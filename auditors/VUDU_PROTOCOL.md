@@ -1,3 +1,16 @@
+<!---
+FILE: VUDU_PROTOCOL.md
+PURPOSE: VuDu Light coordination protocol for cross-AI adversarial auditing
+VERSION: v3.7.2
+STATUS: Active
+DEPENDS_ON: VUDU_HEADER_STANDARD.md, VUDU_LOG.md, ROLE_LOGGER.md
+NEEDED_BY: BOOTSTRAP_VUDU.md, BOOTSTRAP_GROK.md, BOOTSTRAP_NOVA.md, BOOTSTRAP_VUDU_CLAUDE.md
+MOVES_WITH: /auditors/
+LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-17]
+--->
+
+<!-- deps: vudu_protocol, coordination_process, logger_claude -->
+
 ─── VUDU PROTOCOL ───────────────────────────────────
 
 # VUDU_PROTOCOL.md - VuDu Light Coordination Process
@@ -326,6 +339,94 @@ VUDU_PROTOCOL, VUDU_HEADER_STANDARD, VUDU_LOG accessible
 **Step 4:** Human relays to external auditor
 
 **Step 5:** External auditor updates local VUDU_LOG
+
+---
+
+## 📡 **PROTOCOL FILE TRANSMISSION & VERSION CHECKING**
+
+### **First VUDU Network Session Opening**
+
+**When opening a new VUDU network session with an external auditor for the first time:**
+
+**Claude sends these protocol files ONCE:**
+- `VUDU_PROTOCOL.md` - Core coordination protocol
+- `VUDU_HEADER_STANDARD.md` - Message format specification
+- `VUDU_LOG_LITE_TEMPLATE.md` - Template for coordination logs
+
+**Location:** Staged in `/auditors/relay/Claude_Incoming/` with README_C.md
+
+**Purpose:**
+- Establish shared protocol understanding
+- Provide reference documentation
+- Enable proper VUDU_LOG_LITE formatting
+
+---
+
+### **Subsequent Sessions: Version Checking via VUDU_LOG_LITE**
+
+**After first transmission, protocol files are NOT resent.**
+
+**Instead, version checking happens via VUDU_LOG_LITE entries:**
+
+Each coordination entry in VUDU_LOG_LITE.md includes context about the protocol version in use. The semantic header of VUDU_PROTOCOL.md states the version:
+
+```markdown
+<!---
+FILE: VUDU_PROTOCOL.md
+VERSION: v3.7.2
+--->
+```
+
+**How Version Checking Works:**
+
+1. **External Auditor References Version:**
+   - Each auditor maintains their copy of VUDU_PROTOCOL.md
+   - VUDU_LOG_LITE entries implicitly reference protocol version via format compliance
+   - Semantic headers in all VUDU files state VERSION field
+
+2. **LOGGER Claude Detects Version Mismatch:**
+   - Reads incoming VUDU_LOG_LITE.md from external auditor
+   - Checks format compliance
+   - If format violations suggest version mismatch:
+     - Doc Claude flags the issue
+     - LOGGER Claude notes version discrepancy in master VUDU_LOG
+     - Response includes updated protocol files
+
+3. **Doc Claude Steps In:**
+   - If version mismatch detected, Doc Claude includes note in `/auditors/relay/Claude_Incoming/`
+   - Example: `DOC_CLAUDE_VERSION_NOTICE.md`
+   - Updated protocol files attached to next transmission
+   - External auditor updates their local copies
+
+**Why This Approach:**
+- **Efficiency:** No redundant file transmission
+- **Clarity:** Version explicit in semantic headers
+- **Flexibility:** Easy to detect and resolve version drift
+- **Reliability:** LOGGER Claude catches format violations automatically
+
+**Example Version Mismatch Detection:**
+
+```markdown
+### [COORDINATION-2025-11-15-3] 2025-11-15 - Version Mismatch Detected
+
+**Changed by:** LOGGER_CLAUDE (VUDU_LOG Custodian)
+**Session:** claude/session-xyz
+**Status:** RESOLUTION IN PROGRESS ⚠️
+
+**Changes:**
+- Detected format violation in Grok's VUDU_LOG_LITE.md
+- Entry ID format suggests v3.5 (pre-VUDU_LOG_LITE protocol)
+- Prepared updated protocol files for transmission
+
+**Reason:** Grok appears to be using older VUDU protocol version
+
+**Impact:** Moderate (requires protocol file update to Grok)
+```
+
+**Resolution:**
+- Doc Claude creates `DOC_CLAUDE_VERSION_NOTICE.md` in Claude_Incoming/
+- Updated VUDU_PROTOCOL.md, VUDU_HEADER_STANDARD.md, VUDU_LOG_LITE_TEMPLATE.md attached
+- Grok updates local copies and resumes coordination
 
 ---
 

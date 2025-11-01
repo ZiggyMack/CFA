@@ -1,11 +1,23 @@
-# VUDU_HEADER_STANDARD.md - Message Format Specification
+<!---
+FILE: VUDU_HEADER_STANDARD.md
+PURPOSE: Standardized message format specification for VuDu Light coordination
+VERSION: v3.5.2
+STATUS: Active
+DEPENDS_ON: VUDU_PROTOCOL.md
+NEEDED_BY: VUDU_PROTOCOL.md, All README_[X].md relay messages
+MOVES_WITH: /auditors/
+LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-16]
+--->
 
 <!-- deps: vudu_protocol -->
+
+# VUDU_HEADER_STANDARD.md - Message Format Specification
+
 ## Purpose
 Standardized message format for all VuDu Light coordination.
 
-**Version:** VuDu Light v3.5.2  
-**Last Updated:** 2025-10-26
+**Version:** VuDu Light v3.5.2
+**Last Updated:** 2025-11-01
 
 ---
 
