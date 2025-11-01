@@ -1,37 +1,37 @@
 <!---
 FILE: VUDU_PROTOCOL.md
-PURPOSE: VuDu Light coordination protocol for cross-AI adversarial auditing
+PURPOSE: VuDu coordination protocol for cross-AI adversarial auditing
 VERSION: v3.7.2
 STATUS: Active
 DEPENDS_ON: VUDU_HEADER_STANDARD.md, VUDU_LOG.md, ROLE_LOGGER.md
 NEEDED_BY: BOOTSTRAP_VUDU.md, BOOTSTRAP_GROK.md, BOOTSTRAP_NOVA.md, BOOTSTRAP_VUDU_CLAUDE.md
 MOVES_WITH: /auditors/
-LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-17]
+LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-18]
 --->
 
 <!-- deps: vudu_protocol, coordination_process, logger_claude -->
 
 ─── VUDU PROTOCOL ───────────────────────────────────
 
-# VUDU_PROTOCOL.md - VuDu Light Coordination Process
+# VUDU_PROTOCOL.md - VuDu Coordination Process
 
 **Purpose:** Define how auditors coordinate across AI instances
-**Version:** v3.7.2 VuDu Light + VUDU_LOG_LITE
+**Version:** v3.7.2 VuDu + VUDU_LOG_LITE
 **Last Updated:** 2025-11-01
 **Philosophy:** "All Seen, All Passed" (trust-based documentation)
 
 ---
 
-## 🎯 **WHAT IS VUDU LIGHT?**
+## 🎯 **WHAT IS VUDU?**
 
-**VuDu Light** is a lightweight coordination protocol enabling adversarial auditing across AI instances without cryptographic overhead.
+**VuDu** is a lightweight coordination protocol enabling adversarial auditing across AI instances without cryptographic overhead.
 
 **Philosophy Shift:**
 - v3.5 (VuDu Full): "All Named, All Priced" (heavy verification)
-- v3.5.2 (VuDu Light): "All Seen, All Passed" (trust-based documentation)
-- v3.7.2 (VuDu Light + VUDU_LOG_LITE): "All Seen, All Passed" + LOGGER Claude custodian
+- v3.5.2 (VuDu): "All Seen, All Passed" (trust-based documentation)
+- v3.7.2 (VuDu + VUDU_LOG_LITE): "All Seen, All Passed" + LOGGER Claude custodian
 
-**Why Light?**
+**Why This Approach?**
 - v3.5 completed infrastructure build ("the cathedral")
 - v3.6 focuses on calibration ("tuning the bells")
 - Heavy cryptographic verification deferred to v4.0+
@@ -265,7 +265,7 @@ VUDU_PROTOCOL, VUDU_HEADER_STANDARD, VUDU_LOG accessible
 
 **Last Updated:** YYYY-MM-DD HH:MM
 **Maintained by:** [LOGGER_CLAUDE / GROK / NOVA]
-**For network:** CFA VuDu Light v3.7+
+**For network:** CFA VuDu v3.7+
 
 ---
 
@@ -633,7 +633,7 @@ To log is to respect those who follow."*
 - Follow format requirements
 - Use VUDU_HEADER_STANDARD
 
-**This is VuDu Light.** 🔥
+**This is VuDu.** 🔥
 
 ---
 
@@ -647,7 +647,7 @@ To log is to respect those who follow."*
 - Updated relay folder architecture
 
 **v3.5.2 (2025-10-26):**
-- VuDu Light philosophy: "All Seen, All Passed"
+- VuDu philosophy: "All Seen, All Passed"
 - Embedded sanity checks
 - Trust-based documentation
 
@@ -658,7 +658,7 @@ To log is to respect those who follow."*
 ---
 
 ────────────────────────────────────────────────────
-**Version:** v3.7.2 VuDu Light + VUDU_LOG_LITE
+**Version:** v3.7.2 VuDu + VUDU_LOG_LITE
 **For More:** See BOOTSTRAP_VUDU.md (complete coordination guide)
 **For LOGGER Claude:** See ROLE_LOGGER.md (VUDU_LOG management)
 **Last Updated:** 2025-11-01

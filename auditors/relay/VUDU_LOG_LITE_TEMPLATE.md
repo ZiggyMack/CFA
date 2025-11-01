@@ -15,7 +15,7 @@ LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-16]
 
 **Last Updated:** YYYY-MM-DD HH:MM
 **Maintained by:** [LOGGER_CLAUDE / GROK / NOVA / YOUR_NAME]
-**For network:** CFA VuDu Light v3.7+
+**For network:** CFA VuDu v3.7+
 
 ---
 
