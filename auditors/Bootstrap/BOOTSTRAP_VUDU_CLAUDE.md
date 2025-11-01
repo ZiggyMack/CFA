@@ -506,7 +506,7 @@ LAST_UPDATE: YYYY-MM-DD [REPO_LOG_ID]
 - Complete change documentation
 - Impact assessment
 - Follow-up tracking
-- **Use /auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/REPO_LOG_ASSISTANT.md** for help
+- **See REPO_LOG Protocol section below for template and help**
 
 **3. Dependency Awareness:**
 - Document what file depends on
@@ -522,6 +522,50 @@ LAST_UPDATE: YYYY-MM-DD [REPO_LOG_ID]
 **This is a Tier 1 superpower.**
 **Use it automatically when repo work is needed.**
 **No separate instance required - just switch hats.**
+
+---
+
+## 📝 REPO_LOG Protocol
+
+**All changes MUST be logged in REPO_LOG.md**
+
+Every repo modification requires a REPO_LOG entry.
+
+**Required format:**
+- Entry ID: `[CATEGORY-YYYY-MM-DD-N]`
+- Categories from coordination checkpoint
+- Complete change documentation
+
+**For help creating entries:**
+→ `/docs/repository/librarian_tools/ROLE_LOGGER.md`
+
+**Basic template:**
+```markdown
+### [CATEGORY-YYYY-MM-DD-N] Brief description
+
+**Categories:** [PRIMARY]
+**Changed by:** Your Name (Role)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `ACTION`: /path/to/file.md - what changed
+- `ACTION`: /path/to/other.md - what changed
+
+**Reason:** Why you made these changes
+
+**Impact:** Minimal/Moderate/Significant
+
+**Follow-up Required:** YES/NO
+```
+
+**That's it.** Basics + pointer.
+
+**Defense in depth:**
+- Bootstrap (here) = Awareness ("I know I need to do this")
+- ROLE_LOGGER = Full guidance ("Here's exactly how")
+- Doc_Claude = Enforcement ("Let me check it")
+
+**When in doubt, check ROLE_LOGGER.md for examples and detailed help.**
 
 ---
 ---
