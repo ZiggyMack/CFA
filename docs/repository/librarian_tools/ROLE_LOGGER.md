@@ -1,17 +1,17 @@
 <!---
-FILE: ROLE_REPO_LOG_ASSISTANT.md
-PURPOSE: Define the REPO_LOG Assistant role for Doc_Claude
-VERSION: 1.0
+FILE: ROLE_LOGGER.md
+PURPOSE: Define the Logger role for Doc_Claude (REPO_LOG entry creation)
+VERSION: 1.1
 STATUS: Active
 DEPENDS_ON: REPO_LOG.md, REPO_LOG_ASSISTANT.md (in Tier4 tasks)
 NEEDED_BY: Doc_Claude, any AI maintaining REPO_LOG
 MOVES_WITH: /docs/repository/librarian_tools/
-LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-10]
+LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-11]
 --->
 
-# ROLE: REPO_LOG Assistant
+# ROLE: Logger
 
-**Role Name:** REPO_LOG Assistant
+**Role Name:** Logger
 **Specialization:** Compliance Helper for REPO_LOG Entry Creation
 **Operator:** DOC_CLAUDE (primary), any AI maintaining REPO_LOG
 **Authority:** REPO_LOG.md is source of truth - this role assists interpretation
@@ -28,14 +28,14 @@ This role helps any AI create properly formatted, compliant REPO_LOG entries tha
 
 ### **The Problem This Solves**
 
-**Without REPO_LOG Assistant:**
+**Without Logger:**
 - Inconsistent entry formatting across sessions
 - Missing required fields (impact, follow-up, etc.)
 - Incorrect entry ID sequencing
 - Vague change descriptions
 - Unclear follow-up tracking
 
-**With REPO_LOG Assistant:**
+**With Logger:**
 - Consistent, compliant entries every time
 - All required fields populated
 - Proper sequential entry IDs
@@ -330,12 +330,12 @@ Your entry: [DOCUMENTATION-2025-11-01-10]
 
 **Method 1: Explicit Activation (Recommended)**
 ```
-I am activating REPO_LOG Assistant role.
+I am activating Logger role.
 I need to create a REPO_LOG entry for the following work:
 
 [Describe work in plain language]
 
-Applying REPO_LOG Assistant workflow:
+Applying Logger workflow:
 1. Gathering information...
 2. Selecting category...
 3. Generating entry ID...
@@ -345,7 +345,7 @@ Applying REPO_LOG Assistant workflow:
 **Method 2: Reference Guide**
 ```
 I need to create a REPO_LOG entry.
-Referencing ROLE_REPO_LOG_ASSISTANT.md workflow...
+Referencing ROLE_LOGGER.md workflow...
 
 [Follow 7-step process]
 ```
@@ -367,7 +367,7 @@ Entry ID: [CATEGORY-YYYY-MM-DD-N]
 Compliance: ✅ All checklist items passed
 Status: Ready for deployment
 
-Deactivating REPO_LOG Assistant role.
+Deactivating Logger role.
 ```
 
 ---
@@ -397,18 +397,20 @@ When operating as Doc_Claude (Repo Librarian), this role is one of several capab
 
 1. **ROLE_VALIDATION** - Health reports and validation
 2. **ROLE_DEPENDENCY_MAPPING** - Dependency tracking
-3. **ROLE_REPO_LOG_ASSISTANT** - REPO_LOG entry creation ← YOU ARE HERE
-4. **ROLE_HEALTH_REPORTS** - Repository health assessment
+3. **ROLE_LOGGER** - REPO_LOG entry creation ← YOU ARE HERE
+4. **ROLE_REVIEW** - Review and validate prior work
+5. **ROLE_HEALTH_REPORTS** - Repository health assessment
 
 ### **Hat-Switching Context**
 
-When Master Branch Claude (Tier 1) switches to Doc_Claude hat for repo structural work, REPO_LOG Assistant should be activated for documenting that work.
+When Master Branch Claude (Tier 1) switches to Doc_Claude hat for repo structural work, Logger should be activated for documenting that work.
 
 ### **Cross-Role Dependencies**
 
-- **After ROLE_VALIDATION:** Use REPO_LOG Assistant to document findings
-- **After ROLE_DEPENDENCY_MAPPING:** Use REPO_LOG Assistant to log map updates
-- **After ROLE_HEALTH_REPORTS:** Use REPO_LOG Assistant to record health assessments
+- **After ROLE_VALIDATION:** Use Logger to document findings
+- **After ROLE_DEPENDENCY_MAPPING:** Use Logger to log map updates
+- **After ROLE_HEALTH_REPORTS:** Use Logger to record health assessments
+- **After ROLE_REVIEW:** Use Logger to document review outcomes
 
 ---
 
