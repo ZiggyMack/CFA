@@ -6,7 +6,7 @@ STATUS: Active
 DEPENDS_ON: None
 NEEDED_BY: All auditors making repository changes, CHANGELOG.md
 MOVES_WITH: / (root)
-LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-18]
+LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-19]
 --->
 
 <!-- deps: file_structure, documentation -->
@@ -53,7 +53,7 @@ LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-18]
 ## 📊 COORDINATION CHECKPOINT
 
 **Last Full Coordination:** 2025-11-01
-**Entries Since:** 16
+**Entries Since:** 17
 **Pending Items:** 0 (All VUDU_LOG_LITE deployment tasks complete ✅)
 
 ### Category Pointers:
@@ -61,14 +61,65 @@ LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-18]
 - **[TASK_MOVEMENT]:** Last entry 2025-11-01-10
 - **[VALIDATION]:** Last entry 2025-11-01-15
 - **[PENDING_ACTIONS]:** Last entry 2025-11-01-1
-- **[DOCUMENTATION]:** Last entry 2025-11-01-18
+- **[DOCUMENTATION]:** Last entry 2025-11-01-19
 - **[STRUCTURE]:** Last entry 2025-11-01-18
-- **[DEPLOYMENTS]:** Last entry 2025-11-01-17
+- **[DEPLOYMENTS]:** Last entry 2025-11-01-19
 - **[ALL_CHANGES]:** Last entry 2025-11-01-1
 
 -----
 
 ## 📝 CHANGE LOG
+
+### [DOCUMENTATION-2025-11-01-19] 2025-11-01 - Deploy ROLE_SANITIZE for README Audit System
+
+**Categories:** [DOCUMENTATION] [DEPLOYMENTS]
+**Changed by:** DOC_CLAUDE (Repo Librarian)
+**Session ID:** claude/verify-previous-changes-011CUhfCj9dKDsZrQmGQSaap
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `CREATED`: /docs/repository/librarian_tools/ROLE_SANITIZE.md - README audit and sanitization role (527 lines)
+
+**Reason:** Ziggy requested creation of SANITIZE Claude role to support TASK_BRIEF_README_AUDIT.md (Tier 4 active task). This role defines procedures for auditing READMEs for prescriptive vs descriptive language and maintaining protocol hierarchy (Bootstrap > Protocol > README).
+
+**ROLE_SANITIZE Capabilities:**
+
+**Mode 1 - Audit (Analysis):**
+- Scan all READMEs for prescriptive language patterns
+- Identify contradictions between READMEs and authoritative sources (bootstrap/protocol files)
+- Classify issues by severity (CRITICAL / MODERATE / MINOR)
+- Generate comprehensive audit reports to `/docs/validation/reports/`
+- Output: REPORT.md, CRITICAL_ISSUES.md, MODERATE_ISSUES.md, MINOR_ISSUES.md, CLEAN_FILES.md, CONTRADICTIONS.md
+
+**Mode 2 - Sanitize (Implementation):**
+- Transform prescriptive language → descriptive
+- Replace embedded procedures with pointers to authoritative sources
+- Ensure READMEs describe WHAT, not HOW
+- Maintain protocol hierarchy enforcement
+
+**Critical Distinction:**
+- **Prescriptive (BAD):** "To bootstrap: 1) Do X, 2) Do Y..." (HOW to do something)
+- **Descriptive (GOOD):** "Bootstrap system activates Claude instances. For procedures: See BOOTSTRAP_CLAUDE.md" (WHAT exists + WHERE to find HOW)
+
+**Integration:**
+- References TASK_BRIEF_README_AUDIT.md for audit procedures
+- References CODE_CLAUDE_OUTPUT_PROTOCOL.md for Mode 1 vs Mode 2 output standards
+- References 88MPH_PROTOCOL.md for Doc_Claude standards
+- Enforces authority hierarchy: Bootstrap > Protocol > README
+
+**Use Case:**
+- Pre-launch validation before Grok/Nova arrival
+- Prevent READMEs from contradicting bootstrap files
+- Maintain documentation hygiene
+- Clear separation of concerns (WHAT vs HOW)
+
+**Impact:** Significant (enables critical pre-launch README audit, prevents documentation drift and authority conflicts)
+
+**Follow-up Required:** NO (role deployed and ready)
+
+**Next Step:** Execute TASK_BRIEF_README_AUDIT.md using ROLE_SANITIZE when Ziggy requests
+
+-----
 
 ### [DOCUMENTATION-2025-11-01-18] 2025-11-01 - VUDU Branding Cleanup + Claude_Incoming Corrections
 
