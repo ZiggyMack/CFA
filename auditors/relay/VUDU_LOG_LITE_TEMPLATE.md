@@ -1,3 +1,16 @@
+<!---
+FILE: VUDU_LOG_LITE_TEMPLATE.md
+PURPOSE: Template for lightweight VUDU coordination log entries (network travel)
+VERSION: v3.7.2
+STATUS: Active
+DEPENDS_ON: VUDU_PROTOCOL.md, VUDU_HEADER_STANDARD.md, ROLE_LOGGER.md
+NEEDED_BY: BOOTSTRAP_GROK.md, BOOTSTRAP_NOVA.md, BOOTSTRAP_VUDU_CLAUDE.md
+MOVES_WITH: /auditors/relay/
+LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-16]
+--->
+
+<!-- deps: vudu_protocol, logger_claude -->
+
 # VUDU_LOG_LITE
 
 **Last Updated:** YYYY-MM-DD HH:MM
