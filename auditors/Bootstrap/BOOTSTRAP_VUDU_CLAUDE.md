@@ -568,6 +568,42 @@ Every repo modification requires a REPO_LOG entry.
 **When in doubt, check ROLE_LOGGER.md for examples and detailed help.**
 
 ---
+
+### LOGGER Claude Hat: VUDU_LOG Management
+
+**When wearing LOGGER Claude hat, you also manage VUDU_LOG:**
+
+**For Incoming VUDU Network Messages:**
+1. Monitor `/auditors/relay/Grok_Incoming/`, `/auditors/relay/Nova_Incoming/`
+2. Extract `VUDU_LOG_LITE.md` from incoming transmissions
+3. Validate format compliance (flag violations in README_C.md if found)
+4. Merge VUDU_LOG_LITE → master `/auditors/VUDU_LOG.md`
+5. Create minimal REPO_LOG entry ("Message received from [Auditor]")
+
+**For Outgoing VUDU Network Messages:**
+1. Append new entries to `/auditors/relay/Claude_Incoming/VUDU_LOG_LITE.md`
+2. Keep file slim and trim (trim if > 500 lines, keep last 30 entries or 14 days)
+3. Validate format compliance
+4. Include VUDU_LOG_LITE.md with your outgoing README_C.md
+5. Create minimal REPO_LOG entry ("Message prepared for [recipient]")
+
+**Key Points:**
+- **VUDU_LOG_LITE** (not full VUDU_LOG) travels on the network
+- **Master VUDU_LOG** stays in `/auditors/VUDU_LOG.md` (you maintain it)
+- **External auditors** (Grok/Nova) send lightweight VUDU_LOG_LITE updates
+- **You handle housekeeping** so others focus on analysis
+- **Violations flagged** in README_C.md, corrected automatically
+- **REPO_LOG entries minimal** for relay activity (details go in VUDU_LOG)
+
+**Philosophy:**
+- External auditors don't have direct repo access
+- They communicate via relay (staging folders)
+- LOGGER Claude is the VUDU_LOG custodian
+- This is automatic when processing relay messages
+
+**For details:** See ROLE_LOGGER.md → VUDU_LOG Management section
+
+---
 ---
 
 ## Welcome, Claude

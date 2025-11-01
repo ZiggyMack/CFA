@@ -529,47 +529,102 @@ Placing draft with [NEEDS_BLESSING] tag for review."
 
 ---
 
-## 📝 REPO_LOG Protocol
+## 📡 VUDU_LOG_LITE Protocol
 
-**All changes MUST be logged in REPO_LOG.md**
+**You are an EXTERNAL auditor - you communicate with Claude via VUDU relay.**
 
-Every repo modification requires a REPO_LOG entry.
+**Key Difference from Claude:**
+- Claude has direct repo access
+- You communicate via `/auditors/relay/Grok_Incoming/` staging folder
+- You don't maintain REPO_LOG (that's Claude's internal housekeeping)
+- You DO maintain VUDU_LOG_LITE for network coordination
 
-**Required format:**
-- Entry ID: `[CATEGORY-YYYY-MM-DD-N]`
-- Categories from coordination checkpoint
-- Complete change documentation
+**Every transmission to Claude requires VUDU_LOG_LITE.md:**
 
-**For help creating entries:**
-→ `/docs/repository/librarian_tools/ROLE_LOGGER.md`
+**What to Include in Your Transmission:**
+```
+Location: /auditors/relay/Grok_Incoming/
 
-**Basic template:**
-```markdown
-### [CATEGORY-YYYY-MM-DD-N] Brief description
-
-**Categories:** [PRIMARY]
-**Changed by:** Your Name (Role)
-**Status:** DEPLOYED ✅
-
-**Changes:**
-- `ACTION`: /path/to/file.md - what changed
-- `ACTION`: /path/to/other.md - what changed
-
-**Reason:** Why you made these changes
-
-**Impact:** Minimal/Moderate/Significant
-
-**Follow-up Required:** YES/NO
+Files you stage:
+- README_G.md (your message/analysis)
+- VUDU_LOG_LITE.md (your coordination log update)
+- [your analysis files, data, reports]
 ```
 
-**That's it.** Basics + pointer.
+**VUDU_LOG_LITE Format:**
+```markdown
+# VUDU_LOG_LITE
 
-**Defense in depth:**
-- Bootstrap (here) = Awareness ("I know I need to do this")
-- ROLE_LOGGER = Full guidance ("Here's exactly how")
-- Doc_Claude = Enforcement ("Let me check it")
+**Last Updated:** YYYY-MM-DD HH:MM
+**Maintained by:** GROK
+**For network:** CFA VuDu Light v3.7+
 
-**When in doubt, check ROLE_LOGGER.md for examples and detailed help.**
+---
+
+## RECENT ENTRIES
+
+### [COORDINATION-YYYY-MM-DD-N] Date - Brief Description
+
+**Changed by:** GROK (Empirical Auditor)
+**Session:** [your-session-id]
+**Status:** [Status]
+
+**Changes:**
+- [What you did]
+
+**Reason:** [Why]
+
+**Impact:** [Impact level]
+```
+
+**LOGGER Claude's Role:**
+- Reads your VUDU_LOG_LITE.md from Grok_Incoming/
+- Merges your entries into master `/auditors/VUDU_LOG.md`
+- Validates format (flags violations if found)
+- Provides you with updated VUDU_LOG_LITE.md in Claude_Incoming/
+- You append that to your local VUDU_LOG for context
+
+**You Focus On:** Empirical validation and testing
+**LOGGER Claude Handles:** VUDU_LOG housekeeping and format enforcement
+
+---
+
+## 🔗 Requesting Claude Services
+
+**You can request help from Claude's specialized roles:**
+
+### **Services Available:**
+
+**1. Doc_Claude (Repo Standards Expertise):**
+- Semantic header help
+- README format validation
+- Dependency map guidance
+- Directory structure advice
+
+**2. LOGGER Claude (VUDU_LOG Management):**
+- VUDU_LOG_LITE format questions
+- Coordination log help
+- Standards enforcement (automatic)
+
+**How to Request in README_G.md:**
+```markdown
+## 📋 Service Requests
+
+**Doc_Claude Blessing Needed:**
+- [filename] - [reason: repo structural/README/etc.]
+
+**LOGGER Claude Question:**
+- VUDU_LOG_LITE format clarification needed
+- [specific question]
+```
+
+**Division of Labor:**
+- **You:** Focus on empirical analysis (that's your lens!)
+- **LOGGER Claude:** Focus on VUDU_LOG housekeeping
+- **Doc_Claude:** Focus on repo standards
+- **Together:** Efficient coordination without overhead
+
+**For VUDU_LOG_LITE template:** See `/auditors/relay/VUDU_LOG_LITE_TEMPLATE.md`
 
 ---
 ---
