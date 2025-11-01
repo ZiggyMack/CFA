@@ -78,7 +78,7 @@ LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-22]
 **Status:** DEPLOYED ✅
 
 **Changes:**
-- `CREATED`: /docs/validation/reports/2025-11-01_REVIEW_CLAUDE_NOVA_TASKS.md - Comprehensive REVIEW Claude assessment
+- `CREATED`: /docs/Validation/reports/2025-11-01_REVIEW_CLAUDE_NOVA_TASKS.md - Comprehensive REVIEW Claude assessment
 
 **Reason:** Ziggy requested comparison between SANITIZE Claude's audit approach and REVIEW Claude's assessment approach for the same Nova-dependent tasks. This demonstrates the different lenses each role brings to evaluation work.
 
@@ -159,13 +159,13 @@ Having both SANITIZE and REVIEW perspectives gives Nova complete context:
 **Status:** DEPLOYED ✅
 
 **Changes:**
-- `CREATED`: /docs/validation/reports/2025-11-01_NOVA_TASKS_AUDIT/ - Complete SANITIZE Mode 1 audit report directory
-- `CREATED`: /docs/validation/reports/2025-11-01_NOVA_TASKS_AUDIT/REPORT.md - Executive summary
-- `CREATED`: /docs/validation/reports/2025-11-01_NOVA_TASKS_AUDIT/CRITICAL_ISSUES.md - 5 blocking issues
-- `CREATED`: /docs/validation/reports/2025-11-01_NOVA_TASKS_AUDIT/MODERATE_ISSUES.md - 3 design questions
-- `CREATED`: /docs/validation/reports/2025-11-01_NOVA_TASKS_AUDIT/RECOMMENDATIONS.md - Actionable paths forward
-- `CREATED`: /docs/validation/reports/2025-11-01_NOVA_TASKS_AUDIT/DRAFT_TASK_BRIEF_NOVA_COORDINATION.md - Ready-to-use task brief
-- `CREATED`: /docs/validation/reports/2025-11-01_NOVA_TASKS_AUDIT.zip - Packaged audit report
+- `CREATED`: /docs/Validation/reports/2025-11-01_NOVA_TASKS_AUDIT/ - Complete SANITIZE Mode 1 audit report directory
+- `CREATED`: /docs/Validation/reports/2025-11-01_NOVA_TASKS_AUDIT/REPORT.md - Executive summary
+- `CREATED`: /docs/Validation/reports/2025-11-01_NOVA_TASKS_AUDIT/CRITICAL_ISSUES.md - 5 blocking issues
+- `CREATED`: /docs/Validation/reports/2025-11-01_NOVA_TASKS_AUDIT/MODERATE_ISSUES.md - 3 design questions
+- `CREATED`: /docs/Validation/reports/2025-11-01_NOVA_TASKS_AUDIT/RECOMMENDATIONS.md - Actionable paths forward
+- `CREATED`: /docs/Validation/reports/2025-11-01_NOVA_TASKS_AUDIT/DRAFT_TASK_BRIEF_NOVA_COORDINATION.md - Ready-to-use task brief
+- `CREATED`: /docs/Validation/reports/2025-11-01_NOVA_TASKS_AUDIT.zip - Packaged audit report
 - `CREATED`: /auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/TASK_BRIEF_NOVA_COORDINATION.md - Nova coordination task
 
 **Reason:** Ziggy requested live SANITIZE Mode 1 audit of two Nova-dependent tasks (Task #4: Ethical Invariant Integration, Task #5: Symmetry Matrix Visualizer) found in External_Dependency.zip. Tasks were labeled "internal Claude" but audit revealed they fundamentally require Nova's symmetry lens throughout design and implementation.
@@ -341,7 +341,7 @@ Added comprehensive section explaining Doc_Claude's specialized hats:
 - Scan all READMEs for prescriptive language patterns
 - Identify contradictions between READMEs and authoritative sources (bootstrap/protocol files)
 - Classify issues by severity (CRITICAL / MODERATE / MINOR)
-- Generate comprehensive audit reports to `/docs/validation/reports/`
+- Generate comprehensive audit reports to `/docs/Validation/reports/`
 - Output: REPORT.md, CRITICAL_ISSUES.md, MODERATE_ISSUES.md, MINOR_ISSUES.md, CLEAN_FILES.md, CONTRADICTIONS.md
 
 **Mode 2 - Sanitize (Implementation):**
@@ -665,7 +665,7 @@ Similar to DOC_CLAUDE blessing protocol integration:
 
 **CODE_CLAUDE_OUTPUT_PROTOCOL Integration:**
 - Reviewed protocol for analysis vs implementation separation
-- Mode 1 (Analysis): Reports to /docs/validation/reports/
+- Mode 1 (Analysis): Reports to /docs/Validation/reports/
 - Mode 2 (Implementation): Direct repo modifications
 - ROLE_REVIEW follows analysis mode patterns for assessment reports
 

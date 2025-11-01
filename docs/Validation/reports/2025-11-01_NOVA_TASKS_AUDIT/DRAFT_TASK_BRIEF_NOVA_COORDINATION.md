@@ -357,7 +357,7 @@ These tasks should be treated as collaborative Nova+Claude work, not solo Claude
 
 **Audit Report Location:**
 ```
-/docs/validation/reports/2025-11-01_NOVA_TASKS_AUDIT/
+/docs/Validation/reports/2025-11-01_NOVA_TASKS_AUDIT/
 ├── REPORT.md (Executive summary - START HERE)
 ├── CRITICAL_ISSUES.md (5 blocking issues)
 ├── MODERATE_ISSUES.md (3 design questions)
