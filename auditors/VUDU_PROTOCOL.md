@@ -1,3 +1,16 @@
+<!---
+FILE: VUDU_PROTOCOL.md
+PURPOSE: VuDu Light coordination protocol for cross-AI adversarial auditing
+VERSION: v3.7.2
+STATUS: Active
+DEPENDS_ON: VUDU_HEADER_STANDARD.md, VUDU_LOG.md, ROLE_LOGGER.md
+NEEDED_BY: BOOTSTRAP_VUDU.md, BOOTSTRAP_GROK.md, BOOTSTRAP_NOVA.md, BOOTSTRAP_VUDU_CLAUDE.md
+MOVES_WITH: /auditors/
+LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-14]
+--->
+
+<!-- deps: vudu_protocol, coordination_process, logger_claude -->
+
 ─── VUDU PROTOCOL ───────────────────────────────────
 
 # VUDU_PROTOCOL.md - VuDu Light Coordination Process
