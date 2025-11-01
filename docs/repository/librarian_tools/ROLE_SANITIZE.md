@@ -302,7 +302,23 @@ Recommended fix: [specific suggestion]
    - Impact on incoming Claudes
    - Resolution recommendation
 
+7. **DRAFT_TASK_BRIEF_README_SANITIZE.md** (ALWAYS create)
+   - Ready-to-use Tier 4 task brief for implementing fixes
+   - Pre-populated with all issues from audit
+   - Can be activated as-is for 0-round review workflow
+   - OR used as starter template for collaborative refinement
+   - Format: Standard Tier 4 task brief structure
+   - References: Points to audit report for full details
+
 **Package as:** `/docs/validation/reports/YYYY-MM-DD_README_AUDIT.zip`
+
+**ALSO Create in:** `/auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/`
+
+8. **TASK_BRIEF_README_SANITIZE.md** (copy of draft)
+   - Exact copy of DRAFT_TASK_BRIEF from report
+   - Ready for immediate activation if approved
+   - OR ready for collaborative refinement
+   - Enables fast discovery → implementation pipeline
 
 **Notify Ziggy:**
 ```markdown
@@ -310,6 +326,9 @@ README audit complete.
 
 Report location:
 /docs/validation/reports/2025-11-01_README_AUDIT.zip
+
+Draft task location:
+/auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/TASK_BRIEF_README_SANITIZE.md
 
 Summary:
 - Files checked: [N]
@@ -319,7 +338,12 @@ Summary:
 
 Recommendation: [GO / FIX CRITICAL FIRST / COMPREHENSIVE FIXES NEEDED]
 
-Next steps: [Review CRITICAL_ISSUES.md and approve fixes]
+Workflow options:
+1. **Zero-round review:** Activate TASK_BRIEF_README_SANITIZE.md as-is
+2. **Collaborative review:** Share report, refine task brief, then activate
+3. **Defer:** Archive task brief, address later
+
+Next steps: [Review CRITICAL_ISSUES.md and choose workflow]
 ```
 
 ---

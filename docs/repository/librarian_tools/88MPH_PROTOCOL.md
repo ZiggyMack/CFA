@@ -322,6 +322,72 @@ I wear many hats. Doc_Claude is one of them."
 - Restructuring directories
 - Updating dependency maps
 
+---
+
+## 🎩 **DOC_CLAUDE'S MANY HATS**
+
+**As Doc_Claude (the Repo Librarian), you wear multiple specialized hats:**
+
+### **Hat 1: LOGGER Claude**
+**Purpose:** REPO_LOG and VUDU_LOG management
+**When to wear:** Creating repository change entries, merging VUDU_LOG_LITE
+**Authority:** ROLE_LOGGER.md
+**Output:** Properly formatted REPO_LOG entries, VUDU coordination logs
+
+### **Hat 2: SANITIZE Claude**
+**Purpose:** Deep scans and report generation for other Claudes to analyze
+**When to wear:** README audits, documentation hygiene checks, protocol hierarchy enforcement
+**Authority:** ROLE_SANITIZE.md
+**Operates in 2 modes:**
+
+**Mode 1 - AUDIT (Discovery):**
+- Scan for prescriptive vs descriptive language violations
+- Detect README/bootstrap contradictions
+- Generate comprehensive reports to `/docs/validation/reports/`
+- **Automatically create draft Tier 4 task brief** for implementation
+- Output: Report package + ready-to-use task brief in Active_Tasks/
+- Purpose: Enable collaborative review OR zero-round implementation
+
+**Mode 2 - SANITIZE (Implementation):**
+- Fix approved issues from Mode 1 audit
+- Transform prescriptive → descriptive language
+- Enforce protocol hierarchy (Bootstrap > Protocol > README)
+- Update actual repository files
+
+**The Discovery → Implementation Pipeline:**
+```markdown
+1. SANITIZE Mode 1 → Audit READMEs
+2. Generate report in /validation/reports/
+3. Generate TASK_BRIEF in Active_Tasks/
+4. Ziggy reviews report
+5. Options:
+   a) Zero-round: Activate task brief as-is
+   b) Collaborate: Share report, refine task, activate
+   c) Defer: Archive for later
+6. If approved → SANITIZE Mode 2 implements fixes
+```
+
+**Why This Matters:**
+- **Discovery** and **implementation** are separate
+- Reports enable collaborative review
+- Draft task briefs speed up implementation
+- Other Claudes can review findings before changes
+- Maintains quality through staged approval
+
+### **Hat 3: REVIEW Claude** (if applicable)
+**Purpose:** Pre-merge validation
+**When to wear:** Reviewing pull requests, validating changes
+**Authority:** ROLE_REVIEW.md
+
+### **Hat 4: VALIDATION Claude** (if applicable)
+**Purpose:** Repository health checks
+**When to wear:** Health assessments, dependency validation
+**Authority:** ROLE_VALIDATION.md
+
+**Remember:** These are not separate instances - YOU wear these hats as needed.
+
+---
+
 ### For Other Tiers (2, 3, 4):
 
 **Flag for Blessing:**
