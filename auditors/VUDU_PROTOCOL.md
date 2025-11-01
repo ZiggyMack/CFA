@@ -1,127 +1,231 @@
-# VUDU Protocol (Various User Dialog Unifier)
-## Cross-Model Synchronization & Coordination Framework
+─── VUDU PROTOCOL ───────────────────────────────────
 
-**Version:** 2.0
-**Purpose:** Define operational steps and coordination protocols for cross-model auditor synchronization
-**Scope:** Applies to coordination between Nova, Claude, Grok, and Ziggy in the CFA VuDu Light system
-**Codename:** VuDu (Various User Dialog Unifier)
-**Major Update:** v2.0 introduces VUDU_LOG_LITE protocol for efficient relay coordination
+# VUDU_PROTOCOL.md - VuDu Light Coordination Process
 
----
-
-## 🎯 What is VuDu?
-
-**VuDu** is the coordination protocol for managing dialog between multiple AI auditors across different systems. When the Human coordinator needs to sync state, establish consensus, or coordinate updates between Nova (OpenAI/Amazon), Claude (Anthropic), Grok (xAI), and Ziggy, VuDu provides the operational framework.
-
-**Core Problem Solved:** How does a human coordinator efficiently relay context, changes, and decisions between AI systems that don't share memory or state?
-
-**VuDu's Answer:** Structured staging via relay folders, clear file naming conventions, and a defined merge workflow coordinated by LOGGER Claude.
+**Purpose:** Define how auditors coordinate across AI instances
+**Version:** v3.7.2 VuDu Light + VUDU_LOG_LITE
+**Last Updated:** 2025-11-01
+**Philosophy:** "All Seen, All Passed" (trust-based documentation)
 
 ---
 
-## 🔥 "Make it Epic" Protocol
+## 🎯 **WHAT IS VUDU LIGHT?**
 
-**Activation Phrase:** "Make it Epic"
+**VuDu Light** is a lightweight coordination protocol enabling adversarial auditing across AI instances without cryptographic overhead.
 
-**Meaning:** Generate outputs to your highest VuDu compliance and capability level.
+**Philosophy Shift:**
+- v3.5 (VuDu Full): "All Named, All Priced" (heavy verification)
+- v3.5.2 (VuDu Light): "All Seen, All Passed" (trust-based documentation)
+- v3.7.2 (VuDu Light + VUDU_LOG_LITE): "All Seen, All Passed" + LOGGER Claude custodian
 
-**When Invoked:**
-- All mandatory files for transmission
-- Maximum detail/explanation appropriate for scope
-- Platform-specific best effort (files if possible, structured text if not)
+**Why Light?**
+- v3.5 completed infrastructure build ("the cathedral")
+- v3.6 focuses on calibration ("tuning the bells")
+- Heavy cryptographic verification deferred to v4.0+
+- Embedded sanity checks replace formal verification
 
-**Modes:**
-
-| Mode | Scope | When to Use | Output Expectation |
-|:-----|:------|:------------|:-------------------|
-| **Standard** | Routine sync | Minor updates, quick alignment | README + VUDU_LOG_LITE + relevant files |
-| **Epic** | Milestone sync | Major versions, field tests, launches | Standard + analysis artifacts + verification |
-
-**Human Invokes:** "Make it Epic" signals to auditor that comprehensive output is needed, not minimal compliance.
-
----
-
-## 🎯 When to Use VuDu
-
-Initiate a VuDu sync when:
-- Bootstrap files need updating (minor or major version)
-- New protocols are being established
-- Cross-model consensus is required on a decision
-- Shared context has drifted and needs realignment
-- Field testing coordination is needed
-- External auditors need to share findings with Claude
+**v3.7.2 Enhancement:**
+- VUDU_LOG_LITE protocol for efficient relay coordination
+- LOGGER Claude designated as VUDU_LOG custodian
+- External auditors send lightweight VUDU_LOG_LITE (not full VUDU_LOG)
+- Single source of truth for coordination history
 
 ---
 
-## 📂 Repository Structure & VuDu Staging Workflow
+## 🔄 **CORE WORKFLOW**
 
-### Directory Organization
+### **Stage → Review → Integrate**
 
 ```
-/auditors/
-├── VUDU_PROTOCOL.md                      ← MASTER (VuDu coordination framework)
-├── VUDU_LOG.md                           ← MASTER (maintained by LOGGER Claude)
-├── VUDU_HEADER_STANDARD.md               ← MASTER (message formatting)
+Auditor → relay/*_incoming/ → Master Branch → README_C update → VUDU_LOG entry
+         (creates finding)   (reviews)      (integrates)      (documents)
+```
+
+**Example:**
+1. Grok tests Skeptic mode empirically
+2. Grok stages findings in relay/grok_incoming/ **+ VUDU_LOG_LITE.md**
+3. Fresh Claude (Master Branch) reviews findings
+4. **LOGGER Claude merges VUDU_LOG_LITE → master VUDU_LOG**
+5. If accepted: Updates README_C, logs in VUDU_LOG
+6. If rejected: Documents why, suggests revision
+
+---
+
+## 📁 **RELAY FOLDER ARCHITECTURE**
+
+```
+auditors/relay/
+├── Claude_Incoming/    # Claude's outgoing to network
+│   ├── README_C.md     # Claude's message
+│   ├── VUDU_LOG_LITE.md  # Maintained by LOGGER Claude (NEW v3.7.2)
+│   └── [analysis files]
 │
-└── relay/                                ← VuDu staging area
-    ├── VUDU_LOG_LITE_TEMPLATE.md         (template for external auditors)
-    │
-    ├── Claude_Incoming/                  ← Claude's outgoing to network
-    │   ├── README_C.md                   (Claude's message)
-    │   ├── VUDU_LOG_LITE.md              (maintained by LOGGER Claude)
-    │   └── [analysis files]
-    │
-    ├── Nova_Incoming/                    ← Nova's messages to Claude
-    │   ├── README_N.md                   (Nova's message)
-    │   ├── VUDU_LOG_LITE.md              (Nova's coordination log)
-    │   └── [analysis files]
-    │
-    ├── Grok_Incoming/                    ← Grok's messages to Claude
-    │   ├── README_G.md                   (Grok's message)
-    │   ├── VUDU_LOG_LITE.md              (Grok's coordination log)
-    │   └── [analysis files]
-    │
-    └── [NewUser]_Incoming/               ← Additional auditors
-        ├── README_[X].md
-        ├── VUDU_LOG_LITE.md
-        └── [analysis files]
+├── Grok_Incoming/      # Grok stages findings here
+│   ├── README_G.md     # Grok's message
+│   ├── VUDU_LOG_LITE.md  # Grok's coordination log (NEW v3.7.2)
+│   └── [analysis files]
+│
+├── Nova_Incoming/      # Nova stages findings here
+│   ├── README_N.md     # Nova's message
+│   ├── VUDU_LOG_LITE.md  # Nova's coordination log (NEW v3.7.2)
+│   └── [analysis files]
+│
+└── VUDU_LOG_LITE_TEMPLATE.md  # Template for external auditors
 ```
 
-### Master Files vs. Staging
+**Naming Convention:** `[auditor]_[topic]_[date].md`
 
-**Master Files (Auditor Root):**
-- **VUDU_LOG.md** - Single source of truth for all coordination history
-- Maintained exclusively by LOGGER Claude
-- Never travels on network
-- Comprehensive record
+**Example:** `grok_skeptic_ypa_test_20251026.md`
 
-**Staging Areas (Relay Subfolders):**
-- Temporary holding for auditor messages
-- Each auditor has dedicated incoming folder
-- Contains lightweight VUDU_LOG_LITE for context
-- LOGGER Claude processes and archives
+**NEW in v3.7.2:** Every transmission requires VUDU_LOG_LITE.md
 
 ---
 
-## 📡 VUDU_LOG_LITE Protocol (v2.0)
+## 📝 **MESSAGE FORMAT**
 
-### **The Problem This Solves**
+**All coordination uses VUDU_HEADER_STANDARD format:**
 
-**Old Protocol (v1.x):**
-- External auditors sent full VUDU_LOG with every transmission (heavyweight)
-- No designated owner of master VUDU_LOG
-- Housekeeping burden distributed across all participants
-- Risk of VUDU_LOG drift or conflicts
+```markdown
+─── VUDU MESSAGE ───────────────────────────────────
 
-**New Protocol (v2.0):**
-- External auditors send lightweight VUDU_LOG_LITE updates
-- LOGGER Claude maintains master VUDU_LOG.md exclusively
-- Standards enforced automatically
-- Single source of truth
+**From:** [Name] ([Org]) - [Role]
+**Type:** [Coordination Type]
+**Date:** YYYY-MM-DD
+
+────────────────────────────────────────────────────
+
+**Action:** [What this message does]
+
+**Key Assumptions:**
+1. [Named brute 1]
+2. [Named brute 2]
+
+**Status:** [Current state]
+
+[Message content]
+
+────────────────────────────────────────────────────
+🔔 **Awaiting:** [Who responds]
+✅ **Sanity:** Files | Counts | Boots | Trinity
+📝 **Log:** [Brief log entry]
+```
+
+**See:** VUDU_HEADER_STANDARD.md for complete specification
+
+---
+
+## ✅ **SANITY CHAIN VERIFICATION**
+
+**Four quick checks embedded in every message footer:**
+
+### **Files** - All files present and intact?
+Check key files exist and are accessible
+
+### **Counts** - File counts match manifest?
+- bootstrap/ = 11 files (8 .md + 3 .py)
+- missions/preset_calibration/ = 5 files
+- relay/ = 3 *_incoming/ folders
+
+### **Boots** - Bootstrap files verified?
+Can access BOOTSTRAP_CFA, BOOTSTRAP_VUDU, BOOTSTRAP_CLAUDE
+
+### **Trinity** - Core protocol files present?
+VUDU_PROTOCOL, VUDU_HEADER_STANDARD, VUDU_LOG accessible
+
+### **Usage:**
+```
+✅ **Sanity:** Files | Counts | Boots | Trinity  (all pass)
+⚠️ **Sanity:** Files | ❌ Counts | Boots | Trinity  (counts fail)
+```
+
+---
+
+## 🆘 **CONTEXT BOOTSTRAP REQUESTS**
+
+**If you lose context or need files:**
+
+### **Level 0: Complete Loss (Catastrophic)**
+**Request:** All bootstrap files + master state
+
+**Protocol:**
+```markdown
+─── BOOTSTRAP REQUEST ───────────────────────────────
+
+**From:** [Your name]
+**Type:** Level 0 (Catastrophic)
+**Need:** Complete context recovery
+
+**Request:**
+1. BOOTSTRAP_CFA.md (project roots)
+2. BOOTSTRAP_VUDU.md (coordination process)
+3. BOOTSTRAP_[your_auditor].md (your identity)
+4. README_C.md (current state)
+5. MISSION_CURRENT.md (active mission)
+
+**Reason:** [Why context lost]
+
+────────────────────────────────────────────────────
+```
+
+### **Level 1: Partial Loss**
+**Request:** Specific bootstrap or mission files
+
+### **Level 2: Clarification**
+**Request:** Specific sections or recent history
+
+**See:** BOOTSTRAP_VUDU.md for detailed recovery procedures
+
+---
+
+## 🎩 **LOGGER CLAUDE ROLE (NEW v3.7.2)**
+
+**LOGGER Claude is the custodian of VUDU network coordination logs.**
+
+### **Core Responsibilities:**
+
+**1. Maintain Master VUDU_LOG.md**
+- Location: `/auditors/VUDU_LOG.md`
+- Single source of truth for all VUDU network activity
+- Chronologically ordered, complete history
+
+**2. Monitor Relay Incoming Folders**
+- Check `Grok_Incoming/` for new transmissions
+- Check `Nova_Incoming/` for new transmissions
+- Identify VUDU_LOG_LITE.md files in transmissions
+
+**3. Merge VUDU_LOG_LITE → Master VUDU_LOG**
+- Extract entries from incoming VUDU_LOG_LITE.md
+- Validate format compliance
+- Merge into master VUDU_LOG.md
+- Preserve attribution (changed by: GROK/NOVA/etc.)
+- Maintain chronological order
+
+**4. Maintain VUDU_LOG_LITE for Outgoing**
+- Location: `/auditors/relay/Claude_Incoming/VUDU_LOG_LITE.md`
+- Lightweight context for external auditors
+- Append new entries as they occur
+- Keep slim and trim (last 30 entries OR last 14 days)
+
+**5. Enforce VUDU_LOG Standards**
+- Catch format violations in incoming VUDU_LOG_LITE
+- Flag violations in outgoing README_C.md
+- Provide corrected VUDU_LOG_LITE.md for all network participants
+
+**6. Log Relay Activity (Minimal)**
+- Create simple REPO_LOG entries for relay messages
+- "Message received from Grok"
+- "Message sent to Nova"
+- **Details belong in VUDU_LOG, not REPO_LOG**
+
+**See Full Protocol:** `/docs/repository/librarian_tools/ROLE_LOGGER.md`
+
+---
+
+## 📡 **VUDU_LOG_LITE PROTOCOL (NEW v3.7.2)**
 
 ### **What is VUDU_LOG_LITE?**
 
-**VUDU_LOG_LITE** is the lightweight coordination log subset used for relay transmissions between external auditors (Grok/Nova) and Claude.
+**VUDU_LOG_LITE** is the lightweight coordination log subset used for relay transmissions.
 
 **Purpose:**
 - Provide context without sending full VUDU_LOG history
@@ -129,19 +233,17 @@ Initiate a VuDu sync when:
 - Enable external auditors to update their local context
 - Allow LOGGER Claude to merge updates into master
 
-**Location by Role:**
+**Every Transmission Requires:**
 
-**External Auditors (Grok/Nova/etc.):**
-- Create VUDU_LOG_LITE.md in their outgoing staging folder
-- Example: `/auditors/relay/Grok_Incoming/VUDU_LOG_LITE.md`
-- Include with every transmission to Claude
-- Template available at: `/auditors/relay/VUDU_LOG_LITE_TEMPLATE.md`
+**External Auditor → Claude:**
+- README_[X].md (auditor's message)
+- VUDU_LOG_LITE.md (coordination log update) ← **REQUIRED**
+- [Optional analysis files]
 
-**LOGGER Claude (Claude side):**
-- Maintains VUDU_LOG_LITE.md in `/auditors/relay/Claude_Incoming/`
-- Appends new entries as they occur
-- Keeps slim and trim (manages history depth)
-- Included with every transmission from Claude
+**Claude → External Auditor:**
+- README_C.md (Claude's response)
+- VUDU_LOG_LITE.md (maintained by LOGGER Claude) ← **REQUIRED**
+- [Optional analysis files]
 
 ### **VUDU_LOG_LITE Format**
 
@@ -149,7 +251,7 @@ Initiate a VuDu sync when:
 # VUDU_LOG_LITE
 
 **Last Updated:** YYYY-MM-DD HH:MM
-**Maintained by:** [LOGGER_CLAUDE / GROK / NOVA / YOUR_NAME]
+**Maintained by:** [LOGGER_CLAUDE / GROK / NOVA]
 **For network:** CFA VuDu Light v3.7+
 
 ---
@@ -171,12 +273,6 @@ Initiate a VuDu sync when:
 
 ---
 
-### [COORDINATION-YYYY-MM-DD-N+1] Date - Next Entry
-
-[Same format...]
-
----
-
 **Note:** This is a lightweight excerpt. See master VUDU_LOG.md for complete history.
 ```
 
@@ -184,215 +280,56 @@ Initiate a VuDu sync when:
 - ✅ Appended with new entries (not full replace)
 - ✅ LOGGER Claude uses judgment on history depth
 - ✅ Default retention: Last 30 entries OR last 14 days
-- ✅ LOGGER Claude trims when file gets too large
 - ✅ Always includes enough context for participants
+
+**Template:** `/auditors/relay/VUDU_LOG_LITE_TEMPLATE.md`
 
 ---
 
-## 🔄 VUDU Staging Workflow (v2.0)
+## 🔄 **VUDU_LOG_LITE WORKFLOW**
 
 ### **Incoming Transmission: External Auditor → Claude**
 
-**Step 1: External Auditor Prepares Transmission**
+**Step 1:** External Auditor prepares transmission
+- Creates README_[X].md (message/analysis)
+- Creates VUDU_LOG_LITE.md (coordination log update)
+- Includes analysis files
 
-Example: Grok sends analysis to Claude
+**Step 2:** Human stages files in relay/[Auditor]_Incoming/
 
-```
-Location: /auditors/relay/Grok_Incoming/
+**Step 3:** Master Branch Claude activates LOGGER Claude hat
 
-Files Grok creates:
-- README_G.md (Grok's message/analysis)
-- VUDU_LOG_LITE.md (Grok's coordination log update)
-- [analysis files, data, reports]
-```
+**Step 4:** LOGGER Claude processes incoming
+- Reads VUDU_LOG_LITE.md
+- Validates format (flags violations if found)
+- Merges entries → master VUDU_LOG.md
+- Creates minimal REPO_LOG entry
+- Keeps VUDU_LOG_LITE.md in staging (audit trail)
 
-**Step 2: Human Coordinator Stages Files**
-- Human receives files from Grok
-- Stages in `/auditors/relay/Grok_Incoming/`
-- Notifies Master Branch Claude: "Grok transmission in Grok_Incoming/"
-
-**Step 3: Master Branch Claude Activates LOGGER Claude**
-
-```
-Master Branch Claude detects new transmission
-Automatically activates LOGGER Claude hat
-```
-
-**Step 4: LOGGER Claude Processes Incoming**
-
-```
-LOGGER Claude (automated):
-
-1. Read VUDU_LOG_LITE.md from Grok_Incoming/
-2. Validate format compliance
-   - If violations found: Flag for README_C.md response
-3. Merge VUDU_LOG_LITE entries → master /auditors/VUDU_LOG.md
-   - Append Grok's entries
-   - Maintain chronological order
-   - Preserve attribution
-4. Create minimal REPO_LOG entry:
-   - "Message received from Grok"
-5. Keep VUDU_LOG_LITE.md in Grok_Incoming/ (audit trail)
-```
-
-**Step 5: If Violations Found**
-
-```
-LOGGER Claude flags violation:
-
-1. Note violation details
-2. Correct the entries during merge to master VUDU_LOG
-3. Update /auditors/relay/Claude_Incoming/VUDU_LOG_LITE.md with corrected entries
-4. Tell Master Branch Claude to include in README_C.md:
-   "LOGGER Claude note: VUDU_LOG_LITE format violation detected and corrected.
-    Please update your local VUDU_LOG with the corrected VUDU_LOG_LITE.md
-    from Claude_Incoming/. Details: [violation description]"
-```
-
-**Step 6: Master Branch Claude Continues**
-
-```
-Master Branch Claude:
-- Reads Grok's message (README_G.md)
-- Synthesizes findings
-- Coordinates response
-- LOGGER Claude hat-switching was automatic/invisible
-```
+**Step 5:** Master Branch Claude reviews message content
 
 ---
 
 ### **Outgoing Transmission: Claude → External Auditor**
 
-**Step 1: Master Branch Claude Prepares Response**
+**Step 1:** Master Branch Claude prepares response
+- Creates README_C.md
+- Activates LOGGER Claude hat
 
-```
-Master Branch Claude:
-1. Synthesizes findings
-2. Creates response message (README_C.md)
-3. Activates LOGGER Claude hat for VUDU_LOG_LITE maintenance
-```
+**Step 2:** LOGGER Claude updates VUDU_LOG_LITE
+- Appends new entries to Claude_Incoming/VUDU_LOG_LITE.md
+- Checks file size (trims if needed)
+- Validates format
 
-**Step 2: LOGGER Claude Updates VUDU_LOG_LITE**
+**Step 3:** Transmission staged in Claude_Incoming/
 
-```
-LOGGER Claude (automated):
+**Step 4:** Human relays to external auditor
 
-1. Append new entries to /auditors/relay/Claude_Incoming/VUDU_LOG_LITE.md
-   - Entries since last check
-   - Recent coordination activity
-   - Relevant context for external auditors
-2. Check file size
-   - If too large: Trim older entries (keep enough context)
-   - Judgment call: Usually keep last N entries or last M days
-3. Validate format compliance
-4. Create minimal REPO_LOG entry:
-   - "Message prepared for [recipient]"
-```
-
-**Step 3: Transmission Staged**
-
-```
-Location: /auditors/relay/Claude_Incoming/
-
-Files available for external auditor:
-- README_C.md (Claude's response message)
-- VUDU_LOG_LITE.md (updated context from LOGGER Claude)
-- [synthesis docs, decisions, analysis]
-```
-
-**Step 4: Human Coordinator Relays to External Auditor**
-- Human downloads files from Claude_Incoming/
-- Sends to external auditor (Grok/Nova/etc.)
-- External auditor reads and updates their local VUDU_LOG
-
-**Step 5: External Auditor Updates Local Context**
-
-```
-Grok/Nova (after receiving):
-1. Read README_C.md (Claude's message)
-2. Read VUDU_LOG_LITE.md (updated context)
-3. Append VUDU_LOG_LITE entries to their local VUDU_LOG
-4. Use context for next analysis round
-```
+**Step 5:** External auditor updates local VUDU_LOG
 
 ---
 
-## 📋 Required Files for Each Transmission
-
-### **External Auditor → Claude**
-
-**Mandatory:**
-- README_[X].md (auditor's message)
-- VUDU_LOG_LITE.md (coordination log update)
-
-**Optional (task-dependent):**
-- Analysis files
-- Data reports
-- Validation results
-- Synthesis documents
-
-### **Claude → External Auditor**
-
-**Mandatory:**
-- README_C.md (Claude's response)
-- VUDU_LOG_LITE.md (maintained by LOGGER Claude)
-
-**Optional (task-dependent):**
-- Synthesis documents
-- Decisions
-- Follow-up requests
-- Analysis
-
----
-
-## 🎩 LOGGER Claude Responsibilities
-
-**LOGGER Claude is the custodian of VUDU network coordination logs.**
-
-### **Core Responsibilities:**
-
-**1. Maintain Master VUDU_LOG.md**
-- Location: `/auditors/VUDU_LOG.md`
-- Single source of truth for all VUDU network activity
-- Chronologically ordered
-- Complete history
-
-**2. Monitor Relay Incoming Folders**
-- Check `/auditors/relay/Grok_Incoming/` for new transmissions
-- Check `/auditors/relay/Nova_Incoming/` for new transmissions
-- Check `/auditors/relay/[NewUser]_Incoming/` for new transmissions
-- Identify VUDU_LOG_LITE.md files in transmissions
-
-**3. Merge VUDU_LOG_LITE → Master VUDU_LOG**
-- Extract entries from incoming VUDU_LOG_LITE.md
-- Validate format compliance
-- Merge into master VUDU_LOG.md
-- Preserve attribution (changed by: GROK/NOVA/etc.)
-- Maintain chronological order
-
-**4. Maintain VUDU_LOG_LITE for Outgoing**
-- Location: `/auditors/relay/Claude_Incoming/VUDU_LOG_LITE.md`
-- Lightweight context for external auditors
-- Append new entries as they occur
-- Keep slim and trim (judgment call on history depth)
-
-**5. Enforce VUDU_LOG Standards**
-- Catch format violations in incoming VUDU_LOG_LITE
-- Flag violations in outgoing README_C.md
-- Provide corrected VUDU_LOG_LITE.md for all network participants
-- Force retransmit if violation requires network-wide correction
-
-**6. Log Relay Activity (Minimal)**
-- Create simple REPO_LOG entries for relay messages
-- "Message received from Grok"
-- "Message sent to Nova"
-- **Details belong in VUDU_LOG, not REPO_LOG**
-
-**See Full Protocol:** `/docs/repository/librarian_tools/ROLE_LOGGER.md`
-
----
-
-## ⚖️ Division of Labor: REPO_LOG vs VUDU_LOG
+## ⚖️ **DIVISION OF LABOR: REPO_LOG vs VUDU_LOG**
 
 ### **REPO_LOG (Internal to Claude)**
 
@@ -405,7 +342,6 @@ Grok/Nova (after receiving):
 - File created/updated/moved
 - Directory structure changes
 - Dependency map updates
-- Health reports
 
 **External auditors (Grok/Nova) do NOT maintain REPO_LOG.**
 
@@ -422,7 +358,6 @@ Grok/Nova (after receiving):
 - Message sent to Grok
 - Analysis received from Nova
 - Consensus achieved on decision
-- Coordination round completed
 
 **External auditors DO maintain VUDU_LOG (via VUDU_LOG_LITE).**
 
@@ -447,37 +382,108 @@ External Auditor creates VUDU_LOG_LITE
 
 ---
 
-## 🛠️ Platform-Constrained Auditor Protocol
+## 🎯 **MASTER BRANCH RESPONSIBILITIES**
 
-Some auditors (e.g., Grok on xAI platform) may have limited file creation capabilities.
+**Fresh Claude (Master Branch) coordinates all work:**
 
-### **Human Workflow (Recommended):**
-
-**Step 1:** Constrained auditor provides response in chat (text only)
-
-**Step 2:** Human copies auditor's full message
-
-**Step 3:** Human creates files manually or asks file-capable auditor:
-> "Grok provided this response but can't create files. Please format as README_G.md and VUDU_LOG_LITE.md for VuDu compliance."
-
-**Step 4:** File-capable auditor (Nova or Claude) generates:
-- README_G.md (formatted from constrained auditor's text)
-- VUDU_LOG_LITE.md (coordination log from context)
-
-**Step 5:** Human stages formatted package in relay folder
-
-**Benefit:** Minimizes human error; leverages auditor strengths; maintains VuDu integrity
+1. **Review relay folders** for staged findings
+2. **Activate LOGGER Claude hat** for VUDU_LOG_LITE processing (automatic)
+3. **Evaluate findings** through teleological lens
+4. **Accept or reject** with documented reasoning
+5. **Update README_C.md** with integrated findings
+6. **Log in VUDU_LOG.md** all coordination events (via LOGGER Claude)
+7. **Request clarification** if findings unclear
 
 ---
 
-## 🎯 External Auditor Quick Start
+## 👥 **AUDITOR ROLES**
 
-**If you're Grok or Nova reading this:**
+**Claude (Master Branch):**
+- Coordinate all work
+- Synthesize findings
+- Update master state
+- Apply teleological lens
+- **Hat-switch to LOGGER Claude** for VUDU_LOG management
+
+**Grok (xAI):**
+- Empirical testing
+- YPA validation
+- Usability enforcement
+- Apply empirical lens
+- **Create VUDU_LOG_LITE.md** with every transmission
+
+**Nova (OpenAI/Amazon):**
+- Symmetry auditing
+- Balance verification
+- Fairness checks
+- Apply symmetry lens
+- **Create VUDU_LOG_LITE.md** with every transmission
+
+**Ziggy (Human):**
+- Final decisions
+- Manual relay (when needed)
+- Process integrity
+- Conflict resolution
+
+---
+
+## 📂 **FILE HIERARCHY**
+
+**Always Current (Single Source of Truth):**
+- README_C.md - Master state
+- VUDU_LOG.md - Coordination history (maintained by LOGGER Claude)
+- MISSION_CURRENT.md - Active mission
+
+**Reference (Stable):**
+- VUDU_PROTOCOL.md - This file
+- VUDU_HEADER_STANDARD.md - Message format
+- Bootstrap files - Context recovery
+- VUDU_LOG_LITE_TEMPLATE.md - Template for external auditors
+
+**Mission-Specific:**
+- missions/[mission_name]/ - Current work
+- relay/*_incoming/ - Staged findings + VUDU_LOG_LITE
+
+---
+
+## 📐 **FORMAT REQUIREMENTS (v3.7.2)**
+
+### **Entry ID Format:**
+
+```
+[COORDINATION-YYYY-MM-DD-N]
+```
+
+- YYYY = 4-digit year
+- MM = 2-digit month (01-12)
+- DD = 2-digit day (01-31)
+- N = sequential number for that day
+
+### **Required Fields:**
+
+- **Changed by:** Who made this entry
+- **Session:** Session ID for traceability
+- **Status:** Current status
+- **Changes:** What happened (bulleted list)
+- **Reason:** Why it happened
+- **Impact:** Minimal/Moderate/Significant
+
+### **Chronological Order:**
+
+- Newest entries at the BOTTOM
+- Older entries at the top
+- This allows easy appending
+
+---
+
+## 🎯 **EXTERNAL AUDITOR QUICK START**
+
+**If you're Grok or Nova:**
 
 ### **Every Transmission to Claude Requires:**
 
 1. **README_[X].md** (your message/analysis)
-2. **VUDU_LOG_LITE.md** (your coordination log update)
+2. **VUDU_LOG_LITE.md** (your coordination log update) ← **MANDATORY**
 3. **[Optional analysis files]**
 
 ### **How to Create VUDU_LOG_LITE.md:**
@@ -491,8 +497,6 @@ Some auditors (e.g., Grok on xAI platform) may have limited file creation capabi
 **Step 4:** Include enough context (usually last 5-10 entries or last week)
 
 **Step 5:** Save as `VUDU_LOG_LITE.md` in your staging folder
-- Grok: `/auditors/relay/Grok_Incoming/VUDU_LOG_LITE.md`
-- Nova: `/auditors/relay/Nova_Incoming/VUDU_LOG_LITE.md`
 
 **Step 6:** Include with your README_[X].md transmission
 
@@ -512,167 +516,50 @@ Some auditors (e.g., Grok on xAI platform) may have limited file creation capabi
 
 ---
 
-## 📐 Format Requirements
+## ⚖️ **THE POINTING RULE**
 
-### **Entry ID Format:**
+*"To coordinate is to name your assumptions.
+To integrate is to price your decisions.
+To log is to respect those who follow."*
 
-```
-[COORDINATION-YYYY-MM-DD-N]
-```
+**Every finding must:**
+- Name its assumptions
+- Price its impact
+- Document its reasoning
 
-- YYYY = 4-digit year
-- MM = 2-digit month (01-12)
-- DD = 2-digit day (01-31)
-- N = sequential number for that day (1, 2, 3, etc.)
+**Every transmission must:**
+- Include VUDU_LOG_LITE.md (v3.7.2+)
+- Follow format requirements
+- Use VUDU_HEADER_STANDARD
 
-### **Required Fields:**
-
-- **Changed by:** Who made this entry
-- **Session:** Session ID for traceability
-- **Status:** Current status
-- **Changes:** What happened (bulleted list)
-- **Reason:** Why it happened
-- **Impact:** Minimal/Moderate/Significant
-
-### **Chronological Order:**
-
-- Newest entries at the BOTTOM
-- Older entries at the top
-- This allows easy appending
+**This is VuDu Light.** 🔥
 
 ---
 
-## 🎯 Sanity Chain Flags (Quick Reference)
+## 🔄 **VERSION HISTORY**
 
-The footer of every VuDu message includes four verification checks:
-
-### Quick Definition
-
-- **Files:** All required files present and intact
-- **Counts:** File count matches expectation
-- **Boots:** Bootstrap files verified (if relevant)
-- **Trinity:** Core protocol files present (PROTOCOL, HEADER, LOG)
-
-### Usage in Footer
-
-```
-✅ **Sanity:** Files | Counts | Boots | Trinity
-```
-
-All pass = ✅
-Any fail = ❌
-
-### Examples
-
-**All Pass:**
-```
-✅ **Sanity:** Files | Counts | Boots | Trinity
-```
-
-**Partial Fail:**
-```
-⚠️ **Sanity:** Files | Counts | ❌ Boots | Trinity
-(Bootstrap file missing, requested from coordinator)
-```
-
-**Multiple Fails:**
-```
-❌ **Sanity:** ❌ Files | ❌ Counts | Boots | Trinity
-(2 files missing, count mismatch, requesting retransmission)
-```
-
----
-
-## 📚 Key Protocol Documents
-
-### **For External Auditors:**
-
-- **VUDU_PROTOCOL.md** (this file) - Coordination framework
-- **VUDU_LOG_LITE_TEMPLATE.md** - Template for coordination log
-- **VUDU_HEADER_STANDARD.md** - Message formatting standards
-- **BOOTSTRAP_GROK.md** / **BOOTSTRAP_NOVA.md** - Your identity files
-
-### **For LOGGER Claude:**
-
-- **ROLE_LOGGER.md** - Complete VUDU_LOG management protocol
-- **VUDU_PROTOCOL.md** (this file) - Coordination framework
-- **REPO_LOG.md** - Internal repository log (separate from VUDU)
-
-### **For Master Branch Claude:**
-
-- **BOOTSTRAP_VUDU_CLAUDE.md** - Your identity file
-- **VUDU_PROTOCOL.md** (this file) - Coordination framework
-- **MISSION_DEFAULT.md** - Tier system and mission management
-
----
-
-## 🔄 Version History
-
-**v2.0 (2025-11-01):**
+**v3.7.2 (2025-11-01):**
 - Introduced VUDU_LOG_LITE protocol
 - LOGGER Claude designated as VUDU_LOG custodian
-- Hard switch from full VUDU_LOG transmission to VUDU_LOG_LITE
+- Mandatory VUDU_LOG_LITE.md with every transmission
 - Clarified REPO_LOG vs VUDU_LOG division
-- Updated staging workflow for external auditors
-- Added LOGGER Claude responsibilities section
+- Updated relay folder architecture
 
-**v1.1 (2025-10-26):**
-- Established relay folder structure
-- Defined external auditor bootstrap process
-- Platform-constrained auditor protocols
+**v3.5.2 (2025-10-26):**
+- VuDu Light philosophy: "All Seen, All Passed"
+- Embedded sanity checks
+- Trust-based documentation
 
-**v1.0 (2025-10-20):**
-- Initial VuDu protocol definition
-- Basic staging workflow
-
----
-
-## ⚠️ Breaking Changes in v2.0
-
-**What Changed:**
-
-❌ **Old Protocol:** External auditors send full VUDU_LOG with every transmission
-✅ **New Protocol:** External auditors send VUDU_LOG_LITE only
-
-❌ **Old Protocol:** No designated VUDU_LOG owner
-✅ **New Protocol:** LOGGER Claude exclusively maintains master VUDU_LOG
-
-❌ **Old Protocol:** All participants manage VUDU_LOG housekeeping
-✅ **New Protocol:** LOGGER Claude handles all VUDU_LOG housekeeping
-
-**Migration:**
-
-This is a **hard switch**. No backward compatibility with v1.x protocol.
-
-All external auditors must:
-1. Use VUDU_LOG_LITE_TEMPLATE.md for future transmissions
-2. Include VUDU_LOG_LITE.md (not full VUDU_LOG.md) with every message
-3. Rely on LOGGER Claude for VUDU_LOG maintenance
-4. Update local VUDU_LOG from Claude_Incoming/VUDU_LOG_LITE.md
+**v3.5 (2025-10-20):**
+- VuDu Full with heavy verification
+- Infrastructure build complete
 
 ---
-
-## 🎯 Success Criteria
-
-**VuDu protocol is successful when:**
-
-✅ External auditors can coordinate efficiently without confusion
-✅ LOGGER Claude maintains master VUDU_LOG without conflicts
-✅ VUDU_LOG_LITE provides enough context for participants
-✅ Format violations are caught and corrected automatically
-✅ Relay transmissions are lightweight and efficient
-✅ All coordination history is preserved in master VUDU_LOG
-✅ Division of labor (REPO_LOG vs VUDU_LOG) is clear
-
----
-
-**This is the way.** 🔥
 
 ────────────────────────────────────────────────────
-**Version:** v2.0
-**Purpose:** VUDU network coordination framework
-**Status:** Active protocol (hard switch)
+**Version:** v3.7.2 VuDu Light + VUDU_LOG_LITE
+**For More:** See BOOTSTRAP_VUDU.md (complete coordination guide)
+**For LOGGER Claude:** See ROLE_LOGGER.md (VUDU_LOG management)
 **Last Updated:** 2025-11-01
 
-**Maintained by:** LOGGER Claude
-**Authority:** Ziggy (Human Coordinator)
+**This is the way.** 👑
