@@ -53,15 +53,15 @@ LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-5]
 ## 📊 COORDINATION CHECKPOINT
 
 **Last Full Coordination:** 2025-11-01
-**Entries Since:** 9
-**Pending Items:** 0 (Review Claude + Logger roles deployed ✅)
+**Entries Since:** 10
+**Pending Items:** 0 (REPO_LOG Protocol advertised in bootstrap files ✅)
 
 ### Category Pointers:
 
 - **[TASK_MOVEMENT]:** Last entry 2025-11-01-10
 - **[VALIDATION]:** Last entry 2025-10-29-2
 - **[PENDING_ACTIONS]:** Last entry 2025-11-01-1
-- **[DOCUMENTATION]:** Last entry 2025-11-01-11
+- **[DOCUMENTATION]:** Last entry 2025-11-01-12
 - **[STRUCTURE]:** Last entry 2025-11-01-1
 - **[DEPLOYMENTS]:** Last entry 2025-10-29-2
 - **[ALL_CHANGES]:** Last entry 2025-11-01-1
@@ -69,6 +69,40 @@ LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-5]
 -----
 
 ## 📝 CHANGE LOG
+
+### [DOCUMENTATION-2025-11-01-12] 2025-11-01 - REPO_LOG Protocol Advertised in Bootstrap Files
+
+**Categories:** [DOCUMENTATION]
+**Changed by:** DOC_CLAUDE (Repo Librarian)
+**Session ID:** claude/onboarding-88mph-review-011CUgHTs3EjgHdXg9Sy4Tvf
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `UPDATED`: /auditors/Bootstrap/BOOTSTRAP_VUDU_CLAUDE.md - Added REPO_LOG Protocol section (basics + pointer to ROLE_LOGGER.md), updated Doc_Claude hat-switching reference
+- `UPDATED`: /auditors/Bootstrap/BOOTSTRAP_GROK.md - Added REPO_LOG Protocol section (basics + pointer to ROLE_LOGGER.md)
+- `UPDATED`: /auditors/Bootstrap/BOOTSTRAP_NOVA.md - Added REPO_LOG Protocol section (basics + pointer to ROLE_LOGGER.md)
+
+**Reason:** Defense in depth - advertise ROLE_LOGGER availability in bootstrap files, similar to DOC_CLAUDE blessing protocol. User and architect realized bootstrap files should provide awareness + basics + pointer to full guidance, not full duplication. Pattern: Bootstrap = "I know I need to do this", ROLE_LOGGER = "Here's exactly how", Doc_Claude = "Let me check it".
+
+**Impact:** Minimal
+
+**REPO_LOG Protocol Section Features:**
+- **Awareness:** All changes MUST be logged in REPO_LOG.md
+- **Basic Requirements:** Entry ID format, categories, complete documentation
+- **Template:** Simple copy-paste template for quick entry creation
+- **Pointer:** Direct link to `/docs/repository/librarian_tools/ROLE_LOGGER.md` for full guidance
+- **Philosophy:** Defense in depth (3 layers: awareness, guidance, enforcement)
+
+**Pattern Replicated:**
+Similar to DOC_CLAUDE blessing protocol integration:
+1. Bootstrap files provide basics and awareness
+2. Specialized tools provide full detailed help
+3. Avoid duplicating full format in bootstrap
+4. Point to the tool for comprehensive guidance
+
+**Follow-up Required:** NO (REPO_LOG Protocol now advertised across all 3 bootstrap files)
+
+-----
 
 ### [DOCUMENTATION-2025-11-01-11] 2025-11-01 - Role Renaming + ROLE_REVIEW Deployed
 
