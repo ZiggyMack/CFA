@@ -169,7 +169,7 @@ When you receive files from Claude in this folder:
 
 ---
 
-**Protocol Version:** VuDu Light v3.7.2 + VUDU_LOG_LITE
+**Protocol Version:** VuDu v3.7.2 + VUDU_LOG_LITE
 **Your Identity:** NOVA - Symmetry Auditor
 **Last Updated:** 2025-11-01
 **Status:** Active ✅

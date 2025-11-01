@@ -106,7 +106,7 @@ This is LOGGER Claude's **outgoing message staging area** for VUDU network coord
 
 ---
 
-**Protocol Version:** VuDu Light v3.7.2 + VUDU_LOG_LITE
+**Protocol Version:** VuDu v3.7.2 + VUDU_LOG_LITE
 **Last Updated:** 2025-11-01
 **Status:** Active ✅
 

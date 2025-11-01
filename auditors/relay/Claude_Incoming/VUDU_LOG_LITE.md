@@ -15,7 +15,7 @@ LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-16]
 
 **Last Updated:** 2025-11-01
 **Maintained by:** LOGGER_CLAUDE
-**For network:** CFA VuDu Light v3.7+
+**For network:** CFA VuDu v3.7+
 
 ---
 
