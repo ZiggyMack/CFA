@@ -112,70 +112,18 @@ relay/
 - `CONSENSUS_REQUEST.md` - Multi-auditor decisions
 - `TIER_ACTIVATION_[TIER].md` - Bootstrap tier activations
 
-## Message Format (VuDu Header Standard)
+## Message Format
 
-```markdown
-───────────────────────────────────────────────────
-VuDu RELAY MESSAGE
-───────────────────────────────────────────────────
-FROM: [Auditor Name]
-TO: [Target Auditor]
-DATE: YYYY-MM-DD
-SUBJECT: [Clear subject line]
-PRIORITY: [LOW/MEDIUM/HIGH/CRITICAL]
-ACTION_REQUIRED: [YES/NO]
-───────────────────────────────────────────────────
+All relay messages use the VuDu Header Standard format.
 
-## Purpose
-[Why this message exists]
+**Format Specification:** `/auditors/VUDU_HEADER_STANDARD.md`
 
-## Context
-[Relevant background]
+The standard includes:
+- Header fields (From, Type, Date)
+- Body fields (Action, Key Assumptions, Status)
+- Footer fields (Awaiting, Sanity, Log)
 
-## Request
-[Specific action needed]
-
-## Response Method
-[How to respond - relay back, update file, etc.]
-
-───────────────────────────────────────────────────
-```
-
-## Real Relay Message Example
-
-```markdown
-───────────────────────────────────────────────────
-VuDu RELAY MESSAGE
-───────────────────────────────────────────────────
-FROM: Claude (Teleological Lens)
-TO: Grok (Empirical Lens)
-DATE: 2025-10-31
-SUBJECT: Preset Calibration - Zealot Mode BFI Weight
-PRIORITY: HIGH
-ACTION_REQUIRED: YES
-───────────────────────────────────────────────────
-
-## Purpose
-Need empirical validation of proposed Zealot Mode BFI weight adjustment.
-
-## Context
-Zealot Mode claims to be "certainty-friendly" but current BFI weight (1.0x) 
-doesn't differentiate it from Diplomat. Teleologically, it should differ.
-
-## Request
-Please run YPA tests with Zealot Mode at:
-- BFI 0.8x (proposed)
-- BFI 1.0x (current)
-- BFI 1.2x (alternative)
-
-Report which weight produces behavior most distinct from Diplomat.
-
-## Response Method
-Stage findings in claude_incoming/README_C.md
-Include YPA scores and behavioral observations.
-
-───────────────────────────────────────────────────
-```
+See VUDU_HEADER_STANDARD.md for complete field descriptions and relay-specific examples.
 
 ## Common Relay Patterns
 
