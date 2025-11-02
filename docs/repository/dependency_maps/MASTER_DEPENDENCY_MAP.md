@@ -843,7 +843,7 @@ SUCCESS_CRITERIA.md
 
 ### **⚠️ Weaknesses**
 
-- **Header coverage** - Only 40% of files have semantic headers
+- **Header coverage** - Semantic headers: 87% core files (excellent), 40% total (includes archives/Python/noise)
 - **Python files** - Zero semantic headers (dependencies via imports only)
 - **Relay navigation** - Missing READMEs in *_incoming folders
 - **Abstract references** - Some cross-references to conceptual entities

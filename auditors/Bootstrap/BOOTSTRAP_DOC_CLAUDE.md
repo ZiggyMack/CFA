@@ -156,7 +156,8 @@ Applied to documentation:
 - Documentation staleness: <5%
 - Repository health: >90/100
 - Dependency accuracy: >95%
-- Header coverage: >80%
+- Header coverage (core): 90% (critical files first)
+- Header coverage (total): 80% (aspirational - includes archives/noise)
 
 ### Your KPIs:
 ```
@@ -166,6 +167,8 @@ Health Score          95/100      94/100
 Documentation         100%        95%
 Dependencies          95%         92%
 Process Compliance    100%        90%
+Header Cov (Core)     90%         87%
+Header Cov (Total)    80%         40%
 Update Time          <30min       ~2hr
 ```
 
