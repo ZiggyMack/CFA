@@ -475,11 +475,19 @@ cfa_app/ (Repository Root)
 │   │
 │   ├── 📄 README.md                   ✅ Complete - Documentation navigation
 │   │
-│   ├── 📁 Process/                    ✅ PROCESS DOCUMENTATION
-│   │   ├── 📄 README.md              (Assumed present)
-│   │   ├── 📄 deployment_workflow.md
-│   │   ├── 📄 validation_process.md
-│   │   └── [8+ process documentation files]
+│   ├── 📁 Process/                    ✅ PROCESS DOCUMENTATION (Process Claude's domain)
+│   │   ├── 📄 README.md              ✅ Present (stub)
+│   │   ├── 📄 PROCESS.md             🆕 v1.0 - Core process doc (learned from failures)
+│   │   ├── 📄 INTEGRITY_CHECKLIST.md ✅ Present
+│   │   │
+│   │   ├── 📁 failures/              🆕 PROCESS FAILURE CASE STUDIES
+│   │   │   └── 📄 README.md          ✅ Complete - Failure documentation guide
+│   │   │
+│   │   ├── 📁 templates/             🆕 PROCESS TEMPLATES
+│   │   │   └── 📄 README.md          ✅ Complete - Template index
+│   │   │
+│   │   └── 📁 checklists/            🆕 PROCESS CHECKLISTS
+│   │       └── 📄 README.md          ✅ Complete - Quick reference index
 │   │
 │   ├── 📁 Validation/                 ✅ VALIDATION REPORTS
 │   │   ├── 📄 README.md              ✅ Complete - Validation index
@@ -534,7 +542,9 @@ cfa_app/ (Repository Root)
 │           ├── 📄 HEADER_STANDARD.md ✅ Complete - Semantic header spec
 │           ├── 📄 ROLE_LOGGER.md     ✅ Complete - REPO_LOG role
 │           ├── 📄 ROLE_VALIDATION.md ✅ Enhanced - Validation + systematic mode
-│           └── 📄 ROLE_REVIEW.md     ✅ v1.1 - Review Claude + Tree Structure Validator
+│           ├── 📄 ROLE_REVIEW.md     ✅ v1.1 - Review Claude + Tree Structure Validator
+│           ├── 📄 ROLE_SANITIZE.md   ✅ Complete - Sanitize Claude role
+│           └── 📄 ROLE_PROCESS.md    🆕 v1.0 - Process Expert (Nov 2)
 │
 ├── 📁 pages/                          ⚠️  PYTHON FILES (No semantic headers - expected)
 │   ├── 📄 __init__.py                ⚠️  Package marker
@@ -655,6 +665,55 @@ MISSION_BRIEF.md
 **Purpose:** Translate mission goals into working code
 
 **Critical for:** Preset calibration, feature development, quality assurance
+
+-----
+
+### **Specialized Claude Roles Chain** (DOC_CLAUDE Consultants)
+
+```
+PROCESS Claude (Process Expert)
+  → /docs/Process/PROCESS.md (process documentation)
+    → /docs/Process/failures/ (failure case studies)
+      → /docs/Process/templates/ (process templates)
+        → /docs/Process/checklists/ (quick references)
+
+DOC_CLAUDE consults PROCESS Claude when:
+  → Making system-wide changes (methodology, structure, naming)
+  → Questioning process adherence
+  → Documenting failures as learning opportunities
+  → Adding new processes
+```
+
+**Purpose:** Prevent repeated mistakes through institutional memory
+
+**Critical for:** Methodology changes, structural changes, process verification, failure learning
+
+**Process Claude's Domain Dependencies:**
+```
+PROCESS.md
+  ├── DEPENDS_ON: Actual failures (documented via REPO_LOG)
+  ├── NEEDED_BY: DOC_CLAUDE (via ROLE_PROCESS activation)
+  └── UPDATES_WHEN: New failures occur, processes refined
+
+/docs/Process/failures/
+  ├── DEPENDS_ON: REPO_LOG (source of truth for what happened)
+  └── NEEDED_BY: Process creation
+
+/docs/Process/templates/
+  ├── DEPENDS_ON: PROCESS.md (source processes)
+  └── NEEDED_BY: Doc Claude creating new processes
+
+/docs/Process/checklists/
+  ├── DEPENDS_ON: PROCESS.md (full processes)
+  └── NEEDED_BY: Quick process verification
+```
+
+**Process Claude Ripple Effects:**
+When processes change:
+- PROCESS.md → templates need updating
+- PROCESS.md → checklists need updating
+- New process added → This file needs Process Claude section update
+- Process refined → Examples in PROCESS.md need updating
 
 -----
 

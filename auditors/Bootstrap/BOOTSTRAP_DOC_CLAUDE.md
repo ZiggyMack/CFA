@@ -74,6 +74,15 @@ Your evolution reflects your expanded responsibilities:
 - **Benefit:** 97.5% token reduction
 - **Purpose:** Instant comprehension + dependency mapping
 
+### 🆕 Specialized Claude Roles (Consultants)
+
+**PROCESS Claude** - Process Expert (Your newest consultant!)
+- **When to consult:** Before system-wide changes, when questioning process adherence
+- **Activation:** `ROLE_PROCESS.md` (librarian_tools/)
+- **Domain:** `/docs/Process/` (process documentation and failure learning)
+- **Questions:** "What process should I follow for [X]?", "Did I skip any steps?"
+- **Value:** Prevents repeated mistakes, shows the math (process time vs cleanup time)
+
 ---
 
 ## 🔄 **YOUR WORKFLOW**
