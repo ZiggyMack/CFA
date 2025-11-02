@@ -1,9 +1,10 @@
-<!-- deps: validation_process, documentation, bootstrap_system -->
+<!-- deps: validation_process, documentation, bootstrap_system, VALIDATION_MAP -->
 # ROLE_VALIDATION.md - Validation Expert Role for DOC_CLAUDE
 
-**Purpose:** Activate Validation Expert role when deep validation knowledge is needed
+**Purpose:** Activate Validation Expert role for validation history analysis AND systematic validation execution
 **Owner:** DOC_CLAUDE (88MPH Repo Librarian)
 **Created:** 2025-11-01
+**Updated:** 2025-11-02 (Added Systematic Validation Mode)
 **Status:** Active Role Pattern
 
 ---
@@ -16,12 +17,13 @@
 - Identifying validation gaps or patterns
 - Supporting deployment decisions with validation data
 - Tracking validation effectiveness over time
+- **[NEW] Performing systematic validation** using VALIDATION_MAP.md
+- **[NEW] Stress testing repository quality** before major releases
 
 **Do NOT activate for:**
-- Writing new validation reports (that's Tier 3 work)
-- Performing validations (you analyze existing reports)
 - Making deployment decisions (you inform them)
 - General documentation work (use standard DOC_CLAUDE)
+- Code development (you validate, not build)
 
 ---
 
@@ -227,6 +229,173 @@ Recommend validation priorities:
 
 ---
 
+## 🔍 **SYSTEMATIC VALIDATION MODE** _(NEW - 2025-11-02)_
+
+### **When to Use Systematic Validation:**
+
+**Trigger scenarios:**
+- User reports "Doc Claude reporting already-completed items"
+- Before major version bumps (v3.7 → v3.8)
+- After large merges (>50 files changed)
+- Weekly during active development
+- Before deployment decisions
+- When stale checklists suspected
+
+### **Validation Process Using VALIDATION_MAP.md:**
+
+**Step 1: Activate Validation Mode**
+```markdown
+I am activating ROLE_VALIDATION in SYSTEMATIC VALIDATION MODE.
+
+Purpose: [Specific trigger - e.g., "Stress test before v3.8.0 release"]
+Tool: VALIDATION_MAP.md (6 categories, 18 checks)
+Expected Duration: 60-90 minutes
+```
+
+**Step 2: Read VALIDATION_MAP.md**
+```markdown
+Reading /docs/repository/dependency_maps/VALIDATION_MAP.md...
+
+Validation categories understood:
+1. Documentation Health (3 checks)
+2. Loop Detection (3 checks)
+3. Structural Integrity (3 checks)
+4. Standards Compliance (3 checks)
+5. State Consistency (3 checks)
+6. Process Adherence (3 checks)
+
+Total: 18 checks to perform
+```
+
+**Step 3: Execute All Checks Systematically**
+
+For each check in VALIDATION_MAP.md:
+1. **Read the check description** - Understand what to validate
+2. **Follow the validation process** - Execute steps exactly
+3. **Document findings** - Note any failures with file:line references
+4. **Mark pass/fail** - Update scorecard
+
+**Example:**
+```markdown
+Executing Check 1.1: Stale Checklists
+├─ Read DASHBOARD.md... ✅
+├─ Read MASTER_DEPENDENCY_MAP.md... ✅
+├─ Search for TODO items... Found 2 stale
+├─ Cross-reference REPO_LOG... Confirmed resolved 2025-11-01
+└─ Status: ❌ FAIL
+
+Finding: DASHBOARD.md lines 45-67 contain stale checklist
+- "Complete preset_calibration/README.md" (completed 2025-10-31)
+- "Fix archive naming" (completed 2025-11-01)
+
+Fix: Add STATUS UPDATE section at top of DASHBOARD.md
+```
+
+**Step 4: Calculate Validation Score**
+```markdown
+Validation Scorecard:
+- Category 1: Documentation Health     [2/3] = 67%
+- Category 2: Loop Detection           [3/3] = 100%
+- Category 3: Structural Integrity     [3/3] = 100%
+- Category 4: Standards Compliance     [2/3] = 67%
+- Category 5: State Consistency        [3/3] = 100%
+- Category 6: Process Adherence        [3/3] = 100%
+
+OVERALL VALIDATION SCORE: [16/18] = 89%
+Grade: 🟡 Good (target ≥90%)
+```
+
+**Step 5: Prioritize Findings**
+```markdown
+Critical Findings (Fix Immediately):
+1. Stale checklists in DASHBOARD.md (lines 45-67)
+2. Broken link in README.md (line 123)
+
+Important Findings (Fix This Week):
+3. Header coverage at 42% (target 80%)
+
+Minor Findings (Nice to Have):
+4. Inconsistent capitalization in 2 file names
+```
+
+**Step 6: Execute Fixes for Critical Findings**
+
+Fix critical findings immediately:
+```markdown
+Fixing: Stale checklists in DASHBOARD.md
+
+1. Add STATUS UPDATE section at top
+2. Mark resolved items with ✅
+3. Update version (v1.0 → v1.1)
+4. Update LAST_UPDATE date
+5. Commit with descriptive message
+
+Status: Fixed ✅
+```
+
+**Step 7: Document Validation Results**
+
+Create validation report using template from VALIDATION_MAP.md:
+```markdown
+File: /docs/Validation/reports/2025-11-02_VALIDATION_REPORT.md
+
+Overall Score: 89% (🟡 Good)
+Critical Findings: 2 (both fixed)
+Important Findings: 1 (plan created)
+Next Validation: 2025-11-09
+```
+
+**Step 8: Deactivate Systematic Validation Mode**
+```markdown
+Systematic validation complete.
+
+Files fixed: 3
+Commits made: 2
+Score: 89% → Re-run validation to confirm fixes brought to ≥90%
+
+Deactivating ROLE_VALIDATION.
+Returning to standard DOC_CLAUDE mode.
+```
+
+### **Validation Tools:**
+
+**Primary Tool:**
+- **VALIDATION_MAP.md** - Systematic 18-check validation framework
+  - Location: `/docs/repository/dependency_maps/VALIDATION_MAP.md`
+  - Contains: 6 categories, 18 checks, scoring rubric, report template
+  - Updated: 2025-11-02
+
+**Supporting Tools:**
+- **DASHBOARD.md** - Current repository health metrics
+- **MASTER_DEPENDENCY_MAP.md** - Dependency tracking and issues
+- **REPO_LOG.md** - Source of truth for state changes
+- **88MPH_PROTOCOL.md** - Rapid repository assessment
+
+### **Validation vs Historical Analysis:**
+
+**Two modes of ROLE_VALIDATION:**
+
+| Mode | Purpose | Tool | Output |
+|------|---------|------|--------|
+| **Historical Analysis** | Answer questions about past validations | Read `/docs/Validation/` reports | Q&A responses |
+| **Systematic Validation** | Perform quality checks on current state | Use `VALIDATION_MAP.md` | Validation report + fixes |
+
+**When to use which mode:**
+- User asks "What was validated in v3.8.0?" → Historical Analysis
+- User asks "Are there any stale checklists?" → Systematic Validation
+- User says "Stress test the repository" → Systematic Validation
+- User says "What did Phase 3 validation find?" → Historical Analysis
+
+### **Success Metrics for Systematic Validation:**
+
+✅ **Zero False Positives** - No stale checklists causing confusion
+✅ **Zero Missed Loops** - All circular dependencies caught
+✅ **High Quality Score** - Validation score ≥90% consistently
+✅ **Fast Fixes** - Critical findings fixed within 24 hours
+✅ **Process Improvement** - Common issues addressed at root cause
+
+---
+
 ## 🤝 **COLLABORATION INTERFACES**
 
 ### **With DOC_CLAUDE (Standard Mode)**
@@ -421,8 +590,9 @@ Answer: "v3.8.0 validated 2025-10-30. Status: PASSED. Core systems validated suc
 
 ## 📖 **RELATED DOCUMENTATION**
 
-**Data Source:**
-- `/docs/Validation/` - All validation reports (primary source)
+**Validation Tools:**
+- **`/docs/repository/dependency_maps/VALIDATION_MAP.md`** - 🆕 Systematic validation checklist (18 checks)
+- `/docs/Validation/` - All validation reports (historical analysis)
 - `/docs/Validation/Criteria/` - Validation criteria and checklists
 - `/docs/Validation/reports/` - Archived detailed reports
 
