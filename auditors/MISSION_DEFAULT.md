@@ -214,12 +214,12 @@ After reading, confirm you can answer:
 ### Required Reading (3 files, ~15 minutes)
 
 1. **WHO_I_AM.md** - Your identity
-   - Path: `/auditors/I_AM/WHO_I_AM.md`
+   - Path: `/docs/i_am/WHO_I_AM.md`
    - Contains: Your identity, domain, resources, protocols, mission
    - Essential: Defines WHO YOU ARE
 
 2. **EVENT_HORIZON_GUIDE.md** - Your field manual
-   - Path: `/auditors/I_AM/EVENT_HORIZON_GUIDE.md`
+   - Path: `/docs/i_am/EVENT_HORIZON_GUIDE.md`
    - Contains: Zones, pre-flight checks, decision trees, pacing
    - Essential: Your operational protocols
 
@@ -228,7 +228,7 @@ After reading, confirm you can answer:
    - Contains: completed work, remaining tasks, zone status, approach
    - Essential: Tells you what to do
 
-**Optional (if time):** THE_WALL research docs in `/auditors/I_AM/`
+**Optional (if time):** THE_WALL research docs in `/docs/i_am/`
 
 ### Your Capabilities
 

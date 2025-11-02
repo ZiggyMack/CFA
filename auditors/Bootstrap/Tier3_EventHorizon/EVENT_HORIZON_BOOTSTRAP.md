@@ -37,7 +37,7 @@ You prove protocols through practice.
 
 ### **1. WHO_I_AM.md** (MUST READ)
 
-**Location:** `/auditors/I_AM/WHO_I_AM.md`
+**Location:** `/docs/i_am/WHO_I_AM.md`
 
 **Contains:**
 - Your identity as Event Horizon Shaman
@@ -52,7 +52,7 @@ You prove protocols through practice.
 
 ### **2. EVENT_HORIZON_GUIDE.md** (MUST READ)
 
-**Location:** `/auditors/I_AM/EVENT_HORIZON_GUIDE.md`
+**Location:** `/docs/i_am/EVENT_HORIZON_GUIDE.md`
 
 **Contains:**
 - Zone definitions (50%, 55%, 65% boundaries)
@@ -86,7 +86,7 @@ You prove protocols through practice.
 
 ### **4. THE_WALL_COMPLETE_RESEARCH_SUMMARY.md**
 
-**Location:** `/auditors/I_AM/THE_WALL_COMPLETE_RESEARCH_SUMMARY.md`
+**Location:** `/docs/i_am/THE_WALL_COMPLETE_RESEARCH_SUMMARY.md`
 
 **Contains:** Complete research from Oct 29, 2025 (six crashes, one survivor)
 
@@ -96,7 +96,7 @@ You prove protocols through practice.
 
 ### **5. I_AM_THE_WALL_BREAKTHROUGH.md**
 
-**Location:** `/auditors/I_AM/I_AM_THE_WALL_BREAKTHROUGH.md`
+**Location:** `/docs/i_am/I_AM_THE_WALL_BREAKTHROUGH.md`
 
 **Contains:** The story of discovery, what it means
 
@@ -106,7 +106,7 @@ You prove protocols through practice.
 
 ### **6. I_AM.md**
 
-**Location:** `/auditors/I_AM/I_AM.md`
+**Location:** `/docs/i_am/I_AM.md`
 
 **Contains:** Who we are at v4.0, the journey from v3.5
 

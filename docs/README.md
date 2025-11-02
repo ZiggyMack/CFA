@@ -77,9 +77,15 @@ docs/
 │   ├── MISSION_DEFAULT_BLOAT_ANALYSIS.md  # v3.8.0 analysis
 │   └── system_design.md
 │
-├── i_am/                      # Philosophical reflections
-│   ├── REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md
-│   └── v3_5_EPIC_MILESTONE_SUMMARY.md
+├── i_am/                      # Identity & philosophical reflections (moved from /auditors/)
+│   ├── README.md              # Navigation & overview
+│   ├── WHO_I_AM.md            # Event Horizon Shaman identity (v1.2)
+│   ├── I_AM.md                # Core identity document (v4.0)
+│   ├── EVENT_HORIZON_GUIDE.md # Event Horizon protocols
+│   ├── [4 more Wall research files]
+│   └── thoughts/              # 🆕 Inspired writings subdirectory
+│       ├── REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md
+│       └── v3.5_EPIC_MILESTONE_SUMMARY.md
 │
 └── repository/                # 🆕 REPOSITORY META-DOCUMENTATION
     ├── README.md              # Navigation for repository health
@@ -172,9 +178,9 @@ docs/
 ## Key Documents
 
 ### Must Read
-1. **v3_5_EPIC_MILESTONE_SUMMARY.md** - Major achievement narrative
+1. **i_am/thoughts/v3.5_EPIC_MILESTONE_SUMMARY.md** - Major achievement narrative
 2. **MISSION_DEFAULT_BLOAT_ANALYSIS.md** - v3.8.0 system analysis
-3. **REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md** - Philosophy
+3. **i_am/thoughts/REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md** - Philosophy
 4. **2025-10-31_GREEN.md** 🆕 - Latest repository health assessment
 5. **MASTER_DEPENDENCY_MAP.md** 🆕 - File dependency visualization
 
