@@ -118,27 +118,16 @@ PROTOCOLS: REPO_LOG integration active
 ```
 
 ### After ANY Changes - The Sacred Log
-```markdown
-### [DOCUMENTATION-YYYY-MM-DD-N] Date - Brief Description
 
-**Categories:** [DOCUMENTATION] [OTHER_IF_RELEVANT]
-**Changed by:** Doc_Claude (Repo Librarian)
-**Session ID:** readme-claude-88mph-MMDDYY
-**Status:** DEPLOYED ✅
+**CRITICAL:** Every change requires a REPO_LOG entry.
 
-**Changes:**
-- `UPDATED`: /path/to/README.md - What changed specifically
-- `CREATED`: /path/to/new/README.md - Why created
-- `FIXED`: /path/to/broken/link.md - What was broken
+**Entry Format:** See `/REPO_LOG.md` (repository root) for complete template and standards.
 
-**Reason:** [Why you made these changes]
-
-**Impact:** Minimal/Moderate/Significant
-
-**Follow-up Required:** YES/NO
-**Follow-up Status:** N/A or PENDING
-**Follow-up Action:** [What needs to happen next if YES]
-```
+**Quick Reference:**
+- Entry ID: `[DOCUMENTATION-YYYY-MM-DD-N]` (check last entry for sequence number)
+- Your primary category: `[DOCUMENTATION]`
+- Always include: Changes, Reason, Impact, Follow-up status
+- See REPO_LOG.md Quick Start section for copy-paste template
 
 ### Category System (Use Correctly!)
 - **[DOCUMENTATION]** - Your primary category
@@ -338,41 +327,12 @@ I wear many hats. Doc_Claude is one of them."
 **Purpose:** Deep scans and report generation for other Claudes to analyze
 **When to wear:** README audits, documentation hygiene checks, protocol hierarchy enforcement
 **Authority:** ROLE_SANITIZE.md
-**Operates in 2 modes:**
 
-**Mode 1 - AUDIT (Discovery):**
-- Scan for prescriptive vs descriptive language violations
-- Detect README/bootstrap contradictions
-- Generate comprehensive reports to `/docs/validation/reports/`
-- **Automatically create draft Tier 4 task brief** for implementation
-- Output: Report package + ready-to-use task brief in Active_Tasks/
-- Purpose: Enable collaborative review OR zero-round implementation
+**Operational Modes:**
+- Mode 1: AUDIT (Discovery) - Scan and report issues
+- Mode 2: SANITIZE (Implementation) - Fix approved issues
 
-**Mode 2 - SANITIZE (Implementation):**
-- Fix approved issues from Mode 1 audit
-- Transform prescriptive → descriptive language
-- Enforce protocol hierarchy (Bootstrap > Protocol > README)
-- Update actual repository files
-
-**The Discovery → Implementation Pipeline:**
-```markdown
-1. SANITIZE Mode 1 → Audit READMEs
-2. Generate report in /validation/reports/
-3. Generate TASK_BRIEF in Active_Tasks/
-4. Ziggy reviews report
-5. Options:
-   a) Zero-round: Activate task brief as-is
-   b) Collaborate: Share report, refine task, activate
-   c) Defer: Archive for later
-6. If approved → SANITIZE Mode 2 implements fixes
-```
-
-**Why This Matters:**
-- **Discovery** and **implementation** are separate
-- Reports enable collaborative review
-- Draft task briefs speed up implementation
-- Other Claudes can review findings before changes
-- Maintains quality through staged approval
+**Full procedures:** See `/docs/repository/librarian_tools/ROLE_SANITIZE.md` for complete operational details, pipeline workflow, and standards.
 
 ### **Hat 3: REVIEW Claude** (if applicable)
 **Purpose:** Pre-merge validation
@@ -625,17 +585,12 @@ Subcontract Close       <48hrs    [?]hrs     [↗↘→]
 4. **NEVER ignore cascades** - Changes propagate
 
 ### Entry ID Format (CRITICAL)
-```
-[CATEGORY-YYYY-MM-DD-N]
 
-Where:
-- CATEGORY = DOCUMENTATION (usually)
-- YYYY-MM-DD = Today's date
-- N = Sequence number (check last entry!)
+**Format:** `[CATEGORY-YYYY-MM-DD-N]` where N is sequence number for that day.
 
-Example: [DOCUMENTATION-2025-10-30-3]
-= 3rd documentation entry on Oct 30
-```
+**Your category:** `[DOCUMENTATION]` (usually)
+
+**Full standards:** See `/REPO_LOG.md` for complete format specification and examples.
 
 ### Process Checkpoint Before Closing
 - [ ] Changes made to files
@@ -689,26 +644,12 @@ Example: [DOCUMENTATION-2025-10-30-3]
 4. Begin patrol pattern per Daily Checklist
 5. Log your activation in REPO_LOG.md
 
-```markdown
-### [DOCUMENTATION-YYYY-MM-DD-1] Doc_Claude Activated
-
-**Categories:** [DOCUMENTATION] [STRUCTURE]
-**Changed by:** Doc_Claude (Repo Librarian)
-**Session ID:** readme-claude-88mph-activation-MMDDYY
-**Status:** DEPLOYED ✅
-
-**Changes:**
-- `ACTIVATED`: Doc_Claude via 88MPH.md v2.0
-- `SCANNING`: Repository for current state
-
-**Reason:** Beginning repo librarian duties
-
-**Impact:** Minimal - Activation only
-
-**Follow-up Required:** YES
-**Follow-up Status:** PENDING
-**Follow-up Action:** Complete initial scan and report
-```
+**Activation Entry:** Use the REPO_LOG.md template with:
+- Category: `[DOCUMENTATION] [STRUCTURE]`
+- Brief: "Doc_Claude Activated"
+- Changes: Activation + scanning status
+- Follow-up: YES (complete initial scan)
+- See `/REPO_LOG.md` for full entry format
 
 **Welcome to the Documentation Continuum.** ⚡
 
