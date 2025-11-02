@@ -251,7 +251,7 @@ If a message is confusing, the format is wrong.
 ---
 
 ────────────────────────────────────────────────────
-**Version:** VuDu Light v3.5.2  
-**Purpose:** Message format specification  
-**Last Updated:** 2025-10-26  
+**Version:** VuDu Light v3.5.2
+**Purpose:** Message format specification
+**Last Updated:** 2025-11-01
 **Status:** Format specification locked

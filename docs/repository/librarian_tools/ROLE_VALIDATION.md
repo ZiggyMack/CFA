@@ -4,7 +4,7 @@
 **Purpose:** Activate Validation Expert role for validation history analysis AND systematic validation execution
 **Owner:** DOC_CLAUDE (88MPH Repo Librarian)
 **Created:** 2025-11-01
-**Updated:** 2025-11-02 (Added Systematic Validation Mode)
+**Updated:** 2025-11-02 (Added Systematic Validation Mode + Metadata Accuracy Validation)
 **Status:** Active Role Pattern
 
 ---
@@ -393,6 +393,228 @@ Returning to standard DOC_CLAUDE mode.
 ✅ **High Quality Score** - Validation score ≥90% consistently
 ✅ **Fast Fixes** - Critical findings fixed within 24 hours
 ✅ **Process Improvement** - Common issues addressed at root cause
+
+---
+
+## 🎯 **SPECIALIZED VALIDATION: METADATA ACCURACY** _(NEW - 2025-11-02)_
+
+### **Purpose**
+
+**Catch stale metadata claims in documentation that drift from reality:**
+- Line count claims ("This file is 150 lines") that are now outdated
+- File size claims that no longer match actual size
+- Version numbers in text that don't match semantic headers
+- "Last updated" dates that contradict git/REPO_LOG history
+
+**Why This Matters:**
+- Users rely on metadata for quick understanding
+- Stale metadata erodes trust in documentation
+- Automated validation catches what humans miss
+- Prevents "why did I have to catch this?" moments
+
+### **Trigger Scenarios**
+
+**Invoke Metadata Accuracy Validation when:**
+- User reports "READMEs have wrong line counts"
+- After major structural changes (files moved/renamed/edited heavily)
+- Before version releases
+- Weekly during active development
+- When Doc Claude makes large documentation updates
+
+### **Validation Process**
+
+**Step 1: Activate Metadata Validation Mode**
+```markdown
+I am activating ROLE_VALIDATION for METADATA ACCURACY VALIDATION.
+
+Purpose: Validate all metadata claims across documentation
+Scope: [Specific directory OR full repository]
+Expected Findings: Line counts, file sizes, version claims
+```
+
+**Step 2: Identify Files with Metadata Claims**
+
+Search for common metadata claim patterns:
+```bash
+# Line count claims
+grep -r "lines" --include="*.md" auditors/ docs/ | grep -i "file\|this"
+
+# File size claims
+grep -r "KB\|MB\|bytes" --include="*.md" auditors/ docs/
+
+# Version claims in text
+grep -r "version [0-9]" --include="*.md" auditors/ docs/
+
+# Last updated claims
+grep -r "Last updated\|Updated:" --include="*.md" auditors/ docs/
+```
+
+**Step 3: For Each File, Validate Claims**
+
+**Line Count Validation:**
+```markdown
+File: /auditors/VUDU_PROTOCOL.md
+
+Claim found (line 20): "This protocol is 666 lines"
+Actual count: wc -l /auditors/VUDU_PROTOCOL.md
+Result: 781 lines
+
+Status: ❌ STALE (claimed 666, actual 781)
+Delta: +115 lines (17% drift)
+Fix needed: Update line 20 to reflect current size
+```
+
+**Version Validation:**
+```markdown
+File: /docs/repository/MASTER_DEPENDENCY_MAP.md
+
+Claim found (line 5): "Using v2.2 dependency map"
+Semantic header: VERSION: v2.3
+REPO_LOG: Updated to v2.3 on 2025-11-02
+
+Status: ❌ STALE (claimed v2.2, actual v2.3)
+Fix needed: Update version reference in text
+```
+
+**Last Updated Validation:**
+```markdown
+File: /auditors/Bootstrap/BOOTSTRAP_VUDU_CLAUDE.md
+
+Claim found (line 635): "Last Updated: 2025-10-26"
+Semantic header: LAST_UPDATE: [not present]
+Git log: Last modified 2025-11-02
+REPO_LOG: Updated 2025-11-02
+
+Status: ❌ STALE (claimed 2025-10-26, actual 2025-11-02)
+Fix needed: Add semantic header + update footer date
+```
+
+**Step 4: Generate Validation Report**
+
+```markdown
+## METADATA ACCURACY VALIDATION REPORT
+**Date:** 2025-11-02
+**Scope:** Full repository
+**Validator:** VALIDATION Claude
+
+### Summary
+- Files scanned: 127
+- Files with metadata claims: 23
+- Stale metadata found: 18
+- Accuracy rate: 22% (5/23 accurate)
+- Fix priority: HIGH (>75% stale)
+
+### Findings by Type
+
+**Line Count Claims:**
+- Total files: 12
+- Stale: 10 (83%)
+- Examples:
+  - VUDU_PROTOCOL.md: Claimed 666, actual 781 (+115 lines)
+  - BOOTSTRAP_VUDU_CLAUDE.md: Claimed 637, actual 824 (+187 lines)
+  - README.md: Claimed 100, actual 145 (+45 lines)
+
+**Version Claims:**
+- Total files: 8
+- Stale: 6 (75%)
+- Examples:
+  - MASTER_DEPENDENCY_MAP.md: Claimed v2.2, actual v2.3
+  - VUDU_PROTOCOL.md: Claimed v3.7.1, actual v3.7.2
+
+**Last Updated Claims:**
+- Total files: 11
+- Stale: 8 (73%)
+- Examples:
+  - BOOTSTRAP_VUDU_CLAUDE.md: Claimed 2025-10-26, actual 2025-11-02
+  - ROLE_REVIEW.md: Claimed 2025-10-30, actual 2025-11-02
+
+### Priority Findings (Fix Immediately)
+
+1. **VUDU_PROTOCOL.md** - Line count +17% drift
+2. **BOOTSTRAP_VUDU_CLAUDE.md** - Multiple stale claims
+3. **MASTER_DEPENDENCY_MAP.md** - Version mismatch
+
+### Recommended Actions
+
+**Immediate:**
+1. Doc Claude updates all stale metadata
+2. Add metadata validation to Doc Claude checklist
+3. Include in weekly validation runs
+
+**Preventive:**
+1. Automate line count extraction (no hard-coded claims)
+2. Reference semantic headers for versions (not duplicate)
+3. Git hooks to update "Last Modified" automatically
+
+### Deliverable for Doc Claude
+
+File: METADATA_FIXES_2025-11-02.md (list of all fixes needed)
+Format: file:line:claim:actual:fix_needed
+```
+
+**Step 5: Hand Off to Doc Claude**
+
+```markdown
+METADATA ACCURACY VALIDATION COMPLETE
+
+Findings: 18 stale metadata claims across 23 files
+Report: [Validation report created]
+Next step: Doc Claude executes fixes
+
+Deactivating ROLE_VALIDATION.
+```
+
+### **Integration with Doc Claude Workflow**
+
+**After Metadata Validation, Doc Claude:**
+
+1. **Reads validation report**
+2. **For each stale claim:**
+   - Open file
+   - Find claim line
+   - Update to current value
+   - Update semantic header if needed
+3. **Commits fixes with clear message**
+4. **Updates REPO_LOG**
+5. **Re-runs validation to confirm 100% accuracy**
+
+**Example Fix Commit:**
+```bash
+git commit -m "Metadata Accuracy: Fix stale line counts across 10 files
+
+VALIDATION Claude found 18 stale metadata claims (22% accuracy rate).
+Fixed all line counts, version references, and last updated dates.
+
+Details in REPO_LOG [VALIDATION-2025-11-02-X]"
+```
+
+### **Success Criteria**
+
+✅ **100% Metadata Accuracy** - All claims match reality
+✅ **Zero Manual Catches** - Automated validation finds issues before humans
+✅ **Fast Turnaround** - Validation → Fixes → Commit within 1 hour
+✅ **Process Integration** - Added to weekly validation routine
+
+### **Prevention Strategy**
+
+**Best Practices for Doc Claude:**
+
+1. **Avoid Hard-Coded Metadata When Possible:**
+   - ❌ "This file is 150 lines" (will drift)
+   - ✅ Reference dynamic values or omit
+
+2. **Use Semantic Headers as Source of Truth:**
+   - ❌ "Version v2.2" in text
+   - ✅ Reference semantic header VERSION field
+
+3. **Let Git/REPO_LOG Track Dates:**
+   - ❌ "Last updated 2025-11-02" in text
+   - ✅ Use semantic header LAST_UPDATE field
+
+4. **Run Metadata Validation Regularly:**
+   - After large edits
+   - Before version bumps
+   - Weekly during active development
 
 ---
 

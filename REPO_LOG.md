@@ -6,7 +6,7 @@ STATUS: Active
 DEPENDS_ON: None
 NEEDED_BY: All auditors making repository changes, CHANGELOG.md
 MOVES_WITH: / (root)
-LAST_UPDATE: 2025-11-02 [DOCUMENTATION-2025-11-02-07]
+LAST_UPDATE: 2025-11-02 [DOCUMENTATION-2025-11-02-10]
 --->
 
 <!-- deps: file_structure, documentation -->
@@ -59,9 +59,9 @@ LAST_UPDATE: 2025-11-02 [DOCUMENTATION-2025-11-02-07]
 ### Category Pointers:
 
 - **[TASK_MOVEMENT]:** Last entry 2025-11-02-06
-- **[VALIDATION]:** Last entry 2025-11-02-05
+- **[VALIDATION]:** Last entry 2025-11-02-9 🆕
 - **[PENDING_ACTIONS]:** Last entry 2025-11-01-21
-- **[DOCUMENTATION]:** Last entry 2025-11-02-8 🆕
+- **[DOCUMENTATION]:** Last entry 2025-11-02-10 🆕
 - **[STRUCTURE]:** Last entry 2025-11-02-8
 - **[DEPLOYMENTS]:** Last entry 2025-11-01-19
 - **[ALL_CHANGES]:** Last entry 2025-11-01-1
@@ -69,6 +69,76 @@ LAST_UPDATE: 2025-11-02 [DOCUMENTATION-2025-11-02-07]
 -----
 
 ## 📝 CHANGE LOG
+
+### [DOCUMENTATION-2025-11-02-10] 2025-11-02 - Semantic Header Metric Refinement: Signal vs Noise (40% → 87% Core)
+
+**Categories:** [DOCUMENTATION] [VALIDATION]
+**Changed by:** DOC_CLAUDE (Noise Assessment) + Doc Claude (Implementation)
+**Session ID:** claude/integrate-grok-nova-prep-vudu-011CUiK823ucWkkGE34Rndof
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `UPDATED`: /docs/repository/DASHBOARD.md (split metrics: Core 87% vs Total 40%)
+- `CREATED`: /docs/repository/SEMANTIC_HEADER_NOISE_ASSESSMENT.md (full analysis)
+- `UPDATED`: /docs/repository/DASHBOARD.md (added "Semantic Header Coverage Explained" section)
+
+**Reason:** User questioned 40% semantic header metric ("does this serve its purpose?"). DOC_CLAUDE performed noise assessment - discovered 40% metric was misleading because ~60% of "missing" files either SHOULDN'T have headers (Python) or are LOW priority (archives, task-specific).
+
+**METRIC REFINEMENT:** 40% → 87% (Core Files)
+
+Before (Misleading): "Only 40% coverage 🔴" (felt behind, lots of work)
+After (Accurate): "87% core coverage 🟢" (on track, focused, 5-10 files to 90% target)
+
+**Noise Breakdown:** Python 13%, Archives 29%, Task-specific 12%, Stubs 6%, Active 23%, Reference 17%
+**Key Insight:** ~60% of the "missing" is noise that doesn't need headers
+
+**DASHBOARD Updates:** Split metrics (Core 87% 🟢 / Total 40% 🟡), added detailed explanation section, updated alerts/priorities
+
+**Impact:** High - Corrected misleading metric preventing wasted effort. Revealed true status: already excellent coverage on critical files.
+
+**Follow-up Required:** NO (metric refinement complete)
+
+---
+
+### [VALIDATION-2025-11-02-9] 2025-11-02 - Metadata Accuracy Validation: ROLE_VALIDATION Enhancement + 20 Stale Claims Fixed
+
+**Categories:** [VALIDATION] [DOCUMENTATION]
+**Changed by:** VALIDATION Claude + Doc Claude
+**Session ID:** claude/integrate-grok-nova-prep-vudu-011CUiK823ucWkkGE34Rndof
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `UPDATED`: /docs/repository/librarian_tools/ROLE_VALIDATION.md (added Metadata Accuracy Validation)
+- `FIXED`: 5 stale line count claims (MISSION_DEFAULT x2, Mission README, relay README, docs README)
+- `FIXED`: 15 stale last updated dates (3 HIGH priority + 6 MEDIUM priority files)
+- `TOTAL`: 20 metadata fixes across 18 unique files
+
+**Reason:** User caught stale line counts in READMEs ("why did I have to catch this?"). Should be automated validation, not manual discovery. Following pattern: REVIEW Claude got tree structure validation → VALIDATION Claude now gets metadata accuracy validation.
+
+**PHASE 1: ROLE_VALIDATION.md Enhancement**
+
+Added specialized validation capability: **Metadata Accuracy Validation**
+
+Includes: Line count validation, file size validation, version validation, last updated date validation
+
+Process: Search patterns → Validate claims → Generate fix list → Doc Claude executes → Re-validate
+
+**PHASE 2: Metadata Accuracy Audit Execution**
+
+VALIDATION Claude findings:
+- Files scanned: 127, Claims found: 163 in 23 files
+- Stale metadata: 20 (87.7% accuracy before fixes)
+- **100% accuracy after fixes** ✅
+
+Line count fixes (5 files): MISSION_DEFAULT (331→350 x2), Mission README (180→193), relay README (248→310), docs README (~320→394)
+
+Last updated fixes (15 locations): README_C, auditors/README, VUDU_PROTOCOL x2, Mission/relay/docs READMEs x6, BOOTSTRAP files x5
+
+**Impact:** Moderate - Fixed 20 stale metadata claims, established automated validation process. Metadata accuracy now part of weekly validation workflow.
+
+**Follow-up Required:** NO (all fixes complete, process documented)
+
+---
 
 ### [DOCUMENTATION-2025-11-02-8] 2025-11-02 - VUDU_Operations Integration: Prep Package Content to Active Documentation
 
