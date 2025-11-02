@@ -12,7 +12,7 @@ LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-2]
 <!-- deps: vudu_protocol -->
 # Relay System
 
-**Lines:** 310
+**Lines:** 258
 **Quality Score:** 95/100 (improved from 90/100)
 **Target Score:** 90/100 ✅
 **Status:** Active

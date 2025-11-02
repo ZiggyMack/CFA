@@ -12,7 +12,7 @@ LAST_UPDATE: 2025-11-02
 # MISSION_DEFAULT.md - Universal Fallback Guidance
 
 **Version:** v4.0.0
-**Lines:** 350
+**Lines:** 464
 **Purpose:** Cold start recovery + fallback priorities  
 
 ---
