@@ -2,8 +2,8 @@
 
 # MISSION_DEFAULT.md - Universal Fallback Guidance
 
-**Version:** v4.0.0  
-**Lines:** 331  
+**Version:** v4.0.0
+**Lines:** 350
 **Purpose:** Cold start recovery + fallback priorities  
 
 ---
@@ -20,7 +20,7 @@ Use this guidance when:
 
 ## ⚡ **EFFICIENCY GUIDE**
 
-**This file: 331 lines total**
+**This file: 350 lines total**
 
 **You only need:**
 - Tier Selection: ~20 lines (everyone reads)
