@@ -165,7 +165,7 @@ All MD Files        ████████░░░░░░░░░░░░
 
 **Recommendation:** Focus on the 5-10 critical operational files to hit 90% core target. Don't chase headers on archives, Python files, or completed tasks.
 
-[Full Analysis →](SEMANTIC_HEADER_NOISE_ASSESSMENT.md)
+[Full Analysis →](/docs/Validation/reports/2025-11-02_SEMANTIC_HEADER_NOISE_ASSESSMENT.md)
 
 ---
 
