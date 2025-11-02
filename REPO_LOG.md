@@ -6,7 +6,7 @@ STATUS: Active
 DEPENDS_ON: None
 NEEDED_BY: All auditors making repository changes, CHANGELOG.md
 MOVES_WITH: / (root)
-LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-9]
+LAST_UPDATE: 2025-11-02 [DOCUMENTATION-2025-11-02-10]
 --->
 
 <!-- deps: file_structure, documentation -->
@@ -61,7 +61,7 @@ LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-9]
 - **[TASK_MOVEMENT]:** Last entry 2025-11-02-06
 - **[VALIDATION]:** Last entry 2025-11-02-9 🆕
 - **[PENDING_ACTIONS]:** Last entry 2025-11-01-21
-- **[DOCUMENTATION]:** Last entry 2025-11-02-9 🆕
+- **[DOCUMENTATION]:** Last entry 2025-11-02-10 🆕
 - **[STRUCTURE]:** Last entry 2025-11-02-8
 - **[DEPLOYMENTS]:** Last entry 2025-11-01-19
 - **[ALL_CHANGES]:** Last entry 2025-11-01-1
@@ -69,6 +69,36 @@ LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-9]
 -----
 
 ## 📝 CHANGE LOG
+
+### [DOCUMENTATION-2025-11-02-10] 2025-11-02 - Semantic Header Metric Refinement: Signal vs Noise (40% → 87% Core)
+
+**Categories:** [DOCUMENTATION] [VALIDATION]
+**Changed by:** DOC_CLAUDE (Noise Assessment) + Doc Claude (Implementation)
+**Session ID:** claude/integrate-grok-nova-prep-vudu-011CUiK823ucWkkGE34Rndof
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `UPDATED`: /docs/repository/DASHBOARD.md (split metrics: Core 87% vs Total 40%)
+- `CREATED`: /docs/repository/SEMANTIC_HEADER_NOISE_ASSESSMENT.md (full analysis)
+- `UPDATED`: /docs/repository/DASHBOARD.md (added "Semantic Header Coverage Explained" section)
+
+**Reason:** User questioned 40% semantic header metric ("does this serve its purpose?"). DOC_CLAUDE performed noise assessment - discovered 40% metric was misleading because ~60% of "missing" files either SHOULDN'T have headers (Python) or are LOW priority (archives, task-specific).
+
+**METRIC REFINEMENT:** 40% → 87% (Core Files)
+
+Before (Misleading): "Only 40% coverage 🔴" (felt behind, lots of work)
+After (Accurate): "87% core coverage 🟢" (on track, focused, 5-10 files to 90% target)
+
+**Noise Breakdown:** Python 13%, Archives 29%, Task-specific 12%, Stubs 6%, Active 23%, Reference 17%
+**Key Insight:** ~60% of the "missing" is noise that doesn't need headers
+
+**DASHBOARD Updates:** Split metrics (Core 87% 🟢 / Total 40% 🟡), added detailed explanation section, updated alerts/priorities
+
+**Impact:** High - Corrected misleading metric preventing wasted effort. Revealed true status: already excellent coverage on critical files.
+
+**Follow-up Required:** NO (metric refinement complete)
+
+---
 
 ### [VALIDATION-2025-11-02-9] 2025-11-02 - Metadata Accuracy Validation: ROLE_VALIDATION Enhancement + 20 Stale Claims Fixed
 
