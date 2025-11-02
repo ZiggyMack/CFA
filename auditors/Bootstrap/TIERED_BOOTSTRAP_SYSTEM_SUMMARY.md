@@ -1,3 +1,14 @@
+<!---
+FILE: TIERED_BOOTSTRAP_SYSTEM_SUMMARY.md
+PURPOSE: Complete overview of 5-tier bootstrap system - rapid reference for all tiers
+VERSION: v3.7.1
+STATUS: Active
+DEPENDS_ON: All bootstrap tier files, MISSION_DEFAULT.md
+NEEDED_BY: All auditors, bootstrap navigation, tier selection
+MOVES_WITH: /auditors/Bootstrap/
+LAST_UPDATE: 2025-11-02
+--->
+
 # TIERED_BOOTSTRAP_SYSTEM_SUMMARY.md — Complete Overview
 
 **Version:** v3.7.1  

@@ -1,5 +1,13 @@
-<!-- deps: mission_system, preset_modes, validation_process -->
-─── PRESET CALIBRATION MISSION ──────────────────────
+<!---
+FILE: MISSION_BRIEF.md
+PURPOSE: Preset mode calibration mission definition - achieve "All Named, All Priced" for UX features
+VERSION: v3.5
+STATUS: Active
+DEPENDS_ON: SUCCESS_CRITERIA.md, TECHNICAL_SPEC.md, CURRENT_MODE_CONFIGS.md
+NEEDED_BY: All mission auditors, MISSION_CURRENT.md
+MOVES_WITH: /auditors/Mission/Preset_Calibration/
+LAST_UPDATE: 2025-11-02
+--->
 
 # MISSION_BRIEF.md - Preset Mode Calibration
 

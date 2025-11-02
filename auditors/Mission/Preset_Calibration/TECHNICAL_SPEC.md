@@ -1,4 +1,14 @@
-<!-- deps: preset_modes, ypa_calculation, file_structure -->
+<!---
+FILE: TECHNICAL_SPEC.md
+PURPOSE: Complete technical reference for AI auditors - preset modes, YPA calculation, system architecture
+VERSION: v3.5.1
+STATUS: Active
+DEPENDS_ON: utils/frameworks.py, utils/calculations.py, pages/console.py
+NEEDED_BY: MISSION_BRIEF.md, SUCCESS_CRITERIA.md, all technical auditors
+MOVES_WITH: /auditors/Mission/Preset_Calibration/
+LAST_UPDATE: 2025-11-02
+--->
+
 # CFA v3.5 - TECHNICAL SPECIFICATION 🔧
 
 **Purpose:** Complete technical reference for AI auditors  
