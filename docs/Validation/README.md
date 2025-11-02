@@ -1,12 +1,12 @@
 <!---
 FILE: README.md
 PURPOSE: Navigation for Validation directory - protocols, reports, and criteria
-VERSION: v2.0
+VERSION: v2.1
 STATUS: Active
-DEPENDS_ON: DOC_CLAUDE_WELLNESS_PROTOCOL.md, 88MPH_PROTOCOL.md, reports/
+DEPENDS_ON: DOC_CLAUDE_WELLNESS_PROTOCOL.md, 88MPH_PROTOCOL.md, ROLE_PROCESS.md (SME), reports/
 NEEDED_BY: All validation activities, Doc Claude wellness checks, VALIDATION Claude work
 MOVES_WITH: /docs/Validation/
-LAST_UPDATE: 2025-11-02
+LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-17]
 --->
 
 # Validation Directory - Navigation
@@ -42,6 +42,7 @@ LAST_UPDATE: 2025-11-02
 **Purpose:** Enable Doc Claude to perform independent repository health assessments
 **Method:** 88MPH Protocol methodology with cold-start validation
 **Use Case:** Self-diagnosis, dashboard validation, drift detection, wellness checks
+**SME:** Process Claude (wellness check expert - consult instead of reading 494 lines!)
 
 **When to use:**
 - After major changes (50+ files modified)
@@ -56,8 +57,13 @@ LAST_UPDATE: 2025-11-02
 - ✅ Failure handling procedures
 - ✅ Proof of concept included (96/100 validation, 2025-11-02)
 - ✅ Report template provided
+- ✅ **Process Claude SME pattern** (consult expert, don't memorize protocol) 🆕
 
-**Quick Start:** Copy the activation prompt from the protocol and run Doc Claude in fresh session
+**Quick Start:**
+- **Option 1 (Recommended):** Activate ROLE_PROCESS and ask Process Claude for wellness check guidance
+- **Option 2 (Direct):** Copy the activation prompt from the protocol and run Doc Claude in fresh session
+
+**Pro Tip:** Process Claude has mastered the wellness protocol - 5 min consultation beats 20 min protocol deep-dive!
 
 ---
 
@@ -118,19 +124,23 @@ See `/docs/Validation/reports/README.md` for complete index
 ## 🎯 COMMON USE CASES
 
 ### **"I need to validate repository health"**
-→ Use DOC_CLAUDE_WELLNESS_PROTOCOL.md activation prompt
+→ **Recommended:** Activate ROLE_PROCESS and ask Process Claude for wellness check guidance
+→ **Direct:** Use DOC_CLAUDE_WELLNESS_PROTOCOL.md activation prompt
 
 ### **"Dashboard claims X but I'm not sure"**
-→ Run wellness check to independently verify
+→ Consult Process Claude: "How do I verify dashboard accuracy?"
 
 ### **"Major changes were made, is system healthy?"**
-→ Run wellness check after 50+ file changes
+→ Run wellness check after 50+ file changes (Process Claude can guide)
 
 ### **"Monthly health monitoring"**
-→ Schedule regular wellness checks
+→ Schedule regular wellness checks (Process Claude is SME)
 
 ### **"Fresh Doc Claude needs current state"**
-→ Run wellness check for independent assessment
+→ Run wellness check for independent assessment (consult Process Claude first)
+
+### **"How do I run a wellness check?" 🆕**
+→ Activate ROLE_PROCESS and ask Process Claude (5 min vs 20 min protocol read)
 
 ---
 

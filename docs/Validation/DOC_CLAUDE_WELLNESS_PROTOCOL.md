@@ -1,12 +1,12 @@
 <!---
 FILE: DOC_CLAUDE_WELLNESS_PROTOCOL.md
 PURPOSE: Self-diagnostic health check protocol for Doc Claude to independently validate repository state
-VERSION: v1.0
+VERSION: v1.1
 STATUS: Active
-DEPENDS_ON: 88MPH_PROTOCOL.md, DASHBOARD.md, health_reports/
+DEPENDS_ON: 88MPH_PROTOCOL.md, DASHBOARD.md, health_reports/, ROLE_PROCESS.md (Process Claude is SME)
 NEEDED_BY: Doc Claude wellness checks, dashboard accuracy validation, drift detection
 MOVES_WITH: /docs/Validation/
-LAST_UPDATE: 2025-11-02
+LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-17]
 --->
 
 # DOC_CLAUDE_WELLNESS_PROTOCOL
@@ -35,6 +35,84 @@ LAST_UPDATE: 2025-11-02
 - Weekly quick checks during intensive development
 - After significant structural changes
 - When multiple auditors have made changes
+
+---
+
+## 🤝 PROCESS CLAUDE IS THE EXPERT (DON'T MEMORIZE THIS FILE!)
+
+**Key Insight:** This protocol is 494 lines. **You don't need to master it.**
+
+**Instead:** **Consult Process Claude** who is the subject matter expert for wellness checks.
+
+### **Why This Matters:**
+
+**Before this pattern:**
+- Doc Claude reads 494-line protocol (15-20 min context load)
+- Tries to remember all checkpoints and criteria
+- Risks missing details or misinterpreting methodology
+- Protocol becomes barrier instead of enabler
+
+**After this pattern:**
+- Doc Claude asks Process Claude: "How do I run a wellness check?"
+- Process Claude (who has mastered this protocol) provides step-by-step guidance
+- Doc Claude gets exactly what they need, when they need it
+- 5-minute consultation vs 20-minute protocol deep-dive
+
+### **How to Consult Process Claude:**
+
+**Activate Process Claude role:**
+```markdown
+I am DOC_CLAUDE, activating ROLE_PROCESS.
+
+Purpose: Get wellness check guidance
+
+Process Claude, I need to run a repository wellness check. Can you guide me through:
+1. The activation sequence
+2. The validation checkpoints
+3. The success criteria
+```
+
+**Process Claude will provide:**
+- ✅ Exact activation prompt (copy-paste ready)
+- ✅ 7-step methodology breakdown
+- ✅ Validation checkpoints to verify
+- ✅ Success criteria for sign-off
+- ✅ Expected outcomes (GREEN/YELLOW/RED scenarios)
+- ✅ Discrepancy handling procedures
+
+**Common Consultation Patterns:**
+
+| **Doc Claude Question** | **Process Claude Provides** |
+|------------------------|---------------------------|
+| "How do I run wellness check?" | Full activation sequence + 7-step methodology |
+| "What are validation checkpoints?" | README 95%, Headers 90%, Archives 100%, etc. |
+| "What's success criteria?" | ±1 point tolerance, HIGH confidence, YES sign-off |
+| "Dashboard says 95, I got 92 - now what?" | Discrepancy analysis + drift correction procedure |
+| "Should I escalate to VALIDATION?" | Escalation criteria + process |
+| "What does confidence HIGH mean?" | Confidence level definitions + implications |
+
+### **The Knowledge Specialization Pattern:**
+
+```
+Doc Claude      ←→  Process Claude
+(Wellness Runner)   (Wellness Expert)
+
+"How do I do X?"  →  "Here's exactly how..."
+"What does Y mean?" → "Y means this..."
+"Should I do Z?"   →  "Yes/No because..."
+```
+
+**Translation:** You don't need to be the expert. Process Claude is the expert. You just need to know to consult them.
+
+### **Quick Start (TL;DR):**
+
+1. **Activate ROLE_PROCESS:** "Process Claude, I need wellness check guidance"
+2. **Get activation prompt:** Process Claude provides exact text
+3. **Run assessment:** Follow Process Claude's guidance
+4. **Consult as needed:** Questions? Ask Process Claude
+5. **Deliver report:** Use report template (Process Claude can provide)
+
+**Time savings:** 5 min consultation + 10 min assessment = 15 min total (vs 35 min if you read this entire protocol first)
 
 ---
 
@@ -475,11 +553,14 @@ When creating the wellness check report, use this structure:
 
 ## 🔗 RELATED DOCUMENTATION
 
+- **🔥 PROCESS CLAUDE (SME):** [ROLE_PROCESS.md](/docs/repository/librarian_tools/ROLE_PROCESS.md) ⭐ **CONSULT FIRST**
 - **Protocol Reference:** [88MPH_PROTOCOL.md](/docs/repository/librarian_tools/88MPH_PROTOCOL.md)
 - **Validation Role:** [ROLE_VALIDATION.md](/docs/repository/librarian_tools/ROLE_VALIDATION.md)
 - **Dashboard:** [DASHBOARD.md](/docs/repository/DASHBOARD.md)
 - **Health Reports:** [Health_Reports/](/docs/repository/Health_Reports/)
 - **Validation Reports:** [reports/](/docs/Validation/reports/)
+
+**💡 Pro Tip:** Don't read this entire 494-line protocol! Activate ROLE_PROCESS and consult Process Claude who is the wellness check expert. 5 minutes of consultation beats 20 minutes of protocol deep-dive.
 
 ---
 

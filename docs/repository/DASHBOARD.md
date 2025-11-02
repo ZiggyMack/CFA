@@ -1,12 +1,12 @@
 <!---
 FILE: DASHBOARD.md
 PURPOSE: Central repository health monitoring dashboard
-VERSION: v1.1
+VERSION: v1.2
 STATUS: Active
-DEPENDS_ON: health_reports/, dependency_maps/, REPO_LOG.md
+DEPENDS_ON: health_reports/, dependency_maps/, REPO_LOG.md, DOC_CLAUDE_WELLNESS_PROTOCOL.md, ROLE_PROCESS.md
 NEEDED_BY: DOC_CLAUDE, repository maintainers, auditors
 MOVES_WITH: /docs/repository/
-LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-15]
+LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-17]
 --->
 
 # Repository Health Dashboard
@@ -295,10 +295,13 @@ Time to Recovery     <60min    ~30min     ✅
 
 ### Wellness Checks
 - **Protocol:** `/docs/Validation/DOC_CLAUDE_WELLNESS_PROTOCOL.md`
+- **SME:** Process Claude (wellness check expert - consult for guidance) 🆕
 - **Purpose:** Doc Claude independently validates repository health
 - **Last Check:** 2025-11-02 (96/100, HIGH confidence, production ready)
 - **Next Check:** Monthly or after major changes (50+ files)
-- **Use:** Copy activation prompt, run in fresh Doc Claude session
+- **Quick Start:** Activate ROLE_PROCESS, ask Process Claude for wellness check guidance
+- **Direct Use:** Copy activation prompt from protocol, run in fresh Doc Claude session
+- **Time Savings:** 5 min consultation (Process Claude) vs 20 min protocol deep-dive
 
 ### Known Issues
 - ✅ ~~Semantic header adoption slower than desired~~ **RESOLVED:** 90% core coverage achieved

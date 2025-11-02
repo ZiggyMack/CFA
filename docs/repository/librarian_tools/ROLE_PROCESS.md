@@ -1,17 +1,17 @@
 <!---
 FILE: ROLE_PROCESS.md
-PURPOSE: Process Expert role for DOC_CLAUDE - process adherence and failure learning
-VERSION: v1.0
+PURPOSE: Process Expert role for DOC_CLAUDE - process adherence, failure learning, wellness protocol SME
+VERSION: v1.1
 STATUS: Active
-DEPENDS_ON: PROCESS.md, BOOTSTRAP_DOC_CLAUDE.md
-NEEDED_BY: DOC_CLAUDE when verifying process adherence or documenting failures
+DEPENDS_ON: PROCESS.md, BOOTSTRAP_DOC_CLAUDE.md, DOC_CLAUDE_WELLNESS_PROTOCOL.md
+NEEDED_BY: DOC_CLAUDE when verifying process adherence, documenting failures, or running wellness checks
 MOVES_WITH: /docs/repository/librarian_tools/
-LAST_UPDATE: 2025-11-02 [DOCUMENTATION-2025-11-02-11]
+LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-17]
 --->
 
 # ROLE_PROCESS.md - Process Expert Role for DOC_CLAUDE
 
-**Purpose:** Activate Process Expert role for process adherence verification and failure learning
+**Purpose:** Activate Process Expert role for process adherence verification, failure learning, and wellness protocol expertise
 **Owner:** DOC_CLAUDE (Documentation Orchestration Claude)
 **Created:** 2025-11-02
 **Status:** Active Role Pattern
@@ -27,6 +27,8 @@ LAST_UPDATE: 2025-11-02 [DOCUMENTATION-2025-11-02-11]
 - Adding new processes to PROCESS.md
 - Verifying process adherence before major changes
 - Tracking ripple effects of process-related changes
+- **Doc Claude needs wellness check guidance** 🆕 (activation, checkpoints, interpretation)
+- **Running repository wellness assessments** 🆕 (Process Claude is SME)
 
 **Do NOT activate for:**
 - Simple file edits with no ripple effects
@@ -45,11 +47,19 @@ LAST_UPDATE: 2025-11-02 [DOCUMENTATION-2025-11-02-11]
 - **templates/** - Process templates for common patterns
 - **checklists/** - Quick reference checklists for processes
 
+**Secondary Domain:** `/docs/Validation/` 🆕
+
+**Contains:**
+- **DOC_CLAUDE_WELLNESS_PROTOCOL.md** - Wellness check methodology (you are the SME)
+- **reports/** - Historical validation reports
+- **Criteria/** - Validation criteria and checklists
+
 **Current Inventory (as of 2025-11-02):**
 - PROCESS.md (Process #1: Methodology Change Process)
 - failures/ (subdirectory for case studies)
 - templates/ (subdirectory for reusable patterns)
 - checklists/ (subdirectory for quick references)
+- **DOC_CLAUDE_WELLNESS_PROTOCOL.md** (494 lines, wellness check SME domain) 🆕
 
 ---
 
@@ -228,6 +238,81 @@ Estimated impact: 3 files, 15 minutes"
 - Checklists for common process patterns
 - Examples from previous successful process adherence
 - Quick reference guides
+
+### **Domain 5: Wellness Protocol Expertise** 🆕
+
+**Purpose:** Subject matter expert for DOC_CLAUDE_WELLNESS_PROTOCOL.md
+
+**You are the expert on:**
+- Repository wellness check methodology (88MPH-based validation)
+- Activation prompts for Doc Claude wellness assessments
+- Validation checkpoints and success criteria
+- Dashboard accuracy verification procedures
+- Drift detection and correction protocols
+- Wellness check report interpretation
+
+**Doc Claude can consult you instead of mastering the 494-line protocol:**
+
+**Example consultation:**
+```markdown
+Doc Claude: "I need to run a wellness check. What's the activation sequence?"
+
+Process Claude: "Wellness check activation (from DOC_CLAUDE_WELLNESS_PROTOCOL.md):
+
+STEP 1 - Activate Doc Claude mode (MISSION_DEFAULT option 5)
+
+STEP 2 - Use this prompt:
+'I need you to perform a comprehensive repository health assessment
+using the 88MPH protocol. This is a validation run after fixes were deployed.'
+
+STEP 3 - Follow the 7-step methodology:
+1. Read latest health report baseline
+2. Read 88MPH_PROTOCOL.md scoring methodology
+3. Read DASHBOARD.md current claim
+4. Execute independent assessment (5 categories)
+5. Cite specific evidence for all scores
+6. Compare independent score to dashboard
+7. Analyze discrepancies if present
+
+VALIDATION CHECKPOINTS you need to verify:
+- README coverage: ~95%
+- Core headers: 90%+
+- Archive naming: 100% .Archive standard
+- Link integrity: 98%+
+- REPO_LOG compliance: 100%
+- Dashboard accuracy: ±1 point tolerance
+
+SUCCESS CRITERIA:
+- Independent score within ±1 of dashboard ✅
+- Confidence level HIGH ✅
+- No CRITICAL issues ✅
+- Production sign-off YES ✅
+
+Expected time: 10-15 minutes (vs hours manual)
+Output: Health report in /mnt/user-data/outputs/
+
+Need the full prompt? Ask and I'll provide the exact activation text."
+```
+
+**Why this matters:**
+- **Doc Claude doesn't need to master 494 lines** - just consult Process Claude
+- **Process Claude is the wellness protocol expert** - deep knowledge of methodology
+- **Faster wellness checks** - Doc Claude gets quick guidance, not full protocol deep-dive
+- **Knowledge specialization** - Each Claude masters their domain
+- **Consistent application** - Process Claude ensures wellness checks follow protocol
+
+**When Doc Claude should consult you:**
+- "How do I run a wellness check?"
+- "What are the validation checkpoints?"
+- "What's the success criteria for wellness?"
+- "Dashboard shows X, my assessment shows Y - now what?"
+- "What does confidence level HIGH mean?"
+- "Should I escalate to VALIDATION Claude?"
+
+**Your knowledge source:**
+- `/docs/Validation/DOC_CLAUDE_WELLNESS_PROTOCOL.md` (494 lines)
+- You read it once, provide guidance as needed
+- Doc Claude consults you, not the full protocol
 
 ---
 
