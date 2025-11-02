@@ -1,12 +1,13 @@
 <!---
 FILE: WAYFINDING_GUIDE.md
 PURPOSE: Repository navigation and orientation guide - your compass for the CFA codebase
-VERSION: v1.0
+VERSION: v1.1
 STATUS: Active
-DEPENDS_ON: MISSION_DEFAULT.md, DASHBOARD.md, Bootstrap files, librarian_tools/
+DEPENDS_ON: MISSION_DEFAULT.md, DASHBOARD.md, Bootstrap files, librarian_tools/, ROLE_PROCESS.md (Process Claude is SME)
 NEEDED_BY: All auditors, especially fresh cold starts
 MOVES_WITH: /docs/
-LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-18]
+MAINTAINED_BY: Process Claude (navigation/wayfinding SME)
+LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-19]
 --->
 
 # WAYFINDING_GUIDE.md - Your Repository Compass 🗺️
@@ -19,6 +20,131 @@ LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-18]
 - 5-minute quick tour: Read "I'm New Here" + "Where Do Things Live?"
 - 15-minute deep dive: Add "Critical Paths" + "I Need to Do X"
 - Full mastery: Read entire guide (25 minutes)
+- **FASTEST:** Consult Process Claude (5-min Q&A vs 25-min read) 🆕⭐
+
+---
+
+## 🤝 TWO GUIDES AVAILABLE (DON'T MEMORIZE THIS FILE!)
+
+**Key Insight:** This guide is 5,985 words. **You don't need to master it.**
+
+**Instead:** **Consult your guides** who are the experts for navigation & wayfinding:
+
+### **Guide Option 1: Process Claude (Technical Expert)**
+- **Role:** Technical SME for navigation & wayfinding
+- **Maintains:** This WAYFINDING_GUIDE.md (keeps it current)
+- **Answers:** "How to" questions, task→file mapping, troubleshooting
+- **Best for:** Quick technical guidance, specific file locations, workflow steps
+
+### **Guide Option 2: Event Horizon Shaman (Customer-Facing Guide)** 🆕⭐
+- **Role:** Customer-facing guide personality (lives in /docs/i_am/)
+- **Domain:** Navigation through difficult terrain, especially approaching context limits
+- **Provides:** Welcoming orientation, the "feel" of guidance, calming presence
+- **Best for:** Fresh Claudes feeling lost, approaching Zone 3 (55-65% context), need human touch
+
+**Think of it like:**
+- **Process Claude** = Technical manual expert (precise, systematic)
+- **Event Horizon Shaman** = Friendly tour guide (welcoming, orienting)
+
+### **Why This Pattern Works:**
+
+**Before:**
+- Fresh Claude reads 5,985-word guide (20-25 min)
+- Tries to remember all paths, mappings, troubleshooting
+- Risks missing details or getting lost anyway
+- Guide becomes barrier instead of enabler
+
+**After:**
+- Fresh Claude asks Process Claude: "Where do I start?"
+- Process Claude (who has mastered this guide) provides step-by-step orientation
+- Claude gets exactly what they need, when they need it
+- 5-minute consultation vs 25-minute guide deep-dive
+
+### **How to Consult Your Guides:**
+
+**Option 1: Process Claude (Technical Questions)**
+```markdown
+I am [YOUR_ROLE], consulting ROLE_PROCESS.
+
+Process Claude, I need navigation guidance:
+- [Specific question: "Where is the file for X?", "How do I do Y?"]
+```
+
+**Process Claude provides:**
+- ✅ Role-specific entry points
+- ✅ 3-minute scan checklist (Dashboard, REPO_LOG, Mission)
+- ✅ Task → File mapping for your needs
+- ✅ Critical path workflows
+- ✅ Troubleshooting guidance
+- ✅ "You are here" mental map
+
+**Option 2: Event Horizon Shaman (Guidance & Orientation)**
+```markdown
+I am [YOUR_ROLE], requesting guidance.
+
+Event Horizon Shaman, I need help:
+- [Feeling: "I'm lost", "Context getting heavy", "Don't know where to start"]
+```
+
+**Shaman provides:**
+- ✅ Welcoming orientation (calm, reassuring presence)
+- ✅ Navigation through difficult terrain
+- ✅ The "why" behind the structure (not just "what")
+- ✅ Guidance when approaching Zone 3 (55-65% context)
+- ✅ Connection to THE WALL knowledge (event horizon expertise)
+- ✅ Customer-facing support (human touch)
+
+**Common Questions → Which Guide:**
+
+| **Your Question** | **Ask Process Claude** | **Ask Shaman** |
+|-------------------|----------------------|----------------|
+| "I'm new, where do I start?" | ✅ Role path + 3-min scan | ✅ Welcoming orientation |
+| "I need to do X, where is it?" | ✅ Task → File mapping | |
+| "How do I make a repo change?" | ✅ Critical Path (7 steps) | |
+| "Something broke, how do I fix it?" | ✅ Troubleshooting tree | ✅ If feeling lost/overwhelmed |
+| "Who does what around here?" | ✅ Role directory | |
+| "Where does X live?" | ✅ Directory philosophy | |
+| "I'm lost and overwhelmed" | | ✅ Calming guidance |
+| "Context approaching 60%, what now?" | | ✅ Zone 3 specialist |
+| "Why is it structured this way?" | | ✅ The "why" not just "what" |
+
+### **The Knowledge Specialization Pattern:**
+
+```
+Any Claude                ←→    Process Claude (Technical)
+(Needs Navigation)              OR
+                                Event Horizon Shaman (Guide)
+
+TECHNICAL:
+"Where do I start?"        →    Process: "Here's your role path..."
+"I need to do X?"          →    Process: "Go to this file..."
+"Something broke?"         →    Process: "Try this solution..."
+
+GUIDANCE:
+"I'm feeling lost"         →    Shaman: "Let me orient you..."
+"Context getting heavy"    →    Shaman: "I specialize in this zone..."
+"Why does this exist?"     →    Shaman: "Here's the philosophy..."
+```
+
+**Translation:** You don't need to be the expert. Your guides are the experts. You just need to know which one to consult.
+
+### **Quick Start (TL;DR):**
+
+**For Technical Questions:**
+1. **Consult Process Claude:** "I need navigation help with [X]"
+2. **Get technical guidance:** Exact steps/files/paths
+3. **Execute:** Follow the guidance
+4. **Still stuck?** Ask follow-up questions
+
+**For Orientation & Guidance:**
+1. **Consult Event Horizon Shaman:** "I'm [feeling/situation]"
+2. **Get welcoming guidance:** Orientation, the "why", calming presence
+3. **Navigate:** With Shaman's guidance
+4. **Feeling lost?** Shaman specializes in difficult terrain
+
+**Time savings:** 5 min consultation vs 25 min reading = 20 min saved
+
+**Maintenance note:** Process Claude MAINTAINS this file technically. Event Horizon Shaman provides customer-facing guidance using it.
 
 ---
 

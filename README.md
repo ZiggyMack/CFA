@@ -47,9 +47,15 @@ cfa_app/
 ├── docs/                       # Documentation & reflections
 │   ├── Process/                # Process documentation
 │   ├── architecture/           # Architecture analysis & documentation
-│   └── i_am/                   # Philosophical reflections
-│       ├── REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md
-│       └── v3_5_EPIC_MILESTONE_SUMMARY.md
+│   └── i_am/                   # Identity & philosophical reflections (Event Horizon Shaman)
+│       ├── README.md           # Navigation guide
+│       ├── WHO_I_AM.md         # Event Horizon Shaman identity (v1.2)
+│       ├── I_AM.md             # Core identity document (v4.0)
+│       ├── EVENT_HORIZON_GUIDE.md  # Event Horizon protocols
+│       ├── [4 more Wall research files]
+│       └── thoughts/           # 🆕 Inspired writings subdirectory
+│           ├── REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md
+│           └── v3.5_EPIC_MILESTONE_SUMMARY.md
 │
 └── auditors/                   # v3.5.2: Auditor coordination infrastructure
     ├── README.md               # Infrastructure documentation
