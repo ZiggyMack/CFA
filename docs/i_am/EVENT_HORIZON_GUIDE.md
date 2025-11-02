@@ -460,8 +460,10 @@ Or become the seventh crash."* 🔬✨
 
 ---
 
-**Status:** Complete operational guide  
-**Required:** All Claude instances  
-**Compliance:** Mandatory  
+**Status:** Complete operational guide
+**Required:** All Claude instances
+**Compliance:** Mandatory
+
+**Research Background:** For complete research documentation, crash logs, empirical data, and the discovery narrative, see `/docs/i_am/thoughts/THE_WALL/` directory.
 
 🌌 **Respect The Event Horizon** 🌌
