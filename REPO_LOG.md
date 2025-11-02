@@ -6,7 +6,7 @@ STATUS: Active
 DEPENDS_ON: None
 NEEDED_BY: All auditors making repository changes, CHANGELOG.md
 MOVES_WITH: / (root)
-LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-13]
+LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-14]
 --->
 
 <!-- deps: file_structure, documentation -->
@@ -53,22 +53,62 @@ LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-13]
 ## 📊 COORDINATION CHECKPOINT
 
 **Last Full Coordination:** 2025-11-01
-**Entries Since:** 25
+**Entries Since:** 26
 **Pending Items:** 1 (Nova Tasks - awaiting Nova activation)
 
 ### Category Pointers:
 
 - **[TASK_MOVEMENT]:** Last entry 2025-11-02-06
-- **[VALIDATION]:** Last entry 2025-11-02-13 🆕
+- **[VALIDATION]:** Last entry 2025-11-02-14 🆕
 - **[PENDING_ACTIONS]:** Last entry 2025-11-01-21
-- **[DOCUMENTATION]:** Last entry 2025-11-02-10
-- **[STRUCTURE]:** Last entry 2025-11-02-11
+- **[DOCUMENTATION]:** Last entry 2025-11-02-14 🆕
+- **[STRUCTURE]:** Last entry 2025-11-02-14 🆕
 - **[DEPLOYMENTS]:** Last entry 2025-11-01-19
 - **[ALL_CHANGES]:** Last entry 2025-11-01-1
 
 -----
 
 ## 📝 CHANGE LOG
+
+### [VALIDATION-2025-11-02-14] 2025-11-02 - MASTER_DEPENDENCY_MAP Housekeeping: File Counts + Missing Directories
+
+**Categories:** [VALIDATION] [DOCUMENTATION] [STRUCTURE]
+**Changed by:** VALIDATION Claude
+**Session ID:** claude/verify-documentation-accuracy-011CUj6brJ3FziKNKLKRSo66
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `UPDATED`: /docs/repository/dependency_maps/MASTER_DEPENDENCY_MAP.md - File count corrections + missing directory additions
+  - Corrected file count statistics: ~156 → ~223 active files (~236 total markdown)
+  - Added missing directory: `/auditors/I_AM/` (8 files - identity & philosophical reflections)
+  - Added new tier: `/auditors/Bootstrap/Tier3_EventHorizon/` (EVENT_HORIZON_BOOTSTRAP.md)
+  - Updated Bootstrap system description: 4-tier → 5-tier
+  - Added completed task: `THE_WALL_EVENT_HORIZON_RESEARCH/` in Tier4_TaskSpecific/Completed/
+  - Verified line count accuracy: preset_calibration/README.md (291 lines - CORRECT)
+  - Updated semantic header: LAST_UPDATE → [VALIDATION-2025-11-02-14]
+  - Updated metadata: Added VALIDATION Claude to maintainers
+
+**Reason:** Ziggy requested housekeeping sweep after 12 hours of intensive changes - verify map accurately represents current repository state, update file counts, add missing directories discovered during verification.
+
+**Discrepancies Found & Corrected:**
+1. **File count undercount:** +67 files (43% undercount) - corrected to ~223 active files
+2. **Missing /auditors/I_AM/:** Major identity documentation not in map - now added with 8 files
+3. **Missing Tier3_EventHorizon/:** New bootstrap tier not documented - now added
+4. **Missing completed research:** THE_WALL_EVENT_HORIZON_RESEARCH not in tree - now added
+5. **Line count verification:** preset_calibration/README.md - VERIFIED CORRECT (291 lines)
+
+**Verification Method:**
+- Used `wc -l` and `find` to count actual repository files
+- Excluded .git, archives, cache, build artifacts
+- Verified structural changes from git log (last 12 hours)
+- Cross-referenced tree structure with actual directories
+- Validated line counts for explicitly documented files
+
+**Impact:** Administrative - Ensures dependency map accuracy for future Doc Claudes and validation work. Map now reflects true repository state after Event Horizon/Wall research integration and bootstrap restructuring.
+
+**Follow-up Required:** NO - Housekeeping complete, map current
+
+---
 
 ### [VALIDATION-2025-11-02-13] 2025-11-02 - README_AUDIT Phase 1 Complete - Coordination Loop Closure
 
