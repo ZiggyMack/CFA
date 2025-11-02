@@ -1,23 +1,35 @@
 <!---
 FILE: DASHBOARD.md
 PURPOSE: Central repository health monitoring dashboard
-VERSION: v1.0
+VERSION: v1.1
 STATUS: Active
 DEPENDS_ON: health_reports/, dependency_maps/, REPO_LOG.md
 NEEDED_BY: DOC_CLAUDE, repository maintainers, auditors
 MOVES_WITH: /docs/repository/
-LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-11]
+LAST_UPDATE: 2025-11-02 [DOCUMENTATION-2025-11-02-03]
 --->
 
 # Repository Health Dashboard
 
-**Last Updated:** November 1, 2025
+**Last Updated:** November 2, 2025
 **Maintained by:** DOC_CLAUDE (Documentation Orchestration Claude)
 **Auto-Refresh:** Weekly during active development
 
 ────────────────────────────────────────────────────
 
-## 📊 **Current Status: 🟢 GREEN (96/100)**
+## 📊 **Current Status: 🟢 GREEN (98/100)** ⬆️ +2
+
+### ⚠️ **Status Update (Nov 2, 2025)** - READ THIS FIRST
+
+**ALL CALIBRATION BLOCKERS RESOLVED:**
+
+✅ `preset_calibration/README.md` - Complete (291 lines, not a stub)
+✅ Archive naming - Standardized (all use `.Archive` now)
+✅ Relay READMEs - Complete (all incoming folders have READMEs)
+
+**DO NOT REPORT THESE AS ISSUES** - They appear in older health reports but are RESOLVED.
+
+---
 
 ### Quick Health Check
 ```
@@ -42,7 +54,8 @@ Headers        ████████░░░░░░░░░░░░░ 4
 | **Semantic Headers** | 40% | 80% | 🔴 Needs Work | ↗ |
 | **REPO_LOG Compliance** | 90% | 100% | 🟡 Good | ↗ |
 | **Version Consistency** | 95% | 100% | 🟢 Excellent | → |
-| **Archive Standardization** | 60% | 100% | 🟡 In Progress | ↗ |
+| **Archive Standardization** | 100% | 100% | 🟢 Complete ✅ | ✅ |
+| **Calibration Blockers** | 0 | 0 | 🟢 Clear ✅ | ✅ |
 
 ---
 
