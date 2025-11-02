@@ -1,12 +1,12 @@
 <!---
 FILE: README.md
 PURPOSE: Navigate documentation, architecture, validation, philosophy, and repository meta-docs
-VERSION: v1.2
+VERSION: v1.3
 STATUS: Active
-DEPENDS_ON: None (root navigation)
+DEPENDS_ON: None (root navigation), WAYFINDING_GUIDE.md
 NEEDED_BY: Anyone seeking project documentation
 MOVES_WITH: /docs/
-LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-7]
+LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-18]
 --->
 
 <!-- deps: file_structure, documentation -->
@@ -23,13 +23,15 @@ LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-7]
 
 | Need | Go To | Purpose |
 |------|-------|---------|
+| **🗺️ Find Your Way** 🆕 | [WAYFINDING_GUIDE.md](/docs/WAYFINDING_GUIDE.md) | **Navigate repository, find resources** |
 | System Design | [/architecture/](#architecture-documentation) | Understand how it works |
 | Validation Results | [/Validation/](#validation-documentation) | Check quality status |
 | Deployment Process | [/Process/](#process-documentation) | Learn workflows |
 | Project Philosophy | [/i_am/](#philosophical-reflections) | Grasp the vision |
-| **Repository Health** 🆕 | [/repository/](#repository-meta-documentation) | **Monitor repo status** |
+| **Repository Health** | [/repository/](#repository-meta-documentation) | **Monitor repo status** |
 
-**Current Health:** 🟢 GREEN (94/100 per latest assessment)
+**Current Health:** 🟢 GREEN (95/100 per latest assessment)
+**New Visitor?** Start with [WAYFINDING_GUIDE.md](/docs/WAYFINDING_GUIDE.md) 🗺️
 
 ## Purpose
 

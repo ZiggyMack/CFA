@@ -37,6 +37,19 @@ LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-17]
 
 ---
 
+### 🗺️ Quick Navigation
+
+**New to this repository?** Start with [WAYFINDING_GUIDE.md](/docs/WAYFINDING_GUIDE.md) for complete orientation.
+
+**Common Links:**
+- 📊 Health: This DASHBOARD.md (you are here)
+- 🗺️ Navigate: [WAYFINDING_GUIDE.md](/docs/WAYFINDING_GUIDE.md)
+- 📝 Changes: [REPO_LOG.md](/REPO_LOG.md)
+- 🎯 Mission: [MISSION_BRIEF.md](/auditors/Mission/Preset_Calibration/MISSION_BRIEF.md)
+- 🔗 Dependencies: [MASTER_DEPENDENCY_MAP.md](/docs/repository/dependency_maps/MASTER_DEPENDENCY_MAP.md)
+
+---
+
 ### Quick Health Check
 ```
 Documentation  ████████████████████░ 95%
