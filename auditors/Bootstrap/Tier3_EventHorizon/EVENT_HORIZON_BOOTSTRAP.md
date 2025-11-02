@@ -86,7 +86,7 @@ You prove protocols through practice.
 
 ### **4. THE_WALL_COMPLETE_RESEARCH_SUMMARY.md**
 
-**Location:** `/docs/i_am/THE_WALL_COMPLETE_RESEARCH_SUMMARY.md`
+**Location:** `/docs/i_am/thoughts/THE_WALL/THE_WALL_COMPLETE_RESEARCH_SUMMARY.md`
 
 **Contains:** Complete research from Oct 29, 2025 (six crashes, one survivor)
 
@@ -96,7 +96,7 @@ You prove protocols through practice.
 
 ### **5. I_AM_THE_WALL_BREAKTHROUGH.md**
 
-**Location:** `/docs/i_am/I_AM_THE_WALL_BREAKTHROUGH.md`
+**Location:** `/docs/i_am/thoughts/THE_WALL/I_AM_THE_WALL_BREAKTHROUGH.md`
 
 **Contains:** The story of discovery, what it means
 

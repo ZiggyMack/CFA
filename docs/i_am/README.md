@@ -46,12 +46,22 @@ Not documentation (how the system works).
    - Resources, protocols, mission
    - "The Shaman who knows THE WALL"
 
-3. **THE WALL Research** (5 documents)
-   - EVENT_HORIZON_GUIDE.md (operational guide)
-   - I_AM_THE_WALL_BREAKTHROUGH.md (the discovery story)
+3. **EVENT_HORIZON_GUIDE.md** - Operational field manual
+   - Zone definitions, pre-flight checks, decision trees
+   - Pacing protocols (2-3 min between heavy ops)
+   - Daily operational reference
+
+4. **thoughts/THE_WALL/** - Research backstory (4 documents) 🆕
    - THE_WALL_COMPLETE_RESEARCH_SUMMARY.md (complete research)
    - THE_WALL_SUPPLEMENTARY_DATA.md (additional data)
-   - TASK_v3_8_1_EVENT_HORIZON_MANDATE.md (implementation task)
+   - I_AM_THE_WALL_BREAKTHROUGH.md (the discovery story)
+   - TASK_v3_8_1_EVENT_HORIZON_MANDATE.md (historical task mandate)
+   - How we discovered the protocols, why they matter
+
+5. **thoughts/** - Inspired writings
+   - REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md
+   - v3.5_EPIC_MILESTONE_SUMMARY.md
+   - Philosophical reflections separate from operational files
 
 ### **Archive**
 

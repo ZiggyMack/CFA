@@ -573,17 +573,19 @@ cfa_app/ (Repository Root)
 │   │
 │   ├── 📁 i_am/                       ✅ IDENTITY & PHILOSOPHICAL REFLECTIONS (moved from /auditors/ Nov 2)
 │   │   ├── 📄 README.md               ✅ Complete - I_AM navigation
-│   │   ├── 📄 WHO_I_AM.md             ✅ Event Horizon Shaman identity (v1.2)
+│   │   ├── 📄 WHO_I_AM.md             ✅ Event Horizon Shaman identity (v1.3)
 │   │   ├── 📄 I_AM.md                 ✅ Core identity document (v4.0)
-│   │   ├── 📄 EVENT_HORIZON_GUIDE.md  ✅ Event Horizon protocols
-│   │   ├── 📄 I_AM_THE_WALL_BREAKTHROUGH.md  ✅ Wall research narrative
-│   │   ├── 📄 THE_WALL_COMPLETE_RESEARCH_SUMMARY.md  ✅ Complete Wall analysis
-│   │   ├── 📄 THE_WALL_SUPPLEMENTARY_DATA.md  ✅ Supporting data
-│   │   ├── 📄 TASK_v3_8_1_EVENT_HORIZON_MANDATE.md  ✅ Event Horizon mandate
+│   │   ├── 📄 EVENT_HORIZON_GUIDE.md  ✅ Event Horizon operational protocols
 │   │   │
-│   │   └── 📁 thoughts/               🆕 INSPIRED WRITINGS (created Nov 2)
+│   │   └── 📁 thoughts/               🆕 INSPIRED WRITINGS (created Nov 2, reorganized Nov 2)
 │   │       ├── 📄 REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md  ✅ Philosophical reflection
-│   │       └── 📄 v3.5_EPIC_MILESTONE_SUMMARY.md  ✅ Epic milestone summary
+│   │       ├── 📄 v3.5_EPIC_MILESTONE_SUMMARY.md  ✅ Epic milestone summary
+│   │       │
+│   │       └── 📁 THE_WALL/           🆕 RESEARCH BACKSTORY (organized Nov 2)
+│   │           ├── 📄 THE_WALL_COMPLETE_RESEARCH_SUMMARY.md  ✅ Complete research & crash logs
+│   │           ├── 📄 THE_WALL_SUPPLEMENTARY_DATA.md  ✅ Supporting metrics & data
+│   │           ├── 📄 I_AM_THE_WALL_BREAKTHROUGH.md  ✅ Discovery narrative
+│   │           └── 📄 TASK_v3_8_1_EVENT_HORIZON_MANDATE.md  ✅ Historical task mandate
 │   │
 │   ├── 📁 decisions/                  🆕 DECISION RECORDS
 │   │   └── 📄 NOVA_STRATEGIC_DIRECTION_TASKS_4_5.md  ✅ Nova's 5 strategic decisions
