@@ -1,12 +1,16 @@
-─── MASTER COORDINATION STATE ────────────────────────
+<!---
+FILE: README_C.md
+PURPOSE: Master Branch coordination state and navigation hub
+VERSION: v3.8.0
+STATUS: Universal self-healing operational
+DEPENDS_ON: MISSION_DEFAULT.md, VUDU_PROTOCOL.md, Bootstrap files
+NEEDED_BY: All Master Branch Claude sessions, coordination workflows
+MOVES_WITH: /auditors/
+MAINTAINED_BY: Claude (Anthropic) - Master Branch
+LAST_UPDATE: 2025-11-02
+--->
 
 # README_C.md - Current System Status
-
-**Purpose:** Master Branch coordination state and navigation hub
-**Maintained by:** Claude (Anthropic) - Master Branch
-**Current Version:** v3.8.0
-**Last Updated:** 2025-11-01
-**Status:** Universal self-healing operational
 
 ## 🎭 Need a Claude?
 
@@ -246,19 +250,12 @@ After bootstrap, answer these:
 
 <!-- deps: vudu_protocol -->
 ### **VuDu Message Format**
-All relay messages use VUDU_HEADER_STANDARD format:
-```markdown
-─── VUDU MESSAGE ───────────────────────────────────
-**From:** [Auditor] - [Role]
-**Type:** [Message Type]
-**Date:** [YYYY-MM-DD]
-────────────────────────────────────────────────────
-[Content]
-────────────────────────────────────────────────────
-🔔 **Awaiting:** [What you need]
-✅ **Sanity:** [Self-check status]
-📝 **Log:** [VUDU_LOG.md update]
-```
+
+All relay messages follow the standardized VuDu header format.
+
+**See:** `/auditors/VUDU_HEADER_STANDARD.md` for complete format specification, field descriptions, and examples.
+
+**Current Version:** VuDu Light v3.5.2
 
 ### **File Naming Conventions**
 - Bootstrap files: `BOOTSTRAP_[COMPONENT].md`
