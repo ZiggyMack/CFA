@@ -6,7 +6,7 @@ STATUS: Active
 DEPENDS_ON: None
 NEEDED_BY: All auditors making repository changes, CHANGELOG.md
 MOVES_WITH: / (root)
-LAST_UPDATE: 2025-11-02 [DOCUMENTATION-2025-11-02-10]
+LAST_UPDATE: 2025-11-02 [STRUCTURE-2025-11-02-11]
 --->
 
 <!-- deps: file_structure, documentation -->
@@ -53,22 +53,70 @@ LAST_UPDATE: 2025-11-02 [DOCUMENTATION-2025-11-02-10]
 ## 📊 COORDINATION CHECKPOINT
 
 **Last Full Coordination:** 2025-11-01
-**Entries Since:** 23
+**Entries Since:** 24
 **Pending Items:** 2 (Nova Tasks - awaiting Nova activation, README_AUDIT - awaiting Ziggy approval)
 
 ### Category Pointers:
 
 - **[TASK_MOVEMENT]:** Last entry 2025-11-02-06
-- **[VALIDATION]:** Last entry 2025-11-02-9 🆕
+- **[VALIDATION]:** Last entry 2025-11-02-12 🆕
 - **[PENDING_ACTIONS]:** Last entry 2025-11-01-21
-- **[DOCUMENTATION]:** Last entry 2025-11-02-10 🆕
-- **[STRUCTURE]:** Last entry 2025-11-02-8
+- **[DOCUMENTATION]:** Last entry 2025-11-02-10
+- **[STRUCTURE]:** Last entry 2025-11-02-11
 - **[DEPLOYMENTS]:** Last entry 2025-11-01-19
 - **[ALL_CHANGES]:** Last entry 2025-11-01-1
 
 -----
 
 ## 📝 CHANGE LOG
+
+### [VALIDATION-2025-11-02-12] 2025-11-02 - Validation Ripple Impact Fixes: Semantic Header & README
+
+**Categories:** [VALIDATION] [DOCUMENTATION]
+**Changed by:** VALIDATION Claude (Review) + Doc Claude (Execution)
+**Session ID:** claude/integrate-grok-nova-prep-vudu-011CUiK823ucWkkGE34Rndof
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `UPDATED`: /docs/Validation/reports/2025-11-02_SEMANTIC_HEADER_NOISE_ASSESSMENT.md (MOVES_WITH field corrected)
+- `UPDATED`: /docs/Validation/reports/README.md (stub → proper index with org logic)
+
+**Reason:** VALIDATION Claude ripple impact review found stale semantic header metadata (MOVES_WITH still referenced old path) and inadequate reports/ directory README. Priority 1 (CRITICAL) and Priority 2 (IMPORTANT) fixes from validation report.
+
+**Validation Findings:**
+- 7/9 checks passed (78%) before fixes
+- CRITICAL: Semantic header MOVES_WITH field was stale (/docs/repository/ → /docs/Validation/reports/)
+- IMPORTANT: README.md was inadequate stub, poor discoverability for validation reports
+
+**Impact:** Minimal - Maintains semantic header dependency tracking integrity. Improves discoverability of validation reports directory.
+
+**Follow-up Required:** NO - Validation complete. File organization fully compliant.
+
+---
+
+### [STRUCTURE-2025-11-02-11] 2025-11-02 - File Organization: Move Validation Report to Proper Home
+
+**Categories:** [STRUCTURE] [VALIDATION]
+**Changed by:** Doc Claude (File Organization)
+**Session ID:** claude/integrate-grok-nova-prep-vudu-011CUiK823ucWkkGE34Rndof
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `MOVED`: SEMANTIC_HEADER_NOISE_ASSESSMENT.md → /docs/Validation/reports/2025-11-02_SEMANTIC_HEADER_NOISE_ASSESSMENT.md
+- `UPDATED`: /docs/repository/DASHBOARD.md (link reference updated)
+
+**Reason:** User questioned file location. File is a point-in-time validation report (not a living tool/process). Belongs with other validation reports in /docs/Validation/reports/ (dated filename convention).
+
+**Organization Logic:**
+- Validation reports → `/docs/Validation/reports/` (dated: 2025-11-02_*.md)
+- Repository tools → `/docs/repository/librarian_tools/`
+- Repository meta-docs → `/docs/repository/`
+
+**Impact:** Minimal - Proper file organization. Validation reports now consistently located.
+
+**Follow-up Required:** COMPLETED ✅ - See [VALIDATION-2025-11-02-12]
+
+---
 
 ### [DOCUMENTATION-2025-11-02-10] 2025-11-02 - Semantic Header Metric Refinement: Signal vs Noise (40% → 87% Core)
 

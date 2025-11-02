@@ -5,7 +5,7 @@ VERSION: v1.0
 STATUS: Analysis Complete
 DEPENDS_ON: MASTER_DEPENDENCY_MAP.md, TREE_STRUCTURE_DEEP_SCAN
 NEEDED_BY: DOC_CLAUDE, Repository stakeholders
-MOVES_WITH: /docs/repository/
+MOVES_WITH: /docs/Validation/reports/
 LAST_UPDATE: 2025-11-02
 --->
 
