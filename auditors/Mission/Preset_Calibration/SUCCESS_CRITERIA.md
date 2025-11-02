@@ -1,3 +1,14 @@
+<!---
+FILE: SUCCESS_CRITERIA.md
+PURPOSE: Define "done" for preset mode calibration mission
+VERSION: v1.0
+STATUS: Active
+DEPENDS_ON: TECHNICAL_SPEC.md, MISSION_BRIEF.md
+NEEDED_BY: Mission auditors, validation processes
+MOVES_WITH: /auditors/Mission/Preset_Calibration/
+LAST_UPDATE: 2025-11-02
+--->
+
 # VUDU CALIBRATION SUCCESS CRITERIA 🎯
 
 **Purpose:** Define "done" for preset mode calibration  

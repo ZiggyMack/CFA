@@ -1,4 +1,13 @@
-─── DEFAULT OPERATIONAL STATE ────────────────────────
+<!---
+FILE: MISSION_DEFAULT.md
+PURPOSE: Universal fallback guidance for cold starts and mission recovery
+VERSION: v4.0.0
+STATUS: Active
+DEPENDS_ON: None (root fallback document)
+NEEDED_BY: All auditors, README_C.md, bootstrap system, MISSION_CURRENT.md
+MOVES_WITH: /auditors/
+LAST_UPDATE: 2025-11-02
+--->
 
 # MISSION_DEFAULT.md - Universal Fallback Guidance
 

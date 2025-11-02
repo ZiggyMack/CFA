@@ -1,4 +1,14 @@
-<!-- deps: preset_modes, mission_system -->
+<!---
+FILE: CURRENT_MODE_CONFIGS.md
+PURPOSE: Exact current preset mode values for VuDu calibration
+VERSION: v3.5
+STATUS: Active - INTUITIVE (not yet calibrated)
+DEPENDS_ON: pages/console.py (lines 185-222), MISSION_BRIEF.md
+NEEDED_BY: Calibration auditors, SUCCESS_CRITERIA.md validation
+MOVES_WITH: /auditors/Mission/Preset_Calibration/
+LAST_UPDATE: 2025-11-02
+--->
+
 # CURRENT MODE CONFIGURATIONS - v3.5 📊
 
 **Purpose:** Exact current preset mode values for VuDu calibration  

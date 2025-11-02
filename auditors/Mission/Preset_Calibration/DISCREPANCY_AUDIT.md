@@ -1,4 +1,14 @@
-<!-- deps: validation_process, documentation -->
+<!---
+FILE: DISCREPANCY_AUDIT.md
+PURPOSE: Comprehensive validation audit - find all documentation conflicts across v3.5 files
+VERSION: v3.5
+STATUS: Complete
+DEPENDS_ON: All v3.5 documentation files
+NEEDED_BY: Quality validation, consistency verification
+MOVES_WITH: /auditors/Mission/Preset_Calibration/
+LAST_UPDATE: 2025-11-02
+--->
+
 # v3.5 COMPREHENSIVE DISCREPANCY AUDIT - ALL CONFLICTS FOUND ✅
 
 **Audited By:** Claude (Anthropic) - Master Branch  
