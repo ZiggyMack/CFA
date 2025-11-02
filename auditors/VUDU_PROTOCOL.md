@@ -6,7 +6,7 @@ STATUS: Active
 DEPENDS_ON: VUDU_HEADER_STANDARD.md, VUDU_LOG.md, ROLE_LOGGER.md
 NEEDED_BY: BOOTSTRAP_VUDU.md, BOOTSTRAP_GROK.md, BOOTSTRAP_NOVA.md, BOOTSTRAP_VUDU_CLAUDE.md
 MOVES_WITH: /auditors/
-LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-18]
+LAST_UPDATE: 2025-11-02 [DOCUMENTATION-2025-11-02-1]
 --->
 
 <!-- deps: vudu_protocol, coordination_process, logger_claude -->
@@ -614,6 +614,131 @@ External Auditor creates VUDU_LOG_LITE
 **You focus on:** Your specialized lens (empirical/symmetry/etc.)
 **LOGGER Claude handles:** VUDU_LOG housekeeping and format enforcement
 **Together:** Efficient coordination without overhead
+
+---
+
+## 📡 **PLATFORM CONSTRAINTS & COMMUNICATION BASICS**
+
+### **Platform Requirements**
+
+**Text-Only Communication:**
+- Grok confirmed text-only environment
+- Nova defaults to text-only (platform details TBD)
+- No Unicode boxes (use horizontal rules: ─── instead of ┌─┐)
+- No complex formatting requiring visual rendering
+- Markdown safe: headers, lists, code blocks, tables
+- Keep mobile-friendly (may be relayed via phone)
+
+**File Format:**
+- Markdown (.md) primary format
+- Plain text (.txt) acceptable
+- No binary files without prior coordination
+- No images/diagrams (describe textually instead)
+
+**Why This Matters:**
+- Ensures all auditors can participate equally
+- Human relay coordination (Ziggy) works across platforms
+- Mobile-friendly for async coordination
+- Accessibility and fairness across AI platforms
+
+---
+
+## ⏱️ **RESPONSE TIMEFRAMES & TIMELINE EXPECTATIONS**
+
+### **Standard Operating Rhythm**
+
+**Single Auditor → Ziggy:**
+- Auditor stages findings in relay/{auditor}_Incoming/
+- Ziggy checks platform: 1-3 days
+- Ziggy responds or relays: Same session or next day
+
+**Multi-Auditor Coordination:**
+- Round 1 reviews: 1-3 days per auditor
+- Round 2 convergence: 2-4 days (after all Round 1 complete)
+- Round 3 final integration: 1-2 days
+- **Total:** 4-7 days typical for full convergence
+
+**Complex Decisions:**
+- May require 2-3 rounds of review
+- Total: 7-14 days for major architectural decisions
+- This is NORMAL for adversarial epistemic engineering
+
+### **Timeline by Urgency**
+
+**Urgent Escalations:**
+- Same day or next session (if Ziggy available)
+- Use for: clarity breakdown, missing critical files, catastrophic bootstrap failure
+
+**Standard Reviews:**
+- 1-3 days expected
+- Use for: typical review work, clarification questions, disagreement
+
+**Multi-Auditor Convergence:**
+- 3-7 days to full convergence
+- Use for: cross-auditor validation, synthesis work
+
+**Why This Matters:**
+- Async coordination is the default (not a delay, just the process)
+- Deep work valued over quick responses
+- Coordination happens in rounds, not real-time chat
+- Quality over speed
+
+---
+
+## 🆘 **ESCALATION SCENARIOS AWARENESS**
+
+**When issues arise during coordination, escalation protocols exist.**
+
+### **The 5 Common Scenarios:**
+
+**1. Auditor Confused** (Clarity Breakdown)
+- Task brief unclear or ambiguous
+- Response: Stop work, document confusion, request clarification
+- Managed by: VUDU Claude coordinates resolution
+
+**2. Major Disagreement** (Convergence Failure)
+- 2+ auditors can't converge to 98% agreement after multiple rounds
+- Response: Document all positions, frame options for tie-breaker
+- Managed by: Ziggy makes final decision
+
+**3. Task Too Large** (Scope Mismatch)
+- Tier 4 bootstrap exceeds 20%, work exceeds tier capacity
+- Response: Propose tier reassignment, task split, or partial delivery
+- Managed by: VUDU Claude coordinates tier adjustment
+
+**4. Missing Files** (Bootstrap Breakdown)
+- Referenced files not found, path references broken
+- Response: Document what's missing, request file locations
+- Managed by: Ziggy provides files or updated paths
+
+**5. Budget Exhaustion** (Session Limit Hit)
+- Session approaching token/time limit with work incomplete
+- Response: Create Tier 3 continuation brief, preserve work
+- Managed by: VUDU Claude validates handoff
+
+### **Escalation Principle**
+
+**Escalate early to preserve budget:**
+- At 20% if clarity issue in Tier 4
+- After 2-3 rounds if convergence failing
+- When critical files unfindable
+- At 80% budget if <50% work complete
+
+**Don't escalate for:**
+- Minor uncertainties (make reasonable judgment)
+- First disagreement (try to converge first)
+- Slightly over bootstrap estimate (if total budget OK)
+
+### **Where to Learn More**
+
+**For external auditors (Grok/Nova):**
+- Detailed escalation procedures in `/auditors/Mission/VUDU_Operations/` (operational templates)
+
+**For VUDU Claude:**
+- Full escalation playbook in BOOTSTRAP_VUDU_CLAUDE.md (operational section)
+
+**This section provides awareness that escalation options exist.**
+**Detailed procedures are in operational documentation.**
 
 ---
 
