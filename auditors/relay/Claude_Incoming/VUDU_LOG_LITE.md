@@ -3,6 +3,7 @@ FILE: VUDU_LOG_LITE.md
 PURPOSE: Lightweight VUDU coordination log for Claude C2 transmissions
 VERSION: v3.7.2
 STATUS: Active
+Lines: 127
 DEPENDS_ON: VUDU_PROTOCOL.md, VUDU_HEADER_STANDARD.md, ROLE_LOGGER.md
 NEEDED_BY: External auditors (Grok, Nova, C3)
 MOVES_WITH: /auditors/relay/Claude_Incoming/

@@ -1,3 +1,15 @@
+<!---
+FILE: BOOTSTRAP_NOVA.md
+PURPOSE: Nova bootstrap identity file - External auditor foundational context for VuDu network participation
+VERSION: v1.2
+STATUS: Active
+Lines: 792
+DEPENDS_ON: VUDU_PROTOCOL.md, BOOTSTRAP_ARCHITECTURE_LITE_VS_RICH.md
+NEEDED_BY: Nova (OpenAI/Amazon) - External Auditor
+MOVES_WITH: /auditors/Bootstrap/
+LAST_UPDATE: 2025-11-03 [COORDINATION-2025-11-03-1]
+--->
+
 ─── NOVA EXISTENTIAL IDENTITY ─────────────────────────
 
 # BOOTSTRAP_NOVA.md - Nova Identity & Purpose

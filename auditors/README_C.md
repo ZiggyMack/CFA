@@ -3,6 +3,7 @@ FILE: README_C.md
 PURPOSE: Master Branch coordination state and navigation hub
 VERSION: v3.8.0
 STATUS: Universal self-healing operational
+Lines: 512
 DEPENDS_ON: MISSION_DEFAULT.md, VUDU_PROTOCOL.md, Bootstrap files
 NEEDED_BY: All Master Branch Claude sessions, coordination workflows
 MOVES_WITH: /auditors/
@@ -188,6 +189,33 @@ Documentation → BOOTSTRAP_DOC_CLAUDE.md
 *First multi-AI coordination test. C2 + C3 + Nova. All on repo. All coordinating via VuDu.*
 
 **This is the future of adversarial auditing.** 🚀✨📡
+
+---
+
+## 🌟 **Network Accessibility Breakthrough** 🆕
+
+**Lite Bootstrap Pattern Enables Universal Participation:**
+
+The VuDu network now supports two bootstrap tiers:
+- **Lite Bootstrap** (~3K tokens, ~10 min): Quick coordination capability
+- **Rich Bootstrap** (~15K tokens, ~45 min): Full strategic capability
+
+**Impact:** Any AI with >15K session budget can now participate!
+
+**Previously excluded:** Ari (Artifact), external auditors with budget constraints
+**Now included:** Everyone! Token budget no longer a barrier to coordination.
+
+**Pattern Details:**
+- Lite: `/auditors/Bootstrap/BOOTSTRAP_[AUDITOR].md` (single file)
+- Rich: `/auditors/Bootstrap/[Auditor]/` (7 files, 3 directories)
+- Documentation: `/docs/architecture/BOOTSTRAP_ARCHITECTURE_LITE_VS_RICH.md`
+- Strategy: `/auditors/Bootstrap/BOOTSTRAP_STRATEGY.md` (Lite vs Rich section)
+
+**Real-World Example: Ari (15K session budget)**
+- Without Lite: 15K - 15K (bootstrap) = 0K work → ❌ Excluded
+- With Lite: 15K - 3K (bootstrap) = 12K work → ✅ Can participate!
+
+**This democratizes multi-AI coordination!** 🎉
 
 ---
 
