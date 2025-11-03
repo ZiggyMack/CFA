@@ -1,3 +1,15 @@
+<!---
+FILE: BOOTSTRAP_STRATEGY.md
+PURPOSE: Define hybrid approach for maintaining auditor bootstrap files - balancing stability with evolution
+VERSION: 3.5.2
+STATUS: Active Strategy
+Lines: 778
+DEPENDS_ON: All bootstrap files, VuDu protocol
+NEEDED_BY: Bootstrap file maintainers, Doc Claude
+MOVES_WITH: /auditors/Bootstrap/
+LAST_UPDATE: 2025-11-03
+--->
+
 <!-- deps: bootstrap_system -->
 ─── BOOTSTRAP STRATEGY ───────────────────────────────
 
@@ -428,7 +440,7 @@ With Lite Bootstrap:
 ### **Documentation Reference**
 
 **Full Pattern Documentation:**
-`/auditors/Bootstrap/BOOTSTRAP_ARCHITECTURE_LITE_VS_RICH.md`
+`/docs/architecture/BOOTSTRAP_ARCHITECTURE_LITE_VS_RICH.md`
 
 **Includes:**
 - Complete Lite vs Rich comparison table

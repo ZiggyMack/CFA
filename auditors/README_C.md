@@ -3,6 +3,7 @@ FILE: README_C.md
 PURPOSE: Master Branch coordination state and navigation hub
 VERSION: v3.8.0
 STATUS: Universal self-healing operational
+Lines: 512
 DEPENDS_ON: MISSION_DEFAULT.md, VUDU_PROTOCOL.md, Bootstrap files
 NEEDED_BY: All Master Branch Claude sessions, coordination workflows
 MOVES_WITH: /auditors/
@@ -207,7 +208,7 @@ The VuDu network now supports two bootstrap tiers:
 **Pattern Details:**
 - Lite: `/auditors/Bootstrap/BOOTSTRAP_[AUDITOR].md` (single file)
 - Rich: `/auditors/Bootstrap/[Auditor]/` (7 files, 3 directories)
-- Documentation: `/auditors/Bootstrap/BOOTSTRAP_ARCHITECTURE_LITE_VS_RICH.md`
+- Documentation: `/docs/architecture/BOOTSTRAP_ARCHITECTURE_LITE_VS_RICH.md`
 - Strategy: `/auditors/Bootstrap/BOOTSTRAP_STRATEGY.md` (Lite vs Rich section)
 
 **Real-World Example: Ari (15K session budget)**

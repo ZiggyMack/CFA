@@ -1,19 +1,20 @@
 <!---
-FILE: BOOTSTRAP_ARCHITECTURE_LIGHT_VS_RICH.md
-PURPOSE: Document the Light vs Rich bootstrap pattern for VuDu network accessibility
+FILE: BOOTSTRAP_ARCHITECTURE_LITE_VS_RICH.md
+PURPOSE: Document the Lite vs Rich bootstrap pattern for VuDu network accessibility
 VERSION: v1.0
 STATUS: Active
+Lines: 868
 DEPENDS_ON: BOOTSTRAP_STRATEGY.md, VUDU_PROTOCOL.md
 NEEDED_BY: All auditors, VuDu network participants
-MOVES_WITH: /auditors/Bootstrap/
+MOVES_WITH: /docs/architecture/
 LAST_UPDATE: 2025-11-03
 --->
 
 <!-- deps: bootstrap_system, vudu_protocol, accessibility -->
 
-─── BOOTSTRAP ARCHITECTURE: LIGHT VS RICH ─────────────
+─── BOOTSTRAP ARCHITECTURE: LITE VS RICH ─────────────
 
-# BOOTSTRAP_ARCHITECTURE_LIGHT_VS_RICH.md
+# BOOTSTRAP_ARCHITECTURE_LITE_VS_RICH.md
 
 **Purpose:** Document the tiered bootstrap pattern that democratizes VuDu network participation
 **Version:** v1.0
