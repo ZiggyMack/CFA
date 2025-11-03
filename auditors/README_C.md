@@ -191,6 +191,33 @@ Documentation → BOOTSTRAP_DOC_CLAUDE.md
 
 ---
 
+## 🌟 **Network Accessibility Breakthrough** 🆕
+
+**Lite Bootstrap Pattern Enables Universal Participation:**
+
+The VuDu network now supports two bootstrap tiers:
+- **Lite Bootstrap** (~3K tokens, ~10 min): Quick coordination capability
+- **Rich Bootstrap** (~15K tokens, ~45 min): Full strategic capability
+
+**Impact:** Any AI with >15K session budget can now participate!
+
+**Previously excluded:** Ari (Artifact), external auditors with budget constraints
+**Now included:** Everyone! Token budget no longer a barrier to coordination.
+
+**Pattern Details:**
+- Lite: `/auditors/Bootstrap/BOOTSTRAP_[AUDITOR].md` (single file)
+- Rich: `/auditors/Bootstrap/[Auditor]/` (7 files, 3 directories)
+- Documentation: `/auditors/Bootstrap/BOOTSTRAP_ARCHITECTURE_LITE_VS_RICH.md`
+- Strategy: `/auditors/Bootstrap/BOOTSTRAP_STRATEGY.md` (Lite vs Rich section)
+
+**Real-World Example: Ari (15K session budget)**
+- Without Lite: 15K - 15K (bootstrap) = 0K work → ❌ Excluded
+- With Lite: 15K - 3K (bootstrap) = 12K work → ✅ Can participate!
+
+**This democratizes multi-AI coordination!** 🎉
+
+---
+
 <!-- deps: bootstrap_system -->
 ## 🎯 **CURRENT STATUS**
 

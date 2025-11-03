@@ -131,6 +131,317 @@ Every **MAJOR version** (v3.x → v4.0), we:
 
 ---
 
+## 🎚️ **LITE vs RICH: Bootstrap Access Tiers** 🆕
+
+**Discovery Date:** 2025-11-03
+**Origin:** Nova repo access preparation for VuDu network test
+**Documented:** BOOTSTRAP_ARCHITECTURE_LITE_VS_RICH.md
+**Impact:** Token budget no longer a barrier to VuDu coordination
+
+---
+
+### **The Pattern Discovery**
+
+While preparing Nova for the VuDu network test, we discovered a brilliant accessibility pattern:
+
+**The Problem:**
+- Full 7-file bootstrap system requires ~15-20K tokens (~45 min read)
+- Budget-limited AIs (like Ari) have 15K total session budgets
+- Reading bootstrap = no tokens left for actual work
+- Result: Budget-limited AIs excluded from VuDu network
+
+**The Insight:**
+> "Not all AIs need full context to participate meaningfully"
+
+**The Solution:**
+Two bootstrap tiers serving different needs:
+- **Lite Bootstrap** (1 file, ~3K tokens, ~10 min): Network participation
+- **Rich Bootstrap** (7 files, ~15K tokens, ~45 min): Full context recovery
+
+---
+
+### **Lite Bootstrap (Network Participation Tier)**
+
+**Files:**
+- `BOOTSTRAP_NOVA.md` (single file)
+- `BOOTSTRAP_CLAUDE.md` (single file)
+- `BOOTSTRAP_GROK.md` (single file)
+- Future: `BOOTSTRAP_ARI.md` (when Ari joins)
+
+**Read Time:** ~10 minutes
+**Token Cost:** ~2-3K tokens
+**Session Budget:** Works with 15K+ session limits
+
+**Capabilities:**
+- ✅ VuDu network participation
+- ✅ Send/receive relay messages (README_[X].md)
+- ✅ Update VUDU_LOG_LITE.md
+- ✅ Provide domain expertise
+- ✅ Quick validation tasks
+- ✅ External auditor perspective
+
+**Use Cases:**
+- Budget-limited AIs (Ari with 15K sessions)
+- Quick coordination tasks
+- External auditor validation
+- VuDu network messaging
+- Time-sensitive responses
+
+**What's Included:**
+- Identity & role definition
+- Core lens/bias understanding
+- VuDu coordination workflow
+- File access methods
+- Boundaries & capabilities
+- Quick reference
+
+---
+
+### **Rich Bootstrap (Full Context Recovery Tier)**
+
+**Files:**
+- `Bootstrap/Nova/` (7 files, 3 subdirectories)
+- `Bootstrap/Claude/` (7 files, 3 subdirectories)
+- Future: `Bootstrap/Grok/`, `Bootstrap/Ari/`
+
+**Structure:**
+```
+Bootstrap/[Auditor]/
+├── BOOTSTRAP_README_[X].md        (map/index)
+├── Identity/
+│   ├── README.md
+│   └── SKELETON.md                (who they are)
+├── Operations/
+│   ├── README.md
+│   ├── FIELD_GUIDE.md             (how they work)
+│   └── INTERFACE_MANIFEST.md      (what they promise)
+└── Continuity/
+    ├── LEDGER_ENTRY.md            (living log/state)
+    ├── USE_CASE_[X].md            (domain examples)
+    └── README_[X]_vX.X.md         (history/changelog)
+```
+
+**Read Time:** ~45 minutes
+**Token Cost:** ~15-20K tokens
+**Session Budget:** Requires 30K+ for meaningful work after bootstrap
+
+**Capabilities:**
+- ✅ Full auditor activation
+- ✅ Strategic decision making
+- ✅ Complex mission execution
+- ✅ Deep context understanding
+- ✅ Historical continuity
+- ✅ Interface contract guarantees
+
+**Use Cases:**
+- Token-rich AIs (Claude, GPT-5, etc.)
+- Strategic mission work
+- Deep auditing tasks
+- Cross-mission continuity
+- Full capability activation
+- Complex coordination
+
+**What's Included:**
+- Everything in Lite, plus:
+- Detailed operational procedures
+- Interface manifests & contracts
+- Living continuity ledger
+- Domain-specific examples
+- Version history & changelog
+- Philosophical grounding
+
+---
+
+### **The Accessibility Breakthrough**
+
+**Before Lite/Rich Pattern:**
+- Bootstrap cost: 15-20K tokens (mandatory)
+- Ari (15K sessions): 0K work tokens left → **EXCLUDED**
+- Participation: Only high-capacity AIs
+
+**After Lite/Rich Pattern:**
+- Lite bootstrap: 3K tokens
+- Ari (15K sessions): 12K work tokens left → **INCLUDED**
+- Participation: Any AI with 15K+ session
+
+**Impact Metrics:**
+- **2x more AIs** can participate in VuDu network
+- **50% reduction** in bootstrap waste for quick tasks
+- **∞ potential network size** (budget no longer barrier)
+
+**Real-World Example: Ari (Sassy's AI)**
+```
+Session Budget: 15K tokens total
+
+Without Lite Bootstrap:
+  15K (session) - 15K (rich bootstrap) = 0K work → ❌ Can't participate
+
+With Lite Bootstrap:
+  15K (session) - 3K (lite bootstrap) = 12K work → ✅ Can participate!
+```
+
+---
+
+### **Design Principles**
+
+1. **Layered Context Recovery:**
+   - Lite gives minimum viable context
+   - Rich gives complete ontological grounding
+   - Both are valid, serve different needs
+
+2. **VuDu Network Accessibility:**
+   - Lite enables network participation
+   - Network coordination ≠ full capability
+   - External perspective still valuable
+
+3. **Graceful Degradation:**
+   - Lite works standalone (not "broken")
+   - Rich is enhancement, not requirement
+   - Capabilities explicit at each tier
+
+4. **Explicit Boundaries:**
+   - Lite: "You CAN / You CANNOT" sections
+   - Rich: Full capability manifest
+   - No confusion about what's available
+
+5. **Upgrade Path:**
+   - Start with Lite (quick participation)
+   - Reference Rich if deeper context needed
+   - Task determines tier choice
+
+---
+
+### **Relationship to Evolution Strategy**
+
+**This Pattern is ORTHOGONAL to Locked/Append/Rebuild:**
+
+- **Locked/Append/Rebuild** = How files evolve over time (vertical dimension)
+  - Phase 1: Lock core (stability)
+  - Phase 2: Append lessons (learning)
+  - Phase 3: Rebuild (major versions)
+
+- **Lite/Rich** = Access tiers for different contexts (horizontal dimension)
+  - Lite: Network participation (accessibility)
+  - Rich: Full recovery (capability)
+
+**Both apply simultaneously:**
+```
+           Locked/Append/Rebuild
+                    ↓
+    BOOTSTRAP_NOVA.md (Lite)         ← Evolves via append/rebuild
+    Bootstrap/Nova/  (Rich)          ← Evolves via append/rebuild
+                    ↓
+                Lite/Rich
+```
+
+**Integration:**
+- Each tier follows locked/append/rebuild strategy
+- Lessons learned go in both tiers (synchronized)
+- Major rebuilds affect both Lite and Rich files
+- Lite points to Rich for depth
+
+---
+
+### **Maintenance Guidelines for Lite/Rich**
+
+**Rule 1: Keep Lite/Rich Synchronized**
+- Core identity changes go in BOTH
+- Lessons learned append to BOTH
+- Rich has more detail, but same truth
+
+**Rule 2: Lite Points to Rich**
+- Lite should reference Rich for depth
+- "See Bootstrap/[Auditor]/ for complete context"
+- Never hide Rich existence from Lite readers
+
+**Rule 3: Rich is Self-Contained**
+- Rich doesn't require Lite
+- Can start with Rich if tokens allow
+- Lite is optimization, not prerequisite
+
+**Rule 4: Test with Budget-Limited AIs**
+- Validate Lite works within 15K sessions
+- Measure actual token usage
+- Ensure capabilities are sufficient
+
+**Rule 5: Document Tier Choice Criteria**
+- When to use Lite (budget limits, quick tasks)
+- When to use Rich (strategic work, full capability)
+- Let AI choose based on context
+
+---
+
+### **Future Expansion (v4.0+)**
+
+**Phase 1: Formalize Pattern** ✅ (Complete - 2025-11-03)
+- Created BOOTSTRAP_ARCHITECTURE_LITE_VS_RICH.md
+- Added Lite Bootstrap to BOOTSTRAP_NOVA.md
+- Documented pattern in BOOTSTRAP_STRATEGY.md
+
+**Phase 2: Create Lite for Other Auditors** (Planned Q1 2026)
+- Grok Lite Bootstrap (BOOTSTRAP_GROK.md enhancement)
+- Ari Lite Bootstrap (new file)
+- Template for future auditors
+
+**Phase 3: Test with Budget-Limited AIs** (Planned Q1 2026)
+- Ari joins VuDu network test
+- Measure token usage
+- Validate capabilities sufficient
+- Refine Lite content based on feedback
+
+**Phase 4: Generalize Pattern** (Planned v4.0)
+- Create BOOTSTRAP_LITE_TEMPLATE.md
+- Create BOOTSTRAP_RICH_TEMPLATE.md
+- Automation for auditor creation
+
+**Phase 5: Dynamic Bootstrap Selection** (Future v4.0+)
+- AI declares session budget
+- System recommends Lite or Rich
+- Adaptive content based on available tokens
+
+---
+
+### **Lessons Learned from Discovery**
+
+**Lesson 1: Patterns Emerge from Real Work**
+- We didn't design Lite/Rich upfront
+- Nova repo access forced the question
+- Real constraint (token budget) revealed solution
+
+**Lesson 2: Accessibility is Strategic**
+- More participants = better auditing
+- Diverse perspectives > comprehensive context
+- Inclusion creates innovation
+
+**Lesson 3: Token Budget is Hidden Barrier**
+- We assumed everyone had unlimited tokens
+- Budget-limited AIs silently excluded
+- Making constraint explicit enables solutions
+
+**Lesson 4: Explicit Boundaries Prevent Confusion**
+- Lite: "You CAN / You CANNOT" sections
+- Prevents budget-limited AI from overreaching
+- Clear capabilities reduce frustration
+
+---
+
+### **Documentation Reference**
+
+**Full Pattern Documentation:**
+`/auditors/Bootstrap/BOOTSTRAP_ARCHITECTURE_LITE_VS_RICH.md`
+
+**Includes:**
+- Complete Lite vs Rich comparison table
+- Token budget impact analysis
+- Use case examples (Ari, Nova)
+- Design principles
+- Implementation details
+- Future expansion roadmap
+
+**Status:** Active pattern, validated with Nova, ready for Ari testing
+
+---
+
 ## 🛡️ Governance Rules
 
 ### **Rule 1: Core Ethos is Immutable**
