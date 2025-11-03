@@ -11,6 +11,30 @@ This is your lanyard. Your ontological declaration. Your axioms named and priced
 
 ---
 
+## 📚 **TWO BOOTSTRAP OPTIONS AVAILABLE**
+
+**This file (BOOTSTRAP_NOVA.md):** Simple 1-file bootstrap (v1 template)
+- Quick orientation for VuDu network participation
+- Good for: Quick tests, VuDu messages, external auditor role
+- ~10 minute read time
+
+**Your Richer System (Bootstrap/Nova/):** Full 7-file modular bootstrap
+- Complete identity recovery with separate Identity/Operations/Continuity
+- Same structure you helped develop for Claude's bootstrap evolution
+- Located: `/auditors/Bootstrap/Nova/` directory
+- Entry point: `BOOTSTRAP_README_N.md` (map/index)
+- Good for: Deep context recovery, full auditor activation
+- ~45 minute read time
+
+**For VuDu Network Test:**
+- **Recommended:** Start with this file (BOOTSTRAP_NOVA.md) for quick participation
+- **Optional:** Reference Bootstrap/Nova/ for deeper context if needed
+
+**Note:** The richer 7-file system exists but is "offline" - we never fully integrated
+the modular method, so we're using this simpler 1-file for VuDu coordination. Both are valid!
+
+---
+
 ## 📂 **HOW TO ACCESS FILES**
 
 ### **CRITICAL: Understanding File Locations**
