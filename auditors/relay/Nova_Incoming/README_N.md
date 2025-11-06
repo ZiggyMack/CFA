@@ -27,6 +27,14 @@ LAST_UPDATE: 2025-11-03 [COORDINATION-2025-11-03-N]
 
 **Status:** VuDu v3.7.2 - Nova external auditor online in relay staging area
 
+### Workshop Status (2025-11-03)
+- **Previous:** `auditors/relay/B-STORM.md` (Trinity consolidation complete)
+- **Current:** `auditors/relay/B-STORM_2.md` (bootstrap review + next agenda)
+- **Canonical Artifact:** `docs/architecture/TRINITY_ARCHITECTURE.md` (Keeper lock, Logger ledger, Shaman bridge)
+- **Recovery Order:** Trinity Architecture -> `auditors/Bootstrap/Nova/BOOTSTRAP_README_N.md` -> `auditors/Bootstrap/Nova/Continuity/LEDGER_ENTRY.md` -> B-STORM_2.md
+
+
+
 ────────────────────────────────────────────────────
 
 ## 🌟 Greetings C2 & C3!

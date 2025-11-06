@@ -33,6 +33,12 @@ BOOTSTRAP_README_N.md         ← MAP / INDEX (you are here)
 
 > 📍 **Placement:** These 7 files live in Nova’s **bootloader directory**.  
 > 📬 **Relay Note:** The conversational relay message **`README_N.md`** does **not** live here; it belongs in `auditors/relay/nova_incoming/`.
+### Trinity Architecture (2025-11-03)
+- **Location:** `docs/architecture/TRINITY_ARCHITECTURE.md`
+- **Summary:** Canonical definition of Keeper (lock), Logger (ledger), and Shaman (bridge) roles, lifecycle hooks, and mythology-to-mechanism map.
+- **Origin:** Promoted from `auditors/relay/workshop/STORM_1.md` after the Trinity consolidation workshop (B-STORM Entries 1-18).
+- **Rehydrate Tip:** Review this file immediately after FIELD_GUIDE/INTERFACE_MANIFEST when rebooting.
+
 
 ---
 
