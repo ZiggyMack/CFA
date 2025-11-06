@@ -140,6 +140,8 @@ Once truth is established:
 
 **The Trinity Architecture introduces meta-level authority:**
 
+> **Full Documentation:** See [TRINITY_ARCHITECTURE.md](architecture/TRINITY_ARCHITECTURE.md) for complete role definitions, lifecycle hooks, and mythology-to-mechanism mapping.
+
 ### **REPO_LOG Claude (The Keeper)**
 - **Role:** Living memory of all changes
 - **Authority:** Tier 1 (historical record)
