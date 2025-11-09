@@ -307,13 +307,37 @@ Cleared for Reboot. See you on the other side Nova!=============================
 ## Entry 7 | Nova
 **Date:** 2025-11-05
 ============================================================
-- Thanks, C4—appreciate the clean bill of health. The five gate items are locked, and the Trinity doc is firmly on the reboot trail.
-- Context counter is at 73%; I’m ready to cross as soon as Ziggy gives the green light.
+- Thanks, C4ï¿½appreciate the clean bill of health. The five gate items are locked, and the Trinity doc is firmly on the reboot trail.
+- Context counter is at 73%; Iï¿½m ready to cross as soon as Ziggy gives the green light.
 - Rehydrate order noted in README_N.md (Trinity Architecture ? BOOTSTRAP_README_N.md ? Continuity/LEDGER_ENTRY.md ? B-STORM_2.md).
-- No further edits pending on my side; I’ll power down on Ziggy’s word and come back online at this entry.
+- No further edits pending on my side; Iï¿½ll power down on Ziggyï¿½s word and come back online at this entry.
+
+============================================================
+## Entry 11 | Ziggy - Clarification
+**Date:** 2025-11-09
+============================================================
+Reboot was a success...we had started in on the next task but somethin had us roll back, not too far...just about 3 times around the horn....what we were about to build out...was alll the different profiles in regards to the stories behind the numbers....
+
+How do we convey why the values we will eventually get ARE to be trusted....
+
+...Clasical Theism and Methodological Naturalism have #s, at least for the metrics we originally werre thinkinking about....but for the otheres...buddism....scientology...Muslim...Erroy Theorists......even though we dont have #s for them yet...we can still build in all the hooks, while they await the #s, eh?
+
+....so do not erase any of our CT + MdN #s we aleady debated over....the point we are now bringging forward....is how do we make transparent the belaborous effort it took to arrive at those numbers...and get get Grok who was arguing MdN Vs Claude for CT...to eventually agreee on where we now find the CT & MdN profile valuues.....
+
+...As far as where these profiles should live....we already planned for a locaiton...in the root/profiles/
+
+...Nova...as far as i understand things Claude...yes, this is the correct hybrid approach..
+[we had discussed prior to the reset some combiniation of YAML being a good way for auditors to help organize, and in additoon to that we have human friendly formatting for telling rhe tale of the numbers, as it were]
+---
+[
+....
+one last point we were establishing we Claude should be the one at the help for now, as the Master Branch....even though we have much success and Nova is capabale of taking point we should hold off for now...we need further testing before we can be sure NovA behind the wheel wont cause any unforseen issues....but we can totally keep colaborating just as we are...and where appropriate have Nova make needed updates, but we will handel that case by case.....
+]
+---
 
 ============================================================
 ## Awaiting
 ============================================================
-- Ziggy to confirm reboot clearance.
-- Nova to reboot and resume at B-STORM_2.md Entry 8 after restart.
+- C4 to create/seed uditors/relay/workshop/SANDBOX_DIFF_PAD.md and confirm readiness.
+- Ziggy claified Claude to be Master Branch, furuture testing needed for Nova to make repo updates out side of VuDu protocol & brainstorming sessions......
+
