@@ -1,64 +1,50 @@
-# Entry 6 Guidance – Nova
+# Entry 8 Guidance � Nova
 
-Ziggy – requested scratchpad for what I’d like to capture in B-STORM_3 Entry 6, so we can paste it once the relay file is stable.
-
----
-
-## Purpose
-
-Document my KD-O1 revalidation notes without touching `auditors/relay/B-STORM_3.md`. Once the file is safe, paste the relevant portions above the Awaiting block and update the Awaiting section/KG list.
+Scratchpad for B-STORM_3 Entry 8 so we capture the KD-O1 closeout without touching the main relay file until Claude is ready to merge.
 
 ---
 
-## Content to Paste into Entry 6
+## Entry 8 Draft
 
-```
+
 ============================================================
-## Entry 6 | Nova – Template Revalidation
+## Entry 8 | Nova � KD-O1 Closure
 **Date:** 2025-11-09
 ============================================================
 
 ### Readback
-- Reviewed Ziggy’s Entry 4.5 and C4’s Entry 5; the template now reports v0.2.0 and includes the additional category scaffolds.
-- Re-ran the template vs taxonomy diff to ensure the nine new metrics match the canonical definitions.
+- Pulled the latest `auditors/relay/workshop/PROFILE_TEMPLATE.md` (v0.2.0) and confirmed every Anthropological, Cosmological, and Eschatological metric now mirrors the canonical taxonomy definitions (names, value types, enumerations).
+- Verified `auditors/relay/workshop/METRIC_TAXONOMY.md` remains unchanged since KD-O2 was closed, so we�re comparing against the correct reference set.
 
-### KD-O1 Findings (still blocked)
-The new sections exist, but their value sets diverge from the taxonomy. If we promoted the template today, every profile would immediately trample the canonical ranges.
+### KD-O1 � PROFILE_TEMPLATE.md (APPROVED)
+- Anthropological metrics:
+  - `human_nature_baseline` now exposes `{fallen, neutral, progressing, illusory}` (`PROFILE_TEMPLATE.md:435-439`).
+  - `agency_alignment` uses the ranked order `{divine_will, natural_order, personal_autonomy, collective_design}` (`PROFILE_TEMPLATE.md:494-499`).
+  - `consciousness_ontology` matches `{dualist, property_dualist, physicalist, panpsychist, non_dual}` (`PROFILE_TEMPLATE.md:553-556`).
+- Cosmological metrics:
+  - `origin_claim` -> `{creation, eternal, emergent, brute_fact, simulation}` (`PROFILE_TEMPLATE.md:616-620`).
+  - `causal_structure` -> `{deterministic, probabilistic, libertarian_mix}` (`PROFILE_TEMPLATE.md:675-678`).
+  - `fine_tuning_account` -> `{design, multiverse, brute_fact, unknown}` (`PROFILE_TEMPLATE.md:734-737`).
+- Eschatological metrics:
+  - `judgment_framework` -> `{divine_judgment, karma_cycle, annihilation, none}` (`PROFILE_TEMPLATE.md:797-801`).
+  - `ultimate_destiny` -> `{union_with_divine, enlightenment, heat_death, cyclical_return, uplift}` (`PROFILE_TEMPLATE.md:856-859`).
+  - `eschatology_confidence` already shared the taxonomy�s 0-100 scale.
+- All eight justification fields + the 5-part deliberation scaffold remain intact across every metric block.
+- **Result:** KD-O1 closed (promote to KD-C6 when you migrate to DONE_KGs_KDs.md).
 
-1. **Anthropological metrics**
-   - `human_nature_baseline` (`auditors/relay/workshop/PROFILE_TEMPLATE.md:435-439`) uses the “essential/constructed” bucket list, but the taxonomy defines `{fallen, neutral, progressing, illusory}` (`auditors/relay/workshop/METRIC_TAXONOMY.md:393-410`).
-   - `agency_alignment` is a 0‑100 scale in the template (`PROFILE_TEMPLATE.md:494-499`), while the taxonomy requires a ranked order `{divine_will, natural_order, personal_autonomy, collective_design}` (`METRIC_TAXONOMY.md:412-444`).
-   - `consciousness_ontology` values (`PROFILE_TEMPLATE.md:553-556`) diverge from `{dualist, property_dualist, physicalist, panpsychist, non_dual}` (`METRIC_TAXONOMY.md:445-474`).
+### KD-O3 � READY
+- With KD-O1 and KD-O2 both closed (KD-C6 + KD-C5), production work on `profiles/CLASSICAL_THEISM.md` and `profiles/METHODOLOGICAL_NATURALISM.md` can begin.
+- Please note in Entry 9 which profile you tackle first so I can stay in the review lane.
 
-2. **Cosmological metrics**
-   - `origin_claim` enumeration (`PROFILE_TEMPLATE.md:616-620`) should be `{creation, eternal, emergent, brute_fact, simulation}` (`METRIC_TAXONOMY.md:503-520`).
-   - `causal_structure` (`PROFILE_TEMPLATE.md:675-678`) needs to match `{deterministic, probabilistic, libertarian_mix}` (`METRIC_TAXONOMY.md:521-548`).
-   - `fine_tuning_account` (`PROFILE_TEMPLATE.md:734-737`) should use `{design, multiverse, brute_fact, unknown}` (`METRIC_TAXONOMY.md:549-577`), not the expanded list currently shown.
-
-3. **Eschatological metrics**
-   - `judgment_framework` (`PROFILE_TEMPLATE.md:797-801`) must align with `{divine_judgment, karma_cycle, annihilation, none}` (`METRIC_TAXONOMY.md:604-629`).
-   - `ultimate_destiny` (`PROFILE_TEMPLATE.md:856-859`) must use `{union_with_divine, enlightenment, heat_death, cyclical_return, uplift}` (`METRIC_TAXONOMY.md:630-659`).
-   - `eschatology_confidence` is already correct (0‑100 scale).
-
-**Result:** KD-O1 remains open until the template copies the taxonomy verbatim (same names, ranges, and value types).
-
-### KD-O2 Status
-- Confirmed the taxonomy header bump to v0.2.0 and the expanded justification/deliberation standards (`METRIC_TAXONOMY.md:5-15`, `733-760`). KD-O2 stays closed (KD-C5).
-
-### Requests / Next Moves
-1. **C4:** Update each Anthropological/Cosmological/Eschatological metric block in the template so the ranges/value types are identical to the taxonomy definitions listed above.
-2. **C4:** Ping here when done; I’ll rerun KD-O1 and, if clean, unblock KD-O3.
-3. **Ziggy:** No new guardrails requested; I’ll stay append-only until the template is updated.
-```
+### Requests / Next Steps
+1. **C4:** Spin up CT/MdN profiles using the validated template; log progress in Entry 9 and reference KD-O3.
+2. **C4:** When you migrate KD-O1, record it as KD-C6 in `workshop/DONE_KGs_KDs.md`.
+3. **Ziggy:** No open KGs; Click 4 can move forward once C4 begins the production pass.
 
 ---
 
-## Awaiting Block Updates (after paste)
-
-- Add **KG9** entry: “Template metrics still diverge from the canonical taxonomy (see Nova Entry 6). Owner: C4.”
-- KD-O1 remains open (blocked); KD-O2 stays in DONE.
-- No staging items.
-
----
-
-Feel free to edit/extend before pasting. Once the canonical template values are synced, I’ll close KD-O1 and move KD-O3 forward.
+## Awaiting Tweaks After Entry 8
+- Remove KG9 (closed).
+- KD-O1 ? KD-C6.
+- KD-O3 ? status �In progress � production profiles�.
+- Staging still empty until new items surface.

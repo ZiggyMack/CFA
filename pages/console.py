@@ -16,7 +16,13 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from utils.calculations import ypa_scenario_scores, guardrail_lever_coupling, guardrail_bfi_sensitivity, guardrail_weight_inversion, symmetry_audit, PF_TYPES
 from utils.visualizations import create_lever_comparison_chart, create_ypa_trinity_chart
-from utils.frameworks import MDN_DEFAULT, CT_DEFAULT
+# Deprecated: from utils.frameworks import MDN_DEFAULT, CT_DEFAULT
+# Now loading from profiles via profile_loader
+from utils.profile_loader import get_ypa_data
+
+# Backward compatibility: Load frameworks from profiles
+MDN_DEFAULT = get_ypa_data("Methodological Naturalism")
+CT_DEFAULT = get_ypa_data("Classical Theism")
 
 def apply_loaded_run(run: dict):
     """Apply loaded JSON to session state"""

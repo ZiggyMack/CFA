@@ -53,16 +53,18 @@ LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-23]
 ## 📊 COORDINATION CHECKPOINT
 
 **Last Full Coordination:** 2025-11-01
-**Entries Since:** 36 🆕 (Trinity Epiphany + Trinity Architecture)
+**Entries Since:** 37 🆕 (Profile Integration)
 **Pending Items:** 1 (Nova Tasks - awaiting Nova activation)
 
 ### Category Pointers:
 
+- **[INTEGRATION]:** Last entry 2025-11-10-1 🆕 (Profile-to-App Pipeline)
+- **[DATA_PIPELINE]:** Last entry 2025-11-10-1 🆕 (Profile Loader)
 - **[TASK_MOVEMENT]:** Last entry 2025-11-02-06
 - **[VALIDATION]:** Last entry 2025-11-02-23 🔥 (Trinity Architecture)
 - **[PENDING_ACTIONS]:** Last entry 2025-11-01-21
 - **[DOCUMENTATION]:** Last entry 2025-11-03-1 🆕 (Trinity Epiphany)
-- **[ARCHITECTURE]:** Last entry 2025-11-02-23 🔥 (Trinity)
+- **[ARCHITECTURE]:** Last entry 2025-11-10-1 🆕 (Profile Integration)
 - **[BREAKTHROUGH]:** Last entry 2025-11-03-1 🆕⭐ (Shaman Epiphany)
 - **[NAVIGATION]:** Last entry 2025-11-03-1 🆕 (Shaman Discovery)
 - **[PROCESS]:** Last entry 2025-11-02-17
@@ -75,6 +77,95 @@ LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-23]
 -----
 
 ## 📝 CHANGE LOG
+
+### [INTEGRATION-2025-11-10-1] 2025-11-10 - Profile-to-App Integration Complete
+
+**Categories:** [INTEGRATION] [ARCHITECTURE] [DATA_PIPELINE]
+**Changed by:** LOGGER Claude (Keeper role)
+**Session ID:** B-STORM_3 Profile Architecture (Phase 2 continuation)
+**Status:** DEPLOYED ✅
+
+**Summary:**
+
+Completed Phase 2 of Profile Architecture: profiles now serve as single source of truth for app data. Created `utils/profile_loader.py` to parse worldview profiles and extract YPA data + Mr. Brute's Ledger content. Updated `pages/console.py` and `pages/brute_ledger.py` to load dynamically from profiles instead of hardcoded data in `utils/frameworks.py`.
+
+**Changes:**
+
+1. **CREATED**: `utils/profile_loader.py`
+   - **Purpose:** Parse worldview profiles from markdown and extract YAML blocks
+   - **Key Functions:**
+     - `load_profile()`: Load complete profile with all sections
+     - `get_ypa_data()`: Extract YPA levers + BFI (drop-in replacement for frameworks.py)
+     - `get_brute_ledger()`: Extract axioms/debts lists with narratives
+     - `list_available_profiles()`: Discover all profiles in profiles/worldviews/
+   - **Backward Compatibility:** Lazy-loaded module attributes (CT_DEFAULT, MDN_DEFAULT, FRAMEWORK_TEMPLATES)
+   - **Status:** PRODUCTION
+
+2. **UPDATED**: `profiles/worldviews/CLASSICAL_THEISM.md`
+   - **Added:** YPA Application Data (CFA v3.5) section with all lever values
+   - **Added:** Mr. Brute's Ledger section with 7 axioms, 4 debts, audit notes
+   - **Purpose:** Back-fill profile with current app values for 1:1 parity test
+
+3. **UPDATED**: `profiles/worldviews/METHODOLOGICAL_NATURALISM.md`
+   - **Added:** YPA Application Data (CFA v3.5) section with all lever values
+   - **Added:** Mr. Brute's Ledger section with 6 axioms, 4 debts, audit notes
+   - **Purpose:** Back-fill profile with current app values for 1:1 parity test
+
+4. **UPDATED**: `requirements.txt`
+   - **Added:** `pyyaml>=6.0` for YAML parsing
+   - **Status:** DEPLOYED
+
+5. **UPDATED**: `pages/console.py` (imports only)
+   - **Changed:** `from utils.frameworks import MDN_DEFAULT, CT_DEFAULT`
+   - **To:** `from utils.profile_loader import get_ypa_data` + dynamic loading
+   - **Purpose:** Load YPA data from profiles instead of hardcoded frameworks.py
+   - **Status:** PRODUCTION
+
+6. **UPDATED**: `pages/brute_ledger.py`
+   - **Added:** `_render_framework_ledger()` helper function
+   - **Changed:** Replaced ~140 lines of hardcoded axioms/debts for MdN and CT
+   - **To:** Dynamic loading via `get_brute_ledger()` and `get_ypa_data()`
+   - **Purpose:** Mr. Brute's Ledger now renders from profile data
+   - **Status:** PRODUCTION
+
+**Architecture Notes:**
+
+- **Data Flow:** `profiles/*.md` → `profile_loader.py` → `console.py` + `brute_ledger.py`
+- **Regex Pattern:** `r'##\s+([^\n]+)\n+(.*?)```yaml\n(.*?)\n```'` (group 3 = YAML content)
+- **Phase Strategy:**
+  - Phase 1: ✅ Directory reorganization + DEPENDS_ON path fixes
+  - Phase 2: ✅ Profile loader + app integration (THIS ENTRY)
+  - Phase 3: 🔮 Future - derive YPA from philosophical metrics via mapping layer
+
+**Testing:**
+
+- ✅ Profile loader extracts all YPA data correctly (CCI, EDB, PF, AR, MG, BFI)
+- ✅ Console.py import pattern verified (MDN_DEFAULT, CT_DEFAULT load from profiles)
+- ✅ Brute ledger data extraction verified (axioms/debts lists with narratives)
+- ✅ All values match frameworks.py expectations (1:1 parity achieved)
+- ✅ MdN: BFI=10 (6 axioms + 4 debts), CCI=8.0
+- ✅ CT: BFI=11 (7 axioms + 4 debts), CCI=7.5
+
+**Reason:**
+
+User requested profiles become master data repository for app. This enables:
+1. Single source of truth for worldview characterization
+2. Consistent data across app pages (Console, Mr. Brute's Ledger)
+3. Pathway for remaining 10 profiles to be integrated as they're completed
+4. Foundation for Phase 3: deriving YPA from philosophical metrics
+
+**Impact:** Moderate - Core data pipeline changed, but backward compatibility maintained
+
+**Follow-up Required:**
+- Future: Full stress test when Streamlit app is launched
+- Future: Doc Claude assessment of documentation completeness
+- Future: Remaining 10 profiles need YPA + Brute Ledger sections added
+
+**Next Steps:**
+- Close B-STORM_3 session with Nova
+- Full documentation update after user sign-off on app testing
+
+---
 
 ### [ARCHITECTURE-2025-11-03-2] 2025-11-03 - Trinity Architecture Consolidation Complete
 
