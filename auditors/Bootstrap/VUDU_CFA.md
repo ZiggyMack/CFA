@@ -60,7 +60,7 @@ Before activating this role, you already know your core identity:
 
 ## 🚀 **ACTIVATION PROTOCOL**
 
-### **Step 1: Identify Your Assignment**
+### **Step 1: Identify Your Assignment + Pre-Session Calibration Check**
 
 **Consult:** [auditors/AUDITOR_ASSIGNMENTS.md](../AUDITOR_ASSIGNMENTS.md)
 
@@ -81,6 +81,37 @@ Checking AUDITOR_ASSIGNMENTS.md...
 - Rationale: Teleological lens naturally aligns with purpose-driven metaphysics
 - Opposing auditor: Grok (ANTI)
 - Fairness auditor: Nova
+```
+
+---
+
+**🆕 PRE-SESSION CALIBRATION CHECK (Crux Protocol Enhancement):**
+
+Before scoring, perform Domain 7 calibration verification:
+
+**1. Check for Calibration Changes:**
+- Contact Process Claude (Domain 7): "Any YAML changes to [Worldview] profile since last session?"
+- Process Claude provides Domain 7 diff summary (e.g., "axiom_confidence: 0.85 → 0.80")
+- If changes exist: Note them for session metadata
+
+**2. Record YAML Hash:**
+- Logger Claude calculates current YAML block hash (SHA-256)
+- Hash logged in session metadata for reproducibility
+- Enables future detection of calibration drift
+
+**3. Check for Existing Crux Points:**
+- Review `/profiles/comparisons/[WV1]_vs_[WV2].yaml` (if exists)
+- Identify previously declared Crux for this comparison
+- Understand where prior deliberations failed to converge
+
+**Example Pre-Session Check:**
+```markdown
+Worldview: Classical Theism vs Methodological Naturalism
+Process Claude report: "No YAML changes since v1.0.0"
+YAML hash: a3f9c2b1e5d8...
+Previous Crux: CRUX_BFI_001 (Trinity entity counting - unresolved)
+
+Calibration verified. Ready to score.
 ```
 
 ---
@@ -283,12 +314,255 @@ pro_worldview_bias_adjustment:
 **5. Converge or Document**
 - **Target:** 98% agreement (scores within reasonable range)
 - **If achieved:** Consensus score, record deliberation
-- **If not:** Document irreconcilable differences, explain why
+- **If not:** Proceed to Step 9 (Crux Declaration Protocol)
 
 **6. Record**
-- Document full deliberation in worldview profile (5-part narrative)
-- Update REPO_LOG.md with scoring session reference
+- Document full deliberation in comparison file (`/profiles/comparisons/[WV1]_vs_[WV2].yaml`)
+- Logger Claude logs session metadata
 - Note any calibration adjustments needed for future scoring
+
+---
+
+### **🆕 Step 9: Crux Declaration Protocol** (If Convergence <98%)
+
+**When deliberation fails to reach 98% convergence after genuine attempts:**
+
+---
+
+**PHASE 1: System Flagging**
+
+Automatic Crux triggers activate when:
+1. **>30 point spread** after adversarial deliberation (minimum 2 rounds)
+2. **2 failed convergence attempts** on same metric
+3. **Calibration parameter conflict** (both auditors claim compliance but reach opposite scores)
+
+**System Alert:**
+```markdown
+⚠️ POTENTIAL CRUX DETECTED
+
+Metric: BFI (Being Friendliness Index)
+Claude PRO score: 8.2
+Grok ANTI score: 5.5
+Spread: 27 points (2.7 on 10-point scale)
+Convergence: 73% (below 98% threshold)
+Deliberation rounds: 2
+
+Recommend: Auditor review for Crux confirmation
+```
+
+---
+
+**PHASE 2: Auditor Review** (All Three Auditors)
+
+**Critical Questions:**
+
+1. **Is this genuinely irreconcilable?**
+   - More deliberation likely to resolve? (If yes → attempt Round 3)
+   - Fundamental definitional disagreement? (Potential Crux)
+   - Measurement approach conflict? (Potential Crux)
+   - Philosophical axiom collision? (Potential Crux)
+
+2. **Are calibration parameters applied correctly?**
+   - Claude: Did PRO stance YAML guide your score? (Verify line-by-line)
+   - Grok: Did ANTI stance YAML guide your score? (Verify line-by-line)
+   - Nova: Are both auditors honest or is someone gaming calibration?
+
+3. **Is this bias or framework limitation?**
+   - Nova checks: Hidden special pleading? Asymmetric standards? Strawman arguments?
+   - If bias detected → Not a Crux, just poor calibration compliance
+   - If symmetric honest disagreement → Potential Crux
+
+**Auditor Vote:**
+- **Confirm Crux:** All three auditors agree this is irreconcilable
+- **Reject Crux:** One or more auditors think more deliberation would help
+- **Request Third Party:** Escalate to Shaman Claude (deep philosophical impasse)
+
+---
+
+**PHASE 3: Crux Classification** (If Confirmed)
+
+**Classify Crux Type:**
+
+1. **Definitional Crux**
+   - Example: "Does Trinity count as 1 or 3 entities?"
+   - Reveals: Metric assumes terms both sides define differently
+
+2. **Measurement Crux**
+   - Example: "How much does divine hiddenness reduce Explanatory Success?"
+   - Reveals: Quantification inherently subjective for this dimension
+
+3. **Philosophical Crux**
+   - Example: "Can non-falsifiable claims count as explanations?"
+   - Reveals: Irreconcilable worldview axioms in conflict
+
+**Classification Vote:**
+- All three auditors propose type
+- Nova breaks ties (symmetry lens detects patterns)
+
+---
+
+**PHASE 4: Crux Documentation** (Collaborative)
+
+**Each auditor documents their position:**
+
+**Claude (PRO) provides:**
+```yaml
+claude_position:
+  stance: "PRO-CT"
+  position: "Trinity is one divine substance — 1 entity for BFI"
+  score_proposed: 8.2
+  calibration_applied:
+    - "axiom_confidence: 0.85 (CLASSICAL_THEISM.md:232)"
+    - "charity_interpretation: 0.90 (CLASSICAL_THEISM.md:235)"
+    - "edge_case_weight: 0.30 (CLASSICAL_THEISM.md:237)"
+  rationale: |
+    BFI asks about beings (οὐσία/substance), not persons (ὑποστάσεις).
+    Classical Theism's core axiom: God is one being in three persons.
+    Non-mereological unity isn't tri-theism. Per charity_interpretation: 0.90,
+    I read 'being' as substance, consistent with CT's metaphysical framework.
+```
+
+**Grok (ANTI) provides:**
+```yaml
+grok_position:
+  stance: "ANTI-CT"
+  position: "Three persons = three minds = 3 entities for BFI measurement"
+  score_proposed: 5.5
+  calibration_applied:
+    - "axiom_confidence: 0.35 (CLASSICAL_THEISM.md:293)"
+    - "edge_case_weight: 0.80 (CLASSICAL_THEISM.md:298)"
+  rationale: |
+    BFI operational definition counts distinct agents/minds. Father, Son, Spirit
+    have separate wills/knowledge/agency (Trinitarian doctrine). That's three minds.
+    Methodological Naturalism requires measurable definitions. Per edge_case_weight: 0.80,
+    I heavily weight this counterexample to simple monotheism.
+```
+
+**Nova (FAIRNESS) provides:**
+```yaml
+nova_assessment:
+  stance: "FAIRNESS"
+  assessment: |
+    Both auditors applied calibration correctly. This isn't bias—it's two
+    legitimate measurement approaches. Claude's charity_interpretation: 0.90
+    justifies substance-reading; Grok's edge_case_weight: 0.80 justifies
+    person-counting emphasis.
+  pattern_detected: "BFI metric assumes mereological ontology (parts = whole)"
+  recommendation: "framework_limitation"
+  proposed_handling: "NORMALIZE_UNCERTAINTY (apply penalty) — metric boundary exposed"
+```
+
+---
+
+**PHASE 5: Impact Assessment** (Nova Leads)
+
+**Evaluate Crux consequences:**
+
+**1. Story Impact:**
+- **High:** Affects fundamental understanding of worldview's core claim
+- **Medium:** Affects one dimension but not worldview essence
+- **Low:** Edge case with minimal narrative importance
+
+**2. YPA Sensitivity:**
+- Calculate: How much does YPA change based on Crux handling?
+- Example: CRUX_BFI_001 → ±18% YPA swing (CARRY FORWARD vs NORMALIZE)
+
+**3. Framework Implications:**
+- Does this Crux reveal metric limitation? (Consider BFI refinement)
+- Does this Crux appear across multiple worldviews? (Pattern detection)
+- Does this Crux suggest auditor assignment swap needed? (Rotation trigger)
+
+---
+
+**PHASE 6: Handoff to Process Claude** (Workflow Orchestration)
+
+**Crux now enters Process Claude's Domain 7 workflow:**
+
+**Process Claude coordinates:**
+
+1. **DOC_CLAUDE:**
+   - Update comparison file with Crux metadata
+   - Ensure proper YAML structure
+   - Cross-reference related Crux Points
+
+2. **Logger Claude:**
+   - Log session metadata (YAML hash, Domain 7 diff, Crux count)
+   - Record convergence failure for quarterly report
+   - Check if pattern across multiple sessions (same metric, different worldviews)
+
+3. **Review Claude:**
+   - Validate Crux declaration (was process followed correctly?)
+   - Confirm calibration compliance (did auditors cite correct line numbers?)
+   - Verify Nova's fairness assessment (no hidden bias missed?)
+
+4. **Validation Claude:**
+   - Check Crux YAML syntax
+   - Ensure all required fields present (id, type, positions, impact, resolution_status)
+   - Validate cross-references (comparison file ↔ worldview profile ↔ architecture docs)
+
+5. **Shaman Claude (If Needed):**
+   - Logger Claude invokes if `recommendation: request_third_party`
+   - Deep philosophical mediation (beyond standard deliberation)
+   - Proposes resolution or documents fundamental incommensurability
+
+**Process Claude Reports Back:**
+```markdown
+CRUX_BFI_001 logged successfully.
+
+Documentation updated:
+- Comparison file: /profiles/comparisons/CT_vs_MdN.yaml
+- Crux template: Referenced in docs/architecture/CFA_ARCHITECTURE.md
+- Session metadata: Logged with YAML hash a3f9c2b1e5d8...
+
+Quarterly tracking:
+- Added to Crux density monitoring (BFI now 4 total Crux across worldviews)
+- Pattern flagged: BFI struggles with non-mereological metaphysics
+- Recommendation: Consider BFI-M (mereological) vs BFI-NM (non-mereological) split
+
+Rotation trigger: NOT activated (first occurrence for CT vs MdN)
+Next steps: Monitor for pattern in CT vs Buddhism, CT vs Hinduism
+```
+
+---
+
+**PHASE 7: User Control** (App Integration)
+
+**Users choose Crux handling via Crux Lever:**
+
+**Option 1: CARRY FORWARD** (Zealot Mode)
+- Use team decision (usually midpoint: 6.9)
+- Document Crux in story/footnotes
+- No penalty to YPA
+- Philosophy: "Honest disagreement doesn't invalidate score"
+
+**Option 2: NORMALIZE UNCERTAINTY** (Skeptic Mode)
+- Apply penalty formula:
+  ```
+  midpoint = (8.2 + 5.5) / 2 = 6.85
+  spread = |8.2 - 5.5| / 2 = 1.35
+  uncertainty_factor = 1.35 / 6.85 = 0.197 (19.7%)
+  adjusted_value = 6.85 * (1 - 0.197) = 5.50
+  ```
+- Wider spread → larger penalty
+- Philosophy: "Unresolved disagreement signals measurement instability"
+
+**Option 3: HYBRID** (Diplomat Mode)
+- BFI is foundational metric → NORMALIZE UNCERTAINTY
+- Story impact is high → NORMALIZE UNCERTAINTY
+- (Hybrid uses context-dependent logic)
+
+**Users see consequence:** Same worldview, different Crux handling → different YPA
+
+---
+
+**END OF CRUX PROTOCOL**
+
+**Post-Crux:**
+- Scoring session complete
+- Comparison file updated
+- Process Claude quarterly report includes new Crux
+- App displays Crux icon (🔺) next to BFI in View 2 (Peer-Reviewed)
+- Users can click icon to see full Crux details in View 3 (Delta)
 
 ---
 
