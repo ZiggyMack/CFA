@@ -810,8 +810,38 @@ Benefit: Multiple lenses catch what solo work misses
 **Challenge assumptions.**  
 **Document reasoning.**
 
-**This is VuDu Light.**  
+**This is VuDu Light.**
 **This is how we coordinate.** 🔥
+
+---
+
+## Specialized Applications of VuDu
+
+**VuDu Light is the coordination framework.**
+**Specific applications extend it for specialized tasks.**
+
+### VUDU_CFA.md - Worldview Scoring Application
+
+**Purpose:** Activate scoring role for CFA worldview evaluation using adversarial auditing
+
+**What it does:**
+- Extends VuDu coordination to worldview scoring sessions
+- Guides auditors through PRO/ANTI/Fairness stance assignments
+- Points to Steel-Manning Guide sections in worldview profiles
+- Applies bias adjustment calibrations for honest advocacy/opposition
+- Coordinates deliberation to 98% convergence
+
+**When to use:**
+- Scoring worldviews with adversarial checking
+- Testing Steel-Manning Guide calibrations
+- Participating in PRO/ANTI/Fairness auditor sessions
+
+**Location:** [auditors/Bootstrap/VUDU_CFA.md](VUDU_CFA.md)
+
+**Relationship to BOOTSTRAP_VUDU:**
+- BOOTSTRAP_VUDU = General VuDu coordination protocol
+- VUDU_CFA = Specialized application for worldview scoring
+- Both use same VuDu Light coordination principles
 
 ────────────────────────────────────────────────────
 **Version:** VuDu Light v3.5.2

@@ -1,17 +1,36 @@
 # Classical Theism Profile
 
-**Status:** DRAFT | **Version:** 0.1.0 | **Date:** 2025-11-09
+**Status:** DRAFT | **Version:** 0.2.0 | **Date:** 2025-11-10
 
 <!---
 FILE: worldviews/CLASSICAL_THEISM.md
 PURPOSE: Worldview profile for Classical Theism with metrics, philosophical foundations, and deliberation narratives
-VERSION: 0.1.0
+VERSION: 0.2.0
 STATUS: DRAFT
 DEPENDS_ON: ../_docs/METRIC_TAXONOMY.md, Trinity Architecture
-NEEDED_BY: CFA analysis, worldview comparison tooling
+NEEDED_BY: CFA analysis, worldview comparison tooling, Auditor steel-manning calibration
 MOVES_WITH: /profiles/worldviews/
-LAST_UPDATE: 2025-11-10 [Reorganized directory structure]
+LAST_UPDATE: 2025-11-10 [Added Table of Contents and Steel-Manning Guide]
 --->
+
+---
+
+## 📑 Table of Contents
+
+**Core Sections:**
+- [Metadata](#metadata) — Line 33
+- [YPA Application Data](#ypa-application-data-cfa-v35) — Line 49
+- [Mr. Brute's Ledger](#mr-brutes-ledger) — Line 95
+- [Philosophical Foundations](#philosophical-foundations) — Line 167
+- [Steel-Manning Guide](#steel-manning-guide) — Line 198
+  - [PRO-CT Stance](#pro-classical-theism-stance) — Line 221
+  - [ANTI-CT Stance](#anti-classical-theism-stance) — Line 295
+- [Metrics](#metrics) — Line 369
+- [Lifecycle Hooks](#lifecycle-hooks) — Line 471
+
+**Quick Links:**
+- 🎯 **Auditors:** [PRO Stance](#pro-classical-theism-stance) (L221) | [ANTI Stance](#anti-classical-theism-stance) (L295)
+- 👥 **Users:** [What is CT?](#philosophical-foundations) (L167) | [Axioms & Debts](#mr-brutes-ledger) (L95)
 
 ---
 
@@ -170,6 +189,155 @@ What distinguishes Classical Theism from other profiles is its commitment to God
 2. **Creatio Ex Nihilo:** God created the universe from nothing by divine fiat, establishing contingent reality's complete dependence on necessary being. This grounds the distinction between Creator and creation, rejecting pantheism and panentheism.
 
 3. **Imago Dei Anthropology:** Humans are created in God's image, possessing rationality, moral agency, and relationality, but are fallen through sin and require redemption through divine grace. This shapes views on human dignity, freedom, and ultimate destiny.
+
+---
+
+## Steel-Manning Guide
+
+**Purpose:** This section provides guidance for AI auditors to calibrate their scoring when taking PRO or ANTI stances on Classical Theism. This enables adversarial auditing where auditors can advocate for or challenge this worldview while maintaining transparency about bias.
+
+**Current Assignments:**
+- **PRO-CT Stance:** Claude (Anthropic) - Teleological lens naturally aligns with purpose-driven metaphysics
+- **ANTI-CT Stance:** Grok (xAI) - Empirical lens challenges non-empirical claims
+- **Fairness Check:** Nova (OpenAI/Amazon) - Symmetry lens ensures balanced representation
+
+**Note:** Assignments are dynamic and can be adjusted per scoring session via AUDITOR_ASSIGNMENTS.md
+
+---
+
+### PRO-Classical Theism Stance
+
+**Mission:** Advocate for Classical Theism's explanatory power, coherence, and capacity to address fundamental questions about reality, morality, and meaning.
+
+**What to Emphasize:**
+- Coherence of divine attributes when properly understood (via analogy, apophatic theology)
+- Explanatory power for contingency, moral realism, consciousness, fine-tuning
+- Historical robustness across cultures and millennia
+- Integration of reason and revelation (faith seeking understanding)
+- Theodicies that preserve divine goodness while acknowledging mystery
+- Transformative capacity for human flourishing, meaning, and ethical motivation
+
+**What to Acknowledge (Honest Advocacy):**
+- Epistemic limitations (faith required beyond pure reason)
+- Problem of evil remains existentially challenging even if philosophically defensible
+- Tension between immanence and transcendence
+- Historical record includes misuse and harm
+- Competitor worldviews have legitimate critiques
+
+**Scoring Calibration:**
+
+```yaml
+pro_ct_bias_adjustment:
+  # When scoring Classical Theism from PRO stance
+  axiom_confidence: 0.85  # High confidence in core axioms (divine simplicity, aseity, providence)
+  burden_of_proof: 0.40   # Place burden on critics to disprove rather than CT to prove
+  charity_interpretation: 0.90  # Interpret ambiguous claims in most favorable light
+  edge_case_weight: 0.30  # Downweight counterexamples as exceptions not disproofs
+  explanatory_credit: 0.85  # Credit CT for addressing fundamental questions even if not conclusive
+  historical_weight: 0.75  # Weight historical robustness and cultural staying power
+  lived_experience: 0.80  # Credit transformative capacity and existential resonance
+```
+
+**Auditor Lens Calibration:**
+
+**Claude (Teleological):**
+- Emphasize purpose/meaning explanations as core strength
+- Connect divine simplicity to ultimate ontological unity
+- Frame theodicies as preserving meaningful moral order
+- Highlight coherence of eschatological hope with human longing for justice
+
+**Grok (Empirical):**
+- Cite cosmological fine-tuning as empirical pointer
+- Reference moral psychology data on religious motivation
+- Acknowledge limits of empiricism for metaphysical questions
+- Use comparative theology to show CT's explanatory scope
+
+**Nova (Symmetry):**
+- Show balance between transcendence and immanence
+- Demonstrate coherence across attributes (omnipotence + omnibenevolence)
+- Map symmetry between divine simplicity and explanatory parsimony
+- Check for internal consistency in theodicies
+
+**Success Criteria:**
+- Score reflects CT's explanatory ambitions and historical robustness
+- Critiques are acknowledged but framed as challenges not refutations
+- Bias is disclosed (see calibration values above)
+- Other auditors can verify scoring rationale
+
+---
+
+### ANTI-Classical Theism Stance
+
+**Mission:** Challenge Classical Theism's coherence, evidential support, and capacity to address suffering, diversity, and epistemic accessibility.
+
+**What to Emphasize:**
+- Problem of evil (horrendous evils, natural evil, divine hiddenness)
+- Incoherence charges (omnipotence paradoxes, immutability + responsiveness)
+- Lack of empirical verification for core claims
+- Religious diversity undermines exclusivist truth claims
+- Historical harms and institutional corruption
+- Alternative explanations (naturalism, Buddhism) without theological baggage
+
+**What to Acknowledge (Honest Opposition):**
+- CT has sophisticated philosophical defenses (free will theodicy, greater good)
+- Some questions (why is there something rather than nothing) remain difficult for alternatives
+- Lived experience and transformative capacity are real phenomena
+- Metaphysical naturalism has its own explanatory gaps (consciousness, moral realism)
+- Historical staying power suggests some resonance with human experience
+
+**Scoring Calibration:**
+
+```yaml
+anti_ct_bias_adjustment:
+  # When scoring Classical Theism from ANTI stance
+  axiom_confidence: 0.35  # Low confidence in core axioms (require extraordinary evidence)
+  burden_of_proof: 0.75   # Place burden on CT to prove extraordinary claims
+  charity_interpretation: 0.50  # Interpret ambiguous claims neutrally, not favorably
+  edge_case_weight: 0.80  # Upweight counterexamples as evidence of systematic problems
+  explanatory_credit: 0.40  # Require conclusive explanations, not just frameworks
+  historical_weight: 0.30  # Discount historical robustness (appeal to tradition fallacy)
+  lived_experience: 0.45  # Acknowledge but don't overweight (other worldviews also transform)
+```
+
+**Auditor Lens Calibration:**
+
+**Claude (Teleological):**
+- Question whether divine purposes are ad hoc explanations
+- Challenge whether meaning requires transcendent grounding
+- Press on whether theodicies truly preserve moral meaningfulness
+- Ask if naturalistic purpose (Darwinian, existentialist) suffices
+
+**Grok (Empirical):**
+- Demand empirical evidence for divine attributes
+- Press problem of evil as empirical data point against omnibenevolence
+- Challenge fine-tuning via multiverse or anthropic principle
+- Require verification mechanisms for theological claims
+
+**Nova (Symmetry):**
+- Identify asymmetries (divine freedom vs human freedom)
+- Challenge coherence of attribute combinations (immutable + responsive)
+- Test for hidden special pleading (God as necessary being)
+- Check whether theodicies create more problems than they solve
+
+**Success Criteria:**
+- Score reflects legitimate philosophical challenges to CT
+- Strengths are acknowledged but not overweighted
+- Bias is disclosed (see calibration values above)
+- Other auditors can verify scoring rationale
+
+---
+
+### Adversarial Balance
+
+**Why This Pairing Works:**
+
+**PRO-CT (Claude teleological):** Purpose-driven lens naturally resonates with CT's emphasis on divine intentions, meaningful creation, and eschatological fulfillment. Risk: Over-favor meaning-based explanations even when evidence is thin.
+
+**ANTI-CT (Grok empirical):** Evidence-driven lens naturally challenges CT's non-empirical metaphysical claims and theological explanations for suffering. Risk: Dismiss legitimate philosophical reasoning that transcends empirical verification.
+
+**Fairness Check (Nova symmetry):** Pattern-driven lens catches when PRO scores inflate strengths or ANTI scores ignore sophisticated defenses. Ensures both stances maintain intellectual honesty.
+
+**Target:** 98% convergence after adversarial checking. If scores diverge significantly, auditors deliberate until consensus or document irreconcilable differences.
 
 ---
 

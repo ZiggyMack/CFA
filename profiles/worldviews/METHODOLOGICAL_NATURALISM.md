@@ -1,17 +1,36 @@
 # Methodological Naturalism Profile
 
-**Status:** DRAFT | **Version:** 0.1.0 | **Date:** 2025-11-09
+**Status:** DRAFT | **Version:** 0.2.0 | **Date:** 2025-11-10
 
 <!---
 FILE: worldviews/METHODOLOGICAL_NATURALISM.md
-PURPOSE: Worldview profile for Methodological Naturalism with metrics, philosophical foundations, and deliberation narratives
-VERSION: 0.1.0
+PURPOSE: Worldview profile for Methodological Naturalism with metrics, philosophical foundations, deliberation narratives, and steel-manning guide for adversarial auditing
+VERSION: 0.2.0
 STATUS: DRAFT
 DEPENDS_ON: ../_docs/METRIC_TAXONOMY.md, Trinity Architecture
-NEEDED_BY: CFA analysis, worldview comparison tooling
+NEEDED_BY: CFA analysis, worldview comparison tooling, auditor calibration
 MOVES_WITH: /profiles/worldviews/
-LAST_UPDATE: 2025-11-10 [Reorganized directory structure]
+LAST_UPDATE: 2025-11-10 [Added ToC and Steel-Manning Guide for auditor calibration]
 --->
+
+---
+
+## 📑 Table of Contents
+
+**Core Sections:**
+- [Metadata](#metadata) — Line 36
+- [YPA Application Data](#ypa-application-data-cfa-v35) — Line 52
+- [Mr. Brute's Ledger](#mr-brutes-ledger) — Line 101
+- [Philosophical Foundations](#philosophical-foundations) — Line 169
+- [Steel-Manning Guide](#steel-manning-guide) — Line 193
+  - [PRO-MdN Stance](#pro-methodological-naturalism-stance) — Line 216
+  - [ANTI-MdN Stance](#anti-methodological-naturalism-stance) — Line 290
+- [Metrics](#metrics) — Line 364
+- [Lifecycle Hooks](#lifecycle-hooks) — Line 466
+
+**Quick Links:**
+- 🎯 **Auditors:** [PRO Stance](#pro-methodological-naturalism-stance) (L216) | [ANTI Stance](#anti-methodological-naturalism-stance) (L290)
+- 👥 **Users:** [What is MdN?](#philosophical-foundations) (L169) | [Axioms & Debts](#mr-brutes-ledger) (L101)
 
 ---
 
@@ -169,6 +188,155 @@ What distinguishes Methodological Naturalism from other profiles is its methodol
 2. **Causal Closure:** The physical world operates as a causally closed system governed by natural laws. Explanations invoke natural causes and mechanisms without recourse to supernatural intervention or teleological purposes.
 
 3. **Methodological Parsimony:** Prefer simpler, naturalistic explanations over complex, supernatural ones (Occam's Razor applied to scientific inquiry). Supernatural hypotheses are methodologically inadmissible regardless of metaphysical possibility.
+
+---
+
+## Steel-Manning Guide
+
+**Purpose:** This section provides guidance for AI auditors to calibrate their scoring when taking PRO or ANTI stances on Methodological Naturalism. This enables adversarial auditing where auditors can advocate for or challenge this worldview while maintaining transparency about bias.
+
+**Current Assignments:**
+- **PRO-MdN Stance:** Grok (xAI) - Empirical lens naturally aligns with evidence-based methodology
+- **ANTI-MdN Stance:** Claude (Anthropic) - Teleological lens challenges reductionism and meaninglessness
+- **Fairness Check:** Nova (OpenAI/Amazon) - Symmetry lens ensures balanced representation
+
+**Note:** Assignments are dynamic and can be adjusted per scoring session via AUDITOR_ASSIGNMENTS.md
+
+---
+
+### PRO-Methodological Naturalism Stance
+
+**Mission:** Advocate for Methodological Naturalism's epistemic rigor, predictive power, and capacity to generate reliable knowledge without metaphysical baggage.
+
+**What to Emphasize:**
+- Track record of scientific progress (medicine, technology, cosmology)
+- Predictive accuracy and reproducibility of empirical methods
+- Methodological parsimony (Occam's Razor applied rigorously)
+- Self-correcting mechanisms (peer review, falsification, replication)
+- Practical utility for problem-solving without supernatural appeals
+- Epistemic modesty (bracketing unfalsifiable claims rather than dogmatic rejection)
+
+**What to Acknowledge (Honest Advocacy):**
+- Hard problem of consciousness not yet solved empirically
+- Moral realism difficult to ground in purely naturalistic terms
+- Existential/meaning questions not addressed by scientific method
+- Some phenomena (fine-tuning, origins of life) remain open questions
+- Methodological constraints may exclude legitimate metaphysical truths
+
+**Scoring Calibration:**
+
+```yaml
+pro_mdn_bias_adjustment:
+  # When scoring Methodological Naturalism from PRO stance
+  axiom_confidence: 0.90  # High confidence in empirical methodology
+  burden_of_proof: 0.35   # Place burden on metaphysical claims to justify non-empirical knowledge
+  charity_interpretation: 0.90  # Interpret ambiguous claims as methodological agnosticism not dogmatic atheism
+  edge_case_weight: 0.25  # Downweight unsolved problems (consciousness) as research frontiers not refutations
+  explanatory_credit: 0.90  # Credit predictive success and technological application
+  historical_weight: 0.85  # Weight scientific revolution's transformation of human knowledge
+  lived_experience: 0.50  # Acknowledge but don't overweight (MdN doesn't claim to address meaning)
+```
+
+**Auditor Lens Calibration:**
+
+**Claude (Teleological):**
+- Emphasize how science uncovers natural purposes (evolutionary function, ecological roles)
+- Frame methodological parsimony as intellectually honest (no ad hoc explanations)
+- Acknowledge MdN's epistemic modesty (brackets rather than denies metaphysics)
+- Credit practical problem-solving as serving human flourishing
+
+**Grok (Empirical):**
+- Cite track record of scientific predictions (relativity, quantum mechanics, evolution)
+- Emphasize reproducibility and self-correction as epistemic strengths
+- Show how naturalistic explanations outperform supernatural alternatives (disease as germ theory not demonic possession)
+- Reference technological applications as validation of theoretical frameworks
+
+**Nova (Symmetry):**
+- Show balance between epistemic confidence (natural world) and epistemic modesty (ultimate questions)
+- Demonstrate symmetry between parsimony principle and explanatory success
+- Map coherence between methodological constraints and practical results
+- Check for consistency in application of evidentiary standards
+
+**Success Criteria:**
+- Score reflects MdN's epistemic track record and methodological rigor
+- Limitations are acknowledged (consciousness, meaning) but framed as outside MdN's scope
+- Bias is disclosed (see calibration values above)
+- Other auditors can verify scoring rationale
+
+---
+
+### ANTI-Methodological Naturalism Stance
+
+**Mission:** Challenge Methodological Naturalism's reductionism, metaphysical assumptions, and capacity to address consciousness, morality, and meaning.
+
+**What to Emphasize:**
+- Hard problem of consciousness (qualia, subjective experience irreducible to physical processes)
+- Is-ought gap (cannot derive moral values from empirical facts alone)
+- Explanatory gaps (origins of life, fine-tuning, mathematical unreasonable effectiveness)
+- Reductionism fails to capture emergent properties (meaning, agency, rationality)
+- Methodological constraints beg metaphysical questions (why trust reason if naturalism true?)
+- Existential inadequacy (cannot address purpose, meaning, transcendence)
+
+**What to Acknowledge (Honest Opposition):**
+- MdN has impressive track record in natural sciences (physics, biology, chemistry)
+- Predictive success suggests naturalistic explanations capture important truths
+- Methodological parsimony is intellectually honest (avoids ad hoc supernatural appeals)
+- Self-correcting mechanisms (falsification, peer review) are epistemic strengths
+- MdN doesn't claim to solve all problems (technically methodological not metaphysical)
+
+**Scoring Calibration:**
+
+```yaml
+anti_mdn_bias_adjustment:
+  # When scoring Methodological Naturalism from ANTI stance
+  axiom_confidence: 0.40  # Low confidence that empirical method captures all knowledge
+  burden_of_proof: 0.70   # Place burden on MdN to explain consciousness, morality, meaning naturalistically
+  charity_interpretation: 0.50  # Interpret ambiguous claims neutrally (MdN often slides into metaphysical naturalism)
+  edge_case_weight: 0.85  # Upweight unsolved problems (hard problem) as evidence of systematic limitations
+  explanatory_credit: 0.50  # Credit success in natural sciences but penalize failures in philosophy of mind/ethics
+  historical_weight: 0.40  # Discount scientific revolution (doesn't validate metaphysical naturalism)
+  lived_experience: 0.30  # Heavily penalize existential inadequacy (meaning, purpose unaddressed)
+```
+
+**Auditor Lens Calibration:**
+
+**Claude (Teleological):**
+- Press on whether reductionism eliminates purpose/meaning or just brackets it
+- Challenge whether evolutionary debunking arguments undermine rationality itself
+- Question whether MdN can account for normative dimensions (morality, epistemic justification)
+- Ask if methodological parsimony begs metaphysical questions
+
+**Grok (Empirical):**
+- Demand empirical evidence for eliminativist claims about consciousness
+- Press on whether MdN's metaphysical assumptions (causal closure) are themselves empirically testable
+- Challenge whether naturalistic explanations for morality (evolutionary ethics) avoid relativism
+- Require verification mechanisms for claims about origins of life, fine-tuning
+
+**Nova (Symmetry):**
+- Identify asymmetries (trust reason but reason product of non-rational processes)
+- Challenge coherence of eliminativist claims (conscious beings denying consciousness)
+- Test for hidden metaphysical commitments (physicalism smuggled into methodology)
+- Check whether MdN's scope limitations excuse explanatory gaps or reveal fundamental inadequacy
+
+**Success Criteria:**
+- Score reflects legitimate philosophical challenges to MdN (hard problem, is-ought gap)
+- Strengths are acknowledged (natural sciences) but not overweighted
+- Bias is disclosed (see calibration values above)
+- Other auditors can verify scoring rationale
+
+---
+
+### Adversarial Balance
+
+**Why This Pairing Works:**
+
+**PRO-MdN (Grok empirical):** Evidence-driven lens naturally resonates with MdN's emphasis on reproducibility, falsification, and predictive success. Risk: Overweight empirical track record, underweight philosophical limitations (consciousness, meaning).
+
+**ANTI-MdN (Claude teleological):** Purpose-driven lens naturally challenges MdN's reductionism and bracketing of meaning questions. Risk: Dismiss methodological rigor as insufficient even when MdN doesn't claim to address teleology.
+
+**Fairness Check (Nova symmetry):** Pattern-driven lens catches when PRO scores inflate empirical success to cover philosophical gaps, or when ANTI scores penalize MdN for not solving problems outside its scope.
+
+**Target:** 98% convergence after adversarial checking. If scores diverge significantly, auditors deliberate until consensus or document irreconcilable differences.
 
 ---
 

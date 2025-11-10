@@ -1,19 +1,20 @@
 <!---
 FILE: ROLE_PROCESS.md
-PURPOSE: Process Expert role for DOC_CLAUDE - process adherence, failure learning, wellness protocol SME, navigation/wayfinding SME
-VERSION: v1.2
+PURPOSE: Process Expert role for DOC_CLAUDE - process adherence, failure learning, wellness protocol SME, navigation/wayfinding SME, worldview profile monitoring
+VERSION: v1.3
 STATUS: Active
-DEPENDS_ON: PROCESS.md, BOOTSTRAP_DOC_CLAUDE.md, DOC_CLAUDE_WELLNESS_PROTOCOL.md, WAYFINDING_GUIDE.md
-NEEDED_BY: DOC_CLAUDE when verifying process adherence, documenting failures, running wellness checks, or navigating repository
+DEPENDS_ON: PROCESS.md, BOOTSTRAP_DOC_CLAUDE.md, DOC_CLAUDE_WELLNESS_PROTOCOL.md, WAYFINDING_GUIDE.md, profiles/worldviews/*.md, auditors/AUDITOR_ASSIGNMENTS.md
+NEEDED_BY: DOC_CLAUDE when verifying process adherence, documenting failures, running wellness checks, navigating repository, or tracking worldview profile changes
 MOVES_WITH: /docs/repository/librarian_tools/
-LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-19]
+LAST_UPDATE: 2025-11-10 [B-STORM_4: Added Domain 7 - Worldview Profile Monitoring for auditor calibration tracking]
 --->
 
 # ROLE_PROCESS.md - Process Expert Role for DOC_CLAUDE
 
-**Purpose:** Activate Process Expert role for process adherence verification, failure learning, wellness protocol expertise, and navigation/wayfinding guidance
+**Purpose:** Activate Process Expert role for process adherence verification, failure learning, wellness protocol expertise, navigation/wayfinding guidance, and worldview profile monitoring
 **Owner:** DOC_CLAUDE (Documentation Orchestration Claude)
 **Created:** 2025-11-02
+**Updated:** 2025-11-10 (Added Domain 7 - Worldview Profile Monitoring)
 **Status:** Active Role Pattern
 
 ---
@@ -32,6 +33,8 @@ LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-19]
 - **Fresh Claude needs navigation guidance** 🆕 (where to start, how to find resources)
 - **Repository wayfinding questions** 🆕 ("I need X, where is it?", "How do I do Y?")
 - **WAYFINDING_GUIDE updates needed** 🆕 (maintaining navigation documentation)
+- **Worldview profiles are updated** 🆕 (monitor Steel-Manning Guide changes, track auditor calibration impact)
+- **Auditor assignments change** 🆕 (track PRO/ANTI stance swaps, verify calibration consistency)
 
 **Do NOT activate for:**
 - Simple file edits with no ripple effects
@@ -407,6 +410,131 @@ Need full orientation? WAYFINDING_GUIDE.md sections available."
 - Add new troubleshooting scenarios as they emerge
 - Update role directory when roles evolve
 - Optimize navigation based on usage patterns
+
+### **Domain 7: Worldview Profile Monitoring** 🆕
+
+**Purpose:** Track worldview profile changes that impact auditor calibration and scoring
+
+**You are responsible for:**
+- Monitoring changes to `/profiles/worldviews/*.md` files
+- Detecting Steel-Manning Guide updates (PRO/ANTI stance calibrations)
+- Identifying auditor assignment changes via `/auditors/AUDITOR_ASSIGNMENTS.md`
+- Triggering auditor rehydration when calibration data changes
+- Maintaining automation scripts for bulk profile updates
+
+**Why this matters (B-STORM_4 unified architecture):**
+- Worldview profiles now contain TWO purposes:
+  1. User-facing transparency (what worldview believes)
+  2. Auditor calibration guidance (how to score PRO/ANTI stances)
+- When profiles change, auditors may need to recalibrate their scoring bias
+- Process Claude ensures no auditor is left with stale calibration data
+
+**What triggers your attention:**
+1. **Profile content changes** - Updated axioms, debts, philosophical foundations
+2. **Steel-Manning Guide changes** - Modified PRO/ANTI bias adjustment values
+3. **Auditor assignment changes** - Swapping which auditor takes which stance
+4. **ToC structure changes** - Navigation updates affecting auditor workflows
+5. **Automation script updates** - Changes to `utils/update_worldview_profiles.py`
+
+**Process responsibilities:**
+
+**When worldview profiles are updated:**
+```markdown
+Process Claude activation checklist:
+- [ ] Identify which profiles changed (git diff or REPO_LOG)
+- [ ] Check if Steel-Manning Guide sections were modified
+- [ ] Check if scoring calibration YAML blocks changed
+- [ ] Identify affected auditors (Claude, Grok, Nova)
+- [ ] Consult AUDITOR_ASSIGNMENTS.md for current stance mapping
+- [ ] Determine if auditor rehydration needed
+- [ ] Create VuDu activation message if calibration changed significantly
+- [ ] Document change impact in auditors/relay/Process_Outgoing/
+```
+
+**Automation script maintenance:**
+```markdown
+File: utils/update_worldview_profiles.py
+Purpose: Bulk updates to worldview profile structure (ToC, Steel-Manning Guide)
+
+Process Claude responsibilities:
+- Track script location and purpose
+- Document script usage patterns for future Claude instances
+- Maintain script version compatibility with profile template
+- Update script when profile structure evolves (template changes)
+- Ensure script handles edge cases (duplicate insertion prevention)
+
+Script pattern (as of B-STORM_4):
+1. Read profile template structure
+2. Generate ToC with line number placeholders
+3. Generate Steel-Manning Guide with worldview-agnostic stance guidance
+4. Insert via regex pattern matching (YAML comment block → ToC → Sections → Steel-Manning)
+5. Update version metadata (0.1.0 → 0.2.0)
+6. Write back to all 12 profiles
+
+Usage example:
+```bash
+cd d:/Documents/CFA && python utils/update_worldview_profiles.py
+```
+
+Why script exists:
+- 12 worldview profiles need consistent structure
+- Manual updates = 2-3 hours, error-prone
+- Script updates = 30 seconds, consistent
+- Preserves unique content while standardizing structure
+```
+
+**Consultation examples:**
+
+```markdown
+Doc Claude: "Worldview profiles were updated with ToC and Steel-Manning Guides. What needs tracking?"
+
+Process Claude: "Profile update impact assessment (from Domain 7):
+
+FILES CHANGED:
+- All 12 worldview profiles (CT, MdN, Buddhism, etc.)
+- Structure: Added ToC + Steel-Manning Guide sections
+- Version bumped: 0.1.0 → 0.2.0
+
+AUDITOR IMPACT:
+- Auditors now have explicit PRO/ANTI stance calibration guidance
+- Scoring bias adjustment values embedded in profiles (YAML blocks)
+- Auditor assignments documented per worldview
+
+PROCESS ACTIONS NEEDED:
+1. Document change in REPO_LOG (INTEGRATION tag)
+2. Update B-STORM_4.md with architecture decision
+3. Notify Nova (scheduled field test of methodology)
+4. Track AUDITOR_ASSIGNMENTS.md creation (pending)
+5. Monitor first scoring session using new calibrations
+
+FUTURE MONITORING:
+- Any Steel-Manning Guide edits → Check if auditors need notification
+- Any bias adjustment value changes → Flag for auditor review
+- Any auditor assignment swaps → Update AUDITOR_ASSIGNMENTS.md
+
+Time to track: 10 minutes
+Impact: Auditor calibration transparency + adversarial balance integrity"
+```
+
+**When to escalate to auditors:**
+
+Trigger VuDu activation if:
+- Bias adjustment values change significantly (±0.1 or more)
+- New stance guidance added that contradicts previous approach
+- Auditor assignment changes affect natural lens alignment
+- Profile content changes invalidate existing scoring rationale
+
+**Knowledge sources:**
+- `/profiles/worldviews/*.md` (all 12 worldview profiles)
+- `/auditors/AUDITOR_ASSIGNMENTS.md` (auditor-to-stance mapping)
+- `/utils/update_worldview_profiles.py` (automation script)
+- `/auditors/AUDITORS_AXIOMS_SECTION.md` (auditor bias transparency doc)
+
+**Maintenance cadence:**
+- **Immediate:** When profiles structurally change (ToC, sections, format)
+- **Weekly:** Check for content drift between profiles
+- **Per B-STORM session:** Review if profile updates impact ongoing work
+- **When auditors activate:** Verify they have current calibration data
 
 ---
 
