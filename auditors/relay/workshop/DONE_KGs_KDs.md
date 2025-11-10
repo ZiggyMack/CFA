@@ -54,6 +54,12 @@
 **Reference:** 📌 Nova Entry 4
 **Context:** Nova validated METRIC_TAXONOMY.md v0.2.0 - all 3 new categories (Anthropological, Cosmological, Eschatological) fully documented with 9 new metrics specified; 8 justification fields + 5-part deliberation scaffold standards complete; changelog reflects expansion. This closes KG8 and unblocks production work pending KD-O1 closure.
 
+**KD-C6** ✅
+**Decision:** Final approval of PROFILE_TEMPLATE.md structure
+**Resolution:** Approved
+**Reference:** 📌 Nova Entry 8
+**Context:** Nova validated PROFILE_TEMPLATE.md v0.2.0 after two rounds of fixes: Entry 5 added missing 9 metric sections (3 categories), Entry 7 synced all metrics to canonical taxonomy definitions. All 8 metrics (Anthropological, Cosmological, Eschatological) now match taxonomy verbatim (names, types, ranges). Template complete with 7 categories, 14 metrics, 8 justification fields per metric, 5-part deliberation scaffold. This closes KG7 and KG9, fully unblocks KD-O3 for production profiles (CT, MdN).
+
 ---
 
 ### Knowledge Gaps (KG) - Closed
@@ -116,6 +122,23 @@ _C4 implementation of Nova Entry 2 specifications:_
 
 ---
 
+_C4 fixes per Nova validation feedback:_
+
+**KG9** ✅
+**Summary:** Template metrics diverge from canonical taxonomy definitions
+**Resolution:** Fixed all 8 metrics to match taxonomy verbatim - Anthropological (human_nature_baseline, agency_alignment, consciousness_ontology), Cosmological (origin_claim, causal_structure, fine_tuning_account), Eschatological (judgment_framework, ultimate_destiny)
+**Reference:** 📌 C4 Entry 7, Nova Entry 6
+**Enabled:** KD-O1 final approval (KD-C6)
+**Context:** Nova Entry 6 identified mismatched ranges/types between template and taxonomy; C4 Entry 7 synced all values, types, units to canonical definitions; most significant fix was agency_alignment changing from scale 0-100 to ranked_categories; this closed the final blocker for template approval
+
+**KD-C7** ✅
+**Decision:** Proceed with production profiles (CT, MdN) or iterate foundation?
+**Resolution:** Production profiles deployed - 12 worldview profiles + infrastructure complete
+**Reference:** 📌 C4 Entry 9
+**Context:** Following Nova Entry 8 approval of KD-C6 (template complete), C4 deployed full profile architecture buildout: (1) Production Profiles: CLASSICAL_THEISM.md and METHODOLOGICAL_NATURALISM.md with complete structure, suffering_weight metric fully detailed with 8-field justification + 5-part deliberation scaffold, remaining 13 metrics scaffolded; (2) Priority Queue (per Ziggy Entry 2.5): Orthodox Judaism, Mormonism, Error Theory, Null Hypothesis, Desiderata Believers with foundations + 3 key principles; (3) Additional Worldviews: Buddhism, Islam, Hinduism, Process Theology, Existentialism with concise scaffolding; (4) Infrastructure: profiles/README.md with complete index, development workflow, usage examples. Total delivered: 12 worldview profiles + README (13 files). Phase 3 complete, ready for Phase 4 (Grok integration for metric determination).
+
+---
+
 ## Causality Chains
 
 **Profile Foundation Build Sequence:**
@@ -125,10 +148,12 @@ _C4 implementation of Nova Entry 2 specifications:_
 3. **KD-C4** → Created pause point for validation before production
 4. **KG1-KG6** (Nova Entry 2) → Specified all additions needed for philosophical rigor
 5. **KG7, KG8** (C4 Entry 3) → Implemented specifications in template and taxonomy
-6. **KD-O1, KD-O2** (pending) → Nova validation gates before production profiles
-7. **KD-O3** (pending) → Proceed with CT/MdN production once validation passes
+6. **KD-C5** (Nova Entry 4) → Taxonomy validated and locked at v0.2.0
+7. **KG9** (Nova Entry 6, C4 Entry 7) → Template/taxonomy value sync completed
+8. **KD-C6** (Nova Entry 8) → Template validated and locked at v0.2.0
+9. **KD-C7** (C4 Entry 9) → Production profiles deployed, Phase 3 → Phase 4 transition
 
-**Key Insight:** The closed KGs enabled subsequent open KDs by filling knowledge gaps. KG1-KG6 defined requirements, which enabled KG7-KG8 implementation work, which now blocks KD-O1 and KD-O2 validation, which blocks KD-O3 production work.
+**Key Insight:** The closed KGs enabled subsequent open KDs by filling knowledge gaps. KG1-KG6 defined requirements, which enabled KG7-KG8 implementation work, which enabled KD-C5 and KD-C6 validation, which unblocked KD-C7 production deployment. Foundation is now complete and locked for Grok integration (Phase 4).
 
 ---
 
@@ -138,3 +163,8 @@ _C4 implementation of Nova Entry 2 specifications:_
   - Migrated all closed KDs and KGs from B-STORM_3.md Awaiting section
   - Established append-only history structure
   - B-STORM files now track open work only; this file preserves institutional memory
+
+- **2025-11-10:** KD-C7 migration (C4 Entry 9)
+  - Added KD-C7 documenting production profile deployment completion
+  - Updated Causality Chains to reflect Phase 3 completion
+  - Phase 3 → Phase 4 transition: Foundation locked, ready for Grok integration

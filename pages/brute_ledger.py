@@ -2,9 +2,86 @@
 CFA v3.5 - Mr. Brute's Ledger Page
 "To name your brute is to pay your fee"
 Comprehensive view of axioms and debts for all frameworks
+
+NOTE: As of 2025-11-10, this page now loads axioms/debts dynamically from
+profiles/worldviews/*.md via utils/profile_loader.py instead of hardcoded data.
 """
 
 import streamlit as st
+from pathlib import Path
+import sys
+
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils.profile_loader import get_brute_ledger, get_ypa_data
+
+def _render_framework_ledger(worldview_name: str, emoji: str, subtitle: str):
+    """
+    Helper function to render a framework's brute ledger section dynamically from profile
+
+    Args:
+        worldview_name: Name to pass to profile_loader (e.g., "Classical Theism")
+        emoji: Emoji prefix for display
+        subtitle: One-line description
+    """
+    # Load data from profile
+    try:
+        ledger = get_brute_ledger(worldview_name)
+        ypa_data = get_ypa_data(worldview_name)
+    except Exception as e:
+        st.error(f"Failed to load profile for {worldview_name}: {e}")
+        return
+
+    st.markdown(f"## {worldview_name}")
+    st.markdown(f"*{subtitle}*")
+
+    col1, col2 = st.columns(2)
+
+    # Axioms column
+    with col1:
+        axiom_count = ledger["axioms"]["count"]
+        st.markdown(f"### ✅ Axioms ({axiom_count})")
+        st.markdown("*Unprovable starting assumptions required:*")
+
+        for i, axiom_item in enumerate(ledger["axioms"]["list"], 1):
+            name = axiom_item["name"]
+            desc = axiom_item["description"]
+            st.markdown(f"{i}. **{name}** - {desc}")
+
+    # Debts column
+    with col2:
+        debt_count = ledger["debts"]["count"]
+        st.markdown(f"### ⚠️ Debts ({debt_count})")
+        st.markdown("*Unresolved questions acknowledged but not answered:*")
+
+        for i, debt_item in enumerate(ledger["debts"]["list"], 1):
+            name = debt_item["name"]
+            desc = debt_item["description"]
+            st.markdown(f"{i}. **{name}** - {desc}")
+
+    st.markdown("---")
+
+    # BFI Calculation
+    st.markdown("### 📊 BFI Calculation")
+    col1, col2, col3 = st.columns(3)
+    bfi_total = ypa_data["bf_i"]["axioms"] + ypa_data["bf_i"]["debts"]
+
+    with col1:
+        st.metric("Axioms", str(ypa_data["bf_i"]["axioms"]))
+    with col2:
+        st.metric("Debts", str(ypa_data["bf_i"]["debts"]))
+    with col3:
+        st.metric("**BFI Total**", f"**{bfi_total}**")
+
+    st.markdown("---")
+
+    # Audit notes
+    with st.expander("📝 Audit Notes & Justifications", expanded=False):
+        # Display audit notes from profile (markdown format)
+        audit_notes = ledger.get("audit_notes", "No audit notes available.")
+        st.markdown(audit_notes)
+
 
 def render():
     """Render the Brute Ledger page"""
@@ -54,157 +131,21 @@ def render():
     # METHODOLOGICAL NATURALISM
     # ========================================================================
     with framework_tabs[0]:
-        st.markdown("## Methodological Naturalism (MdN)")
-        st.markdown("*Research protocol assuming testable natural causes*")
-        
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.markdown("### ✅ Axioms (6)")
-            st.markdown("*Unprovable starting assumptions required:*")
-            
-            axioms_mdn = [
-                "**Regularity exists** - The universe operates according to consistent patterns",
-                "**Cognition is reliable** - Our minds can track reality (at least approximately)",
-                "**Testing arbitrates** - Empirical testing can distinguish better from worse explanations",
-                "**Natural causation default** - Assume natural causes unless evidence suggests otherwise",
-                "**Parsimony works** - Simpler explanations are generally more likely to be true",
-                "**Findings are provisional** - All conclusions remain open to revision"
-            ]
-            
-            for i, axiom in enumerate(axioms_mdn, 1):
-                st.markdown(f"{i}. {axiom}")
-        
-        with col2:
-            st.markdown("### ⚠️ Debts (4)")
-            st.markdown("*Unresolved questions acknowledged but not answered:*")
-            
-            debts_mdn = [
-                "**Why does regularity exist?** - No explanation for why universe has laws",
-                "**Why does cognition track truth?** - Evolution explains survival, not truth-tracking",
-                "**Why does success = truth?** - No grounding for equating predictive success with truth",
-                "**Why pursue knowledge?** - No internal justification for epistemic values"
-            ]
-            
-            for i, debt in enumerate(debts_mdn, 1):
-                st.markdown(f"{i}. {debt}")
-        
-        st.markdown("---")
-        
-        # BFI Calculation
-        st.markdown("### 📊 BFI Calculation")
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.metric("Axioms", "6")
-        with col2:
-            st.metric("Debts", "4")
-        with col3:
-            st.metric("**BFI Total**", "**10**")
-        
-        st.markdown("---")
-        
-        # Audit notes
-        with st.expander("📝 Audit Notes & Justifications", expanded=False):
-            st.markdown("""
-            **Why these axioms?**
-            
-            MdN's axioms reflect the minimal commitments needed for scientific practice:
-            - Regularity + Cognition = ability to investigate
-            - Testing + Natural causation = methodological toolkit
-            - Parsimony + Provisionality = self-correcting discipline
-            
-            **Why these debts?**
-            
-            MdN **brackets** (sets aside) questions it can't answer empirically:
-            - Metaphysical foundations (why regularities?)
-            - Epistemological grounding (why cognition works?)
-            - Normative justification (why pursue truth?)
-            
-            This is **intellectual honesty**, not weakness. MdN admits what it can and cannot explain.
-            
-            **Grok's perspective**: "MdN's lean BFI reflects its disciplined scope. It doesn't claim to answer everything—just what's testable."
-            
-            **Claude's perspective**: "MdN's debts reveal its dependence on external grounding. It's a powerful method, but not a complete worldview."
-            """)
+        _render_framework_ledger(
+            worldview_name="Methodological Naturalism",
+            emoji="📘",
+            subtitle="Research protocol assuming testable natural causes"
+        )
     
     # ========================================================================
     # CLASSICAL THEISM
     # ========================================================================
     with framework_tabs[1]:
-        st.markdown("## Classical Theism (CT)")
-        st.markdown("*God as necessary, simple, omnipotent, omniscient, omnibenevolent being*")
-        
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.markdown("### ✅ Axioms (7)")
-            st.markdown("*Unprovable starting assumptions required:*")
-            
-            axioms_ct = [
-                "**Divine aseity/simplicity** - Posits that God exists necessarily and is metaphysically simple",
-                "**Logos/intelligibility** - Claims God's rationality grounds cosmic order and comprehensibility",
-                "**Revelation reliability** - Assumes Scripture/tradition reliably communicates divine truth",
-                "**Moral realism** - Claims objective moral facts exist, grounded in God's nature",
-                "**Teleology** - Posits purpose and design as fundamental features of reality",
-                "**PSR (Principle of Sufficient Reason)** - Everything has an explanation (in God)",
-                "**Imago Dei** - Claims humans bear God's image, enabling knowledge and moral agency"
-            ]
-            
-            for i, axiom in enumerate(axioms_ct, 1):
-                st.markdown(f"{i}. {axiom}")
-        
-        with col2:
-            st.markdown("### ⚠️ Debts (4)")
-            st.markdown("*Unresolved questions acknowledged but not answered:*")
-            
-            debts_ct = [
-                "**Divine hiddenness** - Why doesn't God make existence more evident?",
-                "**Problem of evil** - How does omnipotent/benevolent God permit suffering?",
-                "**Hermeneutic variance** - Why do interpretations of revelation differ?",
-                "**Beauty→truth bridge** - Does aesthetic resonance actually track truth?"
-            ]
-            
-            for i, debt in enumerate(debts_ct, 1):
-                st.markdown(f"{i}. {debt}")
-        
-        st.markdown("---")
-        
-        # BFI Calculation
-        st.markdown("### 📊 BFI Calculation")
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.metric("Axioms", "7")
-        with col2:
-            st.metric("Debts", "4")
-        with col3:
-            st.metric("**BFI Total**", "**11**")
-        
-        st.markdown("---")
-        
-        # Audit notes
-        with st.expander("📝 Audit Notes & Justifications", expanded=False):
-            st.markdown("""
-            **Why these axioms?**
-            
-            CT's axioms reflect commitments needed for a theistic worldview:
-            - Divine attributes (aseity, simplicity) = foundation
-            - Logos + PSR = intelligibility and explanation
-            - Revelation + Imago Dei = knowledge possibility
-            - Moral realism + Teleology = normative grounding
-            
-            **Why these debts?**
-            
-            CT acknowledges **mystery** - questions it can't fully resolve:
-            - Theodicy (hiddenness, evil) remains debated for millennia
-            - Hermeneutic variance (denominational differences) acknowledged
-            - Beauty's epistemic role (does it track truth?) unclear
-            
-            This is **honest theology**, not evasion. CT names what it cannot fully explain.
-            
-            **Claude's perspective**: "CT's higher BFI reflects its comprehensive scope. It addresses questions MdN brackets—at a cost."
-            
-            **Grok's perspective**: "CT's debts (especially theodicy) remain live tensions. Acknowledging them maintains intellectual honesty."
-            """)
+        _render_framework_ledger(
+            worldview_name="Classical Theism",
+            emoji="📕",
+            subtitle="God as necessary, simple, omnipotent, omniscient, omnibenevolent being"
+        )
     
     # ========================================================================
     # SKEPTIC MODE PRESET (Grok Note #4)
