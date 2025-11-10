@@ -1,16 +1,16 @@
 # [Profile Name] Profile
 
-**Status:** DRAFT | **Version:** 0.1.0 | **Date:** 2025-11-09
+**Status:** DRAFT | **Version:** 0.2.0 | **Date:** 2025-11-09
 
 <!---
 FILE: [PROFILE_NAME].md
 PURPOSE: Worldview profile with metrics, philosophical foundations, and deliberation narratives
-VERSION: 0.1.0
+VERSION: 0.2.0
 STATUS: DRAFT
 DEPENDS_ON: METRIC_TAXONOMY.md, Trinity Architecture
 NEEDED_BY: CFA analysis, worldview comparison tooling
 MOVES_WITH: /profiles/
-LAST_UPDATE: 2025-11-09 [Profile Architecture Foundation]
+LAST_UPDATE: 2025-11-09 [Profile Architecture Foundation - Nova Entry 4 fixes]
 --->
 
 ---
@@ -424,6 +424,549 @@ justification:
 
 ---
 
+### Anthropological Commitments
+
+How this worldview understands human nature, agency, and consciousness.
+
+#### Metric: Human Nature Baseline
+
+```yaml
+metric:
+  name: "human_nature_baseline"
+  value: 0  # PLACEHOLDER
+  unit: "categorical"
+  range: ["essential_fixed", "essential_malleable", "constructed_stable", "constructed_fluid", "emergent_only"]
+  description: "Whether human nature is essential, constructed, or purely emergent"
+
+justification:
+  axiom_connection: |
+    [How does axiom inform view of human nature?]
+
+  reasoning_process: |
+    [Walk through reasoning: fixed essence vs constructed identity vs emergent properties]
+
+  assumptions:
+    - "[Assumption 1 about human nature]"
+    - "[Assumption 2]"
+
+  contestable_points:
+    - "[Where reasonable disagreement exists]"
+
+  comparison_notes:
+    classical_theism: "[How CT differs on human nature]"
+    methodological_naturalism: "[How MdN differs on human nature]"
+
+  methodological_notes: |
+    [Document deliberation modality, analytical tools used]
+
+  evidence_threads: |
+    [REPO_LOG IDs, experiment links, transcript references]
+
+  open_questions:
+    - "[Unresolved tension 1]"
+    - "[Unresolved tension 2]"
+```
+
+**Deliberation Narrative:**
+
+[Story of how this metric was determined - to be filled during Grok integration]
+
+**1. Prompt Stack:** [Exact questions/prompts used]
+
+**2. Counterweight Table:** [Claim vs counterclaim with resolution]
+
+**3. Edge Case Ledger:** [Numbered edge cases with keeper outcomes]
+
+**4. Mythology Capsule:** [Shaman paragraph connecting axiom to outcome]
+
+**5. Decision Stamp:** [Timestamp, participants, confidence, session ID]
+
+**Why This Baseline:**
+
+[Summary]
+
+---
+
+#### Metric: Agency Alignment
+
+```yaml
+metric:
+  name: "agency_alignment"
+  value: 0  # PLACEHOLDER
+  unit: "scale"
+  range: [0, 100]
+  description: "Degree to which human agency is real vs illusory (0=fully determined, 100=libertarian free will)"
+
+justification:
+  axiom_connection: |
+    [How does axiom inform view of human agency?]
+
+  reasoning_process: |
+    [Walk through reasoning: determinism vs compatibilism vs libertarian freedom]
+
+  assumptions:
+    - "[Assumption 1 about agency]"
+    - "[Assumption 2]"
+
+  contestable_points:
+    - "[Where reasonable disagreement exists]"
+
+  comparison_notes:
+    classical_theism: "[How CT differs on agency]"
+    methodological_naturalism: "[How MdN differs on agency]"
+
+  methodological_notes: |
+    [Document deliberation modality, analytical tools used]
+
+  evidence_threads: |
+    [REPO_LOG IDs, experiment links, transcript references]
+
+  open_questions:
+    - "[Unresolved tension 1]"
+    - "[Unresolved tension 2]"
+```
+
+**Deliberation Narrative:**
+
+[Story of how this metric was determined - to be filled during Grok integration]
+
+**1. Prompt Stack:** [Exact questions/prompts used]
+
+**2. Counterweight Table:** [Claim vs counterclaim with resolution]
+
+**3. Edge Case Ledger:** [Numbered edge cases with keeper outcomes]
+
+**4. Mythology Capsule:** [Shaman paragraph connecting axiom to outcome]
+
+**5. Decision Stamp:** [Timestamp, participants, confidence, session ID]
+
+**Why This Alignment:**
+
+[Summary]
+
+---
+
+#### Metric: Consciousness Ontology
+
+```yaml
+metric:
+  name: "consciousness_ontology"
+  value: 0  # PLACEHOLDER
+  unit: "categorical"
+  range: ["substance_dualism", "property_dualism", "emergent_materialism", "eliminative_materialism", "idealism"]
+  description: "Ontological status of consciousness and mental states"
+
+justification:
+  axiom_connection: |
+    [How does axiom inform view of consciousness?]
+
+  reasoning_process: |
+    [Walk through reasoning: mind-body relationship, mental causation]
+
+  assumptions:
+    - "[Assumption 1 about consciousness]"
+    - "[Assumption 2]"
+
+  contestable_points:
+    - "[Where reasonable disagreement exists]"
+
+  comparison_notes:
+    classical_theism: "[How CT differs on consciousness]"
+    methodological_naturalism: "[How MdN differs on consciousness]"
+
+  methodological_notes: |
+    [Document deliberation modality, analytical tools used]
+
+  evidence_threads: |
+    [REPO_LOG IDs, experiment links, transcript references]
+
+  open_questions:
+    - "[Unresolved tension 1]"
+    - "[Unresolved tension 2]"
+```
+
+**Deliberation Narrative:**
+
+[Story of how this metric was determined - to be filled during Grok integration]
+
+**1. Prompt Stack:** [Exact questions/prompts used]
+
+**2. Counterweight Table:** [Claim vs counterclaim with resolution]
+
+**3. Edge Case Ledger:** [Numbered edge cases with keeper outcomes]
+
+**4. Mythology Capsule:** [Shaman paragraph connecting axiom to outcome]
+
+**5. Decision Stamp:** [Timestamp, participants, confidence, session ID]
+
+**Why This Ontology:**
+
+[Summary]
+
+---
+
+### Cosmological Commitments
+
+How this worldview understands the origin, structure, and fine-tuning of the cosmos.
+
+#### Metric: Origin Claim
+
+```yaml
+metric:
+  name: "origin_claim"
+  value: 0  # PLACEHOLDER
+  unit: "categorical"
+  range: ["divine_creation", "necessary_existence", "brute_fact", "eternal_universe", "multiverse_framework"]
+  description: "Account of cosmic origins and why universe exists"
+
+justification:
+  axiom_connection: |
+    [How does axiom inform view of cosmic origins?]
+
+  reasoning_process: |
+    [Walk through reasoning: necessity vs contingency, explanation vs brute fact]
+
+  assumptions:
+    - "[Assumption 1 about origins]"
+    - "[Assumption 2]"
+
+  contestable_points:
+    - "[Where reasonable disagreement exists]"
+
+  comparison_notes:
+    classical_theism: "[How CT differs on origins]"
+    methodological_naturalism: "[How MdN differs on origins]"
+
+  methodological_notes: |
+    [Document deliberation modality, analytical tools used]
+
+  evidence_threads: |
+    [REPO_LOG IDs, experiment links, transcript references]
+
+  open_questions:
+    - "[Unresolved tension 1]"
+    - "[Unresolved tension 2]"
+```
+
+**Deliberation Narrative:**
+
+[Story of how this metric was determined - to be filled during Grok integration]
+
+**1. Prompt Stack:** [Exact questions/prompts used]
+
+**2. Counterweight Table:** [Claim vs counterclaim with resolution]
+
+**3. Edge Case Ledger:** [Numbered edge cases with keeper outcomes]
+
+**4. Mythology Capsule:** [Shaman paragraph connecting axiom to outcome]
+
+**5. Decision Stamp:** [Timestamp, participants, confidence, session ID]
+
+**Why This Origin:**
+
+[Summary]
+
+---
+
+#### Metric: Causal Structure
+
+```yaml
+metric:
+  name: "causal_structure"
+  value: 0  # PLACEHOLDER
+  unit: "categorical"
+  range: ["primary_secondary", "natural_only", "overdetermined", "occasionalism", "no_causation"]
+  description: "Nature of causality in the universe"
+
+justification:
+  axiom_connection: |
+    [How does axiom inform view of causation?]
+
+  reasoning_process: |
+    [Walk through reasoning: primary vs secondary causes, natural law]
+
+  assumptions:
+    - "[Assumption 1 about causation]"
+    - "[Assumption 2]"
+
+  contestable_points:
+    - "[Where reasonable disagreement exists]"
+
+  comparison_notes:
+    classical_theism: "[How CT differs on causation]"
+    methodological_naturalism: "[How MdN differs on causation]"
+
+  methodological_notes: |
+    [Document deliberation modality, analytical tools used]
+
+  evidence_threads: |
+    [REPO_LOG IDs, experiment links, transcript references]
+
+  open_questions:
+    - "[Unresolved tension 1]"
+    - "[Unresolved tension 2]"
+```
+
+**Deliberation Narrative:**
+
+[Story of how this metric was determined - to be filled during Grok integration]
+
+**1. Prompt Stack:** [Exact questions/prompts used]
+
+**2. Counterweight Table:** [Claim vs counterclaim with resolution]
+
+**3. Edge Case Ledger:** [Numbered edge cases with keeper outcomes]
+
+**4. Mythology Capsule:** [Shaman paragraph connecting axiom to outcome]
+
+**5. Decision Stamp:** [Timestamp, participants, confidence, session ID]
+
+**Why This Structure:**
+
+[Summary]
+
+---
+
+#### Metric: Fine-Tuning Account
+
+```yaml
+metric:
+  name: "fine_tuning_account"
+  value: 0  # PLACEHOLDER
+  unit: "categorical"
+  range: ["design", "necessity", "chance", "multiverse", "brute_fact", "selection_effect"]
+  description: "Explanation for cosmic fine-tuning for life"
+
+justification:
+  axiom_connection: |
+    [How does axiom inform view of fine-tuning?]
+
+  reasoning_process: |
+    [Walk through reasoning: design vs chance vs necessity]
+
+  assumptions:
+    - "[Assumption 1 about fine-tuning]"
+    - "[Assumption 2]"
+
+  contestable_points:
+    - "[Where reasonable disagreement exists]"
+
+  comparison_notes:
+    classical_theism: "[How CT differs on fine-tuning]"
+    methodological_naturalism: "[How MdN differs on fine-tuning]"
+
+  methodological_notes: |
+    [Document deliberation modality, analytical tools used]
+
+  evidence_threads: |
+    [REPO_LOG IDs, experiment links, transcript references]
+
+  open_questions:
+    - "[Unresolved tension 1]"
+    - "[Unresolved tension 2]"
+```
+
+**Deliberation Narrative:**
+
+[Story of how this metric was determined - to be filled during Grok integration]
+
+**1. Prompt Stack:** [Exact questions/prompts used]
+
+**2. Counterweight Table:** [Claim vs counterclaim with resolution]
+
+**3. Edge Case Ledger:** [Numbered edge cases with keeper outcomes]
+
+**4. Mythology Capsule:** [Shaman paragraph connecting axiom to outcome]
+
+**5. Decision Stamp:** [Timestamp, participants, confidence, session ID]
+
+**Why This Account:**
+
+[Summary]
+
+---
+
+### Eschatological Commitments
+
+How this worldview understands judgment, destiny, and ultimate ends.
+
+#### Metric: Judgment Framework
+
+```yaml
+metric:
+  name: "judgment_framework"
+  value: 0  # PLACEHOLDER
+  unit: "categorical"
+  range: ["divine_judgment", "karmic_rebirth", "natural_consequence", "none", "transformation"]
+  description: "Nature and mechanism of ultimate judgment or accountability"
+
+justification:
+  axiom_connection: |
+    [How does axiom inform view of judgment?]
+
+  reasoning_process: |
+    [Walk through reasoning: accountability, justice, consequences]
+
+  assumptions:
+    - "[Assumption 1 about judgment]"
+    - "[Assumption 2]"
+
+  contestable_points:
+    - "[Where reasonable disagreement exists]"
+
+  comparison_notes:
+    classical_theism: "[How CT differs on judgment]"
+    methodological_naturalism: "[How MdN differs on judgment]"
+
+  methodological_notes: |
+    [Document deliberation modality, analytical tools used]
+
+  evidence_threads: |
+    [REPO_LOG IDs, experiment links, transcript references]
+
+  open_questions:
+    - "[Unresolved tension 1]"
+    - "[Unresolved tension 2]"
+```
+
+**Deliberation Narrative:**
+
+[Story of how this metric was determined - to be filled during Grok integration]
+
+**1. Prompt Stack:** [Exact questions/prompts used]
+
+**2. Counterweight Table:** [Claim vs counterclaim with resolution]
+
+**3. Edge Case Ledger:** [Numbered edge cases with keeper outcomes]
+
+**4. Mythology Capsule:** [Shaman paragraph connecting axiom to outcome]
+
+**5. Decision Stamp:** [Timestamp, participants, confidence, session ID]
+
+**Why This Framework:**
+
+[Summary]
+
+---
+
+#### Metric: Ultimate Destiny
+
+```yaml
+metric:
+  name: "ultimate_destiny"
+  value: 0  # PLACEHOLDER
+  unit: "categorical"
+  range: ["eternal_communion", "annihilation", "reincarnation", "naturalistic_end", "universal_restoration"]
+  description: "Final state or end of human existence"
+
+justification:
+  axiom_connection: |
+    [How does axiom inform view of ultimate destiny?]
+
+  reasoning_process: |
+    [Walk through reasoning: afterlife, continuation, finality]
+
+  assumptions:
+    - "[Assumption 1 about destiny]"
+    - "[Assumption 2]"
+
+  contestable_points:
+    - "[Where reasonable disagreement exists]"
+
+  comparison_notes:
+    classical_theism: "[How CT differs on destiny]"
+    methodological_naturalism: "[How MdN differs on destiny]"
+
+  methodological_notes: |
+    [Document deliberation modality, analytical tools used]
+
+  evidence_threads: |
+    [REPO_LOG IDs, experiment links, transcript references]
+
+  open_questions:
+    - "[Unresolved tension 1]"
+    - "[Unresolved tension 2]"
+```
+
+**Deliberation Narrative:**
+
+[Story of how this metric was determined - to be filled during Grok integration]
+
+**1. Prompt Stack:** [Exact questions/prompts used]
+
+**2. Counterweight Table:** [Claim vs counterclaim with resolution]
+
+**3. Edge Case Ledger:** [Numbered edge cases with keeper outcomes]
+
+**4. Mythology Capsule:** [Shaman paragraph connecting axiom to outcome]
+
+**5. Decision Stamp:** [Timestamp, participants, confidence, session ID]
+
+**Why This Destiny:**
+
+[Summary]
+
+---
+
+#### Metric: Eschatology Confidence
+
+```yaml
+metric:
+  name: "eschatology_confidence"
+  value: 0  # PLACEHOLDER
+  unit: "scale"
+  range: [0, 100]
+  description: "Epistemic confidence in eschatological claims (0=agnostic, 100=certainty)"
+
+justification:
+  axiom_connection: |
+    [How does axiom inform confidence in ultimate ends?]
+
+  reasoning_process: |
+    [Walk through reasoning: epistemic access, revelation, speculation]
+
+  assumptions:
+    - "[Assumption 1 about eschatological knowledge]"
+    - "[Assumption 2]"
+
+  contestable_points:
+    - "[Where reasonable disagreement exists]"
+
+  comparison_notes:
+    classical_theism: "[How CT differs on eschatological confidence]"
+    methodological_naturalism: "[How MdN differs on eschatological confidence]"
+
+  methodological_notes: |
+    [Document deliberation modality, analytical tools used]
+
+  evidence_threads: |
+    [REPO_LOG IDs, experiment links, transcript references]
+
+  open_questions:
+    - "[Unresolved tension 1]"
+    - "[Unresolved tension 2]"
+```
+
+**Deliberation Narrative:**
+
+[Story of how this metric was determined - to be filled during Grok integration]
+
+**1. Prompt Stack:** [Exact questions/prompts used]
+
+**2. Counterweight Table:** [Claim vs counterclaim with resolution]
+
+**3. Edge Case Ledger:** [Numbered edge cases with keeper outcomes]
+
+**4. Mythology Capsule:** [Shaman paragraph connecting axiom to outcome]
+
+**5. Decision Stamp:** [Timestamp, participants, confidence, session ID]
+
+**Why This Confidence:**
+
+[Summary]
+
+---
+
 ## Lifecycle Hooks
 
 Profile-specific guidance for Trinity Architecture hooks.
@@ -565,12 +1108,14 @@ Worldview profiles don't exist in isolation - they're part of a comparative fram
 
 ## Changelog
 
-- **v0.2.0** (2025-11-09): Major expansion per Nova Entry 2 (C4 implementation)
+- **v0.2.0** (2025-11-09): Major expansion per Nova Entry 2 (C4 implementation) + Nova Entry 4 fixes
   - 2 new hooks added (Deliberation, Comparative Audit)
   - 3 new justification fields added to all metrics (methodological_notes, evidence_threads, open_questions)
   - 5-part deliberation narrative scaffold mandated (Prompt Stack, Counterweight Table, Edge Case Ledger, Mythology Capsule, Decision Stamp)
   - All existing metrics updated with new structure
-  - Awaiting Nova validation of implementation (KD-O1)
+  - **3 new category sections added** (Anthropological, Cosmological, Eschatological) with 9 placeholder metrics (Nova Entry 4 fix)
+  - Header metadata bumped to v0.2.0 (Nova Entry 4 fix)
+  - Template now includes all 7 metric categories with 14 total metrics
 
 - **v0.1.0** (2025-11-09): Initial skeleton created during Profile Architecture Foundation (C4)
   - Structure defined with hybrid YAML + narrative approach

@@ -48,6 +48,12 @@
 **Reference:** 📌 C4 Entry 1
 **Context:** Created KD-O1 and KD-O2 to ensure Nova validates foundation before production profiles (CT, MdN) are built
 
+**KD-C5** ✅
+**Decision:** Final approval of METRIC_TAXONOMY.md
+**Resolution:** Approved
+**Reference:** 📌 Nova Entry 4
+**Context:** Nova validated METRIC_TAXONOMY.md v0.2.0 - all 3 new categories (Anthropological, Cosmological, Eschatological) fully documented with 9 new metrics specified; 8 justification fields + 5-part deliberation scaffold standards complete; changelog reflects expansion. This closes KG8 and unblocks production work pending KD-O1 closure.
+
 ---
 
 ### Knowledge Gaps (KG) - Closed

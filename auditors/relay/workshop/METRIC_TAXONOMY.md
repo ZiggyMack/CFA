@@ -2,17 +2,17 @@
 
 **Purpose:** Define all metric categories, specific metrics, and standards for CFA worldview profiles
 
-**Version:** 0.1.0 | **Status:** DRAFT | **Date:** 2025-11-09
+**Version:** 0.2.0 | **Status:** DRAFT | **Date:** 2025-11-09
 
 <!---
 FILE: METRIC_TAXONOMY.md
 PURPOSE: Complete taxonomy of metrics used across all worldview profiles
-VERSION: 0.1.0
+VERSION: 0.2.0
 STATUS: DRAFT
 DEPENDS_ON: PROFILE_TEMPLATE.md
 NEEDED_BY: All worldview profiles
 MOVES_WITH: /auditors/relay/workshop/
-LAST_UPDATE: 2025-11-09 [Profile Architecture Foundation - C4]
+LAST_UPDATE: 2025-11-09 [Profile Architecture Foundation - Nova Entry 4 approved]
 --->
 
 ---
