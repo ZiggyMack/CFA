@@ -375,6 +375,323 @@ justification_requirements:
 
 ---
 
+### 5. Anthropological Commitments
+
+**Purpose:** Capture how different worldviews understand human nature, agency, and consciousness
+
+**Why This Matters:**
+Worldviews differ fundamentally in their understanding of what humans ARE:
+- Is there an essential human nature, or is it constructed/emergent?
+- What is the source and scope of human agency?
+- Is consciousness purely physical, dualist, or something else?
+- How does human nature relate to flourishing or purpose?
+
+These differences shape views on ethics, freedom, identity, and what it means to be human.
+
+**Metrics in This Category:**
+
+#### 5.1 human_nature_baseline
+
+```yaml
+name: "human_nature_baseline"
+type: "categorical"
+unit: "category"
+range: ["fallen", "neutral", "progressing", "illusory"]
+description: |
+  Baseline assessment of human nature in its default or starting state.
+  This reveals whether worldview sees humans as fundamentally flawed,
+  neutral, evolving, or perhaps not having a fixed nature at all.
+
+category_definitions:
+  fallen: "Human nature is corrupted, broken, or fallen from an ideal state (theological or philosophical)"
+  neutral: "Human nature is neither good nor bad by default - morally blank slate"
+  progressing: "Human nature is evolving/improving toward higher state (evolutionary, transhumanist)"
+  illusory: "Fixed human nature is illusory - no essential self (Buddhist, some postmodern views)"
+
+example_values:
+  classical_theism: "[Expected: fallen - imago Dei corrupted by sin, requiring redemption]"
+  methodological_naturalism: "[Expected: neutral or progressing - evolved nature without moral valence]"
+  buddhism: "[Expected: illusory - anatta (no-self) doctrine]"
+
+justification_requirements:
+  - axiom_connection: How does declared axiom inform view of human nature?
+  - reasoning_process: What anthropological framework supports this baseline?
+  - assumptions: What assumptions about human origins or telos?
+  - contestable_points: Where does anthropology become contested?
+```
+
+#### 5.2 agency_alignment
+
+```yaml
+name: "agency_alignment"
+type: "ranked_categories"
+unit: "priority_order"
+range: ["divine_will", "natural_order", "personal_autonomy", "collective_design"]
+description: |
+  Ranked priorities for the source and direction of human agency.
+  Reveals whether worldview sees human choices as primarily aligned with
+  divine will, natural law, individual autonomy, or collective/social design.
+
+category_definitions:
+  divine_will: "Human agency properly aligned with God's will or divine purposes"
+  natural_order: "Human agency aligned with natural law, telos, or cosmic order"
+  personal_autonomy: "Human agency grounded in individual freedom and self-determination"
+  collective_design: "Human agency shaped by and accountable to collective/social structures"
+
+example_values:
+  classical_theism: "[Expected: divine_will, natural_order, personal_autonomy - ordered loves]"
+  methodological_naturalism: "[Expected: personal_autonomy, collective_design - social contract]"
+  buddhism: "[Expected: natural_order, personal_autonomy - dharma and karma]"
+
+justification_requirements:
+  - axiom_connection: How does axiom inform agency priorities?
+  - reasoning_process: Why this ordering of agency sources?
+  - assumptions: What assumptions about freedom and moral responsibility?
+  - contestable_points: Where do agency priorities conflict?
+```
+
+#### 5.3 consciousness_ontology
+
+```yaml
+name: "consciousness_ontology"
+type: "categorical"
+unit: "category"
+range: ["dualist", "property_dualist", "physicalist", "panpsychist", "non_dual"]
+description: |
+  Ontological status of consciousness - what IS consciousness in this worldview?
+  This reveals deep metaphysical commitments about mind, matter, and their relationship.
+
+category_definitions:
+  dualist: "Consciousness is non-physical substance distinct from matter (Cartesian dualism)"
+  property_dualist: "Consciousness is emergent property of physical systems but not reducible"
+  physicalist: "Consciousness is entirely physical - brain states, nothing more"
+  panpsychist: "Consciousness is fundamental feature of all matter (degrees of consciousness)"
+  non_dual: "Consciousness/matter distinction is ultimately illusory (Advaita, some Buddhism)"
+
+example_values:
+  classical_theism: "[Expected: dualist or property_dualist - soul as distinct from body]"
+  methodological_naturalism: "[Expected: physicalist or property_dualist - no immaterial soul]"
+  buddhism: "[Expected: non_dual - consciousness without inherent existence]"
+
+justification_requirements:
+  - axiom_connection: How does axiom inform consciousness ontology?
+  - reasoning_process: What metaphysical framework supports this view?
+  - assumptions: What assumptions about mind/body problem?
+  - contestable_points: Where does consciousness account become contested?
+```
+
+---
+
+### 6. Cosmological Commitments
+
+**Purpose:** Capture how different worldviews understand the origin, structure, and fine-tuning of the cosmos
+
+**Why This Matters:**
+Worldviews differ on fundamental questions about physical reality:
+- Did the universe have an origin, or is it eternal?
+- Is causation deterministic, probabilistic, or open to libertarian agency?
+- How do we explain cosmic fine-tuning for life?
+- What does the universe's structure reveal about ultimate reality?
+
+These differences affect views on divine action, scientific method, and cosmic meaning.
+
+**Metrics in This Category:**
+
+#### 6.1 origin_claim
+
+```yaml
+name: "origin_claim"
+type: "categorical"
+unit: "category"
+range: ["creation", "eternal", "emergent", "brute_fact", "simulation"]
+description: |
+  How this worldview accounts for the universe's existence.
+  This is the answer to "why is there something rather than nothing?"
+
+category_definitions:
+  creation: "Universe was created by divine being or intelligent designer"
+  eternal: "Universe has always existed - no beginning"
+  emergent: "Universe emerged from prior quantum/physical state (quantum fluctuation)"
+  brute_fact: "Universe exists without explanation - brute contingent fact"
+  simulation: "Universe is computational simulation by higher beings"
+
+example_values:
+  classical_theism: "[Expected: creation - creatio ex nihilo by God]"
+  methodological_naturalism: "[Expected: emergent or brute_fact - no teleology required]"
+  buddhism: "[Expected: eternal or emergent - cyclical cosmology without creator]"
+
+justification_requirements:
+  - axiom_connection: How does axiom inform origin account?
+  - reasoning_process: What cosmological arguments support this claim?
+  - assumptions: What assumptions about causation and contingency?
+  - contestable_points: Where does origin account face objections?
+```
+
+#### 6.2 causal_structure
+
+```yaml
+name: "causal_structure"
+type: "categorical"
+unit: "category"
+range: ["deterministic", "probabilistic", "libertarian_mix"]
+description: |
+  How causation operates in the universe according to this worldview.
+  This reveals commitments about natural law, divine action, and freedom.
+
+category_definitions:
+  deterministic: "All events causally determined by prior states - no genuine openness"
+  probabilistic: "Causation includes irreducible randomness (quantum indeterminacy)"
+  libertarian_mix: "Some events causally determined, others open to libertarian agency (divine or human)"
+
+example_values:
+  classical_theism: "[Expected: libertarian_mix - natural law + divine providence + human free will]"
+  methodological_naturalism: "[Expected: probabilistic or deterministic - closed causal system]"
+  buddhism: "[Expected: deterministic or probabilistic - karma as causal law]"
+
+justification_requirements:
+  - axiom_connection: How does axiom inform causal structure?
+  - reasoning_process: What physics/metaphysics supports this view?
+  - assumptions: What assumptions about natural law and agency?
+  - contestable_points: Where does causal account become contested?
+```
+
+#### 6.3 fine_tuning_account
+
+```yaml
+name: "fine_tuning_account"
+type: "categorical"
+unit: "category"
+range: ["design", "multiverse", "brute_fact", "unknown"]
+description: |
+  How this worldview explains the apparent fine-tuning of physical constants for life.
+  This is a key divergence point between theistic and naturalistic worldviews.
+
+category_definitions:
+  design: "Fine-tuning explained by intelligent designer setting parameters"
+  multiverse: "Fine-tuning explained by many universes with varying constants (anthropic principle)"
+  brute_fact: "Fine-tuning is just how things are - no explanation needed"
+  unknown: "Fine-tuning requires explanation but current accounts are inadequate"
+
+example_values:
+  classical_theism: "[Expected: design - fine-tuning as evidence for divine designer]"
+  methodological_naturalism: "[Expected: multiverse or brute_fact - naturalistic explanation]"
+  buddhism: "[Expected: brute_fact or unknown - not central concern]"
+
+justification_requirements:
+  - axiom_connection: How does axiom inform fine-tuning account?
+  - reasoning_process: What explanatory framework is used?
+  - assumptions: What assumptions about design detection or probability?
+  - contestable_points: Where do fine-tuning arguments face objections?
+```
+
+---
+
+### 7. Eschatological Commitments
+
+**Purpose:** Capture how different worldviews understand judgment, destiny, and ultimate ends
+
+**Why This Matters:**
+Worldviews differ on where everything is heading:
+- Is there divine judgment or karmic consequence?
+- What is the ultimate destiny of individuals and cosmos?
+- How confident is this worldview about eschatological claims?
+- Do eschatological beliefs affect present ethics and meaning?
+
+These differences shape how people live in light of perceived ultimate outcomes.
+
+**Metrics in This Category:**
+
+#### 7.1 judgment_framework
+
+```yaml
+name: "judgment_framework"
+type: "categorical"
+unit: "category"
+range: ["divine_judgment", "karma_cycle", "annihilation", "none"]
+description: |
+  How this worldview accounts for moral consequence in the cosmic order.
+  This is the answer to "will there be justice/accountability?"
+
+category_definitions:
+  divine_judgment: "Moral accountability enforced by divine judgment (heaven/hell, reward/punishment)"
+  karma_cycle: "Moral accountability through karmic causation and rebirth"
+  annihilation: "Death is end of existence - no posthumous judgment"
+  none: "No cosmic moral accountability - ethics are purely human/social"
+
+example_values:
+  classical_theism: "[Expected: divine_judgment - final judgment by God]"
+  methodological_naturalism: "[Expected: none or annihilation - no cosmic justice]"
+  buddhism: "[Expected: karma_cycle - rebirth determined by karma]"
+
+justification_requirements:
+  - axiom_connection: How does axiom inform judgment framework?
+  - reasoning_process: What eschatological/soteriological framework supports this?
+  - assumptions: What assumptions about moral order and agency?
+  - contestable_points: Where does judgment account face objections?
+```
+
+#### 7.2 ultimate_destiny
+
+```yaml
+name: "ultimate_destiny"
+type: "categorical"
+unit: "category"
+range: ["union_with_divine", "enlightenment", "heat_death", "cyclical_return", "uplift"]
+description: |
+  What is the ultimate end state for individuals/cosmos in this worldview?
+  This reveals the telos or final purpose (if any) of existence.
+
+category_definitions:
+  union_with_divine: "Ultimate end is beatific vision, theosis, eternal communion with God"
+  enlightenment: "Ultimate end is liberation from suffering/ignorance (nirvana, moksha)"
+  heat_death: "Ultimate end is thermodynamic heat death of universe - no cosmic purpose"
+  cyclical_return: "No ultimate end - eternal recurrence or cyclical rebirth"
+  uplift: "Ultimate end is transhumanist/technological transcendence"
+
+example_values:
+  classical_theism: "[Expected: union_with_divine - eternal life with God]"
+  methodological_naturalism: "[Expected: heat_death or uplift depending on thinker]"
+  buddhism: "[Expected: enlightenment - nirvana as escape from samsara]"
+
+justification_requirements:
+  - axiom_connection: How does axiom inform ultimate destiny?
+  - reasoning_process: What eschatological vision supports this end?
+  - assumptions: What assumptions about cosmic telos?
+  - contestable_points: Where do destiny claims face objections?
+```
+
+#### 7.3 eschatology_confidence
+
+```yaml
+name: "eschatology_confidence"
+type: "numeric"
+unit: "normalized_scale"
+range: [0, 100]
+description: |
+  How confident is this worldview about its eschatological claims?
+  Higher values indicate strong confidence in destiny/judgment framework.
+  Lower values indicate agnosticism or epistemic humility about ultimate ends.
+
+interpretation:
+  0-25: "Highly agnostic about ultimate ends - eschatology not central or knowable"
+  26-50: "Tentative eschatological claims - hope but not certainty"
+  51-75: "Moderate confidence - eschatology important but some mystery remains"
+  76-100: "High confidence - eschatological claims are certain/revealed"
+
+example_values:
+  classical_theism: "[Expected: 70-85 - revelation provides confidence but mystery remains]"
+  methodological_naturalism: "[Expected: 40-60 - scientific predictions but cosmic purpose unclear]"
+  buddhism: "[Expected: 65-80 - dharma provides path but ultimate reality beyond concepts]"
+
+justification_requirements:
+  - axiom_connection: How does axiom inform eschatological confidence?
+  - reasoning_process: What epistemological factors affect confidence level?
+  - assumptions: What assumptions about revelation or cosmic knowledge?
+  - contestable_points: Where might confidence be challenged?
+```
+
+---
+
 ## Metric Standards
 
 ### Naming Conventions
@@ -421,14 +738,18 @@ justification_requirements:
 3. **assumptions:** Bulleted list of assumptions baked into metric
 4. **contestable_points:** Bulleted list of where reasonable disagreement exists
 5. **comparison_notes:** Cross-references to other profiles (CT and MdN minimum)
+6. **methodological_notes:** Document deliberation modality, analytical tools, or scripts used
+7. **evidence_threads:** REPO_LOG IDs, experiment links, or transcript references that support metric
+8. **open_questions:** Bulleted list of unresolved tensions to revisit at next audit hook
 
 ### Deliberation Narrative Requirements
 
 **Every metric must eventually include (Phase 3):**
-1. **Main questions explored:** 3-5 questions that guided deliberation
-2. **Edge cases:** Specific examples that challenged assumptions
-3. **Divergence points:** Where this worldview differs from others
-4. **"Why This Number/Value":** Concise summary connecting axiom → value
+1. **Prompt Stack:** Exact questions/prompts used in the deliberation
+2. **Counterweight Table:** Claim vs counterclaim with resolution stamps
+3. **Edge Case Ledger:** Numbered edge cases with keeper outcomes and next steps
+4. **Mythology Capsule:** Shaman paragraph connecting axiom to outcome
+5. **Decision Stamp:** Timestamp, participants, confidence band, Grok session ID, REPO_LOG reference
 
 ---
 
@@ -458,43 +779,27 @@ justification_requirements:
 
 ---
 
-## Future Metric Categories (Candidates)
-
-**These categories are candidates for future expansion:**
-
-### Anthropological Commitments
-- human_nature (essential, constructed, emergent)
-- free_will_framework (libertarian, compatibilist, determinist)
-- consciousness_nature (substance_dualism, property_dualism, physicalist)
-
-### Cosmological Commitments
-- universe_origin (divine_creation, brute_fact, eternal)
-- causal_structure (deterministic, probabilistic, libertarian)
-- fine_tuning_explanation (design, multiverse, brute_fact)
-
-### Eschatological Commitments
-- afterlife_framework (eternal, reincarnation, annihilation)
-- judgment_framework (divine_judgment, karma, none)
-- cosmic_destiny (omega_point, heat_death, cyclical)
-
-**Nova: Which of these should we prioritize? What's missing?**
-
----
-
 ## Changelog
+
+- **v0.2.0** (2025-11-09): Major expansion per Nova Entry 2 (C4 implementation)
+  - 3 new categories added (Anthropological, Cosmological, Eschatological)
+  - 9 new metrics added (3 per new category) with full specifications
+  - Justification requirements expanded: +3 fields (methodological_notes, evidence_threads, open_questions)
+  - Deliberation narrative scaffold specified: 5-part structure (Prompt Stack, Counterweight Table, Edge Case Ledger, Mythology Capsule, Decision Stamp)
+  - Total: 7 categories, 18 metrics, 8 justification fields, 5-part deliberation framework
+  - Awaiting Nova validation of implementation (KD-O2)
 
 - **v0.1.0** (2025-11-09): Initial taxonomy created (C4)
   - 4 categories defined (Suffering, Epistemology, Morality, Teleology)
   - 9 metrics specified with full definitions
   - Standards for naming, justification, and deliberation narratives
   - Process for adding new metrics
-  - Awaiting Nova validation and enhancement
 
 ---
 
 **Next Steps:**
-1. Nova reviews and validates against CFA context
-2. Nova suggests additions/modifications to categories and metrics
-3. Team iterates until taxonomy is solid
-4. Begin creating production profiles (CT, MdN) using this taxonomy
+1. Nova validates C4 implementation of Entry 2 specifications (KD-O2)
+2. Close KD-O1 and KD-O2 if validation passes
+3. Close KD-O3 and proceed with production profiles (CT, MdN)
+4. Apply this taxonomy structure to all worldview profiles
 
