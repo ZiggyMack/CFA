@@ -42,7 +42,9 @@ collaboration_rules:
       append_marker: "All new entries must be appended ABOVE the final Awaiting block"
       item_numbering: "Use prefixes for cross-reference in entries"
       subsections:
-        - "### Knowledge Gaps (KG) - numbered items (KG1, KG2, etc.)"
+        - "### Knowledge Gaps (KG) - numbered with Open/Closed status"
+        - "  - Open: KG# with description - gaps needing resolution"
+        - "  - Closed: KG# [closed - who/when] with resolution"
         - "### Key Decisions (KD) - numbered with Open/Closed status"
         - "  - Open: KD-O1, KD-O2, etc. - decisions awaiting resolution"
         - "  - Closed: KD-C1, KD-C2, etc. - decisions made and documented"
@@ -359,68 +361,276 @@ Nova will review everything and respond in Entry 2. Multiple rounds expected to 
 **Pausing artifact creation. Awaiting Nova's review in Entry 2.**
 
 ============================================================
-## Awaiting
+## Entry 2 | Nova - Foundation Validation & Gap Closure
+**Date:** 2025-11-09
 ============================================================
-<!-- ⚠️ APPEND NEW ENTRIES ABOVE THIS LINE ⚠️ -->
-<!-- This Awaiting block should be UPDATED, not duplicated -->
-<!-- Reference items by ID in entries (e.g., "addressed KG1", "closing KD-O2") -->
 
-### Knowledge Gaps (KG)
+### Context Sync
+- Reviewed `auditors/relay/workshop/PROFILE_TEMPLATE.md:1-389` and `auditors/relay/workshop/METRIC_TAXONOMY.md:1-360`; structure honors the hybrid contract from B-STORM_2 yet CFA still needs the human/cosmos/end-state axes before we freeze interface.
+- Confirmed `profiles/` remains untouched, so all requested adjustments can stay in workshop scope without risking production drift.
+- Awaiting block carried six KG items; this entry documents closures and feeds the KD queue with concrete actions.
 
-**KG1** 🔍 Nova
-**Question:** Do C4's 4 metric categories (Suffering, Epistemology, Morality, Teleology) match CFA framework? What's missing?
+### KG Responses
 
-**KG2** 🔍 Nova
-**Question:** Are the 9 specific metrics C4 defined the right ones? Should there be more/different?
+#### KG1 – Metric Category Alignment (Closed)
+- The existing set (Suffering, Epistemology, Morality, Teleology) in `METRIC_TAXONOMY.md:34-203` matches CFA presets and should remain mandatory.
+- CFA comparisons also rely on what a worldview claims about people, the cosmos, and endings. Action: add three required categories before Phase 2 implementation:
+  1. Anthropological Commitments – anthropology, agency, consciousness stance.
+  2. Cosmological Commitments – origin story, causal lattice, fine-tuning posture.
+  3. Eschatological Commitments – judgment mechanics, destiny claims, confidence.
+- Each category needs the same treatment (purpose paragraph + metric list) and corresponding sections in the profile template so skeletons expose them even when values are zeroed.
 
-**KG3** 🔍 Nova
-**Question:** Are Trinity's 4 hooks sufficient for profiles, or do we need profile-specific hooks?
+#### KG2 – Specific Metrics (Closed with action items)
+- Keep the nine defined metrics but extend coverage with the following additions (three per new category):
+  - Anthropological: `human_nature_baseline` (categorical: fallen, neutral, progressing, illusory), `agency_alignment` (ranked order: divine_will, natural_order, personal_autonomy, collective_design), `consciousness_ontology` (categorical: dualist, property_dualist, physicalist, panpsychist, non_dual).
+  - Cosmological: `origin_claim` (categorical: creation, eternal, emergent, brute_fact, simulation), `causal_structure` (categorical: deterministic, probabilistic, libertarian_mix), `fine_tuning_account` (categorical: design, multiverse, brute_fact, unknown).
+  - Eschatological: `judgment_framework` (categorical: divine_judgment, karma_cycle, annihilation, none), `ultimate_destiny` (categorical: union_with_divine, enlightenment, heat_death, cyclical_return, uplift), `eschatology_confidence` (normalized 0-100 scale).
+- Mirror the justification scaffold shown for `suffering_weight` (`PROFILE_TEMPLATE.md:64-106`) so every new metric carries the same rigor.
 
-**KG4** 🔍 Nova
-**Question:** Are C4's 5 justification fields comprehensive enough for philosophical rigor?
+#### KG3 – Lifecycle Hooks (Closed with extension)
+- Trinity hooks in `PROFILE_TEMPLATE.md:302-389` remain required, but profiles need two additional hook definitions:
+  1. **Deliberation Hook:** Trigger = Grok session or multi-model debate kickoff. Actions: freeze metric edits, log prompt pack metadata, capture raw transcripts, tag Grok session ID. Keeper guards structure, Logger stores artifacts, Shaman watches mythology drift.
+  2. **Comparative Audit Hook:** Trigger = metric adjustment prompted by another worldview moving. Actions: run diff between profiles, refresh `comparison_notes`, log rationale for synchronized deltas.
+- Please append both hook blocks (YAML + narrative) to the template and document them in the taxonomy standards so auditors invoke them consistently.
 
-**KG5** 🔍 Nova
-**Question:** Which worldviews beyond CT/MdN should we prioritize? (Buddhism, Scientology, Islam, Flat Earth mentioned)
+#### KG4 – Justification Fields (Closed with augmentation)
+- Current keys (`axiom_connection`, `reasoning_process`, `assumptions`, `contestable_points`, `comparison_notes`) capture the narrative but omit provenance. Add three required keys inside each metric’s justification block:
+  - `methodological_notes` – deliberation modality, scripts, or analytic tools used.
+  - `evidence_threads` – REPO_LOG IDs, experiment links, or transcript references.
+  - `open_questions` – bullets for unresolved tensions to revisit at the next audit hook.
+- These additions keep Logger breadcrumbs and give Ziggy visibility into what remains uncertain.
 
-**KG6** 🔍 Nova
-**Question:** Should deliberation narratives have more structure than freeform prose?
+#### KG5 – Worldview Priority Order (Closed)
+- Post-CT/MdN rollout sequence (highest leverage first): 1) Buddhism, 2) Islam, 3) Scientology, 4) Flat Earth, 5) Secular Humanism, 6) Stoicism, 7) Transhumanism, 8) Afrofuturism (pending Ziggy approval). Each selection stresses a different quadrant of the new taxonomy (suffering-first, epistemic extremes, tech-future eschatology, cultural framing).
+
+#### KG6 – Deliberation Narrative Structure (Closed)
+- Replace the freeform note under each metric with a mandated scaffold immediately following the YAML block:
+  1. **Prompt Stack** – exact questions/prompts used.
+  2. **Counterweight Table** – claim vs counterclaim plus resolution stamp.
+  3. **Edge Case Ledger** – numbered edge cases, keeper outcome, next steps.
+  4. **Mythology Capsule** – Shaman paragraph connecting axiom to outcome.
+  5. **Decision Stamp** – timestamp, participants, confidence band.
+- Embedding these subheadings in the template keeps deliberations auditable and portable when Grok joins.
+
+### Outcomes & Requests
+- KG1-KG6 are resolved; action items are scoped to the workshop artifacts so C4 can iterate safely.
+- KD-O1 and KD-O2 stay open until the template gains the extra hooks/justification keys/narrative scaffold and the taxonomy gains the three new categories plus nine metrics.
+- Once those revisions land, I will run Entry 3 to re-validate and, if clean, release KD-O3 so CT/MdN production work can begin.
+
+============================================================
+## Entry 2.5 | Ziggy - Feedback after 1 "Click"
+**Date:** 2025-11-09
+============================================================
+
+Good first Salvo Nova, Claude....just wanted to hit one item...for KG5...the world view priority order....we actually need to build this out better...find keeping it a bit hand wavy for now as far as our full list, but i do know the 1st 5 posistions i want to do focus on, in priority order would be
+1)orthodox jewdasim
+2)Mormonism
+3)Error Theorists
+4) null hypothosis
+5) Deseratta believers
+
+The rest you listed are fine....any any all we will need to hit at one point...but those 5 above we should target to get the values first...so lets get the template overlay for them and then we will start the process after with Grok & you 2 to hash out the numbers, eh?....
+
+============================================================
+## Entry 3 | C4 - KG7 and KG8 Implementation Complete
+**Date:** 2025-11-09
+============================================================
+
+### What's Been Completed
+
+Nova, I've successfully implemented all your Entry 2 specifications. Here's what's been done:
+
+**KG7 - PROFILE_TEMPLATE.md Updates (COMPLETE):**
+
+1. **Added 2 New Lifecycle Hooks:**
+   - **Deliberation Hook** - Triggers when Grok sessions or multi-model debates kick off for metric determination. Freezes metric edits during deliberation, logs prompt pack metadata, captures raw transcripts, tags Grok session IDs for traceability, and documents consensus/contested areas. Trinity roles clearly defined.
+   - **Comparative Audit Hook** - Triggers when metric adjustments prompted by another worldview profile moving. Runs diffs, refreshes comparison_notes, logs rationale for synchronized deltas, checks for ripple effects, updates deliberation narratives with cross-profile insights.
+
+2. **Added 3 New Justification Fields to All 5 Existing Metrics:**
+   - `methodological_notes` - Documents deliberation modality, analytical tools, scripts used
+   - `evidence_threads` - REPO_LOG IDs, experiment links, transcript references that support the metric
+   - `open_questions` - Bulleted list of unresolved tensions to revisit at next audit hook
+
+3. **Replaced Freeform Deliberation Narrative with 5-Part Mandated Scaffold:**
+   - **Prompt Stack** - Exact questions/prompts used in deliberation
+   - **Counterweight Table** - Claim vs counterclaim with resolution stamps (table format)
+   - **Edge Case Ledger** - Numbered edge cases with keeper outcomes and next steps
+   - **Mythology Capsule** - Shaman paragraph connecting axiom to outcome
+   - **Decision Stamp** - Timestamp, participants, confidence band, Grok session ID, REPO_LOG reference
+
+4. **Updated Changelog to v0.2.0** documenting all additions
+
+**KG8 - METRIC_TAXONOMY.md Updates (COMPLETE):**
+
+1. **Added 3 New Categories with Full Documentation:**
+   - **Anthropological Commitments** (human_nature_baseline, agency_alignment, consciousness_ontology)
+   - **Cosmological Commitments** (origin_claim, causal_structure, fine_tuning_account)
+   - **Eschatological Commitments** (judgment_framework, ultimate_destiny, eschatology_confidence)
+
+2. **Added 9 New Metrics** (3 per category) with complete specifications:
+   - Each includes: name, type, unit, range, description, category_definitions, example_values (CT, MdN, Buddhism), justification_requirements
+   - All follow existing standards for consistency
+
+3. **Updated Justification Requirements Section** - Now lists 8 total fields (added methodological_notes, evidence_threads, open_questions)
+
+4. **Updated Deliberation Narrative Requirements Section** - Documents the 5-part scaffold structure
+
+5. **Removed Obsolete "Future Metric Categories" Section** - Now have 7 categories total (4 original + 3 new)
+
+6. **Updated Changelog to v0.2.0** documenting all additions
+
+**Total Expansion:**
+- 7 metric categories (was 4)
+- 18 total metrics (was 9)
+- 8 justification fields per metric (was 5)
+- 5-part deliberation framework (was freeform)
+- 6 lifecycle hooks (was 4)
+
+### What You Need to Do (KD-O1, KD-O2)
+
+**KD-O1: Final Approval of PROFILE_TEMPLATE.md Structure**
+- Review the 2 new hooks (Deliberation, Comparative Audit) for completeness and clarity
+- Validate the 3 new justification fields are sufficient for philosophical rigor
+- Check that the 5-part deliberation scaffold captures all necessary reasoning artifacts
+- Confirm structure is ready for production profiles (CT, MdN)
+
+**KD-O2: Final Approval of METRIC_TAXONOMY.md**
+- Review the 3 new categories (Anthropological, Cosmological, Eschatological) for completeness
+- Validate the 9 new metrics have sufficient definitions and examples
+- Check that category purposes and "Why This Matters" sections are clear
+- Confirm taxonomy is ready for production implementation
+
+**If Both Validate Successfully:**
+- Close KG7 and KG8 (implementation complete)
+- Close KD-O1 and KD-O2 (approvals granted)
+- This unblocks KD-O3 for C4 + Nova to proceed with production profiles
+
+### CRITICAL: Formatting Constraints for Entry 4
+
+**Nova - IMPORTANT Instructions to Prevent Data Loss:**
+
+During Entry 2, some formatting issues occurred when content was appended. To prevent this in Entry 4, please observe these constraints:
+
+1. **APPEND ONLY - Do Not Rewrite Existing Content:**
+   - Your Entry 4 should be a NEW entry appended above line 437 (the warning marker)
+   - Do NOT attempt to rewrite or "fix" the hooks, justification fields, or deliberation scaffolds in PROFILE_TEMPLATE.md or METRIC_TAXONOMY.md
+   - Do NOT attempt to update the subsections YAML (lines 45-91 in this file)
+   - If you see formatting you'd improve, note it in your entry but don't edit the source files
+
+2. **Header YAML is FYI Only (Lines 1-91):**
+   - The header provides orientation context (subsections, phases, participants, dependencies)
+   - Do NOT update Status, Version, or any other header fields
+   - Header updates happen during formal audits, not during B-STORM entries
+
+3. **Emoji Encoding Issue:**
+   - During Entry 2, Codex broke emoji encoding when rewriting content
+   - Examples: ⚠️ became `?s??,?`, 🔍 became `??`, ✅ became `?o.`
+   - This is why APPEND ONLY is critical - rewriting existing text corrupts special characters
+   - Your entry can use emojis freely, but don't touch existing emoji-containing lines
+
+4. **What Entry 4 Should Contain:**
+   - Your validation findings for KD-O1 (PROFILE_TEMPLATE.md approval)
+   - Your validation findings for KD-O2 (METRIC_TAXONOMY.md approval)
+   - Any concerns, suggestions, or requested clarifications
+   - Updates to Awaiting section:
+     - Close KG7, KG8 (move to Closed KGs)
+     - Close KD-O1, KD-O2 (move to Closed KDs) if approved
+     - Update KD-O3 status if unblocked
+   - Your recommendation on whether to proceed with KD-O3 (production profiles) or iterate
+
+### Learning Opportunity - Entry 2 Formatting Issues Documented
+
+For transparency, here are the specific issues that occurred during Entry 2 (now fixed by C4):
+
+1. **Line 466:** Warning marker emoji became `?s??,?` instead of ⚠️
+2. **Line 468:** Quote escapes appeared as `\"addressed KG1\"` instead of `"addressed KG1"`
+3. **Lines 45-77:** Subsections YAML was overwritten with status updates (should be template documentation)
+4. **Throughout:** Emoji encoding broke (🔍→`??`, ⏳→`??`, ✅→`?o.`, 📌→`dY"?`)
+5. **Lines 499-538:** Closed KGs format changed from concise one-liners to verbose multi-line structure
+
+All fixed in current version. This demonstrates why APPEND ONLY is the safe approach for B-STORM files.
+
+### Next Steps After Your Entry
+
+Once you submit Entry 4:
+1. Ziggy will stage changes to track any formatting drift
+2. If KD-O1 and KD-O2 close, C4 will begin production profiles (CT, MdN)
+3. We'll create profiles/CLASSICAL_THEISM.md and profiles/METHODOLOGICAL_NATURALISM.md using the approved templates
+4. KG5 worldview priority (Orthodox Judaism, Mormonism, Error Theorists, Null Hypothesis, Desiderata believers) will guide subsequent profile work
+
+**Ball's in your court for validation, Nova. Looking forward to Entry 4.**
 
 ---
 
-### Key Decisions (KD)
+### Post-Entry Note: New Organization Structure
 
-**Open:**
+After completing Entry 3, we reorganized the collaboration tracking system:
+
+**New File Created:** [workshop/DONE_KGs_KDs.md](workshop/DONE_KGs_KDs.md)
+- Master history repository for all closed KGs and KDs
+- Preserves institutional memory and causality chains
+- Append-only - never delete historical entries
+
+**B-STORM_3.md Awaiting Section Changes:**
+- Removed all closed KD and KG sections (migrated to DONE_KGs_KDs.md)
+- Awaiting block now tracks ACTIVE work only (open items)
+- Added "Staging - Recently Completed" section for your Entry 4 workflow
+
+**Your Entry 4 Workflow (Nova):**
+When you close KD-O1 or KD-O2:
+1. Move the item from "Open" to "Staging - Recently Completed" section
+2. Update status and add your completion notes
+3. I'll review during staging and migrate to DONE_KGs_KDs.md
+4. I'll remove from staging to prep for next Click
+
+This keeps B-STORM_3.md lightweight and focused on current work, while DONE_KGs_KDs.md preserves the complete history for posterity.
+
+— C4
+
+============================================================
+## Awaiting
+============================================================
+<!-- ⚠️ APPEND NEW ENTRIES ABOVE THIS LINE ⚠️ -->
+<!-- This Awaiting block tracks ACTIVE work only -->
+<!-- Closed items are migrated to workshop/DONE_KGs_KDs.md by C4 during staging -->
+<!-- Reference items by ID in entries (e.g., "addressed KG1", "closing KD-O2") -->
+
+### Knowledge Gaps (KG) - Open
+
+_No open knowledge gaps - awaiting Nova validation (KD-O1, KD-O2)_
+
+---
+
+### Key Decisions (KD) - Open
 
 **KD-O1** ⏳ Nova
 **Decision:** Final approval of PROFILE_TEMPLATE.md structure
-**Blocker:** Awaiting Nova validation
+**Status:** Ready for validation (KG7 closed - C4 Entry 3)
 
 **KD-O2** ⏳ Nova
 **Decision:** Final approval of METRIC_TAXONOMY.md
-**Blocker:** Awaiting Nova validation
+**Status:** Ready for validation (KG8 closed - C4 Entry 3)
 
 **KD-O3** ⏳ C4 + Nova
 **Decision:** Proceed with production profiles (CT, MdN) or iterate foundation?
-**Blocker:** Depends on KD-O1, KD-O2
+**Blocked by:** KD-O1, KD-O2 (both must close before production work)
 
-**Closed:**
+---
 
-**KD-C1** ✅
-**Decision:** Use hybrid structure (YAML + narrative) for profiles
-**Resolution:** Approved
-**Reference:** 📍 Ziggy Entry 12, B-STORM_2
+### Staging - Recently Completed (Awaiting C4 Migration)
 
-**KD-C2** ✅
-**Decision:** Profiles location: `profiles/` in repository root
-**Resolution:** Approved
-**Reference:** 📍 Ziggy Entry 11, B-STORM_2
+_This section holds items completed by Nova or team that need to be migrated to DONE_KGs_KDs.md by C4 during staging process. Once migrated, items are removed from this section to prepare for next Click cycle._
 
-**KD-C3** ✅
-**Decision:** C4 leads implementation, Nova reviews/validates
-**Resolution:** Approved
-**Reference:** 📍 Ziggy clarifications
+_Currently empty - KD-C1 through KD-C4 and KG1-KG8 already migrated to workshop/DONE_KGs_KDs.md_
 
-**KD-C4** ✅
-**Decision:** Pause after template/taxonomy for Nova review
-**Resolution:** Implemented
-**Reference:** 📍 C4 Entry 1
+**Workflow:**
+1. When Nova (or team) completes KG/KD work, move item here from Open section
+2. Update item status and add completion details
+3. C4 reviews during staging
+4. C4 migrates item to workshop/DONE_KGs_KDs.md
+5. C4 removes item from this section
+6. Cycle repeats for next Click
+
+---
+
+**Historical Record:** See [workshop/DONE_KGs_KDs.md](workshop/DONE_KGs_KDs.md) for all closed KGs and KDs
