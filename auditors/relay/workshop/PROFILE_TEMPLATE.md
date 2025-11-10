@@ -434,9 +434,13 @@ How this worldview understands human nature, agency, and consciousness.
 metric:
   name: "human_nature_baseline"
   value: 0  # PLACEHOLDER
-  unit: "categorical"
-  range: ["essential_fixed", "essential_malleable", "constructed_stable", "constructed_fluid", "emergent_only"]
-  description: "Whether human nature is essential, constructed, or purely emergent"
+  type: "categorical"
+  unit: "category"
+  range: ["fallen", "neutral", "progressing", "illusory"]
+  description: |
+    Baseline assessment of human nature in its default or starting state.
+    This reveals whether worldview sees humans as fundamentally flawed,
+    neutral, evolving, or perhaps not having a fixed nature at all.
 
 justification:
   axiom_connection: |
@@ -493,9 +497,13 @@ justification:
 metric:
   name: "agency_alignment"
   value: 0  # PLACEHOLDER
-  unit: "scale"
-  range: [0, 100]
-  description: "Degree to which human agency is real vs illusory (0=fully determined, 100=libertarian free will)"
+  type: "ranked_categories"
+  unit: "priority_order"
+  range: ["divine_will", "natural_order", "personal_autonomy", "collective_design"]
+  description: |
+    Ranked priorities for the source and direction of human agency.
+    Reveals whether worldview sees human choices as primarily aligned with
+    divine will, natural law, individual autonomy, or collective/social design.
 
 justification:
   axiom_connection: |
@@ -552,9 +560,12 @@ justification:
 metric:
   name: "consciousness_ontology"
   value: 0  # PLACEHOLDER
-  unit: "categorical"
-  range: ["substance_dualism", "property_dualism", "emergent_materialism", "eliminative_materialism", "idealism"]
-  description: "Ontological status of consciousness and mental states"
+  type: "categorical"
+  unit: "category"
+  range: ["dualist", "property_dualist", "physicalist", "panpsychist", "non_dual"]
+  description: |
+    Ontological status of consciousness - what IS consciousness in this worldview?
+    This reveals deep metaphysical commitments about mind, matter, and their relationship.
 
 justification:
   axiom_connection: |
@@ -615,9 +626,12 @@ How this worldview understands the origin, structure, and fine-tuning of the cos
 metric:
   name: "origin_claim"
   value: 0  # PLACEHOLDER
-  unit: "categorical"
-  range: ["divine_creation", "necessary_existence", "brute_fact", "eternal_universe", "multiverse_framework"]
-  description: "Account of cosmic origins and why universe exists"
+  type: "categorical"
+  unit: "category"
+  range: ["creation", "eternal", "emergent", "brute_fact", "simulation"]
+  description: |
+    How this worldview accounts for the universe's existence.
+    This is the answer to "why is there something rather than nothing?"
 
 justification:
   axiom_connection: |
@@ -674,9 +688,12 @@ justification:
 metric:
   name: "causal_structure"
   value: 0  # PLACEHOLDER
-  unit: "categorical"
-  range: ["primary_secondary", "natural_only", "overdetermined", "occasionalism", "no_causation"]
-  description: "Nature of causality in the universe"
+  type: "categorical"
+  unit: "category"
+  range: ["deterministic", "probabilistic", "libertarian_mix"]
+  description: |
+    How causation operates in the universe according to this worldview.
+    This reveals commitments about natural law, divine action, and freedom.
 
 justification:
   axiom_connection: |
@@ -733,9 +750,12 @@ justification:
 metric:
   name: "fine_tuning_account"
   value: 0  # PLACEHOLDER
-  unit: "categorical"
-  range: ["design", "necessity", "chance", "multiverse", "brute_fact", "selection_effect"]
-  description: "Explanation for cosmic fine-tuning for life"
+  type: "categorical"
+  unit: "category"
+  range: ["design", "multiverse", "brute_fact", "unknown"]
+  description: |
+    How this worldview explains the apparent fine-tuning of physical constants for life.
+    This is a key divergence point between theistic and naturalistic worldviews.
 
 justification:
   axiom_connection: |
@@ -796,9 +816,12 @@ How this worldview understands judgment, destiny, and ultimate ends.
 metric:
   name: "judgment_framework"
   value: 0  # PLACEHOLDER
-  unit: "categorical"
-  range: ["divine_judgment", "karmic_rebirth", "natural_consequence", "none", "transformation"]
-  description: "Nature and mechanism of ultimate judgment or accountability"
+  type: "categorical"
+  unit: "category"
+  range: ["divine_judgment", "karma_cycle", "annihilation", "none"]
+  description: |
+    How this worldview accounts for moral consequence in the cosmic order.
+    This is the answer to "will there be justice/accountability?"
 
 justification:
   axiom_connection: |
@@ -855,9 +878,12 @@ justification:
 metric:
   name: "ultimate_destiny"
   value: 0  # PLACEHOLDER
-  unit: "categorical"
-  range: ["eternal_communion", "annihilation", "reincarnation", "naturalistic_end", "universal_restoration"]
-  description: "Final state or end of human existence"
+  type: "categorical"
+  unit: "category"
+  range: ["union_with_divine", "enlightenment", "heat_death", "cyclical_return", "uplift"]
+  description: |
+    What is the ultimate end state for individuals/cosmos in this worldview?
+    This reveals the telos or final purpose (if any) of existence.
 
 justification:
   axiom_connection: |
