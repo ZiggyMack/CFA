@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(python utils/profile_loader.py:*)",
+      "Bash(cat:*)",
+      "Bash(pip install:*)",
+      "Bash(=6.0 --quiet)",
+      "Bash(python -c:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
