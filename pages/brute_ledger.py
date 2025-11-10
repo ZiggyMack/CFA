@@ -123,6 +123,16 @@ def render():
     framework_tabs = st.tabs([
         "📘 Methodological Naturalism (MdN)",
         "📕 Classical Theism (CT)",
+        "🕎 Orthodox Judaism",
+        "📖 Mormonism (LDS)",
+        "⛔ Error Theory",
+        "❓ Null Hypothesis",
+        "🤔 Desiderata Believers",
+        "☸️ Buddhism",
+        "☪️ Islam",
+        "🕉️ Hinduism",
+        "🌊 Process Theology",
+        "🎭 Existentialism",
         "⚡ Skeptic Mode Preset",
         "🆕 Build Custom Framework"
     ])
@@ -146,11 +156,111 @@ def render():
             emoji="📕",
             subtitle="God as necessary, simple, omnipotent, omniscient, omnibenevolent being"
         )
-    
+
+    # ========================================================================
+    # ORTHODOX JUDAISM
+    # ========================================================================
+    with framework_tabs[2]:
+        _render_framework_ledger(
+            worldview_name="Orthodox Judaism",
+            emoji="🕎",
+            subtitle="Torah at Sinai; halakha is binding and authoritative for covenantal life"
+        )
+
+    # ========================================================================
+    # MORMONISM (LDS)
+    # ========================================================================
+    with framework_tabs[3]:
+        _render_framework_ledger(
+            worldview_name="Mormonism",
+            emoji="📖",
+            subtitle="Continuing revelation through prophets; eternal progression toward godhood"
+        )
+
+    # ========================================================================
+    # ERROR THEORY
+    # ========================================================================
+    with framework_tabs[4]:
+        _render_framework_ledger(
+            worldview_name="Error Theory",
+            emoji="⛔",
+            subtitle="Moral statements systematically fail; all positive moral claims are false"
+        )
+
+    # ========================================================================
+    # NULL HYPOTHESIS
+    # ========================================================================
+    with framework_tabs[5]:
+        _render_framework_ledger(
+            worldview_name="Null Hypothesis",
+            emoji="❓",
+            subtitle="Withhold assent from all claims lacking sufficient evidence"
+        )
+
+    # ========================================================================
+    # DESIDERATA BELIEVERS
+    # ========================================================================
+    with framework_tabs[6]:
+        _render_framework_ledger(
+            worldview_name="Desiderata Believers",
+            emoji="🤔",
+            subtitle="Pragmatic justification for belief based on beneficial outcomes"
+        )
+
+    # ========================================================================
+    # BUDDHISM
+    # ========================================================================
+    with framework_tabs[7]:
+        _render_framework_ledger(
+            worldview_name="Buddhism",
+            emoji="☸️",
+            subtitle="Four Noble Truths; suffering arises from attachment and can be transcended"
+        )
+
+    # ========================================================================
+    # ISLAM
+    # ========================================================================
+    with framework_tabs[8]:
+        _render_framework_ledger(
+            worldview_name="Islam",
+            emoji="☪️",
+            subtitle="Tawhid (oneness of Allah); Quran as final revelation through Prophet Muhammad"
+        )
+
+    # ========================================================================
+    # HINDUISM
+    # ========================================================================
+    with framework_tabs[9]:
+        _render_framework_ledger(
+            worldview_name="Hinduism",
+            emoji="🕉️",
+            subtitle="Dharma, karma, and moksha; Brahman as ultimate reality"
+        )
+
+    # ========================================================================
+    # PROCESS THEOLOGY
+    # ========================================================================
+    with framework_tabs[10]:
+        _render_framework_ledger(
+            worldview_name="Process Theology",
+            emoji="🌊",
+            subtitle="God and universe in dynamic co-creative relationship; reality as process"
+        )
+
+    # ========================================================================
+    # EXISTENTIALISM
+    # ========================================================================
+    with framework_tabs[11]:
+        _render_framework_ledger(
+            worldview_name="Existentialism",
+            emoji="🎭",
+            subtitle="Existence precedes essence; radical freedom and responsibility"
+        )
+
     # ========================================================================
     # SKEPTIC MODE PRESET (Grok Note #4)
     # ========================================================================
-    with framework_tabs[2]:
+    with framework_tabs[12]:
         st.markdown("## ⚡ Skeptic Mode Preset")
         st.markdown("*Optimized configuration for empirical naturalists*")
         
@@ -217,7 +327,7 @@ def render():
     # ========================================================================
     # CUSTOM FRAMEWORK
     # ========================================================================
-    with framework_tabs[3]:
+    with framework_tabs[13]:
         st.markdown("## Build Your Own Ledger")
         
         st.markdown("""
