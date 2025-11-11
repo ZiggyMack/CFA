@@ -1,20 +1,20 @@
 <!---
 FILE: ROLE_PROCESS.md
-PURPOSE: Process Expert role for DOC_CLAUDE - process adherence, failure learning, wellness protocol SME, navigation/wayfinding SME, worldview profile monitoring
-VERSION: v1.3
+PURPOSE: Process Expert role for DOC_CLAUDE - process adherence, failure learning, wellness protocol SME, navigation/wayfinding SME, worldview profile monitoring, academic sources maintenance
+VERSION: v1.4
 STATUS: Active
-DEPENDS_ON: PROCESS.md, BOOTSTRAP_DOC_CLAUDE.md, DOC_CLAUDE_WELLNESS_PROTOCOL.md, WAYFINDING_GUIDE.md, profiles/worldviews/*.md, auditors/AUDITOR_ASSIGNMENTS.md
-NEEDED_BY: DOC_CLAUDE when verifying process adherence, documenting failures, running wellness checks, navigating repository, or tracking worldview profile changes
+DEPENDS_ON: PROCESS.md, BOOTSTRAP_DOC_CLAUDE.md, DOC_CLAUDE_WELLNESS_PROTOCOL.md, WAYFINDING_GUIDE.md, profiles/worldviews/*.md, profiles/_docs/ACADEMIC_SOURCES.md, auditors/AUDITOR_ASSIGNMENTS.md
+NEEDED_BY: DOC_CLAUDE when verifying process adherence, documenting failures, running wellness checks, navigating repository, tracking worldview profile changes, or maintaining academic source references
 MOVES_WITH: /docs/repository/librarian_tools/
-LAST_UPDATE: 2025-11-10 [B-STORM_4: Added Domain 7 - Worldview Profile Monitoring for auditor calibration tracking]
+LAST_UPDATE: 2025-11-10 [B-STORM_4 Click 4: Added Domain 7 Sub-Section - Academic Sources Monitoring for hyperlink-based profile architecture]
 --->
 
 # ROLE_PROCESS.md - Process Expert Role for DOC_CLAUDE
 
-**Purpose:** Activate Process Expert role for process adherence verification, failure learning, wellness protocol expertise, navigation/wayfinding guidance, and worldview profile monitoring
+**Purpose:** Activate Process Expert role for process adherence verification, failure learning, wellness protocol expertise, navigation/wayfinding guidance, worldview profile monitoring, and academic sources maintenance
 **Owner:** DOC_CLAUDE (Documentation Orchestration Claude)
 **Created:** 2025-11-02
-**Updated:** 2025-11-10 (Added Domain 7 - Worldview Profile Monitoring)
+**Updated:** 2025-11-10 (Added Domain 7 Sub-Section - Academic Sources Monitoring)
 **Status:** Active Role Pattern
 
 ---
@@ -899,6 +899,231 @@ When Crux declared:
 4. **Review Claude** → Validate Crux legitimacy
 5. **Validation Claude** → Check syntax + cross-references
 6. **Shaman Claude** (if escalated) → Deep philosophical mediation
+
+---
+
+#### **🆕 Domain 7 Sub-Section: Academic Sources Monitoring**
+
+**Purpose:** Maintain the Academic Sources Reference Map that powers hyperlink-based worldview profiles
+
+**What Is ACADEMIC_SOURCES.md?**
+- **Location:** `/profiles/_docs/ACADEMIC_SOURCES.md`
+- **Function:** Maps 12 worldviews → 3-5 authoritative URLs (SEP/IEP primarily)
+- **Enables:** Hyperlink-based profiles that reference expert scholarship (not duplicate content)
+- **Owner:** Process Claude (you)
+- **Bootstrap Creator:** Doc Claude (one-time refactor)
+
+**Why This Matters:**
+- Worldview profiles use academic links for PRO/ANTI arguments during scoring
+- If links break → auditors lose reference material during deliberation
+- If better sources emerge → profiles improve without manual rewrites
+- External sources feed into APP via profile data pipeline
+
+**Your Responsibilities:**
+
+---
+
+**1. Pre-Scoring Validation (VUDU Step 1)**
+
+**Before each scoring session:**
+
+```markdown
+VUDU Step 1 Pre-Check: Validate Academic Sources
+
+Worldview: Classical Theism vs Methodological Naturalism
+Date: 2025-11-10
+
+Process Claude Actions:
+1. Check ACADEMIC_SOURCES.md for both worldviews
+2. Validate 3-5 primary source links are live (spot-check via curl or manual)
+3. Confirm section anchors work (e.g., SEP Divine Simplicity §Moti)
+4. Document in session metadata: "Academic sources validated 2025-11-10"
+
+If broken links found → Flag to Doc Claude for quick repair before scoring
+```
+
+**Pre-Scoring Checklist:**
+- [ ] ACADEMIC_SOURCES.md section exists for both worldviews being compared
+- [ ] Primary sources (SEP/IEP) are live (HTTP 200 responses)
+- [ ] Section anchors valid (spot-check 2-3 anchor links per worldview)
+- [ ] Coverage quality noted (excellent/good/fair) - escalate "fair" to Shaman if pattern emerges
+
+---
+
+**2. Post-Scoring Updates**
+
+**After scoring sessions, auditors may discover better sources:**
+
+```markdown
+VUDU Step 9 Post-Session Notes:
+
+From: Nova (Fairness auditor)
+"During deliberation, Grok cited [SEP Religious Epistemology §Reformed Epistemology]
+which provides superior coverage of CT's warrant theory vs our current IEP link.
+Recommend updating ACADEMIC_SOURCES.md Classical Theism section."
+
+Process Claude Action:
+1. Review suggested source (verify quality, relevance, coverage)
+2. Update ACADEMIC_SOURCES.md if improvement confirmed
+3. Document change in comparison file session notes
+4. Add to quarterly health report: "CT sources upgraded (Reformed Epistemology)"
+```
+
+**Post-Scoring Protocol:**
+- Monitor auditor deliberation notes for source recommendations
+- Verify quality before updating (SEP/IEP preferred, peer-reviewed journals acceptable)
+- Update ACADEMIC_SOURCES.md within 24 hours if source improves coverage
+- Document source changes in `/profiles/comparisons/[worldview_pair].yaml` session metadata
+
+---
+
+**3. New Worldview Addition**
+
+**When adding worldview #13 to catalog:**
+
+```markdown
+New Worldview Request: Jainism
+
+Process Claude Coordination:
+1. Check if Jainism section exists in ACADEMIC_SOURCES.md
+2. If missing → Coordinate with Doc Claude for bootstrap source mapping:
+   - Request 3-5 authoritative URLs (SEP/IEP preferred)
+   - Validate coverage (core commitments, PRO arguments, ANTI criticisms)
+   - Assess quality (excellent/good/fair)
+3. Add Jainism section to ACADEMIC_SOURCES.md
+4. Update worldview catalog count (12 → 13)
+5. Notify auditors: "Jainism academic sources mapped, ready for calibration"
+```
+
+**New Worldview Checklist:**
+- [ ] Coordinate source mapping with Doc Claude (bootstrap)
+- [ ] Ensure 3-5 primary sources (SEP/IEP preferred)
+- [ ] Validate coverage: core commitments + PRO arguments + ANTI criticisms
+- [ ] Assess quality: excellent (9+ sources) / good (6-8) / fair (3-5)
+- [ ] Add section to ACADEMIC_SOURCES.md
+- [ ] Update worldview count in CFA_ARCHITECTURE.md
+
+---
+
+**4. Quarterly Health Check**
+
+**Every quarter (Q1, Q2, Q3, Q4):**
+
+```markdown
+Q4 2025 Academic Sources Health Check
+
+Process Claude Quarterly Report:
+
+1. Link Validation (automated via lifecycle hooks):
+   - Total links: 48 (12 worldviews × 3-5 sources avg)
+   - Live links: 47 ✅
+   - Broken links: 1 ❌ (IEP Process Philosophy - 404 error)
+   - Action: Flagged to Doc Claude for repair
+
+2. Coverage Quality Assessment:
+   - Excellent (9-12 sources): 9 worldviews ✅
+   - Good (6-8 sources): 2 worldviews ✅
+   - Fair (3-5 sources): 1 worldview ⚠️ (Desiderata Believers)
+   - Action: Escalate Desiderata coverage to Shaman Claude
+
+3. Source Improvements Discovered:
+   - CT: Upgraded Reformed Epistemology source (Nova recommendation)
+   - Buddhism: Added SEP Madhyamaka article (Grok recommendation)
+   - Action: Both updated in ACADEMIC_SOURCES.md
+
+4. Emerging Patterns:
+   - No systematic source failures
+   - SEP more stable than IEP (fewer broken links)
+   - Recommendation: Prefer SEP when both available
+
+Report Delivered To: Shaman Claude, Doc Claude, Auditors
+Next Health Check: Q1 2026
+```
+
+**Quarterly Checklist:**
+- [ ] Validate all academic source links (automated via Audit lifecycle hooks)
+- [ ] Assess coverage quality for each worldview (excellent/good/fair)
+- [ ] Document source improvements from past quarter's scoring sessions
+- [ ] Identify patterns (e.g., "SEP more stable than IEP")
+- [ ] Escalate degraded coverage (fair → good) or broken links to Doc Claude
+- [ ] Report systematic issues to Shaman Claude (e.g., "BFI metric sources weak across 4+ worldviews")
+
+---
+
+**Key Files You Monitor:**
+
+**Primary:**
+- `/profiles/_docs/ACADEMIC_SOURCES.md` (your ownership)
+- `/profiles/worldviews/*.md` (academic source usage)
+- `/profiles/comparisons/*.yaml` (session notes document source discoveries)
+
+**Secondary (cross-references):**
+- `/auditors/AUDITOR_ASSIGNMENTS.md` (auditor lens affects source interpretation)
+- `/docs/architecture/CFA_ARCHITECTURE.md` (worldview catalog count)
+
+**Integration Points:**
+
+1. **VUDU Protocol:** Pre-scoring validation (Step 1), post-scoring notes (Step 9)
+2. **Crux Workflow:** Better sources may resolve Crux Points (e.g., definitional clarity)
+3. **Lifecycle Hooks:** Audit hooks validate links automatically (you review results)
+4. **Quarterly Reports:** Academic sources health included in worldview catalog status
+
+**Escalation Protocol:**
+
+**When to escalate to Shaman Claude:**
+- **Pattern:** 4+ worldviews have "fair" coverage quality (systematic gap)
+- **Pattern:** Same metric (e.g., BFI) has weak sources across multiple worldviews
+- **Impact:** Broken links block scoring sessions (urgent repair needed)
+- **Decision:** Should we create custom CFA academic content vs relying on SEP/IEP?
+
+**When to coordinate with Doc Claude:**
+- Broken links need repair (quick fix)
+- New worldview needs source mapping (bootstrap)
+- Source format changes (e.g., SEP restructures article sections)
+
+---
+
+**Example Workflow: Academic Source Issue During Scoring**
+
+```markdown
+VUDU Step 5: Auditor Deliberation In Progress
+
+From: Grok (ANTI-CT stance)
+"I attempted to cite SEP Divine Simplicity §Modal Collapse but link returns 404.
+Cannot complete ANTI argument without this source. Request Process Claude intervention."
+
+Process Claude Immediate Actions:
+1. Validate link is broken: curl https://plato.stanford.edu/entries/divine-simplicity/#ModaCollObjeDDS
+   → Result: 404 error (section anchor changed)
+2. Check SEP article for new structure:
+   → Found: Section renamed to "§Modal Objections to Divine Simplicity"
+   → New anchor: #ModaObjeToDS
+3. Update ACADEMIC_SOURCES.md Classical Theism section with corrected anchor
+4. Notify Grok: "Link repaired. New anchor: #ModaObjeToDS. Resume deliberation."
+5. Document in CT_vs_MdN.yaml session notes: "SEP anchor updated during session"
+6. Flag to Doc Claude: "Update all CT profile inline citations to new anchor"
+
+Session Continues ✅
+```
+
+---
+
+**Summary: Your Academic Sources Duties**
+
+| **When** | **What** | **How** |
+|----------|----------|---------|
+| **Pre-Scoring (VUDU Step 1)** | Validate academic sources live | Spot-check 2-3 links per worldview |
+| **Post-Scoring (VUDU Step 9)** | Document source improvements | Update ACADEMIC_SOURCES.md if better refs discovered |
+| **New Worldview** | Coordinate source mapping | Bootstrap with Doc Claude, assess coverage |
+| **Quarterly** | Health check report | Validate all links, assess quality, escalate gaps |
+| **Broken Link** | Immediate repair | Fix anchor, notify auditors, update profiles |
+| **Pattern Detected** | Escalate to Shaman | Report systematic gaps (4+ worldviews affected) |
+
+**This map (ACADEMIC_SOURCES.md) is your responsibility because:**
+1. You orchestrate scoring sessions (need working sources for auditors)
+2. You track profile changes (Domain 7 already monitors worldview catalog)
+3. You coordinate team (Doc Claude, Shaman Claude) when issues arise
+4. External academic sources → feed APP data pipeline (you ensure quality)
 
 ---
 

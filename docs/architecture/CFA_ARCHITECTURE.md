@@ -1,19 +1,19 @@
 <!---
 FILE: CFA_ARCHITECTURE.md
-PURPOSE: Comprehensive system architecture - worldview scoring, auditors, Crux Points, app integration
-VERSION: 1.0.0
+PURPOSE: Comprehensive system architecture - worldview scoring, auditors, Crux Points, app integration, hyperlink-based profiles
+VERSION: 1.1.0
 STATUS: Active System Documentation
-DEPENDS_ON: profiles/worldviews/*.md, auditors/*, VUDU_CFA.md, ROLE_PROCESS.md
+DEPENDS_ON: profiles/worldviews/*.md, profiles/_docs/ACADEMIC_SOURCES.md, auditors/*, VUDU_CFA.md, ROLE_PROCESS.md
 NEEDED_BY: All system components, development team, auditors
 MOVES_WITH: /docs/architecture/
-LAST_UPDATE: 2025-11-10 [B-STORM_4 Entry 3: Unified architecture documentation]
+LAST_UPDATE: 2025-11-10 [B-STORM_4 Entry 7: Added Hyperlink-Based Profile Architecture section + academic sources integration]
 --->
 
 # CFA System Architecture
 
 **Comprehensive Framework Analysis - End-to-End System Design**
 
-**Version:** 1.0.0
+**Version:** 1.1.0
 **Status:** Active System Documentation
 **Last Updated:** 2025-11-10
 
@@ -23,6 +23,7 @@ LAST_UPDATE: 2025-11-10 [B-STORM_4 Entry 3: Unified architecture documentation]
 
 1. [System Overview](#1-system-overview)
 2. [Worldview Profiles: The Foundation](#2-worldview-profiles-the-foundation)
+   - [Hyperlink-Based Profile Architecture](#hyperlink-based-profile-architecture)
 3. [Self-Reported vs Peer-Reviewed Scoring](#3-self-reported-vs-peer-reviewed-scoring)
 4. [The Three Auditors](#4-the-three-auditors)
 5. [Context-Dependent Scoring](#5-context-dependent-scoring)
@@ -190,6 +191,119 @@ anti_ct_bias_adjustment:
 **Crux Points:** Documented in comparison files where they emerge
 
 **Session Logs:** Stored separately (`/session_logs/` or embedded in comparison files)
+
+---
+
+### Hyperlink-Based Profile Architecture
+
+**Problem:** Duplicating philosophical content across profiles creates maintenance burden and drift risk.
+
+**Solution:** Reference authoritative academic sources (SEP/IEP) via hyperlinks instead of copying content.
+
+**Implementation (as of v0.3.0 - 2025-11-10):**
+
+**Academic Sources Reference Map:**
+- **File:** `/profiles/_docs/ACADEMIC_SOURCES.md`
+- **Purpose:** Maps all 12 worldviews → 3-5 authoritative URLs (primarily Stanford Encyclopedia of Philosophy and Internet Encyclopedia of Philosophy)
+- **Owner:** Process Claude (Domain 7: Academic Sources Monitoring)
+- **Update Frequency:** As needed when worldviews added, sources change, or better references discovered
+
+**Profile Integration:**
+
+All worldview profiles now include:
+
+1. **`academic_sources` metadata field:** Points to ACADEMIC_SOURCES.md section anchor
+   ```yaml
+   profile:
+     academic_sources: "../_docs/ACADEMIC_SOURCES.md#1-classical-theism"
+   ```
+
+2. **📚 Academic Foundation sections:** Curated hyperlinks to SEP/IEP articles
+   ```markdown
+   📚 **Academic Foundation:**
+   - **Core Definition:** [SEP Divine Simplicity](https://plato.stanford.edu/entries/divine-simplicity/#Moti)
+   - **Comprehensive Overview:** [IEP God, Western Concepts](https://iep.utm.edu/god-west/)
+   ```
+
+3. **Academic citations in Steel-Manning Guides:** PRO/ANTI arguments reference specific sections
+   ```markdown
+   **What to Emphasize:**
+   - **Divine perfection** (omniscience, omnipotence, omnibenevolence)
+     - 📚 **Steel-man with:** [SEP Divine Simplicity §Motivation](https://...)
+   ```
+
+4. **`academic_grounding` field in metric justifications:** Links to relevant scholarly debates
+   ```yaml
+   justification:
+     academic_grounding: |
+       📚 **Theodicy Frameworks:**
+       - Free will theodicy: [SEP Problem of Evil §Free Will Defense](https://...)
+       - Soul-making theodicy: [SEP Problem of Evil §Soul-Making](https://...)
+   ```
+
+**Benefits:**
+
+✅ **50% File Reduction** - Eliminated philosophical content duplication (profiles went from dense exposition to curated roadmaps)
+✅ **"Standing on Shoulders of Giants"** - Profiles reference expert scholarship instead of copying it
+✅ **Future-Proof** - External sources auto-update (SEP/IEP maintained by philosophy academic community)
+✅ **Proper Attribution** - Built-in citations to authoritative sources
+✅ **Clean Separation** - CFA maintains calibration framework + scoring infrastructure, academics maintain philosophical content
+✅ **Scalable** - Easy to add worldview #13, #14... (just map sources + add calibrations)
+
+**Process Claude Responsibilities:**
+
+Per [ROLE_PROCESS.md Domain 7: Academic Sources Monitoring](../repository/librarian_tools/ROLE_PROCESS.md):
+
+1. **Pre-Scoring Validation (VUDU Step 1):** Spot-check 2-3 academic source links per worldview before scoring sessions
+2. **Post-Scoring Updates:** Document source improvements discovered during auditor deliberation
+3. **New Worldview Addition:** Coordinate source mapping with Doc Claude (bootstrap)
+4. **Quarterly Health Check:** Validate all links (automated via Audit lifecycle hooks), assess coverage quality, escalate gaps to Shaman Claude
+
+**Integration with Auditor Workflow:**
+
+- **Before Scoring:** Process Claude validates academic sources live (VUDU Step 1)
+- **During Deliberation:** Auditors cite specific SEP/IEP sections in PRO/ANTI arguments
+- **During Crux Declaration:** Better sources may resolve definitional disagreements
+- **After Scoring:** Process Claude documents source improvements in comparison file session notes (VUDU Step 9)
+- **Quarterly:** Process Claude health check report includes academic sources status (link validation, coverage quality)
+
+**Example Usage (Classical Theism):**
+
+**PRO-CT Auditor (Claude):**
+> "Divine simplicity avoids infinite regress. See [SEP Divine Simplicity §Motivation](https://plato.stanford.edu/entries/divine-simplicity/#Moti) - Argument 1: Aseity requires God be causa sui, incompatible with compositeness."
+
+**ANTI-CT Auditor (Grok):**
+> "Divine simplicity creates coherence problems. See [SEP Divine Simplicity §Modal Collapse Objection](https://plato.stanford.edu/entries/divine-simplicity/#ModaCollObjeDDS) - If God's essence = existence, all divine actions become necessary, eliminating contingency."
+
+**Fairness Auditor (Nova):**
+> "Both auditors cited authoritative sources correctly. This isn't bias - it's a legitimate philosophical debate (constituent vs non-constituent ontology). Recommend CRUX_BFI_001 declaration with academic source cross-references in Crux record."
+
+**Telemetry:**
+
+Session metadata tracks academic source usage:
+```yaml
+session_metadata:
+  academic_sources_cited:
+    - "SEP Divine Simplicity §Motivation" (Claude, PRO argument)
+    - "SEP Divine Simplicity §Modal Collapse" (Grok, ANTI argument)
+    - "SEP Problem of Evil §Evidential Problem" (Grok, ANTI argument)
+  source_validation_date: "2025-11-10"
+  broken_links: []
+```
+
+**Coverage Quality Assessment:**
+
+Per ACADEMIC_SOURCES.md:
+
+- **Excellent (9 worldviews):** 9+ sources, comprehensive PRO/ANTI coverage, detailed section anchors
+- **Good (2 worldviews):** 6-8 sources, solid coverage, some missing specialized sources
+- **Fair (1 worldview):** 3-5 sources minimum, gaps in coverage noted for improvement
+
+**Escalation Protocol:**
+
+- **Broken Link During Scoring:** Process Claude immediate repair (update anchor, notify auditors)
+- **Pattern Detection (4+ worldviews):** Escalate to Shaman Claude (e.g., "BFI metric has weak academic sources across multiple worldviews")
+- **Source Format Changes:** Coordinate with Doc Claude for bulk updates
 
 ---
 

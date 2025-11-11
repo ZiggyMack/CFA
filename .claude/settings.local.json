@@ -1,9 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python:*)",
-      "Bash(ls -la \"d:\\Documents\\CFA\\auditors\\Bootstrap\"\" | grep -E \"VUDU)",
-      "Bash(ROLE \")"
+      "Bash(for file in *.md)",
+      "Bash(do echo \"$file\")",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []

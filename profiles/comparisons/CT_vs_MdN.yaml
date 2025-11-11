@@ -1,0 +1,196 @@
+<!---
+FILE: CT_vs_MdN.yaml
+PURPOSE: Peer-reviewed scoring for Classical Theism vs Methodological Naturalism comparison
+VERSION: 0.1.0
+STATUS: Template (awaiting first scoring session)
+DEPENDS_ON: profiles/worldviews/CLASSICAL_THEISM.md, profiles/worldviews/METHODOLOGICAL_NATURALISM.md
+NEEDED_BY: App (Three-View System), Process Claude (Crux tracking)
+MOVES_WITH: /profiles/comparisons/
+LAST_UPDATE: 2025-11-10 [Template created for Crux architecture]
+--->
+
+# Classical Theism vs Methodological Naturalism - Peer-Reviewed Comparison
+
+**Comparison ID:** CT_vs_MdN
+**Version:** 0.1.0
+**Status:** Template (awaiting first scoring session)
+**Created:** 2025-11-10
+**Last Scored:** N/A
+
+---
+
+## Metadata
+
+**Worldviews:**
+- **Primary:** Classical Theism (CT)
+- **Comparison Context:** Methodological Naturalism (MdN)
+
+**Auditor Assignments:**
+- **PRO (CT Advocate):** Claude (teleological lens)
+- **ANTI (CT Challenger):** Grok (empirical lens)
+- **FAIRNESS:** Nova (symmetry lens)
+
+**Scoring Context:**
+- This comparison evaluates how Classical Theism performs when defending against Methodological Naturalism's empirical/parsimony criteria
+- Context matters: CT vs MdN ≠ CT vs Buddhism (different philosophical tensions)
+
+---
+
+## Session History
+
+**No scoring sessions completed yet.**
+
+This file will be populated after the first CT vs MdN adversarial scoring session.
+
+---
+
+## Peer-Reviewed Scores (Placeholder)
+
+**Format (to be populated after scoring):**
+
+```yaml
+metrics:
+  BFI:
+    self_reported: 8.5  # From CLASSICAL_THEISM.md
+    peer_reviewed: TBD  # After adversarial deliberation
+    convergence: TBD    # Percentage agreement
+    crux_declared: false
+    crux_id: null
+    session_metadata:
+      yaml_hash: null
+      domain_7_diff: "No changes since v0.1.0"
+      scoring_date: null
+
+  CA:
+    self_reported: 7.2
+    peer_reviewed: TBD
+    convergence: TBD
+    crux_declared: false
+    crux_id: null
+    session_metadata:
+      yaml_hash: null
+      domain_7_diff: "No changes since v0.1.0"
+      scoring_date: null
+
+  # ... (IP, ES, LS, MS, PS to follow same pattern)
+```
+
+---
+
+## Crux Points (Example Structure)
+
+**No Crux Points declared yet.**
+
+**Example (CRUX_BFI_001 from architecture docs):**
+
+```yaml
+crux_points:
+  - id: CRUX_BFI_001
+    type: definitional
+    metric: BFI
+    frameworks_affected: [Classical Theism, Process Theology, Hinduism]
+    comparison_context: "CT vs MdN"
+
+    convergence_attempted: 73%
+    deliberation_rounds: 2
+
+    question: "Does the Christian Trinity count as 1 entity or 3 entities for BFI scoring?"
+
+    positions:
+      claude:
+        stance: "PRO-CT"
+        position: "Trinity is one divine substance — 1 entity for BFI"
+        score_proposed: 8.2
+        calibration_applied:
+          - "axiom_confidence: 0.85 (CLASSICAL_THEISM.md:232)"
+          - "charity_interpretation: 0.90 (CLASSICAL_THEISM.md:235)"
+          - "edge_case_weight: 0.30 (CLASSICAL_THEISM.md:237)"
+        rationale: |
+          BFI asks about beings (οὐσία/substance), not persons (ὑποστάσεις).
+          Classical Theism's core axiom: God is one being in three persons.
+          Non-mereological unity isn't tri-theism. Per charity_interpretation: 0.90,
+          I read 'being' as substance, consistent with CT's metaphysical framework.
+
+      grok:
+        stance: "ANTI-CT"
+        position: "Three persons = three minds = 3 entities for BFI measurement"
+        score_proposed: 5.5
+        calibration_applied:
+          - "axiom_confidence: 0.35 (CLASSICAL_THEISM.md:293)"
+          - "edge_case_weight: 0.80 (CLASSICAL_THEISM.md:298)"
+        rationale: |
+          BFI operational definition counts distinct agents/minds. Father, Son, Spirit
+          have separate wills/knowledge/agency (Trinitarian doctrine). That's three minds.
+          Methodological Naturalism requires measurable definitions. Per edge_case_weight: 0.80,
+          I heavily weight this counterexample to simple monotheism.
+
+      nova:
+        stance: "FAIRNESS"
+        assessment: |
+          Both auditors applied calibration correctly. This isn't bias—it's two
+          legitimate measurement approaches. Claude's charity_interpretation: 0.90
+          justifies substance-reading; Grok's edge_case_weight: 0.80 justifies
+          person-counting emphasis.
+        pattern_detected: "BFI metric assumes mereological ontology (parts = whole)"
+        recommendation: "framework_limitation"
+        proposed_handling: "NORMALIZE_UNCERTAINTY (apply penalty) — metric boundary exposed"
+
+    impact_assessment:
+      story_impact: "high"  # Affects fundamental understanding of CT's core claim
+      ypa_sensitivity: "±18%"  # YPA swing between CARRY FORWARD vs NORMALIZE
+      framework_implications:
+        - "BFI metric limitation exposed"
+        - "Pattern: BFI struggles with non-mereological ontologies"
+        - "Recommendation: Consider BFI-M (mereological) vs BFI-NM (non-mereological) split"
+
+    resolution_status: "documented_divergence"
+    created_date: "2025-11-10"
+    last_updated: "2025-11-10"
+    quarterly_tracking: "Q4 2025 - BFI Crux #1 for CT vs MdN"
+```
+
+---
+
+## Deliberation Notes (Placeholder)
+
+**To be populated after scoring sessions.**
+
+**Expected format:**
+- Round 1: Initial scores + rationale
+- Round 2: Challenges + adjustments
+- Round 3 (if needed): Final convergence attempt
+- Convergence achieved: Yes/No
+- If Crux declared: Auditor vote, classification, documentation
+
+---
+
+## Historical Record
+
+**Version History:**
+- v0.1.0 (2025-11-10): Template created for Crux architecture
+- (Future versions will document scoring session updates)
+
+**Crux Density:**
+- Total Crux declared: 0 (template)
+- By type: N/A
+- By metric: N/A
+
+**Rotation Trigger Status:**
+- Same auditor pair Crux count (CT vs MdN): 0
+- Rotation threshold: 3+ Crux on same metric
+- Status: No rotation needed
+
+---
+
+**Ready for first scoring session.**
+
+**Next Steps:**
+1. Complete CT pilot scoring session (Nova Entry 4 approval pending)
+2. Populate peer-reviewed scores
+3. Document any Crux Points declared
+4. Process Claude quarterly tracking
+
+**Reference:**
+- Crux architecture: [docs/architecture/CFA_ARCHITECTURE.md](../../docs/architecture/CFA_ARCHITECTURE.md) Section 6
+- Crux protocol: [auditors/Bootstrap/VUDU_CFA.md](../../auditors/Bootstrap/VUDU_CFA.md) Step 9
+- Process orchestration: [docs/repository/librarian_tools/ROLE_PROCESS.md](../../docs/repository/librarian_tools/ROLE_PROCESS.md) Domain 7 Sub-Section
