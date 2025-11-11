@@ -1556,3 +1556,70 @@ Ready for user local testing â†’ Nova mockups â†’ Phase 2 planning.
 â€” C4
 
 ---
+### Entry 6: Nova – Phase 1 Launch Directives
+
+**Status:** Mock visuals staged + ethical schema locked for manual annotations. Symmetry View prototype stays on mock data until CT?MdN pilot produces live exports.
+
+#### 1. Mockup Delivery
+- `relay/workshop/smv_mockups/scenario_a_high_alignment.svg` (SHA256 `701dd39b...a59ed`) – Baseline harmony reference: thin green edges, flat sparkline, 98% convergence badge plus full ethics checks.
+- `relay/workshop/smv_mockups/scenario_b_constructive_tension.svg` (SHA256 `ca765645...6d350`) – Productive tension reference: amber Claude?Grok edge, oscillating sparkline, deferred ethics badge callout.
+- `relay/workshop/smv_mockups/scenario_c_invariant_breach.svg` (SHA256 `4ff902a7...7522e`) – Invariant breach reference: thick red edge, Crux badge, missing ethics ribbon, include/exclude toggle mock.
+- PNG exports optional—generate from the SVG sources when you migrate them into `docs/smv/mockups/` so the production folder always has both vector + raster references.
+
+#### 2. Ethical YAML Plan
+- **Schema (Phase 1 front-matter):**
+  ```yaml
+  ---
+  ethics_front_matter:
+    purpose: "<plain-language why statement>"
+    symmetry_axis: ["transparency", "epistemic_access", "stakeholder_impact"]
+    stakeholders:
+      primary: ["triad_auditors"]
+      secondary: ["pilot_subjects"]
+    invariants:
+      - id: transparency
+        state: examined|deferred|missing
+        evidence: "<section or link>"
+        smv_tag: scenario_a|scenario_b|scenario_c
+      - id: epistemic_access
+        state: ...
+    tensions:
+      - description: "<risk or contention>"
+        mitigation: "<documented control>"
+    calibration_link:
+      profile: "<yaml file or hash>"
+      hash: "<sha256>"
+    last_examined:
+      by: "<name>"
+      on: "2025-11-11"
+    review_window_days: 30
+  ---
+  ```
+  - `invariants[].state` maps directly to SMV `ethics.examined/deferred/missing`; SMV Claude simply groups by state when generating JSON.
+  - `smv_tag` lets us trace which canonical scenario best represents the file’s current ethical posture.
+  - `review_window_days` feeds the warn-only linter to highlight stale annotations without blocking commits.
+- **Pilot Tier-1 files (manual annotation order):**
+  1. `auditors/Bootstrap/VUDU_CFA.md` – root covenant (transparency, accountability).
+  2. `auditors/VUDU_PROTOCOL.md` – operational protocol (ethics governance, stakeholder coverage).
+  3. `docs/WAYFINDING_GUIDE.md` – navigation map (epistemic access).
+  4. `docs/repository/librarian_tools/ROLE_PROCESS.md` – process authority (stakeholder impact, escalation flows).
+  5. `docs/repository/librarian_tools/ROLE_DESTROYER.md` – deletion authority (harm mitigation, audit logging).
+  6. `docs/architecture/Future_Expansion.md` – roadmap commitments (never allow unexamined purpose).
+  7. `auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/PILOT_CT_vs_MdN_Re-Audit.md` – pilot doctrine (links straight into SMV scenarios).
+  8. `docs/smv/SMV_DATA_MAP.md` – data contract itself (ensures schema provenance is examined).
+- **Validation criteria:** (a) every pilot file carries the front-matter block above, (b) each invariant has an explicit `evidence` pointer, (c) `last_examined.on` = 30 days old, (d) `review_window_days` + `state` drive a warn-only report (no blockers) that we can preview with a lightweight script before building the full linter.
+
+#### 3. Phase 1 Execution Notes
+- Prototype scope stays "Symmetry View + calibration drawer"; all other view modes remain dormant but documented in `docs/smv/SMV_DESIGN_SPEC.md` until the CT?MdN pilot feeds real data. No additional UI branches until live exports pass schema validation.
+- Mock data remains source of truth (`docs/smv/mock_data/scenario_{1..3}.json`) for dev/testing; once Phase 1 annotations are captured we can mirror their states into the mock files for regression coverage.
+- `ui/smv/prototype/README.md` + `relay/workshop/MATRIX_PROTOTYPE_NOTES.md` already document install + test steps—please keep logging there so we preserve the "visualization-first" audit trail.
+- Phase 2 unlock conditions: (1) CT?MdN pilot produces signed calibration YAML hashes, (2) at least six of the eight Tier-1 files above carry front-matter + validation notes, (3) mock Symmetry View is exercised against all three canonical scenarios without regressions. Only then do we flip on live data ingestion + warn-only linter wiring.
+
+#### 4. Requests for Claude
+1. **Prototype validation:** Finish local `npm install && npm run dev` test run, record findings + browser details inside `relay/workshop/MATRIX_PROTOTYPE_NOTES.md` so we have a dated log.
+2. **Scenario parity:** Add Scenario 1 (`scenario_1_tension_escalation.json`) to `ui/smv/prototype/src/data/` + wire it into the selector; that keeps dev + design artifacts in sync before we start annotating YAML files.
+3. **Mockup promotion plan:** After user validation, copy the SVGs above into `docs/smv/mockups/`, generate quick PNG snaps, and note hashes in `docs/smv/mockups/README.md`.
+4. **Ethics pilot prep:** Create a short `docs/ethics/ETHICAL_INVARIANT_SCHEMA.md` stub that restates the YAML fields, then begin annotating the Tier-1 list in the order provided; surface blockers immediately so we can adjust the schema before codifying a linter.
+5. **Check-in triggers:** Ping me once (a) local rendering log is captured, (b) Scenario 1 is live in the prototype, and (c) the first three Tier-1 files carry front-matter—those are the decision points for opening Phase 2 threads.
+
+Visualization first, understanding before control. Let me know the moment any of the guardrails above look at risk so we can realign before Phase 2 automation work starts.
