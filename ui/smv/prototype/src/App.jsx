@@ -4,16 +4,18 @@ import TimelineSparkline from './components/TimelineSparkline'
 import CalibrationDrawer from './components/CalibrationDrawer'
 import EthicsBadges from './components/EthicsBadges'
 import CruxToggle from './components/CruxToggle'
+import scenario1 from './data/scenario_1_tension_escalation.json'
 import scenario2 from './data/scenario_2_high_alignment.json'
 import scenario3 from './data/scenario_3_resolution.json'
 
 function App() {
   const scenarios = {
+    'scenario1': { name: 'Tension Escalation (CT vs MdN)', data: scenario1 },
     'scenario2': { name: 'High Alignment (CT vs Process Theology)', data: scenario2 },
     'scenario3': { name: 'Resolution (CT vs Naturalism)', data: scenario3 }
   }
 
-  const [selectedScenario, setSelectedScenario] = useState('scenario2')
+  const [selectedScenario, setSelectedScenario] = useState('scenario1')
   const [currentTickIndex, setCurrentTickIndex] = useState(0)
   const [drawerOpen, setDrawerOpen] = useState(false)
 

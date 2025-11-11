@@ -1,30 +1,32 @@
 <!---
 FILE: README.md
 PURPOSE: Documentation for SMV SVG mockups (visual prototypes for Phase 1 UI implementation)
-VERSION: 1.0.0
-STATUS: Planned (awaiting Phase 0 mockup creation)
-DEPENDS_ON: docs/smv/SMV_DESIGN_SPEC.md
+VERSION: 2.0.0
+STATUS: Active (Nova Entry 6 mockups delivered and promoted)
+DEPENDS_ON: docs/smv/SMV_DESIGN_SPEC.md, relay/workshop/smv_mockups/README.md
 NEEDED_BY: SMV Phase 1 prototype implementation
 MOVES_WITH: /docs/smv/mockups/
 CREATED: 2025-11-11 (B-STORM_6 Entry 3)
-LAST_UPDATE: 2025-11-11 [Placeholder structure created]
+LAST_UPDATE: 2025-11-11 [Nova Entry 6 mockups promoted to production]
 --->
 
 # SMV SVG Mockups
 
 **Purpose:** Visual prototypes (SVG format) demonstrating SMV visualization goals for Phase 1 prototype implementation
 
-**Status:** Planned (awaiting mockup creation in Phase 0)
+**Status:** Active (Nova Entry 6 mockups delivered, promoted from workshop)
 
 ---
 
 ## 📋 Mockup Overview
 
-| Mockup | File | Status | Purpose |
-|--------|------|--------|---------|
-| **Scenario A: High Alignment** | scenario_A_high_alignment.svg | ⏳ Planned | Green triangle, flat sparkline, all ethics examined |
-| **Scenario B: Constructive Tension** | scenario_B_constructive_tension.svg | ⏳ Planned | Amber edges, oscillating sparkline, ethics in progress |
-| **Scenario C: Invariant Breach** | scenario_C_invariant_breach.svg | ⏳ Planned | Red alert, tension spike, Crux marker, ethics missing |
+| Mockup | File | Status | SHA-256 Hash | Purpose |
+|--------|------|--------|--------------|---------|
+| **Scenario A: High Alignment** | [scenario_a_high_alignment.svg](scenario_a_high_alignment.svg) | ✅ Delivered | `701dd39b...a59ed` | Thin green edges, flat sparkline, 98% convergence, full ethics checks |
+| **Scenario B: Constructive Tension** | [scenario_b_constructive_tension.svg](scenario_b_constructive_tension.svg) | ✅ Delivered | `ca765645...6d350` | Amber Claude–Grok edge, oscillating sparkline, deferred ethics callout |
+| **Scenario C: Invariant Breach** | [scenario_c_invariant_breach.svg](scenario_c_invariant_breach.svg) | ✅ Delivered | `4ff902a7...7522e` | Thick red edge, Crux badge, missing ethics ribbon, toggle mock |
+
+**Source:** Promoted from [relay/workshop/smv_mockups/](../../../relay/workshop/smv_mockups/) per Nova Entry 6 instructions
 
 ---
 

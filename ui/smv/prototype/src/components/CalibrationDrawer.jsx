@@ -3,7 +3,32 @@ const CalibrationDrawer = ({ worldviewPair, tickData }) => {
   // For now, showing representative values based on worldview pair
 
   const getMockCalibration = () => {
-    if (worldviewPair === 'CT_vs_ProcessTheology') {
+    if (worldviewPair === 'CT_vs_MdN') {
+      return {
+        pro: {
+          worldview: 'Classical Theism',
+          stance: 'PRO',
+          axiom_confidence: 0.85,
+          burden_of_proof: 0.60,
+          charity_interpretation: 0.75,
+          edge_case_weight: 0.50,
+          explanatory_credit: 0.70,
+          historical_weight: 0.80,
+          lived_experience: 0.65
+        },
+        anti: {
+          worldview: 'Classical Theism',
+          stance: 'ANTI (Methodological Naturalism)',
+          axiom_confidence: 0.35,
+          burden_of_proof: 0.80,
+          charity_interpretation: 0.70,
+          edge_case_weight: 0.65,
+          explanatory_credit: 0.40,
+          historical_weight: 0.25,
+          lived_experience: 0.45
+        }
+      }
+    } else if (worldviewPair === 'CT_vs_ProcessTheology') {
       return {
         pro: {
           worldview: 'Classical Theism',
