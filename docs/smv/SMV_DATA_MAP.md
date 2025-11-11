@@ -511,6 +511,68 @@ docs/smv/live_data/
 
 ---
 
+## 🏛️ Observatory Integration
+
+**Relationship:** Observatory (Repo Health Dashboard) monitors SMV data freshness as one of its health metrics.
+
+**Distinction:**
+- **Observatory (REPO_HEALTH_DASHBOARD.md):** Meta-level repository health tracking
+  - Documentation coverage, link integrity, git hygiene, process compliance
+  - **SMV freshness** (monitors staleness of worldview comparison data)
+  - Trinity collaboration health, semantic headers coverage
+- **SMV (docs/smv/):** Worldview comparison visualization
+  - Auditor triangle dynamics (tension, volume, convergence)
+  - Calibration transparency (PRO vs ANTI bias adjustments)
+  - Crux impact analysis (with/without toggle comparisons)
+  - Temporal patterns across deliberation ticks
+
+**Data Flow (Phase 2):**
+```
+Observatory (weekly health scan by Doc Claude)
+    ↓
+smv_freshness_check.py (staleness detection)
+    ↓
+SMV Claude (reports: X/66 comparisons stale)
+    ↓
+Observatory Dashboard (displays SMV Dashboard Health section)
+    ↓
+User decides: Trigger smv_refresh.sh or defer?
+```
+
+**SMV Metrics Reported to Observatory:**
+
+| Metric | Description | Example Status |
+|--------|-------------|----------------|
+| **Freshness** | How many comparisons stale? | ⚠️ Stale (2/66 comparisons) |
+| **Coverage** | How many comparisons exported? | 2/66 (CT_vs_MdN ✅, CT_vs_ProcessTheology ✅) |
+| **Schema Compliance** | % exports passing validation | 100% (all exports match schema v1.1) |
+| **Last Refresh** | When was data last regenerated? | 2025-11-12 14:45:00Z |
+
+**Example Observatory Status Display:**
+```
+### SMV Dashboard Health
+
+Current: ⚠️ Stale (2/66 comparisons need refresh)
+Target:  ✅ Fresh (all comparisons current within 24 hours)
+Gap:     2 comparisons behind
+
+Recent Status:
+- CT_vs_MdN: ⚠️ Stale (CLASSICAL_THEISM.md modified)
+- CT_vs_ProcessTheology: ⚠️ Stale (calibration hash mismatch)
+
+Action: Run docs/smv/scripts/smv_refresh.sh
+```
+
+**Why This Matters:**
+- Observatory provides **meta-visibility** into SMV health (not the visualizations themselves)
+- Staleness detection prevents showing outdated comparison data
+- Coverage tracking shows progression toward 66-comparison goal
+- Schema compliance ensures visualization layer can trust data format
+
+**See:** [REPO_HEALTH_DASHBOARD.md](../repository/REPO_HEALTH_DASHBOARD.md) § "SMV Dashboard Health" for live status
+
+---
+
 ## 🤝 Trinity Handoff Protocol
 
 ### **Process Claude → SMV Claude**

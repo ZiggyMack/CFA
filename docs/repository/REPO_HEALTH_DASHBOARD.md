@@ -238,6 +238,46 @@ Nov: 40% ████████░░░░░░░░░░░░
 
 ---
 
+### SMV Dashboard Health
+
+```
+Current: ⏳ Placeholder (0/66 comparisons exported)
+Target:  ✅ Fresh (all comparisons current within 24 hours)
+Gap:     Phase 2 awaiting CT↔MdN pilot completion
+
+Status: Phase 0 Complete (design spec + data map)
+Next:   Phase 1 (UI prototype) → Phase 2 (automation)
+```
+
+**What This Tracks:**
+- **SMV data freshness:** How current are worldview comparison visualizations?
+- **Coverage:** X/66 comparisons exported (pilot: CT_vs_MdN)
+- **Schema compliance:** % exports passing validation against schema v1.1+
+- **Last refresh timestamp:** Staleness detection
+
+**Integration:** Doc Claude calls `smv_freshness_check.py` during weekly health scan (Phase 2)
+
+**Example Future Status:**
+```
+Current: ⚠️ Stale (2/66 comparisons need refresh)
+Target:  ✅ Fresh (all comparisons current within 24 hours)
+Gap:     2 comparisons behind
+
+Recent Status:
+- CT_vs_MdN: ⚠️ Stale (CLASSICAL_THEISM.md modified 2025-11-12)
+- CT_vs_ProcessTheology: ⚠️ Stale (calibration hash mismatch)
+
+Action: Run docs/smv/scripts/smv_refresh.sh to regenerate
+```
+
+**Distinction:**
+- **Observatory (this dashboard):** Meta-level repository health (documentation, links, git hygiene, **SMV freshness**)
+- **SMV visualization:** Worldview comparison analysis (auditor triangle, tension patterns, Crux impact, calibration transparency)
+
+**See:** [SMV Data Map](../smv/SMV_DATA_MAP.md) for technical details, [SMV Design Spec](../smv/SMV_DESIGN_SPEC.md) for schema
+
+---
+
 ## 🏆 Achievements & Milestones
 
 ### Recently Completed (Last 3 Months)
