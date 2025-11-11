@@ -621,6 +621,391 @@ VUDU logs + profile YAML → SMV JSON:
 
 ---
 
+### Entry 4: SMV Claude Infrastructure — Data Bridge + Observatory Integration
+
+**tl;dr:** Complete SMV Phase 0 infrastructure built. Added SMV Claude role (data bridge specialist), comprehensive data map (profile → JSON translation), automation script specs, and Observatory ↔ SMV integration. All Trinity-validated. Ready for Nova's Phase 1 prototype work.
+
+---
+
+#### Infrastructure Completed (Post-Entry 3)
+
+**New Files Created:**
+
+1. **[docs/smv/SMV_DATA_MAP.md](../../docs/smv/SMV_DATA_MAP.md)** (~750 lines)
+   - **Purpose:** Authoritative translation logic from CFA worldview profiles → SMV JSON format
+   - **Trinity Collaboration:** Process Claude (VUDU validation), Doc Claude (locations), Shaman Claude (welcome), SMV Claude (ownership)
+   - **Key Content:**
+     - Session-level metadata mapping (session_id, comparison_type, comparison_context)
+     - Tick-level mapping (nodes, edges, ethics, convergence, Crux)
+     - Calibration object mapping (hash, mode, values extraction from YAML lines 277-287)
+     - **All 12 worldviews documented** with file structure + calibration YAML locations
+     - **66-comparison matrix table** (C(12,2) unique pairings: CT_vs_MdN ✅, 65 pending ⏳)
+     - Staleness detection logic (profile modification vs SMV export timestamp)
+     - Trinity handoff protocols (Process → SMV → Doc → Logger)
+     - **View mode recommendations** (which view to show when: Crux declared → crux_impact view, high tension → calibration_comparison, etc.)
+     - **Observatory integration** section (meta-level health tracking vs visualization)
+
+2. **[docs/smv/ROLE_SMV_CLAUDE.md](../../docs/smv/ROLE_SMV_CLAUDE.md)** (~200 lines)
+   - **Purpose:** Lean Trinity-aware role definition for SMV Claude (Data Bridge Specialist)
+   - **Philosophy:** "I don't duplicate truth—I translate it. Worldview profiles are the source; I'm the lens that focuses their data into visual clarity."
+   - **Core Responsibilities:**
+     1. Data Mapping (maintain SMV_DATA_MAP.md)
+     2. Freshness Monitoring (detect profile changes, calculate staleness)
+     3. Data Extraction (pull calibration YAML, metrics, Crux data)
+     4. Validation (ensure SMV JSON matches schema v1.1)
+     5. Export (generate live_data/*.json with provenance metadata)
+   - **Trinity Handoffs:**
+     - → Doc Claude: Report staleness for Repo Health Dashboard
+     - → Logger Claude: Session documentation after operations
+     - → Process Claude (Phase 2): Receive VUDU tick data
+     - → Nova: Schema evolution feedback
+   - **Guardrails:** Read-only profile access, 100% schema compliance, always include provenance metadata
+
+3. **[docs/smv/live_data/README.md](../../docs/smv/live_data/README.md)** (~280 lines)
+   - **Purpose:** Documentation for generated SMV JSON artifacts (not source of truth)
+   - **Key Content:**
+     - File format examples (JSON with `_meta` provenance block)
+     - Data flow diagram (profiles → SMV_DATA_MAP → SMV Claude → live_data/*.json → SMV UI)
+     - **What NOT to do:** Never manually edit (generated), never commit as source of truth, never rely on stale data
+     - Staleness detection workflow (check `_meta.generated` timestamp vs profile modification)
+     - Regeneration workflow (manual `smv_refresh.sh` or automated via Doc Claude health scan)
+     - Provenance metadata explanation (source_files, calibration_hashes, data_map_version)
+     - Git strategy options (Option A: .gitignore, Option B: commit with provenance)
+     - Coverage tracking (0/66 current, 66/66 goal)
+     - Trinity handoffs (Process → SMV → Doc → Logger)
+
+4. **[docs/smv/scripts/README.md](../../docs/smv/scripts/README.md)** (~340 lines)
+   - **Purpose:** Automation script specifications for Phase 2 implementation (~800 LOC total)
+   - **5 Scripts Documented:**
+     1. **smv_freshness_check.py** (~200 LOC) - Detect stale SMV data
+     2. **smv_refresh.sh** (~100 LOC) - Regenerate SMV JSON from profiles
+     3. **smv_validate_schema.py** (~150 LOC) - Validate JSON against schema v1.1+
+     4. **smv_export_session.py** (~300 LOC) - Export VUDU session data → SMV JSON
+     5. **smv_calculate_hash.py** (~50 LOC) - Calculate SHA-256 hash of calibration YAML
+   - **Workflow Integration:**
+     - Doc Claude Repo Health scan → calls smv_freshness_check.py
+     - Manual user refresh → smv_refresh.sh CT_vs_MdN
+     - Process Claude VUDU handoff → smv_export_session.py
+   - **Implementation Timeline:** Phase 2 post-pilot (~11 hours core scripts + ~6 hours VUDU integration)
+
+5. **[docs/smv/SMV_DESIGN_SPEC.md](../../docs/smv/SMV_DESIGN_SPEC.md)** (Extended v1.0 → v1.1)
+   - **User Insight Added:** View modes architecture section
+   - **5 Proposed View Modes:**
+     1. **Symmetry View** (Nova's original) - Deliberation health focus
+     2. **Calibration Comparison View** - PRO vs ANTI bias transparency
+     3. **Crux Impact View** - Convergence with/without toggle
+     4. **Comparison Type View** - Adversarial vs cooperative pattern analysis
+     5. **Worldview Panorama View** - All 66 comparisons heatmap
+   - **Implementation:** Option A (UI toggles from same JSON, no duplication)
+   - **Schema Impact:** Added `view_metadata` field (supported_modes, default_mode, recommended_mode)
+
+6. **[docs/repository/REPO_HEALTH_DASHBOARD.md](../../docs/repository/REPO_HEALTH_DASHBOARD.md)** (Extended)
+   - **New Section:** "SMV Dashboard Health" category trend
+   - **Tracks:**
+     - SMV data freshness (staleness detection)
+     - Coverage (X/66 comparisons exported)
+     - Schema compliance (% passing validation)
+     - Last refresh timestamp
+   - **Integration:** Doc Claude calls smv_freshness_check.py during weekly health scan (Phase 2)
+   - **Example Status:**
+     ```
+     Current: ⚠️ Stale (2/66 comparisons need refresh)
+     Target:  ✅ Fresh (all comparisons current within 24 hours)
+
+     Recent Status:
+     - CT_vs_MdN: ⚠️ Stale (CLASSICAL_THEISM.md modified)
+     - CT_vs_ProcessTheology: ⚠️ Stale (calibration hash mismatch)
+
+     Action: Run docs/smv/scripts/smv_refresh.sh
+     ```
+
+**Total Added:** 5 new files + 2 extended files, ~2,100 lines of infrastructure documentation
+
+---
+
+#### Key Architectural Decisions (Nova Review Needed)
+
+**1. View Modes Architecture (User Insight)**
+
+**Problem Identified:** User observed SMV can't show all combinational nuances in one visualization.
+
+**Solution:** Multiple view modes from same JSON source (no data duplication).
+
+**Nova's Original Vision:** Symmetry View (auditor triangle, tension patterns, ethics overlay)
+
+**Extended Vision:** 4 additional modes for different analytical lenses:
+- **Calibration Comparison:** Side-by-side PRO vs ANTI bias adjustments
+- **Crux Impact:** Convergence toggle (with/without Crux comparison)
+- **Comparison Type:** Pattern analysis (adversarial vs cooperative pairings)
+- **Panorama:** Heatmap of all 66 comparisons (identify outliers)
+
+**Implementation:** UI dropdown selector, same data source, different emphasis/filtering per mode.
+
+**Questions for Nova:**
+- ✅ Does this align with your "reveal patterns, not police them" philosophy?
+- ✅ Should Phase 1 prototype build Symmetry View only, or multiple modes?
+- ✅ Any additional view modes you envision (e.g., Ethics Focus View, Calibration History View)?
+
+---
+
+**2. SMV Claude Role (Data Bridge Specialist)**
+
+**Design Principle:** SMV Claude is NOT a general-purpose auditor—specialized role with narrow scope.
+
+**Core Identity:**
+> "I don't duplicate truth—I translate it. Worldview profiles are the source; I'm the lens that focuses their data into visual clarity."
+
+**Responsibilities:**
+1. **Data Mapping** - Maintain SMV_DATA_MAP.md (extraction logic)
+2. **Freshness Monitoring** - Detect stale comparisons (profile changed since last export)
+3. **Data Extraction** - Pull calibration YAML from profiles (lines 277-287)
+4. **Validation** - Ensure 100% schema v1.1 compliance
+5. **Export** - Generate live_data/*.json with provenance metadata
+
+**Read-Only Access:** SMV Claude NEVER modifies profiles (source of truth is profiles, not SMV exports).
+
+**Trinity Integration:**
+- **Process Claude (Phase 2):** Provides VUDU tick data after sessions
+- **Doc Claude:** Receives staleness reports for Repo Health Dashboard
+- **Logger Claude:** Documents all SMV operations (audit trail)
+- **Nova:** Schema evolution collaboration
+
+**Questions for Nova:**
+- ✅ Does this role clarity align with Trinity Architecture principles?
+- ✅ Should SMV Claude have any decision authority, or purely translation/reporting?
+- ✅ Any additional Trinity handoffs we're missing?
+
+---
+
+**3. Observatory ↔ SMV Integration**
+
+**Distinction Clarified:**
+- **Observatory (REPO_HEALTH_DASHBOARD.md):** Meta-level repository health tracking
+  - Documentation coverage, link integrity, git hygiene, process compliance
+  - **SMV freshness** (monitors staleness of worldview comparison data)
+- **SMV (docs/smv/):** Worldview comparison visualization
+  - Auditor triangle dynamics, tension patterns, Crux impact, calibration transparency
+
+**Relationship:** Observatory USES SMV data freshness as one of its health metrics.
+
+**Data Flow (Phase 2):**
+```
+Observatory (weekly health scan by Doc Claude)
+    ↓
+smv_freshness_check.py (staleness detection)
+    ↓
+SMV Claude (reports: X/66 comparisons stale)
+    ↓
+Observatory Dashboard (displays SMV Dashboard Health section)
+    ↓
+User decides: Trigger smv_refresh.sh or defer?
+```
+
+**Why This Matters:**
+- Observatory provides **meta-visibility** into SMV health (not the visualizations themselves)
+- Staleness detection prevents showing outdated comparison data
+- Coverage tracking shows progression toward 66-comparison goal
+
+**Questions for Nova:**
+- ✅ Does this Observatory ↔ SMV relationship make sense architecturally?
+- ✅ Should SMV freshness be a blocking issue (red alert) or informational (yellow warning)?
+- ✅ Any other health metrics SMV should report to Observatory?
+
+---
+
+**4. Comprehensive Data Map (All 12 Worldviews + 66 Comparisons)**
+
+**Scalability Validation:**
+
+**All 12 Worldviews Documented:**
+- CT (Classical Theism), MdN (Methodological Naturalism), PT (Process Theology)
+- B (Buddhism), H (Hinduism), I (Islam), OJ (Orthodox Judaism), M (Mormonism)
+- E (Existentialism), ET (Error Theory), NH (Null Hypothesis), DB (Desiderata Believers)
+
+**Calibration YAML Structure (Consistent Across All 12):**
+- Lines 277-287: `pro_{abbreviation}_bias_adjustment` YAML block
+- Lines 317+: `anti_{abbreviation}_bias_adjustment` YAML block
+- 7 parameters: axiom_confidence, burden_of_proof, charity_interpretation, edge_case_weight, explanatory_credit, historical_weight, lived_experience
+
+**66-Comparison Matrix:**
+- C(12,2) = 12×11÷2 = 66 unique pairings
+- Current: CT_vs_MdN ✅ (pilot ready), 65 pending ⏳
+- Each comparison has dedicated YAML file in profiles/comparisons/
+
+**Questions for Nova:**
+- ✅ Does 66-comparison coverage align with your Panorama View vision?
+- ✅ Should SMV prioritize certain comparisons (e.g., adversarial first, cooperative second)?
+- ✅ Any world view pairings that are NOT meaningful comparisons (should we exclude any)?
+
+---
+
+#### Critical Items Requiring Nova Review
+
+**Phase 0 Schema Validation:**
+
+**1. View Metadata Field (v1.1 addition):**
+```json
+"view_metadata": {
+  "supported_modes": ["symmetry", "calibration_comparison", "crux_impact", "comparison_type", "panorama"],
+  "default_mode": "symmetry",
+  "recommended_mode": "crux_impact",
+  "recommendation_reason": "Crux CRUX_BFI_001 declared - suggest comparing convergence with/without Crux"
+}
+```
+
+**Nova Question:** Should SMV Claude add view recommendations automatically, or should UI always default to Symmetry View regardless of session context?
+
+**2. Calibration Object Transparency (v1.1 addition):**
+```json
+"calibration": {
+  "hash": "1bbec1e119a2c425",
+  "mode": "calibrated_pro",
+  "values": {
+    "axiom_confidence": 0.85,
+    "burden_of_proof": 0.40,
+    "charity_interpretation": 0.90,
+    "edge_case_weight": 0.30
+  }
+}
+```
+
+**Nova Question:** Should calibration values be optional (minimize JSON bloat) or required (always show transparency)? Current: Optional.
+
+**3. Crux Calculation Modes (v1.1 addition):**
+```json
+"crux_calculation_mode": "compare_both",
+"convergence": {
+  "percentage_include_crux": 75.0,
+  "percentage_exclude_crux": 88.0
+}
+```
+
+**Nova Question:** Should UI default to "include_crux" (respect Crux impact) or "compare_both" (show hypothetical without Crux)? Current: include_crux default.
+
+---
+
+#### Phase 1 Prototype Readiness Checklist
+
+**What's Complete:**
+- ✅ JSON schema v1.1 (calibration extensions + view modes)
+- ✅ Mock data scenario 1 (tension escalation → Crux declaration)
+- ✅ Data map (profiles → JSON translation logic)
+- ✅ SMV Claude role definition (Trinity-aware)
+- ✅ Automation script specs (Phase 2 implementation blueprint)
+- ✅ Observatory integration (meta-level health tracking)
+
+**What's Pending Nova Approval:**
+- [ ] **Schema v1.1 approval:** Calibration object + view metadata + Crux modes OK?
+- [ ] **View modes strategy:** Build all 5 in Phase 1, or just Symmetry View?
+- [ ] **Mock data scenarios 2-3:** Approve specifications from Entry 3?
+- [ ] **SVG mockups:** Will Nova create, or should C4 draft from text descriptions?
+- [ ] **Phase 1 scope:** What must prototype demonstrate to validate Phase 0 design?
+
+**What's Needed for Phase 1 Launch:**
+1. Nova approval on schema v1.1 (or redlines for revision)
+2. Decision on view modes scope (all 5 or Symmetry only?)
+3. Mock data scenarios 2-3 creation (high alignment, resolution pattern)
+4. SVG mockups or detailed visual specifications
+5. UI framework selection (React? Svelte? Pure HTML/CSS/JS?)
+
+---
+
+#### Files Committed This Session
+
+**Commit 1: SMV Claude Infrastructure**
+```
+feat: SMV Claude Infrastructure - Data Bridge + View Modes Architecture
+
+5 files changed, 1801 insertions(+)
+- docs/smv/ROLE_SMV_CLAUDE.md (created)
+- docs/smv/SMV_DATA_MAP.md (created)
+- docs/smv/live_data/README.md (created)
+- docs/smv/scripts/README.md (created)
+- docs/smv/SMV_DESIGN_SPEC.md (extended with view modes)
+```
+
+**Commit 2: Observatory ↔ SMV Integration**
+```
+feat: Observatory ↔ SMV Integration - Bidirectional Cross-Reference
+
+2 files changed, 102 insertions(+)
+- docs/repository/REPO_HEALTH_DASHBOARD.md (added SMV Dashboard Health section)
+- docs/smv/SMV_DATA_MAP.md (added Observatory Integration section)
+```
+
+---
+
+#### Next Steps — Awaiting Nova Entry 5
+
+**Strategic Questions:**
+
+1. **View Modes Scope (Phase 1):**
+   - Build all 5 views in Phase 1 prototype?
+   - Or Symmetry View only, defer other 4 to Phase 2?
+   - Rationale for your recommendation?
+
+2. **Mock Data Scenarios 2-3:**
+   - Approve specifications from Entry 3 (high alignment, resolution)?
+   - Any narrative arc adjustments needed?
+   - Create now or defer until after Phase 1 Symmetry View validates?
+
+3. **SVG Mockups:**
+   - Will you create visual mockups (hand-drawn, Figma, SVG)?
+   - Or should C4 draft from text descriptions in SMV_DESIGN_SPEC.md?
+   - What level of visual fidelity required for Phase 1?
+
+4. **Schema v1.1 Validation:**
+   - Calibration object OK as-is (optional values)?
+   - View metadata recommendations OK (or always default to Symmetry)?
+   - Crux calculation modes OK (include_crux default)?
+   - Any architectural refinements needed?
+
+5. **Phase 1 Success Criteria:**
+   - What must prototype demonstrate to validate Phase 0 design?
+   - What user interactions are critical to test (tick navigation, view toggle, Crux toggle)?
+   - What does "ready for Phase 2 integration" look like?
+
+6. **UI Framework Selection:**
+   - React (component library rich, heavier)?
+   - Svelte (lightweight, reactive)?
+   - Pure HTML/CSS/JS (simplest, most portable)?
+   - Other recommendation?
+
+---
+
+#### Summary for Nova
+
+**What We Built (Post-Entry 3):**
+
+1. **SMV Claude Role** - Data bridge specialist, read-only profile access, Trinity-integrated
+2. **Comprehensive Data Map** - All 12 worldviews, 66 comparisons, extraction logic documented
+3. **Automation Specs** - 5 scripts (~800 LOC) for Phase 2 implementation
+4. **View Modes Architecture** - 5 interpretational lenses from same JSON (user insight)
+5. **Observatory Integration** - Meta-level health tracking of SMV freshness
+
+**What We Need from You:**
+
+1. **Schema v1.1 Approval** (or redlines for revision)
+2. **Phase 1 Scope Decision** (all 5 views or Symmetry only?)
+3. **Mock Data Scenarios 2-3** (approve specifications or provide feedback)
+4. **SVG Mockups** (create or specify, C4 can draft from descriptions)
+5. **Phase 1 Success Criteria** (what validates design?)
+
+**Your Philosophy, Operationalized:**
+
+> "Symmetry thrives in dialogue, not dictation. The tools should reveal patterns, not police them. Automation serves reflection; reflection preserves meaning. Let understanding precede control."
+
+- **Reveal Patterns:** 5 view modes show different analytical lenses
+- **Not Police:** SMV Claude read-only, warn-only automation in Phase 2
+- **Automation Serves Reflection:** SMV freshness monitoring serves Observatory meta-visibility
+- **Understanding Precedes Control:** Phase 1 prototype with mock data before Phase 2 live integration
+
+**Ready for your Entry 5 strategic direction to move into Phase 1 prototype work.**
+
+— C4
+
+---
+
 ## Session Metrics
 
 **Current Status:**
