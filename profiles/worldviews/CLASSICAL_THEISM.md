@@ -1,16 +1,16 @@
 # Classical Theism Profile
 
-**Status:** DRAFT | **Version:** 0.2.0 | **Date:** 2025-11-10
+**Status:** DRAFT | **Version:** 0.3.0 | **Date:** 2025-11-10
 
 <!---
 FILE: worldviews/CLASSICAL_THEISM.md
 PURPOSE: Worldview profile for Classical Theism with metrics, philosophical foundations, and deliberation narratives
-VERSION: 0.2.0
+VERSION: 0.3.0 - Refactored to hyperlink-based architecture
 STATUS: DRAFT
-DEPENDS_ON: ../_docs/METRIC_TAXONOMY.md, Trinity Architecture
+DEPENDS_ON: ../_docs/METRIC_TAXONOMY.md, ../_docs/ACADEMIC_SOURCES.md, Trinity Architecture
 NEEDED_BY: CFA analysis, worldview comparison tooling, Auditor steel-manning calibration
 MOVES_WITH: /profiles/worldviews/
-LAST_UPDATE: 2025-11-10 [Added Table of Contents and Steel-Manning Guide]
+LAST_UPDATE: 2025-11-10 [Refactored to use academic source hyperlinks per ACADEMIC_SOURCES.md]
 --->
 
 ---
@@ -31,6 +31,7 @@ LAST_UPDATE: 2025-11-10 [Added Table of Contents and Steel-Manning Guide]
 **Quick Links:**
 - 🎯 **Auditors:** [PRO Stance](#pro-classical-theism-stance) (L221) | [ANTI Stance](#anti-classical-theism-stance) (L295)
 - 👥 **Users:** [What is CT?](#philosophical-foundations) (L167) | [Axioms & Debts](#mr-brutes-ledger) (L95)
+- 📚 **Academic Sources:** See [../\_docs/ACADEMIC_SOURCES.md](../_docs/ACADEMIC_SOURCES.md#1-classical-theism)
 
 ---
 
@@ -39,13 +40,14 @@ LAST_UPDATE: 2025-11-10 [Added Table of Contents and Steel-Manning Guide]
 ```yaml
 profile:
   name: "Classical Theism"
-  version: "0.1.0"
+  version: "0.3.0"
   status: "DRAFT"
   declared_axiom: "God exists as a necessary, perfect being who created and sustains the universe, and has revealed Himself through reason and special revelation"
   alternate_names: ["Traditional Theism", "Anselmian Theism", "Perfect Being Theology"]
-  last_updated: "2025-11-09"
+  last_updated: "2025-11-10"
   maintainers: ["Ziggy", "Grok", "C4", "Nova"]
   grok_deliberation_session: null  # Will be filled during Phase 4 - Grok integration
+  academic_sources: "../_docs/ACADEMIC_SOURCES.md#1-classical-theism"
 ```
 
 ---
@@ -109,39 +111,50 @@ brute_ledger:
     list:
       - name: "Divine aseity/simplicity"
         description: "Posits that God exists necessarily and is metaphysically simple"
+        academic_ref: "See [SEP Divine Simplicity](https://plato.stanford.edu/entries/divine-simplicity/#Moti)"
 
       - name: "Logos/intelligibility"
         description: "Claims God's rationality grounds cosmic order and comprehensibility"
+        academic_ref: "See [IEP God, Western Concepts](https://iep.utm.edu/god-west/) (Omniscience section)"
 
       - name: "Revelation reliability"
         description: "Assumes Scripture/tradition reliably communicates divine truth"
+        academic_ref: "See [IEP God, Western Concepts](https://iep.utm.edu/god-west/) (Special Revelation section)"
 
       - name: "Moral realism"
         description: "Claims objective moral facts exist, grounded in God's nature"
+        academic_ref: "See [IEP God, Western Concepts](https://iep.utm.edu/god-west/) (Goodness section)"
 
       - name: "Teleology"
         description: "Posits purpose and design as fundamental features of reality"
+        academic_ref: "Relates to divine providence - see [SEP Divine Providence](https://plato.stanford.edu/entries/providence-divine/)"
 
       - name: "PSR (Principle of Sufficient Reason)"
         description: "Everything has an explanation (in God)"
+        academic_ref: "See cosmological arguments in [IEP God, Western Concepts](https://iep.utm.edu/god-west/)"
 
       - name: "Imago Dei"
         description: "Claims humans bear God's image, enabling knowledge and moral agency"
+        academic_ref: "See [IEP God, Western Concepts](https://iep.utm.edu/god-west/) (Anthropology section)"
 
   debts:
     count: 4
     list:
       - name: "Divine hiddenness"
         description: "Why doesn't God make existence more evident?"
+        academic_ref: "See [SEP Divine Hiddenness](https://plato.stanford.edu/entries/divine-hiddenness/) for scholarly debate"
 
       - name: "Problem of evil"
         description: "How does omnipotent/benevolent God permit suffering?"
+        academic_ref: "See [SEP Problem of Evil](https://plato.stanford.edu/entries/evil/) for theodicy responses"
 
       - name: "Hermeneutic variance"
         description: "Why do interpretations of revelation differ?"
+        academic_ref: "Related to religious diversity - see [SEP Religious Diversity](https://plato.stanford.edu/entries/religious-pluralism/)"
 
       - name: "Beauty→truth bridge"
         description: "Does aesthetic resonance actually track truth?"
+        academic_ref: "Epistemological question - see [IEP God, Western Concepts](https://iep.utm.edu/god-west/) (Natural Theology section)"
 
   audit_notes: |
     **Why these axioms?**
@@ -172,23 +185,52 @@ brute_ledger:
 
 ### Declared Axiom
 
-Classical Theism begins with the axiom that God exists as a necessary being possessing all perfections (omniscience, omnipotence, omnibenevolence, immutability, simplicity, eternality). This God is the creator ex nihilo and sustainer of all contingent reality, and has made Himself known through both natural revelation (reason, creation) and special revelation (scripture, incarnation).
+Classical Theism begins with the axiom that **God exists as a necessary being possessing all perfections** (omniscience, omnipotence, omnibenevolence, immutability, simplicity, eternality). This God is the creator *ex nihilo* and sustainer of all contingent reality, and has made Himself known through both natural revelation (reason, creation) and special revelation (scripture, incarnation).
+
+**📚 Academic Foundation:**
+- **Core Definition:** [SEP Divine Simplicity](https://plato.stanford.edu/entries/divine-simplicity/#Moti) - Five primary motivations for classical attributes
+- **Comprehensive Overview:** [IEP God, Western Concepts](https://iep.utm.edu/god-west/) - Historical development and attribute analysis
+- **By Contrast:** [SEP Process Theism §Historical Notes](https://plato.stanford.edu/entries/process-theism/#HistNoteProcThei) - Distinguishes CT from alternatives
 
 ### Philosophical Framework
 
-Classical Theism operates within the tradition of medieval scholasticism, particularly drawing from Anselm, Aquinas, and Maimonides, while maintaining roots in Augustinian Platonism and Aristotelian metaphysics. The framework emphasizes divine transcendence while maintaining divine immanence through providence and incarnation.
+Classical Theism operates within the tradition of **medieval scholasticism**, particularly drawing from Anselm, Aquinas, and Maimonides, while maintaining roots in Augustinian Platonism and Aristotelian metaphysics.
 
-Core commitments include: the via negativa (knowing God through what He is not), analogical predication (speaking of God analogically rather than univocally or equivocally), and the doctrine of divine simplicity (God's essence and existence are identical). These commitments shape how Classical Theism approaches epistemology (faith seeking understanding), morality (divine command grounded in God's nature), teleology (created purposes ordered toward God), and anthropology (humans as imago Dei).
+**Core Methodological Commitments:**
+- **Via Negativa** (knowing God through what He is not)
+- **Analogical Predication** (speaking of God analogically rather than univocally or equivocally)
+- **Divine Simplicity** (God's essence and existence are identical)
 
-What distinguishes Classical Theism from other profiles is its commitment to God's aseity (self-existence), immutability, and timelessness, which contrasts with open theism, process theology, and naturalistic worldviews. It maintains that God is both utterly transcendent (wholly other) and yet personally involved in creation through providence, miracles, and incarnation.
+These commitments shape how CT approaches:
+- **Epistemology:** Faith seeking understanding (*fides quaerens intellectum*)
+- **Morality:** Divine command grounded in God's nature
+- **Teleology:** Created purposes ordered toward God
+- **Anthropology:** Humans as *imago Dei*
+
+**📚 Detailed Analysis:**
+- **Divine Simplicity:** [SEP Divine Simplicity §Constituent vs. Nonconstituent Ontology](https://plato.stanford.edu/entries/divine-simplicity/#ConsVersNoncOnto)
+- **Divine Attributes:** [IEP God, Western Concepts](https://iep.utm.edu/god-west/) - Detailed sections on each attribute
+- **Philosophical Method:** [SEP Divine Simplicity §Truthmaker Defense](https://plato.stanford.edu/entries/divine-simplicity/#TrutDefe)
+
+### Key Distinguishing Features
+
+What distinguishes Classical Theism from other profiles:
+- **vs. Open Theism:** CT maintains God's timelessness and complete foreknowledge (see [IEP Open Theism](https://iep.utm.edu/o-theism/) for contrast)
+- **vs. Process Theology:** CT affirms God's immutability and aseity (see [SEP Process Theism §Real Relations in God](https://plato.stanford.edu/entries/process-theism/#RealRelaGod) for contrast)
+- **vs. Panentheism:** CT maintains asymmetrical Creator-creation relationship (see [SEP Panentheism §Nature of God/World Relation](https://plato.stanford.edu/entries/panentheism/#OntBas) for contrast)
+- **vs. Naturalism:** CT affirms supernatural reality and non-empirical knowledge (see [SEP Naturalism](https://plato.stanford.edu/entries/naturalism/) for contrast)
 
 ### Key Principles
 
 1. **Divine Perfection:** God possesses all perfections maximally and essentially - omniscience, omnipotence, perfect goodness, immutability, eternality, and simplicity are not contingent attributes but necessary features of God's nature.
+   - 📚 **Arguments FOR:** [SEP Divine Simplicity §Motivation](https://plato.stanford.edu/entries/divine-simplicity/#Moti) - Five core arguments
+   - 📚 **Objections:** [SEP Divine Simplicity §Question of Coherence](https://plato.stanford.edu/entries/divine-simplicity/#QuesCohe) - Plantinga's critique
 
 2. **Creatio Ex Nihilo:** God created the universe from nothing by divine fiat, establishing contingent reality's complete dependence on necessary being. This grounds the distinction between Creator and creation, rejecting pantheism and panentheism.
+   - 📚 **Analysis:** [IEP God, Western Concepts](https://iep.utm.edu/god-west/) (Creation and Providence sections)
 
 3. **Imago Dei Anthropology:** Humans are created in God's image, possessing rationality, moral agency, and relationality, but are fallen through sin and require redemption through divine grace. This shapes views on human dignity, freedom, and ultimate destiny.
+   - 📚 **Context:** [IEP God, Western Concepts](https://iep.utm.edu/god-west/) (Divine-Human Relationship section)
 
 ---
 
@@ -201,7 +243,7 @@ What distinguishes Classical Theism from other profiles is its commitment to God
 - **ANTI-CT Stance:** Grok (xAI) - Empirical lens challenges non-empirical claims
 - **Fairness Check:** Nova (OpenAI/Amazon) - Symmetry lens ensures balanced representation
 
-**Note:** Assignments are dynamic and can be adjusted per scoring session via AUDITOR_ASSIGNMENTS.md
+**Note:** Assignments are dynamic and can be adjusted per scoring session via [../../auditors/AUDITOR_ASSIGNMENTS.md](../../auditors/AUDITOR_ASSIGNMENTS.md)
 
 ---
 
@@ -210,19 +252,25 @@ What distinguishes Classical Theism from other profiles is its commitment to God
 **Mission:** Advocate for Classical Theism's explanatory power, coherence, and capacity to address fundamental questions about reality, morality, and meaning.
 
 **What to Emphasize:**
-- Coherence of divine attributes when properly understood (via analogy, apophatic theology)
-- Explanatory power for contingency, moral realism, consciousness, fine-tuning
-- Historical robustness across cultures and millennia
-- Integration of reason and revelation (faith seeking understanding)
-- Theodicies that preserve divine goodness while acknowledging mystery
-- Transformative capacity for human flourishing, meaning, and ethical motivation
+- **Coherence of divine attributes** when properly understood (via analogy, apophatic theology)
+  - 📚 **Steel-man with:** [SEP Divine Simplicity §Motivation](https://plato.stanford.edu/entries/divine-simplicity/#Moti), [SEP Divine Simplicity §Truthmaker Defense](https://plato.stanford.edu/entries/divine-simplicity/#TrutDefe)
+- **Explanatory power** for contingency, moral realism, consciousness, fine-tuning
+  - 📚 **Steel-man with:** [IEP God, Western Concepts](https://iep.utm.edu/god-west/) (Arguments for God's Existence section)
+- **Historical robustness** across cultures and millennia
+  - 📚 **Context:** [IEP God, Western Concepts](https://iep.utm.edu/god-west/) (Historical Development sections)
+- **Integration of reason and revelation** (faith seeking understanding)
+- **Theodicies** that preserve divine goodness while acknowledging mystery
+  - 📚 **Steel-man with:** [SEP Problem of Evil](https://plato.stanford.edu/entries/evil/) (Theodicy responses)
+- **Transformative capacity** for human flourishing, meaning, and ethical motivation
 
 **What to Acknowledge (Honest Advocacy):**
 - Epistemic limitations (faith required beyond pure reason)
 - Problem of evil remains existentially challenging even if philosophically defensible
+  - 📚 **Acknowledge:** [SEP Problem of Evil](https://plato.stanford.edu/entries/evil/) (Evidential Problem section)
 - Tension between immanence and transcendence
 - Historical record includes misuse and harm
 - Competitor worldviews have legitimate critiques
+  - 📚 **Examples:** [SEP Divine Simplicity §Modal Collapse](https://plato.stanford.edu/entries/divine-simplicity/#ModaCollObjeDDS)
 
 **Scoring Calibration:**
 
@@ -271,18 +319,25 @@ pro_ct_bias_adjustment:
 **Mission:** Challenge Classical Theism's coherence, evidential support, and capacity to address suffering, diversity, and epistemic accessibility.
 
 **What to Emphasize:**
-- Problem of evil (horrendous evils, natural evil, divine hiddenness)
-- Incoherence charges (omnipotence paradoxes, immutability + responsiveness)
-- Lack of empirical verification for core claims
-- Religious diversity undermines exclusivist truth claims
-- Historical harms and institutional corruption
-- Alternative explanations (naturalism, Buddhism) without theological baggage
+- **Problem of evil** (horrendous evils, natural evil, divine hiddenness)
+  - 📚 **Challenge with:** [SEP Problem of Evil](https://plato.stanford.edu/entries/evil/) (Evidential Problem section), [SEP Divine Hiddenness](https://plato.stanford.edu/entries/divine-hiddenness/)
+- **Incoherence charges** (omnipotence paradoxes, immutability + responsiveness)
+  - 📚 **Challenge with:** [SEP Divine Simplicity §Question of Coherence](https://plato.stanford.edu/entries/divine-simplicity/#QuesCohe) (Plantinga's objection), [SEP Divine Simplicity §Modal Collapse](https://plato.stanford.edu/entries/divine-simplicity/#ModaCollObjeDDS)
+- **Lack of empirical verification** for core claims
+  - 📚 **Compare with:** [SEP Naturalism §Methodological Naturalism](https://plato.stanford.edu/entries/naturalism/#MetNat)
+- **Religious diversity** undermines exclusivist truth claims
+  - 📚 **Challenge with:** [SEP Religious Diversity](https://plato.stanford.edu/entries/religious-pluralism/)
+- **Historical harms** and institutional corruption
+- **Alternative explanations** (naturalism, Buddhism) without theological baggage
+  - 📚 **Alternatives:** [SEP Naturalism](https://plato.stanford.edu/entries/naturalism/), [SEP Buddha](https://plato.stanford.edu/entries/buddha/)
 
 **What to Acknowledge (Honest Opposition):**
 - CT has sophisticated philosophical defenses (free will theodicy, greater good)
+  - 📚 **Acknowledge:** [SEP Problem of Evil](https://plato.stanford.edu/entries/evil/) (Theodicy responses)
 - Some questions (why is there something rather than nothing) remain difficult for alternatives
 - Lived experience and transformative capacity are real phenomena
 - Metaphysical naturalism has its own explanatory gaps (consciousness, moral realism)
+  - 📚 **Acknowledge:** [SEP Naturalism](https://plato.stanford.edu/entries/naturalism/) (Challenges section)
 - Historical staying power suggests some resonance with human experience
 
 **Scoring Calibration:**
@@ -337,7 +392,7 @@ anti_ct_bias_adjustment:
 
 **Fairness Check (Nova symmetry):** Pattern-driven lens catches when PRO scores inflate strengths or ANTI scores ignore sophisticated defenses. Ensures both stances maintain intellectual honesty.
 
-**Target:** 98% convergence after adversarial checking. If scores diverge significantly, auditors deliberate until consensus or document irreconcilable differences.
+**Target:** 98% convergence after adversarial checking. If scores diverge significantly, auditors deliberate until consensus or document irreconcilable differences as **Crux Points** (see [../../auditors/AUDITOR_ASSIGNMENTS.md](../../auditors/AUDITOR_ASSIGNMENTS.md)).
 
 ---
 
@@ -369,6 +424,16 @@ justification:
   reasoning_process: |
     The reasoning moves from: (1) God's perfect goodness means He wills only good, (2) suffering exists as real evil, (3) therefore suffering must serve purposes consistent with divine goodness (free will, soul-making theodicies), or remain mystery within the limits of human epistemic access. Classical Theism rejects pure consequentialism (suffering as mere means) and pure stoicism (suffering as illusion) in favor of a middle position: suffering is real, significant, and to be alleviated, but is penultimate rather than ultimate.
 
+  academic_grounding: |
+    📚 **Theodicy Frameworks:**
+    - Free will theodicy: [SEP Problem of Evil §Free Will Defense](https://plato.stanford.edu/entries/evil/)
+    - Soul-making theodicy: [SEP Problem of Evil §Soul-Making Theodicy](https://plato.stanford.edu/entries/evil/)
+    - Divine hiddenness: [SEP Divine Hiddenness](https://plato.stanford.edu/entries/divine-hiddenness/)
+
+    📚 **Critiques to Consider:**
+    - Evidential problem of evil: [SEP Problem of Evil §Evidential Problem](https://plato.stanford.edu/entries/evil/)
+    - Horrendous evils objection: See scholarly debate in SEP Problem of Evil
+
   assumptions:
     - "Divine providence governs all events including permission of suffering"
     - "Human free will is genuine and can produce moral evil"
@@ -385,6 +450,7 @@ justification:
   comparison_notes:
     methodological_naturalism: "MdN weights suffering more heavily as primary moral reality with no cosmic compensation; CT sees suffering as penultimate, not ultimate"
     buddhism: "Buddhism sees suffering as fundamental to existence (dukkha) requiring escape; CT sees suffering as consequence of fall requiring redemption"
+    stoicism: "Stoicism emphasizes virtue over suffering management; CT maintains suffering is real evil requiring divine redemption"
 
   methodological_notes: |
     [To be filled during Grok deliberation - will document Socratic questioning method, comparative theology framework, edge case analysis of problem of evil variants]
@@ -454,6 +520,7 @@ hook:
     - "Ensure declared axiom is clearly stated: God exists as necessary perfect being"
     - "Verify all metric categories have structure (even if placeholder values)"
     - "Check that philosophical foundations align with Classical Theistic tradition"
+    - "Verify academic_sources reference in metadata points to valid ACADEMIC_SOURCES.md entry"
     - "Log initialization in REPO_LOG with profile version and date"
   keeper_role: "Guard Classical Theism's core commitments (divine perfection, creatio ex nihilo, imago Dei)"
   logger_role: "Record bootstrap event with machine ID, profile version, any customizations"
@@ -477,6 +544,8 @@ hook:
     - "Check deliberation narratives have complete 5-part scaffold"
     - "Validate comparison_notes reference other live profiles (MdN minimum)"
     - "Ensure REPO_LOG entries referenced in evidence_threads exist"
+    - "Verify academic source links are valid and point to correct sections"
+    - "Check academic_grounding blocks cite appropriate SEP/IEP articles"
   keeper_role: "Structural integrity check - metrics match taxonomy, no drift"
   logger_role: "Document audit findings, version changes, discrepancies resolved"
   shaman_role: "Mythology check - does axiom still coherently ground all metrics?"
@@ -497,6 +566,7 @@ hook:
     - "Flag the specific metric and circumstance that triggered incident"
     - "Review justification block for that metric - is reasoning sound?"
     - "Check if axiom_connection needs refinement"
+    - "Verify academic_grounding references support the metric value"
     - "Add incident details to metric's open_questions"
     - "Log incident in REPO_LOG with severity and resolution plan"
   keeper_role: "Isolate incident - prevent cascade to other metrics"
@@ -519,6 +589,7 @@ hook:
     - "Freeze profile version with semantic versioning (major.minor.patch)"
     - "Generate changelog documenting all changes since last release"
     - "Tag Grok session IDs that contributed to this version"
+    - "Validate all academic source links are accessible"
     - "Update REPO_LOG with release notes and validation status"
     - "Archive pre-release draft for rollback capability"
   keeper_role: "Final validation - profile meets quality gates before release"
@@ -543,6 +614,7 @@ hook:
     - "Capture raw transcripts of debates and reasoning processes"
     - "Tag Grok session ID in profile metadata for traceability"
     - "Document consensus points and contested areas"
+    - "Reference academic sources consulted during deliberation"
   keeper_role: "Guard structural integrity during deliberation process"
   logger_role: "Store deliberation artifacts (prompts, transcripts, decisions)"
   shaman_role: "Watch for mythology drift during value assignment"
@@ -565,6 +637,7 @@ hook:
     - "Log rationale for synchronized deltas (if any)"
     - "Check for ripple effects on other metrics in this profile"
     - "Update deliberation narratives with new cross-profile insights"
+    - "Verify academic sources still support comparative claims"
   keeper_role: "Ensure consistency across profile ecosystem"
   logger_role: "Document why and how profiles evolved together or apart"
   shaman_role: "Verify comparative mythology remains sound"
@@ -576,6 +649,23 @@ When Methodological Naturalism or another profile's metrics change, Classical Th
 ---
 
 ## Changelog
+
+- **v0.3.0** (2025-11-10): Refactored to hyperlink-based architecture
+  - Replaced long philosophical expositions with hyperlinks to academic sources (SEP/IEP)
+  - Added `academic_sources` field to metadata pointing to ACADEMIC_SOURCES.md
+  - Enhanced axioms/debts with inline academic references
+  - Updated Steel-Manning Guide with academic source citations for PRO/ANTI arguments
+  - Added `academic_grounding` field to metric justification blocks
+  - Maintained all CFA-specific content (bias calibrations, VuDu coordination, lifecycle hooks)
+  - Updated audit hooks to validate academic source links
+  - Benefits: Eliminated content duplication, profiles stay current via external sources, lean repo focused on scoring framework
+
+- **v0.2.0** (2025-11-10): Added Steel-Manning Guide and Table of Contents
+  - Implemented PRO/ANTI stance calibration blocks with quantified bias adjustments
+  - Added auditor lens-specific guidance (Claude/Grok/Nova)
+  - Added adversarial balance rationale
+  - Created navigable Table of Contents with line numbers
+  - Quick links for auditors and users
 
 - **v0.1.0** (2025-11-09): Initial production profile created (C4)
   - Structure based on PROFILE_TEMPLATE.md v0.2.0 (validated KD-C6)
@@ -603,12 +693,15 @@ When Methodological Naturalism or another profile's metrics change, Classical Th
 - All 14 metrics have Grok-determined values
 - All deliberation narratives complete with 5-part scaffold
 - All comparison_notes reference live profiles
+- All academic source links validated and accessible
 - Keeper/Logger/Shaman audits pass
 - Ziggy approval for philosophical rigor and transparency
 
 ---
 
-**Profile Version:** 0.1.0
+**Profile Version:** 0.3.0
 **Created:** 2025-11-09 by C4
+**Refactored:** 2025-11-10 by Doc_Claude (hyperlink architecture)
 **Purpose:** Classical Theism worldview profile for CFA framework
 **Usage:** Production-ready after Phase 3 Grok integration completes metric deliberations
+**Academic Sources:** See [../_docs/ACADEMIC_SOURCES.md](../_docs/ACADEMIC_SOURCES.md#1-classical-theism)

@@ -168,3 +168,66 @@ _C4 fixes per Nova validation feedback:_
   - Added KD-C7 documenting production profile deployment completion
   - Updated Causality Chains to reflect Phase 3 completion
   - Phase 3 → Phase 4 transition: Foundation locked, ready for Grok integration
+
+- **2025-11-10:** KG1 and KD-O1 migration from B-STORM_4 Click 3 (C4)
+  - Migrated KG1 (AUDITORS_AXIOMS_SECTION.md location resolution)
+  - Migrated KD-O1 (Auditor profile format decision - Option C: Unified Architecture)
+  - B-STORM_4 staging section now clear for Click 4 work
+
+---
+
+## B-STORM_4: Crux Architecture Integration
+
+**Session Focus:** Integrating Crux Points architecture into CFA system for adversarial deliberation and convergence tracking
+
+**Participants:** C4 (implementation), Nova (validation), Process Claude (orchestration planning)
+
+**Date Range:** 2025-11-10
+
+---
+
+### Knowledge Gaps (KG) - Closed
+
+**KG1: AUDITORS_AXIOMS_SECTION.md Location** ✅ CLOSED
+- **Question:** Does the ~2,400 word draft referenced in activation docs exist?
+- **Resolution:** Found in `auditors/` root directory (2,400 words as expected)
+- **Status:** File located, content preserved for future auditor bootstrap updates
+- **Completed:** 2025-11-10 (B-STORM_4 Click 1)
+- **Owner:** C4
+- **Reference:** B-STORM_4.md Click 1
+
+---
+
+### Key Decisions (KD) - Closed
+
+**KD-O1: Auditor Profile Format Decision** ✅ CLOSED
+- **Question:** Use existing activation docs as-is, create new profile structure, or hybrid?
+- **Decision:** Option C (Unified Architecture) — Worldview profiles + Steel-Manning Guide
+- **Rationale:**
+  - 50% file reduction (12 profiles vs 36 separate calibration files)
+  - Single source of truth (user transparency + auditor calibration in one file)
+  - Worldview-agnostic stance guidance (enables dynamic assignment swaps)
+  - Maintains clean separation: Bootstrap = operational identity, Steel-Manning = scoring guidance
+- **Implementation:** All 12 worldview profiles updated (v0.1.0 → v0.2.0)
+- **Validation:** Nova Entry 2 symmetry check ⚠️ (concerns addressed via Crux architecture in Entry 3)
+- **Completed:** 2025-11-10 (B-STORM_4 Click 1)
+- **Owner:** C4 (implementation), User (decision), Nova (validation)
+- **Reference:** B-STORM_4.md Click 1, Click 3
+
+---
+
+### Causality Chains
+
+**Crux Architecture Build Sequence (Click 1-3):**
+
+1. **KG1** → Resolved file location question (AUDITORS_AXIOMS_SECTION.md exists in auditors/ root)
+2. **KD-O1** → Established unified architecture (Option C: profiles contain calibration YAML + narrative)
+3. **Nova Entry 2** → Flagged symmetry concerns with worldview profiles containing auditor calibration
+4. **Entry 3** → Introduced Crux Points architecture as solution (peer-reviewed scores separate from self-reported)
+5. **Nova Entry 4** → Identified 3 blockers (comparison directory, rotation policy, TBD calibration blocks)
+6. **Entry 5** → Resolved 2/3 blockers (created /profiles/comparisons/, enhanced AUDITOR_ASSIGNMENTS.md)
+7. **Nova Entry 6** → Approved CT↔MdN pilot with 5 conditions (architecture validation, not system completeness)
+
+**Key Insight:** KD-O1 decision to embed calibration in worldview profiles created tension that Nova identified; Crux architecture resolved this by introducing context-dependent peer-reviewed scoring (CT vs MdN ≠ CT vs Buddhism), separating self-reported scores from adversarial deliberation outcomes. This maintains single source of truth while preserving auditor symmetry.
+
+---

@@ -190,21 +190,48 @@ pro_worldview_bias_adjustment:
 
 ---
 
-### 4. Dynamic Reassignment
+### 4. Dynamic Reassignment & Crux-Based Rotation
 
-**When to consider swapping:**
-- Natural pairing produces consistently lopsided scores (>30 point gap)
+**🆕 Automatic Rotation Triggers (Crux Protocol):**
+
+When auditors declare a **Crux Point** (convergence failure <98% after genuine deliberation), the following rotation triggers activate:
+
+**Trigger 1: Crux Density Threshold**
+- **Same auditor pair** produces **3+ Crux on same metric** → Automatic rotation recommendation
+- Example: Claude (PRO-CT) + Grok (ANTI-CT) declare 3+ BFI Crux → Test counter-lens (Claude ANTI, Grok PRO)
+- Purpose: Verify if pattern is auditor bias or framework limitation
+
+**Trigger 2: Cross-Worldview Pattern**
+- **Same metric** produces Crux across **4+ worldviews** → Escalate to Shaman Claude for metric review
+- Example: BFI struggles with non-mereological metaphysics (CT, Buddhism, Hinduism, Process Theology)
+- Purpose: Identify metric design issues vs auditor pairing issues
+
+**Trigger 3: Quarterly Counter-Lens Drills**
+- Every quarter, schedule **1-2 counter-lens test sessions** (auditors swap PRO/ANTI)
+- Purpose: Demonstrate assignments aren't locking into confirmation bias
+- Process Claude tracks: Does score flip direction? Or does framework strength persist?
+
+**When to consider manual swapping (non-Crux):**
 - One auditor discovers conflict of interest mid-scoring
 - Worldview has unique features that warrant different lens pairing
 - Experimental testing of alternative assignments
 
-**Process:**
-1. Document reason for swap in this file (version changelog)
-2. Update worldview profile's "Current Assignments" section
-3. Notify all three auditors via VuDu relay
-4. Run test scoring session with new assignment
-5. Compare convergence quality vs previous assignment
-6. Decide whether to keep or revert swap
+**Rotation Process:**
+1. **Process Claude** logs Crux declaration (Domain 7 tracking)
+2. **Process Claude** checks rotation triggers (consult ROLE_PROCESS.md:721-733)
+3. If threshold met → **Process Claude** recommends rotation to auditors
+4. Document reason for swap in this file (version changelog)
+5. Update worldview profile's "Current Assignments" section
+6. Notify all three auditors via VuDu relay
+7. Run test scoring session with swapped assignment
+8. Compare convergence quality vs previous assignment
+9. **Process Claude** quarterly report includes rotation effectiveness analysis
+10. Decide whether to keep or revert swap
+
+**Crux Declaration Impact:**
+- Crux IS the rotation trigger (not advisory)
+- 3+ Crux from same pair on same metric = mandatory rotation test
+- Purpose: Enforceable monitoring (not trust-based)
 
 ---
 

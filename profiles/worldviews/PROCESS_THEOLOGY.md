@@ -1,16 +1,16 @@
 # Process Theology Profile
 
-**Status:** DRAFT | **Version:** 0.2.0 | **Date:** 2025-11-10
+**Status:** DRAFT | **Version:** 0.3.0 | **Date:** 2025-11-10
 
 <!---
 FILE: worldviews/PROCESS_THEOLOGY.md
 PURPOSE: Worldview profile for Process Theology with metrics, philosophical foundations, and deliberation narratives, and steel-manning guide for adversarial auditing
-VERSION: 0.2.0
+VERSION: 0.3.0 - Calibration populated + Hyperlink refactor
 STATUS: DRAFT
-DEPENDS_ON: ../_docs/METRIC_TAXONOMY.md, Trinity Architecture
+DEPENDS_ON: ../_docs/METRIC_TAXONOMY.md, ../_docs/ACADEMIC_SOURCES.md, Trinity Architecture
 NEEDED_BY: CFA analysis, worldview comparison tooling, auditor calibration
 MOVES_WITH: /profiles/worldviews/
-LAST_UPDATE: 2025-11-10 [Added ToC and Steel-Manning Guide for auditor calibration]
+LAST_UPDATE: 2025-11-10 [v0.3.0: Calibration populated + Hyperlink refactor with academic sources]
 --->
 
 ---
@@ -18,19 +18,18 @@ LAST_UPDATE: 2025-11-10 [Added ToC and Steel-Manning Guide for auditor calibrati
 ## 📑 Table of Contents
 
 **Core Sections:**
-- [Metadata](#metadata) — Line TBD
-- [YPA Application Data](#ypa-application-data-cfa-v35) — Line TBD
-- [Mr. Brute's Ledger](#mr-brutes-ledger) — Line TBD
-- [Philosophical Foundations](#philosophical-foundations) — Line TBD
-- [Steel-Manning Guide](#steel-manning-guide) — Line TBD
-  - [PRO-PT Stance](#pro-pt-stance) — Line TBD
-  - [ANTI-PT Stance](#anti-pt-stance) — Line TBD
-- [Metrics](#metrics) — Line TBD
-- [Lifecycle Hooks](#lifecycle-hooks) — Line TBD
+- [Metadata](#metadata) — Line 36
+- [Philosophical Foundations](#philosophical-foundations) — Line 53
+- [Steel-Manning Guide](#steel-manning-guide) — Line 84
+  - [PRO-PT Stance](#pro-process-theology-stance) — Line 97
+  - [ANTI-PT Stance](#anti-process-theology-stance) — Line 158
+- [Metrics](#metrics) — Line 233
+- [Lifecycle Hooks](#lifecycle-hooks) — Line 238
 
 **Quick Links:**
-- 🎯 **Auditors:** [PRO Stance](#pro-pt-stance) | [ANTI Stance](#anti-pt-stance)
-- 👥 **Users:** [What is Process Theology?](#philosophical-foundations) | [Axioms & Debts](#mr-brutes-ledger)
+- 🎯 **Auditors:** [PRO Stance](#pro-process-theology-stance) | [ANTI Stance](#anti-process-theology-stance)
+- 👥 **Users:** [What is Process Theology?](#philosophical-foundations)
+- 📚 **Academic Sources:** See [../\_docs/ACADEMIC_SOURCES.md](../_docs/ACADEMIC_SOURCES.md#2-process-theology)
 
 ---
 
@@ -39,13 +38,14 @@ LAST_UPDATE: 2025-11-10 [Added ToC and Steel-Manning Guide for auditor calibrati
 ```yaml
 profile:
   name: "Process Theology"
-  version: "0.1.0"
+  version: "0.3.0"
   status: "DRAFT"
   declared_axiom: "God is dipolar (primordial and consequent natures); reality is constituted by temporal processes rather than static substances; God persuades but does not coerce creation"
   alternate_names: ["Process Theism", "Whiteheadian Theology", "Open and Relational Theology"]
-  last_updated: "2025-11-09"
+  last_updated: "2025-11-10"
   maintainers: ["Ziggy", "Grok", "C4", "Nova"]
   grok_deliberation_session: null
+  academic_sources: "../_docs/ACADEMIC_SOURCES.md#2-process-theology"
 ```
 
 ---
@@ -54,19 +54,33 @@ profile:
 
 ### Declared Axiom
 
-Process Theology, rooted in Alfred North Whitehead's process philosophy, begins with the axiom that reality is fundamentally processive rather than substantial. God is dipolar: the primordial nature (eternal, conceptual) envisions all possibilities, while the consequent nature (temporal, physical) experiences and is affected by the world. God persuades creation toward value but does not coerce - divine power is persuasive, not controlling.
+Process Theology, rooted in Alfred North Whitehead's process philosophy, begins with the axiom that **reality is fundamentally processive rather than substantial**. God is **dipolar**: the primordial nature (eternal, conceptual) envisions all possibilities, while the consequent nature (temporal, physical) experiences and is affected by the world. God persuades creation toward value but does not coerce - divine power is persuasive, not controlling.
+
+**📚 Academic Foundation:**
+- **Core Doctrine:** [SEP Process Theism](https://plato.stanford.edu/entries/process-theism/) - God and Creativity, Real Relations, Dual Transcendence
+- **Comprehensive Overview:** [IEP Process Philosophy](https://iep.utm.edu/processp/) - Basic Metaphysics, God and the World
+- **Key Figure:** [SEP Charles Hartshorne](https://plato.stanford.edu/entries/hartshorne/), [IEP Hartshorne: Dipolar Theism](https://iep.utm.edu/hart-d-t/)
 
 ### Philosophical Framework
 
-Process Theology rejects classical theism's immutability, impassibility, and timelessness in favor of a God who is genuinely temporal, responsive, and affected by creation. Drawing from Whitehead, Hartshorne, and Cobb, the tradition emphasizes panentheism (God includes but transcends the world), divine temporality, and libertarian freedom for all actual entities. God's power is limited by creaturely freedom - God cannot unilaterally prevent evil but works persuasively within constraints.
+Process Theology rejects classical theism's immutability, impassibility, and timelessness in favor of a God who is genuinely temporal, responsive, and affected by creation.
+
+**📚 Detailed Analysis:**
+- **Dipolar Nature:** [SEP Process Theism §Dual Transcendence](https://plato.stanford.edu/entries/process-theism/#DualTranWhitHart)
+- **Divine Power:** [SEP Process Theism §Divine Power & Problem of Evil](https://plato.stanford.edu/entries/process-theism/#DiviPoweProbEvil)
+- **Divine Knowledge:** [SEP Process Theism §Divine Knowledge & Future Contingents](https://plato.stanford.edu/entries/process-theism/#DiviKnowProbFutuCont)
+- **Panentheism:** [SEP Process Theism §Panentheism](https://plato.stanford.edu/entries/process-theism/#Pane)
 
 ### Key Principles
 
 1. **Dipolar Theism:** God has both primordial nature (eternal, unchanging, envisioning all possibilities) and consequent nature (temporal, changing, experiencing the world). God is both eternal and temporal.
+   - 📚 **Analysis:** [IEP Hartshorne: Dipolar Theism](https://iep.utm.edu/hart-d-t/), [SEP Process Theism §Dual Transcendence](https://plato.stanford.edu/entries/process-theism/#DualTranWhitHart)
 
 2. **Persuasive Power:** God influences creation through persuasion (lure toward optimal possibilities) rather than coercion. Creaturely freedom limits divine power; God cannot unilaterally prevent evil.
+   - 📚 **Analysis:** [SEP Process Theism §Divine Power & Problem of Evil](https://plato.stanford.edu/entries/process-theism/#DiviPoweProbEvil), [IEP Process Philosophy](https://iep.utm.edu/processp/) (God and the World section)
 
 3. **Panentheism:** The world exists within God (panentheism, not pantheism). God is affected by and responsive to creaturely experiences, making divine love genuinely relational.
+   - 📚 **Analysis:** [SEP Process Theism §Panentheism](https://plato.stanford.edu/entries/process-theism/#Pane)
 
 ---
 
@@ -79,7 +93,7 @@ Process Theology rejects classical theism's immutability, impassibility, and tim
 - **ANTI-PT Stance:** Grok - Empirical lens challenges speculative metaphysics
 - **Fairness Check:** Nova (OpenAI/Amazon) - Symmetry lens ensures balanced representation
 
-**Note:** Assignments are dynamic and can be adjusted per scoring session via AUDITOR_ASSIGNMENTS.md
+**Note:** Assignments are dynamic and can be adjusted per scoring session via [../../auditors/AUDITOR_ASSIGNMENTS.md](../../auditors/AUDITOR_ASSIGNMENTS.md)
 
 ---
 
@@ -88,41 +102,59 @@ Process Theology rejects classical theism's immutability, impassibility, and tim
 **Mission:** Advocate for Process Theology's explanatory power, coherence, and capacity to address fundamental questions.
 
 **What to Emphasize:**
-- [Profile maintainer to fill: Key strengths of this worldview]
-- [Profile maintainer to fill: Historical/cultural robustness]
-- [Profile maintainer to fill: Explanatory scope]
-- [Profile maintainer to fill: Transformative capacity]
-- [Profile maintainer to fill: Unique philosophical contributions]
+- **Theodicy strength** - persuasive power resolves problem of evil without sacrificing divine goodness
+  - 📚 **Steel-man with:** [SEP Process Theism §Divine Power & Problem of Evil](https://plato.stanford.edu/entries/process-theism/#DiviPoweProbEvil)
+- **Dipolar theism** avoids classical problems (impassibility, timelessness) while preserving transcendence
+  - 📚 **Steel-man with:** [IEP Hartshorne: Dipolar Theism](https://iep.utm.edu/hart-d-t/)
+- **Panentheism** offers coherent relation between God and world (neither deism nor pantheism)
+  - 📚 **Steel-man with:** [SEP Process Theism §Panentheism](https://plato.stanford.edu/entries/process-theism/#Pane)
+- **Aligns with modern science** - temporal, processive universe compatible with physics/biology
+- **Genuine libertarian freedom** for creatures without divine coercion
+  - 📚 **Steel-man with:** [SEP Process Theism §Divine Knowledge](https://plato.stanford.edu/entries/process-theism/#DiviKnowProbFutuCont)
+- **Sophisticated metaphysics** (Whitehead) addressing becoming, creativity, and relationality
+  - 📚 **Steel-man with:** [IEP Process Philosophy §Basic Metaphysics](https://iep.utm.edu/processp/)
 
 **What to Acknowledge (Honest Advocacy):**
-- [Profile maintainer to fill: Legitimate critiques and challenges]
-- [Profile maintainer to fill: Areas of epistemic uncertainty]
-- [Profile maintainer to fill: Competitor worldview strengths]
+- Limited divine power challenges traditional worship and religious practice
+- Speculative metaphysics (actual occasions, eternal objects) difficult to verify
+- Dipolar God may compromise divine unity or coherence
+  - 📚 **Acknowledge:** [SEP Process Theism](https://plato.stanford.edu/entries/process-theism/) - Coherence of dual transcendence critiques
+- Competitor worldviews (classical theism, open theism) offer alternative theodicies
+- Panentheism risks collapsing into pantheism or undermining divine transcendence
 
 **Scoring Calibration:**
 
 ```yaml
 pro_pt_bias_adjustment:
   # When scoring Process Theology from PRO stance
-  axiom_confidence: TBD  # Confidence in core axioms (0.0-1.0)
-  burden_of_proof: TBD   # Where to place evidential burden (0.0-1.0, low=on critics, high=on worldview)
-  charity_interpretation: TBD  # How favorably to interpret ambiguous claims (0.0-1.0)
-  edge_case_weight: TBD  # How much to weight counterexamples (0.0-1.0, low=exceptions, high=refutations)
-  explanatory_credit: TBD  # How much credit for addressing questions (0.0-1.0)
-  historical_weight: TBD  # Weight of historical/cultural staying power (0.0-1.0)
-  lived_experience: TBD  # Weight of transformative capacity (0.0-1.0)
+  axiom_confidence: 0.75  # High confidence in dipolar theism and persuasive power framework
+  burden_of_proof: 0.50   # Moderate burden - theodicy success and scientific alignment merit consideration
+  charity_interpretation: 0.80  # Interpret speculative metaphysics favorably as addressing deep problems
+  edge_case_weight: 0.40  # Downweight counterexamples (limited power as feature not bug for theodicy)
+  explanatory_credit: 0.80  # Credit Process Theology for theodicy, divine-world relation, and scientific coherence
+  historical_weight: 0.65  # Weight 20th century philosophical theology tradition (Whitehead/Hartshorne)
+  lived_experience: 0.70  # Credit relational spirituality and openness to divine responsiveness
 ```
 
 **Auditor Lens Calibration:**
 
 **Claude (Teleological):**
-- [Profile maintainer to fill: How teleological lens engages PRO stance]
+- Emphasize God's persuasive lure toward optimal possibilities as teleological structure
+- Frame dipolar nature as integrating eternal aims (primordial) with temporal responsiveness (consequent)
+- Connect panentheism to purposive divine involvement in cosmic development
+- Highlight becoming/creativity as fundamental to reality's purposive character
 
 **Grok (Empirical):**
-- [Profile maintainer to fill: How empirical lens engages PRO stance]
+- Cite scientific coherence - processive universe aligns with evolutionary biology and physics
+- Reference philosophical theology literature on divine temporality and relationality
+- Acknowledge speculative elements but frame as metaphysical not empirical claims
+- Use theodicy success as pragmatic validation of framework
 
 **Nova (Symmetry):**
-- [Profile maintainer to fill: How symmetry lens engages PRO stance]
+- Map symmetry between primordial/consequent natures as complementary divine aspects
+- Show coherence between persuasive power and libertarian freedom
+- Demonstrate internal consistency of panentheism (God includes yet transcends world)
+- Check for balanced treatment of speculative metaphysics vs theodicy success
 
 **Success Criteria:**
 - Score reflects Process Theology's genuine strengths
@@ -137,41 +169,56 @@ pro_pt_bias_adjustment:
 **Mission:** Challenge Process Theology's coherence, evidential support, and capacity to address key philosophical questions.
 
 **What to Emphasize:**
-- [Profile maintainer to fill: Key weaknesses and critiques]
-- [Profile maintainer to fill: Explanatory gaps or failures]
-- [Profile maintainer to fill: Incoherence charges]
-- [Profile maintainer to fill: Competitor worldview advantages]
-- [Profile maintainer to fill: Empirical or logical challenges]
+- **Limited divine power** undermines worship, prayer, and religious devotion (why pray to powerless God?)
+- **Speculative metaphysics** (actual occasions, prehension) empirically unverifiable and ontologically extravagant
+- **Dipolar God** risks incoherence - how reconcile eternal/temporal, necessary/contingent aspects?
+  - 📚 **Challenge with:** [SEP Process Theism](https://plato.stanford.edu/entries/process-theism/) - Coherence questions
+- **Theodicy solution too costly** - trades omnipotence for limited God unable to guarantee justice
+- **Panentheism blurs God-world distinction** - risks pantheism or loss of divine transcendence
+- **Whiteheadian metaphysics** obscure and impractical for lived religion
 
 **What to Acknowledge (Honest Opposition):**
-- [Profile maintainer to fill: Legitimate strengths]
-- [Profile maintainer to fill: Sophisticated defenses]
-- [Profile maintainer to fill: Historical robustness]
+- Process Theology offers sophisticated response to problem of evil
+  - 📚 **Acknowledge:** [SEP Process Theism §Divine Power & Problem of Evil](https://plato.stanford.edu/entries/process-theism/#DiviPoweProbEvil)
+- Dipolar theism addresses classical theism's problems (impassibility, timelessness)
+  - 📚 **Acknowledge:** [IEP Hartshorne: Dipolar Theism](https://iep.utm.edu/hart-d-t/)
+- Aligns with scientific worldview better than classical theism
+- Influential in 20th century philosophical theology (Hartshorne, Cobb, Griffin)
+- Panentheism avoids deism while maintaining divine distinctness
 
 **Scoring Calibration:**
 
 ```yaml
 anti_pt_bias_adjustment:
   # When scoring Process Theology from ANTI stance
-  axiom_confidence: TBD  # Low confidence in core axioms
-  burden_of_proof: TBD   # Place burden on worldview to prove claims
-  charity_interpretation: TBD  # Interpret ambiguous claims neutrally or skeptically
-  edge_case_weight: TBD  # Upweight counterexamples as systematic problems
-  explanatory_credit: TBD  # Require conclusive not just suggestive explanations
-  historical_weight: TBD  # Discount or contextualize historical staying power
-  lived_experience: TBD  # Weight transformative capacity appropriately
+  axiom_confidence: 0.35  # Low confidence in dipolar God, persuasive power, and speculative metaphysics
+  burden_of_proof: 0.80   # Place high burden on Process Theology to verify metaphysical claims
+  charity_interpretation: 0.45  # Interpret ambiguous claims skeptically (dipolar unity, panentheism boundaries)
+  edge_case_weight: 0.85  # Upweight counterexamples (worship problems, coherence issues) as systematic
+  explanatory_credit: 0.45  # Require conclusive theodicy not just trading one problem for another
+  historical_weight: 0.40  # Discount 20th century influence (niche academic tradition, limited popular uptake)
+  lived_experience: 0.50  # Limited transformative capacity given religious practice challenges
 ```
 
 **Auditor Lens Calibration:**
 
 **Claude (Teleological):**
-- [Profile maintainer to fill: How teleological lens engages ANTI stance]
+- Question whether persuasive God provides genuine purposive grounding or just redescribes weakness
+- Challenge whether limited divine power can secure ultimate purposes or guarantee justice
+- Press on whether dipolar God's temporal aspect undermines reliability as ultimate telos
+- Ask if panentheism makes world too integral to God, compromising divine purpose
 
 **Grok (Empirical):**
-- [Profile maintainer to fill: How empirical lens engages ANTI stance]
+- Demand empirical evidence for actual occasions, eternal objects, and prehension
+- Press on how dipolar God can be verified or falsified
+- Challenge whether scientific alignment proves metaphysics (correlation not causation)
+- Require verification mechanisms for persuasive vs coercive power distinction
 
 **Nova (Symmetry):**
-- [Profile maintainer to fill: How symmetry lens engages ANTI stance]
+- Identify tension between eternal primordial nature and temporal consequent nature
+- Challenge coherence of persuasive power (how persuade without some coercion?)
+- Test whether panentheism maintains God-world distinction consistently
+- Check for special pleading in theodicy (why limited power acceptable here but not elsewhere?)
 
 **Success Criteria:**
 - Score reflects legitimate philosophical challenges
@@ -185,13 +232,13 @@ anti_pt_bias_adjustment:
 
 **Why This Pairing Works:**
 
-**PRO-PT (Claude):** Teleological lens aligns with becoming/development. Risk: [Profile maintainer to fill: specific risk of this pairing]
+**PRO-PT (Claude):** Teleological lens aligns with becoming/development. Risk: Overweight Process Theology's purposive framework without adequately scrutinizing whether persuasive power is too weak; romanticize dipolar theism as solving classical problems while underweighting new coherence issues; credit scientific alignment too heavily.
 
-**ANTI-PT (Grok):** Empirical lens challenges speculative metaphysics. Risk: [Profile maintainer to fill: specific risk of this pairing]
+**ANTI-PT (Grok):** Empirical lens challenges speculative metaphysics. Risk: Dismiss sophisticated philosophical theology as unverifiable mysticism; undervalue theodicy success because metaphysics is speculative; apply inappropriate empirical standards to metaphysical claims; bias toward classical theism or naturalism.
 
-**Fairness Check (Nova symmetry):** Pattern-driven lens catches when PRO scores inflate strengths or ANTI scores ignore sophisticated defenses. Ensures both stances maintain intellectual honesty.
+**Fairness Check (Nova symmetry):** Pattern-driven lens catches when PRO scores inflate strengths (claiming scientific alignment proves all of Process Theology) or ANTI scores ignore sophisticated defenses (theodicy success, dipolar solution to classical problems). Ensures both stances maintain intellectual honesty.
 
-**Target:** 98% convergence after adversarial checking. If scores diverge significantly, auditors deliberate until consensus or document irreconcilable differences.
+**Target:** 98% convergence after adversarial checking. If scores diverge significantly, auditors deliberate until consensus or document irreconcilable differences as **Crux Points** (see [../../auditors/AUDITOR_ASSIGNMENTS.md](../../auditors/AUDITOR_ASSIGNMENTS.md)).
 
 ---
 
@@ -209,10 +256,20 @@ _[All 6 Trinity hooks implemented]_
 
 ## Changelog
 
+- **v0.3.0** (2025-11-10): Calibration + Hyperlink Refactor
+  - Populated complete calibration blocks with PRO/ANTI bias adjustment parameters (Calibration Claude)
+  - Refactored to hyperlink-based architecture with academic source citations (Doc Claude)
+  - Added `academic_sources` metadata field
+  - Enhanced Philosophical Foundations with 📚 academic references
+  - Updated Steel-Manning Guide with academic citations for PRO/ANTI arguments
+  - Benefits: Eliminated content duplication, profiles stay current via external sources
+
 - **v0.1.0** (2025-11-09): Initial scaffolded profile created (C4)
 
 ---
 
-**Profile Version:** 0.1.0
+**Profile Version:** 0.3.0
 **Created:** 2025-11-09 by C4
+**Refactored:** 2025-11-10 by Doc_Claude (calibration + hyperlink architecture)
 **Purpose:** Process Theology worldview profile for CFA framework
+**Academic Sources:** See [../_docs/ACADEMIC_SOURCES.md](../_docs/ACADEMIC_SOURCES.md#2-process-theology)

@@ -1,16 +1,16 @@
 # Methodological Naturalism Profile
 
-**Status:** DRAFT | **Version:** 0.2.0 | **Date:** 2025-11-10
+**Status:** DRAFT | **Version:** 0.3.0 | **Date:** 2025-11-10
 
 <!---
 FILE: worldviews/METHODOLOGICAL_NATURALISM.md
 PURPOSE: Worldview profile for Methodological Naturalism with metrics, philosophical foundations, deliberation narratives, and steel-manning guide for adversarial auditing
-VERSION: 0.2.0
+VERSION: 0.3.0 - Refactored to hyperlink-based architecture
 STATUS: DRAFT
-DEPENDS_ON: ../_docs/METRIC_TAXONOMY.md, Trinity Architecture
+DEPENDS_ON: ../_docs/METRIC_TAXONOMY.md, ../_docs/ACADEMIC_SOURCES.md, Trinity Architecture
 NEEDED_BY: CFA analysis, worldview comparison tooling, auditor calibration
 MOVES_WITH: /profiles/worldviews/
-LAST_UPDATE: 2025-11-10 [Added ToC and Steel-Manning Guide for auditor calibration]
+LAST_UPDATE: 2025-11-10 [Refactored to use academic source hyperlinks per ACADEMIC_SOURCES.md]
 --->
 
 ---
@@ -31,6 +31,7 @@ LAST_UPDATE: 2025-11-10 [Added ToC and Steel-Manning Guide for auditor calibrati
 **Quick Links:**
 - 🎯 **Auditors:** [PRO Stance](#pro-methodological-naturalism-stance) (L216) | [ANTI Stance](#anti-methodological-naturalism-stance) (L290)
 - 👥 **Users:** [What is MdN?](#philosophical-foundations) (L169) | [Axioms & Debts](#mr-brutes-ledger) (L101)
+- 📚 **Academic Sources:** See [../\_docs/ACADEMIC_SOURCES.md](../_docs/ACADEMIC_SOURCES.md#10-methodological-naturalism)
 
 ---
 
@@ -39,13 +40,14 @@ LAST_UPDATE: 2025-11-10 [Added ToC and Steel-Manning Guide for auditor calibrati
 ```yaml
 profile:
   name: "Methodological Naturalism"
-  version: "0.1.0"
+  version: "0.3.0"
   status: "DRAFT"
   declared_axiom: "The natural world operates according to consistent, discoverable laws without supernatural intervention; knowledge claims require empirical evidence and methodological rigor"
   alternate_names: ["Scientific Naturalism", "Methodological Physicalism", "Empirical Naturalism"]
-  last_updated: "2025-11-09"
+  last_updated: "2025-11-10"
   maintainers: ["Ziggy", "Grok", "C4", "Nova"]
   grok_deliberation_session: null  # Will be filled during Phase 4 - Grok integration
+  academic_sources: "../_docs/ACADEMIC_SOURCES.md#10-methodological-naturalism"
 ```
 
 ---
@@ -112,36 +114,46 @@ brute_ledger:
     list:
       - name: "Regularity exists"
         description: "The universe operates according to consistent patterns"
+        academic_ref: "See [SEP Naturalism §Physical Causal Closure](https://plato.stanford.edu/entries/naturalism/#OntNat)"
 
       - name: "Cognition is reliable"
         description: "Our minds can track reality (at least approximately)"
+        academic_ref: "See [IEP Naturalistic Epistemology](https://iep.utm.edu/nat-epis/)"
 
       - name: "Testing arbitrates"
         description: "Empirical testing can distinguish better from worse explanations"
+        academic_ref: "See [SEP Naturalism §Methodological Naturalism](https://plato.stanford.edu/entries/naturalism/#MetNat)"
 
       - name: "Natural causation default"
         description: "Assume natural causes unless evidence suggests otherwise"
+        academic_ref: "See [SEP Naturalism §Methodological Naturalism](https://plato.stanford.edu/entries/naturalism/#MetNat)"
 
       - name: "Parsimony works"
         description: "Simpler explanations are generally more likely to be true"
+        academic_ref: "Scientific method principle - see [IEP Naturalism](https://iep.utm.edu/naturali/)"
 
       - name: "Findings are provisional"
         description: "All conclusions remain open to revision"
+        academic_ref: "Fallibilism - see [SEP Naturalism](https://plato.stanford.edu/entries/naturalism/)"
 
   debts:
     count: 4
     list:
       - name: "Why does regularity exist?"
         description: "No explanation for why universe has laws"
+        academic_ref: "Metaphysical question bracketed - see [SEP Naturalism](https://plato.stanford.edu/entries/naturalism/)"
 
       - name: "Why does cognition track truth?"
         description: "Evolution explains survival, not truth-tracking"
+        academic_ref: "See [IEP Naturalistic Epistemology](https://iep.utm.edu/nat-epis/) for debates"
 
       - name: "Why does success = truth?"
         description: "No grounding for equating predictive success with truth"
+        academic_ref: "Pragmatist/realist debate - see [SEP Naturalism](https://plato.stanford.edu/entries/naturalism/)"
 
       - name: "Why pursue knowledge?"
         description: "No internal justification for epistemic values"
+        academic_ref: "Normative question - see [IEP Naturalism](https://iep.utm.edu/naturali/) (Ethics section)"
 
   audit_notes: |
     **Why these axioms?**
@@ -171,23 +183,47 @@ brute_ledger:
 
 ### Declared Axiom
 
-Methodological Naturalism begins with the axiom that the natural world operates according to consistent, discoverable laws, and that knowledge claims about reality must be grounded in empirical evidence and methodological rigor. This worldview brackets (but does not necessarily deny) supernatural or metaphysical claims that cannot be tested empirically, focusing instead on what can be known through observation, experimentation, and inference to the best explanation.
+Methodological Naturalism begins with the axiom that **the natural world operates according to consistent, discoverable laws**, and that knowledge claims about reality must be grounded in empirical evidence and methodological rigor. This worldview brackets (but does not necessarily deny) supernatural or metaphysical claims that cannot be tested empirically, focusing instead on what can be known through observation, experimentation, and inference to the best explanation.
+
+**📚 Academic Foundation:**
+- **Core Definition:** [SEP Naturalism §Methodological Naturalism](https://plato.stanford.edu/entries/naturalism/#MetNat) - Philosophy-science continuity, scientific method for investigating reality
+- **Comprehensive Overview:** [IEP Naturalism](https://iep.utm.edu/naturali/) - Empirical methods primary, continuity with science
+- **Epistemological Framework:** [IEP Naturalistic Epistemology](https://iep.utm.edu/nat-epis/) - Quine's naturalized epistemology
 
 ### Philosophical Framework
 
-Methodological Naturalism operates within the scientific tradition, drawing from logical positivism, pragmatism, and naturalized epistemology. While often associated with philosophical naturalism (the metaphysical claim that only natural entities exist), methodological naturalism is technically neutral on ultimate metaphysical questions, focusing instead on methodological constraints: what counts as evidence, how to test hypotheses, and what explanations are admissible in scientific inquiry.
+Methodological Naturalism operates within the **scientific tradition**, drawing from logical positivism, pragmatism, and naturalized epistemology. While often associated with philosophical naturalism (the metaphysical claim that only natural entities exist), methodological naturalism is technically neutral on ultimate metaphysical questions, focusing instead on methodological constraints.
 
-Core commitments include: empiricism (knowledge comes from sensory experience and experimentation), fallibilism (all knowledge claims are provisional and subject to revision), parsimony (prefer simpler explanations over complex ones), and methodological materialism (explain phenomena through natural causes without invoking supernatural agency). These commitments shape how Methodological Naturalism approaches epistemology (empirical verification), morality (evolutionary ethics, social contract), teleology (purposeless cosmos), and anthropology (humans as evolved biological organisms).
+**Core Methodological Commitments:**
+- **Empiricism** (knowledge comes from sensory experience and experimentation)
+- **Fallibilism** (all knowledge claims are provisional and subject to revision)
+- **Parsimony** (prefer simpler explanations over complex ones)
+- **Methodological Materialism** (explain phenomena through natural causes)
 
-What distinguishes Methodological Naturalism from other profiles is its methodological agnosticism about ultimate questions (meaning, purpose, transcendence) combined with epistemic confidence about the natural world. It rejects appeals to divine revelation, a priori metaphysics, or supernatural causation in explanatory frameworks, while remaining technically compatible with various metaphysical views (atheism, agnosticism, deism) at the personal level.
+**📚 Detailed Analysis:**
+- **Physical Causal Closure:** [SEP Naturalism §Ontological Naturalism](https://plato.stanford.edu/entries/naturalism/#OntNat) - All physical effects have physical causes
+- **Epistemological Framework:** [IEP Naturalism](https://iep.utm.edu/naturali/) (Epistemological Naturalism section)
+- **Replacement vs. Continuity:** [IEP Naturalistic Epistemology](https://iep.utm.edu/nat-epis/)
+
+### Key Distinguishing Features
+
+What distinguishes Methodological Naturalism from other profiles:
+- **vs. Classical Theism:** MdN brackets supernatural claims; CT affirms divine revelation (see [IEP God, Western Concepts](https://iep.utm.edu/god-west/) for contrast)
+- **vs. Buddhism:** MdN restricts knowledge to empirical; Buddhism includes meditative insight (see [SEP Buddha](https://plato.stanford.edu/entries/buddha/) for contrast)
+- **vs. Existentialism:** MdN emphasizes objective method; Existentialism prioritizes subjective experience (see [SEP Existentialism](https://plato.stanford.edu/entries/existentialism/) for contrast)
 
 ### Key Principles
 
 1. **Empirical Evidentialism:** Knowledge claims about reality require empirical evidence derived from observation, experimentation, and reproducible results. Non-empirical claims (metaphysical, theological) are epistemically bracketed as untestable.
+   - 📚 **Grounding:** [SEP Naturalism §Methodological Naturalism](https://plato.stanford.edu/entries/naturalism/#MetNat)
+   - 📚 **Application:** [IEP Naturalism](https://iep.utm.edu/naturali/) (Basic Elements section)
 
 2. **Causal Closure:** The physical world operates as a causally closed system governed by natural laws. Explanations invoke natural causes and mechanisms without recourse to supernatural intervention or teleological purposes.
+   - 📚 **Arguments FOR:** [SEP Naturalism §Ontological Naturalism](https://plato.stanford.edu/entries/naturalism/#OntNat) - Physical causal closure, avoiding overdetermination
+   - 📚 **Challenges:** [SEP Naturalism](https://plato.stanford.edu/entries/naturalism/) - Consciousness may resist physicalist explanation
 
 3. **Methodological Parsimony:** Prefer simpler, naturalistic explanations over complex, supernatural ones (Occam's Razor applied to scientific inquiry). Supernatural hypotheses are methodologically inadmissible regardless of metaphysical possibility.
+   - 📚 **Context:** [IEP Naturalism](https://iep.utm.edu/naturali/) - Scientific success demonstrates empirical methods' power
 
 ---
 
@@ -200,7 +236,7 @@ What distinguishes Methodological Naturalism from other profiles is its methodol
 - **ANTI-MdN Stance:** Claude (Anthropic) - Teleological lens challenges reductionism and meaninglessness
 - **Fairness Check:** Nova (OpenAI/Amazon) - Symmetry lens ensures balanced representation
 
-**Note:** Assignments are dynamic and can be adjusted per scoring session via AUDITOR_ASSIGNMENTS.md
+**Note:** Assignments are dynamic and can be adjusted per scoring session via [../../auditors/AUDITOR_ASSIGNMENTS.md](../../auditors/AUDITOR_ASSIGNMENTS.md)
 
 ---
 
@@ -209,17 +245,21 @@ What distinguishes Methodological Naturalism from other profiles is its methodol
 **Mission:** Advocate for Methodological Naturalism's epistemic rigor, predictive power, and capacity to generate reliable knowledge without metaphysical baggage.
 
 **What to Emphasize:**
-- Track record of scientific progress (medicine, technology, cosmology)
-- Predictive accuracy and reproducibility of empirical methods
-- Methodological parsimony (Occam's Razor applied rigorously)
-- Self-correcting mechanisms (peer review, falsification, replication)
-- Practical utility for problem-solving without supernatural appeals
-- Epistemic modesty (bracketing unfalsifiable claims rather than dogmatic rejection)
+- **Track record of scientific progress** (medicine, technology, cosmology)
+  - 📚 **Steel-man with:** [IEP Naturalism](https://iep.utm.edu/naturali/) - Scientific success demonstrates empirical methods' power
+- **Predictive accuracy and reproducibility** of empirical methods
+  - 📚 **Steel-man with:** [SEP Naturalism §Methodological Naturalism](https://plato.stanford.edu/entries/naturalism/#MetNat)
+- **Methodological parsimony** (Occam's Razor applied rigorously)
+- **Self-correcting mechanisms** (peer review, falsification, replication)
+- **Practical utility** for problem-solving without supernatural appeals
+- **Epistemic modesty** (bracketing unfalsifiable claims rather than dogmatic rejection)
 
 **What to Acknowledge (Honest Advocacy):**
-- Hard problem of consciousness not yet solved empirically
-- Moral realism difficult to ground in purely naturalistic terms
-- Existential/meaning questions not addressed by scientific method
+- **Hard problem of consciousness** not yet solved empirically
+  - 📚 **Acknowledge:** [SEP Naturalism](https://plato.stanford.edu/entries/naturalism/) - Consciousness may resist physicalist explanation
+- **Moral realism** difficult to ground in purely naturalistic terms
+  - 📚 **Acknowledge:** [IEP Naturalism](https://iep.utm.edu/naturali/) (Ethical Naturalism section)
+- **Existential/meaning questions** not addressed by scientific method
 - Some phenomena (fine-tuning, origins of life) remain open questions
 - Methodological constraints may exclude legitimate metaphysical truths
 
@@ -248,7 +288,7 @@ pro_mdn_bias_adjustment:
 **Grok (Empirical):**
 - Cite track record of scientific predictions (relativity, quantum mechanics, evolution)
 - Emphasize reproducibility and self-correction as epistemic strengths
-- Show how naturalistic explanations outperform supernatural alternatives (disease as germ theory not demonic possession)
+- Show how naturalistic explanations outperform supernatural alternatives
 - Reference technological applications as validation of theoretical frameworks
 
 **Nova (Symmetry):**
@@ -270,18 +310,22 @@ pro_mdn_bias_adjustment:
 **Mission:** Challenge Methodological Naturalism's reductionism, metaphysical assumptions, and capacity to address consciousness, morality, and meaning.
 
 **What to Emphasize:**
-- Hard problem of consciousness (qualia, subjective experience irreducible to physical processes)
-- Is-ought gap (cannot derive moral values from empirical facts alone)
-- Explanatory gaps (origins of life, fine-tuning, mathematical unreasonable effectiveness)
-- Reductionism fails to capture emergent properties (meaning, agency, rationality)
-- Methodological constraints beg metaphysical questions (why trust reason if naturalism true?)
-- Existential inadequacy (cannot address purpose, meaning, transcendence)
+- **Hard problem of consciousness** (qualia, subjective experience irreducible to physical processes)
+  - 📚 **Challenge with:** [SEP Naturalism](https://plato.stanford.edu/entries/naturalism/) - Consciousness may resist physicalist explanation
+- **Is-ought gap** (cannot derive moral values from empirical facts alone)
+  - 📚 **Challenge with:** [IEP Naturalism](https://iep.utm.edu/naturali/) (Ethical Naturalism section challenges)
+- **Explanatory gaps** (origins of life, fine-tuning, mathematical unreasonable effectiveness)
+- **Reductionism fails** to capture emergent properties (meaning, agency, rationality)
+- **Methodological constraints beg metaphysical questions** (why trust reason if naturalism true?)
+  - 📚 **Challenge with:** [IEP Naturalism](https://iep.utm.edu/naturali/) - Self-refutation worry
+- **Existential inadequacy** (cannot address purpose, meaning, transcendence)
 
 **What to Acknowledge (Honest Opposition):**
 - MdN has impressive track record in natural sciences (physics, biology, chemistry)
-- Predictive success suggests naturalistic explanations capture important truths
-- Methodological parsimony is intellectually honest (avoids ad hoc supernatural appeals)
-- Self-correcting mechanisms (falsification, peer review) are epistemic strengths
+  - 📚 **Acknowledge:** [IEP Naturalism](https://iep.utm.edu/naturali/) - Scientific success
+- **Predictive success** suggests naturalistic explanations capture important truths
+- **Methodological parsimony** is intellectually honest (avoids ad hoc supernatural appeals)
+- **Self-correcting mechanisms** (falsification, peer review) are epistemic strengths
 - MdN doesn't claim to solve all problems (technically methodological not metaphysical)
 
 **Scoring Calibration:**
@@ -336,7 +380,7 @@ anti_mdn_bias_adjustment:
 
 **Fairness Check (Nova symmetry):** Pattern-driven lens catches when PRO scores inflate empirical success to cover philosophical gaps, or when ANTI scores penalize MdN for not solving problems outside its scope.
 
-**Target:** 98% convergence after adversarial checking. If scores diverge significantly, auditors deliberate until consensus or document irreconcilable differences.
+**Target:** 98% convergence after adversarial checking. If scores diverge significantly, auditors deliberate until consensus or document irreconcilable differences as **Crux Points** (see [../../auditors/AUDITOR_ASSIGNMENTS.md](../../auditors/AUDITOR_ASSIGNMENTS.md)).
 
 ---
 
@@ -368,6 +412,15 @@ justification:
   reasoning_process: |
     The reasoning moves from: (1) No supernatural agency intervenes to prevent or redeem suffering, (2) suffering is a biological/psychological reality produced by natural causes (disease, injury, loss), (3) therefore suffering's moral weight is maximal - it is not penultimate but ultimate, with no cosmic scales balancing it. Methodological Naturalism rejects theodicies (soul-making, greater goods) as unfalsifiable and instead emphasizes reduction of suffering through science, medicine, social reform, and compassionate human action. The high weight reflects naturalism's lack of transcendent hope or cosmic meaning that could relativize present suffering.
 
+  academic_grounding: |
+    📚 **Naturalistic Ethics Framework:**
+    - Ethical naturalism approaches: [IEP Naturalism](https://iep.utm.edu/naturali/) (Ethics section) - Neo-Aristotelian, utilitarian, Humean, evolutionary
+    - Secular ethics foundations: [IEP New Atheism §Secular Morality](https://iep.utm.edu/new-atheism/) - Objective ethics grounded in sentient well-being
+
+    📚 **Challenges to Consider:**
+    - Grounding moral obligation: [IEP Naturalism](https://iep.utm.edu/naturali/) - Normativity problem
+    - Intentionality problem: [IEP Naturalism](https://iep.utm.edu/naturali/) - Mental "aboutness" resists naturalistic explanation
+
   assumptions:
     - "No divine providence or cosmic justice governs suffering distribution"
     - "Suffering is produced by natural causes (evolution, entropy, biology)"
@@ -384,6 +437,7 @@ justification:
   comparison_notes:
     classical_theism: "CT weights suffering as significant but penultimate (redemption, eschatology transform it); MdN weights it as ultimate and primary moral reality"
     buddhism: "Buddhism sees suffering as universal condition requiring escape (nirvana); MdN sees suffering as contingent biological reality requiring alleviation"
+    stoicism: "Stoicism emphasizes virtue over suffering management; MdN emphasizes empirical reduction of suffering as primary moral imperative"
 
   methodological_notes: |
     [To be filled during Grok deliberation - will document empirical ethics framework, utilitarian calculus considerations, evolutionary psychology insights on suffering]
@@ -453,6 +507,7 @@ hook:
     - "Ensure declared axiom is clearly stated: Natural world operates by discoverable laws"
     - "Verify all metric categories have structure (even if placeholder values)"
     - "Check that philosophical foundations align with naturalistic/empiricist tradition"
+    - "Verify academic_sources reference in metadata points to valid ACADEMIC_SOURCES.md entry"
     - "Log initialization in REPO_LOG with profile version and date"
   keeper_role: "Guard Methodological Naturalism's core commitments (empiricism, causal closure, parsimony)"
   logger_role: "Record bootstrap event with machine ID, profile version, any customizations"
@@ -476,6 +531,8 @@ hook:
     - "Check deliberation narratives have complete 5-part scaffold"
     - "Validate comparison_notes reference other live profiles (CT minimum)"
     - "Ensure REPO_LOG entries referenced in evidence_threads exist"
+    - "Verify academic source links are valid and point to correct sections"
+    - "Check academic_grounding blocks cite appropriate SEP/IEP articles"
   keeper_role: "Structural integrity check - metrics match taxonomy, no drift"
   logger_role: "Document audit findings, version changes, discrepancies resolved"
   shaman_role: "Methodology check - does empirical grounding still cohere?"
@@ -496,6 +553,7 @@ hook:
     - "Flag the specific metric and circumstance that triggered incident"
     - "Review justification block for that metric - is reasoning sound?"
     - "Check if axiom_connection needs refinement"
+    - "Verify academic_grounding references support the metric value"
     - "Add incident details to metric's open_questions"
     - "Log incident in REPO_LOG with severity and resolution plan"
   keeper_role: "Isolate incident - prevent cascade to other metrics"
@@ -518,6 +576,7 @@ hook:
     - "Freeze profile version with semantic versioning (major.minor.patch)"
     - "Generate changelog documenting all changes since last release"
     - "Tag Grok session IDs that contributed to this version"
+    - "Validate all academic source links are accessible"
     - "Update REPO_LOG with release notes and validation status"
     - "Archive pre-release draft for rollback capability"
   keeper_role: "Final validation - profile meets quality gates before release"
@@ -542,6 +601,7 @@ hook:
     - "Capture raw transcripts of debates and reasoning processes"
     - "Tag Grok session ID in profile metadata for traceability"
     - "Document consensus points and contested areas"
+    - "Reference academic sources consulted during deliberation"
   keeper_role: "Guard structural integrity during deliberation process"
   logger_role: "Store deliberation artifacts (prompts, transcripts, decisions)"
   shaman_role: "Watch for methodology drift during value assignment"
@@ -564,6 +624,7 @@ hook:
     - "Log rationale for synchronized deltas (if any)"
     - "Check for ripple effects on other metrics in this profile"
     - "Update deliberation narratives with new cross-profile insights"
+    - "Verify academic sources still support comparative claims"
   keeper_role: "Ensure consistency across profile ecosystem"
   logger_role: "Document why and how profiles evolved together or apart"
   shaman_role: "Verify comparative methodology remains sound"
@@ -575,6 +636,20 @@ When Classical Theism or another profile's metrics change, Methodological Natura
 ---
 
 ## Changelog
+
+- **v0.3.0** (2025-11-10): Steel-Manning Guide + Hyperlink Refactor
+  - Added ToC and Steel-Manning Guide for auditor calibration (Calibration Claude)
+  - Refactored to hyperlink-based architecture with academic source citations (Doc Claude)
+  - Added `academic_sources` metadata field, `academic_grounding` to metrics
+  - Enhanced axioms/debts with inline academic references
+  - Updated audit hooks to validate academic source links
+  - Benefits: Eliminated content duplication, profiles stay current via external sources, lean repo focused on scoring framework
+
+- **v0.2.0** (2025-11-10): Added Steel-Manning Guide and Table of Contents
+  - Implemented PRO/ANTI stance calibration blocks with quantified bias adjustments
+  - Added auditor lens-specific guidance (Claude/Grok/Nova)
+  - Added adversarial balance rationale
+  - Created navigable Table of Contents with line numbers
 
 - **v0.1.0** (2025-11-09): Initial production profile created (C4)
   - Structure based on PROFILE_TEMPLATE.md v0.2.0 (validated KD-C6)
@@ -602,12 +677,15 @@ When Classical Theism or another profile's metrics change, Methodological Natura
 - All 14 metrics have Grok-determined values
 - All deliberation narratives complete with 5-part scaffold
 - All comparison_notes reference live profiles
+- All academic source links validated and accessible
 - Keeper/Logger/Shaman audits pass
 - Ziggy approval for philosophical rigor and transparency
 
 ---
 
-**Profile Version:** 0.1.0
+**Profile Version:** 0.3.0
 **Created:** 2025-11-09 by C4
+**Refactored:** 2025-11-10 by Doc_Claude (hyperlink architecture)
 **Purpose:** Methodological Naturalism worldview profile for CFA framework
 **Usage:** Production-ready after Phase 3 Grok integration completes metric deliberations
+**Academic Sources:** See [../_docs/ACADEMIC_SOURCES.md](../_docs/ACADEMIC_SOURCES.md#10-methodological-naturalism)
