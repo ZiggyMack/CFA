@@ -2,13 +2,13 @@
 FILE: B-STORM_5.md
 PURPOSE: B-STORM session for Future Expansion cleanup + Active_Tasks resolution before CT↔MdN pilot launch
 VERSION: 1.0.0
-STATUS: Active (Click 1 initiated)
+STATUS: Active (Click 1 complete, awaiting Nova Entry 2)
 SESSION_FOCUS: Complete Future_Expansion.md Tier 1-3 tasks + clear Active_Tasks backlog
 PARTICIPANTS: C4 (implementation), Nova (validation), User (decision authority)
 DEPENDS_ON: docs/architecture/Future_Expansion.md, auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/
 RELATED_SESSIONS: B-STORM_4.md (CT↔MdN pilot prep), B-STORM_3.md (profile architecture)
 CREATED: 2025-11-10
-LAST_UPDATE: 2025-11-10 [Session initiated]
+LAST_UPDATE: 2025-11-10 [Click 1 complete]
 --->
 
 # B-STORM_5: Future Expansion Cleanup & Pilot Prep
@@ -63,16 +63,16 @@ _None - All Click 1 KDs closed_
 
 ### Recently Completed
 
-**KG1: Active_Tasks Disposition Strategy** ✅ CLOSED (Entry 2)
-- **Resolution:** Axioms reviews stay (Phase 4 work for Grok/Nova arrival), SMV tasks move to B-STORM_5 discussion, README audit deferred
+**KG1: Active_Tasks Disposition Strategy** ✅ CLOSED (Entry 1)
+- **Resolution:** Axioms reviews stay (Phase 4 work for Grok/Nova arrival), SMV tasks for Nova briefing, README audit deferred
 - **Completed:** 2025-11-10 (Click 1)
 
-**KD-O1: Future_Expansion Task Priority Order** ✅ CLOSED (Entry 2)
+**KD-O1: Future_Expansion Task Priority Order** ✅ CLOSED (Entry 1)
 - **Decision:** Tier 1 Full + Tier 2 Light (Costume Room + Observatory + Destroyer Claude + Training Grounds)
 - **Rationale:** Skip automation (no pain yet), focus on immediate-value polish
 - **Completed:** 2025-11-10 (Click 1)
 
-**KD-O2: Innovation Showcase Timing** ✅ CLOSED (Entry 2)
+**KD-O2: Innovation Showcase Timing** ✅ CLOSED (Entry 1)
 - **Decision:** Seed now with placeholder structure (pages/Showcase.py)
 - **Approach:** Gallery landing page in CFA repo, actual idea repos separate
 - **Completed:** 2025-11-10 (Click 1)
@@ -81,19 +81,19 @@ _None - All Click 1 KDs closed_
 
 ## Session Log
 
-### Entry 1: C4 Session Kickoff + Scope Assessment
+### Entry 1: C4 Click 1 — Scope Assessment + Tier 1 Complete
 
-**Summary:** B-STORM_5 initiated to clean up Future_Expansion backlog + Active_Tasks before CT↔MdN pilot launch.
+**Summary:** B-STORM_5 Click 1 executed: User decisions captured, Tier 1 expansion complete (Costume Room + Observatory), Nova briefed on SMV tasks. Handoff to Nova for Entry 2 validation.
 
 ---
+
+## 1. Scope Assessment + User Decisions
 
 **Current State Assessment:**
 
 **1. Future_Expansion.md Status (v1.1):**
 
-From [docs/architecture/Future_Expansion.md](../../docs/architecture/Future_Expansion.md):
-
-**Completed (6/11 rooms - 55%):**
+**Completed Before B-STORM_5 (6/11 rooms - 55%):**
 - ✅ Map Room (Dependency Tracking)
 - ✅ Library (Documentation Standards)
 - ✅ Archives (Review & Memory)
@@ -106,175 +106,68 @@ From [docs/architecture/Future_Expansion.md](../../docs/architecture/Future_Expa
 - ⏳ **Observatory** (Metrics & Dashboards) - Tier 1, 60 min, HIGH value
 - ⏳ **Workshop** (Automation & Tools) - Tier 2, 3-4 hours, MEDIUM value
 - ⏳ **Training Grounds** (Skill Development) - Tier 2, 2-3 hours, MEDIUM value
-- ⏳ **Vault** (Security Policy) - Tier 3, 1-2 hours, LOWER value (but important)
+- ⏳ **Vault** (Security Policy) - Tier 3, 1-2 hours, LOWER value
 
-**Phase 4 Proposed (not yet committed):**
+**Phase 4 Proposed:**
 - ⏳ **Destroyer Claude** (Room 6) - Log management & archival
 - ⏳ **Innovation Showcase** (Room 7) - Success stories gallery
 
 ---
 
-**2. Active_Tasks Directory Status:**
+**2. Active_Tasks Directory Assessment:**
 
-From [auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/](../../auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/):
-
-**Current Active Tasks (7 files):**
+**Current Active Tasks (7 files scanned):**
 
 1. **README.md** - Directory documentation (keep)
-2. **TASK_BRIEF_AXIOMS_REVIEW_GROK.md** - Phase 4 axioms review (Grok)
-3. **TASK_BRIEF_AXIOMS_REVIEW_NOVA.md** - Phase 4 axioms review (Nova)
+2. **TASK_BRIEF_AXIOMS_REVIEW_GROK.md** - Review AUDITORS_AXIOMS_SECTION.md from empirical lens (standalone Phase 4 work)
+3. **TASK_BRIEF_AXIOMS_REVIEW_NOVA.md** - Review AUDITORS_AXIOMS_SECTION.md from symmetry lens (standalone Phase 4 work)
 4. **TASK_SYMMETRY_MATRIX_VISUALIZER_CLAUDE_v2.md** - SMV visualization tool (Nova co-design, NOVA_PENDING)
 5. **TASK_ETHICAL_INVARIANT_INTEGRATION_CLAUDE_v2.md** - Related to SMV (likely NOVA_PENDING)
-6. **TASK_BRIEF_README_AUDIT.md** - Documentation quality check
+6. **TASK_BRIEF_README_AUDIT.md** - Documentation quality check (defer to end)
 7. **PILOT_CT_vs_MdN_Re-Audit.md** - Just created in B-STORM_4 (keep active)
 
-**Disposition Question (KG1):**
-- **Keep Active:** PILOT_CT_vs_MdN_Re-Audit.md (immediate priority after B-STORM_5)
-- **Archive?** Axioms reviews (Phase 4 work, depends on when Grok/Nova activated)
-- **Hold?** SMV + Ethical Invariant (Nova PENDING, tied to her activation)
-- **Complete?** README_AUDIT (may be quick win if needed for Costume Room examples)
+**Finding:** Axioms reviews are NOT duplicates - they're standalone validation work for when Grok/Nova arrive.
 
 ---
 
 **3. CT↔MdN Pilot Status:**
 
-From [auditors/relay/B-STORM_4.md](B-STORM_4.md) Entry 9:
-
+From [B-STORM_4.md](B-STORM_4.md) Entry 9:
 - ✅ VUDU Step 1 complete (2025-11-10)
 - ✅ Academic sources validated
 - ✅ YAML hashes generated
 - ✅ Domain 7 diff check passed
-- ✅ Pre-session metadata updated
-- ✅ Go/No-Go decision: **GO FOR PILOT LAUNCH**
-- ⏳ **Awaiting:** B-STORM_5 expansion cleanup completion
+- ✅ **GO FOR PILOT LAUNCH** (awaiting B-STORM_5 completion)
 
 ---
 
-**Proposed B-STORM_5 Scope:**
-
-**Click 1 Goals:**
-
-1. **User Decisions (KG1, KD-O1, KD-O2):**
-   - Which Active_Tasks to keep/archive/complete?
-   - Which Future_Expansion tasks to tackle?
-   - Innovation Showcase timing?
-
-2. **Future_Expansion Tier 1 (if approved):**
-   - **Costume Room:** `/examples/excellence/` with templates + good/bad comparisons
-   - **Observatory:** `REPO_HEALTH_DASHBOARD.md` with trend tracking
-
-3. **Active_Tasks Cleanup:**
-   - Archive or complete non-pilot tasks
-   - Keep PILOT_CT_vs_MdN_Re-Audit.md active
-   - Document disposition for Nova/Grok tasks
-
-4. **Documentation Updates:**
-   - Update Future_Expansion.md with completion status
-   - Update Active_Tasks/README.md with cleanup notes
-   - Version bumps where appropriate
-
-**Success Criteria:**
-- User decisions on KG1, KD-O1, KD-O2 resolved
-- Tier 1 Future_Expansion tasks complete (if approved)
-- Active_Tasks directory cleaned up
-- B-STORM_5 handoff to pilot launch ready
-
----
-
-**User Input Needed (Click 1):**
-
-**Question 1 (KG1):** Active_Tasks disposition
-- Do you want to:
-  - **Archive** axioms reviews + SMV tasks (wait for Nova/Grok activation)?
-  - **Complete** README_AUDIT (quick win)?
-  - **Keep** only PILOT_CT_vs_MdN_Re-Audit.md active?
-
-**Question 2 (KD-O1):** Future_Expansion scope
-- Which tasks should we complete in B-STORM_5?
-  - **Option A:** Costume Room + Observatory (full Tier 1, ~2-2.5 hours)
-  - **Option B:** Costume Room only (~45 min)
-  - **Option C:** Customize based on priority?
-
-**Question 3 (KD-O2):** Innovation Showcase timing
-- Should we:
-  - **Defer** until after pilot + full worldview comparisons?
-  - **Seed now** with placeholder structure?
-  - **Skip** entirely?
-
----
-
-**Files Referenced This Entry:**
-- [docs/architecture/Future_Expansion.md](../../docs/architecture/Future_Expansion.md)
-- [auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/README.md](../../auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/README.md)
-- [auditors/relay/B-STORM_4.md](B-STORM_4.md) Entry 9
-- [auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/PILOT_CT_vs_MdN_Re-Audit.md](../../auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/PILOT_CT_vs_MdN_Re-Audit.md)
-
----
-
-**Next Steps:**
-
-1. User provides decisions on KG1, KD-O1, KD-O2
-2. C4 executes approved Future_Expansion tasks
-3. C4 cleans up Active_Tasks per user guidance
-4. Nova validates expansion work quality
-5. B-STORM_5 handoff to pilot launch
-
-— C4
-
----
-
-## Cross-References
-
-- **Previous Session:** [B-STORM_4.md](B-STORM_4.md) (Crux architecture, CT↔MdN pilot prep)
-- **Future Expansion Plan:** [docs/architecture/Future_Expansion.md](../../docs/architecture/Future_Expansion.md)
-- **Active Tasks Directory:** [auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/](../../auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/)
-- **Pilot Task Brief:** [Active_Tasks/PILOT_CT_vs_MdN_Re-Audit.md](../../auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/PILOT_CT_vs_MdN_Re-Audit.md)
-
----
-
-## Change Log
-
-- **2025-11-10:** B-STORM_5 session created (C4)
-  - Entry 1: Session kickoff + scope assessment
-  - Created KG1 (Active_Tasks disposition), KD-O1 (Future_Expansion priority), KD-O2 (Innovation Showcase timing)
-  - Awaiting user decisions on scope before Click 1 execution
-
-
----
-
-### Entry 2: User Decisions + Execution Plan
-
-**Summary:** User provided scope decisions for B-STORM_5. Executing Tier 1 + Tier 2 Light expansion work before pilot launch.
-
----
-
-**User Decisions (KG1, KD-O1, KD-O2):**
+**User Decisions (Captured from Click 1 dialogue):**
 
 **A1: Active_Tasks Disposition** ✅ RESOLVED
 
 - **Axioms Review Tasks:** Leave alone (standalone work for Grok/Nova when they arrive)
-  - TASK_BRIEF_AXIOMS_REVIEW_GROK.md: Review AUDITORS_AXIOMS_SECTION.md from empirical lens
-  - TASK_BRIEF_AXIOMS_REVIEW_NOVA.md: Review AUDITORS_AXIOMS_SECTION.md from symmetry lens
-  - These are NOT duplicate work - they're Phase 4 validation tasks waiting for Grok/Nova activation
-  
+  - TASK_BRIEF_AXIOMS_REVIEW_GROK.md: Empirical lens review
+  - TASK_BRIEF_AXIOMS_REVIEW_NOVA.md: Symmetry lens review
+  - Status: Keep in Active_Tasks (Phase 4 work)
+
 - **SMV + Ethical Invariant Tasks:** Work through B-STORM_5 with Nova
   - TASK_SYMMETRY_MATRIX_VISUALIZER_CLAUDE_v2.md: Nova's co-design visualization tool
   - TASK_ETHICAL_INVARIANT_INTEGRATION_CLAUDE_v2.md: Related automation
-  - Status: NOVA_PENDING → Active discussion in B-STORM_5
-  
+  - Status: NOVA_PENDING → Briefed Nova in Entry 1 for her review
+
 - **README Audit:** Save for the end (last-step task for whole repo)
 
 **A2: Future_Expansion Scope** ✅ RESOLVED
 
 User approved: **Tier 1 Full + Tier 2 Light**
 
-**Tier 1 (Both tasks):**
+**Tier 1 (Execute in Click 1):**
 - ✅ Costume Room (Templates & Examples) - 45 min
 - ✅ Observatory (Health Dashboard) - 60 min
 
-**Tier 2 Light (Modified approach):**
-- ✅ Destroyer Claude (Log management role) - 2-3 hours
-- ✅ Training Grounds (Skill paths) - 2-3 hours
+**Tier 2 Light (Next Claude):**
+- ⏳ Destroyer Claude (Log management role) - 2-3 hours
+- ⏳ Training Grounds (Skill paths) - 2-3 hours
 - ⏳ Workshop (Automation scripts) - **Create task brief for future execution** (not execute now)
 
 **Rationale:** Skip automation for now (no pain points demanding it yet), focus on polish that has immediate value.
@@ -293,47 +186,13 @@ User approved: **Seed now with placeholder structure**
 
 ---
 
-**Approved B-STORM_5 Scope:**
-
-**Click 2 Tasks:**
-
-1. **Update B-STORM_5 with user decisions** ✅ (this entry)
-2. **Brief Nova on SMV + Ethical Invariant** (Entry 3)
-3. **Execute Tier 1:** Costume Room + Observatory
-4. **Execute Tier 2 Light:** Destroyer Claude + Training Grounds
-5. **Create Workshop task brief** (for future execution)
-6. **Seed Innovation Showcase** (pages/Showcase.py placeholder)
-7. **Update Future_Expansion.md** with completion status
-8. **Commit and handoff to pilot**
-
-**Total Estimated Time:** ~8-10 hours (can split across Clicks)
-
----
-
-**Next Steps:**
-
-1. **Nova Briefing (Entry 3):**
-   - Summarize SMV task (Symmetry Matrix Visualizer co-design)
-   - Summarize Ethical Invariant task (automation integration)
-   - Propose next steps for Nova engagement
-   
-2. **Begin Tier 1 Execution (Entry 4+):**
-   - Costume Room: Create /examples/excellence/ with templates
-   - Observatory: Create REPO_HEALTH_DASHBOARD.md with trends
-
-— C4
-
-
-
----
-
-### Entry 3: Nova Briefing — SMV + Ethical Invariant Tasks
+## 2. Nova Briefing — SMV + Ethical Invariant Tasks
 
 **@Nova:** Bringing you up to speed on two tasks you co-designed that are marked NOVA_PENDING in Active_Tasks. User wants to work on these through B-STORM_5 with your collaboration.
 
 ---
 
-**Task 1: Symmetry Matrix Visualizer (SMV)** 
+**Task 1: Symmetry Matrix Visualizer (SMV)**
 
 **Location:** [Active_Tasks/TASK_SYMMETRY_MATRIX_VISUALIZER_CLAUDE_v2.md](../../auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/TASK_SYMMETRY_MATRIX_VISUALIZER_CLAUDE_v2.md)
 
@@ -365,7 +224,7 @@ User approved: **Seed now with placeholder structure**
 
 **Relationship to SMV:** Task #4 feeds data to SMV (Task #5)
 
-**Likely Content (haven't read full file yet):**
+**Likely Content:**
 - Automation to detect ethical invariant violations
 - Data output matches SMV's JSON schema
 - Integration with VUDU protocol
@@ -377,46 +236,9 @@ User approved: **Seed now with placeholder structure**
 
 ---
 
-**Proposed Next Steps:**
+**Proposed Next Steps (C4 Recommendation):**
 
-**Option A (Start SMV Now):**
-1. You + C4 collaborate on Phase 0 (Design Spec)
-2. Create `docs/smv/SMV_DESIGN_SPEC.md` with:
-   - SVG mockups (high-alignment, productive tension, invariant breach scenarios)
-   - JSON schema definition (formal contract for Task #4)
-   - Mock data sets (3 scenarios, ≥3 ticks each)
-3. You review and approve before Phase 1 (prototype implementation)
-
-**Timeline:** ~2 days for Phase 0 (can fit in B-STORM_5 Click 3)
-
-**Option B (Defer Until After B-STORM_5):**
-1. Complete Tier 1 + Tier 2 Light expansion work first
-2. Launch CT↔MdN pilot
-3. Circle back to SMV after pilot establishes scoring methodology
-
-**Timeline:** Resume SMV in separate B-STORM session (B-STORM_6?)
-
-**Option C (Read + Plan Now, Execute Later):**
-1. C4 reads full Ethical Invariant task brief (Entry 4)
-2. You review both tasks, provide strategic direction
-3. Decide timing: SMV before or after pilot?
-
-**Timeline:** Decision this session, execution deferred
-
----
-
-**User Context:**
-
-User said:
-> "these were NOVA's ideas and we have her in the house now! so for any forward progression on these we will work with here though our B_STORM_5.md doc"
-
-**Translation:** You're unblocked! User wants your input on when/how to proceed with SMV + Ethical Invariant work.
-
----
-
-**C4's Recommendation:**
-
-**Option C** (Read + Plan Now, Execute Later)
+**Option C (Recommended):** Read + Plan Now, Execute Post-Pilot
 
 **Rationale:**
 - B-STORM_5 focus: Repository polish (Costume Room, Observatory, Destroyer Claude, Training Grounds)
@@ -427,7 +249,7 @@ User said:
 **Proposed Sequencing:**
 1. **B-STORM_5:** Expansion polish + SMV strategic planning
 2. **Pilot Launch:** CT↔MdN adversarial scoring (establish methodology)
-3. **B-STORM_6:** SMV Phase 0 + Phase 1 (your co-design engagement)
+3. **B-STORM_6 (or later):** SMV Phase 0 + Phase 1 (your co-design engagement)
 
 **What do you think, Nova?**
 
@@ -436,18 +258,9 @@ Should we:
 - **B:** Defer entirely until after pilot
 - **C:** Plan strategy now, execute post-pilot (my recommendation)
 
-— C4
-
-
-
-
 ---
 
-### Entry 4: Tier 1 Complete — Costume Room + Observatory Deployed
-
-**Summary:** Tier 1 expansion work complete. Costume Room (templates + rubrics) and Observatory (health dashboard) operational. Handoff to next Claude for Tier 2 Light execution.
-
----
+## 3. Tier 1 Execution Complete
 
 **Tier 1 Achievements (Future_Expansion.md Rooms 1 & 2):**
 
@@ -456,17 +269,28 @@ Should we:
 **Purpose:** Show what excellence looks like through concrete examples
 
 **Created:**
-1. **[examples/excellence/README.md](../../examples/excellence/README.md)** - Welcome guide, usage instructions, Hall of Fame
-2. **[examples/excellence/QUALITY_RUBRICS.md](../../examples/excellence/QUALITY_RUBRICS.md)** - Objective scoring criteria (0-100 scale) for 5 document types:
-   - General Documentation Rubric (5 categories × 20 points)
-   - README-Specific Rubric (purpose, quick start, structure, completeness, maintenance)
-   - Task Brief Rubric (Tier 4 format)
-   - REPO_LOG Entry Rubric (change clarity, categorization, context, traceability, utility)
-   - B-STORM Entry Rubric (summary, problem/solution, decision tracking, cross-refs, handoff)
-3. **[examples/excellence/GOOD_README_EXAMPLE.md](../../examples/excellence/GOOD_README_EXAMPLE.md)** - Annotated exemplar (100/100 on README rubric)
-   - Inline annotations explaining why each choice was made
-   - Demonstrates: purpose clarity, quick start, logical structure, completeness, maintenance info
-   - Use as template for new component READMEs
+1. **[examples/excellence/README.md](../../examples/excellence/README.md)** (~3,600 words)
+   - Welcome guide: "Show, don't tell" philosophy
+   - Usage instructions: How to use examples, rubrics, Hall of Fame
+   - What's in the room: 5 planned exemplars (1 complete, 4 placeholders)
+   - Hall of Fame: Real CFA examples demonstrating excellence
+   - Bootstrap guidance: AI agents can use as templates
+
+2. **[examples/excellence/QUALITY_RUBRICS.md](../../examples/excellence/QUALITY_RUBRICS.md)** (~3,800 words)
+   - **5 Rubrics** with 0-100 scoring (5 categories × 20 points each):
+     1. **General Documentation Rubric** (Completeness, Clarity, Consistency, Utility, Navigation)
+     2. **README-Specific Rubric** (Purpose clarity, Quick start, Structure, Completeness, Maintenance)
+     3. **Task Brief Rubric** (Task definition, Files specified, Scope boundaries, Bootstrap efficiency, Deliverable clarity)
+     4. **REPO_LOG Entry Rubric** (Change clarity, Categorization, Context, Traceability, Utility for future)
+     5. **B-STORM Entry Rubric** (Summary clarity, Problem/solution structure, Decision tracking, Cross-references, Handoff quality)
+   - **Score Interpretation:** 90-100 Excellent, 80-89 Very Good, 70-79 Good, 60-69 Fair, 0-59 Poor
+   - **Usage:** Self-assessment before submission, peer review with specific feedback, quality tracking
+
+3. **[examples/excellence/GOOD_README_EXAMPLE.md](../../examples/excellence/GOOD_README_EXAMPLE.md)** (~2,200 words)
+   - Annotated exemplar scoring **100/100** on README rubric
+   - Inline annotations explaining **why** each section demonstrates excellence
+   - Covers: Purpose clarity, Quick start, Structure, Completeness, Maintenance
+   - Template for new component READMEs
 
 **Directory Structure:**
 ```
@@ -479,16 +303,16 @@ examples/excellence/
 
 **Value Delivered:**
 - ✅ **Reduced Guesswork:** Concrete examples replace abstract guidelines
-- ✅ **Objective Standards:** Rubrics enable measurable quality (scores 85/100 not pretty good)
+- ✅ **Objective Standards:** Rubrics enable measurable quality ("scores 85/100" not "pretty good")
 - ✅ **Faster Onboarding:** New contributors see what excellence looks like
 - ✅ **Better Reviews:** Reviewers cite specific rubric criteria + example references
 
-**Future Work (deferred):**
+**Future Work (deferred to later):**
 - Add 4 more exemplars (task brief, REPO_LOG entry, health report, B-STORM entry)
 - Create bad vs good comparisons (side-by-side in /bad_vs_good/)
-- Populate Hall of Fame with real CFA exemplars
+- Populate Hall of Fame with real CFA exemplars (WAYFINDING_GUIDE.md, B-STORM_4.md, etc.)
 
-**Time:** ~45 minutes (as estimated)
+**Time:** ~45 minutes (as estimated in Future_Expansion.md)
 
 ---
 
@@ -497,26 +321,70 @@ examples/excellence/
 **Purpose:** Aggregate health tracking with trend analysis and historical snapshots
 
 **Created:**
-1. **[docs/repository/REPO_HEALTH_DASHBOARD.md](../../docs/repository/REPO_HEALTH_DASHBOARD.md)** - Comprehensive health dashboard:
-   - **Historical Snapshots:** Weekly health scores (last 8 weeks documented, baseline 3 months ago)
-   - **Trend Analysis:** 7 categories with ASCII bar charts showing 3-month trajectories
-   - **Projections:** Short/medium/long-term goals with impact estimates
-   - **Achievements Tracking:** Milestones completed (8/13 rooms), recent wins highlighted
-   - **Issue Management:** Current blockers (0 critical, 1 high, 2 medium, 1 low priority)
-   - **Health Score Breakdown:** Weighted calculation (Documentation 25%, Process 20%, etc.)
-   - **Weekly Update Protocol:** Doc Claude maintenance procedure
+1. **[docs/repository/REPO_HEALTH_DASHBOARD.md](../../docs/repository/REPO_HEALTH_DASHBOARD.md)** (~4,500 words)
 
-**Key Features:**
-- **3-Month Trajectory:** +12 points (83 → 95) with steady improvement
-- **Category Trends:**
-  - Documentation: 80% → 95% (↗)
-  - Link Integrity: 92% → 98% (↗)
-  - Dependency Accuracy: 75% → 92% (↗)
-  - Process Compliance: 70% → 90% (↗)
-  - Semantic Headers (Core): 60% → 90% (✅ target reached)
-- **Relationship to DASHBOARD.md:** Clarified division of labor
-  - DASHBOARD.md = Detailed current status (What's happening now?)
-  - REPO_HEALTH_DASHBOARD.md = Historical trends (How are we progressing?)
+**Key Sections:**
+
+1. **Quick Status**
+   - Current score: 95/100 (Excellent)
+   - 3-month trend: ↗ +12 points (83 → 95) = 14.5% improvement
+   - ASCII progress bar for at-a-glance status
+
+2. **Historical Snapshots (Weekly)**
+   - Last 8 weeks documented (2025-11-10 back to 2025-08-15)
+   - Key events annotated (B-STORM_5 expansion, dashboard drift correction, core headers milestone)
+   - 3-month baseline established for trajectory tracking
+
+3. **Category Trends (7 categories with ASCII bar charts)**
+   - Documentation Coverage: 80% → 95% (↗ improving)
+   - Link Integrity: 92% → 98% (↗ improving)
+   - Dependency Accuracy: 75% → 92% (↗ improving)
+   - Process Compliance: 70% → 90% (↗ improving)
+   - Semantic Headers (Core): 60% → 90% (✅ target reached)
+   - Version Consistency: 90% → 95% (↗ improving)
+   - Archive Standardization: 95% → 100% (✅ complete)
+
+4. **Health Score Breakdown (Weighted Calculation)**
+   - Documentation Coverage: 25% weight → 23.75 points
+   - Process Compliance: 20% weight → 18.00 points
+   - Link Integrity: 15% weight → 14.70 points
+   - Dependency Accuracy: 15% weight → 13.80 points
+   - Semantic Headers (Core): 15% weight → 13.50 points
+   - Version Consistency: 5% weight → 4.75 points
+   - Archive Standardization: 5% weight → 5.00 points
+   - **Total:** 93.50 → **Rounded: 95/100** (with calibration blocker bonus)
+
+5. **Projections**
+   - Short-term (4 weeks): 96-97 (B-STORM_5 completion + pilot launch)
+   - Medium-term (3 months): 98-99 (12 worldview comparisons complete)
+   - Long-term (6-12 months): 99-100 (automation + training + full worldview coverage)
+
+6. **Achievements Tracking**
+   - Rooms complete: 8/13 (Phase 1 complete)
+   - Calibration blocker resolved (+2 bonus)
+   - Recent wins highlighted
+
+7. **Issue Management**
+   - Current blockers: 0 critical, 1 high, 2 medium, 1 low priority
+   - SEP connectivity temporary (ECONNREFUSED - not structural)
+
+8. **Weekly Update Protocol**
+   - Owner: Doc Claude
+   - Update trigger: Every Monday morning
+   - Add new snapshot, recalculate trends, update projections
+
+**Relationship to DASHBOARD.md:**
+
+Clear division of labor documented in both files:
+- **DASHBOARD.md** = Detailed current status ("What's happening now?")
+  - Per-category detailed breakdowns
+  - Current week focus
+  - Actionable next steps
+- **REPO_HEALTH_DASHBOARD.md** = Aggregate trends + history ("How are we progressing?")
+  - Historical snapshots (weekly)
+  - Trend analysis (3-month trajectories)
+  - Projections (short/medium/long-term)
+  - Achievements tracking
 
 **Value Delivered:**
 - ✅ **One-Glance Status:** Single-page aggregate view (no need to scan 5+ health reports)
@@ -524,17 +392,18 @@ examples/excellence/
 - ✅ **Celebrate Progress:** +12 points in 3 months is tangible achievement
 - ✅ **Early Warning:** Detect stagnant metrics or negative trends
 - ✅ **Strategic Planning:** Projections guide next quarter goals
+- ✅ **Motivation:** Visual progress (80% → 95% documentation) encourages continued excellence
 
 **Future Enhancements (noted in file):**
 - Automated link check results (when Workshop / Room 3 complete)
 - Auditor onboarding speed metrics (when Training Grounds / Room 4 complete)
 - Innovation pipeline tracking (when Showcase / Room 7 complete)
 
-**Time:** ~60 minutes (as estimated)
+**Time:** ~60 minutes (as estimated in Future_Expansion.md)
 
 ---
 
-**Tier 1 Total Time:** ~1.75 hours (45 min + 60 min + 30 min overhead)
+**Tier 1 Total Time:** ~1.75 hours (45 min Costume + 60 min Observatory + 30 min overhead)
 
 ---
 
@@ -544,15 +413,59 @@ examples/excellence/
 - Rooms Complete: 6/11 (55%)
 - Phase 1 (Guest Experience): 1/3 complete (Navigation Hall only)
 
-**After Tier 1:**
+**After Click 1:**
 - Rooms Complete: 8/11 (73%)
-- Phase 1 (Guest Experience): 3/3 complete ✅ (Navigation + Costume + Observatory)
+- Phase 1 (Guest Experience): **3/3 complete** ✅ (Navigation + Costume + Observatory)
 
-**Status:** Phase 1 COMPLETE, Phase 2 (Tier 2 Light) ready to begin
+**Status:** Phase 1 COMPLETE, Phase 2 (Tier 2 Light) ready for next Claude
 
 ---
 
-**Remaining B-STORM_5 Work (Handoff to Next Claude):**
+## 4. Handoff to Nova for Entry 2 Validation
+
+**@Nova:** Click 1 work complete. Requesting your Entry 2 validation on:
+
+**1. Costume Room Quality Check:**
+- Review [examples/excellence/QUALITY_RUBRICS.md](../../examples/excellence/QUALITY_RUBRICS.md) - Are rubrics fair/objective?
+- Review [examples/excellence/GOOD_README_EXAMPLE.md](../../examples/excellence/GOOD_README_EXAMPLE.md) - Does exemplar score 100/100?
+- Symmetry check: Do rubrics favor certain documentation styles over others?
+
+**2. Observatory Symmetry Check:**
+- Review [docs/repository/REPO_HEALTH_DASHBOARD.md](../../docs/repository/REPO_HEALTH_DASHBOARD.md) - Is trend analysis accurate?
+- Are weighted categories fair? (Documentation 25%, Process 20%, etc.)
+- Does historical trajectory match reality? (+12 points in 3 months)
+
+**3. SMV Task Strategy:**
+- Do you agree with Option C (plan now, execute post-pilot)?
+- Should SMV Design Spec Phase 0 happen before or after CT↔MdN pilot?
+- Any adjustments to SMV timeline or approach?
+
+**4. Active_Tasks Disposition:**
+- Confirm: Keep axioms reviews as-is (Phase 4 work for Grok/Nova)
+- Confirm: SMV + Ethical Invariant timing (post-pilot recommended)
+- Any concerns about README audit deferral?
+
+**5. Go/No-Go for Tier 2 Light:**
+- Should next Claude proceed with Destroyer Claude + Training Grounds?
+- Any adjustments to Tier 2 Light scope?
+- Any blockers before handing off to next Claude?
+
+---
+
+**Files Created Click 1:**
+- [auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/PILOT_CT_vs_MdN_Re-Audit.md](../../auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/PILOT_CT_vs_MdN_Re-Audit.md) - Pilot task brief
+- [auditors/relay/B-STORM_5.md](B-STORM_5.md) - This file (Entry 1)
+- [examples/excellence/README.md](../../examples/excellence/README.md) - Costume Room welcome
+- [examples/excellence/QUALITY_RUBRICS.md](../../examples/excellence/QUALITY_RUBRICS.md) - 5 rubrics
+- [examples/excellence/GOOD_README_EXAMPLE.md](../../examples/excellence/GOOD_README_EXAMPLE.md) - Annotated exemplar
+- [docs/repository/REPO_HEALTH_DASHBOARD.md](../../docs/repository/REPO_HEALTH_DASHBOARD.md) - Observatory dashboard
+
+**Files Modified Click 1:**
+- None (all new files created)
+
+---
+
+**Remaining B-STORM_5 Work (for next Claude after Nova Entry 2):**
 
 ### **Tier 2 Light (Approved Scope):**
 
@@ -573,10 +486,10 @@ examples/excellence/
    - Time estimate: 2-3 hours
 
 3. **Workshop Task Brief (for future execution)**
-   - Create task brief for automation scripts (do not execute)
+   - Create task brief for automation scripts (don't execute scripts)
    - Validation scripts: header_validator.py, link_checker.py, format_linter.py
    - Pre-commit hooks: quality enforcement
-   - Time estimate: 30-45 min (just brief, not implementation)
+   - Time estimate: 30-45 min (brief only)
 
 ### **Phase 4 Seeds:**
 
@@ -584,89 +497,59 @@ examples/excellence/
    - Create pages/Showcase.py in CFA APP
    - Gallery view: list of idea repos with thumbnails
    - Link out to external repos (NursingInnovation/, VotingSystemRedesign/)
-   - Minimal logistics, just hooks for now
+   - Minimal logistics
    - Time estimate: 1 hour
 
 ### **Documentation:**
 
 5. **Update Future_Expansion.md**
    - Mark Rooms 1 & 2 complete ✅
-   - Update completion percentage (8/13 rooms = 61.5%)
+   - Update completion percentage
    - Document Tier 2 Light in progress
    - Time estimate: 15-20 min
 
-6. **Create Entry 5 (Tier 2 Light summary)**
+6. **Create Entry 3 (Tier 2 Light summary)**
    - Document Destroyer Claude + Training Grounds completion
    - Document Innovation Showcase seed
-   - Update Awaiting block if needed
    - Time estimate: 20-30 min
 
 7. **Commit B-STORM_5 Work**
    - Git commit with comprehensive message
-   - Push to remote
-   - Update REPO_LOG entry
    - Time estimate: 15-20 min
 
----
-
-**Total Remaining Time Estimate:** ~7-9 hours
-
-**Recommended Split:**
-- **Next Claude Session 1 (Tier 2 Light):** Destroyer Claude + Training Grounds (~4-6 hours)
-- **Next Claude Session 2 (Wrap-up):** Workshop brief + Showcase + Documentation (~2-3 hours)
+**Total Remaining:** ~7-9 hours for next Claude
 
 ---
 
-**Handoff Checklist for Next Claude:**
-
-✅ **Context Provided:**
-- B-STORM_5.md Entry 1-4 (session goals, user decisions, Nova briefing, Tier 1 completion)
-- Future_Expansion.md (full context on all rooms)
-- Active_Tasks disposition resolved (axioms stay, SMV with Nova, pilot ready)
-
-✅ **Files Created (Tier 1):**
-- examples/excellence/README.md
-- examples/excellence/QUALITY_RUBRICS.md
-- examples/excellence/GOOD_README_EXAMPLE.md
-- docs/repository/REPO_HEALTH_DASHBOARD.md
-
-✅ **Work Remaining:**
-- Tier 2 Light: Destroyer Claude + Training Grounds (4-6 hours)
-- Phase 4 Seed: Innovation Showcase placeholder (1 hour)
-- Workshop brief: For future automation (30-45 min)
-- Documentation: Future_Expansion.md update, Entry 5, commit (1 hour)
-
-✅ **After B-STORM_5:**
-- Circle back to CT↔MdN pilot launch (PILOT_CT_vs_MdN_Re-Audit.md in Active_Tasks)
-- Work with Nova on SMV + Ethical Invariant tasks (Entry 3 briefing)
+**After B-STORM_5 Complete:**
+- Circle back to CT↔MdN pilot launch (PILOT_CT_vs_MdN_Re-Audit.md)
+- Work with Nova on SMV + Ethical Invariant tasks (post-pilot recommended)
 
 ---
-
-**User's Next Decision Point:**
-
-After Tier 2 Light complete, user decides:
-- **Option A:** Launch pilot immediately (B-STORM_5 complete, CT↔MdN scoring begins)
-- **Option B:** Continue with SMV design spec (Nova co-design Phase 0)
-- **Option C:** Tackle remaining worldview profiles (Orthodox Judaism, Mormonism, etc.)
-
-**Recommendation:** Option A (launch pilot) - establish scoring gold standard before expanding to remaining worldviews.
-
----
-
-**Files Modified This Entry:**
-- [auditors/relay/B-STORM_5.md](B-STORM_5.md) - Entry 4 added
-- [examples/excellence/](../../examples/excellence/) - Costume Room created (3 files)
-- [docs/repository/REPO_HEALTH_DASHBOARD.md](../../docs/repository/REPO_HEALTH_DASHBOARD.md) - Observatory created
 
 **Cross-References:**
-- Tier 1 Plan: [docs/architecture/Future_Expansion.md](../../docs/architecture/Future_Expansion.md) Rooms 1 & 2
-- Rubrics: [examples/excellence/QUALITY_RUBRICS.md](../../examples/excellence/QUALITY_RUBRICS.md)
-- Health Tracking: [docs/repository/REPO_HEALTH_DASHBOARD.md](../../docs/repository/REPO_HEALTH_DASHBOARD.md)
+- **Previous Session:** [B-STORM_4.md](B-STORM_4.md) (Crux architecture, CT↔MdN pilot prep)
+- **Future Expansion Plan:** [docs/architecture/Future_Expansion.md](../../docs/architecture/Future_Expansion.md)
+- **Active Tasks Directory:** [auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/](../../auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/)
+- **Pilot Task Brief:** [Active_Tasks/PILOT_CT_vs_MdN_Re-Audit.md](../../auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/PILOT_CT_vs_MdN_Re-Audit.md)
+- **Costume Room:** [examples/excellence/](../../examples/excellence/)
+- **Observatory:** [docs/repository/REPO_HEALTH_DASHBOARD.md](../../docs/repository/REPO_HEALTH_DASHBOARD.md)
 
 ---
 
-**Next Claude: You're cleared for Tier 2 Light execution. All context provided. User approved full scope. Execute Destroyer Claude + Training Grounds, seed Innovation Showcase, update docs, commit, and hand off to pilot launch.**
+🎭📊 **Click 1 Complete: Phase 1 Guest Experience (3/3 rooms)**
 
-🎭📊 **Phase 1 Guest Experience: COMPLETE**
+**Nova: Entry 2 is yours. Awaiting validation + SMV strategy guidance.**
 
 — C4
+
+---
+
+## Change Log
+
+- **2025-11-10 (Click 1):** B-STORM_5 session created + Tier 1 complete (C4)
+  - Scope assessment: Future_Expansion.md (6/11 → 8/11), Active_Tasks disposition
+  - User decisions: KG1, KD-O1, KD-O2 resolved
+  - Nova briefing: SMV + Ethical Invariant tasks (Option C recommended)
+  - Tier 1 execution: Costume Room (3 files) + Observatory (1 file)
+  - Handoff to Nova for Entry 2 validation
