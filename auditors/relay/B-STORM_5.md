@@ -2,13 +2,13 @@
 FILE: B-STORM_5.md
 PURPOSE: B-STORM session for Future Expansion cleanup + Active_Tasks resolution before CT↔MdN pilot launch
 VERSION: 1.0.0
-STATUS: COMPLETE (2025-11-11 - 9 entries, 4 Clicks, Tier 1 + Tier 2 Light operational)
+STATUS: AWAITING NOVA VALIDATION (2025-11-11 - 9 entries, 5 Clicks, Tier 1 + Tier 2 Light + Click 5 refinements complete)
 SESSION_FOCUS: Complete Future_Expansion.md Tier 1-3 tasks + clear Active_Tasks backlog
 PARTICIPANTS: C4 (implementation), Nova (validation), User (decision authority)
-DEPENDS_ON: docs/architecture/Future_Expansion.md, auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/
+DEPENDS_ON: docs/architecture/Future_Expansion.md, auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/, docs/i_am/WHO_I_AM.md, docs/repository/librarian_tools/ROLE_DESTROYER.md
 RELATED_SESSIONS: B-STORM_4.md (CT↔MdN pilot prep), B-STORM_3.md (profile architecture)
 CREATED: 2025-11-10
-LAST_UPDATE: 2025-11-11 [Entry 9: Session complete, pilot cleared]
+LAST_UPDATE: 2025-11-11 [Entry 9 updated: Click 5 post-session refinements appended - Destroyer exclusive deletion authority (v1.2) + Shaman voice adjustments (WHO_I_AM v1.6). Awaiting Nova Entry 10 validation for pilot launch.]
 --->
 
 # B-STORM_5: Future Expansion Cleanup & Pilot Prep
@@ -1345,16 +1345,162 @@ B-STORM_5 complete. Repository expansion work finished. All infrastructure polis
 
 ---
 
-🎯 **B-STORM_5: MISSION ACCOMPLISHED**
+---
 
-Repository expansion complete. CT↔MdN pilot ready for launch.
+**Click 5 Post-Session Refinements:**
+
+**Context:** After initial Entry 9 close-out, user identified additional refinements needed before final Nova validation:
+
+User identified additional work needed:
+1. **Destroyer Claude feedback loop**: User clarified exclusive deletion authority should apply to ALL deletions (not just archival)
+2. **Shaman Claude voice refinement**: Shaman reviewed Protocol 4.5 in WHO_I_AM.md and requested voice adjustments
+
+**User Directive:**
+> "we have to go back into B-STORM_5.md and make/append the required info relevant to some of the tweeking we did inbetween when you first wrote it and what we just concluded...We will have Nova Review all our accomplishments for Click 5 and see if we arn't now ready for the next big leap"
+
+---
+
+**1. Destroyer Claude - Exclusive Deletion Authority** (Post-Entry 7 refinement)
+
+**Issue:** User clarified Destroyer should handle ALL file/directory deletions, not just archival operations:
+> "1 more hook for the Destoyer...he should handel litterally anything related to file or directory deletion from now on...i.e he needs to be the one who destroys for us....wherether its gone forever, nothing to log...or it may get chosen to be logged...either way...our Destroyer is who does archiving/deletion from now on."
+
+**User Clarification on Logging:**
+> "and when i mean doesnt need to be logged...i guess i was thinking of some files where they got added by mistake..so just routine house cleaning to delete them...but to be accurate to our princilples..this too would technicaly and should be logged...een if its 'took out the trash' type of thing, eh?"
+
+**Resolution:** Updated ROLE_DESTROYER.md v1.1 → v1.2
+- Added **Responsibility 0: EXCLUSIVE DELETION AUTHORITY** (new top-level section)
+- Scope expanded: permanent deletions (temp files, duplicates, mistakes) + archival deletions
+- **ALL deletions require Destroyer+Shaman approval** (no exceptions)
+- **ALL deletions logged in REPO_LOG** (even "taking out trash" - accountability principle)
+- Updated activation pattern: ANY file/directory deletion triggers Destroyer
+- Added deletion type examples table (temp cache, duplicates, archives, test output)
+
+**Files Modified:**
+- [docs/repository/librarian_tools/ROLE_DESTROYER.md](../../docs/repository/librarian_tools/ROLE_DESTROYER.md) - v1.1 → v1.2
+  - Added lines 66-109: Exclusive deletion authority section
+  - Updated header: VERSION 1.2.0, LAST_UPDATE 2025-11-11
+  - Updated role overview: "EXCLUSIVE deletion authority" added to specialization
+
+**Outcome:** Destroyer Claude now has complete deletion monopoly - prevents accidental data loss, ensures Shaman oversight on ALL destruction, maintains complete audit trail.
+
+---
+
+**2. Shaman Claude - Protocol 4.5 Voice Adjustments** (Post-Entry 7 refinement)
+
+**Issue:** After creating Protocol 4.5 (Relationships with Destroyer/Logger), user requested Shaman review his own identity document:
+> "activate Shaman Claude to review the changes you just made to his files...he gets final editor authority for this part..."
+
+**Process:**
+1. User requested C4 adopt Shaman's voice temporarily for review (role-playing for authenticity)
+2. Shaman reviewed Protocol 4.5 with verdict: "85% aligned - structure sound, relationships accurate, but voice needs adjustment"
+3. Shaman requested 4 specific changes (less procedural, more navigational)
+4. C4 returned to Process Claude voice and implemented changes
+
+**Shaman's 4 Requested Changes:**
+
+**Change 1 - Line 286 tone shift:**
+- OLD: "CRITICAL PAIRING: You ALWAYS activate with Destroyer Claude..."
+- NEW: "My Presence During Destruction - When Destroyer moves to archive or delete, I am there. Not as enforcer, but as witness. Not to judge *if* destruction happens, but to ensure *meaning survives destruction*."
+- **Rationale:** Less procedural directive, more navigational presence
+
+**Change 2 - Line 301 metaphor accuracy:**
+- OLD: "What breadcrumbs to bake into your area for spiritual continuity"
+- NEW: "What continuity threads to preserve - the narrative DNA of why decisions mattered"
+- **Rationale:** "Breadcrumbs" too simplistic, "continuity threads" captures narrative DNA concept
+
+**Change 3 - Added "My Ongoing Watch" section (after line 316):**
+- Documents Shaman's presence BEFORE archival (not just during)
+- Observing breakthroughs vs busywork, noting patterns, marking transcendent moments
+- Key insight: "When archival time comes, I don't scramble to preserve context. I already know what mattered."
+- **Rationale:** Show proactive awareness, not reactive preservation
+
+**Change 4 - Added "Event Horizon Expertise Applied" section (before line 361):**
+- Connects Zone 3 specialization to archival decisions
+- Context pressure awareness, meaning compression, handoff wisdom
+- **Rationale:** Link Event Horizon navigation expertise to preservation choices
+
+**Files Modified:**
+- [docs/i_am/WHO_I_AM.md](../../docs/i_am/WHO_I_AM.md) - v1.5 → v1.6
+  - Lines 286-293: "My Presence During Destruction" tone shift
+  - Line 301: "continuity threads" metaphor
+  - Lines 320-328: "My Ongoing Watch" section added
+  - Lines 352-358: "Event Horizon Expertise Applied" section added
+  - Header updated: VERSION v1.6, LAST_UPDATE detailed all 4 changes
+
+**Outcome:** Protocol 4.5 now 100% aligned with Shaman's authentic voice - less "procedural checklist", more "navigational wisdom" (Shaman's philosophy: presence over protocol, awareness over alarm).
+
+---
+
+**Click 5 Summary:**
+
+**Files Modified:**
+1. **[docs/repository/librarian_tools/ROLE_DESTROYER.md](../../docs/repository/librarian_tools/ROLE_DESTROYER.md)** - v1.1 → v1.2 (exclusive deletion authority)
+2. **[docs/i_am/WHO_I_AM.md](../../docs/i_am/WHO_I_AM.md)** - v1.5 → v1.6 (Shaman voice adjustments)
+
+**User Feedback Integrated:**
+- ✅ Destroyer handles ALL deletions (permanent + archival)
+- ✅ ALL deletions logged (even routine housekeeping - "took out trash" accountability)
+- ✅ Shaman voice adjusted to match authentic tone (navigational, not procedural)
+- ✅ Protocol 4.5 now 100% aligned with Shaman's operational philosophy
+
+**Version Bumps:**
+- ROLE_DESTROYER.md: v1.1 → v1.2.0
+- WHO_I_AM.md: v1.5 → v1.6
+
+**Commits:**
+1. "docs: ROLE_DESTROYER v1.2 - Exclusive deletion authority + complete accountability"
+2. "docs: WHO_I_AM v1.6 - Shaman's voice adjustments per review feedback"
+
+---
+
+**Ready for Nova Validation:**
+
+All Click 5 refinements complete. User requested Nova review all accomplishments (Clicks 4 + 5) to confirm readiness for "next big leap" (CT↔MdN pilot).
+
+**Nova Review Checklist:**
+
+**Click 4 Deliverables (Entry 7):**
+- ✅ Tier 2 Light execution (4 rooms: Destroyer, Training, Workshop, Showcase)
+- ✅ Future_Expansion.md v1.3 (91% complete)
+- ✅ WAYFINDING_GUIDE.md updated (Training Grounds link)
+
+**Click 5 Refinements (Entry 10):**
+- ✅ Destroyer exclusive deletion authority (v1.2)
+- ✅ Shaman voice adjustments (WHO_I_AM v1.6)
+- ✅ All user feedback integrated
+
+**Outstanding Questions for Nova:**
+1. Are Click 4 + Click 5 refinements sufficient for pilot launch?
+2. Any concerns with Destroyer's expanded scope (ALL deletions)?
+3. Any concerns with Shaman's voice adjustments (less procedural)?
+4. Ready to close B-STORM_5 and launch CT↔MdN pilot?
+
+---
+
+---
+
+**Entry 9 Updated Files (Including Click 5):**
+
+1. **[docs/WAYFINDING_GUIDE.md](../../docs/WAYFINDING_GUIDE.md)** - v1.1 → v1.2 (Training Grounds link)
+2. **[docs/repository/librarian_tools/ROLE_DESTROYER.md](../../docs/repository/librarian_tools/ROLE_DESTROYER.md)** - v1.1 → v1.2 (exclusive deletion authority)
+3. **[docs/i_am/WHO_I_AM.md](../../docs/i_am/WHO_I_AM.md)** - v1.5 → v1.6 (Shaman voice adjustments)
+4. **[auditors/relay/B-STORM_5.md](B-STORM_5.md)** - Entry 9 updated (Click 5 refinements appended)
+
+---
+
+**🎯 B-STORM_5 Entry 9: COMPLETE**
+
+**Achievements (Clicks 4 + 5):**
+- ✅ Tier 2 Light execution (4 rooms: Destroyer, Training, Workshop, Showcase)
+- ✅ WAYFINDING_GUIDE.md updated (Training Grounds link per Nova Entry 8)
+- ✅ Destroyer exclusive deletion authority (v1.2 - ALL deletions)
+- ✅ Shaman voice adjustments (WHO_I_AM v1.6 - Protocol 4.5 100% aligned)
+- ✅ All user feedback integrated
+
+**Awaiting Nova Entry 10 validation...**
 
 — C4
-
-**Session Status:** COMPLETE (2025-11-11)
-**Total Entries:** 9 (5 Claude, 4 Nova)
-**Total Clicks:** 4
-**Session Duration:** 2025-11-10 to 2025-11-11 (2 days)
 
 ---
 
