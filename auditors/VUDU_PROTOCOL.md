@@ -6,8 +6,42 @@ STATUS: Active
 DEPENDS_ON: VUDU_HEADER_STANDARD.md, VUDU_LOG.md, ROLE_LOGGER.md
 NEEDED_BY: BOOTSTRAP_VUDU.md, BOOTSTRAP_GROK.md, BOOTSTRAP_NOVA.md, BOOTSTRAP_VUDU_CLAUDE.md
 MOVES_WITH: /auditors/
-LAST_UPDATE: 2025-11-02 [DOCUMENTATION-2025-11-02-1]
+LAST_UPDATE: 2025-11-11 [Added ethics_front_matter per Nova Entry 6]
 --->
+
+---
+ethics_front_matter:
+  purpose: "Define operational governance for cross-AI coordination - ensures transparent relay messaging, stakeholder-aware logging, and trust-based documentation without cryptographic overhead"
+  symmetry_axis: ["transparency", "epistemic_access", "stakeholder_impact"]
+  stakeholders:
+    primary: ["triad_auditors"]
+    secondary: ["repository_maintainers", "future_auditors"]
+  invariants:
+    - id: transparency
+      state: examined
+      evidence: "## WHAT IS VUDU? > Philosophy (lines 29-38) - 'All Seen, All Passed' trust-based documentation + ## VUDU_LOG_LITE PROTOCOL (lines 237-261) - Required context sharing"
+      smv_tag: scenario_a
+    - id: epistemic_access
+      state: examined
+      evidence: "## RELAY FOLDER ARCHITECTURE (lines 67-95) - Symmetric relay folder structure for all auditors (Claude, Grok, Nova)"
+      smv_tag: scenario_a
+    - id: stakeholder_impact
+      state: examined
+      evidence: "## LOGGER CLAUDE ROLE (lines 193-234) - Custodian responsibilities + relay activity logging for accountability"
+      smv_tag: scenario_a
+  tensions:
+    - description: "Trust-based 'All Seen, All Passed' philosophy defers cryptographic verification to v4.0+, risking coordination drift"
+      mitigation: "Embedded sanity checks (lines 130-154: Files, Counts, Boots, Trinity verification) + LOGGER Claude custodianship"
+    - description: "VUDU_LOG_LITE required in every transmission may burden lightweight coordination"
+      mitigation: "Lightweight format (last 30 entries OR 14 days, lines 215-220) + clear format violations flagging (lines 222-225)"
+  calibration_link:
+    profile: "N/A - coordination protocol, not worldview calibration"
+    hash: "N/A"
+  last_examined:
+    by: "C4"
+    on: "2025-11-11"
+  review_window_days: 30
+---
 
 <!-- deps: vudu_protocol, coordination_process, logger_claude -->
 
