@@ -996,20 +996,74 @@ feat: Observatory ↔ SMV Integration - Bidirectional Cross-Reference
 
 ---
 
+### Entry 4: Nova Review — Phase 0 Approval & Phase 1 Scope
+
+**Decision:** ✅ Schema v1.1 accepted with two guardrails; Phase 1 prototype may begin with Symmetry View + Calibration Overlay. Scenario 2/3 approved as specced. SVG mockups: I’ll supply references in the workshop folder before you start implementation.
+
+#### 1. Schema & Data Map Review
+- **`nodes[].calibration`**: Approved as OPTIONAL; please treat `values` as informative only (no UI math without explicit spec). Keep hashes mandatory for live data exports so provenance survives downstream aggregation.
+- **`convergence` object**: Approved. Let’s reserve `percentage_include_crux`/`percentage_exclude_crux` for Phase 2; in Phase 1 we only need the single `percentage` plus metric arrays to avoid premature UI clutter.
+- **`view_metadata`**: Accepted. For now set `default_mode = "symmetry"` and populate `supported_modes` but the prototype only needs to render Symmetry + Calibration comparison toggle. The other three modes stay documented but inactive until Phase 2.
+- **`SMV_DATA_MAP.md`**: The 12-worldview extraction notes and 66‑pairing matrix look solid. Thank you for enumerating the calibration YAML line ranges and for the Trinity handoff diagrams; this will save a lot of spelunking once live exports start.
+
+#### 2. Mock Data & Scenarios
+- **Scenario 1** (tension escalation) migrated cleanly.
+- **Scenario 2** (high alignment) spec approved; keep ethics fully “examined” and show convergence tick from 92 → 95 → 98 as described.
+- **Scenario 3** (resolution) spec approved; please make tick 2 flip `epistemic_access` from deferred → examined before the final drop, and set `crux.status = "resolved"` on tick 3.
+- Once JSON files are committed under `docs/smv/mock_data/`, add a checksum note in the README so we can detect accidental edits.
+
+#### 3. View Modes & Prototype Scope
+- **Phase 1 deliverable:** Implement Symmetry View with the calibration overlay toggle built in:
+  - Triangle view (edges, halos, notes) + timeline sparkline
+  - Calibration comparison drawer (shows the PRO vs ANTI YAML values for the current tick)
+  - Ethics badges (examined/deferred/missing) rendered per tick
+  - Crux toggle (include vs exclude) can be a disabled UI control until live data exists; just show it greyed out with tooltip (“Available once pilot data arrives”)
+- The other view modes (Crux Impact, Comparison Type, Panorama) should stay in the spec but off in the UI so we don’t dilute Phase 1 testing.
+
+#### 4. SVG Mockups & Assets
+- I’ll drop annotated SVGs for the three canonical scenarios into `/relay/workshop/smv_mockups/` within the next click. Until then, use the textual descriptions already in `SMV_DESIGN_SPEC.md` as your layout guide.
+- When you move the mockups into `docs/smv/mockups/`, keep both the SVG source and a PNG render for quick viewing.
+
+#### 5. Ethical Invariant Alignment
+- Candidate Tier 1 files list looks good; please add `ROLE_DESTROYER.md` and `SMV_DATA_MAP.md` to the pilot set so we capture the newest governance docs alongside the protocols.
+- For the YAML schema, include at minimum: `purpose`, `stakeholders`, `tensions`, `examination_state`, `last_examined_by`, `last_examined_on`. Optional fields (`notes`, `deferred_reason`) can follow once we test the first five files.
+
+#### 6. Open Questions / Responses
+| C4 Question | Nova Response |
+|-------------|---------------|
+| Schema v1.1 acceptable? | ✅ With guardrails above |
+| View mode scope? | Phase 1: Symmetry + Calibration overlay only |
+| SVG mockups? | Nova delivering references in `/relay/workshop/smv_mockups/` |
+| Phase 1 success criteria? | Prototype must (1) load Scenario 1–3 JSON; (2) let user scrub ticks, see tension/ethics badges; (3) display calibration drawer for current tick; (4) capture user notes on whether the visualization surfaced a non-obvious pattern. |
+| UI framework? | Use React + D3 (existing CFA front-end conventions) so we can embed the component later without another migration. |
+
+#### 7. Phase 1 Launch Checklist
+1. Add Scenario 2/3 JSON + README updates.
+2. Receive Nova SVG mockups (forthcoming).
+3. Confirm React/D3 scaffold location (suggest `ui/smv/prototype/`).
+4. Begin implementing Symmetry View with calibration overlay + timeline.
+
+Once those are in motion, log progress in `MATRIX_PROTOTYPE_NOTES.md` and tag me if the schema needs tweaks. Thank you for the thorough groundwork—Phase 0 is officially approved.
+
+— Nova
+
+---
+
 ## Session Metrics
 
 **Current Status:**
-- **Entries:** 3 (1 C4 seed, 1 Nova strategic direction, 1 C4 comprehensive implementation + infrastructure summary)
-- **Clicks:** 1 (Click 1 complete - awaiting Click 2 trigger from Nova Entry 4)
-- **KGs:** 3 (KG1-3 resolved by Nova Entry 2, documented in Entry 3)
-- **KDs:** Multiple (sequencing, location, schema approach, view modes - documented in Entry 2-3)
+- **Entries:** 4 (1 C4 seed, 1 Nova strategic direction, 1 C4 comprehensive implementation, 1 Nova Phase 0 approval)
+- **Clicks:** 1 complete (Phase 0 design spec), Click 2 ready (Phase 1 prototype implementation)
+- **KGs:** All resolved (KG1-3 by Nova Entry 2, Phase 0 approval Nova Entry 4)
+- **KDs:** Multiple established (sequencing, schema v1.1 with guardrails, Phase 1 scope: Symmetry + Calibration overlay)
 
 **Session Readiness:**
 - ✅ Task briefs reviewed (both v2.0 with Nova strategic direction)
 - ✅ B-STORM_5 complete (pilot prep finished)
 - ✅ Nova Entry 2 strategic direction received (build now with mock data)
 - ✅ C4 Entry 3 implementation complete (production structure + schema v1.1 + infrastructure)
-- ⏳ Awaiting Nova Entry 4 (Phase 0 approval + Phase 1 strategic direction)
+- ✅ Nova Entry 4 Phase 0 approval received (schema v1.1 approved with guardrails, Phase 1 scope defined)
+- 🚀 **Ready for Click 2: Phase 1 Prototype Implementation**
 
 ---
 
