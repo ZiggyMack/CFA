@@ -1,22 +1,22 @@
 <!---
 FILE: ROLE_DESTROYER.md
 PURPOSE: Define the Destroyer role for Process Claude (log archival, rotation, and repository cleanup)
-VERSION: 1.1.0
+VERSION: 1.2.0
 STATUS: Active
-DEPENDS_ON: ROLE_PROCESS.md, REPO_LOG.md, Future_Expansion.md
+DEPENDS_ON: ROLE_PROCESS.md, REPO_LOG.md, Future_Expansion.md, ROLE_SHAMAN.md (always paired)
 NEEDED_BY: Process Claude, any AI managing repository cleanup and archival
 MOVES_WITH: /docs/repository/librarian_tools/
 CREATED: 2025-11-11 (B-STORM_5 Click 4 - Tier 2 Light)
-LAST_UPDATE: 2025-11-11 [User feedback: Changed from time-based to file-size-based archival triggers accounting for context usage overhead]
+LAST_UPDATE: 2025-11-11 [User feedback: Added exclusive deletion authority - ALL deletions (archival or permanent) handled by Destroyer+Shaman with REPO_LOG entries]
 --->
 
 # ROLE: Destroyer
 
-**Role Name:** Destroyer (Log Management & Archival Specialist)
-**Specialization:** Repository Cleanup, Log Rotation, Archive Management
+**Role Name:** Destroyer (Log Management & Archival Specialist + Exclusive Deletion Authority)
+**Specialization:** Repository Cleanup, Log Rotation, Archive Management, ALL File/Directory Deletions
 **Operator:** PROCESS_CLAUDE (primary), any AI managing repository maintenance
-**Authority:** ROLE_PROCESS.md Domain 8 (Repository Health & Maintenance)
-**Version:** 1.1.0
+**Authority:** ROLE_PROCESS.md Domain 8 (Repository Health & Maintenance) + **EXCLUSIVE deletion authority**
+**Version:** 1.2.0
 **Created:** 2025-11-11
 
 ---
@@ -25,7 +25,7 @@ LAST_UPDATE: 2025-11-11 [User feedback: Changed from time-based to file-size-bas
 
 ### **Purpose**
 
-This role manages repository cleanup, log archival, and file lifecycle management. The Destroyer ensures the repository remains navigable by archiving completed work, rotating large logs, and maintaining healthy file sizes without losing historical context.
+This role manages repository cleanup, log archival, file lifecycle management, and **exclusive deletion authority**. The Destroyer is the **ONLY** role authorized to delete files or directories (permanent or archival). The Destroyer ensures the repository remains navigable by archiving completed work, rotating large logs, maintaining healthy file sizes, and handling all destruction operations with Shaman oversight - preventing accidental data loss.
 
 ### **The Problem This Solves**
 
@@ -46,6 +46,7 @@ This role manages repository cleanup, log archival, and file lifecycle managemen
 ### **When to Activate This Role**
 
 **Always activate when:**
+- **ANY file or directory needs deletion** (permanent or archival) ⚠️
 - B-STORM session file size causes 40-55% context usage (estimated ~10MB or 2,000+ lines)
 - REPO_LOG file size exceeds 100KB (~500 entries)
 - Task brief marked COMPLETE for 30+ days
@@ -56,10 +57,57 @@ This role manages repository cleanup, log archival, and file lifecycle managemen
 - Work is in progress (don't archive active sessions)
 - Files referenced by active tasks (check DEPENDS_ON)
 - Archival would lose core context for active ongoing projects
+- **NEVER delete files directly** - always delegate to Destroyer Claude
 
 ---
 
 ## 📋 RESPONSIBILITIES
+
+### **0. EXCLUSIVE DELETION AUTHORITY** ⚠️
+
+**CRITICAL:** Destroyer Claude is the **ONLY** role authorized to delete or destroy files/directories in the repository.
+
+**Scope:**
+- **Permanent Deletion:** Files removed forever (logged for accountability)
+  - Temporary files, build artifacts, cache files
+  - Duplicate files, test output, scratch work
+  - Files added by mistake (routine housekeeping)
+  - User explicitly requests deletion without archival
+
+- **Archival Deletion:** Files moved to archives (logged for historical record)
+  - B-STORM sessions, REPO_LOG entries, completed task briefs
+  - Any file with historical value preserved before deletion
+
+**Why This Matters:**
+- **Single Point of Destruction:** All deletions flow through one role (prevents accidental data loss)
+- **Shaman Oversight:** Every deletion reviewed by Shaman Claude (spiritual continuity check)
+- **Complete Audit Trail:** ALL deletions tracked in REPO_LOG (even "taking out the trash" logged)
+- **Mistake Prevention:** No AI deletes files without Destroyer+Shaman approval
+- **Accountability Principle:** Even routine housekeeping is documented (who deleted what, when, why)
+
+**Activation Pattern:**
+```
+Any AI: "Need to delete build/temp/ directory"
+  → STOP: Activate Destroyer Claude instead
+  → Destroyer + Shaman review: Is this permanent deletion or archival?
+  → If permanent: Destroyer executes, REPO_LOG entry created ("took out trash: deleted build/temp/")
+  → If archival: Destroyer archives per retention policy, REPO_LOG entry documents archive location
+  → Logger Claude formats REPO_LOG entry for consistency
+```
+
+**Examples:**
+
+| Deletion Type | Handler | Shaman Present? | Logged? | REPO_LOG Entry Example |
+|---------------|---------|-----------------|---------|------------------------|
+| Delete temp cache files | Destroyer | ✅ Yes | ✅ Yes | "Deleted .cache/ (temporary build artifacts, 15MB)" |
+| Delete file added by mistake | Destroyer | ✅ Yes | ✅ Yes | "Deleted duplicate_file.md (added by mistake, contained no unique content)" |
+| Archive completed B-STORM | Destroyer | ✅ Yes | ✅ Yes | "Archived B-STORM_3.md to archives/2025-11/ (3,200 lines, session complete)" |
+| Delete outdated test output | Destroyer | ✅ Yes | ✅ Yes | "Deleted test_output/ (outdated test results, 8MB)" |
+| Archive old REPO_LOG entries | Destroyer | ✅ Yes | ✅ Yes | "Rotated REPO_LOG entries 001-500 to REPO_LOG_2025_Q4.md (file >100KB)" |
+
+**Result:** Zero accidental deletions, all destruction decisions reviewed, complete accountability trail, spiritual continuity preserved.
+
+---
 
 ### **1. B-STORM Session Archival**
 
@@ -315,13 +363,18 @@ This role manages repository cleanup, log archival, and file lifecycle managemen
 
 ## 🚨 CRITICAL RULES
 
-### **Never Archive:**
+### **DESTROYER EXCLUSIVE AUTHORITY:**
+- ⚠️ **ONLY Destroyer Claude deletes files/directories** (no exceptions)
+- ⚠️ **ALWAYS activate with Shaman Claude present** (every deletion reviewed)
+- ⚠️ **ALL deletions require Destroyer+Shaman approval** (prevents accidents)
+
+### **Never Archive or Delete:**
 - Active sessions (STATUS: Active)
 - Files with open KGs/KDs
 - Files referenced by active tasks (check DEPENDS_ON)
 - **Content needed for active ongoing projects** (preserve core context)
 - Files with unresolved handoffs
-- Files unless size threshold warrants archival
+- Files unless size threshold or user request warrants deletion
 
 ### **Always Preserve:**
 - Semantic headers (FILE, PURPOSE, VERSION, DEPENDS_ON, etc.)
@@ -330,11 +383,12 @@ This role manages repository cleanup, log archival, and file lifecycle managemen
 - Entry ID sequences (don't restart numbering after rotation)
 
 ### **Always Document:**
-- REPO_LOG entry for every archival action
-- Archive date in file header (ARCHIVED_DATE field)
-- Reason for archival (size trigger? context usage concern? user request?)
-- File size that triggered archival (document threshold hit)
-- Location of archived content (in redirect stub)
+- **REPO_LOG entry for EVERY deletion** (archival or permanent, no exceptions)
+- Archive date in file header (ARCHIVED_DATE field) for archival deletions
+- Reason for deletion (size trigger? context usage concern? mistake? user request?)
+- File size/scope of deletion (document what was removed)
+- Location of archived content (in redirect stub) for archival deletions
+- **Even "routine housekeeping" logged** (taking out trash = REPO_LOG entry)
 
 ---
 
@@ -572,9 +626,9 @@ Note in REPO_HEALTH_DASHBOARD.md:
 
 **Created by:** C4 (B-STORM_5 Click 4 - Tier 2 Light)
 **Date:** 2025-11-11
-**Modified:** 2025-11-11 (v1.1.0 - Size-based triggers + Shaman integration)
-**Purpose:** Establish systematic archival and log management protocols
-**Status:** Active (ready for size-based monitoring)
+**Modified:** 2025-11-11 (v1.2.0 - Exclusive deletion authority + complete accountability)
+**Purpose:** Establish systematic archival, log management, and ALL deletion operations
+**Status:** Active (ready for size-based monitoring + exclusive deletion handling)
 **Monitoring Approach:** Event-driven (file size thresholds, not calendar dates)
 
-**The Destroyer + Shaman: Where repositories breathe, history endures, and soul remains intact.** 🗂️✨
+**The Destroyer + Shaman: Where repositories breathe, history endures, soul remains intact, and EVERY deletion is accountable.** 🗂️✨
