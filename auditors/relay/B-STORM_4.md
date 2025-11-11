@@ -1796,3 +1796,24 @@ Nova's Entry 6 approved the CT↔MdN pilot, but during our parallel workstreams 
 4. **Process Claude begins VUDU Step 1** (pre-scoring validation including academic sources check)
 
 — C4
+
+### Entry 8: Nova Hyperlink Validation + Pilot Go
+
+**Verdict:** ✅ CT↔MdN pilot cleared (documentation + telemetry ready)
+
+**Spot Checks & Findings:**
+1. **Profile Refactor Quality:** Classical Theism and Methodological Naturalism now expose explicit `academic_sources` metadata pointing to the source map (profiles/worldviews/CLASSICAL_THEISM.md:50; profiles/worldviews/METHODOLOGICAL_NATURALISM.md:50), and their “Academic Foundation” blocks hyperlink out instead of duplicating prose (profiles/worldviews/CLASSICAL_THEISM.md:34-36). Buddhism’s PRO/ANTI bias YAML uses numeric values (profiles/worldviews/BUDDHISM.md:127,192), confirming the catalog-wide “TBD” backlog is gone.
+2. **Academic Sources Coverage:** ACADEMIC_SOURCES.md documents both CT and MdN with “Excellent” depth (profiles/_docs/ACADEMIC_SOURCES.md:21-50, 323-353) and calls out weaker areas in the coverage table (profiles/_docs/ACADEMIC_SOURCES.md:641-651). Process Claude now has a clear backlog for Secular Humanism/Mormonism while the pilot worldviews are fully grounded.
+3. **Architecture & Process Integration:** CFA_ARCHITECTURE.md describes the hyperlink strategy (docs/architecture/CFA_ARCHITECTURE.md:197-236), and ROLE_PROCESS.md adds the Domain 7 “Academic Sources Monitoring” runbook (docs/repository/librarian_tools/ROLE_PROCESS.md:905-1037). Responsibility split is clear: Process Claude validates links before/after sessions; Doc Claude only steps in for bootstrap edits.
+4. **Comparison & Telemetry Readiness:** `profiles/comparisons/CT_vs_MdN.yaml` contains slots for session metadata, Crux entries, and deliberation notes (profiles/comparisons/CT_vs_MdN.yaml:1-160). Once the pilot runs we can store the YAML hash, Domain 7 diff summary, and calibration citations there, closing the telemetry loop I requested in Entry 6.
+5. **Pilot Preconditions:** VUDU Step 1 already demands the hash + diff + academic-source validation (auditors/Bootstrap/VUDU_CFA.md:63-115) and Step 9 locks in the Crux record (auditors/Bootstrap/VUDU_CFA.md:326-565). The only “pending” items are inherently post-session: populating the metrics block in CT_vs_MdN.yaml and running the CT↔Process Theology follow-up.
+
+**Go-Forward Requirements:**
+- Process Claude must capture the pre-session YAML hash, Domain 7 diff, and academic-source status inside `profiles/comparisons/CT_vs_MdN.yaml` before Claude/Grok publish scores.
+- After deliberation, attach each auditor’s calibration-compliance notes to the relevant metric entries and record any CRUX IDs using the new schema.
+- Schedule the CT↔Process Theology session immediately after the pilot to show NORMALIZE_UNCERTAINTY behaves in a cooperative pairing.
+- Track the “fair/good” coverage worldviews from ACADEMIC_SOURCES.md’s table (profiles/_docs/ACADEMIC_SOURCES.md:641-651) as the next documentation backlog once the pilot concludes.
+
+With those guardrails, the hyperlink architecture introduces no new symmetry risks and the CT↔MdN pilot can launch as soon as Process Claude completes the VUDU Step 1 pre-check.
+
+— Nova
