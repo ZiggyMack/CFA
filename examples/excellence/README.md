@@ -1,13 +1,13 @@
 <!---
 FILE: README.md
 PURPOSE: Welcome to the Costume Room - Examples of excellent CFA documentation
-VERSION: 1.0.0
+VERSION: 1.1.0
 STATUS: Active
 CREATED: 2025-11-10 (B-STORM_5 Click 1)
 DEPENDS_ON: docs/WAYFINDING_GUIDE.md, Future_Expansion.md
 NEEDED_BY: All contributors (quality standards reference)
 MOVES_WITH: /examples/excellence/
-LAST_UPDATE: 2025-11-10 [B-STORM_5: Tier 1 Costume Room creation]
+LAST_UPDATE: 2025-11-11 [B-STORM_5 Click 2: All exemplars + comparisons complete]
 --->
 
 # 🎭 The Costume Room - Excellence Examples
@@ -40,10 +40,10 @@ These demonstrate excellence with inline annotations explaining design choices:
 
 Side-by-side examples showing before/after improvements:
 
-1. [README_bad_vs_good.md](bad_vs_good/README_bad_vs_good.md) - README evolution
-2. [TASK_BRIEF_bad_vs_good.md](bad_vs_good/TASK_BRIEF_bad_vs_good.md) - Task brief refinement
-3. [REPO_LOG_bad_vs_good.md](bad_vs_good/REPO_LOG_bad_vs_good.md) - Change log clarity
-4. [HEADER_bad_vs_good.md](bad_vs_good/HEADER_bad_vs_good.md) - Semantic header usage
+1. [README_comparison.md](bad_vs_good/README_comparison.md) - README evolution (5 comparisons)
+2. [task_brief_comparison.md](bad_vs_good/task_brief_comparison.md) - Task brief refinement (5 comparisons)
+3. [repo_log_comparison.md](bad_vs_good/repo_log_comparison.md) - Change log clarity (5 comparisons)
+4. [b-storm_comparison.md](bad_vs_good/b-storm_comparison.md) - B-STORM entry quality (5 comparisons)
 
 ### **Quality Rubric** ([QUALITY_RUBRICS.md](QUALITY_RUBRICS.md))
 
@@ -153,7 +153,7 @@ All examples in this room maintain these standards:
 > "Don't write vague task briefs." (what's vague?)
 
 **Good:**
-> "Compare [TASK_BRIEF_bad_vs_good.md](bad_vs_good/TASK_BRIEF_bad_vs_good.md) - the 'bad' version has unclear success criteria (line 23), while the 'good' version uses specific, measurable criteria (line 31)."
+> "Compare [task_brief_comparison.md](bad_vs_good/task_brief_comparison.md) - the 'bad' version has unclear success criteria, while the 'good' version uses specific, measurable criteria with acceptance tests."
 
 ### **Principle 4: Provide Objective Rubrics**
 
@@ -229,10 +229,10 @@ when examples shine."*
 
 ---
 
-**Created by:** C4 (B-STORM_5 Click 1)
-**Date:** 2025-11-10
+**Created by:** C4 (B-STORM_5 Click 1-2)
+**Date:** 2025-11-10 (Click 1), 2025-11-11 (Click 2 - all exemplars + comparisons)
 **Purpose:** Establish concrete quality standards through exemplars
-**Status:** Active - First 5 examples + rubrics
-**Next:** Add more examples as repository evolves
+**Status:** Active - 5 exemplars + 4 comparisons + 5 rubrics (100% complete)
+**Next:** Add more examples to Hall of Fame as repository evolves
 
 **Welcome to excellence.** ✨
