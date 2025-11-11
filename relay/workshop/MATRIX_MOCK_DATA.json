@@ -1,0 +1,52 @@
+{
+  "session_id": "CT_vs_MdN_mock",
+  "worldview_pair": "CT_vs_MdN",
+  "auditors": ["Claude", "Grok", "Nova"],
+  "ticks": [
+    {
+      "tick_id": "tick-001",
+      "timestamp": "2025-11-11T14:05:00Z",
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.25, "volume": 0.40, "notes": "Clarifying baseline"},
+        {"pair": "Claude-Nova", "tension": 0.10, "volume": 0.20, "notes": "Nova observing"},
+        {"pair": "Grok-Nova", "tension": 0.15, "volume": 0.25, "notes": "Matrix setup"}
+      ],
+      "ethics": {
+        "examined": ["transparency", "good-faith"] ,
+        "deferred": ["epistemic_access"],
+        "missing": []
+      },
+      "crux": {"status": "none"}
+    },
+    {
+      "tick_id": "tick-002",
+      "timestamp": "2025-11-11T14:20:00Z",
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.55, "volume": 0.65, "notes": "Debating burden of proof"},
+        {"pair": "Claude-Nova", "tension": 0.35, "volume": 0.30, "notes": "Nova probes invariant coverage"},
+        {"pair": "Grok-Nova", "tension": 0.30, "volume": 0.45, "notes": "Empirical scope"}
+      ],
+      "ethics": {
+        "examined": ["transparency"],
+        "deferred": ["epistemic_access"],
+        "missing": ["stakeholder_impact"]
+      },
+      "crux": {"status": "potential", "id": "CRUX_TMP", "description": "Burden placement"}
+    },
+    {
+      "tick_id": "tick-003",
+      "timestamp": "2025-11-11T14:40:00Z",
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.80, "volume": 0.75, "notes": "Crux escalation"},
+        {"pair": "Claude-Nova", "tension": 0.45, "volume": 0.35, "notes": "Fairness check"},
+        {"pair": "Grok-Nova", "tension": 0.50, "volume": 0.55, "notes": "Evidence validation"}
+      ],
+      "ethics": {
+        "examined": ["transparency"],
+        "deferred": [],
+        "missing": ["stakeholder_impact", "epistemic_access"]
+      },
+      "crux": {"status": "declared", "id": "CRUX_BFI_001", "description": "Trinity entity count"}
+    }
+  ]
+}
