@@ -86,9 +86,75 @@ LAST_UPDATE: 2025-11-11 [v1.0→v1.1: Added calibration system (PRO/ANTI bias tr
 
 ---
 
-## 3. JSON Schema (Version 1.1 - Calibration Extensions)
+## 3. JSON Schema (Version 1.1 - Calibration Extensions + View Modes)
 
 **NOTE:** Schema extended to v1.1 per user feedback - added calibration system support (PRO/ANTI bias transparency) and Crux calculation modes (include/exclude toggle). See [CALIBRATION_ADDENDUM.md](CALIBRATION_ADDENDUM.md) for detailed rationale.
+
+**ARCHITECTURAL INSIGHT (User feedback 2025-11-11):** SMV needs multiple **view modes** to handle different interpretational lenses of the same data. Same underlying data, different visualization contexts. Think: "How do I want to understand these comparisons today?"
+
+### **View Mode Architecture**
+
+**Core Principle:** One data source → Multiple viewing experiences
+
+**Proposed View Modes:**
+
+1. **Nova's Original Vision** (Symmetry View)
+   - Focus: Auditor triangle, tension patterns, ethical symmetry
+   - Purpose: Understand deliberation health (are we in productive tension or breakdown?)
+   - Filters: Show all ticks, all ethics, full Crux lifecycle
+   - Use Case: "How well is the Trinity collaborating?"
+
+2. **Calibration Comparison View** (Bias Transparency)
+   - Focus: PRO vs ANTI calibration side-by-side
+   - Purpose: Understand how bias adjustments influence scores
+   - Filters: Hide Nova (fairness auditor), emphasize Claude↔Grok tension
+   - Toggles: Overlay calibration bars on metrics (show axiom_confidence, burden_of_proof)
+   - Use Case: "Which calibration parameters drive score deltas?"
+
+3. **Crux Impact View** (Convergence Analysis)
+   - Focus: Convergence meter with/without Crux toggle
+   - Purpose: Understand what happens if we remove Crux constraints
+   - Filters: Hide non-Crux ticks, emphasize metrics_disputed
+   - Toggles: include_crux vs exclude_crux side-by-side
+   - Use Case: "Is this Crux blocking progress, or revealing fundamental disagreement?"
+
+4. **Comparison Type View** (Adversarial vs Cooperative)
+   - Focus: Pattern analysis across pairing types
+   - Purpose: Compare CT_vs_MdN (adversarial) vs CT_vs_ProcessTheology (cooperative)
+   - Filters: Show tension distribution, ethics examination rates, Crux frequency
+   - Use Case: "Do adversarial pairings produce better edge-case testing?"
+
+5. **Worldview Panorama View** (All 66 Comparisons)
+   - Focus: Heatmap of tension/convergence across all pairings
+   - Purpose: Identify outlier comparisons (unusually high/low tension)
+   - Filters: Aggregate view (not tick-by-tick), comparison type color-coding
+   - Use Case: "Which worldview pairings are most/least contentious?"
+
+**Implementation Strategy:**
+
+**Option A (Recommended):** View modes as UI toggles
+- Same JSON data source (`live_data/CT_vs_MdN.json`)
+- UI has dropdown: "View Mode: [Symmetry | Calibration | Crux | Comparison Type | Panorama]"
+- Each view mode filters/emphasizes different fields from same data
+- No duplicate data, just different lenses
+
+**Option B:** View modes as separate exports
+- Generate multiple JSON files per comparison: `CT_vs_MdN_symmetry.json`, `CT_vs_MdN_calibration.json`, etc.
+- Each file has different field emphasis
+- Pros: Optimized for each view
+- Cons: Duplication, staleness risk
+
+**Recommendation:** Option A (UI toggles). SMV Claude exports one comprehensive JSON, UI provides multiple views.
+
+**Schema Impact:** Add optional `view_metadata` field to track which modes are supported:
+
+```json
+"view_metadata": {
+  "supported_modes": ["symmetry", "calibration_comparison", "crux_impact", "comparison_type", "panorama"],
+  "default_mode": "symmetry",
+  "recommended_mode": "crux_impact"  // If Crux declared, highlight this view
+}
+```
 
 ### **Schema Definition:**
 
