@@ -1,13 +1,13 @@
 <!---
 FILE: WAYFINDING_GUIDE.md
 PURPOSE: Repository navigation and orientation guide - your compass for the CFA codebase
-VERSION: v1.1
+VERSION: v1.2
 STATUS: Active
-DEPENDS_ON: MISSION_DEFAULT.md, DASHBOARD.md, Bootstrap files, librarian_tools/, ROLE_PROCESS.md (Process Claude is SME)
+DEPENDS_ON: MISSION_DEFAULT.md, DASHBOARD.md, Bootstrap files, librarian_tools/, ROLE_PROCESS.md (Process Claude is SME), training/TRAINING_GROUNDS.md
 NEEDED_BY: All auditors, especially fresh cold starts
 MOVES_WITH: /docs/
 MAINTAINED_BY: Process Claude (navigation/wayfinding SME)
-LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-19]
+LAST_UPDATE: 2025-11-11 [B-STORM_5 Click 4: Added Training Grounds link per Nova Entry 8]
 --->
 
 # WAYFINDING_GUIDE.md - Your Repository Compass 🗺️
@@ -599,6 +599,13 @@ Tier 4 (Task Specific):
 ---
 
 ## 🎓 "LEVEL UP" - PROGRESSIVE LEARNING PATHS
+
+**🆕 Comprehensive Skill Paths Available:**
+
+For detailed progressive training with checkpoints, common mistakes, and skill validation, see:
+**[Training Grounds](training/TRAINING_GROUNDS.md)** - 3 progressive paths (Beginner → Intermediate → Advanced → Expert) with 11 skills, checkpoints, and anti-patterns.
+
+**Quick reference below for navigation-focused learning:**
 
 ### **Beginner (First Session) - 15 minutes**
 1. Read MISSION_DEFAULT.md or 88MPH_PROTOCOL.md (depending on role)
