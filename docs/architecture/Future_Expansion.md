@@ -1,12 +1,12 @@
 <!---
 FILE: Future_Expansion.md
 PURPOSE: Track future repository enhancement tasks - "Missing Rooms" + Phase 4 expansion ideas
-VERSION: v1.2
+VERSION: v1.3
 STATUS: Active (Planning)
 DEPENDS_ON: WAYFINDING_GUIDE.md (Navigation Hall complete), DASHBOARD.md
 NEEDED_BY: Tier 4 task planners, future enhancement work
 MOVES_WITH: /docs/architecture/
-LAST_UPDATE: 2025-11-11 [B-STORM_5 Click 2: Tier 1 complete]
+LAST_UPDATE: 2025-11-11 [B-STORM_5 Click 4: Tier 2 Light complete]
 --->
 
 # Future_Expansion.md - Repository Enhancement Roadmap
@@ -21,7 +21,7 @@ LAST_UPDATE: 2025-11-11 [B-STORM_5 Click 2: Tier 1 complete]
 
 ## 🏰 **THE ESTATE STATUS**
 
-### ✅ **ROOMS CLEANED (Complete - 73%)**
+### ✅ **ROOMS CLEANED (Complete - 91%)**
 
 ```markdown
 📍 The Map Room (Dependency Tracking) ✅
@@ -67,34 +67,48 @@ LAST_UPDATE: 2025-11-11 [B-STORM_5 Click 2: Tier 1 complete]
 ├─ QUALITY_RUBRICS.md (5 rubrics, 0-100 scoring)
 └─ Show excellence through concrete examples
 
-📊 The Observatory (Metrics & Dashboards) ✅ 🆕
+📊 The Observatory (Metrics & Dashboards) ✅
 ├─ REPO_HEALTH_DASHBOARD.md
 ├─ Historical snapshots (weekly)
 ├─ Trend tracking (3-month trajectories)
 ├─ Aggregate health score (95/100)
 └─ Complements DASHBOARD.md (trends vs current)
+
+🗂️ Destroyer Claude (Log Management & Archival) ✅ 🆕
+├─ ROLE_DESTROYER.md
+├─ Archival protocols (B-STORM, REPO_LOG, task briefs, VUDU_LOGs)
+├─ Retention rules (time-based, size-based, event-based)
+├─ Quarterly cleanup schedule
+└─ Archive directory structure
+
+🎓 The Training Grounds (Skill Development) ✅ 🆕
+├─ TRAINING_GROUNDS.md
+├─ Progressive skill paths (Beginner → Intermediate → Advanced → Expert)
+├─ Skill checkpoints (how to know you're ready for next level)
+├─ Common mistakes (anti-patterns by skill level)
+└─ 11 skills total (navigation, quality, git, collaboration, scoring, architecture)
+
+🔧 The Workshop (Automation & Tools) ✅ 🆕 (Brief Only)
+├─ TASK_WORKSHOP_AUTOMATION_v1.md (task brief)
+├─ Scope defined (header validator, link checker, format linter)
+├─ Execution trigger (3+ quality issues or user request)
+├─ NO SCRIPTS YET (awaiting pain point validation)
+└─ Trade-offs documented (benefits vs maintenance cost)
+
+🌟 Innovation Showcase (Case Studies Gallery) ✅ 🆕
+├─ INNOVATION_SHOWCASE.md
+├─ Gallery structure (master repo + external mini-repos)
+├─ Submission guidelines (eligibility, review process)
+├─ Placeholder for first case study
+└─ Connects CFA methodology to real-world applications
 ```
 
 ---
 
-### ⚠️ **ROOMS STILL DUSTY (Future Work - 27%)**
+### ⚠️ **ROOMS STILL DUSTY (Future Work - 9%)**
 
 ```markdown
-🔄 The Workshop (Automation & Tools)
-├─ Manual processes defined
-├─ But: No automated helpers
-├─ But: No validation scripts
-├─ But: No CI/CD integration
-└─ Everything requires human touch ⚠️
-
-🎓 The Training Grounds (Skill Development) ⏳ Tier 2 Light
-├─ Bootstrap files for roles
-├─ But: No progressive training
-├─ But: No skill certification
-├─ But: No "level up" paths
-└─ Sink or swim mentality ⚠️
-
-🔐 The Vault (Sensitive Data & Secrets)
+🔐 The Vault (Sensitive Data & Secrets) ⏳ Tier 3
 ├─ Git ignores exist
 ├─ But: No documented security policy
 ├─ But: No secrets management guide
