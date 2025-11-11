@@ -75,10 +75,11 @@ LAST_UPDATE: 2025-11-11 [B-STORM_5 Click 4: Tier 2 Light complete]
 └─ Complements DASHBOARD.md (trends vs current)
 
 🗂️ Destroyer Claude (Log Management & Archival) ✅ 🆕
-├─ ROLE_DESTROYER.md
+├─ ROLE_DESTROYER.md (v1.1.0 - size-based triggers + Shaman integration)
 ├─ Archival protocols (B-STORM, REPO_LOG, task briefs, VUDU_LOGs)
-├─ Retention rules (time-based, size-based, event-based)
-├─ Quarterly cleanup schedule
+├─ Retention rules (SIZE-BASED with context-aware thresholds, event-based)
+├─ Size-based monitoring (40-55% context usage threshold ~10MB)
+├─ Always activates with Shaman Claude (spiritual continuity oversight)
 └─ Archive directory structure
 
 🎓 The Training Grounds (Skill Development) ✅ 🆕
