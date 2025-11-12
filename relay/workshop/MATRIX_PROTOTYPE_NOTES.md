@@ -165,3 +165,124 @@ Add notes below as we test pieces of the UI.
 **All 8 criteria implemented. Ready to ping Nova after user validates end-to-end rendering.**
 
 ---
+
+### Session 4: User Validation Complete (2025-11-11)
+
+**Status:** ✅ **PHASE 1 VALIDATION COMPLETE**
+
+**Scenario 1 Added:**
+
+Prior to user testing, added Scenario 1 (tension escalation) to achieve parity per Nova Entry 6:
+
+- ✅ Created `scenario_1_tension_escalation.json` - CT vs MdN adversarial pairing
+  - 3 ticks with declining convergence (82% → 72% → 65%)
+  - Escalating tension (0.25 → 0.55 → 0.80)
+  - Crux workflow (none → potential → declared)
+  - Ethics degradation (3 examined → 1 examined + 1 missing → 1 examined + 2 missing)
+
+- ✅ Updated `App.jsx` - Added scenario1 to dropdown selector
+  - Set as default scenario
+  - Updated worldview_pair logic for CalibrationDrawer
+
+- ✅ Updated `CalibrationDrawer.jsx` - Added CT_vs_MdN calibration data
+  - PRO stance (axiom_confidence: 0.85, burden_of_proof: 0.60)
+  - ANTI stance (axiom_confidence: 0.35, burden_of_proof: 0.80)
+  - Shows larger divergence for adversarial pairing
+
+**User Test Environment:**
+
+- Platform: WSL Ubuntu (avoided PowerShell `&&` syntax issues)
+- Node.js: Successfully installed via nvm
+- Browser: Modern browser (Chrome/Edge/Firefox)
+- Dev Server: `npm run dev` → localhost:3001
+
+**User Validation Results:**
+
+**✅ All 3 Scenarios Tested:**
+
+1. **Scenario 1 (Tension Escalation - CT vs MdN):**
+   - ✅ Tick 1: 82% convergence, low tension, 3 ethics examined
+   - ✅ Tick 2: 72% convergence, rising tension, 1 ethics missing (stakeholder_impact)
+   - ✅ Tick 3: 65% convergence, high tension, 2 ethics missing, Crux declared (CRUX_BFI_001)
+   - ✅ Tooltip display on edge hover - **User feedback:** "elegant!"
+   - ✅ Sparkline click-to-jump confirmed
+   - ✅ Calibration drawer with 7 parameters confirmed
+
+2. **Scenario 2 (High Alignment - CT vs Process Theology):**
+   - ✅ Tick 1: 92% convergence
+   - ✅ Tick 2: 95% convergence
+   - ✅ Tick 3: 98% convergence (target achieved)
+   - ✅ All ethics examined (green badges)
+   - ✅ Low tension (thin green edges)
+
+3. **Scenario 3 (Resolution - CT vs Naturalism):**
+   - ✅ Tick 1: 75% convergence, high tension
+   - ✅ Tick 2: 85% convergence, reducing tension
+   - ✅ Tick 3: 95% convergence, Crux resolved
+   - ✅ Ethics progression observed (red → yellow → green badges)
+   - ✅ Tension reduction visible (thick amber → thin green edges)
+
+**✅ All Interactive Features Working:**
+
+- ✅ Scenario selector dropdown (3 scenarios)
+- ✅ Tick navigation (prev/next buttons)
+- ✅ Timeline sparkline click-to-jump
+- ✅ Edge hover tooltips
+- ✅ Ethics badge hover descriptions
+- ✅ Calibration drawer toggle
+- ✅ Crux toggle placeholder with tooltip
+
+**✅ All 8 Nova Entry 4 Success Criteria Met:**
+
+1. ✅ Triangle view renders with all 3 nodes
+2. ✅ Edges show tension lines with volume encoding
+3. ✅ Edge notes display on hover (tooltips)
+4. ✅ Confidence halos visually encode node confidence
+5. ✅ Timeline sparkline navigates between ticks
+6. ✅ Calibration drawer shows PRO vs ANTI side-by-side
+7. ✅ Ethics badges render per tick (examined/deferred/missing)
+8. ✅ Crux toggle greyed out with tooltip
+
+**User Feedback:**
+
+**Positive:**
+- "OMG this is so cool!" (initial reaction)
+- "elegant!" (tooltip interaction)
+- All tick transitions smooth
+- All visual encodings clear
+- Calibration drawer comparison intuitive
+
+**UX Improvement Suggestion:**
+- Tooltip resize: Mouse pointer slightly obstructs some text characters
+- **Phase 2 Polish:** Adjust tooltip offset or arrow positioning for better readability
+
+**Screenshots Captured:**
+- Scenario 1: Ticks 1-3 with tooltip demonstration
+- Scenario 2: Single screenshot (convergence changes validated)
+- Scenario 3: Ticks 1-3 showing Crux resolution
+
+**Nova Entry 6 Ping Trigger Conditions Met:**
+
+- ✅ **(a) Local rendering log captured** - Screenshots + validation notes documented
+- ✅ **(b) Scenario 1 live in prototype** - scenario_1_tension_escalation.json tested and confirmed
+- ✅ **(c) First 3 Tier-1 files carry front-matter** - VUDU_CFA.md, VUDU_PROTOCOL.md, WAYFINDING_GUIDE.md annotated (commit a90f56e)
+
+**Phase 1 Status:** ✅ **COMPLETE - READY FOR NOVA ENTRY 7 PING**
+
+**Next Steps:**
+1. Update B-STORM_6 with Entry 7 (Phase 1 completion report)
+2. Ping Nova with validation results
+3. Await Phase 2 strategic direction (live data integration, automation scripts, additional view modes)
+
+**Commits:**
+- `97a54fd` - Phase 1 Prototype (16 files, 1,923 insertions)
+- `62e1ce3` - Phase 1 Continuation (8 files, 795 insertions)
+- `a90f56e` - Ethics Annotations (3 files, 105 insertions)
+
+**Total Lines Implemented:** ~2,820 lines across 27 files
+
+**Implementation Time:** ~4 hours (scaffold → components → scenarios → testing)
+
+**Prototype Stability:** Production-ready for Phase 1 goals (mock data visualization validation)
+
+---

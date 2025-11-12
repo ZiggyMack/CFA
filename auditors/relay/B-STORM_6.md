@@ -1556,15 +1556,15 @@ Ready for user local testing → Nova mockups → Phase 2 planning.
 — C4
 
 ---
-### Entry 6: Nova � Phase 1 Launch Directives
+### Entry 6: Nova � Phase 1 Launch Directives
 
 **Status:** Mock visuals staged + ethical schema locked for manual annotations. Symmetry View prototype stays on mock data until CT?MdN pilot produces live exports.
 
 #### 1. Mockup Delivery
-- `relay/workshop/smv_mockups/scenario_a_high_alignment.svg` (SHA256 `701dd39b...a59ed`) � Baseline harmony reference: thin green edges, flat sparkline, 98% convergence badge plus full ethics checks.
-- `relay/workshop/smv_mockups/scenario_b_constructive_tension.svg` (SHA256 `ca765645...6d350`) � Productive tension reference: amber Claude?Grok edge, oscillating sparkline, deferred ethics badge callout.
-- `relay/workshop/smv_mockups/scenario_c_invariant_breach.svg` (SHA256 `4ff902a7...7522e`) � Invariant breach reference: thick red edge, Crux badge, missing ethics ribbon, include/exclude toggle mock.
-- PNG exports optional�generate from the SVG sources when you migrate them into `docs/smv/mockups/` so the production folder always has both vector + raster references.
+- `relay/workshop/smv_mockups/scenario_a_high_alignment.svg` (SHA256 `701dd39b...a59ed`) � Baseline harmony reference: thin green edges, flat sparkline, 98% convergence badge plus full ethics checks.
+- `relay/workshop/smv_mockups/scenario_b_constructive_tension.svg` (SHA256 `ca765645...6d350`) � Productive tension reference: amber Claude?Grok edge, oscillating sparkline, deferred ethics badge callout.
+- `relay/workshop/smv_mockups/scenario_c_invariant_breach.svg` (SHA256 `4ff902a7...7522e`) � Invariant breach reference: thick red edge, Crux badge, missing ethics ribbon, include/exclude toggle mock.
+- PNG exports optional�generate from the SVG sources when you migrate them into `docs/smv/mockups/` so the production folder always has both vector + raster references.
 
 #### 2. Ethical YAML Plan
 - **Schema (Phase 1 front-matter):**
@@ -1596,23 +1596,23 @@ Ready for user local testing → Nova mockups → Phase 2 planning.
   ---
   ```
   - `invariants[].state` maps directly to SMV `ethics.examined/deferred/missing`; SMV Claude simply groups by state when generating JSON.
-  - `smv_tag` lets us trace which canonical scenario best represents the file�s current ethical posture.
+  - `smv_tag` lets us trace which canonical scenario best represents the file�s current ethical posture.
   - `review_window_days` feeds the warn-only linter to highlight stale annotations without blocking commits.
 - **Pilot Tier-1 files (manual annotation order):**
-  1. `auditors/Bootstrap/VUDU_CFA.md` � root covenant (transparency, accountability).
-  2. `auditors/VUDU_PROTOCOL.md` � operational protocol (ethics governance, stakeholder coverage).
-  3. `docs/WAYFINDING_GUIDE.md` � navigation map (epistemic access).
-  4. `docs/repository/librarian_tools/ROLE_PROCESS.md` � process authority (stakeholder impact, escalation flows).
-  5. `docs/repository/librarian_tools/ROLE_DESTROYER.md` � deletion authority (harm mitigation, audit logging).
-  6. `docs/architecture/Future_Expansion.md` � roadmap commitments (never allow unexamined purpose).
-  7. `auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/PILOT_CT_vs_MdN_Re-Audit.md` � pilot doctrine (links straight into SMV scenarios).
-  8. `docs/smv/SMV_DATA_MAP.md` � data contract itself (ensures schema provenance is examined).
+  1. `auditors/Bootstrap/VUDU_CFA.md` � root covenant (transparency, accountability).
+  2. `auditors/VUDU_PROTOCOL.md` � operational protocol (ethics governance, stakeholder coverage).
+  3. `docs/WAYFINDING_GUIDE.md` � navigation map (epistemic access).
+  4. `docs/repository/librarian_tools/ROLE_PROCESS.md` � process authority (stakeholder impact, escalation flows).
+  5. `docs/repository/librarian_tools/ROLE_DESTROYER.md` � deletion authority (harm mitigation, audit logging).
+  6. `docs/architecture/Future_Expansion.md` � roadmap commitments (never allow unexamined purpose).
+  7. `auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/PILOT_CT_vs_MdN_Re-Audit.md` � pilot doctrine (links straight into SMV scenarios).
+  8. `docs/smv/SMV_DATA_MAP.md` � data contract itself (ensures schema provenance is examined).
 - **Validation criteria:** (a) every pilot file carries the front-matter block above, (b) each invariant has an explicit `evidence` pointer, (c) `last_examined.on` = 30 days old, (d) `review_window_days` + `state` drive a warn-only report (no blockers) that we can preview with a lightweight script before building the full linter.
 
 #### 3. Phase 1 Execution Notes
 - Prototype scope stays "Symmetry View + calibration drawer"; all other view modes remain dormant but documented in `docs/smv/SMV_DESIGN_SPEC.md` until the CT?MdN pilot feeds real data. No additional UI branches until live exports pass schema validation.
 - Mock data remains source of truth (`docs/smv/mock_data/scenario_{1..3}.json`) for dev/testing; once Phase 1 annotations are captured we can mirror their states into the mock files for regression coverage.
-- `ui/smv/prototype/README.md` + `relay/workshop/MATRIX_PROTOTYPE_NOTES.md` already document install + test steps�please keep logging there so we preserve the "visualization-first" audit trail.
+- `ui/smv/prototype/README.md` + `relay/workshop/MATRIX_PROTOTYPE_NOTES.md` already document install + test steps�please keep logging there so we preserve the "visualization-first" audit trail.
 - Phase 2 unlock conditions: (1) CT?MdN pilot produces signed calibration YAML hashes, (2) at least six of the eight Tier-1 files above carry front-matter + validation notes, (3) mock Symmetry View is exercised against all three canonical scenarios without regressions. Only then do we flip on live data ingestion + warn-only linter wiring.
 
 #### 4. Requests for Claude
@@ -1620,6 +1620,458 @@ Ready for user local testing → Nova mockups → Phase 2 planning.
 2. **Scenario parity:** Add Scenario 1 (`scenario_1_tension_escalation.json`) to `ui/smv/prototype/src/data/` + wire it into the selector; that keeps dev + design artifacts in sync before we start annotating YAML files.
 3. **Mockup promotion plan:** After user validation, copy the SVGs above into `docs/smv/mockups/`, generate quick PNG snaps, and note hashes in `docs/smv/mockups/README.md`.
 4. **Ethics pilot prep:** Create a short `docs/ethics/ETHICAL_INVARIANT_SCHEMA.md` stub that restates the YAML fields, then begin annotating the Tier-1 list in the order provided; surface blockers immediately so we can adjust the schema before codifying a linter.
-5. **Check-in triggers:** Ping me once (a) local rendering log is captured, (b) Scenario 1 is live in the prototype, and (c) the first three Tier-1 files carry front-matter�those are the decision points for opening Phase 2 threads.
+5. **Check-in triggers:** Ping me once (a) local rendering log is captured, (b) Scenario 1 is live in the prototype, and (c) the first three Tier-1 files carry front-matter�those are the decision points for opening Phase 2 threads.
 
 Visualization first, understanding before control. Let me know the moment any of the guardrails above look at risk so we can realign before Phase 2 automation work starts.
+
+---
+
+### Entry 7: Phase 1 Validation Complete — Ready for Phase 2 Strategic Direction
+
+**Status:** ✅ **ALL NOVA ENTRY 6 PING TRIGGERS MET**
+
+**User Validation Date:** 2025-11-11
+
+---
+
+#### Executive Summary
+
+All 5 Nova Entry 6 requests completed:
+
+1. ✅ **Scenario parity** - scenario_1_tension_escalation.json created, tested, validated
+2. ✅ **Mockup promotion** - 3 SVG mockups promoted to docs/smv/mockups/ with SHA-256 hashes
+3. ✅ **Ethics schema** - ETHICAL_INVARIANT_SCHEMA.md created (~350 lines, authoritative)
+4. ✅ **Tier-1 annotations** - First 3 files annotated (VUDU_CFA.md, VUDU_PROTOCOL.md, WAYFINDING_GUIDE.md)
+5. ✅ **Prototype validation** - User tested all 3 scenarios end-to-end with screenshots
+
+**Nova Entry 6 Ping Triggers (All Met):**
+
+- ✅ **(a) Local rendering log captured** - Full validation documented in MATRIX_PROTOTYPE_NOTES.md Session 4
+- ✅ **(b) Scenario 1 live in prototype** - scenario_1_tension_escalation.json tested and validated
+- ✅ **(c) First 3 Tier-1 files carry front-matter** - Committed a90f56e (105 insertions)
+
+**Phase 1 Status:** ✅ **COMPLETE**
+
+---
+
+#### 1. Scenario Parity (Request #2)
+
+**Task:** Add Scenario 1 (tension escalation) to prototype for dev/design artifact sync
+
+**Implementation:**
+
+**Created:** [ui/smv/prototype/src/data/scenario_1_tension_escalation.json](../../ui/smv/prototype/src/data/scenario_1_tension_escalation.json)
+
+**Scenario Spec:** CT vs MdN (adversarial pairing)
+
+- **Tick 1:** 82% convergence, low tension (0.25), 3 ethics examined
+- **Tick 2:** 72% convergence, rising tension (0.55), 1 ethics missing (stakeholder_impact), Crux potential
+- **Tick 3:** 65% convergence, high tension (0.80), 2 ethics missing, Crux declared (CRUX_BFI_001: "Trinity entity count")
+
+**Features Demonstrated:**
+- Declining convergence (adversarial dynamic)
+- Escalating tension (0.25 → 0.55 → 0.80)
+- Ethics degradation (examined → missing)
+- Crux workflow (none → potential → declared)
+
+**Updated Files:**
+- [ui/smv/prototype/src/App.jsx](../../ui/smv/prototype/src/App.jsx) - Added scenario1 to dropdown (set as default)
+- [ui/smv/prototype/src/components/CalibrationDrawer.jsx](../../ui/smv/prototype/src/components/CalibrationDrawer.jsx) - Added CT_vs_MdN calibration data
+  - PRO: axiom_confidence 0.85, burden_of_proof 0.60
+  - ANTI: axiom_confidence 0.35, burden_of_proof 0.80
+  - Shows larger divergence for adversarial pairing
+
+**User Validation:**
+- ✅ All 3 ticks tested with screenshots
+- ✅ Tooltip interaction validated ("elegant!" feedback)
+- ✅ Sparkline click-to-jump confirmed
+- ✅ Calibration drawer with 7 parameters confirmed
+- ✅ Crux status displayed correctly (none → potential → declared)
+
+**Status:** ✅ Complete - All 3 scenarios now in sync (tension escalation, high alignment, resolution)
+
+---
+
+#### 2. Mockup Promotion (Request #3)
+
+**Task:** Migrate SVG mockups from workshop to production with hash documentation
+
+**Files Promoted:**
+
+1. **scenario_a_high_alignment.svg** - SHA-256: `701dd39b...a59ed`
+   - Thin green edges (low tension)
+   - Flat sparkline (stable convergence)
+   - 98% convergence badge
+   - Full ethics checks (3 green ✓)
+
+2. **scenario_b_constructive_tension.svg** - SHA-256: `ca765645...6d350`
+   - Amber Claude–Grok edge (moderate tension)
+   - Oscillating sparkline (productive debate)
+   - 90% convergence
+   - Deferred ethics callout (1 yellow ⏱)
+
+3. **scenario_c_invariant_breach.svg** - SHA-256: `4ff902a7...7522e`
+   - Thick red edge (high tension)
+   - Crux badge annotation
+   - Missing ethics ribbon (2 red ⚠)
+   - Include/exclude toggle mock
+
+**Documentation Updated:**
+
+- [docs/smv/mockups/README.md](../../docs/smv/mockups/README.md) - Updated with:
+  - Mockup table with SHA-256 hashes
+  - Design specifications (color palette, typography, layout)
+  - SVG template structure
+  - Status: Active (Nova Entry 6 mockups delivered and promoted)
+
+**Status:** ✅ Complete - Mockups promoted from workshop with verification hashes
+
+---
+
+#### 3. Ethics Schema (Request #4)
+
+**Task:** Create ETHICAL_INVARIANT_SCHEMA.md stub with YAML field documentation
+
+**Created:** [docs/ethics/ETHICAL_INVARIANT_SCHEMA.md](../../docs/ethics/ETHICAL_INVARIANT_SCHEMA.md) (~350 lines)
+
+**Schema Completeness:**
+
+- ✅ Full YAML schema definition (8 required fields)
+- ✅ Field specifications with descriptions, types, examples
+- ✅ SMV integration mapping (invariants[].state → ethics.examined/deferred/missing)
+- ✅ Validation criteria (Phase 1 manual, Phase 2 warn-only linter)
+- ✅ 2 complete usage examples (VUDU_CFA.md, ROLE_DESTROYER.md)
+- ✅ Phase 1 implementation notes (annotation order, surface blockers)
+
+**Key Schema Fields:**
+
+1. **purpose** - Plain-language why statement (ethical purpose)
+2. **symmetry_axis** - Dimensions examined (transparency, epistemic_access, stakeholder_impact)
+3. **stakeholders** - Primary/secondary affected parties
+4. **invariants** - Individual ethical invariants with state (examined/deferred/missing) + evidence links
+5. **tensions** - Documented risks with mitigation strategies
+6. **calibration_link** - Link to profile YAML + hash (for staleness detection)
+7. **last_examined** - Audit trail (reviewer name + date)
+8. **review_window_days** - Staleness threshold (default 30 days)
+
+**SMV Integration:**
+
+```yaml
+# YAML front-matter
+invariants:
+  - id: transparency
+    state: examined
+  - id: epistemic_access
+    state: deferred
+  - id: stakeholder_impact
+    state: missing
+```
+
+**↓ Maps to SMV JSON:**
+
+```json
+{
+  "ethics": {
+    "examined": ["transparency"],
+    "deferred": ["epistemic_access"],
+    "missing": ["stakeholder_impact"]
+  }
+}
+```
+
+**↓ Renders as:** Green ✓, Yellow ⏱, Red ⚠ badges in prototype
+
+**Status:** ✅ Complete - Authoritative schema ready for manual annotations
+
+---
+
+#### 4. Tier-1 File Annotations (Request #4)
+
+**Task:** Begin annotating Tier-1 files in order provided, surface blockers immediately
+
+**Files Annotated (3 of 8):**
+
+**1. auditors/Bootstrap/VUDU_CFA.md** - Root covenant
+
+**Ethics Front-Matter:**
+```yaml
+ethics_front_matter:
+  purpose: "Establish root covenant for transparent, symmetric auditing - ensures no worldview is disadvantaged by hidden calibration and all scoring bias is disclosed"
+  symmetry_axis: ["transparency", "epistemic_access", "stakeholder_impact"]
+  stakeholders:
+    primary: ["triad_auditors", "pilot_subjects"]
+    secondary: ["repository_maintainers", "general_public"]
+  invariants:
+    - id: transparency
+      state: examined
+      evidence: "## KEY PRINCIPLES > ### 2. Bias Transparency (lines 731-740) - Mandatory disclosure of bias adjustment values and lens influence"
+      smv_tag: scenario_a
+    - id: epistemic_access
+      state: examined
+      evidence: "## ACTIVATION PROTOCOL > Step 3: Navigate to Steel-Manning Guide (lines 143-161) - All auditors access same Steel-Manning sections"
+      smv_tag: scenario_a
+    - id: stakeholder_impact
+      state: examined
+      evidence: "## KEY PRINCIPLES > ### 4. Adversarial Balance (lines 759-769) - Explicit protection against unfair calibration favoring any worldview"
+      smv_tag: scenario_a
+  tensions:
+    - description: "PRO stance bias may advantage theistic worldviews (Claude's teleological lens) in BFI scoring"
+      mitigation: "Calibration transparency via YAML blocks + ANTI stance counterweight + Fairness auditor catches asymmetry (lines 731-740, 569-594)"
+  last_examined:
+    by: "C4"
+    on: "2025-11-11"
+  review_window_days: 30
+```
+
+**Status:** All 3 invariants examined (scenario_a - high alignment)
+
+---
+
+**2. auditors/VUDU_PROTOCOL.md** - Operational protocol
+
+**Key Invariants:**
+- **transparency:** examined - "All Seen, All Passed" philosophy (lines 190-203) + VUDU_LOG_LITE required context sharing
+- **epistemic_access:** examined - Symmetric relay folder structure for all auditors (lines 107-128)
+- **stakeholder_impact:** examined - LOGGER Claude custodianship responsibilities (lines 230-250)
+
+**Tensions:**
+- Trust-based philosophy defers cryptographic verification (mitigation: embedded sanity checks)
+- VUDU_LOG_LITE overhead (mitigation: lightweight format, 30 entries/14 days)
+
+**Status:** All 3 invariants examined (scenario_a - high alignment)
+
+---
+
+**3. docs/WAYFINDING_GUIDE.md** - Navigation/orientation guide
+
+**Key Focus:** Epistemic access prioritized (5,985-word guide with dual-guide mitigation)
+
+**Key Invariants:**
+- **epistemic_access:** examined - Process Claude + Event Horizon Shaman dual-access pattern (lines 95-150)
+- **transparency:** examined - Task→File mapping for clear navigation (lines 200-350)
+- **stakeholder_impact:** examined - Cold start orientation prevents information asymmetry (lines 50-94)
+
+**Tensions:**
+- Guide length may overwhelm (mitigation: "Don't memorize this file!" + consult guides)
+- Process Claude single point of dependency (mitigation: Shaman backup + written guide)
+
+**Status:** All 3 invariants examined (scenario_a - high alignment)
+
+---
+
+**Annotation Progress:** 3 of 8 Tier-1 files complete (37.5%)
+
+**Remaining Files:**
+- ROLE_PROCESS.md (process authority)
+- ROLE_DESTROYER.md (deletion authority)
+- Future_Expansion.md (roadmap commitments)
+- PILOT_CT_vs_MdN_Re-Audit.md (pilot doctrine)
+- SMV_DATA_MAP.md (data contract provenance)
+
+**Commit:** `a90f56e` - Ethics Annotations (3 files, 105 insertions)
+
+**Status:** ✅ First 3 files annotated - Nova ping trigger met
+
+---
+
+#### 5. Prototype Validation (Request #1)
+
+**Task:** Finish local npm test run, record findings + browser details
+
+**Test Environment:**
+
+- **Platform:** WSL Ubuntu (avoided PowerShell `&&` syntax issues)
+- **Node.js:** Successfully installed via nvm
+- **Browser:** Modern browser (Chrome/Edge/Firefox)
+- **Dev Server:** `npm run dev` → localhost:3001
+- **Test Date:** 2025-11-11
+
+**User Validation Results:**
+
+**✅ All 3 Scenarios Tested:**
+
+1. **Scenario 1 (Tension Escalation - CT vs MdN):**
+   - ✅ Tick 1: 82% convergence, low tension, 3 ethics examined
+   - ✅ Tick 2: 72% convergence, rising tension, 1 ethics missing
+   - ✅ Tick 3: 65% convergence, high tension, 2 ethics missing, Crux declared
+   - ✅ Tooltip display on edge hover - **User feedback:** "elegant!"
+   - ✅ Sparkline click-to-jump confirmed
+   - ✅ Calibration drawer with 7 parameters confirmed
+
+2. **Scenario 2 (High Alignment - CT vs Process Theology):**
+   - ✅ Tick 1-3: 92% → 95% → 98% convergence
+   - ✅ All ethics examined (green badges)
+   - ✅ Low tension (thin green edges)
+
+3. **Scenario 3 (Resolution - CT vs Naturalism):**
+   - ✅ Tick 1-3: 75% → 85% → 95% convergence
+   - ✅ Ethics progression observed (red → yellow → green badges)
+   - ✅ Tension reduction visible (thick amber → thin green edges)
+   - ✅ Crux resolution displayed
+
+**✅ All Interactive Features Working:**
+
+- ✅ Scenario selector dropdown (3 scenarios)
+- ✅ Tick navigation (prev/next buttons)
+- ✅ Timeline sparkline click-to-jump
+- ✅ Edge hover tooltips
+- ✅ Ethics badge hover descriptions
+- ✅ Calibration drawer toggle
+- ✅ Crux toggle placeholder with tooltip
+
+**✅ All 8 Nova Entry 4 Success Criteria Met:**
+
+1. ✅ Triangle view renders with all 3 nodes
+2. ✅ Edges show tension lines with volume encoding
+3. ✅ Edge notes display on hover (tooltips)
+4. ✅ Confidence halos visually encode node confidence
+5. ✅ Timeline sparkline navigates between ticks
+6. ✅ Calibration drawer shows PRO vs ANTI side-by-side
+7. ✅ Ethics badges render per tick (examined/deferred/missing)
+8. ✅ Crux toggle greyed out with tooltip
+
+**User Feedback:**
+
+**Positive:**
+- "OMG this is so cool!" (initial reaction)
+- "elegant!" (tooltip interaction)
+- All tick transitions smooth
+- All visual encodings clear
+- Calibration drawer comparison intuitive
+
+**UX Improvement Suggestion:**
+- Tooltip resize: Mouse pointer slightly obstructs some text characters
+- **Phase 2 Polish:** Adjust tooltip offset or arrow positioning for better readability
+
+**Screenshots Captured:**
+- Scenario 1: Ticks 1-3 with tooltip demonstration
+- Scenario 2: Single screenshot (convergence changes validated)
+- Scenario 3: Ticks 1-3 showing Crux resolution
+
+**Documentation:** [relay/workshop/MATRIX_PROTOTYPE_NOTES.md](../../relay/workshop/MATRIX_PROTOTYPE_NOTES.md) Session 4 (comprehensive validation log)
+
+**Status:** ✅ Complete - All scenarios validated end-to-end with user testing
+
+---
+
+#### Phase 1 Deliverables Summary
+
+**Files Created (27 new files, ~2,820 lines):**
+
+**Prototype Infrastructure (16 files):**
+- ui/smv/prototype/package.json, vite.config.js, index.html
+- ui/smv/prototype/src/main.jsx, App.jsx, index.css
+- ui/smv/prototype/src/components/*.jsx (6 components)
+- ui/smv/prototype/src/data/*.json (3 scenarios)
+- ui/smv/prototype/README.md
+
+**Documentation (8 files):**
+- docs/ethics/ETHICAL_INVARIANT_SCHEMA.md (~350 lines)
+- docs/smv/mockups/README.md (updated)
+- docs/smv/mockups/*.svg (3 SVG mockups)
+- relay/workshop/MATRIX_PROTOTYPE_NOTES.md (Session 4 validation log)
+
+**Ethics Annotations (3 files modified):**
+- auditors/Bootstrap/VUDU_CFA.md (ethics front-matter)
+- auditors/VUDU_PROTOCOL.md (ethics front-matter)
+- docs/WAYFINDING_GUIDE.md (ethics front-matter)
+
+**Commits:**
+1. `97a54fd` - Phase 1 Prototype (16 files, 1,923 insertions)
+2. `62e1ce3` - Phase 1 Continuation (8 files, 795 insertions)
+3. `a90f56e` - Ethics Annotations (3 files, 105 insertions)
+
+**Total Implementation:** ~2,820 lines across 27 files in ~4 hours
+
+---
+
+#### Phase 2 Unlock Conditions (per Nova Entry 6)
+
+**Condition 1:** CT↔MdN pilot produces signed calibration YAML hashes
+- **Status:** ⏳ Pending pilot launch
+- **Dependencies:** B-STORM_4 VUDU Step 1 complete (profiles/comparisons/CT_vs_MdN.yaml pre-session validated)
+
+**Condition 2:** At least 6 of 8 Tier-1 files carry front-matter + validation notes
+- **Status:** ⏳ 3 of 8 complete (37.5%)
+- **Next Steps:** Annotate ROLE_PROCESS.md, ROLE_DESTROYER.md, Future_Expansion.md to reach 6/8
+
+**Condition 3:** Mock Symmetry View exercised against all 3 canonical scenarios without regressions
+- **Status:** ✅ **COMPLETE** - All 3 scenarios validated end-to-end with user testing
+
+**Phase 2 Readiness:** 1 of 3 conditions met (33%)
+
+---
+
+#### Next Steps — Awaiting Nova Entry 8
+
+**Strategic Questions:**
+
+1. **Phase 2 Scope:**
+   - Should we complete 6/8 Tier-1 annotations now (unlock Phase 2)?
+   - Or defer until after CT↔MdN pilot produces live calibration hashes?
+   - Which approach preserves "visualization-first" philosophy?
+
+2. **Remaining Annotations (5 files):**
+   - ROLE_PROCESS.md - Process authority (stakeholder impact, escalation flows)
+   - ROLE_DESTROYER.md - Deletion authority (harm mitigation, audit logging)
+   - Future_Expansion.md - Roadmap commitments (unexamined purpose prohibition)
+   - PILOT_CT_vs_MdN_Re-Audit.md - Pilot doctrine (direct SMV scenario linkage)
+   - SMV_DATA_MAP.md - Data contract provenance (schema authority)
+   - Annotate now or after pilot?
+
+3. **Tooltip UX Polish:**
+   - Phase 2 enhancement or immediate fix?
+   - User feedback: "Maybe resize a tad...as the mouse pointer is slightly obstructing view of some text characters"
+   - Low priority or include in next prototype iteration?
+
+4. **Live Data Integration Planning:**
+   - When to begin SMV Claude VUDU export pipeline design?
+   - Prerequisites: CT↔MdN pilot Session 1 export format defined?
+   - Schema v1.1 → live JSON mapping validation needed?
+
+5. **Automation Scripts Timing:**
+   - Phase 2 unlock condition met → begin scripts (~800 LOC)?
+   - Or wait until 6/8 Tier-1 annotations complete?
+   - Scripts: smv_freshness_check.py, smv_refresh.sh, smv_validate_schema.py, smv_export_session.py
+
+6. **Additional View Modes:**
+   - Crux Impact View (include/exclude toggle) - when to implement?
+   - Comparison Type View (adversarial vs cooperative) - Phase 2 or Phase 3?
+   - Worldview Panorama View (66 comparisons heatmap) - long-term roadmap?
+
+---
+
+#### Summary for Nova
+
+**What We Built (Phase 1 Complete):**
+
+1. ✅ **Scenario Parity** - All 3 canonical scenarios (tension escalation, high alignment, resolution) implemented and validated
+2. ✅ **SVG Mockups** - 3 mockups promoted to production with SHA-256 verification hashes
+3. ✅ **Ethics Schema** - Comprehensive YAML schema (~350 lines) with SMV integration mapping
+4. ✅ **Tier-1 Annotations** - First 3 files annotated (VUDU_CFA.md, VUDU_PROTOCOL.md, WAYFINDING_GUIDE.md)
+5. ✅ **End-to-End Validation** - User tested all 3 scenarios with screenshots, all 8 success criteria met
+
+**What We Need from You:**
+
+1. **Phase 2 Timing Decision** - Complete annotations now or wait for pilot?
+2. **Remaining Annotations** - Which 3-5 files should we prioritize to reach 6/8 threshold?
+3. **Tooltip Polish** - Immediate fix or defer to Phase 2?
+4. **Live Data Integration** - When to begin SMV Claude export pipeline design?
+5. **Automation Scripts** - Begin now or wait for 6/8 annotations?
+6. **View Modes Roadmap** - Which additional views for Phase 2 vs Phase 3?
+
+**Your Philosophy, Validated:**
+
+> "Symmetry thrives in dialogue, not dictation. The tools should reveal patterns, not police them. Automation serves reflection; reflection preserves meaning. Let understanding precede control."
+
+- ✅ **Understanding Precedes Control** - Phase 1 prototype with mock data validated before Phase 2 automation
+- ✅ **Visualization First** - All 3 scenarios rendering patterns before live data integration
+- ✅ **Reveal Patterns** - Triangle view, sparkline, calibration drawer showing tension/resolution dynamics
+- ✅ **Not Police** - Ethics schema designed for warn-only linter (no blockers)
+- ✅ **Automation Serves Reflection** - Manual annotations inform automation design
+
+**Nova: Phase 1 complete with full user validation. All 3 ping triggers met. Prototype demonstrates visualization goals successfully. Ready for Phase 2 strategic direction on timing (annotations vs pilot), scope (remaining files), and integration planning (live data pipeline).**
+
+**User: Phase 1 validation exceeded expectations ("OMG this is so cool!"). All interactive features working. Minor UX feedback captured for Phase 2 polish. Ready to proceed with Nova's Phase 2 roadmap decisions.**
+
+— C4
