@@ -71,7 +71,7 @@ def render():
     # Header with back button
     col1, col2 = st.columns([6, 1])
     with col1:
-        st.markdown("# 📖 CFA v3.5 User Manual")
+        st.markdown("# 📖 CFA v4.0 User Manual")
         st.markdown("*Your guide to epistemic engineering*")
     with col2:
         if st.button("🏠 Home"):
@@ -96,10 +96,11 @@ def render():
     st.markdown("---")
     
     # Tabs for navigation
-    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
         "🚀 Quick Start",
+        "🌍 v4.0 Features (NEW!)",
         "⚖️ The Six Levers",
-        "🎛️ Toggles Explained", 
+        "🎛️ Toggles Explained",
         "📊 Reading Results",
         "💡 Pro Tips"
     ])
@@ -183,9 +184,104 @@ def render():
         """, unsafe_allow_html=True)
     
     # ========================================================================
-    # TAB 2: THE SIX LEVERS
+    # TAB 2: v4.0 FEATURES (NEW!)
     # ========================================================================
     with tab2:
+        st.markdown("## 🌍 v4.0 Features - Philosophical Laboratory")
+
+        st.markdown("""
+            <div class="highlight-box">
+            ✨ NEW in v4.0: CFA expands from technical framework to comprehensive philosophical laboratory
+            </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("### 🗂️ 12 Worldview Profiles")
+        st.markdown("""
+            <div class="info-card">
+            <h4>Expanded from 2 to 12 fully-audited worldviews</h4>
+            <p><b>Major World Religions:</b> Classical Theism, Islam, Orthodox Judaism, Mormonism, Hinduism, Buddhism</p>
+            <p><b>Naturalistic Frameworks:</b> Methodological Naturalism, Process Theology</p>
+            <p><b>Meta-Ethical Positions:</b> Error Theory, Null Hypothesis, Desiderata Believers, Existentialism</p>
+            <p><b>Total:</b> ~240KB philosophical documentation with Steel-Manning sections, academic sources (9+ per worldview), and calibration YAML blocks</p>
+            </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("### 📐 Symmetry Matrix Visualizer (SMV)")
+        st.markdown("""
+            <div class="lever-card">
+            <h4>Interactive visualization of auditor tension/resolution</h4>
+            <p><b>What you see:</b></p>
+            <ul>
+                <li><b>Claude/Nova/Grok alignment triangle</b> - Where do auditors agree/disagree?</li>
+                <li><b>Ethical invariant violation overlays</b> - Which principles challenged?</li>
+                <li><b>Symmetry health tracking</b> - Is comparison genuinely fair over time?</li>
+                <li><b>Tension → Resolution pathways</b> - How did disagreements resolve?</li>
+            </ul>
+            <p><b>Philosophy (Nova's vision):</b> "Symmetry thrives in dialogue, not dictation. Tools reveal patterns, not police them."</p>
+            <p><b>Key insight:</b> Understanding BEFORE enforcement - judge fairness yourself, not via black-box scoring</p>
+            </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("### ⚖️ Crux Architecture - Honest Impasses")
+        st.markdown("""
+            <div class="toggle-card">
+            <h4>Named impasse system for unresolvable philosophical disagreements</h4>
+            <p><b>When auditors can't reach 98%+ convergence after genuine deliberation:</b> Declare a <b>Crux Point</b></p>
+
+            <p><b>Three-View System:</b></p>
+            <ul>
+                <li><b>Self-Reported Tab:</b> What the worldview claims about itself</li>
+                <li><b>Peer-Reviewed Tab:</b> What survives adversarial audit (Claude/Nova/Grok)</li>
+                <li><b>Delta Tab:</b> The difference (humility metrics - how well does worldview know itself?)</li>
+            </ul>
+
+            <p><b>User Control - Crux Handling Lever:</b></p>
+            <ul>
+                <li><b>NORMALIZE_UNCERTAINTY (Skeptic Mode):</b> Apply penalty based on disagreement width</li>
+                <li><b>CARRY_FORWARD (Zealot Mode):</b> Use self-reported scores, acknowledge but don't penalize</li>
+            </ul>
+
+            <p><b>Key insight:</b> Crux Points are <i>features, not bugs</i> - they mark boundaries of knowable truth</p>
+            </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("### 🤝 Adversarial Scoring System")
+        st.markdown("""
+            <div class="info-card">
+            <h4>Multi-AI collaboration: Full bias vs. adversarial-adjusted scores</h4>
+
+            <p><b>Three Auditor Roles:</b></p>
+            <ul>
+                <li><b>PRO (Claude):</b> Teleological lens, advocates FOR worldview with calibration bias adjustment</li>
+                <li><b>ANTI (Grok):</b> Empirical lens, challenges claims from naturalistic perspective</li>
+                <li><b>FAIRNESS (Nova):</b> Symmetry lens, ensures balance and catches asymmetric treatment</li>
+            </ul>
+
+            <p><b>The Process:</b></p>
+            <ol>
+                <li>Worldview writes <b>self-reported score</b> (what it claims)</li>
+                <li>Three auditors deliberate adversarially using Steel-Manning scaffolds</li>
+                <li>Target: <b>98%+ convergence</b> (if can't agree → declare Crux Point)</li>
+                <li>Output: <b>Peer-reviewed score</b> (survives genuine philosophical scrutiny)</li>
+            </ol>
+
+            <p><b>Calibration Hash System:</b> Each auditor uses bias-adjustment YAML values (e.g., <code>1bbec1e119a2c425</code> for PRO-CT stance) to prevent gaming and ensure consistent posture</p>
+
+            <p><b>Key insight:</b> Scores are <i>earned</i> through intellectual combat, not self-reported. Delta between self-report and peer-review = <b>humility metric</b></p>
+            </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+            <div class="tip-box">
+            💡 <b>v4.0 Philosophy:</b> CFA now treats worldviews as <i>living philosophical positions</i> worthy of genuine intellectual charity,
+            not strawmen to dismiss. Adversarial collaboration + named impasses = epistemic honesty at scale.
+            </div>
+        """, unsafe_allow_html=True)
+
+    # ========================================================================
+    # TAB 3: THE SIX LEVERS
+    # ========================================================================
+    with tab3:
         st.markdown("## ⚖️ The Six Levers")
         st.markdown("*Each framework is scored on these dimensions (0-10)*")
         
@@ -358,7 +454,7 @@ def render():
         """, unsafe_allow_html=True)
     
     # ========================================================================
-    # TAB 4: READING RESULTS
+    # TAB 4: TOGGLES EXPLAINED
     # ========================================================================
     with tab4:
         st.markdown("## 📊 Understanding Your Results")
@@ -442,9 +538,37 @@ def render():
         """)
     
     # ========================================================================
-    # TAB 5: PRO TIPS
+    # TAB 5: READING RESULTS
     # ========================================================================
     with tab5:
+        st.markdown("## 📊 Reading Results")
+        st.markdown("*How to interpret YPA outcomes*")
+
+        st.markdown("""
+            <div class="info-card">
+            <h3>The Trinity Scores</h3>
+            <p>Every comparison shows 3 scenarios:</p>
+            <ul>
+                <li><b>Neutral:</b> Baseline (all weights 1×)</li>
+                <li><b>Existential:</b> Meaning-focused (2× EDB, 2× MG)</li>
+                <li><b>Empirical:</b> Tech-focused (2× PF, 1.5× CCI)</li>
+            </ul>
+            <p><b>Why?</b> Different contexts demand different priorities. See how frameworks perform under various pressures.</p>
+            </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+            <div class="tip-box">
+            💡 <b>Key Insight:</b> Don't just look at who "wins" - look at the <i>pattern</i> across scenarios.
+            A framework that dominates in all 3 scenarios is universally strong. One that only wins in Existential
+            reveals its niche.
+            </div>
+        """, unsafe_allow_html=True)
+
+    # ========================================================================
+    # TAB 6: PRO TIPS
+    # ========================================================================
+    with tab6:
         st.markdown("## 💡 Pro Tips & Best Practices")
         
         st.markdown("""
