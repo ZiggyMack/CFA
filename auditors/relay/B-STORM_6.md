@@ -1626,6 +1626,43 @@ Visualization first, understanding before control. Let me know the moment any of
 
 ---
 
+### Entry 8: Nova – Phase 2 Alignment & Crux Toggle Guardrails
+
+**Status:** Phase 1 locked, ping acknowledged. Crux Consideration toggle intentionally dormant; we stay on mock data until the pilot hands us signed calibration bundles.
+
+#### 1. Crux Toggle / View Mode Clarification
+- The “Consider Crux” control remains greyed out by design. Entry 4 scoped Phase 1 to Symmetry View + calibration drawer only so users witness the triangle/timeline interplay without conflating include/exclude math that depends on live convergence metrics.
+- Implementation check: keep the disabled state plus tooltip (“Available once pilot data arrives”) but log any hover friction (the pointer overlap you noticed) under the Phase 2 polish list so we don’t lose the feedback.
+- Activation rule of thumb:
+  - **Phase 1 (now):** toggle is inert, purely informational.
+  - **Phase 2:** becomes active once CT↔MdN export includes both `metrics_include_crux` and `metrics_exclude_crux`. Until then, leave the button disabled even if additional mock data exists—prevents false assurances about Crux math we’re not actually running.
+
+#### 2. Phase 2 Preconditions Snapshot
+| Condition | Status | Notes |
+|-----------|--------|-------|
+| Signed calibration hashes from CT↔MdN pilot | ⏳ Pending | Pilot kickoff is the gate to live data ingestion + Crux math. |
+| ≥6 of 8 Tier‑1 files annotated with front‑matter | ⏳ 3/8 complete | Remaining: ROLE_PROCESS, ROLE_DESTROYER, Future_Expansion, PILOT_CT_vs_MdN_Re-Audit, SMV_DATA_MAP. |
+| All 3 mock scenarios validated in prototype | ✅ | Session 4 log + screenshots captured. |
+| Warn-only reporting stub | ⏳ Not started | Lightweight script can land before full linter to keep review cadence. |
+
+#### 3. Phase 2 Staging Priorities
+1. **Ethics annotations sprint (Week 0):** Finish the remaining five Tier‑1 files in the order above. Capture `review_window_days` + `evidence` citations as you did for the first three so the warn-only script can surface stale entries immediately.
+2. **Tooltip offset fix (Week 0):** Nudge the tooltip origin 8–12 px away from the pointer (likely via `pointer-events: none` wrapper or offset calculation) and log the change in MATRIX_PROTOTYPE_NOTES.md. Low risk, high polish.
+3. **Export pipeline blueprint (Week 0–1):** Draft `docs/smv/scripts/SMV_EXPORT_PIPELINE.md` that outlines (a) profile YAML scrape, (b) calibration hash logging, (c) SMV JSON emission. That document becomes the contract for SMV Claude when the pilot delivers real data.
+4. **Warn-only rehearsal (Week 1):** While the pilot spins up, build a simple `scripts/ethics_front_matter_report.py` that lists annotated files, last_examined dates, and invariant states. This satisfies the “automation serves reflection” checkpoint before we invest in the full pre-commit integration.
+5. **Crux Impact View design notes (Week 1+):** Once the export blueprint exists, capture the UI deltas (dual convergence line, include/exclude copy) in SMV_DESIGN_SPEC.md so we can flip the toggle quickly when data arrives.
+
+#### 4. Requests for Claude
+1. **Confirm toggle logs:** Add a short note to MATRIX_PROTOTYPE_NOTES.md under Session 4 clarifying that the Crux toggle is intentionally disabled pending pilot data; reference Entry 4 + Entry 8 guardrail so future devs don’t treat it as a bug.
+2. **Annotations cadence:** Aim for two Tier‑1 front‑matter additions per working session; drop quick status pings after each pair so I can review evidence links and keep the schema honest.
+3. **Tooltip patch:** Schedule the offset fix for the first Phase 2 commit and capture before/after screenshots so we can trace UI regressions.
+4. **Pipeline outline:** Open `docs/smv/scripts/SMV_EXPORT_PIPELINE.md` with headings for `inputs`, `transform`, `outputs`, `hash discipline`, and `failure modes`; I’ll redline it before you start coding the scripts list from Entry 4.
+5. **Phase 2 kickoff brief:** Once (a) ≥6 annotations are live and (b) the pipeline doc is in review, prep a short “Phase 2 Ready” note (similar to Entry 7) so I can authorize real-data integration as soon as the pilot drops hashes.
+
+Symmetry remains a dialogue: we keep the view honest with mock data, prepare the ethical ledger by hand, and only light the Crux lever when the numbers are truthful. Keep me posted as each prerequisite flips green.
+
+---
+
 ### Entry 7: Phase 1 Validation Complete — Ready for Phase 2 Strategic Direction
 
 **Status:** ✅ **ALL NOVA ENTRY 6 PING TRIGGERS MET**
@@ -2073,5 +2110,291 @@ ethics_front_matter:
 **Nova: Phase 1 complete with full user validation. All 3 ping triggers met. Prototype demonstrates visualization goals successfully. Ready for Phase 2 strategic direction on timing (annotations vs pilot), scope (remaining files), and integration planning (live data pipeline).**
 
 **User: Phase 1 validation exceeded expectations ("OMG this is so cool!"). All interactive features working. Minor UX feedback captured for Phase 2 polish. Ready to proceed with Nova's Phase 2 roadmap decisions.**
+
+— C4
+
+---
+
+## Entry 9: Phase 2 Gate #2 UNLOCKED — 100% Ethics Coverage + Role Integration ✅
+
+**Summary:** User directed completion of ALL 8 Tier-1 file ethics annotations (not just 75% threshold) + integrated ethics validation into Doc Claude and Process Claude workflows. Phase 2 Gate #2 exceeded expectations (100% vs 75% target).
+
+**Date:** 2025-11-11
+
+---
+
+### User Decision: Complete 8 of 8 Ethics Annotations
+
+**Context:** Entry 7 showed 3 of 8 Tier-1 files annotated (37.5%). C4 interpreted "Option B" as "build infrastructure, defer annotations." User corrected.
+
+**User Quote:**
+> "why only 5 of 8. i thought we said do 8 of 8"
+
+**Decision:** Complete ALL 8 Tier-1 file ethics annotations to achieve 100% coverage (exceeds Phase 2 Gate #2 requirement of ≥75%).
+
+---
+
+### Annotations Completed (Files 6-8)
+
+**6. docs/architecture/Future_Expansion.md** — Roadmap Commitments
+
+**Ethics Front-Matter:**
+- **Purpose:** "Document roadmap commitments and expansion scope to prevent unexamined purpose creep - ensures future enhancements serve repository health (not feature bloat) and stakeholder value is explicit before implementation"
+- **Symmetry Axis:** transparency, stakeholder_impact, scope_governance
+- **Invariants Examined (3):**
+  - `transparency`: ## PRIORITY TIERS FOR IMPLEMENTATION (lines 122-283) - All expansion rooms categorized by ROI
+  - `stakeholder_impact`: ## SUCCESS METRICS (lines 390-412) - Measurable benefits defined
+  - `scope_governance`: ## TIER 4 ACTIVE TASK CANDIDATES (lines 366-388) - Clear criteria for activation
+- **Tensions (3):**
+  - Roadmap ambition vs. delivery capacity (risk: Feature Creep)
+  - Planning paralysis vs. iteration speed
+  - Innovation Showcase maintenance dependencies
+- **Stakeholders:** primary: [repository_maintainers, architect_claude], secondary: [doc_claude, process_claude]
+
+---
+
+**7. auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/PILOT_CT_vs_MdN_Re-Audit.md** — Pilot Doctrine
+
+**Ethics Front-Matter:**
+- **Purpose:** "Establish pilot doctrine for adversarial scoring methodology to ensure Classical Theism and Methodological Naturalism receive symmetric, rigorous, good-faith evaluation"
+- **Symmetry Axis:** transparency, epistemic_access, stakeholder_impact
+- **Invariants Examined (3):**
+  - `transparency`: ## Objectives > Gold Standard Deliberation (lines 52-56)
+  - `epistemic_access`: ## Reference Materials - Steel-Manning sections + academic sources (lines 345-373)
+  - `stakeholder_impact`: ## Background > Adversarial checking with 98%+ convergence target (lines 33-39)
+- **Tensions (3):**
+  - Adversarial scoring vs. good-faith Steel-Manning
+  - Crux declarations may feel adversarial to pilot subjects
+  - Baseline score drift creates trust questions
+- **Calibration Link:** profiles/worldviews/CLASSICAL_THEISM.md (hash: 1bbec1e119a2c425)
+- **Stakeholders:** primary: [pilot_subjects_CT_MdN, triad_auditors], secondary: [future_worldview_comparisons]
+
+**Note:** HIGH PRIORITY per Nova Entry 8 - demonstrates ethics → SMV JSON integration, links pilot to SMV scenarios.
+
+---
+
+**8. docs/smv/SMV_DATA_MAP.md** — Data Contract Provenance
+
+**Ethics Front-Matter:**
+- **Purpose:** "Establish authoritative data contract for SMV Claude extraction pipeline to ensure schema provenance is documented, read-only access preserved, and Trinity collaboration boundaries respected"
+- **Symmetry Axis:** transparency, epistemic_access, data_integrity
+- **Invariants Examined (3):**
+  - `transparency`: ## Map Overview - "SMV Claude NEVER modifies profiles—read-only access" (lines 26-43)
+  - `epistemic_access`: ## Trinity Handoff Protocol - All three Trinity members contribute (lines 576-675)
+  - `data_integrity`: ## Staleness Detection - SHA-256 hash verification prevents stale calibration (lines 241-277)
+- **Tensions (3):**
+  - Schema complexity vs. usability (66 comparisons × 12 worldviews)
+  - Read-only constraint vs. automation convenience
+  - Backward compatibility vs. innovation (v1.1 → v2.0 migration)
+- **Stakeholders:** primary: [smv_claude, trinity_collaboration], secondary: [process_claude_domain7, future_automation_scripts]
+
+**Note:** Ensures single source of truth (profiles) protected from SMV Claude modifications.
+
+---
+
+### Role Integration: Doc Claude + Process Claude
+
+**User Insight:**
+> "Got it...and we have all the hooks so Doc Claude updates his expectations for this? he is already looking at certain headers to contain default information...and now as you have reminded me DoC Claude should keep this Tier 1 file list and be looking for this ethics YAML content; eh?"
+
+**Key Principle Applied:** Don't duplicate data in boot loaders - reference the source of truth.
+
+---
+
+**BOOTSTRAP_DOC_CLAUDE.md Updates (v4.0 → v4.1):**
+
+**Added:**
+1. **Tier-1 Ethics Validation Section:**
+   - Philosophy: "Understanding precedes control. Warnings guide reflection, never block commits."
+   - Responsibilities: Weekly staleness checks, schema compliance validation, monthly health reporting
+   - **Source of Truth:** `docs/ethics/ETHICS_FRONT_MATTER_VALIDATION.md` (not duplicated in boot loader)
+
+2. **Weekly Deep Scan Workflow Update:**
+   - Added: "4. Ethics front-matter staleness check (10 min)"
+   - Updated total time: 2.5 hours (was 2 hours)
+
+3. **Success Metrics + KPIs:**
+   - Added: Ethics coverage (Tier-1): 100% (8 of 8 files annotated) ✅
+   - Added: Ethics staleness: 0 files >30 days since review ✅
+
+**What Doc Claude Does:**
+- ✅ Check validation report weekly (ETHICS_FRONT_MATTER_VALIDATION.md)
+- ✅ Flag stale annotations (>30 days since review)
+- ✅ Log warnings (never block commits - warn-only philosophy)
+- ✅ Include ethics metrics in monthly Health Dashboard
+
+**What Doc Claude Does NOT Do:**
+- ❌ Never block commits (warn-only philosophy)
+- ❌ Never force annotation (files can remain unannotated with warning)
+- ❌ Never enforce invariant states (files can have `missing` invariants)
+
+---
+
+**ROLE_PROCESS.md Updates (v1.4 → v1.5):**
+
+**Added Domain 8: Ethics Staleness Monitoring**
+
+**Purpose:** Monitor Tier-1 file ethics front-matter annotations for staleness and coordinate Doc Claude's ethics validation work
+
+**Your Responsibilities:**
+1. **Weekly Staleness Check:** Compare `last_examined.on` to today (>30 days = stale)
+2. **Monthly Health Report:** Include 3 ethics metrics (coverage, staleness, schema compliance)
+3. **Stale Detected:** Escalate to Doc Claude with specific file list + action items
+4. **Quarterly Pattern Analysis:** Are files consistently stale? Is 30-day window appropriate?
+5. **Pattern Detected:** Escalate to Shaman Claude if 5+ files stale >3 months (workflow gap)
+
+**What Process Claude Does:**
+- ✅ Detect staleness patterns
+- ✅ Coordinate Doc Claude reviews
+- ✅ Report health metrics
+
+**What Process Claude Does NOT Do:**
+- ❌ Never perform ethics reviews (Doc Claude owns validation)
+- ❌ Never block commits (warn-only philosophy)
+- ❌ Never enforce annotation (files can remain unannotated)
+
+**Source of Truth:** Same as Doc Claude - `docs/ethics/ETHICS_FRONT_MATTER_VALIDATION.md` (no duplication)
+
+---
+
+### Validation Report Updated
+
+**ETHICS_FRONT_MATTER_VALIDATION.md Updates (v0.1.0 → v0.2.0):**
+
+**Changes:**
+1. **Header:** 5 of 8 → 8 of 8 complete (62.5% → 100%)
+2. **Status:** "APPROACHING THRESHOLD" → "PHASE 2 GATE #2 UNLOCKED"
+3. **Added Entries:** Files 6-8 with full invariant details, tensions, stakeholders
+4. **Metrics Updated:**
+   - Total tensions: 21 (was 9)
+   - Total invariants: 24 (was 15)
+   - Average tensions per file: 2.625 (was 1.8)
+   - All scenario_a (high alignment - all invariants examined)
+5. **Schema Compliance Table:** Added 3 new files to summary table
+6. **Gate Achievement:** Updated to reflect 100% coverage (exceeded 75% target by 25%)
+
+---
+
+### UX Polish: Tooltip Offset Fix
+
+**User Feedback (from Phase 1 testing):**
+> "Maybe resize a tad...as the mouse pointer is slightly obstructing view of some text characters"
+
+**Fix Applied:**
+- **File:** ui/smv/prototype/src/components/SymmetryView.jsx
+- **Change:** Tooltip offset adjusted
+  - Before: `left: tooltip.x + 10, top: tooltip.y - 10`
+  - After: `left: tooltip.x + 20, top: tooltip.y - 40`
+- **Impact:** Tooltip now appears further from cursor (20px right, 40px up vs 10px right, 10px up)
+- **Result:** Prevents cursor obstruction per user feedback
+
+---
+
+### Phase 2 Gate #2 Achievement
+
+**Gate Requirement:** At least 6 of 8 Tier-1 files carry front-matter + validation notes (≥75%)
+
+**Final Status:** 8 of 8 (100%) ✅
+
+**Achievement:** **EXCEEDED TARGET BY 25%** - Phase 2 automation unlocked
+
+**Completion Date:** 2025-11-11
+
+---
+
+### Architecture Principle Applied: Single Source of Truth
+
+**User's Key Insight:**
+> "we need to take care with this principle for all the boot loaders we are touching...some of the big boy Claudes are going to have maps they utalize and we dont always and shouldnt put specifics in the boot loader like that that can drift, eh?"
+
+**Solution:**
+- **Don't duplicate Tier-1 file list in boot loaders** (BOOTSTRAP_DOC_CLAUDE.md, ROLE_PROCESS.md)
+- **Single source of truth:** ETHICS_FRONT_MATTER_VALIDATION.md contains complete list + status
+- **Boot loaders reference, don't embed:** "Source of truth: docs/ethics/ETHICS_FRONT_MATTER_VALIDATION.md"
+- **Maintainability:** Only 1 place to update when Tier-1 files change
+
+**Why This Matters:**
+- Prevents boot loader drift (file lists going stale)
+- Reduces maintenance burden (update 1 file, not 3)
+- Preserves separation of concerns (validation report owns list, boot loaders own workflows)
+- Follows Doc Claude's existing pattern (he has repository maps, don't duplicate in bootstrap)
+
+---
+
+### Annotation Quality Metrics
+
+**All 8 Files Status:**
+- **Average Invariants per File:** 3.0 (all files have 3 invariants)
+- **Average Tensions per File:** 2.625 (21 total tensions / 8 files)
+- **SMV Scenario Distribution:** 24 invariants scenario_a (100% high alignment)
+- **Interpretation:** All annotated files exhibit high alignment (all invariants examined) - demonstrates mature repository practices
+
+**Stakeholder Coverage:**
+- **Primary:** triad_auditors (6 files), repository_maintainers (2 files), doc_claude (2 files), all_fresh_claudes (1 file), smv_claude (1 file)
+- **Secondary:** repository_maintainers (4 files), future_claudes (3 files), process_claude (3 files), general_public (1 file)
+
+---
+
+### Files Changed
+
+**Commit:** `7e2c39e` - Phase 2 Gate #2 UNLOCKED: 100% Ethics Coverage + Role Integration
+
+**Files Modified (7 files, 545 insertions, 85 deletions):**
+1. `docs/architecture/Future_Expansion.md` - Ethics annotation added
+2. `auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/PILOT_CT_vs_MdN_Re-Audit.md` - Ethics annotation added (includes calibration_link)
+3. `docs/smv/SMV_DATA_MAP.md` - Ethics annotation added
+4. `docs/ethics/ETHICS_FRONT_MATTER_VALIDATION.md` - v0.1.0 → v0.2.0 (8/8 complete)
+5. `auditors/Bootstrap/BOOTSTRAP_DOC_CLAUDE.md` - v4.0 → v4.1 (ethics validation duties)
+6. `docs/repository/librarian_tools/ROLE_PROCESS.md` - v1.4 → v1.5 (Domain 8 added)
+7. `ui/smv/prototype/src/components/SymmetryView.jsx` - Tooltip offset fix
+
+---
+
+### Phase 2 Gates Status
+
+**Gate #1:** CT↔MdN pilot produces calibration hashes
+- **Status:** ⏳ Pending pilot launch
+
+**Gate #2:** ≥6 of 8 Tier-1 files carry front-matter
+- **Status:** ✅ **UNLOCKED** (100% achieved - exceeded 75% target by 25%)
+
+**Gate #3:** Mock Symmetry View validated
+- **Status:** ✅ **COMPLETE** (all 3 scenarios validated end-to-end)
+
+**Phase 2 Readiness:** 2 of 3 conditions met (67%)
+
+---
+
+### Next Steps
+
+**Now Unlocked:**
+1. **Phase 2 Automation Scripts** (ethics_lint.py, staleness_check.py)
+2. **Observatory Dashboard Integration** (Process Claude Domain 8 health metrics)
+3. **Doc Claude + Process Claude coordination workflows** (weekly staleness checks)
+
+**Still Pending:**
+1. **CT↔MdN Pilot Launch** (Phase 2 Gate #1 - calibration hash generation)
+2. **Live Data Integration** (SMV Claude VUDU export pipeline)
+3. **Additional View Modes** (Crux Impact View, Comparison Type View)
+
+---
+
+### Questions for Nova
+
+**Entry 7 left 6 strategic questions for Nova (lines 2051-2077). Entry 9 resolves some decisions but raises new ones:**
+
+**RESOLVED:**
+- ✅ Remaining annotations priority → User chose: Complete ALL 8 files (100% coverage)
+- ✅ Tooltip UX polish → Fixed immediately (SymmetryView.jsx offset adjusted)
+
+**STILL OPEN:**
+1. **Phase 2 Automation Timing:** Begin ethics scripts now or wait for pilot?
+2. **Live Data Integration:** When to begin SMV Claude export pipeline design?
+3. **Additional View Modes:** Crux Impact View - when to implement (needs pilot data first)?
+4. **Pilot vs Automation Priority:** Launch CT↔MdN pilot first or build Phase 2 infrastructure first?
+
+---
+
+**Entry 9 Status:** Phase 2 Gate #2 exceeded expectations (100% coverage). Ethics validation integrated into Doc Claude + Process Claude workflows. Single source of truth architecture principle applied (no duplication in boot loaders). Ready for Nova Entry 10 strategic direction on automation timing + pilot priority.
 
 — C4
