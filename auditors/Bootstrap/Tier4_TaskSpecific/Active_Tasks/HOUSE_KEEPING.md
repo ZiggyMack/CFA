@@ -1,0 +1,333 @@
+# TASK BRIEF: Repository House Keeping - Doc Claude Duties
+
+**Version:** 1.0
+**Task ID:** TASK-2025-11-12-HOUSEKEEPING
+**Owner:** Doc Claude (Documentation Orchestration)
+**Priority:** HIGH
+**Tier:** Tier 4 (Task-Specific)
+**Category:** DOCUMENTATION | HEALTH | EFFICIENCY
+**Created:** 2025-11-12
+**Due:** Before Grok VUDU activation
+**Status:** PENDING
+**Estimated Time:** 4-6 hours
+
+---
+
+## 🎯 MISSION
+
+**Execute comprehensive repository health assessment and documentation updates after Phase 2 infrastructure buildout and mission consolidation.**
+
+**Why Now:** Major additions since last Doc Claude health check:
+- CFA Mission structure created
+- SMV prototype complete
+- Ethics front-matter system deployed
+- Role integrations (Doc Claude v4.1, Process Claude v1.5)
+- Mission consolidation complete
+
+**User Context:**
+> "Doc Claude has to update all his maps as we added a ton of new stuff! tree structures need to be updated...line counts updated....a full new repo health assessment is needed....and like the point we just tripped over...we are going to need to go through an efficiency scan...to make sure our Boot Straps are not conflicting with live Repo Data (i.e...we put stale instructions in the boot strap...that live living maps should supersede and we risk contradicting...)..."
+
+---
+
+## 📋 OBJECTIVES
+
+### **Objective 1: Update All Documentation Maps**
+
+**What needs updating:**
+
+1. **Tree Structure Maps:**
+   - `docs/repository/TREE_STRUCTURE.md` (if exists)
+   - Mission folder structure documentation
+   - relay/ cleanup (B-STORM files moved to workshop/)
+   - root /relay/ directory removed
+
+2. **Line Count Updates:**
+   - Total repository LOC
+   - Documentation LOC
+   - Code LOC (Python utils, React SMV)
+   - Per-directory breakdowns
+
+3. **File Inventory:**
+   - New files since last scan:
+     - `auditors/Mission/CFA_VUDU/` (6 files, ~1,600 lines)
+     - `auditors/relay/MISSION_CURRENT.md`
+     - `auditors/Bootstrap/Tier4_TaskSpecific/Completed/` (2 completion notes)
+     - `docs/smv/` (SMV_DESIGN_SPEC.md, SMV_DATA_MAP.md, scripts/)
+     - `docs/ethics/` (ETHICAL_INVARIANT_SCHEMA.md, ETHICS_FRONT_MATTER_VALIDATION.md)
+     - `ui/smv/prototype/` (React app, 27 files)
+   - Deleted files:
+     - `auditors/Bootstrap/Tier4_TaskSpecific/Completed/` (43 old completed tasks)
+     - `relay/` (root directory - moved to auditors/relay/workshop/)
+
+4. **Dependency Maps:**
+   - Update `documentation_dependencies.yaml` (DOC_DEP system)
+   - Add new files to dependency tracking
+   - Verify cross-references still valid
+
+---
+
+### **Objective 2: Full Repository Health Assessment**
+
+**Update:** `docs/repository/DASHBOARD.md`
+
+**Metrics to refresh:**
+
+1. **Health Score:** Current → Target 95/100
+2. **Documentation Coverage:** Core files vs total files
+3. **Header Coverage:**
+   - Core files (90% target)
+   - Total files (80% target)
+4. **Ethics Coverage:** 8 of 8 Tier-1 files (100%) ✅
+5. **Ethics Staleness:** Files >30 days since review (target: 0)
+6. **Dependency Accuracy:** Cross-references verified (95% target)
+7. **Process Compliance:** Following established workflows (100% target)
+8. **Update Timeliness:** Documentation lag time (<30 min target)
+
+**Trends to capture:**
+- Health score trajectory (last 3 months)
+- Documentation growth rate
+- Active improvements impact
+- Technical debt reduction
+
+---
+
+### **Objective 3: Bootstrap Efficiency Scan**
+
+**Critical User Concern:**
+> "we are going to need to go through an efficiency scan...to make sure our Boot Straps are not conflicting with live Repo Data (i.e...we put stale instructions in the boot strap...that live living maps should supersede and we risk contradicting...)"
+
+**Scan for Bootstrap ↔ Live Data Conflicts:**
+
+**1. Auditor Boot Loaders:**
+- `BOOTSTRAP_DOC_CLAUDE.md` - Check for stale file lists
+  - ✅ Already fixed: References ETHICS_FRONT_MATTER_VALIDATION.md (single source of truth)
+  - Verify no other embedded lists that could drift
+- `BOOTSTRAP_FRAMEWORK.md` - Check for outdated file paths
+- `BOOTSTRAP_VUDU.md` - Check for stale VUDU protocol references
+
+**2. Role Files:**
+- `ROLE_PROCESS.md` Domain 7 - Check for hardcoded worldview counts (should be 12, not 11)
+- `ROLE_DESTROYER.md` - Check for deletion criteria referencing old paths
+
+**3. Mission Files:**
+- `MISSION_BRIEF.md` - Check for file path references
+- `GROK_BRIEFING.md` - Check for "Essential Files" list accuracy
+
+**4. Validation:**
+For each bootstrap reference to a file/directory:
+- Does the target still exist?
+- Is the path current (not moved)?
+- Is the description accurate (not stale)?
+- Should this be a reference to a living map instead?
+
+**Deliverable:**
+- `docs/Validation/BOOTSTRAP_EFFICIENCY_SCAN.md`
+- List of conflicts found
+- Recommended fixes (reference living maps vs embed data)
+
+---
+
+### **Objective 4: Living Maps Validation**
+
+**Ensure these "single source of truth" files are current:**
+
+1. **`ETHICS_FRONT_MATTER_VALIDATION.md`**
+   - Status: ✅ Current (8 of 8 files, updated 2025-11-11)
+   - Action: Verify all 8 files still annotated
+
+2. **`ACADEMIC_SOURCES.md`**
+   - Status: Check last update date
+   - Action: Verify hyperlinks still functional
+   - Check SEP/IEP connectivity issues resolved
+
+3. **`AUDITOR_ASSIGNMENTS.md`** (if exists)
+   - Status: Check for CT vs MdN assignments
+   - Action: Verify matches MISSION_BRIEF.md
+
+4. **`Future_Expansion.md`**
+   - Status: Check for completed items (SMV, Ethics annotations)
+   - Action: Move completed items to "Done" section
+   - Update roadmap with new priorities
+
+---
+
+### **Objective 5: Cross-Reference Verification**
+
+**Check these high-traffic navigation paths:**
+
+1. **Mission Navigation:**
+   - `MISSION_CURRENT.md` → `Mission/CFA_VUDU/MISSION_BRIEF.md` ✅
+   - `MISSION_BRIEF.md` → `CT_vs_MdN.yaml` (verify path)
+   - `MISSION_BRIEF.md` → `PILOT_CT_vs_MdN_Re-Audit.md` (now in Mission/)
+   - `GROK_BRIEFING.md` → All "Essential Files" links
+
+2. **Boot Loader Navigation:**
+   - `BOOTSTRAP_DOC_CLAUDE.md` → `DASHBOARD.md`
+   - `BOOTSTRAP_DOC_CLAUDE.md` → `ETHICS_FRONT_MATTER_VALIDATION.md`
+   - `ROLE_PROCESS.md` Domain 8 → Ethics files
+
+3. **Architecture Navigation:**
+   - `CFA_ARCHITECTURE.md` Section 6 → Crux examples
+   - `VUDU_CFA.md` → Worldview profiles
+   - `WAYFINDING_GUIDE.md` → All directory references
+
+**Deliverable:**
+- List of broken links
+- List of redirects needed (old path → new path)
+- Recommended README updates
+
+---
+
+## ✅ SUCCESS CRITERIA
+
+**Task succeeds when:**
+
+1. ✅ **All maps updated:**
+   - Tree structures current
+   - Line counts accurate
+   - File inventory reflects reality
+
+2. ✅ **Health assessment complete:**
+   - DASHBOARD.md refreshed with current metrics
+   - Trends documented
+   - Improvement priorities identified
+
+3. ✅ **Bootstrap efficiency validated:**
+   - No conflicts between bootstrap instructions and live data
+   - All embedded lists replaced with living map references
+   - BOOTSTRAP_EFFICIENCY_SCAN.md delivered
+
+4. ✅ **Living maps validated:**
+   - ETHICS_FRONT_MATTER_VALIDATION.md current
+   - ACADEMIC_SOURCES.md links functional
+   - Future_Expansion.md updated with completions
+
+5. ✅ **Cross-references verified:**
+   - Broken links documented
+   - Redirects recommended
+   - Navigation paths tested
+
+---
+
+## 📦 DELIVERABLES
+
+**Primary:**
+1. `docs/repository/DASHBOARD.md` (updated health assessment)
+2. `docs/Validation/BOOTSTRAP_EFFICIENCY_SCAN.md` (conflict report)
+3. `docs/repository/dependency_maps/` (updated maps)
+
+**Secondary:**
+4. `Future_Expansion.md` (updated with completions)
+5. Bootstrap files (any fixes needed)
+6. README files (navigation improvements)
+
+---
+
+## 🔧 METHODOLOGY
+
+### **Phase 1: Inventory (1-2 hours)**
+
+**Scan commands:**
+```bash
+# Tree structure
+tree -L 3 -I 'node_modules|__pycache__|.git' > docs/repository/TREE_STRUCTURE.txt
+
+# Line counts
+cloc . --exclude-dir=node_modules,__pycache__,.git --md > docs/repository/LINE_COUNTS.md
+
+# File inventory
+find . -type f -name "*.md" | wc -l  # Total markdown files
+find . -type f -name "*.py" | wc -l  # Total Python files
+find . -type f -name "*.js" -o -name "*.jsx" | wc -l  # Total JS/React files
+```
+
+---
+
+### **Phase 2: Validation (2-3 hours)**
+
+**Bootstrap scan process:**
+1. Read each bootstrap file
+2. Extract all file/directory references
+3. Verify each reference:
+   - `ls <path>` (does it exist?)
+   - Check last modified date (is description stale?)
+   - Check if should reference living map instead
+4. Document conflicts in BOOTSTRAP_EFFICIENCY_SCAN.md
+
+**Cross-reference check:**
+1. Extract all markdown links from high-traffic files
+2. Test each link (file exists? section exists?)
+3. Document broken links
+4. Recommend fixes
+
+---
+
+### **Phase 3: Updates (1-2 hours)**
+
+**Update sequence:**
+1. Fix any critical broken links (blocking navigation)
+2. Update DASHBOARD.md with current metrics
+3. Update Future_Expansion.md (move completions to "Done")
+4. Update dependency maps (add new files)
+5. Fix any bootstrap conflicts found
+
+---
+
+## 🎯 PRIORITY AREAS
+
+**High Priority (Must fix before Grok):**
+1. MISSION_CURRENT.md cross-references (Grok will read this first)
+2. GROK_BRIEFING.md "Essential Files" list (all paths must be accurate)
+3. Bootstrap efficiency conflicts (prevent contradictory instructions)
+
+**Medium Priority (Should fix soon):**
+4. DASHBOARD.md health metrics (understand current state)
+5. Living maps validation (ensure single sources of truth current)
+
+**Low Priority (Nice to have):**
+6. Tree structure documentation
+7. Line count updates
+8. Minor README improvements
+
+---
+
+## ⚖️ THE POINTING RULE
+
+*"A map outdated is a navigator misled.
+A bootstrap stale is a recovery failed.
+A link broken is a journey blocked.
+
+Documentation serves navigation.
+Navigation serves purpose.
+Purpose serves the mission.
+
+This is the orchestrator's calling.
+This is Doc Claude's domain.
+This is house keeping."* 📚
+
+---
+
+**Task Status:** PENDING (Ready for Doc Claude activation)
+**Estimated Time:** 4-6 hours
+**Priority:** HIGH (Before Grok VUDU activation)
+**Blocking:** None (can execute immediately)
+
+---
+
+## 📞 COORDINATION
+
+**Owner:** Doc Claude (Documentation Orchestration)
+**Reviewer:** Process Claude (Domain 7 - Process compliance check)
+**User Approval:** Required for any bootstrap changes that affect behavior
+
+**Questions?**
+- Unclear what constitutes "stale" → Use 30-day rule (>30 days old with content changes)
+- Unclear if living map reference needed → If data appears in 2+ locations, create living map
+
+---
+
+**Created:** 2025-11-12 by Claude (C4)
+**Session:** B-STORM_7 Consolidation Cleanup
+**Next:** Activate Doc Claude for execution
+
+**This is the way.** 🔥
