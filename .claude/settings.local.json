@@ -18,7 +18,11 @@
       "Bash(git rm:*)",
       "Bash(git clean:*)",
       "Bash(powershell -Command:*)",
-      "Bash(.gitignore)"
+      "Bash(.gitignore)",
+      "Bash(git mv:*)",
+      "Bash(for item in prototype/*)",
+      "Bash(do git mv \"$item\" .)",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []
