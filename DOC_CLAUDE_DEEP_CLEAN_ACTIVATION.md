@@ -12,7 +12,7 @@ You've been away while we built Phase 2 infrastructure and cleaned up major repo
 
 **What happened while you were away:**
 - CFA Mission structure created (`auditors/Mission/CFA_VUDU/`)
-- SMV prototype completed and moved to `docs/UI_SMV/` (uppercase convention)
+- SMV prototype completed and moved to `Dashboard/SMV/` (uppercase convention)
 - Ethics front-matter system deployed (8 of 8 Tier-1 files annotated - 100% coverage)
 - Role integrations (your role updated to v4.1, Process Claude v1.5)
 - Mission consolidation complete (~1,850 lines of documentation)

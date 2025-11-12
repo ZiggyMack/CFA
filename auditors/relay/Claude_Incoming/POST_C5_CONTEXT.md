@@ -35,7 +35,7 @@
 **Status:** All 4 created in docs/repository/ - You should verify they're accurate and current
 
 **3. Directory Reorganization**
-- UI_SMV moved from ui/smv/prototype/ to docs/UI_SMV/ (uppercase, flattened)
+- UI_SMV moved from ui/smv/prototype/ to Dashboard/SMV/ (uppercase, flattened)
 - Empty ui/ directory may still exist at root (leftover shells)
 
 **4. Process Improvements**

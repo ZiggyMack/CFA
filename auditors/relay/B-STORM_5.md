@@ -212,11 +212,11 @@ Should we:
 ### **UI_SMV Location Decision**
 
 **User Question:**
-> "if UI_SMV/ makes it obvious 'this is a running application'...then does this deserve to live anymore in our docs folder?....maybe we create a folder in the root called 'Dashboard/' and the protype content lives there?"
+> "if Dashboard/SMV/ makes it obvious 'this is a running application'...then does this deserve to live anymore in our docs folder?....maybe we create a folder in the root called 'Dashboard/' and the protype content lives there?"
 
 **Analysis:**
 
-**Current:** `docs/UI_SMV/` (uppercase signals "running code")
+**Current:** `Dashboard/SMV/` (uppercase signals "running code")
 
 **Proposed:** Root `/Dashboard/` directory
 
@@ -229,8 +229,8 @@ Should we:
 - Follows industry convention (Next.js, React apps at root)
 
 **⚠️ Arguments AGAINST moving:**
-- docs/UI_SMV/ already validated by Code Claude as correct location
-- Recent migration work (ui/smv/prototype/ → docs/UI_SMV/) would be undone
+- Dashboard/SMV/ already validated by Code Claude as correct location
+- Recent migration work (ui/smv/prototype/ → Dashboard/SMV/) would be undone
 - Creates churn in references (bootstrap files, dependency maps)
 - /docs/ can contain both documentation AND tools (precedent: /docs/repository/librarian_tools/)
 
@@ -238,7 +238,7 @@ Should we:
 
 **Rationale:**
 - Your intuition is correct - running apps shouldn't live in /docs/
-- Dashboard/ is clearer semantic label than UI_SMV/
+- Dashboard/ is clearer semantic label than Dashboard/SMV/
 - This is the LAST move before stability - better to get structure right now
 - Code Claude's validation was of the MIGRATION COMPLETION, not the final destination
 - Philosophy: "Docs for reading, dashboards for running"

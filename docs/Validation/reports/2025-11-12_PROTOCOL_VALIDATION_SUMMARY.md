@@ -121,19 +121,19 @@ git ls-files | wc -l
 
 #### 1. **SMV Directory Merge** 🔴 DO NOT IMPLEMENT
 
-**Opus suggests:** Merge smv/ and UI_SMV/ directories
+**Opus suggests:** Merge smv/ and Dashboard/SMV/ directories
 
-**Conflict:** Code Claude just validated UI_SMV/ migration is complete
+**Conflict:** Code Claude just validated Dashboard/SMV/ migration is complete
 
 **Risk:**
-- UI_SMV/ contains working React app (src/, package.json, 16 files)
+- Dashboard/SMV/ contains working React app (src/, package.json, 16 files)
 - smv/ contains design docs, mockups, specifications
 - Different purposes, different consumers
 - Merging would confuse documentation vs implementation
 
 **Recommendation:** **REJECT** - Keep separate
 - smv/ = Design/planning
-- UI_SMV/ = Working prototype
+- Dashboard/SMV/ = Working prototype
 
 ---
 
@@ -236,7 +236,7 @@ diff Validation/reports/REFLECTION_BEFORE_PHASE_4*.md i_am/thoughts/REFLECTION_B
 
 **5. Review app/ directory for obsolescence**
 - Check if still referenced
-- Merge with UI_SMV/ if related
+- Merge with Dashboard/SMV/ if related
 - Delete if obsolete
 
 ---
@@ -262,7 +262,7 @@ diff Validation/reports/REFLECTION_BEFORE_PHASE_4*.md i_am/thoughts/REFLECTION_B
 ## 📋 FOR SPECIALIST REVIEW
 
 **Review Claude - Architecture Validation:**
-- [ ] Verify smv/ vs UI_SMV/ separation is architecturally sound
+- [ ] Verify smv/ vs Dashboard/SMV/ separation is architecturally sound
 - [ ] Review if MASTER_DEPENDENCY_MAP.md split would improve or complicate architecture
 - [ ] Assess decisions/ directory - keep separate or merge?
 

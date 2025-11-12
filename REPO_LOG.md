@@ -186,7 +186,7 @@ Executed and validated DEEP_CLEAN_PROTOCOL.md across three Claude instances (Web
 
 **Summary:**
 
-C5 completed baseline health scan (96/100) and created 4 living maps. Post-C5 fixes applied: Bootstrap efficiency improvements (embedded data → living map references), UI_SMV migration (ui/smv/prototype/ → docs/UI_SMV/), Doc Claude activation prompt created with Gospel Problem warning.
+C5 completed baseline health scan (96/100) and created 4 living maps. Post-C5 fixes applied: Bootstrap efficiency improvements (embedded data → living map references), UI_SMV migration (ui/smv/prototype/ → Dashboard/SMV/), Doc Claude activation prompt created with Gospel Problem warning.
 
 **Changes:**
 
@@ -202,7 +202,7 @@ C5 completed baseline health scan (96/100) and created 4 living maps. Post-C5 fi
    - Grade improved: C+ → A (validation pending in Entry 2)
 
 3. **UI_SMV Migration:**
-   - `MOVED`: ui/smv/prototype/ → docs/UI_SMV/ (uppercase convention, flattened)
+   - `MOVED`: ui/smv/prototype/ → Dashboard/SMV/ (uppercase convention, flattened)
    - `REMOVED`: Empty ui/ directory (leftover shells)
    - Status: Validated by Code Claude (Entry 2)
 
@@ -292,7 +292,7 @@ Phase 2 Gate #2 unlocked: 100% Tier-1 ethics coverage (8/8 files), SMV Phase 1 p
    - `CREATED`: docs/ethics/ETHICS_FRONT_MATTER_VALIDATION.md (validation report)
 
 2. **SMV Prototype Validation:**
-   - `VALIDATED`: UI_SMV/ prototype (16 files, React app)
+   - `VALIDATED`: Dashboard/SMV/ prototype (16 files, React app)
    - Features: Triangle view, calibration drawer, ethics badges, mock data scenarios
    - User feedback: "Prototype Success!"
    - Status: Phase 1 complete, ready for Nova Entry 8
@@ -380,7 +380,7 @@ Completed SMV (Symmetry Matrix Visualizer) Phase 1 prototype: Created React app 
 **Changes:**
 
 1. **Prototype Implementation:**
-   - `CREATED`: UI_SMV/ directory (16 files, React app)
+   - `CREATED`: Dashboard/SMV/ directory (16 files, React app)
    - Components: SymmetryTriangle.tsx, CalibrationDrawer.tsx, EthicsBadge.tsx
    - Mock data: 3 scenarios (high-alignment, productive-tension, invariant-breach)
    - Features: Interactive triangle, tick navigation, scenario switching
