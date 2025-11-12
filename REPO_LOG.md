@@ -6,7 +6,7 @@ STATUS: Active
 DEPENDS_ON: None
 NEEDED_BY: All auditors making repository changes, CHANGELOG.md
 MOVES_WITH: / (root)
-LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-23]
+LAST_UPDATE: 2025-11-12 [LIVING_MAP_REFRESH]
 --->
 
 <!-- deps: file_structure, documentation -->

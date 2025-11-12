@@ -140,7 +140,7 @@ MASTER BRANCH Claude Bootstrap (Tier 1):
 ```
 1. Read BOOTSTRAP_DOC_CLAUDE.md (identity + duties)
 2. Read 88MPH.md (rapid assessment method)
-3. Review DASHBOARD.md (current health status)
+3. Review REPO_HEALTH_DASHBOARD.md (current health status)
 4. Execute assigned documentation task
 5. Update living maps as needed
 ```
@@ -155,9 +155,9 @@ MASTER BRANCH Claude Bootstrap (Tier 1):
 ### **Budget Allocation:** ~10% session budget on bootstrap
 
 **Key Documents:**
-- [BOOTSTRAP_DOC_CLAUDE.md](../../auditors/Bootstrap/Documentation/BOOTSTRAP_DOC_CLAUDE.md)
-- [88MPH.md](../librarian_tools/88MPH.md)
-- [ROLE_DOC_CLAUDE.md](../librarian_tools/ROLE_DOC_CLAUDE.md)
+- [BOOTSTRAP_DOC_CLAUDE.md](../../auditors/Bootstrap/BOOTSTRAP_DOC_CLAUDE.md)
+- [88MPH.md](../../88MPH.md)
+- [REPO_HEALTH_DASHBOARD.md](../REPO_HEALTH_DASHBOARD.md)
 
 ---
 

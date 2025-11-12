@@ -137,10 +137,10 @@ cat auditors/relay/workshop/ARCHIVE_INDEX.md
 
 ## 📊 Archive Statistics
 
-**Total archived sessions:** 18 files (616KB)
+**Total archived sessions:** 21 files (616KB)
 - B-STORM series: 7 sessions (446KB)
 - Design specs: 5 files (89KB)
-- Mockups/data: 6 files (81KB)
+- Mockups/data: 9 files (81KB)
 
 **Largest archived session:** B-STORM_6.md (109KB, ~20,000 words)
 

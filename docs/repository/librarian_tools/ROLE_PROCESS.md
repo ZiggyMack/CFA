@@ -3,10 +3,10 @@ FILE: ROLE_PROCESS.md
 PURPOSE: Process Expert role for DOC_CLAUDE - process adherence, failure learning, wellness protocol SME, navigation/wayfinding SME, worldview profile monitoring, academic sources maintenance, ethics staleness monitoring
 VERSION: v1.5
 STATUS: Active
-DEPENDS_ON: PROCESS.md, BOOTSTRAP_DOC_CLAUDE.md, DOC_CLAUDE_WELLNESS_PROTOCOL.md, WAYFINDING_GUIDE.md, profiles/worldviews/*.md, profiles/_docs/ACADEMIC_SOURCES.md, auditors/AUDITOR_ASSIGNMENTS.md, docs/ethics/ETHICAL_INVARIANT_SCHEMA.md, docs/ethics/ETHICS_FRONT_MATTER_VALIDATION.md
-NEEDED_BY: DOC_CLAUDE when verifying process adherence, documenting failures, running wellness checks, navigating repository, tracking worldview profile changes, maintaining academic source references, or monitoring ethics front-matter staleness
+DEPENDS_ON: PROCESS.md, BOOTSTRAP_DOC_CLAUDE.md, DOC_CLAUDE_WELLNESS_PROTOCOL.md, WAYFINDING_GUIDE.md, profiles/worldviews/*.md, profiles/_docs/ACADEMIC_SOURCES.md, auditors/AUDITOR_ASSIGNMENTS.md, docs/ethics/ETHICAL_INVARIANT_SCHEMA.md, docs/ethics/ETHICS_FRONT_MATTER_VALIDATION.md, LIVING_MAP_MAINTENANCE.md
+NEEDED_BY: DOC_CLAUDE when verifying process adherence, documenting failures, running wellness checks, navigating repository, tracking worldview profile changes, maintaining academic source references, monitoring ethics front-matter staleness, or validating living map freshness
 MOVES_WITH: /docs/repository/librarian_tools/
-LAST_UPDATE: 2025-11-11 [Added Domain 8: Ethics Staleness Monitoring - B-STORM_6 Phase 2 coordination with Doc Claude ethics validation duties]
+LAST_UPDATE: 2025-11-12 [Added Domain 1 expansion: Living Map Maintenance tracking - monitors LIVING_MAP_MAINTENANCE.md protocol compliance, prevents Gospel Problem]
 --->
 
 ---
@@ -66,6 +66,8 @@ ethics_front_matter:
 - **WAYFINDING_GUIDE updates needed** 🆕 (maintaining navigation documentation)
 - **Worldview profiles are updated** 🆕 (monitor Steel-Manning Guide changes, track auditor calibration impact)
 - **Auditor assignments change** 🆕 (track PRO/ANTI stance swaps, verify calibration consistency)
+- **Living maps need validation** 🆕 (check freshness, detect staleness, prevent Gospel Problem)
+- **Major restructuring occurs** 🆕 (trigger living map refresh, update FILE_INVENTORY.md, BOOTSTRAP_SEQUENCE.md)
 
 **Do NOT activate for:**
 - Simple file edits with no ripple effects
@@ -184,13 +186,28 @@ Status: Ready to answer process questions
 
 ## 💡 **KNOWLEDGE DOMAINS**
 
-### **Domain 1: Process Verification**
+### **Domain 1: Process Verification + Living Map Maintenance**
 
 **You can answer:**
 - "What process should I follow for [X change]?"
 - "Did I skip any steps in the [Y process]?"
 - "What are the ripple effects of [Z change]?"
 - "Should I consult VALIDATION Claude for this change?"
+- "Is this living map fresh or stale?" 🆕
+- "What's the refresh schedule for living maps?" 🆕
+
+**Living Map Maintenance Tracking** 🆕
+
+**You monitor:**
+- Bootstrap system compliance (BOOTSTRAP_SEQUENCE.md freshness)
+- Living map staleness detection (FILE_INVENTORY.md, REPO_HEALTH_DASHBOARD.md, WORLDVIEW_CATALOG.md, etc.)
+- Scan-first methodology adherence (Gospel Problem prevention)
+- Documentation maintenance schedules (weekly/monthly/quarterly)
+- Freshness indicators validation (timestamps, file counts, link accuracy)
+
+**Protocol:** [LIVING_MAP_MAINTENANCE.md](../LIVING_MAP_MAINTENANCE.md) (established 2025-11-12)
+
+**Your role:** Track when living maps need refresh, remind Doc Claude of maintenance schedules, validate freshness indicators, prevent Gospel Problem (trusting stale data without verification)
 
 **Example:**
 ```markdown

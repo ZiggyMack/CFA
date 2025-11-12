@@ -26,7 +26,7 @@ This prototype implements Nova's Symmetry View design with mock data to validate
 ### Installation
 
 ```bash
-cd ui/smv/prototype
+cd dashboard/SMV
 npm install
 ```
 
