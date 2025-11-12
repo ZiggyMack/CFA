@@ -1,9 +1,10 @@
 # 📊 REPOSITORY HEALTH DASHBOARD
 
-**Last Updated:** 2025-11-12  
-**Updated By:** DOC_CLAUDE (Documentation Orchestration)  
-**Health Score:** 96/100 🟢 GREEN  
-**Trend:** ↑ IMPROVING (+1 from last assessment)
+**Last Updated:** 2025-11-12 (Deep Clean - Evening scan)
+**Updated By:** DOC_CLAUDE (Documentation Orchestration)
+**Previous Scan:** C5 (Morning 96/100)
+**Health Score:** 94/100 🟢 GREEN (Adjusted for issues found)
+**Trend:** → STABLE (Minor regression due to discovered issues)
 
 ---
 
@@ -111,14 +112,28 @@ Coordination       ████████████████████�
 
 ## 📊 REPOSITORY STATISTICS
 
-### File Inventory (as of 2025-11-12)
+### File Inventory (Deep Clean Fresh Scan - Nov 12 Evening)
 
-**Total Repository:**
-- Markdown files: ~156
-- Python files: ~12
-- JavaScript/React: ~27
-- YAML/JSON: ~15
-- **Total:** ~210 files
+**Current Count (All Files):**
+- Markdown files: 289
+- Python files: 14
+- JavaScript/React: 8
+- JSON: 13
+- YAML: ~5
+- Other (CSS, HTML, config): ~45
+- **Total:** 374 files
+
+**Excluding Archives (.Archive/):**
+- Markdown files: 256
+- Total files: 307
+
+**C5 Baseline (Morning Scan):**
+- Markdown: ~156 | Total: ~210 files
+
+**Delta Analysis:**
+- Raw delta: +164 files (+78% from C5)
+- Excluding archives delta: +97 files (+46% from C5)
+- **Investigation:** Methodology difference suspected (C5 may have excluded Bootstrap subdirs or used stricter criteria for "significant files")
 
 ### Line Counts by Category:
 
@@ -143,6 +158,46 @@ TOTAL:            ~30,600 lines
 /profiles/         3% of content
 /pages/            2% of content
 ```
+
+---
+
+## 🔍 DEEP CLEAN FINDINGS (Nov 12 Evening Scan)
+
+**Protocol:** DEEP_CLEAN_PROTOCOL.md executed - Fresh scan BEFORE reading C5 baseline (Gospel Problem discipline)
+
+### ✅ Verified Working:
+1. **Bootstrap Fixes Applied** - README_C.md now references MISSION_DEFAULT.md (not embedded sequence)
+2. **Living Maps Created** - All 4 created (BOOTSTRAP_SEQUENCE, WORLDVIEW_CATALOG, FILE_INVENTORY, DASHBOARD)
+3. **Ethics Coverage** - 100% (8/8 Tier-1 files) ✅ Validated fresh
+4. **Worldview Count** - 12 profiles confirmed (matches WORLDVIEW_CATALOG.md)
+
+### ⚠️ Issues Discovered:
+1. **File Count Discrepancy** - MY scan: 374 files vs C5 baseline: ~210 files
+   - Gap: +164 files (+78%) or +97 files excluding archives
+   - Cause: Methodology difference (investigation ongoing)
+   - Impact: Living maps (FILE_INVENTORY, DASHBOARD) already stale within hours of creation
+
+2. **Broken Navigation Link** - CRITICAL for Grok activation
+   - File: `auditors/Mission/CFA_VUDU/GROK_BRIEFING.md` (line 46)
+   - References: `../../../auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/PILOT_CT_vs_MdN_Re-Audit.md`
+   - Actual location: `auditors/Mission/CFA_VUDU/PILOT_CT_vs_MdN_Re-Audit.md` (same directory)
+   - Impact: Grok will get 404 when trying to read pilot doctrine
+
+3. **Living Maps Staleness** - Gospel Problem validated
+   - FILE_INVENTORY.md created morning, stale by evening (if file count discrepancy real)
+   - DASHBOARD.md metrics don't match fresh scan
+   - Lesson: "Scan first, then compare" protocol essential
+
+### 🎯 Required Actions Before Grok Activation:
+1. **Fix GROK_BRIEFING.md line 46** - Update PILOT path
+2. **Resolve file count mystery** - Why 374 vs 210? (C5's methodology vs mine)
+3. **Update living maps** - Use fresh scan as source of truth (not C5's snapshot)
+
+### 📊 Health Score Adjustment:
+- **C5 (Morning):** 96/100
+- **Doc Claude (Evening):** 94/100 (-2 points)
+- **Reason:** Broken link + living maps stale + file count discrepancy
+- **Recovery:** Fix link (+1), resolve methodology (+1) → Back to 96/100
 
 ---
 
