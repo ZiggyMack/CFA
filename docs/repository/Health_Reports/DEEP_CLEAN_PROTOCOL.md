@@ -1,21 +1,23 @@
-# TASK BRIEF: Repository House Keeping - Doc Claude Duties
+# DEEP CLEAN PROTOCOL - Doc Claude's Comprehensive Health Update
 
 **Version:** 1.0
-**Task ID:** TASK-2025-11-12-HOUSEKEEPING
+**Protocol ID:** DEEP-CLEAN-DOC-CLAUDE
 **Owner:** Doc Claude (Documentation Orchestration)
-**Priority:** HIGH
-**Tier:** Tier 4 (Task-Specific)
+**Process Owner:** Process Claude (Domain 1 - Health Protocol Compliance)
 **Category:** DOCUMENTATION | HEALTH | EFFICIENCY
 **Created:** 2025-11-12
-**Due:** Before Grok VUDU activation
-**Status:** PENDING
-**Estimated Time:** 4-6 hours
+**Status:** Active Protocol (Repeatable Process)
+**Estimated Time:** 4-6 hours per execution
 
 ---
 
-## 🎯 MISSION
+## 🎯 PURPOSE
 
-**Execute comprehensive repository health assessment and documentation updates after Phase 2 infrastructure buildout and mission consolidation.**
+**Execute comprehensive repository health assessment and documentation updates after major repository changes.**
+
+**This is Doc Claude's "Deep Clean Protocol" - distinct from Validation Claude's sanitization modes:**
+- **Validation Claude:** Content quality (README completeness, bootstrap prescriptiveness)
+- **Doc Claude:** Structural health (maps, metrics, cross-references, bootstrap efficiency)
 
 **Why Now:** Major additions since last Doc Claude health check:
 - CFA Mission structure created
@@ -24,8 +26,19 @@
 - Role integrations (Doc Claude v4.1, Process Claude v1.5)
 - Mission consolidation complete
 
-**User Context:**
-> "Doc Claude has to update all his maps as we added a ton of new stuff! tree structures need to be updated...line counts updated....a full new repo health assessment is needed....and like the point we just tripped over...we are going to need to go through an efficiency scan...to make sure our Boot Straps are not conflicting with live Repo Data (i.e...we put stale instructions in the boot strap...that live living maps should supersede and we risk contradicting...)..."
+**When to Execute:**
+- After major infrastructure additions (new systems, refactors)
+- When repository structure changes significantly
+- Before critical milestones (Grok activation, Phase launches)
+- Every 30-60 days during active development
+- When health reports become stale (>30 days old)
+
+**The "Gospel Problem" This Solves:**
+Doc Claude must SCAN FIRST, then compare to last report - not trust last report as gospel.
+1. ✅ Fresh scan (current reality)
+2. ✅ Read last report (historical baseline)
+3. ✅ Compare delta (document gap)
+4. ❌ Don't just update last report without verifying current state
 
 ---
 

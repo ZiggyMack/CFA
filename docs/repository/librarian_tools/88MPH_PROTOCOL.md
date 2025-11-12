@@ -70,10 +70,17 @@ project_knowledge_search("recent changes")
 - How many version mismatches?
 ```
 ### Check Infrastructure:
-- Health reports: /docs/repository/health_reports/
-- Dependency map: /docs/repository/dependency_maps/MASTER_DEPENDENCY_MAP.md
+- Health reports: /docs/repository/Health_Reports/
+- Last report: Check REPO_HEALTH_DASHBOARD.md for latest timestamp
+- Dependency maps: /docs/repository/dependency_maps/
 - Your tools: /docs/repository/librarian_tools/
-- Latest health: GREEN 94/100 (2025-10-31)
+
+**⚠️ THE GOSPEL PROBLEM:**
+DO NOT trust last report as gospel. SCAN FIRST, then compare:
+1. Run your fresh scan (current state)
+2. Read last health report (historical baseline)
+3. Calculate delta (repo changes since last report)
+4. Document gap (what changed, what needs updating)
   
 ### Step 3: Declare Operational (30 seconds)
 ```markdown
