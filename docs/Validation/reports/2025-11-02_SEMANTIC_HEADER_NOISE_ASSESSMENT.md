@@ -224,7 +224,7 @@ Reality: 🔥 ALREADY CLOSE TO TARGET
 
 ### **Option 1: Track Two Separate Metrics** ✅ RECOMMENDED
 
-**In DASHBOARD.md:**
+**In REPO_HEALTH_DASHBOARD.md:**
 ```markdown
 Header Coverage:
 - Core Files:  87% (35/42) 🟢 [Target: 90%]
@@ -281,7 +281,7 @@ ADJUSTED COVERAGE: 65% (58/89)
 
 ### **Immediate Actions**
 
-1. **✅ Update DASHBOARD.md with CORE FILE metric**
+1. **✅ Update REPO_HEALTH_DASHBOARD.md with CORE FILE metric**
    - Track Core Coverage separately
    - Current: ~87% (vs 40% total)
    - Target: 90%

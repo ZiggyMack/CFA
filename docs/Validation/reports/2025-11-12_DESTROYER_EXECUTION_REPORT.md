@@ -26,7 +26,7 @@
 ### **Problem Statement:**
 
 **Master file:** `88MPH.md` (root, 405 lines, updated 2025-11-02)
-**Stale duplicate:** `docs/repository/librarian_tools/88MPH_PROTOCOL.md`
+**Stale duplicate:** `88MPH.md`
 
 **Missing from duplicate:**
 - Gospel Problem warning (CRITICAL!)
@@ -43,7 +43,7 @@
 
 Used `sed` for batch updates:
 ```bash
-# Updated all 88MPH_PROTOCOL.md → 88MPH.md
+# Updated all 88MPH.md → 88MPH.md
 # Adjusted relative paths as needed
 ```
 
@@ -58,7 +58,7 @@ Used `sed` for batch updates:
 
 **2. Stale File Deletion:**
 ```bash
-git rm docs/repository/librarian_tools/88MPH_PROTOCOL.md
+git rm 88MPH.md
 # Status: DELETED ✅
 ```
 
@@ -193,7 +193,7 @@ git rm docs/Validation/reports/REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md
 ### **Gospel Problem Risk:**
 
 **Before:**
-- Doc Claude could read `88MPH_PROTOCOL.md` (missing Gospel Problem warning)
+- Doc Claude could read `88MPH.md` (missing Gospel Problem warning)
 - Stale duplicate 150+ lines behind master
 - Critical updates not propagated
 
@@ -224,7 +224,7 @@ git rm docs/Validation/reports/REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md
 
 ### **88MPH Consolidation:**
 
-- ✅ Stale file deleted: `docs/repository/librarian_tools/88MPH_PROTOCOL.md`
+- ✅ Stale file deleted: `88MPH.md`
 - ✅ References updated: 20+ files
 - ✅ Bootstrap file works: `BOOTSTRAP_DOC_CLAUDE.md` references master
 - ✅ No broken links: Verified with grep

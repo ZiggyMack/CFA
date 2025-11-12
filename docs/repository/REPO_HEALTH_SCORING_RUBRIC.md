@@ -82,7 +82,7 @@ done
 **Common broken link patterns:**
 - DASHBOARD.md (should be REPO_HEALTH_DASHBOARD.md)
 - ROLE_DOC_CLAUDE.md (doesn't exist)
-- 88MPH_PROTOCOL.md (should be 88MPH.md)
+- 88MPH.md (should be 88MPH.md)
 - ui/ references (should be dashboard/)
 
 **Current baseline:** ~98% (Nova found 3 broken links in Priority 1 fixes)

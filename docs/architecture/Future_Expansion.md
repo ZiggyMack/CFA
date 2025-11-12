@@ -3,7 +3,7 @@ FILE: Future_Expansion.md
 PURPOSE: Track future repository enhancement tasks - "Missing Rooms" + Phase 4 expansion ideas
 VERSION: v1.3
 STATUS: Active (Planning)
-DEPENDS_ON: WAYFINDING_GUIDE.md (Navigation Hall complete), DASHBOARD.md
+DEPENDS_ON: WAYFINDING_GUIDE.md (Navigation Hall complete), REPO_HEALTH_DASHBOARD.md
 NEEDED_BY: Tier 4 task planners, future enhancement work
 MOVES_WITH: /docs/architecture/
 LAST_UPDATE: 2025-11-11 [B-STORM_5 Click 4: Tier 2 Light complete]
@@ -105,7 +105,7 @@ ethics_front_matter:
 ├─ Historical snapshots (weekly)
 ├─ Trend tracking (3-month trajectories)
 ├─ Aggregate health score (95/100)
-└─ Complements DASHBOARD.md (trends vs current)
+└─ Complements REPO_HEALTH_DASHBOARD.md (trends vs current)
 
 🗂️ Destroyer Claude (Log Management & Archival) ✅ 🆕
 ├─ ROLE_DESTROYER.md (v1.1.0 - size-based triggers + Shaman integration)
@@ -209,7 +209,7 @@ ethics_front_matter:
 
 **Estimated Effort:** 60 minutes ✅
 
-**Dependencies:** DASHBOARD.md ✅
+**Dependencies:** REPO_HEALTH_DASHBOARD.md ✅
 
 **Success Criteria:** ✅ ALL MET
 - ✅ Single-page comprehensive view
@@ -217,8 +217,8 @@ ethics_front_matter:
 - ✅ Weekly update cadence established (Doc Claude, Mondays)
 - ✅ Integration with health checks
 
-**Note:** Different from DASHBOARD.md
-- DASHBOARD.md = Current detailed status
+**Note:** Different from REPO_HEALTH_DASHBOARD.md
+- REPO_HEALTH_DASHBOARD.md = Current detailed status
 - REPO_HEALTH_DASHBOARD.md = Aggregate trends + history
 
 **Completed:** 2025-11-11 (B-STORM_5 Click 1)
@@ -734,7 +734,7 @@ Vision: Sustainable system that demonstrates real-world impact
 ## 🔗 **RELATED RESOURCES**
 
 - **Navigation Hall:** [WAYFINDING_GUIDE.md](/docs/WAYFINDING_GUIDE.md) ✅
-- **Current Health:** [DASHBOARD.md](/docs/repository/DASHBOARD.md)
+- **Current Health:** [REPO_HEALTH_DASHBOARD.md](/docs/repository/REPO_HEALTH_DASHBOARD.md)
 - **Change Log:** [REPO_LOG.md](/REPO_LOG.md)
 - **Dependency Map:** [MASTER_DEPENDENCY_MAP.md](/docs/repository/dependency_maps/MASTER_DEPENDENCY_MAP.md)
 - **Task System:** [/auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/](/auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/)

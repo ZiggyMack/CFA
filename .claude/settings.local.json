@@ -3,7 +3,13 @@
     "allow": [
       "Bash(md5sum:*)",
       "Bash(certutil:*)",
-      "Bash(git pull:*)"
+      "Bash(git pull:*)",
+      "Bash(test:*)",
+      "Bash(find:*)",
+      "Bash(shuf:*)",
+      "Bash(xargs -I {} bash -c \"echo \"\"File: {}\"\" && grep -c \"\"DASHBOARD\\.md\"\" {} | grep -v \"\"REPO_HEALTH\"\"\")",
+      "Bash(python fix_broken_links.py:*)",
+      "Bash(python fix_remaining_dashboard_refs.py:*)"
     ],
     "deny": [],
     "ask": []

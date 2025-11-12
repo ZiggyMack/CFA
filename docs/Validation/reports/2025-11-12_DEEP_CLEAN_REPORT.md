@@ -300,7 +300,7 @@ Critical Actions: Fix 3 bootstrap sequences, create 4 living maps
 - C5's methodology not documented (no exclusion criteria listed)
 
 **Impact:**
-- Living maps (FILE_INVENTORY.md, DASHBOARD.md) show 210 files but my scan found 374
+- Living maps (FILE_INVENTORY.md, REPO_HEALTH_DASHBOARD.md) show 210 files but my scan found 374
 - If methodology difference: Maps are accurate per C5's criteria, but criteria undocumented
 - If actual file additions: Maps already stale within hours (validates Gospel Problem)
 
@@ -408,7 +408,7 @@ Scenario: Doc Claude scans first (what I did)
 
 **Why Score Decreased:**
 1. **Broken Navigation Link (-1 point):** GROK_BRIEFING.md references non-existent PILOT path
-2. **Living Maps Staleness (-1 point):** FILE_INVENTORY.md and DASHBOARD.md show file count discrepancy (either methodology difference or actual staleness)
+2. **Living Maps Staleness (-1 point):** FILE_INVENTORY.md and REPO_HEALTH_DASHBOARD.md show file count discrepancy (either methodology difference or actual staleness)
 
 **Recovery Path to 96/100:**
 1. Fix GROK_BRIEFING.md line 46 (+1 point) - **5 minute fix**

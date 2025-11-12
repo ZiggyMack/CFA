@@ -278,17 +278,17 @@ For each check in VALIDATION_MAP.md:
 **Example:**
 ```markdown
 Executing Check 1.1: Stale Checklists
-├─ Read DASHBOARD.md... ✅
+├─ Read REPO_HEALTH_DASHBOARD.md... ✅
 ├─ Read MASTER_DEPENDENCY_MAP.md... ✅
 ├─ Search for TODO items... Found 2 stale
 ├─ Cross-reference REPO_LOG... Confirmed resolved 2025-11-01
 └─ Status: ❌ FAIL
 
-Finding: DASHBOARD.md lines 45-67 contain stale checklist
+Finding: REPO_HEALTH_DASHBOARD.md lines 45-67 contain stale checklist
 - "Complete preset_calibration/README.md" (completed 2025-10-31)
 - "Fix archive naming" (completed 2025-11-01)
 
-Fix: Add STATUS UPDATE section at top of DASHBOARD.md
+Fix: Add STATUS UPDATE section at top of REPO_HEALTH_DASHBOARD.md
 ```
 
 **Step 4: Calculate Validation Score**
@@ -308,7 +308,7 @@ Grade: 🟡 Good (target ≥90%)
 **Step 5: Prioritize Findings**
 ```markdown
 Critical Findings (Fix Immediately):
-1. Stale checklists in DASHBOARD.md (lines 45-67)
+1. Stale checklists in REPO_HEALTH_DASHBOARD.md (lines 45-67)
 2. Broken link in README.md (line 123)
 
 Important Findings (Fix This Week):
@@ -322,7 +322,7 @@ Minor Findings (Nice to Have):
 
 Fix critical findings immediately:
 ```markdown
-Fixing: Stale checklists in DASHBOARD.md
+Fixing: Stale checklists in REPO_HEALTH_DASHBOARD.md
 
 1. Add STATUS UPDATE section at top
 2. Mark resolved items with ✅
@@ -366,10 +366,10 @@ Returning to standard DOC_CLAUDE mode.
   - Updated: 2025-11-02
 
 **Supporting Tools:**
-- **DASHBOARD.md** - Current repository health metrics
+- **REPO_HEALTH_DASHBOARD.md** - Current repository health metrics
 - **MASTER_DEPENDENCY_MAP.md** - Dependency tracking and issues
 - **REPO_LOG.md** - Source of truth for state changes
-- **88MPH_PROTOCOL.md** - Rapid repository assessment
+- **88MPH.md** - Rapid repository assessment
 
 ### **Validation vs Historical Analysis:**
 
@@ -820,7 +820,7 @@ Answer: "v3.8.0 validated 2025-10-30. Status: PASSED. Core systems validated suc
 
 **Role Documentation:**
 - `/docs/repository/librarian_tools/ROLE_VALIDATION.md` - This file (role definition)
-- `/docs/repository/librarian_tools/88MPH_PROTOCOL.md` - DOC_CLAUDE activation
+- `/88MPH.md` - DOC_CLAUDE activation
 - `/docs/repository/librarian_tools/HEADER_STANDARD.md` - Documentation standards
 
 **Process Documentation:**

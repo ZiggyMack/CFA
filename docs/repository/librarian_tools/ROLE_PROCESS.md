@@ -331,7 +331,7 @@ using the 88MPH protocol. This is a validation run after fixes were deployed.'
 STEP 3 - Follow the 7-step methodology:
 1. Read latest health report baseline
 2. Read 88MPH.md scoring methodology
-3. Read DASHBOARD.md current claim
+3. Read REPO_HEALTH_DASHBOARD.md current claim
 4. Execute independent assessment (5 categories)
 5. Cite specific evidence for all scores
 6. Compare independent score to dashboard
@@ -407,7 +407,7 @@ STEP 1 - Choose path by role:
 - Process Claude → ROLE_PROCESS.md (that's me!)
 
 STEP 2 - Quick 3-minute scan:
-1. Read DASHBOARD.md (current health: 95/100)
+1. Read REPO_HEALTH_DASHBOARD.md (current health: 95/100)
 2. Check REPO_LOG.md coordination checkpoint
 3. Scan Mission/Preset_Calibration/MISSION_BRIEF.md
 
@@ -1474,7 +1474,7 @@ Need full schema? docs/ethics/ETHICAL_INVARIANT_SCHEMA.md"
 User: "I'm about to change header coverage methodology. Did I follow all steps?"
 
 PROCESS Claude audit:
-- [ ] ✅ Made initial change in DASHBOARD.md
+- [ ] ✅ Made initial change in REPO_HEALTH_DASHBOARD.md
 - [ ] ❌ CONSULTED VALIDATION CLAUDE (YOU SKIPPED THIS)
 - [ ] ❌ Updated all identified files (can't do if step 2 skipped)
 - [ ] ❌ Verified completeness
@@ -1498,7 +1498,7 @@ resulted in stale Doc Claude sources, 30 min cleanup cost)
 Failure documented:
 - Date: 2025-11-02
 - Change: Header coverage methodology split
-- What we did: Updated DASHBOARD.md only
+- What we did: Updated REPO_HEALTH_DASHBOARD.md only
 - What we skipped: VALIDATION Claude consultation
 - What broke: Doc Claude sources stayed stale
 - Discovery delay: 3 commits later

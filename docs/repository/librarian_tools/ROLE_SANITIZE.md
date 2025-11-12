@@ -3,7 +3,7 @@ FILE: ROLE_SANITIZE.md
 PURPOSE: Define the Sanitize role for maintaining README descriptive standards and protocol hierarchy
 VERSION: 1.0
 STATUS: Active
-DEPENDS_ON: 88MPH_PROTOCOL.md, CODE_CLAUDE_OUTPUT_PROTOCOL.md, TASK_BRIEF_README_AUDIT.md
+DEPENDS_ON: 88MPH.md, CODE_CLAUDE_OUTPUT_PROTOCOL.md, TASK_BRIEF_README_AUDIT.md
 NEEDED_BY: Doc_Claude, Code Claude performing README audits or sanitization
 MOVES_WITH: /docs/repository/librarian_tools/
 LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-19]
@@ -14,7 +14,7 @@ LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-19]
 **Role Name:** Sanitize
 **Specialization:** README Audit & Protocol Hierarchy Enforcement
 **Operator:** DOC_CLAUDE (audit mode), CODE_CLAUDE (implementation mode)
-**Authority:** 88MPH_PROTOCOL.md + CODE_CLAUDE_OUTPUT_PROTOCOL.md
+**Authority:** 88MPH.md + CODE_CLAUDE_OUTPUT_PROTOCOL.md
 **Version:** 1.0
 **Created:** 2025-11-01
 
@@ -55,7 +55,7 @@ This role ensures READMEs remain **descriptive** (WHAT) rather than **prescripti
 
 2. Protocol files (HOW - specific domains)
    ├── VUDU_PROTOCOL.md
-   ├── 88MPH_PROTOCOL.md
+   ├── 88MPH.md
    ├── CODE_CLAUDE_OUTPUT_PROTOCOL.md
    └── *_PROTOCOL.md files
 
@@ -682,7 +682,7 @@ This is the way."* 🏠📋
 - CODE_CLAUDE_OUTPUT_PROTOCOL.md (Mode 1 vs Mode 2)
 
 **For documentation standards:**
-- 88MPH_PROTOCOL.md (Doc_Claude blessing protocol)
+- 88MPH.md (Doc_Claude blessing protocol)
 
 **For protocol hierarchy:**
 - BOOTSTRAP_CLAUDE.md (primary authority)

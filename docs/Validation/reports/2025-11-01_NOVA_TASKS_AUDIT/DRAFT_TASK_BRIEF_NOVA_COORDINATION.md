@@ -377,7 +377,7 @@ External_Dependency.zip contents:
 ```
 /auditors/Bootstrap/BOOTSTRAP_VUDU.md (VuDu protocol context)
 /docs/repository/librarian_tools/ROLE_SANITIZE.md (Audit methodology)
-/docs/repository/librarian_tools/88MPH_PROTOCOL.md (Doc_Claude roles)
+/88MPH.md (Doc_Claude roles)
 ```
 
 ---

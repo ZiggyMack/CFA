@@ -40,7 +40,7 @@ repository/
 │   └── validation/            # Map accuracy checks
 └── librarian_tools/           # Maintenance protocols
     ├── README.md              # Tool documentation
-    ├── 88MPH_PROTOCOL.md      # Rapid assessment framework
+    ├── 88MPH.md      # Rapid assessment framework
     └── HEADER_STANDARD.md     # Semantic header specs
 ```
 
@@ -85,7 +85,7 @@ repository/
 
 ### Generate New Health Report
 ```bash
-1. Use 88MPH_PROTOCOL.md framework
+1. Use 88MPH.md framework
 2. Run comprehensive assessment
 3. Save as health_reports/YYYY-MM-DD_STATUS.md
 4. Update this README with latest score

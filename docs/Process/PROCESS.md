@@ -68,7 +68,7 @@ This file documents processes **we actually forgot** and **what broke because of
 
 **Date:** November 2, 2025
 **Change:** Split header coverage into "core files" (87%) vs "total files" (40%)
-**What we updated:** `/docs/repository/DASHBOARD.md`
+**What we updated:** `/docs/repository/REPO_HEALTH_DASHBOARD.md` (formerly DASHBOARD.md)
 **What we forgot:** Doc Claude's source files
 
 **Result:**
@@ -96,7 +96,7 @@ This file documents processes **we actually forgot** and **what broke because of
 - [ ] Document why the methodology changed
 - [ ] Note the old methodology for context
 
-**Example:** Updated DASHBOARD.md to show 87% core / 40% total split
+**Example:** Updated REPO_HEALTH_DASHBOARD.md to show 87% core / 40% total split
 
 ---
 
@@ -119,7 +119,7 @@ to a core/total split:
 - Core files: 87% (critical operational files)
 - Total files: 40% (includes archives/Python/noise)
 
-I've updated DASHBOARD.md to reflect this.
+I've updated REPO_HEALTH_DASHBOARD.md to reflect this.
 
 What other files reference header coverage metrics and need updating?
 ```
@@ -141,7 +141,7 @@ What other files reference header coverage metrics and need updating?
 **Example:**
 ```markdown
 Files to update:
-- [x] DASHBOARD.md (primary change)
+- [x] REPO_HEALTH_DASHBOARD.md (primary change)
 - [x] MASTER_DEPENDENCY_MAP.md (weakness section)
 - [x] BOOTSTRAP_DOC_CLAUDE.md (success metrics)
 ```
@@ -171,7 +171,7 @@ Files to update:
 ```markdown
 [DOCUMENTATION-2025-11-02-N] Header Coverage Methodology Change
 - Changed from single metric to core/total split
-- Updated: DASHBOARD.md, MASTER_DEPENDENCY_MAP.md, BOOTSTRAP_DOC_CLAUDE.md
+- Updated: REPO_HEALTH_DASHBOARD.md, MASTER_DEPENDENCY_MAP.md, BOOTSTRAP_DOC_CLAUDE.md
 - Reason: Better reflect operational excellence vs aspirational total coverage
 ```
 
