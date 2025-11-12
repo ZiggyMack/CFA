@@ -186,6 +186,101 @@ Standardized 100-point scoring system resolves auditor variance:
 
 ---
 
+## 🌍 Worldview Architecture (v4.0.0 - November 2025)
+
+**v4.0.0 expands CFA from a technical framework into a comprehensive philosophical laboratory, where worldviews are not merely compared but truly *audited* through adversarial collaboration.**
+
+### The 12 Worldview Profiles
+
+CFA now includes **12 fully-audited worldview profiles** (expanded from the initial 2), each representing a distinct philosophical tradition with rigorous Steel-Manning methodology:
+
+**Major World Religions:**
+- **Classical Theism** - Traditional monotheistic philosophy (divine simplicity, omnipotence, moral realism)
+- **Islam** - Islamic philosophical tradition with emphasis on divine unity and revelation
+- **Orthodox Judaism** - Halakhic reasoning and covenant theology
+- **Mormonism** - Latter-day Saint theology with eternal progression
+- **Hinduism** - Dharmic philosophy with moksha and karma
+- **Buddhism** - Buddhist metaphysics focused on suffering, impermanence, and liberation
+
+**Naturalistic Frameworks:**
+- **Methodological Naturalism** - Empirical science as primary epistemic tool
+- **Process Theology** - Reality as dynamic becoming (Whitehead tradition)
+
+**Meta-Ethical Positions:**
+- **Error Theory** - Moral facts don't exist (Mackie tradition)
+- **Null Hypothesis** - Skepticism as default epistemic stance
+- **Desiderata Believers** - Pragmatic belief formation based on consequences
+- **Existentialism** - Radical freedom, authenticity, meaning-making
+
+**Each profile contains:**
+- **Steel-Manning sections** (5-part scaffold: Charitable Interpretation → Core Insight → Counterweight Analysis → Edge Case Ledger → Crux Identification)
+- **Academic sources metadata** (9+ peer-reviewed sources per worldview)
+- **Calibration YAML blocks** (bias adjustment values for adversarial scoring)
+- **~240KB total philosophical documentation** across 12 profiles
+
+**Innovation:** Worldviews are treated as *living philosophical positions* worthy of genuine intellectual charity, not strawmen to be dismissed.
+
+### Symmetry Matrix Visualizer (SMV)
+
+**What it is:** An interactive React/Vite visualization system showing real-time auditor tension and philosophical disagreement resolution.
+
+**Why it matters:** Abstract philosophical debates become *concrete and visual*. Users see:
+- **Claude/Nova/Grok alignment triangle** - Where do the three auditors agree/disagree?
+- **Ethical invariant violation overlays** - Which principles are being challenged?
+- **Symmetry health tracking** - Is the comparison genuinely fair over time?
+- **Tension → Resolution pathways** - How did auditors move from disagreement to convergence?
+
+**Design philosophy (Nova's vision):**
+> "Symmetry thrives in dialogue, not dictation. The tools should reveal patterns, not police them. Automation serves reflection; reflection preserves meaning."
+
+**Location:** [dashboard/SMV/](dashboard/SMV/) (full prototype), [docs/smv/](docs/smv/) (design specifications)
+
+**Key insight:** Understanding BEFORE enforcement. SMV shows philosophical tensions visually so users can judge fairness themselves, rather than trusting black-box scoring.
+
+### Crux Architecture - Honest Impasses
+
+**What it is:** A named impasse system acknowledging that some philosophical disagreements *cannot be resolved* even after genuine adversarial deliberation.
+
+**Why it matters:** Intellectual honesty. When Claude, Nova, and Grok deliberate in good faith and still can't reach 98%+ convergence, CFA declares a **Crux Point** - a fundamental disagreement where reasonable people diverge.
+
+**User control:** The **Crux Handling Lever** lets users decide how to weight unresolved tensions:
+- **NORMALIZE_UNCERTAINTY (Skeptic Mode):** Apply penalty based on disagreement width (wider spread = larger penalty)
+- **CARRY_FORWARD (Zealot Mode):** Use self-reported scores, acknowledging disagreement exists but not penalizing for it
+
+**Three-View System:**
+- **Self-Reported Tab:** What the worldview claims about itself
+- **Peer-Reviewed Tab:** What survives adversarial audit (Claude/Nova/Grok deliberation)
+- **Delta Tab:** The *difference* between self-report and peer-review (humility metrics)
+
+**Key insight:** Crux Points are *features, not bugs*. They mark the boundaries of knowable truth and honor philosophical humility.
+
+**Specification:** [docs/app/CRUX_INTEGRATION_SPEC.md](docs/app/CRUX_INTEGRATION_SPEC.md)
+
+### Adversarial Scoring System
+
+**What it is:** Multi-AI collaboration showing **full bias vs. adversarial-adjusted scores** for every worldview comparison.
+
+**Why it matters:** Single-AI self-assessment is epistemically insufficient. CFA uses *role-based adversarial auditing* where:
+
+**Three Auditor Roles:**
+- **PRO (Claude):** Teleological lens, advocates FOR the worldview with calibration bias adjustment
+- **ANTI (Grok):** Empirical lens, challenges worldview claims from naturalistic perspective
+- **FAIRNESS (Nova):** Symmetry lens, ensures balance and catches asymmetric treatment
+
+**The Process:**
+1. Each worldview writes a **self-reported score** (what it claims)
+2. Three auditors deliberate adversarially using **Steel-Manning scaffolds**
+3. Target: **98%+ convergence** (if they can't agree, declare Crux Point)
+4. Output: **Peer-reviewed score** (what survives genuine philosophical scrutiny)
+
+**Calibration Hash System:** Each auditor uses bias-adjustment YAML values (e.g., `1bbec1e119a2c425` for PRO-CT stance) to prevent gaming and ensure consistent philosophical posture across sessions.
+
+**Key insight:** Scores are *earned* through intellectual combat, not self-reported. The delta between self-report and peer-review becomes a **humility metric** - how well does a worldview know itself?
+
+**Implementation:** [profiles/comparisons/](profiles/comparisons/) (comparison YAML files), [auditors/AUDITOR_ASSIGNMENTS.md](auditors/AUDITOR_ASSIGNMENTS.md)
+
+---
+
 <!-- deps: preset_modes, ypa_calculation -->
 ## ✨ Key Features
 

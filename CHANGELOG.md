@@ -14,7 +14,7 @@ LAST_UPDATE: 2025-11-12 [v4.0.0 Release - Living Map System + Repository Health 
 # CHANGELOG
 
 ## [4.0.0] - 2025-11-12
-### Added
+### Added - Repository Infrastructure
 - **Living Map System**: 7 authoritative "single source of truth" maps preventing documentation drift
   - FILE_INVENTORY.md (~353 files tracked)
   - BOOTSTRAP_SEQUENCE.md (canonical bootstrap paths)
@@ -27,6 +27,32 @@ LAST_UPDATE: 2025-11-12 [v4.0.0 Release - Living Map System + Repository Health 
 - **REPO_HEALTH_SCORING_RUBRIC.md**: Standardized 100-point scoring system with 7 quantifiable categories
 - **Gospel Problem Prevention Methodology**: Scan-first validation approach with tri-auditor convergence testing
 - **Process Claude Domain 1 Expansion**: Living map freshness monitoring and maintenance tracking
+
+### Added - Application Features
+- **12 Worldview Profiles** (expanded from 2): Classical Theism, Methodological Naturalism, Buddhism, Islam, Orthodox Judaism, Mormonism, Hinduism, Process Theology, Error Theory, Null Hypothesis, Desiderata Believers, Existentialism
+  - ~240KB total philosophical documentation across 12 profiles
+  - Steel-Manning sections (5-part scaffold: Charitable Interpretation → Core Insight → Counterweight Analysis → Edge Case Ledger → Crux Identification)
+  - Academic sources metadata (9+ peer-reviewed sources per worldview)
+  - Calibration YAML blocks for adversarial scoring bias adjustment
+- **Symmetry Matrix Visualizer (SMV)**: Interactive React/Vite visualization showing real-time auditor tension/resolution
+  - Claude/Nova/Grok alignment triangle visualization
+  - Ethical invariant violation overlays
+  - Symmetry health tracking over time
+  - Tension → Resolution pathway mapping
+  - Full prototype in dashboard/SMV/, design specs in docs/smv/
+- **Crux Architecture**: Named impasse system for unresolved philosophical disagreements
+  - Three-View System (Self-Reported / Peer-Reviewed / Delta tabs)
+  - Crux Handling Lever (NORMALIZE_UNCERTAINTY vs CARRY_FORWARD modes)
+  - User control over uncertainty penalties
+  - Integration with preset modes (Skeptic/Zealot/Diplomat auto-configuration)
+  - Complete specification: docs/app/CRUX_INTEGRATION_SPEC.md
+- **Adversarial Scoring System**: Multi-AI collaboration with role-based bias adjustments
+  - PRO/ANTI/FAIRNESS auditor roles (Claude/Grok/Nova)
+  - Self-reported vs peer-reviewed score comparison
+  - 98%+ convergence target (or Crux Point declaration)
+  - Calibration hash system (prevents gaming, ensures consistent philosophical posture)
+  - Humility metrics (delta between self-report and peer-review)
+  - Implementation: profiles/comparisons/*.yaml, auditors/AUDITOR_ASSIGNMENTS.md
 
 ### Changed
 - Repository health scoring: Objective 100-point system replaces subjective assessments
