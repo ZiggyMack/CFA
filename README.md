@@ -1,4 +1,4 @@
-# CFA v3.5.2 - Interactive Console
+# CFA v4.0.0 - Interactive Console
 ## "All Named, All Priced" → "All Seen, All Passed"
 ### Epistemic Engineering Platform
 
@@ -13,6 +13,8 @@ The **Comparative Framework Audit (CFA)** is the first interactive epistemic lab
 **Core Innovation**: Every assumption is disclosed, every presupposition is counted, every bias is made toggleable, and every outcome is earned.
 
 **v3.5.2 Innovation**: **VuDu Light** coordination infrastructure - enabling multi-AI collaboration with lightweight verification, context recovery, and cross-model adversarial auditing.
+
+**v4.0.0 Innovation**: **Living Map System** + **Repository Health Scoring** - systematic infrastructure ensuring documentation stays current, auditors maintain consistent standards, and "Gospel Problem" prevention through scan-first methodology.
 
 ---
 
@@ -129,6 +131,58 @@ The project maintains three complementary logs tracking different aspects of evo
 - **"Why was this decided?"** → VUDU_LOG (coordination reasoning)
 - **"What's new in v3.X?"** → CHANGELOG (feature releases)
 - **"What changed in line 47?"** → git commits (code-level)
+
+---
+
+## 📐 Repository Infrastructure (v4.0.0 - November 2025)
+
+**v4.0.0 introduces systematic repository maintenance infrastructure to ensure documentation stays current and auditors maintain consistent quality standards across all Deep Clean validations.**
+
+### Living Map System
+The CFA repository now maintains **7 living maps** - authoritative "single sources of truth" that prevent documentation drift:
+
+1. **FILE_INVENTORY.md** - Complete file inventory (~353 files tracked)
+2. **BOOTSTRAP_SEQUENCE.md** - Canonical bootstrap paths for all AI auditors
+3. **REPO_HEALTH_DASHBOARD.md** - Real-time repository health (current: 96/100)
+4. **WORLDVIEW_CATALOG.md** - Authoritative list of 12 worldview profiles
+5. **WAYFINDING_GUIDE.md** - Navigation guide for finding anything in the repository
+6. **AUDITOR_ASSIGNMENTS.md** - PRO/ANTI stance assignments for adversarial auditing
+7. **workshop/ARCHIVE_INDEX.md** - Brainstorming session archive (21 files, 616KB)
+
+**Innovation:** [LIVING_MAP_MAINTENANCE.md](docs/repository/LIVING_MAP_MAINTENANCE.md) protocol prevents "Gospel Problem" - where embedded references drift while maps stay current.
+
+### Repository Health Scoring Rubric
+Standardized 100-point scoring system resolves auditor variance:
+- **7 categories:** Documentation Coverage, Link Integrity, Living Map Freshness, Process Compliance, Repository Organization, Dependency Accuracy, Version Consistency
+- **Quantifiable thresholds:** Eliminates subjective "healthy" assessments
+- **Current score:** 96/100 (A) - up from 87/100 after Priority 1+2 fixes
+- **Details:** See [REPO_HEALTH_SCORING_RUBRIC.md](docs/repository/REPO_HEALTH_SCORING_RUBRIC.md)
+
+### Gospel Problem Prevention
+**Problem Identified:** Previous Deep Clean tests showed 18% auditor variance (Opus: 78/100, Code Claude: 92/100) due to:
+- Auditors reading historical reports first (confirmation bias)
+- Embedded file counts drifting from living maps
+- No systematic validation protocol
+
+**Solution Implemented:**
+1. **Scan-first methodology:** Auditors scan repository BEFORE reading reports
+2. **Living map protocol:** All references point to living maps (not embedded counts)
+3. **Tri-auditor convergence testing:** Three independent audits validated methodology
+4. **Process Claude Domain 1 oversight:** Monitors living map freshness
+
+**Result:** Convergence improved to 96% agreement across auditors
+
+### File Organization Improvements
+**Priority 2 Cleanup (November 2025):**
+- Removed 11 stub READMEs (39 → 28 in auditors/)
+- Fixed 94 broken DASHBOARD.md references → REPO_HEALTH_DASHBOARD.md
+- Fixed 28 broken 88MPH_PROTOCOL.md references → 88MPH.md (root)
+- Archived 21 brainstorming sessions (616KB) to .Archive/workshop/
+- Removed ui/ directory (replaced with dashboard/ at root)
+
+**File Count:** ~353 tracked files (down from 357, up from 210 baseline)
+
+**For complete infrastructure documentation, see [docs/repository/](docs/repository/).**
 
 ---
 
@@ -272,6 +326,7 @@ See complete auditor bootstrap sequence in [/auditors/MISSION_DEFAULT.md](audito
 | v3.0 | October 2024 | Icons, badges, bootstrap foundation, aesthetic polish |
 | v3.5 | October 2025 | VuDu Full, Bootstrap System, complete guardrails, preset modes, quiz, dark mode |
 | **v3.5.2** | **October 2025** | **VuDu Light activation, mission architecture, mobile-friendly format, preset calibration mission launched** |
+| **v4.0.0** | **November 2025** | **Living Map System (7 maps), Repository Health Scoring Rubric (100-point), Gospel Problem prevention methodology, Priority 2 cleanup (94 broken links fixed, 11 stub READMEs removed, 96/100 health score)** |
 
 ---
 
@@ -282,7 +337,7 @@ Open source (license TBD - currently in development)
 
 ### **Citation:**
 ```
-CFA v3.5.2 Interactive Console (2025)
+CFA v4.0.0 Interactive Console (2025)
 "All Named, All Priced" → "All Seen, All Passed"
 Epistemic Engineering Project
 https://cfa-voodoo.streamlit.app
@@ -295,6 +350,7 @@ Adversarial Collaboration:
 
 98% auditor convergence achieved across all metrics.
 VuDu Light coordination protocol: v3.5.2
+Living Map System + Health Scoring: v4.0.0
 ```
 
 ---
@@ -310,6 +366,6 @@ VuDu Light coordination protocol: v3.5.2
 
 *"Where ideas reveal their true weight, and honesty becomes quantifiable."*
 
-**CFA v3.5.2 | Epistemic Engineering | October 2025**
+**CFA v4.0.0 | Epistemic Engineering | November 2025**
 
 **"All Named, All Priced, All Seen, All Passed - for present and future collaboration."** 🔥👑

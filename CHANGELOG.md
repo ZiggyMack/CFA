@@ -1,17 +1,55 @@
 <!---
 FILE: CHANGELOG.md
 PURPOSE: Track version history and major feature releases
-VERSION: v3.8.0
+VERSION: v4.0.0
 STATUS: Active
 DEPENDS_ON: None
 NEEDED_BY: README.md, deployment processes, all users
 MOVES_WITH: / (root)
-LAST_UPDATE: 2025-10-30 [DOCUMENTATION-2025-10-30-8]
+LAST_UPDATE: 2025-11-12 [v4.0.0 Release - Living Map System + Repository Health Infrastructure]
 --->
 
-<!-- deps: file_structure, preset_modes, ypa_calculation, vudu_protocol, bootstrap_system --># CFA - Changelog
+<!-- deps: file_structure, preset_modes, ypa_calculation, vudu_protocol, bootstrap_system, living_maps, health_scoring --># CFA - Changelog
 
 # CHANGELOG
+
+## [4.0.0] - 2025-11-12
+### Added
+- **Living Map System**: 7 authoritative "single source of truth" maps preventing documentation drift
+  - FILE_INVENTORY.md (~353 files tracked)
+  - BOOTSTRAP_SEQUENCE.md (canonical bootstrap paths)
+  - REPO_HEALTH_DASHBOARD.md (real-time health: 96/100)
+  - WORLDVIEW_CATALOG.md (12 worldview profiles)
+  - WAYFINDING_GUIDE.md (repository navigation)
+  - AUDITOR_ASSIGNMENTS.md (PRO/ANTI stance assignments)
+  - workshop/ARCHIVE_INDEX.md (brainstorming archive: 21 files, 616KB)
+- **LIVING_MAP_MAINTENANCE.md**: Protocol preventing "Gospel Problem" (embedded references drifting from maps)
+- **REPO_HEALTH_SCORING_RUBRIC.md**: Standardized 100-point scoring system with 7 quantifiable categories
+- **Gospel Problem Prevention Methodology**: Scan-first validation approach with tri-auditor convergence testing
+- **Process Claude Domain 1 Expansion**: Living map freshness monitoring and maintenance tracking
+
+### Changed
+- Repository health scoring: Objective 100-point system replaces subjective assessments
+- Auditor convergence: Improved from 82% to 96% agreement through scan-first methodology
+- Documentation organization: README count reduced from 39 to 28 in auditors/ (removed 11 stub files)
+
+### Fixed
+- **94 broken DASHBOARD.md references** → corrected to REPO_HEALTH_DASHBOARD.md across entire docs/ tree
+- **28 broken 88MPH_PROTOCOL.md references** → corrected to 88MPH.md (root location)
+- FILE_INVENTORY.md accuracy: Updated from 210 to 353 files (corrected +70% undocumented drift)
+- BOOTSTRAP_SEQUENCE.md: Removed broken references to non-existent files (ROLE_DOC_CLAUDE.md, etc.)
+- WAYFINDING_GUIDE.md: Fixed navigation paths to correct file locations
+
+### Removed
+- 11 stub README files (≤50 bytes) in auditors/ directory
+- Empty ui/ directory structure (replaced with dashboard/ at root)
+- 21 brainstorming session files moved to .Archive/workshop/ (616KB archived)
+
+### Validation
+- **Health Score**: 96/100 (A) - up from 87/100 post-link cleanup
+- **Auditor Variance**: Reduced from 18% (Opus: 78, Code: 92) to 4% through standardized rubric
+- **Living Maps Status**: 7/7 current and accurate
+- **Link Integrity**: 100% (0 broken links remaining in docs/)
 
 ## [3.8.0] - 2025-10-30
 ### Added

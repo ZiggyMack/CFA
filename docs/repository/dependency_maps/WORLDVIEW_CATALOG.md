@@ -169,7 +169,7 @@ All references to worldview counts, lists, or profiles should point HERE instead
 **This catalog is referenced by:**
 - [ROLE_PROCESS.md](../docs/repository/librarian_tools/ROLE_PROCESS.md) Domain 7
 - [CFA_ARCHITECTURE.md](../docs/architecture/CFA_ARCHITECTURE.md) Section 3
-- [DASHBOARD.md](../docs/repository/DASHBOARD.md)
+- [REPO_HEALTH_DASHBOARD.md](../docs/repository/REPO_HEALTH_DASHBOARD.md)
 - Bootstrap files (via reference, not embedding)
 
 **Do NOT embed worldview lists in:**

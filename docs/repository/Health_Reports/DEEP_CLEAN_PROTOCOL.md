@@ -81,7 +81,7 @@ Doc Claude must SCAN FIRST, then compare to last report - not trust last report 
 
 ### **Objective 2: Full Repository Health Assessment**
 
-**Update:** `docs/repository/DASHBOARD.md`
+**Update:** `docs/repository/REPO_HEALTH_DASHBOARD.md`
 
 **Metrics to refresh:**
 
@@ -175,7 +175,7 @@ For each bootstrap reference to a file/directory:
    - `GROK_BRIEFING.md` → All "Essential Files" links
 
 2. **Boot Loader Navigation:**
-   - `BOOTSTRAP_DOC_CLAUDE.md` → `DASHBOARD.md`
+   - `BOOTSTRAP_DOC_CLAUDE.md` → `REPO_HEALTH_DASHBOARD.md`
    - `BOOTSTRAP_DOC_CLAUDE.md` → `ETHICS_FRONT_MATTER_VALIDATION.md`
    - `ROLE_PROCESS.md` Domain 8 → Ethics files
 
@@ -201,7 +201,7 @@ For each bootstrap reference to a file/directory:
    - File inventory reflects reality
 
 2. ✅ **Health assessment complete:**
-   - DASHBOARD.md refreshed with current metrics
+   - REPO_HEALTH_DASHBOARD.md refreshed with current metrics
    - Trends documented
    - Improvement priorities identified
 
@@ -225,7 +225,7 @@ For each bootstrap reference to a file/directory:
 ## 📦 DELIVERABLES
 
 **Primary:**
-1. `docs/repository/DASHBOARD.md` (updated health assessment)
+1. `docs/repository/REPO_HEALTH_DASHBOARD.md` (updated health assessment)
 2. `docs/Validation/BOOTSTRAP_EFFICIENCY_SCAN.md` (conflict report)
 3. `docs/repository/dependency_maps/` (updated maps)
 
@@ -279,7 +279,7 @@ find . -type f -name "*.js" -o -name "*.jsx" | wc -l  # Total JS/React files
 
 **Update sequence:**
 1. Fix any critical broken links (blocking navigation)
-2. Update DASHBOARD.md with current metrics
+2. Update REPO_HEALTH_DASHBOARD.md with current metrics
 3. Update Future_Expansion.md (move completions to "Done")
 4. Update dependency maps (add new files)
 5. Fix any bootstrap conflicts found
@@ -294,7 +294,7 @@ find . -type f -name "*.js" -o -name "*.jsx" | wc -l  # Total JS/React files
 3. Bootstrap efficiency conflicts (prevent contradictory instructions)
 
 **Medium Priority (Should fix soon):**
-4. DASHBOARD.md health metrics (understand current state)
+4. REPO_HEALTH_DASHBOARD.md health metrics (understand current state)
 5. Living maps validation (ensure single sources of truth current)
 
 **Low Priority (Nice to have):**

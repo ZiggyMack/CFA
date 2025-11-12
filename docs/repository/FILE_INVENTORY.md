@@ -147,7 +147,7 @@ auditors/Mission/
 ```
 docs/
 ├── repository/
-│   ├── DASHBOARD.md (health monitoring)
+│   ├── REPO_HEALTH_DASHBOARD.md (health monitoring)
 │   ├── dependency_maps/
 │   └── librarian_tools/
 ├── ethics/ (2 files - new system)

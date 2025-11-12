@@ -483,7 +483,7 @@ Nova's strategic direction demonstrates exceptional understanding of CFA's cultu
 **Related Standards:**
 - `/auditors/VUDU_PROTOCOL.md` (VuDu v3.7.2 - "All Seen, All Passed")
 - `/docs/AXIOMS.md` (Ethical invariants source)
-- `/docs/repository/librarian_tools/88MPH_PROTOCOL.md` (Doc_Claude roles)
+- `/88MPH.md` (Doc_Claude roles)
 
 ---
 

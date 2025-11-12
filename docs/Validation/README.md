@@ -3,7 +3,7 @@ FILE: README.md
 PURPOSE: Navigation for Validation directory - protocols, reports, and criteria
 VERSION: v2.1
 STATUS: Active
-DEPENDS_ON: DOC_CLAUDE_WELLNESS_PROTOCOL.md, 88MPH_PROTOCOL.md, ROLE_PROCESS.md (SME), reports/
+DEPENDS_ON: DOC_CLAUDE_WELLNESS_PROTOCOL.md, 88MPH.md, ROLE_PROCESS.md (SME), reports/
 NEEDED_BY: All validation activities, Doc Claude wellness checks, VALIDATION Claude work
 MOVES_WITH: /docs/Validation/
 LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-17]
@@ -46,7 +46,7 @@ LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-17]
 
 **When to use:**
 - After major changes (50+ files modified)
-- Before updating DASHBOARD.md health score
+- Before updating REPO_HEALTH_DASHBOARD.md health score
 - When dashboard accuracy is questioned
 - Monthly wellness checks during active development
 
@@ -104,8 +104,8 @@ See `/docs/Validation/reports/README.md` for complete index
 
 ## 🔗 RELATED PROTOCOLS
 
-### **88MPH_PROTOCOL.md**
-- **Location:** `/docs/repository/librarian_tools/88MPH_PROTOCOL.md`
+### **88MPH.md**
+- **Location:** `/88MPH.md`
 - **Purpose:** Rapid repository health assessment methodology
 - **Relationship:** DOC_CLAUDE_WELLNESS_PROTOCOL uses 88MPH scoring system
 
@@ -114,8 +114,8 @@ See `/docs/Validation/reports/README.md` for complete index
 - **Purpose:** VALIDATION Claude role definition and responsibilities
 - **Relationship:** VALIDATION Claude handles escalations from wellness checks
 
-### **DASHBOARD.md**
-- **Location:** `/docs/repository/DASHBOARD.md`
+### **REPO_HEALTH_DASHBOARD.md**
+- **Location:** `/docs/repository/REPO_HEALTH_DASHBOARD.md`
 - **Purpose:** Central repository health monitoring dashboard
 - **Relationship:** Wellness protocol validates dashboard accuracy
 
@@ -162,7 +162,7 @@ See `/docs/Validation/reports/README.md` for complete index
    └─ CRITICAL issues found? 🚨 ESCALATE
 
 4. Take Action
-   ├─ Update DASHBOARD.md if drift detected
+   ├─ Update REPO_HEALTH_DASHBOARD.md if drift detected
    ├─ Create validation report in reports/
    ├─ Document in REPO_LOG
    └─ Escalate to VALIDATION Claude if needed

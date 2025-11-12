@@ -55,7 +55,7 @@ After this document: **Hierarchical resolution**
    - **Maintained by:** VALIDATION Claude + Doc Claude
    - **Scope:** File locations, relationships, tree structure
 
-4. **DASHBOARD.md**
+4. **REPO_HEALTH_DASHBOARD.md**
    - **Authority:** Current repository health and status
    - **Maintained by:** Multiple Claudes (health assessors)
    - **Scope:** "What's the current state?"

@@ -3,7 +3,7 @@ FILE: DOC_CLAUDE_WELLNESS_PROTOCOL.md
 PURPOSE: Self-diagnostic health check protocol for Doc Claude to independently validate repository state
 VERSION: v1.1
 STATUS: Active
-DEPENDS_ON: 88MPH_PROTOCOL.md, DASHBOARD.md, health_reports/, ROLE_PROCESS.md (Process Claude is SME)
+DEPENDS_ON: 88MPH.md, REPO_HEALTH_DASHBOARD.md, health_reports/, ROLE_PROCESS.md (Process Claude is SME)
 NEEDED_BY: Doc Claude wellness checks, dashboard accuracy validation, drift detection
 MOVES_WITH: /docs/Validation/
 LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-17]
@@ -22,7 +22,7 @@ LAST_UPDATE: 2025-11-02 [VALIDATION-2025-11-02-17]
 
 **Required:**
 - After major changes (50+ files modified)
-- Before updating DASHBOARD.md health score
+- Before updating REPO_HEALTH_DASHBOARD.md health score
 - When dashboard accuracy is questioned
 - Before production deployments
 
@@ -131,8 +131,8 @@ Perform an independent, from-scratch health assessment to validate the repositor
 
 **METHODOLOGY:**
 1. **Read baseline:** Find and read the most recent health report in /docs/repository/Health_Reports/
-2. **Read protocol:** Use project_knowledge_search to find and read /docs/repository/librarian_tools/88MPH_PROTOCOL.md scoring methodology
-3. **Read dashboard:** Check what the current /docs/repository/DASHBOARD.md claims as the health score
+2. **Read protocol:** Use project_knowledge_search to find and read /88MPH.md scoring methodology
+3. **Read dashboard:** Check what the current /docs/repository/REPO_HEALTH_DASHBOARD.md claims as the health score
 4. **Execute assessment:** Score each category independently using 88MPH methodology:
    - Structural Health (25 points)
    - Documentation Quality (25 points)
@@ -140,7 +140,7 @@ Perform an independent, from-scratch health assessment to validate the repositor
    - Process Compliance (20 points)
    - Coordination Health (10 points)
 5. **Evidence required:** For each category, cite specific evidence (file counts, validation reports, REPO_LOG entries, etc.)
-6. **Compare:** Compare your independent score to what DASHBOARD.md claims
+6. **Compare:** Compare your independent score to what REPO_HEALTH_DASHBOARD.md claims
 7. **Discrepancy analysis:** If your score differs from dashboard, identify why
 
 **VALIDATION CHECKPOINTS:**
@@ -215,7 +215,7 @@ Sign-off: CONDITIONAL (after drift correction)
 
 Action Required:
 1. Document discrepancy in REPO_LOG
-2. Update DASHBOARD.md to accurate score
+2. Update REPO_HEALTH_DASHBOARD.md to accurate score
 3. Investigate root cause of drift
 4. Create validation report
 ```
@@ -293,7 +293,7 @@ Action Required:
    - If CRITICAL issues found: Immediate attention
    - If dashboard drift >3 points: Coordination gap investigation
 
-4. **Update DASHBOARD.md:**
+4. **Update REPO_HEALTH_DASHBOARD.md:**
    - Correct to accurate score
    - Add warning notice
    - Note: "Under remediation"
@@ -306,7 +306,7 @@ Action Required:
    - Drift magnitude
    - Root cause analysis
 
-2. **Update DASHBOARD.md immediately:**
+2. **Update REPO_HEALTH_DASHBOARD.md immediately:**
    - Correct health score
    - Add drift correction notice
    - Update last validation date
@@ -433,7 +433,7 @@ When creating the wellness check report, use this structure:
 
 ## 🔄 INTEGRATION WITH OTHER PROTOCOLS
 
-### **88MPH_PROTOCOL.md**
+### **88MPH.md**
 - **Relationship:** This wellness protocol uses 88MPH methodology
 - **When to use which:** 88MPH for rapid assessment, Wellness for independent validation
 - **Complementary:** Use both together for comprehensive health monitoring
@@ -443,8 +443,8 @@ When creating the wellness check report, use this structure:
 - **Escalation criteria:** Discrepancies >5 points, CRITICAL issues, dashboard drift >3 points
 - **Handoff:** Wellness check creates report → VALIDATION Claude reviews → Actions taken
 
-### **DASHBOARD.md**
-- **Relationship:** Wellness protocol validates DASHBOARD.md accuracy
+### **REPO_HEALTH_DASHBOARD.md**
+- **Relationship:** Wellness protocol validates REPO_HEALTH_DASHBOARD.md accuracy
 - **Update procedure:** If drift detected, wellness check provides corrected score
 - **Maintenance:** Run wellness check before any dashboard health score updates
 
@@ -554,9 +554,9 @@ When creating the wellness check report, use this structure:
 ## 🔗 RELATED DOCUMENTATION
 
 - **🔥 PROCESS CLAUDE (SME):** [ROLE_PROCESS.md](/docs/repository/librarian_tools/ROLE_PROCESS.md) ⭐ **CONSULT FIRST**
-- **Protocol Reference:** [88MPH_PROTOCOL.md](/docs/repository/librarian_tools/88MPH_PROTOCOL.md)
+- **Protocol Reference:** [88MPH.md](/88MPH.md)
 - **Validation Role:** [ROLE_VALIDATION.md](/docs/repository/librarian_tools/ROLE_VALIDATION.md)
-- **Dashboard:** [DASHBOARD.md](/docs/repository/DASHBOARD.md)
+- **Dashboard:** [REPO_HEALTH_DASHBOARD.md](/docs/repository/REPO_HEALTH_DASHBOARD.md)
 - **Health Reports:** [Health_Reports/](/docs/repository/Health_Reports/)
 - **Validation Reports:** [reports/](/docs/Validation/reports/)
 

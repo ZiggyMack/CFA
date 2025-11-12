@@ -215,7 +215,7 @@ Ziggy, how should I proceed?
 
 #### **Recommendation 1: Add "Bad Documentation" Triage Protocol** 🟡 MEDIUM PRIORITY
 
-**Target File:** `/auditors/Bootstrap/88MPH_PROTOCOL.md`
+**Target File:** `/auditors/Bootstrap/88MPH.md`
 
 **Status:** ⏳ **NOT IMPLEMENTED**
 
@@ -367,7 +367,7 @@ Focus on Phase [N], specifically:
 
 | Recommendation | Priority | Status | Target File | Assigned To | Notes |
 |----------------|----------|--------|-------------|-------------|-------|
-| Bad documentation triage | 🟡 MEDIUM | ⏳ | 88MPH_PROTOCOL.md | - | - |
+| Bad documentation triage | 🟡 MEDIUM | ⏳ | 88MPH.md | - | - |
 | Phase tracking mechanism | 🟢 NICE-TO-HAVE | ⏳ | REPO_LOG or new tracker | - | Decision needed on location |
 
 ---

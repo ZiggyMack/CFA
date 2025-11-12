@@ -72,7 +72,7 @@ Coordination       ████████████████████�
 
 **Changes:**
 1. **88MPH File Consolidation** ✅
-   - REMOVED: `docs/repository/librarian_tools/88MPH_PROTOCOL.md` (stale, missing 150+ lines)
+   - REMOVED: `88MPH.md` (stale, missing 150+ lines)
    - UPDATED: 20+ files to reference master `88MPH.md` (root)
    - Master file: 405 lines, current as of 2025-11-02
    - Includes: Gospel Problem warning, Trinity Architecture, multiple hat roles
@@ -217,7 +217,7 @@ TOTAL:            ~30,600 lines
 
 3. **Living Maps Staleness** - Gospel Problem validated
    - FILE_INVENTORY.md created morning, stale by evening (if file count discrepancy real)
-   - DASHBOARD.md metrics don't match fresh scan
+   - REPO_HEALTH_DASHBOARD.md metrics don't match fresh scan
    - Lesson: "Scan first, then compare" protocol essential
 
 ### 🎯 Required Actions Before Grok Activation:
@@ -331,7 +331,7 @@ Target (v4.0):   ████████████████████ 98
 ### Key Locations
 - [Mission Brief](/auditors/Mission/CFA_VUDU/MISSION_BRIEF.md)
 - [REPO_LOG](/REPO_LOG.md)
-- [88MPH Protocol](/docs/repository/librarian_tools/88MPH_PROTOCOL.md)
+- [88MPH Protocol](/88MPH.md)
 
 ### Living Maps (To Create)
 - TREE_STRUCTURE.md (pending)

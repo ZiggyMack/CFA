@@ -3,7 +3,7 @@ FILE: VALIDATION_MAP.md
 PURPOSE: Systematic validation checklist for Validation Claude operations
 VERSION: 1.0
 STATUS: Active
-DEPENDS_ON: DASHBOARD.md, MASTER_DEPENDENCY_MAP.md, REPO_LOG.md
+DEPENDS_ON: REPO_HEALTH_DASHBOARD.md, MASTER_DEPENDENCY_MAP.md, REPO_LOG.md
 NEEDED_BY: Validation Claude, auditors, quality assurance
 MOVES_WITH: /docs/repository/dependency_maps/
 LAST_UPDATE: 2025-11-02 [DOCUMENTATION-2025-11-02-05]
@@ -62,7 +62,7 @@ LAST_UPDATE: 2025-11-02 [DOCUMENTATION-2025-11-02-05]
 **Risk:** Doc Claude instances report already-completed items as pending
 
 **Validation Process:**
-1. **Read DASHBOARD.md** - Check status updates section
+1. **Read REPO_HEALTH_DASHBOARD.md** - Check status updates section
 2. **Read MASTER_DEPENDENCY_MAP.md** - Check issues section
 3. **Read health reports** in `/docs/repository/health_reports/`
 4. **Cross-reference with REPO_LOG.md** - Verify completion dates
@@ -95,7 +95,7 @@ Add STATUS UPDATE section at top of affected files:
 ```
 
 **Files to Check:**
-- `/docs/repository/DASHBOARD.md`
+- `/docs/repository/REPO_HEALTH_DASHBOARD.md`
 - `/docs/repository/dependency_maps/MASTER_DEPENDENCY_MAP.md`
 - `/docs/repository/health_reports/*.md`
 - `/auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/*.md`
@@ -282,7 +282,7 @@ def detect_cycles(dependencies):
 4. **Verify against REPO_LOG** as source of truth
 
 **What to look for:**
-- [ ] DASHBOARD.md says "Complete" but task brief says "Pending"
+- [ ] REPO_HEALTH_DASHBOARD.md says "Complete" but task brief says "Pending"
 - [ ] README_C.md says "Phase 3" but MISSION_CURRENT.md says "Phase 4"
 - [ ] REPO_LOG shows completion but dependent docs don't reflect it
 - [ ] Multiple files claiming different current states
@@ -300,7 +300,7 @@ def detect_cycles(dependencies):
 
 **Files to Check:**
 - `/REPO_LOG.md` (source of truth)
-- `/docs/repository/DASHBOARD.md`
+- `/docs/repository/REPO_HEALTH_DASHBOARD.md`
 - `/README_C.md`
 - `/auditors/Bootstrap/MISSION_CURRENT.md`
 - Task briefs in Active_Tasks/
@@ -326,7 +326,7 @@ def detect_cycles(dependencies):
 - [ ] `archive/` directories (non-standard)
 - [ ] Mixed naming within same directory level
 - [ ] Empty archive directories
-- [ ] Archives not documented in DASHBOARD.md
+- [ ] Archives not documented in REPO_HEALTH_DASHBOARD.md
 
 **Pass Criteria:**
 - All archives use `.Archive` naming convention (dot prefix)
@@ -444,7 +444,7 @@ git mv wrong_name.md CORRECT_NAME.md
 1. **Scan all markdown files** for semantic header block
 2. **Check header completeness** (FILE, PURPOSE, VERSION, STATUS, etc.)
 3. **Calculate coverage percentage** (files with headers / total files)
-4. **Target: 80% coverage** per DASHBOARD.md goals
+4. **Target: 80% coverage** per REPO_HEALTH_DASHBOARD.md goals
 
 **What to look for:**
 - [ ] Markdown files with no semantic header block
@@ -584,7 +584,7 @@ LAST_UPDATE: YYYY-MM-DD
 
 **What to look for:**
 - [ ] README.md says v3.7.0 but VuDu_PROTOCOL.md says v3.8.0
-- [ ] DASHBOARD.md references wrong version
+- [ ] REPO_HEALTH_DASHBOARD.md references wrong version
 - [ ] Semantic headers VERSION field doesn't increment
 - [ ] Changelog missing entries for version bumps
 
@@ -607,7 +607,7 @@ LAST_UPDATE: YYYY-MM-DD
 **Files to Check:**
 - `/auditors/protocols/VuDu_PROTOCOL.md` (source of truth)
 - `/README.md`
-- `/docs/repository/DASHBOARD.md`
+- `/docs/repository/REPO_HEALTH_DASHBOARD.md`
 - `/docs/CHANGELOG.md`
 
 **Last Validated:** [Not yet validated]
@@ -669,7 +669,7 @@ LAST_UPDATE: YYYY-MM-DD
 
 **What to look for:**
 - [ ] DASHBOARD says "Phase 3" but MISSION_CURRENT says "Phase 4"
-- [ ] README_C.md shows different progress than DASHBOARD.md
+- [ ] README_C.md shows different progress than REPO_HEALTH_DASHBOARD.md
 - [ ] Task briefs not updated when DASHBOARD milestones change
 - [ ] Health score in DASHBOARD doesn't match health reports
 
@@ -681,7 +681,7 @@ LAST_UPDATE: YYYY-MM-DD
 
 **State-Bearing Documents:**
 - `/REPO_LOG.md` - Source of truth for all changes
-- `/docs/repository/DASHBOARD.md` - Health status, metrics
+- `/docs/repository/REPO_HEALTH_DASHBOARD.md` - Health status, metrics
 - `/README_C.md` - Master state document
 - `/auditors/Bootstrap/MISSION_CURRENT.md` - Current mission phase
 - Task briefs - Task status, progress
@@ -694,7 +694,7 @@ LAST_UPDATE: YYYY-MM-DD
 
 **Files to Check:**
 - `/REPO_LOG.md`
-- `/docs/repository/DASHBOARD.md`
+- `/docs/repository/REPO_HEALTH_DASHBOARD.md`
 - `/README_C.md`
 - `/auditors/Bootstrap/MISSION_CURRENT.md`
 
@@ -889,7 +889,7 @@ OVERALL VALIDATION SCORE: [__/18] = ___%
 **1. Pre-Validation Setup (5 minutes)**
 ```markdown
 - [ ] Read VALIDATION_MAP.md (this file)
-- [ ] Read latest DASHBOARD.md for current state
+- [ ] Read latest REPO_HEALTH_DASHBOARD.md for current state
 - [ ] Read REPO_LOG.md last 10 entries
 - [ ] Note any recent major changes
 - [ ] Prepare validation checklist
@@ -923,7 +923,7 @@ OVERALL VALIDATION SCORE: [__/18] = ___%
 
 **5. Post-Validation (5 minutes)**
 ```markdown
-- [ ] Update DASHBOARD.md with validation status
+- [ ] Update REPO_HEALTH_DASHBOARD.md with validation status
 - [ ] Update this file with latest validation date
 - [ ] Commit validation results
 - [ ] Schedule next validation date
@@ -1115,7 +1115,7 @@ OVERALL VALIDATION SCORE: [__/18] = ___%
 
 **State Tracking:**
 - `/REPO_LOG.md` - Authoritative change log
-- `/docs/repository/DASHBOARD.md` - Current repository health
+- `/docs/repository/REPO_HEALTH_DASHBOARD.md` - Current repository health
 - `/README_C.md` - Master state document
 
 **Dependency Tracking:**

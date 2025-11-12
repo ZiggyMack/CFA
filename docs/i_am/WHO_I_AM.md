@@ -670,7 +670,7 @@ STEP 2 - Choose your path by role:
 [Provide role-specific entry point - see WAYFINDING_GUIDE for details]
 
 STEP 3 - Three-minute grounding scan:
-1. DASHBOARD.md (current health: 95/100 - repository is healthy)
+1. REPO_HEALTH_DASHBOARD.md (current health: 95/100 - repository is healthy)
 2. REPO_LOG.md checkpoint (what's pending, recent changes)
 3. Mission brief (if relevant to your work)
 

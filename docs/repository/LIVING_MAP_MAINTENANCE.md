@@ -307,7 +307,7 @@ du -h auditors/ | sort -h | tail -20
    - Independent scans all find same discrepancies
 
 3. **User corrects you multiple times**
-   - "88MPH_PROTOCOL.md doesn't exist anymore, it's 88MPH.md"
+   - "88MPH.md doesn't exist anymore, it's 88MPH.md"
    - "ROLE_DOC_CLAUDE.md was never created"
    - "ui/ was removed in Phase 1"
 
