@@ -3,7 +3,7 @@ FILE: WAYFINDING_GUIDE.md
 PURPOSE: Repository navigation and orientation guide - your compass for the CFA codebase
 VERSION: v1.2
 STATUS: Active
-DEPENDS_ON: MISSION_DEFAULT.md, DASHBOARD.md, Bootstrap files, librarian_tools/, ROLE_PROCESS.md (Process Claude is SME), training/TRAINING_GROUNDS.md
+DEPENDS_ON: MISSION_DEFAULT.md, REPO_HEALTH_DASHBOARD.md, Bootstrap files, librarian_tools/, ROLE_PROCESS.md (Process Claude is SME), training/TRAINING_GROUNDS.md
 NEEDED_BY: All auditors, especially fresh cold starts
 MOVES_WITH: /docs/
 MAINTAINED_BY: Process Claude (navigation/wayfinding SME)
@@ -207,7 +207,7 @@ GUIDANCE:
 **Path D: Validation Claude (Health & Standards)**
 → Start: `/docs/repository/librarian_tools/ROLE_VALIDATION.md`
 → Your domain: Repository health, dashboard accuracy, standards enforcement
-→ Key tools: DASHBOARD.md, MASTER_DEPENDENCY_MAP.md, wellness protocols
+→ Key tools: REPO_HEALTH_DASHBOARD.md, MASTER_DEPENDENCY_MAP.md, wellness protocols
 → Bootstrap file: Contact Ziggy for activation
 
 **Path E: Process Claude (Process & Wellness Expert)**
@@ -225,7 +225,7 @@ GUIDANCE:
 
 ### **Step 2: What's the Current State? (3-Minute Scan)**
 
-1. **Read DASHBOARD.md**: `/docs/repository/DASHBOARD.md`
+1. **Read REPO_HEALTH_DASHBOARD.md**: `/docs/repository/REPO_HEALTH_DASHBOARD.md`
    - Current health: 95/100 (GREEN)
    - Known issues, recent changes
    - Wellness check status
@@ -263,7 +263,7 @@ CFA/ (root)
 ├── /docs/                     # Documentation, validation, meta-docs
 │   ├── WAYFINDING_GUIDE.md    # You are reading this! 🗺️
 │   ├── /repository/           # Meta-documentation
-│   │   ├── DASHBOARD.md       # Health monitoring dashboard
+│   │   ├── REPO_HEALTH_DASHBOARD.md       # Health monitoring dashboard
 │   │   ├── /dependency_maps/  # MASTER_DEPENDENCY_MAP.md
 │   │   ├── /Health_Reports/   # Historical health assessments
 │   │   └── /librarian_tools/  # Doc Claude tools, role definitions
@@ -304,7 +304,7 @@ CFA/ (root)
 | Activate as Doc Claude | `/docs/../88MPH.md` | 8.8 min activation |
 | Make a repository change | `/REPO_LOG.md` first! | Check coordination, log all changes |
 | Understand file dependencies | `/docs/repository/dependency_maps/MASTER_DEPENDENCY_MAP.md` | ~223 files tracked |
-| Check repository health | `/docs/repository/DASHBOARD.md` | Current: 95/100 GREEN |
+| Check repository health | `/docs/repository/REPO_HEALTH_DASHBOARD.md` | Current: 95/100 GREEN |
 | Add semantic headers | `/docs/repository/librarian_tools/HEADER_STANDARD.md` | Required format |
 | Format REPO_LOG entry | `/REPO_LOG.md` Quick Start | Copy-paste template |
 
@@ -371,7 +371,7 @@ CFA/ (root)
    ↓
 4. Run Doc Claude assessment (10-15 min)
    ↓
-5. Compare results to DASHBOARD.md claim
+5. Compare results to REPO_HEALTH_DASHBOARD.md claim
    ↓
 6. If drift detected → Escalate to VALIDATION Claude
    ↓
@@ -438,7 +438,7 @@ Tier 4 (Task Specific):
 
 ### **Problem: "I don't know where to start"**
 → **Solution:** Read MISSION_DEFAULT.md section "If No Context Given"
-→ **Fallback:** DASHBOARD.md for current state
+→ **Fallback:** REPO_HEALTH_DASHBOARD.md for current state
 
 ---
 
@@ -524,7 +524,7 @@ Tier 4 (Task Specific):
 **Owns:** Repository health, dashboard accuracy, validation protocols
 **Activates via:** ROLE_VALIDATION.md
 **Bootstrap:** Being formalized
-**Domain:** /docs/Validation/, DASHBOARD.md, standards compliance
+**Domain:** /docs/Validation/, REPO_HEALTH_DASHBOARD.md, standards compliance
 **Pattern:** Independent validation, drift detection, coordination gap closure
 
 ---
@@ -579,7 +579,7 @@ Tier 4 (Task Specific):
 ### **/docs/ - Knowledge Base**
 **Philosophy:** Documentation, validation, meta-knowledge
 **Contains:** Repository docs, health reports, validation protocols, process documentation
-**Entry Points:** DASHBOARD.md, WAYFINDING_GUIDE.md (you are here!)
+**Entry Points:** REPO_HEALTH_DASHBOARD.md, WAYFINDING_GUIDE.md (you are here!)
 **Who Uses:** Doc Claude (primary), Validation Claude, Process Claude
 
 ---
@@ -587,7 +587,7 @@ Tier 4 (Task Specific):
 ### **/docs/repository/ - Meta-Documentation**
 **Philosophy:** Documentation about documentation
 **Contains:** Dependency maps, health reports, librarian tools, role definitions
-**Entry Points:** DASHBOARD.md, MASTER_DEPENDENCY_MAP.md
+**Entry Points:** REPO_HEALTH_DASHBOARD.md, MASTER_DEPENDENCY_MAP.md
 **Who Uses:** Doc Claude, Validation Claude, anyone doing structural work
 
 ---
@@ -643,7 +643,7 @@ For detailed progressive training with checkpoints, common mistakes, and skill v
 
 ### **Beginner (First Session) - 15 minutes**
 1. Read MISSION_DEFAULT.md or 88MPH.md (depending on role)
-2. Scan DASHBOARD.md for current state
+2. Scan REPO_HEALTH_DASHBOARD.md for current state
 3. Check REPO_LOG.md coordination checkpoint
 4. Understand your role from "Who Does What?"
 5. Find your bootstrap file and activate
@@ -690,7 +690,7 @@ For detailed progressive training with checkpoints, common mistakes, and skill v
 ### **🔥 Most Critical Files**
 1. `/REPO_LOG.md` - Check before/after ALL changes
 2. `/auditors/MISSION_DEFAULT.md` - Universal mission fallback
-3. `/docs/repository/DASHBOARD.md` - Current health status
+3. `/docs/repository/REPO_HEALTH_DASHBOARD.md` - Current health status
 4. `/docs/WAYFINDING_GUIDE.md` - This guide (navigation)
 
 ### **⚡ Fast Activations**
@@ -702,7 +702,7 @@ For detailed progressive training with checkpoints, common mistakes, and skill v
 ### **📍 Key Decision Points**
 - **"Where do I start?"** → MISSION_DEFAULT.md or 88MPH.md
 - **"How do I log changes?"** → REPO_LOG.md Quick Start
-- **"Is repository healthy?"** → DASHBOARD.md
+- **"Is repository healthy?"** → REPO_HEALTH_DASHBOARD.md
 - **"I need guidance on X"** → Consult appropriate ROLE_*.md
 
 ### **🚨 Emergency Contacts**
@@ -716,7 +716,7 @@ For detailed progressive training with checkpoints, common mistakes, and skill v
 ## 🔗 **RELATED NAVIGATION RESOURCES**
 
 - **Repository Entry:** [README.md](/README.md) - New visitor starting point
-- **Health Dashboard:** [DASHBOARD.md](/docs/repository/DASHBOARD.md) - Current status
+- **Health Dashboard:** [REPO_HEALTH_DASHBOARD.md](/docs/repository/REPO_HEALTH_DASHBOARD.md) - Current status
 - **Change Log:** [REPO_LOG.md](/REPO_LOG.md) - All changes tracked here
 - **Mission Entry:** [MISSION_DEFAULT.md](/auditors/MISSION_DEFAULT.md) - Universal fallback
 - **Doc Claude Start:** [88MPH.md](/docs/../88MPH.md) - Repo librarian
