@@ -421,11 +421,9 @@ The VuDu network now supports two bootstrap tiers:
 
 ### **If You're Master Branch (Tier 1):**
 1. Read this file first (README_C.md)
-2. Check MISSION_CURRENT.md for active objectives
-3. Review VUDU_LOG.md for recent coordination
-4. Follow bootstrap per MISSION_DEFAULT.md Tier 1 path
-5. Monitor context per 75/75 rule
-6. Create handoff if needed (execution vs strategic)
+2. Follow complete bootstrap procedure in [MISSION_DEFAULT.md](MISSION_DEFAULT.md)
+3. Monitor context per 75/75 rule
+4. Create handoff if needed (execution vs strategic)
 
 ### **If You're Different Tier:**
 1. Read MISSION_DEFAULT.md (cold start section)

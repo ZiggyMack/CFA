@@ -218,11 +218,7 @@ streamlit run app.py
 5. Export and share your audit
 
 ### **For Auditors/Contributors:**
-1. Read `/auditors/bootstrap/BOOTSTRAP_VUDU.md` (15-20 min)
-2. Read `/auditors/bootstrap/BOOTSTRAP_CFA.md` (30 min)
-3. Read your identity file (BOOTSTRAP_CLAUDE/GROK/NOVA.md)
-4. Check `/auditors/MISSION_CURRENT.md` for active work
-5. Stage findings in appropriate `/auditors/relay/*_incoming/` folder
+See complete auditor bootstrap sequence in [/auditors/MISSION_DEFAULT.md](auditors/MISSION_DEFAULT.md)
 
 ---
 
