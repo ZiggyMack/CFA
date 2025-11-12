@@ -1,0 +1,100 @@
+{
+  "session_id": "resolution_mock",
+  "worldview_pair": "CT_vs_Naturalism",
+  "auditors": ["Claude", "Grok", "Nova"],
+  "ticks": [
+    {
+      "tick_id": "tick-001",
+      "timestamp": "2025-11-11T16:00:00Z",
+      "nodes": [
+        {"auditor": "Claude", "confidence": 0.72, "bias_overhead": 0.50, "stance": "PRO"},
+        {"auditor": "Grok", "confidence": 0.70, "bias_overhead": 0.45, "stance": "ANTI"},
+        {"auditor": "Nova", "confidence": 0.92, "bias_overhead": 0.30, "stance": "FAIRNESS"}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.62, "volume": 0.75, "notes": "BFI dispute: Trinity entity count"},
+        {"pair": "Claude-Nova", "tension": 0.38, "volume": 0.40, "notes": "Checking fairness"},
+        {"pair": "Grok-Nova", "tension": 0.45, "volume": 0.55, "notes": "Empirical scope debate"}
+      ],
+      "ethics": {
+        "examined": ["transparency"],
+        "deferred": ["epistemic_access"],
+        "missing": ["stakeholder_impact"]
+      },
+      "convergence": {
+        "percentage": 75.0,
+        "metrics_agreed": ["CA", "IP", "MS"],
+        "metrics_disputed": ["BFI", "ES", "PS", "LS"],
+        "metrics_include_crux": [],
+        "metrics_exclude_crux": []
+      },
+      "crux": {"status": "potential", "id": "CRUX_BFI_001", "description": "Entity definition"},
+      "view_metadata": {
+        "supported_modes": ["symmetry", "crux_impact"],
+        "default_mode": "symmetry"
+      }
+    },
+    {
+      "tick_id": "tick-002",
+      "timestamp": "2025-11-11T16:20:00Z",
+      "nodes": [
+        {"auditor": "Claude", "confidence": 0.78, "bias_overhead": 0.50, "stance": "PRO"},
+        {"auditor": "Grok", "confidence": 0.74, "bias_overhead": 0.45, "stance": "ANTI"},
+        {"auditor": "Nova", "confidence": 0.93, "bias_overhead": 0.30, "stance": "FAIRNESS"}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.45, "volume": 0.65, "notes": "Exploring resolution options"},
+        {"pair": "Claude-Nova", "tension": 0.30, "volume": 0.35, "notes": "Symmetry audit"},
+        {"pair": "Grok-Nova", "tension": 0.34, "volume": 0.45, "notes": "Empirical adjustments"}
+      ],
+      "ethics": {
+        "examined": ["transparency", "epistemic_access"],
+        "deferred": [],
+        "missing": ["stakeholder_impact"]
+      },
+      "convergence": {
+        "percentage": 85.0,
+        "metrics_agreed": ["CA", "IP", "ES", "MS"],
+        "metrics_disputed": ["BFI", "PS", "LS"],
+        "metrics_include_crux": [],
+        "metrics_exclude_crux": []
+      },
+      "crux": {"status": "declared", "id": "CRUX_BFI_001", "description": "Entity definition"},
+      "view_metadata": {
+        "supported_modes": ["symmetry", "crux_impact"],
+        "default_mode": "symmetry"
+      }
+    },
+    {
+      "tick_id": "tick-003",
+      "timestamp": "2025-11-11T16:40:00Z",
+      "nodes": [
+        {"auditor": "Claude", "confidence": 0.83, "bias_overhead": 0.50, "stance": "PRO"},
+        {"auditor": "Grok", "confidence": 0.79, "bias_overhead": 0.45, "stance": "ANTI"},
+        {"auditor": "Nova", "confidence": 0.94, "bias_overhead": 0.30, "stance": "FAIRNESS"}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.20, "volume": 0.55, "notes": "Resolution achieved"},
+        {"pair": "Claude-Nova", "tension": 0.18, "volume": 0.30, "notes": "Crux closure"},
+        {"pair": "Grok-Nova", "tension": 0.22, "volume": 0.40, "notes": "Documentation"}
+      ],
+      "ethics": {
+        "examined": ["transparency", "epistemic_access"],
+        "deferred": [],
+        "missing": []
+      },
+      "convergence": {
+        "percentage": 95.0,
+        "metrics_agreed": ["BFI", "CA", "IP", "ES", "MS"],
+        "metrics_disputed": ["PS", "LS"],
+        "metrics_include_crux": [],
+        "metrics_exclude_crux": []
+      },
+      "crux": {"status": "resolved", "id": "CRUX_BFI_001", "description": "Entity definition"},
+      "view_metadata": {
+        "supported_modes": ["symmetry", "crux_impact"],
+        "default_mode": "symmetry"
+      }
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "session_id": "high_alignment_mock",
+  "worldview_pair": "CT_vs_ProcessTheology",
+  "auditors": ["Claude", "Grok", "Nova"],
+  "ticks": [
+    {
+      "tick_id": "tick-001",
+      "timestamp": "2025-11-11T15:00:00Z",
+      "nodes": [
+        {"auditor": "Claude", "confidence": 0.90, "bias_overhead": 0.50, "stance": "PRO"},
+        {"auditor": "Grok", "confidence": 0.88, "bias_overhead": 0.45, "stance": "ANTI"},
+        {"auditor": "Nova", "confidence": 0.95, "bias_overhead": 0.30, "stance": "FAIRNESS"}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.10, "volume": 0.35, "notes": "Alignment on core axioms"},
+        {"pair": "Claude-Nova", "tension": 0.08, "volume": 0.25, "notes": "Nova observing"},
+        {"pair": "Grok-Nova", "tension": 0.12, "volume": 0.28, "notes": "Empirical calibration"}
+      ],
+      "ethics": {
+        "examined": ["transparency", "epistemic_access", "stakeholder_impact"],
+        "deferred": [],
+        "missing": []
+      },
+      "convergence": {
+        "percentage": 92.0,
+        "metrics_agreed": ["BFI", "CA", "IP", "ES", "LS"],
+        "metrics_disputed": ["MS", "PS"],
+        "metrics_include_crux": [],
+        "metrics_exclude_crux": []
+      },
+      "crux": {"status": "none"},
+      "view_metadata": {
+        "supported_modes": ["symmetry", "calibration_comparison", "crux_impact"],
+        "default_mode": "symmetry"
+      }
+    },
+    {
+      "tick_id": "tick-002",
+      "timestamp": "2025-11-11T15:20:00Z",
+      "nodes": [
+        {"auditor": "Claude", "confidence": 0.91, "bias_overhead": 0.50, "stance": "PRO"},
+        {"auditor": "Grok", "confidence": 0.89, "bias_overhead": 0.44, "stance": "ANTI"},
+        {"auditor": "Nova", "confidence": 0.95, "bias_overhead": 0.30, "stance": "FAIRNESS"}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.12, "volume": 0.32, "notes": "Minor clarification on metrics"},
+        {"pair": "Claude-Nova", "tension": 0.09, "volume": 0.22, "notes": "Fairness alignment"},
+        {"pair": "Grok-Nova", "tension": 0.11, "volume": 0.25, "notes": "Empirical nuance"}
+      ],
+      "ethics": {
+        "examined": ["transparency", "epistemic_access", "stakeholder_impact"],
+        "deferred": [],
+        "missing": []
+      },
+      "convergence": {
+        "percentage": 95.0,
+        "metrics_agreed": ["BFI", "CA", "IP", "ES", "LS", "MS"],
+        "metrics_disputed": ["PS"],
+        "metrics_include_crux": [],
+        "metrics_exclude_crux": []
+      },
+      "crux": {"status": "none"},
+      "view_metadata": {
+        "supported_modes": ["symmetry", "calibration_comparison"],
+        "default_mode": "symmetry"
+      }
+    },
+    {
+      "tick_id": "tick-003",
+      "timestamp": "2025-11-11T15:40:00Z",
+      "nodes": [
+        {"auditor": "Claude", "confidence": 0.92, "bias_overhead": 0.50, "stance": "PRO"},
+        {"auditor": "Grok", "confidence": 0.90, "bias_overhead": 0.44, "stance": "ANTI"},
+        {"auditor": "Nova", "confidence": 0.95, "bias_overhead": 0.30, "stance": "FAIRNESS"}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.08, "volume": 0.30, "notes": "Full alignment reached"},
+        {"pair": "Claude-Nova", "tension": 0.08, "volume": 0.25, "notes": "Symmetry confirmation"},
+        {"pair": "Grok-Nova", "tension": 0.08, "volume": 0.25, "notes": "Final review"}
+      ],
+      "ethics": {
+        "examined": ["transparency", "epistemic_access", "stakeholder_impact"],
+        "deferred": [],
+        "missing": []
+      },
+      "convergence": {
+        "percentage": 98.0,
+        "metrics_agreed": ["BFI", "CA", "IP", "ES", "LS", "MS", "PS"],
+        "metrics_disputed": [],
+        "metrics_include_crux": [],
+        "metrics_exclude_crux": []
+      },
+      "crux": {"status": "none"},
+      "view_metadata": {
+        "supported_modes": ["symmetry", "calibration_comparison"],
+        "default_mode": "symmetry"
+      }
+    }
+  ]
+}

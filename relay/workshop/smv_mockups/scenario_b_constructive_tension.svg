@@ -1,0 +1,61 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#f5f5f5"/>
+  <text x="600" y="60" text-anchor="middle" font-family="Segoe UI" font-size="28" fill="#333">Scenario B · Constructive Tension</text>
+  <text x="600" y="90" text-anchor="middle" font-family="Segoe UI" font-size="16" fill="#666">Amber Claude–Grok edge, oscillating sparkline, ethics deferred</text>
+
+  <!-- Convergence meter -->
+  <g transform="translate(80,140)">
+    <text x="0" y="-20" font-family="Segoe UI" font-size="16" fill="#333">Convergence</text>
+    <rect x="0" y="0" width="300" height="20" rx="10" ry="10" fill="#fff4d5" stroke="#FFC107" stroke-width="2"/>
+    <rect x="0" y="0" width="270" height="20" rx="10" ry="10" fill="#FFC107"/>
+    <text x="150" y="15" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#333">90%</text>
+  </g>
+
+  <!-- Ethics overlay -->
+  <g transform="translate(900,140)">
+    <text x="0" y="-20" font-family="Segoe UI" font-size="16" fill="#333">Ethics Overlay</text>
+    <g transform="translate(0,0)">
+      <circle cx="0" cy="0" r="12" fill="#4CAF50"/>
+      <text x="20" y="5" font-family="Segoe UI" font-size="14" fill="#333">Examined · transparency</text>
+    </g>
+    <g transform="translate(0,30)">
+      <circle cx="0" cy="0" r="12" fill="#FFC107"/>
+      <text x="20" y="5" font-family="Segoe UI" font-size="14" fill="#333">Deferred · epistemic_access</text>
+    </g>
+    <g transform="translate(0,60)">
+      <circle cx="0" cy="0" r="12" fill="#4CAF50" opacity="0.3"/>
+      <text x="20" y="5" font-family="Segoe UI" font-size="14" fill="#777">Missing · stakeholder_impact (none)</text>
+    </g>
+  </g>
+
+  <!-- Triangle -->
+  <g transform="translate(600,360)">
+    <!-- Edges -->
+    <line x1="0" y1="-170" x2="-150" y2="110" stroke="#FFC107" stroke-width="10" stroke-linecap="round"/>
+    <line x1="0" y1="-170" x2="150" y2="110" stroke="#4CAF50" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-150" y1="110" x2="150" y2="110" stroke="#4CAF50" stroke-width="4" stroke-linecap="round"/>
+    <text x="-60" y="-40" font-family="Segoe UI" font-size="14" fill="#9c6f00">Productive debate</text>
+
+    <!-- Nodes -->
+    <circle cx="0" cy="-170" r="60" fill="#2196F3" opacity="0.85"/>
+    <circle cx="-150" cy="110" r="60" fill="#4CAF50" opacity="0.80"/>
+    <circle cx="150" cy="110" r="60" fill="#9C27B0" opacity="0.92"/>
+    <text x="0" y="-110" text-anchor="middle" font-family="Segoe UI" font-size="16" fill="#333">Claude</text>
+    <text x="-150" y="180" text-anchor="middle" font-family="Segoe UI" font-size="16" fill="#333">Grok</text>
+    <text x="150" y="180" text-anchor="middle" font-family="Segoe UI" font-size="16" fill="#333">Nova</text>
+  </g>
+
+  <!-- Timeline -->
+  <g transform="translate(150,640)">
+    <line x1="0" y1="0" x2="900" y2="0" stroke="#bbb" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="10" fill="#4CAF50"/>
+    <circle cx="450" cy="0" r="14" fill="#FFC107"/>
+    <circle cx="900" cy="0" r="10" fill="#4CAF50"/>
+    <text x="450" y="-20" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#333">Tick 2 peak</text>
+  </g>
+
+  <!-- Sparkline -->
+  <path d="M150 700 L 450 640 L 900 690" fill="none" stroke="#FFC107" stroke-width="4" stroke-linecap="round"/>
+  <path d="M150 720 L 450 710 L 900 715" fill="none" stroke="#4CAF50" stroke-width="2" opacity="0.4"/>
+  <text x="600" y="755" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#333">Tension oscillates yet reconverges</text>
+</svg>

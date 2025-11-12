@@ -11,6 +11,39 @@ CREATED: 2025-11-11 (B-STORM_6 SMV Claude onboarding)
 LAST_UPDATE: 2025-11-11 [Initial version - Trinity-validated mapping logic]
 --->
 
+---
+ethics_front_matter:
+  purpose: "Establish authoritative data contract for SMV Claude extraction pipeline to ensure schema provenance is documented, read-only access preserved, and Trinity collaboration boundaries respected - prevents SMV Claude from modifying profiles (single source of truth protection)"
+  symmetry_axis: ["transparency", "epistemic_access", "data_integrity"]
+  stakeholders:
+    primary: ["smv_claude", "trinity_collaboration", "prototype_consumers"]
+    secondary: ["process_claude_domain7", "doc_claude", "future_automation_scripts"]
+  invariants:
+    - id: transparency
+      state: examined
+      evidence: "## Map Overview (lines 26-43) - 'Key Principle: SMV Claude NEVER modifies profiles—read-only access. All data is derived, not duplicated' + ## Schema Mapping (lines 45-240) - Complete extraction logic documented for all 12 worldviews, 66 comparisons"
+      smv_tag: scenario_a
+    - id: epistemic_access
+      state: examined
+      evidence: "## Trinity Handoff Protocol (lines 576-675) - All three Trinity members contribute: Process Claude exports VUDU data, Doc Claude includes SMV in Dashboard, Shaman Claude archival strategy validated + ## File Structure Reference (lines 278-513) - Canonical file locations documented for all 12 worldviews"
+      smv_tag: scenario_a
+    - id: data_integrity
+      state: examined
+      evidence: "## Staleness Detection (lines 241-277) - SHA-256 hash verification prevents stale calibration from corrupting exports + ## Validation Checklist (lines 789-813) - 11-point schema compliance checklist ensures SMV JSON quality before prototype consumes it"
+      smv_tag: scenario_a
+  tensions:
+    - description: "Schema complexity vs. usability - 66 comparisons × 12 worldviews = massive extraction logic; risk of maintenance burden if profile structure evolves"
+      mitigation: "Trinity Handoff Protocol (lines 576-675) - SMV Claude consults Trinity when profile structure changes (not unilateral decisions) + Map Overview philosophy (lines 26-43): 'SMV Claude owns this map' but collaborates on evolution"
+    - description: "Read-only constraint vs. automation convenience - SMV Claude can't cache extracted data in profiles, must regenerate from scratch each time"
+      mitigation: "Observatory Integration (lines 514-575) - Freshness check only regenerates when calibration changes (hash mismatch) or VUDU session completes. Not every read triggers full extraction. Staleness report documents when exports are current vs. stale"
+    - description: "Backward compatibility vs. innovation - schema v1.1 locked for Phase 1 prototype, but future view modes (Crux Impact, Worldview Panorama) may require v2.0"
+      mitigation: "View Mode Recommendations (lines 713-787) - New view modes documented as 'Phase 2+' with schema extension requirements noted. Versioning allows migration path (v1.1 → v2.0) without breaking existing prototype"
+  last_examined:
+    by: "C4"
+    on: "2025-11-11"
+  review_window_days: 30
+---
+
 # SMV Data Map — Profile Structure → SMV Schema
 
 **Purpose:** Authoritative translation logic from CFA worldview profiles to SMV JSON format. This map ensures SMV Claude knows exactly where to find data and how to transform it.
