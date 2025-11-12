@@ -176,8 +176,8 @@ const SymmetryView = ({ tickData }) => {
         <div
           className="tooltip"
           style={{
-            left: tooltip.x + 10,
-            top: tooltip.y - 10
+            left: tooltip.x + 20,
+            top: tooltip.y - 40
           }}
         >
           {tooltip.content.split('\n').map((line, i) => (

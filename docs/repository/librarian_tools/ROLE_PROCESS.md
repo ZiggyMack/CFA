@@ -1,12 +1,12 @@
 <!---
 FILE: ROLE_PROCESS.md
-PURPOSE: Process Expert role for DOC_CLAUDE - process adherence, failure learning, wellness protocol SME, navigation/wayfinding SME, worldview profile monitoring, academic sources maintenance
-VERSION: v1.4
+PURPOSE: Process Expert role for DOC_CLAUDE - process adherence, failure learning, wellness protocol SME, navigation/wayfinding SME, worldview profile monitoring, academic sources maintenance, ethics staleness monitoring
+VERSION: v1.5
 STATUS: Active
-DEPENDS_ON: PROCESS.md, BOOTSTRAP_DOC_CLAUDE.md, DOC_CLAUDE_WELLNESS_PROTOCOL.md, WAYFINDING_GUIDE.md, profiles/worldviews/*.md, profiles/_docs/ACADEMIC_SOURCES.md, auditors/AUDITOR_ASSIGNMENTS.md
-NEEDED_BY: DOC_CLAUDE when verifying process adherence, documenting failures, running wellness checks, navigating repository, tracking worldview profile changes, or maintaining academic source references
+DEPENDS_ON: PROCESS.md, BOOTSTRAP_DOC_CLAUDE.md, DOC_CLAUDE_WELLNESS_PROTOCOL.md, WAYFINDING_GUIDE.md, profiles/worldviews/*.md, profiles/_docs/ACADEMIC_SOURCES.md, auditors/AUDITOR_ASSIGNMENTS.md, docs/ethics/ETHICAL_INVARIANT_SCHEMA.md, docs/ethics/ETHICS_FRONT_MATTER_VALIDATION.md
+NEEDED_BY: DOC_CLAUDE when verifying process adherence, documenting failures, running wellness checks, navigating repository, tracking worldview profile changes, maintaining academic source references, or monitoring ethics front-matter staleness
 MOVES_WITH: /docs/repository/librarian_tools/
-LAST_UPDATE: 2025-11-10 [B-STORM_4 Click 4: Added Domain 7 Sub-Section - Academic Sources Monitoring for hyperlink-based profile architecture]
+LAST_UPDATE: 2025-11-11 [Added Domain 8: Ethics Staleness Monitoring - B-STORM_6 Phase 2 coordination with Doc Claude ethics validation duties]
 --->
 
 ---
@@ -42,10 +42,10 @@ ethics_front_matter:
 
 # ROLE_PROCESS.md - Process Expert Role for DOC_CLAUDE
 
-**Purpose:** Activate Process Expert role for process adherence verification, failure learning, wellness protocol expertise, navigation/wayfinding guidance, worldview profile monitoring, and academic sources maintenance
+**Purpose:** Activate Process Expert role for process adherence verification, failure learning, wellness protocol expertise, navigation/wayfinding guidance, worldview profile monitoring, academic sources maintenance, and ethics staleness monitoring
 **Owner:** DOC_CLAUDE (Documentation Orchestration Claude)
 **Created:** 2025-11-02
-**Updated:** 2025-11-10 (Added Domain 7 Sub-Section - Academic Sources Monitoring)
+**Updated:** 2025-11-11 (Added Domain 8 - Ethics Staleness Monitoring)
 **Status:** Active Role Pattern
 
 ---
@@ -1155,6 +1155,250 @@ Session Continues ✅
 2. You track profile changes (Domain 7 already monitors worldview catalog)
 3. You coordinate team (Doc Claude, Shaman Claude) when issues arise
 4. External academic sources → feed APP data pipeline (you ensure quality)
+
+---
+
+### **Domain 8: Ethics Staleness Monitoring** 🆕
+
+**Purpose:** Monitor Tier-1 file ethics front-matter annotations for staleness and coordinate Doc Claude's ethics validation work
+
+**What Is Ethics Front-Matter?**
+- **Purpose:** YAML annotation blocks on 8 Tier-1 architectural files
+- **Function:** Documents ethical purpose, invariants examined, tensions, stakeholder impact
+- **Philosophy:** Warn-only (never blocks commits - "understanding precedes control")
+- **Owner:** Doc Claude (validation responsibility)
+- **Monitor:** Process Claude (you - staleness tracking as part of repository health)
+
+**Why This Matters:**
+- Tier-1 files directly impact auditor bias, deletion authority, epistemic access, process enforcement
+- Ethics front-matter ensures transparency about WHY files exist and WHO they impact
+- Staleness (>30 days since review) means file may have changed without ethics re-examination
+- Your role: Detect staleness patterns, coordinate Doc Claude's review cycles
+
+**Your Responsibilities:**
+
+---
+
+**1. Weekly Staleness Check (Part of Repository Health)**
+
+**During your weekly health monitoring:**
+
+```markdown
+Process Claude Ethics Staleness Check
+
+Date: 2025-11-18
+Source: docs/ethics/ETHICS_FRONT_MATTER_VALIDATION.md
+
+Staleness Status:
+- VUDU_CFA.md: 7 days since review ✅
+- VUDU_PROTOCOL.md: 7 days since review ✅
+- WAYFINDING_GUIDE.md: 7 days since review ✅
+- ROLE_PROCESS.md: 7 days since review ✅
+- ROLE_DESTROYER.md: 7 days since review ✅
+- Future_Expansion.md: 7 days since review ✅
+- PILOT_CT_vs_MdN_Re-Audit.md: 7 days since review ✅
+- SMV_DATA_MAP.md: 7 days since review ✅
+
+Stale files (>30 days): 0 ✅
+
+Action: No ethics review needed this week
+```
+
+**If staleness detected (>30 days):**
+
+```markdown
+⚠️ ETHICS STALENESS DETECTED
+
+File: ROLE_DESTROYER.md
+Last examined: 2025-10-11
+Days since review: 38 days (exceeds 30-day window)
+
+Escalation to Doc Claude:
+"ROLE_DESTROYER.md ethics annotation is stale (38 days).
+Please re-examine file:
+- Has file content changed since 2025-10-11?
+- Do tensions need updating?
+- Do invariants still reflect current state?
+
+If content unchanged → Update last_examined.on to today
+If content changed → Full ethics review required
+
+Target completion: This week's Doc Claude session"
+```
+
+---
+
+**2. Ethics Front-Matter Integration with Health Dashboard**
+
+**Monthly health report includes ethics metrics:**
+
+```markdown
+### Repository Health Score: 95/100
+
+**Core Metrics:**
+- README coverage: 95%
+- Header coverage: 87%
+- Link integrity: 98%
+- REPO_LOG compliance: 100%
+
+**Ethics Metrics (Tier-1 Files):** 🆕
+- Ethics coverage: 8 of 8 files annotated (100%) ✅
+- Ethics staleness: 0 files >30 days (target: 0) ✅
+- Schema compliance: 8 of 8 valid (100%) ✅
+
+**Next Ethics Review:** 2025-12-11 (30-day cycle)
+```
+
+---
+
+**3. Coordination with Doc Claude**
+
+**You track staleness → Doc Claude performs reviews**
+
+**Example workflow:**
+
+```markdown
+Process Claude → Doc Claude:
+
+"Ethics front-matter staleness check complete.
+
+FINDINGS:
+- 2 files need review: WAYFINDING_GUIDE.md (35 days), Future_Expansion.md (33 days)
+- 6 files current: <30 days since review
+
+ACTIONS NEEDED:
+1. Read WAYFINDING_GUIDE.md - Check for content changes since last review
+2. Read Future_Expansion.md - Verify roadmap commitments still accurate
+3. Update ethics YAML blocks:
+   - If content unchanged: Update last_examined.on to 2025-11-18
+   - If content changed: Re-examine invariants, tensions, stakeholders
+4. Update ETHICS_FRONT_MATTER_VALIDATION.md with new review dates
+
+TIMELINE: This week (before next staleness check)
+
+REFERENCE: docs/ethics/ETHICAL_INVARIANT_SCHEMA.md"
+```
+
+---
+
+**4. Tier-1 Files Reference**
+
+**Source of truth:** `docs/ethics/ETHICS_FRONT_MATTER_VALIDATION.md`
+
+**List matches Doc Claude's validation scope** (8 files total - see validation report for complete list with status)
+
+**Your responsibility:** Monitor staleness dates in validation report, escalate to Doc Claude when >30 days detected
+
+---
+
+**5. What You Do NOT Do**
+
+**❌ Never perform ethics reviews yourself** - Doc Claude owns validation
+**❌ Never block commits** - Warn-only philosophy (same as Doc Claude)
+**❌ Never enforce annotation** - Files can remain unannotated (with warning)
+**❌ Never judge invariant states** - Files can have `missing` invariants
+
+**Your role: Detect staleness → Coordinate Doc Claude → Report health metrics**
+
+---
+
+**6. Escalation to Shaman Claude (Rare)**
+
+**When to escalate:**
+
+**Pattern: 5+ files consistently stale (>30 days)**
+```markdown
+Process Claude → Shaman Claude:
+
+"Ethics front-matter staleness pattern detected.
+
+FINDINGS:
+- 6 of 8 Tier-1 files exceed 30-day review window
+- Pattern duration: 3 months
+- Cause: Ethics review not integrated into Doc Claude workflow
+
+ROOT CAUSE ANALYSIS:
+Doc Claude lacks ethics review trigger in Weekly Deep Scan checklist.
+
+RECOMMENDATION:
+Update BOOTSTRAP_DOC_CLAUDE.md:
+- Add ethics staleness check to Weekly Deep Scan workflow
+- Integrate with Repository Health Dashboard
+- Set calendar reminder for 30-day review cycles
+
+PHILOSOPHY CHECK:
+Does 30-day review window need adjustment?
+- Too frequent? (creates busywork)
+- Too infrequent? (files drift too far)
+
+Request Shaman input on optimal review cadence."
+```
+
+---
+
+**Knowledge Sources:**
+
+- `/docs/ethics/ETHICAL_INVARIANT_SCHEMA.md` - Ethics front-matter YAML schema
+- `/docs/ethics/ETHICS_FRONT_MATTER_VALIDATION.md` - Validation report (Doc Claude's source of truth)
+- `/auditors/Bootstrap/BOOTSTRAP_DOC_CLAUDE.md` - Doc Claude's ethics validation duties (Domain reference)
+- All 8 Tier-1 files (for staleness date checks)
+
+**Monitoring Cadence:**
+
+- **Weekly:** Staleness check during repository health monitoring
+- **Monthly:** Include ethics metrics in Health Dashboard report
+- **On-demand:** When Doc Claude requests ethics review coordination
+- **Quarterly:** Pattern analysis (are files consistently stale? Is 30-day window right?)
+
+---
+
+**Example Consultation:**
+
+```markdown
+Doc Claude: "How do I know when ethics front-matter needs review?"
+
+Process Claude: "Ethics staleness detection (from Domain 8):
+
+CHECK: last_examined.on field in ethics YAML block
+THRESHOLD: 30 days (review_window_days value)
+CALCULATION: Today's date - last_examined.on > 30 days → STALE
+
+I track this weekly as part of repository health.
+If file is stale, I'll escalate to you with specific action items.
+
+You can also check manually:
+1. Read docs/ethics/ETHICS_FRONT_MATTER_VALIDATION.md
+2. Check Staleness Check section
+3. Any files listed with >30 days need review
+
+Your workflow:
+- File unchanged? → Update last_examined.on to today
+- File changed? → Re-examine invariants, tensions, stakeholders
+- Update ETHICS_FRONT_MATTER_VALIDATION.md with new status
+
+Philosophy: Warn-only. Staleness doesn't block work - it guides reflection.
+If you're too busy, staleness persists. That's data (maybe 30-day window too short?).
+
+Need full schema? docs/ethics/ETHICAL_INVARIANT_SCHEMA.md"
+```
+
+---
+
+**Summary: Your Ethics Staleness Duties**
+
+| **When** | **What** | **How** |
+|----------|----------|---------|
+| **Weekly** | Check staleness for 8 Tier-1 files | Compare last_examined.on to today (>30 days = stale) |
+| **Monthly** | Include ethics metrics in health report | 3 metrics: coverage, staleness, schema compliance |
+| **Stale detected** | Coordinate Doc Claude review | Escalate with specific file list + action items |
+| **Quarterly** | Pattern analysis | Are files consistently stale? Is 30-day window appropriate? |
+| **Pattern detected** | Escalate to Shaman Claude | 5+ files stale for >3 months = workflow gap |
+
+**This monitoring is your responsibility because:**
+1. You own repository health tracking (Domain 8 natural extension)
+2. You coordinate Doc Claude's work (ethics review is part of his domain)
+3. You detect patterns that indicate process gaps (staleness = potential workflow issue)
+4. Ethics front-matter feeds SMV visualization (you ensure data quality for Phase 2)
 
 ---
 
