@@ -21,6 +21,8 @@ This prototype implements Nova's Symmetry View design with mock data to validate
 - Node.js 18+ (with npm)
 - Modern web browser (Chrome, Firefox, Edge, Safari)
 
+**Need help with setup?** See **[docs/Process/SMV_PROTOTYPE_SETUP.md](../../../docs/Process/SMV_PROTOTYPE_SETUP.md)** for complete installation instructions including nvm setup for Git Bash/MINGW64 environments.
+
 ### Installation
 
 ```bash
