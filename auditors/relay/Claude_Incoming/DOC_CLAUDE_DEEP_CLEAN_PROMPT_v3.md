@@ -579,10 +579,173 @@ grep "README Count" docs/repository/FILE_INVENTORY.md
 
 ---
 
-**Ready for your final validation scan?**
+## 📝 POST-VALIDATION COMPLETION TASKS
 
-Scan first, score using rubric, verify all fixes, document honestly. This is the gold standard assessment that validates months of optimization work.
+**After you complete the Deep Clean validation above, you have 4 additional tasks to wrap up the v4.0.0 release:**
+
+### **Task 1: Root README Update (WITH REVIEW CLAUDE)**
+
+**Instructions:**
+1. Read current [README.md](../../README.md) carefully (understand existing flow/explanations)
+2. **Consult Review Claude:** Propose README additions WITHOUT losing critical flow
+   - Ask Review Claude: "I want to append Priority 1 + 2 improvements to README. How should I integrate these without disrupting the existing narrative?"
+   - Show Review Claude draft additions before committing
+3. **Append to README (with Review Claude approval):**
+   - Living Map Maintenance protocol
+   - Gospel Problem prevention methodology
+   - Repository Health Scoring Rubric
+   - Tri-auditor convergence validation
+   - Phase 1 optimization results (workshop archived, dashboard restructured)
+4. **Goal:** Accurately describe full power of CFA repository at root level
+
+**Timeline:** 1-2 hours (with Review Claude collaboration)
+
+---
+
+### **Task 2: Version Number Update (CONSULT LOGGER/SHAMAN)**
+
+**Current State:**
+- README.md says: v3.5.2
+- CHANGELOG.md header says: v3.8.0
+- **Mismatch!**
+
+**Proposed:** v4.0.0 (major version for major improvements)
+
+**Instructions:**
+1. **Read version history:**
+   - [CHANGELOG.md](../../CHANGELOG.md) - v3.8.0 last entry
+   - [README.md](../../README.md) - v3.5.2 current
+2. **Consult LOGGER Claude + Shaman Claude:** Ask for semantic versioning guidance
+   - Question: "Should Priority 1 + 2 (Gospel Problem + Health Rubric + Living Maps) be v3.9.0 or v4.0.0?"
+   - Provide justification for v4.0.0 (from PRIORITY_2_COMPLETION_SUMMARY.md)
+3. **Update files with approved version:**
+   - README.md (line 1: "CFA v4.0.0" or approved version)
+   - CHANGELOG.md (add new entry at top documenting all v4.0 changes)
+   - Any other version references found
+
+**Recommended Version:** v4.0.0 (see [PRIORITY_2_COMPLETION_SUMMARY.md](PRIORITY_2_COMPLETION_SUMMARY.md) for rationale)
+
+**Timeline:** 30 minutes (with consultation)
+
+---
+
+### **Task 3: User Manual Light Cleanup**
+
+**File:** Check for User Manual location (may be in docs/ or pages/)
+
+**Instructions:**
+1. **Find User Manual** (search for "manual" or "guide" in docs/)
+2. **Light cleanup only:**
+   - Remove references to pre-v3.5 versions
+   - Add "⚠️ UPDATE PENDING" markers to outdated sections
+   - Flag sections needing comprehensive rewrite
+3. **DO NOT do comprehensive rewrite** (save for Opus 4.1)
+
+**Timeline:** 15 minutes
+
+---
+
+### **Task 4: Create Opus 4.1 Task Brief**
+
+**Location:** `auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/`
+
+**File to create:** `TASK_BRIEF_README_USERMANUAL_v4_UPDATE.md`
+
+**Brief contents:**
+```markdown
+# Task Brief: README + User Manual Comprehensive Update for v4.0.0
+
+**Priority:** HIGH
+**Owner:** Opus 4.1 Claude
+**Timeline:** 3-4 hours
+**Status:** PENDING
+
+## Objective
+Comprehensively update README.md and User Manual to accurately reflect all v4.0.0 features (Priority 1 + 2 improvements).
+
+## Context
+- Priority 1 + 2 completed (Living Maps, Gospel Problem, Health Rubric)
+- Version updated to v4.0.0 (or approved version)
+- Root README needs comprehensive v4.0 feature documentation
+- User Manual has stale workflows and version references
+
+## Tasks
+
+### 1. README.md Comprehensive Update
+- **Consult Review Claude** for flow preservation
+- Document all v4.0 features:
+  - Living Map Maintenance protocol
+  - Gospel Problem prevention
+  - Repository Health Scoring Rubric
+  - Tri-auditor convergence methodology
+  - Phase 1 optimization results
+- Preserve existing critical explanations (don't delete, enhance)
+
+### 2. User Manual Comprehensive Rewrite
+- Update all stale version references (pre-v3.5 → v4.0)
+- Document new workflows (Deep Clean with rubric, living map maintenance)
+- Add Gospel Problem prevention examples
+- Update health scoring section
+- Remove ⚠️ UPDATE PENDING markers
+
+### 3. Validation
+- Verify all v4.0 features documented
+- Test all examples/workflows described
+- Ensure consistency between README and User Manual
+
+## Success Criteria
+- [ ] README accurately describes all v4.0 features
+- [ ] User Manual workflows current (no stale references)
+- [ ] Review Claude approved README flow
+- [ ] All ⚠️ markers removed from User Manual
+- [ ] Cross-references between docs valid
+
+## References
+- [PRIORITY_1_COMPLETION_SUMMARY.md](../../../relay/Claude_Incoming/PRIORITY_1_COMPLETION_SUMMARY.md)
+- [PRIORITY_2_COMPLETION_SUMMARY.md](../../../relay/Claude_Incoming/PRIORITY_2_COMPLETION_SUMMARY.md)
+- [REPO_HEALTH_SCORING_RUBRIC.md](../../../../docs/repository/REPO_HEALTH_SCORING_RUBRIC.md)
+- [LIVING_MAP_MAINTENANCE.md](../../../../docs/repository/LIVING_MAP_MAINTENANCE.md)
+```
+
+**Timeline:** 30 minutes to create brief
+
+---
+
+## 🎯 FINAL DELIVERABLES
+
+**When you complete ALL tasks (validation + 4 post-tasks), you will have:**
+
+1. ✅ **Deep Clean Validation Report** (Phase 1-3 of this prompt)
+   - Health score (expected: 92-94/100)
+   - Priority 1 + 2 verification (11/11 fixes)
+   - Gospel Problem test result (PASSED expected)
+
+2. ✅ **Updated Root README** (with Review Claude approval)
+   - All v4.0 features documented
+   - Critical flow preserved
+   - Accurate repository power description
+
+3. ✅ **Version Number Updated** (with LOGGER/Shaman approval)
+   - README.md + CHANGELOG.md synchronized
+   - v4.0.0 (or approved version) applied
+
+4. ✅ **User Manual Light Cleanup**
+   - Stale references removed
+   - ⚠️ UPDATE PENDING markers added
+   - Ready for Opus 4.1 comprehensive rewrite
+
+5. ✅ **Opus 4.1 Task Brief Created**
+   - Comprehensive instructions for README + User Manual full update
+   - Placed in Active_Tasks for Opus to execute
+
+---
+
+**Ready for your final validation scan + completion tasks?**
+
+Scan first, score using rubric, verify all fixes, document honestly. Then collaborate with Review Claude (README), LOGGER/Shaman (version), and create the path forward for Opus 4.1.
+
+This is the gold standard assessment that validates months of optimization work AND prepares the v4.0.0 release.
 
 — Process Claude (C4)
 
-**P.S.** The repository should be in excellent shape. But if it's not, we need to know. Trust the scan, use the rubric, tell the truth. That's the CFA way. 🔥
+**P.S.** The repository should be in excellent shape. But if it's not, we need to know. Trust the scan, use the rubric, tell the truth. Then help us tell the world about v4.0.0 through README and version updates. That's the CFA way. 🔥
