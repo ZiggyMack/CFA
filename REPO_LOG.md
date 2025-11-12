@@ -125,7 +125,7 @@ Executed TASK_DESTROYER_FILE_CONSOLIDATION.md: Removed stale 88MPH_PROTOCOL.md d
 **Follow-up Actions:**
 1. Fix GROK_BRIEFING.md broken link (line 46) - 2 min → Health 98/100
 2. Update FILE_INVENTORY.md with counting methodology - 15 min
-3. User decision: UI_SMV → Dashboard/SMV/ migration?
+3. User decision: UI_SMV → dashboard/SMV/ migration?
 
 **Commits:** eb01c3a, da6cff8, 342628d
 
@@ -186,7 +186,7 @@ Executed and validated DEEP_CLEAN_PROTOCOL.md across three Claude instances (Web
 
 **Summary:**
 
-C5 completed baseline health scan (96/100) and created 4 living maps. Post-C5 fixes applied: Bootstrap efficiency improvements (embedded data → living map references), UI_SMV migration (ui/smv/prototype/ → Dashboard/SMV/), Doc Claude activation prompt created with Gospel Problem warning.
+C5 completed baseline health scan (96/100) and created 4 living maps. Post-C5 fixes applied: Bootstrap efficiency improvements (embedded data → living map references), UI_SMV migration (ui/smv/prototype/ → dashboard/SMV/), Doc Claude activation prompt created with Gospel Problem warning.
 
 **Changes:**
 
@@ -202,7 +202,7 @@ C5 completed baseline health scan (96/100) and created 4 living maps. Post-C5 fi
    - Grade improved: C+ → A (validation pending in Entry 2)
 
 3. **UI_SMV Migration:**
-   - `MOVED`: ui/smv/prototype/ → Dashboard/SMV/ (uppercase convention, flattened)
+   - `MOVED`: ui/smv/prototype/ → dashboard/SMV/ (uppercase convention, flattened)
    - `REMOVED`: Empty ui/ directory (leftover shells)
    - Status: Validated by Code Claude (Entry 2)
 
@@ -292,7 +292,7 @@ Phase 2 Gate #2 unlocked: 100% Tier-1 ethics coverage (8/8 files), SMV Phase 1 p
    - `CREATED`: docs/ethics/ETHICS_FRONT_MATTER_VALIDATION.md (validation report)
 
 2. **SMV Prototype Validation:**
-   - `VALIDATED`: Dashboard/SMV/ prototype (16 files, React app)
+   - `VALIDATED`: dashboard/SMV/ prototype (16 files, React app)
    - Features: Triangle view, calibration drawer, ethics badges, mock data scenarios
    - User feedback: "Prototype Success!"
    - Status: Phase 1 complete, ready for Nova Entry 8
@@ -380,7 +380,7 @@ Completed SMV (Symmetry Matrix Visualizer) Phase 1 prototype: Created React app 
 **Changes:**
 
 1. **Prototype Implementation:**
-   - `CREATED`: Dashboard/SMV/ directory (16 files, React app)
+   - `CREATED`: dashboard/SMV/ directory (16 files, React app)
    - Components: SymmetryTriangle.tsx, CalibrationDrawer.tsx, EthicsBadge.tsx
    - Mock data: 3 scenarios (high-alignment, productive-tension, invariant-breach)
    - Features: Interactive triangle, tick navigation, scenario switching

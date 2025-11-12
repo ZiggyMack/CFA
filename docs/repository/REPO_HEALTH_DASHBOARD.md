@@ -106,7 +106,7 @@ Coordination       ████████████████████�
    - Status: Fully operational
 
 2. **SMV Prototype** ✅
-   - Location: `Dashboard/SMV/`
+   - Location: `dashboard/SMV/`
    - Components: 16 files (React app)
    - Status: Phase 1 complete, validated by Code Claude
    - Features: Triangle view, calibration drawer, ethics badges

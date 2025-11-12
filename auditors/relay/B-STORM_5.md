@@ -192,7 +192,7 @@ Should we:
 
 ## Entry 4: Deep Clean Integration + UI_SMV Location Decision
 
-**Summary:** Cherry-picked Code Claude's deep clean execution commit. Analyzed UI_SMV location question. Recommend moving to `/Dashboard/SMV/` at root.
+**Summary:** Cherry-picked Code Claude's deep clean execution commit. Analyzed UI_SMV location question. Recommend moving to `/dashboard/SMV/` at root.
 
 ### **Code Claude's Work Integrated** ✅
 
@@ -212,11 +212,11 @@ Should we:
 ### **UI_SMV Location Decision**
 
 **User Question:**
-> "if Dashboard/SMV/ makes it obvious 'this is a running application'...then does this deserve to live anymore in our docs folder?....maybe we create a folder in the root called 'Dashboard/' and the protype content lives there?"
+> "if dashboard/SMV/ makes it obvious 'this is a running application'...then does this deserve to live anymore in our docs folder?....maybe we create a folder in the root called 'Dashboard/' and the protype content lives there?"
 
 **Analysis:**
 
-**Current:** `Dashboard/SMV/` (uppercase signals "running code")
+**Current:** `dashboard/SMV/` (uppercase signals "running code")
 
 **Proposed:** Root `/Dashboard/` directory
 
@@ -229,8 +229,8 @@ Should we:
 - Follows industry convention (Next.js, React apps at root)
 
 **⚠️ Arguments AGAINST moving:**
-- Dashboard/SMV/ already validated by Code Claude as correct location
-- Recent migration work (ui/smv/prototype/ → Dashboard/SMV/) would be undone
+- dashboard/SMV/ already validated by Code Claude as correct location
+- Recent migration work (ui/smv/prototype/ → dashboard/SMV/) would be undone
 - Creates churn in references (bootstrap files, dependency maps)
 - /docs/ can contain both documentation AND tools (precedent: /docs/repository/librarian_tools/)
 
@@ -238,7 +238,7 @@ Should we:
 
 **Rationale:**
 - Your intuition is correct - running apps shouldn't live in /docs/
-- Dashboard/ is clearer semantic label than Dashboard/SMV/
+- Dashboard/ is clearer semantic label than dashboard/SMV/
 - This is the LAST move before stability - better to get structure right now
 - Code Claude's validation was of the MIGRATION COMPLETION, not the final destination
 - Philosophy: "Docs for reading, dashboards for running"
@@ -257,7 +257,7 @@ Should we:
 **Migration Command:**
 ```bash
 mkdir Dashboard
-mv docs/UI_SMV Dashboard/SMV
+mv docs/UI_SMV dashboard/SMV
 
 # Update references (becomes Destroyer Claude task)
 ```
@@ -338,13 +338,13 @@ mv docs/UI_SMV Dashboard/SMV
 
 1. ✅ **Cherry-picked Code Claude's deep clean report** (commit 0131267)
 2. ✅ **Created DEPENDENCY_CORE.md** (anchor-based pointer system, no line numbers)
-3. ✅ **Analyzed UI_SMV location** - Recommend /Dashboard/SMV/ at root
+3. ✅ **Analyzed UI_SMV location** - Recommend /dashboard/SMV/ at root
 4. ✅ **Created Destroyer task brief** - File consolidation + duplicate removal
 5. ✅ **Identified 88MPH duplicate** - Confirmed stale, 20 references to update
 
 ### **Pending User Decisions:**
 
-**Decision 1a: UI_SMV → Dashboard/SMV/ migration**
+**Decision 1a: UI_SMV → dashboard/SMV/ migration**
 - User asked if UI_SMV should move out of docs/
 - C4 recommends: YES, create /Dashboard/ at root
 - Benefits: Clear semantics, room to grow, industry convention
@@ -367,7 +367,7 @@ mv docs/UI_SMV Dashboard/SMV
 **Then ready for:**
 1. Fix GROK_BRIEFING.md broken link (line 46) - 2 minutes
 2. Update FILE_INVENTORY.md with counting methodology - 15 minutes
-3. IF approved: Migrate UI_SMV → Dashboard/SMV/ - 30 minutes
+3. IF approved: Migrate UI_SMV → dashboard/SMV/ - 30 minutes
 4. Final CFA-VS-Code → main merge
 5. Run validation cycle with fresh Opus + Code Claude
 
@@ -384,7 +384,7 @@ mv docs/UI_SMV Dashboard/SMV
 3. `[pending]` - Created Destroyer task brief
 
 **Blocking Items:**
-- User decision on UI_SMV → Dashboard/SMV/ migration
+- User decision on UI_SMV → dashboard/SMV/ migration
 - User decision #6 (not yet provided)
 - Destroyer Claude execution (45-60 min)
 

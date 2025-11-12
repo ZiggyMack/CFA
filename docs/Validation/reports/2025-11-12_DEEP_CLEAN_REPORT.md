@@ -55,7 +55,7 @@ pages/: 1 markdown + 6 Python files
 
 **Infrastructure Verified:**
 - ✅ Mission structure: 21 files across 3 subdirectories (CFA_VUDU, Preset_Calibration, VUDU_Operations)
-- ✅ SMV Prototype: Located at `Dashboard/SMV/` (moved from `ui/smv/` after C5's scan)
+- ✅ SMV Prototype: Located at `dashboard/SMV/` (moved from `ui/smv/` after C5's scan)
 - ✅ Ethics system: 100% coverage (8/8 Tier-1 files)
 - ✅ Worldview profiles: All 12 found and verified
 - ✅ Living maps: BOOTSTRAP_SEQUENCE.md, WORLDVIEW_CATALOG.md both exist
@@ -249,8 +249,8 @@ Critical Actions: Fix 3 bootstrap sequences, create 4 living maps
 - VUDU_Operations/: 7 operational templates + 2 examples
 
 **6. SMV Prototype Successfully Migrated**
-- Old location: `Dashboard/SMV/`
-- New location: `Dashboard/SMV/` (uppercase convention, flattened)
+- Old location: `dashboard/SMV/`
+- New location: `dashboard/SMV/` (uppercase convention, flattened)
 - Empty `ui/` directory removed
 - React app functional at new location
 

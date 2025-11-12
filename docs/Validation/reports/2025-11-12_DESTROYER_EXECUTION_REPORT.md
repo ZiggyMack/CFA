@@ -317,8 +317,8 @@ PILOT_CT_vs_MdN_Re-Audit.md
 ### **Future Optimization:**
 
 **UI_SMV Location Decision** - User decision pending
-- Current: `Dashboard/SMV/`
-- Proposed: `/Dashboard/SMV/` at root
+- Current: `dashboard/SMV/`
+- Proposed: `/dashboard/SMV/` at root
 - Rationale: Running apps shouldn't live in /docs/
 - Impact: ~10 files to update if approved
 

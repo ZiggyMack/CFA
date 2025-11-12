@@ -72,7 +72,7 @@ All actual dependency information lives in [MASTER_DEPENDENCY_MAP.md](MASTER_DEP
 
 **Jump to:** [📋 COMPREHENSIVE DEPENDENCY TABLES](MASTER_DEPENDENCY_MAP.md#-comprehensive-dependency-tables) → Search for "SMV"
 
-**Summary:** Design docs (smv/) vs implementation (Dashboard/SMV/) relationships
+**Summary:** Design docs (smv/) vs implementation (dashboard/SMV/) relationships
 
 ---
 
