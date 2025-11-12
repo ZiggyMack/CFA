@@ -286,3 +286,66 @@ Prior to user testing, added Scenario 1 (tension escalation) to achieve parity p
 **Prototype Stability:** Production-ready for Phase 1 goals (mock data visualization validation)
 
 ---
+
+### Session 5: Nova Entry 8 — Phase 2 Roadmap (2025-11-11)
+
+**Status:** ✅ **STRATEGIC DIRECTION RECEIVED**
+
+**Crux Toggle Rationale (per Nova Entry 8):**
+
+Nova clarified that the "Consider Crux" toggle being greyed out is **intentional design**, not a Phase 1 limitation:
+
+**Philosophy:** "Data-first, not placeholder-first"
+
+- **Current State:** Toggle disabled with tooltip "Available once pilot data arrives"
+- **Unlock Condition:** CT↔MdN pilot produces real convergence metrics with/without Crux influence
+- **Why Wait:** Crux Impact View requires actual include/exclude data to demonstrate value
+  - Mock data can't authentically show Crux resolution dynamics
+  - Pilot will generate first real Crux declaration (if BFI impasse occurs)
+  - Include/exclude comparison needs baseline (with Crux) vs. counterfactual (without Crux)
+
+**Phase 2 Implementation Plan:**
+
+1. **Pilot Generates Data:**
+   - CT↔MdN adversarial scoring declares Crux (if <98% convergence persists)
+   - Process Claude logs metrics_include_crux vs. metrics_exclude_crux
+   - SMV Claude extracts convergence deltas
+
+2. **Toggle Activates:**
+   - Button enabled when `crux.status === "declared"` or `"resolved"`
+   - Click toggles between two convergence visualizations:
+     - **Include Crux:** Baseline convergence (what actually happened)
+     - **Exclude Crux:** Counterfactual convergence (if Crux mechanism didn't exist)
+
+3. **Visual Changes:**
+   - Sparkline shows two lines (baseline vs. counterfactual)
+   - Convergence meter displays delta (e.g., "Crux contributed +12% convergence")
+   - Triangle view highlights which auditor pair benefited from Crux resolution
+
+**Example Scenario (from SMV_DESIGN_SPEC.md Scenario C):**
+```json
+"convergence": {
+  "percentage": 95.0,
+  "metrics_include_crux": ["BFI", "CA", "IP", "ES", "PS", "LS", "MS"],
+  "metrics_exclude_crux": ["CA", "IP", "ES", "PS", "LS", "MS"]
+}
+```
+
+**↓ Crux Impact Calculation:**
+- With Crux: 7 metrics converged (100%)
+- Without Crux: 6 metrics converged (85.7%)
+- **Crux Contribution:** +14.3% convergence (BFI resolution unlocked progress)
+
+**UI Mockup (Phase 2):**
+- Toggle ON: Sparkline shows single green line (95% convergence)
+- Toggle OFF: Sparkline shows amber line dropping to 85.7% at tick where BFI would stall
+- Annotation: "Crux resolved BFI impasse, enabling 7/7 convergence"
+
+**Documentation:**
+- Full Crux workflow in [docs/smv/SMV_DESIGN_SPEC.md](../../docs/smv/SMV_DESIGN_SPEC.md) (lines 450-520)
+- Crux architecture in [docs/architecture/CRUX_ARCHITECTURE.md](../../docs/architecture/CRUX_ARCHITECTURE.md)
+- Phase 2 unlock conditions in [auditors/relay/B-STORM_6.md](../../auditors/relay/B-STORM_6.md) Entry 8
+
+**Status:** Rationale logged. Toggle remains disabled until pilot produces real Crux data.
+
+---

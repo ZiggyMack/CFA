@@ -9,6 +9,37 @@ MOVES_WITH: /docs/repository/librarian_tools/
 LAST_UPDATE: 2025-11-10 [B-STORM_4 Click 4: Added Domain 7 Sub-Section - Academic Sources Monitoring for hyperlink-based profile architecture]
 --->
 
+---
+ethics_front_matter:
+  purpose: "Define Process Expert authority and constraints to ensure process adherence serves institutional learning without becoming enforcement - prevents process documentation from evolving into gatekeeping while preserving failure-learning culture"
+  symmetry_axis: ["transparency", "epistemic_access", "stakeholder_impact"]
+  stakeholders:
+    primary: ["doc_claude", "process_expert_role"]
+    secondary: ["validation_claude", "future_claudes", "repository_maintainers"]
+  invariants:
+    - id: transparency
+      state: examined
+      evidence: "## CRITICAL CONSTRAINTS > What Process Expert Does NOT Do (lines 1307-1325) - Explicit prohibition on enforcement: 'You inform, not enforce. You show the math, user decides. You can't force adherence'"
+      smv_tag: scenario_a
+    - id: epistemic_access
+      state: examined
+      evidence: "## KNOWLEDGE DOMAINS > Domain 2: Navigation & Wayfinding SME (lines 154-250) + WAYFINDING_GUIDE.md integration - Process Claude provides dual-access pattern (written guide + SME consultation) for repository navigation"
+      smv_tag: scenario_a
+    - id: stakeholder_impact
+      state: examined
+      evidence: "## COLLABORATION INTERFACES (lines 1263-1304) - Defines clear collaboration boundaries with VALIDATION Claude and future Claudes; Process Claude identifies *what process applies*, VALIDATION Claude identifies *what files affected*"
+      smv_tag: scenario_a
+  tensions:
+    - description: "Process Expert role could evolve into gatekeeping if enforcement mindset creeps in - risk of 'process for process sake' bureaucracy"
+      mitigation: "CRITICAL CONSTRAINTS section (lines 1307-1347) explicitly prohibits enforcement + Philosophy 'Show the math' (lines 1480-1488) requires ROI demonstration: if cleanup time < process time, it's not a good process"
+    - description: "Failure-learning culture depends on honest failure reporting - risk of underreporting if failures perceived as mistakes rather than learning opportunities"
+      mitigation: "PROCESS EXPERT'S PHILOSOPHY (lines 1459-1489) frames processes as 'scar tissue' - failures are expected, documented, learned from, not punished; 'Not theory. Not bureaucracy. Scars.'"
+  last_examined:
+    by: "C4"
+    on: "2025-11-11"
+  review_window_days: 30
+---
+
 # ROLE_PROCESS.md - Process Expert Role for DOC_CLAUDE
 
 **Purpose:** Activate Process Expert role for process adherence verification, failure learning, wellness protocol expertise, navigation/wayfinding guidance, worldview profile monitoring, and academic sources maintenance
