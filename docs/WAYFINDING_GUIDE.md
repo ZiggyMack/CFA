@@ -193,7 +193,7 @@ GUIDANCE:
 → Bootstrap file: `/auditors/Bootstrap/BOOTSTRAP_VUDU_CLAUDE.md`
 
 **Path B: Doc Claude (Repo Librarian)**
-→ Start: `/docs/repository/librarian_tools/88MPH_PROTOCOL.md`
+→ Start: `/docs/../88MPH.md`
 → Instant activation: 8.8 minutes to operational
 → Your domain: READMEs, REPO_LOG, dependency maps, health reports
 → Bootstrap file: `/auditors/Bootstrap/BOOTSTRAP_DOC_CLAUDE.md`
@@ -267,7 +267,7 @@ CFA/ (root)
 │   │   ├── /dependency_maps/  # MASTER_DEPENDENCY_MAP.md
 │   │   ├── /Health_Reports/   # Historical health assessments
 │   │   └── /librarian_tools/  # Doc Claude tools, role definitions
-│   │       ├── 88MPH_PROTOCOL.md  # Doc Claude activation
+│   │       ├── 88MPH.md  # Doc Claude activation
 │   │       ├── ROLE_*.md      # Specialized role guides
 │   │       └── HEADER_STANDARD.md # Semantic headers
 │   ├── /Validation/           # Validation protocols and reports
@@ -301,7 +301,7 @@ CFA/ (root)
 
 | **I Need To...** | **Go To...** | **Key Info** |
 |-----------------|-------------|-------------|
-| Activate as Doc Claude | `/docs/repository/librarian_tools/88MPH_PROTOCOL.md` | 8.8 min activation |
+| Activate as Doc Claude | `/docs/../88MPH.md` | 8.8 min activation |
 | Make a repository change | `/REPO_LOG.md` first! | Check coordination, log all changes |
 | Understand file dependencies | `/docs/repository/dependency_maps/MASTER_DEPENDENCY_MAP.md` | ~223 files tracked |
 | Check repository health | `/docs/repository/DASHBOARD.md` | Current: 95/100 GREEN |
@@ -481,7 +481,7 @@ Tier 4 (Task Specific):
 ---
 
 ### **Problem: "Context window approaching limit"**
-→ **Solution:** Check `/docs/repository/librarian_tools/88MPH_PROTOCOL.md` Event Horizon section
+→ **Solution:** Check `/docs/../88MPH.md` Event Horizon section
 → **Action:** Handoff protocols, avoid crashes
 → **Warning:** At 85% usage, begin preparing handoff
 
@@ -502,7 +502,7 @@ Tier 4 (Task Specific):
 ### **Doc Claude (Repo Librarian)**
 **Lens:** Documentation specialist
 **Owns:** READMEs, REPO_LOG, dependency maps, health reports
-**Activates via:** 88MPH_PROTOCOL.md (8.8 min to operational)
+**Activates via:** 88MPH.md (8.8 min to operational)
 **Bootstrap:** BOOTSTRAP_DOC_CLAUDE.md
 **Domain:** /docs/repository/, all README.md files
 **Specializations:** LOGGER, SANITIZE, REVIEW (wears multiple hats)
@@ -595,7 +595,7 @@ Tier 4 (Task Specific):
 ### **/docs/repository/librarian_tools/ - Doc Claude's Toolbox**
 **Philosophy:** Specialized capabilities, role expertise
 **Contains:** 88MPH activation, ROLE_* files, header standards, protocols
-**Entry Points:** 88MPH_PROTOCOL.md, ROLE_*.md files
+**Entry Points:** 88MPH.md, ROLE_*.md files
 **Who Uses:** Doc Claude (primary), anyone needing role expertise
 
 ---
@@ -642,7 +642,7 @@ For detailed progressive training with checkpoints, common mistakes, and skill v
 **Quick reference below for navigation-focused learning:**
 
 ### **Beginner (First Session) - 15 minutes**
-1. Read MISSION_DEFAULT.md or 88MPH_PROTOCOL.md (depending on role)
+1. Read MISSION_DEFAULT.md or 88MPH.md (depending on role)
 2. Scan DASHBOARD.md for current state
 3. Check REPO_LOG.md coordination checkpoint
 4. Understand your role from "Who Does What?"
@@ -694,13 +694,13 @@ For detailed progressive training with checkpoints, common mistakes, and skill v
 4. `/docs/WAYFINDING_GUIDE.md` - This guide (navigation)
 
 ### **⚡ Fast Activations**
-- **Doc Claude:** 88MPH_PROTOCOL.md (8.8 min)
+- **Doc Claude:** 88MPH.md (8.8 min)
 - **VuDu Claude:** MISSION_DEFAULT.md → Tier selection
 - **Validation:** ROLE_VALIDATION.md
 - **Process:** ROLE_PROCESS.md (consultation-based)
 
 ### **📍 Key Decision Points**
-- **"Where do I start?"** → MISSION_DEFAULT.md or 88MPH_PROTOCOL.md
+- **"Where do I start?"** → MISSION_DEFAULT.md or 88MPH.md
 - **"How do I log changes?"** → REPO_LOG.md Quick Start
 - **"Is repository healthy?"** → DASHBOARD.md
 - **"I need guidance on X"** → Consult appropriate ROLE_*.md
@@ -719,7 +719,7 @@ For detailed progressive training with checkpoints, common mistakes, and skill v
 - **Health Dashboard:** [DASHBOARD.md](/docs/repository/DASHBOARD.md) - Current status
 - **Change Log:** [REPO_LOG.md](/REPO_LOG.md) - All changes tracked here
 - **Mission Entry:** [MISSION_DEFAULT.md](/auditors/MISSION_DEFAULT.md) - Universal fallback
-- **Doc Claude Start:** [88MPH_PROTOCOL.md](/docs/repository/librarian_tools/88MPH_PROTOCOL.md) - Repo librarian
+- **Doc Claude Start:** [88MPH.md](/docs/../88MPH.md) - Repo librarian
 - **Dependency Map:** [MASTER_DEPENDENCY_MAP.md](/docs/repository/dependency_maps/MASTER_DEPENDENCY_MAP.md) - File relationships
 
 ---

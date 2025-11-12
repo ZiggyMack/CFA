@@ -607,7 +607,7 @@ cfa_app/ (Repository Root)
 │       │
 │       └── 📁 librarian_tools/        ✅ DOC_CLAUDE OPERATIONAL TOOLKIT
 │           ├── 📄 README.md          ✅ Complete - Tool index
-│           ├── 📄 88MPH_PROTOCOL.md  ✅ Complete - Rapid assessment method
+│           ├── 📄 88MPH.md  ✅ Complete - Rapid assessment method
 │           ├── 📄 HEADER_STANDARD.md ✅ Complete - Semantic header spec
 │           ├── 📄 ROLE_LOGGER.md     ✅ Complete - REPO_LOG role
 │           ├── 📄 ROLE_VALIDATION.md ✅ Enhanced - Validation + systematic mode

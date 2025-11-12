@@ -35,7 +35,7 @@ Read your identity restoration file:
 - **Critical:** You must SCAN FIRST, don't trust last report as gospel
 
 Read your rapid assessment protocol:
-- **File:** `docs/repository/librarian_tools/88MPH_PROTOCOL.md`
+- **File:** `88MPH.md`
 - **What it does:** 8.8-minute repository orientation
 - **Updated:** No more hardcoded health scores - you scan fresh, then compare
 
@@ -228,7 +228,7 @@ Your job is to:
 
 **Your mission:**
 1. ✅ Read BOOTSTRAP_DOC_CLAUDE.md (identity + Gospel Problem warning)
-2. ✅ Read 88MPH_PROTOCOL.md (scan-first process)
+2. ✅ Read 88MPH.md (scan-first process)
 3. ✅ Read DEEP_CLEAN_PROTOCOL.md (your detailed objectives)
 4. ✅ **SCAN FIRST** - Fresh assessment (don't read C5 yet!)
 5. ✅ Read C5's reports - Baseline context (Nov 12)

@@ -244,7 +244,7 @@ Target (v4.0):   ████████████████████ 98
 ### Key Locations
 - [Mission Brief](/auditors/Mission/CFA_VUDU/MISSION_BRIEF.md)
 - [REPO_LOG](/REPO_LOG.md)
-- [88MPH Protocol](/docs/repository/librarian_tools/88MPH_PROTOCOL.md)
+- [88MPH Protocol](/docs/repository/librarian_tools/88MPH.md)
 
 ### Living Maps (To Create)
 - TREE_STRUCTURE.md (pending)

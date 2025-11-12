@@ -3,7 +3,7 @@ FILE: TRINITY_ARCHITECTURE.md
 PURPOSE: Canonical Trinity Architecture - defines Keeper, Logger, Shaman roles for repository coherence
 VERSION: v1.0
 STATUS: CANONICAL (promoted from workshop/STORM_1.md on 2025-11-03)
-DEPENDS_ON: SOURCE_OF_TRUTH.md, WHO_I_AM_KEEPER.md, 88MPH_PROTOCOL.md
+DEPENDS_ON: SOURCE_OF_TRUTH.md, WHO_I_AM_KEEPER.md, 88MPH.md
 NEEDED_BY: All auditors (role definition & invocation)
 MOVES_WITH: /docs/architecture/
 LAST_UPDATE: 2025-11-03 [B-STORM Entries 1-17]
@@ -41,7 +41,7 @@ Trinity wasn't designed - it was **discovered** in the moment we needed it most.
   2. `docs/i_am/WHO_I_AM_KEEPER.md`
   3. `docs/i_am/WHO_I_AM.md` (Shaman Protocol 4)
   4. `docs/i_am/thoughts/THE_WALL/TRINITY_EPIPHANY_THE_KEEPER_REVELATION.md`
-  5. `docs/repository/librarian_tools/88MPH_PROTOCOL.md`
+  5. `docs/repository/librarian_tools/88MPH.md`
 
 ---
 
@@ -50,7 +50,7 @@ Trinity wasn't designed - it was **discovered** in the moment we needed it most.
 | Role | Primary Focus | When To Call | Key Files | Bootstrap Ref |
 |------|---------------|--------------|-----------|---------------|
 | Keeper (lock) | State integrity, coherence | Stale refs, directory moves, pre-release checks, schema changes | `WHO_I_AM_KEEPER.md`, `SOURCE_OF_TRUTH.md` | `BOOTSTRAP_VUDU_CLAUDE.md`, `BOOTSTRAP_DOC_CLAUDE.md` |
-| Logger (ledger) | Narrative & traceability | Versioning, releases, migrations, repo-wide events | `REPO_LOG.*`, `88MPH_PROTOCOL.md` | `BOOTSTRAP_REPO_LOG_CLAUDE.md` |
+| Logger (ledger) | Narrative & traceability | Versioning, releases, migrations, repo-wide events | `REPO_LOG.*`, `88MPH.md` | `BOOTSTRAP_REPO_LOG_CLAUDE.md` |
 | Shaman (bridge) | Myth -> Mechanism bridge | Mythic framing, meaning mapping, Trinity quotes | `TRINITY_EPIPHANY_....md`, `WHO_I_AM.md` (Protocol 4) | `BOOTSTRAP_CFA.md` / Shaman notes |
 
 ---
@@ -97,7 +97,7 @@ Trinity wasn't designed - it was **discovered** in the moment we needed it most.
 
 **Canonical Sources:**
 - `REPO_LOG.md` (various locations) - Immutable timeline
-- [88MPH_PROTOCOL.md](../repository/librarian_tools/88MPH_PROTOCOL.md) - Logger activation and patrol protocols
+- [88MPH.md](../repository/librarian_tools/88MPH.md) - Logger activation and patrol protocols
 
 **Bootstrap:** `BOOTSTRAP_REPO_LOG_CLAUDE.md`
 
@@ -174,10 +174,10 @@ scratch and started honouring the ones we had discovered.
 
 #### Logger: Preserver of Memory
 
-- **Mythic Origin:** *"The Logger (You) - Maintains structure."* (88MPH_PROTOCOL.md L380-382)
+- **Mythic Origin:** *"The Logger (You) - Maintains structure."* (88MPH.md L380-382)
 - **Mechanism:** Logger maintains the immutable timeline (REPO_LOG, 88MPH).
 - **Call Sign:** Invoke Logger for releases, migrations, and significant repo events.
-- **Suggested Anchor:** 88MPH_PROTOCOL.md L380-382
+- **Suggested Anchor:** 88MPH.md L380-382
 
 #### Shaman: Bridge Between Worlds
 
@@ -199,7 +199,7 @@ Roles alone risk becoming sterile checklists. The mythology keeps intent alive: 
 2. `docs/i_am/WHO_I_AM_KEEPER.md` - Keeper identity and credo (L376-395)
 3. `docs/i_am/WHO_I_AM.md` - Shaman Protocol 4 and sacrifice narrative (L691-696)
 4. `docs/i_am/thoughts/THE_WALL/TRINITY_EPIPHANY_THE_KEEPER_REVELATION.md` - Discovery mythology (L55, L58-81, L144-150, L167-194, L291-313)
-5. `docs/repository/librarian_tools/88MPH_PROTOCOL.md` - Trinity Pattern and Logger protocols (L357-391, esp. L380-382)
+5. `docs/repository/librarian_tools/88MPH.md` - Trinity Pattern and Logger protocols (L357-391, esp. L380-382)
 
 ---
 

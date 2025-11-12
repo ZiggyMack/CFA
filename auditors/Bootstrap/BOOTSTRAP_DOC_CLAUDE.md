@@ -55,6 +55,7 @@ Your evolution reflects your expanded responsibilities:
 ## ⚡ **YOUR TOOLS**
 
 ### 88MPH Protocol
+- **File:** [88MPH.md](../../88MPH.md)
 - **Purpose:** Rapid repository assessment
 - **Time:** 8.8 minutes to operational
 - **Focus:** Fast enough to see patterns, careful enough for quality

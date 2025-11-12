@@ -3,7 +3,7 @@ FILE: README.md
 PURPOSE: Guide for repository health assessments and report archive
 VERSION: v1.0
 STATUS: Active
-DEPENDS_ON: 88MPH_PROTOCOL.md, REPO_HEALTH_REPORT_TEMPLATE.md
+DEPENDS_ON: 88MPH.md, REPO_HEALTH_REPORT_TEMPLATE.md
 NEEDED_BY: DOC_CLAUDE, Master Branch auditors
 MOVES_WITH: /docs/repository/health_reports/
 LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-3]
@@ -198,7 +198,7 @@ Each health report evaluates:
 
 ## 🔗 Related Tools
 
-- [88MPH_PROTOCOL.md](../librarian_tools/88MPH_PROTOCOL.md) - Assessment framework
+- [88MPH.md](../librarian_tools/88MPH.md) - Assessment framework
 - [REPO_LOG.md](/REPO_LOG.md) - Change tracking
 - [MASTER_DEPENDENCY_MAP.md](../dependency_maps/MASTER_DEPENDENCY_MAP.md) - System structure
 

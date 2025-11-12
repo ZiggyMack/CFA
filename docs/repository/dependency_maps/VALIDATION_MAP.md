@@ -1110,7 +1110,7 @@ OVERALL VALIDATION SCORE: [__/18] = ___%
 
 **Quality Standards:**
 - `/docs/repository/librarian_tools/HEADER_STANDARD.md` - Semantic header standard
-- `/docs/repository/librarian_tools/88MPH_PROTOCOL.md` - Repository assessment
+- `/docs/repository/librarian_tools/88MPH.md` - Repository assessment
 - `/auditors/protocols/VuDu_PROTOCOL.md` - Version and update protocol
 
 **State Tracking:**

@@ -21,7 +21,7 @@ LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-5]
 
 ### Core Tools
 
-#### 1. **88MPH_PROTOCOL.md**
+#### 1. **88MPH.md**
 **Purpose:** Rapid repository assessment and maintenance  
 **Time:** 8.8 minutes to operational  
 **Use Cases:**
@@ -107,7 +107,7 @@ Total: ~2 hours
 
 ### Emergency Recovery
 ```markdown
-1. Read 88MPH_PROTOCOL.md (2 min)
+1. Read 88MPH.md (2 min)
 2. Execute quick scan (3 min)
 3. Identify critical gaps (2 min)
 4. Stage fixes (varies)

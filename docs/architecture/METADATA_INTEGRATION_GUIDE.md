@@ -263,7 +263,7 @@ Is this about WHY this file exists or what ethical principles apply?
 - `/docs/AXIOMS.md` (ethical invariants source)
 - `/auditors/VUDU_PROTOCOL.md` (coordination protocol)
 - `/auditors/Bootstrap/BOOTSTRAP_CLAUDE.md` (activation protocol)
-- `/docs/repository/librarian_tools/88MPH_PROTOCOL.md` (role definitions)
+- `/docs/repository/librarian_tools/88MPH.md` (role definitions)
 - Files in `/docs/decisions/` (architectural decisions)
 
 **When to Skip:**

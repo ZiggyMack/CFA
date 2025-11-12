@@ -119,7 +119,7 @@ auditors/Bootstrap/
 ├── BOOTSTRAP_FRAMEWORK.md
 ├── BOOTSTRAP_VUDU.md
 ├── Tier1_MasterBranch/
-│   ├── 88MPH_PROTOCOL.md
+│   ├── 88MPH.md
 │   └── WAYFINDING_GUIDE.md
 ├── Tier2_SanityCheck/
 ├── Tier3_Continuation/

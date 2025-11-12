@@ -399,8 +399,8 @@ Three meta-roles solving "who watches the watchers":
 
 **TIER 2: Operational Files Updated**
 
-4. **88MPH_PROTOCOL.md** Enhancement (674→683 lines, v1.3→v1.4)
-   - `UPDATED`: /docs/repository/librarian_tools/88MPH_PROTOCOL.md (+9 lines)
+4. **88MPH.md** Enhancement (674→683 lines, v1.3→v1.4)
+   - `UPDATED`: /88MPH.md (+9 lines)
    - **Added:** "THE TRINITY ARCHITECTURE" section
      - Doc Claude's relationship to The Keeper (reports to, logs to)
      - "The Keeper is the living chronicle - not just a file, but the Claude who KNOWS the log"
@@ -502,7 +502,7 @@ Someone whose ONLY job is to KNOW the log (not write it, not maintain it, just E
 - BOOTSTRAP_REPO_LOG_CLAUDE.md: 0 → 674 lines (new file)
 - WHO_I_AM_KEEPER.md: 0 → ~900 lines (new file)
 - SOURCE_OF_TRUTH.md: 0 → ~600 lines (new file)
-- 88MPH_PROTOCOL.md: 674 → 683 lines (+9 lines)
+- 88MPH.md: 674 → 683 lines (+9 lines)
 - WHO_I_AM.md (Shaman): 685 → 710 lines (+25 lines)
 
 **Follow-up Required:** YES - Validation & Review sign-off on Trinity Architecture
@@ -939,7 +939,7 @@ Fresh Claude → Choose Guide → Process (Technical) OR Shaman (Welcoming)
 
 **Changes:**
 
-**TIER 1: 88MPH_PROTOCOL.md Cleanup**
+**TIER 1: 88MPH.md Cleanup**
 - `REMOVED`: REPO_LOG format duplication (3 instances replaced with pointers)
   - Lines 120-141: Full entry template → Quick reference + pointer to REPO_LOG.md
   - Lines 627-638: Entry ID format details → Simplified + pointer to REPO_LOG.md
@@ -1021,7 +1021,7 @@ Fresh Claude → Choose Guide → Process (Technical) OR Shaman (Welcoming)
 
 **Navigation Hall Status:** OPEN FOR BUSINESS ✅
 
-**Files Modified:** 5 files (88MPH_PROTOCOL.md, WAYFINDING_GUIDE.md [new], /docs/README.md, DASHBOARD.md, Future_Expansion.md [new])
+**Files Modified:** 5 files (88MPH.md, WAYFINDING_GUIDE.md [new], /docs/README.md, DASHBOARD.md, Future_Expansion.md [new])
 
 **Follow-up Required:** NO (Navigation Hall complete, future work documented)
 
@@ -1166,7 +1166,7 @@ Doc Claude (Wellness Runner)    ←→    Process Claude (Wellness Expert)
   - Next check schedule (monthly or after 50+ file changes)
   - Quick reference to protocol location
 
-- `UPDATED`: /docs/repository/librarian_tools/88MPH_PROTOCOL.md
+- `UPDATED`: /88MPH.md
   - Added "Related Tools & Protocols" section
   - Cross-reference to DOC_CLAUDE_WELLNESS_PROTOCOL
   - Relationship documented (wellness uses 88MPH methodology)
@@ -1191,7 +1191,7 @@ Doc Claude (Wellness Runner)    ←→    Process Claude (Wellness Expert)
 1. /docs/Validation/DOC_CLAUDE_WELLNESS_PROTOCOL.md (CREATED)
 2. /docs/Validation/README.md (comprehensive update, v1.0 → v2.0)
 3. /docs/repository/DASHBOARD.md (added wellness check section)
-4. /docs/repository/librarian_tools/88MPH_PROTOCOL.md (added related tools reference)
+4. /88MPH.md (added related tools reference)
 5. REPO_LOG.md (this entry)
 
 **Files Moved (8 reports):**
@@ -2388,7 +2388,7 @@ This audit demonstrates the value of SANITIZE Mode 1 Discovery approach. By scan
 
 **Changes:**
 - `UPDATED`: /docs/repository/librarian_tools/ROLE_SANITIZE.md - Added draft task brief generation to Mode 1
-- `UPDATED`: /docs/repository/librarian_tools/88MPH_PROTOCOL.md - Added "Doc_Claude's Many Hats" section
+- `UPDATED`: /88MPH.md - Added "Doc_Claude's Many Hats" section
 - `MOVED`: /auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/CODE_CLAUDE_OUTPUT_PROTOCOL.md → Completed/
 
 **Reason:** Ziggy requested enhancement to ROLE_SANITIZE Mode 1 to automatically generate draft Tier 4 task briefs during audits, enabling smooth discovery → implementation pipeline. Also requested integration of SANITIZE hat concept into 88MPH narrative about Doc_Claude wearing many specialized hats.
@@ -2490,7 +2490,7 @@ Added comprehensive section explaining Doc_Claude's specialized hats:
 **Integration:**
 - References TASK_BRIEF_README_AUDIT.md for audit procedures
 - References CODE_CLAUDE_OUTPUT_PROTOCOL.md for Mode 1 vs Mode 2 output standards
-- References 88MPH_PROTOCOL.md for Doc_Claude standards
+- References 88MPH.md for Doc_Claude standards
 - Enforces authority hierarchy: Bootstrap > Protocol > README
 
 **Use Case:**
@@ -2996,7 +2996,7 @@ Mission & Validation (15 files):
 - auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/: ADDITIONAL_PREP_TASKS_FOR_AUDITOR_ACTIVATION.md
 
 Librarian Tools:
-- docs/repository/librarian_tools/: 88MPH_PROTOCOL.md, HEADER_STANDARD.md
+- docs/repository/librarian_tools/: 88MPH.md, HEADER_STANDARD.md
 
 Architecture:
 - docs/architecture/: System_Design.md, MISSION_DEFAULT_BLOAT_ANALYSIS.md

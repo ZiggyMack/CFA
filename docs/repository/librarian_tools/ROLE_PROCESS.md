@@ -313,7 +313,7 @@ using the 88MPH protocol. This is a validation run after fixes were deployed.'
 
 STEP 3 - Follow the 7-step methodology:
 1. Read latest health report baseline
-2. Read 88MPH_PROTOCOL.md scoring methodology
+2. Read 88MPH.md scoring methodology
 3. Read DASHBOARD.md current claim
 4. Execute independent assessment (5 categories)
 5. Cite specific evidence for all scores
@@ -384,7 +384,7 @@ Process Claude: "Fresh Claude orientation (from WAYFINDING_GUIDE.md):
 
 STEP 1 - Choose path by role:
 - VuDu Claude → MISSION_DEFAULT.md (tier selection)
-- Doc Claude → 88MPH_PROTOCOL.md (8.8 min activation)
+- Doc Claude → 88MPH.md (8.8 min activation)
 - Review Claude → ROLE_REVIEW.md
 - Validation Claude → ROLE_VALIDATION.md
 - Process Claude → ROLE_PROCESS.md (that's me!)

@@ -99,7 +99,7 @@ docs/
     │   └── validation/        # Map verification logs
     └── librarian_tools/       # Maintenance protocols
         ├── README.md          # Tool documentation
-        ├── 88MPH_PROTOCOL.md  # Rapid assessment framework
+        ├── 88MPH.md  # Rapid assessment framework
         └── HEADER_STANDARD.md # Semantic header specifications
 ```
 
@@ -187,7 +187,7 @@ docs/
 ### Process References
 - `Process/deployment_workflow.md` - How to deploy
 - `Process/validation_process.md` - How to validate
-- `repository/librarian_tools/88MPH_PROTOCOL.md` 🆕 - How to assess
+- `repository/librarian_tools/88MPH.md` 🆕 - How to assess
 
 ### Validation References
 - `Validation/reports/` - Test results and findings
@@ -244,7 +244,7 @@ docs/
 
 **For Repository Maintenance:** 🆕
 1. `repository/health_reports/` - Current status
-2. `repository/librarian_tools/88MPH_PROTOCOL.md` - Assessment method
+2. `repository/librarian_tools/88MPH.md` - Assessment method
 3. `repository/dependency_maps/` - Impact analysis
 4. `REPO_LOG.md` - Recent changes
 

@@ -61,7 +61,7 @@ After this document: **Hierarchical resolution**
    - **Scope:** "What's the current state?"
 
 ### **Tier 3: Operational Documentation**
-5. **88MPH_PROTOCOL.md**
+5. **88MPH.md**
    - **Authority:** Doc Claude rapid activation and patrol protocols
    - **Maintained by:** Doc Claude
    - **Scope:** Documentation standards, semantic headers, logging requirements
@@ -223,7 +223,7 @@ Precedence determines which definition wins.
 ### **Example 2: Protocol Disagreement**
 
 **Conflict:**
-- 88MPH_PROTOCOL.md: "Create REPO_LOG entry format A"
+- 88MPH.md: "Create REPO_LOG entry format A"
 - ROLE_PROCESS.md: "Use REPO_LOG entry format B"
 
 **Resolution:**
