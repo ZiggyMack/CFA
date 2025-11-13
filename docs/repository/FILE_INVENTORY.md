@@ -48,7 +48,7 @@ dashboard/SMV/
 │       └── scenario_3_crux_event.json
 ```
 
-**Note:** Relocated from `ui/smv/prototype/` to `dashboard/SMV/` during Phase 1 optimization.
+**Note:** Relocated from `dashboard/SMV/` to `dashboard/SMV/` during Phase 1 optimization.
 
 ### **3. Ethics System** (2 primary files, ~500 lines)
 ```
@@ -297,7 +297,7 @@ Other:               2% (10 files)
 
 ### **Watch Areas:**
 1. `/auditors/Mission/` - Rapid evolution expected
-2. `/dashboard/SMV/` - Phase 2 automation coming (relocated from ui/smv/)
+2. `/dashboard/SMV/` - Phase 2 automation coming (relocated from dashboard/SMV/)
 3. `/docs/ethics/` - Linter may be added
 4. Bootstrap files - Need embedded data fixes (Priority 1)
 

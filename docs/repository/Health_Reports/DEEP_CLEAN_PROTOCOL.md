@@ -42,6 +42,62 @@ Doc Claude must SCAN FIRST, then compare to last report - not trust last report 
 
 ---
 
+## 🗂️ ARCHIVE FOLDER POLICY
+
+**Critical Distinction:** `.Archive/` folders contain **historical snapshots**, NOT current operational documentation.
+
+### **Scope of Deep Clean:**
+
+**✅ IN SCOPE (Current Operational Docs):**
+- `docs/` tree (all current documentation)
+- `auditors/Mission/` (current mission files)
+- `auditors/Bootstrap/` (current bootstrap sequences)
+- `auditors/relay/` (current relay coordination files)
+- `profiles/` (current worldview profiles)
+- Root files (README.md, CHANGELOG.md, REPO_LOG.md)
+
+**❌ OUT OF SCOPE (Historical Archives):**
+- `auditors/.Archive/workshop/` - Brainstorming session snapshots (v4.0.0 development history)
+- `auditors/relay/.Archive/` - Archived relay coordination files
+- `docs/repository/Health_Reports/.Archive/` - Old health reports (historical baselines)
+- Any directory named `.Archive/` or `archive/`
+
+### **Why Archives Are Excluded:**
+
+1. **Historical Integrity:** Archives preserve repository state at time of writing
+2. **Broken Link Tolerance:** Historical docs may reference old filenames (DASHBOARD.md, 88MPH_PROTOCOL.md, ui/) - this is EXPECTED
+3. **Snapshot Philosophy:** "Archives are time capsules, not living documents"
+4. **Gospel Problem Prevention:** Fixing historical docs creates false continuity (makes past appear cleaner than it was)
+
+### **Archive-Specific Validation:**
+
+**ONLY validate:**
+- ✅ Living Map #7 exists (auditors/.Archive/workshop/ARCHIVE_INDEX.md)
+- ✅ Archive index is current (lists all archived files correctly)
+- ❌ Do NOT check broken links in archived files
+- ❌ Do NOT check semantic headers in archived files
+- ❌ Do NOT update version numbers in archived files
+
+**Example:**
+```bash
+# WRONG: Finding broken links in archives
+grep -r "DASHBOARD\.md" auditors/.Archive/
+
+# RIGHT: Only scan operational docs
+grep -r "DASHBOARD\.md" docs/ README.md CHANGELOG.md
+```
+
+### **Health Scoring Clarification:**
+
+**When calculating link integrity scores:**
+- **Primary Scope (80% weight):** `docs/` tree + root files
+- **Secondary Scope (20% weight):** `auditors/Mission/` + `auditors/Bootstrap/` + `auditors/relay/` (EXCLUDING .Archive/)
+- **Excluded (0% weight):** All `.Archive/` directories
+
+**Result:** Repository can be 96/100 for operational health even if archives contain 100+ broken links (by design).
+
+---
+
 ## 📋 OBJECTIVES
 
 ### **Objective 1: Update All Documentation Maps**
@@ -67,7 +123,7 @@ Doc Claude must SCAN FIRST, then compare to last report - not trust last report 
      - `auditors/Bootstrap/Tier4_TaskSpecific/Completed/` (2 completion notes)
      - `docs/smv/` (SMV_DESIGN_SPEC.md, SMV_DATA_MAP.md, scripts/)
      - `docs/ethics/` (ETHICAL_INVARIANT_SCHEMA.md, ETHICS_FRONT_MATTER_VALIDATION.md)
-     - `ui/smv/prototype/` (React app, 27 files)
+     - `dashboard/SMV/` (React app, 27 files)
    - Deleted files:
      - `auditors/Bootstrap/Tier4_TaskSpecific/Completed/` (43 old completed tasks)
      - `relay/` (root directory - moved to auditors/relay/workshop/)

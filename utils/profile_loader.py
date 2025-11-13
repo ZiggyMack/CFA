@@ -126,7 +126,7 @@ def load_profile(worldview_name: str) -> Dict[str, Any]:
 
     return {
         "metadata": yaml_blocks.get("Metadata", {}),
-        "ypa_data": yaml_blocks.get("YPA Application Data (CFA v3.5)", {}),
+        "ypa_data": yaml_blocks.get("YPA Application Data (CFA v4.0)", {}),
         "metrics": {},  # TODO: Phase 2 - extract philosophical metrics
         "raw_content": content,
         "filepath": str(filepath),

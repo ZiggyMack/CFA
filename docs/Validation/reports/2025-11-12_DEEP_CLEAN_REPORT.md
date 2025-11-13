@@ -55,7 +55,7 @@ pages/: 1 markdown + 6 Python files
 
 **Infrastructure Verified:**
 - ✅ Mission structure: 21 files across 3 subdirectories (CFA_VUDU, Preset_Calibration, VUDU_Operations)
-- ✅ SMV Prototype: Located at `dashboard/SMV/` (moved from `ui/smv/` after C5's scan)
+- ✅ SMV Prototype: Located at `dashboard/SMV/` (moved from `dashboard/SMV/` after C5's scan)
 - ✅ Ethics system: 100% coverage (8/8 Tier-1 files)
 - ✅ Worldview profiles: All 12 found and verified
 - ✅ Living maps: BOOTSTRAP_SEQUENCE.md, WORLDVIEW_CATALOG.md both exist

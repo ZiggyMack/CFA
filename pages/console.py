@@ -1,5 +1,5 @@
 """
-CFA v3.5 - Console (FIXED VERSION)
+CFA v4.0 - Console (FIXED VERSION)
 - Per-framework preset buttons ABOVE sliders
 - Global preset buttons removed (they break when below)
 - Sidebar simplified (just Import at bottom)
@@ -103,7 +103,7 @@ def render():
     # Header
     col1, col2 = st.columns([6, 1])
     with col1:
-        st.markdown('<p style="font-size:2.5rem;font-weight:bold;color:#1f77b4;">⚖️ CFA v3.5 Console</p>', unsafe_allow_html=True)
+        st.markdown('<p style="font-size:2.5rem;font-weight:bold;color:#1f77b4;">⚖️ CFA v4.0 Console</p>', unsafe_allow_html=True)
     with col2:
         if st.button("🏠 Home"):
             st.session_state.page = 'landing'
@@ -183,7 +183,7 @@ def render():
     st.sidebar.markdown("---")
 
     # deps: preset_modes
-    # NEW v3.5: Preset Mode Spectrum
+    # NEW v4.0: Preset Mode Spectrum
     with st.sidebar.expander("🎚️ Preset Mode Spectrum", expanded=False):
         st.markdown("**Quick Configuration Profiles:**")
         st.caption("Set all toggles to match your starting epistemology")
@@ -540,7 +540,7 @@ def render():
             st.dataframe(df)
     
     # deps: preset_modes
-    # NEW v3.5: EPISTEMIC QUIZ SYSTEM
+    # NEW v4.0: EPISTEMIC QUIZ SYSTEM
     st.markdown("---")
     with st.expander("🧠 Epistemic Quiz - Find Your Starting Point", expanded=False):
         st.markdown("**Answer 5 questions to auto-detect your bias profile**")
