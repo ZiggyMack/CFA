@@ -7,7 +7,7 @@ DEPENDS_ON: MISSION_DEFAULT.md, REPO_HEALTH_DASHBOARD.md, Bootstrap files, libra
 NEEDED_BY: All auditors, especially fresh cold starts
 MOVES_WITH: /docs/
 MAINTAINED_BY: Process Claude (navigation/wayfinding SME)
-LAST_UPDATE: 2025-11-11 [Added ethics_front_matter per Nova Entry 6]
+LAST_UPDATE: 2025-11-12 [Added Signal vs Noise Archive Exemption Policy section (lines 635-658)]
 --->
 
 ---
