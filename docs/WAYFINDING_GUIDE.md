@@ -1,13 +1,13 @@
 <!---
 FILE: WAYFINDING_GUIDE.md
 PURPOSE: Repository navigation and orientation guide - your compass for the CFA codebase
-VERSION: v1.2
+VERSION: v4.0.0
 STATUS: Active
 DEPENDS_ON: MISSION_DEFAULT.md, REPO_HEALTH_DASHBOARD.md, Bootstrap files, librarian_tools/, ROLE_PROCESS.md (Process Claude is SME), training/TRAINING_GROUNDS.md
 NEEDED_BY: All auditors, especially fresh cold starts
 MOVES_WITH: /docs/
 MAINTAINED_BY: Process Claude (navigation/wayfinding SME)
-LAST_UPDATE: 2025-11-12 [Added Signal vs Noise Archive Exemption Policy section (lines 635-658)]
+LAST_UPDATE: 2025-11-13 [Added Infrastructure Quick Start section for v4.0.0 (lines 286-447) - Living Maps, Health Scoring, Gospel Problem explained]
 --->
 
 ---
@@ -280,6 +280,169 @@ CFA/ (root)
 ├── CHANGELOG.md              # Version history, major milestones
 └── README.md                 # Repository entry point
 ```
+
+---
+
+## 🏗️ "INFRASTRUCTURE QUICK START" - v4.0.0 SYSTEMS EXPLAINED
+
+**For new contributors and agents:** This section explains CFA's v4.0.0 repository infrastructure - the systems that keep this codebase healthy and navigable.
+
+### **What is the Living Map System?**
+
+**Problem it solves:** Documentation drifts from reality. READMEs claim file counts that are outdated. Dependency maps reference moved files. This is the "Gospel Problem" - embedded references becoming stale.
+
+**Solution:** 7 authoritative "Living Maps" that serve as single sources of truth:
+
+1. **[FILE_INVENTORY.md](repository/FILE_INVENTORY.md)** - Complete file catalog (~321 files)
+2. **[BOOTSTRAP_SEQUENCE.md](repository/dependency_maps/BOOTSTRAP_SEQUENCE.md)** - Canonical bootstrap paths
+3. **[REPO_HEALTH_DASHBOARD.md](repository/REPO_HEALTH_DASHBOARD.md)** - Real-time health monitoring
+4. **[WORLDVIEW_CATALOG.md](repository/dependency_maps/WORLDVIEW_CATALOG.md)** - Worldview profile list
+5. **WAYFINDING_GUIDE.md** - Repository navigation (you're reading it!)
+6. **[AUDITOR_ASSIGNMENTS.md](../auditors/AUDITOR_ASSIGNMENTS.md)** - PRO/ANTI stance assignments
+7. **[ARCHIVE_INDEX.md](../auditors/.Archive/workshop/ARCHIVE_INDEX.md)** - Brainstorming archive index
+
+**How it works:** When files move or restructure, Living Maps are updated FIRST. All other docs reference these maps, not each other. This creates a single-source-of-truth hierarchy.
+
+**For contributors:** Before embedding file counts or paths in docs, check the relevant Living Map. Link to maps, don't duplicate their data.
+
+---
+
+### **What is Repository Health Scoring?**
+
+**Purpose:** Quantify repository health using objective metrics (not vibes).
+
+**The System:** 100-point scoring across 7 categories:
+1. Documentation Coverage (15 pts) - % of files with semantic headers
+2. Link Integrity (15 pts) - % of working markdown links
+3. Living Map Freshness (15 pts) - How current are the 7 maps?
+4. Process Compliance (15 pts) - Following established protocols
+5. Repository Organization (15 pts) - Clean structure, proper archiving
+6. Dependency Accuracy (10 pts) - Dependency maps current?
+7. Version Consistency (15 pts) - Version numbers aligned?
+
+**Current Score:** 98/100 (A+) - See [REPO_HEALTH_DASHBOARD.md](repository/REPO_HEALTH_DASHBOARD.md)
+
+**Full Rubric:** [REPO_HEALTH_SCORING_RUBRIC.md](repository/REPO_HEALTH_SCORING_RUBRIC.md) (454 lines, comprehensive)
+
+**For contributors:** When making changes, consider impact on these 7 categories. Major restructuring should include a health score update.
+
+---
+
+### **What is the Gospel Problem?**
+
+**The Problem:** Traditional documentation has embedded claims that drift from reality:
+```markdown
+# Bad example
+This repository has 353 files organized into 12 directories...
+```
+
+When files are added/removed, this claim becomes false. Finding and fixing all embedded references is tedious and error-prone.
+
+**Prevention Method: "Scan-First"**
+1. **Independent scanning:** Auditors scan repository BEFORE reading previous reports
+2. **Record findings:** Whatever you discover (good or bad)
+3. **Compare to claims:** THEN check if reality matches documentation
+4. **Report variance:** If scores differ by >5 points, investigate why
+
+**Why it works:** Multiple independent auditors reaching similar conclusions (98/100, 96/100, 98/100) proves methodology prevents confirmation bias.
+
+**For contributors:** Always scan independently first. Don't assume documentation is current. Verify claims against reality.
+
+**See also:** [DEEP_CLEAN_PROTOCOL.md](repository/Health_Reports/DEEP_CLEAN_PROTOCOL.md) for full methodology
+
+---
+
+### **How Do I Maintain Living Maps?**
+
+**When to update:**
+- File moves/renames (update BOOTSTRAP_SEQUENCE.md, FILE_INVENTORY.md)
+- Worldview profiles added/changed (update WORLDVIEW_CATALOG.md)
+- Repository restructuring (update multiple maps as needed)
+- Health scoring changes (update REPO_HEALTH_DASHBOARD.md)
+- PRO/ANTI assignments change (update AUDITOR_ASSIGNMENTS.md)
+
+**Maintenance protocol:** [LIVING_MAP_MAINTENANCE.md](repository/LIVING_MAP_MAINTENANCE.md)
+
+**Process Claude oversight:** Living Map updates are Domain 1 for Process Claude - consult [ROLE_PROCESS.md](repository/librarian_tools/ROLE_PROCESS.md) if unsure.
+
+**Key principle:** Update maps IMMEDIATELY when changes occur. Don't batch updates. Fresh maps prevent Gospel Problem.
+
+---
+
+### **How Do I Run a Health Audit?**
+
+**Quick audit (5 minutes):**
+1. Click through links in README.md → Do they work?
+2. Check FILE_INVENTORY.md → Does file count feel right?
+3. Review REPO_HEALTH_DASHBOARD.md → Claims reasonable?
+
+**Full Deep Clean (2-3 hours):**
+1. Read [DEEP_CLEAN_PROTOCOL.md](repository/Health_Reports/DEEP_CLEAN_PROTOCOL.md) methodology
+2. Scan repository independently (don't read previous reports first!)
+3. Score using [REPO_HEALTH_SCORING_RUBRIC.md](repository/REPO_HEALTH_SCORING_RUBRIC.md)
+4. Compare your score to REPO_HEALTH_DASHBOARD.md claim
+5. Report findings (convergence validates methodology)
+
+**For new auditors:** Start with quick audit. Graduate to full Deep Clean after you understand the rubric.
+
+---
+
+### **Signal vs Noise: Archive Policy**
+
+**CRITICAL FOR AUDITORS:** When scanning repository, ALWAYS exclude `.Archive/` directories:
+
+```bash
+# Correct - Excludes archives
+grep -r "pattern" . | grep -v ".Archive"
+find . -name "*.md" | grep -v ".Archive"
+```
+
+**Why:** Archives contain historical snapshots (old B-STORM sessions, deprecated validation reports). Broken links are EXPECTED and TOLERATED in archives. Including them inflates broken link counts artificially.
+
+**Health scoring:**
+- **Signal (Operational docs):** docs/, profiles/, auditors/Bootstrap/, auditors/Mission/ → Score these
+- **Noise (Archives):** .Archive/ directories → Exclude from scoring
+
+**Result:** Repository scores 98/100 for operational docs, but would score 62/100 if archives included. The 36-point gap is by design.
+
+**See:** [DEEP_CLEAN_PROTOCOL.md](repository/Health_Reports/DEEP_CLEAN_PROTOCOL.md) lines 45-90 for full philosophy
+
+---
+
+### **Common Contributor Pitfalls**
+
+**❌ DON'T:**
+- Embed file counts directly in docs (use Living Maps instead)
+- Skip REPO_LOG.md coordination check before changes
+- Run scans that include .Archive/ directories
+- Assume documentation is current (scan first!)
+- Update embedded references everywhere (Gospel Problem trap)
+
+**✅ DO:**
+- Check Living Maps for current state
+- Link to maps, don't duplicate their data
+- Exclude archives from all scans
+- Log changes in REPO_LOG.md
+- Update Living Maps immediately when structure changes
+- Run independent scans before reading reports
+
+---
+
+### **Quick Reference: Infrastructure Files**
+
+| **System** | **File** | **Purpose** |
+|-----------|---------|-----------|
+| **Living Maps** | FILE_INVENTORY.md | File catalog (what exists) |
+| | BOOTSTRAP_SEQUENCE.md | Bootstrap paths |
+| | REPO_HEALTH_DASHBOARD.md | Health monitoring |
+| | WORLDVIEW_CATALOG.md | Profile list |
+| | WAYFINDING_GUIDE.md | Navigation |
+| | AUDITOR_ASSIGNMENTS.md | Stance assignments |
+| | ARCHIVE_INDEX.md | Archive catalog |
+| **Health Scoring** | REPO_HEALTH_SCORING_RUBRIC.md | Scoring methodology |
+| | DEEP_CLEAN_PROTOCOL.md | Audit procedures |
+| **Maintenance** | LIVING_MAP_MAINTENANCE.md | Update protocol |
+| | ROLE_PROCESS.md | Process oversight |
 
 ---
 

@@ -450,6 +450,66 @@ Living Map System + Health Scoring: v4.0.0
 
 ---
 
+## 🤝 For New Contributors
+
+**Welcome to CFA!** Whether you're a new AI agent joining the auditor system or a human contributor, here's how to get started:
+
+### Quick Start for AI Auditors
+
+**1. Choose your activation path:**
+- **Doc Claude (Repository Librarian):** Start with [88MPH.md](docs/repository/librarian_tools/88MPH.md) - 8.8 minute activation
+- **VuDu Claude (Mission Execution):** Start with [MISSION_DEFAULT.md](auditors/MISSION_DEFAULT.md) - Universal fallback with tier selection
+- **Other roles:** See [auditors/Bootstrap/](auditors/Bootstrap/) for role-specific bootstrap files
+
+**2. Understand the infrastructure:**
+- Read [WAYFINDING_GUIDE.md](docs/WAYFINDING_GUIDE.md) section "Infrastructure Quick Start" (lines 286-447)
+- Learn about Living Maps, Health Scoring, and Gospel Problem prevention
+- Quick tour: 5 minutes | Comprehensive: 15 minutes
+
+**3. Check current state:**
+- [REPO_HEALTH_DASHBOARD.md](docs/repository/REPO_HEALTH_DASHBOARD.md) - Current health: 98/100 (A+)
+- [REPO_LOG.md](REPO_LOG.md) - Recent changes and coordination checkpoint
+- [MISSION_CURRENT.md](auditors/MISSION_CURRENT.md) - Active mission status
+
+### How to Contribute
+
+**Before making changes:**
+1. Check [REPO_LOG.md](REPO_LOG.md) coordination checkpoint for pending work
+2. Consult relevant Living Maps for current state (see Infrastructure section above)
+3. Exclude `.Archive/` directories from all scans (archives are historical snapshots)
+
+**When making changes:**
+1. Update affected Living Maps FIRST (if structure changes)
+2. Log your changes in [REPO_LOG.md](REPO_LOG.md) (use Quick Start template)
+3. Check [DEEP_CLEAN_PROTOCOL.md](docs/repository/Health_Reports/DEEP_CLEAN_PROTOCOL.md) for validation procedures
+4. Commit with descriptive message following established patterns
+
+**Common pitfalls to avoid:**
+- ❌ Don't embed file counts directly in docs (use Living Maps instead)
+- ❌ Don't skip REPO_LOG coordination check
+- ❌ Don't include `.Archive/` in scans (inflates broken link counts)
+- ❌ Don't assume documentation is current (scan independently first)
+
+**Get help:**
+- **Technical questions:** Consult Process Claude via [ROLE_PROCESS.md](docs/repository/librarian_tools/ROLE_PROCESS.md)
+- **Navigation help:** [WAYFINDING_GUIDE.md](docs/WAYFINDING_GUIDE.md) has full navigation system
+- **Mission questions:** [MISSION_DEFAULT.md](auditors/MISSION_DEFAULT.md) for universal guidance
+
+### Key Documentation
+
+| **System** | **Documentation** | **Purpose** |
+|-----------|------------------|-----------|
+| **Living Maps** | [Repository Infrastructure](#-repository-infrastructure-v400---november-2025) | 7 authoritative maps preventing drift |
+| **Health Scoring** | [REPO_HEALTH_SCORING_RUBRIC.md](docs/repository/REPO_HEALTH_SCORING_RUBRIC.md) | 100-point scoring methodology |
+| **Gospel Problem** | [DEEP_CLEAN_PROTOCOL.md](docs/repository/Health_Reports/DEEP_CLEAN_PROTOCOL.md) | Scan-first validation procedures |
+| **Navigation** | [WAYFINDING_GUIDE.md](docs/WAYFINDING_GUIDE.md) | Complete repository navigation |
+| **Bootstrap System** | [auditors/Bootstrap/](auditors/Bootstrap/) | Tiered activation for all roles |
+| **Coordination** | [REPO_LOG.md](REPO_LOG.md) | Change tracking and coordination |
+
+**Ready to contribute?** Start with [WAYFINDING_GUIDE.md](docs/WAYFINDING_GUIDE.md) → Infrastructure Quick Start section → Choose your activation path!
+
+---
+
 ## 📞 Contact
 
 - **GitHub**: [Repository link]
