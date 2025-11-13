@@ -42,7 +42,7 @@ Every file gets a lightweight semantic header that answers:
 <!---
 FILE: BOOTSTRAP_DOC_CLAUDE.md
 PURPOSE: DOC_CLAUDE's identity and teleological lens definition
-VERSION: v3.5.2
+VERSION: v4.0.0
 STATUS: Active
 DEPENDS_ON: BOOTSTRAP_FRAMEWORK.md, BOOTSTRAP_VUDU.md
 NEEDED_BY: README_C.md, MISSION_CURRENT.md, Any Claude instance
@@ -59,7 +59,7 @@ LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-11]
 """
 FILE: calculations.py
 PURPOSE: YPA calculation engine and framework scoring
-VERSION: v3.5
+VERSION: v4.0
 STATUS: Active
 DEPENDS_ON: config.py, numpy, pandas
 NEEDED_BY: app.py, console.py, all framework analysis
