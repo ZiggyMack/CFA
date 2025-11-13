@@ -52,7 +52,7 @@ profile:
 
 ---
 
-## YPA Application Data (CFA v3.5)
+## YPA Application Data (CFA v4.0)
 
 **Purpose:** This section documents the current YPA (Yield-Per-Axiom) lever values used by the CFA application. These values represent the *output* of philosophical deliberation and will eventually be derived from the foundational metrics below through a mapping layer.
 
