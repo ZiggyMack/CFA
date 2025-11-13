@@ -147,6 +147,111 @@ grep -r "DASHBOARD\.md" docs/ README.md CHANGELOG.md
 
 ---
 
+## 🔗 BROKEN LINK DETECTION (Working Implementation)
+
+**CRITICAL:** Use this exact methodology to avoid false positives.
+
+### **What IS a Broken Link:**
+
+A broken link is a markdown reference `[text](path/file.md)` where the target file **does not exist**.
+
+**Example of REAL broken link:**
+```markdown
+See [Missing File](docs/nonexistent.md) for details.
+```
+Where `docs/nonexistent.md` actually doesn't exist.
+
+### **What IS NOT a Broken Link:**
+
+1. **Text mentioning a filename** (not a link):
+   ```markdown
+   We fixed 94 DASHBOARD.md references.
+   ```
+   This is documentation ABOUT fixes, not a broken link.
+
+2. **Documentation of historical state**:
+   ```markdown
+   Historical docs may reference old filenames (DASHBOARD.md, ui/)
+   ```
+   This describes what archives contain, not a link.
+
+3. **Code examples or command examples**:
+   ```markdown
+   grep -r "DASHBOARD\.md" docs/
+   ```
+   This is a command example, not a link.
+
+### **Correct Detection Method:**
+
+**Step 1: Extract actual markdown links (with link syntax)**
+```bash
+# Extract ALL markdown links from operational docs
+grep -roh '\[.*\](.*\.md)' docs/ README.md CHANGELOG.md auditors/Mission/ auditors/Bootstrap/ auditors/relay/ 2>/dev/null | grep -v ".Archive" > /tmp/all_links.txt
+```
+
+**Step 2: Parse link targets and check existence**
+```bash
+# For each link, extract the path and check if file exists
+while IFS= read -r line; do
+    # Extract path from [text](path)
+    path=$(echo "$line" | sed 's/.*](\(.*\))/\1/')
+
+    # Skip external links (http://, https://)
+    if [[ "$path" == http* ]]; then
+        continue
+    fi
+
+    # Check if file exists (handle relative paths)
+    if [[ ! -f "$path" ]] && [[ ! -f "docs/$path" ]] && [[ ! -f "auditors/$path" ]]; then
+        echo "BROKEN: $line"
+    fi
+done < /tmp/all_links.txt
+```
+
+**Step 3: Manual verification of reported broken links**
+
+Because path resolution can be tricky (relative vs absolute), ALWAYS manually verify a sample:
+- Check if the file exists at the claimed path
+- Check if the link works when clicked in VS Code or GitHub
+- If link works but script reports broken, it's a path resolution issue (not actually broken)
+
+### **Simple Alternative: Manual Spot Check**
+
+**For quick validation audits:**
+
+1. **Click through critical README links** - Do they work in VS Code?
+2. **Check living map links** - Do the 7 living maps have working cross-references?
+3. **Test key navigation paths** - Can you bootstrap a new Claude from WAYFINDING_GUIDE.md?
+
+**If navigation works, link integrity is GOOD** (even if automated tools report false positives).
+
+### **Common False Positives to Ignore:**
+
+1. **Filenames in text without link syntax:**
+   - "Fixed DASHBOARD.md" ✅ IGNORE (not a link)
+   - "[Dashboard](DASHBOARD.md)" ❌ CHECK (is a link)
+
+2. **Archive policy documentation:**
+   - Text explaining what archives contain ✅ IGNORE
+   - Actual links to archive files ❌ CHECK
+
+3. **Historical commit messages or reports:**
+   - Past descriptions of fixes ✅ IGNORE
+   - Current references claiming files exist ❌ CHECK
+
+### **Expected Results for v4.0.0:**
+
+**Operational docs (docs/, README.md, CHANGELOG.md):**
+- Expected broken links: **0-2** (if any exist, they're real issues)
+- False positives from text mentions: **~3-5** (IGNORE these)
+
+**If automated tool reports 200+ broken links:**
+- It's counting text mentions, not actual link syntax
+- Use manual spot check instead
+- Fix the detection script, not the docs
+
+---
+
 ## 📋 OBJECTIVES
 
 ### **Objective 1: Update All Documentation Maps**
