@@ -25,7 +25,9 @@
       "Bash(do sed -i 's/VERSION: v3\\.7\\.2/VERSION: v4.0.0/g' \"$file\")",
       "Bash(done)",
       "Bash(for file in auditors/Mission/Preset_Calibration/*.md)",
-      "Bash(do sed -i 's/VERSION: v3\\.5\\.1/VERSION: v4.0.0/g; s/VERSION: v3\\.5/VERSION: v4.0.0/g' \"$file\")"
+      "Bash(do sed -i 's/VERSION: v3\\.5\\.1/VERSION: v4.0.0/g; s/VERSION: v3\\.5/VERSION: v4.0.0/g' \"$file\")",
+      "Bash(versioning creates cognitive load. Start unified. Split only when)",
+      "Bash(independence is proven necessary.\"\n\nPost-Fix Expected Metrics:\n- Version Consistency: 100% (all files v4.0.0)\n- Repository Health: 96-98/100 (A/A+)\n- Link Integrity: 100% (0 broken links in operational docs)\n- Living Maps: 7/7 accurate and current\n- Unified Release: ✅ COMPLETE\n\nStatus: v4.0.0 TRULY READY for final validation\n\n🚀 Generated with Claude Code (Process Claude C4 + Shaman Claude)\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []
