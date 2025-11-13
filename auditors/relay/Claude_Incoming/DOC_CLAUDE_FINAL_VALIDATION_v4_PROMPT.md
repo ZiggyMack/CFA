@@ -53,24 +53,33 @@ Read [docs/repository/REPO_HEALTH_SCORING_RUBRIC.md](../../docs/repository/REPO_
 
 ### **2. Broken Link Hunt**
 
-**Search for common broken link patterns:**
+**CRITICAL: EXCLUDE .Archive folders - they are historical snapshots!**
+
+**Search for common broken link patterns IN OPERATIONAL DOCS ONLY:**
 
 ```bash
 # DASHBOARD.md references (should all be REPO_HEALTH_DASHBOARD.md now)
-grep -r "DASHBOARD\.md" docs/ | grep -v "REPO_HEALTH_DASHBOARD.md"
+# ONLY scan docs/ and root files (EXCLUDE .Archive/)
+grep -r "DASHBOARD\.md" docs/ README.md CHANGELOG.md | grep -v "REPO_HEALTH_DASHBOARD.md" | grep -v ".Archive"
 
 # 88MPH_PROTOCOL.md references (should all be 88MPH.md now)
-grep -r "88MPH_PROTOCOL\.md" docs/
+grep -r "88MPH_PROTOCOL\.md" docs/ README.md CHANGELOG.md | grep -v ".Archive"
 
 # ui/ directory references (should all be dashboard/ now)
-grep -r "ui/" . --include="*.md" | grep -v ".git"
+grep -r "ui/" docs/ README.md CHANGELOG.md --include="*.md" | grep -v ".Archive" | grep -v "ui/ux"
 
 # ROLE_DOC_CLAUDE.md references (this file doesn't exist)
-grep -r "ROLE_DOC_CLAUDE\.md" docs/
+grep -r "ROLE_DOC_CLAUDE\.md" docs/ | grep -v ".Archive"
 ```
 
-**Expected result:** 0 broken links found
-**If you find any:** Report them with file paths and line numbers
+**Why exclude .Archive/?**
+- Archives are **historical snapshots** (preserved with original broken links)
+- They document the JOURNEY to v4.0.0 (not current operational state)
+- Broken links in archives are EXPECTED (show what refs existed at that time)
+- See: [DEEP_CLEAN_PROTOCOL.md - Archive Folder Policy](../../docs/repository/Health_Reports/DEEP_CLEAN_PROTOCOL.md#archive-folder-policy)
+
+**Expected result:** 0 broken links found in operational docs
+**If you find any:** Report them with file paths (but ignore if they're in .Archive/)
 
 ### **3. Living Map Accuracy Check**
 
@@ -82,9 +91,11 @@ The repository claims **7 living maps** are current and accurate. Verify each on
 4. **WORLDVIEW_CATALOG.md** - Does it list 12 worldview profiles? Do they all exist in profiles/worldviews/?
 5. **WAYFINDING_GUIDE.md** - Do all navigation paths point to existing files?
 6. **AUDITOR_ASSIGNMENTS.md** - Are PRO/ANTI/FAIRNESS assignments clear?
-7. **auditors/.Archive/workshop/ARCHIVE_INDEX.md** - Does it index 21 files? Are they all present?
+7. **auditors/.Archive/workshop/ARCHIVE_INDEX.md** - Does it exist? Does it index 19 files (~628KB)?
 
 **For each map:** Report if current ✅ or if you find drift ❌
+
+**Note:** Living Map #7 (ARCHIVE_INDEX.md) indexes historical brainstorming files. Don't check for broken links INSIDE those archived files - they're historical snapshots.
 
 ### **4. Version Consistency Check**
 
