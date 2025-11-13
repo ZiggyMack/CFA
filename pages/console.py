@@ -350,12 +350,12 @@ def render():
         st.markdown("---")
         
         # SLIDERS
-        fa_cci = st.slider("CCI - Coherence & Closure", 0.0, 10.0, value=st.session_state["fa_cci"], step=0.1, key="fa_cci")
-        fa_edb = st.slider("EDB - Explanatory Depth & Breadth", 0.0, 10.0, value=st.session_state["fa_edb"], step=0.1, key="fa_edb")
-        fa_pf_i = st.slider("PF-Instrumental", 0.0, 10.0, value=st.session_state["fa_pfi"], step=0.1, key="fa_pfi")
-        fa_pf_e = st.slider("PF-Existential", 0.0, 10.0, value=st.session_state["fa_pfe"], step=0.1, key="fa_pfe")
-        fa_ar = st.slider("AR - Aesthetic Resonance", 0.0, 10.0, value=st.session_state["fa_ar"], step=0.1, key="fa_ar")
-        fa_mg = st.slider("MG - Moral Generativity", 0.0, 10.0, value=st.session_state["fa_mg"], step=0.1, key="fa_mg")
+        fa_cci = st.slider("CCI - Coherence & Closure", 0.0, 10.0, step=0.1, key="fa_cci")
+        fa_edb = st.slider("EDB - Explanatory Depth & Breadth", 0.0, 10.0, step=0.1, key="fa_edb")
+        fa_pf_i = st.slider("PF-Instrumental", 0.0, 10.0, step=0.1, key="fa_pfi")
+        fa_pf_e = st.slider("PF-Existential", 0.0, 10.0, step=0.1, key="fa_pfe")
+        fa_ar = st.slider("AR - Aesthetic Resonance", 0.0, 10.0, step=0.1, key="fa_ar")
+        fa_mg = st.slider("MG - Moral Generativity", 0.0, 10.0, step=0.1, key="fa_mg")
 
         fa = {
             "name": fa_name,
@@ -421,12 +421,12 @@ def render():
         st.markdown("---")
         
         # SLIDERS
-        fb_cci = st.slider("CCI - Coherence & Closure", 0.0, 10.0, value=st.session_state["fb_cci"], step=0.1, key="fb_cci")
-        fb_edb = st.slider("EDB - Explanatory Depth & Breadth", 0.0, 10.0, value=st.session_state["fb_edb"], step=0.1, key="fb_edb")
-        fb_pf_i = st.slider("PF-Instrumental", 0.0, 10.0, value=st.session_state["fb_pfi"], step=0.1, key="fb_pfi")
-        fb_pf_e = st.slider("PF-Existential", 0.0, 10.0, value=st.session_state["fb_pfe"], step=0.1, key="fb_pfe")
-        fb_ar = st.slider("AR - Aesthetic Resonance", 0.0, 10.0, value=st.session_state["fb_ar"], step=0.1, key="fb_ar")
-        fb_mg = st.slider("MG - Moral Generativity", 0.0, 10.0, value=st.session_state["fb_mg"], step=0.1, key="fb_mg")
+        fb_cci = st.slider("CCI - Coherence & Closure", 0.0, 10.0, step=0.1, key="fb_cci")
+        fb_edb = st.slider("EDB - Explanatory Depth & Breadth", 0.0, 10.0, step=0.1, key="fb_edb")
+        fb_pf_i = st.slider("PF-Instrumental", 0.0, 10.0, step=0.1, key="fb_pfi")
+        fb_pf_e = st.slider("PF-Existential", 0.0, 10.0, step=0.1, key="fb_pfe")
+        fb_ar = st.slider("AR - Aesthetic Resonance", 0.0, 10.0, step=0.1, key="fb_ar")
+        fb_mg = st.slider("MG - Moral Generativity", 0.0, 10.0, step=0.1, key="fb_mg")
 
         fb = {
             "name": fb_name,
