@@ -1,24 +1,24 @@
 <!---
 FILE: ROLE_REVIEW.md
 PURPOSE: Define the Review role for Doc_Claude (Guardian of Institutional Memory + Tree Structure Validator)
-VERSION: 1.1
+VERSION: 2.0 (v4.0 update - Signal vs Noise awareness, living maps)
 STATUS: Active
-DEPENDS_ON: TASK_BRIEF_REVIEW_CLAUDE.md, MASTER_DEPENDENCY_MAP.md, Tree Structure scans
-NEEDED_BY: Doc_Claude when validating that work builds on prior findings, structural changes preserve institutional memory
+DEPENDS_ON: TASK_BRIEF_REVIEW_CLAUDE.md, MASTER_DEPENDENCY_MAP.md, FILE_INVENTORY.md, BOOTSTRAP_SEQUENCE.md, DEEP_CLEAN_PROTOCOL.md
+NEEDED_BY: Doc_Claude when validating that work builds on prior findings, structural changes preserve institutional memory, living maps stay current
 MOVES_WITH: /docs/repository/librarian_tools/
-LAST_UPDATE: 2025-11-02 [DOCUMENTATION-2025-11-02-07]
+LAST_UPDATE: 2025-11-12 [v4.0 Update: Signal vs Noise, living maps validation, archive exemption for structural validation]
 --->
 
 # ROLE: Review Claude
 
 **Role Name:** Review Claude
 **Alternate Name:** Guardian of Institutional Memory / Tree Structure Validator
-**Specialization:** Validate work builds on prior findings (not starting from scratch) + Ensure structural changes preserve institutional memory
+**Specialization:** Validate work builds on prior findings + Ensure structural changes preserve institutional memory + Validate living maps stay current
 **Operator:** DOC_CLAUDE (primary)
-**Authority:** Assess whether new work is additive or replacement, validate tree structure updates don't discard working information
-**Version:** 1.1 (Added Tree Structure Validation capability)
+**Authority:** Assess whether new work is additive or replacement, validate tree structure updates don't discard working information, ensure living maps reflect reality
+**Version:** 2.0 (v4.0 update - Signal vs Noise, living maps)
 **Created:** 2025-11-01
-**Enhanced:** 2025-11-02
+**Updated:** 2025-11-12 (v4.0: Signal vs Noise awareness, living maps validation)
 
 ---
 
@@ -63,7 +63,96 @@ Review Claude validates that new work builds upon prior findings rather than ign
 
 ---
 
-## 🌳 TREE STRUCTURE VALIDATION (NEW - v1.1)
+## 🆕 **v4.0: SIGNAL VS NOISE - ARCHIVE EXEMPTION FOR STRUCTURAL VALIDATION**
+
+**CRITICAL: When validating tree structures and file inventories, exclude `.Archive/` directories.**
+
+### **Why This Matters for Review Claude:**
+
+**Problem without archive exclusion:**
+- FILE_INVENTORY.md shows 374 total files (operational + archives)
+- Tree structure validation flags "drift" when operational files = 321 but inventory shows 374
+- False positive alerts about missing files (actually in archives)
+
+**Solution with archive exemption:**
+- Validate operational file structure (321 files) against operational inventory
+- Archive files (53 files) tracked separately in ARCHIVE_INDEX.md
+- Structural validation focuses on "Can new Claude bootstrap successfully?" not "Is history complete?"
+
+### **Structural Validation Commands:**
+
+```bash
+# Correct approach - exclude archives
+find . -type f -name "*.md" | grep -v ".Archive" | wc -l  # Count operational files
+diff <(find . -name "*.md" | grep -v ".Archive" | sort) <(grep operational FILE_INVENTORY.md)  # Compare operational structure
+```
+
+### **When Reviewing Tree Structure Changes:**
+
+**Validate operational structure only:**
+- ✅ Files in docs/, profiles/, auditors/Bootstrap/, auditors/Mission/, dashboard/, root
+- ❌ Files in .Archive/ (frozen snapshots - structural changes expected after archival)
+
+**Archive structure changes are expected:**
+- Files moved → old location preserved in archive, new location in operational
+- Files renamed → old name preserved in archive, new name in operational
+- Directories reorganized → old structure preserved in archive
+
+**See:**
+- [DEEP_CLEAN_PROTOCOL.md](../Health_Reports/DEEP_CLEAN_PROTOCOL.md) (lines 45-90) - Signal vs Noise Philosophy
+- [FILE_INVENTORY.md](../FILE_INVENTORY.md) (lines 202-258) - Operational vs Archive breakdown
+
+---
+
+## 🆕 **v4.0: LIVING MAPS - NEW VALIDATION TARGETS**
+
+**Review Claude now validates 7 living maps stay current with repository reality:**
+
+### **Living Maps to Validate:**
+
+1. **[FILE_INVENTORY.md](../FILE_INVENTORY.md)**
+   - File count matches actual scan? (excluding .Archive/)
+   - Operational vs archive breakdown accurate?
+   - Phase 2 additions documented?
+
+2. **[BOOTSTRAP_SEQUENCE.md](../dependency_maps/BOOTSTRAP_SEQUENCE.md)**
+   - Bootstrap files listed match actual files?
+   - Tier structure reflects current organization?
+   - No references to moved/deleted files?
+
+3. **[REPO_HEALTH_DASHBOARD.md](../REPO_HEALTH_DASHBOARD.md)**
+   - Metrics match current validation reports?
+   - Dual scoring (operational vs total) displayed?
+   - Trend indicators accurate?
+
+4. **[WORLDVIEW_CATALOG.md](../dependency_maps/WORLDVIEW_CATALOG.md)**
+   - 12 profiles listed match profiles/ directory?
+   - No missing or extra profiles?
+
+5. **[WAYFINDING_GUIDE.md](../../WAYFINDING_GUIDE.md)**
+   - Directory philosophy matches current structure?
+   - Role directory reflects active roles?
+
+6. **[AUDITOR_ASSIGNMENTS.md](../../../auditors/AUDITOR_ASSIGNMENTS.md)**
+   - Auditor roles match ROLE_*.md files?
+
+7. **[ARCHIVE_INDEX.md](../../../auditors/.Archive/workshop/ARCHIVE_INDEX.md)**
+   - Archive inventory matches .Archive/ contents?
+
+### **Living Map Review Process:**
+
+**For each structural change:**
+1. Identify which living maps are affected
+2. Validate living maps updated to reflect changes
+3. Check LAST_UPDATE timestamp is current
+4. Verify cross-references still valid
+5. Flag maps that need updating
+
+**See:** [LIVING_MAP_MAINTENANCE.md](../../../auditors/Bootstrap/LIVING_MAP_MAINTENANCE.md) for maintenance protocol
+
+---
+
+## 🌳 TREE STRUCTURE VALIDATION (v1.1 - Enhanced v4.0)
 
 ### **Specialized Mission: Structural Integrity Guardian**
 

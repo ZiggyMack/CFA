@@ -16,13 +16,15 @@
 ### **1. CFA Mission Structure** (6 files, ~1,600 lines)
 ```
 auditors/Mission/CFA_VUDU/
-├── MISSION_BRIEF.md           (Mission context and objectives)
-├── CT_vs_MdN.yaml             (Worldview comparison data)
-├── PILOT_CT_vs_MdN_Re-Audit.md (Moved from Tier4)
-├── CFA_ARCHITECTURE.md        (Architectural documentation)
-├── VUDU_CFA.md               (VUDU protocol for CFA)
-└── Future_Expansion.md        (Roadmap and priorities)
+├── MISSION_BRIEF.md                    (Mission context and objectives)
+├── PILOT_CT_vs_MdN_Re-Audit.md        (Pilot doctrine for CT vs MdN audit)
+├── SUCCESS_CRITERIA.md                 (Mission success criteria)
+├── GROK_BRIEFING.md                    (Grok activation briefing)
+├── TASK_BRIEF_AXIOMS_REVIEW_GROK.md   (Grok axioms review task)
+└── TASK_BRIEF_AXIOMS_REVIEW_NOVA.md   (Nova axioms review task)
 ```
+
+**Note:** CFA_ARCHITECTURE.md and Future_Expansion.md are located in `docs/architecture/`, not in Mission directory.
 
 ### **2. SMV Prototype** (17 files, ~1,500 lines) **Updated Location**
 ```
@@ -154,7 +156,14 @@ docs/
 ├── smv/ (4 files + mockups)
 ├── Validation/
 │   └── reports/ (14 validation reports)
-├── architecture/
+├── architecture/ (9 files)
+│   ├── CFA_ARCHITECTURE.md (system architecture)
+│   ├── Future_Expansion.md (roadmap & missing rooms)
+│   ├── TRINITY_ARCHITECTURE.md (3-auditor system)
+│   ├── INNOVATION_SHOWCASE.md (case studies gallery)
+│   ├── BOOTSTRAP_ARCHITECTURE_LITE_VS_RICH.md
+│   ├── METADATA_INTEGRATION_GUIDE.md
+│   └── [3 more architecture docs]
 └── Process/
 ```
 
@@ -196,6 +205,66 @@ profiles/
 
 ### **Standardized Archives:**
 All archive folders renamed from `~Archive/` to `.Archive/`
+
+---
+
+## 🔍 SIGNAL VS NOISE - OPERATIONAL VS ARCHIVE BREAKDOWN
+
+### **Philosophy:**
+Health metrics measure **operational readiness** (Can new Claude bootstrap successfully?), not historical completeness.
+
+### **File Count Distribution:**
+
+**Operational Files (Signal - Counted in Health Metrics): ~321 files**
+```
+docs/                  ~60 files (documentation, validation reports, architecture)
+profiles/              12 files (worldview profiles)
+auditors/Bootstrap/    ~35 files (bootstrap system, tiers)
+auditors/Mission/      ~25 files (CFA_VUDU, active missions)
+auditors/relay/        ~15 files (coordination, workshop - not .Archive)
+dashboard/SMV/         17 files (running application)
+utils/                 ~14 files (Python utilities)
+pages/                 ~8 files (web pages)
+Root files             ~15 files (REPO_LOG, CHANGELOG, README, etc.)
+───────────────────────────────
+OPERATIONAL TOTAL:     ~321 files
+```
+
+**Archive Files (Noise - Excluded from Health Metrics): ~53 files**
+```
+.Archive/ directories contain:
+- Historical B-STORM sessions (workshop snapshots)
+- Deprecated validation reports (old health assessments)
+- Completed task briefs (archived after execution)
+- Superseded bootstrap files (previous versions)
+- Old mission files (phased out structures)
+───────────────────────────────
+ARCHIVE TOTAL:         ~53 files
+```
+
+### **Total Repository: ~374 files (321 operational + 53 archived)**
+
+### **Why This Distinction Matters:**
+
+**Operational files (321):**
+- Must maintain 100% link integrity (0 broken links target)
+- Counted in health scoring (current: 96/100)
+- Subject to version consistency checks
+- Must follow current header standards
+- Updated when processes change
+
+**Archive files (53):**
+- Broken links tolerated (files moved after archival)
+- Excluded from health scoring (0% weight)
+- Version references frozen at time of archival
+- Headers preserved as historical artifacts
+- NOT updated retroactively (Gospel Problem prevention)
+
+**Result:** Repository can achieve 96/100 health score even with 100+ broken links in archives (by design).
+
+**See also:**
+- [REPO_HEALTH_DASHBOARD.md](REPO_HEALTH_DASHBOARD.md) (lines 33-38) - Dual scoring: 96/100 operational vs 62/100 total
+- [DEEP_CLEAN_PROTOCOL.md](Health_Reports/DEEP_CLEAN_PROTOCOL.md) (lines 45-90) - Full Signal vs Noise Philosophy
 
 ---
 

@@ -10,21 +10,36 @@
 
 ## 🎯 QUICK STATUS
 
-### Overall Health: 96/100 🟢
+### Operational Health: 96/100 🟢
+**Measures:** Can new Claude bootstrap successfully?
 
 ```
 Documentation    ████████████████████░ 95%
-Structure        ████████████████████░ 98%  
+Structure        ████████████████████░ 98%
 Navigation       ████████████████████░ 92%
 Processes        ████████████████████░ 94%
 Recovery         ████████████████████████ 100%
 ────────────────────────────────────────────
-OVERALL:         ████████████████████░ 96/100
+OPERATIONAL:     ████████████████████░ 96/100
 ```
 
-**Status:** 🟢 GREEN - Repository highly operational  
-**Trajectory:** Phase 2 infrastructure successfully integrated  
-**Next Target:** 98/100 for v4.0 readiness
+### Total Repository Health: 62/100 🟡
+**Includes:** Archives with 100+ broken links (historical snapshots)
+
+**Difference:** 34 points from archive exemption (by design)
+
+---
+
+### Signal vs Noise Philosophy
+
+**What the scores mean:**
+- **Operational Health (96/100)**: Measures readiness for new Claude instances. Excludes `.Archive/` directories from all metrics (broken links, file counts, header coverage, etc.). This is the score that matters for repository health.
+- **Total Health (62/100)**: Includes everything (operational + historical archives). Lower score due to 100+ broken links in archives where files have moved/been renamed over time.
+- **34-Point Gap**: This variance is by design. Archives preserve development history including broken links - we don't retroactively fix historical snapshots to maintain Gospel Problem discipline.
+
+**Status:** 🟢 GREEN - Repository highly operational
+**Trajectory:** Phase 2 infrastructure successfully integrated
+**Next Target:** 98/100 operational health for v4.0 readiness
 
 ---
 

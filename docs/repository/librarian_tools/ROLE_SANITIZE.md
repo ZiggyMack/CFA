@@ -1,12 +1,12 @@
 <!---
 FILE: ROLE_SANITIZE.md
 PURPOSE: Define the Sanitize role for maintaining README descriptive standards and protocol hierarchy
-VERSION: 1.0
+VERSION: 2.0 (v4.0 update - Signal vs Noise awareness)
 STATUS: Active
-DEPENDS_ON: 88MPH.md, CODE_CLAUDE_OUTPUT_PROTOCOL.md, TASK_BRIEF_README_AUDIT.md
+DEPENDS_ON: 88MPH.md, CODE_CLAUDE_OUTPUT_PROTOCOL.md, TASK_BRIEF_README_AUDIT.md, DEEP_CLEAN_PROTOCOL.md, BOOTSTRAP_SEQUENCE.md
 NEEDED_BY: Doc_Claude, Code Claude performing README audits or sanitization
 MOVES_WITH: /docs/repository/librarian_tools/
-LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-19]
+LAST_UPDATE: 2025-11-12 [v4.0 Update: Signal vs Noise, living maps, archive exclusion]
 --->
 
 # ROLE: Sanitize
@@ -14,9 +14,10 @@ LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-19]
 **Role Name:** Sanitize
 **Specialization:** README Audit & Protocol Hierarchy Enforcement
 **Operator:** DOC_CLAUDE (audit mode), CODE_CLAUDE (implementation mode)
-**Authority:** 88MPH.md + CODE_CLAUDE_OUTPUT_PROTOCOL.md
-**Version:** 1.0
+**Authority:** 88MPH.md + CODE_CLAUDE_OUTPUT_PROTOCOL.md + DEEP_CLEAN_PROTOCOL.md
+**Version:** 2.0 (v4.0 update)
 **Created:** 2025-11-01
+**Updated:** 2025-11-12 (v4.0: Signal vs Noise, living maps, archive exclusion)
 
 ---
 
@@ -66,6 +67,54 @@ This role ensures READMEs remain **descriptive** (WHAT) rather than **prescripti
 
 READMEs MUST point to bootstrap/protocol files, NOT duplicate them.
 ```
+
+### **🆕 v4.0: Signal vs Noise - Archive Exclusion Policy**
+
+**CRITICAL: When performing README audits, ALWAYS exclude `.Archive/` directories from all scans.**
+
+**Why this matters:**
+- **Signal (Audit scope)**: Operational READMEs in docs/, profiles/, auditors/Bootstrap/, auditors/Mission/, dashboard/, root directories
+- **Noise (Excluded from audits)**: Historical READMEs in `.Archive/` directories - preserved as historical snapshots, not subject to current standards
+
+**Search commands MUST exclude archives:**
+```bash
+# Correct approach for README scanning
+find . -name "README*.md" | grep -v ".Archive"
+grep -r "prescriptive pattern" . --include="*.md" | grep -v ".Archive"
+```
+
+**Archive READMEs are exempt from:**
+- Prescriptive/descriptive audits (frozen at time of archival)
+- Authority hierarchy enforcement (may reference moved/deleted files)
+- Current bootstrap standards (represent past workflow states)
+- Sanitization recommendations (Gospel Problem prevention - don't fix history)
+
+**Result:** Repository can have prescriptive READMEs in archives without impacting health score. Sanitize Claude only fixes operational READMEs.
+
+**See also:**
+- [DEEP_CLEAN_PROTOCOL.md](../Health_Reports/DEEP_CLEAN_PROTOCOL.md) (lines 45-90) - Full Signal vs Noise Philosophy
+- [WAYFINDING_GUIDE.md](../../WAYFINDING_GUIDE.md) (lines 635-658) - Archive exemption warning
+
+---
+
+### **🆕 v4.0: Living Maps Reference**
+
+**Bootstrap files have been systematized into living maps:**
+
+**7 Living Maps (created after 2025-11-01):**
+1. [FILE_INVENTORY.md](../FILE_INVENTORY.md) - File count and structure
+2. [BOOTSTRAP_SEQUENCE.md](../dependency_maps/BOOTSTRAP_SEQUENCE.md) - Bootstrap tier system
+3. [REPO_HEALTH_DASHBOARD.md](../REPO_HEALTH_DASHBOARD.md) - Health metrics
+4. [WORLDVIEW_CATALOG.md](../dependency_maps/WORLDVIEW_CATALOG.md) - Profile inventory
+5. [WAYFINDING_GUIDE.md](../../WAYFINDING_GUIDE.md) - Navigation guide
+6. [AUDITOR_ASSIGNMENTS.md](../../../auditors/AUDITOR_ASSIGNMENTS.md) - Auditor roles
+7. [ARCHIVE_INDEX.md](../../../auditors/.Archive/workshop/ARCHIVE_INDEX.md) - Archive inventory
+
+**When auditing READMEs, check if they reference living maps instead of embedding data:**
+- ❌ BAD: README embeds bootstrap sequence (Steps 1-5 listed)
+- ✅ GOOD: README points to BOOTSTRAP_SEQUENCE.md for procedures
+
+---
 
 ### **When to Activate This Role**
 
@@ -459,6 +508,8 @@ AFTER:
 **Before starting audit:**
 - [ ] Understand prescriptive vs descriptive distinction
 - [ ] Know the hierarchy (Bootstrap > Protocol > README)
+- [ ] 🆕 Understand Signal vs Noise (exclude .Archive/ from all scans)
+- [ ] 🆕 Verify search commands include `| grep -v ".Archive"`
 - [ ] Have examples of good/bad patterns in mind
 - [ ] Ready to document findings thoroughly
 - [ ] Confirmed this is Mode 1 (analysis only)

@@ -632,6 +632,32 @@ Tier 4 (Task Specific):
 
 ---
 
+### **⚠️ CRITICAL: Signal vs Noise - Archive Exemption Policy**
+
+**When searching, counting files, checking links, or running any scan:**
+
+**ALWAYS exclude `.Archive/` directories from your searches:**
+```bash
+# Correct approach
+grep -r "pattern" . | grep -v ".Archive"
+find . -name "*.md" | grep -v ".Archive"
+```
+
+**Why this matters:**
+- **Signal (Operational docs)**: docs/, profiles/, auditors/Bootstrap/, auditors/Mission/, dashboard/, root files - what new Claudes need to bootstrap successfully
+- **Noise (Historical archives)**: `.Archive/` directories contain historical snapshots, deprecated B-STORM sessions, old validation reports - broken links expected and tolerated
+
+**Health metrics measure operational readiness, not historical completeness:**
+- Including archives in scans inflates broken link counts (100+ broken links in historical snapshots where files have moved)
+- Repository health: 96/100 (operational docs) vs 62/100 (total including archives) - 34-point gap is by design
+- We don't retroactively fix historical snapshots (Gospel Problem prevention)
+
+**See also:**
+- [DEEP_CLEAN_PROTOCOL.md](repository/Health_Reports/DEEP_CLEAN_PROTOCOL.md) (lines 45-90) - Full Signal vs Noise Philosophy + search exclusion guidance
+- [REPO_HEALTH_DASHBOARD.md](repository/REPO_HEALTH_DASHBOARD.md) (lines 33-38) - Dual scoring display explaining 34-point variance
+
+---
+
 ## 🎓 "LEVEL UP" - PROGRESSIVE LEARNING PATHS
 
 **🆕 Comprehensive Skill Paths Available:**

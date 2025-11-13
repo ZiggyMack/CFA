@@ -77,6 +77,18 @@ Doc Claude must SCAN FIRST, then compare to last report - not trust last report 
 - Archives preserve truth about development journey (including broken links from file moves)
 - Health scoring focuses on "Can new Claude bootstrap successfully?" not "Is history perfect?"
 
+### **🚫 CRITICAL: Exclude Archives from All Searches**
+
+**When running scans (grep, find, link checks, file counts):**
+```bash
+# ALWAYS exclude .Archive/ directories
+grep -r "pattern" . | grep -v ".Archive"
+find . -name "*.md" | grep -v ".Archive"
+# Or use --exclude-dir for find/grep native exclusion
+```
+
+**Why:** Including archives in searches inflates metrics (broken links, file counts, etc.) and produces false negatives. Health scans measure operational docs only.
+
 ---
 
 ## 🗂️ ARCHIVE FOLDER POLICY

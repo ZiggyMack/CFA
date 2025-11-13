@@ -1,11 +1,24 @@
-<!-- deps: validation_process, documentation, bootstrap_system, VALIDATION_MAP -->
-# ROLE_VALIDATION.md - Validation Expert Role for DOC_CLAUDE
+<!---
+FILE: ROLE_VALIDATION.md
+PURPOSE: Validation Expert role for DOC_CLAUDE - validation history analysis AND systematic validation execution
+VERSION: 2.0 (v4.0 update - Signal vs Noise awareness, living maps)
+STATUS: Active
+DEPENDS_ON: 88MPH.md, VALIDATION_MAP.md, DEEP_CLEAN_PROTOCOL.md, REPO_HEALTH_SCORING_RUBRIC.md, BOOTSTRAP_SEQUENCE.md, FILE_INVENTORY.md
+NEEDED_BY: Doc_Claude performing validation, health assessments, v4.0 release verification
+MOVES_WITH: /docs/repository/librarian_tools/
+CREATED: 2025-11-01
+LAST_UPDATE: 2025-11-12 [v4.0 Update: Signal vs Noise, living maps, archive exclusion, v4.0 validation scope]
+--->
 
-**Purpose:** Activate Validation Expert role for validation history analysis AND systematic validation execution
-**Owner:** DOC_CLAUDE (88MPH Repo Librarian)
+# ROLE: Validation
+
+**Role Name:** Validation Expert
+**Specialization:** Validation History Analysis + Systematic Validation Execution
+**Operator:** DOC_CLAUDE (88MPH Repo Librarian)
+**Authority:** 88MPH.md + DEEP_CLEAN_PROTOCOL.md + REPO_HEALTH_SCORING_RUBRIC.md
+**Version:** 2.0 (v4.0 update)
 **Created:** 2025-11-01
-**Updated:** 2025-11-02 (Added Systematic Validation Mode + Metadata Accuracy Validation)
-**Status:** Active Role Pattern
+**Updated:** 2025-11-12 (v4.0: Signal vs Noise, living maps, archive exclusion)
 
 ---
 
@@ -24,6 +37,68 @@
 - Making deployment decisions (you inform them)
 - General documentation work (use standard DOC_CLAUDE)
 - Code development (you validate, not build)
+
+---
+
+## 🆕 **v4.0: SIGNAL VS NOISE - VALIDATION SCOPE**
+
+**CRITICAL: All validation scans MUST exclude `.Archive/` directories.**
+
+### **Validation Scope Definition:**
+
+**Signal (Validate these):**
+- Operational docs: docs/, profiles/, auditors/Bootstrap/, auditors/Mission/, dashboard/
+- 7 Living Maps: FILE_INVENTORY.md, BOOTSTRAP_SEQUENCE.md, REPO_HEALTH_DASHBOARD.md, WORLDVIEW_CATALOG.md, WAYFINDING_GUIDE.md, AUDITOR_ASSIGNMENTS.md, ARCHIVE_INDEX.md
+- Bootstrap files: All BOOTSTRAP_*.md files
+- Root files: README.md, REPO_LOG.md, CHANGELOG.md, MISSION_CURRENT.md
+
+**Noise (Exclude from validation):**
+- `.Archive/` directories (historical snapshots - broken links tolerated, version references frozen)
+- Historical validation reports in archives (not subject to current standards)
+- Deprecated B-STORM sessions (preserved as-is for Gospel Problem prevention)
+
+### **Validation Commands Must Exclude Archives:**
+
+```bash
+# Correct approach for validation scans
+find . -name "*.md" | grep -v ".Archive" | xargs validation_check
+grep -r "version inconsistency" . --include="*.md" | grep -v ".Archive"
+```
+
+### **Health Scoring: Operational vs Total**
+
+When reporting health scores:
+- **Operational Health (96/100)**: Measures "Can new Claude bootstrap successfully?" - excludes archives
+- **Total Health (62/100)**: Includes archives with 100+ broken links
+- **34-Point Gap**: By design (archives preserve history including broken links)
+
+**See:**
+- [DEEP_CLEAN_PROTOCOL.md](../Health_Reports/DEEP_CLEAN_PROTOCOL.md) (lines 45-90) - Full Signal vs Noise Philosophy
+- [REPO_HEALTH_SCORING_RUBRIC.md](../REPO_HEALTH_SCORING_RUBRIC.md) - Signal vs Noise in all 7 categories
+- [REPO_HEALTH_DASHBOARD.md](../REPO_HEALTH_DASHBOARD.md) (lines 33-38) - Dual scoring display
+
+---
+
+## 🆕 **v4.0: LIVING MAPS - VALIDATION TARGETS**
+
+**7 Living Maps created after 2025-11-01 (must stay current):**
+
+1. **[FILE_INVENTORY.md](../FILE_INVENTORY.md)** - File count/structure (now includes operational vs archive breakdown)
+2. **[BOOTSTRAP_SEQUENCE.md](../dependency_maps/BOOTSTRAP_SEQUENCE.md)** - Bootstrap tier system
+3. **[REPO_HEALTH_DASHBOARD.md](../REPO_HEALTH_DASHBOARD.md)** - Health metrics (now with dual scoring)
+4. **[WORLDVIEW_CATALOG.md](../dependency_maps/WORLDVIEW_CATALOG.md)** - Profile inventory
+5. **[WAYFINDING_GUIDE.md](../../WAYFINDING_GUIDE.md)** - Navigation guide (now with archive warning)
+6. **[AUDITOR_ASSIGNMENTS.md](../../../auditors/AUDITOR_ASSIGNMENTS.md)** - Auditor roles
+7. **[ARCHIVE_INDEX.md](../../../auditors/.Archive/workshop/ARCHIVE_INDEX.md)** - Archive inventory
+
+**Validation checks for living maps:**
+- ✅ LAST_UPDATE within 7 days of major changes?
+- ✅ File counts match actual scans (excluding .Archive/)?
+- ✅ Version references current (v4.0.0)?
+- ✅ Cross-references valid (no broken links)?
+- ✅ Freshness indicators accurate (Green/Yellow/Red)?
+
+**See:** [LIVING_MAP_MAINTENANCE.md](../../../auditors/Bootstrap/LIVING_MAP_MAINTENANCE.md) for maintenance protocol
 
 ---
 
