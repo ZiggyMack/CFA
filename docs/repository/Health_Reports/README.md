@@ -132,8 +132,24 @@ Each health report evaluates:
 - Major documentation gaps
 - Process breakdown evident
 
-## 📝 Report Template
+## 📝 Report Templates
 
+### **v4.0 Template (Current - Signal vs Noise Reporting)**
+**Location:** [REPO_HEALTH_REPORT_TEMPLATE_v4.md](REPO_HEALTH_REPORT_TEMPLATE_v4.md)
+
+**When to use:**
+- All health reports starting 2025-11-12
+- Doc Claude validation reports
+- External auditor assessments
+- Quarterly health reviews
+
+**Key Features:**
+- **Signal vs Noise Philosophy:** Explicit separation of operational docs from archives
+- **Category-by-category breakdown:** Shows signal/noise split for every metric
+- **Methodology section:** Documents scan-first approach and exclusions applied
+- **34-point variance explanation:** Shows why archives don't impact operational health scores
+
+### **Legacy Template (v1.0 - Deprecated)**
 ```markdown
 # Repository Health Report - [DATE]
 
@@ -167,6 +183,8 @@ Each health report evaluates:
 ## Next Assessment
 [Scheduled date]
 ```
+
+**Note:** This template is deprecated as of v4.0. Use [REPO_HEALTH_REPORT_TEMPLATE_v4.md](REPO_HEALTH_REPORT_TEMPLATE_v4.md) for all new reports.
 
 ## 🎯 Success Metrics
 

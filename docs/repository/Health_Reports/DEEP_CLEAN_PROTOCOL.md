@@ -42,6 +42,43 @@ Doc Claude must SCAN FIRST, then compare to last report - not trust last report 
 
 ---
 
+## 📊 SIGNAL VS NOISE PHILOSOPHY
+
+**Core Principle:** Health metrics measure **operational readiness**, not **historical completeness**.
+
+### **Signal (Actively Maintained, Scored):**
+
+1. **Critical Documentation** - docs/, profiles/, auditors/Bootstrap/, auditors/Mission/
+2. **Living Maps** - 7 maps that must stay current
+3. **Semantic Headers** - Critical files only (see REPO_HEALTH_SCORING_RUBRIC.md)
+4. **Link Integrity** - Operational docs must have working references
+
+### **Noise (Historical Snapshots, Exempt):**
+
+1. **Archives** - `.Archive/` directories (broken links tolerated)
+2. **Non-Critical Files** - Workspace files, experiments, intermediate outputs
+3. **Historical Reports** - Old validation reports, archived B-STORM sessions
+4. **Deprecated Paths** - Historical references to old filenames (ui/, DASHBOARD.md)
+
+### **Why This Separation Matters:**
+
+**Representation of Health Numbers:**
+- **Without this distinction:** 62/100 score (Doc Claude found 142+ broken links across entire repo including archives)
+- **With this distinction:** 96/100 score (same repo, but only counting operational docs)
+- **The difference:** 34 points of "false negative" if we conflate signal with noise
+
+**Practical Impact:**
+- Repository can score 96/100 even with 100+ broken links in `.Archive/` (by design)
+- 90% semantic header coverage counts critical files only (not total markdown count)
+- Living maps scored on freshness of operational maps, not archived snapshots
+
+**Gospel Problem Prevention:**
+- Fixing historical docs creates false continuity (makes past appear cleaner than it was)
+- Archives preserve truth about development journey (including broken links from file moves)
+- Health scoring focuses on "Can new Claude bootstrap successfully?" not "Is history perfect?"
+
+---
+
 ## 🗂️ ARCHIVE FOLDER POLICY
 
 **Critical Distinction:** `.Archive/` folders contain **historical snapshots**, NOT current operational documentation.
