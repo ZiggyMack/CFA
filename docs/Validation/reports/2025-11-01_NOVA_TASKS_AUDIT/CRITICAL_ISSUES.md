@@ -359,14 +359,14 @@ category: "Single Task"
 **Task #5 Actual Scope:**
 
 **New Infrastructure:**
-- `ui/smv/prototype/` directory (NEW)
+- `dashboard/SMV/` directory (NEW)
 - `docs/smv/` directory (NEW)
 
 **New Files:**
 - `docs/smv/SMV_DESIGN_SPEC.md` (with SVG mockups)
-- `ui/smv/prototype/index.html`
-- `ui/smv/prototype/smv.js`
-- `ui/smv/prototype/smv_sample_input.json`
+- `dashboard/SMV/index.html`
+- `dashboard/SMV/smv.js`
+- `dashboard/SMV/smv_sample_input.json`
 - `docs/smv/README.md`
 
 **Development Work:**

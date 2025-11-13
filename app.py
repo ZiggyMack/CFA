@@ -1,5 +1,5 @@
 """
-CFA v3.5 - Main Application (Modular Version)
+CFA v4.0 - Main Application (Modular Version)
 Run with: streamlit run app.py
 """
 
@@ -17,7 +17,7 @@ from pages import landing, console, about, manual, brute_ledger
 
 # Page configuration
 st.set_page_config(
-    page_title="CFA v3.5 - Epistemic Engineering",
+    page_title="CFA v4.0 - Epistemic Engineering",
     page_icon="⚖️",
     layout="wide",
     initial_sidebar_state="auto"

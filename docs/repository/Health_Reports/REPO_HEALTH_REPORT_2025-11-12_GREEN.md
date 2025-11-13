@@ -73,7 +73,7 @@ Coordination       ████████████████████�
    - Status: Fully operational
 
 2. **SMV Prototype** ✅
-   - Location: `ui/smv/prototype/`
+   - Location: `dashboard/SMV/`
    - Components: 27 files (React app)
    - Status: Phase 1 complete, validated by user
    - Features: Triangle view, calibration drawer, ethics badges

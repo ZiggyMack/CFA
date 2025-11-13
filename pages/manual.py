@@ -1,5 +1,5 @@
 """
-CFA v3.5 - User Manual (Beautiful Version)
+CFA v4.0 - User Manual (Beautiful Version)
 Inspired by the original vibrant design
 """
 
@@ -84,7 +84,7 @@ def render():
     st.markdown("""
         <div class="info-card">
             <h2>📥 Complete Manual (PDF)</h2>
-            <p style="font-size: 1.1rem;">Access the full CFA v3.5 User Manual with all formulas, examples, and calibration history.</p>
+            <p style="font-size: 1.1rem;">Access the full CFA v4.0 User Manual with all formulas, examples, and calibration history.</p>
             <p><a href="https://github.com/ZiggyMack/CFA-2.0/raw/main/docs/CFA_v2_Manual.pdf" 
                style="color: white; text-decoration: underline; font-size: 1.2rem;">
                → Download PDF Manual
@@ -659,7 +659,7 @@ def render():
     st.markdown("---")
     st.markdown("""
         <div style="text-align: center; color: #666; padding: 1rem;">
-        <p>CFA v3.5 | "All Named, All Priced" | October 2025</p>
+        <p>CFA v4.0 | "All Named, All Priced" | October 2025</p>
         <p><i>Where ideas reveal their true weight, and honesty becomes quantifiable.</i></p>
         </div>
     """, unsafe_allow_html=True)

@@ -75,7 +75,7 @@ npm --version   # 11.6.2
 ### Step 4: Navigate to Prototype Directory
 
 ```bash
-cd /d/Documents/CFA/ui/smv/prototype
+cd /d/Documents/CFA/dashboard/SMV
 ```
 
 **Note:** In Git Bash (MINGW64), Windows drives are mounted at `/d/` not `/mnt/d/` (unlike WSL Ubuntu).
@@ -108,7 +108,7 @@ Every time you want to run the SMV prototype:
 export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # 2. Navigate to prototype
-cd /d/Documents/CFA/ui/smv/prototype
+cd /d/Documents/CFA/dashboard/SMV
 
 # 3. Start dev server
 npm run dev
@@ -163,9 +163,9 @@ nvm install --lts
 
 **Cause:** Not in the correct directory.
 
-**Solution:** Ensure you're in `/d/Documents/CFA/ui/smv/prototype`:
+**Solution:** Ensure you're in `/d/Documents/CFA/dashboard/SMV`:
 ```bash
-pwd  # Should output: /d/Documents/CFA/ui/smv/prototype
+pwd  # Should output: /d/Documents/CFA/dashboard/SMV
 ```
 
 ### Issue: Port 3001 Already in Use
@@ -203,7 +203,7 @@ taskkill /PID <PID> /F
 ### Project Structure
 
 ```
-ui/smv/prototype/
+dashboard/SMV/
 ├── src/
 │   ├── components/       # React components (SymmetryView, CalibrationDrawer, etc.)
 │   ├── data/            # Mock scenario JSON files

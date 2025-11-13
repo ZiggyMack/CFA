@@ -1,5 +1,5 @@
 """
-CFA v3.5 - Mr. Brute's Ledger Page
+CFA v4.0 - Mr. Brute's Ledger Page
 "To name your brute is to pay your fee"
 Comprehensive view of axioms and debts for all frameworks
 
@@ -490,4 +490,4 @@ def render():
     """, unsafe_allow_html=True)
     
     st.markdown("---")
-    st.caption("Mr. Brute's Ledger | CFA v3.5 | 'All Named, All Priced'")
+    st.caption("Mr. Brute's Ledger | CFA v4.0 | 'All Named, All Priced'")

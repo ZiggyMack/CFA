@@ -1,5 +1,5 @@
 """
-CFA v3.5 - About Page Component
+CFA v4.0 - About Page Component
 Complete backstory of the adversarial audit process
 """
 
@@ -11,7 +11,7 @@ def render():
     # Header with back button
     col1, col2 = st.columns([6, 1])
     with col1:
-        st.markdown("# ℹ️ About CFA v3.5")
+        st.markdown("# ℹ️ About CFA v4.0")
     with col2:
         if st.button("🏠 Home"):
             st.session_state.page = 'landing'
@@ -300,7 +300,7 @@ def render():
         **Why Adversarial Collaboration?**
         
         The fact that these different perspectives **converged on the same numbers** 
-        (98% agreement) suggests the CFA v3.5 has achieved its goal:
+        (98% agreement) suggests the CFA v4.0 has achieved its goal:
         
         Not neutrality (impossible), but **transparency** (achievable).
         """)
@@ -320,7 +320,7 @@ def render():
         - No toggle options
         - Symmetry not tested
         
-        **v3.5** (Current)
+        **v4.0** (Current)
         - ✅ 4 Toggles (Parity, PF-Type, Fallibilism, BFI-Weight)
         - ✅ 4 Guardrails (auto-detection of manipulation)
         - ✅ YPA Trinity (3 scenarios per audit)
