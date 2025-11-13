@@ -1,7 +1,7 @@
 <!---
 FILE: VUDU_HEADER_STANDARD.md
 PURPOSE: Standardized message format specification for VuDu Light coordination
-VERSION: v3.5.2
+VERSION: v4.0.0
 STATUS: Active
 DEPENDS_ON: VUDU_PROTOCOL.md
 NEEDED_BY: VUDU_PROTOCOL.md, All README_[X].md relay messages

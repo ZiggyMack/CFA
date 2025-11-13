@@ -1,7 +1,7 @@
 <!---
 FILE: TECHNICAL_SPEC.md
 PURPOSE: Complete technical reference for AI auditors - preset modes, YPA calculation, system architecture
-VERSION: v3.5.1
+VERSION: v4.0.0
 STATUS: Active
 DEPENDS_ON: utils/frameworks.py, utils/calculations.py, pages/console.py
 NEEDED_BY: MISSION_BRIEF.md, SUCCESS_CRITERIA.md, all technical auditors

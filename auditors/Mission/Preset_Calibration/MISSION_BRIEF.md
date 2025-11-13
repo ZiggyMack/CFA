@@ -1,7 +1,7 @@
 <!---
 FILE: MISSION_BRIEF.md
 PURPOSE: Preset mode calibration mission definition - achieve "All Named, All Priced" for UX features
-VERSION: v3.5
+VERSION: v4.0.0
 STATUS: Active
 DEPENDS_ON: SUCCESS_CRITERIA.md, TECHNICAL_SPEC.md, CURRENT_MODE_CONFIGS.md
 NEEDED_BY: All mission auditors, MISSION_CURRENT.md

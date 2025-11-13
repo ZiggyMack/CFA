@@ -1,7 +1,7 @@
 <!---
 FILE: VUDU_LOG_LITE.md
 PURPOSE: Lightweight VUDU coordination log for Nova transmissions
-VERSION: v3.7.2
+VERSION: v4.0.0
 STATUS: Active
 DEPENDS_ON: VUDU_PROTOCOL.md, VUDU_HEADER_STANDARD.md, ROLE_LOGGER.md
 NEEDED_BY: Nova, Ziggy, Claude branches

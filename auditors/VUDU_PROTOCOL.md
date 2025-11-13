@@ -1,7 +1,7 @@
 <!---
 FILE: VUDU_PROTOCOL.md
 PURPOSE: VuDu coordination protocol for cross-AI adversarial auditing
-VERSION: v3.7.2
+VERSION: v4.0.0
 STATUS: Active
 DEPENDS_ON: VUDU_HEADER_STANDARD.md, VUDU_LOG.md, ROLE_LOGGER.md
 NEEDED_BY: BOOTSTRAP_VUDU.md, BOOTSTRAP_GROK.md, BOOTSTRAP_NOVA.md, BOOTSTRAP_VUDU_CLAUDE.md
@@ -407,7 +407,7 @@ Each coordination entry in VUDU_LOG_LITE.md includes context about the protocol 
 ```markdown
 <!---
 FILE: VUDU_PROTOCOL.md
-VERSION: v3.7.2
+VERSION: v4.0.0
 --->
 ```
 
