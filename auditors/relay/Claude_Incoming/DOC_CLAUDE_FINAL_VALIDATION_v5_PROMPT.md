@@ -84,6 +84,59 @@ Use [REPO_HEALTH_SCORING_RUBRIC.md](../../docs/repository/REPO_HEALTH_SCORING_RU
 
 ---
 
+### **2a. Broken Link Detection (CRITICAL - Belt & Suspenders)**
+
+⚠️ **STOP: Read this before running ANY broken link scans.**
+
+**Use DEEP_CLEAN_PROTOCOL.md methodology (lines 150-252) for broken link detection.**
+
+**CRITICAL DISTINCTION:**
+
+**❌ DO NOT use text pattern matching:**
+```bash
+# WRONG - This finds text mentions, not broken links
+grep -r "DASHBOARD.md" docs/
+grep -r "ui/" docs/
+```
+
+**✅ DO extract markdown link syntax:**
+```bash
+# CORRECT - This finds actual markdown links
+grep -roh '\[.*\](.*\.md)' docs/ README.md CHANGELOG.md | grep -v ".Archive"
+```
+
+**What IS a broken link:**
+- A markdown reference `[text](path/file.md)` where the target file **does not exist**
+- Example: `[Missing File](docs/nonexistent.md)` ← BROKEN
+
+**What IS NOT a broken link:**
+1. **Text mentioning a filename:** "We fixed 94 DASHBOARD.md references" ← This is documentation ABOUT fixes, not a broken link
+2. **Historical documentation:** "Archives may reference old ui/ directory" ← This describes what archives contain, not a link
+3. **Code examples in docs:** `` `grep "DASHBOARD.md"` `` ← This is a code snippet, not a link
+
+**🎯 Recommended approach (most reliable):**
+
+**Manual spot-check** - Click through these in VS Code:
+1. README.md links → Do they work?
+2. WAYFINDING_GUIDE.md navigation paths → Can you follow them?
+3. Living map cross-references (7 maps) → Do they resolve?
+4. CHANGELOG.md references → Do they exist?
+
+**If navigation works, link integrity is GOOD** (even if automated tools report false positives).
+
+**Expected results:**
+- **Operational docs:** 0-2 real broken links (A+ tier repository)
+- **Archives:** 100+ broken links (historical snapshots - EXCLUDED from scoring)
+- **False positives to ignore:** ~3-5 (text mentions of old filenames in historical docs)
+
+**⚠️ Error recovery:**
+- **If tool reports 200+ broken links:** Fix the script, not the docs
+- **If unsure:** Default to manual spot-check (click through README)
+
+**See DEEP_CLEAN_PROTOCOL.md lines 150-252 for working bash implementation.**
+
+---
+
 ### **3. Living Map Verification**
 
 Verify all 7 living maps are current and accurate:
@@ -269,10 +322,16 @@ Use [REPO_HEALTH_REPORT_TEMPLATE_v4.md](../../docs/repository/Health_Reports/REP
 
 ---
 
-**Prompt Version:** v5.0 (Bootstrap Added)
+**Prompt Version:** v5.1 (Belt & Suspenders Broken Link Detection)
 **Created:** 2025-11-12 (Process Claude C4)
 **Updates from v4.0:**
 - Added BOOTSTRAP FIRST section (lines 9-19) requiring 88MPH.md read before audit
 - Referenced REPO_HEALTH_REPORT_TEMPLATE_v4.md for full Signal vs Noise reporting
 - Clarified Signal vs Noise Philosophy reference (DEEP_CLEAN_PROTOCOL.md lines 45-79)
 - Updated Ready? section to include bootstrap step
+**Updates in v5.1 (2025-11-13):**
+- Added section 2a: Explicit broken link detection methodology (lines 87-136)
+- Belt & suspenders approach: Prevents text pattern matching false positives
+- Critical distinction: Link syntax vs text mentions
+- Recommended manual spot-check over automated tools
+- Error recovery: If tool reports 200+ links, fix script not docs
