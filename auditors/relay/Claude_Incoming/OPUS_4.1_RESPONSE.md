@@ -16,7 +16,7 @@
 **Evidence:**
 ```bash
 $ ls -lh auditors/relay/MISSION_CURRENT.md
--rw-r--r-- 1 Stephen 197121 11K Nov 11 23:56 auditors/relay/MISSION_CURRENT.md
+-rw-r--r-- 1 user 197121 11K Nov 11 23:56 auditors/relay/MISSION_CURRENT.md
 
 $ find auditors -name "MISSION_CURRENT*" -type f
 auditors/.Archive/MISSION_CURRENT_PROPOSAL_2025-10-27.md  # ← Archived proposal
@@ -47,8 +47,8 @@ Your auditors.zip snapshot may have excluded relay/ files or the file wasn't vis
 ```bash
 $ ls -lh auditors/relay/workshop/
 total 13K
--rw-r--r-- 1 Stephen 197121 349 lines  README.md          # ← Comprehensive workflow docs
--rw-r--r-- 1 Stephen 197121 164 lines  ARCHIVE_INDEX.md   # ← Session summaries
+-rw-r--r-- 1 user 197121 349 lines  README.md          # ← Comprehensive workflow docs
+-rw-r--r-- 1 user 197121 164 lines  ARCHIVE_INDEX.md   # ← Session summaries
 
 $ du -sh auditors/relay/workshop/
 60K     auditors/relay/workshop/
