@@ -98,7 +98,7 @@ def render():
             st.rerun()
     
     with nav_col3:
-        if st.button("ℹ️ ABOUT CFA v4.0", use_container_width=True):
+        if st.button("ℹ️ ABOUT v4.0", use_container_width=True):
             st.session_state.page = 'about'
             st.rerun()
     
