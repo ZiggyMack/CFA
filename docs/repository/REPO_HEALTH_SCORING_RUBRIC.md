@@ -85,7 +85,12 @@ done
 - 88MPH.md (should be 88MPH.md)
 - ui/ references (should be dashboard/)
 
-**Current baseline:** ~98% (Nova found 3 broken links in Priority 1 fixes)
+**Signal vs Noise:**
+- **Signal (Scored):** Links in docs/, profiles/, auditors/Mission/, auditors/Bootstrap/, root files
+- **Noise (Excluded):** Links in .Archive/ directories (broken links expected in historical snapshots)
+- **Why:** Archives preserve development history - broken links inevitable after file moves. Health score measures operational readiness, not historical completeness.
+
+**Current baseline:** ~98% (Nova found 3 broken links in Priority 1 fixes, excluding archives)
 
 ---
 
@@ -114,6 +119,11 @@ done
 - Check LAST_UPDATE timestamp (within 7 days = fresh)
 - OR verify metrics manually (file count matches scan?)
 - Use freshness indicators from LIVING_MAP_MAINTENANCE.md (Green/Yellow/Red)
+
+**Signal vs Noise:**
+- **Signal (Scored):** All 7 living maps (including ARCHIVE_INDEX.md which maps noise files)
+- **Noise (Excluded):** Historical validation reports, archived B-STORM sessions (not "living" maps)
+- **Why:** Living maps are operational navigation aids that must stay current. ARCHIVE_INDEX.md itself is signal (active map) even though it indexes noise (historical files).
 
 **Current baseline:** 7/7 current (after Priority 1 fixes)
 
@@ -145,6 +155,11 @@ done
 - Living map protocol: Check if LIVING_MAP_MAINTENANCE.md exists and is referenced
 - Ethics front-matter: Check 8 Tier-1 ethics files for front-matter
 
+**Signal vs Noise:**
+- **Signal (Scored):** Process compliance in operational docs (docs/, profiles/, auditors/Bootstrap/, auditors/Mission/)
+- **Noise (Excluded):** Archived B-STORM sessions, historical validation reports (exempt from current process requirements)
+- **Why:** Archives represent past workflow states - we don't retroactively enforce new processes on historical snapshots. Health score measures whether current work follows current processes.
+
 **Current baseline:** 5/5 (after Priority 1 fixes)
 
 ---
@@ -175,6 +190,11 @@ done
 - README count: `find . -name "README*.md" | wc -l` (39 is current)
 - Duplicate files: Check for same file in multiple locations
 
+**Signal vs Noise:**
+- **Signal (Scored):** Operational file count (docs/, profiles/, auditors/Mission/, auditors/Bootstrap/, dashboard/, root files)
+- **Noise (Excluded):** .Archive/ directories (can contain duplicates, stubs, orphaned dirs without penalty)
+- **Why:** File count target (<400) applies to operational files only. Archives can grow indefinitely as historical record without impacting organization health score.
+
 **Current baseline:** 4/5 (README proliferation still needs work: 39 files)
 
 ---
@@ -201,6 +221,11 @@ done
 - Verify DEPENDS_ON files exist
 - Check if dependency is bidirectional (spot-check 5 cases)
 
+**Signal vs Noise:**
+- **Signal (Scored):** Dependency accuracy in critical operational files (docs/, profiles/, auditors/Bootstrap/)
+- **Noise (Excluded):** Historical B-STORM sessions, archived validation reports (dependencies may reference moved/deleted files)
+- **Why:** We don't update dependencies in historical snapshots when files move. Archives preserve dependency state at time of creation.
+
 **Current baseline:** ~95% (estimated, needs formal audit)
 
 ---
@@ -226,6 +251,11 @@ done
 - Check WORLDVIEW_CATALOG.md against profile files (12 profiles)
 - Sample 10 bootstrap files for version consistency
 - Verify 7 living maps have VERSION in semantic headers
+
+**Signal vs Noise:**
+- **Signal (Scored):** Version consistency in operational docs (profiles/, docs/, auditors/Bootstrap/, root files)
+- **Noise (Excluded):** Archived validation reports, historical B-STORM sessions (may reference old versions like v3.5, v3.8)
+- **Why:** Archives preserve version state at time of creation. We don't retroactively update version references in historical snapshots to match current version.
 
 **Current baseline:** ~100% (after Priority 1 fixes)
 

@@ -1,12 +1,12 @@
 <!---
 FILE: ROLE_LOGGER.md
 PURPOSE: Define the Logger role for Doc_Claude (REPO_LOG + VUDU_LOG management)
-VERSION: 2.0
+VERSION: 2.1 (v4.0 update - archive exclusion note)
 STATUS: Active
-DEPENDS_ON: REPO_LOG.md, VUDU_PROTOCOL.md, REPO_LOG_ASSISTANT.md (in Tier4 tasks)
+DEPENDS_ON: REPO_LOG.md, VUDU_PROTOCOL.md, REPO_LOG_ASSISTANT.md, DEEP_CLEAN_PROTOCOL.md
 NEEDED_BY: Doc_Claude, any AI maintaining REPO_LOG or VUDU_LOG
 MOVES_WITH: /docs/repository/librarian_tools/
-LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-13]
+LAST_UPDATE: 2025-11-12 [v4.0 Update: Archive exclusion note for REPO_LOG scanning]
 --->
 
 # ROLE: Logger
@@ -14,10 +14,10 @@ LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-13]
 **Role Name:** Logger
 **Specialization:** REPO_LOG Entry Creation + VUDU_LOG Network Management
 **Operator:** DOC_CLAUDE (primary), any AI maintaining REPO_LOG or VUDU_LOG
-**Authority:** REPO_LOG.md + VUDU_PROTOCOL.md (dual authority)
-**Version:** 2.0
+**Authority:** REPO_LOG.md + VUDU_PROTOCOL.md + DEEP_CLEAN_PROTOCOL.md (dual authority + Signal vs Noise)
+**Version:** 2.1 (v4.0 update)
 **Created:** 2025-11-01
-**Major Update:** 2025-11-01 (Added VUDU_LOG Management)
+**Updated:** 2025-11-12 (v4.0: Archive exclusion note)
 
 ---
 
@@ -56,6 +56,35 @@ This role helps any AI create properly formatted, compliant REPO_LOG entries tha
 - Just reading REPO_LOG.md
 - Reviewing existing entries (unless validating format)
 - Working on non-repository documentation
+
+---
+
+## 🆕 **v4.0: ARCHIVE EXCLUSION FOR REPO_LOG SCANNING**
+
+**Note:** When scanning REPO_LOG for patterns, compliance checks, or historical analysis, be aware of Signal vs Noise:
+
+**Signal (Current operational logs):**
+- REPO_LOG.md entries documenting operational changes
+- Entries referencing files in docs/, profiles/, auditors/Bootstrap/, auditors/Mission/, dashboard/
+
+**Noise (Historical context - exempt from current standards):**
+- REPO_LOG entries referencing archived files (`.Archive/` directories)
+- Old entries may reference moved/deleted files - this is expected and NOT an error
+- Historical entries preserve state at time of creation (Gospel Problem prevention)
+
+**When creating new REPO_LOG entries:**
+- ✅ Reference operational file paths (current locations)
+- ✅ Use current version numbers (v4.0.0)
+- ⚠️ If documenting archival, note both old and new locations
+
+**Example:**
+```markdown
+[REPO_LOG-2025-11-12-005] ARCHIVAL
+Archived 43 completed task briefs from auditors/Bootstrap/Tier4_TaskSpecific/Completed/
+to auditors/.Archive/workshop/completed_tasks/. Operational task count reduced from 55 to 12.
+```
+
+**See:** [DEEP_CLEAN_PROTOCOL.md](../Health_Reports/DEEP_CLEAN_PROTOCOL.md) (lines 45-90) - Signal vs Noise Philosophy
 
 ---
 
