@@ -1,4 +1,4 @@
-# CFA v3.5 - Deployment Guide
+# CFA v4.0 - Deployment Guide
 
 ## 📦 Quick Start
 
@@ -21,7 +21,7 @@ streamlit run app.py
 ---
 
 <!-- deps: file_structure -->
-## 📁 Required File Structure (v3.5)
+## 📁 Required File Structure (v4.0)
 
 ```
 your-repo/
@@ -45,7 +45,7 @@ your-repo/
 │   ├── visualizations.py
 │   └── frameworks.py
 │
-└── auditors/               # NEW v3.5: Auditor coordination infrastructure
+└── auditors/               # NEW v4.0: Auditor coordination infrastructure
     ├── README.md
     ├── protocols/
     │   ├── VUDU_PROTOCOL_v1_1.md
@@ -68,7 +68,7 @@ your-repo/
 
 **CRITICAL:** `app.py` must be in root directory, NOT in a subfolder!
 
-**NEW in v3.5:** `auditors/` folder contains cross-model coordination infrastructure. These files are documentation and don't affect app runtime, but are essential for multi-auditor collaboration.
+**NEW in v4.0:** `auditors/` folder contains cross-model coordination infrastructure. These files are documentation and don't affect app runtime, but are essential for multi-auditor collaboration.
 
 ---
 
@@ -185,7 +185,7 @@ streamlit run pages/landing.py
 ---
 
 <!-- deps: vudu_protocol, bootstrap_system -->
-## 🔄 NEW in v3.5: Auditor Infrastructure Deployment
+## 🔄 NEW in v4.0: Auditor Infrastructure Deployment
 
 ### What is /auditors/ Folder?
 
@@ -233,7 +233,7 @@ The `/auditors/` folder contains:
 - [ ] Secrets configured (if needed)
 - [ ] Custom domain configured (optional)
 
-**NEW v3.5 - Auditor Infrastructure:**
+**NEW v4.0 - Auditor Infrastructure:**
 - [ ] `/auditors/` folder included (if using multi-auditor coordination)
 - [ ] Bootstrap files present (if context recovery needed)
 - [ ] VuDu Protocol reviewed (if coordinating with AI auditors)
@@ -257,18 +257,18 @@ The `/auditors/` folder contains:
 ---
 
 <!-- deps: file_structure -->
-## 🔄 Updating from v2.0 → v3.5
+## 🔄 Updating from v2.0 → v4.0
 
 ### What Changed:
 
 **File Structure:**
 - ✅ Core app structure unchanged (pages/, utils/, app.py)
 - ✅ NEW: `auditors/` folder added
-- ✅ README.md updated with v3.5 features
-- ✅ CHANGELOG.md updated with v3.5 section
+- ✅ README.md updated with v4.0 features
+- ✅ CHANGELOG.md updated with v4.0 section
 
 **Required Actions:**
-1. Pull latest from GitHub (or download v3.5 package)
+1. Pull latest from GitHub (or download v4.0 package)
 2. Add `/auditors/` folder to your repo
 3. Update `README.md` and `CHANGELOG.md`
 4. Redeploy to Streamlit Cloud
@@ -280,7 +280,7 @@ The `/auditors/` folder contains:
 
 ### Breaking Changes:
 
-**None.** v3.5 is fully backward compatible.
+**None.** v4.0 is fully backward compatible.
 
 - Existing pages/console.py works unchanged
 - All v2.0 features preserved
@@ -289,7 +289,7 @@ The `/auditors/` folder contains:
 
 ---
 
-## 🧪 Testing v3.5 Features
+## 🧪 Testing v4.0 Features
 
 ### Test VuDu Protocol (Optional - For Contributors)
 
@@ -327,7 +327,7 @@ print(f"✅ {context['role']['primary_function']} restored")
 
 ---
 
-## 📊 v3.5 Deployment Statistics
+## 📊 v4.0 Deployment Statistics
 
 **From Field Testing:**
 - Bootstrap restoration: ~10 minutes (vs 1-2 hours without)
@@ -369,4 +369,4 @@ print(f"✅ {context['role']['primary_function']} restored")
 
 *End of Deployment Guide*
 
-**CFA v3.5 | Deployment Guide | October 2025**
+**CFA v4.0 | Deployment Guide | October 2025**

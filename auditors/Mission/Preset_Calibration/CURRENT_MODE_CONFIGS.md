@@ -1,7 +1,7 @@
 <!---
 FILE: CURRENT_MODE_CONFIGS.md
 PURPOSE: Exact current preset mode values for VuDu calibration
-VERSION: v3.5
+VERSION: v4.0.0
 STATUS: Active - INTUITIVE (not yet calibrated)
 DEPENDS_ON: pages/console.py (lines 185-222), MISSION_BRIEF.md
 NEEDED_BY: Calibration auditors, SUCCESS_CRITERIA.md validation
