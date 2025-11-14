@@ -282,55 +282,44 @@ def render():
     if "sidebar_bfi_weight" not in st.session_state:
         st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
 
-    # Read current values from session state to set correct index
+    # Lever-Parity selectbox (session state binding via key parameter)
     parity_options = ["ON", "OFF"]
-    parity_index = parity_options.index(st.session_state["sidebar_lever_parity"])
 
     lever_parity = st.sidebar.selectbox(
         "Lever-Parity",
         parity_options,
-        index=parity_index,
         key="sidebar_lever_parity",
         help="**Parity ON:** Moral norms (MG) count equally with epistemic norms. **OFF:** Focus on predictive power. [ΔYPA: OFF typically boosts MdN ~+0.2-0.3] Because CT includes moral realism, Parity ON increases MG weighting for both frameworks."
     )
 
-    # PF-Type with dynamic index
-    pf_index = PF_TYPES.index(st.session_state["sidebar_pf_type"])
-
+    # PF-Type selectbox (session state binding via key parameter)
     pf_type = st.sidebar.selectbox(
         "PF-Type",
         PF_TYPES,
-        index=pf_index,
         key="sidebar_pf_type",
         help="**Instrumental:** Tech/predictive yield only. **Composite (70/30):** 70% instrumental, 30% existential. **Holistic (50/50):** Equal weight. [ΔYPA: Holistic favors CT ~+0.15-0.25] CT scores higher on existential fertility, so holistic weighting benefits CT."
     )
 
-    # Fallibilism with dynamic index
+    # Fallibilism-Bonus selectbox (session state binding via key parameter)
     fall_options = ["ON", "OFF"]
-    fall_index = fall_options.index(st.session_state["sidebar_fallibilism"])
 
     fall_bonus = st.sidebar.selectbox(
         "Fallibilism-Bonus",
         fall_options,
-        index=fall_index,
         key="sidebar_fallibilism",
         help="**Bonus ON:** Frameworks that admit limits get +0.3 CCI boost. **OFF:** No bonus. [ΔYPA: ON benefits both MdN and CT equally ~+0.03] Both frameworks acknowledge limitations, so both receive the fallibilism bonus when enabled."
     )
 
-    # BFI Weight with dynamic index
+    # BFI Debt Weight selectbox (session state binding via key parameter)
     # Normalize "Heavier_1.2x" to "Weighted_1.2x" for display consistency
-    current_bfi = st.session_state["sidebar_bfi_weight"]
-    if current_bfi == "Heavier_1.2x":
-        current_bfi = "Weighted_1.2x"
+    if st.session_state["sidebar_bfi_weight"] == "Heavier_1.2x":
         st.session_state["sidebar_bfi_weight"] = "Weighted_1.2x"
 
     bfi_options = ["Equal_1.0x", "Weighted_1.2x"]
-    bfi_index = bfi_options.index(current_bfi)
 
     bfi_weight = st.sidebar.selectbox(
         "BFI Debt Weight",
         bfi_options,
-        index=bfi_index,
         key="sidebar_bfi_weight",
         help="**Equal (1.0x):** Debts count same as axioms. **Weighted (1.2x):** Debts cost 20% more. [ΔYPA: Weighted slightly lowers both scores ~-0.05-0.10] Higher BFI denominator reduces YPA. Both frameworks have 4 debts, so weighted impacts both similarly."
     )
