@@ -76,6 +76,52 @@ def _render_framework_ledger(worldview_name: str, emoji: str, subtitle: str):
 
     st.markdown("---")
 
+    # Push to Console buttons
+    st.markdown("### 🚀 Load into Console")
+    st.caption("*Push this worldview's data directly to the Console for YPA analysis*")
+
+    push_col1, push_col2 = st.columns(2)
+
+    with push_col1:
+        if st.button(f"→ Push to Framework A", key=f"push_a_{worldview_name.replace(' ', '_')}", use_container_width=True, type="primary"):
+            # Load worldview data into Framework A
+            st.session_state["fa_name"] = worldview_name
+            st.session_state["fa_ax"] = ypa_data["bf_i"]["axioms"]
+            st.session_state["fa_db"] = ypa_data["bf_i"]["debts"]
+            st.session_state["fa_ad"] = ypa_data.get("admits_limits", True)
+            st.session_state["fa_cci"] = ypa_data["levers"]["CCI"]
+            st.session_state["fa_edb"] = ypa_data["levers"]["EDB"]
+            st.session_state["fa_pfi"] = ypa_data["levers"]["PF_instrumental"]
+            st.session_state["fa_pfe"] = ypa_data["levers"]["PF_existential"]
+            st.session_state["fa_ar"] = ypa_data["levers"]["AR"]
+            st.session_state["fa_mg"] = ypa_data["levers"]["MG"]
+
+            # Navigate to Console
+            st.session_state.page = 'console'
+            st.success(f"✅ {worldview_name} loaded into Framework A!")
+            st.rerun()
+
+    with push_col2:
+        if st.button(f"→ Push to Framework B", key=f"push_b_{worldview_name.replace(' ', '_')}", use_container_width=True):
+            # Load worldview data into Framework B
+            st.session_state["fb_name"] = worldview_name
+            st.session_state["fb_ax"] = ypa_data["bf_i"]["axioms"]
+            st.session_state["fb_db"] = ypa_data["bf_i"]["debts"]
+            st.session_state["fb_ad"] = ypa_data.get("admits_limits", True)
+            st.session_state["fb_cci"] = ypa_data["levers"]["CCI"]
+            st.session_state["fb_edb"] = ypa_data["levers"]["EDB"]
+            st.session_state["fb_pfi"] = ypa_data["levers"]["PF_instrumental"]
+            st.session_state["fb_pfe"] = ypa_data["levers"]["PF_existential"]
+            st.session_state["fb_ar"] = ypa_data["levers"]["AR"]
+            st.session_state["fb_mg"] = ypa_data["levers"]["MG"]
+
+            # Navigate to Console
+            st.session_state.page = 'console'
+            st.success(f"✅ {worldview_name} loaded into Framework B!")
+            st.rerun()
+
+    st.markdown("---")
+
     # Audit notes
     with st.expander("📝 Audit Notes & Justifications", expanded=False):
         # Display audit notes from profile (markdown format)
