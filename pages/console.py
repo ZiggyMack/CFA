@@ -386,6 +386,8 @@ def render():
             fa_admits = st.checkbox("Admits Limits", True, key="fa_ad")
             
             if st.button("🔍 Go to Brute Ledger", key="goto_ledger_a"):
+                # Pass framework name for smart navigation
+                st.session_state.ledger_nav_target = st.session_state.get("fa_name", "Methodological Naturalism")
                 st.session_state.page = 'brute_ledger'
                 st.rerun()
         
@@ -463,6 +465,8 @@ def render():
             fb_admits = st.checkbox("Admits Limits", True, key="fb_ad")
             
             if st.button("🔍 Go to Brute Ledger", key="goto_ledger_b"):
+                # Pass framework name for smart navigation
+                st.session_state.ledger_nav_target = st.session_state.get("fb_name", "Classical Theism")
                 st.session_state.page = 'brute_ledger'
                 st.rerun()
         

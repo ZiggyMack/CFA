@@ -97,23 +97,51 @@ def render():
             st.rerun()
     
     st.markdown("---")
-    
+
+    # Smart navigation: Check if coming from Console with a specific framework target
+    if "ledger_nav_target" in st.session_state:
+        target_framework = st.session_state.ledger_nav_target
+
+        # Map framework names to their categories
+        worldview_to_category = {
+            "Classical Theism": "⛪ Theistic Traditions (5)",
+            "Process Theology": "⛪ Theistic Traditions (5)",
+            "Islam": "⛪ Theistic Traditions (5)",
+            "Orthodox Judaism": "⛪ Theistic Traditions (5)",
+            "Mormonism": "⛪ Theistic Traditions (5)",
+            "Methodological Naturalism": "🔬 Naturalistic Traditions (2)",
+            "Null Hypothesis": "🔬 Naturalistic Traditions (2)",
+            "Buddhism": "🕉️ Eastern Traditions (2)",
+            "Hinduism": "🕉️ Eastern Traditions (2)",
+            "Existentialism": "🧠 Philosophical Frameworks (3)",
+            "Error Theory": "🧠 Philosophical Frameworks (3)",
+            "Desiderata Believers": "🧠 Philosophical Frameworks (3)"
+        }
+
+        # Set the default category based on the target framework
+        if target_framework in worldview_to_category:
+            st.session_state.ledger_category_default = worldview_to_category[target_framework]
+            st.session_state.ledger_section_default = "📚 Worldview Profiles"
+
+        # Clear the navigation target
+        del st.session_state.ledger_nav_target
+
     # Intro section
     st.info("""
     ### What is the Brute Ledger?
-    
+
     Every framework rests on **unprovable assumptions** (axioms) and carries **unresolved questions** (debts).
-    
+
     **Mr. Brute** is our accountability mechanism - a metaphor that personifies intellectual honesty:
     - When you **name an axiom** → He marks it
-    - When you **justify it** → He erases the mark  
+    - When you **justify it** → He erases the mark
     - When you **hide it** → He marks you twice
-    
+
     The Brute-Fact Index (BFI) = Axioms + Debts
-    
+
     Lower BFI = More efficient framework (fewer starting assumptions)
     """)
-    
+
     st.markdown("---")
 
     # ========================================================================
@@ -122,10 +150,16 @@ def render():
     st.markdown("## 📖 Ledger Sections")
     st.caption("*Select which section of Mr. Brute's Ledger to explore*")
 
+    # Get default section (may be set by smart navigation)
+    section_options = ["📚 Worldview Profiles", "🤖 The Auditors", "⚙️ Utilities"]
+    section_default = st.session_state.get("ledger_section_default", "📚 Worldview Profiles")
+    section_index = section_options.index(section_default) if section_default in section_options else 0
+
     # Simple section selector for now (fancy page-flip in future sandbox branch)
     ledger_section = st.radio(
         "Choose Section:",
-        ["📚 Worldview Profiles", "🤖 The Auditors", "⚙️ Utilities"],
+        section_options,
+        index=section_index,
         horizontal=True,
         label_visibility="collapsed"
     )
@@ -141,9 +175,16 @@ def render():
 
         # Grouped category selector (following WORLDVIEW_CATALOG.md structure)
         st.markdown("**Browse by Category:**")
+
+        # Get default category (may be set by smart navigation)
+        category_options = ["⛪ Theistic Traditions (5)", "🔬 Naturalistic Traditions (2)", "🕉️ Eastern Traditions (2)", "🧠 Philosophical Frameworks (3)"]
+        category_default = st.session_state.get("ledger_category_default", "⛪ Theistic Traditions (5)")
+        category_index = category_options.index(category_default) if category_default in category_options else 0
+
         category = st.radio(
             "Choose Category:",
-            ["⛪ Theistic Traditions (5)", "🔬 Naturalistic Traditions (2)", "🕉️ Eastern Traditions (2)", "🧠 Philosophical Frameworks (3)"],
+            category_options,
+            index=category_index,
             horizontal=True,
             label_visibility="collapsed"
         )
