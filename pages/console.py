@@ -537,19 +537,147 @@ def render():
                 st.markdown(f"**4. Symmetry:** ✅ All toggles stable (max Δ = {max_delta_b:.2f})")
 
     with tab4:
+        st.markdown("### ⚖️ Symmetry Audit - Nova's Lens")
+        st.caption("*Pattern-checking for hidden bias in configuration settings*")
+
+        # Contextual explanation
+        st.info("""
+        **What This Tests:**
+
+        The Symmetry Audit checks whether your **configuration settings** (Parity, PF-Type, Fallibilism, BFI Weight)
+        are creating hidden bias by favoring one framework over the other.
+
+        **How It Works:**
+        - Takes your current YPA score (Base)
+        - Flips each configuration lever one at a time
+        - Measures how much the YPA changes (Delta)
+        - Large deltas (>0.3) suggest that lever has asymmetric impact
+
+        **Why This Matters:**
+        - Small deltas (±0.1) = Balanced configuration
+        - Large deltas (>0.3) = Configuration favors one framework
+        - Helps you understand which levers are "load-bearing" for your results
+        """)
+
+        st.markdown("---")
+
+        # Interpretation guide
+        with st.expander("📖 How to Read This Table", expanded=False):
+            st.markdown("""
+            **Column Guide:**
+            - **Toggle:** Which configuration lever was flipped
+            - **Base:** Your current YPA with existing settings
+            - **Flip:** What YPA would be if you flipped that one lever
+            - **Delta:** The difference (Flip - Base)
+            - **Flag:** ✅ Stable (|Delta| ≤ 0.3) | ⚠️ Sensitive (|Delta| > 0.3)
+
+            **Interpretation Examples:**
+
+            **Example 1: Parity Toggle**
+            - Base: 6.50, Flip: 6.45, Delta: -0.05 ✅
+            - **Meaning:** Parity ON/OFF has minimal impact. This framework's score is stable regardless of moral weighting.
+
+            **Example 2: PF-Type Toggle**
+            - Base: 7.20, Flip: 6.50, Delta: -0.70 ⚠️
+            - **Meaning:** Switching from Instrumental to Holistic drops YPA by 0.70. This framework is **instrumentally strong** (prediction-focused).
+
+            **Example 3: Fallibilism Toggle**
+            - Base: 5.80, Flip: 6.25, Delta: +0.45 ⚠️
+            - **Meaning:** Turning Fallibilism OFF *increases* YPA. This framework doesn't emphasize revision mechanisms.
+
+            ---
+
+            **What Action Should I Take?**
+
+            ✅ **All Stable (All Deltas < 0.3):**
+            - Your configuration is balanced across all levers
+            - Scores are robust to setting changes
+            - Good sign of neutral evaluation
+
+            ⚠️ **Some Sensitive (Some Deltas > 0.3):**
+            - Identify which levers cause big swings
+            - Ask: "Is this sensitivity justified?"
+            - Example: If MdN's Parity delta is -0.50, it means moral grounding significantly impacts its score
+
+            🚨 **Many Sensitive (Most Deltas > 0.5):**
+            - Your configuration may be "tuned" to favor/penalize this framework
+            - Consider using Diplomat Mode (balanced preset) for comparison
+            - Review whether lever settings match your epistemic commitments
+            """)
+
+        st.markdown("---")
+
         c1, c2 = st.columns(2)
         with c1:
-            st.markdown(f"**{fa['name']}**")
+            st.markdown(f"### 📊 {fa['name']}")
             audit = symmetry_audit(fa, cfg)
             df = pd.DataFrame(audit, columns=["Toggle", "Base", "Flip", "Delta"])
             df["Flag"] = df["Delta"].apply(lambda x: "⚠️" if abs(x) > 0.3 else "✅")
-            st.dataframe(df)
+            st.dataframe(df, use_container_width=True, hide_index=True)
+
+            # Summary assessment
+            max_delta = max(abs(row[3]) for row in audit)
+            sensitive_count = sum(1 for row in audit if abs(row[3]) > 0.3)
+
+            if sensitive_count == 0:
+                st.success(f"✅ **Balanced Configuration** - Max delta: {max_delta:.2f}")
+            elif sensitive_count <= 2:
+                st.warning(f"⚠️ **{sensitive_count} Sensitive Levers** - Max delta: {max_delta:.2f}")
+                st.caption("Some levers have asymmetric impact. Review which ones and why.")
+            else:
+                st.error(f"🚨 **{sensitive_count} Sensitive Levers** - Max delta: {max_delta:.2f}")
+                st.caption("Configuration may be tuned to favor/penalize this framework. Consider Diplomat Mode.")
+
         with c2:
-            st.markdown(f"**{fb['name']}**")
+            st.markdown(f"### 📊 {fb['name']}")
             audit = symmetry_audit(fb, cfg)
             df = pd.DataFrame(audit, columns=["Toggle", "Base", "Flip", "Delta"])
             df["Flag"] = df["Delta"].apply(lambda x: "⚠️" if abs(x) > 0.3 else "✅")
-            st.dataframe(df)
+            st.dataframe(df, use_container_width=True, hide_index=True)
+
+            # Summary assessment
+            max_delta = max(abs(row[3]) for row in audit)
+            sensitive_count = sum(1 for row in audit if abs(row[3]) > 0.3)
+
+            if sensitive_count == 0:
+                st.success(f"✅ **Balanced Configuration** - Max delta: {max_delta:.2f}")
+            elif sensitive_count <= 2:
+                st.warning(f"⚠️ **{sensitive_count} Sensitive Levers** - Max delta: {max_delta:.2f}")
+                st.caption("Some levers have asymmetric impact. Review which ones and why.")
+            else:
+                st.error(f"🚨 **{sensitive_count} Sensitive Levers** - Max delta: {max_delta:.2f}")
+                st.caption("Configuration may be tuned to favor/penalize this framework. Consider Diplomat Mode.")
+
+        st.markdown("---")
+
+        # Nova's perspective
+        st.markdown("### 🔍 Nova's Perspective: Why Symmetry Matters")
+        st.markdown("""
+        **Nova (Symmetry Auditor) says:**
+
+        > "Configuration bias is insidious because it *feels* neutral. You're not manipulating
+        > individual lever scores—you're just choosing 'reasonable' settings. But if those settings
+        > systematically favor one framework over another, you've introduced **architectural bias**.
+        >
+        > The Symmetry Audit exposes this by testing: *Would flipping each setting change the outcome?*
+        > If yes, you need to justify why that asymmetry serves truth rather than preference.
+        >
+        > Mathematical symmetry doesn't always equal functional fairness—but when it breaks,
+        > you better have a good reason why."
+
+        **When Asymmetry is Justified:**
+        - Skeptic Mode intentionally favors empirical frameworks (Parity OFF = legitimate choice)
+        - Zealot Mode intentionally favors existential frameworks (Fallibilism OFF = legitimate choice)
+        - **Key:** The bias is *named and priced* in the preset's meta-axioms
+
+        **When Asymmetry is Problematic:**
+        - You claim to be using "neutral" settings but deltas show hidden bias
+        - Diplomat Mode shows large deltas (should be balanced by design)
+        - You didn't realize your configuration was favoring one side
+        """)
+
+        st.markdown("---")
+        st.caption("**Pro Tip:** Run Diplomat Mode and check Symmetry tab—if deltas are large even in 'balanced' mode, the frameworks themselves may have legitimately different sensitivities.")
     
     # deps: preset_modes
     # NEW v4.0: EPISTEMIC QUIZ SYSTEM
