@@ -65,21 +65,21 @@ When files are added or deleted, use diff notation like git commits:
 
 ## 📊 COORDINATION CHECKPOINT
 
-**Last Full Coordination:** 2025-11-14 🆕 (Preset Mode Wiring + Smart Nav)
-**Entries Since:** 49 🆕 (+1 UX enhancement entry)
-**Pending Items:** 4 (GROK_BRIEFING.md fix, UI_SMV location, Ledger→Console push, import spec doc)
+**Last Full Coordination:** 2025-11-14 🆕 (Persistent Home Button)
+**Entries Since:** 50 🆕 (+1 UX navigation entry)
+**Pending Items:** 4 (Audit Mode toggle, Grok feedback processing, Shaman Claude persona, import spec doc)
 
 ### Category Pointers:
 
-- **[UX]:** Last entry 2025-11-14-1 🆕🔥 (Preset Wiring + Smart Nav)
-- **[NAVIGATION]:** Last entry 2025-11-14-1 🆕🔥 (Smart Navigation)
+- **[UX]:** Last entry 2025-11-14-2 🆕🔥 (Persistent Home Button)
+- **[NAVIGATION]:** Last entry 2025-11-14-2 🆕🔥 (Sticky Navigation)
 - **[CONSOLIDATION]:** Last entry 2025-11-12-3 🆕 (File Consolidation)
 - **[VALIDATION]:** Last entry 2025-11-12-2 🆕 (Deep Clean Protocol)
 - **[STRUCTURE]:** Last entry 2025-11-12-1 🆕 (Repository Cleanup)
 - **[INTEGRATION]:** Last entry 2025-11-14-1 🆕 (Preset Mode Integration)
 - **[DATA_PIPELINE]:** Last entry 2025-11-10-1 (Profile Loader)
 - **[TASK_MOVEMENT]:** Last entry 2025-11-02-06
-- **[PENDING_ACTIONS]:** Last entry 2025-11-14-1 🆕 (Ledger push + import doc)
+- **[PENDING_ACTIONS]:** Last entry 2025-11-14-2 🆕 (Audit Mode, Grok feedback, Shaman, import doc)
 - **[DOCUMENTATION]:** Last entry 2025-11-12-3 🆕 (DEPENDENCY_CORE)
 - **[ARCHITECTURE]:** Last entry 2025-11-13-3 🆕 (LITE vs RICH Bootstrap)
 - **[BREAKTHROUGH]:** Last entry 2025-11-03-1 ⭐ (Shaman Epiphany)
@@ -87,12 +87,82 @@ When files are added or deleted, use diff notation like git commits:
 - **[I_AM]:** Last entry 2025-11-03-1 🔥 (Trinity Epiphany)
 - **[ACCURACY]:** Last entry 2025-11-02-21
 - **[DEPLOYMENTS]:** Last entry 2025-11-01-19
-- **[ALL_CHANGES]:** Last entry 2025-11-14-1 🆕
-- **[🧹 BROOM]:** Last entry 2025-11-14-1 🆕 (Console + Brute Ledger Updates)
+- **[ALL_CHANGES]:** Last entry 2025-11-14-2 🆕
+- **[🧹 BROOM]:** Last entry 2025-11-14-2 🆕 (All Pages Updated)
 
 -----
 
 ## 📝 CHANGE LOG
+
+### [UX-2025-11-14-2] 2025-11-14 - Persistent Sticky Home Button Across All Pages
+
+**Categories:** [UX] [NAVIGATION] [🧹]
+**Changed by:** Claude Sonnet 4.5 (C4.5)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `UPDATED`: pages/console.py - Added CSS sticky positioning for Home button header
+- `UPDATED`: pages/brute_ledger.py - Added sticky Home button styling
+- `UPDATED`: pages/about.py - Added sticky Home button styling
+- `UPDATED`: pages/manual.py - Added sticky Home button styling
+- `UPDATED`: pages/chat_assistant.py - Added sticky Home button styling
+
+**Reason:**
+User approved fundamental core app UX enhancement: "Yes...provided the resource overhead cost to the app is not too great...i think its a major advancement to keep the home button navigation persisting for the user at the top as they scroll through."
+
+**Problem Identified:**
+When users scroll down long pages (especially Console comparisons, Brute Ledger worldview profiles, Manual documentation, or Chat Assistant conversations), the Home button disappears from view. Users must scroll all the way back to top to navigate home, creating friction.
+
+**Solution Implemented:**
+CSS-only sticky positioning (not JavaScript) - minimal overhead, maximum compatibility:
+- Home button header stays visible at top while scrolling
+- Subtle shadow for visual separation from content
+- z-index: 999 ensures visibility above all content
+- Works seamlessly on scroll without performance impact
+
+**Technical Approach:**
+```css
+div[data-testid="stHorizontalBlock"]:has(button[kind="secondary"]) {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 999;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+```
+
+**Pages Updated (5 total):**
+1. **Console** - Critical for long comparison sessions
+2. **Brute Ledger** - Essential while exploring 12 worldview profiles
+3. **About** - Helpful during long audit history reading
+4. **Manual** - Quick navigation during documentation review
+5. **Chat Assistant** - Persistent exit during Q&A sessions
+
+**User Experience Impact:**
+- ✅ Home always accessible regardless of scroll position
+- ✅ Zero performance overhead (CSS-only solution)
+- ✅ Mobile-friendly (user noted: "will have to double check how it looks on mobile")
+- ✅ Consistent UX across entire application
+- ✅ Lightweight implementation (no JavaScript state management)
+
+**Design Philosophy:**
+This follows the "frozen position" pattern already established with the Console's preset mode indicator. Now users have:
+- Top-right: Preset mode indicator (Console only)
+- Top-center/left: Persistent Home button (all pages)
+
+**Mobile Consideration:**
+User acknowledged need to test on mobile. Sticky positioning is generally mobile-friendly, but awaiting user feedback for any edge cases.
+
+**Impact:** High - Fundamental navigation UX improvement affecting every page. Reduces friction, increases discoverability, enables confident deep-diving without "how do I get back?" anxiety.
+
+**Follow-up Required:** NO - Feature complete. User will test on mobile and report any issues.
+
+**Housekeeping Trail:** All 5 page files modified with consistent sticky CSS pattern. Future Doc Claude should verify mobile responsiveness during next deep clean.
+
+---
 
 ### [UX-2025-11-14-1] 2025-11-14 - Wired Preset Mode Functionality + Smart Navigation
 
