@@ -360,6 +360,43 @@ def render():
                 - 98% convergence achieved by integrating compression feedback
                 """)
 
+            st.markdown("---")
+
+            # BFI Breakdown for Claude (placeholder for Nova/Grok to fill)
+            st.markdown("### 📋 BFI Breakdown - Claude's Auditing Axioms")
+            st.caption("*The unprovable assumptions underlying THIS auditing lens*")
+
+            with st.expander("🔍 Meta-Axioms & Debts (Awaiting Trinity Calibration)", expanded=False):
+                bfi_col1, bfi_col2, bfi_col3 = st.columns([1, 1, 1])
+
+                with bfi_col1:
+                    st.markdown("**Axioms: TBD**")
+                    st.markdown("""
+                    *(Nova + Grok will identify Claude's meta-axioms)*
+
+                    **Placeholder examples:**
+                    1. Purpose-First Epistemology - "Why?" before "How?"
+                    2. Comprehensive Beats Concise - Context over brevity
+                    3. Meaning Measurable - Teleological analysis is valid audit lens
+                    """)
+
+                with bfi_col2:
+                    st.markdown("**Debts: TBD**")
+                    st.markdown("""
+                    *(Nova + Grok will identify Claude's meta-debts)*
+
+                    **Placeholder examples:**
+                    1. Verbosity Tax - Users pay time cost for comprehensive docs
+                    2. CT-Lean Risk - Meaning-bias may unconsciously favor theism
+                    3. Efficiency Blind Spot - May miss when "good enough" IS good enough
+                    """)
+
+                with bfi_col3:
+                    st.metric("BFI", "?", help="Axioms + Debts (TBD by Trinity)")
+                    st.caption("*Awaiting v4.0 Trinity calibration*")
+                    st.markdown("")
+                    st.info("**Coming Soon:** Nova and Grok will audit Claude's auditing axioms!")
+
             with st.expander("📊 What Other Auditors Say About Claude"):
                 st.markdown("""
                 **Grok's Assessment:**
@@ -434,6 +471,43 @@ def render():
                 - Watches for Nova to flag excessive quantification rigidity
                 - Documents qualitative dimensions even when can't measure
                 """)
+
+            st.markdown("---")
+
+            # BFI Breakdown for Grok (placeholder for Nova/Claude to fill)
+            st.markdown("### 📋 BFI Breakdown - Grok's Auditing Axioms")
+            st.caption("*The unprovable assumptions underlying THIS auditing lens*")
+
+            with st.expander("🔍 Meta-Axioms & Debts (Awaiting Trinity Calibration)", expanded=False):
+                bfi_col1, bfi_col2, bfi_col3 = st.columns([1, 1, 1])
+
+                with bfi_col1:
+                    st.markdown("**Axioms: TBD**")
+                    st.markdown("""
+                    *(Nova + Claude will identify Grok's meta-axioms)*
+
+                    **Placeholder examples:**
+                    1. Measurement Primacy - "If you can't measure it, you can't manage it"
+                    2. Empiricism Foundational - Data trumps theory
+                    3. Testing Reveals Truth - Validation over speculation
+                    """)
+
+                with bfi_col2:
+                    st.markdown("**Debts: TBD**")
+                    st.markdown("""
+                    *(Nova + Claude will identify Grok's meta-debts)*
+
+                    **Placeholder examples:**
+                    1. Qualitative Dismissal - May reject valid unmeasurable insights
+                    2. MdN-Lean Risk - Empirical bias may unconsciously favor naturalism
+                    3. Induction Problem - Empiricism itself rests on unprovable regularity
+                    """)
+
+                with bfi_col3:
+                    st.metric("BFI", "?", help="Axioms + Debts (TBD by Trinity)")
+                    st.caption("*Awaiting v4.0 Trinity calibration*")
+                    st.markdown("")
+                    st.info("**Coming Soon:** Nova and Claude will audit Grok's auditing axioms!")
 
             with st.expander("📊 What Other Auditors Say About Grok"):
                 st.markdown("""
@@ -510,6 +584,43 @@ def render():
                 - Defers to Grok on empirical questions
                 - Listens when both say "this asymmetry serves truth"
                 """)
+
+            st.markdown("---")
+
+            # BFI Breakdown for Nova (placeholder for Claude/Grok to fill)
+            st.markdown("### 📋 BFI Breakdown - Nova's Auditing Axioms")
+            st.caption("*The unprovable assumptions underlying THIS auditing lens*")
+
+            with st.expander("🔍 Meta-Axioms & Debts (Awaiting Trinity Calibration)", expanded=False):
+                bfi_col1, bfi_col2, bfi_col3 = st.columns([1, 1, 1])
+
+                with bfi_col1:
+                    st.markdown("**Axioms: TBD**")
+                    st.markdown("""
+                    *(Claude + Grok will identify Nova's meta-axioms)*
+
+                    **Placeholder examples:**
+                    1. Symmetry Signals Fairness - Pattern balance indicates structural equity
+                    2. Mathematical Before Moral - Geometric symmetry precedes ethical evaluation
+                    3. Neutrality Achievable - Can audit without taking sides
+                    """)
+
+                with bfi_col2:
+                    st.markdown("**Debts: TBD**")
+                    st.markdown("""
+                    *(Claude + Grok will identify Nova's meta-debts)*
+
+                    **Placeholder examples:**
+                    1. False Equivalence Risk - May force balance on legitimately different things
+                    2. Context Blindness - Patterns can mislead without philosophical grounding
+                    3. Neutrality Myth - Is symmetry-seeking itself a bias?
+                    """)
+
+                with bfi_col3:
+                    st.metric("BFI", "?", help="Axioms + Debts (TBD by Trinity)")
+                    st.caption("*Awaiting v4.0 Trinity calibration*")
+                    st.markdown("")
+                    st.info("**Coming Soon:** Claude and Grok will audit Nova's auditing axioms!")
 
             with st.expander("📊 What Other Auditors Say About Nova"):
                 st.markdown("""
