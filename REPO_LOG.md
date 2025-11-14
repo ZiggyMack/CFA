@@ -93,6 +93,43 @@ When files are added or deleted, use diff notation like git commits:
 
 ## 📝 CHANGE LOG
 
+### [UI-2025-11-13-8] 2025-11-13 - Refactored Mr. Brute's Ledger into Separate Sections
+
+**Categories:** [UI] [ARCHITECTURE] [🧹]
+**Changed by:** Process Claude (C4)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `REFACTORED`: pages/brute_ledger.py - Separated into 3 distinct sections with radio selector
+- Section 1: 📚 Worldview Profiles (12 frameworks)
+- Section 2: 🤖 The Auditors (separate from worldviews)
+- Section 3: ⚙️ Utilities (Skeptic Mode + Custom Builder)
+
+**Reason:**
+User vision: "Turn the page" metaphor - Auditors should be in their own room/chapter of the ledger, not mixed with worldview profiles. Current implementation uses simple radio buttons (horizontal). Future sandbox branch will explore fancy page-flip animations and ledger book styling without breaking v4.0 functionality.
+
+**Implementation:**
+- Added `st.radio()` section selector at top (3 options)
+- Each section gets its own `if/elif` block
+- Worldviews: 12 tabs (unchanged content)
+- Auditors: Standalone section (no longer tab 13)
+- Utilities: 2 tabs (Skeptic Mode, Custom Builder)
+- Footer remains shared across all sections
+
+**User Experience:**
+Users now "turn the page" to different sections of the ledger:
+1. Browse worldview axioms/debts (12 frameworks)
+2. "Turn page" → See the auditors' axioms (Trinity transparency)
+3. "Turn page" → Access utilities (presets, custom builder)
+
+Separate but equal - each section has its own identity.
+
+**Impact:** Moderate - Structural refactor with zero content changes, better conceptual organization, sets stage for future visual enhancements
+
+**Follow-up Required:** YES - Create `feature/ledger-visual-experiments` branch to explore page-flip animations, book-style navigation, ledger theming
+
+---
+
 ### [UI-2025-11-13-7] 2025-11-13 - Integrated Auditors Section into Mr. Brute's Ledger
 
 **Categories:** [UI] [ARCHITECTURE] [DOCUMENTATION] [🧹]
