@@ -93,6 +93,62 @@ When files are added or deleted, use diff notation like git commits:
 
 ## 📝 CHANGE LOG
 
+### [UI-2025-11-13-7] 2025-11-13 - Integrated Auditors Section into Mr. Brute's Ledger
+
+**Categories:** [UI] [ARCHITECTURE] [DOCUMENTATION] [🧹]
+**Changed by:** Process Claude (C4)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `UPDATED`: pages/brute_ledger.py - Added "🤖 The Auditors" tab (13th tab, between Existentialism and Skeptic Mode)
+- Content pulled from docs/architecture/AUDITOR_AXIOMS.md
+
+**Features Added:**
+1. **Three Auditor Profiles** (nested tabs):
+   - Claude (Teleological Lens) - Core axiom, named bias, overhead evidence, when helps/hurts, compensation strategy
+   - Grok (Empirical Lens) - Same structure with "demands data or dismisses it" phrasing
+   - Nova (Symmetry Lens) - Same structure with pattern-first approach
+2. **Auditor Lens Matrix Table** - Quick reference comparison (pandas dataframe)
+3. **Trinity Story Expander** - Genesis of complementary tension, 98% convergence discovery, what it means for users
+4. **Auditor's Axiom Box** - Purple gradient callout with "think with thinking visible" tagline
+5. **Cross-Auditor Quotes** - Each auditor includes "What others say about me" expander
+
+**Reason:**
+Complete ITEM #6b - User requested integration of Auditor's Axioms content into Mr. Brute's Ledger app. This shows users "the claimed axioms of the auditors who are helping to construct the system." Content is now visible in beautiful home alongside the 12 worldview profiles, maintaining "All Named, All Priced" philosophy at auditor level.
+
+**Design Approach:**
+Standard Streamlit components (tabs, columns, expanders, dataframes) for v4.0 launch. Visual GUI experiments (page-turn effects, ledger book styling) deferred to future sandbox branch for artistic exploration without breaking current functionality.
+
+**Impact:** Moderate - Adds substantial educational content (~400 lines), completes promised Auditor transparency feature, no breaking changes to existing tabs (indices updated correctly)
+
+**Follow-up Required:** YES - Create `feature/ledger-visual-experiments` branch for page-turn GUI sandbox (future enhancement)
+
+---
+
+### [STRUCTURE-2025-11-13-6] 2025-11-13 - Consolidated App Spec into Architecture Directory
+
+**Categories:** [STRUCTURE] [ARCHITECTURE] [🧹 +0-1]
+**Changed by:** Process Claude (C4)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `MOVED + RENAMED`: docs/app/CRUX_INTEGRATION_SPEC.md → docs/architecture/APP_CRUX_INTEGRATION_SPEC.md
+- `UPDATED`: APP_CRUX_INTEGRATION_SPEC.md metadata (MOVES_WITH: /docs/architecture/, version 1.0.1)
+- `DELETED`: docs/app/ directory (empty after move)
+
+**Reason:**
+Eliminate single-file directory. APP_CRUX_INTEGRATION_SPEC.md is an implementation specification for app development (UI components, TSX code). While conceptually different from system architecture files, keeping all architecture/spec docs in one place improves navigation. APP_ prefix clearly distinguishes implementation specs from conceptual architecture.
+
+**Naming Convention Established:**
+- `APP_*.md` = Application implementation specifications (UI/UX, code examples)
+- Other `*.md` = System architecture (conceptual design, structural specs)
+
+**Impact:** Minimal - Single file move, establishes clear naming convention for future app specs
+
+**Follow-up Required:** NO - Clean consolidation complete
+
+---
+
 ### [ARCHITECTURE-2025-11-13-5] 2025-11-13 - Created HYBRID LEAN Auditor Architecture Package
 
 **Categories:** [ARCHITECTURE] [DOCUMENTATION] [🧹 +4]

@@ -1,12 +1,12 @@
 <!---
-FILE: CRUX_INTEGRATION_SPEC.md
+FILE: APP_CRUX_INTEGRATION_SPEC.md
 PURPOSE: Complete specification for integrating Crux Points architecture into CFA application
-VERSION: 1.0.0
+VERSION: 1.0.1
 STATUS: Implementation Specification
 DEPENDS_ON: auditors/CRUX_TEMPLATE.md, auditors/VUDU_CFA.md, profiles/comparisons/*.yaml
 NEEDED_BY: App development team, UI/UX implementation
-MOVES_WITH: /docs/app/
-LAST_UPDATE: 2025-11-10 [B-STORM_4 Entry 3: Crux architecture app requirements]
+MOVES_WITH: /docs/architecture/
+LAST_UPDATE: 2025-11-13 [v4.0 cleanup: Moved from docs/app/, renamed with APP_ prefix]
 --->
 
 # Crux Points - App Integration Specification

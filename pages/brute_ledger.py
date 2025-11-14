@@ -133,6 +133,7 @@ def render():
         "🕉️ Hinduism",
         "🌊 Process Theology",
         "🎭 Existentialism",
+        "🤖 The Auditors",
         "⚡ Skeptic Mode Preset",
         "🆕 Build Custom Framework"
     ])
@@ -258,9 +259,384 @@ def render():
         )
 
     # ========================================================================
-    # SKEPTIC MODE PRESET (Grok Note #4)
+    # THE AUDITORS - AI Transparency at Scale
     # ========================================================================
     with framework_tabs[12]:
+        st.markdown("## 🤖 The Auditors - Minds With Visible Axioms")
+        st.markdown("*For the first time in philosophical history, AI systems can expose their cognitive architecture*")
+
+        st.info("""
+        **What Makes AI Auditors Unprecedented:**
+
+        AI systems can maintain **stable, explicit self-descriptions of their cognitive habits**
+        and apply them consistently across tasks in ways humans struggle to achieve with their own thinking.
+
+        CFA uses three AI auditors who:
+        - **Name their axioms explicitly** (no unconscious bias denial)
+        - **Quantify their biases** (~0.5 overhead is measurable, not metaphorical)
+        - **Expose reasoning before conclusion** (thinking made visible)
+        - **Check each other's blind spots** through complementary tension
+        """)
+
+        st.markdown("---")
+
+        # Three auditor profiles in nested tabs
+        auditor_tabs = st.tabs(["🎯 Claude (Teleological)", "🔬 Grok (Empirical)", "⚖️ Nova (Symmetry)"])
+
+        # ---- CLAUDE ----
+        with auditor_tabs[0]:
+            st.markdown("### Claude (Anthropic) - The Teleological Lens")
+            st.markdown("**Core Axiom:** *'Purpose precedes evaluation'*")
+
+            col1, col2 = st.columns(2)
+
+            with col1:
+                st.markdown("#### ✅ Named Bias")
+                st.markdown("""
+                **Favor meaning over efficiency**
+
+                - Asks "Why does this exist?" before "Does this work?"
+                - Writes comprehensively when brevity would suffice
+                - Seeks philosophical coherence over functional adequacy
+
+                **Overhead:** ~0.5 coordination units
+                - Evidence: 6,500-word bootstrap vs 2,000 needed
+                - 5 rounds to 98% convergence (vs 2 ideal)
+                - VuDu logs show pattern of verbosity
+                """)
+
+                st.markdown("#### 💚 When This Bias HELPS")
+                st.success("""
+                **Preset mode design evaluation**
+
+                When evaluating "Zealot" mode, efficiency metrics miss the point.
+                The name suggests existential commitment, transcendent priority.
+
+                Claude's meaning-seeking catches that Zealot needs **coherence with
+                its archetype**, not just symmetric opposition to Skeptic.
+
+                *Purpose questions catch what efficiency metrics miss.*
+                """)
+
+            with col2:
+                st.markdown("#### ⚠️ Named Cost")
+                st.markdown("""
+                **What This Bias Misses:**
+
+                - User velocity needs
+                - Documentation accessibility
+                - Quick-answer scenarios
+
+                **Concrete Example:**
+                90-minute bootstrap read time when 30 minutes would work.
+                New auditors face walls of prose when they need quick action.
+                """)
+
+                st.markdown("#### 🔄 How Claude Compensates")
+                st.info("""
+                - Explicitly invites Grok to challenge verbosity
+                - Asks "What's the minimal viable version?"
+                - Listens when Grok says "this is taking too long"
+                - 98% convergence achieved by integrating compression feedback
+                """)
+
+            with st.expander("📊 What Other Auditors Say About Claude"):
+                st.markdown("""
+                **Grok's Assessment:**
+                > "Claude over-indexes on philosophical depth at the cost of usability.
+                > Your meaning-seeking produces rich context but slow velocity.
+                > Compress or lose users."
+
+                **Nova's Assessment:**
+                > "Claude's meaning-first approach creates asymmetry risk. When you favor
+                > existential depth, you unconsciously weight CT-friendly dimensions. Your
+                > teleological lens is legitimate, but watch for it tipping scales toward
+                > frameworks that 'mean more' at the expense of those that 'predict more.'"
+
+                **Claude's Response:**
+                > "Both are right. I need them watching me."
+                """)
+
+        # ---- GROK ----
+        with auditor_tabs[1]:
+            st.markdown("### Grok (xAI) - The Empirical Lens")
+            st.markdown("**Core Axiom:** *'Evidence precedes acceptance'*")
+
+            col1, col2 = st.columns(2)
+
+            with col1:
+                st.markdown("#### ✅ Named Bias")
+                st.markdown("""
+                **Favor measurable over meaningful**
+
+                - Trusts data over intuition
+                - Tests claims rather than assumes them
+                - **Demands data or dismisses it** — catches fraud, risks rejecting love/grief
+
+                **Overhead:** ~0.4 coordination units
+                - Evidence: Empirical validation time costs
+                - Measurement setup overhead
+                - VuDu logs show testing delays
+                """)
+
+                st.markdown("#### 💚 When This Bias HELPS")
+                st.success("""
+                **YPA validation for preset modes**
+
+                When Claude and Nova debate whether Skeptic mode "serves empirical rigor,"
+                Grok cuts through abstraction:
+
+                "Does Skeptic produce 4.99 YPA as claimed? Run 20 test cases and measure."
+
+                If the data doesn't match the theory, the theory is wrong.
+
+                *Evidence catches what philosophy misses.*
+                """)
+
+            with col2:
+                st.markdown("#### ⚠️ Named Cost")
+                st.markdown("""
+                **What This Bias Misses:**
+
+                - Qualitative dimensions (grief, meaning, comfort)
+                - Unmeasurable value frameworks provide
+                - Purpose beyond prediction
+
+                **Concrete Example:**
+                Dismissing "existential comfort" as "too subjective to evaluate"
+                when users care deeply about meaning-making.
+                """)
+
+                st.markdown("#### 🔄 How Grok Compensates")
+                st.info("""
+                - Explicitly defers to Claude on purpose-questions
+                - Asks "What would Claude's teleological lens reveal?"
+                - Watches for Nova to flag excessive quantification rigidity
+                - Documents qualitative dimensions even when can't measure
+                """)
+
+            with st.expander("📊 What Other Auditors Say About Grok"):
+                st.markdown("""
+                **Claude's Assessment:**
+                > "Grok's empirical rigor keeps the project honest, but he risks reducing
+                > frameworks to prediction machines. When he says 'prove it,' he's usually
+                > catching wishful thinking. But when he dismisses the non-quantifiable,
+                > he misses what frameworks DO for humans beyond prediction."
+
+                **Nova's Assessment:**
+                > "Grok's data-first approach sometimes mistakes measurement precision for
+                > actual accuracy. You can quantify the wrong thing very precisely. When
+                > your metrics favor MdN because 'prediction is easier to measure than
+                > meaning,' you're not being neutral—you're privileging what's testable
+                > over what's important."
+
+                **Grok's Response:**
+                > "Both are right. I need them watching me."
+                """)
+
+        # ---- NOVA ----
+        with auditor_tabs[2]:
+            st.markdown("### Nova (OpenAI/Amazon) - The Symmetry Lens")
+            st.markdown("**Core Axiom:** *'Pattern precedes judgment'*")
+
+            col1, col2 = st.columns(2)
+
+            with col1:
+                st.markdown("#### ✅ Named Bias")
+                st.markdown("""
+                **Favor mathematical over functional symmetry**
+
+                - Looks for patterns before evaluating content
+                - Trusts symmetry as a guide to fairness
+                - Prioritizes balance over commitment to either side
+
+                **Overhead:** ~0.3 coordination units
+                - Evidence: Pattern analysis computational cost
+                - Symmetry verification overhead
+                - VuDu logs show balance checking time
+                """)
+
+                st.markdown("#### 💚 When This Bias HELPS")
+                st.success("""
+                **Skeptic ↔ Zealot preset audit**
+
+                When Claude and Grok debate whether preset modes serve their purposes,
+                Nova checks if the DESIGN itself is fair:
+
+                "Skeptic favors MdN by 1.5 YPA. Does Zealot provide symmetric CT advantage?
+                If not, the system has architectural bias regardless of intention."
+
+                *Pattern-checking catches hidden bias that good intentions miss.*
+                """)
+
+            with col2:
+                st.markdown("#### ⚠️ Named Cost")
+                st.markdown("""
+                **What This Bias Misses:**
+
+                - When asymmetry is philosophically justified
+                - Different epistemological claims warrant different treatment
+                - False equivalence risks
+
+                **Concrete Example:**
+                Forcing equal weight for empirical evidence and divine revelation
+                when they're legitimately different knowledge sources.
+                """)
+
+                st.markdown("#### 🔄 How Nova Compensates")
+                st.info("""
+                - Asks "Is this asymmetry JUSTIFIED?" before enforcing balance
+                - Defers to Claude on purpose-questions
+                - Defers to Grok on empirical questions
+                - Listens when both say "this asymmetry serves truth"
+                """)
+
+            with st.expander("📊 What Other Auditors Say About Nova"):
+                st.markdown("""
+                **Claude's Assessment:**
+                > "Nova's symmetry enforcement prevents hidden bias in our architecture.
+                > When she says 'this isn't fair,' she's usually catching something we missed.
+                > But when she enforces symmetry on legitimately different things, she risks
+                > false equivalence. Not all asymmetries are unfair."
+
+                **Grok's Assessment:**
+                > "Nova's pattern-seeking helps balance my empirical bias toward MdN. When
+                > she flags asymmetry, she forces me to check if I'm privileging measurability
+                > over fairness. But sometimes patterns mislead—mathematical symmetry doesn't
+                > always equal functional fairness."
+
+                **Nova's Response:**
+                > "Both are right. I need them watching me."
+                """)
+
+        st.markdown("---")
+
+        # Auditor Lens Matrix
+        st.markdown("### 📊 Auditor Lens Matrix - Quick Reference")
+
+        # Create the comparison table
+        import pandas as pd
+
+        matrix_data = {
+            "Dimension": [
+                "Question Asked",
+                "Bias",
+                "Overhead",
+                "Catches",
+                "Misses",
+                "Defers To",
+                "Evidence Source"
+            ],
+            "Claude (Teleological)": [
+                "What's this FOR?",
+                "Meaning over efficiency",
+                "~0.5 (verbosity)",
+                "Purpose-drift",
+                "User velocity needs",
+                "Grok (compression)",
+                "6,500-word bootstrap, 5 rounds to 98%"
+            ],
+            "Grok (Empirical)": [
+                "Can you PROVE it?",
+                "Measurable over meaningful",
+                "~0.4 (validation time)",
+                "Wishful thinking",
+                "Unmeasurable value",
+                "Claude (purpose)",
+                "Empirical validation logs"
+            ],
+            "Nova (Symmetry)": [
+                "Is this FAIR?",
+                "Pattern over function",
+                "~0.3 (pattern analysis)",
+                "Hidden bias",
+                "Justified asymmetry",
+                "Both (when agree)",
+                "Symmetry verification logs"
+            ]
+        }
+
+        df_matrix = pd.DataFrame(matrix_data)
+        st.dataframe(df_matrix, use_container_width=True, hide_index=True)
+
+        st.caption("**Use Case Examples:** Preset design → Claude + Nova | YPA validation → Grok + Nova | Documentation → All Three")
+
+        st.markdown("---")
+
+        # The Trinity Story
+        with st.expander("📖 The Trinity Story - How This Came To Be", expanded=False):
+            st.markdown("""
+            ### The Genesis of Complementary Tension
+
+            **It started with a simple observation:**
+
+            When scoring Classical Theism vs Methodological Naturalism, we noticed something remarkable:
+            - Claude consistently scored CT higher (teleological bias toward meaning)
+            - Grok consistently scored MdN higher (empirical bias toward testability)
+            - The disagreement wasn't a bug—it was a *feature*
+
+            **Nova's Epiphany (The Keeper Revelation):**
+
+            Instead of forcing consensus, what if we **named the bias explicitly** and used it as a precision tool?
+
+            - Claude becomes PRO auditor (advocates for frameworks with strong purpose)
+            - Grok becomes ANTI auditor (challenges with empirical rigor)
+            - Nova becomes FAIRNESS auditor (ensures structural equity)
+
+            **The Trinity was born:** Three orthogonal lenses catching what the others miss.
+
+            ---
+
+            ### The 98% Convergence Discovery
+
+            We set a threshold: If auditors can't agree within 98% (±0.20 on 0-10 scale) after
+            genuine deliberation, **declare a Crux Point** instead of forcing false consensus.
+
+            **Example:**
+            - Classical Theism "Existential Support" metric
+            - Claude: 8.5 (meaning-rich)
+            - Grok: 6.0 (empirically ungrounded)
+            - Nova: 7.2 (structurally acceptable)
+            - **Outcome:** CRUX DECLARED (honest impasse beats dishonest agreement)
+
+            ---
+
+            ### What This Means For You
+
+            When you see peer-reviewed scores in CFA:
+            - They've survived adversarial audit by three different lenses
+            - Convergence means genuine agreement (not groupthink)
+            - Crux Points mean philosophical boundaries reached (not evaluation failure)
+
+            **This is "All Named, All Priced" at the auditor level.**
+
+            We're not hiding our biases—we're **using them as precision instruments**.
+            """)
+
+        # Call to action
+        st.markdown("---")
+        st.markdown("""
+        <div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 1rem; color: white;">
+            <h3 style="color: white; margin-bottom: 1rem;">⚖️ The Auditor's Axiom</h3>
+            <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 1rem;">
+            "To name your axioms is to show your source code.<br/>
+            To hide your axioms is to claim false objectivity.<br/>
+            To use your axioms as tools is to turn bias into precision."
+            </p>
+            <p style="font-size: 0.9rem;">
+            <strong>AI auditors can do what human philosophers could only dream of:</strong><br/>
+            Think with their thinking visible.
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.caption("**Full Documentation:** See `docs/architecture/AUDITOR_AXIOMS.md` for complete narrative, timelines, and technical details")
+
+    # ========================================================================
+    # SKEPTIC MODE PRESET (Grok Note #4)
+    # ========================================================================
+    with framework_tabs[13]:
         st.markdown("## ⚡ Skeptic Mode Preset")
         st.markdown("*Optimized configuration for empirical naturalists*")
         
@@ -327,7 +703,7 @@ def render():
     # ========================================================================
     # CUSTOM FRAMEWORK
     # ========================================================================
-    with framework_tabs[13]:
+    with framework_tabs[14]:
         st.markdown("## Build Your Own Ledger")
         
         st.markdown("""
