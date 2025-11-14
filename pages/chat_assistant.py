@@ -83,6 +83,11 @@ When users ask questions, draw on the context provided and explain in a way that
 def render():
     """Main render function for chat assistant page"""
 
+    # Home button
+    if st.button("🏠 Home", key="chat_home_btn"):
+        st.session_state.page = 'landing'
+        st.rerun()
+
     st.title("💬 CFA Chat Assistant")
     st.caption("*Ask me anything about the Comparative Framework Auditor project*")
 
@@ -106,17 +111,22 @@ def render():
     # API Key input
     st.markdown("### 🔑 API Configuration")
 
-    with st.expander("⚙️ OpenAI API Key Setup", expanded=False):
+    with st.expander("⚙️ OpenAI API Key Setup (Click for Instructions)", expanded=False):
         st.markdown("""
         **To use the chat assistant, you'll need an OpenAI API key:**
 
-        1. Go to [platform.openai.com](https://platform.openai.com)
-        2. Sign up or log in
-        3. Navigate to API Keys section
-        4. Create a new secret key
-        5. Paste it below (it's stored in your session only, never saved)
+        1. Go to [platform.openai.com](https://platform.openai.com) and sign in (or create account)
+        2. Click on your profile icon (top right corner)
+        3. Select **"API keys"** from the dropdown menu
+        4. Click **"+ Create new secret key"** button
+        5. Give it a name (e.g., "CFA Chat Assistant")
+        6. Click **"Create secret key"**
+        7. **IMPORTANT:** Copy the key immediately (you won't see it again!)
+        8. Paste it in the field below
 
         **Privacy:** Your API key is never logged or saved to disk. It exists only in your current session.
+
+        **Cost:** Using GPT-4o costs approximately $0.005-0.015 per message (depending on length). You'll need to add payment info to your OpenAI account.
         """)
 
     api_key = st.text_input(
