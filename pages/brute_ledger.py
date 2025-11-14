@@ -679,23 +679,63 @@ def render():
             st.markdown("## 🔬 Skeptic Mode (MdN-Optimized)")
             st.markdown("*Empirical rigor, prediction focus, axiom skepticism*")
 
-            col1, col2 = st.columns([2, 1])
+            # Row 1: YPA (left) + Configuration (right)
+            col1, col2 = st.columns([1, 1])
 
             with col1:
-                st.markdown("### ⚙️ Configuration")
-                st.code("""Parity:         OFF
-PF-Type:        Instrumental
-Fallibilism:    ON
-BFI Weight:     1.2x (Heavier)""", language="yaml")
-
-                st.markdown("**Philosophy:**")
-                st.markdown("Taking empirical rigor seriously means allowing asymmetric evaluation that favors frameworks making falsifiable claims.")
+                st.markdown("### 📊 Expected YPA")
+                ypacol1, ypacol2 = st.columns(2)
+                with ypacol1:
+                    st.metric("MdN", "~7-8")
+                with ypacol2:
+                    st.metric("CT", "~4-5")
+                st.caption("⚠️ *INTUITIVE (not validated)*")
 
             with col2:
-                st.markdown("### 📊 Expected YPA")
-                st.metric("MdN", "~7-8")
-                st.metric("CT", "~4-5")
-                st.caption("⚠️ *INTUITIVE (not validated)*")
+                st.markdown("### ⚙️ Configuration")
+                # Compact inline display
+                st.markdown("""
+                - **Parity:** OFF
+                - **PF-Type:** Instrumental
+                - **Fallibilism:** ON
+                - **BFI Weight:** 1.2x (Heavier)
+                """)
+
+            st.markdown("---")
+
+            # Row 2: BFI Breakdown (Meta-Axioms + Debts)
+            st.markdown("### 📋 BFI Breakdown - Skeptic's Meta-Axioms")
+            st.caption("*The unprovable assumptions underlying THIS preset itself*")
+
+            bfi_col1, bfi_col2, bfi_col3 = st.columns([1, 1, 1])
+
+            with bfi_col1:
+                st.markdown("**Axioms: 3**")
+                st.markdown("""
+                1. **Testability > Meaning** - Falsifiable claims deserve epistemic priority
+                2. **Asymmetric Standards Justified** - Empirical frameworks get different evaluation (Parity OFF)
+                3. **Parsimony Virtue** - More axioms = higher intellectual cost (BFI 1.2x penalty)
+                """)
+
+            with bfi_col2:
+                st.markdown("**Debts: 2**")
+                st.markdown("""
+                1. **Unmeasurable Value Problem** - How to handle love, grief, meaning if unprovable?
+                2. **Induction Debt** - Empiricism itself rests on unprovable regularity assumption
+                """)
+
+            with bfi_col3:
+                st.metric("BFI", "5", help="3 Axioms + 2 Debts")
+                st.caption("*Skeptic preset has its own brute facts!*")
+                st.markdown("")
+                st.markdown("")
+                if st.button("→ Apply & Go to Console", key="apply_nav_skeptic", use_container_width=True, type="primary"):
+                    st.session_state['sidebar_lever_parity'] = "OFF"
+                    st.session_state['sidebar_pf_type'] = "Instrumental"
+                    st.session_state['sidebar_fallibilism'] = "ON"
+                    st.session_state['sidebar_bfi_weight'] = "Heavier_1.2x"
+                    st.session_state.page = 'console'
+                    st.rerun()
 
             with st.expander("🔍 The Story Behind The Numbers"):
                 st.markdown("""
@@ -706,6 +746,12 @@ BFI Weight:     1.2x (Heavier)""", language="yaml")
                 Empirical naturalists wanted configuration honoring their commitments: testability matters more than meaning,
                 prediction > existential comfort, falsifiability is virtue.
 
+                **Meta-Revelation:**
+
+                The preset itself has axioms! Parity OFF is justified by Axiom #2 (asymmetric standards).
+                BFI 1.2x is justified by Axiom #3 (parsimony virtue). But Debt #2 reveals: empiricism
+                itself rests on unprovable regularity! *Even skeptics have brute facts.*
+
                 **Critical Symmetry Issue (Under Trinity Review):**
 
                 Nova flagged: Skeptic has 3 MdN-favoring levers, but Zealot has only 1 CT-favoring lever.
@@ -715,12 +761,6 @@ BFI Weight:     1.2x (Heavier)""", language="yaml")
                 """)
 
             st.markdown("---")
-            if st.button("⚡ Apply to Console", key="apply_skeptic", use_container_width=True, type="primary"):
-                st.session_state['sidebar_lever_parity'] = "OFF"
-                st.session_state['sidebar_pf_type'] = "Instrumental"
-                st.session_state['sidebar_fallibilism'] = "ON"
-                st.session_state['sidebar_bfi_weight'] = "Heavier_1.2x"
-                st.success("✅ Skeptic Mode applied! Navigate to Console.")
 
         # ========================================================================
         # DIPLOMAT MODE (Balanced)
@@ -729,49 +769,82 @@ BFI Weight:     1.2x (Heavier)""", language="yaml")
             st.markdown("## 🤝 Diplomat Mode (Balanced)")
             st.markdown("*Fair comparison, balanced criteria, neutral stance*")
 
-            col1, col2 = st.columns([2, 1])
+            # Row 1: YPA (left) + Configuration (right)
+            col1, col2 = st.columns([1, 1])
 
             with col1:
-                st.markdown("### ⚙️ Configuration")
-                st.code("""Parity:         ON
-PF-Type:        Holistic_50_50
-Fallibilism:    ON
-BFI Weight:     1.0x (Equal)""", language="yaml")
-
-                st.markdown("**Philosophy:**")
-                st.markdown("True balance requires symmetric evaluation. No asymmetry, no hidden bias—just fair comparison.")
+                st.markdown("### 📊 Expected YPA")
+                ypacol1, ypacol2 = st.columns(2)
+                with ypacol1:
+                    st.metric("MdN", "~6")
+                with ypacol2:
+                    st.metric("CT", "~6")
+                st.caption("⚠️ *INTUITIVE (not validated)*")
 
             with col2:
-                st.markdown("### 📊 Expected YPA")
-                st.metric("MdN", "~6")
-                st.metric("CT", "~6")
-                st.caption("⚠️ *INTUITIVE (not validated)*")
+                st.markdown("### ⚙️ Configuration")
+                st.markdown("""
+                - **Parity:** ON
+                - **PF-Type:** Holistic_50_50
+                - **Fallibilism:** ON
+                - **BFI Weight:** 1.0x (Equal)
+                """)
+
+            st.markdown("---")
+
+            # Row 2: BFI Breakdown (Meta-Axioms + Debts)
+            st.markdown("### 📋 BFI Breakdown - Diplomat's Meta-Axioms")
+            st.caption("*The unprovable assumptions underlying THIS preset itself*")
+
+            bfi_col1, bfi_col2, bfi_col3 = st.columns([1, 1, 1])
+
+            with bfi_col1:
+                st.markdown("**Axioms: 2**")
+                st.markdown("""
+                1. **Symmetry = Fairness** - Same standards for all frameworks (Parity ON)
+                2. **Balance is Achievable** - 50/50 weighting produces unbiased comparison
+                """)
+
+            with bfi_col2:
+                st.markdown("**Debts: 3**")
+                st.markdown("""
+                1. **Context Collapse** - Does "fair" treatment ignore legitimate differences?
+                2. **Neutrality Myth** - Is 50/50 weighting actually neutral or just different bias?
+                3. **Evasion Suspicion** - Is balance-seeking just avoiding hard truth claims?
+                """)
+
+            with bfi_col3:
+                st.metric("BFI", "5", help="2 Axioms + 3 Debts")
+                st.caption("*Even neutrality has assumptions!*")
+                st.markdown("")
+                st.markdown("")
+                if st.button("→ Apply & Go to Console", key="apply_nav_diplomat", use_container_width=True, type="primary"):
+                    st.session_state['sidebar_lever_parity'] = "ON"
+                    st.session_state['sidebar_pf_type'] = "Holistic_50_50"
+                    st.session_state['sidebar_fallibilism'] = "ON"
+                    st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
+                    st.session_state.page = 'console'
+                    st.rerun()
 
             with st.expander("🔍 The Diplomat Philosophy"):
                 st.markdown("""
                 **Seeking Unbiased Comparison:**
 
-                Some users want to see frameworks compared on equal footing:
-                - Parity ON ensures same standards for both
-                - 50/50 PF weighting (instrumental + intrinsic balanced)
-                - Equal BFI treatment (neither favored/penalized for axiom count)
+                Parity ON ensures same standards for both, 50/50 PF weighting balances instrumental + intrinsic.
+                Equal BFI treatment (neither favored/penalized for axiom count).
 
-                **Success Criteria:**
+                **Meta-Revelation:**
 
-                Diplomat should produce |MdN - CT| < 0.5 YPA (within tolerance for "balanced").
+                Even "neutrality" rests on axioms! Axiom #1 assumes symmetry equals fairness. But Debt #1 asks:
+                what if frameworks are legitimately different? Debt #2 challenges: is 50/50 actually neutral,
+                or just a different configuration bias? *Even the center has brute facts.*
 
-                If Diplomat shows significant bias, something's broken in the architecture.
+                **Success Criteria:** |MdN - CT| < 0.5 YPA. If Diplomat shows bias, architecture is broken.
 
                 *Status: Awaiting empirical validation from Grok.*
                 """)
 
             st.markdown("---")
-            if st.button("🤝 Apply to Console", key="apply_diplomat", use_container_width=True, type="primary"):
-                st.session_state['sidebar_lever_parity'] = "ON"
-                st.session_state['sidebar_pf_type'] = "Holistic_50_50"
-                st.session_state['sidebar_fallibilism'] = "ON"
-                st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
-                st.success("✅ Diplomat Mode applied! Navigate to Console.")
 
         # ========================================================================
         # SEEKER MODE (CT-Leaning)
@@ -780,36 +853,75 @@ BFI Weight:     1.0x (Equal)""", language="yaml")
             st.markdown("## 🙏 Seeker Mode (CT-Leaning)")
             st.markdown("*Meaning-first exploration, holistic value, epistemic openness*")
 
-            col1, col2 = st.columns([2, 1])
+            # Row 1: YPA (left) + Configuration (right)
+            col1, col2 = st.columns([1, 1])
 
             with col1:
-                st.markdown("### ⚙️ Configuration")
-                st.code("""Parity:         ON
-PF-Type:        Composite_70_30
-Fallibilism:    ON
-BFI Weight:     1.0x (Equal)""", language="yaml")
-
-                st.markdown("**Philosophy:**")
-                st.markdown("Some users prioritize meaning over prediction. Composite 70/30 weights intrinsic value without rejecting empirical concerns entirely.")
+                st.markdown("### 📊 Expected YPA")
+                ypacol1, ypacol2 = st.columns(2)
+                with ypacol1:
+                    st.metric("MdN", "~5")
+                with ypacol2:
+                    st.metric("CT", "~7")
+                st.caption("⚠️ *INTUITIVE (not validated)*")
 
             with col2:
-                st.markdown("### 📊 Expected YPA")
-                st.metric("MdN", "~5")
-                st.metric("CT", "~7")
-                st.caption("⚠️ *INTUITIVE (not validated)*")
+                st.markdown("### ⚙️ Configuration")
+                st.markdown("""
+                - **Parity:** ON
+                - **PF-Type:** Composite_70_30
+                - **Fallibilism:** ON
+                - **BFI Weight:** 1.0x (Equal)
+                """)
+
+            st.markdown("---")
+
+            # Row 2: BFI Breakdown (Meta-Axioms + Debts)
+            st.markdown("### 📋 BFI Breakdown - Seeker's Meta-Axioms")
+            st.caption("*The unprovable assumptions underlying THIS preset itself*")
+
+            bfi_col1, bfi_col2, bfi_col3 = st.columns([1, 1, 1])
+
+            with bfi_col1:
+                st.markdown("**Axioms: 3**")
+                st.markdown("""
+                1. **Meaning > Prediction** - Intrinsic value matters more than instrumental (70/30)
+                2. **Fairness Compatible** - Can lean CT while maintaining procedural justice (Parity ON)
+                3. **Openness Virtue** - Revision willingness is strength not weakness (Fallibilism ON)
+                """)
+
+            with bfi_col2:
+                st.markdown("**Debts: 2**")
+                st.markdown("""
+                1. **Ratio Arbitrariness** - Why 70/30 not 65/35 or 75/25? (Grok demands justification)
+                2. **Lean vs Zealot** - Where's the line between CT-leaning and CT-committed?
+                """)
+
+            with bfi_col3:
+                st.metric("BFI", "5", help="3 Axioms + 2 Debts")
+                st.caption("*Seekers have brute facts too!*")
+                st.markdown("")
+                st.markdown("")
+                if st.button("→ Apply & Go to Console", key="apply_nav_seeker", use_container_width=True, type="primary"):
+                    st.session_state['sidebar_lever_parity'] = "ON"
+                    st.session_state['sidebar_pf_type'] = "Composite_70_30"
+                    st.session_state['sidebar_fallibilism'] = "ON"
+                    st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
+                    st.session_state.page = 'console'
+                    st.rerun()
 
             with st.expander("🔍 The Seeker Position"):
                 st.markdown("""
                 **Between Diplomat and Zealot:**
 
-                Seeker is "CT-leaning but not extreme":
-                - Values existential depth
-                - Maintains fairness (Parity ON)
-                - Weights intrinsic fruitfulness 70% (vs instrumental 30%)
+                Seeker is "CT-leaning but not extreme" - values existential depth, maintains fairness (Parity ON),
+                weights intrinsic fruitfulness 70% (vs instrumental 30%).
 
-                **Open Question:**
+                **Meta-Revelation:**
 
-                Is 70/30 the right ratio? Trinity needs to test 60/40, 65/35, 70/30, 75/25 to find optimal "CT-leaning" balance.
+                Axiom #1 (Meaning > Prediction) justifies the 70/30 split. But Debt #1 reveals: why THIS ratio?
+                Nova asks about 65/35 or 75/25. Debt #2 probes the boundary: when does leaning become zealotry?
+                *The seeker seeks, but on what grounds?*
 
                 **Positioning Issue (Nova's Concern):**
 
@@ -819,12 +931,6 @@ BFI Weight:     1.0x (Equal)""", language="yaml")
                 """)
 
             st.markdown("---")
-            if st.button("🙏 Apply to Console", key="apply_seeker", use_container_width=True, type="primary"):
-                st.session_state['sidebar_lever_parity'] = "ON"
-                st.session_state['sidebar_pf_type'] = "Composite_70_30"
-                st.session_state['sidebar_fallibilism'] = "ON"
-                st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
-                st.success("✅ Seeker Mode applied! Navigate to Console.")
 
         # ========================================================================
         # ZEALOT MODE (CT-Optimized)
@@ -833,23 +939,61 @@ BFI Weight:     1.0x (Equal)""", language="yaml")
             st.markdown("## 👿 Zealot Mode (CT-Optimized)")
             st.markdown("*Existential priority, certainty-friendly, holistic focus*")
 
-            col1, col2 = st.columns([2, 1])
+            # Row 1: YPA (left) + Configuration (right)
+            col1, col2 = st.columns([1, 1])
 
             with col1:
-                st.markdown("### ⚙️ Configuration")
-                st.code("""Parity:         ON
-PF-Type:        Holistic_50_50
-Fallibilism:    OFF
-BFI Weight:     1.0x (Equal)""", language="yaml")
-
-                st.markdown("**Philosophy:**")
-                st.markdown("Those seeking existential commitment value coherence and meaning over falsifiability. Certainty-friendly evaluation recognizes some truths aren't empirically testable.")
+                st.markdown("### 📊 Expected YPA")
+                ypacol1, ypacol2 = st.columns(2)
+                with ypacol1:
+                    st.metric("MdN", "~4")
+                with ypacol2:
+                    st.metric("CT", "~8")
+                st.caption("⚠️ *INTUITIVE (not validated)*")
 
             with col2:
-                st.markdown("### 📊 Expected YPA")
-                st.metric("MdN", "~4")
-                st.metric("CT", "~8")
-                st.caption("⚠️ *INTUITIVE (not validated)*")
+                st.markdown("### ⚙️ Configuration")
+                st.markdown("""
+                - **Parity:** ON
+                - **PF-Type:** Holistic_50_50
+                - **Fallibilism:** OFF
+                - **BFI Weight:** 1.0x (Equal)
+                """)
+
+            st.markdown("---")
+
+            # Row 2: BFI Breakdown (Meta-Axioms + Debts)
+            st.markdown("### 📋 BFI Breakdown - Zealot's Meta-Axioms")
+            st.caption("*The unprovable assumptions underlying THIS preset itself*")
+
+            bfi_col1, bfi_col2, bfi_col3 = st.columns([1, 1, 1])
+
+            with bfi_col1:
+                st.markdown("**Axioms: 3**")
+                st.markdown("""
+                1. **Certainty Accessible** - Some truths transcend empirical testing (Fallibilism OFF)
+                2. **Existential Priority** - Meaning matters more than predictive power
+                3. **Commitment ≠ Unfairness** - Can privilege transcendence while maintaining procedural justice (Parity ON)
+                """)
+
+            with bfi_col2:
+                st.markdown("**Debts: 2**")
+                st.markdown("""
+                1. **Symmetry Violation** - Why Parity ON when Skeptic is OFF? (Nova demands justification)
+                2. **Axiom Tolerance Inconsistency** - If Skeptic penalizes axioms 1.2x, shouldn't Zealot reward them 0.8x?
+                """)
+
+            with bfi_col3:
+                st.metric("BFI", "5", help="3 Axioms + 2 Debts")
+                st.caption("*Zealots confess their debts!*")
+                st.warning("⚠️ **Trinity Alert:** Symmetry violations under review")
+                if st.button("→ Apply & Go to Console", key="apply_nav_zealot", use_container_width=True, type="primary"):
+                    st.session_state['sidebar_lever_parity'] = "ON"
+                    st.session_state['sidebar_pf_type'] = "Holistic_50_50"
+                    st.session_state['sidebar_fallibilism'] = "OFF"
+                    st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
+                    st.session_state.page = 'console'
+                    st.rerun()
 
             with st.expander("🔍 The Zealot Symmetry Problem"):
                 st.markdown("""
@@ -868,21 +1012,21 @@ BFI Weight:     1.0x (Equal)""", language="yaml")
 
                 Skeptic has 3 MdN-favoring levers, Zealot has only 1 CT-favoring lever. Not philosophically justified.
 
+                **Meta-Revelation:**
+
+                Zealot's Debt #1 and #2 ARE THE SYMMETRY VIOLATIONS! The preset confesses its own architectural problems.
+                Axiom #3 claims Parity ON maintains fairness, but Nova asks: if Skeptic's asymmetry (Parity OFF) is
+                justified by empirical rigor, shouldn't Zealot's asymmetry (Parity OFF mirrored) be justified by
+                existential commitment? *Even the zealot's debts reveal design flaws.*
+
                 **Trinity's Task:**
 
-                Either justify this asymmetry OR correct it. If Skeptic is Parity OFF, should Zealot mirror it?
-                If Skeptic penalizes axioms 1.2x, should Zealot reward them 0.8x?
+                Either justify this asymmetry OR correct it. This is the heart of the preset calibration mission.
 
-                *This is the heart of the preset calibration mission.*
+                *Full calibration status: `auditors/Mission/Preset_Calibration/CURRENT_MODE_CONFIGS.md`*
                 """)
 
             st.markdown("---")
-            if st.button("👿 Apply to Console", key="apply_zealot", use_container_width=True, type="primary"):
-                st.session_state['sidebar_lever_parity'] = "ON"
-                st.session_state['sidebar_pf_type'] = "Holistic_50_50"
-                st.session_state['sidebar_fallibilism'] = "OFF"
-                st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
-                st.success("✅ Zealot Mode applied! Navigate to Console.")
 
         # ========================================================================
         # CUSTOM FRAMEWORK
