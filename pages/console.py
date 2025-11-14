@@ -81,15 +81,15 @@ def detect_active_preset():
     # Normalize BFI weight naming (Heavier_1.2x and Weighted_1.2x are equivalent)
     bfi_normalized = "Weighted_1.2x" if bfi in ["Heavier_1.2x", "Weighted_1.2x"] else bfi
 
-    # Check against known preset configurations
+    # Check against known preset configurations (emojis match Brute Ledger)
     if parity == "OFF" and pf == "Instrumental" and fall == "ON" and bfi_normalized == "Weighted_1.2x":
         return "🔬 Skeptic"
     elif parity == "ON" and pf == "Holistic_50_50" and fall == "ON" and bfi == "Equal_1.0x":
         return "🤝 Diplomat"
     elif parity == "ON" and pf == "Composite_70_30" and fall == "ON" and bfi == "Equal_1.0x":
-        return "🌉 Seeker"
+        return "🙏 Seeker"
     elif parity == "ON" and pf == "Holistic_50_50" and fall == "OFF" and bfi == "Equal_1.0x":
-        return "⛪ Zealot"
+        return "👿 Zealot"
     else:
         return "⚙️ Custom"
 
@@ -123,17 +123,17 @@ def render():
     if "fb_mg" not in st.session_state:
         st.session_state["fb_mg"] = CT_DEFAULT["levers"]["MG"]
     
-    # Frozen position preset indicator and home button (top-right corner)
+    # Frozen position preset indicator (top-right corner, smaller size)
     active_preset = detect_active_preset()
     st.markdown(f"""
-    <div style="position: fixed; top: 10px; right: 10px; z-index: 9999;
+    <div style="position: fixed; top: 15px; right: 15px; z-index: 9999;
                 background-color: rgba(255, 255, 255, 0.95);
-                border: 2px solid #1f77b4; border-radius: 8px;
-                padding: 8px 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-        <div style="font-size: 0.85rem; font-weight: bold; color: #1f77b4; margin-bottom: 4px;">
+                border: 2px solid #1f77b4; border-radius: 6px;
+                padding: 6px 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+        <div style="font-size: 0.7rem; font-weight: bold; color: #1f77b4; margin-bottom: 2px;">
             Active Mode
         </div>
-        <div style="font-size: 1.1rem; font-weight: bold; color: #333;">
+        <div style="font-size: 0.9rem; font-weight: bold; color: #333;">
             {active_preset}
         </div>
     </div>
@@ -177,47 +177,85 @@ def render():
         )
         
         preset_key = preset_options[selected_preset]
-        
+
         if preset_key == "mdn":
             st.info("**Methodological Naturalism**\n\nResearch protocol assuming testable natural causes. Audited by Claude + Grok with 98% convergence.")
-            
-            if st.button("Load MdN Profile", use_container_width=True):
-                st.session_state["fa_name"] = "Methodological Naturalism"
-                st.session_state["fa_ax"] = 6
-                st.session_state["fa_db"] = 4
-                st.session_state["fa_ad"] = True
-                st.session_state["fa_cci"] = 8.0
-                st.session_state["fa_edb"] = 7.5
-                st.session_state["fa_pfi"] = 10.0
-                st.session_state["fa_pfe"] = 3.0
-                st.session_state["fa_ar"] = 7.0
-                st.session_state["fa_mg"] = 4.0
-                st.success("✅ MdN loaded into Framework A!")
-                st.rerun()
-        
+
+            # Let user choose which framework slot
+            load_col1, load_col2 = st.columns(2)
+
+            with load_col1:
+                if st.button("→ Load to A", key="load_mdn_a", use_container_width=True, type="primary"):
+                    st.session_state["fa_name"] = "Methodological Naturalism"
+                    st.session_state["fa_ax"] = 6
+                    st.session_state["fa_db"] = 4
+                    st.session_state["fa_ad"] = True
+                    st.session_state["fa_cci"] = 8.0
+                    st.session_state["fa_edb"] = 7.5
+                    st.session_state["fa_pfi"] = 10.0
+                    st.session_state["fa_pfe"] = 3.0
+                    st.session_state["fa_ar"] = 7.0
+                    st.session_state["fa_mg"] = 4.0
+                    st.success("✅ MdN → Framework A!")
+                    st.rerun()
+
+            with load_col2:
+                if st.button("→ Load to B", key="load_mdn_b", use_container_width=True):
+                    st.session_state["fb_name"] = "Methodological Naturalism"
+                    st.session_state["fb_ax"] = 6
+                    st.session_state["fb_db"] = 4
+                    st.session_state["fb_ad"] = True
+                    st.session_state["fb_cci"] = 8.0
+                    st.session_state["fb_edb"] = 7.5
+                    st.session_state["fb_pfi"] = 10.0
+                    st.session_state["fb_pfe"] = 3.0
+                    st.session_state["fb_ar"] = 7.0
+                    st.session_state["fb_mg"] = 4.0
+                    st.success("✅ MdN → Framework B!")
+                    st.rerun()
+
         elif preset_key == "ct":
             st.info("**Classical Theism**\n\nTraditional monotheistic worldview. Audited by Claude + Grok with 98% convergence.")
-            
-            if st.button("Load CT Profile", use_container_width=True):
-                st.session_state["fb_name"] = "Classical Theism"
-                st.session_state["fb_ax"] = 7
-                st.session_state["fb_db"] = 4
-                st.session_state["fb_ad"] = True
-                st.session_state["fb_cci"] = 7.5
-                st.session_state["fb_edb"] = 8.5
-                st.session_state["fb_pfi"] = 7.0
-                st.session_state["fb_pfe"] = 8.0
-                st.session_state["fb_ar"] = 8.5
-                st.session_state["fb_mg"] = 8.5
-                st.success("✅ CT loaded into Framework B!")
-                st.rerun()
-        
+
+            # Let user choose which framework slot
+            load_col1, load_col2 = st.columns(2)
+
+            with load_col1:
+                if st.button("→ Load to A", key="load_ct_a", use_container_width=True, type="primary"):
+                    st.session_state["fa_name"] = "Classical Theism"
+                    st.session_state["fa_ax"] = 7
+                    st.session_state["fa_db"] = 4
+                    st.session_state["fa_ad"] = True
+                    st.session_state["fa_cci"] = 7.5
+                    st.session_state["fa_edb"] = 8.5
+                    st.session_state["fa_pfi"] = 7.0
+                    st.session_state["fa_pfe"] = 8.0
+                    st.session_state["fa_ar"] = 8.5
+                    st.session_state["fa_mg"] = 8.5
+                    st.success("✅ CT → Framework A!")
+                    st.rerun()
+
+            with load_col2:
+                if st.button("→ Load to B", key="load_ct_b", use_container_width=True):
+                    st.session_state["fb_name"] = "Classical Theism"
+                    st.session_state["fb_ax"] = 7
+                    st.session_state["fb_db"] = 4
+                    st.session_state["fb_ad"] = True
+                    st.session_state["fb_cci"] = 7.5
+                    st.session_state["fb_edb"] = 8.5
+                    st.session_state["fb_pfi"] = 7.0
+                    st.session_state["fb_pfe"] = 8.0
+                    st.session_state["fb_ar"] = 8.5
+                    st.session_state["fb_mg"] = 8.5
+                    st.success("✅ CT → Framework B!")
+                    st.rerun()
+
         elif preset_key == "coming":
             st.warning(f"**{selected_preset.replace('🔜 ', '')}**\n\nAudit in progress. Check back soon!")
-        
+
         if selected_preset != "-- Select Framework --":
             st.markdown("---")
-            st.caption("💡 **Tip:** Load two presets to compare!")
+            st.caption("💡 **Tip:** Load different frameworks to each side to compare!")
     
     st.sidebar.markdown("---")
 
@@ -239,7 +277,7 @@ def render():
                 st.rerun()
             st.caption("MdN-optimized\nPredictive power focus")
             
-            if st.button("🌉 Seeker Mode", use_container_width=True):
+            if st.button("🙏 Seeker Mode", use_container_width=True):
                 st.session_state["sidebar_lever_parity"] = "ON"
                 st.session_state["sidebar_pf_type"] = "Composite_70_30"
                 st.session_state["sidebar_fallibilism"] = "ON"
@@ -258,7 +296,7 @@ def render():
                 st.rerun()
             st.caption("Balanced bridge\nEqual weighting")
 
-            if st.button("⛪ Zealot Mode", use_container_width=True):
+            if st.button("👿 Zealot Mode", use_container_width=True):
                 st.session_state["sidebar_lever_parity"] = "ON"
                 st.session_state["sidebar_pf_type"] = "Holistic_50_50"
                 st.session_state["sidebar_fallibilism"] = "OFF"
