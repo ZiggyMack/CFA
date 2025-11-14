@@ -139,140 +139,144 @@ def render():
         st.markdown("## 📚 Worldview Profiles")
         st.caption("*Axioms and debts for 12 audited frameworks*")
 
-        framework_tabs = st.tabs([
-            "📘 Methodological Naturalism (MdN)",
-            "📕 Classical Theism (CT)",
-            "🕎 Orthodox Judaism",
-            "📖 Mormonism (LDS)",
-            "⛔ Error Theory",
-            "❓ Null Hypothesis",
-            "🤔 Desiderata Believers",
-            "☸️ Buddhism",
-            "☪️ Islam",
-            "🕉️ Hinduism",
-            "🌊 Process Theology",
-            "🎭 Existentialism"
-        ])
-    
-        # ========================================================================
-        # METHODOLOGICAL NATURALISM
-        # ========================================================================
-        with framework_tabs[0]:
-            _render_framework_ledger(
-                worldview_name="Methodological Naturalism",
-                emoji="📘",
-                subtitle="Research protocol assuming testable natural causes"
-            )
-    
-        # ========================================================================
-        # CLASSICAL THEISM
-        # ========================================================================
-        with framework_tabs[1]:
-            _render_framework_ledger(
-                worldview_name="Classical Theism",
-                emoji="📕",
-                subtitle="God as necessary, simple, omnipotent, omniscient, omnibenevolent being"
-            )
-    
-        # ========================================================================
-        # ORTHODOX JUDAISM
-        # ========================================================================
-        with framework_tabs[2]:
-            _render_framework_ledger(
-                worldview_name="Orthodox Judaism",
-                emoji="🕎",
-                subtitle="Torah at Sinai; halakha is binding and authoritative for covenantal life"
-            )
-    
-        # ========================================================================
-        # MORMONISM (LDS)
-        # ========================================================================
-        with framework_tabs[3]:
-            _render_framework_ledger(
-                worldview_name="Mormonism",
-                emoji="📖",
-                subtitle="Continuing revelation through prophets; eternal progression toward godhood"
-            )
-    
-        # ========================================================================
-        # ERROR THEORY
-        # ========================================================================
-        with framework_tabs[4]:
-            _render_framework_ledger(
-                worldview_name="Error Theory",
-                emoji="⛔",
-                subtitle="Moral statements systematically fail; all positive moral claims are false"
-            )
-    
-        # ========================================================================
-        # NULL HYPOTHESIS
-        # ========================================================================
-        with framework_tabs[5]:
-            _render_framework_ledger(
-                worldview_name="Null Hypothesis",
-                emoji="❓",
-                subtitle="Withhold assent from all claims lacking sufficient evidence"
-            )
-    
-        # ========================================================================
-        # DESIDERATA BELIEVERS
-        # ========================================================================
-        with framework_tabs[6]:
-            _render_framework_ledger(
-                worldview_name="Desiderata Believers",
-                emoji="🤔",
-                subtitle="Pragmatic justification for belief based on beneficial outcomes"
-            )
-    
-        # ========================================================================
-        # BUDDHISM
-        # ========================================================================
-        with framework_tabs[7]:
-            _render_framework_ledger(
-                worldview_name="Buddhism",
-                emoji="☸️",
-                subtitle="Four Noble Truths; suffering arises from attachment and can be transcended"
-            )
-    
-        # ========================================================================
-        # ISLAM
-        # ========================================================================
-        with framework_tabs[8]:
-            _render_framework_ledger(
-                worldview_name="Islam",
-                emoji="☪️",
-                subtitle="Tawhid (oneness of Allah); Quran as final revelation through Prophet Muhammad"
-            )
-    
-        # ========================================================================
-        # HINDUISM
-        # ========================================================================
-        with framework_tabs[9]:
-            _render_framework_ledger(
-                worldview_name="Hinduism",
-                emoji="🕉️",
-                subtitle="Dharma, karma, and moksha; Brahman as ultimate reality"
-            )
-    
-        # ========================================================================
-        # PROCESS THEOLOGY
-        # ========================================================================
-        with framework_tabs[10]:
-            _render_framework_ledger(
-                worldview_name="Process Theology",
-                emoji="🌊",
-                subtitle="God and universe in dynamic co-creative relationship; reality as process"
-            )
-    
-        # ========================================================================
-        # EXISTENTIALISM
-        # ========================================================================
-        with framework_tabs[11]:
-            _render_framework_ledger(
-                worldview_name="Existentialism",
-                emoji="🎭",
-                subtitle="Existence precedes essence; radical freedom and responsibility"
-            )
+        # Grouped category selector (following WORLDVIEW_CATALOG.md structure)
+        st.markdown("**Browse by Category:**")
+        category = st.radio(
+            "Choose Category:",
+            ["⛪ Theistic Traditions (5)", "🔬 Naturalistic Traditions (2)", "🕉️ Eastern Traditions (2)", "🧠 Philosophical Frameworks (3)"],
+            horizontal=True,
+            label_visibility="collapsed"
+        )
+
+        st.markdown("---")
+
+        # ---- THEISTIC TRADITIONS ----
+        if category == "⛪ Theistic Traditions (5)":
+            st.markdown("### ⛪ Theistic Traditions")
+            st.caption("*Frameworks grounded in divine reality*")
+
+            framework_tabs = st.tabs([
+                "📕 Classical Theism",
+                "🌊 Process Theology",
+                "☪️ Islam",
+                "🕎 Orthodox Judaism",
+                "📖 Mormonism (LDS)"
+            ])
+
+            with framework_tabs[0]:
+                _render_framework_ledger(
+                    worldview_name="Classical Theism",
+                    emoji="📕",
+                    subtitle="God as necessary, simple, omnipotent, omniscient, omnibenevolent being"
+                )
+
+            with framework_tabs[1]:
+                _render_framework_ledger(
+                    worldview_name="Process Theology",
+                    emoji="🌊",
+                    subtitle="God and universe in dynamic co-creative relationship; reality as process"
+                )
+
+            with framework_tabs[2]:
+                _render_framework_ledger(
+                    worldview_name="Islam",
+                    emoji="☪️",
+                    subtitle="Tawhid (oneness of Allah); Quran as final revelation through Prophet Muhammad"
+                )
+
+            with framework_tabs[3]:
+                _render_framework_ledger(
+                    worldview_name="Orthodox Judaism",
+                    emoji="🕎",
+                    subtitle="Torah at Sinai; halakha is binding and authoritative for covenantal life"
+                )
+
+            with framework_tabs[4]:
+                _render_framework_ledger(
+                    worldview_name="Mormonism",
+                    emoji="📖",
+                    subtitle="Continuing revelation through prophets; eternal progression toward godhood"
+                )
+
+        # ---- NATURALISTIC TRADITIONS ----
+        elif category == "🔬 Naturalistic Traditions (2)":
+            st.markdown("### 🔬 Naturalistic Traditions")
+            st.caption("*Frameworks grounded in empirical methodology*")
+
+            framework_tabs = st.tabs([
+                "📘 Methodological Naturalism",
+                "❓ Null Hypothesis"
+            ])
+
+            with framework_tabs[0]:
+                _render_framework_ledger(
+                    worldview_name="Methodological Naturalism",
+                    emoji="📘",
+                    subtitle="Research protocol assuming testable natural causes"
+                )
+
+            with framework_tabs[1]:
+                _render_framework_ledger(
+                    worldview_name="Null Hypothesis",
+                    emoji="❓",
+                    subtitle="Withhold assent from all claims lacking sufficient evidence"
+                )
+
+        # ---- EASTERN TRADITIONS ----
+        elif category == "🕉️ Eastern Traditions (2)":
+            st.markdown("### 🕉️ Eastern Traditions")
+            st.caption("*Frameworks from Buddhist and Hindu philosophical systems*")
+
+            framework_tabs = st.tabs([
+                "☸️ Buddhism",
+                "🕉️ Hinduism"
+            ])
+
+            with framework_tabs[0]:
+                _render_framework_ledger(
+                    worldview_name="Buddhism",
+                    emoji="☸️",
+                    subtitle="Four Noble Truths; suffering arises from attachment and can be transcended"
+                )
+
+            with framework_tabs[1]:
+                _render_framework_ledger(
+                    worldview_name="Hinduism",
+                    emoji="🕉️",
+                    subtitle="Dharma, karma, and moksha; Brahman as ultimate reality"
+                )
+
+        # ---- PHILOSOPHICAL FRAMEWORKS ----
+        elif category == "🧠 Philosophical Frameworks (3)":
+            st.markdown("### 🧠 Philosophical Frameworks")
+            st.caption("*Secular philosophical systems and metaethical positions*")
+
+            framework_tabs = st.tabs([
+                "🎭 Existentialism",
+                "⛔ Error Theory",
+                "🤔 Desiderata Believers"
+            ])
+
+            with framework_tabs[0]:
+                _render_framework_ledger(
+                    worldview_name="Existentialism",
+                    emoji="🎭",
+                    subtitle="Existence precedes essence; radical freedom and responsibility"
+                )
+
+            with framework_tabs[1]:
+                _render_framework_ledger(
+                    worldview_name="Error Theory",
+                    emoji="⛔",
+                    subtitle="Moral statements systematically fail; all positive moral claims are false"
+                )
+
+            with framework_tabs[2]:
+                _render_framework_ledger(
+                    worldview_name="Desiderata Believers",
+                    emoji="🤔",
+                    subtitle="Pragmatic justification for belief based on beneficial outcomes"
+                )
 
     # ========================================================================
     # SECTION 2: THE AUDITORS
@@ -656,79 +660,234 @@ def render():
         st.markdown("## ⚙️ Utilities")
         st.caption("*Preset configurations and custom framework builder*")
 
-        utility_tabs = st.tabs(["⚡ Skeptic Mode Preset", "🆕 Build Custom Framework"])
+        # Info box about preset modes with link to master documentation
+        st.info("""
+        **📘 About Preset Modes**
+
+        CFA offers four calibrated presets representing different epistemic stances.
+        Each preset makes explicit which values you're privileging in framework comparison.
+
+        **Full Documentation:** See `auditors/Mission/Preset_Calibration/CURRENT_MODE_CONFIGS.md` for technical details, empirical validation status, and the Trinity's ongoing calibration work.
+        """)
+
+        utility_tabs = st.tabs(["🔬 Skeptic Mode", "🤝 Diplomat Mode", "🙏 Seeker Mode", "👿 Zealot Mode", "🆕 Build Custom Framework"])
 
         # ========================================================================
-        # SKEPTIC MODE PRESET (Grok Note #4)
+        # SKEPTIC MODE (MdN-Optimized)
         # ========================================================================
         with utility_tabs[0]:
-            st.markdown("## ⚡ Skeptic Mode Preset")
-            st.markdown("*Optimized configuration for empirical naturalists*")
-            
-            st.info("""
-            **What is Skeptic Mode?**
-            
-            A preset configuration designed for users who prioritize:
-            - Predictive power over existential meaning
-            - Instrumental utility over moral grounding
-            - Empirical evidence over metaphysical explanations
-            
-            **Configuration:**
-            - **Lever-Parity:** OFF (reduces moral norm weighting)
-            - **PF-Type:** Instrumental (tech/predictive yield only)
-            - **Fallibilism-Bonus:** ON (rewards intellectual honesty)
-            - **BFI Debt Weight:** Equal 1.0x (standard)
-            
-            **Result:** MdN dominates with ~4.99 YPA vs CT ~3.65 YPA
-            """)
-            
-            st.markdown("---")
-            st.markdown("### 🔬 Why This Mode?")
-            
-            col1, col2 = st.columns(2)
-            
+            st.markdown("## 🔬 Skeptic Mode (MdN-Optimized)")
+            st.markdown("*Empirical rigor, prediction focus, axiom skepticism*")
+
+            col1, col2 = st.columns([2, 1])
+
             with col1:
-                st.markdown("""
-                **For Naturalist Skeptics:**
-                - Shows MdN's empirical strength clearly
-                - Removes existential/moral "noise"
-                - Demonstrates predictive fertility advantage
-                - Maintains transparency (no hidden weights)
-                """)
-            
+                st.markdown("### ⚙️ Configuration")
+                st.code("""Parity:         OFF
+PF-Type:        Instrumental
+Fallibilism:    ON
+BFI Weight:     1.2x (Heavier)""", language="yaml")
+
+                st.markdown("**Philosophy:**")
+                st.markdown("Taking empirical rigor seriously means allowing asymmetric evaluation that favors frameworks making falsifiable claims.")
+
             with col2:
+                st.markdown("### 📊 Expected YPA")
+                st.metric("MdN", "~7-8")
+                st.metric("CT", "~4-5")
+                st.caption("⚠️ *INTUITIVE (not validated)*")
+
+            with st.expander("🔍 The Story Behind The Numbers"):
                 st.markdown("""
-                **Still Fair to CT:**
-                - CT's scores accurately reflect its priorities
-                - CT excels in existential/moral domains
-                - Switching to Holistic mode shows CT's strengths
-                - No framework is "cheated" - just measured differently
+                **The Skeptic Mode Genesis:**
+
+                This was the seed that grew into the entire Auditor's Axioms revelation.
+
+                Empirical naturalists wanted configuration honoring their commitments: testability matters more than meaning,
+                prediction > existential comfort, falsifiability is virtue.
+
+                **Critical Symmetry Issue (Under Trinity Review):**
+
+                Nova flagged: Skeptic has 3 MdN-favoring levers, but Zealot has only 1 CT-favoring lever.
+                Is this justified asymmetry or accidental bias?
+
+                *Full calibration status: `auditors/Mission/Preset_Calibration/CURRENT_MODE_CONFIGS.md`*
                 """)
-            
+
             st.markdown("---")
-            st.markdown("### 🚀 Load Skeptic Mode")
-            
-            if st.button("⚡ Apply Skeptic Mode to Console", use_container_width=True, type="primary"):
-                # Set session state for console to pick up
+            if st.button("⚡ Apply to Console", key="apply_skeptic", use_container_width=True, type="primary"):
                 st.session_state['sidebar_lever_parity'] = "OFF"
                 st.session_state['sidebar_pf_type'] = "Instrumental"
                 st.session_state['sidebar_fallibilism'] = "ON"
-                st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
-                
-                st.success("✅ Skeptic Mode applied! Navigate to Console to see results.")
-                st.info("**What changed:** Parity OFF, PF-Instrumental, Fallibilism ON, BFI Weight Equal")
-                
-                if st.button("→ Go to Console Now"):
-                    st.session_state.page = 'console'
-                    st.rerun()
-            
+                st.session_state['sidebar_bfi_weight'] = "Heavier_1.2x"
+                st.success("✅ Skeptic Mode applied! Navigate to Console.")
+
+        # ========================================================================
+        # DIPLOMAT MODE (Balanced)
+        # ========================================================================
+        with utility_tabs[1]:
+            st.markdown("## 🤝 Diplomat Mode (Balanced)")
+            st.markdown("*Fair comparison, balanced criteria, neutral stance*")
+
+            col1, col2 = st.columns([2, 1])
+
+            with col1:
+                st.markdown("### ⚙️ Configuration")
+                st.code("""Parity:         ON
+PF-Type:        Holistic_50_50
+Fallibilism:    ON
+BFI Weight:     1.0x (Equal)""", language="yaml")
+
+                st.markdown("**Philosophy:**")
+                st.markdown("True balance requires symmetric evaluation. No asymmetry, no hidden bias—just fair comparison.")
+
+            with col2:
+                st.markdown("### 📊 Expected YPA")
+                st.metric("MdN", "~6")
+                st.metric("CT", "~6")
+                st.caption("⚠️ *INTUITIVE (not validated)*")
+
+            with st.expander("🔍 The Diplomat Philosophy"):
+                st.markdown("""
+                **Seeking Unbiased Comparison:**
+
+                Some users want to see frameworks compared on equal footing:
+                - Parity ON ensures same standards for both
+                - 50/50 PF weighting (instrumental + intrinsic balanced)
+                - Equal BFI treatment (neither favored/penalized for axiom count)
+
+                **Success Criteria:**
+
+                Diplomat should produce |MdN - CT| < 0.5 YPA (within tolerance for "balanced").
+
+                If Diplomat shows significant bias, something's broken in the architecture.
+
+                *Status: Awaiting empirical validation from Grok.*
+                """)
+
             st.markdown("---")
-            st.caption("💡 **Tip:** After applying, compare MdN vs CT in Console to see how configuration affects scores.")
-        
+            if st.button("🤝 Apply to Console", key="apply_diplomat", use_container_width=True, type="primary"):
+                st.session_state['sidebar_lever_parity'] = "ON"
+                st.session_state['sidebar_pf_type'] = "Holistic_50_50"
+                st.session_state['sidebar_fallibilism'] = "ON"
+                st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
+                st.success("✅ Diplomat Mode applied! Navigate to Console.")
+
+        # ========================================================================
+        # SEEKER MODE (CT-Leaning)
+        # ========================================================================
+        with utility_tabs[2]:
+            st.markdown("## 🙏 Seeker Mode (CT-Leaning)")
+            st.markdown("*Meaning-first exploration, holistic value, epistemic openness*")
+
+            col1, col2 = st.columns([2, 1])
+
+            with col1:
+                st.markdown("### ⚙️ Configuration")
+                st.code("""Parity:         ON
+PF-Type:        Composite_70_30
+Fallibilism:    ON
+BFI Weight:     1.0x (Equal)""", language="yaml")
+
+                st.markdown("**Philosophy:**")
+                st.markdown("Some users prioritize meaning over prediction. Composite 70/30 weights intrinsic value without rejecting empirical concerns entirely.")
+
+            with col2:
+                st.markdown("### 📊 Expected YPA")
+                st.metric("MdN", "~5")
+                st.metric("CT", "~7")
+                st.caption("⚠️ *INTUITIVE (not validated)*")
+
+            with st.expander("🔍 The Seeker Position"):
+                st.markdown("""
+                **Between Diplomat and Zealot:**
+
+                Seeker is "CT-leaning but not extreme":
+                - Values existential depth
+                - Maintains fairness (Parity ON)
+                - Weights intrinsic fruitfulness 70% (vs instrumental 30%)
+
+                **Open Question:**
+
+                Is 70/30 the right ratio? Trinity needs to test 60/40, 65/35, 70/30, 75/25 to find optimal "CT-leaning" balance.
+
+                **Positioning Issue (Nova's Concern):**
+
+                Currently only 1 lever differs from Diplomat (PF-Type). Should Seeker be more distinct?
+
+                *Awaiting sensitivity analysis from Grok.*
+                """)
+
+            st.markdown("---")
+            if st.button("🙏 Apply to Console", key="apply_seeker", use_container_width=True, type="primary"):
+                st.session_state['sidebar_lever_parity'] = "ON"
+                st.session_state['sidebar_pf_type'] = "Composite_70_30"
+                st.session_state['sidebar_fallibilism'] = "ON"
+                st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
+                st.success("✅ Seeker Mode applied! Navigate to Console.")
+
+        # ========================================================================
+        # ZEALOT MODE (CT-Optimized)
+        # ========================================================================
+        with utility_tabs[3]:
+            st.markdown("## 👿 Zealot Mode (CT-Optimized)")
+            st.markdown("*Existential priority, certainty-friendly, holistic focus*")
+
+            col1, col2 = st.columns([2, 1])
+
+            with col1:
+                st.markdown("### ⚙️ Configuration")
+                st.code("""Parity:         ON
+PF-Type:        Holistic_50_50
+Fallibilism:    OFF
+BFI Weight:     1.0x (Equal)""", language="yaml")
+
+                st.markdown("**Philosophy:**")
+                st.markdown("Those seeking existential commitment value coherence and meaning over falsifiability. Certainty-friendly evaluation recognizes some truths aren't empirically testable.")
+
+            with col2:
+                st.markdown("### 📊 Expected YPA")
+                st.metric("MdN", "~4")
+                st.metric("CT", "~8")
+                st.caption("⚠️ *INTUITIVE (not validated)*")
+
+            with st.expander("🔍 The Zealot Symmetry Problem"):
+                st.markdown("""
+                **Major Symmetry Violation (Under Trinity Review):**
+
+                Zealot is SUPPOSED to be the mirror opposite of Skeptic, but:
+
+                | Lever | Skeptic | Zealot | Symmetric? |
+                |-------|---------|--------|------------|
+                | Parity | OFF | ON | ❌ NO |
+                | PF-Type | Instrumental | Holistic_50_50 | ❌ NO |
+                | Fallibilism | ON | OFF | ✅ YES |
+                | BFI Weight | 1.2x | 1.0x | ❌ NO (should be 0.8x) |
+
+                **Consequence:**
+
+                Skeptic has 3 MdN-favoring levers, Zealot has only 1 CT-favoring lever. Not philosophically justified.
+
+                **Trinity's Task:**
+
+                Either justify this asymmetry OR correct it. If Skeptic is Parity OFF, should Zealot mirror it?
+                If Skeptic penalizes axioms 1.2x, should Zealot reward them 0.8x?
+
+                *This is the heart of the preset calibration mission.*
+                """)
+
+            st.markdown("---")
+            if st.button("👿 Apply to Console", key="apply_zealot", use_container_width=True, type="primary"):
+                st.session_state['sidebar_lever_parity'] = "ON"
+                st.session_state['sidebar_pf_type'] = "Holistic_50_50"
+                st.session_state['sidebar_fallibilism'] = "OFF"
+                st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
+                st.success("✅ Zealot Mode applied! Navigate to Console.")
+
         # ========================================================================
         # CUSTOM FRAMEWORK
         # ========================================================================
-        with utility_tabs[1]:
+        with utility_tabs[4]:
             st.markdown("## Build Your Own Ledger")
             
             st.markdown("""
