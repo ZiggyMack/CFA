@@ -9,9 +9,21 @@ import streamlit as st
 def render():
     """Render the beautiful manual page"""
     
-    # Custom CSS for visual appeal
+    # Custom CSS for visual appeal and sticky home button
     st.markdown("""
         <style>
+        /* Make the header row sticky */
+        div[data-testid="stHorizontalBlock"]:has(button[kind="secondary"]) {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 999;
+            padding: 10px 0;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
         /* Card styling */
         .info-card {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);

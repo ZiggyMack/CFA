@@ -123,6 +123,23 @@ def render():
     if "fb_mg" not in st.session_state:
         st.session_state["fb_mg"] = CT_DEFAULT["levers"]["MG"]
     
+    # Style to make Home button in header sticky (frozen at top while scrolling)
+    st.markdown("""
+    <style>
+    /* Make the header row sticky */
+    div[data-testid="stHorizontalBlock"]:has(button:contains("Home")) {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 999;
+        padding: 10px 0;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
     # Frozen position preset indicator (top-right corner, smaller size)
     active_preset = detect_active_preset()
     st.markdown(f"""

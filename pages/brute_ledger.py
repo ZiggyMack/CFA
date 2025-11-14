@@ -131,7 +131,24 @@ def _render_framework_ledger(worldview_name: str, emoji: str, subtitle: str):
 
 def render():
     """Render the Brute Ledger page"""
-    
+
+    # Style to make Home button sticky (frozen at top while scrolling)
+    st.markdown("""
+    <style>
+    /* Make the header row sticky */
+    div[data-testid="stHorizontalBlock"]:has(button[kind="secondary"]) {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 999;
+        padding: 10px 0;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
     # Header
     col1, col2 = st.columns([6, 1])
     with col1:
@@ -141,7 +158,7 @@ def render():
         if st.button("🏠 Home"):
             st.session_state.page = 'landing'
             st.rerun()
-    
+
     st.markdown("---")
 
     # Smart navigation: Check if coming from Console with a specific framework target

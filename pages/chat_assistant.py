@@ -83,6 +83,19 @@ When users ask questions, draw on the context provided and explain in a way that
 def render():
     """Main render function for chat assistant page"""
 
+    # Style to make Home button sticky (frozen at top while scrolling)
+    st.markdown("""
+    <style>
+    /* Make the home button sticky */
+    button[data-testid="baseButton-secondary"][aria-label*="Home"] {
+        position: -webkit-sticky !important;
+        position: sticky !important;
+        top: 10px !important;
+        z-index: 999 !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
     # Home button
     if st.button("🏠 Home", key="chat_home_btn"):
         st.session_state.page = 'landing'
