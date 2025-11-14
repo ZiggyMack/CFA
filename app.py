@@ -13,7 +13,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 # Import page modules
-from pages import landing, console, about, manual, brute_ledger
+from pages import landing, console, about, manual, brute_ledger, chat_assistant
 
 # Page configuration
 st.set_page_config(
@@ -39,6 +39,8 @@ def main():
         about.render()
     elif st.session_state.page == 'brute_ledger':
         brute_ledger.render()
+    elif st.session_state.page == 'chat_assistant':
+        chat_assistant.render()
 
 if __name__ == "__main__":
     main()

@@ -110,11 +110,15 @@ def render():
     st.markdown('<h1 class="main-title">⚖️ CFA-VOODOO</h1>', unsafe_allow_html=True)
     st.markdown('<p class="tagline">"All Named. All Priced."</p>', unsafe_allow_html=True)
     
-    # Mr. Brute button - centered below tagline
-    col_spacer1, col_brute, col_spacer2 = st.columns([2, 1, 2])
+    # Secondary navigation - Mr. Brute's Ledger + Chat Assistant
+    col_spacer1, col_brute, col_chat, col_spacer2 = st.columns([1.5, 1, 1, 1.5])
     with col_brute:
         if st.button("📓✍️ Mr. Brute's Ledger", use_container_width=True, key="brute_main"):
             st.session_state.page = 'brute_ledger'
+            st.rerun()
+    with col_chat:
+        if st.button("💬 Chat Assistant", use_container_width=True, key="chat_main"):
+            st.session_state.page = 'chat_assistant'
             st.rerun()
     
     st.markdown("---")
