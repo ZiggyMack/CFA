@@ -70,9 +70,32 @@ def apply_loaded_run(run: dict):
         st.session_state["fb_ar"] = float(levers.get("AR", 5.0))
         st.session_state["fb_mg"] = float(levers.get("MG", 5.0))
 
+def detect_active_preset():
+    """Detect which preset mode is currently active based on sidebar config"""
+    # Read current sidebar values
+    parity = st.session_state.get("sidebar_lever_parity", "ON")
+    pf = st.session_state.get("sidebar_pf_type", "Holistic_50_50")
+    fall = st.session_state.get("sidebar_fallibilism", "ON")
+    bfi = st.session_state.get("sidebar_bfi_weight", "Equal_1.0x")
+
+    # Normalize BFI weight naming (Heavier_1.2x and Weighted_1.2x are equivalent)
+    bfi_normalized = "Weighted_1.2x" if bfi in ["Heavier_1.2x", "Weighted_1.2x"] else bfi
+
+    # Check against known preset configurations
+    if parity == "OFF" and pf == "Instrumental" and fall == "ON" and bfi_normalized == "Weighted_1.2x":
+        return "🔬 Skeptic"
+    elif parity == "ON" and pf == "Holistic_50_50" and fall == "ON" and bfi == "Equal_1.0x":
+        return "🤝 Diplomat"
+    elif parity == "ON" and pf == "Composite_70_30" and fall == "ON" and bfi == "Equal_1.0x":
+        return "🌉 Seeker"
+    elif parity == "ON" and pf == "Holistic_50_50" and fall == "OFF" and bfi == "Equal_1.0x":
+        return "⛪ Zealot"
+    else:
+        return "⚙️ Custom"
+
 def render():
     """Render console"""
-    
+
     # Initialize session state
     if "fa_cci" not in st.session_state:
         st.session_state["fa_cci"] = MDN_DEFAULT["levers"]["CCI"]
@@ -100,6 +123,22 @@ def render():
     if "fb_mg" not in st.session_state:
         st.session_state["fb_mg"] = CT_DEFAULT["levers"]["MG"]
     
+    # Frozen position preset indicator and home button (top-right corner)
+    active_preset = detect_active_preset()
+    st.markdown(f"""
+    <div style="position: fixed; top: 10px; right: 10px; z-index: 9999;
+                background-color: rgba(255, 255, 255, 0.95);
+                border: 2px solid #1f77b4; border-radius: 8px;
+                padding: 8px 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+        <div style="font-size: 0.85rem; font-weight: bold; color: #1f77b4; margin-bottom: 4px;">
+            Active Mode
+        </div>
+        <div style="font-size: 1.1rem; font-weight: bold; color: #333;">
+            {active_preset}
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
     # Header
     col1, col2 = st.columns([6, 1])
     with col1:
@@ -108,7 +147,7 @@ def render():
         if st.button("🏠 Home"):
             st.session_state.page = 'landing'
             st.rerun()
-    
+
     st.markdown('**"All Named, All Priced" — Interactive Comparison Tool**')
     st.markdown("---")
 
@@ -192,38 +231,38 @@ def render():
         
         with col1:
             if st.button("🔬 Skeptic Mode", use_container_width=True):
-                st.session_state["lever_parity"] = "OFF"
-                st.session_state["pf_type"] = "Instrumental"
-                st.session_state["fallibilism_bonus"] = "ON"
-                st.session_state["bfi_debt_weight"] = "Heavier_1.2x"
+                st.session_state["sidebar_lever_parity"] = "OFF"
+                st.session_state["sidebar_pf_type"] = "Instrumental"
+                st.session_state["sidebar_fallibilism"] = "ON"
+                st.session_state["sidebar_bfi_weight"] = "Weighted_1.2x"
                 st.success("✅ Skeptic Mode loaded! (MdN-optimized)")
                 st.rerun()
             st.caption("MdN-optimized\nPredictive power focus")
             
             if st.button("🌉 Seeker Mode", use_container_width=True):
-                st.session_state["lever_parity"] = "ON"
-                st.session_state["pf_type"] = "Composite_70_30"
-                st.session_state["fallibilism_bonus"] = "ON"
-                st.session_state["bfi_debt_weight"] = "Equal_1.0x"
+                st.session_state["sidebar_lever_parity"] = "ON"
+                st.session_state["sidebar_pf_type"] = "Composite_70_30"
+                st.session_state["sidebar_fallibilism"] = "ON"
+                st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
                 st.success("✅ Seeker Mode loaded! (CT-leaning)")
                 st.rerun()
             st.caption("CT-leaning\nMeaning-first")
-        
+
         with col2:
             if st.button("🤝 Diplomat Mode", use_container_width=True):
-                st.session_state["lever_parity"] = "ON"
-                st.session_state["pf_type"] = "Holistic_50_50"
-                st.session_state["fallibilism_bonus"] = "ON"
-                st.session_state["bfi_debt_weight"] = "Equal_1.0x"
+                st.session_state["sidebar_lever_parity"] = "ON"
+                st.session_state["sidebar_pf_type"] = "Holistic_50_50"
+                st.session_state["sidebar_fallibilism"] = "ON"
+                st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
                 st.success("✅ Diplomat Mode loaded! (Balanced)")
                 st.rerun()
             st.caption("Balanced bridge\nEqual weighting")
-            
+
             if st.button("⛪ Zealot Mode", use_container_width=True):
-                st.session_state["lever_parity"] = "ON"
-                st.session_state["pf_type"] = "Holistic_50_50"
-                st.session_state["fallibilism_bonus"] = "OFF"
-                st.session_state["bfi_debt_weight"] = "Equal_1.0x"
+                st.session_state["sidebar_lever_parity"] = "ON"
+                st.session_state["sidebar_pf_type"] = "Holistic_50_50"
+                st.session_state["sidebar_fallibilism"] = "OFF"
+                st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
                 st.success("✅ Zealot Mode loaded! (CT-optimized)")
                 st.rerun()
             st.caption("CT-optimized\nExistential-first")
@@ -232,35 +271,66 @@ def render():
         st.caption("💡 **Tip:** Start with a mode, then adjust toggles manually!")
     
     st.sidebar.markdown("---")
-    
+
+    # Initialize sidebar config defaults if not set
+    if "sidebar_lever_parity" not in st.session_state:
+        st.session_state["sidebar_lever_parity"] = "ON"
+    if "sidebar_pf_type" not in st.session_state:
+        st.session_state["sidebar_pf_type"] = "Holistic_50_50"
+    if "sidebar_fallibilism" not in st.session_state:
+        st.session_state["sidebar_fallibilism"] = "ON"
+    if "sidebar_bfi_weight" not in st.session_state:
+        st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
+
+    # Read current values from session state to set correct index
+    parity_options = ["ON", "OFF"]
+    parity_index = parity_options.index(st.session_state["sidebar_lever_parity"])
+
     lever_parity = st.sidebar.selectbox(
-        "Lever-Parity", 
-        ["ON", "OFF"], 
-        index=0,
+        "Lever-Parity",
+        parity_options,
+        index=parity_index,
         key="sidebar_lever_parity",
         help="**Parity ON:** Moral norms (MG) count equally with epistemic norms. **OFF:** Focus on predictive power. [ΔYPA: OFF typically boosts MdN ~+0.2-0.3] Because CT includes moral realism, Parity ON increases MG weighting for both frameworks."
     )
-    
+
+    # PF-Type with dynamic index
+    pf_index = PF_TYPES.index(st.session_state["sidebar_pf_type"])
+
     pf_type = st.sidebar.selectbox(
-        "PF-Type", 
-        PF_TYPES, 
-        index=1,
+        "PF-Type",
+        PF_TYPES,
+        index=pf_index,
         key="sidebar_pf_type",
         help="**Instrumental:** Tech/predictive yield only. **Composite (70/30):** 70% instrumental, 30% existential. **Holistic (50/50):** Equal weight. [ΔYPA: Holistic favors CT ~+0.15-0.25] CT scores higher on existential fertility, so holistic weighting benefits CT."
     )
-    
+
+    # Fallibilism with dynamic index
+    fall_options = ["ON", "OFF"]
+    fall_index = fall_options.index(st.session_state["sidebar_fallibilism"])
+
     fall_bonus = st.sidebar.selectbox(
-        "Fallibilism-Bonus", 
-        ["ON", "OFF"], 
-        index=0,
+        "Fallibilism-Bonus",
+        fall_options,
+        index=fall_index,
         key="sidebar_fallibilism",
         help="**Bonus ON:** Frameworks that admit limits get +0.3 CCI boost. **OFF:** No bonus. [ΔYPA: ON benefits both MdN and CT equally ~+0.03] Both frameworks acknowledge limitations, so both receive the fallibilism bonus when enabled."
     )
-    
+
+    # BFI Weight with dynamic index
+    # Normalize "Heavier_1.2x" to "Weighted_1.2x" for display consistency
+    current_bfi = st.session_state["sidebar_bfi_weight"]
+    if current_bfi == "Heavier_1.2x":
+        current_bfi = "Weighted_1.2x"
+        st.session_state["sidebar_bfi_weight"] = "Weighted_1.2x"
+
+    bfi_options = ["Equal_1.0x", "Weighted_1.2x"]
+    bfi_index = bfi_options.index(current_bfi)
+
     bfi_weight = st.sidebar.selectbox(
-        "BFI Debt Weight", 
-        ["Equal_1.0x", "Weighted_1.2x"], 
-        index=0,
+        "BFI Debt Weight",
+        bfi_options,
+        index=bfi_index,
         key="sidebar_bfi_weight",
         help="**Equal (1.0x):** Debts count same as axioms. **Weighted (1.2x):** Debts cost 20% more. [ΔYPA: Weighted slightly lowers both scores ~-0.05-0.10] Higher BFI denominator reduces YPA. Both frameworks have 4 debts, so weighted impacts both similarly."
     )
