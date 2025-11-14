@@ -271,7 +271,7 @@ Repository Root
 │       │       ├── DEPENDS_ON: MISSION_DEFAULT│
 │       │       └── NEEDED_BY: Training    │
 │       │                                  │
-│       └── MASTER_BRANCH_TRUST_PROTOCOL.md│
+│       └── MISSION_TRUST_PROTOCOL.md│
 │           ├── DEPENDS_ON: README_C       │
 │           └── NEEDED_BY: Governance      │
 │                                          │
@@ -392,7 +392,7 @@ cfa_app/ (Repository Root)
 │   ├── 📄 VUDU_HEADER_STANDARD.md     ✅ Complete - Message format
 │   ├── 📄 VUDU_LOG.md                 ✅ Complete - Coordination log
 │   ├── 📄 VUDU_LOG_LITE.md            ✅ Complete - Lightweight coordination
-│   ├── 📄 MASTER_BRANCH_TRUST_PROTOCOL.md  ✅ Complete - Governance
+│   ├── 📄 MISSION_TRUST_PROTOCOL.md  ✅ Complete - Governance
 │   ├── 📄 AUDITORS_AXIOMS.md          ⚠️  Missing semantic header
 │   ├── 📄 AUDITORS_AXIOMS_SECTION.md  ✅ Complete
 │   │
@@ -838,7 +838,7 @@ When processes change:
 |BOOTSTRAP_CLAUDE.md               |✅         |BOOTSTRAP_CFA, BOOTSTRAP_VUDU|Claude identity    |
 |BOOTSTRAP_CFA.md                  |✅         |None (root)                  |Project context    |
 |BOOTSTRAP_VUDU.md                 |✅         |VUDU_PROTOCOL                |Coordination       |
-|MASTER_BRANCH_TRUST_PROTOCOL.md   |✅         |README_C                     |Governance         |
+|MISSION_TRUST_PROTOCOL.md   |✅         |README_C                     |Governance         |
 |**Tier 2: Sanity Check**                                                                    ||||
 |SANITY_CHECK_BRIEF.md             |✅         |MISSION_CURRENT              |External validation|
 |**Tier 3: Continuation**                                                                    ||||

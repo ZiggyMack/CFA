@@ -154,7 +154,7 @@
 
 **Location rationale:**
 - relay/ = active coordination (MISSION_CURRENT.md belongs here)
-- Root auditors/ = governance docs (VUDU_PROTOCOL, MASTER_BRANCH_TRUST_PROTOCOL)
+- Root auditors/ = governance docs (VUDU_PROTOCOL, MISSION_TRUST_PROTOCOL)
 - Placement reflects function, not prominence
 
 **Alternative considered:**

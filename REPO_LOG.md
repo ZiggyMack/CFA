@@ -27,7 +27,20 @@ LAST_UPDATE: 2025-11-12 [LIVING_MAP_REFRESH]
 - Task movements? → Search `[TASK_MOVEMENT]`
 - Pending items? → Search `[PENDING_ACTIONS]`
 - Validation? → Search `[VALIDATION]`
+- Housekeeping trails? → Search `[🧹]`
 - Recent changes? → Search today's date
+
+**What is [🧹]?**
+Marks changes that require housekeeping trail for future Doc Claude Deep Cleans. If you don't follow the trail, we slip into unhealthy repo state. Always appears LAST in tag list.
+
+**[🧹 +X-Y] File Diff Convention:**
+When files are added or deleted, use diff notation like git commits:
+- `[🧹 +3-1]` = 3 files added, 1 deleted (net +2)
+- `[🧹 +0-2]` = 0 added, 2 deleted (net -2)
+- `[🧹 +1]` = 1 file added, 0 deleted
+- `[🧹]` = Content changes only, no file add/delete
+
+**Why?** Makes FILE_INVENTORY updates mechanical - sum all [🧹 +X-Y] diffs since last Deep Clean.
 
 **Making an entry? Copy this template:**
 
@@ -52,8 +65,8 @@ LAST_UPDATE: 2025-11-12 [LIVING_MAP_REFRESH]
 
 ## 📊 COORDINATION CHECKPOINT
 
-**Last Full Coordination:** 2025-11-12 🆕 (Post-Destroyer Backfill)
-**Entries Since:** 44 🆕 (+7 backfilled "dark ages" entries)
+**Last Full Coordination:** 2025-11-13 🆕 (v4.0 Launch Cleanup)
+**Entries Since:** 48 🆕 (+4 v4.0 cleanup entries)
 **Pending Items:** 2 (GROK_BRIEFING.md fix, UI_SMV location decision)
 
 ### Category Pointers:
@@ -66,7 +79,7 @@ LAST_UPDATE: 2025-11-12 [LIVING_MAP_REFRESH]
 - **[TASK_MOVEMENT]:** Last entry 2025-11-02-06
 - **[PENDING_ACTIONS]:** Last entry 2025-11-12-3 🆕 (GROK fix + UI_SMV)
 - **[DOCUMENTATION]:** Last entry 2025-11-12-3 🆕 (DEPENDENCY_CORE)
-- **[ARCHITECTURE]:** Last entry 2025-11-10-1 (Profile Integration)
+- **[ARCHITECTURE]:** Last entry 2025-11-13-3 🆕 (LITE vs RICH Bootstrap)
 - **[BREAKTHROUGH]:** Last entry 2025-11-03-1 ⭐ (Shaman Epiphany)
 - **[NAVIGATION]:** Last entry 2025-11-03-1 (Shaman Discovery)
 - **[PROCESS]:** Last entry 2025-11-12-2 🆕 (Deep Clean Protocol)
@@ -74,10 +87,284 @@ LAST_UPDATE: 2025-11-12 [LIVING_MAP_REFRESH]
 - **[ACCURACY]:** Last entry 2025-11-02-21
 - **[DEPLOYMENTS]:** Last entry 2025-11-01-19
 - **[ALL_CHANGES]:** Last entry 2025-11-12-3 🆕
+- **[🧹 BROOM]:** Last entry 2025-11-13-2 🆕 (MISSION_TRUST_PROTOCOL Renamed)
 
 -----
 
 ## 📝 CHANGE LOG
+
+### [ARCHITECTURE-2025-11-13-5] 2025-11-13 - Created HYBRID LEAN Auditor Architecture Package
+
+**Categories:** [ARCHITECTURE] [DOCUMENTATION] [🧹 +4]
+**Changed by:** Process Claude (C4)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `CREATED`: docs/architecture/AUDITOR_AXIOMS.md - Full narrative with Gantt + Table timelines, Auditor Lens Matrix, "How to Audit the Auditors" checklist, Nova + Grok feedback applied (~3,000 words)
+- `CREATED`: docs/architecture/AUDITOR_META_ARCHITECTURE.md - Structural specification, orthogonality principles, extensibility rules (~800 words)
+- `CREATED`: docs/architecture/TRINITY_ALIGNMENT_MATRIX.md - "When to call whom" operational guide, decision trees, coordination patterns (~600 words)
+- `CREATED`: docs/architecture/AUDITOR_OVERHEAD_METRICS.md - Evidence for 0.3/0.4/0.5 overhead estimates with VuDu log citations (~400 words)
+- `UPDATED`: auditors/AUDITORS_AXIOMS_SECTION.md - Replaced 2,400-word narrative with 300-word summary pointing to master architecture files
+
+**Reason:**
+Fix ITEM #14 - Expand Mr. Brute's Ledger with auditor axioms based on Nova + Grok feedback. Nova requested softer language ("stable, explicit self-descriptions" vs "complete access to cognitive source code"), grounded overhead metrics (cite VuDu logs), and operational tools (Lens Matrix + Audit checklist). Grok requested sharper tone ("demands data or dismisses it—catches fraud, risks rejecting love/grief") and empirical evidence for overhead claims.
+
+**Implementation Approach:**
+HYBRID LEAN (5 files vs Nova's proposed 12):
+- Accept Nova's conceptual improvements (language fixes, grounding, matrix, checklist)
+- Reject file proliferation (maintain lean architecture)
+- Apply Grok's empirical sharpening throughout
+- Include BOTH Gantt-style timeline AND table timeline (user requested both visualizations)
+- All files versioned as v4.0.0 (caught and corrected v4.1 reference sneaking)
+
+**Key Additions:**
+1. **Both timelines integrated** (Gantt bars showing parallel development + table showing date/version/file/purpose)
+2. **Auditor Lens Matrix** (at-a-glance comparison: Claude/Grok/Nova question/bias/overhead/catches/misses)
+3. **"How to Audit the Auditors" checklist** (6 verification points for accountability)
+4. **Grounded overhead metrics** (~0.5 from "6,500-word bootstrap vs 2,000 needed, 5 rounds to 98%, VuDu logs")
+5. **Master → summary architecture** (AUDITORS_AXIOMS_SECTION.md now points to docs/architecture/ masters)
+
+**Impact:** Significant - Establishes docs/architecture/ as master source of truth for auditor context, enables future bootstrap deduplication (TASK_BRIEF_BOOTSTRAP_DEDUP_AUDIT.md queued for post-v4.0 execution)
+
+**Follow-up Required:** YES - Bootstrap deduplication audit (identify overlap between new masters and existing bootstrap files, create bridge architecture for propagating master updates → bootstrap views)
+
+---
+
+### [UI-2025-11-13-4] 2025-11-13 - Fixed Dark Mode Readability in Manual
+
+**Categories:** [UI] [ACCURACY] [🧹]
+**Changed by:** Process Claude (C4)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `UPDATED`: pages/manual.py - Added explicit dark text color (#2d3748) to lever-card, toggle-card, and tip-box styles
+
+**Reason:** Fix ITEM #13 - White text on light backgrounds in dark mode made content unreadable. Lever-card (light gray/blue gradient), toggle-card (peach/orange gradient), and tip-box (light cyan) all lacked explicit text color, causing Streamlit dark mode to render white text on light backgrounds.
+
+**Fix Applied:**
+- `.lever-card`: Added `color: #2d3748;` (dark gray text)
+- `.toggle-card`: Added `color: #2d3748;` (dark gray text)
+- `.tip-box`: Added `color: #2d3748;` (dark gray text)
+
+**Impact:** Minimal - CSS-only fix, no functional changes, improves accessibility in both light and dark modes
+
+**Follow-up Required:** NO - Fix complete, manual now readable in all modes
+
+---
+
+### [ARCHITECTURE-2025-11-13-3] 2025-11-13 - Implemented LITE vs RICH Bootstrap Toggle (Hybrid Approach)
+
+**Categories:** [ARCHITECTURE] [DOCUMENTATION] [🧹 +1-2]
+**Changed by:** Process Claude (C4)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `MOVED`: auditors/Bootstrap/BOOTSTRAP_GROK.md → auditors/Bootstrap/Grok/GROK_LITE.md
+- `MOVED`: auditors/Bootstrap/BOOTSTRAP_NOVA.md → auditors/Bootstrap/Nova/NOVA_LITE.md
+- `CREATED`: auditors/Bootstrap/Claude/CLAUDE_LITE.md
+- `UPDATED`: auditors/Bootstrap/Grok/GROK_LITE.md - Added [UNSIGNED - LITE ONLY] marker, fixed repo URL (CFA-2.0 → CFA)
+- `UPDATED`: auditors/Bootstrap/Nova/NOVA_LITE.md - Added [UNSIGNED - LITE ONLY] marker, updated VUDU header metadata, removed outdated TWO BOOTSTRAP OPTIONS section
+- `UPDATED`: auditors/Bootstrap/README.md - Documented new LITE vs RICH hybrid architecture
+- `KEPT`: auditors/Bootstrap/BOOTSTRAP_VUDU_CLAUDE.md - Bedrock file stays in place (no breaking changes)
+
+**Reason:** Implement ITEM #10a - LITE vs RICH bootstrap toggle using hybrid approach. Keep BOOTSTRAP_VUDU_CLAUDE.md as bedrock for existing bootstrap sequences. Create lightweight LITE versions as distilled excerpts for external auditor calls (when Nova/Grok are running the show).
+
+**Architecture Decision:**
+- **LITE files:** Lightweight profiles (~5-10 min read) for external auditor calls, marked [UNSIGNED - LITE ONLY]
+- **RICH files:** Full VuDu coordination context (BOOTSTRAP_VUDU_CLAUDE.md remains in place)
+- **Philosophy:** No breaking changes to existing workflows, LITE serves new use case (external calls)
+- **Minimal duplication:** LITE files are distilled excerpts with pointers back to RICH for full context
+
+**Impact:** Moderate - New files created, existing GROK/NOVA files moved, but no breaking changes to existing bootstrap sequences
+
+**Follow-up Required:** NO - Implementation complete per hybrid approach decision
+
+---
+
+### [STRUCTURE-2025-11-13-2] 2025-11-13 - Renamed MASTER_BRANCH_TRUST_PROTOCOL → MISSION_TRUST_PROTOCOL
+
+**Categories:** [STRUCTURE] [DOCUMENTATION] [🧹 BROOM]
+**Changed by:** Process Claude (C4)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `RENAMED`: auditors/MASTER_BRANCH_TRUST_PROTOCOL.md → auditors/MISSION_TRUST_PROTOCOL.md
+- `UPDATED`: Language conversion - "Master Branch" → "Mission Coordinator" perspective
+- `UPDATED`: Core principle emphasizes README_C.md as mission coordinator (agent-agnostic)
+- `UPDATED`: 34 references across 17 files to use new filename
+- `DELETED`: Old MASTER_BRANCH_TRUST_PROTOCOL.md file
+
+**Reason:** Shift from branch-centric to mission-centric language. Protocol governs mission execution, not specific branch authority. README_C.md is the coordination mechanism regardless of which agent operates it.
+
+**Impact:** Significant - affects bootstrap system, documentation references, mission understanding
+
+**Follow-up Required:** YES - [🧹 BROOM] Update any external documentation or user-facing descriptions that reference old filename
+
+**Files Updated:**
+- auditors/Bootstrap/ (4 files)
+- auditors/ (3 files: MISSION_DEFAULT.md, README.md, README_C.md)
+- docs/ (7 files across validation, dependency_maps, thoughts)
+- Root: README.md, REPO_LOG.md
+- FOR_OPUS/ (2 files)
+
+---
+
+### [PROCESS-2025-11-13-7] 2025-11-13 - Added [🧹 +X-Y] File Diff Convention
+
+**Categories:** [PROCESS] [🧹]
+**Changed by:** Process Claude (C4)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `UPDATED`: REPO_LOG.md Quick Start section
+  - Added [🧹 +X-Y] file diff notation documentation
+  - Examples: `[🧹 +3-1]` (3 added, 1 deleted), `[🧹]` (content only)
+- `UPDATED`: BOOTSTRAP_VUDU_CLAUDE.md
+  - Fixed repo URL: `CFA-2.0` → `CFA` (old repo name removed)
+
+**Reason:** Make FILE_INVENTORY updates mechanical by tracking net file changes in [🧹] entries. Logger Claude can sum diffs since last Deep Clean instead of manual counting.
+
+**Impact:** Minimal - Process improvement for future Deep Cleans
+
+**Follow-up Required:** NO - Convention documented and in use moving forward
+
+---
+
+### [STRUCTURE-2025-11-13-4] 2025-11-13 - FOR_OPUS Archive + BOOTSTRAP_STRATEGY Move
+
+**Categories:** [STRUCTURE] [🧹]
+**Changed by:** Process Claude (C4)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `ARCHIVED`: FOR_OPUS/ → .Archive/FOR_OPUS_20251113/
+  - Added ARCHIVE_NOTE.md documenting Opus 4.1 manual update mission
+  - Preserves historical record of successful handoff workflow
+- `MOVED`: auditors/Bootstrap/TIERED_BOOTSTRAP_SYSTEM_SUMMARY.md → docs/architecture/
+- `MOVED`: auditors/Bootstrap/BOOTSTRAP_STRATEGY.md → docs/architecture/
+- `DELETED`: auditors/Bootstrap/Documentation/ (empty directory)
+
+**Reason:** v4.0 launch cleanup - archive completed mission files, consolidate architecture docs, remove empty directories.
+
+**Impact:** Moderate - Cleaner structure, architecture docs centralized
+
+**Follow-up Required:** NO - Structure optimized
+
+---
+
+### [DOCUMENTATION-2025-11-13-4] 2025-11-13 - Bootstrap README System Restructured
+
+**Categories:** [DOCUMENTATION] [STRUCTURE] [🧹]
+**Changed by:** Process Claude (C4)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `MOVED`: auditors/Bootstrap/README.md → auditors/Bootstrap/Tier4_TaskSpecific/README.md
+  - Previous README was Tier 4-specific content (task brief standards)
+- `CREATED`: auditors/Bootstrap/README.md (new root bootstrap navigation)
+  - Tier selection workflow
+  - Directory structure map
+  - Bootstrap metrics by tier
+  - Emergency recovery protocols
+  - LITE vs RICH preview (v4.1)
+
+**Reason:** Bootstrap root needed proper navigation guide, not Tier 4-specific content.
+
+**Impact:** Significant - Clearer bootstrap system navigation
+
+**Follow-up Required:** NO - System properly documented
+
+---
+
+### [DOCUMENTATION-2025-11-13-5] 2025-11-13 - Auditor's Axioms Integrated into Root README
+
+**Categories:** [DOCUMENTATION] [PHILOSOPHY] [🧹]
+**Changed by:** Process Claude (C4)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `INTEGRATED`: auditors/AUDITORS_AXIOMS_SECTION.md → README.md
+  - Added new section "🤖 The Auditor's Axioms - AI Transparency at Scale"
+  - Location: After Project Structure, before Logging Infrastructure
+  - ~150 lines of philosophical content
+  - Documents Claude/Grok/Nova axioms, biases, compensation strategies
+  - Explains "All Named, All Priced" at META level
+
+**Reason:** Make unprecedented AI axiomatic transparency visible to all users in main README, not buried in auditors/ subdirectory.
+
+**Impact:** SIGNIFICANT - Major philosophical addition to project documentation
+
+**Follow-up Required:** YES - Awaiting Grok + Nova sign-off on axioms descriptions
+
+---
+
+### [DOCUMENTATION-2025-11-13-6] 2025-11-13 - Root README Updated to v4.0.0
+
+**Categories:** [DOCUMENTATION] [🧹]
+**Changed by:** Process Claude (C4)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `UPDATED`: Project Structure section (v3.5.2 → v4.0.0)
+  - Added REPO_LOG.md to root files
+  - Added docs/architecture/ subdirectory
+  - Added docs/Validation/reports/ subdirectory
+  - Added docs/repository/dependency_maps/ subdirectory
+  - Expanded Bootstrap/ structure (Claude/, Grok/, Nova/, Tier3_EventHorizon/, Tier4_TaskSpecific/)
+  - Added docs/i_am/thoughts/ subdirectory
+  - Added docs/.Archive/ with v2 manual
+  - Updated auditors/ structure (Bootstrap reorganization, MISSION_TRUST_PROTOCOL, Mission/CFA_VUDU/)
+  - Added .Archive/FOR_OPUS_20251113/
+
+**Reason:** Reflect actual v4.0.0 repository structure including all recent reorganizations.
+
+**Impact:** Moderate - README tree now accurate to actual structure
+
+**Follow-up Required:** NO - Structure documented
+
+---
+
+### [DOCUMENTATION-2025-11-13-3] 2025-11-13 - Manual PDF Updated & v2 Archived
+
+**Categories:** [DOCUMENTATION] [🧹]
+**Changed by:** Process Claude (C4)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `MOVED`: docs/CFA_v2_Manual.pdf → docs/.Archive/CFA_v2_Manual.pdf
+- `UPDATED`: pages/manual.py line 89 - Fixed PDF download link
+  - Changed: `CFA-2.0/raw/main` → `CFA/raw/main` (correct repo)
+  - Links to: CFA_v4_Manual.pdf (already correct version)
+- `MOVED`: docs/manual.py → pages/manual.py (Opus 4.1 updated version)
+- `MOVED`: pages/manual.py → pages/manual_v3.5.py.archive
+- `MOVED`: docs/OPUS_4.1_MANUAL_AUDIT_REPORT.md → docs/Validation/reports/
+
+**Reason:** Complete manual file reorganization for v4.0 launch. Archive legacy v2 PDF, correct repo link, position Opus 4.1 updated manual as primary.
+
+**Impact:** Moderate - Manual now fully v4.0 compliant with correct download links
+
+**Follow-up Required:** NO - Manual files properly organized
+
+---
+
+### [STRUCTURE-2025-11-13-1] 2025-11-13 - Added [🧹 BROOM] Housekeeping Tag
+
+**Categories:** [STRUCTURE] [PROCESS] [🧹 BROOM]
+**Changed by:** Process Claude (C4)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `ADDED`: [🧹 BROOM] tag to category list (line 77)
+- `ADDED`: [🧹 BROOM] definition to Quick Start section (lines 33-34)
+- `ADDED`: Example entry demonstrating proper [🧹 BROOM] usage
+
+**Reason:** Establish housekeeping trail marker for future Doc Claude Deep Cleans. Changes marked with [🧹 BROOM] require follow-up to maintain repo health.
+
+**Impact:** Minimal - Adds new logging convention
+
+**Follow-up Required:** NO - Tag established and documented
+
+---
 
 ### [CONSOLIDATION-2025-11-12-3] 2025-11-12 - File Consolidation Complete (Destroyer Claude)
 
@@ -3313,7 +3600,7 @@ Bootstrap System (18 files):
 - auditors/Bootstrap/Tier4_TaskSpecific/: TASK_SPECIFIC_BRIEF.md, Active_Tasks/README.md, Completed/README.md
 
 Coordination & Protocol:
-- 88MPH.md, auditors/VUDU_PROTOCOL.md, auditors/MASTER_BRANCH_TRUST_PROTOCOL.md
+- 88MPH.md, auditors/VUDU_PROTOCOL.md, auditors/MISSION_TRUST_PROTOCOL.md
 - auditors/relay/Claude_Incoming/: README.md, VUDU_LOG.md, VUDU_MESSAGE_AXIOMS_ACTIVATION.md
 - auditors/relay/Grok_Incoming/README.md, auditors/relay/Nova_Incoming/README.md
 
@@ -3380,7 +3667,7 @@ Supporting Files:
 High-priority navigation and protocol files:
 - auditors/Bootstrap/README.md, BOOTSTRAP_FRAMEWORK.md, BOOTSTRAP_STRATEGY.md
 - pages/README.md, utils/README.md
-- auditors/VUDU_PROTOCOL.md, MASTER_BRANCH_TRUST_PROTOCOL.md
+- auditors/VUDU_PROTOCOL.md, MISSION_TRUST_PROTOCOL.md
 - CHANGELOG.md, REPO_LOG.md
 - auditors/Mission/Preset_Calibration/MISSION_BRIEF.md
 

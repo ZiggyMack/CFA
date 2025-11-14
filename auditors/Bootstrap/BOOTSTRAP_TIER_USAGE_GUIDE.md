@@ -92,7 +92,7 @@ What role does this Claude need to fill?
 3. BOOTSTRAP_VUDU.md (coordination protocols)
 4. MISSION_CURRENT.md (active work)
 5. README_C.md (current state)
-6. MASTER_BRANCH_TRUST_PROTOCOL.md (governance)
+6. MISSION_TRUST_PROTOCOL.md (governance)
 7. [Mission-specific files as needed]
 
 ### **Result:**

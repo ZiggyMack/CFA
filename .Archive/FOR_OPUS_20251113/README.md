@@ -62,7 +62,7 @@ cfa_app/
 └── auditors/                   # v3.5.2: Auditor coordination infrastructure
     ├── README.md               # Infrastructure documentation
     ├── README_C.md             # Master Branch current state
-    ├── MASTER_BRANCH_TRUST_PROTOCOL.md
+    ├── MISSION_TRUST_PROTOCOL.md
     ├── AUDITORS_AXIOMS.md
     ├── MISSION_CURRENT.md
     ├── MISSION_DEFAULT.md

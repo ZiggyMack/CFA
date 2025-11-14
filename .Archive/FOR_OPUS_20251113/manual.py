@@ -1,7 +1,6 @@
 """
 CFA v4.0 - User Manual (Beautiful Version)
 Inspired by the original vibrant design
-Updated: 2025-11-13 by Doc Claude (Opus 4.1) for v4.0.0 accuracy
 """
 
 import streamlit as st
@@ -86,11 +85,11 @@ def render():
         <div class="info-card">
             <h2>📥 Complete Manual (PDF)</h2>
             <p style="font-size: 1.1rem;">Access the full CFA v4.0 User Manual with all formulas, examples, and calibration history.</p>
-            <p><a href="https://github.com/ZiggyMack/CFA-2.0/raw/main/docs/CFA_v4_Manual.pdf" 
+            <p><a href="https://github.com/ZiggyMack/CFA-2.0/raw/main/docs/CFA_v2_Manual.pdf" 
                style="color: white; text-decoration: underline; font-size: 1.2rem;">
                → Download PDF Manual
             </a></p>
-            <p style="font-size: 0.9rem; margin-top: 1rem;"><em>Note: PDF reflects complete v4.0.0 release with all features • Repository Health: 98/100 (A+)</em></p>
+            <p style="font-size: 0.9rem; margin-top: 1rem;"><em>Note: Upload the PDF from this repo's outputs folder to your GitHub docs/ directory</em></p>
         </div>
     """, unsafe_allow_html=True)
     
@@ -101,7 +100,7 @@ def render():
         "🚀 Quick Start",
         "🌍 v4.0 Features (NEW!)",
         "⚖️ The Six Levers",
-        "🎛️ Toggles Explained", 
+        "🎛️ Toggles Explained",
         "📊 Reading Results",
         "💡 Pro Tips"
     ])
@@ -123,13 +122,10 @@ def render():
         The **Comparative Framework Audit** is a system for comparing worldviews, 
         epistemologies, and philosophical frameworks using transparent, adjustable criteria.
         
-        **Core Innovation**: "All Named, All Priced" → "All Seen, All Passed"
+        **Core Innovation**: "All Named, All Priced"
         - Every assumption is disclosed
-        - Every presupposition is counted  
+        - Every presupposition is counted
         - Every bias is made toggleable
-        - Every outcome is earned through adversarial audit (v4.0)
-        
-        **Repository Health**: 98/100 (A+) - Maintained via Living Map System
         """)
         
         st.markdown("### The Formula")
@@ -143,27 +139,13 @@ def render():
         **YPA** = Yield-Per-Axiom (efficiency metric)
         
         **Higher YPA** = More efficient framework (more explanatory power per assumption)
-        
-        **v4.0 Note**: YPA now has both self-reported and peer-reviewed scores after adversarial audit.
         """)
         
         st.markdown("### 5-Minute Workflow")
         
         st.markdown("""
             <div class="lever-card">
-            <h4>Step 1: Choose Your Worldview</h4>
-            <p>v4.0 offers 12 worldviews (expanded from 2):</p>
-            <ul>
-                <li><b>Major Religions:</b> Classical Theism, Islam, Judaism, Mormonism, Hinduism, Buddhism</li>
-                <li><b>Naturalistic:</b> Methodological Naturalism, Process Theology</li>
-                <li><b>Meta-Ethical:</b> Error Theory, Null Hypothesis, Desiderata, Existentialism</li>
-            </ul>
-            </div>
-        """, unsafe_allow_html=True)
-        
-        st.markdown("""
-            <div class="lever-card">
-            <h4>Step 2: Configure Your Values</h4>
+            <h4>Step 1: Configure Your Values</h4>
             <p>In the sidebar, set 4 toggles based on what you care about:</p>
             <ul>
                 <li>Do moral norms matter as much as predictive power? (Parity)</li>
@@ -176,7 +158,7 @@ def render():
         
         st.markdown("""
             <div class="lever-card">
-            <h4>Step 3: Adjust the Levers</h4>
+            <h4>Step 2: Adjust the Levers</h4>
             <p>Use sliders to score each framework on 6 dimensions (0-10 scale)</p>
             <p>Or use preset buttons: MAX, MID, RESET, MIN</p>
             </div>
@@ -184,7 +166,7 @@ def render():
         
         st.markdown("""
             <div class="lever-card">
-            <h4>Step 4: Examine the Trinity</h4>
+            <h4>Step 3: Examine the Trinity</h4>
             <p>Check YPA under 3 scenarios:</p>
             <ul>
                 <li><b>Neutral</b> - Baseline (all 1×)</li>
@@ -198,22 +180,21 @@ def render():
             <div class="tip-box">
             💡 <b>Pro Tip:</b> Don't just look at who "wins." Look at the trade-offs. 
             What does each framework give up? Is that acceptable for your purposes?
-            Check the Living Map System to explore all 12 worldview profiles in depth.
             </div>
         """, unsafe_allow_html=True)
     
     # ========================================================================
-    # TAB 2: v4.0 FEATURES (NEW!) - Updated with Living Maps and Health Scoring
+    # TAB 2: v4.0 FEATURES (NEW!)
     # ========================================================================
     with tab2:
         st.markdown("## 🌍 v4.0 Features - Philosophical Laboratory")
-    
+
         st.markdown("""
             <div class="highlight-box">
             ✨ NEW in v4.0: CFA expands from technical framework to comprehensive philosophical laboratory
             </div>
         """, unsafe_allow_html=True)
-    
+
         st.markdown("### 🗂️ 12 Worldview Profiles")
         st.markdown("""
             <div class="info-card">
@@ -224,7 +205,7 @@ def render():
             <p><b>Total:</b> ~240KB philosophical documentation with Steel-Manning sections, academic sources (9+ per worldview), and calibration YAML blocks</p>
             </div>
         """, unsafe_allow_html=True)
-    
+
         st.markdown("### 📐 Symmetry Matrix Visualizer (SMV)")
         st.markdown("""
             <div class="lever-card">
@@ -240,42 +221,42 @@ def render():
             <p><b>Key insight:</b> Understanding BEFORE enforcement - judge fairness yourself, not via black-box scoring</p>
             </div>
         """, unsafe_allow_html=True)
-    
+
         st.markdown("### ⚖️ Crux Architecture - Honest Impasses")
         st.markdown("""
             <div class="toggle-card">
             <h4>Named impasse system for unresolvable philosophical disagreements</h4>
             <p><b>When auditors can't reach 98%+ convergence after genuine deliberation:</b> Declare a <b>Crux Point</b></p>
-    
+
             <p><b>Three-View System:</b></p>
             <ul>
                 <li><b>Self-Reported Tab:</b> What the worldview claims about itself</li>
                 <li><b>Peer-Reviewed Tab:</b> What survives adversarial audit (Claude/Nova/Grok)</li>
                 <li><b>Delta Tab:</b> The difference (humility metrics - how well does worldview know itself?)</li>
             </ul>
-    
+
             <p><b>User Control - Crux Handling Lever:</b></p>
             <ul>
                 <li><b>NORMALIZE_UNCERTAINTY (Skeptic Mode):</b> Apply penalty based on disagreement width</li>
                 <li><b>CARRY_FORWARD (Zealot Mode):</b> Use self-reported scores, acknowledge but don't penalize</li>
             </ul>
-    
+
             <p><b>Key insight:</b> Crux Points are <i>features, not bugs</i> - they mark boundaries of knowable truth</p>
             </div>
         """, unsafe_allow_html=True)
-    
+
         st.markdown("### 🤝 Adversarial Scoring System")
         st.markdown("""
             <div class="info-card">
             <h4>Multi-AI collaboration: Full bias vs. adversarial-adjusted scores</h4>
-    
+
             <p><b>Three Auditor Roles:</b></p>
             <ul>
                 <li><b>PRO (Claude):</b> Teleological lens, advocates FOR worldview with calibration bias adjustment</li>
                 <li><b>ANTI (Grok):</b> Empirical lens, challenges claims from naturalistic perspective</li>
                 <li><b>FAIRNESS (Nova):</b> Symmetry lens, ensures balance and catches asymmetric treatment</li>
             </ul>
-    
+
             <p><b>The Process:</b></p>
             <ol>
                 <li>Worldview writes <b>self-reported score</b> (what it claims)</li>
@@ -283,94 +264,20 @@ def render():
                 <li>Target: <b>98%+ convergence</b> (if can't agree → declare Crux Point)</li>
                 <li>Output: <b>Peer-reviewed score</b> (survives genuine philosophical scrutiny)</li>
             </ol>
-    
+
             <p><b>Calibration Hash System:</b> Each auditor uses bias-adjustment YAML values (e.g., <code>1bbec1e119a2c425</code> for PRO-CT stance) to prevent gaming and ensure consistent posture</p>
-    
+
             <p><b>Key insight:</b> Scores are <i>earned</i> through intellectual combat, not self-reported. Delta between self-report and peer-review = <b>humility metric</b></p>
             </div>
         """, unsafe_allow_html=True)
 
-        st.markdown("### 🗺️ Living Map System")
-        st.markdown("""
-            <div class="info-card">
-            <h4>7 Authoritative Maps Preventing Documentation Drift</h4>
-            
-            <p><b>The Problem:</b> Documentation claims become stale (the "Gospel Problem"). Files move, counts change, but embedded references don't update.</p>
-            
-            <p><b>The Solution - 7 Living Maps:</b></p>
-            <ol>
-                <li><b>FILE_INVENTORY.md</b> - Complete catalog (~353 tracked files)</li>
-                <li><b>BOOTSTRAP_SEQUENCE.md</b> - Canonical activation paths</li>
-                <li><b>REPO_HEALTH_DASHBOARD.md</b> - Real-time health (98/100 A+)</li>
-                <li><b>WORLDVIEW_CATALOG.md</b> - 12 worldview profile registry</li>
-                <li><b>WAYFINDING_GUIDE.md</b> - Navigation for finding anything</li>
-                <li><b>AUDITOR_ASSIGNMENTS.md</b> - PRO/ANTI stance mappings</li>
-                <li><b>ARCHIVE_INDEX.md</b> - Brainstorming archive (21 files, 616KB)</li>
-            </ol>
-            
-            <p><b>How it works:</b> When files move, Living Maps update FIRST. All docs reference maps, not each other. Single-source-of-truth hierarchy.</p>
-            
-            <p><b>Result:</b> Documentation stays current, references don't drift, repository maintains 98/100 health score.</p>
-            </div>
-        """, unsafe_allow_html=True)
-
-        st.markdown("### 📊 Repository Health Scoring")
-        st.markdown("""
-            <div class="lever-card">
-            <h4>100-Point Quantifiable Health System</h4>
-            
-            <p><b>7 Scoring Categories (100 points total):</b></p>
-            <ul>
-                <li><b>Documentation Coverage</b> (15 pts) - % files with semantic headers</li>
-                <li><b>Link Integrity</b> (15 pts) - % working markdown links</li>
-                <li><b>Living Map Freshness</b> (15 pts) - How current are the 7 maps?</li>
-                <li><b>Process Compliance</b> (15 pts) - Following protocols</li>
-                <li><b>Repository Organization</b> (15 pts) - Clean structure</li>
-                <li><b>Dependency Accuracy</b> (10 pts) - Maps current?</li>
-                <li><b>Version Consistency</b> (15 pts) - Versions aligned?</li>
-            </ul>
-            
-            <p><b>Current Score:</b> 98/100 (A+) - Exceptional, reference-quality repository</p>
-            
-            <p><b>Grade Scale:</b></p>
-            <ul>
-                <li>A+ (98-100): Exceptional</li>
-                <li>A (94-97): Excellent</li>
-                <li>A- (90-93): Very Good</li>
-            </ul>
-            
-            <p><b>Innovation:</b> Eliminates subjective "feels healthy" assessments with quantifiable metrics</p>
-            </div>
-        """, unsafe_allow_html=True)
-
-        st.markdown("### 🔍 Gospel Problem Prevention")
-        st.markdown("""
-            <div class="toggle-card">
-            <h4>Scan-First Methodology for Accurate Documentation</h4>
-            
-            <p><b>The Gospel Problem:</b> Previous audits showed 18% variance between auditors reading historical reports first (confirmation bias).</p>
-            
-            <p><b>Solution - Scan-First Protocol:</b></p>
-            <ol>
-                <li><b>Independent scanning:</b> Auditors scan repository BEFORE reading reports</li>
-                <li><b>Record findings:</b> Document what you actually find</li>
-                <li><b>Compare to claims:</b> THEN check if reality matches documentation</li>
-                <li><b>Update Living Maps:</b> Fix discrepancies at the source</li>
-            </ol>
-            
-            <p><b>Result:</b> Convergence improved from 78% to 96% agreement across auditors</p>
-            
-            <p><b>For Users:</b> You can trust the scores - they're validated by three independent AI auditors using scan-first methodology</p>
-            </div>
-        """, unsafe_allow_html=True)
-    
         st.markdown("""
             <div class="tip-box">
             💡 <b>v4.0 Philosophy:</b> CFA now treats worldviews as <i>living philosophical positions</i> worthy of genuine intellectual charity,
-            not strawmen to dismiss. Adversarial collaboration + named impasses + Living Maps = epistemic honesty at scale.
+            not strawmen to dismiss. Adversarial collaboration + named impasses = epistemic honesty at scale.
             </div>
         """, unsafe_allow_html=True)
-    
+
     # ========================================================================
     # TAB 3: THE SIX LEVERS
     # ========================================================================
@@ -385,7 +292,6 @@ def render():
             <p><b>What it measures:</b> How many unprovable assumptions does this framework require?</p>
             <p><b>Scoring:</b> Count axioms + debts. Lower = more efficient</p>
             <p><b>Key insight:</b> Every framework starts somewhere. The question is: are you honest about where?</p>
-            <p><b>v4.0:</b> Now subject to adversarial audit - auditors may disagree on what counts as "brute"</p>
             <p><i>"To name your brute is to pay your fee"</i></p>
             </div>
         """, unsafe_allow_html=True)
@@ -447,13 +353,13 @@ def render():
         """, unsafe_allow_html=True)
     
     # ========================================================================
-    # TAB 4: TOGGLES EXPLAINED
+    # TAB 3: TOGGLES EXPLAINED
     # ========================================================================
-    with tab4:
+    with tab3:
         st.markdown("## 🎛️ The Four Toggles")
         st.markdown("*Configuration options that reveal your values*")
         
-        # Toggle 1: Parity
+        # Toggle 1
         st.markdown("""
             <div class="toggle-card">
             <h3>1️⃣ Lever-Parity Toggle</h3>
@@ -463,21 +369,19 @@ def render():
             <ul>
                 <li>Favors comprehensive worldviews</li>
                 <li>Values moral grounding as much as predictive power</li>
-                <li>Treats ethics and epistemology as equally important</li>
             </ul>
             
             <p><b>OFF:</b> MG down-weighted (0.5×)</p>
             <ul>
                 <li>Favors methodological frameworks</li>
                 <li>Emphasizes epistemic norms over ethical claims</li>
-                <li>Better for purely scientific comparisons</li>
             </ul>
             
-            <p><b>Impact:</b> Classical Theism loses ~0.8 YPA when OFF (reveals structural dependency on normative grounding)</p>
+            <p><b>Impact:</b> CT loses ~0.8 YPA when OFF (reveals structural dependency on normative grounding)</p>
             </div>
         """, unsafe_allow_html=True)
         
-        # Toggle 2: PF-Type
+        # Toggle 2
         st.markdown("""
             <div class="toggle-card">
             <h3>2️⃣ PF-Type Toggle</h3>
@@ -486,38 +390,34 @@ def render():
             <p><b>Instrumental (100% tech):</b></p>
             <ul>
                 <li>Only predictive/technological yield</li>
-                <li>Material outcomes only</li>
-                <li>Favors Methodological Naturalism</li>
+                <li>Favors MdN</li>
             </ul>
             
             <p><b>Composite 70:30 (Default):</b></p>
             <ul>
-                <li>70% instrumental, 30% existential</li>
-                <li>Balanced mix of tech and meaning</li>
+                <li>Balanced mix</li>
                 <li>Fair comparison baseline</li>
             </ul>
             
             <p><b>Holistic 50:50 (Equal meaning):</b></p>
             <ul>
                 <li>Existential yield weighted equally</li>
-                <li>Values purpose/meaning as much as tech</li>
-                <li>Favors theistic/religious worldviews</li>
+                <li>Favors CT</li>
             </ul>
             
-            <p><b>Impact:</b> ±0.4 YPA swing depending on worldview's strengths</p>
+            <p><b>Impact:</b> ±0.4 YPA depending on choice</p>
             </div>
         """, unsafe_allow_html=True)
         
-        # Toggle 3: Fallibilism
+        # Toggle 3
         st.markdown("""
             <div class="toggle-card">
             <h3>3️⃣ Fallibilism-Bonus Toggle</h3>
             <p><b>The Question:</b> Should frameworks that admit their limits get a reward?</p>
             
-            <p><b>ON (Default):</b> +0.3 CCI bonus for intellectual humility</p>
+            <p><b>ON (Default):</b> +0.3 CCI bonus</p>
             <ul>
-                <li>Rewards frameworks that acknowledge uncertainty</li>
-                <li>Values epistemic modesty</li>
+                <li>Rewards intellectual humility</li>
                 <li>Favors frameworks checking "Admits Limits"</li>
             </ul>
             
@@ -525,14 +425,13 @@ def render():
             <ul>
                 <li>Confidence not penalized if grounded</li>
                 <li>Divine revelation (CT) gets equal treatment</li>
-                <li>Certainty-friendly approach</li>
             </ul>
             
-            <p><b>Impact:</b> Usually small (±0.1 YPA) - many frameworks admit limits in v4.0</p>
+            <p><b>Impact:</b> Usually small (±0.1 YPA) - both MdN and CT admit limits</p>
             </div>
         """, unsafe_allow_html=True)
         
-        # Toggle 4: BFI Weight
+        # Toggle 4
         st.markdown("""
             <div class="toggle-card">
             <h3>4️⃣ BFI Debt-Weight Toggle</h3>
@@ -542,50 +441,60 @@ def render():
             <ul>
                 <li>Axioms and debts count the same</li>
                 <li>Neutrality between foundations and mysteries</li>
-                <li>Fair baseline comparison</li>
             </ul>
             
             <p><b>Weighted 1.2×:</b></p>
             <ul>
-                <li>Debts cost 20% more than axioms</li>
-                <li>Penalizes unresolved questions</li>
-                <li>Values solid foundations over promissory notes</li>
+                <li>Debts cost 20% more</li>
+                <li>Promissory notes vs solid foundations</li>
             </ul>
             
-            <p><b>Impact:</b> Penalizes frameworks with many unresolved questions (varies by worldview)</p>
-            
-            <p><b>v4.0 Note:</b> This toggle interacts with Crux Architecture - unresolved questions may become named Crux Points</p>
+            <p><b>Impact:</b> Penalizes frameworks with many unresolved questions</p>
             </div>
         """, unsafe_allow_html=True)
     
     # ========================================================================
-    # TAB 5: READING RESULTS
+    # TAB 4: TOGGLES EXPLAINED
     # ========================================================================
-    with tab5:
-        st.markdown("## 📊 Reading Results")
-        st.markdown("*How to interpret YPA outcomes*")
-    
+    with tab4:
+        st.markdown("## 📊 Understanding Your Results")
+        
+        st.markdown("### The YPA Trinity")
+        st.write("""
+        Every audit reports scores under **three weighting scenarios**. 
+        This reveals how frameworks are optimized for different purposes.
+        """)
+        
         st.markdown("""
-            <div class="info-card">
-            <h3>The Trinity Scores</h3>
-            <p>Every comparison shows 3 scenarios:</p>
-            <ul>
-                <li><b>Neutral:</b> Baseline (all weights 1×)</li>
-                <li><b>Existential:</b> Meaning-focused (2× EDB, 2× MG)</li>
-                <li><b>Empirical:</b> Tech-focused (2× PF, 1.5× CCI)</li>
-            </ul>
-            <p><b>Why?</b> Different contexts demand different priorities. See how frameworks perform under various pressures.</p>
-            
-            <p><b>v4.0 Addition:</b> Each scenario now shows:</p>
-            <ul>
-                <li><b>Self-Reported Score:</b> What the worldview claims</li>
-                <li><b>Peer-Reviewed Score:</b> What survives 98% adversarial convergence</li>
-                <li><b>Delta (Humility Metric):</b> The gap reveals how well a worldview knows itself</li>
-            </ul>
+            <div class="lever-card">
+            <h4>🔵 Neutral Scenario</h4>
+            <p><b>Weighting:</b> All levers 1×</p>
+            <p><b>Purpose:</b> Baseline comparison</p>
+            <p><b>What it shows:</b> General-purpose efficiency</p>
             </div>
         """, unsafe_allow_html=True)
-    
-        st.markdown("### Understanding Guardrails")
+        
+        st.markdown("""
+            <div class="lever-card">
+            <h4>🟣 Existential Scenario</h4>
+            <p><b>Weighting:</b> 2× EDB, 2× MG</p>
+            <p><b>Purpose:</b> Meaning/purpose focus</p>
+            <p><b>What it shows:</b> Which framework better addresses "Why?" questions</p>
+            <p><b>Typical winner:</b> Comprehensive worldviews (CT)</p>
+            </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+            <div class="lever-card">
+            <h4>🟢 Empirical Scenario</h4>
+            <p><b>Weighting:</b> 2× PF, 1.5× CCI</p>
+            <p><b>Purpose:</b> Prediction/tech focus</p>
+            <p><b>What it shows:</b> Which framework generates practical success</p>
+            <p><b>Typical winner:</b> Scientific methods (MdN)</p>
+            </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("### The Guardrails")
         st.write("**Automated checks that flag suspicious patterns:**")
         
         st.markdown("""
@@ -615,15 +524,47 @@ def render():
             <i>Large impacts reveal structural dependencies</i>
             </div>
         """, unsafe_allow_html=True)
+        
+        st.markdown("### Interpreting the Symmetry Tab")
+        
+        st.markdown("""
+        The Symmetry Audit shows how each framework responds to toggle changes:
+        
+        - **✅ Green (Δ < 0.3)**: Small impact, framework is robust to this config
+        - **⚠️ Yellow (Δ > 0.3)**: Large impact, framework depends on this setting
+        
+        **Important**: Large impacts aren't "bad" - they reveal **structural dependencies**. 
+        The key is **disclosure**: you can see exactly how your choices affect results.
+        """)
     
+    # ========================================================================
+    # TAB 5: READING RESULTS
+    # ========================================================================
+    with tab5:
+        st.markdown("## 📊 Reading Results")
+        st.markdown("*How to interpret YPA outcomes*")
+
+        st.markdown("""
+            <div class="info-card">
+            <h3>The Trinity Scores</h3>
+            <p>Every comparison shows 3 scenarios:</p>
+            <ul>
+                <li><b>Neutral:</b> Baseline (all weights 1×)</li>
+                <li><b>Existential:</b> Meaning-focused (2× EDB, 2× MG)</li>
+                <li><b>Empirical:</b> Tech-focused (2× PF, 1.5× CCI)</li>
+            </ul>
+            <p><b>Why?</b> Different contexts demand different priorities. See how frameworks perform under various pressures.</p>
+            </div>
+        """, unsafe_allow_html=True)
+
         st.markdown("""
             <div class="tip-box">
             💡 <b>Key Insight:</b> Don't just look at who "wins" - look at the <i>pattern</i> across scenarios.
             A framework that dominates in all 3 scenarios is universally strong. One that only wins in Existential
-            reveals its niche. v4.0's peer-review process ensures these patterns are adversarially validated.
+            reveals its niche.
             </div>
         """, unsafe_allow_html=True)
-    
+
     # ========================================================================
     # TAB 6: PRO TIPS
     # ========================================================================
@@ -632,7 +573,7 @@ def render():
         
         st.markdown("""
             <div class="highlight-box">
-            🎯 How to get the most out of CFA v4.0
+            🎯 How to get the most out of CFA
             </div>
         """, unsafe_allow_html=True)
         
@@ -666,19 +607,18 @@ def render():
             1. Start with default config (Parity ON, Composite PF, etc.)
             2. Note the YPA scores
             3. Flip Parity OFF
-            4. Watch theistic worldviews drop ~0.8 YPA
+            4. Watch CT's score drop ~0.8 YPA
             
-            <b>Question:</b> Is this bias against theism, or honest measurement of structural dependency?
+            <b>Question:</b> Is this bias against CT, or honest measurement of structural dependency?
             </div>
         """, unsafe_allow_html=True)
         
         st.markdown("### 4. Check the Brute Ledger")
         st.write("""
         Visit the **🔍 Brute Ledger** page to see:
-        - Full axiom/debt lists for all 12 worldviews (v4.0)
+        - Full axiom/debt lists for MdN and CT
         - Why each framework requires its starting assumptions
-        - Audit notes from Claude + Grok + Nova perspectives
-        - Steel-Manning scaffolds showing charitable interpretation
+        - Audit notes from Claude + Grok perspectives
         
         Understanding the BFI makes the YPA scores make sense.
         """)
@@ -689,58 +629,17 @@ def render():
         - Your configuration
         - Your lever scores
         - The calculated YPA Trinity
-        - Both self-reported and peer-reviewed scores (v4.0)
         
         Share your runs with others! Compare interpretations!
         """)
         
-        st.markdown("### 6. Explore Crux Points")
-        st.markdown("""
-            <div class="info-card">
-            <h3>v4.0: Named Impasses are Features</h3>
-            <p>When auditors can't reach 98% convergence, CFA declares a <b>Crux Point</b>.</p>
-            <p>These mark the boundaries of philosophical agreement.</p>
-            <p>You decide (via Crux Handling Lever) whether to:</p>
-            <ul>
-                <li><b>NORMALIZE_UNCERTAINTY:</b> Apply penalty for disagreement</li>
-                <li><b>CARRY_FORWARD:</b> Accept the impasse without penalty</li>
-            </ul>
-            <p>Either way, the disagreement is <i>named and priced</i>, not hidden.</p>
-            </div>
-        """, unsafe_allow_html=True)
-
-        st.markdown("### 7. Check Repository Health")
-        st.markdown("""
-            <div class="tip-box">
-            <b>NEW in v4.0:</b> Repository Health Scoring
-            
-            CFA maintains a 98/100 (A+) health score across 7 categories:
-            - Documentation Coverage
-            - Link Integrity  
-            - Living Map Freshness
-            - Process Compliance
-            - Repository Organization
-            - Dependency Accuracy
-            - Version Consistency
-            
-            This means you can trust that:
-            - Documentation is current
-            - Links work
-            - File counts are accurate
-            - The system is professionally maintained
-            
-            Check the <b>Repo Health Dashboard</b> for real-time status!
-            </div>
-        """, unsafe_allow_html=True)
-        
-        st.markdown("### 8. Remember the Pointing Rule")
+        st.markdown("### 6. Remember the Pointing Rule")
         st.markdown("""
             <div class="info-card">
             <h3>"To name your brute is to pay your fee"</h3>
             <p>Every framework starts with unprovable assumptions.</p>
             <p>The question isn't whether you have them.</p>
             <p>The question is whether you're honest about them.</p>
-            <p><b>v4.0:</b> And whether they survive adversarial audit!</p>
             </div>
         """, unsafe_allow_html=True)
         
@@ -750,10 +649,7 @@ def render():
         st.write("""
         - **Full Documentation**: Download the PDF manual (link at top)
         - **Brute Ledger**: Visit 🔍 Brute Ledger page for axiom/debt lists
-        - **About Page**: Read the complete 5-level audit story
-        - **SMV Dashboard**: Explore auditor tension/resolution visually
-        - **Repository Health**: Check the 98/100 (A+) health dashboard
-        - **Living Maps**: Navigate via the 7 authoritative source-of-truth documents
+        - **About Page**: Read the complete 4-level audit story
         - **Console Tooltips**: Hover over any toggle or lever for inline help
         """)
     
@@ -763,8 +659,7 @@ def render():
     st.markdown("---")
     st.markdown("""
         <div style="text-align: center; color: #666; padding: 1rem;">
-        <p>CFA v4.0.0 | "All Named, All Priced → All Seen, All Passed" | November 2025</p>
-        <p>Repository Health: 98/100 (A+) | 12 Worldviews | 7 Living Maps | 3 AI Auditors</p>
-        <p><i>Where ideas reveal their true weight, and honesty becomes quantifiable through adversarial audit.</i></p>
+        <p>CFA v4.0 | "All Named, All Priced" | October 2025</p>
+        <p><i>Where ideas reveal their true weight, and honesty becomes quantifiable.</i></p>
         </div>
     """, unsafe_allow_html=True)

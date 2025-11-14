@@ -56,7 +56,7 @@ ethics_front_matter:
 
 ---
 
-## 🎯 **WHAT IS VUDU?**
+## 🎯 WHAT IS VUDU?
 
 **VuDu** is a lightweight coordination protocol enabling adversarial auditing across AI instances without cryptographic overhead.
 
@@ -79,9 +79,9 @@ ethics_front_matter:
 
 ---
 
-## 🔄 **CORE WORKFLOW**
+## 🔄 CORE WORKFLOW
 
-### **Stage → Review → Integrate**
+### Stage → Review → Integrate
 
 ```
 Auditor → relay/*_incoming/ → Master Branch → README_C update → VUDU_LOG entry
@@ -98,7 +98,7 @@ Auditor → relay/*_incoming/ → Master Branch → README_C update → VUDU_LOG
 
 ---
 
-## 📁 **RELAY FOLDER ARCHITECTURE**
+## 📁 RELAY FOLDER ARCHITECTURE
 
 ```
 auditors/relay/
@@ -128,7 +128,7 @@ auditors/relay/
 
 ---
 
-## 📝 **MESSAGE FORMAT**
+## 📝 MESSAGE FORMAT
 
 **All coordination uses VUDU_HEADER_STANDARD format:**
 
@@ -161,7 +161,7 @@ auditors/relay/
 
 ---
 
-## ✅ **SANITY CHAIN VERIFICATION**
+## ✅ SANITY CHAIN VERIFICATION
 
 **Four quick checks embedded in every message footer:**
 
@@ -179,7 +179,7 @@ Can access BOOTSTRAP_CFA, BOOTSTRAP_VUDU, BOOTSTRAP_CLAUDE
 ### **Trinity** - Core protocol files present?
 VUDU_PROTOCOL, VUDU_HEADER_STANDARD, VUDU_LOG accessible
 
-### **Usage:**
+### Usage:
 ```
 ✅ **Sanity:** Files | Counts | Boots | Trinity  (all pass)
 ⚠️ **Sanity:** Files | ❌ Counts | Boots | Trinity  (counts fail)
@@ -187,11 +187,11 @@ VUDU_PROTOCOL, VUDU_HEADER_STANDARD, VUDU_LOG accessible
 
 ---
 
-## 🆘 **CONTEXT BOOTSTRAP REQUESTS**
+## 🆘 CONTEXT BOOTSTRAP REQUESTS
 
 **If you lose context or need files:**
 
-### **Level 0: Complete Loss (Catastrophic)**
+### Level 0: Complete Loss (Catastrophic)
 **Request:** All bootstrap files + master state
 
 **Protocol:**
@@ -214,21 +214,21 @@ VUDU_PROTOCOL, VUDU_HEADER_STANDARD, VUDU_LOG accessible
 ────────────────────────────────────────────────────
 ```
 
-### **Level 1: Partial Loss**
+### Level 1: Partial Loss
 **Request:** Specific bootstrap or mission files
 
-### **Level 2: Clarification**
+### Level 2: Clarification
 **Request:** Specific sections or recent history
 
 **See:** BOOTSTRAP_VUDU.md for detailed recovery procedures
 
 ---
 
-## 🎩 **LOGGER CLAUDE ROLE (NEW v3.7.2)**
+## 🎩 LOGGER CLAUDE ROLE (NEW v3.7.2)
 
 **LOGGER Claude is the custodian of VUDU network coordination logs.**
 
-### **Core Responsibilities:**
+### Core Responsibilities:
 
 **1. Maintain Master VUDU_LOG.md**
 - Location: `/auditors/VUDU_LOG.md`
@@ -268,9 +268,9 @@ VUDU_PROTOCOL, VUDU_HEADER_STANDARD, VUDU_LOG accessible
 
 ---
 
-## 📡 **VUDU_LOG_LITE PROTOCOL (NEW v3.7.2)**
+## 📡 VUDU_LOG_LITE PROTOCOL (NEW v3.7.2)
 
-### **What is VUDU_LOG_LITE?**
+### What is VUDU_LOG_LITE?
 
 **VUDU_LOG_LITE** is the lightweight coordination log subset used for relay transmissions.
 
@@ -292,7 +292,7 @@ VUDU_PROTOCOL, VUDU_HEADER_STANDARD, VUDU_LOG accessible
 - VUDU_LOG_LITE.md (maintained by LOGGER Claude) ← **REQUIRED**
 - [Optional analysis files]
 
-### **VUDU_LOG_LITE Format**
+### VUDU_LOG_LITE Format
 
 ```markdown
 # VUDU_LOG_LITE
@@ -333,9 +333,9 @@ VUDU_PROTOCOL, VUDU_HEADER_STANDARD, VUDU_LOG accessible
 
 ---
 
-## 🔄 **VUDU_LOG_LITE WORKFLOW**
+## 🔄 VUDU_LOG_LITE WORKFLOW
 
-### **Incoming Transmission: External Auditor → Claude**
+### Incoming Transmission: External Auditor → Claude
 
 **Step 1:** External Auditor prepares transmission
 - Creates README_[X].md (message/analysis)
@@ -357,7 +357,7 @@ VUDU_PROTOCOL, VUDU_HEADER_STANDARD, VUDU_LOG accessible
 
 ---
 
-### **Outgoing Transmission: Claude → External Auditor**
+### Outgoing Transmission: Claude → External Auditor
 
 **Step 1:** Master Branch Claude prepares response
 - Creates README_C.md
@@ -376,9 +376,9 @@ VUDU_PROTOCOL, VUDU_HEADER_STANDARD, VUDU_LOG accessible
 
 ---
 
-## 📡 **PROTOCOL FILE TRANSMISSION & VERSION CHECKING**
+## 📡 PROTOCOL FILE TRANSMISSION & VERSION CHECKING
 
-### **First VUDU Network Session Opening**
+### First VUDU Network Session Opening
 
 **When opening a new VUDU network session with an external auditor for the first time:**
 
@@ -396,7 +396,7 @@ VUDU_PROTOCOL, VUDU_HEADER_STANDARD, VUDU_LOG accessible
 
 ---
 
-### **Subsequent Sessions: Version Checking via VUDU_LOG_LITE**
+### Subsequent Sessions: Version Checking via VUDU_LOG_LITE
 
 **After first transmission, protocol files are NOT resent.**
 
@@ -464,9 +464,9 @@ VERSION: v4.0.0
 
 ---
 
-## ⚖️ **DIVISION OF LABOR: REPO_LOG vs VUDU_LOG**
+## ⚖️ DIVISION OF LABOR: REPO_LOG vs VUDU_LOG
 
-### **REPO_LOG (Internal to Claude)**
+### REPO_LOG (Internal to Claude)
 
 **Purpose:** Track internal repository changes
 **Maintained by:** Doc_Claude / LOGGER Claude
@@ -482,7 +482,7 @@ VERSION: v4.0.0
 
 ---
 
-### **VUDU_LOG (Network Coordination)**
+### VUDU_LOG (Network Coordination)
 
 **Purpose:** Track coordination activity across VUDU network
 **Maintained by:** LOGGER Claude (master), External auditors (local copies)
@@ -498,7 +498,7 @@ VERSION: v4.0.0
 
 ---
 
-### **VUDU_LOG_LITE (Network Travel)**
+### VUDU_LOG_LITE (Network Travel)
 
 **Purpose:** Lightweight coordination log for relay transmissions
 **Maintained by:** LOGGER Claude (Claude_Incoming/), External auditors (their staging)
@@ -517,7 +517,7 @@ External Auditor creates VUDU_LOG_LITE
 
 ---
 
-## 🎯 **MASTER BRANCH RESPONSIBILITIES**
+## 🎯 MASTER BRANCH RESPONSIBILITIES
 
 **Fresh Claude (Master Branch) coordinates all work:**
 
@@ -531,7 +531,7 @@ External Auditor creates VUDU_LOG_LITE
 
 ---
 
-## 👥 **AUDITOR ROLES**
+## 👥 AUDITOR ROLES
 
 **Claude (Master Branch):**
 - Coordinate all work
@@ -562,7 +562,7 @@ External Auditor creates VUDU_LOG_LITE
 
 ---
 
-## 📂 **FILE HIERARCHY**
+## 📂 FILE HIERARCHY
 
 **Always Current (Single Source of Truth):**
 - README_C.md - Master state
@@ -581,9 +581,9 @@ External Auditor creates VUDU_LOG_LITE
 
 ---
 
-## 📐 **FORMAT REQUIREMENTS (v3.7.2)**
+## 📐 FORMAT REQUIREMENTS (v3.7.2)
 
-### **Entry ID Format:**
+### Entry ID Format:
 
 ```
 [COORDINATION-YYYY-MM-DD-N]
@@ -594,7 +594,7 @@ External Auditor creates VUDU_LOG_LITE
 - DD = 2-digit day (01-31)
 - N = sequential number for that day
 
-### **Required Fields:**
+### Required Fields:
 
 - **Changed by:** Who made this entry
 - **Session:** Session ID for traceability
@@ -603,7 +603,7 @@ External Auditor creates VUDU_LOG_LITE
 - **Reason:** Why it happened
 - **Impact:** Minimal/Moderate/Significant
 
-### **Chronological Order:**
+### Chronological Order:
 
 - Newest entries at the BOTTOM
 - Older entries at the top
@@ -611,17 +611,17 @@ External Auditor creates VUDU_LOG_LITE
 
 ---
 
-## 🎯 **EXTERNAL AUDITOR QUICK START**
+## 🎯 EXTERNAL AUDITOR QUICK START
 
 **If you're Grok or Nova:**
 
-### **Every Transmission to Claude Requires:**
+### Every Transmission to Claude Requires:
 
 1. **README_[X].md** (your message/analysis)
 2. **VUDU_LOG_LITE.md** (your coordination log update) ← **MANDATORY**
 3. **[Optional analysis files]**
 
-### **How to Create VUDU_LOG_LITE.md:**
+### How to Create VUDU_LOG_LITE.md:
 
 **Step 1:** Use template at `/auditors/relay/VUDU_LOG_LITE_TEMPLATE.md`
 
@@ -635,7 +635,7 @@ External Auditor creates VUDU_LOG_LITE
 
 **Step 6:** Include with your README_[X].md transmission
 
-### **What LOGGER Claude Will Do:**
+### What LOGGER Claude Will Do:
 
 - Read your VUDU_LOG_LITE.md
 - Validate format
@@ -643,7 +643,7 @@ External Auditor creates VUDU_LOG_LITE
 - Provide you with updated VUDU_LOG_LITE.md from Claude_Incoming/
 - Flag any violations (with corrected version)
 
-### **Your Focus:**
+### Your Focus:
 
 **You focus on:** Your specialized lens (empirical/symmetry/etc.)
 **LOGGER Claude handles:** VUDU_LOG housekeeping and format enforcement
@@ -651,9 +651,9 @@ External Auditor creates VUDU_LOG_LITE
 
 ---
 
-## 📡 **PLATFORM CONSTRAINTS & COMMUNICATION BASICS**
+## 📡 PLATFORM CONSTRAINTS & COMMUNICATION BASICS
 
-### **Platform Requirements**
+### Platform Requirements
 
 **Text-Only Communication:**
 - Grok confirmed text-only environment
@@ -677,9 +677,9 @@ External Auditor creates VUDU_LOG_LITE
 
 ---
 
-## ⏱️ **RESPONSE TIMEFRAMES & TIMELINE EXPECTATIONS**
+## ⏱️ RESPONSE TIMEFRAMES & TIMELINE EXPECTATIONS
 
-### **Standard Operating Rhythm**
+### Standard Operating Rhythm
 
 **Single Auditor → Ziggy:**
 - Auditor stages findings in relay/{auditor}_Incoming/
@@ -697,7 +697,7 @@ External Auditor creates VUDU_LOG_LITE
 - Total: 7-14 days for major architectural decisions
 - This is NORMAL for adversarial epistemic engineering
 
-### **Timeline by Urgency**
+### Timeline by Urgency
 
 **Urgent Escalations:**
 - Same day or next session (if Ziggy available)
@@ -719,11 +719,11 @@ External Auditor creates VUDU_LOG_LITE
 
 ---
 
-## 🆘 **ESCALATION SCENARIOS AWARENESS**
+## 🆘 ESCALATION SCENARIOS AWARENESS
 
 **When issues arise during coordination, escalation protocols exist.**
 
-### **The 5 Common Scenarios:**
+### The 5 Common Scenarios:
 
 **1. Auditor Confused** (Clarity Breakdown)
 - Task brief unclear or ambiguous
@@ -750,7 +750,7 @@ External Auditor creates VUDU_LOG_LITE
 - Response: Create Tier 3 continuation brief, preserve work
 - Managed by: VUDU Claude validates handoff
 
-### **Escalation Principle**
+### Escalation Principle
 
 **Escalate early to preserve budget:**
 - At 20% if clarity issue in Tier 4
@@ -763,7 +763,7 @@ External Auditor creates VUDU_LOG_LITE
 - First disagreement (try to converge first)
 - Slightly over bootstrap estimate (if total budget OK)
 
-### **Where to Learn More**
+### Where to Learn More
 
 **For external auditors (Grok/Nova):**
 - Detailed escalation procedures in `/auditors/Mission/VUDU_Operations/` (operational templates)
@@ -776,7 +776,7 @@ External Auditor creates VUDU_LOG_LITE
 
 ---
 
-## ⚖️ **THE POINTING RULE**
+## ⚖️ THE POINTING RULE
 
 *"To coordinate is to name your assumptions.
 To integrate is to price your decisions.
@@ -796,7 +796,7 @@ To log is to respect those who follow."*
 
 ---
 
-## 🔄 **VERSION HISTORY**
+## 🔄 VERSION HISTORY
 
 **v3.7.2 (2025-11-01):**
 - Introduced VUDU_LOG_LITE protocol

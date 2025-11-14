@@ -6,7 +6,7 @@
 
 ---
 
-## 🎯 **WHAT THIS FOLDER IS**
+## 🎯 WHAT THIS FOLDER IS
 
 This is the **coordination layer** for multi-AI auditing of the CFA project.
 
@@ -20,13 +20,13 @@ This is the **coordination layer** for multi-AI auditing of the CFA project.
 
 ---
 
-## 📂 **FOLDER STRUCTURE**
+## 📂 FOLDER STRUCTURE
 
 ```
 auditors/
 ├── README.md (this file)
 ├── README_C.md (Master Branch current state)
-├── MASTER_BRANCH_TRUST_PROTOCOL.md (governance)
+├── MISSION_TRUST_PROTOCOL.md (governance)
 ├── AUDITORS_AXIOMS.md (AI capabilities doc)
 ├── MISSION_CURRENT.md (active objectives)
 ├── MISSION_DEFAULT.md (fallback objectives)
@@ -88,27 +88,27 @@ auditors/
 
 ## 🎯 Tier Selection Guide
 
-### **Choose Tier 1 when:**
+### Choose Tier 1 when:
 - Master Branch coordination needed
 - Strategic decisions required
 - Multi-auditor work
 - Architecture discussions
 - New mission phases
 
-### **Choose Tier 2 when:**
+### Choose Tier 2 when:
 - Need validation/review
 - Check alignment
 - External audit perspective
 - No coordination needed
 - **Most common for routine checks**
 
-### **Choose Tier 3 when:**
+### Choose Tier 3 when:
 - Previous session hit limit
 - Work clearly in progress
 - Handoff exists
 - Just need completion
 
-### **Choose Tier 4 when:**
+### Choose Tier 4 when:
 - Single specific task
 - Quick turnaround
 - Clear scope
@@ -127,34 +127,34 @@ auditors/
 
 **[Rest of existing README.md content continues below]**
 ---
-## 📚 **KEY DOCUMENTS**
+## 📚 KEY DOCUMENTS
 
-### **Master State & Governance**
+### Master State & Governance
 - **README_C.md** - Master Branch current state (what's happening now)
-- **MASTER_BRANCH_TRUST_PROTOCOL.md** - Governance framework (how coordination works)
+- **MISSION_TRUST_PROTOCOL.md** - Governance framework (how coordination works)
 - **MISSION_CURRENT.md** - Active mission details (what we're working on)
 - **VUDU_PROTOCOL.md** - Coordination process (how to coordinate)
 
-### **System Understanding**
+### System Understanding
 - **AUDITORS_AXIOMS.md** - AI auditor capabilities documentation (pending Grok+Nova sign-off)
 - **bootstrap/BOOTSTRAP_CFA.md** - Complete CFA project context
 - **bootstrap/BOOTSTRAP_VUDU.md** - VuDu Light coordination understanding
 - **bootstrap/BOOTSTRAP_[AUDITOR].md** - Individual auditor identities
 
-### **Coordination Records**
+### Coordination Records
 - **VUDU_LOG.md** - Complete coordination history
 - **VUDU_HEADER_STANDARD.md** - Message format standard
 - **.Archive/stress_tests/** - Validation test results
 
 ---
 
-## 🔄 **HOW NEW MASTER BRANCH FINDS THIS**
+## 🔄 HOW NEW MASTER BRANCH FINDS THIS
 
 **When New Master Branch Starts:**
 
 1. **Reads README_C.md** (their starting point)
 2. **README_C.md references:**
-   - MASTER_BRANCH_TRUST_PROTOCOL.md (your authority)
+   - MISSION_TRUST_PROTOCOL.md (your authority)
    - MISSION_CURRENT.md (your objective)
    - bootstrap/BOOTSTRAP_CLAUDE.md (your identity)
    - AUDITORS_AXIOMS.md (your unique capability)
@@ -168,22 +168,22 @@ auditors/
 
 ---
 
-## 🎯 **CURRENT STATUS (v3.5.2.1)**
+## 🎯 CURRENT STATUS (v3.5.2.1)
 
-### **Phase Tracker**
+### Phase Tracker
 - ✅ Phase 1: Infrastructure Build (Claude_C1) - COMPLETE
 - ✅ Phase 2: Repository Staging (Ziggy) - COMPLETE
 - ✅ Phase 3: Verification (Fresh Claude) - COMPLETE
 - ✅ Phase 3.5: Stress Test (Hot & Cold) - COMPLETE
 - 🚀 **Phase 4: Mission Coordination - APPROVED TO BEGIN**
 
-### **Validation Status**
+### Validation Status
 - ✅ Hot Start: Fresh Claude passed 8/8 trials
 - ✅ Cold Start: Fresh Fresh Claude passed 8/8 trials
 - ✅ Bootstrap system: Validated in both scenarios
 - ✅ Master Branch: Ready for coordination
 
-### **Active Mission**
+### Active Mission
 - **Name:** Preset Mode Calibration
 - **Goal:** Justify every preset configuration value
 - **Method:** Three-lens adversarial auditing
@@ -191,7 +191,7 @@ auditors/
 
 ---
 
-## 👥 **AUDITOR STATUS**
+## 👥 AUDITOR STATUS
 
 **Fresh Claude (Master Branch):**
 - Status: Operational ✅
@@ -214,7 +214,7 @@ auditors/
 
 ---
 
-## 📖 **FOR NEW AUDITORS**
+## 📖 FOR NEW AUDITORS
 
 **If you're a new auditor joining mid-project:**
 
@@ -223,13 +223,13 @@ auditors/
 3. **Understand CFA:** bootstrap/BOOTSTRAP_CFA.md
 4. **Learn coordination:** bootstrap/BOOTSTRAP_VUDU.md
 5. **Check current mission:** MISSION_CURRENT.md
-6. **Review governance:** MASTER_BRANCH_TRUST_PROTOCOL.md
+6. **Review governance:** MISSION_TRUST_PROTOCOL.md
 
 **Estimated bootstrap time:** ~90 minutes for full context
 
 ---
 
-## 🔥 **PHILOSOPHY**
+## 🔥 PHILOSOPHY
 
 **"All Named, All Priced"** evolved to **"All Seen, All Passed"**
 
@@ -241,7 +241,7 @@ This folder is the **immune system** of the project - it ensures ethos survives 
 
 ---
 
-## ⚖️ **THE POINTING RULE**
+## ⚖️ THE POINTING RULE
 
 *"To document is to enable recovery.  
 To coordinate is to leverage multiple lenses.  

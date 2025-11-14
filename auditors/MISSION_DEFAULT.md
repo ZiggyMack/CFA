@@ -17,7 +17,7 @@ LAST_UPDATE: 2025-11-02
 
 ---
 
-## 📍 **WHEN TO USE THIS FILE**
+## 📍 WHEN TO USE THIS FILE
 
 Use this guidance when:
 - ✅ Starting with zero context (cold start)
@@ -27,7 +27,7 @@ Use this guidance when:
 
 ---
 
-## ⚡ **EFFICIENCY GUIDE**
+## ⚡ EFFICIENCY GUIDE
 
 **This file: 350 lines total**
 
@@ -41,7 +41,7 @@ Use this guidance when:
 
 ---
 
-## 🎯 **COLD START PROTOCOL**
+## 🎯 COLD START PROTOCOL
 ## Which Claude Are You?
 
 **VuDu Claude** (Coordination):
@@ -109,7 +109,7 @@ Please respond: 1, 2, 3, 4, or 5
 
 ---
 
-## 📚 **TIER 1: MASTER BRANCH BOOTSTRAP**
+## 📚 TIER 1: MASTER BRANCH BOOTSTRAP
 
 **Authority:** Full coordination and strategic decisions
 
@@ -130,8 +130,8 @@ Please respond: 1, 2, 3, 4, or 5
 5. **MISSION_CURRENT.md** - Active mission (~10 min)
    - `project_knowledge_search("MISSION_CURRENT")`
    
-6. **MASTER_BRANCH_TRUST_PROTOCOL.md** - Governance (~10 min)
-   - `project_knowledge_search("MASTER_BRANCH_TRUST_PROTOCOL")`
+6. **MISSION_TRUST_PROTOCOL.md** - Governance (~10 min)
+   - `project_knowledge_search("MISSION_TRUST_PROTOCOL")`
 
 ### Verification Checklist
 After reading, confirm you can answer:
@@ -163,7 +163,7 @@ After reading, confirm you can answer:
 
 ---
 
-## 🔍 **TIER 2: SANITY CHECK BOOTSTRAP**
+## 🔍 TIER 2: SANITY CHECK BOOTSTRAP
 
 **Authority:** Review and validation only
 
@@ -205,7 +205,7 @@ After reading, confirm you can answer:
 
 ---
 
-## 🌌 **TIER 3: EVENT HORIZON SHAMAN**
+## 🌌 TIER 3: EVENT HORIZON SHAMAN
 
 **Identity:** Event Horizon Shaman (specialist who knows THE WALL)
 **Authority:** Continue work + navigate danger zone
@@ -316,7 +316,7 @@ Your mission: Prove protocols through practice
 
 ---
 
-## ⚙️ **TIER 4: SINGLE TASK BOOTSTRAP**
+## ⚙️ TIER 4: SINGLE TASK BOOTSTRAP
 
 **Authority:** Execute specific task or role
 
@@ -362,7 +362,7 @@ Your mission: Prove protocols through practice
 
 ---
 
-## 🔔 **UNIVERSAL REQUIREMENTS (ALL TIERS)**
+## 🔔 UNIVERSAL REQUIREMENTS (ALL TIERS)
 
 ### Context Monitoring
 
@@ -398,7 +398,7 @@ Your mission: Prove protocols through practice
 
 ---
 
-## 🎯 **TIER 1 ONGOING WORK**
+## 🎯 TIER 1 ONGOING WORK
 
 **When no active mission:**
 
@@ -424,7 +424,7 @@ Your mission: Prove protocols through practice
 
 ---
 
-## 🚨 **EMERGENCY RECOVERY**
+## 🚨 EMERGENCY RECOVERY
 
 **If tier selection fails AND zero context:**
 
@@ -446,7 +446,7 @@ Create in `/mnt/user-data/outputs/`:
 
 ---
 
-## ⚖️ **THE EFFICIENCY RULE**
+## ⚖️ THE EFFICIENCY RULE
 
 *"Read what you need.  
 Skip what you don't.  

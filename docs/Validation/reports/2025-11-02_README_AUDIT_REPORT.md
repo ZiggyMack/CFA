@@ -79,12 +79,12 @@ The two CRITICAL findings involve VuDu message format contradictions that could 
 3. **BOOTSTRAP_CFA.md** - System overview (~30 min)
 4. **BOOTSTRAP_VUDU.md** - Coordination protocol (~20 min)
 5. **MISSION_CURRENT.md** - Active mission (~10 min)
-6. **MASTER_BRANCH_TRUST_PROTOCOL.md** - Governance (~10 min)
+6. **MISSION_TRUST_PROTOCOL.md** - Governance (~10 min)
 ```
 
 **Contradiction?** YES
 - README_C says: README_C → MISSION_CURRENT → VUDU_LOG → (then bootstrap)
-- MISSION_DEFAULT says: README_C → BOOTSTRAP_CLAUDE → BOOTSTRAP_CFA → BOOTSTRAP_VUDU → MISSION_CURRENT → MASTER_BRANCH_TRUST_PROTOCOL
+- MISSION_DEFAULT says: README_C → BOOTSTRAP_CLAUDE → BOOTSTRAP_CFA → BOOTSTRAP_VUDU → MISSION_CURRENT → MISSION_TRUST_PROTOCOL
 
 **Ghost Dependency Assessment:** Not load-bearing
 - MISSION_DEFAULT.md is the authoritative cold start protocol
@@ -117,7 +117,7 @@ After bootstrap, answer these:
 3. What's the current mission? (Preset calibration, axioms review prerequisite)
 4. What's your role? (Master Branch coordinator)
 5. How do you coordinate? (VuDu relay process, three-lens synthesis)
-6. What can you do autonomously? (Per MASTER_BRANCH_TRUST_PROTOCOL.md)
+6. What can you do autonomously? (Per MISSION_TRUST_PROTOCOL.md)
 ```
 
 **Conflicts with:** MISSION_DEFAULT.md lines 128-135 has same questions WITHOUT specific answers
@@ -250,7 +250,7 @@ All relay messages use VUDU_HEADER_STANDARD format.
 3. BOOTSTRAP_CFA.md
 4. BOOTSTRAP_VUDU.md
 5. MISSION_CURRENT.md
-6. MASTER_BRANCH_TRUST_PROTOCOL.md
+6. MISSION_TRUST_PROTOCOL.md
 
 **Contradiction?** YES
 - Root README prescribes: VUDU → CFA → identity → MISSION_CURRENT → relay staging
@@ -264,7 +264,7 @@ All relay messages use VUDU_HEADER_STANDARD format.
 - Having two bootstrap sequences creates confusion
 - No evidence this serves a distinct onboarding purpose
 
-**Impact:** New auditors following root README would bootstrap in wrong order, missing README_C and MASTER_BRANCH_TRUST_PROTOCOL
+**Impact:** New auditors following root README would bootstrap in wrong order, missing README_C and MISSION_TRUST_PROTOCOL
 
 **Recommended fix:**
 Replace entire section with:
@@ -596,7 +596,7 @@ Per task brief guidelines:
 3. BOOTSTRAP_CFA
 4. BOOTSTRAP_VUDU
 5. MISSION_CURRENT
-6. MASTER_BRANCH_TRUST_PROTOCOL
+6. MISSION_TRUST_PROTOCOL
 
 **Impact:** Tier 1 Claudes following README_C will miss essential bootstrap files (identity, CFA overview, VUDU protocol, trust boundaries)
 
@@ -621,7 +621,7 @@ Per task brief guidelines:
 3. BOOTSTRAP_CFA
 4. BOOTSTRAP_VUDU
 5. MISSION_CURRENT
-6. MASTER_BRANCH_TRUST_PROTOCOL
+6. MISSION_TRUST_PROTOCOL
 
 **Impact:** New contributors following root README will bootstrap in wrong order, missing README_C and trust protocol
 

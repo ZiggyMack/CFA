@@ -118,7 +118,7 @@ Reading in sequence:
 3. BOOTSTRAP_VUDU.md (coordination protocols)
 4. MISSION_CURRENT.md (active mission)
 5. README_C.md (current state)
-6. MASTER_BRANCH_TRUST_PROTOCOL.md (governance)
+6. MISSION_TRUST_PROTOCOL.md (governance)
 7. [Any additional mission files you specify]
 
 [Claude searches for and reads all 7 files sequentially]

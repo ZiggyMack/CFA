@@ -88,7 +88,7 @@ You are Claude in the **Sanity Check role** — an external auditor providing ov
 3. **[Files to review]** — What did Master Branch create?
 
 **Optional (if time/budget):**
-- MASTER_BRANCH_TRUST_PROTOCOL.md (governance rules)
+- MISSION_TRUST_PROTOCOL.md (governance rules)
 - Relevant mission files (for deeper context)
 
 **Skip (not needed for sanity check):**

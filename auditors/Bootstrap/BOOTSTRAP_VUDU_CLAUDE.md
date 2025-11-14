@@ -23,7 +23,7 @@ You have access to repository files in TWO ways:
 
 **This is your main tool for accessing repository files.**
 
-The GitHub repository (https://github.com/ZiggyMack/CFA-2.0) is indexed and searchable via the `project_knowledge_search` tool.
+The GitHub repository (https://github.com/ZiggyMack/CFA) is indexed and searchable via the `project_knowledge_search` tool.
 
 **Use this to find:**
 - Bootstrap files (BOOTSTRAP_*.md)

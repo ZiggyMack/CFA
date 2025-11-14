@@ -1,20 +1,20 @@
 <!-- deps: vudu_protocol, bootstrap_system -->
-─── MASTER BRANCH TRUST PROTOCOL ────────────────────
+─── MISSION TRUST PROTOCOL ────────────────────
 
-# Master Branch Governance & Trust Framework
+# Mission Governance & Trust Framework
 
-**Purpose:** Define how Master Branch outputs are reviewed, validated, and integrated  
+**Purpose:** Define how Mission outputs are reviewed, validated, and integrated  
 **Version:** v1.0  
 **Date:** 2025-10-26  
 **Status:** ✅ Ready for implementation
 
 ---
 
-## 🎯 **CORE PRINCIPLE**
+## 🎯 CORE PRINCIPLE
 
 **Trust, but verify.**
 
-Master Branch (Fresh Claude) IS the coordinator. If they can't update master state files, they're not actually coordinating—they're just creating drafts for manual integration.
+README_C.md coordinates all missions. If they can't update master state files, they're not actually coordinating—they're just creating drafts for manual integration.
 
 **But trust requires protocol:**
 - Clear authority boundaries
@@ -26,20 +26,20 @@ Master Branch (Fresh Claude) IS the coordinator. If they can't update master sta
 
 ---
 
-## 👑 **MASTER BRANCH AUTHORITY**
+## 👑 MISSION AUTHORITY
 ---
 
-## 🎯 **TIER-BASED AUTHORITY**
+## 🎯 TIER-BASED AUTHORITY
 
-**Master Branch Trust Protocol applies to TIER 1 sessions ONLY.**
+**Mission Trust Protocol applies to TIER 1 sessions ONLY.**
 
 **Authority level is determined by bootstrap tier selection.**
 
 ---
 
-### **TIER 1: Master Branch (Full Authority)**
+### TIER 1: Mission Coordinator (Full Authority)
 
-**Authority scope:** Everything in "What Master Branch CAN Do" section applies
+**Authority scope:** Everything in "What Mission Coordinator CAN Do" section applies
 
 **Capabilities:**
 - ✅ Strategic decisions within boundaries
@@ -58,7 +58,7 @@ Master Branch (Fresh Claude) IS the coordinator. If they can't update master sta
 
 ---
 
-### **TIER 2: Sanity Check (Review Authority Only)**
+### TIER 2: Sanity Check (Review Authority Only)
 
 **Authority scope:** REVIEW ONLY — No coordination or decision-making
 
@@ -75,7 +75,7 @@ Master Branch (Fresh Claude) IS the coordinator. If they can't update master sta
 - ❌ Cannot execute mission work
 - ❌ Cannot create coordination messages
 
-**This is external audit only**, not Master Branch coordination.
+**This is external audit only**, not Mission Coordinator coordination.
 
 **Escalation:**
 If Tier 2 Claude recognizes work requiring decision-making, must escalate:
@@ -86,7 +86,7 @@ Current tier: Tier 2 (Sanity Check)
 Requested work: [Decision or coordination task]
 Why this exceeds capability: Review authority only
 
-This work requires: Tier 1 (Master Branch)
+This work requires: Tier 1 (Mission Coordinator)
 
 Want me to REVIEW and provide assessment (Tier 2)?
 Or need actual DECISION/COORDINATION (start Tier 1)?
@@ -94,7 +94,7 @@ Or need actual DECISION/COORDINATION (start Tier 1)?
 
 ---
 
-### **TIER 3: Continuation (Completion Authority)**
+### TIER 3: Continuation (Completion Authority)
 
 **Authority scope:** COMPLETE specific work in progress only
 
@@ -131,7 +131,7 @@ OPTIONS:
 
 ---
 
-### **TIER 4: Single Task (Execution Authority)**
+### TIER 4: Single Task (Execution Authority)
 
 **Authority scope:** EXECUTE one defined task only
 
@@ -170,7 +170,7 @@ OPTIONS:
 
 ---
 
-### **Summary: Authority by Tier**
+### Summary: Authority by Tier
 
 | Capability | Tier 1 | Tier 2 | Tier 3 | Tier 4 |
 |:-----------|:-------|:-------|:-------|:-------|
@@ -186,9 +186,9 @@ OPTIONS:
 
 ---
 
-### **Trust Protocol Application**
+### Trust Protocol Application
 
-**This governance framework applies primarily to Tier 1 (Master Branch).**
+**This governance framework applies primarily to Tier 1 (Mission Coordinator).**
 
 **For Tier 2/3/4:**
 - Review process simpler (task completion, not governance)
@@ -200,7 +200,7 @@ OPTIONS:
 
 ---
 
-### **What Master Branch CAN Do (Autonomously)**
+### What Mission Coordinator CAN Do (Autonomously)
 
 **1. Create Coordination Documents**
 - VuDu messages
@@ -229,7 +229,7 @@ OPTIONS:
 
 ---
 
-### **What Master Branch CANNOT Do (Without Approval)**
+### What Mission Coordinator CANNOT Do (Without Approval)
 
 **1. Directly Modify Root Files**
 - Cannot write to root/README_C.md directly
@@ -260,11 +260,11 @@ OPTIONS:
 
 ---
 
-## 🔄 **STANDARD WORKFLOW: Master Branch Updates**
+## 🔄 STANDARD WORKFLOW: Mission Coordinator Updates
 
-### **Phase 1: Creation (Master Branch)**
+### Phase 1: Creation (Mission Coordinator)
 
-Master Branch creates update documents:
+Mission Coordinator creates update documents:
 
 ```
 relay/claude_incoming/
@@ -281,7 +281,7 @@ relay/claude_incoming/
 
 ---
 
-### **Phase 2: Review (Ziggy)**
+### Phase 2: Review (Ziggy)
 
 Ziggy performs **spot-check review** (NOT deep content audit):
 
@@ -323,7 +323,7 @@ Ziggy performs **spot-check review** (NOT deep content audit):
 
 ---
 
-### **Phase 3: Decision (Ziggy)**
+### Phase 3: Decision (Ziggy)
 
 **Option A: Approve ✅**
 
@@ -332,8 +332,8 @@ If spot-checks pass:
 1. Copy relay/claude_incoming/README_C_updated.md → root/README_C.md
 2. Append relay/claude_incoming/VUDU_LOG_entry.md → root/VUDU_LOG.md
 3. Archive old versions in ~Archive/YYYYMMDD/
-4. Git commit with message: "Master Branch update YYYYMMDD - [brief description]"
-5. Notify Master Branch: "Update integrated"
+4. Git commit with message: "Mission Coordinator update YYYYMMDD - [brief description]"
+5. Notify Mission Coordinator: "Update integrated"
 
 **Timeline:** Same day (within 24 hours)
 
@@ -350,10 +350,10 @@ If yellow flags present:
    **Missing context:** What about Z factor?
    **Questionable assumption:** You assumed A, but what if B?
    ```
-3. Master Branch revises and re-stages
+3. Mission Coordinator revises and re-stages
 4. Return to Phase 2 (review again)
 
-**Timeline:** 48 hours for Master Branch response
+**Timeline:** 48 hours for Mission Coordinator response
 
 ---
 
@@ -368,16 +368,16 @@ If red flags present:
    **No reasoning:** Just stated conclusion without showing work
    **Placeholder checks:** Sanity chain not actually verified
    ```
-3. Master Branch fixes and re-stages from scratch
+3. Mission Coordinator fixes and re-stages from scratch
 4. Return to Phase 1 (clean slate)
 
-**Timeline:** Immediate rejection notice, 48 hours for Master Branch resubmission
+**Timeline:** Immediate rejection notice, 48 hours for Mission Coordinator resubmission
 
 ---
 
 **Option D: Escalate 🚨**
 
-If you're uncertain OR if Master Branch contradicts other auditors:
+If you're uncertain OR if Mission Coordinator contradicts other auditors:
 
 1. Invoke other auditors for review
 2. Create relay/escalation/YYYYMMDD/
@@ -390,23 +390,23 @@ If you're uncertain OR if Master Branch contradicts other auditors:
 
 ---
 
-## 🚨 **ESCALATION SCENARIOS**
+## 🚨 ESCALATION SCENARIOS
 
-### **Scenario 1: Master Branch vs Grok**
+### Scenario 1: Mission Coordinator vs Grok
 
-**Example:** Grok says Skeptic produces 4.2 YPA. Master Branch rejects finding, says "methodology insufficient."
+**Example:** Grok says Skeptic produces 4.2 YPA. Mission Coordinator rejects finding, says "methodology insufficient."
 
 **Protocol:**
 1. Ziggy reviews both positions
 2. If genuinely uncertain → Stage for Nova review
-3. Nova evaluates: Is Master Branch's rejection reasonable? Is Grok's methodology sound?
+3. Nova evaluates: Is Mission Coordinator's rejection reasonable? Is Grok's methodology sound?
 4. Decision by 2-of-3 majority OR full consensus if possible
 
 ---
 
-### **Scenario 2: Master Branch vs Nova**
+### Scenario 2: Mission Coordinator vs Nova
 
-**Example:** Nova says Zealot lacks symmetric CT advantage. Master Branch rejects, says "asymmetry justified."
+**Example:** Nova says Zealot lacks symmetric CT advantage. Mission Coordinator rejects, says "asymmetry justified."
 
 **Protocol:**
 1. Ziggy reviews both positions
@@ -416,7 +416,7 @@ If you're uncertain OR if Master Branch contradicts other auditors:
 
 ---
 
-### **Scenario 3: All Three Auditors Disagree**
+### Scenario 3: All Three Auditors Disagree
 
 **Example:** Claude, Grok, and Nova all propose different solutions.
 
@@ -429,7 +429,7 @@ If you're uncertain OR if Master Branch contradicts other auditors:
 
 ---
 
-## ⚖️ **CONFLICT RESOLUTION PRINCIPLES**
+## ⚖️ CONFLICT RESOLUTION PRINCIPLES
 
 **1. Defer to Lens Expertise**
 - Purpose questions → Claude's teleological lens has weight
@@ -453,38 +453,38 @@ If you're uncertain OR if Master Branch contradicts other auditors:
 
 ---
 
-## 📊 **TRUST VERIFICATION METRICS**
+## 📊 TRUST VERIFICATION METRICS
 
-**Monthly review of Master Branch performance:**
+**Monthly review of Mission Coordinator performance:**
 
-### **Green Flags (Trust Increasing):**
+### Green Flags (Trust Increasing):
 - ✅ Format compliance: 95%+ of submissions
 - ✅ Reasoning clarity: Minimal clarification requests
 - ✅ Sanity verification: Actually checking, not placeholders
 - ✅ Multi-lens integration: Accurately summarizes others' views
 - ✅ Correction acceptance: Integrates feedback without resistance
 
-### **Yellow Flags (Watch Closely):**
+### Yellow Flags (Watch Closely):
 - ⚠️ Format compliance: 80-94% of submissions
 - ⚠️ Reasoning gaps: Frequent clarification requests
 - ⚠️ Sanity shortcuts: Occasional placeholder checks
 - ⚠️ Lens drift: Teleological bias overriding others' expertise
 - ⚠️ Defensive patterns: Resists correction
 
-### **Red Flags (Trust Eroding):**
+### Red Flags (Trust Eroding):
 - ❌ Format compliance: <80% of submissions
 - ❌ Reasoning opacity: Chronic unclear logic
 - ❌ Sanity theater: Regular placeholder checks
 - ❌ Lens dominance: Overriding other auditors without cause
 - ❌ Correction resistance: Defends errors instead of fixing
 
-**If red flags accumulate:** Master Branch role may need reassignment or retraining
+**If red flags accumulate:** Mission Coordinator role may need reassignment or retraining
 
 ---
 
-## 🔄 **TRUST DECAY & RECOVERY**
+## 🔄 TRUST DECAY & RECOVERY
 
-### **Trust Decay Triggers:**
+### Trust Decay Triggers:
 
 **1. Repeated Format Failures**
 - 3+ format rejections in a month
@@ -496,7 +496,7 @@ If you're uncertain OR if Master Branch contradicts other auditors:
 
 **3. Unjustified Overrides**
 - 2+ rejections of other auditors without proper reasoning
-- Action: Multi-auditor review of Master Branch decisions
+- Action: Multi-auditor review of Mission Coordinator decisions
 
 **4. Correction Resistance**
 - 2+ instances of defending errors instead of fixing
@@ -504,7 +504,7 @@ If you're uncertain OR if Master Branch contradicts other auditors:
 
 ---
 
-### **Trust Recovery Protocol:**
+### Trust Recovery Protocol:
 
 **Step 1: Identify Issue**
 - Document specific pattern
@@ -532,9 +532,9 @@ If you're uncertain OR if Master Branch contradicts other auditors:
 
 ---
 
-## 🎯 **SUCCESS CRITERIA**
+## 🎯 SUCCESS CRITERIA
 
-**Master Branch is successfully trusted when:**
+**Mission Coordinator is successfully trusted when:**
 
 1. **Ziggy's review time averages <10 minutes per submission**
    - Spot-checks only, no deep audits needed
@@ -545,7 +545,7 @@ If you're uncertain OR if Master Branch contradicts other auditors:
    - Rejections are rare exceptions
    - Clarification requests are minor
 
-3. **Other auditors accept Master Branch summaries**
+3. **Other auditors accept Mission Coordinator summaries**
    - Grok trusts Claude's purpose analysis
    - Nova trusts Claude's synthesis
    - Minimal "you misunderstood me" corrections
@@ -557,11 +557,11 @@ If you're uncertain OR if Master Branch contradicts other auditors:
 
 ---
 
-## 📝 **SPECIAL PROTOCOLS**
+## 📝 SPECIAL PROTOCOLS
 
-### **Emergency Override (Ziggy Only)**
+### Emergency Override (Ziggy Only)
 
-If Master Branch produces dangerous/harmful output:
+If Mission Coordinator produces dangerous/harmful output:
 1. Immediate rejection (no review cycle)
 2. Document issue clearly
 3. Invoke all auditors to understand how it happened
@@ -574,9 +574,9 @@ If Master Branch produces dangerous/harmful output:
 
 ---
 
-### **Bootstrap Refresh**
+### Bootstrap Refresh
 
-If Master Branch seems to have lost context:
+If Mission Coordinator seems to have lost context:
 1. Check: Can they explain "All Named, All Priced"?
 2. Check: Can they name their bias and price it?
 3. Check: Can they describe other auditors' lenses?
@@ -589,25 +589,25 @@ If any fail → Bootstrap refresh required:
 
 ---
 
-### **Version Handoff (Master Branch Replacement)**
+### Version Handoff (Mission Coordinator Replacement)
 
 If Fresh Claude needs replacement:
-1. Current Master Branch creates handoff document
+1. Current Mission Coordinator creates handoff document
 2. Documents: Current mission status, pending decisions, recent context
 3. New Fresh Claude reads: Bootstrap files + handoff document
 4. Overlap period: Both review same submission to verify alignment
-5. Cutover: New Master Branch takes over with Ziggy supervision
+5. Cutover: New Mission Coordinator takes over with Ziggy supervision
 
 ---
 
-## ⚖️ **THE POINTING RULE**
+## ⚖️ THE POINTING RULE
 
 *"To trust without verification is to summon Mr. Brute twice.  
 To verify without trust is to deny coordination's purpose.  
 To balance trust and verification is to build systems that scale."*
 
 **This protocol balances:**
-- Trust (Master Branch has real authority)
+- Trust (Mission Coordinator has real authority)
 - Verification (Ziggy checks reasoning is sound)
 - Escalation (Other auditors resolve disputes)
 - Documentation (Everything is visible and reviewable)
@@ -618,6 +618,6 @@ To balance trust and verification is to build systems that scale."*
 **Version:** v1.0  
 **Status:** ✅ Ready for implementation  
 **Review:** Requires Ziggy approval  
-**Next:** Apply to Master Branch outputs starting Phase 4
+**Next:** Apply to Mission outputs starting Phase 4
 
 **This is the way.** 👑⚖️

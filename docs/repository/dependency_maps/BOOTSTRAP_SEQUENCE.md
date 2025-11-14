@@ -59,7 +59,7 @@ MASTER BRANCH Claude Bootstrap (Tier 1):
 3. BOOTSTRAP_CFA.md
 4. BOOTSTRAP_VUDU.md (if coordination needed)
 5. MISSION_CURRENT.md
-6. MASTER_BRANCH_TRUST_PROTOCOL.md
+6. MISSION_TRUST_PROTOCOL.md
 ```
 
 ### **Responsibilities:**

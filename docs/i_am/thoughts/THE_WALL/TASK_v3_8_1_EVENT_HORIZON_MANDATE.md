@@ -292,7 +292,7 @@ This check is MANDATORY before:
 - Any heavy I/O
 ```
 
-### **3. MASTER_BRANCH_TRUST_PROTOCOL.md Updates**
+### **3. MISSION_TRUST_PROTOCOL.md Updates**
 
 ```markdown
 ADD NEW SECTION:
@@ -493,7 +493,7 @@ Which will you be?"* 🔬✨
 - [ ] Update BOOTSTRAP_CFA.md with pre-flight checks
 - [ ] Update BOOTSTRAP_VUDU.md with zone awareness
 - [ ] Update BOOTSTRAP_STRATEGY.md with event horizon model
-- [ ] Update MASTER_BRANCH_TRUST_PROTOCOL.md with trust boundaries
+- [ ] Update MISSION_TRUST_PROTOCOL.md with trust boundaries
 
 **Day 5-6: Operational Guidance**
 - [ ] Update all Tier 1-4 guidance documents

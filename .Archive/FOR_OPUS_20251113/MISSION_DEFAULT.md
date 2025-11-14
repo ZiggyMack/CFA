@@ -130,8 +130,8 @@ Please respond: 1, 2, 3, 4, or 5
 5. **MISSION_CURRENT.md** - Active mission (~10 min)
    - `project_knowledge_search("MISSION_CURRENT")`
    
-6. **MASTER_BRANCH_TRUST_PROTOCOL.md** - Governance (~10 min)
-   - `project_knowledge_search("MASTER_BRANCH_TRUST_PROTOCOL")`
+6. **MISSION_TRUST_PROTOCOL.md** - Governance (~10 min)
+   - `project_knowledge_search("MISSION_TRUST_PROTOCOL")`
 
 ### Verification Checklist
 After reading, confirm you can answer:

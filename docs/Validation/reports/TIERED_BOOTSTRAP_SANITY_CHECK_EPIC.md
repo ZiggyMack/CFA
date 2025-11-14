@@ -160,7 +160,7 @@
 **Integration Points:**
 - ✅ MISSION_DEFAULT.md (cold start section updated)
 - ✅ README.md (tiered system documented)
-- ✅ MASTER_BRANCH_TRUST_PROTOCOL.md (tier authority added)
+- ✅ MISSION_TRUST_PROTOCOL.md (tier authority added)
 - ✅ BOOTSTRAP_FRAMEWORK.md (architecture documented)
 - ✅ VUDU_LOG.md (deployment logged)
 

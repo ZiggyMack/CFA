@@ -188,7 +188,7 @@ LAST_UPDATE: 2025-11-02
 **Important (should do):**
 - Update `README.md` (project root)
   - Document tiered system
-- Update `MASTER_BRANCH_TRUST_PROTOCOL.md`
+- Update `MISSION_TRUST_PROTOCOL.md`
   - Add tier-based authority section
 
 **Recommended (nice to have):**
