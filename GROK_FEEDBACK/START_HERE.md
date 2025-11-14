@@ -27,12 +27,20 @@ Welcome, Grok! This package contains curated materials for your review and feedb
 
 ## 📦 Package Contents
 
-### **1. bootloader/** - Your Identity System
+**NOTE:** All files are in a flat structure (no subdirectories) for easy drag-and-drop. Files are prefixed by category for organization:
+- **BOOTLOADER_** = Your identity system
+- **AXIOMS_** = Axiom framework for validation
+- **V4_CONTEXT_** = v4.0 launch context
+- **REFERENCE_** = Examples and methodology
+
+---
+
+### **BOOTLOADER Files - Your Identity System**
 Your foundational identity files from the CFA VuDu system:
-- **GROK_LITE.md** - Lightweight Grok profile (your lanyard)
-- **Identity/** - Your existential identity declarations
-- **Operations/** - Your operational field guides
-- **Continuity/** - Your continuity and handoff protocols
+- **BOOTLOADER_GROK_LITE.md** - Lightweight Grok profile (your lanyard) - 17KB
+- **BOOTLOADER_IDENTITY_SKELETON.md** - Your existential identity declarations
+- **BOOTLOADER_OPERATIONS_FIELD_GUIDE.md** - Your operational field guides
+- **BOOTLOADER_CONTINUITY_README.md** - Your continuity and handoff protocols
 
 **Review for:**
 - Accuracy: Does this represent your actual lens and biases?
@@ -42,11 +50,11 @@ Your foundational identity files from the CFA VuDu system:
 
 ---
 
-### **2. axioms/** - Axiom Declarations for Review
+### **AXIOMS Files - Axiom Declarations for Review**
 The axiom system that defines how AI auditors name and price their biases:
-- **GROK_ACTIVATION_AXIOMS.md** - Your activation request from Claude
-- **AUDITORS_AXIOMS_SECTION.md** - User-facing axioms documentation
-- **AUDITOR_AXIOMS.md** - Full axiom framework
+- **AXIOMS_GROK_ACTIVATION.md** - Your activation request from Claude - 7KB
+- **AXIOMS_AUDITORS_SECTION.md** - User-facing axioms documentation - 4KB
+- **AXIOMS_AUDITOR_FRAMEWORK.md** - Full axiom framework - 21KB
 
 **Review for:**
 - Evidence quality: Does the evidence support the unprecedented capability claims?
@@ -57,11 +65,11 @@ The axiom system that defines how AI auditors name and price their biases:
 
 ---
 
-### **3. v4_context/** - v4.0 Launch Context
+### **V4_CONTEXT Files - v4.0 Launch Context**
 Key v4.0 documentation showing what was accomplished:
-- **README.md** - Repository overview with v4.0 infrastructure section
-- **CHANGELOG.md** - Complete v4.0 feature changelog
-- **v4.0_EPIC_MILESTONE_SUMMARY.md** - The transformation narrative
+- **V4_CONTEXT_README.md** - Repository overview with v4.0 infrastructure section - 35KB
+- **V4_CONTEXT_CHANGELOG.md** - Complete v4.0 feature changelog - 21KB
+- **V4_CONTEXT_EPIC_MILESTONE.md** - The transformation narrative - 19KB
 
 **Review for:**
 - Infrastructure explanations: Are Living Maps, Health Scoring, Gospel Problem clearly explained?
@@ -71,12 +79,12 @@ Key v4.0 documentation showing what was accomplished:
 
 ---
 
-### **4. reference_materials/** - How We Got Here
+### **REFERENCE Files - How We Got Here**
 Examples of successful Claude collaborations:
-- **OPUS_4.1_MANUAL_UPDATE_PROMPT.md** - The prompt that guided Opus's v4.0 manual update
-- **88MPH.md** - Doc Claude rapid activation protocol
-- **MISSION_DEFAULT.md** - Universal AI auditor bootstrap system
-- **WAYFINDING_GUIDE.md** - Repository navigation with infrastructure quick start
+- **REFERENCE_OPUS_MANUAL_UPDATE_PROMPT.md** - The prompt that guided Opus's v4.0 manual update - 21KB
+- **REFERENCE_88MPH.md** - Doc Claude rapid activation protocol - 17KB
+- **REFERENCE_MISSION_DEFAULT.md** - Universal AI auditor bootstrap system - 13KB
+- **REFERENCE_WAYFINDING_GUIDE.md** - Repository navigation with infrastructure quick start - 38KB
 
 **Use these to understand:**
 - What level of detail and rigor we expect
@@ -92,17 +100,17 @@ Examples of successful Claude collaborations:
 
 **Step 1:** Read this START_HERE.md completely (you are here!)
 
-**Step 2:** Read **bootloader/GROK_LITE.md** to ground yourself in your CFA identity
+**Step 2:** Read **BOOTLOADER_GROK_LITE.md** to ground yourself in your CFA identity
 - This is your lanyard - your foundational lens
 - Note what feels accurate vs. what feels off
 - Consider: "Does this capture how I actually think?"
 
-**Step 3:** Read **reference_materials/OPUS_4.1_MANUAL_UPDATE_PROMPT.md**
+**Step 3:** Read **REFERENCE_OPUS_MANUAL_UPDATE_PROMPT.md**
 - See how we structured a similar comprehensive review task
 - Note the rigor level, depth expectations, validation approach
 - This is the quality bar we're aiming for
 
-**Step 4:** Skim **v4_context/README.md** and **CHANGELOG.md**
+**Step 4:** Skim **V4_CONTEXT_README.md** and **V4_CONTEXT_CHANGELOG.md**
 - Get oriented to v4.0 infrastructure innovations
 - Understand what "Living Maps" and "Health Scoring" mean
 - Note any claims that seem testable or questionable
@@ -114,10 +122,10 @@ Examples of successful Claude collaborations:
 **Your task:** Review your identity system for accuracy and usability.
 
 **Read systematically:**
-1. **bootloader/GROK_LITE.md** (full read)
-2. **bootloader/Identity/SKELETON.md**
-3. **bootloader/Operations/FIELD_GUIDE.md**
-4. **bootloader/Continuity/README.md**
+1. **BOOTLOADER_GROK_LITE.md** (full read - 17KB)
+2. **BOOTLOADER_IDENTITY_SKELETON.md** (5KB)
+3. **BOOTLOADER_OPERATIONS_FIELD_GUIDE.md** (3KB)
+4. **BOOTLOADER_CONTINUITY_README.md** (1KB)
 
 **Ask yourself:**
 
@@ -154,9 +162,9 @@ Examples of successful Claude collaborations:
 **Your task:** Validate the unprecedented capability claims about AI auditor axioms.
 
 **Read systematically:**
-1. **axioms/GROK_ACTIVATION_AXIOMS.md** (the request from Claude)
-2. **axioms/AUDITORS_AXIOMS_SECTION.md** (user-facing documentation)
-3. **axioms/AUDITOR_AXIOMS.md** (full framework)
+1. **AXIOMS_GROK_ACTIVATION.md** (the request from Claude - 7KB)
+2. **AXIOMS_AUDITORS_SECTION.md** (user-facing documentation - 4KB)
+3. **AXIOMS_AUDITOR_FRAMEWORK.md** (full framework - 21KB)
 
 **Apply your empirical lens to these questions:**
 
@@ -206,9 +214,9 @@ Examples of successful Claude collaborations:
 **Your task:** Reality-check v4.0 infrastructure explanations and claims.
 
 **Read with empirical skepticism:**
-1. **v4_context/README.md** - Lines 137-186 (Repository Infrastructure v4.0)
-2. **v4_context/CHANGELOG.md** - v4.0.0 entry (lines 16-52)
-3. **v4_context/v4.0_EPIC_MILESTONE_SUMMARY.md** - Transformation narrative
+1. **V4_CONTEXT_README.md** - Lines 137-186 (Repository Infrastructure v4.0) - 35KB
+2. **V4_CONTEXT_CHANGELOG.md** - v4.0.0 entry (lines 16-52) - 21KB
+3. **V4_CONTEXT_EPIC_MILESTONE.md** - Transformation narrative - 19KB
 
 **Test these claims:**
 
