@@ -65,33 +65,75 @@ When files are added or deleted, use diff notation like git commits:
 
 ## 📊 COORDINATION CHECKPOINT
 
-**Last Full Coordination:** 2025-11-13 🆕 (v4.0 Launch Cleanup)
-**Entries Since:** 48 🆕 (+4 v4.0 cleanup entries)
-**Pending Items:** 2 (GROK_BRIEFING.md fix, UI_SMV location decision)
+**Last Full Coordination:** 2025-11-14 🆕 (Preset Mode Wiring + Smart Nav)
+**Entries Since:** 49 🆕 (+1 UX enhancement entry)
+**Pending Items:** 4 (GROK_BRIEFING.md fix, UI_SMV location, Ledger→Console push, import spec doc)
 
 ### Category Pointers:
 
-- **[CONSOLIDATION]:** Last entry 2025-11-12-3 🆕🔥 (File Consolidation)
+- **[UX]:** Last entry 2025-11-14-1 🆕🔥 (Preset Wiring + Smart Nav)
+- **[NAVIGATION]:** Last entry 2025-11-14-1 🆕🔥 (Smart Navigation)
+- **[CONSOLIDATION]:** Last entry 2025-11-12-3 🆕 (File Consolidation)
 - **[VALIDATION]:** Last entry 2025-11-12-2 🆕 (Deep Clean Protocol)
 - **[STRUCTURE]:** Last entry 2025-11-12-1 🆕 (Repository Cleanup)
-- **[INTEGRATION]:** Last entry 2025-11-10-1 (Profile-to-App Pipeline)
+- **[INTEGRATION]:** Last entry 2025-11-14-1 🆕 (Preset Mode Integration)
 - **[DATA_PIPELINE]:** Last entry 2025-11-10-1 (Profile Loader)
 - **[TASK_MOVEMENT]:** Last entry 2025-11-02-06
-- **[PENDING_ACTIONS]:** Last entry 2025-11-12-3 🆕 (GROK fix + UI_SMV)
+- **[PENDING_ACTIONS]:** Last entry 2025-11-14-1 🆕 (Ledger push + import doc)
 - **[DOCUMENTATION]:** Last entry 2025-11-12-3 🆕 (DEPENDENCY_CORE)
 - **[ARCHITECTURE]:** Last entry 2025-11-13-3 🆕 (LITE vs RICH Bootstrap)
 - **[BREAKTHROUGH]:** Last entry 2025-11-03-1 ⭐ (Shaman Epiphany)
-- **[NAVIGATION]:** Last entry 2025-11-03-1 (Shaman Discovery)
 - **[PROCESS]:** Last entry 2025-11-12-2 🆕 (Deep Clean Protocol)
 - **[I_AM]:** Last entry 2025-11-03-1 🔥 (Trinity Epiphany)
 - **[ACCURACY]:** Last entry 2025-11-02-21
 - **[DEPLOYMENTS]:** Last entry 2025-11-01-19
-- **[ALL_CHANGES]:** Last entry 2025-11-12-3 🆕
-- **[🧹 BROOM]:** Last entry 2025-11-13-2 🆕 (MISSION_TRUST_PROTOCOL Renamed)
+- **[ALL_CHANGES]:** Last entry 2025-11-14-1 🆕
+- **[🧹 BROOM]:** Last entry 2025-11-14-1 🆕 (Console + Brute Ledger Updates)
 
 -----
 
 ## 📝 CHANGE LOG
+
+### [UX-2025-11-14-1] 2025-11-14 - Wired Preset Mode Functionality + Smart Navigation
+
+**Categories:** [UX] [NAVIGATION] [INTEGRATION] [🧹]
+**Changed by:** Claude Sonnet 4.5 (C4.5)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `UPDATED`: pages/console.py - Wired preset mode buttons to actually update sidebar configuration
+- `UPDATED`: pages/console.py - Added frozen position preset indicator (top-right corner)
+- `UPDATED`: pages/console.py - Fixed sidebar selectboxes to read from session state
+- `UPDATED`: pages/console.py - Added smart navigation context passing (ledger_nav_target)
+- `UPDATED`: pages/brute_ledger.py - Added smart navigation auto-selection logic
+- `UPDATED`: pages/chat_assistant.py - Fixed OpenAI API key instructions with 2025 UI flow
+
+**Reason:**
+Critical v4.0 launch gaps identified by user: "The dwelling is built but not painted." Three major UX issues fixed:
+
+1. **Preset Mode Wiring:** Preset buttons (Skeptic/Diplomat/Seeker/Zealot) were setting session state but Console sidebar wasn't reading those values. Now fully functional end-to-end.
+
+2. **Visual Feedback:** Added frozen position (CSS fixed) preset indicator showing active mode (Skeptic/Diplomat/Seeker/Zealot/Custom) that persists on scroll. Auto-detects configuration against known preset patterns.
+
+3. **Smart Navigation:** "Go to Brute Ledger" from Console now passes framework name and auto-opens correct category. User quote: "This is navigation with purpose...show me the LEDGER for this worldview...I don't believe the claimed numbers until you show me!!"
+
+**Technical Implementation:**
+- Added `detect_active_preset()` function to match config against 4 known presets
+- Dynamic index calculation for all sidebar selectboxes based on session state
+- Normalized "Heavier_1.2x" ↔ "Weighted_1.2x" BFI weight formats
+- Worldview-to-category mapping (12 frameworks → 4 categories)
+- Session state navigation context (ledger_nav_target → auto-select category/section)
+
+**User Flow Examples:**
+1. Click "Skeptic Mode" in Ledger Utilities → Navigate to Console → Sidebar shows OFF/Instrumental/ON/Weighted_1.2x + Indicator shows "🔬 Skeptic"
+2. Set Framework A to "Methodological Naturalism" → Click "Go to Brute Ledger" → Opens directly to "Naturalistic Traditions" category (not default CT)
+3. Scroll down Console page → Preset indicator stays visible in top-right corner
+
+**Impact:** Significant - Completes critical functionality gaps, transforms preset system from UI-only to fully functional, enables context-aware navigation between pages
+
+**Follow-up Required:** YES - Implement reverse navigation (Ledger → Console worldview push buttons), document import file format specification
+
+---
 
 ### [UI-2025-11-13-8] 2025-11-13 - Refactored Mr. Brute's Ledger into Separate Sections
 
