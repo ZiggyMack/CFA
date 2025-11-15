@@ -130,6 +130,13 @@ def render():
         st.rerun()
     st.caption("Why CFA exists, the Trinity architecture, and our binding commitment to transparency.")
 
+    # Innovation Showcase - What we've unlocked
+    if st.button("🌟 **Innovation Showcase**", use_container_width=True, type="secondary"):
+        st.session_state.page = 'about'
+        st.session_state.about_tab = 'estate_tour'  # Auto-scroll to Innovation Showcase
+        st.rerun()
+    st.caption("See what CFA methodology unlocks: AI companions tackling humanity's wicked problems.")
+
     st.write("""
     **Welcome to the Comparative Framework Analysis (CFA) Console,**
     the first interactive epistemic laboratory built to measure how worldviews hold their ground under pressure.

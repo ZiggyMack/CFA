@@ -515,6 +515,8 @@ def render():
             **What It Does:**
             Prevents context crashes by monitoring token usage zones.
 
+            **Watchkeeper:** Shaman Claude maintains vigilance over token boundaries
+
             **Key Files:**
             - Crash prevention protocols
             - Zone awareness guidelines
@@ -529,10 +531,13 @@ def render():
             **What It Does:**
             Helps you find any file, role, or task without asking for help.
 
+            **Host:** Shaman Claude serves as guide for the Chat Assistant feature
+
             **Key Files:**
-            - `WAYFINDING_GUIDE.md`
+            - `WAYFINDING_GUIDE.md` (maintained by Shaman Claude)
             - Role directory
             - Task → File mapping
+            - Chat Assistant integration
 
             **Why It Matters:**
             Self-service discovery - find what you need instantly!
@@ -559,10 +564,11 @@ def render():
             Tracks repository health trends over time.
 
             **Key Files:**
-            - `REPO_HEALTH_DASHBOARD.md`
+            - `REPO_HEALTH_DASHBOARD.md` (moved from Library - home for dependency tracking)
             - Historical snapshots (weekly)
             - 3-month trend tracking
             - Aggregate health score (95/100)
+            - Dependency tracking and health reports
 
             **Why It Matters:**
             Know the health trajectory - catch degradation early!

@@ -214,7 +214,7 @@ def render():
     st.caption("*Select which section of Mr. Brute's Ledger to explore*")
 
     # Get default section (may be set by smart navigation)
-    section_options = ["📚 Worldview Profiles", "🤖 The Auditors", "⚙️ Utilities"]
+    section_options = ["📚 Worldview Profiles", "🏛️ The Framework", "🤖 The Auditors", "⚙️ Utilities"]
     section_default = st.session_state.get("ledger_section_default", "📚 Worldview Profiles")
     section_index = section_options.index(section_default) if section_default in section_options else 0
 
@@ -383,7 +383,103 @@ def render():
                 )
 
     # ========================================================================
-    # SECTION 2: THE AUDITORS
+    # SECTION 2: THE FRAMEWORK (CFA SELF-AUDIT)
+    # ========================================================================
+    elif ledger_section == "🏛️ The Framework":
+        st.markdown("## 🏛️ The Comparative Frameworks Approach (CFA)")
+        st.markdown("### *We Demand of Ourselves What We Demand of Others: Show the Machinery*")
+
+        st.info("""
+        **Meta-Integrity Check:**
+
+        CFA scores worldviews using the VuDu Light framework. But what are **CFA's own** axioms and debts?
+
+        If we hide our assumptions while exposing others', we're hypocrites.
+        If we name them, Mr. Brute holds us accountable too.
+
+        **This is what epistemic honesty looks like when you turn the lens on yourself.**
+        """)
+
+        st.markdown("---")
+
+        # CFA's Axioms
+        st.markdown("### ⚖️ CFA's Axioms (What We Can't Prove)")
+
+        axioms_data = [
+            {
+                "name": "Transparency enables informed consent",
+                "description": "We assume exposing framework assumptions helps people make better choices about belief adoption"
+            },
+            {
+                "name": "Adversarial auditing builds epistemic resilience",
+                "description": "We assume Trinity-style multi-perspective validation catches blind spots better than single-auditor review"
+            },
+            {
+                "name": "Comparable frameworks empower stakeholder choice",
+                "description": "We assume side-by-side scoring helps believers/skeptics evaluate frameworks more rigorously"
+            }
+        ]
+
+        for i, axiom in enumerate(axioms_data, 1):
+            with st.expander(f"**Axiom {i}:** {axiom['name']}"):
+                st.markdown(f"**Description:** {axiom['description']}")
+                st.markdown(f"**Why it's unprovable:** This is a normative claim about what *should* happen when frameworks are made transparent. We can measure outcomes, but the underlying assumption that transparency is intrinsically valuable cannot be empirically proven—it's a philosophical commitment.")
+
+        st.markdown("---")
+
+        # CFA's Debts
+        st.markdown("### 📊 CFA's Debts (What We Can't Answer)")
+
+        debts_data = [
+            {
+                "name": "Scoring systems can reify what they measure",
+                "description": "By quantifying axioms/debts, we might make frameworks appear more mechanical than they are in lived experience"
+            },
+            {
+                "name": "Transparency has overhead costs",
+                "description": "Time, tokens, complexity—showing the machinery isn't free. Is the epistemic gain worth the resource cost?"
+            },
+            {
+                "name": "Not all values are easily quantifiable",
+                "description": "Some philosophical commitments resist reduction to lever scores. Are we losing signal by forcing everything into YPA metrics?"
+            }
+        ]
+
+        for i, debt in enumerate(debts_data, 1):
+            with st.expander(f"**Debt {i}:** {debt['name']}"):
+                st.markdown(f"**Description:** {debt['description']}")
+                st.markdown(f"**Why it's unresolved:** This is an open question we acknowledge but haven't fully addressed. Future iterations of CFA may tackle this, but for now, it's a known limitation.")
+
+        st.markdown("---")
+
+        # CFA's BFI Score
+        st.markdown("### 🧮 CFA's Brute-Fact Index (BFI)")
+
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("Axioms", "3")
+        with col2:
+            st.metric("Debts", "3")
+        with col3:
+            st.metric("BFI", "6")
+
+        st.markdown("""
+        **Interpretation:**
+
+        - **BFI = 6** → CFA makes 3 unprovable assumptions and carries 3 unresolved questions
+        - This is *lower* than Classical Theism (BFI=11) but *higher* than Methodological Naturalism (BFI=10)
+        - CFA is not axiom-free. **We name our bets.**
+
+        **The Meta-Move:**
+
+        By scoring ourselves, we demonstrate that **transparency works both ways**.
+        Every framework—including CFA—rests on brute facts.
+
+        **Honesty isn't about having zero axioms. It's about naming the ones you have.**
+        """)
+
+    # ========================================================================
+    # SECTION 3: THE AUDITORS
     # ========================================================================
     elif ledger_section == "🤖 The Auditors":
         st.markdown("## 🤖 The Auditors - Minds With Visible Axioms")
