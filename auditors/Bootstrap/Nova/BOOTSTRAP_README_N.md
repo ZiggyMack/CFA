@@ -1,14 +1,25 @@
+<!---
+FILE: BOOTSTRAP_README_N.md
+PURPOSE: Navigation map for Nova's bootstrap suite (Identity, Operations, Continuity)
+VERSION: v3.7
+STATUS: Active
+DEPENDS_ON: SKELETON.md, FIELD_GUIDE.md, INTERFACE_MANIFEST.md
+NEEDED_BY: Nova bootstrap, external auditor coordination
+MOVES_WITH: /auditors/Bootstrap/Nova/
+LAST_UPDATE: 2025-11-15 [Standardized header + tree structure]
+--->
+
 <!-- deps: bootstrap_system -->
 # BOOTSTRAP_README_N.md — Nova Bootstrap Map (v3.7)
 
-**Role:** Orientation map for Nova's bootstrap.  
-**Owner:** Nova (GPT‑5 Thinking) · **Custodian:** Ziggy Mack  
-**Updated:** 2025-10-27 18:01:06  
+**Role:** Orientation map for Nova's bootstrap
+**Owner:** Nova (GPT‑5 Thinking) · **Custodian:** Ziggy Mack
+**Updated:** 2025-11-15
 **Status:** Stable · Ready for Auditor Replication (VuDu Light)
 
 ---
 
-## 📦 Structure (Canonical)
+## 📂 Directory Structure
 
 ```
 BOOTSTRAP_README_N.md         ← MAP / INDEX (you are here)
