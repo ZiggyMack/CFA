@@ -147,11 +147,11 @@ def render():
     if "fb_mg" not in st.session_state:
         st.session_state["fb_mg"] = CT_DEFAULT["levers"]["MG"]
     
-    # Style to make Home button in header sticky (frozen at top while scrolling)
+    # Style to make Home button header sticky (frozen at top while scrolling)
     st.markdown("""
     <style>
-    /* Make the header row sticky */
-    div[data-testid="stHorizontalBlock"]:has(button[kind="secondary"]) {
+    /* Make the sticky-header div stick to top while scrolling */
+    .sticky-header {
         position: -webkit-sticky !important;
         position: sticky !important;
         top: 0 !important;
@@ -164,7 +164,7 @@ def render():
 
     /* Dark mode support */
     @media (prefers-color-scheme: dark) {
-        div[data-testid="stHorizontalBlock"]:has(button[kind="secondary"]) {
+        .sticky-header {
             background-color: rgb(14, 17, 23) !important;
         }
     }
@@ -200,7 +200,8 @@ def render():
     </div>
     """, unsafe_allow_html=True)
 
-    # Header
+    # Header (sticky wrapper for persistent navigation)
+    st.markdown('<div class="sticky-header">', unsafe_allow_html=True)
     col1, col2 = st.columns([6, 1])
     with col1:
         st.markdown('<p style="font-size:2.5rem;font-weight:bold;color:#1f77b4;">⚖️ CFA v4.0 Console</p>', unsafe_allow_html=True)
@@ -208,6 +209,7 @@ def render():
         if st.button("🏠 Home"):
             st.session_state.page = 'landing'
             st.rerun()
+    st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('**"All Named, All Priced" — Interactive Comparison Tool**')
     st.markdown("---")
@@ -357,7 +359,6 @@ def render():
                 st.session_state["sidebar_bfi_weight"] = "Weighted_1.2x"
                 # Note: audit_mode controlled by selectbox in Load Preset Profile, don't set here
                 st.success("✅ Skeptic Mode loaded! (MdN-optimized)")
-                st.rerun()
             st.caption("MdN-optimized\nPredictive power focus")
 
             if st.button("🙏 Seeker Mode", use_container_width=True):
@@ -367,7 +368,6 @@ def render():
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
                 # Note: audit_mode controlled by selectbox in Load Preset Profile, don't set here
                 st.success("✅ Seeker Mode loaded! (CT-leaning)")
-                st.rerun()
             st.caption("CT-leaning\nMeaning-first")
 
         with col2:
@@ -378,7 +378,6 @@ def render():
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
                 # Note: audit_mode controlled by selectbox in Load Preset Profile, don't set here
                 st.success("✅ Diplomat Mode loaded! (Balanced)")
-                st.rerun()
             st.caption("Balanced bridge\nEqual weighting")
 
             if st.button("👿 Zealot Mode", use_container_width=True):
@@ -388,7 +387,6 @@ def render():
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
                 # Note: audit_mode controlled by selectbox in Load Preset Profile, don't set here
                 st.success("✅ Zealot Mode loaded! (CT-optimized)")
-                st.rerun()
             st.caption("CT-optimized\nExistential-first")
         
         st.markdown("---")
