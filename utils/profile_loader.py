@@ -1,24 +1,30 @@
 """
-CFA Profile Loader - Parse worldview profiles from markdown files
+CFA Profile Loader - Load worldview profiles from canonical YAML files
 
 This module provides utilities to load worldview profiles from the profiles/worldviews/
-directory, extracting both YPA application data (levers, BFI) and philosophical metrics
-(suffering_weight, moral_foundation, etc.) for use in the CFA application.
+directory. As of v4.0, YPA scores are loaded from canonical .yaml files (Gospel Problem
+protection - single source of truth), while .md files provide human-readable documentation.
 
-Architecture:
-- Phase 1: Load YPA data from profiles (replaces utils/frameworks.py)
-- Phase 2: Load philosophical metrics from profiles
-- Phase 3: Derive YPA levers from philosophical metrics via mapping layer
+Architecture (v4.0 Dual-File System):
+- .yaml files: Canonical machine-readable scores (axioms, debts, levers, YPA)
+- .md files: Human-readable documentation (hyperlinks, sources, philosophy)
+- Console reads .yaml for calculations, .md for context/display
+
+Data Flow:
+    get_ypa_data() → CLASSICAL_THEISM.yaml (primary)
+                  ↓ (fallback if no .yaml)
+                  → CLASSICAL_THEISM.md (legacy YAML blocks)
 
 Usage:
     from utils.profile_loader import load_profile, get_ypa_data
 
-    # Load complete profile
-    profile = load_profile("Classical Theism")
-
-    # Get YPA data for app calculations
+    # Get YPA data for Console calculations (reads .yaml file)
     ypa_data = get_ypa_data("Classical Theism")
     # Returns: {"name": "...", "bf_i": {...}, "levers": {...}, "admits_limits": bool}
+
+    # Load complete profile metadata (reads .md file)
+    profile = load_profile("Classical Theism")
+    # Returns: {"metadata": {...}, "ypa_data": {...}, "raw_content": "..."}
 """
 
 import re
@@ -135,13 +141,14 @@ def load_profile(worldview_name: str) -> Dict[str, Any]:
 
 def get_ypa_data(worldview_name: str) -> Dict[str, Any]:
     """
-    Get YPA data in format compatible with utils/frameworks.py
+    Get YPA data from canonical .yaml file (Gospel Problem protection)
 
-    This function provides a drop-in replacement for the old frameworks.py
-    hardcoded data, loading it from profile markdown instead.
+    Architecture Change (v4.0): Now reads from canonical .yaml files instead of
+    .md YAML blocks. This ensures single source of truth for scores - .yaml files
+    are the master, .md files are documentation only.
 
     Args:
-        worldview_name: Name of worldview
+        worldview_name: Name of worldview (e.g., "Classical Theism", "ct")
 
     Returns:
         Dict with keys: "name", "bf_i", "levers", "admits_limits"
@@ -153,35 +160,76 @@ def get_ypa_data(worldview_name: str) -> Dict[str, Any]:
         7.5
         >>> ypa["bf_i"]["axioms"]
         7
+
+    Raises:
+        ProfileLoadError: If .yaml file not found or invalid
     """
-    profile = load_profile(worldview_name)
+    # Normalize name and construct .yaml filepath
+    yaml_filename = f"{_normalize_worldview_name(worldview_name)}.yaml"
+    yaml_filepath = PROFILES_DIR / yaml_filename
 
-    if not profile["ypa_data"]:
-        raise ProfileLoadError(
-            f"Profile '{worldview_name}' has no YPA Application Data section. "
-            f"This profile may not be ready for CFA calculations yet."
-        )
+    # PRIMARY: Load from canonical .yaml file (v4.0 architecture)
+    if yaml_filepath.exists():
+        try:
+            with open(yaml_filepath, 'r', encoding='utf-8') as f:
+                data = yaml.safe_load(f)
 
-    ypa = profile["ypa_data"]
-    metadata = profile["metadata"].get("profile", {})
+            # Convert canonical YAML structure to Console format
+            return {
+                "name": data["profile"]["name"],
+                "bf_i": {
+                    "axioms": data["calculated"]["axiom_count"],
+                    "debts": data["calculated"]["debt_count"],
+                },
+                "levers": {
+                    "CCI": data["levers"]["collective_coherence_impact"],
+                    "EDB": data["levers"]["epistemic_debt_burden"],
+                    "PF_instrumental": data["levers"]["paternalistic_force_interventionist"],
+                    "PF_existential": data["levers"]["paternalistic_force_epistemic"],
+                    "AR": data["levers"]["asymmetry_risk"],
+                    "MG": data["levers"]["meta_governance"],
+                },
+                "admits_limits": data["behavioral_flags"]["admits_limits"],
+            }
 
-    # Extract data in frameworks.py format
-    return {
-        "name": metadata.get("name", worldview_name),
-        "bf_i": {
-            "axioms": ypa.get("brute_fact_index", {}).get("axioms", 0),
-            "debts": ypa.get("brute_fact_index", {}).get("debts", 0),
-        },
-        "levers": {
-            "CCI": ypa.get("ypa_levers", {}).get("CCI", 0.0),
-            "EDB": ypa.get("ypa_levers", {}).get("EDB", 0.0),
-            "PF_instrumental": ypa.get("ypa_levers", {}).get("PF_instrumental", 0.0),
-            "PF_existential": ypa.get("ypa_levers", {}).get("PF_existential", 0.0),
-            "AR": ypa.get("ypa_levers", {}).get("AR", 0.0),
-            "MG": ypa.get("ypa_levers", {}).get("MG", 0.0),
-        },
-        "admits_limits": ypa.get("behavioral_flags", {}).get("admits_limits", True),
-    }
+        except (KeyError, TypeError, yaml.YAMLError) as e:
+            raise ProfileLoadError(
+                f"Invalid YAML structure in {yaml_filepath}: {e}\n"
+                f"Expected canonical format with profile/calculated/levers/behavioral_flags blocks."
+            )
+
+    # FALLBACK: Try old .md YAML block method (backward compatibility)
+    # This ensures profiles without .yaml files yet (scaffolded profiles) still work
+    else:
+        profile = load_profile(worldview_name)
+
+        if not profile["ypa_data"]:
+            raise ProfileLoadError(
+                f"Profile '{worldview_name}' has no canonical .yaml file AND no YPA data in .md file. "
+                f"This profile may not be ready for CFA calculations yet.\n"
+                f"Expected: {yaml_filepath}"
+            )
+
+        ypa = profile["ypa_data"]
+        metadata = profile["metadata"].get("profile", {})
+
+        # Extract data in frameworks.py format (legacy .md YAML blocks)
+        return {
+            "name": metadata.get("name", worldview_name),
+            "bf_i": {
+                "axioms": ypa.get("brute_fact_index", {}).get("axioms", 0),
+                "debts": ypa.get("brute_fact_index", {}).get("debts", 0),
+            },
+            "levers": {
+                "CCI": ypa.get("ypa_levers", {}).get("CCI", 0.0),
+                "EDB": ypa.get("ypa_levers", {}).get("EDB", 0.0),
+                "PF_instrumental": ypa.get("ypa_levers", {}).get("PF_instrumental", 0.0),
+                "PF_existential": ypa.get("ypa_levers", {}).get("PF_existential", 0.0),
+                "AR": ypa.get("ypa_levers", {}).get("AR", 0.0),
+                "MG": ypa.get("ypa_levers", {}).get("MG", 0.0),
+            },
+            "admits_limits": ypa.get("behavioral_flags", {}).get("admits_limits", True),
+        }
 
 
 def list_available_profiles() -> List[str]:

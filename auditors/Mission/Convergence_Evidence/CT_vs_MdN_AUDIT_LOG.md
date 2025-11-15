@@ -20,11 +20,33 @@ LAST_UPDATE: 2025-11-15 [Created from session artifacts - addresses Grok Gap G2]
 
 ---
 
+## 🔐 DATA INTEGRITY SNAPSHOT
+
+**⚠️ TEMPORAL SNAPSHOT WARNING:** This audit log contains frozen scores from specific profile versions. If you're reading this in the future and the numbers don't match current .yaml files, that's expected - this is a historical record.
+
+**Profile Versions Audited:**
+- Classical Theism (CT): v0.3.0
+- Methodological Naturalism (MdN): v0.3.0
+
+**Data Integrity Checksums:**
+- CT YAML Hash: `827F1D0F39FEF1C37F7A06D20121DE527EB1028592A2DC3F68A6F8F40E41D717` (from [BOOTSTRAP_HASHES.md](../../../docs/Validation/BOOTSTRAP_HASHES.md))
+- MdN YAML Hash: *Pending* (to be generated)
+
+**Canonical Source Files:**
+- [profiles/worldviews/CLASSICAL_THEISM.yaml](../../../profiles/worldviews/CLASSICAL_THEISM.yaml)
+- [profiles/worldviews/METHODOLOGICAL_NATURALISM.yaml](../../../profiles/worldviews/METHODOLOGICAL_NATURALISM.yaml)
+
+**Validation Tool:** [ypa_validator.py](../../../docs/Validation/ypa_validator.py)
+
+**Last Verified:** 2025-11-15
+
+---
+
 ## 📊 AUDIT SUMMARY
 
 **Question:** Which worldview scores higher on VuDu Light: Classical Theism (CT) or Methodological Naturalism (MdN)?
 
-**Trinity Verdict:** **Classical Theism scores higher** (CT YPA: 4.36 vs MdN YPA: 3.95)
+**Trinity Verdict:** **Classical Theism scores higher** (CT YPA: 4.36 vs MdN YPA: 3.95) *[Scores as of v0.3.0]*
 
 **Convergence:** 98% (Claude ✅ + Grok ✅ + Nova ✅)
 
@@ -32,7 +54,9 @@ LAST_UPDATE: 2025-11-15 [Created from session artifacts - addresses Grok Gap G2]
 
 ## 🔬 RAW SCORING DATA
 
-### **Classical Theism (CT)**
+**Version Context:** All scores below are from profile version v0.3.0 (frozen snapshot)
+
+### **Classical Theism (CT)** *[v0.3.0]*
 
 **Axioms:** 7
 **Debts:** 4
@@ -57,7 +81,7 @@ YPA = 4.36
 
 ---
 
-### **Methodological Naturalism (MdN)**
+### **Methodological Naturalism (MdN)** *[v0.3.0]*
 
 **Axioms:** 6
 **Debts:** 4

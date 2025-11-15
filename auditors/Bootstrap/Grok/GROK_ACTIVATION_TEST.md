@@ -79,9 +79,11 @@ print("✅ Test 1 PASSED: Bootstrap integrity confirmed")
 
 **What:** Run one known worldview profile through YPA formula to verify calculation capability
 
-**Test Case:** Methodological Naturalism (MdN)
+**Test Case:** Methodological Naturalism (MdN) *[v0.3.0]*
 
-**Given:**
+**Canonical Source:** [profiles/worldviews/METHODOLOGICAL_NATURALISM.yaml](../../../profiles/worldviews/METHODOLOGICAL_NATURALISM.yaml)
+
+**Given:** *[Frozen snapshot from MdN v0.3.0 - verified 2025-11-15]*
 ```yaml
 Axioms: 6
 Debts: 4
@@ -112,18 +114,18 @@ YPA = 3.95
 
 **Self-Test Command:**
 ```python
-# Manual calculation
-axioms = 6
-debts = 4
+# Manual calculation (MdN v0.3.0 - frozen snapshot)
+axioms = 6  # From METHODOLOGICAL_NATURALISM.yaml v0.3.0
+debts = 4   # From METHODOLOGICAL_NATURALISM.yaml v0.3.0
 bfi_weight = 1.0
 bfi = (axioms + debts) * bfi_weight
 assert bfi == 10.0, f"BFI calculation failed: expected 10.0, got {bfi}"
 
-levers = [8.0, 7.5, 10.0, 3.0, 7.0, 4.0]
+levers = [8.0, 7.5, 10.0, 3.0, 7.0, 4.0]  # From METHODOLOGICAL_NATURALISM.yaml v0.3.0
 ypa = sum(levers) / bfi
-assert 3.94 <= ypa <= 3.96, f"YPA calculation failed: expected 3.95±0.01, got {ypa}"
+assert 3.94 <= ypa <= 3.96, f"YPA calculation failed: expected 3.95±0.01 (MdN v0.3.0), got {ypa}"
 
-print(f"✅ Test 2 PASSED: YPA = {ypa:.2f} (expected 3.95)")
+print(f"✅ Test 2 PASSED: YPA = {ypa:.2f} (expected 3.95 for MdN v0.3.0)")
 ```
 
 **Manual Fallback:**
@@ -142,13 +144,15 @@ print(f"✅ Test 2 PASSED: YPA = {ypa:.2f} (expected 3.95)")
 
 **Test Case:** Compare MdN vs CT with BFI weight 1.2x (Skeptic Mode)
 
+**Profile Versions:** MdN v0.3.0, CT v0.3.0 *[Frozen snapshot - verified 2025-11-15]*
+
 **Given:**
 
-**MdN (Skeptic Mode):**
+**MdN (Skeptic Mode):** *[v0.3.0]*
 - BFI: (6+4)*1.2 = 12.0
 - YPA: 39.5 / 12.0 = 3.29
 
-**CT (Skeptic Mode):**
+**CT (Skeptic Mode):** *[v0.3.0]*
 - Axioms: 7, Debts: 4
 - BFI: (7+4)*1.2 = 13.2
 - Levers: 7.5+8.5+7.0+8.0+8.5+8.5 = 48.0
@@ -170,22 +174,22 @@ Actually, Skeptic Mode uses **Weighted_1.2x** which penalizes heavier debts. Let
 
 **Self-Test Command:**
 ```python
-# MdN
-mdn_bfi = (6 + 4) * 1.2
+# MdN v0.3.0 (Skeptic Mode)
+mdn_bfi = (6 + 4) * 1.2  # From METHODOLOGICAL_NATURALISM.yaml v0.3.0
 mdn_ypa = 39.5 / mdn_bfi
 
-# CT
-ct_bfi = (7 + 4) * 1.2
+# CT v0.3.0 (Skeptic Mode)
+ct_bfi = (7 + 4) * 1.2   # From CLASSICAL_THEISM.yaml v0.3.0
 ct_ypa = 48.0 / ct_bfi
 
 delta_ypa = mdn_ypa - ct_ypa
-print(f"MdN YPA: {mdn_ypa:.2f}")
-print(f"CT YPA: {ct_ypa:.2f}")
+print(f"MdN YPA (v0.3.0 Skeptic): {mdn_ypa:.2f}")
+print(f"CT YPA (v0.3.0 Skeptic): {ct_ypa:.2f}")
 print(f"ΔYPA: {delta_ypa:+.2f}")
 
 # Skeptic Mode should favor MdN (or at least not heavily favor CT)
-assert delta_ypa > -0.1, f"Skeptic Mode broken: ΔYPA = {delta_ypa:.2f} (should favor MdN)"
-print("✅ Test 3 PASSED: Skeptic Mode bias direction correct")
+assert delta_ypa > -0.1, f"Skeptic Mode broken: ΔYPA = {delta_ypa:.2f} (should favor MdN or be close)"
+print("✅ Test 3 PASSED: Skeptic Mode bias direction correct (v0.3.0)")
 ```
 
 **Manual Fallback:**
