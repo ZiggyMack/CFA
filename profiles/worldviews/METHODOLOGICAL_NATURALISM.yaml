@@ -1,0 +1,86 @@
+# Methodological Naturalism - Canonical Score Data
+# Purpose: Machine-readable YPA scores for validation and calculation
+# Source: Extracted from METHODOLOGICAL_NATURALISM.md (v0.3.0)
+# Usage: ypa_validator.py, empirical verification, Grok validation
+# Last Updated: 2025-11-15
+
+profile:
+  name: "Methodological Naturalism"
+  version: "0.3.0"
+  status: "DRAFT"
+  declared_axiom: "The natural world operates according to consistent, discoverable laws without supernatural intervention; knowledge claims require empirical evidence and methodological rigor"
+  alternate_names:
+    - "Scientific Naturalism"
+    - "Methodological Physicalism"
+    - "Empirical Naturalism"
+  last_updated: "2025-11-10"
+  maintainers:
+    - "Ziggy"
+    - "Grok"
+    - "C4"
+    - "Nova"
+
+# Axioms: Foundational unprovable assumptions
+axioms:
+  - name: "Regularity exists"
+    description: "The universe operates according to consistent patterns"
+
+  - name: "Cognition is reliable"
+    description: "Our minds can track reality (at least approximately)"
+
+  - name: "Testing arbitrates"
+    description: "Empirical testing can distinguish better from worse explanations"
+
+  - name: "Natural causation default"
+    description: "Assume natural causes unless evidence suggests otherwise"
+
+  - name: "Parsimony works"
+    description: "Simpler explanations are generally more likely to be true"
+
+  - name: "Findings are provisional"
+    description: "All conclusions remain open to revision"
+
+# Debts: Unresolved explanatory burdens
+debts:
+  - name: "Why does regularity exist?"
+    description: "No explanation for why universe has laws"
+
+  - name: "Why does cognition track truth?"
+    description: "Evolution explains survival, not truth-tracking"
+
+  - name: "Why does success = truth?"
+    description: "Pragmatic utility doesn't guarantee metaphysical accuracy"
+
+  - name: "Where does morality come from?"
+    description: "Naturalistic accounts of ethics remain contested"
+
+# Levers: VuDu Light scoring dimensions (0-10 scale)
+levers:
+  collective_coherence_impact: 8.0    # CCI - Categorical confidence
+  epistemic_debt_burden: 7.5          # EDB - Existential-dread bearing
+  paternalistic_force_interventionist: 10.0  # PF-I - Pragmatic fertility (instrumental)
+  paternalistic_force_epistemic: 3.0        # PF-E - Pragmatic fertility (existential)
+  asymmetry_risk: 7.0                 # AR - Asymptotic realism
+  meta_governance: 4.0                # MG - Moral generativity
+
+# Behavioral flags
+behavioral_flags:
+  admits_limits: true
+
+# Calculated values (for verification)
+calculated:
+  axiom_count: 6
+  debt_count: 4
+  bfi_standard: 10.0    # (6 + 4) * 1.0
+  lever_sum: 39.5       # Sum of all 6 levers
+  ypa_standard: 3.95    # 39.5 / 10.0
+
+  # Preset mode BFI/YPA variations
+  skeptic_bfi: 12.0     # (6 + 4) * 1.2
+  skeptic_ypa: 3.29     # 39.5 / 12.0
+
+  diplomat_bfi: 9.0     # (6 + 4) * 0.9
+  diplomat_ypa: 4.39    # 39.5 / 9.0
+
+  zealot_bfi: 7.0       # (6 + 4) * 0.7
+  zealot_ypa: 5.64      # 39.5 / 7.0
