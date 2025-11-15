@@ -96,7 +96,22 @@ def detect_active_preset():
 def render():
     """Render console"""
 
-    # Initialize session state
+    # Initialize session state (avoids Session State API warnings)
+    # Framework names
+    if "fa_name" not in st.session_state:
+        st.session_state["fa_name"] = MDN_DEFAULT["name"]
+    if "fb_name" not in st.session_state:
+        st.session_state["fb_name"] = CT_DEFAULT["name"]
+
+    # Framework A - BFI
+    if "fa_ax" not in st.session_state:
+        st.session_state["fa_ax"] = MDN_DEFAULT["bf_i"]["axioms"]
+    if "fa_db" not in st.session_state:
+        st.session_state["fa_db"] = MDN_DEFAULT["bf_i"]["debts"]
+    if "fa_ad" not in st.session_state:
+        st.session_state["fa_ad"] = True
+
+    # Framework A - Levers
     if "fa_cci" not in st.session_state:
         st.session_state["fa_cci"] = MDN_DEFAULT["levers"]["CCI"]
     if "fa_edb" not in st.session_state:
@@ -109,7 +124,16 @@ def render():
         st.session_state["fa_ar"] = MDN_DEFAULT["levers"]["AR"]
     if "fa_mg" not in st.session_state:
         st.session_state["fa_mg"] = MDN_DEFAULT["levers"]["MG"]
-    
+
+    # Framework B - BFI
+    if "fb_ax" not in st.session_state:
+        st.session_state["fb_ax"] = CT_DEFAULT["bf_i"]["axioms"]
+    if "fb_db" not in st.session_state:
+        st.session_state["fb_db"] = CT_DEFAULT["bf_i"]["debts"]
+    if "fb_ad" not in st.session_state:
+        st.session_state["fb_ad"] = True
+
+    # Framework B - Levers
     if "fb_cci" not in st.session_state:
         st.session_state["fb_cci"] = CT_DEFAULT["levers"]["CCI"]
     if "fb_edb" not in st.session_state:
@@ -127,15 +151,22 @@ def render():
     st.markdown("""
     <style>
     /* Make the header row sticky */
-    div[data-testid="stHorizontalBlock"]:has(button:contains("Home")) {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        background-color: white;
-        z-index: 999;
-        padding: 10px 0;
-        margin-bottom: 10px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    div[data-testid="stHorizontalBlock"]:has(button[kind="secondary"]) {
+        position: -webkit-sticky !important;
+        position: sticky !important;
+        top: 0 !important;
+        background-color: var(--background-color) !important;
+        z-index: 999 !important;
+        padding: 10px 0 !important;
+        margin-bottom: 10px !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+    }
+
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+        div[data-testid="stHorizontalBlock"]:has(button[kind="secondary"]) {
+            background-color: rgb(14, 17, 23) !important;
+        }
     }
     </style>
     """, unsafe_allow_html=True)
@@ -149,29 +180,21 @@ def render():
     audit_icon = "🔍" if audit_mode == "Audit" else "🎯"
 
     st.markdown(f"""
-    <div style="position: fixed; top: 80px; right: 15px; z-index: 9999;">
+    <div style="position: fixed; top: 80px; right: 15px; z-index: 9999; max-width: 200px;">
         <!-- Preset Mode Indicator -->
         <div style="background-color: rgba(255, 255, 255, 0.95);
                     border: 2px solid #1f77b4; border-radius: 6px;
                     padding: 6px 10px; margin-bottom: 8px;
-                    box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+                    max-width: 180px;">
             <div style="font-size: 0.7rem; font-weight: bold; color: #1f77b4; margin-bottom: 2px;">
                 Active Mode
             </div>
             <div style="font-size: 0.9rem; font-weight: bold; color: #333;">
                 {active_preset}
             </div>
-        </div>
-
-        <!-- Audit Mode Indicator -->
-        <div style="background-color: rgba(255, 255, 255, 0.95);
-                    border: 2px solid {audit_color}; border-radius: 6px;
-                    padding: 6px 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
-            <div style="font-size: 0.7rem; font-weight: bold; color: {audit_color}; margin-bottom: 2px;">
-                Scoring Mode
-            </div>
-            <div style="font-size: 0.9rem; font-weight: bold; color: #333;">
-                {audit_icon} {audit_mode}
+            <div style="font-size: 0.65rem; color: {audit_color}; margin-top: 4px; font-weight: 600;">
+                {audit_icon} {audit_mode} Mode
             </div>
         </div>
     </div>
@@ -194,18 +217,39 @@ def render():
     
     # Preset Profile Library
     with st.sidebar.expander("📚 Load Preset Profile", expanded=False):
+        # Scoring Mode (moved here from below)
+        st.markdown("**🔍 Scoring Mode:**")
+        if "audit_mode" not in st.session_state:
+            st.session_state["audit_mode"] = "Bias"
+
+        audit_mode_options = ["Bias", "Audit"]
+        audit_mode = st.selectbox(
+            "Mode",
+            audit_mode_options,
+            key="audit_mode",
+            help="**Bias Mode (🎯):** Full bias scoring - auditors apply their native lenses with bias intact. **Audit Mode (🔍):** Adversarial audit - scores reflect rigorous adversarial checking (Trinity convergence). Switch to Audit to see adversarially-validated scores.",
+            label_visibility="collapsed"
+        )
+
+        st.markdown("---")
         st.markdown("**Pre-Audited Frameworks:**")
-        
+
         preset_options = {
             "-- Select Framework --": None,
+            # Fully audited (98% Trinity convergence)
             "✅ Methodological Naturalism (MdN)": "mdn",
             "✅ Classical Theism (CT)": "ct",
+            # Profiles exist but not yet fully audited
             "🔜 Buddhism": "coming",
-            "🔜 Stoicism": "coming",
-            "🔜 Pragmatism": "coming",
-            "🔜 Process Theology": "coming",
-            "🔜 Secular Humanism": "coming",
-            "🔜 Metaphysical Naturalism": "coming"
+            "🔜 Desiderata Believers": "coming",
+            "🔜 Error Theory": "coming",
+            "🔜 Existentialism": "coming",
+            "🔜 Hinduism": "coming",
+            "🔜 Islam": "coming",
+            "🔜 Mormonism (LDS)": "coming",
+            "🔜 Null Hypothesis": "coming",
+            "🔜 Orthodox Judaism": "coming",
+            "🔜 Process Theology": "coming"
         }
         
         selected_preset = st.selectbox(
@@ -234,6 +278,8 @@ def render():
                     st.session_state["fa_pfe"] = 3.0
                     st.session_state["fa_ar"] = 7.0
                     st.session_state["fa_mg"] = 4.0
+                    # Reset selector to prevent re-rendering issues
+                    st.session_state["preset_selector"] = "-- Select Framework --"
                     st.success("✅ MdN → Framework A!")
                     st.rerun()
 
@@ -249,6 +295,8 @@ def render():
                     st.session_state["fb_pfe"] = 3.0
                     st.session_state["fb_ar"] = 7.0
                     st.session_state["fb_mg"] = 4.0
+                    # Reset selector to prevent re-rendering issues
+                    st.session_state["preset_selector"] = "-- Select Framework --"
                     st.success("✅ MdN → Framework B!")
                     st.rerun()
 
@@ -270,6 +318,8 @@ def render():
                     st.session_state["fa_pfe"] = 8.0
                     st.session_state["fa_ar"] = 8.5
                     st.session_state["fa_mg"] = 8.5
+                    # Reset selector to prevent re-rendering issues
+                    st.session_state["preset_selector"] = "-- Select Framework --"
                     st.success("✅ CT → Framework A!")
                     st.rerun()
 
@@ -285,6 +335,8 @@ def render():
                     st.session_state["fb_pfe"] = 8.0
                     st.session_state["fb_ar"] = 8.5
                     st.session_state["fb_mg"] = 8.5
+                    # Reset selector to prevent re-rendering issues
+                    st.session_state["preset_selector"] = "-- Select Framework --"
                     st.success("✅ CT → Framework B!")
                     st.rerun()
 
@@ -311,17 +363,17 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Instrumental"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Weighted_1.2x"
-                st.session_state["audit_mode"] = "Bias"
+                # Note: audit_mode controlled by selectbox in Load Preset Profile, don't set here
                 st.success("✅ Skeptic Mode loaded! (MdN-optimized)")
                 st.rerun()
             st.caption("MdN-optimized\nPredictive power focus")
-            
+
             if st.button("🙏 Seeker Mode", use_container_width=True):
                 st.session_state["sidebar_lever_parity"] = "ON"
                 st.session_state["sidebar_pf_type"] = "Composite_70_30"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
-                st.session_state["audit_mode"] = "Bias"
+                # Note: audit_mode controlled by selectbox in Load Preset Profile, don't set here
                 st.success("✅ Seeker Mode loaded! (CT-leaning)")
                 st.rerun()
             st.caption("CT-leaning\nMeaning-first")
@@ -332,7 +384,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Holistic_50_50"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
-                st.session_state["audit_mode"] = "Bias"
+                # Note: audit_mode controlled by selectbox in Load Preset Profile, don't set here
                 st.success("✅ Diplomat Mode loaded! (Balanced)")
                 st.rerun()
             st.caption("Balanced bridge\nEqual weighting")
@@ -342,7 +394,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Holistic_50_50"
                 st.session_state["sidebar_fallibilism"] = "OFF"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
-                st.session_state["audit_mode"] = "Bias"
+                # Note: audit_mode controlled by selectbox in Load Preset Profile, don't set here
                 st.success("✅ Zealot Mode loaded! (CT-optimized)")
                 st.rerun()
             st.caption("CT-optimized\nExistential-first")
@@ -406,33 +458,7 @@ def render():
 
     st.sidebar.markdown("---")
 
-    # Audit Mode Toggle (Bias vs Adversarial Audit)
-    if "audit_mode" not in st.session_state:
-        st.session_state["audit_mode"] = "Bias"  # Default to Bias mode
-
-    audit_mode_options = ["Bias", "Audit"]
-
-    audit_mode = st.sidebar.selectbox(
-        "🔍 Scoring Mode",
-        audit_mode_options,
-        key="audit_mode",
-        help="**Bias Mode (🎯):** Full bias scoring - auditors apply their native lenses with bias intact. **Audit Mode (🔍):** Adversarial audit - scores reflect rigorous adversarial checking (Trinity convergence). Switch to Audit to see adversarially-validated scores."
-    )
-
-    cfg = {
-        "lever_parity": lever_parity,
-        "pf_type": pf_type,
-        "fallibilism_bonus": fall_bonus,
-        "bfi_debt_weight": bfi_weight,
-        "audit_mode": audit_mode
-    }
-
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("**Current Config:**")
-    st.sidebar.json(cfg)
-    
-    # Sidebar Import only
-    st.sidebar.markdown("---")
+    # Sidebar Import
     st.sidebar.markdown("### 📥 Import")
     import_file_sidebar = st.sidebar.file_uploader("Load saved audit", type=["json"], key="import_sidebar")
     if import_file_sidebar:
@@ -445,6 +471,20 @@ def render():
         except:
             st.sidebar.error("Invalid file")
 
+    st.sidebar.markdown("---")
+
+    # Current Config (moved below Import, now collapsible)
+    cfg = {
+        "lever_parity": lever_parity,
+        "pf_type": pf_type,
+        "fallibilism_bonus": fall_bonus,
+        "bfi_debt_weight": bfi_weight,
+        "audit_mode": audit_mode
+    }
+
+    with st.sidebar.expander("📋 Current Config", expanded=False):
+        st.json(cfg)
+
     # FRAMEWORK EDITORS
     col1, col2 = st.columns(2)
 
@@ -452,7 +492,7 @@ def render():
     with col1:
         st.markdown("### 📘 Framework A")
         st.caption("✅ 98% Convergence | Adversarially Audited")
-        fa_name = st.text_input("Name", MDN_DEFAULT["name"], key="fa_name")
+        fa_name = st.text_input("Name", key="fa_name")
         
         with st.expander("🔢 BFI", expanded=False):
             if 'custom_framework_ready' in st.session_state:
@@ -466,9 +506,9 @@ def render():
                         del st.session_state['custom_framework_ready']
                         st.rerun()
             
-            fa_axioms = st.number_input("Axioms", 1, 30, MDN_DEFAULT["bf_i"]["axioms"], key="fa_ax")
-            fa_debts = st.number_input("Debts", 0, 30, MDN_DEFAULT["bf_i"]["debts"], key="fa_db")
-            fa_admits = st.checkbox("Admits Limits", True, key="fa_ad")
+            fa_axioms = st.number_input("Axioms", min_value=1, max_value=30, key="fa_ax")
+            fa_debts = st.number_input("Debts", min_value=0, max_value=30, key="fa_db")
+            fa_admits = st.checkbox("Admits Limits", key="fa_ad")
             
             if st.button("🔍 Go to Brute Ledger", key="goto_ledger_a"):
                 # Pass framework name for smart navigation
@@ -531,7 +571,7 @@ def render():
     with col2:
         st.markdown("### 📕 Framework B")
         st.caption("✅ 98% Convergence | Adversarially Audited")
-        fb_name = st.text_input("Name", CT_DEFAULT["name"], key="fb_name")
+        fb_name = st.text_input("Name", key="fb_name")
         
         with st.expander("🔢 BFI", expanded=False):
             if 'custom_framework_ready' in st.session_state:
@@ -545,9 +585,9 @@ def render():
                         del st.session_state['custom_framework_ready']
                         st.rerun()
             
-            fb_axioms = st.number_input("Axioms", 1, 30, CT_DEFAULT["bf_i"]["axioms"], key="fb_ax")
-            fb_debts = st.number_input("Debts", 0, 30, CT_DEFAULT["bf_i"]["debts"], key="fb_db")
-            fb_admits = st.checkbox("Admits Limits", True, key="fb_ad")
+            fb_axioms = st.number_input("Axioms", min_value=1, max_value=30, key="fb_ax")
+            fb_debts = st.number_input("Debts", min_value=0, max_value=30, key="fb_db")
+            fb_admits = st.checkbox("Admits Limits", key="fb_ad")
             
             if st.button("🔍 Go to Brute Ledger", key="goto_ledger_b"):
                 # Pass framework name for smart navigation

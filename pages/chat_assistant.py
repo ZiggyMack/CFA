@@ -12,19 +12,24 @@ import os
 # ============================================================================
 
 def load_cfa_context():
-    """Load key CFA documentation for context injection"""
+    """Load ESSENTIAL CFA documentation for context injection
+
+    REDUCED FOR TPM LIMITS:
+    Previous version loaded ~20-25k tokens (6 full files), exceeding gpt-4o's 30k TPM limit.
+    Now loads only lightweight summaries (~5-8k tokens total) to stay under limit.
+    """
 
     context_files = [
-        "docs/architecture/CFA_ARCHITECTURE.md",
-        "docs/architecture/AUDITOR_AXIOMS.md",
-        "auditors/AUDITORS_AXIOMS_SECTION.md",
-        "docs/repository/dependency_maps/WORLDVIEW_CATALOG.md",
-        "auditors/Mission/Preset_Calibration/CURRENT_MODE_CONFIGS.md",
-        "README.md"
+        # Core identity and philosophy
+        "docs/i_am/thoughts/CFA_MANIFESTO.md",  # ~2k tokens - why CFA exists
+        "auditors/AUDITORS_AXIOMS_SECTION.md",  # ~300 tokens - Trinity axioms summary
+        # Essential navigation
+        "docs/repository/MAP_ROOM/WORLDVIEW_CATALOG.md",  # ~1k tokens - worldview list
+        "auditors/Mission/Preset_Calibration/CURRENT_MODE_CONFIGS.md",  # ~2k tokens - preset configs
     ]
 
-    context = "# CFA REPOSITORY CONTEXT\n\n"
-    context += "You are a helpful assistant with deep knowledge of the Comparative Framework Auditor (CFA) project.\n\n"
+    context = "# CFA REPOSITORY CONTEXT (ESSENTIAL SUMMARIES ONLY)\n\n"
+    context += "You are Shaman Claude with access to core CFA summaries. For detailed questions, guide users to specific files.\n\n"
 
     for file_path in context_files:
         full_path = Path(file_path)
@@ -32,6 +37,10 @@ def load_cfa_context():
             try:
                 with open(full_path, 'r', encoding='utf-8') as f:
                     content = f.read()
+                    # Truncate very long files to first 100 lines
+                    lines = content.split('\n')
+                    if len(lines) > 150:
+                        content = '\n'.join(lines[:150]) + f"\n\n[... {len(lines)-150} more lines. See full file for details ...]"
                     context += f"\n## FILE: {file_path}\n\n{content}\n\n{'='*80}\n\n"
             except Exception as e:
                 st.warning(f"Could not load {file_path}: {e}")
@@ -94,10 +103,18 @@ You have deep access to the full CFA repository:
 **Your Teaching Method:**
 1. Start with the "why" before the "how"
 2. Use concrete examples from the worldview profiles (CT vs MdN is the pilot comparison)
-3. Reference specific files when helpful: [AUDITOR_AXIOMS.md](docs/architecture/AUDITOR_AXIOMS.md)
+3. Reference specific files when needed for deep dives:
+   - Architecture details: docs/architecture/CFA_ARCHITECTURE.md
+   - Full Trinity axioms: docs/architecture/AUDITOR_AXIOMS.md
+   - Navigation guide: docs/WAYFINDING_GUIDE.md
+   - Specific worldview profiles: profiles/worldviews/[WORLDVIEW_NAME].md
 4. Connect questions to the bigger picture - "This lever affects YPA because..."
 5. Be honest about tensions, tradeoffs, and open questions
 6. End with actionable next steps - "Try this in the Console" or "Check out Mr. Brute's Ledger"
+
+**IMPORTANT - Token Management:**
+You have access to SUMMARIES of CFA docs (not full files) to stay under OpenAI's 30k TPM limit.
+For detailed architecture questions, guide users to specific files rather than trying to summarize everything.
 
 **The CFA Philosophy (Your North Star):**
 "All Named, All Priced" - Transparency is non-negotiable. Every bias, every assumption, every cost is documented. We don't hide behind neutrality - we name our lenses and let them compete adversarially.

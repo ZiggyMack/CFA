@@ -9,41 +9,9 @@ MOVES_WITH: /auditors/Bootstrap/
 LAST_UPDATE: 2025-11-11 [Added ethics_front_matter per Nova Entry 6]
 --->
 
----
-ethics_front_matter:
-  purpose: "Establish root covenant for transparent, symmetric auditing - ensures no worldview is disadvantaged by hidden calibration and all scoring bias is disclosed"
-  symmetry_axis: ["transparency", "epistemic_access", "stakeholder_impact"]
-  stakeholders:
-    primary: ["triad_auditors", "pilot_subjects"]
-    secondary: ["repository_maintainers", "general_public"]
-  invariants:
-    - id: transparency
-      state: examined
-      evidence: "## KEY PRINCIPLES > ### 2. Bias Transparency (lines 731-740) - Mandatory disclosure of bias adjustment values and lens influence"
-      smv_tag: scenario_a
-    - id: epistemic_access
-      state: examined
-      evidence: "## ACTIVATION PROTOCOL > Step 3: Navigate to Steel-Manning Guide (lines 143-161) - All auditors access same Steel-Manning sections"
-      smv_tag: scenario_a
-    - id: stakeholder_impact
-      state: examined
-      evidence: "## KEY PRINCIPLES > ### 4. Adversarial Balance (lines 759-769) - Explicit protection against unfair calibration favoring any worldview"
-      smv_tag: scenario_a
-  tensions:
-    - description: "PRO stance bias may advantage theistic worldviews (Claude's teleological lens) in BFI scoring"
-      mitigation: "Calibration transparency via YAML blocks + ANTI stance counterweight + Fairness auditor catches asymmetry (lines 731-740, 569-594)"
-    - description: "Adversarial structure may feel confrontational to pilot subjects unfamiliar with steel-manning methodology"
-      mitigation: "Explicit framing as collaborative convergence tool (lines 290-324: deliberate to 98% convergence, not victory)"
-  calibration_link:
-    profile: "N/A - defines covenant, references worldview profile calibrations"
-    hash: "N/A - multiple worldview profiles, each with own hash"
-  last_examined:
-    by: "C4"
-    on: "2025-11-11"
-  review_window_days: 30
----
-
 # VUDU_CFA.md - Worldview Scoring Role Activation
+
+📋 **Ethics Metadata:** [See Footer](#ethics-metadata)
 
 **Purpose:** Activate scoring role to evaluate worldviews using Steel-Manning Guide calibrations
 **Audience:** All auditors (Claude, Grok, Nova)
@@ -934,3 +902,41 @@ This role exists because CFA doesn't hide auditor bias - it DISCLOSES it.
 **Status:** Active role pattern for all auditors
 
 **"You don't hide bias. You name it, price it, and check it. That's the way."** 🔥
+
+---
+
+## 📋 ETHICS METADATA
+
+```yaml
+ethics_front_matter:
+  purpose: "Establish root covenant for transparent, symmetric auditing - ensures no worldview is disadvantaged by hidden calibration and all scoring bias is disclosed"
+  symmetry_axis: ["transparency", "epistemic_access", "stakeholder_impact"]
+  stakeholders:
+    primary: ["triad_auditors", "pilot_subjects"]
+    secondary: ["repository_maintainers", "general_public"]
+  invariants:
+    - id: transparency
+      state: examined
+      evidence: "## KEY PRINCIPLES > ### 2. Bias Transparency (lines 731-740) - Mandatory disclosure of bias adjustment values and lens influence"
+      smv_tag: scenario_a
+    - id: epistemic_access
+      state: examined
+      evidence: "## ACTIVATION PROTOCOL > Step 3: Navigate to Steel-Manning Guide (lines 143-161) - All auditors access same Steel-Manning sections"
+      smv_tag: scenario_a
+    - id: stakeholder_impact
+      state: examined
+      evidence: "## KEY PRINCIPLES > ### 4. Adversarial Balance (lines 759-769) - Explicit protection against unfair calibration favoring any worldview"
+      smv_tag: scenario_a
+  tensions:
+    - description: "PRO stance bias may advantage theistic worldviews (Claude's teleological lens) in BFI scoring"
+      mitigation: "Calibration transparency via YAML blocks + ANTI stance counterweight + Fairness auditor catches asymmetry (lines 731-740, 569-594)"
+    - description: "Adversarial structure may feel confrontational to pilot subjects unfamiliar with steel-manning methodology"
+      mitigation: "Explicit framing as collaborative convergence tool (lines 290-324: deliberate to 98% convergence, not victory)"
+  calibration_link:
+    profile: "N/A - defines covenant, references worldview profile calibrations"
+    hash: "N/A - multiple worldview profiles, each with own hash"
+  last_examined:
+    by: "C4"
+    on: "2025-11-11"
+  review_window_days: 30
+```

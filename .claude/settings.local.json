@@ -1,8 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(...i think its a major advancement to keep the home button navigation persisting)",
-      "Bash(for the user at the top as they scroll through\"\n\nIMPLEMENTATION:\nUsed CSS position: sticky to make Home button headers stay at top while scrolling.\nThis is a lightweight CSS-only solution with minimal overhead.\n\nPAGES UPDATED:\n✅ Console - Home button stays visible during long comparison sessions\n✅ Brute Ledger - Easy navigation while exploring 12 worldview profiles\n✅ About - Accessible exit while reading long audit history\n✅ Manual - Quick home access during documentation review\n✅ Chat Assistant - Persistent navigation during Q&A\n\nTECHNICAL APPROACH:\n- CSS sticky positioning (not JavaScript, minimal overhead)\n- Targets button containers with :has() selector\n- z-index: 999 ensures visibility above content\n- Subtle shadow for visual separation\n- Works on scroll without performance impact\n\nMOBILE CONSIDERATION:\nUser noted: \"will have to double check how it looks on the mobile\"\nSticky positioning is mobile-friendly, but awaiting user feedback.\n\nRESULT:\n✅ Home button persists at top of all pages\n✅ Lightweight CSS-only solution\n✅ No JavaScript or performance overhead\n✅ Consistent UX across entire app\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+      "Bash(git fetch:*)"
     ],
     "deny": [],
     "ask": []

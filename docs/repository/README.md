@@ -1,67 +1,144 @@
 <!---
 FILE: README.md
-PURPOSE: Navigate repository meta-documentation and health monitoring
-VERSION: v1.0
+PURPOSE: Navigate Doc Claude's Dual-Room Suite (Map Room + Observatory + Workshop)
+VERSION: v2.0
 STATUS: Active
 DEPENDS_ON: None
 NEEDED_BY: All repository maintainers, auditors, DOC_CLAUDE
 MOVES_WITH: /docs/repository/
-LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-2]
+LAST_UPDATE: 2025-11-14 [Map Room/Observatory Migration]
 --->
 
 <!-- deps: file_structure, documentation -->
-# Repository Meta-Documentation
+# Doc Claude's Suite: Two Rooms Under One Roof
 
-**Purpose:** Central hub for repository health monitoring, dependency tracking, and maintenance protocols  
-**Created:** 2025-10-31  
-**Maintained by:** DOC_CLAUDE (88MPH Librarian)  
-**Status:** 🟢 ACTIVE  
+**Purpose:** Central hub for repository structure tracking, health monitoring, and maintenance protocols
+**Created:** 2025-10-31 | **Reorganized:** 2025-11-14 (v4.0 Launch Party)
+**Maintained by:** DOC_CLAUDE (Repository Librarian)
+**Status:** 🟢 ACTIVE
 
-## 🎯 Why This Directory Exists
+## 🎯 The Dual-Room Philosophy
 
-**The Problem:** Repository health was assessed ad-hoc without systematic tracking  
-**The Solution:** Dedicated meta-documentation space for repository analysis  
-**The Result:** Continuous health monitoring with historical tracking
+**The Question:** Why are health reports separate from dependency maps?
+**The Answer:** They serve different purposes. They belong in different rooms.
 
-This directory serves the PURPOSE of maintaining repository integrity through systematic documentation of health, dependencies, and maintenance protocols.
+This directory houses Doc Claude's two primary workspaces:
+
+### 📍 **MAP_ROOM** - Structure & Connections
+**"What connects to what?"**
+- Dependency maps showing file relationships
+- Tree structures visualizing repository architecture
+- Bootstrap sequences defining canonical paths
+- Worldview catalogs listing framework profiles
+
+**Purpose:** Answer structural questions about how the codebase is organized
+
+### 📊 **OBSERVATORY** - Health & Metrics
+**"How is everything doing?"**
+- Health dashboards with current scores
+- Historical health reports (archived)
+- Staleness tracking and Gospel Problem detection
+- Deep clean protocols and scoring rubrics
+
+**Purpose:** Answer health questions about repository quality and trends
+
+### 🔧 **librarian_tools/** - Doc Claude's Workshop
+**"How do I maintain this?"**
+- 88MPH rapid assessment framework
+- Role definitions (Process, Validator, Destroyer, etc.)
+- Header standards and semantic metadata specs
+- Integration checklists and integrity protocols
+
+**Purpose:** Operational tools for repository maintenance
+
+---
 
 ## 📂 Directory Structure
 
 ```
 repository/
-├── README.md                    # This file - navigation hub
-├── health_reports/             # Periodic repository assessments
-│   ├── README.md              # Health report guide
-│   ├── 2025-10-31_GREEN.md    # Latest assessment
-│   └── .Archive/              # Historical reports
-├── dependency_maps/            # File relationship tracking
-│   ├── README.md              # Dependency mapping guide
-│   ├── MASTER_DEPENDENCY_MAP.md # Current system map
-│   └── validation/            # Map accuracy checks
-└── librarian_tools/           # Maintenance protocols
-    ├── README.md              # Tool documentation
-    ├── 88MPH.md      # Rapid assessment framework
-    └── HEADER_STANDARD.md     # Semantic header specs
+├── README.md                    # This file - Dual-room philosophy guide
+│
+├── MAP_ROOM/                    # Structure & Connections
+│   ├── dependency_maps_README.md  # Navigation guide (legacy name)
+│   ├── MASTER_DEPENDENCY_MAP.md   # Comprehensive file relationships
+│   ├── VALIDATION_MAP.md          # Systematic validation checklist
+│   ├── BOOTSTRAP_SEQUENCE.md      # Canonical bootstrap paths
+│   ├── WORLDVIEW_CATALOG.md       # Framework profile catalog
+│   └── DEPENDENCY_CORE.md         # Core dependency specifications
+│
+├── OBSERVATORY/                 # Health & Metrics
+│   ├── REPO_HEALTH_DASHBOARD.md   # Current health status (living doc)
+│   ├── REPO_HEALTH_SCORING_RUBRIC.md  # Scoring methodology
+│   ├── DEEP_CLEAN_PROTOCOL.md     # Scan-first methodology
+│   └── Archives/                  # Historical health snapshots
+│       ├── health_reports_README.md  # Archive guide
+│       ├── REPO_HEALTH_REPORT_2025-11-12_GREEN.md  # Latest (95/100)
+│       ├── REPO_HEALTH_REPORT_2025-10-31_GREEN(1).md
+│       ├── REPO_HEALTH_REPORT_2025-10-31_GREEN(2).md
+│       └── REPO_HEALTH_REPORT_TEMPLATE_v4.md
+│
+├── librarian_tools/             # Doc Claude's Workshop
+│   ├── README.md                # Tool documentation
+│   ├── 88MPH.md                 # Rapid assessment framework
+│   ├── ROLE_PROCESS.md          # Process Expert role
+│   ├── ROLE_VALIDATION.md       # Validation Expert role
+│   ├── ROLE_DESTROYER.md        # Deletion authority role
+│   ├── ROLE_LOGGER.md           # REPO_LOG maintenance
+│   ├── ROLE_SANITIZE.md         # Sanitization protocols
+│   ├── ROLE_REVIEW.md           # Review methodology
+│   └── HEADER_STANDARD.md       # Semantic header specs
+│
+├── FILE_INVENTORY.md            # Complete file catalog (~353 files)
+└── LIVING_MAP_MAINTENANCE.md    # Living Map update protocols
 ```
 
-## 🔍 What Each Folder Contains
+---
 
-### health_reports/
-**Purpose:** Track repository health over time  
-**Contains:** Periodic assessments using 88MPH framework  
-**Frequency:** Weekly during active development, monthly otherwise  
-**Latest:** 2025-10-31 - Status GREEN (94/100)
+## 🏛️ Doc Claude Wears Different Hats
 
-### dependency_maps/
-**Purpose:** Visualize and validate file interdependencies  
-**Contains:** Master dependency map extracted from semantic headers  
-**Updates:** After major structural changes  
-**Use:** Identify orphans, circular dependencies, missing links
+**As Mapper (MAP_ROOM):**
+- "Let me show you how these files connect"
+- "This depends on that, and that needs this"
+- "Here's the canonical bootstrap sequence"
+- Uses MASTER_DEPENDENCY_MAP.md to track relationships
 
-### librarian_tools/
-**Purpose:** Protocols and standards for repository maintenance  
-**Contains:** 88MPH rapid assessment, header standards, quality metrics  
-**For:** DOC_CLAUDE and other maintenance auditors
+**As Observer (OBSERVATORY):**
+- "Repository health: 95/100 GREEN"
+- "Staleness detected in 3 files"
+- "Health trending upward over last 3 weeks"
+- Uses REPO_HEALTH_DASHBOARD.md to monitor metrics
+
+**As Librarian (librarian_tools/):**
+- "Running 88MPH rapid assessment"
+- "Applying ROLE_DESTROYER deletion protocols"
+- "Enforcing semantic header standards"
+- Uses operational tools to maintain quality
+
+---
+
+## 🔍 When to Use Each Room
+
+### Use MAP_ROOM When:
+- ✅ Finding what depends on a file before modifying it
+- ✅ Understanding bootstrap sequence for auditor coordination
+- ✅ Locating worldview profiles by name or category
+- ✅ Mapping out which files must move together (MOVES_WITH)
+- ✅ Identifying circular dependencies or orphan files
+
+### Use OBSERVATORY When:
+- ✅ Checking current repository health score
+- ✅ Comparing health trends over time
+- ✅ Running deep clean protocols to assess quality
+- ✅ Detecting Gospel Problem (embedded stale references)
+- ✅ Generating new health reports using scoring rubric
+
+### Use librarian_tools/ When:
+- ✅ Performing rapid 88MPH assessment (8.8 minutes)
+- ✅ Understanding Doc Claude role constraints (Process, Validator, etc.)
+- ✅ Learning semantic header format (DEPENDS_ON, NEEDED_BY, etc.)
+- ✅ Following deletion protocols (ROLE_DESTROYER)
+- ✅ Maintaining REPO_LOG with proper format
 
 ## 📊 Key Metrics Tracked
 

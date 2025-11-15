@@ -10,43 +10,9 @@ MOVES_WITH: /auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/
 LAST_UPDATE: 2025-11-10 [Task brief created post-VUDU Step 1]
 --->
 
----
-ethics_front_matter:
-  purpose: "Establish pilot doctrine for adversarial scoring methodology to ensure Classical Theism and Methodological Naturalism receive symmetric, rigorous, good-faith evaluation - prevents hidden bias, validates calibration transparency, demonstrates Crux architecture in practice"
-  symmetry_axis: ["transparency", "epistemic_access", "stakeholder_impact"]
-  stakeholders:
-    primary: ["pilot_subjects_CT_MdN", "triad_auditors"]
-    secondary: ["future_worldview_comparisons", "methodology_template_users"]
-  invariants:
-    - id: transparency
-      state: examined
-      evidence: "## Objectives > Primary Objective 2 (lines 52-56) - 'Establish Gold Standard Deliberation: Capture complete 5-part deliberation scaffold...show calibration YAML values in action' + ## VUDU Protocol Integration (lines 300-314) - All calibration hashes logged, diff status tracked, academic sources documented"
-      smv_tag: scenario_a
-    - id: epistemic_access
-      state: examined
-      evidence: "## Reference Materials (lines 345-373) - All auditors access same Steel-Manning sections (CLASSICAL_THEISM.md lines 117-246, METHODOLOGICAL_NATURALISM.md lines 120-187) + academic sources (IEP/SEP) anchoring arguments in peer-reviewed philosophy + ## Methodology > 5-Part Deliberation Scaffold (lines 148-299) - Prompt Stack, Counterweight Table explicitly documented"
-      smv_tag: scenario_a
-    - id: stakeholder_impact
-      state: examined
-      evidence: "## Background > What This Pilot Adds (lines 33-39) - Adversarial checking (Claude PRO-CT vs Grok ANTI-CT vs Nova Fairness) with 98%+ convergence target prevents any worldview advantage + ## Risks & Mitigation > Risk 3 (lines 385-387) - If Crux Points excessive (5+ of 7 metrics), review calibration YAML (may be overcalibrated) - Acknowledges adversarial approach risk to stakeholders"
-      smv_tag: scenario_a
-  tensions:
-    - description: "Adversarial scoring vs. good-faith Steel-Manning - risk that Claude (PRO-CT) and Grok (ANTI-CT) stances create combative tone instead of charitable evaluation"
-      mitigation: "Success Criteria (lines 78-99) - Best Case: 98%+ convergence despite adversarial stances + Methodology references Steel-Manning sections (lines 345-373) + VUDU_CFA.md Principle #4 Adversarial Balance: 'Adversarial checking serves accuracy, not winning' (lines 759-769)"
-    - description: "Crux declarations may feel adversarial to pilot subjects - CT and MdN representatives might perceive impasses as 'failures' rather than legitimate philosophical tensions"
-      mitigation: "## Objectives > Primary Objective 3 (lines 58-61) - Frames Crux as validation of methodology ('test Crux Point declaration process'), not worldview deficiency + Follow-Up Tasks (lines 399-415) - CT↔Process Theology scheduled next to show Crux architecture handles different contexts (cooperative pairing)"
-    - description: "Baseline score drift risk - if new scores differ >15% from original, creates trust questions: which scores are correct?"
-      mitigation: "## Risks & Mitigation > Risk 2 (lines 381-383) - Major drift triggers user review ('requires user to decide which scores to trust') + Documented via Crux Points ('evidence original scores lacked rigor') - Transparency preserves user authority"
-  calibration_link:
-    profile: "profiles/worldviews/CLASSICAL_THEISM.md"
-    hash: "1bbec1e119a2c425"  # SHA-256 of pro_ct_bias_adjustment (lines 277-287)
-  last_examined:
-    by: "C4"
-    on: "2025-11-11"
-  review_window_days: 30
----
-
 # PILOT: CT↔MdN Re-Audit with Rigorous Methodology
+
+📋 **Ethics Metadata:** [See Footer](#ethics-metadata)
 
 **Mission Statement:**
 > "Re-fortify our CT vs MdN numbers...as well as flush out the story behind the numbers to be the gold standard for every profile to follow after"
@@ -471,3 +437,43 @@ This pilot follows **VUDU_CFA.md** steps:
 - Post-pilot: [CT_vs_MdN.yaml](../../../profiles/comparisons/CT_vs_MdN.yaml) (will update to v0.2.0)
 
 🚀 **PILOT READY FOR LAUNCH**
+
+---
+
+## 📋 ETHICS METADATA
+
+```yaml
+ethics_front_matter:
+  purpose: "Establish pilot doctrine for adversarial scoring methodology to ensure Classical Theism and Methodological Naturalism receive symmetric, rigorous, good-faith evaluation - prevents hidden bias, validates calibration transparency, demonstrates Crux architecture in practice"
+  symmetry_axis: ["transparency", "epistemic_access", "stakeholder_impact"]
+  stakeholders:
+    primary: ["pilot_subjects_CT_MdN", "triad_auditors"]
+    secondary: ["future_worldview_comparisons", "methodology_template_users"]
+  invariants:
+    - id: transparency
+      state: examined
+      evidence: "## Objectives > Primary Objective 2 (lines 52-56) - 'Establish Gold Standard Deliberation: Capture complete 5-part deliberation scaffold...show calibration YAML values in action' + ## VUDU Protocol Integration (lines 300-314) - All calibration hashes logged, diff status tracked, academic sources documented"
+      smv_tag: scenario_a
+    - id: epistemic_access
+      state: examined
+      evidence: "## Reference Materials (lines 345-373) - All auditors access same Steel-Manning sections (CLASSICAL_THEISM.md lines 117-246, METHODOLOGICAL_NATURALISM.md lines 120-187) + academic sources (IEP/SEP) anchoring arguments in peer-reviewed philosophy + ## Methodology > 5-Part Deliberation Scaffold (lines 148-299) - Prompt Stack, Counterweight Table explicitly documented"
+      smv_tag: scenario_a
+    - id: stakeholder_impact
+      state: examined
+      evidence: "## Background > What This Pilot Adds (lines 33-39) - Adversarial checking (Claude PRO-CT vs Grok ANTI-CT vs Nova Fairness) with 98%+ convergence target prevents any worldview advantage + ## Risks & Mitigation > Risk 3 (lines 385-387) - If Crux Points excessive (5+ of 7 metrics), review calibration YAML (may be overcalibrated) - Acknowledges adversarial approach risk to stakeholders"
+      smv_tag: scenario_a
+  tensions:
+    - description: "Adversarial scoring vs. good-faith Steel-Manning - risk that Claude (PRO-CT) and Grok (ANTI-CT) stances create combative tone instead of charitable evaluation"
+      mitigation: "Success Criteria (lines 78-99) - Best Case: 98%+ convergence despite adversarial stances + Methodology references Steel-Manning sections (lines 345-373) + VUDU_CFA.md Principle #4 Adversarial Balance: 'Adversarial checking serves accuracy, not winning' (lines 759-769)"
+    - description: "Crux declarations may feel adversarial to pilot subjects - CT and MdN representatives might perceive impasses as 'failures' rather than legitimate philosophical tensions"
+      mitigation: "## Objectives > Primary Objective 3 (lines 58-61) - Frames Crux as validation of methodology ('test Crux Point declaration process'), not worldview deficiency + Follow-Up Tasks (lines 399-415) - CT↔Process Theology scheduled next to show Crux architecture handles different contexts (cooperative pairing)"
+    - description: "Baseline score drift risk - if new scores differ >15% from original, creates trust questions: which scores are correct?"
+      mitigation: "## Risks & Mitigation > Risk 2 (lines 381-383) - Major drift triggers user review ('requires user to decide which scores to trust') + Documented via Crux Points ('evidence original scores lacked rigor') - Transparency preserves user authority"
+  calibration_link:
+    profile: "profiles/worldviews/CLASSICAL_THEISM.md"
+    hash: "1bbec1e119a2c425"  # SHA-256 of pro_ct_bias_adjustment (lines 277-287)
+  last_examined:
+    by: "C4"
+    on: "2025-11-11"
+  review_window_days: 30
+```
