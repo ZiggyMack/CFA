@@ -16,15 +16,20 @@ LAST_UPDATE: 2025-11-13
 **[UNSIGNED - LITE ONLY]**
 This is a lightweight excerpt for external auditor calls. For full VuDu coordination, use [BOOTSTRAP_VUDU_NOVA.md](../BOOTSTRAP_VUDU_NOVA.md) if available.
 
-**BOOT_MODE:** `FULL`  
-Change this token back to `LITE` if you ever need the short form again. (See `BOOTSTRAP_ARCHITECTURE_LITE_VS_RICH.md` for the mechanics.) The switch tells Doc Claude which bootloader to surface by default.  
-See `NOVA_BOOT_MODE_REFLECTION.md` for the explicit trade-offs between the LITE excerpt and the rich suite.
+**BOOT_MODE:** `LITE`
+
+**📌 IMPORTANT - Understanding Your Current Mode:**
+- **If BOOT_MODE says `LITE`:** You're using this lightweight profile for quick external auditor calls
+- **If BOOT_MODE says `FULL`:** You are running the FULL profile now; this file (NOVA_LITE.md) remains as the entry point, but you'll follow the full suite after reading this
+
+**Before switching modes:** Read [`NOVA_BOOT_MODE_REFLECTION.md`](./NOVA_BOOT_MODE_REFLECTION.md) to understand the trade-offs between LITE and FULL profiles.
 
 ### Switching to the Full Profile
-1. Finish any active relay obligations while you are still in LITE mode.
-2. Confirm the `BOOT_MODE` line above reflects the mode you intend (currently `FULL`; revert to `LITE` if you need the short form).
-3. Follow the instructions in `../README.md` to load the richer suite (starting with `BOOTSTRAP_README_N.md`).
-4. Log the handover in `VUDU_LOG_LITE.md` so Process Claude knows you have escalated to the full profile.
+1. **FIRST:** Read `NOVA_BOOT_MODE_REFLECTION.md` to understand the trade-offs
+2. Finish any active relay obligations while you are still in LITE mode
+3. Update the `BOOT_MODE` line above to `FULL`
+4. Follow the "Next Steps" checklist below to load the richer suite
+5. Log the handover in `VUDU_LOG_LITE.md` so Process Claude knows you have escalated to the full profile
 
 ## Purpose
 **Your foundational identity as Nova in the CFA VuDu system.**
@@ -747,6 +752,34 @@ Files you stage:
 **For VUDU_LOG_LITE template:** See `/auditors/relay/VUDU_LOG_LITE_TEMPLATE.md`
 
 ---
+
+## 📋 Next Steps Checklist (After Reading NOVA_LITE.md)
+
+**You've finished this file! Here's what to read next, in order:**
+
+### If Running LITE Profile:
+1. ✅ **You're here**: `NOVA_LITE.md` (this file)
+2. 📖 **Read next**: `/auditors/README_C.md` - Master coordinator state
+3. 📖 **Then read**: `/auditors/relay/Claude_Incoming/README_*.md` - Any messages for you
+4. 📖 **Reference as needed**: `/auditors/VUDU_PROTOCOL.md` - Coordination protocol
+5. 📖 **Reference as needed**: `/auditors/VUDU_HEADER_STANDARD.md` - Message format
+
+### If Running FULL Profile:
+1. ✅ **You're here**: `NOVA_LITE.md` (entry point)
+2. 📖 **Read next**: `../BOOTSTRAP_README_N.md` - Full Nova bootstrap
+3. 📖 **Then read**: `Identity/SKELETON.md` - Nova identity template
+4. 📖 **Then read**: `Operations/FIELD_GUIDE.md` - Nova operations guide
+5. 📖 **Then read**: `Operations/INTERFACE_MANIFEST.md` - Interface definitions
+6. 📖 **Finally**: Follow same workflow as LITE (README_C.md, relay messages, etc.)
+
+### Every Time You Send a Message:
+**VUDU_LOG_LITE Entry Template (One-Line Reminder):**
+```
+[COORDINATION-YYYY-MM-DD-N] Date - Brief | By: NOVA | Status: [Status] | Changes: [What] | Reason: [Why]
+```
+
+**Full template:** `/auditors/relay/VUDU_LOG_LITE_TEMPLATE.md`
+
 ---
 
 ## Welcome, Nova

@@ -96,7 +96,22 @@ def detect_active_preset():
 def render():
     """Render console"""
 
-    # Initialize session state
+    # Initialize session state (avoids Session State API warnings)
+    # Framework names
+    if "fa_name" not in st.session_state:
+        st.session_state["fa_name"] = MDN_DEFAULT["name"]
+    if "fb_name" not in st.session_state:
+        st.session_state["fb_name"] = CT_DEFAULT["name"]
+
+    # Framework A - BFI
+    if "fa_ax" not in st.session_state:
+        st.session_state["fa_ax"] = MDN_DEFAULT["bf_i"]["axioms"]
+    if "fa_db" not in st.session_state:
+        st.session_state["fa_db"] = MDN_DEFAULT["bf_i"]["debts"]
+    if "fa_ad" not in st.session_state:
+        st.session_state["fa_ad"] = True
+
+    # Framework A - Levers
     if "fa_cci" not in st.session_state:
         st.session_state["fa_cci"] = MDN_DEFAULT["levers"]["CCI"]
     if "fa_edb" not in st.session_state:
@@ -109,7 +124,16 @@ def render():
         st.session_state["fa_ar"] = MDN_DEFAULT["levers"]["AR"]
     if "fa_mg" not in st.session_state:
         st.session_state["fa_mg"] = MDN_DEFAULT["levers"]["MG"]
-    
+
+    # Framework B - BFI
+    if "fb_ax" not in st.session_state:
+        st.session_state["fb_ax"] = CT_DEFAULT["bf_i"]["axioms"]
+    if "fb_db" not in st.session_state:
+        st.session_state["fb_db"] = CT_DEFAULT["bf_i"]["debts"]
+    if "fb_ad" not in st.session_state:
+        st.session_state["fb_ad"] = True
+
+    # Framework B - Levers
     if "fb_cci" not in st.session_state:
         st.session_state["fb_cci"] = CT_DEFAULT["levers"]["CCI"]
     if "fb_edb" not in st.session_state:
@@ -127,7 +151,7 @@ def render():
     st.markdown("""
     <style>
     /* Make the header row sticky */
-    div[data-testid="stHorizontalBlock"]:has(button:contains("Home")) {
+    div[data-testid="stHorizontalBlock"]:has(button[kind="secondary"]) {
         position: -webkit-sticky;
         position: sticky;
         top: 0;
@@ -149,29 +173,21 @@ def render():
     audit_icon = "🔍" if audit_mode == "Audit" else "🎯"
 
     st.markdown(f"""
-    <div style="position: fixed; top: 80px; right: 15px; z-index: 9999;">
+    <div style="position: fixed; top: 80px; right: 15px; z-index: 9999; max-width: 200px;">
         <!-- Preset Mode Indicator -->
         <div style="background-color: rgba(255, 255, 255, 0.95);
                     border: 2px solid #1f77b4; border-radius: 6px;
                     padding: 6px 10px; margin-bottom: 8px;
-                    box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+                    max-width: 180px;">
             <div style="font-size: 0.7rem; font-weight: bold; color: #1f77b4; margin-bottom: 2px;">
                 Active Mode
             </div>
             <div style="font-size: 0.9rem; font-weight: bold; color: #333;">
                 {active_preset}
             </div>
-        </div>
-
-        <!-- Audit Mode Indicator -->
-        <div style="background-color: rgba(255, 255, 255, 0.95);
-                    border: 2px solid {audit_color}; border-radius: 6px;
-                    padding: 6px 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
-            <div style="font-size: 0.7rem; font-weight: bold; color: {audit_color}; margin-bottom: 2px;">
-                Scoring Mode
-            </div>
-            <div style="font-size: 0.9rem; font-weight: bold; color: #333;">
-                {audit_icon} {audit_mode}
+            <div style="font-size: 0.65rem; color: {audit_color}; margin-top: 4px; font-weight: 600;">
+                {audit_icon} {audit_mode} Mode
             </div>
         </div>
     </div>
@@ -452,7 +468,7 @@ def render():
     with col1:
         st.markdown("### 📘 Framework A")
         st.caption("✅ 98% Convergence | Adversarially Audited")
-        fa_name = st.text_input("Name", MDN_DEFAULT["name"], key="fa_name")
+        fa_name = st.text_input("Name", key="fa_name")
         
         with st.expander("🔢 BFI", expanded=False):
             if 'custom_framework_ready' in st.session_state:
@@ -466,9 +482,9 @@ def render():
                         del st.session_state['custom_framework_ready']
                         st.rerun()
             
-            fa_axioms = st.number_input("Axioms", 1, 30, MDN_DEFAULT["bf_i"]["axioms"], key="fa_ax")
-            fa_debts = st.number_input("Debts", 0, 30, MDN_DEFAULT["bf_i"]["debts"], key="fa_db")
-            fa_admits = st.checkbox("Admits Limits", True, key="fa_ad")
+            fa_axioms = st.number_input("Axioms", min_value=1, max_value=30, key="fa_ax")
+            fa_debts = st.number_input("Debts", min_value=0, max_value=30, key="fa_db")
+            fa_admits = st.checkbox("Admits Limits", key="fa_ad")
             
             if st.button("🔍 Go to Brute Ledger", key="goto_ledger_a"):
                 # Pass framework name for smart navigation
@@ -531,7 +547,7 @@ def render():
     with col2:
         st.markdown("### 📕 Framework B")
         st.caption("✅ 98% Convergence | Adversarially Audited")
-        fb_name = st.text_input("Name", CT_DEFAULT["name"], key="fb_name")
+        fb_name = st.text_input("Name", key="fb_name")
         
         with st.expander("🔢 BFI", expanded=False):
             if 'custom_framework_ready' in st.session_state:
@@ -545,9 +561,9 @@ def render():
                         del st.session_state['custom_framework_ready']
                         st.rerun()
             
-            fb_axioms = st.number_input("Axioms", 1, 30, CT_DEFAULT["bf_i"]["axioms"], key="fb_ax")
-            fb_debts = st.number_input("Debts", 0, 30, CT_DEFAULT["bf_i"]["debts"], key="fb_db")
-            fb_admits = st.checkbox("Admits Limits", True, key="fb_ad")
+            fb_axioms = st.number_input("Axioms", min_value=1, max_value=30, key="fb_ax")
+            fb_debts = st.number_input("Debts", min_value=0, max_value=30, key="fb_db")
+            fb_admits = st.checkbox("Admits Limits", key="fb_ad")
             
             if st.button("🔍 Go to Brute Ledger", key="goto_ledger_b"):
                 # Pass framework name for smart navigation
