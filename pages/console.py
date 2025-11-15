@@ -236,20 +236,20 @@ def render():
 
         preset_options = {
             "-- Select Framework --": None,
-            # Fully audited (98% Trinity convergence)
-            "✅ Methodological Naturalism (MdN)": "mdn",
-            "✅ Classical Theism (CT)": "ct",
-            # Profiles exist but not yet fully audited
-            "🔜 Buddhism": "coming",
-            "🔜 Desiderata Believers": "coming",
-            "🔜 Error Theory": "coming",
-            "🔜 Existentialism": "coming",
-            "🔜 Hinduism": "coming",
-            "🔜 Islam": "coming",
-            "🔜 Mormonism (LDS)": "coming",
-            "🔜 Null Hypothesis": "coming",
-            "🔜 Orthodox Judaism": "coming",
-            "🔜 Process Theology": "coming"
+            # Fully audited (98% Trinity convergence) - emojis match Brute Ledger
+            "📘 Methodological Naturalism (MdN)": "mdn",
+            "📕 Classical Theism (CT)": "ct",
+            # Profiles exist but not yet fully audited (emojis match Brute Ledger)
+            "☸️ Buddhism": "coming",
+            "🤔 Desiderata Believers": "coming",
+            "⛔ Error Theory": "coming",
+            "🎭 Existentialism": "coming",
+            "🕉️ Hinduism": "coming",
+            "☪️ Islam": "coming",
+            "📖 Mormonism (LDS)": "coming",
+            "❓ Null Hypothesis": "coming",
+            "🕎 Orthodox Judaism": "coming",
+            "🌊 Process Theology": "coming"
         }
         
         selected_preset = st.selectbox(
@@ -278,8 +278,6 @@ def render():
                     st.session_state["fa_pfe"] = 3.0
                     st.session_state["fa_ar"] = 7.0
                     st.session_state["fa_mg"] = 4.0
-                    # Reset selector to prevent re-rendering issues
-                    st.session_state["preset_selector"] = "-- Select Framework --"
                     st.success("✅ MdN → Framework A!")
                     st.rerun()
 
@@ -295,8 +293,6 @@ def render():
                     st.session_state["fb_pfe"] = 3.0
                     st.session_state["fb_ar"] = 7.0
                     st.session_state["fb_mg"] = 4.0
-                    # Reset selector to prevent re-rendering issues
-                    st.session_state["preset_selector"] = "-- Select Framework --"
                     st.success("✅ MdN → Framework B!")
                     st.rerun()
 
@@ -318,8 +314,6 @@ def render():
                     st.session_state["fa_pfe"] = 8.0
                     st.session_state["fa_ar"] = 8.5
                     st.session_state["fa_mg"] = 8.5
-                    # Reset selector to prevent re-rendering issues
-                    st.session_state["preset_selector"] = "-- Select Framework --"
                     st.success("✅ CT → Framework A!")
                     st.rerun()
 
@@ -335,8 +329,6 @@ def render():
                     st.session_state["fb_pfe"] = 8.0
                     st.session_state["fb_ar"] = 8.5
                     st.session_state["fb_mg"] = 8.5
-                    # Reset selector to prevent re-rendering issues
-                    st.session_state["preset_selector"] = "-- Select Framework --"
                     st.success("✅ CT → Framework B!")
                     st.rerun()
 

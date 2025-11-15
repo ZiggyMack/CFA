@@ -212,7 +212,7 @@ GUIDANCE:
 
 ### **Step 3: Find Your "You Are Here" Marker**
 
-**Repository Structure (Mental Map):**
+## 📂 Directory Structure
 
 ```
 CFA/ (root)

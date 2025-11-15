@@ -222,7 +222,7 @@ Know which role you're serving."*
 
 ### **Where Files Live**
 
-**Bootstrap Architecture (v4.0):**
+## 📂 Directory Structure
 
 ```
 auditors/Bootstrap/
