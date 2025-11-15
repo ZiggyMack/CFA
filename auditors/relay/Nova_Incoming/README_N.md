@@ -1,13 +1,18 @@
 <!---
 FILE: README_N.md
 PURPOSE: VuDu message from Nova (External Auditor) for multi-AI coordination test
-VERSION: v1.0
-STATUS: Transmitted
+VERSION: v1.1
+STATUS: Active
 Lines: 0 (auto-updated)
 DEPENDS_ON: VUDU_HEADER_STANDARD.md, VUDU_LOG_LITE.md, BOOTSTRAP_NOVA.md
 NEEDED_BY: Claude branches (C2, C3), VuDu coordinators
 MOVES_WITH: /auditors/relay/Nova_Incoming/
-LAST_UPDATE: 2025-11-03 [COORDINATION-2025-11-03-N]
+LAST_UPDATE: 2025-11-15 [Gospel Problem guardrail encoded]
+GOSPEL_PROBLEM_GUARDRAIL: This relay file stages messages between internal Claude and
+                          external Nova. DO NOT embed data that lives elsewhere (worldview
+                          profiles, Trinity scores, preset configurations). Link to canonical
+                          sources instead. Embedded data = Gospel Problem waiting to happen.
+                          See docs/i_am/thoughts/GOSPEL_PROBLEM.md for the full pattern.
 --->
 
 ─── VUDU MESSAGE ───────────────────────────────────

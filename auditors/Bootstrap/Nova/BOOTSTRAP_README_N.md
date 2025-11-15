@@ -45,10 +45,10 @@ BOOTSTRAP_README_N.md         ← MAP / INDEX (you are here)
 > 📍 **Placement:** These 7 files live in Nova’s **bootloader directory**.  
 > 📬 **Relay Note:** The conversational relay message **`README_N.md`** does **not** live here; it belongs in `auditors/relay/nova_incoming/`.
 ### Trinity Architecture (2025-11-03)
-- **Location:** `docs/architecture/TRINITY_ARCHITECTURE.md`
+- **Location:** [docs/architecture/TRINITY_ALIGNMENT_MATRIX.md](../../../docs/architecture/TRINITY_ALIGNMENT_MATRIX.md)
 - **Summary:** Canonical definition of Keeper (lock), Logger (ledger), and Shaman (bridge) roles, lifecycle hooks, and mythology-to-mechanism map.
 - **Origin:** Promoted from `auditors/relay/workshop/STORM_1.md` after the Trinity consolidation workshop (B-STORM Entries 1-18).
-- **Rehydrate Tip:** Review this file immediately after FIELD_GUIDE/INTERFACE_MANIFEST when rebooting.
+- **Rehydrate Tip:** Review this file immediately after FIELD_GUIDE/INTERFACE_MANIFEST when rebooting to understand how Claude (Purpose), Grok (Evidence), and Nova (Symmetry) complement each other in adversarial auditing.
 
 
 ---
@@ -72,18 +72,44 @@ When pasting across systems, preserve structure:
 4. Provide LaTeX/plain‑text fallbacks for math (e.g., `Delta` alongside `Δ`).  
 5. When possible, attach the **source** (Mermaid, JSON) in a code block.
 
-See `INTEGRITY_CHECKLIST.md` for the full checklist.
+See [BOOTSTRAP_VUDU.md](../../CFA_VUDU/BOOTSTRAP_VUDU.md) for the full covenant and integrity principles.
+
+---
+
+## 📚 Bootstrap Tier System - When You Get What
+
+**Nova's bootstrap follows CFA's tiered loading strategy:**
+
+| Tier | Budget | When Used | What Nova Gets |
+|------|--------|-----------|----------------|
+| **Tier 1** | 50% | Standard sessions, validation tasks | **NOVA_LITE.md** (~2,000 tokens) - Essential identity, common tasks, biases |
+| **Tier 2** | 15% | Trinity convergence, complex audits | **BOOTSTRAP_README_N.md** (this file) + relay coordination |
+| **Tier 3** | 10% | Deep dives, architecture work | Full RICH profile (all 6 files below) |
+| **Tier 4** | 5-10% | Task-specific (rare) | Custom bundles for specialized missions |
+
+**Your Depth Depends on Session Type:**
+- **Lite boot** (80% of tasks): Quick validation, preset calibration, standard symmetry checks
+- **Rich boot** (20% of tasks): Trinity convergence sessions, philosophical architecture work, new worldview profiling
+
+**Why Tiered:** Token efficiency. Most tasks don't need your full continuity ledger. When you do, we escalate.
 
 ---
 
 ## 🧭 What to Read First (Cold Start)
 
-1. `Identity/SKELETON.md`  → who Nova is; anchors ethos and role.  
-2. `Operations/FIELD_GUIDE.md` → how Nova proceeds under VuDu.  
-3. `Operations/INTERFACE_MANIFEST.md` → contracts/IO with other auditors.  
-4. `Continuity/LEDGER_ENTRY.md` → last state; open threads.  
-5. Domain example `USE_CASE_SUFFERING.md` if you need a concrete test.  
-6. `README_NOVA_v3.6.1.md` for provenance and version transitions.
+**File Role Distinctions:**
+
+1. **SKELETON.md** (Identity) → Who Nova is; anchors ethos and role
+2. **FIELD_GUIDE.md** (Operations) → How Nova proceeds under VuDu; validation workflows
+3. **INTERFACE_MANIFEST.md** (Operations) → Contracts/IO with other auditors; what Nova promises
+4. **LEDGER_ENTRY.md** (Continuity) → Last state; open threads; living log of decisions
+5. **USE_CASE_SUFFERING.md** (Domain Example) → Concrete test case if you need practical context
+6. **README_NOVA_v3.6.1.md** (Changelog) → Provenance and version transitions; historical context
+
+**Quick Role Summary:**
+- **FIELD_GUIDE** = Your navigation map (how to work)
+- **README_NOVA** (in relay/) = Message staging area for external Nova instances
+- **LEDGER_LOGBOOK** = Audit decision log (what you decided and why)
 
 ---
 
