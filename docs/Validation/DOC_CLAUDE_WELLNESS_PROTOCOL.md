@@ -433,6 +433,23 @@ When creating the wellness check report, use this structure:
 
 ## 🔄 INTEGRATION WITH OTHER PROTOCOLS
 
+### **DEEP_CLEAN_PROTOCOL.md**
+- **Relationship:** Wellness validates what Deep Clean creates
+- **When to use which:**
+  - **Use WELLNESS when:** Validating dashboard accuracy, monthly health checks, fresh Claude orientation
+  - **Use DEEP_CLEAN when:** Repository structure changed, maps are stale, bootstrap conflicts suspected
+- **Workflow:** `Major Change → Run DEEP_CLEAN → Update Dashboard → Run WELLNESS → Validate Dashboard`
+- **Escalation:** If wellness check reveals discrepancy >5 points, maps may be stale → Run [DEEP_CLEAN_PROTOCOL](/docs/repository/OBSERVATORY/DEEP_CLEAN_PROTOCOL.md)
+
+### **When to Escalate to DEEP_CLEAN**
+
+**If wellness check reveals:**
+- **Discrepancy >5 points** (maps may be stale)
+- **Structural issues** (FILE_INVENTORY outdated)
+- **Bootstrap conflicts** (embedded lists drifting)
+
+**Action:** Run [DEEP_CLEAN_PROTOCOL](/docs/repository/OBSERVATORY/DEEP_CLEAN_PROTOCOL.md) to update repository infrastructure, then re-run wellness check.
+
 ### **88MPH.md**
 - **Relationship:** This wellness protocol uses 88MPH methodology
 - **When to use which:** 88MPH for rapid assessment, Wellness for independent validation

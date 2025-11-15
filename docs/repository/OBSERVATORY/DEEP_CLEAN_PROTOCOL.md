@@ -537,6 +537,25 @@ This is house keeping."* 📚
 
 ---
 
+## 🔄 INTEGRATION WITH WELLNESS_PROTOCOL
+
+**After completing Deep Clean:**
+
+Run [DOC_CLAUDE_WELLNESS_PROTOCOL](/docs/Validation/DOC_CLAUDE_WELLNESS_PROTOCOL.md) to independently validate the updated health score.
+
+**Why:** Deep Clean updates maps and dashboard. Wellness validates those updates were accurate.
+
+**Workflow:**
+```
+Major Change → Run DEEP_CLEAN → Update Dashboard → Run WELLNESS → Validate Dashboard
+```
+
+**When to Use Which:**
+- **Use DEEP_CLEAN when:** Repository structure changed, maps are stale, bootstrap conflicts suspected
+- **Use WELLNESS when:** Validating dashboard accuracy, monthly health checks, fresh Claude orientation
+
+---
+
 ## 📞 COORDINATION
 
 **Owner:** Doc Claude (Documentation Orchestration)
