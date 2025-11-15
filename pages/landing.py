@@ -125,7 +125,10 @@ def render():
     st.markdown("## ⚡ Launch Manifesto")
 
     # Link to full philosophical covenant
-    st.info("📜 **Read the full philosophical covenant:** [The CFA Manifesto](https://github.com/ZiggyMack/CFA/blob/main/docs/i_am/thoughts/CFA_MANIFESTO.md) — Why CFA exists, the Trinity architecture, and our binding commitment to transparency.")
+    if st.button("📜 **Read the Full CFA Manifesto**", use_container_width=True):
+        st.session_state.page = 'verbose_manifesto'
+        st.rerun()
+    st.caption("Why CFA exists, the Trinity architecture, and our binding commitment to transparency.")
 
     st.write("""
     **Welcome to the Comparative Framework Analysis (CFA) Console,**
@@ -152,7 +155,7 @@ def render():
     # Inline button for Mr. Brute Ledger
     col_text, col_btn = st.columns([1, 5])
     with col_text:
-        st.markdown("- Audits hidden axioms through the")
+        st.markdown("- Audits hidden axioms through")
     with col_btn:
         if st.button("📓 **Mr. Brute Ledger**", key="manifesto_brute_link"):
             st.session_state.page = 'brute_ledger'
