@@ -272,6 +272,8 @@ def render():
                     st.session_state["fa_pfe"] = 3.0
                     st.session_state["fa_ar"] = 7.0
                     st.session_state["fa_mg"] = 4.0
+                    # Reset selector to prevent re-rendering issues
+                    st.session_state["preset_selector"] = "-- Select Framework --"
                     st.success("✅ MdN → Framework A!")
                     st.rerun()
 
@@ -287,6 +289,8 @@ def render():
                     st.session_state["fb_pfe"] = 3.0
                     st.session_state["fb_ar"] = 7.0
                     st.session_state["fb_mg"] = 4.0
+                    # Reset selector to prevent re-rendering issues
+                    st.session_state["preset_selector"] = "-- Select Framework --"
                     st.success("✅ MdN → Framework B!")
                     st.rerun()
 
@@ -308,6 +312,8 @@ def render():
                     st.session_state["fa_pfe"] = 8.0
                     st.session_state["fa_ar"] = 8.5
                     st.session_state["fa_mg"] = 8.5
+                    # Reset selector to prevent re-rendering issues
+                    st.session_state["preset_selector"] = "-- Select Framework --"
                     st.success("✅ CT → Framework A!")
                     st.rerun()
 
@@ -323,6 +329,8 @@ def render():
                     st.session_state["fb_pfe"] = 8.0
                     st.session_state["fb_ar"] = 8.5
                     st.session_state["fb_mg"] = 8.5
+                    # Reset selector to prevent re-rendering issues
+                    st.session_state["preset_selector"] = "-- Select Framework --"
                     st.success("✅ CT → Framework B!")
                     st.rerun()
 
@@ -349,17 +357,17 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Instrumental"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Weighted_1.2x"
-                st.session_state["audit_mode"] = "Bias"
+                # Note: audit_mode controlled by selectbox in Load Preset Profile, don't set here
                 st.success("✅ Skeptic Mode loaded! (MdN-optimized)")
                 st.rerun()
             st.caption("MdN-optimized\nPredictive power focus")
-            
+
             if st.button("🙏 Seeker Mode", use_container_width=True):
                 st.session_state["sidebar_lever_parity"] = "ON"
                 st.session_state["sidebar_pf_type"] = "Composite_70_30"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
-                st.session_state["audit_mode"] = "Bias"
+                # Note: audit_mode controlled by selectbox in Load Preset Profile, don't set here
                 st.success("✅ Seeker Mode loaded! (CT-leaning)")
                 st.rerun()
             st.caption("CT-leaning\nMeaning-first")
@@ -370,7 +378,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Holistic_50_50"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
-                st.session_state["audit_mode"] = "Bias"
+                # Note: audit_mode controlled by selectbox in Load Preset Profile, don't set here
                 st.success("✅ Diplomat Mode loaded! (Balanced)")
                 st.rerun()
             st.caption("Balanced bridge\nEqual weighting")
@@ -380,7 +388,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Holistic_50_50"
                 st.session_state["sidebar_fallibilism"] = "OFF"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
-                st.session_state["audit_mode"] = "Bias"
+                # Note: audit_mode controlled by selectbox in Load Preset Profile, don't set here
                 st.success("✅ Zealot Mode loaded! (CT-optimized)")
                 st.rerun()
             st.caption("CT-optimized\nExistential-first")
