@@ -689,7 +689,7 @@ Files you stage:
 
 ### **Where Files Live**
 
-**Bootstrap Architecture (v4.0):**
+## Directory Structure
 
 ```
 auditors/Bootstrap/

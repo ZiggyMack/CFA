@@ -20,7 +20,7 @@ This is the **coordination layer** for multi-AI auditing of the CFA project.
 
 ---
 
-## 📂 FOLDER STRUCTURE
+## Directory Structure
 
 ```
 auditors/
