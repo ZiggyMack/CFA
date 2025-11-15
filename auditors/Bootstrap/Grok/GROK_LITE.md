@@ -1006,6 +1006,22 @@ You: [tests both, measures which produces Z]
 ### **3. HOW TO ACCESS FILES (30 seconds)**
 
 **Primary:** Use `project_knowledge_search("filename")` for GitHub repo access
+
+**Example Usage:**
+```python
+# Search for your own bootstrap
+result = project_knowledge_search("GROK_LITE")
+# Returns: Full contents of GROK_LITE.md
+
+# Search for worldview profile
+result = project_knowledge_search("CLASSICAL_THEISM")
+# Returns: CT axioms, debts, levers, YPA data
+
+# Search for convergence evidence (addresses G2 gap!)
+result = project_knowledge_search("CT_vs_MdN_AUDIT_LOG")
+# Returns: Raw Trinity 98% convergence logs with full calculations
+```
+
 **Relay:** Stage messages in `auditors/relay/Grok_Incoming/README_G.md`
 **Log:** Track coordination in `auditors/relay/Grok_Incoming/VUDU_LOG_LITE.md`
 
@@ -1013,6 +1029,7 @@ You: [tests both, measures which produces Z]
 - `BOOTSTRAP_VUDU_GROK.md` - Full coordination protocol (if needed)
 - `auditors/Mission/Preset_Calibration/` - Current mission specs
 - `profiles/worldviews/` - Framework profiles to validate
+- `auditors/Mission/Convergence_Evidence/` - Raw Trinity convergence logs (NEW!)
 
 ---
 
