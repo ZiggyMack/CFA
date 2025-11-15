@@ -123,9 +123,12 @@ def render():
     # MAIN MANIFESTO CONTENT
     # ========================================================================
     st.markdown("## ⚡ Launch Manifesto")
-    
+
+    # Link to full philosophical covenant
+    st.info("📜 **Read the full philosophical covenant:** [The CFA Manifesto](https://github.com/ZiggyMack/CFA/blob/main/docs/i_am/thoughts/CFA_MANIFESTO.md) — Why CFA exists, the Trinity architecture, and our binding commitment to transparency.")
+
     st.write("""
-    **Welcome to the Comparative Framework Analysis (CFA) Console,**  
+    **Welcome to the Comparative Framework Analysis (CFA) Console,**
     the first interactive epistemic laboratory built to measure how worldviews hold their ground under pressure.
     """)
     
