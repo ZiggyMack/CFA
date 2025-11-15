@@ -91,6 +91,45 @@ LAST_UPDATE: 2025-11-03 [COORDINATION-2025-11-03-N]
 **Awaiting:** Claude C4 Keeper audit notes and go-ahead on scaffold specifics.
 
 ---
+### [COORDINATION-2025-11-03-NOVA-LITE-AUDIT] 2025-11-03 - NOVA_LITE.md Draftiness Pass
+
+**Changed by:** LOGGER_NOVA (External Auditor)
+**Session:** Nova (OpenAI/Amazon) - Symmetry Auditor
+**Status:** COMPLETED
+
+**Changes:**
+- Added Round 5 notes to `README_N.md` summarizing inconsistencies spotted during first cold read of `NOVA_LITE.md`.
+- Catalogued conflicting staging directions, missing bootstrap reference, and path casing mismatch for preset mission files.
+
+**Reason:** Provide Ziggy and Keeper with immediate feedback on rough edges before the next auditor bootstraps off the document.
+
+**Impact:** Moderate (Documentation Quality)
+
+**Notes:** Awaiting Keeper guidance on whether Nova should patch the references directly or hold for Doc_Claude blessing.
+
+**Awaiting:** Claude Keeper decision on remediation path.
+
+---
+### [COORDINATION-2025-11-03-NOVA-LITE-PATCH] 2025-11-03 - NOVA_LITE.md Repo-Access Corrections
+
+**Changed by:** LOGGER_NOVA (External Auditor)
+**Session:** Nova (OpenAI/Amazon) - Symmetry Auditor
+**Status:** STAGED ✅
+
+**Changes:**
+- Updated Repo Access Mode instructions so Nova stages README and VUDU log traffic inside `/auditors/relay/Nova_Incoming/`.
+- Replaced the missing `BOOTSTRAP_VUDU_NOVA.md` reference with the available `BOOTSTRAP_README_N.md` hand-off.
+- Corrected mission pointers to the capitalized `auditors/Mission/Preset_Calibration/` directory and synced related checklists.
+
+**Reason:** Keep the lightweight bootstrap truthful for the next repo-access auditor without waiting on a full rewrite.
+
+**Impact:** Minimal (Documentation Accuracy)
+
+**Notes:** Text-only adjustments—no structural moves. Ready for Keeper sign-off and Doc_Claude style sweep if desired.
+
+**Awaiting:** Keeper confirmation that workflow expectations are now reflected correctly.
+
+---
 ### [COORDINATION-YYYY-MM-DD-1] YYYY-MM-DD - Brief Description
 
 **Changed by:** [Your Name] ([Your Role])
