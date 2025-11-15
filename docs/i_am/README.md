@@ -59,8 +59,10 @@ Not documentation (how the system works).
    - How we discovered the protocols, why they matter
 
 5. **thoughts/** - Inspired writings
+   - CFA_MANIFESTO.md (the philosophical covenant - why CFA exists) 🆕
    - REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md
    - v3.5_EPIC_MILESTONE_SUMMARY.md
+   - v4.0_EPIC_MILESTONE_SUMMARY.md
    - Philosophical reflections separate from operational files
 
 ### **Archive**

@@ -701,6 +701,25 @@ Living Map System + Health Scoring: v4.0.0
 
 ---
 
+## 📜 The CFA Manifesto: Why This Exists
+
+**"All Named, All Priced" is not marketing copy. It is a binding covenant.**
+
+CFA exists because we believe you have the right to see the machinery—to understand the axioms frameworks assume, the debts they carry, and the values they optimize for. No hidden costs. No invisible commitments. No asymmetric information games.
+
+**Read the full philosophical covenant:** [The CFA Manifesto](docs/i_am/thoughts/CFA_MANIFESTO.md)
+
+**What you'll find:**
+- The foundational promise: Why epistemic transparency matters
+- The Trinity architecture: How Claude, Grok, and Nova adversarially audit together
+- The VuDu Light system: Making worldview commitments legible and comparable
+- The Gospel Problem: Why Living Maps prevent documentation decay
+- The Shaman's question: What is this *for*?
+
+*"The worldview you can't examine is the worldview that examines you."*
+
+---
+
 ## 📞 Contact
 
 - **GitHub**: [Repository link]
