@@ -278,8 +278,6 @@ def render():
                     st.session_state["fa_pfe"] = 3.0
                     st.session_state["fa_ar"] = 7.0
                     st.session_state["fa_mg"] = 4.0
-                    # Reset selector to prevent re-rendering issues
-                    st.session_state["preset_selector"] = "-- Select Framework --"
                     st.success("✅ MdN → Framework A!")
                     st.rerun()
 
@@ -295,8 +293,6 @@ def render():
                     st.session_state["fb_pfe"] = 3.0
                     st.session_state["fb_ar"] = 7.0
                     st.session_state["fb_mg"] = 4.0
-                    # Reset selector to prevent re-rendering issues
-                    st.session_state["preset_selector"] = "-- Select Framework --"
                     st.success("✅ MdN → Framework B!")
                     st.rerun()
 
@@ -318,8 +314,6 @@ def render():
                     st.session_state["fa_pfe"] = 8.0
                     st.session_state["fa_ar"] = 8.5
                     st.session_state["fa_mg"] = 8.5
-                    # Reset selector to prevent re-rendering issues
-                    st.session_state["preset_selector"] = "-- Select Framework --"
                     st.success("✅ CT → Framework A!")
                     st.rerun()
 
@@ -335,8 +329,6 @@ def render():
                     st.session_state["fb_pfe"] = 8.0
                     st.session_state["fb_ar"] = 8.5
                     st.session_state["fb_mg"] = 8.5
-                    # Reset selector to prevent re-rendering issues
-                    st.session_state["preset_selector"] = "-- Select Framework --"
                     st.success("✅ CT → Framework B!")
                     st.rerun()
 

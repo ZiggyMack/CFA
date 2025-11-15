@@ -19,7 +19,7 @@ The **Comparative Framework Audit (CFA)** is the first interactive epistemic lab
 ---
 
 <!-- deps: file_structure -->
-## Directory Structure
+## 📂 Directory Structure
 
 ```
 cfa_app/

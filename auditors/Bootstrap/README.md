@@ -27,7 +27,7 @@ This directory contains everything needed for context recovery, organized by tie
 
 ---
 
-## Directory Structure
+## 📂 Directory Structure
 
 ```
 Bootstrap/

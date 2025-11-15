@@ -27,7 +27,7 @@ LAST_UPDATE: 2025-11-14 [Initial creation - Tree Structure Tracking]
 
 **REQUIRED HEADER:** All tree structures MUST begin with:
 ```markdown
-## Directory Structure
+## 📂 Directory Structure
 ```
 
 **Why Standardize:**
@@ -207,10 +207,10 @@ grep -r "├──" --include="*.md" . | grep -v "\.Archive" | cut -d: -f1 | sor
 **Step 3: Standardize Header**
 Ensure every tree begins with:
 ```markdown
-## Directory Structure
+## 📂 Directory Structure
 
 ```
-(Note the blank line after header)
+(Note the blank line after header, 📂 folder emoji for easy indexing)
 
 **Step 4: Validate Against Living Maps**
 - Cross-reference with FILE_INVENTORY.md

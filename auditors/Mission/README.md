@@ -39,7 +39,7 @@ Organized mission-based work structure for VuDu Light coordination system - enab
 - **Status:** Coordination in progress
 - **Location:** `/auditors/missions/preset_calibration/`
 
-## Directory Structure
+## 📂 Directory Structure
 
 ```
 missions/

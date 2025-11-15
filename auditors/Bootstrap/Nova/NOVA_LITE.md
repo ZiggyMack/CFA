@@ -849,7 +849,7 @@ Files you stage:
 
 ### **Where Files Live**
 
-## Directory Structure
+## 📂 Directory Structure
 
 ```
 auditors/Bootstrap/

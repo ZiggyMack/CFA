@@ -63,7 +63,7 @@ npm run dev
 
 ---
 
-## Directory Structure
+## 📂 Directory Structure
 
 ```
 dashboard/
