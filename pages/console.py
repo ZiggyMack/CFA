@@ -140,18 +140,39 @@ def render():
     </style>
     """, unsafe_allow_html=True)
 
-    # Frozen position preset indicator (top-right corner, smaller size)
+    # Frozen position indicators (top-right corner, stacked vertically)
     active_preset = detect_active_preset()
+    audit_mode = st.session_state.get("audit_mode", "Bias")  # Default to Bias mode
+
+    # Color coding for audit mode
+    audit_color = "#28a745" if audit_mode == "Audit" else "#dc3545"  # Green for Audit, Red for Bias
+    audit_icon = "🔍" if audit_mode == "Audit" else "🎯"
+
     st.markdown(f"""
-    <div style="position: fixed; top: 15px; right: 15px; z-index: 9999;
-                background-color: rgba(255, 255, 255, 0.95);
-                border: 2px solid #1f77b4; border-radius: 6px;
-                padding: 6px 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
-        <div style="font-size: 0.7rem; font-weight: bold; color: #1f77b4; margin-bottom: 2px;">
-            Active Mode
+    <div style="position: fixed; top: 80px; right: 15px; z-index: 9999;">
+        <!-- Preset Mode Indicator -->
+        <div style="background-color: rgba(255, 255, 255, 0.95);
+                    border: 2px solid #1f77b4; border-radius: 6px;
+                    padding: 6px 10px; margin-bottom: 8px;
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+            <div style="font-size: 0.7rem; font-weight: bold; color: #1f77b4; margin-bottom: 2px;">
+                Active Mode
+            </div>
+            <div style="font-size: 0.9rem; font-weight: bold; color: #333;">
+                {active_preset}
+            </div>
         </div>
-        <div style="font-size: 0.9rem; font-weight: bold; color: #333;">
-            {active_preset}
+
+        <!-- Audit Mode Indicator -->
+        <div style="background-color: rgba(255, 255, 255, 0.95);
+                    border: 2px solid {audit_color}; border-radius: 6px;
+                    padding: 6px 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+            <div style="font-size: 0.7rem; font-weight: bold; color: {audit_color}; margin-bottom: 2px;">
+                Scoring Mode
+            </div>
+            <div style="font-size: 0.9rem; font-weight: bold; color: #333;">
+                {audit_icon} {audit_mode}
+            </div>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -290,6 +311,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Instrumental"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Weighted_1.2x"
+                st.session_state["audit_mode"] = "Bias"
                 st.success("✅ Skeptic Mode loaded! (MdN-optimized)")
                 st.rerun()
             st.caption("MdN-optimized\nPredictive power focus")
@@ -299,6 +321,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Composite_70_30"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
+                st.session_state["audit_mode"] = "Bias"
                 st.success("✅ Seeker Mode loaded! (CT-leaning)")
                 st.rerun()
             st.caption("CT-leaning\nMeaning-first")
@@ -309,6 +332,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Holistic_50_50"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
+                st.session_state["audit_mode"] = "Bias"
                 st.success("✅ Diplomat Mode loaded! (Balanced)")
                 st.rerun()
             st.caption("Balanced bridge\nEqual weighting")
@@ -318,6 +342,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Holistic_50_50"
                 st.session_state["sidebar_fallibilism"] = "OFF"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
+                st.session_state["audit_mode"] = "Bias"
                 st.success("✅ Zealot Mode loaded! (CT-optimized)")
                 st.rerun()
             st.caption("CT-optimized\nExistential-first")
@@ -379,11 +404,27 @@ def render():
         help="**Equal (1.0x):** Debts count same as axioms. **Weighted (1.2x):** Debts cost 20% more. [ΔYPA: Weighted slightly lowers both scores ~-0.05-0.10] Higher BFI denominator reduces YPA. Both frameworks have 4 debts, so weighted impacts both similarly."
     )
 
+    st.sidebar.markdown("---")
+
+    # Audit Mode Toggle (Bias vs Adversarial Audit)
+    if "audit_mode" not in st.session_state:
+        st.session_state["audit_mode"] = "Bias"  # Default to Bias mode
+
+    audit_mode_options = ["Bias", "Audit"]
+
+    audit_mode = st.sidebar.selectbox(
+        "🔍 Scoring Mode",
+        audit_mode_options,
+        key="audit_mode",
+        help="**Bias Mode (🎯):** Full bias scoring - auditors apply their native lenses with bias intact. **Audit Mode (🔍):** Adversarial audit - scores reflect rigorous adversarial checking (Trinity convergence). Switch to Audit to see adversarially-validated scores."
+    )
+
     cfg = {
         "lever_parity": lever_parity,
         "pf_type": pf_type,
         "fallibilism_bonus": fall_bonus,
-        "bfi_debt_weight": bfi_weight
+        "bfi_debt_weight": bfi_weight,
+        "audit_mode": audit_mode
     }
 
     st.sidebar.markdown("---")

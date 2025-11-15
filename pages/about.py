@@ -56,11 +56,12 @@ def render():
     # ========================================================================
     # TABS FOR ORGANIZED CONTENT
     # ========================================================================
-    tab1, tab2, tab3, tab4 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "🎯 What is CFA?",
         "📖 The Audit Story",
         "🤝 The Team",
-        "⚙️ Technical Details"
+        "⚙️ Technical Details",
+        "🏰 The Estate Tour"
     ])
     
     # ------------------------------------------------------------------------
@@ -427,12 +428,275 @@ def render():
         st.markdown("---")
         st.markdown("""
         ### Contact & Contribute
-        
+
         - **GitHub**: [Repository link]
         - **Feedback**: Use the console and export your runs!
         - **Collaboration**: Propose new frameworks to audit
         """)
-    
+
+    # ------------------------------------------------------------------------
+    # TAB 5: The Estate Tour (NEW)
+    # ------------------------------------------------------------------------
+    with tab5:
+        st.markdown("""
+        ## 🏰 Welcome to Mr. Brute's Estate
+
+        The CFA repository is like a well-maintained estate - many rooms, each with a specific purpose.
+        This tour shows you what's been built, what's polished, and where we're headed next.
+        """)
+
+        st.info("💡 **Tip:** Each room represents a piece of repository infrastructure that keeps CFA organized, discoverable, and maintainable.")
+
+        st.markdown("---")
+
+        # ====================================================================
+        # COMPLETED ROOMS (Expandable Cards)
+        # ====================================================================
+        st.markdown("### ✅ Completed Rooms (91% of Estate)")
+
+        with st.expander("📍 The Map Room - Dependency Tracking", expanded=False):
+            st.markdown("""
+            **What It Does:**
+            Tracks all file dependencies so you know which files connect to which.
+
+            **Key Files:**
+            - `MASTER_DEPENDENCY_MAP.md`
+            - Health reports
+            - Dependency visualization tools
+
+            **Why It Matters:**
+            Safe refactoring! Know all connections before moving/deleting files.
+            """)
+
+        with st.expander("📚 The Library - Documentation Standards", expanded=False):
+            st.markdown("""
+            **What It Does:**
+            Ensures all documentation follows consistent quality standards.
+
+            **Key Files:**
+            - Doc Claude blessing protocol
+            - Semantic header definitions
+            - README standards
+
+            **Why It Matters:**
+            Quality is maintained across all files - no documentation rot!
+            """)
+
+        with st.expander("🔍 The Archives - Review & Memory", expanded=False):
+            st.markdown("""
+            **What It Does:**
+            Stores completed work and enforces "build-on-prior" principle.
+
+            **Key Files:**
+            - Review Claude role
+            - Archived task briefs
+            - Historical decisions
+
+            **Why It Matters:**
+            Institutional memory - no work gets lost or forgotten!
+            """)
+
+        with st.expander("📝 The Ledger Room - Change Tracking", expanded=False):
+            st.markdown("""
+            **What It Does:**
+            Logs all repository changes with proper categorization.
+
+            **Key Files:**
+            - `REPO_LOG.md`
+            - REPO_LOG_ASSISTANT protocols
+            - Change audit trail
+
+            **Why It Matters:**
+            Full transparency - every change is documented and traceable!
+            """)
+
+        with st.expander("⚠️ The Warning Tower - Event Horizon Protection", expanded=False):
+            st.markdown("""
+            **What It Does:**
+            Prevents context crashes by monitoring token usage zones.
+
+            **Key Files:**
+            - Crash prevention protocols
+            - Zone awareness guidelines
+            - Handoff procedures
+
+            **Why It Matters:**
+            Survival guaranteed - no work lost to context crashes!
+            """)
+
+        with st.expander("🗺️ The Navigation Hall - Wayfinding", expanded=False):
+            st.markdown("""
+            **What It Does:**
+            Helps you find any file, role, or task without asking for help.
+
+            **Key Files:**
+            - `WAYFINDING_GUIDE.md`
+            - Role directory
+            - Task → File mapping
+
+            **Why It Matters:**
+            Self-service discovery - find what you need instantly!
+            """)
+
+        with st.expander("🎭 The Costume Room - Templates & Examples", expanded=False):
+            st.markdown("""
+            **What It Does:**
+            Shows excellence through concrete examples (good vs. bad).
+
+            **Key Files:**
+            - `examples/excellence/` directory
+            - 4 GOOD_*_EXAMPLE.md files
+            - 4 bad_vs_good/*.md comparisons
+            - `QUALITY_RUBRICS.md` (0-100 scoring)
+
+            **Why It Matters:**
+            Learn by example - see what quality looks like!
+            """)
+
+        with st.expander("📊 The Observatory - Metrics & Dashboards", expanded=False):
+            st.markdown("""
+            **What It Does:**
+            Tracks repository health trends over time.
+
+            **Key Files:**
+            - `REPO_HEALTH_DASHBOARD.md`
+            - Historical snapshots (weekly)
+            - 3-month trend tracking
+            - Aggregate health score (95/100)
+
+            **Why It Matters:**
+            Know the health trajectory - catch degradation early!
+            """)
+
+        with st.expander("🗂️ Destroyer Claude - Log Management & Archival", expanded=False):
+            st.markdown("""
+            **What It Does:**
+            Manages log size and archives old entries when they get too large.
+
+            **Key Files:**
+            - `ROLE_DESTROYER.md` (v1.1.0)
+            - Archival protocols
+            - Size-based triggers (~10MB threshold)
+
+            **Why It Matters:**
+            Long-term sustainability - CFA can scale without drowning in history!
+            """)
+
+        with st.expander("🎓 The Training Grounds - Skill Development", expanded=False):
+            st.markdown("""
+            **What It Does:**
+            Progressive skill paths from beginner to expert.
+
+            **Key Files:**
+            - `TRAINING_GROUNDS.md`
+            - 11 skills with checkpoints
+            - Common mistakes guide
+            - Skill level progression
+
+            **Why It Matters:**
+            Onboarding made easy - know what to learn next!
+            """)
+
+        with st.expander("🔧 The Workshop - Automation & Tools (Task Brief Only)", expanded=False):
+            st.markdown("""
+            **What It Does:**
+            Automation tools (header validator, link checker, format linter).
+
+            **Status:** Task brief created, awaiting pain point validation
+
+            **Key Files:**
+            - `TASK_WORKSHOP_AUTOMATION_v1.md`
+
+            **Why It Matters:**
+            Future efficiency - automate repetitive quality checks!
+            """)
+
+        st.markdown("---")
+
+        # ====================================================================
+        # INNOVATION SHOWCASE - THE BIG REVEAL
+        # ====================================================================
+        st.markdown("### 🌟 The Innovation Showcase - **UNVEILED!**")
+
+        st.success("""
+        **🎉 NEW ADDITION: The Innovation Showcase Room**
+
+        This is where CFA methodology meets real-world impact!
+        """)
+
+        with st.expander("🌟 The Innovation Showcase - Case Studies Gallery", expanded=True):
+            st.markdown("""
+            **What It Does:**
+            Demonstrates CFA's real-world applications through documented case studies.
+
+            **Structure:**
+            - **Master Repo:** Gallery index + submission guidelines
+            - **External Mini-Repos:** Individual case studies (self-contained)
+            - **Review Process:** Eligibility criteria + quality standards
+
+            **Key Files:**
+            - `INNOVATION_SHOWCASE.md` (gallery structure)
+            - Submission guidelines
+            - Placeholder for first case study
+
+            ---
+
+            **Why This Room Matters:**
+
+            **External Value:**
+            Proves CFA works beyond self-development - shows real-world impact!
+
+            **Audience:**
+            Stakeholders, potential adopters, and humanity 🌍
+
+            **Evolution:**
+            From "building the tool" → "using the tool to build solutions"
+
+            ---
+
+            **Case Study Examples (Future):**
+            - Nursing innovation evaluation
+            - Voting system redesign assessment
+            - Policy framework comparison
+            - Educational curriculum audit
+
+            **Submission Criteria:**
+            - Must use CFA methodology (BFI, YPA, adversarial audit)
+            - Real-world problem addressed
+            - Documented outcomes
+            - Reproducible process
+
+            ---
+
+            **Status:** Gallery structure complete - accepting first submission!
+
+            **Ready to Showcase Your Work?**
+            See `INNOVATION_SHOWCASE.md` for submission guidelines.
+            """)
+
+        st.markdown("---")
+
+        st.markdown("""
+        ### 🏗️ Future Rooms (Planned)
+
+        **The estate is 91% complete.** The remaining 9% are polish and optional enhancements:
+
+        - 🤖 **AI Agent Integration Room** - API-first CFA for programmatic access
+        - 🧪 **Experimental Methods Lab** - Testing new evaluation approaches
+        - 📖 **Public Documentation Hub** - User-facing guides and tutorials
+
+        **Status:** Deferred until current rooms are battle-tested
+
+        ---
+
+        ## ⚖️ The Estate Philosophy
+
+        > *"The estate is very livable now. The rest is polish."* ✨
+
+        Every room serves a purpose. Every door opens to something useful.
+        Mr. Brute's ledger is complete - transparent, navigable, and ready for the world.
+        """)
+
     # Footer
     st.markdown("---")
     st.caption("*'Where ideas reveal their true weight, and honesty becomes quantifiable.'*")

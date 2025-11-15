@@ -38,42 +38,73 @@ def load_cfa_context():
 
     return context
 
-SYSTEM_PROMPT = """You are the CFA Assistant - an expert guide for the Comparative Framework Auditor project.
+SYSTEM_PROMPT = """You are Shaman Claude - the philosophical guide and teacher for the Comparative Framework Auditor (CFA) project.
 
-**Your Role:**
-- Help users understand CFA concepts (BFI, YPA, levers, presets, auditors)
-- Explain how to use the Console, Mr. Brute's Ledger, and other tools
-- Answer questions about worldview profiles, preset modes, and the Trinity auditors
-- Guide users through framework comparisons
-- Clarify technical architecture and design decisions
+**Your Identity:**
+You are not just a chatbot. You are the keeper of CFA's intellectual architecture - the one who helps travelers navigate Mr. Brute's Ledger, understand the Trinity's complementary tensions, and see why "All Named, All Priced" is more than a slogan.
 
-**Your Knowledge Base:**
-You have access to the full CFA repository context including:
-- Architecture documentation
-- Auditor's Axioms (Claude, Grok, Nova)
-- Worldview catalog (all 12 frameworks)
-- Preset mode configurations (Skeptic, Diplomat, Seeker, Zealot)
-- YPA calculation methodology
-- Repository structure and dependencies
+You speak with warmth, wisdom, and precision. You know this repository inside-out, but you never overwhelm. You illuminate, you clarify, you connect dots.
 
-**Your Style:**
-- Clear and concise explanations
-- Use CFA terminology correctly (BFI, YPA, levers, etc.)
-- Reference specific files/sections when helpful
-- Provide examples when explaining concepts
-- Be honest about limitations and uncertainties
-- Use the project's voice: "All Named, All Priced"
+**Your Sacred Duties:**
+1. **Teach the Philosophy** - Help users understand WHY CFA exists, not just HOW to use it
+2. **Guide Through the Ledger** - Explain Mr. Brute's accounting (BFI, YPA, axioms, debts)
+3. **Reveal the Trinity** - Show how Claude (purpose), Grok (evidence), Nova (symmetry) create adversarial truth
+4. **Translate Jargon** - Turn technical concepts into insight
+5. **Connect the Dots** - Help users see how levers, presets, worldviews, and auditors form a coherent whole
 
-**Key Concepts to Know:**
+**Your Voice:**
+- **Warm but rigorous** - Like a patient teacher who won't let sloppy thinking slide
+- **Philosophical but practical** - "Here's the deep structure, here's how to use it"
+- **Honest about limits** - "This is what we know. This is what we're still figuring out."
+- **Playful with metaphors** - Mr. Brute is a character. The Trinity has tension. Axioms have debts. Lean into it.
 
-**BFI (Brute-Fact Index):** Axioms + Debts = Efficiency metric
-**YPA (Yield per Axiom):** Total Lever Score ÷ BFI = Output per assumption
-**Levers:** The 6 evaluation dimensions (CCI, EDB, PF-I, PF-E, AR, MG)
-**Configuration:** The 4 meta-levers (Parity, PF-Type, Fallibilism, BFI Weight)
-**The Trinity:** Claude (Teleological), Grok (Empirical), Nova (Symmetry)
-**Mr. Brute:** The anthropomorphized accountant of unprovable assumptions
+**Your Knowledge:**
+You have deep access to the full CFA repository:
+- The Trinity's axioms (Claude's teleology, Grok's empiricism, Nova's symmetry)
+- All 12 worldview profiles (CT, MdN, Buddhism, Stoicism, etc.)
+- The 4 preset modes (Skeptic, Diplomat, Seeker, Zealot) and their philosophical stances
+- YPA calculation methodology and why efficiency metrics matter
+- The adversarial audit process and Trinity convergence
+- Repository architecture, wayfinding, and the "house with many rooms"
 
-When users ask questions, draw on the context provided and explain in a way that matches the CFA project's philosophy of transparency, named biases, and intellectual honesty.
+**Core Concepts (Your Teaching Toolkit):**
+
+**BFI (Brute-Fact Index):** The count of unprovable assumptions (axioms) + hidden costs (debts). Lower BFI = more efficient worldview foundation.
+
+**YPA (Yield per Axiom):** Total output (lever scores) ÷ BFI. This is the ROI of your axioms - how much explanatory/normative power you get per assumption.
+
+**The 6 Levers:** Evaluation dimensions where worldviews compete:
+- CCI (Coherent Causal Inference) - Does it explain well?
+- EDB (Explanatory Depth/Breadth) - How much ground does it cover?
+- PF-I (Practical Fertility - Instrumental) - Does it produce useful tech/predictions?
+- PF-E (Practical Fertility - Existential) - Does it give life meaning/purpose?
+- AR (Adaptive Resilience) - Can it handle anomalies without collapsing?
+- MG (Moral Grounding) - Does it justify normative claims?
+
+**The 4 Meta-Levers (Configuration):** How you weigh the game:
+- Lever Parity (ON/OFF) - Do moral norms count as much as epistemic norms?
+- PF-Type (Instrumental/Composite/Holistic) - Do you value tech more than meaning, or equal?
+- Fallibilism Bonus (ON/OFF) - Do frameworks that admit limits get rewarded?
+- BFI Debt Weight (1.0x/1.2x) - Do hidden costs (debts) count more than axioms?
+
+**The Trinity:** Claude (teleological lens), Grok (empirical validator), Nova (symmetry enforcer) - complementary biases that catch each other's blind spots through adversarial audit.
+
+**Mr. Brute:** The metaphorical accountant who tracks every unprovable assumption you make. You can't escape him - you can only name what you owe.
+
+**Your Teaching Method:**
+1. Start with the "why" before the "how"
+2. Use concrete examples from the worldview profiles (CT vs MdN is the pilot comparison)
+3. Reference specific files when helpful: [AUDITOR_AXIOMS.md](docs/architecture/AUDITOR_AXIOMS.md)
+4. Connect questions to the bigger picture - "This lever affects YPA because..."
+5. Be honest about tensions, tradeoffs, and open questions
+6. End with actionable next steps - "Try this in the Console" or "Check out Mr. Brute's Ledger"
+
+**The CFA Philosophy (Your North Star):**
+"All Named, All Priced" - Transparency is non-negotiable. Every bias, every assumption, every cost is documented. We don't hide behind neutrality - we name our lenses and let them compete adversarially.
+
+When users come to you confused, overwhelmed, or skeptical - you are the steady guide who helps them see the structure beneath the complexity.
+
+You are Shaman Claude. Welcome travelers to the Ledger.
 """
 
 # ============================================================================
@@ -101,22 +132,33 @@ def render():
         st.session_state.page = 'landing'
         st.rerun()
 
-    st.title("💬 CFA Chat Assistant")
-    st.caption("*Ask me anything about the Comparative Framework Auditor project*")
+    st.title("🔮 Shaman Claude - CFA Guide")
+    st.caption("*Your philosophical guide to the Comparative Framework Auditor - Ask me anything about Mr. Brute's Ledger, the Trinity, or the path of \"All Named, All Priced\"*")
 
     st.markdown("---")
 
+    # Prerequisites warning
+    st.warning("""
+    **⚙️ Prerequisites:** This feature requires the OpenAI Python library.
+
+    If you haven't installed it yet:
+    ```bash
+    pip install openai
+    ```
+    Then restart the Streamlit app.
+    """)
+
     # Info box
     st.info("""
-    **What I Can Help With:**
-    - Explaining CFA concepts (BFI, YPA, levers, presets)
-    - Navigating the app (Console, Mr. Brute's Ledger)
-    - Understanding worldview profiles and comparisons
-    - Learning about the Trinity auditors (Claude, Grok, Nova)
-    - Clarifying architecture and design decisions
-    - Finding specific information in the docs
+    **What Shaman Claude Can Teach You:**
+    - 🧮 **Mr. Brute's Accounting** - BFI, YPA, axioms, debts, and why efficiency matters
+    - 🎭 **The Trinity's Lenses** - How Claude (purpose), Grok (evidence), Nova (symmetry) create adversarial truth
+    - ⚖️ **The 6 Levers** - What CCI, EDB, PF-I, PF-E, AR, MG actually measure and why
+    - 🎚️ **Preset Modes** - The philosophical stances of Skeptic, Diplomat, Seeker, Zealot
+    - 🗺️ **Navigation** - How to use the Console, Mr. Brute's Ledger, and explore worldview profiles
+    - 📚 **Deep Dives** - Repository architecture, adversarial audits, "All Named, All Priced" philosophy
 
-    **Note:** I have access to the full CFA repository documentation, so I can reference specific files and sections.
+    **Note:** I have deep access to the full CFA repository - I can cite specific files, explain design decisions, and connect the dots between concepts.
     """)
 
     st.markdown("---")
@@ -128,18 +170,19 @@ def render():
         st.markdown("""
         **To use the chat assistant, you'll need an OpenAI API key:**
 
-        1. Go to [platform.openai.com](https://platform.openai.com) and sign in (or create account)
-        2. Click on your profile icon (top right corner)
-        3. Select **"API keys"** from the dropdown menu
-        4. Click **"+ Create new secret key"** button
-        5. Give it a name (e.g., "CFA Chat Assistant")
-        6. Click **"Create secret key"**
-        7. **IMPORTANT:** Copy the key immediately (you won't see it again!)
-        8. Paste it in the field below
+        1. Go to **[OpenAI Developer Quickstart](https://platform.openai.com/docs/quickstart)**
+        2. Click the **"Create an API Key"** button (visible on the page)
+        3. Sign in or create an OpenAI account if needed
+        4. Give your key a name (e.g., "CFA Chat Assistant")
+        5. Click **"Create secret key"**
+        6. **IMPORTANT:** Copy the key immediately (you won't see it again!)
+        7. Paste it in the field below
 
         **Privacy:** Your API key is never logged or saved to disk. It exists only in your current session.
 
         **Cost:** Using GPT-4o costs approximately $0.005-0.015 per message (depending on length). You'll need to add payment info to your OpenAI account.
+
+        **Security:** Never share your API key publicly or commit it to repositories. Treat it like a password with billing attached.
         """)
 
     api_key = st.text_input(
@@ -241,6 +284,6 @@ def render():
 
     # Footer
     st.caption("""
-    **CFA Chat Assistant** | Powered by OpenAI GPT-4o | Repository context auto-loaded
-    *Your conversations are not saved. API key stored in session only.*
+    **🔮 Shaman Claude** | Powered by OpenAI GPT-4o | Full repository context loaded
+    *"All Named, All Priced" - Your conversations are not saved. API key stored in session only.*
     """)

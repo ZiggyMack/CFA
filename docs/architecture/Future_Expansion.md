@@ -9,39 +9,6 @@ MOVES_WITH: /docs/architecture/
 LAST_UPDATE: 2025-11-11 [B-STORM_5 Click 4: Tier 2 Light complete]
 --->
 
----
-ethics_front_matter:
-  purpose: "Document roadmap commitments and expansion scope to prevent unexamined purpose creep - ensures future enhancements serve repository health (not feature bloat) and stakeholder value is explicit before implementation"
-  symmetry_axis: ["transparency", "stakeholder_impact", "scope_governance"]
-  stakeholders:
-    primary: ["repository_maintainers", "architect_claude", "tier4_task_planners"]
-    secondary: ["doc_claude", "process_claude", "future_claudes"]
-  invariants:
-    - id: transparency
-      state: examined
-      evidence: "## PRIORITY TIERS FOR IMPLEMENTATION (lines 122-283) - All expansion rooms categorized by ROI (Tier 1 Full, Tier 2 Light, Tier 3 Defer) with explicit rationale for prioritization + ## IMPLEMENTATION ROADMAP (lines 324-364) - Timeline and dependencies documented"
-      smv_tag: scenario_a
-    - id: stakeholder_impact
-      state: examined
-      evidence: "## SUCCESS METRICS (lines 390-412) - Measurable benefits defined for each room (time saved, mistakes caught, confidence gained) + ## ARCHITECT'S VERDICT (lines 414-432) - 'Is house easy enough for guests to navigate alone?' - Stakeholder experience prioritized"
-      smv_tag: scenario_a
-    - id: scope_governance
-      state: examined
-      evidence: "## TIER 4 ACTIVE TASK CANDIDATES (lines 366-388) - Clear criteria for when to activate expansion tasks vs. defer: 'Never activate unless (a) real pain point exists OR (b) user explicitly requests' - Prevents premature optimization"
-      smv_tag: scenario_a
-  tensions:
-    - description: "Roadmap ambition vs. delivery capacity - risk of Feature Creep if all 'Missing Rooms' pursued without validating pain points first"
-      mitigation: "Tier system (1 Full, 2 Light, 3 Defer) + SUCCESS METRICS require measurable ROI (lines 390-412) + TIER 4 ACTIVE TASK CANDIDATES section (lines 366-388) gates activation: 'Only activate when pain point validated OR user requests'"
-    - description: "Planning paralysis vs. iteration speed - too much roadmap documentation may slow down adaptation to emerging needs"
-      mitigation: "Living document (v1.3, updated 2025-11-11 after B-STORM_5) + Architect's Verdict philosophy (lines 414-432): 'Make wayfinding effortless. Everything else follows' - Prioritizes immediate value over comprehensive planning"
-    - description: "Innovation Showcase may promise more than repository can deliver - external project repos create maintenance dependencies"
-      mitigation: "Phase 4 designation (lines 435-700) - explicitly deferred until Phase 1-3 stable + External repos (NursingInnovation/, VotingSystemRedesign/) are separate - master repo only links, doesn't maintain mini-ideas"
-  last_examined:
-    by: "C4"
-    on: "2025-11-11"
-  review_window_days: 30
----
-
 # Future_Expansion.md - Repository Enhancement Roadmap
 
 **Purpose:** Track "Missing Rooms" identified by Architect Claude for future Tier 4 implementation
@@ -49,6 +16,8 @@ ethics_front_matter:
 **Status:** Planning phase - rooms prioritized, implementation deferred
 
 **Origin:** Architect Claude assessment (2025-11-02) identified gaps after core infrastructure complete
+
+📋 **Ethics Metadata:** [See Footer](#ethics-metadata)
 
 ---
 
@@ -748,3 +717,40 @@ Vision: Sustainable system that demonstrates real-world impact
 **Status:** Planning document - Ready for task activation
 
 **"The estate is very livable now. The rest is polish."** ✨
+
+---
+
+## 📋 ETHICS METADATA
+
+```yaml
+ethics_front_matter:
+  purpose: "Document roadmap commitments and expansion scope to prevent unexamined purpose creep - ensures future enhancements serve repository health (not feature bloat) and stakeholder value is explicit before implementation"
+  symmetry_axis: ["transparency", "stakeholder_impact", "scope_governance"]
+  stakeholders:
+    primary: ["repository_maintainers", "architect_claude", "tier4_task_planners"]
+    secondary: ["doc_claude", "process_claude", "future_claudes"]
+  invariants:
+    - id: transparency
+      state: examined
+      evidence: "## PRIORITY TIERS FOR IMPLEMENTATION (lines 122-283) - All expansion rooms categorized by ROI (Tier 1 Full, Tier 2 Light, Tier 3 Defer) with explicit rationale for prioritization + ## IMPLEMENTATION ROADMAP (lines 324-364) - Timeline and dependencies documented"
+      smv_tag: scenario_a
+    - id: stakeholder_impact
+      state: examined
+      evidence: "## SUCCESS METRICS (lines 390-412) - Measurable benefits defined for each room (time saved, mistakes caught, confidence gained) + ## ARCHITECT'S VERDICT (lines 414-432) - 'Is house easy enough for guests to navigate alone?' - Stakeholder experience prioritized"
+      smv_tag: scenario_a
+    - id: scope_governance
+      state: examined
+      evidence: "## TIER 4 ACTIVE TASK CANDIDATES (lines 366-388) - Clear criteria for when to activate expansion tasks vs. defer: 'Never activate unless (a) real pain point exists OR (b) user explicitly requests' - Prevents premature optimization"
+      smv_tag: scenario_a
+  tensions:
+    - description: "Roadmap ambition vs. delivery capacity - risk of Feature Creep if all 'Missing Rooms' pursued without validating pain points first"
+      mitigation: "Tier system (1 Full, 2 Light, 3 Defer) + SUCCESS METRICS require measurable ROI (lines 390-412) + TIER 4 ACTIVE TASK CANDIDATES section (lines 366-388) gates activation: 'Only activate when pain point validated OR user requests'"
+    - description: "Planning paralysis vs. iteration speed - too much roadmap documentation may slow down adaptation to emerging needs"
+      mitigation: "Living document (v1.3, updated 2025-11-11 after B-STORM_5) + Architect's Verdict philosophy (lines 414-432): 'Make wayfinding effortless. Everything else follows' - Prioritizes immediate value over comprehensive planning"
+    - description: "Innovation Showcase may promise more than repository can deliver - external project repos create maintenance dependencies"
+      mitigation: "Phase 4 designation (lines 435-700) - explicitly deferred until Phase 1-3 stable + External repos (NursingInnovation/, VotingSystemRedesign/) are separate - master repo only links, doesn't maintain mini-ideas"
+  last_examined:
+    by: "C4"
+    on: "2025-11-11"
+  review_window_days: 30
+```
