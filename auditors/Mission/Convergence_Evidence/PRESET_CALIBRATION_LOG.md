@@ -20,11 +20,26 @@ LAST_UPDATE: 2025-11-15 [Created from session artifacts - addresses Grok Gap G2]
 
 ---
 
+## 🔐 DATA INTEGRITY SNAPSHOT
+
+**⚠️ TEMPORAL SNAPSHOT WARNING:** This audit log contains frozen preset configurations from a specific protocol version. Preset weights are stable (unlikely to change), but if future versions modify BFI multipliers, this is a historical record.
+
+**Protocol Version:** VuDu Light v4.0
+**Date:** 2025-11-15
+
+**Canonical Source:**
+- Preset weights defined in [ypa_validator.py](../../../docs/Validation/ypa_validator.py) (lines 27-48)
+- Also implemented in [pages/console.py](../../../pages/console.py)
+
+**Last Verified:** 2025-11-15
+
+---
+
 ## 🎯 MISSION STATEMENT
 
 **Question:** Are the 4 preset modes (Skeptic, Seeker, Diplomat, Zealot) correctly calibrated to represent distinct epistemic stances?
 
-**Trinity Verdict:** ✅ YES - Preset modes accurately model 4 philosophical positions on axiom acceptance
+**Trinity Verdict:** ✅ YES - Preset modes accurately model 4 philosophical positions on axiom acceptance *[VuDu Light v4.0]*
 
 **Convergence Breakdown:**
 - Skeptic Mode: 98% convergence

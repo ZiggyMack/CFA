@@ -1013,13 +1013,18 @@ You: [tests both, measures which produces Z]
 result = project_knowledge_search("GROK_LITE")
 # Returns: Full contents of GROK_LITE.md
 
-# Search for worldview profile
-result = project_knowledge_search("CLASSICAL_THEISM")
-# Returns: CT axioms, debts, levers, YPA data
+# Search for worldview profile (canonical YAML scores)
+result = project_knowledge_search("CLASSICAL_THEISM.yaml")
+# Returns: CT canonical scores (axioms, debts, levers, YPA) from profiles/worldviews/
+# Note: .yaml files are canonical source (v4.0 architecture), .md files are documentation
 
 # Search for convergence evidence (addresses G2 gap!)
 result = project_knowledge_search("CT_vs_MdN_AUDIT_LOG")
 # Returns: Raw Trinity 98% convergence logs with full calculations
+# Warning: Audit logs contain frozen snapshots - verify versions match current .yaml files
+
+# Validate live calculations (addresses G1 gap!)
+# Run: python docs/Validation/ypa_validator.py --profile CLASSICAL_THEISM.yaml
 ```
 
 **Relay:** Stage messages in `auditors/relay/Grok_Incoming/README_G.md`
