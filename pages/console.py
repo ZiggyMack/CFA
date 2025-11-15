@@ -236,20 +236,20 @@ def render():
 
         preset_options = {
             "-- Select Framework --": None,
-            # Fully audited (98% Trinity convergence)
-            "✅ Methodological Naturalism (MdN)": "mdn",
-            "✅ Classical Theism (CT)": "ct",
-            # Profiles exist but not yet fully audited
-            "🔜 Buddhism": "coming",
-            "🔜 Desiderata Believers": "coming",
-            "🔜 Error Theory": "coming",
-            "🔜 Existentialism": "coming",
-            "🔜 Hinduism": "coming",
-            "🔜 Islam": "coming",
-            "🔜 Mormonism (LDS)": "coming",
-            "🔜 Null Hypothesis": "coming",
-            "🔜 Orthodox Judaism": "coming",
-            "🔜 Process Theology": "coming"
+            # Fully audited (98% Trinity convergence) - emojis match Brute Ledger
+            "📘 Methodological Naturalism (MdN)": "mdn",
+            "📕 Classical Theism (CT)": "ct",
+            # Profiles exist but not yet fully audited (emojis match Brute Ledger)
+            "☸️ Buddhism": "coming",
+            "🤔 Desiderata Believers": "coming",
+            "⛔ Error Theory": "coming",
+            "🎭 Existentialism": "coming",
+            "🕉️ Hinduism": "coming",
+            "☪️ Islam": "coming",
+            "📖 Mormonism (LDS)": "coming",
+            "❓ Null Hypothesis": "coming",
+            "🕎 Orthodox Judaism": "coming",
+            "🌊 Process Theology": "coming"
         }
         
         selected_preset = st.selectbox(
