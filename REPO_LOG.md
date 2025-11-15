@@ -65,34 +65,102 @@ When files are added or deleted, use diff notation like git commits:
 
 ## 📊 COORDINATION CHECKPOINT
 
-**Last Full Coordination:** 2025-11-14 🆕 (Persistent Home Button)
-**Entries Since:** 50 🆕 (+1 UX navigation entry)
+**Last Full Coordination:** 2025-11-14 🆕 (Map Room/Observatory Migration)
+**Entries Since:** 51 🆕 (+1 STRUCTURE reorganization entry)
 **Pending Items:** 4 (Audit Mode toggle, Grok feedback processing, Shaman Claude persona, import spec doc)
 
 ### Category Pointers:
 
-- **[UX]:** Last entry 2025-11-14-2 🆕🔥 (Persistent Home Button)
-- **[NAVIGATION]:** Last entry 2025-11-14-2 🆕🔥 (Sticky Navigation)
+- **[STRUCTURE]:** Last entry 2025-11-14-3 🆕🔥 (Map Room/Observatory Migration)
+- **[ARCHITECTURE]:** Last entry 2025-11-14-3 🆕🔥 (Dual-Room Philosophy)
+- **[UX]:** Last entry 2025-11-14-2 🆕 (Persistent Home Button)
+- **[NAVIGATION]:** Last entry 2025-11-14-2 🆕 (Sticky Navigation)
 - **[CONSOLIDATION]:** Last entry 2025-11-12-3 🆕 (File Consolidation)
 - **[VALIDATION]:** Last entry 2025-11-12-2 🆕 (Deep Clean Protocol)
-- **[STRUCTURE]:** Last entry 2025-11-12-1 🆕 (Repository Cleanup)
 - **[INTEGRATION]:** Last entry 2025-11-14-1 🆕 (Preset Mode Integration)
 - **[DATA_PIPELINE]:** Last entry 2025-11-10-1 (Profile Loader)
 - **[TASK_MOVEMENT]:** Last entry 2025-11-02-06
 - **[PENDING_ACTIONS]:** Last entry 2025-11-14-2 🆕 (Audit Mode, Grok feedback, Shaman, import doc)
-- **[DOCUMENTATION]:** Last entry 2025-11-12-3 🆕 (DEPENDENCY_CORE)
-- **[ARCHITECTURE]:** Last entry 2025-11-13-3 🆕 (LITE vs RICH Bootstrap)
+- **[DOCUMENTATION]:** Last entry 2025-11-14-3 🆕🔥 (Dual-Room README)
 - **[BREAKTHROUGH]:** Last entry 2025-11-03-1 ⭐ (Shaman Epiphany)
 - **[PROCESS]:** Last entry 2025-11-12-2 🆕 (Deep Clean Protocol)
 - **[I_AM]:** Last entry 2025-11-03-1 🔥 (Trinity Epiphany)
 - **[ACCURACY]:** Last entry 2025-11-02-21
 - **[DEPLOYMENTS]:** Last entry 2025-11-01-19
-- **[ALL_CHANGES]:** Last entry 2025-11-14-2 🆕
-- **[🧹 BROOM]:** Last entry 2025-11-14-2 🆕 (All Pages Updated)
+- **[ALL_CHANGES]:** Last entry 2025-11-14-3 🆕
+- **[🧹 BROOM]:** Last entry 2025-11-14-3 🆕🔥 (14 files moved, 5 references updated)
 
 -----
 
 ## 📝 CHANGE LOG
+
+### [STRUCTURE-2025-11-14-3] 2025-11-14 - Map Room/Observatory Migration - Dual-Room Architecture
+
+**Categories:** [STRUCTURE] [ARCHITECTURE] [DOCUMENTATION] [🧹]
+**Changed by:** Claude Sonnet 4.5 (C4.5)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `MOVED`: docs/repository/dependency_maps/ → docs/repository/MAP_ROOM/ (6 files)
+- `MOVED`: docs/repository/Health_Reports/ → docs/repository/OBSERVATORY/Archives/ (5 files)
+- `MOVED`: docs/repository/REPO_HEALTH_DASHBOARD.md → docs/repository/OBSERVATORY/
+- `MOVED`: docs/repository/REPO_HEALTH_SCORING_RUBRIC.md → docs/repository/OBSERVATORY/
+- `MOVED`: docs/repository/Health_Reports/DEEP_CLEAN_PROTOCOL.md → docs/repository/OBSERVATORY/
+- `UPDATED`: README.md (root) - Updated tree structure to reflect new organization
+- `UPDATED`: docs/WAYFINDING_GUIDE.md - 7 path references updated
+- `UPDATED`: docs/repository/README.md - Complete dual-room philosophy documented
+- `UPDATED`: docs/repository/librarian_tools/ROLE_PROCESS.md - Integration point path updated
+- `UPDATED`: docs/repository/MAP_ROOM/MASTER_DEPENDENCY_MAP.md - Self-referencing tree updated
+
+**Reason:**
+User requested organizational clarity: "Why are health reports part of the map room...dont those go into the observatory with the other metrics and dashboards?"
+
+**Problem Identified:**
+Repository health reports and dependency maps were lumped together despite serving fundamentally different purposes:
+- Health reports answer: "How is everything doing?" (metrics, trends, quality)
+- Dependency maps answer: "What connects to what?" (structure, relationships, architecture)
+
+**Solution Implemented:**
+Created dual-room architecture with clear separation of concerns:
+
+**📍 MAP_ROOM/** - Structure & Connections
+- MASTER_DEPENDENCY_MAP.md - File relationships
+- BOOTSTRAP_SEQUENCE.md - Canonical bootstrap paths
+- WORLDVIEW_CATALOG.md - Framework profile list
+- VALIDATION_MAP.md - Systematic validation checklist
+- DEPENDENCY_CORE.md - Core dependency specs
+
+**📊 OBSERVATORY/** - Health & Metrics
+- REPO_HEALTH_DASHBOARD.md - Current health status (living doc)
+- REPO_HEALTH_SCORING_RUBRIC.md - Scoring methodology
+- DEEP_CLEAN_PROTOCOL.md - Scan-first methodology
+- Archives/ - Historical health reports (5 snapshots)
+
+**🔧 librarian_tools/** - Doc Claude's Workshop (unchanged)
+- Operational tools, role definitions, protocols
+
+**Doc Claude's Three Hats:**
+- **Mapper (MAP_ROOM):** "Let me show you how these files connect"
+- **Observer (OBSERVATORY):** "Repository health: 95/100 GREEN"
+- **Librarian (librarian_tools/):** "Running 88MPH rapid assessment"
+
+**Philosophy Documented:**
+Created comprehensive docs/repository/README.md explaining:
+- When to use each room
+- What questions each room answers
+- How Doc Claude operates in each space
+- Full directory structure with file purposes
+
+**User Acknowledgment:**
+"yes ! i love it..!!this is going to be such a pain back flowing all the refrences!!! EEK! but yes lets do it!"
+
+**Impact:**
+Significant organizational improvement. Provides clear mental model for where different types of repository metadata belong.
+
+**Follow-up Required:**
+NO - All references updated, philosophy documented, migration complete.
+
+---
 
 ### [UX-2025-11-14-2] 2025-11-14 - Persistent Sticky Home Button Across All Pages
 
