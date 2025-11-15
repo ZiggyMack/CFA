@@ -152,14 +152,21 @@ def render():
     <style>
     /* Make the header row sticky */
     div[data-testid="stHorizontalBlock"]:has(button[kind="secondary"]) {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        background-color: white;
-        z-index: 999;
-        padding: 10px 0;
-        margin-bottom: 10px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        position: -webkit-sticky !important;
+        position: sticky !important;
+        top: 0 !important;
+        background-color: var(--background-color) !important;
+        z-index: 999 !important;
+        padding: 10px 0 !important;
+        margin-bottom: 10px !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+    }
+
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+        div[data-testid="stHorizontalBlock"]:has(button[kind="secondary"]) {
+            background-color: rgb(14, 17, 23) !important;
+        }
     }
     </style>
     """, unsafe_allow_html=True)
@@ -210,8 +217,23 @@ def render():
     
     # Preset Profile Library
     with st.sidebar.expander("📚 Load Preset Profile", expanded=False):
+        # Scoring Mode (moved here from below)
+        st.markdown("**🔍 Scoring Mode:**")
+        if "audit_mode" not in st.session_state:
+            st.session_state["audit_mode"] = "Bias"
+
+        audit_mode_options = ["Bias", "Audit"]
+        audit_mode = st.selectbox(
+            "Mode",
+            audit_mode_options,
+            key="audit_mode",
+            help="**Bias Mode (🎯):** Full bias scoring - auditors apply their native lenses with bias intact. **Audit Mode (🔍):** Adversarial audit - scores reflect rigorous adversarial checking (Trinity convergence). Switch to Audit to see adversarially-validated scores.",
+            label_visibility="collapsed"
+        )
+
+        st.markdown("---")
         st.markdown("**Pre-Audited Frameworks:**")
-        
+
         preset_options = {
             "-- Select Framework --": None,
             "✅ Methodological Naturalism (MdN)": "mdn",
@@ -422,33 +444,7 @@ def render():
 
     st.sidebar.markdown("---")
 
-    # Audit Mode Toggle (Bias vs Adversarial Audit)
-    if "audit_mode" not in st.session_state:
-        st.session_state["audit_mode"] = "Bias"  # Default to Bias mode
-
-    audit_mode_options = ["Bias", "Audit"]
-
-    audit_mode = st.sidebar.selectbox(
-        "🔍 Scoring Mode",
-        audit_mode_options,
-        key="audit_mode",
-        help="**Bias Mode (🎯):** Full bias scoring - auditors apply their native lenses with bias intact. **Audit Mode (🔍):** Adversarial audit - scores reflect rigorous adversarial checking (Trinity convergence). Switch to Audit to see adversarially-validated scores."
-    )
-
-    cfg = {
-        "lever_parity": lever_parity,
-        "pf_type": pf_type,
-        "fallibilism_bonus": fall_bonus,
-        "bfi_debt_weight": bfi_weight,
-        "audit_mode": audit_mode
-    }
-
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("**Current Config:**")
-    st.sidebar.json(cfg)
-    
-    # Sidebar Import only
-    st.sidebar.markdown("---")
+    # Sidebar Import
     st.sidebar.markdown("### 📥 Import")
     import_file_sidebar = st.sidebar.file_uploader("Load saved audit", type=["json"], key="import_sidebar")
     if import_file_sidebar:
@@ -460,6 +456,20 @@ def render():
                     st.rerun()
         except:
             st.sidebar.error("Invalid file")
+
+    st.sidebar.markdown("---")
+
+    # Current Config (moved below Import, now collapsible)
+    cfg = {
+        "lever_parity": lever_parity,
+        "pf_type": pf_type,
+        "fallibilism_bonus": fall_bonus,
+        "bfi_debt_weight": bfi_weight,
+        "audit_mode": audit_mode
+    }
+
+    with st.sidebar.expander("📋 Current Config", expanded=False):
+        st.json(cfg)
 
     # FRAMEWORK EDITORS
     col1, col2 = st.columns(2)
