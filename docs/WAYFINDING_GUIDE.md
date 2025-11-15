@@ -231,9 +231,8 @@ CFA/ (root)
 ├── /docs/                     # Documentation, validation, meta-docs
 │   ├── WAYFINDING_GUIDE.md    # You are reading this! 🗺️
 │   ├── /repository/           # Meta-documentation
-│   │   ├── REPO_HEALTH_DASHBOARD.md       # Health monitoring dashboard
-│   │   ├── /dependency_maps/  # MASTER_DEPENDENCY_MAP.md
-│   │   ├── /Health_Reports/   # Historical health assessments
+│   │   ├── /MAP_ROOM/         # Structure & connections (dependency maps, tree structures)
+│   │   ├── /OBSERVATORY/      # Health & metrics (dashboards, reports, staleness tracking)
 │   │   └── /librarian_tools/  # Doc Claude tools, role definitions
 │   │       ├── 88MPH.md  # Doc Claude activation
 │   │       ├── ROLE_*.md      # Specialized role guides
@@ -262,9 +261,9 @@ CFA/ (root)
 **Solution:** 7 authoritative "Living Maps" that serve as single sources of truth:
 
 1. **[FILE_INVENTORY.md](repository/FILE_INVENTORY.md)** - Complete file catalog (~321 files)
-2. **[BOOTSTRAP_SEQUENCE.md](repository/dependency_maps/BOOTSTRAP_SEQUENCE.md)** - Canonical bootstrap paths
-3. **[REPO_HEALTH_DASHBOARD.md](repository/REPO_HEALTH_DASHBOARD.md)** - Real-time health monitoring
-4. **[WORLDVIEW_CATALOG.md](repository/dependency_maps/WORLDVIEW_CATALOG.md)** - Worldview profile list
+2. **[BOOTSTRAP_SEQUENCE.md](repository/MAP_ROOM/BOOTSTRAP_SEQUENCE.md)** - Canonical bootstrap paths
+3. **[REPO_HEALTH_DASHBOARD.md](repository/OBSERVATORY/REPO_HEALTH_DASHBOARD.md)** - Real-time health monitoring
+4. **[WORLDVIEW_CATALOG.md](repository/MAP_ROOM/WORLDVIEW_CATALOG.md)** - Worldview profile list
 5. **WAYFINDING_GUIDE.md** - Repository navigation (you're reading it!)
 6. **[AUDITOR_ASSIGNMENTS.md](../auditors/AUDITOR_ASSIGNMENTS.md)** - PRO/ANTI stance assignments
 7. **[ARCHIVE_INDEX.md](../auditors/.Archive/workshop/ARCHIVE_INDEX.md)** - Brainstorming archive index
@@ -316,7 +315,7 @@ When files are added/removed, this claim becomes false. Finding and fixing all e
 
 **For contributors:** Always scan independently first. Don't assume documentation is current. Verify claims against reality.
 
-**See also:** [DEEP_CLEAN_PROTOCOL.md](repository/Health_Reports/DEEP_CLEAN_PROTOCOL.md) for full methodology
+**See also:** [DEEP_CLEAN_PROTOCOL.md](repository/OBSERVATORY/DEEP_CLEAN_PROTOCOL.md) for full methodology
 
 ---
 
@@ -345,7 +344,7 @@ When files are added/removed, this claim becomes false. Finding and fixing all e
 3. Review REPO_HEALTH_DASHBOARD.md → Claims reasonable?
 
 **Full Deep Clean (2-3 hours):**
-1. Read [DEEP_CLEAN_PROTOCOL.md](repository/Health_Reports/DEEP_CLEAN_PROTOCOL.md) methodology
+1. Read [DEEP_CLEAN_PROTOCOL.md](repository/OBSERVATORY/DEEP_CLEAN_PROTOCOL.md) methodology
 2. Scan repository independently (don't read previous reports first!)
 3. Score using [REPO_HEALTH_SCORING_RUBRIC.md](repository/REPO_HEALTH_SCORING_RUBRIC.md)
 4. Compare your score to REPO_HEALTH_DASHBOARD.md claim
@@ -373,7 +372,7 @@ find . -name "*.md" | grep -v ".Archive"
 
 **Result:** Repository scores 98/100 for operational docs, but would score 62/100 if archives included. The 36-point gap is by design.
 
-**See:** [DEEP_CLEAN_PROTOCOL.md](repository/Health_Reports/DEEP_CLEAN_PROTOCOL.md) lines 45-90 for full philosophy
+**See:** [DEEP_CLEAN_PROTOCOL.md](repository/OBSERVATORY/DEEP_CLEAN_PROTOCOL.md) lines 45-90 for full philosophy
 
 ---
 
@@ -434,7 +433,7 @@ find . -name "*.md" | grep -v ".Archive"
 |-----------------|-------------|-------------|
 | Activate as Doc Claude | `/docs/../88MPH.md` | 8.8 min activation |
 | Make a repository change | `/REPO_LOG.md` first! | Check coordination, log all changes |
-| Understand file dependencies | `/docs/repository/dependency_maps/MASTER_DEPENDENCY_MAP.md` | ~223 files tracked |
+| Understand file dependencies | `/docs/repository/MAP_ROOM/MASTER_DEPENDENCY_MAP.md` | ~223 files tracked |
 | Check repository health | `/docs/repository/REPO_HEALTH_DASHBOARD.md` | Current: 95/100 GREEN |
 | Add semantic headers | `/docs/repository/librarian_tools/HEADER_STANDARD.md` | Required format |
 | Format REPO_LOG entry | `/REPO_LOG.md` Quick Start | Copy-paste template |
@@ -784,7 +783,7 @@ find . -name "*.md" | grep -v ".Archive"
 - We don't retroactively fix historical snapshots (Gospel Problem prevention)
 
 **See also:**
-- [DEEP_CLEAN_PROTOCOL.md](repository/Health_Reports/DEEP_CLEAN_PROTOCOL.md) (lines 45-90) - Full Signal vs Noise Philosophy + search exclusion guidance
+- [DEEP_CLEAN_PROTOCOL.md](repository/OBSERVATORY/DEEP_CLEAN_PROTOCOL.md) (lines 45-90) - Full Signal vs Noise Philosophy + search exclusion guidance
 - [REPO_HEALTH_DASHBOARD.md](repository/REPO_HEALTH_DASHBOARD.md) (lines 33-38) - Dual scoring display explaining 34-point variance
 
 ---
@@ -877,7 +876,7 @@ For detailed progressive training with checkpoints, common mistakes, and skill v
 - **Change Log:** [REPO_LOG.md](/REPO_LOG.md) - All changes tracked here
 - **Mission Entry:** [MISSION_DEFAULT.md](/auditors/MISSION_DEFAULT.md) - Universal fallback
 - **Doc Claude Start:** [88MPH.md](/docs/../88MPH.md) - Repo librarian
-- **Dependency Map:** [MASTER_DEPENDENCY_MAP.md](/docs/repository/dependency_maps/MASTER_DEPENDENCY_MAP.md) - File relationships
+- **Dependency Map:** [MASTER_DEPENDENCY_MAP.md](/docs/repository/MAP_ROOM/MASTER_DEPENDENCY_MAP.md) - File relationships
 
 ---
 

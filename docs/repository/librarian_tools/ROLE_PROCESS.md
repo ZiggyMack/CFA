@@ -1792,7 +1792,7 @@ Returning to standard DOC_CLAUDE mode.
 - `/auditors/Bootstrap/BOOTSTRAP_DOC_CLAUDE.md` - Doc Claude identity
 
 **Integration Points:**
-- `/docs/repository/dependency_maps/MASTER_DEPENDENCY_MAP.md` - Process Claude domain section
+- `/docs/repository/MAP_ROOM/MASTER_DEPENDENCY_MAP.md` - Process Claude domain section
 - `/REPO_LOG.md` - Source of truth for what actually happened
 
 ---

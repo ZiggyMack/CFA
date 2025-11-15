@@ -592,18 +592,22 @@ cfa_app/ (Repository Root)
 │   │
 │   └── 📁 repository/                 🆕 META-DOCUMENTATION HUB (Major Innovation)
 │       ├── 📄 README.md              ✅ Complete - Meta-documentation index
-│       ├── 📄 REPO_HEALTH_DASHBOARD.md ✅ v1.1 - Central health monitoring
-│       │
-│       ├── 📁 Health_Reports/         ✅ REPOSITORY HEALTH
-│       │   ├── 📄 README.md          ✅ Complete
-│       │   ├── 📄 REPO_HEALTH_REPORT_2025-10-31_GREEN.md  ✅ Latest (94/100)
-│       │   ├── 📄 REPO_HEALTH_REPORT_2025-10-30.md
-│       │   └── [5+ health assessment reports]
-│       │
-│       ├── 📁 dependency_maps/        ✅ DEPENDENCY TRACKING (This location!)
+│       ├── 📁 MAP_ROOM/               ✅ STRUCTURE & CONNECTIONS
 │       │   ├── 📄 README.md          ✅ Complete - Dependency map navigation
 │       │   ├── 📄 MASTER_DEPENDENCY_MAP.md  ✅ v2.3 - THIS FILE (comprehensive tree added)
-│       │   └── 📄 VALIDATION_MAP.md  🆕 v1.0 - Systematic validation checklist
+│       │   ├── 📄 VALIDATION_MAP.md  🆕 v1.0 - Systematic validation checklist
+│       │   ├── 📄 BOOTSTRAP_SEQUENCE.md ✅ Complete - Canonical bootstrap paths
+│       │   ├── 📄 WORLDVIEW_CATALOG.md ✅ Complete - Worldview profile list
+│       │   └── 📄 DEPENDENCY_CORE.md ✅ Complete - Core dependency specs
+│       │
+│       ├── 📁 OBSERVATORY/            ✅ HEALTH & METRICS
+│       │   ├── 📄 REPO_HEALTH_DASHBOARD.md ✅ v1.1 - Central health monitoring
+│       │   ├── 📄 REPO_HEALTH_SCORING_RUBRIC.md ✅ Complete - Scoring methodology
+│       │   ├── 📄 DEEP_CLEAN_PROTOCOL.md ✅ Complete - Scan-first methodology
+│       │   └── 📁 Archives/          ✅ Historical health assessments
+│       │       ├── 📄 REPO_HEALTH_REPORT_2025-10-31_GREEN.md  ✅ Latest (94/100)
+│       │       ├── 📄 REPO_HEALTH_REPORT_2025-10-30.md
+│       │       └── [5+ health assessment reports]
 │       │
 │       └── 📁 librarian_tools/        ✅ DOC_CLAUDE OPERATIONAL TOOLKIT
 │           ├── 📄 README.md          ✅ Complete - Tool index

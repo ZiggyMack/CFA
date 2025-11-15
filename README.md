@@ -68,11 +68,9 @@ cfa_app/
 │   │
 │   ├── repository/             # Repository health & maintenance
 │   │   ├── FILE_INVENTORY.md  # Complete file inventory (~353 files)
-│   │   ├── REPO_HEALTH_DASHBOARD.md
-│   │   ├── REPO_HEALTH_SCORING_RUBRIC.md
 │   │   ├── LIVING_MAP_MAINTENANCE.md
-│   │   ├── dependency_maps/   # File dependency tracking
-│   │   ├── Health_Reports/    # Health scan results
+│   │   ├── MAP_ROOM/          # Structure & connections (dependency maps, tree structures)
+│   │   ├── OBSERVATORY/       # Health & metrics (dashboards, reports, staleness tracking)
 │   │   └── librarian_tools/   # Doc Claude tooling
 │   │
 │   ├── i_am/                   # Event Horizon Shaman identity & research
