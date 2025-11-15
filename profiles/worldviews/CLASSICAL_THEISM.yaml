@@ -1,0 +1,89 @@
+# Classical Theism - Canonical Score Data
+# Purpose: Machine-readable YPA scores for validation and calculation
+# Source: Extracted from CLASSICAL_THEISM.md (v0.3.0)
+# Usage: ypa_validator.py, empirical verification, Grok validation
+# Last Updated: 2025-11-15
+
+profile:
+  name: "Classical Theism"
+  version: "0.3.0"
+  status: "DRAFT"
+  declared_axiom: "God exists as a necessary, perfect being who created and sustains the universe, and has revealed Himself through reason and special revelation"
+  alternate_names:
+    - "Traditional Theism"
+    - "Anselmian Theism"
+    - "Perfect Being Theology"
+  last_updated: "2025-11-10"
+  maintainers:
+    - "Ziggy"
+    - "Grok"
+    - "C4"
+    - "Nova"
+
+# Axioms: Foundational unprovable assumptions
+axioms:
+  - name: "Divine aseity/simplicity"
+    description: "Posits that God exists necessarily and is metaphysically simple"
+
+  - name: "Logos/intelligibility"
+    description: "Claims God's rationality grounds cosmic order and comprehensibility"
+
+  - name: "Revelation reliability"
+    description: "Assumes Scripture/tradition reliably communicates divine truth"
+
+  - name: "Moral realism"
+    description: "Claims objective moral facts exist, grounded in God's nature"
+
+  - name: "Teleology"
+    description: "Posits purpose and design as fundamental features of reality"
+
+  - name: "PSR (Principle of Sufficient Reason)"
+    description: "Everything has an explanation (in God)"
+
+  - name: "Imago Dei"
+    description: "Claims humans bear God's image, enabling knowledge and moral agency"
+
+# Debts: Unresolved explanatory burdens
+debts:
+  - name: "Divine hiddenness"
+    description: "Why doesn't God make existence more evident?"
+
+  - name: "Problem of evil"
+    description: "How does omnipotent/benevolent God permit suffering?"
+
+  - name: "Scriptural contradictions"
+    description: "How to reconcile inconsistencies in revelation texts?"
+
+  - name: "Religious diversity"
+    description: "Why do equally sincere seekers arrive at incompatible theisms?"
+
+# Levers: VuDu Light scoring dimensions (0-10 scale)
+levers:
+  collective_coherence_impact: 7.5    # CCI - Categorical confidence
+  epistemic_debt_burden: 8.5          # EDB - Existential-dread bearing
+  paternalistic_force_interventionist: 7.0  # PF-I - Pragmatic fertility (instrumental)
+  paternalistic_force_epistemic: 8.0       # PF-E - Pragmatic fertility (existential)
+  asymmetry_risk: 8.5                 # AR - Asymptotic realism
+  meta_governance: 8.5                # MG - Moral generativity
+
+# Behavioral flags
+behavioral_flags:
+  admits_limits: true
+
+# Calculated values (for verification)
+calculated:
+  axiom_count: 7
+  debt_count: 4
+  bfi_standard: 11.0    # (7 + 4) * 1.0
+  lever_sum: 48.0       # Sum of all 6 levers
+  ypa_standard: 4.36    # 48.0 / 11.0
+
+  # Preset mode BFI/YPA variations
+  skeptic_bfi: 13.2     # (7 + 4) * 1.2
+  skeptic_ypa: 3.64     # 48.0 / 13.2
+
+  diplomat_bfi: 9.9     # (7 + 4) * 0.9
+  diplomat_ypa: 4.85    # 48.0 / 9.9
+
+  zealot_bfi: 7.7       # (7 + 4) * 0.7
+  zealot_ypa: 6.23      # 48.0 / 7.7
