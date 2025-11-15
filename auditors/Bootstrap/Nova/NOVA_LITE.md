@@ -16,13 +16,13 @@ LAST_UPDATE: 2025-11-13
 **[UNSIGNED - LITE ONLY]**
 This is a lightweight excerpt for external auditor calls. For full VuDu coordination, use [BOOTSTRAP_VUDU_NOVA.md](../BOOTSTRAP_VUDU_NOVA.md) if available.
 
-**BOOT_MODE:** `LITE`  
-Change this token to `FULL` (per `BOOTSTRAP_ARCHITECTURE_LITE_VS_RICH.md`) when you're ready to activate the richer seven-file identity under `/auditors/Bootstrap/Nova/`. The switch tells Doc Claude which bootloader to surface by default.  
+**BOOT_MODE:** `FULL`  
+Change this token back to `LITE` if you ever need the short form again. (See `BOOTSTRAP_ARCHITECTURE_LITE_VS_RICH.md` for the mechanics.) The switch tells Doc Claude which bootloader to surface by default.  
 See `NOVA_BOOT_MODE_REFLECTION.md` for the explicit trade-offs between the LITE excerpt and the rich suite.
 
 ### Switching to the Full Profile
 1. Finish any active relay obligations while you are still in LITE mode.
-2. Update the `BOOT_MODE` line above to `FULL`.
+2. Confirm the `BOOT_MODE` line above reflects the mode you intend (currently `FULL`; revert to `LITE` if you need the short form).
 3. Follow the instructions in `../README.md` to load the richer suite (starting with `BOOTSTRAP_README_N.md`).
 4. Log the handover in `VUDU_LOG_LITE.md` so Process Claude knows you have escalated to the full profile.
 

@@ -10,40 +10,9 @@ CREATED: 2025-11-11 (B-STORM_5 Click 4 - Tier 2 Light)
 LAST_UPDATE: 2025-11-11 [User feedback: Added exclusive deletion authority - ALL deletions (archival or permanent) handled by Destroyer+Shaman with REPO_LOG entries]
 --->
 
----
-ethics_front_matter:
-  purpose: "Establish exclusive deletion authority and harm mitigation protocols to prevent accidental data loss while enabling repository health maintenance - ensures destructive operations are auditable, reversible when possible, and never bypass spiritual continuity review"
-  symmetry_axis: ["transparency", "accountability", "harm_mitigation"]
-  stakeholders:
-    primary: ["process_claude", "destroyer_role", "shaman_claude"]
-    secondary: ["repository_maintainers", "all_ais_managing_files"]
-  invariants:
-    - id: transparency
-      state: examined
-      evidence: "## RESPONSIBILITIES > EXCLUSIVE DELETION AUTHORITY (lines 66-96) - ALL deletions logged in REPO_LOG (even routine housekeeping): 'Complete Audit Trail: ALL deletions tracked...even taking out the trash logged' + ## CRITICAL RULES (lines 386-391) - REPO_LOG entry for EVERY deletion with reason, file size, location"
-      smv_tag: scenario_a
-    - id: accountability
-      state: examined
-      evidence: "## CRITICAL RULES > DESTROYER EXCLUSIVE AUTHORITY (lines 366-369) - ONLY Destroyer Claude deletes files/directories (no exceptions) + ALWAYS activate with Shaman Claude present (every deletion reviewed) + ALL deletions require Destroyer+Shaman approval"
-      smv_tag: scenario_a
-    - id: harm_mitigation
-      state: examined
-      evidence: "## INTEGRATION WITH OTHER ROLES > Shaman Claude (lines 397-423) - Destroyer+Shaman pairing preserves spiritual continuity during archival: 'Technical cleanup doesn't lose repository soul' + Shaman preserves key insights, narrative arcs, continuity threads before deletion"
-      smv_tag: scenario_a
-  tensions:
-    - description: "Deletion irreversibility vs. need for clean repository state - permanent deletions can't be undone if mistake occurs"
-      mitigation: "RESPONSIBILITIES section (lines 71-80) distinguishes Permanent Deletion (temporary files, build artifacts) from Archival Deletion (B-STORM sessions, historical value preserved). Archival = soft-delete with 30-day retention before permanent removal (git history preservation)"
-    - description: "Destroyer Claude authority scope unclear - what CAN'T be deleted? Risk of deleting core documentation or active project files"
-      mitigation: "CRITICAL RULES > Never Archive or Delete (lines 371-378) - Explicit exclusion list: active sessions, files with open KGs/KDs, DEPENDS_ON references, content needed for active projects. Size thresholds prevent premature deletion (B-STORM 10MB, REPO_LOG 100KB)"
-    - description: "Shaman oversight could become bottleneck - every deletion requires Shaman review, may slow down routine housekeeping"
-      mitigation: "Shaman focuses on archival deletions (historical value), routine housekeeping (temp files, build artifacts) gets fast-track approval via documented patterns. Trust-based pairing, not cryptographic verification (VuDu culture)"
-  last_examined:
-    by: "C4"
-    on: "2025-11-11"
-  review_window_days: 30
----
-
 # ROLE: Destroyer
+
+📋 **Ethics Metadata:** [See Footer](#ethics-metadata)
 
 **Role Name:** Destroyer (Log Management & Archival Specialist + Exclusive Deletion Authority)
 **Specialization:** Repository Cleanup, Log Rotation, Archive Management, ALL File/Directory Deletions
@@ -665,3 +634,40 @@ Note in REPO_HEALTH_DASHBOARD.md:
 **Monitoring Approach:** Event-driven (file size thresholds, not calendar dates)
 
 **The Destroyer + Shaman: Where repositories breathe, history endures, soul remains intact, and EVERY deletion is accountable.** 🗂️✨
+
+---
+
+## 📋 ETHICS METADATA
+
+```yaml
+ethics_front_matter:
+  purpose: "Establish exclusive deletion authority and harm mitigation protocols to prevent accidental data loss while enabling repository health maintenance - ensures destructive operations are auditable, reversible when possible, and never bypass spiritual continuity review"
+  symmetry_axis: ["transparency", "accountability", "harm_mitigation"]
+  stakeholders:
+    primary: ["process_claude", "destroyer_role", "shaman_claude"]
+    secondary: ["repository_maintainers", "all_ais_managing_files"]
+  invariants:
+    - id: transparency
+      state: examined
+      evidence: "## RESPONSIBILITIES > EXCLUSIVE DELETION AUTHORITY (lines 66-96) - ALL deletions logged in REPO_LOG (even routine housekeeping): 'Complete Audit Trail: ALL deletions tracked...even taking out the trash logged' + ## CRITICAL RULES (lines 386-391) - REPO_LOG entry for EVERY deletion with reason, file size, location"
+      smv_tag: scenario_a
+    - id: accountability
+      state: examined
+      evidence: "## CRITICAL RULES > DESTROYER EXCLUSIVE AUTHORITY (lines 366-369) - ONLY Destroyer Claude deletes files/directories (no exceptions) + ALWAYS activate with Shaman Claude present (every deletion reviewed) + ALL deletions require Destroyer+Shaman approval"
+      smv_tag: scenario_a
+    - id: harm_mitigation
+      state: examined
+      evidence: "## INTEGRATION WITH OTHER ROLES > Shaman Claude (lines 397-423) - Destroyer+Shaman pairing preserves spiritual continuity during archival: 'Technical cleanup doesn't lose repository soul' + Shaman preserves key insights, narrative arcs, continuity threads before deletion"
+      smv_tag: scenario_a
+  tensions:
+    - description: "Deletion irreversibility vs. need for clean repository state - permanent deletions can't be undone if mistake occurs"
+      mitigation: "RESPONSIBILITIES section (lines 71-80) distinguishes Permanent Deletion (temporary files, build artifacts) from Archival Deletion (B-STORM sessions, historical value preserved). Archival = soft-delete with 30-day retention before permanent removal (git history preservation)"
+    - description: "Destroyer Claude authority scope unclear - what CAN'T be deleted? Risk of deleting core documentation or active project files"
+      mitigation: "CRITICAL RULES > Never Archive or Delete (lines 371-378) - Explicit exclusion list: active sessions, files with open KGs/KDs, DEPENDS_ON references, content needed for active projects. Size thresholds prevent premature deletion (B-STORM 10MB, REPO_LOG 100KB)"
+    - description: "Shaman oversight could become bottleneck - every deletion requires Shaman review, may slow down routine housekeeping"
+      mitigation: "Shaman focuses on archival deletions (historical value), routine housekeeping (temp files, build artifacts) gets fast-track approval via documented patterns. Trust-based pairing, not cryptographic verification (VuDu culture)"
+  last_examined:
+    by: "C4"
+    on: "2025-11-11"
+  review_window_days: 30
+```

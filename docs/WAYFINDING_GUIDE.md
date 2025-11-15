@@ -10,41 +10,9 @@ MAINTAINED_BY: Process Claude (navigation/wayfinding SME)
 LAST_UPDATE: 2025-11-13 [Added Infrastructure Quick Start section for v4.0.0 (lines 286-447) - Living Maps, Health Scoring, Gospel Problem explained]
 --->
 
----
-ethics_front_matter:
-  purpose: "Ensure epistemic access for all auditors (Claude, Grok, Nova) - provides navigation map, task→file mapping, and human-touch guidance to prevent information asymmetry"
-  symmetry_axis: ["epistemic_access", "transparency", "stakeholder_impact"]
-  stakeholders:
-    primary: ["triad_auditors", "fresh_auditors"]
-    secondary: ["repository_maintainers"]
-  invariants:
-    - id: epistemic_access
-      state: examined
-      evidence: "## TWO GUIDES AVAILABLE (lines 27-110) - Process Claude (technical SME) + Event Horizon Shaman (welcoming guide) dual-access pattern + Task→File mapping (lines 252-303)"
-      smv_tag: scenario_a
-    - id: transparency
-      state: examined
-      evidence: "## 'I NEED TO DO X' - TASK → FILE MAPPING (lines 252-303) - Clear path from intent to file location"
-      smv_tag: scenario_a
-    - id: stakeholder_impact
-      state: examined
-      evidence: "## 'I'M NEW HERE' - COLD START ORIENTATION (lines 151-250) - 3-step orientation prevents fresh auditors from feeling lost"
-      smv_tag: scenario_a
-  tensions:
-    - description: "5,985-word guide may overwhelm fresh auditors, creating epistemic barrier instead of access"
-      mitigation: "Dual-guide pattern (lines 27-110): consult Process Claude or Event Horizon Shaman instead of memorizing guide + 'Don't memorize this file!' explicit instruction"
-    - description: "Process Claude as SME creates single point of dependency for navigation knowledge"
-      mitigation: "Event Horizon Shaman backup + guide is written/searchable (not oral tradition) + Process Claude role is documented in ROLE_PROCESS.md"
-  calibration_link:
-    profile: "N/A - navigation guide, not worldview calibration"
-    hash: "N/A"
-  last_examined:
-    by: "C4"
-    on: "2025-11-11"
-  review_window_days: 30
----
-
 # WAYFINDING_GUIDE.md - Your Repository Compass 🗺️
+
+📋 **Ethics Metadata:** [See Footer](#ethics-metadata)
 
 **Purpose:** Navigate the CFA repository with confidence - find what you need, understand where things live, recover from issues
 
@@ -936,3 +904,41 @@ That's your wayfinding."* 🗺️✨
 **Purpose:** Enable self-service navigation, reduce Ziggy dependency, multiply improvements
 **Status:** Active - Navigation Hall open for business
 **Proof:** You found what you needed. The wayfinding works. 🎯
+
+---
+
+## 📋 ETHICS METADATA
+
+```yaml
+ethics_front_matter:
+  purpose: "Ensure epistemic access for all auditors (Claude, Grok, Nova) - provides navigation map, task→file mapping, and human-touch guidance to prevent information asymmetry"
+  symmetry_axis: ["epistemic_access", "transparency", "stakeholder_impact"]
+  stakeholders:
+    primary: ["triad_auditors", "fresh_auditors"]
+    secondary: ["repository_maintainers"]
+  invariants:
+    - id: epistemic_access
+      state: examined
+      evidence: "## TWO GUIDES AVAILABLE (lines 27-110) - Process Claude (technical SME) + Event Horizon Shaman (welcoming guide) dual-access pattern + Task→File mapping (lines 252-303)"
+      smv_tag: scenario_a
+    - id: transparency
+      state: examined
+      evidence: "## 'I NEED TO DO X' - TASK → FILE MAPPING (lines 252-303) - Clear path from intent to file location"
+      smv_tag: scenario_a
+    - id: stakeholder_impact
+      state: examined
+      evidence: "## 'I'M NEW HERE' - COLD START ORIENTATION (lines 151-250) - 3-step orientation prevents fresh auditors from feeling lost"
+      smv_tag: scenario_a
+  tensions:
+    - description: "5,985-word guide may overwhelm fresh auditors, creating epistemic barrier instead of access"
+      mitigation: "Dual-guide pattern (lines 27-110): consult Process Claude or Event Horizon Shaman instead of memorizing guide + 'Don't memorize this file!' explicit instruction"
+    - description: "Process Claude as SME creates single point of dependency for navigation knowledge"
+      mitigation: "Event Horizon Shaman backup + guide is written/searchable (not oral tradition) + Process Claude role is documented in ROLE_PROCESS.md"
+  calibration_link:
+    profile: "N/A - navigation guide, not worldview calibration"
+    hash: "N/A"
+  last_examined:
+    by: "C4"
+    on: "2025-11-11"
+  review_window_days: 30
+```
