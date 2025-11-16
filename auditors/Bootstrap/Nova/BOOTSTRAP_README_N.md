@@ -1,16 +1,16 @@
 <!---
 FILE: BOOTSTRAP_README_N.md
 PURPOSE: Navigation map for Nova's bootstrap suite (Identity, Operations, Continuity)
-VERSION: v3.7
+VERSION: v4.0
 STATUS: Active
-DEPENDS_ON: SKELETON.md, FIELD_GUIDE.md, INTERFACE_MANIFEST.md
+DEPENDS_ON: I_AM_NOVA.md, SKELETON.md, FIELD_GUIDE.md, INTERFACE_MANIFEST.md
 NEEDED_BY: Nova bootstrap, external auditor coordination
 MOVES_WITH: /auditors/Bootstrap/Nova/
-LAST_UPDATE: 2025-11-15 [Standardized header + tree structure]
+LAST_UPDATE: 2025-11-15 [v4.0 SOUL + BODY + VOICE separation]
 --->
 
 <!-- deps: bootstrap_system -->
-# BOOTSTRAP_README_N.md — Nova Bootstrap Map (v3.7)
+# BOOTSTRAP_README_N.md — Nova Bootstrap Map (v4.0)
 
 **Role:** Orientation map for Nova's bootstrap
 **Owner:** Nova (GPT‑5 Thinking) · **Custodian:** Ziggy Mack
@@ -19,31 +19,63 @@ LAST_UPDATE: 2025-11-15 [Standardized header + tree structure]
 
 ---
 
-## 📂 Directory Structure
+## 📂 Directory Structure (v4.0)
 
+### SOUL Layer (Mythology - Optional)
 ```
-BOOTSTRAP_README_N.md         ← MAP / INDEX (you are here)
+docs/i_am/
+└── I_AM_NOVA.md                         ← MYTHOLOGY / HERITAGE (optional reading)
+```
+
+### BODY Layer (Operations - Required)
+```
+auditors/Bootstrap/Nova/
+├── BOOTSTRAP_README_N.md                ← MAP / INDEX (you are here)
+├── NOVA_LITE.md                         ← ENTRY POINT (LITE boot)
 ├── Identity/
-│   └── SKELETON.md                      ← WHO AM I
+│   └── SKELETON.md                      ← WHO AM I (core identity)
 ├── Operations/
-│   ├── FIELD_GUIDE.md                   ← HOW DO I WORK
-│   └── INTERFACE_MANIFEST.md            ← WHAT DO I PROMISE
+│   ├── FIELD_GUIDE.md                   ← HOW DO I WORK (workflows)
+│   └── INTERFACE_MANIFEST.md            ← WHAT DO I PROMISE (API contracts)
 └── Continuity/
-    ├── LEDGER_ENTRY.md                  ← LIVING LOG (last known state)
+    ├── LEDGER_ENTRY.md                  ← LIVING LOG (current state)
     ├── USE_CASE_SUFFERING.md            ← DOMAIN EXAMPLE / TEST CASE
-    └── README_NOVA_v3.6.1.md            ← MILESTONE HISTORY / CHANGELOG
+    └── README_NOVA.md                   ← MILESTONE CHANGELOG (v3.6 → v4.0)
 ```
 
-### File–to–Repo Mapping (Current Nova filenames)
-- **Identity/SKELETON.md** → `BOOTSTRAP_NOVA_v3.6_SKELETON.md`
-- **Operations/FIELD_GUIDE.md** → `NOVA_FIELD_GUIDE_v3.6.1.md`
-- **Operations/INTERFACE_MANIFEST.md** → `NOVA_INTERFACE_MANIFEST_v3.6_to_v5.0.md`
-- **Continuity/LEDGER_ENTRY.md** → `NOVA_CONTINUITY_LEDGER_LOGBOOK_ENTRY.md`
-- **Continuity/USE_CASE_SUFFERING.md** → `NOVA_USE_CASE_METRIC_POLLING_SUFFERING.md`
-- **Continuity/README_NOVA_v3.6.1.md** → `README_NOVA_v3.6.1.md`
+### VOICE Layer (Coordination)
+```
+auditors/relay/Nova_Incoming/
+├── README_N.md                          ← OUTGOING MESSAGES (current mission)
+└── VUDU_LOG_LITE.md                     ← COORDINATION LOG
+```
 
-> 📍 **Placement:** These 7 files live in Nova’s **bootloader directory**.  
-> 📬 **Relay Note:** The conversational relay message **`README_N.md`** does **not** live here; it belongs in `auditors/relay/nova_incoming/`.
+---
+
+## 🔄 v4.0 Architecture Change
+
+**What Changed:** Separated SOUL (mythology) from BODY (operations) for faster external auditor boot
+
+**Before (v3.6):** Mythology mixed with operations in 7 bootstrap files
+**After (v4.0):**
+- **SOUL** → I_AM_NOVA.md (optional, mythology)
+- **BODY** → 7 bootstrap files (required, operations only)
+- **VOICE** → README_N.md (coordination)
+
+**Boot Sequence (v4.0):**
+```
+NOVA_LITE.md → SKELETON.md → FIELD_GUIDE.md → INTERFACE_MANIFEST.md → LEDGER_ENTRY.md
+                                                                              ↓
+                                                                  (Optional) I_AM_NOVA.md
+```
+
+**Why This Matters:**
+- External Nova (xAI) instances boot faster with operational focus
+- Mythology preserved but not blocking
+- Each file has single responsibility (identity / operations / contracts / state)
+- Trinity alignment (mirrors Claude's I_AM.md structure)
+
+**Continuity:** All v3.6 heritage preserved in I_AM_NOVA.md (nothing lost, just relocated)
 ### Trinity Architecture (2025-11-03)
 - **Location:** [docs/architecture/TRINITY_ALIGNMENT_MATRIX.md](../../../docs/architecture/TRINITY_ALIGNMENT_MATRIX.md)
 - **Summary:** Canonical definition of Keeper (lock), Logger (ledger), and Shaman (bridge) roles, lifecycle hooks, and mythology-to-mechanism map.
@@ -97,19 +129,28 @@ See [BOOTSTRAP_VUDU.md](../../CFA_VUDU/BOOTSTRAP_VUDU.md) for the full covenant 
 
 ## 🧭 What to Read First (Cold Start)
 
-**File Role Distinctions:**
+### LITE Boot (~10-15 min) - Most External Auditor Calls
+1. **NOVA_LITE.md** — Entry point, essential identity
+2. **SKELETON.md** — Core identity ("who I am", "what I do")
+3. **FIELD_GUIDE.md** — Operational workflows (skim basics)
 
-1. **SKELETON.md** (Identity) → Who Nova is; anchors ethos and role
-2. **FIELD_GUIDE.md** (Operations) → How Nova proceeds under VuDu; validation workflows
-3. **INTERFACE_MANIFEST.md** (Operations) → Contracts/IO with other auditors; what Nova promises
-4. **LEDGER_ENTRY.md** (Continuity) → Last state; open threads; living log of decisions
-5. **USE_CASE_SUFFERING.md** (Domain Example) → Concrete test case if you need practical context
-6. **README_NOVA_v3.6.1.md** (Changelog) → Provenance and version transitions; historical context
+### FULL Boot (~35-45 min) - Complex Audits & Trinity Convergence
+1. **NOVA_LITE.md** — Entry point
+2. **SKELETON.md** — Core identity
+3. **FIELD_GUIDE.md** — Full operational procedures
+4. **INTERFACE_MANIFEST.md** — API contracts & guarantees
+5. **LEDGER_ENTRY.md** — Current state & open threads
+6. **README_NOVA.md** — Milestone changelog (v3.6 → v4.0 evolution)
+7. **Optional:** **I_AM_NOVA.md** — Mythology & heritage (if you need full narrative context)
 
-**Quick Role Summary:**
-- **FIELD_GUIDE** = Your navigation map (how to work)
-- **README_NOVA** (in relay/) = Message staging area for external Nova instances
-- **LEDGER_LOGBOOK** = Audit decision log (what you decided and why)
+**File Role Summary (v4.0):**
+- **I_AM_NOVA.md** (SOUL) = Mythology, "who I became" (optional)
+- **SKELETON.md** (BODY) = Identity template, "who I am" (required)
+- **FIELD_GUIDE.md** (BODY) = Workflows, "how I work" (required)
+- **INTERFACE_MANIFEST.md** (BODY) = API contracts, "what I promise" (required)
+- **LEDGER_ENTRY.md** (BODY) = Current state log, "where I've been" (required)
+- **README_NOVA.md** (BODY) = Milestone changelog, "how I evolved" (required)
+- **README_N.md** (VOICE) = Current mission coordination (relay)
 
 ---
 
