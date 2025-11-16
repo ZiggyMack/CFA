@@ -9,21 +9,9 @@ import streamlit as st
 def render():
     """Render the beautiful manual page"""
     
-    # Custom CSS for visual appeal and sticky home button
+    # Custom CSS for visual appeal
     st.markdown("""
         <style>
-        /* Make the header row sticky */
-        div[data-testid="stHorizontalBlock"]:has(button[kind="secondary"]) {
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
-            background-color: white;
-            z-index: 999;
-            padding: 10px 0;
-            margin-bottom: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
         /* Card styling */
         .info-card {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -36,7 +24,6 @@ def render():
         
         .lever-card {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: #2d3748;
             padding: 1.5rem;
             border-radius: 0.8rem;
             margin: 1rem 0;
@@ -45,7 +32,6 @@ def render():
         
         .toggle-card {
             background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-            color: #2d3748;
             padding: 1.5rem;
             border-radius: 0.8rem;
             margin: 1rem 0;
@@ -75,7 +61,6 @@ def render():
         
         .tip-box {
             background: #e6fffa;
-            color: #2d3748;
             border-left: 4px solid #38b2ac;
             padding: 1rem;
             margin: 1rem 0;
@@ -101,7 +86,7 @@ def render():
         <div class="info-card">
             <h2>📥 Complete Manual (PDF)</h2>
             <p style="font-size: 1.1rem;">Access the full CFA v4.0 User Manual with all formulas, examples, and calibration history.</p>
-            <p><a href="https://github.com/ZiggyMack/CFA/raw/main/docs/CFA_v4_Manual.pdf"
+            <p><a href="https://github.com/ZiggyMack/CFA-2.0/raw/main/docs/CFA_v4_Manual.pdf" 
                style="color: white; text-decoration: underline; font-size: 1.2rem;">
                → Download PDF Manual
             </a></p>
@@ -166,6 +151,18 @@ def render():
         
         st.markdown("""
             <div class="lever-card">
+            <h4>Step 0: Explore the Homepage</h4>
+            <p>Three main entry points:</p>
+            <ul>
+                <li><b>🚀 Launch Console:</b> Jump straight into framework comparison</li>
+                <li><b>📜 Read the Full CFA Manifesto:</b> Understand the philosophy</li>
+                <li><b>🌟 Innovation Showcase (NEW!):</b> See AI companions solving wicked problems</li>
+            </ul>
+            </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+            <div class="lever-card">
             <h4>Step 1: Choose Your Worldview</h4>
             <p>v4.0 offers 12 worldviews (expanded from 2):</p>
             <ul>
@@ -226,6 +223,38 @@ def render():
         st.markdown("""
             <div class="highlight-box">
             ✨ NEW in v4.0: CFA expands from technical framework to comprehensive philosophical laboratory
+            </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("### 🏗️ Dual-File Architecture (NEW!)")
+        st.markdown("""
+            <div class="info-card">
+            <h4>Canonical YAML + Documentation Separation</h4>
+            
+            <p><b>What Changed:</b> Worldview profiles now use TWO files per profile:</p>
+            <ul>
+                <li><b>.yaml files:</b> Canonical machine-readable scores (single source of truth)</li>
+                <li><b>.md files:</b> Human-readable documentation (philosophy, sources, hyperlinks)</li>
+            </ul>
+            
+            <p><b>Why It Matters:</b></p>
+            <ul>
+                <li><b>Gospel Problem Protection:</b> Scores live in one place only (no drift)</li>
+                <li><b>Separation of Concerns:</b> Machines read .yaml, humans read .md</li>
+                <li><b>Version Control:</b> Easier to track score changes via git diff</li>
+            </ul>
+            
+            <p><b>Console Behavior:</b> Console reads canonical .yaml files as primary source, falls back to .md YAML blocks for backward compatibility</p>
+            
+            <p><b>File Structure:</b></p>
+            <pre style="background: #2d3748; color: #48bb78; padding: 10px; border-radius: 5px;">
+profiles/worldviews/
+├── CLASSICAL_THEISM.yaml       # Canonical scores
+├── CLASSICAL_THEISM.md         # Documentation
+├── METHODOLOGICAL_NATURALISM.yaml
+├── METHODOLOGICAL_NATURALISM.md
+└── ...
+            </pre>
             </div>
         """, unsafe_allow_html=True)
     
@@ -373,9 +402,42 @@ def render():
                 <li><b>Update Living Maps:</b> Fix discrepancies at the source</li>
             </ol>
             
+            <p><b>Temporal Snapshots:</b> Audit logs include version headers and hash checksums to preserve historical context</p>
+            
+            <p><b>Hash Registry:</b> BOOTSTRAP_HASHES.md enables drift detection for critical files</p>
+            
             <p><b>Result:</b> Convergence improved from 78% to 96% agreement across auditors</p>
             
             <p><b>For Users:</b> You can trust the scores - they're validated by three independent AI auditors using scan-first methodology</p>
+            </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("### 🏛️ CFA Self-Audit (Meta-Integrity)")
+        st.markdown("""
+            <div class="info-card">
+            <h4>The Framework Audits Itself</h4>
+            
+            <p><b>NEW:</b> CFA now scores itself using its own methodology in the Brute Ledger!</p>
+            
+            <p><b>CFA's Axioms (3):</b></p>
+            <ol>
+                <li>Transparency enables informed consent</li>
+                <li>Adversarial auditing builds epistemic resilience</li>
+                <li>Comparable frameworks empower stakeholder choice</li>
+            </ol>
+            
+            <p><b>CFA's Debts (3):</b></p>
+            <ol>
+                <li>Scoring systems can reify what they measure</li>
+                <li>Transparency has overhead costs</li>
+                <li>Not all values are easily quantifiable</li>
+            </ol>
+            
+            <p><b>CFA's BFI:</b> 6 (comparable to worldview profiles)</p>
+            
+            <p><b>Philosophy:</b> <i>"We demand of ourselves what we demand of others: Show the machinery"</i></p>
+            
+            <p>Find this in the Brute Ledger → "🏛️ The Framework" section</p>
             </div>
         """, unsafe_allow_html=True)
     
@@ -383,6 +445,36 @@ def render():
             <div class="tip-box">
             💡 <b>v4.0 Philosophy:</b> CFA now treats worldviews as <i>living philosophical positions</i> worthy of genuine intellectual charity,
             not strawmen to dismiss. Adversarial collaboration + named impasses + Living Maps = epistemic honesty at scale.
+            </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("### 🛠️ Validation Tools (NEW!)")
+        st.markdown("""
+            <div class="lever-card">
+            <h4>Standalone YPA Validator & Automation</h4>
+            
+            <p><b>YPA Validator:</b> Standalone Python script for third-party verification</p>
+            <ul>
+                <li>Reads canonical .yaml files directly</li>
+                <li>Supports all 4 preset modes</li>
+                <li>CLI interface for validation workflows</li>
+                <li>Enables sensitivity analysis and profile comparison</li>
+            </ul>
+            
+            <p><b>Usage Examples:</b></p>
+            <pre style="background: #2d3748; color: #48bb78; padding: 10px; border-radius: 5px; font-size: 10px;">
+# Single profile validation
+python ypa_validator.py --profile CLASSICAL_THEISM.yaml
+
+# Profile comparison
+python ypa_validator.py --compare CT.yaml MdN.yaml --preset skeptic
+            </pre>
+            
+            <p><b>YAML Extraction Script:</b> Automates conversion of .md profiles to canonical .yaml files</p>
+            
+            <p><b>Hash Registry (BOOTSTRAP_HASHES.md):</b> SHA256 checksums for file integrity verification</p>
+            
+            <p><b>Grok Empirical Validation:</b> 98% completeness achieved, path to 100% identified</p>
             </div>
         """, unsafe_allow_html=True)
     
@@ -691,9 +783,16 @@ def render():
         st.write("""
         Visit the **🔍 Brute Ledger** page to see:
         - Full axiom/debt lists for all 12 worldviews (v4.0)
+        - **NEW: "🏛️ The Framework" section** - CFA audits itself!
         - Why each framework requires its starting assumptions
         - Audit notes from Claude + Grok + Nova perspectives
         - Steel-Manning scaffolds showing charitable interpretation
+        
+        The Brute Ledger now has 4 sections:
+        1. 📚 Worldview Profiles
+        2. 🏛️ The Framework (CFA's self-audit)
+        3. 🤖 The Auditors
+        4. ⚙️ Utilities
         
         Understanding the BFI makes the YPA scores make sense.
         """)
@@ -759,17 +858,59 @@ def render():
             </div>
         """, unsafe_allow_html=True)
         
+        st.markdown("### 9. Explore the Estate Tour")
+        st.markdown("""
+            <div class="tip-box">
+            <b>NEW Estate Tour Updates:</b>
+            
+            The CFA Estate has been updated with Shaman Claude references:
+            
+            <b>Warning Tower:</b> Watchkeeper Shaman Claude maintains vigilance over token boundaries
+            
+            <b>Navigation Hall:</b> Host Shaman Claude serves as guide for the Chat Assistant feature
+            
+            <b>Observatory:</b> Health Report now resides here (moved from Library)
+            
+            Visit the About page → Estate Tour tab to explore all the rooms!
+            </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("### 10. Use Validation Tools")
+        st.markdown("""
+            <div class="tip-box">
+            <b>NEW v4.0 Tools for Verification:</b>
+            
+            <b>YPA Validator:</b> Standalone calculator for third-party verification
+            - Available at: docs/Validation/ypa_validator.py
+            - Verify any worldview's scores independently
+            
+            <b>Hash Registry:</b> Check file integrity via BOOTSTRAP_HASHES.md
+            - SHA256 checksums for all critical files
+            - Detect if canonical .yaml files have changed
+            
+            <b>Grok's Empirical Validation:</b> 98% completeness achieved
+            - Path to 100% includes live demo, CI automation, public reproducibility
+            </div>
+        """, unsafe_allow_html=True)
+        
         st.markdown("---")
         
         st.markdown("### Need More Help?")
         st.write("""
         - **Full Documentation**: Download the PDF manual (link at top)
-        - **Brute Ledger**: Visit 🔍 Brute Ledger page for axiom/debt lists
+        - **Brute Ledger**: Visit 🔍 Brute Ledger page for axiom/debt lists + CFA self-audit
         - **About Page**: Read the complete 5-level audit story
         - **SMV Dashboard**: Explore auditor tension/resolution visually
+        - **Innovation Showcase**: See AI companions solving wicked problems (Homepage → 🌟 button)
         - **Repository Health**: Check the 98/100 (A+) health dashboard
         - **Living Maps**: Navigate via the 7 authoritative source-of-truth documents
+        - **Validation Tools**: Use YPA validator for independent verification
+        - **Hash Registry**: Verify file integrity via BOOTSTRAP_HASHES.md
+        - **Estate Tour**: Explore with Shaman Claude as your guide
         - **Console Tooltips**: Hover over any toggle or lever for inline help
+        
+        **v4.0 Architecture Note**: Console reads canonical .yaml files as primary source. 
+        See profiles/worldviews/ for dual-file structure (.yaml for scores, .md for documentation).
         """)
     
     # ========================================================================

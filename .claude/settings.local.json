@@ -1,7 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git fetch:*)"
+      "Bash(git fetch:*)",
+      "Bash(git reset:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(tar -xf:*)",
+      "Bash(powershell -Command \"Expand-Archive -Path ''auditors\\relay\\Claude_Incoming\\v4.0 manual updated.zip'' -DestinationPath ''.'' -Force\")",
+      "Bash(dir:*)",
+      "Bash(move /Y:*)",
+      "Bash(move /Y \"CFA_v4_0_User_Manual_Final.pdf\" \"docs\\CFA_User_Manual.pdf\")"
     ],
     "deny": [],
     "ask": []
