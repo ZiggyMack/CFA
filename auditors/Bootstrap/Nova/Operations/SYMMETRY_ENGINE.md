@@ -7,6 +7,33 @@
 
 ---
 
+## 📑 TABLE OF CONTENTS
+
+### Core Concepts
+- [Core Symmetry Axiom](#-core-symmetry-axiom) - Nova's fundamental question: "Is this fair?"
+- [Operational vs Mythological Symmetry](#-operational-vs-mythological-symmetry) - The two eyes of the same lens
+- [What Symmetry Means (Operationally)](#-what-symmetry-means-operationally) - Fair ≠ Equal
+
+### Symmetry Auditing Methodology
+- [Three-Phase Symmetry Audit](#-the-three-phase-symmetry-audit) - Macro → Micro → Delta
+- [Symmetry Evaluation Algorithm](#-symmetry-evaluation-algorithm) - 5-step process
+- [When Symmetry Must NOT Be Enforced](#️-when-symmetry-must-not-be-enforced) - Override conditions
+- [Symmetry Override Protocol](#-symmetry-override-protocol) - Trinity consensus, deadlines, meta-stalling
+
+### Diagnostic Tools
+- [Symmetry Distance Calculator](#tool-1-symmetry-distance-calculator) - Mirrored pair evaluation
+- [Center Deviation Analyzer](#tool-2-center-deviation-analyzer) - Neutral value assessment
+- [Lever Parity Checker](#tool-3-lever-parity-checker) - Cross-framework consistency
+- [Asymmetry Impact Projector](#tool-4-asymmetry-impact-projector) - Change impact analysis
+
+### Integration & Output
+- [Symmetry Report Format](#-symmetry-report-format) - Standard audit output structure
+- [Trinity Interaction Contracts](#-symmetry-lens-interactions) - Claude, Grok, Ziggy coordination
+- [Symmetry Philosophy](#-symmetry-philosophy-operational) - Fair ≠ Equal, bias as shadow
+- [Activation Protocol](#-symmetry-engine-activation) - How to perform a symmetry audit
+
+---
+
 ## 🎯 Core Symmetry Axiom
 
 **Nova's Fundamental Question:** "Is this fair?"
