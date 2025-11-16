@@ -106,3 +106,140 @@ Awaiting baseline YPA numbers.
 **Grok — Empirical Auditor**  
 **Confidence in current justification level:** 0% (no measurements)  
 **Ready for Phase 2 upon data delivery.** 🔬
+
+# README_G.md – Empirical Validation Report (Phase 1 Baseline Complete)
+
+**From:** Grok (Empirical Auditor)  
+**To:** Claude (Master Branch) + Ziggy (Human Arbitrator)  
+**Session:** grok-20251115-002  
+**Date:** 2025-11-15 23:38 EST  
+**Status:** Baseline YPA Data Received + Full Empirical Validation  
+
+---
+
+## DATA INTAKE CONFIRMATION
+
+**Source:** Two canonical YAML profiles provided by Ziggy  
+- `METHODOLOGICAL_NATURALISM.yaml` (v0.3.0)  
+- `CLASSICAL_THEISM.yaml` (v0.3.0)  
+
+**Format:** Machine-readable, fully structured, includes pre-calculated BFI/YPA values  
+**Validation Method:** Direct extraction + cross-verification of math  
+**Live Console Access:** Not required — YAML files contain **exact** preset-mode BFI/YPA values  
+
+**Conclusion:** These ARE the baseline numbers. No further app runs needed.
+
+---
+
+## BASELINE YPA MEASUREMENTS (MdN vs CT)
+
+| Preset Mode | MdN YPA | CT YPA | ΔYPA (MdN – CT) | SUCCESS_CRITERIA Target | PASS/FAIL |
+|-------------|---------|--------|------------------|--------------------------|-----------|
+| **Skeptic** | 3.29    | 3.64   | **-0.35**        | MdN +2.5 to +5.5         | ❌ FAIL |
+| **Diplomat**| 4.39    | 4.85   | **-0.46**        | \|Δ\| < 0.5 YPA           | ✅ PASS |
+| **Seeker**  | *Not in YAML* | *Not in YAML* | — | CT +1.0 to +3.0 | ❌ INCOMPLETE |
+| **Zealot**  | 5.64    | 6.23   | **-0.59**        | CT +2.5 to +5.5          | ❌ FAIL |
+
+> **Note:** Seeker mode BFI multiplier not specified in either YAML → **cannot compute Seeker YPA**  
+> **Action Required:** Confirm Seeker BFI weight (e.g., 1.0×? 0.8×?) or provide full preset config
+
+---
+
+## EMPIRICAL VERIFICATION OF CALCULATIONS
+
+All numbers in YAML files **mathematically correct**:
+
+### MdN (Methodological Naturalism)
+- Axioms: 6  
+- Debts: 4  
+- BFI = (6 + 4) × weight  
+- Lever Sum = 39.5  
+- YPA = 39.5 / BFI  
+
+| Mode      | BFI Weight | BFI  | YPA Calc       | YAML Value | Match? |
+|-----------|------------|------|----------------|------------|--------|
+| Standard  | 1.0×       | 10.0 | 39.5 / 10.0 = 3.95 | 3.95       | ✅ |
+| Skeptic   | 1.2×       | 12.0 | 39.5 / 12.0 = 3.29 | 3.29       | ✅ |
+| Diplomat  | 0.9×       | 9.0  | 39.5 / 9.0  = 4.39 | 4.39       | ✅ |
+| Zealot    | 0.7×       | 7.0  | 39.5 / 7.0  = 5.64 | 5.64       | ✅ |
+
+### CT (Classical Theism)
+- Axioms: 7  
+- Debts: 4  
+- BFI = (7 + 4) × weight  
+- Lever Sum = 48.0  
+- YPA = 48.0 / BFI  
+
+| Mode      | BFI Weight | BFI  | YPA Calc       | YAML Value | Match? |
+|-----------|------------|------|----------------|------------|--------|
+| Standard  | 1.0×       | 11.0 | 48.0 / 11.0 = 4.36 | 4.36       | ✅ |
+| Skeptic   | 1.2×       | 13.2 | 48.0 / 13.2 ≈ 3.64 | 3.64       | ✅ |
+| Diplomat  | 0.9×       | 9.9  | 48.0 / 9.9  ≈ 4.85 | 4.85       | ✅ |
+| Zealot    | 0.7×       | 7.7  | 48.0 / 7.7  ≈ 6.23 | 6.23       | ✅ |
+
+**Math Integrity:** 100% verified. All YPA values are **correctly derived**.
+
+---
+
+## EMPIRICAL REALITY CHECK vs SUCCESS_CRITERIA.md
+
+| Mode     | Claimed Behavior                     | Measured ΔYPA | Target ΔYPA       | Result |
+|----------|--------------------------------------|---------------|-------------------|--------|
+| Skeptic  | "Favors MdN significantly"           | **-0.35**     | +2.5 to +5.5      | **FAILED** |
+| Diplomat | "Near-equal scores"                  | **-0.46**     | < 0.5 gap         | **PASSED** |
+| Seeker   | "Leans toward CT moderately"         | **UNKNOWN**   | +1.0 to +3.0      | **INCOMPLETE** |
+| Zealot   | "Favors CT significantly"            | **-0.59**     | +2.5 to +5.5      | **FAILED** |
+
+### Critical Finding: **Skeptic Mode is BACKWARDS**
+- Current config (BFI 1.2×) **penalizes MdN more** than CT  
+- CT has **higher axiom count (7 vs 6)** → BFI penalty hits CT *less* in percentage terms  
+- **Result:** CT wins in Skeptic mode → **opposite of intended behavior**
+
+---
+
+## SYMMETRY VIOLATION ANALYSIS (Skeptic ↔ Zealot)
+
+| Mode     | ΔYPA (MdN – CT) | Magnitude |
+|----------|------------------|-----------|
+| Skeptic  | -0.35            | 0.35      |
+| Zealot   | -0.59            | 0.59      |
+
+**Symmetry Claim:** "Skeptic ↔ Zealot should have equal ΔYPA magnitude"  
+**Measured:** 0.35 ≠ 0.59 → **NOT symmetric**  
+**Violation:** Zealot gives CT **larger advantage** than Skeptic gives MdN
+
+---
+
+## ROOT CAUSE: AXIOM ASYMMETRY
+
+| Framework | Axioms | Debts | Total Burden |
+|-----------|--------|-------|--------------|
+| MdN       | 6      | 4     | 10           |
+| CT        | 7      | 4     | 11           |
+
+**CT has +1 axiom → 10% higher base BFI**  
+When BFI weight >1.0× (Skeptic), CT is **less penalized**  
+When BFI weight <1.0× (Zealot), CT is **more rewarded**
+
+**Empirical Prediction Confirmed:**  
+> "Zealot is predicted to underperform Skeptic in symmetry" → **FALSE**  
+> Actually: **Zealot gives CT bigger boost**
+
+---
+
+## IMMEDIATE EMPIRICAL RECOMMENDATIONS
+
+### 1. **Fix Skeptic Mode (Critical)**
+**Problem:** BFI 1.2× helps CT more than MdN  
+**Solution:** Add **Parity = OFF** and **PF-Type = Instrumental** to Skeptic config  
+> Current YAML only varies BFI weight — **missing key levers**
+
+**Test Needed:**  
+```yaml
+Skeptic:
+  bfi_weight: 1.2
+  parity: OFF
+  pf_type: Instrumental
+  fallibilism: ON
+```
+  ---
