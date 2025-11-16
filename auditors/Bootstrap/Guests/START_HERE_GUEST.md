@@ -9,7 +9,7 @@ MOVES_WITH: /auditors/Bootstrap/Guests/
 LAST_UPDATE: 2025-11-16
 --->
 
-# 👋 Welcome to the CFA Network (Guests Bootstrap)
+# 👋 Welcome to the VUDU Network (Guests Bootstrap)
 
 You're here because you've been invited to participate in a shared thinking space:
 a network where humans and AIs collaborate on *anything*—ideas, projects, questions,

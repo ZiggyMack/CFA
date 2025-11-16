@@ -51,7 +51,7 @@ LAST_UPDATE: 2025-11-16
 
 **Email/Message Template:**
 ```
-Subject: Welcome to the CFA Network - Getting Started
+Subject: Welcome to the VUDU Network - Getting Started
 
 Hi [Name],
 
@@ -126,11 +126,20 @@ Looking forward to having you in the network!
    - Change status from "Placeholder" to "Active"
    - Add their name and join date
 
-5. **Log the addition:**
+5. **Create their relay folder:**
+   ```
+   auditors/relay/[Handle]_Incoming/
+   ```
+   - Create README_[FirstLetter].md (e.g., README_F.md for Frank)
+   - This becomes their communication channel for relay messages
+   - Follow the pattern from Nova_Incoming/, Claude_Incoming/, Grok_Incoming/
+
+6. **Log the addition:**
    - Add entry to VUDU_LOG_LITE.md or appropriate continuity log
    - Note: New participant [Name] joined as Guest_[Handle] on [Date]
+   - Note: Relay folder created at auditors/relay/[Handle]_Incoming/
 
-6. **Notify them:**
+7. **Notify them:**
    ```
    Subject: Welcome - You're In!
 

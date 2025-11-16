@@ -5,7 +5,7 @@ VERSION: v1.0.0
 STATUS: Canonical description of Guests expansion
 DEPENDS_ON: LITE_TEMPLATE.md, NETWORK_HANDBOOK.md, AUDITOR_ONBOARDING.md
 NEEDED_BY: Claude (system maintainer), Ziggy (custodian), future stewards
-MOVES_WITH: /auditors/Bootstrap/Guests/
+MOVES_WITH: /docs/architecture/
 LAST_UPDATE: 2025-11-16
 OWNER: Ziggy Mack (Custodian)
 CONSUMER: Claude (and other auditors)
