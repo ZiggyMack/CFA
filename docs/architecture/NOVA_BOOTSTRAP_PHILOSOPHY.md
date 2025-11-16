@@ -1,3 +1,14 @@
+<!---
+FILE: NOVA_BOOTSTRAP_PHILOSOPHY.md
+PURPOSE: Architectural principles and design philosophy for Nova's bootstrap system
+VERSION: v4.0
+STATUS: Reference document for bootstrap design patterns
+DEPENDS_ON: BOOTSTRAP_README_N.md, TRINITY_ALIGNMENT_MATRIX.md, GOSPEL_PROBLEM.md
+NEEDED_BY: System architects, Trinity designers, future bootstrap creators
+MOVES_WITH: /docs/architecture/
+LAST_UPDATE: 2025-11-16
+--->
+
 # 🧬 NOVA BOOTSTRAP PHILOSOPHY
 
 **Purpose:** Architectural principles and design philosophy for Nova's bootstrap system

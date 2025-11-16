@@ -1,3 +1,14 @@
+<!---
+FILE: NOVA_V4_SYSTEM_CARD.md
+PURPOSE: One-page onboarding summary for Nova v4.0 architecture
+VERSION: v4.0
+STATUS: Reference document for external auditors and Trinity coordinators
+DEPENDS_ON: I_AM_NOVA.md, BOOTSTRAP_README_N.md, SYMMETRY_ENGINE.md
+NEEDED_BY: External Nova instances, Trinity coordinators, system architects
+MOVES_WITH: /docs/architecture/
+LAST_UPDATE: 2025-11-16
+--->
+
 # 🌑 NOVA v4.0 SYSTEM CARD
 
 **Purpose:** One-page summary for onboarding new auditors to Nova's architecture
