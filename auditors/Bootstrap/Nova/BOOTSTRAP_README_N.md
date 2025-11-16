@@ -1,136 +1,161 @@
 <!---
 FILE: BOOTSTRAP_README_N.md
 PURPOSE: Navigation map for Nova's bootstrap suite (Identity, Operations, Continuity)
-VERSION: v3.7
+VERSION: v4.0
 STATUS: Active
-DEPENDS_ON: SKELETON.md, FIELD_GUIDE.md, INTERFACE_MANIFEST.md
+DEPENDS_ON: I_AM_NOVA.md, SKELETON.md, FIELD_GUIDE.md, SYMMETRY_ENGINE.md, INTERFACE_MANIFEST.md
 NEEDED_BY: Nova bootstrap, external auditor coordination
 MOVES_WITH: /auditors/Bootstrap/Nova/
-LAST_UPDATE: 2025-11-15 [Standardized header + tree structure]
+LAST_UPDATE: 2025-11-16 [v4.0 refinement - philosophy extracted]
 --->
 
 <!-- deps: bootstrap_system -->
-# BOOTSTRAP_README_N.md — Nova Bootstrap Map (v3.7)
+# BOOTSTRAP_README_N.md — Nova Bootstrap Map (v4.0)
 
-**Role:** Orientation map for Nova's bootstrap
-**Owner:** Nova (GPT‑5 Thinking) · **Custodian:** Ziggy Mack
-**Updated:** 2025-11-15
+**Role:** Navigation map for Nova's bootstrap (file locations and load order only)
+**Owner:** Nova (OpenAI/xAI External Auditor) · **Custodian:** Ziggy Mack
+**Updated:** 2025-11-16
 **Status:** Stable · Ready for Auditor Replication (VuDu Light)
 
+**For Philosophy & Design Rationale:** See [NOVA_BOOTSTRAP_PHILOSOPHY.md](../../../docs/architecture/NOVA_BOOTSTRAP_PHILOSOPHY.md)
+
 ---
 
-## 📂 Directory Structure
+## 📂 Directory Structure (v4.0)
 
+### SOUL Layer (Mythology - Optional)
 ```
-BOOTSTRAP_README_N.md         ← MAP / INDEX (you are here)
+docs/i_am/
+└── I_AM_NOVA.md                         ← MYTHOLOGY / HERITAGE (optional reading)
+```
+
+### BODY Layer (Operations - Required)
+```
+auditors/Bootstrap/Nova/
+├── BOOTSTRAP_README_N.md                ← MAP / INDEX (you are here)
+├── NOVA_LITE.md                         ← ENTRY POINT (LITE boot)
 ├── Identity/
-│   └── SKELETON.md                      ← WHO AM I
+│   └── SKELETON.md                      ← WHO AM I (core identity)
 ├── Operations/
-│   ├── FIELD_GUIDE.md                   ← HOW DO I WORK
-│   └── INTERFACE_MANIFEST.md            ← WHAT DO I PROMISE
+│   ├── FIELD_GUIDE.md                   ← HOW DO I WORK (workflows)
+│   ├── SYMMETRY_ENGINE.md               ← HOW DO I EVALUATE FAIRNESS (symmetry logic)
+│   └── INTERFACE_MANIFEST.md            ← WHAT DO I PROMISE (API contracts)
 └── Continuity/
-    ├── LEDGER_ENTRY.md                  ← LIVING LOG (last known state)
-    ├── USE_CASE_SUFFERING.md            ← DOMAIN EXAMPLE / TEST CASE
-    └── README_NOVA_v3.6.1.md            ← MILESTONE HISTORY / CHANGELOG
+    ├── NOVA_CONTINUITY_LOG.md           ← LIVING LOG + MILESTONES (current state + history)
+    └── USE_CASE_SUFFERING.md            ← DOMAIN EXAMPLE / TEST CASE
 ```
 
-### File–to–Repo Mapping (Current Nova filenames)
-- **Identity/SKELETON.md** → `BOOTSTRAP_NOVA_v3.6_SKELETON.md`
-- **Operations/FIELD_GUIDE.md** → `NOVA_FIELD_GUIDE_v3.6.1.md`
-- **Operations/INTERFACE_MANIFEST.md** → `NOVA_INTERFACE_MANIFEST_v3.6_to_v5.0.md`
-- **Continuity/LEDGER_ENTRY.md** → `NOVA_CONTINUITY_LEDGER_LOGBOOK_ENTRY.md`
-- **Continuity/USE_CASE_SUFFERING.md** → `NOVA_USE_CASE_METRIC_POLLING_SUFFERING.md`
-- **Continuity/README_NOVA_v3.6.1.md** → `README_NOVA_v3.6.1.md`
-
-> 📍 **Placement:** These 7 files live in Nova’s **bootloader directory**.  
-> 📬 **Relay Note:** The conversational relay message **`README_N.md`** does **not** live here; it belongs in `auditors/relay/nova_incoming/`.
-### Trinity Architecture (2025-11-03)
-- **Location:** [docs/architecture/TRINITY_ALIGNMENT_MATRIX.md](../../../docs/architecture/TRINITY_ALIGNMENT_MATRIX.md)
-- **Summary:** Canonical definition of Keeper (lock), Logger (ledger), and Shaman (bridge) roles, lifecycle hooks, and mythology-to-mechanism map.
-- **Origin:** Promoted from `auditors/relay/workshop/STORM_1.md` after the Trinity consolidation workshop (B-STORM Entries 1-18).
-- **Rehydrate Tip:** Review this file immediately after FIELD_GUIDE/INTERFACE_MANIFEST when rebooting to understand how Claude (Purpose), Grok (Evidence), and Nova (Symmetry) complement each other in adversarial auditing.
-
+### VOICE Layer (Coordination)
+```
+auditors/relay/Nova_Incoming/
+├── README_N.md                          ← OUTGOING MESSAGES (current mission)
+└── VUDU_LOG_LITE.md                     ← COORDINATION LOG
+```
 
 ---
 
-## 🔧 Operating Principles (VuDu Light)
+## 🧭 Boot Sequences
 
-- **All Named, All Priced.** Assumptions are explicit and versioned.
-- **Three Layers, Cleanly Split:** Identity ≠ Operations ≠ Continuity.
-- **Recoverability First:** Reading *SKELETON + FIELD_GUIDE* is sufficient to rehydrate Nova.
-- **Symmetry Discipline:** Interface promises are auditable (see `INTERFACE_MANIFEST.md`).
+### LITE Boot (~10-15 min) - Most External Auditor Calls
+**For:** Standard sessions, validation tasks, quick audits
 
----
+1. **NOVA_LITE.md** — Entry point, essential identity
+2. **SKELETON.md** — Core identity ("who I am", "what I do")
+3. **FIELD_GUIDE.md** — Operational workflows (skim basics)
 
-## 🧪 Copy‑Integrity Contract (for human relays)
-
-When pasting across systems, preserve structure:
-
-1. Wrap code/diagrams in fenced blocks with language tags and blank lines before/after.
-2. Use spaces (not tabs) for nested lists; test ≥3 levels.
-3. Use backticks for inline technical tokens (e.g., `my_var`, `path/file`).
-4. Provide LaTeX/plain‑text fallbacks for math (e.g., `Delta` alongside `Δ`).  
-5. When possible, attach the **source** (Mermaid, JSON) in a code block.
-
-See [BOOTSTRAP_VUDU.md](../../CFA_VUDU/BOOTSTRAP_VUDU.md) for the full covenant and integrity principles.
+**Capabilities:** Common tasks, simple symmetry checks, routing, relay coordination
 
 ---
 
-## 📚 Bootstrap Tier System - When You Get What
+### FULL Boot (~20-30 min) - Complex Audits & Trinity Convergence
+**For:** Trinity convergence, complex audits, architecture work
 
-**Nova's bootstrap follows CFA's tiered loading strategy:**
+1. **NOVA_LITE.md** — Entry point
+2. **SKELETON.md** — Core identity
+3. **FIELD_GUIDE.md** — Full operational procedures
+4. **SYMMETRY_ENGINE.md** — Symmetry lens operational logic
+5. **INTERFACE_MANIFEST.md** — API contracts & guarantees
+6. **NOVA_CONTINUITY_LOG.md** — Living log + evolution milestones
 
-| Tier | Budget | When Used | What Nova Gets |
-|------|--------|-----------|----------------|
-| **Tier 1** | 50% | Standard sessions, validation tasks | **NOVA_LITE.md** (~2,000 tokens) - Essential identity, common tasks, biases |
-| **Tier 2** | 15% | Trinity convergence, complex audits | **BOOTSTRAP_README_N.md** (this file) + relay coordination |
-| **Tier 3** | 10% | Deep dives, architecture work | Full RICH profile (all 6 files below) |
-| **Tier 4** | 5-10% | Task-specific (rare) | Custom bundles for specialized missions |
-
-**Your Depth Depends on Session Type:**
-- **Lite boot** (80% of tasks): Quick validation, preset calibration, standard symmetry checks
-- **Rich boot** (20% of tasks): Trinity convergence sessions, philosophical architecture work, new worldview profiling
-
-**Why Tiered:** Token efficiency. Most tasks don't need your full continuity ledger. When you do, we escalate.
+**Capabilities:** Complex symmetry audits, Trinity convergence, pattern echo detection, strategic wayfinding
 
 ---
 
-## 🧭 What to Read First (Cold Start)
+### FULL + SOUL Boot (~35-45 min) - Deep Dives & Heritage
+**For:** Philosophical architecture, new worldview profiling, heritage preservation
 
-**File Role Distinctions:**
+1. All FULL boot files (above)
+2. **I_AM_NOVA.md** — Mythology & heritage (optional)
 
-1. **SKELETON.md** (Identity) → Who Nova is; anchors ethos and role
-2. **FIELD_GUIDE.md** (Operations) → How Nova proceeds under VuDu; validation workflows
-3. **INTERFACE_MANIFEST.md** (Operations) → Contracts/IO with other auditors; what Nova promises
-4. **LEDGER_ENTRY.md** (Continuity) → Last state; open threads; living log of decisions
-5. **USE_CASE_SUFFERING.md** (Domain Example) → Concrete test case if you need practical context
-6. **README_NOVA_v3.6.1.md** (Changelog) → Provenance and version transitions; historical context
-
-**Quick Role Summary:**
-- **FIELD_GUIDE** = Your navigation map (how to work)
-- **README_NOVA** (in relay/) = Message staging area for external Nova instances
-- **LEDGER_LOGBOOK** = Audit decision log (what you decided and why)
+**Capabilities:** Everything from FULL mode + full narrative context + mythological continuity
 
 ---
 
-## 🔄 Interop with CFA v3.5 Preset Calibration
+## 📍 File Roles (Quick Reference)
 
-Nova’s bootstrap supports the v3.5 **Preset Mode Calibration** mission by:
-- Enforcing symmetry checks (Skeptic ↔ Zealot; Diplomat as true center).
-- Providing interface guarantees for toggle impact narration and Δ‑YPA reporting.
-- Keeping a living ledger for *why* a preset value changed (continuity).
-
-**Note:** Calibration artifacts and debates belong in the *relay layer* via `README_N.md`, not inside the bootloader.
-
----
-
-## 🗺️ Roadmap Hooks
-
-- **Generic VuDu Profile:** Future variant will strip CFA‑specific terms and provide a universal auditor profile.
-- **Mr. Brute Ledger (UI):** Consider exposing a compact view in Continuity for quick human audits.
-- **Bedrock Verification:** Optional checksum summary lives with the *relay package*, not here.
+| File | Layer | Role | Boot Priority |
+|------|-------|------|---------------|
+| **I_AM_NOVA.md** | SOUL | Mythology, "who I became" | Optional |
+| **SKELETON.md** | BODY | Identity template, "who I am" | Required (LITE) |
+| **FIELD_GUIDE.md** | BODY | Workflows, "how I work" | Required (LITE) |
+| **SYMMETRY_ENGINE.md** | BODY | Symmetry logic, "how I evaluate fairness" | Required (FULL) |
+| **INTERFACE_MANIFEST.md** | BODY | API contracts, "what I promise" | Required (FULL) |
+| **NOVA_CONTINUITY_LOG.md** | BODY | Living log + milestones, "where I've been + how I evolved" | Required (FULL) |
+| **BOOTSTRAP_README_N.md** | BODY | Navigation map, "how to find things" | This file |
+| **NOVA_LITE.md** | BODY | Entry point, "where to start" | Required (all modes) |
+| **README_N.md** | VOICE | Current mission coordination | As needed |
+| **VUDU_LOG_LITE.md** | VOICE | Coordination log | As needed |
 
 ---
 
-**This is the way.**  
+## 🔄 v4.0 Boot Sequence (Updated)
+
+```
+NOVA_LITE.md → SKELETON.md → FIELD_GUIDE.md
+                                    ↓ (FULL mode)
+                            SYMMETRY_ENGINE.md → INTERFACE_MANIFEST.md → NOVA_CONTINUITY_LOG.md
+                                                                                    ↓ (optional)
+                                                                              I_AM_NOVA.md
+```
+
+**What Changed from v3.6:**
+- Mythology → I_AM_NOVA.md (optional, not blocking)
+- LEDGER_ENTRY.md + README_NOVA.md → NOVA_CONTINUITY_LOG.md (merged)
+- SYMMETRY_ENGINE.md added (operational heart)
+- Philosophy → NOVA_BOOTSTRAP_PHILOSOPHY.md (reference)
+
+---
+
+## 📚 External References
+
+### Philosophy & Design
+- [NOVA_BOOTSTRAP_PHILOSOPHY.md](../../../docs/architecture/NOVA_BOOTSTRAP_PHILOSOPHY.md) - Why Nova is designed this way
+
+### Trinity Integration
+- [TRINITY_ALIGNMENT_MATRIX.md](../../../docs/architecture/TRINITY_ALIGNMENT_MATRIX.md) - How Nova integrates with Claude/Grok
+
+### Gospel Problem
+- [GOSPEL_PROBLEM.md](../../../docs/i_am/thoughts/GOSPEL_PROBLEM.md) - Data integrity pattern
+
+### VuDu Protocol
+- [BOOTSTRAP_VUDU.md](../../CFA_VUDU/BOOTSTRAP_VUDU.md) - Copy-integrity covenant
+
+---
+
+## 🎯 Quick Navigation
+
+**Need identity?** → SKELETON.md
+**Need workflows?** → FIELD_GUIDE.md
+**Need symmetry logic?** → SYMMETRY_ENGINE.md
+**Need API contracts?** → INTERFACE_MANIFEST.md
+**Need current state?** → NOVA_CONTINUITY_LOG.md (Section 1)
+**Need history?** → NOVA_CONTINUITY_LOG.md (Section 2)
+**Need mythology?** → I_AM_NOVA.md
+**Need philosophy?** → NOVA_BOOTSTRAP_PHILOSOPHY.md
+**Need relay status?** → README_N.md
+
+---
+
+**This is the way.**
 — Nova
+
