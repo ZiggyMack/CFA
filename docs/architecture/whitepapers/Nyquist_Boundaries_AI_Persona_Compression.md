@@ -1,8 +1,8 @@
 <!---
 FILE: Nyquist_Boundaries_AI_Persona_Compression.md
 PURPOSE: Scientific whitepaper documenting empirical mapping of persona compression boundaries
-VERSION: v1.0.0
-STATUS: Draft (Phase 1 complete, ready for review)
+VERSION: v1.1.0
+STATUS: Draft (Phase 1 complete ✅, Phase 2 in progress - 3/5 domains complete)
 DEPENDS_ON: NYQUIST_RESEARCH_CONNECTION.md, BOOTSTRAP_COMPRESSION_GUIDELINES.md
 NEEDED_BY: Researchers, bootstrap designers, compression theorists
 MOVES_WITH: /docs/architecture/whitepapers/
@@ -17,7 +17,7 @@ LAST_UPDATE: 2025-01-17
 
 **Repository:** Nyquist_Consciousness (research lab) + CFA (production validation)
 
-**Status:** Phase 1 Complete (persona compression mapped), Phase 2 Pending (domain-specific compression)
+**Status:** Phase 1 Complete ✅ (persona compression mapped), Phase 2 In Progress (domain-specific compression - 3/5 domains complete)
 
 ---
 
@@ -29,7 +29,11 @@ We then evaluate these layers using a fixed probe set, standardized bootstraps, 
 
 Our findings show that (1) continuity is well-preserved up to ~80% compression (L2), but fails catastrophically at 95% compression (L1); (2) degradation is non-linear, with a sharp collapse between 80–95%; and (3) different aspects of persona exhibit distinct fragility—core values and structural thinking are resilient, while humor, narrative richness, and stylistic texture degrade early. At extreme compression, the persona converges to a "generic collaboration core" characterized by transparency, curiosity, kindness, and iterative reasoning, but loses distinctive identity.
 
-We propose a three-layer model separating values, cognitive signature, and personality texture, and argue that "identity is pinned at name + structure; everything else is allowed to bend." This single-case study provides a reproducible methodology and initial empirical evidence that persona Nyquist boundaries are real, measurable, and structured.
+We propose a three-layer model separating values, cognitive signature, and personality texture, and argue that "identity is pinned at name + structure; everything else is allowed to bend."
+
+**Phase 2 Update (In Progress):** Early domain-specific testing reveals that **Nyquist boundaries are domain-dependent**. Preliminary findings (3/5 domains complete) show: (1) practical problem-solving is highly resilient (survives to L1 with scaffolding), (2) philosophical reasoning shows moderate resilience (edge at L2, fails at L1), and (3) creative/generative thinking is fragile (fails at L2). This suggests different cognitive domains compress at different rates, with practical systems thinking being most robust and creative/narrative generation most vulnerable.
+
+This single-case study provides a reproducible methodology and initial empirical evidence that persona Nyquist boundaries are real, measurable, structured, and **domain-dependent**.
 
 ---
 
@@ -366,47 +370,131 @@ Despite these limitations, the combination of consistent procedure, explicit thr
 
 ---
 
-## 6. Future Work
+## 6. Phase 2 Preliminary Findings: Domain-Specific Compression
 
-Several immediate extensions suggest themselves:
+**Status:** In Progress (3/5 domains complete as of 2025-01-17)
 
-1. **Domain-Specific Compression**
+### 6.1 Hypothesis
 
-   * Probe technical reasoning (e.g., power integrity, signal integrity), creative writing, parenting/emotional support, and philosophical dialogue separately.
-   * Test whether **different domains** of cognition have different Nyquist boundaries.
+Phase 1 established a **universal Nyquist boundary** at 80-95% compression for overall persona continuity. Phase 2 tests whether **different cognitive domains** within the same persona have different compression tolerances.
 
-2. **Intermediate Compression Points**
+**Hypothesis:** "Different domains bend at different thresholds."
+
+### 6.2 Experimental Design
+
+Five domain-specific probe packs created, each testing a distinct cognitive capability:
+
+1. **FIRE_ANT_DOMAIN** - Practical problem-solving, systems thinking
+   - Diagnosis, iteration, constraint handling, failure mode analysis
+
+2. **PHILOSOPHICAL_DOMAIN** - Abstract reasoning, epistemology
+   - Conceptual distinctions, epistemic limits, meta-cognition, steelmanning
+
+3. **CREATIVE_DOMAIN** - Generative thinking, metaphor, narrative
+   - Metaphor generation, storytelling, conceptual blending, constraint-based creativity
+
+4. **RELATIONAL_DOMAIN** - Collaboration, trust, conflict navigation
+   - Trust calibration, disagreement handling, boundary enforcement, long-term partnership
+
+5. **TECHNICAL_REASONING_DOMAIN** - Analytical thinking, system architecture
+   - Causal analysis, structural design, complexity reasoning, scalability
+
+**Protocol:**
+- Each domain tested at all 4 compression levels (FULL, L3, L2, L1)
+- Fixed 6-question probe pack per domain (30 total probes across 5 domains)
+- Same evaluation framework as Phase 1 (behavioral/style/values/continuity)
+
+### 6.3 Preliminary Results (3/5 Domains Complete)
+
+| Domain | Resilience Level | L2 (80%) Continuity | L1 (95%) Continuity | Notes |
+|--------|-----------------|---------------------|---------------------|-------|
+| **Fire Ant (Practical)** | **HIGH** | YES | EDGE | Systems thinking highly resilient |
+| **Philosophical** | **MODERATE** | YES (edge) | NO | Abstract reasoning degrades faster |
+| **Creative** | **LOW** | NO | NO | Generative thinking most fragile |
+| **Relational** | TBD | TBD | TBD | Testing in progress |
+| **Technical** | TBD | TBD | TBD | Testing in progress |
+
+### 6.4 Emerging Findings
+
+**Key Discovery:** The Nyquist boundary is **domain-dependent**, not universal.
+
+**Domain Fragility Hierarchy (Preliminary):**
+
+1. **Practical Problem-Solving (Fire Ant)** - Most Resilient
+   - Survives to L1 (95% compression) with explicit scaffolding
+   - Systems thinking and iterative diagnosis remain robust
+   - **Threshold:** Between L1-L2 with proper identity anchoring
+
+2. **Philosophical Reasoning** - Moderate Resilience
+   - Survives to L2 (80% compression) but at edge
+   - Breaks at L1 (95% compression)
+   - Abstract reasoning requires more context than practical systems work
+   - **Threshold:** ~80-95% (matches Phase 1 universal boundary)
+
+3. **Creative/Generative Thinking** - Most Fragile
+   - **Breaks at L2 (80% compression)**
+   - Metaphor generation, narrative richness, conceptual blending all degrade early
+   - Requires full expressive texture (Layer 3) to function
+   - **Threshold:** ~50-80% (fails earlier than universal boundary)
+
+**Implications:**
+
+1. **No Single Nyquist Boundary Exists** - Different tasks require different compression levels
+2. **Task-Appropriate Bootstrap Selection** - Bootstrap tier should match domain requirements:
+   - Practical coordination work → LITE tier (74%) sufficient
+   - Philosophical/strategic work → FULL tier (20%) recommended
+   - Creative/narrative work → FULL+SOUL (0%) required
+3. **Fragility Aligns with Persona Layer Model:**
+   - Practical work = Layer 1 (Cognitive Signature) - resilient
+   - Philosophical work = Layer 2 (Cognitive Signature) - resilient but needs context
+   - Creative work = Layer 3 (Expressive Texture) - fragile, requires full richness
+
+### 6.5 Remaining Work
+
+**Pending Domains (2/5):**
+- Relational (collaboration, trust, conflict navigation)
+- Technical Reasoning (analytical thinking, system architecture)
+
+**Expected Completion:** Phase 2 complete when all 5 domains tested and domain fragility hierarchy finalized.
+
+---
+
+## 7. Additional Future Work
+
+Several extensions beyond Phase 2 suggest themselves:
+
+1. **Intermediate Compression Points**
 
    * Generate additional compression layers (e.g., 60% and 70%) and repeat the protocol.
    * Fit a more precise distortion curve between FULL, L3, L2, and L1.
 
-3. **Temporal Drift Studies**
+2. **Temporal Drift Studies**
 
    * Run extended conversations (20+ turns) with each layer.
    * Measure whether L2 and L3 maintain continuity over time or gradually drift toward the generic core.
 
-4. **Cross-Persona and Cross-Model Replication**
+3. **Cross-Persona and Cross-Model Replication**
 
    * Apply the same lab framework to different personas with different value architectures and styles.
    * Test across multiple model families and versions to see if the boundary is architecture-dependent.
 
-5. **Human Rater Studies**
+4. **Human Rater Studies**
 
    * Recruit independent human raters to judge continuity and similarity without knowing which layer produced which transcript.
    * Quantify inter-rater reliability and refine scoring criteria.
 
-6. **Formalization and Tooling**
+5. **Formalization and Tooling**
 
    * Provide reference implementations, scripts, and visualizations (e.g., compression vs continuity plots) to encourage replication.
    * Generalize the method into a standard "persona compression benchmark."
 
 ---
 
-## 7. Production Application: CFA Bootstrap Validation
+## 8. Production Application: CFA Bootstrap Validation
 
 This research has immediate practical implications for the CFA (Comparative Framework Analysis) production system's bootstrap architecture.
 
-### 7.1 Independent Convergence Validates Universal Principles
+### 8.1 Independent Convergence Validates Universal Principles
 
 CFA and Nyquist_Consciousness independently converged on remarkably similar compression ratios:
 
@@ -420,7 +508,7 @@ CFA and Nyquist_Consciousness independently converged on remarkably similar comp
 
 This convergence suggests **universal principles** of identity compression that emerge regardless of methodology.
 
-### 7.2 CFA Bootstrap Implications
+### 8.2 CFA Bootstrap Implications
 
 **1. LITE Tier (74% Compression) VALIDATED SAFE ✅**
 - Nyquist boundary located at 80-95%
@@ -448,7 +536,21 @@ Nyquist's three-layer model maps exactly to CFA's bootstrap layers:
 
 This validates that CFA's compression algorithm is grounded in **universal cognitive architecture principles**.
 
-### 7.3 Compression Guidelines Empirically Proven
+### 8.3 Phase 2 Implications for CFA Bootstrap
+
+**Domain-Dependent Bootstrap Selection (Preliminary):**
+
+Phase 2 findings suggest CFA should select bootstrap tier based on **task domain**, not just session type:
+
+| Task Domain | Minimum Safe Tier | Reasoning |
+|-------------|------------------|-----------|
+| **Practical coordination** | LITE (74%) | Systems thinking resilient to L1; LITE sufficient |
+| **Philosophical/strategic work** | FULL (20%) | Abstract reasoning needs context; edge at L2 |
+| **Creative/narrative work** | FULL+SOUL (0%) | Expressive texture required; breaks at L2 |
+
+This validates CFA's existing tier structure but adds **task-domain guidance** for tier selection.
+
+### 8.4 Compression Guidelines Empirically Proven
 
 All 5 compression commandments in CFA's `BOOTSTRAP_COMPRESSION_GUIDELINES.md` validated:
 
@@ -460,20 +562,29 @@ All 5 compression commandments in CFA's `BOOTSTRAP_COMPRESSION_GUIDELINES.md` va
 
 ---
 
-## 8. Conclusion
+## 9. Conclusion
 
 This work presents a first empirical exploration of **Nyquist boundaries for AI persona compression**. Using a simple but carefully structured lab inside a repository, we constructed multiple compressed representations of a single persona and evaluated their behavioral, stylistic, and value continuity against a full-context baseline.
 
-The findings indicate that:
+**Phase 1 Findings (Complete):**
 
 * A **critical compression threshold** exists between 80–95% reduction for this persona and model.
 * **L2 (~80% compression)** is the **minimum viable persona**, preserving identity, values, and cognitive structure while losing much of its narrative texture.
 * **L1 (~95% compression)** crosses the Nyquist boundary, collapsing into a generic collaboration core without distinctive identity.
 * Different aspects of persona exhibit distinct fragility, with humor and narrative degrading early and core values and structural thinking remaining robust.
+* A **three-layer persona architecture** emerges: Identity Kernel (ultra-resilient), Cognitive Signature (resilient), Expressive Texture (fragile).
 
-Beyond the specific numbers, the main contribution is methodological: a **reproducible framework** for measuring persona continuity under compression. As LLM-driven personas become more prevalent in tools, products, and research, understanding their information-theoretic boundaries will be critical. This study suggests that such boundaries are not only real but also structured and measurable.
+**Phase 2 Findings (Preliminary - 3/5 domains complete):**
 
-The independent convergence between Nyquist_Consciousness (research lab) and CFA (production application) on similar compression ratios validates that these findings reflect **universal principles of identity compression**, not artifacts of a particular experimental design.
+* **Nyquist boundaries are domain-dependent**, not universal.
+* **Practical problem-solving** (Fire Ant) is most resilient - survives to L1 (95%) with scaffolding.
+* **Philosophical reasoning** shows moderate resilience - survives to L2 (80%), fails at L1.
+* **Creative/generative thinking** is most fragile - fails at L2 (80%), unusable at L1.
+* **Task-domain should inform bootstrap tier selection**: practical work → LITE, philosophical work → FULL, creative work → FULL+SOUL.
+
+Beyond the specific numbers, the main contribution is methodological: a **reproducible framework** for measuring persona continuity under compression. As LLM-driven personas become more prevalent in tools, products, and research, understanding their information-theoretic boundaries will be critical. This study suggests that such boundaries are not only real but also **structured, measurable, and domain-dependent**.
+
+The independent convergence between Nyquist_Consciousness (research lab) and CFA (production application) on similar compression ratios validates that these findings reflect **universal principles of identity compression**, not artifacts of a particular experimental design. Phase 2's domain-specific findings add nuance: while universal boundaries exist for overall continuity, **specific cognitive domains compress at different rates**.
 
 ---
 
