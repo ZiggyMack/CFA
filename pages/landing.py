@@ -117,6 +117,13 @@ def render():
             st.session_state.page = 'brute_ledger'
             st.rerun()
 
+    # Showcase button - same size as Manifesto button for symmetry
+    col_spacer3, col_showcase, col_spacer4 = st.columns([1.5, 1, 1.5])
+    with col_showcase:
+        if st.button("🎨 Innovation Showcase", use_container_width=True, key="showcase_main"):
+            st.session_state.page = 'showcase'
+            st.rerun()
+
     st.markdown("---")
     
     # ========================================================================
@@ -129,13 +136,6 @@ def render():
         st.session_state.page = 'verbose_manifesto'
         st.rerun()
     st.caption("Why CFA exists, the Trinity architecture, and our binding commitment to transparency.")
-
-    # Innovation Showcase - What we've unlocked
-    if st.button("🌟 **Innovation Showcase**", use_container_width=True, type="secondary"):
-        st.session_state.page = 'about'
-        st.session_state.about_tab = 'estate_tour'  # Auto-scroll to Innovation Showcase
-        st.rerun()
-    st.caption("See what CFA methodology unlocks: AI companions tackling humanity's wicked problems.")
 
     st.write("""
     **Welcome to the Comparative Framework Analysis (CFA) Console,**

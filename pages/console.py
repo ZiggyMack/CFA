@@ -174,10 +174,16 @@ def render():
     # Frozen position indicators (top-right corner, stacked vertically)
     active_preset = detect_active_preset()
     audit_mode = st.session_state.get("audit_mode", "Bias")  # Default to Bias mode
+    include_crux = st.session_state.get("include_crux", True)  # Default to Include
 
     # Color coding for audit mode
     audit_color = "#28a745" if audit_mode == "Audit" else "#dc3545"  # Green for Audit, Red for Bias
     audit_icon = "🔍" if audit_mode == "Audit" else "🎯"
+
+    # Crux indicator
+    crux_status = "Include" if include_crux else "Exclude"
+    crux_color = "#9b59b6" if include_crux else "#e67e22"  # Purple for Include, Orange for Exclude
+    crux_icon = "⚖️" if include_crux else "🚫"
 
     st.markdown(f"""
     <div style="position: fixed; top: 80px; right: 15px; z-index: 9999; max-width: 200px;">
@@ -195,6 +201,9 @@ def render():
             </div>
             <div style="font-size: 0.65rem; color: {audit_color}; margin-top: 4px; font-weight: 600;">
                 {audit_icon} {audit_mode} Mode
+            </div>
+            <div style="font-size: 0.65rem; color: {crux_color}; margin-top: 4px; font-weight: 600;">
+                {crux_icon} Crux: {crux_status}
             </div>
         </div>
     </div>
@@ -283,6 +292,25 @@ def render():
             help="**Bias Mode (🎯):** Full bias scoring - auditors apply their native lenses with bias intact. **Audit Mode (🔍):** Adversarial audit - scores reflect rigorous adversarial checking (Trinity convergence). Switch to Audit to see adversarially-validated scores.",
             label_visibility="collapsed"
         )
+
+        st.markdown("---")
+
+        # Crux Impasses Toggle
+        st.markdown("**⚖️ Crux Impasses:**")
+        if "include_crux" not in st.session_state:
+            st.session_state["include_crux"] = True
+
+        include_crux_options = ["Include", "Exclude"]
+        include_crux = st.selectbox(
+            "Crux Impact",
+            include_crux_options,
+            index=0 if st.session_state["include_crux"] else 1,
+            key="crux_selector",
+            help="**Include (default):** Scores reflect full convergence including Crux resolutions. **Exclude:** Scores show what convergence would be WITHOUT Crux declarations (counterfactual - shows impact of honest impasse mechanism).",
+            label_visibility="collapsed"
+        )
+        # Update session state based on selection
+        st.session_state["include_crux"] = (include_crux == "Include")
 
         st.markdown("---")
         st.markdown("**Pre-Audited Frameworks:**")
@@ -467,7 +495,8 @@ def render():
         "pf_type": pf_type,
         "fallibilism_bonus": fall_bonus,
         "bfi_debt_weight": bfi_weight,
-        "audit_mode": audit_mode
+        "audit_mode": audit_mode,
+        "include_crux": include_crux
     }
 
     with st.sidebar.expander("📋 Current Config", expanded=False):

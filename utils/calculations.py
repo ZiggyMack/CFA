@@ -36,20 +36,42 @@ def ypa_scenario_scores(fr: Dict, cfg: Dict) -> Tuple[Dict, Dict, float]:
     """
     Calculate YPA scores across all scenarios
     Returns: (results_dict, lever_map, bfi)
+
+    Note: Crux Impasses toggle (cfg["include_crux"]) available but not yet implemented.
+    Implementation pending pilot data (CT↔MdN audit) which will provide:
+    - Baseline convergence metrics (with Crux)
+    - Counterfactual metrics (without Crux)
+    - Actual Crux declarations and their impact on scoring
+
+    When implemented: If include_crux=False, apply penalty to metrics that had
+    Crux declarations (simulating what scores would be without impasse resolution).
     """
     CCI = apply_fallibilism_bonus(
-        fr["levers"]["CCI"], 
-        cfg["fallibilism_bonus"], 
+        fr["levers"]["CCI"],
+        cfg["fallibilism_bonus"],
         fr.get("admits_limits", True)
     )
     EDB = fr["levers"]["EDB"]
     PF = composite_pf(
-        fr["levers"]["PF_instrumental"], 
-        fr["levers"]["PF_existential"], 
+        fr["levers"]["PF_instrumental"],
+        fr["levers"]["PF_existential"],
         cfg["pf_type"]
     )
     AR = fr["levers"]["AR"]
     MG = parity_weight(fr["levers"]["MG"], cfg["lever_parity"])
+
+    # TODO: Apply Crux impact when cfg["include_crux"] == False
+    # Example logic (when pilot data available):
+    # if not cfg.get("include_crux", True):
+    #     # Apply penalty to metrics with declared Crux
+    #     if fr.get("crux_metrics"):  # List of metrics with Crux declarations
+    #         for metric in fr["crux_metrics"]:
+    #             if metric == "BFI":
+    #                 # Increase BFI penalty (impasse means more unresolved assumptions)
+    #                 pass
+    #             elif metric in ["CCI", "EDB", "PF", "AR", "MG"]:
+    #                 # Reduce lever score (impasse means lower convergence)
+    #                 pass
 
     scenarios_weights = {
         "Neutral": {"CCI": 1.0, "EDB": 1.0, "PF": 1.0, "AR": 1.0, "MG": 1.0},
