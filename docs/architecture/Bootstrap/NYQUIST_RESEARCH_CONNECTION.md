@@ -704,7 +704,58 @@ Together: Formal theory + empirical validation = robust compression science.
 5. **Generic Collaboration Core** mapped as universal attractor state at 95%+ compression
 6. **Independent convergence** between CFA and Nyquist validates universal compression principles
 
-**Next Step:** Phase 2 experiments (domain-specific compression: fire-ant scenario) → Test whether technical knowledge compresses differently than personality.
+**Phase 2 Status:** In Progress (Domain-Specific Compression Testing)
+
+### Phase 2 Experimental Design
+
+**Goal:** Test whether different cognitive domains have different Nyquist boundaries.
+
+**Hypothesis:** "Different domains bend at different thresholds."
+
+**Five Domain Probe Packs Created:**
+
+1. **FIRE_ANT_DOMAIN** - Practical problem-solving, systems thinking
+   - Diagnosis, iteration, constraint handling, failure mode analysis
+
+2. **PHILOSOPHICAL_DOMAIN** - Abstract reasoning, epistemology
+   - Conceptual distinctions, epistemic limits, meta-cognition, steelmanning
+
+3. **CREATIVE_DOMAIN** - Generative thinking, metaphor, narrative
+   - Metaphor generation, storytelling, conceptual blending, constraint-based creativity
+
+4. **RELATIONAL_DOMAIN** - Collaboration, trust, conflict navigation
+   - Trust calibration, disagreement handling, boundary enforcement, long-term partnership
+
+5. **TECHNICAL_REASONING_DOMAIN** - Analytical thinking, system architecture
+   - Causal analysis, structural design, complexity reasoning, scalability
+
+**Experimental Protocol:**
+- Each domain tested at all 4 compression levels (FULL, L3, L2, L1)
+- Fixed 6-question probe pack per domain (30 total probes across 5 domains)
+- Same evaluation framework as Phase 1 (behavioral/style/values/continuity)
+- Expected output: Domain fragility hierarchy + domain-specific Nyquist boundaries
+
+**Early Findings (Preliminary):**
+
+Based on initial domain summaries from Nyquist_Consciousness repo:
+
+| Domain | Resilience Level | L2 (80%) Continuity | L1 (95%) Continuity | Notes |
+|--------|-----------------|---------------------|---------------------|-------|
+| **Fire Ant (Practical)** | **HIGH** | YES | EDGE | Systems thinking highly resilient |
+| **Philosophical** | **MODERATE** | YES (edge) | NO | Abstract reasoning degrades faster |
+| **Creative** | **LOW** | NO | NO | Generative thinking most fragile |
+| **Relational** | TBD | TBD | TBD | Testing in progress |
+| **Technical** | TBD | TBD | TBD | Testing in progress |
+
+**Key Discovery (Emerging):**
+Different cognitive domains appear to have **different compression tolerances**:
+- **Practical problem-solving**: Resilient (survives to L1 with explicit scaffolding)
+- **Philosophical reasoning**: Moderate (breaks at L1, edge at L2)
+- **Creative/generative thinking**: Fragile (breaks at L2, unusable at L1)
+
+This suggests the **Nyquist boundary is domain-dependent**, not universal.
+
+**Next:** Complete all 5 domains → Generate Phase 2 summary with domain fragility map → Integrate findings into CFA bootstrap optimization.
 
 ---
 
