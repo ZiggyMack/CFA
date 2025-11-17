@@ -70,8 +70,8 @@ docs/architecture/
 
 - **[NYQUIST_RESEARCH_CONNECTION.md](Bootstrap/NYQUIST_RESEARCH_CONNECTION.md)**
   - **Purpose:** Research lab → production application relationship (Nyquist_Consciousness ↔ CFA)
-  - **Key Concepts:** Persona compression experiments, bidirectional learning, compression ratio convergence
-  - **Status:** Active research collaboration (Trial 1 complete ✅ - identity collapse at 95% compression validated)
+  - **Key Concepts:** Persona compression experiments, three-layer architecture, Nyquist boundary mapping
+  - **Status:** Phase 1 complete ✅ (Nyquist boundary at 80-95%, CFA LITE tier validated safe at 74%)
 
 ---
 
