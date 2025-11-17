@@ -75,6 +75,20 @@ docs/architecture/
 
 ---
 
+## 📄 Whitepapers/
+
+**Purpose:** Scientific whitepapers and research publications documenting CFA methodology and findings.
+
+### Key Documents:
+
+- **[Nyquist_Boundaries_AI_Persona_Compression.md](whitepapers/Nyquist_Boundaries_AI_Persona_Compression.md)**
+  - **Purpose:** Empirical study mapping persona compression boundaries using Shannon-Nyquist framework
+  - **Key Concepts:** Compression thresholds, fragility hierarchy, three-layer architecture, Generic Collaboration Core
+  - **Status:** Draft v1.0.0 (Phase 1 complete - Nyquist boundary at 80-95%)
+  - **Citation:** Mack, Z., et al. (2025). "Nyquist Boundaries for AI Persona Compression: An Empirical Case Study."
+
+---
+
 ## 🔺 Trinity/
 
 **Purpose:** Architecture for Trinity coordination (Claude-Purpose, Grok-Evidence, Nova-Symmetry).
