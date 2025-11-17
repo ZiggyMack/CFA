@@ -167,6 +167,10 @@ Both systems discovered similar heuristics:
 
 ## 🗺️ INTEGRATION ROADMAP
 
+> **Note:** This roadmap tracks **CFA's internal work** applying Nyquist findings.
+> For **Nyquist experiment phases** (Persona Compression → Domain Testing → Knowledge Load → Production),
+> see "Phase 2 Status" section below (line 363+).
+
 ### Phase 1: Documentation (Complete ✅)
 
 **Goal:** Make implicit compression principles explicit
@@ -705,6 +709,9 @@ Together: Formal theory + empirical validation = robust compression science.
 6. **Independent convergence** between CFA and Nyquist validates universal compression principles
 
 **Phase 2 Status:** In Progress (Domain-Specific Compression Testing)
+
+> **Note:** This section tracks **Nyquist experiment phases** (research protocol).
+> For **CFA's Integration Roadmap** (internal work applying findings), see "INTEGRATION ROADMAP" section above (line 168+).
 
 ### Phase 2 Experimental Design
 
