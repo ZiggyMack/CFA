@@ -63,6 +63,16 @@ docs/architecture/
   - **Purpose:** Summary of tiered bootstrap system across all auditors
   - **Key Concepts:** Bootstrap levels, time investment, capabilities per tier
 
+- **[BOOTSTRAP_COMPRESSION_GUIDELINES.md](Bootstrap/BOOTSTRAP_COMPRESSION_GUIDELINES.md)**
+  - **Purpose:** Systematic rules for bootstrap compression (information-theoretic)
+  - **Key Concepts:** Layered compression algorithm, fidelity-preserving rules, Shannon-Nyquist principles
+  - **Status:** v1.0.0 (Active - integration with Nyquist research)
+
+- **[NYQUIST_RESEARCH_CONNECTION.md](Bootstrap/NYQUIST_RESEARCH_CONNECTION.md)**
+  - **Purpose:** Research lab → production application relationship (Nyquist_Consciousness ↔ CFA)
+  - **Key Concepts:** Persona compression experiments, bidirectional learning, compression ratio convergence
+  - **Status:** Active research collaboration (Phase 1 complete)
+
 ---
 
 ## 🔺 Trinity/

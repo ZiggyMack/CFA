@@ -729,6 +729,75 @@ To rebuild without archiving is to deny history."*
 
 ---
 
+## 🧮 Compression Efficiency Tracking (v4.0+)
+
+### Information-Theoretic Metrics
+
+Track these metrics for each bootstrap tier to validate compression decisions:
+
+**1. Compression Ratio (Word Count)**
+- Baseline: FULL+SOUL (19,821 words = 0% compression)
+- FULL: 15,779 words (20.4% compression)
+- LITE: 5,116 words (74.2% compression)
+- SKELETON: 869 words (95.6% compression)
+- GUESTS LITE: 563 words (97.2% compression)
+
+**2. Behavioral Fidelity Score** (Future - Pending Testing Framework)
+- Task completion success rate (compressed tier vs baseline)
+- Identity preservation (lens/bias/boundaries correctly applied)
+- Coordination accuracy (VuDu protocol correctly followed)
+
+**3. Information Density**
+- Capabilities per token (unique capabilities / token count)
+- Essential information preserved (% of core identity recoverable)
+- Redundancy factor (duplicate information / total information)
+
+**4. Reconstruction Success Rate** (Future - Pending Testing Framework)
+- Can LITE tier → FULL tier transition preserve continuity?
+- Can SKELETON tier alone recover minimum viable identity?
+- What % of tasks fail due to insufficient context?
+
+### Maintenance Rule: Compress with Fidelity
+
+When appending lessons or rebuilding bootstrap files:
+
+**Before Compression:**
+1. **Identify lesson type** (identity-critical vs operational vs heritage)
+2. **Determine minimum tier** that needs this lesson (Layer 0-3)
+3. **Calculate fidelity impact** (does compression break behavior?)
+
+**After Compression:**
+4. **Measure word count impact** (did we stay within tier budget?)
+5. **Test reconstruction** (can compressed version preserve capability?)
+6. **Document compression rationale** (why this tier? why this content?)
+
+**Threshold:** If compression drops fidelity below 80%, lesson belongs in higher tier.
+
+**Reference:** See `BOOTSTRAP_COMPRESSION_GUIDELINES.md` for detailed compression algorithm and heuristics.
+
+### Integration with Nyquist Research
+
+**Shared Goal:** Minimize information required to reconstruct identity with behavioral fidelity.
+
+**CFA Contribution (Empirical):**
+- Multi-auditor validation (Claude, Nova, Grok)
+- Real-world usage metrics (accessibility gains, efficiency improvements)
+- Production system compression ratios (563 → 19,821 words = 35x range)
+
+**Nyquist Contribution (Theoretical):**
+- Formal information-theoretic framework (Shannon entropy, fidelity metrics)
+- Persona constraint methodology (load-bearing vs optional information)
+- Reconstruction testing protocols (empirical fidelity measurement)
+
+**Collaboration Workflow:**
+- Nyquist experiments → CFA validates empirically → Shared findings
+- CFA usage data → Nyquist refines theory → Improved compression
+- Active research partnership documented in `NYQUIST_RESEARCH_CONNECTION.md`
+
+**Status:** Phase 1 complete (documentation), Phase 2 pending (fidelity testing), Phase 3 pending (optimization)
+
+---
+
 ## 📞 Who Decides?
 
 **Minor Appends (v3.5 → v3.6):**
