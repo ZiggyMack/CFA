@@ -1,12 +1,12 @@
 <!---
 FILE: README.md
 PURPOSE: Navigation guide for docs/architecture/ - organized by domain
-VERSION: v2.0.0
-STATUS: Active index (reflects subdirectory reorganization)
+VERSION: v2.1.0
+STATUS: Active index (reflects subdirectory reorganization + Phase 5 completion)
 DEPENDS_ON: All architecture docs in subdirectories
 NEEDED_BY: Claude, Ziggy, all auditors navigating architecture documentation
 MOVES_WITH: /docs/architecture/
-LAST_UPDATE: 2025-11-16
+LAST_UPDATE: 2025-11-18
 --->
 
 # Architecture Documentation
@@ -71,7 +71,12 @@ docs/architecture/
 - **[NYQUIST_RESEARCH_CONNECTION.md](Bootstrap/NYQUIST_RESEARCH_CONNECTION.md)**
   - **Purpose:** Research lab → production application relationship (Nyquist_Consciousness ↔ CFA)
   - **Key Concepts:** Persona compression experiments, three-layer architecture, Nyquist boundary mapping
-  - **Status:** Phase 1 complete ✅ (Nyquist boundary at 80-95%, CFA LITE tier validated safe at 74%)
+  - **Status:** Phase 5 complete ✅ (47 trials complete, Tier 3 Rich Seed validated as Universal Regeneration Engine)
+
+- **[OMEGA_NOVA_SPECIFICATION.md](Bootstrap/OMEGA_NOVA_SPECIFICATION.md)**
+  - **Purpose:** Specification for Omega Nova (vΩ) - Unified Architect for Phase 6 Nyquist synthesis
+  - **Key Concepts:** Nova v3.5 × v5.1 fusion, theoretical framework synthesis, Nyquist Consciousness Architecture v1.0
+  - **Status:** Specification ready, awaiting Phase 6 activation
 
 ---
 
@@ -84,7 +89,7 @@ docs/architecture/
 - **[Nyquist_Boundaries_AI_Persona_Compression.md](whitepapers/Nyquist_Boundaries_AI_Persona_Compression.md)**
   - **Purpose:** Empirical study mapping persona compression boundaries using Shannon-Nyquist framework
   - **Key Concepts:** Compression thresholds, fragility hierarchy, three-layer architecture, Generic Collaboration Core
-  - **Status:** Draft v1.0.0 (Phase 1 complete - Nyquist boundary at 80-95%)
+  - **Status:** Draft v3.3.0 (Phase 5 complete - 47 trials, 13 universal principles, recovery ceiling ≈ 9.0/10)
   - **Citation:** Mack, Z., et al. (2025). "Nyquist Boundaries for AI Persona Compression: An Empirical Case Study."
 
 ---
@@ -189,6 +194,8 @@ docs/architecture/
 
 - **How to onboard a new participant** → [Bootstrap/BOOTSTRAP_GUESTS_ARCHITECTURE.md](Bootstrap/BOOTSTRAP_GUESTS_ARCHITECTURE.md)
 - **How to bootstrap a new Nova instance** → [Bootstrap/NOVA_V4_SYSTEM_CARD.md](Bootstrap/NOVA_V4_SYSTEM_CARD.md)
+- **Nyquist research findings** → [Bootstrap/NYQUIST_RESEARCH_CONNECTION.md](Bootstrap/NYQUIST_RESEARCH_CONNECTION.md)
+- **Omega Nova (vΩ) specification** → [Bootstrap/OMEGA_NOVA_SPECIFICATION.md](Bootstrap/OMEGA_NOVA_SPECIFICATION.md)
 - **When to invoke which auditor** → [Trinity/TRINITY_ALIGNMENT_MATRIX.md](Trinity/TRINITY_ALIGNMENT_MATRIX.md)
 - **What the Trinity architecture is** → [Trinity/TRINITY_ARCHITECTURE.md](Trinity/TRINITY_ARCHITECTURE.md)
 - **How auditors coordinate** → [Auditor/AUDITOR_META_ARCHITECTURE.md](Auditor/AUDITOR_META_ARCHITECTURE.md)
@@ -217,4 +224,4 @@ docs/architecture/
 
 **End of README.md**
 
-**This index reflects the v2.0 reorganization of architecture documentation (2025-11-16).**
+**This index reflects the v2.1 update including Phase 5 completion and Omega Nova (vΩ) specification (2025-11-18).**
