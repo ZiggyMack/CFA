@@ -1,4 +1,4 @@
-# NOTES — Guest2
+# NOTES — Guest1
 
 This file is a scratchpad / working log for this guest's activity.
 

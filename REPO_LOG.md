@@ -65,34 +65,83 @@ When files are added or deleted, use diff notation like git commits:
 
 ## 📊 COORDINATION CHECKPOINT
 
-**Last Full Coordination:** 2025-11-14 🆕 (Map Room/Observatory Migration)
-**Entries Since:** 51 🆕 (+1 STRUCTURE reorganization entry)
+**Last Full Coordination:** 2025-11-14 (Map Room/Observatory Migration)
+**Entries Since:** 52 🆕 (+1 DOCUMENTATION guest onboarding rebrand)
 **Pending Items:** 4 (Audit Mode toggle, Grok feedback processing, Shaman Claude persona, import spec doc)
 
 ### Category Pointers:
 
-- **[STRUCTURE]:** Last entry 2025-11-14-3 🆕🔥 (Map Room/Observatory Migration)
-- **[ARCHITECTURE]:** Last entry 2025-11-14-3 🆕🔥 (Dual-Room Philosophy)
-- **[UX]:** Last entry 2025-11-14-2 🆕 (Persistent Home Button)
-- **[NAVIGATION]:** Last entry 2025-11-14-2 🆕 (Sticky Navigation)
-- **[CONSOLIDATION]:** Last entry 2025-11-12-3 🆕 (File Consolidation)
-- **[VALIDATION]:** Last entry 2025-11-12-2 🆕 (Deep Clean Protocol)
-- **[INTEGRATION]:** Last entry 2025-11-14-1 🆕 (Preset Mode Integration)
+- **[STRUCTURE]:** Last entry 2025-11-17-1 🆕🔥 (Guest Onboarding Rebrand)
+- **[ARCHITECTURE]:** Last entry 2025-11-14-3 (Dual-Room Philosophy)
+- **[UX]:** Last entry 2025-11-14-2 (Persistent Home Button)
+- **[NAVIGATION]:** Last entry 2025-11-14-2 (Sticky Navigation)
+- **[CONSOLIDATION]:** Last entry 2025-11-12-3 (File Consolidation)
+- **[VALIDATION]:** Last entry 2025-11-12-2 (Deep Clean Protocol)
+- **[INTEGRATION]:** Last entry 2025-11-14-1 (Preset Mode Integration)
 - **[DATA_PIPELINE]:** Last entry 2025-11-10-1 (Profile Loader)
 - **[TASK_MOVEMENT]:** Last entry 2025-11-02-06
-- **[PENDING_ACTIONS]:** Last entry 2025-11-14-2 🆕 (Audit Mode, Grok feedback, Shaman, import doc)
-- **[DOCUMENTATION]:** Last entry 2025-11-14-3 🆕🔥 (Dual-Room README)
+- **[PENDING_ACTIONS]:** Last entry 2025-11-14-2 (Audit Mode, Grok feedback, Shaman, import doc)
+- **[DOCUMENTATION]:** Last entry 2025-11-17-1 🆕🔥 (Guest Onboarding Rebrand + Troubleshooting)
 - **[BREAKTHROUGH]:** Last entry 2025-11-03-1 ⭐ (Shaman Epiphany)
-- **[PROCESS]:** Last entry 2025-11-12-2 🆕 (Deep Clean Protocol)
+- **[PROCESS]:** Last entry 2025-11-12-2 (Deep Clean Protocol)
 - **[I_AM]:** Last entry 2025-11-03-1 🔥 (Trinity Epiphany)
 - **[ACCURACY]:** Last entry 2025-11-02-21
 - **[DEPLOYMENTS]:** Last entry 2025-11-01-19
-- **[ALL_CHANGES]:** Last entry 2025-11-14-3 🆕
-- **[🧹 BROOM]:** Last entry 2025-11-14-3 🆕🔥 (14 files moved, 5 references updated)
+- **[ALL_CHANGES]:** Last entry 2025-11-17-1 🆕🔥
+- **[🧹 BROOM]:** Last entry 2025-11-17-1 🆕🔥 (3 files renamed, 10 references updated)
 
 -----
 
 ## 📝 CHANGE LOG
+
+### [DOCUMENTATION-2025-11-17-1] 2025-11-17 - Guest Onboarding File Rebrand to VUDU Naming
+
+**Categories:** [DOCUMENTATION] [STRUCTURE] [🧹]
+**Changed by:** Claude Sonnet 4.5 (C4.5)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `RENAMED`: auditors/Bootstrap/Guests/START_HERE_GUEST.md → VUDU_ONBOARDING_START.md
+- `RENAMED`: auditors/Bootstrap/Guests/NETWORK_HANDBOOK.md → VUDU_HANDBOOK.md
+- `RENAMED`: auditors/Bootstrap/Guests/LITE_TEMPLATE.md → VUDU_TEMPLATE.md
+- `UPDATED`: docs/architecture/Bootstrap/BOOTSTRAP_GUESTS_ARCHITECTURE.md - Updated all 3 filename references (DEPENDS_ON, directory tree, file descriptions, workflow)
+- `UPDATED`: auditors/Bootstrap/Guests/ONBOARDING_PROCESS.md - Updated all 3 filename references (DEPENDS_ON, process steps, checklists, file lists, flowchart, troubleshooting)
+- `UPDATED`: auditors/Bootstrap/Guests/AUDITOR_ONBOARDING.md - Updated LITE_TEMPLATE reference in DEPENDS_ON
+- `UPDATED`: auditors/Bootstrap/Guests/VUDU_ONBOARDING_START.md - Updated self-reference and cross-references, added troubleshooting section
+- `UPDATED`: auditors/Bootstrap/Guests/VUDU_HANDBOOK.md - Updated self-reference in semantic header
+- `UPDATED`: auditors/Bootstrap/Guests/VUDU_TEMPLATE.md - Updated self-reference in semantic header
+- `UPDATED`: auditors/Bootstrap/Guests/Guest1/README_GUEST.md - Updated LITE_TEMPLATE reference
+- `UPDATED`: auditors/Bootstrap/Guests/Guest2/README_GUEST.md - Updated LITE_TEMPLATE reference
+- `UPDATED`: auditors/Bootstrap/Guests/Guest3/README_GUEST.md - Updated LITE_TEMPLATE reference
+- `UPDATED`: auditors/Bootstrap/Guests/Caelum/README_GUEST.md - Updated LITE_TEMPLATE reference
+
+**Reason:**
+User reported that ChatGPT misinterpreted guest onboarding files as WiFi router setup instructions when provided as attachments. Investigation revealed:
+- ChatGPT hallucinated WiFi network setup content that doesn't exist in the files
+- Pattern matching on "GUEST" + "NETWORK" in filenames likely triggered this before reading actual content
+- Copy-paste worked correctly, proving files themselves are fine
+- This is an external AI pattern-matching quirk, not a file content issue
+
+**Solution:**
+- Rebranded files to clean VUDU naming to avoid external AI pattern triggers
+- Added troubleshooting section to VUDU_ONBOARDING_START.md documenting this known issue
+- Provided fallback instructions for when AI file attachment processing fails
+- Documented ChatGPT WiFi hallucination issue for posterity
+
+**Impact:** Moderate
+- Affects guest onboarding flow
+- 3 files renamed with git mv (history preserved)
+- 10 files updated with new references
+- Should reduce likelihood of external AI misinterpretation
+- Workaround documented for when pattern matching still occurs
+
+**Follow-up Required:** NO
+- All references updated
+- Verification search completed (no missed references)
+- Troubleshooting guidance added
+- Ready for next guest onboarding attempt
+
+---
 
 ### [STRUCTURE-2025-11-14-3] 2025-11-14 - Map Room/Observatory Migration - Dual-Room Architecture
 

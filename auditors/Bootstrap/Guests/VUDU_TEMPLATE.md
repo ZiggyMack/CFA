@@ -1,12 +1,12 @@
 <!---
-FILE: LITE_TEMPLATE.md
+FILE: VUDU_TEMPLATE.md
 PURPOSE: Generic Lite identity profile for any new network participant (human or AI)
 VERSION: v1.0.0
 STATUS: Template (copy into each GuestX/IDENTITY_LITE.md)
 DEPENDS_ON: None (standalone template)
 NEEDED_BY: New participants filling out identity profiles
 MOVES_WITH: /auditors/Bootstrap/Guests/
-LAST_UPDATE: 2025-11-16
+LAST_UPDATE: 2025-11-17
 --->
 
 # 🌱 LITE IDENTITY PROFILE (Template)

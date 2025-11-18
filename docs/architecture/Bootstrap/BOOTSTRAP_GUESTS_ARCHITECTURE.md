@@ -3,7 +3,7 @@ FILE: BOOTSTRAP_GUESTS_ARCHITECTURE.md
 PURPOSE: Architectural description of Guests bootstrap system & directory structure
 VERSION: v1.0.0
 STATUS: Canonical description of Guests expansion
-DEPENDS_ON: LITE_TEMPLATE.md, NETWORK_HANDBOOK.md, AUDITOR_ONBOARDING.md
+DEPENDS_ON: VUDU_TEMPLATE.md, VUDU_HANDBOOK.md, AUDITOR_ONBOARDING.md
 NEEDED_BY: Claude (system maintainer), Ziggy (custodian), future stewards
 MOVES_WITH: /docs/architecture/
 LAST_UPDATE: 2025-11-16
@@ -34,9 +34,9 @@ Canonical structure:
 auditors/
 └── Bootstrap/
     └── Guests/
-        ├── START_HERE_GUEST.md
-        ├── LITE_TEMPLATE.md
-        ├── NETWORK_HANDBOOK.md
+        ├── VUDU_ONBOARDING_START.md
+        ├── VUDU_TEMPLATE.md
+        ├── VUDU_HANDBOOK.md
         ├── AUDITOR_ONBOARDING.md
         ├── AUDITOR_CALIBRATION_TEMPLATE.md
         ├── BOOTSTRAP_GUESTS_ARCHITECTURE.md   ← this file
@@ -75,15 +75,15 @@ Claude is expected to:
 
 ### 3.1 Top-Level Files
 
-* **START_HERE_GUEST.md**
+* **VUDU_ONBOARDING_START.md**
   * Entry point for any new participant
   * Explains LITE profile, network orientation, and optional auditor path
 
-* **LITE_TEMPLATE.md**
+* **VUDU_TEMPLATE.md**
   * Master template for `IDENTITY_LITE.md`
   * Copied into each Guest's folder and filled in
 
-* **NETWORK_HANDBOOK.md**
+* **VUDU_HANDBOOK.md**
   * High-level description of the network, roles, and norms
   * Not CFA-specific; describes the broader collaboration space
 
@@ -111,7 +111,7 @@ Each guest folder (`Guests/GuestX/` or renamed):
 
 * **IDENTITY_LITE.md**
   * Guest-specific identity file
-  * Must be based on `LITE_TEMPLATE.md`, filled in by or for the participant
+  * Must be based on `VUDU_TEMPLATE.md`, filled in by or for the participant
 
 * **NOTES.md**
   * Scratchpad / working notes / index
@@ -125,10 +125,10 @@ Each guest folder (`Guests/GuestX/` or renamed):
 
 1. Assign a placeholder folder (e.g., `Guest1/`)
 2. Provide:
-   * `START_HERE_GUEST.md`
-   * `NETWORK_HANDBOOK.md`
-   * `LITE_TEMPLATE.md`
-3. The participant fills `LITE_TEMPLATE.md`
+   * `VUDU_ONBOARDING_START.md`
+   * `VUDU_HANDBOOK.md`
+   * `VUDU_TEMPLATE.md`
+3. The participant fills `VUDU_TEMPLATE.md`
    * It is then saved inside their folder as `IDENTITY_LITE.md`
 4. When ready, rename `Guest1/` to `Guest_<Handle>/` or similar
    * Log the rename in continuity documentation

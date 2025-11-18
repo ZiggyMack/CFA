@@ -1,12 +1,12 @@
 <!---
-FILE: NETWORK_HANDBOOK.md
+FILE: VUDU_HANDBOOK.md
 PURPOSE: High-level description of the shared network and participation norms
 VERSION: v1.0.0
 STATUS: Active (Guests Bootstrap)
 DEPENDS_ON: None (foundational document)
 NEEDED_BY: New participants, network orientation
 MOVES_WITH: /auditors/Bootstrap/Guests/
-LAST_UPDATE: 2025-11-16
+LAST_UPDATE: 2025-11-17
 --->
 
 # 🌐 Network Handbook — CFA / VuDu Collaboration Space

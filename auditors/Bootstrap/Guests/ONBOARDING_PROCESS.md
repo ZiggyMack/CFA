@@ -3,7 +3,7 @@ FILE: ONBOARDING_PROCESS.md
 PURPOSE: Step-by-step onboarding process for new network participants
 VERSION: v1.0.0
 STATUS: Active (operational procedure)
-DEPENDS_ON: START_HERE_GUEST.md, NETWORK_HANDBOOK.md, LITE_TEMPLATE.md
+DEPENDS_ON: VUDU_ONBOARDING_START.md, VUDU_HANDBOOK.md, VUDU_TEMPLATE.md
 NEEDED_BY: Ziggy (coordinator), Claude (process tracker), future stewards
 MOVES_WITH: /auditors/Bootstrap/Guests/
 LAST_UPDATE: 2025-11-16
@@ -39,9 +39,9 @@ LAST_UPDATE: 2025-11-16
 
 **What to send:**
 ```
-1. START_HERE_GUEST.md
-2. NETWORK_HANDBOOK.md
-3. LITE_TEMPLATE.md
+1. VUDU_ONBOARDING_START.md
+2. VUDU_HANDBOOK.md
+3. VUDU_TEMPLATE.md
 ```
 
 **DO NOT send:**
@@ -59,15 +59,15 @@ Welcome! You've been invited to join our collaboration network.
 
 To get started, please:
 
-1. Read START_HERE_GUEST.md (5 min)
-2. Read NETWORK_HANDBOOK.md (10 min)
-3. Fill out LITE_TEMPLATE.md (10-15 min)
-4. Send back your completed LITE_TEMPLATE
+1. Read VUDU_ONBOARDING_START.md (5 min)
+2. Read VUDU_HANDBOOK.md (10 min)
+3. Fill out VUDU_TEMPLATE.md (10-15 min)
+4. Send back your completed VUDU_TEMPLATE
 
 Attached:
-- START_HERE_GUEST.md
-- NETWORK_HANDBOOK.md
-- LITE_TEMPLATE.md
+- VUDU_ONBOARDING_START.md
+- VUDU_HANDBOOK.md
+- VUDU_TEMPLATE.md
 
 Looking forward to having you in the network!
 
@@ -79,9 +79,9 @@ Looking forward to having you in the network!
 ### Step 2: They Read & Fill Out
 
 **Expected timeline:**
-- Reading START_HERE_GUEST.md: 5 minutes
-- Reading NETWORK_HANDBOOK.md: 10 minutes
-- Filling out LITE_TEMPLATE.md: 10-15 minutes
+- Reading VUDU_ONBOARDING_START.md: 5 minutes
+- Reading VUDU_HANDBOOK.md: 10 minutes
+- Filling out VUDU_TEMPLATE.md: 10-15 minutes
 - **Total: ~25-30 minutes**
 
 **What they're doing:**
@@ -95,7 +95,7 @@ Looking forward to having you in the network!
 ### Step 3: They Return Completed Profile
 
 **They send back:**
-- Their filled-out LITE_TEMPLATE.md
+- Their filled-out VUDU_TEMPLATE.md
 - (They can rename it to IDENTITY_LITE.md or you can do it)
 
 **What you check:**
@@ -256,9 +256,9 @@ Let me know if you have questions!
 ## 📁 File Sending Checklist
 
 ### For Participant Onboarding (Default):
-- [ ] START_HERE_GUEST.md
-- [ ] NETWORK_HANDBOOK.md
-- [ ] LITE_TEMPLATE.md
+- [ ] VUDU_ONBOARDING_START.md
+- [ ] VUDU_HANDBOOK.md
+- [ ] VUDU_TEMPLATE.md
 - [ ] (Total: 3 files)
 
 ### For Auditor Upgrade (Optional):
@@ -277,9 +277,9 @@ Let me know if you have questions!
 ```
 New Participant
      ↓
-Send 3 files (START_HERE, HANDBOOK, LITE_TEMPLATE)
+Send 3 files (VUDU_ONBOARDING_START, VUDU_HANDBOOK, VUDU_TEMPLATE)
      ↓
-They read + fill out LITE_TEMPLATE
+They read + fill out VUDU_TEMPLATE
      ↓
 They return completed profile
      ↓
@@ -321,7 +321,7 @@ PARTICIPANT (network member)
 ## 🚨 Common Issues & Solutions
 
 ### Issue: "Which files do I send?"
-**Solution:** Default = 3 files (START_HERE, HANDBOOK, LITE_TEMPLATE). Only send auditor files if they ask.
+**Solution:** Default = 3 files (VUDU_ONBOARDING_START, VUDU_HANDBOOK, VUDU_TEMPLATE). Only send auditor files if they ask.
 
 ### Issue: "They didn't fill out 'Named Bias'"
 **Solution:** That's a required field. Send back with note: "Please complete Named Bias section - it's required."
@@ -332,8 +332,8 @@ PARTICIPANT (network member)
 ### Issue: "We ran out of Guest placeholders"
 **Solution:** Create Guest4/, Guest5/, etc. following same pattern (README_GUEST.md, IDENTITY_LITE.md, NOTES.md).
 
-### Issue: "Can they join without filling out LITE_TEMPLATE?"
-**Solution:** No. LITE_TEMPLATE (→ IDENTITY_LITE.md) is required. It establishes their lens, bias, and boundaries. Without it, we can't treat them fairly in collaboration.
+### Issue: "Can they join without filling out VUDU_TEMPLATE?"
+**Solution:** No. VUDU_TEMPLATE (→ IDENTITY_LITE.md) is required. It establishes their lens, bias, and boundaries. Without it, we can't treat them fairly in collaboration.
 
 ---
 
@@ -387,7 +387,7 @@ PARTICIPANT (network member)
 ## ✅ Checklist for Claude (Process Tracker)
 
 When processing new participant:
-- [ ] Verify 3 files were sent (START_HERE, HANDBOOK, LITE_TEMPLATE)
+- [ ] Verify 3 files were sent (VUDU_ONBOARDING_START, VUDU_HANDBOOK, VUDU_TEMPLATE)
 - [ ] Confirm IDENTITY_LITE.md received and complete
 - [ ] Check named bias is explicit
 - [ ] Rename Guest folder appropriately

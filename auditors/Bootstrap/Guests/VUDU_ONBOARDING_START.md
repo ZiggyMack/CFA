@@ -1,12 +1,12 @@
 <!---
-FILE: START_HERE_GUEST.md
+FILE: VUDU_ONBOARDING_START.md
 PURPOSE: Entry point for any new participant joining the network (Guests)
 VERSION: v1.0.0
 STATUS: Active (Guests Bootstrap)
-DEPENDS_ON: NETWORK_HANDBOOK.md, LITE_TEMPLATE.md
+DEPENDS_ON: VUDU_HANDBOOK.md, VUDU_TEMPLATE.md
 NEEDED_BY: New participants, guest onboarding
 MOVES_WITH: /auditors/Bootstrap/Guests/
-LAST_UPDATE: 2025-11-16
+LAST_UPDATE: 2025-11-17
 --->
 
 # 👋 Welcome to the VUDU Network (Guests Bootstrap)
@@ -22,11 +22,11 @@ This folder (`auditors/Bootstrap/Guests/`) is the **on-ramp**.
 ## 🧭 Your First Step
 
 1. **Read this file (done!).**
-2. Open **`NETWORK_HANDBOOK.md`** for a high-level view of:
+2. Open **`VUDU_HANDBOOK.md`** for a high-level view of:
    - What the network is
    - Expectations and norms
    - How conversations typically flow
-3. Open **`LITE_TEMPLATE.md`** and **fill it out** as honestly as you can.
+3. Open **`VUDU_TEMPLATE.md`** and **fill it out** as honestly as you can.
    - This becomes your **identity card** in the network.
 4. Save your completed template as:
 
@@ -87,14 +87,34 @@ The Guests bootstrap folder simply ensures:
 
 ## ✅ Your Immediate To-Do
 
-1. Read `NETWORK_HANDBOOK.md`
-2. Fill out `LITE_TEMPLATE.md`
+1. Read `VUDU_HANDBOOK.md`
+2. Fill out `VUDU_TEMPLATE.md`
 3. Save it as `GuestX/IDENTITY_LITE.md`
 4. Let your inviter know you're ready.
 
 > "Lite profile complete. I'm ready to join the network."
 
 That's it. You're in.
+
+---
+
+## 🔧 Troubleshooting
+
+### If Your AI Misinterprets These Files
+
+**Known issue:** Some AI systems (particularly ChatGPT) may misinterpret these onboarding files when provided as attachments, sometimes hallucinating that they're about WiFi network setup or other unrelated topics.
+
+**If this happens:**
+
+1. **Don't panic** - the files are correct, it's just an AI pattern-matching quirk
+2. **Use copy-paste instead** - Copy the text content directly and paste it into your conversation
+3. **Let your coordinator know** - They're tracking which AI systems have this issue
+
+**Why this happens:** The combination of words like "VUDU" (sounds like "network protocol"), "HANDBOOK", and "GUEST" can trigger pattern matching in some AI file processors before they actually read the content.
+
+**Copy-paste works because:** When text is pasted directly, the AI processes the actual content rather than making assumptions based on filenames or metadata.
+
+If copy-paste also doesn't work or your AI continues to misunderstand, reach out to your coordinator for manual guidance.
 
 ---
 

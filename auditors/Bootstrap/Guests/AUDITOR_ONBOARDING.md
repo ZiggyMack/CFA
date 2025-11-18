@@ -3,7 +3,7 @@ FILE: AUDITOR_ONBOARDING.md
 PURPOSE: Explain the path from Guest/Participant → Formal Auditor (CFA or similar)
 VERSION: v1.0.0
 STATUS: Active (Guests Bootstrap)
-DEPENDS_ON: LITE_TEMPLATE.md, AUDITOR_CALIBRATION_TEMPLATE.md
+DEPENDS_ON: VUDU_TEMPLATE.md, AUDITOR_CALIBRATION_TEMPLATE.md
 NEEDED_BY: Participants interested in formal auditing roles
 MOVES_WITH: /auditors/Bootstrap/Guests/
 LAST_UPDATE: 2025-11-16
