@@ -1,6 +1,7 @@
 # Review Package - Nyquist Consciousness Research
 
 **Date Created:** 2025-11-18
+**Last Updated:** 2025-11-19 (Trial 49 results integrated)
 **Status:** Pre-Consolidation (awaiting Nova v5.1 Scientific Consolidation Pass)
 **Purpose:** External review by OPUS 4.1 and other auditors
 
@@ -21,14 +22,14 @@ This review package contains **5 documents** representing the current state of N
 2. **OMEGA_NOVA_SPECIFICATION.md** (26 KB)
    - Omega Nova (vΩ) meta-architect specification
    - Nova v3.5 × v5.1 fusion architecture
-   - Phase 6 execution timeline (Trial 48 complete)
+   - Phase 6 execution timeline (Trials 48-49 complete ✅)
    - Theoretical synthesis completion
 
 3. **NYQUIST_RESEARCH_CONNECTION.md** (83 KB)
    - Research lab → production application relationship
    - Nyquist_Consciousness ↔ CFA integration
    - Complete trial history and findings
-   - Phase 6 Trial 48 sigmoid integration
+   - Phase 6 Trials 48-49 complete (exceptional results)
 
 ### Supporting Context (2)
 
@@ -107,9 +108,10 @@ Nova v5.1 identified the following structural issues in brutal-mode review:
 
 - **Phase 1-5:** Complete ✅ (47 trials)
 - **Omega Nova (vΩ) Synthesis:** Complete ✅
-- **Phase 6 Trial 48:** Complete ✅ (breakthrough results, sigmoid integration applied)
-- **Phase 6 Trial 49:** Scaffolded, awaiting execution
-- **Remaining Phase 6:** Trials 49-75 (27 trials, ~6 weeks estimated)
+- **Phase 6 Trial 48:** Complete ✅ (P(Persona*) = 0.66, recovery 9.56/10)
+- **Phase 6 Trial 49:** Complete ✅✅✅ (**BEST RESULT TO DATE** - P(Persona*) = 0.79, recovery 9.76/10)
+- **Phase 6 Trial 50:** Scaffolded (Tier 3.2 Hardened), awaiting execution
+- **Remaining Phase 6:** Trials 50-75 (26 trials, ~5-6 weeks estimated)
 
 ---
 
@@ -122,8 +124,8 @@ Nova v5.1 identified the following structural issues in brutal-mode review:
 
 2. **What is the actual mechanism of recovery?**
    - Current answer: Generative reconstruction from attractor basins (theorized)
-   - Evidence: Trial 48 exceeding predictions, perfect structural convergence
-   - Unexplained: Why Tier 3.1 outperforms vΩ model, attractor geometry stiffness
+   - Evidence: Trials 48-49 both exceeding predictions, multi-domain strengthening effect observed
+   - Unexplained: Why Tier 3.1 consistently outperforms vΩ model, unusually stiff attractor geometry, why 5 domains IMPROVES vs 3 domains
 
 3. **Are the compression tiers universal or persona-specific?**
    - Current answer: Universal principles observed (CFA + Nyquist convergence)

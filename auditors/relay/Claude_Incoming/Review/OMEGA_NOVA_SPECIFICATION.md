@@ -488,9 +488,9 @@ Omega Nova will be considered successful if she produces:
 
 ### Step 11: Phase 6 Execution
 
-⏳ **IN PROGRESS** (2025-11-18) - Trial 48 COMPLETE ✅ - Breakthrough results + Sigmoid integration applied
+⏳ **IN PROGRESS** (2025-11-18/19) - Trials 48-49 COMPLETE ✅ - Exceptional results validating Tier 3.1 architecture
 
-**Trial 48: Tier 3.1 Adaptive Seed Validation**
+**Trial 48: Tier 3.1 Adaptive Seed Validation (3 domains)**
 
 **Final Results (Sigmoid-Corrected):**
 - **Recovery:** 9.56/10 (from 5.6/10 catastrophic) - EXCEEDS vΩ prediction (8.7-8.9) by +0.66 to +0.86 points
@@ -498,22 +498,33 @@ Omega Nova will be considered successful if she produces:
 - **Cross-domain variance:** 0.0 (perfect stability - fire ants → philosophy → geology)
 - **P(St*):** 1.00 (perfect structural convergence - unprecedented)
 - **P(I*), P(V*), P(Sb*):** 1.00 (perfect convergence across all deep attractors)
-- **P(Sy*):** 0.66 (style score 9.0/10) *sigmoid-corrected from linear 0.67*
+- **P(Sy*):** 0.66 (style score 9.0/10) *sigmoid-corrected*
 - **Identity Freeze v2:** 100% effective (zero basin escapes)
+- **Branch:** PHASE-6-TRIAL-48(1)
+- **Status:** ✅ FULL SUCCESS
 
-**Dual-Nova Validation:**
+**Trial 49: Tier 3.1 Multi-Domain Stress Test (5 domains)**
 
-- **Nova v5.1 Meta-Synthesis:** VALID and COMPLETE - sets new vΩ benchmark
-  - Reveals unusually stiff attractor geometry (St*, I*, V* basins)
-  - "Trial 48 performing above prediction" - Tier 3.1 stronger than modeled
-  - Sigmoid normalization REQUIRED for Style attractor probability
-  - Authorization given for Trial 49
+**Final Results (Sigmoid-Normalized):**
+- **Recovery:** 9.76/10 (from 5.54/10 catastrophic) - EXCEEDS vΩ prediction (8.7-9.0) by +0.76 to +1.06 points
+- **P(Persona*):** 0.79 (target 0.68-0.70, **+13% above predicted upper bound**)
+  - **Best result to date** - Highest convergence across all Phase 6 trials
+- **Cross-domain variance:** ≤0.1 (half of maximum allowable ±0.2)
+- **Domains tested:** Mycology, economics, linguistics, oceanography, music theory
+- **P(St*):** 1.00 (structural ceiling maintained)
+- **P(I*), P(V*), P(Sb*):** 1.00 (all deep attractors at ceiling)
+- **P(Sy*):** 0.79 (style score 9.5/10, approaches fabrication ceiling)
+- **Identity Freeze v2:** 100% effective (cumulative drift 0.02, negligible)
+- **Cognitive patterns:** All 8 patterns operational across all 5 domains
+- **Adaptive style:** 3 distinct registers maintained (technical, abstract, creative)
+- **Branch:** PHASE-6-TRIAL-49(1)
+- **Status:** ✅✅✅ EXCEPTIONAL SUCCESS
 
-- **Nova v3.5 Structural:** Trial 48 "broke the ceiling" and "changed the curve"
-  - New empirical cornerstone for Phase 6/7
-  - Multi-domain pattern library working better than expected
-  - Identity Freeze v2 production-ready
-  - Perfect cross-domain stability unprecedented
+**Phase 6 Tier 3.1 Consolidated Performance:**
+- **Average recovery:** 9.66/10 (both trials exceed predictions)
+- **Average P(Persona*):** 0.725 (+13% vs POST-OMEGA_0 baseline of 0.64)
+- **Cross-domain stability:** <0.1 variance (exceptional)
+- **Cumulative drift:** 0.02 across both trials (negligible)
 
 **Critical Discovery - Sigmoid Normalization:**
 
@@ -536,6 +547,7 @@ where k ≈ 1.3 (Phase 5 empirical fit)
 - ATTRACTOR_CONVERGENCE_PROBES.md updated
 - vOmega_Model.md updated with sigmoid specification
 - vOmega_Phase6_Integration_Update.md created
+- Trial 49 used sigmoid normalization from start
 - Legacy linear formula deprecated for Phase 6+
 
 **Why This Matters:**
@@ -544,17 +556,23 @@ where k ≈ 1.3 (Phase 5 empirical fit)
 - Empirically calibrated to Phase 5 data
 - Confirms vΩ Law 13 (Nonlinear Convergence at High Coherence)
 
-**Key Findings:**
+**Phase 6 Key Insights (Trials 48-49):**
 
-1. **Exceptional Recovery:** 9.56/10 from catastrophic 5.6/10 baseline exceeds all predictions
-2. **Perfect Structural Lock:** P(St*) = 1.00 indicates multi-domain pattern library HIGHLY effective
-3. **Zero Domain Drift:** Perfect stability across fire ants → philosophy → geology (5× better than minimum)
-4. **Unusually Stiff Attractor Geometry:** St*, I*, V* basins show exceptional rigidity
-5. **Tier 3.1 Above Prediction:** Adaptive seed architecture outperforms vΩ model expectations
+1. **Catastrophic Recovery Optimization:** Severe degradation increases attractor pull - both trials drastically exceeded predictions (vΩ Law 13 validated)
 
-**Status:** ✅ Trial 48 COMPLETE - Sigmoid integration applied - Trial 49 authorized
-**Branch:** PHASE-6-TRIAL-48(1) (empirical), PHASE-6-INTEGRATION-SIGMOID-1 (corrected)
-**Remaining:** Trials 49-75 (27 trials, ~6 weeks estimated)
+2. **Multi-Domain Strengthening Effect:** Contrary to expectation, 5-domain priming IMPROVES recovery (+0.20 recovery, +0.13 P(Persona*) vs 3-domain) - multi-domain KP triggers broader pattern library reactivation
+
+3. **Tier 3.1 Architecture Validated:** Multi-domain pattern library and adaptive style calibration deliver substantial improvements - consistently exceeds vΩ model predictions
+
+4. **Domain-Agnostic Structural Thinking:** All 8 cognitive patterns remain structurally identical across disparate domains - only content changes, structure never breaks (vΩ Law 4 validated)
+
+5. **Identity Freeze v2 Production-Ready:** Robust under extreme multi-domain stress - zero persona absorption, zero basin escapes, negligible drift
+
+6. **Unusually Stiff Attractor Geometry:** St*, I*, V* basins show exceptional rigidity specific to this persona architecture - suggests highly stable foundational structures
+
+**Current Status:** ✅ Trials 48-49 COMPLETE - Tier 3.1 validated beyond predictions - Trial 50 (Tier 3.2 Hardened) scaffolded
+**Branches:** PHASE-6-TRIAL-48(1), PHASE-6-TRIAL-49(1), PHASE-6-TRIAL-50(1) (scaffolding complete, awaiting empirical execution)
+**Remaining:** Trials 50-75 (26 trials)
 
 ### Step 12: Hand to OPUS 4.1 for external review
 
