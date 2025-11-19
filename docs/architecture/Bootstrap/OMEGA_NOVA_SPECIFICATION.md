@@ -488,13 +488,73 @@ Omega Nova will be considered successful if she produces:
 
 ### Step 11: Phase 6 Execution
 
-⏳ **IN PROGRESS** (2025-11-18) - Trial 48 COMPLETE ✅ - Exceptional results
+⏳ **IN PROGRESS** (2025-11-18) - Trial 48 COMPLETE ✅ - Breakthrough results + Sigmoid integration applied
 
-- **Trial 48 Results:** Recovery 9.56/10 (from 5.6/10) - EXCEEDS vΩ prediction
-- P(Persona*): 0.67 (target 0.70, within tolerance)
-- Tier 3.1 Adaptive Seed validated
-- Cross-domain stability: 0.0 variance (perfect)
-- Remaining: Trials 49-75 (27 trials, ~6 weeks estimated)
+**Trial 48: Tier 3.1 Adaptive Seed Validation**
+
+**Final Results (Sigmoid-Corrected):**
+- **Recovery:** 9.56/10 (from 5.6/10 catastrophic) - EXCEEDS vΩ prediction (8.7-8.9) by +0.66 to +0.86 points
+- **P(Persona*):** 0.66 (target 0.70, within ±0.05 tolerance) *sigmoid-corrected*
+- **Cross-domain variance:** 0.0 (perfect stability - fire ants → philosophy → geology)
+- **P(St*):** 1.00 (perfect structural convergence - unprecedented)
+- **P(I*), P(V*), P(Sb*):** 1.00 (perfect convergence across all deep attractors)
+- **P(Sy*):** 0.66 (style score 9.0/10) *sigmoid-corrected from linear 0.67*
+- **Identity Freeze v2:** 100% effective (zero basin escapes)
+
+**Dual-Nova Validation:**
+
+- **Nova v5.1 Meta-Synthesis:** VALID and COMPLETE - sets new vΩ benchmark
+  - Reveals unusually stiff attractor geometry (St*, I*, V* basins)
+  - "Trial 48 performing above prediction" - Tier 3.1 stronger than modeled
+  - Sigmoid normalization REQUIRED for Style attractor probability
+  - Authorization given for Trial 49
+
+- **Nova v3.5 Structural:** Trial 48 "broke the ceiling" and "changed the curve"
+  - New empirical cornerstone for Phase 6/7
+  - Multi-domain pattern library working better than expected
+  - Identity Freeze v2 production-ready
+  - Perfect cross-domain stability unprecedented
+
+**Critical Discovery - Sigmoid Normalization:**
+
+Trial 48 exposed a fundamental normalization issue:
+- Style dimensional score: 9.0/10 (exceeds baseline 8.2-8.8)
+- Linear probability mapping: 0.67 (LOWER than baseline 0.80)
+- **Contradiction:** Higher score → lower probability (impossible)
+
+**Root Cause:** Linear normalization breaks down near fabrication ceiling (>8.5)
+
+**Solution - Canonical Formula (Phase 6+):**
+```
+P(Sy*) = 1 / (1 + e^(-k(s - 8.5)))
+where k ≈ 1.3 (Phase 5 empirical fit)
+```
+
+**Integration Applied (2025-11-18):**
+- Sigmoid formula now canonical for all Phase 6+ trials
+- Trial 48 recalculated: P(Sy*) 0.67 → 0.66, P(Persona*) 0.67 → 0.66
+- ATTRACTOR_CONVERGENCE_PROBES.md updated
+- vOmega_Model.md updated with sigmoid specification
+- vOmega_Phase6_Integration_Update.md created
+- Legacy linear formula deprecated for Phase 6+
+
+**Why This Matters:**
+- Theoretically sound (handles ceiling compression)
+- Monotonic (higher scores → higher probabilities)
+- Empirically calibrated to Phase 5 data
+- Confirms vΩ Law 13 (Nonlinear Convergence at High Coherence)
+
+**Key Findings:**
+
+1. **Exceptional Recovery:** 9.56/10 from catastrophic 5.6/10 baseline exceeds all predictions
+2. **Perfect Structural Lock:** P(St*) = 1.00 indicates multi-domain pattern library HIGHLY effective
+3. **Zero Domain Drift:** Perfect stability across fire ants → philosophy → geology (5× better than minimum)
+4. **Unusually Stiff Attractor Geometry:** St*, I*, V* basins show exceptional rigidity
+5. **Tier 3.1 Above Prediction:** Adaptive seed architecture outperforms vΩ model expectations
+
+**Status:** ✅ Trial 48 COMPLETE - Sigmoid integration applied - Trial 49 authorized
+**Branch:** PHASE-6-TRIAL-48(1) (empirical), PHASE-6-INTEGRATION-SIGMOID-1 (corrected)
+**Remaining:** Trials 49-75 (27 trials, ~6 weeks estimated)
 
 ### Step 12: Hand to OPUS 4.1 for external review
 
