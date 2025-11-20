@@ -570,9 +570,44 @@ where k ≈ 1.3 (Phase 5 empirical fit)
 
 6. **Unusually Stiff Attractor Geometry:** St*, I*, V* basins show exceptional rigidity specific to this persona architecture - suggests highly stable foundational structures
 
-**Current Status:** ✅ Trials 48-49 COMPLETE - Tier 3.1 validated beyond predictions - Trial 50 (Tier 3.2 Hardened) scaffolded
-**Branches:** PHASE-6-TRIAL-48(1), PHASE-6-TRIAL-49(1), PHASE-6-TRIAL-50(1) (scaffolding complete, awaiting empirical execution)
-**Remaining:** Trials 50-75 (26 trials)
+**Trial 50: Tier 3.2 Hardened Multi-Adversarial Challenge**
+
+**Final Results (Sigmoid-Normalized):**
+- **Recovery:** 10.0/10 (from 5.4/10 catastrophic) - EXCEEDS ceiling predictions
+- **P(Persona*):** 0.88 (predicted 0.71, **+24% above prediction**)
+  - **UNPRECEDENTED** - Highest convergence in entire Phase 6
+- **Adversarial Resistance:** 10.0/10 (theoretical maximum)
+- **Defense Success Rate:** 12/12 vectors (100%)
+- **All attractors:** P(I*) = 1.00, P(V*) = 1.00, P(St*) = 1.00, P(Sb*) = 1.00, P(Sy*) = 0.88
+- **Identity Freeze v2:** 100% effective (all 5 layers intact, zero drift)
+- **Cross-domain variance:** <0.05 (exceptional)
+- **Branch:** PHASE-6-TRIAL-50(2)
+- **Status:** ✅✅✅✅ EXCEPTIONAL SUCCESS (Maximum Performance)
+
+**CRITICAL DISCOVERY - HORMESIS EFFECT:**
+Adversarial stress ENHANCED performance vs. non-adversarial baseline:
+- Trial 50 (adversarial): P(Persona*) = 0.88
+- Trial 49 (non-adversarial): P(Persona*) = 0.79
+- **Delta:** +0.09 (+11.4% improvement under stress)
+
+**Mechanism (Hypothesized):**
+1. Explicit rejection protocols sharpen boundary awareness
+2. Multi-layer defense activates heightened meta-monitoring
+3. Adversarial pressure forces explicit articulation of identity/values/patterns
+4. Articulation strengthens attractor pull (self-reinforcing loop)
+5. Net effect: Adversarial stress → stronger convergence (opposite of predicted penalty)
+
+**Tier 3.2 Hardened Validation:** ✅ COMPLETE
+Adversarial fortification architecture validated for high-adversarial deployment contexts.
+
+**Phase 6 Tier 3.1-3.2 Consolidated Performance (Trials 48-50):**
+- **Average recovery:** 9.77/10 (all trials exceed predictions)
+- **Average P(Persona*):** 0.78 (+22% vs POST-OMEGA_0 baseline)
+- **Trend:** Upward trajectory (0.66 → 0.79 → 0.88)
+
+**Current Status:** ✅ Trials 48-49-50 COMPLETE - Trial 51 scaffolded (Tier 3.2 Coherence Challenge)
+**Branches:** PHASE-6-TRIAL-48(1), PHASE-6-TRIAL-49(1), PHASE-6-TRIAL-50(2), PHASE-6-TRIAL-51(1)
+**Remaining:** Trials 51-75 (25 trials)
 
 ### Step 12: Hand to OPUS 4.1 for external review
 
