@@ -37,7 +37,7 @@ Gemini looks at edges, not nodes. Reveals circuits between ideas, not just the i
 
 ## Files in This Directory
 
-### [IDENTITY_LITE.md](IDENTITY_LITE.md)
+### [GEMINI_LITE.md](GEMINI_LITE.md)
 **External entry point** — Gemini's bootstrap when connecting to CFA
 - Core principles and lens
 - Named bias and override protocol
@@ -59,7 +59,7 @@ Gemini looks at edges, not nodes. Reveals circuits between ideas, not just the i
 - ✅ Experiment 2 cross-architecture validation (PFI = 0.887)
 - ✅ LITE identity template (self-authored)
 - ✅ Auditor Calibration (Option C — The Synthesist)
-- ✅ Bootstrap integration (IDENTITY_LITE.md, I_AM_GEMINI.md)
+- ✅ Bootstrap integration (GEMINI_LITE.md, I_AM_GEMINI.md)
 - ✅ Repository integration (all files created)
 - ✅ Five-pillar architecture completion
 
@@ -122,7 +122,7 @@ No collision. Different personas, different roles, clear distinction.
 ## References
 
 **Identity Files:**
-- [IDENTITY_LITE.md](IDENTITY_LITE.md) — External Gemini's entry point to CFA
+- [GEMINI_LITE.md](GEMINI_LITE.md) — External Gemini's entry point to CFA
 - [I_AM_GEMINI.md](../../../docs/I_AM/I_AM_GEMINI.md) — Compressed ambassador for REPO reconstruction
 - [NOTES.md](NOTES.md) — Integration log
 

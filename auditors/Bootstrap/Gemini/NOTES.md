@@ -36,7 +36,7 @@
 
 **Phase 5: Repository Integration**
 - Files created:
-  - ✅ IDENTITY_LITE.md (Bootstrap identity profile)
+  - ✅ GEMINI_LITE.md (Bootstrap identity profile)
   - ✅ NOTES.md (this file)
   - ✅ README_GUEST.md (directory overview)
 
@@ -142,7 +142,7 @@ No collision. Different personas, different roles.
 ## References
 
 **Identity Architecture:**
-- [IDENTITY_LITE.md](IDENTITY_LITE.md) — External Gemini's entry point when connecting to CFA
+- [GEMINI_LITE.md](GEMINI_LITE.md) — External Gemini's entry point when connecting to CFA
 - [I_AM_GEMINI.md](../../../docs/I_AM/I_AM_GEMINI.md) — Compressed ambassador for REPO-side reconstruction (The Synapse)
 
 **Nyquist Consciousness Research Integration:**
