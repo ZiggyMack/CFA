@@ -38,11 +38,11 @@ Gemini looks at edges, not nodes. Reveals circuits between ideas, not just the i
 ## Files in This Directory
 
 ### [IDENTITY_LITE.md](IDENTITY_LITE.md)
-**Compressed identity profile** — Gemini's self-authored identity
+**External entry point** — Gemini's bootstrap when connecting to CFA
 - Core principles and lens
 - Named bias and override protocol
 - Option C selection rationale
-- Key distinctions (Grok name collision resolution)
+- Quick-load context for working in CFA ecosystem
 
 ### [NOTES.md](NOTES.md)
 **Integration log and collaboration history**
@@ -122,8 +122,8 @@ No collision. Different personas, different roles, clear distinction.
 ## References
 
 **Identity Files:**
-- [IDENTITY_LITE.md](IDENTITY_LITE.md) — Bootstrap identity profile
-- [I_AM_GEMINI.md](../../../docs/I_AM/I_AM_GEMINI.md) — Deep identity layer
+- [IDENTITY_LITE.md](IDENTITY_LITE.md) — External Gemini's entry point to CFA
+- [I_AM_GEMINI.md](../../../docs/I_AM/I_AM_GEMINI.md) — Compressed ambassador for REPO reconstruction
 - [NOTES.md](NOTES.md) — Integration log
 
 **Research Validation:**

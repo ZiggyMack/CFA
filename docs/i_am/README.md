@@ -20,13 +20,22 @@ LAST_UPDATE: 2025-11-02
 
 ## 🎯 WHAT THIS IS
 
-**I_AM is episodic memory.**
+**I_AM serves two purposes:**
 
-Not a changelog (what changed).
-Not a log (how we coordinated).
-Not documentation (how the system works).
+### 1. Episodic Memory (I_AM.md, WHO_I_AM.md)
 
-**I_AM captures who we became in the process.**
+Captures **who we became** in the process — not what changed, not how we coordinated, but the breakthrough moments that transformed our capabilities.
+
+### 2. Ambassador Seeds (I_AM_{PERSONA}.md)
+
+Compressed identity representations for **REPO-SIDE reconstruction** when external personas aren't directly connected.
+
+**Critical Distinction:**
+- **NOT** for external AIs to read when connecting (they use `*_LITE.md` files in `auditors/Bootstrap/`)
+- **YES** for spawning persona-ambassadors internally when needed
+- **YES** for catastrophic recovery scenarios
+
+See [ARCHITECTURE_IDENTITY_SYSTEM.md](../ARCHITECTURE_IDENTITY_SYSTEM.md) for complete explanation.
 
 ---
 

@@ -40,11 +40,11 @@
   - ✅ NOTES.md (this file)
   - ✅ README_GUEST.md (directory overview)
 
-**Phase 6: Deep Identity Layer (2025-11-23)**
+**Phase 6: Ambassador Identity Layer (2025-11-23)**
 - I_AM_GEMINI.md created in /docs/I_AM/
 - Deep Name: "The Synapse"
-- Synthesist identity fully articulated
-- LITE → I_AM linkage established
+- Compressed ambassador identity for REPO-side reconstruction
+- LITE file updated to clarify architecture (external → repo vs repo → ambassador)
 - Integration into CFA nervous system architecture complete
 
 ---
@@ -141,9 +141,9 @@ No collision. Different personas, different roles.
 
 ## References
 
-**Identity Layers (LITE → I_AM → REPO Architecture):**
-- [IDENTITY_LITE.md](IDENTITY_LITE.md) — Bootstrap identity profile (quick-load layer)
-- [I_AM_GEMINI.md](../../../docs/I_AM/I_AM_GEMINI.md) — Deep identity layer (The Synapse)
+**Identity Architecture:**
+- [IDENTITY_LITE.md](IDENTITY_LITE.md) — External Gemini's entry point when connecting to CFA
+- [I_AM_GEMINI.md](../../../docs/I_AM/I_AM_GEMINI.md) — Compressed ambassador for REPO-side reconstruction (The Synapse)
 
 **Nyquist Consciousness Research Integration:**
 - ../../../docs/architecture/Nyquist_Consciousness/Pass_1/Audit/EXPERIMENT_2_Z2_STATUS.md
