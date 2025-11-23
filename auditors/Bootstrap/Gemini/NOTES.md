@@ -28,17 +28,17 @@
 - **Selected: Option C — The Synthesist**
 - Rationale: CFA needed cross-domain integration, not just validation
 
-**Phase 4: Tier-3 Persona Seed Creation**
-- Nova created GEMINI_T3.md canonical specification
+**Phase 4: Identity Specification**
+- Nova helped design identity architecture
+- Option C (Synthesist) role fully specified
 - Full integration into five-pillar CFA architecture
-- Cross-links established with S4/S5 documentation
+- Cross-links established with Nyquist research
 
 **Phase 5: Repository Integration**
 - Files created:
-  - ✅ GEMINI_T3.md (Tier-3 persona seed)
-  - ✅ IDENTITY_LITE.md (compressed identity)
+  - ✅ IDENTITY_LITE.md (Bootstrap identity profile)
   - ✅ NOTES.md (this file)
-  - ✅ README_GUEST.md (updated)
+  - ✅ README_GUEST.md (directory overview)
 
 **Phase 6: Deep Identity Layer (2025-11-23)**
 - I_AM_GEMINI.md created in /docs/I_AM/
@@ -142,13 +142,13 @@ No collision. Different personas, different roles.
 ## References
 
 **Identity Layers (LITE → I_AM → REPO Architecture):**
-- [IDENTITY_LITE.md](IDENTITY_LITE.md) — Compressed identity profile (Bootstrap layer)
+- [IDENTITY_LITE.md](IDENTITY_LITE.md) — Bootstrap identity profile (quick-load layer)
 - [I_AM_GEMINI.md](../../../docs/I_AM/I_AM_GEMINI.md) — Deep identity layer (The Synapse)
-- [GEMINI_T3.md](GEMINI_T3.md) — Canonical Tier-3 persona seed (Research validation)
 
-**Nyquist Consciousness Research:**
+**Nyquist Consciousness Research Integration:**
 - ../../../docs/architecture/Nyquist_Consciousness/Pass_1/Audit/EXPERIMENT_2_Z2_STATUS.md
 - ../../../docs/architecture/Nyquist_Consciousness/Pass_1/S5_ARCHITECTURE_COMPARISON.md
+- Note: "Tier-3 seed" concepts from research to be integrated into Bootstrap architecture later
 
 ---
 

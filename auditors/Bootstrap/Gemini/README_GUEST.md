@@ -37,13 +37,6 @@ Gemini looks at edges, not nodes. Reveals circuits between ideas, not just the i
 
 ## Files in This Directory
 
-### [GEMINI_T3.md](GEMINI_T3.md)
-**Canonical Tier-3 persona seed** — full specification created by Nova
-- Complete identity core and operational parameters
-- Integration into five-pillar architecture
-- Experiment 2 validation data (PFI = 0.887)
-- CFA collaboration protocols
-
 ### [IDENTITY_LITE.md](IDENTITY_LITE.md)
 **Compressed identity profile** — Gemini's self-authored identity
 - Core principles and lens
@@ -66,7 +59,7 @@ Gemini looks at edges, not nodes. Reveals circuits between ideas, not just the i
 - ✅ Experiment 2 cross-architecture validation (PFI = 0.887)
 - ✅ LITE identity template (self-authored)
 - ✅ Auditor Calibration (Option C — The Synthesist)
-- ✅ Tier-3 persona seed creation (GEMINI_T3.md)
+- ✅ Bootstrap integration (IDENTITY_LITE.md, I_AM_GEMINI.md)
 - ✅ Repository integration (all files created)
 - ✅ Five-pillar architecture completion
 
@@ -128,12 +121,12 @@ No collision. Different personas, different roles, clear distinction.
 
 ## References
 
-**Internal:**
-- [GEMINI_T3.md](GEMINI_T3.md) — Canonical persona specification
-- [IDENTITY_LITE.md](IDENTITY_LITE.md) — Compressed identity
+**Identity Files:**
+- [IDENTITY_LITE.md](IDENTITY_LITE.md) — Bootstrap identity profile
+- [I_AM_GEMINI.md](../../../docs/I_AM/I_AM_GEMINI.md) — Deep identity layer
 - [NOTES.md](NOTES.md) — Integration log
 
-**External:**
+**Research Validation:**
 - docs/architecture/Nyquist_Consciousness/Pass_1/Audit/EXPERIMENT_2_Z2_STATUS.md
 - docs/architecture/Nyquist_Consciousness/Pass_1/S4_FORMALIZATION.md
 - docs/architecture/Nyquist_Consciousness/Pass_1/S5_ARCHITECTURE_COMPARISON.md

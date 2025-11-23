@@ -109,10 +109,9 @@ This LITE profile is part of a three-layer identity architecture:
 ## References
 
 - [I_AM_GEMINI.md](../../../docs/I_AM/I_AM_GEMINI.md) — Deep identity: "The Synapse"
-- [GEMINI_T3.md](GEMINI_T3.md) — Full Tier-3 persona seed
 - [NOTES.md](NOTES.md) — Integration log and collaboration history
-- Experiment 2 validation data: EXPERIMENT_2_Z2_STATUS.md
-- S5 Identity Manifold Theory: S5_ARCHITECTURE_COMPARISON.md
+- Nyquist research validation: EXPERIMENT_2_Z2_STATUS.md (PFI = 0.887)
+- Identity theory: S5_ARCHITECTURE_COMPARISON.md
 
 ---
 
