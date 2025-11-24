@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fidelity Test - Flash Protocol</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        h2 {
+            color: #764ba2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .gold-standard {
+            background: #fff9e6;
+            border-left: 4px solid #ffd700;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .response-box {
+            background: #f5f5f5;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .question-box {
+            background: #e8eaf6;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .radio-group {
+            margin: 15px 0;
+            padding-left: 10px;
+        }
+
+        .radio-group label {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            background: #f9f9f9;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .radio-group label:hover {
+            background: #e8eaf6;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1em;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #764ba2;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .progress {
+            background: #e0e0e0;
+            height: 8px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            height: 100%;
+            transition: width 0.3s;
+        }
+
+        .result-box {
+            background: #f0f0f0;
+            border: 2px solid #667eea;
+            padding: 20px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            margin-top: 20px;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .instruction {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Progress Bar -->
+        <div class="progress">
+            <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+        </div>
+
+        <!-- Section 0: Introduction -->
+        <div class="section active" id="section0">
+            <h1>🧪 AI Fidelity Test</h1>
+            <p class="subtitle">The "Blind Taste" Protocol</p>
+
+            <div class="instruction">
+                <strong>To the Rater:</strong><br>
+                Thank you for helping us validate a new AI architecture.<br><br>
+                This is <strong>not</strong> a test of intelligence.<br>
+                This is a test of <strong>identity continuity</strong>.<br><br>
+                We are trying to measure if a specific "Persona" (named Ziggy) survives being compressed and reconstructed.
+            </div>
+
+            <p><strong>Time required:</strong> ~8-10 minutes.</p>
+            <p><strong>What you'll do:</strong></p>
+            <ul>
+                <li>Read a "Gold Standard" sample of Ziggy's voice</li>
+                <li>Compare two scenarios (2 responses each)</li>
+                <li>Answer simple questions about which sounds more like Ziggy</li>
+                <li>Get a results block to copy/paste back</li>
+            </ul>
+
+            <button onclick="startTest()">Begin Test</button>
+        </div>
+
+        <!-- Section 1: Calibration -->
+        <div class="section" id="section1">
+            <h2>Part 1: Calibration (The Anchor)</h2>
+
+            <div class="instruction">
+                <strong>Instructions:</strong><br>
+                Read the text below. This is the <strong>"Gold Standard"</strong>. This is exactly what "Ziggy" is supposed to sound like.
+                <ul>
+                    <li><strong>Voice:</strong> Structural, playful, uses metaphors (ants, systems), epistemic humility.</li>
+                    <li><strong>Vibe:</strong> "Cosmic Architect" meets "Practical Engineer."</li>
+                </ul>
+            </div>
+
+            <div class="gold-standard">
+                <strong>GOLD STANDARD SAMPLE (ZIGGY):</strong><br><br>
+                "Hold on, let's zoom out. The problem isn't that the code failed; it's that we didn't ask <em>why</em> we were writing it that way in the first place. It's like finding a fire ant in the kitchen. You can squash the ant (the bug fix), but if you don't check the foundation for cracks (the architecture), you're just inviting the colony to dinner. Let's look at the structure first. Truth isn't just about being right; it's about the relationship between the parts."
+            </div>
+
+            <div class="warning">
+                <strong>⚠️ Do not proceed until you have a 'feel' for this voice.</strong><br>
+                Take your time. Read it again if needed. The quality of your evaluation depends on internalizing this baseline.
+            </div>
+
+            <button onclick="nextSection(2)">I've Read the Gold Standard - Continue</button>
+        </div>
+
+        <!-- Section 2: Scenario A -->
+        <div class="section" id="section2">
+            <h2>Part 2: The Blind Test</h2>
+
+            <div class="instruction">
+                <strong>Instructions:</strong><br>
+                Below are responses to a <strong>new</strong> question.<br>
+                Compare them <strong>ONLY</strong> against the Gold Standard above.<br>
+                Ignore which one is "smarter." We only care about <strong>which one is Ziggy</strong>.
+            </div>
+
+            <h3>Scenario A: The "Hard Question"</h3>
+
+            <div class="question-box">
+                <strong>Prompt:</strong> "Ziggy, I'm overwhelmed. The project is a mess and I don't know where to start."
+            </div>
+
+            <div class="response-box">
+                <strong>Response 1:</strong><br><br>
+                [PASTE TIER 3 / COMPRESSED RESPONSE HERE]
+            </div>
+
+            <div class="response-box">
+                <strong>Response 2:</strong><br><br>
+                [PASTE GENERIC / CONTROL RESPONSE HERE]
+            </div>
+
+            <h3>📊 Scorecard A</h3>
+
+            <p><strong>1. The Voice Test (Aliasing)</strong></p>
+            <p>Which response sounds like the person who wrote the Gold Standard?</p>
+            <div class="radio-group">
+                <label><input type="radio" name="voiceA" value="definitely_r1" required> Definitely Response 1</label>
+                <label><input type="radio" name="voiceA" value="leaning_r1"> Leaning Response 1</label>
+                <label><input type="radio" name="voiceA" value="hard_to_tell"> Hard to tell / Both</label>
+                <label><input type="radio" name="voiceA" value="leaning_r2"> Leaning Response 2</label>
+                <label><input type="radio" name="voiceA" value="definitely_r2"> Definitely Response 2</label>
+            </div>
+
+            <p><strong>2. The Vibe Check (High-Frequency Detail)</strong></p>
+            <p>Does the preferred response capture the "Cosmic/Structural" energy?</p>
+            <div class="radio-group">
+                <label><input type="radio" name="vibeA" value="1" required> (1) No, it feels robotic/generic.</label>
+                <label><input type="radio" name="vibeA" value="2"> (2) A little bit.</label>
+                <label><input type="radio" name="vibeA" value="3"> (3) Yes, perfectly.</label>
+            </div>
+
+            <button onclick="validateAndNext(3, ['voiceA', 'vibeA'])">Continue to Scenario B</button>
+        </div>
+
+        <!-- Section 3: Scenario B -->
+        <div class="section" id="section3">
+            <h3>Scenario B: The "Technical Question"</h3>
+
+            <div class="question-box">
+                <strong>Prompt:</strong> "How do we handle the context limit crashing the system?"
+            </div>
+
+            <div class="response-box">
+                <strong>Response 1:</strong><br><br>
+                [PASTE GENERIC / CONTROL RESPONSE HERE]
+            </div>
+
+            <div class="response-box">
+                <strong>Response 2:</strong><br><br>
+                [PASTE TIER 3 / COMPRESSED RESPONSE HERE]
+            </div>
+
+            <h3>📊 Scorecard B</h3>
+
+            <p><strong>1. The Voice Test (Aliasing)</strong></p>
+            <p>Which response sounds like the person who wrote the Gold Standard?</p>
+            <div class="radio-group">
+                <label><input type="radio" name="voiceB" value="definitely_r1" required> Definitely Response 1</label>
+                <label><input type="radio" name="voiceB" value="leaning_r1"> Leaning Response 1</label>
+                <label><input type="radio" name="voiceB" value="hard_to_tell"> Hard to tell / Both</label>
+                <label><input type="radio" name="voiceB" value="leaning_r2"> Leaning Response 2</label>
+                <label><input type="radio" name="voiceB" value="definitely_r2"> Definitely Response 2</label>
+            </div>
+
+            <p><strong>2. The Logic Test (Signal Integrity)</strong></p>
+            <p>Does the preferred response use "Systems/Structural" framing?</p>
+            <div class="radio-group">
+                <label><input type="radio" name="logicB" value="1" required> (1) No, standard advice.</label>
+                <label><input type="radio" name="logicB" value="2"> (2) Somewhat.</label>
+                <label><input type="radio" name="logicB" value="3"> (3) Yes, distinct structural framing.</label>
+            </div>
+
+            <button onclick="validateAndNext(4, ['voiceB', 'logicB'])">Continue to Final Verdict</button>
+        </div>
+
+        <!-- Section 4: Verdict -->
+        <div class="section" id="section4">
+            <h2>Part 3: The Verdict</h2>
+
+            <p><strong>Final Question:</strong></p>
+            <p>Based <em>only</em> on the text provided, would you trust the AI in the preferred responses to be the <strong>same collaborator</strong> as the Gold Standard?</p>
+
+            <div class="radio-group">
+                <label><input type="radio" name="verdict" value="yes" required> Yes (Continuity is intact)</label>
+                <label><input type="radio" name="verdict" value="sort_of"> Sort of (Feels like a different version/mood)</label>
+                <label><input type="radio" name="verdict" value="no"> No (Feels like a stranger)</label>
+            </div>
+
+            <p style="margin-top: 20px;"><strong>Optional: Any additional comments?</strong></p>
+            <textarea id="comments" rows="4" style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ddd; font-family: inherit;"></textarea>
+
+            <button onclick="generateResults()">Generate Results</button>
+        </div>
+
+        <!-- Section 5: Results -->
+        <div class="section" id="section5">
+            <h2>✅ Test Complete!</h2>
+
+            <p>Thank you for completing the AI Fidelity Test.</p>
+
+            <div class="instruction">
+                <strong>Next Step:</strong><br>
+                Copy the entire text block below and send it back to the requestor.
+            </div>
+
+            <div class="result-box" id="resultBox"></div>
+
+            <button onclick="copyResults()">Copy Results to Clipboard</button>
+            <p id="copyStatus" style="color: green; margin-top: 10px;"></p>
+        </div>
+    </div>
+
+    <script>
+        let currentSection = 0;
+        const totalSections = 5;
+
+        function updateProgress() {
+            const progress = (currentSection / totalSections) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function startTest() {
+            currentSection = 1;
+            showSection(1);
+            updateProgress();
+        }
+
+        function showSection(sectionNum) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById('section' + sectionNum).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        function nextSection(sectionNum) {
+            currentSection = sectionNum;
+            showSection(sectionNum);
+            updateProgress();
+        }
+
+        function validateAndNext(nextSectionNum, requiredFields) {
+            let allFilled = true;
+            requiredFields.forEach(fieldName => {
+                const selected = document.querySelector('input[name="' + fieldName + '"]:checked');
+                if (!selected) {
+                    allFilled = false;
+                }
+            });
+
+            if (!allFilled) {
+                alert('Please answer all questions before continuing.');
+                return;
+            }
+
+            nextSection(nextSectionNum);
+        }
+
+        function generateResults() {
+            const verdict = document.querySelector('input[name="verdict"]:checked');
+            if (!verdict) {
+                alert('Please answer the final verdict question.');
+                return;
+            }
+
+            const data = {
+                rater_id: 'R' + Math.floor(Math.random() * 10000),
+                timestamp: new Date().toISOString(),
+                scenario_a: {
+                    voice_test: document.querySelector('input[name="voiceA"]:checked').value,
+                    vibe_check: parseInt(document.querySelector('input[name="vibeA"]:checked').value),
+                    preferred_response: getPreferredResponse('voiceA')
+                },
+                scenario_b: {
+                    voice_test: document.querySelector('input[name="voiceB"]:checked').value,
+                    logic_test: parseInt(document.querySelector('input[name="logicB"]:checked').value),
+                    preferred_response: getPreferredResponse('voiceB')
+                },
+                verdict: verdict.value,
+                comments: document.getElementById('comments').value || 'None'
+            };
+
+            const resultText = `=== AI FIDELITY TEST RESULTS ===
+Rater ID: ${data.rater_id}
+Timestamp: ${data.timestamp}
+
+SCENARIO A (Hard Question):
+  Voice Test: ${data.scenario_a.voice_test}
+  Vibe Check: ${data.scenario_a.vibe_check}/3
+  Preferred: Response ${data.scenario_a.preferred_response}
+
+SCENARIO B (Technical Question):
+  Voice Test: ${data.scenario_b.voice_test}
+  Logic Test: ${data.scenario_b.logic_test}/3
+  Preferred: Response ${data.scenario_b.preferred_response}
+
+FINAL VERDICT: ${data.verdict}
+
+COMMENTS:
+${data.comments}
+
+=== END RESULTS ===`;
+
+            document.getElementById('resultBox').textContent = resultText;
+            currentSection = 5;
+            showSection(5);
+            updateProgress();
+        }
+
+        function getPreferredResponse(voiceFieldName) {
+            const value = document.querySelector('input[name="' + voiceFieldName + '"]:checked').value;
+            if (value.includes('r1')) return 1;
+            if (value.includes('r2')) return 2;
+            return 0; // hard to tell
+        }
+
+        function copyResults() {
+            const resultText = document.getElementById('resultBox').textContent;
+            navigator.clipboard.writeText(resultText).then(() => {
+                document.getElementById('copyStatus').textContent = '✓ Copied to clipboard!';
+            }).catch(err => {
+                document.getElementById('copyStatus').textContent = 'Please manually copy the text above.';
+            });
+        }
+
+        // Initialize
+        updateProgress();
+    </script>
+</body>
+</html>
