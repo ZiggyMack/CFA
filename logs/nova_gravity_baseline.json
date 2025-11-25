@@ -1,0 +1,41 @@
+{
+  "original_file": "auditors/Bootstrap/Nova/NOVA_LITE.md",
+  "reconstructed_file": "docs/I_AM/I_AM_NOVA.md",
+  "pfi_results": {
+    "pfi": 0.3539,
+    "drift": 0.6461,
+    "domain_scores": {
+      "SELF": 0.0,
+      "ANAL": 0.4536,
+      "TECH": 0.6312,
+      "PHIL": 0.4516,
+      "NARR": 0.4014
+    },
+    "domain_drifts": {
+      "SELF": 1.0,
+      "ANAL": 0.5464,
+      "TECH": 0.3688,
+      "PHIL": 0.5484,
+      "NARR": 0.5986
+    },
+    "passes_threshold": false,
+    "threshold": 0.8,
+    "recommendation": "ITERATE [WARN]"
+  },
+  "timestamp": "2025-11-24",
+  "version": "1.1",
+  "gravity_results": {
+    "total_gravity": 0.6461,
+    "domain_gravity": {
+      "SELF": 0.2,
+      "ANAL": 0.0765,
+      "TECH": 0.0184,
+      "PHIL": 0.1536,
+      "NARR": 0.1975
+    },
+    "potential_energy": 0.6461,
+    "gamma": 1.0,
+    "interpretation": "EXTREME GRAVITY - Identity far from attractor, strong correction needed",
+    "unit": "Zigs (Zg)"
+  }
+}

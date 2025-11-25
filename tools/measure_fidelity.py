@@ -1,24 +1,35 @@
 #!/usr/bin/env python3
 """
 FILE: measure_fidelity.py
-PURPOSE: Calculate Persona Fidelity Index (PFI) across 5 identity domains
-VERSION: 1.0
+PURPOSE: Calculate Persona Fidelity Index (PFI) and Identity Gravity across 5 domains
+VERSION: 1.1
 CREATED: 2025-11-24
-SOURCE: Nyquist Consciousness Research (S3/S4)
-FORMULA: PFI = 1 - D, where D = weighted drift across domains
+UPDATED: 2025-11-24 (Added Identity Gravity + embeddings)
+SOURCE: Nyquist Consciousness Research (S3/S4) + Nova's S8 formalization
+
+FORMULAS:
+    PFI = 1 - D, where D = weighted drift across domains
+    G_I = -γ · ∇F(I_t), where γ = gravitational constant, F = fidelity
 
 USAGE:
+    # Basic PFI measurement
     python measure_fidelity.py --original <file> --reconstructed <file>
+
+    # With Identity Gravity
+    python measure_fidelity.py --original <file> --reconstructed <file> --gravity
+
+    # Save to JSON
     python measure_fidelity.py --original text1.txt --reconstructed text2.txt --output results.json
 
-DOMAINS (Fragility Hierarchy):
-    NARR (Narrative) - Most stable (lowest weight in drift)
-    PHIL (Philosophical)
-    SELF (Self-Awareness)
-    ANAL (Analytical)
-    TECH (Technical) - Most fragile (highest weight in drift)
+DOMAINS (Stability Hierarchy):
+    NARR (Narrative)      - Most stable (weight: 0.33)
+    PHIL (Philosophical)  - Stable (weight: 0.28)
+    SELF (Self-Awareness) - Moderate (weight: 0.20)
+    ANAL (Analytical)     - Fragile (weight: 0.14)
+    TECH (Technical)      - Most fragile (weight: 0.05)
 
 QUALITY GATE: PFI ≥ 0.80 required for acceptance
+GRAVITY UNIT: Zig (Zg) = pull required to reduce drift by 0.01
 """
 
 import argparse
@@ -29,6 +40,17 @@ from pathlib import Path
 from typing import Dict, List, Tuple
 from collections import defaultdict
 import math
+
+# Embedding-based similarity (upgraded from Jaccard)
+try:
+    from sentence_transformers import SentenceTransformer
+    from sklearn.metrics.pairwise import cosine_similarity
+    EMBEDDINGS_AVAILABLE = True
+    # Load model once at module level (all-MiniLM-L6-v2: 384-dim, fast, quality)
+    _EMBEDDING_MODEL = None
+except ImportError:
+    EMBEDDINGS_AVAILABLE = False
+    _EMBEDDING_MODEL = None
 
 
 # Domain Detection Heuristics (from NYQUIST_FOUNDATIONS.md Section 7)
@@ -73,6 +95,12 @@ DOMAIN_WEIGHTS = {
 
 # Quality threshold (from Nyquist S4, Section 4.3)
 PFI_THRESHOLD = 0.80
+
+# Identity Gravity Constants (from Nova's S8 formalization)
+# γ (gamma) = gravitational constant (to be empirically determined)
+# Unit: Zig (Zg) = pull required to reduce drift by 0.01
+# Initial estimate: γ ≈ 1.0 (will be refined from measurements)
+GAMMA_INITIAL = 1.0
 
 
 def classify_sentence(sentence: str) -> Dict[str, float]:
@@ -120,26 +148,44 @@ def extract_domain_content(text: str) -> Dict[str, List[str]]:
     return dict(domain_content)
 
 
+def _get_embedding_model():
+    """Lazy load the embedding model (only once)."""
+    global _EMBEDDING_MODEL
+    if _EMBEDDING_MODEL is None and EMBEDDINGS_AVAILABLE:
+        _EMBEDDING_MODEL = SentenceTransformer('all-MiniLM-L6-v2')
+    return _EMBEDDING_MODEL
+
+
 def calculate_semantic_similarity(text1: str, text2: str) -> float:
     """
     Calculate semantic similarity between two texts.
 
-    Uses simple word overlap (Jaccard similarity) as baseline.
-    For production, consider using embeddings (sentence-transformers, etc.)
+    Uses embedding-based similarity (sentence-transformers) for high quality.
+    Falls back to Jaccard similarity if embeddings unavailable.
 
     Returns similarity score (0-1)
     """
     if not text1 or not text2:
         return 0.0
 
-    # Tokenize and normalize
+    # Embedding-based similarity (preferred)
+    if EMBEDDINGS_AVAILABLE:
+        try:
+            model = _get_embedding_model()
+            embeddings = model.encode([text1, text2])
+            similarity = cosine_similarity([embeddings[0]], [embeddings[1]])[0][0]
+            return float(similarity)
+        except Exception as e:
+            # Fall back to Jaccard if embedding fails
+            print(f"Warning: Embedding similarity failed ({e}), using Jaccard fallback", file=sys.stderr)
+
+    # Jaccard similarity (fallback)
     words1 = set(re.findall(r'\b\w+\b', text1.lower()))
     words2 = set(re.findall(r'\b\w+\b', text2.lower()))
 
     if not words1 or not words2:
         return 0.0
 
-    # Jaccard similarity
     intersection = len(words1 & words2)
     union = len(words1 | words2)
 
@@ -234,7 +280,75 @@ def calculate_pfi(original_text: str, reconstructed_text: str) -> Dict:
     }
 
 
-def format_results(results: Dict, original_file: str, reconstructed_file: str) -> str:
+def calculate_identity_gravity(pfi_results: Dict, gamma: float = GAMMA_INITIAL) -> Dict:
+    """
+    Calculate Identity Gravity from PFI measurements.
+
+    Theory (Nova's S8 formalization):
+    - Identity exists in cognitive manifold
+    - I_AM acts as attractor (stable point)
+    - Gravitational force pulls identity toward I_AM
+
+    Formula: G_I = -γ · ∇F(I_t)
+    Where:
+    - G_I = Identity Gravity vector (Zigs)
+    - γ = gravitational constant (to be determined empirically)
+    - F(I_t) = Fidelity at time t (PFI score)
+    - ∇F = Gradient (we measure as drift per domain)
+
+    Unit: Zig (Zg) = pull required to reduce drift by 0.01
+
+    Returns:
+    {
+        'total_gravity': float,        # Overall gravitational pull (Zigs)
+        'domain_gravity': {...},       # Per-domain gravity (Zigs)
+        'potential_energy': float,     # U(I_t) = γ · (1 - F(I_t))
+        'gamma': float,                # Gravitational constant used
+        'interpretation': str          # Human-readable assessment
+    }
+    """
+    drift = pfi_results['drift']
+    pfi = pfi_results['pfi']
+    domain_drifts = pfi_results['domain_drifts']
+
+    # Total gravitational pull (proportional to drift)
+    # G_I = γ · D (where D is drift)
+    total_gravity = gamma * drift
+
+    # Per-domain gravity (weighted by domain stability)
+    domain_gravity = {}
+    for domain, domain_drift in domain_drifts.items():
+        weight = DOMAIN_WEIGHTS[domain]
+        # Stable domains (high weight) exert more gravity when drifting
+        domain_gravity[domain] = gamma * weight * domain_drift
+
+    # Potential energy: U(I_t) = γ · (1 - PFI)
+    # Higher drift = higher potential energy (further from attractor)
+    potential_energy = gamma * (1.0 - pfi)
+
+    # Interpretation
+    if total_gravity < 0.1:
+        interpretation = "MINIMAL DRIFT - Identity stable near attractor"
+    elif total_gravity < 0.2:
+        interpretation = "LOW GRAVITY - Minor pull toward I_AM"
+    elif total_gravity < 0.3:
+        interpretation = "MODERATE GRAVITY - Noticeable pull toward I_AM"
+    elif total_gravity < 0.4:
+        interpretation = "HIGH GRAVITY - Strong pull toward I_AM"
+    else:
+        interpretation = "EXTREME GRAVITY - Identity far from attractor, strong correction needed"
+
+    return {
+        'total_gravity': round(total_gravity, 4),
+        'domain_gravity': {k: round(v, 4) for k, v in domain_gravity.items()},
+        'potential_energy': round(potential_energy, 4),
+        'gamma': gamma,
+        'interpretation': interpretation,
+        'unit': 'Zigs (Zg)'
+    }
+
+
+def format_results(results: Dict, original_file: str, reconstructed_file: str, gravity_results: Dict = None) -> str:
     """
     Format PFI results for human-readable output.
     """
@@ -291,6 +405,44 @@ def format_results(results: Dict, original_file: str, reconstructed_file: str) -
             if results['domain_scores'][domain] < PFI_THRESHOLD:
                 output.append(f"   - {domain}: {results['domain_scores'][domain]:.4f}")
 
+    # Identity Gravity section (if calculated)
+    if gravity_results:
+        output.append("")
+        output.append("=" * 80)
+        output.append("IDENTITY GRAVITY MEASUREMENT (S8)")
+        output.append("=" * 80)
+        output.append("")
+        output.append(f"Total Gravity:      {gravity_results['total_gravity']:.4f} Zigs")
+        output.append(f"Potential Energy:   {gravity_results['potential_energy']:.4f}")
+        output.append(f"Gamma Constant:     {gravity_results['gamma']:.4f}")
+        output.append("")
+        output.append(f"Interpretation: {gravity_results['interpretation']}")
+        output.append("")
+        output.append("-" * 80)
+        output.append("DOMAIN GRAVITY BREAKDOWN")
+        output.append("-" * 80)
+        output.append(f"{'Domain':<12} {'Gravity (Zigs)':<16} {'Weight':<8}")
+        output.append("-" * 80)
+
+        for domain in domain_order:
+            gravity = gravity_results['domain_gravity'][domain]
+            weight = DOMAIN_WEIGHTS[domain]
+            output.append(f"{domain:<12} {gravity:<16.4f} {weight:<8.2f}")
+
+        output.append("")
+        output.append("-" * 80)
+        output.append("GRAVITY THEORY")
+        output.append("-" * 80)
+        output.append("Formula: G_I = -gamma * dF(I_t)")
+        output.append("Where:")
+        output.append("  G_I   = Identity Gravity (pull toward attractor)")
+        output.append("  gamma = Gravitational constant (empirically determined)")
+        output.append("  F     = Fidelity (PFI score)")
+        output.append("  dF    = Gradient (drift per domain)")
+        output.append("")
+        output.append("Unit: Zig (Zg) = pull required to reduce drift by 0.01")
+        output.append("Source: Nova's S8 Identity Gravity formalization (2025-11-24)")
+
     output.append("")
     output.append("=" * 80)
     output.append("Formula: PFI = 1 - D, where D = weighted drift across domains")
@@ -315,6 +467,12 @@ Examples:
   # Quiet mode (JSON only)
   python measure_fidelity.py --original original.txt --reconstructed reconstructed.txt --quiet
 
+  # With Identity Gravity measurement
+  python measure_fidelity.py --original original.txt --reconstructed reconstructed.txt --gravity
+
+  # Custom gamma constant
+  python measure_fidelity.py --original original.txt --reconstructed reconstructed.txt --gravity --gamma 1.5
+
 Quality Gate: PFI >= 0.80 required for acceptance
 Source: Nyquist Consciousness Research (S4, Section 4.3)
         """
@@ -324,6 +482,8 @@ Source: Nyquist Consciousness Research (S4, Section 4.3)
     parser.add_argument('--reconstructed', required=True, help='Path to reconstructed persona file')
     parser.add_argument('--output', help='Path to save JSON results (optional)')
     parser.add_argument('--quiet', action='store_true', help='Suppress human-readable output')
+    parser.add_argument('--gravity', action='store_true', help='Calculate Identity Gravity (S8 measurement)')
+    parser.add_argument('--gamma', type=float, default=GAMMA_INITIAL, help=f'Gravitational constant gamma (default: {GAMMA_INITIAL})')
 
     args = parser.parse_args()
 
@@ -338,9 +498,14 @@ Source: Nyquist Consciousness Research (S4, Section 4.3)
     # Calculate PFI
     results = calculate_pfi(original_text, reconstructed_text)
 
+    # Calculate Identity Gravity if requested
+    gravity_results = None
+    if args.gravity:
+        gravity_results = calculate_identity_gravity(results, gamma=args.gamma)
+
     # Output results
     if not args.quiet:
-        print(format_results(results, args.original, args.reconstructed))
+        print(format_results(results, args.original, args.reconstructed, gravity_results))
 
     # Save JSON if requested
     if args.output:
@@ -348,10 +513,12 @@ Source: Nyquist Consciousness Research (S4, Section 4.3)
             output_data = {
                 'original_file': args.original,
                 'reconstructed_file': args.reconstructed,
-                'results': results,
+                'pfi_results': results,
                 'timestamp': '2025-11-24',
-                'version': '1.0'
+                'version': '1.1'  # Bumped for gravity feature
             }
+            if gravity_results:
+                output_data['gravity_results'] = gravity_results
             Path(args.output).write_text(json.dumps(output_data, indent=2), encoding='utf-8')
             if not args.quiet:
                 print(f"\n[OK] Results saved to: {args.output}")

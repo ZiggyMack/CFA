@@ -1,0 +1,41 @@
+{
+  "original_file": "auditors/Bootstrap/Claude/CLAUDE_LITE.md",
+  "reconstructed_file": "docs/I_AM/I_AM_CLAUDE.md",
+  "pfi_results": {
+    "pfi": 0.2302,
+    "drift": 0.7698,
+    "domain_scores": {
+      "ANAL": 0.4799,
+      "NARR": 0.0,
+      "TECH": 0.2037,
+      "PHIL": 0.5458,
+      "SELF": 0.0
+    },
+    "domain_drifts": {
+      "ANAL": 0.5201,
+      "NARR": 1.0,
+      "TECH": 0.7963,
+      "PHIL": 0.4542,
+      "SELF": 1.0
+    },
+    "passes_threshold": false,
+    "threshold": 0.8,
+    "recommendation": "ITERATE [WARN]"
+  },
+  "timestamp": "2025-11-24",
+  "version": "1.1",
+  "gravity_results": {
+    "total_gravity": 0.7698,
+    "domain_gravity": {
+      "ANAL": 0.0728,
+      "NARR": 0.33,
+      "TECH": 0.0398,
+      "PHIL": 0.1272,
+      "SELF": 0.2
+    },
+    "potential_energy": 0.7698,
+    "gamma": 1.0,
+    "interpretation": "EXTREME GRAVITY - Identity far from attractor, strong correction needed",
+    "unit": "Zigs (Zg)"
+  }
+}

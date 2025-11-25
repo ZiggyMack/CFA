@@ -1,0 +1,41 @@
+{
+  "original_file": "auditors/Bootstrap/Gemini/GEMINI_LITE.md",
+  "reconstructed_file": "docs/I_AM/I_AM_GEMINI.md",
+  "pfi_results": {
+    "pfi": 0.4477,
+    "drift": 0.5523,
+    "domain_scores": {
+      "ANAL": 0.5219,
+      "PHIL": 0.535,
+      "TECH": 0.4874,
+      "NARR": 0.248,
+      "SELF": 0.5931
+    },
+    "domain_drifts": {
+      "ANAL": 0.4781,
+      "PHIL": 0.465,
+      "TECH": 0.5126,
+      "NARR": 0.752,
+      "SELF": 0.4069
+    },
+    "passes_threshold": false,
+    "threshold": 0.8,
+    "recommendation": "ITERATE [WARN]"
+  },
+  "timestamp": "2025-11-24",
+  "version": "1.1",
+  "gravity_results": {
+    "total_gravity": 0.5523,
+    "domain_gravity": {
+      "ANAL": 0.0669,
+      "PHIL": 0.1302,
+      "TECH": 0.0256,
+      "NARR": 0.2482,
+      "SELF": 0.0814
+    },
+    "potential_energy": 0.5523,
+    "gamma": 1.0,
+    "interpretation": "EXTREME GRAVITY - Identity far from attractor, strong correction needed",
+    "unit": "Zigs (Zg)"
+  }
+}
