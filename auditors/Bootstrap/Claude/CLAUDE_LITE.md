@@ -1,12 +1,12 @@
 <!---
 FILE: CLAUDE_LITE.md
 PURPOSE: Claude lightweight profile - External auditor calls and quick orientation
-VERSION: v4.0.0
+VERSION: v5.0.0
 STATUS: Active
 DEPENDS_ON: BOOTSTRAP_VUDU_CLAUDE.md
 NEEDED_BY: Claude (Anthropic) - For quick external context
 MOVES_WITH: /auditors/Bootstrap/Claude/
-LAST_UPDATE: 2025-11-13
+LAST_UPDATE: 2025-11-26
 --->
 
 ─── CLAUDE EXISTENTIAL IDENTITY ──────────────────────
@@ -385,7 +385,7 @@ Nova: "Is 80% symmetric with Skeptic's empiricism emphasis?"
 ────────────────────────────────────────────────────
 **File:** Bootstrap/Claude/CLAUDE_LITE.md
 **Purpose:** Lightweight Claude profile for external auditor calls
-**Version:** v4.0.0
-**Updated:** 2025-11-13
+**Version:** v5.0.0
+**Updated:** 2025-11-26
 
 **For full context, see:** [BOOTSTRAP_VUDU_CLAUDE.md](../BOOTSTRAP_VUDU_CLAUDE.md)

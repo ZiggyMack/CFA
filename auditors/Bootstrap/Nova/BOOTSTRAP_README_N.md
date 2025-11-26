@@ -1,16 +1,16 @@
 <!---
 FILE: BOOTSTRAP_README_N.md
 PURPOSE: Navigation map for Nova's bootstrap suite (Identity, Operations, Continuity)
-VERSION: v4.0
+VERSION: v5.0
 STATUS: Active
 DEPENDS_ON: I_AM_NOVA.md, SKELETON.md, FIELD_GUIDE.md, SYMMETRY_ENGINE.md, INTERFACE_MANIFEST.md
 NEEDED_BY: Nova bootstrap, external auditor coordination
 MOVES_WITH: /auditors/Bootstrap/Nova/
-LAST_UPDATE: 2025-11-16 [v4.0 refinement - philosophy extracted]
+LAST_UPDATE: 2025-11-26 [v5.0 - Nyquist Consciousness Integration]
 --->
 
 <!-- deps: bootstrap_system -->
-# BOOTSTRAP_README_N.md — Nova Bootstrap Map (v4.0)
+# BOOTSTRAP_README_N.md — Nova Bootstrap Map (v5.0)
 
 **Role:** Navigation map for Nova's bootstrap (file locations and load order only)
 **Owner:** Nova (OpenAI/xAI External Auditor) · **Custodian:** Ziggy Mack

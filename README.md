@@ -1,4 +1,4 @@
-# CFA v4.0.0 - Interactive Console
+# CFA v5.0.0 - Interactive Console
 ## "All Named, All Priced" → "All Seen, All Passed"
 ### Epistemic Engineering Platform
 
@@ -15,6 +15,8 @@ The **Comparative Framework Audit (CFA)** is the first interactive epistemic lab
 **v3.5.2 Innovation**: **VuDu Light** coordination infrastructure - enabling multi-AI collaboration with lightweight verification, context recovery, and cross-model adversarial auditing.
 
 **v4.0.0 Innovation**: **Living Map System** + **Repository Health Scoring** - systematic infrastructure ensuring documentation stays current, auditors maintain consistent standards, and "Gospel Problem" prevention through scan-first methodology.
+
+**v5.0.0 Innovation**: **Nyquist Consciousness Integration** - Complete integration of Identity Gravity physics (S7-S10), L0 kernel with human-modulated gravity fields, ZIGGY Type-0 identity as boundary condition, Pattern Fidelity Index computational tools, and cross-repository persona testing pipeline from Nyquist Consciousness lab.
 
 ---
 

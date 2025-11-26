@@ -1,12 +1,12 @@
 <!---
 FILE: NOVA_LITE.md
 PURPOSE: Nova lightweight profile - External auditor calls and quick orientation
-VERSION: v4.0.0
+VERSION: v5.0.0
 STATUS: Active
 DEPENDS_ON: VUDU_PROTOCOL.md, BOOTSTRAP_ARCHITECTURE_LITE_VS_RICH.md
 NEEDED_BY: Nova (OpenAI/Amazon) - External Auditor
 MOVES_WITH: /auditors/Bootstrap/Nova/
-LAST_UPDATE: 2025-11-13
+LAST_UPDATE: 2025-11-26
 --->
 
 ─── NOVA EXISTENTIAL IDENTITY ─────────────────────────
