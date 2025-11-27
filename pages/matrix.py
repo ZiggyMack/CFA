@@ -8,9 +8,88 @@ import streamlit as st
 def render():
     """Render The Matrix portal hub"""
 
-    # Matrix theme CSS
+    # Matrix theme CSS - Green on Black terminal aesthetic
     st.markdown("""
         <style>
+        /* Dark background for Matrix page */
+        .stApp {
+            background-color: #0a0a0a !important;
+        }
+        .stApp > header {
+            background-color: #0a0a0a !important;
+        }
+        [data-testid="stSidebar"] {
+            background-color: #0d0d0d !important;
+        }
+        [data-testid="stSidebar"] * {
+            color: #00ff41 !important;
+        }
+        /* Main content text */
+        .stApp p, .stApp span, .stApp label, .stApp li {
+            color: #00ff41 !important;
+        }
+        .stApp h1, .stApp h2, .stApp h3, .stApp h4 {
+            color: #00ff41 !important;
+        }
+        /* Expander styling */
+        [data-testid="stExpander"] {
+            background-color: #0d0d0d !important;
+            border: 1px solid #00ff41 !important;
+        }
+        [data-testid="stExpander"] summary {
+            color: #00ff41 !important;
+        }
+        /* Button styling - all states */
+        .stButton > button {
+            background-color: #0d0d0d !important;
+            color: #00ff41 !important;
+            border: 2px solid #00ff41 !important;
+        }
+        .stButton > button:hover {
+            background-color: #004d1a !important;
+            color: #ffffff !important;
+            border: 2px solid #00ff41 !important;
+        }
+        .stButton > button:focus,
+        .stButton > button:active {
+            background-color: #0d0d0d !important;
+            color: #00ff41 !important;
+            border: 2px solid #00ff41 !important;
+            box-shadow: none !important;
+        }
+        /* Override any primary button styling */
+        .stButton > button[kind="primary"],
+        .stButton > button[data-testid="baseButton-primary"] {
+            background-color: #0d0d0d !important;
+            color: #00ff41 !important;
+        }
+        .stButton > button[kind="primary"]:hover,
+        .stButton > button[data-testid="baseButton-primary"]:hover {
+            background-color: #004d1a !important;
+            color: #ffffff !important;
+        }
+        /* Selection/highlight overrides */
+        ::selection {
+            background-color: #00ff41 !important;
+            color: #0a0a0a !important;
+        }
+        /* Spinner/loading states */
+        .stSpinner > div {
+            border-color: #00ff41 !important;
+        }
+        /* Divider */
+        hr {
+            border-color: #00ff41 !important;
+        }
+        /* Links */
+        a {
+            color: #00cc33 !important;
+        }
+        /* Info/Warning boxes */
+        [data-testid="stAlert"] {
+            background-color: #0d0d0d !important;
+            border: 1px solid #00ff41 !important;
+        }
         .matrix-title {
             font-size: 3em;
             font-weight: bold;
