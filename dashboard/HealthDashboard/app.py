@@ -11,9 +11,22 @@ import plotly.express as px
 import plotly.graph_objects as go
 from pathlib import Path
 import sys
+import os
 
-# Add parent directory to path for config import
-sys.path.append(str(Path(__file__).parent.parent))
+# Add dashboard directory to path for config import
+# HealthDashboard is at: dashboard/HealthDashboard/
+# config.py is at: dashboard/config.py
+if '__file__' in globals():
+    # When run by Streamlit, __file__ is set
+    dashboard_dir = str(Path(__file__).parent.parent.resolve())
+else:
+    # Fallback: use current working directory's parent
+    dashboard_dir = str(Path(os.getcwd()).parent.resolve())
+
+if dashboard_dir not in sys.path:
+    sys.path.insert(0, dashboard_dir)
+
+# Now import config from dashboard/config.py
 from config import PATHS, SETTINGS, EXCLUSIONS, validate_paths
 
 # ============================================================================
