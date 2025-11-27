@@ -35,9 +35,14 @@ This directory contains **running applications** — tools with their own packag
 - 3-month health trends and projections
 
 **Run locally:**
+
 ```bash
+# Option 1: From dashboard/ root (recommended)
+cd dashboard
+launch_health.bat
+
+# Option 2: Direct run
 cd dashboard/HealthDashboard
-pip install -r requirements.txt
 streamlit run app.py
 ```
 
@@ -63,12 +68,40 @@ streamlit run app.py
 **Run locally:**
 
 ```bash
+# Option 1: From dashboard/ root (recommended)
+cd dashboard
+launch_smv.bat
+
+# Option 2: Direct run
 cd dashboard/SMV
-npm install
 npm run dev
 ```
 
 **Design docs:** See `/docs/smv/` for specifications, mockups, and architecture
+
+---
+
+## 🚀 Quick Launch (From dashboard/ root)
+
+**Launch Individual Dashboards:**
+
+```bash
+cd dashboard
+launch_health.bat   # Health Dashboard only (Streamlit)
+launch_smv.bat      # SMV Trinity only (React)
+```
+
+**Launch Both Simultaneously:**
+
+```bash
+cd dashboard
+launch_both.bat     # Opens both in separate windows
+```
+
+**URLs:**
+
+- Health Dashboard: <http://localhost:8504>
+- SMV Trinity: <http://localhost:3001>
 
 ---
 
