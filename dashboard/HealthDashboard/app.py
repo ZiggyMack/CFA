@@ -14,20 +14,58 @@ import sys
 import os
 
 # Add dashboard directory to path for config import
-# HealthDashboard is at: dashboard/HealthDashboard/
-# config.py is at: dashboard/config.py
+# This needs to work whether run from:
+# - dashboard/HealthDashboard/ (recommended)
+# - CFA root (also works)
 if '__file__' in globals():
-    # When run by Streamlit, __file__ is set
-    dashboard_dir = str(Path(__file__).parent.parent.resolve())
+    # When run by Streamlit, __file__ is set to full path of app.py
+    # app.py is at: CFA/dashboard/HealthDashboard/app.py
+    # config.py is at: CFA/dashboard/config.py
+    # So we need: Path(__file__).parent.parent = CFA/dashboard/
+    app_file = Path(__file__).resolve()
+    dashboard_dir = app_file.parent.parent  # Go up two levels from app.py
 else:
-    # Fallback: use current working directory's parent
-    dashboard_dir = str(Path(os.getcwd()).parent.resolve())
+    # Fallback: assume we're in HealthDashboard/ directory
+    dashboard_dir = Path(os.getcwd()).parent
 
-if dashboard_dir not in sys.path:
-    sys.path.insert(0, dashboard_dir)
+# Add dashboard directory to Python path
+dashboard_dir_str = str(dashboard_dir)
+if dashboard_dir_str not in sys.path:
+    sys.path.insert(0, dashboard_dir_str)
+
+# Debug: verify config.py exists
+config_file = dashboard_dir / 'config.py'
+if not config_file.exists():
+    st.error(f"""
+    **Config File Not Found**
+
+    Looking for: `{config_file}`
+
+    Current info:
+    - app.py location: `{Path(__file__).resolve() if '__file__' in globals() else 'unknown'}`
+    - Dashboard directory: `{dashboard_dir}`
+    - Config file exists: {config_file.exists()}
+
+    **Try:** `cd dashboard/HealthDashboard && streamlit run app.py`
+    """)
+    st.stop()
 
 # Now import config from dashboard/config.py
-from config import PATHS, SETTINGS, EXCLUSIONS, validate_paths
+try:
+    from config import PATHS, SETTINGS, EXCLUSIONS, validate_paths
+except ModuleNotFoundError as e:
+    st.error(f"""
+    **Import Error**
+
+    Config file exists but import failed.
+
+    - Config file: `{config_file}` (exists: {config_file.exists()})
+    - Dashboard directory: `{dashboard_dir}`
+    - sys.path[0]: `{sys.path[0]}`
+
+    Error: {str(e)}
+    """)
+    st.stop()
 
 # ============================================================================
 # PAGE CONFIG
