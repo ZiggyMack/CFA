@@ -18,13 +18,42 @@ This directory contains **running applications** — tools with their own packag
 
 ## 🎯 Current Applications
 
+### **HealthDashboard - Repository Health Visualizer**
+
+**Location:** [dashboard/HealthDashboard/](HealthDashboard/)
+**Type:** Streamlit dashboard (Python + Plotly)
+**Status:** v5.0 initial implementation
+**Purpose:** Interactive visualization of repository health metrics
+
+**What it does:**
+
+- Overall health score visualization (97/100 gauge)
+- 7-category performance breakdown (Documentation, Links, Living Maps, Processes, Organization, Dependencies, Version Control)
+- README directory matrix with scope metadata (flagship feature)
+- File metrics and distributions
+- Link integrity analysis (698 links, 99.7% working)
+- 3-month health trends and projections
+
+**Run locally:**
+```bash
+cd dashboard/HealthDashboard
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+**Data sources:** `docs/repository/OBSERVATORY/REPO_HEALTH_DASHBOARD.md`, `dashboard/config.py`
+
+---
+
 ### **SMV - Symmetry Matrix Visualizer**
+
 **Location:** [dashboard/SMV/](SMV/)
 **Type:** React prototype (Vite + Recharts)
 **Status:** Phase 1 complete, validated
 **Purpose:** Visualizes auditor alignment, calibration drift, and ethical invariant violations
 
 **What it does:**
+
 - Real-time symmetry health tracking (Claude ↔ Nova ↔ Grok triangle)
 - Timeline view with tick-by-tick auditor positions
 - Calibration drawer showing YAML-based bias adjustments
@@ -32,6 +61,7 @@ This directory contains **running applications** — tools with their own packag
 - Crux detection (convergence failure alerts)
 
 **Run locally:**
+
 ```bash
 cd dashboard/SMV
 npm install
@@ -43,12 +73,6 @@ npm run dev
 ---
 
 ## 🔮 Future Applications (Planned)
-
-**Repository Health Dashboard** (projected)
-- Live metrics from REPO_HEALTH_DASHBOARD.md
-- Dependency graph visualizations
-- Bootstrap efficiency scores
-- Gospel Problem alerts
 
 **Worldview Comparison Studio** (projected)
 - Interactive worldview profile explorer
@@ -161,11 +185,13 @@ dashboard/
 
 ## 📝 Maintenance Notes
 
-**Last Updated:** 2025-11-12
+**Last Updated:** 2025-11-26
 **Maintainer:** Doc Claude (Documentation Orchestration)
-**Status:** Active directory with 1 application (SMV)
+**Status:** Active directory with 2 applications (HealthDashboard, SMV)
 
 **Recent changes:**
+
+- 2025-11-26: Added HealthDashboard (Streamlit-based health visualizer)
 - 2025-11-12: Created dashboard/ at root (moved from docs/UI_SMV/)
 - 2025-11-12: Renamed Dashboard → dashboard (lowercase for consistency)
 - 2025-11-12: Added this README to prevent folder display compression

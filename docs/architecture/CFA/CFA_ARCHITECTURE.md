@@ -412,7 +412,7 @@ peer_reviewed_scores:
 
 **Core Axiom:** "Evidence precedes acceptance"
 
-**File:** [auditors/Bootstrap/BOOTSTRAP_GROK.md](../../auditors/Bootstrap/BOOTSTRAP_GROK.md)
+**File:** [auditors/Bootstrap/Grok/GROK_LITE.md](../../auditors/Bootstrap/Grok/GROK_LITE.md)
 
 **Named Bias:** Favor measurable over meaningful (~0.4 risk of dismissing qualitative)
 
@@ -438,7 +438,7 @@ peer_reviewed_scores:
 
 **Core Axiom:** "Pattern precedes judgment"
 
-**File:** [auditors/Bootstrap/BOOTSTRAP_NOVA.md](../../auditors/Bootstrap/BOOTSTRAP_NOVA.md)
+**File:** [auditors/Bootstrap/Nova/NOVA_LITE.md](../../auditors/Bootstrap/Nova/NOVA_LITE.md)
 
 **Named Bias:** Favor mathematical over functional symmetry (~0.3 risk of forcing false equivalence)
 

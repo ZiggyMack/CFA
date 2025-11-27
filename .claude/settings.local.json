@@ -11,7 +11,15 @@
       "Bash(move /Y:*)",
       "Bash(move /Y \"CFA_v4_0_User_Manual_Final.pdf\" \"docs\\CFA_User_Manual.pdf\")",
       "Bash(git push:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(find:*)",
+      "Bash(for f in \"auditors/Bootstrap/BOOTSTRAP_GROK.md\" \"auditors/Bootstrap/BOOTSTRAP_NOVA.md\" \"auditors/AUDITOR_ASSIGNMENTS.md\" \"auditors/Bootstrap/VUDU_CFA.md\")",
+      "Bash(do echo \"Checking: $f\")",
+      "Bash(test:*)",
+      "Bash(done)",
+      "Bash(for f in \"auditors/Bootstrap/BOOTSTRAP_ARCHITECTURE.md\" \"auditors/Bootstrap/BOOTSTRAP_DOC_CLAUDE.md\")",
+      "Bash(python config.py:*)"
     ],
     "deny": [],
     "ask": []

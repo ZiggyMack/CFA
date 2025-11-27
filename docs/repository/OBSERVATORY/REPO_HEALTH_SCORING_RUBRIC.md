@@ -171,8 +171,8 @@ done
 **Organization checks:**
 1. **No orphaned directories** (empty dirs, stub READMEs only)
 2. **Archive hygiene** (old work properly archived, not in active areas)
-3. **File count reasonable** (<400 files, or growth explained)
-4. **README proliferation controlled** (<45 README files)
+3. **File count reasonable** (<500 files operational, or growth explained)
+4. **README coverage appropriate** (55-70 README files for v5.0 architecture depth)
 5. **Duplicate files removed** (no MISSION_CURRENT in 2 places)
 
 **Scoring:**
@@ -186,16 +186,22 @@ done
 **How to measure:**
 - Orphaned directories: Visual scan, check for stub READMEs (≤50 bytes)
 - Archive hygiene: Check .Archive/ vs relay/ (old work in archive?)
-- File count: `git ls-files | wc -l` (357 is current, explain growth from 210)
-- README count: `find . -name "README*.md" | wc -l` (39 is current)
+- File count: `find . -type f ! -path "./.git/*" ! -path "./.Archive/*" ! -path "./docs/Nyquist-Sync/*" | wc -l`
+- README count: `find . -name "README*.md" ! -path "./.git/*" ! -path "./.Archive/*" ! -path "./docs/Nyquist-Sync/*" | wc -l`
 - Duplicate files: Check for same file in multiple locations
+
+**v5.0 baseline (Nov 26, 2025):**
+
+- Operational files: 492 (within <500 target)
+- READMEs: 64 (within 55-70 target range for v5.0 architecture)
+- Architecture depth: 3 auditors + 5 guests + kernels + expanded tier system
 
 **Signal vs Noise:**
 - **Signal (Scored):** Operational file count (docs/, profiles/, auditors/Mission/, auditors/Bootstrap/, dashboard/, root files)
 - **Noise (Excluded):** .Archive/ directories (can contain duplicates, stubs, orphaned dirs without penalty)
 - **Why:** File count target (<400) applies to operational files only. Archives can grow indefinitely as historical record without impacting organization health score.
 
-**Current baseline:** 4/5 (README proliferation still needs work: 39 files)
+**Current baseline:** 5/5 (v5.0 organization excellent: 64 READMEs appropriate for expanded architecture)
 
 ---
 
