@@ -117,11 +117,11 @@ def render():
             st.session_state.page = 'brute_ledger'
             st.rerun()
 
-    # Showcase button - same size as Manifesto button for symmetry
-    col_spacer3, col_showcase, col_spacer4 = st.columns([1.5, 1, 1.5])
-    with col_showcase:
-        if st.button("🎨 Innovation Showcase", use_container_width=True, key="showcase_main"):
-            st.session_state.page = 'showcase'
+    # Matrix button - Portal to Pan Handler ecosystem
+    col_spacer3, col_matrix, col_spacer4 = st.columns([1.5, 1, 1.5])
+    with col_matrix:
+        if st.button("🌐 The Matrix", use_container_width=True, key="matrix_main"):
+            st.session_state.page = 'matrix'
             st.rerun()
 
     st.markdown("---")
