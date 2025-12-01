@@ -1,0 +1,63 @@
+{
+  "repo_name": "CFA",
+  "repo_id": "cfa-framework",
+  "role": "Epistemic Engineering Framework",
+  "tagline": "All Named, All Priced",
+  "status": "Active",
+  "owner": "Ziggy + Trinity Auditors",
+  "track": "Core Framework",
+
+  "provides": [
+    "Worldview comparison framework (12 frameworks)",
+    "YPA (Yield-Per-Axiom) calculation engine",
+    "Adversarial audit methodology",
+    "Mr. Brute's Ledger (assumption tracking)",
+    "Health Dashboard for repository metrics",
+    "SMV Trinity for auditor symmetry visualization"
+  ],
+
+  "consumes_from": {
+    "nyquist-consciousness": [
+      "Identity Gravity physics (S7-S10)",
+      "Pattern Fidelity Index tools",
+      "Cross-repository persona testing"
+    ]
+  },
+
+  "dashboard": {
+    "main_port": 8503,
+    "health_port": 8504,
+    "smv_port": 3001,
+    "launch_main": "streamlit run app.py",
+    "launch_health": "cd dashboard && launch_health.bat",
+    "launch_smv": "cd dashboard && launch_smv.bat"
+  },
+
+  "matrix_portal": {
+    "enabled": true,
+    "theme": "green-terminal",
+    "location": "pages/matrix.py",
+    "colors": {
+      "background": "#0a0a0a",
+      "text": "#00ff41",
+      "hover_bg": "#004d1a",
+      "hover_text": "#ffffff"
+    }
+  },
+
+  "integration_points": [
+    {
+      "name": "Nyquist Matrix",
+      "type": "bidirectional",
+      "description": "CFA appears in Nyquist's Matrix page, Nyquist appears in CFA's Matrix page"
+    },
+    {
+      "name": "VUDU Fidelity",
+      "type": "planned",
+      "description": "Human validation surveys for CFA worldview assessments"
+    }
+  ],
+
+  "version": "5.0.0",
+  "last_updated": "2025-12-01"
+}
