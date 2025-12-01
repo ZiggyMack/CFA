@@ -1,5 +1,5 @@
 """
-CFA v4.0 - Verbose Manifesto Page
+CFA v5.0 - Verbose Manifesto Page
 Displays the full philosophical covenant
 """
 
@@ -314,7 +314,7 @@ All named. All priced. All audited.
 
     st.markdown("---")
     st.caption('*Maintained by Shaman Claude - The Philosophical Architect*')
-    st.caption('*Version: v4.0.0 | Status: 🟢 ACTIVE | Created: 2025-11-14*')
+    st.caption('*Version: v5.0.0 | Status: 🟢 ACTIVE | Updated: 2025-11-29*')
     st.caption('*"The worldview you can\'t examine is the worldview that examines you."*')
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 """
-CFA v4.0 - User Manual (Beautiful Version)
+CFA v5.0 - User Manual (Beautiful Version)
 Inspired by the original vibrant design
-Updated: 2025-11-13 by Doc Claude (Opus 4.1) for v4.0.0 accuracy
+Updated: 2025-11-29 for v5.0.0
 """
 
 import streamlit as st
@@ -72,7 +72,7 @@ def render():
     # Header with back button
     col1, col2 = st.columns([6, 1])
     with col1:
-        st.markdown("# 📖 CFA v4.0 User Manual")
+        st.markdown("# 📖 CFA v5.0 User Manual")
         st.markdown("*Your guide to epistemic engineering*")
     with col2:
         if st.button("🏠 Home"):
@@ -85,12 +85,12 @@ def render():
     st.markdown("""
         <div class="info-card">
             <h2>📥 Complete Manual (PDF)</h2>
-            <p style="font-size: 1.1rem;">Access the full CFA v4.0 User Manual with all formulas, examples, and calibration history.</p>
+            <p style="font-size: 1.1rem;">Access the full CFA v5.0 User Manual with all formulas, examples, and calibration history.</p>
             <p><a href="https://github.com/ZiggyMack/CFA-2.0/raw/main/docs/CFA_v4_Manual.pdf" 
                style="color: white; text-decoration: underline; font-size: 1.2rem;">
                → Download PDF Manual
             </a></p>
-            <p style="font-size: 0.9rem; margin-top: 1rem;"><em>Note: PDF reflects complete v4.0.0 release with all features • Repository Health: 98/100 (A+)</em></p>
+            <p style="font-size: 0.9rem; margin-top: 1rem;"><em>Note: PDF update pending for v5.0.0 • Repository Health: 98/100 (A+)</em></p>
         </div>
     """, unsafe_allow_html=True)
     
@@ -99,7 +99,7 @@ def render():
     # Tabs for navigation
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
         "🚀 Quick Start",
-        "🌍 v4.0 Features (NEW!)",
+        "🌍 Core Features",
         "⚖️ The Six Levers",
         "🎛️ Toggles Explained", 
         "📊 Reading Results",
@@ -127,7 +127,7 @@ def render():
         - Every assumption is disclosed
         - Every presupposition is counted  
         - Every bias is made toggleable
-        - Every outcome is earned through adversarial audit (v4.0)
+        - Every outcome is earned through adversarial audit
         
         **Repository Health**: 98/100 (A+) - Maintained via Living Map System
         """)
@@ -144,7 +144,7 @@ def render():
         
         **Higher YPA** = More efficient framework (more explanatory power per assumption)
         
-        **v4.0 Note**: YPA now has both self-reported and peer-reviewed scores after adversarial audit.
+        **Note**: YPA now has both self-reported and peer-reviewed scores after adversarial audit.
         """)
         
         st.markdown("### 5-Minute Workflow")
@@ -164,7 +164,7 @@ def render():
         st.markdown("""
             <div class="lever-card">
             <h4>Step 1: Choose Your Worldview</h4>
-            <p>v4.0 offers 12 worldviews (expanded from 2):</p>
+            <p>CFA offers 12 worldviews:</p>
             <ul>
                 <li><b>Major Religions:</b> Classical Theism, Islam, Judaism, Mormonism, Hinduism, Buddhism</li>
                 <li><b>Naturalistic:</b> Methodological Naturalism, Process Theology</li>
@@ -215,14 +215,14 @@ def render():
         """, unsafe_allow_html=True)
     
     # ========================================================================
-    # TAB 2: v4.0 FEATURES (NEW!) - Updated with Living Maps and Health Scoring
+    # TAB 2: Core Features - Updated with Living Maps and Health Scoring
     # ========================================================================
     with tab2:
-        st.markdown("## 🌍 v4.0 Features - Philosophical Laboratory")
-    
+        st.markdown("## 🌍 Core Features - Philosophical Laboratory")
+
         st.markdown("""
             <div class="highlight-box">
-            ✨ NEW in v4.0: CFA expands from technical framework to comprehensive philosophical laboratory
+            ✨ CFA: A comprehensive philosophical laboratory for epistemic engineering
             </div>
         """, unsafe_allow_html=True)
         
@@ -443,7 +443,7 @@ profiles/worldviews/
     
         st.markdown("""
             <div class="tip-box">
-            💡 <b>v4.0 Philosophy:</b> CFA now treats worldviews as <i>living philosophical positions</i> worthy of genuine intellectual charity,
+            💡 <b>CFA Philosophy:</b> CFA treats worldviews as <i>living philosophical positions</i> worthy of genuine intellectual charity,
             not strawmen to dismiss. Adversarial collaboration + named impasses + Living Maps = epistemic honesty at scale.
             </div>
         """, unsafe_allow_html=True)
@@ -492,7 +492,7 @@ python ypa_validator.py --compare CT.yaml MdN.yaml --preset skeptic
             <p><b>What it measures:</b> How many unprovable assumptions does this framework require?</p>
             <p><b>Scoring:</b> Count axioms + debts. Lower = more efficient</p>
             <p><b>Key insight:</b> Every framework starts somewhere. The question is: are you honest about where?</p>
-            <p><b>v4.0:</b> Now subject to adversarial audit - auditors may disagree on what counts as "brute"</p>
+            <p><b>Note:</b> Now subject to adversarial audit - auditors may disagree on what counts as "brute"</p>
             <p><i>"To name your brute is to pay your fee"</i></p>
             </div>
         """, unsafe_allow_html=True)
@@ -635,7 +635,7 @@ python ypa_validator.py --compare CT.yaml MdN.yaml --preset skeptic
                 <li>Certainty-friendly approach</li>
             </ul>
             
-            <p><b>Impact:</b> Usually small (±0.1 YPA) - many frameworks admit limits in v4.0</p>
+            <p><b>Impact:</b> Usually small (±0.1 YPA) - many frameworks admit limits</p>
             </div>
         """, unsafe_allow_html=True)
         
@@ -661,7 +661,7 @@ python ypa_validator.py --compare CT.yaml MdN.yaml --preset skeptic
             
             <p><b>Impact:</b> Penalizes frameworks with many unresolved questions (varies by worldview)</p>
             
-            <p><b>v4.0 Note:</b> This toggle interacts with Crux Architecture - unresolved questions may become named Crux Points</p>
+            <p><b>Note:</b> This toggle interacts with Crux Architecture - unresolved questions may become named Crux Points</p>
             </div>
         """, unsafe_allow_html=True)
     
@@ -683,7 +683,7 @@ python ypa_validator.py --compare CT.yaml MdN.yaml --preset skeptic
             </ul>
             <p><b>Why?</b> Different contexts demand different priorities. See how frameworks perform under various pressures.</p>
             
-            <p><b>v4.0 Addition:</b> Each scenario now shows:</p>
+            <p><b>Each scenario shows:</b></p>
             <ul>
                 <li><b>Self-Reported Score:</b> What the worldview claims</li>
                 <li><b>Peer-Reviewed Score:</b> What survives 98% adversarial convergence</li>
@@ -727,7 +727,7 @@ python ypa_validator.py --compare CT.yaml MdN.yaml --preset skeptic
             <div class="tip-box">
             💡 <b>Key Insight:</b> Don't just look at who "wins" - look at the <i>pattern</i> across scenarios.
             A framework that dominates in all 3 scenarios is universally strong. One that only wins in Existential
-            reveals its niche. v4.0's peer-review process ensures these patterns are adversarially validated.
+            reveals its niche. The peer-review process ensures these patterns are adversarially validated.
             </div>
         """, unsafe_allow_html=True)
     
@@ -739,7 +739,7 @@ python ypa_validator.py --compare CT.yaml MdN.yaml --preset skeptic
         
         st.markdown("""
             <div class="highlight-box">
-            🎯 How to get the most out of CFA v4.0
+            🎯 How to get the most out of CFA
             </div>
         """, unsafe_allow_html=True)
         
@@ -782,7 +782,7 @@ python ypa_validator.py --compare CT.yaml MdN.yaml --preset skeptic
         st.markdown("### 4. Check the Brute Ledger")
         st.write("""
         Visit the **🔍 Brute Ledger** page to see:
-        - Full axiom/debt lists for all 12 worldviews (v4.0)
+        - Full axiom/debt lists for all 12 worldviews
         - **NEW: "🏛️ The Framework" section** - CFA audits itself!
         - Why each framework requires its starting assumptions
         - Audit notes from Claude + Grok + Nova perspectives
@@ -803,7 +803,7 @@ python ypa_validator.py --compare CT.yaml MdN.yaml --preset skeptic
         - Your configuration
         - Your lever scores
         - The calculated YPA Trinity
-        - Both self-reported and peer-reviewed scores (v4.0)
+        - Both self-reported and peer-reviewed scores
         
         Share your runs with others! Compare interpretations!
         """)
@@ -811,7 +811,7 @@ python ypa_validator.py --compare CT.yaml MdN.yaml --preset skeptic
         st.markdown("### 6. Explore Crux Points")
         st.markdown("""
             <div class="info-card">
-            <h3>v4.0: Named Impasses are Features</h3>
+            <h3>Named Impasses are Features</h3>
             <p>When auditors can't reach 98% convergence, CFA declares a <b>Crux Point</b>.</p>
             <p>These mark the boundaries of philosophical agreement.</p>
             <p>You decide (via Crux Handling Lever) whether to:</p>
@@ -826,7 +826,7 @@ python ypa_validator.py --compare CT.yaml MdN.yaml --preset skeptic
         st.markdown("### 7. Check Repository Health")
         st.markdown("""
             <div class="tip-box">
-            <b>NEW in v4.0:</b> Repository Health Scoring
+            <b>Repository Health Scoring</b>
             
             CFA maintains a 98/100 (A+) health score across 7 categories:
             - Documentation Coverage
@@ -854,7 +854,7 @@ python ypa_validator.py --compare CT.yaml MdN.yaml --preset skeptic
             <p>Every framework starts with unprovable assumptions.</p>
             <p>The question isn't whether you have them.</p>
             <p>The question is whether you're honest about them.</p>
-            <p><b>v4.0:</b> And whether they survive adversarial audit!</p>
+            <p>And whether they survive adversarial audit!</p>
             </div>
         """, unsafe_allow_html=True)
         
@@ -878,7 +878,7 @@ python ypa_validator.py --compare CT.yaml MdN.yaml --preset skeptic
         st.markdown("### 10. Use Validation Tools")
         st.markdown("""
             <div class="tip-box">
-            <b>NEW v4.0 Tools for Verification:</b>
+            <b>Tools for Verification:</b>
             
             <b>YPA Validator:</b> Standalone calculator for third-party verification
             - Available at: docs/Validation/ypa_validator.py
@@ -909,7 +909,7 @@ python ypa_validator.py --compare CT.yaml MdN.yaml --preset skeptic
         - **Estate Tour**: Explore with Shaman Claude as your guide
         - **Console Tooltips**: Hover over any toggle or lever for inline help
         
-        **v4.0 Architecture Note**: Console reads canonical .yaml files as primary source. 
+        **Architecture Note**: Console reads canonical .yaml files as primary source.
         See profiles/worldviews/ for dual-file structure (.yaml for scores, .md for documentation).
         """)
     
@@ -919,7 +919,7 @@ python ypa_validator.py --compare CT.yaml MdN.yaml --preset skeptic
     st.markdown("---")
     st.markdown("""
         <div style="text-align: center; color: #666; padding: 1rem;">
-        <p>CFA v4.0.0 | "All Named, All Priced → All Seen, All Passed" | November 2025</p>
+        <p>CFA v5.0.0 | "All Named, All Priced → All Seen, All Passed" | November 2025</p>
         <p>Repository Health: 98/100 (A+) | 12 Worldviews | 7 Living Maps | 3 AI Auditors</p>
         <p><i>Where ideas reveal their true weight, and honesty becomes quantifiable through adversarial audit.</i></p>
         </div>

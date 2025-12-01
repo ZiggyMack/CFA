@@ -2,10 +2,10 @@
 CFA Profile Loader - Load worldview profiles from canonical YAML files
 
 This module provides utilities to load worldview profiles from the profiles/worldviews/
-directory. As of v4.0, YPA scores are loaded from canonical .yaml files (Gospel Problem
+directory. YPA scores are loaded from canonical .yaml files (Gospel Problem
 protection - single source of truth), while .md files provide human-readable documentation.
 
-Architecture (v4.0 Dual-File System):
+Architecture (Dual-File System):
 - .yaml files: Canonical machine-readable scores (axioms, debts, levers, YPA)
 - .md files: Human-readable documentation (hyperlinks, sources, philosophy)
 - Console reads .yaml for calculations, .md for context/display
@@ -143,9 +143,9 @@ def get_ypa_data(worldview_name: str) -> Dict[str, Any]:
     """
     Get YPA data from canonical .yaml file (Gospel Problem protection)
 
-    Architecture Change (v4.0): Now reads from canonical .yaml files instead of
-    .md YAML blocks. This ensures single source of truth for scores - .yaml files
-    are the master, .md files are documentation only.
+    Architecture: Reads from canonical .yaml files instead of .md YAML blocks.
+    This ensures single source of truth for scores - .yaml files are the master,
+    .md files are documentation only.
 
     Args:
         worldview_name: Name of worldview (e.g., "Classical Theism", "ct")
@@ -168,7 +168,7 @@ def get_ypa_data(worldview_name: str) -> Dict[str, Any]:
     yaml_filename = f"{_normalize_worldview_name(worldview_name)}.yaml"
     yaml_filepath = PROFILES_DIR / yaml_filename
 
-    # PRIMARY: Load from canonical .yaml file (v4.0 architecture)
+    # PRIMARY: Load from canonical .yaml file
     if yaml_filepath.exists():
         try:
             with open(yaml_filepath, 'r', encoding='utf-8') as f:

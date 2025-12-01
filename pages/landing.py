@@ -1,5 +1,5 @@
 """
-CFA v4.0 - Landing Page Component (Updated)
+CFA v5.0 - Landing Page Component (Updated)
 With navigation at top, minimal spacing, reordered content
 """
 
@@ -98,7 +98,7 @@ def render():
             st.rerun()
     
     with nav_col3:
-        if st.button("ℹ️ ABOUT v4.0", use_container_width=True):
+        if st.button("ℹ️ ABOUT v5.0", use_container_width=True):
             st.session_state.page = 'about'
             st.rerun()
     
@@ -277,5 +277,5 @@ def render():
     # FOOTER - Every number earned under "All Named, All Priced"
     # ========================================================================
     st.markdown("---")
-    st.caption("CFA v4.0 | Epistemic Engineering | October 2025")
+    st.caption("CFA v5.0 | Epistemic Engineering | November 2025")
     st.caption("*Every number you see was earned under the rule: All Named, All Priced.*")

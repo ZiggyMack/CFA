@@ -1,5 +1,5 @@
 """
-CFA v4.0 - Mr. Brute's Ledger Page
+CFA v5.0 - Mr. Brute's Ledger Page
 "To name your brute is to pay your fee"
 Comprehensive view of axioms and debts for all frameworks
 
@@ -593,7 +593,7 @@ def render():
 
                 with bfi_col3:
                     st.metric("BFI", "?", help="Axioms + Debts (TBD by Trinity)")
-                    st.caption("*Awaiting v4.0 Trinity calibration*")
+                    st.caption("*Awaiting v5.0 Trinity calibration*")
                     st.markdown("")
                     st.info("**Coming Soon:** Nova and Grok will audit Claude's auditing axioms!")
 
@@ -705,7 +705,7 @@ def render():
 
                 with bfi_col3:
                     st.metric("BFI", "?", help="Axioms + Debts (TBD by Trinity)")
-                    st.caption("*Awaiting v4.0 Trinity calibration*")
+                    st.caption("*Awaiting v5.0 Trinity calibration*")
                     st.markdown("")
                     st.info("**Coming Soon:** Nova and Claude will audit Grok's auditing axioms!")
 
@@ -818,7 +818,7 @@ def render():
 
                 with bfi_col3:
                     st.metric("BFI", "?", help="Axioms + Debts (TBD by Trinity)")
-                    st.caption("*Awaiting v4.0 Trinity calibration*")
+                    st.caption("*Awaiting v5.0 Trinity calibration*")
                     st.markdown("")
                     st.info("**Coming Soon:** Claude and Grok will audit Nova's auditing axioms!")
 
@@ -1505,4 +1505,4 @@ def render():
     """, unsafe_allow_html=True)
     
     st.markdown("---")
-    st.caption("Mr. Brute's Ledger | CFA v4.0 | 'All Named, All Priced'")
+    st.caption("Mr. Brute's Ledger | CFA v5.0 | 'All Named, All Priced'")

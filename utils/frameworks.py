@@ -1,5 +1,5 @@
 """
-CFA v4.0 - Default Framework Configurations
+CFA v5.0 - Default Framework Configurations
 Pre-configured frameworks ready for analysis
 """
 

@@ -1,5 +1,5 @@
 """
-CFA v4.0 - Visualization Utilities
+CFA v5.0 - Visualization Utilities
 All chart creation functions
 """
 

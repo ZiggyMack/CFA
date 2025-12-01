@@ -1,5 +1,5 @@
 """
-CFA v4.0 - Console (FIXED VERSION)
+CFA v5.0 - Console (FIXED VERSION)
 - Per-framework preset buttons ABOVE sliders
 - Global preset buttons removed (they break when below)
 - Sidebar simplified (just Import at bottom)
@@ -213,7 +213,7 @@ def render():
     st.markdown('<div class="sticky-header">', unsafe_allow_html=True)
     col1, col2 = st.columns([6, 1])
     with col1:
-        st.markdown('<p style="font-size:2.5rem;font-weight:bold;color:#1f77b4;">⚖️ CFA v4.0 Console</p>', unsafe_allow_html=True)
+        st.markdown('<p style="font-size:2.5rem;font-weight:bold;color:#1f77b4;">⚖️ CFA v5.0 Console</p>', unsafe_allow_html=True)
     with col2:
         if st.button("🏠 Home"):
             st.session_state.page = 'landing'
@@ -227,7 +227,7 @@ def render():
     st.sidebar.header("🎛️ Configuration")
 
     # deps: preset_modes
-    # NEW v4.0: Preset Mode Spectrum (MOVED TO TOP - user should select spectrum FIRST)
+    # Preset Mode Spectrum (MOVED TO TOP - user should select spectrum FIRST)
     with st.sidebar.expander("🎚️ Preset Mode Spectrum", expanded=False):
         st.markdown("**Quick Configuration Profiles:**")
         st.caption("⚠️ **IMPORTANT:** Select your spectrum mode FIRST, then load frameworks below!")
@@ -896,7 +896,7 @@ def render():
         st.caption("**Pro Tip:** Run Diplomat Mode and check Symmetry tab—if deltas are large even in 'balanced' mode, the frameworks themselves may have legitimately different sensitivities.")
     
     # deps: preset_modes
-    # NEW v4.0: EPISTEMIC QUIZ SYSTEM
+    # EPISTEMIC QUIZ SYSTEM
     st.markdown("---")
     with st.expander("🧠 Epistemic Quiz - Find Your Starting Point", expanded=False):
         st.markdown("**Answer 5 questions to auto-detect your bias profile**")

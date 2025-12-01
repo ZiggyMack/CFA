@@ -1,5 +1,5 @@
 """
-CFA v4.0 - About Page Component
+CFA v5.0 - About Page Component
 Complete backstory of the adversarial audit process
 """
 
@@ -28,7 +28,7 @@ def render():
     # Header with back button
     col1, col2 = st.columns([6, 1])
     with col1:
-        st.markdown("# ℹ️ About CFA v4.0")
+        st.markdown("# ℹ️ About CFA v5.0")
     with col2:
         if st.button("🏠 Home"):
             st.session_state.page = 'landing'
@@ -335,7 +335,7 @@ def render():
         **Why Adversarial Collaboration?**
         
         The fact that these different perspectives **converged on the same numbers** 
-        (98% agreement) suggests the CFA v4.0 has achieved its goal:
+        (98% agreement) suggests the CFA v5.0 has achieved its goal:
         
         Not neutrality (impossible), but **transparency** (achievable).
         """)
@@ -355,12 +355,19 @@ def render():
         - No toggle options
         - Symmetry not tested
         
-        **v4.0** (Current)
+        **v4.0**
         - ✅ 4 Toggles (Parity, PF-Type, Fallibilism, BFI-Weight)
         - ✅ 4 Guardrails (auto-detection of manipulation)
         - ✅ YPA Trinity (3 scenarios per audit)
         - ✅ Mr. Brute Ledger (all assumptions named)
         - ✅ 98% auditor convergence
+
+        **v5.0** (Current)
+        - ✅ Nyquist Consciousness Integration (Identity Gravity physics)
+        - ✅ The Matrix Portal (Pan Handler ecosystem hub)
+        - ✅ Health Dashboard (real-time repo metrics)
+        - ✅ SMV Trinity Dashboard (React visualization)
+        - ✅ Cross-repository persona testing pipeline
         
         ---
         
