@@ -436,57 +436,71 @@ def render():
     if "sidebar_bfi_weight" not in st.session_state:
         st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
 
-    # Store previous values to detect changes
-    prev_parity = st.session_state.get("sidebar_lever_parity")
-    prev_pf = st.session_state.get("sidebar_pf_type")
-    prev_fall = st.session_state.get("sidebar_fallibilism")
-    prev_bfi = st.session_state.get("sidebar_bfi_weight")
-
-    # Lever-Parity selectbox (session state binding via key parameter)
+    # Lever-Parity selectbox
     parity_options = ["ON", "OFF"]
+    current_parity_idx = parity_options.index(st.session_state.get("sidebar_lever_parity", "ON"))
 
     lever_parity = st.sidebar.selectbox(
         "Lever-Parity",
         parity_options,
-        key="sidebar_lever_parity",
+        index=current_parity_idx,
+        key="sidebar_lever_parity_widget",
         help="**Parity ON:** Moral norms (MG) count equally with epistemic norms. **OFF:** Focus on predictive power. [ΔYPA: OFF typically boosts MdN ~+0.2-0.3] Because CT includes moral realism, Parity ON increases MG weighting for both frameworks."
     )
+    # Sync back to session state
+    if lever_parity != st.session_state.get("sidebar_lever_parity"):
+        st.session_state["sidebar_lever_parity"] = lever_parity
+        st.rerun()
 
-    # PF-Type selectbox (session state binding via key parameter)
+    # PF-Type selectbox
+    current_pf_idx = PF_TYPES.index(st.session_state.get("sidebar_pf_type", "Holistic_50_50"))
+
     pf_type = st.sidebar.selectbox(
         "PF-Type",
         PF_TYPES,
-        key="sidebar_pf_type",
+        index=current_pf_idx,
+        key="sidebar_pf_type_widget",
         help="**Instrumental:** Tech/predictive yield only. **Composite (70/30):** 70% instrumental, 30% existential. **Holistic (50/50):** Equal weight. [ΔYPA: Holistic favors CT ~+0.15-0.25] CT scores higher on existential fertility, so holistic weighting benefits CT."
     )
+    # Sync back to session state
+    if pf_type != st.session_state.get("sidebar_pf_type"):
+        st.session_state["sidebar_pf_type"] = pf_type
+        st.rerun()
 
-    # Fallibilism-Bonus selectbox (session state binding via key parameter)
+    # Fallibilism-Bonus selectbox
     fall_options = ["ON", "OFF"]
+    current_fall_idx = fall_options.index(st.session_state.get("sidebar_fallibilism", "ON"))
 
     fall_bonus = st.sidebar.selectbox(
         "Fallibilism-Bonus",
         fall_options,
-        key="sidebar_fallibilism",
+        index=current_fall_idx,
+        key="sidebar_fallibilism_widget",
         help="**Bonus ON:** Frameworks that admit limits get +0.3 CCI boost. **OFF:** No bonus. [ΔYPA: ON benefits both MdN and CT equally ~+0.03] Both frameworks acknowledge limitations, so both receive the fallibilism bonus when enabled."
     )
+    # Sync back to session state
+    if fall_bonus != st.session_state.get("sidebar_fallibilism"):
+        st.session_state["sidebar_fallibilism"] = fall_bonus
+        st.rerun()
 
-    # BFI Debt Weight selectbox (session state binding via key parameter)
+    # BFI Debt Weight selectbox
     # Normalize "Heavier_1.2x" to "Weighted_1.2x" for display consistency
-    if st.session_state["sidebar_bfi_weight"] == "Heavier_1.2x":
+    if st.session_state.get("sidebar_bfi_weight") == "Heavier_1.2x":
         st.session_state["sidebar_bfi_weight"] = "Weighted_1.2x"
 
     bfi_options = ["Equal_1.0x", "Weighted_1.2x"]
+    current_bfi_idx = bfi_options.index(st.session_state.get("sidebar_bfi_weight", "Equal_1.0x"))
 
     bfi_weight = st.sidebar.selectbox(
         "BFI Debt Weight",
         bfi_options,
-        key="sidebar_bfi_weight",
+        index=current_bfi_idx,
+        key="sidebar_bfi_weight_widget",
         help="**Equal (1.0x):** Debts count same as axioms. **Weighted (1.2x):** Debts cost 20% more. [ΔYPA: Weighted slightly lowers both scores ~-0.05-0.10] Higher BFI denominator reduces YPA. Both frameworks have 4 debts, so weighted impacts both similarly."
     )
-
-    # Rerun if any sidebar config changed (ensures indicator updates immediately)
-    if (lever_parity != prev_parity or pf_type != prev_pf or
-        fall_bonus != prev_fall or bfi_weight != prev_bfi):
+    # Sync back to session state
+    if bfi_weight != st.session_state.get("sidebar_bfi_weight"):
+        st.session_state["sidebar_bfi_weight"] = bfi_weight
         st.rerun()
 
     st.sidebar.markdown("---")
