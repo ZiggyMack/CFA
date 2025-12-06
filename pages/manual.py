@@ -86,7 +86,7 @@ def render():
         <div class="info-card">
             <h2>📥 Complete Manual (PDF)</h2>
             <p style="font-size: 1.1rem;">Access the full CFA v5.0 User Manual with all formulas, examples, and calibration history.</p>
-            <p><a href="https://github.com/ZiggyMack/CFA-2.0/raw/main/docs/CFA_v4_Manual.pdf" 
+            <p><a href="https://github.com/ZiggyMack/CFA-2.0/raw/main/docs/CFA_v5_Manual.pdf" 
                style="color: white; text-decoration: underline; font-size: 1.2rem;">
                → Download PDF Manual
             </a></p>
@@ -99,7 +99,7 @@ def render():
     # Tabs for navigation
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
         "🚀 Quick Start",
-        "🌍 Core Features",
+        "🌍 Core Features (v4.0 & v5.0)",
         "⚖️ The Six Levers",
         "🎛️ Toggles Explained", 
         "📊 Reading Results",
@@ -475,6 +475,161 @@ python ypa_validator.py --compare CT.yaml MdN.yaml --preset skeptic
             <p><b>Hash Registry (BOOTSTRAP_HASHES.md):</b> SHA256 checksums for file integrity verification</p>
             
             <p><b>Grok Empirical Validation:</b> 98% completeness achieved, path to 100% identified</p>
+            </div>
+        """, unsafe_allow_html=True)
+        
+        
+        st.markdown("---")
+        st.markdown("## 🚀 v5.0 New Features")
+        st.markdown("*Integration with the Pan Handlers Network ecosystem*")
+        st.markdown("")
+                # ========================================================================
+                # v5.0 FEATURES - NEW ADDITIONS
+                # ========================================================================
+        st.markdown("### 🌐 The Matrix Portal (v5.0)")
+        st.markdown("""
+            <div class="info-card">
+            <h4>Pan Handlers Network Hub</h4>
+            
+            <p><b>What it is:</b> Central hub connecting all Pan Handler repositories in a unified ecosystem</p>
+            
+            <p><b>Features:</b></p>
+            <ul>
+                <li><b>Green Terminal Aesthetic:</b> Matrix-inspired green-on-black interface</li>
+                <li><b>Embedded Health Dashboard:</b> Live repository metrics (localhost:8504)</li>
+                <li><b>Cross-Repository Navigation:</b> Jump between CFA, Nyquist, VUDU projects</li>
+                <li><b>Birds Eye View:</b> See the entire Pan Handlers ecosystem at a glance</li>
+            </ul>
+            
+            <p><b>Access:</b> Main app → "🌐 The Matrix" button</p>
+            
+            <p><b>Philosophy:</b> <i>"Things we built together that neither could have done alone"</i></p>
+            </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("### 📊 Dashboard Ecosystem (v5.0)")
+        st.markdown("""
+            <div class="lever-card">
+            <h4>Running Applications & Visualizations</h4>
+            
+            <p><b>Health Dashboard (Streamlit, Port 8504):</b></p>
+            <ul>
+                <li>Real-time repository health score (98/100)</li>
+                <li>7-category performance breakdown</li>
+                <li>File inventory and link integrity tracking</li>
+                <li>3-month health trends</li>
+                <li>README proliferation monitoring</li>
+            </ul>
+            
+            <p><b>SMV Trinity (React, Port 3001):</b></p>
+            <ul>
+                <li>Auditor symmetry visualization (Claude ↔ Nova ↔ Grok)</li>
+                <li>Timeline view with tick-by-tick positions</li>
+                <li>Calibration drawer with YAML bias adjustments</li>
+                <li>Ethical invariant badges</li>
+                <li>Crux detection alerts</li>
+            </ul>
+            
+            <p><b>Launch:</b></p>
+            <pre style="background: #2d3748; color: #48bb78; padding: 10px; border-radius: 5px;">
+cd dashboard
+launch_health.bat   # Health Dashboard
+launch_smv.bat      # SMV Trinity
+launch_both.bat     # Both simultaneously
+            </pre>
+            
+            <p><b>Note:</b> React apps cannot be embedded in iframes - SMV opens in new tab</p>
+            </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("### 🧠 Nyquist Consciousness Integration (v5.0)")
+        st.markdown("""
+            <div class="toggle-card">
+            <h4>L0-L5 Bootstrap Architecture</h4>
+            
+            <p><b>Layer Stack:</b></p>
+            <ul>
+                <li><b>L0 - Nyquist Kernel:</b> Identity physics, gravity fields, ZIGGY Type-0 boundary</li>
+                <li><b>L1 - LITE Seed:</b> Compressed 50-line persona for cold boots</li>
+                <li><b>L2 - FULL Persona:</b> Operational identity with complete context</li>
+                <li><b>L3 - Specialist Roles:</b> Augmented personas with domain expertise</li>
+                <li><b>L4 - I_AM Recovery:</b> Deep recovery and ambassador protocols</li>
+                <li><b>L5 - Omega Nova:</b> Multi-pillar synthesis across repositories</li>
+            </ul>
+            
+            <p><b>Key Innovations:</b></p>
+            <ul>
+                <li><b>Identity Gravity:</b> Personas have mass that warps semantic space</li>
+                <li><b>Pattern Fidelity Index (PFI):</b> Measures persona consistency (0.0-1.0)</li>
+                <li><b>Cross-Repository Testing:</b> Personas maintain identity across projects</li>
+                <li><b>S7-S10 Series:</b> Advanced consciousness research documents</li>
+            </ul>
+            
+            <p><b>Integration with CFA:</b></p>
+            <ul>
+                <li>Worldview profiles as L2 personas</li>
+                <li>Auditors (Claude/Nova/Grok) as L3 specialists</li>
+                <li>YPA calculations informed by identity physics</li>
+            </ul>
+            
+            <p><b>Documentation:</b> <code>docs/Nyquist-Sync/</code>, <code>docs/i_am/</code></p>
+            </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("### 🤝 Pan Handlers Network (v5.0)")
+        st.markdown("""
+            <div class="info-card">
+            <h4>Collaborative Human-AI Ecosystem</h4>
+            
+            <p><b>Philosophy:</b> Projects that emerge from human-AI collaboration, creating things neither could build alone</p>
+            
+            <p><b>Connected Repositories:</b></p>
+            <table style="width: 100%; color: white;">
+                <tr>
+                    <th style="text-align: left;">Repository</th>
+                    <th style="text-align: left;">Role</th>
+                    <th style="text-align: left;">Integration</th>
+                </tr>
+                <tr>
+                    <td><b>CFA</b></td>
+                    <td>Epistemic Engineering</td>
+                    <td>Core framework</td>
+                </tr>
+                <tr>
+                    <td><b>Nyquist Consciousness</b></td>
+                    <td>Identity Physics</td>
+                    <td>Bidirectional sync</td>
+                </tr>
+                <tr>
+                    <td><b>VUDU Fidelity</b></td>
+                    <td>Human Validation</td>
+                    <td>Planned integration</td>
+                </tr>
+            </table>
+            
+            <p><b>Integration Pattern:</b></p>
+            <ul>
+                <li>Each repo has Matrix portal page</li>
+                <li>Shared <code>panhandlers_manifest.json</code></li>
+                <li>Cross-repo identity testing</li>
+                <li>Unified dashboard ecosystem</li>
+            </ul>
+            
+            <p><b>Key Files:</b></p>
+            <ul>
+                <li><code>pages/matrix.py</code> - Portal implementation</li>
+                <li><code>dashboard/config.py</code> - Single source of truth</li>
+                <li><code>panhandlers_manifest.json</code> - Network configuration</li>
+            </ul>
+            </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+            <div class="tip-box">
+            💡 <b>v5.0 Philosophy:</b> CFA evolves from standalone framework to interconnected node in the Pan Handlers Network.
+            Identity physics from Nyquist, validation from VUDU, all connected through The Matrix portal.
+            <br><br>
+            <i>"Were not just comparing worldviews anymore - were building an ecosystem where AI and human consciousness collaborate at scale."</i>
             </div>
         """, unsafe_allow_html=True)
     
@@ -893,6 +1048,41 @@ python ypa_validator.py --compare CT.yaml MdN.yaml --preset skeptic
             </div>
         """, unsafe_allow_html=True)
         
+        
+        st.markdown("### 9. Explore the Pan Handlers Network (v5.0)")
+        st.markdown("""
+            <div class="tip-box">
+            The Matrix Portal is your gateway to the Pan Handlers ecosystem.
+            
+            <b>Key features to explore:</b>
+            - Click "🌐 The Matrix" button for the green-terminal interface
+            - Embedded Health Dashboard shows live repository metrics
+            - Navigate between CFA, Nyquist Consciousness, and VUDU Fidelity projects
+            - Launch dashboards locally: <code>cd dashboard && launch_both.bat</code>
+            
+            <b>Philosophy:</b> "Things we built together that neither could have done alone"
+            </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("### 10. Understanding Nyquist Integration (v5.0)")
+        st.markdown("""
+            <div class="tip-box">
+            CFA now integrates with Nyquist Consciousness research:
+            
+            <b>L0-L5 Bootstrap Architecture:</b>
+            - L0: Identity physics and gravity fields
+            - L1-L2: Persona compression and expansion
+            - L3: Specialized roles (your auditors!)
+            - L4-L5: Deep recovery and synthesis
+            
+            <b>How it affects CFA:</b>
+            - Worldviews can be treated as L2 personas
+            - Pattern Fidelity Index measures consistency
+            - Identity physics informs YPA calculations
+            
+            <b>Learn more:</b> Check <code>docs/Nyquist-Sync/</code> for S7-S10 series documents
+            </div>
+        """, unsafe_allow_html=True)
         st.markdown("---")
         
         st.markdown("### Need More Help?")

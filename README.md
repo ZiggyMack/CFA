@@ -36,7 +36,7 @@ cfa_app/
 │   ├── __init__.py
 │   ├── landing.py              # Landing page with manifesto
 │   ├── console.py              # Main console (guardrails, presets, quiz)
-│   ├── manual.py               # v4.0 user manual (updated by Opus 4.1)
+│   ├── manual.py               # v5.0 user manual (updated by Dr. Opus)
 │   ├── about.py                # Complete audit story (Level 0-5)
 │   └── brute_ledger.py         # Axiom/debt viewer + custom framework builder
 │
@@ -50,7 +50,7 @@ cfa_app/
 │   └── README.md
 │
 ├── docs/                       # Documentation & analysis
-│   ├── CFA_v4_Manual.pdf       # PDF version of user manual
+│   ├── CFA_v5_0_User_Manual.pdf # PDF version of user manual
 │   ├── README.md               # Documentation navigation
 │   ├── SOURCE_OF_TRUTH.md      # Living Map system overview
 │   ├── WAYFINDING_GUIDE.md     # Repository navigation guide

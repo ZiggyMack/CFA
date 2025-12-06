@@ -85,7 +85,7 @@ This will open the dashboard in your default browser at `http://localhost:8501`
 ### 6. Trends
 - 3-month health score trend (Sep → Oct → Nov)
 - Improvement rate analysis
-- Projection to v4.0 target (98/100)
+- Projection to v5.0 target (98/100)
 - Recommendations for next improvements
 
 ---
