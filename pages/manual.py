@@ -86,11 +86,11 @@ def render():
         <div class="info-card">
             <h2>📥 Complete Manual (PDF)</h2>
             <p style="font-size: 1.1rem;">Access the full CFA v5.0 User Manual with all formulas, examples, and calibration history.</p>
-            <p><a href="https://github.com/ZiggyMack/CFA-2.0/raw/main/docs/CFA_v5_Manual.pdf" 
+            <p><a href="https://github.com/ZiggyMack/CFA/blob/main/docs/CFA_v5_0_User_Manual.pdf"
                style="color: white; text-decoration: underline; font-size: 1.2rem;">
                → Download PDF Manual
             </a></p>
-            <p style="font-size: 0.9rem; margin-top: 1rem;"><em>Note: PDF update pending for v5.0.0 • Repository Health: 98/100 (A+)</em></p>
+            <p style="font-size: 0.9rem; margin-top: 1rem;"><em>CFA v5.0.0 User Manual • Repository Health: 98/100 (A+)</em></p>
         </div>
     """, unsafe_allow_html=True)
     
