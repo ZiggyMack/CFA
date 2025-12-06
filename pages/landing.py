@@ -131,11 +131,13 @@ def render():
     # ========================================================================
     st.markdown("## ⚡ Launch Manifesto")
 
-    # Link to full philosophical covenant
-    if st.button("📜 **Read the Full CFA Manifesto**", use_container_width=True):
-        st.session_state.page = 'verbose_manifesto'
-        st.rerun()
-    st.caption("Why CFA exists, the Trinity architecture, and our binding commitment to transparency.")
+    # Link to full philosophical covenant - symmetrical with header
+    col_spacer_m1, col_manifesto, col_spacer_m2 = st.columns([1.5, 1, 1.5])
+    with col_manifesto:
+        if st.button("📜 Verbose CFA Manifesto", use_container_width=True):
+            st.session_state.page = 'verbose_manifesto'
+            st.rerun()
+    st.markdown("<p style='text-align: center; font-size: 0.85rem; color: #888;'>Why CFA exists, the Trinity architecture, and our binding commitment to transparency.</p>", unsafe_allow_html=True)
 
     st.write("""
     **Welcome to the Comparative Framework Analysis (CFA) Console,**

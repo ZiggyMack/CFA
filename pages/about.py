@@ -35,23 +35,6 @@ def render():
             st.rerun()
 
     st.markdown("---")
-    
-    # Chat Assistant Link (For users who need help)
-    st.info("""
-    **Need Help Understanding CFA?** Try our AI Chat Assistant!
-
-    The Chat Assistant has access to the full CFA repository and can answer questions about:
-    - BFI, YPA, and the evaluation framework
-    - How to use the Console and Mr. Brute's Ledger
-    - Worldview profiles and preset modes
-    - The Trinity auditors (Claude, Grok, Nova)
-    """)
-
-    if st.button("💬 Open Chat Assistant", use_container_width=True, type="primary"):
-        st.session_state.page = 'chat_assistant'
-        st.rerun()
-
-    st.markdown("---")
 
     # ========================================================================
     # TABS FOR ORGANIZED CONTENT
@@ -709,6 +692,39 @@ def render():
         Every room serves a purpose. Every door opens to something useful.
         Mr. Brute's ledger is complete - transparent, navigable, and ready for the world.
         """)
+
+    # ========================================================================
+    # ADVANCED USERS SECTION (Chat Assistant - requires API key)
+    # ========================================================================
+    st.markdown("---")
+
+    with st.expander("🔧 Advanced Users", expanded=False):
+        st.markdown("""
+        **Features for users with API access**
+
+        These tools require additional setup (API keys) and are designed for power users
+        who want deeper integration with CFA's infrastructure.
+        """)
+
+        st.markdown("---")
+
+        st.markdown("""
+        ### 💬 AI Chat Assistant
+
+        **Requires:** Anthropic API Key
+
+        The Chat Assistant has access to the full CFA repository and can answer questions about:
+        - BFI, YPA, and the evaluation framework
+        - How to use the Console and Mr. Brute's Ledger
+        - Worldview profiles and preset modes
+        - The Trinity auditors (Claude, Grok, Nova)
+
+        *Note: You'll need your own Anthropic API key to use this feature.*
+        """)
+
+        if st.button("💬 Open Chat Assistant", use_container_width=True):
+            st.session_state.page = 'chat_assistant'
+            st.rerun()
 
     # Footer
     st.markdown("---")

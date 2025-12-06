@@ -240,8 +240,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Instrumental"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Weighted_1.2x"
-                # Note: audit_mode controlled by selectbox in Load Preset Profile, don't set here
-                st.success("✅ Skeptic Mode loaded! (MdN-optimized)")
+                st.rerun()  # Immediately reflect changes in indicator
             st.caption("MdN-optimized\nPredictive power focus")
 
             if st.button("🙏 Seeker Mode", use_container_width=True):
@@ -249,8 +248,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Composite_70_30"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
-                # Note: audit_mode controlled by selectbox in Load Preset Profile, don't set here
-                st.success("✅ Seeker Mode loaded! (CT-leaning)")
+                st.rerun()  # Immediately reflect changes in indicator
             st.caption("CT-leaning\nMeaning-first")
 
         with col2:
@@ -259,8 +257,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Holistic_50_50"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
-                # Note: audit_mode controlled by selectbox in Load Preset Profile, don't set here
-                st.success("✅ Diplomat Mode loaded! (Balanced)")
+                st.rerun()  # Immediately reflect changes in indicator
             st.caption("Balanced bridge\nEqual weighting")
 
             if st.button("👿 Zealot Mode", use_container_width=True):
@@ -268,8 +265,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Holistic_50_50"
                 st.session_state["sidebar_fallibilism"] = "OFF"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
-                # Note: audit_mode controlled by selectbox in Load Preset Profile, don't set here
-                st.success("✅ Zealot Mode loaded! (CT-optimized)")
+                st.rerun()  # Immediately reflect changes in indicator
             st.caption("CT-optimized\nExistential-first")
 
         st.markdown("---")
@@ -285,13 +281,19 @@ def render():
             st.session_state["audit_mode"] = "Bias"
 
         audit_mode_options = ["Bias", "Audit"]
+        current_audit_idx = audit_mode_options.index(st.session_state.get("audit_mode", "Bias"))
         audit_mode = st.selectbox(
             "Mode",
             audit_mode_options,
-            key="audit_mode",
+            index=current_audit_idx,
+            key="audit_mode_selector",
             help="**Bias Mode (🎯):** Full bias scoring - auditors apply their native lenses with bias intact. **Audit Mode (🔍):** Adversarial audit - scores reflect rigorous adversarial checking (Trinity convergence). Switch to Audit to see adversarially-validated scores.",
             label_visibility="collapsed"
         )
+        # Update session state and rerun if changed
+        if audit_mode != st.session_state.get("audit_mode"):
+            st.session_state["audit_mode"] = audit_mode
+            st.rerun()
 
         st.markdown("---")
 
@@ -301,16 +303,20 @@ def render():
             st.session_state["include_crux"] = True
 
         include_crux_options = ["Include", "Exclude"]
+        current_crux_idx = 0 if st.session_state.get("include_crux", True) else 1
         include_crux = st.selectbox(
             "Crux Impact",
             include_crux_options,
-            index=0 if st.session_state["include_crux"] else 1,
+            index=current_crux_idx,
             key="crux_selector",
             help="**Include (default):** Scores reflect full convergence including Crux resolutions. **Exclude:** Scores show what convergence would be WITHOUT Crux declarations (counterfactual - shows impact of honest impasse mechanism).",
             label_visibility="collapsed"
         )
-        # Update session state based on selection
-        st.session_state["include_crux"] = (include_crux == "Include")
+        # Update session state and rerun if changed
+        new_include_crux = (include_crux == "Include")
+        if new_include_crux != st.session_state.get("include_crux"):
+            st.session_state["include_crux"] = new_include_crux
+            st.rerun()
 
         st.markdown("---")
         st.markdown("**Pre-Audited Frameworks:**")
@@ -430,6 +436,12 @@ def render():
     if "sidebar_bfi_weight" not in st.session_state:
         st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
 
+    # Store previous values to detect changes
+    prev_parity = st.session_state.get("sidebar_lever_parity")
+    prev_pf = st.session_state.get("sidebar_pf_type")
+    prev_fall = st.session_state.get("sidebar_fallibilism")
+    prev_bfi = st.session_state.get("sidebar_bfi_weight")
+
     # Lever-Parity selectbox (session state binding via key parameter)
     parity_options = ["ON", "OFF"]
 
@@ -471,6 +483,11 @@ def render():
         key="sidebar_bfi_weight",
         help="**Equal (1.0x):** Debts count same as axioms. **Weighted (1.2x):** Debts cost 20% more. [ΔYPA: Weighted slightly lowers both scores ~-0.05-0.10] Higher BFI denominator reduces YPA. Both frameworks have 4 debts, so weighted impacts both similarly."
     )
+
+    # Rerun if any sidebar config changed (ensures indicator updates immediately)
+    if (lever_parity != prev_parity or pf_type != prev_pf or
+        fall_bonus != prev_fall or bfi_weight != prev_bfi):
+        st.rerun()
 
     st.sidebar.markdown("---")
 
