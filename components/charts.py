@@ -500,3 +500,268 @@ def create_scenario_comparison_bars(
     )
 
     return fig
+
+
+def create_lever_pie_charts(
+    levers_a: dict,
+    levers_b: dict,
+    name_a: str,
+    name_b: str
+) -> go.Figure:
+    """
+    Create side-by-side pie charts showing lever contribution breakdown
+
+    Args:
+        levers_a: Dict with CCI, EDB, PF, AR, MG for Framework A
+        levers_b: Same for Framework B
+        name_a: Framework A name
+        name_b: Framework B name
+
+    Returns:
+        Plotly Figure with subplots
+    """
+    from plotly.subplots import make_subplots
+
+    # Vibrant color palette for levers
+    lever_colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#9467bd', '#8c564b']
+    labels = ['CCI', 'EDB', 'PF', 'AR', 'MG']
+
+    values_a = [levers_a.get(k, 0) for k in labels]
+    values_b = [levers_b.get(k, 0) for k in labels]
+
+    fig = make_subplots(
+        rows=1, cols=2,
+        specs=[[{'type': 'pie'}, {'type': 'pie'}]],
+        subplot_titles=[name_a, name_b]
+    )
+
+    # Framework A pie
+    fig.add_trace(go.Pie(
+        labels=labels,
+        values=values_a,
+        name=name_a,
+        marker=dict(colors=lever_colors),
+        hole=0.4,
+        textinfo='label+percent',
+        textposition='outside',
+        pull=[0.05, 0, 0, 0, 0]  # Pull out CCI slightly
+    ), row=1, col=1)
+
+    # Framework B pie
+    fig.add_trace(go.Pie(
+        labels=labels,
+        values=values_b,
+        name=name_b,
+        marker=dict(colors=lever_colors),
+        hole=0.4,
+        textinfo='label+percent',
+        textposition='outside',
+        pull=[0, 0, 0, 0, 0.05]  # Pull out MG slightly
+    ), row=1, col=2)
+
+    fig.update_layout(
+        title=dict(
+            text='Lever Contribution Breakdown',
+            font=dict(size=16, family='Georgia, serif'),
+            x=0.5
+        ),
+        showlegend=True,
+        legend=dict(
+            orientation='h',
+            yanchor='bottom',
+            y=-0.1,
+            xanchor='center',
+            x=0.5
+        ),
+        margin=dict(t=80, b=60, l=40, r=40),
+        paper_bgcolor='rgba(0,0,0,0)',
+        height=400
+    )
+
+    return fig
+
+
+def create_ypa_gauge(
+    ypa_a: float,
+    ypa_b: float,
+    name_a: str,
+    name_b: str
+) -> go.Figure:
+    """
+    Create dual gauge charts showing YPA scores
+
+    Args:
+        ypa_a: YPA score for Framework A
+        ypa_b: YPA score for Framework B
+        name_a: Framework A name
+        name_b: Framework B name
+
+    Returns:
+        Plotly Figure with gauge indicators
+    """
+    from plotly.subplots import make_subplots
+
+    color_a = get_framework_color(name_a)
+    color_b = get_framework_color(name_b)
+
+    fig = make_subplots(
+        rows=1, cols=2,
+        specs=[[{'type': 'indicator'}, {'type': 'indicator'}]],
+        subplot_titles=[name_a, name_b]
+    )
+
+    # Framework A gauge
+    fig.add_trace(go.Indicator(
+        mode="gauge+number+delta",
+        value=ypa_a,
+        title={'text': "YPA", 'font': {'size': 14}},
+        delta={'reference': 5.0, 'increasing': {'color': "#2a9d8f"}, 'decreasing': {'color': "#e76f51"}},
+        gauge={
+            'axis': {'range': [0, 10], 'tickwidth': 1},
+            'bar': {'color': color_a},
+            'bgcolor': "white",
+            'borderwidth': 2,
+            'bordercolor': "gray",
+            'steps': [
+                {'range': [0, 3], 'color': '#ffcccb'},
+                {'range': [3, 6], 'color': '#fffacd'},
+                {'range': [6, 10], 'color': '#90EE90'}
+            ],
+            'threshold': {
+                'line': {'color': "red", 'width': 4},
+                'thickness': 0.75,
+                'value': ypa_b  # Show competitor as threshold
+            }
+        }
+    ), row=1, col=1)
+
+    # Framework B gauge
+    fig.add_trace(go.Indicator(
+        mode="gauge+number+delta",
+        value=ypa_b,
+        title={'text': "YPA", 'font': {'size': 14}},
+        delta={'reference': 5.0, 'increasing': {'color': "#2a9d8f"}, 'decreasing': {'color': "#e76f51"}},
+        gauge={
+            'axis': {'range': [0, 10], 'tickwidth': 1},
+            'bar': {'color': color_b},
+            'bgcolor': "white",
+            'borderwidth': 2,
+            'bordercolor': "gray",
+            'steps': [
+                {'range': [0, 3], 'color': '#ffcccb'},
+                {'range': [3, 6], 'color': '#fffacd'},
+                {'range': [6, 10], 'color': '#90EE90'}
+            ],
+            'threshold': {
+                'line': {'color': "red", 'width': 4},
+                'thickness': 0.75,
+                'value': ypa_a  # Show competitor as threshold
+            }
+        }
+    ), row=1, col=2)
+
+    fig.update_layout(
+        title=dict(
+            text='YPA Performance Gauges',
+            font=dict(size=16, family='Georgia, serif'),
+            x=0.5
+        ),
+        margin=dict(t=80, b=40, l=40, r=40),
+        paper_bgcolor='rgba(0,0,0,0)',
+        height=350
+    )
+
+    return fig
+
+
+def create_lever_radar_comparison(
+    levers_a: dict,
+    levers_b: dict,
+    name_a: str,
+    name_b: str
+) -> go.Figure:
+    """
+    Create overlapping radar chart comparing two frameworks' lever profiles
+
+    Args:
+        levers_a: Dict with CCI, EDB, PF, AR, MG for Framework A
+        levers_b: Same for Framework B
+        name_a: Framework A name
+        name_b: Framework B name
+
+    Returns:
+        Plotly Figure
+    """
+    categories = ['CCI', 'EDB', 'PF', 'AR', 'MG']
+    color_a = get_framework_color(name_a)
+    color_b = get_framework_color(name_b)
+
+    # Get values and close the polygon
+    values_a = [levers_a.get(k, 0) for k in categories] + [levers_a.get('CCI', 0)]
+    values_b = [levers_b.get(k, 0) for k in categories] + [levers_b.get('CCI', 0)]
+    theta = categories + [categories[0]]
+
+    # Convert hex to rgba for fills
+    def hex_to_rgba(hex_color, alpha):
+        hex_color = hex_color.lstrip('#')
+        r, g, b = int(hex_color[0:2], 16), int(hex_color[2:4], 16), int(hex_color[4:6], 16)
+        return f'rgba({r},{g},{b},{alpha})'
+
+    fig = go.Figure()
+
+    # Framework A
+    fig.add_trace(go.Scatterpolar(
+        r=values_a,
+        theta=theta,
+        name=name_a,
+        fill='toself',
+        fillcolor=hex_to_rgba(color_a, 0.3),
+        line=dict(color=color_a, width=3),
+        marker=dict(size=8, color=color_a)
+    ))
+
+    # Framework B
+    fig.add_trace(go.Scatterpolar(
+        r=values_b,
+        theta=theta,
+        name=name_b,
+        fill='toself',
+        fillcolor=hex_to_rgba(color_b, 0.3),
+        line=dict(color=color_b, width=3),
+        marker=dict(size=8, color=color_b)
+    ))
+
+    fig.update_layout(
+        polar=dict(
+            radialaxis=dict(
+                visible=True,
+                range=[0, 10],
+                tickfont=dict(size=10),
+                gridcolor='#e0e0e0',
+                linecolor='#ccc'
+            ),
+            angularaxis=dict(
+                tickfont=dict(size=12),
+                gridcolor='#e0e0e0',
+                linecolor='#ccc'
+            ),
+            bgcolor='rgba(248, 249, 250, 0.8)'
+        ),
+        title=dict(
+            text='Lever Profile Comparison',
+            font=dict(size=16, family='Georgia, serif'),
+            x=0.5
+        ),
+        legend=dict(
+            orientation='h',
+            yanchor='bottom',
+            y=-0.15,
+            xanchor='center',
+            x=0.5
+        ),
+        margin=dict(t=80, b=60, l=80, r=80),
+        paper_bgcolor='rgba(0,0,0,0)',
+        height=450
+    )
+
+    return fig

@@ -27,7 +27,8 @@ from components.cards import (
 from components.charts import (
     create_convergence_radar, create_sensitivity_heatmap,
     create_battle_card_html, create_preset_compass,
-    create_guardrail_grid, create_scenario_comparison_bars
+    create_guardrail_grid, create_scenario_comparison_bars,
+    create_lever_pie_charts, create_ypa_gauge, create_lever_radar_comparison
 )
 
 # Backward compatibility: Load frameworks from profiles
@@ -884,13 +885,30 @@ def render():
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["📈 Visual", "⚔️ Battle Card", "📋 Details", "🛡️ Guardrails", "🔄 Symmetry"])
 
     with tab1:
-        # Original charts
-        st.plotly_chart(create_lever_comparison_chart(ya_levers, yb_levers, fa["name"], fb["name"]), use_container_width=True)
-        st.plotly_chart(create_ypa_trinity_chart(ya_results, yb_results, fa["name"], fb["name"]), use_container_width=True)
+        # NEW: YPA Gauge meters (visually engaging!)
+        st.markdown("### 🎯 YPA Performance")
+        st.plotly_chart(create_ypa_gauge(
+            ya_results["Neutral"]["YPA"],
+            yb_results["Neutral"]["YPA"],
+            fa["name"], fb["name"]
+        ), use_container_width=True)
 
-        # NEW: Scenario Comparison Bars
+        # NEW: Radar comparison (more engaging than bar chart)
+        st.markdown("### 🕸️ Lever Profile Radar")
+        st.plotly_chart(create_lever_radar_comparison(ya_levers, yb_levers, fa["name"], fb["name"]), use_container_width=True)
+
+        # NEW: Pie charts for lever contribution
+        st.markdown("### 🥧 Lever Contribution Breakdown")
+        st.plotly_chart(create_lever_pie_charts(ya_levers, yb_levers, fa["name"], fb["name"]), use_container_width=True)
+
+        # Scenario Comparison Bars
         st.markdown("### 📊 Scenario Impact")
         st.plotly_chart(create_scenario_comparison_bars(ya_results, yb_results, fa["name"], fb["name"]), use_container_width=True)
+
+        # Original charts in expander for those who want them
+        with st.expander("📈 Classic Charts", expanded=False):
+            st.plotly_chart(create_lever_comparison_chart(ya_levers, yb_levers, fa["name"], fb["name"]), use_container_width=True)
+            st.plotly_chart(create_ypa_trinity_chart(ya_results, yb_results, fa["name"], fb["name"]), use_container_width=True)
 
         # NEW: Trinity Convergence Radar (simulated - both frameworks show same audited scores)
         with st.expander("🎯 Trinity Convergence Radar", expanded=False):
@@ -898,21 +916,24 @@ def render():
 
             radar_col1, radar_col2 = st.columns(2)
 
+            # Use raw framework levers (fa["levers"]) for individual PF scores
             with radar_col1:
                 # Framework A - Trinity scores (simulated convergence)
+                fa_raw = fa["levers"]
                 trinity_a = {
-                    'Claude': [ya_levers["CCI"], ya_levers["EDB"], ya_levers["PF_instrumental"], ya_levers["PF_existential"], ya_levers["AR"], ya_levers["MG"]],
-                    'Grok': [ya_levers["CCI"]*0.99, ya_levers["EDB"]*1.01, ya_levers["PF_instrumental"]*0.98, ya_levers["PF_existential"]*1.02, ya_levers["AR"]*0.99, ya_levers["MG"]*1.01],
-                    'Nova': [ya_levers["CCI"]*1.01, ya_levers["EDB"]*0.99, ya_levers["PF_instrumental"]*1.01, ya_levers["PF_existential"]*0.99, ya_levers["AR"]*1.02, ya_levers["MG"]*0.98]
+                    'Claude': [fa_raw["CCI"], fa_raw["EDB"], fa_raw["PF_instrumental"], fa_raw["PF_existential"], fa_raw["AR"], fa_raw["MG"]],
+                    'Grok': [fa_raw["CCI"]*0.99, fa_raw["EDB"]*1.01, fa_raw["PF_instrumental"]*0.98, fa_raw["PF_existential"]*1.02, fa_raw["AR"]*0.99, fa_raw["MG"]*1.01],
+                    'Nova': [fa_raw["CCI"]*1.01, fa_raw["EDB"]*0.99, fa_raw["PF_instrumental"]*1.01, fa_raw["PF_existential"]*0.99, fa_raw["AR"]*1.02, fa_raw["MG"]*0.98]
                 }
                 st.plotly_chart(create_convergence_radar(trinity_a, f"{fa['name']} - Trinity View"), use_container_width=True)
 
             with radar_col2:
                 # Framework B - Trinity scores (simulated convergence)
+                fb_raw = fb["levers"]
                 trinity_b = {
-                    'Claude': [yb_levers["CCI"], yb_levers["EDB"], yb_levers["PF_instrumental"], yb_levers["PF_existential"], yb_levers["AR"], yb_levers["MG"]],
-                    'Grok': [yb_levers["CCI"]*0.99, yb_levers["EDB"]*1.01, yb_levers["PF_instrumental"]*0.98, yb_levers["PF_existential"]*1.02, yb_levers["AR"]*0.99, yb_levers["MG"]*1.01],
-                    'Nova': [yb_levers["CCI"]*1.01, yb_levers["EDB"]*0.99, yb_levers["PF_instrumental"]*1.01, yb_levers["PF_existential"]*0.99, yb_levers["AR"]*1.02, yb_levers["MG"]*0.98]
+                    'Claude': [fb_raw["CCI"], fb_raw["EDB"], fb_raw["PF_instrumental"], fb_raw["PF_existential"], fb_raw["AR"], fb_raw["MG"]],
+                    'Grok': [fb_raw["CCI"]*0.99, fb_raw["EDB"]*1.01, fb_raw["PF_instrumental"]*0.98, fb_raw["PF_existential"]*1.02, fb_raw["AR"]*0.99, fb_raw["MG"]*1.01],
+                    'Nova': [fb_raw["CCI"]*1.01, fb_raw["EDB"]*0.99, fb_raw["PF_instrumental"]*1.01, fb_raw["PF_existential"]*0.99, fb_raw["AR"]*1.02, fb_raw["MG"]*0.98]
                 }
                 st.plotly_chart(create_convergence_radar(trinity_b, f"{fb['name']} - Trinity View"), use_container_width=True)
 
