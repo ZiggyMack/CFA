@@ -336,26 +336,9 @@ def render():
     # SIDEBAR
     st.sidebar.header("🎛️ Configuration")
 
-    # Console Mode Navigation (NEW - from CONSOLE_ENHANCEMENT_PROMPT)
-    st.sidebar.markdown("**📊 Console Mode:**")
-    if "console_mode" not in st.session_state:
-        st.session_state["console_mode"] = "Compare"
-
-    console_modes = ["Compare", "Analyze", "Simulate", "Audit"]
-    console_mode = st.sidebar.radio(
-        "Mode",
-        console_modes,
-        index=console_modes.index(st.session_state.get("console_mode", "Compare")),
-        key="console_mode_radio",
-        horizontal=True,
-        label_visibility="collapsed",
-        help="**Compare:** Side-by-side framework comparison. **Analyze:** Deep dive on single framework. **Simulate:** Toggle sensitivity playground. **Audit:** Trinity convergence details."
-    )
-    if console_mode != st.session_state.get("console_mode"):
-        st.session_state["console_mode"] = console_mode
-        st.rerun()
-
-    st.sidebar.markdown("---")
+    # Console Mode Navigation - placeholder for future expansion
+    # Currently all modes show the same Compare view
+    # Future: Analyze (single framework deep-dive), Simulate (toggle playground), Audit (Trinity details)
 
     # deps: preset_modes
     # Preset Mode Spectrum (MOVED TO TOP - user should select spectrum FIRST)
