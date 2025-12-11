@@ -23,188 +23,11 @@ def render():
     """Render The Matrix portal hub"""
     manifest = load_pan_handler_manifest()
 
-    # Matrix theme CSS - Full green-on-black terminal aesthetic
-    # Uses triple-specificity selectors to override app.py light theme
+    # Matrix theme CSS - SCOPED to .matrix-page wrapper only
+    # All styles prefixed with .matrix-page to prevent leaking to other pages
     st.markdown("""
         <style>
-        /* ===== MATRIX THEME OVERRIDE ===== */
-        /* Triple specificity to beat app.py's ".main .block-container *" rule */
-
-        /* ===== BASE - BLACK BACKGROUND ===== */
-        .stApp .main .block-container,
-        .stApp .main .block-container > div,
-        .stApp [data-testid="stAppViewContainer"],
-        .stApp [data-testid="stVerticalBlock"],
-        .stApp [data-testid="stHorizontalBlock"],
-        .main .block-container,
-        .main .block-container > div {
-            background-color: #0a0a0a !important;
-            background: #0a0a0a !important;
-        }
-
-        /* Force background on root elements */
-        html, body, [data-testid="stAppViewContainer"] {
-            background-color: #0a0a0a !important;
-        }
-
-        /* ===== ALL TEXT MATRIX GREEN - TRIPLE SPECIFICITY ===== */
-        .stApp .main .block-container p,
-        .stApp .main .block-container span,
-        .stApp .main .block-container label,
-        .stApp .main .block-container li,
-        .stApp .main .block-container h1,
-        .stApp .main .block-container h2,
-        .stApp .main .block-container h3,
-        .stApp .main .block-container h4,
-        .stApp .main .block-container h5,
-        .stApp .main .block-container h6,
-        .stApp .main .block-container div,
-        .stApp .main .block-container strong,
-        .stApp .main .block-container b,
-        .stApp .main .block-container em,
-        .stApp .main .block-container i,
-        .stApp .main .block-container a {
-            color: #00ff41 !important;
-        }
-
-        .stApp .main .block-container * {
-            color: #00ff41 !important;
-        }
-
-        /* ===== HEADERS - MATRIX GREEN WITH MONOSPACE ===== */
-        h1, h2, h3, h4, h5, h6 {
-            color: #00ff41 !important;
-            font-family: 'Courier New', monospace;
-            font-weight: bold !important;
-        }
-
-        h1 {
-            border-bottom: 2px solid #00ff41;
-            padding-bottom: 0.5rem;
-        }
-
-        /* Strong/bold text - bright green with glow */
-        strong, b {
-            color: #00ff41 !important;
-            text-shadow: 0 0 5px rgba(0,255,65,0.5);
-        }
-
-        /* Italic/emphasis - dimmer green */
-        em, i {
-            color: #00cc33 !important;
-        }
-
-        /* Links - dimmer green */
-        a {
-            color: #00cc33 !important;
-        }
-
-        a:hover {
-            color: #00ff41 !important;
-            text-shadow: 0 0 10px rgba(0,255,65,0.5);
-        }
-
-        /* ===== METRIC CARDS ===== */
-        [data-testid="stMetricValue"] {
-            font-size: 2rem;
-            color: #00ff41 !important;
-            font-weight: bold;
-            font-family: 'Courier New', monospace;
-        }
-
-        [data-testid="stMetricLabel"] {
-            color: #00ff41 !important;
-            font-size: 1rem;
-        }
-
-        [data-testid="stMetricDelta"] {
-            font-size: 0.875rem;
-            color: #00cc33 !important;
-        }
-
-        /* ===== EXPANDERS - DARK WITH GREEN BORDER ===== */
-        [data-testid="stExpander"] {
-            background-color: #0d0d0d !important;
-            border: 1px solid #00ff41 !important;
-            border-radius: 8px;
-        }
-
-        [data-testid="stExpander"] summary {
-            color: #00ff41 !important;
-        }
-
-        [data-testid="stExpander"] * {
-            color: #00ff41 !important;
-        }
-
-        /* ===== BUTTONS - DEFAULT STATE ===== */
-        .stButton > button {
-            background-color: #0d0d0d !important;
-            color: #00ff41 !important;
-            border: 2px solid #00ff41 !important;
-            border-radius: 8px;
-            font-weight: 500;
-            font-family: 'Courier New', monospace;
-            transition: all 0.3s ease;
-        }
-
-        /* ===== BUTTONS - HOVER STATE ===== */
-        .stButton > button:hover {
-            background-color: #004d1a !important;
-            color: #ffffff !important;
-            border: 2px solid #00ff41 !important;
-            box-shadow: 0 0 15px rgba(0,255,65,0.4);
-        }
-
-        /* Horizontal rules */
-        hr {
-            border-color: #00ff41 !important;
-        }
-
-        /* ===== SELECTBOX ===== */
-        [data-testid="stSelectbox"] {
-            color: #00ff41 !important;
-        }
-
-        [data-testid="stSelectbox"] > div {
-            background-color: #0d0d0d !important;
-            border: 1px solid #00ff41 !important;
-        }
-
-        [data-baseweb="select"] > div:first-child {
-            background-color: #0d0d0d !important;
-            border-color: #00ff41 !important;
-        }
-
-        [data-baseweb="select"] span {
-            color: #00ff41 !important;
-        }
-
-        /* Dropdown menu styling */
-        [data-baseweb="popover"],
-        [data-baseweb="menu"],
-        ul[role="listbox"],
-        ul[role="listbox"] li {
-            background-color: #1a1a1a !important;
-            color: #00ff41 !important;
-        }
-
-        ul[role="listbox"] li:hover {
-            background-color: #003311 !important;
-        }
-
-        [data-floating-ui-portal] > div {
-            background-color: #1a1a1a !important;
-            border: 1px solid #00ff41 !important;
-            border-radius: 8px !important;
-        }
-
-        /* ===== WARNINGS/INFO/SUCCESS/ERROR ===== */
-        .stAlert {
-            background-color: #0d0d0d !important;
-            color: #00ff41 !important;
-            border: 1px solid #00ff41 !important;
-        }
+        /* ===== MATRIX THEME - SCOPED TO .matrix-page ===== */
 
         /* ===== NEON SIGN ANIMATIONS ===== */
         @keyframes neonGlow {
@@ -249,8 +72,7 @@ def render():
         }
 
         /* ===== TUNNEL CARD ===== */
-        .stApp .main .block-container .tunnel-card,
-        .main .block-container .tunnel-card {
+        .matrix-page .tunnel-card {
             background:
                 radial-gradient(ellipse at center, rgba(0,50,20,0.9) 0%, rgba(0,20,10,0.95) 60%, rgba(0,10,5,1) 100%);
             border: 3px solid #00ff41;
@@ -267,8 +89,7 @@ def render():
         }
 
         /* ===== PLATFORM GATE ===== */
-        .stApp .main .block-container .platform-gate,
-        .main .block-container .platform-gate {
+        .matrix-page .platform-gate {
             background:
                 linear-gradient(135deg, rgba(0,30,0,0.95) 0%, rgba(0,50,20,0.9) 100%),
                 repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,255,65,0.03) 2px, rgba(0,255,65,0.03) 4px);
@@ -283,8 +104,7 @@ def render():
                 inset 0 0 50px rgba(0,255,65,0.05);
         }
 
-        .stApp .main .block-container .platform-gate::before,
-        .main .block-container .platform-gate::before {
+        .matrix-page .platform-gate::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0;
@@ -294,8 +114,7 @@ def render():
         }
 
         /* ===== PORTAL CARD ===== */
-        .stApp .main .block-container .portal-card,
-        .main .block-container .portal-card {
+        .matrix-page .portal-card {
             background: linear-gradient(135deg, rgba(0,255,65,0.1) 0%, rgba(0,204,51,0.05) 100%) !important;
             border: 2px solid #00ff41;
             border-radius: 10px;
@@ -304,16 +123,14 @@ def render():
             box-shadow: 0 0 20px rgba(0,255,65,0.3);
         }
 
-        .stApp .main .block-container .portal-card h3,
-        .main .block-container .portal-card h3 {
+        .matrix-page .portal-card h3 {
             color: #00ff41 !important;
             margin-top: 0;
             font-family: 'Courier New', monospace;
         }
 
         /* ===== NEON BADGES ===== */
-        .stApp .main .block-container .neon-live,
-        .main .block-container .neon-live {
+        .matrix-page .neon-live {
             display: inline-block;
             padding: 0.3em 0.7em;
             font-size: 0.85em;
@@ -330,8 +147,7 @@ def render():
             animation: neonGlow 2s ease-in-out infinite, neonFlicker 4s linear infinite;
         }
 
-        .stApp .main .block-container .neon-here,
-        .main .block-container .neon-here {
+        .matrix-page .neon-here {
             display: inline-block;
             padding: 0.3em 0.7em;
             font-size: 0.8em;
@@ -348,8 +164,7 @@ def render():
             animation: neonGlow 2s ease-in-out infinite;
         }
 
-        .stApp .main .block-container .neon-active,
-        .main .block-container .neon-active {
+        .matrix-page .neon-active {
             display: inline-block;
             padding: 0.3em 0.7em;
             font-size: 0.85em;
@@ -367,8 +182,7 @@ def render():
         }
 
         /* ===== FEATURE TAGS ===== */
-        .stApp .main .block-container .feature-tag,
-        .main .block-container .feature-tag {
+        .matrix-page .feature-tag {
             background: rgba(0,255,65,0.1);
             border: 1px solid rgba(0,255,65,0.3);
             border-radius: 15px;
@@ -380,15 +194,13 @@ def render():
             transition: all 0.3s ease;
         }
 
-        .stApp .main .block-container .feature-tag:hover,
-        .main .block-container .feature-tag:hover {
+        .matrix-page .feature-tag:hover {
             background: rgba(0,255,65,0.25);
             box-shadow: 0 0 10px rgba(0,255,65,0.4);
         }
 
         /* ===== MATRIX FOOTER ===== */
-        .stApp .main .block-container .matrix-footer,
-        .main .block-container .matrix-footer {
+        .matrix-page .matrix-footer {
             text-align: center;
             color: #00ff41 !important;
             font-family: 'Courier New', monospace;
@@ -397,6 +209,9 @@ def render():
         </style>
     """, unsafe_allow_html=True)
 
+    # Start Matrix page wrapper
+    st.markdown('<div class="matrix-page">', unsafe_allow_html=True)
+
     # ══════════════════════════════════════════════════════════════
     # HEADER - Back button
     # ══════════════════════════════════════════════════════════════
@@ -404,7 +219,7 @@ def render():
     with col_home:
         if st.button("🏠 Home"):
             st.session_state.page = 'landing'
-            st.rerun()
+            st.experimental_rerun()
 
     # ══════════════════════════════════════════════════════════════
     # TRANSIT HUB HEADER
@@ -591,14 +406,14 @@ def render():
 
         if st.button("🚀 Open Health Dashboard", key="open_health", use_container_width=True):
             st.session_state.show_health_embed = True
-            st.rerun()
+            st.experimental_rerun()
 
         if 'show_health_embed' in st.session_state and st.session_state.show_health_embed:
             st.markdown("### 📊 Live Health Dashboard")
             st.components.v1.iframe("http://localhost:8504", height=800, scrolling=True)
             if st.button("✖️ Close Dashboard", key="close_health"):
                 st.session_state.show_health_embed = False
-                st.rerun()
+                st.experimental_rerun()
 
     with col2:
         st.markdown("""
@@ -705,6 +520,9 @@ def render():
         </p>
     </div>
     """, unsafe_allow_html=True)
+
+    # Close Matrix page wrapper
+    st.markdown('</div>', unsafe_allow_html=True)
 
 
 if __name__ == "__main__":

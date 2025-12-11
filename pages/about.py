@@ -32,7 +32,7 @@ def render():
     with col2:
         if st.button("🏠 Home"):
             st.session_state.page = 'landing'
-            st.rerun()
+            st.experimental_rerun()
 
     st.markdown("---")
 
@@ -724,7 +724,7 @@ def render():
 
         if st.button("💬 Open Chat Assistant", use_container_width=True):
             st.session_state.page = 'chat_assistant'
-            st.rerun()
+            st.experimental_rerun()
 
     # Footer
     st.markdown("---")

@@ -99,7 +99,7 @@ def _render_framework_ledger(worldview_name: str, emoji: str, subtitle: str):
             # Navigate to Console
             st.session_state.page = 'console'
             st.success(f"✅ {worldview_name} loaded into Framework A!")
-            st.rerun()
+            st.experimental_rerun()
 
     with push_col2:
         if st.button(f"→ Push to Framework B", key=f"push_b_{worldview_name.replace(' ', '_')}", use_container_width=True):
@@ -118,7 +118,7 @@ def _render_framework_ledger(worldview_name: str, emoji: str, subtitle: str):
             # Navigate to Console
             st.session_state.page = 'console'
             st.success(f"✅ {worldview_name} loaded into Framework B!")
-            st.rerun()
+            st.experimental_rerun()
 
     st.markdown("---")
 
@@ -157,7 +157,7 @@ def render():
     with col2:
         if st.button("🏠 Home"):
             st.session_state.page = 'landing'
-            st.rerun()
+            st.experimental_rerun()
 
     st.markdown("---")
 
@@ -1046,7 +1046,7 @@ def render():
                     st.session_state['sidebar_fallibilism'] = "ON"
                     st.session_state['sidebar_bfi_weight'] = "Heavier_1.2x"
                     st.session_state.page = 'console'
-                    st.rerun()
+                    st.experimental_rerun()
 
             with st.expander("🔍 The Story Behind The Numbers"):
                 st.markdown("""
@@ -1135,7 +1135,7 @@ def render():
                     st.session_state['sidebar_fallibilism'] = "ON"
                     st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
                     st.session_state.page = 'console'
-                    st.rerun()
+                    st.experimental_rerun()
 
             with st.expander("🔍 The Diplomat Philosophy"):
                 st.markdown("""
@@ -1219,7 +1219,7 @@ def render():
                     st.session_state['sidebar_fallibilism'] = "ON"
                     st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
                     st.session_state.page = 'console'
-                    st.rerun()
+                    st.experimental_rerun()
 
             with st.expander("🔍 The Seeker Position"):
                 st.markdown("""
@@ -1304,7 +1304,7 @@ def render():
                     st.session_state['sidebar_fallibilism'] = "OFF"
                     st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
                     st.session_state.page = 'console'
-                    st.rerun()
+                    st.experimental_rerun()
 
             with st.expander("🔍 The Zealot Symmetry Problem"):
                 st.markdown("""
@@ -1448,7 +1448,7 @@ def render():
                     # Optional: Auto-navigate
                     if st.button("→ Go to Console Now", key="nav_to_console"):
                         st.session_state.page = 'console'
-                        st.rerun()
+                        st.experimental_rerun()
             
             with col_action2:
                 st.markdown("**Option 2: Export File**")

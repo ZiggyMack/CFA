@@ -54,35 +54,35 @@ def render_sidebar():
             # Create navigation buttons
             if st.button("🏠 Landing", use_container_width=True, key="nav_landing"):
                 st.session_state.page = 'landing'
-                st.rerun()
+                st.experimental_rerun()
 
             if st.button("🎮 Console", use_container_width=True, key="nav_console"):
                 st.session_state.page = 'console'
-                st.rerun()
+                st.experimental_rerun()
 
             if st.button("ℹ️ About", use_container_width=True, key="nav_about"):
                 st.session_state.page = 'about'
-                st.rerun()
+                st.experimental_rerun()
 
             if st.button("📖 Manual", use_container_width=True, key="nav_manual"):
                 st.session_state.page = 'manual'
-                st.rerun()
+                st.experimental_rerun()
 
             if st.button("📓 Brute Ledger", use_container_width=True, key="nav_brute"):
                 st.session_state.page = 'brute_ledger'
-                st.rerun()
+                st.experimental_rerun()
 
             if st.button("💬 Chat Assistant", use_container_width=True, key="nav_chat"):
                 st.session_state.page = 'chat_assistant'
-                st.rerun()
+                st.experimental_rerun()
 
             if st.button("📜 Verbose Manifesto", use_container_width=True, key="nav_manifesto"):
                 st.session_state.page = 'verbose_manifesto'
-                st.rerun()
+                st.experimental_rerun()
 
             if st.button("🌐 Matrix", use_container_width=True, key="nav_matrix"):
                 st.session_state.page = 'matrix'
-                st.rerun()
+                st.experimental_rerun()
 
 # Main router
 def main():

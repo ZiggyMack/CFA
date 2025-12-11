@@ -147,7 +147,7 @@ def render():
     # Home button
     if st.button("🏠 Home", key="chat_home_btn"):
         st.session_state.page = 'landing'
-        st.rerun()
+        st.experimental_rerun()
 
     st.title("🔮 Shaman Claude - CFA Guide")
     st.caption("*Your philosophical guide to the Comparative Framework Auditor - Ask me anything about Mr. Brute's Ledger, the Trinity, or the path of \"All Named, All Priced\"*")
@@ -235,7 +235,8 @@ def render():
             st.markdown(message["content"])
 
     # Chat input
-    if prompt := st.chat_input("Ask me about CFA..."):
+    prompt = st.chat_input("Ask me about CFA...")
+    if prompt:
         # Add user message to history
         st.session_state.chat_messages.append({"role": "user", "content": prompt})
 
@@ -295,7 +296,7 @@ def render():
     # Clear chat button
     if st.button("🗑️ Clear Conversation"):
         st.session_state.chat_messages = []
-        st.rerun()
+        st.experimental_rerun()
 
     st.markdown("---")
 

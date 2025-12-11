@@ -207,29 +207,23 @@ def create_battle_card_html(
         val_a = levers_a.get(key, levers_a.get(label, 5.0))
         val_b = levers_b.get(key, levers_b.get(label, 5.0))
 
-        # Create bar visualization (10 chars = 10 points)
-        bar_a = '█' * int(val_a) + '░' * (10 - int(val_a))
-        bar_b = '█' * int(val_b) + '░' * (10 - int(val_b))
+        # Create CSS bar visualization
+        pct_a = int(val_a * 10)
+        pct_b = int(val_b * 10)
+        bar_a = f'<div style="display:inline-block;width:100px;height:12px;background:#eee;border-radius:3px;overflow:hidden;"><div style="width:{pct_a}%;height:100%;background:{color_a};"></div></div>'
+        bar_b = f'<div style="display:inline-block;width:100px;height:12px;background:#eee;border-radius:3px;overflow:hidden;"><div style="width:{pct_b}%;height:100%;background:{color_b};"></div></div>'
 
         # Determine winner
         if val_a > val_b:
-            winner = f'<span style="color: {color_a}; font-weight: bold;">← {name_a.split()[0][:3]}</span>'
+            winner = f'<span style="color: {color_a}; font-weight: bold;">&larr; {name_a.split()[0][:3]}</span>'
             wins_a += 1
         elif val_b > val_a:
-            winner = f'<span style="color: {color_b}; font-weight: bold;">{name_b.split()[0][:3]} →</span>'
+            winner = f'<span style="color: {color_b}; font-weight: bold;">{name_b.split()[0][:3]} &rarr;</span>'
             wins_b += 1
         else:
             winner = '<span style="color: #666;">TIE</span>'
 
-        rows.append(f'''
-        <tr>
-            <td style="padding: 8px; font-weight: bold; color: {CFA_COLORS['text']};">{label}</td>
-            <td style="padding: 8px; font-family: monospace; color: {color_a};">{val_a:.1f} {bar_a}</td>
-            <td style="padding: 8px; text-align: center;">vs</td>
-            <td style="padding: 8px; font-family: monospace; color: {color_b};">{bar_b} {val_b:.1f}</td>
-            <td style="padding: 8px; text-align: right;">{winner}</td>
-        </tr>
-        ''')
+        rows.append(f'<tr><td style="padding: 8px; font-weight: bold; color: #333;">{label}</td><td style="padding: 8px; color: {color_a};">{val_a:.1f} {bar_a}</td><td style="padding: 8px; text-align: center;">vs</td><td style="padding: 8px; color: {color_b};">{bar_b} {val_b:.1f}</td><td style="padding: 8px; text-align: right;">{winner}</td></tr>')
 
     # YPA final row
     ypa_winner = name_a.split()[0][:3] if ypa_a > ypa_b else (name_b.split()[0][:3] if ypa_b > ypa_a else "TIE")
@@ -390,12 +384,7 @@ def create_guardrail_grid(
             f'<td style="padding: 10px; text-align: center; font-size: 1.2em;">{guardrail_status[i][j]}</td>'
             for j in range(len(frameworks))
         ])
-        rows.append(f'''
-        <tr>
-            <td style="padding: 10px; font-weight: bold; color: {CFA_COLORS['text']};">{guard}</td>
-            {cells}
-        </tr>
-        ''')
+        rows.append(f'<tr><td style="padding: 10px; font-weight: bold; color: #333;">{guard}</td>{cells}</tr>')
 
     return f'''
     <div style="

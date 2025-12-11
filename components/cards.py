@@ -110,7 +110,7 @@ def status_summary_card(
             border-bottom: 1px solid rgba(255,255,255,0.2);
             padding-bottom: 10px;
         ">
-            <h3 style="margin: 0; font-family: Georgia, serif; font-size: 1.2em;">
+            <h3 style="margin: 0; font-family: Georgia, serif; font-size: 1.2em; color: white;">
                 AUDIT STATUS
             </h3>
             <span style="

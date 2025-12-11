@@ -327,7 +327,7 @@ def render():
     with col2:
         if st.button("🏠 Home"):
             st.session_state.page = 'landing'
-            st.rerun()
+            st.experimental_rerun()
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('**"All Named, All Priced" — Interactive Comparison Tool**')
@@ -354,7 +354,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Instrumental"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Weighted_1.2x"
-                st.rerun()  # Immediately reflect changes in indicator
+                st.experimental_rerun()  # Immediately reflect changes in indicator
             st.caption("MdN-optimized\nPredictive power focus")
 
             if st.button("🙏 Seeker Mode", use_container_width=True):
@@ -362,7 +362,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Composite_70_30"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
-                st.rerun()  # Immediately reflect changes in indicator
+                st.experimental_rerun()  # Immediately reflect changes in indicator
             st.caption("CT-leaning\nMeaning-first")
 
         with col2:
@@ -371,7 +371,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Holistic_50_50"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
-                st.rerun()  # Immediately reflect changes in indicator
+                st.experimental_rerun()  # Immediately reflect changes in indicator
             st.caption("Balanced bridge\nEqual weighting")
 
             if st.button("👿 Zealot Mode", use_container_width=True):
@@ -379,7 +379,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Holistic_50_50"
                 st.session_state["sidebar_fallibilism"] = "OFF"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
-                st.rerun()  # Immediately reflect changes in indicator
+                st.experimental_rerun()  # Immediately reflect changes in indicator
             st.caption("CT-optimized\nExistential-first")
 
         st.markdown("---")
@@ -407,7 +407,7 @@ def render():
         # Update session state and rerun if changed
         if audit_mode != st.session_state.get("audit_mode"):
             st.session_state["audit_mode"] = audit_mode
-            st.rerun()
+            st.experimental_rerun()
 
         st.markdown("---")
 
@@ -430,7 +430,7 @@ def render():
         new_include_crux = (include_crux == "Include")
         if new_include_crux != st.session_state.get("include_crux"):
             st.session_state["include_crux"] = new_include_crux
-            st.rerun()
+            st.experimental_rerun()
 
         st.markdown("---")
         st.markdown("**Pre-Audited Frameworks:**")
@@ -480,7 +480,7 @@ def render():
                     st.session_state["fa_ar"] = 7.0
                     st.session_state["fa_mg"] = 4.0
                     st.success("✅ MdN → Framework A!")
-                    st.rerun()
+                    st.experimental_rerun()
 
             with load_col2:
                 if st.button("→ Load to B", key="load_mdn_b", use_container_width=True):
@@ -495,7 +495,7 @@ def render():
                     st.session_state["fb_ar"] = 7.0
                     st.session_state["fb_mg"] = 4.0
                     st.success("✅ MdN → Framework B!")
-                    st.rerun()
+                    st.experimental_rerun()
 
         elif preset_key == "ct":
             st.info("**Classical Theism**\n\nTraditional monotheistic worldview. Audited by Claude + Grok with 98% convergence.")
@@ -516,7 +516,7 @@ def render():
                     st.session_state["fa_ar"] = 8.5
                     st.session_state["fa_mg"] = 8.5
                     st.success("✅ CT → Framework A!")
-                    st.rerun()
+                    st.experimental_rerun()
 
             with load_col2:
                 if st.button("→ Load to B", key="load_ct_b", use_container_width=True):
@@ -531,7 +531,7 @@ def render():
                     st.session_state["fb_ar"] = 8.5
                     st.session_state["fb_mg"] = 8.5
                     st.success("✅ CT → Framework B!")
-                    st.rerun()
+                    st.experimental_rerun()
 
         elif preset_key == "coming":
             st.warning(f"**{selected_preset.replace('🔜 ', '')}**\n\nAudit in progress. Check back soon!")
@@ -564,7 +564,7 @@ def render():
     # Sync back to session state
     if lever_parity != st.session_state.get("sidebar_lever_parity"):
         st.session_state["sidebar_lever_parity"] = lever_parity
-        st.rerun()
+        st.experimental_rerun()
 
     # PF-Type selectbox
     current_pf_idx = PF_TYPES.index(st.session_state.get("sidebar_pf_type", "Holistic_50_50"))
@@ -579,7 +579,7 @@ def render():
     # Sync back to session state
     if pf_type != st.session_state.get("sidebar_pf_type"):
         st.session_state["sidebar_pf_type"] = pf_type
-        st.rerun()
+        st.experimental_rerun()
 
     # Fallibilism-Bonus selectbox
     fall_options = ["ON", "OFF"]
@@ -595,7 +595,7 @@ def render():
     # Sync back to session state
     if fall_bonus != st.session_state.get("sidebar_fallibilism"):
         st.session_state["sidebar_fallibilism"] = fall_bonus
-        st.rerun()
+        st.experimental_rerun()
 
     # BFI Debt Weight selectbox
     # Normalize "Heavier_1.2x" to "Weighted_1.2x" for display consistency
@@ -615,7 +615,7 @@ def render():
     # Sync back to session state
     if bfi_weight != st.session_state.get("sidebar_bfi_weight"):
         st.session_state["sidebar_bfi_weight"] = bfi_weight
-        st.rerun()
+        st.experimental_rerun()
 
     st.sidebar.markdown("---")
 
@@ -628,7 +628,7 @@ def render():
             if "config" in run:
                 if st.sidebar.button("✅ Apply", key="apply_sidebar"):
                     apply_loaded_run(run)
-                    st.rerun()
+                    st.experimental_rerun()
         except:
             st.sidebar.error("Invalid file")
 
@@ -666,7 +666,7 @@ def render():
                         st.session_state.fa_ax = custom['axioms']
                         st.session_state.fa_db = custom['debts']
                         del st.session_state['custom_framework_ready']
-                        st.rerun()
+                        st.experimental_rerun()
             
             fa_axioms = st.number_input("Axioms", min_value=1, max_value=30, key="fa_ax")
             fa_debts = st.number_input("Debts", min_value=0, max_value=30, key="fa_db")
@@ -676,7 +676,7 @@ def render():
                 # Pass framework name for smart navigation
                 st.session_state.ledger_nav_target = st.session_state.get("fa_name", "Methodological Naturalism")
                 st.session_state.page = 'brute_ledger'
-                st.rerun()
+                st.experimental_rerun()
         
         # PER-FRAMEWORK PRESET BUTTONS (ABOVE SLIDERS - WORKING POSITION)
         st.markdown("**⚡ Quick Adjust:**")
@@ -685,12 +685,12 @@ def render():
             if st.button("⚡ MAX", key="fa_max_btn", help="Set all to 10.0"):
                 for k in ["fa_cci", "fa_edb", "fa_pfi", "fa_pfe", "fa_ar", "fa_mg"]:
                     st.session_state[k] = 10.0
-                st.rerun()
+                st.experimental_rerun()
         with preset_a[1]:
             if st.button("⚖️ MID", key="fa_mid_btn", help="Set all to 5.0"):
                 for k in ["fa_cci", "fa_edb", "fa_pfi", "fa_pfe", "fa_ar", "fa_mg"]:
                     st.session_state[k] = 5.0
-                st.rerun()
+                st.experimental_rerun()
         with preset_a[2]:
             if st.button("🔄 RESET", key="fa_reset_btn", help="Reset to MdN"):
                 st.session_state["fa_cci"] = MDN_DEFAULT["levers"]["CCI"]
@@ -699,12 +699,12 @@ def render():
                 st.session_state["fa_pfe"] = MDN_DEFAULT["levers"]["PF_existential"]
                 st.session_state["fa_ar"] = MDN_DEFAULT["levers"]["AR"]
                 st.session_state["fa_mg"] = MDN_DEFAULT["levers"]["MG"]
-                st.rerun()
+                st.experimental_rerun()
         with preset_a[3]:
             if st.button("🚫 MIN", key="fa_min_btn", help="Set all to 0.0"):
                 for k in ["fa_cci", "fa_edb", "fa_pfi", "fa_pfe", "fa_ar", "fa_mg"]:
                     st.session_state[k] = 0.0
-                st.rerun()
+                st.experimental_rerun()
         
         st.markdown("---")
         
@@ -745,7 +745,7 @@ def render():
                         st.session_state.fb_ax = custom['axioms']
                         st.session_state.fb_db = custom['debts']
                         del st.session_state['custom_framework_ready']
-                        st.rerun()
+                        st.experimental_rerun()
             
             fb_axioms = st.number_input("Axioms", min_value=1, max_value=30, key="fb_ax")
             fb_debts = st.number_input("Debts", min_value=0, max_value=30, key="fb_db")
@@ -755,7 +755,7 @@ def render():
                 # Pass framework name for smart navigation
                 st.session_state.ledger_nav_target = st.session_state.get("fb_name", "Classical Theism")
                 st.session_state.page = 'brute_ledger'
-                st.rerun()
+                st.experimental_rerun()
         
         # PER-FRAMEWORK PRESET BUTTONS (ABOVE SLIDERS - WORKING POSITION)
         st.markdown("**⚡ Quick Adjust:**")
@@ -764,12 +764,12 @@ def render():
             if st.button("⚡ MAX", key="fb_max_btn", help="Set all to 10.0"):
                 for k in ["fb_cci", "fb_edb", "fb_pfi", "fb_pfe", "fb_ar", "fb_mg"]:
                     st.session_state[k] = 10.0
-                st.rerun()
+                st.experimental_rerun()
         with preset_b[1]:
             if st.button("⚖️ MID", key="fb_mid_btn", help="Set all to 5.0"):
                 for k in ["fb_cci", "fb_edb", "fb_pfi", "fb_pfe", "fb_ar", "fb_mg"]:
                     st.session_state[k] = 5.0
-                st.rerun()
+                st.experimental_rerun()
         with preset_b[2]:
             if st.button("🔄 RESET", key="fb_reset_btn", help="Reset to CT"):
                 st.session_state["fb_cci"] = CT_DEFAULT["levers"]["CCI"]
@@ -778,12 +778,12 @@ def render():
                 st.session_state["fb_pfe"] = CT_DEFAULT["levers"]["PF_existential"]
                 st.session_state["fb_ar"] = CT_DEFAULT["levers"]["AR"]
                 st.session_state["fb_mg"] = CT_DEFAULT["levers"]["MG"]
-                st.rerun()
+                st.experimental_rerun()
         with preset_b[3]:
             if st.button("🚫 MIN", key="fb_min_btn", help="Set all to 0.0"):
                 for k in ["fb_cci", "fb_edb", "fb_pfi", "fb_pfe", "fb_ar", "fb_mg"]:
                     st.session_state[k] = 0.0
-                st.rerun()
+                st.experimental_rerun()
         
         st.markdown("---")
         
@@ -1307,7 +1307,7 @@ def render():
                 st.success("✅ **Profile Detected: Zealot Mode** (CT-optimized, existential-first)")
             
             st.info(f"🎯 **Your Score Breakdown:** Skeptic: {scores['skeptic']}, Diplomat: {scores['diplomat']}, Seeker: {scores['seeker']}, Zealot: {scores['zealot']}")
-            st.rerun()
+            st.experimental_rerun()
         
         st.markdown("---")
         st.caption("💡 **Note:** This quiz is a starting point. You can always adjust toggles manually after!")
@@ -1328,7 +1328,7 @@ def render():
                     st.success("✅ Valid profile")
                     if st.button("Apply", key="apply_bottom"):
                         apply_loaded_run(run)
-                        st.rerun()
+                        st.experimental_rerun()
             except:
                 st.error("Invalid file")
     

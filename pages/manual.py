@@ -77,7 +77,7 @@ def render():
     with col2:
         if st.button("🏠 Home"):
             st.session_state.page = 'landing'
-            st.rerun()
+            st.experimental_rerun()
     
     st.markdown("---")
     
