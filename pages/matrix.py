@@ -34,13 +34,146 @@ def render():
     pan_handler_data = load_pan_handler_projects()
 
     # ==========================================================================
-    # MATRIX THEME CSS - ALL STYLES SCOPED TO .matrix-page WRAPPER
-    # This prevents CSS from leaking to other pages (Landing, Console, etc.)
+    # MATRIX THEME CSS - HYBRID APPROACH
+    # Uses :has() selector to apply dark theme ONLY when .matrix-page exists
+    # This is the key to making Matrix look like Nyquist without leaking
     # ==========================================================================
+    # CSS styles first, then open the matrix-page div
     st.markdown("""
         <style>
-        /* ===== MATRIX THEME - SCOPED TO .matrix-page ===== */
-        /* All selectors prefixed with .matrix-page to prevent global leaking */
+        /* ===== MATRIX THEME - CONDITIONAL GLOBAL STYLES ===== */
+        /* These styles ONLY apply when .matrix-page element exists on the page */
+        /* Uses :has() pseudo-class for parent selection (supported in modern browsers) */
+
+        /* When page contains .matrix-page, override Streamlit's containers */
+        /* Matrix dark background */
+        .stApp:has(.matrix-page),
+        .stApp:has(.matrix-page) > header,
+        .stApp:has(.matrix-page) [data-testid="stAppViewContainer"],
+        .stApp:has(.matrix-page) .main,
+        .stApp:has(.matrix-page) .main .block-container,
+        .stApp:has(.matrix-page) [data-testid="stVerticalBlock"],
+        .stApp:has(.matrix-page) [data-testid="stHorizontalBlock"] {
+            background-color: #0a0a0a !important;
+            background: #0a0a0a !important;
+        }
+
+        /* CRITICAL: Remove default Streamlit padding that creates empty space */
+        .stApp:has(.matrix-page) .main .block-container {
+            padding-top: 0 !important;
+            padding-bottom: 1rem !important;
+            max-width: 100% !important;
+        }
+
+        /* Remove ALL top spacing from Streamlit containers */
+        .stApp:has(.matrix-page) [data-testid="stAppViewContainer"] {
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+        }
+
+        .stApp:has(.matrix-page) [data-testid="stAppViewContainer"] > div,
+        .stApp:has(.matrix-page) [data-testid="stAppViewContainer"] > section,
+        .stApp:has(.matrix-page) .main,
+        .stApp:has(.matrix-page) .main > div {
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+        }
+
+        /* Hide the Streamlit header bar completely on Matrix page */
+        .stApp:has(.matrix-page) > header,
+        .stApp:has(.matrix-page) header[data-testid="stHeader"] {
+            display: none !important;
+            height: 0 !important;
+        }
+
+        /* Remove the deploy button area spacing */
+        .stApp:has(.matrix-page) [data-testid="stToolbar"] {
+            display: none !important;
+        }
+
+        /* Target the inner block that often has default padding */
+        .stApp:has(.matrix-page) [data-testid="stVerticalBlockBorderWrapper"],
+        .stApp:has(.matrix-page) [data-testid="stVerticalBlock"] > div:first-child {
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+        }
+
+        /* All text in Streamlit containers when Matrix page is active */
+        .stApp:has(.matrix-page) .main .block-container *,
+        .stApp:has(.matrix-page) [data-testid="stMarkdownContainer"] * {
+            color: #00ff41 !important;
+            font-family: 'Courier New', monospace !important;
+        }
+
+        /* Streamlit buttons on Matrix page */
+        .stApp:has(.matrix-page) .stButton > button {
+            background-color: #0d0d0d !important;
+            color: #00ff41 !important;
+            border: 2px solid #00ff41 !important;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .stApp:has(.matrix-page) .stButton > button:hover {
+            background-color: #004d1a !important;
+            color: #ffffff !important;
+            box-shadow: 0 0 15px rgba(0,255,65,0.4);
+        }
+
+        /* Streamlit metrics on Matrix page */
+        .stApp:has(.matrix-page) [data-testid="stMetricValue"] {
+            color: #00ff41 !important;
+            font-family: 'Courier New', monospace !important;
+        }
+
+        .stApp:has(.matrix-page) [data-testid="stMetricLabel"] {
+            color: #00ff41 !important;
+        }
+
+        .stApp:has(.matrix-page) [data-testid="stMetricDelta"] {
+            color: #00cc33 !important;
+        }
+
+        /* Streamlit captions on Matrix page */
+        .stApp:has(.matrix-page) .stCaption,
+        .stApp:has(.matrix-page) [data-testid="stCaptionContainer"] {
+            color: #00cc33 !important;
+        }
+
+        /* Expanders on Matrix page */
+        .stApp:has(.matrix-page) [data-testid="stExpander"] {
+            background-color: #0d0d0d !important;
+            border: 1px solid #00ff41 !important;
+        }
+
+        /* Alerts/warnings on Matrix page */
+        .stApp:has(.matrix-page) .stAlert {
+            background-color: #0d0d0d !important;
+            border: 1px solid #00ff41 !important;
+        }
+
+        /* Sidebar when on Matrix page - notably lighter for contrast like Nyquist */
+        .stApp:has(.matrix-page) [data-testid="stSidebar"],
+        .stApp:has(.matrix-page) [data-testid="stSidebar"] > div,
+        .stApp:has(.matrix-page) [data-testid="stSidebar"] [data-testid="stSidebarContent"] {
+            background-color: #1e1e1e !important;
+            background: #1e1e1e !important;
+            border-right: 1px solid #00ff41 !important;
+        }
+
+        .stApp:has(.matrix-page) [data-testid="stSidebar"] * {
+            color: #00ff41 !important;
+        }
+
+        .stApp:has(.matrix-page) [data-testid="stSidebar"] .stButton > button {
+            background-color: #2a2a2a !important;
+            border: 1px solid #00ff41 !important;
+        }
+
+        .stApp:has(.matrix-page) [data-testid="stSidebar"] .stButton > button:hover {
+            background-color: #003311 !important;
+            box-shadow: 0 0 10px rgba(0,255,65,0.3);
+        }
 
         /* ===== KEYFRAME ANIMATIONS ===== */
         @keyframes neonGlow {
@@ -109,13 +242,23 @@ def render():
             100% { background-position: 0% 100%; }
         }
 
-        /* ===== BASE CONTAINER - BLACK BACKGROUND ===== */
+        /* ===== BASE CONTAINER ===== */
+        /* Background is handled by :has() selector at parent level */
+        /* This just ensures text styling inside the wrapper */
         .matrix-page {
-            background-color: #0a0a0a !important;
             color: #00ff41 !important;
             font-family: 'Courier New', monospace;
-            padding: 1em;
-            min-height: 100vh;
+            padding: 0;
+        }
+
+        /* Ensure first element doesn't have excess top margin */
+        .matrix-page > *:first-child {
+            margin-top: 0 !important;
+        }
+
+        /* Hide the style block container that Streamlit wraps around st.markdown */
+        .stApp:has(.matrix-page) [data-testid="stMarkdownContainer"]:first-child {
+            display: contents !important;
         }
 
         /* ===== ALL TEXT ELEMENTS - MATRIX GREEN ===== */
@@ -172,19 +315,14 @@ def render():
 
         /* ===== TUNNEL CARD - Main header element ===== */
         .matrix-page .tunnel-card {
-            background:
-                radial-gradient(ellipse at center, rgba(0,50,20,0.9) 0%, rgba(0,20,10,0.95) 60%, rgba(0,10,5,1) 100%);
+            background: linear-gradient(135deg, #0d2818 0%, #0a1f14 50%, #061510 100%);
             border: 3px solid #00ff41;
-            border-radius: 50% / 10%;
-            padding: 2em;
-            margin: 1em 0;
+            border-radius: 15px;
+            padding: 1.5em;
+            margin: 0 0 1em 0;
             position: relative;
             text-align: center;
-            box-shadow:
-                0 0 40px rgba(0,255,65,0.3),
-                inset 0 0 80px rgba(0,255,65,0.1),
-                inset 0 0 120px rgba(0,0,0,0.5);
-            animation: tunnelPerspective 6s ease-in-out infinite;
+            box-shadow: 0 0 30px rgba(0,255,65,0.4), inset 0 0 50px rgba(0,255,65,0.1);
         }
 
         /* ===== PLATFORM GATE ===== */
@@ -667,30 +805,21 @@ def render():
         </style>
     """, unsafe_allow_html=True)
 
-    # ==========================================================================
-    # START MATRIX PAGE WRAPPER - All content inside this div gets Matrix theme
-    # ==========================================================================
-    st.markdown('<div class="matrix-page">', unsafe_allow_html=True)
-
-    # ══════════════════════════════════════════════════════════════
-    # HEADER - Back button
-    # ══════════════════════════════════════════════════════════════
-    col_header, col_home = st.columns([6, 1])
-    with col_home:
-        if st.button("Home"):
-            st.session_state.page = 'landing'
-            st.experimental_rerun()
-
-    # ══════════════════════════════════════════════════════════════
-    # TRANSIT HUB HEADER
-    # ══════════════════════════════════════════════════════════════
+    # Open the matrix-page wrapper - this triggers the :has() CSS selector
+    # We combine this with the first content element to minimize empty containers
     st.markdown("""
+    <div class="matrix-page">
     <div class="tunnel-card">
         <h1 style="font-size: 2.2em; margin: 0; letter-spacing: 0.1em; color: #00ff41 !important;">DIMENSIONAL TRANSIT HUB</h1>
         <p style="font-size: 1.1em; margin: 0.5em 0; color: #00ff41 !important;">Pan Handler Central Station</p>
         <p style="font-size: 0.85em; opacity: 0.7; color: #00cc33 !important;">Where Projects Travel Between Worlds</p>
     </div>
     """, unsafe_allow_html=True)
+
+    # Home button in compact form
+    if st.button("← Back to Landing", key="matrix_home"):
+        st.session_state.page = 'landing'
+        st.experimental_rerun()
 
     # Philosophy banner
     philosophy = "Where ideas reveal their true weight, and honesty becomes quantifiable."
@@ -966,15 +1095,7 @@ def render():
         """, unsafe_allow_html=True)
 
         if st.button("Open Health Dashboard", key="open_health", use_container_width=True):
-            st.session_state.show_health_embed = True
-            st.experimental_rerun()
-
-        if 'show_health_embed' in st.session_state and st.session_state.show_health_embed:
-            st.markdown("<h3 style='color: #00ff41 !important;'>Live Health Dashboard</h3>", unsafe_allow_html=True)
-            st.components.v1.iframe("http://localhost:8504", height=800, scrolling=True)
-            if st.button("Close Dashboard", key="close_health"):
-                st.session_state.show_health_embed = False
-                st.experimental_rerun()
+            st.info("**Health Dashboard:**\n\nLaunch separately with:\n```bash\ncd dashboard/HealthDashboard\nstreamlit run app.py --server.port 8504\n```\n\n**Then visit:** http://localhost:8504")
 
     with col2:
         st.markdown("""

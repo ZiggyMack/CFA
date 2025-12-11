@@ -15,13 +15,16 @@ sys.path.insert(0, str(Path(__file__).parent))
 # Import page modules
 from pages import landing, console, about, manual, brute_ledger, chat_assistant, verbose_manifesto, matrix
 
-# Page configuration
-st.set_page_config(
-    page_title="CFA v5.0 - Epistemic Engineering",
-    page_icon="⚖️",
-    layout="wide",
-    initial_sidebar_state="collapsed"  # Start collapsed, expand when needed
-)
+# Page configuration - wrapped to handle session conflicts
+try:
+    st.set_page_config(
+        page_title="CFA v5.0 - Epistemic Engineering",
+        page_icon="⚖️",
+        layout="wide",
+        initial_sidebar_state="collapsed"  # Start collapsed, expand when needed
+    )
+except st.errors.StreamlitAPIException:
+    pass  # Page config already set by another session or rerun
 
 # Initialize session state
 if 'page' not in st.session_state:
