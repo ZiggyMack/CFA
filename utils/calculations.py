@@ -8,6 +8,7 @@ All math and scoring logic in one place
 from typing import Dict, Tuple, List
 
 PF_TYPES = ["Instrumental", "Composite_70_30", "Holistic_50_50"]
+BFI_WEIGHTS = ["Equal_1.0x", "Weighted_1.2x"]
 
 def composite_pf(pf_inst: float, pf_exist: float, pf_type: str) -> float:
     """Calculate composite pragmatic fertility score"""
@@ -153,7 +154,7 @@ def symmetry_audit(fr: Dict, cfg: Dict) -> List[Tuple[str, float, float, float]]
     
     baseline = get_ypa(fr, cfg)
     reports = []
-    
+
     # Test lever parity
     cfg_parity = cfg.copy()
     cfg_parity["lever_parity"] = "OFF" if cfg["lever_parity"] == "ON" else "ON"
@@ -168,11 +169,21 @@ def symmetry_audit(fr: Dict, cfg: Dict) -> List[Tuple[str, float, float, float]]
         cfg_pf["pf_type"] = pf_type
         delta_pf = get_ypa(fr, cfg_pf) - baseline
         reports.append((f"PF->{pf_type}", baseline, get_ypa(fr, cfg_pf), delta_pf))
-    
+
     # Test fallibilism
     cfg_fall = cfg.copy()
     cfg_fall["fallibilism_bonus"] = "OFF" if cfg["fallibilism_bonus"] == "ON" else "ON"
     delta_fall = get_ypa(fr, cfg_fall) - baseline
     reports.append(("Fallibilism", baseline, get_ypa(fr, cfg_fall), delta_fall))
-    
+
+    # Test BFI debt weighting
+    cfg_bfi = cfg.copy()
+    # Normalize and flip between the two supported weights
+    current_bfi = cfg.get("bfi_debt_weight", "Equal_1.0x")
+    current_bfi = "Weighted_1.2x" if current_bfi == "Heavier_1.2x" else current_bfi
+    flipped_bfi = "Weighted_1.2x" if current_bfi == "Equal_1.0x" else "Equal_1.0x"
+    cfg_bfi["bfi_debt_weight"] = flipped_bfi
+    delta_bfi = get_ypa(fr, cfg_bfi) - baseline
+    reports.append((f"BFI->{flipped_bfi}", baseline, get_ypa(fr, cfg_bfi), delta_bfi))
+
     return reports

@@ -936,16 +936,17 @@ def render():
         st.markdown("### 🌡️ Toggle Sensitivity Heatmap")
         st.caption("*How much does YPA change when each toggle is flipped?*")
 
-        # Calculate sensitivity matrix
+        # Calculate sensitivity matrix (rows=frameworks, cols=toggles as returned by symmetry_audit)
+        toggle_labels = [row[0] for row in audit_a_summary]
         sensitivity_matrix = []
-        for _, audit_data in [(fa, audit_a_summary), (fb, audit_b_summary)]:
+        for audit_data in (audit_a_summary, audit_b_summary):
             delta_row = [r[3] for r in audit_data]  # Delta values
             sensitivity_matrix.append(delta_row)
 
         st.plotly_chart(create_sensitivity_heatmap(
             sensitivity_matrix,
             [fa["name"], fb["name"]],
-            ['Parity', 'PF-Type', 'Fallibilism', 'BFI Weight']
+            toggle_labels
         ), use_container_width=True)
 
     with tab3:
