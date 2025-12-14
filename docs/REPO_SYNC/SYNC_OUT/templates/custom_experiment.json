@@ -1,0 +1,43 @@
+{
+  "spec_id": "TEMPLATE_CUSTOM",
+  "spec_version": "1.0",
+  "created_by": "CFA",
+  "created_at": null,
+
+  "experiment": {
+    "type": "custom",
+    "name": "[FILL: Experiment name]",
+    "description": "[FILL: What is this experiment testing?]"
+  },
+
+  "parameters": {
+    "_comment": "Define custom parameters for your experiment"
+  },
+
+  "identity_overrides": {
+    "_comment": "Optional: Customize auditor identities"
+  },
+
+  "predictions": [
+    {
+      "id": "P-CUSTOM-001",
+      "hypothesis": "[FILL: Testable hypothesis]",
+      "success_criteria": "[FILL: Measurable threshold]",
+      "measurement_method": "[FILL: How to evaluate]"
+    }
+  ],
+
+  "constraints": {
+    "_comment": "Define any runtime constraints"
+  },
+
+  "deliverables": {
+    "full_json": true,
+    "summary_report": true
+  },
+
+  "metadata": {
+    "related_to": null,
+    "notes": "[FILL: Any special considerations]"
+  }
+}

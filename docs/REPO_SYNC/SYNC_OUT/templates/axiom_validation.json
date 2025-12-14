@@ -1,0 +1,58 @@
+{
+  "spec_id": "TEMPLATE_AXIOM_VALIDATION",
+  "spec_version": "1.0",
+  "created_by": "CFA",
+  "created_at": null,
+
+  "experiment": {
+    "type": "axiom_validation",
+    "name": "[FILL: Experiment name]",
+    "description": "[FILL: What axiom(s) are we testing?]"
+  },
+
+  "parameters": {
+    "auditors": ["claude", "grok", "nova"],
+    "focus_auditor": "[FILL: Which auditor's axioms? claude|grok|nova]",
+    "axioms_to_test": [
+      "[FILL: Axiom claim 1]",
+      "[FILL: Axiom claim 2]"
+    ],
+    "pressure_level": "standard",
+    "components": ["1", "2"],
+    "metrics": ["BFI", "CA", "IP", "ES", "LS", "MS", "PS"],
+    "max_rounds_per_metric": 5,
+    "convergence_target": 0.98,
+    "acceptable_convergence": 0.90
+  },
+
+  "identity_overrides": {
+    "_comment": "Optional: Add system_prompt_append per auditor if needed"
+  },
+
+  "predictions": [
+    {
+      "id": "P-AV-001",
+      "hypothesis": "[FILL: Testable hypothesis]",
+      "success_criteria": "[FILL: Measurable threshold]",
+      "measurement_method": "[FILL: How to evaluate]"
+    }
+  ],
+
+  "constraints": {
+    "max_total_rounds": 50,
+    "max_runtime_minutes": 60,
+    "dry_run_first": true
+  },
+
+  "deliverables": {
+    "full_json": true,
+    "summary_report": true,
+    "crux_documentation": true,
+    "drift_data": true
+  },
+
+  "metadata": {
+    "related_to": null,
+    "notes": "[FILL: Any special considerations]"
+  }
+}

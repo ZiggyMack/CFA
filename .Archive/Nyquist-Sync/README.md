@@ -29,7 +29,14 @@ docs/Nyquist-Sync/
 ├── SYNC-OUT/           # Outgoing from CFA → Nyquist (experiment packages)
 │   ├── START_HERE.md           # Entry point for Nyquist
 │   ├── SCRIPT_REVIEW_RESPONSE.md  # Script modifications + mission hierarchy
+│   ├── CFA_LAUNCH_CLEARANCE.md   # Launch authorization for v2 script
 │   └── CFA-EXP1/               # Complete experiment package (14 files)
+├── REPO_SYNC/          # CFA's bidirectional pipeline infrastructure (NEW)
+│   ├── SYNC_IN/        # Results FROM ARMADA (our intake)
+│   ├── SYNC_OUT/       # Experiment specs TO ARMADA (our output)
+│   ├── schemas/        # JSON validation schemas
+│   ├── scripts/        # Processing utilities
+│   └── VUDU_NETWORK/   # Identity reference files
 └── OLD/                # Archived materials (Phase 1 complete)
 ```
 
@@ -106,11 +113,18 @@ CFA-EXP1/
 - `START_HERE.md` - Entry point with quick start (10 minutes)
 - `SCRIPT_REVIEW_RESPONSE.md` - Critical script modifications for multi-metric loop
 
-### Phase 3: CFA-ARMADA Pipeline (📋 PROPOSED)
+### Phase 3: CFA-ARMADA Pipeline (✅ OPERATIONAL)
 
-**Vision**: CFA designs experiments → ARMADA runs them at scale → Results validate/invalidate axioms
+**Status**: REPO_SYNC infrastructure established. Ready to receive results.
 
-**Proposed Experiments**:
+**REPO_SYNC Directory**:
+- `REPO_SYNC/SYNC_IN/` - Intake for ARMADA results (pending → processed → archived)
+- `REPO_SYNC/SYNC_OUT/` - Experiment specs to send (pending → sent + templates)
+- `REPO_SYNC/scripts/process_sync_in.py` - Result processing automation
+- `REPO_SYNC/INTAKE_GUIDE.md` - How to process incoming results
+- `REPO_SYNC/SPEC_GUIDE.md` - How to design experiments
+
+**Pipeline Experiments**:
 1. **Axiom Validation** - Do declared values predict behavior under pressure?
 2. **Brute Hierarchy** - Which values are truly foundational (survive perturbation)?
 3. **Cross-Architecture Consistency** - Do shared axioms produce shared behavior?

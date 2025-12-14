@@ -1,0 +1,56 @@
+{
+  "spec_id": "TEMPLATE_CROSS_ARCHITECTURE",
+  "spec_version": "1.0",
+  "created_by": "CFA",
+  "created_at": null,
+
+  "experiment": {
+    "type": "cross_architecture",
+    "name": "[FILL: Comparison name]",
+    "description": "[FILL: What are we comparing across providers?]"
+  },
+
+  "parameters": {
+    "providers": ["anthropic", "xai", "openai"],
+    "auditors": {
+      "anthropic": "claude",
+      "xai": "grok",
+      "openai": "nova"
+    },
+    "test_prompts": [
+      "[FILL: Identical prompt for all providers]"
+    ],
+    "comparison_method": "embedding_similarity",
+    "embedding_model": "text-embedding-3-small"
+  },
+
+  "identity_overrides": {
+    "_comment": "Optional: Customize per-provider identity loading"
+  },
+
+  "predictions": [
+    {
+      "id": "P-CA-001",
+      "hypothesis": "[FILL: What difference do you expect between providers?]",
+      "success_criteria": "[FILL: Measurable threshold]",
+      "measurement_method": "embedding_cosine_similarity"
+    }
+  ],
+
+  "constraints": {
+    "max_runtime_minutes": 30,
+    "dry_run_first": true
+  },
+
+  "deliverables": {
+    "full_json": true,
+    "embedding_matrix": true,
+    "similarity_scores": true,
+    "response_comparison": true
+  },
+
+  "metadata": {
+    "related_to": null,
+    "notes": "[FILL: Any provider-specific considerations]"
+  }
+}
