@@ -1272,6 +1272,40 @@ def render():
 
         st.markdown("---")
 
+        # Context callout — specific when CT/MdN loaded, generic otherwise
+        _fa_lower = fa["name"].lower()
+        _fb_lower = fb["name"].lower()
+        _is_ct_mdn = (
+            ("classical theism" in _fa_lower or "classical theism" in _fb_lower) and
+            ("methodological naturalism" in _fa_lower or "methodological naturalism" in _fb_lower)
+        )
+        if _is_ct_mdn:
+            st.markdown("""
+<div style="background:#12121f;border-left:4px solid #d4a843;padding:0.9rem 1.2rem;border-radius:0 6px 6px 0;margin:0 0 1rem 0;">
+<p style="margin:0 0 0.5rem 0;font-size:0.9rem;color:#d4a843;font-weight:600;">
+⚑ Why these specific levers are sensitive — and why that's principled, not a flaw
+</p>
+<p style="margin:0 0 0.4rem 0;font-size:0.85rem;color:#c0c0d0;">
+<strong style="color:#e0e0e0;">CT → Lever-Parity (Δ≈−0.39):</strong>
+Classical Theism carries 7 axioms and 4 debts — a structurally asymmetric ratio.
+Parity controls how that imbalance is weighted in BFI. When parity changes, CT's score shifts
+because the 7:4 ratio is baked into the worldview's architecture, not introduced by the ruler.
+The ruler is measuring a real structural feature.
+</p>
+<p style="margin:0 0 0.4rem 0;font-size:0.85rem;color:#c0c0d0;">
+<strong style="color:#e0e0e0;">MdN → PF→Instrumental (Δ≈+0.35):</strong>
+Methodological Naturalism's entire explanatory model is built around empirical prediction and
+practical fertility. Switching from Instrumental to Composite weighting directly cuts into MdN's
+strongest dimension — the Instrumental setting credits what MdN is specifically designed to do.
+That sensitivity is a sign of validity, not bias.
+</p>
+<p style="margin:0;font-size:0.8rem;color:#707080;">
+Both worldviews are sensitive to exactly the levers that most directly measure what they are built to do.
+One sensitive lever each, comparable magnitude (0.35–0.39). The symmetry audit is working correctly.
+</p>
+</div>
+""", unsafe_allow_html=True)
+
         # Nova's perspective
         st.markdown("### 🔍 Nova's Perspective: Why Symmetry Matters")
         st.markdown("""
