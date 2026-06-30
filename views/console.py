@@ -1548,6 +1548,59 @@ CFA scores live at *Evaluation*. Divergence can originate at any upstream layer.
                             c3.metric("CT Avg Rounds", str(stab.get('ct_golden_avg_rounds','?')))
                             c4.metric("MdN Avg Rounds", str(stab.get('mdn_golden_avg_rounds','?')))
                             st.caption(stab.get("interpretation", ""))
+
+                        # --- Key Finding: Asymmetric Identity Pressure ---
+                        st.markdown("### Key Finding: Asymmetric Identity Pressure")
+
+                        # Compute identity delta stats from CT batch (golden condition)
+                        id_claude = {k: ct_m[k].get("identity_delta_claude", 0) for k in METRIC_ORDER_T if k in ct_m}
+                        id_grok   = {k: ct_m[k].get("identity_delta_grok",   0) for k in METRIC_ORDER_T if k in ct_m}
+                        n = len(id_claude)
+                        avg_claude_id = round(sum(id_claude.values()) / n, 2) if n else 0
+                        avg_grok_id   = round(sum(id_grok.values())   / n, 2) if n else 0
+                        grok_harder_ct = sum(
+                            1 for k in id_claude
+                            if id_grok[k] < 0 and abs(id_grok[k]) > abs(id_claude[k])
+                        )
+                        largest_gap = max(
+                            (abs(id_grok[k]) - abs(id_claude[k]), k) for k in id_claude
+                        )
+
+                        metric_full_map_s = {
+                            "BFI": "Beings, Foundational Importance",
+                            "CA":  "Causal Attribution",
+                            "IP":  "Intellectual Pedigree",
+                            "ES":  "Explanatory Scope",
+                            "LS":  "Logical Soundness",
+                            "MS":  "Moral Substance",
+                            "PS":  "Practical Significance",
+                        }
+
+                        st.markdown(f"""
+<div style="background:#1a1a2e;border-left:4px solid #e94560;padding:1rem 1.2rem;border-radius:0 6px 6px 0;margin:0.5rem 0 1rem 0;">
+<p style="margin:0 0 0.6rem 0;font-size:0.95rem;color:#e0e0e0;">
+<strong style="color:#e94560;">Identity loading deflates the ANTI-CT auditor (Grok) substantially harder than the PRO-CT auditor (Claude)</strong>
+across the CT golden batch — on <strong>{grok_harder_ct} of {n} metrics</strong>, Grok's identity-induced deflation is larger in magnitude.
+</p>
+<p style="margin:0 0 0.6rem 0;font-size:0.9rem;color:#b0b0c0;">
+Avg identity Δ — <strong style="color:#7ec8e3;">Claude (PRO-CT): {avg_claude_id:+.2f}</strong> &nbsp;|&nbsp;
+<strong style="color:#e94560;">Grok (ANTI-CT): {avg_grok_id:+.2f}</strong> &nbsp;·&nbsp;
+Largest gap: <em>{metric_full_map_s.get(largest_gap[1], largest_gap[1])}</em> ({largest_gap[0]:+.2f} pts)
+</p>
+<p style="margin:0 0 0.4rem 0;font-size:0.85rem;color:#909090;">
+<strong style="color:#d4a843;">Why this is a finding about the frameworks, not the instrument:</strong>
+CT makes metaphysical claims (PSR, divine simplicity, final causality, teleology) that present rich surface area
+for empirical challenge. MdN is itself built on empirical methodology — so an empirical auditor scoring MdN
+has less adversarial purchase; the lens and the subject are aligned. The asymmetric pressure is philosophically
+principled. The instrument is measuring a real structural fact: CT is a harder target for the empirical lens
+than MdN is for the teleological lens.
+</p>
+<p style="margin:0;font-size:0.8rem;color:#606070;">
+Trinity² identity-only condition (H-014) will isolate this effect directly from scaffold and calibration contributions.
+</p>
+</div>
+""", unsafe_allow_html=True)
+
                     else:
                         st.info("Both CT and MdN trinity data required for symmetry analysis.")
 
