@@ -1283,25 +1283,36 @@ def render():
             st.markdown("""
 <div style="background:#12121f;border-left:4px solid #d4a843;padding:0.9rem 1.2rem;border-radius:0 6px 6px 0;margin:0 0 1rem 0;">
 <p style="margin:0 0 0.5rem 0;font-size:0.9rem;color:#d4a843;font-weight:600;">
-⚑ Why these specific levers are sensitive — and why that's principled, not a flaw
+⚑ Why is this flag appearing — and is it a problem?
+</p>
+<p style="margin:0 0 0.6rem 0;font-size:0.85rem;color:#c0c0d0;">
+<strong style="color:#e0e0e0;">Short answer: no.</strong> A sensitive lever flag means the worldview has a
+<em>concentrated, narrow-and-deep</em> profile in that dimension — it has staked out a strong position
+rather than distributing strength broadly across all levers. A fully generalist worldview would show
+near-zero sensitivity everywhere. Seeing one flag per worldview at comparable magnitude (0.35–0.39)
+means the audit is detecting real philosophical architecture, not instrument error.
+Think of it as: the flag marks the <em>hinge point</em> where a worldview's specialization gets tested.
 </p>
 <p style="margin:0 0 0.4rem 0;font-size:0.85rem;color:#c0c0d0;">
 <strong style="color:#e0e0e0;">CT → Lever-Parity (Δ≈−0.39):</strong>
-Classical Theism carries 7 axioms and 4 debts — a structurally asymmetric ratio.
-Parity controls how that imbalance is weighted in BFI. When parity changes, CT's score shifts
-because the 7:4 ratio is baked into the worldview's architecture, not introduced by the ruler.
-The ruler is measuring a real structural feature.
+CT carries 7 axioms and only 4 debts — a structurally asymmetric ratio. Parity controls how that
+imbalance is weighted in BFI. CT's large axiom count reflects deep metaphysical commitment
+(divine simplicity, PSR, teleology, imago dei…); its 4 debts are genuinely serious (evil, hiddenness).
+Flipping parity shifts the weight between those two sides, and CT feels it because its axiom-to-debt
+ratio is a fundamental feature of how it is built, not an artifact of measurement.
 </p>
 <p style="margin:0 0 0.4rem 0;font-size:0.85rem;color:#c0c0d0;">
 <strong style="color:#e0e0e0;">MdN → PF→Instrumental (Δ≈+0.35):</strong>
-Methodological Naturalism's entire explanatory model is built around empirical prediction and
-practical fertility. Switching from Instrumental to Composite weighting directly cuts into MdN's
-strongest dimension — the Instrumental setting credits what MdN is specifically designed to do.
-That sensitivity is a sign of validity, not bias.
+MdN is the most functionally specialized worldview in the current library — its identity is built
+almost entirely around explaining, predicting, and intervening in the natural world. The Instrumental
+setting credits that mode of fertility directly. Switching to Composite blends in existential and
+meaning-making fertility, domains MdN intentionally brackets. MdN scores lower there not because
+it fails — but because it doesn't try. The sensitivity reveals a narrow-and-deep profile, not a weakness.
 </p>
 <p style="margin:0;font-size:0.8rem;color:#707080;">
-Both worldviews are sensitive to exactly the levers that most directly measure what they are built to do.
-One sensitive lever each, comparable magnitude (0.35–0.39). The symmetry audit is working correctly.
+Speculative takeaway: both flags are appearing because both worldviews are <em>specialists</em>, not generalists.
+Specialists will always be sensitive to the lever most aligned with their core claim.
+That's a diagnostic about the frameworks — not a verdict on the ruler.
 </p>
 </div>
 """, unsafe_allow_html=True)
