@@ -1,4 +1,4 @@
-"""
+﻿"""
 CFA Chat Assistant - AI Helper with Full Repo Context
 Provides an interactive ChatGPT interface with comprehensive CFA knowledge
 """
@@ -147,7 +147,7 @@ def render():
     # Home button
     if st.button("🏠 Home", key="chat_home_btn"):
         st.session_state.page = 'landing'
-        st.experimental_rerun()
+        st.rerun()
 
     st.title("🔮 Shaman Claude - CFA Guide")
     st.caption("*Your philosophical guide to the Comparative Framework Auditor - Ask me anything about Mr. Brute's Ledger, the Trinity, or the path of \"All Named, All Priced\"*")
@@ -296,7 +296,7 @@ def render():
     # Clear chat button
     if st.button("🗑️ Clear Conversation"):
         st.session_state.chat_messages = []
-        st.experimental_rerun()
+        st.rerun()
 
     st.markdown("---")
 

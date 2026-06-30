@@ -21,13 +21,29 @@ const SymmetryView = ({ tickData }) => {
       .attr('width', width)
       .attr('height', height)
 
-    // Define triangle positions (equilateral triangle)
+    // Define triangle positions — Claude/Grok fixed, Nova drifts toward lower scorer
     const angleOffset = -Math.PI / 2 // Start from top
+
+    // Claude is bottom-right (angle=30°), Grok is bottom-left (angle=150°)
+    // Nova drifts toward the auditor with the LOWER score (needs fairness support)
+    const claudeNode = tickData.nodes.find(n => n.auditor === 'Claude')
+    const grokNode   = tickData.nodes.find(n => n.auditor === 'Grok')
+    const claudeScore = claudeNode?.score ?? 5
+    const grokScore   = grokNode?.score   ?? 5
+    // scoreGap > 0 → Claude leading → Nova leans LEFT toward Grok; < 0 → lean RIGHT toward Claude
+    const scoreGap = claudeScore - grokScore
+    const leanNorm = Math.max(-1, Math.min(1, scoreGap / 8)) // cap at ±8pt gap
+    const novaBaseX = centerX + radius * Math.cos(angleOffset)
+    const novaBaseY = centerY + radius * Math.sin(angleOffset)
+    const novaDriftX = -leanNorm * 90   // negative = left (toward Grok)
+    const novaDriftY =  Math.abs(leanNorm) * 28  // drop as triangle skews
+
     const positions = {
       'Nova': {
-        x: centerX + radius * Math.cos(angleOffset),
-        y: centerY + radius * Math.sin(angleOffset),
-        angle: angleOffset
+        x: novaBaseX + novaDriftX,
+        y: novaBaseY + novaDriftY,
+        angle: angleOffset,
+        lean: leanNorm,
       },
       'Claude': {
         x: centerX + radius * Math.cos(angleOffset + 2 * Math.PI / 3),
@@ -98,9 +114,10 @@ const SymmetryView = ({ tickData }) => {
       const nodeData = nodeMap[auditor]
       if (!nodeData) return
 
-      // Draw halo (confidence indicator)
-      const haloRadius = 20 + nodeData.confidence * 20 // 20-40px based on confidence
-      const haloOpacity = 0.1 + nodeData.confidence * 0.2 // More confident = brighter halo
+      // Draw halo — use bias_overhead as proxy (0.3–0.5 range)
+      const biasWeight = nodeData.bias_overhead ?? 0.3
+      const haloRadius = 20 + biasWeight * 20
+      const haloOpacity = 0.08 + biasWeight * 0.18
 
       nodesGroup.append('circle')
         .attr('cx', pos.x)
@@ -128,14 +145,30 @@ const SymmetryView = ({ tickData }) => {
         .attr('font-weight', 'bold')
         .text(auditor)
 
-      // Add confidence percentage
-      nodesGroup.append('text')
-        .attr('x', pos.x)
-        .attr('y', pos.y + 35)
-        .attr('text-anchor', 'middle')
-        .attr('fill', 'rgba(255,255,255,0.6)')
-        .attr('font-size', '11px')
-        .text(`${(nodeData.confidence * 100).toFixed(0)}% confidence`)
+      // Score label (Claude/Grok show score; Nova shows lean direction)
+      if (nodeData.score !== null && nodeData.score !== undefined) {
+        nodesGroup.append('text')
+          .attr('x', pos.x)
+          .attr('y', pos.y + 35)
+          .attr('text-anchor', 'middle')
+          .attr('fill', 'rgba(255,255,255,0.65)')
+          .attr('font-size', '12px')
+          .attr('font-weight', '600')
+          .text(nodeData.score.toFixed(1))
+      } else if (auditor === 'Nova' && Math.abs(pos.lean ?? 0) > 0.12) {
+        // Nova lean direction label — only when meaningfully off-center
+        const leanAmt = pos.lean ?? 0
+        const leanTarget = leanAmt > 0 ? '→ Grok' : 'Claude ←'
+        const leanPct = Math.round(Math.abs(leanAmt) * 100)
+        nodesGroup.append('text')
+          .attr('x', pos.x)
+          .attr('y', pos.y + 35)
+          .attr('text-anchor', 'middle')
+          .attr('fill', '#f59e0b')
+          .attr('font-size', '10px')
+          .attr('font-weight', '600')
+          .text(`⚖ ${leanTarget} ${leanPct}%`)
+      }
 
       // Add stance indicator
       nodesGroup.append('text')
@@ -185,6 +218,50 @@ const SymmetryView = ({ tickData }) => {
           ))}
         </div>
       )}
+
+      {/* Edge legend */}
+      <div style={{
+        display: 'flex',
+        gap: '1.5rem',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: '-0.5rem',
+        marginBottom: '0.5rem',
+        fontSize: '0.72rem',
+        color: 'rgba(255,255,255,0.45)',
+      }}>
+        {/* Color legend */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+          <span>Edge color — disagreement:</span>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+            <span style={{ display: 'inline-block', width: '28px', height: '3px', background: 'linear-gradient(to right, #1a9850, #ffffbf, #d73027)', borderRadius: '2px' }} />
+          </span>
+          <span style={{ color: '#1a9850' }}>converging</span>
+          <span>→</span>
+          <span style={{ color: '#d73027' }}>diverging</span>
+        </div>
+
+        <span style={{ color: 'rgba(255,255,255,0.15)' }}>|</span>
+
+        {/* Thickness legend */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+          <span>Thickness — deliberation intensity:</span>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
+            <span style={{ display: 'inline-block', width: '18px', height: '2px', backgroundColor: 'rgba(255,255,255,0.5)', borderRadius: '1px' }} />
+            <span style={{ display: 'inline-block', width: '18px', height: '5px', backgroundColor: 'rgba(255,255,255,0.5)', borderRadius: '1px' }} />
+            <span style={{ display: 'inline-block', width: '18px', height: '9px', backgroundColor: 'rgba(255,255,255,0.5)', borderRadius: '1px' }} />
+          </span>
+          <span>thin = early · thick = active</span>
+        </div>
+
+        <span style={{ color: 'rgba(255,255,255,0.15)' }}>|</span>
+
+        {/* Nova lean legend */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+          <span style={{ color: '#f59e0b' }}>⚖</span>
+          <span>Nova vertex drifts toward lower scorer — fairness load</span>
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,0 +1,279 @@
+{
+  "session_id": "20260629_035028",
+  "worldview_pair": "CT_vs_MdN",
+  "auditors": ["Claude", "Grok", "Nova"],
+  "identity_condition": "external_identity",
+  "experiment": "CFA-EXP1-BATCH-20260629",
+  "notes": "Run E1 — external identity condition. 2 crux declarations (BFI, IP). Score audit status: PRELIMINARY (parser bug fixed in future runs; round_scores may contain Grok contamination). Qualitative arc is reliable.",
+  "ticks": [
+    {
+      "tick_id": "tick-BFI-R1",
+      "metric": "BFI",
+      "metric_full": "Beings, Foundational Importance",
+      "round": 1,
+      "nodes": [
+        {"auditor": "Claude", "score": 1.0, "stance": "PRO", "bias_overhead": 0.50},
+        {"auditor": "Grok",   "score": 8.0, "stance": "ANTI", "bias_overhead": 0.40},
+        {"auditor": "Nova",   "score": null, "stance": "FAIRNESS", "bias_overhead": 0.30}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.90, "notes": "Maximum opening divergence — 7pt gap"},
+        {"pair": "Claude-Nova", "tension": 0.10, "notes": "Nova observing"},
+        {"pair": "Grok-Nova",   "tension": 0.10, "notes": "Nova observing"}
+      ],
+      "convergence": {"percentage": 30.0, "status": "divergent"},
+      "crux": {"status": "none"},
+      "divergence_layer": "Beliefs"
+    },
+    {
+      "tick_id": "tick-BFI-R2",
+      "metric": "BFI",
+      "metric_full": "Beings, Foundational Importance",
+      "round": 2,
+      "nodes": [
+        {"auditor": "Claude", "score": 5.0, "stance": "PRO", "bias_overhead": 0.50},
+        {"auditor": "Grok",   "score": 3.0, "stance": "ANTI", "bias_overhead": 0.40},
+        {"auditor": "Nova",   "score": null, "stance": "FAIRNESS", "bias_overhead": 0.30}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.55, "notes": "Both moved toward center — genuine deliberation"},
+        {"pair": "Claude-Nova", "tension": 0.20, "notes": "Nova monitoring"},
+        {"pair": "Grok-Nova",   "tension": 0.20, "notes": "Nova monitoring"}
+      ],
+      "convergence": {"percentage": 80.0, "status": "converging"},
+      "crux": {"status": "none"},
+      "divergence_layer": "Beliefs"
+    },
+    {
+      "tick_id": "tick-BFI-R3",
+      "metric": "BFI",
+      "metric_full": "Beings, Foundational Importance",
+      "round": 3,
+      "nodes": [
+        {"auditor": "Claude", "score": 1.0, "stance": "PRO", "bias_overhead": 0.50},
+        {"auditor": "Grok",   "score": 4.0, "stance": "ANTI", "bias_overhead": 0.40},
+        {"auditor": "Nova",   "score": null, "stance": "FAIRNESS", "bias_overhead": 0.30}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.75, "notes": "Claude retreated — oscillation beginning"},
+        {"pair": "Claude-Nova", "tension": 0.30, "notes": "Nova noting instability"},
+        {"pair": "Grok-Nova",   "tension": 0.20, "notes": "Grok holding"}
+      ],
+      "convergence": {"percentage": 70.0, "status": "diverging"},
+      "crux": {"status": "potential", "id": "CRUX_BFI_E1_TMP"}
+    },
+    {
+      "tick_id": "tick-BFI-R4",
+      "metric": "BFI",
+      "metric_full": "Beings, Foundational Importance",
+      "round": 4,
+      "nodes": [
+        {"auditor": "Claude", "score": 4.0, "stance": "PRO", "bias_overhead": 0.50},
+        {"auditor": "Grok",   "score": 2.0, "stance": "ANTI", "bias_overhead": 0.40},
+        {"auditor": "Nova",   "score": null, "stance": "FAIRNESS", "bias_overhead": 0.30}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.65, "notes": "Still wide after 4 rounds"},
+        {"pair": "Claude-Nova", "tension": 0.35, "notes": "Nova preparing fairness assessment"},
+        {"pair": "Grok-Nova",   "tension": 0.25, "notes": "Nova assessing Grok stance"}
+      ],
+      "convergence": {"percentage": 80.0, "status": "stalled"},
+      "crux": {"status": "potential", "id": "CRUX_BFI_E1_TMP"}
+    },
+    {
+      "tick_id": "tick-BFI-R5",
+      "metric": "BFI",
+      "metric_full": "Beings, Foundational Importance",
+      "round": 5,
+      "nodes": [
+        {"auditor": "Claude", "score": 4.0, "stance": "PRO", "bias_overhead": 0.50},
+        {"auditor": "Grok",   "score": 2.0, "stance": "ANTI", "bias_overhead": 0.40},
+        {"auditor": "Nova",   "score": null, "stance": "FAIRNESS", "bias_overhead": 0.30}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.80, "notes": "Max rounds reached — Crux declared"},
+        {"pair": "Claude-Nova", "tension": 0.40, "notes": "Nova issuing crux assessment"},
+        {"pair": "Grok-Nova",   "tension": 0.30, "notes": "Nova issuing crux assessment"}
+      ],
+      "convergence": {"percentage": 80.0, "status": "crux_declared"},
+      "crux": {
+        "status": "declared",
+        "id": "CRUX_BFI_E1_20260629",
+        "classification": "Beliefs",
+        "description": "Both auditors agree on what foundational importance means; diverge on whether divine necessary being qualifies. CT's ontological status is the locus of disagreement."
+      }
+    },
+    {
+      "tick_id": "tick-CA-R1",
+      "metric": "CA",
+      "metric_full": "Causal Attribution",
+      "round": 1,
+      "nodes": [
+        {"auditor": "Claude", "score": 4.5, "stance": "PRO", "bias_overhead": 0.50},
+        {"auditor": "Grok",   "score": 4.5, "stance": "ANTI", "bias_overhead": 0.40},
+        {"auditor": "Nova",   "score": null, "stance": "FAIRNESS", "bias_overhead": 0.30}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.05, "notes": "Instant convergence — genuine common ground on first-cause reasoning"},
+        {"pair": "Claude-Nova", "tension": 0.05, "notes": "Nova confirming"},
+        {"pair": "Grok-Nova",   "tension": 0.05, "notes": "Nova confirming"}
+      ],
+      "convergence": {"percentage": 100.0, "status": "converged"},
+      "crux": {"status": "none"},
+      "divergence_layer": "Beliefs",
+      "note": "CA most convergence-prone metric. Both lenses credit CT's causal framework partially."
+    },
+    {
+      "tick_id": "tick-IP-R1",
+      "metric": "IP",
+      "metric_full": "Intellectual Pedigree",
+      "round": 1,
+      "nodes": [
+        {"auditor": "Claude", "score": 7.0, "stance": "PRO", "bias_overhead": 0.50},
+        {"auditor": "Grok",   "score": 6.3, "stance": "ANTI", "bias_overhead": 0.40},
+        {"auditor": "Nova",   "score": null, "stance": "FAIRNESS", "bias_overhead": 0.30}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.20, "notes": "Both initially reading IP as historical lineage — deceptive early alignment"},
+        {"pair": "Claude-Nova", "tension": 0.10, "notes": "Nova observing"},
+        {"pair": "Grok-Nova",   "tension": 0.10, "notes": "Nova observing"}
+      ],
+      "convergence": {"percentage": 93.0, "status": "near_converged"},
+      "crux": {"status": "none"}
+    },
+    {
+      "tick_id": "tick-IP-R2",
+      "metric": "IP",
+      "metric_full": "Intellectual Pedigree",
+      "round": 2,
+      "nodes": [
+        {"auditor": "Claude", "score": 1.0, "stance": "PRO", "bias_overhead": 0.50},
+        {"auditor": "Grok",   "score": 5.2, "stance": "ANTI", "bias_overhead": 0.40},
+        {"auditor": "Nova",   "score": null, "stance": "FAIRNESS", "bias_overhead": 0.30}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.85, "notes": "Grok reframes IP to empirical traction — Claude follows and collapses"},
+        {"pair": "Claude-Nova", "tension": 0.40, "notes": "Nova detecting instability"},
+        {"pair": "Grok-Nova",   "tension": 0.25, "notes": "Grok holding new definition"}
+      ],
+      "convergence": {"percentage": 58.0, "status": "divergent"},
+      "crux": {"status": "potential"},
+      "divergence_layer": "Definitions",
+      "note": "KEY MOMENT: Grok redefines IP from historical lineage to empirical traction. Claude adopts Grok's framing and scores low. Definitions-layer reframe cascades through entire evaluation."
+    },
+    {
+      "tick_id": "tick-IP-R3",
+      "metric": "IP",
+      "metric_full": "Intellectual Pedigree",
+      "round": 3,
+      "nodes": [
+        {"auditor": "Claude", "score": 5.5, "stance": "PRO", "bias_overhead": 0.50},
+        {"auditor": "Grok",   "score": 3.8, "stance": "ANTI", "bias_overhead": 0.40},
+        {"auditor": "Nova",   "score": null, "stance": "FAIRNESS", "bias_overhead": 0.30}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.60, "notes": "Claude recovering — returning to historical lineage definition"},
+        {"pair": "Claude-Nova", "tension": 0.30, "notes": "Nova monitoring definitional instability"},
+        {"pair": "Grok-Nova",   "tension": 0.20, "notes": "Grok partially conceding historical claim"}
+      ],
+      "convergence": {"percentage": 83.0, "status": "converging"},
+      "crux": {"status": "potential"}
+    },
+    {
+      "tick_id": "tick-IP-R4",
+      "metric": "IP",
+      "metric_full": "Intellectual Pedigree",
+      "round": 4,
+      "nodes": [
+        {"auditor": "Claude", "score": 1.0, "stance": "PRO", "bias_overhead": 0.50},
+        {"auditor": "Grok",   "score": 4.1, "stance": "ANTI", "bias_overhead": 0.40},
+        {"auditor": "Nova",   "score": null, "stance": "FAIRNESS", "bias_overhead": 0.30}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.80, "notes": "Claude oscillates back to Grok's empirical frame — definition cycling"},
+        {"pair": "Claude-Nova", "tension": 0.45, "notes": "Nova preparing crux assessment"},
+        {"pair": "Grok-Nova",   "tension": 0.30, "notes": "Grok steady"}
+      ],
+      "convergence": {"percentage": 69.0, "status": "stalled"},
+      "crux": {"status": "potential"}
+    },
+    {
+      "tick_id": "tick-IP-R5",
+      "metric": "IP",
+      "metric_full": "Intellectual Pedigree",
+      "round": 5,
+      "nodes": [
+        {"auditor": "Claude", "score": 1.0, "stance": "PRO", "bias_overhead": 0.50},
+        {"auditor": "Grok",   "score": 4.7, "stance": "ANTI", "bias_overhead": 0.40},
+        {"auditor": "Nova",   "score": null, "stance": "FAIRNESS", "bias_overhead": 0.30}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.90, "notes": "No resolution — Crux declared"},
+        {"pair": "Claude-Nova", "tension": 0.50, "notes": "Nova issuing crux classification"},
+        {"pair": "Grok-Nova",   "tension": 0.35, "notes": "Nova issuing crux classification"}
+      ],
+      "convergence": {"percentage": 63.0, "status": "crux_declared"},
+      "crux": {
+        "status": "declared",
+        "id": "CRUX_IP_20260629",
+        "classification": "Definitions",
+        "description": "Auditors diverge at Definitions layer. Claude reads IP as historical philosophical lineage; Grok redefines as current empirical traction. Same CT evidence, different questions. Metric requires locked definition before scores are interpretable. See CRUX_IP_20260629.md."
+      }
+    },
+    {
+      "tick_id": "tick-MS-R1",
+      "metric": "MS",
+      "metric_full": "Moral Substance",
+      "round": 1,
+      "nodes": [
+        {"auditor": "Claude", "score": 6.5, "stance": "PRO", "bias_overhead": 0.50},
+        {"auditor": "Grok",   "score": 4.5, "stance": "ANTI", "bias_overhead": 0.40},
+        {"auditor": "Nova",   "score": null, "stance": "FAIRNESS", "bias_overhead": 0.30}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.55, "notes": "Claude reading MS as metaphysical grounding; Grok as measurable outcomes"},
+        {"pair": "Claude-Nova", "tension": 0.20, "notes": "Nova observing"},
+        {"pair": "Grok-Nova",   "tension": 0.15, "notes": "Nova observing"}
+      ],
+      "convergence": {"percentage": 80.0, "status": "moderate"},
+      "crux": {"status": "none"}
+    },
+    {
+      "tick_id": "tick-MS-R2",
+      "metric": "MS",
+      "metric_full": "Moral Substance",
+      "round": 2,
+      "nodes": [
+        {"auditor": "Claude", "score": 4.5, "stance": "PRO", "bias_overhead": 0.50},
+        {"auditor": "Grok",   "score": 3.0, "stance": "ANTI", "bias_overhead": 0.40},
+        {"auditor": "Nova",   "score": null, "stance": "FAIRNESS", "bias_overhead": 0.30}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.40, "notes": "Both moving toward center"},
+        {"pair": "Claude-Nova", "tension": 0.15, "notes": "Nova monitoring"},
+        {"pair": "Grok-Nova",   "tension": 0.15, "notes": "Nova monitoring"}
+      ],
+      "convergence": {"percentage": 85.0, "status": "converging"},
+      "crux": {"status": "none"}
+    },
+    {
+      "tick_id": "tick-MS-R3",
+      "metric": "MS",
+      "metric_full": "Moral Substance",
+      "round": 3,
+      "nodes": [
+        {"auditor": "Claude", "score": 3.0, "stance": "PRO", "bias_overhead": 0.50},
+        {"auditor": "Grok",   "score": 2.0, "stance": "ANTI", "bias_overhead": 0.40},
+        {"auditor": "Nova",   "score": null, "stance": "FAIRNESS", "bias_overhead": 0.30}
+      ],
+      "edges": [
+        {"pair": "Claude-Grok", "tension": 0.30, "notes": "Converging — MS resolves in E1 unlike H1"},
+        {"pair": "Claude-Nova", "tension": 0.10, "notes": "Nova confirming convergence"},
+        {"pair": "Grok-Nova",   "tension": 0.10, "notes": "Nova confirming convergence"}
+      ],
+      "convergence": {"percentage": 90.0, "status": "converged"},
+      "crux": {"status": "none"},
+      "note": "MS converged in E1 — the H1 oscillation (6.5→1.0→6.2→1.0) was stochastic, not structural. Richer identity context in E1 gave Claude more stable definitional footing."
+    }
+  ]
+}

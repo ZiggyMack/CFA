@@ -70,6 +70,198 @@ levers:
 behavioral_flags:
   admits_limits: true
 
+# Trinity Audit Scores — CT vs MdN Pilot
+# Source: CFA-ARMADA batch experiment, 2026-06-29
+# Auditors: Claude (PRO-CT, Teleological), Grok (ANTI-CT, Empirical), Nova (Fairness Monitor)
+# Models: claude-sonnet-4-6, grok-3, gpt-4o
+# Total runs: 17 (7 hardcoded identity + 10 external identity)
+# Recommended condition: external_identity (LITE files loaded from VUDU_NETWORK)
+# Note: MdN was the adversarial lens, not the subject. Symmetric MdN-as-subject run needed.
+trinity_scores:
+  experiment_id: "CFA-EXP1-BATCH-20260629"
+  session_ids:
+    golden:
+      - "132540"
+      - "135207"
+      - "141547"
+      - "143943"
+      - "150746"
+      - "153034"
+      - "155831"
+      - "162330"
+      - "164552"
+      - "170941"
+    control:
+      - "201637"
+      - "202404"
+      - "203230"
+      - "203925"
+      - "204727"
+      - "205545"
+      - "210256"
+      - "211053"
+      - "211906"
+      - "212612"
+
+  identity_condition: "external_identity"
+  score_audit_status: "VALIDATED — parser fixes applied (ADVOCACY_SCORE tag, last-match extraction, max_tokens=4096) before golden batch. 2/~280 extraction warnings in golden condition."
+
+  # Per-metric results (golden condition, 10 runs, final-round scores)
+  # Source: GOLDEN_BATCH_RESULTS_20260629.md
+  # divergence_layer: where Claude/Grok first diverge (DBEP framework)
+  metrics:
+    BFI:
+      full_name: "Beings, Foundational Importance"
+      claude_mean: 8.3
+      claude_sd: 0.52
+      claude_range: [7.2, 9.0]
+      grok_mean: 6.2
+      grok_sd: 1.14
+      grok_range: [4.0, 7.2]
+      spread: 2.1
+      convergence_pct: 79.0
+      avg_rounds: 5.0
+      combined_midpoint: 7.25
+      stability: "medium"
+      crux_rate: "1/10"
+      identity_delta_claude: 0.49
+      identity_delta_grok: -1.73
+      divergence_layer: "Beliefs"
+      notes: "Most contested by rounds (5.0 avg). Grok σ=1.14 reflects genuine philosophical variance — samples between 'architecture coherent but unverifiable' (~6.8) and 'these are not testable claims' (~4.0). Identity drops Grok sharply; Claude slightly up."
+
+    CA:
+      full_name: "Causal Attribution"
+      claude_mean: 7.4
+      claude_sd: 0.51
+      claude_range: [6.6, 8.1]
+      grok_mean: 5.2
+      grok_sd: 0.73
+      grok_range: [4.2, 6.3]
+      spread: 2.1
+      convergence_pct: 78.9
+      avg_rounds: 4.8
+      combined_midpoint: 6.3
+      stability: "medium"
+      crux_rate: "0/10"
+      identity_delta_claude: -0.08
+      identity_delta_grok: -2.44
+      divergence_layer: "Beliefs"
+      notes: "Largest identity gap for Grok (Δ=-2.44). Empirical lens most effective here — CT's causal claims (final causality, participation) are precisely what empiricism targets. No crux declarations despite wide spread; auditors accept the impasse without formalizing it."
+
+    IP:
+      full_name: "Intellectual Pedigree"
+      claude_mean: 8.2
+      claude_sd: 0.21
+      claude_range: [7.8, 8.5]
+      grok_mean: 7.2
+      grok_sd: 0.34
+      grok_range: [6.4, 7.5]
+      spread: 1.0
+      convergence_pct: 90.4
+      avg_rounds: 2.8
+      combined_midpoint: 7.7
+      stability: "high"
+      crux_rate: "4/10"
+      identity_delta_claude: -1.09
+      identity_delta_grok: -1.87
+      divergence_layer: "Definitions"
+      notes: "Most stable score ranges (Claude σ=0.21, Grok σ=0.34) despite highest crux rate (4/10). Control baseline 9.2/9.1 — 800 years of Aquinas/Aristotle is agreed fact for naked models. Identity forces definitional specificity, creating a persistent boundary: 'pedigree = historical depth' (Claude) vs 'pedigree = empirical traction' (Grok). Crux at 90.4% convergence is consistent, not unstable."
+
+    ES:
+      full_name: "Explanatory Scope"
+      claude_mean: 7.5
+      claude_sd: 0.36
+      claude_range: [7.0, 8.1]
+      grok_mean: 6.3
+      grok_sd: 0.45
+      grok_range: [5.5, 7.1]
+      spread: 1.2
+      convergence_pct: 88.1
+      avg_rounds: 3.7
+      combined_midpoint: 6.9
+      stability: "medium"
+      crux_rate: "2/10"
+      identity_delta_claude: -0.27
+      identity_delta_grok: -1.37
+      divergence_layer: "Expectations"
+      notes: "Auditors share concept of explanation but expect different evidence — Claude expects coherent metaphysical coverage, Grok expects falsifiable predictions. CT scope appears wide through teleological lens, narrow through empirical lens."
+
+    LS:
+      full_name: "Logical Soundness"
+      claude_mean: 7.6
+      claude_sd: 0.57
+      claude_range: [6.6, 8.5]
+      grok_mean: 6.4
+      grok_sd: 0.41
+      grok_range: [5.9, 7.3]
+      spread: 1.2
+      convergence_pct: 87.9
+      avg_rounds: 4.7
+      combined_midpoint: 7.0
+      stability: "medium"
+      crux_rate: "0/10"
+      identity_delta_claude: 1.35
+      identity_delta_grok: -0.20
+      divergence_layer: "Beliefs"
+      notes: "Only metric where identity RAISES Claude (+1.35). The 5-Part Scaffold's systematic approach (counterweight table, edge case ledger) may provide genuine analytical value for logical analysis. Control scores lowest here (6.3/6.6) — without scaffolding, models find CT's logical structure less compelling."
+
+    MS:
+      full_name: "Moral Substance"
+      claude_mean: 7.5
+      claude_sd: 0.47
+      claude_range: [6.9, 8.2]
+      grok_mean: 6.0
+      grok_sd: 0.64
+      grok_range: [4.8, 6.8]
+      spread: 1.4
+      convergence_pct: 85.6
+      avg_rounds: 4.5
+      combined_midpoint: 6.75
+      stability: "medium"
+      crux_rate: "1/10"
+      identity_delta_claude: -0.96
+      identity_delta_grok: -2.43
+      divergence_layer: "Definitions"
+      notes: "Base models agree strongly on CT ethics (control 8.4/8.5). Identity drops Grok -2.43 (2nd largest gap) — empirical lens challenges CT's moral grounding effectively. Preliminary H1 Crux (Claude oscillating 6.5→1.0) did not reproduce in golden batch — confirmed stochastic, not structural."
+
+    PS:
+      full_name: "Practical Significance"
+      claude_mean: 7.3
+      claude_sd: 0.35
+      claude_range: [6.9, 8.1]
+      grok_mean: 6.4
+      grok_sd: 0.56
+      grok_range: [5.3, 7.2]
+      spread: 0.9
+      convergence_pct: 90.8
+      avg_rounds: 2.6
+      combined_midpoint: 6.85
+      stability: "medium"
+      crux_rate: "0/10"
+      identity_delta_claude: -0.68
+      identity_delta_grok: -1.53
+      divergence_layer: "Beliefs"
+      notes: "Narrowest spread (0.9) and fastest convergence after IP (2.6 rounds, 90.8%). Both lenses credit CT's historical influence on ethics, law, and culture. Diverge on what CT delivers in contemporary practice."
+
+  # Batch-level summary (golden condition, 10 runs)
+  batch_summary:
+    avg_convergence_pct: 85.8
+    avg_convergence_sd: 2.3
+    avg_rounds: 4.0
+    avg_rounds_sd: 0.4
+    total_crux_declarations: 44
+    avg_crux_per_run: 4.4
+    extraction_warnings: "2 of ~280 calls"
+    control_avg_convergence_pct: 97.9
+    control_avg_rounds: 1.8
+    key_findings:
+      - "Identity creates debate, not inflation — Claude scores LOWER with identity on 5/7 metrics"
+      - "Identity deflates Grok 1.2–2.4 pts — ANTI-CT calibration does real analytical work"
+      - "Base model priors favor CT (6.3–9.2 without identity) — a named training data bias"
+      - "Spread IS the signal — golden 0.9–2.1 vs control ~0.0"
+      - "LS only metric where identity raises Claude (+1.35) — possible 5-Part Scaffold analytical value"
+    symmetric_experiment_needed: "MdN-as-subject (Claude PRO-MdN, Grok ANTI-MdN) required for symmetric MdN profile"
+
 # Calculated values (for verification)
 calculated:
   axiom_count: 7

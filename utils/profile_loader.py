@@ -232,6 +232,29 @@ def get_ypa_data(worldview_name: str) -> Dict[str, Any]:
         }
 
 
+def get_trinity_scores(worldview_name: str) -> Optional[Dict[str, Any]]:
+    """
+    Get Trinity audit scores for a worldview from canonical .yaml file.
+
+    Returns the full trinity_scores block (metrics, batch_summary, session_ids)
+    or None if no trinity data exists for this worldview.
+
+    Used by pages/console.py Trinity Audit tab.
+    """
+    yaml_filename = f"{_normalize_worldview_name(worldview_name)}.yaml"
+    yaml_filepath = PROFILES_DIR / yaml_filename
+
+    if not yaml_filepath.exists():
+        return None
+
+    try:
+        with open(yaml_filepath, 'r', encoding='utf-8') as f:
+            data = yaml.safe_load(f)
+        return data.get("trinity_scores", None)
+    except (yaml.YAMLError, Exception):
+        return None
+
+
 def list_available_profiles() -> List[str]:
     """
     List all available worldview profiles

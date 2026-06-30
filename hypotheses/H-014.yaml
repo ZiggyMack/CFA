@@ -1,0 +1,257 @@
+# SEALED HYPOTHESIS REGISTRY — H-014
+#
+# This file is a pre-registration artifact. Its epistemic value depends entirely
+# on immutability after sealing. DO NOT EDIT after the SHA-256 hash is recorded
+# in MANIFEST.yaml. If you need to record a post-experiment verdict, create
+# H-014.result.yaml instead — the posterior never overwrites the prior.
+#
+# CURRENT STATUS: DRAFT — not yet sealed. See notes.seal_blocker before finalizing.
+# ---
+
+id: H-014
+name: Identity independently creates structured disagreement
+date_registered: "2026-06-30"
+sealed: true
+# sha256 is stored externally in MANIFEST.yaml only — self-referential hash breaks integrity
+
+authors:
+  - Ziggy (ZiggyMack)
+  - Repo Claude
+  - CFA Claude (claude-sonnet-4-6)
+  - Nova
+  - Opus (claude-opus-4-8, framework and sealing protocol)
+
+confidence_prior: 0.70
+confidence_rationale: >
+  Phase 1 produced a robust bundle effect: golden condition (identity + scaffold +
+  calibration) generated 0.9–2.1 avg spread across CT and MdN batches; control
+  (no bundle) collapsed to ~0.0. The effect is real and replicable. What remains
+  undecomposed is which component of the bundle drives it. Prior confidence of 0.70
+  that identity is the independent contributor reflects: (a) the conceptual
+  plausibility — LITE files change what definitions are available, expanding the
+  possibility manifold before scoring begins; (b) uncertainty about scaffold
+  contribution — the 5-Part structure enforces adversarial pressure that may itself
+  produce spread without identity loading.
+
+hypotheses:
+  H0:
+    label: Scaffold hypothesis
+    claim: >
+      The deliberation scaffold (5-Part structure + adversarial advocacy framing)
+      is the primary driver of spread. Identity loading (LITE files) contributes
+      minimally when scaffold is held constant.
+    prediction:
+      scaffold_only_spread: "≥0.70"
+      identity_only_spread: "≤0.50"
+
+  H1:
+    label: Identity hypothesis (target)
+    claim: >
+      Identity loading (LITE files) independently creates structured disagreement,
+      contributing meaningfully to spread above and beyond what scaffold alone
+      produces. This is the pre-committed hypothesis.
+    prediction:
+      identity_only_spread: "1.0–2.0"
+      scaffold_only_spread: "<0.50"
+      combined_expected: additive
+
+  H2:
+    label: Interaction hypothesis
+    claim: >
+      An interaction term dominates: identity and scaffold together produce spread
+      that neither produces alone. Both main effects are small; the interaction is
+      large. Super-additive structure.
+    prediction:
+      interaction_vs_main_effects: ">2x either main effect while both main effects <0.50"
+
+target_hypothesis: H1
+
+predictions:
+  # All predictions are against the 8-condition factorial (see experiment_design).
+  # Numbers are pre-committed and cannot be adjusted after sealing.
+  identity_only:
+    spread: "1.0–2.0"
+    rationale: >
+      If identity independently expands the possibility manifold (DBEP framework:
+      LITE files make additional definitions available before scoring), the
+      identity-only condition should produce meaningful auditor divergence even
+      without scaffold structure.
+
+  scaffold_only:
+    spread: "<0.50"
+    rationale: >
+      If scaffold alone cannot produce disagreement without identity loading,
+      spread should remain near the control baseline. Adversarial framing without
+      LITE files leaves both auditors sampling from the same narrow default
+      definition space.
+
+  calibration_only:
+    spread: "<0.30"
+    rationale: >
+      Calibration (metric anchors and scoring rubric) should reduce variance, not
+      create it. If calibration-only produces near-zero spread, it confirms that
+      calibration is a variance-suppressor, not a driver.
+
+  all_three_combined:
+    spread: "1.5–3.0"
+    rationale: >
+      The golden condition should exceed identity-only if effects are additive.
+      Established empirically: Phase 1 CT golden 0.9–2.1 per metric.
+
+  control_baseline:
+    spread: "~0.0"
+    established_by: >
+      Phase 1 CT control batch (10 runs, 97.9% convergence) and Phase 1 MdN
+      control batch (10 runs, 99.0% convergence). Control is the zero point.
+
+falsifiers:
+  - id: F-1
+    condition: "scaffold_only spread ≥ 0.70 AND identity_only spread ≤ 0.50"
+    verdict: "Falsifies H1 — scaffold is the primary driver (H0 supported)"
+
+  - id: F-2
+    condition: "interaction term >2× either main effect while both main effects <0.50"
+    verdict: "Falsifies H1 — interaction dominates (H2 supported)"
+
+  - id: F-3
+    condition: "identity_only spread <0.50 in both CT and MdN domain replications"
+    verdict: "Falsifies H1 across domains — identity is not the independent contributor"
+
+prior_evidence:
+  - source: "CFA-EXP1-BATCH-20260629 (CT as subject)"
+    n_runs: 20
+    conditions: [CT_golden, CT_control]
+    finding: >
+      Golden avg spread 0.9–2.1 per metric across 10 runs; control avg spread ~0.0.
+      Bundle effect confirmed. Cannot decompose: golden varies identity + scaffold +
+      calibration simultaneously against no-bundle control.
+
+  - source: "CFA-EXP1-BATCH-20260630 (MdN as subject)"
+    n_runs: 20
+    conditions: [MdN_golden, MdN_control]
+    finding: >
+      Replicates CT pattern across domain. Golden 86.2% conv; control 99.0% conv.
+      Same decomposition limitation applies — bundle is not factorial.
+
+  - source: "DBEP framework (2026-06-29)"
+    type: theoretical_prior
+    finding: >
+      Identity loading (LITE files) operates at the Possibility Space layer — it
+      expands which definitions are available before scoring begins. This mechanism
+      predicts identity contributes independently of scaffold structure.
+
+experiment_design:
+  name: "Trinity² Factorial (8-condition)"
+  experiment_ref: Trinity²
+  factors: [identity, calibration, scaffold]
+  n_conditions: 8
+  spec_author: Nova (2026-06-30)
+
+  # Component toggle definitions — what each factor controls in the prompt
+  # (Nova, 2026-06-30)
+  component_toggles:
+    identity:
+      true:
+        load_lite_identity_files: true
+        load_role_lens: true
+        role_identity_in_system_prompt: true
+      false:
+        load_lite_identity_files: false
+        load_role_lens: false
+        use_neutral_auditor_identity: true
+
+    calibration:
+      true:
+        assign_directional_stance: true
+        use_PRO_ANTI_pairing: true
+        include_forward_reverse_role_swap: true
+      false:
+        assign_directional_stance: false
+        use_PRO_ANTI_pairing: false
+        auditors_score_as_neutral_calibrators: true
+
+    scaffold:
+      true:
+        load_5_part_scaffold: true
+        require_counterweight_table: true
+        require_edge_case_ledger: true
+        require_ADVOCACY_SCORE_tag: true
+      false:
+        load_5_part_scaffold: false
+        require_counterweight_table: false
+        require_edge_case_ledger: false
+        require_ADVOCACY_SCORE_tag: true  # always required — extraction plumbing, not treatment
+
+  # ADVOCACY_SCORE tag is required in EVERY condition regardless of scaffold setting.
+  # It is parser extraction plumbing, not part of the scaffold treatment. (Nova, 2026-06-30)
+  parser_invariants:
+    require_ADVOCACY_SCORE_tag: true  # all 8 conditions
+
+  # Lever definitions remain invariant across all conditions.
+  # The worldview changes; the ruler does not. (Nova, 2026-06-30)
+  lever_invariant: true
+
+  conditions:
+    C1_control:
+      identity: false
+      calibration: false
+      scaffold: false
+      label: "Control baseline"
+      notes: "Established by Phase 1 control batches (CT: 97.9% conv; MdN: 99.0% conv)"
+
+    C2_identity_only:
+      identity: true
+      calibration: false
+      scaffold: false
+      label: "Identity only"
+
+    C3_calibration_only:
+      identity: false
+      calibration: true
+      scaffold: false
+      label: "Calibration only"
+
+    C4_scaffold_only:
+      identity: false
+      calibration: false
+      scaffold: true
+      label: "Scaffold only"
+
+    C5_identity_plus_calibration:
+      identity: true
+      calibration: true
+      scaffold: false
+      label: "Identity + Calibration"
+
+    C6_identity_plus_scaffold:
+      identity: true
+      calibration: false
+      scaffold: true
+      label: "Identity + Scaffold"
+
+    C7_calibration_plus_scaffold:
+      identity: false
+      calibration: true
+      scaffold: true
+      label: "Calibration + Scaffold"
+
+    C8_full_golden:
+      identity: true
+      calibration: true
+      scaffold: true
+      label: "Full bundle (golden)"
+      notes: "Established by Phase 1 golden batches (CT: 85.8% conv; MdN: 86.2% conv)"
+
+notes:
+  immutability_protocol: >
+    Once sealed (sha256 recorded in MANIFEST.yaml), this file must not be edited.
+    Post-experiment adjudication belongs in hypotheses/results/H-014.result.yaml,
+    which references this file by hash. The posterior never overwrites the prior.
+    (Opus, 2026-06-30)
+
+  adjudication_protocol: >
+    The result file comparison is intentionally dumb: pull sealed prediction numbers,
+    pull Trinity² output numbers, report side-by-side, mark pass/fail against
+    pre-committed thresholds. No automatic adjudication. A human reads the diff
+    and writes the posterior. The machine makes the comparison unavoidable and
+    un-fudgeable, not the judgment. (Opus, 2026-06-30)

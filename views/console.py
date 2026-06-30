@@ -1,4 +1,4 @@
-"""
+﻿"""
 CFA v5.0 - Console (ENHANCED VERSION)
 - Card-based layout with Ledger aesthetic
 - New visualizations: Convergence Radar, Sensitivity Heatmap, Battle Cards
@@ -9,6 +9,8 @@ CFA v5.0 - Console (ENHANCED VERSION)
 import streamlit as st
 import pandas as pd
 import json
+import re
+import glob
 import sys
 from pathlib import Path
 
@@ -17,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from utils.calculations import ypa_scenario_scores, guardrail_lever_coupling, guardrail_bfi_sensitivity, guardrail_weight_inversion, symmetry_audit, PF_TYPES
 from utils.visualizations import create_lever_comparison_chart, create_ypa_trinity_chart
 from utils.colors import CFA_COLORS, get_framework_color, get_preset_color
-from utils.profile_loader import get_ypa_data
+from utils.profile_loader import get_ypa_data, get_trinity_scores
 
 # Import new components
 from components.cards import (
@@ -30,6 +32,58 @@ from components.charts import (
     create_guardrail_grid, create_scenario_comparison_bars,
     create_lever_pie_charts, create_ypa_gauge, create_lever_radar_comparison
 )
+
+@st.cache_data(ttl=300)
+def load_crux_data(worldview_prefix):
+    """Scan golden session JSONs and return unique declared crux events for a batch.
+
+    Deduplicates by crux ID so continuation ticks don't inflate counts.
+    Excludes demo/non-standard files by checking the filename key is all digits.
+    """
+    data_dir = Path(__file__).resolve().parent.parent / "dashboard" / "SMV" / "src" / "data"
+    cruxes = []
+    prefix_str = f"scenario_{worldview_prefix}_"
+    for fpath in glob.glob(str(data_dir / f"scenario_{worldview_prefix}_*.json")):
+        try:
+            # The filename key (e.g. "132540") must be all digits to be a real session;
+            # demo files like "E1_20260629" contain letters and are skipped.
+            fname_key = Path(fpath).stem[len(prefix_str):]
+            if not fname_key.isdigit():
+                continue
+            with open(fpath, encoding="utf-8") as f:
+                scenario = json.load(f)
+            session_id = str(scenario.get("session_id", fname_key))
+            condition = scenario.get("identity_condition", "unknown")
+            seen_ids = set()  # deduplicate within session by crux ID
+            for tick in scenario.get("ticks", []):
+                crux = tick.get("crux", {})
+                if crux.get("status") != "declared":
+                    continue
+                crux_id = crux.get("id") or f"{fname_key}_{tick.get('metric')}"
+                if crux_id in seen_ids:
+                    continue
+                seen_ids.add(crux_id)
+                narrative = tick.get("claude_narrative", "")
+                deadlock = None
+                dm = re.search(r'\*{0,2}Deadlock basis[:\s]*\*{0,2}\s*(.+?)(?:\n\n|\n(?=\*\*)|\Z)',
+                               narrative, re.IGNORECASE | re.DOTALL)
+                if dm:
+                    deadlock = dm.group(1).replace('\n', ' ').strip()[:300]
+                cruxes.append({
+                    "session_id": fname_key,
+                    "condition": condition,
+                    "metric": tick.get("metric"),
+                    "metric_full": tick.get("metric_full"),
+                    "round": tick.get("round"),
+                    "classification": crux.get("classification", "unclassified"),
+                    "description": crux.get("description", ""),
+                    "deadlock": deadlock,
+                    "claude_score": next((n["score"] for n in tick.get("nodes", []) if n.get("auditor") == "Claude"), None),
+                    "grok_score": next((n["score"] for n in tick.get("nodes", []) if n.get("auditor") == "Grok"), None),
+                })
+        except Exception:
+            continue
+    return cruxes
 
 # Backward compatibility: Load frameworks from profiles
 MDN_DEFAULT = get_ypa_data("Methodological Naturalism")
@@ -327,7 +381,7 @@ def render():
     with col2:
         if st.button("🏠 Home"):
             st.session_state.page = 'landing'
-            st.experimental_rerun()
+            st.rerun()
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown('**"All Named, All Priced" — Interactive Comparison Tool**')
@@ -354,7 +408,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Instrumental"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Weighted_1.2x"
-                st.experimental_rerun()  # Immediately reflect changes in indicator
+                st.rerun()  # Immediately reflect changes in indicator
             st.caption("MdN-optimized\nPredictive power focus")
 
             if st.button("🙏 Seeker Mode", use_container_width=True):
@@ -362,7 +416,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Composite_70_30"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
-                st.experimental_rerun()  # Immediately reflect changes in indicator
+                st.rerun()  # Immediately reflect changes in indicator
             st.caption("CT-leaning\nMeaning-first")
 
         with col2:
@@ -371,7 +425,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Holistic_50_50"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
-                st.experimental_rerun()  # Immediately reflect changes in indicator
+                st.rerun()  # Immediately reflect changes in indicator
             st.caption("Balanced bridge\nEqual weighting")
 
             if st.button("👿 Zealot Mode", use_container_width=True):
@@ -379,7 +433,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Holistic_50_50"
                 st.session_state["sidebar_fallibilism"] = "OFF"
                 st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
-                st.experimental_rerun()  # Immediately reflect changes in indicator
+                st.rerun()  # Immediately reflect changes in indicator
             st.caption("CT-optimized\nExistential-first")
 
         st.markdown("---")
@@ -407,7 +461,7 @@ def render():
         # Update session state and rerun if changed
         if audit_mode != st.session_state.get("audit_mode"):
             st.session_state["audit_mode"] = audit_mode
-            st.experimental_rerun()
+            st.rerun()
 
         st.markdown("---")
 
@@ -430,7 +484,62 @@ def render():
         new_include_crux = (include_crux == "Include")
         if new_include_crux != st.session_state.get("include_crux"):
             st.session_state["include_crux"] = new_include_crux
-            st.experimental_rerun()
+            st.rerun()
+
+        st.markdown("---")
+        st.markdown("**Head-to-Head Pairings:**")
+        st.caption("*Sets both A & B in one click*")
+        pair_col1, pair_col2 = st.columns(2)
+        with pair_col1:
+            if st.button("📕 CT  vs  📘 MdN", key="pair_ct_mdn", use_container_width=True, help="Load CT → A, MdN → B"):
+                # CT → A
+                st.session_state["fa_name"] = CT_DEFAULT["name"]
+                st.session_state["fa_ax"]  = CT_DEFAULT["bf_i"]["axioms"]
+                st.session_state["fa_db"]  = CT_DEFAULT["bf_i"]["debts"]
+                st.session_state["fa_ad"]  = True
+                st.session_state["fa_cci"] = CT_DEFAULT["levers"]["CCI"]
+                st.session_state["fa_edb"] = CT_DEFAULT["levers"]["EDB"]
+                st.session_state["fa_pfi"] = CT_DEFAULT["levers"]["PF_instrumental"]
+                st.session_state["fa_pfe"] = CT_DEFAULT["levers"]["PF_existential"]
+                st.session_state["fa_ar"]  = CT_DEFAULT["levers"]["AR"]
+                st.session_state["fa_mg"]  = CT_DEFAULT["levers"]["MG"]
+                # MdN → B
+                st.session_state["fb_name"] = MDN_DEFAULT["name"]
+                st.session_state["fb_ax"]  = MDN_DEFAULT["bf_i"]["axioms"]
+                st.session_state["fb_db"]  = MDN_DEFAULT["bf_i"]["debts"]
+                st.session_state["fb_ad"]  = True
+                st.session_state["fb_cci"] = MDN_DEFAULT["levers"]["CCI"]
+                st.session_state["fb_edb"] = MDN_DEFAULT["levers"]["EDB"]
+                st.session_state["fb_pfi"] = MDN_DEFAULT["levers"]["PF_instrumental"]
+                st.session_state["fb_pfe"] = MDN_DEFAULT["levers"]["PF_existential"]
+                st.session_state["fb_ar"]  = MDN_DEFAULT["levers"]["AR"]
+                st.session_state["fb_mg"]  = MDN_DEFAULT["levers"]["MG"]
+                st.rerun()
+        with pair_col2:
+            if st.button("📘 MdN  vs  📕 CT", key="pair_mdn_ct", use_container_width=True, help="Load MdN → A, CT → B"):
+                # MdN → A
+                st.session_state["fa_name"] = MDN_DEFAULT["name"]
+                st.session_state["fa_ax"]  = MDN_DEFAULT["bf_i"]["axioms"]
+                st.session_state["fa_db"]  = MDN_DEFAULT["bf_i"]["debts"]
+                st.session_state["fa_ad"]  = True
+                st.session_state["fa_cci"] = MDN_DEFAULT["levers"]["CCI"]
+                st.session_state["fa_edb"] = MDN_DEFAULT["levers"]["EDB"]
+                st.session_state["fa_pfi"] = MDN_DEFAULT["levers"]["PF_instrumental"]
+                st.session_state["fa_pfe"] = MDN_DEFAULT["levers"]["PF_existential"]
+                st.session_state["fa_ar"]  = MDN_DEFAULT["levers"]["AR"]
+                st.session_state["fa_mg"]  = MDN_DEFAULT["levers"]["MG"]
+                # CT → B
+                st.session_state["fb_name"] = CT_DEFAULT["name"]
+                st.session_state["fb_ax"]  = CT_DEFAULT["bf_i"]["axioms"]
+                st.session_state["fb_db"]  = CT_DEFAULT["bf_i"]["debts"]
+                st.session_state["fb_ad"]  = True
+                st.session_state["fb_cci"] = CT_DEFAULT["levers"]["CCI"]
+                st.session_state["fb_edb"] = CT_DEFAULT["levers"]["EDB"]
+                st.session_state["fb_pfi"] = CT_DEFAULT["levers"]["PF_instrumental"]
+                st.session_state["fb_pfe"] = CT_DEFAULT["levers"]["PF_existential"]
+                st.session_state["fb_ar"]  = CT_DEFAULT["levers"]["AR"]
+                st.session_state["fb_mg"]  = CT_DEFAULT["levers"]["MG"]
+                st.rerun()
 
         st.markdown("---")
         st.markdown("**Pre-Audited Frameworks:**")
@@ -480,7 +589,7 @@ def render():
                     st.session_state["fa_ar"] = 7.0
                     st.session_state["fa_mg"] = 4.0
                     st.success("✅ MdN → Framework A!")
-                    st.experimental_rerun()
+                    st.rerun()
 
             with load_col2:
                 if st.button("→ Load to B", key="load_mdn_b", use_container_width=True):
@@ -495,7 +604,7 @@ def render():
                     st.session_state["fb_ar"] = 7.0
                     st.session_state["fb_mg"] = 4.0
                     st.success("✅ MdN → Framework B!")
-                    st.experimental_rerun()
+                    st.rerun()
 
         elif preset_key == "ct":
             st.info("**Classical Theism**\n\nTraditional monotheistic worldview. Audited by Claude + Grok with 98% convergence.")
@@ -516,7 +625,7 @@ def render():
                     st.session_state["fa_ar"] = 8.5
                     st.session_state["fa_mg"] = 8.5
                     st.success("✅ CT → Framework A!")
-                    st.experimental_rerun()
+                    st.rerun()
 
             with load_col2:
                 if st.button("→ Load to B", key="load_ct_b", use_container_width=True):
@@ -531,7 +640,7 @@ def render():
                     st.session_state["fb_ar"] = 8.5
                     st.session_state["fb_mg"] = 8.5
                     st.success("✅ CT → Framework B!")
-                    st.experimental_rerun()
+                    st.rerun()
 
         elif preset_key == "coming":
             st.warning(f"**{selected_preset.replace('🔜 ', '')}**\n\nAudit in progress. Check back soon!")
@@ -564,7 +673,7 @@ def render():
     # Sync back to session state
     if lever_parity != st.session_state.get("sidebar_lever_parity"):
         st.session_state["sidebar_lever_parity"] = lever_parity
-        st.experimental_rerun()
+        st.rerun()
 
     # PF-Type selectbox
     current_pf_idx = PF_TYPES.index(st.session_state.get("sidebar_pf_type", "Holistic_50_50"))
@@ -579,7 +688,7 @@ def render():
     # Sync back to session state
     if pf_type != st.session_state.get("sidebar_pf_type"):
         st.session_state["sidebar_pf_type"] = pf_type
-        st.experimental_rerun()
+        st.rerun()
 
     # Fallibilism-Bonus selectbox
     fall_options = ["ON", "OFF"]
@@ -595,7 +704,7 @@ def render():
     # Sync back to session state
     if fall_bonus != st.session_state.get("sidebar_fallibilism"):
         st.session_state["sidebar_fallibilism"] = fall_bonus
-        st.experimental_rerun()
+        st.rerun()
 
     # BFI Debt Weight selectbox
     # Normalize "Heavier_1.2x" to "Weighted_1.2x" for display consistency
@@ -615,7 +724,7 @@ def render():
     # Sync back to session state
     if bfi_weight != st.session_state.get("sidebar_bfi_weight"):
         st.session_state["sidebar_bfi_weight"] = bfi_weight
-        st.experimental_rerun()
+        st.rerun()
 
     st.sidebar.markdown("---")
 
@@ -628,7 +737,7 @@ def render():
             if "config" in run:
                 if st.sidebar.button("✅ Apply", key="apply_sidebar"):
                     apply_loaded_run(run)
-                    st.experimental_rerun()
+                    st.rerun()
         except:
             st.sidebar.error("Invalid file")
 
@@ -648,6 +757,18 @@ def render():
         st.json(cfg)
 
     # FRAMEWORK EDITORS
+    swap_col, _ = st.columns([1, 5])
+    with swap_col:
+        if st.button("↔ Swap A & B", key="swap_ab_btn", help="Swap all Framework A and B values"):
+            keys = ["name", "ax", "db", "ad", "cci", "edb", "pfi", "pfe", "ar", "mg"]
+            for k in keys:
+                fa_k, fb_k = f"fa_{k}", f"fb_{k}"
+                fa_val = st.session_state.get(fa_k)
+                fb_val = st.session_state.get(fb_k)
+                st.session_state[fa_k] = fb_val
+                st.session_state[fb_k] = fa_val
+            st.rerun()
+
     col1, col2 = st.columns(2)
 
     # FRAMEWORK A
@@ -666,7 +787,7 @@ def render():
                         st.session_state.fa_ax = custom['axioms']
                         st.session_state.fa_db = custom['debts']
                         del st.session_state['custom_framework_ready']
-                        st.experimental_rerun()
+                        st.rerun()
             
             fa_axioms = st.number_input("Axioms", min_value=1, max_value=30, key="fa_ax")
             fa_debts = st.number_input("Debts", min_value=0, max_value=30, key="fa_db")
@@ -676,7 +797,7 @@ def render():
                 # Pass framework name for smart navigation
                 st.session_state.ledger_nav_target = st.session_state.get("fa_name", "Methodological Naturalism")
                 st.session_state.page = 'brute_ledger'
-                st.experimental_rerun()
+                st.rerun()
         
         # PER-FRAMEWORK PRESET BUTTONS (ABOVE SLIDERS - WORKING POSITION)
         st.markdown("**⚡ Quick Adjust:**")
@@ -685,12 +806,12 @@ def render():
             if st.button("⚡ MAX", key="fa_max_btn", help="Set all to 10.0"):
                 for k in ["fa_cci", "fa_edb", "fa_pfi", "fa_pfe", "fa_ar", "fa_mg"]:
                     st.session_state[k] = 10.0
-                st.experimental_rerun()
+                st.rerun()
         with preset_a[1]:
             if st.button("⚖️ MID", key="fa_mid_btn", help="Set all to 5.0"):
                 for k in ["fa_cci", "fa_edb", "fa_pfi", "fa_pfe", "fa_ar", "fa_mg"]:
                     st.session_state[k] = 5.0
-                st.experimental_rerun()
+                st.rerun()
         with preset_a[2]:
             if st.button("🔄 RESET", key="fa_reset_btn", help="Reset to MdN"):
                 st.session_state["fa_cci"] = MDN_DEFAULT["levers"]["CCI"]
@@ -699,12 +820,12 @@ def render():
                 st.session_state["fa_pfe"] = MDN_DEFAULT["levers"]["PF_existential"]
                 st.session_state["fa_ar"] = MDN_DEFAULT["levers"]["AR"]
                 st.session_state["fa_mg"] = MDN_DEFAULT["levers"]["MG"]
-                st.experimental_rerun()
+                st.rerun()
         with preset_a[3]:
             if st.button("🚫 MIN", key="fa_min_btn", help="Set all to 0.0"):
                 for k in ["fa_cci", "fa_edb", "fa_pfi", "fa_pfe", "fa_ar", "fa_mg"]:
                     st.session_state[k] = 0.0
-                st.experimental_rerun()
+                st.rerun()
         
         st.markdown("---")
         
@@ -745,7 +866,7 @@ def render():
                         st.session_state.fb_ax = custom['axioms']
                         st.session_state.fb_db = custom['debts']
                         del st.session_state['custom_framework_ready']
-                        st.experimental_rerun()
+                        st.rerun()
             
             fb_axioms = st.number_input("Axioms", min_value=1, max_value=30, key="fb_ax")
             fb_debts = st.number_input("Debts", min_value=0, max_value=30, key="fb_db")
@@ -755,7 +876,7 @@ def render():
                 # Pass framework name for smart navigation
                 st.session_state.ledger_nav_target = st.session_state.get("fb_name", "Classical Theism")
                 st.session_state.page = 'brute_ledger'
-                st.experimental_rerun()
+                st.rerun()
         
         # PER-FRAMEWORK PRESET BUTTONS (ABOVE SLIDERS - WORKING POSITION)
         st.markdown("**⚡ Quick Adjust:**")
@@ -764,12 +885,12 @@ def render():
             if st.button("⚡ MAX", key="fb_max_btn", help="Set all to 10.0"):
                 for k in ["fb_cci", "fb_edb", "fb_pfi", "fb_pfe", "fb_ar", "fb_mg"]:
                     st.session_state[k] = 10.0
-                st.experimental_rerun()
+                st.rerun()
         with preset_b[1]:
             if st.button("⚖️ MID", key="fb_mid_btn", help="Set all to 5.0"):
                 for k in ["fb_cci", "fb_edb", "fb_pfi", "fb_pfe", "fb_ar", "fb_mg"]:
                     st.session_state[k] = 5.0
-                st.experimental_rerun()
+                st.rerun()
         with preset_b[2]:
             if st.button("🔄 RESET", key="fb_reset_btn", help="Reset to CT"):
                 st.session_state["fb_cci"] = CT_DEFAULT["levers"]["CCI"]
@@ -778,12 +899,12 @@ def render():
                 st.session_state["fb_pfe"] = CT_DEFAULT["levers"]["PF_existential"]
                 st.session_state["fb_ar"] = CT_DEFAULT["levers"]["AR"]
                 st.session_state["fb_mg"] = CT_DEFAULT["levers"]["MG"]
-                st.experimental_rerun()
+                st.rerun()
         with preset_b[3]:
             if st.button("🚫 MIN", key="fb_min_btn", help="Set all to 0.0"):
                 for k in ["fb_cci", "fb_edb", "fb_pfi", "fb_pfe", "fb_ar", "fb_mg"]:
                     st.session_state[k] = 0.0
-                st.experimental_rerun()
+                st.rerun()
         
         st.markdown("---")
         
@@ -865,7 +986,7 @@ def render():
     ), unsafe_allow_html=True)
 
     # TABS (Enhanced with new visualizations)
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(["📈 Visual", "⚔️ Battle Card", "📋 Details", "🛡️ Guardrails", "🔄 Symmetry"])
+    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["📈 Visual", "⚔️ Battle Card", "📋 Details", "🛡️ Guardrails", "🔄 Symmetry", "🔬 Trinity Audit"])
 
     with tab1:
         # NEW: YPA Gauge meters (visually engaging!)
@@ -874,24 +995,25 @@ def render():
             ya_results["Neutral"]["YPA"],
             yb_results["Neutral"]["YPA"],
             fa["name"], fb["name"]
-        ), use_container_width=True)
+        ), use_container_width=True, key="chart_ypa_gauge")
+
 
         # NEW: Radar comparison (more engaging than bar chart)
         st.markdown("### 🕸️ Lever Profile Radar")
-        st.plotly_chart(create_lever_radar_comparison(ya_levers, yb_levers, fa["name"], fb["name"]), use_container_width=True)
+        st.plotly_chart(create_lever_radar_comparison(ya_levers, yb_levers, fa["name"], fb["name"]), use_container_width=True, key="chart_lever_radar")
 
         # NEW: Pie charts for lever contribution
         st.markdown("### 🥧 Lever Contribution Breakdown")
-        st.plotly_chart(create_lever_pie_charts(ya_levers, yb_levers, fa["name"], fb["name"]), use_container_width=True)
+        st.plotly_chart(create_lever_pie_charts(ya_levers, yb_levers, fa["name"], fb["name"]), use_container_width=True, key="chart_lever_pie")
 
         # Scenario Comparison Bars
         st.markdown("### 📊 Scenario Impact")
-        st.plotly_chart(create_scenario_comparison_bars(ya_results, yb_results, fa["name"], fb["name"]), use_container_width=True)
+        st.plotly_chart(create_scenario_comparison_bars(ya_results, yb_results, fa["name"], fb["name"]), use_container_width=True, key="chart_scenario_bars")
 
         # Original charts in expander for those who want them
         with st.expander("📈 Classic Charts", expanded=False):
-            st.plotly_chart(create_lever_comparison_chart(ya_levers, yb_levers, fa["name"], fb["name"]), use_container_width=True)
-            st.plotly_chart(create_ypa_trinity_chart(ya_results, yb_results, fa["name"], fb["name"]), use_container_width=True)
+            st.plotly_chart(create_lever_comparison_chart(ya_levers, yb_levers, fa["name"], fb["name"]), use_container_width=True, key="chart_lever_comparison")
+            st.plotly_chart(create_ypa_trinity_chart(ya_results, yb_results, fa["name"], fb["name"]), use_container_width=True, key="chart_ypa_trinity")
 
         # NEW: Trinity Convergence Radar (simulated - both frameworks show same audited scores)
         with st.expander("🎯 Trinity Convergence Radar", expanded=False):
@@ -908,7 +1030,7 @@ def render():
                     'Grok': [fa_raw["CCI"]*0.99, fa_raw["EDB"]*1.01, fa_raw["PF_instrumental"]*0.98, fa_raw["PF_existential"]*1.02, fa_raw["AR"]*0.99, fa_raw["MG"]*1.01],
                     'Nova': [fa_raw["CCI"]*1.01, fa_raw["EDB"]*0.99, fa_raw["PF_instrumental"]*1.01, fa_raw["PF_existential"]*0.99, fa_raw["AR"]*1.02, fa_raw["MG"]*0.98]
                 }
-                st.plotly_chart(create_convergence_radar(trinity_a, f"{fa['name']} - Trinity View"), use_container_width=True)
+                st.plotly_chart(create_convergence_radar(trinity_a, f"{fa['name']} - Trinity View"), use_container_width=True, key="chart_trinity_radar_a")
 
             with radar_col2:
                 # Framework B - Trinity scores (simulated convergence)
@@ -918,7 +1040,7 @@ def render():
                     'Grok': [fb_raw["CCI"]*0.99, fb_raw["EDB"]*1.01, fb_raw["PF_instrumental"]*0.98, fb_raw["PF_existential"]*1.02, fb_raw["AR"]*0.99, fb_raw["MG"]*1.01],
                     'Nova': [fb_raw["CCI"]*1.01, fb_raw["EDB"]*0.99, fb_raw["PF_instrumental"]*1.01, fb_raw["PF_existential"]*0.99, fb_raw["AR"]*1.02, fb_raw["MG"]*0.98]
                 }
-                st.plotly_chart(create_convergence_radar(trinity_b, f"{fb['name']} - Trinity View"), use_container_width=True)
+                st.plotly_chart(create_convergence_radar(trinity_b, f"{fb['name']} - Trinity View"), use_container_width=True, key="chart_trinity_radar_b")
 
     with tab2:
         # NEW: Battle Card visualization
@@ -947,7 +1069,7 @@ def render():
             sensitivity_matrix,
             [fa["name"], fb["name"]],
             toggle_labels
-        ), use_container_width=True)
+        ), use_container_width=True, key="chart_sensitivity_heatmap")
 
     with tab3:
         # Details tab (was tab2)
@@ -1179,6 +1301,256 @@ def render():
         st.markdown("---")
         st.caption("**Pro Tip:** Run Diplomat Mode and check Symmetry tab—if deltas are large even in 'balanced' mode, the frameworks themselves may have legitimately different sensitivities.")
     
+    # =========================================================================
+    # TAB 6: TRINITY AUDIT (live data from golden batch)
+    # =========================================================================
+    with tab6:
+        fa_name_lower = fa["name"].lower()
+        fb_name_lower = fb["name"].lower()
+        is_ct_mdn = (
+            ("classical theism" in fa_name_lower or "classical theism" in fb_name_lower) and
+            ("methodological naturalism" in fa_name_lower or "methodological naturalism" in fb_name_lower)
+        )
+
+        if not is_ct_mdn:
+            st.info("🔬 **Trinity Audit data is available for CT vs MdN only.**\n\nLoad Classical Theism + Methodological Naturalism to see the 10-run golden batch deliberation results.")
+        else:
+            trinity_ct  = get_trinity_scores("Classical Theism")
+            trinity_mdn = get_trinity_scores("Methodological Naturalism")
+
+            if not trinity_ct and not trinity_mdn:
+                st.error("Could not load Trinity scores from YAML profiles.")
+            else:
+                st.markdown("## 🔬 Trinity Audit — CT ↔ MdN Symmetric Experiment")
+                st.caption("Two complementary 10-run golden batches. Each framework audited as subject by its lens-aligned advocate.")
+
+                audit_tabs = st.tabs(["📕 CT as Subject", "📘 MdN as Subject", "⚖️ Cross-Stance Symmetry"])
+
+                METRIC_ORDER_T = ["BFI", "CA", "IP", "ES", "LS", "MS", "PS"]
+
+                def render_crux_analysis(worldview_prefix):
+                    cruxes = load_crux_data(worldview_prefix)
+                    if not cruxes:
+                        st.caption("No crux data found — golden session JSONs not present.")
+                        return
+                    golden = [c for c in cruxes if c["condition"] == "external_identity"]
+                    n_sessions = len(set(c["session_id"] for c in golden))
+                    avg_per = round(len(golden) / n_sessions, 1) if n_sessions else 0
+                    st.caption(f"**{avg_per} crux impasses per session** ({len(golden)} total across {n_sessions} golden sessions)")
+
+                    # Summary breakdown — build full-name lookup from crux data
+                    metric_full_map = {}
+                    by_metric = {}
+                    by_class = {}
+                    for c in golden:
+                        key = c["metric"]
+                        by_metric[key] = by_metric.get(key, 0) + 1
+                        by_class[c["classification"]] = by_class.get(c["classification"], 0) + 1
+                        if key not in metric_full_map and c.get("metric_full"):
+                            metric_full_map[key] = c["metric_full"]
+
+                    col_m, col_c = st.columns(2)
+                    with col_m:
+                        st.markdown("**By Metric**")
+                        max_cnt = max(by_metric.values()) if by_metric else 1
+                        for metric, cnt in sorted(by_metric.items(), key=lambda x: -x[1]):
+                            full = metric_full_map.get(metric, metric)
+                            bar = "█" * cnt + "░" * (max_cnt - cnt)
+                            lc, rc = st.columns([5, 3])
+                            lc.markdown(f"**{full}**")
+                            rc.markdown(f"{bar} **{cnt}**")
+                    with col_c:
+                        st.markdown("**By Classification**")
+                        for cls, cnt in sorted(by_class.items(), key=lambda x: -x[1]):
+                            st.markdown(f"- **{cls}**: {cnt}")
+
+                    # Grouped by metric — one expander per metric, table inside
+                    st.markdown("---")
+                    METRIC_ORDER_C = ["BFI", "CA", "IP", "ES", "LS", "MS", "PS"]
+                    grouped = {}
+                    for c in golden:
+                        grouped.setdefault(c["metric"], []).append(c)
+
+                    for metric in METRIC_ORDER_C:
+                        if metric not in grouped:
+                            continue
+                        items = grouped[metric]
+                        full_name = metric_full_map.get(metric, metric)
+                        cls_summary = {}
+                        for c in items:
+                            cls_summary[c["classification"]] = cls_summary.get(c["classification"], 0) + 1
+                        cls_str = " · ".join(f"{cls} ({n})" for cls, n in sorted(cls_summary.items(), key=lambda x: -x[1]))
+                        label = f"⚑ {full_name} — {len(items)} crux{'es' if len(items) != 1 else ''} · {cls_str}"
+                        with st.expander(label, expanded=False):
+                            rows = []
+                            for c in sorted(items, key=lambda x: x["session_id"]):
+                                rows.append({
+                                    "Session": c["session_id"],
+                                    "R": c["round"] if c["round"] is not None else "—",
+                                    "Claude": c["claude_score"] if c["claude_score"] is not None else "—",
+                                    "Grok": c["grok_score"] if c["grok_score"] is not None else "—",
+                                    "Type": c["classification"],
+                                    "Deadlock Basis": (c["deadlock"] or c["description"] or "—")[:120],
+                                })
+                            st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+
+                def render_trinity_tab(trinity, subject_label, claude_role, grok_role, delta_label, delta_claude_key, delta_grok_key, extra_delta_label=None, extra_delta_claude_key=None, extra_delta_grok_key=None, crux_prefix=None):
+                    if not trinity:
+                        st.info(f"No Trinity data loaded for {subject_label}.")
+                        return
+                    summary = trinity.get("batch_summary", {})
+                    st.caption(
+                        f"**Experiment:** {trinity.get('experiment_id', '')}  ·  "
+                        f"**Status:** {trinity.get('score_audit_status', '')}"
+                    )
+                    col1, col2, col3, col4 = st.columns(4)
+                    col1.metric("Avg Convergence", f"{summary.get('avg_convergence_pct', 0)}%")
+                    col2.metric("Avg Rounds", str(summary.get('avg_rounds', 0)))
+                    col3.metric("Crux Impasses/Session", str(summary.get('avg_crux_per_run', '—')))
+                    ctrl = summary.get('control_avg_convergence_pct')
+                    col4.metric("Control Convergence" if ctrl else "Avg Crux/Run",
+                                f"{ctrl}%" if ctrl else str(summary.get('avg_crux_per_run', '—')))
+
+                    st.markdown(f"---\n### Per-Metric Results — {subject_label} (n=10)")
+                    st.caption(f"Claude = {claude_role} · Grok = {grok_role}")
+
+                    with st.expander("📖 Metric Definitions — What the auditors scored", expanded=False):
+                        st.markdown("""
+Each metric was scored 0–10 by both auditors independently, then deliberated to convergence (or crux). Definitions below are what auditors were instructed to evaluate against.
+
+| Metric | Full Name | Scoring Question |
+|--------|-----------|-----------------|
+| **BFI** | Beings, Foundational Importance | Does this worldview provide a compelling account of *why anything exists at all*? Does it ground being-ness itself, or does existence arrive as a brute fact? |
+| **CA** | Causal Attribution | Does this worldview coherently explain causal structure — what causes what, why causal chains hold, and what ultimately grounds the causal order of reality? |
+| **IP** | Intellectual Pedigree | Has this worldview generated sustained, rigorous philosophical engagement? Is it anchored in a tradition deep enough that its core claims have been seriously stress-tested? |
+| **ES** | Explanatory Scope | How broad is this worldview's explanatory reach across domains — physical, moral, aesthetic, existential? Can it address diverse phenomena without category errors or ad hoc patches? |
+| **LS** | Logical Soundness | Are the worldview's core propositions internally consistent? Does it avoid contradiction, question-begging, and logical incoherence under adversarial pressure? |
+| **MS** | Moral Substance | Can this worldview ground moral claims in something more than preference or convention? Does it have the ontological resources to make morality *real* rather than merely felt? |
+| **PS** | Practical Significance | Does this worldview make a *difference* for how one ought to live? Is it actionable — does it provide genuine orientation for real human decisions and values? |
+
+*Scores are assigned under adversarial identity conditions: the PRO auditor argues from the worldview's strongest case; the ANTI auditor applies the opposing lens. Convergence is required above 98% or a crux is declared.*
+                        """)
+
+                    metrics = trinity.get("metrics", {})
+                    rows = []
+                    for key in METRIC_ORDER_T:
+                        if key not in metrics:
+                            continue
+                        m = metrics[key]
+                        cd = m.get(delta_claude_key, 0)
+                        gd = m.get(delta_grok_key, 0)
+                        row = {
+                            "Metric": f"{key} — {m.get('full_name', '')}",
+                            "Claude": f"{m.get('claude_mean','?')} ±{m.get('claude_sd','?')}",
+                            "Grok": f"{m.get('grok_mean','?')} ±{m.get('grok_sd','?')}",
+                            "Spread": m.get("spread", "?"),
+                            "Conv %": f"{m.get('convergence_pct','?')}%",
+                            "Rounds": m.get("avg_rounds", "?"),
+                            f"Claude {delta_label}": f"{'+' if cd >= 0 else ''}{cd}",
+                            f"Grok {delta_label}": f"{'+' if gd >= 0 else ''}{gd}",
+                            "Layer": m.get("divergence_layer", "?"),
+                        }
+                        if extra_delta_label and extra_delta_claude_key:
+                            ecd = m.get(extra_delta_claude_key, "—")
+                            egd = m.get(extra_delta_grok_key, "—")
+                            if ecd != "—": ecd = f"{'+' if ecd >= 0 else ''}{ecd}"
+                            if egd != "—": egd = f"{'+' if egd >= 0 else ''}{egd}"
+                            row[f"Claude {extra_delta_label}"] = ecd
+                            row[f"Grok {extra_delta_label}"] = egd
+                        rows.append(row)
+                    st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+
+                    with st.expander("📐 Divergence Layer Definitions (DBEP Framework)", expanded=False):
+                        st.markdown("""
+The **Layer** column identifies *where in the epistemic stack* the divergence originates — not just that auditors disagree, but **why** the disagreement is structurally resistant to resolution.
+
+| Layer | What it means | Debate signature |
+|-------|---------------|-----------------|
+| **Definitions** | Auditors are answering *different questions* — the metric term is underspecified and each auditor samples a different definition | Massive score spread; participants appear to talk past each other; high variance across sessions |
+| **Beliefs** | Shared definitions, but different fundamental metaphysical commitments about what is true | Moderate, stable disagreement; communication is possible but convergence stalls at a principled gap |
+| **Expectations** | Shared beliefs, different anticipations of what evidence or explanation should look like | "You're ignoring X" arguments; auditors notice different features of the same evidence |
+| **Perceptions** | Shared framework, but different evaluative registrations of the same content | Soft disagreements; value-weighting and aesthetic differences in how arguments land |
+
+**DBEP Stack:** Stories → Possibility Space → **Definitions → Beliefs → Expectations → Perceptions** → Evaluation
+
+CFA scores live at *Evaluation*. Divergence can originate at any upstream layer. Tagging the layer turns a disagreement into a diagnostic: *is this an argument about what the words mean, or about what is true, or about what counts as evidence?*
+
+*Source: DBEP framework developed collaboratively across CFA Phase 1 batch analysis (2026-06-29).*
+                        """)
+
+                    st.markdown("### Key Findings")
+                    for finding in summary.get("key_findings", []):
+                        st.markdown(f"- {finding}")
+
+                    with st.expander("⚑ Crux Analysis", expanded=False):
+                        if crux_prefix:
+                            render_crux_analysis(crux_prefix)
+                        else:
+                            st.caption("Crux prefix not configured for this tab.")
+
+                    with st.expander("📋 Session IDs", expanded=False):
+                        ids = trinity.get("session_ids", {})
+                        c1, c2 = st.columns(2)
+                        with c1:
+                            st.markdown("**Golden (External Identity)**")
+                            for s in ids.get("golden", []):
+                                st.code(s)
+                        with c2:
+                            st.markdown("**Control (No Identity)**")
+                            for s in ids.get("control", []):
+                                st.code(s)
+                            if not ids.get("control"):
+                                st.caption("No control batch for this experiment.")
+
+                with audit_tabs[0]:
+                    render_trinity_tab(trinity_ct, "CT (Classical Theism)", "PRO-CT", "ANTI-CT",
+                                       "Identity Δ", "identity_delta_claude", "identity_delta_grok",
+                                       crux_prefix="CT_MdN")
+
+                with audit_tabs[1]:
+                    render_trinity_tab(trinity_mdn, "MdN (Methodological Naturalism)", "ANTI-MdN", "PRO-MdN",
+                                       "Role-Swap Δ", "role_swap_delta_claude", "role_swap_delta_grok",
+                                       extra_delta_label="Identity Δ",
+                                       extra_delta_claude_key="identity_delta_claude",
+                                       extra_delta_grok_key="identity_delta_grok",
+                                       crux_prefix="MdN_CT")
+
+                with audit_tabs[2]:
+                    st.markdown("### Cross-Stance Role-Swap Deltas")
+                    st.caption("How much each auditor's score shifts when switching from one stance to the other")
+                    if trinity_ct and trinity_mdn:
+                        ct_m  = trinity_ct.get("metrics", {})
+                        mdn_m = trinity_mdn.get("metrics", {})
+                        sym_rows = []
+                        for key in METRIC_ORDER_T:
+                            if key not in ct_m or key not in mdn_m:
+                                continue
+                            ct  = ct_m[key]
+                            mdn = mdn_m[key]
+                            sym_rows.append({
+                                "Metric": key,
+                                "Claude PRO-CT": ct.get("claude_mean", "?"),
+                                "Claude ANTI-MdN": mdn.get("claude_mean", "?"),
+                                "Claude Δ": f"{'+' if mdn.get('role_swap_delta_claude',0) >= 0 else ''}{mdn.get('role_swap_delta_claude','?')}",
+                                "Grok ANTI-CT": ct.get("grok_mean", "?"),
+                                "Grok PRO-MdN": mdn.get("grok_mean", "?"),
+                                "Grok Δ": f"{'+' if mdn.get('role_swap_delta_grok',0) >= 0 else ''}{mdn.get('role_swap_delta_grok','?')}",
+                                "CT Conv%": f"{ct.get('convergence_pct','?')}%",
+                                "MdN Conv%": f"{mdn.get('convergence_pct','?')}%",
+                            })
+                        st.dataframe(pd.DataFrame(sym_rows), use_container_width=True, hide_index=True)
+                        st.markdown("### Instrument Stability")
+                        stab = trinity_mdn.get("batch_summary", {}).get("instrument_stability", {})
+                        if stab:
+                            c1, c2, c3, c4 = st.columns(4)
+                            c1.metric("CT Avg Conv", f"{stab.get('ct_golden_avg_convergence','?')}%")
+                            c2.metric("MdN Avg Conv", f"{stab.get('mdn_golden_avg_convergence','?')}%")
+                            c3.metric("CT Avg Rounds", str(stab.get('ct_golden_avg_rounds','?')))
+                            c4.metric("MdN Avg Rounds", str(stab.get('mdn_golden_avg_rounds','?')))
+                            st.caption(stab.get("interpretation", ""))
+                    else:
+                        st.info("Both CT and MdN trinity data required for symmetry analysis.")
+
     # deps: preset_modes
     # EPISTEMIC QUIZ SYSTEM
     st.markdown("---")
@@ -1307,7 +1679,7 @@ def render():
                 st.success("✅ **Profile Detected: Zealot Mode** (CT-optimized, existential-first)")
             
             st.info(f"🎯 **Your Score Breakdown:** Skeptic: {scores['skeptic']}, Diplomat: {scores['diplomat']}, Seeker: {scores['seeker']}, Zealot: {scores['zealot']}")
-            st.experimental_rerun()
+            st.rerun()
         
         st.markdown("---")
         st.caption("💡 **Note:** This quiz is a starting point. You can always adjust toggles manually after!")
@@ -1328,7 +1700,7 @@ def render():
                     st.success("✅ Valid profile")
                     if st.button("Apply", key="apply_bottom"):
                         apply_loaded_run(run)
-                        st.experimental_rerun()
+                        st.rerun()
             except:
                 st.error("Invalid file")
     

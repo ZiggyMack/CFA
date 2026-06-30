@@ -1,4 +1,4 @@
-"""
+﻿"""
 CFA v5.0 - Main Application (Modular Version)
 Run with: streamlit run app.py
 """
@@ -13,7 +13,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 # Import page modules
-from pages import landing, console, about, manual, brute_ledger, chat_assistant, verbose_manifesto, matrix
+from views import landing, console, about, manual, brute_ledger, chat_assistant, verbose_manifesto, matrix
 
 # Page configuration - wrapped to handle session conflicts
 try:
@@ -57,35 +57,35 @@ def render_sidebar():
             # Create navigation buttons
             if st.button("🏠 Landing", use_container_width=True, key="nav_landing"):
                 st.session_state.page = 'landing'
-                st.experimental_rerun()
+                st.rerun()
 
             if st.button("🎮 Console", use_container_width=True, key="nav_console"):
                 st.session_state.page = 'console'
-                st.experimental_rerun()
+                st.rerun()
 
             if st.button("ℹ️ About", use_container_width=True, key="nav_about"):
                 st.session_state.page = 'about'
-                st.experimental_rerun()
+                st.rerun()
 
             if st.button("📖 Manual", use_container_width=True, key="nav_manual"):
                 st.session_state.page = 'manual'
-                st.experimental_rerun()
+                st.rerun()
 
             if st.button("📓 Brute Ledger", use_container_width=True, key="nav_brute"):
                 st.session_state.page = 'brute_ledger'
-                st.experimental_rerun()
+                st.rerun()
 
             if st.button("💬 Chat Assistant", use_container_width=True, key="nav_chat"):
                 st.session_state.page = 'chat_assistant'
-                st.experimental_rerun()
+                st.rerun()
 
             if st.button("📜 Verbose Manifesto", use_container_width=True, key="nav_manifesto"):
                 st.session_state.page = 'verbose_manifesto'
-                st.experimental_rerun()
+                st.rerun()
 
             if st.button("🌐 Matrix", use_container_width=True, key="nav_matrix"):
                 st.session_state.page = 'matrix'
-                st.experimental_rerun()
+                st.rerun()
 
 # Main router
 def main():

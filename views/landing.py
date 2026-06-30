@@ -1,4 +1,4 @@
-"""
+﻿"""
 CFA v5.0 - Landing Page Component (Updated)
 With navigation at top, minimal spacing, reordered content
 """
@@ -90,17 +90,17 @@ def render():
     with nav_col1:
         if st.button("🚀 LAUNCH CONSOLE", use_container_width=True, type="primary"):
             st.session_state.page = 'console'
-            st.experimental_rerun()
+            st.rerun()
     
     with nav_col2:
         if st.button("📖 USER MANUAL", use_container_width=True):
             st.session_state.page = 'manual'
-            st.experimental_rerun()
+            st.rerun()
     
     with nav_col3:
         if st.button("ℹ️ ABOUT v5.0", use_container_width=True):
             st.session_state.page = 'about'
-            st.experimental_rerun()
+            st.rerun()
     
     st.markdown('<div style="height: 1.5rem;"></div>', unsafe_allow_html=True)
     
@@ -115,14 +115,14 @@ def render():
     with col_brute:
         if st.button("📓✍️ Mr. Brute's Ledger", use_container_width=True, key="brute_main"):
             st.session_state.page = 'brute_ledger'
-            st.experimental_rerun()
+            st.rerun()
 
     # Matrix button - Portal to Pan Handler ecosystem
     col_spacer3, col_matrix, col_spacer4 = st.columns([1.5, 1, 1.5])
     with col_matrix:
         if st.button("🌐 The Matrix", use_container_width=True, key="matrix_main"):
             st.session_state.page = 'matrix'
-            st.experimental_rerun()
+            st.rerun()
 
     st.markdown("---")
     
@@ -136,7 +136,7 @@ def render():
     with col_manifesto:
         if st.button("📜 Verbose CFA Manifesto", use_container_width=True):
             st.session_state.page = 'verbose_manifesto'
-            st.experimental_rerun()
+            st.rerun()
     st.markdown("<p style='text-align: center; font-size: 0.85rem; color: #888;'>Why CFA exists, the Trinity architecture, and our binding commitment to transparency.</p>", unsafe_allow_html=True)
 
     st.write("""
@@ -168,7 +168,7 @@ def render():
     with col_btn:
         if st.button("📓 **Mr. Brute Ledger**", key="manifesto_brute_link"):
             st.session_state.page = 'brute_ledger'
-            st.experimental_rerun()
+            st.rerun()
     
     st.write("You can watch, in real time, how changing your assumptions reshapes your philosophical landscape.")
     

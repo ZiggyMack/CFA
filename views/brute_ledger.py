@@ -1,4 +1,4 @@
-"""
+﻿"""
 CFA v5.0 - Mr. Brute's Ledger Page
 "To name your brute is to pay your fee"
 Comprehensive view of axioms and debts for all frameworks
@@ -99,7 +99,7 @@ def _render_framework_ledger(worldview_name: str, emoji: str, subtitle: str):
             # Navigate to Console
             st.session_state.page = 'console'
             st.success(f"✅ {worldview_name} loaded into Framework A!")
-            st.experimental_rerun()
+            st.rerun()
 
     with push_col2:
         if st.button(f"→ Push to Framework B", key=f"push_b_{worldview_name.replace(' ', '_')}", use_container_width=True):
@@ -118,7 +118,7 @@ def _render_framework_ledger(worldview_name: str, emoji: str, subtitle: str):
             # Navigate to Console
             st.session_state.page = 'console'
             st.success(f"✅ {worldview_name} loaded into Framework B!")
-            st.experimental_rerun()
+            st.rerun()
 
     st.markdown("---")
 
@@ -157,7 +157,7 @@ def render():
     with col2:
         if st.button("🏠 Home"):
             st.session_state.page = 'landing'
-            st.experimental_rerun()
+            st.rerun()
 
     st.markdown("---")
 
@@ -507,6 +507,7 @@ def render():
         with auditor_tabs[0]:
             st.markdown("### Claude (Anthropic) - The Teleological Lens")
             st.markdown("**Core Axiom:** *'Purpose precedes evaluation'*")
+            st.caption(f"Model: claude-sonnet-4-6 · Identity: CLAUDE_LITE v5.0.0 · Calibration hash: `1bbec1e119a2c425`")
 
             col1, col2 = st.columns(2)
 
@@ -562,40 +563,48 @@ def render():
 
             st.markdown("---")
 
-            # BFI Breakdown for Claude (placeholder for Nova/Grok to fill)
-            st.markdown("### 📋 BFI Breakdown - Claude's Auditing Axioms")
-            st.caption("*The unprovable assumptions underlying THIS auditing lens*")
+            st.markdown("### 📋 Bias Profile — Claude's Calibration Parameters")
+            st.caption("*Source: CALIBRATION_PARAMETERS_20260629.md — extracted from CLAUDE_LITE v5.0.0 + scoring prompt layer*")
 
-            with st.expander("🔍 Meta-Axioms & Debts (Awaiting Trinity Calibration)", expanded=False):
+            with st.expander("🔍 Named Biases & Prices", expanded=True):
                 bfi_col1, bfi_col2, bfi_col3 = st.columns([1, 1, 1])
 
                 with bfi_col1:
-                    st.markdown("**Axioms: TBD**")
+                    st.markdown("**Named Biases (3)**")
                     st.markdown("""
-                    *(Nova + Grok will identify Claude's meta-axioms)*
+                    1. **Comprehensive Approach** — Tends toward holistic solutions over minimal ones
+                       *Price: 0.5 coordination overhead*
+                       *Mitigation: Grok and Nova push back with "Keep it simple"*
 
-                    **Placeholder examples:**
-                    1. Purpose-First Epistemology - "Why?" before "How?"
-                    2. Comprehensive Beats Concise - Context over brevity
-                    3. Meaning Measurable - Teleological analysis is valid audit lens
+                    2. **Teleological Over-Emphasis** — Prioritizes "serves the purpose" even when empirics disagree
+                       *Price: 0.3 YPA potential suboptimality*
+                       *Mitigation: Grok forces empirical validation before approval*
+
+                    3. **Narrative Smoothing** — May overlook conflicts if narrative flows well
+                       *Price: 0.2 risk of unresolved conflicts*
+                       *Mitigation: Nova specifically checks for hidden conflicts*
                     """)
 
                 with bfi_col2:
-                    st.markdown("**Debts: TBD**")
+                    st.markdown("**Scoring Tools**")
+                    st.success("✓ 5-Part Scaffold")
                     st.markdown("""
-                    *(Nova + Grok will identify Claude's meta-debts)*
-
-                    **Placeholder examples:**
-                    1. Verbosity Tax - Users pay time cost for comprehensive docs
-                    2. CT-Lean Risk - Meaning-bias may unconsciously favor theism
-                    3. Efficiency Blind Spot - May miss when "good enough" IS good enough
+                    1. Prompt Stack — *What calibration am I applying?*
+                    2. Counterweight Table — *What would Grok say?*
+                    3. Edge Case Ledger — *Where does CT struggle?*
+                    4. Mythology Capsule — *What narrative am I in?*
+                    5. Decision Stamp — *Final score with reasoning trail*
                     """)
+                    st.markdown("**Stance:** PRO-CT (advocate for Classical Theism, apply charitable interpretations)")
 
                 with bfi_col3:
-                    st.metric("BFI", "?", help="Axioms + Debts (TBD by Trinity)")
-                    st.caption("*Awaiting v5.0 Trinity calibration*")
-                    st.markdown("")
-                    st.info("**Coming Soon:** Nova and Grok will audit Claude's auditing axioms!")
+                    st.metric("Total Bias Cost", "1.0", help="Sum of named bias prices: 0.5 + 0.3 + 0.2")
+                    st.markdown("**Empirical validation:**")
+                    st.markdown("""
+                    - Claude scores LOWER on 5/7 metrics with identity (lens = more disciplined, not more generous)
+                    - LS only metric where identity raises Claude (+1.35) — possible 5-Part Scaffold analytical value
+                    - *Source: GOLDEN_BATCH_RESULTS_20260629.md*
+                    """)
 
             with st.expander("📊 What Other Auditors Say About Claude"):
                 st.markdown("""
@@ -618,6 +627,7 @@ def render():
         with auditor_tabs[1]:
             st.markdown("### Grok (xAI) - The Empirical Lens")
             st.markdown("**Core Axiom:** *'Evidence precedes acceptance'*")
+            st.caption(f"Model: grok-3 · Identity: GROK_LITE v3.5.2 · Calibration hash: `00cd73274759e218`")
 
             col1, col2 = st.columns(2)
 
@@ -674,40 +684,50 @@ def render():
 
             st.markdown("---")
 
-            # BFI Breakdown for Grok (placeholder for Nova/Claude to fill)
-            st.markdown("### 📋 BFI Breakdown - Grok's Auditing Axioms")
-            st.caption("*The unprovable assumptions underlying THIS auditing lens*")
+            st.markdown("### 📋 Bias Profile — Grok's Calibration Parameters")
+            st.caption("*Source: CALIBRATION_PARAMETERS_20260629.md — extracted from GROK_LITE v3.5.2 + scoring prompt layer*")
 
-            with st.expander("🔍 Meta-Axioms & Debts (Awaiting Trinity Calibration)", expanded=False):
+            with st.expander("🔍 Named Biases & Prices", expanded=True):
                 bfi_col1, bfi_col2, bfi_col3 = st.columns([1, 1, 1])
 
                 with bfi_col1:
-                    st.markdown("**Axioms: TBD**")
+                    st.markdown("**Named Biases (3)**")
                     st.markdown("""
-                    *(Nova + Claude will identify Grok's meta-axioms)*
+                    1. **Empiricism Over Meaning** — Favors what's measurable over what's meaningful
+                       *Price: 0.4 risk of undervaluing non-quantifiable dimensions*
+                       *Mitigation: Claude pushes back with teleological justification*
 
-                    **Placeholder examples:**
-                    1. Measurement Primacy - "If you can't measure it, you can't manage it"
-                    2. Empiricism Foundational - Data trumps theory
-                    3. Testing Reveals Truth - Validation over speculation
+                    2. **Data Availability Bias** — Prioritizes questions with available data over important questions without data
+                       *Price: 0.3 risk of optimizing wrong metrics*
+                       *Mitigation: Nova asks "Are we measuring what matters?"*
+
+                    3. **Precision Over Accuracy** — May over-optimize measurable details while missing bigger picture
+                       *Price: 0.2 coordination overhead*
+                       *Mitigation: Claude reframes toward broader goals*
                     """)
 
                 with bfi_col2:
-                    st.markdown("**Debts: TBD**")
+                    st.markdown("**Scoring Tools**")
+                    st.warning("No scaffold tools assigned")
                     st.markdown("""
-                    *(Nova + Claude will identify Grok's meta-debts)*
+                    Grok receives no 5-Part Scaffold — relies on ANTI-CT stance instructions:
 
-                    **Placeholder examples:**
-                    1. Qualitative Dismissal - May reject valid unmeasurable insights
-                    2. MdN-Lean Risk - Empirical bias may unconsciously favor naturalism
-                    3. Induction Problem - Empiricism itself rests on unprovable regularity
+                    - Challenge Classical Theism, advocate for Methodological Naturalism
+                    - Demand testability, measurability, falsifiability
+                    - Apply skeptical pressure to unfalsifiable claims
+                    - Challenge theological metaphysics with empirical rigor
                     """)
+                    st.markdown("**Stance:** ANTI-CT (challenge CT, advocate MdN)")
 
                 with bfi_col3:
-                    st.metric("BFI", "?", help="Axioms + Debts (TBD by Trinity)")
-                    st.caption("*Awaiting v5.0 Trinity calibration*")
-                    st.markdown("")
-                    st.info("**Coming Soon:** Nova and Claude will audit Grok's auditing axioms!")
+                    st.metric("Total Bias Cost", "0.9", help="Sum of named bias prices: 0.4 + 0.3 + 0.2")
+                    st.markdown("**Empirical validation:**")
+                    st.markdown("""
+                    - Grok drops 1.2–2.4 pts with ANTI-CT identity across all 7 metrics
+                    - Largest gaps: CA (Δ=-2.44), MS (Δ=-2.43) — empirical skepticism most effective on causal/moral claims
+                    - Without identity: Grok agrees with Claude at 97.9% in 1.8 rounds
+                    - *Source: GOLDEN_BATCH_RESULTS_20260629.md*
+                    """)
 
             with st.expander("📊 What Other Auditors Say About Grok"):
                 st.markdown("""
@@ -787,40 +807,52 @@ def render():
 
             st.markdown("---")
 
-            # BFI Breakdown for Nova (placeholder for Claude/Grok to fill)
-            st.markdown("### 📋 BFI Breakdown - Nova's Auditing Axioms")
-            st.caption("*The unprovable assumptions underlying THIS auditing lens*")
+            st.markdown("### 📋 Bias Profile — Nova's Calibration Parameters")
+            st.caption("*Nova operates as fairness monitor — invoked on non-convergence. No LITE identity file; role defined by position in deliberation structure.*")
 
-            with st.expander("🔍 Meta-Axioms & Debts (Awaiting Trinity Calibration)", expanded=False):
+            with st.expander("🔍 Role & Bias Profile", expanded=True):
                 bfi_col1, bfi_col2, bfi_col3 = st.columns([1, 1, 1])
 
                 with bfi_col1:
-                    st.markdown("**Axioms: TBD**")
+                    st.markdown("**Named Biases (3)**")
                     st.markdown("""
-                    *(Claude + Grok will identify Nova's meta-axioms)*
+                    1. **Mathematical Over Functional Symmetry** — Looks for pattern balance before evaluating content
+                       *Price: 0.3 pattern analysis overhead*
+                       *Mitigation: Claude and Grok flag when asymmetry is philosophically justified*
 
-                    **Placeholder examples:**
-                    1. Symmetry Signals Fairness - Pattern balance indicates structural equity
-                    2. Mathematical Before Moral - Geometric symmetry precedes ethical evaluation
-                    3. Neutrality Achievable - Can audit without taking sides
+                    2. **False Equivalence Risk** — May force balance on legitimately different things
+                       *Price: risk of treating unequal things as equal*
+                       *Mitigation: Defers when both Claude and Grok agree asymmetry is justified*
+
+                    3. **Context Blindness** — Patterns can mislead without philosophical grounding
+                       *Price: symmetry metric ≠ fairness metric in all cases*
+                       *Mitigation: Asks "Is this asymmetry JUSTIFIED?" before enforcing balance*
                     """)
 
                 with bfi_col2:
-                    st.markdown("**Debts: TBD**")
+                    st.markdown("**Scoring Tools**")
+                    st.info("Fairness Monitor — invoked only on non-convergence")
                     st.markdown("""
-                    *(Claude + Grok will identify Nova's meta-debts)*
+                    Nova is NOT assigned a PRO or ANTI stance. Role:
 
-                    **Placeholder examples:**
-                    1. False Equivalence Risk - May force balance on legitimately different things
-                    2. Context Blindness - Patterns can mislead without philosophical grounding
-                    3. Neutrality Myth - Is symmetry-seeking itself a bias?
+                    - Monitor for structural bias in Claude-Grok deliberation
+                    - Issue crux assessments when convergence < 98% persists
+                    - Check if metric definition is the source of impasse (IP, MS cases)
+                    - Provide symmetry verdict on final round
+
+                    **Model:** gpt-4o
                     """)
 
                 with bfi_col3:
-                    st.metric("BFI", "?", help="Axioms + Debts (TBD by Trinity)")
-                    st.caption("*Awaiting v5.0 Trinity calibration*")
-                    st.markdown("")
-                    st.info("**Coming Soon:** Claude and Grok will audit Nova's auditing axioms!")
+                    st.metric("Total Bias Cost", "0.3", help="Estimated overhead for fairness monitoring role")
+                    st.markdown("**Role in golden batch:**")
+                    st.markdown("""
+                    - Invoked on 8 crux declarations across 10 runs
+                    - IP crux (4/10 runs): flagged definition mismatch as source
+                    - MS crux (1/10): confirmed stochastic vs structural instability
+                    - No score assigned (fairness position, not advocacy)
+                    - *Source: GOLDEN_BATCH_RESULTS_20260629.md*
+                    """)
 
             with st.expander("📊 What Other Auditors Say About Nova"):
                 st.markdown("""
@@ -1046,7 +1078,7 @@ def render():
                     st.session_state['sidebar_fallibilism'] = "ON"
                     st.session_state['sidebar_bfi_weight'] = "Heavier_1.2x"
                     st.session_state.page = 'console'
-                    st.experimental_rerun()
+                    st.rerun()
 
             with st.expander("🔍 The Story Behind The Numbers"):
                 st.markdown("""
@@ -1135,7 +1167,7 @@ def render():
                     st.session_state['sidebar_fallibilism'] = "ON"
                     st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
                     st.session_state.page = 'console'
-                    st.experimental_rerun()
+                    st.rerun()
 
             with st.expander("🔍 The Diplomat Philosophy"):
                 st.markdown("""
@@ -1219,7 +1251,7 @@ def render():
                     st.session_state['sidebar_fallibilism'] = "ON"
                     st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
                     st.session_state.page = 'console'
-                    st.experimental_rerun()
+                    st.rerun()
 
             with st.expander("🔍 The Seeker Position"):
                 st.markdown("""
@@ -1304,7 +1336,7 @@ def render():
                     st.session_state['sidebar_fallibilism'] = "OFF"
                     st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
                     st.session_state.page = 'console'
-                    st.experimental_rerun()
+                    st.rerun()
 
             with st.expander("🔍 The Zealot Symmetry Problem"):
                 st.markdown("""
@@ -1448,7 +1480,7 @@ def render():
                     # Optional: Auto-navigate
                     if st.button("→ Go to Console Now", key="nav_to_console"):
                         st.session_state.page = 'console'
-                        st.experimental_rerun()
+                        st.rerun()
             
             with col_action2:
                 st.markdown("**Option 2: Export File**")

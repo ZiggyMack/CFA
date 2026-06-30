@@ -1,4 +1,4 @@
-"""
+﻿"""
 CFA v5.0 - User Manual (Beautiful Version)
 Inspired by the original vibrant design
 Updated: 2025-11-29 for v5.0.0
@@ -77,7 +77,7 @@ def render():
     with col2:
         if st.button("🏠 Home"):
             st.session_state.page = 'landing'
-            st.experimental_rerun()
+            st.rerun()
     
     st.markdown("---")
     

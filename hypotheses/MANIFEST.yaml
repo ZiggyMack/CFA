@@ -1,0 +1,39 @@
+# HYPOTHESIS REGISTRY — CFA Project
+#
+# This file is an append-only index of all registered hypotheses.
+# Do not remove entries. Superseded hypotheses stay here with status: retired.
+#
+# Sealing protocol:
+#   1. Finalize the hypothesis YAML (fill all [PENDING] sections)
+#   2. Compute: (Get-FileHash hypotheses\H-NNN.yaml -Algorithm SHA256).Hash
+#   3. Record hash here and in the experiment YAML's preregistered_hypotheses block
+#   4. Set sealed: true in the hypothesis file
+#   5. Never edit the hypothesis file again after this point
+#
+# ---
+
+registry_version: "1.0"
+last_updated: "2026-06-30"
+
+hypotheses:
+  - id: H-014
+    name: "Identity independently creates structured disagreement"
+    file: "hypotheses/H-014.yaml"
+    date_registered: "2026-06-30"
+    status: sealed  # draft → sealed → adjudicated
+    sealed: true
+    sha256: "126B4736C6421716F63901B241F0E7401251F6EA1C11D551089DF6455FBB7B39"
+    seal_date: "2026-06-30"
+
+    result_file: "hypotheses/results/H-014.result.yaml"
+    result_status: not_yet_created  # created only after Trinity² data lands
+
+    linked_experiments:
+      - experiment_id: Trinity²
+        role: preregistered_hypothesis
+        test_design: "8-condition factorial (identity × scaffold × calibration)"
+
+# --- Sealing command (run from d:\Documents\CFA) ---
+# PowerShell:
+#   (Get-FileHash "hypotheses\H-014.yaml" -Algorithm SHA256).Hash
+# After filling in PENDING entries, paste the output hash into sha256 above.

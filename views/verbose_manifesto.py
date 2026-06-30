@@ -1,4 +1,4 @@
-"""
+﻿"""
 CFA v5.0 - Verbose Manifesto Page
 Displays the full philosophical covenant
 """
@@ -36,7 +36,7 @@ def render():
     with col2:
         if st.button("🏠 Home"):
             st.session_state.page = 'landing'
-            st.experimental_rerun()
+            st.rerun()
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown("**A Philosophical Covenant for Comparative Framework Analysis**")

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import * as d3 from 'd3'
 
-const TimelineSparkline = ({ ticks, currentIndex, onTickSelect }) => {
+const TimelineSparkline = ({ ticks, currentIndex, onTickSelect, metricGroups = [] }) => {
   const svgRef = useRef()
 
   useEffect(() => {
@@ -65,6 +65,11 @@ const TimelineSparkline = ({ ticks, currentIndex, onTickSelect }) => {
       .attr('stroke-width', 2)
       .attr('d', line)
 
+    // Enrich convergenceData with crux status
+    convergenceData.forEach((d, i) => {
+      d.cruxStatus = ticks[i]?.crux?.status || 'none'
+    })
+
     // Draw points
     const points = g.selectAll('.point')
       .data(convergenceData)
@@ -75,11 +80,35 @@ const TimelineSparkline = ({ ticks, currentIndex, onTickSelect }) => {
       .style('cursor', 'pointer')
       .on('click', (event, d) => onTickSelect(d.index))
 
+    // Base dot
     points.append('circle')
       .attr('r', d => d.index === currentIndex ? 6 : 4)
-      .attr('fill', d => d.index === currentIndex ? '#f59e0b' : '#646cff')
+      .attr('fill', d => {
+        if (d.index === currentIndex) return '#f59e0b'
+        if (d.cruxStatus === 'declared') return '#ef4444'
+        if (d.cruxStatus === 'potential') return '#f59e0b'
+        return '#646cff'
+      })
       .attr('stroke', '#fff')
       .attr('stroke-width', 1)
+
+    // Crux flag above declared ticks
+    points.filter(d => d.cruxStatus === 'declared')
+      .append('text')
+      .attr('y', -7)
+      .attr('text-anchor', 'middle')
+      .attr('font-size', '9px')
+      .attr('fill', '#ef4444')
+      .text('⚑')
+
+    // Potential indicator above potential ticks
+    points.filter(d => d.cruxStatus === 'potential')
+      .append('text')
+      .attr('y', -7)
+      .attr('text-anchor', 'middle')
+      .attr('font-size', '8px')
+      .attr('fill', '#f59e0b')
+      .text('◈')
 
     // Add labels for current tick
     if (currentIndex !== null && currentIndex >= 0 && currentIndex < convergenceData.length) {
@@ -111,11 +140,54 @@ const TimelineSparkline = ({ ticks, currentIndex, onTickSelect }) => {
     g.selectAll('.domain, .tick line')
       .attr('stroke', 'rgba(255,255,255,0.2)')
 
-  }, [ticks, currentIndex, onTickSelect])
+    // Draw metric boundary separators
+    if (metricGroups.length > 1) {
+      const separatorsGroup = svg.append('g').attr('class', 'metric-separators')
+      metricGroups.forEach((group, i) => {
+        if (i === 0) return // no line before first metric
+        const x = xScale(group.firstIndex - 0.5)
+
+        // Vertical separator line
+        separatorsGroup.append('line')
+          .attr('x1', x).attr('y1', 0)
+          .attr('x2', x).attr('y2', chartHeight)
+          .attr('stroke', 'rgba(255,255,255,0.2)')
+          .attr('stroke-width', 1)
+          .attr('stroke-dasharray', '3,3')
+
+        // Metric label at top
+        separatorsGroup.append('text')
+          .attr('x', xScale(group.firstIndex))
+          .attr('y', -2)
+          .attr('text-anchor', 'middle')
+          .attr('fill', 'rgba(255,255,255,0.35)')
+          .attr('font-size', '9px')
+          .attr('font-weight', '600')
+          .text(group.metric)
+      })
+
+      // Label the first metric too
+      separatorsGroup.append('text')
+        .attr('x', xScale(metricGroups[0].firstIndex))
+        .attr('y', -2)
+        .attr('text-anchor', 'middle')
+        .attr('fill', 'rgba(255,255,255,0.35)')
+        .attr('font-size', '9px')
+        .attr('font-weight', '600')
+        .text(metricGroups[0].metric)
+    }
+
+  }, [ticks, currentIndex, onTickSelect, metricGroups])
 
   return (
-    <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'center' }}>
+    <div style={{ marginBottom: '1rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.3rem' }}>
       <svg ref={svgRef}></svg>
+      <div style={{ display: 'flex', gap: '1.2rem', fontSize: '0.7rem', color: 'rgba(255,255,255,0.4)' }}>
+        <span><span style={{ color: '#646cff' }}>●</span> tick</span>
+        <span><span style={{ color: '#f59e0b' }}>●</span> current</span>
+        <span><span style={{ color: '#f59e0b' }}>◈</span> approaching crux</span>
+        <span><span style={{ color: '#ef4444' }}>⚑</span> crux declared</span>
+      </div>
     </div>
   )
 }

@@ -1,0 +1,50 @@
+# H-014 RESULT FILE — append-only, created after Trinity² data lands
+#
+# DO NOT create this file until Trinity² has produced final numbers.
+# DO NOT edit H-014.yaml — all post-experiment annotation belongs here.
+# This file references the sealed prior by hash; any hash mismatch is a
+# visible integrity failure, not a silent one.
+#
+# STATUS: TEMPLATE — not yet populated. Trinity² has not run.
+# ---
+
+hypothesis_id: H-014
+prior_file: "hypotheses/H-014.yaml"
+prior_sha256: null  # fill with hash from MANIFEST.yaml at adjudication time
+
+adjudication_date: null
+adjudicated_by: null  # "Ziggy" or "Ziggy + CFA-Claude"
+
+# --- Observed values (fill from Trinity² output) ---
+observed:
+  identity_only_spread: null        # C2: identity=true, scaffold=false, calibration=false
+  scaffold_only_spread: null        # C3: scaffold=true, identity=false, calibration=false
+  calibration_only_spread: null     # C4: calibration=true, identity=false, scaffold=false
+  identity_scaffold_spread: null    # C5: identity=true, scaffold=true, calibration=false
+  identity_calibration_spread: null # C6: identity=true, calibration=true, scaffold=false
+  scaffold_calibration_spread: null # C7: scaffold=true, calibration=true, identity=false
+  full_golden_spread: null          # C8: all three = true
+  control_spread: null              # C1: all false (expected ~0.0, use to anchor scale)
+
+# --- Pre-committed threshold comparisons (dumb diff — do not adjust post-hoc) ---
+decision_rule_results:
+  # H1 target: identity_only 1.0–2.0
+  identity_only_in_predicted_range: null  # true / false
+
+  # H0 falsifier F-1: scaffold_only ≥ 0.70 AND identity_only ≤ 0.50
+  scaffold_primary_driver_F1: null  # true = H0 supported, H1 falsified
+
+  # H2 falsifier F-2: interaction >2× either main effect while both <0.50
+  interaction_dominates_F2: null  # true = H2 supported
+
+  # H1 falsifier F-3: identity_only <0.50 in both domain replications
+  identity_null_both_domains_F3: null  # true = H1 falsified across domains
+
+# --- Human posterior (written by Ziggy after reviewing decision rules) ---
+human_posterior:
+  status: null  # one of: supported | weakened | inconclusive | h0_supported | h2_supported
+  confidence_posterior: null  # numeric, compare to prior 0.70
+  notes: null
+
+# --- Surprises / unexpected findings (free text) ---
+surprises: null

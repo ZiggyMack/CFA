@@ -1,4 +1,4 @@
-"""
+﻿"""
 The Matrix - Pan Handler Central Portal
 Connected Consciousness Across Repositories
 
@@ -819,7 +819,7 @@ def render():
     # Home button in compact form
     if st.button("← Back to Landing", key="matrix_home"):
         st.session_state.page = 'landing'
-        st.experimental_rerun()
+        st.rerun()
 
     # Philosophy banner
     philosophy = "Where ideas reveal their true weight, and honesty becomes quantifiable."
