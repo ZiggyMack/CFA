@@ -938,10 +938,7 @@ def render():
     # YPA EXPLANATION (Grok Note #1: Pragmatic Clarity)
     st.info("💡 **YPA = Yield per Axiom:** Efficiency score = Total Lever Score ÷ BFI. Higher YPA = more output per assumption.")
 
-    # =========================================================================
-    # AUDIT STATUS SUMMARY CARD (NEW - from CONSOLE_ENHANCEMENT_PROMPT)
-    # =========================================================================
-    # Calculate guardrail status for summary
+    # Pre-compute guardrail ok flags — used by Guardrails tab grid
     ok1_a, _ = guardrail_lever_coupling(ya_levers["PF"], ya_levers["CCI"])
     ok2_a, _ = guardrail_bfi_sensitivity(ya_results["Neutral"]["YPA"], ya_bfi, ya_results["Empirical"]["YPA"], ya_results["Existential"]["YPA"])
     ok3_a, _ = guardrail_weight_inversion(ya_results, ya_results["Neutral"]["YPA"])
@@ -953,28 +950,6 @@ def render():
     ok3_b, _ = guardrail_weight_inversion(yb_results, yb_results["Neutral"]["YPA"])
     audit_b_summary = symmetry_audit(fb, cfg)
     ok4_b = max(abs(row[3]) for row in audit_b_summary) <= 0.3
-
-    guardrails_passed = sum([ok1_a, ok2_a, ok3_a, ok4_a, ok1_b, ok2_b, ok3_b, ok4_b])
-    guardrails_total = 8
-
-    # Symmetry status
-    max_delta_overall = max(
-        max(abs(row[3]) for row in audit_a_summary),
-        max(abs(row[3]) for row in audit_b_summary)
-    )
-    symmetry_status = "Balanced" if max_delta_overall <= 0.3 else f"Max Δ = {max_delta_overall:.2f}"
-
-    # Display summary card
-    st.markdown(status_summary_card(
-        frameworks_loaded=2,
-        frameworks_total=2,
-        guardrails_passed=guardrails_passed,
-        guardrails_total=guardrails_total,
-        convergence_pct=98.0,  # Hardcoded for audited frameworks
-        crux_count=0,
-        active_preset=active_preset,
-        symmetry_status=symmetry_status
-    ), unsafe_allow_html=True)
 
     # =========================================================================
     # FRAMEWORK COMPARISON HEADER (NEW)
