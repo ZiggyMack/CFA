@@ -16,7 +16,7 @@ The **Comparative Framework Audit (CFA)** is the first interactive epistemic lab
 
 **v4.0.0 Innovation**: **Living Map System** + **Repository Health Scoring** - systematic infrastructure ensuring documentation stays current, auditors maintain consistent standards, and "Gospel Problem" prevention through scan-first methodology.
 
-**v5.0.0 Innovation**: **Nyquist Consciousness Integration** - Complete integration of Identity Gravity physics (S7-S10), L0 kernel with human-modulated gravity fields, ZIGGY Type-0 identity as boundary condition, Pattern Fidelity Index computational tools, and cross-repository persona testing pipeline from Nyquist Consciousness lab.
+**v5.0.0 Innovation**: **Trinity Audit System + ARMADA Experiment Framework** - First empirical 2×2 factorial audit (40 runs: CT golden/control × MdN golden/control). Introduces the DBEP divergence framework (Definitions→Beliefs→Expectations→Perceptions), per-metric identity deltas, crux impasse tracking, sealed hypothesis pre-registration (H-014), and the Symmetry Matrix Visualizer (SMV) with full Phase 1 scenario data.
 
 ---
 
@@ -32,13 +32,19 @@ cfa_app/
 ├── CHANGELOG.md                # Version history
 ├── DEPLOYMENT.md               # Deployment guide
 │
-├── pages/                      # Page modules
+├── views/                      # Page modules (migrated from pages/ in v5.0)
 │   ├── __init__.py
 │   ├── landing.py              # Landing page with manifesto
-│   ├── console.py              # Main console (guardrails, presets, quiz)
-│   ├── manual.py               # v5.0 user manual (updated by Dr. Opus)
+│   ├── console.py              # Main console (guardrails, presets, Trinity Audit, quiz)
+│   ├── manual.py               # v5.0 user manual
 │   ├── about.py                # Complete audit story (Level 0-5)
 │   └── brute_ledger.py         # Axiom/debt viewer + custom framework builder
+│
+├── hypotheses/                 # Sealed pre-registration artifacts (v5.0)
+│   ├── MANIFEST.yaml           # Hypothesis registry with SHA-256 hashes
+│   ├── H-014.yaml              # Sealed: identity independently creates structured disagreement
+│   ├── H-014.yaml.sha256       # Integrity sidecar
+│   └── results/                # Append-only result files (created post-experiment)
 │
 ├── utils/                      # Core utilities
 │   ├── __init__.py
@@ -477,6 +483,22 @@ CFA now includes **12 fully-audited worldview profiles** (expanded from the init
 <!-- deps: preset_modes, ypa_calculation -->
 ## ✨ Key Features
 
+### 🔬 Trinity Audit System (NEW in v5.0)
+
+- **2×2 Factorial Design**: CT golden/control × MdN golden/control — 40 runs, fully validated
+- **7-Metric Audit**: BFI / CA / IP / ES / LS / MS / PS scored per session by Claude + Grok
+- **DBEP Divergence Framework**: Tags where auditors first diverge — Definitions, Beliefs, Expectations, or Perceptions
+- **Crux Impasse Tracking**: Declared deadlocks (avg 4.4/session CT, 3.7/session MdN) with per-metric breakdown
+- **Cross-Stance Symmetry**: Identity delta and role-swap delta analysis across both worldview conditions
+- **Asymmetric Pressure Finding**: Empirical lens deflates CT 2–5× harder than teleological lens deflates MdN — philosophically principled, not instrument bias
+
+### 📋 Hypothesis Registry (NEW in v5.0)
+
+- **Sealed Pre-Registration**: H-014 sealed (SHA-256: `126B4736...B39`) before Trinity² runs — immutable prior
+- **8-Condition Factorial (Trinity²)**: Decomposes identity × calibration × scaffold contributions independently
+- **Append-Only Results**: `hypotheses/results/H-014.result.yaml` created post-experiment; posterior never overwrites prior
+- **Integrity Verification**: Hash mismatch = visible integrity failure, not silent drift
+
 ### 🎛️ Interactive Console
 - **Dual-Framework Comparison**: Side-by-side worldview measurement
 - **Six Levers Each**: Precision control over explanatory power metrics
@@ -615,6 +637,7 @@ See complete auditor bootstrap sequence in [/auditors/MISSION_DEFAULT.md](audito
 | v3.5 | October 2025 | VuDu Full, Bootstrap System, complete guardrails, preset modes, quiz, dark mode |
 | **v3.5.2** | **October 2025** | **VuDu Light activation, mission architecture, mobile-friendly format, preset calibration mission launched** |
 | **v4.0.0** | **November 2025** | **Living Map System (7 maps), Repository Health Scoring Rubric (100-point), Gospel Problem prevention methodology, Priority 2 cleanup (94 broken links fixed, 11 stub READMEs removed, 96/100 health score)** |
+| **v5.0.0** | **June 2026** | **Trinity Audit System (40-run 2×2 factorial, CT+MdN), DBEP divergence framework, crux impasse tracking, Symmetry Matrix Visualizer (SMV) with Phase 1 scenario data, sealed hypothesis registry (H-014), pages→views migration, asymmetric identity pressure finding** |
 
 ---
 
@@ -733,6 +756,6 @@ CFA exists because we believe you have the right to see the machinery—to under
 
 *"Where ideas reveal their true weight, and honesty becomes quantifiable."*
 
-**CFA v4.0.0 | Epistemic Engineering | November 2025**
+CFA v5.0.0 | Epistemic Engineering | June 2026
 
-**"All Named, All Priced, All Seen, All Passed - for present and future collaboration."** 🔥👑
+"All Named, All Priced, All Seen, All Passed - for present and future collaboration." 🔥👑
