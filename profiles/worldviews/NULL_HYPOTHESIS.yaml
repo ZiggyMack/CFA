@@ -1,0 +1,80 @@
+# Null Hypothesis - Canonical Score Data
+# Purpose: Machine-readable YPA scores — preliminary draft from web research
+# Sources: Stanford Encyclopedia of Philosophy, Internet Encyclopedia of Philosophy
+# Status: DRAFT — not auditor-validated; requires Grok deliberation before promotion
+# Last Updated: 2026-06-30
+
+profile:
+  name: "Null Hypothesis"
+  version: "0.1.0"
+  status: "DRAFT"
+  declared_axiom: "Suspend judgment on any claim lacking sufficient evidence; the default epistemic position is non-belief, not belief; burden of proof falls entirely on positive claims"
+  alternate_names:
+    - "Epistemic Minimalism"
+    - "Skeptical Agnosticism"
+    - "Nullism"
+  last_updated: "2026-06-30"
+  maintainers:
+    - "Ziggy"
+    - "CFA-Claude"
+
+# Axioms: Foundational unprovable assumptions
+axioms:
+  - name: "Claims require evidence"
+    description: "Belief is only warranted when proportioned to evidence; extraordinary claims require extraordinary evidence (Hume/Sagan)"
+
+  - name: "Default is suspension of belief"
+    description: "In the absence of sufficient evidence, the rational position is non-belief — not agnosticism-as-balance but non-commitment as default"
+
+  - name: "Burden of proof on positive claims"
+    description: "Those asserting existence bear the burden of proof; absence of evidence is evidence of absence (in proportion to the search)"
+
+  - name: "Natural explanation default"
+    description: "Natural, physical explanations are assumed as default; supernatural explanations require extraordinary evidence before consideration"
+
+# Debts: Unresolved explanatory burdens
+debts:
+  - name: "Cannot address meaning"
+    description: "Epistemic minimalism provides no resources for questions of purpose, meaning, or value — it can only clear the ground, not furnish the house"
+
+  - name: "Provides no positive framework"
+    description: "The null hypothesis is a method, not a worldview; it cannot answer 'how should I live?' without importing external values"
+
+  - name: "Self-application issues"
+    description: "Is 'claims require evidence' itself a claim supported by evidence, or a foundational axiom? The theory risks circularity at its base"
+
+  - name: "Value questions unanswered"
+    description: "Why value evidence-tracking over other epistemic practices? The preference for empirical truth requires values the null hypothesis cannot itself justify"
+
+# Levers: VuDu Light scoring dimensions (0-10 scale)
+# PRELIMINARY — web research estimates, not deliberation-validated
+# Note: Null Hypothesis is epistemic methodology, not a comprehensive worldview
+levers:
+  collective_coherence_impact: 8.5    # CCI — extremely internally consistent; the principle is clear and unambiguous
+  epistemic_debt_burden: 3.5          # EDB — suspends rather than resolves existential dread; offers no positive comfort
+  paternalistic_force_interventionist: 9.0  # PF-I — very high: scientific method, hypothesis testing, empirical research — all descend from this stance
+  paternalistic_force_epistemic: 2.0       # PF-E — very low existential fertility; deliberately agnostic on meaning, purpose, community
+  asymmetry_risk: 9.5                 # AR — highest possible truth-tracking orientation; designed specifically for asymptotic realism
+  meta_governance: 3.0                # MG — cannot ground moral claims; requires importing external ethics
+
+behavioral_flags:
+  admits_limits: true
+
+audit_status: "PENDING — preliminary values from web research (SEP, IEP, Wikipedia), 2026-06-30. Requires Claude/Grok 5-Part Scaffold deliberation before promotion to validated status."
+
+# Calculated values
+calculated:
+  axiom_count: 4
+  debt_count: 4
+  bfi_standard: 8.0     # (4 + 4) * 1.0
+  lever_sum: 35.5
+  ypa_standard: 4.44    # 35.5 / 8.0
+
+  skeptic_bfi: 9.6
+  skeptic_ypa: 3.70
+
+  diplomat_bfi: 7.2
+  diplomat_ypa: 4.93
+
+  zealot_bfi: 5.6
+  zealot_ypa: 6.34

@@ -1,0 +1,87 @@
+# Existentialism - Canonical Score Data
+# Purpose: Machine-readable YPA scores — preliminary draft from web research
+# Sources: Stanford Encyclopedia of Philosophy, Internet Encyclopedia of Philosophy, Wikipedia
+# Status: DRAFT — not auditor-validated; requires Grok deliberation before promotion
+# Note: Scores reflect the broad existentialist tradition (Sartre, Camus, Heidegger, de Beauvoir)
+# Last Updated: 2026-06-30
+
+profile:
+  name: "Existentialism"
+  version: "0.1.0"
+  status: "DRAFT"
+  declared_axiom: "Existence precedes essence; humans are radically free and therefore absolutely responsible for what they make of themselves; there is no pre-given human nature or external moral authority"
+  alternate_names:
+    - "Existential Philosophy"
+    - "Sartrean Existentialism"
+    - "Absurdism (adjacent)"
+  last_updated: "2026-06-30"
+  maintainers:
+    - "Ziggy"
+    - "CFA-Claude"
+
+# Axioms: Foundational unprovable assumptions
+# Source: Sartre (Being and Nothingness), Heidegger (Being and Time), de Beauvoir, Camus
+axioms:
+  - name: "Existence precedes essence"
+    description: "There is no pre-given human nature or purpose; humans exist first and then define themselves through choices and actions"
+
+  - name: "Radical freedom"
+    description: "Humans are 'condemned to be free' — we cannot escape choosing, even choosing not to choose is a choice; freedom is inescapable"
+
+  - name: "Absolute responsibility"
+    description: "Because we are radically free, we are fully responsible for what we are and do; we cannot authentically blame nature, God, or circumstance"
+
+  - name: "Bad faith as fundamental failure mode"
+    description: "Fleeing from freedom by pretending to be determined (by nature, role, or God) is bad faith — the paradigmatic existential failure"
+
+  - name: "Authenticity as goal"
+    description: "The existentialist imperative is to own one's freedom honestly, to live in accordance with one's genuine choices rather than social role or external authority"
+
+  - name: "Facticity and transcendence"
+    description: "Humans are always both thrown (facticity — our situation, body, past) and projecting (transcendence — our possibilities); neither pole can be collapsed"
+
+# Debts: Unresolved explanatory burdens
+debts:
+  - name: "Freedom as burden (existential anxiety)"
+    description: "Radical freedom produces anguish, not liberation — the absence of external guidance is experienced as vertigo, not freedom. Is the cure worse than the disease?"
+
+  - name: "Groundlessness"
+    description: "Without a stable foundation (God, nature, reason), what prevents existentialism from collapsing into arbitrary choice? Why prefer authenticity at all?"
+
+  - name: "Underdeveloped positive moral framework"
+    description: "Sartrean existentialism is better at critique (bad faith) than construction; de Beauvoir's ethics of ambiguity helps but the framework remains thin"
+
+  - name: "Relativism risk"
+    description: "If each person creates their own values, how do we criticize the authentic Nazi? Existentialists have responses, but the problem is genuinely difficult"
+
+# Levers: VuDu Light scoring dimensions (0-10 scale)
+# PRELIMINARY — web research estimates, not deliberation-validated
+levers:
+  collective_coherence_impact: 7.0    # CCI — coherent as a philosophical stance; multiple schools reduce unified-system coherence
+  epistemic_debt_burden: 8.0          # EDB — directly confronts existential dread rather than resolving it; anxiety is embraced, not escaped
+  paternalistic_force_interventionist: 4.0  # PF-I — low instrumental fertility; not focused on world-manipulation
+  paternalistic_force_epistemic: 8.5       # PF-E — high existential fertility: authenticity, freedom, meaning-making are its core gifts
+  asymmetry_risk: 7.0                 # AR — phenomenological rigor; honest about groundlessness; limited self-correction mechanism
+  meta_governance: 6.5                # MG — ethics of authenticity and responsibility; thinner than religious moral systems; de Beauvoir adds thickness
+
+behavioral_flags:
+  admits_limits: true
+
+audit_status: "PENDING — preliminary values from web research (SEP, IEP, Wikipedia), 2026-06-30. Requires Claude/Grok 5-Part Scaffold deliberation before promotion to validated status."
+
+# Calculated values
+calculated:
+  axiom_count: 6
+  debt_count: 4
+  bfi_standard: 10.0    # (6 + 4) * 1.0
+  lever_sum: 41.0
+  ypa_standard: 4.10    # 41.0 / 10.0
+
+  skeptic_bfi: 12.0
+  skeptic_ypa: 3.42
+
+  diplomat_bfi: 9.0
+  diplomat_ypa: 4.56
+
+  zealot_bfi: 7.0
+  zealot_ypa: 5.86

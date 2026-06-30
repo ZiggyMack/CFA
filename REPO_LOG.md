@@ -94,6 +94,34 @@ When files are added or deleted, use diff notation like git commits:
 
 ## 📝 CHANGE LOG
 
+### [DOCUMENTATION-2026-06-30-1] 2026-06-30 - Preliminary YPA Lever Scores for 10 Worldview Profiles
+
+**Categories:** [DOCUMENTATION] [DATA_PIPELINE] [🧹 +10]
+**Changed by:** Ziggy + CFA-Claude (Sonnet 4.6)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+
+- `CREATED`: profiles/worldviews/ISLAM.yaml — 7 axioms, 4 debts, YPA: 4.18 (DRAFT)
+- `CREATED`: profiles/worldviews/ORTHODOX_JUDAISM.yaml — 7 axioms, 4 debts, YPA: 4.14 (DRAFT)
+- `CREATED`: profiles/worldviews/MORMONISM.yaml — 8 axioms, 5 debts, YPA: 3.27 (DRAFT)
+- `CREATED`: profiles/worldviews/HINDUISM.yaml — 7 axioms, 4 debts, YPA: 4.05 (DRAFT)
+- `CREATED`: profiles/worldviews/BUDDHISM.yaml — 6 axioms, 4 debts, YPA: 4.65 (DRAFT)
+- `CREATED`: profiles/worldviews/PROCESS_THEOLOGY.yaml — 6 axioms, 4 debts, YPA: 4.05 (DRAFT)
+- `CREATED`: profiles/worldviews/ERROR_THEORY.yaml — 4 axioms, 4 debts, YPA: 3.31 (DRAFT)
+- `CREATED`: profiles/worldviews/NULL_HYPOTHESIS.yaml — 4 axioms, 4 debts, YPA: 4.44 (DRAFT)
+- `CREATED`: profiles/worldviews/DESIDERATA_BELIEVERS.yaml — 5 axioms, 4 debts, YPA: 4.33 (DRAFT)
+- `CREATED`: profiles/worldviews/EXISTENTIALISM.yaml — 6 axioms, 4 debts, YPA: 4.10 (DRAFT)
+- `UPDATED`: profiles/README.md — Added YAML tier notation, YPA scores, and DRAFT status to all 10 profile entries
+
+**Reason:** Establish machine-readable YPA lever scores for all non-validated worldview profiles. Scores derived from SEP, IEP, and Wikipedia research. All files marked DRAFT with explicit audit_status requiring Claude/Grok 5-Part Scaffold deliberation before promotion to validated status.
+
+**Impact:** Moderate — adds 10 new YAML files; enables console to load all 12 profiles, not just CT and MdN.
+
+**Follow-up Required:** YES — all 10 DRAFT YAMLs require Grok deliberation and Trinity Audit before promotion to VALIDATED status.
+
+-----
+
 ### [DOCUMENTATION-2025-11-17-1] 2025-11-17 - Guest Onboarding File Rebrand to VUDU Naming
 
 **Categories:** [DOCUMENTATION] [STRUCTURE] [🧹]

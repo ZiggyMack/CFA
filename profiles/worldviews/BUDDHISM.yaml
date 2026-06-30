@@ -1,0 +1,86 @@
+# Buddhism - Canonical Score Data
+# Purpose: Machine-readable YPA scores — preliminary draft from web research
+# Sources: Stanford Encyclopedia of Philosophy, Internet Encyclopedia of Philosophy, Wikipedia
+# Status: DRAFT — not auditor-validated; requires Grok deliberation before promotion
+# Note: Scores reflect broad Buddhist synthesis; Theravada/Mahayana/Vajrayana may differ
+# Last Updated: 2026-06-30
+
+profile:
+  name: "Buddhism"
+  version: "0.1.0"
+  status: "DRAFT"
+  declared_axiom: "Suffering (dukkha) is the fundamental condition of conditioned existence; its cause is craving (tanha); its cessation (nirvana) is possible; the Eightfold Path is the means to that cessation"
+  alternate_names:
+    - "Buddhadharma"
+    - "Dharma"
+    - "The Middle Way"
+  last_updated: "2026-06-30"
+  maintainers:
+    - "Ziggy"
+    - "CFA-Claude"
+
+# Axioms: Foundational unprovable assumptions
+axioms:
+  - name: "Four Noble Truths"
+    description: "Suffering exists (dukkha); it has a cause (tanha/craving); it can cease (nirvana); the Eightfold Path leads to cessation"
+
+  - name: "Eightfold Path"
+    description: "Right view, intention, speech, action, livelihood, effort, mindfulness, and concentration constitute the path to liberation"
+
+  - name: "Three Marks of Existence"
+    description: "All conditioned phenomena are impermanent (anicca), characterized by suffering (dukkha), and without fixed self (anatta)"
+
+  - name: "Karma and dependent origination"
+    description: "Actions have morally weighted consequences; all phenomena arise in dependence on conditions (pratityasamutpada)"
+
+  - name: "Samsara and rebirth"
+    description: "Beings cycle through conditioned existence across lives driven by karma and craving until liberation is attained"
+
+  - name: "Nirvana is attainable"
+    description: "Liberation from the cycle of suffering is possible in principle for all beings; the Buddha's attainment is proof of concept"
+
+# Debts: Unresolved explanatory burdens
+debts:
+  - name: "Karma transmission without self"
+    description: "If there is no permanent self (anatta), what carries karma across lives? The tension between rebirth and no-self is Buddhism's central internal paradox"
+
+  - name: "Nirvana definition contested"
+    description: "Is nirvana annihilation, a positive state, or beyond description? Theravada and Mahayana diverge significantly on this central goal"
+
+  - name: "Rebirth mechanism"
+    description: "What exactly transmigrates if not a soul? Buddhist philosophy has sophisticated answers but they remain empirically untestable"
+
+  - name: "Early exclusion of women"
+    description: "The Buddha's initial reluctance to ordain women, and subsequent gender hierarchies in Buddhist institutions, require honest reckoning"
+
+# Levers: VuDu Light scoring dimensions (0-10 scale)
+# PRELIMINARY — web research estimates, not deliberation-validated
+levers:
+  collective_coherence_impact: 8.0    # CCI — highly systematic psychological and philosophical analysis; Abhidhamma is rigorous
+  epistemic_debt_burden: 9.0          # EDB — directly and systematically addresses suffering as its central concern; uniquely high score here
+  paternalistic_force_interventionist: 4.0  # PF-I — not primarily instrumental; mindfulness has practical applications but that's secondary
+  paternalistic_force_epistemic: 9.5       # PF-E — extremely high: meditation, community (sangha), ritual, cosmology, ethics all integrated for liberation
+  asymmetry_risk: 8.0                 # AR — "come and see" (ehipassiko) empirical epistemology; Buddhist logic (Dignaga, Dharmakirti) is sophisticated
+  meta_governance: 8.0                # MG — five precepts, bodhisattva ethics, vinaya monastic code; rich and extensively developed
+
+behavioral_flags:
+  admits_limits: true
+
+audit_status: "PENDING — preliminary values from web research (SEP, IEP, Wikipedia), 2026-06-30. Requires Claude/Grok 5-Part Scaffold deliberation before promotion to validated status."
+
+# Calculated values
+calculated:
+  axiom_count: 6
+  debt_count: 4
+  bfi_standard: 10.0    # (6 + 4) * 1.0
+  lever_sum: 46.5
+  ypa_standard: 4.65    # 46.5 / 10.0
+
+  skeptic_bfi: 12.0
+  skeptic_ypa: 3.88
+
+  diplomat_bfi: 9.0
+  diplomat_ypa: 5.17
+
+  zealot_bfi: 7.0
+  zealot_ypa: 6.64

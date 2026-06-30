@@ -1,0 +1,89 @@
+# Orthodox Judaism - Canonical Score Data
+# Purpose: Machine-readable YPA scores — preliminary draft from web research
+# Sources: Stanford Encyclopedia of Philosophy, Internet Encyclopedia of Philosophy, Wikipedia
+# Status: DRAFT — not auditor-validated; requires Grok deliberation before promotion
+# Last Updated: 2026-06-30
+
+profile:
+  name: "Orthodox Judaism"
+  version: "0.1.0"
+  status: "DRAFT"
+  declared_axiom: "God revealed the Torah (Written and Oral) at Sinai; halakha is binding on all Jews; Jewish covenant identity is eternal and irreplaceable"
+  alternate_names:
+    - "Torah Judaism"
+    - "Traditional Judaism"
+    - "Halakhic Judaism"
+  last_updated: "2026-06-30"
+  maintainers:
+    - "Ziggy"
+    - "CFA-Claude"
+
+# Axioms: Foundational unprovable assumptions
+# Source: Maimonides' 13 Principles of Faith (Rambam) — the canonical Orthodox creed
+axioms:
+  - name: "God exists"
+    description: "The Creator exists necessarily, is incorporeal, eternal, and absolutely one (Maimonides principles 1-3)"
+
+  - name: "Torah is divine"
+    description: "The Written Torah (Tanakh) was given by God to Moses at Sinai; it is eternally authoritative and unalterable"
+
+  - name: "Covenant with Israel"
+    description: "God entered a unique, binding covenant with the Jewish people — this relationship is permanent and cannot be transferred"
+
+  - name: "Oral Torah is binding"
+    description: "The Oral Torah (Talmud, rabbinic tradition) was given at Sinai alongside Written Torah and is equally authoritative"
+
+  - name: "Mitzvot are obligatory"
+    description: "The 613 commandments are binding on all Jews; observance is not optional but covenantal obligation"
+
+  - name: "Messianic expectation"
+    description: "A personal Messiah will come, rebuild the Temple, and usher in a redemptive era for all humanity"
+
+  - name: "Resurrection of the dead"
+    description: "The physical dead will be resurrected in the messianic era; bodily resurrection is a core tenet"
+
+# Debts: Unresolved explanatory burdens
+debts:
+  - name: "Theodicy / Holocaust"
+    description: "How does a just God permit the destruction of 6 million Jews, including over a million children? The Shoah strains any theodicy."
+
+  - name: "Religious diversity"
+    description: "The particularity of Jewish covenant raises questions about the status and salvation of righteous non-Jews"
+
+  - name: "Modern science tensions"
+    description: "Biblical chronology, origins narratives, and some halakhic categories require reconciliation with evolutionary biology and cosmology"
+
+  - name: "Gender and inclusion tensions"
+    description: "Traditional gender roles in prayer, testimony, and leadership create ongoing tension with contemporary equality norms"
+
+# Levers: VuDu Light scoring dimensions (0-10 scale)
+# PRELIMINARY — web research estimates, not deliberation-validated
+levers:
+  collective_coherence_impact: 8.0    # CCI — highly unified legal-theological system; 3000-year textual coherence
+  epistemic_debt_burden: 8.0          # EDB — covenant framework absorbs existential dread; communal identity provides grounding
+  paternalistic_force_interventionist: 4.0  # PF-I — not primarily instrumental; focus on observance over world-manipulation
+  paternalistic_force_epistemic: 9.0       # PF-E — extremely rich: Shabbat, lifecycle rituals, dietary laws, community, tikkun olam meaning
+  asymmetry_risk: 7.5                 # AR — tradition of machloket l'shem shamayim (argument for heaven's sake); pilpul as self-correction
+  meta_governance: 9.0                # MG — halacha is among history's most detailed moral-legal frameworks; 613 mitzvot + rabbinic elaboration
+
+behavioral_flags:
+  admits_limits: true
+
+audit_status: "PENDING — preliminary values from web research (SEP, IEP, Wikipedia), 2026-06-30. Requires Claude/Grok 5-Part Scaffold deliberation before promotion to validated status."
+
+# Calculated values
+calculated:
+  axiom_count: 7
+  debt_count: 4
+  bfi_standard: 11.0    # (7 + 4) * 1.0
+  lever_sum: 45.5
+  ypa_standard: 4.14    # 45.5 / 11.0
+
+  skeptic_bfi: 13.2
+  skeptic_ypa: 3.45
+
+  diplomat_bfi: 9.9
+  diplomat_ypa: 4.60
+
+  zealot_bfi: 7.7
+  zealot_ypa: 5.91

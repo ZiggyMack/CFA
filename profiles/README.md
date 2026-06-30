@@ -24,65 +24,77 @@ profiles/
 
 ## Profile Index
 
-### Production Profiles (Phase 3 - Complete Scaffolding)
+> **Two artifact tiers per profile:** `.md` = human-readable narrative (Steel-Manning Guide, deliberation). `.yaml` = machine-readable YPA lever scores. **VALIDATED** = auditor-deliberated. **DRAFT** = preliminary web research.
 
-**[Classical Theism](worldviews/CLASSICAL_THEISM.md)** - v0.2.0 (DRAFT)
+### Production Profiles (Validated YPA Scores)
+
+**[Classical Theism](worldviews/CLASSICAL_THEISM.md)** — [YAML ✅ VALIDATED](worldviews/CLASSICAL_THEISM.yaml) - v0.2.0
 - **Axiom:** God exists as necessary perfect being who created and sustains the universe
 - **Tradition:** Medieval scholasticism (Anselm, Aquinas, Maimonides)
-- **Key Commitments:** Divine perfection, creatio ex nihilo, imago Dei anthropology
-- **Status:** Full structure with ToC, Steel-Manning Guide, 1 detailed metric (suffering_weight), all hooks implemented
+- **YPA:** 4.46 (7 axioms, 4 debts, BFI: 11.0)
+- **Status:** Full narrative + validated lever scores (Claude/Grok Trinity Audit)
 
-**[Methodological Naturalism](worldviews/METHODOLOGICAL_NATURALISM.md)** - v0.2.0 (DRAFT)
+**[Methodological Naturalism](worldviews/METHODOLOGICAL_NATURALISM.md)** — [YAML ✅ VALIDATED](worldviews/METHODOLOGICAL_NATURALISM.yaml) - v0.2.0
 - **Axiom:** Natural world operates by discoverable laws; knowledge requires empirical evidence
 - **Tradition:** Scientific empiricism, logical positivism, naturalized epistemology
-- **Key Commitments:** Empirical evidentialism, causal closure, methodological parsimony
-- **Status:** Full structure with ToC, Steel-Manning Guide, 1 detailed metric (suffering_weight), all hooks implemented
+- **YPA:** 4.18 (6 axioms, 4 debts, BFI: 10.0)
+- **Status:** Full narrative + validated lever scores (Claude/Grok Trinity Audit)
 
-### Priority Queue Profiles (Phase 3 - Scaffolded)
+### Priority Queue Profiles (Narrative + Preliminary YPA)
 
 Per Ziggy Entry 2.5 (B-STORM_3.md), next priority for Phase 4 Grok deliberation:
 
-**1. [Orthodox Judaism](worldviews/ORTHODOX_JUDAISM.md)** - v0.2.0 (DRAFT)
+**1. [Orthodox Judaism](worldviews/ORTHODOX_JUDAISM.md)** — [YAML ⚠️ DRAFT](worldviews/ORTHODOX_JUDAISM.yaml) - v0.2.0
 - **Axiom:** God revealed Torah at Sinai; halakha is binding and authoritative
-- **Status:** Scaffolded with ToC and Steel-Manning Guide - foundations complete, metrics ready for Grok
+- **YPA:** 4.14 (7 axioms, 4 debts, BFI: 11.0) — preliminary, web research only
+- **Status:** Narrative scaffolded; lever scores PENDING auditor deliberation
 
-**2. [Mormonism (LDS)](worldviews/MORMONISM.md)** - v0.2.0 (DRAFT)
+**2. [Mormonism (LDS)](worldviews/MORMONISM.md)** — [YAML ⚠️ DRAFT](worldviews/MORMONISM.yaml) - v0.2.0
 - **Axiom:** Continuing revelation through prophets; humans have potential for divine progression
-- **Status:** Scaffolded with ToC and Steel-Manning Guide - foundations complete, metrics ready for Grok
+- **YPA:** 3.27 (8 axioms, 5 debts, BFI: 13.0) — preliminary, web research only
+- **Status:** Narrative scaffolded; lever scores PENDING auditor deliberation
 
-**3. [Error Theory](worldviews/ERROR_THEORY.md)** - v0.2.0 (DRAFT)
+**3. [Error Theory](worldviews/ERROR_THEORY.md)** — [YAML ⚠️ DRAFT](worldviews/ERROR_THEORY.yaml) - v0.2.0
 - **Axiom:** All positive moral claims are false; moral properties do not exist
-- **Status:** Scaffolded with ToC and Steel-Manning Guide - foundations complete, metrics ready for Grok
+- **YPA:** 3.31 (4 axioms, 4 debts, BFI: 8.0) — preliminary, web research only
+- **Status:** Narrative scaffolded; lever scores PENDING auditor deliberation
 
-**4. [Null Hypothesis](worldviews/NULL_HYPOTHESIS.md)** - v0.2.0 (DRAFT)
+**4. [Null Hypothesis](worldviews/NULL_HYPOTHESIS.md)** — [YAML ⚠️ DRAFT](worldviews/NULL_HYPOTHESIS.yaml) - v0.2.0
 - **Axiom:** Suspend judgment on claims lacking sufficient evidence; epistemic minimalism
-- **Status:** Scaffolded with ToC and Steel-Manning Guide - foundations complete, metrics ready for Grok
+- **YPA:** 4.44 (4 axioms, 4 debts, BFI: 8.0) — preliminary, web research only
+- **Status:** Narrative scaffolded; lever scores PENDING auditor deliberation
 
-**5. [Desiderata Believers](worldviews/DESIDERATA_BELIEVERS.md)** - v0.2.0 (DRAFT)
+**5. [Desiderata Believers](worldviews/DESIDERATA_BELIEVERS.md)** — [YAML ⚠️ DRAFT](worldviews/DESIDERATA_BELIEVERS.yaml) - v0.2.0
 - **Axiom:** Adopt beliefs that promote flourishing; pragmatic value justifies belief
-- **Status:** Scaffolded with ToC and Steel-Manning Guide - foundations complete, metrics ready for Grok
+- **YPA:** 4.33 (5 axioms, 4 debts, BFI: 9.0) — preliminary, web research only
+- **Status:** Narrative scaffolded; lever scores PENDING auditor deliberation
 
-### Additional Worldview Profiles (Phase 3 - Scaffolded)
+### Additional Worldview Profiles (Narrative + Preliminary YPA)
 
-**[Buddhism](worldviews/BUDDHISM.md)** - v0.2.0 (DRAFT)
+**[Buddhism](worldviews/BUDDHISM.md)** — [YAML ⚠️ DRAFT](worldviews/BUDDHISM.yaml) - v0.2.0
 - **Axiom:** Suffering is universal; liberation achieved through Eightfold Path
-- **Status:** Scaffolded with ToC and Steel-Manning Guide - foundations complete, metrics ready for Grok
+- **YPA:** 4.65 (6 axioms, 4 debts, BFI: 10.0) — preliminary, web research only
+- **Status:** Narrative scaffolded; lever scores PENDING auditor deliberation
 
-**[Islam](worldviews/ISLAM.md)** - v0.2.0 (DRAFT)
+**[Islam](worldviews/ISLAM.md)** — [YAML ⚠️ DRAFT](worldviews/ISLAM.yaml) - v0.2.0
 - **Axiom:** There is no god but Allah; Muhammad is His messenger; Quran is final revelation
-- **Status:** Scaffolded with ToC and Steel-Manning Guide - foundations complete, metrics ready for Grok
+- **YPA:** 4.18 (7 axioms, 4 debts, BFI: 11.0) — preliminary, web research only
+- **Status:** Narrative scaffolded; lever scores PENDING auditor deliberation
 
-**[Hinduism](worldviews/HINDUISM.md)** - v0.2.0 (DRAFT)
+**[Hinduism](worldviews/HINDUISM.md)** — [YAML ⚠️ DRAFT](worldviews/HINDUISM.yaml) - v0.2.0
 - **Axiom:** Brahman is ultimate reality; atman-Brahman identity; moksha is liberation
-- **Status:** Scaffolded with ToC and Steel-Manning Guide - foundations complete, metrics ready for Grok
+- **YPA:** 4.05 (7 axioms, 4 debts, BFI: 11.0) — preliminary, web research only
+- **Status:** Narrative scaffolded; lever scores PENDING auditor deliberation
 
-**[Process Theology](worldviews/PROCESS_THEOLOGY.md)** - v0.2.0 (DRAFT)
+**[Process Theology](worldviews/PROCESS_THEOLOGY.md)** — [YAML ⚠️ DRAFT](worldviews/PROCESS_THEOLOGY.yaml) - v0.2.0
 - **Axiom:** God is dipolar; divine power is persuasive not coercive; panentheism
-- **Status:** Scaffolded with ToC and Steel-Manning Guide - foundations complete, metrics ready for Grok
+- **YPA:** 4.05 (6 axioms, 4 debts, BFI: 10.0) — preliminary, web research only
+- **Status:** Narrative scaffolded; lever scores PENDING auditor deliberation
 
-**[Existentialism](worldviews/EXISTENTIALISM.md)** - v0.2.0 (DRAFT)
+**[Existentialism](worldviews/EXISTENTIALISM.md)** — [YAML ⚠️ DRAFT](worldviews/EXISTENTIALISM.yaml) - v0.2.0
 - **Axiom:** Existence precedes essence; radical freedom creates meaning in absurd universe
-- **Status:** Scaffolded with ToC and Steel-Manning Guide - foundations complete, metrics ready for Grok
+- **YPA:** 4.10 (6 axioms, 4 debts, BFI: 10.0) — preliminary, web research only
+- **Status:** Narrative scaffolded; lever scores PENDING auditor deliberation
 
 ### Future Profiles (Planned)
 

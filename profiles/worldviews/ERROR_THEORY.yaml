@@ -1,0 +1,81 @@
+# Error Theory - Canonical Score Data
+# Purpose: Machine-readable YPA scores — preliminary draft from web research
+# Sources: Stanford Encyclopedia of Philosophy (Mackie, Joyce), Internet Encyclopedia of Philosophy
+# Status: DRAFT — not auditor-validated; requires Grok deliberation before promotion
+# Last Updated: 2026-06-30
+
+profile:
+  name: "Error Theory"
+  version: "0.1.0"
+  status: "DRAFT"
+  declared_axiom: "Moral discourse purports to describe objective moral facts, but no such facts exist; therefore all positive moral claims are systematically false"
+  alternate_names:
+    - "Moral Error Theory"
+    - "Mackian Error Theory"
+    - "Moral Nihilism (descriptive)"
+  last_updated: "2026-06-30"
+  maintainers:
+    - "Ziggy"
+    - "CFA-Claude"
+
+# Axioms: Foundational unprovable assumptions
+# Source: J.L. Mackie (Ethics: Inventing Right and Wrong, 1977); Richard Joyce
+axioms:
+  - name: "Moral discourse is cognitivist"
+    description: "Moral statements purport to be truth-apt descriptions of objective features of reality — they are not mere expressions of emotion or preference"
+
+  - name: "No objective moral facts exist"
+    description: "Metaphysically, there are no mind-independent moral properties or facts in the world. The universe contains no objective values (Mackie's argument from queerness)"
+
+  - name: "All positive moral claims are false"
+    description: "Since moral claims purport to describe objective facts that don't exist, every positive moral claim ('X is wrong') is false"
+
+  - name: "Moral discourse is systematically in error"
+    description: "Human moral practice operates under a systematic illusion — we act as if moral facts exist when they do not (the argument from relativity)"
+
+# Debts: Unresolved explanatory burdens
+debts:
+  - name: "Self-refutation risk"
+    description: "If all positive moral claims are false, is 'we should accept Error Theory' a positive moral claim? The theory risks sawing off the branch it sits on"
+
+  - name: "Practical paralysis"
+    description: "If no moral claims are true, on what basis should anyone act morally? Error theory seems to license anything while providing no positive guidance"
+
+  - name: "Replacement theory needed"
+    description: "What do we do with moral discourse once we accept the error? Fictionalism, abolitionism, and revisionism are proposed but none is clearly superior"
+
+  - name: "Phenomenology contradiction"
+    description: "Moral experience feels categorically different from preference — the theory must explain why billions experience moral obligation as genuinely binding"
+
+# Levers: VuDu Light scoring dimensions (0-10 scale)
+# PRELIMINARY — web research estimates, not deliberation-validated
+# Note: Error Theory is a META-ETHICAL position, not a first-order worldview; scores reflect this
+levers:
+  collective_coherence_impact: 7.0    # CCI — internally consistent given premises; argument from queerness is rigorous
+  epistemic_debt_burden: 3.0          # EDB — provides no positive framework for bearing existential dread; strips meaning without replacing it
+  paternalistic_force_interventionist: 5.0  # PF-I — neutral on scientific method; neither aids nor hinders
+  paternalistic_force_epistemic: 2.0       # PF-E — very low existential fertility; by design denies the objective status of moral meaning
+  asymmetry_risk: 8.5                 # AR — high epistemic honesty; follows the argument where it leads regardless of comfort
+  meta_governance: 1.0                # MG — cannot generate a positive moral framework by design; this is its essential limitation
+
+behavioral_flags:
+  admits_limits: true
+
+audit_status: "PENDING — preliminary values from web research (SEP, IEP, Wikipedia), 2026-06-30. Requires Claude/Grok 5-Part Scaffold deliberation before promotion to validated status."
+
+# Calculated values
+calculated:
+  axiom_count: 4
+  debt_count: 4
+  bfi_standard: 8.0     # (4 + 4) * 1.0
+  lever_sum: 26.5
+  ypa_standard: 3.31    # 26.5 / 8.0
+
+  skeptic_bfi: 9.6
+  skeptic_ypa: 2.76
+
+  diplomat_bfi: 7.2
+  diplomat_ypa: 3.68
+
+  zealot_bfi: 5.6
+  zealot_ypa: 4.73

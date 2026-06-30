@@ -1,0 +1,90 @@
+# Hinduism - Canonical Score Data
+# Purpose: Machine-readable YPA scores — preliminary draft from web research
+# Sources: Stanford Encyclopedia of Philosophy, Internet Encyclopedia of Philosophy, Wikipedia
+# Status: DRAFT — not auditor-validated; requires Grok deliberation before promotion
+# Note: "Hinduism" is a family of traditions; scores reflect the broad Vedantic synthesis
+# Last Updated: 2026-06-30
+
+profile:
+  name: "Hinduism"
+  version: "0.1.0"
+  status: "DRAFT"
+  declared_axiom: "Ultimate reality (Brahman) is one; the individual self (Atman) is identical with or related to Brahman; liberation (moksha) from the cycle of rebirth is the highest goal of human existence"
+  alternate_names:
+    - "Sanatana Dharma"
+    - "Vedantic Philosophy"
+    - "Hindu Dharma"
+  last_updated: "2026-06-30"
+  maintainers:
+    - "Ziggy"
+    - "CFA-Claude"
+
+# Axioms: Foundational unprovable assumptions
+# Source: Vedantic synthesis (Advaita, Vishishtadvaita, Dvaita); Smarta tradition
+axioms:
+  - name: "Brahman/Atman unity"
+    description: "Ultimate reality (Brahman) is the ground of all being; the individual self (Atman) is identical to or deeply related with Brahman"
+
+  - name: "Dharma as cosmic order"
+    description: "Dharma is the eternal moral-cosmic order underlying reality; living in accord with dharma is the foundational ethical imperative"
+
+  - name: "Karma"
+    description: "Actions (karma) generate consequences that shape future experience within this life and across lives; moral causation is real"
+
+  - name: "Samsara (cycle of rebirth)"
+    description: "The soul transmigrates through multiple lives across species and cosmic epochs until liberation is attained"
+
+  - name: "Moksha as highest liberation"
+    description: "Liberation from samsara — through jnana (knowledge), bhakti (devotion), karma yoga (action), or raja yoga — is the supreme human goal"
+
+  - name: "Vedas as sacred revelation"
+    description: "The Vedas (shruti) are eternal, authorless revealed truth; they are the epistemic foundation of dharmic inquiry"
+
+  - name: "Multiple valid paths"
+    description: "Many paths (margas) lead to liberation; different traditions (Shaiva, Vaishnava, Shakta, Smarta) represent legitimate approaches to the same ultimate reality"
+
+# Debts: Unresolved explanatory burdens
+debts:
+  - name: "Caste system implications"
+    description: "The varna/jati system, traditionally grounded in karma and dharma, has enabled systemic oppression requiring ongoing philosophical reckoning"
+
+  - name: "Internal school conflicts"
+    description: "Advaita (non-dualism), Vishishtadvaita (qualified non-dualism), and Dvaita (dualism) reach incompatible conclusions about Brahman-Atman relationship"
+
+  - name: "Science-cosmology tensions"
+    description: "Puranic cosmology (vast cosmic timescales are actually close to modern estimates) coexists uneasily with evolutionary biology and geological timescales"
+
+  - name: "Theodicy"
+    description: "If karma explains suffering, what explains the first moment of suffering? The infinite regress of karma chains is philosophically difficult"
+
+# Levers: VuDu Light scoring dimensions (0-10 scale)
+# PRELIMINARY — web research estimates, not deliberation-validated
+levers:
+  collective_coherence_impact: 7.0    # CCI — pluralistic internal structure reduces single-system coherence; individual schools are highly coherent
+  epistemic_debt_burden: 8.5          # EDB — karma/dharma/samsara provides rich framework for absorbing suffering and existential dread
+  paternalistic_force_interventionist: 4.5  # PF-I — yoga, Ayurveda, vastu provide practical tools; not primarily instrumental worldview
+  paternalistic_force_epistemic: 9.5       # PF-E — highest existential fertility: art, music, dance, poetry, ritual, devotion, philosophy — all integrated
+  asymmetry_risk: 7.0                 # AR — robust debate tradition (Nyaya, Buddhist-Hindu dialogues); revelation sets some hard limits
+  meta_governance: 8.0                # MG — dharmic ethics (ahimsa, satya, asteya), extensive ritual-moral framework, caste complexity requires honest accounting
+
+behavioral_flags:
+  admits_limits: true
+
+audit_status: "PENDING — preliminary values from web research (SEP, IEP, Wikipedia), 2026-06-30. Requires Claude/Grok 5-Part Scaffold deliberation before promotion to validated status."
+
+# Calculated values
+calculated:
+  axiom_count: 7
+  debt_count: 4
+  bfi_standard: 11.0    # (7 + 4) * 1.0
+  lever_sum: 44.5
+  ypa_standard: 4.05    # 44.5 / 11.0
+
+  skeptic_bfi: 13.2
+  skeptic_ypa: 3.37
+
+  diplomat_bfi: 9.9
+  diplomat_ypa: 4.49
+
+  zealot_bfi: 7.7
+  zealot_ypa: 5.78

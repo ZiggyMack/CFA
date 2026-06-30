@@ -1,0 +1,86 @@
+# Process Theology - Canonical Score Data
+# Purpose: Machine-readable YPA scores — preliminary draft from web research
+# Sources: Stanford Encyclopedia of Philosophy, Internet Encyclopedia of Philosophy, Wikipedia
+# Status: DRAFT — not auditor-validated; requires Grok deliberation before promotion
+# Last Updated: 2026-06-30
+
+profile:
+  name: "Process Theology"
+  version: "0.1.0"
+  status: "DRAFT"
+  declared_axiom: "God and world are mutually constituted through an ongoing creative process; God is not omnipotent but persuasive, and grows through relationship with creation"
+  alternate_names:
+    - "Whiteheadian Theology"
+    - "Process-Relational Theology"
+    - "Open Theism (adjacent)"
+  last_updated: "2026-06-30"
+  maintainers:
+    - "Ziggy"
+    - "CFA-Claude"
+
+# Axioms: Foundational unprovable assumptions
+# Source: Whitehead's Process and Reality; Hartshorne's dipolar theism; Cobb & Griffin
+axioms:
+  - name: "Reality is process, not substance"
+    description: "The fundamental units of reality are events/occasions of experience, not static substances; becoming precedes being"
+
+  - name: "God is dipolar"
+    description: "God has a primordial nature (eternal, unchanging conceptual vision of all possibilities) and a consequent nature (temporal, responsive, affected by the world)"
+
+  - name: "God persuades, not coerces"
+    description: "God acts by luring creatures toward greater beauty, truth, and goodness — never by overriding creaturely freedom. God is the ground of possibility, not control"
+
+  - name: "All actual entities have experience"
+    description: "Mentality and experience are present in all actual occasions to varying degrees; this is panpsychism, not mere projection"
+
+  - name: "Creativity is ultimate"
+    description: "The ultimate metaphysical category is creativity itself — the ongoing bringing-forth of novelty; God exemplifies creativity but does not monopolize it"
+
+  - name: "Novelty is real and irreducible"
+    description: "Genuine newness enters the world through each actual occasion's self-creation; determinism is false at the metaphysical level"
+
+# Debts: Unresolved explanatory burdens
+debts:
+  - name: "Theodicy (God cannot prevent evil)"
+    description: "God's inability to coerce is the solution to evil — but does a God who cannot prevent a child's suffering deserve worship? Is limitation a feature or a devastating bug?"
+
+  - name: "Speculative metaphysics"
+    description: "Process philosophy's metaphysical system is elaborate and largely unfalsifiable; it requires accepting Whitehead's system wholesale"
+
+  - name: "Personal immortality unclear"
+    description: "Whitehead's account of subjective immortality is thin; whether individuals survive death in any meaningful sense is contested"
+
+  - name: "Empirical testability"
+    description: "Process theology claims to be naturalistic-compatible but its core claims (divine luring, panpsychism) are not empirically testable"
+
+# Levers: VuDu Light scoring dimensions (0-10 scale)
+# PRELIMINARY — web research estimates, not deliberation-validated
+levers:
+  collective_coherence_impact: 7.0    # CCI — internally coherent Whiteheadian system; metaphysically demanding and not widely understood
+  epistemic_debt_burden: 7.5          # EDB — God suffers with creation (consequent nature); suffering as shared rather than permitted is existentially meaningful
+  paternalistic_force_interventionist: 5.0  # PF-I — compatible with science; no specific practical program
+  paternalistic_force_epistemic: 7.0       # PF-E — relational God provides meaning; weaker than classical theisms due to thinner eschatology
+  asymmetry_risk: 7.5                 # AR — explicitly open to revision; compatible with evolutionary cosmology; built-in epistemic humility
+  meta_governance: 6.5                # MG — ethics of creative advance and maximizing richness of experience; less developed than classical religious moral systems
+
+behavioral_flags:
+  admits_limits: true
+
+audit_status: "PENDING — preliminary values from web research (SEP, IEP, Wikipedia), 2026-06-30. Requires Claude/Grok 5-Part Scaffold deliberation before promotion to validated status."
+
+# Calculated values
+calculated:
+  axiom_count: 6
+  debt_count: 4
+  bfi_standard: 10.0    # (6 + 4) * 1.0
+  lever_sum: 40.5
+  ypa_standard: 4.05    # 40.5 / 10.0
+
+  skeptic_bfi: 12.0
+  skeptic_ypa: 3.38
+
+  diplomat_bfi: 9.0
+  diplomat_ypa: 4.50
+
+  zealot_bfi: 7.0
+  zealot_ypa: 5.79

@@ -1,0 +1,83 @@
+# Desiderata Believers - Canonical Score Data
+# Purpose: Machine-readable YPA scores — preliminary draft from web research
+# Sources: William James (The Will to Believe), Pascal's Wager literature, SEP on Pragmatism
+# Status: DRAFT — not auditor-validated; requires Grok deliberation before promotion
+# Last Updated: 2026-06-30
+
+profile:
+  name: "Desiderata Believers"
+  version: "0.1.0"
+  status: "DRAFT"
+  declared_axiom: "When evidence is insufficient to compel belief, it is rational and permissible to adopt beliefs on the basis of their beneficial consequences for the believer and community"
+  alternate_names:
+    - "Pragmatic Faith"
+    - "Beneficial Belief"
+    - "Will to Believe"
+  last_updated: "2026-06-30"
+  maintainers:
+    - "Ziggy"
+    - "CFA-Claude"
+
+# Axioms: Foundational unprovable assumptions
+# Source: William James, Blaise Pascal, contemporary pragmatist epistemology
+axioms:
+  - name: "Belief can be pragmatically chosen"
+    description: "When forced, live options lack decisive evidential resolution, and stakes are genuine, choosing belief on pragmatic grounds is rationally permissible"
+
+  - name: "Pragmatic truth has epistemic standing"
+    description: "The consequences of a belief — its fruits for life — are legitimate evidence of its truth or value, not mere rationalization"
+
+  - name: "Living-as-if yields real results"
+    description: "Adopting a belief and living consistently with it can generate experiences and transformations that partially validate the belief"
+
+  - name: "Beneficial beliefs warrant adoption"
+    description: "When other things are equal, beliefs that are more beneficial to the believer and community have a rational claim on adoption"
+
+  - name: "Experiential evidence counts"
+    description: "Religious and transformative experiences, though not publicly replicable, constitute genuine evidence of a personal and probabilistic kind"
+
+# Debts: Unresolved explanatory burdens
+debts:
+  - name: "Belief voluntarism is contested"
+    description: "Can we actually choose to believe something directly? Most epistemologists hold that belief is not voluntarily adopted — it follows evidence"
+
+  - name: "Self-deception risk"
+    description: "Permitting beneficial belief can license systematic self-deception; the line between pragmatic faith and wishful thinking is hard to draw"
+
+  - name: "Wishful thinking critique"
+    description: "If consequences justify belief, then different people will rationally adopt incompatible beliefs — with no mechanism for resolution"
+
+  - name: "No falsifiability"
+    description: "Beliefs adopted on pragmatic grounds are insulated from disconfirmation by design; this severs the self-correction mechanism"
+
+# Levers: VuDu Light scoring dimensions (0-10 scale)
+# PRELIMINARY — web research estimates, not deliberation-validated
+levers:
+  collective_coherence_impact: 6.0    # CCI — coherent as a meta-epistemological stance; content depends on which beliefs are adopted
+  epistemic_debt_burden: 7.5          # EDB — pragmatic resolution of existential dread is one of its explicit purposes
+  paternalistic_force_interventionist: 6.0  # PF-I — moderate; depends on content of chosen beliefs
+  paternalistic_force_epistemic: 8.5       # PF-E — explicitly optimized for existential meaning-making; high by design
+  asymmetry_risk: 5.0                 # AR — moderate; not primarily truth-tracking; risks insulation from disconfirmation
+  meta_governance: 6.0                # MG — moderate; moral framework depends on content of adopted beliefs, not the meta-stance itself
+
+behavioral_flags:
+  admits_limits: true
+
+audit_status: "PENDING — preliminary values from web research (SEP, IEP, Wikipedia), 2026-06-30. Requires Claude/Grok 5-Part Scaffold deliberation before promotion to validated status."
+
+# Calculated values
+calculated:
+  axiom_count: 5
+  debt_count: 4
+  bfi_standard: 9.0     # (5 + 4) * 1.0
+  lever_sum: 39.0
+  ypa_standard: 4.33    # 39.0 / 9.0
+
+  skeptic_bfi: 10.8
+  skeptic_ypa: 3.61
+
+  diplomat_bfi: 8.1
+  diplomat_ypa: 4.81
+
+  zealot_bfi: 6.3
+  zealot_ypa: 6.19

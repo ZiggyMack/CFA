@@ -1,0 +1,94 @@
+# Mormonism (LDS) - Canonical Score Data
+# Purpose: Machine-readable YPA scores — preliminary draft from web research
+# Sources: Stanford Encyclopedia of Philosophy, Internet Encyclopedia of Philosophy, Wikipedia
+# Status: DRAFT — not auditor-validated; requires Grok deliberation before promotion
+# Last Updated: 2026-06-30
+
+profile:
+  name: "Mormonism"
+  version: "0.1.0"
+  status: "DRAFT"
+  declared_axiom: "God the Father is an exalted, embodied being; Joseph Smith was a prophet who restored the true church; humans have eternal potential for divine progression"
+  alternate_names:
+    - "LDS (Latter-day Saints)"
+    - "The Church of Jesus Christ of Latter-day Saints"
+    - "Restorationism"
+  last_updated: "2026-06-30"
+  maintainers:
+    - "Ziggy"
+    - "CFA-Claude"
+
+# Axioms: Foundational unprovable assumptions
+axioms:
+  - name: "God is an exalted embodied being"
+    description: "The Father has a perfect, glorified physical body; the Trinity is three separate beings (social trinitarianism)"
+
+  - name: "Joseph Smith was a prophet"
+    description: "Joseph Smith received divine revelations restoring the true gospel lost in the Great Apostasy"
+
+  - name: "Book of Mormon is scripture"
+    description: "The Book of Mormon is an authentic historical record and companion scripture to the Bible, translated by divine gift"
+
+  - name: "Eternal progression"
+    description: "Humans are literally children of God with the potential to become like God ('as man now is, God once was')"
+
+  - name: "Three-tier heaven"
+    description: "The afterlife contains three degrees of glory (Celestial, Terrestrial, Telestial); nearly all are saved to some degree"
+
+  - name: "Priesthood authority"
+    description: "Divine authority to act in God's name was restored through Joseph Smith; this priesthood is essential for saving ordinances"
+
+  - name: "Pre-mortal existence"
+    description: "All humans existed as spirit children of God before birth; earth life is a necessary stage in eternal progression"
+
+  - name: "Celestial marriage"
+    description: "Temple marriage seals families for eternity; exaltation in the highest Celestial degree requires this ordinance"
+
+# Debts: Unresolved explanatory burdens
+debts:
+  - name: "Historical anachronisms in Book of Mormon"
+    description: "The BOM mentions horses, steel, chariots, and wheat in pre-Columbian America — items not supported by archaeology"
+
+  - name: "DNA and archaeological tensions"
+    description: "Genetic evidence does not support a Near Eastern origin for indigenous American populations as implied by BOM narrative"
+
+  - name: "Polygamy history"
+    description: "Joseph Smith practiced plural marriage; the church's official discontinuation and historical minimization create ongoing credibility tensions"
+
+  - name: "Racial exclusion history"
+    description: "The priesthood was denied to Black members until 1978 by official revelation — explaining this theologically remains unresolved"
+
+  - name: "Multiple scripture problem"
+    description: "The doctrinal relationship between Bible, BOM, D&C, and Pearl of Great Price, plus ongoing prophetic revelation, creates interpretive complexity"
+
+# Levers: VuDu Light scoring dimensions (0-10 scale)
+# PRELIMINARY — web research estimates, not deliberation-validated
+levers:
+  collective_coherence_impact: 7.0    # CCI — internally coherent eternal-progression narrative; external historical tensions reduce score
+  epistemic_debt_burden: 8.0          # EDB — eternal families narrative and three-tier afterlife provide strong existential framework
+  paternalistic_force_interventionist: 5.0  # PF-I — moderate; strong community/welfare systems but not primarily world-manipulating
+  paternalistic_force_epistemic: 9.0       # PF-E — very high: eternal families, pre-mortal identity, exaltation narrative is deeply meaning-rich
+  asymmetry_risk: 5.5                 # AR — living prophet allows some self-correction; historical credibility issues constrain score
+  meta_governance: 8.0                # MG — strong moral community framework; Word of Wisdom, law of chastity, tithing, welfare system
+
+behavioral_flags:
+  admits_limits: true
+
+audit_status: "PENDING — preliminary values from web research (SEP, IEP, Wikipedia), 2026-06-30. Requires Claude/Grok 5-Part Scaffold deliberation before promotion to validated status."
+
+# Calculated values
+calculated:
+  axiom_count: 8
+  debt_count: 5
+  bfi_standard: 13.0    # (8 + 5) * 1.0
+  lever_sum: 42.5
+  ypa_standard: 3.27    # 42.5 / 13.0
+
+  skeptic_bfi: 15.6
+  skeptic_ypa: 2.72
+
+  diplomat_bfi: 11.7
+  diplomat_ypa: 3.63
+
+  zealot_bfi: 9.1
+  zealot_ypa: 4.67

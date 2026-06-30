@@ -1,0 +1,90 @@
+# Islam - Canonical Score Data
+# Purpose: Machine-readable YPA scores — preliminary draft from web research
+# Sources: Stanford Encyclopedia of Philosophy, Internet Encyclopedia of Philosophy, Wikipedia
+# Status: DRAFT — not auditor-validated; requires Grok deliberation before promotion
+# Last Updated: 2026-06-30
+
+profile:
+  name: "Islam"
+  version: "0.1.0"
+  status: "DRAFT"
+  declared_axiom: "There is no god but Allah, and Muhammad is His messenger; the Quran is the final, complete divine revelation governing all domains of human life"
+  alternate_names:
+    - "Islamic Worldview"
+    - "Quranic Theism"
+    - "Submission"
+  last_updated: "2026-06-30"
+  maintainers:
+    - "Ziggy"
+    - "CFA-Claude"
+
+# Axioms: Foundational unprovable assumptions
+# Source: Arkan al-Iman (Six Pillars of Faith) + Shahada
+axioms:
+  - name: "Tawhid (Divine Unity)"
+    description: "God (Allah) is absolutely one, indivisible, and without partner or equal"
+
+  - name: "Prophethood of Muhammad"
+    description: "Muhammad is the final and seal of the prophets; his revelation supersedes all prior revelations"
+
+  - name: "Quran as divine word"
+    description: "The Quran is the literal, uncreated word of God — perfectly preserved and universally binding"
+
+  - name: "Angels"
+    description: "Non-material beings created from light who carry out divine commands and record human deeds"
+
+  - name: "Day of Judgment"
+    description: "All humans will be resurrected and judged according to their beliefs and deeds; heaven and hell are real"
+
+  - name: "Divine decree (Qadar)"
+    description: "Everything that occurs is within God's foreknowledge and will — human agency exists within divine providence"
+
+  - name: "Life after death (Akhirah)"
+    description: "The afterlife is the ultimate, permanent domain; earthly life is preparation for it"
+
+# Debts: Unresolved explanatory burdens
+debts:
+  - name: "Problem of evil"
+    description: "How does an omnipotent, benevolent God permit suffering, especially for the innocent?"
+
+  - name: "Religious diversity"
+    description: "Why do equally sincere non-Muslims lack the means of salvation? What of those who never heard the message?"
+
+  - name: "Scriptural interpretation conflicts"
+    description: "Disagreements between Sunni, Shia, Sufi, and other schools on authoritative interpretation of Quran and Hadith"
+
+  - name: "Science-revelation tensions"
+    description: "Apparent conflicts between Quranic cosmology/biology and modern scientific consensus require ongoing reconciliation"
+
+# Levers: VuDu Light scoring dimensions (0-10 scale)
+# PRELIMINARY — web research estimates, not deliberation-validated
+levers:
+  collective_coherence_impact: 8.0    # CCI — strict monotheism provides highly unified worldview; sharia integrates law/ethics/ritual
+  epistemic_debt_burden: 8.5          # EDB — submission (islam) framework absorbs existential dread effectively; afterlife stakes are clear
+  paternalistic_force_interventionist: 5.0  # PF-I — practical guidance strong (halal/haram, finance, governance) but not primarily tool-building
+  paternalistic_force_epistemic: 9.0       # PF-E — extremely high existential fertility: ummah community, ritual structure, eternal purpose
+  asymmetry_risk: 7.0                 # AR — ijtihad tradition enables some self-correction; revelation sets hard limits on revision
+  meta_governance: 8.5                # MG — sharia is one of history's most comprehensive moral-legal frameworks
+
+behavioral_flags:
+  admits_limits: true
+
+audit_status: "PENDING — preliminary values from web research (SEP, IEP, Wikipedia), 2026-06-30. Requires Claude/Grok 5-Part Scaffold deliberation before promotion to validated status."
+
+# Calculated values
+calculated:
+  axiom_count: 7
+  debt_count: 4
+  bfi_standard: 11.0    # (7 + 4) * 1.0
+  lever_sum: 46.0
+  ypa_standard: 4.18    # 46.0 / 11.0
+
+  # Preset mode BFI/YPA variations
+  skeptic_bfi: 13.2     # (7 + 4) * 1.2
+  skeptic_ypa: 3.48
+
+  diplomat_bfi: 9.9     # (7 + 4) * 0.9
+  diplomat_ypa: 4.65
+
+  zealot_bfi: 7.7       # (7 + 4) * 0.7
+  zealot_ypa: 5.97
