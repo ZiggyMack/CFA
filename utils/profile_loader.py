@@ -294,21 +294,63 @@ def get_brute_ledger(worldview_name: str) -> Dict[str, Any]:
     - audit_notes: Commentary on axioms/debts
 
     Used by pages/brute_ledger.py to dynamically generate ledger content
+
+    Priority:
+    1. .md file's brute_ledger YAML block (validated profiles with full narrative)
+    2. .yaml file's top-level axioms/debts lists (DRAFT profiles without full .md narrative)
     """
-    profile = load_profile(worldview_name)
+    # PRIMARY: Try to load from .md file brute_ledger YAML block
+    try:
+        profile = load_profile(worldview_name)
+        yaml_blocks = _extract_yaml_blocks(profile["raw_content"])
+        ledger_data = yaml_blocks.get("Mr. Brute's Ledger", {}).get("brute_ledger", {})
+    except ProfileLoadError:
+        ledger_data = {}
 
-    yaml_blocks = _extract_yaml_blocks(profile["raw_content"])
-    ledger_data = yaml_blocks.get("Mr. Brute's Ledger", {}).get("brute_ledger", {})
+    if ledger_data:
+        return ledger_data
 
-    if not ledger_data:
-        # Profile doesn't have brute ledger section yet
-        return {
-            "axioms": {"count": 0, "list": []},
-            "debts": {"count": 0, "list": []},
-            "audit_notes": "Brute ledger not yet documented for this profile.",
-        }
+    # FALLBACK: Read axioms/debts directly from canonical .yaml file
+    yaml_filename = f"{_normalize_worldview_name(worldview_name)}.yaml"
+    yaml_filepath = PROFILES_DIR / yaml_filename
 
-    return ledger_data
+    if yaml_filepath.exists():
+        try:
+            with open(yaml_filepath, 'r', encoding='utf-8') as f:
+                data = yaml.safe_load(f)
+
+            raw_axioms = data.get("axioms", [])
+            raw_debts = data.get("debts", [])
+
+            return {
+                "axioms": {
+                    "count": len(raw_axioms),
+                    "list": [
+                        {"name": a.get("name", ""), "description": a.get("description", "")}
+                        for a in raw_axioms
+                    ],
+                },
+                "debts": {
+                    "count": len(raw_debts),
+                    "list": [
+                        {"name": d.get("name", ""), "description": d.get("description", "")}
+                        for d in raw_debts
+                    ],
+                },
+                "audit_notes": data.get("audit_status",
+                    f"DRAFT profile — preliminary values from web research. "
+                    f"Full deliberation narrative pending Grok integration."
+                ),
+            }
+        except (KeyError, TypeError, yaml.YAMLError):
+            pass
+
+    # No data found in either source
+    return {
+        "axioms": {"count": 0, "list": []},
+        "debts": {"count": 0, "list": []},
+        "audit_notes": "Brute ledger not yet documented for this profile.",
+    }
 
 
 # Backward compatibility: Provide frameworks.py-style constants
