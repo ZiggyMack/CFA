@@ -1048,120 +1048,40 @@ Here, <strong style="color:#e0e0e0;">PF-type</strong> is that toggle: switching 
 """, unsafe_allow_html=True)
 
     with tab3:
-        st.markdown("### ⚖️ Symmetry Audit - Nova's Lens")
-        st.caption("*Pattern-checking for hidden bias in configuration settings*")
-
-        # Contextual explanation
-        st.info("""
-        **What This Tests:**
-
-        The Symmetry Audit checks whether your **configuration settings** (Parity, PF-Type, Fallibilism, BFI Weight)
-        are creating hidden bias by favoring one framework over the other.
-
-        **How It Works:**
-        - Takes your current YPA score (Base)
-        - Flips each configuration lever one at a time
-        - Measures how much the YPA changes (Delta)
-        - Large deltas (>0.3) suggest that lever has asymmetric impact
-
-        **Why This Matters:**
-        - Small deltas (±0.1) = Balanced configuration
-        - Large deltas (>0.3) = Configuration favors one framework
-        - Helps you understand which levers are "load-bearing" for your results
-        """)
-
-        st.markdown("---")
-
-        # Interpretation guide
-        with st.expander("📖 How to Read This Table", expanded=False):
-            st.markdown("""
-            **Column Guide:**
-            - **Toggle:** Which configuration lever was flipped
-            - **Base:** Your current YPA with existing settings
-            - **Flip:** What YPA would be if you flipped that one lever
-            - **Delta:** The difference (Flip - Base)
-            - **Flag:** ✅ Stable (|Delta| ≤ 0.3) | ⚠️ Sensitive (|Delta| > 0.3)
-
-            **Interpretation Examples:**
-
-            **Example 1: Parity Toggle**
-            - Base: 6.50, Flip: 6.45, Delta: -0.05 ✅
-            - **Meaning:** Parity ON/OFF has minimal impact. This framework's score is stable regardless of moral weighting.
-
-            **Example 2: PF-Type Toggle**
-            - Base: 7.20, Flip: 6.50, Delta: -0.70 ⚠️
-            - **Meaning:** Switching from Instrumental to Holistic drops YPA by 0.70. This framework is **instrumentally strong** (prediction-focused).
-
-            **Example 3: Fallibilism Toggle**
-            - Base: 5.80, Flip: 6.25, Delta: +0.45 ⚠️
-            - **Meaning:** Turning Fallibilism OFF *increases* YPA. This framework doesn't emphasize revision mechanisms.
-
-            ---
-
-            **What Action Should I Take?**
-
-            ✅ **All Stable (All Deltas < 0.3):**
-            - Your configuration is balanced across all levers
-            - Scores are robust to setting changes
-            - Good sign of neutral evaluation
-
-            ⚠️ **Some Sensitive (Some Deltas > 0.3):**
-            - Identify which levers cause big swings
-            - Ask: "Is this sensitivity justified?"
-            - Example: If MdN's Parity delta is -0.50, it means moral grounding significantly impacts its score
-
-            🚨 **Many Sensitive (Most Deltas > 0.5):**
-            - Your configuration may be "tuned" to favor/penalize this framework
-            - Consider using Diplomat Mode (balanced preset) for comparison
-            - Review whether lever settings match your epistemic commitments
-            """)
-
-        st.markdown("---")
+        st.caption("How much does YPA shift when each configuration toggle is flipped? ⚠️ = sensitive (|Δ| > 0.3)")
 
         c1, c2 = st.columns(2)
         with c1:
-            st.markdown(f"### 📊 {fa['name']}")
+            st.markdown(f"**{fa['name']}**")
             audit = symmetry_audit(fa, cfg)
             df = pd.DataFrame(audit, columns=["Toggle", "Base", "Flip", "Delta"])
             df["Flag"] = df["Delta"].apply(lambda x: "⚠️" if abs(x) > 0.3 else "✅")
             st.dataframe(df, use_container_width=True, hide_index=True)
-
-            # Summary assessment
             max_delta = max(abs(row[3]) for row in audit)
             sensitive_count = sum(1 for row in audit if abs(row[3]) > 0.3)
-
             if sensitive_count == 0:
-                st.success(f"✅ **Balanced Configuration** - Max delta: {max_delta:.2f}")
+                st.success(f"✅ Balanced — max Δ {max_delta:.2f}")
             elif sensitive_count <= 2:
-                st.warning(f"⚠️ **{sensitive_count} Sensitive Levers** - Max delta: {max_delta:.2f}")
-                st.caption("Some levers have asymmetric impact. Review which ones and why.")
+                st.warning(f"⚠️ {sensitive_count} sensitive toggle(s) — max Δ {max_delta:.2f}")
             else:
-                st.error(f"🚨 **{sensitive_count} Sensitive Levers** - Max delta: {max_delta:.2f}")
-                st.caption("Configuration may be tuned to favor/penalize this framework. Consider Diplomat Mode.")
+                st.error(f"🚨 {sensitive_count} sensitive toggles — max Δ {max_delta:.2f}")
 
         with c2:
-            st.markdown(f"### 📊 {fb['name']}")
+            st.markdown(f"**{fb['name']}**")
             audit = symmetry_audit(fb, cfg)
             df = pd.DataFrame(audit, columns=["Toggle", "Base", "Flip", "Delta"])
             df["Flag"] = df["Delta"].apply(lambda x: "⚠️" if abs(x) > 0.3 else "✅")
             st.dataframe(df, use_container_width=True, hide_index=True)
-
-            # Summary assessment
             max_delta = max(abs(row[3]) for row in audit)
             sensitive_count = sum(1 for row in audit if abs(row[3]) > 0.3)
-
             if sensitive_count == 0:
-                st.success(f"✅ **Balanced Configuration** - Max delta: {max_delta:.2f}")
+                st.success(f"✅ Balanced — max Δ {max_delta:.2f}")
             elif sensitive_count <= 2:
-                st.warning(f"⚠️ **{sensitive_count} Sensitive Levers** - Max delta: {max_delta:.2f}")
-                st.caption("Some levers have asymmetric impact. Review which ones and why.")
+                st.warning(f"⚠️ {sensitive_count} sensitive toggle(s) — max Δ {max_delta:.2f}")
             else:
-                st.error(f"🚨 **{sensitive_count} Sensitive Levers** - Max delta: {max_delta:.2f}")
-                st.caption("Configuration may be tuned to favor/penalize this framework. Consider Diplomat Mode.")
+                st.error(f"🚨 {sensitive_count} sensitive toggles — max Δ {max_delta:.2f}")
 
-        st.markdown("---")
-
-        # Context callout — specific when CT/MdN loaded, generic otherwise
+        # CT-MdN philosophical callout
         _fa_lower = fa["name"].lower()
         _fb_lower = fb["name"].lower()
         _is_ct_mdn = (
@@ -1170,70 +1090,14 @@ Here, <strong style="color:#e0e0e0;">PF-type</strong> is that toggle: switching 
         )
         if _is_ct_mdn:
             st.markdown("""
-<div style="background:#12121f;border-left:4px solid #d4a843;padding:0.9rem 1.2rem;border-radius:0 6px 6px 0;margin:0 0 1rem 0;">
-<p style="margin:0 0 0.5rem 0;font-size:0.9rem;color:#d4a843;font-weight:600;">
-⚑ Why is this flag appearing — and is it a problem?
-</p>
-<p style="margin:0 0 0.6rem 0;font-size:0.85rem;color:#c0c0d0;">
-<strong style="color:#e0e0e0;">Short answer: no.</strong> A sensitive lever flag means the worldview has a
-<em>concentrated, narrow-and-deep</em> profile in that dimension — it has staked out a strong position
-rather than distributing strength broadly across all levers. A fully generalist worldview would show
-near-zero sensitivity everywhere. Seeing one flag per worldview at comparable magnitude (0.35–0.39)
-means the audit is detecting real philosophical architecture, not instrument error.
-Think of it as: the flag marks the <em>hinge point</em> where a worldview's specialization gets tested.
-</p>
-<p style="margin:0 0 0.4rem 0;font-size:0.85rem;color:#c0c0d0;">
-<strong style="color:#e0e0e0;">CT → Lever-Parity (Δ≈−0.39):</strong>
-CT carries 7 axioms and only 4 debts — a structurally asymmetric ratio. Parity controls how that
-imbalance is weighted in BFI. CT's large axiom count reflects deep metaphysical commitment
-(divine simplicity, PSR, teleology, imago dei…); its 4 debts are genuinely serious (evil, hiddenness).
-Flipping parity shifts the weight between those two sides, and CT feels it because its axiom-to-debt
-ratio is a fundamental feature of how it is built, not an artifact of measurement.
-</p>
-<p style="margin:0 0 0.4rem 0;font-size:0.85rem;color:#c0c0d0;">
-<strong style="color:#e0e0e0;">MdN → PF→Instrumental (Δ≈+0.35):</strong>
-MdN is the most functionally specialized worldview in the current library — its identity is built
-almost entirely around explaining, predicting, and intervening in the natural world. The Instrumental
-setting credits that mode of fertility directly. Switching to Composite blends in existential and
-meaning-making fertility, domains MdN intentionally brackets. MdN scores lower there not because
-it fails — but because it doesn't try. The sensitivity reveals a narrow-and-deep profile, not a weakness.
-</p>
-<p style="margin:0;font-size:0.8rem;color:#707080;">
-Speculative takeaway: both flags are appearing because both worldviews are <em>specialists</em>, not generalists.
-Specialists will always be sensitive to the lever most aligned with their core claim.
-That's a diagnostic about the frameworks — not a verdict on the ruler.
-</p>
+<div style="background:#12121f;border-left:4px solid #d4a843;padding:0.9rem 1.2rem;border-radius:0 6px 6px 0;margin:1rem 0 0 0;">
+<p style="margin:0 0 0.5rem 0;font-size:0.9rem;color:#d4a843;font-weight:600;">⚑ Why is this flag appearing — and is it a problem?</p>
+<p style="margin:0 0 0.6rem 0;font-size:0.85rem;color:#c0c0d0;"><strong style="color:#e0e0e0;">Short answer: no.</strong> A sensitive toggle flag means the worldview has a <em>narrow-and-deep</em> profile — it has staked out a strong position rather than distributing strength broadly. Seeing one flag per worldview at comparable magnitude means the audit is detecting real philosophical architecture, not instrument error. The flag marks the <em>hinge point</em> where a worldview's specialization gets tested.</p>
+<p style="margin:0 0 0.4rem 0;font-size:0.85rem;color:#c0c0d0;"><strong style="color:#e0e0e0;">CT → Lever-Parity:</strong> CT carries 7 axioms vs 4 debts — a structurally asymmetric ratio. Parity controls how that imbalance is weighted. CT feels it because its axiom-to-debt ratio is a fundamental feature of how it is built, not a measurement artifact.</p>
+<p style="margin:0 0 0.4rem 0;font-size:0.85rem;color:#c0c0d0;"><strong style="color:#e0e0e0;">MdN → PF→Instrumental:</strong> MdN's identity is built around explaining, predicting, and intervening in the natural world. Switching to Composite blends in existential fertility — a domain MdN intentionally brackets. MdN scores lower there not because it fails, but because it doesn't try.</p>
+<p style="margin:0;font-size:0.8rem;color:#707080;">Both flags appear because both worldviews are <em>specialists</em>, not generalists. That's a diagnostic about the frameworks — not a verdict on the ruler.</p>
 </div>
 """, unsafe_allow_html=True)
-
-        # Nova's perspective
-        st.markdown("### 🔍 Nova's Perspective: Why Symmetry Matters")
-        st.markdown("""
-        **Nova (Symmetry Auditor) says:**
-
-        > "Configuration bias is insidious because it *feels* neutral. You're not manipulating
-        > individual lever scores—you're just choosing 'reasonable' settings. But if those settings
-        > systematically favor one framework over another, you've introduced **architectural bias**.
-        >
-        > The Symmetry Audit exposes this by testing: *Would flipping each setting change the outcome?*
-        > If yes, you need to justify why that asymmetry serves truth rather than preference.
-        >
-        > Mathematical symmetry doesn't always equal functional fairness—but when it breaks,
-        > you better have a good reason why."
-
-        **When Asymmetry is Justified:**
-        - Skeptic Mode intentionally favors empirical frameworks (Parity OFF = legitimate choice)
-        - Zealot Mode intentionally favors existential frameworks (Fallibilism OFF = legitimate choice)
-        - **Key:** The bias is *named and priced* in the preset's meta-axioms
-
-        **When Asymmetry is Problematic:**
-        - You claim to be using "neutral" settings but deltas show hidden bias
-        - Diplomat Mode shows large deltas (should be balanced by design)
-        - You didn't realize your configuration was favoring one side
-        """)
-
-        st.markdown("---")
-        st.caption("**Pro Tip:** Run Diplomat Mode and check Symmetry tab—if deltas are large even in 'balanced' mode, the frameworks themselves may have legitimately different sensitivities.")
     
     # =========================================================================
     # TAB 4: TRINITY AUDIT (live data from golden batch)
