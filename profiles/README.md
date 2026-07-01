@@ -31,13 +31,13 @@ profiles/
 **[Classical Theism](worldviews/CLASSICAL_THEISM.md)** — [YAML ✅ VALIDATED](worldviews/CLASSICAL_THEISM.yaml) - v0.2.0
 - **Axiom:** God exists as necessary perfect being who created and sustains the universe
 - **Tradition:** Medieval scholasticism (Anselm, Aquinas, Maimonides)
-- **YPA:** 4.46 (7 axioms, 4 debts, BFI: 11.0)
+- **YPA:** 3.59 (7 axioms, 4 debts, BFI: 11.0)
 - **Status:** Full narrative + validated lever scores (Claude/Grok Trinity Audit)
 
 **[Methodological Naturalism](worldviews/METHODOLOGICAL_NATURALISM.md)** — [YAML ✅ VALIDATED](worldviews/METHODOLOGICAL_NATURALISM.yaml) - v0.2.0
 - **Axiom:** Natural world operates by discoverable laws; knowledge requires empirical evidence
 - **Tradition:** Scientific empiricism, logical positivism, naturalized epistemology
-- **YPA:** 4.18 (6 axioms, 4 debts, BFI: 10.0)
+- **YPA:** 3.71 (6 axioms, 4 debts, BFI: 10.0)
 - **Status:** Full narrative + validated lever scores (Claude/Grok Trinity Audit)
 
 ### Priority Queue Profiles (Narrative + Preliminary YPA)
