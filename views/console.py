@@ -984,27 +984,6 @@ def render():
     tab1, tab2, tab3, tab4 = st.tabs(["📈 Visual", "⚔️ Battle Card", "🔄 Symmetry", "🔬 Trinity Audit"])
 
     with tab1:
-        # Compact guardrail status bar
-        _g_statuses = [
-            ("Lever-Coupling", ok1_a, ok1_b),
-            ("BFI-Sensitivity", ok2_a, ok2_b),
-            ("Weight-Inversion", ok3_a, ok3_b),
-            ("Symmetry", ok4_a, ok4_b),
-        ]
-        _g_parts = []
-        _any_fail = False
-        for _lbl, _ga, _gb in _g_statuses:
-            if _ga and _gb:
-                _g_parts.append(f'<span style="color:#2a9d8f;margin-right:18px;">✅ {_lbl}</span>')
-            else:
-                _any_fail = True
-                _who = ", ".join(filter(None, ["A" if not _ga else None, "B" if not _gb else None]))
-                _g_parts.append(f'<span style="color:#e76f51;margin-right:18px;">⚠️ {_lbl} ({_who})</span>')
-        _g_border = "#e76f51" if _any_fail else "#2a9d8f"
-        _g_bg = "#1f0d0d" if _any_fail else "#0d1a0d"
-        st.markdown(f"""<div style="background:{_g_bg};border-left:3px solid {_g_border};padding:6px 14px;border-radius:0 4px 4px 0;margin-bottom:14px;font-size:0.8rem;">
-<span style="color:#808090;margin-right:18px;font-weight:600;">🛡️ Guardrails</span>{"".join(_g_parts)}</div>""", unsafe_allow_html=True)
-
         # YPA Gauge meters
         st.markdown("### 🎯 YPA Performance")
         st.plotly_chart(create_ypa_gauge(
