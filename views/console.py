@@ -981,10 +981,31 @@ def render():
     ), unsafe_allow_html=True)
 
     # TABS (Enhanced with new visualizations)
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(["📈 Visual", "⚔️ Battle Card", "🛡️ Guardrails", "🔄 Symmetry", "🔬 Trinity Audit"])
+    tab1, tab2, tab3, tab4 = st.tabs(["📈 Visual", "⚔️ Battle Card", "🔄 Symmetry", "🔬 Trinity Audit"])
 
     with tab1:
-        # NEW: YPA Gauge meters (visually engaging!)
+        # Compact guardrail status bar
+        _g_statuses = [
+            ("Lever-Coupling", ok1_a, ok1_b),
+            ("BFI-Sensitivity", ok2_a, ok2_b),
+            ("Weight-Inversion", ok3_a, ok3_b),
+            ("Symmetry", ok4_a, ok4_b),
+        ]
+        _g_parts = []
+        _any_fail = False
+        for _lbl, _ga, _gb in _g_statuses:
+            if _ga and _gb:
+                _g_parts.append(f'<span style="color:#2a9d8f;margin-right:18px;">✅ {_lbl}</span>')
+            else:
+                _any_fail = True
+                _who = ", ".join(filter(None, ["A" if not _ga else None, "B" if not _gb else None]))
+                _g_parts.append(f'<span style="color:#e76f51;margin-right:18px;">⚠️ {_lbl} ({_who})</span>')
+        _g_border = "#e76f51" if _any_fail else "#2a9d8f"
+        _g_bg = "#1f0d0d" if _any_fail else "#0d1a0d"
+        st.markdown(f"""<div style="background:{_g_bg};border-left:3px solid {_g_border};padding:6px 14px;border-radius:0 4px 4px 0;margin-bottom:14px;font-size:0.8rem;">
+<span style="color:#808090;margin-right:18px;font-weight:600;">🛡️ Guardrails</span>{"".join(_g_parts)}</div>""", unsafe_allow_html=True)
+
+        # YPA Gauge meters
         st.markdown("### 🎯 YPA Performance")
         st.plotly_chart(create_ypa_gauge(
             ya_results["Neutral"]["YPA"],
@@ -992,50 +1013,17 @@ def render():
             fa["name"], fb["name"]
         ), use_container_width=True, key="chart_ypa_gauge")
 
-
-        # NEW: Radar comparison (more engaging than bar chart)
+        # Radar comparison
         st.markdown("### 🕸️ Lever Profile Radar")
         st.plotly_chart(create_lever_radar_comparison(ya_levers, yb_levers, fa["name"], fb["name"]), use_container_width=True, key="chart_lever_radar")
 
-        # NEW: Pie charts for lever contribution
+        # Pie charts for lever contribution
         st.markdown("### 🥧 Lever Contribution Breakdown")
         st.plotly_chart(create_lever_pie_charts(ya_levers, yb_levers, fa["name"], fb["name"]), use_container_width=True, key="chart_lever_pie")
 
         # Scenario Comparison Bars
         st.markdown("### 📊 Scenario Impact")
         st.plotly_chart(create_scenario_comparison_bars(ya_results, yb_results, fa["name"], fb["name"]), use_container_width=True, key="chart_scenario_bars")
-
-        # Original charts in expander for those who want them
-        with st.expander("📈 Classic Charts", expanded=False):
-            st.plotly_chart(create_lever_comparison_chart(ya_levers, yb_levers, fa["name"], fb["name"]), use_container_width=True, key="chart_lever_comparison")
-            st.plotly_chart(create_ypa_trinity_chart(ya_results, yb_results, fa["name"], fb["name"]), use_container_width=True, key="chart_ypa_trinity")
-
-        # NEW: Trinity Convergence Radar (simulated - both frameworks show same audited scores)
-        with st.expander("🎯 Trinity Convergence Radar", expanded=False):
-            st.caption("*Shows how Claude, Grok, and Nova scored this framework (audited frameworks converge at 98%)*")
-
-            radar_col1, radar_col2 = st.columns(2)
-
-            # Use raw framework levers (fa["levers"]) for individual PF scores
-            with radar_col1:
-                # Framework A - Trinity scores (simulated convergence)
-                fa_raw = fa["levers"]
-                trinity_a = {
-                    'Claude': [fa_raw["CCI"], fa_raw["EDB"], fa_raw["PF_instrumental"], fa_raw["PF_existential"], fa_raw["AR"], fa_raw["MG"]],
-                    'Grok': [fa_raw["CCI"]*0.99, fa_raw["EDB"]*1.01, fa_raw["PF_instrumental"]*0.98, fa_raw["PF_existential"]*1.02, fa_raw["AR"]*0.99, fa_raw["MG"]*1.01],
-                    'Nova': [fa_raw["CCI"]*1.01, fa_raw["EDB"]*0.99, fa_raw["PF_instrumental"]*1.01, fa_raw["PF_existential"]*0.99, fa_raw["AR"]*1.02, fa_raw["MG"]*0.98]
-                }
-                st.plotly_chart(create_convergence_radar(trinity_a, f"{fa['name']} - Trinity View"), use_container_width=True, key="chart_trinity_radar_a")
-
-            with radar_col2:
-                # Framework B - Trinity scores (simulated convergence)
-                fb_raw = fb["levers"]
-                trinity_b = {
-                    'Claude': [fb_raw["CCI"], fb_raw["EDB"], fb_raw["PF_instrumental"], fb_raw["PF_existential"], fb_raw["AR"], fb_raw["MG"]],
-                    'Grok': [fb_raw["CCI"]*0.99, fb_raw["EDB"]*1.01, fb_raw["PF_instrumental"]*0.98, fb_raw["PF_existential"]*1.02, fb_raw["AR"]*0.99, fb_raw["MG"]*1.01],
-                    'Nova': [fb_raw["CCI"]*1.01, fb_raw["EDB"]*0.99, fb_raw["PF_instrumental"]*1.01, fb_raw["PF_existential"]*0.99, fb_raw["AR"]*1.02, fb_raw["MG"]*0.98]
-                }
-                st.plotly_chart(create_convergence_radar(trinity_b, f"{fb['name']} - Trinity View"), use_container_width=True, key="chart_trinity_radar_b")
 
     with tab2:
         # NEW: Battle Card visualization
@@ -1081,79 +1069,6 @@ Here, <strong style="color:#e0e0e0;">PF-type</strong> is that toggle: switching 
 """, unsafe_allow_html=True)
 
     with tab3:
-        # Guardrails tab (was tab3)
-        st.caption("✨ Each guardrail tests integrity—of method and of meaning alike.")
-
-        # NEW: Visual Guardrail Grid
-        guardrail_status = [
-            ['✅' if ok1_a else '⚠️', '✅' if ok1_b else '⚠️'],  # Lever-Coupling
-            ['✅' if ok2_a else '⚠️', '✅' if ok2_b else '⚠️'],  # BFI-Sensitivity
-            ['✅' if ok3_a else '⚠️', '✅' if ok3_b else '⚠️'],  # Weight-Inversion
-            ['✅' if ok4_a else '⚠️', '✅' if ok4_b else '⚠️'],  # Symmetry
-        ]
-        st.markdown(create_guardrail_grid([fa["name"], fb["name"]], guardrail_status), unsafe_allow_html=True)
-
-        st.markdown("---")
-
-        c1, c2 = st.columns(2)
-
-        with c1:
-            st.markdown(f"**{fa['name']}**")
-
-            # Guardrail 1: Lever-Coupling
-            g1_ok, msg1 = guardrail_lever_coupling(ya_levers["PF"], ya_levers["CCI"])
-            st.markdown(f"**1. Lever-Coupling:** {msg1}")
-
-            # Guardrail 2: BFI-Sensitivity
-            g2_ok, msg2 = guardrail_bfi_sensitivity(
-                ya_results["Neutral"]["YPA"],
-                ya_bfi,
-                ya_results["Empirical"]["YPA"],
-                ya_results["Existential"]["YPA"]
-            )
-            st.markdown(f"**2. BFI-Sensitivity:** {msg2}")
-
-            # Guardrail 3: Weight-Inversion
-            g3_ok, msg3 = guardrail_weight_inversion(ya_results, ya_results["Neutral"]["YPA"])
-            st.markdown(f"**3. Weight-Inversion:** {msg3}")
-
-            # Guardrail 4: Symmetry Audit Summary
-            audit_a = symmetry_audit(fa, cfg)
-            max_delta_a = max(abs(row[3]) for row in audit_a)
-            if max_delta_a > 0.3:
-                st.markdown(f"**4. Symmetry:** ⚠️ Max toggle sensitivity = {max_delta_a:.2f} (see Symmetry tab)")
-            else:
-                st.markdown(f"**4. Symmetry:** ✅ All toggles stable (max Δ = {max_delta_a:.2f})")
-
-        with c2:
-            st.markdown(f"**{fb['name']}**")
-
-            # Guardrail 1: Lever-Coupling
-            g1_ok, msg1 = guardrail_lever_coupling(yb_levers["PF"], yb_levers["CCI"])
-            st.markdown(f"**1. Lever-Coupling:** {msg1}")
-
-            # Guardrail 2: BFI-Sensitivity
-            g2_ok, msg2 = guardrail_bfi_sensitivity(
-                yb_results["Neutral"]["YPA"],
-                yb_bfi,
-                yb_results["Empirical"]["YPA"],
-                yb_results["Existential"]["YPA"]
-            )
-            st.markdown(f"**2. BFI-Sensitivity:** {msg2}")
-
-            # Guardrail 3: Weight-Inversion
-            g3_ok, msg3 = guardrail_weight_inversion(yb_results, yb_results["Neutral"]["YPA"])
-            st.markdown(f"**3. Weight-Inversion:** {msg3}")
-
-            # Guardrail 4: Symmetry Audit Summary
-            audit_b = symmetry_audit(fb, cfg)
-            max_delta_b = max(abs(row[3]) for row in audit_b)
-            if max_delta_b > 0.3:
-                st.markdown(f"**4. Symmetry:** ⚠️ Max toggle sensitivity = {max_delta_b:.2f} (see Symmetry tab)")
-            else:
-                st.markdown(f"**4. Symmetry:** ✅ All toggles stable (max Δ = {max_delta_b:.2f})")
-
-    with tab4:
         st.markdown("### ⚖️ Symmetry Audit - Nova's Lens")
         st.caption("*Pattern-checking for hidden bias in configuration settings*")
 
@@ -1342,9 +1257,9 @@ That's a diagnostic about the frameworks — not a verdict on the ruler.
         st.caption("**Pro Tip:** Run Diplomat Mode and check Symmetry tab—if deltas are large even in 'balanced' mode, the frameworks themselves may have legitimately different sensitivities.")
     
     # =========================================================================
-    # TAB 5: TRINITY AUDIT (live data from golden batch)
+    # TAB 4: TRINITY AUDIT (live data from golden batch)
     # =========================================================================
-    with tab5:
+    with tab4:
         fa_name_lower = fa["name"].lower()
         fb_name_lower = fb["name"].lower()
         is_ct_mdn = (
