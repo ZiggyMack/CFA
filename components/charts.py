@@ -601,10 +601,9 @@ def create_ypa_gauge(
 
     # Framework A gauge
     fig.add_trace(go.Indicator(
-        mode="gauge+number+delta",
+        mode="gauge+number",
         value=ypa_a,
         title={'text': "YPA", 'font': {'size': 14}},
-        delta={'reference': 5.0, 'increasing': {'color': "#2a9d8f"}, 'decreasing': {'color': "#e76f51"}},
         gauge={
             'axis': {'range': [0, 10], 'tickwidth': 1},
             'bar': {'color': color_a},
@@ -626,10 +625,9 @@ def create_ypa_gauge(
 
     # Framework B gauge
     fig.add_trace(go.Indicator(
-        mode="gauge+number+delta",
+        mode="gauge+number",
         value=ypa_b,
         title={'text': "YPA", 'font': {'size': 14}},
-        delta={'reference': 5.0, 'increasing': {'color': "#2a9d8f"}, 'decreasing': {'color': "#e76f51"}},
         gauge={
             'axis': {'range': [0, 10], 'tickwidth': 1},
             'bar': {'color': color_b},
