@@ -94,6 +94,24 @@ When files are added or deleted, use diff notation like git commits:
 
 ## 📝 CHANGE LOG
 
+### [ARCHITECTURE-2026-07-01-1] 2026-07-01 - levers_by_matchup Scaffolding (Matchup-Aware Lever Architecture)
+
+**Categories:** [ARCHITECTURE] [DATA_MODEL] [UI]
+**Changed by:** Ziggy + CFA-Claude (Sonnet 4.6)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+
+- `MODIFIED`: profiles/worldviews/CLASSICAL_THEISM.yaml — added `levers_by_matchup.vs_methodological_naturalism` block (Phase 2 calibrated values, CT golden condition)
+- `MODIFIED`: profiles/worldviews/METHODOLOGICAL_NATURALISM.yaml — added `levers_by_matchup.vs_classical_theism` block (Phase 2 calibrated values, MdN golden condition)
+- `MODIFIED`: utils/profile_loader.py — `get_ypa_data()` now accepts optional `opponent` param; looks up `levers_by_matchup[vs_{opponent}]` and returns `calibration_context` + `calibration_opponent` fields
+- `MODIFIED`: views/console.py — pair buttons ("CT vs MdN", "MdN vs CT") now call `get_ypa_data(name, opponent=other)` to load matchup-calibrated levers; standalone "Load to A/B" buttons updated from old hardcoded priors to `CT_DEFAULT`/`MDN_DEFAULT`; framework column headers show calibration context when matchup levers are active
+
+**Design:**
+Key format: `vs_<screaming_snake_opponent.lower()>` (e.g. `vs_methodological_naturalism`). Canonical `levers:` block remains the default/fallback. New worldview matchups (CT vs OJ, etc.) require only adding a new key under `levers_by_matchup` — no schema changes needed.
+
+-----
+
 ### [DOCUMENTATION-2026-06-30-1] 2026-06-30 - Preliminary YPA Lever Scores for 10 Worldview Profiles
 
 **Categories:** [DOCUMENTATION] [DATA_PIPELINE] [🧹 +10]

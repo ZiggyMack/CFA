@@ -139,7 +139,7 @@ def load_profile(worldview_name: str) -> Dict[str, Any]:
     }
 
 
-def get_ypa_data(worldview_name: str) -> Dict[str, Any]:
+def get_ypa_data(worldview_name: str, opponent: str = None) -> Dict[str, Any]:
     """
     Get YPA data from canonical .yaml file (Gospel Problem protection)
 
@@ -149,17 +149,23 @@ def get_ypa_data(worldview_name: str) -> Dict[str, Any]:
 
     Args:
         worldview_name: Name of worldview (e.g., "Classical Theism", "ct")
+        opponent: Optional opponent name — if provided and a levers_by_matchup entry exists
+                  for that pairing, returns matchup-calibrated levers instead of canonical.
+                  Example: get_ypa_data("Classical Theism", opponent="Methodological Naturalism")
 
     Returns:
-        Dict with keys: "name", "bf_i", "levers", "admits_limits"
+        Dict with keys: "name", "bf_i", "levers", "admits_limits", "calibration_context"
         Matches format expected by utils/calculations.py::ypa_scenario_scores()
+        calibration_context is None for canonical (no opponent), or a string describing the
+        experiment that produced the matchup-specific scores.
 
     Example:
         >>> ypa = get_ypa_data("Classical Theism")
         >>> ypa["levers"]["CCI"]
-        7.5
-        >>> ypa["bf_i"]["axioms"]
-        7
+        6.53
+        >>> ypa = get_ypa_data("Classical Theism", opponent="Methodological Naturalism")
+        >>> ypa["calibration_context"]
+        "TRINITY2-PHASE2-20260630, CT golden ..."
 
     Raises:
         ProfileLoadError: If .yaml file not found or invalid
@@ -174,6 +180,22 @@ def get_ypa_data(worldview_name: str) -> Dict[str, Any]:
             with open(yaml_filepath, 'r', encoding='utf-8') as f:
                 data = yaml.safe_load(f)
 
+            # Start with canonical levers block
+            levers_data = data["levers"]
+            calibration_context = None
+            calibration_opponent = None
+
+            # If opponent specified, check for matchup-specific levers
+            if opponent:
+                opponent_key = f"vs_{_normalize_worldview_name(opponent).lower()}"
+                matchup_block = data.get("levers_by_matchup", {}).get(opponent_key)
+                if matchup_block:
+                    calibration_context = matchup_block.get("calibration_context")
+                    calibration_opponent = opponent
+                    # Build levers dict, excluding metadata fields
+                    levers_data = {k: v for k, v in matchup_block.items()
+                                   if k != "calibration_context"}
+
             # Convert canonical YAML structure to Console format
             return {
                 "name": data["profile"]["name"],
@@ -182,14 +204,16 @@ def get_ypa_data(worldview_name: str) -> Dict[str, Any]:
                     "debts": data["calculated"]["debt_count"],
                 },
                 "levers": {
-                    "CCI": data["levers"]["collective_coherence_impact"],
-                    "EDB": data["levers"]["epistemic_debt_burden"],
-                    "PF_instrumental": data["levers"]["paternalistic_force_interventionist"],
-                    "PF_existential": data["levers"]["paternalistic_force_epistemic"],
-                    "AR": data["levers"]["asymmetry_risk"],
-                    "MG": data["levers"]["meta_governance"],
+                    "CCI": levers_data["collective_coherence_impact"],
+                    "EDB": levers_data["epistemic_debt_burden"],
+                    "PF_instrumental": levers_data["paternalistic_force_interventionist"],
+                    "PF_existential": levers_data["paternalistic_force_epistemic"],
+                    "AR": levers_data["asymmetry_risk"],
+                    "MG": levers_data["meta_governance"],
                 },
                 "admits_limits": data["behavioral_flags"]["admits_limits"],
+                "calibration_context": calibration_context,
+                "calibration_opponent": calibration_opponent,
             }
 
         except (KeyError, TypeError, yaml.YAMLError) as e:
@@ -229,6 +253,8 @@ def get_ypa_data(worldview_name: str) -> Dict[str, Any]:
                 "MG": ypa.get("ypa_levers", {}).get("MG", 0.0),
             },
             "admits_limits": ypa.get("behavioral_flags", {}).get("admits_limits", True),
+            "calibration_context": None,
+            "calibration_opponent": None,
         }
 
 

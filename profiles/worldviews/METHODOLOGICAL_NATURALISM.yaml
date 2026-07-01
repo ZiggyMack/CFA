@@ -411,3 +411,17 @@ calculated:
 
   zealot_bfi: 7.0       # (6 + 4) * 0.7
   zealot_ypa: 5.29      # 37.05 / 7.0
+
+# Matchup-specific lever scores
+# Key format: vs_<normalized_opponent_name>
+# Canonical levers: block above (used as default when no matchup-specific data available)
+# Matchup levers: adversarially calibrated in the specific MdN-vs-opponent experiment context
+levers_by_matchup:
+  vs_classical_theism:
+    calibration_context: "TRINITY2-PHASE2-20260630, MdN golden (Claude ANTI-MdN / Grok PRO-MdN, CT as adversarial lens)"
+    collective_coherence_impact: 6.81
+    epistemic_debt_burden: 6.49
+    paternalistic_force_interventionist: 8.07
+    paternalistic_force_epistemic: 4.54
+    asymmetry_risk: 6.32
+    meta_governance: 4.82

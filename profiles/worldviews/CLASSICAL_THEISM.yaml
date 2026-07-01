@@ -367,3 +367,17 @@ calculated:
 
   zealot_bfi: 7.7       # (7 + 4) * 0.7
   zealot_ypa: 5.12      # 39.47 / 7.7
+
+# Matchup-specific lever scores
+# Key format: vs_<normalized_opponent_name>
+# Canonical levers: block above (used as default when no matchup-specific data available)
+# Matchup levers: adversarially calibrated in the specific CT-vs-opponent experiment context
+levers_by_matchup:
+  vs_methodological_naturalism:
+    calibration_context: "TRINITY2-PHASE2-20260630, CT golden (Claude PRO-CT / Grok ANTI-CT, MdN as adversarial lens)"
+    collective_coherence_impact: 6.53
+    epistemic_debt_burden: 6.60
+    paternalistic_force_interventionist: 4.85
+    paternalistic_force_epistemic: 7.24
+    asymmetry_risk: 7.12
+    meta_governance: 7.13

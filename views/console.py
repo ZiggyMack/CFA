@@ -491,54 +491,62 @@ def render():
         st.caption("*Sets both A & B in one click*")
         pair_col1, pair_col2 = st.columns(2)
         with pair_col1:
-            if st.button("📕 CT  vs  📘 MdN", key="pair_ct_mdn", use_container_width=True, help="Load CT → A, MdN → B"):
-                # CT → A
-                st.session_state["fa_name"] = CT_DEFAULT["name"]
-                st.session_state["fa_ax"]  = CT_DEFAULT["bf_i"]["axioms"]
-                st.session_state["fa_db"]  = CT_DEFAULT["bf_i"]["debts"]
-                st.session_state["fa_ad"]  = True
-                st.session_state["fa_cci"] = CT_DEFAULT["levers"]["CCI"]
-                st.session_state["fa_edb"] = CT_DEFAULT["levers"]["EDB"]
-                st.session_state["fa_pfi"] = CT_DEFAULT["levers"]["PF_instrumental"]
-                st.session_state["fa_pfe"] = CT_DEFAULT["levers"]["PF_existential"]
-                st.session_state["fa_ar"]  = CT_DEFAULT["levers"]["AR"]
-                st.session_state["fa_mg"]  = CT_DEFAULT["levers"]["MG"]
-                # MdN → B
-                st.session_state["fb_name"] = MDN_DEFAULT["name"]
-                st.session_state["fb_ax"]  = MDN_DEFAULT["bf_i"]["axioms"]
-                st.session_state["fb_db"]  = MDN_DEFAULT["bf_i"]["debts"]
-                st.session_state["fb_ad"]  = True
-                st.session_state["fb_cci"] = MDN_DEFAULT["levers"]["CCI"]
-                st.session_state["fb_edb"] = MDN_DEFAULT["levers"]["EDB"]
-                st.session_state["fb_pfi"] = MDN_DEFAULT["levers"]["PF_instrumental"]
-                st.session_state["fb_pfe"] = MDN_DEFAULT["levers"]["PF_existential"]
-                st.session_state["fb_ar"]  = MDN_DEFAULT["levers"]["AR"]
-                st.session_state["fb_mg"]  = MDN_DEFAULT["levers"]["MG"]
+            if st.button("📕 CT  vs  📘 MdN", key="pair_ct_mdn", use_container_width=True, help="Load CT → A, MdN → B (matchup-calibrated levers)"):
+                _ct = get_ypa_data("Classical Theism", opponent="Methodological Naturalism")
+                _mdn = get_ypa_data("Methodological Naturalism", opponent="Classical Theism")
+                # CT → A (matchup-calibrated vs MdN)
+                st.session_state["fa_name"] = _ct["name"]
+                st.session_state["fa_ax"]  = _ct["bf_i"]["axioms"]
+                st.session_state["fa_db"]  = _ct["bf_i"]["debts"]
+                st.session_state["fa_ad"]  = _ct["admits_limits"]
+                st.session_state["fa_cci"] = _ct["levers"]["CCI"]
+                st.session_state["fa_edb"] = _ct["levers"]["EDB"]
+                st.session_state["fa_pfi"] = _ct["levers"]["PF_instrumental"]
+                st.session_state["fa_pfe"] = _ct["levers"]["PF_existential"]
+                st.session_state["fa_ar"]  = _ct["levers"]["AR"]
+                st.session_state["fa_mg"]  = _ct["levers"]["MG"]
+                st.session_state["fa_calibration_opponent"] = _ct.get("calibration_opponent")
+                # MdN → B (matchup-calibrated vs CT)
+                st.session_state["fb_name"] = _mdn["name"]
+                st.session_state["fb_ax"]  = _mdn["bf_i"]["axioms"]
+                st.session_state["fb_db"]  = _mdn["bf_i"]["debts"]
+                st.session_state["fb_ad"]  = _mdn["admits_limits"]
+                st.session_state["fb_cci"] = _mdn["levers"]["CCI"]
+                st.session_state["fb_edb"] = _mdn["levers"]["EDB"]
+                st.session_state["fb_pfi"] = _mdn["levers"]["PF_instrumental"]
+                st.session_state["fb_pfe"] = _mdn["levers"]["PF_existential"]
+                st.session_state["fb_ar"]  = _mdn["levers"]["AR"]
+                st.session_state["fb_mg"]  = _mdn["levers"]["MG"]
+                st.session_state["fb_calibration_opponent"] = _mdn.get("calibration_opponent")
                 st.rerun()
         with pair_col2:
-            if st.button("📘 MdN  vs  📕 CT", key="pair_mdn_ct", use_container_width=True, help="Load MdN → A, CT → B"):
-                # MdN → A
-                st.session_state["fa_name"] = MDN_DEFAULT["name"]
-                st.session_state["fa_ax"]  = MDN_DEFAULT["bf_i"]["axioms"]
-                st.session_state["fa_db"]  = MDN_DEFAULT["bf_i"]["debts"]
-                st.session_state["fa_ad"]  = True
-                st.session_state["fa_cci"] = MDN_DEFAULT["levers"]["CCI"]
-                st.session_state["fa_edb"] = MDN_DEFAULT["levers"]["EDB"]
-                st.session_state["fa_pfi"] = MDN_DEFAULT["levers"]["PF_instrumental"]
-                st.session_state["fa_pfe"] = MDN_DEFAULT["levers"]["PF_existential"]
-                st.session_state["fa_ar"]  = MDN_DEFAULT["levers"]["AR"]
-                st.session_state["fa_mg"]  = MDN_DEFAULT["levers"]["MG"]
-                # CT → B
-                st.session_state["fb_name"] = CT_DEFAULT["name"]
-                st.session_state["fb_ax"]  = CT_DEFAULT["bf_i"]["axioms"]
-                st.session_state["fb_db"]  = CT_DEFAULT["bf_i"]["debts"]
-                st.session_state["fb_ad"]  = True
-                st.session_state["fb_cci"] = CT_DEFAULT["levers"]["CCI"]
-                st.session_state["fb_edb"] = CT_DEFAULT["levers"]["EDB"]
-                st.session_state["fb_pfi"] = CT_DEFAULT["levers"]["PF_instrumental"]
-                st.session_state["fb_pfe"] = CT_DEFAULT["levers"]["PF_existential"]
-                st.session_state["fb_ar"]  = CT_DEFAULT["levers"]["AR"]
-                st.session_state["fb_mg"]  = CT_DEFAULT["levers"]["MG"]
+            if st.button("📘 MdN  vs  📕 CT", key="pair_mdn_ct", use_container_width=True, help="Load MdN → A, CT → B (matchup-calibrated levers)"):
+                _mdn = get_ypa_data("Methodological Naturalism", opponent="Classical Theism")
+                _ct = get_ypa_data("Classical Theism", opponent="Methodological Naturalism")
+                # MdN → A (matchup-calibrated vs CT)
+                st.session_state["fa_name"] = _mdn["name"]
+                st.session_state["fa_ax"]  = _mdn["bf_i"]["axioms"]
+                st.session_state["fa_db"]  = _mdn["bf_i"]["debts"]
+                st.session_state["fa_ad"]  = _mdn["admits_limits"]
+                st.session_state["fa_cci"] = _mdn["levers"]["CCI"]
+                st.session_state["fa_edb"] = _mdn["levers"]["EDB"]
+                st.session_state["fa_pfi"] = _mdn["levers"]["PF_instrumental"]
+                st.session_state["fa_pfe"] = _mdn["levers"]["PF_existential"]
+                st.session_state["fa_ar"]  = _mdn["levers"]["AR"]
+                st.session_state["fa_mg"]  = _mdn["levers"]["MG"]
+                st.session_state["fa_calibration_opponent"] = _mdn.get("calibration_opponent")
+                # CT → B (matchup-calibrated vs MdN)
+                st.session_state["fb_name"] = _ct["name"]
+                st.session_state["fb_ax"]  = _ct["bf_i"]["axioms"]
+                st.session_state["fb_db"]  = _ct["bf_i"]["debts"]
+                st.session_state["fb_ad"]  = _ct["admits_limits"]
+                st.session_state["fb_cci"] = _ct["levers"]["CCI"]
+                st.session_state["fb_edb"] = _ct["levers"]["EDB"]
+                st.session_state["fb_pfi"] = _ct["levers"]["PF_instrumental"]
+                st.session_state["fb_pfe"] = _ct["levers"]["PF_existential"]
+                st.session_state["fb_ar"]  = _ct["levers"]["AR"]
+                st.session_state["fb_mg"]  = _ct["levers"]["MG"]
+                st.session_state["fb_calibration_opponent"] = _ct.get("calibration_opponent")
                 st.rerun()
 
         st.markdown("---")
@@ -578,31 +586,33 @@ def render():
 
             with load_col1:
                 if st.button("→ Load to A", key="load_mdn_a", use_container_width=True, type="primary"):
-                    st.session_state["fa_name"] = "Methodological Naturalism"
-                    st.session_state["fa_ax"] = 6
-                    st.session_state["fa_db"] = 4
-                    st.session_state["fa_ad"] = True
-                    st.session_state["fa_cci"] = 8.0
-                    st.session_state["fa_edb"] = 7.5
-                    st.session_state["fa_pfi"] = 10.0
-                    st.session_state["fa_pfe"] = 3.0
-                    st.session_state["fa_ar"] = 7.0
-                    st.session_state["fa_mg"] = 4.0
+                    st.session_state["fa_name"] = MDN_DEFAULT["name"]
+                    st.session_state["fa_ax"] = MDN_DEFAULT["bf_i"]["axioms"]
+                    st.session_state["fa_db"] = MDN_DEFAULT["bf_i"]["debts"]
+                    st.session_state["fa_ad"] = MDN_DEFAULT["admits_limits"]
+                    st.session_state["fa_cci"] = MDN_DEFAULT["levers"]["CCI"]
+                    st.session_state["fa_edb"] = MDN_DEFAULT["levers"]["EDB"]
+                    st.session_state["fa_pfi"] = MDN_DEFAULT["levers"]["PF_instrumental"]
+                    st.session_state["fa_pfe"] = MDN_DEFAULT["levers"]["PF_existential"]
+                    st.session_state["fa_ar"] = MDN_DEFAULT["levers"]["AR"]
+                    st.session_state["fa_mg"] = MDN_DEFAULT["levers"]["MG"]
+                    st.session_state["fa_calibration_opponent"] = None  # canonical, no matchup context
                     st.success("✅ MdN → Framework A!")
                     st.rerun()
 
             with load_col2:
                 if st.button("→ Load to B", key="load_mdn_b", use_container_width=True):
-                    st.session_state["fb_name"] = "Methodological Naturalism"
-                    st.session_state["fb_ax"] = 6
-                    st.session_state["fb_db"] = 4
-                    st.session_state["fb_ad"] = True
-                    st.session_state["fb_cci"] = 8.0
-                    st.session_state["fb_edb"] = 7.5
-                    st.session_state["fb_pfi"] = 10.0
-                    st.session_state["fb_pfe"] = 3.0
-                    st.session_state["fb_ar"] = 7.0
-                    st.session_state["fb_mg"] = 4.0
+                    st.session_state["fb_name"] = MDN_DEFAULT["name"]
+                    st.session_state["fb_ax"] = MDN_DEFAULT["bf_i"]["axioms"]
+                    st.session_state["fb_db"] = MDN_DEFAULT["bf_i"]["debts"]
+                    st.session_state["fb_ad"] = MDN_DEFAULT["admits_limits"]
+                    st.session_state["fb_cci"] = MDN_DEFAULT["levers"]["CCI"]
+                    st.session_state["fb_edb"] = MDN_DEFAULT["levers"]["EDB"]
+                    st.session_state["fb_pfi"] = MDN_DEFAULT["levers"]["PF_instrumental"]
+                    st.session_state["fb_pfe"] = MDN_DEFAULT["levers"]["PF_existential"]
+                    st.session_state["fb_ar"] = MDN_DEFAULT["levers"]["AR"]
+                    st.session_state["fb_mg"] = MDN_DEFAULT["levers"]["MG"]
+                    st.session_state["fb_calibration_opponent"] = None  # canonical, no matchup context
                     st.success("✅ MdN → Framework B!")
                     st.rerun()
 
@@ -614,31 +624,33 @@ def render():
 
             with load_col1:
                 if st.button("→ Load to A", key="load_ct_a", use_container_width=True, type="primary"):
-                    st.session_state["fa_name"] = "Classical Theism"
-                    st.session_state["fa_ax"] = 7
-                    st.session_state["fa_db"] = 4
-                    st.session_state["fa_ad"] = True
-                    st.session_state["fa_cci"] = 7.5
-                    st.session_state["fa_edb"] = 8.5
-                    st.session_state["fa_pfi"] = 7.0
-                    st.session_state["fa_pfe"] = 8.0
-                    st.session_state["fa_ar"] = 8.5
-                    st.session_state["fa_mg"] = 8.5
+                    st.session_state["fa_name"] = CT_DEFAULT["name"]
+                    st.session_state["fa_ax"] = CT_DEFAULT["bf_i"]["axioms"]
+                    st.session_state["fa_db"] = CT_DEFAULT["bf_i"]["debts"]
+                    st.session_state["fa_ad"] = CT_DEFAULT["admits_limits"]
+                    st.session_state["fa_cci"] = CT_DEFAULT["levers"]["CCI"]
+                    st.session_state["fa_edb"] = CT_DEFAULT["levers"]["EDB"]
+                    st.session_state["fa_pfi"] = CT_DEFAULT["levers"]["PF_instrumental"]
+                    st.session_state["fa_pfe"] = CT_DEFAULT["levers"]["PF_existential"]
+                    st.session_state["fa_ar"] = CT_DEFAULT["levers"]["AR"]
+                    st.session_state["fa_mg"] = CT_DEFAULT["levers"]["MG"]
+                    st.session_state["fa_calibration_opponent"] = None  # canonical, no matchup context
                     st.success("✅ CT → Framework A!")
                     st.rerun()
 
             with load_col2:
                 if st.button("→ Load to B", key="load_ct_b", use_container_width=True):
-                    st.session_state["fb_name"] = "Classical Theism"
-                    st.session_state["fb_ax"] = 7
-                    st.session_state["fb_db"] = 4
-                    st.session_state["fb_ad"] = True
-                    st.session_state["fb_cci"] = 7.5
-                    st.session_state["fb_edb"] = 8.5
-                    st.session_state["fb_pfi"] = 7.0
-                    st.session_state["fb_pfe"] = 8.0
-                    st.session_state["fb_ar"] = 8.5
-                    st.session_state["fb_mg"] = 8.5
+                    st.session_state["fb_name"] = CT_DEFAULT["name"]
+                    st.session_state["fb_ax"] = CT_DEFAULT["bf_i"]["axioms"]
+                    st.session_state["fb_db"] = CT_DEFAULT["bf_i"]["debts"]
+                    st.session_state["fb_ad"] = CT_DEFAULT["admits_limits"]
+                    st.session_state["fb_cci"] = CT_DEFAULT["levers"]["CCI"]
+                    st.session_state["fb_edb"] = CT_DEFAULT["levers"]["EDB"]
+                    st.session_state["fb_pfi"] = CT_DEFAULT["levers"]["PF_instrumental"]
+                    st.session_state["fb_pfe"] = CT_DEFAULT["levers"]["PF_existential"]
+                    st.session_state["fb_ar"] = CT_DEFAULT["levers"]["AR"]
+                    st.session_state["fb_mg"] = CT_DEFAULT["levers"]["MG"]
+                    st.session_state["fb_calibration_opponent"] = None  # canonical, no matchup context
                     st.success("✅ CT → Framework B!")
                     st.rerun()
 
@@ -774,7 +786,11 @@ def render():
     # FRAMEWORK A
     with col1:
         st.markdown("### 📘 Framework A")
-        st.caption("✅ 98% Convergence | Adversarially Audited")
+        _fa_opp = st.session_state.get("fa_calibration_opponent")
+        if _fa_opp:
+            st.caption(f"⚗️ Levers calibrated vs {_fa_opp} | Adversarially Audited")
+        else:
+            st.caption("✅ Canonical levers | Adversarially Audited")
         fa_name = st.text_input("Name", key="fa_name")
         
         with st.expander("🔢 BFI", expanded=False):
@@ -853,7 +869,11 @@ def render():
     # FRAMEWORK B
     with col2:
         st.markdown("### 📕 Framework B")
-        st.caption("✅ 98% Convergence | Adversarially Audited")
+        _fb_opp = st.session_state.get("fb_calibration_opponent")
+        if _fb_opp:
+            st.caption(f"⚗️ Levers calibrated vs {_fb_opp} | Adversarially Audited")
+        else:
+            st.caption("✅ Canonical levers | Adversarially Audited")
         fb_name = st.text_input("Name", key="fb_name")
         
         with st.expander("🔢 BFI", expanded=False):
