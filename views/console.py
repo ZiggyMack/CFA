@@ -981,7 +981,7 @@ def render():
     ), unsafe_allow_html=True)
 
     # TABS (Enhanced with new visualizations)
-    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["📈 Visual", "⚔️ Battle Card", "📋 Details", "🛡️ Guardrails", "🔄 Symmetry", "🔬 Trinity Audit"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["📈 Visual", "⚔️ Battle Card", "🛡️ Guardrails", "🔄 Symmetry", "🔬 Trinity Audit"])
 
     with tab1:
         # NEW: YPA Gauge meters (visually engaging!)
@@ -1066,21 +1066,21 @@ def render():
             toggle_labels
         ), use_container_width=True, key="chart_sensitivity_heatmap")
 
-    with tab3:
-        # Details tab (was tab2)
-        c1, c2 = st.columns(2)
-        with c1:
-            st.markdown(f"**{fa['name']}**")
-            st.json(ya_levers)
-            st.metric("BFI", f"{ya_bfi:.2f}")
-            st.metric("Neutral YPA", f"{ya_results['Neutral']['YPA']:.3f}")
-        with c2:
-            st.markdown(f"**{fb['name']}**")
-            st.json(yb_levers)
-            st.metric("BFI", f"{yb_bfi:.2f}")
-            st.metric("Neutral YPA", f"{yb_results['Neutral']['YPA']:.3f}")
+        st.markdown("""
+<div style="background:#12121f;border-left:4px solid #6c757d;padding:0.8rem 1.1rem;border-radius:0 6px 6px 0;margin:0.5rem 0 1rem 0;">
+<p style="margin:0 0 0.4rem 0;font-size:0.85rem;color:#a0a0b0;font-weight:600;">How to read this</p>
+<p style="margin:0 0 0.4rem 0;font-size:0.82rem;color:#c0c0d0;">
+Each cell shows <strong style="color:#e0e0e0;">ΔYPA</strong> — how much that framework's score would shift if the column toggle were flipped from its current setting.
+<strong style="color:#90EE90;">Green = score rises</strong>, <strong style="color:#e76f51;">red = score falls</strong>, near-zero = toggle doesn't move the needle.
+</p>
+<p style="margin:0;font-size:0.82rem;color:#c0c0d0;">
+The toggle that moves the two frameworks in <em>opposite directions</em> is your configuration's hidden bias point — it's picking a side.
+Here, <strong style="color:#e0e0e0;">PF-type</strong> is that toggle: switching to Instrumental helps MdN (strong on prediction) and hurts CT (strong on existential meaning), or vice versa.
+</p>
+</div>
+""", unsafe_allow_html=True)
 
-    with tab4:
+    with tab3:
         # Guardrails tab (was tab3)
         st.caption("✨ Each guardrail tests integrity—of method and of meaning alike.")
 
@@ -1153,7 +1153,7 @@ def render():
             else:
                 st.markdown(f"**4. Symmetry:** ✅ All toggles stable (max Δ = {max_delta_b:.2f})")
 
-    with tab5:
+    with tab4:
         st.markdown("### ⚖️ Symmetry Audit - Nova's Lens")
         st.caption("*Pattern-checking for hidden bias in configuration settings*")
 
@@ -1342,9 +1342,9 @@ That's a diagnostic about the frameworks — not a verdict on the ruler.
         st.caption("**Pro Tip:** Run Diplomat Mode and check Symmetry tab—if deltas are large even in 'balanced' mode, the frameworks themselves may have legitimately different sensitivities.")
     
     # =========================================================================
-    # TAB 6: TRINITY AUDIT (live data from golden batch)
+    # TAB 5: TRINITY AUDIT (live data from golden batch)
     # =========================================================================
-    with tab6:
+    with tab5:
         fa_name_lower = fa["name"].lower()
         fb_name_lower = fb["name"].lower()
         is_ct_mdn = (
