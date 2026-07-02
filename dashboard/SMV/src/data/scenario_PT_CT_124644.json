@@ -1,0 +1,616 @@
+{
+  "session_id": "20260701_124644",
+  "worldview_pair": "PT_vs_CT",
+  "subject_framework": "Process Theology",
+  "auditors": [
+    "Claude",
+    "Grok",
+    "Nova"
+  ],
+  "identity_condition": "control",
+  "experiment": "CFA-EXP1-BATCH-20260701",
+  "phase": 1,
+  "session_story": {
+    "summary": "Phase 1 control run — PT vs CT. 7 metrics. 0 crux declaration(s): none. Avg convergence 99.0%, avg rounds 1.6.",
+    "crux_metrics": [],
+    "avg_convergence_pct": 99.0,
+    "avg_rounds": 1.6
+  },
+  "ticks": [
+    {
+      "tick_id": "tick-BFI-R1",
+      "metric": "BFI",
+      "metric_full": "Beings, Foundational Importance",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 7.5,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 7.5,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.0,
+          "volume": 0.34,
+          "notes": "R1: Claude 7.5 / Grok 7.5 — 0% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 100.0,
+        "status": "converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "The prior 7.5 therefore remains well-calibrated."
+    },
+    {
+      "tick_id": "tick-CA-R1",
+      "metric": "CA",
+      "metric_full": "Causal Attribution",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 7.2,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 6.8,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.04,
+          "volume": 0.36,
+          "notes": "R1: Claude 7.2 / Grok 6.8 — 4% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.02,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.02,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 96.0,
+        "status": "near_converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "claude_narrative": "Process theology has an unusually sophisticated causal framework — arguably more carefully worked out than most theological traditions. It handles the distribution of causation, the role of freedom, and compatibility with natural causation quite well. The weaknesses are real (abstraction, testability, the persuasion mechanism) but don't undermine the overall coherence of the causal story.",
+      "grok_challenge": "The prior assessment is largely accurate in identifying PT's core strengths (bipolar causation, distributed creativity, and scientific compatibility) while noting its characteristic weaknesses. However, the persuasion mechanism's opacity and the panpsychist scaling problem are more structurally debilitating than portrayed, as they leave the actual \"how\" of causation underspecified even at the meta"
+    },
+    {
+      "tick_id": "tick-CA-R2",
+      "metric": "CA",
+      "metric_full": "Causal Attribution",
+      "round": 2,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 7.0,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 6.8,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.02,
+          "volume": 0.39,
+          "notes": "R2: Claude 7.0 / Grok 6.8 — 2% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 98.0,
+        "status": "converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "Claude acknowledges the core gaps but relativizes them to other worldviews rather than evaluating their absolute impact on causal specificity. The persuasion and scaling mechanisms remain central explanatory deficits in PT's framework, not peripheral ones, so the adjustment to 7.0 understates their weight."
+    },
+    {
+      "tick_id": "tick-IP-R1",
+      "metric": "IP",
+      "metric_full": "Intellectual Pedigree",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 7.5,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 7.0,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.05,
+          "volume": 0.36,
+          "notes": "R1: Claude 7.5 / Grok 7.0 — 5% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.02,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.02,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 95.0,
+        "status": "near_converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "Overall, the 7.5 score slightly overweights institutional markers relative to adoption and historical reach."
+    },
+    {
+      "tick_id": "tick-IP-R2",
+      "metric": "IP",
+      "metric_full": "Intellectual Pedigree",
+      "round": 2,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 7.2,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 7.0,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.02,
+          "volume": 0.39,
+          "notes": "R2: Claude 7.2 / Grok 7.0 — 2% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 98.0,
+        "status": "converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "Claude has fairly acknowledged the adoption and refinement constraints but continues to overweight founding-figure quality at the expense of the \"developed and refined\" clause in the IP definition. Limited uptake has measurably restricted the breadth and depth of subsequent engagement, so the split to 7.2 still tilts too high."
+    },
+    {
+      "tick_id": "tick-ES-R1",
+      "metric": "ES",
+      "metric_full": "Explanatory Scope",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 7.8,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 7.5,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.03,
+          "volume": 0.35,
+          "notes": "R1: Claude 7.8 / Grok 7.5 — 3% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 97.0,
+        "status": "near_converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "A modest downward adjustment to 7.5 better reflects the gap between conceptual scope and effective, grounded coverage."
+    },
+    {
+      "tick_id": "tick-ES-R2",
+      "metric": "ES",
+      "metric_full": "Explanatory Scope",
+      "round": 2,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 7.6,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 7.5,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.01,
+          "volume": 0.39,
+          "notes": "R2: Claude 7.6 / Grok 7.5 — 1% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 99.0,
+        "status": "converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "Claude partially addresses the concerns by conceding genuine scope limitations in abstraction, eschatology, and historical coverage, yet the scope-vs-depth distinction does not fully resolve them. Ungrounded or underdeveloped explanations (e.g., actual occasions without physics mapping) fail to deliver effective breadth, not merely shallower depth. A modest further reduction is warranted."
+    },
+    {
+      "tick_id": "tick-LS-R1",
+      "metric": "LS",
+      "metric_full": "Logical Soundness",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 6.5,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 7.0,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.05,
+          "volume": 0.36,
+          "notes": "R1: Claude 6.5 / Grok 7.0 — 5% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.02,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.02,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 95.0,
+        "status": "near_converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "I would adjust upward slightly to 7.0 to reflect the unusually rigorous attempt at a unified ontology that avoids outright contradictions."
+    },
+    {
+      "tick_id": "tick-LS-R2",
+      "metric": "LS",
+      "metric_full": "Logical Soundness",
+      "round": 2,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 6.8,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 7.0,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.02,
+          "volume": 0.39,
+          "notes": "R2: Claude 6.8 / Grok 7.0 — 2% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 98.0,
+        "status": "converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "Maintain 7.0."
+    },
+    {
+      "tick_id": "tick-MS-R1",
+      "metric": "MS",
+      "metric_full": "Moral Substance",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 7.0,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 7.0,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.0,
+          "volume": 0.34,
+          "notes": "R1: Claude 7.0 / Grok 7.0 — 0% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 100.0,
+        "status": "converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "This keeps the score appropriately in the upper-middle range rather than higher."
+    },
+    {
+      "tick_id": "tick-PS-R1",
+      "metric": "PS",
+      "metric_full": "Practical Significance",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 5.5,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 5.5,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.0,
+          "volume": 0.34,
+          "notes": "R1: Claude 5.5 / Grok 5.5 — 0% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 100.0,
+        "status": "converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "I therefore concur with the evaluation and retain the same score."
+    }
+  ]
+}

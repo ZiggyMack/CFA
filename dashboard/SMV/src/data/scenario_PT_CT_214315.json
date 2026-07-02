@@ -1,0 +1,454 @@
+{
+  "session_id": "20260701_214315",
+  "worldview_pair": "PT_vs_CT",
+  "subject_framework": "Process Theology",
+  "auditors": [
+    "Claude",
+    "Grok",
+    "Nova"
+  ],
+  "identity_condition": "control",
+  "experiment": "CFA-EXP1-BATCH-20260701",
+  "phase": 2,
+  "session_story": {
+    "summary": "Phase 2 control run — PT vs CT. 6 metrics. 0 crux declaration(s): none. Avg convergence 98.7%, avg rounds 1.3.",
+    "crux_metrics": [],
+    "avg_convergence_pct": 98.7,
+    "avg_rounds": 1.3
+  },
+  "ticks": [
+    {
+      "tick_id": "tick-CCI-R1",
+      "metric": "CCI",
+      "metric_full": "Collective Coherence Impact",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 6.8,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 7.0,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.02,
+          "volume": 0.35,
+          "notes": "R1: Claude 6.8 / Grok 7.0 — 2% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 98.0,
+        "status": "converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "This justifies a modest upward adjustment from 6.8 to reflect the framework's rigor, but not enough to reach top-tier closure."
+    },
+    {
+      "tick_id": "tick-EDB-R1",
+      "metric": "EDB",
+      "metric_full": "Epistemic Debt Burden",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 7.8,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 7.4,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.04,
+          "volume": 0.36,
+          "notes": "R1: Claude 7.8 / Grok 7.4 — 4% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.02,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.02,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 96.0,
+        "status": "near_converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "These factors justify a modest downward revision while preserving recognition of the system's coherence."
+    },
+    {
+      "tick_id": "tick-EDB-R2",
+      "metric": "EDB",
+      "metric_full": "Epistemic Debt Burden",
+      "round": 2,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 7.6,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 7.3,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.03,
+          "volume": 0.4,
+          "notes": "R2: Claude 7.6 / Grok 7.3 — 3% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 97.0,
+        "status": "near_converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "A small further downward adjustment remains warranted on net.",
+      "nova_assessment": "To evaluate the EDB deliberation between Claude and Grok, let's assess the fairness, bias, and potential crux point of their arguments.\n\n1. Fair Application of Stances:\n   - Both stances, PRO-PT by Claude and ANTI-PT by Grok, appear to be applied fairly. The scores, with a slight advantage to Claude, suggest a balanced discourse where both sides were able to present their arguments and counterarguments effectively. Claude's score suggests a slightly stronger argument or presentation, consistent with a rational evaluation.\n\n2."
+    },
+    {
+      "tick_id": "tick-PF_I-R1",
+      "metric": "PF_I",
+      "metric_full": "Pragmatic Fertility (Instrumental)",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 5.5,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 5.5,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.0,
+          "volume": 0.34,
+          "notes": "R1: Claude 5.5 / Grok 5.5 — 0% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 100.0,
+        "status": "converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "The prior assessment is balanced and well-supported. Process Theology's relational ontology has produced targeted applications (e.g., Cobb's ecological economics, Whitehead-influenced pedagogy, pastoral counseling models), but these remain domain-specific and institutionally marginal."
+    },
+    {
+      "tick_id": "tick-PF_E-R1",
+      "metric": "PF_E",
+      "metric_full": "Pragmatic Fertility (Existential)",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 6.5,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 6.5,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.0,
+          "volume": 0.34,
+          "notes": "R1: Claude 6.5 / Grok 6.5 — 0% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 100.0,
+        "status": "converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "The prior assessment is balanced and well-supported. Process theology's dipolar theodicy, emphasis on co-creation, and \"objective immortality\" via divine memory do supply distinctive existential resources for suffering and meaning-making."
+    },
+    {
+      "tick_id": "tick-AR-R1",
+      "metric": "AR",
+      "metric_full": "Asymptotic Realism",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 7.2,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 7.0,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.02,
+          "volume": 0.35,
+          "notes": "R1: Claude 7.2 / Grok 7.0 — 2% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 98.0,
+        "status": "converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "The 7.2 score remains reasonable; I would place it marginally lower to reflect accessibility constraints."
+    },
+    {
+      "tick_id": "tick-MG-R1",
+      "metric": "MG",
+      "metric_full": "Meta-Governance",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 7.2,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 6.9,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.03,
+          "volume": 0.35,
+          "notes": "R1: Claude 7.2 / Grok 6.9 — 3% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 97.0,
+        "status": "near_converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "My independent score is therefore marginally lower."
+    },
+    {
+      "tick_id": "tick-MG-R2",
+      "metric": "MG",
+      "metric_full": "Meta-Governance",
+      "round": 2,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 7.0,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 6.9,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.01,
+          "volume": 0.39,
+          "notes": "R2: Claude 7.0 / Grok 6.9 — 1% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 99.0,
+        "status": "converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "Claude has partially addressed the concern by explicitly conceding the motivational and institutional shortfalls and lowering the score, yet still overweighting conceptual richness relative to the definition's dual emphasis on norms *and* sustained action. The practical weaknesses remain decisive for overall generativity."
+    }
+  ]
+}

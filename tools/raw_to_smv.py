@@ -24,6 +24,7 @@ from pathlib import Path
 from typing import Optional
 
 METRIC_FULL_NAMES = {
+    # Phase 1 — Trinity deliberation metrics
     "BFI": "Beings, Foundational Importance",
     "CA": "Causal Attribution",
     "IP": "Intellectual Pedigree",
@@ -31,9 +32,43 @@ METRIC_FULL_NAMES = {
     "LS": "Logical Soundness",
     "MS": "Moral Substance",
     "PS": "Practical Significance",
+    # Phase 2 — CFA lever metrics
+    "CCI": "Collective Coherence Impact",
+    "EDB": "Epistemic Debt Burden",
+    "PF_I": "Pragmatic Fertility (Instrumental)",
+    "PF_E": "Pragmatic Fertility (Existential)",
+    "AR": "Asymptotic Realism",
+    "MG": "Meta-Governance",
 }
 
-METRIC_ORDER = ["BFI", "CA", "IP", "ES", "LS", "MS", "PS"]
+METRIC_ORDER_P1 = ["BFI", "CA", "IP", "ES", "LS", "MS", "PS"]
+METRIC_ORDER_P2 = ["CCI", "EDB", "PF_I", "PF_E", "AR", "MG"]
+METRIC_ORDER = METRIC_ORDER_P1  # legacy default
+
+# Stance abbreviation → (display abbr, full name)
+# Add new worldviews here as experiments are run.
+STANCE_ABBR = {
+    "ct":  ("CT",  "Classical Theism"),
+    "mdn": ("MdN", "Methodological Naturalism"),
+    "pt":  ("PT",  "Process Theology"),
+}
+
+
+def parse_stance(stance: str):
+    """Parse 'subject_vs_opponent' stance string.
+    Returns (subject_abbr, subject_full, opponent_abbr, opponent_full,
+             claude_stance, grok_stance, worldview_pair).
+    """
+    parts = stance.lower().split("_vs_")
+    if len(parts) != 2:
+        return ("CT", "Classical Theism", "MdN", "Methodological Naturalism",
+                "PRO", "ANTI", "CT_vs_MdN")
+    subj_key, opp_key = parts
+    subj_abbr, subj_full = STANCE_ABBR.get(subj_key, (subj_key.upper(), subj_key.upper()))
+    opp_abbr, opp_full   = STANCE_ABBR.get(opp_key,  (opp_key.upper(),  opp_key.upper()))
+    # Claude is always PRO-subject; Grok is always ANTI-subject
+    return (subj_abbr, subj_full, opp_abbr, opp_full, "PRO", "ANTI",
+            f"{subj_abbr}_vs_{opp_abbr}")
 
 
 def convergence_status(conv: float, is_crux: bool, is_last: bool) -> str:
@@ -233,16 +268,17 @@ def convert(raw_path: Path, output_path: Optional[Path] = None) -> dict:
     session_id = raw.get("session_id", raw_path.stem.split("_", 3)[-1])
     condition = raw.get("condition", "unknown")
     identity_condition = "external_identity" if condition == "external" else "control"
-    stance = raw.get("stance", "ct_vs_mdn")  # "ct_vs_mdn" or "mdn_vs_ct"
+    stance = raw.get("stance", "ct_vs_mdn")
+    phase = raw.get("phase", 1)
 
-    # In the MdN reverse batch: Grok is PRO-MdN, Claude is ANTI-MdN
-    mdn_stance = stance == "mdn_vs_ct"
-    claude_stance = "ANTI" if mdn_stance else "PRO"
-    grok_stance  = "PRO"  if mdn_stance else "ANTI"
-    worldview_pair = "MdN_vs_CT" if mdn_stance else "CT_vs_MdN"
-    experiment_id  = "CFA-EXP1-BATCH-20260630" if mdn_stance else "CFA-EXP1-BATCH-20260629"
+    subj_abbr, subj_full, opp_abbr, _, claude_stance, grok_stance, worldview_pair = parse_stance(stance)
+
+    # Derive experiment ID from date embedded in session_id (YYYYMMDD_HHMMSS)
+    date_part = session_id.split("_")[0] if "_" in session_id else "20260629"
+    experiment_id = f"CFA-EXP1-BATCH-{date_part}"
 
     results = raw.get("component1_results", {})
+    metric_order = METRIC_ORDER_P2 if phase == 2 else METRIC_ORDER_P1
 
     all_ticks = []
     crux_metrics = []
@@ -250,7 +286,7 @@ def convert(raw_path: Path, output_path: Optional[Path] = None) -> dict:
     total_rounds = 0
     metric_count = 0
 
-    for metric in METRIC_ORDER:
+    for metric in metric_order:
         if metric not in results:
             continue
         mdata = results[metric]
@@ -269,13 +305,15 @@ def convert(raw_path: Path, output_path: Optional[Path] = None) -> dict:
     scenario = {
         "session_id": session_id,
         "worldview_pair": worldview_pair,
-        "subject_framework": raw.get("subject_framework", "Classical Theism"),
+        "subject_framework": raw.get("subject_framework") or subj_full,
         "auditors": ["Claude", "Grok", "Nova"],
         "identity_condition": identity_condition,
         "experiment": experiment_id,
+        "phase": phase,
         "session_story": {
             "summary": (
-                f"{identity_condition.replace('_', ' ').title()} run. "
+                f"Phase {phase} {identity_condition.replace('_', ' ')} run — "
+                f"{subj_abbr} vs {opp_abbr}. "
                 f"{metric_count} metrics. "
                 f"{len(crux_metrics)} crux declaration(s): {', '.join(crux_metrics) if crux_metrics else 'none'}. "
                 f"Avg convergence {avg_conv * 100:.1f}%, avg rounds {avg_rounds:.1f}."
@@ -291,7 +329,7 @@ def convert(raw_path: Path, output_path: Optional[Path] = None) -> dict:
         output_path.parent.mkdir(parents=True, exist_ok=True)
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(scenario, f, indent=2, ensure_ascii=False)
-        print(f"  Written: {output_path} ({len(all_ticks)} ticks)")
+        print(f"  Written: {output_path} ({len(all_ticks)} ticks, phase {phase})")
 
     return scenario
 
@@ -319,17 +357,20 @@ def main():
             # Peek at stance to determine output prefix
             with open(json_file, "r", encoding="utf-8") as _f:
                 _raw = json.load(_f)
-            prefix = "scenario_MdN_CT" if _raw.get("stance") == "mdn_vs_ct" else "scenario_CT_MdN"
-            out_file = out_dir / f"{prefix}_{suffix}.json"
+            subj_abbr, _, opp_abbr, _, _, _, _ = parse_stance(_raw.get("stance", "ct_vs_mdn"))
+            out_file = out_dir / f"scenario_{subj_abbr}_{opp_abbr}_{suffix}.json"
             convert(json_file, out_file)
         print("Done.")
     else:
         raw_path = Path(sys.argv[1])
         out_path = Path(sys.argv[2]) if len(sys.argv) >= 3 else None
         if out_path is None:
-            parts = raw_path.stem.rsplit("_", 1)
-            suffix = parts[-1]
-            out_path = raw_path.parent / f"scenario_CT_MdN_{suffix}.json"
+            import json as _json
+            with open(raw_path, "r", encoding="utf-8") as _f:
+                _raw = _json.load(_f)
+            subj_abbr, _, opp_abbr, _, _, _, _ = parse_stance(_raw.get("stance", "ct_vs_mdn"))
+            suffix = raw_path.stem.rsplit("_", 1)[-1]
+            out_path = raw_path.parent / f"scenario_{subj_abbr}_{opp_abbr}_{suffix}.json"
         result = convert(raw_path, out_path)
         print(f"Session story: {result['session_story']['summary']}")
 

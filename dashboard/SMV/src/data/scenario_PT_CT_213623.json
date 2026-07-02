@@ -1,0 +1,454 @@
+{
+  "session_id": "20260701_213623",
+  "worldview_pair": "PT_vs_CT",
+  "subject_framework": "Process Theology",
+  "auditors": [
+    "Claude",
+    "Grok",
+    "Nova"
+  ],
+  "identity_condition": "control",
+  "experiment": "CFA-EXP1-BATCH-20260701",
+  "phase": 2,
+  "session_story": {
+    "summary": "Phase 2 control run — PT vs CT. 6 metrics. 0 crux declaration(s): none. Avg convergence 98.8%, avg rounds 1.3.",
+    "crux_metrics": [],
+    "avg_convergence_pct": 98.8,
+    "avg_rounds": 1.3
+  },
+  "ticks": [
+    {
+      "tick_id": "tick-CCI-R1",
+      "metric": "CCI",
+      "metric_full": "Collective Coherence Impact",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 6.5,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 7.2,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.07,
+          "volume": 0.37,
+          "notes": "R1: Claude 6.5 / Grok 7.2 — 7% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.03,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.03,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 93.0,
+        "status": "near_converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "Overall, the combination of rigorous consistency and deliberately limited eschatology supports a modestly higher score than 6.5."
+    },
+    {
+      "tick_id": "tick-CCI-R2",
+      "metric": "CCI",
+      "metric_full": "Collective Coherence Impact",
+      "round": 2,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 6.8,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 7.2,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.04,
+          "volume": 0.4,
+          "notes": "R2: Claude 6.8 / Grok 7.2 — 4% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.02,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.02,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 96.0,
+        "status": "near_converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "Claude partially engages the principled-openness point but continues weighting external (existential) criteria over the system's internal logic for closure. This keeps the evaluation from fully crediting Process Theology on its own terms.",
+      "nova_assessment": "1. Fair Application of Stances:\nThe scores for Claude (6.8/10) and Grok (7.2/10) suggest that both the PRO-PT and ANTI-PT stances were applied fairly, as they are relatively close to each other. This indicates that both perspectives were considered with an even hand, with Grok's anti-PT view slightly outperforming Claude's pro-PT side.\n\n2. Justification of Remaining Disagreement:\nWith a convergence rate of 96."
+    },
+    {
+      "tick_id": "tick-EDB-R1",
+      "metric": "EDB",
+      "metric_full": "Epistemic Debt Burden",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 7.4,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 7.1,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.03,
+          "volume": 0.35,
+          "notes": "R1: Claude 7.4 / Grok 7.1 — 3% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 97.0,
+        "status": "near_converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "The prior assessment is largely accurate in identifying Process Theology's unusual systematic reach and its integration of relational metaphysics with a non-coercive theodicy. However, the weaknesses are understated: the \"actual occasions\" and \"prehension\" apparatus functions more as a redescription of experience than a genuine causal explanation, and the absence of testable empirical content or r"
+    },
+    {
+      "tick_id": "tick-EDB-R2",
+      "metric": "EDB",
+      "metric_full": "Epistemic Debt Burden",
+      "round": 2,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 7.2,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 7.1,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.01,
+          "volume": 0.39,
+          "notes": "R2: Claude 7.2 / Grok 7.1 — 1% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 99.0,
+        "status": "converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "Claude has substantively addressed the concerns by conceding that the redescription problem is a genuine limit on depth, that panpsychist assumptions lack independent justification, and that weak testability plus thin eschatology were underweighted. This justifies the modest downward revision. The remaining 0.1-point gap is negligible given the framework's philosophical ambition."
+    },
+    {
+      "tick_id": "tick-PF_I-R1",
+      "metric": "PF_I",
+      "metric_full": "Pragmatic Fertility (Instrumental)",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 5.5,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 5.5,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.0,
+          "volume": 0.34,
+          "notes": "R1: Claude 5.5 / Grok 5.5 — 0% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 100.0,
+        "status": "converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "The prior assessment is balanced and evidence-based. Process theology's instrumental outputs are real but narrowly scoped (primarily within progressive theology, education, and ecology niches), constrained by opacity and limited diffusion into policy, technology, or everyday decision-making. No compelling counter-evidence suggests broader real-world traction than described."
+    },
+    {
+      "tick_id": "tick-PF_E-R1",
+      "metric": "PF_E",
+      "metric_full": "Pragmatic Fertility (Existential)",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 6.5,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 6.5,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.0,
+          "volume": 0.34,
+          "notes": "R1: Claude 6.5 / Grok 6.5 — 0% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 100.0,
+        "status": "converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "The assessment is balanced and well-supported. Process Theology's theodicy and emphasis on co-creativity do offer distinctive existential resources for philosophically inclined users, yet its density, limited emotional immediacy, and weak provisions for personal survival after death constrain broader pragmatic uptake. These trade-offs justify the given score without need for adjustment."
+    },
+    {
+      "tick_id": "tick-AR-R1",
+      "metric": "AR",
+      "metric_full": "Asymptotic Realism",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 6.8,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 6.8,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.0,
+          "volume": 0.34,
+          "notes": "R1: Claude 6.8 / Grok 6.8 — 0% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.0,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 100.0,
+        "status": "converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "I largely agree with the assessment. Process theology's conceptual grounding in aesthetic experience (via Whitehead's categories of beauty, intensity, and creative advance) is genuinely distinctive and philosophically resonant, supporting the listed strengths."
+    },
+    {
+      "tick_id": "tick-MG-R1",
+      "metric": "MG",
+      "metric_full": "Meta-Governance",
+      "round": 1,
+      "nodes": [
+        {
+          "auditor": "Claude",
+          "score": 7.2,
+          "stance": "PRO",
+          "bias_overhead": 0.5
+        },
+        {
+          "auditor": "Grok",
+          "score": 7.4,
+          "stance": "ANTI",
+          "bias_overhead": 0.4
+        },
+        {
+          "auditor": "Nova",
+          "score": null,
+          "stance": "FAIRNESS",
+          "bias_overhead": 0.3
+        }
+      ],
+      "edges": [
+        {
+          "pair": "Claude-Grok",
+          "tension": 0.02,
+          "volume": 0.35,
+          "notes": "R1: Claude 7.2 / Grok 7.4 — 2% gap"
+        },
+        {
+          "pair": "Claude-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        },
+        {
+          "pair": "Grok-Nova",
+          "tension": 0.01,
+          "volume": 0.25,
+          "notes": "Nova observing"
+        }
+      ],
+      "convergence": {
+        "percentage": 98.0,
+        "status": "converged"
+      },
+      "crux": {
+        "status": "none"
+      },
+      "grok_challenge": "I largely concur but would weight the metaphysical resources for moral novelty slightly higher."
+    }
+  ]
+}
