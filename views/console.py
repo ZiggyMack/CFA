@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from utils.calculations import ypa_scenario_scores, guardrail_lever_coupling, guardrail_bfi_sensitivity, guardrail_weight_inversion, symmetry_audit, PF_TYPES
 from utils.visualizations import create_lever_comparison_chart, create_ypa_trinity_chart
 from utils.colors import CFA_COLORS, get_framework_color, get_preset_color
-from utils.profile_loader import get_ypa_data, get_trinity_scores
+from utils.profile_loader import get_ypa_data, get_trinity_scores, get_framework_templates
 
 # Import new components
 from components.cards import (
@@ -157,6 +157,55 @@ def detect_active_preset():
         return "👿 Zealot"
     else:
         return "⚙️ Custom"
+
+@st.cache_data(ttl=300)
+def _worldview_options():
+    """Return sorted list of worldviews that have canonical YAML score files."""
+    try:
+        return sorted(get_framework_templates().keys())
+    except Exception:
+        return ["Classical Theism", "Methodological Naturalism", "Process Theology"]
+
+
+def _on_fa_worldview_change():
+    name = st.session_state.get("fa_name", "")
+    if not name:
+        return
+    try:
+        ypa = get_ypa_data(name)
+        st.session_state["fa_ax"]  = ypa["bf_i"]["axioms"]
+        st.session_state["fa_db"]  = ypa["bf_i"]["debts"]
+        st.session_state["fa_ad"]  = ypa["admits_limits"]
+        st.session_state["fa_cci"] = ypa["levers"]["CCI"]
+        st.session_state["fa_edb"] = ypa["levers"]["EDB"]
+        st.session_state["fa_pfi"] = ypa["levers"]["PF_instrumental"]
+        st.session_state["fa_pfe"] = ypa["levers"]["PF_existential"]
+        st.session_state["fa_ar"]  = ypa["levers"]["AR"]
+        st.session_state["fa_mg"]  = ypa["levers"]["MG"]
+        st.session_state["fa_calibration_opponent"] = None
+    except Exception:
+        pass
+
+
+def _on_fb_worldview_change():
+    name = st.session_state.get("fb_name", "")
+    if not name:
+        return
+    try:
+        ypa = get_ypa_data(name)
+        st.session_state["fb_ax"]  = ypa["bf_i"]["axioms"]
+        st.session_state["fb_db"]  = ypa["bf_i"]["debts"]
+        st.session_state["fb_ad"]  = ypa["admits_limits"]
+        st.session_state["fb_cci"] = ypa["levers"]["CCI"]
+        st.session_state["fb_edb"] = ypa["levers"]["EDB"]
+        st.session_state["fb_pfi"] = ypa["levers"]["PF_instrumental"]
+        st.session_state["fb_pfe"] = ypa["levers"]["PF_existential"]
+        st.session_state["fb_ar"]  = ypa["levers"]["AR"]
+        st.session_state["fb_mg"]  = ypa["levers"]["MG"]
+        st.session_state["fb_calibration_opponent"] = None
+    except Exception:
+        pass
+
 
 def render():
     """Render console"""
@@ -572,152 +621,6 @@ def render():
                 st.session_state["fb_calibration_opponent"] = _mdn.get("calibration_opponent")
                 st.rerun()
 
-        st.markdown("---")
-        st.markdown("**Pre-Audited Frameworks:**")
-
-        preset_options = {
-            "-- Select Framework --": None,
-            # Fully audited (98% Trinity convergence) - emojis match Brute Ledger
-            "📘 Methodological Naturalism (MdN)": "mdn",
-            "📕 Classical Theism (CT)": "ct",
-            # Profiles exist but not yet fully audited (emojis match Brute Ledger)
-            "☸️ Buddhism": "coming",
-            "🤔 Desiderata Believers": "coming",
-            "⛔ Error Theory": "coming",
-            "🎭 Existentialism": "coming",
-            "🕉️ Hinduism": "coming",
-            "☪️ Islam": "coming",
-            "📖 Mormonism (LDS)": "coming",
-            "❓ Null Hypothesis": "coming",
-            "🕎 Orthodox Judaism": "coming",
-            "🌊 Process Theology": "pt"
-        }
-        
-        selected_preset = st.selectbox(
-            "Choose Framework:",
-            list(preset_options.keys()),
-            key="preset_selector"
-        )
-        
-        preset_key = preset_options[selected_preset]
-
-        if preset_key == "mdn":
-            st.info("**Methodological Naturalism**\n\nResearch protocol assuming testable natural causes. Audited by Claude + Grok with 98% convergence.")
-
-            # Let user choose which framework slot
-            load_col1, load_col2 = st.columns(2)
-
-            with load_col1:
-                if st.button("→ Load to A", key="load_mdn_a", use_container_width=True, type="primary"):
-                    st.session_state["fa_name"] = MDN_DEFAULT["name"]
-                    st.session_state["fa_ax"] = MDN_DEFAULT["bf_i"]["axioms"]
-                    st.session_state["fa_db"] = MDN_DEFAULT["bf_i"]["debts"]
-                    st.session_state["fa_ad"] = MDN_DEFAULT["admits_limits"]
-                    st.session_state["fa_cci"] = MDN_DEFAULT["levers"]["CCI"]
-                    st.session_state["fa_edb"] = MDN_DEFAULT["levers"]["EDB"]
-                    st.session_state["fa_pfi"] = MDN_DEFAULT["levers"]["PF_instrumental"]
-                    st.session_state["fa_pfe"] = MDN_DEFAULT["levers"]["PF_existential"]
-                    st.session_state["fa_ar"] = MDN_DEFAULT["levers"]["AR"]
-                    st.session_state["fa_mg"] = MDN_DEFAULT["levers"]["MG"]
-                    st.session_state["fa_calibration_opponent"] = None  # canonical, no matchup context
-                    st.success("✅ MdN → Framework A!")
-                    st.rerun()
-
-            with load_col2:
-                if st.button("→ Load to B", key="load_mdn_b", use_container_width=True):
-                    st.session_state["fb_name"] = MDN_DEFAULT["name"]
-                    st.session_state["fb_ax"] = MDN_DEFAULT["bf_i"]["axioms"]
-                    st.session_state["fb_db"] = MDN_DEFAULT["bf_i"]["debts"]
-                    st.session_state["fb_ad"] = MDN_DEFAULT["admits_limits"]
-                    st.session_state["fb_cci"] = MDN_DEFAULT["levers"]["CCI"]
-                    st.session_state["fb_edb"] = MDN_DEFAULT["levers"]["EDB"]
-                    st.session_state["fb_pfi"] = MDN_DEFAULT["levers"]["PF_instrumental"]
-                    st.session_state["fb_pfe"] = MDN_DEFAULT["levers"]["PF_existential"]
-                    st.session_state["fb_ar"] = MDN_DEFAULT["levers"]["AR"]
-                    st.session_state["fb_mg"] = MDN_DEFAULT["levers"]["MG"]
-                    st.session_state["fb_calibration_opponent"] = None  # canonical, no matchup context
-                    st.success("✅ MdN → Framework B!")
-                    st.rerun()
-
-        elif preset_key == "ct":
-            st.info("**Classical Theism**\n\nTraditional monotheistic worldview. Audited by Claude + Grok with 98% convergence.")
-
-            # Let user choose which framework slot
-            load_col1, load_col2 = st.columns(2)
-
-            with load_col1:
-                if st.button("→ Load to A", key="load_ct_a", use_container_width=True, type="primary"):
-                    st.session_state["fa_name"] = CT_DEFAULT["name"]
-                    st.session_state["fa_ax"] = CT_DEFAULT["bf_i"]["axioms"]
-                    st.session_state["fa_db"] = CT_DEFAULT["bf_i"]["debts"]
-                    st.session_state["fa_ad"] = CT_DEFAULT["admits_limits"]
-                    st.session_state["fa_cci"] = CT_DEFAULT["levers"]["CCI"]
-                    st.session_state["fa_edb"] = CT_DEFAULT["levers"]["EDB"]
-                    st.session_state["fa_pfi"] = CT_DEFAULT["levers"]["PF_instrumental"]
-                    st.session_state["fa_pfe"] = CT_DEFAULT["levers"]["PF_existential"]
-                    st.session_state["fa_ar"] = CT_DEFAULT["levers"]["AR"]
-                    st.session_state["fa_mg"] = CT_DEFAULT["levers"]["MG"]
-                    st.session_state["fa_calibration_opponent"] = None  # canonical, no matchup context
-                    st.success("✅ CT → Framework A!")
-                    st.rerun()
-
-            with load_col2:
-                if st.button("→ Load to B", key="load_ct_b", use_container_width=True):
-                    st.session_state["fb_name"] = CT_DEFAULT["name"]
-                    st.session_state["fb_ax"] = CT_DEFAULT["bf_i"]["axioms"]
-                    st.session_state["fb_db"] = CT_DEFAULT["bf_i"]["debts"]
-                    st.session_state["fb_ad"] = CT_DEFAULT["admits_limits"]
-                    st.session_state["fb_cci"] = CT_DEFAULT["levers"]["CCI"]
-                    st.session_state["fb_edb"] = CT_DEFAULT["levers"]["EDB"]
-                    st.session_state["fb_pfi"] = CT_DEFAULT["levers"]["PF_instrumental"]
-                    st.session_state["fb_pfe"] = CT_DEFAULT["levers"]["PF_existential"]
-                    st.session_state["fb_ar"] = CT_DEFAULT["levers"]["AR"]
-                    st.session_state["fb_mg"] = CT_DEFAULT["levers"]["MG"]
-                    st.session_state["fb_calibration_opponent"] = None  # canonical, no matchup context
-                    st.success("✅ CT → Framework B!")
-                    st.rerun()
-
-        elif preset_key == "pt":
-            st.info("**Process Theology**\n\nWhitehead-influenced panentheism. Audited by Claude + Grok, YPA 3.53.")
-            _pt = get_ypa_data("Process Theology")
-            load_col1, load_col2 = st.columns(2)
-            with load_col1:
-                if st.button("→ Load to A", key="load_pt_a", use_container_width=True, type="primary"):
-                    st.session_state["fa_name"] = _pt["name"]
-                    st.session_state["fa_ax"] = _pt["bf_i"]["axioms"]
-                    st.session_state["fa_db"] = _pt["bf_i"]["debts"]
-                    st.session_state["fa_ad"] = _pt["admits_limits"]
-                    st.session_state["fa_cci"] = _pt["levers"]["CCI"]
-                    st.session_state["fa_edb"] = _pt["levers"]["EDB"]
-                    st.session_state["fa_pfi"] = _pt["levers"]["PF_instrumental"]
-                    st.session_state["fa_pfe"] = _pt["levers"]["PF_existential"]
-                    st.session_state["fa_ar"] = _pt["levers"]["AR"]
-                    st.session_state["fa_mg"] = _pt["levers"]["MG"]
-                    st.session_state["fa_calibration_opponent"] = None
-                    st.success("✅ PT → Framework A!")
-                    st.rerun()
-            with load_col2:
-                if st.button("→ Load to B", key="load_pt_b", use_container_width=True):
-                    st.session_state["fb_name"] = _pt["name"]
-                    st.session_state["fb_ax"] = _pt["bf_i"]["axioms"]
-                    st.session_state["fb_db"] = _pt["bf_i"]["debts"]
-                    st.session_state["fb_ad"] = _pt["admits_limits"]
-                    st.session_state["fb_cci"] = _pt["levers"]["CCI"]
-                    st.session_state["fb_edb"] = _pt["levers"]["EDB"]
-                    st.session_state["fb_pfi"] = _pt["levers"]["PF_instrumental"]
-                    st.session_state["fb_pfe"] = _pt["levers"]["PF_existential"]
-                    st.session_state["fb_ar"] = _pt["levers"]["AR"]
-                    st.session_state["fb_mg"] = _pt["levers"]["MG"]
-                    st.session_state["fb_calibration_opponent"] = None
-                    st.success("✅ PT → Framework B!")
-                    st.rerun()
-
-        elif preset_key == "coming":
-            st.warning(f"**{selected_preset.replace('🔜 ', '')}**\n\nAudit in progress. Check back soon!")
-
-        if selected_preset != "-- Select Framework --":
-            st.markdown("---")
-            st.caption("💡 **Tip:** Load different frameworks to each side to compare!")
     
     # Initialize sidebar config defaults if not set
     if "sidebar_lever_parity" not in st.session_state:
@@ -849,7 +752,7 @@ def render():
             st.caption(f"⚗️ Levers calibrated vs {_fa_opp} | Adversarially Audited")
         else:
             st.caption("✅ Canonical levers | Adversarially Audited")
-        fa_name = st.text_input("Name", key="fa_name")
+        fa_name = st.selectbox("Worldview", options=_worldview_options(), key="fa_name", on_change=_on_fa_worldview_change)
         
         with st.expander("🔢 BFI", expanded=False):
             if 'custom_framework_ready' in st.session_state:
@@ -932,7 +835,7 @@ def render():
             st.caption(f"⚗️ Levers calibrated vs {_fb_opp} | Adversarially Audited")
         else:
             st.caption("✅ Canonical levers | Adversarially Audited")
-        fb_name = st.text_input("Name", key="fb_name")
+        fb_name = st.selectbox("Worldview", options=_worldview_options(), key="fb_name", on_change=_on_fb_worldview_change)
         
         with st.expander("🔢 BFI", expanded=False):
             if 'custom_framework_ready' in st.session_state:
