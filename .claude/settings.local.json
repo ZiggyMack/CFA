@@ -30,7 +30,10 @@
       "Bash(mkdir:*)",
       "Bash(copy:*)",
       "Bash(git -C \"d:\\Documents\\CFA\" status)",
-      "Bash(git -C \"d:\\Documents\\CFA\" add -A)"
+      "Bash(git -C \"d:\\Documents\\CFA\" add -A)",
+      "Bash(git -C \"d:\\Documents\\CFA\" log --oneline -3)",
+      "Bash(git -C \"d:\\Documents\\CFA\" commit -m \"$(cat <<''EOF''\nrefactor: Establish REPO_SYNC pipeline infrastructure\n\n- Rename 12_CFA to REPO_SYNC and move to docs/\n- Archive Nyquist-Sync to .Archive/\n- Rewrite README from CFA perspective\n- Add SYNC_IN intake workflow (pending/processed/archived)\n- Add SYNC_OUT spec workflow (pending/sent/templates)\n- Create INTAKE_GUIDE.md for processing ARMADA results\n- Create SPEC_GUIDE.md for designing experiments\n- Add experiment templates (axiom_validation, cross_architecture, custom)\n- Add process_sync_in.py processing script\n- Archive run_cfa_trinity_v2.py to OLD/ (ARMADA runs this)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git -C \"d:\\Documents\\CFA\" push)"
     ],
     "deny": [],
     "ask": []
