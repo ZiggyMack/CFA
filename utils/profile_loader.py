@@ -258,14 +258,17 @@ def get_ypa_data(worldview_name: str, opponent: str = None) -> Dict[str, Any]:
         }
 
 
-def get_trinity_scores(worldview_name: str) -> Optional[Dict[str, Any]]:
+def get_trinity_scores(worldview_name: str, opponent: str = None) -> Optional[Dict[str, Any]]:
     """
     Get Trinity audit scores for a worldview from canonical .yaml file.
 
-    Returns the full trinity_scores block (metrics, batch_summary, session_ids)
-    or None if no trinity data exists for this worldview.
+    Args:
+        worldview_name: Name of the worldview being audited (the subject)
+        opponent: Name of the opposing framework used as adversarial lens.
+                  If provided, returns scores from the specific matchup.
+                  If omitted, returns the first available matchup (or None).
 
-    Used by pages/console.py Trinity Audit tab.
+    Returns the trinity_scores block for the given matchup, or None if not found.
     """
     yaml_filename = f"{_normalize_worldview_name(worldview_name)}.yaml"
     yaml_filepath = PROFILES_DIR / yaml_filename
@@ -276,7 +279,18 @@ def get_trinity_scores(worldview_name: str) -> Optional[Dict[str, Any]]:
     try:
         with open(yaml_filepath, 'r', encoding='utf-8') as f:
             data = yaml.safe_load(f)
-        return data.get("trinity_scores", None)
+
+        by_matchup = data.get("trinity_scores_by_matchup", {}) or {}
+
+        if opponent:
+            opponent_key = f"vs_{_normalize_worldview_name(opponent).lower()}"
+            return by_matchup.get(opponent_key)
+
+        # No opponent specified — return first available matchup
+        if by_matchup:
+            return next(iter(by_matchup.values()), None)
+
+        return None
     except (yaml.YAMLError, Exception):
         return None
 

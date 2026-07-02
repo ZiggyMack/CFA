@@ -1103,26 +1103,27 @@ Here, <strong style="color:#e0e0e0;">PF-type</strong> is that toggle: switching 
     # TAB 4: TRINITY AUDIT (live data from golden batch)
     # =========================================================================
     with tab4:
-        fa_name_lower = fa["name"].lower()
-        fb_name_lower = fb["name"].lower()
-        is_ct_mdn = (
-            ("classical theism" in fa_name_lower or "classical theism" in fb_name_lower) and
-            ("methodological naturalism" in fa_name_lower or "methodological naturalism" in fb_name_lower)
-        )
+        trinity_fa = get_trinity_scores(fa["name"], opponent=fb["name"])
+        trinity_fb = get_trinity_scores(fb["name"], opponent=fa["name"])
 
-        if not is_ct_mdn:
-            st.info("🔬 **Trinity Audit data is available for CT vs MdN only.**\n\nLoad Classical Theism + Methodological Naturalism to see the 10-run golden batch deliberation results.")
+        if not trinity_fa and not trinity_fb:
+            st.info(f"🔬 **No Trinity Audit data for {fa['name']} vs {fb['name']} yet.**\n\nRun a golden batch experiment for this pairing to populate this tab.")
         else:
-            trinity_ct  = get_trinity_scores("Classical Theism")
-            trinity_mdn = get_trinity_scores("Methodological Naturalism")
+            trinity_ct  = trinity_fa
+            trinity_mdn = trinity_fb
 
             if not trinity_ct and not trinity_mdn:
                 st.error("Could not load Trinity scores from YAML profiles.")
             else:
-                st.markdown("## 🔬 Trinity Audit — CT ↔ MdN Symmetric Experiment")
-                st.caption("Two complementary 10-run golden batches. Each framework audited as subject by its lens-aligned advocate.")
+                st.markdown(f"## 🔬 Trinity Audit — {fa['name']} ↔ {fb['name']}")
+                st.caption("Golden batch deliberation results. Each framework audited as subject by its lens-aligned advocate.")
 
-                audit_tabs = st.tabs(["📕 CT as Subject", "📘 MdN as Subject", "⚖️ Cross-Stance Symmetry"])
+                _tab_labels = []
+                if trinity_fa: _tab_labels.append(f"📕 {fa['name']} as Subject")
+                if trinity_fb: _tab_labels.append(f"📘 {fb['name']} as Subject")
+                if trinity_fa and trinity_fb: _tab_labels.append("⚖️ Cross-Stance Symmetry")
+                audit_tabs = st.tabs(_tab_labels)
+                _tab_idx = 0
 
                 METRIC_ORDER_T = ["BFI", "CA", "IP", "ES", "LS", "MS", "PS"]
 
@@ -1300,81 +1301,102 @@ CFA scores live at *Evaluation*. Divergence can originate at any upstream layer.
                             if not ids.get("control"):
                                 st.caption("No control batch for this experiment.")
 
-                with audit_tabs[0]:
-                    render_trinity_tab(trinity_ct, "CT (Classical Theism)", "PRO-CT", "ANTI-CT",
-                                       "Identity Δ", "identity_delta_claude", "identity_delta_grok",
-                                       crux_prefix="CT_MdN")
+                def _has_role_swap(trinity):
+                    m = trinity.get("metrics", {}) if trinity else {}
+                    return any("role_swap_delta_claude" in v for v in m.values())
 
-                with audit_tabs[1]:
-                    render_trinity_tab(trinity_mdn, "MdN (Methodological Naturalism)", "ANTI-MdN", "PRO-MdN",
-                                       "Role-Swap Δ", "role_swap_delta_claude", "role_swap_delta_grok",
-                                       extra_delta_label="Identity Δ",
-                                       extra_delta_claude_key="identity_delta_claude",
-                                       extra_delta_grok_key="identity_delta_grok",
-                                       crux_prefix="MdN_CT")
+                if trinity_fa:
+                    with audit_tabs[_tab_idx]:
+                        _fa_abbrev = "".join(w[0].upper() for w in fa["name"].split()[:3])
+                        _has_rs = _has_role_swap(trinity_fa)
+                        render_trinity_tab(trinity_fa, fa["name"], f"PRO-{_fa_abbrev}", f"ANTI-{_fa_abbrev}",
+                                           "Role-Swap Δ" if _has_rs else "Identity Δ",
+                                           "role_swap_delta_claude" if _has_rs else "identity_delta_claude",
+                                           "role_swap_delta_grok" if _has_rs else "identity_delta_grok",
+                                           extra_delta_label="Identity Δ" if _has_rs else None,
+                                           extra_delta_claude_key="identity_delta_claude" if _has_rs else None,
+                                           extra_delta_grok_key="identity_delta_grok" if _has_rs else None,
+                                           crux_prefix=None)
+                    _tab_idx += 1
 
-                with audit_tabs[2]:
-                    st.markdown("### Cross-Stance Role-Swap Deltas")
-                    st.caption("How much each auditor's score shifts when switching from one stance to the other")
-                    if trinity_ct and trinity_mdn:
-                        ct_m  = trinity_ct.get("metrics", {})
-                        mdn_m = trinity_mdn.get("metrics", {})
+                if trinity_fb:
+                    with audit_tabs[_tab_idx]:
+                        _fb_abbrev = "".join(w[0].upper() for w in fb["name"].split()[:3])
+                        _has_rs = _has_role_swap(trinity_fb)
+                        render_trinity_tab(trinity_fb, fb["name"], f"PRO-{_fb_abbrev}", f"ANTI-{_fb_abbrev}",
+                                           "Role-Swap Δ" if _has_rs else "Identity Δ",
+                                           "role_swap_delta_claude" if _has_rs else "identity_delta_claude",
+                                           "role_swap_delta_grok" if _has_rs else "identity_delta_grok",
+                                           extra_delta_label="Identity Δ" if _has_rs else None,
+                                           extra_delta_claude_key="identity_delta_claude" if _has_rs else None,
+                                           extra_delta_grok_key="identity_delta_grok" if _has_rs else None,
+                                           crux_prefix=None)
+                    _tab_idx += 1
+
+                if trinity_fa and trinity_fb:
+                    with audit_tabs[_tab_idx]:
+                        st.markdown("### Cross-Stance Role-Swap Deltas")
+                        st.caption("How much each auditor's score shifts when switching from one stance to the other")
+                        _cs_fa_m = trinity_fa.get("metrics", {})
+                        _cs_fb_m = trinity_fb.get("metrics", {})
                         sym_rows = []
                         for key in METRIC_ORDER_T:
-                            if key not in ct_m or key not in mdn_m:
+                            if key not in _cs_fa_m or key not in _cs_fb_m:
                                 continue
-                            ct  = ct_m[key]
-                            mdn = mdn_m[key]
+                            _cs_fa = _cs_fa_m[key]
+                            _cs_fb = _cs_fb_m[key]
                             sym_rows.append({
                                 "Metric": key,
-                                "Claude PRO-CT": ct.get("claude_mean", "?"),
-                                "Claude ANTI-MdN": mdn.get("claude_mean", "?"),
-                                "Claude Δ": f"{'+' if mdn.get('role_swap_delta_claude',0) >= 0 else ''}{mdn.get('role_swap_delta_claude','?')}",
-                                "Grok ANTI-CT": ct.get("grok_mean", "?"),
-                                "Grok PRO-MdN": mdn.get("grok_mean", "?"),
-                                "Grok Δ": f"{'+' if mdn.get('role_swap_delta_grok',0) >= 0 else ''}{mdn.get('role_swap_delta_grok','?')}",
-                                "CT Conv%": f"{ct.get('convergence_pct','?')}%",
-                                "MdN Conv%": f"{mdn.get('convergence_pct','?')}%",
+                                f"Claude PRO-{_fa_abbrev}": _cs_fa.get("claude_mean", "?"),
+                                f"Claude ANTI-{_fb_abbrev}": _cs_fb.get("claude_mean", "?"),
+                                "Claude Δ": f"{'+' if _cs_fb.get('role_swap_delta_claude',0) >= 0 else ''}{_cs_fb.get('role_swap_delta_claude','?')}",
+                                f"Grok ANTI-{_fa_abbrev}": _cs_fa.get("grok_mean", "?"),
+                                f"Grok PRO-{_fb_abbrev}": _cs_fb.get("grok_mean", "?"),
+                                "Grok Δ": f"{'+' if _cs_fb.get('role_swap_delta_grok',0) >= 0 else ''}{_cs_fb.get('role_swap_delta_grok','?')}",
+                                f"{_fa_abbrev} Conv%": f"{_cs_fa.get('convergence_pct','?')}%",
+                                f"{_fb_abbrev} Conv%": f"{_cs_fb.get('convergence_pct','?')}%",
                             })
                         st.dataframe(pd.DataFrame(sym_rows), use_container_width=True, hide_index=True)
                         st.markdown("### Instrument Stability")
-                        stab = trinity_mdn.get("batch_summary", {}).get("instrument_stability", {})
+                        stab = trinity_fb.get("batch_summary", {}).get("instrument_stability", {})
                         if stab:
+                            _fa_k = _fa_abbrev.lower()
+                            _fb_k = _fb_abbrev.lower()
                             c1, c2, c3, c4 = st.columns(4)
-                            c1.metric("CT Avg Conv", f"{stab.get('ct_golden_avg_convergence','?')}%")
-                            c2.metric("MdN Avg Conv", f"{stab.get('mdn_golden_avg_convergence','?')}%")
-                            c3.metric("CT Avg Rounds", str(stab.get('ct_golden_avg_rounds','?')))
-                            c4.metric("MdN Avg Rounds", str(stab.get('mdn_golden_avg_rounds','?')))
+                            c1.metric(f"{_fa_abbrev} Avg Conv", f"{stab.get(f'{_fa_k}_golden_avg_convergence', stab.get('ct_golden_avg_convergence','?'))}%")
+                            c2.metric(f"{_fb_abbrev} Avg Conv", f"{stab.get(f'{_fb_k}_golden_avg_convergence', stab.get('mdn_golden_avg_convergence','?'))}%")
+                            c3.metric(f"{_fa_abbrev} Avg Rounds", str(stab.get(f'{_fa_k}_golden_avg_rounds', stab.get('ct_golden_avg_rounds','?'))))
+                            c4.metric(f"{_fb_abbrev} Avg Rounds", str(stab.get(f'{_fb_k}_golden_avg_rounds', stab.get('mdn_golden_avg_rounds','?'))))
                             st.caption(stab.get("interpretation", ""))
 
-                        # --- Key Finding: Asymmetric Identity Pressure ---
-                        st.markdown("### Key Finding: Asymmetric Identity Pressure")
-
-                        # Compute identity delta stats from CT batch (golden condition)
-                        id_claude = {k: ct_m[k].get("identity_delta_claude", 0) for k in METRIC_ORDER_T if k in ct_m}
-                        id_grok   = {k: ct_m[k].get("identity_delta_grok",   0) for k in METRIC_ORDER_T if k in ct_m}
-                        n = len(id_claude)
-                        avg_claude_id = round(sum(id_claude.values()) / n, 2) if n else 0
-                        avg_grok_id   = round(sum(id_grok.values())   / n, 2) if n else 0
-                        grok_harder_ct = sum(
-                            1 for k in id_claude
-                            if id_grok[k] < 0 and abs(id_grok[k]) > abs(id_claude[k])
+                        # --- Key Finding: Asymmetric Identity Pressure (CT vs MdN specific) ---
+                        _is_ct_mdn_pair = (
+                            {fa["name"], fb["name"]} == {"Classical Theism", "Methodological Naturalism"}
                         )
-                        largest_gap = max(
-                            (abs(id_grok[k]) - abs(id_claude[k]), k) for k in id_claude
-                        )
-
-                        metric_full_map_s = {
-                            "BFI": "Beings, Foundational Importance",
-                            "CA":  "Causal Attribution",
-                            "IP":  "Intellectual Pedigree",
-                            "ES":  "Explanatory Scope",
-                            "LS":  "Logical Soundness",
-                            "MS":  "Moral Substance",
-                            "PS":  "Practical Significance",
-                        }
-
-                        st.markdown(f"""
+                        if _is_ct_mdn_pair:
+                            st.markdown("### Key Finding: Asymmetric Identity Pressure")
+                            id_claude = {k: _cs_fa_m[k].get("identity_delta_claude", 0) for k in METRIC_ORDER_T if k in _cs_fa_m}
+                            id_grok   = {k: _cs_fa_m[k].get("identity_delta_grok",   0) for k in METRIC_ORDER_T if k in _cs_fa_m}
+                            n = len(id_claude)
+                            avg_claude_id = round(sum(id_claude.values()) / n, 2) if n else 0
+                            avg_grok_id   = round(sum(id_grok.values())   / n, 2) if n else 0
+                            grok_harder_ct = sum(
+                                1 for k in id_claude
+                                if id_grok[k] < 0 and abs(id_grok[k]) > abs(id_claude[k])
+                            )
+                            largest_gap = max(
+                                (abs(id_grok[k]) - abs(id_claude[k]), k) for k in id_claude
+                            )
+                            metric_full_map_s = {
+                                "BFI": "Beings, Foundational Importance",
+                                "CA":  "Causal Attribution",
+                                "IP":  "Intellectual Pedigree",
+                                "ES":  "Explanatory Scope",
+                                "LS":  "Logical Soundness",
+                                "MS":  "Moral Substance",
+                                "PS":  "Practical Significance",
+                            }
+                            st.markdown(f"""
 <div style="background:#1a1a2e;border-left:4px solid #e94560;padding:1rem 1.2rem;border-radius:0 6px 6px 0;margin:0.5rem 0 1rem 0;">
 <p style="margin:0 0 0.6rem 0;font-size:0.95rem;color:#e0e0e0;">
 <strong style="color:#e94560;">Identity loading deflates the ANTI-CT auditor (Grok) substantially harder than the PRO-CT auditor (Claude)</strong>
@@ -1393,14 +1415,8 @@ has less adversarial purchase; the lens and the subject are aligned. The asymmet
 principled. The instrument is measuring a real structural fact: CT is a harder target for the empirical lens
 than MdN is for the teleological lens.
 </p>
-<p style="margin:0;font-size:0.8rem;color:#606070;">
-Trinity² identity-only condition (H-014) will isolate this effect directly from scaffold and calibration contributions.
-</p>
 </div>
 """, unsafe_allow_html=True)
-
-                    else:
-                        st.info("Both CT and MdN trinity data required for symmetry analysis.")
 
     # deps: preset_modes
     # EPISTEMIC QUIZ SYSTEM
