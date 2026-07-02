@@ -33,15 +33,27 @@ from components.charts import (
     create_lever_pie_charts, create_ypa_gauge, create_lever_radar_comparison
 )
 
+_PREFIX_TO_SUBJECT = {
+    "CT":  "Classical Theism",
+    "MdN": "Methodological Naturalism",
+    "PT":  "Process Theology",
+}
+
 @st.cache_data(ttl=300)
 def load_crux_data(worldview_prefix):
     """Scan golden session JSONs and return unique declared crux events for a batch.
 
-    Deduplicates by crux ID so continuation ticks don't inflate counts.
-    Excludes demo/non-standard files by checking the filename key is all digits.
+    Handles two session schemas:
+    - V1 (CT/MdN): scenario_{SUBJECT}_{OPPONENT}_{HHMMSS}.json in dashboard/SMV/src/data/
+      Uses 'ticks' list with crux.status == 'declared'
+    - V2 (PT/ARMADA): S7_cfa_trinity_{date}_{time}.json in SYNC_IN/pending/{5,6,7,8}/
+      Uses 'component1_results' dict with crux_declared bool per metric
     """
-    data_dir = Path(__file__).resolve().parent.parent / "dashboard" / "SMV" / "src" / "data"
+    root = Path(__file__).resolve().parent.parent
     cruxes = []
+
+    # --- V1 schema: dashboard/SMV/src/data/ ---
+    data_dir = root / "dashboard" / "SMV" / "src" / "data"
     prefix_str = f"scenario_{worldview_prefix}_"
     for fpath in glob.glob(str(data_dir / f"scenario_{worldview_prefix}_*.json")):
         try:
@@ -57,7 +69,7 @@ def load_crux_data(worldview_prefix):
                 scenario = json.load(f)
             session_id = str(scenario.get("session_id", fname_key))
             condition = scenario.get("identity_condition", "unknown")
-            seen_ids = set()  # deduplicate within session by crux ID
+            seen_ids = set()
             for tick in scenario.get("ticks", []):
                 crux = tick.get("crux", {})
                 if crux.get("status") != "declared":
@@ -73,7 +85,7 @@ def load_crux_data(worldview_prefix):
                 if dm:
                     deadlock = dm.group(1).replace('\n', ' ').strip()[:300]
                 cruxes.append({
-                    "session_id": fname_key,
+                    "session_id": session_id,
                     "condition": condition,
                     "metric": tick.get("metric"),
                     "metric_full": tick.get("metric_full"),
@@ -86,6 +98,45 @@ def load_crux_data(worldview_prefix):
                 })
         except Exception:
             continue
+
+    # --- V2 schema: SYNC_IN/pending/5-8/ (ARMADA format) ---
+    expected_subject = _PREFIX_TO_SUBJECT.get(worldview_prefix)
+    if expected_subject:
+        sync_pending = root / "docs" / "REPO_SYNC" / "SYNC_IN" / "pending"
+        for folder in ["5", "6", "7", "8"]:
+            folder_path = sync_pending / folder
+            if not folder_path.exists():
+                continue
+            for fpath in glob.glob(str(folder_path / "S7_cfa_trinity_*.json")):
+                try:
+                    with open(fpath, encoding="utf-8") as f:
+                        scenario = json.load(f)
+                    if scenario.get("subject_framework") != expected_subject:
+                        continue
+                    session_id = str(scenario.get("session_id", Path(fpath).stem))
+                    # "external" = golden (maps to identity_condition naming); "control" = control
+                    raw_cond = scenario.get("condition", "unknown")
+                    condition = "external_identity" if raw_cond == "external" else raw_cond
+                    for metric, data in scenario.get("component1_results", {}).items():
+                        if not isinstance(data, dict) or not data.get("crux_declared"):
+                            continue
+                        crux_info = data.get("crux_point") or {}
+                        crux_id = crux_info.get("id") or f"{session_id}_{metric}"
+                        cruxes.append({
+                            "session_id": session_id,
+                            "condition": condition,
+                            "metric": metric,
+                            "metric_full": data.get("metric_full", metric),
+                            "round": data.get("rounds_taken"),
+                            "classification": crux_info.get("type", "unclassified"),
+                            "description": crux_info.get("description", ""),
+                            "deadlock": None,
+                            "claude_score": data.get("claude_score"),
+                            "grok_score": data.get("grok_score"),
+                        })
+                except Exception:
+                    continue
+
     return cruxes
 
 # Backward compatibility: Load frameworks from profiles
