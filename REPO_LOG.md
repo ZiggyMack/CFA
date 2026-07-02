@@ -94,6 +94,27 @@ When files are added or deleted, use diff notation like git commits:
 
 ## 📝 CHANGE LOG
 
+### [DOCUMENTATION-2026-07-02-1] 2026-07-02 - Repo Health Backfill (July 2026 Changes)
+
+**Categories:** [DOCUMENTATION]
+**Changed by:** CFA-Claude (Sonnet 4.6)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `UPDATED`: docs/repository/MAP_ROOM/WORLDVIEW_CATALOG.md — Added GNOSTICISM as 13th worldview (Esoteric/Ancient Traditions section); updated total count 12→13, comparisons 66→78; added "Draft Profiles" tier to status distribution
+- `UPDATED`: docs/repository/MAP_ROOM/MASTER_DEPENDENCY_MAP.md — Added "July 2026 Additions" section documenting tools/raw_to_smv.py, dashboard/HealthDashboard/app.py, 40 PT scenario files, GNOSTICISM.yaml, and CRUX_YPA_METHODOLOGY.md; flagged tree as pre-July-2026 snapshot
+- `UPDATED`: docs/repository/OBSERVATORY/REPO_HEALTH_DASHBOARD.md — Added July 2026 Activity Note table listing all unscored changes since Nov 2025 Deep Clean; flagged 97/100 score as unverified pending next Deep Clean
+
+**Reason:** Living maps were frozen at Nov 2025. The July 2026 session created GNOSTICISM.yaml, generalized raw_to_smv.py, stood up HealthDashboard, and added 40 PT scenario files — none of these appeared in the structural health docs. REPO_LOG had the entries; the maps did not reflect them.
+
+**Impact:** Moderate — living maps now reflect current state; cold-start Doc Claude reads truth not stale Nov 2025 snapshot.
+
+**Follow-up Required:** YES
+**Follow-up Status:** PENDING
+**Follow-up Action:** Run full Deep Clean (docs/repository/OBSERVATORY/DEEP_CLEAN_PROTOCOL.md) to re-score repo health. Current 97/100 claim is unverified against July 2026 additions. Expect to remain GREEN.
+
+-----
+
 ### [WORLDVIEW-2026-07-02-1] 2026-07-02 - Gnosticism Worldview Profile Added (DRAFT YAML)
 
 **Categories:** [DOCUMENTATION] [DATA_MODEL] [🧹 +1]

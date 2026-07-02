@@ -23,9 +23,9 @@ All references to worldview counts, lists, or profiles should point HERE instead
 
 ## 📊 WORLDVIEW COUNT
 
-**Total Worldviews:** 12
+**Total Worldviews:** 13
 
-**Unique Comparisons Possible:** 66 pairings (12 choose 2)
+**Unique Comparisons Possible:** 78 pairings (13 choose 2)
 
 ---
 
@@ -97,6 +97,18 @@ All references to worldview counts, lists, or profiles should point HERE instead
 
 ---
 
+### **Esoteric / Ancient Traditions** (1)
+
+13. **[Gnosticism](worldviews/GNOSTICISM.yaml)** (GN)
+    - Status: v0.1.0 | DRAFT (Trinity audit pending)
+    - Tradition: Ancient Gnostic Christianity (Valentinian, Sethian, Nag Hammadi)
+    - Key Claims: Transcendent Monad/Pleroma, Demiurge as flawed creator, Divine Spark (pneuma), liberation through Gnosis
+    - Abbreviation: GN
+    - YPA: 2.79 (standard) | BFI: 12.0 | lever_sum: 33.5
+    - Note: Deep source review (Gnostic-1/2/x3 folders). Jungian-sympathetic interpretive filter; source_calibration_notes embedded in YAML. PF-E=9.0 (highest in set), PF-I=2.0 (lowest in set). Suggested Trinity pairings: GN vs CT (Demiurge/theodicy), GN vs MdN (gnosis vs empiricism).
+
+---
+
 ### **Philosophical Frameworks** (3)
 
 10. **[Existentialism](worldviews/EXISTENTIALISM.md)** (EX)
@@ -126,13 +138,16 @@ All references to worldview counts, lists, or profiles should point HERE instead
 - Process Theology
 - Methodological Naturalism
 
+**Draft Profiles (v0.1.0 + YAML, pending Trinity audit):** 1
+- Gnosticism (deep source review complete; source_calibration_notes embedded)
+
 **Seed Profiles (v0.1.0):** 9
 - Islam, Orthodox Judaism, Mormonism
 - Null Hypothesis
 - Buddhism, Hinduism
 - Existentialism, Error Theory, Desiderata Believers
 
-**Target:** All 12 profiles at v0.3.0+ before Phase 5 scoring begins
+**Target:** All 13 profiles at v0.3.0+ before Phase 5 scoring begins
 
 ---
 

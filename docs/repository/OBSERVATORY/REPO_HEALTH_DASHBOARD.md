@@ -8,6 +8,26 @@
 
 ---
 
+## 📋 JULY 2026 ACTIVITY NOTE
+
+**Score Validity:** The 97/100 score above is from the 2025-11-26 Deep Clean. A full re-score has not been run since. Score is likely still GREEN but unverified against July 2026 additions.
+
+**Changes since last Deep Clean (not yet scored):**
+
+| Item | Type | Date | REPO_LOG |
+|------|------|------|----------|
+| `profiles/worldviews/GNOSTICISM.yaml` | New worldview (DRAFT) | 2026-07-02 | WORLDVIEW-2026-07-02-1 |
+| `tools/raw_to_smv.py` | New tool (stance-generic translator) | 2026-07-02 | METHODOLOGY-2026-07-02-1 |
+| `dashboard/HealthDashboard/app.py` | New Streamlit app | 2026-07-02 | — |
+| `dashboard/SMV/src/data/scenario_PT_CT_*.json` | 40 new scenario files | 2026-07-02 | commit 2f4dda1 |
+| `docs/architecture/CFA/CRUX_YPA_METHODOLOGY.md` | New architecture doc | 2026-07-02 | METHODOLOGY-2026-07-02-1 |
+| `profiles/worldviews/*.yaml` (10 files) | Preliminary DRAFT YAMLs | 2026-06-30 | DOCUMENTATION-2026-06-30-1 |
+| `levers_by_matchup` scaffolding in CT/MdN YAMLs | Architecture update | 2026-07-01 | ARCHITECTURE-2026-07-01-1 |
+
+**Next Action:** Run `DEEP_CLEAN_PROTOCOL.md` to re-score. Expect score to remain GREEN (structural health protocols were followed for all July 2026 additions).
+
+---
+
 ## 🎯 QUICK STATUS
 
 ### Operational Health: 97/100 🟢
