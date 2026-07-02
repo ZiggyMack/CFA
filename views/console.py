@@ -549,6 +549,62 @@ def render():
                 st.session_state["fb_calibration_opponent"] = _ct.get("calibration_opponent")
                 st.rerun()
 
+        pair_col3, pair_col4 = st.columns(2)
+        with pair_col3:
+            if st.button("📕 CT  vs  🌊 PT", key="pair_ct_pt", use_container_width=True, help="Load CT → A, PT → B (PT calibrated vs CT)"):
+                _ct = get_ypa_data("Classical Theism", opponent="Process Theology")
+                _pt = get_ypa_data("Process Theology", opponent="Classical Theism")
+                st.session_state["fa_name"] = _ct["name"]
+                st.session_state["fa_ax"]  = _ct["bf_i"]["axioms"]
+                st.session_state["fa_db"]  = _ct["bf_i"]["debts"]
+                st.session_state["fa_ad"]  = _ct["admits_limits"]
+                st.session_state["fa_cci"] = _ct["levers"]["CCI"]
+                st.session_state["fa_edb"] = _ct["levers"]["EDB"]
+                st.session_state["fa_pfi"] = _ct["levers"]["PF_instrumental"]
+                st.session_state["fa_pfe"] = _ct["levers"]["PF_existential"]
+                st.session_state["fa_ar"]  = _ct["levers"]["AR"]
+                st.session_state["fa_mg"]  = _ct["levers"]["MG"]
+                st.session_state["fa_calibration_opponent"] = _ct.get("calibration_opponent")
+                st.session_state["fb_name"] = _pt["name"]
+                st.session_state["fb_ax"]  = _pt["bf_i"]["axioms"]
+                st.session_state["fb_db"]  = _pt["bf_i"]["debts"]
+                st.session_state["fb_ad"]  = _pt["admits_limits"]
+                st.session_state["fb_cci"] = _pt["levers"]["CCI"]
+                st.session_state["fb_edb"] = _pt["levers"]["EDB"]
+                st.session_state["fb_pfi"] = _pt["levers"]["PF_instrumental"]
+                st.session_state["fb_pfe"] = _pt["levers"]["PF_existential"]
+                st.session_state["fb_ar"]  = _pt["levers"]["AR"]
+                st.session_state["fb_mg"]  = _pt["levers"]["MG"]
+                st.session_state["fb_calibration_opponent"] = _pt.get("calibration_opponent")
+                st.rerun()
+        with pair_col4:
+            if st.button("🌊 PT  vs  📘 MdN", key="pair_pt_mdn", use_container_width=True, help="Load PT → A, MdN → B (canonical until PT vs MdN results land)"):
+                _pt = get_ypa_data("Process Theology", opponent="Methodological Naturalism")
+                _mdn = get_ypa_data("Methodological Naturalism", opponent="Process Theology")
+                st.session_state["fa_name"] = _pt["name"]
+                st.session_state["fa_ax"]  = _pt["bf_i"]["axioms"]
+                st.session_state["fa_db"]  = _pt["bf_i"]["debts"]
+                st.session_state["fa_ad"]  = _pt["admits_limits"]
+                st.session_state["fa_cci"] = _pt["levers"]["CCI"]
+                st.session_state["fa_edb"] = _pt["levers"]["EDB"]
+                st.session_state["fa_pfi"] = _pt["levers"]["PF_instrumental"]
+                st.session_state["fa_pfe"] = _pt["levers"]["PF_existential"]
+                st.session_state["fa_ar"]  = _pt["levers"]["AR"]
+                st.session_state["fa_mg"]  = _pt["levers"]["MG"]
+                st.session_state["fa_calibration_opponent"] = _pt.get("calibration_opponent")
+                st.session_state["fb_name"] = _mdn["name"]
+                st.session_state["fb_ax"]  = _mdn["bf_i"]["axioms"]
+                st.session_state["fb_db"]  = _mdn["bf_i"]["debts"]
+                st.session_state["fb_ad"]  = _mdn["admits_limits"]
+                st.session_state["fb_cci"] = _mdn["levers"]["CCI"]
+                st.session_state["fb_edb"] = _mdn["levers"]["EDB"]
+                st.session_state["fb_pfi"] = _mdn["levers"]["PF_instrumental"]
+                st.session_state["fb_pfe"] = _mdn["levers"]["PF_existential"]
+                st.session_state["fb_ar"]  = _mdn["levers"]["AR"]
+                st.session_state["fb_mg"]  = _mdn["levers"]["MG"]
+                st.session_state["fb_calibration_opponent"] = _mdn.get("calibration_opponent")
+                st.rerun()
+
         st.markdown("---")
         st.markdown("**Pre-Audited Frameworks:**")
 
@@ -567,7 +623,7 @@ def render():
             "📖 Mormonism (LDS)": "coming",
             "❓ Null Hypothesis": "coming",
             "🕎 Orthodox Judaism": "coming",
-            "🌊 Process Theology": "coming"
+            "🌊 Process Theology": "pt"
         }
         
         selected_preset = st.selectbox(
@@ -652,6 +708,41 @@ def render():
                     st.session_state["fb_mg"] = CT_DEFAULT["levers"]["MG"]
                     st.session_state["fb_calibration_opponent"] = None  # canonical, no matchup context
                     st.success("✅ CT → Framework B!")
+                    st.rerun()
+
+        elif preset_key == "pt":
+            st.info("**Process Theology**\n\nWhitehead-influenced panentheism. Audited by Claude + Grok, YPA 3.53.")
+            _pt = get_ypa_data("Process Theology")
+            load_col1, load_col2 = st.columns(2)
+            with load_col1:
+                if st.button("→ Load to A", key="load_pt_a", use_container_width=True, type="primary"):
+                    st.session_state["fa_name"] = _pt["name"]
+                    st.session_state["fa_ax"] = _pt["bf_i"]["axioms"]
+                    st.session_state["fa_db"] = _pt["bf_i"]["debts"]
+                    st.session_state["fa_ad"] = _pt["admits_limits"]
+                    st.session_state["fa_cci"] = _pt["levers"]["CCI"]
+                    st.session_state["fa_edb"] = _pt["levers"]["EDB"]
+                    st.session_state["fa_pfi"] = _pt["levers"]["PF_instrumental"]
+                    st.session_state["fa_pfe"] = _pt["levers"]["PF_existential"]
+                    st.session_state["fa_ar"] = _pt["levers"]["AR"]
+                    st.session_state["fa_mg"] = _pt["levers"]["MG"]
+                    st.session_state["fa_calibration_opponent"] = None
+                    st.success("✅ PT → Framework A!")
+                    st.rerun()
+            with load_col2:
+                if st.button("→ Load to B", key="load_pt_b", use_container_width=True):
+                    st.session_state["fb_name"] = _pt["name"]
+                    st.session_state["fb_ax"] = _pt["bf_i"]["axioms"]
+                    st.session_state["fb_db"] = _pt["bf_i"]["debts"]
+                    st.session_state["fb_ad"] = _pt["admits_limits"]
+                    st.session_state["fb_cci"] = _pt["levers"]["CCI"]
+                    st.session_state["fb_edb"] = _pt["levers"]["EDB"]
+                    st.session_state["fb_pfi"] = _pt["levers"]["PF_instrumental"]
+                    st.session_state["fb_pfe"] = _pt["levers"]["PF_existential"]
+                    st.session_state["fb_ar"] = _pt["levers"]["AR"]
+                    st.session_state["fb_mg"] = _pt["levers"]["MG"]
+                    st.session_state["fb_calibration_opponent"] = None
+                    st.success("✅ PT → Framework B!")
                     st.rerun()
 
         elif preset_key == "coming":

@@ -95,6 +95,7 @@ def _render_framework_ledger(worldview_name: str, emoji: str, subtitle: str):
             st.session_state["fa_pfe"] = ypa_data["levers"]["PF_existential"]
             st.session_state["fa_ar"] = ypa_data["levers"]["AR"]
             st.session_state["fa_mg"] = ypa_data["levers"]["MG"]
+            st.session_state["fa_calibration_opponent"] = None
 
             # Navigate to Console
             st.session_state.page = 'console'
@@ -114,6 +115,7 @@ def _render_framework_ledger(worldview_name: str, emoji: str, subtitle: str):
             st.session_state["fb_pfe"] = ypa_data["levers"]["PF_existential"]
             st.session_state["fb_ar"] = ypa_data["levers"]["AR"]
             st.session_state["fb_mg"] = ypa_data["levers"]["MG"]
+            st.session_state["fb_calibration_opponent"] = None
 
             # Navigate to Console
             st.session_state.page = 'console'
