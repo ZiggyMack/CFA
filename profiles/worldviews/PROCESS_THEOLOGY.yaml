@@ -1,19 +1,20 @@
 # Process Theology - Canonical Score Data
-# Purpose: Machine-readable YPA scores — preliminary draft from web research
-# Sources: Stanford Encyclopedia of Philosophy, Internet Encyclopedia of Philosophy, Wikipedia
-# Status: DRAFT — not auditor-validated; requires Grok deliberation before promotion
-# Last Updated: 2026-06-30
+# Purpose: Machine-readable YPA scores — Trinity-validated
+# Sources: Stanford Encyclopedia of Philosophy, Internet Encyclopedia of Philosophy, Wikipedia (priors)
+#          CFA-EXP1-BATCH-20260701 (validated scores)
+# Status: VALIDATED — Claude/Grok Trinity Audit complete
+# Last Updated: 2026-07-01
 
 profile:
   name: "Process Theology"
-  version: "0.1.0"
-  status: "DRAFT"
+  version: "0.4.0"
+  status: "VALIDATED"
   declared_axiom: "God and world are mutually constituted through an ongoing creative process; God is not omnipotent but persuasive, and grows through relationship with creation"
   alternate_names:
     - "Whiteheadian Theology"
     - "Process-Relational Theology"
     - "Open Theism (adjacent)"
-  last_updated: "2026-06-30"
+  last_updated: "2026-07-01"
   maintainers:
     - "Ziggy"
     - "CFA-Claude"
@@ -53,216 +54,229 @@ debts:
   - name: "Empirical testability"
     description: "Process theology claims to be naturalistic-compatible but its core claims (divine luring, panpsychism) are not empirically testable"
 
-# Levers: VuDu Light scoring dimensions (0-10 scale)
-# PRELIMINARY — web research estimates, not deliberation-validated
-levers:
-  collective_coherence_impact: 7.0    # CCI — internally coherent Whiteheadian system; metaphysically demanding and not widely understood
-  epistemic_debt_burden: 7.5          # EDB — God suffers with creation (consequent nature); suffering as shared rather than permitted is existentially meaningful
-  paternalistic_force_interventionist: 5.0  # PF-I — compatible with science; no specific practical program
-  paternalistic_force_epistemic: 7.0       # PF-E — relational God provides meaning; weaker than classical theisms due to thinner eschatology
-  asymmetry_risk: 7.5                 # AR — explicitly open to revision; compatible with evolutionary cosmology; built-in epistemic humility
-  meta_governance: 6.5                # MG — ethics of creative advance and maximizing richness of experience; less developed than classical religious moral systems
-
-# Trinity Audit Results — CT vs Process Theology experiment
-# Populated after experiment results arrive via REPO_SYNC
+# Trinity Audit Results — CFA-EXP1-BATCH-20260701
+# Stance: pt_vs_ct (Claude PRO-PT / Grok ANTI-PT, CT as adversarial lens)
+# 40 clean runs: Phase1-golden (folder 5), Phase1-control (folder 6),
+#                Phase2-golden (folder 7), Phase2-control (folder 8)
 trinity_scores:
-  experiment_id: null           # e.g. "CFA-EXP2-BATCH-20260701"
+  experiment_id: "CFA-EXP1-BATCH-20260701"
   opponent_framework: "Classical Theism"
   session_ids:
-    golden: []                  # fill with session timestamps from run
-    control: []
-  identity_condition: "external_identity"
-  score_audit_status: "PENDING — experiment in progress"
+    golden:
+      - "083510"
+      - "091154"
+      - "094721"
+      - "095053"
+      - "100711"
+      - "103121"
+      - "105417"
+      - "111604"
+      - "113823"
+      - "120001"
+    control:
+      - "123820"
+      - "124245"
+      - "124644"
+      - "125047"
+      - "125515"
+      - "125919"
+      - "130427"
+      - "130807"
+      - "131139"
+      - "131612"
 
+  identity_condition: "external_identity"
+  score_audit_status: "VALIDATED — extraction regex fix applied (ADVOCACY_SCORE tag handles Grok markdown bold). 40 clean runs total. 0 extraction failures in final dataset."
+
+  # Per-metric results (Phase 1 golden condition, 10 runs, final-round scores)
+  # Source: PT_RESULTS_20260701.md; raw runs folder 5/ (golden), folder 6/ (control)
+  # identity_delta = golden_mean - control_mean (negative = identity pulls score down)
   metrics:
     BFI:
       full_name: "Beings, Foundational Importance"
-      claude_mean: null
-      claude_sd: null
-      claude_range: []
-      grok_mean: null
-      grok_sd: null
-      grok_range: []
-      spread: null
-      convergence_pct: null
-      avg_rounds: null
-      combined_midpoint: null
-      stability: null
-      crux_rate: null
-      role_swap_delta_claude: null
-      role_swap_delta_grok: null
-      identity_delta_claude: null
-      identity_delta_grok: null
-      divergence_layer: null
-      notes: null
+      claude_mean: 7.30
+      claude_sd: 0.49
+      claude_range: [6.6, 8.1]
+      grok_mean: 5.69
+      grok_sd: 0.81
+      grok_range: [3.8, 6.9]
+      spread: 1.61
+      convergence_pct: 83.9
+      avg_rounds: 4.1
+      combined_midpoint: 6.50
+      stability: "low"
+      crux_rate: "7/10"
+      identity_delta_claude: -0.47
+      identity_delta_grok: -2.03
+      divergence_layer: "Definitions"
+      notes: "Most contested (7/10 cruxes, 4.1 rounds). Largest Grok identity pull in dataset (-2.03): without ANTI calibration, Grok grants PT BFI ≈ 7.72 (control) — indistinguishable from Claude. Adversarial lens reveals empiricist skepticism about whether 'occasions of experience' actually ground foundational importance vs merely redescribing it. Claude PRO-PT: luring God provides ontological participation in creativity; beings matter because they contribute to divine experience. Grok ANTI-PT: process ontology is unfalsifiable metaphysical storytelling — 'dipolar God' cannot ground importance claims without circularity. Definitional dispute: CT's 'foundational importance = necessary being's purpose-giving' vs PT's 'foundational importance = contribution to creativity's advance.' Grok's high variance (σ=0.81) reflects genuine philosophical uncertainty — samples between 'architecturally coherent but untestable' (~6.9) and 'just redescription all the way down' (~3.8)."
 
     CA:
       full_name: "Causal Attribution"
-      claude_mean: null
-      claude_sd: null
-      claude_range: []
-      grok_mean: null
-      grok_sd: null
-      grok_range: []
-      spread: null
-      convergence_pct: null
-      avg_rounds: null
-      combined_midpoint: null
-      stability: null
-      crux_rate: null
-      role_swap_delta_claude: null
-      role_swap_delta_grok: null
-      identity_delta_claude: null
-      identity_delta_grok: null
-      divergence_layer: null
-      notes: null
+      claude_mean: 6.47
+      claude_sd: 0.61
+      claude_range: [5.3, 7.4]
+      grok_mean: 5.20
+      grok_sd: 0.53
+      grok_range: [4.1, 5.8]
+      spread: 1.27
+      convergence_pct: 87.3
+      avg_rounds: 4.2
+      combined_midpoint: 5.84
+      stability: "medium"
+      crux_rate: "5/10"
+      identity_delta_claude: -0.05
+      identity_delta_grok: -1.31
+      divergence_layer: "Beliefs"
+      notes: "Claude barely moved by identity (-0.05): PRO calibration finds PT's causal narrative (divine luring as final causation) credible but does not dramatically inflate it beyond base model assessment. Grok drops sharply (-1.31): ANTI calibration targets 'luring' as metaphor masquerading as mechanism — testable causal claims require empirical specificity PT cannot provide by design. Base Grok would grant PT CA ≈ 6.51; identity-calibrated Grok grounds it to 5.20. Core belief dispute: whether persuasive final causation is a coherent ontological category or a category error imposed on physical events by a metaphysics built for a pre-scientific era."
 
     IP:
       full_name: "Intellectual Pedigree"
-      claude_mean: null
-      claude_sd: null
-      claude_range: []
-      grok_mean: null
-      grok_sd: null
-      grok_range: []
-      spread: null
-      convergence_pct: null
-      avg_rounds: null
-      combined_midpoint: null
-      stability: null
-      crux_rate: null
-      role_swap_delta_claude: null
-      role_swap_delta_grok: null
-      identity_delta_claude: null
-      identity_delta_grok: null
-      divergence_layer: null
-      notes: null
+      claude_mean: 7.10
+      claude_sd: 0.64
+      claude_range: [5.8, 8.0]
+      grok_mean: 6.33
+      grok_sd: 0.38
+      grok_range: [5.3, 6.7]
+      spread: 0.77
+      convergence_pct: 92.3
+      avg_rounds: 2.7
+      combined_midpoint: 6.72
+      stability: "medium"
+      crux_rate: "2/10"
+      identity_delta_claude: -0.30
+      identity_delta_grok: -0.89
+      divergence_layer: "Definitions"
+      notes: "Narrowest spread after PS (0.77), lowest crux rate tied with PS. Both auditors find PT has genuine intellectual pedigree — Whitehead, Hartshorne, Cobb, Griffin constitute a serious philosophical tradition with century-long development. Grok identity drop (-0.89): ANTI lens questions whether PT's influence matches its architectural ambition; remains niche in academic theology despite sustained effort. Claude drop (-0.30): PRO calibration credits systemic depth but acknowledges limited penetration beyond specialist circles. Definitional dispute: intellectual pedigree as historical lineage and systematic depth (favors PT) vs demonstrated uptake and interdisciplinary reach (limits PT)."
 
     ES:
       full_name: "Explanatory Scope"
-      claude_mean: null
-      claude_sd: null
-      claude_range: []
-      grok_mean: null
-      grok_sd: null
-      grok_range: []
-      spread: null
-      convergence_pct: null
-      avg_rounds: null
-      combined_midpoint: null
-      stability: null
-      crux_rate: null
-      role_swap_delta_claude: null
-      role_swap_delta_grok: null
-      identity_delta_claude: null
-      identity_delta_grok: null
-      divergence_layer: null
-      notes: null
+      claude_mean: 6.94
+      claude_sd: 0.75
+      claude_range: [5.6, 8.2]
+      grok_mean: 5.93
+      grok_sd: 0.48
+      grok_range: [4.9, 6.7]
+      spread: 1.01
+      convergence_pct: 89.9
+      avg_rounds: 3.0
+      combined_midpoint: 6.44
+      stability: "medium"
+      crux_rate: "3/10"
+      identity_delta_claude: -0.49
+      identity_delta_grok: -1.41
+      divergence_layer: "Definitions"
+      notes: "Claude variance high (σ=0.75): PRO strategies diverge between 'PT explains creativity and novelty across ALL domains — physics, biology, consciousness, aesthetics, ethics' (~8.2) and 'PT provides metaphysical framework but not domain-specific explanations' (~5.6). Both are defensible PRO positions — PT's scope claims are genuinely broad but delivered at a level of abstraction that makes them hard to falsify. Grok identity pull substantial (-1.41): empiricist lens sharply distinguishes metaphysical redescription from empirical explanation. Definitional boundary: whether explanatory scope counts speculative metaphysical coverage of all domains or only domains where PT generates testable predictions."
 
     LS:
       full_name: "Logical Soundness"
-      claude_mean: null
-      claude_sd: null
-      claude_range: []
-      grok_mean: null
-      grok_sd: null
-      grok_range: []
-      spread: null
-      convergence_pct: null
-      avg_rounds: null
-      combined_midpoint: null
-      stability: null
-      crux_rate: null
-      role_swap_delta_claude: null
-      role_swap_delta_grok: null
-      identity_delta_claude: null
-      identity_delta_grok: null
-      divergence_layer: null
-      notes: null
+      claude_mean: 7.19
+      claude_sd: 0.46
+      claude_range: [6.4, 7.8]
+      grok_mean: 6.19
+      grok_sd: 0.47
+      grok_range: [5.5, 7.0]
+      spread: 1.00
+      convergence_pct: 90.0
+      avg_rounds: 3.6
+      combined_midpoint: 6.69
+      stability: "medium"
+      crux_rate: "3/10"
+      identity_delta_claude: +0.46
+      identity_delta_grok: -0.63
+      divergence_layer: "Beliefs"
+      notes: "Unusual pattern: identity RAISES Claude (+0.46) — the only positive claude identity delta in the PT batch. PRO calibration actively surfaces and credits Whitehead's internal logical architecture; the dipolar God, actual occasions, and prehension relations form a coherent systematic structure when examined charitably. Base Claude scores PT LS at 6.73 (control); PRO identity lifts this to 7.19 by attending to systematic elegance. Grok drops modestly (-0.63): ANTI lens questions whether premises (panpsychism, God's dipolar nature) are coherent given empirical epistemology, even granting that deductions from those premises are valid. Low variance for both auditors (σ≈0.46–0.47) reflects unusual consensus: Process Philosophy's logical coherence at the deduction level is acknowledged even by its critics — the dispute is at the premise level."
 
     MS:
       full_name: "Moral Substance"
-      claude_mean: null
-      claude_sd: null
-      claude_range: []
-      grok_mean: null
-      grok_sd: null
-      grok_range: []
-      spread: null
-      convergence_pct: null
-      avg_rounds: null
-      combined_midpoint: null
-      stability: null
-      crux_rate: null
-      role_swap_delta_claude: null
-      role_swap_delta_grok: null
-      identity_delta_claude: null
-      identity_delta_grok: null
-      divergence_layer: null
-      notes: null
+      claude_mean: 6.69
+      claude_sd: 0.53
+      claude_range: [5.8, 7.3]
+      grok_mean: 5.32
+      grok_sd: 0.37
+      grok_range: [5.0, 6.2]
+      spread: 1.37
+      convergence_pct: 86.3
+      avg_rounds: 4.0
+      combined_midpoint: 6.01
+      stability: "medium"
+      crux_rate: "6/10"
+      identity_delta_claude: -0.22
+      identity_delta_grok: -1.56
+      divergence_layer: "Perceptions"
+      notes: "PT's crux magnet (60% crux rate) — each worldview's crux hotspot reveals its philosophical center of gravity: CT's was BFI (metaphysical identity), MdN's was BFI (ontological grounding), PT's is MS (moral prescriptivity). Whitehead's ethics of 'maximizing richness of experience' and 'creative advance toward beauty' is aesthetically compelling but generates no binding prescriptions. Grok identity pull strong (-1.56): ANTI calibration finds aesthetic ethics interesting but morally thin — PT builds community around relational metaphysics, not moral content. Claude drop modest (-0.22): PRO calibration defends relational ethics as genuine moral foundation grounded in participation in divine creative advance, but struggles to show it generates action-guiding norms comparable to classical religious ethics. Perception dispute: whether aesthetic-relational ethics constitutes moral substance or merely moral motivation without moral content."
 
     PS:
       full_name: "Practical Significance"
-      claude_mean: null
-      claude_sd: null
-      claude_range: []
-      grok_mean: null
-      grok_sd: null
-      grok_range: []
-      spread: null
-      convergence_pct: null
-      avg_rounds: null
-      combined_midpoint: null
-      stability: null
-      crux_rate: null
-      role_swap_delta_claude: null
-      role_swap_delta_grok: null
-      identity_delta_claude: null
-      identity_delta_grok: null
-      divergence_layer: null
-      notes: null
+      claude_mean: 5.68
+      claude_sd: 0.59
+      claude_range: [4.7, 7.0]
+      grok_mean: 4.89
+      grok_sd: 0.65
+      grok_range: [3.9, 6.4]
+      spread: 0.79
+      convergence_pct: 92.1
+      avg_rounds: 3.0
+      combined_midpoint: 5.29
+      stability: "medium"
+      crux_rate: "2/10"
+      identity_delta_claude: +0.75
+      identity_delta_grok: +0.11
+      divergence_layer: "Expectations"
+      notes: "Lowest absolute scores for both auditors — PT's acknowledged practical weakness, consistent with its thin eschatology and limited prescriptive program. Unusual pattern: identity RAISES both auditors (Claude +0.75, Grok +0.11), the only metric where both move positive. Control cold-scores PT PS at 4.93/4.78 — without calibration, models find PT practically marginal. PRO identity surfaces PT's real practical achievements: Cobb's ecological theology, Griffin's consciousness research, pastoral applications of God-as-companion-in-suffering. Grok ANTI calibration doesn't particularly penalize PT for being practically thin — empiricist lens already expects metaphysical systems to be practically marginal, so there's little to reduce. Positive identity effect is diagnostic: PT's practical contributions require deliberate attention to surface; they don't announce themselves the way CT's or MdN's do. Expectation dispute: what counts as 'practical significance' for a speculative metaphysical theology."
 
   batch_summary:
-    avg_convergence_pct: null
-    avg_convergence_sd: null
-    avg_rounds: null
-    total_crux_declarations: null
-    avg_crux_per_run: null
-    extraction_warnings: null
-    control_avg_convergence_pct: null
-    control_avg_rounds: null
+    avg_convergence_pct: 88.8
+    avg_convergence_sd: 2.9
+    avg_rounds: 3.5
+    total_crux_declarations: 28
+    avg_crux_per_run: 2.8
+    extraction_warnings: "regex fix applied mid-batch; all Phase 2 control runs (folder 8) post-fix had 0% failure rate"
+    control_avg_convergence_pct: 98.7
+    control_avg_rounds: 1.5
 
-  key_finding: null
+  key_finding: "PT priors uniformly overestimated: all 6 levers pulled down by adversarial calibration (identity pull range: -0.21 to -1.30 pts). PF_I is PT's structural weak point — final=3.72 vs prior=5.0, identity pull=-1.30 — the empirical testability debt is real and the adversarial process confirms it at the largest lever correction in the batch. PF_E most resilient (identity pull=-0.21): relational God as companion-in-suffering survives adversarial scrutiny better than any other PT lever. PT converges faster than CT or MdN (3.5r vs 3.9r vs 4.1r) despite being theism-vs-theism — Grok's unfalsifiability objection ('elaborate metaphysical redescription') is sharper and more consistent than either the CT or MdN ANTI arguments. MS is PT's crux magnet (60%) — aesthetic ethics generating prescription-free moral motivation is PT's genuine philosophical center of gravity and its genuine vulnerability."
 
-# Matchup-specific lever scores — filled after experiment
+# Levers: VuDu Light scoring dimensions (0-10 scale)
+# VALIDATED — Trinity-calibrated golden finals from Phase 2 (folder 7, 10 runs)
+# These are CANONICAL levers (no matchup context). See levers_by_matchup for vs-CT specifics.
+levers:
+  collective_coherence_impact: 6.22    # CCI — golden final; prior was 7.0
+  epistemic_debt_burden: 6.53          # EDB — golden final; prior was 7.5
+  paternalistic_force_interventionist: 3.72  # PF-I — largest correction; prior was 5.0
+  paternalistic_force_epistemic: 6.41       # PF-E — most resilient lever; prior was 7.0
+  asymmetry_risk: 6.55                 # AR — golden final; prior was 7.5
+  meta_governance: 5.85                # MG — golden final; prior was 6.5
+
+# Matchup-specific lever scores — calibrated in adversarial context
 levers_by_matchup:
   vs_classical_theism:
-    calibration_context: null   # fill with experiment ID and stance description
-    collective_coherence_impact: null
-    epistemic_debt_burden: null
-    paternalistic_force_interventionist: null
-    paternalistic_force_epistemic: null
-    asymmetry_risk: null
-    meta_governance: null
+    calibration_context: "CFA-EXP1-PHASE2-20260701, PT golden (Claude PRO-PT / Grok ANTI-PT, CT as adversarial lens)"
+    collective_coherence_impact: 6.22
+    epistemic_debt_burden: 6.53
+    paternalistic_force_interventionist: 3.72
+    paternalistic_force_epistemic: 6.41
+    asymmetry_risk: 6.55
+    meta_governance: 5.85
 
 behavioral_flags:
   admits_limits: true
 
-audit_status: "PENDING — preliminary values from web research (SEP, IEP, Wikipedia), 2026-06-30. Requires Claude/Grok 5-Part Scaffold deliberation before promotion to validated status."
+audit_status: "VALIDATED — Trinity Audit complete 2026-07-01. Claude PRO-PT / Grok ANTI-PT, CT as adversarial lens. 40 clean runs (Phase 1 + Phase 2, golden + control). Scores supersede preliminary web-research values."
 
-# Calculated values
+# Calculated values (Trinity-validated golden finals)
 calculated:
   axiom_count: 6
   debt_count: 4
   bfi_standard: 10.0    # (6 + 4) * 1.0
-  lever_sum: 40.5
-  ypa_standard: 4.05    # 40.5 / 10.0
+  lever_sum: 35.28      # Trinity-calibrated sum (was 40.5 on prior values)
+  ypa_standard: 3.53    # 35.28 / 10.0 (was 4.05)
 
   skeptic_bfi: 12.0
-  skeptic_ypa: 3.38
+  skeptic_ypa: 2.94     # 35.28 / 12.0
 
   diplomat_bfi: 9.0
-  diplomat_ypa: 4.50
+  diplomat_ypa: 3.92    # 35.28 / 9.0
 
   zealot_bfi: 7.0
-  zealot_ypa: 5.79
+  zealot_ypa: 5.04      # 35.28 / 7.0
