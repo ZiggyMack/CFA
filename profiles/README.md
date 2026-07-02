@@ -96,6 +96,13 @@ Per Ziggy Entry 2.5 (B-STORM_3.md), next priority for Phase 4 Grok deliberation:
 - **YPA:** 4.10 (6 axioms, 4 debts, BFI: 10.0) — preliminary, web research only
 - **Status:** Narrative scaffolded; lever scores PENDING auditor deliberation
 
+**[Gnosticism](worldviews/GNOSTICISM.yaml)** — [YAML ⚠️ DRAFT](worldviews/GNOSTICISM.yaml) — v0.1.0 *(no .md narrative stub yet)*
+
+- **Axiom:** Material world is a Demiurge-created prison; humans contain a Divine Spark (pneuma); liberation comes through Gnosis — direct, experiential self-knowledge
+- **YPA:** 2.79 (7 axioms, 5 debts, BFI: 12.0) — preliminary, deep content review of Gnostic-1 source material (2026-07-02)
+- **Notable:** Highest PF-E of any current profile (9.0) — uniquely resonant for cosmic alienation; lowest PF-I (2.0) — anti-material stance yields near-zero practical output
+- **Status:** YAML DRAFT; .md narrative stub pending; no auditor deliberation yet
+
 ### Future Profiles (Planned)
 
 Additional worldviews for comprehensive coverage: Confucianism, Stoicism, Open Theism, Sikhism, Jainism, Taoism, Secular Humanism, Transhumanism, and others as needed for worldview comparison framework.

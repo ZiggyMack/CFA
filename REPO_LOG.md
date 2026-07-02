@@ -94,6 +94,58 @@ When files are added or deleted, use diff notation like git commits:
 
 ## 📝 CHANGE LOG
 
+### [WORLDVIEW-2026-07-02-1] 2026-07-02 - Gnosticism Worldview Profile Added (DRAFT YAML)
+
+**Categories:** [DOCUMENTATION] [DATA_MODEL] [🧹 +1]
+**Changed by:** Ziggy + CFA-Claude (Sonnet 4.6)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+
+- `CREATED`: profiles/worldviews/GNOSTICISM.yaml — DRAFT worldview profile. 7 axioms (Monad/Pleroma transcendence, Demiurge error, Divine Spark/pneuma, Archon enforcement, Gnosis as liberation, awakener-not-savior Christology, pneumatic/psychic/hylic trichotomy). 5 debts (elitist soteriology, no canonical Gnosticism, epistemological bootstrap problem, theodicy inversion, thin social ethics). BFI=12.0, lever_sum=33.5, YPA_standard=2.79. Lever rationale documented inline.
+- `MODIFIED`: profiles/README.md — Added Gnosticism entry under Additional Worldview Profiles section (DRAFT, YAML-only, .md narrative stub pending).
+
+**Source material:** Gnostic-1 folder (docs/REPO_SYNC/SYNC_IN/pending/worldview/Gnostic-1/). Deep content review of: root-level Gnostic-Jungian articles, `_IN/` technical reports and PDFs, `_ROUND_1/` INSIGHTS and CONNECTIONS files.
+
+**Key scoring notes:**
+
+- PF-E 9.0 — highest of any current profile; the "you don't belong here and you're right" claim is uniquely resonant for cosmic alienation
+- PF-I 2.0 — lowest of any current profile; anti-material worldview yields near-zero institutional or predictive output
+- EDB 8.0 — Gnostic cosmology directly theorizes why knowledge is hard (Archons enforce ignorance by design); one of the most elaborate accounts of epistemic entrapment in the set
+- MG 3.5 — pneumatic trichotomy is structurally anti-egalitarian; antinomian tendencies; liberation from the world ≠ engagement with moral community
+- YPA 2.79 — near bottom of current set (above Error Theory at 3.31 only when accounting for BFI size); reflects high PF-E but poor CCI, PF-I, AR, MG balance
+
+**Impact:** Minimal — new DRAFT file only; no console wiring needed (auto-discovered via YAML glob).
+
+**Follow-up Required:** YES — .md narrative stub pending; Trinity audit not yet scheduled; no adversarial lens pairing defined yet. Suggested pairings: Gnosticism vs CT (Demiurge/theodicy contrast), Gnosticism vs MdN (empiricism vs gnosis contrast).
+
+-----
+
+### [METHODOLOGY-2026-07-02-1] 2026-07-02 - Crux Include/Exclude Wired into YPA + Methodology Doc
+
+**Categories:** [ARCHITECTURE] [DOCUMENTATION] [🧹 +1]
+**Changed by:** Ziggy + CFA-Claude (Sonnet 4.6)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+
+- `MODIFIED`: utils/calculations.py — `ypa_scenario_scores()` Crux Exclude now live: multiplicative dampening `lever × (1 - avg_crux_rate × 0.15)` per lever mapped from Trinity Phase-1 metrics (CA/LS→CCI, IP/ES→EDB, PS→PF, MS→MG). AR unchanged; BFI denominator unchanged. Replaced TODO comment block.
+- `MODIFIED`: views/console.py — Added `_get_crux_rates()` helper (parses "N/10" string format from YAML); populates `fa["crux_rates"]` and `fb["crux_rates"]` after both framework dicts are built; Scoring Mode + Crux Impasses moved from "Load Preset Profile" expander to standalone sidebar controls; expander renamed "🎯 Head-to-Head Pairings" (expanded=True); Skeptic preset now sets `include_crux=False`; Crux Impasses tooltip explicitly names the direction assumption.
+- `CREATED`: docs/architecture/CFA/CRUX_YPA_METHODOLOGY.md — Post-experiment methodology note capturing: epistemic direction problem, three options considered (subtractive/multiplicative/confidence-band), why Option 2 was chosen, CT vs MdN crux asymmetry finding, metric→lever mapping, `_K=0.15` rationale, open questions for future experiments.
+- `MODIFIED`: docs/architecture/README.md — Added CRUX_YPA_METHODOLOGY.md to CFA/ section + Navigation Guide; clarified that APP_CRUX_INTEGRATION_SPEC.md is pre-experiment.
+
+**Key Finding (worth preserving here):**
+CT (as subject, audited by MdN lens) has near-zero crux rates on CA, LS, MS, PS (0/10 each). MdN (as subject, audited by CT lens) has high crux rates across all metrics (BFI=9/10, CA=7/10, ES=6/10, PS=5/10). Crux Exclude therefore barely affects CT but applies meaningful dampening to MdN — counter-intuitive for "Skeptic mode" which is nominally MdN-optimized, but empirically correct given the experimental data.
+
+**Design note:**
+The direction of any crux penalty is an epistemic stance, not a fact. The Crux mechanism surfaces disagreement; it does not resolve who was right. Option 2 (multiplicative) was chosen over Option 1 (subtractive) for proportionality, and over Option 3 (confidence band) because the console doesn't yet support range display. Option 3 remains the long-term preferred solution if the directional assumption draws criticism. See CRUX_YPA_METHODOLOGY.md §3 for full reasoning.
+
+**Impact:** Moderate — Crux Exclude now meaningfully changes YPA numbers; sidebar restructured.
+
+**Follow-up Required:** YES — `_K=0.15` is a reasoned estimate, not empirically calibrated. Tune when more matchup data exists. PT vs MdN crux data pending. Option 3 (confidence band) remains open.
+
+-----
+
 ### [ARCHITECTURE-2026-07-01-1] 2026-07-01 - levers_by_matchup Scaffolding (Matchup-Aware Lever Architecture)
 
 **Categories:** [ARCHITECTURE] [DATA_MODEL] [UI]

@@ -45,10 +45,13 @@ def load_crux_data(worldview_prefix):
     prefix_str = f"scenario_{worldview_prefix}_"
     for fpath in glob.glob(str(data_dir / f"scenario_{worldview_prefix}_*.json")):
         try:
-            # The filename key (e.g. "132540") must be all digits to be a real session;
-            # demo files like "E1_20260629" contain letters and are skipped.
-            fname_key = Path(fpath).stem[len(prefix_str):]
-            if not fname_key.isdigit():
+            # Files are scenario_{SUBJECT}_{OPPONENT}_{HHMMSS}.json.
+            # Real sessions end with a 6-digit HHMMSS timestamp; demo/example files
+            # end with an 8-digit YYYYMMDD date (e.g. "E1_20260629") and are skipped.
+            stem = Path(fpath).stem
+            fname_key = stem[len(prefix_str):]          # e.g. "MdN_132540"
+            last_part = fname_key.rsplit("_", 1)[-1]    # e.g. "132540"
+            if not (last_part.isdigit() and len(last_part) == 6):
                 continue
             with open(fpath, encoding="utf-8") as f:
                 scenario = json.load(f)
@@ -185,6 +188,34 @@ _WV_EMOJI = {
 
 def _wv_label(name: str) -> str:
     return f"{_WV_EMOJI.get(name, '🌐')} {name}"
+
+
+def _get_crux_rates(wv_name: str, opponent_name: str) -> dict:
+    """Return per-metric crux rates (0.0–1.0) from Trinity YAML for a given matchup pair.
+    Handles both float and 'N/M' fraction string formats stored in the YAML.
+    """
+    trinity = get_trinity_scores(wv_name, opponent=opponent_name)
+    if not trinity:
+        return {}
+    result = {}
+    for metric, data in trinity.get("metrics", {}).items():
+        if not isinstance(data, dict):
+            continue
+        raw = data.get("crux_rate")
+        if raw is None:
+            continue
+        if isinstance(raw, str) and "/" in raw:
+            try:
+                num, den = raw.split("/")
+                result[metric] = float(num) / float(den) if float(den) else 0.0
+            except (ValueError, ZeroDivisionError):
+                result[metric] = 0.0
+        else:
+            try:
+                result[metric] = float(raw)
+            except (TypeError, ValueError):
+                result[metric] = 0.0
+    return result
 
 
 def _on_fa_worldview_change():
@@ -477,6 +508,7 @@ def render():
                 st.session_state["sidebar_pf_type"] = "Instrumental"
                 st.session_state["sidebar_fallibilism"] = "ON"
                 st.session_state["sidebar_bfi_weight"] = "Weighted_1.2x"
+                st.session_state["include_crux"] = False  # skeptic distrusts contested scores
                 st.rerun()  # Immediately reflect changes in indicator
             st.caption("MdN-optimized\nPredictive power focus")
 
@@ -510,52 +542,8 @@ def render():
 
     st.sidebar.markdown("---")
 
-    # Preset Profile Library (MOVED BELOW SPECTRUM - user loads frameworks AFTER setting spectrum)
-    with st.sidebar.expander("📚 Load Preset Profile", expanded=False):
-        # Scoring Mode (moved here from below)
-        st.markdown("**🔍 Scoring Mode:**")
-        if "audit_mode" not in st.session_state:
-            st.session_state["audit_mode"] = "Bias"
-
-        audit_mode_options = ["Bias", "Audit"]
-        current_audit_idx = audit_mode_options.index(st.session_state.get("audit_mode", "Bias"))
-        audit_mode = st.selectbox(
-            "Mode",
-            audit_mode_options,
-            index=current_audit_idx,
-            key="audit_mode_selector",
-            help="**Bias Mode (🎯):** Full bias scoring - auditors apply their native lenses with bias intact. **Audit Mode (🔍):** Adversarial audit - scores reflect rigorous adversarial checking (Trinity convergence). Switch to Audit to see adversarially-validated scores.",
-            label_visibility="collapsed"
-        )
-        # Update session state and rerun if changed
-        if audit_mode != st.session_state.get("audit_mode"):
-            st.session_state["audit_mode"] = audit_mode
-            st.rerun()
-
-        st.markdown("---")
-
-        # Crux Impasses Toggle
-        st.markdown("**⚖️ Crux Impasses:**")
-        if "include_crux" not in st.session_state:
-            st.session_state["include_crux"] = True
-
-        include_crux_options = ["Include", "Exclude"]
-        current_crux_idx = 0 if st.session_state.get("include_crux", True) else 1
-        include_crux = st.selectbox(
-            "Crux Impact",
-            include_crux_options,
-            index=current_crux_idx,
-            key="crux_selector",
-            help="**Include (default):** Scores reflect full convergence including Crux resolutions. **Exclude:** Scores show what convergence would be WITHOUT Crux declarations (counterfactual - shows impact of honest impasse mechanism).",
-            label_visibility="collapsed"
-        )
-        # Update session state and rerun if changed
-        new_include_crux = (include_crux == "Include")
-        if new_include_crux != st.session_state.get("include_crux"):
-            st.session_state["include_crux"] = new_include_crux
-            st.rerun()
-
-        st.markdown("---")
+    # Head-to-Head Pairings (sets both A & B atomically in one click)
+    with st.sidebar.expander("🎯 Head-to-Head Pairings", expanded=True):
         st.markdown("**Head-to-Head Pairings:**")
         st.caption("*Sets both A & B in one click*")
         pair_col1, pair_col2, pair_col3 = st.columns(3)
@@ -642,6 +630,40 @@ def render():
                 st.rerun()
 
     
+    st.sidebar.markdown("---")
+
+    # Scoring Mode
+    if "audit_mode" not in st.session_state:
+        st.session_state["audit_mode"] = "Bias"
+    audit_mode_options = ["Bias", "Audit"]
+    audit_mode = st.sidebar.selectbox(
+        "Scoring Mode",
+        audit_mode_options,
+        index=audit_mode_options.index(st.session_state.get("audit_mode", "Bias")),
+        key="audit_mode_selector",
+        help="**Bias Mode (🎯):** Full bias scoring — auditors apply their native lenses. **Audit Mode (🔍):** Adversarial audit — scores reflect Trinity convergence (display only for now; YPA wiring coming).",
+    )
+    if audit_mode != st.session_state.get("audit_mode"):
+        st.session_state["audit_mode"] = audit_mode
+        st.rerun()
+
+    # Crux Impasses
+    if "include_crux" not in st.session_state:
+        st.session_state["include_crux"] = True
+    include_crux_options = ["Include", "Exclude"]
+    include_crux_sel = st.sidebar.selectbox(
+        "Crux Impasses",
+        include_crux_options,
+        index=0 if st.session_state.get("include_crux", True) else 1,
+        key="crux_selector",
+        help="**Include:** Trust Trinity golden means as-is for all metrics. **Exclude (pessimistic):** Apply a proportional confidence dampening — lever × (1 − crux_rate × 0.15). Assumes disagreement signals overstatement. Note: direction is a stance, not a fact — the crux tells us *that* auditors disagreed, not *who was right*.",
+    )
+    new_include_crux = (include_crux_sel == "Include")
+    include_crux = new_include_crux
+    if new_include_crux != st.session_state.get("include_crux"):
+        st.session_state["include_crux"] = new_include_crux
+        st.rerun()
+
     # Initialize sidebar config defaults if not set
     if "sidebar_lever_parity" not in st.session_state:
         st.session_state["sidebar_lever_parity"] = "ON"
@@ -929,6 +951,10 @@ def render():
             "levers": {"CCI": fb_cci, "EDB": fb_edb, "PF_instrumental": fb_pf_i, "PF_existential": fb_pf_e, "AR": fb_ar, "MG": fb_mg},
             "admits_limits": fb_admits
         }
+
+    # Enrich both frameworks with matchup-specific crux rates (used by Crux-Exclude mode)
+    fa["crux_rates"] = _get_crux_rates(fa_name, fb_name)
+    fb["crux_rates"] = _get_crux_rates(fb_name, fa_name)
 
     st.markdown("---")
 
@@ -1299,9 +1325,9 @@ CFA scores live at *Evaluation*. Divergence can originate at any upstream layer.
                     return any("role_swap_delta_claude" in v for v in m.values())
 
                 _CRUX_PREFIX = {
-                    "Classical Theism": "ct",
-                    "Methodological Naturalism": "mdn",
-                    "Process Theology": "pt",
+                    "Classical Theism": "CT",
+                    "Methodological Naturalism": "MdN",
+                    "Process Theology": "PT",
                 }
 
                 if trinity_fa:

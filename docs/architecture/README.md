@@ -143,8 +143,15 @@ docs/architecture/
   - **Key Concepts:** Worldview profiles, bias detection, Crux methodology
 
 - **[APP_CRUX_INTEGRATION_SPEC.md](CFA/APP_CRUX_INTEGRATION_SPEC.md)**
-  - **Purpose:** Specification for Crux app integration with CFA framework
-  - **Key Concepts:** API design, profile generation, audit workflows
+  - **Purpose:** Pre-experiment design spec for Crux app integration (2025-11-13)
+  - **Key Concepts:** NORMALIZE_UNCERTAINTY / CARRY_FORWARD modes, Three-View system, session metadata
+  - **Note:** Written before Trinity runs existed. Superseded on scoring methodology by CRUX_YPA_METHODOLOGY.md
+
+- **[CRUX_YPA_METHODOLOGY.md](CFA/CRUX_YPA_METHODOLOGY.md)**
+  - **Purpose:** Post-experiment methodology note on Crux Include/Exclude in YPA scoring
+  - **Key Concepts:** Epistemic direction problem, multiplicative dampening formula, CT vs MdN crux asymmetry, three scoring options, `_K=0.15` coefficient rationale
+  - **Status:** Active research methodology (2026-07-02)
+  - **When to read:** Any time Crux scoring is revisited, `_K` is tuned, or Option 3 (confidence band) is considered
 
 ---
 
@@ -200,6 +207,7 @@ docs/architecture/
 - **What the Trinity architecture is** → [Trinity/TRINITY_ARCHITECTURE.md](Trinity/TRINITY_ARCHITECTURE.md)
 - **How auditors coordinate** → [Auditor/AUDITOR_META_ARCHITECTURE.md](Auditor/AUDITOR_META_ARCHITECTURE.md)
 - **What CFA is architecturally** → [CFA/CFA_ARCHITECTURE.md](CFA/CFA_ARCHITECTURE.md)
+- **Why/how Crux rate affects YPA scoring** → [CFA/CRUX_YPA_METHODOLOGY.md](CFA/CRUX_YPA_METHODOLOGY.md)
 - **How to migrate systems** → [Migration/TECHNICAL_FOOTER_MIGRATION_PLAN.md](Migration/TECHNICAL_FOOTER_MIGRATION_PLAN.md)
 - **What's next for the network** → [Innovation/Future_Expansion.md](Innovation/Future_Expansion.md)
 

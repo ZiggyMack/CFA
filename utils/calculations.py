@@ -35,17 +35,12 @@ def bfi_total(axioms: int, debts: int, debt_weight: str) -> float:
 
 def ypa_scenario_scores(fr: Dict, cfg: Dict) -> Tuple[Dict, Dict, float]:
     """
-    Calculate YPA scores across all scenarios
+    Calculate YPA scores across all scenarios.
     Returns: (results_dict, lever_map, bfi)
 
-    Note: Crux Impasses toggle (cfg["include_crux"]) available but not yet implemented.
-    Implementation pending pilot data (CT↔MdN audit) which will provide:
-    - Baseline convergence metrics (with Crux)
-    - Counterfactual metrics (without Crux)
-    - Actual Crux declarations and their impact on scoring
-
-    When implemented: If include_crux=False, apply penalty to metrics that had
-    Crux declarations (simulating what scores would be without impasse resolution).
+    Crux Exclude (cfg["include_crux"]=False): applies a conservatism discount to
+    levers mapped from Trinity Phase-1 metrics, proportional to the matchup-specific
+    crux_rate. Requires fr["crux_rates"] dict populated by the caller.
     """
     CCI = apply_fallibilism_bonus(
         fr["levers"]["CCI"],
@@ -61,18 +56,35 @@ def ypa_scenario_scores(fr: Dict, cfg: Dict) -> Tuple[Dict, Dict, float]:
     AR = fr["levers"]["AR"]
     MG = parity_weight(fr["levers"]["MG"], cfg["lever_parity"])
 
-    # TODO: Apply Crux impact when cfg["include_crux"] == False
-    # Example logic (when pilot data available):
-    # if not cfg.get("include_crux", True):
-    #     # Apply penalty to metrics with declared Crux
-    #     if fr.get("crux_metrics"):  # List of metrics with Crux declarations
-    #         for metric in fr["crux_metrics"]:
-    #             if metric == "BFI":
-    #                 # Increase BFI penalty (impasse means more unresolved assumptions)
-    #                 pass
-    #             elif metric in ["CCI", "EDB", "PF", "AR", "MG"]:
-    #                 # Reduce lever score (impasse means lower convergence)
-    #                 pass
+    # Crux Exclude: multiplicative confidence dampening on contested levers.
+    # Each Trinity Phase-1 metric maps to a CFA lever; crux_rate is the fraction
+    # of sessions where auditors declared an impasse on that metric.
+    # Formula: lever × (1 - avg_crux_rate × _K)
+    # _K=0.15 means a 100%-crux-rate metric damps its lever by 15%.
+    # This is a pessimistic stance — assumes disagreement signals the score is
+    # overstated — but is proportional (high-value levers take a bigger absolute hit)
+    # rather than a flat deduction. AR has no mapped metric; BFI denominator unchanged.
+    _CRUX_LEVER_MAP = {
+        "CA": "CCI", "LS": "CCI",  # Causal Attribution + Logical Soundness → Coherence
+        "IP": "EDB", "ES": "EDB",  # Intellectual Pedigree + Explanatory Scope → Depth
+        "PS": "PF",                 # Practical Significance → Pragmatic Fertility
+        "MS": "MG",                 # Moral Substance → Moral Generativity
+    }
+    _K = 0.15
+    crux_rates = fr.get("crux_rates", {})
+    if not cfg.get("include_crux", True) and crux_rates:
+        lever_sum_map: Dict[str, float] = {}
+        lever_cnt_map: Dict[str, int] = {}
+        for metric, rate in crux_rates.items():
+            target = _CRUX_LEVER_MAP.get(metric)
+            if target:
+                lever_sum_map[target] = lever_sum_map.get(target, 0.0) + float(rate)
+                lever_cnt_map[target] = lever_cnt_map.get(target, 0) + 1
+        avg_rate = {lev: lever_sum_map[lev] / lever_cnt_map[lev] for lev in lever_sum_map}
+        CCI = CCI * (1.0 - avg_rate.get("CCI", 0.0) * _K)
+        EDB = EDB * (1.0 - avg_rate.get("EDB", 0.0) * _K)
+        PF  = PF  * (1.0 - avg_rate.get("PF",  0.0) * _K)
+        MG  = MG  * (1.0 - avg_rate.get("MG",  0.0) * _K)
 
     scenarios_weights = {
         "Neutral": {"CCI": 1.0, "EDB": 1.0, "PF": 1.0, "AR": 1.0, "MG": 1.0},

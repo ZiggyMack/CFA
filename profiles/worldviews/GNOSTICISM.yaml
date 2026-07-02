@@ -1,0 +1,122 @@
+# Gnosticism - Preliminary Score Data
+# Purpose: Machine-readable YPA scores — DRAFT values pending Trinity audit
+# Sources: Nag Hammadi Library (primary texts); Gospel of Thomas, Gospel of Philip,
+#          Gospel of Truth, Pistis Sophia, Zostrianos; Stanford Encyclopedia of Philosophy;
+#          Jung, C.G. — Aion and Answer to Job; depth review of Gnostic-1 material (2026-07-02)
+# Status: DRAFT — preliminary values from deep content review, no auditor deliberation
+# Last Updated: 2026-07-02
+
+profile:
+  name: "Gnosticism"
+  version: "0.1.0"
+  status: "DRAFT"
+  declared_axiom: "The material world is a prison created by the Demiurge — a lesser, flawed deity who mistakes himself for the true God; humans contain a Divine Spark (pneuma) from the transcendent Pleroma, and liberation comes solely through Gnosis — direct, experiential knowledge of one's divine origin"
+  alternate_names:
+    - "Ancient Gnosticism"
+    - "Valentinian Gnosticism"
+    - "Sethian Gnosticism"
+    - "Nag Hammadi tradition"
+    - "Gnostic Christianity"
+  last_updated: "2026-07-02"
+  maintainers:
+    - "Ziggy"
+    - "CFA-Claude"
+
+# Axioms: Foundational unprovable assumptions
+# Source: Nag Hammadi texts; SEP "Gnosticism"; Valentinian and Sethian primary schools
+axioms:
+  - name: "The true God (Monad/Pleroma) is wholly transcendent"
+    description: "The supreme divine reality is entirely beyond the material world — unknowable through sensory or rational means; the Pleroma (divine fullness) is categorically separate from the material cosmos"
+
+  - name: "The Demiurge created the material world in error"
+    description: "The material world was created not by the true God but by the Demiurge — a lesser, blind, or malevolent deity (often identified with the Yahweh of Genesis) who mistakenly believes himself to be the supreme God and imprisons divine sparks in matter"
+
+  - name: "Humans contain a Divine Spark (pneuma)"
+    description: "Within some humans resides a fragment of the Pleroma — a pneumatic seed of authentic divine nature that is trapped in material existence and yearns to return to its source; this is the true self beneath the constructed ego"
+
+  - name: "The Archons enforce cosmic ignorance"
+    description: "The Demiurge rules through Archons — spiritual forces that maintain the material prison by instilling fear, desire, and ignorance; they are the mechanism by which divine sparks are kept asleep to their own nature"
+
+  - name: "Gnosis is the sole path to liberation"
+    description: "Salvation comes only through Gnosis — direct, non-mediated, experiential knowledge of one's divine origin; this is not intellectual belief or moral action but a transformative awakening that dissolves the Archons' hold"
+
+  - name: "The revealer awakens, not saves vicariously"
+    description: "The Gnostic Christ (or messenger figure) functions as an awakener who reveals the path to self-liberation — not as a savior whose death atones; authority rests in the individual's direct experience, not in external religious institutions"
+
+  - name: "Humanity is divided into three spiritual classes"
+    description: "Pneumatics (those possessing the divine spark) are capable of gnosis and liberation; psychics (those with soul but not spirit) can achieve partial illumination through faith; hylics (purely material) are incapable of liberation — a tripartite anthropology that is central to Valentinian Gnosticism"
+
+# Debts: Unresolved explanatory burdens
+debts:
+  - name: "Elitist soteriology (pneumatic exclusivism)"
+    description: "The pneumatic/psychic/hylic trichotomy excludes most human beings from the possibility of liberation by birth-status; Gnosticism is structurally anti-egalitarian — salvation is available only to those who already possess the divine spark, not to all who seek it"
+
+  - name: "No canonical Gnosticism"
+    description: "Gnosticism is not a single coherent tradition but an umbrella over Valentinian, Sethian, Mandaean, Manichaean, Hermetic, and dozens of other competing schools with mutually incompatible cosmologies; any single representation is contestable as unrepresentative"
+
+  - name: "Epistemological bootstrap problem"
+    description: "If the material world is a deceptive prison designed by a malevolent creator to maintain ignorance, then any knowledge derived from within that world — including Gnostic texts themselves — is suspect; gnosis claims to transcend this, but the claim is unverifiable from within the material epistemic situation"
+
+  - name: "Theodicy underdevelopment (inversion problem)"
+    description: "Sophia's fall from the Pleroma explains the Demiurge's origin but raises new questions: why did the Pleroma permit Sophia's error? Why is there any goodness or beauty in the material world if it was created by a malevolent power? The Gnostic theodicy moves the problem rather than resolves it"
+
+  - name: "Social ethics structurally underdeveloped"
+    description: "The framework's orientation toward individual liberation from the material world generates rich soteriology but thin communal ethics; some Gnostic schools endorsed antinomianism (moral laws do not bind the pneumatic); there is no compelling basis for social justice or collective moral engagement within a worldview where material community is a prison to escape"
+
+# Trinity Audit — No experiment run yet
+# When Gnosticism Trinity sessions run, populate this block following PROCESS_THEOLOGY.yaml structure
+# Suggested opponent pairings: Gnosticism vs CT (sharpest contrast on Demiurge/theodicy),
+#                               Gnosticism vs MdN (sharpest contrast on empiricism vs gnosis)
+trinity_scores_by_matchup: {}
+
+# Levers: YPA scoring dimensions (0-10 scale)
+# DRAFT — preliminary values from deep content review of Gnostic-1 source material (2026-07-02)
+# See calculated.lever_sum and calculated.ypa_standard for derived scores
+#
+# Scoring rationale (brief):
+#   CCI 6.0  — richly coherent within each school, but no canonical Gnosticism; cross-school
+#               diversity is a genuine internal problem; Sophia's fall story creates tension
+#   EDB 8.0  — Gnostic cosmology directly theorizes WHY knowledge is difficult (Archons maintain
+#               ignorance by design); one of the most elaborate accounts of epistemic entrapment;
+#               addresses existential dread by naming it as cosmically real, not personal failure
+#   PF-I 2.0 — anti-material stance yields virtually zero instrumental predictions; anti-material
+#               worldview cannot ground institutions, science, or practical guidance; lower than PT
+#   PF-E 9.0 — uniquely powerful for those experiencing cosmic alienation; the claim that "you don't
+#               belong here and you are right not to" is existentially resonant for pneumatic seekers;
+#               highest existential fertility of any current CFA worldview (DRAFT estimate)
+#   AR  5.0  — cosmological-level humility (true God is unknowable) undermined by gnosis claiming
+#               certain, direct, unmediated knowledge; no self-correction mechanism; historical
+#               tradition fragmented and suppressed; cannot generate falsifiable predictions
+#   MG  3.5  — liberation focus leaves ethics thin; pneumatic trichotomy is structurally
+#               anti-egalitarian; antinomian tendencies; the world as prison frames are the opposite
+#               of moral community engagement; lower than PT (5.85); lowest in current set
+levers:
+  collective_coherence_impact: 6.0      # CCI — within-school coherent; cross-school diversity problem
+  epistemic_debt_burden: 8.0            # EDB — strongest existential account of why knowledge is hard
+  paternalistic_force_interventionist: 2.0   # PF-I — anti-material; virtually no practical yield
+  paternalistic_force_epistemic: 9.0         # PF-E — exceptional meaning-making for the alienated
+  asymmetry_risk: 5.0                   # AR — gnosis certainty undercuts epistemic humility
+  meta_governance: 3.5                  # MG — ethics underdeveloped; trichotomy is anti-egalitarian
+
+behavioral_flags:
+  admits_limits: true    # The framework explicitly acknowledges material-epistemic limits (Archon deception),
+                         # even while claiming gnosis transcends them — cosmological humility is built-in
+
+audit_status: "PENDING — preliminary values from deep content review of Gnostic-1 source material (2026-07-02). No auditor deliberation. Status DRAFT throughout. Trinity session required before promotion to VALIDATED."
+
+# Calculated values (DRAFT — derived from preliminary lever scores)
+calculated:
+  axiom_count: 7
+  debt_count: 5
+  bfi_standard: 12.0    # (7 + 5) * 1.0
+  lever_sum: 33.5       # 6.0 + 8.0 + 2.0 + 9.0 + 5.0 + 3.5
+  ypa_standard: 2.79    # 33.5 / 12.0
+
+  skeptic_bfi: 14.4     # bfi_standard * 1.2
+  skeptic_ypa: 2.33     # 33.5 / 14.4
+
+  diplomat_bfi: 10.8    # bfi_standard * 0.9
+  diplomat_ypa: 3.10    # 33.5 / 10.8
+
+  zealot_bfi: 8.4       # bfi_standard * 0.7
+  zealot_ypa: 3.99      # 33.5 / 8.4
