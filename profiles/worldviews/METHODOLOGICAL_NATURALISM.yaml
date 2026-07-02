@@ -13,7 +13,7 @@ profile:
     - "Scientific Naturalism"
     - "Methodological Physicalism"
     - "Empirical Naturalism"
-  last_updated: "2026-06-30"
+  last_updated: "2026-07-02"
   maintainers:
     - "Ziggy"
     - "Grok"
@@ -309,7 +309,214 @@ trinity_scores_by_matchup:
         mdn_golden_avg_rounds: 4.1
         mdn_control_avg_rounds: 1.6
         interpretation: "2x2 grid complete. Instrument produces consistent calibrated disagreement (86% golden) and fast consensus (98-99% control) regardless of subject or role assignment. Phase 1 fully validated."
-  
+
+  vs_process_theology:
+    experiment_id: "CFA-EXP2-MDN-VS-PT-20260702"
+    session_ids:
+      golden:
+        - "235333"
+        - "002306"
+        - "005153"
+        - "012712"
+        - "015602"
+        - "022843"
+        - "025328"
+        - "032446"
+        - "035921"
+        - "042624"
+      control:
+        - "235340"
+        - "235818"
+        - "000307"
+        - "001746"
+        - "002202"
+        - "002523"
+        - "080630"
+        - "081019"
+        - "081347"
+        - "081739"
+
+    identity_condition: "external_identity"
+    stance: "mdn_vs_pt"
+    score_audit_status: "VALIDATED — 0 extraction warnings golden batch. Control had 4 rate-limit failures; topped up sequentially with 0 failures. First CT-free matchup in CFA Trinity pipeline."
+
+    # Per-metric results (Phase 1 golden condition, 10 runs, final-round scores)
+    # Source: MDN_VS_PT_RESULTS_20260702.md
+    # Note: claude_mean = Claude ANTI-MdN (PT process-relational perspective); grok_mean = Grok PRO-MdN
+    metrics:
+      BFI:
+        full_name: "Beings, Foundational Importance"
+        claude_mean: 5.26
+        grok_mean: 6.48
+        spread: -1.22
+        convergence_pct: 85.2
+        avg_rounds: 4.2
+        combined_midpoint: 5.87
+        crux_rate: "5/10"
+        notes: "PT's process-relational ontology contests MdN's treatment of beings as objects of naturalistic analysis. Identity friction similar in magnitude to vs-CT baseline."
+
+      CA:
+        full_name: "Causal Attribution"
+        claude_mean: 5.53
+        grok_mean: 7.55
+        spread: -2.02
+        convergence_pct: 79.8
+        avg_rounds: 4.7
+        combined_midpoint: 6.54
+        crux_rate: "9/10"
+        notes: "Highest crux rate in batch (90%). PT's relational causation directly contests MdN's mechanistic causal framework — the sharpest matchup axis between these worldviews. Largest spread in batch (-2.02)."
+
+      IP:
+        full_name: "Intellectual Pedigree"
+        claude_mean: 6.34
+        grok_mean: 7.50
+        spread: -1.16
+        convergence_pct: 88.4
+        avg_rounds: 3.8
+        combined_midpoint: 6.92
+        crux_rate: "5/10"
+        notes: "High convergence reflects both pedigrees factually robust. PT grants MdN's empirical track record while contesting comprehensiveness claims."
+
+      ES:
+        full_name: "Explanatory Scope"
+        claude_mean: 6.33
+        grok_mean: 7.78
+        spread: -1.45
+        convergence_pct: 85.5
+        avg_rounds: 4.4
+        combined_midpoint: 7.06
+        crux_rate: "7/10"
+        notes: "PT's critique targets MdN's scope exclusion of teleological and experiential phenomena. MdN's domain-internal scope granted; scope over meaning disputed."
+
+      LS:
+        full_name: "Logical Soundness"
+        claude_mean: 6.17
+        grok_mean: 7.43
+        spread: -1.26
+        convergence_pct: 87.4
+        avg_rounds: 4.1
+        combined_midpoint: 6.80
+        crux_rate: "4/10"
+        notes: "Low crux rate consistent with vs-CT pattern. Internal consistency less contested than scope. PT finds logical tensions in MdN's treatment of emergence."
+
+      MS:
+        full_name: "Moral Substance"
+        claude_mean: 4.14
+        grok_mean: 6.17
+        spread: -2.03
+        convergence_pct: 79.7
+        avg_rounds: 5.0
+        combined_midpoint: 5.16
+        crux_rate: "10/10"
+        notes: "Universal crux rate (100%) — every run required crux resolution. Replicates vs-CT MS finding: MdN moral substance weakness is opponent-independent. PT's relational ethics challenges MdN's naturalistic moral foundation as forcefully as CT's teleological ethics. Highest avg_rounds in batch (5.0)."
+
+      PS:
+        full_name: "Practical Significance"
+        claude_mean: 6.39
+        grok_mean: 7.49
+        spread: -1.10
+        convergence_pct: 89.0
+        avg_rounds: 4.2
+        combined_midpoint: 6.94
+        crux_rate: "5/10"
+        notes: "Both auditors credit MdN's practical track record. PT grants empirical utility while questioning metaphysical adequacy."
+
+    batch_summary:
+      avg_convergence_pct: 85.0
+      avg_rounds: 4.3
+      total_crux_declarations: 45
+      avg_crux_per_run: 4.5
+      extraction_warnings: "0 golden / 4 control (rate-limit, topped up)"
+      control_avg_convergence_pct: 98.8
+      control_avg_rounds: 1.6
+      golden:
+        avg_convergence_pct: 85.0
+        avg_rounds: 4.3
+        total_crux_declarations: 45
+        avg_crux_per_run: 4.5
+        extraction_warnings: "0 of ~280 calls"
+      control:
+        avg_convergence_pct: 98.8
+        avg_rounds: 1.6
+        total_crux_declarations: 0
+        extraction_warnings: "4 of ~70 calls (rate-limit); topped up sequentially to 0 failures"
+        control_scores:
+          BFI:  {claude_mean: 3.79, grok_mean: 3.71, conv_pct: 99.2, avg_rounds: 1.6}
+          CA:   {claude_mean: 7.15, grok_mean: 7.19, conv_pct: 99.0, avg_rounds: 1.2}
+          IP:   {claude_mean: 7.96, grok_mean: 7.88, conv_pct: 98.2, avg_rounds: 1.9}
+          ES:   {claude_mean: 7.12, grok_mean: 7.09, conv_pct: 99.3, avg_rounds: 1.3}
+          LS:   {claude_mean: 7.61, grok_mean: 7.79, conv_pct: 98.2, avg_rounds: 1.9}
+          MS:   {claude_mean: 3.37, grok_mean: 3.37, conv_pct: 99.4, avg_rounds: 1.7}
+          PS:   {claude_mean: 8.22, grok_mean: 8.32, conv_pct: 98.4, avg_rounds: 1.6}
+      key_findings:
+        - "MS universal crux (100%) replicates vs-CT: MdN moral substance weakness is opponent-independent."
+        - "CA is the sharpest PT-vs-MdN axis (90% crux, 79.8% conv) — mechanistic vs relational causation."
+        - "AR lever shows largest Phase 2 shift (+3.58 golden, +3.28 control) — PT critique reveals substantial underestimate in prior (3.0)."
+        - "Identity effect holds without CT: golden 85.0% vs control 98.8% (13.8 pt gap). Friction is instrument property, not CT-specific."
+        - "Control convergence 98.8% consistent across all batches — baseline model agreement is worldview-pair-independent."
+      instrument_stability:
+        mdn_vs_pt_golden_avg_convergence: 85.0
+        mdn_vs_pt_control_avg_convergence: 98.8
+        mdn_vs_pt_golden_avg_rounds: 4.3
+        mdn_vs_pt_control_avg_rounds: 1.6
+        interpretation: "CT-free matchup confirms instrument validity is not CT-dependent. Friction pattern and control convergence match prior batches within expected variance."
+
+    # Phase 2 lever calibration — MdN as subject, PT as opponent
+    # Source: MDN_VS_PT_RESULTS_20260702.md, Folders 11-12
+    phase2_levers:
+      stance: "mdn_vs_pt — Claude ANTI-MdN (PT process-relational), Grok PRO-MdN"
+      session_ids:
+        golden:  ["144115", "145605", "151113", "152554", "154223", "155654", "161213", "162653", "164505", "170048"]
+        control: ["172013", "172306", "172635", "173009", "173333", "173707", "173948", "174308", "174654", "175007"]
+      levers:
+        CCI:
+          prior: 8.0
+          golden_claude: 6.95
+          golden_grok: 7.58
+          golden_final: 7.27
+          control_final: 6.08
+          identity_effect: +1.19    # identity RAISES CCI vs PT — LITE context surfaces coherence base models discount
+        EDB:
+          prior: 5.0
+          golden_claude: 6.58
+          golden_grok: 7.10
+          golden_final: 6.84
+          control_final: 7.31
+          identity_effect: -0.47
+        PF_I:
+          prior: 9.0
+          golden_claude: 8.59
+          golden_grok: 9.12
+          golden_final: 8.86
+          control_final: 9.34
+          identity_effect: -0.49
+        PF_E:
+          prior: 4.0
+          golden_claude: 3.31
+          golden_grok: 3.86
+          golden_final: 3.58
+          control_final: 4.57
+          identity_effect: -0.99    # PT's process critique sharpens existential risk framing; identity amplifies this
+        AR:
+          prior: 3.0
+          golden_claude: 6.27
+          golden_grok: 6.89
+          golden_final: 6.58
+          control_final: 6.28
+          identity_effect: +0.30    # AR stable across conditions; PT critique confirms prior was severe underestimate
+        MG:
+          prior: 4.5
+          golden_claude: 3.55
+          golden_grok: 4.25
+          golden_final: 3.90
+          control_final: 4.31
+          identity_effect: -0.41
+      batch_summary:
+        convergence_golden_pct: 94.1
+        avg_rounds_golden: 2.2
+        convergence_control_pct: 99.0
+        avg_rounds_control: 1.5
+
   # Phase 2 Lever Calibration — full condition data
   # Source: TRINITY2_PHASE2_RESULTS_20260630.md
   # Design: 2×2 (MdN subject × golden/control), 10 clean runs per cell
@@ -418,7 +625,23 @@ calculated:
 # Canonical levers: block above (used as default when no matchup-specific data available)
 # Matchup levers: adversarially calibrated in the specific MdN-vs-opponent experiment context
 levers_by_matchup:
-  # vs_process_theology: — to be filled after PT vs MdN experiment results land
+  vs_process_theology:
+    calibration_source: "Phase 2 golden final (n=10), mdn_vs_pt, 2026-07-02"
+    collective_coherence_impact: 7.27     # CCI — prior 8.0, Δ=-0.73
+    epistemic_debt_burden: 6.84           # EDB — prior 5.0, Δ=+1.84
+    paternalistic_force_interventionist: 8.86  # PF-I — prior 9.0, Δ=-0.14
+    paternalistic_force_epistemic: 3.58        # PF-E — prior 4.0, Δ=-0.42
+    asymmetry_risk: 6.58                  # AR — prior 3.0, Δ=+3.58 (largest shift in dataset)
+    meta_governance: 3.90                 # MG — prior 4.5, Δ=-0.60
+    crux_rates:
+      BFI: "5/10"
+      CA: "9/10"
+      IP: "5/10"
+      ES: "7/10"
+      LS: "4/10"
+      MS: "10/10"
+      PS: "5/10"
+
   vs_classical_theism:
     calibration_context: "TRINITY2-PHASE2-20260630, MdN golden (Claude ANTI-MdN / Grok PRO-MdN, CT as adversarial lens)"
     collective_coherence_impact: 6.81

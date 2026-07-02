@@ -94,6 +94,34 @@ When files are added or deleted, use diff notation like git commits:
 
 ## 📝 CHANGE LOG
 
+### [DATA_PIPELINE-2026-07-02-1] 2026-07-02 - MdN vs PT Care Package Processed (40 Runs)
+
+**Categories:** [DATA_PIPELINE] [WORLDVIEW] [🧹 +40]
+**Changed by:** CFA-Claude (Sonnet 4.6)
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `CREATED` ×40: dashboard/SMV/src/data/scenario_MdN_PT_*.json — SMV tick-format scenario files converted from Trinity v3 raw JSON via raw_to_smv.py (folders 9-12: Phase 1 golden, Phase 1 control, Phase 2 golden, Phase 2 control)
+- `UPDATED`: profiles/worldviews/METHODOLOGICAL_NATURALISM.yaml — Added levers_by_matchup.vs_process_theology (Phase 2 golden final: CCI=7.27, EDB=6.84, PF_I=8.86, PF_E=3.58, AR=6.58, MG=3.90 with full crux_rates); added trinity_scores_by_matchup.vs_process_theology (full Phase 1 per-metric block + Phase 2 lever calibration block with all 40 session IDs); updated last_updated to 2026-07-02
+- `MOVED`: docs/REPO_SYNC/SYNC_IN/pending/9-12 → docs/REPO_SYNC/SYNC_IN/processed/ (raw run mirrors)
+- `MOVED`: docs/REPO_SYNC/SYNC_IN/pending/MDN_VS_PT_RESULTS_20260702.md → docs/REPO_SYNC/SYNC_IN/processed/
+- `CREATED` ×4: docs/REPO_SYNC/.archive/raw_runs/mdn_pt_p1_golden_20260702, mdn_pt_p1_control_20260702, mdn_pt_p2_golden_20260702, mdn_pt_p2_control_20260702 (descriptive-name archive copies from ARMADA SYNC_OUT)
+
+**Reason:** MdN vs PT experiment (40 runs, folders 9-12) completed by ARMADA. Care package MDN_VS_PT_RESULTS_20260702.md delivered. Standard care package processing: convert raw → SMV, update YAML with matchup-specific lever calibration, archive source data.
+
+**Key findings logged:**
+- AR shows largest lever shift in dataset (+3.58 golden vs prior 3.0); PT critique exposes MdN's asymmetry risk as severely underpriced in prior
+- MS universal crux (10/10) replicates vs-CT finding — MdN moral substance weakness is opponent-independent
+- First CT-free matchup: identity effect holds (golden 85.0% vs control 98.8%); confirms friction is instrument property, not CT-specific
+- CA is primary PT-vs-MdN axis: 90% crux, mechanistic vs relational causation
+
+**Impact:** Moderate — MdN profile now has matchup-specific lever set for PT; 40 new scenarios available in SMV dashboard.
+
+**Follow-up Required:** NO (for this batch)
+**Follow-up Note:** PROCESS_THEOLOGY.yaml may need levers_by_matchup.vs_methodological_naturalism when PT-as-subject vs MdN data exists (separate experiment).
+
+-----
+
 ### [DOCUMENTATION-2026-07-02-1] 2026-07-02 - Repo Health Backfill (July 2026 Changes)
 
 **Categories:** [DOCUMENTATION]
