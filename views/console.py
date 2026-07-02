@@ -167,6 +167,26 @@ def _worldview_options():
         return ["Classical Theism", "Methodological Naturalism", "Process Theology"]
 
 
+_WV_EMOJI = {
+    "Buddhism":                  "☸️",
+    "Classical Theism":          "📕",
+    "Desiderata Believers":      "🤔",
+    "Error Theory":              "⛔",
+    "Existentialism":            "🎭",
+    "Hinduism":                  "🕉️",
+    "Islam":                     "☪️",
+    "Methodological Naturalism": "📘",
+    "Mormonism":                 "📖",
+    "Mormonism (LDS)":           "📖",
+    "Null Hypothesis":           "❓",
+    "Orthodox Judaism":          "🕎",
+    "Process Theology":          "🌊",
+}
+
+def _wv_label(name: str) -> str:
+    return f"{_WV_EMOJI.get(name, '🌐')} {name}"
+
+
 def _on_fa_worldview_change():
     name = st.session_state.get("fa_name", "")
     if not name:
@@ -752,7 +772,7 @@ def render():
             st.caption(f"⚗️ Levers calibrated vs {_fa_opp} | Adversarially Audited")
         else:
             st.caption("✅ Canonical levers | Adversarially Audited")
-        fa_name = st.selectbox("Worldview", options=_worldview_options(), key="fa_name", on_change=_on_fa_worldview_change)
+        fa_name = st.selectbox("Worldview", options=_worldview_options(), key="fa_name", on_change=_on_fa_worldview_change, format_func=_wv_label)
         
         with st.expander("🔢 BFI", expanded=False):
             if 'custom_framework_ready' in st.session_state:
@@ -835,7 +855,7 @@ def render():
             st.caption(f"⚗️ Levers calibrated vs {_fb_opp} | Adversarially Audited")
         else:
             st.caption("✅ Canonical levers | Adversarially Audited")
-        fb_name = st.selectbox("Worldview", options=_worldview_options(), key="fb_name", on_change=_on_fb_worldview_change)
+        fb_name = st.selectbox("Worldview", options=_worldview_options(), key="fb_name", on_change=_on_fb_worldview_change, format_func=_wv_label)
         
         with st.expander("🔢 BFI", expanded=False):
             if 'custom_framework_ready' in st.session_state:
@@ -940,6 +960,18 @@ def render():
         ya_results["Neutral"]["YPA"],
         yb_results["Neutral"]["YPA"]
     ), unsafe_allow_html=True)
+
+    st.markdown("""
+<style>
+.stTabs [data-baseweb="tab-list"] { gap: 2rem; }
+.stTabs [data-baseweb="tab"] {
+    font-size: 1.05rem;
+    font-weight: 500;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+</style>
+""", unsafe_allow_html=True)
 
     # TABS (Enhanced with new visualizations)
     tab1, tab2, tab3, tab4 = st.tabs(["📈 Visual", "⚔️ Battle Card", "🔄 Symmetry", "🔬 Trinity Audit"])
