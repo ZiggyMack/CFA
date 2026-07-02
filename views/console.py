@@ -489,12 +489,11 @@ def render():
         st.markdown("---")
         st.markdown("**Head-to-Head Pairings:**")
         st.caption("*Sets both A & B in one click*")
-        pair_col1, pair_col2 = st.columns(2)
+        pair_col1, pair_col2, pair_col3 = st.columns(3)
         with pair_col1:
             if st.button("📕 CT  vs  📘 MdN", key="pair_ct_mdn", use_container_width=True, help="Load CT → A, MdN → B (matchup-calibrated levers)"):
                 _ct = get_ypa_data("Classical Theism", opponent="Methodological Naturalism")
                 _mdn = get_ypa_data("Methodological Naturalism", opponent="Classical Theism")
-                # CT → A (matchup-calibrated vs MdN)
                 st.session_state["fa_name"] = _ct["name"]
                 st.session_state["fa_ax"]  = _ct["bf_i"]["axioms"]
                 st.session_state["fa_db"]  = _ct["bf_i"]["debts"]
@@ -506,7 +505,6 @@ def render():
                 st.session_state["fa_ar"]  = _ct["levers"]["AR"]
                 st.session_state["fa_mg"]  = _ct["levers"]["MG"]
                 st.session_state["fa_calibration_opponent"] = _ct.get("calibration_opponent")
-                # MdN → B (matchup-calibrated vs CT)
                 st.session_state["fb_name"] = _mdn["name"]
                 st.session_state["fb_ax"]  = _mdn["bf_i"]["axioms"]
                 st.session_state["fb_db"]  = _mdn["bf_i"]["debts"]
@@ -520,37 +518,6 @@ def render():
                 st.session_state["fb_calibration_opponent"] = _mdn.get("calibration_opponent")
                 st.rerun()
         with pair_col2:
-            if st.button("📘 MdN  vs  📕 CT", key="pair_mdn_ct", use_container_width=True, help="Load MdN → A, CT → B (matchup-calibrated levers)"):
-                _mdn = get_ypa_data("Methodological Naturalism", opponent="Classical Theism")
-                _ct = get_ypa_data("Classical Theism", opponent="Methodological Naturalism")
-                # MdN → A (matchup-calibrated vs CT)
-                st.session_state["fa_name"] = _mdn["name"]
-                st.session_state["fa_ax"]  = _mdn["bf_i"]["axioms"]
-                st.session_state["fa_db"]  = _mdn["bf_i"]["debts"]
-                st.session_state["fa_ad"]  = _mdn["admits_limits"]
-                st.session_state["fa_cci"] = _mdn["levers"]["CCI"]
-                st.session_state["fa_edb"] = _mdn["levers"]["EDB"]
-                st.session_state["fa_pfi"] = _mdn["levers"]["PF_instrumental"]
-                st.session_state["fa_pfe"] = _mdn["levers"]["PF_existential"]
-                st.session_state["fa_ar"]  = _mdn["levers"]["AR"]
-                st.session_state["fa_mg"]  = _mdn["levers"]["MG"]
-                st.session_state["fa_calibration_opponent"] = _mdn.get("calibration_opponent")
-                # CT → B (matchup-calibrated vs MdN)
-                st.session_state["fb_name"] = _ct["name"]
-                st.session_state["fb_ax"]  = _ct["bf_i"]["axioms"]
-                st.session_state["fb_db"]  = _ct["bf_i"]["debts"]
-                st.session_state["fb_ad"]  = _ct["admits_limits"]
-                st.session_state["fb_cci"] = _ct["levers"]["CCI"]
-                st.session_state["fb_edb"] = _ct["levers"]["EDB"]
-                st.session_state["fb_pfi"] = _ct["levers"]["PF_instrumental"]
-                st.session_state["fb_pfe"] = _ct["levers"]["PF_existential"]
-                st.session_state["fb_ar"]  = _ct["levers"]["AR"]
-                st.session_state["fb_mg"]  = _ct["levers"]["MG"]
-                st.session_state["fb_calibration_opponent"] = _ct.get("calibration_opponent")
-                st.rerun()
-
-        pair_col3, pair_col4 = st.columns(2)
-        with pair_col3:
             if st.button("📕 CT  vs  🌊 PT", key="pair_ct_pt", use_container_width=True, help="Load CT → A, PT → B (PT calibrated vs CT)"):
                 _ct = get_ypa_data("Classical Theism", opponent="Process Theology")
                 _pt = get_ypa_data("Process Theology", opponent="Classical Theism")
@@ -577,7 +544,7 @@ def render():
                 st.session_state["fb_mg"]  = _pt["levers"]["MG"]
                 st.session_state["fb_calibration_opponent"] = _pt.get("calibration_opponent")
                 st.rerun()
-        with pair_col4:
+        with pair_col3:
             if st.button("🌊 PT  vs  📘 MdN", key="pair_pt_mdn", use_container_width=True, help="Load PT → A, MdN → B (canonical until PT vs MdN results land)"):
                 _pt = get_ypa_data("Process Theology", opponent="Methodological Naturalism")
                 _mdn = get_ypa_data("Methodological Naturalism", opponent="Process Theology")
@@ -1396,6 +1363,12 @@ CFA scores live at *Evaluation*. Divergence can originate at any upstream layer.
                     m = trinity.get("metrics", {}) if trinity else {}
                     return any("role_swap_delta_claude" in v for v in m.values())
 
+                _CRUX_PREFIX = {
+                    "Classical Theism": "ct",
+                    "Methodological Naturalism": "mdn",
+                    "Process Theology": "pt",
+                }
+
                 if trinity_fa:
                     with audit_tabs[_tab_idx]:
                         _fa_abbrev = "".join(w[0].upper() for w in fa["name"].split()[:3])
@@ -1407,7 +1380,7 @@ CFA scores live at *Evaluation*. Divergence can originate at any upstream layer.
                                            extra_delta_label="Identity Δ" if _has_rs else None,
                                            extra_delta_claude_key="identity_delta_claude" if _has_rs else None,
                                            extra_delta_grok_key="identity_delta_grok" if _has_rs else None,
-                                           crux_prefix=None)
+                                           crux_prefix=_CRUX_PREFIX.get(fa["name"]))
                     _tab_idx += 1
 
                 if trinity_fb:
@@ -1421,7 +1394,7 @@ CFA scores live at *Evaluation*. Divergence can originate at any upstream layer.
                                            extra_delta_label="Identity Δ" if _has_rs else None,
                                            extra_delta_claude_key="identity_delta_claude" if _has_rs else None,
                                            extra_delta_grok_key="identity_delta_grok" if _has_rs else None,
-                                           crux_prefix=None)
+                                           crux_prefix=_CRUX_PREFIX.get(fb["name"]))
                     _tab_idx += 1
 
                 if trinity_fa and trinity_fb:
