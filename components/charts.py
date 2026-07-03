@@ -143,11 +143,6 @@ def create_sensitivity_heatmap(
             )
 
     fig.update_layout(
-        title=dict(
-            text=title,
-            font=dict(size=16, family='Georgia, serif'),
-            x=0.5
-        ),
         xaxis=dict(
             tickfont=dict(size=11),
             side='bottom'
@@ -155,7 +150,7 @@ def create_sensitivity_heatmap(
         yaxis=dict(
             tickfont=dict(size=11)
         ),
-        margin=dict(t=60, b=40, l=120, r=40),
+        margin=dict(t=20, b=40, l=120, r=40),
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)'
     )
@@ -197,7 +192,6 @@ def _cfg_pill_strip(cfg: dict) -> str:
     bfi_key    = cfg.get("bfi_debt_weight", "Equal_1.0x")
 
     pills = [
-        _cfg_pill("Scenario: Neutral"),
         _cfg_pill(f"Crux: {'✓' if crux_on else '✗'}", is_default=crux_on),
         _cfg_pill(f"Parity: {cfg.get('lever_parity','ON')}", is_default=parity_on),
         _cfg_pill(f"Fall: {cfg.get('fallibilism_bonus','ON')}", is_default=fall_on),
