@@ -315,7 +315,7 @@ def _get_audit_status(prefix: str, wv_name: str, opp_name: str) -> str:
             for k, v in _canonical.items()
             if k in _LEVER_SS_KEYS
         )
-        return "🎯 Prior (canonical, pre-experiment)" if _bias_match else "✏️ Customized (from Prior)"
+        return "🎯 Prior (canonical, pre-experiment)" if _bias_match else "✏️ Customized"
     if not wv_name or not opp_name:
         return "📋 Unaudited"
     try:
@@ -330,7 +330,7 @@ def _get_audit_status(prefix: str, wv_name: str, opp_name: str) -> str:
         for k, v in calibrated.items()
         if k in _LEVER_SS_KEYS
     )
-    return "✅ Adversarially Audited" if sliders_match else "✏️ Customized (from Audited)"
+    return "✅ Adversarially Audited" if sliders_match else "✏️ Customized"
 
 
 def _on_fa_worldview_change():
