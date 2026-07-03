@@ -214,6 +214,7 @@ def get_ypa_data(worldview_name: str, opponent: str = None) -> Dict[str, Any]:
                 "admits_limits": data["behavioral_flags"]["admits_limits"],
                 "calibration_context": calibration_context,
                 "calibration_opponent": calibration_opponent,
+                "has_audit_data": bool(data.get("trinity_scores_by_matchup") or data.get("phase2_lever_scores")),
             }
 
         except (KeyError, TypeError, yaml.YAMLError) as e:

@@ -285,6 +285,7 @@ def _on_fa_worldview_change():
         st.session_state["fa_ar"]  = ypa["levers"]["AR"]
         st.session_state["fa_mg"]  = ypa["levers"]["MG"]
         st.session_state["fa_calibration_opponent"] = None
+        st.session_state["fa_has_audit_data"] = ypa.get("has_audit_data", False)
     except Exception:
         pass
 
@@ -305,6 +306,7 @@ def _on_fb_worldview_change():
         st.session_state["fb_ar"]  = ypa["levers"]["AR"]
         st.session_state["fb_mg"]  = ypa["levers"]["MG"]
         st.session_state["fb_calibration_opponent"] = None
+        st.session_state["fb_has_audit_data"] = ypa.get("has_audit_data", False)
     except Exception:
         pass
 
@@ -640,6 +642,7 @@ def render():
                             st.session_state[f"{_ss}_ar"]   = _d["levers"]["AR"]
                             st.session_state[f"{_ss}_mg"]   = _d["levers"]["MG"]
                             st.session_state[f"{_ss}_calibration_opponent"] = _d.get("calibration_opponent")
+                            st.session_state[f"{_ss}_has_audit_data"] = _d.get("has_audit_data", False)
                         st.rerun()
 
 
@@ -803,10 +806,13 @@ def render():
     with col1:
         st.markdown("### 📘 Framework A")
         _fa_opp = st.session_state.get("fa_calibration_opponent")
+        _fa_audited = st.session_state.get("fa_has_audit_data", False)
         if _fa_opp:
-            st.caption(f"⚗️ Levers calibrated vs {_fa_opp} | Adversarially Audited")
+            st.caption(f"⚗️ Calibrated vs {_fa_opp} | Adversarially Audited")
+        elif _fa_audited:
+            st.caption("📊 Canonical levers | Audited (not vs this opponent)")
         else:
-            st.caption("✅ Canonical levers | Adversarially Audited")
+            st.caption("📋 Canonical levers | Unaudited")
         fa_name = st.selectbox("Worldview", options=_worldview_options(), key="fa_name", on_change=_on_fa_worldview_change, format_func=_wv_label)
         
         with st.expander("🔢 BFI", expanded=False):
@@ -886,10 +892,13 @@ def render():
     with col2:
         st.markdown("### 📕 Framework B")
         _fb_opp = st.session_state.get("fb_calibration_opponent")
+        _fb_audited = st.session_state.get("fb_has_audit_data", False)
         if _fb_opp:
-            st.caption(f"⚗️ Levers calibrated vs {_fb_opp} | Adversarially Audited")
+            st.caption(f"⚗️ Calibrated vs {_fb_opp} | Adversarially Audited")
+        elif _fb_audited:
+            st.caption("📊 Canonical levers | Audited (not vs this opponent)")
         else:
-            st.caption("✅ Canonical levers | Adversarially Audited")
+            st.caption("📋 Canonical levers | Unaudited")
         fb_name = st.selectbox("Worldview", options=_worldview_options(), key="fb_name", on_change=_on_fb_worldview_change, format_func=_wv_label)
         
         with st.expander("🔢 BFI", expanded=False):
