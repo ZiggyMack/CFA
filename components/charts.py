@@ -514,11 +514,6 @@ def create_scenario_comparison_bars(
 
     fig.update_layout(
         barmode='group',
-        title=dict(
-            text='Scenario Impact: YPA Across Weightings',
-            font=dict(size=16, family='Georgia, serif'),
-            x=0.5
-        ),
         xaxis=dict(
             title='YPA Score',
             range=[0, 10],
@@ -601,11 +596,6 @@ def create_lever_pie_charts(
     ), row=1, col=2)
 
     fig.update_layout(
-        title=dict(
-            text='Lever Contribution Breakdown',
-            font=dict(size=16, family='Georgia, serif'),
-            x=0.5
-        ),
         showlegend=True,
         legend=dict(
             orientation='h',
@@ -700,12 +690,7 @@ def create_ypa_gauge(
     ), row=1, col=2)
 
     fig.update_layout(
-        title=dict(
-            text='YPA Performance Gauges',
-            font=dict(size=16, family='Georgia, serif'),
-            x=0.5
-        ),
-        margin=dict(t=80, b=40, l=40, r=40),
+        margin=dict(t=40, b=40, l=40, r=40),
         paper_bgcolor='rgba(0,0,0,0)',
         height=350
     )

@@ -271,10 +271,11 @@ def _get_crux_rates(wv_name: str, opponent_name: str) -> dict:
 
 def _on_fa_worldview_change():
     name = st.session_state.get("fa_name", "")
+    opponent = st.session_state.get("fb_name", "")
     if not name:
         return
     try:
-        ypa = get_ypa_data(name)
+        ypa = get_ypa_data(name, opponent=opponent) if opponent else get_ypa_data(name)
         st.session_state["fa_ax"]  = ypa["bf_i"]["axioms"]
         st.session_state["fa_db"]  = ypa["bf_i"]["debts"]
         st.session_state["fa_ad"]  = ypa["admits_limits"]
@@ -284,18 +285,27 @@ def _on_fa_worldview_change():
         st.session_state["fa_pfe"] = ypa["levers"]["PF_existential"]
         st.session_state["fa_ar"]  = ypa["levers"]["AR"]
         st.session_state["fa_mg"]  = ypa["levers"]["MG"]
-        st.session_state["fa_calibration_opponent"] = None
+        st.session_state["fa_calibration_opponent"] = ypa.get("calibration_opponent")
         st.session_state["fa_has_audit_data"] = ypa.get("has_audit_data", False)
     except Exception:
         pass
+    # Refresh B's calibration status since its opponent just changed
+    if opponent:
+        try:
+            ypa_b = get_ypa_data(opponent, opponent=name)
+            st.session_state["fb_calibration_opponent"] = ypa_b.get("calibration_opponent")
+            st.session_state["fb_has_audit_data"] = ypa_b.get("has_audit_data", False)
+        except Exception:
+            pass
 
 
 def _on_fb_worldview_change():
     name = st.session_state.get("fb_name", "")
+    opponent = st.session_state.get("fa_name", "")
     if not name:
         return
     try:
-        ypa = get_ypa_data(name)
+        ypa = get_ypa_data(name, opponent=opponent) if opponent else get_ypa_data(name)
         st.session_state["fb_ax"]  = ypa["bf_i"]["axioms"]
         st.session_state["fb_db"]  = ypa["bf_i"]["debts"]
         st.session_state["fb_ad"]  = ypa["admits_limits"]
@@ -305,10 +315,18 @@ def _on_fb_worldview_change():
         st.session_state["fb_pfe"] = ypa["levers"]["PF_existential"]
         st.session_state["fb_ar"]  = ypa["levers"]["AR"]
         st.session_state["fb_mg"]  = ypa["levers"]["MG"]
-        st.session_state["fb_calibration_opponent"] = None
+        st.session_state["fb_calibration_opponent"] = ypa.get("calibration_opponent")
         st.session_state["fb_has_audit_data"] = ypa.get("has_audit_data", False)
     except Exception:
         pass
+    # Refresh A's calibration status since its opponent just changed
+    if opponent:
+        try:
+            ypa_a = get_ypa_data(opponent, opponent=name)
+            st.session_state["fa_calibration_opponent"] = ypa_a.get("calibration_opponent")
+            st.session_state["fa_has_audit_data"] = ypa_a.get("has_audit_data", False)
+        except Exception:
+            pass
 
 
 def render():
@@ -647,6 +665,7 @@ def render():
 
 
     st.sidebar.markdown("---")
+    st.sidebar.markdown("### ⚙️ YPA Tuning")
 
     # Scoring Mode
     if "audit_mode" not in st.session_state:
