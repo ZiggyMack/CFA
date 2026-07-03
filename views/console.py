@@ -1502,14 +1502,21 @@ CFA scores live at *Evaluation*. Divergence can originate at any upstream layer.
                                 continue
                             _cs_fa = _cs_fa_m[key]
                             _cs_fb = _cs_fb_m[key]
+
+                            def _fmt_delta(a, b):
+                                if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+                                    d = round(b - a, 2)
+                                    return f"+{d}" if d >= 0 else str(d)
+                                return "?"
+
                             sym_rows.append({
                                 "Metric": key,
                                 f"Claude PRO-{_fa_abbrev}": _cs_fa.get("claude_mean", "?"),
                                 f"Claude ANTI-{_fb_abbrev}": _cs_fb.get("claude_mean", "?"),
-                                "Claude Δ": f"{'+' if _cs_fb.get('role_swap_delta_claude',0) >= 0 else ''}{_cs_fb.get('role_swap_delta_claude','?')}",
+                                "Claude Δ": _fmt_delta(_cs_fa.get("claude_mean"), _cs_fb.get("claude_mean")),
                                 f"Grok ANTI-{_fa_abbrev}": _cs_fa.get("grok_mean", "?"),
                                 f"Grok PRO-{_fb_abbrev}": _cs_fb.get("grok_mean", "?"),
-                                "Grok Δ": f"{'+' if _cs_fb.get('role_swap_delta_grok',0) >= 0 else ''}{_cs_fb.get('role_swap_delta_grok','?')}",
+                                "Grok Δ": _fmt_delta(_cs_fa.get("grok_mean"), _cs_fb.get("grok_mean")),
                                 f"{_fa_abbrev} Conv%": f"{_cs_fa.get('convergence_pct','?')}%",
                                 f"{_fb_abbrev} Conv%": f"{_cs_fb.get('convergence_pct','?')}%",
                             })
