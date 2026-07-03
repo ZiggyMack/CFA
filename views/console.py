@@ -269,13 +269,43 @@ def _get_crux_rates(wv_name: str, opponent_name: str) -> dict:
     return result
 
 
+# Maps YAML lever keys → session-state suffix (fa_cci, fb_edb, etc.)
+_LEVER_SS_KEYS = {
+    "CCI": "cci", "EDB": "edb",
+    "PF_instrumental": "pfi", "PF_existential": "pfe",
+    "AR": "ar", "MG": "mg",
+}
+
+
+def _is_drifted(prefix: str) -> bool:
+    """True if any lever slider has moved away from the loaded audit baseline."""
+    baseline = st.session_state.get(f"{prefix}_audit_baseline", {})
+    if not baseline:
+        return False
+    return any(
+        abs(st.session_state.get(f"{prefix}_{_LEVER_SS_KEYS[k]}", 0.0) - v) > 0.005
+        for k, v in baseline.items()
+        if k in _LEVER_SS_KEYS
+    )
+
+
+def _store_audit_baseline(prefix: str, levers: dict, calibration_opponent) -> None:
+    """Snapshot the loaded lever values as the audit baseline (or clear if unaudited)."""
+    if calibration_opponent:
+        st.session_state[f"{prefix}_audit_baseline"] = dict(levers)
+    else:
+        st.session_state.pop(f"{prefix}_audit_baseline", None)
+
+
 def _on_fa_worldview_change():
     name = st.session_state.get("fa_name", "")
     opponent = st.session_state.get("fb_name", "")
+    audit_mode = st.session_state.get("audit_mode", "Bias")
     if not name:
         return
     try:
-        ypa = get_ypa_data(name, opponent=opponent) if opponent else get_ypa_data(name)
+        use_matchup = audit_mode == "Audit" and bool(opponent)
+        ypa = get_ypa_data(name, opponent=opponent) if use_matchup else get_ypa_data(name)
         st.session_state["fa_ax"]  = ypa["bf_i"]["axioms"]
         st.session_state["fa_db"]  = ypa["bf_i"]["debts"]
         st.session_state["fa_ad"]  = ypa["admits_limits"]
@@ -285,16 +315,20 @@ def _on_fa_worldview_change():
         st.session_state["fa_pfe"] = ypa["levers"]["PF_existential"]
         st.session_state["fa_ar"]  = ypa["levers"]["AR"]
         st.session_state["fa_mg"]  = ypa["levers"]["MG"]
-        st.session_state["fa_calibration_opponent"] = ypa.get("calibration_opponent")
+        cal_opp = ypa.get("calibration_opponent")
+        st.session_state["fa_calibration_opponent"] = cal_opp
         st.session_state["fa_has_audit_data"] = ypa.get("has_audit_data", False)
+        _store_audit_baseline("fa", ypa["levers"], cal_opp)
     except Exception:
         pass
     # Refresh B's calibration status since its opponent just changed
-    if opponent:
+    if opponent and audit_mode == "Audit":
         try:
             ypa_b = get_ypa_data(opponent, opponent=name)
-            st.session_state["fb_calibration_opponent"] = ypa_b.get("calibration_opponent")
+            cal_opp_b = ypa_b.get("calibration_opponent")
+            st.session_state["fb_calibration_opponent"] = cal_opp_b
             st.session_state["fb_has_audit_data"] = ypa_b.get("has_audit_data", False)
+            _store_audit_baseline("fb", ypa_b["levers"], cal_opp_b)
         except Exception:
             pass
 
@@ -302,10 +336,12 @@ def _on_fa_worldview_change():
 def _on_fb_worldview_change():
     name = st.session_state.get("fb_name", "")
     opponent = st.session_state.get("fa_name", "")
+    audit_mode = st.session_state.get("audit_mode", "Bias")
     if not name:
         return
     try:
-        ypa = get_ypa_data(name, opponent=opponent) if opponent else get_ypa_data(name)
+        use_matchup = audit_mode == "Audit" and bool(opponent)
+        ypa = get_ypa_data(name, opponent=opponent) if use_matchup else get_ypa_data(name)
         st.session_state["fb_ax"]  = ypa["bf_i"]["axioms"]
         st.session_state["fb_db"]  = ypa["bf_i"]["debts"]
         st.session_state["fb_ad"]  = ypa["admits_limits"]
@@ -315,16 +351,20 @@ def _on_fb_worldview_change():
         st.session_state["fb_pfe"] = ypa["levers"]["PF_existential"]
         st.session_state["fb_ar"]  = ypa["levers"]["AR"]
         st.session_state["fb_mg"]  = ypa["levers"]["MG"]
-        st.session_state["fb_calibration_opponent"] = ypa.get("calibration_opponent")
+        cal_opp = ypa.get("calibration_opponent")
+        st.session_state["fb_calibration_opponent"] = cal_opp
         st.session_state["fb_has_audit_data"] = ypa.get("has_audit_data", False)
+        _store_audit_baseline("fb", ypa["levers"], cal_opp)
     except Exception:
         pass
     # Refresh A's calibration status since its opponent just changed
-    if opponent:
+    if opponent and audit_mode == "Audit":
         try:
             ypa_a = get_ypa_data(opponent, opponent=name)
-            st.session_state["fa_calibration_opponent"] = ypa_a.get("calibration_opponent")
+            cal_opp_a = ypa_a.get("calibration_opponent")
+            st.session_state["fa_calibration_opponent"] = cal_opp_a
             st.session_state["fa_has_audit_data"] = ypa_a.get("has_audit_data", False)
+            _store_audit_baseline("fa", ypa_a["levers"], cal_opp_a)
         except Exception:
             pass
 
@@ -659,8 +699,10 @@ def render():
                             st.session_state[f"{_ss}_pfe"]  = _d["levers"]["PF_existential"]
                             st.session_state[f"{_ss}_ar"]   = _d["levers"]["AR"]
                             st.session_state[f"{_ss}_mg"]   = _d["levers"]["MG"]
-                            st.session_state[f"{_ss}_calibration_opponent"] = _d.get("calibration_opponent")
+                            _cal_opp = _d.get("calibration_opponent")
+                            st.session_state[f"{_ss}_calibration_opponent"] = _cal_opp
                             st.session_state[f"{_ss}_has_audit_data"] = _d.get("has_audit_data", False)
+                            _store_audit_baseline(_ss, _d["levers"], _cal_opp)
                         st.rerun()
 
 
@@ -827,7 +869,10 @@ def render():
         _fa_opp = st.session_state.get("fa_calibration_opponent")
         _fa_audited = st.session_state.get("fa_has_audit_data", False)
         if _fa_opp:
-            st.caption("✅ Adversarially Audited")
+            if _is_drifted("fa"):
+                st.caption("✏️ Customized (from Audited)")
+            else:
+                st.caption("✅ Adversarially Audited")
         elif _fa_audited:
             st.caption("📊 Not audited for this matchup")
         else:
@@ -918,7 +963,10 @@ def render():
         _fb_opp = st.session_state.get("fb_calibration_opponent")
         _fb_audited = st.session_state.get("fb_has_audit_data", False)
         if _fb_opp:
-            st.caption("✅ Adversarially Audited")
+            if _is_drifted("fb"):
+                st.caption("✏️ Customized (from Audited)")
+            else:
+                st.caption("✅ Adversarially Audited")
         elif _fb_audited:
             st.caption("📊 Not audited for this matchup")
         else:
