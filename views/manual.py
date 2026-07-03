@@ -120,17 +120,28 @@ def render():
         
         st.markdown("### What is CFA?")
         st.write("""
-        The **Comparative Framework Audit** is a system for comparing worldviews, 
+        The **Comparative Framework Audit** is a system for comparing worldviews,
         epistemologies, and philosophical frameworks using transparent, adjustable criteria.
-        
+
         **Core Innovation**: "All Named, All Priced" → "All Seen, All Passed"
         - Every assumption is disclosed
-        - Every presupposition is counted  
+        - Every presupposition is counted
         - Every bias is made toggleable
         - Every outcome is earned through adversarial audit
-        
+
         **Repository Health**: 98/100 (A+) - Maintained via Living Map System
         """)
+
+        st.markdown("""
+            <div class="tip-box">
+            <b>📐 What you're doing when you use the console</b><br/><br/>
+            CFA separates three questions that most philosophical debate accidentally collapses together:<br/><br/>
+            <b>Phase 0 — Who is judging?</b> The Scoring Mode (Bias / Audit) and evaluator identity.<br/>
+            <b>Phase 1 — What is being judged?</b> The worldview profile — faithfully reconstructed via Trinity experiments.<br/>
+            <b>Phase 2 — How well does it perform?</b> The YPA levers and scores. <i>This is what the console is doing.</i><br/><br/>
+            The console operates in Phase 2. The profiles you load are the output of Phase 1. Your evaluator stance is Phase 0.
+            </div>
+        """, unsafe_allow_html=True)
         
         st.markdown("### The Formula")
         st.markdown("""

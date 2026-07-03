@@ -296,8 +296,103 @@ Because we believe in a world where:
 
     st.markdown("---")
 
-    # VIII. The Closing Covenant
-    st.markdown("## VIII. The Closing Covenant")
+    # VIII. The Three Questions
+    st.markdown("## VIII. The Three Questions That Cannot Be Collapsed")
+    st.markdown("""
+Almost every heated philosophical disagreement involves conflating at least one of these: **who** is evaluating, **what** is actually being evaluated, and **how** it is being evaluated. CFA's deepest methodological commitment is forcing all three to be declared separately before any argument begins.
+""")
+
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.markdown("### Phase 0")
+        st.info("**Who is judging?**")
+        st.markdown("""
+*Evaluator Configuration*
+
+Before evaluating anything, declare the evaluator:
+- What framework are they using?
+- What assumptions are loaded?
+- What standard of evidence?
+- What biases or lenses?
+- What identity or advocacy role?
+
+**In the tool:** Bias vs. Audit mode, LITE/PRO/ANTI identity assignments, control conditions.
+""")
+
+    with col2:
+        st.markdown("### Phase 1")
+        st.info("**What is being judged?**")
+        st.markdown("""
+*Worldview Reconstruction*
+
+Before scoring, reconstruct the worldview faithfully:
+- What does it claim exists?
+- How does it explain causation?
+- What is its account of morality?
+- What are its central commitments?
+
+**In the tool:** Trinity metrics — BFI, CA, IP, ES, LS, MS, PS. The goal is understanding, not agreement.
+""")
+
+    with col3:
+        st.markdown("### Phase 2")
+        st.info("**How well does it perform?**")
+        st.markdown("""
+*Utility & Calibration*
+
+Only after faithful reconstruction do we evaluate:
+- How coherent is it?
+- How explanatory is it?
+- What governance capacity does it have?
+- What trade-offs does it make?
+
+**In the tool:** The YPA levers — CCI, EDB, PF-I, PF-E, AR, MG — and the console scores.
+""")
+
+    st.markdown("---")
+
+    st.markdown("### Why the sequence is non-negotiable")
+    st.markdown("""
+Collapsing any two phases destroys the information.
+
+> *"CT is false, therefore Moral Generativity = 0."*
+
+This jumps directly from an external objection (Phase 0 bias) to a Phase 2 score without completing Phase 1. The worldview was never reconstructed — it was caricatured and condemned.
+
+> *"MdN is true, therefore Governance = 10."*
+
+Same mistake in reverse. The protocol intentionally slows this down. **First who. Then what. Only then how well.**
+""")
+
+    st.success("""
+**The protocol isn't trying to decide who wins before understanding what each side is actually saying.**
+
+That is the methodological commitment.
+""")
+
+    st.markdown("""
+```
+Phase 0 — WHO is judging?
+     ↓
+Phase 1 — WHAT is being judged?
+     ↓
+Phase 2 — HOW WELL does it perform?
+```
+""")
+
+    st.info("""
+**Every evaluation requires an evaluator, an object of evaluation, and evaluation criteria.**
+
+**CFA simply refuses to let those three be smuggled together.**
+
+This isn't just a protocol for CFA — it is a general structure for careful inquiry. The framework that cannot separate these three is the framework that cannot be held accountable.
+""")
+
+    st.markdown("---")
+
+    # IX. The Closing Covenant
+    st.markdown("## IX. The Closing Covenant")
     st.markdown("""
 This manifesto is not aspirational marketing. It is a **binding operational commitment**.
 

@@ -172,6 +172,25 @@ def render():
     
     st.write("You can watch, in real time, how changing your assumptions reshapes your philosophical landscape.")
     
+    # The Three Questions
+    st.markdown("---")
+    with st.expander("📐 **The Three Questions — CFA's Core Discipline**", expanded=False):
+        st.markdown("""
+Every evaluation has three moving parts. Most systems smuggle all three together. CFA refuses.
+
+| | Question | What it declares |
+|---|---|---|
+| **Phase 0** | *Who is judging?* | Evaluator identity, framework, biases, assigned lens |
+| **Phase 1** | *What is being judged?* | The worldview — faithfully reconstructed, not caricatured |
+| **Phase 2** | *How well does it perform?* | Utility scoring against declared criteria |
+
+Collapsing any two of these destroys the information. Saying *"CT is false, therefore Moral Generativity = 0"* skips Phase 1 entirely. Saying *"MdN is true, therefore Governance = 10"* commits the same mistake in reverse.
+
+> **Every evaluation requires an evaluator, an object of evaluation, and evaluation criteria. CFA simply refuses to let those three be smuggled together.**
+
+→ Full breakdown in the [Verbose Manifesto](/)
+""")
+
     # The Field We Just Opened
     st.markdown("---")
     st.markdown("## 🧠 The Field We Just Opened")
