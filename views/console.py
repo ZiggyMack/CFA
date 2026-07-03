@@ -297,6 +297,37 @@ def _store_audit_baseline(prefix: str, levers: dict, calibration_opponent) -> No
         st.session_state.pop(f"{prefix}_audit_baseline", None)
 
 
+def _refresh_calibration_status():
+    """Refresh calibration_opponent and has_audit_data for both frameworks.
+
+    Called when Scoring Mode changes. Only touches status keys — does NOT
+    reload lever slider values (those only change via worldview dropdown
+    callbacks or the H2H button). Avoids the worldview-reset bug that occurs
+    when the full on_change callbacks are called before the selectboxes render.
+    """
+    fa_name    = st.session_state.get("fa_name", "")
+    fb_name    = st.session_state.get("fb_name", "")
+    audit_mode = st.session_state.get("audit_mode", "Bias")
+
+    for prefix, name, opponent in [("fa", fa_name, fb_name), ("fb", fb_name, fa_name)]:
+        if not name:
+            continue
+        try:
+            use_matchup = audit_mode == "Audit" and bool(opponent)
+            ypa = get_ypa_data(name, opponent=opponent) if use_matchup else get_ypa_data(name)
+            cal_opp = ypa.get("calibration_opponent")
+            st.session_state[f"{prefix}_calibration_opponent"] = cal_opp
+            st.session_state[f"{prefix}_has_audit_data"]       = ypa.get("has_audit_data", False)
+            # Only store the baseline when calibrated levers are genuinely loaded;
+            # here we just note whether calibration exists, not reload sliders.
+            if cal_opp:
+                st.session_state[f"{prefix}_audit_baseline"] = dict(ypa["levers"])
+            else:
+                st.session_state.pop(f"{prefix}_audit_baseline", None)
+        except Exception:
+            pass
+
+
 def _on_fa_worldview_change():
     name = st.session_state.get("fa_name", "")
     opponent = st.session_state.get("fb_name", "")
@@ -722,11 +753,12 @@ def render():
     )
     if audit_mode != st.session_state.get("audit_mode"):
         st.session_state["audit_mode"] = audit_mode
-        # Re-evaluate both frameworks with the new mode so lever values and
-        # calibration status update immediately (worldview dropdowns haven't
-        # changed, so their on_change callbacks won't fire on their own).
-        _on_fa_worldview_change()
-        _on_fb_worldview_change()
+        # Update calibration status without touching lever slider values.
+        # Calling the full worldview callbacks here caused worldview names
+        # to reset because the selectboxes haven't rendered yet in this
+        # script cycle. Lever values only reload via the worldview dropdowns
+        # (mode-aware callbacks) or the H2H button.
+        _refresh_calibration_status()
         st.rerun()
 
     # Crux Impasses
