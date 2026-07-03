@@ -771,11 +771,6 @@ def create_lever_radar_comparison(
             ),
             bgcolor='rgba(248, 249, 250, 0.8)'
         ),
-        title=dict(
-            text='Lever Profile Comparison',
-            font=dict(size=16, family='Georgia, serif'),
-            x=0.5
-        ),
         legend=dict(
             orientation='h',
             yanchor='bottom',
