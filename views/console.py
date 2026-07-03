@@ -404,11 +404,36 @@ def render():
     """Render console"""
 
     # Deferred lever reload: triggered when Scoring Mode changes.
-    # Must run first — session state is fully stable here (all widget keys
-    # are loaded from the previous cycle before any widgets render).
+    # Reads worldview names once, inline — avoids calling the on_change
+    # callbacks which have cross-update side effects that corrupt fa_name/fb_name.
+    # Extra st.rerun() required so slider widgets pick up the new session state
+    # values rather than their internal state from the previous cycle.
     if st.session_state.pop("_pending_lever_reload", False):
-        _on_fa_worldview_change()
-        _on_fb_worldview_change()
+        _rl_fa   = st.session_state.get("fa_name", "")
+        _rl_fb   = st.session_state.get("fb_name", "")
+        _rl_mode = st.session_state.get("audit_mode", "Bias")
+        for _rl_prefix, _rl_name, _rl_opp in [("fa", _rl_fa, _rl_fb), ("fb", _rl_fb, _rl_fa)]:
+            if not _rl_name:
+                continue
+            try:
+                _use_match = _rl_mode == "Audit" and bool(_rl_opp)
+                _rl_ypa = get_ypa_data(_rl_name, opponent=_rl_opp) if _use_match else get_ypa_data(_rl_name)
+                st.session_state[f"{_rl_prefix}_ax"]  = _rl_ypa["bf_i"]["axioms"]
+                st.session_state[f"{_rl_prefix}_db"]  = _rl_ypa["bf_i"]["debts"]
+                st.session_state[f"{_rl_prefix}_ad"]  = _rl_ypa["admits_limits"]
+                st.session_state[f"{_rl_prefix}_cci"] = _rl_ypa["levers"]["CCI"]
+                st.session_state[f"{_rl_prefix}_edb"] = _rl_ypa["levers"]["EDB"]
+                st.session_state[f"{_rl_prefix}_pfi"] = _rl_ypa["levers"]["PF_instrumental"]
+                st.session_state[f"{_rl_prefix}_pfe"] = _rl_ypa["levers"]["PF_existential"]
+                st.session_state[f"{_rl_prefix}_ar"]  = _rl_ypa["levers"]["AR"]
+                st.session_state[f"{_rl_prefix}_mg"]  = _rl_ypa["levers"]["MG"]
+                _rl_cal_opp = _rl_ypa.get("calibration_opponent")
+                st.session_state[f"{_rl_prefix}_calibration_opponent"] = _rl_cal_opp
+                st.session_state[f"{_rl_prefix}_has_audit_data"]       = _rl_ypa.get("has_audit_data", False)
+                _store_audit_baseline(_rl_prefix, _rl_ypa["levers"], _rl_cal_opp)
+            except Exception:
+                pass
+        st.rerun()
 
     # Initialize session state (avoids Session State API warnings)
     # Framework names
