@@ -323,7 +323,7 @@ def _get_audit_status(prefix: str, wv_name: str, opp_name: str) -> str:
     except Exception:
         return "📋 Unaudited"
     if not ypa.get("calibration_opponent"):
-        return "📊 Audit TBD (bias data used)" if ypa.get("has_audit_data") else "📋 Unaudited"
+        return "📊 Audit TBD (bias data used)" if ypa.get("has_audit_data") else "📋 Unaudited (bias data used)"
     calibrated = ypa["levers"]
     sliders_match = all(
         abs(st.session_state.get(f"{prefix}_{_LEVER_SS_KEYS[k]}", 0.0) - v) <= 0.005
