@@ -791,7 +791,7 @@ def render():
     swap_col, _ = st.columns([1, 5])
     with swap_col:
         if st.button("↔ Swap A & B", key="swap_ab_btn", help="Swap all Framework A and B values"):
-            keys = ["name", "ax", "db", "ad", "cci", "edb", "pfi", "pfe", "ar", "mg"]
+            keys = ["name", "ax", "db", "ad", "cci", "edb", "pfi", "pfe", "ar", "mg", "calibration_opponent", "has_audit_data"]
             for k in keys:
                 fa_k, fb_k = f"fa_{k}", f"fb_{k}"
                 fa_val = st.session_state.get(fa_k)
