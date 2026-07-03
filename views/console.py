@@ -1158,6 +1158,7 @@ Pre-audit pipeline. Values are preliminary.
                 "base_sum_b": sum(_yb_base_levers.values()),
             }
         ), unsafe_allow_html=True)
+        st.caption("*Modifier effect row: 🟢 green = modifiers helped · 🔴 red = modifiers hurt · gray = no change from defaults*")
 
         # NEW: Sensitivity Heatmap
         st.markdown("### 🌡️ Toggle Sensitivity Heatmap")
