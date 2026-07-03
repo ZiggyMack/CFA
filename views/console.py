@@ -304,7 +304,18 @@ def _get_audit_status(prefix: str, wv_name: str, opp_name: str) -> str:
     This makes it immune to the Streamlit widget-reconciliation worldview reset bug.
     """
     if st.session_state.get("audit_mode", "Audit") == "Bias":
-        return "🎯 Prior (canonical, pre-experiment)"
+        if not wv_name:
+            return "🎯 Prior (canonical, pre-experiment)"
+        try:
+            _canonical = get_ypa_data(wv_name)["levers"]  # no opponent → canonical values
+        except Exception:
+            return "🎯 Prior (canonical, pre-experiment)"
+        _bias_match = all(
+            abs(st.session_state.get(f"{prefix}_{_LEVER_SS_KEYS[k]}", 0.0) - v) <= 0.005
+            for k, v in _canonical.items()
+            if k in _LEVER_SS_KEYS
+        )
+        return "🎯 Prior (canonical, pre-experiment)" if _bias_match else "✏️ Customized (from Prior)"
     if not wv_name or not opp_name:
         return "📋 Unaudited"
     try:
