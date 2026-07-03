@@ -742,6 +742,21 @@ def render():
         st.session_state["audit_mode"] = audit_mode
         st.rerun()
 
+    with st.sidebar.expander("🏷️ Badge guide"):
+        st.markdown("""
+**✅ Adversarially Audited**
+Calibrated for this specific matchup via Trinity experiment.
+
+**✏️ Customized**
+You've moved a slider from the loaded baseline.
+
+**📊 Audit TBD (bias data used)**
+Worldview has audit history but not for this pairing yet — canonical priors shown.
+
+**📋 New profile**
+Pre-audit pipeline. Values are preliminary.
+""")
+
     # Crux Impasses
     if "include_crux" not in st.session_state:
         st.session_state["include_crux"] = True

@@ -885,7 +885,52 @@ launch_both.bat     # Both simultaneously
             reveals its niche. The peer-review process ensures these patterns are adversarially validated.
             </div>
         """, unsafe_allow_html=True)
-    
+
+        st.markdown("---")
+        st.markdown("### 🏷️ Audit Status Badges")
+        st.markdown("*Every framework panel shows a provenance badge — a mini audit trail telling you exactly what data you're looking at.*")
+
+        st.markdown("""
+            <div class="tip-box">
+            <b>✅ Adversarially Audited</b><br/>
+            Calibrated lever values for this specific matchup, loaded from a completed Trinity experiment.
+            The scores have been stress-tested by opposing auditors. This is the gold standard.
+            </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+            <div class="tip-box">
+            <b>✏️ Customized</b><br/>
+            You've moved at least one slider away from the loaded values — whether that was an audited baseline
+            or canonical priors. The comparison now reflects your manual configuration.
+            </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+            <div class="tip-box">
+            <b>📊 Audit TBD (bias data used)</b><br/>
+            This worldview has entered the audit pipeline — at least one Trinity session exists for it — but
+            not for this specific matchup yet. The values shown are canonical (self-reported) priors:
+            deliberate and considered, but not yet adversarially stress-tested against this opponent.
+            </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+            <div class="tip-box">
+            <b>📋 New profile</b><br/>
+            This worldview hasn't entered the audit pipeline yet. It may be freshly scaffolded or still
+            being developed. Values exist but their depth and sourcing are unverified — treat as preliminary.
+            </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+            <div class="tip-box">
+            💡 <b>The progression:</b> New profile → Audit TBD → Adversarially Audited reflects a worldview's
+            journey through the CFA research pipeline. Badges tell you where each framework currently sits —
+            not a quality judgment, but a provenance signal.
+            </div>
+        """, unsafe_allow_html=True)
+
     # ========================================================================
     # TAB 6: PRO TIPS
     # ========================================================================
