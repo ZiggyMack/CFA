@@ -187,9 +187,10 @@ Every evaluation has three moving parts. Most systems smuggle all three together
 Collapsing any two of these destroys the information. Saying *"CT is false, therefore Moral Generativity = 0"* skips Phase 1 entirely. Saying *"MdN is true, therefore Governance = 10"* commits the same mistake in reverse.
 
 > **Every evaluation requires an evaluator, an object of evaluation, and evaluation criteria. CFA simply refuses to let those three be smuggled together.**
-
-→ Full breakdown in the [Verbose Manifesto](/)
 """)
+        if st.button("→ Full breakdown in the Verbose Manifesto", key="three_q_manifesto_link"):
+            st.session_state.page = 'verbose_manifesto'
+            st.rerun()
 
     # The Field We Just Opened
     st.markdown("---")
