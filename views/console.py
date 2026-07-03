@@ -297,35 +297,29 @@ def _store_audit_baseline(prefix: str, levers: dict, calibration_opponent) -> No
         st.session_state.pop(f"{prefix}_audit_baseline", None)
 
 
-def _refresh_calibration_status():
-    """Refresh calibration_opponent and has_audit_data for both frameworks.
+def _get_audit_status(prefix: str, wv_name: str, opp_name: str) -> str:
+    """Compute the 4-state audit caption by comparing current sliders against YAML live.
 
-    Called when Scoring Mode changes. Only touches status keys — does NOT
-    reload lever slider values (those only change via worldview dropdown
-    callbacks or the H2H button). Avoids the worldview-reset bug that occurs
-    when the full on_change callbacks are called before the selectboxes render.
+    No cached calibration_opponent state required — reads YAML fresh each render.
+    This makes it immune to the Streamlit widget-reconciliation worldview reset bug.
     """
-    fa_name    = st.session_state.get("fa_name", "")
-    fb_name    = st.session_state.get("fb_name", "")
-    audit_mode = st.session_state.get("audit_mode", "Bias")
-
-    for prefix, name, opponent in [("fa", fa_name, fb_name), ("fb", fb_name, fa_name)]:
-        if not name:
-            continue
-        try:
-            use_matchup = audit_mode == "Audit" and bool(opponent)
-            ypa = get_ypa_data(name, opponent=opponent) if use_matchup else get_ypa_data(name)
-            cal_opp = ypa.get("calibration_opponent")
-            st.session_state[f"{prefix}_calibration_opponent"] = cal_opp
-            st.session_state[f"{prefix}_has_audit_data"]       = ypa.get("has_audit_data", False)
-            # Only store the baseline when calibrated levers are genuinely loaded;
-            # here we just note whether calibration exists, not reload sliders.
-            if cal_opp:
-                st.session_state[f"{prefix}_audit_baseline"] = dict(ypa["levers"])
-            else:
-                st.session_state.pop(f"{prefix}_audit_baseline", None)
-        except Exception:
-            pass
+    if st.session_state.get("audit_mode", "Audit") == "Bias":
+        return "🎯 Prior (canonical, pre-experiment)"
+    if not wv_name or not opp_name:
+        return "📋 Unaudited"
+    try:
+        ypa = get_ypa_data(wv_name, opponent=opp_name)
+    except Exception:
+        return "📋 Unaudited"
+    if not ypa.get("calibration_opponent"):
+        return "📊 Not audited for this matchup" if ypa.get("has_audit_data") else "📋 Unaudited"
+    calibrated = ypa["levers"]
+    sliders_match = all(
+        abs(st.session_state.get(f"{prefix}_{_LEVER_SS_KEYS[k]}", 0.0) - v) <= 0.005
+        for k, v in calibrated.items()
+        if k in _LEVER_SS_KEYS
+    )
+    return "✅ Adversarially Audited" if sliders_match else "✏️ Customized (from Audited)"
 
 
 def _on_fa_worldview_change():
@@ -403,88 +397,38 @@ def _on_fb_worldview_change():
 def render():
     """Render console"""
 
-    # Deferred lever reload: triggered when Scoring Mode changes.
-    # Reads worldview names once, inline — avoids calling the on_change
-    # callbacks which have cross-update side effects that corrupt fa_name/fb_name.
-    # Extra st.rerun() required so slider widgets pick up the new session state
-    # values rather than their internal state from the previous cycle.
-    if st.session_state.pop("_pending_lever_reload", False):
-        _rl_fa   = st.session_state.get("fa_name", "")
-        _rl_fb   = st.session_state.get("fb_name", "")
-        _rl_mode = st.session_state.get("audit_mode", "Bias")
-        for _rl_prefix, _rl_name, _rl_opp in [("fa", _rl_fa, _rl_fb), ("fb", _rl_fb, _rl_fa)]:
-            if not _rl_name:
-                continue
-            try:
-                _use_match = _rl_mode == "Audit" and bool(_rl_opp)
-                _rl_ypa = get_ypa_data(_rl_name, opponent=_rl_opp) if _use_match else get_ypa_data(_rl_name)
-                st.session_state[f"{_rl_prefix}_ax"]  = _rl_ypa["bf_i"]["axioms"]
-                st.session_state[f"{_rl_prefix}_db"]  = _rl_ypa["bf_i"]["debts"]
-                st.session_state[f"{_rl_prefix}_ad"]  = _rl_ypa["admits_limits"]
-                st.session_state[f"{_rl_prefix}_cci"] = _rl_ypa["levers"]["CCI"]
-                st.session_state[f"{_rl_prefix}_edb"] = _rl_ypa["levers"]["EDB"]
-                st.session_state[f"{_rl_prefix}_pfi"] = _rl_ypa["levers"]["PF_instrumental"]
-                st.session_state[f"{_rl_prefix}_pfe"] = _rl_ypa["levers"]["PF_existential"]
-                st.session_state[f"{_rl_prefix}_ar"]  = _rl_ypa["levers"]["AR"]
-                st.session_state[f"{_rl_prefix}_mg"]  = _rl_ypa["levers"]["MG"]
-                _rl_cal_opp = _rl_ypa.get("calibration_opponent")
-                st.session_state[f"{_rl_prefix}_calibration_opponent"] = _rl_cal_opp
-                st.session_state[f"{_rl_prefix}_has_audit_data"]       = _rl_ypa.get("has_audit_data", False)
-                _store_audit_baseline(_rl_prefix, _rl_ypa["levers"], _rl_cal_opp)
-            except Exception:
-                pass
-        st.rerun()
+    # audit_mode must be initialized first — lever init below is mode-aware
+    if "audit_mode" not in st.session_state:
+        st.session_state["audit_mode"] = "Audit"
 
     # Initialize session state (avoids Session State API warnings)
-    # Framework names
     if "fa_name" not in st.session_state:
         st.session_state["fa_name"] = MDN_DEFAULT["name"]
     if "fb_name" not in st.session_state:
         st.session_state["fb_name"] = CT_DEFAULT["name"]
 
-    # Framework A - BFI
-    if "fa_ax" not in st.session_state:
-        st.session_state["fa_ax"] = MDN_DEFAULT["bf_i"]["axioms"]
-    if "fa_db" not in st.session_state:
-        st.session_state["fa_db"] = MDN_DEFAULT["bf_i"]["debts"]
-    if "fa_ad" not in st.session_state:
-        st.session_state["fa_ad"] = True
-
-    # Framework A - Levers
+    # On first load, initialize levers mode-aware so Audit mode shows ✅ immediately
+    # without requiring an H2H click or dropdown re-select.
     if "fa_cci" not in st.session_state:
-        st.session_state["fa_cci"] = MDN_DEFAULT["levers"]["CCI"]
-    if "fa_edb" not in st.session_state:
-        st.session_state["fa_edb"] = MDN_DEFAULT["levers"]["EDB"]
-    if "fa_pfi" not in st.session_state:
-        st.session_state["fa_pfi"] = MDN_DEFAULT["levers"]["PF_instrumental"]
-    if "fa_pfe" not in st.session_state:
-        st.session_state["fa_pfe"] = MDN_DEFAULT["levers"]["PF_existential"]
-    if "fa_ar" not in st.session_state:
-        st.session_state["fa_ar"] = MDN_DEFAULT["levers"]["AR"]
-    if "fa_mg" not in st.session_state:
-        st.session_state["fa_mg"] = MDN_DEFAULT["levers"]["MG"]
-
-    # Framework B - BFI
-    if "fb_ax" not in st.session_state:
-        st.session_state["fb_ax"] = CT_DEFAULT["bf_i"]["axioms"]
-    if "fb_db" not in st.session_state:
-        st.session_state["fb_db"] = CT_DEFAULT["bf_i"]["debts"]
-    if "fb_ad" not in st.session_state:
-        st.session_state["fb_ad"] = True
-
-    # Framework B - Levers
-    if "fb_cci" not in st.session_state:
-        st.session_state["fb_cci"] = CT_DEFAULT["levers"]["CCI"]
-    if "fb_edb" not in st.session_state:
-        st.session_state["fb_edb"] = CT_DEFAULT["levers"]["EDB"]
-    if "fb_pfi" not in st.session_state:
-        st.session_state["fb_pfi"] = CT_DEFAULT["levers"]["PF_instrumental"]
-    if "fb_pfe" not in st.session_state:
-        st.session_state["fb_pfe"] = CT_DEFAULT["levers"]["PF_existential"]
-    if "fb_ar" not in st.session_state:
-        st.session_state["fb_ar"] = CT_DEFAULT["levers"]["AR"]
-    if "fb_mg" not in st.session_state:
-        st.session_state["fb_mg"] = CT_DEFAULT["levers"]["MG"]
+        _init_fa   = st.session_state["fa_name"]
+        _init_fb   = st.session_state["fb_name"]
+        _use_match = st.session_state["audit_mode"] == "Audit"
+        try:
+            _ypa_a = get_ypa_data(_init_fa, opponent=_init_fb) if _use_match else get_ypa_data(_init_fa)
+            _ypa_b = get_ypa_data(_init_fb, opponent=_init_fa) if _use_match else get_ypa_data(_init_fb)
+        except Exception:
+            _ypa_a = MDN_DEFAULT
+            _ypa_b = CT_DEFAULT
+        for _pfx, _ypa in [("fa", _ypa_a), ("fb", _ypa_b)]:
+            st.session_state[f"{_pfx}_ax"]  = _ypa["bf_i"]["axioms"]
+            st.session_state[f"{_pfx}_db"]  = _ypa["bf_i"]["debts"]
+            st.session_state[f"{_pfx}_ad"]  = _ypa["admits_limits"]
+            st.session_state[f"{_pfx}_cci"] = _ypa["levers"]["CCI"]
+            st.session_state[f"{_pfx}_edb"] = _ypa["levers"]["EDB"]
+            st.session_state[f"{_pfx}_pfi"] = _ypa["levers"]["PF_instrumental"]
+            st.session_state[f"{_pfx}_pfe"] = _ypa["levers"]["PF_existential"]
+            st.session_state[f"{_pfx}_ar"]  = _ypa["levers"]["AR"]
+            st.session_state[f"{_pfx}_mg"]  = _ypa["levers"]["MG"]
     
     # Enhanced CSS for card-based layout and Ledger aesthetic
     st.markdown("""
@@ -774,23 +718,17 @@ def render():
 
     # Scoring Mode
     if "audit_mode" not in st.session_state:
-        st.session_state["audit_mode"] = "Bias"
+        st.session_state["audit_mode"] = "Audit"
     audit_mode_options = ["Bias", "Audit"]
     audit_mode = st.sidebar.selectbox(
         "Scoring Mode",
         audit_mode_options,
-        index=audit_mode_options.index(st.session_state.get("audit_mode", "Bias")),
+        index=audit_mode_options.index(st.session_state.get("audit_mode", "Audit")),
         key="audit_mode_selector",
         help="**Bias Mode (🎯):** Full bias scoring — auditors apply their native lenses. **Audit Mode (🔍):** Adversarial audit — scores reflect Trinity convergence (display only for now; YPA wiring coming).",
     )
     if audit_mode != st.session_state.get("audit_mode"):
         st.session_state["audit_mode"] = audit_mode
-        # Defer lever reload to the top of the next render() call.
-        # Calling the worldview callbacks HERE (before st.rerun) caused
-        # worldview names to reset because widget state isn't stable yet
-        # in the current script cycle. The flag is consumed at the top of
-        # render() where session state is fully settled.
-        st.session_state["_pending_lever_reload"] = True
         st.rerun()
 
     # Crux Impasses
@@ -935,19 +873,7 @@ def render():
     # FRAMEWORK A
     with col1:
         st.markdown("### 📘 Framework A")
-        _fa_opp = st.session_state.get("fa_calibration_opponent")
-        _fa_audited = st.session_state.get("fa_has_audit_data", False)
-        if st.session_state.get("audit_mode", "Bias") == "Bias":
-            st.caption("🎯 Prior (canonical, pre-experiment)")
-        elif _fa_opp:
-            if _is_drifted("fa"):
-                st.caption("✏️ Customized (from Audited)")
-            else:
-                st.caption("✅ Adversarially Audited")
-        elif _fa_audited:
-            st.caption("📊 Not audited for this matchup")
-        else:
-            st.caption("📋 Unaudited")
+        st.caption(_get_audit_status("fa", st.session_state.get("fa_name", ""), st.session_state.get("fb_name", "")))
         fa_name = st.selectbox("Worldview", options=_worldview_options(), key="fa_name", on_change=_on_fa_worldview_change, format_func=_wv_label)
         
         with st.expander("🔢 BFI", expanded=False):
@@ -1031,19 +957,7 @@ def render():
     # FRAMEWORK B
     with col2:
         st.markdown("### 📕 Framework B")
-        _fb_opp = st.session_state.get("fb_calibration_opponent")
-        _fb_audited = st.session_state.get("fb_has_audit_data", False)
-        if st.session_state.get("audit_mode", "Bias") == "Bias":
-            st.caption("🎯 Prior (canonical, pre-experiment)")
-        elif _fb_opp:
-            if _is_drifted("fb"):
-                st.caption("✏️ Customized (from Audited)")
-            else:
-                st.caption("✅ Adversarially Audited")
-        elif _fb_audited:
-            st.caption("📊 Not audited for this matchup")
-        else:
-            st.caption("📋 Unaudited")
+        st.caption(_get_audit_status("fb", st.session_state.get("fb_name", ""), st.session_state.get("fa_name", "")))
         fb_name = st.selectbox("Worldview", options=_worldview_options(), key="fb_name", on_change=_on_fb_worldview_change, format_func=_wv_label)
         
         with st.expander("🔢 BFI", expanded=False):
