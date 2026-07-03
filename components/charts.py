@@ -165,12 +165,13 @@ def create_sensitivity_heatmap(
 
 def _cfg_pill(label: str, is_default: bool = True) -> str:
     """Render a single calibration pill badge."""
-    bg = "rgba(80,100,130,0.35)" if is_default else "rgba(200,120,30,0.45)"
-    border = "#4a6080" if is_default else "#c87820"
+    bg     = "#e2e8f0" if is_default else "#fed7aa"
+    border = "#94a3b8" if is_default else "#f97316"
+    color  = "#334155" if is_default else "#7c2d12"
     return (
         f'<span style="display:inline-block;padding:2px 8px;margin:2px 3px;'
         f'border-radius:10px;font-size:0.72em;border:1px solid {border};'
-        f'background:{bg};color:#d0d8e8;letter-spacing:0.03em;">{label}</span>'
+        f'background:{bg};color:{color};letter-spacing:0.03em;">{label}</span>'
     )
 
 
@@ -205,7 +206,7 @@ def _cfg_pill_strip(cfg: dict) -> str:
     ]
     return (
         '<div style="margin-top:8px;text-align:center;">'
-        '<span style="font-size:0.72em;color:#7080a0;margin-right:4px;">⚙️ YPA calc:</span>'
+        '<span style="font-size:0.72em;color:#475569;font-weight:600;margin-right:4px;">⚙️ YPA calc:</span>'
         + "".join(pills)
         + "</div>"
     )
