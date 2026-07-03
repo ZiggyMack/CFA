@@ -593,94 +593,56 @@ def render():
 
     st.sidebar.markdown("---")
 
-    # Head-to-Head Pairings (sets both A & B atomically in one click)
+    # Head-to-Head Pairings — button only appears when BOTH directions have
+    # matchup-calibrated lever data (levers_by_matchup.vs_{opponent} in each YAML).
+    # Add future pairings to _HH_PAIRS; readiness is auto-detected, no other changes needed.
+    _HH_PAIRS = [
+        ("Classical Theism",          "Methodological Naturalism", "📕 CT  vs  📘 MdN", "pair_ct_mdn"),
+        ("Classical Theism",          "Process Theology",          "📕 CT  vs  🌊 PT",  "pair_ct_pt"),
+        ("Process Theology",          "Methodological Naturalism", "🌊 PT  vs  📘 MdN", "pair_pt_mdn"),
+        ("Classical Theism",          "Gnosticism",                "📕 CT  vs  🌀 GN",  "pair_ct_gn"),
+        ("Methodological Naturalism", "Gnosticism",                "📘 MdN vs  🌀 GN",  "pair_mdn_gn"),
+        ("Process Theology",          "Gnosticism",                "🌊 PT  vs  🌀 GN",  "pair_pt_gn"),
+    ]
+
+    _ready_pairs = []
+    for _wv_a, _wv_b, _lbl, _key in _HH_PAIRS:
+        try:
+            _chk_a = get_ypa_data(_wv_a, opponent=_wv_b)
+            _chk_b = get_ypa_data(_wv_b, opponent=_wv_a)
+            if _chk_a.get("calibration_opponent") and _chk_b.get("calibration_opponent"):
+                _ready_pairs.append((_wv_a, _wv_b, _lbl, _key))
+        except Exception:
+            pass
+
     with st.sidebar.expander("🎯 Head-to-Head Pairings", expanded=True):
         st.markdown("**Head-to-Head Pairings:**")
         st.caption("*Sets both A & B in one click*")
-        pair_col1, pair_col2, pair_col3 = st.columns(3)
-        with pair_col1:
-            if st.button("📕 CT  vs  📘 MdN", key="pair_ct_mdn", use_container_width=True, help="Load CT → A, MdN → B (matchup-calibrated levers)"):
-                _ct = get_ypa_data("Classical Theism", opponent="Methodological Naturalism")
-                _mdn = get_ypa_data("Methodological Naturalism", opponent="Classical Theism")
-                st.session_state["fa_name"] = _ct["name"]
-                st.session_state["fa_ax"]  = _ct["bf_i"]["axioms"]
-                st.session_state["fa_db"]  = _ct["bf_i"]["debts"]
-                st.session_state["fa_ad"]  = _ct["admits_limits"]
-                st.session_state["fa_cci"] = _ct["levers"]["CCI"]
-                st.session_state["fa_edb"] = _ct["levers"]["EDB"]
-                st.session_state["fa_pfi"] = _ct["levers"]["PF_instrumental"]
-                st.session_state["fa_pfe"] = _ct["levers"]["PF_existential"]
-                st.session_state["fa_ar"]  = _ct["levers"]["AR"]
-                st.session_state["fa_mg"]  = _ct["levers"]["MG"]
-                st.session_state["fa_calibration_opponent"] = _ct.get("calibration_opponent")
-                st.session_state["fb_name"] = _mdn["name"]
-                st.session_state["fb_ax"]  = _mdn["bf_i"]["axioms"]
-                st.session_state["fb_db"]  = _mdn["bf_i"]["debts"]
-                st.session_state["fb_ad"]  = _mdn["admits_limits"]
-                st.session_state["fb_cci"] = _mdn["levers"]["CCI"]
-                st.session_state["fb_edb"] = _mdn["levers"]["EDB"]
-                st.session_state["fb_pfi"] = _mdn["levers"]["PF_instrumental"]
-                st.session_state["fb_pfe"] = _mdn["levers"]["PF_existential"]
-                st.session_state["fb_ar"]  = _mdn["levers"]["AR"]
-                st.session_state["fb_mg"]  = _mdn["levers"]["MG"]
-                st.session_state["fb_calibration_opponent"] = _mdn.get("calibration_opponent")
-                st.rerun()
-        with pair_col2:
-            if st.button("📕 CT  vs  🌊 PT", key="pair_ct_pt", use_container_width=True, help="Load CT → A, PT → B (PT calibrated vs CT)"):
-                _ct = get_ypa_data("Classical Theism", opponent="Process Theology")
-                _pt = get_ypa_data("Process Theology", opponent="Classical Theism")
-                st.session_state["fa_name"] = _ct["name"]
-                st.session_state["fa_ax"]  = _ct["bf_i"]["axioms"]
-                st.session_state["fa_db"]  = _ct["bf_i"]["debts"]
-                st.session_state["fa_ad"]  = _ct["admits_limits"]
-                st.session_state["fa_cci"] = _ct["levers"]["CCI"]
-                st.session_state["fa_edb"] = _ct["levers"]["EDB"]
-                st.session_state["fa_pfi"] = _ct["levers"]["PF_instrumental"]
-                st.session_state["fa_pfe"] = _ct["levers"]["PF_existential"]
-                st.session_state["fa_ar"]  = _ct["levers"]["AR"]
-                st.session_state["fa_mg"]  = _ct["levers"]["MG"]
-                st.session_state["fa_calibration_opponent"] = _ct.get("calibration_opponent")
-                st.session_state["fb_name"] = _pt["name"]
-                st.session_state["fb_ax"]  = _pt["bf_i"]["axioms"]
-                st.session_state["fb_db"]  = _pt["bf_i"]["debts"]
-                st.session_state["fb_ad"]  = _pt["admits_limits"]
-                st.session_state["fb_cci"] = _pt["levers"]["CCI"]
-                st.session_state["fb_edb"] = _pt["levers"]["EDB"]
-                st.session_state["fb_pfi"] = _pt["levers"]["PF_instrumental"]
-                st.session_state["fb_pfe"] = _pt["levers"]["PF_existential"]
-                st.session_state["fb_ar"]  = _pt["levers"]["AR"]
-                st.session_state["fb_mg"]  = _pt["levers"]["MG"]
-                st.session_state["fb_calibration_opponent"] = _pt.get("calibration_opponent")
-                st.rerun()
-        with pair_col3:
-            if st.button("🌊 PT  vs  📘 MdN", key="pair_pt_mdn", use_container_width=True, help="Load PT → A, MdN → B (canonical until PT vs MdN results land)"):
-                _pt = get_ypa_data("Process Theology", opponent="Methodological Naturalism")
-                _mdn = get_ypa_data("Methodological Naturalism", opponent="Process Theology")
-                st.session_state["fa_name"] = _pt["name"]
-                st.session_state["fa_ax"]  = _pt["bf_i"]["axioms"]
-                st.session_state["fa_db"]  = _pt["bf_i"]["debts"]
-                st.session_state["fa_ad"]  = _pt["admits_limits"]
-                st.session_state["fa_cci"] = _pt["levers"]["CCI"]
-                st.session_state["fa_edb"] = _pt["levers"]["EDB"]
-                st.session_state["fa_pfi"] = _pt["levers"]["PF_instrumental"]
-                st.session_state["fa_pfe"] = _pt["levers"]["PF_existential"]
-                st.session_state["fa_ar"]  = _pt["levers"]["AR"]
-                st.session_state["fa_mg"]  = _pt["levers"]["MG"]
-                st.session_state["fa_calibration_opponent"] = _pt.get("calibration_opponent")
-                st.session_state["fb_name"] = _mdn["name"]
-                st.session_state["fb_ax"]  = _mdn["bf_i"]["axioms"]
-                st.session_state["fb_db"]  = _mdn["bf_i"]["debts"]
-                st.session_state["fb_ad"]  = _mdn["admits_limits"]
-                st.session_state["fb_cci"] = _mdn["levers"]["CCI"]
-                st.session_state["fb_edb"] = _mdn["levers"]["EDB"]
-                st.session_state["fb_pfi"] = _mdn["levers"]["PF_instrumental"]
-                st.session_state["fb_pfe"] = _mdn["levers"]["PF_existential"]
-                st.session_state["fb_ar"]  = _mdn["levers"]["AR"]
-                st.session_state["fb_mg"]  = _mdn["levers"]["MG"]
-                st.session_state["fb_calibration_opponent"] = _mdn.get("calibration_opponent")
-                st.rerun()
+        if not _ready_pairs:
+            st.caption("*No fully calibrated pairings yet.*")
+        else:
+            _pair_cols = st.columns(len(_ready_pairs))
+            for _i, (_wv_a, _wv_b, _lbl, _key) in enumerate(_ready_pairs):
+                with _pair_cols[_i]:
+                    if st.button(_lbl, key=_key, use_container_width=True,
+                                 help="Both directions calibrated — sets A & B with matchup-specific levers"):
+                        _data_a = get_ypa_data(_wv_a, opponent=_wv_b)
+                        _data_b = get_ypa_data(_wv_b, opponent=_wv_a)
+                        for _ss, _d in [("fa", _data_a), ("fb", _data_b)]:
+                            st.session_state[f"{_ss}_name"] = _d["name"]
+                            st.session_state[f"{_ss}_ax"]   = _d["bf_i"]["axioms"]
+                            st.session_state[f"{_ss}_db"]   = _d["bf_i"]["debts"]
+                            st.session_state[f"{_ss}_ad"]   = _d["admits_limits"]
+                            st.session_state[f"{_ss}_cci"]  = _d["levers"]["CCI"]
+                            st.session_state[f"{_ss}_edb"]  = _d["levers"]["EDB"]
+                            st.session_state[f"{_ss}_pfi"]  = _d["levers"]["PF_instrumental"]
+                            st.session_state[f"{_ss}_pfe"]  = _d["levers"]["PF_existential"]
+                            st.session_state[f"{_ss}_ar"]   = _d["levers"]["AR"]
+                            st.session_state[f"{_ss}_mg"]   = _d["levers"]["MG"]
+                            st.session_state[f"{_ss}_calibration_opponent"] = _d.get("calibration_opponent")
+                        st.rerun()
 
-    
+
     st.sidebar.markdown("---")
 
     # Scoring Mode
