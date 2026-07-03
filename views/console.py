@@ -851,13 +851,18 @@ def render():
                     st.session_state[k] = 5.0
                 st.rerun()
         with preset_a[2]:
-            if st.button("🔄 RESET", key="fa_reset_btn", help="Reset to MdN"):
-                st.session_state["fa_cci"] = MDN_DEFAULT["levers"]["CCI"]
-                st.session_state["fa_edb"] = MDN_DEFAULT["levers"]["EDB"]
-                st.session_state["fa_pfi"] = MDN_DEFAULT["levers"]["PF_instrumental"]
-                st.session_state["fa_pfe"] = MDN_DEFAULT["levers"]["PF_existential"]
-                st.session_state["fa_ar"] = MDN_DEFAULT["levers"]["AR"]
-                st.session_state["fa_mg"] = MDN_DEFAULT["levers"]["MG"]
+            _fa_reset_name = st.session_state.get("fa_name", "Methodological Naturalism")
+            if st.button("🔄 RESET", key="fa_reset_btn", help=f"Reset to {_fa_reset_name} audited values"):
+                try:
+                    _reset_a = get_ypa_data(_fa_reset_name)
+                    st.session_state["fa_cci"] = _reset_a["levers"]["CCI"]
+                    st.session_state["fa_edb"] = _reset_a["levers"]["EDB"]
+                    st.session_state["fa_pfi"] = _reset_a["levers"]["PF_instrumental"]
+                    st.session_state["fa_pfe"] = _reset_a["levers"]["PF_existential"]
+                    st.session_state["fa_ar"]  = _reset_a["levers"]["AR"]
+                    st.session_state["fa_mg"]  = _reset_a["levers"]["MG"]
+                except Exception:
+                    pass
                 st.rerun()
         with preset_a[3]:
             if st.button("🚫 MIN", key="fa_min_btn", help="Set all to 0.0"):
@@ -937,13 +942,18 @@ def render():
                     st.session_state[k] = 5.0
                 st.rerun()
         with preset_b[2]:
-            if st.button("🔄 RESET", key="fb_reset_btn", help="Reset to CT"):
-                st.session_state["fb_cci"] = CT_DEFAULT["levers"]["CCI"]
-                st.session_state["fb_edb"] = CT_DEFAULT["levers"]["EDB"]
-                st.session_state["fb_pfi"] = CT_DEFAULT["levers"]["PF_instrumental"]
-                st.session_state["fb_pfe"] = CT_DEFAULT["levers"]["PF_existential"]
-                st.session_state["fb_ar"] = CT_DEFAULT["levers"]["AR"]
-                st.session_state["fb_mg"] = CT_DEFAULT["levers"]["MG"]
+            _fb_reset_name = st.session_state.get("fb_name", "Classical Theism")
+            if st.button("🔄 RESET", key="fb_reset_btn", help=f"Reset to {_fb_reset_name} audited values"):
+                try:
+                    _reset_b = get_ypa_data(_fb_reset_name)
+                    st.session_state["fb_cci"] = _reset_b["levers"]["CCI"]
+                    st.session_state["fb_edb"] = _reset_b["levers"]["EDB"]
+                    st.session_state["fb_pfi"] = _reset_b["levers"]["PF_instrumental"]
+                    st.session_state["fb_pfe"] = _reset_b["levers"]["PF_existential"]
+                    st.session_state["fb_ar"]  = _reset_b["levers"]["AR"]
+                    st.session_state["fb_mg"]  = _reset_b["levers"]["MG"]
+                except Exception:
+                    pass
                 st.rerun()
         with preset_b[3]:
             if st.button("🚫 MIN", key="fb_min_btn", help="Set all to 0.0"):
