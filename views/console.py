@@ -403,6 +403,13 @@ def _on_fb_worldview_change():
 def render():
     """Render console"""
 
+    # Deferred lever reload: triggered when Scoring Mode changes.
+    # Must run first — session state is fully stable here (all widget keys
+    # are loaded from the previous cycle before any widgets render).
+    if st.session_state.pop("_pending_lever_reload", False):
+        _on_fa_worldview_change()
+        _on_fb_worldview_change()
+
     # Initialize session state (avoids Session State API warnings)
     # Framework names
     if "fa_name" not in st.session_state:
@@ -753,12 +760,12 @@ def render():
     )
     if audit_mode != st.session_state.get("audit_mode"):
         st.session_state["audit_mode"] = audit_mode
-        # Update calibration status without touching lever slider values.
-        # Calling the full worldview callbacks here caused worldview names
-        # to reset because the selectboxes haven't rendered yet in this
-        # script cycle. Lever values only reload via the worldview dropdowns
-        # (mode-aware callbacks) or the H2H button.
-        _refresh_calibration_status()
+        # Defer lever reload to the top of the next render() call.
+        # Calling the worldview callbacks HERE (before st.rerun) caused
+        # worldview names to reset because widget state isn't stable yet
+        # in the current script cycle. The flag is consumed at the top of
+        # render() where session state is fully settled.
+        st.session_state["_pending_lever_reload"] = True
         st.rerun()
 
     # Crux Impasses
