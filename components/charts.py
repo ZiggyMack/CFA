@@ -163,13 +163,62 @@ def create_sensitivity_heatmap(
     return fig
 
 
+def _cfg_pill(label: str, is_default: bool = True) -> str:
+    """Render a single calibration pill badge."""
+    bg = "rgba(80,100,130,0.35)" if is_default else "rgba(200,120,30,0.45)"
+    border = "#4a6080" if is_default else "#c87820"
+    return (
+        f'<span style="display:inline-block;padding:2px 8px;margin:2px 3px;'
+        f'border-radius:10px;font-size:0.72em;border:1px solid {border};'
+        f'background:{bg};color:#d0d8e8;letter-spacing:0.03em;">{label}</span>'
+    )
+
+
+def _cfg_pill_strip(cfg: dict) -> str:
+    """Build the full calibration pill row from a cfg dict."""
+    if not cfg:
+        return ""
+
+    pf_labels = {
+        "Holistic_50_50": "PF 50/50",
+        "Composite_70_30": "PF 70/30",
+        "Instrumental": "PF Instr",
+    }
+    bfi_labels = {
+        "Equal_1.0x": "BFI 1.0×",
+        "Weighted_1.2x": "BFI 1.2×",
+    }
+
+    crux_on    = bool(cfg.get("include_crux", True))
+    parity_on  = cfg.get("lever_parity", "ON") == "ON"
+    fall_on    = cfg.get("fallibilism_bonus", "ON") == "ON"
+    pf_key     = cfg.get("pf_type", "Holistic_50_50")
+    bfi_key    = cfg.get("bfi_debt_weight", "Equal_1.0x")
+
+    pills = [
+        _cfg_pill("Scenario: Neutral"),
+        _cfg_pill(f"Crux: {'✓' if crux_on else '✗'}", is_default=crux_on),
+        _cfg_pill(f"Parity: {cfg.get('lever_parity','ON')}", is_default=parity_on),
+        _cfg_pill(f"Fall: {cfg.get('fallibilism_bonus','ON')}", is_default=fall_on),
+        _cfg_pill(pf_labels.get(pf_key, pf_key), is_default=(pf_key == "Holistic_50_50")),
+        _cfg_pill(bfi_labels.get(bfi_key, bfi_key), is_default=(bfi_key == "Equal_1.0x")),
+    ]
+    return (
+        '<div style="margin-top:8px;text-align:center;">'
+        '<span style="font-size:0.72em;color:#7080a0;margin-right:4px;">⚙️ YPA calc:</span>'
+        + "".join(pills)
+        + "</div>"
+    )
+
+
 def create_battle_card_html(
     name_a: str,
     name_b: str,
     levers_a: dict,
     levers_b: dict,
     ypa_a: float,
-    ypa_b: float
+    ypa_b: float,
+    cfg: dict = None
 ) -> str:
     """
     Create an ASCII-style battle card comparing two frameworks
@@ -181,6 +230,8 @@ def create_battle_card_html(
         levers_b: Same structure for B
         ypa_a: YPA score for A
         ypa_b: YPA score for B
+        cfg: Optional calibration config dict; when provided renders a pill strip
+             showing which modifiers are active in the YPA calculation.
 
     Returns:
         HTML string with styled battle card
@@ -271,6 +322,7 @@ def create_battle_card_html(
             Lever Wins: <span style="color: {color_a};">{name_a.split()[0]} {wins_a}</span> |
             <span style="color: {color_b};">{name_b.split()[0]} {wins_b}</span>
         </div>
+        {_cfg_pill_strip(cfg)}
     </div>
     '''
 

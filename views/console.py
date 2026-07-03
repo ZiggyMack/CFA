@@ -1064,7 +1064,8 @@ def render():
             fa["name"], fb["name"],
             fa["levers"], fb["levers"],
             ya_results["Neutral"]["YPA"],
-            yb_results["Neutral"]["YPA"]
+            yb_results["Neutral"]["YPA"],
+            cfg=cfg
         ), unsafe_allow_html=True)
 
         # NEW: Sensitivity Heatmap
