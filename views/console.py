@@ -722,6 +722,11 @@ def render():
     )
     if audit_mode != st.session_state.get("audit_mode"):
         st.session_state["audit_mode"] = audit_mode
+        # Re-evaluate both frameworks with the new mode so lever values and
+        # calibration status update immediately (worldview dropdowns haven't
+        # changed, so their on_change callbacks won't fire on their own).
+        _on_fa_worldview_change()
+        _on_fb_worldview_change()
         st.rerun()
 
     # Crux Impasses
