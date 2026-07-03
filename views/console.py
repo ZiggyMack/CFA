@@ -408,12 +408,6 @@ def _on_fb_worldview_change():
 def render():
     """Render console"""
 
-    # Deferred pill-strip updates: applied here, before any sidebar widgets render,
-    # so Streamlit's widget-key lock doesn't block the assignment.
-    if "_pill_update" in st.session_state:
-        for _k, _v in st.session_state.pop("_pill_update").items():
-            st.session_state[_k] = _v
-
     # audit_mode must be initialized first — lever init below is mode-aware
     if "audit_mode" not in st.session_state:
         st.session_state["audit_mode"] = "Audit"
@@ -1172,80 +1166,6 @@ Pre-audit pipeline. Values are preliminary.
         ), unsafe_allow_html=True)
         st.caption("*Modifier effect row: 🟢 green = modifiers helped · 🔴 red = modifiers hurt · gray = no change from defaults*")
 
-        # ── Clickable YPA-config pill strip ──────────────────────────────────
-        _PARITY_CYCLE = ["ON", "OFF"]
-        _FALL_CYCLE   = ["ON", "OFF"]
-        _PF_CYCLE     = PF_TYPES
-        _BFI_CYCLE    = ["Equal_1.0x", "Weighted_1.2x"]
-        _PF_LABELS    = {"Holistic_50_50": "PF 50/50", "Composite_70_30": "PF 70/30", "Instrumental": "PF Instr"}
-        _BFI_LABELS   = {"Equal_1.0x": "BFI 1.0×", "Weighted_1.2x": "BFI 1.2×"}
-
-        _crux_val   = st.session_state.get("include_crux", True)
-        _parity_val = st.session_state.get("sidebar_lever_parity", "ON")
-        _fall_val   = st.session_state.get("sidebar_fallibilism", "ON")
-        _pf_val     = st.session_state.get("sidebar_pf_type", "Holistic_50_50")
-        _bfi_val    = st.session_state.get("sidebar_bfi_weight", "Equal_1.0x")
-
-        # CSS anchor: scopes pill styling to the buttons immediately following this span
-        st.markdown("""
-<style>
-div[data-testid="stMarkdownContainer"]:has(.ypa-pill-row) + div[data-testid="stHorizontalBlock"] button[data-testid="baseButton-secondary"] {
-    border-radius: 20px !important; padding: 0 10px !important;
-    font-size: 0.72em !important; min-height: 26px !important; height: 26px !important;
-    line-height: 1.3 !important; background: #e2e8f0 !important;
-    color: #334155 !important; border: 1px solid #94a3b8 !important;
-    font-weight: 500 !important; letter-spacing: 0.02em !important;
-}
-div[data-testid="stMarkdownContainer"]:has(.ypa-pill-row) + div[data-testid="stHorizontalBlock"] button[data-testid="baseButton-secondary"]:hover {
-    background: #cbd5e1 !important; border-color: #64748b !important; cursor: pointer !important;
-}
-</style>
-<span class="ypa-pill-row"></span>
-""", unsafe_allow_html=True)
-
-        _pc0, _pc1, _pc2, _pc3, _pc4, _pc5 = st.columns([1.2, 1, 1, 1, 1.2, 1])
-        with _pc0:
-            st.markdown("<div style='padding-top:5px;font-size:0.74em;color:#475569;font-weight:600;'>⚙️ YPA calc:</div>", unsafe_allow_html=True)
-        with _pc1:
-            if st.button(f"Crux: {'✓' if _crux_val else '✗'}", key="pill_crux", use_container_width=True):
-                _nv = not _crux_val
-                st.session_state["_pill_update"] = {
-                    "include_crux": _nv,
-                    "crux_selector": "Include" if _nv else "Exclude",
-                }
-                st.rerun()
-        with _pc2:
-            if st.button(f"Parity: {_parity_val}", key="pill_parity", use_container_width=True):
-                _nv = _PARITY_CYCLE[(_PARITY_CYCLE.index(_parity_val) + 1) % 2]
-                st.session_state["_pill_update"] = {
-                    "sidebar_lever_parity": _nv,
-                    "sidebar_lever_parity_widget": _nv,
-                }
-                st.rerun()
-        with _pc3:
-            if st.button(f"Fall: {_fall_val}", key="pill_fall", use_container_width=True):
-                _nv = _FALL_CYCLE[(_FALL_CYCLE.index(_fall_val) + 1) % 2]
-                st.session_state["_pill_update"] = {
-                    "sidebar_fallibilism": _nv,
-                    "sidebar_fallibilism_widget": _nv,
-                }
-                st.rerun()
-        with _pc4:
-            if st.button(_PF_LABELS.get(_pf_val, _pf_val), key="pill_pf", use_container_width=True):
-                _nv = _PF_CYCLE[(_PF_CYCLE.index(_pf_val) + 1) % len(_PF_CYCLE)]
-                st.session_state["_pill_update"] = {
-                    "sidebar_pf_type": _nv,
-                    "sidebar_pf_type_widget": _nv,
-                }
-                st.rerun()
-        with _pc5:
-            if st.button(_BFI_LABELS.get(_bfi_val, _bfi_val), key="pill_bfi", use_container_width=True):
-                _nv = _BFI_CYCLE[(_BFI_CYCLE.index(_bfi_val) + 1) % 2]
-                st.session_state["_pill_update"] = {
-                    "sidebar_bfi_weight": _nv,
-                    "sidebar_bfi_weight_widget": _nv,
-                }
-                st.rerun()
 
         # NEW: Sensitivity Heatmap
         st.markdown("### 🌡️ Toggle Sensitivity Heatmap")

@@ -366,6 +366,7 @@ def create_battle_card_html(
             Lever Wins: <span style="color: {color_a};">{name_a.split()[0]} {wins_a}</span> |
             <span style="color: {color_b};">{name_b.split()[0]} {wins_b}</span>
         </div>
+        {_cfg_pill_strip(cfg)}
     </div>
     '''
 
