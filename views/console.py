@@ -1156,6 +1156,12 @@ Pre-audit pipeline. Values are preliminary.
                 "adj_sum_b":  sum(yb_levers.values()),
                 "base_sum_a": sum(_ya_base_levers.values()),
                 "base_sum_b": sum(_yb_base_levers.values()),
+                "bfi_a":  ya_bfi,
+                "bfi_b":  yb_bfi,
+                "ax_a":   fa["bf_i"]["axioms"],
+                "dbt_a":  fa["bf_i"]["debts"],
+                "ax_b":   fb["bf_i"]["axioms"],
+                "dbt_b":  fb["bf_i"]["debts"],
             }
         ), unsafe_allow_html=True)
         st.caption("*Modifier effect row: 🟢 green = modifiers helped · 🔴 red = modifiers hurt · gray = no change from defaults*")

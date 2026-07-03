@@ -283,13 +283,37 @@ def create_battle_card_html(
             return f'<span style="color:{c};font-weight:600;">({s})</span>'
         rows.append(
             f'<tr style="background:#f8fafc;">'
-            f'<td style="padding:5px 8px;color:#94a3b8;font-size:0.78em;font-style:italic;border-top:1px dashed #cbd5e1;">Modifier effect</td>'
-            f'<td style="padding:5px 8px;color:#64748b;font-size:0.78em;border-top:1px dashed #cbd5e1;">'
-            f'{_base_a:.2f} → {_adj_a:.2f} {_delta_html(_adj_a - _base_a)}</td>'
-            f'<td style="padding:5px 8px;text-align:center;color:#94a3b8;border-top:1px dashed #cbd5e1;">∑</td>'
-            f'<td style="padding:5px 8px;color:#64748b;font-size:0.78em;border-top:1px dashed #cbd5e1;">'
-            f'{_base_b:.2f} → {_adj_b:.2f} {_delta_html(_adj_b - _base_b)}</td>'
+            f'<td style="padding:7px 16px;color:#94a3b8;font-size:0.82em;font-style:italic;border-top:1px dashed #cbd5e1;white-space:nowrap;">Modifier effect</td>'
+            f'<td style="padding:7px 16px;color:#64748b;font-size:0.82em;border-top:1px dashed #cbd5e1;white-space:nowrap;">'
+            f'{_base_a:.2f}&nbsp;&rarr;&nbsp;{_adj_a:.2f}&nbsp;{_delta_html(_adj_a - _base_a)}</td>'
+            f'<td style="padding:7px 20px;text-align:center;color:#94a3b8;border-top:1px dashed #cbd5e1;">∑</td>'
+            f'<td style="padding:7px 16px;color:#64748b;font-size:0.82em;border-top:1px dashed #cbd5e1;white-space:nowrap;">'
+            f'{_base_b:.2f}&nbsp;&rarr;&nbsp;{_adj_b:.2f}&nbsp;{_delta_html(_adj_b - _base_b)}</td>'
             f'<td style="border-top:1px dashed #cbd5e1;"></td>'
+            f'</tr>'
+        )
+
+    # BFI row (denominator in the YPA formula)
+    _bfi_a = cfg.get("bfi_a") if cfg else None
+    _bfi_b = cfg.get("bfi_b") if cfg else None
+    _ax_a  = cfg.get("ax_a")  if cfg else None
+    _dbt_a = cfg.get("dbt_a") if cfg else None
+    _ax_b  = cfg.get("ax_b")  if cfg else None
+    _dbt_b = cfg.get("dbt_b") if cfg else None
+    if _bfi_a is not None and _bfi_b is not None:
+        def _bfi_detail(ax, dbt):
+            if ax is None or dbt is None:
+                return ""
+            return f'<span style="color:#94a3b8;font-size:0.75em;">&nbsp;({ax}&nbsp;ax&nbsp;·&nbsp;{dbt}&nbsp;dbt)</span>'
+        rows.append(
+            f'<tr style="background:#f1f5f9;">'
+            f'<td style="padding:7px 16px;color:#475569;font-size:0.82em;font-weight:600;border-top:1px solid #cbd5e1;white-space:nowrap;">BFI</td>'
+            f'<td style="padding:7px 16px;color:#475569;font-size:0.82em;border-top:1px solid #cbd5e1;white-space:nowrap;">'
+            f'<strong>{_bfi_a:.1f}</strong>{_bfi_detail(_ax_a, _dbt_a)}</td>'
+            f'<td style="padding:7px 20px;text-align:center;color:#64748b;font-size:1.05em;border-top:1px solid #cbd5e1;">÷</td>'
+            f'<td style="padding:7px 16px;color:#475569;font-size:0.82em;border-top:1px solid #cbd5e1;white-space:nowrap;">'
+            f'<strong>{_bfi_b:.1f}</strong>{_bfi_detail(_ax_b, _dbt_b)}</td>'
+            f'<td style="border-top:1px solid #cbd5e1;"></td>'
             f'</tr>'
         )
 
@@ -318,11 +342,14 @@ def create_battle_card_html(
         </div>
         <table style="width: 100%; border-collapse: collapse;">
             {''.join(rows)}
-            <tr style="border-top: 2px solid {CFA_COLORS['border']};">
-                <td style="padding: 12px 8px; font-weight: bold; font-size: 1.1em;">YPA</td>
-                <td style="padding: 12px 8px; font-size: 1.2em; color: {color_a}; font-weight: bold;">{ypa_a:.2f}</td>
-                <td style="padding: 12px 8px; text-align: center;">vs</td>
-                <td style="padding: 12px 8px; font-size: 1.2em; color: {color_b}; font-weight: bold;">{ypa_b:.2f}</td>
+            <tr style="border-top: 3px solid #334155;">
+                <td style="padding: 12px 16px; font-weight: bold; font-size: 1.1em;">
+                    YPA
+                    <br><span style="font-size:0.62em;color:#94a3b8;font-weight:normal;letter-spacing:0.04em;">Σ&nbsp;levers&nbsp;÷&nbsp;BFI</span>
+                </td>
+                <td style="padding: 12px 16px; font-size: 1.2em; color: {color_a}; font-weight: bold;">{ypa_a:.2f}</td>
+                <td style="padding: 12px 20px; text-align: center; font-size: 1.05em; color: #64748b;">=</td>
+                <td style="padding: 12px 16px; font-size: 1.2em; color: {color_b}; font-weight: bold;">{ypa_b:.2f}</td>
                 <td style="padding: 12px 8px; text-align: right;">
                     <span style="color: {ypa_color}; font-weight: bold;">→ {ypa_winner}</span>
                 </td>
