@@ -1074,6 +1074,11 @@ Pre-audit pipeline. Values are preliminary.
     ya_results, ya_levers, ya_bfi = ypa_scenario_scores(fa, cfg)
     yb_results, yb_levers, yb_bfi = ypa_scenario_scores(fb, cfg)
 
+    # Base lever sums (all-default cfg) for modifier effect row in battle card
+    _base_cfg = {"lever_parity": "ON", "fallibilism_bonus": "ON", "pf_type": "Holistic_50_50", "include_crux": True, "bfi_debt_weight": "Equal_1.0x"}
+    _, _ya_base_levers, _ = ypa_scenario_scores(fa, _base_cfg)
+    _, _yb_base_levers, _ = ypa_scenario_scores(fb, _base_cfg)
+
     # YPA EXPLANATION (Grok Note #1: Pragmatic Clarity)
     st.info("💡 **YPA = Yield per Axiom:** Efficiency score = Total Lever Score ÷ BFI. Higher YPA = more output per assumption.")
 
@@ -1145,7 +1150,13 @@ Pre-audit pipeline. Values are preliminary.
             fa["levers"], fb["levers"],
             ya_results["Neutral"]["YPA"],
             yb_results["Neutral"]["YPA"],
-            cfg=cfg
+            cfg={
+                **cfg,
+                "adj_sum_a":  sum(ya_levers.values()),
+                "adj_sum_b":  sum(yb_levers.values()),
+                "base_sum_a": sum(_ya_base_levers.values()),
+                "base_sum_b": sum(_yb_base_levers.values()),
+            }
         ), unsafe_allow_html=True)
 
         # NEW: Sensitivity Heatmap

@@ -271,6 +271,28 @@ def create_battle_card_html(
 
         rows.append(f'<tr><td style="padding: 8px; font-weight: bold; color: #333;">{label}</td><td style="padding: 8px; color: {color_a};">{val_a:.1f} {bar_a}</td><td style="padding: 8px; text-align: center;">vs</td><td style="padding: 8px; color: {color_b};">{bar_b} {val_b:.1f}</td><td style="padding: 8px; text-align: right;">{winner}</td></tr>')
 
+    # Modifier effect row
+    _adj_a    = cfg.get("adj_sum_a")  if cfg else None
+    _adj_b    = cfg.get("adj_sum_b")  if cfg else None
+    _base_a   = cfg.get("base_sum_a") if cfg else None
+    _base_b   = cfg.get("base_sum_b") if cfg else None
+    if all(v is not None for v in [_adj_a, _adj_b, _base_a, _base_b]):
+        def _delta_html(d):
+            c = "#16a34a" if d > 0.005 else ("#dc2626" if d < -0.005 else "#94a3b8")
+            s = f"+{d:.2f}" if d >= 0 else f"{d:.2f}"
+            return f'<span style="color:{c};font-weight:600;">({s})</span>'
+        rows.append(
+            f'<tr style="background:#f8fafc;">'
+            f'<td style="padding:5px 8px;color:#94a3b8;font-size:0.78em;font-style:italic;border-top:1px dashed #cbd5e1;">Modifier effect</td>'
+            f'<td style="padding:5px 8px;color:#64748b;font-size:0.78em;border-top:1px dashed #cbd5e1;">'
+            f'{_base_a:.2f} → {_adj_a:.2f} {_delta_html(_adj_a - _base_a)}</td>'
+            f'<td style="padding:5px 8px;text-align:center;color:#94a3b8;border-top:1px dashed #cbd5e1;">∑</td>'
+            f'<td style="padding:5px 8px;color:#64748b;font-size:0.78em;border-top:1px dashed #cbd5e1;">'
+            f'{_base_b:.2f} → {_adj_b:.2f} {_delta_html(_adj_b - _base_b)}</td>'
+            f'<td style="border-top:1px dashed #cbd5e1;"></td>'
+            f'</tr>'
+        )
+
     # YPA final row
     ypa_winner = name_a.split()[0][:3] if ypa_a > ypa_b else (name_b.split()[0][:3] if ypa_b > ypa_a else "TIE")
     ypa_color = color_a if ypa_a > ypa_b else (color_b if ypa_b > ypa_a else '#666')
