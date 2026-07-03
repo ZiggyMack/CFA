@@ -873,7 +873,9 @@ def render():
         st.markdown("### 📘 Framework A")
         _fa_opp = st.session_state.get("fa_calibration_opponent")
         _fa_audited = st.session_state.get("fa_has_audit_data", False)
-        if _fa_opp:
+        if st.session_state.get("audit_mode", "Bias") == "Bias":
+            st.caption("🎯 Canonical (Bias Mode)")
+        elif _fa_opp:
             if _is_drifted("fa"):
                 st.caption("✏️ Customized (from Audited)")
             else:
@@ -967,7 +969,9 @@ def render():
         st.markdown("### 📕 Framework B")
         _fb_opp = st.session_state.get("fb_calibration_opponent")
         _fb_audited = st.session_state.get("fb_has_audit_data", False)
-        if _fb_opp:
+        if st.session_state.get("audit_mode", "Bias") == "Bias":
+            st.caption("🎯 Canonical (Bias Mode)")
+        elif _fb_opp:
             if _is_drifted("fb"):
                 st.caption("✏️ Customized (from Audited)")
             else:
