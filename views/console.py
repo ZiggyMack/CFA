@@ -455,7 +455,25 @@ def render():
             st.session_state[f"{_pfx}_pfe"] = _ypa["levers"]["PF_existential"]
             st.session_state[f"{_pfx}_ar"]  = _ypa["levers"]["AR"]
             st.session_state[f"{_pfx}_mg"]  = _ypa["levers"]["MG"]
-    
+
+    # Apply deferred preset HERE (top of render, before detect_active_preset() and before
+    # sidebar selectboxes) so both the Active Mode indicator and the sidebar widgets see
+    # the correct values on the same rerun that the preset was triggered.
+    if "_deferred_preset" in st.session_state:
+        _dp = st.session_state.pop("_deferred_preset")
+        if "lever_parity" in _dp:
+            st.session_state["sidebar_lever_parity"]        = _dp["lever_parity"]
+            st.session_state["sidebar_lever_parity_widget"] = _dp["lever_parity"]
+        if "pf_type" in _dp:
+            st.session_state["sidebar_pf_type"]             = _dp["pf_type"]
+            st.session_state["sidebar_pf_type_widget"]      = _dp["pf_type"]
+        if "fallibilism" in _dp:
+            st.session_state["sidebar_fallibilism"]         = _dp["fallibilism"]
+            st.session_state["sidebar_fallibilism_widget"]  = _dp["fallibilism"]
+        if "bft_weight" in _dp:
+            st.session_state["sidebar_bft_weight"]          = _dp["bft_weight"]
+            st.session_state["sidebar_bft_weight_widget"]   = _dp["bft_weight"]
+
     # Enhanced CSS for card-based layout and Ledger aesthetic
     st.markdown("""
     <style>
@@ -798,23 +816,6 @@ Pre-audit pipeline. Values are preliminary.
         st.session_state["sidebar_fallibilism"] = "ON"
     if "sidebar_bft_weight" not in st.session_state:
         st.session_state["sidebar_bft_weight"] = "Equal_1.0x"
-
-    # Deferred preset: applied here (before selectboxes render) so widget keys pick up
-    # the correct value on the SAME rerun that the caller triggered.
-    if "_deferred_preset" in st.session_state:
-        _dp = st.session_state.pop("_deferred_preset")
-        if "lever_parity" in _dp:
-            st.session_state["sidebar_lever_parity"]        = _dp["lever_parity"]
-            st.session_state["sidebar_lever_parity_widget"] = _dp["lever_parity"]
-        if "pf_type" in _dp:
-            st.session_state["sidebar_pf_type"]             = _dp["pf_type"]
-            st.session_state["sidebar_pf_type_widget"]      = _dp["pf_type"]
-        if "fallibilism" in _dp:
-            st.session_state["sidebar_fallibilism"]         = _dp["fallibilism"]
-            st.session_state["sidebar_fallibilism_widget"]  = _dp["fallibilism"]
-        if "bft_weight" in _dp:
-            st.session_state["sidebar_bft_weight"]          = _dp["bft_weight"]
-            st.session_state["sidebar_bft_weight_widget"]   = _dp["bft_weight"]
 
     # Lever-Parity selectbox
     parity_options = ["ON", "OFF"]
