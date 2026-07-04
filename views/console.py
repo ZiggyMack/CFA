@@ -307,13 +307,19 @@ def _get_audit_status(prefix: str, wv_name: str, opp_name: str) -> str:
         if not wv_name:
             return "🎯 Prior (canonical, pre-experiment)"
         try:
-            _canonical = get_ypa_data(wv_name)["levers"]  # no opponent → canonical values
+            _ypa_full = get_ypa_data(wv_name)
+            _canonical = _ypa_full["levers"]
+            _canonical_bft = _ypa_full.get("bft", {})
         except Exception:
             return "🎯 Prior (canonical, pre-experiment)"
-        _bias_match = all(
-            abs(st.session_state.get(f"{prefix}_{_LEVER_SS_KEYS[k]}", 0.0) - v) <= 0.005
-            for k, v in _canonical.items()
-            if k in _LEVER_SS_KEYS
+        _bias_match = (
+            all(
+                abs(st.session_state.get(f"{prefix}_{_LEVER_SS_KEYS[k]}", 0.0) - v) <= 0.005
+                for k, v in _canonical.items()
+                if k in _LEVER_SS_KEYS
+            ) and
+            st.session_state.get(f"{prefix}_ax", 0) == _canonical_bft.get("axioms", 0) and
+            st.session_state.get(f"{prefix}_db", 0) == _canonical_bft.get("debts", 0)
         )
         return "🎯 Prior (canonical, pre-experiment)" if _bias_match else "✏️ Customized"
     if not wv_name or not opp_name:
@@ -325,10 +331,15 @@ def _get_audit_status(prefix: str, wv_name: str, opp_name: str) -> str:
     if not ypa.get("calibration_opponent"):
         return "📊 Audit TBD (bias data used)" if ypa.get("has_audit_data") else "📋 New profile"
     calibrated = ypa["levers"]
-    sliders_match = all(
-        abs(st.session_state.get(f"{prefix}_{_LEVER_SS_KEYS[k]}", 0.0) - v) <= 0.005
-        for k, v in calibrated.items()
-        if k in _LEVER_SS_KEYS
+    canonical_bft = ypa.get("bft", {})
+    sliders_match = (
+        all(
+            abs(st.session_state.get(f"{prefix}_{_LEVER_SS_KEYS[k]}", 0.0) - v) <= 0.005
+            for k, v in calibrated.items()
+            if k in _LEVER_SS_KEYS
+        ) and
+        st.session_state.get(f"{prefix}_ax", 0) == canonical_bft.get("axioms", 0) and
+        st.session_state.get(f"{prefix}_db", 0) == canonical_bft.get("debts", 0)
     )
     return "✅ Adversarially Audited" if sliders_match else "✏️ Customized"
 
