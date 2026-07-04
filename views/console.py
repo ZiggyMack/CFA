@@ -902,7 +902,7 @@ Pre-audit pipeline. Values are preliminary.
         st.caption(_get_audit_status("fa", st.session_state.get("fa_name", ""), st.session_state.get("fb_name", "")))
         fa_name = st.selectbox("Worldview", options=_worldview_options(), key="fa_name", on_change=_on_fa_worldview_change, format_func=_wv_label)
         
-        with st.expander("🔢 bft", expanded=False):
+        with st.expander("🔢 BFT", expanded=False):
             if 'custom_framework_ready' in st.session_state:
                 custom = st.session_state['custom_framework_ready']
                 if custom.get('target') == 'framework_a':
@@ -986,7 +986,7 @@ Pre-audit pipeline. Values are preliminary.
         st.caption(_get_audit_status("fb", st.session_state.get("fb_name", ""), st.session_state.get("fa_name", "")))
         fb_name = st.selectbox("Worldview", options=_worldview_options(), key="fb_name", on_change=_on_fb_worldview_change, format_func=_wv_label)
         
-        with st.expander("🔢 bft", expanded=False):
+        with st.expander("🔢 BFT", expanded=False):
             if 'custom_framework_ready' in st.session_state:
                 custom = st.session_state['custom_framework_ready']
                 if custom.get('target') == 'framework_b':
