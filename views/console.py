@@ -1648,24 +1648,21 @@ than MdN is for the teleological lens.
         if st.button("🎯 Auto-Detect My Profile", use_container_width=True, type="primary"):
             # Scoring logic
             scores = {"skeptic": 0, "diplomat": 0, "seeker": 0, "zealot": 0}
-            
-            # Q1 scoring
+
             if "Predictive accuracy" in q1:
                 scores["skeptic"] += 2
             elif "Both prediction" in q1:
                 scores["diplomat"] += 2
             else:
                 scores["zealot"] += 2
-            
-            # Q2 scoring
+
             if "Human consensus" in q2:
                 scores["skeptic"] += 2
             elif "mix of objective" in q2:
                 scores["diplomat"] += 2
             else:
                 scores["zealot"] += 2
-            
-            # Q3 scoring
+
             if "Very comfortable" in q3:
                 scores["skeptic"] += 2
             elif "Somewhat comfortable" in q3:
@@ -1673,16 +1670,14 @@ than MdN is for the teleological lens.
                 scores["seeker"] += 1
             else:
                 scores["zealot"] += 2
-            
-            # Q4 scoring
+
             if "Evolutionary pressure" in q4:
                 scores["skeptic"] += 2
             elif "Both method" in q4:
                 scores["diplomat"] += 2
             else:
                 scores["zealot"] += 2
-            
-            # Q5 scoring
+
             if "Minimize assumptions" in q5:
                 scores["skeptic"] += 2
             elif "Balance parsimony" in q5:
@@ -1690,41 +1685,43 @@ than MdN is for the teleological lens.
             else:
                 scores["seeker"] += 1
                 scores["zealot"] += 1
-            
-            # Determine winner
+
             winner = max(scores, key=scores.get)
-            
-            # Load corresponding mode
-            if winner == "skeptic":
-                st.session_state["lever_parity"] = "OFF"
-                st.session_state["pf_type"] = "Instrumental"
-                st.session_state["fallibilism_bonus"] = "ON"
-                st.session_state["bft_debt_weight"] = "Heavier_1.2x"
-                st.success("✅ **Profile Detected: Skeptic Mode** (MdN-optimized, predictive power focus)")
-            elif winner == "diplomat":
-                st.session_state["lever_parity"] = "ON"
-                st.session_state["pf_type"] = "Holistic_50_50"
-                st.session_state["fallibilism_bonus"] = "ON"
-                st.session_state["bft_debt_weight"] = "Equal_1.0x"
-                st.success("✅ **Profile Detected: Diplomat Mode** (Balanced bridge, equal weighting)")
-            elif winner == "seeker":
-                st.session_state["lever_parity"] = "ON"
-                st.session_state["pf_type"] = "Composite_70_30"
-                st.session_state["fallibilism_bonus"] = "ON"
-                st.session_state["bft_debt_weight"] = "Equal_1.0x"
-                st.success("✅ **Profile Detected: Seeker Mode** (CT-leaning, meaning-first)")
-            else:  # zealot
-                st.session_state["lever_parity"] = "ON"
-                st.session_state["pf_type"] = "Holistic_50_50"
-                st.session_state["fallibilism_bonus"] = "OFF"
-                st.session_state["bft_debt_weight"] = "Equal_1.0x"
-                st.success("✅ **Profile Detected: Zealot Mode** (CT-optimized, existential-first)")
-            
-            st.info(f"🎯 **Your Score Breakdown:** Skeptic: {scores['skeptic']}, Diplomat: {scores['diplomat']}, Seeker: {scores['seeker']}, Zealot: {scores['zealot']}")
+
+            _QUIZ_PRESETS = {
+                "skeptic":  ("🔬 Skeptic",  "OFF", "Instrumental",   "ON",  "Weighted_1.2x", "MdN-optimized · predictive power focus"),
+                "diplomat": ("🤝 Diplomat", "ON",  "Holistic_50_50", "ON",  "Equal_1.0x",    "Balanced bridge · equal weighting"),
+                "seeker":   ("🙏 Seeker",   "ON",  "Composite_70_30","ON",  "Equal_1.0x",    "CT-leaning · meaning-first"),
+                "zealot":   ("👿 Zealot",   "ON",  "Holistic_50_50", "OFF", "Equal_1.0x",    "CT-optimized · existential-first"),
+            }
+            label, parity, pf, fall, bft_w, desc = _QUIZ_PRESETS[winner]
+            st.session_state["sidebar_lever_parity"] = parity
+            st.session_state["sidebar_pf_type"]      = pf
+            st.session_state["sidebar_fallibilism"]   = fall
+            st.session_state["sidebar_bft_weight"]    = bft_w
+
+            # Persist result so it survives the rerun
+            st.session_state["quiz_result"] = {
+                "label": label, "desc": desc, "scores": scores
+            }
             st.rerun()
-        
+
+        # Show persistent result banner (survives rerun)
+        if st.session_state.get("quiz_result"):
+            qr = st.session_state["quiz_result"]
+            s  = qr["scores"]
+            st.success(f"**Profile detected: {qr['label']}** — {qr['desc']}")
+            st.caption(
+                f"Score breakdown — "
+                f"🔬 Skeptic: {s['skeptic']}  "
+                f"🤝 Diplomat: {s['diplomat']}  "
+                f"🙏 Seeker: {s['seeker']}  "
+                f"👿 Zealot: {s['zealot']}  "
+                f"· Sidebar toggles updated ↑"
+            )
+
         st.markdown("---")
-        st.caption("💡 **Note:** This quiz is a starting point. You can always adjust toggles manually after!")
+        st.caption("💡 **Note:** This quiz sets your starting point — you can still adjust any toggle manually.")
 
     # BOTTOM: IMPORT + EXPORT
     st.markdown("---")
