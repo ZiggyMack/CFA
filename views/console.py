@@ -146,14 +146,18 @@ CT_DEFAULT = get_ypa_data("Classical Theism")
 def apply_loaded_run(run: dict):
     """Apply loaded JSON to session state"""
     cfg = run.get("config", {})
+    # Build deferred preset so widget keys update correctly on the next render
+    _dp = {}
     if "lever_parity" in cfg:
-        st.session_state["sidebar_lever_parity"] = cfg["lever_parity"]
+        _dp["lever_parity"] = cfg["lever_parity"]
     if "pf_type" in cfg:
-        st.session_state["sidebar_pf_type"] = cfg["pf_type"]
+        _dp["pf_type"] = cfg["pf_type"]
     if "fallibilism_bonus" in cfg:
-        st.session_state["sidebar_fallibilism"] = cfg["fallibilism_bonus"]
+        _dp["fallibilism"] = cfg["fallibilism_bonus"]
     if "bft_debt_weight" in cfg:
-        st.session_state["sidebar_bft_weight"] = cfg["bft_debt_weight"]
+        _dp["bft_weight"] = cfg["bft_debt_weight"]
+    if _dp:
+        st.session_state["_deferred_preset"] = _dp
 
     A = run.get("framework_a", {})
     if "name" in A:
@@ -644,37 +648,37 @@ def render():
 
         with col1:
             if st.button("🔬 Skeptic Mode", use_container_width=True):
-                st.session_state["sidebar_lever_parity"] = "OFF"
-                st.session_state["sidebar_pf_type"] = "Instrumental"
-                st.session_state["sidebar_fallibilism"] = "ON"
-                st.session_state["sidebar_bft_weight"] = "Weighted_1.2x"
-                st.session_state["include_crux"] = False  # skeptic distrusts contested scores
-                st.rerun()  # Immediately reflect changes in indicator
+                st.session_state["_deferred_preset"] = {
+                    "lever_parity": "OFF", "pf_type": "Instrumental",
+                    "fallibilism": "ON", "bft_weight": "Weighted_1.2x",
+                }
+                st.session_state["include_crux"] = False
+                st.rerun()
             st.caption("MdN-optimized\nPredictive power focus")
 
             if st.button("🙏 Seeker Mode", use_container_width=True):
-                st.session_state["sidebar_lever_parity"] = "ON"
-                st.session_state["sidebar_pf_type"] = "Composite_70_30"
-                st.session_state["sidebar_fallibilism"] = "ON"
-                st.session_state["sidebar_bft_weight"] = "Equal_1.0x"
-                st.rerun()  # Immediately reflect changes in indicator
+                st.session_state["_deferred_preset"] = {
+                    "lever_parity": "ON", "pf_type": "Composite_70_30",
+                    "fallibilism": "ON", "bft_weight": "Equal_1.0x",
+                }
+                st.rerun()
             st.caption("CT-leaning\nMeaning-first")
 
         with col2:
             if st.button("🤝 Diplomat Mode", use_container_width=True):
-                st.session_state["sidebar_lever_parity"] = "ON"
-                st.session_state["sidebar_pf_type"] = "Holistic_50_50"
-                st.session_state["sidebar_fallibilism"] = "ON"
-                st.session_state["sidebar_bft_weight"] = "Equal_1.0x"
-                st.rerun()  # Immediately reflect changes in indicator
+                st.session_state["_deferred_preset"] = {
+                    "lever_parity": "ON", "pf_type": "Holistic_50_50",
+                    "fallibilism": "ON", "bft_weight": "Equal_1.0x",
+                }
+                st.rerun()
             st.caption("Balanced bridge\nEqual weighting")
 
             if st.button("👿 Zealot Mode", use_container_width=True):
-                st.session_state["sidebar_lever_parity"] = "ON"
-                st.session_state["sidebar_pf_type"] = "Holistic_50_50"
-                st.session_state["sidebar_fallibilism"] = "OFF"
-                st.session_state["sidebar_bft_weight"] = "Equal_1.0x"
-                st.rerun()  # Immediately reflect changes in indicator
+                st.session_state["_deferred_preset"] = {
+                    "lever_parity": "ON", "pf_type": "Holistic_50_50",
+                    "fallibilism": "OFF", "bft_weight": "Equal_1.0x",
+                }
+                st.rerun()
             st.caption("CT-optimized\nExistential-first")
 
         st.markdown("---")
@@ -794,6 +798,23 @@ Pre-audit pipeline. Values are preliminary.
         st.session_state["sidebar_fallibilism"] = "ON"
     if "sidebar_bft_weight" not in st.session_state:
         st.session_state["sidebar_bft_weight"] = "Equal_1.0x"
+
+    # Deferred preset: applied here (before selectboxes render) so widget keys pick up
+    # the correct value on the SAME rerun that the caller triggered.
+    if "_deferred_preset" in st.session_state:
+        _dp = st.session_state.pop("_deferred_preset")
+        if "lever_parity" in _dp:
+            st.session_state["sidebar_lever_parity"]        = _dp["lever_parity"]
+            st.session_state["sidebar_lever_parity_widget"] = _dp["lever_parity"]
+        if "pf_type" in _dp:
+            st.session_state["sidebar_pf_type"]             = _dp["pf_type"]
+            st.session_state["sidebar_pf_type_widget"]      = _dp["pf_type"]
+        if "fallibilism" in _dp:
+            st.session_state["sidebar_fallibilism"]         = _dp["fallibilism"]
+            st.session_state["sidebar_fallibilism_widget"]  = _dp["fallibilism"]
+        if "bft_weight" in _dp:
+            st.session_state["sidebar_bft_weight"]          = _dp["bft_weight"]
+            st.session_state["sidebar_bft_weight_widget"]   = _dp["bft_weight"]
 
     # Lever-Parity selectbox
     parity_options = ["ON", "OFF"]
@@ -1645,6 +1666,7 @@ than MdN is for the teleological lens.
             key="quiz_q5"
         )
         
+        st.caption("✨ Your matched profile will be auto-applied to the sidebar toggles.")
         if st.button("🎯 Auto-Detect My Profile", use_container_width=True, type="primary"):
             # Scoring logic
             scores = {"skeptic": 0, "diplomat": 0, "seeker": 0, "zealot": 0}
@@ -1695,10 +1717,14 @@ than MdN is for the teleological lens.
                 "zealot":   ("👿 Zealot",   "ON",  "Holistic_50_50", "OFF", "Equal_1.0x",    "CT-optimized · existential-first"),
             }
             label, parity, pf, fall, bft_w, desc = _QUIZ_PRESETS[winner]
-            st.session_state["sidebar_lever_parity"] = parity
-            st.session_state["sidebar_pf_type"]      = pf
-            st.session_state["sidebar_fallibilism"]   = fall
-            st.session_state["sidebar_bft_weight"]    = bft_w
+
+            # Use deferred preset so widget keys are updated before selectboxes render
+            st.session_state["_deferred_preset"] = {
+                "lever_parity": parity,
+                "pf_type":      pf,
+                "fallibilism":  fall,
+                "bft_weight":   bft_w,
+            }
 
             # Persist result so it survives the rerun
             st.session_state["quiz_result"] = {
@@ -1710,7 +1736,7 @@ than MdN is for the teleological lens.
         if st.session_state.get("quiz_result"):
             qr = st.session_state["quiz_result"]
             s  = qr["scores"]
-            st.success(f"**Profile detected: {qr['label']}** — {qr['desc']}")
+            st.success(f"**Profile detected & applied: {qr['label']}** — {qr['desc']}")
             st.caption(
                 f"Score breakdown — "
                 f"🔬 Skeptic: {s['skeptic']}  "
