@@ -35,7 +35,7 @@ def create_convergence_radar(
     Returns:
         Plotly Figure
     """
-    categories = ['CCI', 'EDB', 'PF-I', 'PF-E', 'AR', 'MG']
+    categories = ['Coherence', 'Ep. Debt', 'Fertility (I)', 'Fertility (E)', 'Asym. Risk', 'Moral Gen.']
 
     fig = go.Figure()
 
@@ -236,12 +236,12 @@ def create_battle_card_html(
 
     # Map lever keys to display names
     lever_map = [
-        ('CCI', 'CCI'),
-        ('EDB', 'EDB'),
-        ('PF_instrumental', 'PF-I'),
-        ('PF_existential', 'PF-E'),
-        ('AR', 'AR'),
-        ('MG', 'MG')
+        ('CCI', 'Coherence'),
+        ('EDB', 'Epistemic Debt'),
+        ('PF_instrumental', 'Fertility (Inst)'),
+        ('PF_existential', 'Fertility (Exist)'),
+        ('AR', 'Asymmetry Risk'),
+        ('MG', 'Moral Generativity')
     ]
 
     rows = []
@@ -604,10 +604,11 @@ def create_lever_pie_charts(
 
     # Vibrant color palette for levers
     lever_colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#9467bd', '#8c564b']
-    labels = ['CCI', 'EDB', 'PF', 'AR', 'MG']
+    lever_keys = ['CCI', 'EDB', 'PF', 'AR', 'MG']
+    labels = ['Coherence', 'Ep. Debt', 'Fertility', 'Asym. Risk', 'Moral Gen.']
 
-    values_a = [levers_a.get(k, 0) for k in labels]
-    values_b = [levers_b.get(k, 0) for k in labels]
+    values_a = [levers_a.get(k, 0) for k in lever_keys]
+    values_b = [levers_b.get(k, 0) for k in lever_keys]
 
     fig = make_subplots(
         rows=1, cols=2,
@@ -689,7 +690,7 @@ def create_ypa_gauge(
     fig.add_trace(go.Indicator(
         mode="gauge+number",
         value=ypa_a,
-        title={'text': "YPA", 'font': {'size': 14}},
+        title={'text': "", 'font': {'size': 14}},
         gauge={
             'axis': {'range': [0, 10], 'tickwidth': 1},
             'bar': {'color': color_a},
@@ -713,7 +714,7 @@ def create_ypa_gauge(
     fig.add_trace(go.Indicator(
         mode="gauge+number",
         value=ypa_b,
-        title={'text': "YPA", 'font': {'size': 14}},
+        title={'text': "", 'font': {'size': 14}},
         gauge={
             'axis': {'range': [0, 10], 'tickwidth': 1},
             'bar': {'color': color_b},
@@ -760,13 +761,14 @@ def create_lever_radar_comparison(
     Returns:
         Plotly Figure
     """
-    categories = ['CCI', 'EDB', 'PF', 'AR', 'MG']
+    lever_keys = ['CCI', 'EDB', 'PF', 'AR', 'MG']
+    categories = ['Coherence', 'Ep. Debt', 'Fertility', 'Asym. Risk', 'Moral Gen.']
     color_a = get_framework_color(name_a)
     color_b = get_framework_color(name_b)
 
     # Get values and close the polygon
-    values_a = [levers_a.get(k, 0) for k in categories] + [levers_a.get('CCI', 0)]
-    values_b = [levers_b.get(k, 0) for k in categories] + [levers_b.get('CCI', 0)]
+    values_a = [levers_a.get(k, 0) for k in lever_keys] + [levers_a.get('CCI', 0)]
+    values_b = [levers_b.get(k, 0) for k in lever_keys] + [levers_b.get('CCI', 0)]
     theta = categories + [categories[0]]
 
     # Convert hex to rgba for fills

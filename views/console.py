@@ -700,7 +700,7 @@ def render():
             st.caption("CT-optimized\nExistential-first")
 
         st.markdown("---")
-        st.caption("💡 **Workflow:** 1️⃣ Pick spectrum mode → 2️⃣ Load frameworks below → 3️⃣ Adjust toggles if needed")
+        st.caption("💡 **Workflow:** 1️⃣ Choose a profile → 2️⃣ Load frameworks below → 3️⃣ Adjust toggles if needed")
 
     st.sidebar.markdown("---")
 
