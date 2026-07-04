@@ -209,34 +209,28 @@ Collapsing any two of these destroys the information. Saying *"CT is false, ther
     # Audit Journey (Grok Enhancement)
     with st.expander("🔍 **The Audit Journey: Level 0-5**", expanded=False):
         st.markdown("""
-        **How did we achieve 98% convergence?**
-        
-        **Level 0: Independent Audits**  
-        Claude (Anthropic) and Grok (xAI) each audited MdN and CT independently, bringing different philosophical lenses.
-        
-        **Level 1: Discrepancy Detection**  
-        Scores diverged due to undetected bias:
-        - Claude favored CT's comprehensive scope (teleological sympathy)
-        - Grok favored MdN's predictive power (empirical favoritism)
-        
-        **Level 2: Adversarial Correction**  
-        Each auditor challenged the other with rationale:
-        - Grok to Claude: "CT's CCI should be 7.5, not 8.0 - theodicy tension reduces closure"
-        - Claude to Grok: "MdN's PF-Instrumental can stay 10.0 - predictive success is undeniable"
-        - Both adjusted scores with documented reasoning
-        
-        **Level 3: Convergence Achieved**  
-        Final scores: MdN 3.62, CT 3.65 (only 0.03 YPA difference = 98% agreement)  
-        Convergence proves rigor - mutual checking eliminates solo bias.
-        
-        **Level 4: Tool Building**  
-        The console you see embodies this audit journey:
-        - 4 toggles reflect bias discoveries (Parity, PF-Type, Fallibilism, BFT-Weight)
-        - Guardrails flag implausible lever combinations, score inflation, and extreme scenario gaps
-        - Profile library showcases convergence with badges
-        
-        **Level 5: DaVinci Pass** *(You are here)*  
-        Injecting accountability narrative while maintaining symmetry and usability.
+**How did we achieve 98% convergence?**
+
+**Level 0: Independent Audits**
+Two auditors — Claude (Anthropic) and Grok (xAI) — scored the same worldviews independently, with no coordination and different philosophical lenses.
+
+**Level 1: Discrepancy Detection**
+Their scores diverged. The gaps weren't random — they traced back to each auditor's unacknowledged priors. Different lenses, different blind spots.
+
+**Level 2: Adversarial Correction**
+Each auditor challenged the other's reasoning directly. Both revised scores with documented rationale. No score changed without a written justification.
+
+**Level 3: Convergence**
+After adversarial deliberation, the YPA gap closed to within 0.03 — 98% agreement between two independently biased auditors. Convergence isn't claimed. It's earned through mutual challenge.
+
+**Level 4: The Console**
+Every element of this tool reflects the audit process:
+- 4 toggles expose the exact bias levers the auditors disagreed on (Parity, PF-Type, Fallibilism, BFT-Weight)
+- Guardrails flag implausible lever combinations, score inflation, and extreme scenario gaps
+- Profile badges mark which worldviews have survived adversarial audit
+
+**Level 5: Open Instrument** *(You are here)*
+The console puts you in the auditor's seat. Adjust the same levers that were debated. Run your own configuration. The scores change — and you can see exactly why.
         """)
     
     # Operate with Impeccability
