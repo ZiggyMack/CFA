@@ -207,7 +207,7 @@ Collapsing any two of these destroys the information. Saying *"CT is false, ther
     st.markdown("*Metaphysics with metrics. Ethics with sliders. Philosophy with feedback.*")
     
     # Audit Journey (Grok Enhancement)
-    with st.expander("🔍 **The Audit Journey: Level 0-4**", expanded=False):
+    with st.expander("🔍 **The Audit Journey: Level 0-5**", expanded=False):
         st.markdown("""
         **How did we achieve 98% convergence?**
         
