@@ -20,7 +20,7 @@ Usage:
 
     # Get YPA data for Console calculations (reads .yaml file)
     ypa_data = get_ypa_data("Classical Theism")
-    # Returns: {"name": "...", "bf_i": {...}, "levers": {...}, "admits_limits": bool}
+    # Returns: {"name": "...", "bft": {...}, "levers": {...}, "admits_limits": bool}
 
     # Load complete profile metadata (reads .md file)
     profile = load_profile("Classical Theism")
@@ -154,7 +154,7 @@ def get_ypa_data(worldview_name: str, opponent: str = None) -> Dict[str, Any]:
                   Example: get_ypa_data("Classical Theism", opponent="Methodological Naturalism")
 
     Returns:
-        Dict with keys: "name", "bf_i", "levers", "admits_limits", "calibration_context"
+        Dict with keys: "name", "bft", "levers", "admits_limits", "calibration_context"
         Matches format expected by utils/calculations.py::ypa_scenario_scores()
         calibration_context is None for canonical (no opponent), or a string describing the
         experiment that produced the matchup-specific scores.
@@ -199,7 +199,7 @@ def get_ypa_data(worldview_name: str, opponent: str = None) -> Dict[str, Any]:
             # Convert canonical YAML structure to Console format
             return {
                 "name": data["profile"]["name"],
-                "bf_i": {
+                "bft": {
                     "axioms": data["calculated"]["axiom_count"],
                     "debts": data["calculated"]["debt_count"],
                 },
@@ -241,7 +241,7 @@ def get_ypa_data(worldview_name: str, opponent: str = None) -> Dict[str, Any]:
         # Extract data in frameworks.py format (legacy .md YAML blocks)
         return {
             "name": metadata.get("name", worldview_name),
-            "bf_i": {
+            "bft": {
                 "axioms": ypa.get("brute_fact_index", {}).get("axioms", 0),
                 "debts": ypa.get("brute_fact_index", {}).get("debts", 0),
             },
@@ -473,7 +473,7 @@ if __name__ == "__main__":
         try:
             ypa = get_ypa_data(worldview)
             print(f"  Name: {ypa['name']}")
-            print(f"  BFI: {ypa['bf_i']['axioms']} axioms, {ypa['bf_i']['debts']} debts")
+            print(f"  BFI: {ypa['bft']['axioms']} axioms, {ypa['bft']['debts']} debts")
             print(f"  CCI: {ypa['levers']['CCI']}")
             print(f"  EDB: {ypa['levers']['EDB']}")
             print(f"  PF_inst: {ypa['levers']['PF_instrumental']}")

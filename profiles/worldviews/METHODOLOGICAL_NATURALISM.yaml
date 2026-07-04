@@ -1,4 +1,4 @@
-# Methodological Naturalism - Canonical Score Data
+﻿# Methodological Naturalism - Canonical Score Data
 # Purpose: Machine-readable YPA scores for validation and calculation
 # Source: Extracted from METHODOLOGICAL_NATURALISM.md (v0.3.0)
 # Usage: ypa_validator.py, empirical verification, Grok validation
@@ -606,18 +606,18 @@ phase2_lever_scores:
 calculated:
   axiom_count: 6
   debt_count: 4
-  bfi_standard: 10.0    # (6 + 4) * 1.0
+  bft_standard: 10.0    # (6 + 4) * 1.0
   lever_sum: 37.05      # Phase 2 golden final sum (was 39.5 on prior values)
   ypa_standard: 3.71    # 37.05 / 10.0 (was 3.95)
 
   # Preset mode BFI/YPA variations
-  skeptic_bfi: 12.0     # (6 + 4) * 1.2
+  skeptic_bft: 12.0     # (6 + 4) * 1.2
   skeptic_ypa: 3.09     # 37.05 / 12.0
 
-  diplomat_bfi: 9.0     # (6 + 4) * 0.9
+  diplomat_bft: 9.0     # (6 + 4) * 0.9
   diplomat_ypa: 4.12    # 37.05 / 9.0
 
-  zealot_bfi: 7.0       # (6 + 4) * 0.7
+  zealot_bft: 7.0       # (6 + 4) * 0.7
   zealot_ypa: 5.29      # 37.05 / 7.0
 
 # Matchup-specific lever scores

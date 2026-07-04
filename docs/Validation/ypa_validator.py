@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 YPA Validator - Standalone Calculator for VuDu Light Framework Comparison
 
@@ -23,7 +23,7 @@ from pathlib import Path
 from typing import Dict, List, Tuple, Optional
 
 
-# Preset Mode Configurations (BFI Weight Multipliers)
+# Preset Mode Configurations (BFT Weight Multipliers)
 PRESETS = {
     "skeptic": {
         "weight": 1.2,
@@ -83,8 +83,8 @@ class WorldviewProfile:
             'MG': levers_data.get('meta_governance', 0.0)
         }
 
-    def calculate_bfi(self, weight: float = 1.0) -> float:
-        """Calculate Burden of Falsity Index (BFI)
+    def calculate_bft(self, weight: float = 1.0) -> float:
+        """Calculate Brute-Fact Tax (BFT)
 
         Formula: (axiom_count + debt_count) * weight
 
@@ -92,27 +92,27 @@ class WorldviewProfile:
             weight: Preset mode multiplier (default 1.0 = neutral)
 
         Returns:
-            BFI value
+            BFT value
         """
         return (len(self.axioms) + len(self.debts)) * weight
 
-    def calculate_ypa(self, bfi: float) -> float:
+    def calculate_ypa(self, bft: float) -> float:
         """Calculate Yield Per Axiom (YPA)
 
-        Formula: sum(lever_values) / BFI
+        Formula: sum(lever_values) / BFT
 
         Args:
-            bfi: Burden of Falsity Index
+            bft: Brute-Fact Tax
 
         Returns:
             YPA value
         """
         lever_sum = sum(self.levers.values())
 
-        if bfi == 0:
-            raise ValueError("BFI cannot be zero (division by zero)")
+        if bft == 0:
+            raise ValueError("BFT cannot be zero (division by zero)")
 
-        return lever_sum / bfi
+        return lever_sum / bft
 
     def get_summary(self, preset: str = "seeker") -> Dict:
         """Get complete calculation summary for this profile
@@ -124,8 +124,8 @@ class WorldviewProfile:
             Dictionary with all calculations
         """
         weight = PRESETS[preset]["weight"]
-        bfi = self.calculate_bfi(weight)
-        ypa = self.calculate_ypa(bfi)
+        bft = self.calculate_bft(weight)
+        ypa = self.calculate_ypa(bft)
 
         return {
             "name": self.name,
@@ -135,7 +135,7 @@ class WorldviewProfile:
             "lever_values": self.levers,
             "preset": preset,
             "bfi_weight": weight,
-            "bfi": round(bfi, 4),
+            "bft": round(bft, 4),
             "ypa": round(ypa, 4)
         }
 
@@ -147,7 +147,7 @@ def print_profile_summary(summary: Dict, verbose: bool = False):
     print(f"PROFILE: {summary['name'].upper()}")
     print(f"{'='*60}")
 
-    print(f"\nPreset Mode: {summary['preset'].upper()} (BFI Weight: {summary['bfi_weight']}x)")
+    print(f"\nPreset Mode: {summary['preset'].upper()} (BFT Weight: {summary['bfi_weight']}x)")
 
     print(f"\nAxioms: {summary['axiom_count']}")
     print(f"Debts: {summary['debt_count']}")
@@ -158,8 +158,8 @@ def print_profile_summary(summary: Dict, verbose: bool = False):
             print(f"  {lever}: {value}")
 
     print(f"\nLever Sum: {summary['lever_sum']}")
-    print(f"BFI: ({summary['axiom_count']} + {summary['debt_count']}) × {summary['bfi_weight']} = {summary['bfi']}")
-    print(f"YPA: {summary['lever_sum']} / {summary['bfi']} = {summary['ypa']}")
+    print(f"BFT: ({summary['axiom_count']} + {summary['debt_count']}) × {summary['bfi_weight']} = {summary['bft']}")
+    print(f"YPA: {summary['lever_sum']} / {summary['bft']} = {summary['ypa']}")
 
     print(f"\n{'='*60}\n")
 
@@ -183,7 +183,7 @@ def compare_profiles(profile1: WorldviewProfile, profile2: WorldviewProfile,
     print(f"DELTA ANALYSIS: {summary1['name']} vs {summary2['name']}")
     print(f"{'='*60}")
 
-    print(f"\nPreset Mode: {preset.upper()} (BFI Weight: {PRESETS[preset]['weight']}x)")
+    print(f"\nPreset Mode: {preset.upper()} (BFT Weight: {PRESETS[preset]['weight']}x)")
 
     print(f"\nΔYPA: {summary1['ypa']} - {summary2['ypa']} = {delta_ypa:+.4f}")
     print(f"Percent Difference: {percent_diff:+.2f}%")

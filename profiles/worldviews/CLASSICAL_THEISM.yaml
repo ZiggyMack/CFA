@@ -1,4 +1,4 @@
-# Classical Theism - Canonical Score Data
+﻿# Classical Theism - Canonical Score Data
 # Purpose: Machine-readable YPA scores for validation and calculation
 # Source: Extracted from CLASSICAL_THEISM.md (v0.3.0)
 # Usage: ypa_validator.py, empirical verification, Grok validation
@@ -355,18 +355,18 @@ phase2_lever_scores:
 calculated:
   axiom_count: 7
   debt_count: 4
-  bfi_standard: 11.0    # (7 + 4) * 1.0
+  bft_standard: 11.0    # (7 + 4) * 1.0
   lever_sum: 39.47      # Phase 2 golden final sum (was 48.0 on prior values)
   ypa_standard: 3.59    # 39.47 / 11.0 (was 4.36)
 
   # Preset mode BFI/YPA variations
-  skeptic_bfi: 13.2     # (7 + 4) * 1.2
+  skeptic_bft: 13.2     # (7 + 4) * 1.2
   skeptic_ypa: 2.99     # 39.47 / 13.2
 
-  diplomat_bfi: 9.9     # (7 + 4) * 0.9
+  diplomat_bft: 9.9     # (7 + 4) * 0.9
   diplomat_ypa: 3.99    # 39.47 / 9.9
 
-  zealot_bfi: 7.7       # (7 + 4) * 0.7
+  zealot_bft: 7.7       # (7 + 4) * 0.7
   zealot_ypa: 5.12      # 39.47 / 7.7
 
 # Matchup-specific lever scores

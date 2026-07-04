@@ -62,17 +62,17 @@ def _render_framework_ledger(worldview_name: str, emoji: str, subtitle: str):
 
     st.markdown("---")
 
-    # BFI Calculation
-    st.markdown("### 📊 BFI Calculation")
+    # BFT Calculation
+    st.markdown("### 📊 BFT Calculation")
     col1, col2, col3 = st.columns(3)
-    bfi_total = ypa_data["bf_i"]["axioms"] + ypa_data["bf_i"]["debts"]
+    bft_total = ypa_data["bft"]["axioms"] + ypa_data["bft"]["debts"]
 
     with col1:
-        st.metric("Axioms", str(ypa_data["bf_i"]["axioms"]))
+        st.metric("Axioms", str(ypa_data["bft"]["axioms"]))
     with col2:
-        st.metric("Debts", str(ypa_data["bf_i"]["debts"]))
+        st.metric("Debts", str(ypa_data["bft"]["debts"]))
     with col3:
-        st.metric("**BFI Total**", f"**{bfi_total}**")
+        st.metric("**BFT Total**", f"**{bft_total}**")
 
     st.markdown("---")
 
@@ -86,8 +86,8 @@ def _render_framework_ledger(worldview_name: str, emoji: str, subtitle: str):
         if st.button(f"→ Push to Framework A", key=f"push_a_{worldview_name.replace(' ', '_')}", use_container_width=True, type="primary"):
             # Load worldview data into Framework A
             st.session_state["fa_name"] = worldview_name
-            st.session_state["fa_ax"] = ypa_data["bf_i"]["axioms"]
-            st.session_state["fa_db"] = ypa_data["bf_i"]["debts"]
+            st.session_state["fa_ax"] = ypa_data["bft"]["axioms"]
+            st.session_state["fa_db"] = ypa_data["bft"]["debts"]
             st.session_state["fa_ad"] = ypa_data.get("admits_limits", True)
             st.session_state["fa_cci"] = ypa_data["levers"]["CCI"]
             st.session_state["fa_edb"] = ypa_data["levers"]["EDB"]
@@ -106,8 +106,8 @@ def _render_framework_ledger(worldview_name: str, emoji: str, subtitle: str):
         if st.button(f"→ Push to Framework B", key=f"push_b_{worldview_name.replace(' ', '_')}", use_container_width=True):
             # Load worldview data into Framework B
             st.session_state["fb_name"] = worldview_name
-            st.session_state["fb_ax"] = ypa_data["bf_i"]["axioms"]
-            st.session_state["fb_db"] = ypa_data["bf_i"]["debts"]
+            st.session_state["fb_ax"] = ypa_data["bft"]["axioms"]
+            st.session_state["fb_db"] = ypa_data["bft"]["debts"]
             st.session_state["fb_ad"] = ypa_data.get("admits_limits", True)
             st.session_state["fb_cci"] = ypa_data["levers"]["CCI"]
             st.session_state["fb_edb"] = ypa_data["levers"]["EDB"]
@@ -202,9 +202,9 @@ def render():
     - When you **justify it** → He erases the mark
     - When you **hide it** → He marks you twice
 
-    The Brute-Fact Index (BFI) = Axioms + Debts
+    The Brute-Fact Tax (BFT) = Axioms + Debts
 
-    Lower BFI = More efficient framework (fewer starting assumptions)
+    Lower BFT = More efficient framework (fewer starting assumptions)
     """)
 
     st.markdown("---")
@@ -454,8 +454,8 @@ def render():
 
         st.markdown("---")
 
-        # CFA's BFI Score
-        st.markdown("### 🧮 CFA's Brute-Fact Index (BFI)")
+        # CFA's BFT Score
+        st.markdown("### 🧮 CFA's Brute-Fact Tax (BFT)")
 
         col1, col2, col3 = st.columns(3)
         with col1:
@@ -463,13 +463,13 @@ def render():
         with col2:
             st.metric("Debts", "3")
         with col3:
-            st.metric("BFI", "6")
+            st.metric("BFT", "6")
 
         st.markdown("""
         **Interpretation:**
 
-        - **BFI = 6** → CFA makes 3 unprovable assumptions and carries 3 unresolved questions
-        - This is *lower* than Classical Theism (BFI=11) but *higher* than Methodological Naturalism (BFI=10)
+        - **BFT = 6** → CFA makes 3 unprovable assumptions and carries 3 unresolved questions
+        - This is *lower* than Classical Theism (BFT=11) but *higher* than Methodological Naturalism (BFT=10)
         - CFA is not axiom-free. **We name our bets.**
 
         **The Meta-Move:**
@@ -1043,13 +1043,13 @@ def render():
                 - **Parity:** OFF
                 - **PF-Type:** Instrumental
                 - **Fallibilism:** ON
-                - **BFI Weight:** 1.2x (Heavier)
+                - **BFT Weight:** 1.2x (Heavier)
                 """)
 
             st.markdown("---")
 
-            # Row 2: BFI Breakdown (Meta-Axioms + Debts)
-            st.markdown("### 📋 BFI Breakdown - Skeptic's Meta-Axioms")
+            # Row 2: BFT Breakdown (Meta-Axioms + Debts)
+            st.markdown("### 📋 BFT Breakdown - Skeptic's Meta-Axioms")
             st.caption("*The unprovable assumptions underlying THIS preset itself*")
 
             bfi_col1, bfi_col2, bfi_col3 = st.columns([1, 1, 1])
@@ -1059,7 +1059,7 @@ def render():
                 st.markdown("""
                 1. **Testability > Meaning** - Falsifiable claims deserve epistemic priority
                 2. **Asymmetric Standards Justified** - Empirical frameworks get different evaluation (Parity OFF)
-                3. **Parsimony Virtue** - More axioms = higher intellectual cost (BFI 1.2x penalty)
+                3. **Parsimony Virtue** - More axioms = higher intellectual cost (BFT 1.2x penalty)
                 """)
 
             with bfi_col2:
@@ -1070,7 +1070,7 @@ def render():
                 """)
 
             with bfi_col3:
-                st.metric("BFI", "5", help="3 Axioms + 2 Debts")
+                st.metric("BFT", "5", help="3 Axioms + 2 Debts")
                 st.caption("*Skeptic preset has its own brute facts!*")
                 st.markdown("")
                 st.markdown("")
@@ -1078,7 +1078,7 @@ def render():
                     st.session_state['sidebar_lever_parity'] = "OFF"
                     st.session_state['sidebar_pf_type'] = "Instrumental"
                     st.session_state['sidebar_fallibilism'] = "ON"
-                    st.session_state['sidebar_bfi_weight'] = "Heavier_1.2x"
+                    st.session_state['sidebar_bft_weight'] = "Heavier_1.2x"
                     st.session_state.page = 'console'
                     st.rerun()
 
@@ -1094,7 +1094,7 @@ def render():
                 **Meta-Revelation:**
 
                 The preset itself has axioms! Parity OFF is justified by Axiom #2 (asymmetric standards).
-                BFI 1.2x is justified by Axiom #3 (parsimony virtue). But Debt #2 reveals: empiricism
+                BFT 1.2x is justified by Axiom #3 (parsimony virtue). But Debt #2 reveals: empiricism
                 itself rests on unprovable regularity! *Even skeptics have brute facts.*
 
                 **Critical Symmetry Issue (Under Trinity Review):**
@@ -1132,13 +1132,13 @@ def render():
                 - **Parity:** ON
                 - **PF-Type:** Holistic_50_50
                 - **Fallibilism:** ON
-                - **BFI Weight:** 1.0x (Equal)
+                - **BFT Weight:** 1.0x (Equal)
                 """)
 
             st.markdown("---")
 
-            # Row 2: BFI Breakdown (Meta-Axioms + Debts)
-            st.markdown("### 📋 BFI Breakdown - Diplomat's Meta-Axioms")
+            # Row 2: BFT Breakdown (Meta-Axioms + Debts)
+            st.markdown("### 📋 BFT Breakdown - Diplomat's Meta-Axioms")
             st.caption("*The unprovable assumptions underlying THIS preset itself*")
 
             bfi_col1, bfi_col2, bfi_col3 = st.columns([1, 1, 1])
@@ -1159,7 +1159,7 @@ def render():
                 """)
 
             with bfi_col3:
-                st.metric("BFI", "5", help="2 Axioms + 3 Debts")
+                st.metric("BFT", "5", help="2 Axioms + 3 Debts")
                 st.caption("*Even neutrality has assumptions!*")
                 st.markdown("")
                 st.markdown("")
@@ -1167,7 +1167,7 @@ def render():
                     st.session_state['sidebar_lever_parity'] = "ON"
                     st.session_state['sidebar_pf_type'] = "Holistic_50_50"
                     st.session_state['sidebar_fallibilism'] = "ON"
-                    st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
+                    st.session_state['sidebar_bft_weight'] = "Equal_1.0x"
                     st.session_state.page = 'console'
                     st.rerun()
 
@@ -1176,7 +1176,7 @@ def render():
                 **Seeking Unbiased Comparison:**
 
                 Parity ON ensures same standards for both, 50/50 PF weighting balances instrumental + intrinsic.
-                Equal BFI treatment (neither favored/penalized for axiom count).
+                Equal BFT treatment (neither favored/penalized for axiom count).
 
                 **Meta-Revelation:**
 
@@ -1216,13 +1216,13 @@ def render():
                 - **Parity:** ON
                 - **PF-Type:** Composite_70_30
                 - **Fallibilism:** ON
-                - **BFI Weight:** 1.0x (Equal)
+                - **BFT Weight:** 1.0x (Equal)
                 """)
 
             st.markdown("---")
 
-            # Row 2: BFI Breakdown (Meta-Axioms + Debts)
-            st.markdown("### 📋 BFI Breakdown - Seeker's Meta-Axioms")
+            # Row 2: BFT Breakdown (Meta-Axioms + Debts)
+            st.markdown("### 📋 BFT Breakdown - Seeker's Meta-Axioms")
             st.caption("*The unprovable assumptions underlying THIS preset itself*")
 
             bfi_col1, bfi_col2, bfi_col3 = st.columns([1, 1, 1])
@@ -1243,7 +1243,7 @@ def render():
                 """)
 
             with bfi_col3:
-                st.metric("BFI", "5", help="3 Axioms + 2 Debts")
+                st.metric("BFT", "5", help="3 Axioms + 2 Debts")
                 st.caption("*Seekers have brute facts too!*")
                 st.markdown("")
                 st.markdown("")
@@ -1251,7 +1251,7 @@ def render():
                     st.session_state['sidebar_lever_parity'] = "ON"
                     st.session_state['sidebar_pf_type'] = "Composite_70_30"
                     st.session_state['sidebar_fallibilism'] = "ON"
-                    st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
+                    st.session_state['sidebar_bft_weight'] = "Equal_1.0x"
                     st.session_state.page = 'console'
                     st.rerun()
 
@@ -1302,13 +1302,13 @@ def render():
                 - **Parity:** ON
                 - **PF-Type:** Holistic_50_50
                 - **Fallibilism:** OFF
-                - **BFI Weight:** 1.0x (Equal)
+                - **BFT Weight:** 1.0x (Equal)
                 """)
 
             st.markdown("---")
 
-            # Row 2: BFI Breakdown (Meta-Axioms + Debts)
-            st.markdown("### 📋 BFI Breakdown - Zealot's Meta-Axioms")
+            # Row 2: BFT Breakdown (Meta-Axioms + Debts)
+            st.markdown("### 📋 BFT Breakdown - Zealot's Meta-Axioms")
             st.caption("*The unprovable assumptions underlying THIS preset itself*")
 
             bfi_col1, bfi_col2, bfi_col3 = st.columns([1, 1, 1])
@@ -1329,14 +1329,14 @@ def render():
                 """)
 
             with bfi_col3:
-                st.metric("BFI", "5", help="3 Axioms + 2 Debts")
+                st.metric("BFT", "5", help="3 Axioms + 2 Debts")
                 st.caption("*Zealots confess their debts!*")
                 st.warning("⚠️ **Trinity Alert:** Symmetry violations under review")
                 if st.button("→ Apply & Go to Console", key="apply_nav_zealot", use_container_width=True, type="primary"):
                     st.session_state['sidebar_lever_parity'] = "ON"
                     st.session_state['sidebar_pf_type'] = "Holistic_50_50"
                     st.session_state['sidebar_fallibilism'] = "OFF"
-                    st.session_state['sidebar_bfi_weight'] = "Equal_1.0x"
+                    st.session_state['sidebar_bft_weight'] = "Equal_1.0x"
                     st.session_state.page = 'console'
                     st.rerun()
 
@@ -1351,7 +1351,7 @@ def render():
                 | Parity | OFF | ON | ❌ NO |
                 | PF-Type | Instrumental | Holistic_50_50 | ❌ NO |
                 | Fallibilism | ON | OFF | ✅ YES |
-                | BFI Weight | 1.2x | 1.0x | ❌ NO (should be 0.8x) |
+                | BFT Weight | 1.2x | 1.0x | ❌ NO (should be 0.8x) |
 
                 **Consequence:**
 
@@ -1426,24 +1426,24 @@ def render():
             
             st.markdown("---")
             
-            # Show custom BFI with Live Tracker
-            st.markdown("### 📊 Your BFI (Live Tracker)")
+            # Show custom BFT with Live Tracker
+            st.markdown("### 📊 Your BFT (Live Tracker)")
             col1, col2, col3 = st.columns(3)
             with col1:
                 st.metric("Axioms", f"{num_axioms}")
             with col2:
                 st.metric("Debts", f"{num_debts}")
             with col3:
-                total_bfi = num_axioms + num_debts
-                st.metric("**BFI Total**", f"**{total_bfi}**")
+                total_bft = num_axioms + num_debts
+                st.metric("**BFT Total**", f"**{total_bft}**")
             
             if num_axioms + num_debts > 0:
                 st.info(f"""
-                **Efficiency Check**: Your BFI is {num_axioms + num_debts}.
+                **Efficiency Check**: Your BFT is {num_axioms + num_debts}.
                 
-                - Lower BFI = More efficient (fewer assumptions)
-                - MdN's BFI: 10
-                - CT's BFI: 11
+                - Lower BFT = More efficient (fewer assumptions)
+                - MdN's BFT: 10
+                - CT's BFT: 11
                 
                 How does your framework compare?
                 """)
@@ -1477,7 +1477,7 @@ def render():
                         "target": target_key
                     }
                     st.success(f"✅ '{framework_name}' ready for {target_framework}!")
-                    st.info("**Next:** Go to Console → Open BFI section → Click 'Apply Custom Framework'")
+                    st.info("**Next:** Go to Console → Open BFT section → Click 'Apply Custom Framework'")
                     
                     # Optional: Auto-navigate
                     if st.button("→ Go to Console Now", key="nav_to_console"):
@@ -1489,7 +1489,7 @@ def render():
                 if num_axioms + num_debts > 0:
                     custom_framework = {
                         "name": framework_name,
-                        "bf_i": {
+                        "bft": {
                             "axioms": num_axioms,
                             "debts": num_debts
                         },

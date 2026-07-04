@@ -8,7 +8,7 @@ All math and scoring logic in one place
 from typing import Dict, Tuple, List
 
 PF_TYPES = ["Instrumental", "Composite_70_30", "Holistic_50_50"]
-BFI_WEIGHTS = ["Equal_1.0x", "Weighted_1.2x"]
+BFT_WEIGHTS = ["Equal_1.0x", "Weighted_1.2x"]
 
 def composite_pf(pf_inst: float, pf_exist: float, pf_type: str) -> float:
     """Calculate composite pragmatic fertility score"""
@@ -28,15 +28,15 @@ def parity_weight(mg: float, parity: str) -> float:
     """Apply parity weighting to moral generativity"""
     return mg if parity == "ON" else 0.5 * mg
 
-def bfi_total(axioms: int, debts: int, debt_weight: str) -> float:
-    """Calculate total brute-fact index"""
+def bft_total(axioms: int, debts: int, debt_weight: str) -> float:
+    """Calculate Brute-Fact Tax"""
     w = 1.0 if debt_weight == "Equal_1.0x" else 1.2
     return axioms + w * debts
 
 def ypa_scenario_scores(fr: Dict, cfg: Dict) -> Tuple[Dict, Dict, float]:
     """
     Calculate YPA scores across all scenarios.
-    Returns: (results_dict, lever_map, bfi)
+    Returns: (results_dict, lever_map, bft)
 
     Crux Exclude (cfg["include_crux"]=False): applies a conservatism discount to
     levers mapped from Trinity Phase-1 metrics, proportional to the matchup-specific
@@ -63,7 +63,7 @@ def ypa_scenario_scores(fr: Dict, cfg: Dict) -> Tuple[Dict, Dict, float]:
     # _K=0.15 means a 100%-crux-rate metric damps its lever by 15%.
     # This is a pessimistic stance — assumes disagreement signals the score is
     # overstated — but is proportional (high-value levers take a bigger absolute hit)
-    # rather than a flat deduction. AR has no mapped metric; BFI denominator unchanged.
+    # rather than a flat deduction. AR has no mapped metric; BFT denominator unchanged.
     _CRUX_LEVER_MAP = {
         "CA": "CCI", "LS": "CCI",  # Causal Attribution + Logical Soundness → Coherence
         "IP": "EDB", "ES": "EDB",  # Intellectual Pedigree + Explanatory Scope → Depth
@@ -93,14 +93,14 @@ def ypa_scenario_scores(fr: Dict, cfg: Dict) -> Tuple[Dict, Dict, float]:
     }
 
     lever_map = {"CCI": CCI, "EDB": EDB, "PF": PF, "AR": AR, "MG": MG}
-    bfi = bfi_total(fr["bf_i"]["axioms"], fr["bf_i"]["debts"], cfg["bfi_debt_weight"])
+    bft = bft_total(fr["bft"]["axioms"], fr["bft"]["debts"], cfg["bft_debt_weight"])
 
     results = {}
     for name, weights in scenarios_weights.items():
         total = sum(lever_map[k] * w for k, w in weights.items())
-        results[name] = {"total": total, "YPA": total / bfi if bfi > 0 else 0}
+        results[name] = {"total": total, "YPA": total / bft if bft > 0 else 0}
 
-    return results, lever_map, bfi
+    return results, lever_map, bft
 
 def guardrail_lever_coupling(PF: float, CCI: float) -> Tuple[bool, str]:
     """Check lever coupling guardrail"""
@@ -108,28 +108,28 @@ def guardrail_lever_coupling(PF: float, CCI: float) -> Tuple[bool, str]:
         return False, f"⚠️ WARNING: PF={PF:.2f} >= 9 but CCI={CCI:.2f} < 6.5"
     return True, f"✅ PASS: Lever-Coupling satisfied"
 
-def guardrail_bfi_sensitivity(results_neutral: float, bfi: float, results_empirical: float = None, results_existential: float = None) -> Tuple[bool, str]:
+def guardrail_bft_sensitivity(results_neutral: float, bft: float, results_empirical: float = None, results_existential: float = None) -> Tuple[bool, str]:
     """
-    Prevents axiom inflation abuse by checking if YPA increases faster than BFI grows.
-    Rule: ΔYPA/ΔBFI should not exceed 0.4
+    Prevents axiom inflation abuse by checking if YPA increases faster than BFT grows.
+    Rule: ΔYPA/ΔBFT should not exceed 0.4
     """
-    ratio = results_neutral / bfi if bfi > 0 else 0
-    
-    # Flag if efficiency is suspiciously high (>0.4) with large BFI (>12)
-    if bfi > 12 and ratio > 0.4:
-        return False, f"⚠️ WARNING: High BFI ({bfi:.1f}) with high efficiency (YPA={results_neutral:.2f}, ratio={ratio:.2f})"
-    
+    ratio = results_neutral / bft if bft > 0 else 0
+
+    # Flag if efficiency is suspiciously high (>0.4) with large BFT (>12)
+    if bft > 12 and ratio > 0.4:
+        return False, f"⚠️ WARNING: High BFT ({bft:.1f}) with high efficiency (YPA={results_neutral:.2f}, ratio={ratio:.2f})"
+
     # Also check if empirical/existential scenarios diverge too much from neutral
     if results_empirical and results_existential:
         max_ypa = max(results_neutral, results_empirical, results_existential)
         min_ypa = min(results_neutral, results_empirical, results_existential)
         delta_ypa = max_ypa - min_ypa
-        
-        # Rough heuristic: if ΔYPA across scenarios > 0.4 × BFI, flag it
-        if delta_ypa > 0.4 * bfi:
-            return False, f"⚠️ WARNING: Large YPA variance across scenarios (ΔYPA={delta_ypa:.2f}, threshold=0.4×BFI={0.4*bfi:.2f})"
-    
-    return True, f"✅ PASS: BFI-Sensitivity satisfied (BFI={bfi:.1f}, Neutral YPA={results_neutral:.2f})"
+
+        # Rough heuristic: if ΔYPA across scenarios > 0.4 × BFT, flag it
+        if delta_ypa > 0.4 * bft:
+            return False, f"⚠️ WARNING: Large YPA variance across scenarios (ΔYPA={delta_ypa:.2f}, threshold=0.4×BFT={0.4*bft:.2f})"
+
+    return True, f"✅ PASS: BFT-Sensitivity satisfied (BFT={bft:.1f}, Neutral YPA={results_neutral:.2f})"
 
 def guardrail_weight_inversion(results: Dict, neutral_ypa: float) -> Tuple[bool, str]:
     """
@@ -188,14 +188,14 @@ def symmetry_audit(fr: Dict, cfg: Dict) -> List[Tuple[str, float, float, float]]
     delta_fall = get_ypa(fr, cfg_fall) - baseline
     reports.append(("Fallibilism", baseline, get_ypa(fr, cfg_fall), delta_fall))
 
-    # Test BFI debt weighting
-    cfg_bfi = cfg.copy()
+    # Test BFT debt weighting
+    cfg_bft = cfg.copy()
     # Normalize and flip between the two supported weights
-    current_bfi = cfg.get("bfi_debt_weight", "Equal_1.0x")
-    current_bfi = "Weighted_1.2x" if current_bfi == "Heavier_1.2x" else current_bfi
-    flipped_bfi = "Weighted_1.2x" if current_bfi == "Equal_1.0x" else "Equal_1.0x"
-    cfg_bfi["bfi_debt_weight"] = flipped_bfi
-    delta_bfi = get_ypa(fr, cfg_bfi) - baseline
-    reports.append((f"BFI->{flipped_bfi}", baseline, get_ypa(fr, cfg_bfi), delta_bfi))
+    current_bft = cfg.get("bft_debt_weight", "Equal_1.0x")
+    current_bft = "Weighted_1.2x" if current_bft == "Heavier_1.2x" else current_bft
+    flipped_bft = "Weighted_1.2x" if current_bft == "Equal_1.0x" else "Equal_1.0x"
+    cfg_bft["bft_debt_weight"] = flipped_bft
+    delta_bft = get_ypa(fr, cfg_bft) - baseline
+    reports.append((f"BFT->{flipped_bft}", baseline, get_ypa(fr, cfg_bft), delta_bft))
 
     return reports

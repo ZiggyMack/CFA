@@ -16,7 +16,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from utils.calculations import ypa_scenario_scores, guardrail_lever_coupling, guardrail_bfi_sensitivity, guardrail_weight_inversion, symmetry_audit, PF_TYPES
+from utils.calculations import ypa_scenario_scores, guardrail_lever_coupling, guardrail_bft_sensitivity, guardrail_weight_inversion, symmetry_audit, PF_TYPES
 from utils.visualizations import create_lever_comparison_chart, create_ypa_trinity_chart
 from utils.colors import CFA_COLORS, get_framework_color, get_preset_color
 from utils.profile_loader import get_ypa_data, get_trinity_scores, get_framework_templates
@@ -152,15 +152,15 @@ def apply_loaded_run(run: dict):
         st.session_state["sidebar_pf_type"] = cfg["pf_type"]
     if "fallibilism_bonus" in cfg:
         st.session_state["sidebar_fallibilism"] = cfg["fallibilism_bonus"]
-    if "bfi_debt_weight" in cfg:
-        st.session_state["sidebar_bfi_weight"] = cfg["bfi_debt_weight"]
+    if "bft_debt_weight" in cfg:
+        st.session_state["sidebar_bft_weight"] = cfg["bft_debt_weight"]
 
     A = run.get("framework_a", {})
     if "name" in A:
         st.session_state["fa_name"] = A["name"]
-    if "bf_i" in A:
-        st.session_state["fa_ax"] = A["bf_i"].get("axioms", 6)
-        st.session_state["fa_db"] = A["bf_i"].get("debts", 4)
+    if "bft" in A:
+        st.session_state["fa_ax"] = A["bft"].get("axioms", 6)
+        st.session_state["fa_db"] = A["bft"].get("debts", 4)
     if "admits_limits" in A:
         st.session_state["fa_ad"] = bool(A["admits_limits"])
     if "levers" in A:
@@ -175,9 +175,9 @@ def apply_loaded_run(run: dict):
     B = run.get("framework_b", {})
     if "name" in B:
         st.session_state["fb_name"] = B["name"]
-    if "bf_i" in B:
-        st.session_state["fb_ax"] = B["bf_i"].get("axioms", 6)
-        st.session_state["fb_db"] = B["bf_i"].get("debts", 4)
+    if "bft" in B:
+        st.session_state["fb_ax"] = B["bft"].get("axioms", 6)
+        st.session_state["fb_db"] = B["bft"].get("debts", 4)
     if "admits_limits" in B:
         st.session_state["fb_ad"] = bool(B["admits_limits"])
     if "levers" in B:
@@ -195,19 +195,19 @@ def detect_active_preset():
     parity = st.session_state.get("sidebar_lever_parity", "ON")
     pf = st.session_state.get("sidebar_pf_type", "Holistic_50_50")
     fall = st.session_state.get("sidebar_fallibilism", "ON")
-    bfi = st.session_state.get("sidebar_bfi_weight", "Equal_1.0x")
+    bft = st.session_state.get("sidebar_bft_weight", "Equal_1.0x")
 
-    # Normalize BFI weight naming (Heavier_1.2x and Weighted_1.2x are equivalent)
-    bfi_normalized = "Weighted_1.2x" if bfi in ["Heavier_1.2x", "Weighted_1.2x"] else bfi
+    # Normalize bft weight naming (Heavier_1.2x and Weighted_1.2x are equivalent)
+    bft_normalized = "Weighted_1.2x" if bft in ["Heavier_1.2x", "Weighted_1.2x"] else bft
 
     # Check against known preset configurations (emojis match Brute Ledger)
-    if parity == "OFF" and pf == "Instrumental" and fall == "ON" and bfi_normalized == "Weighted_1.2x":
+    if parity == "OFF" and pf == "Instrumental" and fall == "ON" and bft_normalized == "Weighted_1.2x":
         return "🔬 Skeptic"
-    elif parity == "ON" and pf == "Holistic_50_50" and fall == "ON" and bfi == "Equal_1.0x":
+    elif parity == "ON" and pf == "Holistic_50_50" and fall == "ON" and bft == "Equal_1.0x":
         return "🤝 Diplomat"
-    elif parity == "ON" and pf == "Composite_70_30" and fall == "ON" and bfi == "Equal_1.0x":
+    elif parity == "ON" and pf == "Composite_70_30" and fall == "ON" and bft == "Equal_1.0x":
         return "🙏 Seeker"
-    elif parity == "ON" and pf == "Holistic_50_50" and fall == "OFF" and bfi == "Equal_1.0x":
+    elif parity == "ON" and pf == "Holistic_50_50" and fall == "OFF" and bft == "Equal_1.0x":
         return "👿 Zealot"
     else:
         return "⚙️ Custom"
@@ -342,8 +342,8 @@ def _on_fa_worldview_change():
     try:
         use_matchup = audit_mode == "Audit" and bool(opponent)
         ypa = get_ypa_data(name, opponent=opponent) if use_matchup else get_ypa_data(name)
-        st.session_state["fa_ax"]  = ypa["bf_i"]["axioms"]
-        st.session_state["fa_db"]  = ypa["bf_i"]["debts"]
+        st.session_state["fa_ax"]  = ypa["bft"]["axioms"]
+        st.session_state["fa_db"]  = ypa["bft"]["debts"]
         st.session_state["fa_ad"]  = ypa["admits_limits"]
         st.session_state["fa_cci"] = ypa["levers"]["CCI"]
         st.session_state["fa_edb"] = ypa["levers"]["EDB"]
@@ -378,8 +378,8 @@ def _on_fb_worldview_change():
     try:
         use_matchup = audit_mode == "Audit" and bool(opponent)
         ypa = get_ypa_data(name, opponent=opponent) if use_matchup else get_ypa_data(name)
-        st.session_state["fb_ax"]  = ypa["bf_i"]["axioms"]
-        st.session_state["fb_db"]  = ypa["bf_i"]["debts"]
+        st.session_state["fb_ax"]  = ypa["bft"]["axioms"]
+        st.session_state["fb_db"]  = ypa["bft"]["debts"]
         st.session_state["fb_ad"]  = ypa["admits_limits"]
         st.session_state["fb_cci"] = ypa["levers"]["CCI"]
         st.session_state["fb_edb"] = ypa["levers"]["EDB"]
@@ -431,8 +431,8 @@ def render():
             _ypa_a = MDN_DEFAULT
             _ypa_b = CT_DEFAULT
         for _pfx, _ypa in [("fa", _ypa_a), ("fb", _ypa_b)]:
-            st.session_state[f"{_pfx}_ax"]  = _ypa["bf_i"]["axioms"]
-            st.session_state[f"{_pfx}_db"]  = _ypa["bf_i"]["debts"]
+            st.session_state[f"{_pfx}_ax"]  = _ypa["bft"]["axioms"]
+            st.session_state[f"{_pfx}_db"]  = _ypa["bft"]["debts"]
             st.session_state[f"{_pfx}_ad"]  = _ypa["admits_limits"]
             st.session_state[f"{_pfx}_cci"] = _ypa["levers"]["CCI"]
             st.session_state[f"{_pfx}_edb"] = _ypa["levers"]["EDB"]
@@ -636,7 +636,7 @@ def render():
                 st.session_state["sidebar_lever_parity"] = "OFF"
                 st.session_state["sidebar_pf_type"] = "Instrumental"
                 st.session_state["sidebar_fallibilism"] = "ON"
-                st.session_state["sidebar_bfi_weight"] = "Weighted_1.2x"
+                st.session_state["sidebar_bft_weight"] = "Weighted_1.2x"
                 st.session_state["include_crux"] = False  # skeptic distrusts contested scores
                 st.rerun()  # Immediately reflect changes in indicator
             st.caption("MdN-optimized\nPredictive power focus")
@@ -645,7 +645,7 @@ def render():
                 st.session_state["sidebar_lever_parity"] = "ON"
                 st.session_state["sidebar_pf_type"] = "Composite_70_30"
                 st.session_state["sidebar_fallibilism"] = "ON"
-                st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
+                st.session_state["sidebar_bft_weight"] = "Equal_1.0x"
                 st.rerun()  # Immediately reflect changes in indicator
             st.caption("CT-leaning\nMeaning-first")
 
@@ -654,7 +654,7 @@ def render():
                 st.session_state["sidebar_lever_parity"] = "ON"
                 st.session_state["sidebar_pf_type"] = "Holistic_50_50"
                 st.session_state["sidebar_fallibilism"] = "ON"
-                st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
+                st.session_state["sidebar_bft_weight"] = "Equal_1.0x"
                 st.rerun()  # Immediately reflect changes in indicator
             st.caption("Balanced bridge\nEqual weighting")
 
@@ -662,7 +662,7 @@ def render():
                 st.session_state["sidebar_lever_parity"] = "ON"
                 st.session_state["sidebar_pf_type"] = "Holistic_50_50"
                 st.session_state["sidebar_fallibilism"] = "OFF"
-                st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
+                st.session_state["sidebar_bft_weight"] = "Equal_1.0x"
                 st.rerun()  # Immediately reflect changes in indicator
             st.caption("CT-optimized\nExistential-first")
 
@@ -708,8 +708,8 @@ def render():
                         _data_b = get_ypa_data(_wv_b, opponent=_wv_a)
                         for _ss, _d in [("fa", _data_a), ("fb", _data_b)]:
                             st.session_state[f"{_ss}_name"] = _d["name"]
-                            st.session_state[f"{_ss}_ax"]   = _d["bf_i"]["axioms"]
-                            st.session_state[f"{_ss}_db"]   = _d["bf_i"]["debts"]
+                            st.session_state[f"{_ss}_ax"]   = _d["bft"]["axioms"]
+                            st.session_state[f"{_ss}_db"]   = _d["bft"]["debts"]
                             st.session_state[f"{_ss}_ad"]   = _d["admits_limits"]
                             st.session_state[f"{_ss}_cci"]  = _d["levers"]["CCI"]
                             st.session_state[f"{_ss}_edb"]  = _d["levers"]["EDB"]
@@ -781,8 +781,8 @@ Pre-audit pipeline. Values are preliminary.
         st.session_state["sidebar_pf_type"] = "Holistic_50_50"
     if "sidebar_fallibilism" not in st.session_state:
         st.session_state["sidebar_fallibilism"] = "ON"
-    if "sidebar_bfi_weight" not in st.session_state:
-        st.session_state["sidebar_bfi_weight"] = "Equal_1.0x"
+    if "sidebar_bft_weight" not in st.session_state:
+        st.session_state["sidebar_bft_weight"] = "Equal_1.0x"
 
     # Lever-Parity selectbox
     parity_options = ["ON", "OFF"]
@@ -831,24 +831,24 @@ Pre-audit pipeline. Values are preliminary.
         st.session_state["sidebar_fallibilism"] = fall_bonus
         st.rerun()
 
-    # BFI Debt Weight selectbox
+    # BFT Debt Weight selectbox
     # Normalize "Heavier_1.2x" to "Weighted_1.2x" for display consistency
-    if st.session_state.get("sidebar_bfi_weight") == "Heavier_1.2x":
-        st.session_state["sidebar_bfi_weight"] = "Weighted_1.2x"
+    if st.session_state.get("sidebar_bft_weight") == "Heavier_1.2x":
+        st.session_state["sidebar_bft_weight"] = "Weighted_1.2x"
 
-    bfi_options = ["Equal_1.0x", "Weighted_1.2x"]
-    current_bfi_idx = bfi_options.index(st.session_state.get("sidebar_bfi_weight", "Equal_1.0x"))
+    bft_options = ["Equal_1.0x", "Weighted_1.2x"]
+    current_bft_idx = bft_options.index(st.session_state.get("sidebar_bft_weight", "Equal_1.0x"))
 
-    bfi_weight = st.sidebar.selectbox(
-        "BFI Debt Weight",
-        bfi_options,
-        index=current_bfi_idx,
-        key="sidebar_bfi_weight_widget",
-        help="**Equal (1.0x):** Debts count same as axioms. **Weighted (1.2x):** Debts cost 20% more. [ΔYPA: Weighted slightly lowers both scores ~-0.05-0.10] Higher BFI denominator reduces YPA. Both frameworks have 4 debts, so weighted impacts both similarly."
+    bft_weight = st.sidebar.selectbox(
+        "BFT Debt Weight",
+        bft_options,
+        index=current_bft_idx,
+        key="sidebar_bft_weight_widget",
+        help="**Equal (1.0x):** Debts count same as axioms. **Weighted (1.2x):** Debts cost 20% more. [ΔYPA: Weighted slightly lowers both scores ~-0.05-0.10] Higher BFT denominator reduces YPA. Both frameworks have 4 debts, so weighted impacts both similarly."
     )
     # Sync back to session state
-    if bfi_weight != st.session_state.get("sidebar_bfi_weight"):
-        st.session_state["sidebar_bfi_weight"] = bfi_weight
+    if bft_weight != st.session_state.get("sidebar_bft_weight"):
+        st.session_state["sidebar_bft_weight"] = bft_weight
         st.rerun()
 
     st.sidebar.markdown("---")
@@ -873,7 +873,7 @@ Pre-audit pipeline. Values are preliminary.
         "lever_parity": lever_parity,
         "pf_type": pf_type,
         "fallibilism_bonus": fall_bonus,
-        "bfi_debt_weight": bfi_weight,
+        "bft_debt_weight": bft_weight,
         "audit_mode": audit_mode,
         "include_crux": include_crux
     }
@@ -902,7 +902,7 @@ Pre-audit pipeline. Values are preliminary.
         st.caption(_get_audit_status("fa", st.session_state.get("fa_name", ""), st.session_state.get("fb_name", "")))
         fa_name = st.selectbox("Worldview", options=_worldview_options(), key="fa_name", on_change=_on_fa_worldview_change, format_func=_wv_label)
         
-        with st.expander("🔢 BFI", expanded=False):
+        with st.expander("🔢 bft", expanded=False):
             if 'custom_framework_ready' in st.session_state:
                 custom = st.session_state['custom_framework_ready']
                 if custom.get('target') == 'framework_a':
@@ -975,7 +975,7 @@ Pre-audit pipeline. Values are preliminary.
 
         fa = {
             "name": fa_name,
-            "bf_i": {"axioms": fa_axioms, "debts": fa_debts},
+            "bft": {"axioms": fa_axioms, "debts": fa_debts},
             "levers": {"CCI": fa_cci, "EDB": fa_edb, "PF_instrumental": fa_pf_i, "PF_existential": fa_pf_e, "AR": fa_ar, "MG": fa_mg},
             "admits_limits": fa_admits
         }
@@ -986,7 +986,7 @@ Pre-audit pipeline. Values are preliminary.
         st.caption(_get_audit_status("fb", st.session_state.get("fb_name", ""), st.session_state.get("fa_name", "")))
         fb_name = st.selectbox("Worldview", options=_worldview_options(), key="fb_name", on_change=_on_fb_worldview_change, format_func=_wv_label)
         
-        with st.expander("🔢 BFI", expanded=False):
+        with st.expander("🔢 bft", expanded=False):
             if 'custom_framework_ready' in st.session_state:
                 custom = st.session_state['custom_framework_ready']
                 if custom.get('target') == 'framework_b':
@@ -1059,7 +1059,7 @@ Pre-audit pipeline. Values are preliminary.
 
         fb = {
             "name": fb_name,
-            "bf_i": {"axioms": fb_axioms, "debts": fb_debts},
+            "bft": {"axioms": fb_axioms, "debts": fb_debts},
             "levers": {"CCI": fb_cci, "EDB": fb_edb, "PF_instrumental": fb_pf_i, "PF_existential": fb_pf_e, "AR": fb_ar, "MG": fb_mg},
             "admits_limits": fb_admits
         }
@@ -1071,26 +1071,26 @@ Pre-audit pipeline. Values are preliminary.
     st.markdown("---")
 
     # CALCULATE
-    ya_results, ya_levers, ya_bfi = ypa_scenario_scores(fa, cfg)
-    yb_results, yb_levers, yb_bfi = ypa_scenario_scores(fb, cfg)
+    ya_results, ya_levers, ya_bft = ypa_scenario_scores(fa, cfg)
+    yb_results, yb_levers, yb_bft = ypa_scenario_scores(fb, cfg)
 
     # Base lever sums (all-default cfg) for modifier effect row in battle card
-    _base_cfg = {"lever_parity": "ON", "fallibilism_bonus": "ON", "pf_type": "Holistic_50_50", "include_crux": True, "bfi_debt_weight": "Equal_1.0x"}
+    _base_cfg = {"lever_parity": "ON", "fallibilism_bonus": "ON", "pf_type": "Holistic_50_50", "include_crux": True, "bft_debt_weight": "Equal_1.0x"}
     _, _ya_base_levers, _ = ypa_scenario_scores(fa, _base_cfg)
     _, _yb_base_levers, _ = ypa_scenario_scores(fb, _base_cfg)
 
     # YPA EXPLANATION (Grok Note #1: Pragmatic Clarity)
-    st.info("💡 **YPA = Yield per Axiom:** Efficiency score = Total Lever Score ÷ BFI. Higher YPA = more output per assumption.")
+    st.info("💡 **YPA = Yield per Axiom:** Efficiency score = Total Lever Score ÷ bft. Higher YPA = more output per assumption.")
 
     # Pre-compute guardrail ok flags — used by Guardrails tab grid
     ok1_a, _ = guardrail_lever_coupling(ya_levers["PF"], ya_levers["CCI"])
-    ok2_a, _ = guardrail_bfi_sensitivity(ya_results["Neutral"]["YPA"], ya_bfi, ya_results["Empirical"]["YPA"], ya_results["Existential"]["YPA"])
+    ok2_a, _ = guardrail_bft_sensitivity(ya_results["Neutral"]["YPA"], ya_bft, ya_results["Empirical"]["YPA"], ya_results["Existential"]["YPA"])
     ok3_a, _ = guardrail_weight_inversion(ya_results, ya_results["Neutral"]["YPA"])
     audit_a_summary = symmetry_audit(fa, cfg)
     ok4_a = max(abs(row[3]) for row in audit_a_summary) <= 0.3
 
     ok1_b, _ = guardrail_lever_coupling(yb_levers["PF"], yb_levers["CCI"])
-    ok2_b, _ = guardrail_bfi_sensitivity(yb_results["Neutral"]["YPA"], yb_bfi, yb_results["Empirical"]["YPA"], yb_results["Existential"]["YPA"])
+    ok2_b, _ = guardrail_bft_sensitivity(yb_results["Neutral"]["YPA"], yb_bft, yb_results["Empirical"]["YPA"], yb_results["Existential"]["YPA"])
     ok3_b, _ = guardrail_weight_inversion(yb_results, yb_results["Neutral"]["YPA"])
     audit_b_summary = symmetry_audit(fb, cfg)
     ok4_b = max(abs(row[3]) for row in audit_b_summary) <= 0.3
@@ -1156,12 +1156,12 @@ Pre-audit pipeline. Values are preliminary.
                 "adj_sum_b":  sum(yb_levers.values()),
                 "base_sum_a": sum(_ya_base_levers.values()),
                 "base_sum_b": sum(_yb_base_levers.values()),
-                "bfi_a":  ya_bfi,
-                "bfi_b":  yb_bfi,
-                "ax_a":   fa["bf_i"]["axioms"],
-                "dbt_a":  fa["bf_i"]["debts"],
-                "ax_b":   fb["bf_i"]["axioms"],
-                "dbt_b":  fb["bf_i"]["debts"],
+                "bft_a":  ya_bft,
+                "bft_b":  yb_bft,
+                "ax_a":   fa["bft"]["axioms"],
+                "dbt_a":  fa["bft"]["debts"],
+                "ax_b":   fb["bft"]["axioms"],
+                "dbt_b":  fb["bft"]["debts"],
             }
         ), unsafe_allow_html=True)
         st.caption("*Modifier effect row: 🟢 green = modifiers helped · 🔴 red = modifiers hurt · gray = no change from defaults*")
@@ -1688,25 +1688,25 @@ than MdN is for the teleological lens.
                 st.session_state["lever_parity"] = "OFF"
                 st.session_state["pf_type"] = "Instrumental"
                 st.session_state["fallibilism_bonus"] = "ON"
-                st.session_state["bfi_debt_weight"] = "Heavier_1.2x"
+                st.session_state["bft_debt_weight"] = "Heavier_1.2x"
                 st.success("✅ **Profile Detected: Skeptic Mode** (MdN-optimized, predictive power focus)")
             elif winner == "diplomat":
                 st.session_state["lever_parity"] = "ON"
                 st.session_state["pf_type"] = "Holistic_50_50"
                 st.session_state["fallibilism_bonus"] = "ON"
-                st.session_state["bfi_debt_weight"] = "Equal_1.0x"
+                st.session_state["bft_debt_weight"] = "Equal_1.0x"
                 st.success("✅ **Profile Detected: Diplomat Mode** (Balanced bridge, equal weighting)")
             elif winner == "seeker":
                 st.session_state["lever_parity"] = "ON"
                 st.session_state["pf_type"] = "Composite_70_30"
                 st.session_state["fallibilism_bonus"] = "ON"
-                st.session_state["bfi_debt_weight"] = "Equal_1.0x"
+                st.session_state["bft_debt_weight"] = "Equal_1.0x"
                 st.success("✅ **Profile Detected: Seeker Mode** (CT-leaning, meaning-first)")
             else:  # zealot
                 st.session_state["lever_parity"] = "ON"
                 st.session_state["pf_type"] = "Holistic_50_50"
                 st.session_state["fallibilism_bonus"] = "OFF"
-                st.session_state["bfi_debt_weight"] = "Equal_1.0x"
+                st.session_state["bft_debt_weight"] = "Equal_1.0x"
                 st.success("✅ **Profile Detected: Zealot Mode** (CT-optimized, existential-first)")
             
             st.info(f"🎯 **Your Score Breakdown:** Skeptic: {scores['skeptic']}, Diplomat: {scores['diplomat']}, Seeker: {scores['seeker']}, Zealot: {scores['zealot']}")
@@ -1742,8 +1742,8 @@ than MdN is for the teleological lens.
             "framework_a": fa,
             "framework_b": fb,
             "results": {
-                "a": {"levers": ya_levers, "bfi": ya_bfi, "ypa": {k: v["YPA"] for k, v in ya_results.items()}},
-                "b": {"levers": yb_levers, "bfi": yb_bfi, "ypa": {k: v["YPA"] for k, v in yb_results.items()}}
+                "a": {"levers": ya_levers, "bft": ya_bft, "ypa": {k: v["YPA"] for k, v in ya_results.items()}},
+                "b": {"levers": yb_levers, "bft": yb_bft, "ypa": {k: v["YPA"] for k, v in yb_results.items()}}
             }
         }
         st.download_button(

@@ -113,7 +113,7 @@ def create_sensitivity_heatmap(
         Plotly Figure
     """
     if toggles is None:
-        toggles = ['Parity', 'PF-Type', 'Fallibilism', 'BFI Weight']
+        toggles = ['Parity', 'PF-Type', 'Fallibilism', 'BFT Weight']
 
     # Convert to numpy for easier handling
     z = np.array(sensitivity_matrix)
@@ -180,23 +180,23 @@ def _cfg_pill_strip(cfg: dict) -> str:
         "Composite_70_30": "PF 70/30",
         "Instrumental": "PF Instr",
     }
-    bfi_labels = {
-        "Equal_1.0x": "BFI 1.0×",
-        "Weighted_1.2x": "BFI 1.2×",
+    bft_labels = {
+        "Equal_1.0x": "BFT 1.0×",
+        "Weighted_1.2x": "BFT 1.2×",
     }
 
     crux_on    = bool(cfg.get("include_crux", True))
     parity_on  = cfg.get("lever_parity", "ON") == "ON"
     fall_on    = cfg.get("fallibilism_bonus", "ON") == "ON"
     pf_key     = cfg.get("pf_type", "Holistic_50_50")
-    bfi_key    = cfg.get("bfi_debt_weight", "Equal_1.0x")
+    bft_key    = cfg.get("bft_debt_weight", "Equal_1.0x")
 
     pills = [
         _cfg_pill(f"Crux: {'✓' if crux_on else '✗'}", is_default=crux_on),
         _cfg_pill(f"Parity: {cfg.get('lever_parity','ON')}", is_default=parity_on),
         _cfg_pill(f"Fall: {cfg.get('fallibilism_bonus','ON')}", is_default=fall_on),
         _cfg_pill(pf_labels.get(pf_key, pf_key), is_default=(pf_key == "Holistic_50_50")),
-        _cfg_pill(bfi_labels.get(bfi_key, bfi_key), is_default=(bfi_key == "Equal_1.0x")),
+        _cfg_pill(bft_labels.get(bft_key, bft_key), is_default=(bft_key == "Equal_1.0x")),
     ]
     return (
         '<div style="margin-top:8px;text-align:center;">'
@@ -293,26 +293,26 @@ def create_battle_card_html(
             f'</tr>'
         )
 
-    # BFI row (denominator in the YPA formula)
-    _bfi_a = cfg.get("bfi_a") if cfg else None
-    _bfi_b = cfg.get("bfi_b") if cfg else None
+    # BFT row (denominator in the YPA formula)
+    _bft_a = cfg.get("bft_a") if cfg else None
+    _bft_b = cfg.get("bft_b") if cfg else None
     _ax_a  = cfg.get("ax_a")  if cfg else None
     _dbt_a = cfg.get("dbt_a") if cfg else None
     _ax_b  = cfg.get("ax_b")  if cfg else None
     _dbt_b = cfg.get("dbt_b") if cfg else None
-    if _bfi_a is not None and _bfi_b is not None:
-        def _bfi_detail(ax, dbt):
+    if _bft_a is not None and _bft_b is not None:
+        def _bft_detail(ax, dbt):
             if ax is None or dbt is None:
                 return ""
             return f'<span style="color:#94a3b8;font-size:0.75em;">&nbsp;({ax}&nbsp;ax&nbsp;·&nbsp;{dbt}&nbsp;dbt)</span>'
         rows.append(
             f'<tr style="background:#f1f5f9;">'
-            f'<td style="padding:7px 16px;color:#475569;font-size:0.82em;font-weight:600;border-top:1px solid #cbd5e1;white-space:nowrap;">BFI</td>'
+            f'<td style="padding:7px 16px;color:#475569;font-size:0.82em;font-weight:600;border-top:1px solid #cbd5e1;white-space:nowrap;">BFT</td>'
             f'<td style="padding:7px 16px;color:#475569;font-size:0.82em;border-top:1px solid #cbd5e1;white-space:nowrap;">'
-            f'<strong>{_bfi_a:.1f}</strong>{_bfi_detail(_ax_a, _dbt_a)}</td>'
+            f'<strong>{_bft_a:.1f}</strong>{_bft_detail(_ax_a, _dbt_a)}</td>'
             f'<td style="padding:7px 20px;text-align:center;color:#64748b;font-size:1.05em;border-top:1px solid #cbd5e1;">÷</td>'
             f'<td style="padding:7px 16px;color:#475569;font-size:0.82em;border-top:1px solid #cbd5e1;white-space:nowrap;">'
-            f'<strong>{_bfi_b:.1f}</strong>{_bfi_detail(_ax_b, _dbt_b)}</td>'
+            f'<strong>{_bft_b:.1f}</strong>{_bft_detail(_ax_b, _dbt_b)}</td>'
             f'<td style="border-top:1px solid #cbd5e1;"></td>'
             f'</tr>'
         )
@@ -345,7 +345,7 @@ def create_battle_card_html(
             <tr style="border-top: 3px solid #334155;">
                 <td style="padding: 12px 16px; font-weight: bold; font-size: 1.1em;">
                     YPA
-                    <br><span style="font-size:0.62em;color:#94a3b8;font-weight:normal;letter-spacing:0.04em;">Σ&nbsp;levers&nbsp;÷&nbsp;BFI</span>
+                    <br><span style="font-size:0.62em;color:#94a3b8;font-weight:normal;letter-spacing:0.04em;">Σ&nbsp;levers&nbsp;÷&nbsp;BFT</span>
                 </td>
                 <td style="padding: 12px 16px; font-size: 1.2em; color: {color_a}; font-weight: bold;">{ypa_a:.2f}</td>
                 <td style="padding: 12px 20px; text-align: center; font-size: 1.05em; color: #64748b;">=</td>
@@ -467,7 +467,7 @@ def create_guardrail_grid(
     Returns:
         HTML string for the guardrail grid
     """
-    guardrails = ['Lever-Coupling', 'BFI-Sensitivity', 'Weight-Inversion', 'Symmetry']
+    guardrails = ['Lever-Coupling', 'BFT-Sensitivity', 'Weight-Inversion', 'Symmetry']
 
     header_cells = ''.join([
         f'<th style="padding: 10px; text-align: center; color: {get_framework_color(fw)}; font-weight: bold;">{fw.split()[0]}</th>'

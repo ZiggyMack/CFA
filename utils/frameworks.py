@@ -5,7 +5,7 @@ Pre-configured frameworks ready for analysis
 
 MDN_DEFAULT = {
     "name": "Methodological Naturalism",
-    "bf_i": {"axioms": 6, "debts": 4},
+    "bft": {"axioms": 6, "debts": 4},
     "levers": {
         "CCI": 8.0,
         "EDB": 7.5,
@@ -19,7 +19,7 @@ MDN_DEFAULT = {
 
 CT_DEFAULT = {
     "name": "Classical Theism",
-    "bf_i": {"axioms": 7, "debts": 4},
+    "bft": {"axioms": 7, "debts": 4},
     "levers": {
         "CCI": 7.5,
         "EDB": 8.5,

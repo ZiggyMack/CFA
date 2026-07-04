@@ -146,7 +146,7 @@ def render():
         st.markdown("### The Formula")
         st.markdown("""
             <div class="formula-box">
-            YPA = (CCI + EDB + PF + AR + MG) ÷ BFI
+            YPA = (CCI + EDB + PF + AR + MG) ÷ BFT
             </div>
         """, unsafe_allow_html=True)
         
@@ -192,7 +192,7 @@ def render():
                 <li>Do moral norms matter as much as predictive power? (Parity)</li>
                 <li>Do you value meaning or just tech? (PF-Type)</li>
                 <li>Should humility be rewarded? (Fallibilism)</li>
-                <li>Do unresolved questions cost more? (BFI Weight)</li>
+                <li>Do unresolved questions cost more? (BFT Weight)</li>
             </ul>
             </div>
         """, unsafe_allow_html=True)
@@ -444,7 +444,7 @@ profiles/worldviews/
                 <li>Not all values are easily quantifiable</li>
             </ol>
             
-            <p><b>CFA's BFI:</b> 6 (comparable to worldview profiles)</p>
+            <p><b>CFA's BFT:</b> 6 (comparable to worldview profiles)</p>
             
             <p><b>Philosophy:</b> <i>"We demand of ourselves what we demand of others: Show the machinery"</i></p>
             
@@ -651,10 +651,10 @@ launch_both.bat     # Both simultaneously
         st.markdown("## ⚖️ The Six Levers")
         st.markdown("*Each framework is scored on these dimensions (0-10)*")
         
-        # BFI
+        # BFT
         st.markdown("""
             <div class="lever-card">
-            <h3>🔢 BFI - Brute-Fact Index</h3>
+            <h3>🔢 BFT - Brute-Fact Tax</h3>
             <p><b>What it measures:</b> How many unprovable assumptions does this framework require?</p>
             <p><b>Scoring:</b> Count axioms + debts. Lower = more efficient</p>
             <p><b>Key insight:</b> Every framework starts somewhere. The question is: are you honest about where?</p>
@@ -805,10 +805,10 @@ launch_both.bat     # Both simultaneously
             </div>
         """, unsafe_allow_html=True)
         
-        # Toggle 4: BFI Weight
+        # Toggle 4: BFT Weight
         st.markdown("""
             <div class="toggle-card">
-            <h3>4️⃣ BFI Debt-Weight Toggle</h3>
+            <h3>4️⃣ BFT Debt-Weight Toggle</h3>
             <p><b>The Question:</b> Should unresolved questions cost more than declared axioms?</p>
             
             <p><b>Equal 1.0× (Default):</b></p>
@@ -870,7 +870,7 @@ launch_both.bat     # Both simultaneously
         
         st.markdown("""
             <div class="tip-box">
-            <b>2. BFI-Sensitivity:</b> Flags if ΔYPA / ΔBFI > 0.4<br/>
+            <b>2. BFT-Sensitivity:</b> Flags if ΔYPA / ΔBFT > 0.4<br/>
             <i>Efficiency shouldn't increase as you add axioms</i>
             </div>
         """, unsafe_allow_html=True)
@@ -1005,7 +1005,7 @@ launch_both.bat     # Both simultaneously
         3. 🤖 The Auditors
         4. ⚙️ Utilities
         
-        Understanding the BFI makes the YPA scores make sense.
+        Understanding the BFT makes the YPA scores make sense.
         """)
         
         st.markdown("### 5. Export Your Runs")

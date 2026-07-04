@@ -80,7 +80,7 @@ def render():
         
         ### The Six Levers (0-10 scale)
         
-        **BFI - Brute-Fact Index**  
+        **BFT - Brute-Fact Tax**  
         How many unprovable assumptions? (Lower = more efficient)
         
         **CCI - Coherence & Closure**  
@@ -100,7 +100,7 @@ def render():
         
         ### The Formula
         ```
-        YPA = (CCI + EDB + PF + AR + MG) ÷ BFI
+        YPA = (CCI + EDB + PF + AR + MG) ÷ BFT
         ```
         Higher YPA = More efficient framework
         """)
@@ -126,8 +126,8 @@ def render():
             **Who**: Nova (OpenAI coordinator)
             
             **What**: Defined evaluation criteria and audit rules:
-            - 6 Levers: CCI, EDB, PF, AR, MG, BFI
-            - YPA formula: (Sum of levers) ÷ BFI
+            - 6 Levers: CCI, EDB, PF, AR, MG, BFT
+            - YPA formula: (Sum of levers) ÷ BFT
             - **The Pointing Rule**: "To name your brute is to pay your fee"
             
             **Key Decision**: Audit MdN as a **method** (not worldview) and CT as a **worldview** (not method).
@@ -217,7 +217,7 @@ def render():
             Lever-Parity: ON
             PF-Type: Composite 70:30
             Fallibilism-Bonus: ON
-            BFI-Debt-Weight: Equal 1.0×
+            BFT-Debt-Weight: Equal 1.0×
             ```
             
             **Methodological Naturalism (MdN)**
@@ -339,7 +339,7 @@ def render():
         - Symmetry not tested
         
         **v4.0**
-        - ✅ 4 Toggles (Parity, PF-Type, Fallibilism, BFI-Weight)
+        - ✅ 4 Toggles (Parity, PF-Type, Fallibilism, BFT-Weight)
         - ✅ 4 Guardrails (auto-detection of manipulation)
         - ✅ YPA Trinity (3 scenarios per audit)
         - ✅ Mr. Brute Ledger (all assumptions named)
@@ -370,11 +370,11 @@ def render():
         # Parity Weight
         if parity_OFF: MG = MG × 0.5
         
-        # BFI Total
-        BFI = axioms + (debts × debt_weight)
+        # BFT Total
+        BFT = axioms + (debts × debt_weight)
         
         # YPA Calculation
-        YPA = (CCI + EDB + PF + AR + MG) / BFI
+        YPA = (CCI + EDB + PF + AR + MG) / BFT
         
         # Scenarios
         Neutral:      all levers × 1.0
@@ -386,7 +386,7 @@ def render():
         
         ### The Guardrails
         
-        1. **BFI-Sensitivity**: Flags if YPA increases faster than BFI
+        1. **BFT-Sensitivity**: Flags if YPA increases faster than BFT
         2. **Lever-Coupling**: PF ≥ 9 requires CCI ≥ 6.5
         3. **Weight-Inversion Alarm**: Flags weights <0.3× or >3×
         4. **Symmetry Audit**: Tests 3 toggle inversions, flags Δ >0.3
@@ -657,7 +657,7 @@ def render():
             - Educational curriculum audit
 
             **Submission Criteria:**
-            - Must use CFA methodology (BFI, YPA, adversarial audit)
+            - Must use CFA methodology (BFT, YPA, adversarial audit)
             - Real-world problem addressed
             - Documented outcomes
             - Reproducible process
@@ -714,7 +714,7 @@ def render():
         **Requires:** Anthropic API Key
 
         The Chat Assistant has access to the full CFA repository and can answer questions about:
-        - BFI, YPA, and the evaluation framework
+        - BFT, YPA, and the evaluation framework
         - How to use the Console and Mr. Brute's Ledger
         - Worldview profiles and preset modes
         - The Trinity auditors (Claude, Grok, Nova)
