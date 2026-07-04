@@ -231,8 +231,8 @@ Collapsing any two of these destroys the information. Saying *"CT is false, ther
         
         **Level 4: Tool Building**  
         The console you see embodies this audit journey:
-        - 4 toggles reflect bias discoveries (Parity, PF-Type, Fallibilism, BFI-Weight)
-        - Guardrails implement lessons from Level 2 corrections
+        - 4 toggles reflect bias discoveries (Parity, PF-Type, Fallibilism, BFT-Weight)
+        - Guardrails flag implausible lever combinations, score inflation, and extreme scenario gaps
         - Profile library showcases convergence with badges
         
         **Level 5: DaVinci Pass** *(You are here)*  
