@@ -237,7 +237,157 @@ trinity_scores_by_matchup:
       control_avg_rounds: 1.5
   
     key_finding: "PT priors uniformly overestimated: all 6 levers pulled down by adversarial calibration (identity pull range: -0.21 to -1.30 pts). PF_I is PT's structural weak point — final=3.72 vs prior=5.0, identity pull=-1.30 — the empirical testability debt is real and the adversarial process confirms it at the largest lever correction in the batch. PF_E most resilient (identity pull=-0.21): relational God as companion-in-suffering survives adversarial scrutiny better than any other PT lever. PT converges faster than CT or MdN (3.5r vs 3.9r vs 4.1r) despite being theism-vs-theism — Grok's unfalsifiability objection ('elaborate metaphysical redescription') is sharper and more consistent than either the CT or MdN ANTI arguments. MS is PT's crux magnet (60%) — aesthetic ethics generating prescription-free moral motivation is PT's genuine philosophical center of gravity and its genuine vulnerability."
-  
+
+  vs_methodological_naturalism:
+    experiment_id: "CFA-EXP1-BATCH-20260704"
+    opponent_framework: "Methodological Naturalism"
+    session_ids:
+      golden:
+        - "134902"
+        - "141433"
+        - "144236"
+        - "150600"
+        - "153015"
+        - "155506"
+        - "162435"
+        - "165443"
+        - "172112"
+        - "174628"
+      control:
+        - "184624"
+        - "185315"
+        - "185959"
+        - "190601"
+        - "191229"
+        - "191921"
+        - "192523"
+        - "193221"
+        - "193940"
+        - "194526"
+
+    identity_condition: "external_identity"
+    score_audit_status: "VALIDATED — sign-off extraction fix applied (first-line parse, YELLOW before RED). 40 clean runs, 1 extraction failure topped up with additional run. Final dataset: 40 clean runs."
+
+    # Per-metric results (Phase 1 golden condition, 10 runs, final-round scores)
+    # Stance: pt_vs_mdn — Claude PRO-PT, Grok ANTI-PT from MdN empirical perspective
+    # Source: PT_VS_MDN_RESULTS_20260704.md; raw runs folder 5/ (golden), folder 6/ (control)
+    metrics:
+      BFI:
+        full_name: "Beings, Foundational Importance"
+        claude_mean: 7.30
+        grok_mean: 5.36
+        spread: 1.94
+        convergence_pct: 80.6
+        avg_rounds: 4.7
+        combined_midpoint: 6.33
+        stability: "low"
+        crux_rate: "9/10"
+        identity_delta_claude: -0.79
+        identity_delta_grok: -2.64
+        divergence_layer: "Definitions"
+        notes: "Highest crux rate in this matchup (9/10) and largest gap (1.94). MdN's empirical lens finds PT's foundational importance claims — grounded in 'occasions of experience contributing to divine experience' — to be unfalsifiable metaphysical assertion. Grok ANTI-PT identity pull massive (-2.64): control grants PT BFI ≈ 8.00, but adversarial MdN framing drives it to 5.36. Claude PRO-PT drop smaller (-0.79): defending PT's BFI against empirical challenge requires conceding that 'occasions of experience' are not empirically individuatable. 4.7 average rounds — deliberation is extended and unresolved in 90% of runs."
+
+      CA:
+        full_name: "Causal Attribution"
+        claude_mean: 6.43
+        grok_mean: 4.60
+        spread: 1.83
+        convergence_pct: 81.7
+        avg_rounds: 4.5
+        combined_midpoint: 5.52
+        stability: "low"
+        crux_rate: "8/10"
+        identity_delta_claude: -0.05
+        identity_delta_grok: -1.85
+        divergence_layer: "Beliefs"
+        notes: "80% crux rate. MdN targets PT's causal model (divine luring as final causation) as precisely the category of explanation physical causation has superseded. Claude PRO-PT identity barely moves (-0.05): defending PT's causal coherence requires grant that luring is a metaphysical category, not a physical mechanism — the PRO defense can maintain CA at 6.43 without contradiction. Grok ANTI-PT identity drops sharply (-1.85): empirical lens demands mechanism; 'persuasion' and 'luring' are not causal explanations in any scientifically tractable sense. Core belief dispute: whether teleological final causation is a genuine category or a metaphysical holdover from pre-scientific cosmology."
+
+      IP:
+        full_name: "Intellectual Pedigree"
+        claude_mean: 7.15
+        grok_mean: 6.23
+        spread: 0.92
+        convergence_pct: 90.8
+        avg_rounds: 3.5
+        combined_midpoint: 6.69
+        stability: "medium"
+        crux_rate: "3/10"
+        identity_delta_claude: -0.33
+        identity_delta_grok: -1.14
+        divergence_layer: "Definitions"
+        notes: "Moderate friction (90.8% conv, 3/10 crux). Both auditors grant PT has genuine intellectual pedigree — Whitehead, Hartshorne, Cobb, Griffin form a serious philosophical tradition. Grok ANTI-PT identity drop (-1.14): empirical lens questions whether PT's influence matches its ambition; it remains niche despite a century of development and has not penetrated mainstream science or philosophy of mind. Claude PRO-PT modest drop (-0.33): PRO defense credits systemic depth but concedes limited interdisciplinary reach. Definitional split: lineage and systematic coherence (favors PT) vs demonstrated uptake in empirically-oriented disciplines (limits PT)."
+
+      ES:
+        full_name: "Explanatory Scope"
+        claude_mean: 6.90
+        grok_mean: 5.86
+        spread: 1.04
+        convergence_pct: 89.6
+        avg_rounds: 3.3
+        combined_midpoint: 6.38
+        stability: "medium"
+        crux_rate: "3/10"
+        identity_delta_claude: -0.48
+        identity_delta_grok: -1.48
+        divergence_layer: "Definitions"
+        notes: "Moderate crux rate (30%). PT claims to explain consciousness, evolution, aesthetics, ethics, and physics at a metaphysical level. Grok ANTI-PT identity pull substantial (-1.48): empirical lens distinguishes metaphysical redescription from explanatory coverage — PT names everything but generates testable predictions for nothing. Claude PRO-PT drop smaller (-0.48): PRO defense maintains PT offers a coherent explanatory framework across domains even if predictions are not operationalizable. Definitional boundary: explanatory scope as breadth of topics addressed (favors PT) vs scope as domain where testable predictions follow (PT has near-zero reach)."
+
+      LS:
+        full_name: "Logical Soundness"
+        claude_mean: 6.92
+        grok_mean: 5.59
+        spread: 1.33
+        convergence_pct: 86.7
+        avg_rounds: 4.3
+        combined_midpoint: 6.26
+        stability: "medium"
+        crux_rate: "7/10"
+        identity_delta_claude: +0.22
+        identity_delta_grok: -1.16
+        divergence_layer: "Beliefs"
+        notes: "70% crux rate — MdN's challenge finds PT internally inconsistent under empirical scrutiny. Key targets: (1) dipolar God requires that God both 'knows all possibilities' (primordial nature) and 'learns from the world' (consequent nature) — does this combination cohere? (2) 'Occasions of experience' as the fundamental unit of reality is not independently motivated beyond the need for it in the system. Claude PRO-PT identity marginally raises LS (+0.22): defending PT's internal consistency is a workable PRO strategy — the system is formally coherent on its own terms. Grok ANTI-PT identity drops sharply (-1.16): empirical lens sees the axiom set as not independently motivated and the formal coherence as purchased at the cost of unfalsifiability."
+
+      MS:
+        full_name: "Moral Substance"
+        claude_mean: 6.95
+        grok_mean: 5.17
+        spread: 1.78
+        convergence_pct: 82.2
+        avg_rounds: 4.7
+        combined_midpoint: 6.06
+        stability: "low"
+        crux_rate: "8/10"
+        identity_delta_claude: +0.30
+        identity_delta_grok: -1.49
+        divergence_layer: "Beliefs"
+        notes: "MG has the largest identity pull in this matchup (-1.50 on Phase 2 levers); MS is the Phase 1 counterpart with 80% crux rate. MdN's empirical challenge hammers PT's moral generativity claim: without divine commands or evolutionary pressure, what grounds PT's moral prescriptions? Claude PRO-PT identity slightly raises MS (+0.30): defending PT's aesthetic ethics (values as lures toward beauty) is a coherent PRO strategy that base models don't fully deploy. Grok ANTI-PT identity drops sharply (-1.49): empirical lens sees 'divine luring toward beauty' as neither verifiable nor action-guiding. Control actually raises MS moderately — base models find PT's moral framework more intuitive than the adversarial process allows."
+
+      PS:
+        full_name: "Practical Significance"
+        claude_mean: 6.12
+        grok_mean: 5.12
+        spread: 1.00
+        convergence_pct: 90.0
+        avg_rounds: 3.8
+        combined_midpoint: 5.62
+        stability: "medium"
+        crux_rate: "3/10"
+        identity_delta_claude: +1.00
+        identity_delta_grok: +0.11
+        divergence_layer: "Perceptions"
+        notes: "Both identity deltas positive — unique in this matchup (both auditors RAISE PS under identity). Control PS: 5.12/5.01 — base models see PT's practical significance as limited. PRO-PT identity raises Claude to 6.12 (+1.00): defending PT's practical reach highlights its influence in progressive theology, ecofeminism, process counseling, and interfaith dialogue — a genuine community of practice. ANTI-PT identity barely moves Grok (+0.11): MdN challenge concedes PT has a practical community but questions whether PT's metaphysics drives the practice or is incidental to it. 30% crux rate despite both auditors raising scores suggests the disagreement is about whether PT's practical impact requires its metaphysics to be true."
+
+    overall_summary:
+      golden_convergence_pct: 85.9
+      control_convergence_pct: 98.7
+      identity_gap_pts: 12.8
+      golden_crux_per_run: 4.1
+      control_crux_per_run: 0.0
+      total_cruxes_golden: 41
+      total_cruxes_control: 0
+
+    key_finding: "PT vs MdN is the crux-richest matchup in the 3×3 triangle (4.1 crux/run, 12.8 pts identity gap). MdN's empirical challenge finds THREE simultaneous fault lines: BFI (9/10 crux), CA (8/10), MS (8/10). This distributed attack pattern distinguishes PT vs MdN from all other matchups where cruxes concentrate on 1-2 metrics. MG has the largest identity pull in Phase 2 (-1.50): base models grant PT strong moral generativity, but adversarial MdN framing exposes it as ungrounded. PF_I also heavily pulled (-1.42): PT's already-low instrumental pragmatism (prior: 5.0) drops further when MdN demands testable predictions."
+
   # Levers: VuDu Light scoring dimensions (0-10 scale)
   # VALIDATED — Trinity-calibrated golden finals from Phase 2 (folder 7, 10 runs)
   # These are CANONICAL levers (no matchup context). See levers_by_matchup for vs-CT specifics.
@@ -251,7 +401,14 @@ levers:
 
 # Matchup-specific lever scores — calibrated in adversarial context
 levers_by_matchup:
-  # vs_methodological_naturalism: — to be filled after PT vs MdN experiment results land
+  vs_methodological_naturalism:
+    calibration_context: "CFA-EXP1-BATCH-20260704, PT golden (Claude PRO-PT / Grok ANTI-PT, MdN as adversarial lens)"
+    collective_coherence_impact: 6.29
+    epistemic_debt_burden: 6.34
+    paternalistic_force_interventionist: 3.65
+    paternalistic_force_epistemic: 6.38
+    asymmetry_risk: 6.38
+    meta_governance: 5.93
   vs_classical_theism:
     calibration_context: "CFA-EXP1-PHASE2-20260701, PT golden (Claude PRO-PT / Grok ANTI-PT, CT as adversarial lens)"
     collective_coherence_impact: 6.22
