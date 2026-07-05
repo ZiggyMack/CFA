@@ -54,7 +54,7 @@ And we will **name them all**. We will **price them all**.
 
 No hidden costs. No invisible debts. No asymmetric information games where philosophers know the score but users stumble blind through ethical commitments they never consented to.
 
-This is the CFA promise: **Transparent, symmetric, adversarially-audited worldview analysis**.
+This is the CFA promise: **Transparent, symmetric, adversarially-audited framework analysis**.
 """)
 
     with st.expander("### Why This Matters"):
@@ -112,7 +112,7 @@ Grok's lens is empirical - relentlessly skeptical of anything that can't be **me
         st.markdown("**⚖️ Nova - Symmetry Guardian**")
         st.info('*"Who benefits? Who pays? Where\'s the asymmetry?"*')
         st.markdown("""
-Nova's lens is distributional - always tracking **who wins and who loses** when a framework gets deployed. When a worldview claims universality, Nova asks: "Universal for whom?"
+Nova's lens is distributional - always tracking **who wins and who loses** when a framework gets deployed. When a framework claims universality, Nova asks: "Universal for whom?"
 
 **Holds the fairness debt**: Does this system create unjust asymmetries?
 """)
@@ -137,7 +137,7 @@ This is how CFA builds **epistemic resilience** - not through authority, but thr
     st.markdown("## III. The VuDu Light System: Making Values Legible")
     st.markdown("### What Is VuDu Light?")
     st.markdown("**VuDu = Value-Utility-Deontic-Utility**")
-    st.markdown("It's a scoring system that makes **worldview commitments explicit and comparable**.")
+    st.markdown("It's a scoring system that makes **framework commitments explicit and comparable**.")
 
     st.markdown("Every framework analyzed in CFA gets decomposed into:")
 
@@ -162,7 +162,7 @@ Then we score it. Not subjectively. Not vibes-based. But through **structured, a
 - **BFI (Burden of Falsity Index)**: How many axioms + how heavy are the debts?
 - **YPA (Yield Per Axiom)**: How much value does this framework extract per unit of commitment?
 
-The result? **Comparable worldview profiles** that let you see which frameworks share hidden assumptions, trade similar values, or optimize differently.
+The result? **Comparable framework profiles** that let you see which frameworks share hidden assumptions, trade similar values, or optimize differently.
 """)
 
     with st.expander("### Why Scoring Matters"):
@@ -221,7 +221,7 @@ But **why does CFA exist?**
 
 Because we believe in a world where:
 - **Frameworks compete on transparency**, not rhetorical appeal
-- **Worldviews can be compared** without requiring a PhD in moral philosophy
+- **Frameworks can be compared** without requiring a PhD in moral philosophy
 - **Epistemic asymmetry** is treated as the governance failure it is
 - **Values are named and priced**, not hidden and imposed
 """)
@@ -324,9 +324,9 @@ Before evaluating anything, declare the evaluator:
         st.markdown("### Phase 1")
         st.info("**What is being judged?**")
         st.markdown("""
-*Worldview Reconstruction*
+*Framework Reconstruction*
 
-Before scoring, reconstruct the worldview faithfully:
+Before scoring, reconstruct the framework faithfully:
 - What does it claim exists?
 - How does it explain causation?
 - What is its account of morality?
@@ -358,7 +358,7 @@ Collapsing any two phases destroys the information.
 
 > *"CT is false, therefore Moral Generativity = 0."*
 
-This jumps directly from an external objection (Phase 0 bias) to a Phase 2 score without completing Phase 1. The worldview was never reconstructed — it was caricatured and condemned.
+This jumps directly from an external objection (Phase 0 bias) to a Phase 2 score without completing Phase 1. The framework was never reconstructed — it was caricatured and condemned.
 
 > *"MdN is true, therefore Governance = 10."*
 
@@ -410,7 +410,7 @@ All named. All priced. All audited.
     st.markdown("---")
     st.caption('*Maintained by Shaman Claude - The Philosophical Architect*')
     st.caption('*Version: v5.0.0 | Status: 🟢 ACTIVE | Updated: 2025-11-29*')
-    st.caption('*"The worldview you can\'t examine is the worldview that examines you."*')
+    st.caption('*"The framework you can\'t examine is the framework that examines you."*')
 
 if __name__ == "__main__":
     render()

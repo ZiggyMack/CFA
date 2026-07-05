@@ -141,7 +141,7 @@ def render():
 
     st.write("""
     **Welcome to the Comparative Framework Analysis (CFA) Console,**
-    the first interactive epistemic laboratory built to measure how worldviews hold their ground under pressure.
+    the first interactive epistemic laboratory built to measure how frameworks hold their ground under pressure.
     """)
     
     st.write("""
@@ -181,7 +181,7 @@ Every evaluation has three moving parts. Most systems smuggle all three together
 | | Question | What it declares |
 |---|---|---|
 | **Phase 0** | *Who is judging?* | Evaluator identity, framework, biases, assigned lens |
-| **Phase 1** | *What is being judged?* | The worldview — faithfully reconstructed, not caricatured |
+| **Phase 1** | *What is being judged?* | The framework — faithfully reconstructed, not caricatured |
 | **Phase 2** | *How well does it perform?* | Utility scoring against declared criteria |
 
 Collapsing any two of these destroys the information. Saying *"CT is false, therefore Moral Generativity = 0"* skips Phase 1 entirely. Saying *"MdN is true, therefore Governance = 10"* commits the same mistake in reverse.
@@ -212,7 +212,7 @@ Collapsing any two of these destroys the information. Saying *"CT is false, ther
 **How did we achieve 98% convergence?**
 
 **Level 0: Independent Audits**
-Two auditors — Claude (Anthropic) and Grok (xAI) — scored the same worldviews independently, with no coordination and different philosophical lenses.
+Two auditors — Claude (Anthropic) and Grok (xAI) — scored the same frameworks independently, with no coordination and different philosophical lenses.
 
 **Level 1: Discrepancy Detection**
 Their scores diverged. The gaps weren't random — they traced back to each auditor's unacknowledged priors. Different lenses, different blind spots.
@@ -227,7 +227,7 @@ After adversarial deliberation, the YPA gap closed to within 0.03 — 98% agreem
 Every element of this tool reflects the audit process:
 - 4 toggles expose the exact bias levers the auditors disagreed on (Parity, PF-Type, Fallibilism, BFT-Weight)
 - Guardrails flag implausible lever combinations, score inflation, and extreme scenario gaps
-- Profile badges mark which worldviews have survived adversarial audit
+- Profile badges mark which frameworks have survived adversarial audit
 
 **Level 5: Open Instrument** *(You are here)*
 The console puts you in the auditor's seat. Adjust the same levers that were debated. Run your own configuration. The scores change — and you can see exactly why.

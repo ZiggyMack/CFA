@@ -78,7 +78,7 @@ def _render_framework_ledger(worldview_name: str, emoji: str, subtitle: str):
 
     # Push to Console buttons
     st.markdown("### 🚀 Load into Console")
-    st.caption("*Push this worldview's data directly to the Console for YPA analysis*")
+    st.caption("*Push this framework's data directly to the Console for YPA analysis*")
 
     push_col1, push_col2 = st.columns(2)
 
@@ -186,7 +186,7 @@ def render():
         # Set the default category based on the target framework
         if target_framework in worldview_to_category:
             st.session_state.ledger_category_default = worldview_to_category[target_framework]
-            st.session_state.ledger_section_default = "📚 Worldview Profiles"
+            st.session_state.ledger_section_default = "📚 Framework Profiles"
 
         # Clear the navigation target
         del st.session_state.ledger_nav_target
@@ -216,8 +216,8 @@ def render():
     st.caption("*Select which section of Mr. Brute's Ledger to explore*")
 
     # Get default section (may be set by smart navigation)
-    section_options = ["📚 Worldview Profiles", "🏛️ The Framework", "🤖 The Auditors", "⚙️ Utilities"]
-    section_default = st.session_state.get("ledger_section_default", "📚 Worldview Profiles")
+    section_options = ["📚 Framework Profiles", "🏛️ The Framework", "🤖 The Auditors", "⚙️ Utilities"]
+    section_default = st.session_state.get("ledger_section_default", "📚 Framework Profiles")
     section_index = section_options.index(section_default) if section_default in section_options else 0
 
     # Simple section selector for now (fancy page-flip in future sandbox branch)
@@ -234,8 +234,8 @@ def render():
     # ========================================================================
     # SECTION 1: WORLDVIEW PROFILES
     # ========================================================================
-    if ledger_section == "📚 Worldview Profiles":
-        st.markdown("## 📚 Worldview Profiles")
+    if ledger_section == "📚 Framework Profiles":
+        st.markdown("## 📚 Framework Profiles")
         st.caption("*Axioms and debts for 12 audited frameworks*")
 
         # Grouped category selector (following WORLDVIEW_CATALOG.md structure)
@@ -394,7 +394,7 @@ def render():
         st.info("""
         **Meta-Integrity Check:**
 
-        CFA scores worldviews using the VuDu Light framework. But what are **CFA's own** axioms and debts?
+        CFA scores frameworks using the VuDu Light framework. But what are **CFA's own** axioms and debts?
 
         If we hide our assumptions while exposing others', we're hypocrites.
         If we name them, Mr. Brute holds us accountable too.
@@ -1380,7 +1380,7 @@ def render():
             st.markdown("## Build Your Own Ledger")
             
             st.markdown("""
-            Want to audit your own worldview? List its axioms and debts:
+            Want to audit your own framework? List its axioms and debts:
             """)
             
             col1, col2 = st.columns(2)

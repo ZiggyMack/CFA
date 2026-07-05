@@ -784,7 +784,7 @@ Calibrated for this specific matchup via Trinity experiment.
 You've moved a slider from the loaded baseline.
 
 **📊 Audit TBD (bias data used)**
-Worldview has audit history but not for this pairing yet — canonical priors shown.
+Framework has audit history but not for this pairing yet — canonical priors shown.
 
 **📋 New profile**
 Pre-audit pipeline. Values are preliminary.
@@ -933,7 +933,7 @@ Pre-audit pipeline. Values are preliminary.
     with col1:
         st.markdown("### 📘 Framework A")
         st.caption(_get_audit_status("fa", st.session_state.get("fa_name", ""), st.session_state.get("fb_name", "")))
-        fa_name = st.selectbox("Worldview", options=_worldview_options(), key="fa_name", on_change=_on_fa_worldview_change, format_func=_wv_label)
+        fa_name = st.selectbox("Framework", options=_worldview_options(), key="fa_name", on_change=_on_fa_worldview_change, format_func=_wv_label)
         
         with st.expander("🔢 BFT", expanded=False):
             if 'custom_framework_ready' in st.session_state:
@@ -1017,7 +1017,7 @@ Pre-audit pipeline. Values are preliminary.
     with col2:
         st.markdown("### 📕 Framework B")
         st.caption(_get_audit_status("fb", st.session_state.get("fb_name", ""), st.session_state.get("fa_name", "")))
-        fb_name = st.selectbox("Worldview", options=_worldview_options(), key="fb_name", on_change=_on_fb_worldview_change, format_func=_wv_label)
+        fb_name = st.selectbox("Framework", options=_worldview_options(), key="fb_name", on_change=_on_fb_worldview_change, format_func=_wv_label)
         
         with st.expander("🔢 BFT", expanded=False):
             if 'custom_framework_ready' in st.session_state:
@@ -1279,7 +1279,7 @@ Here, <strong style="color:#e0e0e0;">PF-type</strong> is that toggle: switching 
 <p style="margin:0 0 0.6rem 0;font-size:0.85rem;color:#c0c0d0;"><strong style="color:#e0e0e0;">Short answer: no.</strong> A sensitive toggle flag means the worldview has a <em>narrow-and-deep</em> profile — it has staked out a strong position rather than distributing strength broadly. Seeing one flag per worldview at comparable magnitude means the audit is detecting real philosophical architecture, not instrument error. The flag marks the <em>hinge point</em> where a worldview's specialization gets tested.</p>
 <p style="margin:0 0 0.4rem 0;font-size:0.85rem;color:#c0c0d0;"><strong style="color:#e0e0e0;">CT → Lever-Parity:</strong> CT carries 7 axioms vs 4 debts — a structurally asymmetric ratio. Parity controls how that imbalance is weighted. CT feels it because its axiom-to-debt ratio is a fundamental feature of how it is built, not a measurement artifact.</p>
 <p style="margin:0 0 0.4rem 0;font-size:0.85rem;color:#c0c0d0;"><strong style="color:#e0e0e0;">MdN → PF→Instrumental:</strong> MdN's identity is built around explaining, predicting, and intervening in the natural world. Switching to Composite blends in existential fertility — a domain MdN intentionally brackets. MdN scores lower there not because it fails, but because it doesn't try.</p>
-<p style="margin:0;font-size:0.8rem;color:#707080;">Both flags appear because both worldviews are <em>specialists</em>, not generalists. That's a diagnostic about the frameworks — not a verdict on the ruler.</p>
+<p style="margin:0;font-size:0.8rem;color:#707080;">Both flags appear because both frameworks are <em>specialists</em>, not generalists. That's a diagnostic about the frameworks — not a verdict on the ruler.</p>
 </div>
 """, unsafe_allow_html=True)
     
@@ -1403,15 +1403,15 @@ Each metric was scored 0–10 by both auditors independently, then deliberated t
 
 | Metric | Full Name | Scoring Question |
 |--------|-----------|-----------------|
-| **BFI** | Beings, Foundational Importance | Does this worldview provide a compelling account of *why anything exists at all*? Does it ground being-ness itself, or does existence arrive as a brute fact? |
-| **CA** | Causal Attribution | Does this worldview coherently explain causal structure — what causes what, why causal chains hold, and what ultimately grounds the causal order of reality? |
-| **IP** | Intellectual Pedigree | Has this worldview generated sustained, rigorous philosophical engagement? Is it anchored in a tradition deep enough that its core claims have been seriously stress-tested? |
-| **ES** | Explanatory Scope | How broad is this worldview's explanatory reach across domains — physical, moral, aesthetic, existential? Can it address diverse phenomena without category errors or ad hoc patches? |
-| **LS** | Logical Soundness | Are the worldview's core propositions internally consistent? Does it avoid contradiction, question-begging, and logical incoherence under adversarial pressure? |
-| **MS** | Moral Substance | Can this worldview ground moral claims in something more than preference or convention? Does it have the ontological resources to make morality *real* rather than merely felt? |
-| **PS** | Practical Significance | Does this worldview make a *difference* for how one ought to live? Is it actionable — does it provide genuine orientation for real human decisions and values? |
+| **BFI** | Beings, Foundational Importance | Does this framework provide a compelling account of *why anything exists at all*? Does it ground being-ness itself, or does existence arrive as a brute fact? |
+| **CA** | Causal Attribution | Does this framework coherently explain causal structure — what causes what, why causal chains hold, and what ultimately grounds the causal order of reality? |
+| **IP** | Intellectual Pedigree | Has this framework generated sustained, rigorous philosophical engagement? Is it anchored in a tradition deep enough that its core claims have been seriously stress-tested? |
+| **ES** | Explanatory Scope | How broad is this framework's explanatory reach across domains — physical, moral, aesthetic, existential? Can it address diverse phenomena without category errors or ad hoc patches? |
+| **LS** | Logical Soundness | Are the framework's core propositions internally consistent? Does it avoid contradiction, question-begging, and logical incoherence under adversarial pressure? |
+| **MS** | Moral Substance | Can this framework ground moral claims in something more than preference or convention? Does it have the ontological resources to make morality *real* rather than merely felt? |
+| **PS** | Practical Significance | Does this framework make a *difference* for how one ought to live? Is it actionable — does it provide genuine orientation for real human decisions and values? |
 
-*Scores are assigned under adversarial identity conditions: the PRO auditor argues from the worldview's strongest case; the ANTI auditor applies the opposing lens. Convergence is required above 98% or a crux is declared.*
+*Scores are assigned under adversarial identity conditions: the PRO auditor argues from the framework's strongest case; the ANTI auditor applies the opposing lens. Convergence is required above 98% or a crux is declared.*
                         """)
 
                     metrics = trinity.get("metrics", {})
@@ -1624,7 +1624,7 @@ than MdN is for the teleological lens.
         
         # Question 1: Evidence Priority
         q1 = st.radio(
-            "**Q1:** What matters more in evaluating a worldview?",
+            "**Q1:** What matters more in evaluating a framework?",
             ["Predictive accuracy and testable results", 
              "Both prediction and meaning equally", 
              "Comprehensive explanation and existential depth"],

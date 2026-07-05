@@ -54,8 +54,8 @@ def render():
         st.markdown("""
         ## What is the CFA?
         
-        The **Comparative Framework Audit (CFA)** is a systematic method for evaluating and comparing 
-        philosophical frameworks, worldviews, and epistemological systems using transparent, 
+        The **Comparative Framework Audit (CFA)** is a systematic method for evaluating and comparing
+        candidate frameworks — worldviews, epistemologies, methodologies, ethical systems — using transparent,
         adjustable criteria.
         
         ### Core Principles
@@ -166,7 +166,7 @@ def render():
             
             **1. Lever-Parity Assumption** (Unjustified)
             - We were treating epistemic norms and moral norms as equally important
-            - This **favored comprehensive worldviews** (CT) over focused methods (MdN)
+            - This **favored comprehensive frameworks** (CT) over focused methods (MdN)
             - **Decision**: Make it toggleable (ON/OFF)
             
             **2. PF Privilege** (Unjustified)
@@ -716,7 +716,7 @@ def render():
         The Chat Assistant has access to the full CFA repository and can answer questions about:
         - BFT, YPA, and the evaluation framework
         - How to use the Console and Mr. Brute's Ledger
-        - Worldview profiles and preset modes
+        - Framework profiles and preset modes
         - The Trinity auditors (Claude, Grok, Nova)
 
         *Note: You'll need your own Anthropic API key to use this feature.*

@@ -120,8 +120,8 @@ def render():
         
         st.markdown("### What is CFA?")
         st.write("""
-        The **Comparative Framework Audit** is a system for comparing worldviews,
-        epistemologies, and philosophical frameworks using transparent, adjustable criteria.
+        The **Comparative Framework Audit** is a system for comparing frameworks,
+        epistemologies, and philosophical systems using transparent, adjustable criteria.
 
         **Core Innovation**: "All Named, All Priced" → "All Seen, All Passed"
         - Every assumption is disclosed
@@ -137,7 +137,7 @@ def render():
             <b>📐 What you're doing when you use the console</b><br/><br/>
             CFA separates three questions that most philosophical debate accidentally collapses together:<br/><br/>
             <b>Phase 0 — Who is judging?</b> The Scoring Mode (Bias / Audit) and evaluator identity.<br/>
-            <b>Phase 1 — What is being judged?</b> The worldview profile — faithfully reconstructed via Trinity experiments.<br/>
+            <b>Phase 1 — What is being judged?</b> The framework profile — faithfully reconstructed via Trinity experiments.<br/>
             <b>Phase 2 — How well does it perform?</b> The YPA levers and scores. <i>This is what the console is doing.</i><br/><br/>
             The console operates in Phase 2. The profiles you load are the output of Phase 1. Your evaluator stance is Phase 0.
             </div>
@@ -174,8 +174,8 @@ def render():
         
         st.markdown("""
             <div class="lever-card">
-            <h4>Step 1: Choose Your Worldview</h4>
-            <p>CFA offers 12 worldviews:</p>
+            <h4>Step 1: Choose Your Framework</h4>
+            <p>CFA offers 12 frameworks under test (FUTs):</p>
             <ul>
                 <li><b>Major Religions:</b> Classical Theism, Islam, Judaism, Mormonism, Hinduism, Buddhism</li>
                 <li><b>Naturalistic:</b> Methodological Naturalism, Process Theology</li>
@@ -221,7 +221,7 @@ def render():
             <div class="tip-box">
             💡 <b>Pro Tip:</b> Don't just look at who "wins." Look at the trade-offs. 
             What does each framework give up? Is that acceptable for your purposes?
-            Check the Living Map System to explore all 12 worldview profiles in depth.
+            Check the Living Map System to explore all 12 framework profiles in depth.
             </div>
         """, unsafe_allow_html=True)
     
@@ -242,7 +242,7 @@ def render():
             <div class="info-card">
             <h4>Canonical YAML + Documentation Separation</h4>
             
-            <p><b>What Changed:</b> Worldview profiles now use TWO files per profile:</p>
+            <p><b>What Changed:</b> Framework profiles now use TWO files per profile:</p>
             <ul>
                 <li><b>.yaml files:</b> Canonical machine-readable scores (single source of truth)</li>
                 <li><b>.md files:</b> Human-readable documentation (philosophy, sources, hyperlinks)</li>
@@ -269,14 +269,14 @@ profiles/worldviews/
             </div>
         """, unsafe_allow_html=True)
     
-        st.markdown("### 🗂️ 12 Worldview Profiles")
+        st.markdown("### 🗂️ 12 Framework Profiles")
         st.markdown("""
             <div class="info-card">
-            <h4>Expanded from 2 to 12 fully-audited worldviews</h4>
+            <h4>Expanded from 2 to 12 fully-audited frameworks</h4>
             <p><b>Major World Religions:</b> Classical Theism, Islam, Orthodox Judaism, Mormonism, Hinduism, Buddhism</p>
             <p><b>Naturalistic Frameworks:</b> Methodological Naturalism, Process Theology</p>
             <p><b>Meta-Ethical Positions:</b> Error Theory, Null Hypothesis, Desiderata Believers, Existentialism</p>
-            <p><b>Total:</b> ~240KB philosophical documentation with Steel-Manning sections, academic sources (9+ per worldview), and calibration YAML blocks</p>
+            <p><b>Total:</b> ~240KB philosophical documentation with Steel-Manning sections, academic sources (9+ per framework), and calibration YAML blocks</p>
             </div>
         """, unsafe_allow_html=True)
     
@@ -304,9 +304,9 @@ profiles/worldviews/
     
             <p><b>Three-View System:</b></p>
             <ul>
-                <li><b>Self-Reported Tab:</b> What the worldview claims about itself</li>
+                <li><b>Self-Reported Tab:</b> What the framework claims about itself</li>
                 <li><b>Peer-Reviewed Tab:</b> What survives adversarial audit (Claude/Nova/Grok)</li>
-                <li><b>Delta Tab:</b> The difference (humility metrics - how well does worldview know itself?)</li>
+                <li><b>Delta Tab:</b> The difference (humility metrics - how well does the framework know itself?)</li>
             </ul>
     
             <p><b>User Control - Crux Handling Lever:</b></p>
@@ -326,14 +326,14 @@ profiles/worldviews/
     
             <p><b>Three Auditor Roles:</b></p>
             <ul>
-                <li><b>PRO (Claude):</b> Teleological lens, advocates FOR worldview with calibration bias adjustment</li>
+                <li><b>PRO (Claude):</b> Teleological lens, advocates FOR the framework with calibration bias adjustment</li>
                 <li><b>ANTI (Grok):</b> Empirical lens, challenges claims from naturalistic perspective</li>
                 <li><b>FAIRNESS (Nova):</b> Symmetry lens, ensures balance and catches asymmetric treatment</li>
             </ul>
     
             <p><b>The Process:</b></p>
             <ol>
-                <li>Worldview writes <b>self-reported score</b> (what it claims)</li>
+                <li>Framework writes <b>self-reported score</b> (what it claims)</li>
                 <li>Three auditors deliberate adversarially using Steel-Manning scaffolds</li>
                 <li>Target: <b>98%+ convergence</b> (if can't agree → declare Crux Point)</li>
                 <li>Output: <b>Peer-reviewed score</b> (survives genuine philosophical scrutiny)</li>
@@ -357,7 +357,7 @@ profiles/worldviews/
                 <li><b>FILE_INVENTORY.md</b> - Complete catalog (~353 tracked files)</li>
                 <li><b>BOOTSTRAP_SEQUENCE.md</b> - Canonical activation paths</li>
                 <li><b>REPO_HEALTH_DASHBOARD.md</b> - Real-time health (98/100 A+)</li>
-                <li><b>WORLDVIEW_CATALOG.md</b> - 12 worldview profile registry</li>
+                <li><b>WORLDVIEW_CATALOG.md</b> - 12 framework profile registry</li>
                 <li><b>WAYFINDING_GUIDE.md</b> - Navigation for finding anything</li>
                 <li><b>AUDITOR_ASSIGNMENTS.md</b> - PRO/ANTI stance mappings</li>
                 <li><b>ARCHIVE_INDEX.md</b> - Brainstorming archive (21 files, 616KB)</li>
@@ -444,7 +444,7 @@ profiles/worldviews/
                 <li>Not all values are easily quantifiable</li>
             </ol>
             
-            <p><b>CFA's BFT:</b> 6 (comparable to worldview profiles)</p>
+            <p><b>CFA's BFT:</b> 6 (comparable to framework profiles)</p>
             
             <p><b>Philosophy:</b> <i>"We demand of ourselves what we demand of others: Show the machinery"</i></p>
             
@@ -454,7 +454,7 @@ profiles/worldviews/
     
         st.markdown("""
             <div class="tip-box">
-            💡 <b>CFA Philosophy:</b> CFA treats worldviews as <i>living philosophical positions</i> worthy of genuine intellectual charity,
+            💡 <b>CFA Philosophy:</b> CFA treats frameworks as <i>living philosophical positions</i> worthy of genuine intellectual charity,
             not strawmen to dismiss. Adversarial collaboration + named impasses + Living Maps = epistemic honesty at scale.
             </div>
         """, unsafe_allow_html=True)
@@ -578,7 +578,7 @@ launch_both.bat     # Both simultaneously
             
             <p><b>Integration with CFA:</b></p>
             <ul>
-                <li>Worldview profiles as L2 personas</li>
+                <li>Framework profiles as L2 personas</li>
                 <li>Auditors (Claude/Nova/Grok) as L3 specialists</li>
                 <li>YPA calculations informed by identity physics</li>
             </ul>
@@ -640,7 +640,7 @@ launch_both.bat     # Both simultaneously
             💡 <b>v5.0 Philosophy:</b> CFA evolves from standalone framework to interconnected node in the Pan Handlers Network.
             Identity physics from Nyquist, validation from VUDU, all connected through The Matrix portal.
             <br><br>
-            <i>"Were not just comparing worldviews anymore - were building an ecosystem where AI and human consciousness collaborate at scale."</i>
+            <i>"Were not just comparing frameworks anymore - were building an ecosystem where AI and human consciousness collaborate at scale."</i>
             </div>
         """, unsafe_allow_html=True)
     
@@ -734,7 +734,7 @@ launch_both.bat     # Both simultaneously
             
             <p><b>ON (Default):</b> MG counts fully (1.0×)</p>
             <ul>
-                <li>Favors comprehensive worldviews</li>
+                <li>Favors comprehensive frameworks</li>
                 <li>Values moral grounding as much as predictive power</li>
                 <li>Treats ethics and epistemology as equally important</li>
             </ul>
@@ -774,10 +774,10 @@ launch_both.bat     # Both simultaneously
             <ul>
                 <li>Existential yield weighted equally</li>
                 <li>Values purpose/meaning as much as tech</li>
-                <li>Favors theistic/religious worldviews</li>
+                <li>Favors theistic/religious frameworks</li>
             </ul>
-            
-            <p><b>Impact:</b> ±0.4 YPA swing depending on worldview's strengths</p>
+
+            <p><b>Impact:</b> ±0.4 YPA swing depending on framework's strengths</p>
             </div>
         """, unsafe_allow_html=True)
         
@@ -825,7 +825,7 @@ launch_both.bat     # Both simultaneously
                 <li>Values solid foundations over promissory notes</li>
             </ul>
             
-            <p><b>Impact:</b> Penalizes frameworks with many unresolved questions (varies by worldview)</p>
+            <p><b>Impact:</b> Penalizes frameworks with many unresolved questions (varies by framework)</p>
             
             <p><b>Note:</b> This toggle interacts with Crux Architecture - unresolved questions may become named Crux Points</p>
             </div>
@@ -851,9 +851,9 @@ launch_both.bat     # Both simultaneously
             
             <p><b>Each scenario shows:</b></p>
             <ul>
-                <li><b>Self-Reported Score:</b> What the worldview claims</li>
+                <li><b>Self-Reported Score:</b> What the framework claims</li>
                 <li><b>Peer-Reviewed Score:</b> What survives 98% adversarial convergence</li>
-                <li><b>Delta (Humility Metric):</b> The gap reveals how well a worldview knows itself</li>
+                <li><b>Delta (Humility Metric):</b> The gap reveals how well a framework knows itself</li>
             </ul>
             </div>
         """, unsafe_allow_html=True)
@@ -920,7 +920,7 @@ launch_both.bat     # Both simultaneously
         st.markdown("""
             <div class="tip-box">
             <b>📊 Audit TBD (bias data used)</b><br/>
-            This worldview has entered the audit pipeline — at least one Trinity session exists for it — but
+            This framework has entered the audit pipeline — at least one Trinity session exists for it — but
             not for this specific matchup yet. The values shown are canonical (self-reported) priors:
             deliberate and considered, but not yet adversarially stress-tested against this opponent.
             </div>
@@ -929,14 +929,14 @@ launch_both.bat     # Both simultaneously
         st.markdown("""
             <div class="tip-box">
             <b>📋 New profile</b><br/>
-            This worldview hasn't entered the audit pipeline yet. It may be freshly scaffolded or still
+            This framework hasn't entered the audit pipeline yet. It may be freshly scaffolded or still
             being developed. Values exist but their depth and sourcing are unverified — treat as preliminary.
             </div>
         """, unsafe_allow_html=True)
 
         st.markdown("""
             <div class="tip-box">
-            💡 <b>The progression:</b> New profile → Audit TBD → Adversarially Audited reflects a worldview's
+            💡 <b>The progression:</b> New profile → Audit TBD → Adversarially Audited reflects a framework's
             journey through the CFA research pipeline. Badges tell you where each framework currently sits —
             not a quality judgment, but a provenance signal.
             </div>
@@ -984,7 +984,7 @@ launch_both.bat     # Both simultaneously
             1. Start with default config (Parity ON, Composite PF, etc.)
             2. Note the YPA scores
             3. Flip Parity OFF
-            4. Watch theistic worldviews drop ~0.8 YPA
+            4. Watch theistic frameworks drop ~0.8 YPA
             
             <b>Question:</b> Is this bias against theism, or honest measurement of structural dependency?
             </div>
@@ -993,14 +993,14 @@ launch_both.bat     # Both simultaneously
         st.markdown("### 4. Check the Brute Ledger")
         st.write("""
         Visit the **🔍 Brute Ledger** page to see:
-        - Full axiom/debt lists for all 12 worldviews
+        - Full axiom/debt lists for all 12 frameworks
         - **NEW: "🏛️ The Framework" section** - CFA audits itself!
         - Why each framework requires its starting assumptions
         - Audit notes from Claude + Grok + Nova perspectives
         - Steel-Manning scaffolds showing charitable interpretation
         
         The Brute Ledger now has 4 sections:
-        1. 📚 Worldview Profiles
+        1. 📚 Framework Profiles
         2. 🏛️ The Framework (CFA's self-audit)
         3. 🤖 The Auditors
         4. ⚙️ Utilities
@@ -1093,7 +1093,7 @@ launch_both.bat     # Both simultaneously
             
             <b>YPA Validator:</b> Standalone calculator for third-party verification
             - Available at: docs/Validation/ypa_validator.py
-            - Verify any worldview's scores independently
+            - Verify any framework's scores independently
             
             <b>Hash Registry:</b> Check file integrity via BOOTSTRAP_HASHES.md
             - SHA256 checksums for all critical files
@@ -1132,7 +1132,7 @@ launch_both.bat     # Both simultaneously
             - L4-L5: Deep recovery and synthesis
             
             <b>How it affects CFA:</b>
-            - Worldviews can be treated as L2 personas
+            - Frameworks can be treated as L2 personas
             - Pattern Fidelity Index measures consistency
             - Identity physics informs YPA calculations
             
@@ -1166,7 +1166,7 @@ launch_both.bat     # Both simultaneously
     st.markdown("""
         <div style="text-align: center; color: #666; padding: 1rem;">
         <p>CFA v5.0.0 | "All Named, All Priced → All Seen, All Passed" | November 2025</p>
-        <p>Repository Health: 98/100 (A+) | 12 Worldviews | 7 Living Maps | 3 AI Auditors</p>
+        <p>Repository Health: 98/100 (A+) | 12 Frameworks | 7 Living Maps | 3 AI Auditors</p>
         <p><i>Where ideas reveal their true weight, and honesty becomes quantifiable through adversarial audit.</i></p>
         </div>
     """, unsafe_allow_html=True)
