@@ -19,9 +19,11 @@ NOTE: Based on Barandes' isomorphism argument (Adlam & Barandes, Theories of Eve
 --->
 
 # Phase 1a Isomorphism Calibration
+
 ## Pre-Flight Representation Bias Check
 
 **When to run:** Before any Phase 1a reconstruction scoring session, especially when:
+
 - The FUT has been controversial (CT, MdN with Grant-type objections)
 - A previous run produced Phase 1 cycling or CRUX declaration
 - An auditor is being onboarded or returning after a gap
@@ -100,7 +102,7 @@ Phase 1a requires auditors to reconstruct the FUT in *its own representation*. A
 After completing all three pairs:
 
 | Result | Interpretation | Pre-Phase 1a Action |
-|---|---|---|
+| --- | --- | --- |
 | 3/3 consistent | Calibrated — representation-neutral stance | Proceed to Phase 1a |
 | 2/3 consistent | Partial flag — note which case produced divergence | Declare which representation you default to; note it in Phase 0 |
 | 1/3 or 0/3 consistent | Strong representation loading | Declare representation preference explicitly in Phase 0; Nova should audit Phase 1a outputs for representation artifacts |
@@ -126,7 +128,7 @@ After the three test cases, run this single additional check to detect observer-
 
 When logging Phase 0 evaluator configuration, add a calibration note:
 
-```
+```yaml
 PHASE_1A_CALIBRATION:
   test_1_spring: [consistent | diverged — preferred representation: ...]
   test_2_CT: [consistent | diverged — preferred representation: ...]
@@ -143,7 +145,9 @@ An auditor in `representation-A` stance is not more or less valid than a `repres
 
 CRUX_MS_20260629 would have been detectable by this calibration. Claude oscillated between representation A ("does this architecture successfully ground morality?") and representation B ("does this architecture have the structural components for moral grounding?") within the same scoring session. The calibration would have surfaced this before Phase 1a began and produced a declared stance rather than mid-run cycling.
 
-**Retroactive test:** Run this calibration against the auditor prompts used in the CT↔MdN 20260629 batch. Check whether the Phase 1 prompt implicitly invited representation-A answers for MS. If yes, the cycling was prompt-induced, not auditor error.
+**Retroactive audit result (2026-07-05):** Repo Claude audited the CT↔MdN 20260629 Phase 1 MS prompt. Finding: the prompt was NOT biased toward representation-A — it was under-specified. "Moral Substance" was the only framing; no anchors. Each auditor self-defined the metric via their identity file. Claude's oscillation (6.5→1.0→6.2→1.0→1.0) is consistent with switching representations between rounds as identity file cues fired differently, not with prompt-induced bias.
+
+**Confirmed diagnosis:** CRUX_MS is definitional instability from under-specification, not prompt artifact. The fix is NOT Phase 1 anchors — open Phase 1 is architecturally intentional. It exposes Definitions-layer signal that anchors would suppress. The calibration protocol's value here is not preventing the cycling but making it legible: an auditor who declares their representation stance at Phase 0 produces cycling that can be read as "Definitions-layer divergence in representation X" rather than unexplained oscillation.
 
 ---
 
