@@ -4,10 +4,12 @@ PURPOSE: Philosophical grounding document — maps Adlam & Barandes (2024) philo
          arguments onto CFA's Phase 1/2 architecture, CRUX_MS cycling behavior, and FUT legitimacy.
          Independent convergence: same structural skeleton discovered in physics independently confirms
          CFA design decisions are not arbitrary.
-VERSION: v1.0.0
+VERSION: v1.1.0
 STATUS: Active — Reference Document
-DEPENDS_ON: CRUX_MS_20260629.md, CFA_ARCHITECTURE.md, AUDITOR_AXIOMS.md, CRUX_YPA_METHODOLOGY.md
-NEEDED_BY: Future Phase 1 anchor debates, FUT qualification criteria docs, AUDITOR_AXIOMS.md updates
+DEPENDS_ON: CRUX_MS_20260629.md, CFA_ARCHITECTURE.md, AUDITOR_AXIOMS.md, CRUX_YPA_METHODOLOGY.md,
+            cognitive_physics_care_package.md
+NEEDED_BY: Future Phase 1 anchor debates, FUT qualification criteria docs, AUDITOR_AXIOMS.md updates,
+           JAYNES_OMELETTE_SELF_AUDIT.md
 MOVES_WITH: /docs/architecture/whitepapers/
 LAST_UPDATE: 2026-07-05
 NOTE: Source transcript — Adlam & Barandes, "Theories of Everything" podcast (Jaimungal, host),
@@ -55,6 +57,8 @@ This document should be consulted when: (1) Phase 1 anchor debates arise, (2) a 
 
 **Implication:** Phase 1 definitional cycling (CRUX_MS) is not auditor error. It is the expected behavior of a pure self-location scenario. The fix is not to blame auditors — it is to install a selection process (lock the MS definition), converting the scenario from pure to superficial.
 
+**Bright line confirmation (NotebookLM deep dive, 2026-07-05):** Barandes was asked directly whether the pure/superficial distinction admits a smooth gradation (sorites/heap problem) or a sharp demarcation. His answer: **"There IS a bright line."** A set of outcomes either belongs to one possible world or constitutes a single world where all outcomes coexist — no intermediate state, no boundary cases. He explicitly contrasts this with sorites problems and says this is NOT one. Consequence: Phase 1 (pure, no selection process) and Phase 2 (superficial, anchored) are not a pragmatic convenience — they are on opposite sides of a categorical demarcation that admits no gradations. The split cannot be "partially applied."
+
 **Nova refinement:** The common abstraction is not specifically "self-location." It is **under-determination**: when a formalism does not uniquely determine an outcome, any procedure that pretends otherwise is importing structure that isn't in the formalism. This generalizes beyond self-location to any case where the object of evaluation is under-specified.
 
 ---
@@ -64,6 +68,8 @@ This document should be consulted when: (1) Phase 1 anchor debates arise, (2) a 
 **Background:** In the CT↔MdN 20260629 batch, Claude oscillated MS scores 6.5→1.0→6.2→1.0→1.0 across rounds while Grok held steady ~5.0. Declared as CRUX_MS_20260629 — "stochastic intra-auditor definitional cycling."
 
 **Adlam's argument (bets framing):** In a pure self-location scenario, to decide what credence to assign, you must first specify your goal (e.g., maximize total winnings vs. maximize winnings for one specific observer). But as soon as you specify the goal, that goal *immediately* fixes the credences — there is no further empirical or theoretical work to do. The goal specification and the credence are the same thing in different clothing.
+
+**Precision on "immediately fixes" (NotebookLM deep dive, 2026-07-05):** "Immediately fixes" does not mean "quickly determines." It means the **absolute absence of any intermediate empirical or theoretical steps** between choosing your goal and deriving your strategy. In normal science (coin flip), stating your goal ("I want to win money") does not tell you the odds — you still need to test the coin, model the physics, collect data. That empirical gap is real, and rationality operates in it. In pure self-location (clone betting), stating your goal ("maximize total winnings" vs. "maximize MY winnings") immediately and completely determines your credences with no testing, no modeling, no data collection. The empirical gap vanishes entirely. This is why Phase 1 without anchors produces cycling: the empirical gap has been removed. There is nowhere for deliberation to go.
 
 **CFA mapping:** Claude's MS oscillation is exactly this. Two competing definitions of MS were active in the same auditor in the same run (see CRUX_MS_20260629.md §3). Each definition is a different goal specification. Each goal specification immediately fixes a different score. The oscillation is the auditor cycling between two goal specifications that the open-ended Phase 1 prompt left underdetermined. There is no fact of the matter that could resolve it from within the formalism — only a definitional lock (selecting one goal specification) resolves it.
 
@@ -122,6 +128,8 @@ This abstraction appears in:
 
 The same architecture — faithful to under-determination, suspicious of imported structure — appears to be a general requirement for "how to reason faithfully when multiple coherent perspectives exist without collapsing them prematurely." CFA is one instance. DBEP is another. Adlam and Barandes' programs in philosophy of physics are another. The convergence across domains suggests this is a deep structural property of the problem, not a design choice specific to any one system.
 
+**Meta-recursion validation (2026-07-05):** When NotebookLM was asked to trace all instances of "goal specification fixes credences" across the source material, it identified four instances — including our own RESEARCH_QUESTION.md analysis notes as a fourth instance of Adlam's pattern. NotebookLM has zero CFA context. It detected the same structural pattern in our notes that we extracted during analysis. This is the strongest form of independent convergence available: not just "similar domains, same structure" but "same tool, different reader, same finding." The under-determination pattern is real, not pareidolia.
+
 ---
 
 ## 3. How to Apply This Document
@@ -134,6 +142,8 @@ The same architecture — faithful to under-determination, suspicious of importe
 | FUT qualification challenged on taxonomic grounds | §1.4 — Eliminativism; no fact beyond structural facts |
 | Evaluator embeds Phase 0 bias into Phase 1 scoring | §1.5 — Cartesian ego / universal admissibility criterion |
 | Any Phase 1 vs. Phase 2 architecture debate | §2 — Under-determination as the common abstraction |
+| "Is the Phase 1/2 split just pragmatic?" | §1.1 bright line note — categorically confirmed, not sorites |
+| CFA self-audit (is this element inferential or ontic?) | See JAYNES_OMELETTE_SELF_AUDIT.md |
 
 ---
 
