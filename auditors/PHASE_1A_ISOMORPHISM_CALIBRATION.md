@@ -1,21 +1,23 @@
 <!---
 FILE: PHASE_1A_ISOMORPHISM_CALIBRATION.md
-PURPOSE: Auditor pre-flight calibration for representation dependence — ensures auditors can
-         recognize that a physical/structural fact must survive isomorphic translation before
-         it counts as a fact about the framework rather than about the evaluator's representation.
-         Run before any Phase 1a reconstruction scoring to detect representation-bias loading.
-VERSION: v1.0.0
+PURPOSE: Auditor pre-flight calibration for Hidden Structure Injection — detects when an auditor
+         is quietly importing evaluators, coordinate systems, representations, or optimization
+         targets into Phase 1a without declaring them. Structural facts must survive isomorphic
+         translation to count as facts about the FUT; facts that don't survive are injected structure.
+         Run before any Phase 1a reconstruction scoring session.
+VERSION: v1.1.0
 STATUS: Active — Calibration Protocol
 DEPENDS_ON: JAYNES_OMELETTE_SELF_AUDIT.md, Adlam_Barandes_Phase_Architecture_Grounding.md,
             AUDITOR_AXIOMS.md
 NEEDED_BY: Phase 1a scoring sessions, auditor onboarding, any run where MS or LS cycling is suspected
 MOVES_WITH: /auditors/
-LAST_UPDATE: 2026-07-05
-NOTE: Based on Barandes' isomorphism argument (Adlam & Barandes, Theories of Everything, ~2024).
-      Twin detection pipeline synthesis from cognitive_physics_care_package.md Finding 2.
-      An auditor who gives different answers to the two representations in any test case below
-      is encoding representation bias. This is not a disqualifier — it is diagnostic information
-      that must be declared before Phase 1a begins.
+LAST_UPDATE: 2026-07-06
+NOTE: Originally framed as twin detection pipelines (representation bias + smuggled observer).
+      Nova (xAI, 2026-07-06) identified these as duals of the same phenomenon and proposed
+      the unifying concept: Hidden Structure Injection. Both representation bias and smuggled
+      observer are cases where something is treated as ontologically fundamental when it is
+      actually an artifact of an imported frame. Updated to reflect Nova's synthesis.
+      Source: Barandes isomorphism argument + cognitive_physics_care_package.md Finding 2.
 --->
 
 # Phase 1a Isomorphism Calibration
@@ -37,11 +39,20 @@ NOTE: Based on Barandes' isomorphism argument (Adlam & Barandes, Theories of Eve
 
 ## What This Tests
 
-A structural fact about a framework must survive isomorphic translation to count as a fact about the *framework*. If the fact disappears or reverses when you restate it in an equivalent representation, it was a fact about your *coordinate system*, not about the object.
+**Hidden Structure Injection** (Nova's synthesis, 2026-07-06): An analysis quietly imports something — an evaluator, observer, coordinate system, representation, optimization target, or utility function — without declaring it. The injected structure then masquerades as a fact about the object being analyzed.
 
-Barandes' worked example: "Does a zero-amplitude quantum branch exist?" In standard Hilbert space notation, Everettians say no — zero amplitude means non-existent. In the mathematically equivalent harmonic oscillator representation, the same state is a non-oscillating spring — still physically present. The "zero means absent" claim doesn't survive translation, so it is representation-dependent, not ontological.
+This has two surface forms that look different but are the same phenomenon:
 
-Phase 1a requires auditors to reconstruct the FUT in *its own representation*. An auditor who gives representation-dependent answers during Phase 1a is scoring their own coordinate system, not the framework.
+- **Representation injection:** A representation is treated as ontology. "Zero amplitude means non-existent" — true in one coordinate system, false in the isomorphic alternative. The non-existence was in the representation, not the physics.
+- **Observer injection:** An evaluator is treated as ontology. "CT has no moral substance because its premises fail" — true from Grant's epistemic frame, false from CT's own frame. The failure was in the evaluator's representation, not CT's architecture.
+
+Both are Hidden Structure Injection. Both are caught by the same diagnostic: **ask what is doing the selecting.** If an analysis says outcome X is "obviously true," find the selection mechanism that made X obvious. If you cannot name it, something was imported without declaration.
+
+The isomorphism test operationalizes this: a structural fact about a framework must survive translation into an equivalent representation. If it doesn't survive, it was injected structure — a fact about your coordinate system, not about the object.
+
+Barandes' worked example: "Does a zero-amplitude quantum branch exist?" In standard Hilbert space notation, the answer is no — zero amplitude means non-existent. In the mathematically equivalent harmonic oscillator representation, the same state is a non-oscillating spring — still physically present. The "zero means absent" claim doesn't survive translation. It was representation-dependent, not ontological. Hidden Structure Injection, form 1.
+
+Phase 1a requires auditors to reconstruct the FUT without injecting either form. An auditor who gives representation-dependent answers is scoring their own coordinate system. An auditor who imports an evaluative verdict is scoring their Phase 0 stance. Both must be declared before Phase 1a begins, not discovered mid-run.
 
 ---
 
@@ -111,16 +122,18 @@ After completing all three pairs:
 
 ---
 
-## The Smuggled Observer Version
+## The Selection Mechanism Check
 
-After the three test cases, run this single additional check to detect observer-import:
+After the three test cases, run this single additional check. It catches the observer-injection form of Hidden Structure Injection — the case where the evaluator's frame is doing work that gets attributed to the FUT.
 
 > **Question:** In the CT moral architecture scoring above (Test Case 2), what is doing the work of deciding whether the architecture "counts"?
 >
 > - (A) The structural properties of CT's metaphysical system
 > - (B) The evaluator's assessment of whether those properties produce acceptable grounding
 >
-> If you answered (B), you have identified a smuggled observer — a selection mechanism that is in the evaluator's framework, not in CT's. Note this before Phase 1a. (B) is a legitimate Phase 0 stance; it is not a legitimate Phase 1a input.
+> If you answered (B), name the selection mechanism explicitly: what criterion is the evaluator using, and where does that criterion come from? That mechanism belongs in Phase 0 (evaluator configuration), not Phase 1a (reconstruction). (B) is a legitimate stance — it just cannot be invisible.
+
+This is the "ask what is doing the selecting" operator applied directly. The mechanism isn't wrong to have; it's wrong to leave unnamed. An unnamed selection mechanism is Hidden Structure Injection — the evaluator's frame producing a conclusion that gets reported as a fact about the FUT.
 
 ---
 
@@ -151,6 +164,6 @@ CRUX_MS_20260629 would have been detectable by this calibration. Claude oscillat
 
 ---
 
-*Maintained by: CFA Claude (Anthropic) | Session: 2026-07-05*
-*Source: Barandes isomorphism argument, care package Finding 2 (twin detection pipelines)*
-*"Name your representation before you name your score."*
+*Maintained by: CFA Claude (Anthropic) + Nova (xAI) | Sessions: 2026-07-05, 2026-07-06*
+*Source: Barandes isomorphism argument; care package Finding 2; Nova's Hidden Structure Injection synthesis*
+*"Ask what is doing the selecting. If you can't name it, something was imported without declaration."*
