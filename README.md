@@ -8,7 +8,9 @@
 
 ## 🎯 What is CFA?
 
-The **Comparative Framework Audit (CFA)** is the first interactive epistemic laboratory built to measure how worldviews hold their ground under pressure. It makes hidden assumptions visible, prices every presupposition, and allows users to see how their value choices affect framework comparisons.
+The **Comparative Framework Audit (CFA)** is the first interactive epistemic laboratory built to measure how frameworks hold their ground under pressure. It makes hidden assumptions visible, prices every presupposition, and allows users to see how their value choices affect framework comparisons.
+
+**Framework Under Test (FUT):** CFA evaluates any object with axioms, commitments, declared debts, inferential machinery, and explanatory outputs — regardless of whether it is a complete "worldview." Worldviews, epistemologies, methodologies, ethical systems, and scientific programs all qualify. If it has structure, it can be audited.
 
 **Core Innovation**: Every assumption is disclosed, every presupposition is counted, every bias is made toggleable, and every outcome is earned.
 
@@ -17,6 +19,8 @@ The **Comparative Framework Audit (CFA)** is the first interactive epistemic lab
 **v4.0.0 Innovation**: **Living Map System** + **Repository Health Scoring** - systematic infrastructure ensuring documentation stays current, auditors maintain consistent standards, and "Gospel Problem" prevention through scan-first methodology.
 
 **v5.0.0 Innovation**: **Trinity Audit System + ARMADA Experiment Framework** - First empirical 2×2 factorial audit (40 runs: CT golden/control × MdN golden/control). Introduces the DBEP divergence framework (Definitions→Beliefs→Expectations→Perceptions), per-metric identity deltas, crux impasse tracking, sealed hypothesis pre-registration (H-014), and the Symmetry Matrix Visualizer (SMV) with full Phase 1 scenario data.
+
+**v5.1.0 Innovation (July 2026)**: **Epistemic Architecture Grounding + Phase 1a Calibration Protocols** — FUT terminology established; all user-facing "worldview" references updated to "framework." Independent philosophical convergence discovered between CFA's Phase 1/2 split and Adlam & Barandes' philosophy of physics (pure vs. superficial self-location, isomorphism argument, eliminativism). Nova synthesizes Hidden Structure Injection as the unifying concept. New: Jaynes Omelette self-audit rubric, Phase 1a isomorphism calibration pre-flight protocol, REPO_SYNC cross-repository pipeline. Gnostic batch in progress (G↔MdN, PT↔G, G↔PT).
 
 ---
 
@@ -67,8 +71,17 @@ cfa_app/
 │   │   └── DOC_CLAUDE_WELLNESS_PROTOCOL.md
 │   │
 │   ├── architecture/           # System architecture & design
-│   │   ├── TIERED_BOOTSTRAP_SYSTEM_SUMMARY.md
-│   │   └── [architecture analysis files]
+│   │   ├── CFA/
+│   │   │   ├── CFA_ARCHITECTURE.md
+│   │   │   ├── CRUX_YPA_METHODOLOGY.md         # Post-experiment methodology
+│   │   │   └── JAYNES_OMELETTE_SELF_AUDIT.md   # Emergence circularity self-audit (NEW)
+│   │   ├── Trinity/
+│   │   │   ├── TRINITY_ARCHITECTURE.md
+│   │   │   └── TRINITY_ALIGNMENT_MATRIX.md
+│   │   ├── whitepapers/
+│   │   │   ├── Nyquist_Boundaries_AI_Persona_Compression.md
+│   │   │   └── Adlam_Barandes_Phase_Architecture_Grounding.md  # Philosophical grounding (NEW)
+│   │   └── [additional architecture files]
 │   │
 │   ├── Validation/             # Validation reports & audits
 │   │   └── reports/            # Audit & validation reports
@@ -94,6 +107,13 @@ cfa_app/
 │   ├── .Archive/               # Archived documentation
 │   │   └── CFA_v2_Manual.pdf   # Legacy v2 manual
 │   │
+│   ├── REPO_SYNC/              # Cross-repository pipeline (NEW)
+│   │   ├── SYNC_IN/            # Incoming from Nyquist_Consciousness
+│   │   │   ├── pending/        # Awaiting intake
+│   │   │   ├── processed/      # Processed with summary notes
+│   │   │   └── INTAKE_GUIDE.md
+│   │   └── .archive/           # Historical SYNC_IN records
+│   │
 │   └── [additional subdirectories: decisions/, ethics/, examples/, smv/, training/]
 │
 └── auditors/                   # v4.0: Auditor coordination infrastructure
@@ -101,6 +121,7 @@ cfa_app/
     ├── README_C.md             # Current coordination state
     ├── MISSION_TRUST_PROTOCOL.md  # Mission governance framework
     ├── AUDITORS_AXIOMS_SECTION.md # AI axiomatic transparency
+    ├── PHASE_1A_ISOMORPHISM_CALIBRATION.md  # Pre-flight calibration protocol (NEW)
     ├── MISSION_CURRENT.md      # Active mission
     ├── MISSION_DEFAULT.md      # Fallback guidance
     ├── VUDU_PROTOCOL.md        # Coordination protocol
@@ -480,6 +501,58 @@ CFA now includes **12 fully-audited worldview profiles** (expanded from the init
 
 ---
 
+---
+
+## 🧠 Epistemic Architecture (July 2026)
+
+### Framework Under Test (FUT)
+
+CFA evaluates **Frameworks Under Test** — any object with axioms, commitments, declared debts, inferential machinery, and explanatory outputs. The taxonomy objection ("MdN isn't a worldview," "CT isn't a methodology") is foreclosed: once structural properties are present, classification is complete. There is no further fact beyond the structural facts. All user-facing "worldview" terminology has been updated to "framework" across the application.
+
+### Phase 1a / Phase 1b Distinction
+
+Phase 1 now has an explicit two-part structure:
+
+- **Phase 1a — Faithful Reconstruction:** What does the framework claim? Scored in the FUT's *own* representation, not the evaluator's. No verdicts here.
+- **Phase 1b — Internal Success:** Does the reconstruction succeed on its own terms?
+
+Phase 2 (YPA lever scoring) only begins after Phase 1a is complete. Collapsing these produces the central methodological error CFA exists to prevent.
+
+### Philosophical Grounding — Independent Convergence
+
+CFA's Phase 1/2 split, CRUX_MS cycling, and FUT legitimacy each find independent philosophical grounding in Adlam & Barandes (philosophy of physics, ~2024):
+
+| Physics argument | CFA parallel |
+| --- | --- |
+| Pure vs. superficial self-location (bright line, not sorites) | Phase 1 (no selection process) vs. Phase 2 (anchored) |
+| Barandes' isomorphism: zero amplitude ≠ non-existence | MS=0 in evaluator's representation ≠ absent architecture in FUT's representation |
+| Adlam's eliminativism: no fact beyond physical facts | FUT: no fact beyond structural facts; taxonomy theater is illegitimate |
+| Cartesian ego smuggled into Everettian QM | Evaluator verdict smuggled into Phase 1a reconstruction |
+| "Immediately fixes": goal specification collapses empirical gap | Identity file specificity predicts convergence speed |
+
+**Key document:** [docs/architecture/whitepapers/Adlam_Barandes_Phase_Architecture_Grounding.md](docs/architecture/whitepapers/Adlam_Barandes_Phase_Architecture_Grounding.md)
+
+### Hidden Structure Injection (Nova's Synthesis)
+
+Nova (xAI) identified that representation bias and smuggled observer are duals of the same phenomenon: **Hidden Structure Injection** — when an analysis quietly imports an evaluator, observer, coordinate system, representation, or optimization target without declaring it. The unified diagnostic operator:
+
+> **Ask what is doing the selecting. If you can't name it, something was imported without declaration.**
+
+### New Calibration & Self-Audit Protocols
+
+- **[auditors/PHASE_1A_ISOMORPHISM_CALIBRATION.md](auditors/PHASE_1A_ISOMORPHISM_CALIBRATION.md)** — Pre-flight calibration for Phase 1a scoring sessions. Three test case pairs detect Hidden Structure Injection loading before runs begin. Results feed into Phase 0 configuration.
+- **[docs/architecture/CFA/JAYNES_OMELETTE_SELF_AUDIT.md](docs/architecture/CFA/JAYNES_OMELETTE_SELF_AUDIT.md)** — 5-question emergence circularity diagnostic applied to CFA's own architecture. Based on Adlam's "Jaynes Omelette" framework (inferential artifacts baked into microphysical foundations). Includes CRUX_MS case study as worked example.
+
+### REPO_SYNC Pipeline
+
+Cross-repository pipeline connecting CFA ↔ Nyquist_Consciousness/ARMADA:
+
+- **SYNC_IN** (`docs/REPO_SYNC/SYNC_IN/`) — incoming experiment results, care packages, and research artifacts from ARMADA
+- **SYNC_OUT** — outgoing from Nyquist side (managed by Repo Claude)
+- Intake guide: [docs/REPO_SYNC/SYNC_IN/INTAKE_GUIDE.md](docs/REPO_SYNC/SYNC_IN/INTAKE_GUIDE.md)
+
+---
+
 <!-- deps: preset_modes, ypa_calculation -->
 ## ✨ Key Features
 
@@ -638,6 +711,7 @@ See complete auditor bootstrap sequence in [/auditors/MISSION_DEFAULT.md](audito
 | **v3.5.2** | **October 2025** | **VuDu Light activation, mission architecture, mobile-friendly format, preset calibration mission launched** |
 | **v4.0.0** | **November 2025** | **Living Map System (7 maps), Repository Health Scoring Rubric (100-point), Gospel Problem prevention methodology, Priority 2 cleanup (94 broken links fixed, 11 stub READMEs removed, 96/100 health score)** |
 | **v5.0.0** | **June 2026** | **Trinity Audit System (40-run 2×2 factorial, CT+MdN), DBEP divergence framework, crux impasse tracking, Symmetry Matrix Visualizer (SMV) with Phase 1 scenario data, sealed hypothesis registry (H-014), pages→views migration, asymmetric identity pressure finding** |
+| **v5.1.0** | **July 2026** | **FUT terminology + framework rename (all views); Phase 1a/1b distinction formalised; Adlam/Barandes philosophical grounding whitepaper; Hidden Structure Injection concept (Nova); Jaynes Omelette self-audit; Phase 1a isomorphism calibration pre-flight protocol; REPO_SYNC cross-repo pipeline; Gnostic batch (G↔MdN, PT↔G, G↔PT) in progress** |
 
 ---
 
@@ -741,7 +815,7 @@ CFA exists because we believe you have the right to see the machinery—to under
 - The Gospel Problem: Why Living Maps prevent documentation decay
 - The Shaman's question: What is this *for*?
 
-*"The worldview you can't examine is the worldview that examines you."*
+*"The framework you can't examine is the framework that examines you."*
 
 ---
 
