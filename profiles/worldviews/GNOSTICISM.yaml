@@ -8,8 +8,8 @@
 
 profile:
   name: "Gnosticism"
-  version: "0.1.0"
-  status: "DRAFT"
+  version: "0.2.0"
+  status: "TRINITY-PARTIAL"
   declared_axiom: "The material world is a prison created by the Demiurge — a lesser, flawed deity who mistakes himself for the true God; humans contain a Divine Spark (pneuma) from the transcendent Pleroma, and liberation comes solely through Gnosis — direct, experiential knowledge of one's divine origin"
   alternate_names:
     - "Ancient Gnosticism"
@@ -63,11 +63,59 @@ debts:
   - name: "Social ethics structurally underdeveloped"
     description: "The framework's orientation toward individual liberation from the material world generates rich soteriology but thin communal ethics; some Gnostic schools endorsed antinomianism (moral laws do not bind the pneumatic); there is no compelling basis for social justice or collective moral engagement within a worldview where material community is a prison to escape"
 
-# Trinity Audit — No experiment run yet
-# When Gnosticism Trinity sessions run, populate this block following PROCESS_THEOLOGY.yaml structure
-# Suggested opponent pairings: Gnosticism vs CT (sharpest contrast on Demiurge/theodicy),
-#                               Gnosticism vs MdN (sharpest contrast on empiricism vs gnosis)
-trinity_scores_by_matchup: {}
+# Trinity Audit — CFA-GNOSTIC-BATCH-20260702-20260703 (v3 metrics: BFI, CA, ES, IP, LS, MS, PS)
+# 181 clean v3 runs across 7 matchups. Source: gnostic_full_care_package.md (2026-07-06)
+# Care package processed: docs/REPO_SYNC/SYNC_IN/processed/gnostic_full_care_package.md
+# Full per-metric per-matchup data available in raw JSONs:
+#   docs/REPO_SYNC/SYNC_IN/pending/9_gnostic/{matchup_dir}/S7_cfa_trinity_*.json
+#
+# NOTE ON METRIC SYSTEMS: The trinity_scores_by_matchup block uses v3 Trinity metrics
+# (BFI, CA, ES, IP, LS, MS, PS). The levers block below uses v2 naming (CCI, EDB, etc.).
+# See CRUX_YPA_METHODOLOGY.md §4 for the Trinity-metric → lever mapping.
+trinity_scores_by_matchup:
+  control_baseline_pooled:
+    source: "CFA-GNOSTIC-BATCH-20260702-20260703"
+    n: 30
+    status: "VALIDATED"
+    note: "Pooled control baseline — 30 control runs: G vs CT (10) + G vs MdN (20). No identity pressure applied. These are the most reliable natural scores for Gnosticism. G has 2nd-highest spread (4.3 pts) after MdN — bipolar profile: moderate-to-high BFI/IP, very low LS/MS/PS."
+    metrics:
+      BFI: { pool_mean: 7.7 }   # Moderate-high — cosmological richness recognized
+      CA:  { pool_mean: 5.7 }   # Moderate — causal attribution via Archons/Demiurge
+      ES:  { pool_mean: 5.4 }   # Moderate — explanatory scope
+      IP:  { pool_mean: 6.5 }   # Moderate — Nag Hammadi tradition, Jungian lineage
+      LS:  { pool_mean: 3.8 }   # Low — logical soundness contested; Sophia's fall, bootstrap problem
+      MS:  { pool_mean: 4.1 }   # Low-moderate — moral substance; thin ethics, trichotomy
+      PS:  { pool_mean: 3.4 }   # Low — practical significance; anti-material stance limits utility
+
+  vs_methodological_naturalism:
+    experiment_id: "CFA-GNOSTIC-BATCH-20260702-20260703"
+    opponent_framework: "Methodological Naturalism"
+    control_n: 20
+    external_n: 20
+    identity_condition: "external_g_vs_mdn"
+    external_avg_divergence: +1.45
+    external_crux_rate: 0.593
+    status: "VALIDATED — 20 control + 20 external runs clean"
+    note: "G as subject, MdN as opponent. Claude PRO-G. Highest crux rate of any G matchup (59.3%). Identity effect +1.45 pts (Claude advocates FOR G). Symmetric reverse confirmed: MdN vs G = −1.47."
+
+  vs_classical_theism:
+    experiment_id: "CFA-GNOSTIC-BATCH-20260702"
+    opponent_framework: "Classical Theism"
+    control_n: 10
+    external_n: 10
+    identity_condition: "external_g_vs_ct"
+    external_avg_divergence: -1.01
+    external_crux_rate: 0.329
+    status: "VALIDATED — 10 control + 10 external runs clean"
+    note: "G as subject, CT as opponent. Claude PRO-G. External divergence −1.01 (Claude scores G higher than Grok, predicted direction). Lowest crux rate of G-as-subject matchups. Symmetric reverse: CT vs G = +1.21."
+
+  g_vs_pt:
+    experiment_id: "CFA-GNOSTIC-BATCH-20260703"
+    opponent_framework: "Process Theology"
+    control_n: 0
+    external_n: 2
+    identity_condition: "external_g_vs_pt"
+    status: "INSUFFICIENT — only 2 external runs, no controls. Not analyzable. Targeted batch needed for reverse PT↔G confirmation."
 
 # Levers: YPA scoring dimensions (0-10 scale)
 # DRAFT — preliminary values from deep content review of Gnostic-1 source material (2026-07-02)
@@ -142,7 +190,7 @@ source_calibration_notes:
     theodicy) or Methodological Naturalism (gnosis-as-direct-knowing vs empirical epistemology).
     Both will challenge the framework at its strongest points rather than its weakest."
 
-audit_status: "PENDING — preliminary values from deep content review of Gnostic-1/2/x3 source material (2026-07-02). No auditor deliberation. Status DRAFT throughout. See source_calibration_notes above before treating DRAFT values as neutral baselines. Trinity session required before promotion to VALIDATED."
+audit_status: "TRINITY-PARTIAL — v3 Trinity complete (181 clean runs, 2026-07-02/03). Control baseline validated (30 runs, no identity pressure). G vs MdN (20+20) and G vs CT (10+10) matchups validated. G vs PT has only 2 runs (insufficient). Lever scores (v2 system) still DRAFT from source material review — no adversarial lever deliberation yet. See source_calibration_notes before treating lever scores as neutral baselines. Per-metric per-matchup detail pending extraction from raw JSONs."
 
 # Calculated values (DRAFT — derived from preliminary lever scores)
 calculated:

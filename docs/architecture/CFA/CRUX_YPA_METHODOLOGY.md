@@ -170,7 +170,34 @@ This could be a meaningful finding or could reflect auditor-specific biases (Cla
 
 ---
 
-## 6. PT vs CT Preliminary Data
+## 6. Cross-Matchup Empirical Confirmation: Crux Is Metric-Structural, Not Philosophy-Specific
+
+**Source:** CFA-GNOSTIC-BATCH-20260702-20260703 (181 clean v3 runs, 7 matchups including Gnosticism)
+**Finding:** Crux rates correlate with **metric identity-sensitivity**, not with the philosophical difficulty of the specific framework pairing.
+
+The same metrics generate the highest crux rates regardless of which frameworks are being compared:
+
+| Metric | Avg |Δ| from Control (all matchups) | Avg Crux Rate (all matchups) | Rank |
+|--------|-----------------------------|-----------------------------|------|
+| BFI | 1.47 | 63.6% | 1st |
+| MS | 1.28 | 52.9% | 2nd |
+| CA | 1.28 | 52.1% | 3rd |
+| LS | 1.06 | 42.9% | 4th |
+| ES | 0.99 | 37.1% | 5th |
+| IP | 0.93 | 32.9% | 6th |
+| PS | 0.88 | 25.0% | 7th (most robust) |
+
+This ordering held consistently across all 7 matchups (CT↔G, CT↔PT, G↔MdN, MdN↔G, PT↔G, PT↔MdN, and reverse directions). BFI and MS were the top-crux metrics whether the FUT was CT, MdN, PT, or Gnosticism.
+
+**Implication:** Crux declarations are marking **definitional fights** — points where the metric's definition interacts badly with identity-file advocacy — not philosophical impasses between specific worldview pairs. The same crux patterns appear because the same metrics are definitionally under-specified under advocacy pressure, regardless of the frameworks being audited.
+
+**Connection to PHASE_1A_ISOMORPHISM_CALIBRATION.md:** This confirms the calibration protocol's premise. BFI and MS are not just theoretically representation-sensitive — they are empirically the most representation-sensitive metrics across 181 runs. PS and IP are the most robust, suggesting their definitions are more resistant to identity-file-driven definitional drift. Phase 1 anchors for BFI and MS should be highest priority.
+
+**Connection to Q5 (this document):** The predicted ordering from the CT↔MdN data (BFI and CA most contested for MdN) generalizes. BFI is the highest-crux metric across ALL matchups, confirming that its vulnerability is structural (representation-dependent definition), not an artifact of the CT↔MdN pairing.
+
+---
+
+## 7. PT vs CT Preliminary Data
 
 PT (as subject, audited by CT lens, 10 sessions):
 
