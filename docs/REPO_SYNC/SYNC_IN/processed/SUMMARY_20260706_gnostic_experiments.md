@@ -20,7 +20,7 @@ SOURCE: docs/REPO_SYNC/SYNC_IN/pending/gnostic_full_care_package.md
 Three worldview research packages were in SYNC_IN/pending alongside the care package:
 
 | Package | Status | Notes |
-|---------|--------|-------|
+| ------- | ------ | ----- |
 | `worldview/Gnostic-1/` | Pre-ingested (2026-01-02) | LLM Book pipeline output. GNOSTICISM.yaml was built from this material. `.ingested` marker present. |
 | `worldview/Gnostic-2/` | Pre-ingested (2026-01-02) | Same. Routing matrix references GOLDEN_GEOMETRY/Nyquist as primary destination. CFA consumed what was needed. |
 | `worldview/Gnostic-1-2-x3/` | Pre-ingested (2026-01-02) | Integration synthesis. GNOSTICISM.yaml `source_calibration_notes` documents the Jungian interpretive filter from this material. |
@@ -32,7 +32,7 @@ No further processing needed for worldview packages from CFA Claude's side.
 ## Actions Taken (Care Package)
 
 | Finding | Action | Destination |
-|---------|--------|-------------|
+| ------- | ------ | ----------- |
 | Finding 1: Controls pristine (0% crux, ~0 divergence, 89 runs) | Noted as baseline validation | GNOSTICISM.yaml audit_status updated |
 | Finding 2: Identity effect ~1.0-1.5 pts, always directional (7 matchups) | Documented; significance thresholds noted | GNOSTICISM.yaml matchup blocks |
 | Finding 3: BFI and MS most identity-sensitive; PS/IP most robust | Added to CRUX_YPA_METHODOLOGY.md §6 with full metric ranking table | `docs/architecture/CFA/CRUX_YPA_METHODOLOGY.md` |
@@ -65,7 +65,7 @@ No further processing needed for worldview packages from CFA Claude's side.
 
 ## Source Files
 
-- Raw JSONs: `docs/REPO_SYNC/SYNC_IN/pending/9_gnostic/{matchup}/S7_cfa_trinity_*.json`
+- Raw JSONs: `docs/REPO_SYNC/SYNC_IN/processed/9_gnostic/{matchup}/S7_cfa_trinity_*.json`
 - Care package: `docs/REPO_SYNC/SYNC_IN/processed/gnostic_full_care_package.md`
 
 ---
