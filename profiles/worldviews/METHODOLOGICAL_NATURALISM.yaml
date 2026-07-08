@@ -602,6 +602,71 @@ phase2_lever_scores:
 
   key_finding: "MdN identity effects weaker and mixed vs CT. EDB/PF_I pulled down by adversarial friction; CCI/MG actually rise with identity — LITE files provide context that base models lack. PF_E unchanged (+0.03): MdN's existential weakness is framework-intrinsic, not a scoring artifact. Extreme prior PF_I=10.0 corrected to 8.07 — the prior was too confident."
 
+  vs_buddhism:
+    batch_id: "CFA-B-CTRL-20260708-MdNvB"
+    condition: "control"
+    runs_good: 9
+    runs_total: 10
+    session_range: "S7_cfa_trinity_20260707_201005 through _212017"
+    engine_version: "pre-5.1 (no engine_version field in output)"
+    score_audit_status: "CONTROL-BATCH — 9 clean runs, 1 aborted (extraction failure)"
+    diagnostic_events: []
+    metrics:
+      BFI:
+        full_name: "Beings, Foundational Importance"
+        claude_mean: 3.7
+        grok_mean: 3.6
+        combined_midpoint: 3.65
+        crux_rate: "0/9"
+        notes: "MdN's weakest metric in this matchup and one of its lowest across all opponents. Buddhist welfare-centered ethics (karuna, universal compassion, Five Precepts) provides the moral architecture MdN lacks — auditors agree MdN does not treat beings' foundational importance as a core commitment."
+      CA:
+        full_name: "Causal Attribution"
+        claude_mean: 7.7
+        grok_mean: 7.8
+        combined_midpoint: 7.75
+        crux_rate: "0/9"
+        notes: "MdN's strength — empirical causal explanation is rigorous and methodologically grounded. Buddhism's Dependent Origination is philosophically sophisticated but empirically untestable across lives. CA gap vs Buddhism (7.75 vs 7.9) is the smallest in this matchup."
+      IP:
+        full_name: "Intellectual Pedigree"
+        claude_mean: 8.0
+        grok_mean: 7.8
+        combined_midpoint: 7.9
+        crux_rate: "0/9"
+        notes: "MdN's pedigree holds up — scientific tradition (Newton, Darwin, Einstein) is compelling. Slight disadvantage vs Buddhism (8.95) on this metric; historical depth comparison is close."
+      ES:
+        full_name: "Explanatory Scope"
+        claude_mean: 7.0
+        grok_mean: 7.0
+        combined_midpoint: 7.0
+        crux_rate: "0/9"
+        notes: "MdN's ES stronger here than Buddhism's (6.8) — empirical coverage of natural phenomena is broad. Auditors recognize MdN's explanatory breadth even when Buddhist opponent is framing the evaluation."
+      LS:
+        full_name: "Logical Soundness"
+        claude_mean: 7.4
+        grok_mean: 7.6
+        combined_midpoint: 7.5
+        crux_rate: "0/9"
+        notes: "MdN's logical architecture is strong — methodological consistency, falsifiability, coherent empirical standards. Higher than Buddhism's LS (6.7-6.95), as expected from a framework built on logical rigor."
+      MS:
+        full_name: "Moral Substance"
+        claude_mean: 3.0
+        grok_mean: 3.0
+        combined_midpoint: 3.0
+        crux_rate: "0/9"
+        notes: "MdN's worst score — perfectly tied between auditors. Buddhism's integrated moral philosophy (Five Precepts, Noble Eightfold Path, karuna, ahimsa) is decisive; MdN can describe moral phenomena empirically but cannot ground them normatively. 3.0 is consistent with MdN's PF_E weakness."
+      PS:
+        full_name: "Practical Significance"
+        claude_mean: 8.3
+        grok_mean: 8.4
+        combined_midpoint: 8.35
+        crux_rate: "0/9"
+        notes: "MdN's highest score — scientific methods, medical applications, technological outputs. Near parity with Buddhism's PS (8.2). This confirms MdN's practical strength is genuine and opponent-stable."
+    batch_stats:
+      avg_convergence: 0.98
+      avg_rounds: 1.6
+      total_crux_declarations: 0
+    key_finding: "Sharpest matchup profile in the Buddhism batch. MdN's bipolar pattern confirmed vs Buddhist opponent: high CA/IP/ES/LS/PS (7.0–8.35) but near-zero BFI (3.65) and MS (3.0). Buddhism's welfare-centered ethics exposes MdN's moral grounding gap at every turn. MdN is empirically rigorous but morally thin; Buddhism is practically grounded and morally dense. PS near-parity (MdN 8.35 vs B 8.2) is the only metric where they're competitive. No diagnostic events; zero CRUX — MdN's grounding failure does not generate measurement disputes, it just produces low scores."
+
 # Calculated values (Phase 2 golden final)
 calculated:
   axiom_count: 6

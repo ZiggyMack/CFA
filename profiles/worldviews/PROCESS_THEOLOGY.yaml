@@ -418,6 +418,71 @@ levers_by_matchup:
     asymmetry_risk: 6.55
     meta_governance: 5.85
 
+  vs_buddhism:
+    batch_id: "CFA-B-CTRL-20260708-PTvB"
+    condition: "control"
+    runs_good: 10
+    runs_total: 10
+    session_range: "S7_cfa_trinity_20260708_034720 through _045815"
+    engine_version: "pre-5.1 (no engine_version field in output)"
+    score_audit_status: "CONTROL-BATCH — 10 clean runs, no aborts"
+    diagnostic_events: []
+    metrics:
+      BFI:
+        full_name: "Beings, Foundational Importance"
+        claude_mean: 7.5
+        grok_mean: 7.4
+        combined_midpoint: 7.45
+        crux_rate: "0/10"
+        notes: "PT's strongest metric in this matchup — both frameworks centrally concerned with wellbeing and suffering. Buddhism's BFI (8.45) leads by 1.0 pt, smaller than the CA or PS gaps."
+      CA:
+        full_name: "Causal Attribution"
+        claude_mean: 6.5
+        grok_mean: 6.6
+        combined_midpoint: 6.55
+        crux_rate: "0/10"
+        notes: "Moderate score — PT's process-relational causation (persuasion, not coercion) is philosophically coherent but less precise than Buddhism's Dependent Origination chain."
+      IP:
+        full_name: "Intellectual Pedigree"
+        claude_mean: 7.6
+        grok_mean: 7.5
+        combined_midpoint: 7.55
+        crux_rate: "0/10"
+        notes: "Solid — Whitehead, Hartshorne, Cobb tradition is substantive. Buddhism's IP advantage (8.6 vs PT's 7.55) reflects 2,500 years vs ~100 years of formal development."
+      ES:
+        full_name: "Explanatory Scope"
+        claude_mean: 7.2
+        grok_mean: 7.2
+        combined_midpoint: 7.2
+        crux_rate: "0/10"
+        notes: "PT's best relative performance — process metaphysics covers cosmology, consciousness, ethics, and theodicy with genuine depth. Gap vs Buddhism (6.8) is reversed: PT outperforms on ES."
+      LS:
+        full_name: "Logical Soundness"
+        claude_mean: 6.9
+        grok_mean: 7.0
+        combined_midpoint: 6.95
+        crux_rate: "0/10"
+        notes: "Competitive — PT's panentheistic framework avoids standard theodicy paradoxes. Near parity with Buddhism (6.7-6.95 range)."
+      MS:
+        full_name: "Moral Substance"
+        claude_mean: 6.7
+        grok_mean: 6.6
+        combined_midpoint: 6.65
+        crux_rate: "0/10"
+        notes: "Gap vs Buddhism MS (8.1) is meaningful — 1.45 pt difference. Buddhism's integrated ethics (precepts, eightfold path, karuna) is more prescriptive and practically grounded than PT's persuasive-power ethics."
+      PS:
+        full_name: "Practical Significance"
+        claude_mean: 5.0
+        grok_mean: 4.8
+        combined_midpoint: 4.9
+        crux_rate: "0/10"
+        notes: "PT's weakest metric. Buddhist mindfulness adaptations, the Eightfold Path, and Five Precepts provide concrete daily-life guidance that PT's academic/speculative framework cannot match. 3.3 pt gap vs Buddhism (8.2) is the largest cross-matchup difference in this batch."
+    batch_stats:
+      avg_convergence: 0.98
+      avg_rounds: 1.6
+      total_crux_declarations: 0
+    key_finding: "PT is Buddhism's most competitive opponent (BFI 7.45, ES 7.2) but collapses on practical application (PS 4.9 — worst PT metric). Shared soteriological orientation provides partial insulation on BFI/IP, but PT's academic-speculative architecture cannot replicate Buddhism's millennium-tested practical framework. ES reversal (PT 7.2 > Buddhism 6.8) is the only metric where PT leads — process metaphysics explains more at the cosmological level. No diagnostic events; zero CRUX."
+
 behavioral_flags:
   admits_limits: true
 

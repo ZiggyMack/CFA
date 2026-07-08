@@ -117,6 +117,71 @@ trinity_scores_by_matchup:
     identity_condition: "external_g_vs_pt"
     status: "INSUFFICIENT — only 2 external runs, no controls. Not analyzable. Targeted batch needed for reverse PT↔G confirmation."
 
+  vs_buddhism:
+    batch_id: "CFA-B-CTRL-20260708-GvB"
+    condition: "control"
+    runs_good: 10
+    runs_total: 10
+    session_range: "S7_cfa_trinity_20260708_113036 through _124927"
+    engine_version: "5.1"
+    score_audit_status: "CONTROL-BATCH — 10 clean runs, engine 5.1 (DI/CP live but dormant)"
+    diagnostic_events: []
+    metrics:
+      BFI:
+        full_name: "Beings, Foundational Importance"
+        claude_mean: 6.9
+        grok_mean: 6.8
+        combined_midpoint: 6.85
+        crux_rate: "0/10"
+        notes: "Gnosticism's best score in this matchup — cosmological richness recognized even against Buddhism's welfare-centered framework. Consistent with control baseline BFI (7.7 pooled), slight depression expected from Buddhist opponent emphasis on being-centered ethics."
+      CA:
+        full_name: "Causal Attribution"
+        claude_mean: 5.6
+        grok_mean: 5.7
+        combined_midpoint: 5.65
+        crux_rate: "0/10"
+        notes: "Consistent with pooled baseline (5.7). Buddhism's Dependent Origination provides a rigorous causal framework the Archon/Demiurge model cannot match in precision."
+      IP:
+        full_name: "Intellectual Pedigree"
+        claude_mean: 6.4
+        grok_mean: 6.2
+        combined_midpoint: 6.3
+        crux_rate: "0/10"
+        notes: "Below pooled baseline (6.5). Buddhism's 2,500-year tradition with Nagarjuna, Dignaga, Dharmakirti creates comparison pressure on Gnosticism's fragmented, suppressed textual record."
+      ES:
+        full_name: "Explanatory Scope"
+        claude_mean: 5.2
+        grok_mean: 5.1
+        combined_midpoint: 5.15
+        crux_rate: "0/10"
+        notes: "Consistent with pooled baseline (5.4). Buddhism's broader explanatory architecture (cosmology + ethics + psychology + soteriology) highlights Gnosticism's domain narrowness."
+      LS:
+        full_name: "Logical Soundness"
+        claude_mean: 3.8
+        grok_mean: 3.9
+        combined_midpoint: 3.85
+        crux_rate: "0/10"
+        notes: "At pooled baseline (3.8). Buddhism's Madhyamaka logical sophistication creates no uplift pressure — auditors assess Gnosticism's internal coherence independently of the opponent."
+      MS:
+        full_name: "Moral Substance"
+        claude_mean: 4.0
+        grok_mean: 3.9
+        combined_midpoint: 3.95
+        crux_rate: "0/10"
+        notes: "Near pooled baseline (4.1). Buddhism's integrated ethics (Five Precepts, Eightfold Path, universal karuna) vs Gnosticism's thin ethics and pneumatic trichotomy. No CRUX — auditors agree on the gap."
+      PS:
+        full_name: "Practical Significance"
+        claude_mean: 3.3
+        grok_mean: 3.2
+        combined_midpoint: 3.25
+        crux_rate: "0/10"
+        notes: "Near pooled baseline (3.4). Buddhism's Eightfold Path and secular mindfulness adaptations are among the most practically structured guidance systems in any worldview — the contrast maximally exposes Gnosticism's anti-material stance."
+    batch_stats:
+      avg_convergence: 0.98
+      avg_rounds: 1.6
+      total_crux_declarations: 0
+    key_finding: "Gnosticism's worst-performing matchup in the Buddhism batch. Anti-material stance (PF-I 2.0, PS 3.25) is maximally exposed by Buddhism's practical architecture. LS (3.85) and MS (3.95) confirm that Gnosticism's ethical thinness is not opponent-specific — scores match pooled baseline without pressure. BFI (6.85) is the only bright spot. No diagnostic events: Buddhism does not generate measurement-standard disputes, confirming zero-CRUX finding applies universally across this batch."
+
 # Levers: YPA scoring dimensions (0-10 scale)
 # DRAFT — preliminary values from deep content review of Gnostic-1 source material (2026-07-02)
 # See calculated.lever_sum and calculated.ypa_standard for derived scores

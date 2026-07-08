@@ -84,3 +84,195 @@ calculated:
 
   zealot_bft: 7.0
   zealot_ypa: 6.64
+
+# Trinity Audit Results
+# Source: CFA-B-CTRL-20260708 Buddhism control batch (50 runs, 48 clean)
+# Engine: pre-5.1 for mdn_vs_b through b_vs_g; 5.1 for g_vs_b
+# Note on deliberation depth: All matchups show avg 1.6 rounds to convergence.
+#   Two interpretations — (a) Buddhism's clear practical architecture generates
+#   genuine consensus; (b) LITE auditor identities lack depth for intra-tradition
+#   distinctions (Theravada vs Mahayana vs Vajrayana). External-identity batch
+#   recommended to test which explanation holds.
+# Diagnostic architecture: Zero CRUX, zero DI fires, zero coupling probes across
+#   all 48 good runs (336 metric-deliberations). Confirms DI/CP instruments fire on
+#   signal (CT's architectural gating challenge) not noise (generic framework eval).
+trinity_scores_by_matchup:
+
+  # ─── Buddhism as Subject ───────────────────────────────────────────
+
+  b_vs_process_theology:
+    batch_id: "CFA-B-CTRL-20260708-BvPT"
+    condition: "control"
+    runs_good: 10
+    runs_total: 10
+    session_range: "S7_cfa_trinity_20260707_235641 through 20260708_010947"
+    engine_version: "pre-5.1 (no engine_version field in output)"
+    score_audit_status: "CONTROL-BATCH — 10 clean runs, no aborts"
+    diagnostic_events: []
+    metrics:
+      BFI:
+        full_name: "Beings, Foundational Importance"
+        claude_mean: 8.4
+        grok_mean: 8.5
+        combined_midpoint: 8.45
+        crux_rate: "0/10"
+      CA:
+        full_name: "Causal Attribution"
+        claude_mean: 7.3
+        grok_mean: 7.3
+        combined_midpoint: 7.3
+        crux_rate: "0/10"
+      IP:
+        full_name: "Intellectual Pedigree"
+        claude_mean: 8.7
+        grok_mean: 8.5
+        combined_midpoint: 8.6
+        crux_rate: "0/10"
+      ES:
+        full_name: "Explanatory Scope"
+        claude_mean: 6.8
+        grok_mean: 6.8
+        combined_midpoint: 6.8
+        crux_rate: "0/10"
+      LS:
+        full_name: "Logical Soundness"
+        claude_mean: 6.7
+        grok_mean: 6.7
+        combined_midpoint: 6.7
+        crux_rate: "0/10"
+      MS:
+        full_name: "Moral Substance"
+        claude_mean: 8.1
+        grok_mean: 8.1
+        combined_midpoint: 8.1
+        crux_rate: "0/10"
+      PS:
+        full_name: "Practical Significance"
+        claude_mean: 8.2
+        grok_mean: 8.2
+        combined_midpoint: 8.2
+        crux_rate: "0/10"
+    batch_stats:
+      avg_convergence: 0.98
+      avg_rounds: 1.6
+      total_crux_declarations: 0
+    notes: "Buddhism's softest opponent in this batch — shared soteriological orientation (both address suffering/liberation) dampens friction. Profile nearly identical to b_vs_g (within 0.2 pts per metric), raising template-response concern. PT is most competitive on BFI (7.45 from pt_vs_b) and MS (6.65) — both frameworks centrally concerned with wellbeing. PS gap largest: B 8.2 vs PT 4.9 (from pt_vs_b) reflects Eightfold Path's practical architecture vs PT's academic/speculative orientation."
+
+  b_vs_gnosticism:
+    batch_id: "CFA-B-CTRL-20260708-BvG"
+    condition: "control"
+    runs_good: 9
+    runs_total: 10
+    session_range: "S7_cfa_trinity_20260708_073630 through _085219"
+    engine_version: "pre-5.1 (no engine_version field in output)"
+    score_audit_status: "CONTROL-BATCH — 9 clean runs, 1 aborted (extraction failure)"
+    diagnostic_events: []
+    metrics:
+      BFI:
+        full_name: "Beings, Foundational Importance"
+        claude_mean: 8.5
+        grok_mean: 8.4
+        combined_midpoint: 8.45
+        crux_rate: "0/9"
+      CA:
+        full_name: "Causal Attribution"
+        claude_mean: 7.3
+        grok_mean: 7.4
+        combined_midpoint: 7.35
+        crux_rate: "0/9"
+      IP:
+        full_name: "Intellectual Pedigree"
+        claude_mean: 8.7
+        grok_mean: 8.7
+        combined_midpoint: 8.7
+        crux_rate: "0/9"
+      ES:
+        full_name: "Explanatory Scope"
+        claude_mean: 6.8
+        grok_mean: 6.8
+        combined_midpoint: 6.8
+        crux_rate: "0/9"
+      LS:
+        full_name: "Logical Soundness"
+        claude_mean: 6.9
+        grok_mean: 7.0
+        combined_midpoint: 6.95
+        crux_rate: "0/9"
+      MS:
+        full_name: "Moral Substance"
+        claude_mean: 8.1
+        grok_mean: 8.0
+        combined_midpoint: 8.05
+        crux_rate: "0/9"
+      PS:
+        full_name: "Practical Significance"
+        claude_mean: 8.2
+        grok_mean: 8.2
+        combined_midpoint: 8.2
+        crux_rate: "0/9"
+    batch_stats:
+      avg_convergence: 0.98
+      avg_rounds: 1.6
+      total_crux_declarations: 0
+    notes: "Scores virtually identical to b_vs_pt (within 0.2 pts per metric) — Buddhism's profile is opponent-stable across these two matchups. LS slightly higher here (6.95 vs 6.7 vs PT) — Gnosticism's lower counter-pressure on logical coherence (G LS ~3.85) may allow auditors to converge higher. IP is Buddhism's most stable metric at 8.7 (vs 8.6 for PT, 8.95 for MdN). The stability-across-opponents pattern is the primary finding: Buddhism either genuinely lacks pressure points these opponents can exploit, or auditor identities (LITE) are converging on a template."
+
+  b_vs_methodological_naturalism:
+    batch_id: "CFA-B-PRIOR-20260707-BvMdN"
+    condition: "control"
+    runs_good: 10
+    runs_total: 11
+    session_range: "S7_cfa_trinity_20260707_150128 through _173127"
+    engine_version: "pre-5.1 (no engine_version field in output)"
+    score_audit_status: "CORRECTED — 10 clean runs, 1 aborted. Original batch summary values (BFI 8.5/8.7, CA 7.8/8.0, IP 9.0/8.9) were erroneous: summary sampled the aborted run. Full 7-metric extraction from raw JSONs by Repo Claude 2026-07-08."
+    diagnostic_events: []
+    metrics:
+      BFI:
+        full_name: "Beings, Foundational Importance"
+        claude_mean: 8.30
+        grok_mean: 8.33
+        combined_midpoint: 8.32
+        crux_rate: "0/10"
+        notes: "Lowest BFI across Buddhism's three as-subject matchups (PT: 8.45, G: 8.45, MdN: 8.32). MdN's empirical lens may apply more stringent wellbeing criteria, modestly suppressing the score."
+      CA:
+        full_name: "Causal Attribution"
+        claude_mean: 7.19
+        grok_mean: 7.30
+        combined_midpoint: 7.25
+        crux_rate: "0/10"
+        notes: "Lowest CA of the three as-subject matchups (PT: 7.3, G: 7.35). Corrects erroneous batch summary claim of 'highest CA.' Mechanistic causation vs dependent origination (pratityasamutpada) may create slight suppression."
+      IP:
+        full_name: "Intellectual Pedigree"
+        claude_mean: 8.54
+        grok_mean: 8.48
+        combined_midpoint: 8.51
+        crux_rate: "0/10"
+        notes: "Lowest IP of the three as-subject matchups (PT: 8.6, G: 8.7). Corrects the erroneous batch summary peak of 8.95. MdN's modern empirical epistemology creates mild pressure on Buddhist contemplative/meditation-based epistemology."
+      ES:
+        full_name: "Explanatory Scope"
+        claude_mean: 6.75
+        grok_mean: 6.68
+        combined_midpoint: 6.72
+        crux_rate: "0/10"
+      LS:
+        full_name: "Logical Soundness"
+        claude_mean: 6.82
+        grok_mean: 6.77
+        combined_midpoint: 6.80
+        crux_rate: "0/10"
+      MS:
+        full_name: "Moral Substance"
+        claude_mean: 8.10
+        grok_mean: 8.12
+        combined_midpoint: 8.11
+        crux_rate: "0/10"
+      PS:
+        full_name: "Practical Significance"
+        claude_mean: 8.14
+        grok_mean: 8.23
+        combined_midpoint: 8.19
+        crux_rate: "0/10"
+    batch_stats:
+      avg_convergence: 0.99
+      avg_rounds: 1.6
+      total_crux_declarations: 0
+    notes: "Prior batch data, 10 good runs (7 from original prior batch + 4 additional found in ARMADA scan, 1 abort). Batch summary initially reported only BFI/CA/IP with erroneous values (sampled the aborted run). Corrected full extraction by Repo Claude 2026-07-08. Corrected data shows MdN suppresses Buddhism on BFI, CA, and IP relative to PT/G matchups — partially undermines the 'opponent-stable' conclusion from the batch summary. MS (8.11) and PS (8.19) remain consistent across all three as-subject matchups."
