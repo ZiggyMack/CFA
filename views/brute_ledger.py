@@ -169,11 +169,12 @@ def render():
 
         # Map framework names to their categories
         worldview_to_category = {
-            "Classical Theism": "⛪ Theistic Traditions (5)",
-            "Process Theology": "⛪ Theistic Traditions (5)",
-            "Islam": "⛪ Theistic Traditions (5)",
-            "Orthodox Judaism": "⛪ Theistic Traditions (5)",
-            "Mormonism": "⛪ Theistic Traditions (5)",
+            "Classical Theism": "⛪ Theistic Traditions (6)",
+            "Process Theology": "⛪ Theistic Traditions (6)",
+            "Islam": "⛪ Theistic Traditions (6)",
+            "Orthodox Judaism": "⛪ Theistic Traditions (6)",
+            "Mormonism": "⛪ Theistic Traditions (6)",
+            "Gnosticism": "⛪ Theistic Traditions (6)",
             "Methodological Naturalism": "🔬 Naturalistic Traditions (2)",
             "Null Hypothesis": "🔬 Naturalistic Traditions (2)",
             "Buddhism": "🕉️ Eastern Traditions (2)",
@@ -242,8 +243,8 @@ def render():
         st.markdown("**Browse by Category:**")
 
         # Get default category (may be set by smart navigation)
-        category_options = ["⛪ Theistic Traditions (5)", "🔬 Naturalistic Traditions (2)", "🕉️ Eastern Traditions (2)", "🧠 Philosophical Frameworks (3)"]
-        category_default = st.session_state.get("ledger_category_default", "⛪ Theistic Traditions (5)")
+        category_options = ["⛪ Theistic Traditions (6)", "🔬 Naturalistic Traditions (2)", "🕉️ Eastern Traditions (2)", "🧠 Philosophical Frameworks (3)"]
+        category_default = st.session_state.get("ledger_category_default", "⛪ Theistic Traditions (6)")
         category_index = category_options.index(category_default) if category_default in category_options else 0
 
         category = st.radio(
@@ -257,7 +258,7 @@ def render():
         st.markdown("---")
 
         # ---- THEISTIC TRADITIONS ----
-        if category == "⛪ Theistic Traditions (5)":
+        if category == "⛪ Theistic Traditions (6)":
             st.markdown("### ⛪ Theistic Traditions")
             st.caption("*Frameworks grounded in divine reality*")
 
@@ -266,7 +267,8 @@ def render():
                 "🌊 Process Theology",
                 "☪️ Islam",
                 "🕎 Orthodox Judaism",
-                "📖 Mormonism (LDS)"
+                "📖 Mormonism (LDS)",
+                "🌀 Gnosticism"
             ])
 
             with framework_tabs[0]:
@@ -302,6 +304,13 @@ def render():
                     worldview_name="Mormonism",
                     emoji="📖",
                     subtitle="Continuing revelation through prophets; eternal progression toward godhood"
+                )
+
+            with framework_tabs[5]:
+                _render_framework_ledger(
+                    worldview_name="Gnosticism",
+                    emoji="🌀",
+                    subtitle="Demiurge as false creator; divine spark imprisoned in matter; Gnosis as sole path to liberation"
                 )
 
         # ---- NATURALISTIC TRADITIONS ----

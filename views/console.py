@@ -231,6 +231,7 @@ _WV_EMOJI = {
     "Desiderata Believers":      "🤔",
     "Error Theory":              "⛔",
     "Existentialism":            "🎭",
+    "Gnosticism":                "🌀",
     "Hinduism":                  "🕉️",
     "Islam":                     "☪️",
     "Methodological Naturalism": "📘",
