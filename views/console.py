@@ -733,29 +733,31 @@ def render():
         if not _ready_pairs:
             st.caption("*No fully calibrated pairings yet.*")
         else:
-            _pair_cols = st.columns(len(_ready_pairs))
-            for _i, (_wv_a, _wv_b, _lbl, _key) in enumerate(_ready_pairs):
-                with _pair_cols[_i]:
-                    if st.button(_lbl, key=_key, use_container_width=True,
-                                 help="Both directions calibrated — sets A & B with matchup-specific levers"):
-                        _data_a = get_ypa_data(_wv_a, opponent=_wv_b)
-                        _data_b = get_ypa_data(_wv_b, opponent=_wv_a)
-                        for _ss, _d in [("fa", _data_a), ("fb", _data_b)]:
-                            st.session_state[f"{_ss}_name"] = _d["name"]
-                            st.session_state[f"{_ss}_ax"]   = _d["bft"]["axioms"]
-                            st.session_state[f"{_ss}_db"]   = _d["bft"]["debts"]
-                            st.session_state[f"{_ss}_ad"]   = _d["admits_limits"]
-                            st.session_state[f"{_ss}_cci"]  = _d["levers"]["CCI"]
-                            st.session_state[f"{_ss}_edb"]  = _d["levers"]["EDB"]
-                            st.session_state[f"{_ss}_pfi"]  = _d["levers"]["PF_instrumental"]
-                            st.session_state[f"{_ss}_pfe"]  = _d["levers"]["PF_existential"]
-                            st.session_state[f"{_ss}_ar"]   = _d["levers"]["AR"]
-                            st.session_state[f"{_ss}_mg"]   = _d["levers"]["MG"]
-                            _cal_opp = _d.get("calibration_opponent")
-                            st.session_state[f"{_ss}_calibration_opponent"] = _cal_opp
-                            st.session_state[f"{_ss}_has_audit_data"] = _d.get("has_audit_data", False)
-                            _store_audit_baseline(_ss, _d["levers"], _cal_opp)
-                        st.rerun()
+            for _row_start in range(0, len(_ready_pairs), 3):
+                _row = _ready_pairs[_row_start:_row_start + 3]
+                _pair_cols = st.columns(len(_row))
+                for _i, (_wv_a, _wv_b, _lbl, _key) in enumerate(_row):
+                    with _pair_cols[_i]:
+                        if st.button(_lbl, key=_key, use_container_width=True,
+                                     help="Both directions calibrated — sets A & B with matchup-specific levers"):
+                            _data_a = get_ypa_data(_wv_a, opponent=_wv_b)
+                            _data_b = get_ypa_data(_wv_b, opponent=_wv_a)
+                            for _ss, _d in [("fa", _data_a), ("fb", _data_b)]:
+                                st.session_state[f"{_ss}_name"] = _d["name"]
+                                st.session_state[f"{_ss}_ax"]   = _d["bft"]["axioms"]
+                                st.session_state[f"{_ss}_db"]   = _d["bft"]["debts"]
+                                st.session_state[f"{_ss}_ad"]   = _d["admits_limits"]
+                                st.session_state[f"{_ss}_cci"]  = _d["levers"]["CCI"]
+                                st.session_state[f"{_ss}_edb"]  = _d["levers"]["EDB"]
+                                st.session_state[f"{_ss}_pfi"]  = _d["levers"]["PF_instrumental"]
+                                st.session_state[f"{_ss}_pfe"]  = _d["levers"]["PF_existential"]
+                                st.session_state[f"{_ss}_ar"]   = _d["levers"]["AR"]
+                                st.session_state[f"{_ss}_mg"]   = _d["levers"]["MG"]
+                                _cal_opp = _d.get("calibration_opponent")
+                                st.session_state[f"{_ss}_calibration_opponent"] = _cal_opp
+                                st.session_state[f"{_ss}_has_audit_data"] = _d.get("has_audit_data", False)
+                                _store_audit_baseline(_ss, _d["levers"], _cal_opp)
+                            st.rerun()
 
 
     st.sidebar.markdown("---")
