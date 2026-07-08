@@ -13,7 +13,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 # Import page modules
-from views import landing, console, about, manual, brute_ledger, chat_assistant, verbose_manifesto, matrix
+from views import landing, console, about, manual, brute_ledger, chat_assistant, verbose_manifesto, matrix, cognitive_archaeology
 
 # Page configuration - wrapped to handle session conflicts
 try:
@@ -75,6 +75,10 @@ def render_sidebar():
                 st.session_state.page = 'brute_ledger'
                 st.rerun()
 
+            if st.button("⛏️ Cog. Archaeology", use_container_width=True, key="nav_ca"):
+                st.session_state.page = 'cognitive_archaeology'
+                st.rerun()
+
             if st.button("💬 Chat Assistant", use_container_width=True, key="nav_chat"):
                 st.session_state.page = 'chat_assistant'
                 st.rerun()
@@ -103,6 +107,8 @@ def main():
         about.render()
     elif st.session_state.page == 'brute_ledger':
         brute_ledger.render()
+    elif st.session_state.page == 'cognitive_archaeology':
+        cognitive_archaeology.render()
     elif st.session_state.page == 'chat_assistant':
         chat_assistant.render()
     elif st.session_state.page == 'verbose_manifesto':
