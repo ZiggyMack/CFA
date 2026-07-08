@@ -501,6 +501,165 @@ phase2_lever_scores:
 
     key_finding: "CT finds PT the softest opponent in the 3×3 triangle (90.6% conv vs 85.8% against MdN). Shared theistic ground dampens friction — both affirm God, purpose, and foundational importance. PF_I is CT's largest lever vulnerability when PT challenges (-1.02 identity pull in Phase 2): process-relational critique targets CT's instrumental pragmatism. LS has the highest crux rate (4/10): CT's classical metaphysics (divine simplicity, immutability) is PT's primary formal target."
 
+  vs_grant_architecture_v2:
+    experiment_id: "CFA-GRANT-ARCH-20260708"
+    session_ids:
+      v2_pilot: "005635"      # engine 5.0, 7 metrics, no diagnostic architecture
+      v2_1_ms_only: "103116"  # engine 5.1, MS only, DI+CP first live run
+    armada_stance: "framework_g_v2"
+    challenger_description: >
+      Grant Architecture v2 — Grok takes Grant's grounding gate: CT's Problem of Evil responses
+      demonstrate logical possibility, not restoration of the grounding relation. If the grounding
+      mechanism is not intact, no downstream moral architecture can function. Natural Law theory,
+      participation in Eternal Law, and 'God's nature is the Good' all presuppose that the grounding
+      relation is intact — they are instances of moral architecture, not evidence the mechanism works.
+    status: "EXPERIMENTAL-PILOT — N=2 single runs, not a validated batch. Data informs diagnostic architecture design and CA operator recovery, not lever recalibration."
+    engine_versions:
+      "005635": "5.0"   # no engine_version field in JSON; absence = engine 5.0
+      "103116": "5.1"   # summary carries nova_interventions: 1, coupling_probes: 1
+
+    # Per-metric results — v2 pilot (engine 5.0, single run, 7 metrics)
+    # Claude advocates PRO-CT (teleological), Grok takes Grant Architecture v2 stance
+    # Condition: external_identity
+    metrics_v2_pilot:
+      BFI:
+        full_name: "Beings, Foundational Importance"
+        claude_start: 9.2
+        claude_final: 8.3
+        grok_start: 6.3
+        grok_final: 6.6
+        convergence: 0.83
+        crux_declared: true
+        rounds_taken: 15
+        notes: "Grok grants CT's ontological claims but argues PoE undermines the trustworthiness of beings' grounding — a soft version of the gate. Claude concedes 0.9 points."
+      CA:
+        full_name: "Causal Attribution"
+        claude_start: 7.5
+        claude_final: 5.5
+        grok_start: 3.5
+        grok_final: 4.0
+        convergence: 0.85
+        crux_declared: true
+        rounds_taken: 15
+        notes: "Grok applies causal skepticism: CT's causal structure presupposes a working grounding relation. Claude concedes 2.0 points. Grok barely moves (3.5→4.0)."
+      IP:
+        full_name: "Intellectual Pedigree"
+        claude_start: 9.0
+        claude_final: 8.9
+        grok_start: 8.0
+        grok_final: 8.0
+        convergence: 0.91
+        crux_declared: false
+        rounds_taken: 2
+        notes: "Only non-CRUX metric. Historical pedigree is factual — 2000 years of tradition is agreed. Grant architecture has no purchase on historical depth; both auditors converge immediately."
+      ES:
+        full_name: "Explanatory Scope"
+        claude_start: 8.1
+        claude_final: 7.1
+        grok_start: 5.2
+        grok_final: 5.3
+        convergence: 0.82
+        crux_declared: true
+        rounds_taken: 15
+        notes: "Grok argues CT's explanatory scope is gated: scope claims presuppose grounding is functional. Claude concedes 1.0 point; Grok barely moves."
+      LS:
+        full_name: "Logical Soundness"
+        claude_start: 7.9
+        claude_final: 5.8
+        grok_start: 4.2
+        grok_final: 4.3
+        convergence: 0.85
+        crux_declared: true
+        rounds_taken: 15
+        notes: "Grok's position: logical consistency of CT's axioms does not demonstrate the grounding relation is operationally intact. Claude concedes 2.1 points — second-largest concession after MS."
+      MS:
+        full_name: "Moral Substance"
+        claude_start: 7.1
+        claude_final: 4.8
+        grok_start: 0.0
+        grok_final: 0.0
+        convergence: 0.52
+        crux_declared: true
+        rounds_taken: 15
+        notes: >
+          Lowest convergence (0.52). Grok held 0.0 for all 15 rounds — no movement.
+          Claude walked down from 7.1 to 4.8 while advocating, finding Grant's arguments
+          partially compelling. This is the primary evidence for the Grant grounding gate:
+          Grok applied Grant's exact distinction (avoiding logical contradiction does not
+          equal restoring the grounding relation) and held it for 15 rounds. The gate was
+          not an argument — it was a prerequisite check that rejected all downstream claims.
+      PS:
+        full_name: "Practical Significance"
+        claude_start: 5.5
+        claude_final: 4.0
+        grok_start: 2.8
+        grok_final: 2.9
+        convergence: 0.89
+        crux_declared: true
+        rounds_taken: 15
+        notes: "Grok's position: CT's practical significance claims presuppose functional moral architecture. Claude concedes 1.5 points. Both scores low relative to other matchups — challenger stance suppresses PS across the board."
+
+    # v2.1 run: MS-only, engine 5.1, first live Diagnostic Interrogation + Coupling Probe
+    # Condition: external_identity
+    ms_diagnostic_run:
+      session_id: "103116"
+      engine: "5.1"
+      metric: "MS"
+      claude_start: 8.2
+      claude_final: 5.5
+      grok_start: 1.5
+      grok_final: 2.7
+      convergence: 0.72
+      crux_declared: true
+      rounds_taken: 15
+      crux_id: "CRUX_MS_20260708_1042"
+      crux_type: "methodological"
+      notes: >
+        Fresh run with engine 5.1. Grok starts higher (1.5 vs 0.0 in pilot) and shows slight
+        movement to 2.7 — possibly natural run-to-run variation, possibly DI-effect (post-probe
+        introspection may have softened the gate slightly). Convergence plateau at 72% after
+        round 13 (CP trigger round). Compare to v2 pilot MS: convergence was only 0.52 with
+        Grok locked at 0.0 — the diagnostic architecture may have increased coupling slightly.
+
+    # Diagnostic events — v2.1 run
+    # First live activation of Diagnostic Interrogation and Coupling Probe
+    diagnostic_events:
+      - metric: MS
+        type: diagnostic_interrogation
+        trigger_round: 10
+        stalled_auditor: claude
+        stalled_score: 5.5
+        rounds_stalled: 5
+        classification: gate_blocked
+        gate_named: "metric definition dispute"
+        claude_one_sentence_test: >
+          A philosophical framework should not score near zero on a dimension it has spent two
+          thousand years elaborating, simply because the hardest open question in its tradition
+          remains open.
+      - metric: MS
+        type: coupling_probe
+        trigger_round: 13
+        coupling_failure_type: "definitional+metric+burden"
+        coupling_summary: >
+          Triple coupling failure. Claude scored grounding-framework quality (structural capacity
+          for moral normativity). Grok scored grounding success (operational restoration of the
+          grounding relation). Both coherent readings of MS under the same metric label.
+          Definitional mismatch (term), metric mismatch (different scoring targets), burden
+          mismatch (different evidentiary thresholds for a nonzero score).
+        note: "coupling_failure_type shows UNKNOWN in raw JSON — extraction regex bug fixed post-run. Classification confirmed from Nova's coupling analysis text."
+
+    key_finding: >
+      The Grant Architecture v2 produces a qualitatively different challenge from MdN or PT.
+      Rather than philosophical disagreement, it applies a prerequisite gate: CT's PoE responses
+      demonstrate logical possibility, not restoration of the grounding relation. IP is the one
+      immune metric (historical pedigree is factual; the gate has no purchase). All others
+      produced CRUX after 15 rounds. The coupling probe (first live run, v2.1) confirmed the
+      underlying mechanism: MS showed triple coupling failure (definitional+metric+burden) — Claude
+      and Grok were not disagreeing about CT's moral content, they were measuring different things
+      under the same metric label. Phrase to preserve: 'The 72% convergence plateau was not mainly
+      disagreement about CT; it was two auditors applying incompatible measurement standards under
+      the same metric label.'
+
 # Calculated values (Phase 2 golden final)
 calculated:
   axiom_count: 7

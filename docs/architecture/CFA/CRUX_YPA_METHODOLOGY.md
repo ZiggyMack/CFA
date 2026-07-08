@@ -3,13 +3,14 @@ FILE: CRUX_YPA_METHODOLOGY.md
 PURPOSE: Post-experiment methodology note on Crux Include/Exclude in YPA scoring — captures
          the epistemic reasoning, implementation options, and empirical findings that emerged
          from the Trinity golden batch runs (CT↔MdN, CT↔PT, 2026-06-29/30).
-VERSION: 1.0.0
+VERSION: 1.1.0
 STATUS: Active Research Methodology
 DEPENDS_ON: profiles/worldviews/CLASSICAL_THEISM.yaml, METHODOLOGICAL_NATURALISM.yaml,
-            PROCESS_THEOLOGY.yaml, utils/calculations.py
+            PROCESS_THEOLOGY.yaml, utils/calculations.py,
+            auditors/PHASE_1A_ISOMORPHISM_CALIBRATION.md
 NEEDED_BY: Future CFA development, Trinity audit methodology reviews
 MOVES_WITH: /docs/architecture/CFA/
-LAST_UPDATE: 2026-07-02
+LAST_UPDATE: 2026-07-08
 NOTE: This supersedes the directional speculation in APP_CRUX_INTEGRATION_SPEC.md §2.
       That spec was pre-experiment (2025-11-13). This note reflects post-experiment empirical
       methodology.
@@ -217,7 +218,112 @@ CT as subject audited by PT lens: data pending (CT-as-subject vs PT-as-lens expe
 
 ---
 
-## 7. Preset Mode Wiring
+## 8. CRUX as Coupling Failure — Diagnostic Architecture
+
+*Developed: 2026-07-08. Source: Nova/Repo Claude/CFA Claude synthesis following Framework-G v2 experiment (MS=0.0 invariant, 15 rounds).*
+
+### CRUX Reframed
+
+Prior framing: "Auditors disagree on this metric."
+
+Revised framing:
+
+> **CRUX is not merely disagreement. It is: "The evaluative systems of the two auditors could not synchronize on this concept under current deliberation conditions."**
+
+This matters because two auditors arriving at different scores on the same metric may be:
+
+- Scoring different hidden metrics under the same label (definitional mismatch)
+- Operating through incompatible prerequisite structures (architectural gating — e.g., Grant's grounding requirement for MS under CT challenge)
+- Failing to accurately model each other's position (reconstruction failure)
+- Carrying different evidentiary standards for what counts as a sufficient score
+
+The §6 finding — crux rates correlate with metric identity-sensitivity, not philosophical pairing — is consistent with this interpretation. The most crux-prone metrics are most vulnerable to definitional drift under advocacy pressure. That drift is a coupling phenomenon, not a philosophical one.
+
+### The Escalation Architecture
+
+CFA's measurement layer now includes three diagnostic instruments upstream of CRUX, implemented in `run_cfa_trinity_v3.py` (ARMADA):
+
+```
+Phase 1a                     Pre-flight impedance check.
+                             Tests whether auditor and FUT are running compatible
+                             representational protocols before deliberation begins.
+                             JSON output: PHASE_1A_CALIBRATION block.
+
+↓ deliberation; if one auditor stalls:
+
+Diagnostic Interrogation     Individual observability.
+(Nova Intervention)          Trigger: same score 5+ rounds, convergence < 85%.
+                             Question: "What operation are you performing?"
+                             Fires once per metric per run.
+                             JSON field: nova_intervention.
+
+↓ if gap persists after individual probe:
+
+Coupling Probe               Interaction observability.
+                             Trigger: gap stall 3+ rounds post-DI, convergence still < 85%,
+                             both auditors repeating terminal positions.
+                             Question: "Are you operating through the same interface?"
+                             Fires once per metric per run, only after Diagnostic Interrogation.
+                             JSON field: coupling_probe (coupling_delta across 5 dimensions).
+
+↓ if unresolved at run completion:
+
+CRUX                         Synchronization failure marker.
+                             Post-hoc signal: evaluative systems could not couple
+                             on this concept under current conditions.
+```
+
+**The key distinction:**
+
+> **Diagnostic Interrogation asks what operation an evaluator is performing.**
+> **Coupling Probe asks whether two evaluators are operating through the same interface.**
+
+These are different questions and require different instruments. The Coupling Probe is bilateral — it sends matched questions to both auditors independently and computes a structured delta across term definition, metric interpretation, burden standard, premise, and reconstruction accuracy.
+
+### Methodology Statements (Nova, July 2026)
+
+On Diagnostic Interrogation:
+
+> The objective of a Diagnostic Interrogation is not to change an evaluator's judgment. Its objective is to increase the observability of the evaluator's latent reasoning state. Any subsequent changes in score, explanation, confidence, or behavior are treated as observations of that latent state rather than as measures of persuasion or correctness.
+
+On Coupling Probe:
+
+> The objective of a Coupling Probe is not to force convergence. Its objective is to increase the observability of the interface between evaluators. The coupling delta — the structured difference between how each auditor defines terms, interprets metrics, and models the other — is the measurement artifact, not the subsequent scores.
+
+On CRUX:
+
+> Individual stall reveals hidden evaluator operation. Gap stall reveals hidden interface failure.
+
+### Two Research Programs
+
+The diagnostic architecture reflects two parallel programs embedded in CFA:
+
+- **Cognitive Archaeology (Science A):** Recover recurring reasoning operators. *What structures exist?*
+- **Experimental Epistemology (Science B):** Design perturbations that increase observability. *How do hidden reasoning states become observable?*
+
+Phase 1a, Diagnostic Interrogation, and Coupling Probe are Science B instruments. CRUX events and their data feed Science A analysis via Dig Sites.
+
+### First Empirical Confirmation (2026-07-08)
+
+Run: `S7_cfa_trinity_20260708_103116.json` (CT vs Grant Architecture v2, MS-only, engine 5.1)
+
+- DI fired at round 10 (Claude stalled at 5.5 for 5 rounds). Claude self-classified as gate-blocked (metric definition dispute). One-sentence test: *"A philosophical framework should not score near zero on a dimension it has spent two thousand years elaborating, simply because the hardest open question in its tradition remains open."*
+- Coupling Probe fired at round 13. Triple coupling failure: DEFINITIONAL + METRIC + BURDEN. Claude scored grounding-framework quality; Grok scored grounding success — two coherent readings of MS, incompatible measurement standards under the same label.
+- CRUX declared at round 15, convergence 72%.
+
+> **The 72% convergence plateau was not mainly disagreement about CT; it was two auditors applying incompatible measurement standards under the same metric label.**
+
+The coupling probe did not merely name the phenomenon — it surfaced it directly in structured form, replacing post-hoc inference. First live run data: `profiles/worldviews/CLASSICAL_THEISM.yaml::vs_grant_architecture_v2::diagnostic_events`
+
+### Implementation Reference
+
+- Full protocol spec: `docs/REPO_SYNC/SYNC_OUT/pending/coupling_probe_and_advocate_variability.md`
+- Implementation: `run_cfa_trinity_v3.py` (ARMADA), built 2026-07-08
+- Phase 1a: `auditors/PHASE_1A_ISOMORPHISM_CALIBRATION.md`
+
+---
+
+## 9. Preset Mode Wiring
 
 | Preset | `include_crux` | Rationale |
 |---|---|---|
@@ -230,7 +336,7 @@ Zealot and Diplomat modes intentionally leave the Crux toggle at the user's curr
 
 ---
 
-## 8. Relationship to APP_CRUX_INTEGRATION_SPEC.md
+## 10. Relationship to APP_CRUX_INTEGRATION_SPEC.md
 
 `APP_CRUX_INTEGRATION_SPEC.md` (v1.0.1, 2025-11-13) was written before any Trinity experiments ran. It proposed a `NORMALIZE_UNCERTAINTY` formula using per-session raw auditor scores:
 
@@ -248,7 +354,7 @@ Current formula uses `crux_rate` as the closest available proxy for per-metric c
 
 ---
 
-## 9. Open Questions and Future Work
+## 11. Open Questions and Future Work
 
 **Q1 — Direction validity:** Can we empirically test whether the downward-only penalty is correct? One approach: run counterfactual sessions where Crux-declared metrics are re-scored by a third auditor (e.g., Gemini) with no prior context. Does the third auditor tend toward the Claude score (PRO) or the Grok score (ANTI)? If systematically toward one, that informs direction.
 
@@ -260,9 +366,17 @@ Current formula uses `crux_rate` as the closest available proxy for per-metric c
 
 **Q5 — PT vs MdN data:** When the PT vs MdN experiment runs, crux_rates for that matchup will fill in the currently empty `vs_methodological_naturalism` block in `PROCESS_THEOLOGY.yaml`. At that point, the full three-way comparison (CT, MdN, PT in all six pairings) will show whether the stability ordering observed in CT↔MdN and CT↔PT holds.
 
+**Q6 — Advocate variability:** The advocate (Claude) is currently hardcoded in v3. Does gate behavior (e.g., Grok's MS=0.0 under Framework-G v2) persist with a different advocate model — GPT-4o, Gemini, or human? If Grok gates against every advocate, the gate is a Grok/Grant architecture property. If Claude-specific, it is a Claude↔Grok coupling property. This is the only way to determine whether the identity effect (~1.0-1.5pt directional bias) is substrate-independent or a Claude-specific coupling artifact. See `coupling_probe_and_advocate_variability.md` for experimental design.
+
+**Q7 — Metacognitive accuracy:** How often does auditor self-report (Diagnostic Interrogation response) match extractor classification (independent CA analysis of the full transcript)? When they diverge — Grok self-reports "absence" but extractors classify "gating" — the gap is the measurement. This gives a new axis: whether the evaluator can accurately identify its own reasoning process.
+
+**Q8 — Post-intervention trajectory:** Does a Diagnostic Interrogation fired at round N change the identity effect magnitude in rounds N+1 through end? If identity effect shrinks post-intervention, introspective pressure suppresses advocacy bias. If it grows, self-classification may reinforce it. Both outcomes are informative. Testable by comparing divergence deltas pre- and post-intervention within the same run.
+
+**Q9 — Coupling probe bilateral symmetry:** Does Question 4 (restate opponent's strongest argument in your own words) reveal systematic asymmetry in reconstruction accuracy? If one auditor consistently reconstructs the other less accurately, that is a unidirectional reconstruction failure — a more specific coupling diagnosis than general interface mismatch, and potentially more actionable.
+
 ---
 
-## 10. Implementation Reference
+## 12. Implementation Reference
 
 **File:** `utils/calculations.py` — `ypa_scenario_scores()` function
 **Formula:** `lever *= (1 - avg_crux_rate * _K)` where `_K = 0.15`
