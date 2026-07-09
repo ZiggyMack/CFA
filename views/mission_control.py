@@ -298,62 +298,78 @@ def _render_open_loops():
         unsafe_allow_html=True,
     )
 
-    LOOPS = [
-        {
-            "label":    "🟠 MEDIUM · CA Phase 0C — positive control transcript needed",
-            "color":    "#c97000",
-            "bg":       "#fffbf0",
-            "icon":     "📋",
-            "priority": "MEDIUM",
-            "body": (
-                "Repo Claude needs a known-rich CFA deliberation transcript (Framework-G preferred) "
-                "to run the positive control extraction battery — confirming the pipeline detects "
-                "operators when they are genuinely present. Phase 0C is the last calibration step "
-                "before full excavation begins."
-            ),
-            "action": "→ Action: pass a known-rich Framework-G transcript to Repo Claude via SYNC_OUT",
-        },
-        {
-            "label":    "🔵 LOW · PT YAML — vs_buddhism misplaced in levers_by_matchup",
-            "color":    "#1a4f68",
-            "bg":       "#f0f5fa",
-            "icon":     "🔧",
-            "priority": "LOW",
-            "body": (
-                "PROCESS_THEOLOGY.yaml has a levers_by_matchup.vs_buddhism block with Trinity "
-                "score structure (batch_id, metrics, batch_stats) — misplaced during the Buddhism batch. "
-                "No runtime impact (coverage matrix correctly ignores it). Structural debt only."
-            ),
-            "action": "→ Move block to trinity_scores_by_matchup when convenient",
-        },
-        {
-            "label":    "🔵 LOW · Buddhism 2×2 design incomplete",
-            "color":    "#1a4f68",
-            "bg":       "#f0f5fa",
-            "icon":     "🏛️",
-            "priority": "LOW",
-            "body": (
-                "Buddhism has 41 subject runs (b_vs_ct: 10, b_vs_mdn: 11, b_vs_pt: 10, b_vs_g: 10). "
-                "Reverse-stance runs exist in other framework YAMLs but the full closed 2×2 design "
-                "is not formally documented."
-            ),
-            "action": "→ Awareness item — no action required now",
-        },
-    ]
+    # ── MEDIUM — full width ───────────────────────────────────────────────────
+    AM, ABG = "#c97000", "#fffbf0"
+    st.markdown(
+        f'<div style="border:1.5px solid {AM};border-radius:10px;'
+        f'padding:1rem 1.25rem;background:{ABG};margin-bottom:0.8rem">'
+        f'<div style="display:flex;align-items:flex-start;gap:0.9rem">'
+        f'<div style="font-size:1.6rem;line-height:1;margin-top:0.1rem">📋</div>'
+        f'<div style="flex:1">'
+        f'<div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem">'
+        f'<span style="background:{AM};color:white;border-radius:4px;padding:0.1rem 0.5rem;'
+        f'font-size:0.7rem;font-weight:700;letter-spacing:0.08em">MEDIUM</span>'
+        f'<span style="font-size:0.95rem;font-weight:700;color:#222">'
+        f'CA Phase 0C — positive control transcript needed</span>'
+        f'</div>'
+        f'<div style="font-size:0.83rem;color:#555;line-height:1.55;margin-bottom:0.6rem">'
+        f'Repo Claude needs a known-rich CFA deliberation transcript (Framework-G preferred) '
+        f'to run the positive control extraction battery — confirming the pipeline detects '
+        f'operators when they are genuinely present. Phase 0C is the last calibration step '
+        f'before full excavation begins.'
+        f'</div>'
+        f'<div style="font-size:0.78rem;color:{AM};font-weight:700;border-top:1px solid {AM}30;'
+        f'padding-top:0.45rem">→ Action: pass a known-rich Framework-G transcript to Repo Claude via SYNC_OUT</div>'
+        f'</div></div></div>',
+        unsafe_allow_html=True,
+    )
 
-    for loop in LOOPS:
-        c, bg = loop["color"], loop["bg"]
-        with st.expander(loop["label"]):
-            st.markdown(
-                f'<div style="border-left:3px solid {c};background:{bg};'
-                f'border-radius:0 8px 8px 0;padding:0.8rem 1rem;margin-top:0.2rem">'
-                f'<div style="display:flex;align-items:flex-start;gap:0.7rem">'
-                f'<div style="font-size:1.3rem;line-height:1">{loop["icon"]}</div>'
-                f'<div style="flex:1">'
-                f'<div style="font-size:0.83rem;color:#444;line-height:1.55;margin-bottom:0.55rem">'
-                f'{loop["body"]}</div>'
-                f'<div style="font-size:0.77rem;color:{c};font-weight:700;'
-                f'border-top:1px solid {c}28;padding-top:0.4rem">{loop["action"]}</div>'
-                f'</div></div></div>',
-                unsafe_allow_html=True,
-            )
+    # ── LOW — side by side ────────────────────────────────────────────────────
+    LC, LBG = "#1a4f68", "#f0f5fa"
+    col_l, col_r = st.columns(2)
+
+    with col_l:
+        st.markdown(
+            f'<div style="border:1.5px solid {LC};border-radius:10px;'
+            f'padding:1rem 1.1rem;background:{LBG}">'
+            f'<div style="display:flex;align-items:flex-start;gap:0.7rem">'
+            f'<div style="font-size:1.4rem;line-height:1;margin-top:0.1rem">🔧</div>'
+            f'<div style="flex:1">'
+            f'<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem">'
+            f'<span style="background:{LC};color:white;border-radius:4px;padding:0.1rem 0.45rem;'
+            f'font-size:0.7rem;font-weight:700;letter-spacing:0.08em">LOW</span>'
+            f'<span style="font-size:0.85rem;font-weight:700;color:#222">PT YAML — vs_buddhism misplaced</span>'
+            f'</div>'
+            f'<div style="font-size:0.8rem;color:#555;line-height:1.5;margin-bottom:0.5rem">'
+            f'PROCESS_THEOLOGY.yaml has a levers_by_matchup.vs_buddhism block with Trinity '
+            f'score structure — misplaced during the Buddhism batch. No runtime impact '
+            f'(coverage matrix correctly ignores it). Structural debt only.'
+            f'</div>'
+            f'<div style="font-size:0.76rem;color:{LC};font-weight:700;border-top:1px solid {LC}30;'
+            f'padding-top:0.4rem">→ Move block to trinity_scores_by_matchup when convenient</div>'
+            f'</div></div></div>',
+            unsafe_allow_html=True,
+        )
+
+    with col_r:
+        st.markdown(
+            f'<div style="border:1.5px solid {LC};border-radius:10px;'
+            f'padding:1rem 1.1rem;background:{LBG}">'
+            f'<div style="display:flex;align-items:flex-start;gap:0.7rem">'
+            f'<div style="font-size:1.4rem;line-height:1;margin-top:0.1rem">🏛️</div>'
+            f'<div style="flex:1">'
+            f'<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem">'
+            f'<span style="background:{LC};color:white;border-radius:4px;padding:0.1rem 0.45rem;'
+            f'font-size:0.7rem;font-weight:700;letter-spacing:0.08em">LOW</span>'
+            f'<span style="font-size:0.85rem;font-weight:700;color:#222">Buddhism 2×2 design incomplete</span>'
+            f'</div>'
+            f'<div style="font-size:0.8rem;color:#555;line-height:1.5;margin-bottom:0.5rem">'
+            f'Buddhism has 41 subject runs (b_vs_ct: 10, b_vs_mdn: 11, b_vs_pt: 10, b_vs_g: 10). '
+            f'Reverse-stance runs exist in other framework YAMLs but the closed 2×2 design '
+            f'is not formally documented.'
+            f'</div>'
+            f'<div style="font-size:0.76rem;color:{LC};font-weight:700;border-top:1px solid {LC}30;'
+            f'padding-top:0.4rem">→ Awareness item — no action required now</div>'
+            f'</div></div></div>',
+            unsafe_allow_html=True,
+        )
