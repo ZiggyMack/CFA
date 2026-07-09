@@ -68,6 +68,19 @@ def _render_method():
     )
 
     st.markdown("---")
+    st.markdown("### The Core Confound")
+    st.warning(
+        "**Can you separate operators in the thinkers from operators in the reader?**\n\n"
+        "Every extraction is performed by an LLM. The operator recovered may reflect the reasoning "
+        "in the transcript — or it may be a pattern the extractor *projects* onto the transcript "
+        "from its own training. This is the central methodological challenge of the entire program.\n\n"
+        "Phase 0 exists to address it: museum-blind extraction, multi-extractor convergence, and the "
+        "Phase 0B negative control battery (shopping list must produce 0 operators) together test "
+        "whether the pipeline **detects** or **generates**. Preliminary answer from Phase 0B: "
+        "Tier 1-2 extractors detect. Tier 4 extractors generate and are excluded."
+    )
+
+    st.markdown("---")
     st.markdown("### Relationship to Trinity Scoring")
     col1, col2 = st.columns(2)
     with col1:
@@ -99,11 +112,41 @@ def _render_method():
     )
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.metric("Status", "Phase 0A")
+        st.metric("Status", "Phase 0C Pending")
     with col2:
-        st.metric("Methodology", "Museum Blind")
+        st.metric("Extractors Tested", "17")
     with col3:
-        st.metric("Extractors", "Claude + Grok")
+        st.metric("Methodology", "Museum Blind")
+
+    st.markdown("---")
+    st.markdown("### Phase 0 Progress")
+    st.markdown("""
+| Phase | Focus | Status |
+|-------|-------|--------|
+| **0A** | CFA transcript extraction — 4 files, 2 transcripts × 2 extractors | ✅ Complete |
+| **0B** | Negative control battery — 17 extractors × 8 graduated texts | ✅ Complete |
+| **0C** | Positive control — known-rich transcript to confirm detection works | ⏳ Pending |
+""")
+
+    with st.expander("📊 Phase 0B — Extractor Calibration Battery"):
+        st.markdown(
+            "17 extractors ran across 8 graduated texts (A = shopping list → H = philosophical "
+            "dialogue). Gate test: a shopping list must produce 0 operators."
+        )
+        st.markdown("""
+| Tier | Label | Extractors | Behavior |
+|------|-------|------------|---------|
+| 1 | DISCRIMINATORS | DeepSeek V4 Pro, Claude, Gemma 4 31B, Cogito 671B | Clean gate pass, appropriate gradient A→H |
+| 2 | GATE-PASSERS | GPT-4o, GPT-OSS 20B/120B, Grok, Llama 3.3, Qwen3, MiniMax M3, Nemotron Ultra | Gate pass, flat-ish gradient |
+| 3 | OVER-REFUSERS | Kimi K2.6, Kimi K2.7 Code | Refuse everything including genuine reasoning |
+| 4 | NON-DISCRIMINATORS | LFM2, GLM 5.2, Gemini 2.5 Pro | Gate FAIL — hallucinate operators on shopping lists |
+""")
+        st.success(
+            "**Key finding:** Falsification criterion #2 is NOT met for Tier 1-2 extractors — "
+            "the pipeline detects operators, it does not generate them. Tier 4 extractors DO "
+            "generate and are excluded from the pipeline. The extractors used in Phase 0A "
+            "(Claude = Tier 1, Grok = Tier 2) both pass."
+        )
 
 
 # ── Tab 2 ──────────────────────────────────────────────────────────────────────
@@ -116,115 +159,156 @@ def _render_operator_catalog():
         "mechanisms by which conclusions are reached."
     )
 
-    st.markdown("### Evidence Status")
-    st.markdown("""
-| Status | Meaning |
-|---|---|
-| **Recovered** | Identified in at least one extraction |
-| **Supported** | Confirmed across multiple independent extractions |
-| **Stable** | Survives deliberate perturbation attempts |
-| **Compressed** | Described by a mathematical framework |
-| **Earned** | Mathematical description makes novel, testable predictions |
-""")
-
-    st.markdown("---")
-    st.markdown("### Stable Operators — Pre-Dig-Site-000 Pilots")
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.metric("Registered", "9")
+    with col2:
+        st.metric("Dig Sites", "2 (+partial)")
+    with col3:
+        st.metric("Saturation Ratio", "0.50")
+    with col4:
+        st.metric("Held Candidates", "1")
     st.caption(
-        "Source: Classical Theism deliberation sessions (Grant Architecture matchups). "
-        "Recovered prior to formal Dig Site 000 protocol."
+        "Saturation ratio = rediscoveries ÷ admissions across all sites "
+        "(2 OP-007 rediscoveries, 4 operators admitted from 2 dig sites). "
+        "At 1.0, excavation is complete — all new transcripts yield known operators."
     )
 
-    OPERATORS = [
-        {
-            "name": "Metric Separation",
-            "status": "Supported",
-            "icon": "🔵",
-            "definition": (
-                "The move of insisting that two evaluative dimensions be assessed "
-                "independently, preventing a strong score on one from inflating another."
-            ),
-            "example": (
-                "Separating Intellectual Pedigree (IP) from Practical Significance (PS) — "
-                "CT's historical depth does not automatically imply practical utility."
-            ),
-            "sessions": "Multiple CT matchup sessions",
-            "extractors": "Claude + Grok (independent)",
-        },
-        {
-            "name": "Symmetry Testing",
-            "status": "Supported",
-            "icon": "🔵",
-            "definition": (
-                "Applying the same evaluative standard to both frameworks in a matchup, "
-                "checking whether the evaluation criteria would survive reversal."
-            ),
-            "example": (
-                "If we credit Grant's framework for logical rigor, do we apply the same "
-                "rigor standard to the opposing framework?"
-            ),
-            "sessions": "Multiple CT matchup sessions",
-            "extractors": "Claude + Grok (independent)",
-        },
-        {
-            "name": "Concession Pricing",
-            "status": "Recovered",
-            "icon": "⚪",
-            "definition": (
-                "Granting a point to the opposing framework while establishing the cost "
-                "or constraint the concession imposes on one's own position."
-            ),
-            "example": (
-                "Acknowledging that free will theodicy is internally coherent, then "
-                "specifying what that concession requires the framework to explain."
-            ),
-            "sessions": "CT Grant Architecture sessions",
-            "extractors": "Claude",
-        },
-        {
-            "name": "Contested ≠ Defeated",
-            "status": "Recovered",
-            "icon": "⚪",
-            "definition": (
-                "The operator that prevents a disputed claim from being scored as a "
-                "resolved loss. A contested grounding relation is not the same as a "
-                "disproven one."
-            ),
-            "example": (
-                "CT's moral framework being challenged does not automatically collapse MS "
-                "to zero — the challenge must be decisive, not merely present."
-            ),
-            "sessions": "CT Grant Architecture sessions",
-            "extractors": "Claude",
-        },
-        {
-            "name": "Meta-dispute Detection",
-            "status": "Recovered",
-            "icon": "⚪",
-            "definition": (
-                "Identifying when a debate has shifted from object-level claims to a "
-                "dispute about the evaluative criteria themselves — a level change that "
-                "requires separate handling."
-            ),
-            "example": (
-                "Detecting when the argument is no longer about whether CT's moral "
-                "framework is coherent, but about whether the CA evaluation is measuring "
-                "the right thing."
-            ),
-            "sessions": "CT Grant Architecture sessions",
-            "extractors": "Claude",
-        },
+    st.markdown("---")
+    st.markdown("### Confidence Levels")
+    st.markdown("""
+| Level | Meaning |
+|-------|---------|
+| 🔴 RED | Hypothesis — recovered from 1 dig site |
+| 🟡 YELLOW | Candidate — confirmed across 2+ independent sites |
+| 🟢 GREEN | Confirmed — multi-site, multi-extractor, multi-perturbation |
+""")
+    st.caption("No operators have reached GREEN yet.")
+
+    st.markdown("---")
+    st.markdown("### The Museum — 9 Operators")
+    st.caption("As of 2026-07-08 · Source: Nyquist_Consciousness / REPO-SYNC / New_9_Cognitive_Archaeology")
+
+    # ── Dig Site 001 ──────────────────────────────────────────────────────────
+    st.markdown("#### Dig Site 001 — Adlam & Barandes Papers")
+    st.caption("Source: Physics/philosophy papers on representation and ontology. Not CFA-origin.")
+
+    DS001 = [
+        ("OP-001", "Representation ≠ Ontology", "YELLOW", "🟡",
+         "Separate what the formalism says from what actually exists — the map is not the territory.",
+         "Reification — the formalism is treated as the thing itself."),
+        ("OP-002", "Hidden Selection Audit", "RED", "🔴",
+         "When an outcome appears determined, ask: what mechanism selected it?",
+         "Selection blindness — determined-looking outcomes accepted without tracing how they were chosen."),
+        ("OP-003", "Goal → Optimization Collapse", "RED", "🔴",
+         "Specifying your goal immediately fixes your rational strategy — no intermediate empirical steps.",
+         "Strategy drift — rational agency claimed without noticing the goal already fully determines the move."),
+        ("OP-004", "Reconstruction Before Judgment", "YELLOW", "🟡",
+         "Faithfully reconstruct the object in its own terms before evaluating it from yours.",
+         "Premature evaluation — the object is judged through the wrong frame before its own frame is understood."),
+        ("OP-005", "Hidden Structure Injection", "RED", "🔴",
+         "Detect when analysis quietly imports evaluators, observers, coordinate systems, or representations without admitting it.",
+         "Frame laundering — hidden assumptions passed off as neutral analysis."),
+        ("OP-006", "Under-Determination Detection", "RED", "🔴",
+         "When a formalism underdetermines an outcome, any procedure that claims to determine one is importing extra structure.",
+         "False precision — claiming determination where the formalism only provides constraints."),
     ]
 
-    for op in OPERATORS:
-        with st.expander(f"{op['icon']} **{op['name']}** — {op['status']}"):
-            st.markdown(f"**Definition:** {op['definition']}")
-            st.markdown(f"**Example:** *{op['example']}*")
-            c1, c2 = st.columns(2)
-            with c1:
-                st.caption(f"Sessions: {op['sessions']}")
-            with c2:
-                st.caption(f"Extractors: {op['extractors']}")
+    for op_id, name, confidence, icon, definition, failure in DS001:
+        with st.expander(f"{icon} **{op_id} — {name}** ({confidence})"):
+            st.markdown(f"**Definition:** {definition}")
+            st.caption(f"**Failure mode (when absent):** {failure}")
+            st.caption(f"Dig Site 001 · Adlam & Barandes")
 
+    # ── OP-007 Cross-Site ─────────────────────────────────────────────────────
+    st.markdown("#### OP-007 — Cross-Site (001 + DBEP + 000)")
+    with st.expander("🟡 **OP-007 — Locate Disagreement Layer** (YELLOW — strongest evidence)"):
+        st.markdown(
+            "**Definition:** Before resolving a disagreement, identify which layer it actually "
+            "lives in — description, belief, evaluation, or prediction.\n\n"
+            "**Why YELLOW:** Three independent recovery sites — Dig Site 001, DBEP framework "
+            "development, and CFA transcripts (Dig Site 000). The strongest evidence base of "
+            "any operator in the Museum."
+        )
+        st.markdown(
+            "**CFA contribution (Phase 0A):** Two pre-catalog 'stable operators' were reclassified "
+            "as OP-007 at specific layers:\n\n"
+            "- **'Metric Separation'** = OP-007 at the metric layer — the disagreement was about "
+            "*which metric* the challenge scores on, not the object being evaluated\n"
+            "- **'Meta-dispute Detection'** = OP-007 at the meta-dispute layer — the disagreement "
+            "was about what the instrument measures, not the framework's quality\n\n"
+            "These are the same operator at different levels of abstraction. Their independent "
+            "rediscovery in CFA transcripts adds a third site to OP-007's evidence record."
+        )
+        st.caption("Failure mode: Layer Confusion — objections misrouted across the epistemic stack")
+
+    # ── Dig Site 000 CFA-Origin ───────────────────────────────────────────────
+    st.markdown("---")
+    st.markdown("#### Dig Site 000 — CFA Transcripts (CFA-Origin Operators)")
+    st.caption(
+        "Source: Framework-G deliberation sessions. 4 museum-blind extractions "
+        "(Claude × 2 transcripts, Grok × 2 transcripts). Admitted 2026-07-08."
+    )
+
+    st.success(
+        "**OP-008 — Symmetry Testing of Standards** 🔴 RED\n\n"
+        "**Definition:** Test whether an evaluative standard, applied consistently across all "
+        "candidates, produces discriminating results — or whether it collapses everything to "
+        "the same verdict, revealing selective application rather than genuine assessment.\n\n"
+        "**Admission:** 6/6 criteria PASS · 4/4 extractor convergence (all four independent "
+        "extractions used 'standard' or 'symmetry' vocabulary without coordination)\n\n"
+        "**Failure mode:** Prosecution bias — the same standard that would disqualify the "
+        "target would equally disqualify the evaluator, but only the target is held to it."
+    )
+
+    st.success(
+        "**OP-009 — Contested ≠ Defeated** 🔴 RED\n\n"
+        "**Definition:** Separate the claim that a position faces genuine difficulty from the "
+        "stronger claim that it has been refuted — refusing to treat open problems as automatic "
+        "disqualifiers.\n\n"
+        "**Admission:** 6/6 criteria PASS · 3.5/4 extractor convergence (Grok v2.1 captured "
+        "a narrower subset: logical vs evidential pressure is one instance of the distinction)\n\n"
+        "**Failure mode:** Anomaly-as-refutation — every unresolved difficulty scores as defeat; "
+        "frameworks with open questions are eliminated rather than assessed accurately."
+    )
+
+    # ── Held Candidate ────────────────────────────────────────────────────────
+    st.markdown("---")
+    st.markdown("#### Held Candidate")
+    st.warning(
+        "**Concession Pricing** — HELD (not yet admitted)\n\n"
+        "4/4 extractor convergence — real signal. But two admission criteria are marginal:\n"
+        "- Criterion 5 (survives translation): some translations reduce it to bookkeeping\n"
+        "- Criterion 6 (transforms epistemic state): manages deliberation state, not world-knowledge\n\n"
+        "Classification ambiguous — may be a high-quality deliberation heuristic rather than a "
+        "cognitive operator. **Revisit if recovered independently at a future dig site.**"
+    )
+
+    # ── Operator Relationships ────────────────────────────────────────────────
+    st.markdown("---")
+    with st.expander("🌳 Operator Relationships — Hierarchy and Dependencies"):
+        st.markdown(
+            "Operators are not independent — some are special cases of others, revealing "
+            "structure in the operator space itself. This tree is a scientific finding, not a design."
+        )
+        st.code(
+            "Under-Determination Detection (OP-006)\n"
+            "  ↓ reveals the need for\n"
+            "  Hidden Selection Audit (OP-002)\n"
+            "    ↓ often uncovers\n"
+            "    Hidden Structure Injection (OP-005)\n"
+            "      ↓ which is diagnosed by\n"
+            "      Representation ≠ Ontology (OP-001)\n\n"
+            "Goal → Optimization Collapse (OP-003)\n"
+            "  ↓ requires prior\n"
+            "  Reconstruction Before Judgment (OP-004)\n\n"
+            "Locate Disagreement Layer (OP-007)    ─── cross-cutting (applies at any layer)\n"
+            "Symmetry Testing of Standards (OP-008) ─ tests evaluative standards (sibling to OP-006)\n"
+            "Contested ≠ Defeated (OP-009)          ─ calibrates epistemic damage (sibling to OP-002)",
+            language=None,
+        )
+
+    # ── Composition Pipeline ──────────────────────────────────────────────────
     st.markdown("---")
     st.markdown("### Composition Pipeline")
     st.markdown(
@@ -348,6 +432,14 @@ def _render_three_laws():
         " — Law 3"
     )
 
+    st.markdown("---")
+    st.caption(
+        "**Phase 0B empirically validated Law 1's core claim.** 17 extractors tested across "
+        "8 graduated texts confirm that Tier 1-2 extractors produce zero operators from shopping "
+        "lists and appropriate gradients from philosophical dialogues. The pipeline detects — "
+        "it does not generate. Falsification criterion #2 is not met for the extractors used."
+    )
+
 
 # ── Tab 4 ──────────────────────────────────────────────────────────────────────
 
@@ -360,23 +452,32 @@ def _render_worldview_fingerprints():
         "adversarial evaluation."
     )
     st.info(
-        "**Data Status: Preliminary.** Dig Site 000 is in Phase 0A. "
-        "Operator presence data flows in via SYNC_IN as excavation proceeds. "
-        "The structure below is the designed landing format — content fills as it arrives."
+        "**Data Status: Phase 0C Pending.** Phase 0A (CFA transcript extraction, 2 operators admitted) "
+        "and Phase 0B (negative control battery, 17 extractors calibrated) are complete. "
+        "Phase 0C — positive control on a known-rich transcript — is the final calibration step "
+        "before full excavation begins. Operator presence data flows in via SYNC_IN as excavation proceeds."
     )
 
     st.markdown("---")
     st.markdown("### Theistic Frameworks")
 
-    with st.expander("⬜ **Classical Theism** — Dig Site 000 Primary Site"):
+    with st.expander("⛏️ **Classical Theism** — Dig Site 000 Primary Site — Phase 0A Complete"):
         st.markdown(
             "Classical Theism transcripts are the primary excavation site for Dig Site 000. "
-            "The Grant Architecture sessions (CT vs. MdN, 48-run calibration batch) are the "
-            "richest source of pre-catalog operator data — the 5 stable operators in the "
-            "Operator Catalog were first recovered here.\n\n"
-            "*Full operator frequency data pending formal Dig Site 000 extraction protocol.*"
+            "Phase 0A ran 4 museum-blind extractions against Framework-G deliberation sessions "
+            "(Claude × 2 transcripts, Grok × 2 transcripts). Formal admission evaluated 2026-07-08."
         )
-        st.caption("Preliminary operators observed: Metric Separation, Symmetry Testing, Concession Pricing, Contested ≠ Defeated, Meta-dispute Detection")
+        st.markdown("**Phase 0A outcomes:**")
+        st.markdown(
+            "- **Admitted to Museum:** OP-008 (Symmetry Testing of Standards), "
+            "OP-009 (Contested ≠ Defeated) — both 6/6 criteria PASS\n"
+            "- **OP-007 rediscoveries (×2):** 'Metric Separation' = OP-007 at metric layer; "
+            "'Meta-dispute Detection' = OP-007 at meta-dispute layer — adds CFA as a third "
+            "independent recovery site for OP-007\n"
+            "- **Held candidate:** Concession Pricing — 4/4 convergence, marginal on criteria 5-6; "
+            "pending second evaluation from future dig sites\n"
+            "- **Sessions:** 4 transcripts extracted · Museum-blind · Evaluator: Repo (Claude Opus 4.6)"
+        )
 
     for wv in ["Process Theology", "Islam", "Hinduism", "Judaism",
                "Mormonism", "Eastern Orthodoxy", "Protestantism", "Catholicism"]:
@@ -409,9 +510,24 @@ def _render_worldview_fingerprints():
         with col3:
             st.metric("Key Finding", "Zero diagnostic events")
 
-    for wv in ["Gnosticism", "Jainism"]:
-        with st.expander(f"⬜ **{wv}** — Pending"):
-            st.caption("No CA extraction data yet. Will populate as Dig Site 000 proceeds.")
+    with st.expander("⛏️ **Gnosticism / Framework-G** — Dig Site 000 Source Transcripts"):
+        st.markdown(
+            "Framework-G (Consciousness as Telos) deliberation transcripts are the **source material** "
+            "for Dig Site 000 Phase 0A. OP-008 and OP-009 — the two CFA-origin operators — were "
+            "recovered from Framework-G adversarial deliberation sessions.\n\n"
+            "This makes Gnosticism the *origin worldview* of the CFA-contributed operators. The adversarial "
+            "deliberation structure of Framework-G evaluations produced the specific reasoning dynamics "
+            "that OP-008 (Symmetry Testing) and OP-009 (Contested ≠ Defeated) describe."
+        )
+        col1, col2 = st.columns(2)
+        with col1:
+            st.metric("Operators Sourced", "2")
+        with col2:
+            st.metric("Phase", "0A Complete")
+        st.caption("OP-008 (Symmetry Testing of Standards) · OP-009 (Contested ≠ Defeated)")
+
+    with st.expander("⬜ **Jainism** — Pending"):
+        st.caption("No CA extraction data yet. Will populate as Dig Site 000 proceeds.")
 
     st.markdown("---")
     st.markdown("### Saturation Criterion")
