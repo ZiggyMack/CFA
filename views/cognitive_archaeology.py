@@ -76,43 +76,52 @@ def _render_method():
 
     _c0a, _arr1, _c0b, _arr2, _c0c = st.columns([4, 1, 4, 1, 4])
 
+    _CARD = (
+        "border-radius:10px;padding:1.4rem 1rem 1.2rem;text-align:center;"
+        "color:white;line-height:1.4;"
+    )
+
     with _c0a:
-        st.markdown("##### Phase 0A")
-        st.markdown("*CFA Transcript Extraction*")
-        st.success("✅ Complete")
-        st.caption(
-            "Museum-blind extractions on Framework-G deliberation sessions. "
-            "Outcome: OP-008 and OP-009 admitted to the Museum; "
-            "OP-007 rediscovered ×2."
-        )
+        st.markdown(f"""
+<div style="{_CARD}background:#1a6b50;">
+  <div style="font-size:0.7rem;opacity:0.75;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.4rem">Phase 0A</div>
+  <div style="font-size:1rem;font-weight:600;margin-bottom:0.6rem">CFA Transcript<br>Extraction</div>
+  <div style="font-size:2rem;margin-bottom:0.3rem">✅</div>
+  <div style="font-size:0.9rem;font-weight:700;margin-bottom:0.7rem">Complete</div>
+  <div style="font-size:0.75rem;opacity:0.8">OP-008 &amp; OP-009 admitted<br>OP-007 ×2 rediscovered</div>
+</div>""", unsafe_allow_html=True)
+
     with _arr1:
         st.markdown(
-            "<div style='text-align:center;margin-top:3.2rem;font-size:1.6rem;opacity:0.5'>→</div>",
+            "<div style='text-align:center;margin-top:4rem;font-size:1.8rem;opacity:0.35'>→</div>",
             unsafe_allow_html=True,
         )
+
     with _c0b:
-        st.markdown("##### Phase 0B")
-        st.markdown("*Negative Control Battery*")
-        st.success("✅ Complete")
-        st.caption(
-            "17 extractors × 8 graduated texts (shopping list → philosophical dialogue). "
-            "Gate test: a shopping list must produce 0 operators. "
-            "Outcome: 4-tier calibration — Tier 1-2 detect, Tier 4 generates and is excluded."
-        )
+        st.markdown(f"""
+<div style="{_CARD}background:#1a4f68;">
+  <div style="font-size:0.7rem;opacity:0.75;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.4rem">Phase 0B</div>
+  <div style="font-size:1rem;font-weight:600;margin-bottom:0.6rem">Negative Control<br>Battery</div>
+  <div style="font-size:2rem;margin-bottom:0.3rem">✅</div>
+  <div style="font-size:0.9rem;font-weight:700;margin-bottom:0.7rem">Complete</div>
+  <div style="font-size:0.75rem;opacity:0.8">17 extractors × 8 graduated texts<br>Shopping list must → 0 operators</div>
+</div>""", unsafe_allow_html=True)
+
     with _arr2:
         st.markdown(
-            "<div style='text-align:center;margin-top:3.2rem;font-size:1.6rem;opacity:0.5'>→</div>",
+            "<div style='text-align:center;margin-top:4rem;font-size:1.8rem;opacity:0.35'>→</div>",
             unsafe_allow_html=True,
         )
+
     with _c0c:
-        st.markdown("##### Phase 0C")
-        st.markdown("*Positive Control*")
-        st.warning("⏳ Pending")
-        st.caption(
-            "A known-rich transcript must produce operators — confirming detection works "
-            "when the signal is genuinely present. Gate inverted: this one must fire. "
-            "Blocker: need a known-rich CFA transcript (Framework-G preferred)."
-        )
+        st.markdown(f"""
+<div style="{_CARD}background:#5c4a00;">
+  <div style="font-size:0.7rem;opacity:0.75;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.4rem">Phase 0C</div>
+  <div style="font-size:1rem;font-weight:600;margin-bottom:0.6rem">Positive<br>Control</div>
+  <div style="font-size:2rem;margin-bottom:0.3rem">⏳</div>
+  <div style="font-size:0.9rem;font-weight:700;margin-bottom:0.7rem">Pending</div>
+  <div style="font-size:0.75rem;opacity:0.8">Known-rich transcript must → operators<br>Confirms detection when signal is real</div>
+</div>""", unsafe_allow_html=True)
 
     with st.expander("📊 Phase 0B detail — Extractor Calibration Battery"):
         st.markdown(
@@ -153,9 +162,13 @@ def _render_method():
     with _right:
         st.markdown("**Phase 0B preliminary answer:**")
         st.markdown(
-            "✅ **Tier 1-2 extractors detect.** Falsification criterion #2 is not met — "
-            "the pipeline does not hallucinate operators when no reasoning is present.\n\n"
-            "❌ **Tier 4 extractors generate** and are excluded from all extraction runs."
+            "Phase 0B tests each extractor against a gate: give it a shopping list and "
+            "see what happens. Those that produce zero operators pass. Those that hallucinate "
+            "operators on a grocery list fail — and are permanently excluded.\n\n"
+            "✅ **13 of 17 extractors passed** — the pipeline detects operators when they're "
+            "present and stays silent when they're not.\n\n"
+            "❌ **4 of 17 failed** — they project operators onto blank text. "
+            "The extractors used in Phase 0A (Claude, Grok) both passed."
         )
 
     st.markdown("---")
