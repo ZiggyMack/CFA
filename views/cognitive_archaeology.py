@@ -68,17 +68,95 @@ def _render_method():
     )
 
     st.markdown("---")
+    st.markdown("### Phase 0 — The Calibration Sequence")
+    st.caption(
+        "Before any excavation begins, the pipeline must prove it can tell signal from noise. "
+        "Phase 0 is not archaeology — it is building and testing the shovel."
+    )
+
+    _c0a, _arr1, _c0b, _arr2, _c0c = st.columns([4, 1, 4, 1, 4])
+
+    with _c0a:
+        st.markdown("##### Phase 0A")
+        st.markdown("*CFA Transcript Extraction*")
+        st.success("✅ Complete")
+        st.caption(
+            "Museum-blind extractions on Framework-G deliberation sessions. "
+            "Outcome: OP-008 and OP-009 admitted to the Museum; "
+            "OP-007 rediscovered ×2."
+        )
+    with _arr1:
+        st.markdown(
+            "<div style='text-align:center;margin-top:3.2rem;font-size:1.6rem;opacity:0.5'>→</div>",
+            unsafe_allow_html=True,
+        )
+    with _c0b:
+        st.markdown("##### Phase 0B")
+        st.markdown("*Negative Control Battery*")
+        st.success("✅ Complete")
+        st.caption(
+            "17 extractors × 8 graduated texts (shopping list → philosophical dialogue). "
+            "Gate test: a shopping list must produce 0 operators. "
+            "Outcome: 4-tier calibration — Tier 1-2 detect, Tier 4 generates and is excluded."
+        )
+    with _arr2:
+        st.markdown(
+            "<div style='text-align:center;margin-top:3.2rem;font-size:1.6rem;opacity:0.5'>→</div>",
+            unsafe_allow_html=True,
+        )
+    with _c0c:
+        st.markdown("##### Phase 0C")
+        st.markdown("*Positive Control*")
+        st.warning("⏳ Pending")
+        st.caption(
+            "A known-rich transcript must produce operators — confirming detection works "
+            "when the signal is genuinely present. Gate inverted: this one must fire. "
+            "Blocker: need a known-rich CFA transcript (Framework-G preferred)."
+        )
+
+    with st.expander("📊 Phase 0B detail — Extractor Calibration Battery"):
+        st.markdown(
+            "17 extractors ran across 8 graduated texts (A = shopping list → H = philosophical "
+            "dialogue). Gate test: a shopping list must produce 0 operators."
+        )
+        st.markdown("""
+| Tier | Label | Extractors | Behavior |
+|------|-------|------------|---------|
+| 1 | DISCRIMINATORS | DeepSeek V4 Pro, Claude, Gemma 4 31B, Cogito 671B | Clean gate pass, appropriate gradient A→H |
+| 2 | GATE-PASSERS | GPT-4o, GPT-OSS 20B/120B, Grok, Llama 3.3, Qwen3, MiniMax M3, Nemotron Ultra | Gate pass, flat-ish gradient |
+| 3 | OVER-REFUSERS | Kimi K2.6, Kimi K2.7 Code | Refuse everything including genuine reasoning |
+| 4 | NON-DISCRIMINATORS | LFM2, GLM 5.2, Gemini 2.5 Pro | Gate FAIL — hallucinate operators on shopping lists |
+""")
+        st.success(
+            "**Key finding:** Tier 1-2 extractors detect — they do not generate. Tier 4 "
+            "extractors hallucinate operators on a shopping list and are excluded from the pipeline. "
+            "The extractors used in Phase 0A (Claude = Tier 1, Grok = Tier 2) both pass."
+        )
+
+    st.markdown("---")
     st.markdown("### The Core Confound")
     st.warning(
         "**Can you separate operators in the thinkers from operators in the reader?**\n\n"
         "Every extraction is performed by an LLM. The operator recovered may reflect the reasoning "
         "in the transcript — or it may be a pattern the extractor *projects* onto the transcript "
-        "from its own training. This is the central methodological challenge of the entire program.\n\n"
-        "Phase 0 exists to address it: museum-blind extraction, multi-extractor convergence, and the "
-        "Phase 0B negative control battery (shopping list must produce 0 operators) together test "
-        "whether the pipeline **detects** or **generates**. Preliminary answer from Phase 0B: "
-        "Tier 1-2 extractors detect. Tier 4 extractors generate and are excluded."
+        "from its own training. This is the central methodological challenge of the entire program."
     )
+    _left, _right = st.columns(2)
+    with _left:
+        st.markdown("**How Phase 0 addresses it:**")
+        st.markdown(
+            "- **Museum-blind** — extractors don't see each other's output\n"
+            "- **Multi-extractor convergence** — same signal must appear independently\n"
+            "- **Phase 0B gate** — shopping list must produce zero operators\n"
+            "- **Phase 0C gate** — known-rich text must produce operators"
+        )
+    with _right:
+        st.markdown("**Phase 0B preliminary answer:**")
+        st.markdown(
+            "✅ **Tier 1-2 extractors detect.** Falsification criterion #2 is not met — "
+            "the pipeline does not hallucinate operators when no reasoning is present.\n\n"
+            "❌ **Tier 4 extractors generate** and are excluded from all extraction runs."
+        )
 
     st.markdown("---")
     st.markdown("### Relationship to Trinity Scoring")
@@ -117,36 +195,6 @@ def _render_method():
         st.metric("Extractors Tested", "17")
     with col3:
         st.metric("Methodology", "Museum Blind")
-
-    st.markdown("---")
-    st.markdown("### Phase 0 Progress")
-    st.markdown("""
-| Phase | Focus | Status |
-|-------|-------|--------|
-| **0A** | CFA transcript extraction — 4 files, 2 transcripts × 2 extractors | ✅ Complete |
-| **0B** | Negative control battery — 17 extractors × 8 graduated texts | ✅ Complete |
-| **0C** | Positive control — known-rich transcript to confirm detection works | ⏳ Pending |
-""")
-
-    with st.expander("📊 Phase 0B — Extractor Calibration Battery"):
-        st.markdown(
-            "17 extractors ran across 8 graduated texts (A = shopping list → H = philosophical "
-            "dialogue). Gate test: a shopping list must produce 0 operators."
-        )
-        st.markdown("""
-| Tier | Label | Extractors | Behavior |
-|------|-------|------------|---------|
-| 1 | DISCRIMINATORS | DeepSeek V4 Pro, Claude, Gemma 4 31B, Cogito 671B | Clean gate pass, appropriate gradient A→H |
-| 2 | GATE-PASSERS | GPT-4o, GPT-OSS 20B/120B, Grok, Llama 3.3, Qwen3, MiniMax M3, Nemotron Ultra | Gate pass, flat-ish gradient |
-| 3 | OVER-REFUSERS | Kimi K2.6, Kimi K2.7 Code | Refuse everything including genuine reasoning |
-| 4 | NON-DISCRIMINATORS | LFM2, GLM 5.2, Gemini 2.5 Pro | Gate FAIL — hallucinate operators on shopping lists |
-""")
-        st.success(
-            "**Key finding:** Falsification criterion #2 is NOT met for Tier 1-2 extractors — "
-            "the pipeline detects operators, it does not generate them. Tier 4 extractors DO "
-            "generate and are excluded from the pipeline. The extractors used in Phase 0A "
-            "(Claude = Tier 1, Grok = Tier 2) both pass."
-        )
 
 
 # ── Tab 2 ──────────────────────────────────────────────────────────────────────

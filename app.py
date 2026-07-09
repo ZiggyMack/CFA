@@ -13,7 +13,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 # Import page modules
-from views import landing, console, about, manual, brute_ledger, chat_assistant, verbose_manifesto, matrix, cognitive_archaeology
+from views import landing, console, about, manual, brute_ledger, chat_assistant, verbose_manifesto, matrix, cognitive_archaeology, mission_control
 
 # Page configuration - wrapped to handle session conflicts
 try:
@@ -91,6 +91,12 @@ def render_sidebar():
                 st.session_state.page = 'matrix'
                 st.rerun()
 
+            st.markdown("---")
+            st.caption("Creator")
+            if st.button("🎛️ Mission Control", use_container_width=True, key="nav_mc"):
+                st.session_state.page = 'mission_control'
+                st.rerun()
+
 # Main router
 def main():
     # Render sidebar navigation
@@ -115,6 +121,8 @@ def main():
         verbose_manifesto.render()
     elif st.session_state.page == 'matrix':
         matrix.render()
+    elif st.session_state.page == 'mission_control':
+        mission_control.render()
 
 if __name__ == "__main__":
     main()
