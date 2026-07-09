@@ -519,77 +519,135 @@ def _render_worldview_fingerprints():
         "before full excavation begins. Operator presence data flows in via SYNC_IN as excavation proceeds."
     )
 
+    # ── Excavation Map ─────────────────────────────────────────────────────────
     st.markdown("---")
-    st.markdown("### Theistic Frameworks")
+    st.markdown("### Excavation Map")
+    st.caption("13 worldviews in the CFA library. Active dig sites are highlighted — pending sites await.")
 
-    with st.expander("⛏️ **Classical Theism** — Dig Site 000 Primary Site — Phase 0A Complete"):
+    _GROUPS = [
+        ("Theistic", [
+            ("Classical Theism",   "excavated", "⛏️ Phase 0A Complete"),
+            ("Process Theology",   "pending",   "⬜ Awaiting"),
+            ("Islam",              "pending",   "⬜ Awaiting"),
+            ("Hinduism",           "pending",   "⬜ Awaiting"),
+            ("Judaism",            "pending",   "⬜ Awaiting"),
+            ("Mormonism",          "pending",   "⬜ Awaiting"),
+            ("Eastern Orthodoxy",  "pending",   "⬜ Awaiting"),
+            ("Protestantism",      "pending",   "⬜ Awaiting"),
+            ("Catholicism",        "pending",   "⬜ Awaiting"),
+        ]),
+        ("Naturalistic", [
+            ("Methodological Naturalism", "pending", "⬜ Awaiting"),
+        ]),
+        ("Eastern & Philosophical", [
+            ("Gnosticism",  "excavated", "⛏️ Phase 0A — Origin Site"),
+            ("Buddhism",    "partial",   "🔬 Preliminary Observation"),
+            ("Jainism",     "pending",   "⬜ Awaiting"),
+        ]),
+    ]
+
+    _COLOR = {
+        "excavated": ("#1a6b50", "white"),
+        "partial":   ("#1a4f68", "white"),
+        "pending":   ("#e0e2ec", "#50506a"),
+    }
+
+    for group_label, sites in _GROUPS:
+        st.markdown(f"**{group_label}**")
+        cols = st.columns(4)
+        for i, (name, status, label) in enumerate(sites):
+            bg, fg = _COLOR[status]
+            cols[i % 4].markdown(
+                f"<div style='background:{bg};border-radius:8px;padding:0.6rem 0.5rem;"
+                f"text-align:center;color:{fg};margin-bottom:0.4rem;line-height:1.35'>"
+                f"<div style='font-size:0.8rem;font-weight:600'>{name}</div>"
+                f"<div style='font-size:0.7rem;opacity:0.8;margin-top:0.2rem'>{label}</div>"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
+        st.markdown("")  # breathing room between groups
+
+    # ── Active Dig Sites ───────────────────────────────────────────────────────
+    st.markdown("---")
+    st.markdown("### Active Dig Sites")
+    st.caption("Only worldviews with actual extraction data are expanded here.")
+
+    with st.expander("⛏️ Classical Theism — Dig Site 000 Primary Site — Phase 0A Complete"):
         st.markdown(
             "Classical Theism transcripts are the primary excavation site for Dig Site 000. "
             "Phase 0A ran 4 museum-blind extractions against Framework-G deliberation sessions "
             "(Claude × 2 transcripts, Grok × 2 transcripts). Formal admission evaluated 2026-07-08."
         )
+        c1, c2, c3, c4 = st.columns(4)
+        c1.metric("Transcripts", "4")
+        c2.metric("Operators Admitted", "2")
+        c3.metric("Rediscoveries", "2 × OP-007")
+        c4.metric("Held", "1")
         st.markdown("**Phase 0A outcomes:**")
         st.markdown(
-            "- **Admitted to Museum:** OP-008 (Symmetry Testing of Standards), "
+            "- **Admitted:** OP-008 (Symmetry Testing of Standards), "
             "OP-009 (Contested ≠ Defeated) — both 6/6 criteria PASS\n"
-            "- **OP-007 rediscoveries (×2):** 'Metric Separation' = OP-007 at metric layer; "
+            "- **OP-007 ×2 rediscoveries:** 'Metric Separation' = OP-007 at metric layer; "
             "'Meta-dispute Detection' = OP-007 at meta-dispute layer — adds CFA as a third "
             "independent recovery site for OP-007\n"
-            "- **Held candidate:** Concession Pricing — 4/4 convergence, marginal on criteria 5-6; "
-            "pending second evaluation from future dig sites\n"
-            "- **Sessions:** 4 transcripts extracted · Museum-blind · Evaluator: Repo (Claude Opus 4.6)"
+            "- **Held candidate:** Concession Pricing — 4/4 convergence but marginal on criteria 5-6; "
+            "revisit when recovered at a second dig site\n"
+            "- **Sessions:** Museum-blind · Evaluator: Repo (Claude Opus 4.6)"
         )
 
-    for wv in ["Process Theology", "Islam", "Hinduism", "Judaism",
-               "Mormonism", "Eastern Orthodoxy", "Protestantism", "Catholicism"]:
-        with st.expander(f"⬜ **{wv}** — Pending"):
-            st.caption("No CA extraction data yet. Will populate as Dig Site 000 proceeds.")
-
-    st.markdown("### Naturalistic Frameworks")
-
-    with st.expander("⬜ **Methodological Naturalism** — Pending"):
-        st.caption("No CA extraction data yet. Will populate as Dig Site 000 proceeds.")
-
-    st.markdown("### Eastern & Philosophical Frameworks")
-
-    with st.expander("⛏️ **Buddhism** — Preliminary Observation (Phase 0A)"):
-        st.markdown(
-            "**Differential Presence Finding:**\n\n"
-            "Phase 0A preliminary data suggests Buddhism transcripts show differential "
-            "operator presence compared to the Classical Theism baseline. Buddhism's "
-            "zero-CRUX, zero-DI, zero-CP profile across 48 control runs (336 "
-            "metric-deliberations) is itself a negative CA finding — the experiential/"
-            "phenomenological grounding does not generate the contested grounding "
-            "relations that trigger diagnostic operators.\n\n"
-            "*Positive operator frequency data pending full extraction protocol.*"
-        )
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.metric("Dig Site", "000")
-        with col2:
-            st.metric("Phase", "0A")
-        with col3:
-            st.metric("Key Finding", "Zero diagnostic events")
-
-    with st.expander("⛏️ **Gnosticism / Framework-G** — Dig Site 000 Source Transcripts"):
+    with st.expander("⛏️ Gnosticism / Framework-G — Dig Site 000 Origin Site — Phase 0A Complete"):
         st.markdown(
             "Framework-G (Consciousness as Telos) deliberation transcripts are the **source material** "
             "for Dig Site 000 Phase 0A. OP-008 and OP-009 — the two CFA-origin operators — were "
             "recovered from Framework-G adversarial deliberation sessions.\n\n"
-            "This makes Gnosticism the *origin worldview* of the CFA-contributed operators. The adversarial "
-            "deliberation structure of Framework-G evaluations produced the specific reasoning dynamics "
-            "that OP-008 (Symmetry Testing) and OP-009 (Contested ≠ Defeated) describe."
+            "This makes Gnosticism the *origin worldview* of the CFA-contributed operators. "
+            "The adversarial deliberation structure of Framework-G evaluations produced the specific "
+            "reasoning dynamics that OP-008 (Symmetry Testing) and OP-009 (Contested ≠ Defeated) describe."
         )
-        col1, col2 = st.columns(2)
-        with col1:
-            st.metric("Operators Sourced", "2")
-        with col2:
-            st.metric("Phase", "0A Complete")
+        c1, c2 = st.columns(2)
+        c1.metric("Operators Sourced", "2")
+        c2.metric("Phase", "0A Complete")
         st.caption("OP-008 (Symmetry Testing of Standards) · OP-009 (Contested ≠ Defeated)")
 
-    with st.expander("⬜ **Jainism** — Pending"):
-        st.caption("No CA extraction data yet. Will populate as Dig Site 000 proceeds.")
+    with st.expander("🔬 Buddhism — Preliminary Observation (Phase 0A)"):
+        st.markdown("**Differential Presence Finding:**")
+        st.markdown(
+            "Buddhism transcripts show differential operator presence compared to the "
+            "Classical Theism baseline. Buddhism's zero-CRUX, zero-DI, zero-CP profile "
+            "across 48 control runs (336 metric-deliberations) is itself a CA finding — "
+            "the experiential/phenomenological grounding does not generate the contested "
+            "grounding relations that trigger diagnostic operators.\n\n"
+            "*Positive operator frequency data pending full extraction protocol.*"
+        )
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Dig Site", "000")
+        c2.metric("Phase", "0A Preliminary")
+        c3.metric("Key Finding", "Zero diagnostic events")
 
+    # ── Awaiting Excavation ────────────────────────────────────────────────────
+    st.markdown("---")
+    with st.expander("⬜ Awaiting Excavation — 10 worldviews pending"):
+        st.caption(
+            "These worldviews are in the CFA profile library and have Trinity/lever data, "
+            "but have not yet been run through the CA extraction protocol. "
+            "They will be queued for Dig Site 000 after Phase 0C completes."
+        )
+        st.markdown("""
+| Worldview | Category | Trinity Data | Notes |
+|-----------|----------|-------------|-------|
+| Process Theology | Theistic | ✅ 131 runs | — |
+| Methodological Naturalism | Naturalistic | ✅ 94 runs | — |
+| Islam | Theistic | ⬜ | Profile only |
+| Hinduism | Theistic | ⬜ | Profile only |
+| Judaism | Theistic | ⬜ | Profile only |
+| Mormonism | Theistic | ⬜ | Profile only |
+| Eastern Orthodoxy | Theistic | ⬜ | Profile only |
+| Protestantism | Theistic | ⬜ | Profile only |
+| Catholicism | Theistic | ⬜ | Profile only |
+| Jainism | Eastern | ⬜ | Profile only |
+""")
+
+    # ── Saturation Criterion ───────────────────────────────────────────────────
     st.markdown("---")
     st.markdown("### Saturation Criterion")
     st.markdown(
