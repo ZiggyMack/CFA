@@ -68,6 +68,8 @@ def render():
     st.markdown("---")
     _render_research_status()
     st.markdown("---")
+    _render_theoretical_grounding()
+    st.markdown("---")
     _render_open_loops()
 
 
@@ -281,6 +283,72 @@ def _render_research_status():
         st.caption("614 worldview (259 Golden + 355 Control) · +88 calib/legacy · Source: BRIEFING_20260709_ARMADA_STATUS")
 
 
+# ── Theoretical Grounding ─────────────────────────────────────────────────────
+
+def _render_theoretical_grounding():
+    _section_card("⚛️", "Theoretical Grounding",
+                  "ISP-CFA structural bridge — key implications from the Barandes study (2026-07-10)",
+                  "#3a2a6a")
+
+    TG, TGBG = "#3a2a6a", "#f5f0ff"
+
+    insights = [
+        (
+            "⚛️", "ARMADA = Axiom 2 Estimation",
+            "ISP Axiom 2 states the laws of nature are sparse conditional probabilities. "
+            "Lever calibration (10+ golden runs per pairing averaged to YAML finals) is the "
+            "empirical measurement procedure for exactly this. ARMADA is not building a scoring "
+            "system; it is estimating the sparse conditional probability matrix of a cognitive ISP.",
+            "Barandes ISP study · Q1–Q22",
+        ),
+        (
+            "🔗", "Per-matchup design is ontologically mandated",
+            "A41 confirmed: conditional probabilities are pair-dependent, not system-intrinsic. "
+            "There is no universal CT coherence-impact score — only CT×PT, CT×MdN, CT×G values. "
+            "The per-matchup YAML structure is correct by ISP's own logic. Cross-opponent "
+            "lever portability cannot be assumed without a separate calibration run.",
+            "Barandes ISP study · A41",
+        ),
+        (
+            "🌀", "Buddhism zero-CRUX = ISP prediction, not failure",
+            "Zero CRUX across 48 control runs confirms that division events require classical "
+            "correlation density. Control runs (no identity loading) lack the interaction density "
+            "to form that correlation. The golden batch comparison is now a formal ISP experiment: "
+            "does identity loading restore non-zero crux rates?",
+            "Prediction: golden crux rate will be non-zero · design batch to test explicitly",
+        ),
+        (
+            "🏛️", "Cognitive Architecture Extraction emerging",
+            "The Barandes Q1–Q40 protocol produced a replicable structure: internal mechanics → "
+            "cognitive operators → meta-scientific methodology → cross-disciplinary bridges. "
+            "This skeleton is extractable as a standalone CAE template for subsequent thinkers. "
+            "Barandes is Case Study #1.",
+            "Next: formalize Q1–Q40 skeleton as replicable CAE protocol · Repo Claude staging",
+        ),
+    ]
+
+    row1_l, row1_r = st.columns(2)
+    row2_l, row2_r = st.columns(2)
+    grid = [row1_l, row1_r, row2_l, row2_r]
+
+    for i, (icon, title, body, footer) in enumerate(insights):
+        with grid[i]:
+            st.markdown(
+                f'<div style="border:1.5px solid {TG};border-radius:10px;'
+                f'padding:1rem 1.1rem;background:{TGBG};margin-bottom:0.8rem">'
+                f'<div style="font-size:1.25rem;margin-bottom:0.35rem">{icon}</div>'
+                f'<div style="font-size:0.87rem;font-weight:700;color:#222;'
+                f'margin-bottom:0.4rem">{title}</div>'
+                f'<div style="font-size:0.79rem;color:#555;line-height:1.5;'
+                f'margin-bottom:0.45rem">{body}</div>'
+                f'<div style="font-size:0.73rem;color:{TG};font-weight:600;'
+                f'border-top:1px solid {TG}25;padding-top:0.35rem;'
+                f'font-style:italic">{footer}</div>'
+                f'</div>',
+                unsafe_allow_html=True,
+            )
+
+
 # ── Open Loops ────────────────────────────────────────────────────────────────
 
 def _render_open_loops():
@@ -291,9 +359,9 @@ def _render_open_loops():
     # Count line
     st.markdown(
         '<div style="font-size:0.8rem;color:#888;margin-bottom:0.6rem">'
-        '<span style="color:#c97000;font-weight:700">1 medium</span>'
+        '<span style="color:#c97000;font-weight:700">2 medium</span>'
         '&nbsp;·&nbsp;'
-        '<span style="color:#1a4f68;font-weight:700">3 low</span>'
+        '<span style="color:#1a4f68;font-weight:700">4 low</span>'
         '</div>',
         unsafe_allow_html=True,
     )
@@ -320,6 +388,33 @@ def _render_open_loops():
         f'</div>'
         f'<div style="font-size:0.78rem;color:{AM};font-weight:700;border-top:1px solid {AM}30;'
         f'padding-top:0.45rem">→ Action: pass a known-rich Framework-G transcript to Repo Claude via SYNC_OUT</div>'
+        f'</div></div></div>',
+        unsafe_allow_html=True,
+    )
+
+    # ── MEDIUM 2 — CAE Protocol ───────────────────────────────────────────────
+    st.markdown(
+        f'<div style="border:1.5px solid {AM};border-radius:10px;'
+        f'padding:1rem 1.25rem;background:{ABG};margin-bottom:0.8rem">'
+        f'<div style="display:flex;align-items:flex-start;gap:0.9rem">'
+        f'<div style="font-size:1.6rem;line-height:1;margin-top:0.1rem">🏛️</div>'
+        f'<div style="flex:1">'
+        f'<div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem">'
+        f'<span style="background:{AM};color:white;border-radius:4px;padding:0.1rem 0.5rem;'
+        f'font-size:0.7rem;font-weight:700;letter-spacing:0.08em">MEDIUM</span>'
+        f'<span style="font-size:0.95rem;font-weight:700;color:#222">'
+        f'CAE Protocol — formalize the Barandes extraction template</span>'
+        f'</div>'
+        f'<div style="font-size:0.83rem;color:#555;line-height:1.55;margin-bottom:0.6rem">'
+        f'The Barandes Q1–Q40 study produced a replicable multi-pass structure: internal mechanics '
+        f'(Q1–15) → cross-disciplinary bridge (Q16–20) → meta-scientific operators (Q21–35) → '
+        f'discovery methodology (Q36–40). Extracting that skeleton as a standalone Cognitive '
+        f'Architecture Extraction (CAE) template enables the same protocol to run against '
+        f'subsequent thinkers without rebuilding from scratch. Barandes is Case Study #1.'
+        f'</div>'
+        f'<div style="font-size:0.78rem;color:{AM};font-weight:700;border-top:1px solid {AM}30;'
+        f'padding-top:0.45rem">→ Strip Barandes-specific content from Q1–Q40 → '
+        f'standalone CAE template → Repo Claude for Nyquist staging</div>'
         f'</div></div></div>',
         unsafe_allow_html=True,
     )
@@ -396,3 +491,30 @@ def _render_open_loops():
             f'</div></div></div>',
             unsafe_allow_html=True,
         )
+
+    # ── 4th LOW — Buddhism golden batch as ISP experiment ─────────────────────
+    st.markdown("")
+    st.markdown(
+        f'<div style="border:1.5px solid {LC};border-radius:10px;'
+        f'padding:1rem 1.25rem;background:{LBG}">'
+        f'<div style="display:flex;align-items:flex-start;gap:0.7rem">'
+        f'<div style="font-size:1.4rem;line-height:1;margin-top:0.1rem">⚛️</div>'
+        f'<div style="flex:1">'
+        f'<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem">'
+        f'<span style="background:{LC};color:white;border-radius:4px;padding:0.1rem 0.45rem;'
+        f'font-size:0.7rem;font-weight:700;letter-spacing:0.08em">LOW</span>'
+        f'<span style="font-size:0.85rem;font-weight:700;color:#222">'
+        f'Buddhism golden batch = ISP crux-rate prediction test</span>'
+        f'</div>'
+        f'<div style="font-size:0.8rem;color:#555;line-height:1.5;margin-bottom:0.5rem">'
+        f'A41 confirmed: division events require classical correlation density (identity loading). '
+        f'The control batch zero-CRUX is an ISP prediction, not instrument failure. The golden '
+        f'(identity-loaded) batch is now a formal ISP experiment: does identity loading restore '
+        f'non-zero crux rates? Record crux rate and crux content, compare against the control baseline (0.0).'
+        f'</div>'
+        f'<div style="font-size:0.76rem;color:{LC};font-weight:700;border-top:1px solid {LC}30;'
+        f'padding-top:0.4rem">→ Design golden batch to explicitly test the ISP prediction; '
+        f'include crux-rate comparison in the results briefing</div>'
+        f'</div></div></div>',
+        unsafe_allow_html=True,
+    )
