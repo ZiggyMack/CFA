@@ -213,8 +213,8 @@ def _render_research_status():
         'Research at a glance</div>'
         '<div style="display:grid;grid-template-columns:repeat(3,1fr);'
         'gap:0.5rem;text-align:center">'
-        '<div><div style="font-size:2.2rem;font-weight:700;color:#1a4f68">702</div>'
-        '<div style="font-size:0.8rem;color:#666">Trinity Runs</div></div>'
+        '<div><div style="font-size:2.2rem;font-weight:700;color:#1a4f68">614</div>'
+        '<div style="font-size:0.8rem;color:#666">Worldview Runs</div></div>'
         '<div><div style="font-size:2.2rem;font-weight:700;color:#1a4f68">9</div>'
         '<div style="font-size:0.8rem;color:#666">Museum Operators</div></div>'
         '<div><div style="font-size:2.2rem;font-weight:700;color:#c97000">0C ⏳</div>'
@@ -277,8 +277,8 @@ def _render_research_status():
                 f'{left}{right_html}</div>'
             )
         st.markdown(f'<div style="margin-bottom:0.8rem">{html}</div>', unsafe_allow_html=True)
-        st.metric("Total Runs", "702")
-        st.caption("Source: BRIEFING_20260709_ARMADA_STATUS · as of 2026-07-09")
+        st.metric("Total Runs", "614")
+        st.caption("614 worldview (259 Golden + 355 Control) · +88 calib/legacy · Source: BRIEFING_20260709_ARMADA_STATUS")
 
 
 # ── Open Loops ────────────────────────────────────────────────────────────────

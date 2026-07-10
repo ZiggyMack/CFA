@@ -265,7 +265,185 @@ trinity_scores_by_matchup:
         - "Spread IS the signal — golden 0.9–2.1 vs control ~0.0"
         - "LS only metric where identity raises Claude (+1.35) — possible 5-Part Scaffold analytical value"
       symmetric_experiment_needed: "MdN-as-subject (Claude PRO-MdN, Grok ANTI-MdN) required for symmetric MdN profile"
-  
+
+  vs_process_theology:
+    experiment_id: "CFA-CT-VS-PT-BATCH-20260703"
+    session_ids:
+      golden:
+        - "20260702_231307"
+        - "20260702_233611"
+        - "20260703_000454"
+        - "20260703_003145"
+        - "20260703_005840"
+        - "20260703_012447"
+        - "20260703_014529"
+        - "20260703_021107"
+        - "20260703_023755"
+        - "20260703_025846"
+      control:
+        - "20260703_071338"
+        - "20260703_072038"
+        - "20260703_072808"
+        - "20260703_073536"
+        - "20260703_074408"
+        - "20260703_075227"
+        - "20260703_080135"
+        - "20260703_081059"
+        - "20260703_081958"
+        - "20260703_083008"
+
+    identity_condition: "external_identity"
+    score_audit_status: "VALIDATED — sign-off extraction fix applied (first-line parse, YELLOW before RED). 40 clean runs total. 0 extraction failures."
+
+    # Per-metric results (Phase 1 golden condition, 10 runs, final-round scores)
+    # Stance: ct_vs_pt — Claude ANTI-CT from PT perspective, Grok PRO-CT
+    # Source: CT_VS_PT_RESULTS_20260703.md; raw runs folder 1/ (golden), folder 2/ (control)
+    metrics:
+      BFI:
+        full_name: "Beings, Foundational Importance"
+        claude_mean: 7.71
+        claude_sd: 0.60
+        claude_range: [6.5, 8.4]
+        grok_mean: 8.42
+        grok_sd: 0.61
+        grok_range: [7.1, 9.1]
+        spread: 0.71
+        convergence_pct: 92.9
+        avg_rounds: 2.3
+        combined_midpoint: 8.07
+        stability: "medium"
+        crux_rate: "1/10"
+        identity_delta_claude: -0.28
+        identity_delta_grok: +0.48
+        divergence_layer: "Beliefs"
+        notes: "Lowest friction metric (1/10 crux, 2.3r). Shared theistic ground: both CT and PT affirm beings matter in relation to God. Grok PRO-CT identity marginally elevates score (+0.48): defending CT's ontological participation claim against PT is easy because PT makes analogous claims. Claude ANTI-CT modest pull (-0.28): even a PT-perspective challenger grants CT's BFI claim. 0.71 spread persists because CT grounds importance in necessary being while PT grounds it in creative advance — same conclusion, different metaphysical path."
+
+      CA:
+        full_name: "Causal Attribution"
+        claude_mean: 6.02
+        claude_sd: 0.58
+        claude_range: [5.0, 6.9]
+        grok_mean: 7.12
+        grok_sd: 0.63
+        grok_range: [6.0, 8.0]
+        spread: 1.10
+        convergence_pct: 89.0
+        avg_rounds: 3.5
+        combined_midpoint: 6.57
+        stability: "medium"
+        crux_rate: "3/10"
+        identity_delta_claude: -1.15
+        identity_delta_grok: -0.25
+        divergence_layer: "Beliefs"
+        notes: "30% crux rate. PT's process-relational critique targets CT's causal categories (final causality, divine conservation, transitive causation). Claude ANTI-CT identity pulls CA sharply down (-1.15): process perspective questions whether CT's causal categories map onto physical causation or redescribe it metaphorically. Grok PRO-CT barely affected (-0.25): CT's causal narrative (first cause, sustaining causation) is coherent to defend as structurally sound even if not empirically testable. Dispute at the level of whether Aristotelian final causation is a genuine explanatory category."
+
+      IP:
+        full_name: "Intellectual Pedigree"
+        claude_mean: 7.40
+        claude_sd: 0.71
+        claude_range: [6.1, 8.4]
+        grok_mean: 8.30
+        grok_sd: 0.64
+        grok_range: [6.8, 8.9]
+        spread: 0.90
+        convergence_pct: 91.0
+        avg_rounds: 2.9
+        combined_midpoint: 7.85
+        stability: "medium"
+        crux_rate: "3/10"
+        identity_delta_claude: -1.78
+        identity_delta_grok: -0.68
+        divergence_layer: "Perceptions"
+        notes: "Largest Claude identity pull in this matchup (-1.78). Control grants CT IP ≈ 9.18 — Aquinas, Aristotle, Augustine are agreed historical fact for naked models. PT-perspective identity forces definitional specificity: does pedigree mean systematic depth and historical continuity (CT wins) or contemporary philosophical relevance and science integration (PT has a case). Grok PRO-CT drop (-0.68): defending CT's pedigree against PT requires conceding PT also has serious pedigree (Whitehead, Hartshorne, Cobb). 3/10 cruxes declared but 91.0% convergence — impasse is stable, not escalating."
+
+      ES:
+        full_name: "Explanatory Scope"
+        claude_mean: 6.06
+        claude_sd: 0.59
+        claude_range: [5.0, 7.0]
+        grok_mean: 7.27
+        grok_sd: 0.84
+        grok_range: [6.0, 8.5]
+        spread: 1.21
+        convergence_pct: 87.9
+        avg_rounds: 3.3
+        combined_midpoint: 6.67
+        stability: "medium"
+        crux_rate: "3/10"
+        identity_delta_claude: -1.63
+        identity_delta_grok: -0.37
+        divergence_layer: "Definitions"
+        notes: "Second-largest Claude identity drop (-1.63). PT-perspective challenger cannot concede ES to CT without undermining PT's own scope claims — both frameworks cover consciousness, morality, evolution, aesthetics. Claude must argue PT's scope is richer or at least equivalent, pulling CT's score down. Grok PRO-CT barely affected (-0.37): CT's centuries of systematic coverage across all theological domains is easy to assert. Definitional split: formal theological coverage of all domains (CT wins) vs metaphysically naturalistic-compatible coverage (PT has advantage)."
+
+      LS:
+        full_name: "Logical Soundness"
+        claude_mean: 6.39
+        claude_sd: 0.60
+        claude_range: [5.4, 7.2]
+        grok_mean: 7.44
+        grok_sd: 0.50
+        grok_range: [6.8, 8.1]
+        spread: 1.05
+        convergence_pct: 89.5
+        avg_rounds: 3.5
+        combined_midpoint: 6.92
+        stability: "medium"
+        crux_rate: "4/10"
+        identity_delta_claude: -0.25
+        identity_delta_grok: +0.31
+        divergence_layer: "Expectations"
+        notes: "Highest crux rate in this matchup (4/10). CT's classical metaphysics (divine simplicity, immutability, pure act) is precisely what PT was designed to challenge as internally inconsistent — the tension between an unchanging God who genuinely relates to a changing world is a formal logical problem PT explicitly names. Control LS (6.64/7.13) reflects base model agreement on CT's formal coherence. Identity splits on whether 'coherent within its own axioms' (Grok PRO-CT) is sufficient or whether the axiom set contains unresolved tensions (Claude ANTI-CT). Both identity deltas small: cruxes are declared but neither auditor dramatically moves from base — the impasse is genuine, not inflated by calibration."
+
+      MS:
+        full_name: "Moral Substance"
+        claude_mean: 6.82
+        claude_sd: 0.53
+        claude_range: [5.8, 7.6]
+        grok_mean: 7.64
+        grok_sd: 0.62
+        grok_range: [6.7, 8.5]
+        spread: 0.82
+        convergence_pct: 91.8
+        avg_rounds: 2.7
+        combined_midpoint: 7.23
+        stability: "medium"
+        crux_rate: "1/10"
+        identity_delta_claude: -1.62
+        identity_delta_grok: -0.88
+        divergence_layer: "Beliefs"
+        notes: "Low crux rate (1/10) despite large identity pull on both auditors. Both CT and PT ground morality in divine character. The challenge from PT's perspective is not CT's moral content but the coherence of grounding morality in an immutable God who cannot be genuinely affected by creaturely suffering. Large Claude drop (-1.62): PT-perspective forces engagement with divine immutability and moral responsiveness. Grok drop also meaningful (-0.88): defending CT's moral framework against PT's relational alternative requires engaging the tradeoffs. High convergence despite pulls suggests both find stable equilibrium in the 7-range."
+
+      PS:
+        full_name: "Practical Significance"
+        claude_mean: 5.90
+        claude_sd: 0.46
+        claude_range: [5.2, 6.6]
+        grok_mean: 6.72
+        grok_sd: 0.31
+        grok_range: [6.4, 7.3]
+        spread: 0.82
+        convergence_pct: 91.9
+        avg_rounds: 3.4
+        combined_midpoint: 6.31
+        stability: "high"
+        crux_rate: "3/10"
+        identity_delta_claude: -2.03
+        identity_delta_grok: -1.10
+        divergence_layer: "Perceptions"
+        notes: "Largest identity pull for both auditors in this matchup (Claude -2.03, Grok -1.10). Control PS grants CT 7.94/7.81 — base models see CT as practically significant for vast populations. Double identity pull (both down) signals the perception layer: identities shift what counts as 'practically significant' without changing factual reach data. PT-perspective challenge: is CT's institutional reach genuine transformation or entrenchment? PRO-CT defense must engage PT's claim to offer more ethically responsive guidance for contemporary challenges. 30% crux rate reflects genuine disagreement about practical efficacy criteria."
+
+    batch_summary:
+      avg_convergence_pct: 90.6
+      avg_convergence_sd: 1.8
+      avg_rounds: 3.1
+      avg_rounds_sd: 0.5
+      total_crux_declarations: 18
+      avg_crux_per_run: 1.8
+      extraction_warnings: "0 of ~140 calls"
+      control_avg_convergence_pct: 97.8
+      control_avg_rounds: 1.8
+      key_finding: "CT finds PT the softest opponent in the 3×3 triangle (90.6% conv vs 85.8% against MdN). Shared theistic ground dampens friction — both affirm God, purpose, and foundational importance. PF_I is CT's largest lever vulnerability when PT challenges (-1.22 identity pull in Phase 2): process-relational critique targets CT's instrumental pragmatism. LS has the highest crux rate (4/10): CT's classical metaphysics (divine simplicity, immutability) is PT's primary formal target."
+
   # Phase 2 Lever Calibration — full condition data
   # Source: TRINITY2_PHASE2_RESULTS_20260630.md
   # Design: 2×2 (CT subject × golden/control), 10 clean runs per cell
@@ -684,13 +862,13 @@ calculated:
 # Matchup levers: adversarially calibrated in the specific CT-vs-opponent experiment context
 levers_by_matchup:
   vs_process_theology:
-    calibration_context: "CFA-EXP1-BATCH-20260703, CT golden (Claude ANTI-CT from PT perspective / Grok PRO-CT, PT as adversarial lens)"
-    collective_coherence_impact: 7.33
-    epistemic_debt_burden: 7.91
-    paternalistic_force_interventionist: 5.78
-    paternalistic_force_epistemic: 7.65
-    asymmetry_risk: 7.87
-    meta_governance: 8.01
+    calibration_context: "CFA-CT-VS-PT-BATCH-20260703, CT golden (Claude ANTI-CT from PT perspective / Grok PRO-CT, PT as adversarial lens); 10 golden + 10 control Phase 2 runs"
+    collective_coherence_impact: 7.14
+    epistemic_debt_burden: 7.67
+    paternalistic_force_interventionist: 5.45
+    paternalistic_force_epistemic: 7.36
+    asymmetry_risk: 7.68
+    meta_governance: 7.79
   vs_methodological_naturalism:
     calibration_context: "TRINITY2-PHASE2-20260630, CT golden (Claude PRO-CT / Grok ANTI-CT, MdN as adversarial lens)"
     collective_coherence_impact: 6.53
