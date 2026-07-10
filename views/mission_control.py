@@ -283,11 +283,12 @@ def _render_research_status():
         st.caption("614 worldview (259 Golden + 355 Control) · +88 calib/legacy · Source: BRIEFING_20260709_ARMADA_STATUS")
 
 
-# ── Theoretical Grounding ─────────────────────────────────────────────────────
+# ── What's Cooking ────────────────────────────────────────────────────────────
 
 def _render_theoretical_grounding():
-    _section_card("⚛️", "Theoretical Grounding",
-                  "ISP-CFA structural bridge — key implications from the Barandes study (2026-07-10)",
+    _section_card("🍳🥚", "What's Cooking?",
+                  "New theoretical terrain opening up — what the Barandes ISP study unlocked "
+                  "and where the research is headed next",
                   "#3a2a6a")
 
     TG, TGBG = "#3a2a6a", "#f5f0ff"
