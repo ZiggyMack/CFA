@@ -293,7 +293,7 @@ def _render_open_loops():
         '<div style="font-size:0.8rem;color:#888;margin-bottom:0.6rem">'
         '<span style="color:#c97000;font-weight:700">1 medium</span>'
         '&nbsp;·&nbsp;'
-        '<span style="color:#1a4f68;font-weight:700">2 low</span>'
+        '<span style="color:#1a4f68;font-weight:700">3 low</span>'
         '</div>',
         unsafe_allow_html=True,
     )
@@ -324,9 +324,9 @@ def _render_open_loops():
         unsafe_allow_html=True,
     )
 
-    # ── LOW — side by side ────────────────────────────────────────────────────
+    # ── LOW — three across ────────────────────────────────────────────────────
     LC, LBG = "#1a4f68", "#f0f5fa"
-    col_l, col_r = st.columns(2)
+    col_l, col_r, col_b = st.columns(3)
 
     with col_l:
         st.markdown(
@@ -370,6 +370,29 @@ def _render_open_loops():
             f'</div>'
             f'<div style="font-size:0.76rem;color:{LC};font-weight:700;border-top:1px solid {LC}30;'
             f'padding-top:0.4rem">→ Awareness item — no action required now</div>'
+            f'</div></div></div>',
+            unsafe_allow_html=True,
+        )
+
+    with col_b:
+        st.markdown(
+            f'<div style="border:1.5px solid {LC};border-radius:10px;'
+            f'padding:1rem 1.1rem;background:{LBG}">'
+            f'<div style="display:flex;align-items:flex-start;gap:0.7rem">'
+            f'<div style="font-size:1.4rem;line-height:1;margin-top:0.1rem">🌀</div>'
+            f'<div style="flex:1">'
+            f'<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem">'
+            f'<span style="background:{LC};color:white;border-radius:4px;padding:0.1rem 0.45rem;'
+            f'font-size:0.7rem;font-weight:700;letter-spacing:0.08em">LOW</span>'
+            f'<span style="font-size:0.85rem;font-weight:700;color:#222">Opponent-vs-Buddhism blocks pending</span>'
+            f'</div>'
+            f'<div style="font-size:0.8rem;color:#555;line-height:1.5;margin-bottom:0.5rem">'
+            f'MdN, PT, and G each need trinity_scores_by_matchup.vs_buddhism. Control '
+            f'scores exist (0 CRUX, 1.6 avg rounds) but the golden (identity) batch '
+            f'hasn\'t run. Apply the full package once external-identity batch completes.'
+            f'</div>'
+            f'<div style="font-size:0.76rem;color:{LC};font-weight:700;border-top:1px solid {LC}30;'
+            f'padding-top:0.4rem">→ Hold for Buddhism golden batch, then apply mdn/pt/g vs_buddhism blocks</div>'
             f'</div></div></div>',
             unsafe_allow_html=True,
         )
