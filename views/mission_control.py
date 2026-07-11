@@ -217,9 +217,9 @@ def _render_research_status():
         'gap:0.5rem;text-align:center">'
         '<div><div style="font-size:2.2rem;font-weight:700;color:#1a4f68">614</div>'
         '<div style="font-size:0.8rem;color:#666">Worldview Runs</div></div>'
-        '<div><div style="font-size:2.2rem;font-weight:700;color:#1a4f68">9</div>'
+        '<div><div style="font-size:2.2rem;font-weight:700;color:#1a4f68">15</div>'
         '<div style="font-size:0.8rem;color:#666">Museum Operators</div></div>'
-        '<div><div style="font-size:2.2rem;font-weight:700;color:#c97000">0C ⏳</div>'
+        '<div><div style="font-size:2.2rem;font-weight:700;color:#aaaaaa">Full ⬜</div>'
         '<div style="font-size:0.8rem;color:#666">CA Next Phase</div></div>'
         '</div></div>',
         unsafe_allow_html=True,
@@ -237,7 +237,7 @@ def _render_research_status():
         phases = [
             ("0A",   "CFA transcript extraction",              "✅ Complete",   "#1a6b50"),
             ("0B",   "Negative control battery (17 extractors)", "✅ Complete", "#1a6b50"),
-            ("0C",   "Positive control",                       "⏳ Pending",    "#c97000"),
+            ("0C",   "Positive control (4/4 extractors, 91–100%)", "✅ Complete", "#1a6b50"),
             ("Full", "Systematic worldview excavation",        "⬜ Not started","#aaaaaa"),
         ]
         html = ""
@@ -248,10 +248,10 @@ def _render_research_status():
         st.markdown(f'<div style="margin-bottom:0.8rem">{html}</div>', unsafe_allow_html=True)
 
         c1, c2, c3 = st.columns(3)
-        c1.metric("Museum", "9 operators")
+        c1.metric("Museum", "15 operators")
         c2.metric("Saturation", "0.50")
         c3.metric("Held", "1 candidate")
-        st.caption("Phase 0C blocker: known-rich CFA transcript (Framework-G preferred) → Repo Claude")
+        st.caption("Pipeline fully calibrated — 0A ✅ 0B ✅ 0C ✅ · Next: systematic worldview excavation")
 
     with col_trinity:
         st.markdown(
@@ -360,40 +360,15 @@ def _render_open_loops():
     # Count line
     st.markdown(
         '<div style="font-size:0.8rem;color:#888;margin-bottom:0.6rem">'
-        '<span style="color:#c97000;font-weight:700">2 medium</span>'
+        '<span style="color:#c97000;font-weight:700">1 medium</span>'
         '&nbsp;·&nbsp;'
         '<span style="color:#1a4f68;font-weight:700">4 low</span>'
         '</div>',
         unsafe_allow_html=True,
     )
 
-    # ── MEDIUM — full width ───────────────────────────────────────────────────
+    # ── MEDIUM — CAE Protocol ─────────────────────────────────────────────────
     AM, ABG = "#c97000", "#fffbf0"
-    st.markdown(
-        f'<div style="border:1.5px solid {AM};border-radius:10px;'
-        f'padding:1rem 1.25rem;background:{ABG};margin-bottom:0.8rem">'
-        f'<div style="display:flex;align-items:flex-start;gap:0.9rem">'
-        f'<div style="font-size:1.6rem;line-height:1;margin-top:0.1rem">📋</div>'
-        f'<div style="flex:1">'
-        f'<div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem">'
-        f'<span style="background:{AM};color:white;border-radius:4px;padding:0.1rem 0.5rem;'
-        f'font-size:0.7rem;font-weight:700;letter-spacing:0.08em">MEDIUM</span>'
-        f'<span style="font-size:0.95rem;font-weight:700;color:#222">'
-        f'CA Phase 0C — positive control transcript needed</span>'
-        f'</div>'
-        f'<div style="font-size:0.83rem;color:#555;line-height:1.55;margin-bottom:0.6rem">'
-        f'Repo Claude needs a known-rich CFA deliberation transcript (Framework-G preferred) '
-        f'to run the positive control extraction battery — confirming the pipeline detects '
-        f'operators when they are genuinely present. Phase 0C is the last calibration step '
-        f'before full excavation begins.'
-        f'</div>'
-        f'<div style="font-size:0.78rem;color:{AM};font-weight:700;border-top:1px solid {AM}30;'
-        f'padding-top:0.45rem">→ Action: pass a known-rich Framework-G transcript to Repo Claude via SYNC_OUT</div>'
-        f'</div></div></div>',
-        unsafe_allow_html=True,
-    )
-
-    # ── MEDIUM 2 — CAE Protocol ───────────────────────────────────────────────
     st.markdown(
         f'<div style="border:1.5px solid {AM};border-radius:10px;'
         f'padding:1rem 1.25rem;background:{ABG};margin-bottom:0.8rem">'
