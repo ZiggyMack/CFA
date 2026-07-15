@@ -41,6 +41,20 @@ def render_sidebar():
         [data-testid="stSidebarNav"] {
             display: none;
         }
+        /* Allow dataframe cells to wrap instead of clipping */
+        .dataframe td {
+            white-space: normal !important;
+            word-wrap: break-word !important;
+            max-width: 280px;
+        }
+        /* Keep headers on one line */
+        .dataframe thead th {
+            white-space: nowrap;
+        }
+        /* Horizontal scroll on wide tables rather than clipping */
+        [data-testid="stDataFrame"] > div {
+            overflow-x: auto;
+        }
         </style>
     """, unsafe_allow_html=True)
 
