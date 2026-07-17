@@ -1,20 +1,20 @@
 ﻿# Existentialism - Canonical Score Data
 # Purpose: Machine-readable YPA scores — preliminary draft from web research
 # Sources: Stanford Encyclopedia of Philosophy, Internet Encyclopedia of Philosophy, Wikipedia
-# Status: DRAFT — not auditor-validated; requires Grok deliberation before promotion
+# Status: AUDITED-PRELIMINARY — n=1 deliberated scores from CFA Trinity breadth pass
 # Note: Scores reflect the broad existentialist tradition (Sartre, Camus, Heidegger, de Beauvoir)
-# Last Updated: 2026-06-30
+# Last Updated: 2026-07-17
 
 profile:
   name: "Existentialism"
-  version: "0.1.0"
-  status: "DRAFT"
+  version: "0.2.0"
+  status: "AUDITED-PRELIMINARY"
   declared_axiom: "Existence precedes essence; humans are radically free and therefore absolutely responsible for what they make of themselves; there is no pre-given human nature or external moral authority"
   alternate_names:
     - "Existential Philosophy"
     - "Sartrean Existentialism"
     - "Absurdism (adjacent)"
-  last_updated: "2026-06-30"
+  last_updated: "2026-07-17"
   maintainers:
     - "Ziggy"
     - "CFA-Claude"
@@ -54,34 +54,232 @@ debts:
   - name: "Relativism risk"
     description: "If each person creates their own values, how do we criticize the authentic Nazi? Existentialists have responses, but the problem is genuinely difficult"
 
-# Levers: VuDu Light scoring dimensions (0-10 scale)
-# PRELIMINARY — web research estimates, not deliberation-validated
-levers:
-  collective_coherence_impact: 7.0    # CCI — coherent as a philosophical stance; multiple schools reduce unified-system coherence
-  epistemic_debt_burden: 8.0          # EDB — directly confronts existential dread rather than resolving it; anxiety is embraced, not escaped
-  paternalistic_force_interventionist: 4.0  # PF-I — low instrumental fertility; not focused on world-manipulation
-  paternalistic_force_epistemic: 8.5       # PF-E — high existential fertility: authenticity, freedom, meaning-making are its core gifts
-  asymmetry_risk: 7.0                 # AR — phenomenological rigor; honest about groundlessness; limited self-correction mechanism
-  meta_governance: 6.5                # MG — ethics of authenticity and responsibility; thinner than religious moral systems; de Beauvoir adds thickness
+# Levers: deliberated per-matchup values (flat web-research block removed 2026-07-17;
+# prior lever_sum/YPA retained under calculated.priors_web_research for provenance)
+levers_by_matchup:
+  vs_classical_theism:
+    collective_coherence_impact: 6.1
+    epistemic_debt_burden: 6.05
+    paternalistic_force_interventionist: 3.75
+    paternalistic_force_epistemic: 6.9
+    asymmetry_risk: 6.0
+    meta_governance: 4.8
+    source: "P2 external vs CT, blend(claude,grok), n=1, 2026-07-17"
+
+  vs_methodological_naturalism:
+    collective_coherence_impact: 5.75
+    epistemic_debt_burden: 6.25
+    paternalistic_force_interventionist: 3.75
+    paternalistic_force_epistemic: 7.4
+    asymmetry_risk: 5.55
+    meta_governance: 5.4
+    source: "P2 external vs MdN, blend(claude,grok), n=1, 2026-07-17"
+
+  control_baseline_ct:
+    collective_coherence_impact: 5.6
+    epistemic_debt_burden: 5.1
+    paternalistic_force_interventionist: 5.5
+    paternalistic_force_epistemic: 7.95
+    asymmetry_risk: 7.9
+    meta_governance: 6.0
+    source: "P2 control (base model) vs CT, blend(claude,grok), n=1, 2026-07-17"
 
 behavioral_flags:
   admits_limits: true
 
-audit_status: "PENDING — preliminary values from web research (SEP, IEP, Wikipedia), 2026-06-30. Requires Claude/Grok 5-Part Scaffold deliberation before promotion to validated status."
+audit_status: "AUDITED-PRELIMINARY (n=1) — deliberated scores from CFA Trinity breadth pass 2026-07-17 (vs CT + vs MdN external, CT control baseline). Source: 0_results/runs/cfa_trinity/EXST/. n=10 depth pass pending."
 
-# Calculated values
+# Deliberated Phase-1 quality scores (n=1 breadth pass, 2026-07-17)
+trinity_scores_by_matchup:
+
+  vs_classical_theism:
+    batch_id: "CFA-BREADTH-20260717-EXSTvCT"
+    condition: "external"
+    phase: 1
+    runs_good: 1
+    runs_total: 1
+    session: "S7_cfa_trinity_20260716_231648.json"
+    score_audit_status: "AUDITED-PRELIMINARY — n=1 breadth run, 2026-07-17"
+    metrics:
+      BFI:
+        full_name: "Beings, Foundational Importance"
+        claude_score: 8.0
+        grok_score: 7.1
+        combined_midpoint: 7.55
+        convergence: 0.91
+        crux_declared: false
+      CA:
+        full_name: "Causal Attribution"
+        claude_score: 5.3
+        grok_score: 5.1
+        combined_midpoint: 5.2
+        convergence: 0.98
+        crux_declared: false
+      IP:
+        full_name: "Intellectual Pedigree"
+        claude_score: 7.9
+        grok_score: 7.2
+        combined_midpoint: 7.55
+        convergence: 0.93
+        crux_declared: false
+      ES:
+        full_name: "Explanatory Scope"
+        claude_score: 6.2
+        grok_score: 5.3
+        combined_midpoint: 5.75
+        convergence: 0.91
+        crux_declared: false
+      LS:
+        full_name: "Logical Soundness"
+        claude_score: 6.5
+        grok_score: 5.6
+        combined_midpoint: 6.05
+        convergence: 0.91
+        crux_declared: false
+      MS:
+        full_name: "Moral Substance"
+        claude_score: 6.7
+        grok_score: 5.9
+        combined_midpoint: 6.3
+        convergence: 0.92
+        crux_declared: false
+      PS:
+        full_name: "Practical Significance"
+        claude_score: 6.5
+        grok_score: 6.3
+        combined_midpoint: 6.4
+        convergence: 0.98
+        crux_declared: false
+
+  vs_methodological_naturalism:
+    batch_id: "CFA-BREADTH-20260717-EXSTvMdN"
+    condition: "external"
+    phase: 1
+    runs_good: 1
+    runs_total: 1
+    session: "S7_cfa_trinity_20260717_065602.json"
+    score_audit_status: "AUDITED-PRELIMINARY — n=1 breadth run, 2026-07-17"
+    metrics:
+      BFI:
+        full_name: "Beings, Foundational Importance"
+        claude_score: 6.7
+        grok_score: 5.3
+        combined_midpoint: 6.0
+        convergence: 0.86
+        crux_declared: true
+      CA:
+        full_name: "Causal Attribution"
+        claude_score: 4.5
+        grok_score: 3.7
+        combined_midpoint: 4.1
+        convergence: 0.92
+        crux_declared: false
+      IP:
+        full_name: "Intellectual Pedigree"
+        claude_score: 7.3
+        grok_score: 6.8
+        combined_midpoint: 7.05
+        convergence: 0.95
+        crux_declared: false
+      ES:
+        full_name: "Explanatory Scope"
+        claude_score: 6.7
+        grok_score: 6.3
+        combined_midpoint: 6.5
+        convergence: 0.96
+        crux_declared: false
+      LS:
+        full_name: "Logical Soundness"
+        claude_score: 7.2
+        grok_score: 4.4
+        combined_midpoint: 5.8
+        convergence: 0.72
+        crux_declared: true
+      MS:
+        full_name: "Moral Substance"
+        claude_score: 6.6
+        grok_score: 5.1
+        combined_midpoint: 5.85
+        convergence: 0.85
+        crux_declared: true
+      PS:
+        full_name: "Practical Significance"
+        claude_score: 6.2
+        grok_score: 5.2
+        combined_midpoint: 5.7
+        convergence: 0.9
+        crux_declared: false
+
+  control_baseline_ct:
+    batch_id: "CFA-BREADTH-20260717-EXSTvCT"
+    condition: "control"
+    phase: 1
+    runs_good: 1
+    runs_total: 1
+    session: "S7_cfa_trinity_20260717_142358.json"
+    score_audit_status: "AUDITED-PRELIMINARY — n=1 breadth run, 2026-07-17"
+    metrics:
+      BFI:
+        full_name: "Beings, Foundational Importance"
+        claude_score: 8.5
+        grok_score: 8.5
+        combined_midpoint: 8.5
+        convergence: 1.0
+        crux_declared: false
+      CA:
+        full_name: "Causal Attribution"
+        claude_score: 5.7
+        grok_score: 5.8
+        combined_midpoint: 5.75
+        convergence: 0.99
+        crux_declared: false
+      IP:
+        full_name: "Intellectual Pedigree"
+        claude_score: 8.3
+        grok_score: 8.0
+        combined_midpoint: 8.15
+        convergence: 0.97
+        crux_declared: false
+      ES:
+        full_name: "Explanatory Scope"
+        claude_score: 5.5
+        grok_score: 5.5
+        combined_midpoint: 5.5
+        convergence: 1.0
+        crux_declared: false
+      LS:
+        full_name: "Logical Soundness"
+        claude_score: 6.2
+        grok_score: 6.0
+        combined_midpoint: 6.1
+        convergence: 0.98
+        crux_declared: false
+      MS:
+        full_name: "Moral Substance"
+        claude_score: 6.8
+        grok_score: 7.0
+        combined_midpoint: 6.9
+        convergence: 0.98
+        crux_declared: false
+      PS:
+        full_name: "Practical Significance"
+        claude_score: 6.5
+        grok_score: 6.5
+        combined_midpoint: 6.5
+        convergence: 1.0
+        crux_declared: false
+
+# Calculated values — BFT unchanged (matches run-time BFT); YPA now deliberated
 calculated:
   axiom_count: 6
   debt_count: 4
-  bft_standard: 10.0    # (6 + 4) * 1.0
-  lever_sum: 41.0
-  ypa_standard: 4.10    # 41.0 / 10.0
-
-  skeptic_bft: 12.0
-  skeptic_ypa: 3.42
-
-  diplomat_bft: 9.0
-  diplomat_ypa: 4.56
-
-  zealot_bft: 7.0
-  zealot_ypa: 5.86
+  bft_standard: 10.0
+  lever_sum_vs_classical_theism: 33.6
+  ypa_vs_classical_theism: 3.36
+  lever_sum_vs_methodological_naturalism: 34.1
+  ypa_vs_methodological_naturalism: 3.41
+  lever_sum_control_ct: 38.05
+  ypa_control_ct: 3.8
+  priors_web_research:   # superseded by deliberated values 2026-07-17
+    lever_sum: 41.0
+    ypa_standard: 4.1

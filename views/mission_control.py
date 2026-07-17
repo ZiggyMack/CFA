@@ -179,13 +179,14 @@ def _build_coverage():
         ts = data.get('trinity_scores_by_matchup', {}) or {}
         trinity_keys = [
             k for k, v in ts.items()
-            if isinstance(v, dict) and 'metrics' in v and k != 'control_baseline_pooled'
+            if isinstance(v, dict) and 'metrics' in v and not k.startswith('control')
         ]
 
         lm = data.get('levers_by_matchup', {}) or {}
         lever_keys = [
             k for k, v in lm.items()
             if isinstance(v, dict) and 'collective_coherence_impact' in v
+            and not k.startswith('control')
         ]
 
         rows.append({
@@ -365,7 +366,7 @@ def _render_open_loops():
         '<div style="font-size:0.8rem;color:#888;margin-bottom:0.6rem">'
         '<span style="color:#c97000;font-weight:700">1 medium</span>'
         '&nbsp;·&nbsp;'
-        '<span style="color:#1a4f68;font-weight:700">5 low</span>'
+        '<span style="color:#1a4f68;font-weight:700">4 low</span>'
         '</div>',
         unsafe_allow_html=True,
     )
@@ -498,29 +499,3 @@ def _render_open_loops():
         unsafe_allow_html=True,
     )
 
-    # ── 5th LOW — Breadth YAML update pending ────────────────────────────────
-    st.markdown("")
-    st.markdown(
-        f'<div style="border:1.5px solid {LC};border-radius:10px;'
-        f'padding:1rem 1.25rem;background:{LBG}">'
-        f'<div style="display:flex;align-items:flex-start;gap:0.7rem">'
-        f'<div style="font-size:1.4rem;line-height:1;margin-top:0.1rem">📝</div>'
-        f'<div style="flex:1">'
-        f'<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem">'
-        f'<span style="background:{LC};color:white;border-radius:4px;padding:0.1rem 0.45rem;'
-        f'font-size:0.7rem;font-weight:700;letter-spacing:0.08em">LOW</span>'
-        f'<span style="font-size:0.85rem;font-weight:700;color:#222">'
-        f'8 breadth YAML profiles need deliberated scores populated</span>'
-        f'</div>'
-        f'<div style="font-size:0.8rem;color:#555;line-height:1.5;margin-bottom:0.5rem">'
-        f'OJ / LDS / ISL / HIN / EXST / ERR / NULL / DES profiles still carry web-research priors. '
-        f'Deliberated Phase-1 (BFI/CA/IP/ES/LS/MS/PS) and Phase-2 lever scores (CCI/EDB/PF_I/PF_E/AR/MG) '
-        f'now exist in 0_results/runs/cfa_trinity/&lt;CODE&gt;/. YAMLs should be updated to replace priors '
-        f'and advance audit_status from DRAFT to AUDITED-PRELIMINARY (n=1).'
-        f'</div>'
-        f'<div style="font-size:0.76rem;color:{LC};font-weight:700;border-top:1px solid {LC}30;'
-        f'padding-top:0.4rem">→ Extract from raw JSONs per RUN_DATA_LOCATION_FOR_CFA_20260717; '
-        f'update trinity_scores_by_matchup + levers_by_matchup blocks in each YAML</div>'
-        f'</div></div></div>',
-        unsafe_allow_html=True,
-    )
