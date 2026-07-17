@@ -215,7 +215,7 @@ def _render_research_status():
         'Research at a glance</div>'
         '<div style="display:grid;grid-template-columns:repeat(3,1fr);'
         'gap:0.5rem;text-align:center">'
-        '<div><div style="font-size:2.2rem;font-weight:700;color:#1a4f68">614</div>'
+        '<div><div style="font-size:2.2rem;font-weight:700;color:#1a4f68">663</div>'
         '<div style="font-size:0.8rem;color:#666">Worldview Runs</div></div>'
         '<div><div style="font-size:2.2rem;font-weight:700;color:#1a4f68">15</div>'
         '<div style="font-size:0.8rem;color:#666">Museum Operators</div></div>'
@@ -261,11 +261,12 @@ def _render_research_status():
             unsafe_allow_html=True,
         )
         batches = [
-            ("Classical Theism",          "136", "Mature",      "#1a6b50"),
-            ("Methodological Naturalism", "94",  "Validated",   "#1a6b50"),
-            ("Gnosticism",                "212", "Largest set", "#1a6b50"),
-            ("Process Theology",          "131", "Validated",   "#1a6b50"),
-            ("Buddhism",                  "41",  "Newest",      "#c97000"),
+            ("Classical Theism",          "136", "Mature",        "#1a6b50"),
+            ("Methodological Naturalism", "94",  "Validated",     "#1a6b50"),
+            ("Gnosticism",                "212", "Largest set",   "#1a6b50"),
+            ("Process Theology",          "131", "Validated",     "#1a6b50"),
+            ("Buddhism",                  "41",  "Newest",        "#c97000"),
+            ("8 Breadth Worldviews",      "48",  "n=1 complete",  "#5a3a8a"),
         ]
         html = ""
         for framework, runs, note, color in batches:
@@ -279,8 +280,8 @@ def _render_research_status():
                 f'{left}{right_html}</div>'
             )
         st.markdown(f'<div style="margin-bottom:0.8rem">{html}</div>', unsafe_allow_html=True)
-        st.metric("Total Runs", "614")
-        st.caption("614 worldview (259 Golden + 355 Control) · +88 calib/legacy · Source: BRIEFING_20260709_ARMADA_STATUS")
+        st.metric("Total Runs", "663")
+        st.caption("663 worldview (259 Golden + 355 Control + 49 Breadth) · +88 calib/legacy · Breadth: 8×6 runs + B-control · BREADTH_SCORECARD_20260717")
 
 
 # ── What's Cooking ────────────────────────────────────────────────────────────
@@ -303,20 +304,22 @@ def _render_theoretical_grounding():
             "Barandes ISP study · Q1–Q22",
         ),
         (
-            "🔗", "Per-matchup design is ontologically mandated",
-            "A41 confirmed: conditional probabilities are pair-dependent, not system-intrinsic. "
-            "There is no universal CT coherence-impact score — only CT×PT, CT×MdN, CT×G values. "
-            "The per-matchup YAML structure is correct by ISP's own logic. Cross-opponent "
-            "lever portability cannot be assumed without a separate calibration run.",
-            "Barandes ISP study · A41",
+            "🔗", "Per-matchup design is ontologically mandated — now empirically confirmed",
+            "A41 confirmed pair-dependency by ISP theory. The 8-worldview breadth pass confirmed "
+            "it empirically: holding subject constant and swapping opponent (CT→MdN) produced "
+            "structured, predictable Δ scores — secular frameworks rise against MdN, religious ones "
+            "fall. The sign of Δ sorts cleanly along the secular↔religious axis. Axiom 2 is "
+            "measurable at the individual worldview grain.",
+            "ISP A41 · Breadth opponent effect · OPPONENT_EFFECT_CT_VS_MDN_20260717",
         ),
         (
-            "🌀", "Buddhism zero-CRUX = ISP prediction, not failure",
-            "Zero CRUX across 48 control runs confirms that division events require classical "
-            "correlation density. Control runs (no identity loading) lack the interaction density "
-            "to form that correlation. The golden batch comparison is now a formal ISP experiment: "
-            "does identity loading restore non-zero crux rates?",
-            "Prediction: golden crux rate will be non-zero · design batch to test explicitly",
+            "🗜️", "Identity compresses the score range — control is the uncompressed signal",
+            "New finding from the breadth control grid: Phase-1 spread halves under identity loading "
+            "(3.55 control → 1.72 external). The PRO advocate lifts thin/meta frameworks; the ANTI "
+            "critic lowers rich comprehensive ones. Mean effect ≈ 0 (not inflation), but variance "
+            "collapses. External CFA scores are range-compressed; the external−control delta "
+            "is itself an informative measurement — how far the adversarial frame moves each framework.",
+            "IDENTITY_EFFECT_CONTROLS_20260717 · all 13 worldviews now have control baseline",
         ),
         (
             "🏛️", "Cognitive Architecture Extraction emerging",
@@ -362,7 +365,7 @@ def _render_open_loops():
         '<div style="font-size:0.8rem;color:#888;margin-bottom:0.6rem">'
         '<span style="color:#c97000;font-weight:700">1 medium</span>'
         '&nbsp;·&nbsp;'
-        '<span style="color:#1a4f68;font-weight:700">4 low</span>'
+        '<span style="color:#1a4f68;font-weight:700">5 low</span>'
         '</div>',
         unsafe_allow_html=True,
     )
@@ -491,6 +494,33 @@ def _render_open_loops():
         f'<div style="font-size:0.76rem;color:{LC};font-weight:700;border-top:1px solid {LC}30;'
         f'padding-top:0.4rem">→ Design golden batch to explicitly test the ISP prediction; '
         f'include crux-rate comparison in the results briefing</div>'
+        f'</div></div></div>',
+        unsafe_allow_html=True,
+    )
+
+    # ── 5th LOW — Breadth YAML update pending ────────────────────────────────
+    st.markdown("")
+    st.markdown(
+        f'<div style="border:1.5px solid {LC};border-radius:10px;'
+        f'padding:1rem 1.25rem;background:{LBG}">'
+        f'<div style="display:flex;align-items:flex-start;gap:0.7rem">'
+        f'<div style="font-size:1.4rem;line-height:1;margin-top:0.1rem">📝</div>'
+        f'<div style="flex:1">'
+        f'<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem">'
+        f'<span style="background:{LC};color:white;border-radius:4px;padding:0.1rem 0.45rem;'
+        f'font-size:0.7rem;font-weight:700;letter-spacing:0.08em">LOW</span>'
+        f'<span style="font-size:0.85rem;font-weight:700;color:#222">'
+        f'8 breadth YAML profiles need deliberated scores populated</span>'
+        f'</div>'
+        f'<div style="font-size:0.8rem;color:#555;line-height:1.5;margin-bottom:0.5rem">'
+        f'OJ / LDS / ISL / HIN / EXST / ERR / NULL / DES profiles still carry web-research priors. '
+        f'Deliberated Phase-1 (BFI/CA/IP/ES/LS/MS/PS) and Phase-2 lever scores (CCI/EDB/PF_I/PF_E/AR/MG) '
+        f'now exist in 0_results/runs/cfa_trinity/&lt;CODE&gt;/. YAMLs should be updated to replace priors '
+        f'and advance audit_status from DRAFT to AUDITED-PRELIMINARY (n=1).'
+        f'</div>'
+        f'<div style="font-size:0.76rem;color:{LC};font-weight:700;border-top:1px solid {LC}30;'
+        f'padding-top:0.4rem">→ Extract from raw JSONs per RUN_DATA_LOCATION_FOR_CFA_20260717; '
+        f'update trinity_scores_by_matchup + levers_by_matchup blocks in each YAML</div>'
         f'</div></div></div>',
         unsafe_allow_html=True,
     )
