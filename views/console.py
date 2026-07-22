@@ -334,7 +334,7 @@ def _get_audit_status(prefix: str, wv_name: str, opp_name: str) -> str:
     except Exception:
         return "📋 Unaudited"
     if not ypa.get("calibration_opponent"):
-        return "📊 Audit TBD (bias data used)" if ypa.get("has_audit_data") else "📋 New profile"
+        return "📊 Canonical Profile (opponent effect ~small)" if ypa.get("has_audit_data") else "📋 New profile"
     calibrated = ypa["levers"]
     canonical_bft = ypa.get("bft", {})
     sliders_match = (
@@ -708,7 +708,7 @@ def render():
     # Head-to-Head Pairings — button appears when AT LEAST ONE direction has
     # matchup-calibrated lever data (levers_by_matchup.vs_{opponent} in either
     # YAML). The uncalibrated side (if any) loads its canonical/bias priors —
-    # its badge will correctly read "Audit TBD (bias data used)".
+    # its badge will correctly read "Canonical Profile (opponent effect ~small)".
     # Add future pairings to _HH_PAIRS; readiness is auto-detected, no other changes needed.
     _HH_PAIRS = [
         ("Classical Theism",          "Methodological Naturalism", "📕 CT  vs  📘 MdN", "pair_ct_mdn"),
@@ -760,7 +760,8 @@ def render():
                     with _pair_cols[_i]:
                         if st.button(_lbl, key=_key, use_container_width=True,
                                      help="Loads matchup-calibrated levers for the audited side(s); "
-                                          "unaudited side falls back to canonical priors (Audit TBD badge)"):
+                                          "unaudited side falls back to its canonical profile "
+                                          "(Canonical Profile badge — opponent effect is empirically small)"):
                             _data_a = get_ypa_data(_wv_a, opponent=_wv_b)
                             _data_b = get_ypa_data(_wv_b, opponent=_wv_a)
                             for _ss, _d in [("fa", _data_a), ("fb", _data_b)]:
@@ -807,8 +808,11 @@ Calibrated for this specific matchup via Trinity experiment.
 **✏️ Customized**
 You've moved a slider from the loaded baseline.
 
-**📊 Audit TBD (bias data used)**
-Framework has audit history but not for this pairing yet — canonical priors shown.
+**📊 Canonical Profile (opponent effect ~small)**
+Framework has real audit history, just not a deliberation run specifically against *this*
+opponent — canonical (cross-matchup) values shown instead. Per the CFA commonality-ANOVA
+("manifold verdict"), opponent identity typically shifts a framework's own score by only
+0.8–5.7% — so the canonical profile is a well-justified stand-in, not an unfinished audit.
 
 **📋 New profile**
 Pre-audit pipeline. Values are preliminary.

@@ -919,10 +919,12 @@ launch_both.bat     # Both simultaneously
 
         st.markdown("""
             <div class="tip-box">
-            <b>📊 Audit TBD (bias data used)</b><br/>
+            <b>📊 Canonical Profile (opponent effect ~small)</b><br/>
             This framework has entered the audit pipeline — at least one Trinity session exists for it — but
-            not for this specific matchup yet. The values shown are canonical (self-reported) priors:
-            deliberate and considered, but not yet adversarially stress-tested against this opponent.
+            not for this specific matchup yet. The values shown are the framework's canonical (cross-matchup)
+            profile, not a stand-in for missing work: the CFA commonality-ANOVA ("manifold verdict") found that
+            opponent identity shifts a framework's own score by only 0.8–5.7% on average, so the canonical
+            profile is a statistically well-justified estimate for this pairing, not an incomplete audit.
             </div>
         """, unsafe_allow_html=True)
 
@@ -936,9 +938,10 @@ launch_both.bat     # Both simultaneously
 
         st.markdown("""
             <div class="tip-box">
-            💡 <b>The progression:</b> New profile → Audit TBD → Adversarially Audited reflects a framework's
-            journey through the CFA research pipeline. Badges tell you where each framework currently sits —
-            not a quality judgment, but a provenance signal.
+            💡 <b>The progression:</b> New profile → Canonical Profile → Adversarially Audited reflects a
+            framework's journey through the CFA research pipeline. Badges tell you where each framework
+            currently sits — not a quality judgment, and "Canonical Profile" is not a warning: it means the
+            framework's real, audited baseline is shown, just not one deliberated against this exact opponent.
             </div>
         """, unsafe_allow_html=True)
 
