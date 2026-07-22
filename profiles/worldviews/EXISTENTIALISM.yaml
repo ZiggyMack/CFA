@@ -54,6 +54,16 @@ debts:
   - name: "Relativism risk"
     description: "If each person creates their own values, how do we criticize the authentic Nazi? Existentialists have responses, but the problem is genuinely difficult"
 
+levers:
+  collective_coherence_impact: 7.0    # CCI — coherent as a philosophical stance; multiple schools reduce unified-system coherence
+  epistemic_debt_burden: 8.0          # EDB — directly confronts existential dread rather than resolving it; anxiety is embraced, not escaped
+  paternalistic_force_interventionist: 4.0  # PF-I — low instrumental fertility; not focused on world-manipulation
+  paternalistic_force_epistemic: 8.5       # PF-E — high existential fertility: authenticity, freedom, meaning-making are its core gifts
+  asymmetry_risk: 7.0                 # AR — phenomenological rigor; honest about groundlessness; limited self-correction mechanism
+  meta_governance: 6.5                # MG — ethics of authenticity and responsibility; thinner than religious moral systems; de Beauvoir adds thickness
+
+# NOTE (2026-07-17): the block above is the ORIGINAL web-research canonical prior (pre-experiment baseline — used by Console Bias mode and as the fallback for any opponent pairing without matchup-specific data). Restored after being mistakenly dropped during the breadth-pass update; get_ypa_data() requires this key unconditionally.
+
 # Levers: deliberated per-matchup values (flat web-research block removed 2026-07-17;
 # prior lever_sum/YPA retained under calculated.priors_web_research for provenance)
 levers_by_matchup:

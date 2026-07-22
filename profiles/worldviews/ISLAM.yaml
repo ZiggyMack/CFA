@@ -56,6 +56,16 @@ debts:
   - name: "Science-revelation tensions"
     description: "Apparent conflicts between Quranic cosmology/biology and modern scientific consensus require ongoing reconciliation"
 
+levers:
+  collective_coherence_impact: 8.0    # CCI — strict monotheism provides highly unified worldview; sharia integrates law/ethics/ritual
+  epistemic_debt_burden: 8.5          # EDB — submission (islam) framework absorbs existential dread effectively; afterlife stakes are clear
+  paternalistic_force_interventionist: 5.0  # PF-I — practical guidance strong (halal/haram, finance, governance) but not primarily tool-building
+  paternalistic_force_epistemic: 9.0       # PF-E — extremely high existential fertility: ummah community, ritual structure, eternal purpose
+  asymmetry_risk: 7.0                 # AR — ijtihad tradition enables some self-correction; revelation sets hard limits on revision
+  meta_governance: 8.5                # MG — sharia is one of history's most comprehensive moral-legal frameworks
+
+# NOTE (2026-07-17): the block above is the ORIGINAL web-research canonical prior (pre-experiment baseline — used by Console Bias mode and as the fallback for any opponent pairing without matchup-specific data). Restored after being mistakenly dropped during the breadth-pass update; get_ypa_data() requires this key unconditionally.
+
 # Levers: deliberated per-matchup values (flat web-research block removed 2026-07-17;
 # prior lever_sum/YPA retained under calculated.priors_web_research for provenance)
 levers_by_matchup:

@@ -46,6 +46,16 @@ debts:
   - name: "Value questions unanswered"
     description: "Why value evidence-tracking over other epistemic practices? The preference for empirical truth requires values the null hypothesis cannot itself justify"
 
+levers:
+  collective_coherence_impact: 8.5    # CCI — extremely internally consistent; the principle is clear and unambiguous
+  epistemic_debt_burden: 3.5          # EDB — suspends rather than resolves existential dread; offers no positive comfort
+  paternalistic_force_interventionist: 9.0  # PF-I — very high: scientific method, hypothesis testing, empirical research — all descend from this stance
+  paternalistic_force_epistemic: 2.0       # PF-E — very low existential fertility; deliberately agnostic on meaning, purpose, community
+  asymmetry_risk: 9.5                 # AR — highest possible truth-tracking orientation; designed specifically for asymptotic realism
+  meta_governance: 3.0                # MG — cannot ground moral claims; requires importing external ethics
+
+# NOTE (2026-07-17): the block above is the ORIGINAL web-research canonical prior (pre-experiment baseline — used by Console Bias mode and as the fallback for any opponent pairing without matchup-specific data). Restored after being mistakenly dropped during the breadth-pass update; get_ypa_data() requires this key unconditionally.
+
 # Levers: deliberated per-matchup values (flat web-research block removed 2026-07-17;
 # prior lever_sum/YPA retained under calculated.priors_web_research for provenance)
 levers_by_matchup:
