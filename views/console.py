@@ -705,8 +705,10 @@ def render():
 
     st.sidebar.markdown("---")
 
-    # Head-to-Head Pairings — button only appears when BOTH directions have
-    # matchup-calibrated lever data (levers_by_matchup.vs_{opponent} in each YAML).
+    # Head-to-Head Pairings — button appears when AT LEAST ONE direction has
+    # matchup-calibrated lever data (levers_by_matchup.vs_{opponent} in either
+    # YAML). The uncalibrated side (if any) loads its canonical/bias priors —
+    # its badge will correctly read "Audit TBD (bias data used)".
     # Add future pairings to _HH_PAIRS; readiness is auto-detected, no other changes needed.
     _HH_PAIRS = [
         ("Classical Theism",          "Methodological Naturalism", "📕 CT  vs  📘 MdN", "pair_ct_mdn"),
@@ -715,6 +717,24 @@ def render():
         ("Classical Theism",          "Gnosticism",                "📕 CT  vs  🌀 GN",  "pair_ct_gn"),
         ("Methodological Naturalism", "Gnosticism",                "📘 MdN vs  🌀 GN",  "pair_mdn_gn"),
         ("Process Theology",          "Gnosticism",                "🌊 PT  vs  🌀 GN",  "pair_pt_gn"),
+        # 2026-07-17 breadth pass — forward direction only (worldview_vs_ct/mdn);
+        # reverse (ct/mdn_vs_worldview) not run by design. OR-gate above surfaces these.
+        ("Orthodox Judaism",   "Classical Theism",          "✡️ OJ   vs  📕 CT",  "pair_oj_ct"),
+        ("Orthodox Judaism",   "Methodological Naturalism", "✡️ OJ   vs  📘 MdN", "pair_oj_mdn"),
+        ("Mormonism",          "Classical Theism",          "⭐ LDS  vs  📕 CT",  "pair_lds_ct"),
+        ("Mormonism",          "Methodological Naturalism", "⭐ LDS  vs  📘 MdN", "pair_lds_mdn"),
+        ("Islam",              "Classical Theism",          "☪️ ISL  vs  📕 CT",  "pair_isl_ct"),
+        ("Islam",              "Methodological Naturalism", "☪️ ISL  vs  📘 MdN", "pair_isl_mdn"),
+        ("Hinduism",           "Classical Theism",          "🕉️ HIN  vs  📕 CT",  "pair_hin_ct"),
+        ("Hinduism",           "Methodological Naturalism", "🕉️ HIN  vs  📘 MdN", "pair_hin_mdn"),
+        ("Existentialism",     "Classical Theism",          "🎭 EXST vs  📕 CT",  "pair_exst_ct"),
+        ("Existentialism",     "Methodological Naturalism", "🎭 EXST vs  📘 MdN", "pair_exst_mdn"),
+        ("Error Theory",       "Classical Theism",          "❌ ERR  vs  📕 CT",  "pair_err_ct"),
+        ("Error Theory",       "Methodological Naturalism", "❌ ERR  vs  📘 MdN", "pair_err_mdn"),
+        ("Null Hypothesis",    "Classical Theism",          "⭕ NULL vs  📕 CT",  "pair_null_ct"),
+        ("Null Hypothesis",    "Methodological Naturalism", "⭕ NULL vs  📘 MdN", "pair_null_mdn"),
+        ("Desiderata Believers","Classical Theism",          "🧭 DES  vs  📕 CT",  "pair_des_ct"),
+        ("Desiderata Believers","Methodological Naturalism", "🧭 DES  vs  📘 MdN", "pair_des_mdn"),
     ]
 
     _ready_pairs = []
@@ -722,7 +742,7 @@ def render():
         try:
             _chk_a = get_ypa_data(_wv_a, opponent=_wv_b)
             _chk_b = get_ypa_data(_wv_b, opponent=_wv_a)
-            if _chk_a.get("calibration_opponent") and _chk_b.get("calibration_opponent"):
+            if _chk_a.get("calibration_opponent") or _chk_b.get("calibration_opponent"):
                 _ready_pairs.append((_wv_a, _wv_b, _lbl, _key))
         except Exception:
             pass
@@ -731,7 +751,7 @@ def render():
         st.markdown("**Head-to-Head Pairings:**")
         st.caption("*Sets both A & B in one click*")
         if not _ready_pairs:
-            st.caption("*No fully calibrated pairings yet.*")
+            st.caption("*No calibrated pairings yet.*")
         else:
             for _row_start in range(0, len(_ready_pairs), 3):
                 _row = _ready_pairs[_row_start:_row_start + 3]
@@ -739,7 +759,8 @@ def render():
                 for _i, (_wv_a, _wv_b, _lbl, _key) in enumerate(_row):
                     with _pair_cols[_i]:
                         if st.button(_lbl, key=_key, use_container_width=True,
-                                     help="Both directions calibrated — sets A & B with matchup-specific levers"):
+                                     help="Loads matchup-calibrated levers for the audited side(s); "
+                                          "unaudited side falls back to canonical priors (Audit TBD badge)"):
                             _data_a = get_ypa_data(_wv_a, opponent=_wv_b)
                             _data_b = get_ypa_data(_wv_b, opponent=_wv_a)
                             for _ss, _d in [("fa", _data_a), ("fb", _data_b)]:
