@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-10-03",
+  "native_mcp": {
+    "available": true,
+    "server": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"server_name\":\"comfyui-cloud\",\"server_identity\":\"Comfy Cloud hosted MCP server (https://cloud.comfy.org/mcp)\",\"environment\":\"production\",\"host\":\"https://cloud.comfy.org\",\"version\":\"0.67.0\",\"auth_state\":\"authenticated (OAuth)\",\"tool_count\":41,\"partner_proxy_base_url\":\"https://api.comfy.org\"}"
+        }
+      ]
+    }
+  },
+  "node_names": [
+    "LoadImage",
+    "SaveImage",
+    "KSamplerSelect",
+    "Flux2Scheduler",
+    "CFGGuider",
+    "SamplerCustomAdvanced",
+    "VAEDecode",
+    "RandomNoise",
+    "UNETLoader",
+    "CLIPLoader",
+    "CLIPTextEncode",
+    "ConditioningZeroOut",
+    "EmptyFlux2LatentImage",
+    "GetImageSize",
+    "VAEEncode",
+    "ReferenceLatent",
+    "VAELoader",
+    "ImageScaleToTotalPixels"
+  ],
+  "selected_loader_checks": [
+    {
+      "node": "UNETLoader",
+      "input": "unet_name",
+      "value": "flux-2-klein-9b.safetensors",
+      "present": true
+    },
+    {
+      "node": "CLIPLoader",
+      "input": "clip_name",
+      "value": "qwen_3_8b_fp8mixed.safetensors",
+      "present": true
+    },
+    {
+      "node": "CLIPLoader",
+      "input": "type",
+      "value": "flux2",
+      "present": true
+    },
+    {
+      "node": "VAELoader",
+      "input": "vae_name",
+      "value": "full_encoder_small_decoder.safetensors",
+      "present": true
+    },
+    {
+      "node": "LoraLoaderModelOnly",
+      "input": "lora_name",
+      "value": "flux-2-klein-9b-candid_film.safetensors",
+      "present": true
+    }
+  ],
+  "optional_lora": {
+    "source_url": "https://civitai.com/models/2313101?modelVersionId=2757653",
+    "cloud_filename": "flux-2-klein-9b-candid_film.safetensors",
+    "status": "catalog_and_loader_present; bypassed_by_default; distilled_compatibility_unverified",
+    "creator_example_base": "flux-2-klein-base-9b-fp8.safetensors",
+    "creator_example_strength": 1,
+    "requires_authenticated_download": true,
+    "execution_tested": false
+  },
+  "civitai": {
+    "owned_models": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"data\":[],\"metadata\":{\"total\":0,\"limit\":100,\"offset\":0,\"returned\":0,\"catalog_total\":2317},\"note\":\"No models matched with owned:true, so this Comfy Cloud account has no imported or uploaded models (models you import are flagged owned_by_user). Retry without `owned` to search the shared catalog.\"}"
+        }
+      ]
+    },
+    "civitai_nodes": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"data\":[],\"metadata\":{\"total\":0,\"limit\":30,\"offset\":0,\"returned\":0}}"
+        }
+      ]
+    },
+    "source_filter_note": "Catalog source labels are comfy-cloud and partner; Civitai origin is recorded in individual repo_url fields.",
+    "stored_secret_test": "pending: no model-import/secret-test MCP tool; browser connector failed kernel assets os error 3",
+    "public_metadata_lookup": true
+  },
+  "default_template_model_missing": {
+    "filename": "flux-2-klein-9b-fp8.safetensors",
+    "present_in_live_unet_options": false
+  },
+  "replacement": {
+    "filename": "flux-2-klein-9b.safetensors",
+    "family": "FLUX.2 Klein 9B distilled",
+    "model_card": "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B",
+    "steps": 4,
+    "cfg": 1
+  },
+  "generation_submitted": false
+}

@@ -1,0 +1,815 @@
+welcome to episode 6 of our comfy UI
+0:02
+tutorial series I've created a file with
+0:04
+over 300 art styles and in this video
+0:07
+I'll show you how to use it in comfy UI
+0:10
+this file was originally made for Forge
+0:12
+UI but I found a way to use those
+0:14
+automatic 1111 and Forge art styles
+0:17
+within comfy UI I included a range of
+0:20
+styles from painting and illustration to
+0:22
+Vector photographic and a few
+0:25
+experimental ones that you can enjoy
+0:26
+experimenting with the file I mentioned
+Downloading the Styles File
+0:28
+can be downloaded from go Google Drive
+0:30
+I've included a link in the description
+0:32
+it's a CSV file that lists the name of
+0:34
+each style along with the positive and
+0:36
+negative prompts you can click the
+0:38
+download button to save the file to your
+0:40
+computer then place it in your comfy UI
+0:43
+folder to confirm it's in the right
+0:45
+location make sure you see the main. Pui
+0:48
+file in that folder I will use a basic
+Setting Up the Workflow
+0:51
+sdxl workflow that you can download from
+0:53
+my Discord server in the AI resources
+0:56
+Channel Once you drag it into your
+0:57
+interface it should look similar to this
+0:59
+one just like we did in previous
+1:01
+episodes but before we load that file
+1:04
+let me first explain how to combine two
+1:06
+text prompts into one so that when we
+1:08
+load the file it will make more sense
+1:11
+I'll move the nodes around to create
+1:12
+some space I will copy and paste the
+1:15
+positive prompt node using the control+
+1:17
+C and control+ V shortcuts I'm splitting
+1:20
+the prompt into two parts leaving the
+1:22
+first part in the First node and the
+1:24
+second part in the second node as you
+1:26
+can see if I try to connect the second
+1:27
+node to the positive prompt it will
+1:29
+disconnect the first one but I want both
+1:31
+of them to be used together as one I'll
+1:33
+use a node called conditioning conat for
+1:37
+that you can search for concat in the
+1:39
+node list concat is short for
+1:41
+concatenation which means joining
+1:43
+multiple pieces of information together
+1:45
+now connect the first node to the
+1:47
+conditioning to input and connect the
+1:50
+second node to the conditioning from
+1:52
+input this way both text prompts are
+1:55
+combined in this node concatenating two
+1:57
+text promps is like mixing two flavors
+2:00
+of ice cream to create a new unique
+2:02
+flavor now we can connect this node to
+2:04
+the K sampler positive input if I try to
+2:07
+cue The Prompt and get a notification
+2:09
+about missing input on clip it means I
+2:12
+forgot to connect the clip node to the
+2:13
+low checkpoint clip I'll connect that
+2:16
+and now it should run just fine
+2:18
+producing a robot image from the
+2:20
+combination of those two text prompts I
+2:23
+can replace the robot with something
+2:24
+else like a bunny and I'll get an image
+2:27
+like this we can use more than two
+2:29
+positive promps if we want I'll make
+2:31
+space for another node and copy and
+2:33
+paste the second node don't forget to
+2:35
+link the clip inputs now I'll split the
+2:38
+prompts into three parts you can split
+2:40
+them however you like but I'll do it
+2:42
+like this the first node will be the
+2:44
+subject the second node will contain
+2:47
+details about the subject and the third
+2:49
+node will have information about the
+2:51
+environment there are additional nodes
+2:53
+and settings that allow you to control
+2:54
+how much each prompt influences the
+2:56
+result but I'll cover those in a future
+2:58
+episode if I try to connect the third
+3:00
+node it disconnects the second one so
+3:02
+what can we do we can add another
+3:04
+conditioning concat node I'll make some
+3:06
+space for it now the first and second
+3:08
+prompts are concatenated in this node
+3:10
+and become one you can connect that to
+3:12
+the first input then connect the third
+3:15
+node to the second input finally connect
+3:19
+everything to the positive prompt so the
+3:21
+information from all three text encoders
+3:23
+flows like Rivers merging into a single
+3:25
+stream that goes to the K sampler if I
+3:27
+cue The Prompt I get a robotic bunny
+3:30
+now you can easily change the first
+3:32
+prompt to another animal if you want
+3:34
+however since the prompt is only one
+3:36
+word it doesn't have as much influence
+3:39
+as the robot in this case for example if
+3:42
+I try with bird the result is still more
+3:45
+of a robot than a bird but if I add more
+3:48
+details like a red bird with wings I get
+3:50
+something closer to what I was hoping
+3:52
+for this was just to demonstrate a
+3:54
+simplified version of what comes next
+3:56
+I'm deleting the third node because we
+3:58
+only need two for the styles to work now
+4:01
+if we search for a node to load Styles
+4:03
+or CSV files we don't have one the one
+4:06
+from here is for something else I
+4:08
+searched for a solution for a few days
+4:10
+and eventually found a custom node that
+Using the Styles File
+4:12
+allows us to do that click on the
+4:14
+manager then go to the custom nodes
+4:16
+manager at the top this will let you
+4:18
+install a custom node from the internet
+4:20
+similar to adding an extension that
+4:22
+allows for extra functionality search
+4:24
+for load Styles and you should find the
+4:26
+Styles CSV loader the description
+4:29
+mentions it's useful for migrating
+4:31
+styles from automatic 1111 click the
+4:34
+install button and wait for the
+4:35
+installation to complete after that
+4:38
+press the restart button and a new comfy
+4:40
+UI tab will open with the updated
+4:43
+interface Now search for the node load
+4:46
+Styles and you'll see the new node
+4:48
+called load Styles CSV that you can
+4:51
+select if you put the Styles CSV file in
+4:53
+the correct folder all the art styles
+4:56
+from that file should appear here you
+4:58
+can scroll through the list using the
+5:00
+mouse wheel and use the top search bar
+5:02
+to find a specific style I'll leave it
+5:04
+with no styles for now so you can see
+5:06
+the effect once we select a style from
+5:08
+the list the CSV file contains just
+5:11
+prompts which is why I showed you how to
+5:13
+combine prompts from different nodes
+5:15
+essentially we now want to combine the
+5:17
+positive prompt with the art styles
+5:19
+found in the Styles CSV file when I try
+5:23
+to connect the positive prompt from
+5:25
+Styles it doesn't let me connect to the
+5:27
+K sampers positive prompt or to the clip
+5:29
+input of the prompt so what do we do it
+5:32
+took me a while to figure it out but
+5:34
+here's the solution right click on the
+5:36
+second positive prompt node go to
+5:39
+convert widget to input and select
+5:41
+convert text to input we use this
+5:45
+function in a previous episode with a
+5:46
+primitive node but now it lets you add
+5:49
+the text from styles to the text input
+5:51
+of the text
+5:53
+encoder I'm changing the prompt to
+5:55
+something like a cute bunny in the
+5:56
+forest then I'll arrange the nodes a bit
+5:59
+and test the workflow um without an art
+6:02
+style using the Juggernaut X model we
+6:04
+get something like this now if I select
+6:06
+an art style such as painting abstract
+6:08
+expressionism and cue The Prompt we get
+6:11
+a painting like this you can also search
+6:13
+for styles for example if I search for
+6:15
+cute select Character cartoon cute and
+6:18
+test it I get this cute bunny we have
+6:21
+the positive prompt we added the
+6:23
+positive prompt from Styles and the
+6:25
+negative prompt but the Styles also
+6:27
+include a a negative prompt for each
+6:29
+Style so let's see how we can add that
+6:31
+uh I'm duplicating the negative prompt
+6:33
+node then right clicking to choose
+6:35
+convert widget to input and selecting
+6:38
+convert text to input I'll make it a bit
+6:41
+smaller then I can connect the negative
+6:43
+uh prompt to the clip
+6:45
+input but now we need another
+6:47
+conditioning concat node connect the
+6:49
+negative prompt into this node along
+6:51
+with the negative prompt from the Styles
+6:53
+then link the output of this node to the
+6:56
+K sampler node so now we have loaded the
+7:00
+Styles CSV file into this node and that
+7:03
+file includes both positive and negative
+7:06
+prompts for each style um we have uh the
+7:10
+positive and negative prompts like in
+7:12
+any
+7:13
+workflow the positive prompt uh combined
+7:16
+with the Positive prompt from the Styles
+7:18
+goes to the K sampler the same process
+7:20
+applies to the negative prompt we
+7:22
+combine them and and send them to the
+7:24
+case sampler if I run this workflow I
+7:27
+get this cute little bunny now that we
+7:29
+have a working workflow I prefer to
+Simplifying the Interface
+7:31
+simplify the interface to make it more
+7:33
+compact to do this I select all the
+7:36
+nodes except the save image node using
+7:38
+control then rightclick and choose
+7:41
+convert to group node I name it
+7:43
+something like text to image you know
+7:44
+look how cool and simple it looks now it
+7:46
+doesn't seem so overwhelming anymore
+7:48
+I'll resize it to fit better on my
+7:50
+screen let's see how we can improve this
+7:52
+uh interface even further if I
+7:55
+rightclick on uh this group node there's
+7:58
+an option called manage group node and
+8:01
+from here you can move things around for
+8:02
+example I can move the prompt up and
+8:05
+when I save it the node is updated you
+8:07
+can also hide elements and rename them
+8:10
+I'll try to make it similar to the
+8:11
+automatic Evan 11 and Forge interfaces
+8:14
+from the top we can load the sdxl model
+8:16
+then we have the positive prompt and the
+8:18
+negative prompt it currently says clip
+8:20
+text encode so let's change that using
+8:23
+manage group node from there you can
+8:26
+rename it from the widget options and
+8:28
+save it now it will say negative prompt
+8:31
+next we have the styles that you can
+8:33
+select from the list or search for by
+8:36
+typing for example if I select anime
+8:38
+chibi illustration I get something like
+8:40
+this I added some extra Styles called
+8:43
+experimental uh for example if I test a
+8:45
+Legends digital painting style I get a
+8:47
+nice bunny character similar to game art
+8:50
+you can get even more creative with
+8:52
+Styles like biomechanical Angel it's fun
+8:54
+to experiment so try different prompts
+8:56
+to see what you come up with I organized
+8:59
+them them by categories so if you search
+9:01
+for photo you can see all the
+9:04
+photography Styles if you search for
+9:06
+illustration you'll find different
+9:08
+illustration Styles it also includes
+9:10
+more categories like design and Vector
+9:12
+which cover flat and silhouette Styles
+9:15
+crafts is as great for inspiration if
+9:18
+you're a crafter or for generating
+9:21
+images that resemble Craft products from
+9:24
+Ceramics to sculptures from different
+9:26
+cultures to origami other categories
+9:29
+include painting fashion art 3d and
+9:32
+experimental if I select the cute cyber
+9:35
+ninja style I get this cute 3D character
+9:38
+if you want to avoid being affected by
+9:39
+any art style just choose no style uh
+9:43
+you can save the workflow and give it a
+9:44
+name that makes sense for you I'm saving
+Get The Workflows
+9:47
+and uploading all the workflows from my
+9:49
+episodes to the Discord server and the
+9:52
+easiest way to access the workflows is
+9:54
+to click on the link from my YouTube
+9:56
+channel and accept the invite I've
+9:58
+created a news and updates Channel and
+10:00
+moved all the workflows into the
+10:02
+pixaroma workflows channel each entry
+10:04
+includes the episode number a
+10:06
+description of what it does a preview
+10:08
+and the files you need to work with just
+10:11
+download the Json file and drag it into
+10:13
+your comf uh check other channels like
+10:15
+comfy UI share your art or see what
+10:17
+others have shared you can also share
+10:20
+prompts and explore more AI resources
+Combining Multiple Art Styles
+10:23
+back to the workflow let's convert it
+10:24
+back to nodes and drag the save image
+10:26
+node into view uh now I want to show you
+10:29
+how to combine two art styles since this
+10:31
+will make things more complicated I'll
+10:34
+change the colors of the nodes green for
+10:36
+the positive prompts and red for the
+10:39
+negative prompts I'll also update the
+10:41
+title of each node to make it easier to
+10:43
+identify which prompt comes from the
+10:45
+text and which comes from the uh Styles
+10:48
+uh for the load Styles note I'll use a
+10:50
+yellow color and change the title to
+10:51
+include number one so I can duplicate it
+10:54
+and have another one that includes
+10:55
+number two since I don't have much
+10:58
+experience with nodes it's took me a
+10:59
+while to uh to figure out how to connect
+11:02
+them uh I've created some space between
+11:04
+the positive and negative nodes I
+11:07
+duplicated the positive prompt node the
+11:08
+one used by the first Styles node and
+11:10
+connected it to positive prompt and the
+11:12
+clip then I repeated the process for the
+11:15
+negative prompt duplicated the negative
+11:17
+prompt node and connected it to the
+11:19
+negative prompt and the clip here I had
+11:21
+a bit of a brain freeze and wasn't sure
+11:24
+which connections to make then I thought
+11:26
+let's take it logically we have the
+11:28
+positive text prompt
+11:29
+the one we added and the one from the
+11:31
+first style we just need to combine it
+11:33
+with the second one from the style so I
+11:36
+duplicated the conditioning concat node
+11:39
+I connected the first condition on top
+11:41
+moved it a bit for clarity and then
+11:44
+connected it to the case sampler for the
+11:46
+second input I use the positive prompt
+11:49
+from the second Styles node I fix the
+11:52
+positive prompt and let's do the same
+11:53
+for the negative prompt if this feels
+11:56
+confusing just download the workflow it
+11:58
+will get easy iier over time the more
+12:00
+you play with nodes the more comfortable
+12:02
+you'll become so connect the first
+12:05
+conditioning concat node to the first
+12:07
+input and the second negative prompt
+12:10
+from the art style to the second input
+12:13
+then link everything together the case
+12:15
+sampler uh so this is how it looks
+12:17
+arranged and you can get it from Discord
+12:19
+I have a robot in a cave prompt I'll
+12:23
+select a style like Chinese ink brush
+12:25
+and use a fixed prompt so we can see the
+12:28
+effect it has if I run the workflow I
+12:30
+get a painting like this now let's
+12:32
+deactivate the first style and add a
+12:34
+graffiti style for the second one um
+12:36
+running the workflow gives us something
+12:39
+like this when both Chinese ink graffiti
+12:41
+styles are combined the result uh looks
+12:44
+like this if you're wondering what
+12:45
+happens if you reverse the order of the
+12:48
+Styles the result is almost identical
+12:50
+just like we did with the first workflow
+12:52
+you know you can select all the nodes
+12:55
+and convert them to a group node then
+12:58
+adjust settings uh to look how you want
+13:02
+I've already done that and saved it as a
+13:04
+workflow after you download the workflow
+13:06
+you can simply click load and select the
+13:09
+compact version that looks nice and
+13:11
+clean like here by default no style is
+13:14
+active so if you run the workflow it
+13:15
+will look something like this um I
+13:17
+selected the long exposure style and
+13:19
+when running the prompt robot in the
+13:21
+cave the robot got lost uh due to the
+13:25
+strong effect of the long exposure art
+13:26
+style to balance it out I added a few
+13:30
+few more words to The Prompt if I select
+13:33
+a second style like fantasy portrait I
+13:35
+get a glowing effect keep in mind that
+13:38
+some styles are stronger than others and
+13:40
+can overpower them and for example with
+13:42
+the style flower photography I didn't
+13:44
+get any flowers because the robot the
+13:46
+cave and the long exposure style were
+13:49
+too dominant simple fix is to add
+13:53
+flowers to The
+13:55
+Prompt uh now when I test it I get this
+13:58
+nice scene with flowers uh in the cave
+14:01
+to achieve the desired effect uh try
+14:04
+combining styles from the same category
+14:06
+or similar categories such as photo with
+14:09
+fashion or crafts Vector with
+14:11
+illustration or painting with art for
+14:14
+Vector silhouette combined with logo I
+14:17
+get a nicely styled Vector robot and if
+14:20
+I change the second style to chibi the
+14:22
+result is a chibi looking image now I
+14:25
+can change the first style to something
+14:26
+like manuscript and the second one to
+14:29
+cartoon character and continue
+14:31
+experimenting with different styles uh
+14:33
+for example selecting the Avatar Style
+14:35
+gives me these cute little robots you
+14:37
+can also play with with colors or
+14:41
+introduce other elements into the scene
+14:43
+to further customize your results as you
+14:46
+can see these Styles can be quite useful
+14:48
+once you learn how to connect the load
+14:50
+Styles node properly you can use it in
+14:53
+different workflows with various models
+14:55
+you can edit the styles using the text
+14:57
+editor like notepad or note pad Plus+
+15:00
+but make a copy first in case something
+15:02
+goes wrong or just redownload the Styles
+15:04
+file and replace it if you messed up the
+15:06
+file I struggled for a few hours with
+15:09
+errors just because I manually deleted
+15:11
+some Styles instead of adding and
+15:13
+deleting manually consider using tools
+15:16
+like automatic 1111 style editor or
+15:20
+Forge UI style editor if you do edit
+15:23
+manually it's best to modify an uh an
+15:27
+existing prompt that you don't use
+15:29
+focusing only on the text between the
+15:31
+quotes that's all for today thank you
+15:34
+for watching if you found this episode
+15:36
+helpful please leave a like or a comment
+15:38
+have a great day
+15:44
+[Music]

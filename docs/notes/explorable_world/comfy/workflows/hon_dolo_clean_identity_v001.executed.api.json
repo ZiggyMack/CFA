@@ -1,0 +1,359 @@
+{
+  "76": {
+    "_meta": {
+      "title": "1 - GROK DESIGN: pose, wardrobe and setting"
+    },
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "d7bbaad8ae990775daab8609c534fd8068a3a0a2f4a5cdf89b2f8cb1e99cb686.jpg"
+    }
+  },
+  "121": {
+    "_meta": {
+      "title": "2 - LIKENESS SOURCE: supplied group image"
+    },
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "a5e75d93d4f1cf7a321bafaa52011716210048ea4b2e1ef955732d5025317c0b.png"
+    }
+  },
+  "122": {
+    "_meta": {
+      "title": "4 - SAVE CLEAN LIKENESS: review before finishing"
+    },
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "CFA/HonDolo/clean_identity_v001",
+      "images": [
+        "92:105",
+        0
+      ]
+    }
+  },
+  "153": {
+    "_meta": {
+      "title": "2a - ISOLATE right-hand subject; reset crop for a new source"
+    },
+    "class_type": "ImageCrop",
+    "inputs": {
+      "height": 380,
+      "image": [
+        "121",
+        0
+      ],
+      "width": 300,
+      "x": 430,
+      "y": 5
+    }
+  },
+  "92:101": {
+    "_meta": {
+      "title": "KSamplerSelect"
+    },
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "92:102": {
+    "_meta": {
+      "title": "Flux2Scheduler"
+    },
+    "class_type": "Flux2Scheduler",
+    "inputs": {
+      "height": [
+        "92:114",
+        1
+      ],
+      "steps": 4,
+      "width": [
+        "92:114",
+        0
+      ]
+    }
+  },
+  "92:103": {
+    "_meta": {
+      "title": "CFG Guider"
+    },
+    "class_type": "CFGGuider",
+    "inputs": {
+      "cfg": 1,
+      "model": [
+        "92:107",
+        0
+      ],
+      "negative": [
+        "92:129",
+        0
+      ],
+      "positive": [
+        "92:131",
+        0
+      ]
+    }
+  },
+  "92:104": {
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "guider": [
+        "92:103",
+        0
+      ],
+      "latent_image": [
+        "92:113",
+        0
+      ],
+      "noise": [
+        "92:106",
+        0
+      ],
+      "sampler": [
+        "92:101",
+        0
+      ],
+      "sigmas": [
+        "92:102",
+        0
+      ]
+    }
+  },
+  "92:105": {
+    "_meta": {
+      "title": "VAE Decode"
+    },
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "92:104",
+        0
+      ],
+      "vae": [
+        "92:110",
+        0
+      ]
+    }
+  },
+  "92:106": {
+    "_meta": {
+      "title": "RandomNoise"
+    },
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 42
+    }
+  },
+  "92:107": {
+    "_meta": {
+      "title": "Load Diffusion Model"
+    },
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "flux-2-klein-9b.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "92:108": {
+    "_meta": {
+      "title": "Load CLIP"
+    },
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "device": "default",
+      "type": "flux2"
+    }
+  },
+  "92:109": {
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    },
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "92:108",
+        0
+      ],
+      "text": "Edit image 1. Give its character the recognizable facial identity, apparent age, and hair of the person in image 2, adapting the face naturally to image 1's head angle and lighting. Preserve image 1's body, pose, clothing, jewelry, accessories, framing, and background. Use image 2 for facial identity and hair only; do not copy its clothing or background. Produce one photorealistic person with natural skin texture and believable anatomy. Keep the face and teeth clean for this identity pass: remove facial tattoos and grill. The tattoo artwork and grill will be applied in a later finishing pass."
+    }
+  },
+  "92:110": {
+    "_meta": {
+      "title": "Load VAE"
+    },
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "full_encoder_small_decoder.safetensors"
+    }
+  },
+  "92:111": {
+    "_meta": {
+      "title": "Scale Image to Total Pixels"
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "inputs": {
+      "image": [
+        "76",
+        0
+      ],
+      "megapixels": 1,
+      "resolution_steps": 16,
+      "upscale_method": "lanczos"
+    }
+  },
+  "92:113": {
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "inputs": {
+      "batch_size": 1,
+      "height": [
+        "92:114",
+        1
+      ],
+      "width": [
+        "92:114",
+        0
+      ]
+    }
+  },
+  "92:114": {
+    "_meta": {
+      "title": "Get Image Size"
+    },
+    "class_type": "GetImageSize",
+    "inputs": {
+      "image": [
+        "92:111",
+        0
+      ]
+    }
+  },
+  "92:126": {
+    "_meta": {
+      "title": "Set Reference Latent"
+    },
+    "class_type": "ReferenceLatent",
+    "inputs": {
+      "conditioning": [
+        "92:86",
+        0
+      ],
+      "latent": [
+        "92:127",
+        0
+      ]
+    }
+  },
+  "92:127": {
+    "_meta": {
+      "title": "VAE Encode"
+    },
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "92:111",
+        0
+      ],
+      "vae": [
+        "92:110",
+        0
+      ]
+    }
+  },
+  "92:128": {
+    "_meta": {
+      "title": "Set Reference Latent"
+    },
+    "class_type": "ReferenceLatent",
+    "inputs": {
+      "conditioning": [
+        "92:109",
+        0
+      ],
+      "latent": [
+        "92:127",
+        0
+      ]
+    }
+  },
+  "92:129": {
+    "_meta": {
+      "title": "Set Reference Latent"
+    },
+    "class_type": "ReferenceLatent",
+    "inputs": {
+      "conditioning": [
+        "92:126",
+        0
+      ],
+      "latent": [
+        "92:130",
+        0
+      ]
+    }
+  },
+  "92:130": {
+    "_meta": {
+      "title": "VAE Encode"
+    },
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "92:85",
+        0
+      ],
+      "vae": [
+        "92:110",
+        0
+      ]
+    }
+  },
+  "92:131": {
+    "_meta": {
+      "title": "Set Reference Latent"
+    },
+    "class_type": "ReferenceLatent",
+    "inputs": {
+      "conditioning": [
+        "92:128",
+        0
+      ],
+      "latent": [
+        "92:130",
+        0
+      ]
+    }
+  },
+  "92:85": {
+    "_meta": {
+      "title": "Scale Image to Total Pixels"
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "inputs": {
+      "image": [
+        "153",
+        0
+      ],
+      "megapixels": 1,
+      "resolution_steps": 16,
+      "upscale_method": "lanczos"
+    }
+  },
+  "92:86": {
+    "_meta": {
+      "title": "Conditioning Zero Out"
+    },
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "92:109",
+        0
+      ]
+    }
+  }
+}

@@ -1,0 +1,742 @@
+{
+  "schema_version": 1,
+  "intake_date": "2026-10-07",
+  "recorded_at_utc": "2026-10-07T12:22:43.380570+00:00",
+  "project": "Hon Dolo — Strictly Business",
+  "path_base": "this manifest directory unless an absolute path is explicitly marked at intake",
+  "scope": "Four user-supplied video references; local media integrity and sampled-frame review only. No Cloud execution, compatibility validation or accepted lighting refinement is implied.",
+  "provenance": {
+    "provider": "Gemini",
+    "provider_evidence": "User-stated; filenames agree but do not establish generating model.",
+    "exact_generator_model": null,
+    "model_version": null,
+    "generation_prompts": null,
+    "generation_settings": null,
+    "source_images": null
+  },
+  "review_methods": {
+    "full_video_decode": true,
+    "full_audio_decode": true,
+    "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+    "sampled_frames_per_clip": 16,
+    "selected_full_size_frames_reviewed": true,
+    "selected_clip_cut_boundaries_reviewed": true,
+    "normal_speed_playback_reviewed": false,
+    "audio_listened": false,
+    "cloud_calls_by_intake": 0,
+    "source_files_changed": false,
+    "media_duplicates_among_this_set": false,
+    "additional_dinner_clip_cut_boundaries_reviewed": true
+  },
+  "selected_source_filename": "gemini_generated_video_c0823c60.mp4",
+  "selection_scope": "Direct user preference establishes the next experiment source, not acceptance of every tattoo/grill detail or final production quality.",
+  "design_comparison": {
+    "reference": "../../../casting/grok_intake_20261006/README.md",
+    "casting_brief": "../../../casting/casting_brief.txt",
+    "latest_handoff_retired": [
+      "Chewie lettering",
+      "bird tattoo",
+      "Jabba motif",
+      "dice"
+    ],
+    "first_two_clip_findings": {
+      "status": "Candidate performance/staging examples; not accepted current identity or finished shot.",
+      "retired_details_visible": [
+        "Chewie forehead lettering",
+        "dice on cheek and neck",
+        "large bird on cheek",
+        "Jabba-like cartoon neck mark",
+        "broad gold upper teeth row instead of only two subtle upper canine caps"
+      ],
+      "identity_scope": "These reflect an earlier design. Do not promote their tattoo/grill design over the latest supplied LOCK-FACE direction.",
+      "unverified": [
+        "exact generation model/version and prompts",
+        "source image(s) and settings",
+        "normal-speed smoothness/flicker",
+        "audio content",
+        "lyric timing or lip-sync",
+        "frame-level tattoo and jewelry consistency"
+      ],
+      "recommended_roles": [
+        "shot composition, camera, costume and performance attitude references",
+        "optional single-shot source excerpts for later motion-transfer comparison after full-speed review"
+      ],
+      "non_recommendation": "Do not use either entire montage as a neutral face-reference master or as evidence of current tattoo/grill continuity.",
+      "applies_to_filenames": [
+        "gemini_generated_video_28961248.mp4",
+        "gemini_generated_video_2e361055.mp4"
+      ]
+    },
+    "selected_clip_caveat": "Visible dice above image-right eyebrow remain a source-versus-target discrepancy; do not infer that user source selection reinstates dice.",
+    "dinner_clip_caveat": "The fourth clip also retains brow dice. Its S10A association is a user-directed scene candidate; it does not reinstate retired designs or approve identity continuity."
+  },
+  "sources": [
+    {
+      "filename": "gemini_generated_video_28961248.mp4",
+      "source_relative_path": "../../../references/Gemini Video/gemini_generated_video_28961248.mp4",
+      "source_path_at_intake": "D:/Documents/CFA/docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_28961248.mp4",
+      "bytes": 6513730,
+      "sha256": "cf7359e94ce81c17a356bdc329b3afcb985e623cedeb77fa452a7910979e4e66",
+      "role": "staging_and_performance_reference",
+      "user_selected_for_experiments": false,
+      "accepted_final_identity": false,
+      "accepted_final_production_shot": false,
+      "video": {
+        "codec": "h264",
+        "pixel_format_and_color_tags": "yuv420p(tv, smpte170m/bt709/iec61966-2-1, progressive)",
+        "width": 1280,
+        "height": 720,
+        "fps": 24.0,
+        "decoded_frame_count": 240,
+        "independent_frame_read_count": 240,
+        "nominal_picture_duration_seconds": 10.0,
+        "ffmpeg_count_frames_duration_report_seconds": 10.0,
+        "rounded_container_duration_seconds": 10.01,
+        "stream_headers": [
+          "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, smpte170m/bt709/iec61966-2-1, progressive), 1280x720, 5071 kb/s, 24 fps, 24 tbr, 12288 tbn (default)"
+        ]
+      },
+      "audio": {
+        "present": true,
+        "codec": "aac",
+        "profile": "LC",
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "nominal_bitrate_kbps": 128,
+        "stream_headers": [
+          "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)"
+        ],
+        "decoded_duration_seconds": 10.005333333333333,
+        "measurement_method": "Complete first audio stream decode, downmix to mono PCM s16le at 48 kHz for duration measurement; no saved audio derivative.",
+        "decode_exit_code": 0,
+        "decoded_pcm_bytes": 960512,
+        "listened": false,
+        "song_match_verified": false
+      },
+      "full_av_decode": {
+        "exit_code": 0,
+        "stderr": ""
+      },
+      "normal_speed_playback_reviewed": false,
+      "contact_sheet": {
+        "relative_path": "contact_sheets/gemini_generated_video_28961248.contact_sheet.jpg",
+        "sha256": "28963ee2f276b102a4c1026924ad02dcad4cee2f7e943fbc01e1159ce15d4bd2",
+        "bytes": 750578,
+        "frame_indices": [
+          0,
+          16,
+          32,
+          48,
+          64,
+          80,
+          96,
+          112,
+          127,
+          143,
+          159,
+          175,
+          191,
+          207,
+          223,
+          239
+        ],
+        "sample_timestamps_seconds": [
+          0.0,
+          0.6666666666666666,
+          1.3333333333333333,
+          2.0,
+          2.6666666666666665,
+          3.3333333333333335,
+          4.0,
+          4.666666666666667,
+          5.291666666666667,
+          5.958333333333333,
+          6.625,
+          7.291666666666667,
+          7.958333333333333,
+          8.625,
+          9.291666666666666,
+          9.958333333333334
+        ]
+      },
+      "visual_findings": {
+        "scene": "Hooded performer in a spacecraft cockpit with blue hyperspace streaks; medium pilot angle, face close-ups, side console operation, then a frontal yoke view.",
+        "motion_observed_in_samples": [
+          "changing head/mouth expressions",
+          "arms/hands reposition at console",
+          "two-handed yoke grip in later setup",
+          "multiple viewpoint changes"
+        ],
+        "effects": [
+          "pink/cyan beams crossing the early cockpit frames",
+          "animated light strokes across the face around 5.96-7.29s",
+          "bright near-white/cyan flare at sampled 9.292s"
+        ],
+        "design_evidence_frames": [
+          {
+            "frame": 48,
+            "seconds": 2.0,
+            "finding": "Clear retired forehead/cheek/neck tattoos and broad gold upper grill."
+          },
+          {
+            "frame": 159,
+            "seconds": 6.625,
+            "finding": "Neon stroke crosses nose/eye and cheek area, obscuring detail review."
+          }
+        ],
+        "hands": "No obvious extra-digit defect at inspected full-size frame207/8.625s two-hand yoke grip. This sample does not establish continuous finger/prop contact or stable ring detail.",
+        "limitations": "Several camera setups and strong light effects make the whole clip a poor continuous single-shot performance driver. Split at actual cuts before any later motion transfer; cut boundaries not exhaustively measured.",
+        "possible_shot_roles": [
+          "cockpit rap/performance insert",
+          "travel/hyperspace energy montage",
+          "control/yoke detail insert"
+        ]
+      }
+    },
+    {
+      "filename": "gemini_generated_video_2e361055.mp4",
+      "source_relative_path": "../../../references/Gemini Video/gemini_generated_video_2e361055.mp4",
+      "source_path_at_intake": "D:/Documents/CFA/docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_2e361055.mp4",
+      "bytes": 4883179,
+      "sha256": "fe4100afa5185a9d794f53744f18ef1fe144724a1e7b4cf942b3efa3418035ca",
+      "role": "staging_and_performance_reference",
+      "user_selected_for_experiments": false,
+      "accepted_final_identity": false,
+      "accepted_final_production_shot": false,
+      "video": {
+        "codec": "h264",
+        "pixel_format_and_color_tags": "yuv420p(tv, smpte170m/bt709/iec61966-2-1, progressive)",
+        "width": 1280,
+        "height": 720,
+        "fps": 24.0,
+        "decoded_frame_count": 240,
+        "independent_frame_read_count": 240,
+        "nominal_picture_duration_seconds": 10.0,
+        "ffmpeg_count_frames_duration_report_seconds": 10.0,
+        "rounded_container_duration_seconds": 10.01,
+        "stream_headers": [
+          "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, smpte170m/bt709/iec61966-2-1, progressive), 1280x720, 3766 kb/s, 24 fps, 24 tbr, 12288 tbn (default)"
+        ]
+      },
+      "audio": {
+        "present": true,
+        "codec": "aac",
+        "profile": "LC",
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "nominal_bitrate_kbps": 128,
+        "stream_headers": [
+          "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)"
+        ],
+        "decoded_duration_seconds": 10.005333333333333,
+        "measurement_method": "Complete first audio stream decode, downmix to mono PCM s16le at 48 kHz for duration measurement; no saved audio derivative.",
+        "decode_exit_code": 0,
+        "decoded_pcm_bytes": 960512,
+        "listened": false,
+        "song_match_verified": false
+      },
+      "full_av_decode": {
+        "exit_code": 0,
+        "stderr": ""
+      },
+      "normal_speed_playback_reviewed": false,
+      "contact_sheet": {
+        "relative_path": "contact_sheets/gemini_generated_video_2e361055.contact_sheet.jpg",
+        "sha256": "fa49ceabf99a8ec38706a7bcbdb1d4550b9e4e3cdd340af57b54bcc322880c8a",
+        "bytes": 630392,
+        "frame_indices": [
+          0,
+          16,
+          32,
+          48,
+          64,
+          80,
+          96,
+          112,
+          127,
+          143,
+          159,
+          175,
+          191,
+          207,
+          223,
+          239
+        ],
+        "sample_timestamps_seconds": [
+          0.0,
+          0.6666666666666666,
+          1.3333333333333333,
+          2.0,
+          2.6666666666666665,
+          3.3333333333333335,
+          4.0,
+          4.666666666666667,
+          5.291666666666667,
+          5.958333333333333,
+          6.625,
+          7.291666666666667,
+          7.958333333333333,
+          8.625,
+          9.291666666666666,
+          9.958333333333334
+        ]
+      },
+      "visual_findings": {
+        "scene": "Leather jacket and open white shirt in a populated neon cantina/bar. Head turns and smiling reactions, later a hand raises a short glass with amber liquid.",
+        "motion_observed_in_samples": [
+          "head turns from front to side and back",
+          "changing smile and mouth shapes",
+          "camera viewpoint changes around the bar",
+          "glass lifted for a toast near the end"
+        ],
+        "design_evidence_frames": [
+          {
+            "frame": 80,
+            "seconds": 3.3333333333333335,
+            "finding": "Retired Chewie forehead lettering, cheek/neck dice and broad gold upper grill visible in profile."
+          },
+          {
+            "frame": 207,
+            "seconds": 8.625,
+            "finding": "Front toast view makes retired cheek bird and broad gold upper row clear."
+          }
+        ],
+        "hands": "Inspected full-size frames207/8.625s and239/9.958s show a plausible single hand holding the glass, without an obvious extra finger. Actual pickup, glass/rim continuity, liquid behavior and ring consistency need normal-speed/frame-by-frame review.",
+        "limitations": "Apparent movement across the bar and later changed framing must be checked for cut boundaries before using as one continuous driver. Sampled frames cannot prove lip-sync.",
+        "possible_shot_roles": [
+          "cantina swagger/personality introduction",
+          "bar reaction cutaway",
+          "toast or celebratory insert"
+        ]
+      }
+    },
+    {
+      "filename": "gemini_generated_video_c0823c60.mp4",
+      "source_relative_path": "../../../references/Gemini Video/gemini_generated_video_c0823c60.mp4",
+      "source_path_at_intake": "D:/Documents/CFA/docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_c0823c60.mp4",
+      "bytes": 5307098,
+      "sha256": "b5deff1982da0cbbdee24a7dfc253fe6825018549a37ca531c7b3586cdbee525",
+      "role": "selected_motion_preservation_experiment_source",
+      "user_selected_for_experiments": true,
+      "accepted_final_identity": false,
+      "accepted_final_production_shot": false,
+      "video": {
+        "codec": "h264",
+        "pixel_format_and_color_tags": "yuv420p(tv, smpte170m/bt709/iec61966-2-1, progressive)",
+        "width": 1280,
+        "height": 720,
+        "fps": 24.0,
+        "decoded_frame_count": 240,
+        "independent_frame_read_count": 240,
+        "nominal_picture_duration_seconds": 10.0,
+        "ffmpeg_count_frames_duration_report_seconds": 10.0,
+        "rounded_container_duration_seconds": 10.01,
+        "stream_headers": [
+          "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, smpte170m/bt709/iec61966-2-1, progressive), 1280x720, 4104 kb/s, 24 fps, 24 tbr, 12288 tbn (default)"
+        ]
+      },
+      "audio": {
+        "present": true,
+        "codec": "aac",
+        "profile": "LC",
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "nominal_bitrate_kbps": 128,
+        "stream_headers": [
+          "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)"
+        ],
+        "decoded_duration_seconds": 10.005333333333333,
+        "measurement_method": "Complete first audio stream decode, downmix to mono PCM s16le at 48 kHz for duration measurement; no saved audio derivative.",
+        "decode_exit_code": 0,
+        "decoded_pcm_bytes": 960512,
+        "listened": false,
+        "song_match_verified": false
+      },
+      "full_av_decode": {
+        "exit_code": 0,
+        "stderr": ""
+      },
+      "normal_speed_playback_reviewed": false,
+      "contact_sheet": {
+        "relative_path": "contact_sheets/gemini_generated_video_c0823c60.contact_sheet.jpg",
+        "sha256": "80cb45985af80d8ade6aceac851e2615d8da8f84b8b7737d59fb2ca5e942f71e",
+        "bytes": 617182,
+        "frame_indices": [
+          0,
+          16,
+          32,
+          48,
+          64,
+          80,
+          96,
+          112,
+          127,
+          143,
+          159,
+          175,
+          191,
+          207,
+          223,
+          239
+        ],
+        "sample_timestamps_seconds": [
+          0.0,
+          0.6666666666666666,
+          1.3333333333333333,
+          2.0,
+          2.6666666666666665,
+          3.3333333333333335,
+          4.0,
+          4.666666666666667,
+          5.291666666666667,
+          5.958333333333333,
+          6.625,
+          7.291666666666667,
+          7.958333333333333,
+          8.625,
+          9.291666666666666,
+          9.958333333333334
+        ]
+      },
+      "visual_findings": {
+        "scene": "Four-shot neon cantina performance montage: frontal close-up, medium gesturing performance, white-fur partner interaction with hands on shoulders, then frontal leather-jacket performance with hand/chain gesture and moving stage lights.",
+        "design": "Closer to current supplied direction than the first two: eye at image-left, know at image-right, image-right neck blaster, chest ship, nose/lip/ear piercings, natural-looking upper incisors with gold canine caps and metallic lower teeth in examined close-up. Exact tooth/piercing continuity remains unverified.",
+        "visible_design_gap": "Dice remain above the image-right eyebrow; current through-314 handoff says dice were dropped. Their presence in a user-selected experiment clip is recorded, not treated as a new design instruction.",
+        "hands_and_contact": "Medium-shot hands are cropped or motion-blurred in selected samples. Partner-interaction segment shows tattooed hands on both shoulders of the lead, apparently belonging to the foreground partner; ownership/placement of card and lettering must be reviewed before using as continuity evidence. Final pointing/chain gesture also contains motion blur.",
+        "light_effects": "Final shot has intense moving cyan/pink lights and a strong flare at sampled9.292s; opening close-up has cleaner stable framing for a first test.",
+        "possible_shot_roles": [
+          "face/performance-preservation source",
+          "medium rap-gesture reference",
+          "later two-person contact experiment",
+          "chorus/stage-energy insert"
+        ],
+        "limitations": [
+          "No verified lyric synchronization or audio review",
+          "No exact model/prompt evidence",
+          "Frame samples and cut inspection are not normal-speed smoothness acceptance",
+          "First-experiment change is selected separately by parent/user"
+        ]
+      },
+      "user_selection": {
+        "status": "user_selected_starting_clip_for_Comfy_experiments",
+        "source": "Parent agent relayed direct current user selection on October 7, 2026.",
+        "scope": "Selection as an experiment source does not establish acceptance of every design detail or final production output."
+      },
+      "shot_boundaries": {
+        "method": "FFmpeg select=gt(scene,0.2),showinfo produced transitions at frames60,119,180; adjacent frames58-61,117-120,178-181 visually confirm three hard cuts.",
+        "shots": [
+          {
+            "start_frame": 0,
+            "end_frame_inclusive": 59,
+            "start_seconds": 0,
+            "end_seconds_exclusive": 2.5,
+            "description": "frontal face close-up"
+          },
+          {
+            "start_frame": 60,
+            "end_frame_inclusive": 118,
+            "start_seconds": 2.5,
+            "end_seconds_exclusive": 4.958333333333333,
+            "description": "medium gesturing performance"
+          },
+          {
+            "start_frame": 119,
+            "end_frame_inclusive": 179,
+            "start_seconds": 4.958333333333333,
+            "end_seconds_exclusive": 7.5,
+            "description": "white fur, partner interaction and hands on shoulders"
+          },
+          {
+            "start_frame": 180,
+            "end_frame_inclusive": 239,
+            "start_seconds": 7.5,
+            "end_seconds_exclusive": 10.0,
+            "description": "frontal performance, chain/hand gesture and flare"
+          }
+        ],
+        "adjacent_frames_visually_reviewed": [
+          58,
+          59,
+          60,
+          61,
+          117,
+          118,
+          119,
+          120,
+          178,
+          179,
+          180,
+          181
+        ]
+      },
+      "proposed_first_excerpt": {
+        "status": "proposed_short_excerpt_not_rendered_or_saved_as_a_trim",
+        "start_frame": 0,
+        "end_frame_inclusive": 56,
+        "frame_count": 57,
+        "fps": 24,
+        "start_seconds": 0,
+        "end_seconds_exclusive": 2.375,
+        "duration_seconds": 2.375,
+        "last_frame_timestamp_seconds": 2.3333333333333335,
+        "reason": "Opening close-up provides clear face, visible mouth motion and small head movement without hands/partner contact, hard cuts or the later heavy flare. Safely stops before first cut at frame60. 57 also satisfies 8n+1 where the eventual recipe requires that grid; it is not a universal model setting.",
+        "preserve": [
+          "head and mouth timing",
+          "face position and camera framing",
+          "neck/chest placement",
+          "background structure and source timing"
+        ],
+        "reference_audio": "Retain original source and soundtrack; an appearance experiment does not require generating replacement audio.",
+        "next_alternative": {
+          "start_frame": 60,
+          "end_frame_inclusive": 116,
+          "frame_count": 57,
+          "duration_seconds": 2.375,
+          "purpose": "later hand/body-gesture test after close-up baseline"
+        }
+      }
+    },
+    {
+      "filename": "gemini_generated_video_58328bf1.mp4",
+      "source_relative_path": "../../../references/Gemini Video/gemini_generated_video_58328bf1.mp4",
+      "source_path_at_intake": "D:/Documents/CFA/docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_58328bf1.mp4",
+      "bytes": 4355398,
+      "sha256": "8b3c6d5a7ae5b75ab960e066db2b7d1659468b4d75a894b3fc11e63d1f58d4ea",
+      "role": "user_directed_S10A_dinner_candidate_reference",
+      "user_selected_for_experiments": false,
+      "accepted_final_identity": false,
+      "accepted_final_production_shot": false,
+      "video": {
+        "codec": "h264",
+        "pixel_format_and_color_tags": "yuv420p(tv, smpte170m/bt709/iec61966-2-1, progressive)",
+        "width": 1280,
+        "height": 720,
+        "fps": 24.0,
+        "decoded_frame_count": 240,
+        "independent_frame_read_count": 240,
+        "nominal_picture_duration_seconds": 10.0,
+        "ffmpeg_count_frames_duration_report_seconds": 10.0,
+        "rounded_container_duration_seconds": 10.01,
+        "stream_headers": [
+          "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, smpte170m/bt709/iec61966-2-1, progressive), 1280x720, 3343 kb/s, 24 fps, 24 tbr, 12288 tbn (default)"
+        ]
+      },
+      "audio": {
+        "present": true,
+        "codec": "aac",
+        "profile": "LC",
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "channel_layout": "stereo",
+        "nominal_bitrate_kbps": 128,
+        "stream_headers": [
+          "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)"
+        ],
+        "decoded_duration_seconds": 10.005333333333333,
+        "measurement_method": "Complete first audio stream decode, downmix to mono PCM s16le at 48 kHz for duration measurement; no saved audio derivative.",
+        "decode_exit_code": 0,
+        "decoded_pcm_bytes": 960512,
+        "listened": false,
+        "song_match_verified": false
+      },
+      "full_av_decode": {
+        "exit_code": 0,
+        "stderr": ""
+      },
+      "normal_speed_playback_reviewed": false,
+      "contact_sheet": {
+        "relative_path": "contact_sheets/gemini_generated_video_58328bf1.contact_sheet.jpg",
+        "sha256": "3e7eb50c8ebbaddc754e17ff6fc4a82fc480e78ff04bd49c8ae41e3433f47192",
+        "bytes": 636981,
+        "frame_indices": [
+          0,
+          16,
+          32,
+          48,
+          64,
+          80,
+          96,
+          112,
+          127,
+          143,
+          159,
+          175,
+          191,
+          207,
+          223,
+          239
+        ],
+        "sample_timestamps_seconds": [
+          0.0,
+          0.6666666666666666,
+          1.3333333333333333,
+          2.0,
+          2.6666666666666665,
+          3.3333333333333335,
+          4.0,
+          4.666666666666667,
+          5.291666666666667,
+          5.958333333333333,
+          6.625,
+          7.291666666666667,
+          7.958333333333333,
+          8.625,
+          9.291666666666666,
+          9.958333333333334
+        ]
+      },
+      "visual_findings": {
+        "scene": "Five-shot montage: Hon Dolo and Darth Vader at a lavish dining table; Hon Dolo reaction across Vader's shoulder; white-fur-clad lead lowering in a vapor-filled chamber; orange-lit pool close-up; finished carbonite slab.",
+        "motion_observed_in_samples": [
+          "Changing mouth/head expressions while holding a wineglass in the dinner two-shot",
+          "Changing reaction expressions and head angle in the dinner close-up",
+          "Lead appears progressively lower relative to the chamber rim in later samples",
+          "Orange surface rises relative to shoulders in pool close-ups",
+          "Slab framing changes in the last shot; continuous motion has not been played back"
+        ],
+        "design_evidence_frames": [
+          {
+            "frame": 96,
+            "seconds": 4.0,
+            "finding": "Eye and know cheek words, retained dice above image-right eyebrow, nose/lip/ear jewelry, image-right neck mark and a ship motif high on the chest. Upper incisors appear natural with gold at the canines and metallic lower teeth in this sample."
+          },
+          {
+            "frame": 143,
+            "seconds": 5.958333333333333,
+            "finding": "Two human hands rest on the white-fur shoulders beneath hanging chains; their owner/body is not visible. Treat as an unresolved anatomical/contact issue or intentional staging, not accepted continuity."
+          },
+          {
+            "frame": 223,
+            "seconds": 9.291666666666666,
+            "finding": "Finished slab retains etched facial markings and visible gold-colored teeth. The image-left hand is curled and image-right hand open; source-to-slab hand/wardrobe continuity remains unverified."
+          }
+        ],
+        "hands_and_props": "Frame 0 shows a plausible ringed hand holding the wineglass bowl/stem region without an obvious extra digit; sampled frames do not establish continuous grip, glass/liquid geometry or ring continuity. Vader's hands rest at the table. Unowned shoulder hands in the chamber require deliberate review.",
+        "visible_caveats": [
+          "Retired brow dice remain, so this is not an approved current identity master",
+          "Dinner shot uses leather jacket/open white shirt; chamber and pool shots change to a white fur coat",
+          "Ship motif placement, chest markings and metallic teeth need cross-shot consistency review",
+          "The frame-120 chamber entry has strong radial blur",
+          "Shoulder hands under chains have no visible connected owner in inspected chamber frames",
+          "Orange pool and finished carbonite are separate setups with an abrupt cut; transformation continuity is not established"
+        ],
+        "possible_shot_roles": [
+          "S10A dinner establishing two-shot plus reaction insert, per user direction",
+          "Possible S10C Carbon Knight/slab visual reference, reviewer inference only"
+        ],
+        "limitations": "Review covers 16 evenly spaced frames, four selected full-size frames and eight adjacent cut-boundary frames. No normal-speed playback or audio listening. Lip-sync, actual spoken/sung words, lyric alignment, flicker and continuous hand contact remain unknown."
+      },
+      "shot_boundaries": {
+        "method": "FFmpeg scene-change score > 0.2 suggested transitions; inspected adjacent frames 59/60, 119/120, 177/178 and 208/209 confirm changes of shot. Frame 120 includes radial-blur entry.",
+        "cut_frames": [
+          60,
+          120,
+          178,
+          209
+        ],
+        "cut_times_seconds": [
+          2.5,
+          5.0,
+          7.416666666666667,
+          8.708333333333334
+        ],
+        "shots": [
+          {
+            "start_frame_inclusive": 0,
+            "end_frame_inclusive": 59,
+            "frame_count": 60,
+            "start_seconds": 0.0,
+            "end_seconds_exclusive": 2.5,
+            "description": "Dinner two-shot: lead beside Vader, holding wineglass"
+          },
+          {
+            "start_frame_inclusive": 60,
+            "end_frame_inclusive": 119,
+            "frame_count": 60,
+            "start_seconds": 2.5,
+            "end_seconds_exclusive": 5.0,
+            "description": "Dinner reaction close-up, Vader foreground right"
+          },
+          {
+            "start_frame_inclusive": 120,
+            "end_frame_inclusive": 177,
+            "frame_count": 58,
+            "start_seconds": 5.0,
+            "end_seconds_exclusive": 7.416666666666667,
+            "description": "White-fur chamber view with lowering relative to rim"
+          },
+          {
+            "start_frame_inclusive": 178,
+            "end_frame_inclusive": 208,
+            "frame_count": 31,
+            "start_seconds": 7.416666666666667,
+            "end_seconds_exclusive": 8.708333333333334,
+            "description": "Orange-lit pool face/shoulder close-up"
+          },
+          {
+            "start_frame_inclusive": 209,
+            "end_frame_inclusive": 239,
+            "frame_count": 31,
+            "start_seconds": 8.708333333333334,
+            "end_seconds_exclusive": 10.0,
+            "description": "Finished carbonite slab"
+          }
+        ]
+      },
+      "user_direction": {
+        "source": "Direct user direction relayed in the current October 7 task",
+        "candidate_shot_id": "S10A",
+        "shot_plan_relative_path": "../shot_plan.json",
+        "lyric_context": "Dinner date with Darth Vader? — I ain't order this shit.",
+        "scope": "User says this clip suits the dinner-date lyric. Record a candidate association, not approval of a final take or an exact song timing.",
+        "candidate_source_range": {
+          "start_frame_inclusive": 0,
+          "end_frame_inclusive": 119,
+          "start_seconds": 0.0,
+          "end_seconds_exclusive": 5.0,
+          "contains_two_shots": true
+        },
+        "subshots": [
+          {
+            "start_frame_inclusive": 0,
+            "end_frame_inclusive": 59,
+            "role": "Dinner establishing two-shot"
+          },
+          {
+            "start_frame_inclusive": 60,
+            "end_frame_inclusive": 119,
+            "role": "Reaction close-up"
+          }
+        ],
+        "song_start_seconds": null,
+        "song_end_seconds": null,
+        "audio_content_verified": false,
+        "accepted_take": false,
+        "plan_difference": "Existing S10A draft places Vader at the far end with an empty foreground place; this reference seats Hon Dolo beside him and supplies a reaction close-up. It is a candidate alternative, not a silent rewrite of the shot plan."
+      }
+    }
+  ],
+  "next_experiment": "Prepare a separately recorded lighting-refinement experiment from the selected source and agreed excerpt; this intake performs no Comfy compilation, model check, trim export or generation.",
+  "unknowns": [
+    "exact generating model/version and prompts/settings",
+    "source image references used by Gemini",
+    "normal-speed motion/flicker quality",
+    "audio content and relationship to supplied song",
+    "lyric timing/lip-sync",
+    "uninterrupted tattoo/jewelry/prop-contact continuity",
+    "current Cloud compatibility for the planned edit"
+  ],
+  "storage": {
+    "originals": "../../../references/Gemini Video/",
+    "derived_contact_sheets": "contact_sheets/",
+    "policy": "Originals and contact sheets remain local on D: and excluded from Git; README and manifest retain audit evidence. No deletion or model download performed."
+  },
+  "lessons_consulted": [
+    "D:/Documents/Pan_Handlers/Help/guides/video_handoff.py",
+    "D:/Documents/Pan_Handlers/Help/guides/workflow_files.py"
+  ],
+  "decision_and_feedback_procedure": "../../../templates/workflow_intake.md#decision-and-feedback"
+}

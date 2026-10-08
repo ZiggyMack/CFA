@@ -45,6 +45,15 @@ When files are added or deleted, use diff notation like git commits:
 **Making an entry? Copy this template:**
 
 ```markdown
+### [WORKFLOW-2026-10-08-01] October 8, 2026 - Visual library and separate CFA Creative Studio
+
+- Rebuilt local review pages around visual collections for outfits, tattoos/piercings, cast, storyboard, videos and inspiration. Artwork comes first; documents are grouped and collapsed at the end. Stencils follow placement portraits; Comfy likeness targets have their own section.
+- Added image enlargement, video playback, search and portable favorites. Desktop/mobile functional checks passed; local source files and approval states remain unchanged.
+- Built independent Streamlit app at apps/creative_studio/app.py, borrowing Panhandlers Help's navigation and progressive detail approach. Native media, grouped notes, collaborator kits, pagination and favorites export use a portable review bundle rather than D: paths.
+- Packaged 533 catalogue records and 972 preview/document files; 25 compressed video previews preserve source frame counts, picture durations, aspect and decoded audio duration. Preview media is deliberately tracked; production masters and bulk ZIP archives remain local.
+- Added Google Flow collaborator brief, project attachment roles and shot card from dated official sources. No Flow generation, settings mutation or acceptance claimed.
+- Prepared a scoped GitHub publication excluding unrelated Observatory, data, game and relay work. Streamlit deployment remains separate from Git push.
+
 ### [CATEGORY-YYYY-MM-DD-N] Date - Brief Description
 
 **Categories:** [PRIMARY] [SECONDARY]
@@ -93,6 +102,685 @@ When files are added or deleted, use diff notation like git commits:
 -----
 
 ## 📝 CHANGE LOG
+
+### [WORKFLOW-2026-10-07-06] October 7, 2026 - Sort two projects and deliver Lisan Gemini kit
+
+**Categories:** [DOCUMENTATION] [WORKFLOW] [VALIDATION] [🧹]
+**Changed by:** Nova (Codex) with bounded intake and Cloud agents
+**Status:** Local review libraries and Gemini kit complete; native Cloud soundtrack workflow saved/server-converted, not executed.
+
+- Added a two-project browser, separate Lisan Al Gaib project, paste-ready Gemini instructions, reference map and first-video prompt. Preserved 128 Lisan file occurrences as 121 unique review copies (33,595,417 bytes), all source/copy hashes matching; 50 actual scene files map to 50 storyboard rows. Current portrait, arm-only art and outfit roles are explicit. Reported source approvals remain distinct from new user acceptance.
+- Sorted 34 Hon Dolo ZIPs plus four receipts into 361 unique review files, including 293 images; archive CRCs, image decodes and hashes passed. Added a 36-panel semantic crosswalk without changing the existing shot plan. Source 4:30 storyboard timing does not fit the current 3:54.960 audio. Supplied helper scripts retained inert.
+- Inventoried 25 Gemini MP4s and one GIF (22 new assets), all distinct and fully decodable. Created scene folders/contact sheets; two uncertain clips remain under projects/00_Unassigned_Gemini. No normal-speed/audio acceptance claimed. Originals and prior source paths unchanged.
+- Reauthenticated Comfy and saved Hon Dolo - Replace Video Soundtrack, UUID 2c490a37-6110-4c7b-b073-a3354493645b version 2. Verified live schemas/media/routing and warning-free server conversion. No Cloud export or partner run. Original stream-copy preview evidence retained separately.
+- Registered additions in docs/repository/FILE_INVENTORY.md and local bulk-media ignore rules. Updated current project/workshop/workflow navigation and appended the manual Pan reference-role teaching return. No purchases, original deletion, public release, git commit or push.
+
+### [WORKFLOW-2026-10-07-05] October 7, 2026 - Record forthcoming storyboard and separate Lisan project
+
+**Categories:** [DOCUMENTATION] [PENDING_ACTIONS] [🧹]
+**Changed by:** Nova (Codex)
+**Status:** Recorded user/Grok report; file handoff and organization pending.
+
+- Updated the Hon Dolo song README with the reported Part 1 contents, a reconciliation plan for the 36-panel storyboard versus existing 21 draft cards, and a separate pending Lisan Al Gaib project starring Ziggy (Grok reports resuming scene 25).
+- Corrected the Gemini instructions count to six. No receipt verification, file moves, reference promotion, new project generation or account operation occurred.
+
+### [WORKFLOW-2026-10-07-04] October 7, 2026 - Map Gemini cast attachments
+
+- Added plain-text and JSON cast maps with nine character records, 12 verified image paths/hashes and stable reference IDs. Separated Hon Dolo design/likeness/finish and Chewie DJ staging from Wookiee identity. Reserved distinct Bounty Hunter 1, Bounty Hunter 2 and Thick Vader slots; did not assign illustrative picture numbers or silently equate Boba with a numbered hunter.
+- Added a reference-map instruction to the Gemini brief and a song-project link. File availability, Gemini attachment, reference role and approval remain separate. Original media was not renamed, copied or changed; no Gemini account mutation or generation occurred.
+
+### [WORKFLOW-2026-10-07-03] October 7, 2026 - Draft Gemini creative instructions
+
+- Added casting/gemini_project_instructions.txt with five paste-ready entries scoped to Hon Dolo. The brief preserves the love/sacrifice irony, creative staging freedom, current-reference precedence, editable shot coverage, exact-audio versus lip-sync distinction and truthful take handoff. Registered the file and linked it from the song project.
+- Checked official Gemini guidance: the pictured saved-instruction setting applies across chats. Current reference attachments and per-shot requirements remain necessary; no Gemini settings, media, design locks or account state were changed.
+
+### [WORKFLOW-2026-10-07-02] October 7, 2026 - Prepare soundtrack replacement and separate lip sync
+
+- Created a ten-second local soundtrack proof using the original Gemini c0823c60 picture and current song time 0:00–0:10. FFmpeg stream copy preserves compressed video packets and all 240 decoded frame hashes/timestamps. Replacement AAC closely matches the prepared song excerpt; full AV decoding passed. Original Gemini audio is completely removed, with no source changes, generation or lip-sync operation.
+- Prepared separate importable native audio-replacement and official Sync-based lip-sync editor graphs, preflight records and usage guide. Native frame assembly may re-encode the picture. The lip-sync candidate uses a continuous 2.375-second source and matching audio, seed 42 fixed and cut_off; no paid partner run or spend agreement is claimed. Only mixed-song audio is available, not an isolated vocal stem.
+- Comfy requires authentication; live schemas, uploads, Cloud save/compilation and execution remain pending. The local proof is not a Cloud result. Updated workflow lookup and manual learning handoff; helpers/media remain on D:. Listening, normal-speed playback, lyric alignment and acceptance remain open.
+
+### [WORKFLOW-2026-10-07-01] October 7, 2026 - Test Gemini video controls and reconcile music and Grok map
+
+- Inventoried four Gemini clips with source hashes, full AV decodes, sampled visual reviews and shot roles. Preserved the preferred `c0823c60` opening as a 57-frame, 2.375-second excerpt; recorded `58328bf1` as the user's Vader dinner candidate.
+- Completed two Cloud LTX-2.3 Union experiments plus one control-only preview. Depth v001 and Canny v002 both produce valid 1024 x 576 / 24 fps media with matching source timestamps, but sampled frames alter mouth movement, grill, piercings, lettering and background. Neither meets the strict lighting-only preservation check; no accepted production take is claimed. Saved actual graphs, settings, outputs, comparisons, usage evidence and editable Cloud workflows; repaired a lost literal prompt during editor conversion and verified both saved graphs by readback.
+- Registered the new 234.960-second working MP3 and lyric-video MP4. Latest pasted lyric wording matches the earlier text after whitespace normalization; changed audio invalidates the old provisional timecodes. Preserved both lyric revisions, historic timing and original media. Added scoped media ignores.
+- Audited Grok's CSV/TXT handoff: 164 numbered IDs plus LOCK-FACE match received hashes; five entries remain remote-only and all 159 hash-named stills remain unmapped. Flagged crop/full-image ambiguity, including #277. Applied no source deletion, moves, quarantine or design-lock changes.
+- Updated workshop, workflow, lesson, casting and song entry points and the manual CFA/Panhandlers return. All required local artifacts remain on D:. Normal-speed playback, audio listening and song alignment remain unreviewed; no model purchase, public release, commit or push was performed.
+
+### [WORKFLOW-2026-10-06-01] October 6, 2026 - Inventory Hon Dolo reference drop through 314
+
+- Registered 313 newly dropped files (297 images, four MP4 copies/two distinct clips, 12 documents) with hashes, full image decodes, exact duplicates, named-ID coverage and source document precedence. The full reference directory has 449 files. All new image/video decodes passed; source bytes remain unchanged.
+- Added a searchable 383-card image index including older references and previews, a provenance-aware design handoff and measured video record. Retained 159 unmapped hash-named images without inventing IDs. LOCK-FACE differs from #277 and #289; the newer supplied brief supersedes older #278/retired-tattoo directions.
+- Recorded turnarounds/poses as scaffolds and the two silent clips as keyframe-loop/morph demonstrations. No Cloud operation, generation, accepted Comfy master, source deletion or public release. Updated scoped media ignores and current casting/song entry points; preserved original lyrics, historical decisions and concurrent repository work. Returned bounded reference-role findings through the manual Panhandlers handoff.
+
+### [WORKFLOW-2026-10-04-21] October 4, 2026 - Correct Photo1 reference role
+
+- User clarified that GOLD-PREVIEW-01 was saved for grillz only and the third eye was rejected. Corrected the preview/design records, gallery card, cast review, casting brief and song notes; the previous proposed surreal use is superseded. Source image hash remains unchanged. No image edit or generation was performed.
+
+### [WORKFLOW-2026-10-04-20] October 4, 2026 - Preserve five gold-standard preview stills
+
+**Categories:** [DOCUMENTATION] [MEDIA]
+**Changed by:** Nova (CFA production)
+**Status:** User-endorsed preview set received and visually reviewed; variant roles and Grok ID mapping remain open.
+
+- Preserved five user-described gold-standard sneak-peek JPEGs unchanged on D: and registered their hashes, dimensions, visual observations and proposed lyric/scene uses. All decode at 1280 x 720. Neutral preview IDs do not imply numbered Grok experiments.
+- Linked previews into the existing cast review and gallery (106 earlier source images plus five previews). Recorded cash-counting, cockpit/control, club/fur and rain-alley staging; preserved the third eye, dice and split eye/know as visible variations without assuming they are defects or mandatory across all shots.
+- Kept prior component selections and historical records intact. Chewie side/visibility, bird length, Jabba linework, grill material and piercings differ across the set. No source-image editing, generation, upload or current Cloud compatibility claim is involved. Reusable variant-versus-continuity note returns to Panhandlers.
+
+### [WORKFLOW-2026-10-04-19] October 4, 2026 - Preserve selected character components and later feedback
+
+**Categories:** [DOCUMENTATION] [MEDIA] [WORKFLOW]
+**Changed by:** Nova (CFA production)
+**Status:** Author component decisions recorded; new numbered originals and completed identity master pending.
+
+- Preserved five later user attachments unchanged on D: (four conversation screenshots and an unnumbered close-up), with hashes and dimensions. The 106-image numbered/early/cast inventory remains unchanged. No new experiment ID is inferred from the unnumbered photo.
+- Design revision 2 preserves superseded direction and records protected Jabba from #101, latest #146 tattoo/grill continuation, #107 chest size/position and #147/#149 piercing locations. Smaller Chewie/I know sizing and general locations persist; jewelry types may vary, lip ring and #105 cage remain exploratory.
+- Removed Captain Falcon racer imagery and Captain/Falcon tattoo words from current instructions without changing song lyrics. Retained the #103 down-neck bird-tail goal as unresolved against Grok's reported #146 cheek-only tail. Photo5 still visibly contains removed Falcon text and is not marked as the accepted composite. Quoted generation/preservation claims remain unverified.
+- Updated casting brief v8, gallery notice, review/design/manifest records and workshop/song links. Component locks are distinguished from verified file geometry and final identity acceptance. No render, workflow change, upload or Grok message occurred; reusable status distinctions return through the Panhandlers handoff.
+- Validation: source/copy hashes match for all five attachments; JSON revision/history and selected IDs checked; 106 gallery entries and local links retained; no accepted-master paths populated; original lyric hash unchanged; scoped media ignore and tracked-file whitespace checks passed.
+
+### [WORKFLOW-2026-10-04-18] October 4, 2026 - Register Grok cast collection and evolving design direction
+
+**Categories:** [DOCUMENTATION] [MEDIA] [WORKFLOW]
+**Changed by:** Nova (CFA production)
+**Status:** Source inventory and concept review complete; all designs remain candidates.
+
+- Registered a manifest, design-direction record, review notes and searchable local HTML index for the two supplied Grok folders. All 106 JPEGs decode at 1280 x 720; 90 numbered lead concepts, eight early/face studies and eight supporting-cast concepts. Missing 74 and 86-89 match the supplied README. No within-drop exact-byte/pixel duplicates; six images match older references, preserved in place.
+- Preserved six supplied feedback screenshots on D: with hashes. Captured user component preferences and latest revisions without adopting Grok claims as facts or treating quoted batch discussion as authorization. No look is accepted; the chest spacecraft and jaw bird remain distinct, and latest upper-canine direction supersedes earlier small-fang assumptions.
+- Reviewed lead/early images on contact sheets and supporting-cast originals. Chewie concepts are ape-like DJ/MC staging placeholders; an intended Wookiee reference remains separate. Updated casting brief, song project/shot-plan links and production entry points; original lyrics, audio and individual shot-cut placeholders remain unchanged.
+- Original assets were not altered, renamed, removed or uploaded. Source and derived review images are scoped out of Git; JSON/text bookkeeping remains available. Browser policy blocked the local HTML preview; static link, data and JavaScript checks are the available validation. No Cloud operation or generation occurred. Reusable role/acceptance findings return through the manual Panhandlers handoff.
+
+### [WORKFLOW-2026-10-04-17] October 4, 2026 - Intake song audio and embedded lyric timing
+
+**Categories:** [DOCUMENTATION] [MEDIA] [WORKFLOW]
+**Changed by:** Nova (CFA production)
+**Status:** Source files decoded and registered; section timing provisional, no audible sync acceptance.
+
+- Located the supplied remastered MP3 and M4A. The M4A contains Opus audio plus mov_text subtitles with no video; the MP3 has audio plus attached cover art. Full audio decodes passed. Selected MP3 audio duration is 233.480 seconds; source hashes are retained in the new registered media intake.
+- Extracted the subtitle track unchanged into registered SRT: 100 cues, 12 section markers, 18 zero-duration cues. Final cue exceeds MP3 audio by 3.259 seconds. Added provisional section bounds to existing shot-plan data; individual cuts, BPM and vocal-stem paths remain unset. User lyrics and source media are unchanged.
+- Compared three decoded waveform windows using existing FFmpeg/NumPy: correlations above 0.997 with zero peak lag. This supports provisional cross-file timing but is not listening or lyric-sync verification. No software/model install, upload or generation occurred.
+- Updated project/workflow/handoff notes and scoped Comfy Git ignores for project media. Verified hashes, JSON/SRT structure, section bounds, original lyric integrity, unchanged shot IDs, relative links and ignore behavior. Pan receives the reusable stream-versus-extension and provisional-timing lessons.
+
+### [WORKFLOW-2026-10-04-16] October 4, 2026 - Center the song on ironic sacrifice for love
+
+**Categories:** [DOCUMENTATION] [CREATIVE]
+**Changed by:** Nova (CFA production)
+**Status:** Author clarification recorded; no lyric or workflow changes.
+
+- Revised the song project and shot-plan interpretation around Ziggy's intended irony: the supposedly immoral, greedy smuggler sacrifices himself for love. Kept greed/swagger credible, centered Leia and the farewell, and retained the return-to-battle as an earlier contradiction.
+- Updated the final-chorus visual prompt to juxtapose the recurring mercenary performance with the personal cost. Detailed staging stays proposed; no literal-death or knowingly-chosen-carbonite implication.
+- Recorded the correction in the CFA/Pan handoff. Verified JSON parsing, unchanged 21 shot IDs/timings and the original lyric hash; no generation or application test was needed.
+
+### [WORKFLOW-2026-10-04-15] October 4, 2026 - Preserve Strictly Business and map its story
+
+**Categories:** [DOCUMENTATION] [WORKFLOW] [CREATIVE]
+**Changed by:** Nova (CFA production)
+**Status:** Song source archived; proposed story/shot plan and MiniMax research; no render.
+
+- Registered and created the `comfy/projects/hon_dolo_strictly_business/` home: unchanged user lyrics, creative/production README and planning JSON. Source hash and line ranges preserve 12 supplied sections, including the repeated Verse 2 labels; 21 draft shot cards leave audio timecodes and accepted assets null.
+- Proposed the transaction-to-loyalty-to-personal-cost arc, Chewie's DJ/copilot role and recurring visual motifs. Deeper allusions, an on-screen kid/Luke cameo and final shot count remain open. No lyric rewrite or message to Grok.
+- Added official hosted H3 Max's optional Regenerate to 2K route, with original-output/prompt/reference requirements and regeneration before post-processing. Native-H3/arbitrary-model compatibility, current account support and quality are not established. Fresh Cloud read requires authentication; no API spend or new graph submission.
+- Linked the project from workshop/production/handoff and returned scoped teaching breadcrumbs to Pan. Verified lyric-copy equality, source hash, section ranges, JSON parsing/null timing, local links and scoped whitespace. No application tests were needed for this documentation and planning-data change.
+
+### [WORKFLOW-2026-10-04-14] October 4, 2026 - Research music video workflow families
+
+**Categories:** [DOCUMENTATION] [WORKFLOW] [RESEARCH]
+**Changed by:** Nova (CFA production)
+**Status:** Research plan and manual teaching return; no new Cloud graph, import or generation.
+
+- Registered and added `HON_DOLO_PRODUCTION_PLAN.md`, linked from the workshop, workflow lookup and handoff. Five workflow families cover character/shot stills, new motion, source-performance transfer, recorded-vocal sync and finishing; timeline editing remains a separate assembly task.
+- Reviewed existing Pan lessons and official public templates. Recorded Wan Mix segmentation/FPS dependencies, H3's unconnected video/audio references, Sync's bounce default, LTX-2.5 A2V versus text-driven Dub-It, and native SeedVR2/FLUX Fill candidates. Candidate account support and quality remain unverified.
+- Preserved the 12-option Hon Dolo exploration, Chewie MC/DJ role and separate wolf brief. Defined bounded proof checks and a manual Pan teaching follow-up; no acceptance decisions or app schema changes.
+- Fresh read-only Comfy probes returned authentication required. Earlier completed artifacts were not changed. Checked new local links, documentation markers and scoped whitespace; no application or render test was appropriate for these documentation changes.
+
+### [WORKFLOW-2026-10-04-13] October 4, 2026 - Cast Chewbacca as MC and DJ
+
+**Categories:** [DOCUMENTATION] [CASTING] [🧹]
+**Changed by:** Nova (CFA production)
+**Status:** Grok draft updated; no message or generation submitted.
+
+- Updated casting brief v6, project instructions and continuation prompt with Ziggy's MC / DJ role for Chewbacca. Trap-DJ styling, headphones, bandolier, booth and stage presence are exploration directions; Wookiee appearance/anatomy remains the production target.
+- Separated an optional human DJ style/pose template, Chewbacca appearance reference and a future motion source. No creature transfer or hand/contact fidelity is claimed. Hon Dolo's 12-option exploration remains in place.
+- Checked the three draft files for matching versions, role and unchanged lead exploration count. No application or Cloud test required for this text edit.
+
+### [WORKFLOW-2026-10-04-12] October 4, 2026 - Keep Hon Dolo exploration open before refinement
+
+**Categories:** [DOCUMENTATION] [CASTING] [🧹]
+**Changed by:** Nova (CFA production)
+**Status:** Revised drafts ready for Ziggy; not sent to Grok.
+
+- Updated the existing casting brief to v5, project instructions and continuation prompt following Ziggy's correction: Hon Dolo is not selected and needs at least 10-12 options before refinement. The draft targets 12 new distinct concepts with stable IDs, broad styling exploration and a later shortlist.
+- Supporting-cast work continues alongside the lead: five additional starter concepts. Existing images and alternate angles do not substitute for new design directions. Palettes, hair and accessories remain open proposals.
+- No image generation, external message, accepted-master designation or production workflow change. Checked that all three files use the revised count, priority and version.
+
+### [WORKFLOW-2026-10-04-11] October 4, 2026 - Prepare Grok supporting-cast inspiration round
+
+**Categories:** [DOCUMENTATION] [CASTING] [🧹]
+**Changed by:** Nova (CFA production)
+**Status:** Drafts ready for Ziggy to send; no external message or generation submitted.
+
+- `UPDATED`: existing `comfy/casting/casting_brief.txt` to v4, `grok_project_instructions.txt` and `first_session_prompt.txt`. Next bounded round requests one concept each for Leia, Chewbacca, helmeted Vader, Boba Fett and Jabba; existing Hon Dolo studies remain candidates.
+- `REVIEWED`: additional local `Hon Dolo_4.jpg` through `_7.jpg` for hair/piercing and pendant ideas. No image was changed or designated an accepted identity.
+- Corrected stale claims that originals and a working reference-edit pipeline were unavailable. Recorded the first motion test's limits and neutral-reference expression guidance without promising continuity.
+- Next production sequence: select lead styling, finish/accept a decorated still, then compare a short motion take before lyric performance and high-resolution finishing. Wolf remains separate.
+
+**Validation:** Re-read the three brief files for consistent v4 instructions, all five supporting characters and distinct design/identity/motion roles. This text-only change needs no application test or Cloud run.
+
+### [WORKFLOW-2026-10-04-10] October 4, 2026 - Complete first Hon Dolo image-to-video preview
+
+**Categories:** [WORKFLOW] [VALIDATION] [DOCUMENTATION] [🧹 +3]
+**Changed by:** Nova (CFA production)
+**Status:** One Cloud video completed; sampled review done; acceptance pending.
+
+- `CREATED`: `comfy/workflows/hon_dolo_motion_v001.editor.json`, `.executed.api.json`, and `.record.json`; registered in FILE_INVENTORY. Native official LTX-2.5 I2V, one 97-frame / 24 fps / 960 × 512 output, job `b57756c5-9de7-48ca-90ae-968c763ea2f5`.
+- `SAVED`: private Cloud workflow `bfe78175-2366-4a28-bb76-518c89bef525` v1. Server-converted from the executed graph after slot override mapping failed; all 50 recompiled node classes/inputs match after ID remapping.
+- `REVIEWED`: MP4 decoded, twelve frame samples inspected; prolonged eye closure and smile drift remain. Full motion/audio and user acceptance are not claimed. Video, contact sheet and metadata are ignored artifacts under `comfy/outputs/` on D:.
+- `UPDATED`: workshop/workflow indexes, LESSONS, Pathfinder handoff and wolf dependency preflight. Exact Union depth nodes are missing; models present does not establish compatibility. Civitai not needed for this test.
+- `ENVIRONMENT`: a small FFmpeg decoder package was placed in D: scratch for review; no local generation or model weights. Cloud reconnect was requested after confirmed render/download/save. Local-file browser playback was blocked; no workaround attempted.
+
+**Follow-up:** review take; restore connector authentication before further runs; then one controlled motion-prompt change. Preserve separate wolf and production briefs and return measured evidence to Panhandler Nova.
+
+### [WORKFLOW-2026-10-04-9] October 4, 2026 - Connect task selection, lessons and experiment feedback
+
+**Categories:** [WORKFLOW] [DOCUMENTATION] [VALIDATION]
+**Changed by:** Nova (Codex)
+**Status:** CFA connections complete; Pan teaching integration remains open
+
+**Changes:**
+- Registered and added root `AGENTS.md` with conditional Comfy/video instructions; linked it through the root README and bootstrap map. Tasks enter the existing workshop status, relevant Pan lesson, concrete recipe and decision procedure.
+- Added an eight-row problem-to-recipe lookup to `docs/notes/explorable_world/comfy/workflows/README.md`, retaining dated execution/validation states and explicitly untested finishing/video routes.
+- Extended the existing workflow intake with lesson/source, baseline and rationale fields plus a decision/feedback procedure mapped to the unchanged schema-v1 run record. Updated workshop and handoff entry points.
+- Updated `D:/Documents/Pan_Handlers/Help/CFA_HANDOFF.md` and `CFA_TUTORIAL_LEDGER.md` with the CFA/Pan ownership split and a stronger PH TUT 04 completion check. Reused the existing six open tasks; no separate task registry or automatic sync.
+
+**Validation:** Checked 304 local links and 16 new anchor links across nine documents/sections, 14 referenced run-record fields, and exact staged-to-installed Pan document equality. Independent read-through verified the fresh-task route and corrected the Wan Animate route key. Scoped Git whitespace checks passed. New-session instruction discovery was not independently exercised; no app code, Cloud graph or generation changed. No application test suite, Git commit or remote push was needed.
+
+**Follow-up Required:** YES — Panhandler Nova integrates learner navigation, sourced lessons and exercises through PH TUT 01–06, then returns changed routes and relevant test results. Production quality still requires the recorded bounded experiments and review.
+
+### [WORKFLOW-2026-10-04-8] October 4, 2026 - Return tutorial learning to Panhandlers
+
+**Categories:** [WORKFLOW] [DOCUMENTATION] [VALIDATION]
+**Changed by:** Nova (Codex)
+**Status:** Saved in local checkouts; teaching integration tasks open
+
+**Changes:**
+- Added `D:/Documents/Pan_Handlers/Help/CFA_TUTORIAL_LEDGER.md` under Ziggy's explicit instruction: eight archived tutorial resources, reusable methods, exact workflow reconstruction links, evidence states and six bounded tasks for Panhandler Nova.
+- Updated Pan's `Help/README.md`, `Help/CFA_HANDOFF.md` and `Help/CFA_FEEDBACK.md` with the standing tutorial return process and current handoff. Rebased onto concurrent folder-reorganization edits before writing; verified target hashes and all four written files.
+- Updated `docs/notes/explorable_world/pathfinder_handoff/README.md` and `docs/notes/explorable_world/comfy/README.md` with backlinks and current evidence. Repaired 21 handoff links to Pan's new module locations. Preserve the dated earlier readiness notes as history.
+
+**Validation:** All 249 local links across the six handoff documents resolve; no trailing whitespace. Scoped Git whitespace checks passed. Input-only completion, original executed stills, later validation-only workflow versions and pending acceptance remain distinct. No Python, app route, Cloud workflow or generation job changed in this handoff; application tests were not needed. No Git commit or remote push performed.
+
+**Follow-up Required:** YES — Panhandler Nova integrates the six teaching tasks, returns the changed navigation and appropriate test results, and updates the ledger and CFA handoff. Future guide intakes use this manual documentation loop; no automatic repository synchronization was added.
+
+### [WORKFLOW-2026-10-04-7] October 4, 2026 - Episode 3 canvas operations and branch-selection guide
+
+**Categories:** [WORKFLOW] [VALIDATION] [DOCUMENTATION]
+**Changed by:** Nova (Codex)
+**Status:** DEPLOYED
+
+**Changes:**
+- Archived episode 3 unchanged (21,557 bytes; SHA-256 `dacb137f3931805b25e5c1bb34bc28f4c255fcc0eede5030a029f61b990f299f`) after registering the file in FILE_INVENTORY. Added the eighth provenance entry, preserving the prior seven; no canonical video URL supplied, video not independently watched.
+- Added the transcript lesson and workflow-library operating guide for shared controls, connected branch copying, fixed-seed comparisons, caching, grouped interfaces, and explicit output selection.
+- Documented exact terminal nodes to mute for main-editor input checks, comparison A/B-only runs, and SDXL resize-only checks. Distinguished mute, bypass, hiding and collapsing; retained model-specific settings and Cloud-only scope.
+
+**Reason:** Apply this tutorial's editing/testing techniques to the workflows already built without creating a redundant recipe or changing their generation behavior.
+
+**Validation:** Read back live Reference Edit v6, Civitai Comparison v4 and Image Refinement SDXL v2. Static dependency traversal of their server-compiled API graphs confirmed input-only outputs have no sampler dependency, A-only reaches only `92:104`, B-only only `168:104`, and both reach both samplers. This is graph analysis, not an executed UI-toggle test. Checked official ComfyUI shortcuts and current subgraph documentation. Verified transcript hash/provenance and repository whitespace checks.
+
+**Impact:** One archived transcript plus documentation/provenance updates. No Cloud workflow mutation, generation, model download or automatic queue/batch activation.
+
+**Follow-up Required:** NO for this guide intake.
+
+### [WORKFLOW-2026-10-04-6] October 4, 2026 - Single-image SDXL refinement and episode 4 intake
+
+**Categories:** [WORKFLOW] [VALIDATION] [DOCUMENTATION]
+**Changed by:** Nova (Codex)
+**Status:** DEPLOYED
+
+**Changes:**
+- Archived episode 4 unchanged (18,021 bytes; SHA-256 `888309d77ef3e99127566a556253727c00aaaacead3f81b72be644dd5f672a17`) and added the seventh transcript-provenance entry while preserving the prior six. Reviewed supplied transcript/screenshots, not independently watched video.
+- Created `Hon Dolo - Image Refinement SDXL v001`, Cloud record `2a60a23f-f68a-4a66-92c6-0e30aa0d5e03`, current version 2. Adapted official `image_sdxl_simple`: loaded image -> resize -> VAEEncode supplies KSampler's initial latent, with an exposed denoise input and active positive/negative prompts.
+- Deliberately selected Cloud-available Juggernaut XL v9, rather than the tutorial's Juggernaut X. Defaults: fixed seed 42, 30 steps, CFG 5, dpmpp_2m/karras, denoise 0.30, approximately 1 MP rounded to multiples of 8. Grok Hon Dolo_0.jpg is preloaded; negative prompt starts empty.
+- Saved editor, preflight API and record files after registering them in FILE_INVENTORY. Updated the workshop and workflow READMEs and reference guide.
+
+**Reason:** Provide a separate, inspectable whole-image refinement recipe while retaining the existing two-reference likeness workflow for the actual design-plus-identity task.
+
+**Validation:** Live checkpoint-loader presence verified. Bidirectional editor links passed; final server conversion produced 11 API nodes without warnings; dry-run passed. Resolved-input checks confirm intended model, prompts, seed, steps, CFG, sampler, denoise, starting image latent, matching VAE, resize and save prefix. Stale upstream `widgets_values_named` overrides discovered in version 1 were removed and resolved settings rechecked in version 2 before any execution. Local JSON/provenance checks passed; browser canvas appearance not independently inspected.
+
+**Impact:** No generation submitted, no local weights or node installation, no new Civitai import. Existing reference editor, comparison and input-check graphs unchanged. Denoise does not lock identity or tattoo text; localized finishing and temporal video remain separate pending stages.
+
+**Follow-up Required:** NO for the saved template; output-quality testing remains pending.
+
+### [WORKFLOW-2026-10-04-5] October 4, 2026 - Paired Civitai comparison and episode 5 intake
+
+**Categories:** [WORKFLOW] [VALIDATION] [DOCUMENTATION]
+**Changed by:** Nova (Codex)
+**Status:** DEPLOYED
+
+**Changes:**
+- Archived episode 5 unchanged (19,323 bytes; SHA-256 `532ded1d7a08499a3d2c93e07f4a3614e9c59d6e8758505e712316cecc99dd9a`) and added the sixth provenance entry, preserving the previous five. Reviewed the supplied transcript/screenshots; the linked video was not independently watched.
+- Updated existing Cloud comparison `1ee8615b-5586-42fd-bf3d-3d202b2377eb` from version 2 to version 4: baseline A and Candid Film B share references, crop, prompt/styles and sampling controls. B has a separate LoRA-strength input, default 0.5. Distinct Save Image nodes identify the outputs.
+- Saved the revised editor and a new `.preflight.api.json`; extended the original run record with paired-layout validation while preserving earlier executed graphs, jobs and images. Updated workshop/workflow documentation and registered the new transcript/preflight artifacts in FILE_INVENTORY.
+- Recorded current Cloud SD3.5 catalog hits as discovery only; original tutorial SD3 Medium package availability remains unconfirmed. No weights downloaded, new Civitai imports or model executions performed.
+
+**Reason:** Apply the tutorial's controlled-comparison method within the existing Cloud reference-edit recipe, respecting separate workflow purposes and model-specific settings.
+
+**Validation:** Outer/subgraph links passed bidirectional checks. Final server conversion produced 58 API nodes without warnings; dry-run passed without warnings. Recursive comparison of compiled decode dependencies established A equals main v6, and B equals A after bypassing its sole LoRA loader. Intermediate v3 positional-widget advisories were cleared in v4. Browser canvas appearance was not independently inspected.
+
+**Impact:** Main editor and input-check workflow unchanged. Paired revision not rendered; Run evaluates two generation branches and may accrue Cloud runtime. Earlier individual branch tests do not constitute execution of this paired revision.
+
+**Follow-up Required:** NO for the saved comparison template; likeness acceptance and later finishing/video remain pending.
+
+### [WORKFLOW-2026-10-04-4] October 4, 2026 - Separate input checks and preserve tutorial context
+
+**Categories:** [WORKFLOW] [VALIDATION] [DOCUMENTATION]
+**Changed by:** Nova (Codex)
+**Status:** DEPLOYED
+
+**Changes:**
+- Recorded Ziggy's preference for separate purpose-specific workflows and combining compatible features at the assistant's discretion within the existing Cloud scope.
+- Created `Hon Dolo - Prompt and Reference Check v001` as an independent Cloud workflow (`25a31287-8bfd-4fb6-a7be-878d36325012`) containing no generation/model nodes; saved its editor, executed API and record JSON files.
+- Updated the workflow library links and README, registering the three new workflow files in `docs/repository/FILE_INVENTORY.md` before local creation.
+- Attached the user-supplied episode 6/7 video URLs to transcript provenance and annotated the episode 6 screenshot's approximate 12:19-12:44 transcript match and visible SDXL wiring/settings. Video playback was not independently verified.
+
+**Reason:** Keep distinct tutorial/model/production tasks organized and allow prompt/reference inspection without manually muting rendering outputs in the main workflow.
+
+**Validation:** Saved graph conversion and dry-run passed. Cloud job `687622ca-5d3b-4930-9918-e2f57c529def` completed; its stored API graph has only input/text/crop/preview nodes. Browser widget display was not independently inspected. No image-generation job submitted.
+
+**Impact:** Main editor and Civitai comparison preserved. The new check is an independent snapshot; its edits do not automatically synchronize to the main editor. Cloud runtime charges remain possible. Motion and finishing stages remain pending.
+
+**Follow-up Required:** NO for this input-check workflow.
+
+### [WORKFLOW-2026-10-04-3] October 4, 2026 - Expose the existing FLUX sampling controls
+
+**Categories:** [WORKFLOW] [VALIDATION] [DOCUMENTATION]
+**Changed by:** Nova (Codex)
+**Status:** DEPLOYED
+
+**Changes:**
+- Updated the existing Hon Dolo Cloud workflow to version 6: moved its actual KSamplerSelect to the outer canvas, exposed connected seed/steps/CFG controls, and labeled the internal sampling nodes for inspection.
+- Updated the local editor graph, run record and workflow README; archived episode 6 unchanged with provenance and a lesson in `REFERENCE_DRIVEN_WORKFLOWS.md`.
+
+**Reason:** Ziggy identified KSampler in the SDXL tutorial. The working FLUX template already has an equivalent split sampling pipeline; make its real controls accessible without duplicating or changing that stage.
+
+**Validation:** Server conversion and dry-run passed without warnings. After resolving the three new scalar values and remapping the moved selector ID, all previous node classes, inputs and links match. Default seed 42, steps 4, Euler, CFG 1 and the Flux2 scheduler are retained. No generation job submitted.
+
+**Impact:** Same Cloud workflow link; 20 visible outer nodes, with the actual SamplerCustomAdvanced inside the engine group. No generic SDXL KSampler replacement, new model, download or additional sampling stage.
+
+**Follow-up Required:** NO for exposing controls.
+
+### [WORKFLOW-2026-10-04-2] October 4, 2026 - Expose Hon Dolo prompt, style and preview controls
+
+**Categories:** [WORKFLOW] [VALIDATION] [DOCUMENTATION]
+**Changed by:** Nova (Codex)
+**Status:** DEPLOYED
+
+**Changes:**
+- Updated the existing Hon Dolo main Cloud record to version 5 with a positive prompt field, two embedded style selectors, string concatenation, text/crop/result previews, labeled inactive negative notes, and grouped instructions.
+- Updated the local editor graph, run record and workflow README. Preserved the earlier executed image graphs and comparison workflow.
+- Archived the user-provided episode 7 transcript byte-for-byte, appended provenance, and added its Cloud-specific lessons to `REFERENCE_DRIVEN_WORKFLOWS.md`.
+
+**Reason:** Make the live graph easy for Ziggy to inspect and tweak while adapting the tutorial's controls to the actual Cloud nodes and distilled FLUX model.
+
+**Validation:** Full graph server conversion and dry-run passed without warnings. Input-only job `c9dce556-676f-44f0-bb0c-aaa6d4b4da22` completed with 12 nodes and no generation/model nodes; its 300 x 380 crop was downloaded to ignored D: scratch and visually inspected. Default styles produce the original prompt exactly; the only changed original API input is the positive encoder's text source. Text-only preview UI outputs were omitted by the connector, so the browser widget display remains uninspected.
+
+**Impact:** Same workflow link, no new image/video generation or local model installation. Negative text remains unconnected and visibly inactive at CFG 1. WAS style nodes were available but their catalog contained only None; editable presets use the installed Impact selector.
+
+**Follow-up Required:** NO for these controls; identity acceptance and video remain separate pending work.
+
+### [WORKFLOW-2026-10-03-7] October 3, 2026 - Hon Dolo reference template and Civitai comparison executed
+
+**Categories:** [WORKFLOW] [VALIDATION] [DOCUMENTATION]
+**Changed by:** Nova (Codex)
+**Status:** DEPLOYED
+
+**Changes:**
+- Adapted and saved official Klein 9B two-reference workflow in Comfy Cloud, with labeled inputs, source crop, fixed seed and optional native LoRA connection.
+- Completed baseline job `64483248-7a46-4612-8829-fb9cc3f2a868` and Civitai comparison job `ac805578-8bc4-47b2-a482-3b1089d8fa6b`; saved both 1360 x 768 outputs, editor/API graphs and run evidence under `docs/notes/explorable_world/comfy/`.
+- Verified Civitai-origin shared LoRA loading/execution; new import and stored-provider-key authentication remain untested. Recorded H3 Cloud template discovery without executing video.
+- Archived three user transcripts byte-for-byte with provenance; updated workflow, reference, Civitai, lesson and readiness notes and reader.
+- Removed only our two named temporary Comfy diagnostic directories from C: after disk-full tool failures; their useful connection proof was already retained on D:.
+
+**Reason:** Establish the Grok design plus likeness-reference pipeline with real Cloud execution and reuse community resources through compatible native nodes.
+
+**Validation:** Cloud jobs completed; outputs decoded and visually reviewed; server-returned execution graphs retained; reference links and JSON checked. Cloud GPU time totals 21.340504 seconds, with no per-job dollar/credit charge exposed.
+
+**Impact:** Tested still workflow and candidate images; no accepted identity master or completed video. No local model installation or weight download.
+
+**Follow-up Required:** YES - Ziggy reviews likeness, then tattoos/grill finishing and a bounded H3 performance test; validate the saved Civitai key when a needed authenticated import is available.
+
+### [RECOVERY-2026-10-03-6] October 3, 2026 - Comfy OAuth renewed and live access verified
+
+**Categories:** [RECOVERY] [VALIDATION] [DOCUMENTATION]
+**Changed by:** Nova (Codex)
+**Status:** DEPLOYED
+
+**Changes:**
+- Added `docs/notes/explorable_world/comfy/outputs/comfy_connection_20261003.proof.json`: authenticated production v0.67.0, 41 tools, successful saved pump listing/read, and explicit verification limits.
+- Corrected current readiness in Comfy, workflow, project and Pathfinder handoff notes; updated PLAYBOOK/reader, LESSONS and wolf preflight. Manual Agent handoff remains optional.
+
+**Reason:** Earlier empty CLI/not-found observations came from CodexSandboxOffline and did not describe Stephen's configuration. Actual-profile initialization failed invalid_grant. Fresh browser OAuth succeeded; local app-server JSON-RPC now reaches Comfy. Native chat tool exposure was not reloaded. This corrects the interpretation in earlier October 3 entries while preserving their history.
+
+**Impact:** Direct authenticated reads restored; no new key, generation or account video dependency verification.
+
+**Follow-up Required:** YES - check LTX workflow dependencies and prepare the bounded video test.
+
+### [DIRECTION-2026-10-03-5] 2026-10-03 - Separate Grok styling from the Comfy likeness stage
+
+**Categories:** [DOCUMENTATION] [DIRECTION] [🧹 +1]
+**Changed by:** Codex
+**Status:** DEPLOYED (preparation only)
+
+**Changes:**
+- `UPDATED`: Grok project instructions, casting brief v3, and continuation prompt to treat Grok's original-face images as styling templates while retaining the intended final Hon Dolo likeness as CFA's target.
+- `CREATED`: `comfy/casting/hon_dolo_still_edit.agent_handoff.txt` for an account-validated reference-edit route, clean likeness checkpoint, and subsequent tattoo/grill finishing before identity acceptance.
+- `UPDATED`: Comfy README, PLAYBOOK/generated reader, and Pathfinder handoff with the asset roles and new stage.
+
+**Reason:** Ziggy showed Grok declining the actor likeness while producing a placeholder design. Preserve that work without prematurely accepting its face as the final identity. Screenshots also record proposed Chewie, Millennium Falcon, Jabba and Scoundrel callbacks; exact designs remain to be selected.
+**Validation:** Checked revised local links/text, regenerated the handbook, and confirmed all six cast names persist. Public Flux.2 Klein documentation supports reference editing as a candidate; account availability and likeness quality remain unverified. No output image was received, generated, edited or uploaded in this pass.
+**Follow-up Required:** YES - obtain the original Grok images and selected likeness references, inspect the Cloud still-edit graph, and review one finished identity still before video.
+
+### [DOCUMENTATION-2026-10-03-4] 2026-10-03 - Add the built-in Comfy Agent handoff
+
+**Categories:** [DOCUMENTATION] [STRUCTURE] [🧹 +1]
+**Changed by:** Codex
+**Status:** DEPLOYED (handoff prepared, not sent)
+
+**Changes:**
+- `CREATED`: `docs/notes/explorable_world/comfy/workflows/wolf_care_union_control_v001.agent_handoff.txt`, a concrete account-dependency inspection request for the built-in Comfy Agent.
+- `UPDATED`: Comfy and workflow READMEs, PLAYBOOK and generated reader, and the wolf preflight record with the manual handoff and expected returned evidence.
+
+**Reason:** Ziggy showed the built-in Agent panel and suggested using it in our workflow. Official documentation confirms workspace inspection/editing, separate run permissions, and chat-credit usage. The visible target is the preserved pump; the handoff uses a separate wolf workflow.
+**Validation:** Checked local links and preflight JSON; regenerated the handbook. No message was submitted, canvas changed, or generation run.
+**Follow-up Required:** YES - select/import the dedicated wolf workflow in Cloud, send the inspection message, and return the observed dependency report to CFA.
+
+### [DIRECTION-2026-10-03-3] 2026-10-03 - Define Hon Dolo casting and separate the wolf test
+
+**Categories:** [DOCUMENTATION] [DIRECTION] [🧹]
+**Changed by:** Codex
+**Status:** DEPLOYED
+
+**Changes:**
+- `UPDATED`: the three `comfy/casting/` text files for the user-selected trap-rap project: Hon Dolo (Han Solo), Princess Leia, Chewbacca, Darth Vader, Boba Fett, and Jabba the Hutt. Start with three Hon Dolo styling variations and preserve a selected identity/tattoo map.
+- `UPDATED`: project and Comfy READMEs, PLAYBOOK and generated reader, Pathfinder handoff, and wolf preflight record to state that the wolf clip is only a separate technical test.
+- `REVIEWED`: prior pump run and connection history. September 12 authenticated Comfy execution is confirmed; current tools remain absent. The cause of the configuration/runtime mismatch remains unresolved.
+
+**Reason:** Ziggy clarified the actual production and supplied four tattooed-character visual references; this supersedes the earlier open-cast brief and wolf mood-reference suggestion.
+**Validation:** Checked revised text/links and preflight JSON; regenerated the handbook. No image generation, media upload, or connection change.
+**Follow-up Required:** YES - create/select the Hon Dolo appearance in Grok, restore Comfy access, and test the video's specific identity, tattoo and performance requirements separately from the wolf relighting experiment.
+
+### [REVIEW-2026-10-03-2] 2026-10-03 - Preflight the Union Control production handoff
+
+**Categories:** [DOCUMENTATION] [VALIDATION] [🧹 +3]
+**Changed by:** Codex
+**Status:** DEPLOYED (audit artifacts only; live preflight blocked)
+
+**Changes:**
+- `CREATED`: `docs/notes/explorable_world/comfy/workflows/upstream/video_ltx2_5_union_control_20261003.editor.json` and companion `.manifest.json`, preserving the official graph and public dependency findings.
+- `CREATED`: `docs/notes/explorable_world/comfy/workflows/wolf_care_union_control_v001.preflight.json` with the source, relighting brief, access observations and pending runtime checks.
+- `UPDATED`: Comfy and workflow READMEs plus `pathfinder_handoff/README.md` to record the current PanHandlers handoff and access blocker.
+
+**Reason:** Act on PanHandlers' request to check the production connection and exact Union Control dependencies before preparing a preview.
+**Validation:** Parsed the public graph and records; checked snapshot/source hashes and linked local files. The saved Comfy server remains enabled, but no Comfy tools are exposed; CLI discovery cannot resolve it. Browser and desktop connectors both fail kernel-assets initialization. No account availability, generation or cost claim follows from the public dependency audit.
+**Impact:** Reference files and documentation only; no model downloads, uploads or generation.
+**Follow-up Required:** YES - restore access in the active CFA client, verify account dependencies, review source motion/audio and choose the trim, inspect depth and settle settings/cost before a preview.
+
+### [DOCUMENTATION-2026-10-03-1] 2026-10-03 - Prepare Grok prototype casting handoff
+
+**Categories:** [DOCUMENTATION] [STRUCTURE] [🧹 +3]
+**Changed by:** Codex
+**Status:** DEPLOYED
+
+**Changes:**
+- `CREATED`: `docs/notes/explorable_world/comfy/casting/` with project instructions, an uploadable casting brief and character-card template, and a first-session prompt.
+- `UPDATED`: `docs/notes/explorable_world/comfy/README.md` with casting handoff links and the optional existing guardian still.
+
+**Reason:** Ziggy wants to prototype a cast in Grok for the lifelike ComfyUI video work. Keep genre open, preserve selected visual identities, and return usable reference files with their provenance.
+**Validation:** Checked the text packet and linked local files. No external uploads, image generation, or ComfyUI execution.
+**Impact:** Documentation and creative handoff only.
+**Follow-up Required:** YES - Ziggy selects a casting direction and returns selected original images for the later ComfyUI test.
+
+### [REVIEW-2026-10-02-2] 2026-10-02 - Reconcile Pan_Handlers learning material
+
+**Request:** Ziggy identified `Pan_Handlers/Help/workflow_controls.py` and clarified that earlier work was split across repositories.
+
+**Changes:** Expanded the existing Pathfinder source map with controls, video/audio, tutorial annotations, Node Atlas, image/sampling labs and scene worksheet locations. Confirmed the recorded division: Pathfinder holds general teaching, CFA holds production evidence. Preserved the October visual-editing priority and distinguished instructional controls from an automatic workflow loader; noted still-only exercise assumptions when applying lessons to video.
+
+**Validation:** Read-only inspection of Pan_Handlers source and navigation; static counts confirm 14 controls, 21 starter node types, five recipes and seven Episode 2 milestones. No Pan_Handlers edits, provider calls or new generation. [🧹]
+
+### [DIRECTION-2026-10-02-1] 2026-10-02 - Prioritize lifelike source-video transformation
+
+**Request:** Ziggy shifted focus from game development to high-resolution video in ComfyUI, then selected changing look, setting or characters while retaining original motion as the first test.
+
+**Changes:** Refocused the existing project/Comfy entry points and handbook; added content-to-workflow selection, resource triage, a proposed source-shot experiment and HD/4K finishing criteria. Preserved the September game checkpoint and original recipe evidence. Updated the reference guide, workflow-intake fields, learning record, saved-workflow caveats and reader navigation. No automatic router is implemented.
+
+**Review:** Audited CFA materials and optional Pathfinder lessons; checked current primary LTX/Comfy and supporting repository documentation. Identified unexecuted video routes, the guardian recipe's missing still, and stale API metadata/connected-resolution differences in an upstream I2V inspection snapshot. Current Comfy tools are absent; live dependencies and costs remain unverified. No game-code changes, provider mutation, model weights, media upload or paid generation.
+
+**Validation:** Regenerated the HTML handbook with 14 navigation entries. Checked 159 local links and 164 HTML fragments with none missing; whitespace validation passed. Independent review confirmed the workflow distinctions and static snapshot findings, and prompted correction of an old character-showcase link and intake label. [🧹]
+
+### [RESEARCH-2026-09-12-38] 2026-09-12 - Incorporate image-to-image and LoRA tutorial
+
+**Changes:** Extended the existing Comfy sampling/control notes with Ziggy's Episode 4 transcript (0:00–17:16), source hash and current primary references. Updated SOP 4, README, learning record and the Pathfinder shared-methods map. Captured resize-before-encode, prepared-input provenance, same-parent denoise comparisons, model/CLIP LoRA paths and strengths, and Cloud-versus-local import distinctions.
+
+**Scope:** Documentation review; no model selection, downloads, imports, paid runs or game changes. Uses Pathfinder's existing general curriculum and keeps the project-specific operating details local.
+
+**Validation:** Regenerated the offline reader with all 13 sections. Checked 424 local links and 275 fragments with none missing; the existing run-record template remains valid JSON. Independent review found no corrections needed to the transcript interpretation or comparison procedures. [🧹]
+
+### [RESEARCH-2026-09-12-37] 2026-09-12 - Apply reference-driven Comfy workflow methods
+
+**Changes:** Added `docs/notes/explorable_world/comfy/REFERENCE_DRIVEN_WORKFLOWS.md` from Ziggy's 0:00–21:52 transcript, with source hash, timestamped methods and primary checks. Prepared a one-view Godot-render/style-reference study linked to actual engine improvements. Updated SOPs 2, 4 and 6, the intake sheet, README, learning record and Pathfinder handoff index; regenerated the offline handbook.
+
+**Scope:** Reused Pathfinder's existing foundations. Added environment identification, effective-prompt preservation, typed video outputs, FPS/audio/save checks and review-before-upscale guidance. FLUX.2 Klein editing and LTX control/rephrasing remain researched candidates. No workflow execution, model download, extension installation, paid provision or playable-world change was performed.
+
+**Validation:** Regenerated the handbook with all 13 navigation sections, checked 412 local links with none missing, parsed the unchanged run-record JSON template, and independently reviewed transcript fidelity and environment/output distinctions. [🧹 +1]
+
+### [RESEARCH-2026-09-12-34] 2026-09-12 - Prioritize the guardian encounter and apply sampling lessons
+
+**Result:** Ziggy selected `10b936eb46c1e671b089bf26e0c551bb.mp4` as the first reference. Independently recovered its editor and 72-node execution graphs. The 8.042-second, 1088 x 1920 clip contains an audio track; a native Windows thumbnail shows the woman and giant wolf touching foreheads beside a stream. Full motion and audible content remain unreviewed. This recipe enables image-to-video using the unsupplied `gf_24_a.jpg`; the older walking-wolf recipe remains secondary. Neither supplies a playable 3D mesh.
+
+**Changes:** Added `comfy/references/wolf_care_v001.editor.json`, `.api.json`, `.reference.json` and `.intake.md` under `docs/notes/explorable_world/`. Moved the exact MP4 from game materials to ignored Comfy reference storage after checking workspace containment and retaining its hash; saved a representative thumbnail there. Updated the character showcase, project/Comfy READMEs, learning record and local Pathfinder handoff. Added `comfy/SAMPLING_AND_CONTROLS.md` for the supplied 0:21-20:34 tutorial continuation, with compact model-specific comparison steps, source timestamps and primary references. Expanded SOP 2 and its intake template; rebuilt the handbook. Consulted Pathfinder's control guide, practice path and sampler material without copying the general curriculum or editing the sibling repository. The continuation's episode number and canonical URL remain unverified.
+
+**Validation:** Media, metadata, thumbnail and graph hashes match their receipt; both recovered graphs equal the embedded content and all 103 references across 72 execution nodes resolve. Independent review corrected the comment-box path notation. Bounded credential screening found only empty API-key fields and no common credential-bearing URLs/tokens. Checked 428 local documentation links, 134 HTML anchor references and 13 handbook navigation targets; both reference media files are Git-ignored. No model-weight download, Cloud submission, generation or game-code change occurred. The source image, exact new-clip attribution, Cloud compatibility and replay remain pending; cloud archiving of this clip is unverified. [🧹 +5]
+
+### [RESEARCH-2026-09-12-33] 2026-09-12 - Recover the Giant Fantasy recipe from Ziggy's saved MP4
+
+**Result:** The supplied 12,425,882-byte MP4 contains valid editor/workflow JSON in its comment metadata. Extracted the editable graph and 72-node execution graph; the latter describes a two-stage LTX video recipe with 2x latent enlargement. The container includes an audio track despite the earlier API flag. Exact dependency availability, branch behavior and replay remain unverified.
+
+**Changes:** Added `docs/notes/explorable_world/comfy/references/civitai_142373294.editor.json`, `.api.json` and `.intake.md`. Updated the reference receipt, Comfy README/PLAYBOOK/LESSONS/TUTORIAL_02 and generated reader, the character showcase note, and the local Pathfinder handoff index. Moved the MP4 from `games/observatory/assets/materials/` to ignored `docs/notes/explorable_world/comfy/outputs/references/142373294/`, after checking both absolute paths remain in the workspace; its content hash is unchanged. The reference clip has not become an accepted game asset or verified cloud archive.
+
+**Validation:** Independently parsed the MP4 structure and embedded JSON. Verified source and extracted hashes, semantic equality of both graphs to the metadata, all 72 execution-node references, 97 local documentation links and handbook anchors. Credential screen found only empty API-key fields and no common credential-bearing URLs/tokens. No video playback review, model download, Cloud submission or graph execution occurred. Preserved unused input/API branches in the untouched source recipes for later compatibility review. [🧹 +3]
+
+### [RESEARCH-2026-09-12-32] 2026-09-12 - Investigate the unresponsive Civitai video download
+
+**Finding:** Ziggy reports the visible download arrow has no effect. Read-only public source inspection found an HTTP-status handling path that can fail silently and established that the video URL hook requests transcoding. These findings do not establish the actual browser response or preservation of embedded workflow metadata. The earlier original=true HTTP 403 was a separate request.
+
+**Changes and checks:** Added the observation, source links and bounded browser diagnostics to `docs/notes/explorable_world/comfy/LESSONS.md` and `comfy/references/civitai_142373294.reference.json`. JSON validation passed. No new media, model weights, workflow graph, provider operations or game changes. [🧹]
+
+### [DOCUMENTATION-2026-09-12-31] 2026-09-12 - Share Pathfinder methods while keeping CFA independently usable
+
+**Direction:** Ziggy shares resources with both Novas and wants Pathfinder's preferred processes reused while CFA retains the knowledge required for production.
+
+**Changes:** Expanded `docs/notes/explorable_world/pathfinder_handoff/README.md` with the division of responsibility, reviewed guide sections, local fallback procedures, source/date tracking and a deliberate exchange process. Linked that map from the project README, `comfy/README.md`, `comfy/PLAYBOOK.md`, `comfy/LESSONS.md` and `comfy/TUTORIAL_02.md`; rebuilt `comfy/index.html`. The original dated evidence handoff remains intact. Generic curriculum stays primarily in Pathfinder; exact recipes, operational steps, recovery, world decisions and production evidence stay in CFA. No sibling checkout is introduced as a build or runtime input.
+
+**Review and validation:** Read the live Pathfinder handoff/reply, README and relevant teaching sources. Independent comparison found no material method conflict and identified the newer Episode 2 lab and recorded video URL; the latter remains an attributed source pending an independent match because direct retrieval failed. Rebuilt all 13 handbook navigation entries and checked 121 CFA file links, 9 optional sibling links and reader anchors. Inspected the reader's local source input and found no Pan_Handlers references in game scripts/configuration/launchers. No external repository edits, automatic synchronization, provider calls or game changes. [🧹]
+
+### [DOCUMENTATION-2026-09-12-30] 2026-09-12 - Apply workflow tutorial and trace Ziggy's visual reference
+
+**Changes:** Added `docs/notes/explorable_world/comfy/TUTORIAL_02.md`, `comfy/templates/workflow_intake.md`, and `comfy/references/civitai_142373294.reference.json`. Expanded the handbook's community-workflow SOP with actual graph recovery, typed dependency tracing, controlled baselines, Cloud adaptation and reuse. Updated `comfy/PLAYBOOK.md`, `comfy/CIVITAI.md`, `comfy/README.md`, `comfy/LESSONS.md`, `comfy/workflows/README.md`, `comfy/render_playbook.py`, and the generated `comfy/index.html`. Tutorial notes resolve the name Juggernaut X, qualify older node/UI claims and explain the already executed ten-node pump recipe.
+
+**Reference and direction:** Public Civitai item/version metadata identifies item 142373294 as a 5.042-second video associated with LTX-2.5 Giant Fantasy, version 3313822. Updated `docs/notes/explorable_world/CHARACTER_SHOWCASE.md` and its parent README to record the supplied collection screenshot and media reference, distinguish video generation from a playable mesh, and allow a human or creature showcase. The original MP4 request returned HTTP 403 before media was saved; no embedded workflow or video content was inspected. Public metadata success does not establish private collection access or current Comfy availability.
+
+**Validation:** Reviewed primary Comfy documentation/source and the public item/version responses. Rebuilt the handbook with all 13 navigation entries; checked 246 local links, reader anchors, saved pump-recipe facts and the curated reference JSON. Independent review caught and corrected a batch-size rule so required video frames/multiview counts are preserved. No new generation, model-weight download, model import, game modification or account change. [🧹 +3]
+
+### [DOCUMENTATION-2026-09-12-21] 2026-09-12 - Bring CFA evidence and focused learning improvements into Pathfinder
+
+**Categories:** [DOCUMENTATION] [WORKFLOW] [VALIDATION] [🧹 +2]
+**Changed by:** Nova (Codex)
+**Changes:** Added `docs/notes/explorable_world/pathfinder_handoff/README.md` and `evidence.json`, indexing the actual pump still, editor/API graphs, recorded OAuth recovery, production critique and separately authored Godot chapter. At Ziggy's request, updated the sibling Pan Handlers Pathfinder guide with a portable worked example, a proposed eight-second scene rehearsal, complete guide exports, full-WAV timing clarification and the timed browser-import handoff. Fixed a floating-point comparison at the 0.1-second timing tolerance. Left the requested response in `D:\Documents\Pan_Handlers\Help\CFA_FEEDBACK.md`.
+**Validation:** Pan Handlers baseline 27 tests passed; revised staged and destination suites each passed 33 tests, including standalone/embedded rendering, both themes, journal v1 preservation, timing boundaries, artifact hashes and duplicate renderer keys. Verified destination hashes before applying 17 selected files; 14 other captured guide/test files remained unchanged. Production evidence is linked and hashed; prior game checks were read, not rerun.
+**Impact:** Future learners can inspect one real result and its recipe without CFA credentials or model downloads. Unknown costs/deployed versions and the unexecuted dialogue rewrite remain explicit. No generation, model import, cloud transfer, commit or publication was performed for this handoff.
+
+-----
+
+### [WORKFLOW-2026-09-12-20] 2026-09-12 - Record timed model-import handoffs with Ziggy
+
+**Categories:** [WORKFLOW] [DOCUMENTATION]
+**Changed by:** Codex
+**Changes:** Recorded Ziggy's agreement to handle browser imports when the assistant supplies a timely, fully prepared interruption. Added preparation, notification, independent-work, and post-import verification steps to the Civitai procedure and handbook, with a standing preference in the learning record. Updated stale handbook connection/storage summaries to the latest recorded evidence.
+**Validation:** Rebuilt the HTML handbook from its Markdown source and checked patch whitespace. No new model selection, import, or generation was needed to establish the agreement.
+**Impact:** Model research and handoff timing remain the assistant's responsibility. Ziggy receives a concrete browser task when required; existing imports are reused and background props retain delegated creative control.
+
+-----
+
+### [INTEGRATION-2026-09-12-19] 2026-09-12 - Verify public Civitai discovery and prepare model candidates
+
+**Categories:** [INTEGRATION] [DOCUMENTATION]
+**Changed by:** Codex
+**Changes:** Clarified the assistant's model-research role and the current per-file browser import handoff. Added two standard SDXL SafeTensor candidates and an optional exact Juggernaut X import link to the Civitai guide.
+**Validation:** Public Civitai model API reads succeeded outside the sandbox after ordinary web retrieval failed. Verified listing-level popularity counts, version/file IDs, format, source links, and hashes for RealVisXL V5 and Juggernaut X; cross-checked creator/publisher model cards. No authenticated Civitai account access was used.
+**Impact:** Ziggy can delegate model discovery and preparation. The shared RealVisXL option remains available without a new import; Juggernaut X is an optional comparison. No weights downloaded, imports performed, or generation credits spent.
+
+-----
+
+### [INTEGRATION-2026-09-12-17] 2026-09-12 - Restore Comfy access and verify integration readiness
+
+**Categories:** [INTEGRATION] [STORAGE] [DOCUMENTATION]
+**Changed by:** Codex
+**Changes:** Reauthenticated the existing comfy-cloud connection after a fresh OAuth refresh rejection. Updated connection, Civitai, and learning notes with responding live checks and remaining browser import validation. Recorded Ziggy's confirmed Drive streaming mode and observed cache controls.
+**Validation:** Comfy production server reports authenticated OAuth, version 0.57.0, and 41 tools. Account-owned model count is 0; the SDXL 1.0 checkpoint search returns realvisxlV50_v50Bakedvae.safetensors; civitai node search returns 0. Drive screenshots show 0 bytes pinned offline and 913 KB cached; cache-directory relocation and the recommended cap remain unconfirmed.
+**Impact:** Live Comfy control restored. Civitai authenticated import remains untested. No generation, model import/download, credit spend, or local deletion occurred.
+
+-----
+
+### [STORAGE-2026-09-12-16] 2026-09-12 - Record browser confirmation of Drive folder synchronization
+
+**Categories:** [STORAGE] [DOCUMENTATION]
+**Changed by:** Codex
+**Changes:** Updated the archive receipt and project notes from Ziggy's browser screenshots: CFA Observatory and its three immediate subfolders are visible online. Recorded the displayed storage usage of 672.49 GB of 2 TB.
+**Validation:** Screenshots establish folder synchronization; they do not show the pump files or establish independently retrieved content. File-upload and retrieval verification remain pending in the receipt.
+**Impact:** G: is confirmed as the working synchronization route for the project folders. Local originals remain available. No deletion, new generation, or bulk transfer.
+
+-----
+
+### [STORAGE-2026-09-12-15] 2026-09-12 - Correct the archive destination to G: and document local space reclamation
+
+**Categories:** [STORAGE] [INTEGRATION] [DOCUMENTATION]
+**Changed by:** Codex
+**Changes:** After Ziggy identified the old D: archive and live `G:\My Drive` mount, created `G:\My Drive\CFA Observatory` with Originals, Approved Assets, and Builds. Copied the six pump files and receipt there; retained the D: attempt in the receipt history. Updated storage and workflow notes with the corrected route, streaming behavior, offline availability, and synced deletion semantics.
+**Validation:** G: is accessible outside the sandbox. Six content files total 929,950 bytes; destination sizes and SHA-256 hashes match their sources, and receipt copies match. Remote upload and independent retrieval remain unverified pending the browser check.
+**Impact:** No existing files overwritten or deleted. All originals and the earlier D: archive remain. Cache relocation to D: is documented but not applied. No generation, model download, or sharing occurred.
+
+-----
+
+### [STORAGE-2026-09-12-14] 2026-09-12 - Prepare the nominated Google Drive archive and verify a local test copy
+
+**Categories:** [STORAGE] [INTEGRATION] [DOCUMENTATION]
+**Changed by:** Codex
+**Changes:** Created `D:\Google Drive\CFA Observatory` with Originals, Approved Assets, and Builds. Copied the pump PNG, run-record snapshot, three workflow graphs, and prompt into Originals/pump_concept_v001, plus a new archive receipt retained in comfy/workflows. Updated storage, workflow, connection, and learning notes with the result and pending remote checks.
+**Validation:** Six content files total 929,950 bytes; each destination size and SHA-256 matches its source, and both receipt copies match. The nominated directory is accessible and GoogleDriveFS is running. No cloud-side API check or independent remote retrieval was available; a local copy is not recorded as a verified cloud backup.
+**Impact:** Small archive test copied without overwriting existing files or deleting originals. User confirmation of online visibility and streaming/mirroring mode is pending. Google Drive cloud capacity and independent retrieval remain unverified. No model download, new generation, or public sharing occurred.
+
+-----
+
+### [DOCUMENTATION-2026-09-12-13] 2026-09-12 - Record Civitai secret setup and research Hugging Face and Drive roles
+
+**Categories:** [DOCUMENTATION] [INTEGRATION]
+**Changed by:** Codex
+**Changes:** Recorded Ziggy's report and screenshot of a saved Civitai-provider secret, without inspecting its value or claiming a successful import. Added `comfy/HUGGING_FACE.md` with model examples, minimal token setup, and hosting/storage distinctions. Updated project storage notes to make Ziggy's existing Google Drive account the preferred archive candidate; documented Windows streaming/cache setup and the pending connection.
+**Validation:** Reviewed primary model cards, Hugging Face token/gating/Spaces/storage documentation, Comfy import instructions, and Google's Drive streaming/cache guidance. Inspected available connector tools and a bounded desktop installation check; no authenticated Drive route was found.
+**Impact:** Documentation and read-only research. No credentials read, accounts connected, models downloaded, cloud folders created, or paid jobs submitted. Civitai authenticated import, Hugging Face setup, and Drive archive verification remain open.
+
+-----
+
+### [DOCUMENTATION-2026-09-12-12] 2026-09-12 - Establish cloud storage and D-drive working policy
+
+**Categories:** [DOCUMENTATION] [STORAGE]
+**Changed by:** Codex
+**Changes:** Added `docs/notes/explorable_world/STORAGE.md` with Ziggy's cloud-processing/storage preference, D-drive paths, Git/cloud asset division, archive requirements, and measured footprint. Added scoped model-weight ignore rules to Comfy and the game. Added storage evidence fields to the run-record template and linked the policy from project, Comfy, Civitai, and game documentation.
+**Validation:** Read-only DriveInfo inspection found about 14.36 GiB free on C: and 382.29 GiB on D:. The engine cache, new game, and world notes totaled about 443 MiB, all on D:. Launch/build scripts already place their application data on D:. About 1.34 MiB of new game/design files was eligible for Git at audit time. Reviewed official GitHub file/LFS guidance and Comfy import/retention documentation.
+**Impact:** Establishes future working practice and prevents ordinary accidental staging of model weights in the new project areas. No files deleted/moved, history rewritten, models downloaded, cloud archive connected, or source published. A persistent cloud asset archive remains to be selected and verified.
+
+-----
+
+### [DOCUMENTATION-2026-09-12-11] 2026-09-12 - Document Civitai access and distinguish generation routes
+
+**Categories:** [DOCUMENTATION] [INTEGRATION]
+**Changed by:** Codex
+**Changes:** Added `comfy/CIVITAI.md` with source-backed import and credential instructions, a filter guide, node-package findings, and the next validation step. Recorded the tutorial's X-versus-Hyper comparison as unverified pending the specific model identity, and documented the time-filter publication/statistics nuance. Linked the procedure from the Comfy README and handbook; rebuilt the HTML reader and updated the learning record and current connection status. Reconciled the handbook introduction with the implemented game and delegated prop work.
+**Validation:** Reviewed official Cloud import/node policies and the Civitai repository. One read-only Comfy server-information call failed during OAuth refresh with `invalid_grant: refresh token reuse detected`; its cause remains unknown. No live Civitai catalog, balance, or node availability was established.
+**Impact:** Documentation only. No credentials read or saved, packages installed, models imported, or generation submitted. Existing game and completed pump experiment remain available. Browser credential setup and Comfy reauthentication are the next integration steps. Recorded Ziggy's preference to shortlist third-party models by highest rated and/or most downloaded, default new still-image searches to SDXL 1.0, and prefer SafeTensor files in the procedure, handbook, and learning record.
+
+-----
+
+### [EXPERIMENT-2026-09-12-9] 2026-09-12 - Complete the first Comfy pump concept
+
+**Categories:** [EXPERIMENT] [INTEGRATION] [DOCUMENTATION]
+**Changed by:** Codex
+**Changes:** Recovered Comfy OAuth with a fresh successful browser callback and verified live authenticated access. Submitted one Z-Image-Turbo job (`cb835f1e-3b10-4972-860c-fb83fb0517c0`), confirmed completion, and downloaded the original 1024 by 1024 PNG. Archived its embedded editor and API graphs, source template, prompt/output hashes, and actual settings in the pump experiment record. Saved the recipe as `Observatory - Pump Concept v001` in Comfy's Workflows sidebar. Updated the brief, handbook, and learning record with the result and authentication recovery.
+**Validation:** The PNG metadata matches the submitted prompt, seed 42, eight steps, and dimensions. Its editor graph matches the server-applied slot overrides. Visual review found a useful silhouette and palette, but insufficient repair detail and an unclear lever socket. Usage reporting returned no records; actual cost remains unknown.
+**Impact:** First asset-generation experiment executed. Ziggy subsequently called the concept a fine start; recorded this positive initial feedback while leaving detailed design acceptance open. Clarified that the usage report's time window ended before this job, so it cannot establish the charge. No mesh or engine project was created. Original media is locally saved under the Git-ignored outputs directory; a separate backup is not yet verified.
+
+-----
+
+### [EXPERIMENT-2026-09-12-8] 2026-09-12 - Prepare the pump concept and record OAuth interruption
+
+**Categories:** [EXPERIMENT] [INTEGRATION] [DOCUMENTATION]
+**Changed by:** Codex
+**Changes:** Added a prepared pump-concept record with prompt hash, intended parameters, and visual acceptance checks. Reconciled the brief with the agreed one-image experiment and separated concept review from later mesh tests. Recorded the OAuth refresh rejection and fresh login attempt in the connection notes, handbook, and learning record; rebuilt the handbook reader.
+**Impact:** Local preparation and authentication recovery only. Browser authorization remains pending; no image job was submitted and no output was created.
+
+-----
+
+### [DOCUMENTATION-2026-09-12-7] 2026-09-12 - Add official ComfyUI core as an implementation reference
+
+**Categories:** [DOCUMENTATION]
+**Changed by:** Codex
+**Changes:** Added the official ComfyUI repository to the handbook and learning record; clarified the distinction between upstream implementation, deployed Cloud schemas, and the MCP connector version. Regenerated the HTML handbook.
+**Impact:** Reference documentation only; no installation or generation.
+
+-----
+
+### [INTEGRATION-2026-09-12-5] 2026-09-12 - Verify live Comfy access after client refresh
+
+**Categories:** [INTEGRATION] [DOCUMENTATION]
+**Changed by:** Codex
+**Status:** LIVE DISCOVERY VERIFIED — generation untested
+**Changes:** Updated the Comfy connection README, handbook/HTML reader, and learning record with production OAuth verification, the discovered Z-Image-Turbo template/schema, billing-history access, and scoped NKD catalog searches.
+**Validation:** Server version 0.57.0 reported 41 tools. Billing activity responded but supplied no live balance or subscription entitlement. The template estimate excluded GPU runtime; zero paid-API-node credits is not a total price. NKD names/pack filters returned no matches; core 3D nodes were discoverable.
+**Impact:** Read-only Comfy checks and local documentation updates. No generation, upload, account mutation, or credit-spending operation submitted.
+**Follow-up Required:** YES — first recorded pump-image experiment and observed usage.
+
+-----
+
+### [DOCUMENTATION-2026-09-12-3] 2026-09-12 - Research Comfy resources and establish Observatory asset SOPs
+
+**Categories:** [DOCUMENTATION] [PROCESS]
+**Changed by:** Codex
+**Status:** DOCUMENTED — operational procedures await live Comfy validation
+
+**Changes:** Added the cited Comfy handbook with eight SOPs and reviews of NKD Preview Tools, NKD VFX Tools, ZHO workflows, and official resources. Added an offline HTML reader and its renderer, a learning record, a run-record template, and a pump concept prompt under `docs/notes/explorable_world/comfy/`. Linked them from the connection and workflow READMEs. Distinguished GitHub publishing workflows from Comfy media graphs and clarified the image-first experiment before mesh generation.
+
+**Reason:** Preserve practical, source-backed knowledge across work sessions and make cloud asset experiments reproducible for Water Before the Crossing.
+**Validation:** Checked the renderer, generated document navigation/local links, footnote references, UTF-8 files, JSON records, and diff whitespace. A separate review found no factual blocker in the Cloud procedures; incorporated its cost/recovery and recordkeeping clarifications.
+**Impact:** Documentation and local preparation only. No third-party installation, account mutation, upload, or paid generation performed. Comfy tools remain absent from this running session.
+**Follow-up Required:** YES — restore session tool availability, discover the account's supported template, then complete the first recorded image experiment.
+
+-----
+
+### [INTEGRATION-2026-09-12-2] 2026-09-12 - Connect Comfy Cloud and prepare the first asset experiment
+
+**Categories:** [INTEGRATION] [DOCUMENTATION]
+**Changed by:** Codex
+**Status:** REGISTERED AND AUTHENTICATED — current chat tool refresh pending
+
+**Changes:** Registered the official `comfy-cloud` MCP endpoint in the user's Codex configuration with approval and completed browser OAuth. Created `docs/notes/explorable_world/comfy/README.md`, an unsubmitted pump asset brief, a workflow folder, and an ignored output folder.
+
+**Reason:** Connect the existing working environment to Comfy's hosted generation service without installing local ComfyUI on the current PC.
+**Validation:** Confirmed the registered URL and enabled state without reading credentials; the CLI reported successful login. Checked the asset brief JSON and workspace files. The current chat does not yet expose Comfy tools.
+**Impact:** Connection configuration and experiment preparation only; no generation, purchase, or credit-spending operation submitted.
+**Follow-up Required:** YES — refresh the IDE's MCP connection, then verify server/account/template discovery.
+
+-----
 
 ### [DATA_PIPELINE-2026-07-02-1] 2026-07-02 - MdN vs PT Care Package Processed (40 Runs)
 

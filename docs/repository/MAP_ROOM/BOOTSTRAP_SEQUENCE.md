@@ -25,6 +25,8 @@ All references to bootstrap paths, sequences, or Tier workflows should point HER
 
 ## 📊 TIER OVERVIEW
 
+**Comfy workflow tasks — October 4, 2026:** the root [AGENTS.md](../../../AGENTS.md) provides a conditional Codex entry into the [problem-to-recipe lookup](../../notes/explorable_world/comfy/workflows/README.md#choose-by-problem) and [Panhandlers handoff](../../notes/explorable_world/pathfinder_handoff/README.md). This is a task-specific instruction source, not a new auditor tier. Existing tier definitions below remain unchanged.
+
 **Total Tiers:** 5 bootstrap tiers + 2 specialized roles
 
 ### **VUDU Coordination Tiers** (1-4)

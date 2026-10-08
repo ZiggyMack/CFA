@@ -14,7 +14,117 @@
 
 ## 🆕 v5.0.0 ADDITIONS (Nyquist Integration - Nov 26, 2025)
 
+### October 7, 2026 incremental registration: Gemini cast attachment map
+
+- `docs/notes/explorable_world/comfy/casting/gemini_cast_reference_map.txt` — upload-ready character/reference-role map with actual received filenames, reserved future cast slots and explicit upload-batch numbering rules.
+- `docs/notes/explorable_world/comfy/casting/gemini_cast_reference_map.json` — matching stable reference IDs, original paths/hashes, character roles, selection limits and unverified Gemini attachment state. No original images renamed, copied or newly approved.
+
+### October 7, 2026 incremental registration: Gemini creative instructions
+
+- `docs/notes/explorable_world/comfy/casting/gemini_project_instructions.txt` — six paste-ready, project-scoped saved-instruction entries covering creative direction, current-reference precedence, editable shots, exact audio and honest production handoff. Draft for user to add; no Gemini settings changed.
+
+### October 7, 2026 incremental registration: soundtrack replacement
+
+- `docs/notes/explorable_world/comfy/workflows/hon_dolo_audio_replace_v001.*` — separate native audio-replacement editor graph, dependency preflight, measured preview record and usage guide; Cloud compilation/validation/execution states recorded independently from local media preparation.
+- `docs/notes/explorable_world/comfy/workflows/hon_dolo_lipsync_v001.*` — separate prepared replacement-audio lip-sync recipe and preflight; no partner execution or spend implied.
+- `docs/notes/explorable_world/comfy/outputs/hon_dolo_audio_replace_v001*` — local soundtrack preview with original video stream retained, song excerpt and validation data; bulk media excluded from Git.
+
+### October 7, 2026 incremental registration: Grok conversational ID map
+
+- `docs/notes/explorable_world/comfy/casting/grok_intake_20261007/README.md` — supplied CSV/consolidation handoff review, locally verified IDs, unresolved originals and the #277 canonical-crop mismatch; no automatic cleanup or character-lock changes.
+- `docs/notes/explorable_world/comfy/casting/grok_intake_20261007/id_map_audit.json` — source hashes and all 170 supplied mapping rows checked against the October 6 manifest, retaining local matches, remote-only entries, variants and reference-role limits.
+
+### October 7, 2026 incremental registration: redownloaded Hon Dolo music
+
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_intake_20261007.json` — hashes, full media decode, metadata lyrics and sampled waveform comparison of the new Music-folder MP3/MP4 against the October 4 audio baseline; preserves existing masters and provisional shot timings without claiming audible lyric verification.
+
+### October 7, 2026 incremental registration: Gemini Hon Dolo video references
+
+- `docs/notes/explorable_world/comfy/workflows/hon_dolo_gemini_relight_v002.*` — controlled Canny-versus-depth follow-up, actual graph/settings, output and continuity comparison; no acceptance implied by execution.
+- `docs/notes/explorable_world/comfy/outputs/hon_dolo_gemini_relight_v002*` — local control-video preview and generated comparison media, excluded from Git.
+
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/lyrics.user.v002.txt` — October 7 pasted lyric text, preserved separately from the original and compared without treating changed audio as changed wording.
+
+- `docs/notes/explorable_world/comfy/workflows/hon_dolo_gemini_relight_v001.executed.api.json`, `.editor.json`, `.record.json` and `.prompt.txt` — actual first Gemini source-video lighting experiment, reopenable graph, run evidence and effective prompt.
+- `docs/notes/explorable_world/comfy/outputs/hon_dolo_gemini_relight_v001*` — local generated video, sampled comparisons and measured review; bulk media stays off Git.
+
+- `docs/notes/explorable_world/comfy/workflows/hon_dolo_gemini_relight_v001.intake.json` — selected source, prepared 57-frame baseline, lighting-only experiment specification and dated Cloud readiness; no execution claim without an actual job.
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_intake_20261007/source_excerpts/` — local D: picture excerpt, first frame and separate matching audio for the selected clip; ignored media with hashes in the experiment intake.
+
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_intake_20261007/README.md` — four supplied Gemini video references, measured formats, sampled-frame observations, the user-selected experiment source, proposed excerpt and S10A dinner candidate.
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_intake_20261007/manifest.json` — source paths/hashes, stream/decode evidence, reference roles, knowns and unknowns; no generation or acceptance implied.
+- The four originals remain in `docs/notes/explorable_world/comfy/references/Gemini Video/`; derived `contact_sheets/*.jpg` stay local on D: with the review. Media is excluded from Git; these records retain provenance.
+
+### October 6, 2026 incremental registration: Hon Dolo reference drop through 314
+
+- `docs/notes/explorable_world/comfy/casting/grok_intake_20261006/README.md` — measured drop inventory, duplicate/gap findings, document precedence and reference roles.
+- `docs/notes/explorable_world/comfy/casting/grok_intake_20261006/manifest.json` — per-file hashes, dimensions, decode checks, experiment-number coverage and exact duplicate groups; source media stays on D:.
+- `docs/notes/explorable_world/comfy/casting/grok_intake_20261006/design_handoff.json` — newer supplied Grok design decisions with provenance, observed reference files and unresolved mappings; separate from final Comfy identity acceptance.
+- `docs/notes/explorable_world/comfy/casting/grok_intake_20261006/video_review.json` — measured streams and sampled-frame review of the supplied keyframe loop and morph clips.
+- `docs/notes/explorable_world/comfy/casting/grok_intake_20261006/index.html` — searchable source-image inventory, grouping exact copies without moving or deleting originals.
+- Incoming `references/hon-dolo-nova-brief-through-314/` documents and the supplied pack READMEs remain unchanged; the manifest registers each path/version/hash. Bulk stills, stencils, sheets and videos are local reference assets, not model weights or executed Comfy workflows.
+
+### October 4, 2026 incremental registration: Comfy input-check workflow
+
+The historical totals above remain the November 2025 inventory baseline; this is a scoped addition, not a full recount. The current workshop entry point is [Comfy workflows](../notes/explorable_world/comfy/workflows/README.md).
+
+- `docs/notes/explorable_world/comfy/workflows/hon_dolo_prompt_reference_check_v001.editor.json` — saved Cloud editor graph for prompt/reference inspection without generation.
+- `docs/notes/explorable_world/comfy/workflows/hon_dolo_prompt_reference_check_v001.executed.api.json` — server-returned execution graph from its completed Cloud check.
+- `docs/notes/explorable_world/comfy/workflows/hon_dolo_prompt_reference_check_v001.record.json` — workflow ID, source snapshot, completed job and limitations.
+
+### October 4, 2026 incremental registration: comparison guide and preflight
+
+- `docs/notes/explorable_world/comfy/references/comfy_episode05_sd3_comparison_20261004.user_transcript.txt` — unchanged user-supplied episode 5 transcript; provenance is in the adjacent transcript manifest.
+- `docs/notes/explorable_world/comfy/workflows/hon_dolo_civitai_comparison_v001.preflight.api.json` — server-converted paired comparison graph, validated without execution; distinct from the earlier executed single-branch graph.
+
+### October 4, 2026 incremental registration: image-to-image recipe
+
+- `docs/notes/explorable_world/comfy/references/comfy_episode04_img2img_lora_20261004.user_transcript.txt` — unchanged episode 4 transcript, with provenance in the adjacent manifest.
+- `docs/notes/explorable_world/comfy/workflows/hon_dolo_img2img_sdxl_v001.editor.json` — separate Cloud image-to-image refinement recipe.
+- `docs/notes/explorable_world/comfy/workflows/hon_dolo_img2img_sdxl_v001.preflight.api.json` — server-converted graph validated without generation.
+- `docs/notes/explorable_world/comfy/workflows/hon_dolo_img2img_sdxl_v001.record.json` — template/model provenance, validation, defaults and limitations.
+
+### October 4, 2026 incremental registration: sampling and canvas guide
+
+- `docs/notes/explorable_world/comfy/references/comfy_episode03_sampling_canvas_20261004.user_transcript.txt` — unchanged episode 3 transcript, with provenance in the adjacent manifest.
+
+### October 4, 2026 incremental registration: Comfy task entry
+
+- `AGENTS.md` — conditional Codex project instructions connecting Comfy workflow selection and optimization to the existing CFA recipe index, Panhandlers teaching and experiment-feedback procedure. Other task areas retain their existing entry points.
+
+### October 4, 2026 incremental registration: first video motion test
+
+- `docs/notes/explorable_world/comfy/workflows/hon_dolo_motion_v001.editor.json` — server-converted, reopenable Cloud graph with the executed motion-test settings.
+- `docs/notes/explorable_world/comfy/workflows/hon_dolo_motion_v001.executed.api.json` — actual server-returned 50-node execution graph.
+- `docs/notes/explorable_world/comfy/workflows/hon_dolo_motion_v001.record.json` — completed job, provenance, settings, output checks and review limits. Media and review frames remain ignored under outputs on D:.
+
+### October 4, 2026 incremental registration: music video workflow plan
+
+- `docs/notes/explorable_world/comfy/workflows/HON_DOLO_PRODUCTION_PLAN.md` — five reusable workflow families, official candidate sources, dated evidence, input handoffs and bounded proof tests for the trap-rap video. Research plan; not a newly validated Cloud graph.
+
+### October 4, 2026 incremental registration: Strictly Business song and story
+
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/lyrics.user.v001.txt` — user-supplied song text preserved without lyric corrections, censorship or section renumbering.
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/README.md` — first-project creative home, proposed lyric-to-scene map, MiniMax alternate route and audio/Comfy handoff.
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/shot_plan.json` — editable planning data linking source lyric lines to proposed shots, visual prompts, reference roles and unresolved audio timecodes; not an executable Comfy workflow.
+
+### October 4, 2026 incremental registration: song media intake
+
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/media_intake.v001.json` — hashes, container/stream evidence, decode checks and limitations for the supplied remastered audio files. Original media stays on D: outside Git tracking; lyric-video timing and vocal-stem preparation require their own evidence.
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/lyrics.embedded.v001.srt` — subtitle track extracted from the supplied M4A container, kept separately from the unchanged user lyric master; timing is file-provided and awaits audible synchronization review.
+
+### October 4, 2026 incremental registration: Grok cast collection
+
+- `docs/notes/explorable_world/comfy/casting/grok_intake_20261004/README.md` — received-image review, reference roles, evolving tattoo/grill direction and links to source evidence. No accepted master is declared.
+- `docs/notes/explorable_world/comfy/casting/grok_intake_20261004/manifest.json` — inventory, source hashes, dimensions, duplicate checks and missing-ID explanation for the 106 supplied JPEGs.
+- `docs/notes/explorable_world/comfy/casting/grok_intake_20261004/design_direction.json` — dated user feedback, component locks/preferences and unresolved placement/acceptance decisions; revision 2 preserves the earlier direction as superseded history.
+- `docs/notes/explorable_world/comfy/casting/grok_intake_20261004/index.html` — local, searchable visual index linking the unchanged source images, supporting cast and early studies; no service calls or generation.
+- `docs/notes/explorable_world/comfy/casting/grok_intake_20261004/gold_preview.v001.json` — five user-described gold-standard preview stills, source hashes, visual observations and provisional song-shot uses; no inferred Grok experiment numbers or automatic replacement of prior component locks.
+- Local media sets: the two supplied `references/hon-dolo-stills-*` folders, derived review sheets, six initial feedback screenshots and five later feedback photos remain on D: outside Git image tracking. The later photos are four conversation screenshots and an unnumbered close-up, not the new numbered Grok originals. Their source hashes and roles are recorded in the intake. No originals are renamed or deleted.
+- Five subsequent gold-standard sneak-peek JPEGs are preserved unchanged in `casting/grok_intake_20261004/evidence/gold_preview_01.jpg` through `gold_preview_05.jpg`, with metadata in `gold_preview.v001.json`; media remains outside Git tracking.
+
 ### **1. Nyquist-Sync Documentation** (43 files, ~544KB)
+
 ```
 docs/Nyquist-Sync/
 ├── HANDOFF_MANIFEST.md                     (Integration coordination)
@@ -512,3 +622,52 @@ Other:               2% (10 files)
 
 **Generated by DOC_CLAUDE** 🔥  
 **Documentation Orchestration System**
+
+
+## October 7 Gemini video review and initial scene sort
+
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_review_20261007/`: source inventory JSON, review notes, browseable HTML, contact sheets, probes and initial scene-folder review copies; originals remain in references/Gemini Video. Local review copies/contact sheets are ignored bulk assets; index and evidence stay tracked. No new user approvals or Cloud execution implied.
+
+
+### October 7, 2026 incremental registration: Hon Dolo sorted Grok review copies
+
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/` — safe, exact-hash-deduplicated copies from the four new Hon Dolo drop parts; manifest preserves original archives/member names, roles and evidence. Includes browseable index, storyboard semantic crosswalk, source documents, candidate references, inspiration and review holds. Original archives stay untouched; all copied media and inert source helpers excluded from Git.
+
+
+### October 7, 2026 incremental registration: separate project review and Lisan Gemini kit
+
+- `docs/notes/explorable_world/comfy/projects/README.md` and `index.html` — two-project navigation, current review destinations and source-preserving sort policy.
+- `docs/notes/explorable_world/comfy/projects/lisan_al_gaib/README.md`, `index.html`, `manifest.json`, `scene_map.json`, `.gitignore` — inspected Lisan intake, source hashes, sorted review-copy provenance and all 50 current scene links with reported QA.
+- `docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/` — paste-ready project instructions, role-scoped image map in TXT/JSON and first-video prompt; no Gemini account changes or generation.
+- `docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/`, `02_Storyboard_Scenes/`, `03_Inspiration_History/`, `04_Source_Documents/` — unchanged review copies; bulk images/PDFs ignored; historical duplicate names preserved within version folders.
+- `docs/notes/explorable_world/comfy/workflows/hon_dolo_audio_replace_v001.cloud.editor.json`, `.cloud.api.json`, `.cloud_preflight.json` — reauthenticated live Cloud validation/save evidence separate from prior local preview proof.
+
+
+## October 7 unassigned Gemini review copies
+
+- `docs/notes/explorable_world/comfy/projects/00_Unassigned_Gemini/`: two unchanged review copies of desert/hooded-character videos with unknown project/identity, plus local sorting note and bulk-media ignore rules. Original sources and indexed hashes remain in the shared Gemini directory/review inventory.
+
+
+## October 8 visual-library lightweight previews
+
+- `docs/notes/explorable_world/comfy/projects/review_previews_20261008/`: hash-deduplicated 480-pixel JPEG thumbnails for existing Hon Dolo/Lisan image inventories and Gemini video/GIF posters. Display derivatives only; original sources and review copies stay unchanged. Local `.gitignore` excludes JPEG bulk. Build script and source-to-preview mapping are local helpers under `.cache/visual_library_20261008/`.
+
+
+### October 8, 2026 incremental registration: visual review library
+
+- `docs/notes/explorable_world/comfy/projects/visual_library/` — shared local media browser, embedded catalogue and repeatable catalogue builder; grouped outfits, details, cast, storyboard, videos and inspiration, with image/video viewer and portable favorites.
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard.html` — human-readable storyboard entry point; JSON records remain unchanged.
+- Existing project/review HTML entry points now load the shared visual browser; source media and manifests stay unchanged.
+
+### October 8, 2026 incremental registration: separate CFA Creative Studio
+
+- `apps/creative_studio/` — standalone Streamlit entry point, dependencies and deployment instructions, inspired by Panhandlers Help navigation and progressive detail views. No runtime dependency on the sibling checkout.
+- `apps/creative_studio/build_library.py` and `library/` — repeatable publication bundle with browser-sized media previews, catalogue and provenance. Local production masters remain in the Comfy references and project directories.
+
+- `docs/notes/explorable_world/comfy/projects/collaborators/` — provider roles, Google Flow collaboration brief and reusable shot/evidence card with dated official product sources.
+- Each project's `flow/project_brief.txt` — project-specific Flow attachment roles and bounded first-shot prompt; no generation or account settings changed.
+
+
+## October 8 Grok revision feedback queue
+
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/grok_revision_queue.json` and `.txt`: two scoped user choices (cash-counting vest and black overcoat/boarding scene), current LOCK-FACE attachment mapping, requested tattoo corrections and optional bird-tattoo exploration note. Queued handoff only; not sent, generated or blanket character approval.

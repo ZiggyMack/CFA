@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "record_state": "completed_initial_feedback_recorded",
+  "purpose": "Project evidence record; not a Comfy workflow or executable control",
+  "asset_id": "observatory_pump_housing_001",
+  "experiment_id": "pump_concept_v001",
+  "phase": "concept_image",
+  "question": "Can one Cloud-generated concept communicate a practical, carefully maintained village pump and provide a useful modeling reference?",
+  "created_at_utc": "2026-09-12T12:18:19+00:00",
+  "parent_experiment_id": null,
+  "provider": "Comfy Cloud",
+  "evidence_status": "executed",
+  "source": {
+    "url": "https://cloud.comfy.org/templates/image_z_image_turbo.json",
+    "revision": null,
+    "retrieved_at_utc": "2026-09-12 14:08:59 UTC",
+    "template_id": "image_z_image_turbo",
+    "template_version": "Embedded template revision 0; not an immutable repository or deployed engine revision",
+    "model_identifiers": [
+      "z_image_turbo_bf16.safetensors",
+      "qwen_3_4b.safetensors",
+      "ae.safetensors"
+    ],
+    "node_package_versions": [],
+    "version_notes": "Template/schema rechecked before submission. Template stores comfy-core 0.3.64/0.3.73 and frontendVersion 1.42.15 metadata; these describe the template, not verified deployed software. Model revisions remain unknown."
+  },
+  "workflow": {
+    "editor_json_path": "docs/notes/explorable_world/comfy/workflows/pump_concept_v001.editor.json",
+    "editor_json_sha256": "da506499a61d427ecf6c844e578de2cd68fc4320c7b36ad2a75fb4e387a94359",
+    "execution_json_path": "docs/notes/explorable_world/comfy/workflows/pump_concept_v001.api.json",
+    "execution_json_sha256": "4661cf9f818215442e93b843577367f60345eba0bb3fba8fb4d42c39c7904d4d",
+    "exact_remote_version_known": false,
+    "template_editor_json_path": "docs/notes/explorable_world/comfy/workflows/pump_concept_v001.template.editor.json",
+    "template_editor_json_sha256": "307904f13211cfa5405b308e748ef8035c68991b5bb4cfd4733daed9bc511b77",
+    "archive_evidence": "Editor graph and API execution graph extracted directly from PNG workflow/prompt metadata, without converting formats. Embedded editor graph equals apply_slots result from the archived source template and recorded overrides.",
+    "rerun_note": "The editor retains template control_after_generate=randomize. For a controlled rerun explicitly set seed 42 again (or choose fixed control in the UI); this completed job used 42.",
+    "cloud_saved_filename": "observatory-pump-concept-v001.json",
+    "cloud_saved_name": "Observatory - Pump Concept v001",
+    "cloud_save_evidence": "save_workflow returned success with overwrite=false and converted=false. Available in the Cloud Workflows sidebar after refresh; no share snapshot published."
+  },
+  "inputs": {
+    "prompt_path": "docs/notes/explorable_world/comfy/pump_concept_prompt.txt",
+    "prompt_sha256": "bcb33a3228b6a0009f173e19b04e7ecbd1d1fa97e27f90105848e2b88e96fc99",
+    "reference_files": [],
+    "seed": 42,
+    "width": 1024,
+    "height": 1024,
+    "batch_size": 1,
+    "resolved_parameters": {
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "res_multistep",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "shift": 3.0,
+      "batch_size": 1,
+      "seed": 42,
+      "width": 1024,
+      "height": 1024,
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "clip_name": "qwen_3_4b.safetensors",
+      "clip_type": "lumina2",
+      "vae_name": "ae.safetensors"
+    },
+    "planned_slot_overrides": {
+      "57.text": "One freestanding communal water pump housing for a quiet lakeside observatory settlement, an original practical industrial design. Waist-high, broad stable base, compact rounded rectangular casing, muted lake-green painted metal with modest wear, warm brass inlet and outlet fittings, a clearly readable rectangular service panel, one carefully replaced coupling and a restrained repair patch. Mounted on a low pale stone footing. Large simple forms, understandable construction, clear silhouette, enough separation between fittings to read their shapes. The object feels useful, maintained, and approachable. Three-quarter front view showing the entire object, neutral light gray background, soft even studio illumination, restrained realistic materials. Static housing only, with a small mounting socket for a separately modeled service lever. No moving lever, water spray, people, surrounding buildings, landscape, lettering, logos, ornate decoration, dramatic shadows, or multiple objects.",
+      "57.width": 1024,
+      "57.height": 1024,
+      "57.seed": 42,
+      "57.steps": 8
+    },
+    "parameter_status": "Verified against the completed PNG prompt metadata; output dimensions also checked."
+  },
+  "job": {
+    "id": "cb835f1e-3b10-4972-860c-fb83fb0517c0",
+    "status": "completed",
+    "submitted_at_utc": "2026-09-12 14:08:59 UTC",
+    "completed_at_utc": null,
+    "error_node": null,
+    "error_message": null,
+    "completion_observed_at_utc": "2026-09-12T14:12:05+00:00",
+    "completion_evidence": "wait_for_job returned completed=true for this job; exact provider completion timestamp was not exposed."
+  },
+  "usage": {
+    "estimate_credits": null,
+    "estimate_source": "Pre-submission estimate_credits(image_z_image_turbo) returned zero paid API-node credits and excluded GPU/queue time and storage; total remains unknown.",
+    "balance_before": null,
+    "balance_after": null,
+    "reported_job_credits": null,
+    "observed_at_utc": "2026-09-12T14:12:05+00:00",
+    "attribution_notes": "get_usage_report returned no records for its 2026-08-12T14:00:00Z to 2026-09-12T14:00:00Z window. That window ended before this job was submitted at 14:08:59 UTC, so it cannot establish this job's usage. The tool also cautions against treating empty records as zero spend. Actual attributable charge and balances remain unknown.",
+    "estimated_api_node_credits": 0
+  },
+  "outputs": [
+    {
+      "path": "docs/notes/explorable_world/comfy/outputs/pump_concept_v001.png",
+      "sha256": "5777aaf41b6343e999033d357c136cc18d840a35f565b98d72895c974027e0c4",
+      "media_type": "image/png",
+      "width": 1024,
+      "height": 1024,
+      "role": "original_concept_reference",
+      "source_node_id": "9",
+      "provider_filename": "14141895d27500ddbc25fea921abfbd7f15a15f1e893261b42d0bad4a8c3d8e6.png"
+    }
+  ],
+  "review": {
+    "decision": "promising_starting_direction_further_refinement_needed",
+    "ziggy_feedback": "yeah this is a fine start...very impressive...",
+    "feedback_scope": "Positive initial reaction to the concept; detailed design and game-asset acceptance remain open.",
+    "observations": [
+      "Single complete object with clear green painted housing, brass fittings, pale stone footing, panel, and readable silhouette.",
+      "Surface is mostly pristine; repair patch and deliberately replaced coupling are not evident. Maintenance history does not yet read as intended.",
+      "Housing is taller and slimmer than the brief's compact broad form. Inlet/outlet construction and a distinct lever socket need clarification before modeling.",
+      "Neutral background and three-quarter presentation are useful for design review. A directional ground shadow and small fastener details remain. No moving lever or water effect appears."
+    ],
+    "cleanup_needed": [],
+    "mesh_triangles": null,
+    "material_slots": null,
+    "texture_dimensions": [],
+    "engine_import_tested": false,
+    "target_pc_performance_tested": false,
+    "performance_notes": "Concept image only; no mesh, engine import, or target-PC benchmark performed.",
+    "next_change": "Preserve this promising baseline. A later recorded iteration can make the repair patch explicit, clarify the lever socket, and consider a broader housing.",
+    "acceptance_checks": [
+      "Readable complete housing, broad base, distinct service panel, separated fittings, and lever socket without implausibly fused parts.",
+      "Modest wear, replacement coupling, and repair patch express care; muted lake green, warm brass, and pale stone fit the village.",
+      "Simple silhouette, neutral background, even light, no cropping or extra moving parts; panel and socket remain legible at quarter size."
+    ]
+  },
+  "provenance": {
+    "repository_license_url": null,
+    "model_terms_urls": [],
+    "asset_terms_urls": [],
+    "attribution_notes": "Original project prompt. Archived JSON reviewed: no credentials or signed download links present. Public model-download links and template metadata retained. Applicable model and output terms still need recording before asset release.",
+    "shareable_export_reviewed": true
+  },
+  "archive": {
+    "backup_location": null,
+    "backup_verified_at_utc": null
+  },
+  "preflight": {
+    "status": "recovered",
+    "observed_on": "2026-09-12",
+    "failed_operations": [
+      "get_server_info",
+      "get_template_schema",
+      "get_prompting_guide"
+    ],
+    "error": "invalid_grant: refresh token reuse detected",
+    "cause": "unknown",
+    "recovery": "First browser attempt timed out. Fresh login succeeded and get_server_info confirmed production 0.57.0 authenticated OAuth with 41 tools; no IDE restart was needed."
+  }
+}

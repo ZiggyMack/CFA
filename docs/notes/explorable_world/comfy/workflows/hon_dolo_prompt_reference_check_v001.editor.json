@@ -1,0 +1,643 @@
+{
+  "config": {},
+  "definitions": {
+    "subgraphs": []
+  },
+  "extra": {
+    "cfa": {
+      "cloud_cost_note": "No generation model runs; ordinary Cloud runtime may still accrue.",
+      "generation_nodes": 0,
+      "independent_snapshot": true,
+      "purpose": "input_and_prompt_check_only",
+      "source_version": 6,
+      "source_workflow_id": "dd649394-dae2-4831-8eb0-3c90527b0fc8",
+      "style_defaults": [
+        0,
+        0
+      ]
+    },
+    "comfy_mcp": {
+      "name": "Hon Dolo - Prompt and Reference Check v001"
+    },
+    "ds": {
+      "offset": [
+        50,
+        55
+      ],
+      "scale": 0.55
+    },
+    "frontendVersion": "1.47.10",
+    "workflowRendererVersion": "LG"
+  },
+  "groups": [
+    {
+      "bounding": [
+        -20,
+        20,
+        540,
+        970
+      ],
+      "color": "#3f789e",
+      "flags": {},
+      "font_size": 24,
+      "id": 1,
+      "title": "DESIGN INPUT"
+    },
+    {
+      "bounding": [
+        550,
+        20,
+        540,
+        1070
+      ],
+      "color": "#3f789e",
+      "flags": {},
+      "font_size": 24,
+      "id": 2,
+      "title": "LIKENESS INPUT AND CROP"
+    },
+    {
+      "bounding": [
+        1130,
+        20,
+        540,
+        1110
+      ],
+      "color": "#55804a",
+      "flags": {},
+      "font_size": 24,
+      "id": 3,
+      "title": "PROMPT AND STYLES"
+    },
+    {
+      "bounding": [
+        1720,
+        880,
+        600,
+        870
+      ],
+      "color": "#55804a",
+      "flags": {},
+      "font_size": 24,
+      "id": 4,
+      "title": "COMBINED PROMPT"
+    }
+  ],
+  "id": "7ba51cf9-67b6-45ec-9f08-c82d7b61dc31",
+  "last_link_id": 300,
+  "last_node_id": 169,
+  "links": [
+    [
+      222,
+      121,
+      0,
+      153,
+      0,
+      "IMAGE"
+    ],
+    [
+      223,
+      154,
+      0,
+      157,
+      0,
+      "STRING"
+    ],
+    [
+      224,
+      155,
+      0,
+      157,
+      1,
+      "STRING"
+    ],
+    [
+      225,
+      157,
+      0,
+      158,
+      0,
+      "STRING"
+    ],
+    [
+      226,
+      156,
+      0,
+      158,
+      1,
+      "STRING"
+    ],
+    [
+      227,
+      158,
+      0,
+      159,
+      0,
+      "STRING"
+    ],
+    [
+      229,
+      153,
+      0,
+      161,
+      0,
+      "IMAGE"
+    ],
+    [
+      300,
+      76,
+      0,
+      168,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 76,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            300
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        0,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "enableTabs": false,
+        "hasSecondTab": false,
+        "secondTabOffset": 80,
+        "secondTabText": "Send Back",
+        "secondTabWidth": 65,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "ue_properties": {
+          "input_ue_unconnectable": {},
+          "version": "7.7",
+          "widget_ue_connectable": {}
+        },
+        "ver": "0.8.2"
+      },
+      "size": [
+        500,
+        400
+      ],
+      "title": "1 - GROK DESIGN: pose, wardrobe and setting",
+      "type": "LoadImage",
+      "widgets_values": [
+        "d7bbaad8ae990775daab8609c534fd8068a3a0a2f4a5cdf89b2f8cb1e99cb686.jpg"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 121,
+      "inputs": [],
+      "mode": 0,
+      "order": 1,
+      "outputs": [
+        {
+          "links": [
+            222
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        570,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "enableTabs": false,
+        "hasSecondTab": false,
+        "secondTabOffset": 80,
+        "secondTabText": "Send Back",
+        "secondTabWidth": 65,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "ue_properties": {
+          "input_ue_unconnectable": {},
+          "version": "7.7",
+          "widget_ue_connectable": {}
+        },
+        "ver": "0.8.2"
+      },
+      "size": [
+        500,
+        310
+      ],
+      "title": "2 - LIKENESS SOURCE: supplied group image",
+      "type": "LoadImage",
+      "widgets_values": [
+        "a5e75d93d4f1cf7a321bafaa52011716210048ea4b2e1ef955732d5025317c0b.png"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 153,
+      "inputs": [
+        {
+          "link": 222,
+          "name": "image",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 2,
+      "outputs": [
+        {
+          "links": [
+            229
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        570,
+        450
+      ],
+      "properties": {
+        "Node name for S&R": "ImageCrop",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        500,
+        130
+      ],
+      "title": "2a - ISOLATE right-hand subject; reset crop for a new source",
+      "type": "ImageCrop",
+      "widgets_values": [
+        300,
+        380,
+        430,
+        5
+      ]
+    },
+    {
+      "bgcolor": "#353",
+      "color": "#232",
+      "flags": {},
+      "id": 154,
+      "inputs": [],
+      "mode": 0,
+      "order": 3,
+      "outputs": [
+        {
+          "links": [
+            223
+          ],
+          "name": "STRING",
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        1150,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        500,
+        360
+      ],
+      "title": "PROMPT - edit instruction (active)",
+      "type": "PrimitiveStringMultiline",
+      "widgets_values": [
+        "Edit image 1. Give its character the recognizable facial identity, apparent age, and hair of the person in image 2, adapting the face naturally to image 1's head angle and lighting. Preserve image 1's body, pose, clothing, jewelry, accessories, framing, and background. Use image 2 for facial identity and hair only; do not copy its clothing or background. Produce one photorealistic person with natural skin texture and believable anatomy. Keep the face and teeth clean for this identity pass: remove facial tattoos and grill. The tattoo artwork and grill will be applied in a later finishing pass."
+      ]
+    },
+    {
+      "bgcolor": "#535",
+      "color": "#323",
+      "flags": {},
+      "id": 155,
+      "inputs": [],
+      "mode": 0,
+      "order": 4,
+      "outputs": [
+        {
+          "links": [
+            224
+          ],
+          "name": "STRING",
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        1150,
+        505
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactStringSelector",
+        "cnr_id": "comfyui-impact-pack"
+      },
+      "size": [
+        500,
+        250
+      ],
+      "title": "STYLE A - 0 None | 1 Film | 2 Flash | 3 Overcast | 4 Stage",
+      "type": "ImpactStringSelector",
+      "widgets_values": [
+        "\n Render as a cinematic photograph with restrained contrast, subtle film grain and natural skin texture. Preserve the existing lighting direction, setting and palette.\n Render as a direct-flash music-video publicity photograph with crisp flash-lit detail, rich blacks and believable skin texture. Keep the subjects and composition unchanged.\n Render with soft cool overcast daylight, gentle shadow transitions and restrained colors. Keep the subjects, pose, wardrobe and composition unchanged.\n Render with moody colored stage lighting, subtle haze and convincing photographic detail. Keep the subjects, pose, wardrobe and composition unchanged.",
+        false,
+        0
+      ]
+    },
+    {
+      "bgcolor": "#535",
+      "color": "#323",
+      "flags": {},
+      "id": 156,
+      "inputs": [],
+      "mode": 0,
+      "order": 5,
+      "outputs": [
+        {
+          "links": [
+            226
+          ],
+          "name": "STRING",
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        1150,
+        820
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactStringSelector",
+        "cnr_id": "comfyui-impact-pack"
+      },
+      "size": [
+        500,
+        250
+      ],
+      "title": "STYLE B - optional mix; 0 disables",
+      "type": "ImpactStringSelector",
+      "widgets_values": [
+        "\n Render as a cinematic photograph with restrained contrast, subtle film grain and natural skin texture. Preserve the existing lighting direction, setting and palette.\n Render as a direct-flash music-video publicity photograph with crisp flash-lit detail, rich blacks and believable skin texture. Keep the subjects and composition unchanged.\n Render with soft cool overcast daylight, gentle shadow transitions and restrained colors. Keep the subjects, pose, wardrobe and composition unchanged.\n Render with moody colored stage lighting, subtle haze and convincing photographic detail. Keep the subjects, pose, wardrobe and composition unchanged.",
+        false,
+        0
+      ]
+    },
+    {
+      "flags": {},
+      "id": 157,
+      "inputs": [
+        {
+          "link": 223,
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          }
+        },
+        {
+          "link": 224,
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 6,
+      "outputs": [
+        {
+          "links": [
+            225
+          ],
+          "name": "STRING",
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        1740,
+        930
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        560,
+        140
+      ],
+      "title": "COMBINE prompt + style A",
+      "type": "StringConcatenate",
+      "widgets_values": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "flags": {},
+      "id": 158,
+      "inputs": [
+        {
+          "link": 225,
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          }
+        },
+        {
+          "link": 226,
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 7,
+      "outputs": [
+        {
+          "links": [
+            227
+          ],
+          "name": "STRING",
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        1740,
+        1135
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        560,
+        140
+      ],
+      "title": "COMBINE + style B",
+      "type": "StringConcatenate",
+      "widgets_values": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "flags": {},
+      "id": 159,
+      "inputs": [
+        {
+          "link": 227,
+          "name": "source",
+          "type": "*"
+        }
+      ],
+      "mode": 0,
+      "order": 8,
+      "outputs": [
+        {
+          "links": [],
+          "name": "STRING",
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        1740,
+        1350
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewAny",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        560,
+        360
+      ],
+      "title": "PROMPT PREVIEW - assembled text after Run",
+      "type": "PreviewAny",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 161,
+      "inputs": [
+        {
+          "link": 229,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 9,
+      "outputs": [
+        {
+          "links": [],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        570,
+        650
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        500,
+        380
+      ],
+      "title": "INPUT PREVIEW - selected likeness crop",
+      "type": "PreviewImage",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 168,
+      "inputs": [
+        {
+          "link": 300,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 10,
+      "outputs": [
+        {
+          "links": [],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        0,
+        570
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        500,
+        370
+      ],
+      "title": "DESIGN PREVIEW - original Grok reference",
+      "type": "PreviewImage",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 169,
+      "inputs": [],
+      "mode": 0,
+      "order": 11,
+      "outputs": [],
+      "pos": [
+        1740,
+        80
+      ],
+      "properties": {},
+      "size": [
+        560,
+        760
+      ],
+      "title": "START HERE - preview inputs; no image generation",
+      "type": "MarkdownNote",
+      "widgets_values": [
+        "# Hon Dolo - prompt and reference check\n\nUse this small workflow to inspect the original design, the selected likeness crop and the final combined prompt. It contains no model loader, text encoder, diffusion sampler, image generator or SaveImage output. Run refreshes temporary previews; Cloud runtime may still accrue.\n\nStyle select: 0 None, 1 cinematic film, 2 direct flash, 3 overcast, 4 stage lighting. Keep multiline disabled and preserve the blank first line. Start with one style and hold the other at 0. Strong style changes can conflict with preservation instructions.\n\nLoad the two references and check the crop before a render. The crop is currently x430 y5 w300 h380 for the right-hand person in the supplied group image. Change/reset it when using another reference.\n\nThis is an independent snapshot from the main Hon Dolo editor (version 6). Edits here do NOT synchronize to that workflow. When ready, copy your chosen prompt/style text, source-image choices and crop settings into the main editor. Keep its validated FLUX settings.\n\nMain editor: https://cloud.comfy.org/#dd649394-dae2-4831-8eb0-3c90527b0fc8\nCivitai comparison: https://cloud.comfy.org/#1ee8615b-5586-42fd-bf3d-3d202b2377eb\n\nThe text/image previews show the last execution. No node predicts a future generated result."
+      ]
+    }
+  ],
+  "revision": 0,
+  "version": 0.4
+}

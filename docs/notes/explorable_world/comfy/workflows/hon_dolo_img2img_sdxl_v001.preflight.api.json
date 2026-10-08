@@ -1,0 +1,160 @@
+{
+  "7": {
+    "inputs": {
+      "filename_prefix": "CFA/HonDolo/img2img_sdxl_v001",
+      "images": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "RESULT + SAVE - after generation"
+    }
+  },
+  "10": {
+    "inputs": {
+      "text": "Photorealistic studio portrait of an adult man with wavy dark brown hair, natural facial proportions, black open-collar shirt, heavy gold chain, gold grill, face and neck tattoos, gray studio background. Soft balanced studio lighting, realistic skin pores, believable fabric and metal texture, confident expression.",
+      "clip": [
+        "15",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "POSITIVE - describe the desired image"
+    }
+  },
+  "11": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "15",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "NEGATIVE - active in this SDXL recipe"
+    }
+  },
+  "12": {
+    "inputs": {
+      "seed": 42,
+      "steps": 30,
+      "cfg": 5,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "model": [
+        "15",
+        0
+      ],
+      "positive": [
+        "10",
+        0
+      ],
+      "negative": [
+        "11",
+        0
+      ],
+      "latent_image": [
+        "19",
+        0
+      ],
+      "denoise": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler - SDXL image refinement"
+    }
+  },
+  "14": {
+    "inputs": {
+      "samples": [
+        "12",
+        0
+      ],
+      "vae": [
+        "15",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "DECODE - latent back to pixels"
+    }
+  },
+  "15": {
+    "inputs": {
+      "ckpt_name": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "MODEL - Cloud Juggernaut XL v9"
+    }
+  },
+  "17": {
+    "inputs": {
+      "image": "d7bbaad8ae990775daab8609c534fd8068a3a0a2f4a5cdf89b2f8cb1e99cb686.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "INPUT - Grok design or accepted master"
+    }
+  },
+  "18": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1,
+      "resolution_steps": 8,
+      "image": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "RESIZE - about 1 MP, aspect approximately retained"
+    }
+  },
+  "19": {
+    "inputs": {
+      "pixels": [
+        "18",
+        0
+      ],
+      "vae": [
+        "15",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "ENCODE INPUT - starting latent"
+    }
+  },
+  "20": {
+    "inputs": {
+      "value": 0.3
+    },
+    "class_type": "PrimitiveFloat",
+    "_meta": {
+      "title": "DENOISE - 0 to 1; start at 0.30"
+    }
+  },
+  "21": {
+    "inputs": {
+      "images": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "RESIZED INPUT - updates when run"
+    }
+  }
+}

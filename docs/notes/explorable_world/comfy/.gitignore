@@ -1,0 +1,48 @@
+# Model weights belong in the Cloud model library.
+# Keep workflow JSON, prompts, and model/version records in Git.
+*.safetensors
+*.ckpt
+*.gguf
+*.pt
+*.pth
+*.onnx
+
+# User media in active song projects stays on D:; commit intake records instead.
+projects/**/*.mp3
+projects/**/*.m4a
+projects/**/*.mp4
+
+# Supplied Grok image collections and derived review media remain on D:.
+references/hon-dolo-stills-01-50/**/*.jpg
+references/hon-dolo-stills-51-95/**/*.jpg
+casting/grok_intake_20261004/review_sheets/*.jpg
+casting/grok_intake_20261004/evidence/*.png
+casting/grok_intake_20261004/evidence/*.jpg
+
+# October 6 supplied Hon Dolo packs: keep manifests and notes, not bulk media.
+references/hon-dolo-*/**/*.jpg
+references/hon-dolo-*/**/*.png
+references/hon-dolo-*/**/*.mp4
+references/HD-EXP-WALK-CLIP-*.mp4
+
+# October 7 Gemini source clips and review derivatives remain local on D:.
+references/Gemini Video/*.mp4
+references/Music/*.mp3
+references/Music/*.mp4
+projects/hon_dolo_strictly_business/gemini_intake_20261007/contact_sheets/*.jpg
+projects/hon_dolo_strictly_business/gemini_intake_20261007/source_excerpts/
+outputs/hon_dolo_gemini_relight_v001*.mp4
+outputs/hon_dolo_gemini_relight_v001*.jpg
+outputs/hon_dolo_gemini_relight_v001*.png
+outputs/hon_dolo_gemini_relight_v002*.mp4
+outputs/hon_dolo_gemini_relight_v002*.jpg
+outputs/hon_dolo_gemini_relight_v002*.png
+outputs/hon_dolo_audio_replace_v001*.mp4
+outputs/hon_dolo_audio_replace_v001*.wav
+
+# October 7 expanded project drop: bulk originals remain on D:.
+references/From Grok/**/*.zip
+references/From Grok/**/*.jpg
+references/From Grok/**/*.png
+references/From Grok/**/*.pdf
+references/Gemini Video/*.gif

@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "experiment_id": "hon_dolo_gemini_relight_v001",
+  "date": "2026-10-07",
+  "status": "executed_reviewed_preservation_failed",
+  "execution_environment": "Comfy Cloud",
+  "user_selection": "gemini_generated_video_c0823c60.mp4 is the preferred starting source for Comfy experiments; not automatic approval of every visual detail.",
+  "question": "Can a small warmer face-light change retain the supplied source performance, identity, tattoo/grill shapes and timing?",
+  "intended_change": "One deliberate variable: softer warm key lighting on the face; retain the existing neon cantina background.",
+  "must_preserve": [
+    "Source facial identity for this test",
+    "Head/mouth movement and camera framing",
+    "Tattoo shapes, positions and lettering",
+    "Grill tooth layout and piercings",
+    "Wardrobe and background geometry",
+    "Source timing"
+  ],
+  "baseline": {
+    "kind": "user-supplied video excerpt, not a prior Comfy render",
+    "source": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_c0823c60.mp4",
+    "source_sha256": "b5deff1982da0cbbdee24a7dfc253fe6825018549a37ca531c7b3586cdbee525",
+    "frame_start_inclusive": 0,
+    "frame_end_inclusive": 56,
+    "frame_count": 57,
+    "fps": 24,
+    "picture_duration_seconds": 2.375,
+    "source_dimensions": [
+      1280,
+      720
+    ],
+    "first_cut_frame": 60,
+    "audio_handling": "Original57-frame excerpt has no audio. Source WAV kept independently. Template generates its own AAC soundtrack, not preserved source vocals or song sync."
+  },
+  "prepared_assets": [
+    {
+      "role": "picture",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_intake_20261007/source_excerpts/c0823c60_opening_57f.mp4",
+      "bytes": 1134514,
+      "sha256": "b96cf9cc21274451515e331e432d86851b5fa7a2234fd7e182390a3da22c6e96",
+      "command": [
+        "D:\\Documents\\CFA\\.cache\\hon_dolo_i2v_20261004\\python_packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+        "-v",
+        "error",
+        "-nostdin",
+        "-i",
+        "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_c0823c60.mp4",
+        "-map",
+        "0:v:0",
+        "-frames:v",
+        "57",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "slow",
+        "-crf",
+        "16",
+        "-profile:v",
+        "high",
+        "-pix_fmt",
+        "yuv420p",
+        "-movflags",
+        "+faststart",
+        "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\gemini_intake_20261007\\source_excerpts\\c0823c60_opening_57f.mp4"
+      ]
+    },
+    {
+      "role": "first_frame",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_intake_20261007/source_excerpts/c0823c60_opening_frame0.png",
+      "bytes": 938273,
+      "sha256": "765941faa55c3c129a9fd7817f33c8f99fdbbfd5f55e61fd597bc777305a7552",
+      "command": [
+        "D:\\Documents\\CFA\\.cache\\hon_dolo_i2v_20261004\\python_packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+        "-v",
+        "error",
+        "-nostdin",
+        "-i",
+        "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_c0823c60.mp4",
+        "-map",
+        "0:v:0",
+        "-frames:v",
+        "1",
+        "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\gemini_intake_20261007\\source_excerpts\\c0823c60_opening_frame0.png"
+      ]
+    },
+    {
+      "role": "audio",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_intake_20261007/source_excerpts/c0823c60_opening_audio.wav",
+      "bytes": 456078,
+      "sha256": "fa0de491200bf77c7a40d30840210a536ecd06184282e89e94c3dee398dc1d00",
+      "command": [
+        "D:\\Documents\\CFA\\.cache\\hon_dolo_i2v_20261004\\python_packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+        "-v",
+        "error",
+        "-nostdin",
+        "-i",
+        "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_c0823c60.mp4",
+        "-map",
+        "0:a:0",
+        "-vn",
+        "-af",
+        "atrim=end_sample=114000,asetpts=PTS-STARTPTS",
+        "-c:a",
+        "pcm_s16le",
+        "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\gemini_intake_20261007\\source_excerpts\\c0823c60_opening_audio.wav"
+      ]
+    }
+  ],
+  "preparation_verification": {
+    "full_picture_decode_exit_code": 0,
+    "decoded_frames": 57,
+    "audio": {
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "samples_per_channel": 114000,
+      "duration_seconds": 2.375
+    },
+    "original_modified": false,
+    "video_reencoded": "libx264, CRF16, preset slow, High profile, yuv420p. Timing/frame selection preserved; encoded bytes/pixels are not lossless source copies.",
+    "normal_speed_reviewed": false,
+    "audio_listened": false
+  },
+  "recipe_selection": {
+    "problem": "Change a source clip look while retaining movement",
+    "lookup": "docs/notes/explorable_world/comfy/workflows/README.md#choose-by-problem",
+    "lesson": "D:/Documents/Pan_Handlers/Help/content/video_routes.py: ltx_union",
+    "handoff_lesson": "D:/Documents/Pan_Handlers/Help/guides/video_handoff.py",
+    "existing_baseline_graph": "Official template snapshot .cache/hon_dolo_gemini_20261007/video_ltx2_3_ic_lora.editor.json",
+    "previous_dependency_evidence": "docs/notes/explorable_world/comfy/workflows/wolf_care_union_control_v001.preflight.json",
+    "scope": "Reuse the structural-control method only; the wolf brief and media are not used.",
+    "official_source": "https://cloud.comfy.org/templates/video_ltx2_3_ic_lora.json",
+    "candidate": "Official Cloud video_ltx2_3_ic_lora using MoGe depth",
+    "h3_note": "Hosted H3 Regenerate to2K is documented for H3-origin output, not this arbitrary Gemini source.",
+    "new_graph_created": true,
+    "cloud_models_verified": true,
+    "cloud_nodes_verified": true,
+    "compiled_inputs_verified": true,
+    "reason_for_change": "Available official Cloud source-video template and exact loader models verified; the previously researched2.5 VideoDepthAnything branch remains missing a dependency.",
+    "reviewed_alternative": "LTX2.5 Union Canny branch and nativeH3 researched; neither was rendered in this test."
+  },
+  "proposed_prompt": "A continuous close-up of the same adult male performer in the source video, wearing the same dark leather jacket and open white shirt in the same neon-lit cantina. He makes the same subtle head movement and mouth performance. Preserve his gaze, expression, camera framing, hair, face tattoos, neck tattoos, chest tattoo, grill tooth arrangement, piercings and clothing. Change only the face lighting to a softer warm key light with gentle natural shadows. Keep the existing cyan and magenta background lights, background geometry and shot timing. No new objects, scene cuts, tattoo changes or jewelry changes.",
+  "planned_controls": {
+    "source_reference": "Prepared opening clip; optional first frame only if supported by the selected template.",
+    "seed": 42,
+    "seed_state": "verified actual execution graph",
+    "source_frames": 57,
+    "effective_output_frames": 57,
+    "frame_grid_note": "57 is8n+1; actual accepted duration/length slot must be checked. Do not silently round or duplicate frames.",
+    "effective_output_dimensions": [
+      1024,
+      576
+    ],
+    "sampler_steps": 8,
+    "prompt_enhancement": false,
+    "queue_repetitions": 1,
+    "batch_size": 1,
+    "additional_variants": "Only after review of the first result.",
+    "partner_api_nodes": "none planned",
+    "cost_estimate": "No paidAPI nodes; GPU/queue/storage cost excluded. Billing reported31.536398GPU seconds; dollar cost unknown.",
+    "sampler": "euler_ancestral",
+    "scheduler": "linear_quadratic",
+    "cfg": 1,
+    "denoise": 1
+  },
+  "success_check": [
+    "One continuous shot with no new cuts",
+    "Head turns and mouth phases correspond at matched times",
+    "No new or missing teeth, distorted grill, tattoo/text migration or extra jewelry",
+    "Lighting difference is visible while wardrobe/background composition remain stable",
+    "Measure actual frame count,FPS,duration,dimensions; report timing drift",
+    "Review full playback and sampled face crops before acceptance"
+  ],
+  "known_design_caveat": "Small dice above the image-right brow remain visible in this selected source although retired by the through-314 brief. Preserve them during this lighting-only test to avoid confounding variables; selecting this source does not approve them for production.",
+  "access": {
+    "native_get_server_info": "authenticated OAuth, comfyui-cloud0.70.0",
+    "native_search_templates": "succeeded",
+    "oauth_login_started": true,
+    "oauth_success_confirmed": true,
+    "credentials_recorded": false,
+    "recovery_note": "Initial CLI flow expired; user subsequently restored access and native tools verified it."
+  },
+  "evidence": {
+    "reviewed": true,
+    "source_decoded": true,
+    "inputs_prepared": true,
+    "available_in_cloud": true,
+    "validated": true,
+    "submitted": true,
+    "executed": true,
+    "accepted": false
+  },
+  "job_id": "e7aa5020-d013-4081-beab-d59b9d056eb8",
+  "saved_cloud_workflow_id": "a63aca02-3ec8-45fe-a830-5baf40bd9eeb",
+  "output": "../outputs/hon_dolo_gemini_relight_v001.mp4",
+  "next_action": "Compare one Canny-control follow-up with otherwise fixed generation settings; do not accept this depth result for exact mouth/tattoo/grill preservation.",
+  "prompt_status": "Effective run prompt preserved verbatim in prompt.txt and actualgraph."
+}

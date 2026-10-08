@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "created": "2026-10-08",
+  "authorization": "User explicitly approved local exact-pixel crops of supplied group reference.",
+  "source": {
+    "path": "docs/notes/explorable_world/comfy/references/Han Solo.png",
+    "sha256": "5a6bd67a77920d3f2eae4bbaa98db0aa1e3dad288d38327c963d15cee1722974",
+    "width": 743,
+    "height": 502,
+    "mode": "RGB"
+  },
+  "operation": "rectangular crop only; no resizing, resampling, enhancement, retouching or generation",
+  "coordinate_system": "pixel bounds [left, top, right, bottom], right and bottom exclusive; origin top left",
+  "crops": [
+    {
+      "character_id": "LUKE",
+      "proposed_reference_id": "LUKE-LIKENESS-01",
+      "filename": "luke_source_crop.png",
+      "path": "docs/notes/explorable_world/comfy/casting/likeness_crops/luke_source_crop.png",
+      "sha256": "6faf10399e0af0d34b0988701d58ee4836b1107857e50d42a79428827cafa41f",
+      "bytes": 99207,
+      "source_position": "image-left",
+      "bounds": [
+        10,
+        58,
+        218,
+        365
+      ],
+      "width": 208,
+      "height": 307,
+      "mode": "RGB",
+      "reference_role": "Luke Skywalker likeness and head/upper-body reference",
+      "pixel_array_equals_source_region": true,
+      "visual_crop_review": "pending",
+      "design_approval_changed": false
+    },
+    {
+      "character_id": "LEIA",
+      "proposed_reference_id": "LEIA-LIKENESS-01",
+      "filename": "leia_source_crop.png",
+      "path": "docs/notes/explorable_world/comfy/casting/likeness_crops/leia_source_crop.png",
+      "sha256": "b725ae7c92f4e35a732d056756029b045ddf15345909a6b2c30917b43d3f0d8a",
+      "bytes": 74226,
+      "source_position": "image-center",
+      "bounds": [
+        214,
+        128,
+        389,
+        420
+      ],
+      "width": 175,
+      "height": 292,
+      "mode": "RGB",
+      "reference_role": "Princess Leia likeness and head/upper-body reference",
+      "pixel_array_equals_source_region": true,
+      "visual_crop_review": "pending",
+      "design_approval_changed": false
+    },
+    {
+      "character_id": "HON-DOLO",
+      "proposed_reference_id": "HD-LIKENESS-03",
+      "filename": "han_source_crop.png",
+      "path": "docs/notes/explorable_world/comfy/casting/likeness_crops/han_source_crop.png",
+      "sha256": "e8a66e490bd14c486e5143426e0035df64f4835cb239c762a238565ec689fc50",
+      "bytes": 152368,
+      "source_position": "image-right",
+      "bounds": [
+        407,
+        9,
+        682,
+        370
+      ],
+      "width": 275,
+      "height": 361,
+      "mode": "RGB",
+      "reference_role": "Han Solo likeness reference for Hon Dolo body/likeness swaps",
+      "pixel_array_equals_source_region": true,
+      "visual_crop_review": "pending",
+      "design_approval_changed": false
+    }
+  ],
+  "original_unchanged": true,
+  "all_pixel_arrays_equal_to_source_regions": true
+}

@@ -1,0 +1,946 @@
+welcome to episode three of our comfy UI
+0:02
+tutorial Series in this episode I want
+0:05
+to show you more tips on how to use the
+0:07
+text to image workflow to generate
+0:09
+images Explore More settings manage
+0:12
+multiple workflows simultaneously and
+0:15
+improve the interface for a cleaner look
+0:17
+once your workflow is up and running in
+Text-to-Image Workflow Overview
+0:21
+the last episode we created a simple
+0:23
+text image sdxl workflow as you can see
+0:27
+I loaded a juggernaut X model then The
+0:30
+Prompt text is encoded so stable
+0:32
+diffusion can understand it in case
+0:34
+sampler is where the magic happens it
+0:36
+uses an empty late an image then decodes
+0:39
+it so we can see it and finally saves
+0:41
+the image in the last step i' like to
+KSampler Settings - Seed, Steps, CFG
+0:44
+talk a bit about case sampler and the
+0:46
+settings available in this node a seed
+0:49
+is a specific number that determines the
+0:51
+starting point of the random process
+0:53
+used by the model to generate an image
+0:56
+using the same seed with the same
+0:58
+settings will always always produce the
+1:00
+same image while changing the seed will
+1:03
+produce a different image even if all
+1:05
+other settings remain the same think of
+1:08
+the seed as a recipe number in a
+1:10
+cookbook imagine you have a giant
+1:13
+cookbook where every recipe is numbered
+1:17
+if you want to make a particular dish
+1:19
+you look up the recipe by its number the
+1:22
+seed following the recipe exactly with
+1:26
+the same ingredients and instructions
+1:28
+will always give you the same dish under
+1:31
+the seed we have control after
+1:35
+generation and as you can see it's
+1:37
+currently set to randomize so if I click
+1:39
+Q prompt after generation I get a
+1:42
+different seed each time this allows me
+1:44
+to generate images repeatedly with each
+1:47
+iteration producing a different image
+1:49
+due to the different seeds used the
+1:51
+minimum seed value is zero and the
+1:54
+maximum value is a very large number
+1:58
+with such a wide range you can generate
+2:00
+an enormous variety of images even using
+2:04
+the same model and prompts the chance of
+2:06
+generating the exact same image
+2:08
+unintentionally twice is extremely low
+2:11
+because of the vast number of possible
+2:14
+seeds you can also change that option to
+2:16
+increment which means each time I hit
+2:19
+the Q button the seed number will
+2:21
+increase by one you can add multiple
+2:24
+jobs to the queue similar to sending
+2:27
+multiple jobs to a printer clicking The
+2:30
+View Q button shows all the jobs
+2:34
+currently running allowing you to cancel
+2:36
+any job if needed and this feature is
+2:39
+very useful for large workflows that
+2:40
+take a lot of time as you can cancel
+2:43
+jobs if previews show they're not what
+2:45
+you want if you click on extra options
+2:48
+you'll find the autoq checkbox when
+2:51
+checked it will keep generating
+2:53
+continuously once you click Q as you can
+2:56
+see it's still generating uncheck the
+2:59
+auto que opt option to stop
+3:01
+automatically adding new jobs to the
+3:03
+queue we also have the option to
+3:06
+decrement which will decrease the seed
+3:08
+number by one each time after a
+3:11
+generation most of the time I use
+3:13
+randomize when I have something specific
+3:15
+in mind I use fixed size and input any
+3:18
+number before hitting Q then I can play
+3:21
+with prompt until I get what I want this
+3:23
+is the image result for that seed if I
+3:27
+click Q again without changing anything
+3:29
+neither the seed or the prompt nothing
+3:32
+happens because there's no need to
+3:34
+generate again in the command line
+3:36
+You'll see that the prompt executed in0
+3:39
+seconds however if I make any changes
+3:42
+like adding a space to The Prompt it
+3:44
+recognizes it as different and will
+3:46
+generate again obviously changing a
+3:49
+simple space in the prompt won't alter
+3:51
+the result much for example let's change
+3:53
+the eye color to green and try again the
+3:57
+result is a robot with green eye
+4:01
+I can keep experimenting and because the
+4:04
+seed is fixed subtle changes in the
+4:06
+prompt can lead to variations in the
+4:08
+generation but keeping somehow similar
+4:11
+this depends on the words used in The
+4:13
+Prompt as some words can have more
+4:16
+impact than others if I want a subtle
+4:20
+variation I can change the number of
+4:22
+steps or the CFG value for example if I
+4:25
+change the steps from 30 to 32 I get a
+4:28
+subtle variation changing it to 26 or 40
+4:32
+or any other number close to the
+4:34
+original value results in another subtle
+4:37
+variation to change those values you
+4:40
+have multiple options you can click on
+4:42
+the value and an input field will pop up
+4:45
+alternatively you can use it as a slider
+4:48
+by clicking on the field and dragging
+4:50
+left or right Additionally you can use
+4:53
+the left and right arrows to adjust it
+4:56
+keep in mind that the more steps you use
+4:58
+the longer it will take to generate the
+5:00
+image so we can do the same with the CFG
+5:03
+value If instead of seven I use 6.5 I
+5:05
+will get a subtle variation in the
+5:08
+generation I can lower the value to six
+5:11
+and get another variation keep in mind
+5:13
+the lower you go the less contrast the
+5:16
+image will have and it might look worse
+5:19
+if your values are too far from the
+5:21
+recommended settings for the model
+5:24
+you're using if I increase the CFG value
+5:27
+I get more contrast in the image up to a
+5:30
+certain point where the images start to
+5:31
+look worse again so you have to find the
+5:34
+sweet spot for the model I am using I
+5:37
+get okay results between five and seven
+5:39
+for CFG values but CFG doesn't directly
+5:43
+change the contrast it's more like a
+5:46
+side effect CFG stands for classifier
+5:50
+free guidance if the CFG value is low
+5:53
+the model has more freedom which might
+5:55
+result in more diverse and creative
+5:57
+outputs but they may not closely
+6:00
+match the prompt if the CFG value is
+6:04
+high the model is more strictly Guided
+6:07
+by The Prompt leading to outputs that
+6:09
+are more precise and closer to the
+6:10
+description but potentially less diverse
+6:13
+if you rightclick on the case sampler
+6:15
+nodes you have an option that says
+6:17
+convert widget to input there you can
+6:20
+see all the settings you can change like
+6:22
+seed steps and so on that can be
+6:25
+converted to input but what does that
+6:28
+means let's select CFG from that list
+6:31
+now we don't have that CFG value in the
+6:34
+list but we do have an input here
+6:36
+labeled CFG so I can drag a link from
+6:40
+there and search for a node called
+6:42
+primitive uh this primitive node allows
+6:44
+you to input data into your workflow
+6:48
+whether it's text or a number and it
+6:49
+will adapt based on what is connected
+6:52
+since it's connected to CFG it shows me
+6:54
+the CFG value there having the the value
+6:58
+as a node can be useful if you want to
+7:01
+use the same value in another node for
+7:04
+example if you have another K sampler
+7:06
+node and you don't want to manually
+7:09
+input the same value into all the nodes
+7:12
+you can just drag a link from this node
+7:14
+and all the other nodes will take that
+7:17
+input also because it's in a node I have
+7:20
+another option called control after
+7:22
+generate so I can change it to increment
+7:25
+and each time I hit Q the CFG value will
+7:27
+increase this is very useful for for
+7:29
+quickly testing different uh values if I
+7:33
+no longer need the input I can
+7:34
+rightclick on K sampler and choose
+7:36
+convert input to widget then I select
+7:39
+convert CFG to widget we have only one
+7:42
+there because we converted only one but
+7:45
+you can have any value from the node as
+7:47
+an input if you want as you can see now
+7:50
+the CFG is back in the case sampler node
+7:53
+I will delete the Primitive node and
+7:55
+this time I convert to scheduler to
+7:57
+input now if I drag a link and add a
+8:00
+primitive node again you can see it
+8:02
+adapts to the scheduler values so I can
+8:06
+change the values from there and test it
+8:08
+with different uh settings I will
+8:10
+convert it back to a widget and delete
+8:12
+the Primitive node this time I want to
+8:15
+show you something with the steps so I
+8:17
+will add that as an input I will set it
+8:21
+to increment after generation steps
+8:24
+refer to the number of iterations or
+8:26
+passes the model takes to generate or
+8:28
+refine an image each step incrementally
+8:31
+improves the image based on the given
+8:33
+prompts and parameters the more steps
+8:36
+you use the more refined and detailed
+8:38
+the final image tends to be but this
+8:41
+also increases the computation time so
+8:43
+if I add one step and press Q I get
+8:47
+something but it's barely visible
+8:49
+because there weren't enough steps to
+8:51
+capture detailed results it's like an
+8:54
+artist making only a few brush Strokes
+8:57
+the painting will be rough and and lack
+9:00
+detail the more steps you add the more
+9:02
+details will start to appear but it will
+9:04
+also take more time to generate those
+9:08
+details as you can see at step 15 it's
+9:10
+starting to get some decent results
+9:12
+however as I increase the number of
+9:14
+steps the generation time also increases
+9:17
+it takes under a second at Five Steps
+9:20
+but over two seconds at 14 steps for
+9:23
+this model it's recommended to use
+9:25
+between 30 and 40 steps but more than
+9:28
+that it only take more time and it
+9:30
+doesn't increase the quality it might
+9:32
+even get worse quality let's revert that
+9:35
+input another thing you can do is test
+9:38
+different Samplers and schedulers to see
+9:42
+if one performs better than others a
+9:46
+good starting point is to use the
+9:48
+recommended settings for that model
+9:50
+similar to what I showed you in the
+9:52
+first episode with the models from civit
+9:55
+AI on the empty latent image in addition
+Using Batch Processing
+9:58
+to width and height you can also set the
+10:01
+batch size so if I set it to four there
+10:04
+instead of generating one image it will
+10:06
+generate four uh when it's ready you'll
+10:09
+see in the bottom right corner one of
+10:12
+four and if you click on that it will
+10:14
+switch to the next image and continue in
+10:16
+a loop however if you want a general
+10:19
+view of all four Images at once you can
+10:22
+use the x button in the top right to
+10:25
+close the individual preview allowing
+10:27
+you to see all four Images together you
+10:29
+can click Click on each one again to
+10:30
+view it individually if
+10:32
+needed if you want to generate a large
+10:35
+number of images more quickly running in
+10:37
+batch can save time since it's faster
+10:39
+than running them one by one this is the
+10:42
+result for the eight batch images
+10:44
+looking at the command line it took
+10:46
+almost 30 seconds for eight images
+10:49
+however if I had done it one by one it
+10:51
+would have taken around 35 seconds on my
+10:54
+RTX
+10:55
+4090 I will reset them back to default
+10:58
+and change the seed for from fix to
+11:00
+randomize if you look at the save image
+11:03
+node you can see it has a default prefix
+11:06
+named comfy UI however you can change
+11:09
+this to something else that makes more
+11:11
+sense like robot um for example um this
+11:14
+way all the series you do for robots
+11:16
+will start with that name as you can see
+11:19
+the prefix is now robot whereas for
+11:22
+older ones it was comy
+11:24
+UI so let's say you have a working
+Change UI, Group Node Creation and Management
+11:27
+workflow and you want the interface to
+11:30
+be more organized similar to other UI
+11:33
+designs like automatic 1111 or Forge UI
+11:36
+what I like to do is press control and
+11:39
+then drag to select multiple nodes using
+11:43
+shift and click allows you to add more
+11:46
+nodes to the selection I usually don't
+11:49
+select the save image node you'll see
+11:51
+why in a moment right click and select
+11:54
+the option called convert to group node
+11:57
+this will create a special node that
+11:58
+contains
+11:59
+all the selected nodes give it a name
+12:03
+like text to image in this case resize
+12:06
+it to your liking and there you go now
+12:09
+it looks much simpler with just two
+12:11
+nodes if you want to change the order
+12:13
+you can do that too and even more if I
+12:15
+rightclick and go to manage group node I
+12:18
+can find all the nodes listed on the
+12:20
+left for example if I want to move the
+12:23
+prompts just after the checkpoints I can
+12:25
+do that after clicking save the node
+12:28
+order will have changed um accordingly
+12:31
+um you can also hide the options you
+12:33
+don't need which will not deactivate
+12:35
+them but simply hide them from the node
+12:37
+interface for example if I don't want
+12:39
+the d noise option because I don't use
+12:40
+it for text to image I can go to the K
+12:43
+sampler widget and uncheck visible when
+12:47
+I save that change the option disappears
+12:49
+from the node check what each node has
+12:52
+in terms of inputs widgets and outputs
+12:55
+and optimize the interface so it suits
+12:57
+your specific needs if you need to edit
+13:00
+the workflow you can always go back to
+13:03
+individual nodes by right-clicking and
+13:05
+choosing convert to nodes this might
+13:08
+look messy initially but it allows you
+13:10
+to see how the nodes are connected and
+13:13
+makes it easier to edit the workflow you
+13:16
+can also convert just two nodes like the
+13:19
+positive and negative prompts to make
+13:21
+the workflow look more organized this
+13:24
+can be quite useful for focusing on
+13:26
+specific parts of your workflow if you
+13:29
+want you can convert all the nodes in
+13:32
+your workflow when you run it you can
+13:34
+see how each node loads uh on top
+13:38
+however I prefer not to include the save
+13:40
+image node within the group because the
+13:42
+preview is too small and I couldn't find
+13:44
+a way to make it bigger that's why I
+13:45
+keep the save node out of the
+13:47
+group if you want you can run multiple
+Tips for Advanced Workflows
+13:50
+workflows at the same time Let Me Show
+13:53
+You by using control and selecting all
+13:56
+the nodes then crl plus C to copy and
+13:59
+Control Plus VV to paste I can create a
+14:03
+duplicate of that workflow to
+14:05
+differentiate it quickly I will change
+14:07
+some words in the prompt for the second
+14:09
+workflow um when I click Q prompt you
+14:12
+can see that it loads the first workflow
+14:14
+and then the second one however maybe
+14:16
+you want uh the option to choose which
+14:19
+one to run and which ones not to run so
+14:23
+let's select all the nodes from uh the
+14:26
+first
+14:27
+workflow now if you you right click
+14:29
+outside the nodes anywhere on the canvas
+14:32
+you have the option to add group for
+14:35
+selected nodes this will organize all
+14:38
+the selected nodes into a group similar
+14:41
+to what we did in episode two if you
+14:44
+right click on that group and choose
+14:45
+edit group you can change its title to
+14:47
+make it easier to identify we repeat the
+14:50
+steps for the second workflow now you
+14:52
+can move each workflow easily by
+14:55
+selecting the group not the individual
+14:58
+nodes but the cool thing you can do now
+15:01
+is this right click on the group and
+15:03
+choose bypass group nodes this allows
+15:06
+you to temporarily skip a group of nodes
+15:08
+in the workflow enabling or disabling
+15:11
+their effects without deleting them so
+15:14
+if I press Q you'll notice only the
+15:17
+second workflow is running because the
+15:19
+first one has been bypassed so I can now
+15:22
+bypass the second workflow and if I want
+15:25
+to enable the first one I choose the
+15:27
+option called set group nodes to always
+15:31
+if I test it you'll see that only the
+15:34
+first workflow is running to remove a
+15:37
+group you can right click on it go to
+15:39
+edit group and choose remove to delete
+15:42
+the nodes simply select them all with
+15:45
+control and press delete um I will
+15:48
+delete the first group as well and
+15:50
+basically we're back to the basic sdxl
+15:53
+workflow you can also bypass nodes but
+15:56
+not all nodes can be bypassed for
+15:58
+example if you try to bypass a node like
+16:01
+the negative prompt that is required it
+16:03
+will show an error indicating that the
+16:06
+node is missing and cannot be bypassed
+16:10
+to enable the node again you can select
+16:13
+the bypass option
+16:16
+again let me create a quick node um from
+16:19
+an empty image I'll decode it and take a
+16:22
+preview uh image from it then I'll
+16:26
+bypass this preview node
+16:29
+since it's not needed in the workflow it
+16:31
+won't save the image but the rest of the
+16:33
+workflow will work uh just fine so if I
+16:37
+choose to bypass again to enable that
+16:39
+node when I run the workflow it will
+16:41
+generate that preview image let's delete
+16:44
+those notes now uh we can have multiple
+16:46
+case sampler nodes to generate more
+16:48
+images at once if I select the case
+16:50
+sampler node and use control plus C to
+16:52
+copy and control+v to paste I get a
+16:56
+duplicate then we can connect the links
+16:58
+just like we did with the first one but
+17:00
+there's a faster way instead of control+
+17:02
+V use contrl plus shift+ v to paste it
+17:07
+with all the connections
+17:09
+intact but what I want in this case is
+17:11
+to have another case sampler node that
+17:14
+also saves the image so what I can do is
+17:17
+um select all three nodes K sampler vae
+17:20
+decode and save image by shift clicking
+17:24
+on them then with contrl plus shift plus
+17:27
+v i can paste them with all the links
+17:30
+intact and use shift to move them into
+17:33
+place I could paste another one if I
+17:35
+want you can have as many as you want or
+17:37
+as many as your computer can handle then
+17:39
+you can change the settings in the case
+17:40
+sampler so you get different images
+17:42
+based on the same prompt but let's say I
+17:45
+want the middle one to have a different
+17:46
+prompt like maybe I want it to have uh
+17:49
+green eyes well you can do that I will
+17:51
+disconnect the positive and negative
+17:53
+prompts then I can recreate those as
+17:56
+text and code nodes or I can just copy
+17:59
+and paste the original ones and then
+18:01
+reconnect them as you would normally
+18:04
+do and I can change the eyes from red to
+18:09
+Green now I realized that at first all
+18:12
+of this might seem complicated it's okay
+18:14
+if you can't do it right away like
+18:16
+anything it takes practice start by
+18:19
+learning to create basic workflows like
+18:21
+we did in the last episode and try to
+18:24
+understand each node eventually it will
+18:27
+all make sense if you you still can't do
+18:29
+it just watch and let your brain pick up
+18:33
+pieces from it in a few days something
+18:35
+in your mind will just click and you'll
+18:38
+be able to move on to more advanced
+18:41
+workflows it's okay if you make mistakes
+18:43
+kyui will let you know what the problem
+18:45
+is like in this case I didn't connect uh
+18:48
+the negative prompt so I can fix that
+18:50
+quickly now when I run the prompt I will
+18:53
+get the middle one with green eyes and
+18:55
+the other two with their original
+18:57
+prompts as you can see see you can
+18:59
+accomplish pretty complex tasks with
+19:01
+just a few nodes over time we can expand
+19:04
+and do even more I've seen people with
+19:06
+200 nodes in a workflow imagine being
+19:09
+able to generate everything you need
+19:11
+with just one click I'll delete the last
+19:15
+part of the workflow let's say you're
+19:17
+happy with this workflow that generates
+19:20
+two different images at once using two
+19:23
+different prompts now it's usually the
+19:25
+part where I simplify the interface I'll
+19:29
+select all the nodes with control and
+19:32
+drag all except the save image nodes
+19:34
+then right click and choose convert to
+19:37
+group node you give it a name and click
+19:40
+okay then you can rearrange the nodes
+19:42
+and look at how clean and simple it
+19:44
+looks now so I have both prompts here
+19:47
+and I can change the details I want in
+19:49
+both prompts when I generate I can get
+19:52
+two different robots at once how cool is
+19:54
+that I can also change the prefix in the
+19:57
+save image node like maybe V1 and V2 so
+20:01
+in the output folder I can easily see
+20:03
+which was generated with what
+20:04
+prompt and each time you want to make
+20:06
+changes to the workflow you can convert
+20:08
+it back to nodes so you can see how each
+20:12
+node is connected that's all for today
+20:15
+thank you for watching um leave a like
+20:17
+or a comment if you found something
+20:20
+useful um see you in the next episode
+20:23
+where we'll probably learn about image
+20:26
+to image and maybe how to use lur models
+20:34
+[Music]

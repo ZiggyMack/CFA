@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "reference_id": "wolf_care_v001",
+  "priority": "Ziggy requested this reference first; earlier civitai_142373294 is secondary.",
+  "recorded_on": "2026-09-12",
+  "source": {
+    "kind": "user_supplied_browser_saved_mp4",
+    "original_filename": "10b936eb46c1e671b089bf26e0c551bb.mp4",
+    "initial_local_path": "games/observatory/assets/materials/10b936eb46c1e671b089bf26e0c551bb.mp4",
+    "creator": null,
+    "civitai_item_id": null,
+    "public_url": null,
+    "identity_note": "Do not inherit the earlier clip creator, item ID or model-version attribution. Model filenames below were read from this file independently."
+  },
+  "media": {
+    "path": "outputs/references/preferred_10b936eb46c1e671b089bf26e0c551bb/10b936eb46c1e671b089bf26e0c551bb.mp4",
+    "path_relative_to": "comfy directory",
+    "bytes": 9397638,
+    "sha256": "3f2be3389bbf36c9e83927ac43b4f8181de836a6ddecefb629bac1756169678a",
+    "relocation_verified": true,
+    "git_ignored": true,
+    "archive_verified": false,
+    "width": 1088,
+    "height": 1920,
+    "duration_seconds": 8.042,
+    "frame_rate": 24,
+    "video_samples": 193,
+    "video_sample_entry": "avc1",
+    "audio_sample_entry": "mp4a",
+    "audio_track_present": true,
+    "motion_reviewed": false,
+    "audio_content_reviewed": false
+  },
+  "thumbnail": {
+    "path": "outputs/references/preferred_10b936eb46c1e671b089bf26e0c551bb/representative.png",
+    "path_relative_to": "comfy directory",
+    "bytes": 2419230,
+    "sha256": "f22ca6d26032c00560683849cfb2299168f977cbd46596abdfcc504a36b48507",
+    "width": 725,
+    "height": 1280,
+    "method": "Windows Shell IShellItemImageFactory with THUMBNAILONLY; no generic icon; no software installed.",
+    "timestamp_seconds": null,
+    "visually_reviewed": true,
+    "observations": "Kneeling woman with worn layered clothing touches the muzzle and forehead of an enormous gray-brown wolf beside a mossy forest stream; detailed fur and warm backlighting.",
+    "limitation": "One representative still at an unknown time, not a review of motion and not the original I2V input image."
+  },
+  "embedded_recipe": {
+    "recovered": true,
+    "box_path": "moov/udta/meta/ilst/\u00a9cmt/data",
+    "offset_bytes": 9259823,
+    "payload_bytes": 137815,
+    "payload_sha256": "42916a33b2712eafdfa5f0c930181eb74c3583505997b244620037984d3a1af4",
+    "prompt_was_json_encoded_string": true,
+    "prompt_nodes": 72,
+    "top_level_editor_nodes": 4,
+    "subgraphs": 8,
+    "subgraph_nodes": 77,
+    "artifacts": [
+      {
+        "role": "editor_graph",
+        "path": "wolf_care_v001.editor.json",
+        "bytes": 248868,
+        "sha256": "625a1fc24a3c70be7061c050ec55bf9adc3ca69c4e0c9bf85884847c4fa1df46"
+      },
+      {
+        "role": "execution_graph",
+        "path": "wolf_care_v001.api.json",
+        "bytes": 21225,
+        "sha256": "8949394e883a834573133f8827530f4cb9ee7510c33616d87d6ad67748a56f16"
+      }
+    ],
+    "credential_screen": "Only empty api_key fields; no common secret strings or credential-bearing URLs detected.",
+    "executed_here": false
+  },
+  "recorded_generation": {
+    "route": "image-to-video",
+    "use_image": true,
+    "source_image": "gf_24_a.jpg",
+    "seed": 42,
+    "nominal_seconds": 8,
+    "frames": 193,
+    "frame_rate": 24,
+    "initial_dimensions": [
+      544,
+      960
+    ],
+    "output_dimensions": [
+      1088,
+      1920
+    ],
+    "latent_upscale_factor": 2,
+    "sampling_passes": 2,
+    "guidance": 1,
+    "sampler": "euler_ancestral",
+    "giant_fantasy_strength": 0.8,
+    "distilled_strength": 1.0,
+    "model_files": [
+      "MelBandRoformer_fp32.safetensors",
+      "gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors",
+      "gemma4_e2b_it_bf16.safetensors",
+      "giantfantasy_ltx25.safetensors",
+      "ltx-2.5-22b-dev-transformer-comfy-int8-convrot.safetensors",
+      "ltx-2.5-22b-distilled-lora-450-bf16.safetensors",
+      "ltx-2.5-audio-vae-bf16.safetensors",
+      "ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+      "ltx-2.5-video-vae-conv-bf16.safetensors"
+    ],
+    "source_input_nodes": [
+      {
+        "node_id": "5579",
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "gf_24_a.jpg"
+        }
+      },
+      {
+        "node_id": "5593",
+        "class_type": "LoadAudio",
+        "inputs": {
+          "audio": "ssstik.io_1788696292791.mp3"
+        }
+      }
+    ],
+    "node_classes": [
+      "BooleanBasic",
+      "CFGGuider",
+      "CLIPLoader",
+      "CLIPTextEncode",
+      "ComfyMathExpression",
+      "ComfyNotNode",
+      "ComfySwitchNode",
+      "CreateVideo",
+      "EmptyLTXVLatentVideo",
+      "GemmaAPITextEncode",
+      "IntegerSettings",
+      "KSamplerSelect",
+      "LTXFloatToInt",
+      "LTXVAudioVAEDecode",
+      "LTXVAudioVAEEncode",
+      "LTXVConcatAVLatent",
+      "LTXVConditioning",
+      "LTXVEmptyLatentAudio",
+      "LTXVImgToVideoInplace",
+      "LTXVLatentUpsampler",
+      "LTXVPreprocess",
+      "LTXVSeparateAVLatent",
+      "LatentUpscaleModelLoader",
+      "LoadAudio",
+      "LoadImage",
+      "LoraLoaderModelOnly",
+      "ManualSigmas",
+      "MelBandRoFormerModelLoader",
+      "MelBandRoFormerSampler",
+      "PathchSageAttentionKJ",
+      "PreviewAny",
+      "PrimitiveBoolean",
+      "PrimitiveFloat",
+      "PrimitiveInt",
+      "PrimitiveStringMultiline",
+      "RandomNoise",
+      "ResizeImageMaskNode",
+      "SamplerCustomAdvanced",
+      "SetLatentNoiseMask",
+      "SolidMask",
+      "StringContains",
+      "Switch latent [Crystools]",
+      "TextGenerateLTX2Prompt",
+      "TrimAudioDuration",
+      "TwoWaySwitch",
+      "UNETLoader",
+      "VAEDecode",
+      "VAEDecodeTiled",
+      "VAELoader",
+      "VHS_VideoCombine"
+    ],
+    "positive_prompt": "giantfx, a young fantasy woman kneeling in a forest stream, gently pressing her forehead and hands against a colossal wolf, intimate emotional bond between human and giant creature, extreme but believable scale difference, photorealistic fantasy, soft golden sunlight filtering through tall pine trees, mossy rocks, shallow water, flowing dark hair, rustic fantasy clothing, highly detailed fur, calm protective wolf expression, cinematic natural lighting, one single continuous shot, eye-level medium shot, slow and graceful motion, highly detailed, no text, no subtitles",
+    "negative_prompt": "duplicate subjects, wrong scale, bad anatomy, extra limbs, distorted hands, blurry, low quality, cartoon, flicker, unstable motion, zoom, cuts, text, subtitles, watermark",
+    "environment_versions_verified": false
+  },
+  "remaining_work": [
+    "Find the original gf_24_a.jpg for faithful reproduction, or explicitly use an adapted reference image. It was not found in the scoped CFA games/docs filename search.",
+    "Check current Cloud node/model availability and implementation compatibility.",
+    "Determine whether the referenced MP3 and optional API/audio branches are required or can be pruned safely in a separate working copy.",
+    "Record any future execution and its actual outputs/cost; no generation occurred here.",
+    "For a freely explorable game encounter, separately source/build 3D characters, rig, animation, environment and lighting. This MP4/recipe does not supply them."
+  ]
+}

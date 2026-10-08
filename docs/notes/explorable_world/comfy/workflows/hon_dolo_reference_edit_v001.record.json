@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "checked_on_local": "2026-10-04",
+  "status": "two_cloud_still_tests_completed_user_review_pending",
+  "provider": "Comfy Cloud",
+  "native_mcp_available": true,
+  "base_template": "image_flux2_klein_image_edit_9b_distilled",
+  "source_url": "https://cloud.comfy.org/templates/image_flux2_klein_image_edit_9b_distilled.json",
+  "primary_workflow": {
+    "id": "dd649394-dae2-4831-8eb0-3c90527b0fc8",
+    "url": "https://cloud.comfy.org/#dd649394-dae2-4831-8eb0-3c90527b0fc8",
+    "executed_version": 2,
+    "lora_bypassed": true,
+    "latest_version": 6,
+    "name": "Hon Dolo - Reference Edit v001",
+    "filename": "hon-dolo-reference-edit-v001.json"
+  },
+  "comparison_workflow": {
+    "id": "1ee8615b-5586-42fd-bf3d-3d202b2377eb",
+    "url": "https://cloud.comfy.org/#1ee8615b-5586-42fd-bf3d-3d202b2377eb",
+    "executed_version": 1,
+    "lora": "flux-2-klein-9b-candid_film.safetensors",
+    "strength": 0.5,
+    "source_model_version": "https://civitai.com/models/2313101?modelVersionId=2757653",
+    "latest_version": 4,
+    "current_layout": "paired A baseline / B Candid Film; shared inputs",
+    "latest_layout_rendered": false
+  },
+  "inputs": [
+    {
+      "path": "../references/Hon Dolo_0.jpg",
+      "role": "design",
+      "sha256": "36b8a58c1df187fc87e6270be2814207fc151e125fef3ef69583c0d80df7e82b",
+      "cloud_name": "d7bbaad8ae990775daab8609c534fd8068a3a0a2f4a5cdf89b2f8cb1e99cb686.jpg"
+    },
+    {
+      "path": "../references/Han Solo.png",
+      "role": "likeness; right-hand subject isolated in graph",
+      "sha256": "5a6bd67a77920d3f2eae4bbaa98db0aa1e3dad288d38327c963d15cee1722974",
+      "cloud_name": "a5e75d93d4f1cf7a321bafaa52011716210048ea4b2e1ef955732d5025317c0b.png",
+      "crop": {
+        "x": 430,
+        "y": 5,
+        "width": 300,
+        "height": 380
+      }
+    }
+  ],
+  "duplicate_inputs": [
+    "Hon Dolo_0.jpg and Hon Dolo_3.jpg have identical SHA-256."
+  ],
+  "settings": {
+    "seed": 42,
+    "steps": 4,
+    "cfg": 1,
+    "sampler": "euler",
+    "scheduler": "Flux2Scheduler",
+    "batch_size": 1,
+    "reference_target_megapixels": 1,
+    "reference_resolution_multiple": 16,
+    "model": "flux-2-klein-9b.safetensors",
+    "text_encoder": "qwen_3_8b_fp8mixed.safetensors",
+    "vae": "full_encoder_small_decoder.safetensors"
+  },
+  "outputs": [
+    {
+      "prompt_id": "64483248-7a46-4612-8829-fb9cc3f2a868",
+      "completed": true,
+      "path": "../outputs/hon_dolo_clean_identity_v001.png",
+      "dimensions": [
+        1360,
+        768
+      ],
+      "visual_review": "Shirt, chain, portrait framing retained; face/hair changed toward supplied reference; tattoos/grill removed. Smile is broader, earring missing, skin/eye appearance and background require user review.",
+      "accepted": false,
+      "sha256": "82d6c4bd9aa8e41cadfed602210dfe137f9626c6ee418c9d153f07395f47f6f6",
+      "bytes": 1324965,
+      "format": "PNG"
+    },
+    {
+      "prompt_id": "ac805578-8bc4-47b2-a482-3b1089d8fa6b",
+      "completed": true,
+      "path": "../outputs/hon_dolo_civitai_comparison_v001.png",
+      "dimensions": [
+        1360,
+        768
+      ],
+      "visual_review": "Civitai-origin LoRA loaded in executed graph and output completed. Subtle texture/tone change at 0.5; no established quality improvement over baseline.",
+      "accepted": false,
+      "sha256": "46eed06d4047c0d30f3dc6d1c0b84ce43e89469213ff1a47d15461a5c32d5116",
+      "bytes": 1307467,
+      "format": "PNG"
+    }
+  ],
+  "billing": {
+    "events": [
+      {
+        "completed_at": "2026-10-04T03:46:57.375133Z",
+        "prompt_id": "ac805578-8bc4-47b2-a482-3b1089d8fa6b",
+        "gpu_seconds": 4.264039,
+        "gpu_type": "rtx_pro_6000"
+      },
+      {
+        "completed_at": "2026-10-04T03:42:18.855654Z",
+        "prompt_id": "64483248-7a46-4612-8829-fb9cc3f2a868",
+        "gpu_seconds": 17.076465,
+        "gpu_type": "rtx_pro_6000"
+      }
+    ],
+    "total_gpu_seconds": 21.340504,
+    "actual_dollar_cost": null,
+    "actual_credits": null,
+    "estimate_note": "No paid API nodes; estimate excludes Cloud GPU time, queue and storage. Recorded GPU seconds are not a speed benchmark."
+  },
+  "civitai": {
+    "shared_resource_catalog_verified": true,
+    "shared_lora_runtime_verified": true,
+    "stored_provider_key_verified": false,
+    "authenticated_import_verified": false,
+    "import_blocker": "No model-import/Secrets-test operation in exposed MCP; browser connector failed kernel-assets initialization.",
+    "no_weights_downloaded_locally": true
+  },
+  "next": {
+    "identity_approval": "pending Ziggy review",
+    "tattoos_and_grill_finishing": "pending",
+    "video": "H3 reference-to-video template discovered but dependencies and execution untested"
+  },
+  "local_issue": {
+    "drive": "C:",
+    "free_bytes_observed": 3993600,
+    "effect": "Intermittent viewer and sandbox log writes failed with os error 112. Outputs and records are on D:.",
+    "own_scratch_cleanup_bytes": 3594145
+  },
+  "comparison_pixel_mean_absolute_difference_rgb_0_255": [
+    4.967432598039216,
+    3.5901932061887254,
+    2.683765127144608
+  ],
+  "controls_update": {
+    "date": "2026-10-04",
+    "base_cloud_version": 3,
+    "positive_node": 154,
+    "style_nodes": [
+      155,
+      156
+    ],
+    "negative_notes_node": 160,
+    "negative_conditioning_active": false,
+    "prompt_preview_node": 159,
+    "input_preview_node": 161,
+    "result_preview_node": 162,
+    "style_library": "embedded editable lines",
+    "default_style_indices": [
+      0,
+      0
+    ],
+    "styles_verified_available_in_was": [
+      "None"
+    ],
+    "validation": {
+      "full_graph_dry_run": "passed without warnings",
+      "input_only_cloud_job": "c9dce556-676f-44f0-bb0c-aaa6d4b4da22",
+      "job_completed": true,
+      "preflight_node_count": 12,
+      "preflight_has_generation_nodes": false,
+      "crop_output_dimensions": [
+        300,
+        380
+      ],
+      "default_prompt_equivalence": "exact",
+      "unchanged_generation_inputs": "Only positive CLIP text changed from literal to composed STRING link; all prior model/sampler/reference inputs unchanged.",
+      "full_render_after_controls": false,
+      "text_preview_response_limit": "get_output skipped text-only UI outputs because filename metadata is absent; preflight nodes completed, but rendered text widget was not inspected through browser."
+    },
+    "cloud_version": 5,
+    "input_only_executed_api": "D:\\Documents\\CFA\\.cache\\comfy_controls\\controls_preflight.executed.api.json",
+    "preview_cache": "D:\\Documents\\CFA\\.cache\\comfy_controls\\hon_dolo_likeness_crop_preview.png",
+    "source_tutorial": "https://www.youtube.com/watch?v=Xsx-u0OMezw",
+    "notes": [
+      "Comparison workflow remains at version 2, preserving its original A/B state.",
+      "Full updated graph was server-converted and dry-run validated; no new image generation was needed.",
+      "The two added style selectors use ImpactStringSelector, with an embedded five-line library. The first line is blank for no style; selected values are zero-based, not named dropdowns.",
+      "Negative prompt is saved as notes only, unconnected, and explicitly inactive at CFG 1.",
+      "PreviewAny text-only output is not surfaced by get_output; job completion confirms execution, but browser text-widget display is unverified."
+    ],
+    "sources": [
+      "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B",
+      "https://github.com/Comfy-Org/ComfyUI/blob/master/comfy/samplers.py",
+      "https://docs.comfy.org/built-in-nodes/PreviewImage",
+      "https://github.com/ltdrdata/ComfyUI-Impact-Pack/blob/Main/modules/impact/util_nodes.py"
+    ]
+  },
+  "sampling_controls_update": {
+    "date": "2026-10-04",
+    "from_cloud_version": 5,
+    "selector_node": 164,
+    "steps_node": 165,
+    "cfg_node": 166,
+    "seed_node": 167,
+    "actual_sampler": "92:104",
+    "actual_scheduler": "92:102",
+    "defaults": {
+      "seed": 42,
+      "steps": 4,
+      "sampler": "euler",
+      "cfg": 1
+    },
+    "note": "Existing sampler moved to an external KSamplerSelect; steps/CFG/seed promoted. No second sampler or model change.",
+    "cloud_version": 6,
+    "validation": {
+      "dry_run": "passed without warnings",
+      "baseline_equivalence": {
+        "same": true,
+        "validation": "Resolved PrimitiveInt/Float values, remapped relocated selector ID, ignored titles and key ordering; every class/input/link matches the prior graph."
+      },
+      "full_render_submitted": false
+    },
+    "source_transcript": "../references/comfy_episode06_styles_sampling_20261004.user_transcript.txt"
+  },
+  "comparison_update": {
+    "date": "2026-10-04",
+    "cloud_version": 4,
+    "previous_cloud_version": 2,
+    "source_main_version": 6,
+    "cloud_url": "https://cloud.comfy.org/#1ee8615b-5586-42fd-bf3d-3d202b2377eb",
+    "source_tutorial": "https://www.youtube.com/watch?v=q9ufjcMofI0",
+    "source_transcript": "../references/comfy_episode05_sd3_comparison_20261004.user_transcript.txt",
+    "editor": "hon_dolo_civitai_comparison_v001.editor.json",
+    "preflight_api": "hon_dolo_civitai_comparison_v001.preflight.api.json",
+    "branch_a": {
+      "engine_node": 92,
+      "lora_bypassed": true,
+      "save_node": 122
+    },
+    "branch_b": {
+      "engine_node": 168,
+      "lora": "flux-2-klein-9b-candid_film.safetensors",
+      "strength_node": 170,
+      "strength": 0.5,
+      "save_node": 169
+    },
+    "shared": {
+      "design_node": 76,
+      "likeness_node": 121,
+      "crop_node": 153,
+      "prompt_node": 158,
+      "sampler_node": 164,
+      "steps_node": 165,
+      "cfg_node": 166,
+      "seed_node": 167
+    },
+    "validation": {
+      "branchAEqualsMainV6": true,
+      "branchBEqualsAAfterOnlyLoraBypass": true,
+      "activeLoras": [
+        {
+          "id": "168:151",
+          "model": "flux-2-klein-9b-candid_film.safetensors",
+          "strength": 0.5
+        }
+      ],
+      "outputPrefixes": [
+        {
+          "id": "122",
+          "prefix": "CFA/HonDolo/AB_compare_v001/A_baseline"
+        },
+        {
+          "id": "169",
+          "prefix": "CFA/HonDolo/AB_compare_v001/B_candid_film"
+        }
+      ],
+      "samplers": [
+        "92:104",
+        "168:104"
+      ],
+      "compileWarnings": [],
+      "dryRun": "passed without warnings; no execution",
+      "apiNodeCount": 58,
+      "editor_link_integrity": "passed bidirectional checks for outer graph and both subgraph definitions",
+      "comparison_method": "Recursively expanded the server-compiled decode dependencies by class_type, sorted input names and ordered output slots; ignored titles/node identifiers. A equals main v6. B equals A after bypassing its sole LoraLoaderModelOnly.",
+      "browser_canvas_visual_inspection": false,
+      "paired_render_submitted": false
+    },
+    "notes": [
+      "Run evaluates two image-generation branches with distinct save prefixes. Cloud runtime applies.",
+      "Original single-branch executed graph and two completed output PNGs are preserved; neither is an execution of this paired revision.",
+      "The main editor and input-check workflow are independent saved records and were not changed by this update.",
+      "No model weights were downloaded or new Civitai resource imported.",
+      "Candid Film remains an experiment on distilled 9B despite prior successful execution.",
+      "Positional scalar fallback counts were completed in both engine instances, clearing the intermediate v3 conversion advisories. All scalar values remain linked to shared outer inputs."
+    ],
+    "sd3_discovery": {
+      "queried_on": "2026-10-04",
+      "query": "sd3",
+      "model_hits": [
+        "sd3.5_medium_incl_clips_t5xxlfp8scaled.safetensors",
+        "sd3.5_large_fp8_scaled.safetensors"
+      ],
+      "template_hits": [
+        "sd3.5_simple_example",
+        "sd3.5_large_depth",
+        "sd3.5_large_canny_controlnet_example",
+        "sd3.5_large_blur"
+      ],
+      "original_sd3_medium_packages_confirmed": false,
+      "sd35_execution_tested": false,
+      "official_package_reference": "https://huggingface.co/stabilityai/stable-diffusion-3-medium"
+    }
+  }
+}

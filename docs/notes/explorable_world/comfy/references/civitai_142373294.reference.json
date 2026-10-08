@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "reference_url": "https://civitai.com/images/142373294",
+  "retrieved_on": "2026-09-12",
+  "retrieval": {
+    "method": "Unauthenticated public HTTP GET through an authorized shell outside the network sandbox; parsed the item's server-rendered __NEXT_DATA__ and the public model-version API response.",
+    "credentials_used": false,
+    "cookies_supplied": false,
+    "media_downloaded": true,
+    "weights_downloaded": false,
+    "sources": [
+      {
+        "url": "https://civitai.com/images/142373294",
+        "retrieved_on": "2026-09-12",
+        "http_status": 200,
+        "verified_item_id": 142373294,
+        "metadata_records": [
+          "image.get",
+          "image.getGenerationData"
+        ]
+      },
+      {
+        "url": "https://civitai.com/api/v1/model-versions/3313822",
+        "retrieved_at_utc": "2026-09-12T21:26:43.4250382Z",
+        "http_status": 200,
+        "verified_model_id": 2928244,
+        "verified_model_version_id": 3313822
+      }
+    ],
+    "media_retrieval_method": "Ziggy used the browser native Save video as operation and supplied the resulting local MP4. This supersedes earlier retrieval failures; no new remote media request was made by the assistant."
+  },
+  "item": {
+    "id": 142373294,
+    "post_id": 30942881,
+    "creator": {
+      "username": "Solricks",
+      "user_id": 9937551
+    },
+    "availability": "Public",
+    "created_at": "2026-09-10T13:21:36.129Z",
+    "published_at": "2026-09-10T13:25:06.063Z",
+    "media_type": "video",
+    "mime_type": "video/mp4",
+    "filename": "LTX-2.5_00021-audio (1).mp4",
+    "width": 1088,
+    "height": 1920,
+    "duration_seconds": 5.042,
+    "size_bytes": 12425882,
+    "audio_reported_by_metadata": false,
+    "visual_content_verified": false
+  },
+  "generation": {
+    "on_site": false,
+    "process": null,
+    "prompt_field_verbatim": "Open this video in ComfyUI",
+    "positive_prompt": null,
+    "negative_prompt": null,
+    "base_checkpoint": null,
+    "seed": null,
+    "sampler": null,
+    "scheduler": null,
+    "steps": null,
+    "guidance": null,
+    "frame_rate": null,
+    "text_encoder": null,
+    "vae": null,
+    "listed_resources": [
+      {
+        "image_id": 142373294,
+        "model_id": 2928244,
+        "model_version_id": 3313822,
+        "model_name": "LTX-2.5 Giant Fantasy",
+        "model_type": "LORA",
+        "version_name": "LTX-2.5",
+        "base_model_family": "LTXV 2.5",
+        "strength": null
+      }
+    ],
+    "interpretation": "The item lists an LTXV 2.5 LoRA. This identifies a video model family, not the complete generation workflow or exact base checkpoint. The prompt field is a creator instruction, not a verified generation prompt.",
+    "source_scope": "This section preserves the earlier public-page metadata, including its unknowns. The recovered_graph_generation section below contains newly recovered recipe facts."
+  },
+  "associated_model_version": {
+    "model_id": 2928244,
+    "version_id": 3313822,
+    "page_url": "https://civitai.com/models/2928244?modelVersionId=3313822",
+    "page_url_note": "Constructed from the IDs verified in both public responses; the page itself was not fetched.",
+    "name": "LTX-2.5",
+    "base_model": "LTXV 2.5",
+    "base_model_type": "Standard",
+    "description_text": "Initial release of Giant Fantasy for LTX-2.5. Supports both T2V and I2V.",
+    "trained_words": [
+      "giantfx"
+    ],
+    "settings": null,
+    "recommended_resources": null,
+    "settings_note": "The API response did not contain settings or recommendedResources fields.",
+    "files": [
+      {
+        "id": 3199109,
+        "name": "giantfantasy_ltx25.safetensors",
+        "type": "Model",
+        "format": "SafeTensor",
+        "precision": "bf16",
+        "size_kb": 658446.9140625,
+        "sha256": "064034F98B9BC91A7200C09BB04ADDD76E574AFCF4C280B0BDD4E1B4D9527754"
+      }
+    ]
+  },
+  "workflow": {
+    "graph": "civitai_142373294.editor.json",
+    "download_url": null,
+    "embedded_in_media": true,
+    "verified": true,
+    "status": "Recovered and JSON-validated both graphs from the supplied MP4 comment metadata. Recovery is verified; replay, Cloud compatibility and source-input availability are not.",
+    "missing_for_reproduction": [
+      "Supported Cloud node classes and deployed implementations",
+      "Availability and exact provenance of the recorded model files",
+      "Validation of disabled image/audio/API branches, or a documented adapted graph that omits them",
+      "Referenced input assets if those branches remain required",
+      "Execution, observed cost and comparison against the reference"
+    ],
+    "api_graph": "civitai_142373294.api.json",
+    "executed_here": false
+  },
+  "original_media_inspection": {
+    "attempted_on": "2026-09-12",
+    "method": "Unauthenticated public original MP4 request through Python's standard-library urllib from an authorized shell outside the network sandbox, with a hard 20 MiB response cap.",
+    "url_derivation": "Used the exact public item's media identifier and original filename with original=true, without transcode or optimization parameters, following Civitai's public getEdgeUrl implementation.",
+    "url_construction_source": "https://github.com/civitai/civitai/blob/main/src/client-utils/edge-url.ts",
+    "http_status": 403,
+    "result": "Forbidden; stopped without authentication or alternative delivery attempts.",
+    "download_cap_bytes": 20971520,
+    "expected_size_bytes": 12425882,
+    "target_directory": "outputs/references/142373294",
+    "target_git_ignore_verified": true,
+    "git_ignore_rule": "outputs/.gitignore:1:*",
+    "media_file_written": false,
+    "media_sha256": null,
+    "metadata_parser_run": false,
+    "recovered_workflow_file": null,
+    "recovered_prompt_file": null,
+    "recovered_files": [],
+    "still_frame_file": null,
+    "available_tooling_note": "Python was available. ffmpeg, ffprobe, cv2, av, imageio, and imageio_ffmpeg were not found. No tools were installed."
+  },
+  "collection_context": {
+    "user_supplied_url": "https://civitai.com/collections/17962709",
+    "membership_verified": false
+  },
+  "browser_download_followup": {
+    "reviewed_on": "2026-09-12",
+    "user_report": "Clicking the visible download arrow does nothing.",
+    "browser_request_status": null,
+    "public_source_findings": "DownloadImage's blob request resolves on HTTP 200 but does not reject other statuses in loadend; caught errors are suppressed. Its useEdgeUrl video branch requests transcoding. These source observations do not establish the browser's deployed revision or actual failure.",
+    "sources": [
+      "https://github.com/civitai/civitai/blob/main/src/components/Image/DownloadImage.tsx",
+      "https://github.com/civitai/civitai/blob/main/src/client-utils/cf-images-utils.ts",
+      "https://github.com/civitai/civitai/blob/main/src/components/Image/DetailV2/ImageDetail2.tsx"
+    ],
+    "next_checks": "Read the recovered intake, validate model/node availability and disabled branches before any dependent run.",
+    "original_request_comparison": "The earlier original=true request is different from the button's transcoded URL; its 403 is not the observed browser status.",
+    "new_media_retrieved": true,
+    "resolution": "Ziggy saved via the native video context menu. This exact copy contains the graph despite the source-code transcoding path. Inspect each file rather than assuming metadata survives or is stripped."
+  },
+  "local_media_inspection": {
+    "inspected_on": "2026-09-12",
+    "user_saved_path": "games/observatory/assets/materials/LTX-2.5 Giant Fantasy.mp4",
+    "path": "../outputs/references/142373294/LTX-2.5 Giant Fantasy.mp4",
+    "path_relative_to": "this reference JSON directory",
+    "relocation": "Single-file move into ignored Comfy reference storage; SHA-256 checked before and after. Content unchanged.",
+    "bytes": 12425882,
+    "sha256": "e2ab4fc18bd5e0b99c833719fe206d055006ef2184748c0a88f1781121c1ed28",
+    "git_ignored": true,
+    "archive_verified": false,
+    "width": 1088,
+    "height": 1920,
+    "duration_seconds": 5.042,
+    "video_sample_entry": "avc1",
+    "audio_sample_entry": "mp4a",
+    "audio_track_present": true,
+    "audio_note": "An audio track exists in this file despite the public API reporting audio=false. Audible content was not reviewed.",
+    "inspection_method": "Read-only bounded ISO-BMFF box parsing and JSON extraction using Python standard library; no media decoding or node execution.",
+    "video_playback_reviewed": false,
+    "metadata": {
+      "box_path": "moov/udta/meta/ilst/?cmt/data",
+      "utf8_payload_offset": 12287823,
+      "utf8_payload_bytes": 138059,
+      "sha256": "c35972aa9f14732731b67f626ce781f171730c3cf80e9e453e3e893d2d9d5a6f",
+      "prompt_was_json_encoded_string": true,
+      "prompt_nodes": 72,
+      "top_level_editor_nodes": 4,
+      "subgraphs": 8,
+      "subgraph_node_total": 77,
+      "credential_screen": "Known credential-like fields were empty; no common secret-token patterns or credential-bearing URLs were detected.",
+      "extracted_artifacts": [
+        {
+          "role": "editor_graph",
+          "path": "civitai_142373294.editor.json",
+          "bytes": 248989,
+          "sha256": "15436b5f98debbdc083856b1a6c68dc3682f6ee061392c33db94fb59e535cd2b"
+        },
+        {
+          "role": "execution_graph",
+          "path": "civitai_142373294.api.json",
+          "bytes": 21348,
+          "sha256": "e52e4b481a7cdc62055bbe805568212ff6dc6b062db76079b609e83d1e6968af"
+        }
+      ]
+    }
+  },
+  "recovered_graph_generation": {
+    "source": "local_media_inspection.metadata",
+    "saved_route": "Text-to-video settings with two sampling stages and 2x latent spatial upscale; referenced optional input branches still need validation.",
+    "initial_dimensions": [
+      544,
+      960
+    ],
+    "output_dimensions": [
+      1088,
+      1920
+    ],
+    "frame_rate": 24,
+    "frames": 121,
+    "seed": 43,
+    "guidance": 1,
+    "sampler": "euler_ancestral",
+    "first_pass_sigmas": "1.0, 0.99375, 0.9875, 0.98125, 0.975, 0.909375, 0.725, 0.421875, 0.0",
+    "refinement_sigmas": "0.85, 0.7250, 0.4219, 0.0",
+    "giant_fantasy_strength": 0.8,
+    "distilled_lora_strength": 1.0,
+    "positive_prompt": "giantfx, a colossal black wolf walking slowly beside a normal-sized female traveler through an ancient misty forest, extreme but believable scale difference, the wolf is massive, realistic, and majestic, detailed dark fur moving naturally in the wind, the traveler wears simple fantasy clothing and looks small beside the creature, cinematic photorealistic fantasy, soft morning fog, tall pine trees, mossy rocks, a shallow stream crossing the path, natural creature movement, calm pacing, one single continuous shot, eye-level medium-wide shot, very slow cinematic tracking, strong environmental depth, realistic lighting, highly detailed, no text, no subtitles",
+    "negative_prompt": "white lion, white wolf, duplicate subjects, wrong scale, bad anatomy, extra limbs, distorted face, blurry, low quality, flicker, unstable motion, zoom, cuts, text, subtitles, watermark",
+    "video_output": {
+      "frame_rate": [
+        "5578:5014:5017",
+        0
+      ],
+      "loop_count": 0,
+      "filename_prefix": "LTX-2.5",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 16,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "5578:5584",
+        0
+      ],
+      "audio": [
+        "5578:5617",
+        0
+      ]
+    },
+    "model_files": [
+      "ltx-2.5-22b-dev-transformer-comfy-int8-convrot.safetensors",
+      "ltx-2.5-22b-distilled-lora-450-bf16.safetensors",
+      "giantfantasy_ltx25.safetensors",
+      "ltx-2.5-video-vae-conv-bf16.safetensors",
+      "ltx-2.5-audio-vae-bf16.safetensors",
+      "ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+      "gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors",
+      "gemma4_e2b_it_bf16.safetensors",
+      "MelBandRoformer_fp32.safetensors"
+    ],
+    "referenced_inputs": [
+      "Image 9 Eyl 2026 01_53_39.png",
+      "ssstik.io_1788696292791.mp3"
+    ],
+    "external_nodes": {
+      "GemmaAPITextEncode": {
+        "count": 2,
+        "api_keys_empty": true,
+        "saved_selection": "Local conditioning is selected in the saved graph; do not assume external nodes or referenced files are pruned by every runtime."
+      }
+    },
+    "node_classes": [
+      "BooleanBasic",
+      "CFGGuider",
+      "CLIPLoader",
+      "CLIPTextEncode",
+      "ComfyMathExpression",
+      "ComfyNotNode",
+      "ComfySwitchNode",
+      "CreateVideo",
+      "EmptyLTXVLatentVideo",
+      "GemmaAPITextEncode",
+      "IntegerSettings",
+      "KSamplerSelect",
+      "LTXFloatToInt",
+      "LTXVAudioVAEDecode",
+      "LTXVAudioVAEEncode",
+      "LTXVConcatAVLatent",
+      "LTXVConditioning",
+      "LTXVEmptyLatentAudio",
+      "LTXVImgToVideoInplace",
+      "LTXVLatentUpsampler",
+      "LTXVPreprocess",
+      "LTXVSeparateAVLatent",
+      "LatentUpscaleModelLoader",
+      "LoadAudio",
+      "LoadImage",
+      "LoraLoaderModelOnly",
+      "ManualSigmas",
+      "MelBandRoFormerModelLoader",
+      "MelBandRoFormerSampler",
+      "PathchSageAttentionKJ",
+      "PreviewAny",
+      "PrimitiveBoolean",
+      "PrimitiveFloat",
+      "PrimitiveInt",
+      "PrimitiveStringMultiline",
+      "RandomNoise",
+      "ResizeImageMaskNode",
+      "SamplerCustomAdvanced",
+      "SetLatentNoiseMask",
+      "SolidMask",
+      "StringContains",
+      "Switch latent [Crystools]",
+      "TextGenerateLTX2Prompt",
+      "TrimAudioDuration",
+      "TwoWaySwitch",
+      "UNETLoader",
+      "VAEDecode",
+      "VAEDecodeTiled",
+      "VAELoader",
+      "VHS_VideoCombine"
+    ],
+    "deployed_environment_verified": false,
+    "run_completed_here": false
+  }
+}

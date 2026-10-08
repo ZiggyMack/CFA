@@ -1,0 +1,718 @@
+{
+  "config": {},
+  "extra": {
+    "cfa": {
+      "date": "2026-10-04",
+      "defaults": {
+        "cfg": 5,
+        "denoise": 0.3,
+        "megapixels": 1,
+        "resolution_steps": 8,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras",
+        "seed": 42,
+        "steps": 30
+      },
+      "experiment": "hon_dolo_img2img_sdxl_v001",
+      "generation_submitted": false,
+      "import_cleanup": "Removed stale widgets_values_named copied from the upstream template; compiled inputs are verified against edited positional values.",
+      "input_role": "single Grok design image; placeholder likeness",
+      "model": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "negative_conditioning_active": true,
+      "source_url": "https://cloud.comfy.org/templates/image_sdxl_simple.json",
+      "template_id": "image_sdxl_simple",
+      "tutorial_url": "https://www.youtube.com/watch?v=xedwjtaPVzw",
+      "user_acceptance": "pending"
+    },
+    "comfy_mcp": {
+      "description": "Single-image SDXL refinement with visible denoise control; separate from the two-reference likeness edit.",
+      "name": "Hon Dolo - Image Refinement SDXL v001"
+    },
+    "ds": {
+      "offset": [
+        50,
+        55
+      ],
+      "scale": 0.6
+    },
+    "frontendVersion": "1.49.6"
+  },
+  "groups": [
+    {
+      "bounding": [
+        -20,
+        20,
+        490,
+        1010
+      ],
+      "color": "#3f789e",
+      "flags": {},
+      "font_size": 24,
+      "id": 1,
+      "title": "1 - MODEL + STARTING IMAGE"
+    },
+    {
+      "bounding": [
+        510,
+        20,
+        510,
+        890
+      ],
+      "color": "#55804a",
+      "flags": {},
+      "font_size": 24,
+      "id": 2,
+      "title": "2 - POSITIVE / NEGATIVE + ENCODE"
+    },
+    {
+      "bounding": [
+        1060,
+        20,
+        390,
+        1010
+      ],
+      "color": "#4c6090",
+      "flags": {},
+      "font_size": 24,
+      "id": 3,
+      "title": "3 - DENOISE + SAMPLING"
+    },
+    {
+      "bounding": [
+        1500,
+        20,
+        550,
+        1170
+      ],
+      "color": "#a47738",
+      "flags": {},
+      "font_size": 24,
+      "id": 4,
+      "title": "4 - INPUT / RESULT"
+    }
+  ],
+  "id": "cf871a87-6923-49be-ab16-61c9d697244f",
+  "last_link_id": 47,
+  "last_node_id": 21,
+  "links": [
+    [
+      33,
+      10,
+      0,
+      12,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      34,
+      11,
+      0,
+      12,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      36,
+      12,
+      0,
+      14,
+      0,
+      "LATENT"
+    ],
+    [
+      37,
+      14,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      38,
+      15,
+      0,
+      12,
+      0,
+      "MODEL"
+    ],
+    [
+      39,
+      15,
+      1,
+      10,
+      0,
+      "CLIP"
+    ],
+    [
+      40,
+      15,
+      1,
+      11,
+      0,
+      "CLIP"
+    ],
+    [
+      41,
+      15,
+      2,
+      14,
+      1,
+      "VAE"
+    ],
+    [
+      42,
+      17,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ],
+    [
+      43,
+      18,
+      0,
+      19,
+      0,
+      "IMAGE"
+    ],
+    [
+      44,
+      15,
+      2,
+      19,
+      1,
+      "VAE"
+    ],
+    [
+      45,
+      19,
+      0,
+      12,
+      3,
+      "LATENT"
+    ],
+    [
+      46,
+      20,
+      0,
+      12,
+      4,
+      "FLOAT"
+    ],
+    [
+      47,
+      18,
+      0,
+      21,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 7,
+      "inputs": [
+        {
+          "link": 37,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": null,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        1520,
+        650
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0"
+      },
+      "size": [
+        510,
+        500
+      ],
+      "title": "RESULT + SAVE - after generation",
+      "type": "SaveImage",
+      "widgets_values": [
+        "CFA/HonDolo/img2img_sdxl_v001"
+      ]
+    },
+    {
+      "bgcolor": "#353",
+      "color": "#232",
+      "flags": {},
+      "id": 10,
+      "inputs": [
+        {
+          "link": 39,
+          "name": "clip",
+          "type": "CLIP"
+        }
+      ],
+      "mode": 0,
+      "order": 1,
+      "outputs": [
+        {
+          "links": [
+            33
+          ],
+          "name": "CONDITIONING",
+          "type": "CONDITIONING"
+        }
+      ],
+      "pos": [
+        530,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0"
+      },
+      "size": [
+        460,
+        330
+      ],
+      "title": "POSITIVE - describe the desired image",
+      "type": "CLIPTextEncode",
+      "widgets_values": [
+        "Photorealistic studio portrait of an adult man with wavy dark brown hair, natural facial proportions, black open-collar shirt, heavy gold chain, gold grill, face and neck tattoos, gray studio background. Soft balanced studio lighting, realistic skin pores, believable fabric and metal texture, confident expression."
+      ]
+    },
+    {
+      "bgcolor": "#533",
+      "color": "#322",
+      "flags": {},
+      "id": 11,
+      "inputs": [
+        {
+          "link": 40,
+          "name": "clip",
+          "type": "CLIP"
+        }
+      ],
+      "mode": 0,
+      "order": 2,
+      "outputs": [
+        {
+          "links": [
+            34
+          ],
+          "name": "CONDITIONING",
+          "type": "CONDITIONING"
+        }
+      ],
+      "pos": [
+        530,
+        470
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0"
+      },
+      "size": [
+        460,
+        230
+      ],
+      "title": "NEGATIVE - active in this SDXL recipe",
+      "type": "CLIPTextEncode",
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "flags": {},
+      "id": 12,
+      "inputs": [
+        {
+          "link": 38,
+          "name": "model",
+          "type": "MODEL"
+        },
+        {
+          "link": 33,
+          "name": "positive",
+          "type": "CONDITIONING"
+        },
+        {
+          "link": 34,
+          "name": "negative",
+          "type": "CONDITIONING"
+        },
+        {
+          "link": 45,
+          "name": "latent_image",
+          "type": "LATENT"
+        },
+        {
+          "link": 46,
+          "name": "denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "denoise"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 3,
+      "outputs": [
+        {
+          "links": [
+            36
+          ],
+          "name": "LATENT",
+          "type": "LATENT"
+        }
+      ],
+      "pos": [
+        1080,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler",
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0"
+      },
+      "size": [
+        350,
+        390
+      ],
+      "title": "KSampler - SDXL image refinement",
+      "type": "KSampler",
+      "widgets_values": [
+        42,
+        "fixed",
+        30,
+        5,
+        "dpmpp_2m",
+        "karras",
+        0.3
+      ]
+    },
+    {
+      "flags": {},
+      "id": 14,
+      "inputs": [
+        {
+          "link": 36,
+          "name": "samples",
+          "type": "LATENT"
+        },
+        {
+          "link": 41,
+          "name": "vae",
+          "type": "VAE"
+        }
+      ],
+      "mode": 0,
+      "order": 4,
+      "outputs": [
+        {
+          "links": [
+            37
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        1080,
+        830
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0"
+      },
+      "size": [
+        350,
+        110
+      ],
+      "title": "DECODE - latent back to pixels",
+      "type": "VAEDecode"
+    },
+    {
+      "flags": {},
+      "id": 15,
+      "inputs": [],
+      "mode": 0,
+      "order": 5,
+      "outputs": [
+        {
+          "links": [
+            38
+          ],
+          "name": "MODEL",
+          "type": "MODEL"
+        },
+        {
+          "links": [
+            39,
+            40
+          ],
+          "name": "CLIP",
+          "type": "CLIP"
+        },
+        {
+          "links": [
+            41,
+            44
+          ],
+          "name": "VAE",
+          "type": "VAE"
+        }
+      ],
+      "pos": [
+        0,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple",
+        "cnr_id": "comfy-core",
+        "models": [
+          {
+            "directory": "checkpoints",
+            "name": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+            "url": "https://huggingface.co/RunDiffusion/Juggernaut-XL-v9/resolve/main/Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
+          }
+        ],
+        "ver": "0.33.0"
+      },
+      "size": [
+        450,
+        120
+      ],
+      "title": "MODEL - Cloud Juggernaut XL v9",
+      "type": "CheckpointLoaderSimple",
+      "widgets_values": [
+        "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
+      ]
+    },
+    {
+      "bgcolor": "#000",
+      "color": "#222",
+      "flags": {},
+      "id": 16,
+      "inputs": [],
+      "mode": 0,
+      "order": 6,
+      "outputs": [],
+      "pos": [
+        0,
+        1230
+      ],
+      "properties": {},
+      "size": [
+        990,
+        790
+      ],
+      "title": "READ FIRST - image refinement, references and denoise",
+      "type": "MarkdownNote",
+      "widgets_values": [
+        "# Image-to-image refinement (SDXL)\n\nLoad a Grok design or an accepted likeness master. The loaded image is resized, VAE-encoded, and used as KSampler's starting latent. Describe the desired result in POSITIVE. NEGATIVE is connected and active; it starts empty. Add specific corrections when needed.\n\n## What denoise changes\nStart at 0.30 as an exploratory refinement setting. Lower values usually retain more of the input; higher values allow larger changes. Useful experiments: 0.20, 0.35, 0.50 with the SAME original input, prompt and fixed seed. These are trial settings, not tested quality guarantees. Keep the value between 0 and 1. A value of 0.30 does NOT mean exactly 70% of the pixels or identity are preserved.\n\nEven low denoise may alter the face, tattoo lettering, jewelry, mouth or background. This graph edits the whole image. It has no mask, second face-reference input, face adapter or video motion control.\n\n## Hon Dolo production\nThe supplied input is Grok Hon Dolo_0.jpg, with its placeholder identity. Use our two-reference Klein workflow to combine Grok's design with the intended likeness. Once accepted, that output can replace this input for refinement; revise the prompt to match that image. Do not assume a character name in this prompt recreates the supplied face reference.\n\nLocalized tattoo/grill finishing needs a dedicated masked edit. Video needs its own reference/motion workflow. Those stages are not added here.\n\n## Size, sampling and previews\nResize is Lanczos, approximately 1 megapixel, dimensions rounded to multiples of 8. This keeps the aspect ratio approximately; review the resized preview. It is ordinary resizing, not a learned detail-enhancing upscaler or HD/4K finishing.\n\nBaseline: seed 42 fixed, 30 steps, CFG 5, dpmpp_2m, karras. Juggernaut XL v9 is present in Cloud's checkpoint loader; this is a deliberate substitute for the tutorial's Juggernaut X. Do not transfer these settings to distilled Klein.\n\nThe loaded source displays before generation. RESIZED INPUT preview updates when its nodes run; RESULT appears after generation and saves in the same run. For an input-only resize check, set RESULT + SAVE to Never/muted, then Run; re-enable it for generation. Cloud runtime may still apply. Existing previews can show a previous run.\n\n## LoRAs and Cloud\nNo LoRA is enabled here. Use only a verified SDXL-compatible LoRA with its own trigger/strength guidance. Our Klein Candid Film LoRA belongs to the other workflow. If adding a suitable LoRA later, route checkpoint MODEL and CLIP through LoraLoader, then its MODEL to KSampler and CLIP to both text encoders. The checkpoint VAE still feeds both encode and decode.\n\nAll generation stays in Comfy Cloud; no local checkpoint download or node installation is required. This template is prepared for validation; no image-generation run is claimed.\n\nAdapted from official image_sdxl_simple and ComfyUI img2img examples, guided by the supplied episode 4 transcript."
+      ]
+    },
+    {
+      "flags": {},
+      "id": 17,
+      "inputs": [],
+      "mode": 0,
+      "order": 7,
+      "outputs": [
+        {
+          "links": [
+            42
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        0,
+        300
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        450,
+        400
+      ],
+      "title": "INPUT - Grok design or accepted master",
+      "type": "LoadImage",
+      "widgets_values": [
+        "d7bbaad8ae990775daab8609c534fd8068a3a0a2f4a5cdf89b2f8cb1e99cb686.jpg"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 18,
+      "inputs": [
+        {
+          "link": 42,
+          "name": "image",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 8,
+      "outputs": [
+        {
+          "links": [
+            43,
+            47
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        0,
+        800
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleToTotalPixels",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        450,
+        150
+      ],
+      "title": "RESIZE - about 1 MP, aspect approximately retained",
+      "type": "ImageScaleToTotalPixels",
+      "widgets_values": [
+        "lanczos",
+        1,
+        8
+      ]
+    },
+    {
+      "flags": {},
+      "id": 19,
+      "inputs": [
+        {
+          "link": 43,
+          "name": "pixels",
+          "type": "IMAGE"
+        },
+        {
+          "link": 44,
+          "name": "vae",
+          "type": "VAE"
+        }
+      ],
+      "mode": 0,
+      "order": 9,
+      "outputs": [
+        {
+          "links": [
+            45
+          ],
+          "name": "LATENT",
+          "type": "LATENT"
+        }
+      ],
+      "pos": [
+        530,
+        750
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        460,
+        70
+      ],
+      "title": "ENCODE INPUT - starting latent",
+      "type": "VAEEncode",
+      "widgets_values": []
+    },
+    {
+      "flags": {},
+      "id": 20,
+      "inputs": [],
+      "mode": 0,
+      "order": 10,
+      "outputs": [
+        {
+          "links": [
+            46
+          ],
+          "name": "FLOAT",
+          "type": "FLOAT"
+        }
+      ],
+      "pos": [
+        1080,
+        570
+      ],
+      "properties": {
+        "Node name for S&R": "PrimitiveFloat",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        350,
+        100
+      ],
+      "title": "DENOISE - 0 to 1; start at 0.30",
+      "type": "PrimitiveFloat",
+      "widgets_values": [
+        0.3
+      ]
+    },
+    {
+      "flags": {},
+      "id": 21,
+      "inputs": [
+        {
+          "link": 47,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 11,
+      "outputs": [
+        {
+          "links": [],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        1520,
+        80
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        510,
+        470
+      ],
+      "title": "RESIZED INPUT - updates when run",
+      "type": "PreviewImage",
+      "widgets_values": []
+    }
+  ],
+  "revision": 0,
+  "version": 0.4
+}

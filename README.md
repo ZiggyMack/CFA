@@ -25,6 +25,10 @@ The **Comparative Framework Audit (CFA)** is the first interactive epistemic lab
 ---
 
 <!-- deps: file_structure -->
+## Comfy video workshop
+
+For ComfyUI image/video work, start with the [workshop status](docs/notes/explorable_world/comfy/README.md), [problem-to-recipe lookup](docs/notes/explorable_world/comfy/workflows/README.md#choose-by-problem), and [Panhandlers learning handoff](docs/notes/explorable_world/pathfinder_handoff/README.md). The root [AGENTS.md](AGENTS.md) gives Codex the matching task entry; it leaves unrelated CFA work on its existing routes.
+
 ## 📂 Directory Structure
 
 ```

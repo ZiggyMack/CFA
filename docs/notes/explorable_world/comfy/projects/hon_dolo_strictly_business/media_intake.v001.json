@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "project_id": "hon_dolo_strictly_business",
+  "inspected_date": "2026-10-04",
+  "input_provenance": "Two files placed by Ziggy in the project directory; user described lyric MP4 and song MP3. Actual stream inspection found M4A with timed subtitles plus MP3 with cover art.",
+  "assets": [
+    {
+      "path": "SBT_0 (Remastered).m4a",
+      "bytes": 3955082,
+      "sha256": "bb222ffb02865264e72bfc57d4dd600fbe937e67ed89267656743d8a597706aa",
+      "container": "ISO MP4-family; brands isom/isomiso2mp41",
+      "streams": [
+        {
+          "type": "audio",
+          "codec": "opus",
+          "sample_rate_hz": 48000,
+          "channels": 2
+        },
+        {
+          "type": "subtitle",
+          "codec": "mov_text",
+          "language": "eng"
+        }
+      ],
+      "has_moving_video": false,
+      "reported_duration_seconds": 233.48,
+      "reported_start_seconds": 0,
+      "decoded_audio": {
+        "sample_frames": 11207688,
+        "sample_rate_hz": 48000,
+        "duration_seconds": 233.4935,
+        "decode_exit_code": 0,
+        "warnings": []
+      },
+      "untimed_lyrics_metadata_present": true,
+      "source_unchanged": true
+    },
+    {
+      "path": "SBT_0 (Remastered).mp3",
+      "bytes": 5680973,
+      "sha256": "5adbf5258b31f157362e2b7d5713844d7bfd5e3302adab98a8cae9e610a44035",
+      "container": "MP3",
+      "streams": [
+        {
+          "type": "audio",
+          "codec": "mp3",
+          "sample_rate_hz": 48000,
+          "channels": 2
+        },
+        {
+          "type": "video",
+          "codec": "mjpeg",
+          "width": 360,
+          "height": 360,
+          "attached_cover_art": true,
+          "moving_video": false
+        }
+      ],
+      "has_moving_video": false,
+      "reported_duration_seconds": 233.52,
+      "reported_start_seconds": 0.023021,
+      "decoded_audio": {
+        "sample_frames": 11207040,
+        "sample_rate_hz": 48000,
+        "duration_seconds": 233.48,
+        "decode_exit_code": 0,
+        "warnings": []
+      },
+      "untimed_lyrics_metadata_present": true,
+      "source_unchanged": true
+    }
+  ],
+  "subtitle_extraction": {
+    "source_path": "SBT_0 (Remastered).m4a",
+    "stream": "0:s:0",
+    "output_path": "lyrics.embedded.v001.srt",
+    "output_bytes": 6973,
+    "output_sha256": "a3d0de92d696b9048fc1a0f6f41d671ca90362b925743aeaf673d3053cfe8697",
+    "format": "SRT UTF-8 emitted by FFmpeg without cue edits",
+    "cue_count": 100,
+    "section_markers": [
+      {
+        "id": 1,
+        "start_seconds": 2.314,
+        "end_seconds": 2.314,
+        "text": "[Chorus]"
+      },
+      {
+        "id": 6,
+        "start_seconds": 18.91,
+        "end_seconds": 18.91,
+        "text": "[Verse]"
+      },
+      {
+        "id": 16,
+        "start_seconds": 63.191,
+        "end_seconds": 63.191,
+        "text": "[Chorus]"
+      },
+      {
+        "id": 21,
+        "start_seconds": 76.835,
+        "end_seconds": 76.835,
+        "text": "[Verse 2]"
+      },
+      {
+        "id": 31,
+        "start_seconds": 110.027,
+        "end_seconds": 110.027,
+        "text": "[Bridge]"
+      },
+      {
+        "id": 34,
+        "start_seconds": 119.601,
+        "end_seconds": 119.601,
+        "text": "[Chorus]"
+      },
+      {
+        "id": 39,
+        "start_seconds": 134.441,
+        "end_seconds": 134.441,
+        "text": "[Verse 2]"
+      },
+      {
+        "id": 56,
+        "start_seconds": 149.202,
+        "end_seconds": 149.202,
+        "text": "[Bridge]"
+      },
+      {
+        "id": 58,
+        "start_seconds": 156.144,
+        "end_seconds": 156.144,
+        "text": "[Chorus]"
+      },
+      {
+        "id": 63,
+        "start_seconds": 170.745,
+        "end_seconds": 170.745,
+        "text": "[Verse 3]"
+      },
+      {
+        "id": 80,
+        "start_seconds": 201.303,
+        "end_seconds": 201.303,
+        "text": "[Final Chorus]"
+      },
+      {
+        "id": 85,
+        "start_seconds": 213.431,
+        "end_seconds": 213.431,
+        "text": "[Outro]"
+      }
+    ],
+    "zero_duration_cue_count": 18,
+    "zero_duration_cue_ids": [
+      1,
+      6,
+      16,
+      21,
+      31,
+      34,
+      39,
+      56,
+      58,
+      63,
+      80,
+      85,
+      88,
+      90,
+      92,
+      94,
+      96,
+      98
+    ],
+    "final_cue_end_seconds": 236.739,
+    "overruns_against_selected_mp3": [
+      {
+        "cue_id": 100,
+        "end_seconds": 236.739,
+        "beyond_mp3_decoded_seconds": 3.259
+      }
+    ],
+    "acceptance": "raw file timings retained; audible synchronization unreviewed"
+  },
+  "waveform_comparison": {
+    "method": "Decode to mono float PCM at 8000Hz; mean-centered cross-correlation within +/-100ms for 5s windows in decoded timebase.",
+    "windows": [
+      {
+        "start_seconds": 15,
+        "duration_seconds": 5,
+        "peak_lag_seconds": 0,
+        "normalized_correlation": 0.997504
+      },
+      {
+        "start_seconds": 110,
+        "duration_seconds": 5,
+        "peak_lag_seconds": 0,
+        "normalized_correlation": 0.997883
+      },
+      {
+        "start_seconds": 220,
+        "duration_seconds": 5,
+        "peak_lag_seconds": 0,
+        "normalized_correlation": 0.997116
+      }
+    ],
+    "interpretation": "Strong waveform correspondence at sampled windows; not full-file identity or lyric synchronization verification."
+  },
+  "review_limits": {
+    "listened": false,
+    "lyrics_against_audible_words_verified": false,
+    "bpm_measured": false,
+    "vocal_stem_supplied": false,
+    "moving_lyric_video_received": false,
+    "uploaded_to_comfy": false,
+    "cloud_archive_verified": false
+  },
+  "local_inspection_tools": {
+    "ffmpeg": "D:/Documents/CFA/.cache/hon_dolo_i2v_20261004/python_packages/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+    "waveform_python": "bundled Python with existing NumPy; no new installation",
+    "operations": [
+      "container and stream inspection",
+      "SHA-256 source hashing",
+      "audio-only full decode to PCM/null",
+      "subtitle stream conversion to SRT",
+      "three-window waveform comparison"
+    ]
+  },
+  "next_action": "Review audible lyric synchronization, especially the ending, before committing shot cuts or vocal trims. Preserve user lyric master and source media unchanged."
+}

@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+"""Build HD-VINYL-SHEET.jpg (same layout as HD-VEST-SHEET: 2446x660, bg 40,40,40)
+and zip the folder to /workspace/hon-dolo-ref-sheet-vinyl.zip. Run after the 5 shots exist."""
+import glob, os, zipfile
+from PIL import Image, ImageDraw, ImageFont
+D = os.path.dirname(os.path.abspath(__file__))
+os.chdir(D)
+chest = sorted(glob.glob('HD-VINYL-01*chest-up*.jpg'))
+assert chest, 'missing chest-up'
+shots = [chest[0]] + [f'HD-VINYL-0{i}-full-{n}.jpg' for i, n in [(2,'front'),(3,'left'),(4,'right'),(5,'back')]]
+for s in shots: assert os.path.exists(s), 'missing ' + s
+labels = ['1 chest-up', '2 front', '3 left', '4 right', '5 back']
+H, PAD, LAB = 600, 10, 50
+tiles = []
+im = Image.open(shots[0]).convert('RGB')
+tiles.append(im.resize((round(im.width * H / im.height), H), Image.LANCZOS))
+for s in shots[1:]:
+    im = Image.open(s).convert('RGB')
+    tw = round(im.height * 0.55)
+    if tw < im.width:
+        x0 = (im.width - tw) // 2
+        im = im.crop((x0, 0, x0 + tw, im.height))
+    tiles.append(im.resize((round(H * 0.55), H), Image.LANCZOS))
+W = PAD + sum(t.width + PAD for t in tiles)
+sheet = Image.new('RGB', (W, PAD + H + LAB), (40, 40, 40))
+dr = ImageDraw.Draw(sheet)
+try: font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 22)
+except Exception: font = ImageFont.load_default()
+x = PAD
+for t, l in zip(tiles, labels):
+    sheet.paste(t, (x, PAD)); dr.text((x + 4, PAD + H + 12), l, fill=(220, 220, 220), font=font); x += t.width + PAD
+sheet.save('HD-VINYL-SHEET.jpg', quality=92)
+print('sheet', sheet.size)
+out = '/workspace/hon-dolo-ref-sheet-vinyl.zip'
+with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as z:
+    for f in sorted(os.listdir(D)):
+        p = os.path.join(D, f)
+        if os.path.isfile(p): z.write(p, arcname=os.path.join('hon-dolo-ref-sheet-vinyl', f))
+print('zip', out, os.path.getsize(out))

@@ -1,0 +1,789 @@
+welcome to episode four of this comfy UI
+0:02
+Series today I want to show you the
+0:03
+image to image workflow and how you can
+0:05
+download and use Laura models in comy UI
+0:09
+this is a basic sdxl text to image
+0:11
+workflow I called it sdxl because it
+0:14
+uses an sdxl Bas stable diffusion model
+0:18
+you should be familiar with this
+0:19
+workflow by now if not go back to the
+0:21
+previous episodes we talked about how it
+0:23
+still needs an image in this case a
+0:25
+latent image in order to generate
+0:27
+something but what if I don't want the
+0:29
+starting point to be an empty image what
+0:31
+if I want the image I choose to be the
+0:33
+starting point well we can do that I'll
+0:36
+delete this node we want to load our own
+0:39
+image so we search for load and find a
+0:42
+node called load image it provides a
+0:46
+basic drawing image but we can choose
+0:48
+our own image to upload I'll select the
+0:52
+bunny in the forest image when we try to
+0:55
+connect it we see that there's an image
+0:57
+output point but the case sampler
+1:00
+requires a latent input so what do we do
+1:05
+in this case we're working in pixel mode
+1:08
+and we need to convert it to a format
+1:10
+that stable diffusion understands which
+1:12
+is the latent mode to do this we can use
+1:15
+the vae encode node and now we have a
+1:18
+latent that we can connect to the case
+1:20
+sampler don't forget to connect the vae
+1:23
+for my model the vae is included so I'll
+1:26
+connect it to where it says vae
+1:30
+now when I cue The Prompt I see that the
+1:32
+bunny didn't affect the image why is
+1:36
+that it's because of the Deno value
+1:39
+which is set to one we talked about the
+1:41
+case sampler in the last episode but I
+1:44
+didn't cover Deno yet and now is the
+1:46
+perfect time to explain it the denoising
+1:49
+strength determines how much the output
+1:50
+image differs from the input image low
+1:53
+denoising strength like 0.1 adds a small
+1:56
+amount of noise to the input image
+1:58
+meaning the output image will be very
+2:00
+similar to the input with only slight
+2:02
+modifications high denoising strength
+2:05
+like value of one adds a significant
+2:07
+amount of noise transforming the input
+2:09
+image into a nearly unrecognizable state
+2:12
+of noise this allows for a completely
+2:15
+new image to be generated based on the
+2:17
+prompt with minimal influence from the
+2:19
+original input the process behind how
+2:21
+stable diffusion works is complex but
+2:24
+here's a simplified version to help you
+2:27
+understand in the first case with low
+2:29
+denoid strength it was easier to guess
+2:32
+what's in the image because you can
+2:33
+still see the original content in the
+2:35
+second case with high denoise strength
+2:38
+it's harder to guess what's in the image
+2:41
+because the noise has obscured the
+2:43
+original content as a result the output
+2:45
+could be anything like a robot a bunny
+2:48
+or a house making it look like a
+2:51
+completely new image think of it as
+2:54
+adjusting the opacity of tracing paper
+2:57
+overlay a low denying strength is like
+3:01
+the tracing paper is very transparent so
+3:03
+the original drawing underneath is
+3:05
+clearly visible and the changes are
+3:07
+minor if is high denoising strength then
+3:10
+the tracing paper is almost opaque
+3:13
+allowing you to draw a completely new
+3:15
+image with little reference to the
+3:17
+original the term Den noise is used
+3:20
+instead of add noise because the process
+3:22
+starts by adding noise to the image but
+3:24
+the main focus is on removing that noise
+3:26
+to produce a clear high quality output
+3:30
+back to our example I usually start with
+3:32
+a value like 0.6 so that it is a little
+3:36
+different from the original and the
+3:38
+prompt has enough power to make changes
+3:41
+to the image then I play around with
+3:43
+lower or higher values this is the
+3:45
+result for
+3:47
+0.5 if I lower the value even more to
+3:50
+0.4 it is different but not much and the
+3:54
+prompt with robot doesn't have much
+3:57
+impact if I set a value too high like
+4:00
+0.9 the result is completely different
+4:02
+in this case if I want a robot bunny I
+4:05
+use a value like 0.65 and make sure to
+4:08
+include robot bunny in the prompt as you
+4:12
+can see the bunny is in the same
+4:13
+position and composition but now it's a
+4:16
+robot and set in the environment I chose
+4:19
+right now the image is generated with
+4:21
+the width and height of the loaded image
+4:24
+however we know that depending on the
+4:27
+the model it prefers to work with
+4:29
+certain sizes my loaded image was 1,024
+4:34
+pixels because I work with an sdxl model
+4:37
+so something around that value produces
+4:39
+good results but what happens if I load
+4:41
+a larger image instead let's try it I'll
+4:44
+choose a different image that I've
+4:45
+upscaled four times now when I cue The
+4:48
+Prompt it looks like it's going to take
+4:49
+forever to generate if I open the
+4:53
+command window and check what's
+4:54
+happening you can see it says it ran out
+4:58
+of memory and is retrying with a tiled
+5:00
+vae so clearly that image is way too big
+5:04
+so I'll go to VQ to see the running jobs
+5:06
+and then click cancel job but if you're
+5:09
+wondering what would have happened if I
+5:11
+let it run well I would have ended up
+5:14
+with an image that looks like this
+5:16
+instead of taking 4 seconds it took 200
+5:19
+seconds it's the same size as the loaded
+5:21
+image but clearly not what I wanted so
+5:24
+the solution is to make the image
+5:26
+smaller before uploading it using
+5:29
+software like Photoshop or we can do it
+5:32
+uh right here if I create a little space
+5:35
+between nodes and search for image I can
+5:38
+find a node called upscale image when I
+5:41
+select that we can see width and height
+5:44
+options just like we had in the text to
+5:47
+image workflow with latent images now we
+5:50
+can control the exact size my image is
+5:52
+square so I'll choose values close to
+5:54
+that but if you have a landscape or
+5:57
+portrait image just make sure the sizes
+5:59
+are close close to 1,24 pixels and
+6:02
+preferably the values are divisible by
+6:06
+64 because computers work better with
+6:08
+those numbers I'm deleting the link
+6:11
+between the loaded image and the vae en
+6:13
+code node to make room for the upscale
+6:16
+image node then I'll connect them by
+6:18
+matching the image output with the image
+6:21
+input even if you're not sure how it
+6:24
+works it's fairly intuitive to connect
+6:26
+inputs and outputs with the same color
+6:28
+and name now when I cue The Prompt again
+6:31
+you can see it's quite fast if I look in
+6:33
+the command window I see it took only 5
+6:36
+Seconds instead of 200 the resulting
+6:38
+image size matches the dimensions you
+6:40
+set in this box you can also enable
+6:44
+cropping if you want the result to have
+6:46
+a different ratio than the uploaded
+6:48
+image but what if I want this generated
+6:51
+image to be the loaded image without
+6:53
+saving it and loading it again you can
+6:56
+do that by right clicking on the image
+6:58
+and choosing copy image then go to the
+7:01
+load image node rightclick and although
+7:03
+I expected a paste image option it seems
+7:06
+to be
+7:07
+missing however you can still paste it
+7:10
+using the control+v shortcut I'll do
+7:12
+that now when I cue The Prompt I get
+7:15
+another image of the robot based on this
+7:17
+new input even if I delete the load
+7:20
+image node you can still use any image
+7:22
+copied to the clipboard whether it's
+7:24
+from Photoshop a screenshot or elsewhere
+7:28
+when you use control+v it will create a
+7:31
+load image node with the pasted image
+7:34
+this way you can easily connect that
+7:36
+node and run it to get your Generations
+7:40
+faster without having to repeatedly save
+7:43
+and upload uh images let's move on to
+LoRA (Low-Rank Adaptation)
+7:47
+Laura now I'm loading the basic sdxl
+7:50
+text to image workflow again you can
+7:53
+quickly see that this one loads an empty
+7:55
+latent image but first let's talk a bit
+7:58
+about what a Laura is Laura stands for
+8:01
+low rank adaptation it is a method used
+8:05
+to fine-tune large pre-trained neural
+8:07
+network models efficiently Laura
+8:11
+fine-tunes large models by updating only
+8:14
+a small targeted part of the model this
+8:17
+makes it quicker and less resource
+8:19
+intensive to adapt the model to specific
+8:21
+tasks or new data sets with Laura you
+8:25
+can find tuna model to generate specific
+8:27
+objects like cars or gas gadgets that it
+8:30
+may not have been able to generate
+8:33
+before this helps the model understand
+8:36
+and create images of things it
+8:38
+previously didn't know how to render you
+8:41
+can also adapt a model to generate
+8:43
+images that accurately depict a specific
+8:45
+person capturing their unique features
+8:47
+and style you can also train a model to
+8:50
+create images in a particular art style
+8:52
+such as impressionism surrealism or a
+8:55
+specific artist's style imagine you have
+8:58
+a toolbox with many tools if you need to
+9:01
+do a specific job like tightening a
+9:04
+unique type of screw you could add a
+9:07
+special attachment to one of your
+9:09
+screwdrivers this attachment Laura lets
+9:13
+you do the job without needing a whole
+9:15
+new toolbox similarly Laura tweaks a
+9:19
+small part of a big model to make it
+9:21
+better at a specific task such as
+9:24
+creating images of a particular object
+9:26
+depicting a specific person or emulating
+9:29
+an art style I know this might sound a
+9:31
+bit basic and boring but it will make
+9:34
+more sense once we test a Laura Laura is
+9:37
+a model you can download similar to the
+9:39
+stable diffusion model however it's
+9:41
+smaller and faster to create there are
+9:43
+various tutorials online on how to train
+9:45
+aura but in this video I'll show you how
+9:47
+to download one and use it if we go to
+9:51
+the civit AI website and click on the
+9:53
+models tab we can see all kinds of
+9:56
+models by going to the filters we can
+9:59
+choose Laura as the model type and
+10:02
+you'll also need to know which base
+10:04
+model you're using the most popular ones
+10:07
+are v1.5 but in my case I have an sdxl
+10:11
+model so I'll select that for the time
+10:13
+period I'll choose year to get more
+10:16
+models you can then click on a Model to
+10:18
+see what types of images it can generate
+10:21
+for this video I'll show you two
+10:23
+examples search for The Ether Cloud
+10:25
+Model you'll see that it lists the base
+10:28
+model as sdxl which is what I want also
+10:32
+make sure to note the trigger words
+10:34
+listed you need to use these exact words
+10:38
+in the prompt you can read more
+10:41
+information here about what weight to
+10:43
+use and other details then click the
+10:45
+download button to download um the model
+10:48
+after that place it in the comy UI
+10:50
+folder navigate to the models folder and
+10:54
+then to the luras folder where you
+10:57
+should save the downloaded model while
+11:00
+it's downloading let's search for
+11:02
+another one called ether fire check to
+11:05
+make sure it uses the same base model
+11:08
+sdxl you'll see that it has different
+11:10
+trigger words that you need to use in
+11:12
+the prompt then look for more
+11:15
+information to see if there's anything
+11:18
+else you should know after that download
+11:21
+it and place it in the same Loris folder
+11:27
+once you have downloaded the models it
+11:28
+should look like this you'll see even
+11:31
+has a file that says put luras here now
+11:35
+go to comfy UI if it was open when you
+11:38
+downloaded the files just click the
+11:39
+refresh button then we can see how to
+11:42
+add the models to the workflow um we
+11:45
+need a Laura so let's search for the
+11:46
+word Laura to see what we can find uh
+11:49
+the load Laura option looks like
+11:52
+something we need um you'll see that
+11:54
+from the drop- down menu you can select
+11:56
+the downloaded models uh I'll select the
+11:59
+the cloud model first but where do we
+12:02
+place this node let's think uh logically
+12:05
+we have inputs and outputs labeled model
+12:10
+so we need to position it somewhere
+12:12
+between the load checkpoint and the K
+12:14
+sampler as only those currently have the
+12:18
+right connection points we have Clips on
+12:20
+the input and output One Clip will
+12:23
+definitely go to the load checkpoint but
+12:25
+where does the output clip go since the
+12:28
+K sampler doesn't have have a clip only
+12:30
+positive and negative logically the node
+12:33
+should be placed between the load
+12:34
+checkpoint and the prompts so let's do
+12:37
+that connect the clip from the low
+12:38
+checkpoint to the Laura and then connect
+12:40
+the clip from the Laura to the prompts
+12:43
+next we want the model link to go
+12:45
+through the Laura so I'll delete the
+12:48
+existing link and recreate it connect
+12:50
+from the load checkpoint to the Laura
+12:52
+and then from the Laura to the K sampler
+12:56
+it's like making a little detour to pass
+12:58
+through the the Laura node why is the
+13:02
+Laura placed between the checkpoint and
+13:04
+the prompt by placing the Laura node
+13:06
+before the prompt encoding the model is
+13:09
+first adapted with the Laura adjustments
+13:11
+this ensures that these adjustments are
+13:13
+considered when interpreting the prompts
+13:15
+in other words the modified model is
+13:18
+used to understand and generate images
+13:21
+based on the given prompts so let's add
+13:23
+a prompt making sure to use the trigger
+13:26
+word specified on the model page that
+13:29
+trigger words are Cloud that look like
+13:32
+and I'll add a bullhead blue sky photo
+13:35
+after them I will also set the C to be
+13:38
+fixed so we can compare the results
+13:40
+later I'll change randomize to fixed
+13:45
+then I'll bypass the Laura node to see
+13:47
+what we get without using the Laura for
+13:49
+that prompt when I run it you'll see
+13:52
+that I get a cloud but it doesn't look
+13:54
+like a bull as I want so let's enable
+13:57
+the Lura node Now by using the bypass
+13:59
+option to activate it now when I cue The
+14:02
+Prompt we get something closer to what
+14:05
+we had in mind as you've likely noticed
+14:09
+this Laura is specialized in making
+14:11
+clouds resemble different subjects you
+14:14
+also have an option called strength
+14:16
+model which determines how strongly the
+14:19
+Laura adjustments are applied to the
+14:21
+main model it adjusts the impact of the
+14:23
+fine-tuning with a higher value making
+14:26
+the adjustments more influential and a
+14:28
+lower value making them less noticeable
+14:31
+I usually set it between the 0.3 and one
+14:34
+if you use a value that's too high like
+14:37
+two for example it can make the image
+14:39
+look worse so try to use a value closer
+14:44
+to the recommended settings which is
+14:45
+often around one uh play around with
+14:49
+different prompts just remember to
+14:50
+include those trigger words look a cloud
+14:53
+that looks like a bunny let's try the
+14:56
+second Laura the one with the fire used
+14:59
+the trigger words fire that looks like
+15:01
+and when you run it you'll get a fire
+15:03
+that looks like a bull let's change the
+15:06
+seed back to random and try a few
+15:09
+generations to see what we can get you
+img2img + LoRa
+15:12
+might be wondering if this will work
+15:14
+with an image you have like if you want
+15:17
+to get a version of your bunny in fire
+15:21
+yes you can do that too let's convert
+15:23
+this workflow into an image to image one
+15:27
+delete the empty lat an image node and
+15:29
+add a load image node then use an encode
+15:32
+vae node to encode the image and
+15:35
+remember to connect the vae to ensure
+15:38
+the image isn't too large and works well
+15:41
+with stable diffusion use the image
+15:43
+upscale node Place between the load
+15:46
+image and vae and code nodes for the
+15:49
+prompt I usually add the trigger words
+15:52
+first so I don't forget them then I
+15:54
+include the rest of the details like a
+15:57
+bunny in the forest it's important to
+16:00
+remember to reduce the Deno value so um
+16:04
+the result looks more similar to your
+16:05
+image you can play with different values
+16:07
+until you get something you like in my
+16:10
+case a value of 0.5 made the bunny look
+16:12
+like it was ignited in fire to recap the
+16:16
+process begins by loading a pre-trained
+16:18
+model Juggernaut X which is an sdxl
+16:20
+model in this case next Alura model
+16:23
+called e clouds is loaded which
+16:26
+fine-tunes the base model to make it
+16:28
+better at creating clouds that resemble
+16:32
+different subjects then the positive and
+16:34
+negative text prompts are encoded so
+16:36
+stable diffusion can understand them an
+16:39
+image of a bunny is loaded and scaled to
+16:42
+a size that works well with our model
+16:44
+after scaling the image is encoded
+16:47
+together with the information from the
+16:49
+model Laura and prompts it goes to the
+16:52
+samper which performs the image
+16:54
+generation finally the image is decoded
+16:57
+and saved to our computer computer I've
+16:59
+tried to explain everything as clearly
+17:01
+as possible with my understanding uh in
+17:03
+a simplified way even if it's not the
+17:05
+most accurate I hope it helps make the
+17:06
+concepts easier to understand and that's
+17:09
+all for today's episode if you found
+17:11
+something useful please leave a like or
+17:13
+a comment thank you for watching have a
+17:16
+great day

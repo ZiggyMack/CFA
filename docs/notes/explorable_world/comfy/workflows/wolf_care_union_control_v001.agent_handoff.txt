@@ -1,0 +1,57 @@
+CFA -> COMFY AGENT: WOLF TEST DEPENDENCY CHECK
+Prepared 2026-10-03. Inspection request; no generation requested.
+
+PURPOSE AND TARGET
+We are working with CFA Nova on a separate technical capability test called wolf_care_union_control_v001. Confirm the workflow currently targeted by this Agent conversation. Use the dedicated wolf preflight workflow. If the target is observatory-pump-concept-v001, stop and ask me to select the wolf workflow; preserve the pump.
+
+First inspect and report. Do not edit the canvas, run generation, import/download weights, purchase credits, or publish/share a workflow during this check. Keep Ask run permission. If a dependency cannot be inspected, mark it unverified rather than missing.
+
+TEST BRIEF
+An existing woman-and-enormous-wolf clip will be transformed to cool, overcast daylight. Preserve both subjects, positions, scale, physical contact, gestures, and camera motion. Keep skin, fur, and fabric believable. We intend roughly four continuous seconds, but the trim has not yet been selected or reviewed in motion with sound.
+
+The full local source is 1088 x 1920, 193 frames, 24 fps, approximately 8.042 seconds, with an audio track. Do not assume it has been uploaded here. Keep its audio separately. This technical test has no creative connection to our forthcoming Hon Dolo trap-rap video; it is not a character-casting request.
+
+EXACT WORKFLOW TO INSPECT
+LTX-2.5_ICLoRA_Union_Control_Distilled.json from Lightricks/ComfyUI-LTXVideo, commit 3bf3ca62595f1764c47d01c35c8e5dfe47e1a88f.
+Local snapshot: video_ltx2_5_union_control_20261003.editor.json
+SHA-256: cf3553a6bafd8d5398f36cfe06dc580a13dddea9387cc57b4a17c2c14c9a4df0
+Source: https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/3bf3ca62595f1764c47d01c35c8e5dfe47e1a88f/example_workflows/2.5/LTX-2.5_ICLoRA_Union_Control_Distilled.json
+Guide: https://docs.ltx.io/open-source-model/feature-guides/structural-control/union-control
+
+Our companion video_ltx2_5_union_control_20261003.manifest.json records a static inspection, not proof of this account's compatibility. If the open graph is another version, report the difference and identify which graph you inspected. Do not silently replace it with a different video task.
+
+REQUIRED LIVE CHECKS
+1. State what you can inspect directly in this workspace: actual node schemas, model loader options/files, workflow validation, and credit/cost information. Distinguish these observations from public documentation.
+2. Inspect all active node paths and subgraphs, including:
+   LTXICLoRALoaderModelOnly, LTXAddVideoICLoRAGuide, LTXVCropGuides,
+   LoadVideoDepthAnythingModel -> VideoDepthAnythingProcess -> VideoDepthAnythingOutput.
+   Depth package: yuvraj108c/ComfyUI-Video-Depth-Anything.
+   Check the remaining graph classes too. Identify inactive enhancer/API and canny/pose paths separately; report whether they interfere with import/validation before proposing pruning.
+3. Check exact selected model filenames and compatible loader options:
+   - ltx-2.5-22b-distilled-transformer-bf16.safetensors
+   - gemma4-12b-with-proj-ltx-2.5-bf16.safetensors
+   - ltx-2.5-video-vae-bf16.safetensors
+   - ltx-2.5-audio-vae-bf16.safetensors
+   - ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors
+   - ltx-2.3-22b-ic-lora-union-control-ref0.5.safetensors
+   - video_depth_anything_vits.pth
+   - gemma4_e2b_it_bf16.safetensors (optional prompt-enhancement branch).
+   The 2.3-named Union adapter is specifically selected by this official 2.5 graph. Do not generalize compatibility to arbitrary 2.3 weights. If the exact option is unavailable, propose a supported alternative and explain its effect without applying it.
+4. Reconcile saved settings with linked inputs. Our static inspection found:
+   - Empty source video and image; use-image-input is true. A selected starting frame or deliberate graph adaptation is still needed.
+   - Two sampling stages, 8 + 3 sigma intervals, x2 latent refinement. Guide prose differs on refinement step count.
+   - Stage-two sampler is set by the top-level euler control; nested widget literals can disagree.
+   - FPS comes from the source-video path. Frames and dimensions are linked through depth/resize nodes; do not infer them from disconnected widget literals.
+   - Depth defaults: shorter-dimension resize 544; processor input_size 518, max_res 960, fp32; gray output. Guide alignment is linked to adapter downscale factor * 32.
+   - Source audio is disconnected; the saved graph generates new audio.
+5. Identify missing preparation for a bounded preview: source upload and trim, starting frame, model-valid frame count/FPS, resolved generation/refinement/export sizes, inspectable depth output, fixed seed, and a genuine cost estimate if the interface supports one. Leave unresolved values unknown. Do not run preprocessing or generation to obtain this report.
+
+RETURN TO CFA NOVA
+Keep the response concise:
+- Inspected workflow name/version and current Agent target.
+- Table: dependency | exact name | available / missing / unverified | evidence | next action.
+- Confirmed input/configuration gaps and any proposed substitutions or pruning.
+- Cost estimate, its scope and assumptions, or why it cannot yet be obtained.
+- One next action that advances the test.
+
+No generation is requested in this handoff. After this report we can prepare a separately named working copy, inspect the depth sequence, and settle the bounded run. When a later run is actually performed, return the saved workflow/export, exact settings, job ID, output, observed cost, and defects so CFA can preserve the production record.

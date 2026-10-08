@@ -1,0 +1,52 @@
+{
+  "1": {
+    "class_type": "LoadVideo",
+    "inputs": {
+      "file": "a3e2a994509d82c2b5722423ac074b9a1f3064bdc0ba460b9e02d311f0f02e06.mp4"
+    }
+  },
+  "2": {
+    "class_type": "GetVideoComponents",
+    "inputs": {
+      "video": [
+        "1",
+        0
+      ]
+    }
+  },
+  "3": {
+    "class_type": "CannyEdgePreprocessor",
+    "inputs": {
+      "image": [
+        "2",
+        0
+      ],
+      "low_threshold": 92,
+      "high_threshold": 200,
+      "resolution": 512
+    }
+  },
+  "4": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "3",
+        0
+      ],
+      "fps": 24
+    }
+  },
+  "5": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "4",
+        0
+      ],
+      "filename_prefix": "Hon_Dolo/Gemini_Relight_v002_canny_control",
+      "format": "auto",
+      "codec": "auto",
+      "format.codec": "auto"
+    }
+  }
+}

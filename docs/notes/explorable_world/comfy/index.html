@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Comfy video workflow selection, source-scene transformation, high-resolution finishing and production procedures."><title>Comfy video workshop</title><style>
+:root { color-scheme: light; font-family: Georgia, 'Times New Roman', serif; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: #24272a; }
+.layout { display: grid; grid-template-columns: 250px minmax(0, 1fr);
+          max-width: 1360px; margin: auto; }
+nav { border-right: 1px solid #ddd; padding: 32px 24px;
+      font: 14px/1.5 Arial, sans-serif; }
+nav .contents { position: sticky; top: 24px; max-height: calc(100vh - 48px);
+                overflow-y: auto; }
+nav strong, nav a { display: block; margin-bottom: 12px; }
+nav .files { border-top: 1px solid #ddd; padding-top: 16px; margin-top: 20px; }
+main { min-width: 0; padding: 38px 52px 80px; font-size: 18px; line-height: 1.65; }
+h1 { margin: 0 0 28px; font-size: clamp(30px, 4vw, 44px); line-height: 1.15; }
+p { margin: 0 0 20px; }
+a { color: #254f65; text-underline-offset: 3px; overflow-wrap: anywhere; }
+nav a { text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid #254f65; outline-offset: 4px; }
+a[id] { display: block; scroll-margin-top: 22px; }
+a[id] + p { font-size: 23px; line-height: 1.3; margin-top: 40px; }
+li { margin-bottom: 11px; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0;
+        font: 14px/1.5 Arial, sans-serif; }
+th, td { padding: 11px 9px; text-align: left; vertical-align: top;
+         border-bottom: 1px solid #ddd; overflow-wrap: anywhere; }
+th { background: #f2f3f4; border-top: 1px solid #bbb; }
+sup { line-height: 0; }
+.footnote { border-top: 1px solid #bbb; margin-top: 28px; padding-top: 20px;
+            font: 14px/1.6 Arial, sans-serif; }
+.footnote hr { display: none; }
+.footnote p { margin-bottom: 0; }
+.skip { position: absolute; left: -10000px; }
+.skip:focus { left: 12px; top: 8px; padding: 10px; background: white; }
+@media (max-width: 920px) {
+  .layout { display: block; }
+  nav { border-right: 0; border-bottom: 1px solid #ddd; padding: 24px; }
+  nav .contents { position: static; max-height: none; }
+  nav a { display: inline-block; margin: 0 15px 10px 0; }
+  main { padding: 30px 24px 60px; font-size: 17px; }
+  table { font-size: 12px; }
+  th, td { padding: 9px 6px; }
+}
+@media print {
+  @page { size: A4; margin: 17mm; }
+  .layout { display: block; }
+  nav, .skip { display: none; }
+  main { padding: 0; font-size: 10pt; line-height: 1.45; }
+  h1 { font-size: 25pt; }
+  a { color: inherit; }
+  a[id] + p { font-size: 13pt; margin-top: 18pt; break-after: avoid; }
+  p { margin-bottom: 10pt; orphans: 3; widows: 3; }
+  li { margin-bottom: 6pt; }
+  table, .footnote { font-size: 8pt; line-height: 1.4; }
+  th, td { padding: 6pt; }
+  tr { break-inside: avoid; }
+}
+</style></head><body><a class="skip" href="#content">Skip to handbook</a><div class="layout"><nav aria-label="Handbook contents"><div class="contents"><strong>Comfy handbook</strong><a href="#video-first">Video: choose the workflow</a>
+<a href="#start">September checkpoint</a>
+<a href="#graph">Read the graph</a>
+<a href="#resources">GitHub and resource reviews</a>
+<a href="#sop-1">1. Connect and discover</a>
+<a href="#sop-2">2. Reuse a community workflow</a>
+<a href="#sop-3">3. First pump image</a>
+<a href="#sop-4">4. Controlled edits</a>
+<a href="#sop-5">5. Static mesh and engine</a>
+<a href="#sop-6">6. Preserve and reproduce</a>
+<a href="#sop-7">7. Cost and recovery</a>
+<a href="#sop-8">8. Simple creative controls</a>
+<a href="#learning">Keep learning</a>
+<a href="#sources">Sources</a><div class="files"><a href="PLAYBOOK.md">Markdown source</a><a href="LESSONS.md">Learning record</a><a href="templates/run_record.json">Run record template</a><a href="pump_concept_prompt.txt">Pump concept prompt</a><a href="../lobby_concept.html">Observatory lobby concept</a></div></div></nav><main id="content"><h1>Comfy video workshop</h1>
+<p><strong>Active direction, October 2, 2026:</strong> create high-resolution, lifelike video in ComfyUI. Ziggy selected <strong>change the look, setting, or characters while keeping the original motion</strong> as the first test. Preserve the Observatory prototype for a later return; it no longer determines which media we produce.</p>
+<p><a id="video-first"></a></p>
+<p><strong>Video first: from supplied content to the right workflow</strong></p>
+<p><strong>Actual production, clarified October 3:</strong> a lifelike trap-rap music video starring <strong>Hon Dolo</strong> (Han Solo with face tattoos and gangster styling), with <strong>Princess Leia, Chewbacca, Darth Vader, Boba Fett, and Jabba the Hutt</strong>. The <a href="casting/casting_brief.txt">casting brief v3</a> assigns Grok styling templates on a placeholder face, following its observed refusal to generate the actor likeness. The <a href="casting/hon_dolo_still_edit.agent_handoff.txt">Comfy still-edit handoff</a> develops the intended likeness from selected references, saves a clean checkpoint, and finishes tattoos/grill before accepting an identity master. The <a href="workflows/README.md">two-reference still workflow</a> has now produced a clean likeness candidate and a Civitai style comparison in Cloud; user acceptance, finishing and video remain pending. The woman-and-wolf experiment below is solely a capability test; it cannot establish rap lip-sync, human character replacement, tattoo consistency, or a finished music video.</p>
+<p>The immediate goal is one convincing transformed shot. Keep its source performance and camera timing recognizable while changing a clearly specified visual element. Photorealism is judged through playback: stable faces, believable surfaces, natural motion, contact and consistent lighting. Resolution is a separate deliverable.</p>
+<p><strong>Working with the built-in Comfy Agent:</strong> direct CFA access is restored through the local Codex app-server connection. The prepared <a href="workflows/wolf_care_union_control_v001.agent_handoff.txt">wolf handoff</a> is an optional fallback, not a required manual upload. If used, explicitly select a separate wolf workflow; Ask gates runs but permits canvas edits, and Agent chat can consume credits. See <a href="https://support.comfy.org/articles/4013072355-comfy-agent">Comfy Agent documentation</a>. The handoff remains unsent.</p>
+<p><strong>Where we left off.</strong> The September work produced a playable Godot chapter and one Comfy pump still. Two video references have recoverable graphs, but no CFA video render, source-scene edit, or lip-sync result is recorded. The preferred <a href="references/wolf_care_v001.intake.md">guardian MP4</a> is present: 1088 x 1920, 193 frames, 24 fps, 8.042 seconds. Its old recipe animates the missing <code>gf_24_a.jpg</code>; the clip itself can independently supply a new video-control experiment. Both recovered examples generated at 544 x 960 before 2x latent refinement. They are reference outputs, not our demonstrated native high-resolution generation.</p>
+<p>This review covered the local Comfy handbook, tutorials, model guides, input/run templates, all saved workflow/reference families, storage/Runpod notes, and Pathfinder's scene, video and tutorial modules. Pathfinder remains an instructional reference, not an automatic workflow executor. The <a href="../pathfinder_handoff/README.md">shared-methods map</a> locates it. Historical transcript URLs/attributions that CFA could not independently verify remain qualified; Pathfinder records Pixaroma episodes 1–4 and Max Novak's 2026 guide. Current primary documentation below was checked October 2; public documentation does not establish account availability.</p>
+<p><strong>Choose by input and intended change.</strong> These are recommended candidates to validate, not loaded or executed workflows.</p>
+<table>
+<thead>
+<tr>
+<th>Your content and desired result</th>
+<th>Workflow to prepare</th>
+<th>What decides acceptance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Existing clip; change look or setting, retain performance and camera timing — <strong>selected first route</strong></td>
+<td>LTX-2.5 Union Control; start with the source clip's depth guide. Official file: <code>LTX-2.5_ICLoRA_Union_Control_Distilled.json</code>.<sup id="fnref3:video-ltx"><a class="footnote-ref" href="#fn:video-ltx">39</a></sup></td>
+<td>Matching gesture, contact, framing and timing; intended appearance change; no distracting identity or texture drift</td>
+</tr>
+<tr>
+<td>Character image plus a driving performance; create a new setting</td>
+<td>Wan Animate 2, a distinct newer model using the driving video directly.<sup id="fnref:video-wan"><a class="footnote-ref" href="#fn:video-wan">40</a></sup></td>
+<td>Character likeness, performance, occlusions and camera behavior</td>
+</tr>
+<tr>
+<td>Replace a character while retaining the existing background</td>
+<td>Evaluate Wan2.2 Animate <strong>Mix</strong> with its reference image, source clip and mask/control preparation.<sup id="fnref:video-wan-mix"><a class="footnote-ref" href="#fn:video-wan-mix">41</a></sup></td>
+<td>Subject/background boundaries and lighting hold through movement</td>
+</tr>
+<tr>
+<td>Change only part of a clip</td>
+<td>LTX-2.5 Inpaint with a mask; Wan2.1 VACE is a separate fallback candidate for masked/control editing.<sup id="fnref4:video-ltx"><a class="footnote-ref" href="#fn:video-ltx">39</a></sup><sup id="fnref:video-vace"><a class="footnote-ref" href="#fn:video-vace">42</a></sup></td>
+<td>Untargeted content remains acceptable; edited region stays coherent</td>
+</tr>
+<tr>
+<td>Only a still image, or genuinely new action</td>
+<td>LTX image-to-video/keyframe generation; this makes new motion, so it cannot prove preservation of a whole source performance</td>
+<td>Action readability, identity and continuity</td>
+</tr>
+<tr>
+<td>Replace dialogue later</td>
+<td>Source video plus a dedicated lip-sync route; LTX Dub-It remains validated on 2.3, not 2.5.<sup id="fnref:video-dubit"><a class="footnote-ref" href="#fn:video-dubit">43</a></sup></td>
+<td>Words, mouth movement, face stability and sound timing</td>
+</tr>
+</tbody>
+</table>
+<p>Structural controls guide generation; they do not lock every pixel or guarantee identity. Depth is the first candidate because the guardian includes a creature and scene geometry, rather than only a human skeleton. If depth also holds unwanted background structure too strongly, move to a masked edit or a task-appropriate pose/reference route. Change the route for that reason rather than repeatedly increasing prompt strength. Character replacement and background replacement should first be tested separately.</p>
+<p>For a change covered by a specific edit adapter, also evaluate <code>LTX-2.5_V2V_ICLoRA_Single_Stage_Distilled.json</code>: it uses source RGB frames as guidance. Match the adapter's actual task; its shipped Instant Shave example is not a general relighting model.<sup id="fnref:video-ltx"><a class="footnote-ref" href="#fn:video-ltx">39</a></sup></p>
+<p><strong>The supporting material, refocused.</strong> The three supplied NKD/ZHO repositories remain useful, with different roles. Their READMEs and the VHS/RTX READMEs were rechecked October 2; earlier version and Cloud-catalog observations elsewhere in this handbook retain their September dates.</p>
+<table>
+<thead>
+<tr>
+<th>Resource already in our material</th>
+<th>Role now</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/Comfy-Org/ComfyUI">Comfy core</a>, <a href="https://github.com/Comfy-Org/workflow_templates">official templates</a>, <a href="https://github.com/comfyanonymous/ComfyUI_examples">maintainer examples</a>, <a href="https://github.com/Lightricks/ComfyUI-LTXVideo">LTX nodes</a></td>
+<td>Baselines, exact node schemas, versioned video recipes and dependency checks</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite">VideoHelperSuite</a></td>
+<td>Video intake, frame/audio handling and saved review exports, when native nodes are insufficient</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Nekodificador/ComfyUI-NKD-Preview-Tools">NKD Preview Tools</a></td>
+<td>Optional timelines, scrubbing, frame extraction and comparison of takes</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Nekodificador/ComfyUI-NKD-VFX-Tools">NKD VFX Tools</a></td>
+<td>Optional lighting, lens, camera and control-map preparation; its still/viewport tools do not establish stable whole-clip processing</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ZHO-ZHO-ZHO/ComfyUI-Workflows-ZHO">ZHO workflow collection</a></td>
+<td>Reference library including video and portrait examples; selectively adapt ideas after checking dependencies</td>
+</tr>
+<tr>
+<td>FLUX.2 Klein, Qwen Image Edit, the executed Z-Image recipe, RealVisXL/Juggernaut references</td>
+<td>Prepare a look or character still when needed. The SDXL preference remains a still-image default</td>
+</tr>
+<tr>
+<td>Civitai, Hugging Face, <a href="https://github.com/civitai/civitai-comfy-nodes">Civitai nodes</a></td>
+<td>Model/source discovery and selected imports. A hosted Civitai node is a separate service route, not required just to load a Cloud model</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Comfy-Org/Nvidia_RTX_Nodes_ComfyUI">NVIDIA RTX nodes</a></td>
+<td>Optional upscale comparison on a compatible RTX host after accepting a take</td>
+</tr>
+<tr>
+<td><a href="https://github.com/rgthree/rgthree-comfy">rgthree</a>, Registry and Manager</td>
+<td>Optional workflow convenience and environment/dependency references</td>
+</tr>
+<tr>
+<td>Hunyuan3D, its <a href="https://github.com/kijai/ComfyUI-Hunyuan3DWrapper">wrapper</a>, meshes, rigs and Godot/cloud gaming</td>
+<td>Park the game work. Use 3D only if a particular shot needs previsualization</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bytedance/LatentSync">LatentSync</a>, its <a href="https://github.com/ShmuelRonen/ComfyUI-LatentSyncWrapper">community wrapper</a>, saved Sync template</td>
+<td>Retain as historically researched dialogue branches; not revalidated or required for this visual test</td>
+</tr>
+</tbody>
+</table>
+<p>The four tutorial reviews still supply useful methods: graph inspection and save/load; fixed comparisons and queue controls; image preparation/LoRAs; video handoff and finishing. Reuse those procedures without repeating the entire curriculum. See <a href="TUTORIAL_02.md">Episode 2</a>, <a href="SAMPLING_AND_CONTROLS.md">sampling/image edits</a>, and <a href="REFERENCE_DRIVEN_WORKFLOWS.md">reference/video methods</a>.</p>
+<p><strong>First experiment: keep the performance, change the atmosphere.</strong> This is the prepared experiment brief; no job is submitted.</p>
+<ol>
+<li>Use the existing preferred guardian clip as the default available source, unless Ziggy selects another shot. Review its full motion and audio first; the previous visual review covered only a still. Select a continuous 4–8-second interval containing a clear gesture, retain its aspect ratio, and record time range, dimensions, frame count, FPS and hash. Split any multi-shot source at cuts before generation.</li>
+<li>Make the first variation only a lighting/look change: the same encounter and composition in cool, overcast daylight, with believable skin, fur and fabric. Retain both subjects, their scale, positions, contact and camera movement. This proposed creative default isolates motion preservation before relocating the scene or replacing a character.</li>
+<li>In the actual Cloud workspace, inspect the current official Union Control graph and its depth preprocessing. Resolve the exact model, encoder, VAEs, adapter and node versions against its model links and compatibility notes. Check source-video input and output handling, including every active subgraph. Save a separate working copy; leave original recovered graphs untouched. Keep 2.3 and 2.5 components separate unless the selected official recipe explicitly establishes compatibility.<sup id="fnref:video-compat"><a class="footnote-ref" href="#fn:video-compat">44</a></sup></li>
+<li>Prepare one modest-resolution take with the template's supported settings and a fixed seed; preserve source timing through documented resampling if the selected adapter requires another FPS. Record entered/effective prompt, resolved dimensions, control settings, estimated cost and exclusions. Keep optional finishing off, except refinement intrinsic to the chosen recipe. Use <a href="#sop-7">SOP 7</a> for the bounded run and status/cost record once access and the experiment budget are established.</li>
+<li>Compare source and candidate at the same timecodes and at normal speed. Check facial/animal anatomy, touch/contact, gesture timing, camera path, background stability, lighting and flicker. A pretty still with changed performance fails this test. Record specific defects before making one targeted revision. Keep source audio as a reference track; audition it and remux only if it fits the changed setting. Do not assume the selected video-control workflow carries it through.</li>
+<li>After a take passes, make an HD review master and then one 4K delivery comparison. Keep both generation and finishing outputs and their recipes. A successful lighting test is followed by setting replacement, then character replacement if wanted; each changes one major constraint.</li>
+</ol>
+<p><strong>Resolution and realism.</strong> Proposed delivery targets are 1920 x 1080 and then 3840 x 2160 for landscape, or 1080 x 1920 and 2160 x 3840 for the guardian portrait. These are export targets, not claims about native model dimensions. A workflow may generate padded/model-aligned dimensions such as 1920 x 1088; choose and record a final crop or letterbox without stretching. Record source, first-stage, refined and exported dimensions separately. Keep the source's intended playback speed; changing an FPS field alone is not motion interpolation.</p>
+<p>LTX's current shelf includes a Tiled Fusion V2V upscale workflow with FullHD/4K/8K options.<sup id="fnref2:video-ltx"><a class="footnote-ref" href="#fn:video-ltx">39</a></sup> That is a finishing candidate, not proof that our account runs it or that it restores true detail. Start with 4K only after the underlying performance works. Inspect skin, fur, hands, eyes, edges and temporal texture at full size. Reject an upscale that invents distracting detail or worsens flicker. HDR and higher frame rates are later, separate choices.</p>
+<p><strong>What the eventual simple controls should show:</strong> source clip and trim, what to preserve, what to change, optional character/look reference, preview quality and delivery size. The assistant selects the appropriate graph and explains that selection before loading it. The present table is a documented selector, not an implemented uploader or automatic router. <a href="#sop-8">SOP 8</a> covers simplifying a graph after it has worked.</p>
+<p><strong>Readiness and storage - October 3:</strong> native Comfy tools now work. The two-reference still edit and Civitai-origin LoRA comparison have executed successfully; see the <a href="workflows/hon_dolo_reference_edit_v001.record.json">run record</a>. LTX/H3 video execution and new authenticated model imports remain untested. Keep model weights and execution in Cloud and necessary media on D:. C: was nearly full and caused intermittent local tool failures.</p>
+<p><strong>Success for this milestone:</strong> a playable source/result pair with the intended visual change and recognizable original motion, an inspected HD master plus optional accepted 4K derivative, measured media properties and actual cost, and retrievable source/input/workflow/output records. Our next practical step is current Cloud workflow/dependency discovery for this specific source-video task.</p>
+<p><strong>Preserved September asset handbook</strong></p>
+<p>The sections below retain the game-asset examples and dated connection history. The video direction above supersedes their earlier game-first priorities. The reusable SOPs still apply; acceptance now means acceptance for the selected media use.</p>
+<p>Comfy helps develop the visual language and selected assets for <strong>Water Before the Crossing</strong>: a small place where restoring water changes what its residents have time to do. The first pump concept image is preserved. The <a href="../../../../games/observatory/README.md">implemented game</a> supplies walking, repair interactions, and consequences using authored geometry; generated meshes remain a later experiment. The <a href="../FIRST_PLAYABLE.md">chapter plan</a> defines the game scope.</p>
+<p>This handbook combines researched procedures with an experiment system. Its recommendations are tailored to the existing Comfy Cloud subscription, the current HP Z210 workstation, and the Observatory's emphasis on curiosity and care. A procedure becomes proven here when its run record contains evidence from this environment.</p>
+<p><strong>Storage rule:</strong> keep model execution and bulk assets in the cloud; use D: for necessary local downloads. Git holds source, recipes, and asset records. The local game uses a small set of accepted derivatives. Follow the <a href="../STORAGE.md">storage policy</a>: the G: archive folder structure is confirmed online, streaming is enabled, and Drive confirms its cache at D:\appdata\Local\Google. Independent retrieval of the pump original remains pending.</p>
+<p><strong>Provider update:</strong> Ziggy saved a Civitai secret in Comfy; an authenticated import still needs validation. Public Civitai metadata research works. The <a href="HUGGING_FACE.md">Hugging Face guide</a> covers additional model sources and token setup. The <a href="CIVITAI.md">Civitai procedure</a> contains checked model candidates and the browser handoff agreement.</p>
+<p><a id="start"></a></p>
+<p><strong>Start here: what is established</strong></p>
+<p><strong>Latest connection checkpoint ? October 3:</strong> fresh browser authorization for the existing comfy-cloud connection succeeded. Live get_server_info and saved pump reads verified access; see the <a href="outputs/comfy_connection_20261003.proof.json">connection proof</a>. The older Story Workshop rejection below is historical. Initial empty CLI results came from the isolated sandbox profile, while the actual Windows profile had an OAuth refresh rejection. Renew in the real profile and verify live calls; a stored login alone is insufficient.</p>
+<p><strong>Completed experiment:</strong> the first pump concept completed through <code>run_template</code> with <code>image_z_image_turbo</code>. Job <code>cb835f1e-3b10-4972-860c-fb83fb0517c0</code> reached terminal completion; its <a href="outputs/pump_concept_v001.png">1024 × 1024 image</a>, <a href="workflows/pump_concept_v001.record.json">run record</a>, and <a href="workflows/README.md">workflow files</a> are preserved. Ziggy accepted it as a starting direction and delegated background prop refinements; it is not an accepted game mesh. The usage report ended before the job, so actual cost is unknown.</p>
+<p>The September 12, 2026 discovery checks returned authenticated OAuth, production version 0.57.0, and 41 tools. A later preflight failed with <code>invalid_grant: refresh token reuse detected</code>; the first browser callback timed out, then a fresh login succeeded and server information responded again without an IDE restart. This toolset has no live balance/status tool; its billing feed did not confirm the current balance. Ziggy's earlier screenshot remains the source for the Pro plan, 21,100 credits, and October 12 end date. These are local observations, recorded in the <a href="LESSONS.md">learning record</a>, separate from the documentation findings below.</p>
+<p>Read <a href="#sop-1">SOP 1</a> when restoring the connection, then <a href="#sop-3">SOP 3</a> for the first image. Use <a href="#sop-2">SOP 2</a> whenever a new GitHub recipe arrives. The <a href="LESSONS.md">learning record</a> preserves corrections and experiment results between sessions. Future assistants should read this handbook and that record before choosing another workflow.</p>
+<p>Our practical division of work is straightforward. Ziggy supplies creative direction and judges whether the place feels inviting and meaningful. The assistant researches dependencies, prepares inputs, operates available tools within the agreed task, inspects outputs, and records evidence. Cloud generation supplies candidate media. The implemented game supplies movement, mechanisms, resident behavior, and consequences. Ordinary background props are delegated to the assistant; reviews with Ziggy focus on the experience.</p>
+<p><strong>When Ziggy's browser is needed:</strong> the assistant prepares the model choice and exact import instructions, then gives a timely <strong>Import needed</strong> interruption for a concrete upcoming experiment. Include the link, destination folder, expected filename, Cloud download size, and purpose. Check existing model availability first; continue independent work while waiting; verify the imported entry and loader before dependent execution. Reuse it afterward. Ziggy explicitly accepts this division of work. Follow the <a href="CIVITAI.md#model-discovery-and-browser-handoff">complete handoff procedure</a>.</p>
+<p>Comfy Cloud provides remote generation and browser access, so its model workloads do not require local model installation. The resulting assets still need to fit the device that renders the game. Cloud GPU specifications do not establish frame rate on the Z210.<sup id="fnref:cloud"><a class="footnote-ref" href="#fn:cloud">1</a></sup></p>
+<p><a id="graph"></a></p>
+<p><strong>Reading the graph</strong></p>
+<p>A workflow connects operations through typed inputs and outputs. In a basic diffusion image graph, the model supplies generation behavior, the text encoder converts the prompt into conditioning, the sampler works on a latent representation, and the VAE decoder produces a visible image. A save node writes the result. Models can package these functions differently.<sup id="fnref:basic"><a class="footnote-ref" href="#fn:basic">2</a></sup></p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Working meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Workflow</td>
+<td>The recipe: operations, connections, and settings</td>
+</tr>
+<tr>
+<td>Model</td>
+<td>Learned parameters used by one or more operations</td>
+</tr>
+<tr>
+<td>Custom node</td>
+<td>An additional operation supplied by a package</td>
+</tr>
+<tr>
+<td>Template</td>
+<td>A starting workflow with an intended task and inputs</td>
+</tr>
+<tr>
+<td>Seed</td>
+<td>A recorded sampling input useful for controlled comparisons</td>
+</tr>
+<tr>
+<td>Steps / sampler</td>
+<td>Settings for the sampling process; follow the chosen model's recipe</td>
+</tr>
+<tr>
+<td>Reference image</td>
+<td>A concrete design constraint supplied to a compatible workflow</td>
+</tr>
+<tr>
+<td>MCP</td>
+<td>The connection through which this assistant can discover and invoke Comfy operations</td>
+</tr>
+</tbody>
+</table>
+<p>These distinctions prevent a common detour: a workflow collection is useful even when some dependencies are unavailable, while a preview extension cannot supply a missing generation model. More nodes are useful when they solve a specific production problem.</p>
+<p><strong>Tutorial 2 applied.</strong> Ziggy supplied a nodes/workflows transcript, including an SDXL recipe explicitly named Juggernaut X at 11:41. The <a href="TUTORIAL_02.md">annotated tutorial notes</a> explain the transferable method and walk through our ten-node executed pump graph. The transcript identifies the model name, not its exact version ID or weights.</p>
+<p>Read actual socket types: a standard KSampler accepts MODEL, CONDITIONING and LATENT inputs, plus settings. The latent representation is not the only kind of data entering it. Positive and negative prompt encoders can be the same node class; their destinations give them their roles. VAE decoding reconstructs pixels from a learned representation and should not be described as lossless file decompression.<sup id="fnref:ksampler"><a class="footnote-ref" href="#fn:ksampler">33</a></sup><sup id="fnref:core-nodes"><a class="footnote-ref" href="#fn:core-nodes">34</a></sup></p>
+<p>Save Image writes in the execution environment, so a Cloud save does not automatically create a D: archive. Branch an IMAGE output when both saving and further processing are needed. Current upstream SaveImage also exposes IMAGE passthrough; the deployed Cloud schema must establish whether that socket is available. The tutorial's older no-output layout is not a universal rule.<sup id="fnref2:core-nodes"><a class="footnote-ref" href="#fn:core-nodes">34</a></sup></p>
+<p><strong>Why GitHub also says “workflow.”</strong> In GitHub Actions, a workflow automates repository work such as publishing software. The NKD VFX Actions page lists 11 runs of one publishing workflow. Those entries are publication history. A ComfyUI workflow is the graph used to create or process media.<sup id="fnref:vfx-actions"><a class="footnote-ref" href="#fn:vfx-actions">30</a></sup></p>
+<table>
+<thead>
+<tr>
+<th>Where it appears</th>
+<th>What to inspect</th>
+<th>What it tells us</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GitHub Actions, such as publish.yml</td>
+<td>Automation definition and run history</td>
+<td>How the developer publishes or checks the package</td>
+</tr>
+<tr>
+<td>A Comfy recipe, usually a JSON graph or an image with graph metadata</td>
+<td>Nodes, links, model/input dependencies, parameters</td>
+<td>How a media-generation task is assembled</td>
+</tr>
+<tr>
+<td>A package README and node documentation</td>
+<td>Capabilities, schemas, requirements, examples</td>
+<td>Which operations could help build a recipe</td>
+</tr>
+</tbody>
+</table>
+<p>A public repository link is normally enough to follow its readable files and related sources. Individual run logs, private resources, and some GitHub views may be inaccessible from the research tools. A screenshot or excerpt is useful when a specific page cannot be retrieved; copying every link is unnecessary. This review read the VFX Actions index directly, but retrieval of its individual run/workflow view failed. The supplied screenshot shows the publishing definition; detailed execution logs were not inspected.</p>
+<p><a id="resources"></a></p>
+<p><strong>The resource shelf</strong></p>
+<p>For third-party models, Ziggy's preference is to shortlist by highest rated and/or most downloaded. New still-image model searches default to SDXL 1.0 and SafeTensor files; preserve the executed Z-Image recipe as a baseline. Compare rankings within the relevant task and compatible model family, then inspect versions and examples. The <a href="CIVITAI.md">Civitai procedure</a> explains the filters, setup, and validation steps.</p>
+<p>The following is an adoption order, not an installation list. Availability must be checked in the actual Cloud workspace. Sources were reviewed September 12, 2026; branch links remain mutable unless an immutable revision is recorded in an experiment.</p>
+<p>Use official guides to understand a recipe, the live Cloud schema to establish available inputs, and the official core source to investigate implementation. Match upstream code to the deployed core version when that version is known. The observed MCP server version identifies the connector; it does not establish the ComfyUI core or frontend version. The core README describes those components' separate release paths.<sup id="fnref:core"><a class="footnote-ref" href="#fn:core">3</a></sup></p>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Why it belongs here</th>
+<th>Current decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ComfyUI official core repository</td>
+<td>Upstream node implementations, graph execution, server code, and API examples.<sup id="fnref2:core"><a class="footnote-ref" href="#fn:core">3</a></sup></td>
+<td>Primary implementation reference when documentation needs clarification</td>
+</tr>
+<tr>
+<td>Civitai and its official Comfy node package</td>
+<td>Additional resources for asset experiments; see the <a href="CIVITAI.md">Civitai procedure</a></td>
+<td>Public metadata discovery verified; provider key saved in Comfy; first authenticated import pending; civitai node search returned no matches</td>
+</tr>
+<tr>
+<td>Comfy's official workflow templates</td>
+<td>Searchable starting recipes and reusable subgraphs.<sup id="fnref:templates"><a class="footnote-ref" href="#fn:templates">4</a></sup></td>
+<td>First place to select a supported baseline</td>
+</tr>
+<tr>
+<td>ComfyUI examples</td>
+<td>Maintainer examples for learning image graphs and their variations.<sup id="fnref:examples"><a class="footnote-ref" href="#fn:examples">5</a></sup></td>
+<td>Study when a graph needs explanation</td>
+</tr>
+<tr>
+<td>Z-Image-Turbo official guide</td>
+<td>Provides a Cloud image workflow in the model family visible in Ziggy's screenshot.<sup id="fnref2:zimage"><a class="footnote-ref" href="#fn:zimage">6</a></sup></td>
+<td>First pump-image candidate</td>
+</tr>
+<tr>
+<td>Qwen-Image-Edit-2511 official guide</td>
+<td>Describes editing and material/design changes from image inputs.<sup id="fnref2:qwen"><a class="footnote-ref" href="#fn:qwen">7</a></sup></td>
+<td>Candidate after accepting a reference</td>
+</tr>
+<tr>
+<td>Hunyuan3D 3.0 official partner guide</td>
+<td>Describes image/text-to-mesh and related texture/topology workflows.<sup id="fnref2:hunyuan"><a class="footnote-ref" href="#fn:hunyuan">8</a></sup></td>
+<td>Candidate for the later static housing</td>
+</tr>
+<tr>
+<td>NKD Preview Tools</td>
+<td>Image and media review utilities.<sup id="fnref2:nkd"><a class="footnote-ref" href="#fn:nkd">9</a></sup></td>
+<td>Optional; not found in our exposed Cloud catalog on September 12</td>
+</tr>
+<tr>
+<td>NKD VFX Tools</td>
+<td>Lighting, camera, perspective, and 3D placement controls.<sup id="fnref2:vfx"><a class="footnote-ref" href="#fn:vfx">31</a></sup></td>
+<td>Optional; not found in our exposed Cloud catalog on September 12</td>
+</tr>
+<tr>
+<td>ZHO workflow collection</td>
+<td>Community examples spanning editing, generation, and 3D.<sup id="fnref2:zho"><a class="footnote-ref" href="#fn:zho">14</a></sup></td>
+<td>Study and selectively adapt</td>
+</tr>
+<tr>
+<td>Registry and ComfyUI-Manager</td>
+<td>Package identification/version information and tools for managed installations.<sup id="fnref:registry"><a class="footnote-ref" href="#fn:registry">16</a></sup><sup id="fnref:manager"><a class="footnote-ref" href="#fn:manager">17</a></sup></td>
+<td>Dependency references; no local installation needed</td>
+</tr>
+<tr>
+<td>VideoHelperSuite</td>
+<td>Video loading, sequence assembly, and preview utilities.<sup id="fnref:vhs"><a class="footnote-ref" href="#fn:vhs">18</a></sup></td>
+<td>Promoted to video support for the October pivot; verify the chosen runtime</td>
+</tr>
+<tr>
+<td>Hunyuan3DWrapper</td>
+<td>A separate custom-node route around Hunyuan3D-2, with additional environment dependencies.<sup id="fnref:wrapper"><a class="footnote-ref" href="#fn:wrapper">19</a></sup></td>
+<td>Defer; distinguish it from the 3.0 partner route</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NKD Preview Tools: review of the first submitted link.</strong> The pack documents floating image previews, references, video/audio timelines, video viewing, and frame extraction. Mask Painter has moved into the author's separate Basic Tools pack. Its software license is MIT. It provides no documented mesh inspection or 3D generation node.<sup id="fnref:nkd"><a class="footnote-ref" href="#fn:nkd">9</a></sup></p>
+<p>For this project, its strongest potential use is comparing pump silhouettes and material changes. That is an adoption hypothesis. There is also a concrete documentation discrepancy: the popup guide describes an image output, while the inspected node source defines no output sockets. The target environment's actual schema must determine wiring; these mutable pages may reflect different versions.<sup id="fnref:nkd-popup"><a class="footnote-ref" href="#fn:nkd-popup">10</a></sup><sup id="fnref:nkd-source"><a class="footnote-ref" href="#fn:nkd-source">11</a></sup></p>
+<p>The package metadata observed during review says version 3.10.5. That is neither an installed version nor a tested compatibility result. One open issue reports a crash with video input; it is an unverified report, not a reproduced defect here.<sup id="fnref:nkd-package"><a class="footnote-ref" href="#fn:nkd-package">12</a></sup><sup id="fnref:nkd-issue"><a class="footnote-ref" href="#fn:nkd-issue">13</a></sup> Native previews and saved images are sufficient for the first comparison.</p>
+<p><strong>ZHO workflows: review of the second submitted link.</strong> This is a broad collection of recipes. Its README's newest dated changelog entry is December 20, 2024; that observation does not prove when every repository file last changed. The repository identifies GPL-3.0 as its license. The Sketch to 3D example lists a sketch tool, background removal, and TripoSR dependencies. The sequence is useful to study, but those dependencies need separate Cloud checks.<sup id="fnref:zho"><a class="footnote-ref" href="#fn:zho">14</a></sup></p>
+<p>Inspection of the FLUX.1 DEV JSON shows explicit model filenames and a grouped workflow node. A successful download therefore does not establish that this graph will execute in the current environment.<sup id="fnref:zho-flux"><a class="footnote-ref" href="#fn:zho-flux">15</a></sup> Our first adoption should preserve a useful idea, such as isolating an object before reconstruction, in a currently supported recipe. Record the source and changed dependencies; do not label an adaptation as the original author's tested setup.</p>
+<p><strong>NKD VFX Tools: the additional repository.</strong> This is a separate package from Preview Tools. Its README describes lighting, lens, perspective, and 3D placement operations and says example workflows are still being prepared.<sup id="fnref:vfx"><a class="footnote-ref" href="#fn:vfx">31</a></sup> Preview 3D accepts GLB/GLTF and other supported 3D inputs, with image, mask, depth, and camera-related outputs.<sup id="fnref:vfx-3d"><a class="footnote-ref" href="#fn:vfx-3d">32</a></sup> A possible later use is placing an accepted pump mesh into a courtyard reference to guide composition. That would be a shot-design experiment; engine behavior and performance still require their own tests.</p>
+<p>The latest run listed on the inspected Actions index is version 1.7.4 at commit f9e8cdad8941fde6356b33edc4c15bca9f407eb1.<sup id="fnref2:vfx-actions"><a class="footnote-ref" href="#fn:vfx-actions">30</a></sup> This identifies that publishing run, not an installed package in our Cloud account. Check the actual node inventory before adopting this route.</p>
+<p>Comfy Cloud currently supplies a maintained set of preinstalled custom nodes and does not support directly installing arbitrary packages. The Nodes sidebar is the place to check. A listing on another service that calls itself “ComfyUI Cloud” is not evidence of availability on cloud.comfy.org.<sup id="fnref:cloud-nodes"><a class="footnote-ref" href="#fn:cloud-nodes">20</a></sup></p>
+<p><a id="sop-1"></a></p>
+<p><strong>SOP 1 — Establish the working connection</strong></p>
+<p>Use this when beginning a production session or recovering an absent connection. The output is a short evidence entry stating which account and operations are available.</p>
+<ol>
+<li>Read the <a href="README.md">connection README</a> and latest learning record. Reuse the configured connection. The recorded successful OAuth setup is not a reason to register a second server.</li>
+<li>Inspect this session's tool inventory. If Comfy is absent, record that limitation and reload the client connection. Continue briefing, research, or workflow inspection while access is being restored. Do not describe documentation examples as executed tool calls.</li>
+<li>Once exposed, use the documented server-information and billing checks. Search templates and inspect the selected template's schema and prompting guide. Use model/node discovery where dependencies need resolving.<sup id="fnref:mcp"><a class="footnote-ref" href="#fn:mcp">21</a></sup></li>
+<li>Record the check time, available template/model identifiers, and any uncertainty. An account screenshot can inform the record, but live results determine the next operational step.</li>
+<li>Hand off to a specific experiment: one image, one input edit, or one mesh. Keep its intended output visible before submitting it.</li>
+</ol>
+<p>The useful evidence states are <strong>researched</strong>, <strong>available in this account</strong>, <strong>executed here</strong>, and <strong>accepted for game use</strong>. Advancing one state does not imply the others. An imported workflow can still fail during execution.<sup id="fnref:execution"><a class="footnote-ref" href="#fn:execution">22</a></sup></p>
+<p>In the observed version 0.57.0 toolset, billing access is through get_billing_activity and get_usage_report; get_billing_status is absent. A successful billing-history call does not establish the current credit balance. Use the actual exposed tools and the account UI for information they do not return.</p>
+<p>If tools are exposed but a call fails with an OAuth refresh rejection, recover authentication before submitting a job. Our September 12 preflight reported <code>invalid_grant: refresh token reuse detected</code>; its cause was not established. Use <code>codex mcp login comfy-cloud</code> to start fresh browser authorization for the existing server. Do not register another server or copy tokens into a workflow. Once login completes, verify a read-only server-information call; if the running IDE connection still rejects authentication, reload its connection and recheck. Record this as a preflight failure, separate from any generation job. A submission timeout is different: reconcile job status before attempting another submission.</p>
+<p><strong>Completion:</strong> actual tools respond and the selected task has supported inputs. If tools remain absent, connection discovery is still pending; the rest of this handbook remains usable for preparation.</p>
+<p><a id="sop-2"></a></p>
+<p><strong>SOP 2 — Inspect, adapt and reuse a community workflow</strong></p>
+<p>Use this before adding a community workflow to the production shelf. The output is an adoption decision with a source, dependency inventory and one controlled experiment. Copy the <a href="templates/workflow_intake.md">workflow intake sheet</a>; use the <a href="TUTORIAL_02.md">tutorial read-through</a> as a worked example. This applies to GitHub recipes and workflows recovered from shared media.</p>
+<ol>
+<li>Identify the object: workflow JSON, custom-node package, model, tutorial, or connector. State which chapter asset or review problem it helps.</li>
+<li>Read the author's README and the relevant workflow/source files. Record the URL, observed date, and revision when obtainable. If a commit cannot be verified, say so rather than inventing a pin.</li>
+<li>List required node classes, model identifiers, input files, and any service calls. Inspect grouped/subgraph dependencies as well as the visible canvas. Mark whether cost comes from Cloud GPU activity, a partner service, or both.</li>
+<li>Name the target environment: managed Comfy Cloud, local installation, or a separately managed Runpod Pod. For Cloud, discover the required nodes and models through its catalog. A Runpod connection alone does not provide a Comfy installation. Preserve the original file before adapting names or connections; follow the selected host's installation procedure.<sup id="fnref2:cloud-nodes"><a class="footnote-ref" href="#fn:cloud-nodes">20</a></sup></li>
+<li>Record repository attribution and the model/asset terms linked by the provider. A repository's software-license label alone does not document the terms of every model or asset used by a workflow. Preserve the applicable source links for later release review.</li>
+<li>Choose <strong>adopt a small test</strong>, <strong>adapt the idea</strong>, <strong>defer</strong>, or <strong>decline</strong>, with a concrete reason. Unknown Cloud availability means “pending discovery.”</li>
+</ol>
+<p><strong>From an adopted idea to an executable working copy:</strong></p>
+<ol>
+<li>Obtain the actual graph, not just its screenshot or attractive output. Open editor JSON through File → Open or drag/drop. A supported original image may carry workflow metadata, but a screenshot, recompressed copy or downloaded clip may not. If only a prompt and model list survive, record a reconstruction rather than claiming the author's exact recipe.<sup id="fnref2:import"><a class="footnote-ref" href="#fn:import">24</a></sup><sup id="fnref:format"><a class="footnote-ref" href="#fn:format">25</a></sup></li>
+<li>Export/preserve the original before editing. Trace loaders, preparation, sampler/processing, decoder and every output branch. Inspect subgraphs and bypassed sections; record external service calls and output destinations. Identify a node by its class and schema, not its user-editable title or socket color.</li>
+<li>Match model family, text encoder, VAE, LoRAs and latent nodes. Use the specific release's dimensions and recommended settings. A filename substitution does not establish compatibility. On Comfy Cloud, check existing resources first; invoke the agreed browser-import handoff only for a genuinely missing supported model. There, a missing custom node requires an available substitute or a different supported recipe; a local Manager installation does not change the Cloud catalog.<sup id="fnref3:cloud-nodes"><a class="footnote-ref" href="#fn:cloud-nodes">20</a></sup></li>
+<li>Prepare one baseline execution within the existing task/budget. Use one queue submission, the smallest supported output batch, and disable automatic queuing for this first comparison. For a simple still-image recipe, that normally means batch size one; preserve required frame/view counts in video or multiview graphs. Use a fixed seed/control and retain the author's other resolved settings where supported. Record any required batch, dependency or setting change as an adaptation rather than an exact reproduction.</li>
+<li>Inspect validation errors before submitting. Fix the named missing input, model or node rather than randomly changing parameters. Use a single informative job and record its ID/output/cost through SOP 7. Unchanged graph branches may be cached; quick completion alone does not prove new sampling.<sup id="fnref:execution-cache"><a class="footnote-ref" href="#fn:execution-cache">35</a></sup></li>
+<li>Preserve the baseline result. Change one relevant factor, rerun within scope, compare and record whether it improved the intended asset. Keep seed, input media, dimensions, model versions and all sampling settings in the run record; a fixed seed alone cannot guarantee identical results across runtimes.<sup id="fnref:determinism"><a class="footnote-ref" href="#fn:determinism">36</a></sup></li>
+<li>Organize the working graph into labeled stages with notes, reroutes and groups, then consider App mode after it is useful. Preserve editor JSON for maintenance and API JSON where execution requires it. Reuse the tested recipe and dependencies for subsequent assets, rather than asking Ziggy to repeat model imports.<sup id="fnref3:import"><a class="footnote-ref" href="#fn:import">24</a></sup><sup id="fnref2:format"><a class="footnote-ref" href="#fn:format">25</a></sup></li>
+</ol>
+<p>Prefer a simple official workflow when it can answer the same experiment question. Add an extension when there is evidence of a specific benefit: a comparison view, a needed input operation, or an output format. Popularity alone does not establish compatibility or asset quality.</p>
+<p><strong>Completion:</strong> another person can explain why this resource belongs in the project and what remains unverified. Record the decision in <a href="LESSONS.md">LESSONS.md</a>. No blanket cloning or local environment changes are required for this evaluation.</p>
+<p><strong>Current visual use:</strong> the proposed <a href="../CHARACTER_SHOWCASE.md">character showcase</a> and Ziggy's Favorite_1 references focus our selection. A cinematic image/video workflow can establish appearance and atmosphere. A playable character additionally needs a usable mesh, materials and any animation; a successful clip does not prove that asset exists.</p>
+<p><strong>Recovered example:</strong> the <a href="references/civitai_142373294.intake.md">Giant Fantasy intake</a> demonstrates this SOP on an actual browser-saved MP4. Its editor graph and 72-node execution graph survived in metadata and are preserved with hashes. Dependencies and disabled branches still need Cloud validation; extracting a recipe is separate from executing it.</p>
+<p><strong>Settings and branch comparisons:</strong> follow the compact <a href="SAMPLING_AND_CONTROLS.md">sampling procedure</a>. Count active output branches as well as submissions and samples, retain required video frames, and record which stages share primitive controls. Hidden widgets remain active; bypass can leave required connections invalid. Export and inspect the resulting graph before a controlled comparison. Disabling automatic submission does not establish that pending/running jobs were canceled.</p>
+<p><strong>Video previews and prompt rewriting:</strong> the <a href="REFERENCE_DRIVEN_WORKFLOWS.md">reference-driven workflow note</a> adds typed subgraph outputs, matching frame rate/audio, persistent output and metadata checks. Preserve the original save branch until its replacement is verified. Record the effective prompt after any enhancement, especially when dialogue must remain exact; use a supported toggle before attempting a bypass. Preview extensions and upscalers are optional dependencies, selected for a specific need.</p>
+<p><a id="sop-3"></a></p>
+<p><strong>SOP 3 — Produce the first pump concept</strong></p>
+<p>Use the <a href="pump_brief.json">asset brief</a> and <a href="pump_concept_prompt.txt">prepared prompt</a>. The deliverable is one saved reference image plus its workflow and run record. It is an art-direction experiment, before any mesh generation.</p>
+<p>The pump should communicate practical care: an accessible service panel, a replaced fitting, paint preserved where possible, and a stable stone base. Its form should suggest that residents maintain something useful. An ornate monument would serve a different scene purpose. This interpretation comes from the chapter's design, rather than a provider's model recommendation.</p>
+<ol>
+<li>Start with a supported image template. Z-Image-Turbo is the first candidate; its official guide supplies a Cloud workflow. Preserve its model-specific defaults for the first run and inspect the live inputs. Do not transplant sampler settings from an unrelated model tutorial.<sup id="fnref:zimage"><a class="footnote-ref" href="#fn:zimage">6</a></sup></li>
+<li>Duplicate/name the working recipe for the Observatory pump. Replace the demonstration subject with our prepared prompt. Use one isolated object on a plain background, with the whole housing in frame. Leave model and workflow identifiers unknown in the record until actually selected.</li>
+<li>Set one output and record the chosen dimensions, seed, prompt, and resolved settings. A square 1024-pixel image is our starting composition suggestion if supported by that template. Record the actual settings rather than assuming the screenshot's values remain selected.</li>
+<li>Apply <a href="#sop-7">SOP 7's cost check</a>, then submit once through the available interface and retain the returned job identifier immediately. Observe that job through completion. A missing preview or interrupted client connection calls for checking the existing job before another submission.</li>
+<li>Download the result and inspect it at full view and at a small on-screen size. Is the silhouette recognizable? Can the player find the service area? Are fittings coherent? Does the image convey use and maintenance without distracting scenery?</li>
+<li>Mark <strong>keep</strong>, <strong>revise</strong>, or <strong>reject</strong> with one sentence. If revising, identify the main defect and one change to test. Preserve the unsuccessful result when it explains a decision.</li>
+</ol>
+<p>The first run's value is partly operational: can we follow the recipe, retrieve its output, explain its cost, and reconstruct its inputs? A pleasing image without its recipe is an incomplete experiment.</p>
+<p><strong>First observed result:</strong> the downloaded PNG confirms the exact prepared prompt, seed 42, eight steps, CFG 1, <code>res_multistep</code> sampler, <code>simple</code> scheduler, denoise 1, shift 3, and batch size 1. The general prompting guide suggested <code>euler</code>; we retained the selected template's actual <code>res_multistep</code> setting. The lake-green, brass, and stone palette, service panel, and silhouette read clearly. The housing is too pristine and tall/slender for the brief; its repair patch and replaced coupling are not obvious, and the lever socket is ambiguous. Review the concept with Ziggy before selecting a focused revision. No mesh or engine acceptance follows from this image.</p>
+<p><strong>Completion:</strong> one output opens locally, its source/settings are recorded, and a design decision is attached. Image quality is still a judgement to make from the actual result.</p>
+<p><a id="sop-4"></a></p>
+<p><strong>SOP 4 — Refine a design through controlled edits</strong></p>
+<p>Begin with a reference accepted under SOP 3. Preserve it unchanged and link its record into the next experiment.</p>
+<ol>
+<li>State the change in ordinary language: “replace the corroded coupling with a practical brass repair” or “reduce the decorative ridges while retaining the service panel.” Specify the features that should stay recognizable.</li>
+<li>Choose an available editing template. Qwen-Image-Edit-2511 is a candidate because its official guide covers image editing and material/design work.<sup id="fnref:qwen"><a class="footnote-ref" href="#fn:qwen">7</a></sup> Confirm the actual input count and image handling before wiring it.</li>
+<li>Make one substantive change. Keep camera, palette, and proportions stable where the task permits. Record the reference file's hash, prompt, and settings.</li>
+<li>Compare the edit with its parent. Inspect both the requested change and collateral changes: a moved pipe, altered panel, invented text, or changed proportions can matter more than attractive texture.</li>
+<li>Keep the variant only if it serves the chapter. Record its relationship to the parent, then name the next question.</li>
+</ol>
+<p>For different views, seek evidence that they describe the same object. Separately generated front and rear pictures can disagree; a plausible pair of images is not a geometry check. Inspect panel positions, footing, pipe connections, and dimensions before treating views as reconstruction inputs.</p>
+<p>Start with native side-by-side image viewing. NKD becomes useful if it is available and a small test confirms its comparison behavior. A video timeline adds little to a two-image material decision.</p>
+<p>For world appearance, the <a href="REFERENCE_DRIVEN_WORKFLOWS.md#first-use-render-our-world-then-explore-its-appearance">one-view procedure</a> uses an actual Godot render as layout reference and a separate image for style. Compare camera, paths and major forms, then carry the useful material, asset or lighting decision into Godot. Review the base result before optional upscaling. An edited still is visual direction; the changed game scene needs its own viewing and performance check.</p>
+<p><strong>Classic image-to-image:</strong> the <a href="SAMPLING_AND_CONTROLS.md#image-to-image-and-loras">Episode 4 production notes</a> cover <code>Load Image → Resize → VAE Encode → KSampler → VAE Decode → Save Image</code>, with the required model/conditioning and compatible VAE connections. Preserve the prepared input's dimensions, aspect/crop choices and hash. Compare denoise values from that same parent and fixed settings; feeding each output into the next run is a separate sequence of edits. Lower denoise generally preserves more of the starting image, but cannot guarantee unchanged layout.<sup id="fnref:img2img"><a class="footnote-ref" href="#fn:img2img">37</a></sup></p>
+<p><strong>LoRA comparison:</strong> first establish the image-to-image baseline, then compare a compatible adapter off/on while preserving the prompt, seed and denoise. In the standard loader, route its MODEL to the sampler and CLIP to both prompt encoders; record both model and CLIP strengths. Keep any required trigger phrase unchanged between comparison runs. Applying a downloaded LoRA uses learned adjustments; it is not training a new model. Verify the selected loader and family, and use our Cloud import procedure only for a missing supported dependency.<sup id="fnref:lora"><a class="footnote-ref" href="#fn:lora">38</a></sup></p>
+<p><strong>Completion:</strong> the revision has an explicit improvement and an accepted relationship to the reference. A “care state” visual should convey a specific condition, such as a replaced coupling, without implying a character's virtue from weathering alone.</p>
+<p><a id="sop-5"></a></p>
+<p><strong>SOP 5 — Convert one reference into a usable static prop</strong></p>
+<p>Begin after accepting the pump's form. The deliverable is a reviewed static housing and an engine test record, with moving parts and behavior handled in the game project.</p>
+<p>Hunyuan3D 3.0's documented partner workflows include image-based generation, optional multiple views, texturing, UV work, parts decomposition, and topology processing. These are candidate capabilities to discover and price; the guide's existence is not evidence that our output will meet a game's asset needs.<sup id="fnref:hunyuan"><a class="footnote-ref" href="#fn:hunyuan">8</a></sup></p>
+<ol>
+<li>Choose a supported image-to-3D workflow and inspect its output options. Start from the accepted isolated reference. Supply additional views only if their geometry is consistent and the selected workflow supports them.</li>
+<li>Keep this experiment to the exterior housing. Leave the moving lever, collision, water effects, and repair logic as separately authored components. Evaluate whether generated panel and mounting details leave room for them.</li>
+<li>Save the original output before cleanup. Inspect the full object from front, sides, rear, and below. Look for floating pieces, holes, merged fittings, inaccessible openings, inverted surfaces, and a distorted base.</li>
+<li>Record mesh counts, material slots, texture sizes, orientation, scale, and missing components where the inspection tool exposes them. Use measured findings to choose cleanup. Do not use a provider's “game ready” description as an acceptance result.</li>
+<li>Prepare an engine copy. For the planned Godot evaluation, glTF 2.0 / GLB is a suitable interchange target; Godot explicitly recommends glTF and supports binary GLB.<sup id="fnref:godot"><a class="footnote-ref" href="#fn:godot">23</a></sup> Confirm which format the selected generator actually exports.</li>
+<li>Place it beside a simple scale reference in the target scene. Test collision and interaction separately, and measure frame time on the intended PC. The <a href="../FIRST_PLAYABLE.md">chapter plan</a> proposes an initial 720p/30-fps target; no result has established it yet.</li>
+</ol>
+<p>If cleanup costs more effort than a simple authored housing, keep the generated image as reference and build modest geometry from it. That is a valid experiment outcome. The first prop should help establish a repeatable art pipeline while keeping the chapter achievable.</p>
+<p><strong>Completion:</strong> the asset is visibly acceptable from relevant viewpoints, imports with its materials, and has observed performance in the intended scene. A downloadable mesh alone completes the generation stage only.</p>
+<p><a id="sop-6"></a></p>
+<p><strong>SOP 6 — Preserve the work and reproduce an experiment</strong></p>
+<p>Use the <a href="templates/run_record.json">run record template</a>. It is a project record, not an executable Comfy workflow or an enforced spending control. Duplicate it for each actual experiment and replace unknown values with observations when they become available.</p>
+<p>Comfy's Save/Save As keeps work in its account/workspace. Export produces a local file; import supports drag-and-drop or the Comfy icon's File → Open action. Moving a JSON between environments does not supply its missing models or nodes.<sup id="fnref:import"><a class="footnote-ref" href="#fn:import">24</a></sup></p>
+<ol>
+<li>Preserve the editor workflow under workflows/ with a descriptive versioned filename. Where automation uses a different representation, retain its exact execution JSON too. Editor JSON preserves canvas layout; API JSON focuses on executable inputs/connections and omits layout.<sup id="fnref3:format"><a class="footnote-ref" href="#fn:format">25</a></sup></li>
+<li>Record the source revision or retrieval date, template and model identifiers, input files, entered/effective prompts, seed, dimensions, and other resolved parameters. For video, include frame counts, generation/output FPS, audio handling and observed duration. Record upscale derivatives against their parent output. Use <code>inputs.resolved_parameters</code> and <code>outputs</code> in the existing record template. Save hashes for files we possess. Unknown remote revisions should remain explicit unknowns.</li>
+<li>Record the job ID before waiting. On completion, associate every output with that run. Download assets promptly; hosted MCP output URLs expire, and some submitted workflows' outputs may lack embedded workflow metadata.<sup id="fnref2:mcp"><a class="footnote-ref" href="#fn:mcp">21</a></sup></li>
+<li>Keep bulk originals in cloud storage, with a verified persistent archive for accepted results. Download only necessary references and derivatives to outputs/ on D:, separate from edited game assets. Record stable remote identifiers, sizes, hashes, and retrieval evidence; ignore rules and temporary links do not provide backup. Follow the <a href="../STORAGE.md">storage policy</a>.</li>
+<li>Keep credentials and transient signed URLs out of retained records. Preserve the nonsecret execution inputs exactly, with original attribution and source links. Review private input data before sharing; clearly identify any redacted shareable version.</li>
+<li>To reproduce, reopen the saved editor file or use the saved execution recipe with its required dependencies. Check resolved settings before running. Compare the new result and record differences; a fixed seed alone is not a cross-version reproducibility guarantee.</li>
+</ol>
+<p><strong>Observed archive path:</strong> <code>pump_concept_v001.png</code> contained both <code>workflow</code> (editor JSON) and <code>prompt</code> (API JSON) metadata. These were extracted directly into the corresponding files under workflows/, without manual graph conversion, and checked against the intended settings. The embedded editor graph exactly matches apply_slots output. The original template editor graph is retained separately. Inspect each future output for metadata; this result does not guarantee that other PNGs or download paths preserve it.</p>
+<p>The same editor recipe is saved privately in Cloud as <strong>Observatory - Pump Concept v001</strong> (<code>observatory-pump-concept-v001.json</code>), without overwriting another recipe or publishing a shared snapshot. Refresh Cloud's Workflows sidebar to find it. Its saved seed control remains randomize: the recorded job used seed 42, but a controlled UI rerun requires setting 42 again or selecting a fixed seed control.</p>
+<p><strong>Completion:</strong> a future session can locate the recipe, original inputs, outputs, decision, and remaining uncertainty. It should not have to infer a workflow from a screenshot.</p>
+<p><a id="sop-7"></a></p>
+<p><strong>SOP 7 — Observe cost and recover from failures</strong></p>
+<p>Comfy currently documents Cloud GPU usage at 0.266 credits per active GPU second and a conversion of 211 credits per US dollar. Partner Nodes consume the same balance at model/parameter-dependent rates. For scale, 60 active GPU seconds would be about 15.96 credits at that rate; that is not a quote for a particular image or partner job. Recheck pricing when choosing the actual recipe.<sup id="fnref:credits"><a class="footnote-ref" href="#fn:credits">26</a></sup></p>
+<p>The live estimate for image_z_image_turbo returned zero paid-API-node credits while explicitly excluding GPU runtime and other costs. Its total run cost remains unknown. Preserve that distinction when reporting estimates.</p>
+<ol>
+<li>Record the live balance and the intended output count. Capture an estimate if the selected interface supplies one; otherwise label the cost unknown and use the smallest informative calibration task within the agreed scope.</li>
+<li>Begin calibration with one job at a time. Record reported usage as well as before/after balance. Concurrent activity or reporting delay can make a balance difference an unreliable measure of a single job.<sup id="fnref2:credits"><a class="footnote-ref" href="#fn:credits">26</a></sup></li>
+<li>If the client loses contact, look up the existing job. A timeout in our client does not establish that the remote job failed. The documented MCP job operations include status, waiting, output retrieval, and cancellation; use the available schema.<sup id="fnref3:mcp"><a class="footnote-ref" href="#fn:mcp">21</a></sup> If the selected job should be stopped, request its cancellation, then verify its terminal status and observed usage. Cancellation does not establish that no credits were used.</li>
+<li>If execution fails, record the failing node, message, and approximate time. Check missing nodes/models, incompatible inputs, and environment assumptions before changing settings. Separate configuration failures from dissatisfaction with an otherwise successful image.<sup id="fnref2:execution"><a class="footnote-ref" href="#fn:execution">22</a></sup></li>
+<li>Inspect usage before retrying. Failed or partially executed generations can still consume credits.<sup id="fnref:charges"><a class="footnote-ref" href="#fn:charges">27</a></sup> Make a concrete repair to the recipe or mark the failure unresolved. Avoid automatic repetition of an unchanged failure.</li>
+<li>Record the decision and any remaining partial outputs. A project spending target is an operating agreement; do not describe it as a server-enforced ceiling unless the actual interface provides that guarantee.</li>
+</ol>
+<p>The subscription month gives us a practical review point. Monthly credits do not roll over, while purchased top-ups have a different expiry policy.<sup id="fnref:expiry"><a class="footnote-ref" href="#fn:expiry">28</a></sup> Preserve accepted assets and recipes as we work, and use remaining time to finish useful experiments rather than enlarging the asset list merely to consume credits.</p>
+<p><strong>Completion:</strong> the result or failure has a cost observation and an evidence-based next action. A run record can be complete even when a candidate is rejected.</p>
+<p><a id="sop-8"></a></p>
+<p><strong>SOP 8 — Make a proven workflow comfortable to use</strong></p>
+<p>Once a recipe produces repeatable useful results, evaluate Comfy's App mode. Its builder lets a workflow expose selected inputs and outputs through a simpler interface. The documented sequence is choose inputs, choose outputs, preview, and set the default view.<sup id="fnref:app"><a class="footnote-ref" href="#fn:app">29</a></sup></p>
+<p>For our pump recipe, expose the subject description and any supported reference/material controls that have proved useful. Keep technical settings at the tested defaults unless changing them serves an experiment. Show the image output and preserve the underlying graph for maintenance.</p>
+<p>Save the workflow, reopen it, and check that the simplified controls resolve to the expected graph values before running a small verification. Saving an App view is a usability milestone. It does not add game behavior or prove that the generation result belongs in the chapter.</p>
+<p><strong>Completion:</strong> Ziggy can find the relevant creative controls and recognize the result, while the full recipe remains recoverable. App mode is documented capability; no Observatory App has been created or tested yet.</p>
+<p><a id="learning"></a></p>
+<p><strong>How the project accumulates expertise</strong></p>
+<p>The useful learning loop is <strong>a question → a small experiment → an observed result → a changed procedure</strong>. Research supplies candidates. A run supplies evidence. The handbook retains the procedure, and the learning record retains why it changed. This is how future sessions can build on prior work.</p>
+<p><strong>Learning with Pathfinder.</strong> Ziggy shares resources with PanHandlers Nova as well. Consult its fuller lessons before duplicating general tutorial material here. Our <a href="../pathfinder_handoff/README.md#shared-methods-and-local-independence">shared-methods map</a> identifies the workflow lab, save/load practice and Cloud checklist, with local fallbacks for each. CFA retains the concise operating steps, exact recipes, environment-specific decisions, recovery instructions and evidence needed to continue if Pathfinder is unavailable. Record the source/date and any adaptation; return reusable production findings through the existing handoff. Neither this handbook's build nor the game requires the other checkout.</p>
+<p>Each note should include the claim, evidence status, source/run, consequence for our next action, and what would invalidate it. “This model is good” is too broad. “This isolated pump design imported with two materials; its rear pipe needed rebuilding” provides a reusable lesson once actually observed. That sentence is an example of the intended detail, not a result achieved here.</p>
+<table>
+<thead>
+<tr>
+<th>When</th>
+<th>Update</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A new repository is proposed</td>
+<td>Identify its purpose, dependencies, and adoption decision</td>
+</tr>
+<tr>
+<td>A workflow is discovered</td>
+<td>Record actual availability and schema</td>
+</tr>
+<tr>
+<td>An experiment finishes</td>
+<td>Complete its outputs, usage, and design review</td>
+</tr>
+<tr>
+<td>A failure is resolved</td>
+<td>Preserve the failing condition and the successful correction</td>
+</tr>
+<tr>
+<td>A model/node version changes</td>
+<td>Mark affected recipes for a targeted recheck</td>
+</tr>
+<tr>
+<td>A work session ends</td>
+<td>Leave a short next action and unresolved questions in the learning record</td>
+</tr>
+</tbody>
+</table>
+<p>Our first asset sequence is one image, one deliberate edit, one static mesh, and one engine import/performance check. The game project's first movement-and-interaction scene can proceed independently with placeholder geometry. The <a href="../README.md">project map</a> places the proposed engine project at games/observatory/ relative to the CFA root; accepted media will feed its assets/ directory. Advance according to evidence rather than a promise to use every available model. Video, sound, style training, and additional node packs can earn a place when the first chapter needs them.</p>
+<p>The prototype succeeds when a visitor can understand the water problem, choose how to engage with it, and see the residents' changed circumstances. Generated assets support that experience. They do not replace its design.</p>
+<p><a id="sources"></a></p>
+<p><strong>Sources and review boundaries</strong></p>
+<p>Primary documentation and author repositories were reviewed September 12, 2026. Many pages are continuously maintained and have no fixed publication date. The ZHO date above is its README changelog date; Preview Tools' version is observed package metadata. No immutable commit was verified for Preview Tools or ZHO. The VFX Actions index identifies the specific publishing revision recorded above, but its detailed run logs were not retrieved. The initial source review installed no third-party code and submitted no generation. The subsequent pump-image run validates connection recovery, one native template execution, local output retrieval, and metadata archiving; editing, 3D generation, engine import, and actual cost reporting remain unverified.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:cloud">
+<p>Comfy Org, <a href="https://docs.comfy.org/get_started/cloud">Comfy Cloud overview</a>, continuously maintained; accessed September 12, 2026. Remote generation and browser output handling.&#160;<a class="footnote-backref" href="#fnref:cloud" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:basic">
+<p>Comfy Org, <a href="https://docs.comfy.org/tutorials/basic/text-to-image">Text to Image Workflow</a>, accessed September 12, 2026. Introductory diffusion graph operations; its SD1.5 recipe is not a settings prescription for every model.&#160;<a class="footnote-backref" href="#fnref:basic" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:core">
+<p>Comfy Org, <a href="https://github.com/Comfy-Org/ComfyUI">ComfyUI core repository</a>, master branch/README reviewed September 12, 2026. Core source, API examples, and component release boundaries; consulted as a reference without installation.&#160;<a class="footnote-backref" href="#fnref:core" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:core" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:templates">
+<p>Comfy Org, <a href="https://github.com/Comfy-Org/workflow_templates">workflow_templates</a>, main branch reviewed September 12, 2026. Official template repository. <a href="https://comfy.org/workflows/">Browsable templates</a>.&#160;<a class="footnote-backref" href="#fnref:templates" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:examples">
+<p>comfyanonymous, <a href="https://github.com/comfyanonymous/ComfyUI_examples">ComfyUI_examples</a>, accessed September 12, 2026. <a href="https://comfyanonymous.github.io/ComfyUI_examples/">Readable examples</a>.&#160;<a class="footnote-backref" href="#fnref:examples" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zimage">
+<p>Comfy Org, <a href="https://docs.comfy.org/tutorials/image/z-image/z-image-turbo">Z-Image-Turbo workflow</a>, accessed September 12, 2026. Cloud workflow and model-specific setup; advertised timing is not an account benchmark.&#160;<a class="footnote-backref" href="#fnref:zimage" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:zimage" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:qwen">
+<p>Comfy Org, <a href="https://docs.comfy.org/tutorials/image/qwen/qwen-image-edit-2511">Qwen-Image-Edit-2511</a>, accessed September 12, 2026. Editing and industrial-design/material use cases.&#160;<a class="footnote-backref" href="#fnref:qwen" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:qwen" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:hunyuan">
+<p>Comfy Org, <a href="https://docs.comfy.org/tutorials/partner-nodes/hunyuan3d/hunyuan3d-3-0">Hunyuan3D 3.0 partner workflows</a>, accessed September 12, 2026. Generation, views, textures, and topology options.&#160;<a class="footnote-backref" href="#fnref:hunyuan" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:hunyuan" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nkd">
+<p>Nekodificador, <a href="https://github.com/Nekodificador/ComfyUI-NKD-Preview-Tools">ComfyUI-NKD-Preview-Tools</a>, main branch reviewed September 12, 2026. Node inventory and Mask Painter relocation; <a href="https://github.com/Nekodificador/ComfyUI-NKD-Preview-Tools/blob/main/LICENSE.txt">MIT license</a>.&#160;<a class="footnote-backref" href="#fnref:nkd" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:nkd" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nkd-popup">
+<p>Nekodificador, <a href="https://github.com/Nekodificador/ComfyUI-NKD-Preview-Tools/blob/main/docs/popup-preview.md">Popup Preview documentation</a>, accessed September 12, 2026. Documented preview behavior; compare with actual node schema.&#160;<a class="footnote-backref" href="#fnref:nkd-popup" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nkd-source">
+<p>Nekodificador, <a href="https://github.com/Nekodificador/ComfyUI-NKD-Preview-Tools/blob/main/nodes.py">nodes.py</a>, accessed September 12, 2026. Inspected output definition differs from popup documentation.&#160;<a class="footnote-backref" href="#fnref:nkd-source" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nkd-package">
+<p>Nekodificador, <a href="https://github.com/Nekodificador/ComfyUI-NKD-Preview-Tools/blob/main/pyproject.toml">pyproject.toml</a>, accessed September 12, 2026. Observed version 3.10.5, not an installed version.&#160;<a class="footnote-backref" href="#fnref:nkd-package" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nkd-issue">
+<p>ComfyUI-NKD-Preview-Tools, <a href="https://github.com/Nekodificador/ComfyUI-NKD-Preview-Tools/issues/4">Issue 4</a>, opened August 10, 2026; accessed September 12, 2026. User-reported video crash, not independently reproduced.&#160;<a class="footnote-backref" href="#fnref:nkd-issue" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zho">
+<p>ZHO-ZHO-ZHO, <a href="https://github.com/ZHO-ZHO-ZHO/ComfyUI-Workflows-ZHO">ComfyUI-Workflows-ZHO</a>, reviewed September 12, 2026. README changelog latest dated entry December 20, 2024; workflow dependencies and repository license label.&#160;<a class="footnote-backref" href="#fnref:zho" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:zho" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zho-flux">
+<p>ZHO-ZHO-ZHO, <a href="https://github.com/ZHO-ZHO-ZHO/ComfyUI-Workflows-ZHO/blob/main/FLUX.1%20DEV%201.0%E3%80%90Zho%E3%80%91.json">FLUX.1 DEV 1.0 workflow JSON</a>, main branch inspected September 12, 2026. Explicit model filenames and grouped workflow node.&#160;<a class="footnote-backref" href="#fnref:zho-flux" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:registry">
+<p>Comfy Org, <a href="https://docs.comfy.org/registry/overview">Registry overview</a>, accessed September 12, 2026. Package discovery and version information.&#160;<a class="footnote-backref" href="#fnref:registry" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:manager">
+<p>Comfy Org, <a href="https://github.com/Comfy-Org/ComfyUI-Manager">ComfyUI-Manager</a>, accessed September 12, 2026. Installation/environment-management tooling; separate from Cloud package availability.&#160;<a class="footnote-backref" href="#fnref:manager" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:vhs">
+<p>Kosinkadink, <a href="https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite">ComfyUI-VideoHelperSuite</a>, accessed September 12, 2026. Optional video operations.&#160;<a class="footnote-backref" href="#fnref:vhs" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wrapper">
+<p>kijai, <a href="https://github.com/kijai/ComfyUI-Hunyuan3DWrapper">ComfyUI-Hunyuan3DWrapper</a>, accessed September 12, 2026. Hunyuan3D-2 integration and additional dependencies.&#160;<a class="footnote-backref" href="#fnref:wrapper" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+</li>
+<li id="fn:cloud-nodes">
+<p>Comfy Org, <a href="https://support.comfy.org/articles/6791455062-custom-nodes-on-cloud">Custom nodes on Cloud</a>, accessed September 12, 2026. Preinstalled selection and current installation limits.&#160;<a class="footnote-backref" href="#fnref:cloud-nodes" title="Jump back to footnote 20 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:cloud-nodes" title="Jump back to footnote 20 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:cloud-nodes" title="Jump back to footnote 20 in the text">&#8617;</a></p>
+</li>
+<li id="fn:mcp">
+<p>Comfy Org, <a href="https://docs.comfy.org/agent-tools/mcp">Comfy Cloud MCP</a>, public-beta documentation accessed September 12, 2026. Discovery, schemas, jobs, expiring downloads, and output-metadata limitations. Tool names are documented, not invoked in this review.&#160;<a class="footnote-backref" href="#fnref:mcp" title="Jump back to footnote 21 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:mcp" title="Jump back to footnote 21 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:mcp" title="Jump back to footnote 21 in the text">&#8617;</a></p>
+</li>
+<li id="fn:execution">
+<p>Comfy Org, <a href="https://support.comfy.org/articles/8229866129-workflow-execution-issues">Workflow execution issues</a>, accessed September 12, 2026. Missing dependencies and environment/configuration diagnosis.&#160;<a class="footnote-backref" href="#fnref:execution" title="Jump back to footnote 22 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:execution" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+</li>
+<li id="fn:godot">
+<p>Godot Engine, <a href="https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/available_formats.html">Available 3D formats</a>, stable documentation accessed September 12, 2026. Recommended glTF interchange and GLB support.&#160;<a class="footnote-backref" href="#fnref:godot" title="Jump back to footnote 23 in the text">&#8617;</a></p>
+</li>
+<li id="fn:import">
+<p>Comfy Org, <a href="https://support.comfy.org/articles/2229074405-import-export-workflows">Import &amp; export workflows</a>, accessed September 12, 2026. Save versus export and portability limitations.&#160;<a class="footnote-backref" href="#fnref:import" title="Jump back to footnote 24 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:import" title="Jump back to footnote 24 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:import" title="Jump back to footnote 24 in the text">&#8617;</a></p>
+</li>
+<li id="fn:format">
+<p>Comfy Org, <a href="https://docs.comfy.org/development/api-development/workflow-api-format">Workflow API format</a>, accessed September 12, 2026. Editor and execution representations. Exact menu wording varies between current official pages; use the matching export action in the installed UI.&#160;<a class="footnote-backref" href="#fnref:format" title="Jump back to footnote 25 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:format" title="Jump back to footnote 25 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:format" title="Jump back to footnote 25 in the text">&#8617;</a></p>
+</li>
+<li id="fn:credits">
+<p>Comfy Org, <a href="https://support.comfy.org/articles/5846341390-how-credits-work-in-comfy">How credits work in Comfy</a>, accessed September 12, 2026. Published GPU rate, conversion, shared balance, and reporting delays. Rates require a fresh check for production runs.&#160;<a class="footnote-backref" href="#fnref:credits" title="Jump back to footnote 26 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:credits" title="Jump back to footnote 26 in the text">&#8617;</a></p>
+</li>
+<li id="fn:charges">
+<p>Comfy Org, <a href="https://support.comfy.org/articles/1116676382-unexpected-credit-usage-charges">Unexpected credit usage and charges</a>, accessed September 12, 2026. Partial/failed runs can incur usage.&#160;<a class="footnote-backref" href="#fnref:charges" title="Jump back to footnote 27 in the text">&#8617;</a></p>
+</li>
+<li id="fn:expiry">
+<p>Comfy Org, <a href="https://support.comfy.org/articles/5040699374-credit-expiry-monthly-vs-top-up">Credit expiry: monthly vs top-up</a>, accessed September 12, 2026. Monthly credits do not roll over.&#160;<a class="footnote-backref" href="#fnref:expiry" title="Jump back to footnote 28 in the text">&#8617;</a></p>
+</li>
+<li id="fn:app">
+<p>Comfy Org, <a href="https://docs.comfy.org/interface/app-mode">App mode guide</a>, accessed September 12, 2026. Configurable inputs/outputs, preview, default view, and saving.&#160;<a class="footnote-backref" href="#fnref:app" title="Jump back to footnote 29 in the text">&#8617;</a></p>
+</li>
+<li id="fn:vfx-actions">
+<p>Nekodificador, <a href="https://github.com/Nekodificador/ComfyUI-NKD-VFX-Tools/actions">VFX Tools Actions index</a>, accessed September 12, 2026. Eleven runs of the publishing workflow. Individual run details were supplied as conversation screenshots; direct retrieval of those views failed.&#160;<a class="footnote-backref" href="#fnref:vfx-actions" title="Jump back to footnote 30 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:vfx-actions" title="Jump back to footnote 30 in the text">&#8617;</a></p>
+</li>
+<li id="fn:vfx">
+<p>Nekodificador, <a href="https://github.com/Nekodificador/ComfyUI-NKD-VFX-Tools">ComfyUI-NKD-VFX-Tools</a>, master branch reviewed September 12, 2026. Art-direction operations and example-workflow status.&#160;<a class="footnote-backref" href="#fnref:vfx" title="Jump back to footnote 31 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:vfx" title="Jump back to footnote 31 in the text">&#8617;</a></p>
+</li>
+<li id="fn:vfx-3d">
+<p>Nekodificador, <a href="https://github.com/Nekodificador/ComfyUI-NKD-VFX-Tools/blob/master/docs/preview-3d.md">Preview 3D documentation</a>, accessed September 12, 2026. Supported inputs and preview/control-map outputs; no Cloud compatibility test performed.&#160;<a class="footnote-backref" href="#fnref:vfx-3d" title="Jump back to footnote 32 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ksampler">
+<p>Comfy Org, <a href="https://docs.comfy.org/built-in-nodes/sampling/ksampler">KSampler</a>, accessed September 12, 2026. MODEL, CONDITIONING and LATENT input roles and seeded noise preparation.&#160;<a class="footnote-backref" href="#fnref:ksampler" title="Jump back to footnote 33 in the text">&#8617;</a></p>
+</li>
+<li id="fn:core-nodes">
+<p>Comfy Org, <a href="https://github.com/Comfy-Org/ComfyUI/blob/master/nodes.py">current core nodes.py</a>, master branch reviewed September 12, 2026. Empty latent, VAE and SaveImage implementations; SaveImage currently returns IMAGE. This is not a verified Cloud revision.&#160;<a class="footnote-backref" href="#fnref:core-nodes" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:core-nodes" title="Jump back to footnote 34 in the text">&#8617;</a></p>
+</li>
+<li id="fn:execution-cache">
+<p>Comfy Org, <a href="https://docs.comfy.org/custom-nodes/backend/server_overview">server execution overview</a>, accessed September 12, 2026. Graph execution and caching.&#160;<a class="footnote-backref" href="#fnref:execution-cache" title="Jump back to footnote 35 in the text">&#8617;</a></p>
+</li>
+<li id="fn:determinism">
+<p>Comfy Org, <a href="https://github.com/Comfy-Org/ComfyUI/blob/master/comfy/cli_args.py">CLI arguments</a>, master branch reviewed September 12, 2026. Deterministic mode explicitly does not guarantee determinism in all cases.&#160;<a class="footnote-backref" href="#fnref:determinism" title="Jump back to footnote 36 in the text">&#8617;</a></p>
+</li>
+<li id="fn:img2img">
+<p>Comfy Org, <a href="https://docs.comfy.org/tutorials/basic/image-to-image">Image-to-image workflow</a>, accessed September 12, 2026. Reference input and denoise; the page's SD1.5 example is not our selected SDXL recipe.&#160;<a class="footnote-backref" href="#fnref:img2img" title="Jump back to footnote 37 in the text">&#8617;</a></p>
+</li>
+<li id="fn:lora">
+<p>Comfy Org, <a href="https://docs.comfy.org/tutorials/basic/lora">LoRA workflow</a>, accessed September 12, 2026. MODEL/CLIP application and strengths; see current core implementation for zero-strength bypass behavior.&#160;<a class="footnote-backref" href="#fnref:lora" title="Jump back to footnote 38 in the text">&#8617;</a></p>
+</li>
+<li id="fn:video-ltx">
+<p>Lightricks, <a href="https://github.com/Lightricks/ComfyUI-LTXVideo/blob/master/example_workflows/2.5/README.md">LTX-2.5 workflow shelf</a>, reviewed October 2, 2026. Union Control, inpaint, generation and tiled finishing are separate recipes. Mutable upstream examples; not account tests.&#160;<a class="footnote-backref" href="#fnref:video-ltx" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:video-ltx" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:video-ltx" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:video-ltx" title="Jump back to footnote 39 in the text">&#8617;</a></p>
+</li>
+<li id="fn:video-wan">
+<p>Comfy Org, <a href="https://docs.comfy.org/tutorials/video/wan/wan-animate-2">Wan Animate 2</a>, reviewed October 2, 2026. Reference image plus driving video with a newly generated background and camera controls; not the same model as Wan2.2 Animate.&#160;<a class="footnote-backref" href="#fnref:video-wan" title="Jump back to footnote 40 in the text">&#8617;</a></p>
+</li>
+<li id="fn:video-wan-mix">
+<p>Comfy Org, <a href="https://docs.comfy.org/tutorials/video/wan/wan2-2-animate">Wan2.2 Animate</a>, reviewed October 2, 2026. Mix and Move have different inputs and purposes.&#160;<a class="footnote-backref" href="#fnref:video-wan-mix" title="Jump back to footnote 41 in the text">&#8617;</a></p>
+</li>
+<li id="fn:video-vace">
+<p>Comfy Org, <a href="https://docs.comfy.org/tutorials/video/wan/vace">Wan2.1 VACE</a>, reviewed October 2, 2026. Control video and masked edits; a new fallback reference for this audit, not an existing executed recipe. The page flags ongoing template/documentation changes.&#160;<a class="footnote-backref" href="#fnref:video-vace" title="Jump back to footnote 42 in the text">&#8617;</a></p>
+</li>
+<li id="fn:video-dubit">
+<p>Lightricks, <a href="https://docs.ltx.io/open-source-model/feature-guides/audio/dub-it-beta">Dub-It beta</a>, reviewed October 2, 2026. Validated on LTX-2.3; LTX-2.5 support remains in development.&#160;<a class="footnote-backref" href="#fnref:video-dubit" title="Jump back to footnote 43 in the text">&#8617;</a></p>
+</li>
+<li id="fn:video-compat">
+<p>Lightricks, <a href="https://docs.ltx.io/open-source-model/reference/workflow-asset-compatibility">Workflow &amp; Asset Compatibility</a>, reviewed October 2, 2026. Match exact workflows and adapter cards instead of substituting model generations.&#160;<a class="footnote-backref" href="#fnref:video-compat" title="Jump back to footnote 44 in the text">&#8617;</a></p>
+</li>
+<li id="fn:video-cloud">
+<p>Comfy Org, <a href="https://support.comfy.org/articles/6791455062-custom-nodes-on-cloud">Custom nodes on Cloud</a>, rechecked October 2, 2026. Current managed-node restriction; account inventory not inspected.&#160;<a class="footnote-backref" href="#fnref:video-cloud" title="Jump back to footnote 45 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></main></div></body></html>

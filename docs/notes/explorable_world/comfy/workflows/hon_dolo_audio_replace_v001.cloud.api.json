@@ -1,0 +1,98 @@
+{
+  "1": {
+    "inputs": {
+      "file": "b5249035821d68ba31f8feacad93ac6f3f2c86534ca19ae3067c8f8f7cf03197.mp4",
+      "video-preview": ""
+    },
+    "class_type": "LoadVideo",
+    "_meta": {
+      "title": "01 | Source Gemini video - full 10 seconds"
+    }
+  },
+  "2": {
+    "inputs": {
+      "video": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "GetVideoComponents",
+    "_meta": {
+      "title": "02 | Keep picture and original FPS"
+    }
+  },
+  "3": {
+    "inputs": {
+      "audio": "17f57ae6cc27b389a66519357726beffa1763843ebdcacedc7beb3158df4f875.mp3",
+      "audioUI": "/api/view?filename=17f57ae6cc27b389a66519357726beffa1763843ebdcacedc7beb3158df4f875.mp3&type=input&subfolder=&"
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "03 | Current song - DoLoSoLo remaster"
+    }
+  },
+  "4": {
+    "inputs": {
+      "start_index": 0,
+      "duration": 10,
+      "audio": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "TrimAudioDuration",
+    "_meta": {
+      "title": "04 | Song selection - seconds"
+    }
+  },
+  "5": {
+    "inputs": {
+      "bit_depth": "auto",
+      "color_space": "sRGB",
+      "codec": "none",
+      "images": [
+        "2",
+        0
+      ],
+      "audio": [
+        "4",
+        0
+      ],
+      "fps": [
+        "2",
+        2
+      ]
+    },
+    "class_type": "CreateVideo",
+    "_meta": {
+      "title": "05 | Same frames + replacement song"
+    }
+  },
+  "6": {
+    "inputs": {
+      "audio": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "PreviewAudio",
+    "_meta": {
+      "title": "Listen | Selected song excerpt"
+    }
+  },
+  "7": {
+    "inputs": {
+      "filename_prefix": "video/hon_dolo_audio_replace_v001",
+      "format": "mp4",
+      "format.codec": "auto",
+      "video": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "SaveVideo",
+    "_meta": {
+      "title": "06 | Save soundtrack replacement"
+    }
+  }
+}

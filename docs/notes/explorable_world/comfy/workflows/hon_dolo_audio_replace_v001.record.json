@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "experiment_id": "hon_dolo_audio_replace_v001",
+  "created_at_utc": "2026-10-07T13:15:29.530704+00:00",
+  "question": "Replace all Gemini audio with a portion of the updated song while preserving the existing picture.",
+  "evidence_status": "local_stream_copy_preview_executed_cloud_pending_authentication",
+  "execution_environment": "Local FFmpeg CPU media assembly; no local ComfyUI, AI generation or Cloud job.",
+  "cloud": {
+    "status": "authentication_required",
+    "job_id": null,
+    "saved_workflow_id": null,
+    "validated": false
+  },
+  "baseline": {
+    "path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_c0823c60.mp4",
+    "bytes": 5307098,
+    "sha256": "b5deff1982da0cbbdee24a7dfc253fe6825018549a37ca531c7b3586cdbee525"
+  },
+  "song_source": {
+    "path": "docs/notes/explorable_world/comfy/references/Music/DoLoSoLo_0 (Remastered).mp3",
+    "bytes": 5521459,
+    "sha256": "0d49d0b51df77c60d6fa41f3638cce9b58438c710cbccd706278c2aaaf9cb72e"
+  },
+  "replacement_audio": {
+    "path": "docs/notes/explorable_world/comfy/outputs/hon_dolo_audio_replace_v001_song_000_010.wav",
+    "bytes": 1920220,
+    "sha256": "61afa48cbf43638205b1f738febbfbe4a7f06d7037e2e4ad6a1a37fba0932e1b",
+    "sample_rate": 48000,
+    "channels": 2,
+    "sample_frames": 480000,
+    "duration_seconds": 10.0
+  },
+  "selection": {
+    "source_video_start_seconds": 0,
+    "source_video_end_seconds": 10,
+    "song_start_seconds": 0,
+    "song_end_seconds": 10,
+    "basis": "Opening ten seconds as a technical replacement proof; not a lyric-aligned editorial cut.",
+    "gain_or_time_stretch_applied": false,
+    "original_audio_retained": false
+  },
+  "output": {
+    "path": "docs/notes/explorable_world/comfy/outputs/hon_dolo_audio_replace_v001_local_preview.mp4",
+    "bytes": 5540779,
+    "sha256": "611b25e2f038e225be1fcf086163788c64b430d8aa0c12816e236031a93ce3f7"
+  },
+  "validation": {
+    "full_av_decode_exit_code": 0,
+    "video_frame_count": 240,
+    "fps": 24,
+    "picture_duration_seconds": 10,
+    "source_video_packet_hash": "SHA256=70e46466b7e95fd2ce0728ce8e39a6f50b5391eac8744b62766ba53a37b91f44",
+    "output_video_packet_hash": "SHA256=70e46466b7e95fd2ce0728ce8e39a6f50b5391eac8744b62766ba53a37b91f44",
+    "compressed_video_packets_identical": true,
+    "all_decoded_frame_hashes_and_timestamps_identical": true,
+    "source_files_unchanged": true,
+    "audio_correlation_with_replacement": 0.9999171190938101,
+    "audio_correlation_with_original_gemini": 0.026596009974222717,
+    "audio_comparison_samples": 480000,
+    "audio_comparison_method": "Mono 48 kHz decoded sample correlation at zero lag over common first ten seconds.",
+    "audio_codec": "AAC 320 kbit/s requested; lossy encode of supplied song excerpt",
+    "normal_speed_playback_reviewed": false,
+    "audio_listened": false,
+    "lip_sync_performed": false,
+    "accepted_by_user": false
+  },
+  "commands": {
+    "audio_excerpt": [
+      "D:\\Documents\\CFA\\.cache\\hon_dolo_i2v_20261004\\python_packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+      "-nostdin",
+      "-v",
+      "error",
+      "-n",
+      "-i",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Music\\DoLoSoLo_0 (Remastered).mp3",
+      "-map",
+      "0:a:0",
+      "-vn",
+      "-af",
+      "atrim=start_sample=0:end_sample=480000,asetpts=PTS-STARTPTS",
+      "-c:a",
+      "pcm_s16le",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\outputs\\hon_dolo_audio_replace_v001_song_000_010.wav"
+    ],
+    "replace_soundtrack": [
+      "D:\\Documents\\CFA\\.cache\\hon_dolo_i2v_20261004\\python_packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+      "-nostdin",
+      "-v",
+      "error",
+      "-n",
+      "-i",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_c0823c60.mp4",
+      "-i",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\outputs\\hon_dolo_audio_replace_v001_song_000_010.wav",
+      "-map",
+      "0:v:0",
+      "-map",
+      "1:a:0",
+      "-c:v",
+      "copy",
+      "-c:a",
+      "aac",
+      "-b:a",
+      "320k",
+      "-ar",
+      "48000",
+      "-ac",
+      "2",
+      "-t",
+      "10",
+      "-movflags",
+      "+faststart",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\outputs\\hon_dolo_audio_replace_v001_local_preview.mp4"
+    ]
+  },
+  "relevant_lesson": "../Pan_Handlers/Help/guides/video_handoff.py frames_native; exact prepared audio versus audio reference",
+  "next_step": "Authenticate Comfy, verify native schemas and uploaded inputs, run/save the separate audio replacement graph. Lip-sync is a separate paid candidate requiring its own quote and explicit spend agreement.",
+  "prepared_workflows": {
+    "hon_dolo_audio_replace_v001": {
+      "editor": "docs/notes/explorable_world/comfy/workflows/hon_dolo_audio_replace_v001.editor.json",
+      "sha256": "812ee5795f3a8e25ad2479f2b44c9f3aa0d178c3b12009a4c49ae2bdf94f3d3d",
+      "cloud_validated": false,
+      "executed": false
+    },
+    "hon_dolo_lipsync_v001": {
+      "editor": "docs/notes/explorable_world/comfy/workflows/hon_dolo_lipsync_v001.editor.json",
+      "sha256": "95d29febea4617855c98669999ce0db8f83d65b03e18cc1eda3fb88eb6b0505c",
+      "cloud_validated": false,
+      "executed": false
+    }
+  }
+}

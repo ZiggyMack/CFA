@@ -1,0 +1,1485 @@
+
+welcome to episode eight of our comfy UI
+0:02
+tutorial Series today I want to talk
+0:04
+about flux the new model that is
+0:07
+currently my favorite I'll show you how
+0:09
+to install and use different versions of
+0:11
+it such as the dev and Chanel versions
+0:14
+I'll compare the different models
+0:16
+highlighting which one is better faster
+0:18
+and which settings work best among other
+0:21
+details flux is created by black forest
+FLUX Versions (Pro, Dev, Schnell)
+0:24
+Labs a team of researchers and Engineers
+0:26
+who have developed various models in the
+0:28
+past and previously work worked for
+0:30
+stability AI they have now introduced
+0:32
+the flux version one model family which
+0:35
+performs quite well but requires a good
+0:37
+computer for decent speed it supports
+0:39
+different ratios and resolutions up to 2
+0:41
+megapixels they offer three versions the
+0:44
+pro version which isn't available for
+0:46
+download and the dev and Schnell
+0:48
+versions which we can download and use
+0:51
+on our computers the pro version is only
+0:53
+available through the API the dev
+0:56
+version produced the best quality but
+0:58
+requires more resources while the
+1:00
+Schnell version is the fastest but has
+1:02
+lower quality compared to Dev the dev
+1:06
+license is non-commercial while Schnell
+1:08
+uses the Apache 2.0 license I checked
+1:12
+the dev license on their hugging face
+1:14
+page which includes a license.md file it
+1:17
+states we claim no ownership rights in
+1:20
+and to the outputs you are solely
+1:22
+responsible for the outputs you generate
+1:25
+and their subsequent uses in accordance
+1:27
+with this license you may use output for
+1:29
+any purpose including commercial
+1:31
+purposes however it also notes you may
+1:34
+not use the output to train fine-tune or
+1:37
+distill a model that is competitive with
+1:39
+flux so as I understand it you cannot
+1:41
+use the flux model itself for commercial
+1:43
+purposes but you can use the images
+1:46
+generated with it commercially you also
+1:48
+cannot use those images to train a new
+1:51
+model that competes with flux for the
+1:53
+Schnell model you can use both the model
+1:55
+and its output for commercial work again
+1:58
+this is my interpretation so you should
+2:00
+review the license yourself for complete
+2:02
+Clarity I also asked chat GPT to look
+2:05
+online and explain the license for each
+2:07
+version so you can pause and read this
+2:09
+information if you want I will put all
+2:13
+the links in the description here are
+Installing FLUX Dev and Schnell FP8
+2:15
+some examples from a GitHub page we have
+2:17
+several versions the regular version
+2:19
+which is flux Dev the largest version of
+2:22
+Dev flux Schell the smallest version and
+2:26
+the simpler to use versions which are
+2:28
+floating point8 versions that are
+2:29
+smaller and don't require complicated
+2:32
+workflows both Dev and Schnell have
+2:35
+these smaller versions to make it easier
+2:37
+for you I will show you how to quickly
+2:40
+install each one and you can decide
+2:42
+which is better for you by the end of
+2:44
+the video for the fp8 version download
+2:47
+the models and place them in the
+2:49
+checkpoints folder you can download them
+2:51
+from the links provided but I will also
+2:54
+include additional links from this page
+2:56
+you can download the fp8 version of the
+2:59
+dev model which is 17 GB download it
+3:02
+using the button provided next navigate
+3:05
+to comfy UI then models and place the
+3:09
+files in the checkpoints folder I will
+3:11
+also download the Schnell floating Point
+3:13
+version and place it in the same folder
+3:16
+it has the same size but is the Schnell
+3:19
+version remember schel means fast in
+3:21
+German after the downloads finish which
+3:24
+might take a few minutes depending on
+3:26
+your internet speed I will first show
+3:28
+you some quick workflows for those who
+3:30
+are impatient and then I will explain
+3:33
+how to build that workflow from a simple
+3:35
+sdxl workflow save these images
+3:38
+somewhere on your drive they also
+3:39
+include the
+3:41
+workflow I will do the same for the
+3:43
+Schnell
+3:44
+image next open comfy UI click on
+3:48
+manager and then select update all to
+3:50
+update comfy UI so it adds the new nodes
+3:53
+that recognize flux models after
+3:56
+restarting you should have the latest
+3:57
+version click load and navigate to where
+4:00
+you downloaded the images for both
+4:02
+Schnell and Dev look for the checkpoint
+4:05
+in the name to identify the floating
+4:07
+Point 8 version I will load the Schnell
+4:09
+version which is faster it should show
+4:11
+you the Schnell model if not select it
+4:14
+from the list running the workflow
+4:16
+should give you an image like this now
+4:18
+let's load the dev version workflow and
+4:20
+run it to see what we
+4:23
+get the result is this anime image so
+4:26
+that was the short version I'll show you
+4:28
+later in the video how to install the
+4:30
+larger 16-bit Dev version as well to
+4:33
+recap the short version download the
+4:36
+models place them in the checkpoints
+4:38
+folder download the images load them in
+4:41
+comfy UI and run the workflow it's
+4:43
+pretty simple let's explain it a bit
+4:45
+more now let's load a basic sdx cell you
+4:49
+should have one working by now but you
+4:50
+can also download it from my Discord
+4:52
+server I will show you how the workflow
+4:55
+differs compared to sdxl first we need
+4:58
+to load the model I will start with the
+5:01
+schel floating point8 version another
+5:04
+difference is the empty latent image it
+5:06
+works better if we choose an empty sd3
+5:09
+latent image which we used in another
+5:11
+episode for stable diffusion 3 medium
+5:14
+delete the old one and reconnect the new
+5:16
+one to the latent input I will change
+5:17
+the color to purple so it's easier to
+5:21
+see I'm also changing the color of the
+5:24
+positive prompt to green and the
+5:25
+negative prompt to red as these are the
+5:27
+colors most people commonly use
+5:30
+I'm deleting the negative prompt since
+5:31
+flux doesn't support it then I'll right
+5:34
+click and choose collapse to save space
+5:38
+as you might recall each model has
+5:40
+recommended settings on the examples
+5:42
+page you'll find the settings for the K
+5:45
+sampler the CFG needs to be set to one
+5:48
+because when it is one it ignores the
+5:50
+negative prompt for Schnell being the
+5:53
+fast version it only needs four steps to
+5:55
+run the sampler should be set to Oiler
+5:58
+and the scheduler should be set to
+6:01
+simple let's give it a test to see if it
+6:03
+works and here's the result not bad for
+6:06
+only four steps the first time you try
+6:09
+it it will take longer because the model
+6:11
+needs to load which took about 13
+6:13
+seconds however after that it should be
+6:16
+quicker on my RTX 490 it only takes
+6:19
+three 4 seconds which is great I'll save
+6:22
+the workflows from this video so you can
+6:24
+load them quickly and you can easily
+6:27
+download them from my Discord
+6:29
+now let's load the dev floating Point 8
+6:31
+version this one has the same settings
+6:34
+except that the number of steps should
+6:35
+be higher around 20 30 steps I'll go
+6:38
+with 20 then I'll make some space for a
+6:40
+new node called flux Guidance the
+6:43
+default value is 3.5 and since our CFG
+6:46
+is locked to one we can use this
+6:47
+guidance node to influence the image
+6:50
+it's somewhat similar to CFG but not
+6:52
+quite the same this node doesn't affect
+6:55
+the Schnell version it only works with
+6:57
+the dev version connect the condition in
+6:59
+from the positive prompt and then
+7:01
+connect the conditioning to the positive
+7:03
+input on the K sampler if I run the
+7:07
+workflow you'll see that the first time
+7:09
+it took 24 seconds because we have more
+7:11
+steps now however the second time I ran
+7:15
+it it only took 14 seconds on an older
+7:18
+PC with 6 GB of vram it was still
+7:21
+runnable but took around 6 minutes so
+7:23
+having a newer powerful Nvidia card will
+7:26
+definitely help with the speed I'm also
+7:28
+saving this workflow so you can can
+7:29
+download it now let's test the flux
+7:31
+guidance a little I'll use a prompt for
+7:33
+a painting of a gnome and choose a fixed
+7:36
+seat so we can compare the results
+7:38
+running it with the default value gives
+7:40
+us this result if I change the guidance
+7:43
+to three you can see the difference you
+7:46
+can go lower but at some point it will
+7:48
+start to degrade the image it might
+7:49
+create a nice painting effect but it's
+7:51
+best to experiment to find what looks
+7:53
+best for your prompt the result varies
+7:55
+depending on the prompt but I usually
+7:57
+lower the value for paintings
+7:59
+sometimes higher values can also help
+8:02
+and you can use values between 1 and 100
+8:05
+though values above 20 have less effect
+8:07
+higher values might improve text in some
+8:09
+cases but the default value is usually a
+8:11
+good starting point I'm loading the
+8:13
+schel version workflow again since it's
+Add A1111 Art Styles in Flux
+8:15
+faster someone asked if flux can use
+8:18
+Styles and yes it can but first make
+8:20
+sure to check episode 7 to get the extra
+8:22
+nodes and set up the Styles correctly
+8:25
+I'm adding the multiple style selector
+8:27
+node next I'll convert the clip text
+8:30
+encoder to text input and make some
+8:33
+space for another node I'll add an easy
+8:38
+positive and then a text
+8:41
+concatenate just like in episode s I'll
+8:44
+connect positive to text a and positive
+8:47
+string to text B then I'll connect the
+8:50
+string to text input this way our prompt
+8:53
+along with the prompt from the Styles is
+8:55
+combined in this node before going to
+8:57
+the clip text encoder I'll collapse and
+9:00
+rearrange the nodes to make it clearer
+9:02
+now I can add a prompt and select one of
+9:04
+the Styles such as cartoon cute when I
+9:07
+run the workflow it seems to work just
+9:09
+fine I'm changing the SE to fixed so I
+9:12
+can compare the style
+9:14
+influence first I'll add a prompt like a
+9:16
+gnome in a magical forest then I'll
+9:19
+deactivate the styles by selecting no
+9:21
+style running the workflow gives us this
+9:24
+image if I switch to a new style with
+9:26
+the same seed and prompt such as the
+9:29
+impressionism painting style the results
+9:32
+should be different and we get something
+9:34
+like
+9:35
+this from my tests flux recognizes fewer
+9:39
+art styles compared to
+9:41
+sdxl but it still influences the image
+9:44
+since it uses additional prompts it
+9:47
+might not capture the exact style if
+9:49
+flux doesn't recognize it let's try
+9:52
+another style such as portrait cinematic
+9:54
+from photography the result is a more
+9:56
+photographic look of the gnome finally
+9:59
+let's test a different style like
+10:00
+biomechanical art to see how it
+10:03
+influences the result we get a Sci-Fi
+10:06
+gnome which is pretty interesting I will
+10:09
+create a more compact version to make it
+10:11
+easier for beginners to use you'll be
+10:13
+able to just download and use it first
+10:17
+select all the nodes except the save
+10:19
+image node then rightclick and choose
+10:21
+convert to group node give it a name and
+10:25
+now we have a simplified interface I'll
+10:27
+hide the negative prompt from the
+10:29
+interface face since it's not used in
+10:31
+flux you can try adding phrases like no
+10:34
+signature or no watermark to the
+10:36
+positive prompt sometimes these can work
+10:39
+you can add from one to four Styles here
+10:41
+with the first one being the most
+10:43
+important so the order does matter from
+10:45
+the width and height settings you can
+10:46
+adjust the size since we use the sd3
+10:49
+empty latent image it handles multiples
+10:52
+of 16 making it more compatible I'll
+10:55
+make some more changes and adjustments
+10:57
+and you'll be able to download a version
+10:58
+that looks something like this I want to
+Comparing Dev vs. Schnell FP8
+11:01
+test both the Schnell and Dev floating
+11:03
+point8 versions so I have the Schnell
+11:06
+workflow on top and the dev workflow on
+11:09
+the bottom I want both workflows to use
+11:11
+the same prompt so I'll convert the
+11:13
+positive prompt in both to text input
+11:16
+instead you can add a primitive node and
+11:19
+connect it to both workflows with the
+11:21
+text encoder alternatively if you have
+11:24
+the nodes from episode 7 The Comfy easy
+11:27
+use node already includes the positive
+11:30
+prompt in green and ready to use I'll
+11:33
+add a prompt here and start with a fixed
+11:36
+prompt for both workflows I might change
+11:39
+it to increment so I can test with
+11:42
+another seed while keeping the same seed
+11:44
+for both workflows I'll create a more
+11:47
+compact version leaving only the
+11:49
+generations and the prompt visible on
+11:51
+the screen the first one will be the
+11:53
+Schnell version and the second will be
+11:55
+the dev
+11:57
+version if I test the prompt green
+11:59
+sphere on a blue cube with a black
+12:01
+background in 3D render style both
+12:04
+versions seem to understand it however
+12:06
+for some of the seeds I ended up with a
+12:08
+blurred image as seen in this case I'll
+12:10
+show you how to fix this by changing to
+12:14
+a different sampler and scheduler toward
+12:16
+the end of the video I recorded this
+12:18
+video over a few days because each day
+12:21
+new information versions and
+12:23
+improvements emerged online I've tried
+12:26
+to include as many updates as possible
+12:28
+in this video for a portrait of a woman
+12:30
+I got nice results the dev version seems
+12:33
+to be a bit more realistic but if you
+12:35
+want even more realism there is now a
+12:36
+realistic Laura available for flux for a
+12:39
+portrait of a Viking in the rain at
+12:41
+Golden hour the dev version produced a
+12:43
+more realistic look and successfully
+12:45
+captured the rain which the Schnell
+12:47
+version did not for a witch holding a
+12:50
+sign with text the dev version nearly
+12:52
+got it right on the first try on the
+12:54
+second try both models produ the correct
+12:56
+result while it's not perfect it's the
+12:59
+best offline model I've tried so far for
+13:01
+a cartoon warrior cat Knight the dev
+13:04
+version handles the swords and shield
+13:06
+better I also noticed that the dev
+13:08
+version generally has fewer mistakes
+13:10
+with hands and details compared to the
+13:11
+Schnell version for a penguin eating ice
+13:14
+cream with a polar bear in the
+13:15
+background the dev version did a better
+13:17
+job once again the Schnell version
+13:20
+failed to render the ice cream for the
+13:22
+prompt with a fox and a bunny the dev
+13:24
+version has more details in the
+13:26
+image I then wanted a portrait of a
+13:29
+crocodile with a wanted poster on the
+13:31
+wall I decided to add $1,000 reward to
+13:34
+the poster and wanted the crocodile to
+13:36
+actually be featured on it if you're
+13:38
+clear with your prompt you can get quite
+13:40
+good results once again the dev version
+13:42
+seems to be a bit better at
+13:45
+this I also tried a simple prompt like
+13:48
+stairs to heaven in concept art and the
+13:50
+Styles appeared a bit different then I
+13:52
+got hungry and tested a photo of a
+13:54
+hamburger which resulted in a quite
+13:56
+delicious image next I wanted a small
+13:58
+flag that says free and wondered what if
+14:01
+the flag was white like a surrender flag
+14:04
+the model was able to incorporate all
+14:06
+these elements demonstrating quite good
+14:09
+prompt understanding I wanted to do some
+14:11
+Vector style design as well and again
+14:13
+the dev version tended to blur the image
+14:16
+for certain seeds check later in the
+14:18
+video to see how I fix that issue
+14:20
+however you can create some nice Vector
+14:22
+designs with flux for the dev version I
+14:25
+got a Charming cute
+14:26
+cat it's also quite good for Lo go from
+14:29
+simple to more complex designs you can
+14:31
+experiment with Styles and gradients to
+14:33
+come up with some great logo ideas you
+14:35
+can also create some great photos for
+14:37
+your presentations like cool mockups as
+14:40
+you can see the dev version still tends
+14:43
+to produce better results if your video
+14:46
+card can handle it and you're willing to
+14:47
+wait a bit longer for Generations it's
+14:50
+definitely worth it for the oil painting
+14:53
+of a king on a throne both versions
+14:55
+produce some nice results but I still
+14:58
+think the dev version is a bit better
+15:01
+who would have imagined that you could
+15:02
+get a digital painting of something so
+15:04
+complex in just a few seconds on your
+15:06
+computer it's also quite good with hands
+15:09
+so far the hands are better than on any
+15:11
+other model I've
+15:12
+tested so remember I mentioned I'd show
+Fixing Blurred Images
+15:16
+you a fix for blurred images the issue
+15:19
+is with the dev model if I use a
+15:21
+specific seed I get a sharp clear image
+15:24
+however testing subsequent seeds often
+15:26
+results in Blurred images which can be
+15:29
+quite frustrating what fixed it for me
+15:31
+was changing the sampler to DPM plus
+15:33
+plus 2m and the Schuler to sgm uniform
+15:38
+testing the same seed now yields a sharp
+15:40
+image I also tested the previous seeds
+15:42
+and they work just fine I'll probably
+15:44
+update the workflows on my Discord to
+15:46
+include these settings so you don't end
+15:47
+up with blurred
+15:49
+images so we've tested the floating
+Installing FLUX Dev Full
+15:52
+Point versions of both Dev and Schnell
+15:55
+now for those with top-of-the-line video
+15:58
+cards and plenty of system Ram who want
+16:00
+to try what is considered the best
+16:02
+version here's how to set it up the
+16:05
+regular version works a bit differently
+16:07
+you'll need some additional clip models
+16:08
+to place into the clip folder first go
+16:11
+to this link and download these two
+16:14
+models navigate to your models folder
+16:17
+then the clip folder and save the files
+16:19
+there next get the second model which is
+16:22
+the larger one if you don't have enough
+16:24
+RAM you can use the version with
+16:26
+floating Point 8 in in the name and
+16:28
+place it in the same folder however the
+16:31
+floating Point 16 version is recommended
+16:33
+if you have more than 32 GB of system
+16:37
+Ram you'll also need the vae file which
+16:41
+you can find here under the name AE safe
+16:44
+tensor download it and place it in your
+16:45
+models folder specifically in the vae
+16:48
+folder for the actual flux model this
+16:51
+time you need to place it in the unet
+16:53
+folder download this large model which
+16:55
+is 23 GB and we'll take some time to
+17:00
+download save it in the models folder
+17:03
+then into the unit folder finally you
+17:06
+need one more thing save the image that
+17:08
+includes the workflow load that
+17:11
+workflow how it
+17:13
+looks so this workflow is a bit
+17:16
+different from what we're used to I'll
+17:17
+give it a test you can find more
+17:19
+information about where to place the
+17:21
+models on this note the result is this
+17:24
+anime
+17:26
+image in the tips you also have the
+17:28
+option to uh change the D type which
+17:31
+might speed things up depending on your
+17:33
+setup for me the default option was
+17:35
+faster but you can change it from here
+17:37
+this setup includes a node uh that loads
+17:40
+both clip models we downloaded and the
+17:43
+vae is separate compared to the floating
+17:46
+point8 version we started with where the
+17:48
+model included all the clips and vae
+17:52
+making it simpler to use this version is
+17:54
+a bit more complex we still have the
+17:56
+flux guidance but there's an additional
+17:59
+basic guider and a custom Advanced
+18:01
+sampler instead of the K sampler it also
+18:04
+uses an empty latent image with width
+18:06
+and height adjustments on the side this
+18:09
+setup seems more complex with automatic
+18:11
+adjustments based on resolution which
+18:13
+can be confusing I always try to
+18:15
+simplify workflows but others seem to
+18:17
+make them more complex it would be nice
+18:19
+to have a single node that handles all
+18:22
+these steps the first time I ran it it
+18:24
+took over 35 seconds to generate but the
+18:27
+second generation was completed in just
+18:29
+18
+18:30
+seconds now let's test both the regular
+Comparing Dev Full vs. Dev FP8
+18:32
+Dev version the large one and compare it
+18:35
+with the floating point8 version which
+18:37
+is a bit smaller I'll convert the
+18:39
+positive prompt text encoder to a text
+18:42
+input so I can use an easy positive node
+18:45
+allowing me to place the prompt in one
+18:46
+location the seed will be fixed I'll
+18:49
+arrange the setup so you can see both
+18:50
+generations and the prompt I'll place
+18:53
+the regular version on the left and the
+18:55
+smaller floating Point 8 version on the
+18:57
+right for the first try we see less
+19:00
+detail in the eye with the floating
+19:02
+point8 version for The Gnome the results
+19:06
+are quite similar but the regular
+19:07
+version has more detail like the moon
+19:10
+having more details for the pixaroma
+19:13
+book both versions got the text right on
+19:15
+the first try the same goes for the sign
+19:19
+on an exotic island with only some small
+19:21
+differences for the burger photo the
+19:23
+results are again very similar so most
+19:26
+of the time it doesn't really seem worth
+19:29
+using the uh the regular version since
+19:31
+the results are comparable it depends on
+19:33
+the prompt sometimes you see a
+19:35
+difference and sometimes you don't the
+19:36
+floating point8 version can do nice
+19:38
+illustrations and decent photos and with
+19:40
+the new realistic Laura you can achieve
+19:43
+even more realism however some people
+19:46
+have noticed a small line on the chin in
+19:48
+photos it handles a girl in the grass
+19:50
+better than stable diffusion 3 and can
+19:52
+even manage a yoga pose though I used a
+19:55
+wi as the subject overall the regular
+19:58
+version is a bit better but not by much
+20:02
+given the extra complexity in the
+20:04
+workflow and the increased generation
+20:06
+time I'll probably stick with the
+20:07
+floating Point 8 version most of the
+Installing Flux BNB NF4 Dev and Schnell
+20:10
+time I was about to finish this video
+20:12
+when new updates came out for those with
+20:14
+lower vram there are now faster versions
+20:17
+of flux the quality is a bit lower but
+20:19
+at least you can check if it runs on
+20:21
+your PC the new version is nf4 which I
+20:24
+believe stands for normalized float 4
+20:25
+bit I'll show you how I managed to
+20:27
+install both the dev and Schnell
+20:29
+versions on my comfy UI download the
+20:31
+Schnell version model from the link in
+20:33
+the description or on Discord where it's
+20:35
+more organized next in your models
+20:38
+folder look for the checkpoints folder
+20:40
+this version worked for me when it had
+20:42
+B&B in the name I tried a version
+20:44
+without BNB in the name and it didn't
+20:47
+work so make sure the name includes BNB
+20:50
+do the same for the dev model these
+20:52
+models are smaller than the floating
+20:54
+point8 versions and only take up 11 GB
+20:57
+after downloading you should should have
+20:58
+both models
+21:00
+ready to make it work on comfy UI you'll
+21:03
+need a custom node called bits and bytes
+21:06
+as of making this video it wasn't
+21:08
+available in the manager only in the dev
+21:10
+channel so I'll install it manually
+21:12
+you'll also need to install bits and
+21:15
+bytes go to your comfy UI folder and
+21:18
+look for the custom nodes folder here
+21:20
+you can see all your installed custom
+21:21
+nodes if you ever install a node and
+21:23
+comfy UI stops working you can delete
+21:25
+the folder for that node from here next
+21:28
+go to to the address bar in the custom
+21:29
+nodes folder type CMD and press enter
+21:33
+this will open the command window in
+21:34
+that exact path use the command git
+21:37
+clone followed by the link to the nodes
+21:39
+GitHub page press enter and the node
+21:42
+will be copied to your PC now you need
+21:45
+to install bits and bytes in the command
+21:47
+window use the command pip install you
+21:50
+bits and bytes and press enter it shows
+21:53
+here that I already have it installed if
+21:55
+it doesn't install for you on the
+21:57
+portable comy UI try this
+22:00
+command go to your update
+22:02
+folder type CMD and use the same
+22:10
+command make sure to close all command
+22:13
+Windows you have opened or comfy UI will
+22:15
+not start then run comfy UI to ensure
+22:19
+everything is working correctly update
+22:22
+comfy UI using the manager and select
+22:24
+update all then restart comfy UI here's
+22:27
+the workflow for the chel floating
+22:29
+point8 version to make it work with nf4
+22:32
+you'll need to make a change search for
+22:33
+NF in the nodes and since we've
+22:36
+installed the new custom node you should
+22:38
+see the checkpoint loader nf4 in the
+22:41
+list add this node which looks similar
+22:44
+to the load checkpoint node reconnect
+22:47
+the nodes as you did with load
+22:48
+checkpoint connect the model to model
+22:51
+clip to both positive and negative
+22:53
+encoder and vae to vae decode after
+22:57
+making these connections you can delete
+22:59
+the load checkpoint node ensure you
+23:01
+select the flux Schnell nf4 version from
+23:04
+the
+23:05
+list when you test it you might notice
+23:07
+that the first time it's slower but
+23:08
+after that it should take around 3
+23:11
+seconds on my RTX 490 you can now save
+23:14
+the workflow next let's set up the
+23:16
+version for the dev nf4 select that
+23:19
+model from the list change the steps to
+23:21
+20 to avoid any blurred images with the
+23:23
+dev version switch to DPM plus plus 2m
+23:27
+with sgm unit form after making these
+23:29
+changes do a quick test to ensure
+23:31
+everything works correctly for the dev
+23:34
+version you can add the flux guidance
+23:35
+node which provides extra control
+23:38
+connect this node between the positive
+23:39
+prompt and the key
+23:43
+sampler now let's test the floating
+Comparing Dev FP8 vs. Dev NF4
+23:45
+Point 8 model alongside the nf4 model to
+23:49
+compare the results first choose a fixed
+23:51
+seed for both models to ensure a better
+23:54
+comparison next convert the positive
+23:56
+prompt to text input so you can use a
+23:59
+single prompt for both workflows arrange
+24:02
+the images so you can see both side by
+24:05
+side on the screen along with the prompt
+24:07
+place the floating Point 8 version on
+24:09
+the left and the nf4 version on the
+24:12
+right for some prompts there's a
+24:14
+noticeable difference between the images
+24:17
+while for others the difference isn't as
+24:18
+significant generally the floating Point
+24:20
+8 version seems to have more detail for
+24:23
+instance in the robot image it appears
+24:26
+more detailed around the eyes and the
+24:29
+texture is a bit sharper for some
+24:31
+prompts like the burger the textures are
+24:33
+almost the same but the floating Point 8
+24:35
+version shows slightly more
+24:37
+texture with the cute hamster the
+24:40
+differences in sharpness and detail are
+24:42
+more evident with the nf4 version being
+24:45
+less sharp in the dragon prompt the
+24:48
+images are similar but the horns look
+24:50
+different for the pirate face it's
+24:53
+noticeably sharper in the floating
+24:54
+point8
+24:56
+version the monkey image is again quite
+24:58
+similar with a bit more texture in the
+25:00
+wood in the floating point8 version for
+25:03
+the magician bunny the bunny is sharper
+25:05
+in the floating point8 version so
+25:07
+depending on your preferences you might
+25:09
+find the floating point8 version more
+25:11
+appealing for the portrait it has more
+25:13
+texture on the nose and forehead for the
+Using LoRA with FLUX Dev
+25:16
+last part since I have already extended
+25:18
+the video a few times to include the
+25:20
+latest updates I want to discuss using
+25:23
+Laura with flux you need a Laura that
+25:26
+matches the base model so in this this
+25:28
+case use the dev version I'll use the
+25:30
+floating Point 8 version for this
+25:33
+example xlabs has released a realism
+25:36
+Laura for flux I found a version that
+25:39
+works with comfy UI on this page it's
+25:42
+quite small so you can download it and
+25:45
+place it in the following folder go to
+25:47
+comfy UI then models and look for the
+25:50
+luras folder save the Laura there I
+25:53
+found a prompt that better demonstrates
+25:55
+what this Laura can do first let's hit
+25:57
+refresh so so we can see the new
+25:59
+downloaded model when we add it to the
+26:01
+workflow but before adding the Laura
+26:03
+let's test without it using a fixed seed
+26:06
+the result is this image which has a
+26:08
+plastic look and isn't very realistic
+26:11
+I'll copy this image and paste it next
+26:13
+to the new results for comparison to add
+26:16
+the Laura do it as usual add a load
+26:19
+Laura node and select the Laura from the
+26:22
+list place the Laura between the low
+26:25
+checkpoint and the clip text encoders
+26:28
+instead of a direct connection route the
+26:30
+connection through the Laura connect
+26:33
+model to model input clip to clip then
+26:36
+clip to positive and clip to negative
+26:39
+now let's test it to see any
+26:42
+differences with the realism Laura the
+26:44
+result is much more realistic if you
+26:46
+want to generate more realistic images
+26:48
+this Laura can help I'll try another
+26:51
+prompt like a portrait of a dog first
+26:53
+I'll bypass the Laura to see how it
+26:56
+looks without it the result is quite
+26:59
+realistic I'll make a copy and paste it
+27:02
+for some reason it kept loading
+27:03
+different images instead of pasting the
+27:05
+correct one I had to click on the arrows
+27:08
+to find my pasted version it seems I had
+27:10
+a folder in my input directory with more
+27:13
+images I had pasted in the past with the
+27:15
+same name you I cleared that folder to
+27:18
+fix the issue I'm going to the load
+27:20
+Laura node and right clicking to bypass
+27:21
+again to activate it when I test it now
+27:25
+the difference is subtle but noticeable
+27:28
+um you can see that the image on the
+27:29
+left with the Laura activated appears
+27:32
+more
+Summary and Best Practices
+27:34
+realistic in this video I tested five
+27:37
+flux models as you can see flux version
+27:39
+one comes in different sizes and
+27:41
+versions generally the larger the file
+27:43
+the better the image quality but it also
+27:45
+requires a more powerful graphics card
+27:47
+with more vram and more system Ram here
+27:50
+you can see the approximate time it took
+27:52
+for each model to generate the images I
+27:54
+tested them on an
+27:57
+rtx4 90 as a general rule the dev
+28:00
+version offers better quality than the
+28:02
+schel version Additionally the smaller
+28:06
+the file size the faster it will
+28:08
+generate if you don't have a high-end
+28:10
+graphics card start with the chel
+28:12
+version if your graphics card is decent
+28:14
+but not the best you can try the dev
+28:16
+floating Point 8 version on some cards
+28:19
+the nf4 version might be the fastest
+28:21
+option um it took me a while to organize
+28:24
+everything but uh now you can find all
+28:26
+the workflows for episode 8 and and
+28:28
+earlier episodes on the Discord Channel
+28:30
+pixaroma workflows I've organized them
+28:33
+by model um for example the full version
+28:37
+includes an easy access download link
+28:38
+for everything you need and instructions
+28:41
+on where to place the files you also
+28:43
+have a preview of the workflow which you
+28:47
+can download and load into comfy UI
+28:50
+using the load button um I've also
+28:53
+created workflows for the dev version
+28:56
+and floating point8 complete with
+28:58
+settings and other useful information
+29:01
+I've included compact versions for most
+29:03
+workflows added Laura and more you can
+29:06
+test these for free on various websites
+29:09
+uh sometimes they can be
+29:11
+busy if that's the case try the second
+29:14
+website which should load fine you can
+29:17
+add a prompt run it and see that it's
+29:20
+waiting for a GPU to become
+29:23
+available once it is you'll get an image
+29:26
+that you can download I have a small
+29:29
+request 78% of people who watch my
+29:31
+videos are not subscribed if you could
+29:34
+hit that subscribe button it would
+29:35
+really help if you found this video
+29:38
+useful please leave a like and a comment
+29:40
+to help my channel grow so I can create
+29:42
+even more content for you thank you for
+29:44
+watching and have a great day
+29:51
+[Music]

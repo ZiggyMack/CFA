@@ -1,0 +1,369 @@
+{
+  "schema_version": 1,
+  "updated": "2026-10-07",
+  "purpose": "Gemini cast attachment mapping, prepared for user uploads",
+  "path_base": "repository root D:/Documents/CFA",
+  "state": "local_sources_verified_gemini_upload_mapping_pending",
+  "example_numbers_are_placeholders": true,
+  "characters": [
+    {
+      "id": "HON-DOLO",
+      "name": "Hon Dolo",
+      "aliases": [
+        "Hon DoLo",
+        "Dolo"
+      ],
+      "role": "lead performer and smuggler",
+      "reference_ids": [
+        "HD-DESIGN-01",
+        "HD-FINISH-01",
+        "HD-LIKENESS-01",
+        "HD-LIKENESS-02"
+      ],
+      "pending": [
+        "explicit final on-screen identity selection",
+        "approved full-body/wardrobe master",
+        "mapped detail originals where required"
+      ],
+      "note": "Repeated Hon Dolo headings are one character with multiple reference roles, not additional identities."
+    },
+    {
+      "id": "CHEWBACCA",
+      "name": "Chewbacca",
+      "aliases": [
+        "Chewie",
+        "Chewbaka",
+        "Chewbacka"
+      ],
+      "role": "MC/DJ and copilot",
+      "reference_ids": [
+        "CHEW-STAGE-01",
+        "CHEW-STAGE-02",
+        "CHEW-STAGE-03",
+        "CHEW-STYLE-01"
+      ],
+      "pending": [
+        "CHEW-IDENTITY-01: intended Wookiee face/fur/body/hands/scale",
+        "copilot reference if needed"
+      ],
+      "note": "Current DJ/MC studies do not establish Wookiee anatomy."
+    },
+    {
+      "id": "BH-01",
+      "name": "Bounty Hunter 1",
+      "aliases": [],
+      "role": "reserved distinct bounty hunter",
+      "reference_ids": [],
+      "pending": [
+        "BH01-IDENTITY-01",
+        "BH01-BODY-01",
+        "BH01-ARMOR-01"
+      ],
+      "note": "No identity or image-number assignment inferred. Boba is separate until assigned."
+    },
+    {
+      "id": "BH-02",
+      "name": "Bounty Hunter 2",
+      "aliases": [],
+      "role": "reserved distinct bounty hunter",
+      "reference_ids": [],
+      "pending": [
+        "BH02-IDENTITY-01",
+        "BH02-BODY-01",
+        "BH02-ARMOR-01"
+      ],
+      "note": "Keep identity, armor and props separate from BH-01."
+    },
+    {
+      "id": "VADER-THICK",
+      "name": "Thick Vader",
+      "aliases": [],
+      "role": "user-named Vader variant; details pending",
+      "reference_ids": [],
+      "pending": [
+        "TV-IDENTITY-01: helmet/face treatment",
+        "TV-BODY-01: intended proportions",
+        "TV-COSTUME-01"
+      ],
+      "note": "No verified matching variant identified in the labelled cast set. Do not invent the meaning/proportions of Thick or substitute VADER-ARMOR-01 automatically."
+    },
+    {
+      "id": "VADER-GENERAL",
+      "name": "Darth Vader general concept",
+      "aliases": [
+        "Vader"
+      ],
+      "role": "available armor concept; distinct from unassigned Thick Vader",
+      "reference_ids": [
+        "VADER-ARMOR-01"
+      ],
+      "pending": [
+        "final helmet and body selection"
+      ]
+    },
+    {
+      "id": "BOBA-FETT",
+      "name": "Boba Fett",
+      "aliases": [
+        "Boba"
+      ],
+      "role": "available supporting-cast concept",
+      "reference_ids": [
+        "BOBA-ARMOR-01"
+      ],
+      "pending": [
+        "final helmet/body selection",
+        "whether assigned to either numbered bounty hunter"
+      ]
+    },
+    {
+      "id": "LEIA",
+      "name": "Princess Leia",
+      "aliases": [
+        "Leia"
+      ],
+      "role": "co-star and emotional center",
+      "reference_ids": [
+        "LEIA-STYLE-01"
+      ],
+      "pending": [
+        "approved identity/full-body reference"
+      ]
+    },
+    {
+      "id": "JABBA",
+      "name": "Jabba the Hutt",
+      "aliases": [
+        "Jabba"
+      ],
+      "role": "underworld host",
+      "reference_ids": [
+        "JABBA-STAGE-01"
+      ],
+      "pending": [
+        "approved species proportions and complete body reference"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "reference_id": "HD-DESIGN-01",
+      "character_id": "HON-DOLO",
+      "role": "current Grok design anchor",
+      "filename": "HD-EXP-LOCK-FACE.jpg",
+      "original_path": "docs/notes/explorable_world/comfy/references/hon-dolo-lock-turnaround-outfits/hon-dolo-lock-turnaround-outfits/HD-EXP-LOCK-FACE.jpg",
+      "sha256": "ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978",
+      "bytes": 246854,
+      "selection_status": "current_reported_design_anchor",
+      "use_limits": "Current through-314 design anchor; not proof of a final accepted on-screen likeness or every hidden tattoo. Do not blend its face with other references without an explicit identity brief.",
+      "gemini_attachment_verified": false,
+      "upload_batch_id": null,
+      "picture_number_in_batch": null
+    },
+    {
+      "reference_id": "HD-FINISH-01",
+      "character_id": "HON-DOLO",
+      "role": "optional photographic finish",
+      "filename": "HD-EXP-289.jpg",
+      "original_path": "docs/notes/explorable_world/comfy/references/hon-dolo-lock-turnaround-outfits/hon-dolo-lock-turnaround-outfits/HD-EXP-289.jpg",
+      "sha256": "4836234de5b3a94f3cd9e4407870c88e7cfbc2a1db65ea09695a24699d63c0d7",
+      "bytes": 279799,
+      "selection_status": "available_candidate",
+      "use_limits": "Separate soft-polish asset, not identical to LOCK-FACE. Use only for requested finish; do not replace the design anchor automatically.",
+      "gemini_attachment_verified": false,
+      "upload_batch_id": null,
+      "picture_number_in_batch": null
+    },
+    {
+      "reference_id": "HD-LIKENESS-01",
+      "character_id": "HON-DOLO",
+      "role": "intended likeness reference",
+      "filename": "han solo 2.png",
+      "original_path": "docs/notes/explorable_world/comfy/references/han solo 2.png",
+      "sha256": "708f7a748431021825fb0090609037bdb6a89b4b40f574f159f627f2ba13e981",
+      "bytes": 205175,
+      "selection_status": "available_candidate",
+      "use_limits": "Separate user-supplied intended Han Solo likeness source. Not a wardrobe/tattoo source or automatic request to replace the face in an existing liked video.",
+      "gemini_attachment_verified": false,
+      "upload_batch_id": null,
+      "picture_number_in_batch": null
+    },
+    {
+      "reference_id": "HD-LIKENESS-02",
+      "character_id": "HON-DOLO",
+      "role": "secondary intended likeness reference",
+      "filename": "Han Solo.png",
+      "original_path": "docs/notes/explorable_world/comfy/references/Han Solo.png",
+      "sha256": "5a6bd67a77920d3f2eae4bbaa98db0aa1e3dad288d38327c963d15cee1722974",
+      "bytes": 892454,
+      "selection_status": "available_candidate",
+      "use_limits": "Multi-person image. The intended reference is the man on image-right; isolate/identify that region before conditioning. Do not combine the other faces.",
+      "gemini_attachment_verified": false,
+      "upload_batch_id": null,
+      "picture_number_in_batch": null
+    },
+    {
+      "reference_id": "CHEW-STAGE-01",
+      "character_id": "CHEWBACCA",
+      "role": "DJ booth and deck staging",
+      "filename": "CHEW-EXP-01-furry-dj.jpg",
+      "original_path": "docs/notes/explorable_world/comfy/references/hon-dolo-stills-51-95/cast/CHEW-EXP-01-furry-dj.jpg",
+      "sha256": "ca99252c4e700ee31bafe27cd5935aa58597afa7caf5947a6e0e094668739bc4",
+      "bytes": 309796,
+      "selection_status": "available_candidate",
+      "use_limits": "Ape-like placeholder anatomy. Use decks, headphones, styling and pose only; Wookiee appearance reference is still needed.",
+      "gemini_attachment_verified": false,
+      "upload_batch_id": null,
+      "picture_number_in_batch": null
+    },
+    {
+      "reference_id": "CHEW-STAGE-02",
+      "character_id": "CHEWBACCA",
+      "role": "MC microphone pose",
+      "filename": "CHEW-EXP-02-mic.jpg",
+      "original_path": "docs/notes/explorable_world/comfy/references/hon-dolo-stills-51-95/cast/CHEW-EXP-02-mic.jpg",
+      "sha256": "160cea4ea9fdda923deb24b1e20d8852480dc14fe9b4a3d88f860356f69ea6bc",
+      "bytes": 289204,
+      "selection_status": "available_candidate",
+      "use_limits": "Ape-like styling candidate; not an approved Wookiee face, fur, hands or body model.",
+      "gemini_attachment_verified": false,
+      "upload_batch_id": null,
+      "picture_number_in_batch": null
+    },
+    {
+      "reference_id": "CHEW-STAGE-03",
+      "character_id": "CHEWBACCA",
+      "role": "crowd-hype composition",
+      "filename": "CHEW-EXP-03-hype.jpg",
+      "original_path": "docs/notes/explorable_world/comfy/references/hon-dolo-stills-51-95/cast/CHEW-EXP-03-hype.jpg",
+      "sha256": "c0e8521df895c857558ebfc40df5cb26776aea63372cb52d37376cd56945fa9e",
+      "bytes": 258099,
+      "selection_status": "available_candidate",
+      "use_limits": "Raised-arm staging; cropped hands, exaggerated mouth and different bandolier orientation are not continuity locks.",
+      "gemini_attachment_verified": false,
+      "upload_batch_id": null,
+      "picture_number_in_batch": null
+    },
+    {
+      "reference_id": "CHEW-STYLE-01",
+      "character_id": "CHEWBACCA",
+      "role": "human DJ styling and equipment layout",
+      "filename": "DJ-STYLE-01-human-booth.jpg",
+      "original_path": "docs/notes/explorable_world/comfy/references/hon-dolo-stills-51-95/cast/DJ-STYLE-01-human-booth.jpg",
+      "sha256": "a41c71e3f8143f108daa09120454dd460253b52c904348205e2f64639c39c0b4",
+      "bytes": 193926,
+      "selection_status": "available_candidate",
+      "use_limits": "Human anatomy is excluded. Still image supplies no timed DJ performance.",
+      "gemini_attachment_verified": false,
+      "upload_batch_id": null,
+      "picture_number_in_batch": null
+    },
+    {
+      "reference_id": "VADER-ARMOR-01",
+      "character_id": "VADER-GENERAL",
+      "role": "armor/material/lighting concept",
+      "filename": "VADER-EXP-01-black-armor.jpg",
+      "original_path": "docs/notes/explorable_world/comfy/references/hon-dolo-stills-51-95/cast/VADER-EXP-01-black-armor.jpg",
+      "sha256": "3d622c3bb1458d3a8ed043d61126b7b27100066c0aa0b2f67316f66fe827d3ed",
+      "bytes": 185444,
+      "selection_status": "available_candidate",
+      "use_limits": "Slim/narrow-mask concept. Not evidence for Thick Vader body proportions; do not assign to that variant unless user selects it for a specific detail.",
+      "gemini_attachment_verified": false,
+      "upload_batch_id": null,
+      "picture_number_in_batch": null
+    },
+    {
+      "reference_id": "BOBA-ARMOR-01",
+      "character_id": "BOBA-FETT",
+      "role": "weathered olive armor concept",
+      "filename": "BOBA-EXP-01-olive-armor.jpg",
+      "original_path": "docs/notes/explorable_world/comfy/references/hon-dolo-stills-51-95/cast/BOBA-EXP-01-olive-armor.jpg",
+      "sha256": "9bf5548a5bce0276cf521078b88a46a7df75982872a190853f4190fe9469e969",
+      "bytes": 279681,
+      "selection_status": "available_candidate",
+      "use_limits": "Helmet geometry/rangefinder unresolved. Available Boba concept; not automatically Bounty Hunter 1 or 2.",
+      "gemini_attachment_verified": false,
+      "upload_batch_id": null,
+      "picture_number_in_batch": null
+    },
+    {
+      "reference_id": "LEIA-STYLE-01",
+      "character_id": "LEIA",
+      "role": "ivory wardrobe and hair styling",
+      "filename": "LEIA-EXP-01-ivory-coat.jpg",
+      "original_path": "docs/notes/explorable_world/comfy/references/hon-dolo-stills-51-95/cast/LEIA-EXP-01-ivory-coat.jpg",
+      "sha256": "cdf984cf75b1922eeae99267c71a586d7c8633650d7da8cadb8b18e6549d0965",
+      "bytes": 144270,
+      "selection_status": "available_candidate",
+      "use_limits": "Style candidate, not final approved facial identity or full-body anatomy.",
+      "gemini_attachment_verified": false,
+      "upload_batch_id": null,
+      "picture_number_in_batch": null
+    },
+    {
+      "reference_id": "JABBA-STAGE-01",
+      "character_id": "JABBA",
+      "role": "host/dais environment and styling",
+      "filename": "JABBA-EXP-01-host-dais.jpg",
+      "original_path": "docs/notes/explorable_world/comfy/references/hon-dolo-stills-51-95/cast/JABBA-EXP-01-host-dais.jpg",
+      "sha256": "0cfc363be1df59f63ae4ef8a15c93b431672f29c4d924676cfa8afe9c6e5c09e",
+      "bytes": 477970,
+      "selection_status": "available_candidate",
+      "use_limits": "Palace, gold/red velvet and host attitude. Intended Hutt proportions, arms and tail need clearer reference before motion.",
+      "gemini_attachment_verified": false,
+      "upload_batch_id": null,
+      "picture_number_in_batch": null
+    }
+  ],
+  "rules": [
+    "Treat the user message picture numbers as illustrative examples, not actual file selections.",
+    "Stable reference IDs are labels in this map; source files have not been renamed.",
+    "A file inventoried in CFA is not proof that it has been attached to Gemini. Verify actual attachments before using it.",
+    "Bind upload batch ID + picture number + exact filename + reference ID explicitly. Never infer a mapping from upload order or a similar filename.",
+    "Do not use bare #3 across batches; use e.g. CAST-BATCH-001/P03 with its exact filename. Leave unbound fields empty until actually supplied.",
+    "Latest direct user corrections override older instructions. Only explicit user selection promotes a candidate to primary/approved.",
+    "Use only each reference's assigned role; do not merge faces, transfer one character's tattoos onto another, or restore retired details.",
+    "Existing video continuity is a separate brief from creating a new likeness. Do not silently replace a liked clip's face.",
+    "Keep rejected/superseded sources as history, excluded from active generation unless requested.",
+    "If a listed picture is missing or ambiguous, say which one; ask only the blocking question and proceed with independent planning.",
+    "Do not include every cast reference in every generation. Supply the characters and details required by that shot."
+  ],
+  "attachment_manifest_template": {
+    "upload_batch_id": "CAST-BATCH-001",
+    "picture_number": null,
+    "exact_uploaded_filename": null,
+    "reference_id": null,
+    "character_id": null,
+    "allowed_reference_role": null,
+    "approval_status": "pending"
+  },
+  "sources": [
+    "docs/notes/explorable_world/comfy/casting/grok_intake_20261004/README.md",
+    "docs/notes/explorable_world/comfy/casting/grok_intake_20261006/design_handoff.json",
+    "docs/notes/explorable_world/comfy/casting/grok_intake_20261007/id_map_audit.json"
+  ],
+  "actions_not_performed": [
+    "image edits",
+    "source renaming or copies",
+    "Gemini uploads/settings changes",
+    "new character approval",
+    "Cloud generation"
+  ],
+  "review_collections": [
+    {
+      "project": "hon_dolo_strictly_business",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json",
+      "role": "293 newly inventoried images; choose exact role before adding to active cast attachments; no new approvals"
+    },
+    {
+      "project": "hon_dolo_strictly_business",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_review_20261007/inventory.json",
+      "role": "26 motion/staging candidates, two project-unassigned; do not copy old tattoo drift"
+    },
+    {
+      "project": "lisan_al_gaib",
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/reference_map.json",
+      "role": "Separate project map; not a Hon Dolo cast member or automatic crossover"
+    }
+  ]
+}

@@ -1,0 +1,485 @@
+
+We fight to the last breath. We do not
+0:04
+yield.
+0:06
+[screaming]
+0:08
+Verome for
+0:10
+the clip you just watched was generated
+0:12
+entirely in a [music] single run using
+0:15
+Miniax H3. Fully open source omnimodel
+0:18
+and able to generate highquality [music]
+0:21
+15-second video with native stereo
+0:23
+audio. I don't think I've ever said
+0:26
+these two [music] words on the channel
+0:27
+before, but I'm saying them now. H3 is a
+0:30
+genuine gamecher. You can feed it
+0:32
+multiple images, video [music] clips,
+0:34
+and audio all at once, just like Cance,
+0:37
+except this one runs on your computer
+0:40
+for free. I've spent an entire week
+0:42
+testing it, and in this video, I'm going
+0:44
+to show you exactly how to get this
+0:46
+running [music] inside Comfy UI and what
+0:48
+kind of things you can actually use it
+0:49
+for.
+0:51
+Before we start, if you're new to the
+0:53
+channel, I make a lot of
+0:55
+beginnerfriendly AI and post-production
+0:57
+tutorials. So, if that's your thing,
+0:59
+consider subscribing so you don't miss
+1:00
+the next video.
+1:03
+Now, first thing you will need is Comfy
+Install ComfyUI
+1:05
+UI. If you don't already have it, head
+1:07
+over to comfy.org and download it. I'll
+1:10
+drop the link below along with a
+1:12
+separate tutorial if you need help
+1:13
+getting started with Comfy UI from
+1:15
+scratch. Once it's installed, open the
+Local H3 vs API
+1:18
+menu from here. Go to browse templates
+1:21
+and search Miniax H3. You will notice a
+1:24
+few of these workflows are labeled API.
+1:27
+Right now, that's the only way to
+1:28
+generate a 2K resolution using H3, and
+1:32
+it's not free. So, we're going to focus
+1:34
+on the local workflows instead. They are
+1:36
+completely free. The resolution is more
+1:38
+limited, but honestly, still really
+1:40
+impressive, as you're about to see. Each
+1:43
+workflow does something different. We'll
+Download Models
+1:44
+get to all three, but first, you will
+1:46
+need the actual model files, which you
+1:49
+can get from this hugging face page.
+1:51
+Grab the link from the description box
+1:53
+and make sure you [music] download every
+1:54
+single file in these two folders. Now,
+1:57
+some of the diffusion models, however,
+VRAM Requirements
+1:59
+are pretty massive, but the good news is
+2:02
+you don't need to download them all. The
+2:04
+FL toVA models are what you need for
+2:06
+text to video and image to video. The
+2:09
+REF toVA models are for reference to
+2:11
+video. And within each group, you've got
+2:14
+a few sizes to pick from depending on
+2:16
+your hardware. At the top there is BF16
+2:19
+around 66 GB uncompressed maximum
+2:22
+quality. This is built for serious
+2:25
+hardware. So unless you're running a big
+2:27
+studio setup, just skip it. One step
+2:29
+down is BF16 pruned. Basically, next
+2:33
+best quality without having to deal with
+2:35
+the full 66 gigs. You will probably want
+2:38
+more than 32 GB of VRAM and a decent
+2:41
+amount of system RAM to run it
+2:43
+comfortably. Then there's INT8 comot
+2:46
+which I would call the middle ground.
+2:48
+This is what I'm personally using on a
+2:50
+32GB card and I would expect it to run
+2:53
+fine on anything above 24 GB. If that's
+2:56
+still too much, drop to the pruned INT8
+2:59
+version, smaller footprint, runs on
+3:02
+something like an RTX 3060 with 12 GB
+3:05
+using offloading. If your card is in
+3:07
+that range, this is the one to grab. And
+3:10
+then there is FP8. Pretty much the same
+3:12
+story, just tuned to run faster,
+3:15
+specifically on RTX 40 and 50 series
+3:18
+cards. Once you download the models,
+3:20
+make sure you place them in the right
+3:21
+folders, exactly as shown in this page.
+H3 Text to video & How to Prompt
+3:24
+Let's start with the texttovideo
+3:26
+workflow since it's the simplest place
+3:28
+to begin. First, choose an aspect ratio
+3:30
+for your output. Then, pick a megapixel
+3:32
+value. You can check the size settings
+3:34
+reference node to see exactly which
+3:37
+resolution that maps to. Just keep in
+3:39
+mind the higher you go, the more time
+3:41
+and resources you will need. Now, for
+3:43
+the prompt itself, I've noticed H3
+3:46
+handles both short and extremely long
+3:48
+prompts really well. It really comes
+3:50
+down to how complex the shot is. If
+3:52
+you're doing something simple, keep it
+3:54
+short. But if you're building a
+3:56
+multi-shot sequence with dialogue and
+3:58
+audio cues, get as detailed and specific
+4:01
+as you can. You can use timestamps like
+4:04
+this. 0 to 2 second, shot one, 2 to 4
+4:08
+second, shot two, and describe what
+4:10
+happens in each range. As for duration,
+4:13
+you can go up to 15 seconds. And it's
+4:15
+worth noting H3 generates at 24 frames
+4:19
+per second. Under unit name, you will
+4:21
+pick your diffusion model based on what
+4:23
+we learned a minute ago. And that's it.
+4:26
+You can then hit run to start
+4:28
+generating. And for your reference, I
+Speed test
+4:30
+will put how long it took me to generate
+4:31
+up on the screen. Oh, and by the way, if
+4:33
+those numbers feel too slow or if you're
+4:36
+running into any issues locally, don't
+4:39
+stress. You can run H3 or almost any
+4:42
+other model fully online using Run
+4:45
+Comfy, which gets you access to high-end
+4:47
+GPUs and way faster generation. Link is
+4:50
+below for anyone who wants to try it.
+4:52
+Also, you can try generating your video
+4:54
+at a low resolution locally and upscale
+4:57
+to a higher resolution afterward. I will
+4:59
+link a couple of good options for that
+5:01
+in the description, too. I've also set
+5:03
+up a dedicated H3 channel on our
+5:06
+Discord. We're closing in on 10K members
+5:09
+there. So, if you've got any questions
+5:11
+or just want to trade notes with other
+5:13
+people testing this, come join us. Now,
+5:15
+personally, I'm not a huge fan of text
+5:18
+to video with any model. It's useful for
+5:20
+a quick sanity check when something new
+5:22
+drops, but beyond that, I rarely spend
+5:25
+much time here. You just don't get that
+5:27
+much control. But that changes once we
+5:30
+have an image input, which brings us to
+H3 Image to video
+5:32
+image to video. It's basically the same
+5:34
+setup as text to video, except now
+5:36
+you're uploading an image to base the
+5:38
+generation on. In the prompt box, you
+5:40
+can either describe one continuous shot
+5:43
+that starts from that image or introduce
+5:45
+new cuts using timestamps, same as
+5:48
+before. What I like about H3 is you can
+5:50
+upload an image and have something
+5:52
+happened before it. Here's an example. I
+5:55
+used the poster design as the input
+5:57
+image, but prompted the video to start
+5:59
+completely blank, then animate the
+6:01
+different elements of the poster into
+6:03
+place, one by one until it fully comes
+6:06
+together. I also use the same trick to
+6:08
+animate this web UI page. You can also
+6:11
+use a single image to generate a longer
+6:14
+multi-shot video, which is where I think
+6:16
+H3 is going to get used a lot for things
+6:18
+like budget product ads, especially
+6:20
+since you also get sound effects and
+6:23
+music in the video. Actually, that
+6:24
+opening clip from earlier in this
+6:26
+tutorial, same thing. A single frame
+6:29
+input with a bit of guidance in the
+6:31
+prompt. H3 reimagined the scene from
+6:34
+different angles with dialogue and real
+6:36
+rhythm to it. And this says a lot about
+6:38
+the future of AI film making. And yes, I
+6:41
+had to run the mandatory test, but this
+6:43
+time [music] an extended version.
+6:52
+I really think someone needs to come up
+6:53
+with a harder benchmark at this point.
+6:55
+Though it's not flawless. In one test, I
+6:58
+gave it an image of a tigerlike creature
+7:01
+and asked it to preserve that exact
+7:03
+look. But not even two seconds in, it
+7:06
+had drifted into looking like a regular
+7:08
+tiger. So no, H3 is not a perfect model,
+7:12
+but at least it kept the wings. But if I
+H3 Reference to video
+7:14
+had to give the trophy to H3 for best
+7:17
+open-source video model, it's because of
+7:20
+reference to video. Here you can connect
+7:22
+multiple types of media straight into
+7:24
+the reference to video node. By default,
+7:27
+you will see two image nodes connected,
+7:29
+but you can easily add more. Just double
+7:31
+click anywhere, search for load image,
+7:34
+load video or load audio. Connect the
+7:37
+new node and a new socket will open up
+7:39
+automatically so you can connect more
+7:41
+nodes. Keep in mind you can't connect
+7:44
+more than 12 media inputs in total, at
+7:46
+least not yet. Now, when you're
+7:48
+prompting here, make sure you reference
+7:50
+your inputs in the same order you
+7:52
+connected them. So, the first image
+7:54
+becomes picture one in your text, the
+7:57
+second becomes picture two, and so on.
+8:00
+And same logic applies to video and
+8:02
+audio. And honestly, the possibilities
+8:04
+here are close to endless. Take this one
+8:06
+for example. I used multiple frames from
+8:09
+a comic collage and prompted H3 to
+8:12
+animated like the opening sequence of a
+8:14
+thriller using timestamps to control the
+8:17
+motion of each element in order, and it
+8:19
+pulled it off beautifully. Here's
+8:21
+another. I used H3 to swap the green
+8:24
+screen in this clip for an environment
+8:26
+based on a reference image. In the same
+8:29
+run, I also swapped the character's
+8:31
+costume using a reference image. And to
+8:33
+me, it looks like the days of manual
+8:35
+rotoscoping will soon come to an end.
+8:37
+Don't you think? One of my favorite use
+8:39
+cases is object replacement. Here, I
+8:42
+swapped out the soda can and
+8:44
+deliberately used a see-through can as
+8:47
+the reference to see how it would affect
+8:49
+the liquid physics. I will let you be
+8:51
+the judge of how that turned out. And it
+8:54
+doesn't stop there. There's plenty more
+What's next?
+8:55
+that I didn't cover here as more
+8:58
+workflows show up. Expect H3 to get used
+9:01
+[music] for talking avatars, character
+9:03
+replacements, even visual effects. And
+9:05
+once GGUF models, and further
+9:07
+optimization land, it will only get
+9:10
+faster. And let me know down in the
+9:12
+comments if you want to see a deeper
+9:14
+dive video on H3, more settings,
+9:16
+specific use cases, whatever you're
+9:18
+curious about. Until then, if you got
+9:21
+something out of this video, drop a
+9:22
+like, stay creative, and I'll see you in
+9:25
+the next one. Peace. [music]

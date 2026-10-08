@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "experiment_id": "hon_dolo_lipsync_v001",
+  "prepared_at_utc": "2026-10-07T13:19:47.349784+00:00",
+  "status": "local_editor_prepared_cloud_authentication_required_not_submitted",
+  "scope": "Separate paid lip-sync candidate for one continuous source shot and prepared replacement audio. This is an editor-format workflow, not a compiled API graph. No Cloud upload, workflow save, generation, spending or face-modification result occurred during this preparation.",
+  "path_base": "Paths beginning docs/ are relative to repository root D:/Documents/CFA; editor_json and upstream_snapshot paths are relative to this preflight file; local input paths use the repository-root convention explicitly.",
+  "goal": "Make visible mouth motion follow prepared replacement song audio while retaining the selected source appearance, framing, head motion and background as far as this generative route allows; preservation is a test criterion, not a guarantee.",
+  "baseline": "The separate non-generative soundtrack-replacement experiment keeps pictures unchanged. This lip-sync candidate would deliberately modify picture content around the speaker if later executed.",
+  "template": {
+    "id": "api_sync_so_lip_sync_video",
+    "upstream_snapshot": "upstream/api_sync_so_lip_sync_video.json",
+    "upstream_snapshot_sha256": "33cf05c95888f6d201cd87bb685ffc855f8492422fda6687c1a690f64b237a4f",
+    "public_sources_checked_at_utc": "2026-10-07T13:14:30+00:00",
+    "upstream_commit": null,
+    "editor_format_version": 0.4,
+    "retained_node_package_version_metadata": "comfy-core 0.27.0 from upstream file; not a live Cloud version assertion",
+    "editor_json": "hon_dolo_lipsync_v001.editor.json",
+    "editor_sha256": "95d29febea4617855c98669999ce0db8f83d65b03e18cc1eda3fb88eb6b0505c"
+  },
+  "input_assets": [
+    {
+      "role": "source_picture",
+      "repository_root_relative_path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_intake_20261007/source_excerpts/c0823c60_opening_57f.mp4",
+      "portable_loader_filename": "c0823c60_opening_57f.mp4",
+      "sha256": "b96cf9cc21274451515e331e432d86851b5fa7a2234fd7e182390a3da22c6e96",
+      "bytes": 1134514,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "frame_count": 57,
+      "duration_seconds": 2.375,
+      "source_frame_range_inclusive": [
+        0,
+        56
+      ],
+      "audio_in_excerpt": false,
+      "evidence": "Existing measured first-shot excerpt; source metrics come from the prior full-decode intake. This preparation rechecked presence/hash, not playback.",
+      "cloud_asset_reference": null
+    },
+    {
+      "role": "replacement_audio_provisional_full_mix",
+      "repository_root_relative_path": "docs/notes/explorable_world/comfy/outputs/hon_dolo_audio_replace_v001_song_000_002375.wav",
+      "portable_loader_filename": "hon_dolo_audio_replace_v001_song_000_002375.wav",
+      "sha256": "ef8b0f5c7841ba297dfe1989fe5fbc4d9e786afbee17bcfb2c79c527dbc08dbc",
+      "bytes": 456044,
+      "wav_header": {
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "sample_frames": 114000,
+        "sample_width_bytes": 2,
+        "duration_seconds": 2.375
+      },
+      "song_source": "docs/notes/explorable_world/comfy/references/Music/DoLoSoLo_0 (Remastered).mp3",
+      "song_range_seconds_end_exclusive": [
+        0,
+        2.375
+      ],
+      "clean_lead_vocal": false,
+      "audio_listened_by_this_preparation": false,
+      "lyric_phrase_alignment_verified": false,
+      "evidence": "WAV header/sample count and hash measured locally. Root prepared this opening full-mix excerpt; a clean lead-vocal stem has not been supplied. Its presence is not evidence of a useful sung phrase in this interval.",
+      "cloud_asset_reference": null
+    }
+  ],
+  "planned_connections": [
+    {
+      "from_node": 9,
+      "from_type": "LoadVideo",
+      "from_output": "VIDEO",
+      "to_node": 8,
+      "to_type": "SyncLipSyncNode",
+      "to_input": "video"
+    },
+    {
+      "from_node": 11,
+      "from_type": "LoadAudio",
+      "from_output": "AUDIO",
+      "to_node": 8,
+      "to_type": "SyncLipSyncNode",
+      "to_input": "audio"
+    },
+    {
+      "from_node": 8,
+      "from_type": "SyncLipSyncNode",
+      "from_output": "VIDEO",
+      "to_node": 13,
+      "to_type": "SaveVideo",
+      "to_input": "video"
+    }
+  ],
+  "planned_node_controls": {
+    "seed": 42,
+    "control_after_generate": "fixed",
+    "model": "sync-3",
+    "sync_mode": "cut_off",
+    "speaker_selection": "default",
+    "speaker_frame": 0,
+    "speaker_x": 0,
+    "speaker_y": 0,
+    "speaker_coordinates_active": false,
+    "output_filename_prefix": "video/hon_dolo_lipsync_v001",
+    "record_audio_node": "Retained from upstream, bypassed and disconnected",
+    "seed_limit_note": "The public node documents seed as a rerun control; fixed seed does not guarantee identical generated results."
+  },
+  "duration_contract": {
+    "input_video_seconds": 2.375,
+    "input_audio_seconds": 2.375,
+    "matched_inputs": true,
+    "chosen_mode": "cut_off",
+    "behavior": "Use shorter input if durations differ; with equal prepared durations the planned target is 2.375 seconds. Measure the returned result if executed.",
+    "upstream_default_changed_from": "bounce",
+    "why": "Avoid reversing, looping or speed-remapping the source to fill a longer audio track. Do not silently stretch a longer lyric phrase into this short shot."
+  },
+  "public_schema": {
+    "node_id": "SyncLipSyncNode",
+    "display_name": "sync.so Lip Sync",
+    "category": "partner/video/sync.so",
+    "inputs": {
+      "video": "VIDEO",
+      "audio": "AUDIO",
+      "seed": "INT, default42, range0..2147483647",
+      "model": "DynamicCombo with sync-3 and nested sync_mode/speaker_selection/speaker_frame/speaker_x/speaker_y"
+    },
+    "outputs": [
+      "VIDEO"
+    ],
+    "sync_mode_options": [
+      "bounce",
+      "cut_off",
+      "loop",
+      "silence",
+      "remap"
+    ],
+    "speaker_selection_options": [
+      "default",
+      "auto-detect",
+      "coordinates"
+    ],
+    "wrapper_max_duration_seconds": 600,
+    "max_video_side_pixels": 4096,
+    "max_video_total_pixels": 8847360,
+    "not_exposed": [
+      "text dialogue input",
+      "negative prompt",
+      "mask input"
+    ],
+    "credentials": "Native Comfy partner authentication/credits; hidden token fields are handled by Comfy, never embedded in the editor."
+  },
+  "quality_limits": [
+    "The supplied input is the full song mix, not isolated vocals. Official Sync guidance prefers clean single-speaker vocals for singing; instruments and overlapping voices may degrade mouth alignment.",
+    "Listen and choose a suitable short phrase with pauses before accepting this audio as the lip-sync test. The 0-2.375-second song window is provisional and not verified to contain the intended lyric.",
+    "Sync-3 supports song lip-sync according to provider docs, but fast rap, metallic grill, lip rings and tattoo fidelity remain untested for this project.",
+    "Sync-3 can animate silent lips but the speaking style may be generic; natural speaking motion is preferable.",
+    "Use one visible human-like face. Animal/non-humanoid support is not established; this does not validate Chewie or Jabba.",
+    "Partner output is re-encoded; timing, color, background and identity details require comparison. No pixel-identical preservation promise.",
+    "Restore the selected full song mix at its correct timeline position after accepting picture; keep original video audio disconnected and do not stack the old generated voice under the new track."
+  ],
+  "pricing": {
+    "paid_partner_operation": true,
+    "public_node_badge_usd_per_output_second": 0.19019,
+    "badge_is_approximate": true,
+    "illustrative_duration_seconds": 2.375,
+    "illustrative_badge_arithmetic_usd": 0.45170125,
+    "account_quote_available": false,
+    "account_quote_credits": null,
+    "spend": null,
+    "note": "Public badge arithmetic is approximately USD0.45 for2.375s, not a live Cloud quote. Do not substitute direct Sync subscription pricing for Comfy billing. Actual estimate and credits must be checked after reconnecting."
+  },
+  "cloud_state": {
+    "authentication": "Required; current root probes returned MCP authentication required. Reconnect to continue using this server.",
+    "schema_checked_live": false,
+    "models_available_live": null,
+    "inputs_compiled": false,
+    "workflow_uploaded": false,
+    "assets_uploaded_by_this_preparation": false,
+    "saved_workflow_id": null,
+    "job_id": null,
+    "submitted": false,
+    "executed": false,
+    "accepted": false,
+    "no_cloud_calls_by_this_preparation": true
+  },
+  "offline_checks": {
+    "json_parses": true,
+    "editor_format_preserved": true,
+    "node_input_output_schemas_preserved_from_upstream": true,
+    "link_endpoints_and_types_match": true,
+    "widget_counts_and_order_preserved": true,
+    "generation_controls_match_requested_values": true,
+    "input_paths_exist": true,
+    "input_hashes_measured": true,
+    "replacement_wav_duration_measured": true,
+    "runtime_validation": false
+  },
+  "portability": {
+    "loader_filenames_are_local_preparation_labels": true,
+    "required_after_cloud_reconnect": "Upload/register both exact input assets, bind returned Cloud file identifiers in the loaders, then compile/check the graph. A local filename in this editor is not proof that the Cloud asset already exists.",
+    "api_graph_created": false
+  },
+  "before_execution": [
+    "Confirm native Comfy authentication and current SyncLipSyncNode/schema availability.",
+    "Inspect the replacement audio and selected lyric interval; use an isolated lead vocal if available, retaining pauses and exact timing.",
+    "Resolve exact uploaded media references and compile inputs; confirm sync-3/cut_off/seed42/default face and equal effective durations.",
+    "Read current partner quote/credit requirements before any authorized paid submission."
+  ],
+  "success_checks": [
+    "Normal-speed audio/mouth alignment, including fast syllables and pauses.",
+    "Matched-frame checks for source identity, lower grill, canine caps, lip rings, eye/know lettering, head/eye movement and background.",
+    "Full output decode and measured dimensions/frame count/FPS/audio duration; do not infer retention from file metadata alone.",
+    "No old generated vocal in final mix; correct replacement song timecodes retained."
+  ],
+  "lessons_consulted": [
+    "D:/Documents/Pan_Handlers/Help/content/scene_content.py",
+    "D:/Documents/Pan_Handlers/Help/content/video_routes.py: dialogue",
+    "D:/Documents/Pan_Handlers/Help/guides/video_handoff.py",
+    "D:/Documents/Pan_Handlers/Help/guides/node_atlas.py: scene_lipsync",
+    "docs/notes/explorable_world/comfy/workflows/HON_DOLO_PRODUCTION_PLAN.md#song-timing-and-mouth-movement"
+  ],
+  "sources": [
+    {
+      "role": "official_template",
+      "url": "https://github.com/Comfy-Org/workflow_templates/blob/main/templates/api_sync_so_lip_sync_video.json",
+      "raw_url": "https://raw.githubusercontent.com/Comfy-Org/workflow_templates/main/templates/api_sync_so_lip_sync_video.json"
+    },
+    {
+      "role": "current_public_node_schema_and_price_badge",
+      "url": "https://github.com/Comfy-Org/ComfyUI/blob/master/comfy_api_nodes/nodes_sync_so.py",
+      "raw_url": "https://raw.githubusercontent.com/Comfy-Org/ComfyUI/master/comfy_api_nodes/nodes_sync_so.py"
+    },
+    {
+      "role": "duration_modes",
+      "url": "https://sync.so/docs/developer-guides/sync-mode"
+    },
+    {
+      "role": "songs_vocal_isolation_and_nonhuman_limits",
+      "url": "https://sync.so/docs/models/lipsync"
+    },
+    {
+      "role": "input_quality",
+      "url": "https://sync.so/docs/compatibility-and-tips/improving-lip-sync-quality"
+    },
+    {
+      "role": "formats_and_output_reencoding",
+      "url": "https://sync.so/docs/compatibility-and-tips/media-formats-support"
+    },
+    {
+      "role": "sync_3_model",
+      "url": "https://sync.so/docs/models/sync-3"
+    }
+  ]
+}

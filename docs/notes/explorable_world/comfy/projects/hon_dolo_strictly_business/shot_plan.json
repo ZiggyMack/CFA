@@ -1,0 +1,860 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "music_video_planning_data_not_comfy_workflow",
+  "project_id": "hon_dolo_strictly_business",
+  "title": "Hon Dolo - Strictly Business",
+  "created": "2026-10-04",
+  "status": "draft_story_new_working_audio_requires_timing_realignment",
+  "lyrics_source": {
+    "path": "lyrics.user.v002.txt",
+    "sha256": "291a2fb6f8a542dcdc4f87d1b4b1c29af3ce0014156a988f293843c71561bc01",
+    "provenance": "User pasted October7; wording unchanged after whitespace normalization and omitting old title; keep user wording.",
+    "preserve_wording": true,
+    "preserve_duplicate_section_labels": true
+  },
+  "audio": {
+    "master_mix_path": "../../references/Music/DoLoSoLo_0 (Remastered).mp3",
+    "lead_vocal_stem_path": null,
+    "lyrics_alignment_path": null,
+    "bpm": null,
+    "duration_seconds": 234.96,
+    "status": "current_working_recording_received_decoded_pending_listening",
+    "embedded_lyric_container_path": null,
+    "media_intake_path": "music_intake_20261007.json",
+    "timing_state": "existing_section_times_are_old_recording_only_not_validated_for_new_master",
+    "initial_unlabelled_region_seconds": null,
+    "subtitle_end_overrun_seconds": null,
+    "historical_v001_audio": {
+      "master_mix_path": "SBT_0 (Remastered).mp3",
+      "lead_vocal_stem_path": null,
+      "lyrics_alignment_path": "lyrics.embedded.v001.srt",
+      "bpm": null,
+      "duration_seconds": 233.48,
+      "status": "files_received_decoded_pending_listening_and_lyric_sync_review",
+      "embedded_lyric_container_path": "SBT_0 (Remastered).m4a",
+      "media_intake_path": "media_intake.v001.json",
+      "timing_state": "provisional_from_embedded_subtitles",
+      "initial_unlabelled_region_seconds": [
+        0,
+        2.314
+      ],
+      "subtitle_end_overrun_seconds": 3.259
+    }
+  },
+  "delivery": {
+    "aspect_ratio": null,
+    "fps": null,
+    "width": null,
+    "height": null,
+    "editor_project_path": null
+  },
+  "creative_read": "Author-confirmed central irony: the supposedly immoral, greedy smuggler sacrifices himself for love. Keep his mercenary instincts convincing; his actions contradict his strictly-business claims, with Leia, the farewell and loss of freedom at the center.",
+  "creative_direction_source": "Ziggy's October 4, 2026 correction: emphasize irony and self-sacrifice for love over the earlier general loyalty reading.",
+  "directing_constraints": [
+    "Keep greed and swagger credible; do not imply all his selfishness was merely an act.",
+    "The return to battle introduces the contradiction; love and the farewell give the sacrifice its personal meaning.",
+    "Do not imply literal death or that he knowingly chose carbonite.",
+    "Retain his scoundrel voice at the ending; repeat the business boast against the visible cost of love."
+  ],
+  "cast": {
+    "confirmed_roles": {
+      "Hon Dolo": "lead rapper",
+      "Chewbacca": "MC, DJ and copilot",
+      "Leia": "love at the center of the ironic self-sacrifice",
+      "Darth Vader": "trap and consequence",
+      "Boba Fett": "bounty pressure",
+      "Jabba the Hutt": "debt pressure"
+    },
+    "unresolved": [
+      "Whether the kid should become an on-screen Luke cameo",
+      "Meaning and visual treatment of Lisan Al Gaib and Voice from the outer world",
+      "Specific treatment of Panhandlers shout-out"
+    ],
+    "reference_collection": {
+      "index_path": "../../casting/grok_intake_20261006/index.html",
+      "manifest_path": "../../casting/grok_intake_20261006/manifest.json",
+      "design_direction_path": "../../casting/grok_intake_20261006/design_handoff.json",
+      "state": "through_314_drop_inventoried_reported_grok_design_anchor_received_id_mapping_incomplete",
+      "new_image_files": 297,
+      "new_unique_image_hashes": 268,
+      "all_reference_directory_image_files": 415,
+      "supporting_cast_studies": 8,
+      "note": "Supplied through-314 brief names LOCK-FACE as Grok design anchor; no accepted Comfy identity paths or shot timings populated. 159 hash-named stills remain unmapped; walk clips are still-based scaffolds.",
+      "historical_october4_collection": {
+        "index_path": "../../casting/grok_intake_20261004/index.html",
+        "manifest_path": "../../casting/grok_intake_20261004/manifest.json",
+        "design_direction_path": "../../casting/grok_intake_20261004/design_direction.json",
+        "state": "initial_collection_reviewed_later_component_selections_numbered_originals_pending",
+        "image_count": 106,
+        "numbered_lead_concepts": 90,
+        "early_and_placeholder_studies": 8,
+        "supporting_cast_studies": 8,
+        "note": "Author component locks/preferences are recorded in design revision 2; no new numbered source paths or accepted identity-master references are populated.",
+        "design_direction_revision": 2
+      }
+    }
+  },
+  "defaults": {
+    "render_authorized": false,
+    "accepted_reference_paths": [],
+    "template_id": null,
+    "workflow_id": null,
+    "seed": null,
+    "estimated_cost": null,
+    "output_path": null,
+    "review_state": "planned_not_generated"
+  },
+  "handoff_rules": [
+    "Lyric lines are source metadata, not a positive prompt to paste wholesale into generation.",
+    "Use recorded vocal/audio segments for exact words, phrasing and lip sync; do not synthesize replacements implicitly.",
+    "Resolve appearance, design, performance and audio reference roles separately.",
+    "Map each selected shot to a verified existing template, then inspect compiled inputs and costs before a bounded run.",
+    "Use original source audio/timecodes; frame-grid adjustments require measured sync checks.",
+    "Retain native provider original and effective prompt/reference order if adopting MiniMax regeneration; do not trim/reencode that original."
+  ],
+  "sections": [
+    {
+      "id": "S01",
+      "source_heading": " [Chorus]",
+      "source_line_start": 2,
+      "source_line_end": 8,
+      "beat": "Payment before passage",
+      "dramatic_job": "Swagger and transaction",
+      "start_seconds": 2.314,
+      "end_seconds": 18.91,
+      "candidate_shots": [
+        {
+          "id": "S01A",
+          "title": "Hon Dolo sells the ride",
+          "route_family": "rap_lipsync",
+          "visual_prompt_draft": "Hon Dolo performs directly to camera beside the Falcon boarding ramp, with a confident half-smile and one restrained counting gesture. Medium close-up, readable face, consistent approved costume and facial marks.",
+          "subjects": "Hon Dolo",
+          "preserve": [
+            "likeness",
+            "tattoo placement",
+            "grill geometry"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        },
+        {
+          "id": "S01B",
+          "title": "Count it twice",
+          "route_family": "image_to_video",
+          "visual_prompt_draft": "Close insert of credit chips being counted twice on a battered ship console beside a dim fuel display. A single hand movement, tactile metal and worn surfaces.",
+          "subjects": "hand/prop insert",
+          "preserve": [
+            "finger anatomy",
+            "credit and console geometry"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        }
+      ],
+      "timing_evidence": {
+        "source": "lyrics.embedded.v001.srt",
+        "section_marker_cue_id": 1,
+        "state": "provisional_subtitle_metadata_not_listening_verified",
+        "end_boundary": "next_section_marker"
+      }
+    },
+    {
+      "id": "S02",
+      "source_heading": "[Verse]",
+      "source_line_start": 9,
+      "source_line_end": 21,
+      "beat": "Debt beneath the boasting",
+      "dramatic_job": "The bravado has creditors",
+      "start_seconds": 18.91,
+      "end_seconds": 63.191,
+      "candidate_shots": [
+        {
+          "id": "S02A",
+          "title": "Jabba expects payment",
+          "route_family": "image_to_video",
+          "visual_prompt_draft": "Jabba watches from a low-lit counting room, surrounded by ledgers and cargo tokens. Slow, restrained movement; theatrical wealth and pressure.",
+          "subjects": "Jabba",
+          "preserve": [
+            "creature anatomy",
+            "scale"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        },
+        {
+          "id": "S02B",
+          "title": "Boba watches the bay",
+          "route_family": "image_to_video",
+          "visual_prompt_draft": "Boba Fett stands motionless at the edge of a busy loading bay while the Falcon sits in the distance. One slight helmet turn toward the ship.",
+          "subjects": "Boba Fett",
+          "preserve": [
+            "helmet silhouette",
+            "costume"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        },
+        {
+          "id": "S02C",
+          "title": "Captain portrait",
+          "route_family": "rap_lipsync",
+          "visual_prompt_draft": "Hon Dolo delivers a boast from the Falcon cockpit, leaning back with exaggerated captainly dignity, hands kept clear of his face. Medium close-up.",
+          "subjects": "Hon Dolo",
+          "preserve": [
+            "likeness",
+            "grill",
+            "mouth timing"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        },
+        {
+          "id": "S02D",
+          "title": "The junky ship proves itself",
+          "route_family": "image_to_video",
+          "visual_prompt_draft": "The battered Millennium Falcon makes one clean evasive bank past a massive warship. Wide exterior, coherent ship silhouette and readable flight direction.",
+          "subjects": "Falcon exterior",
+          "preserve": [
+            "ship geometry",
+            "camera continuity"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        }
+      ],
+      "timing_evidence": {
+        "source": "lyrics.embedded.v001.srt",
+        "section_marker_cue_id": 6,
+        "state": "provisional_subtitle_metadata_not_listening_verified",
+        "end_boundary": "next_section_marker"
+      }
+    },
+    {
+      "id": "S03",
+      "source_heading": "[Chorus]",
+      "source_line_start": 22,
+      "source_line_end": 27,
+      "beat": "First doubt in the hook",
+      "dramatic_job": "Foreshadow the turn",
+      "start_seconds": 63.191,
+      "end_seconds": 76.835,
+      "candidate_shots": [
+        {
+          "id": "S03A",
+          "title": "A glance away from the money",
+          "route_family": "rap_lipsync",
+          "visual_prompt_draft": "Repeat the opening Hon Dolo performance framing; he pauses his counting gesture and glances toward the cockpit exit. The credit stack remains in frame.",
+          "subjects": "Hon Dolo",
+          "preserve": [
+            "opening look and lighting",
+            "facial marks"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        }
+      ],
+      "timing_evidence": {
+        "source": "lyrics.embedded.v001.srt",
+        "section_marker_cue_id": 16,
+        "state": "provisional_subtitle_metadata_not_listening_verified",
+        "end_boundary": "next_section_marker"
+      }
+    },
+    {
+      "id": "S04",
+      "source_heading": "[Verse 2]",
+      "source_line_start": 28,
+      "source_line_end": 40,
+      "beat": "A home and a crew",
+      "dramatic_job": "The love-driven protection promise contradicts his demand for a fee",
+      "start_seconds": 76.835,
+      "end_seconds": 110.027,
+      "candidate_shots": [
+        {
+          "id": "S04A",
+          "title": "Leia surveys the junky home",
+          "route_family": "image_to_video",
+          "visual_prompt_draft": "Leia looks around the worn Falcon interior and raises one skeptical eyebrow. Single-character reaction shot with warm practical lighting.",
+          "subjects": "Leia",
+          "preserve": [
+            "likeness and costume"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        },
+        {
+          "id": "S04B",
+          "title": "Chewie drops the beat",
+          "route_family": "performance_transfer",
+          "visual_prompt_draft": "Chewbacca as a trap DJ, oversized headphones and bandolier, makes one deliberate fader adjustment on a controller integrated into the Falcon console. Keep the hand and fader visible.",
+          "subjects": "Chewbacca",
+          "preserve": [
+            "fur",
+            "muzzle",
+            "hand anatomy",
+            "fader contact"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        },
+        {
+          "id": "S04C",
+          "title": "The protection promise",
+          "route_family": "rap_lipsync",
+          "visual_prompt_draft": "Hon Dolo's cocky expression briefly softens as he looks toward Leia just off camera, then returns to his performance. Tight portrait, minimal head movement.",
+          "subjects": "Hon Dolo",
+          "preserve": [
+            "identity",
+            "eye line and costume"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        }
+      ],
+      "timing_evidence": {
+        "source": "lyrics.embedded.v001.srt",
+        "section_marker_cue_id": 21,
+        "state": "provisional_subtitle_metadata_not_listening_verified",
+        "end_boundary": "next_section_marker"
+      }
+    },
+    {
+      "id": "S05",
+      "source_heading": "[Bridge]",
+      "source_line_start": 41,
+      "source_line_end": 44,
+      "beat": "First ignition",
+      "dramatic_job": "The boast becomes movement",
+      "start_seconds": 110.027,
+      "end_seconds": 119.601,
+      "candidate_shots": [
+        {
+          "id": "S05A",
+          "title": "Thrusters light",
+          "route_family": "image_to_video",
+          "visual_prompt_draft": "The Falcon's rear thrusters flare and the ship begins moving forward out of the hangar. One exterior action, no scene change.",
+          "subjects": "Falcon exterior",
+          "preserve": [
+            "silhouette and direction"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        }
+      ],
+      "timing_evidence": {
+        "source": "lyrics.embedded.v001.srt",
+        "section_marker_cue_id": 31,
+        "state": "provisional_subtitle_metadata_not_listening_verified",
+        "end_boundary": "next_section_marker"
+      }
+    },
+    {
+      "id": "S06",
+      "source_heading": "[Chorus]",
+      "source_line_start": 45,
+      "source_line_end": 50,
+      "beat": "Chewie sees through him",
+      "dramatic_job": "The hook becomes an argument",
+      "start_seconds": 119.601,
+      "end_seconds": 134.441,
+      "candidate_shots": [
+        {
+          "id": "S06A",
+          "title": "The copilot's look",
+          "route_family": "image_to_video",
+          "visual_prompt_draft": "Chewbacca turns from his controls to give Hon Dolo, off camera, a knowing look, holding that expression. Medium close-up, restrained fur movement.",
+          "subjects": "Chewbacca",
+          "preserve": [
+            "muzzle",
+            "eyes",
+            "fur pattern"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        }
+      ],
+      "timing_evidence": {
+        "source": "lyrics.embedded.v001.srt",
+        "section_marker_cue_id": 34,
+        "state": "provisional_subtitle_metadata_not_listening_verified",
+        "end_boundary": "next_section_marker"
+      }
+    },
+    {
+      "id": "S07",
+      "source_heading": "[Verse 2]",
+      "source_line_start": 51,
+      "source_line_end": 71,
+      "beat": "The clean exit and the choice",
+      "dramatic_job": "His actions contradict his business rule, foreshadowing the love-driven sacrifice",
+      "start_seconds": 134.441,
+      "end_seconds": 149.202,
+      "candidate_shots": [
+        {
+          "id": "S07A",
+          "title": "Still has not hit the gas",
+          "route_family": "image_to_video",
+          "visual_prompt_draft": "Hon Dolo sits in the pilot seat with his hand hovering over the throttle. Cargo and payment are secured behind him; his attention stays on a distant distress display. One held moment of hesitation.",
+          "subjects": "Hon Dolo",
+          "preserve": [
+            "hand anatomy",
+            "cockpit layout"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        },
+        {
+          "id": "S07B",
+          "title": "Swing her back",
+          "route_family": "image_to_video",
+          "visual_prompt_draft": "The Falcon makes a decisive banking turn from a clear escape route toward a distant battle. Wide shot with readable direction and stable ship geometry.",
+          "subjects": "Falcon exterior",
+          "preserve": [
+            "flight direction",
+            "ship silhouette"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        }
+      ],
+      "timing_evidence": {
+        "source": "lyrics.embedded.v001.srt",
+        "section_marker_cue_id": 39,
+        "state": "provisional_subtitle_metadata_not_listening_verified",
+        "end_boundary": "next_section_marker"
+      }
+    },
+    {
+      "id": "S08",
+      "source_heading": "[Bridge]",
+      "source_line_start": 72,
+      "source_line_end": 74,
+      "beat": "Second ignition",
+      "dramatic_job": "Now the speed has a purpose",
+      "start_seconds": 149.202,
+      "end_seconds": 156.144,
+      "candidate_shots": [
+        {
+          "id": "S08A",
+          "title": "The committed control movement",
+          "route_family": "performance_transfer",
+          "visual_prompt_draft": "Close insert of Hon Dolo pushing the throttle fully forward with one decisive movement, cockpit lights responding. Keep the hand and control visible.",
+          "subjects": "Hon Dolo hand/prop insert",
+          "preserve": [
+            "hand contact",
+            "control geometry"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        }
+      ],
+      "timing_evidence": {
+        "source": "lyrics.embedded.v001.srt",
+        "section_marker_cue_id": 56,
+        "state": "provisional_subtitle_metadata_not_listening_verified",
+        "end_boundary": "next_section_marker"
+      }
+    },
+    {
+      "id": "S09",
+      "source_heading": "[Chorus]",
+      "source_line_start": 75,
+      "source_line_end": 80,
+      "beat": "Return toward danger",
+      "dramatic_job": "The hook now has an answer",
+      "start_seconds": 156.144,
+      "end_seconds": 170.745,
+      "candidate_shots": [
+        {
+          "id": "S09A",
+          "title": "Committed performance",
+          "route_family": "rap_lipsync",
+          "visual_prompt_draft": "Hon Dolo performs from the cockpit with steady resolve, battle light reflected across his face. Match his established appearance and keep camera movement slight.",
+          "subjects": "Hon Dolo",
+          "preserve": [
+            "identity",
+            "tattoos",
+            "grill and lighting continuity"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        }
+      ],
+      "timing_evidence": {
+        "source": "lyrics.embedded.v001.srt",
+        "section_marker_cue_id": 58,
+        "state": "provisional_subtitle_metadata_not_listening_verified",
+        "end_boundary": "next_section_marker"
+      }
+    },
+    {
+      "id": "S10",
+      "source_heading": "[Verse 3]",
+      "source_line_start": 81,
+      "source_line_end": 102,
+      "beat": "The price comes due",
+      "dramatic_job": "The supposedly immoral smuggler sacrifices himself for love; the farewell and loss of freedom expose the irony",
+      "start_seconds": 170.745,
+      "end_seconds": 201.303,
+      "candidate_shots": [
+        {
+          "id": "S10A",
+          "title": "Dinner with Vader",
+          "route_family": "image_to_video",
+          "visual_prompt_draft": "Darth Vader sits at the far end of an immaculate dining table, almost completely still. Symmetrical wide composition, polished setting and an empty place in the foreground.",
+          "subjects": "Darth Vader",
+          "preserve": [
+            "helmet and table geometry"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        },
+        {
+          "id": "S10B",
+          "title": "I know",
+          "route_family": "rap_lipsync",
+          "visual_prompt_draft": "Tight portrait of Hon Dolo looking toward Leia off camera with affection under his familiar confidence. One restrained facial performance in cool chamber light.",
+          "subjects": "Hon Dolo",
+          "preserve": [
+            "likeness",
+            "eye line",
+            "mouth timing"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        },
+        {
+          "id": "S10C",
+          "title": "Carbon Knight",
+          "route_family": "image_to_video",
+          "visual_prompt_draft": "A finished carbonite slab bearing Hon Dolo's frozen silhouette emerges through cold vapor. Slow reveal, no anatomical transformation within this shot.",
+          "subjects": "Hon Dolo carbonite prop",
+          "preserve": [
+            "frozen silhouette and slab geometry"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        }
+      ],
+      "timing_evidence": {
+        "source": "lyrics.embedded.v001.srt",
+        "section_marker_cue_id": 63,
+        "state": "provisional_subtitle_metadata_not_listening_verified",
+        "end_boundary": "next_section_marker"
+      }
+    },
+    {
+      "id": "S11",
+      "source_heading": "[Final Chorus]",
+      "source_line_start": 103,
+      "source_line_end": 108,
+      "beat": "The last bill",
+      "dramatic_job": "Repeat the mercenary boast against his sacrifice for love so the irony lands",
+      "start_seconds": 201.303,
+      "end_seconds": 213.431,
+      "candidate_shots": [
+        {
+          "id": "S11A",
+          "title": "The refrain changes meaning",
+          "route_family": "rap_lipsync",
+          "visual_prompt_draft": "Return to the established Hon Dolo performance portrait with the same cocky salesman's bearing and credit stack as the opening. Hold his familiar confident expression for a later editorial juxtaposition with the farewell to Leia and carbonite reveal.",
+          "subjects": "Hon Dolo",
+          "preserve": [
+            "recurring framing",
+            "approved appearance"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        }
+      ],
+      "timing_evidence": {
+        "source": "lyrics.embedded.v001.srt",
+        "section_marker_cue_id": 80,
+        "state": "provisional_subtitle_metadata_not_listening_verified",
+        "end_boundary": "next_section_marker"
+      }
+    },
+    {
+      "id": "S12",
+      "source_heading": "[Outro]",
+      "source_line_start": 109,
+      "source_line_end": 126,
+      "beat": "Outro and acknowledgement",
+      "dramatic_job": "Leave room for the deeper allusions",
+      "start_seconds": 213.431,
+      "end_seconds": 233.48,
+      "candidate_shots": [
+        {
+          "id": "S12A",
+          "title": "Chewie holds the room",
+          "route_family": "image_to_video",
+          "visual_prompt_draft": "Chewbacca stands at the DJ console as the performance lighting settles, holding a calm final pose. Leave clear composition space for an editorial title added later.",
+          "subjects": "Chewbacca",
+          "preserve": [
+            "fur",
+            "silhouette",
+            "deck layout"
+          ],
+          "start_seconds": null,
+          "end_seconds": null,
+          "appearance_image": null,
+          "style_reference": null,
+          "driving_video": null,
+          "source_video_start_seconds": null,
+          "source_video_end_seconds": null,
+          "vocal_segment": null,
+          "selected_template_id": null,
+          "selected_workflow_id": null,
+          "render_state": "not_submitted"
+        }
+      ],
+      "timing_evidence": {
+        "source": "lyrics.embedded.v001.srt",
+        "section_marker_cue_id": 85,
+        "state": "provisional_subtitle_metadata_not_listening_verified",
+        "end_boundary": "MP3_decoded_end_raw_subtitle_overrun_retained_in_SRT"
+      }
+    }
+  ],
+  "unresolved_story_choices": [
+    "Farewell coverage can precede final carbonite reveal even though lyric mentions ice first; this is a proposed editorial choice.",
+    "Keep early turnaround choruses as foreshadowing and reserve the full committed ship turn for S07.",
+    "88 and Captain Falcon references remain lyrical jokes; no additional franchise assets automatically added.",
+    "Every sequence may need more or fewer shots after listening to the recording."
+  ],
+  "minimax_alternative": {
+    "status": "official_template_and_code_reviewed_account_unverified_no_run",
+    "primary_template_id": "api_minimax_h3_max_r2v",
+    "regeneration_node_class": "MinimaxHailuo03RegenerateNode",
+    "role": "conditional hosted H3-origin 2K regeneration, distinct from native H3 creative editing",
+    "sequence": [
+      "H3 Max 768P generation",
+      "review intact original",
+      "regenerate to 2K",
+      "compare and accept",
+      "post lip-sync or compositing if needed",
+      "timeline edit with original song mix"
+    ],
+    "source_output_path": null,
+    "effective_prompt": null,
+    "ordered_references": [],
+    "first_frame": null,
+    "last_frame": null,
+    "source_generation_record": null,
+    "quote": null,
+    "contract": {
+      "unmodified_source_required": true,
+      "exact_effective_prompt_required": true,
+      "same_reference_order_required": true,
+      "keyframes_and_reference_media_mutually_exclusive": true,
+      "source_fps": 24,
+      "source_frames": {
+        "min": 107,
+        "max": 362,
+        "step": 17
+      },
+      "dimension_multiple": 32,
+      "max_source_pixels": 1032192,
+      "output_resolution_label": "2K",
+      "native_h3_source_compatibility": "unverified",
+      "other_model_source_compatibility": "not_established"
+    },
+    "sources": [
+      "https://github.com/Comfy-Org/workflow_templates/blob/main/templates/api_minimax_h3_max_r2v.json",
+      "https://github.com/Comfy-Org/ComfyUI/blob/master/comfy_api_nodes/nodes_minimax.py"
+    ],
+    "requires_new_acceptance_review": true
+  },
+  "updated": "2026-10-07",
+  "lyrics_source_v001": {
+    "path": "lyrics.user.v001.txt",
+    "sha256": "6b87662275e6547f9e16c3655221651b9b0a170789b3058be5d8273bd4bc8cab",
+    "bytes": 3644,
+    "lines": 126,
+    "provenance": "User supplied song text in this conversation on 2026-10-04.",
+    "preserve_wording": true,
+    "preserve_duplicate_section_labels": true,
+    "normalization": "UTF-8 text; line endings may follow checkout. No lyric edits."
+  },
+  "timing_warning": "Existing numeric section intervals were derived from the older233.480s recording. They are retained for historical planning only; do not use them to trim or sync the refreshed234.960s song until realigned."
+}

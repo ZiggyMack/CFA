@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "checked_on_local": "2026-10-04",
+  "status": "cloud_saved_and_dry_run_validated_not_rendered",
+  "workflow": {
+    "id": "2a60a23f-f68a-4a66-92c6-0e30aa0d5e03",
+    "name": "Hon Dolo - Image Refinement SDXL v001",
+    "filename": "hon-dolo-image-refinement-sdxl-v001.json",
+    "version": 2,
+    "url": "https://cloud.comfy.org/#2a60a23f-f68a-4a66-92c6-0e30aa0d5e03",
+    "graph_id": "cf871a87-6923-49be-ab16-61c9d697244f"
+  },
+  "source": {
+    "template_id": "image_sdxl_simple",
+    "template_url": "https://cloud.comfy.org/templates/image_sdxl_simple.json",
+    "template_canvas_nodes": 8,
+    "tutorial_url": "https://www.youtube.com/watch?v=xedwjtaPVzw",
+    "transcript": "../references/comfy_episode04_img2img_lora_20261004.user_transcript.txt",
+    "transcript_sha256": "888309d77ef3e99127566a556253727c00aaaacead3f81b72be644dd5f672a17",
+    "tutorial_video_independently_watched": false,
+    "official_img2img_example": "https://comfyanonymous.github.io/ComfyUI_examples/img2img/",
+    "model_card": "https://huggingface.co/RunDiffusion/Juggernaut-XL-v9"
+  },
+  "adaptation": [
+    "Removed EmptyLatentImage; LoadImage -> Lanczos resize -> VAEEncode now supplies KSampler.latent_image.",
+    "Selected live Cloud Juggernaut XL v9 checkpoint instead of source-template SDXL base or the tutorial's Juggernaut X.",
+    "Matching checkpoint VAE feeds both VAEEncode and VAEDecode.",
+    "Positive/negative text remains visible on native CLIPTextEncode nodes; negative is connected and initially empty.",
+    "Added connected denoise scalar default 0.30 and resized-source preview; SaveImage previews/preserves result.",
+    "Removed stale widgets_values_named fields from the source template. Version1 exposed a mismatch during compiled-input review; version2 corrected it before any render."
+  ],
+  "files": {
+    "editor": "hon_dolo_img2img_sdxl_v001.editor.json",
+    "preflight_api": "hon_dolo_img2img_sdxl_v001.preflight.api.json"
+  },
+  "input": {
+    "path": "../references/Hon Dolo_0.jpg",
+    "cloud_filename": "d7bbaad8ae990775daab8609c534fd8068a3a0a2f4a5cdf89b2f8cb1e99cb686.jpg",
+    "sha256": "36b8a58c1df187fc87e6270be2814207fc151e125fef3ef69583c0d80df7e82b",
+    "source_dimensions": [
+      1280,
+      720
+    ],
+    "role": "Grok styling template with placeholder identity, not an accepted likeness master"
+  },
+  "settings": {
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "seed": 42,
+    "seed_mode": "fixed",
+    "steps": 30,
+    "cfg": 5,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "denoise": 0.3,
+    "resize_method": "lanczos",
+    "target_megapixels": 1,
+    "resolution_steps": 8,
+    "actual_output_dimensions": null,
+    "negative_prompt": "",
+    "positive_prompt": "Photorealistic studio portrait of an adult man with wavy dark brown hair, natural facial proportions, black open-collar shirt, heavy gold chain, gold grill, face and neck tattoos, gray studio background. Soft balanced studio lighting, realistic skin pores, believable fabric and metal texture, confident expression."
+  },
+  "validation": {
+    "editor_nodes": 12,
+    "compiled_api_nodes": 11,
+    "editor_bidirectional_links": "passed",
+    "conversion_warnings": [],
+    "dry_run": "passed without warnings",
+    "resolved_input_checks": {
+      "model": true,
+      "positive": true,
+      "negativeEmpty": true,
+      "seed": true,
+      "steps": true,
+      "cfg": true,
+      "sampler": true,
+      "scheduler": true,
+      "denoise": true,
+      "imageToLatent": true,
+      "matchingVae": true,
+      "source": true,
+      "resize": true,
+      "prefix": true,
+      "noEmptyLatent": true,
+      "oneSampler": true
+    },
+    "cloud_checkpoint_loader_presence_verified": true,
+    "job_submitted": false,
+    "rendered": false,
+    "output_visual_inspection": false,
+    "browser_canvas_visual_inspection": false,
+    "limits": "Dry run validates structure against the tool catalog and is not an executed Cloud generation or visual-quality test."
+  },
+  "limitations": [
+    "Single input, whole-image SDXL refinement: no second likeness reference, mask, face adapter, ControlNet or temporal video control.",
+    "Denoise0.30 is an exploratory starting setting, not a preservation percentage or validated quality optimum.",
+    "Faces, tattoo text, teeth and jewelry may change even at low denoise.",
+    "Resize is ordinary interpolation; no learned super-resolution or 4K finishing is included.",
+    "No LoRA is enabled. Any later adapter must be compatible with SDXL; the Klein Candid Film adapter is not used here.",
+    "The main Klein editor remains the reference-likeness route; its saved graph and the existing comparison/input-check recipes were not modified."
+  ],
+  "cloud_only": {
+    "local_model_downloads": false,
+    "local_node_installs": false,
+    "new_civitai_imports": false
+  },
+  "usage": {
+    "generation_job_id": null,
+    "actual_gpu_seconds": null,
+    "actual_credits": null,
+    "note": "No generation submitted during preparation. Running the recipe may accrue Comfy Cloud runtime."
+  }
+}

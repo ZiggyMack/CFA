@@ -1,0 +1,127 @@
+{
+  "workflow": "hon_dolo_audio_replace_v001",
+  "reviewed_on": "2026-10-07",
+  "status": "editor_authored_public_schema_reviewed_cloud_unverified",
+  "intended_operation": "Replace the source soundtrack with a selected 10-second excerpt of the current song; preserve source image sequence and FPS without generative processing.",
+  "editor": {
+    "path": "hon_dolo_audio_replace_v001.editor.json",
+    "sha256": "812ee5795f3a8e25ad2479f2b44c9f3aa0d178c3b12009a4c49ae2bdf94f3d3d",
+    "format_version": 0.4,
+    "authored_directly_from_editor_examples": true,
+    "node_count": 8,
+    "link_count": 7,
+    "local_json_and_link_checks": "passed"
+  },
+  "compiled_api": {
+    "path": null,
+    "status": "not_created_pending_authenticated_server_conversion",
+    "reason": "No hand conversion from editor JSON. Actual compiled inputs must come from the Comfy server."
+  },
+  "cloud": {
+    "authentication": "unavailable_at_preparation_per_parent_probe",
+    "input_uploads": "not_performed",
+    "node_availability": "unverified",
+    "editor_import": "not_performed",
+    "server_conversion": "not_performed",
+    "dry_run_validation": "not_performed",
+    "workflow_save": "not_performed",
+    "execution": "not_performed",
+    "acceptance": "pending"
+  },
+  "input_files": [
+    {
+      "role": "picture",
+      "local_path": "../references/Gemini Video/gemini_generated_video_c0823c60.mp4",
+      "expected_cloud_name": "gemini_generated_video_c0823c60.mp4",
+      "cloud_presence": "unknown",
+      "recorded_picture": {
+        "width": 1280,
+        "height": 720,
+        "fps": 24,
+        "frames": 240,
+        "duration_seconds": 10.0,
+        "bit_depth": 8,
+        "color_space": "SDR"
+      },
+      "original_audio": "intentionally disconnected"
+    },
+    {
+      "role": "replacement_sound",
+      "local_path": "../references/Music/DoLoSoLo_0 (Remastered).mp3",
+      "expected_cloud_name": "DoLoSoLo_0 (Remastered).mp3",
+      "cloud_presence": "unknown",
+      "recorded_decoded_duration_seconds": 234.96,
+      "start_index_seconds": 0.0,
+      "duration_seconds": 10.0,
+      "selection_status": "opening excerpt for draft preview; no lyric alignment claimed"
+    }
+  ],
+  "routing": {
+    "frames": "LoadVideo -> GetVideoComponents.images -> CreateVideo.images",
+    "fps": "GetVideoComponents.fps -> CreateVideo.fps",
+    "replacement_audio": "LoadAudio -> TrimAudioDuration -> CreateVideo.audio and PreviewAudio",
+    "source_audio": "GetVideoComponents.audio unconnected",
+    "output": "CreateVideo -> SaveVideo (MP4, auto codec)"
+  },
+  "dependencies": {
+    "native_nodes": [
+      "LoadVideo",
+      "GetVideoComponents",
+      "LoadAudio",
+      "TrimAudioDuration",
+      "CreateVideo",
+      "PreviewAudio",
+      "SaveVideo"
+    ],
+    "frontend_only_nodes": [
+      "Note"
+    ],
+    "external_models": [],
+    "custom_node_packages": []
+  },
+  "schema_evidence": [
+    {
+      "url": "https://github.com/Comfy-Org/ComfyUI/blob/master/comfy_extras/nodes_video.py",
+      "review": "Public master reviewed through raw source on 2026-10-07; mutable revision, not a pinned Cloud installation.",
+      "observed": "LoadVideo uses file. Components supplies images/audio/fps/bit_depth/color_space. CreateVideo takes images, fps and optional audio/bit_depth/color_space/codec. SaveVideo offers dynamic format/codec choices."
+    },
+    {
+      "url": "https://github.com/Comfy-Org/ComfyUI/blob/master/comfy_extras/nodes_audio.py",
+      "review": "Public master reviewed through raw source on 2026-10-07; mutable revision, not a pinned Cloud installation.",
+      "observed": "LoadAudio uses audio. TrimAudioDuration uses start_index and duration in seconds. PreviewAudio accepts and outputs AUDIO."
+    }
+  ],
+  "editor_examples": [
+    {
+      "path": "upstream/video_ltx2_5_union_control_20261003.editor.json",
+      "sha256": "cf3553a6bafd8d5398f36cfe06dc580a13dddea9387cc57b4a17c2c14c9a4df0",
+      "reuse": "LoadVideo, GetVideoComponents, CreateVideo and Note editor structure; current public optional widget/schema adjustments."
+    },
+    {
+      "path": "upstream/api_sync_so_lip_sync_video.json",
+      "sha256": "33cf05c95888f6d201cd87bb685ffc855f8492422fda6687c1a690f64b237a4f",
+      "reuse": "LoadAudio and SaveVideo editor structure; no SyncLipSyncNode included."
+    }
+  ],
+  "lesson": "../../../../../../Pan_Handlers/Help/guides/video_handoff.py (frames_native route)",
+  "limitations": [
+    "Native frame assembly decodes and re-encodes video; compressed video stream identity is not retained. The separate local stream-copy preview is a different operation.",
+    "No face generation, mouth editing, beat matching, lyric alignment or lip-sync.",
+    "PreviewAudio executes only when queued; it is not evidence that the excerpt has been listened to.",
+    "Public master schemas may be newer than Cloud. Verify CreateVideo optional widgets, GetVideoComponents output list, SaveVideo dynamic format/codec serialization and LoadAudio upload widgets during authenticated conversion.",
+    "MP3 decoding and output audio encoding may introduce codec delay or duration rounding; measure final file and listen before accepting.",
+    "Source FPS is connected; 24 in the widget is only a fallback display. No resizing, retiming or interpolation nodes are present."
+  ],
+  "required_before_run": [
+    "Authenticate and inspect live schemas.",
+    "Upload/select existing source media with the actual returned Cloud filenames.",
+    "Import/editor server conversion; inspect actual compiled inputs and dry-run validation.",
+    "Check only the intended output branches are active and confirm usage scope before one bounded run."
+  ],
+  "acceptance_checks": [
+    "Decoded output: 1280 x 720, 24 fps, 240 frames; no deliberate timing or framing changes.",
+    "Only the requested song excerpt is audible; source soundtrack absent.",
+    "Measure final audio/video duration and check sync by listening, without claiming mouth alignment.",
+    "Keep actual executed graph, output, settings, measured costs and defects with the run record."
+  ]
+}

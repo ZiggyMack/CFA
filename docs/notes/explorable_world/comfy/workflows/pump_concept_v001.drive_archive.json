@@ -1,0 +1,81 @@
+{
+    "schema_version":  1,
+    "record_type":  "drive_archive_receipt",
+    "status":  "remote_folders_visible_file_verification_pending",
+    "experiment_id":  "pump_concept_v001",
+    "asset_id":  "observatory_pump_housing_001",
+    "provider_job_id":  "cb835f1e-3b10-4972-860c-fb83fb0517c0",
+    "prepared_at_utc":  "2026-09-12T16:12:44.032463+00:00",
+    "destination_folder":  "G:\\My Drive\\CFA Observatory\\Originals\\pump_concept_v001",
+    "file_count":  6,
+    "total_content_bytes":  929950,
+    "files":  [
+                  {
+                      "source_path":  "docs/notes/explorable_world/comfy/outputs/pump_concept_v001.png",
+                      "archive_filename":  "pump_concept_v001.png",
+                      "size_bytes":  859874,
+                      "sha256":  "5777aaf41b6343e999033d357c136cc18d840a35f565b98d72895c974027e0c4"
+                  },
+                  {
+                      "source_path":  "docs/notes/explorable_world/comfy/workflows/pump_concept_v001.record.json",
+                      "archive_filename":  "pump_concept_v001.record.json",
+                      "size_bytes":  9334,
+                      "sha256":  "30eb2aa920c9d756f1f5ac0650694e7bbef9d59a4b24de2c9b44c77a415cf2ab"
+                  },
+                  {
+                      "source_path":  "docs/notes/explorable_world/comfy/workflows/pump_concept_v001.editor.json",
+                      "archive_filename":  "pump_concept_v001.editor.json",
+                      "size_bytes":  29101,
+                      "sha256":  "da506499a61d427ecf6c844e578de2cd68fc4320c7b36ad2a75fb4e387a94359"
+                  },
+                  {
+                      "source_path":  "docs/notes/explorable_world/comfy/workflows/pump_concept_v001.api.json",
+                      "archive_filename":  "pump_concept_v001.api.json",
+                      "size_bytes":  3475,
+                      "sha256":  "4661cf9f818215442e93b843577367f60345eba0bb3fba8fb4d42c39c7904d4d"
+                  },
+                  {
+                      "source_path":  "docs/notes/explorable_world/comfy/workflows/pump_concept_v001.template.editor.json",
+                      "archive_filename":  "pump_concept_v001.template.editor.json",
+                      "size_bytes":  27172,
+                      "sha256":  "307904f13211cfa5405b308e748ef8035c68991b5bb4cfd4733daed9bc511b77"
+                  },
+                  {
+                      "source_path":  "docs/notes/explorable_world/comfy/pump_concept_prompt.txt",
+                      "archive_filename":  "pump_concept_prompt.txt",
+                      "size_bytes":  994,
+                      "sha256":  "bcb33a3228b6a0009f173e19b04e7ecbd1d1fa97e27f90105848e2b88e96fc99"
+                  }
+              ],
+    "local_copy_verified_at_utc":  "2026-09-12T16:12:49.9518305Z",
+    "sync_root_verified":  true,
+    "sync_root_evidence":  "Ziggy's September 12 screenshots show CFA Observatory and its Originals, Approved Assets, and Builds folders in Drive's web interface, matching the G: setup.",
+    "remote_folder_visibility_verified":  true,
+    "remote_folder_visibility_observed_at_utc":  "2026-09-12T16:18:49Z",
+    "remote_folder_visibility_scope":  "CFA Observatory and its three immediate subfolders; screenshots do not show the pump files or their contents.",
+    "remote_upload_verified":  false,
+    "remote_retrieval_verified":  false,
+    "remote_folder_id":  null,
+    "remote_file_ids":  {
+
+                        },
+    "remote_retrieval_verified_at_utc":  null,
+    "notes":  [
+                  "A local file/hash match does not establish Google Drive upload or remote retrieval.",
+                  "Preserve the original project PNG until an independent remote retrieval is verified.",
+                  "The archived run record is a snapshot; source-relative paths refer to the CFA repository.",
+                  "The initial D: copy did not establish synchronization; its evidence is preserved under previous_attempts."
+              ],
+    "previous_attempts":  [
+                              {
+                                  "destination_folder":  "D:\\Google Drive\\CFA Observatory\\Originals\\pump_concept_v001",
+                                  "status":  "local_copy_verified_remote_pending",
+                                  "local_copy_verified_at_utc":  "2026-09-12T16:03:23.2647604Z",
+                                  "remote_upload_verified":  false,
+                                  "user_observation":  "Ziggy does not see the test online and identifies this D: directory as an older Google Drive archive.",
+                                  "correction":  "Use the user-identified G:\\My Drive mount; preserve the old local copy."
+                              }
+                          ],
+    "mount_access_verified":  true,
+    "mount_access_evidence":  "G:\\My Drive is accessible to a shell outside the sandbox; Ziggy identified it as the live Drive mount."
+}

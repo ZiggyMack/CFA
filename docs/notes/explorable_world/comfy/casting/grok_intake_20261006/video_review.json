@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-06",
+  "scope": "Full video decode plus sampled-frame inspection; no normal-speed playback review. Original media unchanged.",
+  "source_readme": {
+    "path": "docs/notes/explorable_world/comfy/references/hon-dolo-walk-pack/README.md",
+    "bytes": 1245,
+    "sha256": "59daa75a283ac1a8c2deb173cadb30b7c8c6b821bd5ad1c5c3c3a9643509a2f4"
+  },
+  "videos": [
+    {
+      "source": {
+        "path": "docs/notes/explorable_world/comfy/references/hon-dolo-walk-pack/HD-EXP-WALK-CLIP-keyframe-loop.mp4",
+        "bytes": 914877,
+        "sha256": "1528e6047e1800f3a4a57677dce495bb1eed308ba60fd79ffdd3d098c5894ab7"
+      },
+      "exact_copy_paths": [
+        "docs/notes/explorable_world/comfy/references/hon-dolo-walk-pack/HD-EXP-WALK-CLIP-keyframe-loop.mp4",
+        "docs/notes/explorable_world/comfy/references/HD-EXP-WALK-CLIP-keyframe-loop.mp4"
+      ],
+      "codec": "h264",
+      "width": 1280,
+      "height": 720,
+      "fps": 12.0,
+      "decoded_frames": 38,
+      "nominal_cfr_seconds": 3.1666666666666665,
+      "audio_stream_present": false,
+      "full_decode_passed": true,
+      "nearest_source_still_runs": [
+        {
+          "source_jpg": "HD-EXP-306-walk-front-contact.jpg",
+          "start_frame": 0,
+          "end_frame_inclusive": 4,
+          "max_thumbnail_mae": 0.5483940972222222
+        },
+        {
+          "source_jpg": "HD-EXP-307-walk-front-mid.jpg",
+          "start_frame": 5,
+          "end_frame_inclusive": 9,
+          "max_thumbnail_mae": 0.5653211805555556
+        },
+        {
+          "source_jpg": "HD-EXP-308-walk-front-pushoff.jpg",
+          "start_frame": 10,
+          "end_frame_inclusive": 13,
+          "max_thumbnail_mae": 0.5051721643518519
+        },
+        {
+          "source_jpg": "HD-EXP-307-walk-front-mid.jpg",
+          "start_frame": 14,
+          "end_frame_inclusive": 18,
+          "max_thumbnail_mae": 0.5708550347222222
+        },
+        {
+          "source_jpg": "HD-EXP-309-walk-side-contact.jpg",
+          "start_frame": 19,
+          "end_frame_inclusive": 23,
+          "max_thumbnail_mae": 0.5218460648148148
+        },
+        {
+          "source_jpg": "HD-EXP-310-walk-side-mid.jpg",
+          "start_frame": 24,
+          "end_frame_inclusive": 28,
+          "max_thumbnail_mae": 0.5646339699074074
+        },
+        {
+          "source_jpg": "HD-EXP-311-walk-side-pushoff.jpg",
+          "start_frame": 29,
+          "end_frame_inclusive": 33,
+          "max_thumbnail_mae": 0.5764612268518519
+        },
+        {
+          "source_jpg": "HD-EXP-310-walk-side-mid.jpg",
+          "start_frame": 34,
+          "end_frame_inclusive": 37,
+          "max_thumbnail_mae": 0.6610966435185185
+        }
+      ],
+      "role": "still keyframe loop",
+      "performance_accepted": false
+    },
+    {
+      "source": {
+        "path": "docs/notes/explorable_world/comfy/references/hon-dolo-walk-pack/HD-EXP-WALK-CLIP-morph.mp4",
+        "bytes": 1079650,
+        "sha256": "c3d49b51007ea6393788b2fd4fdab496e5db8fc126cace1b80217d182bd46e92"
+      },
+      "exact_copy_paths": [
+        "docs/notes/explorable_world/comfy/references/hon-dolo-walk-pack/HD-EXP-WALK-CLIP-morph.mp4",
+        "docs/notes/explorable_world/comfy/references/HD-EXP-WALK-CLIP-morph.mp4"
+      ],
+      "codec": "h264",
+      "width": 1280,
+      "height": 720,
+      "fps": 24.0,
+      "decoded_frames": 73,
+      "nominal_cfr_seconds": 3.0416666666666665,
+      "audio_stream_present": false,
+      "full_decode_passed": true,
+      "nearest_source_still_runs": [],
+      "role": "interpolated still morph",
+      "performance_accepted": false
+    }
+  ],
+  "visual_review": {
+    "method": "12 evenly spaced decoded samples per clip, supplied 9-still contact sheet, full-size morph frame 7 and LOCK-FACE. No normal-speed playback.",
+    "keyframe_clip": [
+      "Held still poses with abrupt changes in background, facial expression and angle; front and side segments are not one continuous camera shot.",
+      "The side stills retain a similar wide-stride pose, not a convincingly staged complete gait cycle."
+    ],
+    "morph_clip": [
+      "Visible blending/ghosting and smearing through transitions; frame 7 at 0.292s shows doubled facial features, torso/hand outlines and blurred overlapping feet.",
+      "Background architecture changes along with the subject; the morph does not establish a physically coherent walk or temporal identity lock."
+    ],
+    "stills": [
+      "306-311 may serve as separate outfit/pose/composition concepts; they do not establish one consistent environment or complete cyclic footfall sequence.",
+      "312 has caricature-like head/body proportions; 313 visibly holds a blaster; 314 introduces changed framing/background details and a different head turn. These observations support keeping the README exclusions."
+    ],
+    "classification": "Pose/staging scaffolds and still-transition demonstrations, not accepted generated walking footage or a clean performance-driver clip.",
+    "preservation": "Keep all originals. Root MP4s are byte-identical duplicates of pack copies; report duplicates without deletion."
+  },
+  "cloud_graph_validated": false
+}

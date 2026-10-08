@@ -1,0 +1,419 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-04",
+  "state": "user_selected_components_full_identity_master_pending",
+  "provenance": "Current user feedback plus four later screenshots and an unnumbered close-up. User corrections and latest explicit choices take precedence over older directions. Quoted Grok claims are not measured production evidence.",
+  "accepted_identity_master": null,
+  "new_generation_authorized_by_this_intake": false,
+  "component_anchors": [
+    {
+      "experiment_id": 101,
+      "note": "User locks Jabba, grill and other tattoos; chest proportions explicitly excluded. Jabba corrects transcription jaw.",
+      "original_path": null
+    },
+    {
+      "experiment_id": 103,
+      "note": "Preferred bird extent: prominent on face, tail down neck without covering or moving Jabba.",
+      "original_path": null
+    },
+    {
+      "experiment_id": 105,
+      "note": "Optional cage, near/behind ear like dangling earring; not locked.",
+      "original_path": null
+    },
+    {
+      "experiment_id": 107,
+      "note": "User locks chest ship size and position as the standard; artwork may iterate.",
+      "original_path": null
+    },
+    {
+      "experiment_id": 146,
+      "note": "Latest user-endorsed tattoo/grill continuation of #101; preserve for piercing variations. Down-neck bird-tail goal still needs reconciliation.",
+      "original_path": null
+    },
+    {
+      "experiment_id": 147,
+      "note": "User selects piercing locations; jewelry type may vary.",
+      "original_path": null
+    },
+    {
+      "experiment_id": 149,
+      "note": "User selects piercing locations; jewelry type may vary.",
+      "original_path": null
+    }
+  ],
+  "design_components": [
+    {
+      "id": "jabba",
+      "subject": "Jabba the Hutt tattoo",
+      "anchor_ids": [
+        101,
+        146
+      ],
+      "direction": "Preserve Jabba exactly as selected in #101; latest #146 tattoo/grill endorsement continues that baseline. Keep his placement and visibility while extending the bird tail. Do not interpret the earlier transcription jaw as a jaw-shape instruction.",
+      "state": "user_locked_component_original_file_pending"
+    },
+    {
+      "id": "chest_ship",
+      "subject": "Millennium Falcon spacecraft",
+      "anchor_ids": [
+        107
+      ],
+      "direction": "Use #107 proportions, position and size as the locked standard. Artwork may iterate while respecting that geometry. #101 chest proportions were explicitly excluded. #107 supersedes the previous #91 placement anchor.",
+      "state": "user_locked_size_and_position_original_file_pending"
+    },
+    {
+      "id": "jaw_bird",
+      "subject": "falcon bird, distinct from chest ship",
+      "anchor_ids": [
+        103,
+        146
+      ],
+      "direction": "Bird starts prominently on the face and tail feathers extend down the neck as in #103, without covering or moving Jabba from #101. Latest user approves #146 tattoos generally; Grok reports its tail still stops on the cheek. Preserve this unresolved difference for original-image comparison; do not claim the full tail goal is met.",
+      "state": "preferred_extension_goal_with_latest_baseline_to_reconcile"
+    },
+    {
+      "id": "bird_cage",
+      "subject": "optional bird cage tattoo",
+      "anchor_ids": [
+        105
+      ],
+      "direction": "If the cage is retained, use #105 as favorite: shift slightly back near the ear so the hanging cage reads like a dangling earring tattoo. Not selected as mandatory and distinct from physical ear jewelry.",
+      "state": "optional_not_locked"
+    },
+    {
+      "id": "captain_falcon",
+      "subject": "Captain Falcon racer imagery and Captain / Falcon tattoo words",
+      "anchor_ids": [],
+      "direction": "Remove the racer/character and the words Captain and Falcon from the tattoo design. The falcon bird and Millennium Falcon spacecraft stay. This is a visual-design change, not an instruction to edit supplied song lyrics.",
+      "state": "removed_by_user"
+    },
+    {
+      "id": "lettering",
+      "subject": "Chewie and I know",
+      "anchor_ids": [
+        101,
+        146
+      ],
+      "direction": "Keep the smaller achieved font size and same general facial locations. User is content with the sizing and allows later small placement tweaks or swapping. Do not reimpose earlier oversized or rigid numerical placement instructions. Exact sides/coordinates await numbered originals and an annotated map.",
+      "state": "user_approved_size_and_general_placement_minor_adjustments_allowed"
+    },
+    {
+      "id": "mouth",
+      "subject": "grillz",
+      "anchor_ids": [
+        101,
+        146
+      ],
+      "direction": "Preserve #101 grill design, continued in latest user-endorsed #146. This replaces further general fang/grill exploration as the current baseline. Exact tooth layout and material must be checked against numbered originals; unnumbered Photo5 visually shows an upper gold/bright-stone mix and a separate bright lower row but cannot be assigned to an experiment.",
+      "state": "user_locked_component_original_file_pending"
+    },
+    {
+      "id": "piercings",
+      "subject": "ear and nose piercings; optional lip ring",
+      "anchor_ids": [
+        147,
+        149
+      ],
+      "direction": "Preserve piercing locations from #147/#149 with small variations in jewelry type. Desired ensemble includes a conventional rapper earring in one ear, dangling jewelry in the other, and a nose piercing. Lip ring remains exploratory. Exact ear/nose sides cannot be resolved from the supplied textual references; do not invent coordinates. Keep #146 tattoos/grill undisturbed.",
+      "state": "user_selected_locations_types_under_exploration_original_files_pending"
+    },
+    {
+      "id": "jewelry",
+      "subject": "neck chains",
+      "anchor_ids": [
+        57
+      ],
+      "direction": "Use #57 chain design as an influence; user suggested perhaps two chains. Inspect overlap with chest tattoo and collar. Neither exact count nor final jewelry is locked.",
+      "state": "candidate"
+    },
+    {
+      "id": "smoking_prop",
+      "subject": "optional performance prop",
+      "anchor_ids": [
+        90,
+        92,
+        93,
+        95
+      ],
+      "direction": "When included, user prefers a thicker blunt silhouette over a thin cigarette. Reserve unobstructed-mouth takes for any rap-sync proof. Prop is not required in every shot.",
+      "state": "styling_preference"
+    }
+  ],
+  "upcoming_grok_batch": {
+    "reported_in_screenshots": "Conversation now references #146-151 and #152-155 piercing proofs following the broader exploration.",
+    "received_in_this_intake": false,
+    "execution_here": "CFA received feedback attachments only; no new numbered originals, generation request or batch execution."
+  },
+  "production_use": "User component locks guide the next proof. They do not establish a completed accepted likeness composite, accurate generated preservation, or tested temporal consistency. Keep source design, likeness, staging and motion roles separate.",
+  "next_handoff": "When originals arrive, link each selected ID to its real file and assemble an annotated design map from #146/#101, #103, #107 and #147/#149. Check bird/Jabba clearance and removed text before any motion proof.",
+  "evidence_screenshots": [
+    {
+      "id": 1,
+      "path": "evidence/grok_feedback_01.png",
+      "original_filename": "codex-clipboard-625eb1fa-8d10-4e0c-9918-8193151af146.png",
+      "sha256": "5fa7beb72799baebbea141d7f3824d27dc3ebc3a0bcb18c52ae78f600738cd5a",
+      "bytes": 422382,
+      "source": "User supplied screenshot of ongoing Grok conversation; quoted assistant claims are not verified facts or execution authorization."
+    },
+    {
+      "id": 2,
+      "path": "evidence/grok_feedback_02.png",
+      "original_filename": "codex-clipboard-b301beb0-4206-45fc-bfc8-db9d3352b041.png",
+      "sha256": "09c409063464ae21f2bba1eae505efda33c85742247f6dc205c17ea88f97f318",
+      "bytes": 437768,
+      "source": "User supplied screenshot of ongoing Grok conversation; quoted assistant claims are not verified facts or execution authorization."
+    },
+    {
+      "id": 3,
+      "path": "evidence/grok_feedback_03.png",
+      "original_filename": "codex-clipboard-97c86b71-f873-43f4-8cce-27b4cd6200a2.png",
+      "sha256": "288f3d4699e568af3c17b45a207634b7fdc0617e46cb1986355a12c7474e7a09",
+      "bytes": 454385,
+      "source": "User supplied screenshot of ongoing Grok conversation; quoted assistant claims are not verified facts or execution authorization."
+    },
+    {
+      "id": 4,
+      "path": "evidence/grok_feedback_04.png",
+      "original_filename": "codex-clipboard-58ee8c7c-72a4-4d83-9d2f-3b7bd338bf1b.png",
+      "sha256": "e2a069beb60056860d0e8d966ce9d47597f9fe583071e16f970f31ae49e16363",
+      "bytes": 432133,
+      "source": "User supplied screenshot of ongoing Grok conversation; quoted assistant claims are not verified facts or execution authorization."
+    },
+    {
+      "id": 5,
+      "path": "evidence/grok_feedback_05.png",
+      "original_filename": "codex-clipboard-4ab723cd-0760-45ca-bb50-7e1c3c4e500e.png",
+      "sha256": "1e894157f47904c0e724e98c6e026fa81408dd2bc965bb4b39ee901b3e2fa30f",
+      "bytes": 387496,
+      "source": "User supplied screenshot of ongoing Grok conversation; quoted assistant claims are not verified facts or execution authorization."
+    },
+    {
+      "id": 6,
+      "path": "evidence/grok_feedback_06.png",
+      "original_filename": "codex-clipboard-fd75841c-0a8d-4f1d-9e98-28e0168b4ab4.png",
+      "sha256": "3ee685342174564e0e1bed84acb07141af5492e65ab053347d14481195e817c4",
+      "bytes": 319403,
+      "source": "User supplied screenshot of ongoing Grok conversation; quoted assistant claims are not verified facts or execution authorization."
+    }
+  ],
+  "superseded_direction_revisions": [
+    {
+      "revision": 1,
+      "state": "evolving_user_direction_no_locked_look",
+      "component_anchors": [
+        {
+          "experiment_id": 40,
+          "note": "User favorite cockpit scenery; fang too large."
+        },
+        {
+          "experiment_id": 48,
+          "note": "User likes white-fur direction; tattoo placement still being revised."
+        },
+        {
+          "experiment_id": 56,
+          "note": "Earlier chest ship design reference; later #91 preferred for upright placement."
+        },
+        {
+          "experiment_id": 57,
+          "note": "Preferred chain style; two-chain variant suggested, count not accepted."
+        },
+        {
+          "experiment_id": 58,
+          "note": "Earlier preferred fang size; latest feedback asks for more prominent upper canines."
+        },
+        {
+          "experiment_id": 59,
+          "note": "Earlier comparison: fangs too large relative to #58."
+        },
+        {
+          "experiment_id": 65,
+          "note": "Earlier preferred fangs; not a complete accepted look."
+        },
+        {
+          "experiment_id": 71,
+          "note": "Earlier liked look/fangs and pilot-chair setting."
+        },
+        {
+          "experiment_id": 91,
+          "note": "Latest preferred chest-ship starting point; raise it and test collar visibility."
+        },
+        {
+          "experiment_id": 93,
+          "note": "Latest preferred jaw-bird placement; lettering and mouth still unresolved."
+        }
+      ],
+      "design_components": [
+        {
+          "id": "chest_ship",
+          "subject": "Millennium Falcon spacecraft, distinct from the falcon bird",
+          "anchor_ids": [
+            91,
+            56
+          ],
+          "direction": "Start from #91 round ship body with twin forward prongs aimed up the neck. Raise the design so a small slice of the main body remains above a typical shirt collar. User suggested about 13-17 percent of the upper body visible; this is a visual proportion to assess, not a measured pixel mask. Keep the ship recognizable, avoid rocket-like substitution.",
+          "state": "preferred_starting_point_under_revision"
+        },
+        {
+          "id": "jaw_bird",
+          "subject": "falcon bird",
+          "anchor_ids": [
+            93
+          ],
+          "direction": "Use #93 jawline bird as placement starting point. Explore a perch and nearby Captain wording; optional birdcage/perch lettering variants. Do not conflate with the chest spacecraft.",
+          "state": "placement_direction_under_revision"
+        },
+        {
+          "id": "captain_falcon",
+          "subject": "Optional video-game Captain Falcon neck tattoo / lyric callback",
+          "anchor_ids": [],
+          "direction": "User wants an additional Captain Falcon callback lower on the same neck side, exploring placements. Grok offered an original substitute; that reply is not an accepted CFA substitution. Motif, scale and placement remain unresolved.",
+          "state": "exploratory_optional"
+        },
+        {
+          "id": "lettering",
+          "subject": "Chewie and I know",
+          "anchor_ids": [
+            93
+          ],
+          "direction": "Reduce lettering substantially: user compared size 42 with 24 (about 57 percent linear size, not actual font units). I know should angle about 45 degrees rather than sit like a central forehead stamp. Earlier Chewie direction was above the character-left eye and diagonal. Fix left/right on an annotated face map before acceptance; screenshots show swapped sides.",
+          "state": "size_angle_and_sidedness_unresolved"
+        },
+        {
+          "id": "mouth",
+          "subject": "upper canines/jeweled grill and lower grill",
+          "anchor_ids": [
+            58,
+            65,
+            71
+          ],
+          "direction": "Earlier user preferred small upper gold fangs and a conventional lower grill. Latest feedback asks for more prominent upper canines as part of the upper jeweled grill, matching a supplied close-up. This supersedes treating two isolated tiny fangs as final. Lower grill remains separate; exact material, fang length and tooth coverage await review.",
+          "state": "latest_closeup_is_target_not_accepted"
+        },
+        {
+          "id": "jewelry",
+          "subject": "neck chains",
+          "anchor_ids": [
+            57
+          ],
+          "direction": "Use #57 chain design as an influence; user suggested perhaps two chains. Inspect overlap with chest tattoo and collar. Neither exact count nor final jewelry is locked.",
+          "state": "candidate"
+        },
+        {
+          "id": "smoking_prop",
+          "subject": "optional performance prop",
+          "anchor_ids": [
+            90,
+            92,
+            93,
+            95
+          ],
+          "direction": "When included, user prefers a thicker blunt silhouette over a thin cigarette. Reserve unobstructed-mouth takes for any rap-sync proof. Prop is not required in every shot.",
+          "state": "styling_preference"
+        }
+      ],
+      "upcoming_grok_batch": {
+        "reported_in_screenshots": "User and Grok discussing 50 further variations starting with HD-EXP-96.",
+        "received_in_this_intake": false,
+        "execution_here": "No batch requested or launched by CFA; wait for actual files to intake."
+      },
+      "superseded_by": "User follow-up and five later photos on October 4; component locks below replace conflicting older guidance."
+    }
+  ],
+  "revision": 2,
+  "feedback_round2_attachments": [
+    {
+      "id": "round2_photo_1",
+      "path": "evidence/grok_feedback_round2_01.jpg",
+      "original_filename": "1-Photo-1.jpg",
+      "bytes": 168237,
+      "sha256": "26b07ae24ab457d304dfa83cad03122549df2b465f1b01f412c1dfa526fe6c89",
+      "width": 589,
+      "height": 1280,
+      "role": "grok_conversation_screenshot",
+      "numbered_experiment_id": null,
+      "source": "User attachment. Screenshot user messages supply design decisions; Grok generation/preservation claims remain unverified."
+    },
+    {
+      "id": "round2_photo_2",
+      "path": "evidence/grok_feedback_round2_02.jpg",
+      "original_filename": "2-Photo-2.jpg",
+      "bytes": 160995,
+      "sha256": "c1dea8243c2953f2b77227b50869d577a062a09fef193f21c3a84376223756a4",
+      "width": 589,
+      "height": 1280,
+      "role": "grok_conversation_screenshot",
+      "numbered_experiment_id": null,
+      "source": "User attachment. Screenshot user messages supply design decisions; Grok generation/preservation claims remain unverified."
+    },
+    {
+      "id": "round2_photo_3",
+      "path": "evidence/grok_feedback_round2_03.jpg",
+      "original_filename": "3-Photo-3.jpg",
+      "bytes": 181309,
+      "sha256": "7b6903c2b400a7819e8508556a8b6a26d7bf78f29c7984adf404cb04aea0819d",
+      "width": 589,
+      "height": 1280,
+      "role": "grok_conversation_screenshot",
+      "numbered_experiment_id": null,
+      "source": "User attachment. Screenshot user messages supply design decisions; Grok generation/preservation claims remain unverified."
+    },
+    {
+      "id": "round2_photo_4",
+      "path": "evidence/grok_feedback_round2_04.jpg",
+      "original_filename": "4-Photo-4.jpg",
+      "bytes": 155593,
+      "sha256": "eced7ef2aa1b8acbb732140e636d8ad3080adeb6e626c3ee00f7e8892f1977fa",
+      "width": 589,
+      "height": 1280,
+      "role": "grok_conversation_screenshot",
+      "numbered_experiment_id": null,
+      "source": "User attachment. Screenshot user messages supply design decisions; Grok generation/preservation claims remain unverified."
+    },
+    {
+      "id": "round2_photo_5",
+      "path": "evidence/grok_feedback_round2_05.jpg",
+      "original_filename": "5-Photo-5.jpg",
+      "bytes": 206142,
+      "sha256": "6470a39ff257131d5904149cb1f11329f97fd8bbef981ef1b3cbbd2a88c73e83",
+      "width": 913,
+      "height": 1280,
+      "role": "unnumbered_character_closeup",
+      "numbered_experiment_id": null,
+      "source": "User attachment. Screenshot user messages supply design decisions; Grok generation/preservation claims remain unverified."
+    }
+  ],
+  "closeup_observations": {
+    "path": "evidence/grok_feedback_round2_05.jpg",
+    "experiment_id": null,
+    "visible": "Chewie above viewer-right brow, I know on viewer-left cheek, bird on viewer-right cheek/jaw, Jabba below it on neck, visible Falcon text below Jabba, partial chest ship and mixed upper/lower grill.",
+    "limits": "Do not infer mirroring/anatomical side from an unnumbered image, assign it #101/#146, or treat its visible Falcon text as approved. Actual piercing locations are not clearly established by this crop."
+  },
+  "pending_checks": [
+    "Receive and identify numbered originals before comparing locked source components.",
+    "Reconcile latest #146 tattoo baseline with #103 down-neck bird tail and protected Jabba.",
+    "Verify chest geometry against #107, independently of collar exposure.",
+    "Compare #147/#149 piercing positions; exact sides and final jewelry types remain unverified.",
+    "Remove Captain/Falcon words and racer imagery in the next accepted composite; Photo5 still contains Falcon.",
+    "Cage, wardrobe, background and full-character master remain open."
+  ],
+  "subsequent_visual_previews": {
+    "record_path": "gold_preview.v001.json",
+    "count": 5,
+    "user_description": "Gold standards starting to flow in - here is a sneek peak",
+    "numbered_experiment_mapping": "unknown",
+    "handling": "Photo1 is explicitly a grillz-only reference and its third eye is rejected. Other previews and earlier component selections remain as recorded; no unrelated feature is newly accepted by this correction."
+  },
+  "rejected_design_traits": [
+    {
+      "trait": "third eye",
+      "source_path": "evidence/gold_preview_01.jpg",
+      "reason": "User explicitly ditched it; source retained solely as a grillz reference."
+    }
+  ],
+  "later_handoff": {
+    "date": "2026-10-06",
+    "path": "../grok_intake_20261006/design_handoff.json",
+    "note": "Newer supplied Grok brief reports retiring earlier bird/Jabba/Chewie/dice details and selects LOCK-FACE as design anchor. Keep this revision as October 4 history."
+  }
+}

@@ -1,0 +1,842 @@
+{
+  "76": {
+    "inputs": {
+      "image": "d7bbaad8ae990775daab8609c534fd8068a3a0a2f4a5cdf89b2f8cb1e99cb686.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "1 - GROK DESIGN: pose, wardrobe and setting"
+    }
+  },
+  "121": {
+    "inputs": {
+      "image": "a5e75d93d4f1cf7a321bafaa52011716210048ea4b2e1ef955732d5025317c0b.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "2 - LIKENESS SOURCE: supplied group image"
+    }
+  },
+  "122": {
+    "inputs": {
+      "filename_prefix": "CFA/HonDolo/AB_compare_v001/A_baseline",
+      "images": [
+        "92:105",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "A - BASELINE output"
+    }
+  },
+  "153": {
+    "inputs": {
+      "width": 300,
+      "height": 380,
+      "x": 430,
+      "y": 5,
+      "image": [
+        "121",
+        0
+      ]
+    },
+    "class_type": "ImageCrop",
+    "_meta": {
+      "title": "2a - ISOLATE right-hand subject; reset crop for a new source"
+    }
+  },
+  "154": {
+    "inputs": {
+      "value": "Edit image 1. Give its character the recognizable facial identity, apparent age, and hair of the person in image 2, adapting the face naturally to image 1's head angle and lighting. Preserve image 1's body, pose, clothing, jewelry, accessories, framing, and background. Use image 2 for facial identity and hair only; do not copy its clothing or background. Produce one photorealistic person with natural skin texture and believable anatomy. Keep the face and teeth clean for this identity pass: remove facial tattoos and grill. The tattoo artwork and grill will be applied in a later finishing pass."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "PROMPT - edit instruction (active)"
+    }
+  },
+  "155": {
+    "inputs": {
+      "strings": "\n Render as a cinematic photograph with restrained contrast, subtle film grain and natural skin texture. Preserve the existing lighting direction, setting and palette.\n Render as a direct-flash music-video publicity photograph with crisp flash-lit detail, rich blacks and believable skin texture. Keep the subjects and composition unchanged.\n Render with soft cool overcast daylight, gentle shadow transitions and restrained colors. Keep the subjects, pose, wardrobe and composition unchanged.\n Render with moody colored stage lighting, subtle haze and convincing photographic detail. Keep the subjects, pose, wardrobe and composition unchanged.",
+      "multiline": false,
+      "select": 0
+    },
+    "class_type": "ImpactStringSelector",
+    "_meta": {
+      "title": "STYLE A - 0 None | 1 Film | 2 Flash | 3 Overcast | 4 Stage"
+    }
+  },
+  "156": {
+    "inputs": {
+      "strings": "\n Render as a cinematic photograph with restrained contrast, subtle film grain and natural skin texture. Preserve the existing lighting direction, setting and palette.\n Render as a direct-flash music-video publicity photograph with crisp flash-lit detail, rich blacks and believable skin texture. Keep the subjects and composition unchanged.\n Render with soft cool overcast daylight, gentle shadow transitions and restrained colors. Keep the subjects, pose, wardrobe and composition unchanged.\n Render with moody colored stage lighting, subtle haze and convincing photographic detail. Keep the subjects, pose, wardrobe and composition unchanged.",
+      "multiline": false,
+      "select": 0
+    },
+    "class_type": "ImpactStringSelector",
+    "_meta": {
+      "title": "STYLE B - optional mix; 0 disables"
+    }
+  },
+  "157": {
+    "inputs": {
+      "delimiter": "",
+      "string_a": [
+        "154",
+        0
+      ],
+      "string_b": [
+        "155",
+        0
+      ]
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "COMBINE prompt + style A"
+    }
+  },
+  "158": {
+    "inputs": {
+      "delimiter": "",
+      "string_a": [
+        "157",
+        0
+      ],
+      "string_b": [
+        "156",
+        0
+      ]
+    },
+    "class_type": "StringConcatenate",
+    "_meta": {
+      "title": "COMBINE + style B"
+    }
+  },
+  "159": {
+    "inputs": {
+      "preview_markdown": "",
+      "preview_text": "",
+      "previewMode": "",
+      "source": [
+        "158",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "PROMPT PREVIEW - assembled text after Run"
+    }
+  },
+  "161": {
+    "inputs": {
+      "images": [
+        "153",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "INPUT PREVIEW - selected likeness crop"
+    }
+  },
+  "164": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "SAMPLER CHOICE - baseline: Euler"
+    }
+  },
+  "165": {
+    "inputs": {
+      "value": 4
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "STEPS - distilled baseline: 4"
+    }
+  },
+  "166": {
+    "inputs": {
+      "value": 1
+    },
+    "class_type": "PrimitiveFloat",
+    "_meta": {
+      "title": "CFG - keep 1 for this distilled model"
+    }
+  },
+  "167": {
+    "inputs": {
+      "value": 42
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "SEED - fixed; change for another variation"
+    }
+  },
+  "169": {
+    "inputs": {
+      "filename_prefix": "CFA/HonDolo/AB_compare_v001/B_candid_film",
+      "images": [
+        "168:105",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "B - CANDID FILM output"
+    }
+  },
+  "170": {
+    "inputs": {
+      "value": 0.5
+    },
+    "class_type": "PrimitiveFloat",
+    "_meta": {
+      "title": "B ONLY - Candid Film strength"
+    }
+  },
+  "92:102": {
+    "inputs": {
+      "steps": [
+        "165",
+        0
+      ],
+      "width": [
+        "92:114",
+        0
+      ],
+      "height": [
+        "92:114",
+        1
+      ]
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "SCHEDULE - Flux2Scheduler (steps wired from main canvas)"
+    }
+  },
+  "92:103": {
+    "inputs": {
+      "cfg": [
+        "166",
+        0
+      ],
+      "model": [
+        "92:107",
+        0
+      ],
+      "positive": [
+        "92:131",
+        0
+      ],
+      "negative": [
+        "92:129",
+        0
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "GUIDANCE - CFGGuider (CFG wired from main canvas)"
+    }
+  },
+  "92:104": {
+    "inputs": {
+      "noise": [
+        "92:106",
+        0
+      ],
+      "guider": [
+        "92:103",
+        0
+      ],
+      "sigmas": [
+        "92:102",
+        0
+      ],
+      "latent_image": [
+        "92:113",
+        0
+      ],
+      "sampler": [
+        "164",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SAMPLER - SamplerCustomAdvanced (generation happens here)"
+    }
+  },
+  "92:105": {
+    "inputs": {
+      "samples": [
+        "92:104",
+        0
+      ],
+      "vae": [
+        "92:110",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "92:106": {
+    "inputs": {
+      "noise_seed": [
+        "167",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "NOISE - RandomNoise (seed wired from main canvas)"
+    }
+  },
+  "92:107": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "92:108": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "92:109": {
+    "inputs": {
+      "text": [
+        "158",
+        0
+      ],
+      "clip": [
+        "92:108",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "92:86": {
+    "inputs": {
+      "conditioning": [
+        "92:109",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "Conditioning Zero Out"
+    }
+  },
+  "92:113": {
+    "inputs": {
+      "batch_size": 1,
+      "width": [
+        "92:114",
+        0
+      ],
+      "height": [
+        "92:114",
+        1
+      ]
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "92:114": {
+    "inputs": {
+      "image": [
+        "92:111",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "Get Image Size"
+    }
+  },
+  "92:127": {
+    "inputs": {
+      "pixels": [
+        "92:111",
+        0
+      ],
+      "vae": [
+        "92:110",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "92:129": {
+    "inputs": {
+      "conditioning": [
+        "92:126",
+        0
+      ],
+      "latent": [
+        "92:130",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent"
+    }
+  },
+  "92:131": {
+    "inputs": {
+      "conditioning": [
+        "92:128",
+        0
+      ],
+      "latent": [
+        "92:130",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent"
+    }
+  },
+  "92:130": {
+    "inputs": {
+      "pixels": [
+        "92:85",
+        0
+      ],
+      "vae": [
+        "92:110",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "92:110": {
+    "inputs": {
+      "vae_name": "full_encoder_small_decoder.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "92:128": {
+    "inputs": {
+      "conditioning": [
+        "92:109",
+        0
+      ],
+      "latent": [
+        "92:127",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent"
+    }
+  },
+  "92:126": {
+    "inputs": {
+      "conditioning": [
+        "92:86",
+        0
+      ],
+      "latent": [
+        "92:127",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent"
+    }
+  },
+  "92:111": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1,
+      "resolution_steps": 16,
+      "image": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "Scale Image to Total Pixels"
+    }
+  },
+  "92:85": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1,
+      "resolution_steps": 16,
+      "image": [
+        "153",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "Scale Image to Total Pixels"
+    }
+  },
+  "168:102": {
+    "inputs": {
+      "steps": [
+        "165",
+        0
+      ],
+      "width": [
+        "168:114",
+        0
+      ],
+      "height": [
+        "168:114",
+        1
+      ]
+    },
+    "class_type": "Flux2Scheduler",
+    "_meta": {
+      "title": "SCHEDULE - Flux2Scheduler (steps wired from main canvas)"
+    }
+  },
+  "168:103": {
+    "inputs": {
+      "cfg": [
+        "166",
+        0
+      ],
+      "model": [
+        "168:151",
+        0
+      ],
+      "positive": [
+        "168:131",
+        0
+      ],
+      "negative": [
+        "168:129",
+        0
+      ]
+    },
+    "class_type": "CFGGuider",
+    "_meta": {
+      "title": "GUIDANCE - CFGGuider (CFG wired from main canvas)"
+    }
+  },
+  "168:104": {
+    "inputs": {
+      "noise": [
+        "168:106",
+        0
+      ],
+      "guider": [
+        "168:103",
+        0
+      ],
+      "sigmas": [
+        "168:102",
+        0
+      ],
+      "latent_image": [
+        "168:113",
+        0
+      ],
+      "sampler": [
+        "164",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SAMPLER - SamplerCustomAdvanced (generation happens here)"
+    }
+  },
+  "168:105": {
+    "inputs": {
+      "samples": [
+        "168:104",
+        0
+      ],
+      "vae": [
+        "168:110",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "168:106": {
+    "inputs": {
+      "noise_seed": [
+        "167",
+        0
+      ]
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "NOISE - RandomNoise (seed wired from main canvas)"
+    }
+  },
+  "168:107": {
+    "inputs": {
+      "unet_name": "flux-2-klein-9b.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "168:108": {
+    "inputs": {
+      "clip_name": "qwen_3_8b_fp8mixed.safetensors",
+      "type": "flux2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "168:109": {
+    "inputs": {
+      "text": [
+        "158",
+        0
+      ],
+      "clip": [
+        "168:108",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "168:86": {
+    "inputs": {
+      "conditioning": [
+        "168:109",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "Conditioning Zero Out"
+    }
+  },
+  "168:113": {
+    "inputs": {
+      "batch_size": 1,
+      "width": [
+        "168:114",
+        0
+      ],
+      "height": [
+        "168:114",
+        1
+      ]
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "Empty Flux 2 Latent"
+    }
+  },
+  "168:114": {
+    "inputs": {
+      "image": [
+        "168:111",
+        0
+      ]
+    },
+    "class_type": "GetImageSize",
+    "_meta": {
+      "title": "Get Image Size"
+    }
+  },
+  "168:127": {
+    "inputs": {
+      "pixels": [
+        "168:111",
+        0
+      ],
+      "vae": [
+        "168:110",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "168:129": {
+    "inputs": {
+      "conditioning": [
+        "168:126",
+        0
+      ],
+      "latent": [
+        "168:130",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent"
+    }
+  },
+  "168:131": {
+    "inputs": {
+      "conditioning": [
+        "168:128",
+        0
+      ],
+      "latent": [
+        "168:130",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent"
+    }
+  },
+  "168:130": {
+    "inputs": {
+      "pixels": [
+        "168:85",
+        0
+      ],
+      "vae": [
+        "168:110",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "168:110": {
+    "inputs": {
+      "vae_name": "full_encoder_small_decoder.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "168:128": {
+    "inputs": {
+      "conditioning": [
+        "168:109",
+        0
+      ],
+      "latent": [
+        "168:127",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent"
+    }
+  },
+  "168:126": {
+    "inputs": {
+      "conditioning": [
+        "168:86",
+        0
+      ],
+      "latent": [
+        "168:127",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent"
+    }
+  },
+  "168:111": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1,
+      "resolution_steps": 16,
+      "image": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "Scale Image to Total Pixels"
+    }
+  },
+  "168:85": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1,
+      "resolution_steps": 16,
+      "image": [
+        "153",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "Scale Image to Total Pixels"
+    }
+  },
+  "168:151": {
+    "inputs": {
+      "lora_name": "flux-2-klein-9b-candid_film.safetensors",
+      "strength_model": [
+        "170",
+        0
+      ],
+      "model": [
+        "168:107",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "B - Candid Film (strength from canvas)"
+    }
+  }
+}

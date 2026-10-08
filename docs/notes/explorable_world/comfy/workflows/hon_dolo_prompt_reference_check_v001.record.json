@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checked_on_local": "2026-10-04",
+  "status": "cloud_input_check_completed",
+  "provider": "Comfy Cloud",
+  "workflow": {
+    "id": "25a31287-8bfd-4fb6-a7be-878d36325012",
+    "version": 1,
+    "name": "Hon Dolo - Prompt and Reference Check v001",
+    "filename": "hon-dolo-prompt-and-reference-check-v001.json",
+    "url": "https://cloud.comfy.org/#25a31287-8bfd-4fb6-a7be-878d36325012",
+    "editor_graph_id": "7ba51cf9-67b6-45ec-9f08-c82d7b61dc31"
+  },
+  "derived_from": {
+    "workflow_id": "dd649394-dae2-4831-8eb0-3c90527b0fc8",
+    "version": 6,
+    "independent_copy": true,
+    "auto_sync": false
+  },
+  "job": {
+    "prompt_id": "687622ca-5d3b-4930-9918-e2f57c529def",
+    "completed": true,
+    "api_node_count": 11,
+    "node_classes": [
+      "ImageCrop",
+      "ImpactStringSelector",
+      "LoadImage",
+      "PreviewAny",
+      "PreviewImage",
+      "PrimitiveStringMultiline",
+      "StringConcatenate"
+    ],
+    "executed_api": "hon_dolo_prompt_reference_check_v001.executed.api.json"
+  },
+  "purpose": "Inspect prompt/style text, original design and selected likeness crop without a diffusion render.",
+  "outputs": "Temporary source/crop image previews and a text UI preview; no generated character or SaveImage output.",
+  "cost": {
+    "dollar": null,
+    "credits": null,
+    "note": "No generation model or paid API nodes; Cloud runtime can still accrue."
+  },
+  "validation": {
+    "dry_run": "passed",
+    "cloud_execution": "completed",
+    "model_sampler_nodes": 0,
+    "browser_widget_display": "not inspected"
+  },
+  "handoff": "Changes in this independent workflow do not synchronize to the main reference editor. Transfer chosen prompt/style/source/crop settings explicitly.",
+  "editor_graph": "hon_dolo_prompt_reference_check_v001.editor.json"
+}

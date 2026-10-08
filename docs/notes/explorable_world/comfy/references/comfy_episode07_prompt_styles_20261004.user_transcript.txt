@@ -1,0 +1,595 @@
+welcome to episode seven of our comfy UI
+0:02
+tutorial Series this episode was
+0:04
+supposed to be about flux but I'll cover
+0:06
+that in the next episode today I want to
+0:08
+give an update on the last episode where
+0:10
+we discussed art styles the community
+0:12
+suggested some better nodes for
+0:14
+concatenating text so today I'll show
+0:17
+you how to do even more with Styles
+Installing Custom Nodes
+0:20
+first we'll install two custom nodes go
+0:22
+to the manager click on custom node
+0:24
+manager then search for w node Suite
+0:29
+created by this author you can check its
+0:31
+popularity by the number of stars it has
+0:33
+received click the install button to add
+0:35
+it once the installation is done you can
+0:38
+install the second node search for easy
+0:40
+use and find the node named comfy UI
+0:43
+easy use created by this author click
+0:46
+install and wait for it to finish then
+0:48
+click restart to refresh the interface
+0:51
+and you'll have access to the new nodes
+0:53
+now if you check the custom node manager
+0:55
+and filter by installed um you should
+0:58
+see both nodes in the list let's close
+1:01
+this and see if we can find the node
+1:03
+we're looking for uh double click on the
+Text Concatenate Node
+1:06
+canvas to search for a node and use the
+1:08
+word concat uh last time we used
+1:11
+conditioning concat to concatenate our
+1:13
+prompts using conditioning however this
+1:15
+time test concatenate is uh better for
+1:18
+text as it simply combines the text
+1:20
+making it more effective with Styles
+1:23
+since we now have more custom nodes it
+1:25
+can be hard to distinguish which nodes
+1:27
+come with comfy UI and which ones were
+1:30
+installed separately to help with this
+1:32
+go to the manager then select badge
+1:35
+nickname where it says
+1:38
+badge nodes that come with comfy UI will
+1:41
+have the fox icon if the fox icon is
+1:44
+missing it means the node is a custom
+1:46
+the good part is that you can see the
+1:48
+custom node names here so you can
+1:49
+quickly identify what nodes are being
+1:51
+used let's clear the canvas so I can
+1:54
+show you a simplify version first then
+1:56
+we'll return to the sdxl workflow first
+1:59
+I'll add the text concatenate node I'm
+2:02
+still learning about it but you can do
+2:04
+more with comfy UI than just stable
+2:06
+diffusion you can work with text images
+2:09
+and even audio I'm also adding a
+2:11
+primitive node which changes depending
+2:13
+on what's connected to it if we connect
+2:15
+it to text a our primitive becomes a
+2:17
+string type allowing us to add text
+2:20
+values since we've installed the easy
+2:22
+use node we now have access to more
+2:24
+nodes including one called positive this
+2:28
+node is different from the text encoder
+2:30
+but is already colored and works with
+2:32
+the concatenate node uh you can see that
+2:35
+we're able to connect it you can also
+2:37
+drag a connection from text concatenate
+2:41
+and see suggestions like easy positive
+2:43
+and easy negative that you can select
+2:44
+right away let's add another positive
+2:47
+node I'm adding cat to the first node
+2:50
+and dog to the second node now we have a
+2:53
+string output but where does this text
+2:55
+go just like we save images we can save
+2:57
+text using the save text file node
+3:00
+if anyone knows how to add a preview for
+3:02
+text similar to preview images let me
+3:04
+know we can connect the text concatenate
+3:07
+node to the save text file node you can
+3:09
+change the file name prefix if desired
+3:12
+and configure additional options for how
+3:14
+the text file should be saved the path
+3:16
+for saving the text file is specified
+3:19
+and it defaults to a folder structure
+3:21
+like comfy UI output folder with year
+3:23
+and month on the text concatenate node
+3:26
+there is also a delimiter option to
+3:28
+specify what separates the first and
+3:30
+second text a comma works well in this
+3:32
+case for example with cat and dog I'll
+3:35
+add Extra Spaces after cat to
+3:37
+demonstrate the clean spaces option when
+3:40
+this option is set to true it will
+3:41
+remove Extra Spaces when I run the
+3:44
+workflow it creates the text file for me
+3:47
+going to the output folder you can see a
+3:49
+folder with the date and inside it the
+3:52
+text file opening the file you'll find
+3:56
+Cat the first text with spaces removed
+3:59
+follow Follow by a comma and then dog
+4:02
+the second text so with prompts you
+4:04
+could use something like a lion for the
+4:07
+first part and a black forest for the
+4:10
+second part when I run the workflow I
+4:11
+get a second text file and inside it is
+4:15
+the combin prompt there are many things
+4:17
+you can do with text so let me show you
+4:19
+another quick option search for text
+4:22
+find and add the text find and replace
+4:24
+node I'll leave only one positive prompt
+4:27
+and add text like a line in the jungle
+4:31
+then I connect the positive prompt to
+4:33
+the text input and the result text to
+4:35
+the save text node now we have a simple
+4:38
+search and replace note I can search for
+4:40
+lion and replace it with dog so when I
+4:43
+run it I get a dog in the jungle in the
+Updating Configuration for Styles
+4:46
+last episode you downloaded a file that
+4:48
+needed to be placed in a specific folder
+4:51
+however now you can download it and
+4:52
+place it in any folder you want because
+4:54
+we will use the file
+4:56
+path go to where you downloaded the file
+4:59
+in my case it's in the D comfy UI folder
+5:02
+right click on the file select copy as
+5:04
+path and then go to your comfy UI folder
+5:08
+look for custom nodes and then W node
+5:11
+Suite if you've run comfy UI at least
+5:14
+once since installing the node you
+5:17
+should have this config file here if not
+5:20
+run comfy UI once and come back now open
+5:24
+this file with notepad look for web UI
+5:27
+Styles where it says null select null
+5:30
+and paste the path you copied since it's
+5:32
+text it needs to be between quotes it's
+5:35
+also important to note that any
+5:37
+backslashes in your path should be
+5:39
+doubled in my case I had to add an extra
+5:41
+backslash in two
+5:43
+places save the file and return to comfy
+5:46
+UI we need to restart the interface but
+5:49
+since we have the easyuse node there's a
+5:51
+new option on rightclick that lets us
+5:53
+restart click on reboot and we'll be
+5:56
+back to the interface after the restart
+Multiple Style Selector
+5:59
+so now if you search for Styles you can
+6:01
+load the Styles CSV that I used in the
+6:04
+last episode however now I can use the
+6:07
+prompt style selector or even better
+6:09
+instead of using just one style at a
+6:12
+time I want to use multiple combinations
+6:14
+of styles for that I'll use the prompt
+6:18
+multiple style selector as you can see
+6:20
+it allows you to choose up to four
+6:23
+Styles and if you did the configuration
+6:25
+correctly you should see all the Styles
+6:27
+in the list and be able to combine
+6:29
+multiple styles
+6:30
+let's delete this node and add the text
+6:32
+concatenate node this is similar to how
+6:34
+we combined two texts before I connect
+6:36
+the positive prompt to input a and the
+6:38
+positive string to input B but what if
+6:41
+we also want to use a negative prompt
+6:43
+we'll need another text concatenate node
+6:45
+so I'll duplicate the existing one and
+6:48
+connect the negative prompt to input a
+6:51
+and the negative string to input B if it
+6:53
+says no style that means no style will
+6:56
+be used I'll select photography
+6:58
+cinematic as the first style I will
+7:02
+connect the string to the save text file
+7:04
+node so we can save it we also need to
+7:07
+save the negative prompts so I'll add a
+7:09
+save text file node for the negative
+7:11
+prompts as well I'll change the prefix
+7:14
+to positive for the file uh coming from
+7:18
+the positive prompts and negative for
+7:20
+the file coming from the negative
+7:21
+prompts now when I run the workflow I
+7:24
+get two different files in the prompt
+7:27
+you can see my prompt a lion in the
+7:29
+jungle and then it's followed by the
+7:32
+positive prompt from the Styles CSV file
+7:35
+the same goes for the negative prompt
+7:38
+which gets the negative prompt from the
+7:40
+Styles file um so if I add a second art
+7:43
+style like Chinese ink brush and run the
+7:45
+workflow I get the first prompt then the
+7:48
+text from the first style and then the
+7:50
+text from the second style that's why uh
+7:53
+compared with last episode when the
+7:55
+order didn't matter much here the order
+7:58
+does matter the first style is more
+8:00
+important since it appears at the
+8:02
+beginning of the prompt and the second
+8:04
+style is less important since it appears
+8:06
+more at the end it still influences the
+8:09
+result but not as much depending on the
+8:11
+prompt for the negative prompt it just
+8:14
+takes the negative from both Styles even
+8:17
+if there's some repetition it shouldn't
+8:19
+affect it too much but if you think the
+8:21
+influence is too strong you can just
+8:23
+disconnect the negative string and it
+8:25
+will only consider the negative prompt
+8:27
+from here let's put it into practice I'm
+SDXL Workflow with Styles
+8:29
+loading a basic sdxl workflow like the
+8:33
+one we used in episode 3 which you can
+8:35
+get from the Discord first I'll add the
+8:38
+same prompt as last time robot in the
+8:40
+cave and use a fixed seed when I run it
+8:44
+I get something like this now to add the
+8:47
+Styles we need to convert the clip text
+8:50
+encoder where we put our positive prompt
+8:53
+to text input this way we can have
+8:56
+multiple text strings going into that
+8:58
+prompt I'll do the same for the negative
+9:00
+prompt and make them a little smaller
+9:03
+I'm also changing the color to Green for
+9:05
+positive and red for negative so it's
+9:06
+easier to see let's add some space for
+9:08
+the new nodes um I'm adding an easy
+9:11
+positive node and an easy negative
+9:13
+node then connecting the positive to the
+9:16
+text and negative to the text I'll test
+9:18
+it with a robot in the cave prompt and
+9:21
+the result is as shown since it's a
+9:23
+fixed seed remember this image to see
+9:26
+how the Styles influence the results to
+9:28
+add Style St search for Styles and
+9:32
+select prompt multiple style selector I
+9:34
+could connect only this positive string
+9:36
+to the positive text but we also want to
+9:39
+include our prompt alongside the Styles
+9:41
+so again we use the text concatenate
+9:44
+node we need two of these so I'll change
+9:47
+their colors to Green for positive and
+9:49
+red for negative I'm moving them around
+9:52
+and resizing them to better see the
+9:55
+connections currently we have the
+9:57
+positive prompt going to the text in
+9:59
+coder and then to the K sampler the same
+10:01
+setup is used for the negative prompt we
+10:04
+connect the positive prompt to input a
+10:06
+and the positive style to input B
+10:09
+similarly we connect the negative prompt
+10:11
+to the text a of the red node and the
+10:14
+negative style to text B I'm adjusting
+10:16
+the layout to make the links clearer the
+10:19
+result of these combined texts from the
+10:21
+concatenate nodes goes to the text
+10:23
+encoder and then to the K sampler with
+10:26
+the same setup for the negative prompt
+10:28
+if I run the prompt prompt now I should
+10:30
+get exactly the same image because the
+10:32
+styles are set to no style so let's pick
+10:35
+the long exposure style from the
+10:37
+photography category when I run the
+10:39
+workflow with this style applied the
+10:41
+image changes
+10:43
+significantly now let's choose the
+10:45
+flower photography style which didn't
+10:47
+have much of an effect last time and you
+10:49
+can see it's having a noticeable impact
+10:51
+now next let's add a third style such as
+10:54
+fantasy
+10:56
+cartoon when combined you can see that
+10:58
+all the styles are Blended together the
+11:01
+lighting effects from the long exposure
+11:03
+the flowers from the flower photography
+11:05
+style and the fantasy cartoon elements
+11:07
+that transform the robot I've arranged
+11:10
+the nodes as clearly as possible before
+11:12
+saving the workflow so you can see how
+11:14
+everything is connected I'll save this
+11:16
+workflow and you can download it from
+11:18
+Discord I will also create a compact
+Compacting Workflows
+11:20
+version to make it look less messy with
+11:22
+all the nodes to do this right click and
+11:24
+select convert group to nodes then give
+11:26
+it a name next right click and select
+11:29
+manage group nodes to arrange them as
+11:31
+you like this is how the final compact
+11:34
+version looks by default it has no
+11:36
+Styles so you can simply add a prompt
+11:39
+select one or two art styles and run the
+11:42
+workflow it's easy to use and produces a
+11:45
+lot of nice results depending on the
+11:47
+prompt and style combinations here are a
+11:49
+few more examples showing the prompt and
+11:51
+the Styles combination that's all for
+11:54
+today see you in the next episode leave
+11:57
+a like or a comment if you found
+11:58
+something useful have a great day
+12:05
+[Music]

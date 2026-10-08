@@ -1,0 +1,845 @@
+welcome to episode 5 of this comfy UI
+0:02
+Series today I want to show you how you
+0:05
+can run stable diffusion 3 medium on
+0:08
+comfy UI where to get the models which
+0:10
+model is better and how it compares to
+0:12
+the sdxl model first make sure your
+0:15
+comfy UI is updated so you can run
+0:17
+stable diffusion 3 on it uh click on the
+0:19
+manager then click the button that says
+0:22
+update all um after the update you will
+0:25
+receive a message uh click on restart
+0:27
+and then you should have the latest
+0:28
+comfy UI version now we need to download
+0:31
+a stable diffusion 3 Model the easiest
+0:33
+way is to visit the civit AI website
+0:36
+then search for stable diffusion 3 it
+0:39
+should look like this and is uploaded by
+0:41
+this user there are different versions
+0:44
+of the model available but which one
+0:46
+should you choose if you scroll down you
+0:48
+can find a quick start guide by clicking
+0:50
+on that link you can read more about it
+0:52
+on that page the sd3 media model for
+0:55
+example doesn't include text encoders
+0:58
+this model includes everything necessary
+1:00
+to run including the floating Point 8
+1:02
+version of the text encoder another
+1:05
+Model includes clip but does not have
+1:07
+the large t5x XL text encoder so if you
+1:10
+go back and scroll down to the end
+1:12
+you'll see that the original model can
+1:14
+be also found on hugging face by
+1:17
+clicking where it says uh here you can
+1:20
+visit that page to see more information
+1:22
+about the models and the actual files
+1:24
+available for download and keep in mind
+1:27
+that to access these models you'll need
+1:29
+to provide provide some details such as
+1:31
+an email address and you know other
+1:33
+information that's why civit AI is the
+1:36
+easiest option for downloading we have a
+1:38
+total of four different models each in
+1:40
+different sizes I won't download the
+1:42
+first one because it doesn't include
+1:43
+text encoders so you would need to
+1:44
+download them separately which I don't
+1:47
+really recommend I will download the
+1:49
+other three models to test them and and
+1:52
+show you the differences if your video
+1:55
+card doesn't have much video RAM get the
+1:57
+5 gigabyte version because it includes
+1:59
+clip if you have a better video card go
+2:02
+for the 10 gigabyte or even the 15
+2:05
+gigabyte version most people can
+2:07
+download the 5 gigabyte version because
+2:09
+it includes clip click on the download
+2:11
+button then find the folder where you
+2:13
+want to place the files it should be in
+2:15
+the models folder than in um checkpoints
+2:19
+just like where you have your other
+2:21
+stable diffusion models you can see that
+2:23
+I have downloaded all three models and
+2:25
+these are the three models available on
+2:27
+civi I rename them to match the original
+2:31
+names so that people using my workflow
+2:33
+will know what each one is however you
+2:35
+can use any names you prefer for the
+2:38
+models if your comfy UI was open make
+2:40
+sure to click the refresh button so your
+2:43
+models will appear in the interface I've
+2:46
+loaded a basic uh sdxl workflow similar
+2:49
+to what we did in episode 3 you can also
+2:52
+download it from my pixela Discord
+2:54
+server in the channel named AI resources
+2:57
+let's load the smallest model version
+2:59
+the one one named sd3 medium which
+3:01
+includes clip each model has different
+3:04
+recommended settings in the K sampler so
+3:06
+for sd3 medium these are the settings
+3:09
+you can use for steps uh use either 28
+3:12
+or 30 set the CFG value to 4.5 the
+3:15
+sampler to DPM Plus+ 2m and the
+3:18
+scheduler to sgm uniform uh we can give
+3:21
+it a quick test by clicking on Q prompt
+3:24
+uh as you can see it runs on an sdxl
+3:27
+workflow but to make it optimal for SD
+3:29
+three we need to adjust one more thing
+3:31
+the empty latent image uh double click
+3:34
+on the canvas and search for empty
+3:37
+select the empty sd3 latent image as you
+3:40
+can see it's almost identical with just
+3:42
+the name being different however you
+3:44
+know in the code it's uh has some
+3:46
+different formulas that make it more
+3:47
+suitable for sd3 let's delete the old
+3:50
+node and Link the case sampler latent to
+3:52
+the new node um I'll give it a quick
+3:55
+test and it seems to be working fine um
+3:57
+I'll save the workflow for those who
+3:59
+prefer to load it directly as you can
+4:01
+see it's not a complicated workflow uh
+4:04
+just a different model with different
+4:05
+settings in the case sampler and a
+4:08
+special sd3 empty latent image now I
+4:11
+want to compare the results with the
+4:12
+other sd3 models to see what the
+4:14
+differences are so I'll press the
+4:16
+control key and select all the nodes or
+4:19
+use control+ a then I'll copy them using
+4:22
+the control+ C shortcut after that I'll
+4:26
+paste them with crl plus v finally I'll
+4:29
+hold shift and click and drag all the
+4:32
+nodes to the desired position here I'll
+4:35
+load the second model the one with
+4:36
+floating point8 in the name if I run it
+4:39
+you'll see that both workflows are
+4:40
+running uh to make the comparison more
+4:43
+accurate uh we need the same seed for
+4:45
+both workflow so we should use a fixed
+4:47
+seed instead of a random one we also
+4:49
+need the same prompt for both but what
+4:51
+if I don't want to keep repeating them
+4:52
+in both workflows what if I want one
+4:54
+prompt and one seed and both workflows
+4:57
+to take the values from the same place
+5:00
+let's do that rightclick on the positive
+5:02
+prompt then select uh convert widget to
+5:05
+input and choose convert text to input
+5:09
+this option changes a text field into an
+5:12
+input Port allowing you to connect and
+5:15
+dynamically feed data from other nodes
+5:17
+into it so if I link it to a node called
+5:21
+primitive you'll see that node
+5:23
+automatically converts into a string or
+5:25
+text node where we can add the positive
+5:27
+uh prompt let's do the same name for the
+5:30
+negative prompt by converting it to an
+5:33
+input then I'll link it to A Primitive
+5:35
+node giving us a place where we can add
+5:38
+our negative prompt text uh so basically
+5:41
+we just added an extra node as an
+5:42
+extension uh from this primitive node
+5:45
+connect to the text encoder and then it
+5:47
+goes to the case sampler the same
+5:49
+applies to the negative prompt uh the
+5:51
+only difference now is that this
+5:52
+primitive node is not directly connected
+5:56
+to the model so we can connect uh this
+5:58
+node to a different text encoder from
+6:00
+another workflow uh to make it easier to
+6:02
+understand you know let's change the
+6:03
+title of the Primitive node to positive
+6:05
+prompt um we'll do the same for the
+6:07
+negative prompt node uh we can also
+6:09
+change the color to make it more
+6:11
+intuitive um set the color of the
+6:14
+positive prompt node to green and choose
+6:17
+red for the negative prompt node I will
+6:20
+do the same for the second workflow by
+6:22
+converting text to input U now we can
+6:25
+connect the positive and negative
+6:26
+prompts uh to this workflow as well uh
+6:29
+if I move it to the side you'll see that
+6:32
+the Tex from both the positive and
+6:33
+negative prompts is inserted into both
+6:36
+workflows when I run it you'll see that
+6:38
+it uses the same prompt however the
+6:41
+seeds are different so let's fix that as
+6:44
+well right click on the case sampler
+6:46
+node go to convert widget to input and
+6:49
+choose convert C to input do the same
+6:51
+for the other workflow now we can
+6:53
+connect the seed input to A Primitive
+6:55
+node um just like we did with the prompt
+6:58
+um as you can see that the node has
+7:00
+adapted to what was connected and now we
+7:02
+have the seed um and the control after
+7:05
+generation uh change the control to fix
+7:08
+and enter a number for the seed and now
+7:11
+I'll connect this note to the second
+7:12
+workflow as well this way both workflows
+7:15
+use the same prompt and C as you can see
+7:18
+there is a difference between the
+7:19
+generations if I cue prompt so we have
+7:23
+the first model with clip and the second
+7:25
+model with floating point8 now I will
+7:28
+copy and paste the second workflow and
+7:30
+switch it to the third model so we can
+7:32
+test all the models at once don't try
+7:34
+this if you have a weak video card as
+7:37
+loading multiple models into memory can
+7:40
+be demanding um I will connect the seed
+7:43
+to the third workflow and then I will
+7:45
+also connect the positive and negative
+7:47
+prompts it might look complex but in
+7:50
+reality it's just prompts and a seed
+7:53
+that stay in one place and are sent to
+7:55
+the other three workflows to show you
+7:58
+all three generations more clearly on
+8:00
+the screen I'll move them around so they
+8:02
+fit better I might also switch the seed
+8:05
+to increment after each generation so I
+8:09
+don't have to increase the seed manually
+8:11
+if I use the same prompt as the previous
+8:14
+generation uh to make it even clearer
+8:16
+which generation comes from which model
+8:18
+I will change the exported image prefix
+8:20
+to correspond to the model being used so
+8:23
+if I cue The Prompt you'll see that the
+8:25
+second and third model Generations are
+8:28
+quite similar let's try one more time
+8:30
+with a different seed if I zoom in
+8:32
+though you might not be able to see it
+8:34
+clearly in the video you'll notice that
+8:38
+uh the second model has a more detailed
+8:40
+texture and seems to offer better
+8:43
+quality compared to the first model it
+8:45
+not only understands the prompt better
+8:48
+but also improves the image quality a
+8:51
+little in my opinion the second and
+8:53
+third models produce very similar
+8:54
+Generations but in some cases I've seen
+8:57
+better results with the third model such
+9:00
+as improved texture sharper details and
+9:03
+fewer errors let's try another seat here
+9:06
+again the second model seems to perform
+9:08
+better than the first one and is quite
+9:10
+different the third model however
+9:12
+appears to be clearer for example the
+9:15
+welding in this image seems more smudged
+9:18
+in the second model whereas the texture
+9:20
+on the head is more clear and sharp in
+9:22
+the third model uh moving to another
+9:25
+seed it's clear that the first model
+9:27
+produces different results each time
+9:29
+compared to the second and third models
+9:32
+the first model also seems to have fewer
+9:35
+details compared to the others if we
+9:36
+compare the red LED area in the second
+9:39
+and third Generations you can see that
+9:41
+the third model has more details I would
+9:44
+recommend choosing the model that your
+9:47
+video card can handle on my video card
+9:50
+the difference in speed between models
+9:52
+was about 1 second the third model took
+9:55
+longer to load on the first generation
+9:58
+but was fter afterward so I'll probably
+10:01
+use uh the third model for simple
+10:03
+workflows the second model for more
+10:05
+complex ones and the first model on an
+10:07
+older computer now let's compare it with
+10:09
+an sdxl model like Juggernaut X even
+10:11
+though it's not a completely fair
+10:13
+comparison since the I mean the bass
+10:15
+sdxl model was much worse than the
+10:18
+fine-tuned models it's still useful to
+10:20
+see how it stands up against Juggernaut
+10:22
+uh I'm deleting the second and third uh
+10:24
+workflows and leaving only the first one
+10:26
+then I'll select all nodes and copy them
+10:28
+next I'll I'll load a basic sdxl
+10:31
+workflow and paste the SD workflow into
+10:33
+it this way we have both workflows on
+10:34
+the same canvas just like before I need
+10:37
+to convert the text encoders to input so
+10:39
+I can then connect them to the Primitive
+10:42
+positive and negative nodes we also need
+10:44
+to convert the SE to an input so now we
+10:46
+can connect the Primitive node with the
+10:48
+SE to it I will change the seed setting
+10:51
+from fix to increment so the first model
+10:54
+is Juggernaut X and the second model is
+10:57
+the best sd3 medium the one with
+10:59
+floating Point 16 let's arrange
+11:02
+everything a bit so it fits on the
+11:04
+screen I'll change the prefix of the
+11:07
+saved images to identify which image
+11:09
+comes from which model then I'll start
+11:12
+the first generation and there will
+11:14
+obviously be differences we'll see which
+11:16
+model performs best in what aspects soon
+11:20
+um I'll add the positive prompt below so
+11:22
+you can see what I'm using for each on
+11:24
+the left is sdxl and on the right is sd3
+11:29
+uh let's start the comparison uh for the
+11:32
+robot prompt the sdxl model produced a
+11:34
+more detailed robot which I kind of like
+11:37
+on the other hand the sd3 model has a
+11:39
+less detailed robot but is sharper with
+11:42
+the rust appearing more clearly uh for
+11:44
+this portrait of a woman uh I included
+11:47
+Studio light in the prompt because I
+11:49
+like that effect and it can create some
+11:51
+nice Rim lighting however I didn't
+11:54
+expect it to be incorporated into the
+11:56
+image as it was in the sd3 results in
+11:59
+the close-up portrait the lighting
+12:00
+effects are visible again and there's
+12:03
+also an extra hand included let's see
+12:05
+how it handles holding objects like a
+12:07
+mug the sdxl model shows some
+12:09
+distortions in the fingers but handles
+12:11
+the Morning Light better the sd3 model
+12:14
+has six fingers on the hand but offers
+12:17
+nice overall contrast with the face
+12:19
+appearing clearer the ultimate test uh
+12:22
+generating a hand um it seems both
+12:25
+models struggled with this let's try
+12:26
+generating a woman's hand instead it's a
+12:29
+fail as well so if you want to avoid
+12:32
+issues with hands avoid including them
+12:33
+in your prompts instead consider putting
+12:36
+them in Pockets or not specifying that
+12:38
+they're holding something for a knight
+12:40
+holding a sword the sdxl model produ
+12:43
+slightly better results than the sd3
+12:45
+model the sdxl model depicts the sword
+12:48
+more accurately for this prompt and seed
+12:52
+for landscape photos in general sd3
+12:54
+provides better texture such as in grass
+12:56
+and leaves while sdxl tends to be more
+12:59
+blurry in this case sdxl seems to do a
+13:02
+better job on macro photos of a bee on a
+13:05
+flower while sd3 is sharper and clearer
+13:07
+it's less accurate for this photo both
+13:10
+models produce some nice results again
+13:12
+sd3 seems to be a little sharper
+13:14
+remember I mentioned not to ask for
+13:16
+hands holding something in this case sd3
+13:18
+understood the prompt better by showing
+13:21
+one hand instead of two like SXL but it
+13:24
+still messed up the hand for a red
+13:26
+sphere on top of a blue cube std3 got it
+13:28
+right the first time on the second seed
+13:31
+it improved a bit but mixed some blue
+13:33
+into the green background overall sd3
+13:36
+handled complex prompts better uh for
+13:38
+this image of a cat and a dog std3
+13:40
+achieved better accuracy overall
+13:42
+although the animals are still a bit
+13:43
+deformed on hugging face they have some
+13:45
+sample prompts so let's test a few of
+13:47
+those as well for this complex prompt
+13:49
+sd3 understood hair made from the colors
+13:51
+of the Aurora Borealis better while sdxl
+13:54
+placed it behind for the warrior tiger
+13:56
+prompt sd3 correctly rendered the text
+13:58
+on the flag showing it handles text a
+14:01
+bit better than sdxl protect that is not
+14:04
+in English uh sd3 can still struggle but
+14:06
+it tends to make fewer errors compared
+14:09
+to sdxl if the word is in English and is
+14:12
+short sd3 usually produces more accurate
+14:15
+results sdxl on the other hand can still
+14:17
+fail frequently for this cartoon
+14:20
+illustration both models failed with the
+14:21
+number of legs however sd3 got the plain
+14:24
+white background right on the second
+14:26
+seed sdxl corrected this issue while sd3
+14:29
+failed here's a complex prompt created
+14:32
+with chat GPT a mushroom made of ice sd3
+14:36
+got it right demonstrating its ability
+14:38
+to handle complex prompts well except
+14:42
+when it comes to people at hands or
+14:43
+Limbs and for this digital painting of a
+14:45
+bunny sd3 messed up the legs again but
+14:48
+rendered the digital painting effect
+14:50
+more clearly on the second seed it
+14:52
+improved slightly uh for this Vector
+14:54
+style minimalist bat illustration sd3
+14:57
+did quite well however when I tried
+15:00
+generating a gnome head it initially
+15:02
+produced only a silhouette um on the
+15:05
+second seed it improved a bit for a
+15:08
+coloring book page style the sdxl
+15:12
+illustration looks nice but introduces
+15:14
+some gray shading on the other hand sd3
+15:17
+provides a clear black on white design
+15:19
+with no shading though the design itself
+15:22
+is less attractive it seems to depend on
+15:24
+the prompt as well for this unicorn sd3
+15:27
+produced a simpler design but again
+15:29
+messed up the legs sdxl created a more
+15:32
+complex design and this might be due to
+15:34
+the Juggernaut model being fine-tuned
+15:36
+with more images possibly including more
+15:39
+coloring pages compared to the original
+15:42
+Basse model the watercolor painting in
+15:44
+both models produced different styles
+15:45
+while sd3 has better watercolor texture
+15:48
+it seems a bit heavy on contrast from a
+15:50
+distance it looks almost like a vector
+15:52
+style for the sticker illustration both
+15:54
+models produce some cute results for
+15:57
+this fantasy orc uh like the quality of
+16:00
+the painting produced by the sd3 model
+16:02
+but I wish it hadn't messed up the ears
+16:04
+as you can see from the test std3
+16:07
+struggles significantly with people
+16:08
+Limbs and so on we expected sd3 to
+16:11
+outperform sdxl but in some areas it
+16:15
+falls short while excelling in others
+16:17
+this may be due to heavy sensorship
+16:19
+which uh impacts its accuracy when
+16:21
+dealing with anatomical details uh
+16:24
+they've mentioned that this is the
+16:25
+medium version and an improved version
+16:27
+will be released so we'll have have to
+16:29
+wait and see I plan to use sd3 for
+16:31
+images with text Landscapes food object
+16:35
+photography and some illustrations
+16:37
+depending on the The Prompt it produces
+16:39
+great results in some cases but can be
+16:41
+an epic fail in others which can be
+16:44
+quite frustrating I'll use uh sdxl for
+16:47
+people animals and various illustrations
+16:50
+since it seems more accurate if you
+16:52
+found this useful please leave a like or
+16:54
+a comment and check out the Discord
+16:56
+server or my Facebook group pixaroma
+16:58
+Community thank you for watching and
+17:01
+have a great day
+17:06
+[Music]

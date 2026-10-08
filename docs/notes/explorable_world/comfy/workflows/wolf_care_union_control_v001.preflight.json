@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "experiment_id": "wolf_care_union_control_v001",
+  "checked_on": "2026-10-04",
+  "status": "selected_depth_preprocessor_missing_in_cloud_no_wolf_generation",
+  "phase": "dependency_preflight",
+  "scope": "Technical capability test only. The actual production is the separate Hon Dolo trap-rap music video with a reimagined Star Wars cast; this wolf scene is not its story, cast, setting, or creative reference.",
+  "acceptance_limit": "Passing this lighting and motion test does not validate rap lip-sync, human character transfer, facial tattoo continuity, or finished music-video production.",
+  "workspace": "D:/Documents/CFA",
+  "handoff_read": "D:/Documents/Pan_Handlers/Help/CFA_HANDOFF.md",
+  "source_intake": "../references/wolf_care_v001.reference.json",
+  "source_clip": "../outputs/references/preferred_10b936eb46c1e671b089bf26e0c551bb/10b936eb46c1e671b089bf26e0c551bb.mp4",
+  "source_sha256": "3f2be3389bbf36c9e83927ac43b4f8181de836a6ddecefb629bac1756169678a",
+  "path_base": "this record's directory unless absolute",
+  "brief": "The same woman-and-wolf encounter in cool, overcast daylight. Preserve both subjects, their positions, contact, gestures and camera movement. Keep skin, fur and fabric believable.",
+  "trim": {
+    "target_duration_seconds_approximate": 4,
+    "start_seconds": null,
+    "end_seconds": null,
+    "motion_reviewed": false,
+    "audio_reviewed": false,
+    "source_audio_policy": "Keep separately; inspect and decide whether to remux after the visual test."
+  },
+  "access": {
+    "configured_server": "comfy-cloud",
+    "saved_user_configuration_present": true,
+    "saved_server_enabled": true,
+    "saved_endpoint_matches_expected": true,
+    "expected_endpoint": "https://cloud.comfy.org/mcp",
+    "exposed_comfy_tools": 41,
+    "codex_mcp_list_result": [],
+    "codex_mcp_get_result": "Error: No MCP server named 'comfy-cloud' found.",
+    "live_authentication_verified": true,
+    "browser_connector_initialization": "failed to write kernel assets: The system cannot find the path specified. (os error 3)",
+    "desktop_connector_initialization": "failed to write kernel assets: The system cannot find the path specified. (os error 3)",
+    "interpretation": "Initial CLI empty/not-found results came from the sandbox profile. Actual-profile OAuth initialization failed invalid_grant; fresh login restored get_server_info, list_saved_workflows and get_saved_workflow. Native chat tools were not reloaded. Account video dependencies remain unverified.",
+    "credentials_printed": false,
+    "configuration_changed": false,
+    "initial_cli_profile": "C:/Users/CodexSandboxOffline/.codex",
+    "exposed_comfy_tools_scope": "Native Comfy MCP tools available later in the same October 3 session.",
+    "actual_profile_live_tools": 41,
+    "actual_profile": "C:/Users/Stephen/.codex",
+    "initial_actual_profile_error": "invalid_grant",
+    "oauth_renewal_completed": true,
+    "verified_route": "Local Codex app-server JSON-RPC under actual Windows profile with sandbox escalation",
+    "server_version": "0.67.0",
+    "proof_record": "../outputs/comfy_connection_20261003.proof.json",
+    "native_tools_verified_after_recovery": true
+  },
+  "candidate": {
+    "name": "LTX-2.5 Union Control Distilled with depth guidance",
+    "official_guide": "https://docs.ltx.io/open-source-model/feature-guides/structural-control/union-control",
+    "editor_snapshot": "upstream/video_ltx2_5_union_control_20261003.editor.json",
+    "dependency_manifest": "upstream/video_ltx2_5_union_control_20261003.manifest.json",
+    "editor_snapshot_sha256": "cf3553a6bafd8d5398f36cfe06dc580a13dddea9387cc57b4a17c2c14c9a4df0",
+    "upstream_commit": "3bf3ca62595f1764c47d01c35c8e5dfe47e1a88f",
+    "snapshot_findings": [
+      "The editor graph uses two sampling stages and x2 latent refinement.",
+      "The saved manual sigma lists have 8 intervals for stage 1 and 3 for stage 2; the guide's 8+4 prose differs.",
+      "Depth preprocessing is LoadVideoDepthAnythingModel -> VideoDepthAnythingProcess -> VideoDepthAnythingOutput(gray), using video_depth_anything_vits.pth.",
+      "The official recipe explicitly selects the LTX-2.3 Union Control adapter with LTX-2.5 components; this specific documented reuse is not permission to mix arbitrary generations.",
+      "The use-image-input toggle is true while LoadImage is empty; provide the selected excerpt's starting frame or deliberately adapt and validate the graph.",
+      "Source FPS is linked through the graph; decoder widget literals are not the effective rate. Source audio is disconnected and the graph generates new audio."
+    ],
+    "account_template_available": null,
+    "account_models_available": null,
+    "account_nodes_available": false,
+    "live_node_schemas_checked": true,
+    "depth_sequence_inspected": false,
+    "effective_generation_dimensions": null,
+    "effective_frames": null,
+    "effective_fps": null,
+    "seed": null,
+    "estimated_cost": null,
+    "live_node_schema_check_scope": "Selected depth nodes and key LTX/control/utility nodes checked; not an exhaustive schema validation of all 44 graph classes or a compiled workflow dry run.",
+    "manifest_models_catalog_available": true,
+    "model_availability_scope": "All seven exact model_links_from_graph filenames are in the live shared catalog. Overall account_models_available remains unknown because the separate video_depth_anything_vits.pth preprocessor weight was not verified; catalog presence is not loader/runtime validation.",
+    "unchanged_depth_run_feasible": false
+  },
+  "generation": {
+    "submitted": false,
+    "job_id": null,
+    "output": null,
+    "actual_cost": null,
+    "weights_downloaded_locally": false
+  },
+  "built_in_agent_handoff": {
+    "prepared_on": "2026-10-03",
+    "message_file": "wolf_care_union_control_v001.agent_handoff.txt",
+    "panel_visible_in_user_screenshot": true,
+    "screenshot_target": "observatory-pump-concept-v001",
+    "screenshot_run_permission": "Ask",
+    "required_target": "Separate wolf preflight workflow",
+    "sent": false,
+    "dependency_report_received": false,
+    "direct_agent_to_agent_connection_established": false
+  },
+  "resume_steps": [
+    "Recheck the selected depth preprocessing package and exact registered classes in Cloud before resuming this source-video route; all three selected VideoDepthAnything nodes were missing on October 4.",
+    "If a compatible replacement is selected, preserve the official snapshot, adapt a separate working copy and validate the replacement control path and all actual loader options. Seven catalog model hits alone are not a runnable graph.",
+    "Review the wolf source motion and audio, then choose the excerpt and reconcile valid frame count, FPS, resize/padding and generation/output dimensions.",
+    "Prepare and inspect the actual depth sequence; resolve optional missing API branches, compile and validate effective inputs, and establish the bounded preview cost.",
+    "Only after preparation, run the wolf preview and compare contact, timing, camera path, anatomy, identity, lighting and temporal stability. The separate completed Hon Dolo I2V fallback is not proof of source-motion preservation."
+  ],
+  "recovery_references": [
+    "https://learn.chatgpt.com/docs/extend/mcp?surface=cli",
+    "https://docs.comfy.org/agent-tools/mcp"
+  ],
+  "history": [
+    {
+      "checked_on": "2026-10-03",
+      "status": "live_access_restored_dependencies_pending",
+      "phase": "connection_and_dependency_preflight",
+      "account_template_available": null,
+      "account_models_available": null,
+      "account_nodes_available": null,
+      "live_node_schemas_checked": false,
+      "resume_steps": [
+        "Use the verified local Codex app-server route under the real Windows profile. If authentication fails again, renew the existing OAuth login and verify live reads.",
+        "Search the account's templates, models and nodes against the saved official dependency audit; connection recovery alone does not establish compatibility.",
+        "Review source motion and sound; choose the excerpt and reconcile frame count, FPS, resize/padding and output dimensions with the selected graph.",
+        "Prepare and inspect depth control; export a fresh execution graph from the compatible runtime and confirm the bounded preview cost.",
+        "Run only after preparation and budget are settled; compare contact, timing, camera path, anatomy, identity, light and flicker before finishing."
+      ],
+      "note": "Preserved October 3 access recovery/dependency-pending state. Original access evidence remains in access; the dated dependency check below supersedes its dependency-pending interpretation."
+    }
+  ],
+  "dependency_check_20261004": {
+    "checked_on": "2026-10-04",
+    "route": "Native mcp__comfy_cloud get_node, search_nodes and search_models; read-only calls succeeded.",
+    "selected_depth_nodes_missing": [
+      "LoadVideoDepthAnythingModel",
+      "VideoDepthAnythingProcess",
+      "VideoDepthAnythingOutput"
+    ],
+    "depth_exact_lookup": {
+      "requested": [
+        "LoadVideoDepthAnythingModel",
+        "VideoDepthAnythingProcess",
+        "VideoDepthAnythingOutput"
+      ],
+      "data": [],
+      "missing": [
+        "LoadVideoDepthAnythingModel",
+        "VideoDepthAnythingProcess",
+        "VideoDepthAnythingOutput"
+      ]
+    },
+    "depth_searches": [
+      {
+        "tool": "search_nodes",
+        "q": "VideoDepthAnything",
+        "returned": 0,
+        "total": 0
+      },
+      {
+        "tool": "search_nodes",
+        "pack": "ComfyUI-Video-Depth-Anything",
+        "returned": 0,
+        "total": 0
+      }
+    ],
+    "additional_missing_node": {
+      "name": "GemmaAPITextEncode",
+      "role": "Optional API-conditioning branch; saved API key is empty.",
+      "implication": "May be prunable in an adapted graph; pruning was not attempted or validated and would not repair the missing selected depth path."
+    },
+    "resolved_node_classes": [
+      "LTXAddVideoICLoRAGuide",
+      "LTXICLoRALoaderModelOnly",
+      "LTXVLatentUpsampler",
+      "LTXVImgToVideoInplace",
+      "LTXVConcatAVLatent",
+      "LTXVCropGuides",
+      "ComfyMathExpression",
+      "ComfyNotNode",
+      "ComfySwitchNode",
+      "LTXFloatToInt",
+      "ResizeImageMaskNode",
+      "TextGenerateLTX2Prompt",
+      "StringContains",
+      "EmptyLTXVLatentVideo",
+      "LTXVEmptyLatentAudio",
+      "LTXVAudioVAEDecode",
+      "LTXVConditioning",
+      "LTXVSeparateAVLatent"
+    ],
+    "resolved_node_count": 18,
+    "exact_manifest_models_in_catalog": [
+      "gemma4_e2b_it_bf16.safetensors",
+      "gemma4-12b-with-proj-ltx-2.5-bf16.safetensors",
+      "ltx-2.3-22b-ic-lora-union-control-ref0.5.safetensors",
+      "ltx-2.5-22b-distilled-transformer-bf16.safetensors",
+      "ltx-2.5-audio-vae-bf16.safetensors",
+      "ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+      "ltx-2.5-video-vae-bf16.safetensors"
+    ],
+    "manifest_model_count": 7,
+    "catalog_search_evidence": [
+      {
+        "q": "ltx-2.5",
+        "returned": 16,
+        "total": 16,
+        "offset": 0,
+        "match": "substring"
+      },
+      {
+        "q": "union-control",
+        "returned": 1,
+        "total": 1,
+        "offset": 0,
+        "match": "substring"
+      },
+      {
+        "q": "gemma4_e2b_it_bf16",
+        "returned": 1,
+        "total": 1,
+        "offset": 0,
+        "match": "substring"
+      }
+    ],
+    "depth_weight": {
+      "filename": "video_depth_anything_vits.pth",
+      "available": null,
+      "note": "The broad search returned partial any-token matches; it does not establish presence or absence of this exact weight."
+    },
+    "conclusion": "The saved official selected depth-preprocessing path cannot run unchanged in this Cloud catalog. Replacing it requires a separate adaptation, control-sequence inspection and validation; no supported replacement was established in this check.",
+    "limitations": [
+      "Catalog/schema checks only; no workflow save, compiled conversion, dry run or generation in this preflight.",
+      "No source motion/audio review, trim selection or depth-sequence inspection.",
+      "No local weights downloaded or custom nodes installed.",
+      "Generic search_models recommended sampler fields were not adopted as the official Union sampling recipe."
+    ]
+  },
+  "separate_image_to_video_fallback": {
+    "experiment_id": "hon_dolo_motion_v001",
+    "record": "hon_dolo_motion_v001.record.json",
+    "record_creation": "Canonical sibling record saved with the completed job, actual graphs, output metadata and sampled-frame review.",
+    "job_id": "b57756c5-9de7-48ca-90ae-968c763ea2f5",
+    "status": "completed",
+    "evidence_source": "Completion reported by the parent agent handling the separate native Comfy Cloud image-to-video run; consult its canonical record for settings, output and review.",
+    "relationship": "Authorized image-to-video fallback, separate from the wolf source-video relighting test.",
+    "proves_wolf_video_to_video": false,
+    "proves_source_motion_preservation": false,
+    "note": "This record still has no submitted wolf generation, no reviewed source motion/audio, no chosen trim and no inspected depth sequence."
+  }
+}

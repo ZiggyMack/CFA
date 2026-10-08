@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "record_type": "pathfinder_evidence_manifest",
+  "purpose": "Evidence index, not an executable workflow or journal schema.",
+  "prepared_at_utc": "2026-09-12T16:58:57.911871+00:00",
+  "repository": {
+    "name": "CFA",
+    "checkout": "D:/Documents/CFA",
+    "branch": "main",
+    "head_at_inspection": "710360d322e2d9725087fb3d501449272150f4b3",
+    "includes_uncommitted_work": true
+  },
+  "relative_paths_base": "directory containing this manifest",
+  "experiment": {
+    "id": "pump_concept_v001",
+    "task": "text_to_image_pump_concept",
+    "status": "executed_initial_feedback_recorded",
+    "source_image": null,
+    "source_video": null,
+    "dialogue_rewrite_executed": false,
+    "generated_mesh_imported": false,
+    "second_generated_result": null,
+    "output_quality": "promising direction; visible repair history and lever socket need refinement"
+  },
+  "artifacts": [
+    {
+      "role": "source_prompt",
+      "path": "../comfy/pump_concept_prompt.txt",
+      "bytes": 994,
+      "sha256": "bcb33a3228b6a0009f173e19b04e7ecbd1d1fa97e27f90105848e2b88e96fc99"
+    },
+    {
+      "role": "result_png",
+      "path": "../comfy/outputs/pump_concept_v001.png",
+      "bytes": 859874,
+      "sha256": "5777aaf41b6343e999033d357c136cc18d840a35f565b98d72895c974027e0c4"
+    },
+    {
+      "role": "editor_graph",
+      "path": "../comfy/workflows/pump_concept_v001.editor.json",
+      "bytes": 29101,
+      "sha256": "da506499a61d427ecf6c844e578de2cd68fc4320c7b36ad2a75fb4e387a94359"
+    },
+    {
+      "role": "api_graph",
+      "path": "../comfy/workflows/pump_concept_v001.api.json",
+      "bytes": 3475,
+      "sha256": "4661cf9f818215442e93b843577367f60345eba0bb3fba8fb4d42c39c7904d4d"
+    },
+    {
+      "role": "source_template_editor_graph",
+      "path": "../comfy/workflows/pump_concept_v001.template.editor.json",
+      "bytes": 27172,
+      "sha256": "307904f13211cfa5405b308e748ef8035c68991b5bb4cfd4733daed9bc511b77"
+    },
+    {
+      "role": "run_record",
+      "path": "../comfy/workflows/pump_concept_v001.record.json",
+      "bytes": 9334,
+      "sha256": "30eb2aa920c9d756f1f5ac0650694e7bbef9d59a4b24de2c9b44c77a415cf2ab"
+    },
+    {
+      "role": "drive_receipt",
+      "path": "../comfy/workflows/pump_concept_v001.drive_archive.json",
+      "bytes": 5040,
+      "sha256": "b380f820234fffc6ac4ed1723c9ff5b41b9b2e68a73a973da08825d004cf2047"
+    },
+    {
+      "role": "learning_record",
+      "path": "../comfy/LESSONS.md",
+      "bytes": 22444,
+      "sha256": "67f0a21d8bc67a889d7e352a7153bb67b76ab7d023e707eaea4ccd39499f0608"
+    },
+    {
+      "role": "civitai_procedure",
+      "path": "../comfy/CIVITAI.md",
+      "bytes": 15905,
+      "sha256": "ac6417a59f54a336ba60f5ba10b74a32fe4548f7b0a9e1f424ff2a3cf8da2734"
+    },
+    {
+      "role": "game_validation",
+      "path": "../../../../games/observatory/VALIDATION.md",
+      "bytes": 3936,
+      "sha256": "8b2d0a652a8b179ed332359b2edb75a00fabf7758972aeb119895d649396b896"
+    },
+    {
+      "role": "authored_world_source",
+      "path": "snapshots/world_builder_20260912_before_visual.gd.txt",
+      "bytes": 19486,
+      "sha256": "abc2b7ccf818efe4d0e04223cfa1d0f0f3ee2ee53d329d920b7f4235adcfe8f2",
+      "note": "Preserved original handoff source before the subsequent visual upgrade. Live source: games/observatory/scripts/world_builder.gd."
+    }
+  ],
+  "reproduction": {
+    "provider": "Comfy Cloud",
+    "template_id": "image_z_image_turbo",
+    "template_url": "https://cloud.comfy.org/templates/image_z_image_turbo.json",
+    "mcp_server_version_observed": "0.57.0",
+    "authenticated_tools_observed": 41,
+    "deployed_comfy_core_version": null,
+    "template_frontend_version": "1.42.15",
+    "version_scope": "Embedded node/frontend metadata describes the saved template, not verified deployed software; model source URLs use mutable main.",
+    "models": [
+      {
+        "filename": "qwen_3_4b.safetensors",
+        "directory": "text_encoders",
+        "source_url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors",
+        "immutable_revision": null,
+        "weights_sha256": null
+      },
+      {
+        "filename": "ae.safetensors",
+        "directory": "vae",
+        "source_url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors",
+        "immutable_revision": null,
+        "weights_sha256": null
+      },
+      {
+        "filename": "z_image_turbo_bf16.safetensors",
+        "directory": "diffusion_models",
+        "source_url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors",
+        "immutable_revision": null,
+        "weights_sha256": null
+      }
+    ],
+    "node_metadata": [
+      {
+        "class_type": "CLIPLoader",
+        "package": "comfy-core",
+        "template_version": "0.3.73"
+      },
+      {
+        "class_type": "VAELoader",
+        "package": "comfy-core",
+        "template_version": "0.3.73"
+      },
+      {
+        "class_type": "ConditioningZeroOut",
+        "package": "comfy-core",
+        "template_version": "0.3.73"
+      },
+      {
+        "class_type": "VAEDecode",
+        "package": "comfy-core",
+        "template_version": "0.3.64"
+      },
+      {
+        "class_type": "UNETLoader",
+        "package": "comfy-core",
+        "template_version": "0.3.73"
+      },
+      {
+        "class_type": "CLIPTextEncode",
+        "package": "comfy-core",
+        "template_version": "0.3.73"
+      },
+      {
+        "class_type": "EmptySD3LatentImage",
+        "package": "comfy-core",
+        "template_version": "0.3.64"
+      },
+      {
+        "class_type": "ModelSamplingAuraFlow",
+        "package": "comfy-core",
+        "template_version": "0.3.64"
+      },
+      {
+        "class_type": "KSampler",
+        "package": "comfy-core",
+        "template_version": "0.3.64"
+      },
+      {
+        "class_type": "SaveImage",
+        "package": "comfy-core",
+        "template_version": "0.3.64"
+      }
+    ],
+    "execution_node_classes": [
+      "CLIPLoader",
+      "CLIPTextEncode",
+      "ConditioningZeroOut",
+      "EmptySD3LatentImage",
+      "KSampler",
+      "ModelSamplingAuraFlow",
+      "SaveImage",
+      "UNETLoader",
+      "VAEDecode",
+      "VAELoader"
+    ],
+    "parameters": {
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "res_multistep",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "shift": 3.0,
+      "batch_size": 1,
+      "seed": 42,
+      "width": 1024,
+      "height": 1024,
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "clip_name": "qwen_3_4b.safetensors",
+      "clip_type": "lumina2",
+      "vae_name": "ae.safetensors"
+    },
+    "editor_seed_control": "randomize; set seed 42 and fixed control for a controlled rerun",
+    "format_roles": {
+      "editor_graph": "Open/import in a compatible Comfy editor; includes embedded subgraph.",
+      "api_graph": "Resolved prompt graph for an API client accepting Comfy node-ID dictionaries.",
+      "run_record": "Non-executable evidence record."
+    },
+    "image_search_preference": "SDXL 1.0 checkpoint and SafeTensor for new third-party still-image searches; does not override this Z-Image recipe or specialized video/audio loaders."
+  },
+  "completion": {
+    "job_id": "cb835f1e-3b10-4972-860c-fb83fb0517c0",
+    "status": "completed",
+    "submission_observed_at_utc": "2026-09-12 14:08:59 UTC",
+    "completion_observed_at_utc": "2026-09-12T14:12:05+00:00",
+    "exact_completion_at_utc": null,
+    "observation_interval_seconds": 186,
+    "gpu_runtime_seconds": null,
+    "queue_duration_seconds": null,
+    "evidence": "wait_for_job returned completed=true for this job; exact provider completion timestamp was not exposed.",
+    "new_run_performed_for_handoff": false
+  },
+  "usage": {
+    "actual_credits": null,
+    "gpu_credits": null,
+    "estimated_paid_api_node_credits": 0,
+    "credits_scope": "API-node estimate excluded GPU/queue/storage costs; usage report ended before this job. Unknown is not zero."
+  },
+  "failure_and_recovery": {
+    "status": "recovered",
+    "observed_on": "2026-09-12",
+    "failed_operations": [
+      "get_server_info",
+      "get_template_schema",
+      "get_prompting_guide"
+    ],
+    "error": "invalid_grant: refresh token reuse detected",
+    "cause": "unknown",
+    "recovery": "First browser attempt timed out. Fresh login succeeded and get_server_info confirmed production 0.57.0 authenticated OAuth with 41 tools; no IDE restart was needed."
+  },
+  "first_import": {
+    "status": "untested",
+    "provider_secret": "saved per user report and screenshot; value not inspected",
+    "owned_model_count_observed": 0,
+    "shared_sdxl_filename_observed": "realvisxlV50_v50Bakedvae.safetensors",
+    "shared_sdxl_generation_executed": false,
+    "learner_handoff": "Assistant prepares exact needed file link, destination and filename; user performs browser import; assistant verifies catalog/loader entry. A public import need not exercise the saved key."
+  },
+  "archive": {
+    "local_copy_hashes_verified": true,
+    "remote_folder_visibility_verified": true,
+    "remote_file_upload_verified": false,
+    "independent_remote_retrieval_verified": false,
+    "originals_preserved": true
+  },
+  "game": {
+    "implementation": "Separate authored geometry informed by the concept; no image-to-mesh conversion.",
+    "recorded_engine": "Godot 4.7.2.stable.official.ed1daf0bf",
+    "recorded_automated_checks": {
+      "story": 108,
+      "world_access": 36,
+      "save_menu": 56
+    },
+    "rendering_evidence": "Three stationary 181-frame samples, 1280x720, 60 fps cap, Quadro 2000 OpenGL 3.3 driver 369.09; not a full playthrough or comfort assessment.",
+    "tests_rerun_for_handoff": false
+  },
+  "verification": {
+    "artifact_hashes_calculated": 11,
+    "run_record_hashes_match": true,
+    "archive_content_hashes_match": true,
+    "png_dimensions": [
+      1024,
+      1024
+    ],
+    "png_editor_metadata_matches_graph": true,
+    "png_prompt_metadata_matches_graph": true
+  },
+  "unresolved": [
+    "Exact deployed node/core versions and immutable model revisions",
+    "Actual job duration and attributable credits",
+    "First Civitai import and authenticated-key use",
+    "Independent retrieval of archived pump bytes",
+    "Source/result dialogue-rewrite media and measurements",
+    "Human movement/pacing review of the game"
+  ]
+}
