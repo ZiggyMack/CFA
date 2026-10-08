@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "experiment_id": "FLOW-HD-VIDEO-002",
+  "prepared_on": "2026-10-08",
+  "state": "local_prepared_not_uploaded_or_generated",
+  "source": {
+    "reference_id": "GEM-97D0B65E",
+    "filename": "gemini_generated_video_97d0b65e.mp4",
+    "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_97d0b65e.mp4",
+    "sha256": "fe3154c0b727d80909eae9d8ab2c4b42889643d577bbdfb18123c4d23cef695d",
+    "bytes": 20985757,
+    "duration_seconds": 40.0,
+    "frame_count": 960,
+    "fps": 24,
+    "width": 1280,
+    "height": 720,
+    "audio": "original AAC retained in untouched source"
+  },
+  "similar_asset_not_selected": {
+    "reference_id": "GEM-5A115C59",
+    "filename": "gemini_generated_video_5a115c59.mp4",
+    "duration_seconds": 41.0
+  },
+  "excerpt": {
+    "asset_id": "FLOW-HD-VIDEO-002-A",
+    "filename": "FLOW-HD-VIDEO-002_input_10p1667-16p1667.mp4",
+    "repo_path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/FLOW-HD-VIDEO-002_input_10p1667-16p1667.mp4",
+    "sha256": "54569a91c9117a4e9b8904b80c7cbb57cd6c854ce4e387933712f59f9d866897",
+    "bytes": 1796037,
+    "source_start_frame_inclusive": 244,
+    "source_end_frame_exclusive": 388,
+    "source_start_seconds": 10.166666666666666,
+    "source_end_seconds_exclusive": 16.166666666666668,
+    "duration_seconds": 6.0,
+    "frame_count": 144,
+    "fps": 24,
+    "width": 1280,
+    "height": 720,
+    "audio_streams": 0,
+    "role": "baseline A and sole edit input for proposed comparison B"
+  },
+  "processing": {
+    "operation": "frame trim and re-encode; original unchanged",
+    "codec": "libx264",
+    "preset": "medium",
+    "crf": 21,
+    "pixel_format": "yuv420p",
+    "video_filter": "trim=start_frame=244:end_frame=388,setpts=PTS-STARTPTS",
+    "container_flags": "+faststart",
+    "audio": "removed from excerpt for visual-only test; retained in original",
+    "resize": false,
+    "retime": false,
+    "exact_pixel_preservation_claim": false,
+    "execution_receipt": "prepare_receipt.json"
+  },
+  "verification": {
+    "source_hash_unchanged": true,
+    "full_excerpt_decode_exit_code": 0,
+    "decoded_frame_count": 144,
+    "timebase": "1/24",
+    "first_frame_pts": 0,
+    "last_frame_pts": 143,
+    "frame_hash_record": "excerpt_video.framemd5",
+    "scene_detection_threshold": 0.18,
+    "scene_detection_hits_in_excerpt": 0,
+    "visual_review": "24 quarter-second frames plus full-size start/middle/end previews inspected; one continuous scene observed",
+    "normal_speed_playback_review": false,
+    "audio_listening_review": false,
+    "source_design_approved": false
+  },
+  "proposed_test": {
+    "baseline": "A: supplied prepared excerpt, no Flow generation",
+    "variant": "B: same input, only subtly warmer existing illumination",
+    "max_generation_outputs": 1,
+    "model": "Gemini Omni Flash 1.1",
+    "mode": "Video to Video editing",
+    "model_documentation_verified_on": "2026-10-08",
+    "official_source": "https://support.google.com/flow/answer/16352836?hl=en",
+    "documented_video_edit_limit_seconds": 10,
+    "account_model_mode_verified": false,
+    "flow_uploaded_asset_id": null,
+    "flow_generation_id": null,
+    "actual_cost": null,
+    "acceptance": "pending"
+  },
+  "bundle_files": [
+    {
+      "path": "EXPERIMENT.txt",
+      "bytes": 5889,
+      "sha256": "ceafd1019c5448f398c63e3019e1dc4006dd202f4a96867db7d9b71c65710c66",
+      "role": "experiment file"
+    },
+    {
+      "path": "FLOW-HD-VIDEO-002_input_10p1667-16p1667.mp4",
+      "bytes": 1796037,
+      "sha256": "54569a91c9117a4e9b8904b80c7cbb57cd6c854ce4e387933712f59f9d866897",
+      "role": "experiment file"
+    },
+    {
+      "path": "RETURN_RECEIPT.template.json",
+      "bytes": 879,
+      "sha256": "94c01d4d5c63e87277f6117d09a2976a7d110b61eebc1c70f6675a0effbcf318",
+      "role": "experiment file"
+    },
+    {
+      "path": "excerpt_4fps_contact.jpg",
+      "bytes": 551925,
+      "sha256": "4db5a2bae43eb81319009f4edaecbd6e243b7e5f048c2433599729f2957fb9dd",
+      "role": "viewing aid, not extra input"
+    },
+    {
+      "path": "frame_start.jpg",
+      "bytes": 82760,
+      "sha256": "785d846a528819d98bcbfd0325cc30588a616f59b1bff563c27811e7fa08b900",
+      "role": "viewing aid, not extra input"
+    },
+    {
+      "path": "frame_middle.jpg",
+      "bytes": 95317,
+      "sha256": "76052b553a0ff53ee17f101cbbd2891e6b8575aa507920f07f8b5a97e97bdaaf",
+      "role": "viewing aid, not extra input"
+    },
+    {
+      "path": "frame_end.jpg",
+      "bytes": 93745,
+      "sha256": "2d0093f95346777725beb1604404cd7ea8374713d0ba19d33e55abca052e9fe2",
+      "role": "viewing aid, not extra input"
+    },
+    {
+      "path": "prepare_receipt.json",
+      "bytes": 1197,
+      "sha256": "d709f283c0dcdfed6a6c9d4e6d63638a94abd117626030a17fc92f170175df54",
+      "role": "experiment file"
+    },
+    {
+      "path": "excerpt_video.framemd5",
+      "bytes": 11889,
+      "sha256": "ec32c9fbe1ed947d1291a176a3be02468f344ebc2bc6f5dcdf964f45796c24e2",
+      "role": "experiment file"
+    }
+  ]
+}

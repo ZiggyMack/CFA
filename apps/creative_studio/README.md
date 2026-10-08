@@ -2,6 +2,8 @@
 
 A standalone Streamlit review room for Hon Dolo, Lisan Al Gaib, and clips that still need a project. The layout borrows the Pan Handlers Help app's grouped sidebar, restrained color palette, and progressive detail. It has no Pan Handlers runtime dependency.
 
+Hosted entry: [algaib.streamlit.app](https://algaib.streamlit.app/).
+
 ## Run locally
 
 From the CFA repository root:
@@ -24,13 +26,33 @@ Native `st.image` and `st.video` serve packaged files through Streamlit. No stat
 
 ## Review behavior
 
-- **Library:** filter by category, album, and words; open an item for its larger picture or video and review details.
-- **Storyboard:** illustrated panels grouped by story sequence, with lyric connections and review notes when supplied. Planning order does not imply measured song timings.
-- **Collaborator kits:** Gemini instructions and maps, Flow briefs, collaborator roles, and Grok instructions when included in the catalog.
-- **Favorites & notes:** stars and notes are held in the current Streamlit session. Export them before leaving; another browser or a restarted session does not automatically retain them.
-- **Documents:** grouped supporting notes stay behind expanders.
+- **Ziggy’s Corner / Mission Control:** the first view in a new session. Saved task cards cover all projects and show each collaborator's next action, status, missing inputs, and packaged reference documents. Live review and shot-plan counts reflect your session. The page does not monitor third-party accounts or imply a draft was sent. Hosted links resolve packaged asset IDs; local filesystem links are not exposed.
+- **Library:** filter by category, album, and words; open an item for its larger picture or video and review details. Videos have independent Layout (Grouped or All clips) and Sort (Longest first, Shortest, or Alphabetical A–Z) controls. The default is Grouped with Longest first within each scene category, alphabetical ties, unknown durations last, and turnarounds at the bottom. All clips sorts across the current collection/search.
+- **Storyboard:** filter by planning stage, source-panel position, and story themes. Narrowing the position range also narrows the available themes. Stages are Preliminary, Detailed design, Verification, and Production; changing a stage does not claim a technical check passed. Planning order does not imply measured song timings.
+- **Collaborators:** a global production workspace with ComfyUI first, then Flow, Gemini, Grok, and Panhandler Nova. ComfyUI shows concrete saved workflow records and their actual inputs, outputs/previews, documents, and execution status. Cloud links are restricted to `https://cloud.comfy.org/` and do not run the graph. Other providers show their saved tasks and current briefs across projects. A local FFmpeg result must not be described as a Cloud execution.
+- **Collaborator briefs:** separate Gemini, Flow, Grok, and Shared roles sections. Current Grok care-package files are included; earlier exploration briefs remain in Documents as history. Flow's recommended first steps sit beside its starter download, with the canonical Start here · Flow guide in its own expander.
+- **Review queue:** Keep, Needs fixes, and Mark for removal apply to the scope in your note. Marking removal never deletes a file or hides it from the library. Clear removes the decision while preserving the note and shot plan.
+- **Shot plans:** quick Flow / Grok / Gemini toggles appear next to the star and export basket in an open reference. One click queues a local draft and shows that it has not been sent. Expand Plan a shot to refine the idea, prompt, and destinations. Turning off the final provider retains the idea/prompt under undecided; Remove shot plan clears the draft explicitly. Export TXT or JSON handoffs filtered by project, destination, and search. Attach the source images and current character/reference kit separately: a handoff is a reference manifest, not an image ZIP.
+- **Export basket:** a separate selection across both projects, independent of stars and review flags. Export its `cfa-visual-export-v1` JSON selection list, or prepare an in-memory ZIP of hosted review copies plus a manifest. The ZIP retains original-reference hashes alongside actual packaged-copy hashes, includes duplicate content only once, and is limited to 100 MB of selected files. It does not contain original masters. Clearing the basket leaves favorites, reviews, and source files alone.
+- **Favorites & notes:** export the complete review to retain decisions, notes, shot plans, and stars from every project. All changes are held in the current Streamlit session; another browser or a restarted session does not automatically retain them.
+- **Details:** character profiles open individual tattoo or piercing objects, with placement examples and stencils kept distinct. All references remains available as a mixed view when needed.
+- **Documents:** six parent groups collect related notes, including one Design & outfit notes parent. Parent and child counts include their documents; both levels start collapsed and matching search results expand.
 
-Favorites retain the `cfa-visual-favorites-v1` interchange format used by the local gallery. Import merges known IDs and rejects supplied hash mismatches. The optional `notes` and `note_refs` fields carry review notes and their source hashes; older gallery exports work without them. Exports contain references and notes, not media. A star is a review shortlist choice and never changes an asset's production approval.
+Mission Control and Collaborators include a Back to library button that returns to the previous project view. Mission Control's Prepare review sweep downloads the current decisions, favorites, and eligible working-reference requests for a manual Nova handoff; it does not invoke an agent or alter any source file.
+
+Open a reference to choose its Prime or Multiverse lane and request a working-reference scope (complete look, identity, outfit, scene, or detail). Requests remain pending until reviewed; they never move an item into the working-reference category automatically. Multiverse, removed, and archived entries cannot request promotion into Prime. Provider handoffs and basket exports default to Prime, excluding Multiverse and removals; the explicit Multiverse creative ingredients export intent permits alternate-lane ingredients while still excluding removals. Canonically archived entries stay in review bookkeeping but disappear from ordinary browsing, favorites, and exports. A session removal flag alone does not archive an item.
+
+Complete reviews use `cfa-visual-review-v1`: `items` carry `id`, the original source `sha256`, `status` (`keep`, `needs_fixes`, `remove`, or explicit `null`), `note`, and optional `shotPlan`; `favorites` carries reference objects. A plan is `{status: "planned", destinations: [...], idea: "...", prompt: "..."}`; `shotPlan: null` explicitly clears it. Provider handoffs use `cfa-shot-handoff-v1` and are not session restore files.
+
+Optional review fields are `variant` (`prime` or `multiverse`), `workingReference` (`{status, scope}` or `null`), and `storyboardStage` (`preliminary`, `detailed_design`, `verification`, `production`, or `null` to use the source stage). `variantSource` distinguishes a user lane choice from a catalog-derived snapshot: importing a stale catalog lane cannot overwrite a fresh seed. Fields merge independently, so an older note-only export cannot erase new canonical lane decisions. Full review backups retain archived/removal/Multiverse records even when production exports exclude them.
+
+Supplied `catalog.reviewDecisions` seed the initial review. Session choices override matching seed fields, so an explicit Clear or removed shot plan stays cleared on reruns and after export/import. Import merges matching IDs, requires exact original hashes for new review exports, and skips unmatched or invalid entries. Legacy `cfa-visual-favorites-v1` files still import; their supplied hashes are checked, and optional `notes`/`note_refs` remain supported. Legacy note imports do not erase seeded decisions. Complete review files also carry optional `exportBasket` references; omitting that field leaves the current basket alone. Imports merge selections instead of removing existing favorites or basket entries absent from a file.
+
+Mission Control reads `catalog.missionControl.tasks` as saved data. Task links may name a packaged `assetID` or a `downloadPath` resolving to a `.zip` inside `library/`. Local `href` fields are ignored by the hosted app. Care-package downloads are separate prepared files; creating a session shot plan does not rewrite them or send them anywhere.
+
+The production workspace reads `catalog.productionWorkflows`: each record has `id`, `provider`, `project`, `title`, a human-readable `status`, `summary`, `nextAction`, source/output/document asset ID lists, and an optional bounded `cloudURL`. These are workflow bookkeeping records, not executable instructions. Linked media opens in the same gallery viewer.
+
+JSON/TXT handoffs contain references and notes; the separately prepared basket ZIP contains review media. A star is a shortlist choice, and Keep only records the stated review scope; neither changes the source catalog's production approval. The application never writes review changes to the packaged catalog or original source files.
 
 ## Checks
 
@@ -40,4 +62,4 @@ From the repository root:
 python -m unittest discover -s apps/creative_studio/tests -v
 ```
 
-The checks cover bundle path isolation, supplied collection order, favorite/hash compatibility, pagination, project navigation, storyboard rendering, and collaborator text. The app uses native Streamlit widgets and keeps the sidebar toggle accessible for narrow screens.
+The checks cover bundle path isolation, collection order, legacy and current hash compatibility, seed restoration, explicit clears, provider-filtered handoffs, draft-only plan state, and unchanged source bytes. Streamlit interaction checks exercise pagination, project navigation, storyboard rendering, collaborator text, review decisions, and plan save/removal. Native widgets keep the sidebar toggle accessible on narrow screens.

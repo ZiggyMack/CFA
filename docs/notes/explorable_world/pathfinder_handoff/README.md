@@ -1,5 +1,15 @@
 # CFA evidence for Pathfinder
 
+## October 8 production review and provider handoffs
+
+The separate [CFA Creative Studio](https://algaib.streamlit.app/) is deployed from `apps/creative_studio/app.py`. Its local and hosted views now have a prepared Mission Control board, scoped review decisions, shot plans and a selection basket separate from favorites. Local autosave requires a user-chosen review JSON; hosted state requires export/import. Removal marks are a queue, not source deletion.
+
+The [Panhandler return](../comfy/projects/collaborators/panhandler_return_20261008.txt) gives Nova a bounded teaching brief. The [Grok handoff](../comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/START_HERE.txt) maps exact reference files to repair regions and staged two-character scene proofs. Thirteen stencil-named files were inspected and found to be opaque photo crops/placement sheets; no current transparent original was verified. Two chest drawings disagree. Current artwork recovery and missing-original reports are explicit requests, not invented completions.
+
+The [Flow intake](../comfy/projects/collaborators/flow_intake_20261008.txt) records the user's observed Characters/Images/Avatars/Uploads controls and a planned one-reference image comparison. No uploads or generation occurred. Three exact source-pixel [likeness crops](../comfy/casting/likeness_crops/manifest.json) remain separate from the Dolo design reference.
+
+**Bounded return:** connect these examples to the existing reference-role, controlled comparison, and export/persistence lessons. A liked outfit is not blanket tattoo approval; filename labels are not visual proof; a selection JSON differs from a media ZIP; prepared, attached, generated and accepted are distinct states. Preserve Pan's existing schemas and completed curriculum. Return adopted teaching links through `Help/CFA_FEEDBACK.md`; CFA retains production ownership.
+
 ## October 7 separate project libraries and reference conflicts
 
 The [two-project browser](../comfy/projects/index.html) now separates Hon Dolo / Strictly Business from Lisan Al Gaib / Meta Mirror. The [Lisan Gemini kit](../comfy/projects/lisan_al_gaib/gemini/gemini_instructions.txt) and [image map](../comfy/projects/lisan_al_gaib/gemini/reference_map.txt) bind three current reference roles and 50 actual scene files. The arm-tattoo reference visibly contains retired teeth and piercings: its role is artwork-only, not a complete identity input. Repeated historical scene filenames keep version paths/hashes. Source “strong/final” labels remain reported QA, not accepted identity or verified detail continuity.

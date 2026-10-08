@@ -45,15 +45,6 @@ When files are added or deleted, use diff notation like git commits:
 **Making an entry? Copy this template:**
 
 ```markdown
-### [WORKFLOW-2026-10-08-01] October 8, 2026 - Visual library and separate CFA Creative Studio
-
-- Rebuilt local review pages around visual collections for outfits, tattoos/piercings, cast, storyboard, videos and inspiration. Artwork comes first; documents are grouped and collapsed at the end. Stencils follow placement portraits; Comfy likeness targets have their own section.
-- Added image enlargement, video playback, search and portable favorites. Desktop/mobile functional checks passed; local source files and approval states remain unchanged.
-- Built independent Streamlit app at apps/creative_studio/app.py, borrowing Panhandlers Help's navigation and progressive detail approach. Native media, grouped notes, collaborator kits, pagination and favorites export use a portable review bundle rather than D: paths.
-- Packaged 533 catalogue records and 972 preview/document files; 25 compressed video previews preserve source frame counts, picture durations, aspect and decoded audio duration. Preview media is deliberately tracked; production masters and bulk ZIP archives remain local.
-- Added Google Flow collaborator brief, project attachment roles and shot card from dated official sources. No Flow generation, settings mutation or acceptance claimed.
-- Prepared a scoped GitHub publication excluding unrelated Observatory, data, game and relay work. Streamlit deployment remains separate from Git push.
-
 ### [CATEGORY-YYYY-MM-DD-N] Date - Brief Description
 
 **Categories:** [PRIMARY] [SECONDARY]
@@ -102,6 +93,27 @@ When files are added or deleted, use diff notation like git commits:
 -----
 
 ## 📝 CHANGE LOG
+
+### [WORKFLOW-2026-10-08-02] October 8, 2026 - Mission Control, production review and provider packages
+
+- Added global Ziggy's Corner with twelve collaborator tasks, Back to library navigation, prepared downloads and a ComfyUI workspace linking five actual workflow records. The separate CFA Creative Studio is served at https://algaib.streamlit.app/ from main.
+- Added independent favorites/export baskets, cumulative review notes and triage, collaborator flags, scoped working-reference requests, Prime/Multiverse export filtering and a review-sweep handoff. Local autosave requires a user-chosen review JSON; hosted sessions use export/import. Thirteen canonical decisions include the hash-verified user review intake. Removal flags queue a sweep; no source is silently erased.
+- Videos default to grouped longest-first with alphabetical ties and turnarounds last; All clips sorts across groups. The shorter 40-second montage and 10-second turnaround are archived from the working collection; the retained 41-second montage feeds Flow test 002 and the 20-second clip is titled Leather Jacket Turnaround. Source provenance remains intact.
+- Added 27 character tattoo/piercing/detail objects, standalone-versus-placement drilldown, collapsed document parents, source-panel storyboard ranges and independent Preliminary / Detailed design / Verification / Production stages. No exact song timing is inferred from source-panel order.
+- Saved the unchanged approved Lisan Gemini take 02 (10.005 seconds, SHA256 640000faabc0b1f018a6fda0f05c9560579750c662f33d5da4cd4920d67befa0), registered it at Detailed design with approved scene scope, and linked its provenance. File decode passed; creative approval is distinct from pending full motion/audio and detail verification.
+- Completed a source-hash/dimension-verified inventory of 422 existing images with 63 tattoo/variant recovery records. Coverage is contact-sheet overview plus explicitly identified individual checks. Current, historical, Multiverse, original artwork, photo crops and unresolved details remain distinct. The incoming Grok500 is excluded and its download is not yet verified.
+- Prepared the integrated 13-image Grok repair/Caleb package, separate three-reference boss discovery package, one-reference Flow still test and 41-second-source Flow excerpt kit. Boss discovery proceeds in reviewed rounds of ten toward fifty, then four views only for a selected winner. New creative tattoos arrive with four-option companion artwork in the same delivery; 10-12 options require a later exploration request. External Grok upload remains pending explicit package-level approval; no new provider generation is claimed.
+- Saved exact-pixel Luke, Leia and Han crops with parent hashes/bounds and separate Comfy likeness roles. Returned a bounded teaching brief through the manual CFA/Panhandlers ledger without modifying the Panhandlers app.
+- Rebuilt 578 catalog records: 454 visual assets and 124 documents; 1,027 hosted output files totaling 97,721,957 bytes. Source preservation and all 31 video proxy decode/timing checks passed. Twenty-nine hosted tests and desktop/mobile browser checks cover review/import behavior, export gates, navigation, sorting, detail profiles, workflow links and playable media.
+
+### [WORKFLOW-2026-10-08-01] October 8, 2026 - Visual library and separate CFA Creative Studio
+
+- Rebuilt local review pages around visual collections for outfits, tattoos/piercings, cast, storyboard, videos and inspiration. Artwork comes first; documents are grouped and collapsed at the end. Stencils follow placement portraits; Comfy likeness targets have their own section.
+- Added image enlargement, video playback, search and portable favorites. Desktop/mobile functional checks passed; local source files and approval states remain unchanged.
+- Built independent Streamlit app at apps/creative_studio/app.py, borrowing Panhandlers Help's navigation and progressive detail approach. Native media, grouped notes, collaborator kits, pagination and favorites export use a portable review bundle rather than D: paths.
+- Packaged 533 catalogue records and 972 preview/document files; 25 compressed video previews preserve source frame counts, picture durations, aspect and decoded audio duration. Preview media is deliberately tracked; production masters and bulk ZIP archives remain local.
+- Added Google Flow collaborator brief, project attachment roles and shot card from dated official sources. No Flow generation, settings mutation or acceptance claimed.
+- Prepared a scoped GitHub publication excluding unrelated Observatory, data, game and relay work. Streamlit deployment remains separate from Git push.
 
 ### [WORKFLOW-2026-10-07-06] October 7, 2026 - Sort two projects and deliver Lisan Gemini kit
 

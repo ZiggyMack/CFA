@@ -14,6 +14,28 @@
 
 ## 🆕 v5.0.0 ADDITIONS (Nyquist Integration - Nov 26, 2025)
 
+### October 8, 2026 incremental registration: review workspace and collaborator packages
+
+- `docs/notes/explorable_world/comfy/projects/collaborators/mission_control.json` — global Ziggy's Corner task board with next actions, unresolved inputs and prepared provider downloads.
+- `docs/notes/explorable_world/comfy/projects/collaborators/flow_intake_20261008.txt` — observed Flow controls, deliberate upload roles and sourced image-model comparison guidance.
+- `docs/notes/explorable_world/comfy/projects/collaborators/flow_start_here.txt` — direct character-test steps, optional Agent setup and the exact brief/prompt placement sequence.
+- `docs/notes/explorable_world/comfy/projects/collaborators/panhandler_return_20261008.txt` — bounded manual teaching return; no claim of receipt or adoption.
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/first_experiment_20261008.txt`, `build_starter.py`, `FLOW-HD-STILL-001.zip` — one-reference planned still experiment and reproducible, verified source package.
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/` — exact source map, scoped requests, scene panels, return manifest and reproducible ZIP containing 13 selected references. No provider send or generation recorded.
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json` — thirteen canonical review/shot records, including user-file intake, Multiverse routing and archived duplicate links; removal flags await a sweep.
+- `apps/creative_studio/library/packages/` — exact prepared handoff ZIP downloads; separate from hosted image/video review proxies.
+- Local `visual_library/library.js` and hosted `apps/creative_studio/app.py` now expose review notes, shot plans, Mission Control and an independent export basket. Browser/session selections require an explicit saved review file or export to transfer; sources remain unchanged.
+
+### October 8, 2026 incremental registration: production detail and audit records
+
+- `docs/notes/explorable_world/comfy/projects/collaborators/comfy_workflows.json` — five workflow records and six actual outputs, retaining executed, tested, failed and pending distinctions.
+- `docs/notes/explorable_world/comfy/projects/collaborators/detail_profiles.json` — 27 character detail objects with separate art and placement references.
+- `docs/notes/explorable_world/comfy/projects/collaborators/grok_design_instructions.txt` — current creative freedom and same-delivery four-option tattoo-art rule.
+- `docs/notes/explorable_world/comfy/projects/visual_library/tattoo_audit_20261008.json` and `.txt` — all 422 existing images and 63 motif/variant records, inspection limits, exact source hashes and missing-art requests; excludes the pending Grok500 intake.
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/` — review-sweep receipts, read-only intake planner, selected-look prop sweep and staged boss discovery brief.
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/boss_discovery_20261008/` — three exact discovery references, ten-proof rounds toward fifty, winner-only turnaround plan and verified package.
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/` — retained 41-second montage provenance and bounded six-second Flow comparison kit; source masters stay local.
+
 ### October 7, 2026 incremental registration: Gemini cast attachment map
 
 - `docs/notes/explorable_world/comfy/casting/gemini_cast_reference_map.txt` — upload-ready character/reference-role map with actual received filenames, reserved future cast slots and explicit upload-batch numbering rules.
@@ -671,3 +693,15 @@ Other:               2% (10 files)
 ## October 8 Grok revision feedback queue
 
 - `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/grok_revision_queue.json` and `.txt`: two scoped user choices (cash-counting vest and black overcoat/boarding scene), current LOCK-FACE attachment mapping, requested tattoo corrections and optional bird-tattoo exploration note. Queued handoff only; not sent, generated or blanket character approval.
+
+
+## October 8 isolated character likeness crops
+
+- `docs/notes/explorable_world/comfy/casting/likeness_crops/manifest.json` and local PNGs — exact-pixel Luke, Leia and Han portraits from the unchanged group reference; source/crop hashes, bounds and pixel-equality evidence. PNG masters remain locally ignored.
+- `docs/notes/explorable_world/comfy/casting/gemini_cast_reference_map.json` and `.txt` — stable per-character crop IDs, role-scoped Comfy likeness targets and unbound Gemini upload slots; the group image remains historical provenance. No design approvals changed.
+
+### October 8, 2026 incremental registration: Lisan Gemini approved creative take
+
+- `docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/registry.json` — received Gemini media index and scoped gallery/workflow integration requests. One creative working clip is user-approved at Detailed design; technical verification and production remain pending.
+- `docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/20261008/LAG-VID-PROOF-01_T02.provenance.json` and `.txt` — canonical download selection, unchanged-master hash/bytes, decode evidence, beginning/middle/end review and limits. The source MP4, extracted evidence JPGs/contact sheet and thumbnail stay locally ignored under the existing project media rules.
+- `docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/FILE_MANAGEMENT.txt` — preserve-master/new-take policy, derivative roles, Git/hosted packaging separation and pending verification/backup status.

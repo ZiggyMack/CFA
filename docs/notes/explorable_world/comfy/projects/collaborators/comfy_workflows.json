@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "updated": "2026-10-08",
+  "media": [
+    {
+      "id": "HD-AUDIO-REPLACE-V001",
+      "project": "hon",
+      "path": "docs/notes/explorable_world/comfy/outputs/hon_dolo_audio_replace_v001_local_preview.mp4",
+      "title": "Preferred source · Hon Dolo soundtrack replacement",
+      "kind": "video",
+      "category": "videos",
+      "group": "video-soundtrack_experiments",
+      "groupTitle": "Soundtrack experiments",
+      "note": "Completed local stream-copy preview: all 240 original video frames and timestamps preserved; original audio replaced with the first ten seconds of the current song. This is a soundtrack swap, not lip-sync. Related Cloud graph is saved and server-converted, not executed. Acceptance pending.",
+      "sha256": "611b25e2f038e225be1fcf086163788c64b430d8aa0c12816e236031a93ce3f7",
+      "sourceStatus": "Experiment; not accepted",
+      "tags": [
+        "ComfyUI",
+        "production experiment"
+      ],
+      "parentAssetID": "GEM-C0823C60",
+      "duration": 10,
+      "thumbnailPath": ".cache/visual_library_20261008/production_thumbs/HD-AUDIO-REPLACE-V001.jpg"
+    },
+    {
+      "id": "HD-COMFY-IDENTITY-V001",
+      "project": "hon",
+      "path": "docs/notes/explorable_world/comfy/outputs/hon_dolo_clean_identity_v001.png",
+      "title": "Comfy likeness experiment · clean candidate",
+      "kind": "image",
+      "category": "comfy",
+      "group": "comfy-output-stills",
+      "groupTitle": "Comfy candidate stills",
+      "note": "Executed historical likeness candidate used for the first motion test. Not an accepted Prime Dolo design or tattoo reference.",
+      "sha256": "82d6c4bd9aa8e41cadfed602210dfe137f9626c6ee418c9d153f07395f47f6f6",
+      "sourceStatus": "Experiment; not accepted",
+      "tags": [
+        "ComfyUI",
+        "production experiment"
+      ]
+    },
+    {
+      "id": "HD-COMFY-MOTION-V001",
+      "project": "hon",
+      "path": "docs/notes/explorable_world/comfy/outputs/hon_dolo_motion_v001.mp4",
+      "title": "Comfy motion test · clean likeness candidate",
+      "kind": "video",
+      "category": "videos",
+      "group": "video-comfy_experiments",
+      "groupTitle": "Comfy motion and lighting experiments",
+      "note": "Native LTX-2.5 image-to-video executed. Sampled frames show long blinks and smile drift. Broad appearance retained; full playback and acceptance pending. Not rap lip-sync.",
+      "sha256": "cee41a38a60d0782e78ae621fcbc28397f5546c439894dbae24829c3c4fa2c46",
+      "sourceStatus": "Experiment; not accepted",
+      "tags": [
+        "ComfyUI",
+        "production experiment"
+      ],
+      "parentAssetID": "HD-COMFY-IDENTITY-V001",
+      "duration": 4.041666666666667,
+      "thumbnailPath": ".cache/visual_library_20261008/production_thumbs/HD-COMFY-MOTION-V001.jpg"
+    },
+    {
+      "id": "HD-COMFY-RELIGHT-V001",
+      "project": "hon",
+      "path": "docs/notes/explorable_world/comfy/outputs/hon_dolo_gemini_relight_v001.mp4",
+      "title": "Depth relight · preservation failed",
+      "kind": "video",
+      "category": "videos",
+      "group": "video-comfy_experiments",
+      "groupTitle": "Comfy motion and lighting experiments",
+      "note": "Executed 57-frame depth-control comparison. Mouth, grill, piercings, lettering and background drift in matched samples. Technical result retained for comparison, not an accepted master.",
+      "sha256": "8359777d2bfb19e1c340d417afd83b0997881b7a059ee3f1411922b26ded6afa",
+      "sourceStatus": "Experiment; not accepted",
+      "tags": [
+        "ComfyUI",
+        "production experiment"
+      ],
+      "parentAssetID": "GEM-C0823C60",
+      "duration": 2.375,
+      "thumbnailPath": ".cache/visual_library_20261008/production_thumbs/HD-COMFY-RELIGHT-V001.jpg"
+    },
+    {
+      "id": "HD-COMFY-RELIGHT-V002",
+      "project": "hon",
+      "path": "docs/notes/explorable_world/comfy/outputs/hon_dolo_gemini_relight_v002.mp4",
+      "title": "Canny relight · preservation failed",
+      "kind": "video",
+      "category": "videos",
+      "group": "video-comfy_experiments",
+      "groupTitle": "Comfy motion and lighting experiments",
+      "note": "Executed 57-frame edge-control comparison. Canny did not materially improve preservation over depth; mouth, grill and tattoo drift remain. Not an accepted master.",
+      "sha256": "5a0dd11f28ffef5af47aeae7df42129aaa4f1a6a2ed2b6a7f85c079465ae225e",
+      "sourceStatus": "Experiment; not accepted",
+      "tags": [
+        "ComfyUI",
+        "production experiment"
+      ],
+      "parentAssetID": "GEM-C0823C60",
+      "duration": 2.375,
+      "thumbnailPath": ".cache/visual_library_20261008/production_thumbs/HD-COMFY-RELIGHT-V002.jpg"
+    },
+    {
+      "id": "HD-COMFY-RELIGHT-V002-CONTROL",
+      "project": "hon",
+      "path": "docs/notes/explorable_world/comfy/outputs/hon_dolo_gemini_relight_v002_control.mp4",
+      "title": "Canny edge guide · technical preview",
+      "kind": "video",
+      "category": "videos",
+      "group": "video-comfy_experiments",
+      "groupTitle": "Comfy motion and lighting experiments",
+      "note": "Measured control sequence, 57 frames at 24 fps, 910 × 512, no audio. Edge guide supplied to the relighting experiment; not a finished scene.",
+      "sha256": "58adfbbb7bfad90ddc36fb2d60d088f79060dc467f11ea47fe7111e43de50a4a",
+      "sourceStatus": "Experiment; not accepted",
+      "tags": [
+        "ComfyUI",
+        "production experiment"
+      ],
+      "duration": 2.375,
+      "thumbnailPath": ".cache/visual_library_20261008/production_thumbs/HD-COMFY-RELIGHT-V002-CONTROL.jpg"
+    }
+  ],
+  "documents": [
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_audio_replace_v001.README.md",
+      "title": "Soundtrack replacement · measured result"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_audio_replace_v001.cloud_preflight.json",
+      "title": "Cloud soundtrack workflow · October 7 preflight"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_audio_replace_v001.cloud.editor.json",
+      "title": "Cloud soundtrack editor graph"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_motion_v001.record.json",
+      "title": "Motion test · run and review record"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_motion_v001.editor.json",
+      "title": "Motion test · editor graph"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_gemini_relight_v001.record.json",
+      "title": "Depth relight · run and defects"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_gemini_relight_v001.editor.json",
+      "title": "Depth relight · editor graph"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_gemini_relight_v002.record.json",
+      "title": "Canny relight · run and defects"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_gemini_relight_v002.editor.json",
+      "title": "Canny relight · editor graph"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_lipsync_v001.preflight.json",
+      "title": "Lip-sync candidate · preflight gaps"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_lipsync_v001.editor.json",
+      "title": "Lip-sync candidate · saved editor"
+    }
+  ],
+  "workflows": [
+    {
+      "id": "comfy-soundtrack",
+      "provider": "ComfyUI",
+      "project": "hon",
+      "title": "Replace the source soundtrack",
+      "status": "Local preview completed · Cloud saved, not executed",
+      "summary": "The preferred Gemini source and soundtrack-swap preview share one record across the Hon Dolo gallery and this workspace. Source picture was copied unchanged locally.",
+      "nextAction": "Play the ten-second preview and check song placement. Choose an exact vocal phrase before a separate mouth-sync test.",
+      "sourceAssetIDs": [
+        "GEM-C0823C60"
+      ],
+      "outputAssetIDs": [
+        "HD-AUDIO-REPLACE-V001"
+      ],
+      "documentAssetIDs": [
+        "hon:doc:docs/notes/explorable_world/comfy/workflows/hon_dolo_audio_replace_v001.README.md",
+        "hon:doc:docs/notes/explorable_world/comfy/workflows/hon_dolo_audio_replace_v001.cloud_preflight.json",
+        "hon:doc:docs/notes/explorable_world/comfy/workflows/hon_dolo_audio_replace_v001.cloud.editor.json"
+      ],
+      "cloudURL": "https://cloud.comfy.org/#2c490a37-6110-4c7b-b073-a3354493645b"
+    },
+    {
+      "id": "comfy-motion",
+      "provider": "ComfyUI",
+      "project": "hon",
+      "title": "Animate a candidate still",
+      "status": "Executed · acceptance pending",
+      "summary": "First native LTX-2.5 motion test, 97 frames at 24 fps. Long blinks and smile drift remain visible.",
+      "nextAction": "Review the take and identity candidate before extending or regenerating it.",
+      "sourceAssetIDs": [
+        "HD-COMFY-IDENTITY-V001"
+      ],
+      "outputAssetIDs": [
+        "HD-COMFY-MOTION-V001"
+      ],
+      "documentAssetIDs": [
+        "hon:doc:docs/notes/explorable_world/comfy/workflows/hon_dolo_motion_v001.record.json",
+        "hon:doc:docs/notes/explorable_world/comfy/workflows/hon_dolo_motion_v001.editor.json"
+      ],
+      "cloudURL": "https://cloud.comfy.org/#bfe78175-2366-4a28-bb76-518c89bef525"
+    },
+    {
+      "id": "comfy-depth-relight",
+      "provider": "ComfyUI",
+      "project": "hon",
+      "title": "Depth-controlled relight",
+      "status": "Executed · preservation failed",
+      "summary": "A 2.375-second excerpt of the selected source was regenerated with depth control. Matched samples drift in critical facial details.",
+      "nextAction": "Keep this comparison as evidence; evaluate non-generative grading for a lighting-only change.",
+      "sourceAssetIDs": [
+        "GEM-C0823C60"
+      ],
+      "outputAssetIDs": [
+        "HD-COMFY-RELIGHT-V001"
+      ],
+      "documentAssetIDs": [
+        "hon:doc:docs/notes/explorable_world/comfy/workflows/hon_dolo_gemini_relight_v001.record.json",
+        "hon:doc:docs/notes/explorable_world/comfy/workflows/hon_dolo_gemini_relight_v001.editor.json"
+      ],
+      "cloudURL": "https://cloud.comfy.org/#a63aca02-3ec8-45fe-a830-5baf40bd9eeb"
+    },
+    {
+      "id": "comfy-edge-relight",
+      "provider": "ComfyUI",
+      "project": "hon",
+      "title": "Canny-controlled relight",
+      "status": "Executed · preservation failed",
+      "summary": "The deliberate edge-control comparison did not materially solve the depth branch’s mouth, grill and tattoo drift. The edge guide is a technical input.",
+      "nextAction": "Compare matching source frames; do not promote either relight into working references.",
+      "sourceAssetIDs": [
+        "GEM-C0823C60"
+      ],
+      "outputAssetIDs": [
+        "HD-COMFY-RELIGHT-V002",
+        "HD-COMFY-RELIGHT-V002-CONTROL"
+      ],
+      "documentAssetIDs": [
+        "hon:doc:docs/notes/explorable_world/comfy/workflows/hon_dolo_gemini_relight_v002.record.json",
+        "hon:doc:docs/notes/explorable_world/comfy/workflows/hon_dolo_gemini_relight_v002.editor.json"
+      ],
+      "cloudURL": "https://cloud.comfy.org/#fa384c55-d9d5-4afe-9f41-d0bbe30b15d1"
+    },
+    {
+      "id": "comfy-lipsync",
+      "provider": "ComfyUI",
+      "project": "hon",
+      "title": "Match mouth movement to recorded vocals",
+      "status": "Prepared candidate · not executed",
+      "summary": "The saved Sync candidate is separate from soundtrack replacement. No mouth or grill fidelity result exists.",
+      "nextAction": "Choose the exact excerpt and vocal signal; check current account support and quote before any paid test.",
+      "sourceAssetIDs": [
+        "GEM-C0823C60"
+      ],
+      "outputAssetIDs": [],
+      "documentAssetIDs": [
+        "hon:doc:docs/notes/explorable_world/comfy/workflows/hon_dolo_lipsync_v001.preflight.json",
+        "hon:doc:docs/notes/explorable_world/comfy/workflows/hon_dolo_lipsync_v001.editor.json"
+      ]
+    }
+  ]
+}

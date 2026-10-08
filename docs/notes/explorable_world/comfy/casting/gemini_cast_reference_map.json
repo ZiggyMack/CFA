@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-07",
-  "purpose": "Gemini cast attachment mapping, prepared for user uploads",
+  "updated": "2026-10-08",
+  "purpose": "Gemini cast attachment mapping and isolated Comfy likeness targets, prepared for user uploads",
   "path_base": "repository root D:/Documents/CFA",
   "state": "local_sources_verified_gemini_upload_mapping_pending",
   "example_numbers_are_placeholders": true,
@@ -18,7 +18,8 @@
         "HD-DESIGN-01",
         "HD-FINISH-01",
         "HD-LIKENESS-01",
-        "HD-LIKENESS-02"
+        "HD-LIKENESS-02",
+        "HD-LIKENESS-03"
       ],
       "pending": [
         "explicit final on-screen identity selection",
@@ -124,11 +125,29 @@
       ],
       "role": "co-star and emotional center",
       "reference_ids": [
-        "LEIA-STYLE-01"
+        "LEIA-STYLE-01",
+        "LEIA-LIKENESS-01"
       ],
       "pending": [
-        "approved identity/full-body reference"
+        "approved full-body/wardrobe reference",
+        "final generated identity acceptance"
       ]
+    },
+    {
+      "id": "LUKE",
+      "name": "Luke Skywalker",
+      "aliases": [
+        "Luke"
+      ],
+      "role": "young pilot; separate supporting character and likeness swap target",
+      "reference_ids": [
+        "LUKE-LIKENESS-01"
+      ],
+      "pending": [
+        "approved full-body/wardrobe reference",
+        "final generated identity acceptance"
+      ],
+      "note": "Separate from Hon Dolo and Leia. The isolated source crop supplies likeness only; no new production design approval."
     },
     {
       "id": "JABBA",
@@ -191,16 +210,56 @@
     {
       "reference_id": "HD-LIKENESS-02",
       "character_id": "HON-DOLO",
-      "role": "secondary intended likeness reference",
+      "role": "historical group-photo source for isolated likeness crops",
       "filename": "Han Solo.png",
       "original_path": "docs/notes/explorable_world/comfy/references/Han Solo.png",
       "sha256": "5a6bd67a77920d3f2eae4bbaa98db0aa1e3dad288d38327c963d15cee1722974",
       "bytes": 892454,
-      "selection_status": "available_candidate",
-      "use_limits": "Multi-person image. The intended reference is the man on image-right; isolate/identify that region before conditioning. Do not combine the other faces.",
+      "selection_status": "historical_source_reference",
+      "use_limits": "Retain this multi-person source for provenance. Do not use the unisolated group photo as a face-conditioning input. Use HD-LIKENESS-03 for Han on image-right, LEIA-LIKENESS-01 for Leia at center, or LUKE-LIKENESS-01 for Luke on image-left; each is a separate character reference.",
       "gemini_attachment_verified": false,
       "upload_batch_id": null,
-      "picture_number_in_batch": null
+      "picture_number_in_batch": null,
+      "derived_reference_ids": [
+        "HD-LIKENESS-03",
+        "LEIA-LIKENESS-01",
+        "LUKE-LIKENESS-01"
+      ],
+      "recommended_for_direct_face_conditioning": false
+    },
+    {
+      "reference_id": "HD-LIKENESS-03",
+      "character_id": "HON-DOLO",
+      "role": "Han Solo isolated likeness target for Comfy body/likeness swaps",
+      "filename": "han_source_crop.png",
+      "original_path": "docs/notes/explorable_world/comfy/casting/likeness_crops/han_source_crop.png",
+      "sha256": "e8a66e490bd14c486e5143426e0035df64f4835cb239c762a238565ec689fc50",
+      "bytes": 152368,
+      "width": 275,
+      "height": 361,
+      "selection_status": "available_likeness_target",
+      "use_limits": "Use the isolated Han Solo head/upper-body crop for this character's likeness only. It does not approve a generated identity, body, wardrobe, tattoos or an existing video face replacement. Original scene clothing and background are not production design instructions.",
+      "gemini_attachment_verified": false,
+      "upload_batch_id": null,
+      "picture_number_in_batch": null,
+      "provenance": {
+        "source_reference_id": "HD-LIKENESS-02",
+        "source_path": "docs/notes/explorable_world/comfy/references/Han Solo.png",
+        "source_sha256": "5a6bd67a77920d3f2eae4bbaa98db0aa1e3dad288d38327c963d15cee1722974",
+        "source_position": "image-right",
+        "crop_bounds": [
+          407,
+          9,
+          682,
+          370
+        ],
+        "coordinate_system": "pixel bounds [left, top, right, bottom], right and bottom exclusive; origin top left",
+        "operation": "rectangular crop only; no resizing, resampling, enhancement, retouching or generation",
+        "manifest_path": "docs/notes/explorable_world/comfy/casting/likeness_crops/manifest.json",
+        "pixel_array_equals_source_region": true,
+        "visual_crop_review": "inspected: head and upper body isolated; no adjacent character face"
+      },
+      "design_approval_changed": false
     },
     {
       "reference_id": "CHEW-STAGE-01",
@@ -301,6 +360,40 @@
       "picture_number_in_batch": null
     },
     {
+      "reference_id": "LEIA-LIKENESS-01",
+      "character_id": "LEIA",
+      "role": "Princess Leia isolated likeness target for Comfy body/likeness swaps",
+      "filename": "leia_source_crop.png",
+      "original_path": "docs/notes/explorable_world/comfy/casting/likeness_crops/leia_source_crop.png",
+      "sha256": "b725ae7c92f4e35a732d056756029b045ddf15345909a6b2c30917b43d3f0d8a",
+      "bytes": 74226,
+      "width": 175,
+      "height": 292,
+      "selection_status": "available_likeness_target",
+      "use_limits": "Use the isolated Princess Leia head/upper-body crop for this character's likeness only. It does not approve a generated identity, body, wardrobe, tattoos or an existing video face replacement. Original scene clothing and background are not production design instructions.",
+      "gemini_attachment_verified": false,
+      "upload_batch_id": null,
+      "picture_number_in_batch": null,
+      "provenance": {
+        "source_reference_id": "HD-LIKENESS-02",
+        "source_path": "docs/notes/explorable_world/comfy/references/Han Solo.png",
+        "source_sha256": "5a6bd67a77920d3f2eae4bbaa98db0aa1e3dad288d38327c963d15cee1722974",
+        "source_position": "image-center",
+        "crop_bounds": [
+          214,
+          128,
+          389,
+          420
+        ],
+        "coordinate_system": "pixel bounds [left, top, right, bottom], right and bottom exclusive; origin top left",
+        "operation": "rectangular crop only; no resizing, resampling, enhancement, retouching or generation",
+        "manifest_path": "docs/notes/explorable_world/comfy/casting/likeness_crops/manifest.json",
+        "pixel_array_equals_source_region": true,
+        "visual_crop_review": "inspected: head and upper body isolated; no adjacent character face"
+      },
+      "design_approval_changed": false
+    },
+    {
       "reference_id": "JABBA-STAGE-01",
       "character_id": "JABBA",
       "role": "host/dais environment and styling",
@@ -313,6 +406,40 @@
       "gemini_attachment_verified": false,
       "upload_batch_id": null,
       "picture_number_in_batch": null
+    },
+    {
+      "reference_id": "LUKE-LIKENESS-01",
+      "character_id": "LUKE",
+      "role": "Luke Skywalker isolated likeness target for Comfy body/likeness swaps",
+      "filename": "luke_source_crop.png",
+      "original_path": "docs/notes/explorable_world/comfy/casting/likeness_crops/luke_source_crop.png",
+      "sha256": "6faf10399e0af0d34b0988701d58ee4836b1107857e50d42a79428827cafa41f",
+      "bytes": 99207,
+      "width": 208,
+      "height": 307,
+      "selection_status": "available_likeness_target",
+      "use_limits": "Use the isolated Luke Skywalker head/upper-body crop for this character's likeness only. It does not approve a generated identity, body, wardrobe, tattoos or an existing video face replacement. Original scene clothing and background are not production design instructions.",
+      "gemini_attachment_verified": false,
+      "upload_batch_id": null,
+      "picture_number_in_batch": null,
+      "provenance": {
+        "source_reference_id": "HD-LIKENESS-02",
+        "source_path": "docs/notes/explorable_world/comfy/references/Han Solo.png",
+        "source_sha256": "5a6bd67a77920d3f2eae4bbaa98db0aa1e3dad288d38327c963d15cee1722974",
+        "source_position": "image-left",
+        "crop_bounds": [
+          10,
+          58,
+          218,
+          365
+        ],
+        "coordinate_system": "pixel bounds [left, top, right, bottom], right and bottom exclusive; origin top left",
+        "operation": "rectangular crop only; no resizing, resampling, enhancement, retouching or generation",
+        "manifest_path": "docs/notes/explorable_world/comfy/casting/likeness_crops/manifest.json",
+        "pixel_array_equals_source_region": true,
+        "visual_crop_review": "inspected: head and upper body isolated; no adjacent character face"
+      },
+      "design_approval_changed": false
     }
   ],
   "rules": [
@@ -326,7 +453,8 @@
     "Existing video continuity is a separate brief from creating a new likeness. Do not silently replace a liked clip's face.",
     "Keep rejected/superseded sources as history, excluded from active generation unless requested.",
     "If a listed picture is missing or ambiguous, say which one; ask only the blocking question and proceed with independent planning.",
-    "Do not include every cast reference in every generation. Supply the characters and details required by that shot."
+    "Do not include every cast reference in every generation. Supply the characters and details required by that shot.",
+    "For the Han Solo.png group source, use the separate HD-LIKENESS-03, LEIA-LIKENESS-01 or LUKE-LIKENESS-01 crop for the intended character. The group image remains provenance, not a direct multi-face conditioning input. Exact-pixel cropping creates no design approval."
   ],
   "attachment_manifest_template": {
     "upload_batch_id": "CAST-BATCH-001",
@@ -340,13 +468,14 @@
   "sources": [
     "docs/notes/explorable_world/comfy/casting/grok_intake_20261004/README.md",
     "docs/notes/explorable_world/comfy/casting/grok_intake_20261006/design_handoff.json",
-    "docs/notes/explorable_world/comfy/casting/grok_intake_20261007/id_map_audit.json"
+    "docs/notes/explorable_world/comfy/casting/grok_intake_20261007/id_map_audit.json",
+    "docs/notes/explorable_world/comfy/casting/likeness_crops/manifest.json"
   ],
   "actions_not_performed": [
-    "image edits",
-    "source renaming or copies",
+    "generative image edits or enhancement",
+    "source renaming or modification",
     "Gemini uploads/settings changes",
-    "new character approval",
+    "new character design approval",
     "Cloud generation"
   ],
   "review_collections": [

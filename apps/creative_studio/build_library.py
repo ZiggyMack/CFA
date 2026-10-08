@@ -37,7 +37,7 @@ if not FF:
 TOOLS = {'pillow':pillow_version,'ffmpeg':subprocess.run([FF,'-version'],capture_output=True,text=True,check=True).stdout.splitlines()[0]}
 assert OUT.resolve().is_relative_to(ROOT), 'Output must remain inside CFA'
 OUT.mkdir(parents=True, exist_ok=True)
-for folder in ('images','thumbs','videos','animations','docs'):
+for folder in ('images','thumbs','videos','animations','docs','packages'):
     (OUT/folder).mkdir(exist_ok=True)
 
 def sha(data: bytes) -> str:
@@ -125,7 +125,9 @@ def video_dimensions(width:int,height:int):
     g=math.gcd(width,height);unit_w,unit_h=width//g,height//g
     step=2 if unit_w%2 or unit_h%2 else 1
     count=min(g,SETTINGS['video_max_width']//unit_w);count-=count%step
-    if count<step:raise ValueError('Source aspect ratio has no exact even proxy below configured width')
+    # Some small control previews (910x512) cannot scale down while retaining
+    # both an exact aspect ratio and even dimensions. Keep their native size.
+    if count<step:return width,height
     return unit_w*count,unit_h*count
 
 unique={}
@@ -173,8 +175,8 @@ def build_one(a):
         records.append(output_record(dest,digest,'unchanged_animation' if kind=='gif' else 'unchanged_pdf',**extra))
     else:
         dest=OUT/'docs'/f'{digest}.txt'
-        text=clean_text(source.read_text(encoding='utf-8-sig',errors='replace'))
-        if not cached(dest,digest):dest.write_text(text,encoding='utf-8')
+        text=clean_text(source.read_text(encoding='utf-8-sig',errors='replace')).rstrip('\r\n')+'\n'
+        if not dest.is_file() or dest.read_text(encoding='utf-8')!=text:dest.write_text(text,encoding='utf-8')
         records.append(output_record(dest,digest,'inert_text_preview',inert_helper=bool(a.get('inert'))))
     thumb=None
     if a.get('_thumb_source'):
@@ -207,10 +209,26 @@ for a in assets:
         if item.get('inert'):item['downloadFilename']=a['filename']+'.txt'
     packaged.append(clean_values(item))
 catalog['assets']=packaged
+package_outputs=[]
+for task in catalog.get('missionControl',{}).get('tasks',[]):
+    for link in task.get('links',[]):
+        if not link.get('downloadPath'):
+            continue
+        source=source_path(link['href'])
+        dest=(OUT/link['downloadPath']).resolve()
+        if not dest.is_relative_to((OUT/'packages').resolve()) or dest.suffix.lower()!='.zip':
+            raise ValueError('Invalid care package destination')
+        raw=source.read_bytes(); digest=sha(raw)
+        if not dest.is_file() or sha(dest.read_bytes())!=digest:shutil.copyfile(source,dest)
+        sources.setdefault(repo_path(source),{'path':repo_path(source),'sha256':digest,'bytes':len(raw),'role':'prepared_care_package'})
+        package_outputs.append(output_record(dest,digest,'unchanged_care_package'))
+        # Local href is not a hosted route; the app uses the bounded downloadPath.
+        link.pop('href',None)
 catalog=clean_values(catalog)
 output_catalog=OUT/'catalog.json'
 output_catalog.write_text(json.dumps(catalog,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
 outputs={r['path']:r for result in built.values() for r in result['records']}
+outputs.update({r['path']:r for r in package_outputs})
 for a in packaged:
     for key in ('src','thumb'):
         if a.get(key):
@@ -225,6 +243,6 @@ manifest={'schema_version':1,'purpose':'Hosted review proxies, not production ma
           'builder_sha256':sha(Path(__file__).read_bytes()),
           'asset_count':len(packaged),'asset_kinds':dict(Counter(a['kind'] for a in packaged)),
           'output_file_count':len(outputs),'output_bytes':sum(r['bytes'] for r in outputs.values()),
-          'catalog_sha256':sha(output_catalog.read_bytes()),'sources_preserved':True,'sources':list(sources.values()),'outputs':list(outputs.values())}
+          'catalog_sha256':sha(output_catalog.read_bytes()),'sources_preserved':True,'sources':[sources[k] for k in sorted(sources)],'outputs':[outputs[k] for k in sorted(outputs)]}
 (OUT/'manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
 print(json.dumps({k:manifest[k] for k in ('asset_count','asset_kinds','output_file_count','output_bytes','sources_preserved')},indent=2))

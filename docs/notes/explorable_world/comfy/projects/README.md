@@ -1,6 +1,8 @@
 # Music video projects
 
-The separate [CFA Creative Studio](../../../../../apps/creative_studio/README.md) provides Streamlit viewing with packaged image and video previews. Its entry point is `apps/creative_studio/app.py`; the local browser below still opens full local media.
+The separate [CFA Creative Studio](https://algaib.streamlit.app/) provides Streamlit viewing with packaged image and video previews. Its [app notes](../../../../../apps/creative_studio/README.md) describe the entry point `apps/creative_studio/app.py`; the local browser below still opens full local media.
+
+Open Ziggy's Corner in either view for collaborator next steps and prepared downloads. The [Flow start guide](collaborators/flow_start_here.txt) explains direct character creation versus optional Agent planning. The [Grok care package](hon_dolo_strictly_business/handoffs/grok_20261008/START_HERE.txt) contains the current scoped repair and scene requests. Stars, export-basket selections and repair/removal marks are separate; export a review JSON or choose a local review file to hand those decisions back to Nova.
 
 Shared [collaborator roles](collaborators/provider_roles.txt), [Flow brief](collaborators/flow_brief.txt) and [shot card](collaborators/flow_shot_template.txt) keep the same character decisions across tools. Flow has project-specific briefs for [Hon Dolo](hon_dolo_strictly_business/flow/project_brief.txt) and [Lisan](lisan_al_gaib/flow/project_brief.txt); attach the actual role-mapped images in each service.
 
