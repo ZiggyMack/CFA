@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
   "benchmarkID": "HON-OPENING-PROVIDER-20261009",
-  "checkpointUTC": "2026-10-10T01:03:44Z",
-  "status": "restart_checkpoint_no_accepted_starting_frame",
+  "checkpointUTC": "2026-10-10T06:10:25Z",
+  "status": "G2_reviewed_critical_defects_no_accepted_starting_frame",
   "scope": "Compare one current opening still per provider before any dependent video continuation. User explicitly authorized parallel Flow alongside Gemini and Grok; this supersedes the older plan's not-automatically-reopened restriction. No external jobs were submitted by this manifest task.",
   "restartCheckpoint": {
-    "gemini": "G2 correction response completed per current operator update; output download and independent inspection pending. G1 failed. No accepted starting frame.",
-    "flow": "Project creation verified: Oct 09 - 21:02 at https://flow.google.com/project/91923885-3d6e-4747-806a-f46f66007b22. Empty project; no generation submitted.",
+    "gemini": "G2 recovered from actual chat and displayed image captured at 1024x572; critical likeness, neck-blaster and bracelet/band defects independently observed. Exact dental map remains unresolvable. No accepted starting frame; no retry submitted.",
+    "flow": "Existing project inspected again: no media or generation output. Page reports it could not connect to the reCAPTCHA service. No job submitted.",
     "grok": "Existing matching output unknown; do not count as comparable until identical brief and four source inputs are verified.",
-    "video": "All ten-turn lanes pending; zero video turns recorded here.",
-    "nextAction": "After restart, recover Gemini G2 and Flow project state before submitting anything; avoid duplicate jobs. Inspect and score G2, then resume one Flow still only if not already submitted."
+    "video": "Zero video turns submitted. Current G2 fails the accepted-starting-frame gate, so no dependent continuation begins.",
+    "nextAction": "Review the saved G2 defect evidence. Resume Flow only after its connection blocker clears and exact inputs/settings can be inspected. Do not repeat G2 or begin video from this rejected still."
   },
   "sourceWorkshop": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009",
   "sourcePlan": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009",
@@ -86,27 +86,50 @@
     {
       "id": "G2",
       "provider": "Gemini",
-      "status": "response_complete_download_and_inspection_pending",
+      "status": "reviewed_critical_defects_not_accepted",
       "comparable": null,
       "comparableCondition": "Verify exact repair prompt and A/B/D/F attachment receipt against output lineage.",
       "chatURL": "https://gemini.google.com/app/988990050e4ad32c",
       "visibleChatModelLastKnown": "Flash-Lite",
       "actualImageModel": null,
-      "outputPath": null,
-      "outputSHA256": null,
-      "accepted": false
+      "outputPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/evidence/G2_displayed_preview_20261010.jpg",
+      "outputSHA256": "4329013cacd87cf51adae031fd72492b565ea580e6a61b5c99dd094477b6de1a",
+      "accepted": false,
+      "observedDimensions": {
+        "width": 1024,
+        "height": 572
+      },
+      "review": {
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/G2_review_20261010.json",
+        "sha256": "1ab7f8f71f86a9751958177f2a94855ef3a9d0fcce023789b3245a1ead03488f",
+        "reviewer": "CFA Codex Nova and read-only helper",
+        "humanAcceptance": false,
+        "criticalDefects": true,
+        "mouthScore": null,
+        "total": null,
+        "grade": null
+      },
+      "acquisition": "Displayed image captured through browser media download after full-size download event timed out; not claimed to be the full-size server original.",
+      "sourceUI": {
+        "responseID": "0752e9995688a8c5",
+        "promptContentObserved": true,
+        "fourAttachedThumbnailsObserved": true,
+        "uploadedBinaryHashesIndependentlyVerified": false,
+        "copiedPromptBytesVerified": false
+      }
     },
     {
       "id": "F1",
       "provider": "Flow",
-      "status": "empty_project_creation_verified_no_generation_submitted",
+      "status": "empty_project_reconfirmed_connection_blocker_no_generation",
       "comparable": null,
       "projectURL": "https://flow.google.com/project/91923885-3d6e-4747-806a-f46f66007b22",
       "projectTitle": "Oct 09 - 21:02",
       "actualImageModel": null,
       "outputPath": null,
       "outputSHA256": null,
-      "accepted": false
+      "accepted": false,
+      "blocker": "Could not connect to the reCAPTCHA service; no challenge solved and no generation submitted."
     },
     {
       "id": "K1",
@@ -171,5 +194,11 @@
     "../Pan_Handlers/Help/content/video_routes.py:image_to_video",
     "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/BENCHMARK.txt"
   ],
-  "lessonApplication": "Hold references and brief fixed; record one deliberate provider change and remaining setting/context differences. Inspect artifacts, retain defects and avoid promoting a small comparison into universal model rankings. Current workshop cantina/brown-jacket brief supersedes older ship/studded-vest proposals."
+  "lessonApplication": "Hold references and brief fixed; record one deliberate provider change and remaining setting/context differences. Inspect artifacts, retain defects and avoid promoting a small comparison into universal model rankings. Current workshop cantina/brown-jacket brief supersedes older ship/studded-vest proposals.",
+  "latestUserAuthorization": {
+    "localDate": "2026-10-10",
+    "scope": "Finish existing Gemini benchmark and then bounded native video continuation; existing Flow comparison authorization retained",
+    "acceptedFrameGateRetained": true,
+    "additionalJobsSubmitted": 0
+  }
 }

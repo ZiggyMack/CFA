@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "benchmarkID": "HON-OPENING-PROVIDER-20261009",
+  "attemptID": "G2",
+  "provider": "Gemini",
+  "phase": "still",
+  "reviewedUTC": "2026-10-10T06:05:56Z",
+  "reviewer": {
+    "name": "CFA Codex Nova / collaborator_scorecards helper",
+    "kind": "self_authored_ai_visual_review",
+    "humanAcceptance": false
+  },
+  "reviewMethod": "Displayed retrieved G2 JPEG and all four unchanged source images opened with view_image; image bytes decoded and SHA-256 matched. SCORECARD.json and exact current STILL_PROMPT.txt read. No pixel-level identity measurement or unseen/full-size output claimed.",
+  "output": {
+    "path": "docs/notes/downloads/9ae7c5e3-25b7-42c1-baad-109fcc45131e.jpg",
+    "bytes": 85253,
+    "sha256": "4329013cacd87cf51adae031fd72492b565ea580e6a61b5c99dd094477b6de1a",
+    "format": "JPEG",
+    "width": 1024,
+    "height": 572,
+    "mode": "RGB",
+    "decoded": true
+  },
+  "retrievalProvenance": {
+    "basis": "Parent operator supplied browser retrieval evidence; this helper did not interact with Gemini.",
+    "chatURL": "https://gemini.google.com/app/988990050e4ad32c",
+    "responseID": "0752e9995688a8c5",
+    "operationReported": "displayed img downloadMedia",
+    "fullSizeDownloadButton": "Timed out per parent operator; this file is not labelled a full-size-button download.",
+    "promptAndAttachmentEvidence": "Root reported the full current prompt visible and four attached A/B/D/F thumbnails. This is attributed operator evidence, not an independent browser read by this helper.",
+    "actualImageModel": null,
+    "nativeImageDimensions": null
+  },
+  "sourceReferences": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/6c8900223ee9__lf_full.png",
+      "bytes": 1166382,
+      "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae",
+      "format": "PNG",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "decoded": true,
+      "label": "A",
+      "role": "Exact actor identity, loose dark curls, no forehead marks, cheek text styles and sides, existing neck blaster and chest ship, brown jacket/open white shirt. Older teeth in this image are not authoritative.",
+      "matchesRunManifest": true,
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/91ef00348229__GRILL-LOCK-4GOLD-v2.jpg",
+      "bytes": 295186,
+      "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "decoded": true,
+      "label": "B",
+      "role": "Mouth only: four upper gold lateral incisor/short canine caps, white central incisors, lower silver chrome grill, two plain silver lower-lip hoops. Nose comes from A; this crop is not nose authority.",
+      "matchesRunManifest": true,
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-03-pay-table.jpg",
+      "bytes": 316016,
+      "sha256": "36679ee9953bfb8d0492009c1a47309fdd8f04f951f2077bce0007067146b1c4",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "decoded": true,
+      "label": "D",
+      "role": "Translucent glowing rectangular glass-like circuit credits and worn table staging only. Wrong actor and ink must not transfer.",
+      "matchesRunManifest": true,
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-06-scoundrel-detail.jpg",
+      "bytes": 308775,
+      "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "decoded": true,
+      "label": "F",
+      "role": "Substantial flattened gold curb bracelet plus dark band. Character RIGHT/viewer-left is provisional scene blocking, not identity canon. Do not transfer forearm tattoo or invent clasp/watch/hand ink.",
+      "matchesRunManifest": true,
+      "visuallyInspected": true
+    }
+  ],
+  "reviewInputs": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/RUN_MANIFEST.json",
+      "sha256": "dffe589e55f822474da03260c3b4e77f43e8a8628b10b7aa6f99c7dc2d65264f",
+      "bytes": 12039
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/SCORECARD.json",
+      "sha256": "8f8409d2d0798fdd334e23eb5922d79cc7589b6a0f43f91ff983939873923cd1",
+      "bytes": 5972
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/STILL_PROMPT.txt",
+      "sha256": "f5332a288bd840ccc201f8a98e77e68243e7cb7b7b97decfe1f4e32e7b442d06",
+      "bytes": 1891
+    }
+  ],
+  "scores": {
+    "identity": 2,
+    "mouth": null,
+    "tattoo": 2,
+    "jewelry": 1,
+    "prop": 3,
+    "composition": 4
+  },
+  "observedWeight": 80,
+  "total": null,
+  "grade": null,
+  "aggregateReason": "Mouth criterion is not reliably inspectable in the displayed output. A partial score is not normalized or presented as a complete grade. Critical defects separately block continuation.",
+  "observations": [
+    {
+      "criterion": "identity",
+      "score": 2,
+      "sourceLabels": [
+        "A"
+      ],
+      "confidence": "reviewer_visual_judgment",
+      "observation": "Curly dark hair, stubble and basic tattooed-man styling remain, but the generated face is broader with different cheek, nose and eye proportions and more pronounced forehead lines than A; the hair silhouette is shorter/tighter. This reviewer does not see an exact reuse of the supplied actor.",
+      "scopeLimit": "A visual likeness assessment, not a biometric measurement or inference about real age."
+    },
+    {
+      "criterion": "mouth",
+      "score": null,
+      "sourceLabels": [
+        "B"
+      ],
+      "confidence": "insufficient_output_detail",
+      "observation": "Metallic lower-mouth detail and lip jewelry are visible, but at this displayed 1024x572 output the individual upper caps, natural central incisors, lower material and exact hoop geometry cannot all be verified reliably.",
+      "scopeLimit": "No precise tooth count, correct four-gold map or clean mouth match is claimed. Full-size output may allow a later review."
+    },
+    {
+      "criterion": "tattoo",
+      "score": 2,
+      "sourceLabels": [
+        "A"
+      ],
+      "confidence": "visible_motif_difference",
+      "observation": "No foreground forehead mark is apparent and eye/know remain on their requested viewer sides. The visible viewer-right neck marking is a dense angular/dark motif rather than A's thin outlined blaster; the visible chest marking is blockier and does not clearly reproduce A's rounded ship drawing.",
+      "scopeLimit": "Tiny cheek typography and obscured artwork are not certified from this output. Neck mismatch is independently sufficient for a repair finding."
+    },
+    {
+      "criterion": "jewelry",
+      "score": 1,
+      "sourceLabels": [
+        "F"
+      ],
+      "confidence": "clear_visible_difference",
+      "observation": "Viewer-left wrist has a thin gold chain instead of F's substantial flattened curb links. The dark band is visibly on viewer-right, whereas this scene contract requires bracelet plus dark band together on character-right/viewer-left.",
+      "scopeLimit": "Wrist placement is a provisional scene constraint, not a change to identity canon. Nose/ear details are not fully resolvable here."
+    },
+    {
+      "criterion": "prop",
+      "score": 3,
+      "sourceLabels": [
+        "D"
+      ],
+      "confidence": "visible_partial_match",
+      "observation": "Four separate luminous translucent rectangular pieces are present, so the opaque bullion failure improved. Their mostly pink/orange nested borders show less of D's fine illuminated circuit pattern. A small gauge is at far screen-right. Blurred human figures remain in the left background despite the common prompt's no-other-people requirement.",
+      "scopeLimit": "No malformed-hand or precise hidden-finger-count finding is asserted. The small gauge's full detail and original output dimensions remain unverified."
+    },
+    {
+      "criterion": "composition",
+      "score": 4,
+      "sourceLabels": [
+        "A",
+        "D",
+        "F"
+      ],
+      "confidence": "visible_scene_structure",
+      "observation": "Brown jacket/open white shirt, seated worn cantina counter, both hands, four credits, warm amber background and a roughly level medium-wide view are present. The gauge is partly at the frame edge and exact 16:9 native output cannot be established from this displayed rendition.",
+      "scopeLimit": "1024x572 is the retrieved displayed asset, not proof of the native image's resolution or aspect ratio."
+    }
+  ],
+  "criticalDefects": [
+    {
+      "id": "wrist_scene_constraint",
+      "criterion": "jewelry",
+      "confidence": "high",
+      "observation": "Dark band is on the wrong wrist for this scene, and the required substantial flattened curb bracelet is replaced by a thin chain.",
+      "repairScope": "Restore F bracelet and dark band together at viewer-left; preserve other approved components."
+    },
+    {
+      "id": "neck_motif_drift",
+      "criterion": "tattoo",
+      "confidence": "high",
+      "observation": "Visible neck tattoo does not preserve A's outline blaster.",
+      "repairScope": "Use A only for visible ink; do not import unrelated neck art."
+    },
+    {
+      "id": "actor_likeness_drift",
+      "criterion": "identity",
+      "confidence": "reviewer_judgment",
+      "observation": "Material face proportion/hair silhouette differences from A remain in this reviewer's comparison.",
+      "repairScope": "Any later correction must use the exact scoped A identity, without making this scene variant the future global master."
+    },
+    {
+      "id": "extra_background_people",
+      "criterion": "prop",
+      "confidence": "visible_background_figures",
+      "observation": "Human silhouettes remain in the left background, conflicting with the explicit no-other-people still contract.",
+      "repairScope": "If this scene requirement remains, remove background patrons in a separately authorized correction."
+    }
+  ],
+  "acceptanceGate": "FAIL - critical defect",
+  "accepted": false,
+  "acceptedByHuman": false,
+  "canSeedVideo": false,
+  "canBecomeIdentityMaster": false,
+  "nextAction": "Preserve this failed G2 evidence and stop the video start gate. Root may reconcile the evidence or seek a separately authorized bounded correction; this review does not authorize a reroll.",
+  "limits": [
+    "One still attempt, no general Gemini success rate or provider winner.",
+    "No temporal video quality, native append support or ten-turn completion tested.",
+    "Displayed lower-resolution retrieval only; upper tooth map remains unknown.",
+    "Source input roles must remain separated; a correct prop or wardrobe does not approve the actor/ink."
+  ],
+  "externalActionsPerformed": false,
+  "newGenerations": 0,
+  "sourcesModified": false
+}

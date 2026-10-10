@@ -1,0 +1,138 @@
+{
+  "intakeID": "CFA-REVIEW-20261010-WORKING-BOM",
+  "recordedAtUTC": "2026-10-10T05:26:44.918005+00:00",
+  "source": {
+    "id": "CFA-REVIEW-20261010-WORKING-BOM",
+    "sourcePath": "docs/notes/downloads/cfa-review (9).json",
+    "sourceExported": "2026-10-10T05:05:09.832Z",
+    "sourceSHA256": "0f748a55f636d7139a8e05a58a6c90a90c7c0530c652e6054ba071d80b9ee77b",
+    "policy": "Merge only newer explicit user decisions; preserve canonical scope corrections and task plans. Production is image/role local; no numeric ratings inferred."
+  },
+  "changedRecords": [
+    {
+      "id": "LAG-467cd70039955ce1",
+      "fields": {
+        "status": {
+          "before": null,
+          "after": "keep"
+        },
+        "note": {
+          "before": null,
+          "after": ""
+        },
+        "storyboardStage": {
+          "before": null,
+          "after": "production"
+        }
+      }
+    },
+    {
+      "id": "GEM-92EF6FD7",
+      "fields": {
+        "status": {
+          "before": null,
+          "after": "needs_fixes"
+        },
+        "note": {
+          "before": null,
+          "after": "Fix the mistake of Hon DoLo features being mapped on to this Character. this was supposed to be:\n\nHooded traveler · 10 references\nClarity improvement requested\n▾ Hide references\nUser chose Source....currently multiverse until changes are made to align with the refrenced charcter"
+        },
+        "variant": {
+          "before": null,
+          "after": "multiverse"
+        },
+        "variantSource": {
+          "before": null,
+          "after": "user"
+        },
+        "shotPlan": {
+          "before": null,
+          "after": {
+            "status": "planned",
+            "destinations": [
+              "Grok"
+            ],
+            "idea": "we may need to be the ones who fix this w/comfy UI - it is the same sort of idea we are about to under take with DoLO...mapping another onto their frame....",
+            "prompt": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "GEM-8B51108E",
+      "fields": {
+        "status": {
+          "before": null,
+          "after": "needs_fixes"
+        },
+        "note": {
+          "before": null,
+          "after": "This is suppposed to be Hooded traveler · 10"
+        }
+      }
+    },
+    {
+      "id": "HD-DROP-b18c4a123579",
+      "fields": {
+        "status": {
+          "before": null,
+          "after": "keep"
+        },
+        "note": {
+          "before": null,
+          "after": ""
+        },
+        "workingReferenceScope": {
+          "before": null,
+          "after": "identity"
+        },
+        "storyboardStage": {
+          "before": null,
+          "after": "production"
+        }
+      }
+    },
+    {
+      "id": "HD-B-708df0bb5bff",
+      "fields": {
+        "status": {
+          "before": null,
+          "after": "keep"
+        },
+        "note": {
+          "before": null,
+          "after": ""
+        },
+        "workingReferenceScope": {
+          "before": null,
+          "after": "detail"
+        },
+        "storyboardStage": {
+          "before": null,
+          "after": "production"
+        }
+      }
+    }
+  ],
+  "preservedCanonicalRecords": [
+    {
+      "id": "HD-DROP-19593c0144ed",
+      "reason": "Export is not newer than canonical decision; preserve canonical scoped correction and task/plan metadata."
+    },
+    {
+      "id": "HD-RETURN-9ace849985b4",
+      "reason": "Export is not newer than canonical decision; preserve canonical scoped correction and task/plan metadata."
+    }
+  ],
+  "verifiedChangedFiles": [
+    "LAG-467cd70039955ce1",
+    "GEM-92EF6FD7",
+    "GEM-8B51108E",
+    "HD-DROP-b18c4a123579",
+    "HD-B-708df0bb5bff"
+  ],
+  "catalogHashMatches": 71,
+  "productionCount": 18,
+  "numericRatingsAssigned": 0,
+  "physicalFilesDeleted": 0
+}

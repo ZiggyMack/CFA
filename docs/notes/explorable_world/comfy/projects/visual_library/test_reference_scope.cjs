@@ -170,20 +170,19 @@ async function main() {
   assert.equal(page.node('#working-reference-scope').value, 'scene', 'Legacy requested scope remains selected');
   page.change('detail');
   assert.deepEqual(page.record('requested').workingReference, {status:'requested', scope:'scene'}, 'Draft selection does not silently change a queued request');
-  assert.match(page.node('#working-reference-status').textContent, /Update request/);
-  page.node('#request-working-reference').click();
-  assert.deepEqual(page.record('requested').workingReference, {status:'requested', scope:'detail'}, 'Explicit Update request applies the new scope');
-  page.node('#clear-working-reference').click();
-  assert.equal(page.record('requested').workingReference, null);
+  assert.match(page.node('#working-reference-status').textContent, /Earlier request retained/);
+  assert.equal(page.node('#working-reference-scope').value, 'detail');
+  assert.throws(() => page.node('#request-working-reference'), /Rendered control exists/, 'Redundant request action is absent');
+  assert.throws(() => page.node('#clear-working-reference'), /Rendered control exists/, 'Redundant cancel action is absent');
   page.open('other'); page.open('requested');
-  assert.equal(page.node('#working-reference-scope').value, 'detail', 'Cancel preserves the selected scope');
+  assert.equal(page.node('#working-reference-scope').value, 'detail', 'Selected scope survives while the historical request is retained');
   checks++;
 
   page.open('approved');
   assert.equal(page.node('#working-reference-scope').value, 'identity', 'Legacy approval supplies its scope');
   page.change('detail');
   assert.deepEqual(page.record('approved').workingReference, {status:'approved', scope:'identity'}, 'Changing draft does not alter an approval');
-  assert.match(page.node('#working-reference-status').textContent, /Reviewed working reference: Identity/);
+  assert.match(page.node('#working-reference-status').textContent, /Recorded role: identity/);
   const exportedReference = clone(page.api.exportReference(assets[2]));
   assert.equal(exportedReference.workingReferenceScope, 'detail');
   assert.deepEqual(exportedReference.workingReference, {status:'approved', scope:'identity'}, 'Handoffs distinguish selected scope from approved scope');
@@ -191,8 +190,7 @@ async function main() {
 
   const beforeInvalid = page.storage.get(REVIEW_KEY), writesBeforeInvalid = page.writes.length;
   page.change('unsupported');
-  page.node('#request-working-reference').click();
-  assert.equal(page.storage.get(REVIEW_KEY), beforeInvalid, 'Invalid selection/request does not write review state');
+  assert.equal(page.storage.get(REVIEW_KEY), beforeInvalid, 'Invalid selection does not write review state');
   assert.equal(page.writes.length, writesBeforeInvalid);
   page.open('other'); page.open('approved');
   assert.equal(page.node('#working-reference-scope').value, 'detail');

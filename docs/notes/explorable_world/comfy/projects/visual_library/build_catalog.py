@@ -318,11 +318,26 @@ albums.sort(key=album_order)
 catalog=dict(projects=[dict(id='hon',name='Hon Dolo',subtitle='Strictly Business'),dict(id='lisan',name='Lisan Al Gaib',subtitle='Meta Mirror'),dict(id='unassigned',name='Unassigned',subtitle='Two clips to place')],assets=assets,albums=albums,categories=[['working','Working references'],['outfits','Outfits'],['details','Tattoos & piercings'],['cast','Supporting cast'],['storyboard','Storyboard'],['videos','Videos'],['comfy','Comfy swap targets'],['inspiration','Inspiration'],['review','Needs review']])
 ids=[a['id'] for a in assets];assert len(ids)==len(set(ids)), 'Repeated UI asset IDs'
 catalog['reviewDecisions']=review_decisions
+catalog['sceneReviews']=read(review_path).get('sceneReviews',[]) if review_path.exists() else []
 catalog['storyboardSequences']=storyboard_sequences
 catalog['missionControl']=read(PROJECTS/'collaborators/mission_control.json')
+scorecards_path=HERE/'provider_scorecards.json'
+catalog['providerScorecards']=read(scorecards_path) if scorecards_path.exists() else {'providers':[],'roleDefinitions':[]}
 catalog['productionWorkflows']=production['workflows']
 profiles_path=PROJECTS/'collaborators/detail_profiles.json'
 catalog['detailProfiles']=read(profiles_path) if profiles_path.exists() else []
+bom_path=HERE/'working_reference_bom.json'
+catalog['characterBOM']=read(bom_path) if bom_path.exists() else {'characters':[]}
+for character in catalog['characterBOM']['characters']:
+    assert character['coverAssetID'] in by_id,character['id']
+    for component in character['entries']:
+        source=by_id[component['assetID']]
+        assert source['project']==character['project'] and source['sha256']==component['sha256'],component['assetID']
+        assert hashlib.sha256(io_path(ROOT/source['repoPath']).read_bytes()).hexdigest()==component['sha256'],component['assetID']
+        assert (ROOT/component['evidencePath']).is_file(),component['evidencePath']
+    assert all(i in by_id for i in character.get('historyAssetIDs',[])),character['id']
+assert (ROOT/catalog['characterBOM']['policyPath']).is_file()
+
 cast_config=read(HERE/'cast_collections.json') if (HERE/'cast_collections.json').exists() else {}
 catalog['castCollections']=cast_config.get('collections',[])
 for asset_id,override in cast_config.get('assetOverrides',{}).items():

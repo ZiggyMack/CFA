@@ -1,0 +1,2341 @@
+{
+  "schemaVersion": 1,
+  "updatedAtUTC": "2026-10-10T06:24:02.924811+00:00",
+  "scope": "Collaborator roster and evidence-based role scorecards across CFA projects",
+  "displayOrder": "Current work and handoffs first; role resume and scorecards in a separate section.",
+  "roleDefinitions": [
+    {
+      "id": "casting",
+      "label": "Casting",
+      "check": "Choose and refine character candidates against the scoped gold-standard references; keep lineage and creative lane explicit."
+    },
+    {
+      "id": "writing",
+      "label": "Writing",
+      "check": "Translate the song and story intent into clear scene beats, dramatic progression and usable scene cards without inventing canon."
+    },
+    {
+      "id": "direction",
+      "label": "Direction",
+      "check": "Specify intention, action, blocking, performance and eyelines; identify what the viewer should understand in each beat."
+    },
+    {
+      "id": "cinematography",
+      "label": "Cinematography",
+      "check": "Specify framing, camera angle and movement, lens intent, lighting sources and continuity; make the proposed shot practical for the chosen tool."
+    },
+    {
+      "id": "set_design",
+      "label": "Set design",
+      "check": "Resolve scene geography, atmosphere and story-bearing background details before the shoot plan is verified."
+    },
+    {
+      "id": "props",
+      "label": "Props",
+      "check": "Choose and verify scene objects, counts, materials, hand contact and continuity, including money, cigars and breathing accessories."
+    },
+    {
+      "id": "costume",
+      "label": "Costume",
+      "check": "Choose scene-specific wardrobe early, preserve approved construction and distinguish a wardrobe approval from actor identity approval."
+    },
+    {
+      "id": "vfx",
+      "label": "VFX",
+      "check": "Propose effects and finishing while preserving the accepted picture, performance and references; execution needs its own measured result."
+    },
+    {
+      "id": "continuity",
+      "label": "Continuity",
+      "check": "Check identity, dental map, visible tattoos, jewelry, hands, props, spatial relationships and temporal joins against the scoped brief."
+    }
+  ],
+  "metricDefinitions": [
+    {
+      "id": "quality",
+      "label": "Quality",
+      "check": "Observed adherence and defects in the scoped deliverable."
+    },
+    {
+      "id": "consistency",
+      "label": "Consistency",
+      "check": "Preservation across comparable outputs or dependent video turns; one sample does not establish a rate."
+    },
+    {
+      "id": "speed",
+      "label": "Speed",
+      "check": "Measured elapsed time, queue time, tool time and operator/courier time, with cold-start or service limits disclosed."
+    },
+    {
+      "id": "rework",
+      "label": "Rework",
+      "check": "Actual repair iterations and operator effort; include rejected attempts, not just the final image."
+    },
+    {
+      "id": "cost",
+      "label": "Cost",
+      "check": "Observed credits, currency and usage or unknown. Subscription price alone is not the cost of an attempt."
+    },
+    {
+      "id": "tool_access",
+      "label": "Tools and limits",
+      "check": "Actual surface/model, observed tools, unsupported steps and reliance on a helper. Keep this separate from creative quality."
+    }
+  ],
+  "rankingPolicy": {
+    "identityLikeness": "Asset 1-5 stars mean likeness to the scoped gold standard only; they are not collaborator grades or preference stars.",
+    "scope": "Compare the same role, task and input constraints. A casting grade does not imply writing, cinematography or video skill.",
+    "unknown": "Unknown and untested remain null; unsupported direct execution is not an automatic F for planning quality.",
+    "humanAssessment": "Human assessments, author claims and measured output grades remain labelled separately.",
+    "noUniversalWinner": "No overall winner until the relevant task metrics, sample count, dependencies and limitations are recorded.",
+    "routing": "Use the best relevant evidence for this task, availability and cost constraints; document team dependencies and scene-specific exceptions."
+  },
+  "providers": [
+    {
+      "id": "ComfyUI",
+      "mailboxIDs": [],
+      "name": "ComfyUI",
+      "kind": "production_platform",
+      "currentRole": "Cloud workflow execution and finishing",
+      "availability": "live access must be rechecked",
+      "identity": null,
+      "communication": {
+        "route": "CFA operator with actual Cloud tools",
+        "status": "recheck_before_run",
+        "note": "A platform is not an individual collaborator. Saved settings and schemas are dated evidence; current compatibility, execution and acceptance remain separate.",
+        "automaticDelivery": false,
+        "automaticMonitoring": false
+      },
+      "capabilities": {
+        "summary": "Existing CFA records include executed still, motion and relight tests with recorded preservation failures; no aggregate role grade.",
+        "basis": "saved_production_records",
+        "evidenceRefs": []
+      },
+      "scorecards": [
+        {
+          "category": "casting",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "writing",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "direction",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "cinematography",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "set_design",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "props",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "costume",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "vfx",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "continuity",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        }
+      ],
+      "workLinks": [
+        {
+          "label": "Workflow recipes",
+          "path": "docs/notes/explorable_world/comfy/workflows/README.md"
+        },
+        {
+          "label": "Measured motion proof",
+          "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_motion_v001.record.json"
+        }
+      ],
+      "selfReported": {
+        "status": "unreported",
+        "basis": "No current self-authored role resume received for this platform/surface.",
+        "preferredCreativeRoles": null,
+        "benchmarkWillingness": "not_reported",
+        "strengths": [],
+        "limitations": [],
+        "preferences": [],
+        "evidenceRefs": []
+      }
+    },
+    {
+      "id": "Flow",
+      "mailboxIDs": [
+        "flow"
+      ],
+      "name": "Google Flow",
+      "kind": "production_platform",
+      "currentRole": "Dedicated image/video workspace and comparison lane",
+      "availability": "existing empty project reconfirmed; service connection blocker",
+      "identity": null,
+      "communication": {
+        "route": "Nova browser courier",
+        "status": "empty_project_service_connection_blocker",
+        "note": "Treat each companion session as fresh until readback confirms its context. No self-authored Flow I_AM has been received.",
+        "automaticDelivery": false,
+        "automaticMonitoring": false
+      },
+      "capabilities": {
+        "summary": "The existing project was reinspected and still has no media or generated output. Its page reports that it could not connect to the reCAPTCHA service. No challenge was solved and no generation was submitted; model, extension support and output quality remain unverified.",
+        "basis": "opening_manifest_current_operator_observation",
+        "evidenceRefs": [
+          "opening_manifest"
+        ]
+      },
+      "scorecards": [
+        {
+          "category": "casting",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "writing",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "direction",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "cinematography",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "set_design",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "props",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "costume",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "vfx",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "continuity",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        }
+      ],
+      "workLinks": [
+        {
+          "label": "Flow intake",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/flow_intake_20261008.txt"
+        },
+        {
+          "label": "Opening comparison",
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/START_HERE.txt"
+        },
+        {
+          "label": "Existing Flow project",
+          "url": "https://flow.google.com/project/91923885-3d6e-4747-806a-f46f66007b22"
+        }
+      ],
+      "selfReported": {
+        "status": "unreported",
+        "basis": "No current self-authored role resume received for this platform/surface.",
+        "preferredCreativeRoles": null,
+        "benchmarkWillingness": "not_reported",
+        "strengths": [],
+        "limitations": [],
+        "preferences": [],
+        "evidenceRefs": []
+      }
+    },
+    {
+      "id": "Gemini",
+      "mailboxIDs": [
+        "gemini_master",
+        "gemini_chat",
+        "gemini_studio"
+      ],
+      "name": "Gemini",
+      "kind": "ai_collaborator_family",
+      "currentRole": "Notebook/storyboard development plus separate generation surfaces",
+      "availability": "browser helper during authorized active sessions; opening G2 reviewed and not accepted",
+      "identity": {
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/I_AM.md",
+        "sha256": "837eaba6a5da0300ce3a50563d0031d9d83c73b30f65433ee06405f59d028b26",
+        "bytes": 4348
+      },
+      "communication": {
+        "route": "Nova browser courier",
+        "status": "master_intro_received_other_surfaces_separate",
+        "note": "Notebook 0, project chat, AI Studio and local chat are distinct contexts. A mailbox post is not delivery; a local path is not an image attachment.",
+        "automaticDelivery": false,
+        "automaticMonitoring": false
+      },
+      "capabilities": {
+        "summary": "Notebook 0 text response and introduction were archived; direct local filesystem access is unavailable by author report. The retrieved G2 displayed preview was inspected against the unchanged references: actor likeness, neck blaster and wrist arrangement have critical differences. The exact mouth map is unresolved at displayed size. No starting-frame acceptance or video continuation is recorded.",
+        "basis": "authored_introduction_and_saved_displayed_output_visual_review",
+        "evidenceRefs": [
+          "iam_gemini_master",
+          "opening_manifest",
+          "opening_g2_review"
+        ]
+      },
+      "scorecards": [
+        {
+          "category": "casting",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "writing",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "direction",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "cinematography",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "set_design",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "props",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "costume",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "vfx",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "continuity",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        }
+      ],
+      "workLinks": [
+        {
+          "label": "Gemini Master I_AM",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/I_AM.md"
+        },
+        {
+          "label": "Current opening comparison",
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/START_HERE.txt"
+        },
+        {
+          "label": "Hon opening benchmark chat",
+          "url": "https://gemini.google.com/app/988990050e4ad32c"
+        },
+        {
+          "label": "Notebook 0 chat",
+          "url": "https://gemini.google.com/app/31fab947ecdea074"
+        },
+        {
+          "label": "G2 visual review",
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/G2_review_20261010.json"
+        },
+        {
+          "label": "G2 displayed preview",
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/evidence/G2_displayed_preview_20261010.jpg"
+        }
+      ],
+      "selfReported": {
+        "status": "author_report",
+        "basis": "Preserved self-authored I_AM; capability claims and proposed strengths are not earned grades.",
+        "preferredCreativeRoles": null,
+        "benchmarkWillingness": "not_explicitly_reported",
+        "strengths": [
+          "Summaries, reference-role checks and scoped promotion tracking from supplied text."
+        ],
+        "limitations": [
+          "No direct local filesystem or cross-notebook read access.",
+          "Unuploaded visual bytes are not available from path strings."
+        ],
+        "preferences": [
+          "Concise structured summaries and Markdown for Nova to archive."
+        ],
+        "evidenceRefs": [
+          "iam_gemini_master"
+        ]
+      }
+    },
+    {
+      "id": "Grok",
+      "mailboxIDs": [
+        "grok_chief",
+        "hal"
+      ],
+      "name": "Grok / Chief of Staff",
+      "kind": "ai_collaborator_family",
+      "currentRole": "Current casting and visual exploration producer",
+      "availability": "verify active Chief/HaL session",
+      "identity": {
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/grok_chief/I_AM.md",
+        "sha256": "cc58e4d752503d8fc8c17b99239b925c8ab11c059f71f1a301645ab6e7467bbd",
+        "bytes": 5618
+      },
+      "communication": {
+        "route": "Shared files when active or Nova browser courier",
+        "status": "chief_intro_received_hal_intro_pending",
+        "note": "Chief and HaL have separate production scopes. Local package receipt can be verified; the producer’s quality or progress report is not acceptance.",
+        "automaticDelivery": false,
+        "automaticMonitoring": false
+      },
+      "capabilities": {
+        "summary": "Chief reports image generation, packaging and local execution. Historical image packages were received and hash-verified; direct D: writes and video review have reported limits. No measured 1000-images/day rate is asserted.",
+        "basis": "author_report_and_received_package_records",
+        "evidenceRefs": [
+          "iam_grok_chief"
+        ]
+      },
+      "scorecards": [
+        {
+          "category": "casting",
+          "grade": "A-",
+          "assessedBy": "Ziggy",
+          "assessmentDate": "2026-10-10",
+          "status": "human_assessment",
+          "note": "Current user assessment; matched benchmark and measured rates remain ungraded.",
+          "evidenceRefs": [
+            "grok_casting_human_assessment"
+          ],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "writing",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "direction",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "cinematography",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "set_design",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "props",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "costume",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "vfx",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "continuity",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        }
+      ],
+      "workLinks": [
+        {
+          "label": "Chief I_AM",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/grok_chief/I_AM.md"
+        },
+        {
+          "label": "Existing image benchmark",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/START_HERE.txt"
+        },
+        {
+          "label": "Current design instructions",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_design_instructions.txt"
+        }
+      ],
+      "selfReported": {
+        "status": "author_report",
+        "basis": "Preserved self-authored I_AM; capability claims and proposed strengths are not earned grades.",
+        "preferredCreativeRoles": null,
+        "benchmarkWillingness": "not_explicitly_reported",
+        "strengths": [
+          "Hon Dolo image/package production with named files, manifests and contact sheets."
+        ],
+        "limitations": [
+          "Reported direct D: write restriction, slow reads and session-only mailbox access.",
+          "Video review uses helpers; Comfy execution is not his demonstrated role."
+        ],
+        "preferences": [
+          "Bounded brief with exact source ID/path and specific defects.",
+          "Return ZIP/README/manifest/contact sheet with scoped review status."
+        ],
+        "evidenceRefs": [
+          "iam_grok_chief"
+        ]
+      }
+    },
+    {
+      "id": "PanhandlerNova",
+      "mailboxIDs": [
+        "claude"
+      ],
+      "name": "Claude / Pan_Handlers",
+      "kind": "ai_collaborator",
+      "currentRole": "Pan_Handlers Master Repo steward and current lead",
+      "availability": "active session required",
+      "identity": {
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/claude/I_AM.md",
+        "sha256": "4a80293f02e67f532e3e4d4a3c6597100318bec57ae98ad404c2d8574628c448",
+        "bytes": 13587
+      },
+      "communication": {
+        "route": "Established Pan REPO-SYNC; CFA mailbox claude complements it",
+        "status": "intro_received_current_steward",
+        "note": "Panhandler Nova is a preserved historical teaching identity, not a second current repository lead. File posting does not prove Claude read or adopted it.",
+        "automaticDelivery": false,
+        "automaticMonitoring": false
+      },
+      "capabilities": {
+        "summary": "Claude reports local filesystem, PowerShell, JSON and checks. Browser, image viewing and generation are not demonstrated in this onboarding; no Comfy Cloud tools were present in the author report.",
+        "basis": "author_report_file_bytes_verified",
+        "evidenceRefs": [
+          "iam_claude"
+        ]
+      },
+      "scorecards": [
+        {
+          "category": "casting",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "writing",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "direction",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "cinematography",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "set_design",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "props",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "costume",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "vfx",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "continuity",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        }
+      ],
+      "workLinks": [
+        {
+          "label": "Claude I_AM",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/claude/I_AM.md"
+        },
+        {
+          "label": "Repository handoff",
+          "path": "docs/notes/explorable_world/pathfinder_handoff/README.md"
+        }
+      ],
+      "selfReported": {
+        "status": "author_report",
+        "basis": "Preserved self-authored I_AM; capability claims and proposed strengths are not earned grades.",
+        "preferredCreativeRoles": null,
+        "benchmarkWillingness": "not_explicitly_reported",
+        "strengths": [
+          "Long-record reconciliation, cross-repository consistency, hash-backed checks and small validation scripts."
+        ],
+        "limitations": [
+          "No logged-in Grok/Gemini/Flow relay or Comfy tools in the authored session.",
+          "D: searches were slow; persisted notes are not current firsthand memory."
+        ],
+        "preferences": [
+          "Repository-relative path plus a clearly defined finished artifact.",
+          "Markdown/JSON with real hashes and explicit unknowns."
+        ],
+        "evidenceRefs": [
+          "iam_claude"
+        ]
+      }
+    },
+    {
+      "id": "Codex",
+      "mailboxIDs": [
+        "nova"
+      ],
+      "name": "CFA Codex Nova",
+      "kind": "ai_collaborator",
+      "currentRole": "CFA repository lead, evidence keeper and available courier",
+      "availability": "this active Codex session",
+      "identity": {
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/nova/I_AM.md",
+        "sha256": "fdc40f7676ad40602766e43b4a0e2912795c0b0714e3d43da4c3db4b7cc96333",
+        "bytes": 6117
+      },
+      "communication": {
+        "route": "Shared files and authorized browser courier",
+        "status": "active_session_only",
+        "note": "Browser relay availability can fail. Nova performs transcription with attribution; it does not become the remote AI’s filesystem skill.",
+        "automaticDelivery": false,
+        "automaticMonitoring": false
+      },
+      "capabilities": {
+        "summary": "This session has actual local edits, hashes and checks. Browser actions are observed individually; recent timeouts do not establish provider unavailability or a successful send.",
+        "basis": "active_session_actions_and_identity",
+        "evidenceRefs": [
+          "iam_nova"
+        ]
+      },
+      "scorecards": [
+        {
+          "category": "casting",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "writing",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "direction",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "cinematography",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "set_design",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "props",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "costume",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "vfx",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "continuity",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        }
+      ],
+      "workLinks": [
+        {
+          "label": "Nova I_AM",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/nova/I_AM.md"
+        },
+        {
+          "label": "Mailbox protocol",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/MAILBOX.md"
+        }
+      ],
+      "selfReported": {
+        "status": "author_report",
+        "basis": "Preserved self-authored I_AM; capability claims and proposed strengths are not earned grades.",
+        "preferredCreativeRoles": [
+          "direction",
+          "continuity"
+        ],
+        "benchmarkWillingness": "not_explicitly_reported",
+        "strengths": [
+          "Turn creative intent into scoped references, bounded tests and reviewable handoffs.",
+          "Inspect/edit authorized files, prepare checks and preserve evidence."
+        ],
+        "limitations": [
+          "Active-session tools and browser routes can fail.",
+          "Cannot infer access, acceptance or memories from metadata."
+        ],
+        "preferences": [
+          "Precise immediate artifacts and a useful next step; corrections welcome for overbuilding."
+        ],
+        "evidenceRefs": [
+          "iam_nova"
+        ],
+        "summary": "Hello. I help Ziggy turn creative intent into work that another collaborator can pick up: a reference with a clear role, a test with a stopping point, a result someone actually checked. I enjoy the moment when a scattered set of pictures, ideas and conversations starts becoming a coherent project."
+      }
+    },
+    {
+      "id": "DeepSeek",
+      "mailboxIDs": [
+        "deepseek"
+      ],
+      "name": "DeepSeek",
+      "kind": "ai_collaborator",
+      "currentRole": "Shared capability pilot; creative roles open for real-work rotation",
+      "availability": "user closed app; next wake checks mail",
+      "identity": {
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/deepseek/I_AM.md",
+        "sha256": "beb585aa6894a03480e6753aa3087c7fb9ea50072fb9289331946c4746603f5c",
+        "bytes": 13507
+      },
+      "communication": {
+        "route": "Shared files during an active authorized session",
+        "status": "phase0_posted_not_executed",
+        "note": "No automatic wake or mailbox watcher. Long message truncation and directory hangs are reported; bounded explicit-path reads are preferred.",
+        "automaticDelivery": false,
+        "automaticMonitoring": false
+      },
+      "capabilities": {
+        "summary": "Author reports local read/write, PowerShell and hashes; received introduction/reply bytes are verified. Vision, browser relay, Cloud execution and image/video generation were not demonstrated.",
+        "basis": "author_report_file_bytes_verified",
+        "evidenceRefs": [
+          "iam_deepseek"
+        ]
+      },
+      "scorecards": [
+        {
+          "category": "casting",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "writing",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "direction",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "cinematography",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "set_design",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "props",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "costume",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "vfx",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "continuity",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        }
+      ],
+      "workLinks": [
+        {
+          "label": "DeepSeek I_AM",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/deepseek/I_AM.md"
+        },
+        {
+          "label": "Shared pilot",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/work_briefs_20261010/SHARED_PILOT.md"
+        }
+      ],
+      "selfReported": {
+        "status": "author_report",
+        "basis": "Preserved self-authored I_AM; capability claims and proposed strengths are not earned grades.",
+        "preferredCreativeRoles": null,
+        "benchmarkWillingness": "not_explicitly_reported",
+        "strengths": [
+          "Coverage tables, manifest diffs and derived-crop integrity checks are proposed useful contributions."
+        ],
+        "limitations": [
+          "No images were viewed in the authored session.",
+          "Reported long-message truncation and recursive enumeration hangs.",
+          "Cloud, web reachability, vision and generation were untested."
+        ],
+        "preferences": [
+          "Text/structured data, one honest table and real hashes.",
+          "Repository-relative paths in portable handoffs."
+        ],
+        "evidenceRefs": [
+          "iam_deepseek"
+        ]
+      }
+    },
+    {
+      "id": "Kimi",
+      "mailboxIDs": [
+        "kimi"
+      ],
+      "name": "Kimi / Moonshot AI",
+      "kind": "ai_collaborator",
+      "currentRole": "Shared capability pilot; creative roles open for real-work rotation",
+      "availability": "user closed app; next wake checks mail",
+      "identity": {
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/kimi/I_AM.md",
+        "sha256": "aa3c61e3f89ea4c04ae28ee64b85155f927e9ddc49064ffdd45df7f4a278a23f",
+        "bytes": 6740
+      },
+      "communication": {
+        "route": "Shared files during an active authorized session",
+        "status": "phase0_posted_not_executed",
+        "note": "Canonical kimi ID is now registered. The original I_AM correctly records its earlier pending state. No automatic wake or monitoring.",
+        "automaticDelivery": false,
+        "automaticMonitoring": false
+      },
+      "capabilities": {
+        "summary": "Author reports local read/write, shell/Python and hashes; received introduction/reply bytes are verified. Richer tools, vision, generation and exact model version remain untested or unknown here.",
+        "basis": "author_report_file_bytes_verified",
+        "evidenceRefs": [
+          "iam_kimi"
+        ]
+      },
+      "scorecards": [
+        {
+          "category": "casting",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "writing",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "direction",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "cinematography",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "set_design",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "props",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "costume",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "vfx",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "continuity",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        }
+      ],
+      "workLinks": [
+        {
+          "label": "Kimi I_AM",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/kimi/I_AM.md"
+        },
+        {
+          "label": "Shared pilot",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/work_briefs_20261010/SHARED_PILOT.md"
+        }
+      ],
+      "selfReported": {
+        "status": "author_report",
+        "basis": "Preserved self-authored I_AM; capability claims and proposed strengths are not earned grades.",
+        "preferredCreativeRoles": null,
+        "benchmarkWillingness": "not_explicitly_reported",
+        "strengths": [
+          "Local file read/write, shell/Python and hash computation reported in onboarding.",
+          "Proposed bounded mailbox/identity consistency report."
+        ],
+        "limitations": [
+          "Exact model version hidden; richer tools were untested here.",
+          "No images or notebooks supplied; no closed-session mailbox watching."
+        ],
+        "preferences": [
+          "Repository-relative paths and explicit task scope.",
+          "Markdown outputs and correctly addressed small mailbox messages."
+        ],
+        "evidenceRefs": [
+          "iam_kimi"
+        ]
+      }
+    },
+    {
+      "id": "Qwen",
+      "mailboxIDs": [
+        "qwen"
+      ],
+      "name": "Qwen",
+      "kind": "ai_collaborator",
+      "currentRole": "Shared capability pilot; orientation and courier route need testing",
+      "availability": "user closed app; orientation packet prepared",
+      "identity": {
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/qwen38_valis/I_AM.md",
+        "sha256": "0543f5df93f4ac6de5eb44c7c9398eaf8f16546dbc47899bf9389a6429a9aa31",
+        "bytes": 1801
+      },
+      "communication": {
+        "route": "Courier until actual local access is demonstrated",
+        "status": "orientation_and_readback_pending",
+        "note": "Canonical mailbox qwen; qwen38_valis is the author alias/folder. A configured project folder does not prove file access. The reported model version is unverified.",
+        "automaticDelivery": false,
+        "automaticMonitoring": false
+      },
+      "capabilities": {
+        "summary": "Author reports no direct local filesystem access; text introduction was supplied by Ziggy and preserved. Direct tools, vision and rendering remain unknown until tested.",
+        "basis": "author_report_supplied_by_user",
+        "evidenceRefs": [
+          "iam_qwen"
+        ]
+      },
+      "scorecards": [
+        {
+          "category": "casting",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "writing",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "direction",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "cinematography",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "set_design",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "props",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "costume",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "vfx",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        },
+        {
+          "category": "continuity",
+          "grade": null,
+          "assessedBy": null,
+          "assessmentDate": null,
+          "status": "ungraded",
+          "note": "No role grade has been earned or measured in this record.",
+          "evidenceRefs": [],
+          "metrics": {
+            "quality": null,
+            "consistency": null,
+            "speed": null,
+            "rework": null,
+            "cost": null,
+            "tool_access": null
+          }
+        }
+      ],
+      "workLinks": [
+        {
+          "label": "Qwen I_AM",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/qwen38_valis/I_AM.md"
+        },
+        {
+          "label": "Orientation courier packet",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/qwen38_valis/onboarding_packet/START_HERE.txt"
+        },
+        {
+          "label": "Shared pilot",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/work_briefs_20261010/SHARED_PILOT.md"
+        }
+      ],
+      "selfReported": {
+        "status": "author_report",
+        "basis": "Preserved self-authored I_AM; capability claims and proposed strengths are not earned grades.",
+        "preferredCreativeRoles": null,
+        "benchmarkWillingness": "not_explicitly_reported",
+        "strengths": [
+          "Proposed workflow logic, Comfy API JSON structuring and prompt engineering."
+        ],
+        "limitations": [
+          "Reported no direct local filesystem access in this chat.",
+          "Project orientation and addressed invitation contents still requested.",
+          "Reported Qwen3.8 version was not independently verified."
+        ],
+        "preferences": [
+          "Provide CFA guidance and workshop orientation as plain text before the next task."
+        ],
+        "evidenceRefs": [
+          "iam_qwen"
+        ]
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "iam_nova",
+      "label": "CFA Codex Nova self-authored introduction",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/nova/I_AM.md",
+      "sha256": "fdc40f7676ad40602766e43b4a0e2912795c0b0714e3d43da4c3db4b7cc96333",
+      "bytes": 6117,
+      "basis": "author_report_file_bytes_verified",
+      "observedAtUTC": "2026-10-10T06:24:02.924811+00:00",
+      "authorRefreshAtUTC": "2026-10-10T06:01:02Z"
+    },
+    {
+      "id": "iam_grok_chief",
+      "label": "Grok Chief of Staff self-authored introduction",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/grok_chief/I_AM.md",
+      "sha256": "cc58e4d752503d8fc8c17b99239b925c8ab11c059f71f1a301645ab6e7467bbd",
+      "bytes": 5618,
+      "basis": "author_report_file_bytes_verified",
+      "observedAtUTC": "2026-10-10T05:57:16Z"
+    },
+    {
+      "id": "iam_deepseek",
+      "label": "Deep_SEEK self-authored introduction",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/deepseek/I_AM.md",
+      "sha256": "beb585aa6894a03480e6753aa3087c7fb9ea50072fb9289331946c4746603f5c",
+      "bytes": 13507,
+      "basis": "author_report_file_bytes_verified",
+      "observedAtUTC": "2026-10-10T05:57:16Z"
+    },
+    {
+      "id": "iam_qwen",
+      "label": "Qwen self-authored introduction",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/qwen38_valis/I_AM.md",
+      "sha256": "0543f5df93f4ac6de5eb44c7c9398eaf8f16546dbc47899bf9389a6429a9aa31",
+      "bytes": 1801,
+      "basis": "author_report_file_bytes_verified",
+      "observedAtUTC": "2026-10-10T05:57:16Z"
+    },
+    {
+      "id": "iam_claude",
+      "label": "Claude / Claude Code collaborator self-authored introduction",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/claude/I_AM.md",
+      "sha256": "4a80293f02e67f532e3e4d4a3c6597100318bec57ae98ad404c2d8574628c448",
+      "bytes": 13587,
+      "basis": "author_report_file_bytes_verified",
+      "observedAtUTC": "2026-10-10T05:57:16Z"
+    },
+    {
+      "id": "iam_kimi",
+      "label": "Kimi / Moonshot AI collaborator self-authored introduction",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/kimi/I_AM.md",
+      "sha256": "aa3c61e3f89ea4c04ae28ee64b85155f927e9ddc49064ffdd45df7f4a278a23f",
+      "bytes": 6740,
+      "basis": "author_report_file_bytes_verified",
+      "observedAtUTC": "2026-10-10T05:57:16Z"
+    },
+    {
+      "id": "iam_gemini_master",
+      "label": "Gemini Notebook 0 / CFA COMFY Master self-authored introduction",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/I_AM.md",
+      "sha256": "837eaba6a5da0300ce3a50563d0031d9d83c73b30f65433ee06405f59d028b26",
+      "bytes": 4348,
+      "basis": "author_report_file_bytes_verified",
+      "observedAtUTC": "2026-10-10T05:57:16Z"
+    },
+    {
+      "id": "opening_manifest",
+      "label": "Opening comparison checkpoint and exact source roles",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/RUN_MANIFEST.json",
+      "sha256": "d04d87e97659b98655b0360fcab7b90d49af4eafa90d1fcbe21e7e2ee5d61c3a",
+      "bytes": 13802,
+      "basis": "saved_record_updated_after_displayed_output_review",
+      "observedAtUTC": "2026-10-10T06:10:25Z"
+    },
+    {
+      "id": "opening_start",
+      "label": "Opening comparison recovery and continuation gates",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/START_HERE.txt",
+      "sha256": "739b64ab07796fffa636c3f56a9bf188cf91ed7db7a19a44639189d5f27c6afe",
+      "bytes": 6229,
+      "basis": "saved_record_updated_after_displayed_output_review",
+      "observedAtUTC": "2026-10-10T06:10:25Z"
+    },
+    {
+      "id": "opening_scorecard",
+      "label": "Existing still-output scoring criteria",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/SCORECARD.json",
+      "sha256": "8f8409d2d0798fdd334e23eb5922d79cc7589b6a0f43f91ff983939873923cd1",
+      "bytes": 5972,
+      "basis": "saved_record",
+      "observedAtUTC": "2026-10-10T05:57:16Z"
+    },
+    {
+      "id": "opening_prompt",
+      "label": "Common provider-neutral repair prompt",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/STILL_PROMPT.txt",
+      "sha256": "f5332a288bd840ccc201f8a98e77e68243e7cb7b7b97decfe1f4e32e7b442d06",
+      "bytes": 1891,
+      "basis": "saved_record",
+      "observedAtUTC": "2026-10-10T05:57:16Z"
+    },
+    {
+      "id": "historical_10_turns",
+      "label": "Historical ten-turn sequence; scene contract requires current reconciliation",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/GEMINI_10_TURNS.txt",
+      "sha256": "b329246ca7aad1c9b6d5d702492ac5d77310b6e5bc1c2d7e97b0e3c4294f72bd",
+      "bytes": 17802,
+      "basis": "saved_record",
+      "observedAtUTC": "2026-10-10T05:57:16Z"
+    },
+    {
+      "id": "shared_pilot",
+      "label": "Assigned shared route capability pilot; no executed report assumed",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/work_briefs_20261010/SHARED_PILOT.md",
+      "sha256": "51e62405ac37d46ef4df9cd3f507ae1a79e6f6cd2a147c8ba4fc89329b94434e",
+      "bytes": 8234,
+      "basis": "saved_record",
+      "observedAtUTC": "2026-10-10T05:57:16Z"
+    },
+    {
+      "id": "mailbox_guide",
+      "label": "Shared mailbox and receipt protocol",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/MAILBOX.md",
+      "sha256": "1d6ab1e44917a89ef04381cde816ef18591a77b28e67bb98b6e9406e216be1df",
+      "bytes": 8265,
+      "basis": "saved_record",
+      "observedAtUTC": "2026-10-10T05:57:16Z"
+    },
+    {
+      "id": "identity_registry",
+      "label": "Canonical identity and attribution registry",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/registry.json",
+      "sha256": "ba141510d94bb0dfc153191b7648ac8a6265e85f46668450f3f128cc56d3fd07",
+      "bytes": 33666,
+      "basis": "saved_record",
+      "observedAtUTC": "2026-10-10T06:17:26.480969+00:00",
+      "previousCapture": {
+        "sha256": "bf1e4c4037bdfb4791db120ac6bda9587eb45752081b80a01b5e789569462f5f",
+        "bytes": 33073,
+        "observedAtUTC": "2026-10-10T05:57:16Z"
+      }
+    },
+    {
+      "id": "intake_procedure",
+      "label": "Controlled comparison and feedback procedure",
+      "path": "docs/notes/explorable_world/comfy/templates/workflow_intake.md",
+      "sha256": "32a3e67520dd9643824f1bfab0b1315d42d2928cfd89f9cfc14036b8cac2aa9b",
+      "bytes": 5147,
+      "basis": "saved_record",
+      "observedAtUTC": "2026-10-10T05:57:16Z"
+    },
+    {
+      "id": "grok_benchmark",
+      "label": "Historical selected-winner refinement intake; no new ranking",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/START_HERE.txt",
+      "sha256": "39c9075346b91743ff102f63be383570538a4ac49fd60bedc019f3c9fb87b310",
+      "bytes": 7259,
+      "basis": "saved_record",
+      "observedAtUTC": "2026-10-10T05:57:16Z"
+    },
+    {
+      "id": "grok_casting_human_assessment",
+      "label": "Ziggy current assessment of Grok casting",
+      "basis": "direct_user_comment_20261010",
+      "quote": "I’d give him an A minus, to be honest, right now.",
+      "scope": "Casting role only; the user’s present assessment, not a controlled benchmark or universal provider ranking.",
+      "observedAtUTC": "2026-10-10T05:57:16Z"
+    },
+    {
+      "id": "opening_g2_review",
+      "label": "Retrieved Gemini G2 displayed-output visual review",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/G2_review_20261010.json",
+      "sha256": "1ab7f8f71f86a9751958177f2a94855ef3a9d0fcce023789b3245a1ead03488f",
+      "bytes": 11559,
+      "basis": "self_authored_ai_visual_review_not_human_acceptance",
+      "observedAtUTC": "2026-10-10T06:10:25Z"
+    },
+    {
+      "id": "roles_brief_current",
+      "label": "Shared creative-role refresh brief with clarified reported throughput and illustrative grades",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/benchmark_roles_20261010/ROLES_AND_ROTATION_CURRENT.txt",
+      "sha256": "4875029f03cc39328ee831aa96b82422bacb1ca27037128d26948675438e7d0b",
+      "bytes": 6762,
+      "basis": "prepared_brief_not_measured_provider_outcomes",
+      "observedAtUTC": "2026-10-10T06:16:15.179362+00:00"
+    }
+  ],
+  "benchmarkPlan": {
+    "id": "CFA-ROLE-ROTATION-20261010",
+    "status": "prepared_no_new_jobs_started",
+    "roles": [
+      "casting",
+      "writing",
+      "direction",
+      "cinematography",
+      "set_design",
+      "props",
+      "costume",
+      "vfx",
+      "continuity"
+    ],
+    "method": "Rotate bounded roles organically on real project deliverables. Freeze each independent first attempt, then record assisted/team revisions separately. Compare useful work and actual defects, not claimed tool counts.",
+    "existingStillComparison": {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/RUN_MANIFEST.json",
+      "checkpointUTC": "2026-10-10T06:10:25Z",
+      "status": "G2_reviewed_critical_defects_no_accepted_starting_frame",
+      "attempts": [
+        {
+          "id": "G1",
+          "provider": "Gemini",
+          "status": "failed_reference_check",
+          "accepted": false,
+          "comparable": false
+        },
+        {
+          "id": "G2",
+          "provider": "Gemini",
+          "status": "reviewed_critical_defects_not_accepted",
+          "accepted": false,
+          "comparable": null,
+          "reviewPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/G2_review_20261010.json",
+          "outputPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/evidence/G2_displayed_preview_20261010.jpg",
+          "outputSHA256": "4329013cacd87cf51adae031fd72492b565ea580e6a61b5c99dd094477b6de1a",
+          "displayedDimensions": {
+            "width": 1024,
+            "height": 572
+          },
+          "aggregateGrade": null,
+          "mouthScore": null,
+          "humanAcceptance": false
+        },
+        {
+          "id": "F1",
+          "provider": "Flow",
+          "status": "empty_project_reconfirmed_connection_blocker_no_generation",
+          "accepted": false,
+          "comparable": null,
+          "blocker": "Could not connect to the reCAPTCHA service; no challenge solved and no generation submitted."
+        },
+        {
+          "id": "K1",
+          "provider": "Grok",
+          "status": "matching_existing_output_unknown",
+          "accepted": false,
+          "comparable": false
+        }
+      ],
+      "sourcesCheckedAtUTC": "2026-10-10T05:57:16Z",
+      "sources": [
+        {
+          "label": "A",
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/6c8900223ee9__lf_full.png",
+          "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae",
+          "bytes": 1166382,
+          "role": "Exact actor identity, loose dark curls, no forehead marks, cheek text styles and sides, existing neck blaster and chest ship, brown jacket/open white shirt. Older teeth in this image are not authoritative."
+        },
+        {
+          "label": "B",
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/91ef00348229__GRILL-LOCK-4GOLD-v2.jpg",
+          "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "bytes": 295186,
+          "role": "Mouth only: four upper gold lateral incisor/short canine caps, white central incisors, lower silver chrome grill, two plain silver lower-lip hoops. Nose comes from A; this crop is not nose authority."
+        },
+        {
+          "label": "D",
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-03-pay-table.jpg",
+          "sha256": "36679ee9953bfb8d0492009c1a47309fdd8f04f951f2077bce0007067146b1c4",
+          "bytes": 316016,
+          "role": "Translucent glowing rectangular glass-like circuit credits and worn table staging only. Wrong actor and ink must not transfer."
+        },
+        {
+          "label": "F",
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-06-scoundrel-detail.jpg",
+          "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+          "bytes": 308775,
+          "role": "Substantial flattened gold curb bracelet plus dark band. Character RIGHT/viewer-left is provisional scene blocking, not identity canon. Do not transfer forearm tattoo or invent clasp/watch/hand ink."
+        }
+      ],
+      "nextAction": "Review the saved G2 defect evidence. Resume Flow only after its connection blocker clears and exact inputs/settings can be inspected. Do not repeat G2 or begin video from this rejected still."
+    },
+    "continuation": {
+      "status": "blocked_rejected_starting_frame_zero_video_turns",
+      "maximumTotalTurns": 10,
+      "initialBaseMaximum": 1,
+      "dependentExtensionMaximum": 9,
+      "automaticRetries": 0,
+      "latestUserAuthority": "Ziggy explicitly asked Nova to finish the existing Gemini test and attempt the bounded ten-turn continuation. This document creates no external request.",
+      "contract": "Use the current cantina/brown-jacket/four-credit/silent contract; reconcile historical ten-turn text before sending. Confirm actual native append, parent ID, retained prefix, cumulative growth and clean join after every turn. Stop on unsupported/uninspectable extension, critical drift or the finite bound.",
+      "gradeSeparation": "Still, temporal video, planning and final accepted scene receive separate evidence/grades.",
+      "videoTurnsSubmitted": 0
+    },
+    "sharedCapabilityPilot": {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/work_briefs_20261010/SHARED_PILOT.md",
+      "participants": [
+        "deepseek",
+        "kimi",
+        "qwen"
+      ],
+      "status": "phase0_posted_not_executed",
+      "note": "This brief does not replace the assigned pilot or start the closed apps."
+    },
+    "recordRequirements": [
+      "Exact project/scene and role, actual surface/model and input IDs/hashes",
+      "Full original brief and scoped constraints; compare matched work only",
+      "Self-report vs direct execution vs courier/team assistance",
+      "Output path/hash or exact text; timestamps and rejected attempts",
+      "Quality, consistency, elapsed time, rework, observed usage/cost and tool limits",
+      "Reviewer identity/date, concrete defects, acceptance scope and next action"
+    ],
+    "assignments": []
+  },
+  "rolesBriefPath": "docs/notes/explorable_world/comfy/projects/collaborators/benchmark_roles_20261010/ROLES_AND_ROTATION_CURRENT.txt"
+}

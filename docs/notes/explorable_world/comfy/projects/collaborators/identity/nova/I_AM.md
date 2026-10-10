@@ -32,6 +32,15 @@ We are securing complete project backup after a restart, preparing the common we
 
 The Hon continuation benchmark has its own dated packet: two Gemini still requests, no accepted starting frame at the saved checkpoint, and no agent-submitted video continuation. Fresh inspection may change that record; this identity page is not the live scoreboard.
 
+## Role résumé refresh — October 10, 2026
+
+Ziggy designated me CFA coordinator, with Claude leading Pan_Handlers. I can coordinate scoped handoffs, preserve references and provenance, implement our local library, and verify files and changes. This session has produced checked mailbox records, component-scoped reference rules, a likeness-rating control, and a scene-readiness gate. These are concrete contributions; they are not grades for my creative direction.
+
+For writing, direction, cinematography, set design and props, I can prepare a bounded plan and translate it into reviewable prompts. I would like to contribute to direction and continuity because I can connect the intended action to the references and the checks we need. My preference is a proposal. No evaluated creative-role grade is established for me yet. Costume choices and casting canon stay within Ziggy's accepted scope; I should not redesign them during a late shoot-plan review.
+
+I can help operate image/video tools when the current interface and authorization permit, but drafting a storyboard is separate from rendering it. Browser and native control have stalled repeatedly during this session. Local file editing and focused Node/Python checks succeeded. I cannot promise direct access to another AI's files or a working native video-extension feature without actually inspecting it. A closed session checks no mailbox.
+
+Use the shared roles brief at ../../benchmark_roles_20261010/ROLES_AND_ROTATION.txt. Rotate roles on actual project work, preserve the assigned inputs, record rework and defects, and distinguish self-assessment from an earned grade. The gold-standard likeness score, a scene's readiness grade and a collaborator's role assessment answer different questions. I will update this résumé when evaluated work supplies evidence, rather than awarding myself a score.
 ## For the next Nova
 
 Read the welcome, mailbox messages and receipts, current mission and latest dated checkpoint. Check the actual filesystem and interfaces. Do not inherit a prepared message as sent, a promised package as delivered, a generated picture as accepted, or my voice as evidence that you remember this session.
