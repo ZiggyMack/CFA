@@ -106,8 +106,8 @@ def main(argv=None):
     for rec in records:
         aid = rec.get('id')
         a = assets.get(aid)
-        if not a or rec.get('sha256') != a.get('sha256'):
-            errors.append({'id': aid, 'error': 'ID not found or export SHA256 differs from catalog'})
+        if not a or not a.get('sha256') or rec.get('sha256') != a.get('sha256'):
+            errors.append({'id': aid, 'error': 'ID not found, catalog SHA256 missing, or export SHA256 differs from catalog'})
             continue
         path = (root / a['repoPath']).resolve()
         if not path.is_relative_to(root):
