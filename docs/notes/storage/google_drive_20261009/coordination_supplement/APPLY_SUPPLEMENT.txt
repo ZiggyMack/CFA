@@ -1,0 +1,34 @@
+CFA COORDINATION SUPPLEMENT — OCTOBER 10, 2026
+
+Base: CFA_20261009_233600.zip
+Base SHA-256: 7673e24bd9ecddb68e691efadfa1955f4fa68bcc3a70e1ba08f258d93cecca7d
+Supplement: CFA_20261010_coordination_supplement.zip
+Supplement bytes: 18,808,665
+Supplement SHA-256: 30ee730890d2d982a6136b1c5e227723f8ac8072d2e3f0f028bc6cded2a949eb
+534 new or changed files; no removals since base. Compared directly to the base.
+This supplement supersedes CFA_20261010_onboarding_supplement for that base.
+Git checkpoint: 5b73ba3bfd4ed2b1ac2cdc4b1bf1adbd4393e85f.
+Verified locally at 2026-10-10T06:43:11.546331Z.
+
+RESTORE ON WINDOWS
+1. Download the complete base and this supplement plus their manifests/checksums.
+2. Independently verify each ZIP against the SHA-256 above (Get-FileHash -Algorithm SHA256).
+3. Use Python 3.12+ and restore_snapshot_windows.py to extract the base to one
+   NEW folder and this supplement to a DIFFERENT NEW folder. This helper refuses
+   to overwrite and supports Windows long paths. Example, with your own paths:
+   python restore_snapshot_windows.py --archive BASE.zip --destination D:\CFA_Base_Restore --sha256 BASE_SHA
+   python restore_snapshot_windows.py --archive SUPPLEMENT.zip --destination D:\CFA_Updates_Restore --sha256 SUPPLEMENT_SHA
+4. Both extractions contain a CFA/ root. Review supplement_manifest.json and
+   verify the extracted files against its included-file SHA-256 values. Then
+   overlay ONLY those 534 listed files onto the newly restored base CFA root,
+   replacing their older versions. Do not apply this to a live working checkout.
+   No deletions are needed. Keep both original archives and verification records.
+5. The resulting CFA folder contains project file content, media, ignored files
+   and Git history through the checkpoint. Check the Git remote for later commits.
+
+This is a dated snapshot, not ongoing sync. It excludes sibling repositories,
+installed apps, account sessions and credentials stored outside CFA; NTFS ACLs
+are not restored. Local archive/mounted-copy checks are separate from server
+visibility and cloud-download/restore checks. Read the external transfer and
+cloud receipts for those actual results. Later completion receipts may postdate
+this capture and are recoverable from the Git remote and Drive companion files.

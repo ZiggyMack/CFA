@@ -94,3 +94,29 @@ file hashes, mounted-copy hashes and local restore probes remain valid.
 The final coordination supplement is still planned after the current source
 writers stop and the final Git checkpoint is pushed. See its external staged
 verification and mounted transfer receipts for its actual capture cutoff.
+FINAL COORDINATION CAPTURE AND CLOUD VISIBILITY — OCTOBER 10
+The final coordination supplement completed at 06:43:11Z: 534 added/changed
+files, 18,808,665 bytes, SHA-256
+30ee730890d2d982a6136b1c5e227723f8ac8072d2e3f0f028bc6cded2a949eb.
+Its source cutoff is pushed Git commit 5b73ba3bfd4ed2b1ac2cdc4b1bf1adbd4393e85f.
+It compares directly with the 233600 base and supersedes the first supplement
+for restoring that base. There are no removed files to apply. Together they
+capture all 49,032 regular CFA files at that cutoff, including media and files
+Git ignores. Every included file hash and the post-capture inventory passed.
+
+The mounted Drive copy and companion files matched SHA-256 at 06:49:19Z.
+Four newly restored files (Gemini's I_AM, provider scorecards, the current
+roles brief and library.js) also match the supplement manifest exactly.
+The final ZIP is independently visible in Stephen Wright's cloud Drive at:
+https://drive.google.com/drive/u/1/folders/1Ilpgyqnp6PLiGZVK2U-H0A0ZSZXBMX_x
+The cloud UI reports 17.9 MB. A browser download attempt stalled and did not
+return a completed file; cloud checksum and cloud restore remain unverified.
+The 8 GB base archive is also visible online, as recorded earlier. See
+coordination_supplement/ and coordination_cloud_visible_20261010.jpg.
+
+These completion receipts and any collaborator mail arriving after 06:43:11Z
+postdate the capture. They are preserved separately through Git and Drive
+companions; they are not claimed inside the immutable final ZIP. Ongoing
+folder sync is still not configured. The restore scope limitations above
+remain applicable: sibling repos, installed apps, sessions and external
+credentials require their own backup/reinstallation process.
