@@ -1,0 +1,14 @@
+DRIVE SPACE CHECK - OCTOBER 9, 2026
+
+Completed: offloaded 505 inactive Visual Studio installer payload files (2,281,232,236 bytes / 2.12 GiB) from C:/Users/Stephen/AppData/Local/Temp/stbc3hr1 to D:/appdata/Offloaded_C_Temp/2026-10-09/stbc3hr1. Every archive file matched SHA-256; source hashes were checked again before removing only that exact C: folder. Original archive paths and hashes are in installer_offload_receipt.json. This is an archive move, not deletion of the only copy.
+
+C: free immediately after: 4640927744 bytes (about 4.3 GiB). D: remains about 423 GiB free. Free space changes while applications are running.
+
+Other candidates identified, unchanged:
+- Quicken BACKUP: 1,308,185,631 bytes (1.22 GiB), plus a 53,219,328-byte old Desktop QDF backup. Archive-only candidates; active financial data was not opened or moved.
+- Lightroom CC: 4,450,953,803 bytes (4.15 GiB), mostly 2560 proxies. Use app-aware storage/cache relocation.
+- Codex sessions: 2,833,086,841 bytes (2.64 GiB), including this active conversation. Not relocated during the session.
+- Active VS Code update installer in Temp: about 252 MB, left in place because its installer process is running.
+- Bundled Codex runtime: 1.28 GiB, actively used; unchanged.
+
+Coverage: known user folders and selected cache/app locations, not all of C:. Logical file sizes; junctions excluded. CFA production assets and compatibility tests are already on D:.

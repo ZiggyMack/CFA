@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-08",
+  "updated": "2026-10-09",
   "media": [
     {
       "id": "HD-AUDIO-REPLACE-V001",
@@ -121,6 +121,18 @@
   ],
   "documents": [
     {
+      "path": "docs/notes/explorable_world/comfy/workflows/seedance_2_5_20261009.README.txt",
+      "title": "Seedance 2.5 · shared first-frame recipe candidate"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/seedance_2_5_20261009.discovery.json",
+      "title": "Seedance 2.5 · saved-source discovery and pending preflight"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/seedance_2_5_first_frame.official.json",
+      "title": "Seedance 2.5 · unchanged official example graph"
+    },
+    {
       "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_audio_replace_v001.README.md",
       "title": "Soundtrack replacement · measured result"
     },
@@ -163,9 +175,41 @@
     {
       "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_lipsync_v001.editor.json",
       "title": "Lip-sync candidate · saved editor"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/likeness_intake_20261009/README.txt",
+      "title": "New likeness references · roles and limitations"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/likeness_intake_20261009/intake.json",
+      "title": "New likeness references · verified intake"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/grok_viseme_return_20261009/visual_review.txt",
+      "title": "Grok mouth set · independent visual review"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/grok_viseme_return_20261009/visual_review.json",
+      "title": "Grok mouth set · exact findings and hashes"
     }
   ],
   "workflows": [
+    {
+      "id": "comfy-seedance25-first-frame",
+      "provider": "ComfyUI",
+      "project": "shared",
+      "title": "Seedance 2.5 · animate a shared starting frame",
+      "status": "Official graph saved and reviewed · Cloud preflight pending",
+      "summary": "Reusable hosted-model candidate for either project. The local official graph is unchanged; a first-frame-only eight-second / 720p working copy is planned. No Cloud validation, compilation, execution or accepted result exists.",
+      "nextAction": "Select the common frame, prepare a separate copy without the optional last frame, then verify live Cloud node schema, compiled inputs and credit quote. Deferred from the opening benchmark's initial run counts. Extension returns only the new segment, which must be assembled with its retained parent.",
+      "sourceAssetIDs": [],
+      "outputAssetIDs": [],
+      "documentAssetIDs": [
+        "hon:doc:docs/notes/explorable_world/comfy/workflows/seedance_2_5_20261009.README.txt",
+        "hon:doc:docs/notes/explorable_world/comfy/workflows/seedance_2_5_20261009.discovery.json",
+        "hon:doc:docs/notes/explorable_world/comfy/workflows/seedance_2_5_first_frame.official.json"
+      ]
+    },
     {
       "id": "comfy-soundtrack",
       "provider": "ComfyUI",
@@ -264,6 +308,46 @@
         "hon:doc:docs/notes/explorable_world/comfy/workflows/hon_dolo_lipsync_v001.preflight.json",
         "hon:doc:docs/notes/explorable_world/comfy/workflows/hon_dolo_lipsync_v001.editor.json"
       ]
+    },
+    {
+      "id": "comfy-mouth-reference-review",
+      "provider": "ComfyUI",
+      "project": "hon",
+      "title": "Mouth continuity · latest revisions and twelve-shape history",
+      "status": "Four-gold rule confirmed · new head/mouth library awaiting intake",
+      "summary": "User confirmation establishes gold laterals and short gold canines, four upper gold caps total, with natural central incisors and lower silver. Earlier twelve-shape set and excess-gold preview remain history; the new library still needs receipt/review and motion testing.",
+      "nextAction": "Receive the new macros/head views, review exact tooth layout and difficult articulations, then select corrected compatible inputs for the existing bounded motion proof. Do not use the whole library as an assumed model input.",
+      "sourceAssetIDs": [
+        "HD-DROP-ef5d59a6402e",
+        "HD-MOUTH-UPDATE-20261009-01",
+        "HD-MOUTH-UPDATE-20261009-02"
+      ],
+      "outputAssetIDs": [
+        "HD-VIS-5b76b446306e",
+        "HD-VIS-b35f9a0dc328",
+        "HD-VIS-11bafdd2be5a",
+        "HD-VIS-bb94cfd4b528",
+        "HD-VIS-8fd90be71d79",
+        "HD-VIS-860c70ea1081",
+        "HD-VIS-9168d102c9f4",
+        "HD-VIS-88d5651aedcf",
+        "HD-VIS-305909fd6697",
+        "HD-VIS-074dcb2fe720",
+        "HD-VIS-6674cb3c9b70",
+        "HD-VIS-397e5bd66681",
+        "HD-VIS-41cf41b5b24e"
+      ],
+      "documentAssetIDs": [
+        "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/grok_viseme_return_20261009/visual_review.txt",
+        "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/grok_viseme_return_20261009/visual_review.json",
+        "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/user_mouth_update_20261009/UPDATE_NOTES.txt",
+        "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/user_mouth_update_20261009/intake.json"
+      ],
+      "latestReferenceAssetIDs": [
+        "HD-MOUTH-UPDATE-20261009-01",
+        "HD-MOUTH-UPDATE-20261009-02"
+      ],
+      "dentalDecisionStatus": "resolved_four_upper_gold"
     }
   ]
 }

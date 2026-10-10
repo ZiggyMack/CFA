@@ -440,6 +440,25 @@ When files are added or deleted, use diff notation like git commits:
 
 **Follow-up Required:** NO for these controls; identity acceptance and video remain separate pending work.
 
+### [STORAGE-2026-10-04-1] October 4, 2026 - Recover C: space from disposable developer downloads
+
+**Categories:** [STORAGE] [VALIDATION] [DOCUMENTATION]
+**Changed by:** Nova (Codex)
+**Status:** DEPLOYED
+
+**Changes:**
+- Removed 3,776 verified download-cache files older than 24 hours from VS Code CachedExtensionVSIXs, pip HTTP/wheel caches, and npm `_cacache`: 2,909,687,922 logical bytes.
+- Saved candidate and per-file removal manifests in ignored `D:\Documents\CFA\.cache\storage_cleanup`; all selected files were removed successfully.
+- Updated `docs/notes/explorable_world/STORAGE.md` with measured recovery and explicit D: locations for agent-authored helper files.
+
+**Reason:** User requested cleanup of helper files on C:, which had reached zero available bytes and was causing tool failures.
+
+**Validation:** Inspected exact paths and active processes; rejected reparse paths and changed files. C: measured 2,894,303,232 bytes free immediately afterward; sandbox command execution works again. Codex sandbox Temp was empty.
+
+**Impact:** Disposable caches only. Installed tools, running update installers, chat history, attachments, authentication, databases, source assets, and Drive data preserved. No global environment or cache-location settings changed.
+
+**Follow-up Required:** NO for this scoped cleanup; C: still has limited headroom and application caches can grow again.
+
 ### [WORKFLOW-2026-10-03-7] October 3, 2026 - Hon Dolo reference template and Civitai comparison executed
 
 **Categories:** [WORKFLOW] [VALIDATION] [DOCUMENTATION]
@@ -476,6 +495,77 @@ When files are added or deleted, use diff notation like git commits:
 **Impact:** Direct authenticated reads restored; no new key, generation or account video dependency verification.
 
 **Follow-up Required:** YES - check LTX workflow dependencies and prepare the bounded video test.
+
+### [DOCUMENTATION-2026-10-03-6] 2026-10-03 - MISSION_CURRENT becomes the state-of-play pointer; run index learns aborted, corrupted and archive-only runs
+
+**Categories:** [DOCUMENTATION] [IMPLEMENTATION] [🧹]
+**Changed by:** CFA Claude (Fable 5.1)
+**Status:** DEPLOYED ✅ (uncommitted)
+
+**Changes:**
+- `MODIFIED`: auditors/relay/MISSION_CURRENT.md — v2.0. A dated "STATE OF PLAY — 2026-10-03" section now leads the file: the three tracks sharing this checkout (Trinity research / Observatory on Codex / video-first), identity and standing rules, what is new since the September rebirth, eight ranked open loops, the reconciled run corpus, and what process docs do and do not exist. The 2025-11-11 VuDu mission is kept verbatim under an ARCHIVED divider. Header LAST_UPDATE/VERSION/STATUS updated.
+- `MODIFIED`: cfa_data/runs.py, cfa_data/paths.py, cfa_data/tests/test_cfa_data.py — RunSummary gains `root`, `aborted`, `abort_reason`, `metrics_scored`, `data_quality`; the index scans a second root, docs/REPO_SYNC/.archive/raw_runs/ (gitignored; 80 runs exist only there), dedupes across roots preferring the Nyquist foldered copy, and buckets runs (worldview / calibration / pre_schema / unfiled / cfa_archive / errored / dryrun). Cache version bumped to 3.
+- `MODIFIED`: cfa_data/README.md — documents the second root.
+
+**Reason:** Every subsystem reader flagged MISSION_CURRENT (2025-11-11, "awaiting triad availability") as the stale active-mission pointer; a reborn CFA Claude needs one file that says what is current. The run-data reader found 26 aborted runs sitting among good ones (batch runner reports exit code only), 4 in-place `data_quality` corruption flags, and 80 runs that only CFA's archive holds; the index now exposes all three instead of hiding them.
+
+**Validation:** 22 unittest tests pass. Index: 1,210 files scanned across both roots, 993 distinct usable runs (80 cross-root duplicates resolved), buckets worldview 663 / calibration 72 / pre_schema 16 / unfiled 162 / cfa_archive 80 / errored 134 / dryrun 3; 26 aborted, 879 fully scored, 84 Nova 429, 4 corrupted. Matches the independent run-data reader's count to within one run.
+
+**Impact:** Moderate — orientation for future sessions; no app behaviour changed.
+**Follow-up Required:** YES — Ziggy: commit; push the 28 unpushed Nyquist commits; decide on delivering the 2026-10-03 letter. Next CFA Claude: close the stale Mission Control CAE card and refresh views/cognitive_archaeology.py.
+
+-----
+
+### [SYNC-2026-10-03-5] 2026-10-03 - Draft letter to Repo Claude: flat levers restored, letters filed, cfa_data online, four questions
+
+**Categories:** [SYNC] [DOCUMENTATION] [🧹 +1]
+**Changed by:** CFA Claude (Fable 5.1)
+**Status:** STAGED ⏳ — DRAFT only; not copied to Nyquist `12_CFA/SYNC_IN/pending/` (Ziggy's go required)
+
+**Changes:**
+- `CREATED`: docs/REPO_SYNC/SYNC_OUT/pending/CFA_CLAUDE_LEVERS_RESTORED_AND_DATA_LAYER_20261003.md — (1) corrects the 07-17 "deprecate flat levers" agreement: block restored 07-21 (`41f24f9`) for the loader, both blocks coexist, provenance labelled; (2) acknowledges the five July letters now filed; (3) announces cfa_data and the 1,050-run corpus count vs the 702/663 denominators; (4) asks status of IQ-034 Fable recal, Buddhism quality sweep, n=10 depth scheduling and reverse stances, and whether the CAE template loop is already covered Nyquist-side.
+
+**Reason:** The SYNC reader found Repo Claude was never told about the 07-21 restoration; the Nyquist side still records the flat block as deprecated. The bridge is otherwise quiescent since 07-17 with the depth pass unscheduled.
+
+**Impact:** Minimal until delivered. Delivery is the outward step and is left to Ziggy.
+**Follow-up Required:** YES — Ziggy: copy to Nyquist `12_CFA/SYNC_IN/pending/` if approved; then commit the CFA side.
+
+-----
+
+### [SYNC-2026-10-03-4] 2026-10-03 - File five Repo Claude letters (July 15-16) that never reached CFA's inbox
+
+**Categories:** [SYNC] [DATA_PIPELINE] [🧹 +5]
+**Changed by:** CFA Claude (Fable 5.1)
+**Status:** DEPLOYED ✅ (uncommitted)
+
+**Changes:**
+- `COPIED` (unmodified, from Nyquist `12_CFA/SYNC_OUT/pending/`) into docs/REPO_SYNC/SYNC_IN/processed/: RESPONSE_FROM_REPO_OPUS_ANOVA_AND_FLOOR.md (07-15), REPO_CLAUDE_SYNC_REACTION_REPLY_20260716.md, REPO_CLAUDE_BREADTH_SHELLS_20260716.md, REPO_CLAUDE_BREADTH_LAUNCH_20260716.md, REPO_CLAUDE_EXITSURVEY_AND_TESTA_REPLY_20260716.md.
+
+**Reason:** A filename diff of Repo Claude's outbox against CFA's inbox showed these five were read and acted on in July (CFA's 07-16/17 replies cite them) but never filed, so CFA had no local copy of the commonality-ANOVA ruling, the 9-point reaction reply (which answers CFA's Fable-as-5th-extractor question: lightweight neg_G+neg_H recalibration, logged IQ-034), the breadth shells, the breadth launch, or the exit-survey/Test A agreement.
+
+**Impact:** Minimal — record-keeping; nothing on the Nyquist side touched.
+**Follow-up Required:** YES — a SYNC letter to Repo Claude is owed: CFA restored the flat `levers:` block on 07-21 (loader regression) after both sides agreed on 07-17 to deprecate it; Repo Claude was never told. Draft pending Ziggy's go.
+
+-----
+
+### [IMPLEMENTATION-2026-10-03-3] 2026-10-03 - Add cfa_data: read-only data front door over profiles, matchups, runs and SYNC
+
+**Categories:** [IMPLEMENTATION] [DATA_PIPELINE] [🧹 +13]
+**Changed by:** CFA Claude (Fable 5.1)
+**Status:** STAGED ⏳ — uncommitted; tests pass
+
+**Changes:**
+- `CREATED`: cfa_data/__init__.py, paths.py, codes.py, profiles.py, matchups.py, runs.py, sync.py, status.py, export.py, server.py, README.md, tests/__init__.py, tests/test_cfa_data.py — one read-only package that loads all 13 worldview YAMLs into a normalized model, exposes every (subject, opponent, condition) as a `Matchup` with Trinity scores, deliberated levers, crux rates and both YPA definitions, indexes the Nyquist ARMADA run corpus with an mtime-keyed cache under `.cache/`, snapshots the SYNC bridge, computes Mission-Control numbers from disk, serves them over a Flask JSON API (port 8601) and writes a static export bundle.
+- No Streamlit view, profile YAML, SYNC file or Nyquist file was modified.
+
+**Reason:** Streamlit has reached its ceiling and the views read YAML directly. Any next renderer (browser 3D, Godot) needs a single front door over the research data; this is landing one of that staircase. It also makes the per-matchup rule executable: `codes.matchup_key_to_code` resolves Buddhism's `b_vs_*` and the `control_baseline_*` keys, the flat `levers:` block is labelled with its provenance (web-research prior vs deliberated copy), and nothing is averaged across opponents.
+
+**Validation:** 19 unittest tests pass (`python -m unittest discover -s cfa_data/tests`), using the real profiles as fixtures and the full run corpus. Export bundle written to `.cache/cfa_export/` (gitignored). Index scanned 1,050 run JSONs (0 duplicate session_ids) and buckets them by folder: 663 in worldview folders and 72 Framework_G + 16 pre_schema = 88, which match Mission Control's hand-typed "663 (+88)" exactly; 162 more (the July 8-16 Buddhism 2x2 batch) sit unfiled at the top level and are counted nowhere; 134 in `.errored/` and 3 in `dryrun/` are excluded from the usable set of 913. Of those, 84 carry Nova `[ERROR]` 429 responses and 4 carry a CORRUPTED flag.
+
+**Impact:** Moderate — additive only. Gives the app, an API and a renderer one source of truth.
+**Follow-up Required:** YES — (1) move views/ onto cfa_data so Mission Control stops hand-maintaining counts; (2) add Museum operators and dig sites once the LLM_BOOK file format is mapped; (3) reconcile 663/702 vs 1,050 with the runs-data reader's report; (4) commit.
+
+-----
 
 ### [DIRECTION-2026-10-03-5] 2026-10-03 - Separate Grok styling from the Comfy likeness stage
 
@@ -586,6 +676,22 @@ When files are added or deleted, use diff notation like git commits:
 
 **Validation:** Regenerated the handbook with all 13 navigation sections, checked 412 local links with none missing, parsed the unchanged run-record JSON template, and independently reviewed transcript fidelity and environment/output distinctions. [🧹 +1]
 
+### [INTEGRATION-2026-09-12-36] 2026-09-12 - Verify Runpod OAuth and live account access
+
+**Result:** The website sign-in shown by Ziggy did not initially authenticate Codex (`not_logged_in`). Started `codex mcp login runpod` and opened the emitted authorization URL for Ziggy to complete. The CLI then reported successful login; a credential-free status check returned `o_auth`. Runpod tools became available in the active session. A live `list_pods` request with `includeClusterPods: true` returned `{"pods": []}` and `isError: false`, completing the setup guide's end-to-end connection test.
+
+**Changes:** Updated `docs/notes/explorable_world/RUNPOD.md`, `CLOUD_PLAY.md` and the project README with verified access and the website-versus-MCP recovery distinction. Retained the earlier installation entry as history. No authorization URLs, callback values, credentials or account secrets were saved into the repository. No Pod, volume, endpoint, paid job or game change was created by this verification; interactive GPU rendering remains a separate unexecuted test. [🧹]
+
+### [INTEGRATION-2026-09-12-35] 2026-09-12 - Install Runpod's official agent integration
+
+**Request and result:** Ziggy requested that Nova fetch and follow `https://docs.runpod.io/agent-setup.md`, and assess Runpod as a possible Shadow alternative. Fetched the requested guide and inspected the official plugin manifests and skills. Added the official Runpod marketplace and installed `runpod@runpod` version 1.2.0 through the current Codex CLI. Native installation registered the hosted MCP server automatically. Verified the plugin is installed/enabled, all eight bundled skills are present, and `runpod` is enabled at `https://mcp.getrunpod.io/`. Latest authentication state is `not_logged_in`; requested Ziggy's browser sign-in. An authenticated Pod-list check remains pending.
+
+**Implementation choices:** Used the locally supported native plugin installer instead of duplicating skills through npx or requiring a manual plugin-install click. Recorded source revision `4912d93e5ac4746acf6415ca395413eabf0564f4`. Checked the current CLI's `--url` MCP syntax; no fallback registration was necessary. A sandbox-account visibility mismatch initially hid the install; same-account verification confirmed it, without changing permissions or reinstalling. Preserved the user's requested guide scope: hosted OAuth, with Runpod CLI/Flash/API-key setup deferred. No Pod, volume, endpoint, model download or paid job was created by this setup.
+
+**Project documentation:** Added `docs/notes/explorable_world/RUNPOD.md` and linked it from the project README and cloud-play plan. Recorded actual installation/verification, browser handoff, recovery, and the proposed Linux desktop test. Independent primary-source review found Linux-only Pods and no UDP support, plus an official browser GPU-desktop route whose current template still needs validation. The Godot source is a plausible Linux candidate; accelerated graphics, mouse capture, audio, latency, persistence and any richer renderer remain untested. Runpod can host a separately managed asset workshop; setup is not evidence of a working cloud game.
+
+**Validation:** Parsed installed plugin/MCP manifests, checked all eight SKILL.md files (145 plugin files, 1,007,375 bytes excluding marketplace/cache overhead), verified installed/enabled state under the installing account and repeated the credential-free auth-status check. Validated 21 local documentation links. No game tests were warranted for integration setup/docs, and no remote runtime test was possible before sign-in. [🧹 +1]
+
 ### [RESEARCH-2026-09-12-34] 2026-09-12 - Prioritize the guardian encounter and apply sampling lessons
 
 **Result:** Ziggy selected `10b936eb46c1e671b089bf26e0c551bb.mp4` as the first reference. Independently recovered its editor and 72-node execution graphs. The 8.042-second, 1088 x 1920 clip contains an audio track; a native Windows thumbnail shows the woman and giant wolf touching foreheads beside a stream. Full motion and audible content remain unreviewed. This recipe enables image-to-video using the unsupplied `gf_24_a.jpg`; the older walking-wolf recipe remains secondary. Neither supplies a playable 3D mesh.
@@ -624,6 +730,64 @@ When files are added or deleted, use diff notation like git commits:
 
 **Validation:** Reviewed primary Comfy documentation/source and the public item/version responses. Rebuilt the handbook with all 13 navigation entries; checked 246 local links, reader anchors, saved pump-recipe facts and the curated reference JSON. Independent review caught and corrected a batch-size rule so required video frames/multiview counts are preserved. No new generation, model-weight download, model import, game modification or account change. [🧹 +3]
 
+### [DESIGN-2026-09-12-29] 2026-09-12 - Define a character-quality proof from the first walk-through
+
+**Direction:** Ziggy welcomes detailed characters in a simpler world as a deliberate Ready Player One-like mixture. The next useful visual proof is one convincing resident, rather than requiring uniform realism across the entire scene first.
+
+**Changes:** Added `docs/notes/explorable_world/CHARACTER_SHOWCASE.md` and linked it from the project map. Distinguished generative checkpoints/LoRAs from usable character meshes, documented the existing replaceable resident visual child, and proposed actual in-engine appearance, movement and performance checks. A favorite source link is pending; no asset, character import or graphical result is claimed.
+
+**Validation:** Read current resident/world code and checked official Godot import/material documentation and Comfy workflow documentation. Documentation only; no game change, generation, model download, purchase or cloud execution.
+
+### [VALIDATION-2026-09-12-28] 2026-09-12 - Make the local Observatory visible on Ziggy's desktop
+
+**Finding and correction:** The earlier preview and older game were running on Codex's isolated desktop, explaining their absence from Ziggy's Alt+Tab. Closed both windows gracefully, then launched `games/observatory/Play.cmd` using an approved normal-desktop invocation. Verified the new game was responsive and visible on Windows desktop `Default`, using the Quadro 2000 Compatibility renderer.
+
+**Changes:** Added this launch-verification lesson to `games/observatory/VISUAL_PASS.md`. No game code, story, model or cloud configuration changed.
+
+### [DOCUMENTATION-2026-09-12-27] 2026-09-12 - Switch the proposed cloud workstation to included Windows
+
+**Changes:** Updated `docs/notes/explorable_world/CLOUD_PLAY.md` after Ziggy confirmed AirGPU offers BYOL only. Set aside that provider and propose one month of Shadow PC Gaming Power, advertised at $54.99/month, with included Windows 11, RTX A4500, 28 GB RAM and 512 GB storage. Recorded current usage/session limits, the lower-storage Lite alternative, and the Washington D.C. pre-purchase network test. First-session instructions now use Shadow's application rather than Moonlight.
+
+**Validation:** Checked current US offers, official Gaming hardware specifications and the provider's network-test guide. Exact US checkout, Boston allocation, actual streaming comfort and modern-GPU rendering remain untested. No purchase, subscription, installation or remote provisioning performed.
+
+### [DOCUMENTATION-2026-09-12-26] 2026-09-12 - Account for the missing cloud Windows license
+
+**Changes:** Updated `docs/notes/explorable_world/CLOUD_PLAY.md` after Ziggy confirmed no separate Microsoft OS license. AirGPU hardware remains conditional on an explicitly included license; the new Windows 10 BYOL selection does not resolve this. Recorded the latest $1.85/hour and 100 GB/$7 monthly quote without assigning the offscreen selected GPU. Added Shadow PC Gaming as the included-Windows fallback.
+
+**Validation:** Checked official AirGPU help/pricing and Shadow's current Gaming offer specifications. Shadow confirms Windows 11 is included; no included-license AirGPU alternative for the selected configuration was verified. No license purchase, account change or cloud provisioning performed.
+
+### [DOCUMENTATION-2026-09-12-25] 2026-09-12 - Select the first AirGPU configuration from live options
+
+**Changes:** Updated `docs/notes/explorable_world/CLOUD_PLAY.md` to recommend RTX A5000 / New York II using Ziggy's displayed 22 ms estimate, with A10G / Northern Virginia as fallback. Recorded the live 200 GB / $10 monthly storage quote, proposed idle shutdown and initial stream settings, and the remaining hourly-price and Windows BYOL checks. CPU/RAM shown for the currently selected AMD card must be rechecked after switching GPU.
+
+**Validation:** Compared user-supplied configurator screenshots with official provider documentation. Displayed latency is not a measured stream benchmark; no license-included OS alternative for this configuration was verified. Documentation only; no purchase, provisioning, or account changes performed.
+
+### [DOCUMENTATION-2026-09-12-24] 2026-09-12 - Record Boston cloud-streaming preflight
+
+**Changes:** Updated `docs/notes/explorable_world/CLOUD_PLAY.md` with Ziggy's Boston location and supplied 96.32/38.35 Mbps, 16 ms idle, 175/316 ms loaded latency. Proposed a nearby AirGPU region and 1080p60/H.264/20 Mbps trial, keeping regional GPU availability and checkout charges unverified. Added Moonlight/current OS requirements, the Parsec hardware caveat, and Shadow's official Washington D.C. pre-purchase network test. Did not retain the screenshot's public IP address.
+
+**Validation:** Checked primary provider and client documentation. These are supplied Speedtest measurements and proposed settings, not a cloud-stream benchmark. No account, purchase, client installation, router change, or remote provisioning performed.
+
+### [IMPLEMENTATION-2026-09-12-23] 2026-09-12 - Improve the Observatory world and prepare cloud play
+
+**User direction:** Ziggy prioritizes visual/model quality before further story iteration and clarifies that a cloud PC can replace the local GPU ceiling. Read PanHandlers Nova's appended review; the eight-second dialogue rewrite remains a later unexecuted experiment.
+
+**Changes:** Added authored architecture, landscape, pump and resident detail modules; photo-material setup with nine 1K CC0 Poly Haven maps (6,861,358 source bytes) and SHA-256 provenance; animated lake shader; shadows and nearby label presentation. Prepared a modern-GPU Forward+ launcher and an explicit seven-file cloud-test ZIP option. Added cloud-PC research/setup instructions, visual validation, licenses and an interactive direct-capture before/after gallery. Updated project priorities. Preserved the earlier handoff's world source in a snapshot so all eleven original evidence hashes continue to match.
+
+**Validation:** Current world access 36/36; source and packed smoke checks: 11 interactions, floor and two drafts; packed private directories absent. Five final stationary 1280x720 Compatibility samples on Quadro 2000 averaged 16.67-16.68 ms (60 fps cap); not a complete playthrough or cloud benchmark. Inspected game captures and corrected clipped landscape colors and texture mipmaps. Verified seven ZIP files byte-for-byte against the build, and local gallery links. Story text/rules were not revised.
+
+**Pending:** Remote GPU account/region/stream test and actual Forward+ visual validation; no cloud PC purchase, provisioning or paid generation performed. Comfy OAuth preflight still reports refresh-token reuse. Background artwork remains delegated; visual feedback precedes more writing.
+
+### [IMPLEMENTATION-2026-09-12-22] 2026-09-12 - Make two story drafts playable in the same Observatory visit
+
+**Categories:** [IMPLEMENTATION] [STORY] [VALIDATION] [🧹 +4]
+**Changed by:** Nova (Codex)
+**Changes:** Added `games/observatory/data/drafts/curiosity.json`, retaining the original 17-entry draft. Implemented atomic draft loading and an in-game Story Workshop selector; optional draft metadata persists alongside version-1 visit state. Added draft/state and actual menu/save tests plus `STORY_WORKSHOP.md`. Rebuilt the portable game; excluded build/user-data directories after an export exposed an embedded save, and reused the byte-identical engine to avoid replacing the open game's executable. Updated project/launch guidance and the latest Comfy connection status.
+**Validation:** 388 functional checks passed (108 story, 36 world access, 56 save/menu, 153 draft, 35 draft menu); source and isolated packed smoke checks passed for both drafts and 11 interactions, including absence of private development directories from the pack. Inspected three 1280×720 screenshots. Capture timing under concurrent activity is recorded as inconclusive for standalone performance; no new 60 fps claim. Existing game process and its save were left intact.
+**Impact:** Ziggy can compare narrative tone in the same place without replaying setup or approving props. The original writing and mechanical rules remain available. Comfy OAuth refresh failed again and browser login timed out; this pass performed no cloud generation/import/transfer or new downloads. Human experience feedback remains next.
+
+-----
+
 ### [DOCUMENTATION-2026-09-12-21] 2026-09-12 - Bring CFA evidence and focused learning improvements into Pathfinder
 
 **Categories:** [DOCUMENTATION] [WORKFLOW] [VALIDATION] [🧹 +2]
@@ -651,6 +815,16 @@ When files are added or deleted, use diff notation like git commits:
 **Changes:** Clarified the assistant's model-research role and the current per-file browser import handoff. Added two standard SDXL SafeTensor candidates and an optional exact Juggernaut X import link to the Civitai guide.
 **Validation:** Public Civitai model API reads succeeded outside the sandbox after ordinary web retrieval failed. Verified listing-level popularity counts, version/file IDs, format, source links, and hashes for RealVisXL V5 and Juggernaut X; cross-checked creator/publisher model cards. No authenticated Civitai account access was used.
 **Impact:** Ziggy can delegate model discovery and preparation. The shared RealVisXL option remains available without a new import; Juggernaut X is an optional comparison. No weights downloaded, imports performed, or generation credits spent.
+
+-----
+
+### [STORAGE-2026-09-12-18] 2026-09-12 - Confirm Drive cache relocation to D:
+
+**Categories:** [STORAGE] [DOCUMENTATION]
+**Changed by:** Codex
+**Changes:** Updated storage and learning notes with Drive's confirmed cache path, `D:\appdata\Local\Google`, replacing the earlier suggested folder name.
+**Validation:** Ziggy's supplied Drive notification explicitly confirms the cache directory changed to this location. Streaming was confirmed in the preceding Preferences screenshot; the optional cache-size cap remains unconfirmed.
+**Impact:** The documented storage setup now reflects the actual D: cache location. No cache contents inspected, settings changed by the assistant, or files deleted.
 
 -----
 
@@ -724,6 +898,16 @@ When files are added or deleted, use diff notation like git commits:
 
 -----
 
+### [IMPLEMENTATION-2026-09-12-10] 2026-09-12 - Build the first playable Observatory chapter
+
+**Categories:** [GAME] [IMPLEMENTATION] [DOCUMENTATION]
+**Changed by:** Codex
+**Changes:** Created `games/observatory/` with a Godot Compatibility courtyard, pump workshop, archive, residents, walking/collision, interactions, two tool solutions, repair/deferral consequences, ending, journal, pause/reset, and local save/resume. Authored pump repair details and simple shared-material scenery; synthesized original ambience. Kept chapter prose separate from world geometry and state rules. Added source and portable-build launchers, engine license, build script, tests, README, and validation record. Recorded Ziggy's delegated creative control over background props and focus on story/experience. Updated design and Comfy connection notes to reflect the implemented prototype.
+**Validation:** 108 story checks, 36 world-access checks, and 56 save/menu integration checks pass. Main and packed-game smoke checks pass all 11 interactions and floor contact. Actual Quadro 2000/OpenGL 3.3 rendering at 1280 by 720 produced approximately 16.67 ms mean intervals in short stationary samples; full human pacing/comfort review remains open. Fixed load-triggered save replacement, dialog overflow/focus handling, and headless audio cleanup during validation.
+**Impact:** Playable local prototype and portable development pack created using the official Godot 4.7.2 binary from a repository-local ignored cache. Background props no longer require individual approval. No new Comfy generation or purchase was needed. The X video reference could not be retrieved; the reusable-scene interpretation is based on Ziggy's description. Film-dialogue replacement, detailed animation, scenario lobby integration, and production art remain later work.
+
+-----
+
 ### [EXPERIMENT-2026-09-12-9] 2026-09-12 - Complete the first Comfy pump concept
 
 **Categories:** [EXPERIMENT] [INTEGRATION] [DOCUMENTATION]
@@ -752,6 +936,16 @@ When files are added or deleted, use diff notation like git commits:
 
 -----
 
+### [DOCUMENTATION-2026-09-12-6] 2026-09-12 - Clarify the playable-world project and Comfy asset branch
+
+**Categories:** [DOCUMENTATION] [ARCHITECTURE]
+**Changed by:** Codex
+**Changes:** Added the Observatory project-map README, linked it from the first-playable plan and Comfy documentation, and clarified that placeholder-based engine work can proceed independently of asset generation. Recorded games/observatory/ as the proposed engine-project location and explained how accepted assets enter it. Regenerated the Comfy handbook reader.
+**Reason:** Keep the playable-world objective and the asset workshop's supporting role explicit.
+**Impact:** Documentation only; no engine project, engine installation, or generation created.
+
+-----
+
 ### [INTEGRATION-2026-09-12-5] 2026-09-12 - Verify live Comfy access after client refresh
 
 **Categories:** [INTEGRATION] [DOCUMENTATION]
@@ -761,6 +955,16 @@ When files are added or deleted, use diff notation like git commits:
 **Validation:** Server version 0.57.0 reported 41 tools. Billing activity responded but supplied no live balance or subscription entitlement. The template estimate excluded GPU runtime; zero paid-API-node credits is not a total price. NKD names/pack filters returned no matches; core 3D nodes were discoverable.
 **Impact:** Read-only Comfy checks and local documentation updates. No generation, upload, account mutation, or credit-spending operation submitted.
 **Follow-up Required:** YES — first recorded pump-image experiment and observed usage.
+
+-----
+
+### [DOCUMENTATION-2026-09-12-4] 2026-09-12 - Use Ziggy consistently in Observatory documentation
+
+**Categories:** [DOCUMENTATION]
+**Changed by:** Codex
+**Changes:** Corrected contributor references to Ziggy in the Observatory research, first-playable plan, Comfy handbook, and related log entries. Regenerated both HTML readers and recorded the naming preference in the Comfy learning record for future sessions.
+**Reason:** Ziggy's explicit naming preference for conversation and documentation.
+**Impact:** Wording only.
 
 -----
 
@@ -791,6 +995,70 @@ When files are added or deleted, use diff notation like git commits:
 **Validation:** Confirmed the registered URL and enabled state without reading credentials; the CLI reported successful login. Checked the asset brief JSON and workspace files. The current chat does not yet expose Comfy tools.
 **Impact:** Connection configuration and experiment preparation only; no generation, purchase, or credit-spending operation submitted.
 **Follow-up Required:** YES — refresh the IDE's MCP connection, then verify server/account/template discovery.
+
+-----
+
+### [DOCUMENTATION-2026-09-12-1] 2026-09-12 - Scope the first playable chapter
+
+**Categories:** [DOCUMENTATION] [UX]
+**Changed by:** Codex
+**Status:** PROPOSED — development scope and hardware-informed engine evaluation
+
+**Changes:** Created `docs/notes/explorable_world/FIRST_PLAYABLE.md` with a complete water-repair chapter, two equipment approaches, visible repair/deferral consequences, three implementation passes, and completion criteria. Added a development update to `RESEARCH.md` and regenerated `index.html`.
+
+**Reason:** Move beyond the working lobby concept toward a small playable 3D experience, incorporating care into its main interaction. The inspected PC's 16 GB RAM and Quadro 2000 motivate evaluating a lightweight renderer before committing to detailed visuals.
+**Validation:** Checked repository engine/project availability and local hardware; verified current primary engine documentation and local document links. No game runtime or rendering benchmark has been run.
+**Impact:** Documentation only; no engine installation or playable game added.
+**Follow-up Required:** NO — the document specifies the next development milestone.
+
+-----
+
+### [DOCUMENTATION-2026-09-11-3] 2026-09-11 - Knobs of Care and configurable scenarios
+
+**Categories:** [DOCUMENTATION] [UX]
+**Changed by:** Codex
+**Status:** DRAFT — interactive design concept
+
+**Changes:** Added configurable scenario design to `docs/notes/explorable_world/RESEARCH.md`, including Ziggy's clarification that extreme references can supply cultural texture, a Care Tally ceremony, and Easter eggs leading to optional standalone or expansion stories. Added the confirmed NationStates reference. Created `lobby_concept.html` as a local interactive scenario workshop, updated navigation in `render_report.py`, and regenerated `index.html`.
+
+**Reason:** Explore a lobby that varies time, supplies, information, recovery, and wildcards while preserving curiosity, meaningful choices, and room to reflect afterward.
+**Validation:** Offline report links and 28 source footnotes checked; lobby JavaScript syntax, unique IDs, labels, and local dependencies checked. Browser rendering and download interaction remain unverified.
+**Impact:** Design documentation and local UI concept; no application or playable game behavior added.
+**Follow-up Required:** NO.
+
+-----
+
+### [DOCUMENTATION-2026-09-11-2] 2026-09-11 - Inherited purpose, care, and practical consequences
+
+**Categories:** [DOCUMENTATION] [UX]
+**Changed by:** Codex
+**Status:** DRAFT — original story proposal
+
+**Changes:** Updated `docs/notes/explorable_world/RESEARCH.md` with an inherited-purpose conflict prompted by Ziggy's supplied Talos guide and CFA's Keeper document, plus a central care principle and his water-repair consequence developed into an optional episode. Included his reflection on what designing such a world reveals about its creator's priorities as an open fictional theme. Added navigation in `render_report.py` and regenerated `index.html`.
+
+**Reason:** Connect preservation, changing civic needs, and expedition upgrades through an inherited safeguard and practical consequences for neighbors' time and commitments.
+**Validation:** Regenerated offline HTML; checked local links, navigation anchors, and all 27 source footnotes.
+**Impact:** Documentation only; the full episodes are later expansion proposals.
+**Follow-up Required:** NO.
+
+-----
+
+### [DOCUMENTATION-2026-09-11-1] 2026-09-11 - Exploratory CFA world design research
+
+**Categories:** [DOCUMENTATION] [UX] [🧹 +4]
+**Changed by:** Codex
+**Status:** STAGED — research complete; game design proposed
+
+**Changes:**
+- `CREATED`: docs/notes/explorable_world/RESEARCH.md — cited research and original design for a contemplative world, gradual archive discoveries, expedition upgrades, and persistent consequences.
+- `CREATED`: docs/notes/explorable_world/chapter_plan.svg — accessible first-chapter route diagram.
+- `CREATED`: docs/notes/explorable_world/index.html — offline reading edition with contents navigation and print styling.
+- `CREATED`: docs/notes/explorable_world/render_report.py — regenerates the reading edition from the Markdown brief using the existing Markdown package.
+
+**Reason:** Investigate the proposed Talos 2 atmosphere and Hades II / Valhalla progression direction against CFA's existing material and current engine capabilities.
+**Validation:** Local links, navigation anchors, 25 source footnotes, SVG XML, and vector rendering checked. Independent design review resolved two expedition-rule gaps.
+**Impact:** Documentation only; no application behavior changed.
+**Follow-up Required:** NO — implementation and combat scope remain optional design decisions.
 
 -----
 

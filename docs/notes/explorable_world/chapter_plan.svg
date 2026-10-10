@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="plan-title plan-desc">
+  <title id="plan-title">The Observatory: proposed CFA chapter floor plan</title>
+  <desc id="plan-desc">An original proposal for a ten to fifteen minute contemplative chapter, not a game screenshot and not to scale. Solid arrows lead from the entry terrace to the records vestibule, the central instrument room, and the lakeside bench. A dashed arrow offers an optional side archive from the records vestibule. A return loop leads from the bench to the entry. Each place poses a question: Who kept this place alive? What were they afraid of losing? Why do the instruments disagree? Why preserve a failed result? What will I leave for someone else?</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 1 1 L 9 5 L 1 9" fill="none" stroke="#333333" stroke-width="1.5"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #222222; }
+      .room { fill: #ffffff; stroke: #333333; stroke-width: 2; }
+      .label { font-size: 14px; font-weight: 700; letter-spacing: 0.7px; }
+      .question { font-size: 19px; }
+      .note { font-size: 16px; fill: #555555; }
+      .route { fill: none; stroke: #333333; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="680" fill="#ffffff"/>
+  <text x="45" y="49" font-size="29" font-weight="700">CFA / THE OBSERVATORY</text>
+  <text x="45" y="80" class="note">Proposed chapter: 10–15 minutes of exploration, conversation, and one physical puzzle</text>
+
+  <rect x="325" y="120" width="235" height="140" class="room"/>
+  <text x="345" y="151" class="label">SIDE ARCHIVE</text>
+  <text x="345" y="190" class="question">
+    <tspan x="345" dy="0">Why preserve</tspan>
+    <tspan x="345" dy="27">a failed result?</tspan>
+  </text>
+  <path d="M 442 320 L 442 270" class="route" stroke-dasharray="7 6"/>
+  <text x="460" y="295" class="note">Optional detour</text>
+
+  <rect x="925" y="280" width="255" height="225" fill="#e4edf1" stroke="#bbcbd2" stroke-width="1"/>
+  <text x="1115" y="487" font-size="13" fill="#536773" letter-spacing="1.3">LAKE</text>
+
+  <rect x="45" y="320" width="220" height="130" class="room"/>
+  <text x="65" y="351" class="label">ENTRY TERRACE</text>
+  <text x="65" y="390" class="question">
+    <tspan x="65" dy="0">Who kept this</tspan>
+    <tspan x="65" dy="27">place alive?</tspan>
+  </text>
+
+  <rect x="325" y="320" width="235" height="130" class="room"/>
+  <text x="345" y="351" class="label">RECORDS VESTIBULE</text>
+  <text x="345" y="390" class="question">
+    <tspan x="345" dy="0">What were they</tspan>
+    <tspan x="345" dy="27">afraid of losing?</tspan>
+  </text>
+
+  <rect x="625" y="320" width="245" height="130" class="room"/>
+  <text x="645" y="348" class="label">
+    <tspan x="645" dy="0">CENTRAL</tspan>
+    <tspan x="645" dy="19">INSTRUMENT ROOM</tspan>
+  </text>
+  <text x="645" y="402" class="question">
+    <tspan x="645" dy="0">Why do the</tspan>
+    <tspan x="645" dy="27">instruments disagree?</tspan>
+  </text>
+
+  <rect x="940" y="320" width="220" height="130" class="room"/>
+  <text x="960" y="351" class="label">LAKESIDE BENCH</text>
+  <text x="960" y="382" class="question">
+    <tspan x="960" dy="0">What will I leave</tspan>
+    <tspan x="960" dy="25">for someone</tspan>
+    <tspan x="960" dy="25">else?</tspan>
+  </text>
+
+  <path d="M 265 385 L 315 385" class="route"/>
+  <path d="M 560 385 L 615 385" class="route"/>
+  <path d="M 870 385 L 930 385" class="route"/>
+  <path d="M 1050 450 L 1050 565 L 155 565 L 155 460" class="route"/>
+  <text x="500" y="550" class="note">Return by the lake</text>
+
+  <path d="M 45 607 L 99 607" class="route"/>
+  <text x="115" y="613" class="note">Main route and return loop</text>
+  <path d="M 410 607 L 464 607" class="route" stroke-dasharray="7 6"/>
+  <text x="480" y="613" class="note">Optional archive; return to the vestibule</text>
+  <text x="45" y="652" font-size="15" fill="#555555">Original design proposal • not a game screenshot • not to scale</text>
+</svg>

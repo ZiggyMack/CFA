@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "id": "HON-OPENING-WORKSHOP-CURRENT-20261009-VISUAL-READBACK-REVIEW",
+  "recordedAtUTC": "2026-10-10T00:45:30.113216+00:00",
+  "status": "pass_with_corrections_for_role_limited_storyboard_planning",
+  "provider": "Gemini",
+  "chatURL": "https://gemini.google.com/app/988990050e4ad32c",
+  "associatedNotebookID": "586b3ee6-5c57-45b3-a59d-a2e21c18a852",
+  "evidenceSource": {
+    "responseAndUploadObservation": "Root operator reported that all six original images uploaded, a visual-readback answer was received, and a storyboard-planning prompt with corrections was sent.",
+    "localReview": "Recorder had inspected the identity, dental and SB-01/SB-03/SB-04 originals during packet preparation; the SB-06 component scope and earlier independent readback receipt were also consulted. This file reconciles the root operator's reported current answer against those source roles.",
+    "fullRawCurrentAnswerReviewedByRecorder": false,
+    "operatorInspectedAllSixOriginals": true,
+    "operatorInspectionAttribution": "Root operator report, not a new action performed by this recorder.",
+    "rawResponsePath": null,
+    "modelLabelObserved": null
+  },
+  "sources": [
+    {
+      "label": "A",
+      "assetID": "HD-RETURN-6c8900223ee9",
+      "filename": "6c8900223ee9__lf_full.png",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/6c8900223ee9__lf_full.png",
+      "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae",
+      "allowedRole": "Default face / identity and no-forehead-dice direction only"
+    },
+    {
+      "label": "B",
+      "assetID": "HD-B-91ef00348229",
+      "filename": "91ef00348229__GRILL-LOCK-4GOLD-v2.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/91ef00348229__GRILL-LOCK-4GOLD-v2.jpg",
+      "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+      "allowedRole": "External-off dental layout and plain lip rings only"
+    },
+    {
+      "label": "C",
+      "assetID": "HD-DROP-725c38458fd8",
+      "filename": "SB-01-grill-ecu.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-01-grill-ecu.jpg",
+      "sha256": "725c38458fd8e8d6cff78c1c330368e1057333ab8dc84a900070065f02f02ff8",
+      "allowedRole": "SB-01 opening mouth close-up composition only"
+    },
+    {
+      "label": "D",
+      "assetID": "HD-DROP-36679ee9953b",
+      "filename": "SB-03-pay-table.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-03-pay-table.jpg",
+      "sha256": "36679ee9953bfb8d0492009c1a47309fdd8f04f951f2077bce0007067146b1c4",
+      "allowedRole": "SB-03 credit props, transaction and table staging"
+    },
+    {
+      "label": "E",
+      "assetID": "HD-DROP-60f245863c6b",
+      "filename": "SB-04-fuel-gauge.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-04-fuel-gauge.jpg",
+      "sha256": "60f245863c6ba88e160514f4de1363dd4550a1d95b1a59b3b4c443f6dfcf5fd8",
+      "allowedRole": "SB-04 fuel-status idea and counter geography"
+    },
+    {
+      "label": "F",
+      "assetID": "HD-DROP-b18c4a123579",
+      "filename": "SB-06-scoundrel-detail.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-06-scoundrel-detail.jpg",
+      "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+      "allowedRole": "SB-06 visible wrist jewelry only; supplemental continuity input"
+    }
+  ],
+  "matchedObservations": [
+    {
+      "labels": [
+        "B",
+        "C"
+      ],
+      "finding": "Distinguished the older SB-01 two-gold / one-visible-hoop appearance from the current four-upper-gold / two-lip-hoop detail reference.",
+      "scope": "Visible static dental and ring comparison; no temporal preservation claim."
+    },
+    {
+      "labels": [
+        "A"
+      ],
+      "finding": "Located the eye/know cheek lettering and recognized the no-forehead-dice portrait.",
+      "scope": "Tattoo location and default-look context only; typography correction below remains necessary."
+    },
+    {
+      "labels": [
+        "E"
+      ],
+      "finding": "Recognized the profile fuel-status scene and the holographic FUEL EMPTY display.",
+      "scope": "Composition/story concept; no approval of the old identity or exact generated text in a future clip."
+    },
+    {
+      "labels": [
+        "F"
+      ],
+      "finding": "Recognized the gold curb-link wrist accessory.",
+      "scope": "Visible wrist component only; dark-band omission and overlap/texture overclaims require correction."
+    }
+  ],
+  "corrections": [
+    {
+      "labels": [
+        "A"
+      ],
+      "issue": "Called the portrait a JPG.",
+      "correction": "The actual attached original is 6c8900223ee9__lf_full.png. Preserve that canonical filename and recorded SHA-256.",
+      "class": "source_identification"
+    },
+    {
+      "labels": [
+        "F"
+      ],
+      "issue": "Used a wrist-image _2 alias.",
+      "correction": "The canonical source remains SB-06-scoundrel-detail.jpg / HD-DROP-b18c4a123579. A provider-facing alias does not rename the local original or create a new asset.",
+      "class": "source_identification"
+    },
+    {
+      "labels": [
+        "A"
+      ],
+      "issue": "Called both cheek words typewriter lettering.",
+      "correction": "eye is cursive on character-right / viewer-left; know is serif/upright on character-left / viewer-right. Do not make them matching typewriter lettering.",
+      "class": "typography"
+    },
+    {
+      "labels": [
+        "B"
+      ],
+      "issue": "Used imprecise lateral/central terminology for upper gold teeth.",
+      "correction": "Exactly four upper gold caps: both lateral incisors and both SHORT canines. The two central incisors and remaining upper teeth stay natural white. Lower row stays silver/chrome.",
+      "class": "dental_geometry"
+    },
+    {
+      "labels": [
+        "D"
+      ],
+      "issue": "Counted two credit pieces.",
+      "correction": "Do not promote that count into continuity. The controlled prototype explicitly specifies FOUR matching warm-gold luminous rectangular credits; reconcile all four in the eventual starting frame. The storyboard prop layout includes overlap and does not override the specified prototype count.",
+      "class": "object_count"
+    },
+    {
+      "labels": [
+        "F"
+      ],
+      "issue": "Overclaimed that the chain overlaps the lettering.",
+      "correction": "The chain lies immediately below the lettering near the lower edge of the initial S. Do not turn uncertain overlap wording into an instruction to cover the tattoo.",
+      "class": "spatial_relation"
+    },
+    {
+      "labels": [
+        "F"
+      ],
+      "issue": "Asserted a brushed texture for the gold wrist accessory.",
+      "correction": "Gold appearance and broad flattened interlocking curb links are supported. Do not add a brushed-surface specification from this answer.",
+      "class": "unsupported_material_detail"
+    },
+    {
+      "labels": [
+        "F"
+      ],
+      "issue": "Omitted the partially visible dark wrist band in this answer.",
+      "correction": "Preserve the user-selected dark band along with the gold wrist chain whenever visible. Its exact material, hidden clasp/watch mechanism and anatomical side remain unresolved.",
+      "class": "missed_component"
+    }
+  ],
+  "operatorFollowThrough": {
+    "allSixDirectOriginalUploadsReported": true,
+    "correctionsSentWithStoryboardBrief": true,
+    "storyboardPlanningPromptSent": true,
+    "submissionEvidenceAttribution": "Root operator report supplied to this recorder.",
+    "generationExecutionReportedByThisReview": false
+  },
+  "decision": {
+    "result": "Proceed with bounded storyboard planning using the corrected brief and explicit per-image roles.",
+    "passScope": "Useful direct-image visual readback sufficient for a supervised planning discussion, with material corrections supplied.",
+    "notEstablished": [
+      "Comprehensive visual accuracy",
+      "Exact object counting",
+      "Correct dental terminology without the brief",
+      "Temporal identity or accessory preservation",
+      "Lip-sync performance",
+      "A consolidated accepted production starting frame",
+      "Persistent native notebook image Sources ingestion"
+    ],
+    "newCreativeApprovals": 0,
+    "canonicalFilesRenamed": false,
+    "canonicalHashesChanged": false
+  },
+  "persistentNotebookSources": {
+    "status": "unresolved",
+    "testedByThisReadback": false,
+    "directChatAttachmentsAreDistinctFromNativeSources": true
+  },
+  "nextAction": "Review the returned storyboard/ten-turn plan against the corrected current brief and these source-role limitations before selecting a production starting frame."
+}

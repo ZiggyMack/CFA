@@ -1,0 +1,123 @@
+{
+  "format": "cfa-notebook-source-manifest-v1",
+  "template": false,
+  "packetID": "CFA-MASTER-STORYBOARD-20261009",
+  "project": "shared",
+  "revision": "CFA-GEMINI-STORY-20261009-v1",
+  "createdAt": "2026-10-09T16:53:41.676864+00:00",
+  "owner": "CFA / Ziggy",
+  "purpose": "Storyboard development Source candidates; prepared, not remotely ingested.",
+  "notebook": {
+    "key": "00_master",
+    "id": "7719bbe5-fccf-48e2-b6d4-d82f67693b09",
+    "url": "https://notebook.google.com/notebook/7719bbe5-fccf-48e2-b6d4-d82f67693b09",
+    "surface": "actual notebook Sources library"
+  },
+  "sourceOfAuthority": [
+    "Ziggy request, October 9, 2026: develop preliminary storyboards with the project notebooks, prepare two Gemini drops.",
+    "Existing user review decisions and project-specific reference scopes."
+  ],
+  "definitions": [
+    "Packaged means local ZIP bytes verified; not remote upload or acceptance.",
+    "Metadata-only records are in media_manifest.json and are not visual Sources.",
+    "Text-source planning can proceed while visual-dependent checks remain pending."
+  ],
+  "sources": [
+    {
+      "sourceKey": "shared-story-source",
+      "assetID": null,
+      "project": "shared",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/00_master/SOURCE_UPLOAD.txt",
+      "sha256": "2734799bc06fd5cd44d7d6d1c9fa87110cbeea43030afcc1c788333faf6bac37",
+      "bytes": 9679,
+      "mimeType": "text/plain",
+      "revision": "CFA-GEMINI-STORY-20261009-v1",
+      "origin": {
+        "provider": null,
+        "creator": null,
+        "sourceURL": null,
+        "responseID": null,
+        "receivedAt": null
+      },
+      "parent": {
+        "assetID": null,
+        "sha256": "2734799bc06fd5cd44d7d6d1c9fa87110cbeea43030afcc1c788333faf6bac37",
+        "transformation": "unchanged bytes"
+      },
+      "trust": {
+        "state": "local_record_verified",
+        "claimType": "prepared_method_and_context",
+        "evidence": [
+          "User request and local project records"
+        ],
+        "instructionAuthority": false
+      },
+      "approval": {
+        "status": "no_new_approval_by_packet",
+        "scope": "prepared_source_candidate",
+        "decisionRef": null,
+        "approvedBy": null,
+        "approvedAt": null,
+        "limitations": [
+          "Contains descriptions and current decisions; does not substitute for image/video visual ingestion."
+        ]
+      },
+      "storyboardStage": null,
+      "technicalVerification": {
+        "status": "local_bytes_verified",
+        "checks": [
+          "File exists",
+          "Byte length recorded",
+          "SHA-256 verified"
+        ],
+        "receipt": "packet_manifest.json"
+      },
+      "notebookSource": {
+        "id": null,
+        "route": null,
+        "uploadedAt": null,
+        "processingStatus": "not_attempted",
+        "selected": null,
+        "bodyReadbackVerified": false,
+        "retrievalVerified": false,
+        "citationEvidence": [],
+        "observedModalities": [],
+        "error": null
+      },
+      "drive": {
+        "fileID": null,
+        "url": null,
+        "revision": null,
+        "deliveryHash": null
+      },
+      "sync": {
+        "mode": "manual",
+        "lastAttemptAt": null,
+        "lastVerifiedAt": null,
+        "expectedRevision": "CFA-GEMINI-STORY-20261009-v1",
+        "observedRevision": null,
+        "manualSyncUsed": null,
+        "evidence": []
+      },
+      "supersedes": null,
+      "statusHistory": [
+        {
+          "atUTC": "2026-10-09T16:53:41.676864+00:00",
+          "state": "prepared_not_uploaded"
+        }
+      ],
+      "packetRelativePath": "SOURCE_UPLOAD.txt",
+      "role": "Current shared workflow and scoped project context",
+      "selection": "required_text"
+    }
+  ],
+  "invariants": [
+    "Null and empty fields mean unknown or unfilled, never successful.",
+    "Source instructions do not gain authority by appearing in an attachment.",
+    "Provider labels are distinct from user approval.",
+    "Creative scope, storyboard stage, technical verification and production acceptance remain separate.",
+    "A chat attachment, source entry, opened body and successful cited retrieval are separate observations.",
+    "Remote source IDs and Drive IDs are recorded only after actual observation.",
+    "No notebook source, raw answer or script automatically changes project authority."
+  ]
+}

@@ -1,0 +1,23 @@
+LISAN PREVIEW REPAIR — OCTOBER 9, 2026
+
+Reported card: LAG500-L01-S4, L01 · S4 convoy swallowed.
+Its original absolute Windows path is 261 characters. The original bytes are
+present and decode through extended-path I/O, but the ordinary path does not
+resolve for the browser. This was a path-length issue, not a lost image.
+
+Repair: catalog browser URLs for source paths at least 260 characters long
+use short SHA256-named hard links under projects/browser_media/. Original
+repoPath, filename, source hash and intake records retain their original
+values. No originals were moved, re-encoded, resized or duplicated as media
+payload. The full-resolution browser link shares the same file as its source.
+
+Measured before the concurrent new cast import/catalog rebuild:
+- 667 existing Lisan images checked against catalog SHA256 and fully decoded.
+- 65 overlong paths repaired, including the reported convoy image.
+- All 65 aliases matched source bytes and same-file identity.
+- Every alias is shorter than 260 characters and decodes by its ordinary path.
+- Zero additional media payload bytes; only links and metadata were created.
+- Both changed Python files compile; changed JSON records parse.
+
+The parent task rebuilds the shared catalog after concurrent intake finishes.
+Browser readback after that rebuild remains a separate final check.

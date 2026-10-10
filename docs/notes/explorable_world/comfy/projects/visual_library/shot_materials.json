@@ -1,0 +1,2794 @@
+{
+  "version": 1,
+  "updated": "2026-10-09",
+  "purpose": "Connect existing shot ideas to actual available material and one next action; candidate links do not approve a take or advance its stage.",
+  "timingNote": "Timing is tracked by project in projectTimingNotes. No Jet association assigns music time; Hon song timing does not apply to Lisan.",
+  "stageNote": "Existing Hon stages are unchanged. Jet Black adds five preliminary Lisan planning cards with user-confirmed purposes and proposed placements; no image or shot acceptance is granted. The quarters grill-change return is locally verified as a separate untimed ten-panel draft, with eight alternatives and the scoped r4 look reference; original Hon panel percentages remain unchanged.",
+  "sourceFiles": [
+    "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/shot_plan.json",
+    "docs/notes/explorable_world/comfy/projects/visual_library/story_notes.json",
+    "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard_crosswalk.json",
+    "docs/notes/explorable_world/comfy/projects/collaborators/comfy_workflows.json",
+    "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/intake.json",
+    "docs/notes/explorable_world/comfy/projects/visual_library/cast_collections.json",
+    "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/permanent_accessories.json",
+    "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/jet_black_mission_20261009/storyline.json",
+    "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/incoming_scene.json",
+    "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/registry.json",
+    "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/intake_receipt.json",
+    "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/asset_ledger.json",
+    "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/REVIEW.txt"
+  ],
+  "lessons": [
+    "../Pan_Handlers/Help/guides/video_handoff.py#soundtrack_case_markdown",
+    "docs/notes/explorable_world/comfy/workflows/README.md#choose-by-problem",
+    "docs/notes/explorable_world/comfy/templates/workflow_intake.md#decision-and-feedback"
+  ],
+  "sharedMaterials": [
+    {
+      "assetID": "HD-AUDIO-REPLACE-V001",
+      "role": "technical_soundtrack_proof",
+      "shotIDs": [
+        "S01A",
+        "S03A",
+        "S09A",
+        "S11A"
+      ],
+      "status": "available_not_accepted",
+      "note": "Reusable across chorus planning cards. Each recurrence needs its own musical phrase and picture choice; copying this ten-second proof does not establish a final cut."
+    },
+    {
+      "assetID": "HD-DROP-b18c4a123579",
+      "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+      "role": "locked_jewelry_component",
+      "status": "user_accepted_component",
+      "acceptanceScope": "visible_wrist_jewelry_only",
+      "note": "Ziggy locks the SB-06 gold curb-link wrist chain and visible black wrist band as permanent Dolo accessories. Preserve when visible; hidden wrists are occluded. Hidden clasp/watch face, exact dimensions and anatomical side are not established. This is not whole-image or shot acceptance.",
+      "characterID": "HON-DOLO",
+      "shotIDs": [
+        "S02C"
+      ],
+      "appliesTo": "Any Hon Dolo shot with the relevant wrist visible; this list names the current existing SB-06 mapping, not an exclusivity rule."
+    }
+  ],
+  "pendingIntake": [
+    {
+      "id": "hon-grok-returns",
+      "project": "hon",
+      "status": "verified_received_needs_review",
+      "reportedPackets": [
+        "Hon return v001/v002",
+        "17-look hip rollout",
+        "Tattoo recovery inventory",
+        "Boss round 1"
+      ],
+      "taskIDs": [
+        "grok-proof-package",
+        "grok-boss-discovery",
+        "grok-source-art",
+        "favorites-prop-sweep"
+      ],
+      "nextStep": {
+        "owner": "Ziggy / Nova",
+        "action": "Review the linked stills and boss candidates. Choose usable references and resolve flagged defects; then prepare the next Flow/Gemini test."
+      },
+      "note": "All five packages are extracted, hashed and decoded. Receipt is complete; artwork acceptance, video generation and song timing remain separate."
+    },
+    {
+      "id": "HON-QUARTERS-GRILL-CHANGE-20261009",
+      "project": "hon",
+      "status": "verified_received_needs_corrections",
+      "reportedPackets": [
+        "GROK-HD-SB-GRILLUP-v001.zip · 10 selects, 8 earlier alternatives, r4 anchor and provider notes"
+      ],
+      "taskIDs": [
+        "grok-hon-quarters-grill-change"
+      ],
+      "nextStep": {
+        "owner": "CFA / Chief",
+        "action": "Resolve the 02/03 label-content mismatch, two-hoop count, grill geometry and identity/detail drift; preserve original files and keep this sequence untimed."
+      },
+      "note": "All 20 files are hash-verified; 19 JPEGs decode. Ten selected panels and r4 were independently inspected. Received does not mean accepted."
+    }
+  ],
+  "unmappedPanelIDs": [
+    "SB-33"
+  ],
+  "shots": [
+    {
+      "id": "S01A",
+      "project": "hon",
+      "title": "Hon Dolo sells the ride",
+      "sourceTitle": "Hon Dolo sells the ride",
+      "sectionID": "S01",
+      "sectionLabel": "[Chorus] Â· Payment before passage",
+      "panelIDs": [
+        "SB-01",
+        "SB-02",
+        "SB-04",
+        "SB-05"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-725c38458fd8",
+        "HD-DROP-fd723df3ec04",
+        "HD-DROP-60f245863c6b",
+        "HD-DROP-6e8eb6a956c9"
+      ],
+      "sourceShotIDs": [
+        "S01A"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "rap_lipsync",
+      "materials": [
+        {
+          "assetID": "HD-DROP-725c38458fd8",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "725c38458fd8e8d6cff78c1c330368e1057333ab8dc84a900070065f02f02ff8",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-fd723df3ec04",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "fd723df3ec04216423ecbe98962c48d554b91eb3081aab178cf97632e337d37f",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-60f245863c6b",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "60f245863c6ba88e160514f4de1363dd4550a1d95b1a59b3b4c443f6dfcf5fd8",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-6e8eb6a956c9",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "6e8eb6a956c9146a0adc3f1c8c3c71db7d0cc34bbf646f4d681cd6e54ae24428",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "GEM-C0823C60",
+          "role": "reusable_performance_candidate",
+          "status": "user_selected_source",
+          "sha256": "b5deff1982da0cbbdee24a7dfc253fe6825018549a37ca531c7b3586cdbee525",
+          "note": "User-preferred ten-second club/cantina montage. Reuse is a proposed chorus connection, not approval of every detail or a match to the planned ramp/cockpit setting. Retired brow dice remain."
+        },
+        {
+          "assetID": "HD-AUDIO-REPLACE-V001",
+          "role": "soundtrack_proof",
+          "status": "technical_proof_available",
+          "sha256": "611b25e2f038e225be1fcf086163788c64b430d8aa0c12816e236031a93ce3f7",
+          "note": "Ten-second local picture-preserving soundtrack swap. Audio is song 0:00â€“0:10, selected as a technical test; lyric placement, listening, lip sync and creative acceptance are not established."
+        },
+        {
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/START_HERE.txt",
+          "role": "prepared_handoff",
+          "status": "prepared_not_sent",
+          "note": "One Grok frame then up to ten dependent Gemini turns; S01B transaction prototype with S01A context. No generated output or shot approval."
+        },
+        {
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/BENCHMARK.txt",
+          "role": "prepared_handoff",
+          "status": "prepared_not_sent",
+          "note": "Planned Grok + ChatGPT still screen; one shared frame for Gemini, Flow, Grok and Comfy video. Scene/detail specialties are untested; ChatGPT video is conditional on an actual generator. No output or acceptance yet."
+        },
+        {
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/TASK_PROMPT.txt",
+          "role": "prepared_handoff",
+          "status": "prepared_not_sent",
+          "note": "Gemini develops SB-01–04 / S01A–S01B into proposed detailed scene cards, asset-role choices, start/end intentions and Flow drafts. Existing source footage and continuation/benchmark stay available. No stage promotion or generation."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "concept_available",
+          "note": "Storyboard concept available; exact current-character shot art is not accepted."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "candidate_available",
+          "note": "Review existing footage first; only generate if the selected shot needs a new take."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "local_proof_cloud_prepared",
+          "note": "Local soundtrack proof exists. Saved Cloud soundtrack graph is unexecuted; lip-sync is a separate unexecuted candidate."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [
+        "comfy-soundtrack",
+        "comfy-lipsync"
+      ],
+      "taskIDs": [
+        "gemini-hon-opening-continuation",
+        "hon-opening-video-benchmark",
+        "gemini-hon-storyboard-detail"
+      ],
+      "nextStep": {
+        "owner": "Ziggy + Nova",
+        "action": "Play the preferred preview, select one continuous performance shot and align an exact opening-chorus phrase; assess existing mouth timing before preparing a separate sync test. The linked opening-transaction package develops S01B with this opening attitude as context; it does not replace this performance shot or its audio check."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot."
+    },
+    {
+      "id": "S01B",
+      "project": "hon",
+      "title": "Count it twice",
+      "sourceTitle": "Count it twice",
+      "sectionID": "S01",
+      "sectionLabel": "[Chorus] Â· Payment before passage",
+      "panelIDs": [
+        "SB-03",
+        "SB-19"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-36679ee9953b",
+        "HD-DROP-d3f1eb0d0504"
+      ],
+      "sourceShotIDs": [
+        "S01B"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "image_to_video",
+      "materials": [
+        {
+          "assetID": "HD-DROP-36679ee9953b",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "36679ee9953bfb8d0492009c1a47309fdd8f04f951f2077bce0007067146b1c4",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-d3f1eb0d0504",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "d3f1eb0d0504fbde537218e7c49d156b022062b481a7667c51d63844dfc7b0cc",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "GEM-65B11895",
+          "role": "counting_motion_candidate",
+          "status": "available_candidate",
+          "sha256": "dd5af9eac7f0a30921cf40110b79dacc3791cba11f2df43205e07f359717c44a",
+          "note": "Cash-pile performance supports the counting idea. Older tattoo treatment, hands and cash continuity need review; it is not the planned credit-chip insert."
+        },
+        {
+          "assetID": "HD-RETURN-bc5b8c111da7",
+          "sha256": "bc5b8c111da73c15d0e0a69462ba2a416e1fc2b7364577354c439509655aeb00",
+          "role": "cash_revision_candidate",
+          "status": "received_continuity_failed",
+          "note": "New cash revision exists, but the vest and scene changed. Review alongside the original; not approved shot art."
+        },
+        {
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/START_HERE.txt",
+          "role": "prepared_handoff",
+          "status": "prepared_not_sent",
+          "note": "One Grok frame then up to ten dependent Gemini turns; S01B transaction prototype with S01A context. No generated output or shot approval."
+        },
+        {
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/BENCHMARK.txt",
+          "role": "prepared_handoff",
+          "status": "prepared_not_sent",
+          "note": "Planned Grok + ChatGPT still screen; one shared frame for Gemini, Flow, Grok and Comfy video. Scene/detail specialties are untested; ChatGPT video is conditional on an actual generator. No output or acceptance yet."
+        },
+        {
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/TASK_PROMPT.txt",
+          "role": "prepared_handoff",
+          "status": "prepared_not_sent",
+          "note": "Gemini develops SB-01–04 / S01A–S01B into proposed detailed scene cards, asset-role choices, start/end intentions and Flow drafts. Existing source footage and continuation/benchmark stay available. No stage promotion or generation."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "revision_received_needs_fixes",
+          "note": "REV-HD-001 exists locally; outfit and scene preservation failed."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "candidate_available",
+          "note": "Review existing footage first; only generate if the selected shot needs a new take."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "not_prepared",
+          "note": "No Comfy run is bound to this shot. Define the required change after choosing picture and audio."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [
+        "gemini-hon-opening-continuation",
+        "hon-opening-video-benchmark",
+        "gemini-hon-storyboard-detail"
+      ],
+      "nextStep": {
+        "owner": "Nova / Grok, then all four collaborators",
+        "action": "Compare one Grok and one ChatGPT still from the same role-scoped references, then select one frame for the bounded video benchmark. Record scene/detail strengths separately. Reuse a passing Gemini take as continuation turn 01."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot."
+    },
+    {
+      "id": "S02A",
+      "project": "hon",
+      "title": "The boss expects payment",
+      "sourceTitle": "Jabba expects payment",
+      "sectionID": "S02",
+      "sectionLabel": "[Verse] Â· Debt beneath the boasting",
+      "panelIDs": [
+        "SB-10"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-df1418147b5d"
+      ],
+      "sourceShotIDs": [
+        "S02A"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "image_to_video",
+      "materials": [
+        {
+          "assetID": "HD-DROP-df1418147b5d",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "df1418147b5d86de989b65feaa553090af4129d9efed778eff9bc5ef488a373c",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-RETURN-fed7635d883b",
+          "sha256": "fed7635d883ba9d0a7c119534b1e35e83c5b66d9433386da0ce741f7c817ddbd",
+          "role": "boss_discovery_round1",
+          "status": "received_needs_selection",
+          "note": "Ten candidate bosses are available. This contact sheet does not select a character or approve a meeting scene."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "ten_candidates_received",
+          "note": "Select the boss before requesting turnarounds or the meeting master."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "needed",
+          "note": "No linked shot-specific video exists; choose a still before a new motion proof."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "not_prepared",
+          "note": "No Comfy run is bound to this shot. Define the required change after choosing picture and audio."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [
+        "grok-boss-discovery",
+        "flow-boss-proof"
+      ],
+      "nextStep": {
+        "owner": "Ziggy → Grok → Flow",
+        "action": "Review the ten boss proofs and choose one. Develop its four views and the two-character scene, then hand the selected scene to Flow for a bounded motion test."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot. The canonical plan title says Jabba. The newer boss-discovery decision leaves the final boss identity unselected."
+    },
+    {
+      "id": "S02B",
+      "project": "hon",
+      "title": "Boba watches the bay",
+      "sourceTitle": "Boba watches the bay",
+      "sectionID": "S02",
+      "sectionLabel": "[Verse] Â· Debt beneath the boasting",
+      "panelIDs": [
+        "SB-09",
+        "SB-11"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-af2c7daaf039",
+        "HD-DROP-ac71d8209a11"
+      ],
+      "sourceShotIDs": [
+        "S02B"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "image_to_video",
+      "materials": [
+        {
+          "assetID": "HD-DROP-af2c7daaf039",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "af2c7daaf039014c1a60db373598137f3c834b5c4b99d509a1d9ff10277c5e9d",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-ac71d8209a11",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "ac71d8209a11427f2aafa7ff0e04cc88992e9fdb918ae6cea8fa2ac55fc6f3ae",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "concept_available",
+          "note": "Storyboard concept available; exact current-character shot art is not accepted."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "needed",
+          "note": "No linked shot-specific video exists; choose a still before a new motion proof."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "not_prepared",
+          "note": "No Comfy run is bound to this shot. Define the required change after choosing picture and audio."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [],
+      "nextStep": {
+        "owner": "Grok + Nova",
+        "action": "Select or create one still that matches this shot and the current character references, then choose one action for a bounded video proof."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot."
+    },
+    {
+      "id": "S02C",
+      "project": "hon",
+      "title": "Captain portrait",
+      "sourceTitle": "Captain portrait",
+      "sectionID": "S02",
+      "sectionLabel": "[Verse] Â· Debt beneath the boasting",
+      "panelIDs": [
+        "SB-06",
+        "SB-08",
+        "SB-12",
+        "SB-14"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-b18c4a123579",
+        "HD-DROP-e1250a0bce91",
+        "HD-DROP-e5e5bb2eb7ee",
+        "HD-DROP-d36a3316372d"
+      ],
+      "sourceShotIDs": [
+        "S02C"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "rap_lipsync",
+      "materials": [
+        {
+          "assetID": "HD-DROP-b18c4a123579",
+          "role": "locked_jewelry_component",
+          "status": "user_accepted_component",
+          "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+          "note": "Ziggy locks the SB-06 gold curb-link wrist chain and visible black wrist band as permanent Dolo accessories. Preserve when visible; hidden wrists are occluded. Hidden clasp/watch face, exact dimensions and anatomical side are not established. This is not whole-image or shot acceptance.",
+          "acceptanceScope": "visible_wrist_jewelry_only",
+          "sourceRole": "storyboard_concept"
+        },
+        {
+          "assetID": "HD-DROP-e1250a0bce91",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "e1250a0bce91bcd16078f69452504d621e799ddbde5c5e743c7d59a2dd64c4c3",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-e5e5bb2eb7ee",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "e5e5bb2eb7eece96f131d8280e87ed422c3378574e5c181ab722f54ec6d1164b",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-d36a3316372d",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "d36a3316372d3685b17b99249b1b4f27539ea602a57d905f4dc6bc89250c392e",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-14f8eb9979b5",
+          "sha256": "14f8eb9979b5217ece058c612eb04fcddee5870f4910eacf2d7112ed2b38ee9b",
+          "role": "pilot_scene_reference",
+          "status": "user_selected_needs_fixes",
+          "note": "Pilot/cockpit concept retained; grill and neck correction requested; ship variation allowed."
+        },
+        {
+          "assetID": "HD-DROP-8ef3180997c8",
+          "sha256": "8ef3180997c8dd596a9cd27b83c50d4aee42b4d04200f8371625010523bac356",
+          "role": "pilot_scene_reference",
+          "status": "user_selected_needs_fixes",
+          "note": "Correct smile/teeth, eyebrow and earrings. Source is not a current identity master."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "concept_available",
+          "note": "Storyboard concept available; exact current-character shot art is not accepted."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "needed",
+          "note": "No linked shot-specific video exists; choose a still before a new motion proof."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "not_prepared",
+          "note": "No Comfy run is bound to this shot. Define the required change after choosing picture and audio."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [
+        "grok-hon-pilot-corrections",
+        "grok-hon-neck-chains-and-props"
+      ],
+      "nextStep": {
+        "owner": "Grok / CFA",
+        "action": "Prepare the reviewed R2-01 and R2-05 pilot still corrections using scoped current head/mouth references; review before video."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot."
+    },
+    {
+      "id": "S02D",
+      "project": "hon",
+      "title": "The junky ship proves itself",
+      "sourceTitle": "The junky ship proves itself",
+      "sectionID": "S02",
+      "sectionLabel": "[Verse] Â· Debt beneath the boasting",
+      "panelIDs": [
+        "SB-13",
+        "SB-15",
+        "SB-16"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-8896508767b4",
+        "HD-DROP-a962c9148eb5",
+        "HD-DROP-0c8852c50251"
+      ],
+      "sourceShotIDs": [
+        "S02D"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "image_to_video",
+      "materials": [
+        {
+          "assetID": "HD-DROP-8896508767b4",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "8896508767b4deb140202f313d7cb054a765cebd56abd29affbb72621f090bde",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-a962c9148eb5",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "a962c9148eb589f8e5bfb4e75856393dcd3ee8377ca1651a1f948e3fedf3f1a5",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-0c8852c50251",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "0c8852c50251b198d124fbeaa416d696bc4d39c1b0c43487df23e8e03a47e831",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "concept_available",
+          "note": "Storyboard concept available; exact current-character shot art is not accepted."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "needed",
+          "note": "No linked shot-specific video exists; choose a still before a new motion proof."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "not_prepared",
+          "note": "No Comfy run is bound to this shot. Define the required change after choosing picture and audio."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [],
+      "nextStep": {
+        "owner": "Grok + Nova",
+        "action": "Select or create one still that matches this shot and the current character references, then choose one action for a bounded video proof."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot."
+    },
+    {
+      "id": "S03A",
+      "project": "hon",
+      "title": "A glance away from the money",
+      "sourceTitle": "A glance away from the money",
+      "sectionID": "S03",
+      "sectionLabel": "[Chorus] Â· First doubt in the hook",
+      "panelIDs": [],
+      "panelAssetIDs": [],
+      "sourceShotIDs": [
+        "S03A"
+      ],
+      "mappingStatus": "no_panel_mapping",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "rap_lipsync",
+      "materials": [
+        {
+          "assetID": "GEM-C0823C60",
+          "role": "reusable_performance_candidate",
+          "status": "user_selected_source",
+          "sha256": "b5deff1982da0cbbdee24a7dfc253fe6825018549a37ca531c7b3586cdbee525",
+          "note": "User-preferred ten-second club/cantina montage. Reuse is a proposed chorus connection, not approval of every detail or a match to the planned ramp/cockpit setting. Retired brow dice remain."
+        },
+        {
+          "assetID": "HD-AUDIO-REPLACE-V001",
+          "role": "soundtrack_proof",
+          "status": "technical_proof_available",
+          "sha256": "611b25e2f038e225be1fcf086163788c64b430d8aa0c12816e236031a93ce3f7",
+          "note": "Ten-second local picture-preserving soundtrack swap. Audio is song 0:00â€“0:10, selected as a technical test; lyric placement, listening, lip sync and creative acceptance are not established."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "needed",
+          "note": "No dedicated panel is mapped yet."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "candidate_available",
+          "note": "Review existing footage first; only generate if the selected shot needs a new take."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "local_proof_cloud_prepared",
+          "note": "Local soundtrack proof exists. Saved Cloud soundtrack graph is unexecuted; lip-sync is a separate unexecuted candidate."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [
+        "comfy-soundtrack",
+        "comfy-lipsync"
+      ],
+      "taskIDs": [],
+      "nextStep": {
+        "owner": "Ziggy + Nova",
+        "action": "Choose the repeated chorus phrase and review whether the existing performance can convey the first doubt. This shot has no dedicated panel mapping yet."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot. No supplied SB panel currently maps to this canonical shot; keep it visible as an unmapped planning item."
+    },
+    {
+      "id": "S04A",
+      "project": "hon",
+      "title": "Leia surveys the junky home",
+      "sourceTitle": "Leia surveys the junky home",
+      "sectionID": "S04",
+      "sectionLabel": "[Verse 2] Â· A home and a crew",
+      "panelIDs": [],
+      "panelAssetIDs": [],
+      "sourceShotIDs": [
+        "S04A"
+      ],
+      "mappingStatus": "no_panel_mapping",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "image_to_video",
+      "materials": [],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "needed",
+          "note": "No dedicated panel is mapped yet."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "needed",
+          "note": "No linked shot-specific video exists; choose a still before a new motion proof."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "not_prepared",
+          "note": "No Comfy run is bound to this shot. Define the required change after choosing picture and audio."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [],
+      "nextStep": {
+        "owner": "Grok + Nova",
+        "action": "Choose or create a dedicated shot still and connect a storyboard panel; no mapped art or shot-specific video is recorded."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot. No supplied SB panel currently maps to this canonical shot; keep it visible as an unmapped planning item."
+    },
+    {
+      "id": "S04B",
+      "project": "hon",
+      "title": "Chewie drops the beat",
+      "sourceTitle": "Chewie drops the beat",
+      "sectionID": "S04",
+      "sectionLabel": "[Verse 2] Â· A home and a crew",
+      "panelIDs": [
+        "SB-05",
+        "SB-18"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-6e8eb6a956c9",
+        "HD-DROP-b443c1d21d74"
+      ],
+      "sourceShotIDs": [
+        "S04B"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "performance_transfer",
+      "materials": [
+        {
+          "assetID": "HD-DROP-6e8eb6a956c9",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "6e8eb6a956c9146a0adc3f1c8c3c71db7d0cc34bbf646f4d681cd6e54ae24428",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-b443c1d21d74",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "b443c1d21d7481ca8d8fa7af54fe88ad38f526bca1d0260c5d9decd7a38418c0",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "concept_available",
+          "note": "Storyboard concept available; exact current-character shot art is not accepted."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "needed",
+          "note": "No linked shot-specific video exists; choose a still before a new motion proof."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "not_prepared",
+          "note": "No Comfy run is bound to this shot. Define the required change after choosing picture and audio."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [],
+      "nextStep": {
+        "owner": "Grok + Nova",
+        "action": "Select or create one still that matches this shot and the current character references, then choose one action for a bounded video proof."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot."
+    },
+    {
+      "id": "S04C",
+      "project": "hon",
+      "title": "The protection promise",
+      "sourceTitle": "The protection promise",
+      "sectionID": "S04",
+      "sectionLabel": "[Verse 2] Â· A home and a crew",
+      "panelIDs": [
+        "SB-17"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-baf5e3ccb48f"
+      ],
+      "sourceShotIDs": [
+        "S04C"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "rap_lipsync",
+      "materials": [
+        {
+          "assetID": "HD-DROP-baf5e3ccb48f",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "baf5e3ccb48f63050a190151fa575f41445d5c6a4a788f8ec9df196515cd6fac",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "concept_available",
+          "note": "Storyboard concept available; exact current-character shot art is not accepted."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "needed",
+          "note": "No linked shot-specific video exists; choose a still before a new motion proof."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "not_prepared",
+          "note": "No Comfy run is bound to this shot. Define the required change after choosing picture and audio."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [],
+      "nextStep": {
+        "owner": "Grok + Nova",
+        "action": "Select or create one still that matches this shot and the current character references, then choose one action for a bounded video proof."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot."
+    },
+    {
+      "id": "S05A",
+      "project": "hon",
+      "title": "Thrusters light",
+      "sourceTitle": "Thrusters light",
+      "sectionID": "S05",
+      "sectionLabel": "[Bridge] Â· First ignition",
+      "panelIDs": [],
+      "panelAssetIDs": [],
+      "sourceShotIDs": [
+        "S05A"
+      ],
+      "mappingStatus": "no_panel_mapping",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "image_to_video",
+      "materials": [],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "needed",
+          "note": "No dedicated panel is mapped yet."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "needed",
+          "note": "No linked shot-specific video exists; choose a still before a new motion proof."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "not_prepared",
+          "note": "No Comfy run is bound to this shot. Define the required change after choosing picture and audio."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [],
+      "nextStep": {
+        "owner": "Grok + Nova",
+        "action": "Choose or create a dedicated shot still and connect a storyboard panel; no mapped art or shot-specific video is recorded."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot. No supplied SB panel currently maps to this canonical shot; keep it visible as an unmapped planning item."
+    },
+    {
+      "id": "S06A",
+      "project": "hon",
+      "title": "The copilot's look",
+      "sourceTitle": "The copilot's look",
+      "sectionID": "S06",
+      "sectionLabel": "[Chorus] Â· Chewie sees through him",
+      "panelIDs": [
+        "SB-18"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-b443c1d21d74"
+      ],
+      "sourceShotIDs": [
+        "S06A"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "image_to_video",
+      "materials": [
+        {
+          "assetID": "HD-DROP-b443c1d21d74",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "b443c1d21d7481ca8d8fa7af54fe88ad38f526bca1d0260c5d9decd7a38418c0",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "concept_available",
+          "note": "Storyboard concept available; exact current-character shot art is not accepted."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "needed",
+          "note": "No linked shot-specific video exists; choose a still before a new motion proof."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "not_prepared",
+          "note": "No Comfy run is bound to this shot. Define the required change after choosing picture and audio."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [],
+      "nextStep": {
+        "owner": "Grok + Nova",
+        "action": "Select or create one still that matches this shot and the current character references, then choose one action for a bounded video proof."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot."
+    },
+    {
+      "id": "S07A",
+      "project": "hon",
+      "title": "Still has not hit the gas",
+      "sourceTitle": "Still has not hit the gas",
+      "sectionID": "S07",
+      "sectionLabel": "[Verse 2] Â· The clean exit and the choice",
+      "panelIDs": [
+        "SB-19",
+        "SB-20",
+        "SB-22"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-d3f1eb0d0504",
+        "HD-DROP-3bc8b565e14c",
+        "HD-DROP-825d9fd99e3d"
+      ],
+      "sourceShotIDs": [
+        "S07A"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "image_to_video",
+      "materials": [
+        {
+          "assetID": "HD-DROP-d3f1eb0d0504",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "d3f1eb0d0504fbde537218e7c49d156b022062b481a7667c51d63844dfc7b0cc",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-3bc8b565e14c",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "3bc8b565e14c0c20c3cf63ca8cc704573383d53d204a5eaf5b453e09f8e9164a",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-825d9fd99e3d",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "825d9fd99e3de8a711e33840e1b14a0257f0cfd9e99d0b01dc2320c0d2e46466",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "concept_available",
+          "note": "Storyboard concept available; exact current-character shot art is not accepted."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "needed",
+          "note": "No linked shot-specific video exists; choose a still before a new motion proof."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "not_prepared",
+          "note": "No Comfy run is bound to this shot. Define the required change after choosing picture and audio."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [],
+      "nextStep": {
+        "owner": "Grok + Nova",
+        "action": "Select or create one still that matches this shot and the current character references, then choose one action for a bounded video proof."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot."
+    },
+    {
+      "id": "S07B",
+      "project": "hon",
+      "title": "Swing her back",
+      "sourceTitle": "Swing her back",
+      "sectionID": "S07",
+      "sectionLabel": "[Verse 2] Â· The clean exit and the choice",
+      "panelIDs": [
+        "SB-21",
+        "SB-23"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-88f20c203f5b",
+        "HD-DROP-e693f5f7bff1"
+      ],
+      "sourceShotIDs": [
+        "S07B"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "image_to_video",
+      "materials": [
+        {
+          "assetID": "HD-DROP-88f20c203f5b",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "88f20c203f5b3fc228f982ba9bc0ab11e08bbf912f881ff297436185665eed86",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-e693f5f7bff1",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "e693f5f7bff17ce50fda237f81c3a4a83541b4d104556d909a34171c144e8ef2",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "concept_available",
+          "note": "Storyboard concept available; exact current-character shot art is not accepted."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "needed",
+          "note": "No linked shot-specific video exists; choose a still before a new motion proof."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "not_prepared",
+          "note": "No Comfy run is bound to this shot. Define the required change after choosing picture and audio."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [],
+      "nextStep": {
+        "owner": "Grok + Nova",
+        "action": "Select or create one still that matches this shot and the current character references, then choose one action for a bounded video proof."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot."
+    },
+    {
+      "id": "S08A",
+      "project": "hon",
+      "title": "The committed control movement",
+      "sourceTitle": "The committed control movement",
+      "sectionID": "S08",
+      "sectionLabel": "[Bridge] Â· Second ignition",
+      "panelIDs": [
+        "SB-23"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-e693f5f7bff1"
+      ],
+      "sourceShotIDs": [
+        "S08A"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "performance_transfer",
+      "materials": [
+        {
+          "assetID": "HD-DROP-e693f5f7bff1",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "e693f5f7bff17ce50fda237f81c3a4a83541b4d104556d909a34171c144e8ef2",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "concept_available",
+          "note": "Storyboard concept available; exact current-character shot art is not accepted."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "needed",
+          "note": "No linked shot-specific video exists; choose a still before a new motion proof."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "not_prepared",
+          "note": "No Comfy run is bound to this shot. Define the required change after choosing picture and audio."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [],
+      "nextStep": {
+        "owner": "Grok + Nova",
+        "action": "Select or create one still that matches this shot and the current character references, then choose one action for a bounded video proof."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot."
+    },
+    {
+      "id": "S09A",
+      "project": "hon",
+      "title": "Committed performance",
+      "sourceTitle": "Committed performance",
+      "sectionID": "S09",
+      "sectionLabel": "[Chorus] Â· Return toward danger",
+      "panelIDs": [
+        "SB-08",
+        "SB-24"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-e1250a0bce91",
+        "HD-DROP-35f608374a7b"
+      ],
+      "sourceShotIDs": [
+        "S09A"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "rap_lipsync",
+      "materials": [
+        {
+          "assetID": "HD-DROP-e1250a0bce91",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "e1250a0bce91bcd16078f69452504d621e799ddbde5c5e743c7d59a2dd64c4c3",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-35f608374a7b",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "35f608374a7b3a998574fc0d1f05c559a78f16170c3006f5eaadbd1d831bb75d",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "GEM-C0823C60",
+          "role": "reusable_performance_candidate",
+          "status": "user_selected_source",
+          "sha256": "b5deff1982da0cbbdee24a7dfc253fe6825018549a37ca531c7b3586cdbee525",
+          "note": "User-preferred ten-second club/cantina montage. Reuse is a proposed chorus connection, not approval of every detail or a match to the planned ramp/cockpit setting. Retired brow dice remain."
+        },
+        {
+          "assetID": "HD-AUDIO-REPLACE-V001",
+          "role": "soundtrack_proof",
+          "status": "technical_proof_available",
+          "sha256": "611b25e2f038e225be1fcf086163788c64b430d8aa0c12816e236031a93ce3f7",
+          "note": "Ten-second local picture-preserving soundtrack swap. Audio is song 0:00â€“0:10, selected as a technical test; lyric placement, listening, lip sync and creative acceptance are not established."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "concept_available",
+          "note": "Storyboard concept available; exact current-character shot art is not accepted."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "candidate_available",
+          "note": "Review existing footage first; only generate if the selected shot needs a new take."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "local_proof_cloud_prepared",
+          "note": "Local soundtrack proof exists. Saved Cloud soundtrack graph is unexecuted; lip-sync is a separate unexecuted candidate."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [
+        "comfy-soundtrack",
+        "comfy-lipsync"
+      ],
+      "taskIDs": [],
+      "nextStep": {
+        "owner": "Ziggy + Nova",
+        "action": "Compare the reusable club performance with the committed cockpit idea. Use it as performance source only until the setting and emotional change are decided."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot. The shared performance clip is a club/cantina source; a cockpit setting would require a deliberate change or a different take."
+    },
+    {
+      "id": "S10A",
+      "project": "hon",
+      "title": "Dinner with Vader",
+      "sourceTitle": "Dinner with Vader",
+      "sectionID": "S10",
+      "sectionLabel": "[Verse 3] Â· The price comes due",
+      "panelIDs": [
+        "SB-07"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-f7c3d8374e68"
+      ],
+      "sourceShotIDs": [
+        "S10A"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "image_to_video",
+      "materials": [
+        {
+          "assetID": "HD-DROP-f7c3d8374e68",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "f7c3d8374e68ae28950230a6ba5a1fb753eac70e870b364c4de80ada8ae1a16b",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "GEM-58328BF1",
+          "role": "dinner_candidate",
+          "status": "user_selected_candidate",
+          "sha256": "8b3c6d5a7ae5b75ab960e066db2b7d1659468b4d75a894b3fc11e63d1f58d4ea",
+          "note": "User-selected dinner candidate also contains a freezing sequence. Exact usable segment, song placement and costume continuity remain unverified."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "concept_available",
+          "note": "Storyboard concept available; exact current-character shot art is not accepted."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "candidate_available",
+          "note": "Review existing footage first; only generate if the selected shot needs a new take."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "not_prepared",
+          "note": "No Comfy run is bound to this shot. Define the required change after choosing picture and audio."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [],
+      "nextStep": {
+        "owner": "Ziggy + Nova",
+        "action": "Review the dinner section of the existing Vader clip and align the actual dinner lyric; identify its exact cut boundaries and appearance defects."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot."
+    },
+    {
+      "id": "S10B",
+      "project": "hon",
+      "title": "I know",
+      "sourceTitle": "I know",
+      "sectionID": "S10",
+      "sectionLabel": "[Verse 3] Â· The price comes due",
+      "panelIDs": [
+        "SB-28",
+        "SB-29",
+        "SB-30",
+        "SB-34"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-4964cf10eb47",
+        "HD-DROP-d4f916925c82",
+        "HD-DROP-32580c30003c",
+        "HD-DROP-4639c31e55bc"
+      ],
+      "sourceShotIDs": [
+        "S10B"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "rap_lipsync",
+      "materials": [
+        {
+          "assetID": "HD-DROP-4964cf10eb47",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "4964cf10eb47225588610dda058a3f7485a461e2606d4f99814be28419139f42",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-d4f916925c82",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "d4f916925c822861fb7e9c0367f3810fdd64a24e776622d1081debdd9b2bf979",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-32580c30003c",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "32580c30003cabab3f2ab222c315995840d563429aad27659e41b0bd3ebec9ca",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-4639c31e55bc",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "4639c31e55bcd15353f242d4c197ecc12f7c61ed7b0c99ad32c7765db5043dac",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "concept_available",
+          "note": "Storyboard concept available; exact current-character shot art is not accepted."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "needed",
+          "note": "No linked shot-specific video exists; choose a still before a new motion proof."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "not_prepared",
+          "note": "No Comfy run is bound to this shot. Define the required change after choosing picture and audio."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [],
+      "nextStep": {
+        "owner": "Grok + Nova",
+        "action": "Select or create one still that matches this shot and the current character references, then choose one action for a bounded video proof."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot."
+    },
+    {
+      "id": "S10C",
+      "project": "hon",
+      "title": "Carbon Knight",
+      "sourceTitle": "Carbon Knight",
+      "sectionID": "S10",
+      "sectionLabel": "[Verse 3] Â· The price comes due",
+      "panelIDs": [
+        "SB-25",
+        "SB-26",
+        "SB-27"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-e397f8389a14",
+        "HD-DROP-4aadd9404769",
+        "HD-DROP-16ad386979c6"
+      ],
+      "sourceShotIDs": [
+        "S10C"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "image_to_video",
+      "materials": [
+        {
+          "assetID": "HD-DROP-e397f8389a14",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "e397f8389a140aa22275eae51cbb0471d065a2ebc1662415be691d870e2f03c0",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-4aadd9404769",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "4aadd940476960e787e32c54abe03ebddbe7c263cd1bbb827ad1cd07ea3569c7",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-16ad386979c6",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "16ad386979c6b27642d99d8e20e4a96e57e6e1e74d9a0ae52fd5263c4d1e7895",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "GEM-58328BF1",
+          "role": "carbon_freeze_candidate",
+          "status": "user_selected_candidate",
+          "sha256": "8b3c6d5a7ae5b75ab960e066db2b7d1659468b4d75a894b3fc11e63d1f58d4ea",
+          "note": "User-selected dinner candidate also contains a freezing sequence. Exact usable segment, song placement and costume continuity remain unverified."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "concept_available",
+          "note": "Storyboard concept available; exact current-character shot art is not accepted."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "candidate_available",
+          "note": "Review existing footage first; only generate if the selected shot needs a new take."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "not_prepared",
+          "note": "No Comfy run is bound to this shot. Define the required change after choosing picture and audio."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [],
+      "nextStep": {
+        "owner": "Ziggy + Nova",
+        "action": "Review the chamber/carbon-freeze section of the existing dinner clip; check costume continuity and align the Carbon Knight phrase before any new render."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot."
+    },
+    {
+      "id": "S11A",
+      "project": "hon",
+      "title": "The refrain changes meaning",
+      "sourceTitle": "The refrain changes meaning",
+      "sectionID": "S11",
+      "sectionLabel": "[Final Chorus] Â· The last bill",
+      "panelIDs": [
+        "SB-01",
+        "SB-34"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-725c38458fd8",
+        "HD-DROP-4639c31e55bc"
+      ],
+      "sourceShotIDs": [
+        "S11A"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "rap_lipsync",
+      "materials": [
+        {
+          "assetID": "HD-DROP-725c38458fd8",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "725c38458fd8e8d6cff78c1c330368e1057333ab8dc84a900070065f02f02ff8",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-4639c31e55bc",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "4639c31e55bcd15353f242d4c197ecc12f7c61ed7b0c99ad32c7765db5043dac",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "GEM-C0823C60",
+          "role": "reusable_performance_candidate",
+          "status": "user_selected_source",
+          "sha256": "b5deff1982da0cbbdee24a7dfc253fe6825018549a37ca531c7b3586cdbee525",
+          "note": "User-preferred ten-second club/cantina montage. Reuse is a proposed chorus connection, not approval of every detail or a match to the planned ramp/cockpit setting. Retired brow dice remain."
+        },
+        {
+          "assetID": "HD-AUDIO-REPLACE-V001",
+          "role": "soundtrack_proof",
+          "status": "technical_proof_available",
+          "sha256": "611b25e2f038e225be1fcf086163788c64b430d8aa0c12816e236031a93ce3f7",
+          "note": "Ten-second local picture-preserving soundtrack swap. Audio is song 0:00â€“0:10, selected as a technical test; lyric placement, listening, lip sync and creative acceptance are not established."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "concept_available",
+          "note": "Storyboard concept available; exact current-character shot art is not accepted."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "candidate_available",
+          "note": "Review existing footage first; only generate if the selected shot needs a new take."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "local_proof_cloud_prepared",
+          "note": "Local soundtrack proof exists. Saved Cloud soundtrack graph is unexecuted; lip-sync is a separate unexecuted candidate."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [
+        "comfy-soundtrack",
+        "comfy-lipsync"
+      ],
+      "taskIDs": [],
+      "nextStep": {
+        "owner": "Ziggy + Nova",
+        "action": "Select an earlier performance moment that can recur after the sacrifice; align the final chorus separately and decide the editorial juxtaposition."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot."
+    },
+    {
+      "id": "S12A",
+      "project": "hon",
+      "title": "Chewie holds the room",
+      "sourceTitle": "Chewie holds the room",
+      "sectionID": "S12",
+      "sectionLabel": "[Outro] Â· Outro and acknowledgement",
+      "panelIDs": [
+        "SB-31",
+        "SB-32",
+        "SB-35",
+        "SB-36"
+      ],
+      "panelAssetIDs": [
+        "HD-DROP-76b5b1730778",
+        "HD-DROP-39ede31230fd",
+        "HD-DROP-a2587d798b7c",
+        "HD-DROP-ec55fb59f604"
+      ],
+      "sourceShotIDs": [
+        "S12A"
+      ],
+      "mappingStatus": "semantic_crosswalk_only",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "routeFamily": "image_to_video",
+      "materials": [
+        {
+          "assetID": "HD-DROP-76b5b1730778",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "76b5b173077811a2f99a97e42593b1f372e004e2080720d1e3c29cbf3eeaab3f",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-39ede31230fd",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "39ede31230fda9ab878922388472554d71bfdfc3baf8765fe28dd8ddd694396b",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-a2587d798b7c",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "a2587d798b7c4527c69e93135c197043bd1b459d2cc6b9f2c180f41ba20db05e",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        },
+        {
+          "assetID": "HD-DROP-ec55fb59f604",
+          "role": "storyboard_concept",
+          "status": "available_concept",
+          "sha256": "ec55fb59f6048b8c02de02b3a87346d4fe204df1339d4b03bbfa2aa787a64a2a",
+          "note": "Existing story panel: composition/beat reference; not an accepted current-character frame."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Obtain art",
+          "status": "concept_available",
+          "note": "Storyboard concept available; exact current-character shot art is not accepted."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "needed",
+          "note": "No linked shot-specific video exists; choose a still before a new motion proof."
+        },
+        {
+          "id": "comfy",
+          "label": "Comfy",
+          "status": "not_prepared",
+          "note": "No Comfy run is bound to this shot. Define the required change after choosing picture and audio."
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Review motion, identity/details, lyric alignment, audio and acceptance for the actual selected take."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [],
+      "nextStep": {
+        "owner": "Grok + Nova",
+        "action": "Select or create one still that matches this shot and the current character references, then choose one action for a bounded video proof."
+      },
+      "note": "Panel associations come from the existing semantic crosswalk; they do not establish song timing. Existing footage is candidate material, not completion of this shot."
+    },
+    {
+      "id": "HON-IDEA-LIGHTSPEED-20261009",
+      "project": "hon",
+      "title": "Lightspeed · overhead lever and pilot recoil",
+      "sourceTitle": "Lightspeed · overhead lever and pilot recoil",
+      "sectionID": null,
+      "sectionLabel": "Placement pending · review-derived scene",
+      "panelIDs": [],
+      "panelAssetIDs": [],
+      "sourceShotIDs": [],
+      "mappingStatus": "supplemental_user_scene_unplaced",
+      "stage": "detailed_design",
+      "acceptance": "not_accepted",
+      "temporalVariant": "current",
+      "routeFamily": "image_to_video",
+      "materials": [
+        {
+          "assetID": "HD-DROP-1225728294b2",
+          "sha256": "1225728294b297d823069a58563acfb558657d087269bc40df42c03eb52bff2b",
+          "role": "reviewed_scene_source",
+          "status": "needs_fixes",
+          "note": "User marked this source detailed design. Related to control-movement storytelling, but separate from canonical S08A hand/throttle-push composition. Exact song placement pending."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Prepare still",
+          "status": "correction_pending",
+          "note": "User marked this source detailed design. Related to control-movement storytelling, but separate from canonical S08A hand/throttle-push composition. Exact song placement pending."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "not_started"
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending"
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [
+        "grok-hon-pilot-corrections",
+        "gemini-hon-lightspeed-pilot"
+      ],
+      "nextStep": {
+        "owner": "Grok → Gemini / CFA",
+        "action": "Correct protruding tooth/head details, then prepare Gemini motion: overhead lever pull, forward surge and seat recoil."
+      },
+      "note": "User marked this source detailed design. Related to control-movement storytelling, but separate from canonical S08A hand/throttle-push composition. Exact song placement pending.",
+      "sourceReviewIntakeID": "HON-REVIEW-20261009-162912"
+    },
+    {
+      "id": "HON-IDEA-YOUNGER-PILOT-20261009",
+      "project": "hon",
+      "title": "Younger Dolo · pilot flashback coverage",
+      "sourceTitle": "Younger Dolo · pilot flashback coverage",
+      "sectionID": null,
+      "sectionLabel": "Placement pending · review-derived scene",
+      "panelIDs": [],
+      "panelAssetIDs": [],
+      "sourceShotIDs": [],
+      "mappingStatus": "supplemental_user_scene_unplaced",
+      "stage": "detailed_design",
+      "acceptance": "not_accepted",
+      "temporalVariant": "younger_years_flashback",
+      "routeFamily": "image_to_video",
+      "materials": [
+        {
+          "assetID": "HD-DROP-104b30b1f4b7",
+          "sha256": "104b30b1f4b7af4c7c3d4ee94405789198e558a41ade560562ca966f7e1dfcd6",
+          "role": "reviewed_scene_source",
+          "status": "scoped_concept_kept",
+          "note": "User keeps fewer tattoos/earlier teeth for a flashback or younger-era option. Requested identity reference is not approved and does not replace the current head. Exact song placement pending."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Prepare still",
+          "status": "scoped_reference_requested",
+          "note": "User keeps fewer tattoos/earlier teeth for a flashback or younger-era option. Requested identity reference is not approved and does not replace the current head. Exact song placement pending."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "not_started"
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending"
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [
+        "hon-younger-pilot-coverage"
+      ],
+      "nextStep": {
+        "owner": "Grok → Gemini / CFA",
+        "action": "Prepare a separate younger-era brief and finite switch/control/piloting coverage list for Grok/Gemini."
+      },
+      "note": "User keeps fewer tattoos/earlier teeth for a flashback or younger-era option. Requested identity reference is not approved and does not replace the current head. Exact song placement pending.",
+      "sourceReviewIntakeID": "HON-REVIEW-20261009-162912"
+    },
+    {
+      "id": "HON-IDEA-BAR-BARTENDER-20261009",
+      "project": "hon",
+      "title": "Hon at the bar with candidate 09",
+      "sourceTitle": "Hon Dolo at the bar",
+      "sectionID": null,
+      "sectionLabel": "Placement pending - user cast direction",
+      "panelIDs": [],
+      "panelAssetIDs": [],
+      "sourceShotIDs": [],
+      "mappingStatus": "supplemental_user_scene_unplaced",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "timing": "unassigned",
+      "routeFamily": "image_to_video",
+      "characterCollectionID": "hon:cast-bartender",
+      "materials": [
+        {
+          "assetID": "HD-RETURN-80d3ca6a6858",
+          "sha256": "80d3ca6a6858ee40bf39f6e4d224121ab1c96b498f10a3de18f1d8b6f115debb",
+          "role": "user_assigned_character_reference",
+          "status": "available_candidate_role_assigned",
+          "note": "User assigned this character role; existing visual QA remains open. Portrait availability does not establish a generated scene or whole-character approval."
+        },
+        {
+          "assetID": "HD-DROP-b18c4a123579",
+          "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+          "role": "locked_jewelry_component",
+          "status": "user_accepted_component",
+          "acceptanceScope": "visible_wrist_jewelry_only",
+          "note": "Ziggy locks the SB-06 gold curb-link wrist chain and visible black wrist band as permanent Dolo accessories. Preserve when visible; hidden wrists are occluded. Hidden clasp/watch face, exact dimensions and anatomical side are not established. This is not whole-image or shot acceptance."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Prepare shot frame",
+          "status": "needed",
+          "note": "Prepare one bar encounter frame with Hon Dolo and the assigned candidate-09 bartender. Check the current Hon identity, visible hand jewelry and two-character separation; choose the musical placement later."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "not_started"
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Check selected scene continuity, character placement and timing; no accepted video exists."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [
+        "hon-cast-bar-and-entrance"
+      ],
+      "nextStep": {
+        "owner": "CFA / Grok / Gemini",
+        "action": "Prepare one bar encounter frame with Hon Dolo and the assigned candidate-09 bartender. Check the current Hon identity, visible hand jewelry and two-character separation; choose the musical placement later."
+      },
+      "note": "User scene intent, not an assigned source panel or lyric interval. Prepare a frame before a motion test. No dialogue, later conflict or additional plot event is decided. Dolo permanent wrist jewelry applies where visible.",
+      "sourceIntentID": "HON-BAR-BARTENDER-20261009",
+      "sourceIntentPath": "docs/notes/explorable_world/comfy/projects/visual_library/cast_collections.json"
+    },
+    {
+      "id": "HON-IDEA-CLUB-BOUNCER-ENTRANCE-20261009",
+      "project": "hon",
+      "title": "Club entrance - imposing bouncer introduction",
+      "sourceTitle": "Club entrance and subsequent club coverage",
+      "sectionID": null,
+      "sectionLabel": "Placement pending - user cast direction",
+      "panelIDs": [],
+      "panelAssetIDs": [],
+      "sourceShotIDs": [],
+      "mappingStatus": "supplemental_user_scene_unplaced",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "timing": "unassigned",
+      "routeFamily": "image_to_video",
+      "characterCollectionID": "hon:cast-bouncer",
+      "materials": [
+        {
+          "assetID": "HD-RETURN-cafa39484145",
+          "sha256": "cafa39484145fb8dda67c9684134d6d6449f3c5cb66ac4033e27a8f79a28090a",
+          "role": "user_assigned_character_reference",
+          "status": "available_candidate_role_assigned",
+          "note": "User assigned this character role; existing visual QA remains open. Portrait availability does not establish a generated scene or whole-character approval."
+        },
+        {
+          "assetID": "HD-DROP-b18c4a123579",
+          "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+          "role": "locked_jewelry_component",
+          "status": "user_accepted_component",
+          "acceptanceScope": "visible_wrist_jewelry_only",
+          "note": "Ziggy locks the SB-06 gold curb-link wrist chain and visible black wrist band as permanent Dolo accessories. Preserve when visible; hidden wrists are occluded. Hidden clasp/watch face, exact dimensions and anatomical side are not established. This is not whole-image or shot acceptance."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Prepare shot frame",
+          "status": "needed",
+          "note": "Prepare an entrance encounter frame that introduces candidate-06 bouncer as large and imposing when Hon Dolo enters. Carry the user's heavy-breathing performance idea into later motion/audio planning; no clip or breathing track is generated yet."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "not_started"
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Check selected scene continuity, character placement and timing; no accepted video exists."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [
+        "hon-cast-bar-and-entrance"
+      ],
+      "nextStep": {
+        "owner": "CFA / Grok / Gemini",
+        "action": "Prepare an entrance encounter frame that introduces candidate-06 bouncer as large and imposing when Hon Dolo enters. Carry the user's heavy-breathing performance idea into later motion/audio planning; no clip or breathing track is generated yet."
+      },
+      "note": "User scene intent, not an assigned source panel or lyric interval. Prepare a frame before a motion test. No dialogue, later conflict or additional plot event is decided. Dolo permanent wrist jewelry applies where visible.",
+      "sourceIntentID": "HON-CLUB-BOUNCER-20261009",
+      "sourceIntentPath": "docs/notes/explorable_world/comfy/projects/visual_library/cast_collections.json"
+    },
+    {
+      "id": "HON-IDEA-CLUB-BOUNCER-BACKGROUND-20261009",
+      "project": "hon",
+      "title": "Club coverage - bouncer remains on duty",
+      "sourceTitle": "Club entrance and subsequent club coverage",
+      "sectionID": null,
+      "sectionLabel": "Placement pending - user cast direction",
+      "panelIDs": [],
+      "panelAssetIDs": [],
+      "sourceShotIDs": [],
+      "mappingStatus": "supplemental_user_scene_unplaced",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "timing": "unassigned",
+      "routeFamily": "image_to_video",
+      "characterCollectionID": "hon:cast-bouncer",
+      "materials": [
+        {
+          "assetID": "HD-RETURN-cafa39484145",
+          "sha256": "cafa39484145fb8dda67c9684134d6d6449f3c5cb66ac4033e27a8f79a28090a",
+          "role": "user_assigned_character_reference",
+          "status": "available_candidate_role_assigned",
+          "note": "User assigned this character role; existing visual QA remains open. Portrait availability does not establish a generated scene or whole-character approval."
+        },
+        {
+          "assetID": "HD-DROP-b18c4a123579",
+          "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+          "role": "locked_jewelry_component",
+          "status": "user_accepted_component",
+          "acceptanceScope": "visible_wrist_jewelry_only",
+          "note": "Ziggy locks the SB-06 gold curb-link wrist chain and visible black wrist band as permanent Dolo accessories. Preserve when visible; hidden wrists are occluded. Hidden clasp/watch face, exact dimensions and anatomical side are not established. This is not whole-image or shot acceptance."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Prepare shot frame",
+          "status": "needed",
+          "note": "Prepare a later club composition with candidate-06 bouncer doing his job in the background. Preserve the same character and duty position established by the entrance shot; do not invent a confrontation or new action."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "not_started"
+        },
+        {
+          "id": "verification",
+          "label": "Verification",
+          "status": "pending",
+          "note": "Check selected scene continuity, character placement and timing; no accepted video exists."
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [
+        "hon-cast-bar-and-entrance"
+      ],
+      "nextStep": {
+        "owner": "CFA / Grok / Gemini",
+        "action": "Prepare a later club composition with candidate-06 bouncer doing his job in the background. Preserve the same character and duty position established by the entrance shot; do not invent a confrontation or new action."
+      },
+      "note": "User scene intent, not an assigned source panel or lyric interval. Prepare a frame before a motion test. No dialogue, later conflict or additional plot event is decided. Dolo permanent wrist jewelry applies where visible.",
+      "sourceIntentID": "HON-CLUB-BOUNCER-20261009",
+      "sourceIntentPath": "docs/notes/explorable_world/comfy/projects/visual_library/cast_collections.json"
+    },
+    {
+      "id": "LAG-JET-01",
+      "project": "lisan",
+      "title": "Jet arrives with a message",
+      "sourceTitle": "Jet Black recurring mission thread",
+      "sectionID": null,
+      "sectionLabel": "Proposed association - LAG-SC-01",
+      "panelIDs": [
+        "LAG-SC-01"
+      ],
+      "panelAssetIDs": [
+        "LAG-c84566f37ef57925"
+      ],
+      "sourceShotIDs": [],
+      "mappingStatus": "proposed_semantic_association",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "timing": "unassigned",
+      "routeFamily": "story_development",
+      "characterCollectionID": "lisan:cast-jet-black-collection",
+      "narrativeThreadID": "LAG-JET-MISSION-20261009",
+      "materials": [
+        {
+          "assetID": "LAG-CAST-JET-BLACK-REF-02",
+          "sha256": "c07327fcf456e328a303a227ac4c11edf96352c913206df862d748145c9773bc",
+          "role": "jet_design_reference",
+          "status": "user_supplied_reference",
+          "note": "Solo front/body reference. Round cosmic sphere, black shirt and tie, cosmic character-right hand and black-gloved character-left hand. Keep source-specific differences; unseen construction is unknown."
+        },
+        {
+          "assetID": "LAG-CAST-JET-BLACK-REF-01",
+          "sha256": "e2188aa3de4756017fa82d5b14757d24993033604de18625fd9a8a08044d3c1b",
+          "role": "two_character_context",
+          "status": "user_supplied_reference",
+          "note": "User-supplied Jet/Lisan scene context. Earlier both-cosmic-hands/lapel-pin rendition; Lisan here is not his current identity master."
+        },
+        {
+          "assetID": "LAG-JET-BLACK-DROP-048b71751cb2",
+          "sha256": "048b71751cb2a070ed1556aaeefaaac5ee9feb892afe7df5ee2cd22aced8af74",
+          "role": "arrival_composition",
+          "status": "available_unapproved_composition_candidate",
+          "note": "Individually inspected: Jet in swirling sand. Broken cube and lapel glyphs conflict with selected solo reference. Arrival staging only; a broken cube or teleportation power is not established."
+        },
+        {
+          "assetID": "LAG-c84566f37ef57925",
+          "sha256": "c84566f37ef579257ebb702846533e06d99dabcdac79b0732be26608f75fbb12",
+          "role": "storyboard_concept",
+          "status": "existing_scene_proposed_association",
+          "note": "Existing source panel; proposed semantic association only. Original QA and timing limitations remain."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "direction",
+          "label": "Story direction",
+          "status": "user_confirmed",
+          "note": "Introduce the watcher and a timely message from the outer world."
+        },
+        {
+          "id": "reference",
+          "label": "Available references",
+          "status": "received_needs_scoped_review",
+          "note": "User references and inspected composition candidates linked; defects remain visible in each material note."
+        },
+        {
+          "id": "story",
+          "label": "Develop scene and placement",
+          "status": "prepared_not_sent",
+          "note": "Possible signal/voice introduction alongside the existing mirror opening; use only if it does not crowd the opening."
+        },
+        {
+          "id": "art",
+          "label": "Prepare shot frame",
+          "status": "pending_scene_choice",
+          "note": "Use current character standards to correct the chosen composition after story review."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "not_started"
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [
+        "gemini-lisan-jet-mission-thread"
+      ],
+      "nextStep": {
+        "owner": "Gemini / CFA",
+        "action": "Gemini: propose a brief arrival/message association with LAG-SC-01, keeping the existing mirror scene intact and the message wording open."
+      },
+      "note": "Introduce the watcher and a timely message from the outer world. Possible signal/voice introduction alongside the existing mirror opening; use only if it does not crowd the opening. The story function is confirmed; staging, message details and exact timing remain proposals.",
+      "sourceIntentID": "LAG-JET-MISSION-20261009",
+      "sourceIntentPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/jet_black_mission_20261009/storyline.json"
+    },
+    {
+      "id": "LAG-JET-02",
+      "project": "lisan",
+      "title": "The blueprint is freely shared",
+      "sourceTitle": "Jet Black recurring mission thread",
+      "sectionID": null,
+      "sectionLabel": "Proposed association - LAG-SC-24, LAG-SC-25",
+      "panelIDs": [
+        "LAG-SC-24",
+        "LAG-SC-25"
+      ],
+      "panelAssetIDs": [
+        "LAG-15ad12b4da5d4aee",
+        "LAG-94b6449bb2ba60ca"
+      ],
+      "sourceShotIDs": [],
+      "mappingStatus": "proposed_semantic_association",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "timing": "unassigned",
+      "routeFamily": "story_development",
+      "characterCollectionID": "lisan:cast-jet-black-collection",
+      "narrativeThreadID": "LAG-JET-MISSION-20261009",
+      "materials": [
+        {
+          "assetID": "LAG-CAST-JET-BLACK-REF-02",
+          "sha256": "c07327fcf456e328a303a227ac4c11edf96352c913206df862d748145c9773bc",
+          "role": "jet_design_reference",
+          "status": "user_supplied_reference",
+          "note": "Solo front/body reference. Round cosmic sphere, black shirt and tie, cosmic character-right hand and black-gloved character-left hand. Keep source-specific differences; unseen construction is unknown."
+        },
+        {
+          "assetID": "LAG-JET-BLACK-DROP-ccd25e07763a",
+          "sha256": "ccd25e07763af8731534ff546178aabcceb28429535ead2c56e5cf47edba6274",
+          "role": "briefing_composition",
+          "status": "available_unapproved_composition_candidate",
+          "note": "Individually inspected: Jet presents cube to Lisan. Lisan has AL on cheek/chin rather than current lettering; Jet has both cosmic hands and lapel glyphs. Reuse composition, correct character details."
+        },
+        {
+          "assetID": "LAG-JET-BLACK-DROP-23e4575aabef",
+          "sha256": "23e4575aabef86d1e9a0c972df82d9d1841ce086a3bb1a46a3f8566fe5fb3eb6",
+          "role": "blueprint_insert_composition",
+          "status": "available_unapproved_composition_candidate",
+          "note": "Individually inspected: blue terrain/network projection above a crystal fragment. No Jet head visible; Jet attribution is provider metadata. A projected blueprint is a visual proposal; the image itself does not prove free/public access or canonize a crystal artifact."
+        },
+        {
+          "assetID": "LAG-15ad12b4da5d4aee",
+          "sha256": "15ad12b4da5d4aee4e780b9e9671f9bb7b73fbf2fdc3151cdeb7745a8c903e6b",
+          "role": "storyboard_concept",
+          "status": "existing_scene_proposed_association",
+          "note": "Existing source panel; proposed semantic association only. Original QA and timing limitations remain."
+        },
+        {
+          "assetID": "LAG-94b6449bb2ba60ca",
+          "sha256": "94b6449bb2ba60ca00d800b29e04e151bf57b9314923f680c7c42c4a23c25ead",
+          "role": "storyboard_concept",
+          "status": "existing_scene_proposed_association",
+          "note": "Existing source panel; proposed semantic association only. Original QA and timing limitations remain."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "direction",
+          "label": "Story direction",
+          "status": "user_confirmed",
+          "note": "Make clear that the blueprint is available to everyone and helps people unlock their capabilities."
+        },
+        {
+          "id": "reference",
+          "label": "Available references",
+          "status": "received_needs_scoped_review",
+          "note": "User references and inspected composition candidates linked; defects remain visible in each material note."
+        },
+        {
+          "id": "story",
+          "label": "Develop scene and placement",
+          "status": "prepared_not_sent",
+          "note": "The source cues engineers and designing convo offer a possible creation/planning connection."
+        },
+        {
+          "id": "art",
+          "label": "Prepare shot frame",
+          "status": "pending_scene_choice",
+          "note": "Use current character standards to correct the chosen composition after story review."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "not_started"
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [
+        "gemini-lisan-jet-mission-thread"
+      ],
+      "nextStep": {
+        "owner": "Gemini / CFA",
+        "action": "Gemini: develop a concise exchange or visual action for the shared blueprint using the existing briefing and map compositions; distinguish user premise from proposed display mechanics."
+      },
+      "note": "Make clear that the blueprint is available to everyone and helps people unlock their capabilities. The source cues engineers and designing convo offer a possible creation/planning connection. The story function is confirmed; staging, message details and exact timing remain proposals.",
+      "sourceIntentID": "LAG-JET-MISSION-20261009",
+      "sourceIntentPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/jet_black_mission_20261009/storyline.json"
+    },
+    {
+      "id": "LAG-JET-03",
+      "project": "lisan",
+      "title": "Lisan chooses the next action",
+      "sourceTitle": "Jet Black recurring mission thread",
+      "sectionID": null,
+      "sectionLabel": "Placement pending - mission launch",
+      "panelIDs": [],
+      "panelAssetIDs": [],
+      "sourceShotIDs": [],
+      "mappingStatus": "unassigned",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "timing": "unassigned",
+      "routeFamily": "story_development",
+      "characterCollectionID": "lisan:cast-jet-black-collection",
+      "narrativeThreadID": "LAG-JET-MISSION-20261009",
+      "materials": [
+        {
+          "assetID": "LAG-CAST-JET-BLACK-REF-02",
+          "sha256": "c07327fcf456e328a303a227ac4c11edf96352c913206df862d748145c9773bc",
+          "role": "jet_design_reference",
+          "status": "user_supplied_reference",
+          "note": "Solo front/body reference. Round cosmic sphere, black shirt and tie, cosmic character-right hand and black-gloved character-left hand. Keep source-specific differences; unseen construction is unknown."
+        },
+        {
+          "assetID": "LAG-JET-BLACK-DROP-23e4575aabef",
+          "sha256": "23e4575aabef86d1e9a0c972df82d9d1841ce086a3bb1a46a3f8566fe5fb3eb6",
+          "role": "blueprint_insert_composition",
+          "status": "available_unapproved_composition_candidate",
+          "note": "Individually inspected: blue terrain/network projection above a crystal fragment. No Jet head visible; Jet attribution is provider metadata. A projected blueprint is a visual proposal; the image itself does not prove free/public access or canonize a crystal artifact."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "direction",
+          "label": "Story direction",
+          "status": "user_confirmed",
+          "note": "Turn Jet's explanation into a quest or next step that Lisan chooses and carries out."
+        },
+        {
+          "id": "reference",
+          "label": "Available references",
+          "status": "received_needs_scoped_review",
+          "note": "User references and inspected composition candidates linked; defects remain visible in each material note."
+        },
+        {
+          "id": "story",
+          "label": "Develop scene and placement",
+          "status": "prepared_not_sent",
+          "note": "No concrete quest objective or matching action has yet been selected. Keep placement open rather than assigning a source scene by guess."
+        },
+        {
+          "id": "art",
+          "label": "Prepare shot frame",
+          "status": "pending_scene_choice",
+          "note": "Use current character standards to correct the chosen composition after story review."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "not_started"
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [
+        "gemini-lisan-jet-mission-thread"
+      ],
+      "nextStep": {
+        "owner": "Gemini / CFA",
+        "action": "Gemini: identify an existing Lisan action that can serve as the first mission step. Return one proposal with a clear objective and prerequisite; no new image batch yet."
+      },
+      "note": "Turn Jet's explanation into a quest or next step that Lisan chooses and carries out. No concrete quest objective or matching action has yet been selected. Keep placement open rather than assigning a source scene by guess. The story function is confirmed; staging, message details and exact timing remain proposals.",
+      "sourceIntentID": "LAG-JET-MISSION-20261009",
+      "sourceIntentPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/jet_black_mission_20261009/storyline.json"
+    },
+    {
+      "id": "LAG-JET-04",
+      "project": "lisan",
+      "title": "Jet returns with a progress report",
+      "sourceTitle": "Jet Black recurring mission thread",
+      "sectionID": null,
+      "sectionLabel": "Proposed association - LAG-SC-32, LAG-SC-35",
+      "panelIDs": [
+        "LAG-SC-32",
+        "LAG-SC-35"
+      ],
+      "panelAssetIDs": [
+        "LAG-f85245e79d6ce60e",
+        "LAG-169630456365dd64"
+      ],
+      "sourceShotIDs": [],
+      "mappingStatus": "proposed_semantic_association",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "timing": "unassigned",
+      "routeFamily": "story_development",
+      "characterCollectionID": "lisan:cast-jet-black-collection",
+      "narrativeThreadID": "LAG-JET-MISSION-20261009",
+      "materials": [
+        {
+          "assetID": "LAG-CAST-JET-BLACK-REF-02",
+          "sha256": "c07327fcf456e328a303a227ac4c11edf96352c913206df862d748145c9773bc",
+          "role": "jet_design_reference",
+          "status": "user_supplied_reference",
+          "note": "Solo front/body reference. Round cosmic sphere, black shirt and tie, cosmic character-right hand and black-gloved character-left hand. Keep source-specific differences; unseen construction is unknown."
+        },
+        {
+          "assetID": "LAG-JET-BLACK-DROP-f59b02d5c59b",
+          "sha256": "f59b02d5c59bb7b50f3d439bcebe0033f2a639efe1d14c291d2516ef37283c08",
+          "role": "progress_report_composition",
+          "status": "available_unapproved_composition_candidate",
+          "note": "Individually inspected: Jet/Lisan campfire and cube. Jet white shirt/lapel glyphs and Lisan lettering/neck ink drift need correction. Staging only."
+        },
+        {
+          "assetID": "LAG-JET-BLACK-DROP-6783755669e4",
+          "sha256": "6783755669e42ce3b208b6951f8a76584994e3c0a3b0f3cab0c31bcaf6d3dd7f",
+          "role": "community_milestone_inspiration",
+          "status": "available_unapproved_composition_candidate",
+          "note": "Individually inspected: Jet and rear-facing Lisan look toward a gathering under a luminous sky. Jet uses helmet/egg head, not the user sphere; cube not visible. Lower-priority composition inspiration; provider Star Reborn plot is not canon."
+        },
+        {
+          "assetID": "LAG-f85245e79d6ce60e",
+          "sha256": "f85245e79d6ce60e25084cdd5456691538da20faa6c713a068b572929b1665ba",
+          "role": "storyboard_concept",
+          "status": "existing_scene_proposed_association",
+          "note": "Existing source panel; proposed semantic association only. Original QA and timing limitations remain."
+        },
+        {
+          "assetID": "LAG-169630456365dd64",
+          "sha256": "169630456365dd641b7cf7713a6a5eae5b7adb1fd5bcf0f7e85fdb4f0876fac6",
+          "role": "storyboard_concept",
+          "status": "existing_scene_proposed_association",
+          "note": "Existing source panel; proposed semantic association only. Original QA and timing limitations remain."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "direction",
+          "label": "Story direction",
+          "status": "user_confirmed",
+          "note": "Show what has been accomplished, what remains and who can now benefit."
+        },
+        {
+          "id": "reference",
+          "label": "Available references",
+          "status": "received_needs_scoped_review",
+          "note": "User references and inspected composition candidates linked; defects remain visible in each material note."
+        },
+        {
+          "id": "story",
+          "label": "Develop scene and placement",
+          "status": "prepared_not_sent",
+          "note": "Quick to listen and hope is greater offer listening and shared-benefit associations; these are alternatives, not two required appearances."
+        },
+        {
+          "id": "art",
+          "label": "Prepare shot frame",
+          "status": "pending_scene_choice",
+          "note": "Use current character standards to correct the chosen composition after story review."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "not_started"
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [
+        "gemini-lisan-jet-mission-thread"
+      ],
+      "nextStep": {
+        "owner": "Gemini / CFA",
+        "action": "Gemini: propose one later progress checkpoint with a specific change since the briefing; assess campfire versus community staging and preserve Lisan's active response."
+      },
+      "note": "Show what has been accomplished, what remains and who can now benefit. Quick to listen and hope is greater offer listening and shared-benefit associations; these are alternatives, not two required appearances. The story function is confirmed; staging, message details and exact timing remain proposals.",
+      "sourceIntentID": "LAG-JET-MISSION-20261009",
+      "sourceIntentPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/jet_black_mission_20261009/storyline.json"
+    },
+    {
+      "id": "LAG-JET-05",
+      "project": "lisan",
+      "title": "A new outer-world dispatch",
+      "sourceTitle": "Jet Black recurring mission thread",
+      "sectionID": null,
+      "sectionLabel": "Proposed association - LAG-SC-48, LAG-SC-50",
+      "panelIDs": [
+        "LAG-SC-48",
+        "LAG-SC-50"
+      ],
+      "panelAssetIDs": [
+        "LAG-748f2a9fd5de7813",
+        "LAG-eece9ab297c5f95d"
+      ],
+      "sourceShotIDs": [],
+      "mappingStatus": "proposed_semantic_association",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "timing": "unassigned",
+      "routeFamily": "story_development",
+      "characterCollectionID": "lisan:cast-jet-black-collection",
+      "narrativeThreadID": "LAG-JET-MISSION-20261009",
+      "materials": [
+        {
+          "assetID": "LAG-CAST-JET-BLACK-REF-02",
+          "sha256": "c07327fcf456e328a303a227ac4c11edf96352c913206df862d748145c9773bc",
+          "role": "jet_design_reference",
+          "status": "user_supplied_reference",
+          "note": "Solo front/body reference. Round cosmic sphere, black shirt and tie, cosmic character-right hand and black-gloved character-left hand. Keep source-specific differences; unseen construction is unknown."
+        },
+        {
+          "assetID": "LAG-JET-BLACK-DROP-5d23f8199374",
+          "sha256": "5d23f81993742e54e4f45b5dd56b644c6b7e9302903d2d02ced8a76d92ef16a3",
+          "role": "next_message_composition",
+          "status": "available_unapproved_composition_candidate",
+          "note": "Individually inspected: observatory pointing composition. Jet white shirt and bare pointing hand, Lisan identity drift; lantern/amulet are not established. Borrow framing only."
+        },
+        {
+          "assetID": "LAG-748f2a9fd5de7813",
+          "sha256": "748f2a9fd5de7813b4d777e5f6e5138c1e5305cc5f25653b671d76507bd5baa0",
+          "role": "storyboard_concept",
+          "status": "existing_scene_proposed_association",
+          "note": "Existing source panel; proposed semantic association only. Original QA and timing limitations remain."
+        },
+        {
+          "assetID": "LAG-eece9ab297c5f95d",
+          "sha256": "eece9ab297c5f95d4c5dc342b920ac3550e5696892b3d5834954316d18a1bd52",
+          "role": "storyboard_concept",
+          "status": "existing_scene_proposed_association",
+          "note": "Existing source panel; proposed semantic association only. Original QA and timing limitations remain."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "direction",
+          "label": "Story direction",
+          "status": "user_confirmed",
+          "note": "Let Jet return with fresh information and make the next decision or mission step legible."
+        },
+        {
+          "id": "reference",
+          "label": "Available references",
+          "status": "received_needs_scoped_review",
+          "note": "User references and inspected composition candidates linked; defects remain visible in each material note."
+        },
+        {
+          "id": "story",
+          "label": "Develop scene and placement",
+          "status": "prepared_not_sent",
+          "note": "Outer world / inner world and signal in the noise offer late-story message associations. Scene 48 breather continuity remains required if reused."
+        },
+        {
+          "id": "art",
+          "label": "Prepare shot frame",
+          "status": "pending_scene_choice",
+          "note": "Use current character standards to correct the chosen composition after story review."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "not_started"
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [
+        "gemini-lisan-jet-mission-thread"
+      ],
+      "nextStep": {
+        "owner": "Gemini / CFA",
+        "action": "Gemini: propose a fresh dispatch around LAG-SC-48 or 50 that follows an accomplishment and leaves Lisan with a clear choice. Keep exact message, dialogue and timing unresolved."
+      },
+      "note": "Let Jet return with fresh information and make the next decision or mission step legible. Outer world / inner world and signal in the noise offer late-story message associations. Scene 48 breather continuity remains required if reused. The story function is confirmed; staging, message details and exact timing remain proposals.",
+      "sourceIntentID": "LAG-JET-MISSION-20261009",
+      "sourceIntentPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/jet_black_mission_20261009/storyline.json"
+    },
+    {
+      "id": "HON-QUARTERS-GRILL-CHANGE-20261009",
+      "project": "hon",
+      "title": "Dolo in his quarters - changing to the external grill",
+      "sourceTitle": "GROK-HD-SB-GRILLUP-v001 · received draft",
+      "sectionID": null,
+      "sectionLabel": "Standalone sequence · music placement pending",
+      "panelIDs": [
+        "GRILL-UP-01",
+        "GRILL-UP-02",
+        "GRILL-UP-03",
+        "GRILL-UP-04",
+        "GRILL-UP-05",
+        "GRILL-UP-06",
+        "GRILL-UP-07",
+        "GRILL-UP-08",
+        "GRILL-UP-09",
+        "GRILL-UP-10"
+      ],
+      "panelAssetIDs": [
+        "HD-GRILLUP-a9e6f58d0b70",
+        "HD-GRILLUP-57bce647c089",
+        "HD-GRILLUP-02659c457fb9",
+        "HD-GRILLUP-894990536803",
+        "HD-GRILLUP-aa4962b0cbaa",
+        "HD-GRILLUP-08541ac0b6d8",
+        "HD-GRILLUP-fde483650ebb",
+        "HD-GRILLUP-2369c3b2f126",
+        "HD-GRILLUP-1c67855e0139",
+        "HD-GRILLUP-5c213b5307ad"
+      ],
+      "sourceShotIDs": [],
+      "mappingStatus": "received_standalone_scene_unplaced",
+      "stage": "preliminary",
+      "acceptance": "not_accepted",
+      "timing": "unassigned",
+      "routeFamily": "storyboard_continuity_repair",
+      "materials": [
+        {
+          "assetID": "HD-DROP-defe480b085f",
+          "sha256": "defe480b085f58e226bf75991c58bd7a16ce30ce9674bac30758c3ae3507a692",
+          "role": "optional_accessory_history",
+          "status": "existing_scoped_reference",
+          "note": "Earlier optional iced-grill evidence only. The received r4 anchor governs this selected scene look; preserve this older source as accessory history."
+        },
+        {
+          "assetID": "HD-DROP-b18c4a123579",
+          "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+          "role": "locked_jewelry_component",
+          "status": "existing_scoped_reference",
+          "note": "User-selected visible gold curb wrist chain and black band. Scope is wrist jewelry only; hidden hardware and anatomical side remain unresolved."
+        },
+        {
+          "assetID": "HD-HAND-LEIGH-PLACEMENT-20261009",
+          "sha256": "21c8518a3deba105ffe12882af32579071b7c7b935a9716b125d9f4946e8dfb0",
+          "role": "hand_art_and_rings_context",
+          "status": "existing_scoped_reference",
+          "note": "Existing character-right hand direction and gold-ring context; exact final Leigh transfer remains unresolved. Do not mirror the tattoo onto the other hand or use this crop as face authority."
+        },
+        {
+          "assetID": "HD-GRILLUP-40064d98db89",
+          "sha256": "40064d98db897276b80085273919ccd79ca377a068dcc2bd23c519e4038ee93e",
+          "role": "selected_external_grill_look",
+          "status": "user_selected_scope",
+          "note": "Received r4 head/iced-grill reference. No lip rings for this selected look; this selection does not approve the storyboard frames or change every grill variant."
+        },
+        {
+          "assetID": "HD-GRILLUP-a9e6f58d0b70",
+          "sha256": "a9e6f58d0b704948f12c9ca1613a81cc16822f7158030bedcca9fc9209c55d9e",
+          "role": "storyboard_concept",
+          "status": "received_draft_needs_correction",
+          "note": "Original select 01; separate untimed sequence. See the panel review and retained source filename."
+        },
+        {
+          "assetID": "HD-GRILLUP-57bce647c089",
+          "sha256": "57bce647c089bbee5e285f4240be128fc16d8e91ade466bc215722caa94f0784",
+          "role": "storyboard_concept",
+          "status": "received_draft_needs_correction",
+          "note": "Original select 02; separate untimed sequence. See the panel review and retained source filename."
+        },
+        {
+          "assetID": "HD-GRILLUP-02659c457fb9",
+          "sha256": "02659c457fb9833daa540b02f929c829ddbd4707ec11a61ba66219c4e74089e1",
+          "role": "storyboard_concept",
+          "status": "received_draft_needs_correction",
+          "note": "Original select 03; separate untimed sequence. See the panel review and retained source filename."
+        },
+        {
+          "assetID": "HD-GRILLUP-894990536803",
+          "sha256": "894990536803c62f979952399dbc6403236e2576841ab439f0adc9b44e5d4f9e",
+          "role": "storyboard_concept",
+          "status": "received_draft_needs_correction",
+          "note": "Original select 04; separate untimed sequence. See the panel review and retained source filename."
+        },
+        {
+          "assetID": "HD-GRILLUP-aa4962b0cbaa",
+          "sha256": "aa4962b0cbaa88662c5330004b47e8a7bd9808e377debf82c45deb7e0a58ed7f",
+          "role": "storyboard_concept",
+          "status": "received_draft_needs_correction",
+          "note": "Original select 05; separate untimed sequence. See the panel review and retained source filename."
+        },
+        {
+          "assetID": "HD-GRILLUP-08541ac0b6d8",
+          "sha256": "08541ac0b6d813d0da9a2316d16b9c2a3ade6ff5b7df658ba961439ce6d9f063",
+          "role": "storyboard_concept",
+          "status": "received_draft_needs_correction",
+          "note": "Original select 06; separate untimed sequence. See the panel review and retained source filename."
+        },
+        {
+          "assetID": "HD-GRILLUP-fde483650ebb",
+          "sha256": "fde483650ebb8e9b0163e06909e69bbbbdee50c9038c9188e80be983454fe9cd",
+          "role": "storyboard_concept",
+          "status": "received_draft_needs_correction",
+          "note": "Original select 07; separate untimed sequence. See the panel review and retained source filename."
+        },
+        {
+          "assetID": "HD-GRILLUP-2369c3b2f126",
+          "sha256": "2369c3b2f126eb2a64750a1a517e2bcfc7352714bb2ee80c109ffad3b9724ed1",
+          "role": "storyboard_concept",
+          "status": "received_draft_needs_correction",
+          "note": "Original select 08; separate untimed sequence. See the panel review and retained source filename."
+        },
+        {
+          "assetID": "HD-GRILLUP-1c67855e0139",
+          "sha256": "1c67855e013939315eb5a25927a099ef8078dce7775f2986d529776ad999d123",
+          "role": "storyboard_concept",
+          "status": "received_draft_needs_correction",
+          "note": "Original select 09; separate untimed sequence. See the panel review and retained source filename."
+        },
+        {
+          "assetID": "HD-GRILLUP-5c213b5307ad",
+          "sha256": "5c213b5307ada0e77432ea0bdbcfe4950aa6cc94649db305def2293efaa3c1ea",
+          "role": "storyboard_concept",
+          "status": "received_draft_needs_correction",
+          "note": "Original select 10; separate untimed sequence. See the panel review and retained source filename."
+        },
+        {
+          "assetID": "HD-GRILLUP-35fbf6bacc3f",
+          "sha256": "35fbf6bacc3f31f53cd18d154107a5a2c33693b1b21fcfde46f7c97ea5fb19bd",
+          "role": "earlier_scene_alternative",
+          "status": "provider_superseded_history",
+          "note": "Retained under the same Grill Up scene, not a current accepted panel."
+        },
+        {
+          "assetID": "HD-GRILLUP-58a4929ccc45",
+          "sha256": "58a4929ccc45e0616ef2e16b7566bf483c3f236c7a908972102602038d6b0400",
+          "role": "earlier_scene_alternative",
+          "status": "provider_superseded_history",
+          "note": "Retained under the same Grill Up scene, not a current accepted panel."
+        },
+        {
+          "assetID": "HD-GRILLUP-3c64ab207835",
+          "sha256": "3c64ab207835107f51905427fd5748770f516b71686726ea29f9aa6438c5fb18",
+          "role": "earlier_scene_alternative",
+          "status": "provider_superseded_history",
+          "note": "Retained under the same Grill Up scene, not a current accepted panel."
+        },
+        {
+          "assetID": "HD-GRILLUP-df8e2349f716",
+          "sha256": "df8e2349f71656abc700a92140bd1d42525c566f55ed1625e5ca55b779116de6",
+          "role": "earlier_scene_alternative",
+          "status": "provider_superseded_history",
+          "note": "Retained under the same Grill Up scene, not a current accepted panel."
+        },
+        {
+          "assetID": "HD-GRILLUP-0a2075aac343",
+          "sha256": "0a2075aac34332e79434f1bc836786b28624df6e6a15027e15faf13cb23f1355",
+          "role": "earlier_scene_alternative",
+          "status": "provider_superseded_history",
+          "note": "Retained under the same Grill Up scene, not a current accepted panel."
+        },
+        {
+          "assetID": "HD-GRILLUP-948b39b76e55",
+          "sha256": "948b39b76e55889c761801970496a813825770b8aacf447b0aebf0facf013387",
+          "role": "earlier_scene_alternative",
+          "status": "provider_superseded_history",
+          "note": "Retained under the same Grill Up scene, not a current accepted panel."
+        },
+        {
+          "assetID": "HD-GRILLUP-e7ae983ab70b",
+          "sha256": "e7ae983ab70bc384ad5213bd64f98a68953682cb77dc30a7c48c7b6283a6d5c3",
+          "role": "earlier_scene_alternative",
+          "status": "provider_superseded_history",
+          "note": "Retained under the same Grill Up scene, not a current accepted panel."
+        },
+        {
+          "assetID": "HD-GRILLUP-3ddf7227aaa4",
+          "sha256": "3ddf7227aaa4cc0382c7c888631244caecfb499a3c0c8d05c3a379293dcda9ec",
+          "role": "earlier_scene_alternative",
+          "status": "provider_superseded_history",
+          "note": "Retained under the same Grill Up scene, not a current accepted panel."
+        }
+      ],
+      "pipeline": [
+        {
+          "id": "art",
+          "label": "Storyboard return",
+          "status": "received_draft",
+          "note": "Ten selects, eight earlier alternatives, r4 anchor and provider notes received."
+        },
+        {
+          "id": "intake",
+          "label": "Verify originals",
+          "status": "verified",
+          "note": "ZIP CRC, safe paths, bytes/hashes and all 19 image decodes passed; originals preserved."
+        },
+        {
+          "id": "corrections",
+          "label": "Resolve continuity defects",
+          "status": "needed",
+          "note": "02/03 content-label mismatch; hoop count; base teeth and exact r4 grill; face/tattoo/jewelry and reflection consistency."
+        },
+        {
+          "id": "placement",
+          "label": "Place in song",
+          "status": "unassigned",
+          "note": "Separate scene draft. Original 36-panel source-order percentages are unchanged."
+        },
+        {
+          "id": "video",
+          "label": "Video generation",
+          "status": "not_started"
+        }
+      ],
+      "workflowIDs": [],
+      "taskIDs": [
+        "grok-hon-quarters-grill-change"
+      ],
+      "nextStep": {
+        "owner": "CFA / Chief",
+        "action": "Review the linked sequence and resolve 02/03 labels, hoop count, grill geometry, identity and tattoo/accessory continuity before animation. Preserve original files and keep music placement open."
+      },
+      "note": "Lip-hoop removal is intentional for this selected look and scene. User-selected r4 anchor is received; the returned scene panels remain drafts needing corrections. History stays with this one sequence; original Hon source panel order is unchanged.",
+      "sourceIntentID": "HON-QUARTERS-GRILL-CHANGE-20261009",
+      "sourceIntentPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/incoming_scene.json",
+      "independentSequenceID": "HON-QUARTERS-GRILL-CHANGE-20261009",
+      "historyAssetIDs": [
+        "HD-GRILLUP-35fbf6bacc3f",
+        "HD-GRILLUP-58a4929ccc45",
+        "HD-GRILLUP-3c64ab207835",
+        "HD-GRILLUP-df8e2349f716",
+        "HD-GRILLUP-0a2075aac343",
+        "HD-GRILLUP-948b39b76e55",
+        "HD-GRILLUP-e7ae983ab70b",
+        "HD-GRILLUP-3ddf7227aaa4"
+      ]
+    }
+  ],
+  "projectTimingNotes": {
+    "hon": "All mappings are semantic. Current song is 234.960 seconds. Older shot intervals and the 270-second source storyboard are not valid trims. No exact phrase timing is assigned here.",
+    "lisan": "Meta Mirror song alignment is unknown. Original 4.5-second holds are placeholders; Jet associations are semantic proposals only."
+  }
+}

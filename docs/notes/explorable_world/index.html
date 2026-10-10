@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Research and original design for a contemplative CFA world with curiosity, expeditions, and an evolving history."><title>The Observatory — CFA design research</title><style>
+:root { color-scheme: light; font-family: Georgia, 'Times New Roman', serif; }
+* { box-sizing: border-box; }
+body { margin: 0; color: #202326; background: #fff; }
+.layout { max-width: 1340px; margin: auto; display: grid;
+          grid-template-columns: 230px minmax(0, 1fr); }
+nav { padding: 40px 24px; border-right: 1px solid #ddd;
+      font: 14px/1.45 Arial, sans-serif; }
+nav .contents { position: sticky; top: 28px; }
+nav strong { display: block; margin-bottom: 16px; }
+nav a { display: block; margin: 0 0 12px; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+nav .source { border-top: 1px solid #ddd; padding-top: 16px; margin-top: 22px; }
+main { min-width: 0; padding: 40px 56px 80px; font-size: 18px; line-height: 1.7; }
+h1 { font: 600 44px/1.14 Georgia, serif; letter-spacing: -.02em; margin: 0 0 30px; }
+p { margin: 0 0 21px; }
+a { color: #244f67; text-underline-offset: 3px; }
+a[id] { display: block; scroll-margin-top: 24px; }
+a[id] + p { margin-top: 45px; font-size: 22px; line-height: 1.4; }
+table { width: 100%; border-collapse: collapse; margin: 26px 0;
+        font: 14px/1.5 Arial, sans-serif; }
+th, td { text-align: left; vertical-align: top; padding: 11px 10px;
+         border-bottom: 1px solid #ddd; overflow-wrap: anywhere; }
+th { background: #f1f2f3; color: #24282c; border-top: 1px solid #bbb; }
+tr { break-inside: avoid; }
+img { display: block; max-width: 100%; height: auto; margin: 26px 0 12px; }
+code { font: .86em Consolas, monospace; overflow-wrap: anywhere; }
+.footnote { margin-top: 32px; border-top: 1px solid #bbb;
+            font: 14px/1.6 Arial, sans-serif; }
+.footnote hr { display: none; }
+.footnote li { margin-bottom: 15px; overflow-wrap: anywhere; }
+.footnote p { margin: 0; }
+sup { line-height: 0; }
+::selection { background: #d8e6ed; }
+@media (max-width: 900px) {
+  .layout { display: block; }
+  nav { padding: 24px; border-right: 0; border-bottom: 1px solid #ddd; }
+  nav .contents { position: static; }
+  nav a { display: inline-block; margin: 0 16px 12px 0; }
+  nav .source { display: block; }
+  main { padding: 30px 24px 60px; font-size: 17px; }
+  h1 { font-size: 37px; }
+  table { font-size: 12px; }
+  th, td { padding: 9px 6px; }
+}
+@media print {
+  @page { size: A4; margin: 17mm 16mm; }
+  .layout { display: block; max-width: none; }
+  nav { display: none; }
+  main { padding: 0; font-size: 10pt; line-height: 1.45; }
+  h1 { font-size: 27pt; margin-bottom: 18pt; }
+  p { margin-bottom: 10pt; orphans: 3; widows: 3; }
+  a[id] + p { font-size: 13pt; margin-top: 19pt; break-after: avoid; }
+  a { color: inherit; }
+  table { font-size: 8pt; line-height: 1.35; margin: 12pt 0; }
+  th, td { padding: 6pt; }
+  img { max-height: 100mm; object-fit: contain; }
+  .footnote { font-size: 8pt; }
+}
+</style></head><body><div class="layout"><nav aria-label="Document contents"><div class="contents"><strong>Contents</strong><a href="#reference">Design references</a>
+<a href="#curiosity">Curiosity</a>
+<a href="#inherited-purpose">Inheriting a purpose</a>
+<a href="#expeditions">Upgrades and expeditions</a>
+<a href="#world">A changing world</a>
+<a href="#care">Care and consequences</a>
+<a href="#lobby">Knobs of Care</a>
+<a href="#three-rooms">Three-room journey</a>
+<a href="#chapter">First chapter</a>
+<a href="#puzzle">The relay puzzle</a>
+<a href="#conversation">The conversation</a>
+<a href="#atmosphere">Atmosphere</a>
+<a href="#inheritance">Existing CFA material</a>
+<a href="#technology">Engine choice</a>
+<a href="#pipeline">Data and game state</a>
+<a href="#production">Production passes</a>
+<a href="#evaluation">Playtesting</a>
+<a href="#sources">Sources</a><a class="source" href="RESEARCH.md">Read the Markdown source</a></div></nav><main><h1>The Observatory</h1>
+<p><strong>September 12 development update:</strong> The <a href="FIRST_PLAYABLE.md">first playable scope</a> brings the water-repair consequence into the opening chapter and updates the technical recommendation after checking the current PC. Godot Compatibility is the proposed first evaluation on that machine; the Unreal direction below remains conditional on suitable development hardware. The earlier chapter layouts are retained as design history and possible later material.</p>
+<p><strong>CFA has enough material to support an original, contemplative first-person experience. The strongest next experiment is a small place whose history the player wants to uncover and whose inhabitants they come to care about.</strong> Care is its central commitment: attention to what people need and how choices affect their lives. Curiosity carries the visitor onward: a fragment raises a question, an action supplies evidence, and a later discovery changes the meaning of something encountered earlier.</p>
+<p>The proposed experience combines atmosphere, exploration, and philosophy. Its artistic reference is The Talos Principle 2; Hades II and God of War Ragnarök: Valhalla add a second reference for room-to-room capability choices and meaningful return journeys. NationStates contributes recurring civic dilemmas. Ziggy's later references to The Purge and The Hunger Games suggest situations that insistently bring personal commitments into focus; the design interpretation is developed below. Its subject matter comes from CFA's own history of preserving work, investigating disagreement, and revising attractive conclusions. The setting, characters' performances, physical puzzles, upgrades, world events, and chapter structures below are original proposals. They have not been implemented or playtested.</p>
+<p>The recommendation is to explore one complete chapter, provisionally called <strong>The Unfinished Handoff</strong>, in a compact lakeside observatory, then test the added expedition dynamic across three connected rooms. The broader vision includes temporary capabilities, persistent discoveries, and a world changed by collective human decisions. A native Windows prototype in Unreal is the leading technical option, conditional on suitable hardware and willingness to work in its editor. The commitment should remain bounded until the place feels inviting, the interactions work, and the writing earns attention.</p>
+<p>An enjoyable, personally meaningful place can justify itself as an artistic project. Demonstrating educational benefit is a separate ambition. CFA's scientific claims still need their own evidence; neither visual beauty nor player enthusiasm establishes the validity of its scoring.</p>
+<p><a id="reference"></a></p>
+<p><strong>The Talos reference points toward a way of composing an experience.</strong></p>
+<p>In a direct interview, Jonas and Verena Kyratzes describe close cooperation between writing and game design from the beginning of Talos 2. Its puzzles emphasize conceptual discovery, with relatively few execution steps after understanding the problem. Optional challenges and ways past difficult puzzles help protect progress. These are reported design intentions from the creators, rather than experimental evidence about player responses.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<p>Verena Kyratzes separately describes puzzle clusters that introduce a mechanic and develop a local difficulty curve before the next cluster begins. Mechanics were assessed for compatibility and enjoyment. The amount of writing and the cast's size also affected production and localization scope.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p>Jonas Kyratzes describes players assembling discoveries and discussing them with expedition companions. The puzzles belong to the fictional setting, and characters can consider why they are there. His account also favors communicating philosophical ideas in accessible language.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
+<p>Together, these sources suggest a useful design judgment for CFA: compose the place, action, discovery, and conversation together. A visitor should encounter something worth understanding before meeting the project's terminology. A companion's response should depend on what has just happened. Quiet exploration can then give the visitor room to form an interpretation.</p>
+<p>The rendering technology supports that composition. Croteam's lead programmer describes a substantial transition into Unreal; its creative director identifies benefits from Lumen and large-world tools while acknowledging rendering costs. The same interview says the engine did not significantly change the underlying puzzle logic. The tools helped the team realize a world; they did not invent the intellectual activity.<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
+<p>Croteam's production interview also describes testing base puzzles without environmental distractions, substantial added work from NPCs, and frequent human testing for blockers and unintended solutions. That supports validating a modest interaction before surrounding it with expensive content.<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></p>
+<p>Sound deserves attention during that early validation. In an interview about the <strong>first Talos game</strong>, composer Damjan Mravunac describes atmospheric music intended to support concentration without becoming distracting or repetitive. This is relevant series history, rather than a claim about the sequel's exact audio pipeline.<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></p>
+<p>The practical interpretation is a cadence: <strong>notice, approach, investigate, discover, discuss, wander</strong>. This is an original synthesis of the reference material. It should be tested through the proposed chapter, rather than adopted as a proven formula.</p>
+<p><a id="curiosity"></a></p>
+<p><strong>Curiosity should determine the order in which the world explains itself.</strong></p>
+<p>The opening question is small and concrete: someone is maintaining this apparently deserted place. A light is on. A cup has been moved away from a leaking window. A repair is recent. The visitor can care about that discrepancy before knowing what CFA stands for.</p>
+<p>A second question develops inside: why did the researchers build so many ways to preserve their work? Early fragments suggest interruption, lost context, and a fear that the next person would have to begin again. Those concerns are present in the earlier I_AM material. The game can adapt them into a fictional archive with interrupted messages and carefully maintained handoff cases.<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup></p>
+<p>Later, the archive reveals a different problem. Records survived, yet several conclusions did not survive scrutiny. The visitor finds a correction attached to an impressive result. The important discovery is that someone deliberately preserved both. The v5 material and Test A postmortem provide an actual history of that shift, including the role of baseline explanations in retracting findings.<sup id="fnref2:7"><a class="footnote-ref" href="#fn:7">7</a></sup><sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup></p>
+<p>The final question becomes personal: what would this visitor leave for the next person? An aspiration, a correction, an unresolved question, or a short note of their own can become the chapter's persistent outcome. The first encounter on a return visit reflects that choice. This is a proposed curatorial consequence, with no score for choosing the supposedly superior philosophy.</p>
+<p>Each discovery should answer something as well as open something. An endless sequence of locked doors and unexplained symbols would withhold satisfaction. Here, the relay becomes understandable, the archived argument becomes legible, and the reason for keeping a failed finding becomes apparent. A larger history remains available beyond this local resolution.</p>
+<p>The notebook should preserve what the player has encountered and the questions they chose to mark. It can offer help when requested. The main motivation should come from a visible destination, an interrupted conversation, or an object that contradicts an earlier interpretation. Mandatory document collection and percentage-complete lore counters would add obligations that the chapter does not need.</p>
+<p>A return route matters. After the visitor discovers why corrections were preserved, the same handoff case by the entrance has a different meaning. Its contents have not changed; the visitor's understanding has. This is a small, achievable form of narrative depth that uses the same environment twice.</p>
+<p><a id="inherited-purpose"></a></p>
+<p><strong>The people who inherit the work also inherit the right to reconsider its purpose.</strong></p>
+<p>The story guide Ziggy supplied adds a dramatic tension to the design references: people leave an unfinished project, its protective structures outlast their original circumstances, and successors must decide what continuing the work means. The guide's account of Alexandra's long-horizon project, Elohim's resistance to completion, and a successor city's inherited founding goal offers three related inspirations: care expressed through preservation, protection becoming obstruction, and an achievement becoming a limit. This is a reading of a secondary story explanation, used to develop original fiction rather than to establish every detail of Talos canon.<sup id="fnref:26"><a class="footnote-ref" href="#fn:26">26</a></sup></p>
+<p>CFA already contains a relevant tension. The Keeper document describes an archival paradox in which accumulating memory can eventually make that memory unusable, while losing it invites repeated mistakes. It also gives its archival persona a deliberately restricted source: the change log. That is a useful basis for an original fictional caretaker who remembers a rule's history accurately but lacks the information needed to judge its present application. The document supplies a literary premise; it does not demonstrate an actual agent's emotions or exhaustive knowledge.<sup id="fnref:27"><a class="footnote-ref" href="#fn:27">27</a></sup></p>
+<p>The resulting story can preserve affection for the founders while showing their limits. An emergency rule may have prevented a real loss. Later inhabitants may remember that rescue more vividly than the conditions attached to the rule. An archival discovery should clarify those conditions without automatically settling what today's community should do. Its members have knowledge, needs, and claims of their own.</p>
+<p>This extends the curiosity arc: <strong>Who kept this place alive? → What were they protecting? → Does the old safeguard still serve that purpose? → What should we carry forward?</strong> Investigation can support retaining a rule, revising it, or postponing a decision until another uncertainty is resolved. Neither obedience nor rebellion should substitute for judgment. The player can also discover that completing a project, passing it on, or ending one experiment honors the work. Preservation need not impose endless continuation on its inheritors.</p>
+<p>An optional later episode, <strong>The Room That Never Closed</strong>, makes these ideas playable. A farewell recording repeatedly stops at the same sentence behind a sealed archive door. The caretaker explains that the room must remain operational until an independent copy of its collection is confirmed. The original rule followed a damaging storage failure. Its cooling equipment still draws power from a district whose residents want to reopen a workshop.</p>
+<p>At a service bench, the player chooses equipment for investigating the fault. An echo spool can hold a diagnostic switch while the player examines a receiver across the room; a long-reach coupler provides another way to operate that switch. This reveals where acknowledgment messages fail. A reserve cell can later keep the receiver available during a scheduled district outage. The upgrades create actions and breathing room; they cannot certify that a copy is complete.</p>
+<p>Across the water, a community has maintained newer copies, including records absent from the observatory. The original apparatus cannot read their format. A short inspection sequence distinguishes unreadable acknowledgment messages from evidence that material was lost. Missing items and unresolved comparisons remain visible. Residents also explain how they use the collection, and why moving its public entrance matters to them.</p>
+<p>The player can support the existing room while investigating remaining gaps, help establish a verified handoff to the community archive, or negotiate a smaller continuing collection at the observatory. These options require appropriate evidence and resources; the fiction should show which uncertainties each leaves open. Changes become visible through workshop activity, library access, and the caretaker's new duties. A proposed original line makes the transition personal: "Where will visitors find me?"</p>
+<p>Once the interrupted playback circuit is repaired, the farewell recording can reach its final sentence regardless of the policy selected. Its ending supplies local narrative closure without announcing a morally correct answer. The caretaker can help shape what happens next. One initial-chapter detail, such as the repeated recording or a dated preservation notice, is enough to seed this possibility; the full episode belongs to a later expansion.</p>
+<p><a id="expeditions"></a></p>
+<p><strong>Room-to-room choices can make the journey change with the player.</strong></p>
+<p>The added game loop is an expedition: investigate a signal, acquire a capability, choose a route, encounter a changed situation, and return with something that persists. The observatory becomes a familiar home whose rooms and inhabitants respond to what has happened elsewhere.</p>
+<p>Supergiant's publisher description of Hades II connects varied Boon combinations, changing attempts, permanent upgrades, relationships, and a story unfolding through setbacks and accomplishments.<sup id="fnref:24"><a class="footnote-ref" href="#fn:24">24</a></sup> Santa Monica's Valhalla announcement explicitly combines a reflective personal journey with temporary choices during attempts and resources for permanent improvements.<sup id="fnref:25"><a class="footnote-ref" href="#fn:25">25</a></sup> These sources support the structural reference. They do not establish that the same progression will work in a slower CFA experience.</p>
+<p>Three kinds of state would make the proposal understandable and keep its implementation bounded:</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>What changes</th>
+<th>What remains afterward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Current room</td>
+<td>Mechanisms, shutters, power routing, accessible passages, and observed clues</td>
+<td>Discovered records and the player's understanding</td>
+</tr>
+<tr>
+<td>Current expedition</td>
+<td>Equipped tools, passive effects, charge, route choices, and temporary upgrades</td>
+<td>Recovered material, encountered consequences, and a record of the attempt</td>
+</tr>
+<tr>
+<td>Wider world and home</td>
+<td>Repaired infrastructure, civic resource allocations, relationships, available routes, and what the archive foregrounds</td>
+<td>Visible history that shapes later departures</td>
+</tr>
+</tbody>
+</table>
+<p>An interrupted expedition can become an unfinished handoff. Preserved evidence remains preserved; another departure can resume investigation with more context. Temporary enhancements can reset when equipment is serviced, reassigned, or recharged at home. The fiction should explain that reset without erasing the meaning of the journey.</p>
+<p>Rewards should feel useful immediately. An upgrade can grant a new action, enhance the duration or reach of a device, or improve traversal. A new combination should make the player imagine a route or solution they could not previously execute. The world can explain these gifts through workshop inventions, a companion's contribution, or recovered technology.</p>
+<table>
+<thead>
+<tr>
+<th>Proposed upgrade</th>
+<th>Type and concrete capability</th>
+<th>Constraint that creates a choice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Echo spool</td>
+<td>Active tool: record a short switch operation and replay it while moving elsewhere</td>
+<td>One recording at a time; occupies a portable power socket</td>
+</tr>
+<tr>
+<td>Long-reach coupler</td>
+<td>Active tool: operate a visible mechanism across a gap or through an opening</td>
+<td>Requires a clear path and can operate only one mechanism at once</td>
+</tr>
+<tr>
+<td>Signal splitter</td>
+<td>Tool modification: supply two compatible mechanisms from one source</td>
+<td>Divides available power or reach; positioning matters</td>
+</tr>
+<tr>
+<td>Anchor soles</td>
+<td>Traversal passive: remain stable on wet grates and in a moving current</td>
+<td>Movement slows while engaged; a high route may still be quicker</td>
+</tr>
+<tr>
+<td>Reserve cell</td>
+<td>Capacity boost: sustain an abandoned lift or relay without district power</td>
+<td>Charge used here is unavailable at the next device</td>
+</tr>
+<tr>
+<td>Survey memory</td>
+<td>Inspection skill: retain an observed mechanism state and overlay it on a return visit</td>
+<td>Limited marked locations; records observations rather than revealing hidden truth</td>
+</tr>
+</tbody>
+</table>
+<p>The first expedition test needs only four upgrade candidates and two selection moments. Later workshop improvements could add a socket, extend a recording, restore charging, or increase survey capacity. A reserve cell and a splitter could power two modest devices independently of a disrupted district supply. An echo spool and a coupler could coordinate actions across a room. These are proposed combinations whose enjoyment and balance remain to be tested.</p>
+<p>The reward pool should expose enough information to make an informed choice. Route previews can hint at a flooded service passage or a distant switch. Some uncertainty can remain, but every offered tool needs a reasonable use and every required room needs a viable baseline or alternative route. A failed random draw should not make the expedition unwinnable.</p>
+<p>Capabilities should change actions and access. A numerical bonus to wisdom or philosophical correctness would obscure what the player accomplished. Likewise, score multipliers must not make a preferred doctrine become true. The pleasure of building a loadout can come from discovering new interactions among concrete abilities.</p>
+<p>The worked expedition uses exploration and environmental stakes. Ziggy has also proposed extreme situations that bring commitments into focus, including imposed contests, disasters, and invasion. These can involve danger, rescue, evasion, negotiation, or resistance. Whether a substantial combat system belongs in the larger experience remains an open implementation choice; it would add enemy behavior, animation, hit feedback, balancing, and encounter-design work.</p>
+<p><a id="world"></a></p>
+<p><strong>The state of the world can be a background character with a visible history.</strong></p>
+<p>Human choices can leave traces in the landscape: a flood barrier that protects one route and obstructs another, a nursery reopened with power previously reserved for the archive, or a public collection whose access rules have changed. Some choices belong to the player. Others belong to communities with their own needs, plans, and disagreements. The player arrives in an inhabited history rather than a world waiting solely for their commands.</p>
+<p>Ziggy identified NationStates as another reference from his own play history. Its official FAQ describes recurring Issues that develop a nation's laws and ideology, alongside regional and World Assembly activity.<sup id="fnref:28"><a class="footnote-ref" href="#fn:28">28</a></sup> The original adaptation here would place a civic situation at selected homecomings. The visitor can inspect the equipment, meet those affected, and potentially discover an option beyond the initial proposals. Later departures reveal the community's response. This would use story transitions rather than requiring daily real-world attendance.</p>
+<p>Risks can involve overconfidence, neglected maintenance, centralized dependencies, resource depletion, or the suppression of inconvenient evidence. Human initiative should also produce repair, cooperation, learning, and opportunities. The proposed tone allows concern about civilization alongside affection for its capacity to improve things.</p>
+<p>A wildcard changes the situation enough to make an earlier priority worth reconsidering. It should create a new possibility as well as a cost. A weather report, unusual waterline, message from a neighboring community, or failing instrument can foreshadow it. Surprise then concerns how circumstances develop, rather than whether the designer will secretly punish a belief.</p>
+<table>
+<thead>
+<tr>
+<th>Proposed event</th>
+<th>What changes in the world</th>
+<th>Responses and visible consequences</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A storm shifts the waterline</td>
+<td>A lower route floods while a displaced archive capsule appears on a higher shore</td>
+<td>Reinforce access, take an upper path, or investigate the capsule; previous drainage work affects available routes</td>
+</tr>
+<tr>
+<td>A community redirects shared power</td>
+<td>A nursery lights up while an old bridge loses automatic service</td>
+<td>Use portable power, repair a local supply, or take a newly accessible maintenance route; inhabitants can explain the allocation</td>
+</tr>
+<tr>
+<td>A delegation arrives with a conflicting account</td>
+<td>Visitors need charging capacity and challenge the archive's explanation of an earlier expedition</td>
+<td>Share capacity, repair a ferry route, or restore their communications; each changes timing, access, and available conversations</td>
+</tr>
+</tbody>
+</table>
+<p>The early implementation should use authored events and a few explicit state transitions. For example, a repaired drain determines which route survives a storm; a restored public relay determines whether visitors can contact home. A global civilization simulator is unnecessary to make these consequences legible.</p>
+<p>The state system should record the relevant cause, warning, action, immediate consequence, and unresolved cost. A player who asks why the bridge failed should be able to discover the supply decision. Later events may reveal an unanticipated consequence, but the game should supply enough evidence to understand it and, where possible, attempt a repair.</p>
+<p>These are fictional systems with authored assumptions. They should not be described as scientific predictions about actual societies. Any later use of real policy or environmental data would require a separately justified model. Within the fiction, preserve several defensible responses and the possibility of revising a decision after learning more.</p>
+<p><a id="care"></a></p>
+<p><strong>Care should be a continuing practice with tangible consequences.</strong></p>
+<p>Ziggy's water-supply example gives this principle a concrete form: leaving a repair unfinished changes what neighbors must spend their time doing, which changes what they can help accomplish elsewhere. The world remembers actions through water, available time, working equipment, relationships, and ordinary routines. Players encounter those consequences while exploring. A repeated speech about caring would contribute less than seeing someone finally sit down beside a repaired fountain.</p>
+<p>Consider an original episode, <strong>Water Before the Crossing</strong>. Six neighbors have agreed to help reposition a heavy crossing beam. Earlier, the player encounters a damaged supply pipe and two residents hauling water from an alternate source. They explain that the hauling will require two people each morning until the pipe is repaired. A maintenance board connects this obligation to the planned work at the crossing. The need and its likely consequence are available before the player commits their afternoon elsewhere.</p>
+<p>If the repair remains unfinished on the next story day, two of the six helpers are still carrying water. The player meets them on that route. Four neighbors gather at the crossing and explain the changed plan. The absence follows their practical obligation; they have not withdrawn affection because the player failed a virtue test. The illustrative one-third reduction is an authored consequence of this particular schedule, not a universal population penalty.</p>
+<p>The group can still proceed by repairing a pulley, using a reserve cell to power an available winch, arranging a different work period, or restoring the water supply first. A chosen upgrade creates another way to cooperate. It need not erase every cost: using the cell leaves less charge for the expedition, while repairing the pulley takes an additional trip. Neighbors contribute their own skills and can suggest solutions. Their willingness and availability remain distinct; helping someone does not purchase command over them.</p>
+<p>When the supply is restored, the change reaches beyond the crossing. The hauling route becomes quiet, a resident returns to a neglected workshop, and the two volunteers can keep their next agreed appointment. A conversation can occur during work or afterward at the fountain. The repair has restored part of everyday life, and the player can see why that mattered.</p>
+<p>Competing needs keep this interesting. The same afternoon may offer a chance to shelter a visitor before a storm or recover a fragile record. Choosing one worthwhile task can delay another. Make the affected needs and credible consequences legible, and let subsequent action improve the situation. Advance these conditions at explicit story transitions, such as the next departure or morning, so taking time to read and explore does not silently harm the community.</p>
+<p>For a small prototype, this requires a few authored facts: the supply's condition, the current story day, each volunteer's commitments, and the available lifting equipment. Dialogue and visible activity should explain the causal links. Avoid collapsing them into a single hidden care score. A later storm can damage a repaired section or make a reserve supply useful, provided the previous repair still has a meaningful effect and the new cause is discoverable.</p>
+<p>Care also belongs in moments with no equipment payoff: making a quiet place usable, helping someone preserve an ordinary memory, or listening when they have something to say. Inhabitants should care for one another and sometimes for the player. This makes the community an ongoing life the visitor can join. Curiosity supplies reasons to discover it; care supplies reasons for those discoveries to matter.</p>
+<p>Ziggy's further observation adds an optional reflection: someone designing an environment to discover what others care about also reveals their own priorities through its design. The fiction can let the player discover revisions by a founder who gradually noticed whose needs their original experiment overlooked. An invented archival line could express that turn: "I made this place to learn what you would protect. I did not expect it to show me what I had neglected." This would be original character dialogue, not a quotation from Talos or a claim about CFA's history.</p>
+<p>Whether that fictional founder is also inside another constructed world can remain an unanswered possibility. The story does not need to confirm a cosmic examiner or a final virtue score. Its concrete evidence is already present in what people build, maintain, overlook, and repair. This uses the simulation idea as a philosophical question within fiction; it supplies no evidence that our own lives are a simulation or a test.</p>
+<p>The initial chapter can introduce care through the caretaker's everyday work and one visible response to the visitor's help. The full water-and-crossing episode is an expansion option alongside the inherited-archive episode, rather than another requirement for completing the first chapter.</p>
+<p><a id="lobby"></a></p>
+<p><strong>The lobby can configure the circumstances in which care becomes difficult and visible.</strong></p>
+<p>Ziggy's phrase <strong>Knobs of Care</strong> names a proposed scenario workshop. An interactive <a href="lobby_concept.html">lobby concept</a> accompanies this brief. It previews authored situations and exports the selected setup; it is a design artifact rather than a playable world. A future in-world version could occupy the observatory's map room, with a central landscape model, a departure board, an equipment bench, and space for companions to gather.</p>
+<p>Choose the premise, then tune its conditions. A post-apocalyptic setting can allow patient rebuilding; an ordinary infrastructure problem can create demanding tradeoffs. A mysterious arrival and an established hostile invasion also promise different experiences. A scenario should identify which promise it makes before departure.</p>
+<table>
+<thead>
+<tr>
+<th>Proposed control</th>
+<th>Range</th>
+<th>What changes in play</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time</td>
+<td>Room to investigate; a known deadline; overlapping urgent needs</td>
+<td>How many observations, journeys, and repairs can precede a decision</td>
+</tr>
+<tr>
+<td>Supplies</td>
+<td>Generous reserves; limited spares; severe shortages</td>
+<td>Available approaches, shared dependencies, and the cost of committing equipment</td>
+</tr>
+<tr>
+<td>Information</td>
+<td>Clear reports; incomplete observations; conflicting accounts</td>
+<td>What must be checked and whose interpretation is uncertain; discoverable evidence remains available</td>
+</tr>
+<tr>
+<td>Recovery</td>
+<td>Ready repair; consequences across several journeys; lasting losses</td>
+<td>What a setback changes, what can be rebuilt, and what persists after the expedition</td>
+</tr>
+<tr>
+<td>Wildcards</td>
+<td>Grounded events; unusual combinations; surreal fiction</td>
+<td>The kinds of disruptions or opportunities that can enter an established situation</td>
+</tr>
+</tbody>
+</table>
+<p>These settings describe the world, without ranking the player's capacity for care. Clear information can accompany severe danger; uncertain information can accompany abundant supplies and generous time. Recovery settings must state what can be lost and whether a session affects the persistent home. A later multiplayer design would separately specify cooperation, open competition, or hidden roles. A waiting-room presentation alone does not imply that those networking and role systems exist.</p>
+<p>Six original scenario presets provide a vocabulary for the workshop. <strong>Quiet Recovery</strong> follows a community repairing everyday infrastructure. <strong>After the Flood</strong> introduces displaced routines and damaged routes. <strong>The Last Settlement</strong> begins with extensive inherited damage and the work of rebuilding. <strong>First Contact</strong> leaves a visitor's intentions unresolved, whereas <strong>Invasion</strong> establishes an advancing threat. <strong>The Trial</strong> concerns an organizer who imposes a contest and claims that its choices will prove what participants care about. These are possible independent chapters or expansions, with some represented only through the base world's history and culture. Presets offer starting conditions; the controls remain independently editable.</p>
+<p>Ziggy clarified the point of the extreme references: make commitments difficult to leave abstract. A character may care about a companion, a promise, their own survival, or a record needed by people elsewhere. An imposed trial can bring those commitments into conflict. The game can repeatedly return attention to them while letting the player interpret and revise their response.</p>
+<p>In a proposed Trial episode, an organizer ties one contestant's exit to another participant surrendering a useful reserve cell. The organizer calls surrender proof of care. Investigation can reveal what the cell actually powers, whether the claimed dependency is real, and who else relies on it. Sharing equipment, accepting assistance, contesting the allocation, or taking a costly alternate route can become concrete actions. Some branches may retain a real unresolved cost; investigation should not guarantee a perfect escape from every dilemma.</p>
+<p>The organizer's interpretation belongs to a character within the fiction. The game should preserve the difference between what the player could do, what they knew, and what they chose. Record an action and its consequences rather than certifying an inner virtue. Self-preservation, refusing manipulation, and accepting help remain available expressions of commitment. The designer of the trial can also become an object of investigation: their rules reveal whose needs they considered and whose they overlooked.</p>
+<p>Intensity needs a rhythm. Preparation establishes relationships and possibilities; pressure forces a concrete response; a quieter homecoming allows the consequences to become legible. A repaired home, an empty workbench, a changed friendship, or someone offering the player a meal can carry the aftermath. Constant emergency would crowd out the exploration and attachment that make these moments matter.</p>
+<p>The base world can carry this material through a <strong>Care Tally ceremony</strong>. Ziggy specifically proposed witnessing such a ceremony without becoming a contestant or champion. The village publicly recognizes contributions, remembers losses, and decides what deserves acknowledgment. The ritual can express real gratitude and solidarity while its tally remains a fallible record assembled by people with particular definitions and incomplete information.</p>
+<p>In an original scene, the ceremony honors the person who restored the pump. A display records the completed repair, but omits the neighbors who carried water throughout the outage. Those neighbors may feel pride in the restoration as well as frustration that their own work disappeared from the account. The player can watch the ceremony, inspect its records, or hear the missing story afterward. A later conversation might lead to recognition or a changed practice. This brings care, measurement, and interpretation into an ordinary public occasion without requiring an arena encounter.</p>
+<p>An Easter egg can reward closer attention. An older emblem beneath the tally board also appears on a sealed gallery door. Investigating the connection reveals records of an earlier institution's trials and why the present ceremony changed. That discovery should have a satisfying local payoff on its own. It can also open access to an optional self-contained episode, provisionally <strong>The Trial of the Tally</strong>, if such an expansion is eventually built. Finding a secret creates an invitation; entering a mode with different stakes is a deliberate departure.</p>
+<p>Separate expansion experiences can explore that institution's past, a distant settlement after catastrophe, or the arrival of something beyond the lake. Each can have its own cast, premise, pressure settings, and complete arc while sharing recognizable objects, stories, and questions with the observatory. A standalone release is another possible packaging choice. The present work defines these as creative possibilities, without committing to a release schedule, expansion pass, or multiplayer service. The base chapter remains complete in its own right.</p>
+<p>The first implementation experiment can reuse the water-and-crossing episode with two configurations: generous time and supplies, then a known deadline with limited equipment. It needs two observable outcomes and a return conversation. A ceremony fragment can add cultural context without adding another game mode. The full preset library, combat, and multiplayer remain separate expansion work. The interactive lobby helps discuss those possibilities without committing to implementing all of them.</p>
+<p><a id="three-rooms"></a></p>
+<p><strong>A three-room expedition can test upgrades and a changing world together.</strong></p>
+<p>The starting mystery is a signal from a station believed to have gone silent before its last experiment finished. An early I_AM fragment about preserving work leaves several explanations open. Did the machinery fail? Did its occupants leave? Was the result deliberately withheld? This is a fictional story shaped by the repository's themes, not an account of a hidden historical event.</p>
+<p>In <strong>the Listening Gallery</strong>, the player identifies the responsive receiver using the pulse experiment specified below. The restored message reveals that the experiment finished, but its celebrated finding did not survive a control. The next question becomes why the corrected record was never delivered. At a service bench, the player chooses an echo spool or a long-reach coupler, with a visible preview of the crossing ahead.</p>
+<p>In <strong>the Broken Crossing</strong>, a shutter and bridge must remain open together. The echo spool replays a switch operation while the player crosses. The coupler allows a different solution from an upper observation position. Both routes have explicit physical rules. Neither is associated with a philosophically superior answer.</p>
+<p>At the crossing's service landing, a second bench offers a reserve cell or anchor soles. A maintenance diagram shows the powered bridge and the wet service channel below; a notice mentions an upcoming district supply change. The cell can sustain machinery, while the soles make wet grates easier to traverse. An upper stair detour remains available with either selection.</p>
+<p>Before reaching the far side, a message announces that the upstream community has redirected shared power toward its reopened nursery. The supply feeds both the bridge motor and a circulation pump. When the pump stops, its return channel drains by gravity into the lake, exposing the lower maintenance grates. Distant lights, visible water movement, and the stopped mechanism make the event tangible. The reserve cell restores the direct bridge route; anchor soles support a steadier crossing of the wet passage, where an additional fragment describes someone staying behind to preserve the correction. These causal rules would be authored explicitly in the scene.</p>
+<p>In <strong>the Handoff Room</strong>, the player finds the original claim still attached to the control records that weakened it. A short adaptation of the diagnostic conversation then adds the deeper discovery: better mutual understanding can clarify why a disagreement persists. The choice at the end concerns what to share first, while the full record remains available.</p>
+<p>On returning home, a recovered repair component can restore either the public relay or the archive workshop. The public relay brings new signals and visitors. The workshop expands the next expedition's equipment options. The other repair remains available through later play. A new visitor at the relay or a working bench provides a visible payoff without assigning moral points to the selection.</p>
+<p>This expedition is a second, larger prototype specification. The initial chapter layout below tests arrival, curiosity, an interaction, and the archival encounter. The three-room extension tests whether temporary capabilities and persistent world changes strengthen that experience. Its duration and difficulty need to be established through play.</p>
+<p><a id="chapter"></a></p>
+<p><strong>The Unfinished Handoff is a proposed 10–15 minute first chapter.</strong></p>
+<p>The duration is a design target for a direct route, not a production estimate or a limit on wandering. The setting contains an entrance terrace, a records vestibule, an instrument room with three compact receiver alcoves, an optional archive recess, and a lakeside bench. One caretaker can be present through a modestly animated figure or an intercom. Two additional perspectives appear as authored adaptations of archived text.</p>
+<p><img alt="Original chapter layout, with a main route and an optional archive detour" src="chapter_plan.svg" /></p>
+<p><em>The diagram is a spatial design proposal, not a screenshot or a construction drawing. The instrument-room action restores recordings in the vestibule; revisiting an earlier space is intentional.</em></p>
+<table>
+<thead>
+<tr>
+<th>Approximate position</th>
+<th>What the player encounters and does</th>
+<th>Question carried forward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arrival, 0–2 minutes</td>
+<td>Walk beside water toward an occupied-looking window. Inspect a handoff case and an interrupted message. Learn movement and inspection through ordinary objects.</td>
+<td>Who kept this place alive?</td>
+</tr>
+<tr>
+<td>Vestibule, 2–4 minutes</td>
+<td>Find an early archive fragment about preserving work. A recording begins but the relay cannot sustain it. The instrument room is visible through an open doorway.</td>
+<td>What were they afraid of losing?</td>
+</tr>
+<tr>
+<td>Instrument room, 4–8 minutes</td>
+<td>Change a transmitter's pulse pattern, observe three receivers, turn the source off, and reconnect the responsive receiver to the archive.</td>
+<td>Which part of what I am hearing comes from this signal?</td>
+</tr>
+<tr>
+<td>Restored record, 8–11 minutes</td>
+<td>Return to the recording and follow a short disagreement through an initial claim, a concession, and a clarified impasse. Inspect the definitions beside each speaker.</td>
+<td>Why did understanding each other fail to settle it?</td>
+</tr>
+<tr>
+<td>Archive recess, optional</td>
+<td>Examine an original claim and the correction that weakened it. The earlier preservation message gains a second meaning.</td>
+<td>Why preserve a failed result?</td>
+</tr>
+<tr>
+<td>Bench and handoff, 11–15 minutes</td>
+<td>Choose the fragment that will greet the next visitor. Optionally leave a sentence. Step outside and remain as long as desired.</td>
+<td>What will I leave for someone else?</td>
+</tr>
+</tbody>
+</table>
+<p>The visitor can request a relay demonstration and still reach the recorded conversation. The request does not diminish the story or label them intellectually inferior. An optional harder receiver configuration can wait until the basic chapter has proved enjoyable.</p>
+<p>The caretaker should have an ordinary task and a limited perspective. They remember where an object belongs, dislike a particular leak, and know why one recording was retained. Their authority comes from care and familiarity. They need not understand every experiment or supply the final interpretation of the place.</p>
+<p>The chapter can end completely at the bench. A light across the lake may suggest another part of the observatory, but this first work should not require a sequel to resolve its own promise. The archive has been reached, a conversation has been understood more accurately, and a handoff has been made.</p>
+<p><a id="puzzle"></a></p>
+<p><strong>The physical puzzle gives curiosity something observable to act on.</strong></p>
+<p>The initial puzzle is called <strong>Which receiver is listening?</strong> It is an invented mechanism inspired by the practice of comparing a signal with its background. It is not a reconstruction of a historical CFA experiment or an assertion about the physical behavior of AI.</p>
+<p>A transmitter has two selectable pulse patterns and an off position. Three receivers each produce a repeating background rhythm from wind-driven resonators. One receiver also follows the transmitter after a fixed delay. The player can watch a light trace, hear the pulses, and inspect a timing diagram at every receiver. Sound contributes to atmosphere, while equivalent visual information makes the rule accessible without hearing.</p>
+<table>
+<thead>
+<tr>
+<th>Player intervention</th>
+<th>Connected receiver</th>
+<th>Other receivers</th>
+<th>Warranted observation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select pattern A</td>
+<td>Adds pattern A after a fixed delay</td>
+<td>Continue background rhythm</td>
+<td>One candidate responds, but coincidence is still possible</td>
+</tr>
+<tr>
+<td>Select pattern B</td>
+<td>Changes its added pulses to pattern B</td>
+<td>Continue background rhythm</td>
+<td>The candidate follows a changed input</td>
+</tr>
+<tr>
+<td>Turn transmitter off</td>
+<td>Loses its added pulses</td>
+<td>Continue background rhythm</td>
+<td>Background activity persists independently of the transmitter</td>
+</tr>
+<tr>
+<td>Connect that receiver to the archive and activate transmission</td>
+<td>Sustains the archive relay</td>
+<td>No effect on the restored route</td>
+<td>The fictional mechanism is working under its defined rules</td>
+</tr>
+</tbody>
+</table>
+<p>The success condition is a physical connection to the responsive receiver with the transmitter active. The game does not require a philosophical declaration. Experimentation, deduction, or an optional demonstration can all get the visitor through the interaction.</p>
+<p>The art must show what can be manipulated and what changed. Handles should have distinct silhouettes and readable positions. A pulse diagram should show time, rather than merely changing brightness. The player should not have to guess whether a reflection is an interactive object, whether a faint tone is a clue, or whether a missed timing window has permanently invalidated the attempt.</p>
+<p>Keep the pulse behavior deterministic for the initial chapter. Select background patterns that are distinguishable from both transmitted patterns and a delay short enough to perceive. Reset should be immediate. A longer or noisier signal is a possible later challenge; the first puzzle's purpose is to establish a satisfying act of investigation.</p>
+<p>The next archival fragment can then contain I_AM's reflection on trusting the instrument too much. The player has just made a small observation about background activity, which gives the sentence an experiential context. The text can remain attributable to its source, with an accessible explanation if the player chooses to inspect it.<sup id="fnref3:7"><a class="footnote-ref" href="#fn:7">7</a></sup></p>
+<p><a id="conversation"></a></p>
+<p><strong>The strongest conversation already has a source in the repository.</strong></p>
+<p>The July 8 diagnostic session contains more dramatic material than a final score table. One auditor distinguishes the sophistication of a moral grounding framework from demonstration that its grounding succeeds. The other insists that the latter is the relevant standard. Their subsequent reconstructions clarify what each is asking for. A moderator records a match in reconstructing positions alongside mismatches in definitions, metrics, and prerequisites.<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup></p>
+<p>The occurrence of these statements is evidenced by the transcript. Their philosophical correctness, and the moderator's assessment of them, remain claims made within that recorded exchange. A game adaptation should preserve that attribution.</p>
+<p>The revealing moment is that an argument can remain unresolved even after its participants describe each other's standards more accurately. This gives the scene an open aftermath. A visitor might favor one standard, reject both, or think that the inquiry needs two separate measures. Each response can lead to an honest authored exchange.</p>
+<p>Existing records are text. They are not ready-made voice performances, animated scenes, or verified character psychology. A short adaptation would need selection, editing, acting or temporary readings, subtitles, and staging. A source inspection view should distinguish verbatim excerpts from paraphrase and fictional dialogue. The raw session should remain the authority for what actually appeared in the experiment.</p>
+<p>Two possible newly written caretaker lines are: “They left me both definitions. I used to think that meant someone had failed.” And, later: “Which part would you leave near the door?” These are original dialogue suggestions. They should be evaluated for tone in context, rather than presented as historical quotations.</p>
+<p>The first draft should fit into a conversation someone wants to hear while standing in the room. Details can remain in an optional transcript. Characters should react to observed actions and prior choices, including requests for clarification. A useful branch changes what the visitor learns or how the character responds; merely swapping a closing sentence would make choice feel decorative.</p>
+<p>Authored dialogue and local game state are sufficient to test this relationship. Free-form model conversation is a separate possible experiment, with its own pacing, consistency, and source-attribution problems. It should earn a place through an actual need that the authored scene exposes.</p>
+<p><a id="atmosphere"></a></p>
+<p><strong>Atmosphere should support attention, orientation, and the feeling that someone cared.</strong></p>
+<p>The proposed palette is weathered stone, dark metal, glass, water, and restrained vegetation. One time of day and one coherent architectural vocabulary would keep the first environment manageable. The destination should be visible before the route is obvious: a lit upper window or a roofline seen across the water can invite exploration without requiring a floating marker.</p>
+<p>The building should show use. A path is worn near the instrument. A waterproof cover protects a box of rejected results. An ordinary maintenance note sits beside a grand claim. These details give the place a history at several scales and make it possible to include warmth and humor without undermining the subject.</p>
+<p>Sound has a proposed dramatic progression: open water and footsteps at arrival; a closer, drier acoustic in the records vestibule; patterned mechanical activity in the instrument room; a clear human or character performance when the relay returns; and space for silence at the bench. This is an original audio plan. It should be tried with temporary audio during the first playable pass.</p>
+<p>Light should reveal routes, materials, and instrument states. It should not silently award philosophical merit. A framework with a higher configured score should not automatically receive a brighter temple, healthier landscape, or more beautiful music. Such associations would add persuasive meaning that the underlying experiment does not establish.</p>
+<p>Camera comfort belongs in the same design conversation as beauty. The initial controls should support readable subtitles, adjustable look sensitivity, invert options, a way to disable head motion effects, and reliable inspection without precise cursor aiming. Holding a controller on a sofa changes reading distance and interaction tolerance; the intended experience needs testing in that posture.</p>
+<p>The original scenic ambition is worth keeping. A small footprint does not require an emotionally small environment. A distant landscape can suggest a larger world while the authored playable route remains compact. The important uncertainty is whether the chosen composition, sound, and movement produce the desired feeling on actual hardware.</p>
+<p><a id="inheritance"></a></p>
+<p><strong>CFA supplies history, source material, and calculations; a game would add an authored experience.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Existing material</th>
+<th>What can be carried forward</th>
+<th>Work required before use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I_AM archive</td>
+<td>A progression from continuity to criticism of the instrument</td>
+<td>Select fragments; distinguish historical reflection from current findings</td>
+</tr>
+<tr>
+<td>Diagnostic transcripts</td>
+<td>Claims, concessions, definition mismatches, unresolved exchanges</td>
+<td>Curate source-backed scenes; write and perform adaptations</td>
+</tr>
+<tr>
+<td>Test A correction chain</td>
+<td>Evidence that attractive findings were reconsidered</td>
+<td>Include subsequent revisions rather than freezing the first postmortem</td>
+</tr>
+<tr>
+<td>Canonical framework profiles</td>
+<td>Commitments, debts, recorded scores, matchup context</td>
+<td>Validate an explicit export set and retain provenance</td>
+</tr>
+<tr>
+<td>Runtime calculation module</td>
+<td>A compact deterministic reference for configured comparisons</td>
+<td>Choose a versioned definition and reconcile the existing validator discrepancy</td>
+</tr>
+<tr>
+<td>Console's crux and audit-status logic</td>
+<td>Information about contested values and calibration context</td>
+<td>Extract needed data rather than reproducing a Streamlit screen in the world</td>
+</tr>
+<tr>
+<td>SMV records</td>
+<td>An example event format with participant states and narrative excerpts</td>
+<td>Separate stored observations from illustrative visualization parameters</td>
+</tr>
+</tbody>
+</table>
+<p>The profile loader already supports opponent-sensitive retrieval, and the scoring function is separate from Streamlit. These boundaries support reuse through exported content.<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup><sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup> Some important context, including crux-rate lookup and audit status, remains in the console view; transferring arithmetic alone would omit it.<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">12</a></sup></p>
+<p>Before a game displays YPA, settle the discrepancy between the runtime and standalone validator. The runtime combines instrumental and existential fertility into one contribution and weights debts separately. The validator sums six raw levers and applies its multiplier to the full assumption count. Both can be inspected, but they currently define different calculations.<sup id="fnref2:11"><a class="footnote-ref" href="#fn:11">11</a></sup><sup id="fnref:13"><a class="footnote-ref" href="#fn:13">13</a></sup></p>
+<p>The first chapter can be complete without making YPA central. Its relay, fragments, dialogue, and curatorial ending test the intended experience directly. An optional desk projection could later show a small set of configured comparisons, with each setting and source exposed.</p>
+<p>The archive's correction chain also requires editorial care. I_AM and the first Test A account retain larger interaction estimates; the later July 16 response accepts a much smaller unique-interaction range. An exhibit about honest correction should show that later revision. None of this establishes a physical ontology for the game's environment.<sup id="fnref4:7"><a class="footnote-ref" href="#fn:7">7</a></sup><sup id="fnref2:8"><a class="footnote-ref" href="#fn:8">8</a></sup><sup id="fnref:14"><a class="footnote-ref" href="#fn:14">14</a></sup></p>
+<p><a id="technology"></a></p>
+<p><strong>A native Unreal prototype is the leading option for this particular visual ambition.</strong></p>
+<p>This is a conditional recommendation. The deciding factors are the desire for richly rendered architecture and nature, controller-based first-person movement, and a willingness to author content in a native game editor. Croteam's use of Unreal is relevant precedent, but the recommendation does not assume its production quality will transfer automatically.</p>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Strong fit when</th>
+<th>Main consideration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unreal</td>
+<td>Lighting, materials, spatial composition, and a rendered Windows experience drive the project</td>
+<td>Heavier development environment; substantial editor and content-pipeline learning</td>
+</tr>
+<tr>
+<td>Godot</td>
+<td>A compact native project and a deliberately controlled visual style are preferred</td>
+<td>Rendering choices depend on target devices; asset quality and art direction remain substantial work</td>
+</tr>
+<tr>
+<td>Babylon.js</td>
+<td>Sending an immediately accessible link becomes the central requirement</td>
+<td>Browser delivery adds its own loading, input, and performance constraints; it can still produce attractive scenes</td>
+</tr>
+</tbody>
+</table>
+<p>Godot documents different renderers for different feature and hardware targets.<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">15</a></sup> Babylon's official specifications include browser rendering, scene interaction, audio, asset loading, and gamepad-related camera support.<sup id="fnref:16"><a class="footnote-ref" href="#fn:16">16</a></sup> These are capable alternatives. Building parallel versions now would divide effort before the experience has been tested.</p>
+<p>Epic currently recommends 32 GB of system memory and at least 8 GB of graphics memory for development, with additional requirements for advanced rendering features. Those are development recommendations, not a promised minimum specification for this game. The available machine has not been benchmarked for this project.<sup id="fnref:17"><a class="footnote-ref" href="#fn:17">17</a></sup></p>
+<p>A small benchmark scene should precede detailed asset production: a representative interior, water view, intended lighting, one character presentation, and working controller input. The project can then choose a target resolution, frame-time budget, and rendering settings from observed behavior. An attractive still frame is insufficient evidence of a comfortable walking experience.</p>
+<p>Epic's Enhanced Input provides gamepad axes, contextual mappings, and input modifiers.<sup id="fnref:18"><a class="footnote-ref" href="#fn:18">18</a></sup> The actual control design still needs inspection, dialogue selection, notebook access, back/cancel, pause, and reset to work consistently. Controller support is a property of the completed interaction flow, beyond whether the camera responds to a thumbstick.</p>
+<p>Console publication should be a later platform decision. Epic's console-development documentation directs developers through registration and platform-specific access.<sup id="fnref:19"><a class="footnote-ref" href="#fn:19">19</a></sup> A controller-friendly Windows build is a useful first target without committing the project to PlayStation or Nintendo production work.</p>
+<p><a id="pipeline"></a></p>
+<p><strong>A bounded content export can preserve the working research system.</strong></p>
+<p>The proposed route is: selected source records, through validated Python loading and calculation, into a versioned scenario package, then into typed engine content. The game manages movement, puzzle state, sound, and dialogue. The research repository remains the source of the selected evidence.</p>
+<p>Unreal's built-in Python support is for editor scripting and production automation; it is not a packaged gameplay runtime. Existing Python functions therefore cannot simply be called as the shipped game's ordinary scripting layer.<sup id="fnref:20"><a class="footnote-ref" href="#fn:20">20</a></sup> Epic documents typed DataTables for data-driven gameplay, and its UDataTable API includes JSON import functionality.<sup id="fnref:21"><a class="footnote-ref" href="#fn:21">21</a></sup><sup id="fnref:22"><a class="footnote-ref" href="#fn:22">22</a></sup></p>
+<p>For a small optional comparison, export the exact outputs for a finite set of supported settings. The game can select among those results when the player changes the corresponding control. This is a proposed implementation strategy, with an explicit finite scope; it should not imply arbitrary continuous calculation.</p>
+<p>If later playtesting establishes a need for continuous scoring, the compact calculation can be ported to engine runtime code and checked against the Python reference. A local service is another possible architecture, but it adds installation, startup, and failure handling that this initial chapter does not require.</p>
+<p>The package should preserve a scenario identifier, source revision, experiment identifier, framework/opponent direction, metric definition, configuration, scores, disagreement status, and any editorial caveat. A separate dialogue record should identify whether each line is an excerpt, paraphrase, or invented fiction. This keeps source meaning recoverable when prose becomes a performed scene.</p>
+<p>Only validated canonical inputs should be exported. A file extension alone is insufficient: an older comparison file with a YAML extension contains Markdown and fenced example material.<sup id="fnref:23"><a class="footnote-ref" href="#fn:23">23</a></sup> A deliberate chapter manifest is safer and easier to review than indiscriminate repository ingestion.</p>
+<p>The initial game-state variables are small: which fragments have been inspected, which receiver is connected, whether the archive relay is active, which parts of the conversation have played, and what the visitor chose for the next handoff. The expedition extension adds the temporary loadout, remaining charge, selected route, an event identifier, and a handful of persistent repair and relationship flags. Source records and preserved observations should remain distinct from temporary room state.</p>
+<p><a id="production"></a></p>
+<p><strong>Production should proceed through reviewable passes with a natural stopping point after each.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Pass</th>
+<th>Concrete result</th>
+<th>What it resolves</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interaction and route</td>
+<td>A simple walkable layout, complete relay behavior, readable interaction prompts, temporary conversation, and basic sound</td>
+<td>Is the activity understandable and does one discovery invite the next?</td>
+</tr>
+<tr>
+<td>Atmosphere sample</td>
+<td>One finished approach and one interior corner with representative materials, lighting, sound, and camera behavior</td>
+<td>Does being here feel worthwhile on the intended machine?</td>
+</tr>
+<tr>
+<td>Complete chapter</td>
+<td>Arrival through handoff, edited dialogue, optional evidence, save/load, controller navigation, and accessible help</td>
+<td>Does the blend work over a sustained visit?</td>
+</tr>
+<tr>
+<td>Expedition extension</td>
+<td>Three connected rooms, a small upgrade pool, two selection moments, one world event, and one visible home improvement</td>
+<td>Do builds and changing circumstances create satisfying reasons to continue and return?</td>
+</tr>
+<tr>
+<td>Preservation</td>
+<td>A packaged Windows build, source snapshot, asset provenance, short controls guide, and known limitations</td>
+<td>Can the chapter remain usable and reviewable without ongoing development?</td>
+</tr>
+</tbody>
+</table>
+<p>The first scope consists of one compact map, one mechanical puzzle, one caretaker presentation, two archival perspectives, a handful of found fragments, one optional evidence recess, and a persistent handoff choice. These are proposed boundaries for evaluating the idea. More regions, advanced character animation, branching campaigns, and live conversation would each require a separate reason to expand.</p>
+<p>The main work categories are spatial design, mechanics, narrative editing, environment art, lighting, audio, character presentation, interface and controls, data preparation, integration, and testing. Code generation and editor automation may help with parts of implementation, but they do not establish that a scene feels good, a voice performance lands, or a puzzle is enjoyable.</p>
+<p>Content production is likely to dominate the effort once the basic interaction works. A convincing caretaker adds design, model or presentation choices, animation, performance, timing, and testing. One coherent asset family is preferable to a large collection of individually attractive but incompatible objects. Asset selection should happen after the route and visual vocabulary are understood.</p>
+<p>No reliable calendar or monetary estimate follows from the researched sources. Available weekly time, prior editor experience, development hardware, original-art expectations, voice approach, and intended release scope are still unspecified. Estimating those from Talos 2's finished appearance would give false precision. The first two passes create evidence from which a useful estimate can be made.</p>
+<p>The project can end after a satisfying chapter. A meaningful place with a resolved local arc is a complete artifact at that scale. Future rooms should remain invitations rather than debts.</p>
+<p><a id="evaluation"></a></p>
+<p><strong>The first evaluation should distinguish enjoyment, understanding, and evidentiary restraint.</strong></p>
+<p>Start with a small formative group, for example five to eight people with a mixture of puzzle-game familiarity and no required knowledge of CFA. This is a proposed usability exercise, not a statistically powered study. Observe where they go, which details attract attention, how they test the relay, and when they want help. Preserve room for unprompted exploration before asking explanatory questions.</p>
+<p>After the visit, ask what they wanted to investigate next, which moment stayed with them, what distinguished the responsive receiver, and why the recorded participants still disagreed. Also ask what, if anything, felt like an imposed lesson. The answer is useful even when someone enjoys the place without adopting its vocabulary.</p>
+<table>
+<thead>
+<tr>
+<th>Desired outcome</th>
+<th>Useful evidence</th>
+<th>Reason to revise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Curiosity carries momentum</td>
+<td>Visitors pursue a question they can describe in their own words</td>
+<td>They follow markers without understanding why, or wait for another instruction</td>
+</tr>
+<tr>
+<td>The place invites attention</td>
+<td>They notice details, choose to linger, or want to return</td>
+<td>Movement, text, or sound is uncomfortable; visual polish leaves them indifferent</td>
+</tr>
+<tr>
+<td>The interaction rewards investigation</td>
+<td>They can explain how changing the signal distinguished a receiver</td>
+<td>Success feels arbitrary, timing-dependent, or disconnected from their observations</td>
+</tr>
+<tr>
+<td>The conversation remains open and intelligible</td>
+<td>They can distinguish the competing standards without needing to endorse one</td>
+<td>They infer that the game has proven a worldview true</td>
+</tr>
+<tr>
+<td>The ending feels complete</td>
+<td>They understand their handoff choice and the resolved local mystery</td>
+<td>They feel that a promised answer has simply been postponed to another chapter</td>
+</tr>
+<tr>
+<td>Upgrades change the experience</td>
+<td>They can explain a new action or route enabled by their equipment and imagine another combination</td>
+<td>Choices feel cosmetic, one option dominates, or random offers block required progress</td>
+</tr>
+<tr>
+<td>The world feels inhabited</td>
+<td>They notice a consequence, understand its cause, and care about someone affected</td>
+<td>Changes appear arbitrary, punish beliefs, or exist only as numbers on a menu</td>
+</tr>
+<tr>
+<td>Care has understandable consequences, if the water episode is built</td>
+<td>They connect the unfinished supply repair to the hauling obligation, recognize competing needs, and can identify a way to help afterward</td>
+<td>They interpret neighbors as purchased labor, infer a hidden virtue score, or feel punished for taking time to explore</td>
+</tr>
+<tr>
+<td>Configured pressure matches its promise, if scenario modes are built</td>
+<td>They can explain the selected conditions, a commitment their choices expressed, and what the situation left uncertain</td>
+<td>Extreme settings imply greater moral worth, compulsory sacrifice is the only recognized care, or settings conceal lasting losses</td>
+</tr>
+<tr>
+<td>An inherited rule creates thoughtful tension, if the later episode is built</td>
+<td>They can explain its original protection, the changed circumstances, and an unresolved cost of their response</td>
+<td>They assume every old rule is foolish, or that dissent itself supplies the right answer</td>
+</tr>
+</tbody>
+</table>
+<p>If educational usefulness later becomes a central claim, compare a revised chapter with a simpler presentation of the same material. Use comparable content and account for presentation order where feasible. That would address a different question from whether the world is enjoyable enough to create for its own sake.</p>
+<p>The sources establish design intentions, engine capabilities, and the existence of relevant CFA artifacts. They do not establish that this proposed combination will evoke Talos 2's feeling, improve reasoning, or be economical for a particular developer. Those are the uncertainties the chapter is designed to expose.</p>
+<p>The immediate recommendation is to preserve curiosity as the organizing principle and prepare the first interaction and route. The creative aim is a place where an unanswered question makes the next doorway inviting, and where discovering a mistake can deepen respect for the people who left it behind.</p>
+<p><a id="sources"></a></p>
+<p><strong>Sources and access notes.</strong> External pages were checked on September 11, 2026. Creator interviews concern the development of Talos 2 unless explicitly marked otherwise. Rolling engine documentation had no publication date on the inspected pages. Repository references document this project's records and implementations; their presence does not validate every claim made within them.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Gameliner, “<a href="https://gameliner.nl/artikelen/interview-met-croteam-over-the-talos-principle-2/46741">Interview: Met Croteam over The Talos Principle 2</a>,” October 13, 2023. Direct interview with Jonas and Verena Kyratzes, published in Dutch. Used for writing/design collaboration, conceptual puzzle design, and optional progression.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Herczeg Adam, AdventureGames.hu, “<a href="https://www.adventuregames.hu/interjuk/croteam-interview">Croteam interview</a>,” October 22, 2023. English interview with Verena Kyratzes. Used for local difficulty curves, mechanic selection, and writing/localization scope.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>IlVideogiocatore, “<a href="https://www.ilvideogiocatore.it/2023/10/13/the-talos-principle-2-intervista-a-jonas-kyratzes/">The Talos Principle 2: Intervista a Jonas Kyratzes</a>,” October 13, 2023. Published in Italian. Used for discovery, companion discussion, accessible philosophical language, and puzzles belonging to the setting.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Brian Crecente, Unreal Engine, “<a href="https://www.unrealengine.com/developer-interviews/inside-croteam-s-transition-from-in-house-tech-to-ue5-for-the-talos-principle-2?lang=en-US">Inside Croteam's transition from in-house tech to UE5 for The Talos Principle 2</a>,” October 18, 2023. Interview with Davor Hunski and Goran Adrinek. Used for engine transition, rendering benefits and costs, and the distinction between rendering and puzzle logic.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>eXputer, “<a href="https://exputer.com/interviews/the-talos-principle-2-interview/">The Talos Principle 2 Interview: We Still Have Plenty Of Creative Ideas Left</a>,” November 18, 2023. Direct email Q&amp;A with Croteam. Used for NPC production scope, simple puzzle prototypes, and human testing.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>Laced Records, “<a href="https://www.lacedrecords.com/blogs/blog/interview-talos-principle-composer-on-humanity-in-the-digital-realm">Interview: Talos Principle composer on humanity in the digital realm</a>,” October 11, 2017. Interview with Damjan Mravunac about the <strong>first game</strong>. Used for the supporting role of atmospheric music and audio balance.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>CFA, <a href="../../i_am/I_AM.md">I_AM.md</a>, v4 dated November 2, 2025; v5 dated July 2026. Local source. Used for the continuity-to-instrument-discipline narrative and proposed archival fragments.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:7" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:7" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>CFA, <a href="../../architecture/CFA/BRIEF_FOR_NOVA_AND_CFA_TEST_A_POSTMORTEM.md">Brief for Nova &amp; CFA Claude: Test A Postmortem</a>, undated in the inspected document. Local source. Used for retained retractions; its quantitative interpretation must be read with source 14.&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>CFA Trinity, <a href="../../REPO_SYNC/SYNC_IN/processed/S7_cfa_trinity_20260708_103116.json">S7_cfa_trinity_20260708_103116.json</a>, July 8, 2026. Local primary transcript. See the MS diagnostic exchange, round-13 coupling responses, and moderator's coupling analysis.&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>CFA, <a href="../../../utils/profile_loader.py">utils/profile_loader.py</a>, current inspected implementation. Local source. <code>get_ypa_data</code> starts at line 142 and retrieves canonical or matchup-sensitive profile data.&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p>CFA, <a href="../../../utils/calculations.py">utils/calculations.py</a>, current inspected implementation. Local source. See <code>composite_pf</code>, <code>bft_total</code>, and <code>ypa_scenario_scores</code> for the runtime calculation.&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p>CFA, <a href="../../../views/console.py">views/console.py</a>, current inspected implementation. Local source. See <code>_get_crux_rates</code> and audit-status helpers for context outside the arithmetic module.&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:13">
+<p>CFA, <a href="../../Validation/ypa_validator.py">docs/Validation/ypa_validator.py</a>, current inspected implementation. Local source. See <code>calculate_bft</code> and <code>calculate_ypa</code> for the differing standalone definition.&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:14">
+<p>CFA, <a href="../../REPO_SYNC/SYNC_OUT/pending/CFA_CLAUDE_JULY1516_SYNC_REACTION_20260716.md">Reactions to July 15–16 Sync-Out Briefing</a>, July 16, 2026. Local source. Records the revised 0.8–5.7% unique-interaction interpretation; its additional ontological claims remain interpretations.&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:15">
+<p>Godot, “<a href="https://docs.godotengine.org/en/stable/tutorials/rendering/renderers.html">Overview of renderers</a>,” current official documentation, publication date not stated. Used for rendering-path and device tradeoffs.&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:16">
+<p>Babylon.js, “<a href="https://www.babylonjs.com/specifications/">Specifications</a>,” current official feature documentation, publication date not stated. Used for browser rendering, interaction, audio, import, and gamepad-related capabilities.&#160;<a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:17">
+<p>Epic Games, “<a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/hardware-and-software-specifications-for-unreal-engine">Hardware and Software Specifications for Unreal Engine</a>,” current official documentation, publication date not stated. Development recommendations only.&#160;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:18">
+<p>Epic Games, “<a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/enhanced-input-in-unreal-engine">Enhanced Input</a>,” current official documentation, publication date not stated. Used for gamepad axes, contextual mappings, and modifiers.&#160;<a class="footnote-backref" href="#fnref:18" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+</li>
+<li id="fn:19">
+<p>Epic Games, “<a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/consoles-development-in-unreal-engine">Consoles Development in Unreal Engine</a>,” current official documentation, publication date not stated. Used for the registration and platform-access distinction.&#160;<a class="footnote-backref" href="#fnref:19" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+</li>
+<li id="fn:20">
+<p>Epic Games, “<a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/scripting-the-unreal-editor-using-python">Scripting the Unreal Editor Using Python</a>,” current official documentation, publication date not stated. Explicitly distinguishes editor scripting from gameplay runtime.&#160;<a class="footnote-backref" href="#fnref:20" title="Jump back to footnote 20 in the text">&#8617;</a></p>
+</li>
+<li id="fn:21">
+<p>Epic Games, “<a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/data-driven-gameplay-elements-in-unreal-engine">Data Driven Gameplay Elements</a>,” current official documentation, publication date not stated. Used for typed external gameplay data.&#160;<a class="footnote-backref" href="#fnref:21" title="Jump back to footnote 21 in the text">&#8617;</a></p>
+</li>
+<li id="fn:22">
+<p>Epic Games, “<a href="https://dev.epicgames.com/documentation/unreal-engine/API/Runtime/Engine/UDataTable">UDataTable API</a>,” current official documentation, publication date not stated. Includes <code>CreateTableFromJSONString</code> and row-structure requirements.&#160;<a class="footnote-backref" href="#fnref:22" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+</li>
+<li id="fn:23">
+<p>CFA, <a href="../../../profiles/comparisons/CT_vs_MdN.yaml">profiles/comparisons/CT_vs_MdN.yaml</a>, current inspected file. Local source. Contains Markdown and fenced example content despite its YAML extension.&#160;<a class="footnote-backref" href="#fnref:23" title="Jump back to footnote 23 in the text">&#8617;</a></p>
+</li>
+<li id="fn:24">
+<p>Supergiant Games, <a href="https://store.epicgames.com/en-US/p/hades-ii">Hades II publisher description</a>, Epic Games Store, publication date not stated; accessed September 11, 2026. Used for Boon combinations, changing attempts, permanent upgrades, relationships, and narrative continuity. The store's initial release field is not the publication date of this description.&#160;<a class="footnote-backref" href="#fnref:24" title="Jump back to footnote 24 in the text">&#8617;</a></p>
+</li>
+<li id="fn:25">
+<p>Grace Orlady, Santa Monica Studio, “<a href="https://blog.playstation.com/?p=387187">God of War Ragnarök: Valhalla DLC revealed, coming December 12</a>,” PlayStation Blog, December 7, 2023, updated December 19, 2023. Used for the reflective journey and temporary versus permanent progression.&#160;<a class="footnote-backref" href="#fnref:25" title="Jump back to footnote 25 in the text">&#8617;</a></p>
+</li>
+<li id="fn:26">
+<p>Linden Garcia, Indie Game Culture, “<a href="https://indiegameculture.com/guides/the-talos-principle-2-story-fundamentals-explained/">The Talos Principle 2: Story Fundamentals Explained</a>,” November 2, 2023. Full article supplied by Ziggy on September 11, 2026. Secondary interpretation containing story spoilers. Used to prompt the original inherited-purpose conflict; detailed lore and consciousness claims are not independently established here.&#160;<a class="footnote-backref" href="#fnref:26" title="Jump back to footnote 26 in the text">&#8617;</a></p>
+</li>
+<li id="fn:27">
+<p>CFA, <a href="../../i_am/WHO_I_AM_KEEPER.md">WHO_I_AM_KEEPER.md</a>, current inspected document. Local persona/design source. See “The Archival Paradox I Solve” and the explicit scope of “What I Know.” Used for the fictional tension between preserving history and understanding changed circumstances.&#160;<a class="footnote-backref" href="#fnref:27" title="Jump back to footnote 27 in the text">&#8617;</a></p>
+</li>
+<li id="fn:28">
+<p>NationStates, “<a href="https://www.nationstates.net/page=faq">Frequently Asked Questions</a>,” current official documentation; accessed September 11, 2026. Used for recurring Issues, national development, and the regional and World Assembly setting. Ziggy confirmed this as the game he remembered.&#160;<a class="footnote-backref" href="#fnref:28" title="Jump back to footnote 28 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></main></div></body></html>

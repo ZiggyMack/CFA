@@ -1,5 +1,7 @@
 # Hon Dolo Strictly Business
 
+**October 9 head-reference standard:** [Reusable heads, mouth detail and outfit roles](../collaborators/character_head_reference_standard.txt) are now the production method. The [expected intake](head_library_20261009/expected_intake.json) tracks 130 unique head views and 50 separate mouth macros, followed by one hero view per outfit. The [observed Grok correction](head_library_20261009/grok_conversation_evidence.json) confirms four upper gold caps (laterals + short canines), replacing the older two-canines-only wording. New delivery is awaited; historical source files remain unchanged.
+
 This is the first Comfy music-video project: **Hon Dolo - Strictly Business**. The supplied lyrics establish the working song text. Ziggy has clarified the central irony: the supposedly immoral, greedy smuggler ends up sacrificing himself for love. That authorial direction governs the proposed visual story below. The creative direction remains lifelike trap-rap, with Hon Dolo leading and Chewbacca serving as MC, DJ and copilot.
 
 **October 7 working source:** use the newly supplied **DoLoSoLo_0 (Remastered).mp3** for the next alignment pass. The latest pasted lyrics preserve the earlier wording, but the recording has changed. The older section times below remain historical planning evidence and must be realigned before cutting shots or preparing lip-sync audio.
@@ -101,3 +103,8 @@ This corrects the earlier plan's omission of the hosted 2K branch. Public source
 6. Assemble selected takes against the original song master. Treat generated sound as a separate optional track. Regeneration order follows the chosen provider contract; retain unmodified originals for any later provider finishing step.
 
 The first song-specific proofs should be one clear Hon Dolo rap phrase, Chewie making one visible deck adjustment, and the Falcon's decisive turn. These test mouth detail, nonhuman contact and narrative readability. Vader's dining scene and the carbonite reveal can then receive their own reference frames and controlled effects shots.
+
+
+### Grill variants and hand options — October 9
+
+The [reference intake](reference_updates/grill_and_hand_20261009/INTAKE_NOTES.txt) links the unchanged four-gold external-off mouth set, the optional iced-on collection, and the Princess Leigh hearts/spades artwork options. The [head ledger](head_library_20261009/expected_intake.json) records paired coverage and the separate prop set. Artwork layout and final iced-anchor selection remain explicit review decisions.

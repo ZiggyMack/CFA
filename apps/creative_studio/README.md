@@ -63,3 +63,9 @@ python -m unittest discover -s apps/creative_studio/tests -v
 ```
 
 The checks cover bundle path isolation, collection order, legacy and current hash compatibility, seed restoration, explicit clears, provider-filtered handoffs, draft-only plan state, and unchanged source bytes. Streamlit interaction checks exercise pagination, project navigation, storyboard rendering, collaborator text, review decisions, and plan save/removal. Native widgets keep the sidebar toggle accessible on narrow screens.
+
+## Full dashboard mirror
+
+The separate **Full Visual Library** page reuses the complete HTML dashboard while this compact app remains available. Prepare it with `python apps/creative_studio/build_full_dashboard.py`, then use Streamlit's page sidebar. Local bundles use hardlinks on D: and preserve all original bytes and review IDs; nothing is uploaded by the builder.
+
+See [full dashboard preparation and deployment notes](FULL_DASHBOARD_README.txt) for phone review transfers, an explicit portable-copy option, media size and hosting constraints. The hosted page needs its complete bundle before deployment; preparation is not publication or cross-device autosync.

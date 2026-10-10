@@ -1,0 +1,119 @@
+{
+  "schema": "cfa-winner-promotion-registry-v1",
+  "version": "COMFY_UI-MASTER-20261008-v1",
+  "snapshotDate": "2026-10-08",
+  "purpose": "Explicitly elevated work with narrow approval scope; not a favorites, inventory or general quality ranking.",
+  "automaticSync": false,
+  "automaticPromotion": false,
+  "interpretation": [
+    "Only promotions below have recorded explicit user elevation in this snapshot.",
+    "Creative acceptance, storyboard stage, technical verification and production approval are independent.",
+    "Source-designated flagship anchors remain role references; their folder names are not new approval receipts.",
+    "Favorites, export baskets, retained versions and provider acknowledgements do not imply winner promotion."
+  ],
+  "promotions": [
+    {
+      "promotionID": "LAG-SCENE-PROMOTION-20261008-T02",
+      "assetID": "LAG-VID-PROOF-01-T02",
+      "project": "lisan",
+      "title": "Signature look — Gemini take 02",
+      "filename": "LAG-VID-PROOF-01_T02_original.mp4",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/20261008/LAG-VID-PROOF-01_T02_original.mp4",
+      "sha256": "640000faabc0b1f018a6fda0f05c9560579750c662f33d5da4cd4920d67befa0",
+      "bytes": 3365125,
+      "creativeAcceptance": "explicit_user_approved",
+      "workingReference": {
+        "status": "approved",
+        "scope": "scene"
+      },
+      "storyboardStage": "detailed_design",
+      "technicalVerification": "pending",
+      "productionAcceptance": "pending",
+      "approvalBasis": "Explicit user approval and elevation to a working file at detailed design, reported by the parent task.",
+      "approvalEvidence": {
+        "repoPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/20261008/LAG-VID-PROOF-01_T02.provenance.json",
+        "sha256": "8b2ee84299ec0205f10b2cabe3bbeeb73e2786e2108c476d5b15b6c61aa20746",
+        "section": "approval"
+      },
+      "measuredMedia": {
+        "containerSeconds": 10.005,
+        "videoSeconds": 10.0,
+        "width": 1280,
+        "height": 720,
+        "frameCount": 240,
+        "fps": 24,
+        "fullDecodePassed": true
+      },
+      "reviewScope": {
+        "method": "Decoded frames 0, 120 and 239 visually inspected; full A/V decode integrity check.",
+        "fullMotionAndAudioReviewed": false,
+        "exactTattooAndPiercingContinuityVerified": false,
+        "songAlignmentVerified": false
+      },
+      "notImplied": [
+        "New canonical tattoo or identity standard",
+        "Technical continuity verification passed",
+        "Production approval",
+        "Measured song alignment",
+        "Comfy execution"
+      ],
+      "generationUnknowns": {
+        "effectivePrompt": null,
+        "exactAttachedFileIdentities": null,
+        "modelVersion": null,
+        "seed": null,
+        "cost": null
+      },
+      "nextReview": "Review normal-speed motion and audible content, compare exact assigned Lisan identity/detail references, resolve piercing deviations, and choose a bounded edit if needed. No automatic upscaling or production promotion."
+    }
+  ],
+  "notPromotedHere": [
+    {
+      "assetID": "GEM-C0823C60",
+      "state": "user_selected_starting_source",
+      "reason": "Preferred baseline for Comfy experiments; no blanket detail, identity or production approval."
+    },
+    {
+      "assetID": "GEM-58328BF1",
+      "state": "user_selected_dinner_candidate",
+      "reason": "Useful story connection; costume drift and final acceptance remain open."
+    },
+    {
+      "assetID": "GEM-5A115C59",
+      "state": "user_retained_longer_continuation",
+      "reason": "Retained 41-second version; not complete motion/detail acceptance."
+    },
+    {
+      "assetID": "HD-AUDIO-REPLACE-V001",
+      "state": "local_technical_proof",
+      "reason": "Picture equality measured; playback, song placement and user acceptance remain pending."
+    },
+    {
+      "assetID": "HD-COMFY-MOTION-V001",
+      "state": "executed_candidate",
+      "reason": "Long blinks and smile drift; acceptance pending."
+    },
+    {
+      "assetID": "HD-COMFY-RELIGHT-V001",
+      "state": "preservation_failed",
+      "reason": "Critical facial and scene drift; retain as experiment evidence."
+    },
+    {
+      "assetID": "HD-COMFY-RELIGHT-V002",
+      "state": "preservation_failed",
+      "reason": "Canny did not materially solve preservation."
+    },
+    {
+      "assetID": "HD-DROP-19593c0144ed",
+      "state": "multiverse",
+      "reason": "Explicit alternate ingredient; excluded from Prime promotion."
+    }
+  ],
+  "pendingExternalWork": {
+    "grokOutgoing": "acknowledged receipt; content inventory and first proofs pending; no accepted generated result",
+    "flowVideo002": "blocked before upload pending exact-payload approval; no generation",
+    "incomingGrok500": "postponed; no verified download or completed intake"
+  },
+  "updateProtocol": "manual_update_handoff.txt",
+  "scopeChangeRule": "Add, supersede or revoke a promotion only from a new explicit decision with exact asset identity and scope; carry the versioned change back to CFA and the project notebook."
+}

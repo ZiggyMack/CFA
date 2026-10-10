@@ -1,0 +1,65 @@
+{
+  "test_id": "HD-01",
+  "state": "inputs_verified_prompt_reconciliation_pending",
+  "raw_prompt": {
+    "member": "NOVA-IMG-BENCH-20261009/PROMPTS/HD-01_PROMPT.txt",
+    "canonical_path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/ae2dd114e18f__HD-01_PROMPT.txt",
+    "sha256": "ae2dd114e18fde6ceb05f1253e58309587267bbd29353f3e4450214b03836fc6"
+  },
+  "uploads": [
+    {
+      "upload_order": 1,
+      "package_member": "NOVA-IMG-BENCH-20261009/refs/HD-01/01_HD-LOCK-FACE.jpg",
+      "canonical_path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/hon-dolo-armor-swap/HD-EXP-LOCK-FACE.jpg",
+      "canonical_media_id": "HD-DROP-ef5d59a6402e",
+      "sha256": "ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978",
+      "role": "Current identity: face, hair, cheek lettering, neck tattoo, visible teeth and piercings; written nose-hoop conflict must be resolved."
+    },
+    {
+      "upload_order": 2,
+      "package_member": "NOVA-IMG-BENCH-20261009/refs/HD-01/02_HD-LOCK-FACE_face-neck-crop.png",
+      "canonical_path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/89000d0149be__02_HD-LOCK-FACE_face-neck-crop.png",
+      "canonical_media_id": null,
+      "sha256": "89000d0149bef4f8d846500d0e111c9bde5e03bdd3be5ad4650b074799cc20a5",
+      "role": "Face/neck detail crop of the identity anchor; this is a derivative, not a second independent identity source."
+    },
+    {
+      "upload_order": 3,
+      "package_member": "NOVA-IMG-BENCH-20261009/refs/HD-01/03_HD-PINSTRIPE_outfit-scene-ref.jpg",
+      "canonical_path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/hon-dolo-ref-sheet-pinstripe/HD-PINSTRIPE-01-chest-up.jpg",
+      "canonical_media_id": "HD-DROP-71cad143227a",
+      "sha256": "71cad143227a3e44bab318aa6f7f17c303bb01383b455fb17f19d6caec2e3db6",
+      "role": "Navy pinstripe outfit and setting only; do not copy its old teeth/tattoo drift."
+    },
+    {
+      "upload_order": 4,
+      "package_member": "NOVA-IMG-BENCH-20261009/refs/HD-01/04_PROP-HD-HIP_holster-char-left.png",
+      "canonical_path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/41b93f64e7ea__PROP-HD-HIP_v001.png",
+      "canonical_media_id": "HD-RETURN-41b93f64e7ea",
+      "sha256": "41b93f64e7ea7199974101575b5704ce037f019e02e507e2b70cb1b499263350",
+      "role": "Hip prop/holster appearance and character-left placement only; preserve its existing two-stage lineage."
+    },
+    {
+      "upload_order": 5,
+      "package_member": "NOVA-IMG-BENCH-20261009/refs/HD-01/05_TATTOO-HD-NECK-BLASTER_stencil.png",
+      "canonical_path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/c3ce2dd18e1e__ST-HD-BLASTER_sheet-c91af37e_panel3_derived-crop_flat-black-on-white.png",
+      "canonical_media_id": "HD-RETURN-c3ce2dd18e1e",
+      "sha256": "c3ce2dd18e1eb940f978526e38ef56384bab23544a59d41aeaeff8672f4befe2",
+      "role": "Recovered source-sheet panel 3 derived stencil; design only, character-left neck placement set by the agreed brief."
+    }
+  ],
+  "context_only_do_not_upload": [
+    {
+      "member": "NOVA-IMG-BENCH-20261009/refs/HD-01/CTX_HD-BLASTER-SHEET_recovered-original_6-options.jpg",
+      "canonical_path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/c91af37e775d__c91af37e775d5e6d941d2bc05fcc2f26f1ad4ad9a50caa1427a5dd3c01755419.jpg"
+    }
+  ],
+  "remaining_holds": [
+    "Raw prompt says two hoops on character-right nostril but identity anchor/package caveat says one each side. Reconcile one target for both image lanes; preserve raw prompt, record local revision separately.",
+    "Confirm actual accessible image model and multi-reference count/order before a run; provider product names remain claims.",
+    "Historical Grok images are targets with differing original prompts/attempt histories; obtain a matched fresh Grok run for a fair generation ranking, or label the comparison as improvement relative to historical images."
+  ],
+  "suggested_initial_scope": "One HD-01 attempt per selected image lane; no automatic rerolls or completion of all 18 tests implied.",
+  "provider_code_executed": false,
+  "generation_performed": false
+}

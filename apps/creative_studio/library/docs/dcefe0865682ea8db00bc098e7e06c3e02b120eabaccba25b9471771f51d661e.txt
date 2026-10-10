@@ -1,0 +1,528 @@
+{
+  "schema_version": 1,
+  "package_id": "GROK-HD-20261008",
+  "project": "Hon Dolo - Strictly Business",
+  "state": "prepared_not_sent",
+  "updated": "2026-10-08",
+  "supersedes_for_this_handoff": "older generic 12-concept Grok brief and contradictory dated tattoo notes; old files remain historical evidence",
+  "story_intent": "The joke is the greedy smuggler who insists on payment eventually turns back and sacrifices for love. These money/boss scenes establish the boastful starting point, not a new ending.",
+  "common_rules": {
+    "reference_priority": [
+      "latest explicit user direction in this package",
+      "HD-DESIGN-01 / HD-EXP-LOCK-FACE.jpg for visible current design",
+      "request-specific source for outfit/setting/pose",
+      "labelled detail evidence within its limited role"
+    ],
+    "current_visible_tattoo_map": [
+      {
+        "region": "character-right cheek / image-left in frontal source",
+        "design": "eye",
+        "source_asset_id": "HD-DROP-ef5d59a6402e"
+      },
+      {
+        "region": "character-left cheek / image-right in frontal source",
+        "design": "know",
+        "source_asset_id": "HD-DROP-ef5d59a6402e"
+      },
+      {
+        "region": "character-left neck / image-right in frontal source",
+        "design": "blaster with smoke curl",
+        "source_asset_id": "HD-DROP-ef5d59a6402e",
+        "heritage_asset_id": "HD-EXP-259"
+      },
+      {
+        "region": "upper chest, visible portion only",
+        "design": "current visible ship treatment",
+        "source_asset_id": "HD-DROP-ef5d59a6402e",
+        "unresolved": "Complete drawing and #107 original size/placement heritage are unverified. Do not merge the two supplied ship artworks."
+      }
+    ],
+    "preserve": [
+      "current Hon Dolo face/hair identity and skin finish",
+      "two gold upper canine caps with natural other upper teeth and silver/chrome lower grill as visible in LOCK-FACE",
+      "visible nose/lip/ear jewelry and brow treatment from current reference",
+      "chosen wardrobe/setting/composition within each revision",
+      "original files and their names"
+    ],
+    "exclude_from_default": [
+      "bird/falcon tattoo",
+      "Jabba tattoo",
+      "Chewie script",
+      "DoLo or Captain/Falcon tattoo words",
+      "dice",
+      "literal third eye",
+      "eyebrow piercings",
+      "full gold upper row",
+      "oversized vampire fangs"
+    ],
+    "optional_bird_variant": "Retain as an idea only; not requested in these corrections. No automatic global revival.",
+    "unshown_regions": "Forearms, hands, back, hidden chest and jewelry not visible in the source remain unknown. Report gaps instead of drawing invented continuity.",
+    "orientation": "Character-left/right always means the subject's own body. Also state viewer-left/right for each delivered view; never mirror lettering or infer sides from a changed camera angle.",
+    "scope": "These are Grok design and scene corrections. Do not perform a Han actor-likeness swap in this package. Comfy swap targets are a separate task.",
+    "audio": "Still images and motion prompts only. No dialogue, lip-sync, burned-in lyrics or generated song. The actual song segment is supplied later; no new timestamp assignments.",
+    "acceptance": "Generated or returned is not accepted. Keep source, proposed output, review finding and user approval distinct."
+  },
+  "boss_slot": {
+    "slot_id": "BOSS-UNCONFIRMED",
+    "working_assumption": "Jabba the Hutt, established smuggling boss",
+    "status": "pending_user_confirmation",
+    "staging_reference": {
+      "source_asset_id": "JABBA-STAGE-01",
+      "reference_id": "JABBA-STAGE-01",
+      "source_filename": "JABBA-EXP-01-host-dais.jpg",
+      "sha256": "0cfc363be1df59f63ae4ef8a15c93b431672f29c4d924676cfa8afe9c6e5c09e",
+      "bundle_path": "references/04_boss_staging/JABBA-EXP-01-host-dais.jpg",
+      "allowed_role": "boss environment/dais styling only"
+    },
+    "restriction": "Use only dais, environment, scale relationship and host styling from this image; final species anatomy is unresolved. Return the boss proof as provisional. If user names another boss, replace this one slot and its source; do not generate a roster of alternatives."
+  },
+  "items": [
+    {
+      "request_id": "REV-HD-001",
+      "type": "correct_selected_still",
+      "status": "queued_not_sent",
+      "source": {
+        "source_asset_id": "HD-DROP-2691712601a9",
+        "reference_id": null,
+        "source_filename": "REF-cash-source.jpg",
+        "sha256": "2691712601a9da9ab3c629b2c1d3204cdd1106cb64c301218aec1eb63182b702",
+        "bundle_path": "references/02_revision_sources/REF-cash-source.jpg",
+        "allowed_role": "preserve cash-counting vest and ship-table scene"
+      },
+      "current_standard": {
+        "source_asset_id": "HD-DROP-ef5d59a6402e",
+        "reference_id": "HD-DESIGN-01",
+        "source_filename": "HD-EXP-LOCK-FACE.jpg",
+        "sha256": "ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978",
+        "bundle_path": "references/01_current/HD-EXP-LOCK-FACE.jpg",
+        "allowed_role": "current visible Hon Dolo design details"
+      },
+      "region": "visible face, neck and chest tattoos; mouth/jewelry only to match current standard",
+      "preserve": [
+        "Cash-counting vest outfit and accessories",
+        "Cash-counting action, table/currency props, composition and ship-interior scene",
+        "Existing scene lighting and atmosphere"
+      ],
+      "change": "Correct all visible tattoos to the current Hon Dolo standard shown by the current LOCK-FACE and any separately supplied current detail references.",
+      "limits": "Keep the selected scene and outfit. Do not reveal covered anatomy or use older artwork as an automatic current lock.",
+      "max_initial_images": 1,
+      "output_paths": [
+        "01_REVISIONS/REV-HD-001_v001.png"
+      ],
+      "success_check": [
+        "current visible detail map matches without retired motifs",
+        "selected outfit and scene intact",
+        "same intended character",
+        "no new unreferenced tattoos or jewelry"
+      ]
+    },
+    {
+      "request_id": "REV-HD-002",
+      "type": "correct_selected_still",
+      "status": "queued_not_sent",
+      "source": {
+        "source_asset_id": "HD-DROP-56a50dabe9e0",
+        "reference_id": null,
+        "source_filename": "REF-coat-source.jpg",
+        "sha256": "56a50dabe9e0357f3512288b0f5ade4d68d9afa1a080f80d111e047f96827057",
+        "bundle_path": "references/02_revision_sources/REF-coat-source.jpg",
+        "allowed_role": "preserve black overcoat and boarding-ramp night scene"
+      },
+      "current_standard": {
+        "source_asset_id": "HD-DROP-ef5d59a6402e",
+        "reference_id": "HD-DESIGN-01",
+        "source_filename": "HD-EXP-LOCK-FACE.jpg",
+        "sha256": "ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978",
+        "bundle_path": "references/01_current/HD-EXP-LOCK-FACE.jpg",
+        "allowed_role": "current visible Hon Dolo design details"
+      },
+      "region": "visible face, neck and chest tattoos; mouth/jewelry only to match current standard",
+      "preserve": [
+        "Black overcoat outfit and accessories",
+        "Ship boarding ramp/entrance at night, composition and atmospheric lighting",
+        "The nighttime ship-boarding setting and mood"
+      ],
+      "change": "Correct all visible tattoos to the current Hon Dolo standard shown by the current LOCK-FACE and any separately supplied current detail references.",
+      "limits": "Keep the selected scene and outfit. Do not reveal covered anatomy or use older artwork as an automatic current lock.",
+      "max_initial_images": 1,
+      "output_paths": [
+        "01_REVISIONS/REV-HD-002_v001.png"
+      ],
+      "success_check": [
+        "current visible detail map matches without retired motifs",
+        "selected outfit and scene intact",
+        "same intended character",
+        "no new unreferenced tattoos or jewelry"
+      ]
+    },
+    {
+      "request_id": "REV-HD-003",
+      "type": "prepare_pinstripe_boss_look",
+      "status": "queued_not_sent",
+      "source": {
+        "source_asset_id": "HD-DROP-1966838931ad",
+        "reference_id": null,
+        "source_filename": "REF-pinstripe-source.jpg",
+        "sha256": "1966838931adb71d4443b608d65b9c3613bdc7de7fd6ce3e38c9b35e344e51f7",
+        "bundle_path": "references/02_revision_sources/REF-pinstripe-source.jpg",
+        "allowed_role": "preserve navy pinstripe three-piece, tie/bar, pocket square and luxury-office mood"
+      },
+      "current_standard": {
+        "source_asset_id": "HD-DROP-ef5d59a6402e",
+        "reference_id": "HD-DESIGN-01",
+        "source_filename": "HD-EXP-LOCK-FACE.jpg",
+        "sha256": "ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978",
+        "bundle_path": "references/01_current/HD-EXP-LOCK-FACE.jpg",
+        "allowed_role": "current visible Hon Dolo design details"
+      },
+      "region": "visible face, mouth, jewelry and neck; preserve covered chest",
+      "preserve": [
+        "navy pinstripe three-piece suit",
+        "tie, gold tie bar, pocket square, watch",
+        "luxury-office/penthouse mood and pose"
+      ],
+      "change": [
+        "match visible eye/know placement and neck blaster to current standard",
+        "correct full-gold upper teeth and jewelry drift against LOCK-FACE",
+        "remove accidental unreferenced marks"
+      ],
+      "max_initial_images": 1,
+      "output_paths": [
+        "01_REVISIONS/REV-HD-003_v001.png"
+      ],
+      "next_use": "SC-BOSS-001 after continuity check; wardrobe preference is not full-character approval"
+    },
+    {
+      "request_id": "REV-HD-004",
+      "type": "saloon_prop_and_continuity_correction",
+      "status": "queued_not_sent",
+      "source": {
+        "source_asset_id": "HD-DROP-bb0780a46f7d",
+        "reference_id": null,
+        "source_filename": "REF-saloon-source.jpg",
+        "sha256": "bb0780a46f7d6f0ef5493939ba1f1920366dd670ff8b5da3738c3c04672ec596",
+        "bundle_path": "references/02_revision_sources/REF-saloon-source.jpg",
+        "allowed_role": "preserve western-fringe outfit and saloon; repair visible hip prop"
+      },
+      "selected_alpha": {
+        "source_asset_id": "HD-DROP-9cecaad5ed57",
+        "reference_id": null,
+        "source_filename": "HD-SALOON-01-chest-up.jpg",
+        "sha256": "9cecaad5ed5764a4109c053b17fb09afd7bb0f97557fe61f88a2f72ac73cca5a",
+        "bundle_path": "references/02_revision_sources/HD-SALOON-01-chest-up.jpg",
+        "allowed_role": "user-selected western-fringe portrait and bar-scene alpha"
+      },
+      "current_standard": {
+        "source_asset_id": "HD-DROP-ef5d59a6402e",
+        "reference_id": "HD-DESIGN-01",
+        "source_filename": "HD-EXP-LOCK-FACE.jpg",
+        "sha256": "ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978",
+        "bundle_path": "references/01_current/HD-EXP-LOCK-FACE.jpg",
+        "allowed_role": "current visible Hon Dolo design details"
+      },
+      "region": "visible hip blaster/holster silhouette and attachment; current visible face/neck continuity",
+      "preserve": [
+        "brown western fringe jacket",
+        "dark shirt, bolo tie and saloon/bar atmosphere",
+        "selected pose and overall look",
+        "wardrobe fabric, belt and nearby body silhouette"
+      ],
+      "change": [
+        "make a coherent fantasy sci-fi blaster visibly seated in its holster",
+        "correct visual attachment to belt/hip, overlap/occlusion and readable silhouette",
+        "avoid fused shapes or floating/duplicated prop parts",
+        "match current visible tattoos/grill without treating the saloon alpha as blanket tattoo approval"
+      ],
+      "hip_side": {
+        "state": "pending_global_side_selection",
+        "provisional_rule": "Retain the depicted source side for this proof, label both body-side and viewer-side. If the crop prevents certainty, mark unknown. Do not mirror or silently make it a global wardrobe rule."
+      },
+      "max_initial_images": 2,
+      "output_paths": [
+        "01_REVISIONS/REV-HD-004_v001.png",
+        "03_DETAILS/PROP-HD-HIP_v001.png"
+      ],
+      "detail_rule": "The second image may be an exact crop of the corrected proof; label derived_crop and parent output ID. It is visual prop continuity, not original hardware artwork. The proof must show matching front or three-quarter outfit/hip context; a full 360 set is unnecessary.",
+      "future_use": "Transfer the accepted silhouette/attachment convention to other outfits later, one outfit at a time."
+    },
+    {
+      "request_id": "SC-BOSS-001",
+      "type": "pinstripe_boss_meeting_two_person_proof",
+      "status": "proposal_with_provisional_boss",
+      "source": {
+        "source_asset_id": "HD-DROP-1966838931ad",
+        "reference_id": null,
+        "source_filename": "REF-pinstripe-source.jpg",
+        "sha256": "1966838931adb71d4443b608d65b9c3613bdc7de7fd6ce3e38c9b35e344e51f7",
+        "bundle_path": "references/02_revision_sources/REF-pinstripe-source.jpg",
+        "allowed_role": "preserve navy pinstripe three-piece, tie/bar, pocket square and luxury-office mood"
+      },
+      "current_standard": {
+        "source_asset_id": "HD-DROP-ef5d59a6402e",
+        "reference_id": "HD-DESIGN-01",
+        "source_filename": "HD-EXP-LOCK-FACE.jpg",
+        "sha256": "ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978",
+        "bundle_path": "references/01_current/HD-EXP-LOCK-FACE.jpg",
+        "allowed_role": "current visible Hon Dolo design details"
+      },
+      "boss_slot": {
+        "slot_id": "BOSS-UNCONFIRMED",
+        "working_assumption": "Jabba the Hutt, established smuggling boss",
+        "status": "pending_user_confirmation",
+        "staging_reference": {
+          "source_asset_id": "JABBA-STAGE-01",
+          "reference_id": "JABBA-STAGE-01",
+          "source_filename": "JABBA-EXP-01-host-dais.jpg",
+          "sha256": "0cfc363be1df59f63ae4ef8a15c93b431672f29c4d924676cfa8afe9c6e5c09e",
+          "bundle_path": "references/04_boss_staging/JABBA-EXP-01-host-dais.jpg",
+          "allowed_role": "boss environment/dais styling only"
+        },
+        "restriction": "Use only dais, environment, scale relationship and host styling from this image; final species anatomy is unresolved. Return the boss proof as provisional. If user names another boss, replace this one slot and its source; do not generate a roster of alternatives."
+      },
+      "region": "two-character composition and readable interaction",
+      "preserve": [
+        "corrected REV-HD-003 outfit/identity",
+        "distinct Hon Dolo and boss silhouettes",
+        "stable meeting geography"
+      ],
+      "change": "Place suited Hon Dolo in a first readable meeting with the provisional boss; confident businessman posture with a hint of debt pressure.",
+      "max_initial_images": 1,
+      "output_paths": [
+        "02_SCENES/BOSS/BOSS-P01_v001.png"
+      ],
+      "depends_on": [
+        "REV-HD-003 continuity check"
+      ],
+      "coverage_plan": "BOSS-P01 through BOSS-P05 in panel_plan.txt; only P01 requested initially. P02-P05 await accepted proof and boss selection.",
+      "flow_candidate": "Single slow camera move, modest gaze/hand action, no talking; accepted still first."
+    },
+    {
+      "request_id": "SC-CAL-001",
+      "type": "caleb_k_reference_and_saloon_two_person_proof",
+      "status": "queued_not_sent",
+      "source": {
+        "source_asset_id": "HD-DROP-9cecaad5ed57",
+        "reference_id": null,
+        "source_filename": "HD-SALOON-01-chest-up.jpg",
+        "sha256": "9cecaad5ed5764a4109c053b17fb09afd7bb0f97557fe61f88a2f72ac73cca5a",
+        "bundle_path": "references/02_revision_sources/HD-SALOON-01-chest-up.jpg",
+        "allowed_role": "user-selected western-fringe portrait and bar-scene alpha"
+      },
+      "environment_and_prop_source": {
+        "source_asset_id": "HD-DROP-bb0780a46f7d",
+        "reference_id": null,
+        "source_filename": "REF-saloon-source.jpg",
+        "sha256": "bb0780a46f7d6f0ef5493939ba1f1920366dd670ff8b5da3738c3c04672ec596",
+        "bundle_path": "references/02_revision_sources/REF-saloon-source.jpg",
+        "allowed_role": "preserve western-fringe outfit and saloon; repair visible hip prop"
+      },
+      "current_standard": {
+        "source_asset_id": "HD-DROP-ef5d59a6402e",
+        "reference_id": "HD-DESIGN-01",
+        "source_filename": "HD-EXP-LOCK-FACE.jpg",
+        "sha256": "ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978",
+        "bundle_path": "references/01_current/HD-EXP-LOCK-FACE.jpg",
+        "allowed_role": "current visible Hon Dolo design details"
+      },
+      "character": {
+        "character_id": "CALEB-K",
+        "brief": "middle-aged white male lawyer, a distinct new supporting character",
+        "identity_reference": "not yet supplied",
+        "status": "new concept candidate, no approved likeness",
+        "wardrobe_direction": "a plausible lawyer visiting this saloon; restrained outfit distinct from Hon Dolo's fringe look",
+        "do_not_infer": "No celebrity identity, resemblance to a specific real person, tattoos or signature accessories are established."
+      },
+      "region": "new supporting-character identity and coherent two-person bar interaction",
+      "preserve": [
+        "Hon Dolo western-fringe/bar-scene alpha",
+        "current visible Hon Dolo details",
+        "two distinct adult faces and clear eyelines",
+        "nonviolent friendly familiarity"
+      ],
+      "change": "One neutral Caleb reference, then one readable saloon master with Hon Dolo and Caleb; no invented dialogue.",
+      "proposed_cue": {
+        "text": "That's my dog dipped in flavor, Caleb K",
+        "status": "approximate user-remembered cue; not found in verified Strictly Business lyric master",
+        "timing": null,
+        "lyric_master_change_authorized": false
+      },
+      "max_initial_images": 2,
+      "output_paths": [
+        "00_CHARACTER_REFS/CALEB-K_REF_v001.png",
+        "02_SCENES/CALEB/CAL-P01_v001.png"
+      ],
+      "coverage_plan": "CAL-P01 through CAL-P04; only P01 plus Caleb neutral reference requested initially. P02-P04 are proposals after two-person proof review.",
+      "depends_on": [
+        "REV-HD-004 prop/continuity correction for views exposing the hip"
+      ],
+      "flow_candidate": "Small greeting or amused nod at the bar; hands visible and separate; no lip-sync."
+    },
+    {
+      "request_id": "ST-HD-EYE",
+      "type": "recover_current_tattoo_source_art",
+      "status": "original_art_not_verified",
+      "source": {
+        "source_asset_id": "HD-DROP-ef5d59a6402e",
+        "reference_id": "HD-DESIGN-01",
+        "source_filename": "HD-EXP-LOCK-FACE.jpg",
+        "sha256": "ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978",
+        "bundle_path": "references/01_current/HD-EXP-LOCK-FACE.jpg",
+        "allowed_role": "current visible Hon Dolo design details"
+      },
+      "region": "character-right cheek / image-left frontal",
+      "design": "eye",
+      "preserve": "current visible placement, drawing orientation, relative scale and skin landmarks",
+      "change": "Recover the genuine standalone artwork if it exists; separate source art from on-body placement evidence.",
+      "source_art_protocol": [
+        "If the original editable/source art is recoverable, export it unchanged and identify its exact source asset/filename/hash.",
+        "Provide a transparent RGBA PNG and a flat black-on-white PNG only where actual source art permits; record these as exports of that original.",
+        "Provide front and relevant left/right on-body placement views from real received imagery where available. Label region crops as derived_crop, with parent hash and bounds.",
+        "If only a rendered photo exists, state original_missing. Do not call a crop, extraction or reconstruction an original stencil.",
+        "Any later tracing must be separately labelled proposed_reconstruction with parent source hash and uncertainties; no automatic approval or new generation in the initial recovery pass.",
+        "Do not infer hidden line work, physical size in centimetres or unseen placements from a single view."
+      ],
+      "note": "Match the actual current lettering; no guessed font name.",
+      "max_new_generated_images_initial": 0,
+      "return_folder": "03_DETAILS/ST-HD-EYE/"
+    },
+    {
+      "request_id": "ST-HD-KNOW",
+      "type": "recover_current_tattoo_source_art",
+      "status": "original_art_not_verified",
+      "source": {
+        "source_asset_id": "HD-DROP-ef5d59a6402e",
+        "reference_id": "HD-DESIGN-01",
+        "source_filename": "HD-EXP-LOCK-FACE.jpg",
+        "sha256": "ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978",
+        "bundle_path": "references/01_current/HD-EXP-LOCK-FACE.jpg",
+        "allowed_role": "current visible Hon Dolo design details"
+      },
+      "region": "character-left cheek / image-right frontal",
+      "design": "know",
+      "preserve": "current visible placement, drawing orientation, relative scale and skin landmarks",
+      "change": "Recover the genuine standalone artwork if it exists; separate source art from on-body placement evidence.",
+      "source_art_protocol": [
+        "If the original editable/source art is recoverable, export it unchanged and identify its exact source asset/filename/hash.",
+        "Provide a transparent RGBA PNG and a flat black-on-white PNG only where actual source art permits; record these as exports of that original.",
+        "Provide front and relevant left/right on-body placement views from real received imagery where available. Label region crops as derived_crop, with parent hash and bounds.",
+        "If only a rendered photo exists, state original_missing. Do not call a crop, extraction or reconstruction an original stencil.",
+        "Any later tracing must be separately labelled proposed_reconstruction with parent source hash and uncertainties; no automatic approval or new generation in the initial recovery pass.",
+        "Do not infer hidden line work, physical size in centimetres or unseen placements from a single view."
+      ],
+      "note": "Match the actual current lettering; keep distinct from eye.",
+      "max_new_generated_images_initial": 0,
+      "return_folder": "03_DETAILS/ST-HD-KNOW/"
+    },
+    {
+      "request_id": "ST-HD-BLASTER",
+      "type": "recover_current_tattoo_source_art",
+      "status": "original_art_not_verified",
+      "source": {
+        "source_asset_id": "HD-DROP-ef5d59a6402e",
+        "reference_id": "HD-DESIGN-01",
+        "source_filename": "HD-EXP-LOCK-FACE.jpg",
+        "sha256": "ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978",
+        "bundle_path": "references/01_current/HD-EXP-LOCK-FACE.jpg",
+        "allowed_role": "current visible Hon Dolo design details"
+      },
+      "region": "character-left neck / image-right frontal",
+      "design": "neck blaster with smoke curl",
+      "preserve": "current visible placement, drawing orientation, relative scale and skin landmarks",
+      "change": "Recover the genuine standalone artwork if it exists; separate source art from on-body placement evidence.",
+      "source_art_protocol": [
+        "If the original editable/source art is recoverable, export it unchanged and identify its exact source asset/filename/hash.",
+        "Provide a transparent RGBA PNG and a flat black-on-white PNG only where actual source art permits; record these as exports of that original.",
+        "Provide front and relevant left/right on-body placement views from real received imagery where available. Label region crops as derived_crop, with parent hash and bounds.",
+        "If only a rendered photo exists, state original_missing. Do not call a crop, extraction or reconstruction an original stencil.",
+        "Any later tracing must be separately labelled proposed_reconstruction with parent source hash and uncertainties; no automatic approval or new generation in the initial recovery pass.",
+        "Do not infer hidden line work, physical size in centimetres or unseen placements from a single view."
+      ],
+      "note": "Include #259 heritage evidence; separate tattoo from the physical hip prop.",
+      "max_new_generated_images_initial": 0,
+      "return_folder": "03_DETAILS/ST-HD-BLASTER/"
+    },
+    {
+      "request_id": "ST-HD-SHIP",
+      "type": "recover_current_tattoo_source_art",
+      "status": "original_art_not_verified",
+      "source": {
+        "source_asset_id": "HD-DROP-ef5d59a6402e",
+        "reference_id": "HD-DESIGN-01",
+        "source_filename": "HD-EXP-LOCK-FACE.jpg",
+        "sha256": "ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978",
+        "bundle_path": "references/01_current/HD-EXP-LOCK-FACE.jpg",
+        "allowed_role": "current visible Hon Dolo design details"
+      },
+      "region": "upper chest",
+      "design": "chest ship",
+      "preserve": "current visible placement, drawing orientation, relative scale and skin landmarks",
+      "change": "Recover the genuine standalone artwork if it exists; separate source art from on-body placement evidence.",
+      "source_art_protocol": [
+        "If the original editable/source art is recoverable, export it unchanged and identify its exact source asset/filename/hash.",
+        "Provide a transparent RGBA PNG and a flat black-on-white PNG only where actual source art permits; record these as exports of that original.",
+        "Provide front and relevant left/right on-body placement views from real received imagery where available. Label region crops as derived_crop, with parent hash and bounds.",
+        "If only a rendered photo exists, state original_missing. Do not call a crop, extraction or reconstruction an original stencil.",
+        "Any later tracing must be separately labelled proposed_reconstruction with parent source hash and uncertainties; no automatic approval or new generation in the initial recovery pass.",
+        "Do not infer hidden line work, physical size in centimetres or unseen placements from a single view."
+      ],
+      "note": "Report the differing ship references and missing #107 lineage; do not claim a crop or new tracing is original source art.",
+      "max_new_generated_images_initial": 0,
+      "return_folder": "03_DETAILS/ST-HD-SHIP/"
+    },
+    {
+      "request_id": "REC-HD-ORIGINALS",
+      "type": "recover_missing_numbered_originals",
+      "status": "not_verified_in_received_export",
+      "priority_hd_exp_ids": [
+        101,
+        103,
+        107,
+        206
+      ],
+      "secondary_hd_exp_ids": [
+        112,
+        116,
+        117,
+        121,
+        152,
+        154
+      ],
+      "source_asset_id": null,
+      "source_filename": null,
+      "sha256": null,
+      "region": "historical source evidence; #107 chest and #206 forearm particularly unresolved",
+      "preserve": "exact original files and original filenames if recoverable",
+      "change": "Export genuine originals and provide exact ID-to-filename mapping plus computed hashes. If absent, return missing status; do not remake an image and label it the original EXP number.",
+      "limits": "#101/#103 old Jabba/bird details remain history, not current defaults. #206 forearm and right-hand Leigh/card have no sufficient current on-body proof here; report what exists and what is unknown.",
+      "max_new_generated_images_initial": 0,
+      "return_folder": "04_RECOVERED_ORIGINALS/"
+    },
+    {
+      "request_id": "AUD-HD-HIDDEN",
+      "type": "report_unverified_hidden_detail_sources",
+      "status": "unresolved",
+      "source_asset_id": "HD-DROP-ef5d59a6402e",
+      "source_filename": "HD-EXP-LOCK-FACE.jpg",
+      "sha256": "ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978",
+      "region": "forearms, hands, covered chest, back and unseen jewelry",
+      "preserve": "no invented global design locks",
+      "change": "List exact existing files supporting Scoundrel forearm, Leigh/Princess Queen of Hearts hand concept, hidden chest extent and unseen jewelry. Recover true originals if present; otherwise say unknown. No new artwork requested here.",
+      "max_new_generated_images_initial": 0
+    }
+  ],
+  "generation_boundary": {
+    "initial_max_new_stills": 8,
+    "breakdown": "four corrected outfit stills + one hip-detail proof + one provisional boss master + one Caleb neutral reference + one saloon master",
+    "sequential_order": [
+      "recover/report true source art without fabricating missing originals",
+      "REV-HD-001 first: inspect tattoo/mouth/jewelry drift before applying same method to REV-HD-002/003/004",
+      "REV-HD-004 matching hip detail",
+      "SC-BOSS-001 BOSS-P01 after corrected pinstripe continuity check",
+      "SC-CAL-001 Caleb neutral reference then CAL-P01"
+    ],
+    "stop_condition": "If identity, required tattoo text, outfit or prop continuity fails, flag the defect and stop that branch. Do not spend an unbounded retry batch.",
+    "later_coverage": "Four further boss panels and three further Caleb panels are written proposals only, not an instruction to generate all now.",
+    "source_exports": "Genuine recovered originals/artwork exports are not new generated stills; list every returned file in the manifest."
+  },
+  "handoff_protocol": "Return the ZIP structure and manifest described in START_HERE.txt; never invent file hashes or mark outputs approved."
+}

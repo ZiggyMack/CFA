@@ -1,0 +1,62 @@
+{
+  "createdAtUTC": "2026-10-09T17:01:27.949492+00:00",
+  "purpose": "One-image PDF wrapper Source test; actual image only, no descriptive text or OCR added",
+  "parentRepoPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOCK-FACE-NATURAL.jpg",
+  "parentSHA256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+  "derivativeRepoPath": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/compatibility_20261009/temporary/LAG_FACE_source_compatibility_v1.pdf",
+  "derivativeSHA256": "1361ebc33ce1da402709006d51dace59b65aec33d82c3bfc3fb99ddda57e483b",
+  "bytes": 256144,
+  "operation": "Embed unchanged JPEG compressed bytes in one PDF page, no resizing, crop, visual edits or added descriptions.",
+  "embeddedJPEGBytesIdentical": true,
+  "dimensions": [
+    1280,
+    720
+  ],
+  "pageCount": 1,
+  "status": "failed_native_source_ingestion",
+  "temporary": true,
+  "catalogAssetCreated": false,
+  "statusHistory": [
+    {
+      "state": "prepared_not_uploaded",
+      "atUTC": "2026-10-09T17:01:27.949492+00:00"
+    },
+    {
+      "state": "failed_native_source_ingestion",
+      "recordedAtUTC": "2026-10-09T17:11:59.636409+00:00",
+      "observedDate": "2026-10-09"
+    }
+  ],
+  "delivery": {
+    "recordedAtUTC": "2026-10-09T17:11:59.636409+00:00",
+    "observedDate": "2026-10-09",
+    "exactObservationTimeUTC": null,
+    "observedBy": "Root agent through actual IAB tab 33 native notebook Sources UI; local records updated by delegated agent",
+    "notebookID": "114707d8-29b3-4505-bc06-dd7abcc60e4d",
+    "notebookURL": "https://notebook.google.com/notebook/114707d8-29b3-4505-bc06-dd7abcc60e4d",
+    "route": "Add source > Upload files > native file chooser",
+    "sourceDeleted": false,
+    "originalAssetID": "LAG-602a9fd4021dc356",
+    "originalUnchanged": true,
+    "failureRootCause": "unknown",
+    "bulkConversionPerformed": false,
+    "remoteSourceID": "e8db0cd3-ad05-40ff-91c1-2bb306016012",
+    "uploadAttempted": true,
+    "processingStatus": "failed",
+    "selectableCheckbox": false,
+    "selected": false,
+    "error": "Error uploading source, try again!",
+    "usableVisualSourceCreated": false,
+    "sourceGroundedVisualUseVerified": false,
+    "citedRetrievalAttempted": false
+  },
+  "localCleanup": {
+    "status": "temporary_local_bytes_removed_receipt_preserved",
+    "localTransientBytesRemoved": true,
+    "receiptPreserved": true,
+    "remoteFailedEntryRemoved": false,
+    "completedAtUTC": "2026-10-09T17:14:25.869608+00:00"
+  },
+  "derivativeRetained": false,
+  "derivativeRetainedMeaning": "Temporary local test bytes removed after failed-source evidence was recorded; small receipt and recreation recipe retained."
+}

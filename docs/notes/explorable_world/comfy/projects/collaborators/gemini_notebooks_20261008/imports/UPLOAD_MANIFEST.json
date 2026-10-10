@@ -1,0 +1,1168 @@
+{
+  "schema_version": 1,
+  "prepared_at_utc": "2026-10-08T18:45:01.079593+00:00",
+  "purpose": "Verified text-source imports plus original-file media plan; media usability failures and pending chat actions are recorded separately.",
+  "notebooks": [
+    {
+      "key": "00_master",
+      "notebook_id": "7719bbe5-fccf-48e2-b6d4-d82f67693b09",
+      "notebook_name_basis": "Actual native UI creation/rename reported by root agent,2026-10-08",
+      "text_import": {
+        "filename": "00_COMFY_UI_MASTER_IMPORT.txt",
+        "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\collaborators\\gemini_notebooks_20261008\\imports\\00_COMFY_UI_MASTER_IMPORT.txt",
+        "repo_path": "docs/notes/explorable_world/comfy/projects/collaborators/gemini_notebooks_20261008/imports/00_COMFY_UI_MASTER_IMPORT.txt",
+        "sha256": "af3deda0c0890316c6a6ef48f2a5d8b636974ee84d5284190f38e9fa64b1e300",
+        "bytes": 47033,
+        "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+        "notebook_role": "NOTEBOOK 0 / MASTER",
+        "source_parts": [
+          {
+            "package_path": "shared/gemini_shared_instructions.txt",
+            "sha256": "68e40288afebabd4414e2d1235a276376f6423defbfaec89d962ebf1fb669cd0"
+          },
+          {
+            "package_path": "shared/sync_and_promotion.txt",
+            "sha256": "cd1cdc5ef4edd2fb337ec37c92838d6c73d51a7f60daf5250ad96559025e9b66"
+          },
+          {
+            "package_path": "00_master/role_instructions.txt",
+            "sha256": "17dfea75f1ab0fbc076ad5a6b92ba270a26a3cf2992f828c779ec95a6f31d22f"
+          },
+          {
+            "package_path": "00_master/system_overview.txt",
+            "sha256": "0e20596276b2587dbc35acd58abe5e1750ce5eef1e4dfb4d7fa804467202d8a4"
+          },
+          {
+            "package_path": "00_master/workflow_methods_and_status.txt",
+            "sha256": "e4ce46162a32460d7c65a322549d56c81a3b38ac089ee8ee86e5dc97a2491664"
+          },
+          {
+            "package_path": "00_master/project_digests.txt",
+            "sha256": "4f3e7033a847df83cbd8d4c4ae78d73f42cb9c148f49d8596053846fda90e021"
+          },
+          {
+            "package_path": "00_master/manual_update_handoff.txt",
+            "sha256": "dd502db9afbfb97a9eebef013e7bac8f7e888358fab7c08477898fc90fe15a50"
+          },
+          {
+            "package_path": "00_master/winner_promotion_registry.json",
+            "sha256": "308e91736c44906e008ccec77dcc156ac552f206d9d46208cc33c469cc03999a"
+          }
+        ],
+        "contains_media_bytes": false,
+        "uploaded": true,
+        "remote_source_id": null,
+        "source_processing_status": "processed_successfully_in_Sources",
+        "evidence": "Root reported actual Sources processing success; exact imported TXT hash is retained."
+      },
+      "priority_original_media": [
+        {
+          "filename": "LAG-VID-PROOF-01_T02_original.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\gemini\\outputs\\20261008\\LAG-VID-PROOF-01_T02_original.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/20261008/LAG-VID-PROOF-01_T02_original.mp4",
+          "sha256": "640000faabc0b1f018a6fda0f05c9560579750c662f33d5da4cd4920d67befa0",
+          "bytes": 3365125,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "LAG-VID-PROOF-01-T02",
+          "kind": "video",
+          "allowed_role": "Explicitly elevated Lisan scene working reference",
+          "limitations": "Scene scope at Detailed design only; technical continuity/audio/song alignment and production acceptance remain pending. No new identity/tattoo standard.",
+          "approval_scope": {
+            "promotion_id": "LAG-SCENE-PROMOTION-20261008-T02",
+            "working_reference": {
+              "status": "approved",
+              "scope": "scene"
+            },
+            "storyboard_stage": "detailed_design",
+            "production_acceptance": "pending"
+          },
+          "upload_state": "chat_attachment_verified; raw_visual_media_Sources_ingestion_unverified",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "scoped_receipt": {
+            "filename": "NOTEBOOK0_WINNER_RECEIPT.txt",
+            "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\collaborators\\gemini_notebooks_20261008\\02_lisan_al_gaib\\NOTEBOOK0_WINNER_RECEIPT.txt",
+            "repo_path": "docs/notes/explorable_world/comfy/projects/collaborators/gemini_notebooks_20261008/02_lisan_al_gaib/NOTEBOOK0_WINNER_RECEIPT.txt",
+            "sha256": "9245756efb04d145e9ed35110e55d7d062103ba2b2a019abe2528298b64f63e6",
+            "bytes": 2082,
+            "verified_at_utc": "2026-10-08T18:45:01.079593+00:00"
+          },
+          "promotion_registry": {
+            "filename": "winner_promotion_registry.json",
+            "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\collaborators\\gemini_notebooks_20261008\\00_master\\winner_promotion_registry.json",
+            "repo_path": "docs/notes/explorable_world/comfy/projects/collaborators/gemini_notebooks_20261008/00_master/winner_promotion_registry.json",
+            "sha256": "308e91736c44906e008ccec77dcc156ac552f206d9d46208cc33c469cc03999a",
+            "bytes": 5266,
+            "verified_at_utc": "2026-10-08T18:45:01.079593+00:00"
+          },
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": true,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": true,
+          "chat_attachment_receipt": {
+            "url": "https://gemini.google.com/app/31fab947ecdea074",
+            "chat_id": "31fab947ecdea074",
+            "title": "Notebook 0 Setup and Winner Promotion",
+            "verified_by": "root agent via actual Gemini notebook chat UI",
+            "recorded_at_utc": "2026-10-08T21:58:51Z",
+            "attachment_transfer_verified": true,
+            "roles_acknowledged": true,
+            "full_audiovisual_analysis_verified": false,
+            "completion_scope": "Attachment transfer verified. Master conversation transcript is selected persistent context, but raw attached-media visual ingestion and source-grounded visual use remain unverified."
+          },
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        }
+      ],
+      "verified_title": "Notebook0 — CFA / COMFY_UI Master",
+      "notebook_url": "https://gemini.google.com/notebook/7719bbe5-fccf-48e2-b6d4-d82f67693b09",
+      "setup": {
+        "notebook_created": true,
+        "role_and_shared_rules_saved": true,
+        "existing_memory": "on; unchanged",
+        "text_source_status": "processed_successfully",
+        "usable_image_or_video_source_ingestion": false,
+        "project_chat_move_status": "not_required_for_this_winner_chat_operation",
+        "media_chat_attachment_status": "verified_selected_original_files_in_setup_chat",
+        "local_setup_acknowledgement_status": "received",
+        "setup_completed": false,
+        "configuration_complete": true,
+        "media_sources_ready": false,
+        "source_grounded_media_use_verified": false,
+        "chat_attachments_role": "Raw-media attachments do not yet satisfy visual Sources requirement; synced conversation text can be persistent source context.",
+        "persistent_selected_chat_context_verified": true
+      }
+    },
+    {
+      "key": "01_hon_dolo",
+      "notebook_id": "586b3ee6-5c57-45b3-a59d-a2e21c18a852",
+      "notebook_name_basis": "Actual native UI creation/rename reported by root agent,2026-10-08",
+      "text_import": {
+        "filename": "01_HON_DOLO_IMPORT.txt",
+        "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\collaborators\\gemini_notebooks_20261008\\imports\\01_HON_DOLO_IMPORT.txt",
+        "repo_path": "docs/notes/explorable_world/comfy/projects/collaborators/gemini_notebooks_20261008/imports/01_HON_DOLO_IMPORT.txt",
+        "sha256": "8901bdc4a0a0af4fb4d860fd7e43805e5dc59e097c37299e0c45aff2ecadf11a",
+        "bytes": 157828,
+        "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+        "notebook_role": "NOTEBOOK 1 / HON DOLO",
+        "source_parts": [
+          {
+            "package_path": "shared/gemini_shared_instructions.txt",
+            "sha256": "68e40288afebabd4414e2d1235a276376f6423defbfaec89d962ebf1fb669cd0"
+          },
+          {
+            "package_path": "shared/sync_and_promotion.txt",
+            "sha256": "cd1cdc5ef4edd2fb337ec37c92838d6c73d51a7f60daf5250ad96559025e9b66"
+          },
+          {
+            "package_path": "01_hon_dolo/PROJECT_SOURCE.txt",
+            "sha256": "0aded380b09749568daf0d16fd7631c8b91af026a649dcb8cc419e4879922106"
+          },
+          {
+            "package_path": "01_hon_dolo/LYRICS_SOURCE.txt",
+            "sha256": "291a2fb6f8a542dcdc4f87d1b4b1c29af3ce0014156a988f293843c71561bc01"
+          },
+          {
+            "package_path": "01_hon_dolo/MEDIA_REGISTER.json",
+            "sha256": "6f1aabd8a4cc55342c711ec1ec3572312121b11884eecd67b9bf0a7557d3e56c"
+          },
+          {
+            "package_path": "01_hon_dolo/REFERENCE_REGISTER.json",
+            "sha256": "c8133c394cfd7732d1d4fc74e91364e6406838c80ea5b94517818d10c35c1316"
+          }
+        ],
+        "contains_media_bytes": false,
+        "uploaded": true,
+        "remote_source_id": null,
+        "source_processing_status": "processed_successfully_in_Sources",
+        "evidence": "Root reported actual Sources processing success; exact imported TXT hash is retained."
+      },
+      "priority_original_media": [
+        {
+          "filename": "HD-EXP-LOCK-FACE.jpg",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\hon-dolo-lock-turnaround-outfits\\hon-dolo-lock-turnaround-outfits\\HD-EXP-LOCK-FACE.jpg",
+          "repo_path": "docs/notes/explorable_world/comfy/references/hon-dolo-lock-turnaround-outfits/hon-dolo-lock-turnaround-outfits/HD-EXP-LOCK-FACE.jpg",
+          "sha256": "ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978",
+          "bytes": 246854,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "HD-DROP-ef5d59a6402e",
+          "kind": "image",
+          "allowed_role": "Current Hon Dolo visible design anchor / HD-DESIGN-01",
+          "limitations": "Current through-314 design anchor; not proof of a final accepted on-screen likeness or every hidden tattoo. Do not blend its face with other references without an explicit identity brief.",
+          "approval_scope": null,
+          "upload_state": "chat_attachment_verified; raw_visual_media_Sources_ingestion_unverified",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": true,
+          "native_source_attempt_for_this_exact_file": "transferred; displayed Unsupported content",
+          "chat_upload_in_this_setup": true,
+          "chat_attachment_receipt": {
+            "url": "https://gemini.google.com/app/988990050e4ad32c",
+            "chat_id": "988990050e4ad32c",
+            "title": "Notebook 1 Hon Dolo Setup",
+            "verified_by": "root agent via actual Gemini notebook chat UI",
+            "recorded_at_utc": "2026-10-08T21:58:51Z",
+            "attachment_transfer_verified": true,
+            "roles_acknowledged": true,
+            "full_audiovisual_analysis_verified": false,
+            "completion_scope": "Attachment transfer verified. Master conversation transcript is selected persistent context, but raw attached-media visual ingestion and source-grounded visual use remain unverified."
+          },
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_c0823c60.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_c0823c60.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_c0823c60.mp4",
+          "sha256": "b5deff1982da0cbbdee24a7dfc253fe6825018549a37ca531c7b3586cdbee525",
+          "bytes": 5307098,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-C0823C60",
+          "kind": "video",
+          "allowed_role": "user_selected_performance_and_staging_starting_source",
+          "limitations": "User-selected starting source, not blanket approval of every detail. Retired brow dice remain visible; earlier generative relights did not preserve mouth/jewelry well enough.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "user_selected_performance_and_staging_starting_source"
+          },
+          "upload_state": "chat_attachment_verified; raw_visual_media_Sources_ingestion_unverified",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": true,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": true,
+          "chat_attachment_receipt": {
+            "url": "https://gemini.google.com/app/988990050e4ad32c",
+            "chat_id": "988990050e4ad32c",
+            "title": "Notebook 1 Hon Dolo Setup",
+            "verified_by": "root agent via actual Gemini notebook chat UI",
+            "recorded_at_utc": "2026-10-08T21:58:51Z",
+            "attachment_transfer_verified": true,
+            "roles_acknowledged": true,
+            "full_audiovisual_analysis_verified": false,
+            "completion_scope": "Attachment transfer verified. Master conversation transcript is selected persistent context, but raw attached-media visual ingestion and source-grounded visual use remain unverified."
+          },
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_5a115c59.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_5a115c59.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_5a115c59.mp4",
+          "sha256": "854dd279179300173f89339e707c326e7a48cb594cc52f6879229e4d45dc395e",
+          "bytes": 19416653,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-5A115C59",
+          "kind": "video",
+          "allowed_role": "user_selected_retained_41_second_flow_source",
+          "limitations": "Six still samples cannot audit every cut. Similar opening to 97d0b65e; retained separately because bytes and duration differ.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "user_selected_retained_41_second_flow_source"
+          },
+          "upload_state": "chat_attachment_verified; raw_visual_media_Sources_ingestion_unverified",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": true,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": true,
+          "chat_attachment_receipt": {
+            "url": "https://gemini.google.com/app/988990050e4ad32c",
+            "chat_id": "988990050e4ad32c",
+            "title": "Notebook 1 Hon Dolo Setup",
+            "verified_by": "root agent via actual Gemini notebook chat UI",
+            "recorded_at_utc": "2026-10-08T21:58:51Z",
+            "attachment_transfer_verified": true,
+            "roles_acknowledged": true,
+            "full_audiovisual_analysis_verified": false,
+            "completion_scope": "Attachment transfer verified. Master conversation transcript is selected persistent context, but raw attached-media visual ingestion and source-grounded visual use remain unverified."
+          },
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_d6940afc.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_d6940afc.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_d6940afc.mp4",
+          "sha256": "7862191e8ae7dcc3b62812db7270d148b31df0f4613db8a75d974ffcd92123f2",
+          "bytes": 4426188,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-D6940AFC",
+          "kind": "video",
+          "allowed_role": "user_selected_retained_20_second_turnaround",
+          "limitations": "Shares visual family with 3ca92958/GIF, but distinct bytes and duration. Not an accepted rear-body master.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "user_selected_retained_20_second_turnaround"
+          },
+          "upload_state": "chat_attachment_verified; raw_visual_media_Sources_ingestion_unverified",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": true,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": true,
+          "chat_attachment_receipt": {
+            "url": "https://gemini.google.com/app/988990050e4ad32c",
+            "chat_id": "988990050e4ad32c",
+            "title": "Notebook 1 Hon Dolo Setup",
+            "verified_by": "root agent via actual Gemini notebook chat UI",
+            "recorded_at_utc": "2026-10-08T21:58:51Z",
+            "attachment_transfer_verified": true,
+            "roles_acknowledged": true,
+            "full_audiovisual_analysis_verified": false,
+            "completion_scope": "Attachment transfer verified. Master conversation transcript is selected persistent context, but raw attached-media visual ingestion and source-grounded visual use remain unverified."
+          },
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_58328bf1.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_58328bf1.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_58328bf1.mp4",
+          "sha256": "8b3c6d5a7ae5b75ab960e066db2b7d1659468b4d75a894b3fc11e63d1f58d4ea",
+          "bytes": 4355398,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-58328BF1",
+          "kind": "video",
+          "allowed_role": "user_selected_dinner_scene_candidate",
+          "limitations": "User-selected dinner candidate. Later chamber shots change costume; no final acceptance.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "user_selected_dinner_scene_candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "Gemini_Generated_Gif_mv64iymv64iymv64.gif",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\Gemini_Generated_Gif_mv64iymv64iymv64.gif",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/Gemini_Generated_Gif_mv64iymv64iymv64.gif",
+          "sha256": "4177fed89e158eb448a09adfc30a29a7fc33396b703dc02feb00eae40bbdc259",
+          "bytes": 3159836,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-MV64IYMV64IYMV64",
+          "kind": "gif",
+          "allowed_role": "candidate",
+          "limitations": "Check identity and clothing/tattoo continuity before using as an appearance reference.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_0af4ff61.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_0af4ff61.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_0af4ff61.mp4",
+          "sha256": "7bc9946389da2e4ba6dd4e00e7b9900dfed10a7c6d910e23ff62b86033b8b84a",
+          "bytes": 5570481,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-0AF4FF61",
+          "kind": "video",
+          "allowed_role": "candidate",
+          "limitations": "Montage contains separate cuts; select a continuous shot for motion-preservation work.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_227e7494.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_227e7494.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_227e7494.mp4",
+          "sha256": "09dceb461cf3b9ae8f76abf2d4d7947b3ab5136f7d48af310380ebd52c61285e",
+          "bytes": 6525271,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-227E7494",
+          "kind": "video",
+          "allowed_role": "candidate",
+          "limitations": "Copilot identity is unconfirmed. Chest tattoo geometry differs from other clips.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_24ba1ae7.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_24ba1ae7.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_24ba1ae7.mp4",
+          "sha256": "73ee6ea6009a474ec6e390edca89c214f5ef67a3eb3fe6ff5fd974f84a61e9c1",
+          "bytes": 7967392,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-24BA1AE7",
+          "kind": "video",
+          "allowed_role": "candidate",
+          "limitations": "DJ has an ape-like face; use for staging/energy pending anatomy and identity approval.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_25e5c0ec.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_25e5c0ec.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_25e5c0ec.mp4",
+          "sha256": "568103431368f726a4dfba62ecd08dff96daad3bcd7c812b5f5e6b4bd10107b8",
+          "bytes": 5654874,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-25E5C0EC",
+          "kind": "video",
+          "allowed_role": "candidate",
+          "limitations": "Retired Chewie/bird/dice motifs appear. Wardrobe and staging reference, not a new identity lock.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_28961248.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_28961248.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_28961248.mp4",
+          "sha256": "cf7359e94ce81c17a356bdc329b3afcb985e623cedeb77fa452a7910979e4e66",
+          "bytes": 6513730,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-28961248",
+          "kind": "video",
+          "allowed_role": "candidate",
+          "limitations": "Older tattoo treatment; no new acceptance. Brief glow graphic crosses the brow in a sampled frame.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_2e361055.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_2e361055.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_2e361055.mp4",
+          "sha256": "fe4100afa5185a9d794f53744f18ef1fe144724a1e7b4cf942b3efa3418035ca",
+          "bytes": 4883179,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-2E361055",
+          "kind": "video",
+          "allowed_role": "candidate",
+          "limitations": "Older tattoo treatment; drinks/hand contact and lip sync need playback review.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_2e6ef86c.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_2e6ef86c.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_2e6ef86c.mp4",
+          "sha256": "177de78ace9eff14f66115f8f4ea09a7261b64d94e4289b37b9036994eca24bf",
+          "bytes": 4484034,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-2E6EF86C",
+          "kind": "video",
+          "allowed_role": "candidate",
+          "limitations": "Older face motifs; suit and lounge remain scene ideas, not design approvals.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_46659488.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_46659488.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_46659488.mp4",
+          "sha256": "50c40899ebc4eeed2c150ae81dfeadeee11ad50fb243e69eeb09adbdd54051ba",
+          "bytes": 4284487,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-46659488",
+          "kind": "video",
+          "allowed_role": "candidate",
+          "limitations": "Separate montage shots; hand/weapon geometry and causal action need playback review.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_58aea1e7.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_58aea1e7.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_58aea1e7.mp4",
+          "sha256": "cf0374f5cad9541e4cd788763e882efe990825c67bda54a314486a2513582e3d",
+          "bytes": 6189472,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-58AEA1E7",
+          "kind": "video",
+          "allowed_role": "candidate",
+          "limitations": "Older bird/Jabba/Chewie/dice motifs visible. Lighting and staging ideas only until reviewed.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_65b11895.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_65b11895.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_65b11895.mp4",
+          "sha256": "dd5af9eac7f0a30921cf40110b79dacc3791cba11f2df43205e07f359717c44a",
+          "bytes": 4670950,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-65B11895",
+          "kind": "video",
+          "allowed_role": "candidate",
+          "limitations": "Strong potential Count it twice staging; older tattoo treatment and cash/hand continuity need review.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_7533dd57.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_7533dd57.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_7533dd57.mp4",
+          "sha256": "3e79c4f97bd0f59f564c55ef4499996a1e1b57ff73d5a3811fecf20902fae887",
+          "bytes": 5128455,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-7533DD57",
+          "kind": "video",
+          "allowed_role": "candidate",
+          "limitations": "Older tattoo treatment; glow effects cross face in one sampled frame.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_80aae2e2.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_80aae2e2.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_80aae2e2.mp4",
+          "sha256": "59c9b7ad42a984c61ba6fe2ab884ef1e590e988f4d2500bef5f1800312eaf135",
+          "bytes": 4999225,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-80AAE2E2",
+          "kind": "video",
+          "allowed_role": "candidate",
+          "limitations": "Chest ship and mouth details vary from other sources; hand/control contact needs review.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_92c65823.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_92c65823.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_92c65823.mp4",
+          "sha256": "b042f48c84c183de438412c2479aed14c22d3bf26f3013a226e7ad843d1e83fb",
+          "bytes": 6090076,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-92C65823",
+          "kind": "video",
+          "allowed_role": "candidate",
+          "limitations": "Copilot identity unconfirmed; action continuity and hands need full playback.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_a1296fcb.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_a1296fcb.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_a1296fcb.mp4",
+          "sha256": "2daf5fd52543e38b4ffe80a1f6fdbbdf705281e2379d9c3687f08220016273d3",
+          "bytes": 6116310,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-A1296FCB",
+          "kind": "video",
+          "allowed_role": "candidate",
+          "limitations": "No lead face visible in samples. General space-action candidate; assignment to song section provisional.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_ab37b6f4.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_ab37b6f4.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_ab37b6f4.mp4",
+          "sha256": "f85827108862a987d006b422ef43d3ffe569e19243bcdfd134a35ee8c5afda2a",
+          "bytes": 5367916,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-AB37B6F4",
+          "kind": "video",
+          "allowed_role": "candidate",
+          "limitations": "Copilot identity unconfirmed; glove/hand/control and expression continuity need playback.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_c99ca2a5.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_c99ca2a5.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_c99ca2a5.mp4",
+          "sha256": "35671cb4d629a04899a83d8884ea03b3d8b627e34621c3f7b57a7f9b03951a8a",
+          "bytes": 4155898,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-C99CA2A5",
+          "kind": "video",
+          "allowed_role": "candidate",
+          "limitations": "Optional dinner setup/comedic insert; not yet assigned to the final song plan.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "gemini_generated_video_dd07dbb2.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\Gemini Video\\gemini_generated_video_dd07dbb2.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_dd07dbb2.mp4",
+          "sha256": "787fcba7b7d973f7a2197c53660ecbefbc8157858dc9670110c7c30234b21323",
+          "bytes": 4087438,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "GEM-DD07DBB2",
+          "kind": "video",
+          "allowed_role": "candidate",
+          "limitations": "Older face/neck motifs; preserve as outfit/entrance staging candidate.",
+          "approval_scope": {
+            "production_accepted": false,
+            "master_elevated": false,
+            "selection_role": "candidate"
+          },
+          "upload_state": "cataloged_in_import_not_reuploaded_in_this_setup",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": null,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": false,
+          "not_uploaded_scope": "Not individually reuploaded in this notebook setup. Its metadata is in the imported register; earlier provider-chat attachment coverage is not inferred.",
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        }
+      ],
+      "verified_title": "Notebook1 — Hon Dolo · Strictly Business",
+      "notebook_url": "https://gemini.google.com/notebook/586b3ee6-5c57-45b3-a59d-a2e21c18a852",
+      "setup": {
+        "notebook_created": true,
+        "role_and_shared_rules_saved": true,
+        "existing_memory": "on; unchanged",
+        "text_source_status": "processed_successfully",
+        "usable_image_or_video_source_ingestion": false,
+        "project_chat_move_status": "verified_on_destination_notebook_home",
+        "media_chat_attachment_status": "verified_selected_original_files_in_setup_chat",
+        "local_setup_acknowledgement_status": "received",
+        "setup_completed": false,
+        "configuration_complete": true,
+        "media_sources_ready": false,
+        "source_grounded_media_use_verified": false,
+        "chat_attachments_role": "Raw-media attachments do not yet satisfy visual Sources requirement; synced conversation text can be persistent source context.",
+        "persistent_selected_chat_context_verified": "not separately inspected"
+      }
+    },
+    {
+      "key": "02_lisan_al_gaib",
+      "notebook_id": "114707d8-29b3-4505-bc06-dd7abcc60e4d",
+      "notebook_name_basis": "Actual native UI creation/rename reported by root agent,2026-10-08",
+      "text_import": {
+        "filename": "02_LISAN_AL_GAIB_IMPORT.txt",
+        "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\collaborators\\gemini_notebooks_20261008\\imports\\02_LISAN_AL_GAIB_IMPORT.txt",
+        "repo_path": "docs/notes/explorable_world/comfy/projects/collaborators/gemini_notebooks_20261008/imports/02_LISAN_AL_GAIB_IMPORT.txt",
+        "sha256": "2fbc126662442315ddd7666775ddc5a2fb045245aaa2fcd7583ea2081e80b43b",
+        "bytes": 245274,
+        "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+        "notebook_role": "NOTEBOOK 2 / LISAN AL GAIB",
+        "source_parts": [
+          {
+            "package_path": "shared/gemini_shared_instructions.txt",
+            "sha256": "68e40288afebabd4414e2d1235a276376f6423defbfaec89d962ebf1fb669cd0"
+          },
+          {
+            "package_path": "shared/sync_and_promotion.txt",
+            "sha256": "cd1cdc5ef4edd2fb337ec37c92838d6c73d51a7f60daf5250ad96559025e9b66"
+          },
+          {
+            "package_path": "02_lisan_al_gaib/LISAN_NOTEBOOK_SOURCE_DUMP.txt",
+            "sha256": "d7cfff0b2aef889a92b33e0154cda40fe1f510b0039dbbb8be0ee62ae274572f"
+          },
+          {
+            "package_path": "02_lisan_al_gaib/LISAN_MEDIA_MANIFEST.json",
+            "sha256": "6cea8a50fb4eccff8c576d98d1bf59d4dd0d8132f3f7f8f8087cb73c82098d4d"
+          },
+          {
+            "package_path": "02_lisan_al_gaib/NOTEBOOK0_WINNER_RECEIPT.txt",
+            "sha256": "9245756efb04d145e9ed35110e55d7d062103ba2b2a019abe2528298b64f63e6"
+          }
+        ],
+        "contains_media_bytes": false,
+        "uploaded": true,
+        "remote_source_id": null,
+        "source_processing_status": "processed_successfully_in_Sources",
+        "evidence": "Root reported actual Sources processing success; exact imported TXT hash is retained."
+      },
+      "priority_original_media": [
+        {
+          "filename": "LAG-LOCK-FACE-NATURAL.jpg",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\01_Flagship_References\\LAG-LOCK-FACE-NATURAL.jpg",
+          "repo_path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOCK-FACE-NATURAL.jpg",
+          "sha256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+          "bytes": 212322,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "LAG-602a9fd4021dc356",
+          "kind": "image",
+          "allowed_role": "Primary current avatar face, teeth, face/neck tattoos and piercings",
+          "limitations": "Use for identity. Generated avatar reference; does not independently establish a photographic likeness of Ziggy.",
+          "approval_scope": {
+            "working_reference": null,
+            "storyboard_stage": null,
+            "production_accepted": false
+          },
+          "upload_state": "chat_attachment_verified; raw_visual_media_Sources_ingestion_unverified",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": true,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": true,
+          "chat_attachment_receipt": {
+            "url": "https://gemini.google.com/app/11c89d66a6a82538",
+            "chat_id": "11c89d66a6a82538",
+            "title": "Lisan Al Gaib Notebook Setup",
+            "verified_by": "root agent via actual Gemini notebook chat UI",
+            "recorded_at_utc": "2026-10-08T21:58:51Z",
+            "attachment_transfer_verified": true,
+            "roles_acknowledged": true,
+            "full_audiovisual_analysis_verified": false,
+            "completion_scope": "Attachment transfer verified. Master conversation transcript is selected persistent context, but raw attached-media visual ingestion and source-grounded visual use remain unverified."
+          },
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "LAG-LOOK-V3-01.jpg",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\01_Flagship_References\\LAG-LOOK-V3-01.jpg",
+          "repo_path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOOK-V3-01.jpg",
+          "sha256": "63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026",
+          "bytes": 327619,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "LAG-63126392af1ccf8b",
+          "kind": "image",
+          "allowed_role": "Tan stillsuit, black hooded cloak and gold Cuban chain",
+          "limitations": "Wardrobe/composition only; face-natural controls disputed face/neck details. Neck sun and worm geometry differ subtly. A one-image motion study uses this actual frame, not a verified composite of multiple refs.",
+          "approval_scope": {
+            "working_reference": null,
+            "storyboard_stage": null,
+            "production_accepted": false
+          },
+          "upload_state": "chat_attachment_verified; raw_visual_media_Sources_ingestion_unverified",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": true,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": true,
+          "chat_attachment_receipt": {
+            "url": "https://gemini.google.com/app/11c89d66a6a82538",
+            "chat_id": "11c89d66a6a82538",
+            "title": "Lisan Al Gaib Notebook Setup",
+            "verified_by": "root agent via actual Gemini notebook chat UI",
+            "recorded_at_utc": "2026-10-08T21:58:51Z",
+            "attachment_transfer_verified": true,
+            "roles_acknowledged": true,
+            "full_audiovisual_analysis_verified": false,
+            "completion_scope": "Attachment transfer verified. Master conversation transcript is selected persistent context, but raw attached-media visual ingestion and source-grounded visual use remain unverified."
+          },
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        },
+        {
+          "filename": "LAG-VID-PROOF-01_T02_original.mp4",
+          "absolute_path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\gemini\\outputs\\20261008\\LAG-VID-PROOF-01_T02_original.mp4",
+          "repo_path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/20261008/LAG-VID-PROOF-01_T02_original.mp4",
+          "sha256": "640000faabc0b1f018a6fda0f05c9560579750c662f33d5da4cd4920d67befa0",
+          "bytes": 3365125,
+          "verified_at_utc": "2026-10-08T18:45:01.079593+00:00",
+          "asset_id": "LAG-VID-PROOF-01-T02",
+          "kind": "video",
+          "allowed_role": "User-approved creative scene working reference / Gemini take02",
+          "limitations": "Approved scene scope at Detailed design; technical continuity and production not approved. Not a replacement identity or tattoo standard.",
+          "approval_scope": {
+            "working_reference": {
+              "status": "approved",
+              "scope": "scene"
+            },
+            "storyboard_stage": "detailed_design",
+            "production_accepted": false
+          },
+          "upload_state": "chat_attachment_verified; raw_visual_media_Sources_ingestion_unverified",
+          "remote_asset_id": null,
+          "actual_source_type_support": "Native Sources: MP4 unsupported and attempted JPEGs Unsupported content. Selected MP4/JPEG originals were separately accepted as notebook chat attachments; no native Sources ingestion or full audiovisual indexing inferred.",
+          "usable_native_source_ingestion": false,
+          "usable_chat_attachment": true,
+          "native_source_attempt_for_this_exact_file": "not_individually_confirmed_in_this_receipt",
+          "chat_upload_in_this_setup": true,
+          "chat_attachment_receipt": {
+            "url": "https://gemini.google.com/app/11c89d66a6a82538",
+            "chat_id": "11c89d66a6a82538",
+            "title": "Lisan Al Gaib Notebook Setup",
+            "verified_by": "root agent via actual Gemini notebook chat UI",
+            "recorded_at_utc": "2026-10-08T21:58:51Z",
+            "attachment_transfer_verified": true,
+            "roles_acknowledged": true,
+            "full_audiovisual_analysis_verified": false,
+            "completion_scope": "Attachment transfer verified. Master conversation transcript is selected persistent context, but raw attached-media visual ingestion and source-grounded visual use remain unverified."
+          },
+          "persistent_source_ready": false,
+          "source_grounded_use_verified": false
+        }
+      ],
+      "verified_title": "Notebook2 — Lisan Al Gaib · Meta Mirror",
+      "notebook_url": "https://gemini.google.com/notebook/114707d8-29b3-4505-bc06-dd7abcc60e4d",
+      "setup": {
+        "notebook_created": true,
+        "role_and_shared_rules_saved": true,
+        "existing_memory": "on; unchanged",
+        "text_source_status": "processed_successfully",
+        "usable_image_or_video_source_ingestion": false,
+        "project_chat_move_status": "verified_on_destination_notebook_home",
+        "media_chat_attachment_status": "verified_selected_original_files_in_setup_chat",
+        "local_setup_acknowledgement_status": "received",
+        "setup_completed": false,
+        "catalog_vs_actual_media_correction": "acknowledged; arm and 50 storyboard entries are cataloged, not visually inspected images; provider dimensions/hashes are source-reported",
+        "configuration_complete": true,
+        "media_sources_ready": false,
+        "source_grounded_media_use_verified": false,
+        "chat_attachments_role": "Raw-media attachments do not yet satisfy visual Sources requirement; synced conversation text can be persistent source context.",
+        "persistent_selected_chat_context_verified": "not separately inspected"
+      }
+    }
+  ],
+  "counts": {
+    "text_dumps": 3,
+    "media_upload_instances": 27,
+    "unique_original_media_hashes": 26,
+    "by_notebook": {
+      "00_master": 1,
+      "01_hon_dolo": 23,
+      "02_lisan_al_gaib": 3
+    },
+    "hon_active_original_mp4": 21,
+    "hon_active_original_gif": 1,
+    "hon_design_anchor": 1,
+    "master_scoped_winner_originals": 1,
+    "lisan_video_and_current_face_outfit": 3
+  },
+  "exclusions": [
+    "No archived 40-second GEM-97D0B65E or10-second GEM-3CA92958 in priority original uploads.",
+    "No unassigned Gemini desert clips, historical recordings, Multiverse armor or Comfy failure outputs in priority media.",
+    "Historical/experimental media remain metadata within project dumps; no implied attachment.",
+    "No incoming Grok500 assets; no verified receipt exists.",
+    "No account settings, credentials, secrets, unrelated system logs or unrelated conversations included."
+  ],
+  "media_handling": "Retain the exact original-file plan and provenance. Do not report native video/image ingestion as usable. Root is trying existing project-chat moves and chat attachments separately; wait for actual receipts. No public hosting workaround or ZIP import is assumed.",
+  "shared_rules_copy": "Full shared instructions and sync/promotion text appear in all three dumps.",
+  "operator_receipt_fields": [
+    "actual notebook ID",
+    "exact source filename/hash",
+    "remote source or asset ID",
+    "upload accepted/rejected",
+    "readable/playable evidence",
+    "known limitations",
+    "revision acknowledgement"
+  ],
+  "imported": "text_sources_processed; master_selected_persistent_chat_context_verified; required_raw_visual_media_Sources_ingestion_unverified",
+  "generated": false,
+  "updated_at_utc": "2026-10-08T22:06:02Z",
+  "additional_processed_text_sources": [
+    {
+      "filename": "VIDEO_VISUAL_EVIDENCE.txt",
+      "repo_path": "docs/notes/explorable_world/comfy/projects/collaborators/gemini_notebooks_20261008/02_lisan_al_gaib/VIDEO_VISUAL_EVIDENCE.txt",
+      "sha256": "7df502e358a9889192e0c9041d1a83435d2dadf37344ef4fa68dfe509eb7949b",
+      "bytes": 4417,
+      "destination": "02_lisan_al_gaib",
+      "processing_status": "processed_successfully_in_Sources",
+      "contains_media_bytes": false,
+      "remote_source_id": null
+    }
+  ],
+  "source_capability_observations": {
+    "observed_by": "root agent using actual native Gemini notebook UI",
+    "recorded_at_utc": "2026-10-08T19:00:35Z",
+    "TXT": "all three consolidated dumps processed; Lisan VIDEO_VISUAL_EVIDENCE.txt also processed",
+    "MP4": "File type unsupported",
+    "JPEG": "transfer accepted but Sources displayed Unsupported content; Hon anchor and five Lisan images affected",
+    "usable_native_image_video_sources": 0,
+    "limitation": "These observations concern native notebook Sources. Original provider conversations and ordinary chat video attachments are separate operations, still pending.",
+    "later_chat_route": "Master actual Notebook app Sources has selected Chats from Gemini (2). Opened source shows timestamped transcript/citation text, no separate MP4 entry/player/frames. Raw video visual ingestion remains unverified.",
+    "youtube_limit": "Official YouTube import route uses the text transcript only; insufficient alone for the visual-video objective."
+  },
+  "chat_attachment_summary": {
+    "successful_instances": 8,
+    "unique_original_assets": 7,
+    "image_instances": 3,
+    "video_instances": 5,
+    "selected_Hon_video_count": 3,
+    "other_Hon_priority_media_cataloged_not_reuploaded": 19,
+    "Lisan_arm_and_storyboard_bytes_uploaded_in_this_setup": false,
+    "youtube_upload_performed": false,
+    "no_new_generation": true,
+    "acceptance_scope": "Chat text is persistent selectable source context where verified; the eight attachment transfers do not establish raw visual-media Sources readiness."
+  },
+  "setup_receipt": "../setup_status.json",
+  "global_manual_sync": {
+    "revision": "2026-10-08 notebook setup completion digest",
+    "destination_notebook": "00_master",
+    "chat_url": "https://gemini.google.com/app/31fab947ecdea074",
+    "delivered": true,
+    "acknowledged": true,
+    "recorded_at_utc": "2026-10-08T21:59:31Z",
+    "acknowledged_scope": [
+      "Hon and Lisan local notebook setup complete",
+      "Manual update boundaries; no automatic cross-notebook access or synchronization",
+      "T02 scene working reference / Detailed design only",
+      "Media attachment versus cataloged metadata evidence correction"
+    ],
+    "source_of_remote_observations": "root agent verified actual Gemini UI",
+    "subsequent_scope_correction": "The earlier completion digest was actually delivered and acknowledged, but its setup-complete interpretation is superseded by the user requirement for persistent usable media Sources. No remote correction is claimed by this local status update."
+  },
+  "configuration_complete": true,
+  "setup_completed": false,
+  "media_sources_ready": false,
+  "source_grounded_media_use_verified": false,
+  "acceptance_criterion": "Selected media visual content must be usable and selectable in the actual persistent notebook Sources library, and source-grounded use of that visual content must be verified. A persistent chat transcript or media description is real source context, but does not by itself establish ingestion of the raw attached image/video visual content. Chat upload success and acknowledgement alone are insufficient.",
+  "sources_library_audit": {
+    "recorded_at_utc": "2026-10-08T22:06:02Z",
+    "observed_by": "root agent through actual read-only Notebook app UI",
+    "notebook_key": "00_master",
+    "actual_notebook_app_url": "https://notebook.google.com/notebook/7719bbe5-fccf-48e2-b6d4-d82f67693b09",
+    "source_panel": [
+      {
+        "label": "00_COMFY_UI_MASTER_IMPORT.txt",
+        "selected": true,
+        "kind": "text_source"
+      },
+      {
+        "label": "Chats from Gemini (2)",
+        "selected": true,
+        "kind": "persistent_synced_chat_context",
+        "conversations": [
+          "Notebook 0 Setup and Winner Promotion",
+          "Project File Organization Overview"
+        ]
+      }
+    ],
+    "opened_source": "Notebook 0 Setup and Winner Promotion",
+    "source_viewer_observation": "Timestamped User/Gemini transcript and literal citation text visible. No separate MP4 source entry, media player or video frames visible.",
+    "persistent_selectable_chat_context_verified": true,
+    "raw_attached_video_visual_content_ingestion_verified": false,
+    "source_grounded_video_visual_use_verified": false,
+    "scope_limit": "Master source panel and one opened chat source were inspected. No separate Hon/Lisan source-panel audit is claimed. Absence of a player/frames in this view does not prove a universal product incapability; visual ingestion remains unverified."
+  },
+  "official_source_documentation": [
+    {
+      "url": "https://support.google.com/gemininotebook/answer/17003757?hl=en",
+      "fact": "Gemini notebook chats sync as source context.",
+      "verification": "Official documentation verified by root; supports same-notebook chat context persistence, not a claim of raw attached-video visual indexing."
+    },
+    {
+      "url": "https://support.google.com/gemininotebook/answer/16215270?hl=en",
+      "fact": "YouTube imports use the text transcript, not full visual video.",
+      "verification": "Official documentation verified by root; a future YouTube source alone would not meet the visual-media source objective."
+    }
+  ]
+}

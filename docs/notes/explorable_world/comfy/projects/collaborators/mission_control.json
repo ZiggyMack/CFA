@@ -1,20 +1,43 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-08",
+  "updated": "2026-10-09",
   "tasks": [
     {
       "id": "grok-proof-package",
       "provider": "Grok",
       "project": "hon",
-      "title": "Outfit repairs, props and first interaction proofs",
-      "status": "ready",
-      "summary": "Thirteen exact input images, current detail rules, seven proposed initial correction/Caleb stills and a mapped return ZIP. Boss interaction waits for the separate discovery and selection.",
-      "nextAction": "Start with the cash-vest correction. Use the separate boss-discovery brief before commissioning any boss interaction; no boss is selected yet.",
+      "title": "Received the bounded Hon still return",
+      "status": "in_progress",
+      "summary": "Verified REV-HD-001 through 004, hip detail, Caleb reference and first Caleb scene. Review candidates and known continuity defects before creating more.",
+      "nextAction": "Review the returned candidates; REV-HD-001 fails outfit/scene preservation and CAL-P01 still has tattoo-placement defects. Select a corrected still before handing it to Flow.",
       "missing": [
-        "Boss selection is now a discovery task comparing original slug, hippo and gecko-frog directions.",
-        "The remembered Caleb line needs exact wording and song placement."
+        "Creative acceptance and continuity corrections."
       ],
       "links": [
+        {
+          "label": "Cash-counting vest Â· REV-HD-001 revision",
+          "assetID": "HD-RETURN-bc5b8c111da7"
+        },
+        {
+          "label": "Black overcoat Â· REV-HD-002 revision",
+          "assetID": "HD-RETURN-cfcf8f8004ef"
+        },
+        {
+          "label": "Pinstripe suit Â· REV-HD-003 revision",
+          "assetID": "HD-RETURN-9158a4df3f42"
+        },
+        {
+          "label": "Western fringe Â· Gun variant",
+          "assetID": "HD-RETURN-26a91590b6c0"
+        },
+        {
+          "label": "Caleb Â· Meeting scene Â· continuity fixes needed",
+          "assetID": "HD-RETURN-d50fe2346406"
+        },
+        {
+          "label": "Verified intake & next steps",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/START_HERE.txt"
+        },
         {
           "label": "Read the Grok cover",
           "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/START_HERE.txt"
@@ -35,22 +58,56 @@
         {
           "label": "Favorite-look prop sweep",
           "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/grok_favorite_prop_sweep_20261008.txt"
+        },
+        {
+          "label": "Grok delivery and acknowledgement",
+          "href": "../hon_dolo_strictly_business/handoffs/grok_20261008/delivery_status.json"
         }
-      ]
+      ],
+      "delivery": {
+        "status": "acknowledged_receipt",
+        "destination": "https://grok.com/bot/a4a75c63-1565-4448-84a2-f519f40bea15",
+        "destinationTitle": "Chief of Staff",
+        "sentAtUTC": "2026-10-08T16:55:00Z",
+        "timePrecision": "approximate minute",
+        "receiptPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/delivery_status.json",
+        "coverPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/delivery_cover.txt",
+        "contentValidation": "pending",
+        "resultStatus": "awaiting_initial_inventory_and_proofs; nothing accepted",
+        "acknowledgementObservedAtUTC": "2026-10-08T16:56:43Z"
+      },
+      "phaseHistory": [
+        {
+          "recordedAtUTC": "2026-10-09T04:19:09.174506+00:00",
+          "status": "in_progress",
+          "summary": "Thirteen exact input images, current detail rules, seven proposed initial correction/Caleb stills and a mapped return ZIP. Boss interaction waits for the separate discovery and selection.",
+          "nextAction": "Both packages were sent and acknowledged by Chief of Staff. Await the exact packaged-reference inventory, then REV-HD-001 vest proof for review before subsequent corrections."
+        }
+      ],
+      "receiptState": "verified_received_candidates_not_accepted",
+      "receivedIntake": "HON-GROK-RETURN-20261009"
     },
     {
       "id": "grok-source-art",
       "provider": "Grok",
       "project": "hon",
-      "title": "Recover the tattoo source artwork",
-      "status": "ready",
-      "summary": "Review the image-by-image tattoo audit and recover verified standalone artwork. Photo crops, placement sheets, original art and reconstructions have separate roles. New creative tattoos arrive with four-option artwork sheets in the same delivery.",
-      "nextAction": "Use the source audit and exact recovery requests. For creative discovery, identify which of four standalone options matches each new on-body tattoo; expand to 10-12 only when Ziggy asks.",
+      "title": "Review recovered tattoo artwork and remaining gaps",
+      "status": "in_progress",
+      "summary": "Recovered the blaster source sheet and verified derived crops. Eye, know and chest originals remain missing; body crops and indexed candidates are not recovered original stencils.",
+      "nextAction": "Review the recovered blaster drawing and its lineage. Continue targeted recovery for missing source art; do not promote body crops or unconfirmed archive candidates.",
       "missing": [
-        "Original current lettering/blaster/ship artwork has not been verified.",
-        "Conflicting chest drawings need resolution; hidden hand/forearm details remain open."
+        "Exact eye/know/chest source drawings remain unresolved.",
+        "Historical numbered originals and hidden-card/forearm art are still missing."
       ],
       "links": [
+        {
+          "label": "ST-HD-BLASTER sheet-c91af37e panel3 derived-crop 900-0-1280-330",
+          "assetID": "HD-RETURN-93e4112511ce"
+        },
+        {
+          "label": "Verified intake & next steps",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/START_HERE.txt"
+        },
         {
           "label": "Exact requests and regions",
           "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/requests.json"
@@ -60,32 +117,69 @@
           "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/asset_map.json"
         },
         {
-          "label": "Tattoo audit — readable findings",
+          "label": "Tattoo audit â€” readable findings",
           "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/visual_library/tattoo_audit_20261008.txt"
         },
         {
-          "label": "Tattoo audit — exact image and region map",
+          "label": "Tattoo audit â€” exact image and region map",
           "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/visual_library/tattoo_audit_20261008.json"
         },
         {
           "label": "Current Grok creative rule",
           "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_design_instructions.txt"
+        },
+        {
+          "label": "Grok delivery and acknowledgement",
+          "href": "../hon_dolo_strictly_business/handoffs/grok_20261008/delivery_status.json"
         }
-      ]
+      ],
+      "delivery": {
+        "status": "acknowledged_receipt",
+        "destination": "https://grok.com/bot/a4a75c63-1565-4448-84a2-f519f40bea15",
+        "destinationTitle": "Chief of Staff",
+        "sentAtUTC": "2026-10-08T16:55:00Z",
+        "timePrecision": "approximate minute",
+        "receiptPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/delivery_status.json",
+        "coverPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/delivery_cover.txt",
+        "contentValidation": "pending",
+        "resultStatus": "awaiting_initial_inventory_and_proofs; nothing accepted",
+        "acknowledgementObservedAtUTC": "2026-10-08T16:56:43Z"
+      },
+      "phaseHistory": [
+        {
+          "recordedAtUTC": "2026-10-09T04:19:09.174506+00:00",
+          "status": "in_progress",
+          "summary": "Review the image-by-image tattoo audit and recover verified standalone artwork. Photo crops, placement sheets, original art and reconstructions have separate roles. New creative tattoos arrive with four-option artwork sheets in the same delivery.",
+          "nextAction": "Sent and acknowledged; await Grok's exact available/missing-source inventory and genuine source-art recovery report. No recovered artwork has been independently verified."
+        }
+      ],
+      "receiptState": "verified_received_candidates_not_accepted",
+      "receivedIntake": "HON-GROK-RETURN-20261009"
     },
     {
       "id": "favorites-prop-sweep",
       "provider": "Grok",
       "project": "hon",
-      "title": "Add hip-blaster coverage to favorite looks",
+      "title": "Review 17 outfit gun variants",
       "status": "needs_input",
-      "summary": "The historical saved review contains 35 hash-verified favorites: 33 outfit images grouped into 17 looks, one current anchor and one video. Latest user corrections transfer Flow work to the retained 41-second montage.",
-      "nextAction": "Review the mapped favorite-look sweep. Resolve the prop design and hip side using the saloon proof, then request one useful hip-visible view per selected look.",
+      "summary": "All 17 variants are locally verified and joined to existing outfit albums. Distinct failed attempts remain in Needs review; exact duplicates share one media record.",
+      "nextAction": "Open each outfit and compare its gun variant with the original. Review hip side, tattoos, grill and wardrobe preservation; Velvet has a provider-reported failed side check.",
       "missing": [
-        "The saloon proof must establish coherent hardware and holster placement.",
-        "Permanent hip-side choice remains open."
+        "Your per-outfit variant review."
       ],
       "links": [
+        {
+          "label": "Yellow jacket Â· Gun variant",
+          "assetID": "HD-RETURN-86cb39e4d5b6"
+        },
+        {
+          "label": "Burgundy suit Â· Gun variant",
+          "assetID": "HD-RETURN-efc1886a0d62"
+        },
+        {
+          "label": "Verified intake & next steps",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/START_HERE.txt"
+        },
         {
           "label": "Saved review sweep",
           "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_sweep_20261008.txt"
@@ -97,8 +191,78 @@
         {
           "label": "Exact favorite IDs, hashes and roles",
           "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/grok_favorite_prop_sweep_20261008.json"
+        },
+        {
+          "label": "Grok delivery and acknowledgement",
+          "href": "../hon_dolo_strictly_business/handoffs/grok_20261008/delivery_status.json"
+        },
+        {
+          "label": "Current outfit return and grouping policy",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_design_instructions.txt"
+        },
+        {
+          "label": "Existing yellow outfit parent",
+          "href": "../index.html#hon/outfits/hon%3Aoutfit-yellow"
         }
-      ]
+      ],
+      "delivery": {
+        "status": "acknowledged_receipt",
+        "destination": "https://grok.com/bot/a4a75c63-1565-4448-84a2-f519f40bea15",
+        "destinationTitle": "Chief of Staff",
+        "sentAtUTC": "2026-10-08T16:55:00Z",
+        "timePrecision": "approximate minute",
+        "receiptPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/delivery_status.json",
+        "coverPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/delivery_cover.txt",
+        "contentValidation": "pending",
+        "resultStatus": "awaiting_initial_inventory_and_proofs; nothing accepted",
+        "acknowledgementObservedAtUTC": "2026-10-08T16:56:43Z"
+      },
+      "phaseHistory": [
+        {
+          "recordedAtUTC": "2026-10-09T04:05:05.051054+00:00",
+          "phase": "user_reported_gun_additions_in_progress_grouping_policy_prepared",
+          "priorSummary": "The historical saved review contains 35 hash-verified favorites: 33 outfit images grouped into 17 looks, one current anchor and one video. Latest user corrections transfer Flow work to the retained 41-second montage.",
+          "priorNextAction": "Brief sent and acknowledged. Keep rollout pending the coherent prop/holster proof, anatomical hip-side choice and exact missing source references; no outfit batch starts automatically.",
+          "deliveryVerified": false,
+          "newApprovals": []
+        },
+        {
+          "recordedAtUTC": "2026-10-09T04:19:09.174506+00:00",
+          "status": "needs_input",
+          "summary": "Ziggy reports Grok is finishing gun additions to the favorite outfits. Returned gun/no-gun versions and angles belong inside one outfit parent, such as the existing yellow jacket collection. The new batch has not been verified as received or accepted.",
+          "nextAction": "When the files arrive, verify hashes and actual source relationships, then group each outfit under its existing parent album. Keep gun state separate from view/framing, reuse exact duplicate media with aliases, and retain distinct takes. Inspect hardware, holster placement and character continuity before accepting any returned proof."
+        }
+      ],
+      "incomingReport": {
+        "source": "Latest direct user update",
+        "status": "user_reported_in_progress",
+        "recordedAtUTC": "2026-10-09T04:05:05.051054+00:00",
+        "downloadVerified": false,
+        "localContentValidation": "pending",
+        "newApprovals": []
+      },
+      "intakePolicy": {
+        "grouping": "one_outfit_parent_with_child_prop_and_view_variants",
+        "exampleExistingParentAlbumID": "hon:outfit-yellow",
+        "exampleExistingSourceAssetIDs": [
+          "HD-DROP-6c2e98bd1125",
+          "HD-DROP-84bf85a0a2da"
+        ],
+        "propStateValues": [
+          "with_gun",
+          "without_gun",
+          "unspecified"
+        ],
+        "viewSeparateFromPropState": true,
+        "framingSeparateFromView": true,
+        "visibilityRule": "Hidden or cropped hip means unspecified; requested/provider state is not verified visual state.",
+        "exactHashDuplicates": "Reuse canonical media ID and preserve every source filename/archive/path alias.",
+        "distinctMedia": "Keep separate media IDs and exact hashes for different images/takes under the same outfit parent.",
+        "incomingAssetIDs": [],
+        "approvalRule": "Grouping and provider completion claims establish no character, outfit or prop approval."
+      },
+      "receiptState": "verified_received_candidates_not_accepted",
+      "receivedIntake": "HON-GROK-RETURN-20261009"
     },
     {
       "id": "gemini-hon-kit",
@@ -177,16 +341,26 @@
       "id": "flow-interaction",
       "provider": "Flow",
       "project": "hon",
-      "title": "Animate a boss meeting or Caleb bar scene",
+      "title": "Review the received Caleb scene before Flow",
       "status": "planned",
-      "summary": "Two-character video is the next step after a coherent still proves identities, eyelines and contact. Use the actual song later; avoid generated lyrics for this picture test.",
-      "nextAction": "Review Grok's first two-person master and select one action and camera move for a single Flow take.",
+      "summary": "Caleb character reference and CAL-P01 now exist locally. The scene needs tattoo continuity corrections and selection before a motion test.",
+      "nextAction": "Inspect CAL-P01 and its reference. Resolve visible character details, then choose one action and camera move for a bounded Flow test.",
       "missing": [
-        "An accepted two-character starting frame.",
-        "A selected boss or accepted Caleb reference.",
-        "Mode, duration, model and displayed credit cost for the selected video route."
+        "Selected, corrected scene and bounded motion request."
       ],
       "links": [
+        {
+          "label": "Caleb Â· Character proof",
+          "assetID": "HD-RETURN-147fbed5f795"
+        },
+        {
+          "label": "Caleb Â· Meeting scene Â· continuity fixes needed",
+          "assetID": "HD-RETURN-d50fe2346406"
+        },
+        {
+          "label": "Verified intake & next steps",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/START_HERE.txt"
+        },
         {
           "label": "Flow shot template",
           "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/flow_shot_template.txt"
@@ -195,7 +369,17 @@
           "label": "Scene panel options",
           "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/panel_plan.txt"
         }
-      ]
+      ],
+      "phaseHistory": [
+        {
+          "recordedAtUTC": "2026-10-09T04:19:09.174506+00:00",
+          "status": "planned",
+          "summary": "Two-character video is the next step after a coherent still proves identities, eyelines and contact. Use the actual song later; avoid generated lyrics for this picture test.",
+          "nextAction": "Review Grok's first two-person master and select one action and camera move for a single Flow take."
+        }
+      ],
+      "receiptState": "verified_received_candidates_not_accepted",
+      "receivedIntake": "HON-GROK-RETURN-20261009"
     },
     {
       "id": "panhandler-return",
@@ -217,13 +401,14 @@
       "id": "flow-second-video-test",
       "provider": "Flow",
       "project": "hon",
-      "title": "Second Flow test · edit one continuous shot",
-      "status": "ready",
+      "title": "Second Flow test Â· edit one continuous shot",
+      "status": "needs_input",
       "summary": "The user retained GEM-5A115C59, the 41-second continuation. A freshly prepared six-second continuous car-arrival excerpt supplies the lighting-only comparison; the earlier 40-second download is archived from the working library.",
-      "nextAction": "Read the brief and check whether the account exposes the documented video-editing mode. Upload only the prepared six-second excerpt and request one lighting comparison.",
+      "nextAction": "Await exact-file upload and one-test approval. Then upload only the six-second excerpt, inspect the actual Omni editing plan and displayed cost, and request one lighting-only output; no upload or generation has happened.",
       "missing": [
-        "Current account access, mode and displayed cost are unverified.",
-        "No edited result has been generated or accepted."
+        "Automatic approval review blocked the nonpublic creative-file upload; exact payload approval question is pending.",
+        "Live generation plan, actual selected video-edit model/mode and displayed credit cost remain unverified.",
+        "No uploaded asset, edited result or accepted output exists for this test."
       ],
       "links": [
         {
@@ -238,22 +423,57 @@
         {
           "label": "Retained-source trim and checks",
           "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/manifest.json"
+        },
+        {
+          "label": "Flow upload status and approval",
+          "href": "../hon_dolo_strictly_business/flow/video_test_002/delivery_status.json"
         }
-      ]
+      ],
+      "delivery": {
+        "status": "blocked_before_upload_pending_exact_payload_approval",
+        "provider": "Google Flow",
+        "projectID": "e8a547ef-f801-4021-a5ee-fad3080b439c",
+        "receiptPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/delivery_status.json",
+        "uploaded": false,
+        "generationSubmitted": false,
+        "observedAgent": "Edit a video with Omni",
+        "observedConfirmation": "Always",
+        "observedVideoDefaults": {
+          "aspectRatio": "16:9",
+          "outputCount": 1
+        },
+        "modeFullyValidated": false,
+        "displayedCreditCost": null
+      }
     },
     {
       "id": "grok-boss-discovery",
       "provider": "Grok",
       "project": "hon",
-      "title": "Choose an original boss · proofs before turnarounds",
-      "status": "ready",
-      "summary": "Three exact references support cinematic boss discovery: original slug, hippo and gecko-frog. Fifty single proofs are organized as five feedback rounds of ten; only the selected winner then gets four consistent views.",
-      "nextAction": "Send the boss discovery brief with its three named examples. Review the first ten proofs, refine direction, and request four perspectives only after selecting a character.",
+      "title": "Choose among shortlisted boss candidates",
+      "status": "needs_input",
+      "summary": "First ten proofs are received. Ziggy shortlisted 2, 8, 5 and 10; 9 is now the bartender and 6 is now the club bouncer. No final boss or whole-character visual approval is recorded.",
+      "nextAction": "Review shortlist 2, 8, 5 and 10 and choose a boss or request a targeted revision. Keep 9 under bartender and 6 under bouncer; do not regenerate them as boss options. Winner turnarounds and a boss meeting scene follow selection.",
       "missing": [
-        "No boss has been selected.",
-        "Gemini refusal history is user-reported; a new design does not guarantee provider acceptance."
+        "Final boss selection or targeted revision feedback."
       ],
       "links": [
+        {
+          "label": "Boss round 1 Â· BOSS-001-010_contact.jpg",
+          "assetID": "HD-RETURN-fed7635d883b"
+        },
+        {
+          "label": "BOSS-001 Â· Hippo",
+          "assetID": "HD-RETURN-eb26cc4c1795"
+        },
+        {
+          "label": "BOSS-003 Â· Slug",
+          "assetID": "HD-RETURN-53fdb95a7c44"
+        },
+        {
+          "label": "Verified intake & next steps",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/START_HERE.txt"
+        },
         {
           "label": "Boss discovery and review gates",
           "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/boss_discovery_20261008.txt"
@@ -270,8 +490,64 @@
         {
           "label": "Creative freedom and companion tattoo art",
           "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_design_instructions.txt"
+        },
+        {
+          "label": "Grok delivery and acknowledgement",
+          "href": "../hon_dolo_strictly_business/handoffs/grok_20261008/delivery_status.json"
+        },
+        {
+          "label": "BOSS-002 · Gecko-frog - user shortlist",
+          "assetID": "HD-RETURN-339cdbe1e03a"
+        },
+        {
+          "label": "BOSS-008 · Crocodilian - user shortlist",
+          "assetID": "HD-RETURN-8421e7cfa1a0"
+        },
+        {
+          "label": "BOSS-005 · Catfish - user shortlist",
+          "assetID": "HD-RETURN-e18185bdab18"
+        },
+        {
+          "label": "BOSS-010 · Walrus - user shortlist",
+          "assetID": "HD-RETURN-9143639db1cf"
         }
-      ]
+      ],
+      "delivery": {
+        "status": "acknowledged_receipt",
+        "destination": "https://grok.com/bot/a4a75c63-1565-4448-84a2-f519f40bea15",
+        "destinationTitle": "Chief of Staff",
+        "sentAtUTC": "2026-10-08T16:55:00Z",
+        "timePrecision": "approximate minute",
+        "receiptPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/delivery_status.json",
+        "coverPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/delivery_cover.txt",
+        "contentValidation": "pending",
+        "resultStatus": "awaiting_initial_inventory_and_proofs; nothing accepted",
+        "acknowledgementObservedAtUTC": "2026-10-08T16:56:43Z"
+      },
+      "phaseHistory": [
+        {
+          "recordedAtUTC": "2026-10-09T04:19:09.174506+00:00",
+          "status": "in_progress",
+          "summary": "Three exact references support cinematic boss discovery: original slug, hippo and gecko-frog. Fifty single proofs are organized as five feedback rounds of ten; only the selected winner then gets four consistent views.",
+          "nextAction": "Discovery brief and all three named references sent and acknowledged. Await the packaged-reference check and first ten single proofs; later rounds, winner turnarounds and meeting remain gated."
+        }
+      ],
+      "receiptState": "verified_received_candidates_not_accepted",
+      "receivedIntake": "HON-GROK-RETURN-20261009",
+      "userSelection": {
+        "date": "2026-10-09",
+        "shortlist": [
+          2,
+          8,
+          5,
+          10
+        ],
+        "assignedElsewhere": {
+          "9": "bartender",
+          "6": "club bouncer"
+        },
+        "finalBossSelected": false
+      }
     },
     {
       "id": "flow-boss-proof",
@@ -301,8 +577,7 @@
       "nextAction": "Review motion, audio and tattoo/piercing continuity against the assigned Lisan references; align to the song later. Do not automatically upscale or treat the scene selection as blanket detail approval.",
       "missing": [
         "Detailed motion/audio and tattoo/piercing verification.",
-        "Exact song alignment; no automatic production upscaling.",
-        "The separate new Grok500 drop is not yet verified as downloaded or inventoried."
+        "Exact song alignment; no automatic production upscaling."
       ],
       "links": [
         {
@@ -313,7 +588,1661 @@
           "label": "Source and download provenance",
           "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/20261008/LAG-VID-PROOF-01_T02.provenance.txt"
         }
+      ],
+      "phaseHistory": [
+        {
+          "recordedAtUTC": "2026-10-09T02:45:47.596340+00:00",
+          "change": "Separate Grok500 delivery is now locally verified and inventoried; removed only that obsolete missing-item note.",
+          "intakeTaskID": "grok-lisan500-review",
+          "preservedScope": "LAG-VID-PROOF-01-T02 remains approved as a scene working reference at Detailed design; motion/audio/detail verification still pending.",
+          "priorMissingItems": [
+            "Detailed motion/audio and tattoo/piercing verification.",
+            "Exact song alignment; no automatic production upscaling.",
+            "The separate new Grok500 drop is not yet verified as downloaded or inventoried."
+          ]
+        }
       ]
+    },
+    {
+      "id": "gemini-notebook-system",
+      "provider": "Gemini",
+      "project": "shared",
+      "title": "Notebook0 and two project notebooks",
+      "status": "in_progress",
+      "summary": "Lisan storyboard text is processed and selected in Sources; its opened body/revision is verified. Lossless PNG and exact-JPEG PDF tests failed, leaving zero usable visual Sources. Hon/master storyboard drops remain prepared; no planning prompt sent.",
+      "nextAction": "Verify cited retrieval of the Lisan text source, then use L05 with image-dependent checks pending. Continue Hon/Master source delivery separately. No bulk conversion; preserve originals and use temporary test copies.",
+      "missing": [
+        "New Lisan text source has visible body verification but no query/cited retrieval yet.",
+        "Lisan JPEG remains unsupported; PNG and image-only PDF tests also failed. Root cause unknown; no usable visual Sources.",
+        "Hon and Notebook 0 storyboard text drops and all planning prompts remain undelivered.",
+        "YouTube transcript or synced chat text alone does not meet the visual-media requirement."
+      ],
+      "links": [
+        {
+          "label": "Shared method home · Nyquist breadcrumbs",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/README.txt"
+        },
+        {
+          "label": "Notebook workbench · start here",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/OPERATOR_MENU.txt"
+        },
+        {
+          "label": "Notebook0 · ready prompts",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/00_MASTER_PROMPTS.txt"
+        },
+        {
+          "label": "Hon Dolo · ready prompts",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/01_HON_PROMPTS.txt"
+        },
+        {
+          "label": "Lisan · ready prompts",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/02_LISAN_PROMPTS.txt"
+        },
+        {
+          "label": "Studio controls · current settings",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/STUDIO_SETTINGS.txt"
+        },
+        {
+          "label": "Cross-project questions · return prompts",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/DOUBLE_DIP_RETURN.txt"
+        },
+        {
+          "label": "Double-dip questions · prepared queue",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/double_dip_queue.json"
+        },
+        {
+          "label": "Prompt source map",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/operating_sources.json"
+        },
+        {
+          "label": "Method and controls evidence",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/METHOD_AND_CONTROLS_AUDIT.json"
+        },
+        {
+          "label": "Notebook workflow · source audit",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/SOURCE_AUDIT.json"
+        },
+        {
+          "label": "Notebook workflow · Nyquist adaptation",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/START_HERE.txt"
+        },
+        {
+          "label": "Notebook setup and current limitations",
+          "href": "../collaborators/gemini_notebooks_20261008/START_HERE.txt"
+        },
+        {
+          "label": "Exact notebook setup receipt",
+          "href": "../collaborators/gemini_notebooks_20261008/setup_status.json"
+        },
+        {
+          "label": "Notebook0 - CFA / COMFY_UI Master",
+          "href": "https://gemini.google.com/notebook/7719bbe5-fccf-48e2-b6d4-d82f67693b09"
+        },
+        {
+          "label": "Notebook1 - Hon Dolo / Strictly Business",
+          "href": "https://gemini.google.com/notebook/586b3ee6-5c57-45b3-a59d-a2e21c18a852"
+        },
+        {
+          "label": "Notebook2 - Lisan Al Gaib / Meta Mirror",
+          "href": "https://gemini.google.com/notebook/114707d8-29b3-4505-bc06-dd7abcc60e4d"
+        },
+        {
+          "label": "Master acknowledgement and original T02 video attachment",
+          "href": "https://gemini.google.com/app/31fab947ecdea074"
+        },
+        {
+          "label": "Notebook 1 Hon Dolo Setup - acknowledged references",
+          "href": "https://gemini.google.com/app/988990050e4ad32c"
+        },
+        {
+          "label": "Lisan Al Gaib Notebook Setup - acknowledged references",
+          "href": "https://gemini.google.com/app/11c89d66a6a82538"
+        },
+        {
+          "label": "Master actual Sources library",
+          "href": "https://notebook.google.com/notebook/7719bbe5-fccf-48e2-b6d4-d82f67693b09"
+        },
+        {
+          "label": "Google: Gemini notebook chat context",
+          "href": "https://support.google.com/gemininotebook/answer/17003757?hl=en"
+        },
+        {
+          "label": "Google: source import and YouTube transcript limits",
+          "href": "https://support.google.com/gemininotebook/answer/16215270?hl=en"
+        },
+        {
+          "label": "Gemini role · Preliminary to Detailed design",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/shared/STORYBOARD_WORKFLOW.txt"
+        },
+        {
+          "label": "Notebook 0 · source update",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/00_master/SOURCE_UPLOAD.txt"
+        },
+        {
+          "label": "Notebook 0 · coordination request",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/00_master/TASK_PROMPT.txt"
+        },
+        {
+          "label": "Storyboard drops · delivery status",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/delivery_status.json"
+        },
+        {
+          "label": "Notebook compatibility results · text works, visual tests failed",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/compatibility_20261009/RESULTS.json"
+        },
+        {
+          "label": "Temporary delivery copies · originals preserved",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/compatibility_20261009/DELIVERY_COPY_POLICY.txt"
+        }
+      ],
+      "setupReceipt": "docs/notes/explorable_world/comfy/projects/collaborators/gemini_notebooks_20261008/setup_status.json",
+      "masterPromotionScope": "LAG-VID-PROOF-01-T02: scene working reference at Detailed design; production not accepted.",
+      "setupProgress": {
+        "status": "in_progress",
+        "textSources": "four_processed",
+        "projectChatMembership": "verified_two_per_project",
+        "selectedOriginalChatAttachmentInstances": 8,
+        "uniqueOriginalMediaAssets": 7,
+        "setupAcknowledgements": "received_all_three_notebooks",
+        "nativeVideoSources": "unsupported",
+        "nativeImageSources": "observed_JPEG_PNG_failed_PDF_wrapper_failed_no_visual_sources",
+        "youtubeUploadPerformed": false,
+        "contentWork": "continuing",
+        "updatedAtUTC": "2026-10-09T17:11:59.636409+00:00",
+        "globalSetupDigest": "Earlier digest delivered and acknowledged; setup-complete interpretation now superseded by user persistent-Sources criterion.",
+        "LisanMetadataCorrection": "acknowledged",
+        "configurationComplete": true,
+        "mediaSourcesReady": false,
+        "sourceGroundedUseVerified": false,
+        "chatAttachmentsRole": "transfers verified; raw visual ingestion unverified",
+        "masterPersistentChatContext": "verified_selected_Chats_from_Gemini_2",
+        "rawVisualMediaSourcesReady": false,
+        "sourceGroundedVisualUseVerified": false,
+        "youtubeTranscriptMeetsVisualObjective": false,
+        "latestLisanSourcePanel": {
+          "totalEntries": 16,
+          "usableSelectedSources": 6,
+          "usableVisualSources": 0,
+          "countIsNotVisualReadiness": true
+        },
+        "latestLisanTextSourceID": "c0e6a4c9-4a78-4a20-96df-1a9b0193dcc1",
+        "latestLisanTextBodyVerified": true,
+        "latestLisanCitedRetrievalVerified": false,
+        "latestCompatibilityReceipt": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/compatibility_20261009/RESULTS.json"
+      },
+      "acceptanceCriterion": "Selected media visual content must be usable and selectable in the actual persistent notebook Sources library, and source-grounded use of that visual content must be verified. A persistent chat transcript or media description is real source context, but does not by itself establish ingestion of the raw attached image/video visual content. Chat upload success and acknowledgement alone are insufficient.",
+      "phaseHistory": [
+        {
+          "recordedAtUTC": "2026-10-09T04:32:11.384327+00:00",
+          "summary": "Notebook shells, shared rules and text Sources are configured. Master Sources includes selected persistent Gemini chat transcripts. Raw attached-video visual ingestion and source-grounded visual use remain unverified; selected chat uploads alone do not complete the media objective.",
+          "nextAction": "Verify a supported persistent visual-media Sources route and source-grounded visual use. Preserve the verified chat-text context; do not substitute it or a YouTube transcript for video visual content."
+        },
+        {
+          "recordedAtUTC": "2026-10-09T04:49:41.497576+00:00",
+          "summary": "Fourteen source-specific prompt cards now cover chat, reports, audio, slides, infographics and video overviews. Notebook0 mines reusable lessons and routes relevant questions; Hon and Lisan stay centered on their own stories. Prepared locally; no new remote source update or generation.",
+          "nextAction": "Open the Notebook workbench. With current usable Sources, run H01 in Hon and L01 in Lisan, then M01 in Notebook0. Choose one useful Studio output. Keep the Drive sync pilot and unresolved visual-source ingestion as separate delivery work.",
+          "externalExecution": false
+        },
+        {
+          "recordedAtUTC": "2026-10-09T16:52:06.168287+00:00",
+          "summary": "Nyquist remains the shared method home. CFA keeps fourteen project-specific prompt cards, source mappings and outcome records, with direct breadcrumbs to the existing Holy Grail, workflow and templates. No new remote source update or generation.",
+          "nextAction": "Open the Notebook workbench. With current usable Sources, run H01 in Hon and L01 in Lisan, then M01 in Notebook0. Choose one useful Studio output. Keep the Drive sync pilot and unresolved visual-source ingestion as separate delivery work.",
+          "externalExecution": false
+        },
+        {
+          "recordedAtUTC": "2026-10-09T17:11:59.636409+00:00",
+          "summary": "Nyquist remains the shared method home. Seventeen prompt cards now include project storyboard development: Hon opening, Lisan scenes 01–10 and Notebook 0 coordination. Local instructions and two image/text care packages are prepared; no new remote delivery.",
+          "nextAction": "Use H06 and L05 with the new storyboard packets; verify actual Sources and review the detailed scene proposals. M06 updates Notebook 0 with shared method and later reviewed project digests. Existing Studio cards and cross-project questions remain available.",
+          "deliveryStatus": null
+        }
+      ],
+      "updatedAtUTC": "2026-10-09T17:11:59.636409+00:00",
+      "remoteSourceChangesMade": true,
+      "sourceGroundedVisualUseVerified": false,
+      "compatibilityReceipt": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/compatibility_20261009/RESULTS.json"
+    },
+    {
+      "id": "grok-lisan500-review",
+      "provider": "Grok",
+      "project": "lisan",
+      "title": "Review the received 500-image Lisan look pack",
+      "status": "in_progress",
+      "summary": "Verified local intake: 50 looks, 500 unique source images, 50 contact sheets and one index. Each look has five reference views and five story scenes. Grok reports 9 FLAG images and 75 hero candidates; none is a new user approval.",
+      "nextAction": "Open the local Lisan look groups: inspect the 9 provider FLAG images first, then the 75 provider hero candidates by role. Record selected outfit, scene or detail scope explicitly; preserve current Lisan identity references. Hosted refresh is still pending.",
+      "missing": [
+        "User visual review and scoped selections.",
+        "The new 500 images are not covered by the earlier 422-image tattoo audit."
+      ],
+      "links": [
+        {
+          "label": "Measured intake summary",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/receipt_summary.txt"
+        },
+        {
+          "label": "500-row asset ledger with exact source chains",
+          "href": "../lisan_al_gaib/grok_500_20261008/asset_ledger.json"
+        },
+        {
+          "label": "Current intake and cleanup status",
+          "href": "../lisan_al_gaib/grok_500_20261008/intake_status.json"
+        },
+        {
+          "label": "Received pack guide",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part01/NOVA-GUIDE-500.md"
+        }
+      ],
+      "delivery": {
+        "status": "verified_received_unreviewed",
+        "verifiedAtUTC": "2026-10-09T02:16:53.192404+00:00",
+        "receiptPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/intake_receipt.json",
+        "receiptSHA256": "96069a962794403c9d426150158acff20fd6de66f833e129f006cd70d5ce8db9",
+        "assetLedgerPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/asset_ledger.json",
+        "assetLedgerSHA256": "862bf97eb9028e25018fd1191bda9d43ccc7827f17a8f33c93d489c3e08626b9",
+        "sourceImages": 500,
+        "contactSheets": 50,
+        "contactIndexImages": 1,
+        "referenceViewStudies": 250,
+        "storySceneStudies": 250,
+        "nestedZIPsCRCVerified": 50,
+        "outerZIPCRCVerified": true,
+        "outerZIPCRCReason": "Eight original outer ZIPs were found later, CRC checked and all54 members matched frozen original input hashes before removal. Frozen initial receipt remains unchanged.",
+        "creativeReview": "pending",
+        "newUserApprovals": [],
+        "ZIPCleanup": "complete_verified_58_ZIP_copies_removed",
+        "ZIPCopiesRemoved": 58,
+        "ZIPBytesFreed": 313758016,
+        "preservedOutputFiles": 555,
+        "cleanupReceipts": [
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/cleanup_summary.json",
+            "sha256": "8d843f84f5a1449ec37551b63bb07a2c68104dfe0fe3841123e4db24723f42a9",
+            "bytes": 63550,
+            "completedUTC": "2026-10-09T02:53:02.127814+00:00"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/outer_cleanup_summary.json",
+            "sha256": "7e06628a3e1c478fefff4b33e0735996e0e139cd47e4955d0f65d6316087e35a",
+            "bytes": 3333,
+            "completedUTC": "2026-10-09T02:53:25.757735+00:00"
+          }
+        ],
+        "outerZIPVerifiedAtUTC": "2026-10-09T02:53:08.073520+00:00"
+      },
+      "catalogIntegration": {
+        "status": "local_catalog_built_file_audit_passed_hosted_pending",
+        "expectedRoutes": [
+          "Lisan > Outfits > L01 through L50",
+          "Lisan > Review > Grok-flagged look-pack images",
+          "Lisan > Inspiration > 500-image look pack overview",
+          "Lisan > Documents > Design and outfit notes > Grok 500-image pack"
+        ],
+        "note": "All 551 new original hashes/decode and 551 preview decodes passed. Root viewed the50portrait contact-index overview only. Browser gallery render was blocked; hosted publication and individual creative review remain unverified.",
+        "recordedAtUTC": "2026-10-09T03:00:02.475982+00:00",
+        "localCatalogAssets": 1133,
+        "localCatalogMedia": 1005,
+        "localCatalogDocuments": 128,
+        "localCatalogAlbums": 136,
+        "addedLisanMedia": 551,
+        "addedLisanDocuments": 4
+      },
+      "phaseHistory": [
+        {
+          "phase": "provider_completion_observed_local_receipt_unverified",
+          "observedAtUTC": "2026-10-09T01:45:08Z",
+          "sourcePath": "docs/notes/explorable_world/comfy/projects/collaborators/panhandler_return_20261008.txt"
+        },
+        {
+          "phase": "received_extracted_integrity_verified",
+          "observedAtUTC": "2026-10-09T02:16:53.192404+00:00",
+          "receiptPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/intake_receipt.json"
+        },
+        {
+          "phase": "creative_review_pending",
+          "recordedAtUTC": "2026-10-09T02:45:47.596340+00:00",
+          "newApprovals": []
+        },
+        {
+          "phase": "local_catalog_built_hosted_pending",
+          "recordedAtUTC": "2026-10-09T02:47:29.649542+00:00",
+          "priorCatalogState": {
+            "status": "adapter_prepared_build_pending",
+            "expectedRoutes": [
+              "Lisan > Outfits > L01 through L50",
+              "Lisan > Review > Grok-flagged look-pack images",
+              "Lisan > Inspiration > 500-image look pack overview",
+              "Lisan > Documents > Design and outfit notes > Grok 500-image pack"
+            ],
+            "note": "These are prepared routes, not a claim that the current hosted or local catalog has already rebuilt."
+          },
+          "newApprovals": []
+        },
+        {
+          "phase": "later_outer_ZIP_verification_and_all_ZIP_cleanup_complete",
+          "recordedAtUTC": "2026-10-09T03:00:02.475982+00:00",
+          "completedAtUTC": "2026-10-09T02:53:25.757735+00:00",
+          "nestedZIPsRemoved": 50,
+          "outerZIPsRemoved": 8,
+          "bytesFreed": 313758016,
+          "preservedFilesVerified": 555,
+          "frozenReceiptAndLedgerUnchanged": true,
+          "newApprovals": []
+        }
+      ]
+    },
+    {
+      "id": "gemini-hon-mouth-continuity",
+      "provider": "Gemini",
+      "project": "hon",
+      "title": "Test a reusable mouth and grill reference",
+      "status": "needs_input",
+      "summary": "Four upper gold caps, white central incisors and silver lower grill remain the external-off dental direction. Fifty v003 mouth macros are received; complete reusable heads and an accepted moving-mouth proof are still missing. Received r4 is a separate external-iced/no-lip-ring look.",
+      "nextAction": "Choose a scoped corrected external-off head plus matching mouth detail for the existing finite motion test; do not substitute optional r4 dental appearance. Still references do not prove speech continuity.",
+      "missing": [
+        "Selected consolidated four-gold head reference and matching mouth detail from the new delivery.",
+        "Exact current-anchor mouth crop and its bounds/hash are not prepared.",
+        "Actual session support for the additional reference role is unverified.",
+        "No accepted moving-mouth master or validated extra-mouth input in the Comfy graph exists."
+      ],
+      "links": [
+        {
+          "label": "Mouth continuity proof â€” request and checks",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/START_HERE.txt"
+        },
+        {
+          "label": "Current Hon design anchor",
+          "assetID": "HD-DROP-ef5d59a6402e"
+        },
+        {
+          "label": "Latest mouth reference 01",
+          "assetID": "HD-MOUTH-UPDATE-20261009-01"
+        },
+        {
+          "label": "Latest mouth reference 02",
+          "assetID": "HD-MOUTH-UPDATE-20261009-02"
+        },
+        {
+          "label": "Latest mouth update · review notes",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/user_mouth_update_20261009/UPDATE_NOTES.txt"
+        }
+      ],
+      "delivery": {
+        "status": "prepared_local_not_sent",
+        "generationStatus": "not_run",
+        "maximumPlannedTakes": 2,
+        "newApprovals": []
+      },
+      "phaseHistory": [
+        {
+          "recordedAtUTC": "2026-10-09T11:27:01.498109+00:00",
+          "event": "latest-user-mouth-images",
+          "summary": "One close-up neutral/smile/speech proof, then at most one comparison adding a mouth crop. Current Hon design: two upper gold canines, natural other upper teeth and lower silver grill. A separate non-generative grade is the first lighting-only baseline.",
+          "nextAction": "Read the prepared brief; prepare an exact crop from the current anchor and verify the actual Gemini reference-input mode. Run one take at a time, maximum two, only when the user proceeds. Review motion and heard words before any mouth-master approval.",
+          "status": "planned"
+        }
+      ],
+      "latestReferenceAssetIDs": [
+        "HD-MOUTH-UPDATE-20261009-01",
+        "HD-MOUTH-UPDATE-20261009-02"
+      ],
+      "latestIntakePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/user_mouth_update_20261009/intake.json",
+      "dentalDecisionStatus": "resolved_four_upper_gold"
+    },
+    {
+      "id": "grok-hon-money-handling",
+      "provider": "Grok",
+      "project": "hon",
+      "title": "Money-handling stills Â· luminous rectangular credits",
+      "status": "planned",
+      "summary": "One concrete opening-frame request is prepared: current Dolo identity, the existing studded cash-counting vest/ship counter, and four luminous rectangular credits. Existing references retain separate roles; no new frame is approved or generated.",
+      "nextAction": "Use GROK_STARTING_FRAME.txt and its three exact references for one Grok candidate. Compare with the separately planned ChatGPT still, then use one selected scene-scoped frame for all video lanes; no automatic rerolls.",
+      "missing": [
+        "A prepared still brief with exact reference roles and a finite proof count. No money-handling proof has been requested from Grok or generated by this task."
+      ],
+      "links": [
+        {
+          "label": "Opening transaction · start here",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/START_HERE.txt"
+        },
+        {
+          "label": "Grok · one starting-frame request",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/GROK_STARTING_FRAME.txt"
+        },
+        {
+          "label": "Rectangular luminous money Â· prop and transaction cue",
+          "assetID": "HD-DROP-36679ee9953b"
+        },
+        {
+          "label": "Current Prime Hon Dolo character anchor",
+          "assetID": "HD-DROP-ef5d59a6402e"
+        },
+        {
+          "label": "Current Grok design and preservation rules",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_design_instructions.txt"
+        },
+        {
+          "label": "Delivered review file Â· notes and requests",
+          "href": "../../../../cfa-review.json"
+        },
+        {
+          "label": "Hon Dolo planned-shot material",
+          "href": "../index.html#hon/shot_plans"
+        }
+      ],
+      "sourceReview": {
+        "path": "docs/notes/cfa-review.json",
+        "sha256": "5e9f5ca31dfcb12825eb99c23c3cfd3d84e46614ebede901ee9ab301def6e7bf",
+        "exported": "2026-10-09T03:57:01.403Z",
+        "itemCount": 14,
+        "favoriteCount": 36,
+        "assetID": "HD-DROP-36679ee9953b",
+        "assetSHA256": "36679ee9953bfb8d0492009c1a47309fdd8f04f951f2077bce0007067146b1c4",
+        "note": "We need Grok to generate some example of our charcter handeling money..like these rectangular light pieces you have shown..",
+        "status": "keep",
+        "workingReference": {
+          "status": "requested",
+          "scope": "complete_look"
+        },
+        "separateExistingShotPlan": {
+          "status": "planned",
+          "destinations": [
+            "Flow",
+            "Grok"
+          ],
+          "idea": "Playing darts drinking at the bar",
+          "prompt": ""
+        },
+        "interpretation": "This task follows the money-handling note. The existing Flow/Grok darts-and-bar shot plan is retained separately, not rewritten as money handling. The complete-look request remains requested, not approved."
+      },
+      "delivery": {
+        "status": "planned_local_not_sent",
+        "generationStatus": "not_run",
+        "newApprovals": []
+      },
+      "createdAtUTC": "2026-10-09T04:00:33.869844+00:00"
+    },
+    {
+      "id": "gemini-hon-opening-continuation",
+      "provider": "Gemini",
+      "project": "hon",
+      "title": "Opening transaction · ten-turn continuation prototype",
+      "status": "planned",
+      "summary": "One Gemini creation plus nine dependent continuations of the opening transaction. The shared eight-second benchmark now supplies turn 01; reuse the same passing result. No new still or video generated.",
+      "nextAction": "Use the reconciled four-gold adapter and a received, inspected corrected primary reference before selecting or sending the opening scene. Use the common starting frame and benchmark prompt for Gemini turn 01. After the first-wave comparison, Nova checks one real continuation against its passing parent before proceeding within the existing ten-turn maximum.",
+      "links": [
+        {
+          "label": "Shared benchmark · use the Gemini take once",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/BENCHMARK.txt"
+        },
+        {
+          "label": "Opening transaction · start here",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/START_HERE.txt"
+        },
+        {
+          "label": "Grok · one starting-frame request",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/GROK_STARTING_FRAME.txt"
+        },
+        {
+          "label": "Gemini · ten continuation prompts",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/GEMINI_10_TURNS.txt"
+        },
+        {
+          "label": "Run plan · sources and per-turn evidence",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/RUN_PLAN.json"
+        },
+        {
+          "label": "Current Dolo · face and details",
+          "assetID": "HD-DROP-ef5d59a6402e"
+        },
+        {
+          "label": "Cash-counting vest and ship counter",
+          "assetID": "HD-DROP-2691712601a9"
+        },
+        {
+          "label": "SB-03 · luminous credit props",
+          "assetID": "HD-DROP-36679ee9953b"
+        }
+      ],
+      "dependencies": [
+        "grok-hon-money-handling",
+        "hon-opening-video-benchmark"
+      ],
+      "shotIDs": [
+        "S01B",
+        "S01A"
+      ],
+      "preparedAtUTC": "2026-10-09T04:53:04.858919+00:00",
+      "externalExecution": false,
+      "referenceRevisionStatus": "four_upper_gold_requires_corrected_primary"
+    },
+    {
+      "id": "hon-opening-video-benchmark",
+      "provider": "Gemini",
+      "providerRole": "Coordination listing for the existing Gemini opening prototype; all four services are contenders.",
+      "participants": [
+        "Gemini",
+        "Flow",
+        "Grok",
+        "ComfyUI",
+        "ChatGPT"
+      ],
+      "project": "hon",
+      "title": "Opening benchmark · stills, video and scene specialties",
+      "status": "planned",
+      "summary": "Compare one Grok and one ChatGPT still, then use one selected frame across four video lanes and later offered Flow variants. Track strengths by scene and visible detail; ChatGPT native video joins only if an accessible generator is verified. No generation run.",
+      "nextAction": "Use the reconciled four-gold adapter and a received, inspected corrected primary reference before selecting or sending the opening scene. Create the two planned still candidates from the same A/B/C references, compare visible details, and select one shared frame. Verify video controls before the bounded screen. Build scene-specific routing evidence from actual runs, without presuming a provider wins or loses.",
+      "missing": [
+        "One selected scene-scoped frame from the planned Grok/ChatGPT still comparison.",
+        "Live video account controls/usage and Comfy input verification. ChatGPT native video has no connected generator here."
+      ],
+      "links": [
+        {
+          "label": "Four-way benchmark · shared prompt and review",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/BENCHMARK.txt"
+        },
+        {
+          "label": "Benchmark plan · lanes and evidence",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/BENCHMARK_PLAN.json"
+        },
+        {
+          "label": "One Grok starting frame · exact brief",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/GROK_STARTING_FRAME.txt"
+        }
+      ],
+      "dependencies": [
+        "grok-hon-money-handling"
+      ],
+      "shotIDs": [
+        "S01B",
+        "S01A"
+      ],
+      "preparedAtUTC": "2026-10-09T05:30:42.077959+00:00",
+      "externalExecution": false,
+      "referenceRevisionStatus": "four_upper_gold_requires_corrected_primary"
+    },
+    {
+      "id": "grok-image-benchmark-intake",
+      "provider": "Grok",
+      "project": "shared",
+      "title": "Selected-image refinement · Grok benchmark return",
+      "status": "needs_input",
+      "summary": "All three packages verified and filed: 117 unique files, 18 tests, 36 proposed image results plus 21 historical Grok baselines. HD-01 is prepared with five exact references. Mouth set is reviewed with corrections needed; no generation.",
+      "nextAction": "The prepared HD-01 adapter now follows four upper gold caps. Receive/inspect a compatible corrected primary reference and exact crop before a comparison; preserve the original received cards and historical baselines.",
+      "missing": [
+        "Actual account model/settings and cost are unverified.",
+        "Other raw prompt cards retain local reference-scope conflicts; no batch launch implied.",
+        "Corrected four-gold primary reference and matching crop for current benchmark adapter."
+      ],
+      "links": [
+        {
+          "label": "Image benchmark return · intake and holds",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/START_HERE.txt"
+        },
+        {
+          "label": "Flow route · Veo and Nano Banana",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/FLOW_HANDOFF.txt"
+        },
+        {
+          "label": "Receipt · all packages verified",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/INTAKE_STATUS.json"
+        },
+        {
+          "label": "HD-01 · exact attachments and comparison",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/HD01_HANDOFF.txt"
+        },
+        {
+          "label": "HD-01 · shared adapted prompt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/HD01_PROMPT.txt"
+        },
+        {
+          "label": "HD-01 · hashes, roles and adapter",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/HD01_HANDOFF.json"
+        },
+        {
+          "label": "Part one · manifest and pending files",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/part1_manifest_review.json"
+        },
+        {
+          "label": "Benchmark and mouth · asset ledger",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/asset_ledger.json"
+        },
+        {
+          "label": "Filed under Processed · cleanup receipt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/cleanup_receipt.json"
+        }
+      ],
+      "externalExecution": false,
+      "preparedAtUTC": "2026-10-09T05:46:04.047583+00:00",
+      "updatedAtUTC": "2026-10-09T06:18:35.683203+00:00"
+    },
+    {
+      "id": "gemini-hon-ally-arrival-replacement",
+      "provider": "Gemini",
+      "project": "hon",
+      "title": "City chase · ally-arrival replacement",
+      "status": "needs_input",
+      "summary": "Ziggy selected the latest ally-arrival revision to replace the previous city/car/action clip. Gemini currently will not deliver the download even for the user. Existing media remains unchanged.",
+      "nextAction": "When the new file arrives, hash/decode it, inspect the ending, compare against GEM-5A115C59, register a new immutable asset ID and supersede the old version with provenance and review links preserved.",
+      "missing": [
+        "Newest video file from Gemini chat 75a1bed38a68132b; user will retry later."
+      ],
+      "links": [],
+      "sourceChat": "https://gemini.google.com/app/75a1bed38a68132b",
+      "sourceAssetIDs": [
+        "GEM-5A115C59"
+      ],
+      "remoteDownloadAttempted": true,
+      "replacementApplied": false,
+      "browserDurationSeconds": 41.002,
+      "browserDurationNote": "Both preceding and newest players report 41.002 seconds; extension length/content not locally verified.",
+      "preparedAtUTC": "2026-10-09T06:18:35.683203+00:00",
+      "externalExecution": false
+    },
+    {
+      "id": "grok-lisan-jet-black",
+      "provider": "Grok",
+      "project": "lisan",
+      "title": "Jet Black · received character and scene library",
+      "status": "needs_input",
+      "summary": "158 received Jet images remain candidates. New user-confirmed role: watcher and recurring mission guide, bringing a freely shared blueprint, progress reports and outer-world messages. The prior Curator plot remains proposal-only.",
+      "nextAction": "Review the six selected composition candidates against the user references and current story direction; preserve their documented defects. Develop the scene plan before requesting another batch.",
+      "missing": [
+        "User review of new Jet Black candidates"
+      ],
+      "sourceAssetIDs": [
+        "LAG-CAST-JET-BLACK-REF-02",
+        "LAG-CAST-JET-BLACK-REF-01"
+      ],
+      "externalExecution": false,
+      "preparedAtUTC": "2026-10-09T11:31:21.340643+00:00",
+      "deliveryStatus": "prepared_not_sent",
+      "links": [
+        {
+          "label": "Jet Black · solo full-body reference",
+          "assetID": "LAG-CAST-JET-BLACK-REF-02"
+        },
+        {
+          "label": "Jet Black · supplied reference",
+          "assetID": "LAG-CAST-JET-BLACK-REF-01"
+        },
+        {
+          "label": "Six-image brief",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/jet_black_20261009/START_HERE.txt"
+        },
+        {
+          "label": "Grok prompt",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/jet_black_20261009/GROK_PROMPT.txt"
+        },
+        {
+          "label": "Reference and request map",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/jet_black_20261009/brief.json"
+        },
+        {
+          "label": "Jet Black · verified intake",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/cast/jet_black/grok_return_20261009/START_HERE.txt"
+        },
+        {
+          "label": "Latest user story direction and candidate map",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/jet_black_mission_20261009/storyline.json"
+        }
+      ],
+      "phaseHistory": [
+        {
+          "status": "ready",
+          "title": "Jet Black · six solo character images",
+          "summary": "Two verified Jet Black references are filed. The new solo front/body shot supplies trousers, shoes and a cosmic-right/gloved-left rendition. Six follow-up views use that version consistently; the original companion scene remains context.",
+          "nextAction": "When requested, attach both references with their stated roles and send the updated six-image prompt. Review returned views and any hidden rear construction before choosing continuity angles.",
+          "missing": [],
+          "recordedAtUTC": "2026-10-09T18:26:57.464698+00:00"
+        }
+      ]
+    },
+    {
+      "id": "grok-hon-head-library",
+      "provider": "Grok",
+      "project": "hon",
+      "title": "Receive Hon Dolo’s reusable head library",
+      "status": "in_progress",
+      "summary": "50 external-off v003 mouth macros are verified locally; zero completed 130-head-library slots. The user-selected r4 external-iced/no-lip-ring reference is now received separately. Anchor receipt does not fill head-state coverage.",
+      "nextAction": "Keep existing macro coverage and r4 scope; use the verified inventory to plan the existing outstanding heads/props without duplicate generation.",
+      "missing": [
+        "130-head library not delivered",
+        "Three hand-tattoo files and one identity reference absent"
+      ],
+      "sourceAssetIDs": [
+        "HD-DROP-ef5d59a6402e",
+        "HD-MOUTH-UPDATE-20261009-01",
+        "HD-DROP-71cad143227a",
+        "HD-DROP-defe480b085f",
+        "HD-HAND-LEIGH-PLACEMENT-20261009",
+        "HD-HAND-LEIGH-HEARTS-20261009",
+        "HD-HAND-LEIGH-SPADES-20261009",
+        "HD-GRILLUP-40064d98db89"
+      ],
+      "links": [
+        {
+          "label": "Reusable character head standard",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt"
+        },
+        {
+          "label": "Head coverage · paired grill collections",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/head_library_20261009/expected_intake.json"
+        },
+        {
+          "label": "Grok conversation and dental correction",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/head_library_20261009/grok_conversation_evidence.json"
+        },
+        {
+          "label": "Return manifest template",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/head_library_20261009/return_manifest.template.json"
+        },
+        {
+          "label": "Codex → Grok · earlier head correction",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/001_head_library_correction.txt"
+        },
+        {
+          "label": "Grok coordination · delivery receipt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/001_delivery.json"
+        },
+        {
+          "label": "Direct coordination authority",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/collaboration_authority.json"
+        },
+        {
+          "label": "Grok · acknowledgement and next step",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/001_grok_acknowledgement.txt"
+        },
+        {
+          "label": "Grill variants and hand options",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/reference_updates/grill_and_hand_20261009/INTAKE_NOTES.txt"
+        },
+        {
+          "label": "Verified attachment intake",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/reference_updates/grill_and_hand_20261009/intake.json"
+        },
+        {
+          "label": "Codex → Grok · grill-state clarification",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/002_grill_variants_and_hand_options.txt"
+        },
+        {
+          "label": "Latest coordination receipt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/002_delivery.json"
+        },
+        {
+          "label": "Grok · grill and hand-option acknowledgement",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/002_grok_acknowledgement.txt"
+        },
+        {
+          "label": "15-image review and next actions",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/REVIEW_NOTES.txt"
+        },
+        {
+          "label": "Verified review receipt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/intake.json"
+        },
+        {
+          "label": "Hon B · verified intake and missing material",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/START_HERE.txt"
+        },
+        {
+          "label": "Received r4 and GrillUp review",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/REVIEW.txt"
+        },
+        {
+          "label": "Finishing check — exact sent message",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/finishing_pass_20261009/CHIEF_MESSAGE_001.txt"
+        }
+      ],
+      "externalExecution": false,
+      "providerProgressReported": true,
+      "verifiedReceivedHeadCount": 0,
+      "updatedAtUTC": "2026-10-09T23:24:19.529660+00:00",
+      "providerReportedMouthZip": "GROK-HD-20261009_VIS-HD_v003.zip",
+      "coordinationStatus": "Chief acknowledged: no completed head slots or separate prop-mouth shots exist yet. 50 v003 macro states previously verified; r4 received as scoped look reference.",
+      "coordinationReceiptPath": "docs/notes/explorable_world/comfy/projects/collaborators/finishing_pass_20261009/STATUS.json",
+      "reviewFeedbackIntakes": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/intake.json",
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_latest_finish/intake.json"
+      ],
+      "continuityFeedback": "Newest scene review flags overlong/protruding/blurred teeth and eyebrow/earring drift. Correct these in scoped current-era shots; preserve explicitly separate Multiverse and younger-era concepts.",
+      "phaseHistory": [
+        {
+          "status": "in_progress",
+          "title": "Receive Hon Dolo’s reusable head library",
+          "summary": "Two matched head/mouth collections: preserve existing external-off four-gold/silver work; optional external-iced-on starts from r5 with ~10% shorter fangs pending review. Track coverage per state; 50 prop shots remain separate.",
+          "nextAction": "Await refined iced-anchor selection and actual files/manifests. Keep off mouths unchanged. Pair grill-state coverage and retain hearts/spades hand options for visible-hand prop shots.",
+          "missing": [
+            "Actual files and manifest for the new set.",
+            "Names for all 50 states and selection of the 20 key states.",
+            "Per-image visual review and scoped user selections.",
+            "User selection of refined iced-on anchor; r5 is starting inspiration only.",
+            "Final hand transfer layout/variant when a prop shot requires it."
+          ],
+          "recordedAtUTC": "2026-10-09T18:26:57.464698+00:00"
+        },
+        {
+          "recordedAtUTC": "2026-10-09T23:12:51.511875+00:00",
+          "event": "finishing_pass_prior_state",
+          "status": "in_progress",
+          "summary": "Hon B intake verified 50 v003 mouth macros and candidate head proposals, but zero completed slots of the intended 130-head library. Four listed loose references remain missing; incoming B packages retained.",
+          "nextAction": "Review mouth defects and reconcile the four missing files before clearing incoming folders. Receive a manifest of actual head-state coverage."
+        }
+      ],
+      "selectedOptionalAnchor": {
+        "assetID": "HD-GRILLUP-40064d98db89",
+        "filename": "HEAD-HD-ICED-ANCHOR-LOCK-r4.jpg",
+        "sha256": "40064d98db897276b80085273919ccd79ca377a068dcc2bd23c519e4038ee93e",
+        "scope": "External iced grill with lip piercings removed FOR THIS LOOK only; not all variants, base mouth library or storyboard approval."
+      }
+    },
+    {
+      "id": "grok-lisan-head-library",
+      "provider": "Grok",
+      "project": "lisan",
+      "title": "Lisan mouth references · natural teeth, optional grill and breather",
+      "status": "in_progress",
+      "summary": "Partial package verified: fifteen natural-mouth candidates, five breather views including user-selected v3, and one unaccepted optional-grill test. No new general 130-head slots or matching optional-grill states.",
+      "nextAction": "Review the separate collections and their per-image defects. Receive existing opposite-side BR-06 correction. Reconcile the provider count and pose-side labels; detailed audit follow-up awaits send approval.",
+      "missing": [
+        "BR-06 opposite-side pose.",
+        "Remaining natural-mouth coverage and lettering/contact corrections.",
+        "Faithful optional-grill master before fifty matching states."
+      ],
+      "links": [
+        {
+          "label": "Shared character head standard",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt"
+        },
+        {
+          "label": "HaL delivery and acknowledgement",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/optional_grill_dispatch_20261009/delivery_receipt.json"
+        },
+        {
+          "label": "Exact grill and breather references",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/optional_grill_dispatch_20261009/reference_metadata.json"
+        },
+        {
+          "label": "Verified Lisan partial return",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/reference_updates/breather_partial_20261009/START_HERE.txt"
+        },
+        {
+          "label": "Exact coverage and gaps",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/reference_updates/breather_partial_20261009/coverage.json"
+        },
+        {
+          "label": "Breather with natural teeth — scoped v3",
+          "assetID": "LAG-PART-1b60815fa2bb"
+        },
+        {
+          "label": "HaL correction note — awaiting send approval",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/collaborators/finishing_pass_20261009/HAL_CORRECTIONS_FOR_APPROVAL.txt"
+        }
+      ],
+      "externalExecution": false,
+      "phaseHistory": [
+        {
+          "status": "planned",
+          "title": "Later · Lisan reusable head library",
+          "summary": "Apply the shared head/mouth/outfit method after the Hon proof. Main-character target is 130 head views; keep Lisan’s natural teeth, artwork and identity separate.",
+          "nextAction": "Use lessons from the Hon intake to choose Lisan’s state/view coverage. Prepare a separate character package when requested; optional grill stays a separate variant.",
+          "missing": [
+            "Lisan-specific state selection and a future provider request."
+          ],
+          "recordedAtUTC": "2026-10-09T18:26:57.464698+00:00"
+        },
+        {
+          "recordedAtUTC": "2026-10-09T23:12:51.511875+00:00",
+          "event": "finishing_pass_prior_state",
+          "status": "in_progress",
+          "summary": "HaL reports 11 of 50 natural-teeth mouth states and received the exact approved optional grill plus SC-48 breather images. Separate grill series and six breather proofs requested. Initial grill/breather proofs have provider-reported defects; no local Lisan package received.",
+          "nextAction": "Receive corrected paired mouth states and six breather proofs. Check exact grill design, GAIB spelling, face identity and one-sided tubing before accepting individual results."
+        }
+      ],
+      "userSelectedBreatherBase": {
+        "providerProofLabel": "v3",
+        "selectionSource": "Live USER messages in HaL observed by root and relayed to recorder",
+        "sourceAssetID": null,
+        "sha256": null,
+        "localFileReceived": false,
+        "scope": "breather_with_regular_teeth_no_grill_only",
+        "accessoryDefault": false,
+        "changesGeneralFaceDefault": false,
+        "changesOptionalGrill": false,
+        "remainingAuthorizedBreatherPoses": 5,
+        "newBatchAuthorized": false,
+        "independentLocalVisualVerification": false
+      },
+      "updatedAtUTC": "2026-10-09T23:24:19.529660+00:00",
+      "localReceiptStatus": "partial_verified",
+      "receivedCoverage": {
+        "naturalMouthCandidates": 15,
+        "breatherViews": 5,
+        "optionalGrillMasterCandidates": 1,
+        "optionalGrillMatchingStates": 0,
+        "generalHeadSlots": 0
+      }
+    },
+    {
+      "id": "hon-review-20261009-15",
+      "project": "hon",
+      "title": "15-image review · reconciled",
+      "provider": "CFA",
+      "status": "done",
+      "summary": "5 keeps, 3 needing fixes and 7 removal requests integrated. Four armor keeps are Multiverse; younger pilot has a separate flashback role.",
+      "nextAction": "Continue reviewing when ready; future exports reconcile by asset and timestamp.",
+      "sourceAssetIDs": [],
+      "missing": [],
+      "links": [
+        {
+          "label": "15-image review and next actions",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/REVIEW_NOTES.txt"
+        },
+        {
+          "label": "Verified review receipt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/intake.json"
+        },
+        {
+          "label": "Grok review digest",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/GROK_REVIEW_DIGEST.txt"
+        },
+        {
+          "label": "Grok review · delivery receipt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/003_delivery.json"
+        },
+        {
+          "label": "Grok · review acknowledgement",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/003_grok_acknowledgement.txt"
+        }
+      ],
+      "sourceReviewIntakeID": "HON-REVIEW-20261009-162912",
+      "externalExecution": false,
+      "updatedAtUTC": "2026-10-09T16:36:16.494259+00:00",
+      "coordinationReceiptPath": "docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/003_delivery.json",
+      "coordinationStatus": "Grok acknowledged and queued; reports locating all 15 source filenames. No new generation."
+    },
+    {
+      "id": "grok-hon-pilot-corrections",
+      "project": "hon",
+      "title": "Correct three pilot references",
+      "provider": "Grok",
+      "status": "needs_input",
+      "summary": "Preserve pilot/cockpit staging while correcting selected teeth, neck tattoo, brow and earrings. Ship styling variation is allowed within the concept. Minor jewelry drift alone does not force another take; retain the explicit R2-05 repair scope.",
+      "nextAction": "Bind exact scene images to the selected current head/mouth references, then prepare scoped still corrections. R2-03 feeds the later lightspeed scene.",
+      "sourceAssetIDs": [
+        "HD-DROP-14f8eb9979b5",
+        "HD-DROP-1225728294b2",
+        "HD-DROP-8ef3180997c8"
+      ],
+      "missing": [
+        "Selected compatible current head reference; corrected stills and user review."
+      ],
+      "links": [
+        {
+          "label": "15-image review and next actions",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/REVIEW_NOTES.txt"
+        },
+        {
+          "label": "Verified review receipt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/intake.json"
+        },
+        {
+          "label": "HD-COCKPIT-R2-01.jpg",
+          "assetID": "HD-DROP-14f8eb9979b5"
+        },
+        {
+          "label": "HD-COCKPIT-R2-03.jpg",
+          "assetID": "HD-DROP-1225728294b2"
+        },
+        {
+          "label": "HD-COCKPIT-R2-05.jpg",
+          "assetID": "HD-DROP-8ef3180997c8"
+        },
+        {
+          "label": "Grok review · delivery receipt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/003_delivery.json"
+        },
+        {
+          "label": "Grok · review acknowledgement",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/003_grok_acknowledgement.txt"
+        }
+      ],
+      "sourceReviewIntakeID": "HON-REVIEW-20261009-162912",
+      "externalExecution": false,
+      "updatedAtUTC": "2026-10-09T16:36:16.494259+00:00",
+      "coordinationReceiptPath": "docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/003_delivery.json",
+      "coordinationStatus": "Grok acknowledged and queued; reports locating all 15 source filenames. No new generation."
+    },
+    {
+      "id": "grok-hon-multiverse-headphones",
+      "project": "hon",
+      "title": "Multiverse armor · headphone accessory",
+      "provider": "Grok",
+      "status": "planned",
+      "summary": "Keep ARMOR-SWAP-04 as Multiverse and develop its futuristic headphone idea for that outfit.",
+      "nextAction": "Prepare the exact outfit/accessory source; retain one outfit parent and separate accessory views. Agree useful coverage before generation.",
+      "sourceAssetIDs": [
+        "HD-DROP-1c375c9d2ea9"
+      ],
+      "missing": [
+        "Accessory view coverage and matching source attachment."
+      ],
+      "links": [
+        {
+          "label": "15-image review and next actions",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/REVIEW_NOTES.txt"
+        },
+        {
+          "label": "Verified review receipt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/intake.json"
+        },
+        {
+          "label": "HD-ARMOR-SWAP-04.jpg",
+          "assetID": "HD-DROP-1c375c9d2ea9"
+        },
+        {
+          "label": "Grok review · delivery receipt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/003_delivery.json"
+        },
+        {
+          "label": "Grok · review acknowledgement",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/003_grok_acknowledgement.txt"
+        }
+      ],
+      "sourceReviewIntakeID": "HON-REVIEW-20261009-162912",
+      "externalExecution": false,
+      "updatedAtUTC": "2026-10-09T16:36:16.494259+00:00",
+      "coordinationReceiptPath": "docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/003_delivery.json",
+      "coordinationStatus": "Grok acknowledged and queued; reports locating all 15 source filenames. No new generation."
+    },
+    {
+      "id": "gemini-hon-lightspeed-pilot",
+      "project": "hon",
+      "title": "Lightspeed · lever pull and seat recoil",
+      "provider": "Gemini",
+      "status": "planned",
+      "summary": "Detailed-design scene idea from R2-03: overhead lever, forward surge, pilot driven back into his seat.",
+      "nextAction": "Correct the source mouth first, then prepare a bounded Gemini motion prompt. Exact timing and sequence placement remain open.",
+      "sourceAssetIDs": [
+        "HD-DROP-1225728294b2"
+      ],
+      "missing": [
+        "Corrected starting still; motion duration and story placement."
+      ],
+      "links": [
+        {
+          "label": "15-image review and next actions",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/REVIEW_NOTES.txt"
+        },
+        {
+          "label": "Verified review receipt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/intake.json"
+        },
+        {
+          "label": "HD-COCKPIT-R2-03.jpg",
+          "assetID": "HD-DROP-1225728294b2"
+        },
+        {
+          "label": "Grok review · delivery receipt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/003_delivery.json"
+        },
+        {
+          "label": "Grok · review acknowledgement",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/003_grok_acknowledgement.txt"
+        }
+      ],
+      "sourceReviewIntakeID": "HON-REVIEW-20261009-162912",
+      "externalExecution": false,
+      "updatedAtUTC": "2026-10-09T16:36:16.494259+00:00",
+      "coordinationReceiptPath": "docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/003_delivery.json",
+      "coordinationStatus": "Grok acknowledged and queued; reports locating all 15 source filenames. No new generation."
+    },
+    {
+      "id": "hon-younger-pilot-coverage",
+      "project": "hon",
+      "title": "Younger Dolo · flashback pilot coverage",
+      "provider": "Grok / Gemini",
+      "status": "planned",
+      "summary": "Keep the earlier-life appearance of R2-04 for possible flashbacks with pilot/control/switch actions. This is a temporal option, not the current head standard.",
+      "nextAction": "Develop a separate younger-era reference brief and finite coverage list; keep identity approval requested until reviewed.",
+      "sourceAssetIDs": [
+        "HD-DROP-104b30b1f4b7"
+      ],
+      "missing": [
+        "Scoped younger-era reference selection, coverage count and story placement."
+      ],
+      "links": [
+        {
+          "label": "15-image review and next actions",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/REVIEW_NOTES.txt"
+        },
+        {
+          "label": "Verified review receipt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/intake.json"
+        },
+        {
+          "label": "HD-COCKPIT-R2-04.jpg",
+          "assetID": "HD-DROP-104b30b1f4b7"
+        },
+        {
+          "label": "Grok review · delivery receipt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/003_delivery.json"
+        },
+        {
+          "label": "Grok · review acknowledgement",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/003_grok_acknowledgement.txt"
+        }
+      ],
+      "sourceReviewIntakeID": "HON-REVIEW-20261009-162912",
+      "externalExecution": false,
+      "updatedAtUTC": "2026-10-09T16:36:16.494259+00:00",
+      "coordinationReceiptPath": "docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/003_delivery.json",
+      "coordinationStatus": "Grok acknowledged and queued; reports locating all 15 source filenames. No new generation."
+    },
+    {
+      "id": "gemini-hon-storyboard-detail",
+      "provider": "Gemini",
+      "project": "hon",
+      "title": "Hon opening · storyboard detail drop",
+      "status": "ready",
+      "summary": "Prepared source text, 6 role-labeled reference images and a request to develop SB-01–04 / S01A and S01B into detailed scene cards. Includes existing-material reuse, start/end intent, draft Flow prompts and next owners.",
+      "nextAction": "Verify current text and visual Sources in the project notebook, then run the prepared planning prompt. Preserve the raw return and review proposed scene cards before selecting execution inputs.",
+      "missing": [
+        "Remote source upload/readback and prompt delivery are not yet performed.",
+        "Persistent visual Sources remain unverified; text planning can proceed with visual checks explicitly pending."
+      ],
+      "sourceAssetIDs": [
+        "HD-DROP-725c38458fd8",
+        "HD-DROP-fd723df3ec04",
+        "HD-DROP-36679ee9953b",
+        "HD-DROP-60f245863c6b",
+        "HD-DROP-71cad143227a",
+        "HD-MOUTH-UPDATE-20261009-01"
+      ],
+      "links": [
+        {
+          "label": "Notebook Source · current storyboard brief",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/SOURCE_UPLOAD.txt"
+        },
+        {
+          "label": "Gemini · storyboard planning request",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/TASK_PROMPT.txt"
+        },
+        {
+          "label": "Exact reference roles and asset inventory",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/media_manifest.json"
+        },
+        {
+          "label": "Source verification record",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/source_manifest.json"
+        },
+        {
+          "label": "Download Hon storyboard care package",
+          "href": "../collaborators/storyboard_detail_20261009/packages/GEMINI-HON-STORY-20261009.zip",
+          "downloadPath": "packages/GEMINI-HON-STORY-20261009.zip"
+        },
+        {
+          "label": "Storyboard workflow · start here",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/START_HERE.txt"
+        }
+      ],
+      "externalExecution": false,
+      "updatedAtUTC": "2026-10-09T16:52:06.168287+00:00",
+      "deliveryStatus": "prepared_not_sent",
+      "packetPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon"
+    },
+    {
+      "id": "gemini-lisan-storyboard-detail",
+      "provider": "Gemini",
+      "project": "lisan",
+      "title": "Lisan scenes 01–10 · storyboard detail drop",
+      "status": "in_progress",
+      "summary": "The scenes 01–10 storyboard text Source is uploaded, processed, selected and opened with revision verified. Its 13 prepared reference images remain visual-source candidates; one PNG and one exact-JPEG PDF compatibility test failed. No storyboard prompt or generation sent.",
+      "nextAction": "For the next planning turn, include the Jet story addendum alongside the earlier source and verify cited text readback. Keep the scenes 01-10 task bounded; Jet placement across the broader storyboard remains proposed. Image-dependent checks stay pending until actual source access works.",
+      "missing": [
+        "Query/cited retrieval of the new text Source is pending; task prompt not sent.",
+        "Persistent usable visual Sources remain zero after JPEG/PNG/PDF failures; root cause unknown."
+      ],
+      "sourceAssetIDs": [
+        "LAG-c84566f37ef57925",
+        "LAG-5ed417c76928c01c",
+        "LAG-cd847e5d80fe4152",
+        "LAG-b98d290a32ca07ed",
+        "LAG-82942a04b90ca995",
+        "LAG-e19fccbadb357847",
+        "LAG-ea832c79b5bfedaf",
+        "LAG-6cd88f731bfd3497",
+        "LAG-df494c098151967c",
+        "LAG-82dfca3f6472b18d",
+        "LAG-602a9fd4021dc356",
+        "LAG-63126392af1ccf8b",
+        "LAG-CAST-JET-BLACK-REF-02"
+      ],
+      "links": [
+        {
+          "label": "Notebook Source · current storyboard brief",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/02_lisan/SOURCE_UPLOAD.txt"
+        },
+        {
+          "label": "Gemini · storyboard planning request",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/02_lisan/TASK_PROMPT.txt"
+        },
+        {
+          "label": "Exact reference roles and asset inventory",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/02_lisan/media_manifest.json"
+        },
+        {
+          "label": "Source verification record",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/02_lisan/source_manifest.json"
+        },
+        {
+          "label": "Download Lisan storyboard care package",
+          "href": "../collaborators/storyboard_detail_20261009/packages/GEMINI-LISAN-STORY-20261009.zip",
+          "downloadPath": "packages/GEMINI-LISAN-STORY-20261009.zip"
+        },
+        {
+          "label": "Storyboard workflow · start here",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/START_HERE.txt"
+        },
+        {
+          "label": "Notebook compatibility results · text works, visual tests failed",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/compatibility_20261009/RESULTS.json"
+        },
+        {
+          "label": "Temporary delivery copies · originals preserved",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/compatibility_20261009/DELIVERY_COPY_POLICY.txt"
+        },
+        {
+          "label": "Latest Jet recurring-story addendum - not yet delivered",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/jet_black_mission_20261009/STORYBOARD_HANDOFF.txt"
+        }
+      ],
+      "externalExecution": false,
+      "updatedAtUTC": "2026-10-09T17:11:59.636409+00:00",
+      "deliveryStatus": "text_source_processed_visual_sources_unresolved_prompt_not_sent",
+      "packetPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/02_lisan",
+      "phaseHistory": [
+        {
+          "recordedAtUTC": "2026-10-09T17:11:59.636409+00:00",
+          "summary": "Prepared source text, 13 role-labeled reference images and a request to develop LAG-SC-01 through LAG-SC-10 into detailed scene cards. Includes existing-material reuse, start/end intent, draft Flow prompts and next owners.",
+          "nextAction": "Verify current text and visual Sources in the project notebook, then run the prepared planning prompt. Preserve the raw return and review proposed scene cards before selecting execution inputs.",
+          "deliveryStatus": "prepared_not_sent"
+        }
+      ],
+      "remoteSourceChangesMade": true,
+      "sourceGroundedVisualUseVerified": false,
+      "compatibilityReceipt": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/compatibility_20261009/RESULTS.json",
+      "storyAddendum": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/jet_black_mission_20261009/storyline.json",
+        "status": "local_prepared_not_sent",
+        "note": "New recurring Jet direction supersedes optional-only wording in the older uploaded source; it has not been delivered remotely."
+      }
+    },
+    {
+      "id": "external-video-lil-vader-study",
+      "provider": "Gemini",
+      "project": "shared",
+      "title": "Lil Vader · external video case study",
+      "status": "done",
+      "summary": "Captured the full AI Studio breakdown, 19 provisional sequences, continuity notes and three bounded craft-test ideas. External reference study; not CFA character canon. Limited source-frame checks and an ending discrepancy are recorded.",
+      "nextAction": "Use the reviewed case and reusable prompt for further studies. Choose a small craft test when ready; creator toolchain and audio/temporal claims remain unverified.",
+      "missing": [
+        "Creator-confirmed production pipeline",
+        "Full independent audiovisual review"
+      ],
+      "links": [
+        {
+          "label": "External case study · start here",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/video_studies/lil_vader_MwHocQFlw_c_20261009/START_HERE.txt"
+        },
+        {
+          "label": "19 sequences · evidence and corrections",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/video_studies/lil_vader_MwHocQFlw_c_20261009/review.json"
+        },
+        {
+          "label": "Gemini original · full captured response",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/video_studies/lil_vader_MwHocQFlw_c_20261009/foreign_returns/raw/gemini_r1.txt"
+        },
+        {
+          "label": "Exact submitted analysis prompt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/video_studies/lil_vader_MwHocQFlw_c_20261009/source_packet/submitted_prompt.txt"
+        },
+        {
+          "label": "Reusable review prompt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/video_studies/lil_vader_MwHocQFlw_c_20261009/CFA_REVIEW_PROMPT.txt"
+        },
+        {
+          "label": "Reviewed notebook source · prepared",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/video_studies/lil_vader_MwHocQFlw_c_20261009/NOTEBOOK_SOURCE.txt"
+        },
+        {
+          "label": "Original creator video",
+          "href": "https://www.youtube.com/watch?v=MwHocQFlw_c"
+        },
+        {
+          "label": "Saved AI Studio analysis",
+          "href": "https://aistudio.google.com/prompts/1Oys2niEp9fADle8kUcI5LIeWx5jxbNLl"
+        }
+      ],
+      "evidenceStatus": "captured_and_partially_spot_checked",
+      "externalStudy": true,
+      "productionRunSubmitted": false,
+      "notebookDelivery": "not_uploaded"
+    },
+    {
+      "id": "grok-hon-neck-chains-and-props",
+      "provider": "Grok",
+      "project": "hon",
+      "title": "Four staple neck chains and missing mouth-prop coverage",
+      "status": "ready",
+      "summary": "Prepared 24 discovery images: six in each of four chain lanes. SB-06 wrist jewelry is a permanent character component. Existing v003 chain-bite macro is received; cigar/cigarette/toothpick collection remains unreceived.",
+      "nextAction": "Review the exact prepared payload for submission. Automatic approval review blocked the attempted browser send; exact-payload approval is pending. Reconcile already-existing provider prop files before ordering replacements. No generation has begun.",
+      "missing": [
+        "Exact-payload approval before the blocked browser submission can proceed.",
+        "Provider file/state/package list for the existing cigar, cigarette and toothpick request.",
+        "Four chain selections after the bounded 24-candidate discovery round."
+      ],
+      "links": [
+        {
+          "label": "Neck chains and mouth props - prepared brief",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/START_HERE.txt"
+        },
+        {
+          "label": "24-design staged plan",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/PLAN.json"
+        },
+        {
+          "label": "Exact prepared Grok follow-up",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/GROK_FOLLOWUP.txt"
+        },
+        {
+          "label": "Permanent jewelry - scoped component record",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/permanent_accessories.json"
+        },
+        {
+          "label": "Exact reference roles and hashes",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/reference_map.json"
+        },
+        {
+          "label": "SB-06 - locked wrist jewelry",
+          "assetID": "HD-DROP-b18c4a123579"
+        },
+        {
+          "label": "Received #47 chain-mouth candidate",
+          "assetID": "HD-B-708df0bb5bff"
+        }
+      ],
+      "receiptState": "prepared_not_sent",
+      "delivery": {
+        "status": "blocked_pending_exact_payload_approval",
+        "sent": false,
+        "generationStarted": false,
+        "destination": "https://grok.com/bot/a4a75c63-1565-4448-84a2-f519f40bea15",
+        "preparedPayloadPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/GROK_FOLLOWUP.txt",
+        "note": "Automatic approval review rejected the attempted browser submission; no successful delivery or provider acknowledgement is claimed."
+      },
+      "limits": {
+        "discoveryImages": 24,
+        "eventualStaples": 4,
+        "laterWinnerViewsMaximum": 16,
+        "optionalLaterChainContactMaximum": 2,
+        "laterStagesRequireSelection": true,
+        "newReplacementPropBatchOrdered": false
+      }
+    },
+    {
+      "id": "hon-cast-bar-and-entrance",
+      "provider": "CFA / Grok / Gemini",
+      "project": "hon",
+      "title": "Place the bartender and bouncer in the club story",
+      "status": "ready",
+      "summary": "Former BOSS-009 is the bartender with Hon at the bar. Former BOSS-006 is the imposing, heavy-breathing bouncer at the entrance and later background duty. Three supplemental shot ideas retain unassigned timing.",
+      "nextAction": "Prepare shot-frame briefs using the assigned characters and current Dolo references: one bar encounter, one prominent entrance encounter, and later background-duty coverage. Select placement without inventing a conflict or promoting candidate portraits to accepted shot art.",
+      "missing": [
+        "Exact song placement and shot frames.",
+        "Any required visual corrections to the candidate characters."
+      ],
+      "links": [
+        {
+          "label": "Candidate 09 - bartender",
+          "assetID": "HD-RETURN-80d3ca6a6858"
+        },
+        {
+          "label": "Candidate 06 - club bouncer",
+          "assetID": "HD-RETURN-cafa39484145"
+        },
+        {
+          "label": "Character collections and user story intentions",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/visual_library/cast_collections.json"
+        },
+        {
+          "label": "Shot materials and next actions",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/visual_library/shot_materials.json"
+        }
+      ],
+      "receiptState": "user_intent_recorded_no_scene_generated"
+    },
+    {
+      "id": "gemini-lisan-jet-mission-thread",
+      "provider": "Gemini",
+      "project": "lisan",
+      "title": "Jet Black - shared blueprint and recurring mission reports",
+      "status": "ready",
+      "summary": "User-confirmed story direction is recorded. Five preliminary cards link existing Jet references to arrival, blueprint briefing, Lisan's first action, progress and a fresh dispatch. Six composition candidates were individually inspected with defects noted.",
+      "nextAction": "Use the prepared story addendum in the existing Lisan notebook/chat to develop a concise scene plan. Verify actual text/image access, reuse the available compositions, and keep quest specifics, placements and timing proposed until reviewed.",
+      "missing": [
+        "Concrete quest objective, first action and message wording.",
+        "Candidate corrections and final story placements.",
+        "Actual Gemini delivery and verified source access for this addendum."
+      ],
+      "sourceAssetIDs": [
+        "LAG-CAST-JET-BLACK-REF-02",
+        "LAG-CAST-JET-BLACK-REF-01",
+        "LAG-JET-BLACK-DROP-048b71751cb2",
+        "LAG-JET-BLACK-DROP-ccd25e07763a",
+        "LAG-JET-BLACK-DROP-23e4575aabef",
+        "LAG-JET-BLACK-DROP-f59b02d5c59b",
+        "LAG-JET-BLACK-DROP-6783755669e4",
+        "LAG-JET-BLACK-DROP-5d23f8199374"
+      ],
+      "links": [
+        {
+          "label": "Jet storyline - start here",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/jet_black_mission_20261009/START_HERE.txt"
+        },
+        {
+          "label": "Confirmed direction and five proposed scene cards",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/jet_black_mission_20261009/storyline.json"
+        },
+        {
+          "label": "Gemini - prepared story development request",
+          "assetID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/jet_black_mission_20261009/STORYBOARD_HANDOFF.txt"
+        },
+        {
+          "label": "Jet - solo identity reference",
+          "assetID": "LAG-CAST-JET-BLACK-REF-02"
+        },
+        {
+          "label": "Blueprint briefing candidate",
+          "assetID": "LAG-JET-BLACK-DROP-ccd25e07763a"
+        },
+        {
+          "label": "Progress-report staging candidate",
+          "assetID": "LAG-JET-BLACK-DROP-f59b02d5c59b"
+        }
+      ],
+      "externalExecution": false,
+      "deliveryStatus": "prepared_not_sent",
+      "preparedAtUTC": "2026-10-09T20:44:38.999961+00:00",
+      "narrativeThreadID": "LAG-JET-MISSION-20261009"
+    },
+    {
+      "id": "grok-hon-quarters-grill-change",
+      "project": "hon",
+      "provider": "Grok",
+      "title": "Dolo in his quarters - changing to the external grill",
+      "status": "in_progress",
+      "summary": "GrillUp received and verified: ten draft storyboard selects, eight alternatives and the user-selected r4 external-iced/no-lip-ring anchor. The ten selects remain unaccepted; local review found order/content, ring-count, dental, identity and mirror-continuity defects.",
+      "nextAction": "Resolve the 02/03 filename/action mismatch and two-hoop continuity, then review bounded repairs against actual r4 and the external-off dental references. Preserve all originals, panel order and per-panel accessory states; choose timing later.",
+      "missing": [
+        "Corrected 02/03 manifest or user-reviewed proposed order.",
+        "Scoped panel repairs and user acceptance.",
+        "Song placement and motion proof."
+      ],
+      "sourceAssetIDs": [
+        "HD-DROP-defe480b085f",
+        "HD-DROP-b18c4a123579",
+        "HD-HAND-LEIGH-PLACEMENT-20261009",
+        "HD-GRILLUP-40064d98db89"
+      ],
+      "links": [
+        {
+          "label": "Incoming scene and continuity notes",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/START_HERE.txt"
+        },
+        {
+          "label": "Scene intake record",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/incoming_scene.json"
+        },
+        {
+          "label": "Verified GrillUp receipt",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/intake_receipt.json"
+        },
+        {
+          "label": "Observed panel defects",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/REVIEW.txt"
+        },
+        {
+          "label": "Selected r4 — this look only",
+          "assetID": "HD-GRILLUP-40064d98db89"
+        }
+      ],
+      "externalExecution": false,
+      "deliveryStatus": "received_verified_draft_panels_not_accepted",
+      "providerStatusSource": "Local archive receipt and independent still review; selected r4 scope from user direction.",
+      "localReceiptStatus": "verified",
+      "reportedAtUTC": "2026-10-09T22:41:41.974635+00:00",
+      "phaseHistory": [
+        {
+          "recordedAtUTC": "2026-10-09T23:12:51.511875+00:00",
+          "event": "finishing_pass_prior_state",
+          "status": "in_progress",
+          "summary": "Ziggy reports Grok is making a quarters storyboard: Dolo deliberately removes lip piercings and fits his optional external grill. The drop has not arrived locally.",
+          "nextAction": "Receive the promised files; verify originals and exact duplicates, retain sequence order and per-panel accessory states, group under one scene and link selected hand/mouth references. Review continuity before commissioning repairs or animation."
+        }
+      ],
+      "receivedCounts": {
+        "selects": 10,
+        "alternatives": 8,
+        "anchors": 1,
+        "documents": 1
+      },
+      "visualReviewScope": "r4, all ten selects and one earlier alternative inspected; other seven alternatives decoded/inventoried only.",
+      "defectSummary": [
+        "02/03 filename-action mismatch",
+        "Three hoops in dish/hand at beat04 versus two expected and shown at exit",
+        "External-off teeth drift and case/held/inserted grill geometry differs from r4",
+        "Identity/tattoo/hand-jewelry drift",
+        "Direct-versus-mirror continuity mismatch"
+      ],
+      "updatedAtUTC": "2026-10-09T23:12:51.511875+00:00"
+    },
+    {
+      "id": "grok-hon-tattoo-placement-guide",
+      "provider": "Grok / Chief of Staff",
+      "project": "hon",
+      "title": "Tattoo placement guide and two scoped sheet fixes",
+      "status": "needs_input",
+      "summary": "Placement guide and two sheet derivatives received with sixteen exact source crops. Hashes and crop lineage pass; guide/sheet corrections remain before acceptance.",
+      "nextAction": "Review the visible guide and prepared correction note. Sending the detailed local audit to Chief is pending specific approval after automatic approval review blocked submission.",
+      "missing": [
+        "Corrected optional dice location label, clean stencil-only separation and readable/source-verified index.",
+        "User review and approval to send the prepared detailed correction note."
+      ],
+      "sourceAssetIDs": [
+        "HD-RETURN-3fa3290e85db",
+        "HD-RETURN-d55b97a3b322",
+        "HD-RETURN-1e8c86b1c729",
+        "HD-RETURN-9ace849985b4",
+        "HD-RETURN-6c8900223ee9",
+        "HD-RETURN-19cf3cd478dd",
+        "HD-RETURN-d91685dd99cd",
+        "HD-RETURN-f88ff5ae511e"
+      ],
+      "links": [
+        {
+          "label": "Guide brief and source roles",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/tattoo_placement_guide_20261009/START_HERE.txt"
+        },
+        {
+          "label": "Exact sources and six legend entries",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/tattoo_placement_guide_20261009/brief.json"
+        },
+        {
+          "label": "Chief — sent finishing message",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/finishing_pass_20261009/CHIEF_MESSAGE_001.txt"
+        },
+        {
+          "label": "View the tattoo placement proof",
+          "assetID": "HD-TATGUIDE-b6eb3258a6ae"
+        },
+        {
+          "label": "Independent guide review",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/tattoo_placement_guide_20261009/REVIEW.txt"
+        },
+        {
+          "label": "Exact correction note — awaiting send approval",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/finishing_pass_20261009/CHIEF_CORRECTIONS_FOR_APPROVAL.txt"
+        }
+      ],
+      "deliveryStatus": "received_verified_needs_revision",
+      "deliveryEvidence": {
+        "messageMarker": "CFA-FINISH-CHIEF-20261009-01",
+        "exactMessagePath": "docs/notes/explorable_world/comfy/projects/collaborators/finishing_pass_20261009/CHIEF_MESSAGE_001.txt",
+        "sentVerifiedBy": "Root browser observation: user bubble, empty composer and Working state.",
+        "recipientAcknowledged": true,
+        "attachmentsVerified": false
+      },
+      "generationStatus": "proof_received_not_accepted",
+      "outputLimit": {
+        "consolidatedGuide": 1,
+        "forearmInsetInsideGuide": 1,
+        "flat1Derivative": 1,
+        "flat0Derivative": 1
+      },
+      "updatedAtUTC": "2026-10-09T23:24:19.529660+00:00"
+    },
+    {
+      "id": "grok-hon-hand-ring-options-20",
+      "provider": "Grok / Chief of Staff",
+      "project": "hon",
+      "title": "Later — 20 hand and ring options",
+      "status": "planned",
+      "summary": "The saved cards_zoom review requests 20 hand/ring variations. Chief was told to queue this separately after current returns are reviewed; no new generation or completed hand batch is claimed.",
+      "nextAction": "Review current returns and reconcile existing hand/prop coverage first. Then prepare the finite 20-option brief preserving side, hand art, ring context and permanent wrist accessories.",
+      "missing": [
+        "Review of current returns and actual existing hand/prop inventory.",
+        "Prepared 20-option source/variation map."
+      ],
+      "sourceAssetIDs": [
+        "HD-RETURN-831f6171619f",
+        "HD-HAND-LEIGH-PLACEMENT-20261009",
+        "HD-DROP-b18c4a123579"
+      ],
+      "links": [
+        {
+          "label": "Latest saved review and scope",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_latest_finish/REVIEW_NOTES.txt"
+        },
+        {
+          "label": "Chief — queue instruction sent",
+          "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/finishing_pass_20261009/CHIEF_MESSAGE_001.txt"
+        }
+      ],
+      "deliveryStatus": "queued_request_mentioned_in_sent_message",
+      "generationStatus": "not_started_or_verified",
+      "requestedCount": 20,
+      "automaticallyExpandAcrossGrillAndViewStates": false,
+      "updatedAtUTC": "2026-10-09T23:12:51.511875+00:00"
     }
-  ]
+  ],
+  "updatedAtUTC": "2026-10-09T23:12:51.511875+00:00"
 }

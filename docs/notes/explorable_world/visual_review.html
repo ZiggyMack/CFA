@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Observatory · First visual pass</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#101b1d;color:#e9e6da}
+body{max-width:1280px;margin:auto;padding:32px 24px 64px}header{max-width:780px;margin-bottom:28px}
+h1{font:normal clamp(32px,5vw,58px) Georgia,serif;margin:10px 0 18px}p{color:#b8c9c6;line-height:1.6}
+.eyebrow{color:#d8bb7c;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.compare{position:relative;aspect-ratio:16/9;border:1px solid #45605d;border-radius:8px;overflow:hidden}
+.compare img{display:block;width:100%;height:100%;object-fit:cover}
+.compare .after{position:absolute;inset:0;clip-path:inset(0 0 0 50%)}
+.divider{position:absolute;inset:0 auto 0 50%;width:2px;background:#f6dfa9;pointer-events:none}
+.caption{position:absolute;bottom:12px;padding:6px 12px;background:#0b161be8;border-radius:4px;font-size:13px}
+.before-label{left:12px}.after-label{right:12px}.control{display:flex;gap:16px;align-items:center;margin:16px 0 30px}
+input{flex:1;accent-color:#e0c68d}a{color:#a7e1d6}figure{margin:28px 0}figure img{width:100%;border-radius:8px}figcaption{color:#b8c9c6;margin-top:10px}
+button{font:inherit;background:#284c49;border:1px solid #63877c;color:#f2eddf;padding:8px 14px;border-radius:5px;cursor:pointer}
+</style>
+<header><span class="eyebrow">The Observatory · September 12, 2026</span>
+<h1>A place taking shape.</h1>
+<p>The same entrance, camera, and playable chapter. Drag the divider to compare the original blockout with the first visual pass. These are direct game captures from the local Compatibility renderer. Cloud rendering has not been tested.</p></header>
+<div class="compare">
+<img src="visual_pass/courtyard_before.png" alt="Original courtyard with flat materials, simple columns, and mannequin residents">
+<img class="after" src="visual_pass/courtyard_after.png" alt="Updated courtyard with stone paving, arches, shadows, trees, and detailed residents">
+<div class="divider"></div><span class="caption before-label">Original blockout</span><span class="caption after-label">First visual pass</span>
+</div>
+<div class="control"><label for="reveal">Compare</label><input id="reveal" type="range" min="0" max="100" value="50" aria-label="Position of before and after divider"><button id="all-after">Show new world</button></div>
+<p>The work adds photo stone and timber materials, curved masonry, pump hardware, human silhouettes, foliage, water ripples and a distant observatory. It is a step toward the visual direction, with animation and more realistic assets still ahead.</p>
+<figure><img src="visual_pass/pump_after.png" alt="Communal pump with curved pipework, repair plate, pressure gauge and wheel valve"><figcaption>The pump room: shaped hardware, a gauge that follows the water state, and repaired fittings.</figcaption></figure>
+<figure><img src="visual_pass/lake_after.png" alt="View across the lake toward the observatory, with trees and timber in the foreground"><figcaption>The lakeside view: a visible destination across the water.</figcaption></figure>
+<p><a href="../../../games/observatory/VISUAL_PASS.md">Validation and source record</a> · <a href="CLOUD_PLAY.md">Cloud PC plan</a> · <a href="../../../games/observatory/README.md">Play instructions</a></p>
+<script>
+const slider=document.querySelector('#reveal');
+function update(){document.querySelector('.after').style.clipPath=`inset(0 0 0 ${slider.value}%)`;document.querySelector('.divider').style.left=`${slider.value}%`;}
+slider.addEventListener('input',update);
+document.querySelector('#all-after').addEventListener('click',()=>{slider.value=0;update();});
+</script>
+</html>

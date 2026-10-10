@@ -1,0 +1,971 @@
+{
+  "schema_version": 1,
+  "intakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+  "recordedAtUTC": "2026-10-09T22:50:26.128084+00:00",
+  "status": "prepared_for_root_reconciliation_not_applied_not_sent",
+  "source": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+  "sourceExported": "2026-10-09T18:47:47.148Z",
+  "sourceSHA256": "f98195202b2f70448a9f27f88dbb7c1add8176accba6505aa6eef76a6ec1e9a4",
+  "sourceSnapshot": "source_review.json",
+  "priorAppliedSnapshot": "prior_applied_decisions.json",
+  "priorAppliedSHA256": "90d5c195589ec88964ceb85e3765ba9a47aa69519595c02742195fb5062997e6",
+  "comparisonReceipt": "../review_20261009_162912/intake.json",
+  "sourceSelection": {
+    "mode": "bounded_auto_discovery",
+    "policy": "Newest timezone-aware exported timestamp; otherwise file mtime. Newest invalid candidate blocks; older invalid candidates are reported, not applied.",
+    "search_locations": [
+      "D:\\Documents\\CFA\\docs\\notes\\cfa-review.json",
+      "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review*.json"
+    ],
+    "candidates": [
+      {
+        "path": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "modified_at_utc": "2026-10-09T18:47:47.547262+00:00",
+        "timestamp_basis": "exported",
+        "selection_timestamp_utc": "2026-10-09T18:47:47.148000+00:00",
+        "exported": "2026-10-09T18:47:47.148Z",
+        "selected": true,
+        "disposition": "selected"
+      },
+      {
+        "path": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "modified_at_utc": "2026-10-09T18:43:59.721727+00:00",
+        "timestamp_basis": "exported",
+        "selection_timestamp_utc": "2026-10-09T18:43:58.555000+00:00",
+        "exported": "2026-10-09T18:43:58.555Z",
+        "selected": false,
+        "disposition": "older_valid_not_selected"
+      },
+      {
+        "path": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "modified_at_utc": "2026-10-09T18:42:13.202813+00:00",
+        "timestamp_basis": "exported",
+        "selection_timestamp_utc": "2026-10-09T18:42:12.774000+00:00",
+        "exported": "2026-10-09T18:42:12.774Z",
+        "selected": false,
+        "disposition": "older_valid_not_selected"
+      },
+      {
+        "path": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "modified_at_utc": "2026-10-09T18:36:06.043009+00:00",
+        "timestamp_basis": "exported",
+        "selection_timestamp_utc": "2026-10-09T18:36:05.464000+00:00",
+        "exported": "2026-10-09T18:36:05.464Z",
+        "selected": false,
+        "disposition": "older_valid_not_selected"
+      },
+      {
+        "path": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "modified_at_utc": "2026-10-09T16:29:12.546838+00:00",
+        "timestamp_basis": "exported",
+        "selection_timestamp_utc": "2026-10-09T16:29:12.361000+00:00",
+        "exported": "2026-10-09T16:29:12.361Z",
+        "selected": false,
+        "disposition": "older_valid_not_selected"
+      },
+      {
+        "path": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review.json",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "modified_at_utc": "2026-10-09T16:27:38.205731+00:00",
+        "timestamp_basis": "exported",
+        "selection_timestamp_utc": "2026-10-09T16:27:37.913000+00:00",
+        "exported": "2026-10-09T16:27:37.913Z",
+        "selected": false,
+        "disposition": "older_valid_not_selected"
+      },
+      {
+        "path": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review-sweep (1).json",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "modified_at_utc": "2026-10-09T05:39:19.586087+00:00",
+        "timestamp_basis": "exported",
+        "selection_timestamp_utc": "2026-10-09T05:39:19.207000+00:00",
+        "exported": "2026-10-09T05:39:19.207Z",
+        "selected": false,
+        "disposition": "older_valid_not_selected"
+      },
+      {
+        "path": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review-sweep.json",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "modified_at_utc": "2026-10-09T05:39:19.882524+00:00",
+        "timestamp_basis": "exported",
+        "selection_timestamp_utc": "2026-10-09T05:39:18.435000+00:00",
+        "exported": "2026-10-09T05:39:18.435Z",
+        "selected": false,
+        "disposition": "older_valid_not_selected"
+      },
+      {
+        "path": "D:\\Documents\\CFA\\docs\\notes\\cfa-review.json",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "modified_at_utc": "2026-10-09T03:57:02.373303+00:00",
+        "timestamp_basis": "exported",
+        "selection_timestamp_utc": "2026-10-09T03:57:01.403000+00:00",
+        "exported": "2026-10-09T03:57:01.403Z",
+        "selected": false,
+        "disposition": "older_valid_not_selected"
+      }
+    ],
+    "selected_source": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+    "reason": "Latest candidate by the reported timestamp policy."
+  },
+  "sourceFiles": [
+    {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+      "exported": "2026-10-09T18:47:47.148Z",
+      "sha256": "f98195202b2f70448a9f27f88dbb7c1add8176accba6505aa6eef76a6ec1e9a4",
+      "selectedSnapshot": true
+    },
+    {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+      "exported": "2026-10-09T18:43:58.555Z",
+      "sha256": "ec86e91e8d427b14e1ecbea451cf9dd2b855ef8da8431f44bb8deb740b1ffed4",
+      "selectedSnapshot": false
+    },
+    {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+      "exported": "2026-10-09T18:42:12.774Z",
+      "sha256": "e7346799a924f5f17c4b2c6cd1a90d40ee828e10046f89eb35bbd21d59c5bd89",
+      "selectedSnapshot": false
+    },
+    {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+      "exported": "2026-10-09T18:36:05.464Z",
+      "sha256": "9377672c70369aa40ec0bf1025dde92564d76e68f99faa76695515f28578edc6",
+      "selectedSnapshot": false
+    },
+    {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json",
+      "exported": "2026-10-09T16:29:12.361Z",
+      "sha256": "c3ea063827d8bd222117c0fa92593e67bbb34fb822347a6d911ef389e5de2d18",
+      "selectedSnapshot": false
+    },
+    {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review.json",
+      "exported": "2026-10-09T16:27:37.913Z",
+      "sha256": "3d6d6cf4e1cb6d35807cab111d3363123db1d3ef1405921abed72db691fc0806",
+      "selectedSnapshot": false
+    },
+    {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review-sweep (1).json",
+      "exported": "2026-10-09T05:39:19.207Z",
+      "sha256": "3ea1f57cc8abba6ca0aa320cfca37fe7408c063349d43e5bf14db859674a25f7",
+      "selectedSnapshot": false
+    },
+    {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review-sweep.json",
+      "exported": "2026-10-09T05:39:18.435Z",
+      "sha256": "9dfad7e58ac8049142534b8308a2a10a1cd288a8617a3b93ee4f1cb3f46d8b2a",
+      "selectedSnapshot": false
+    },
+    {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\cfa-review.json",
+      "exported": "2026-10-09T03:57:01.403Z",
+      "sha256": "5e9f5ca31dfcb12825eb99c23c3cfd3d84e46614ebede901ee9ab301def6e7bf",
+      "selectedSnapshot": false
+    }
+  ],
+  "verifiedRecordCount": 101,
+  "validationErrors": [],
+  "newUserReviewCount": 36,
+  "counts": {
+    "keep": 20,
+    "remove": 11,
+    "needs_fixes": 4,
+    "unspecified": 1
+  },
+  "newReviewIDs": [
+    "LAG-cb183973ed1fc70e",
+    "HD-GRILL-PLAN-20261009",
+    "HD-DROP-100e2ffb72a4",
+    "HD-RETURN-66a09f60ff80",
+    "HD-RETURN-19cf3cd478dd",
+    "HD-RETURN-6c8900223ee9",
+    "HD-RETURN-9ace849985b4",
+    "HD-RETURN-7b156019ddf8",
+    "HD-RETURN-831f6171619f",
+    "HD-RETURN-d91685dd99cd",
+    "HD-RETURN-b8c9247bfe47",
+    "HD-RETURN-3fa3290e85db",
+    "HD-RETURN-78ad6c79615a",
+    "HD-RETURN-f88ff5ae511e",
+    "HD-RETURN-891a3ee224eb",
+    "HD-RETURN-7fe77eadd174",
+    "HD-RETURN-aa147b8c0c26",
+    "HD-RETURN-10ac9771fdeb",
+    "HD-RETURN-d430b5f72e9b",
+    "HD-RETURN-9f62f9733312",
+    "HD-RETURN-a7bd855cda1e",
+    "HD-RETURN-106ae508f3c2",
+    "HD-RETURN-d55b97a3b322",
+    "HD-RETURN-ea8ca93c3eb8",
+    "HD-RETURN-5524a8c7f619",
+    "HD-RETURN-1e8c86b1c729",
+    "HD-RETURN-b3a2278408a4",
+    "HD-RETURN-4c42885da490",
+    "HD-RETURN-c29f7e8c4947",
+    "HD-RETURN-459feab9d440",
+    "HD-RETURN-ced1fbc35268",
+    "HD-RETURN-537207fbe4c8",
+    "HD-RETURN-1eaa31b63c1e",
+    "HD-RETURN-d9dd6e5aec15",
+    "HD-RETURN-eff745b8de10",
+    "HD-RETURN-361e39a1e518"
+  ],
+  "ignoredCatalogOriginIDs": [
+    "HD-DROP-2691712601a9",
+    "HD-DROP-56a50dabe9e0",
+    "HD-DROP-54078722a35d",
+    "HD-DROP-790b795bb74a",
+    "HD-DROP-1966838931ad",
+    "HD-DROP-9cecaad5ed57",
+    "HD-DROP-bb0780a46f7d",
+    "GEM-97D0B65E",
+    "GEM-5A115C59",
+    "GEM-3CA92958",
+    "GEM-D6940AFC"
+  ],
+  "newestPerItemPolicy": "Choose timezone-aware item updatedAt across saved user exports. Equal timestamps with unequal review payloads flag a conflict. Preserve later direct user instructions and newer canonical entries; missing canonical item time requires source reconciliation. Export timestamp alone cannot supersede an item.",
+  "newestPerItemChecks": [
+    {
+      "id": "HD-DROP-19593c0144ed",
+      "selectedUpdatedAt": "2026-10-08T06:21:36.957Z",
+      "newestObservedUpdatedAt": "2026-10-08T06:21:36.957000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review.json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review-sweep (1).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review-sweep.json",
+        "D:\\Documents\\CFA\\docs\\notes\\cfa-review.json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-d2d1369e30ec",
+      "selectedUpdatedAt": "2026-10-08T06:30:39.348Z",
+      "newestObservedUpdatedAt": "2026-10-08T06:30:39.348000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review.json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review-sweep (1).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review-sweep.json",
+        "D:\\Documents\\CFA\\docs\\notes\\cfa-review.json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-36679ee9953b",
+      "selectedUpdatedAt": "2026-10-09T03:54:03.534Z",
+      "newestObservedUpdatedAt": "2026-10-09T03:54:03.534000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review.json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review-sweep (1).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review-sweep.json",
+        "D:\\Documents\\CFA\\docs\\notes\\cfa-review.json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-aea8323ad9b2",
+      "selectedUpdatedAt": "2026-10-09T16:13:44.867Z",
+      "newestObservedUpdatedAt": "2026-10-09T16:13:44.867000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review.json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-071660490855",
+      "selectedUpdatedAt": "2026-10-09T16:20:01.559Z",
+      "newestObservedUpdatedAt": "2026-10-09T16:20:01.559000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review.json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-4e493c00b66c",
+      "selectedUpdatedAt": "2026-10-09T16:19:53.905Z",
+      "newestObservedUpdatedAt": "2026-10-09T16:19:53.905000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review.json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-1c375c9d2ea9",
+      "selectedUpdatedAt": "2026-10-09T16:19:46.826Z",
+      "newestObservedUpdatedAt": "2026-10-09T16:19:46.826000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review.json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-abdcdd8f1ce1",
+      "selectedUpdatedAt": "2026-10-09T16:17:16.969Z",
+      "newestObservedUpdatedAt": "2026-10-09T16:17:16.969000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review.json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-64134f8b5231",
+      "selectedUpdatedAt": "2026-10-09T16:20:26.499Z",
+      "newestObservedUpdatedAt": "2026-10-09T16:20:26.499000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review.json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-14f8eb9979b5",
+      "selectedUpdatedAt": "2026-10-09T16:22:34.703Z",
+      "newestObservedUpdatedAt": "2026-10-09T16:22:34.703000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review.json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-205eb8df50f5",
+      "selectedUpdatedAt": "2026-10-09T16:23:08.402Z",
+      "newestObservedUpdatedAt": "2026-10-09T16:23:08.402000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review.json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-1225728294b2",
+      "selectedUpdatedAt": "2026-10-09T16:25:21.802Z",
+      "newestObservedUpdatedAt": "2026-10-09T16:25:21.802000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review.json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-104b30b1f4b7",
+      "selectedUpdatedAt": "2026-10-09T16:27:27.081Z",
+      "newestObservedUpdatedAt": "2026-10-09T16:27:27.081000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review.json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-8ef3180997c8",
+      "selectedUpdatedAt": "2026-10-09T16:28:41.642Z",
+      "newestObservedUpdatedAt": "2026-10-09T16:28:41.642000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-b0f479ab08bc",
+      "selectedUpdatedAt": "2026-10-09T16:28:47.387Z",
+      "newestObservedUpdatedAt": "2026-10-09T16:28:47.387000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-65375c760692",
+      "selectedUpdatedAt": "2026-10-09T16:28:52.977Z",
+      "newestObservedUpdatedAt": "2026-10-09T16:28:52.977000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-168698506c70",
+      "selectedUpdatedAt": "2026-10-09T16:29:01.723Z",
+      "newestObservedUpdatedAt": "2026-10-09T16:29:01.723000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-32ffc5ee7a2b",
+      "selectedUpdatedAt": "2026-10-09T16:29:05.514Z",
+      "newestObservedUpdatedAt": "2026-10-09T16:29:05.514000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (1).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "LAG-cb183973ed1fc70e",
+      "selectedUpdatedAt": "2026-10-09T18:05:44.728Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:05:44.728000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-GRILL-PLAN-20261009",
+      "selectedUpdatedAt": "2026-10-09T18:16:50.724Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:16:50.724000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-DROP-100e2ffb72a4",
+      "selectedUpdatedAt": "2026-10-09T18:18:23.277Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:18:23.277000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-66a09f60ff80",
+      "selectedUpdatedAt": "2026-10-09T18:19:57.066Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:19:57.066000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-19cf3cd478dd",
+      "selectedUpdatedAt": "2026-10-09T18:22:11.513Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:22:11.513000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-6c8900223ee9",
+      "selectedUpdatedAt": "2026-10-09T18:23:34.085Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:23:34.085000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-9ace849985b4",
+      "selectedUpdatedAt": "2026-10-09T18:35:08.059Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:35:08.059000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-7b156019ddf8",
+      "selectedUpdatedAt": "2026-10-09T18:24:18.550Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:24:18.550000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-831f6171619f",
+      "selectedUpdatedAt": "2026-10-09T18:25:15.424Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:25:15.424000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-d91685dd99cd",
+      "selectedUpdatedAt": "2026-10-09T18:26:06.103Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:26:06.103000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-b8c9247bfe47",
+      "selectedUpdatedAt": "2026-10-09T18:27:13.407Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:27:13.407000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-3fa3290e85db",
+      "selectedUpdatedAt": "2026-10-09T18:28:03.304Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:28:03.304000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-78ad6c79615a",
+      "selectedUpdatedAt": "2026-10-09T18:28:13.249Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:28:13.249000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-f88ff5ae511e",
+      "selectedUpdatedAt": "2026-10-09T18:29:47.270Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:29:47.270000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-891a3ee224eb",
+      "selectedUpdatedAt": "2026-10-09T18:31:18.157Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:31:18.157000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-7fe77eadd174",
+      "selectedUpdatedAt": "2026-10-09T18:31:46.383Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:31:46.383000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-aa147b8c0c26",
+      "selectedUpdatedAt": "2026-10-09T18:37:28.499Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:37:28.499000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-10ac9771fdeb",
+      "selectedUpdatedAt": "2026-10-09T18:33:04.196Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:33:04.196000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (2).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-d430b5f72e9b",
+      "selectedUpdatedAt": "2026-10-09T18:37:19.302Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:37:19.302000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-9f62f9733312",
+      "selectedUpdatedAt": "2026-10-09T18:36:31.346Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:36:31.346000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-a7bd855cda1e",
+      "selectedUpdatedAt": "2026-10-09T18:36:36.093Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:36:36.093000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-106ae508f3c2",
+      "selectedUpdatedAt": "2026-10-09T18:37:10.088Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:37:10.088000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-d55b97a3b322",
+      "selectedUpdatedAt": "2026-10-09T18:38:52.274Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:38:52.274000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-ea8ca93c3eb8",
+      "selectedUpdatedAt": "2026-10-09T18:39:07.994Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:39:07.994000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-5524a8c7f619",
+      "selectedUpdatedAt": "2026-10-09T18:39:14.353Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:39:14.353000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-1e8c86b1c729",
+      "selectedUpdatedAt": "2026-10-09T18:39:55.817Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:39:55.817000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (4).json",
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (3).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-b3a2278408a4",
+      "selectedUpdatedAt": "2026-10-09T18:46:22.960Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:46:22.960000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-4c42885da490",
+      "selectedUpdatedAt": "2026-10-09T18:44:50.266Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:44:50.266000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-c29f7e8c4947",
+      "selectedUpdatedAt": "2026-10-09T18:46:33.987Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:46:33.987000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-459feab9d440",
+      "selectedUpdatedAt": "2026-10-09T18:45:13.247Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:45:13.247000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-ced1fbc35268",
+      "selectedUpdatedAt": "2026-10-09T18:46:43.041Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:46:43.041000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-537207fbe4c8",
+      "selectedUpdatedAt": "2026-10-09T18:46:01.291Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:46:01.291000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-1eaa31b63c1e",
+      "selectedUpdatedAt": "2026-10-09T18:46:52.571Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:46:52.571000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-d9dd6e5aec15",
+      "selectedUpdatedAt": "2026-10-09T18:47:14.152Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:47:14.152000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-eff745b8de10",
+      "selectedUpdatedAt": "2026-10-09T18:47:33.151Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:47:33.151000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json"
+      ],
+      "conflictFlags": []
+    },
+    {
+      "id": "HD-RETURN-361e39a1e518",
+      "selectedUpdatedAt": "2026-10-09T18:47:41.673Z",
+      "newestObservedUpdatedAt": "2026-10-09T18:47:41.673000+00:00",
+      "matchesNewest": true,
+      "winningSourcePaths": [
+        "D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (5).json"
+      ],
+      "conflictFlags": []
+    }
+  ],
+  "conflictedItemIDs": [],
+  "scope": "Includes 35 Hon records and one Lisan optional-grill record. No working-reference approvals, asset deletions, generation starts, or provider sends.",
+  "newPackageAudit": {
+    "checkedRoots": [
+      "D:\\Documents\\CFA\\docs\\notes\\downloads",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok"
+    ],
+    "newQuartersStoryboardFound": false,
+    "newDedicatedLisanHeadMouthGrillBreatherPackageFound": false,
+    "fromGrokRoot": "Only the four already-ingested GROK-HD-DROP-20261009B parts and Processed. Four B manifest files remain missing; incoming folders retained pending reconciliation.",
+    "previousVerifiedCoverage": "50 Hon external-off v003 mouth macros; zero 130-head slots; seven anchor candidates; external-iced matching mouth/head and separate prop-mouth batch not received. Lisan dispatch acknowledged but completed dedicated local set not received."
+  },
+  "sourceMediaDeleted": false,
+  "workingReferenceApprovalsGranted": false,
+  "newGenerationStarted": false,
+  "providerMessagesSent": false
+}

@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "planID": "CFA-HON-PROPS-NECKCHAINS-20261009-R1",
+  "project": "hon",
+  "characterID": "HON-DOLO",
+  "status": "prepared_not_sent",
+  "discovery": {
+    "plannedNewImages": 24,
+    "generationStarted": false,
+    "lanes": [
+      {
+        "laneID": "A",
+        "title": "Extremely flashy",
+        "candidateCount": 6,
+        "designIDs": [
+          "HD-CHAIN-A01",
+          "HD-CHAIN-A02",
+          "HD-CHAIN-A03",
+          "HD-CHAIN-A04",
+          "HD-CHAIN-A05",
+          "HD-CHAIN-A06"
+        ]
+      },
+      {
+        "laneID": "B",
+        "title": "Medium gold",
+        "candidateCount": 6,
+        "designIDs": [
+          "HD-CHAIN-B01",
+          "HD-CHAIN-B02",
+          "HD-CHAIN-B03",
+          "HD-CHAIN-B04",
+          "HD-CHAIN-B05",
+          "HD-CHAIN-B06"
+        ]
+      },
+      {
+        "laneID": "C",
+        "title": "Medium white metal",
+        "candidateCount": 6,
+        "designIDs": [
+          "HD-CHAIN-C01",
+          "HD-CHAIN-C02",
+          "HD-CHAIN-C03",
+          "HD-CHAIN-C04",
+          "HD-CHAIN-C05",
+          "HD-CHAIN-C06"
+        ]
+      },
+      {
+        "laneID": "D",
+        "title": "Everyday chain link",
+        "candidateCount": 6,
+        "designIDs": [
+          "HD-CHAIN-D01",
+          "HD-CHAIN-D02",
+          "HD-CHAIN-D03",
+          "HD-CHAIN-D04",
+          "HD-CHAIN-D05",
+          "HD-CHAIN-D06"
+        ]
+      }
+    ],
+    "eventualStaples": 4,
+    "stopForUserSelection": true,
+    "oneDesignPerImage": true
+  },
+  "selectedWinnerStage": {
+    "status": "deferred_until_selection",
+    "maximumNewImages": 16,
+    "views": [
+      "front_on_body",
+      "three_quarter",
+      "profile_drape",
+      "links_pendant_clasp_detail"
+    ],
+    "reuseExistingUsefulFront": true,
+    "automaticGeneration": false
+  },
+  "chainBiteStage": {
+    "status": "optional_after_design_selection_if_needed",
+    "maximumNewImages": 2,
+    "automaticGeneration": false
+  },
+  "maximumStagedProposal": 42,
+  "userRetractedImageCount": 200,
+  "props": {
+    "earlierRequestedCount": 50,
+    "status": "not_received_as_separate_collection",
+    "newReplacementBatchOrdered": false,
+    "types": [
+      "cigar",
+      "custom rolled cigarette",
+      "toothpick"
+    ],
+    "nextStep": "Ask provider for existing file/state/package list before replacement generation",
+    "existingChainBiteAssetID": "HD-B-708df0bb5bff"
+  },
+  "coverageAtAudit": {
+    "verifiedExternalOffMouthMacros": 50,
+    "verifiedHeadSlots": 0,
+    "baselineHeadSlots": 130,
+    "headDraftsNotCoverage": 7,
+    "matchedExternalIcedOnReceived": false
+  },
+  "referenceMap": "reference_map.json",
+  "lockedAccessoryRecord": "permanent_accessories.json",
+  "preservation": [
+    "reference roles and current dental revision",
+    "neck/chest tattoo geometry where verified",
+    "link count/topology/material and drape in selected design",
+    "hand side/tattoo/rings if visible",
+    "occluded details distinguished from failures"
+  ],
+  "baseline": "Same crop, neutral lighting/background and identity/detail source roles",
+  "deliberateChange": "Necklace design only",
+  "evidenceStatus": "prepared; existing reference files verified; no generation or new image acceptance",
+  "cloudGraphSelected": null,
+  "paidRunSubmitted": false,
+  "providerMessageSent": false,
+  "lessonPaths": [
+    "D:/Documents/Pan_Handlers/Help/content/cfa_learning.py#Name each reference and inspect its crop",
+    "D:/Documents/Pan_Handlers/Help/guides/prompt_wiring.py"
+  ],
+  "methodPath": "docs/notes/explorable_world/comfy/templates/workflow_intake.md#decision-and-feedback"
+}

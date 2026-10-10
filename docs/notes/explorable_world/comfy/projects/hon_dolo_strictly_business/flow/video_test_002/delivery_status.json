@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "experiment_id": "FLOW-HD-VIDEO-002",
+  "updated": "2026-10-08",
+  "recorded_at_utc": "2026-10-08T18:28:10Z",
+  "destination": {
+    "provider": "Google Flow",
+    "project_id": "e8a547ef-f801-4021-a5ee-fad3080b439c",
+    "surface": "project Agent",
+    "agent_task": "Edit a video with Omni"
+  },
+  "status": "blocked_before_upload_pending_exact_payload_approval",
+  "uploaded": false,
+  "generation_submitted": false,
+  "generated_results": false,
+  "accepted": false,
+  "source": {
+    "asset_id": "FLOW-HD-VIDEO-002-A",
+    "filename": "FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667.mp4",
+    "repo_path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667.mp4",
+    "sha256": "f8f2aa30265392634b67dbddebdc6ac0f05007de1abb2730f27d27513e72d378",
+    "bytes": 1837099,
+    "duration_seconds": 6,
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_streams": 0,
+    "sole_media_input": true
+  },
+  "requested_test": {
+    "output_count": 1,
+    "change": "subtly warmer existing illumination only",
+    "preserve": "existing source character/details, action, scene, car/door contact, camera movement and timing",
+    "exclude": "no extra image anchor, new cuts, retiming, tattoo correction or audio",
+    "candidate_model": "Gemini Omni Flash 1.1",
+    "candidate_mode": "Video to Video editing"
+  },
+  "live_observations": {
+    "observed_by": "root agent using actual Flow browser",
+    "provider_reply": "Which video ... Omni 1.1 Flash?",
+    "provider_reply_type": "reported excerpt; request for video, not an execution confirmation",
+    "confirm_before_generating": "Always",
+    "video_defaults": {
+      "aspect_ratio": "16:9",
+      "output_count": 1
+    },
+    "mode_fully_validated": false,
+    "generation_plan_verified": false,
+    "actual_model_selection_verified": false,
+    "displayed_credit_cost": null,
+    "settings_changed": false,
+    "observed_at_utc": "2026-10-08T18:28:34Z",
+    "asset_picker": "empty; browser snapshot showed no uploaded media"
+  },
+  "authorization": {
+    "general_generation_request": "User authorized Flow generation",
+    "exact_payload_status": "pending user reply to exact-file upload and one-test question",
+    "automatic_review": "Rejected attempted upload because nonpublic creative payload requires exact-file authorization",
+    "approval_question_sent": true
+  },
+  "next_action": "Await the exact-payload approval reply. After approval, upload only this six-second file and inspect the actual model/edit plan and displayed cost before the one-output test. An Agent acknowledgement does not establish validated editing settings.",
+  "preservation": {
+    "source_files_modified": false,
+    "package_zip_modified": false,
+    "manifest_modified": false,
+    "local_catalog_rebuilt": true
+  },
+  "result": {
+    "uploaded_asset_id": null,
+    "generation_id": null,
+    "output_filename": null,
+    "output_sha256": null,
+    "review_state": "not_generated"
+  }
+}

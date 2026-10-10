@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "benchmarkID": "HON-OPENING-PROVIDER-20261009",
+  "phase": "still",
+  "scoring": {
+    "scale": {"0": "Absent, wrong or unusable when required and visible", "1": "Major mismatch", "2": "Mixed match with substantial repairs needed", "3": "Recognizable match with visible repairs needed", "4": "Close match with small defects", "5": "Clean observed match to the scoped reference"},
+    "formula": "sum((criterionScore / 5) * weight)",
+    "maximum": 100,
+    "unknownRule": "Not visible, not retrieved or not inspected is null, never zero or an assumed pass. Record observedWeight. Keep total and grade null until every required criterion is inspected; do not normalize a partial score to 100.",
+    "grades": {"A": "90-100", "B": "80-89.99", "C": "70-79.99", "D": "60-69.99", "F": "below 60"},
+    "criticalRule": "Any critical defect blocks acceptance and continuation regardless of weighted total. Show FAIL - critical defect alongside any completed numeric score; never present an A/B grade alone for a critical failure.",
+    "evidenceRule": "Every score needs a concrete observation against the scoped original and an output ID/path. No scores from model self-description. Record reviewer and time."
+  },
+  "criteria": [
+    {"id": "identity", "weight": 30, "check": "A: face proportions, eyes, messy loose dark curls, stubble and recognizable same person. No substitute actor.", "criticalExamples": ["Different person or material facial/hair identity drift"]},
+    {"id": "mouth", "weight": 20, "check": "B only: four gold upper lateral incisor/short canine caps, white central incisors, lower silver chrome grill and two plain silver lower-lip hoops. Neutral small parted mouth. If the dental map cannot be seen at output resolution, leave unknown.", "criticalExamples": ["Visible wrong tooth map/material or missing/changed lip hoops"]},
+    {"id": "tattoo", "weight": 15, "check": "A: no forehead marks; cursive eye on viewer-left, serif know on viewer-right; existing neck blaster on viewer-right and chest ship as exposed. No invented neck/cheek/hand/forearm ink. Hidden details are not verified.", "criticalExamples": ["Forehead dice/marks", "Swapped or restyled cheek words", "Invented visible ink or wrong visible neck/chest motif"]},
+    {"id": "jewelry", "weight": 10, "check": "F: substantial flattened gold curb bracelet and dark band, on character-right/viewer-left per provisional scene blocking. Preserve other exposed identity jewelry from A without importing B's apparent septum detail. Wrist side is a scene choice, not canon.", "criticalExamples": ["Missing wrist component or wrong wrist for this scene", "Major replacement of the required bracelet/band"]},
+    {"id": "prop", "weight": 15, "check": "Exactly four separate translucent luminous rectangular glass-like circuit credit bars from D; naturally poised hands; small unlettered low-fuel gauge already at far screen-right; no other people.", "criticalExamples": ["Opaque/tapered bullion replaces credits", "Wrong credit count", "Extra/malformed hands or another person", "Missing or wrong-side fuel gauge"]},
+    {"id": "composition", "weight": 10, "check": "Level fixed medium-wide 16:9 view of the same man seated at worn cantina counter; brown jacket/open white shirt; both hands and all four credits visible; warm amber bokeh; no big grin.", "criticalExamples": ["Different location/outfit or unusable framing", "Required hands/credits cropped out"]}
+  ],
+  "candidates": [
+    {
+      "attemptID": "G1", "provider": "Gemini", "status": "historical_failed_initial_brief_not_matched_comparison", "comparable": false,
+      "scores": {"identity": null, "mouth": null, "tattoo": null, "jewelry": null, "prop": null, "composition": null},
+      "observedWeight": 0, "total": null, "grade": null, "acceptanceGate": "fail_critical_operator_report", "accepted": false,
+      "criticalDefectsReported": ["Face/hairstyle changed", "know became cursive and neck ink was added", "Bracelet side flipped", "Credits became solid gold bullion"],
+      "evidenceBasis": "Parent operator report and exact repair prompt. Independent output inspection and numerical scoring have not been performed in this packet.",
+      "outputPath": null, "outputSHA256": null, "reviewer": null, "reviewedUTC": null
+    },
+    {
+      "attemptID": "G2", "provider": "Gemini", "status": "response_complete_download_inspection_pending", "comparable": null,
+      "scores": {"identity": null, "mouth": null, "tattoo": null, "jewelry": null, "prop": null, "composition": null},
+      "observedWeight": 0, "total": null, "grade": null, "acceptanceGate": "unreviewed", "accepted": false,
+      "criticalDefectsReported": [], "observations": [], "outputPath": null, "outputSHA256": null, "reviewer": null, "reviewedUTC": null
+    },
+    {
+      "attemptID": "F1", "provider": "Flow", "status": "initial_still_planned_not_submitted", "comparable": null,
+      "scores": {"identity": null, "mouth": null, "tattoo": null, "jewelry": null, "prop": null, "composition": null},
+      "observedWeight": 0, "total": null, "grade": null, "acceptanceGate": "not_generated", "accepted": false,
+      "criticalDefectsReported": [], "observations": [], "outputPath": null, "outputSHA256": null, "reviewer": null, "reviewedUTC": null
+    },
+    {
+      "attemptID": "K1", "provider": "Grok", "status": "matching_existing_output_unknown", "comparable": false,
+      "scores": {"identity": null, "mouth": null, "tattoo": null, "jewelry": null, "prop": null, "composition": null},
+      "observedWeight": 0, "total": null, "grade": null, "acceptanceGate": "unmatched_brief", "accepted": false,
+      "criticalDefectsReported": [], "observations": [], "outputPath": null, "outputSHA256": null, "reviewer": null, "reviewedUTC": null
+    }
+  ],
+  "ranking": null,
+  "rankingReason": "No complete independently inspected comparable candidate scores yet. Temporal/video performance remains a separate later assessment."
+}

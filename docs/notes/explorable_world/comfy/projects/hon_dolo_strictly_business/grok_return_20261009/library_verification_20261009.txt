@@ -1,0 +1,23 @@
+GROK RETURN — LOCAL LIBRARY VERIFICATION — 2026-10-09
+
+PASS: 1,255 catalog assets and 143 albums. All checked local links resolve.
+Originals: 1,248 distinct source paths; 1,091 SHA-256 comparisons passed; 1,060 source images decoded.
+Thumbnails: 1,090 decoded. Extended Windows I/O handled 65 long paths.
+
+OUTFITS
+Real library.js functions ran in a Node VM with a minimal fake DOM against the actual catalog.
+Exactly 22 Hon Dolo outfit parents appear. All 17 new gun variants appear once under the correct existing outfit, in Gun variants. Other views and revisions remain in the same outfit. No cross-outfit leakage.
+
+ARTWORK AND REVIEW
+All 86 new media IDs and every detail-profile reference resolve. Five profiles / 48 objects; zero approvedArtworkAssetIDs.
+BOSS-006 is explicitly chest, not planned neck. BOSS-009 matches B, not requested A. Eye/know/current chest are still missing standalone artwork.
+All six received provider Python files remain inert text documents; none were executed.
+Delivered cfa-review.json remained byte-identical during QA; counts: 14 entries / 36 favorites. Browser favorites were not accessed or changed.
+
+FOLLOW-UP (NONBLOCKING)
+register_catalog.py still requires .cache audit inputs to rerun. Prefer the preserved intake hd_audit.json / boss_audit.json copies for clean-checkout reproducibility. Current outputs pass.
+
+LIMITS
+No browser visual/layout check was performed. The earlier file-URL policy block was respected; no alternate browser route was attempted.
+File integrity and provider-record classification do not establish creative acceptance, source authorship, exact tattoo transfer, or user approval.
+No production files, user reviews, approvals, or original media were changed by this QA. Detailed hashes and findings are in library_verification_20261009.json.

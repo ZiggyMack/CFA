@@ -1,0 +1,132 @@
+CFA CHARACTER HEAD REFERENCE STANDARD
+
+Adopted by Ziggy October 9, 2026. Reuse across projects; character identity stays separate.
+
+
+
+THE THREE LINKED REFERENCES
+
+1. HEAD LIBRARY: the selected character identity, hair, face/neck artwork, jewelry and mouth states across useful angles. Use a consistent head-and-shoulders crop, plain black tee or suitable neutral collar, neutral grey background and steady lighting. Keep relevant neck details visible. This is not a cut-off floating head and does not establish unseen rear anatomy.
+
+2. MOUTH DETAIL LIBRARY: close-ups for tooth layout/materials, lips and rings. Match each head to the accepted mouth detail/revision. Macro shots do not replace the whole face or validate speech timing.
+
+3. OUTFIT REFERENCE: one clear full-body hero view per outfit as the default. Link it to the character/head revision and outfit parent. Add garment, accessory or prop angles only when needed; do not repeat the entire head library for every outfit. Gun/no-gun views stay children of one outfit.
+
+
+
+MAIN-CHARACTER COVERAGE — CURRENT HON PLAN
+
+50 mouth/expression states from the front.
+
+20 of those states also get four additional views: character-left three-quarter, character-right three-quarter, character-left profile and character-right profile. Describe turn direction explicitly; never use a mirror to fabricate the opposite view.
+
+50 + (20 x 4) = 130 unique head-state/view combinations. The 20 frontal key-state views are already among the 50. Fifty separate mouth close-ups are counted separately, so the planned mouth-plus-head material totals 180 coverage items before outfit images/contact sheets, if both full sets arrive.
+
+Grok also said 150 heads in the live conversation. Reconcile the actual manifest. A second front take can be useful but does not fill an additional required coverage slot; different bytes remain separate takes. Exact duplicates may share one canonical file with aliases.
+
+LATEST PROVIDER EXPANSION: after Ziggy said counts were flexible, Grok proposed looking-up and looking-down views for the 20 key states and called it 190 heads. Keeping the shared fronts once gives 50 + 20*(7-1) = 170 unique head views; 190 exports would include 20 repeated front slots. Record 40 proposed pitch-view additions separately from the original 130 plan. This is not a universal standard or an instruction to start more work automatically.
+
+The 50 labels and 20 selected state IDs have not yet been supplied. Do not invent a universal 50-viseme standard. Kiss/pucker, lip bites, smiles/smirks, tongue motion and laughs are mouth/expression states; they are not all phonemes. Head pitch, including a head-back laugh, is recorded separately from yaw/view and may justify a specifically requested extra shot.
+
+
+
+SMALLER CHARACTER SETS
+
+Around 40 head references is a provisional lighter tier for less prominent or less detailed characters. Choose the needed expression/angle coverage for that character; there is no fixed proven optimum. Eight states across five views is one possible 40-slot plan, not an assigned default. Expand only for an identified gap. Lisan is a separate later main-character set; do not launch it or enlarge any batch automatically.
+
+
+
+CHARACTER RULES
+
+Hon Dolo: four upper GOLD caps = two lateral incisors plus two SHORT canines. Two central incisors stay natural white; remaining upper teeth natural. Lower SILVER/CHROME grill. Two plain lower-lip rings. Keep the full-face anchor's one-hoop-per-nostril arrangement; the close-up test with central/septum-looking jewelry is not a nose reference. The two-canines-only written rule is superseded by Ziggy's observed Grok correction and confirmation.
+
+Hon uses his own eye/know lettering and character-left neck blaster/smoke. Do not add Lisan's worms because a mixed provider description mentions them.
+
+Lisan: natural teeth by default; optional grill only when requested, in its own variant. Keep his current AL/GAIB, neck worms/sun-eye and jewelry map. Never transfer Hon's gold rule to Lisan.
+
+Jet Black and other nonhuman heads: adapt useful angles/states to their anatomy. A cosmic sphere head does not need an invented human mouth or 130 speech poses.
+
+
+
+HON JEWELRY TARGET AND TOLERANCE — OCTOBER 9, 2026 REVIEW FOLLOW-UP
+
+Ziggy's latest live Grok clarification keeps one hoop per nostril as the target, with a hoop in one ear and a crystal stud in the other. He may accept occasional single/double nostril-hoop variation or missing/different earrings as flavor in an otherwise good image. Record the observed variation, but do not require regeneration solely for these minor nose/ear jewelry differences; they are less critical than the other character features. This tolerance does not replace the intended reference arrangement or automatically accept every image, and it does not waive mouth/grill, brow, tattoo or identity corrections.
+
+The explicit COCKPIT-R2-05 / HD-DROP-8ef3180997c8 repair request for teeth, eyebrow and earrings remains queued. Correct its earrings alongside the requested mouth/brow work where practical; do not force a separate jewelry-only reroll. Grok acknowledged the tolerance clarification. Review and conversation provenance: ../hon_dolo_strictly_business/feedback/review_20261009_162912/intake.json.
+
+
+
+HON EXTERNAL GRILL VARIANTS — OCTOBER 9 FOLLOW-UP
+
+Ziggy defines the current head/mouth collection as grillState=external_off: the optional external iced grill is absent, but the four upper gold caps and silver/chrome lower grill described above remain. External off does not mean natural teeth or no lower grill.
+
+grillState=external_iced_on is a separate optional accessory collection, linked to the SAME character and headRevision. Match mouthStateID, view and headPitch across the off/on collections so the accessory can be compared without silently changing identity or articulation. Keep corresponding mouth macros linked to the same state and dental/accessory revision. The optional state does not replace the default.
+
+Existing accessory evidence is HD-DROP-defe480b085f / GRILL-REF-ICED.jpg and the favored pinstripe portrait HD-DROP-71cad143227a / HD-PINSTRIPE-01-chest-up.jpg. Use their iced-grill evidence only for the optional accessory. Ziggy favors the pinstripe face/curls/brow direction, but its recorded wrong lip-ring shape/material, nose arrangement, malformed blaster and stray facial mark are not details to copy. A favored head and an accessory example still need a consolidated corrected reference before broader continuity use.
+
+The 130-slot baseline, proposed 170-slot expansion and separate 50 mouth macros above are counts PER grill state, not combined totals. Report each state's received, reviewed and missing coverage separately, with paired slots and duplicate takes identified. The requested on collection does not authorize automatic multiplication of every prop, outfit, pitch expansion and view.
+
+LATEST USER SELECTION: the refined HEAD-HD-ICED-ANCHOR-LOCK-r4.jpg is received as HD-GRILLUP-40064d98db89, SHA256 40064d98db897276b80085273919ccd79ca377a068dcc2bd23c519e4038ee93e. Ziggy selected this external-iced look with lip piercings removed FOR THIS LOOK only. This is not a no-lip-ring rule for all variants, a change to the 50 external_off four-gold/silver macros, or acceptance of the GrillUp storyboard. Earlier r5 inspiration/fang-refinement requests remain history; r4 selection is no longer pending. Do not transfer the iced teeth into external_off generation. Actual source and per-panel defects: ../hon_dolo_strictly_business/story/quarters_grill_change_20261009/REVIEW.txt and asset_ledger.json.
+
+
+
+SEPARATE HON PROP-MOUTH COLLECTION
+
+Track the reported 50-item prop-mouth request separately from the plain head coverage; reconcile actual requested state labels and delivered files. Cigars, cigarettes and toothpicks are optional prop states, not default identity features. Record prop type, grillState, visible hand, character-side, tattoo variant/source asset, jewelry and occlusion for each image. When a hand is hidden, its side or tattoo may be unknown; do not invent confirmation or derive hand side from a hip holster. Do not automatically generate the cross-product of 50 props, both grill states and every head view.
+
+The user supplied an on-hand Leigh hearts-card example and two standalone Princess Leigh drawings, hearts and spades. Preserve the recorded character-right hand default and keep those supplied alternatives distinct. The on-hand example places Leigh inside the card; the standalone drawings place Princess above/outside and Leigh beside the card. They are white-background RGB JPEG design options, not verified transparent originals or exact recovered body art. Final matching artwork/composition remains unresolved; do not silently replace hearts with spades or promote either sheet to an approved transfer. See ../hon_dolo_strictly_business/reference_updates/grill_and_hand_20261009/INTAKE_NOTES.txt and intake.json for source roles and actual files.
+
+
+
+HOW TO RECEIVE AND REVIEW
+
+Keep original files, filenames/source aliases, actual hashes, dimensions and generator metadata. Register new bytes once; variants and views share one character parent. Do not mark a provider progress claim as receipt.
+
+Bind each received file to characterID + headRevision + mouthStateID + view + headPitch + grillState; also retain outfit/prop state, head pitch, parent macro/identity IDs, provider label, observed pose and take ID. The semantic coverage key is separate from byte deduplication. Do not use invented IDs for unavailable pictures.
+
+Validate files and hashes, then assess face/hair, correct tattoo text and side, tooth count/material/length, lip rings, nostril placement, requested articulation and background/framing. Track pass, defect, occluded or unknown independently. Hidden teeth behind closed lips are occluded, not proved correct or missing. Keep F/V contact and difficult lip-bite poses explicit.
+
+Received, decoded, reviewed, selected by user and accepted for a specific purpose are different states. Maintain an overview/contact sheet and a coverage/gap matrix. Preserve rejected takes and earlier revisions as history. Existing outfits with obsolete mouths need a targeted review/correction pass; do not delete all older imagery or treat it as current head authority.
+
+
+
+HOW TO USE THE LIBRARY
+
+Select a small, relevant, compatible subset for the actual tool: matching head angle/state, mouth detail, outfit and any needed pose/scene/prop reference. Record exact attachments and roles. Do not assume a model consumes all 130 at once, that a head can be pasted onto any body unchanged, or that still consistency proves video consistency.
+
+Prepare a consolidated, reviewed starting image with the chosen head/mouth revision and outfit where the route requires one. Then test a short representative shot and inspect motion, closure, occlusion and jewelry continuity. Preserve the existing finite mouth proof and workflow-intake procedure; no new benchmark budget is implied.
+
+
+
+EXISTING BREADCRUMBS
+
+Grok instructions: grok_design_instructions.txt
+
+CFA workshop: ../../README.md
+
+Problem-to-recipe: ../../workflows/README.md#choose-by-problem
+
+Intake/feedback: ../../templates/workflow_intake.md#decision-and-feedback
+
+Pan lesson: D:/Documents/Pan_Handlers/Help/content/cfa_learning.py (explicit reference roles/evidence states)
+
+Manual teaching return: ../../../pathfinder_handoff/README.md
+
+Hon expected intake: ../hon_dolo_strictly_business/head_library_20261009/expected_intake.json
+
+Observed conversation and dental decision: ../hon_dolo_strictly_business/head_library_20261009/grok_conversation_evidence.json
+
+This standard adopts a local production method and tracks forthcoming drops. Provider coordination is recorded separately in grok_coordination_20261009/; consult its delivery and acknowledgement receipts for messages actually sent. Provider progress and local file receipt remain separate, and this document does not establish a generation, Cloud run or remote notebook update.
+
+
+
+HON QUARTERS STORYBOARD - INTENTIONAL ACCESSORY CHANGE
+
+GROK-HD-SB-GRILLUP-v001 is received: ten draft scene selects, eight alternatives and the selected r4 anchor. Lip-piercing state remains separate from grillState; deliberate lip-ring removal is correct for this quarters sequence and the selected r4 look, not a rule for every external_iced_on variant. Nose/ear jewelry is independent. The ten selects remain unaccepted. Review found a 02/03 filename/action mismatch, an extra hoop at the dish beat, external-off/iced dental drift, identity/tattoo/accessory changes and inconsistent reflections. Correct manifests and bounded repairs need review before motion; original filenames/order are preserved. See ../hon_dolo_strictly_business/story/quarters_grill_change_20261009/REVIEW.txt and intake_receipt.json. No new run is claimed by this instruction update.
+
+
+LISAN BREATHER V3 — USER-SELECTED COMBINATION, OCTOBER 9 FINISHING PASS
+Ziggy selected the browser v3 proof as successful placement of the breather on the desired character, then clarified “breather with regular teeth” and “It isn’t a default”; HaL acknowledged. This is selection of the base for breather + natural teeth with NO grill only. It does not replace the general Lisan face/default, make the breather mandatory, or approve the separate optional grill. The partial package now verifies five of six breather views, including the exact v3 original LAG-PART-1b60815fa2bb (SHA256 1b60815fa2bb4f8f488ebcf123a6a71af4cba144d06667c73b2ceeb2de053c00). BR-06 is still absent; remaining variants need review. The v3 selection stays scoped to this combination. Evidence: ../lisan_al_gaib/handoffs/optional_grill_dispatch_20261009/delivery_receipt.json.
+
+TATTOO PLACEMENT AND FINISHING SCOPE — OCTOBER 9
+The latest 36 saved user reviews were reconciled without deleting originals or promoting working-reference requests. A placement guide was sent to Chief as CFA-FINISH-CHIEF-20261009-01: one neutral head with keyed legend, one necessary forearm inset, and only the requested flat_1 stencil-only / flat_0 indexing derivatives. Preserve cursive eye on character-right/viewer-left and serif/upright know on character-left/viewer-right from lf_cheeks. lf_full is the no-forehead-dice default look; scoundrel.jpg contains an allowed optional dice look and separate forearm context. Scoundrel arm side/scale and bird/Chewie placement remain unresolved. Clean artwork and annotated guides stay separate; no new tattoos or blanket identity approval. The user’s separate n=20 hand/ring request is queued for after current returns, not started by this guide. Brief: ../hon_dolo_strictly_business/handoffs/tattoo_placement_guide_20261009/START_HERE.txt. Exact sent message: finishing_pass_20261009/CHIEF_MESSAGE_001.txt; response/generation remains unverified.

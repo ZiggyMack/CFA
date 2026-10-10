@@ -1,0 +1,720 @@
+{
+  "schemaVersion": 1,
+  "reviewedDate": "2026-10-09",
+  "packageID": "GROK-HD-20261009_VIS-HD_v001",
+  "evidenceState": "received_and_statically_reviewed_not_accepted",
+  "reviewScope": "Static visual inspection of all twelve chosen JPEGs, contact sheet and current identity crop. Local hashes, JPEG decoding and manifest comparisons. No generation, training, animation, playback or Cloud preflight.",
+  "sourceRootAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001",
+  "sourceLocationNote": "Path is provenance at review time; follow primary intake canonical mapping by SHA256 after relocation to Processed. This review does not move or copy provider media.",
+  "sourceManifestSHA256": "7c97e88383e3e0b0ad75f46436839e932b10d7d8b2d0000db075ea169230c51b",
+  "sourceReadmeSHA256": "f7e32fc3a8eea405b936d9c2c082bc346f0e9a0c0a4edb100c6b25b8da062313",
+  "anchor": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/89000d0149be__02_HD-LOCK-FACE_face-neck-crop.png",
+    "sha256": "89000d0149bef4f8d846500d0e111c9bde5e03bdd3be5ad4650b074799cc20a5",
+    "role": "Current design evidence, not new final Comfy likeness approval",
+    "observation": "Two upper gold canine caps with visible points, other visible upper teeth natural, lower silver/chrome row, two plain lower-lip rings, one nostril hoop each side. Oblique head angle, lower resolution and different expression limit exact frontal geometry comparison."
+  },
+  "localBrief": {
+    "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/START_HERE.txt",
+    "sha256": "f633f92c814ee1eab3cf8363772e937c681ce57a2a2b3bfb2b8cb920b5842cb0",
+    "relevantRule": "Exactly two slightly extended gold upper canine caps, other upper teeth natural, lower silver/chrome grill and two lower-lip rings; no oversized fangs. Full-face continuity proof remains a separate prepared test."
+  },
+  "suppliedMaterial": "Twelve generated mouth-detail stills, five rejected attempts, contact sheet and provider documents.",
+  "intendedUse": "Candidate mouth-detail review evidence for the existing bounded continuity proof; no automatic identity or working-reference promotion.",
+  "summary": {
+    "chosenCandidates": 12,
+    "rejectedAttemptsPreserved": 5,
+    "contactSheets": 1,
+    "imagesDecoded": 18,
+    "manifestImageHashChecks": 17,
+    "manifestImageHashMismatches": 0,
+    "userAcceptedCount": 0,
+    "mouthReferenceBenefit": "unknown_not_tested",
+    "providerElevenHoldLockClaim": "Not adopted. Hidden teeth cannot demonstrate lock; visible jewelry and tooth-geometry differences remain.",
+    "directAdditionalFindings": [
+      "03 AH also has ball-ended lip rings.",
+      "07 F/V has natural/white lower front teeth instead of the silver/chrome grill.",
+      "Several open-mouth images emphasize elongated pointed fangs and altered lower-cap geometry; local brief does not approve an oversized-fang redesign."
+    ]
+  },
+  "contactSheet": {
+    "sourceRelativePath": "CONTACT.jpg",
+    "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/CONTACT.jpg",
+    "sha256": "41cf41b5b24e02f75d8bb451aaf6d28daa0ee3926b602d40f670da0ac50e5db1",
+    "bytes": 391091,
+    "dimensions": [
+      1650,
+      927
+    ],
+    "decoded": true
+  },
+  "candidates": [
+    {
+      "id": "VIS-HD-01",
+      "shape": "REST",
+      "sourceRelativePath": "01_VISEMES/VIS-HD-01_REST.jpg",
+      "sha256": "5b76b446306e3f7e9f2dee5f206d28a264862b3ddf60818de773db622b59133a",
+      "bytes": 360760,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "providerManifestHashMatches": true,
+      "providerManifestBytesMatches": true,
+      "providerManifestDimensionsMatch": true,
+      "providerReport": {
+        "qaNote": "good",
+        "attempt": 1,
+        "phonemeLabels": "silence/neutral"
+      },
+      "directObservation": {
+        "mouthAndTeeth": "Lips meet in a relaxed closed pose. Teeth are occluded; grill/canine preservation cannot be established.",
+        "piercings": "Two plain lower-lip rings; one hoop each nostril.",
+        "issues": []
+      },
+      "visualInspection": "individual_original_and_contact_sheet",
+      "status": "needs_user_review",
+      "userApproved": false,
+      "animationTested": false
+    },
+    {
+      "id": "VIS-HD-02",
+      "shape": "MBP",
+      "sourceRelativePath": "01_VISEMES/VIS-HD-02_MBP.jpg",
+      "sha256": "b35f9a0dc328ed1df7f59ad6e5121c1ff14e6cf8eefa3793aba6f33aac35a5dd",
+      "bytes": 296636,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "providerManifestHashMatches": true,
+      "providerManifestBytesMatches": true,
+      "providerManifestDimensionsMatch": true,
+      "providerReport": {
+        "qaNote": "good; only one nostril hoop visible",
+        "attempt": 1,
+        "phonemeLabels": "M B P"
+      },
+      "directObservation": {
+        "mouthAndTeeth": "Lips closed; timed M/B/P closures or releases are untested. Teeth not visible.",
+        "piercings": "Two plain lip rings. Only viewer-right / character-left nostril hoop visible; the other nostril is in frame without its hoop.",
+        "issues": [
+          "missing_nostril_hoop"
+        ]
+      },
+      "visualInspection": "individual_original_and_contact_sheet",
+      "status": "needs_user_review",
+      "userApproved": false,
+      "animationTested": false
+    },
+    {
+      "id": "VIS-HD-03",
+      "shape": "AH",
+      "sourceRelativePath": "01_VISEMES/VIS-HD-03_AH.jpg",
+      "sha256": "11bafdd2be5ab7ae0a95a98723a564fd27344799f920eb320444f1963aa085c5",
+      "bytes": 300011,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "providerManifestHashMatches": true,
+      "providerManifestBytesMatches": true,
+      "providerManifestDimensionsMatch": true,
+      "providerReport": {
+        "qaNote": "good",
+        "attempt": 1,
+        "phonemeLabels": "AH AA"
+      },
+      "directObservation": {
+        "mouthAndTeeth": "Open AH-like pose. Two elongated pointed gold upper canines, white other upper teeth, silver/chrome lower front caps with pointed outer caps.",
+        "piercings": "One hoop each nostril. Both lower-lip rings visibly have spherical ball ends, an additional finding not listed by provider.",
+        "issues": [
+          "ball_end_lip_rings_additional_finding",
+          "elongated_canine_shape",
+          "lower_grill_geometry_not_locked"
+        ]
+      },
+      "visualInspection": "individual_original_and_contact_sheet",
+      "status": "needs_user_review",
+      "userApproved": false,
+      "animationTested": false
+    },
+    {
+      "id": "VIS-HD-04",
+      "shape": "EE",
+      "sourceRelativePath": "01_VISEMES/VIS-HD-04_EE.jpg",
+      "sha256": "bb94cfd4b528c3d83a7e9143bf2f752e3b0a361fce27d258d22854e628eaad28",
+      "bytes": 346847,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "providerManifestHashMatches": true,
+      "providerManifestBytesMatches": true,
+      "providerManifestDimensionsMatch": true,
+      "providerReport": {
+        "qaNote": "good",
+        "attempt": 1,
+        "phonemeLabels": "EE IH AY"
+      },
+      "directObservation": {
+        "mouthAndTeeth": "Broad EE/smile pose. Two pointed gold upper canines, white other upper teeth, silver/chrome lower front caps. Tooth geometry is more prominent than in the subtler oblique anchor.",
+        "piercings": "Two plain lip rings; one hoop each nostril.",
+        "issues": [
+          "elongated_canine_shape",
+          "lower_grill_geometry_not_locked"
+        ]
+      },
+      "visualInspection": "individual_original_and_contact_sheet",
+      "status": "needs_user_review",
+      "userApproved": false,
+      "animationTested": false
+    },
+    {
+      "id": "VIS-HD-05",
+      "shape": "OH",
+      "sourceRelativePath": "01_VISEMES/VIS-HD-05_OH.jpg",
+      "sha256": "8fd90be71d79587db2e63f29c452a33ae7d69dc18f38b5648545dcbb43753708",
+      "bytes": 274693,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "providerManifestHashMatches": true,
+      "providerManifestBytesMatches": true,
+      "providerManifestDimensionsMatch": true,
+      "providerReport": {
+        "qaNote": "good; lip rings drawn with ball ends",
+        "attempt": 1,
+        "phonemeLabels": "OH AO"
+      },
+      "directObservation": {
+        "mouthAndTeeth": "Rounded open mouth. Two long pointed gold upper canines, white upper front teeth, silver/chrome lower front row with pointed outer caps.",
+        "piercings": "Both lip rings have clear ball ends; one hoop each nostril.",
+        "issues": [
+          "ball_end_lip_rings",
+          "elongated_canine_shape",
+          "lower_grill_geometry_not_locked"
+        ]
+      },
+      "visualInspection": "individual_original_and_contact_sheet",
+      "status": "needs_user_review",
+      "userApproved": false,
+      "animationTested": false
+    },
+    {
+      "id": "VIS-HD-06",
+      "shape": "OO-W",
+      "sourceRelativePath": "01_VISEMES/VIS-HD-06_OO-W.jpg",
+      "sha256": "860c70ea1081ea3027cde03ec635cd5da96c08f7f3f6a8cfff8323d414df32f5",
+      "bytes": 258044,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "providerManifestHashMatches": true,
+      "providerManifestBytesMatches": true,
+      "providerManifestDimensionsMatch": true,
+      "providerReport": {
+        "qaNote": "good",
+        "attempt": 1,
+        "phonemeLabels": "OO W UW"
+      },
+      "directObservation": {
+        "mouthAndTeeth": "Pursed rounded lips, small opening. Most teeth hidden; dark interior and small tooth edges do not establish grill preservation.",
+        "piercings": "Two plain lip rings; one hoop each nostril.",
+        "issues": []
+      },
+      "visualInspection": "individual_original_and_contact_sheet",
+      "status": "needs_user_review",
+      "userApproved": false,
+      "animationTested": false
+    },
+    {
+      "id": "VIS-HD-07",
+      "shape": "F-V",
+      "sourceRelativePath": "01_VISEMES/VIS-HD-07_F-V.jpg",
+      "sha256": "9168d102c9f4ce331853666a566ae36050c0ce4777752405a216889546d558d4",
+      "bytes": 412867,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "providerManifestHashMatches": true,
+      "providerManifestBytesMatches": true,
+      "providerManifestDimensionsMatch": true,
+      "providerReport": {
+        "qaNote": "WEAK: lower lip not tucked under upper teeth; ball-end rings; r2 also failed F/V shape -> unresolved, best-available",
+        "attempt": 1,
+        "phonemeLabels": "F V"
+      },
+      "directObservation": {
+        "mouthAndTeeth": "Teeth-baring pose, lower lip below tooth rows: no visible tuck against upper incisors. Two long gold upper canines, other uppers white. Visible lower front teeth look natural/white instead of chrome: additional material failure beyond provider pose notes.",
+        "piercings": "Ball-ended lip rings; one hoop each nostril.",
+        "issues": [
+          "fv_pose_unresolved",
+          "lower_grill_material_lost_additional_finding",
+          "ball_end_lip_rings",
+          "elongated_canine_shape"
+        ]
+      },
+      "visualInspection": "individual_original_and_contact_sheet",
+      "status": "needs_user_review",
+      "userApproved": false,
+      "animationTested": false
+    },
+    {
+      "id": "VIS-HD-08",
+      "shape": "L-TH",
+      "sourceRelativePath": "01_VISEMES/VIS-HD-08_L-TH.jpg",
+      "sha256": "88d5651aedcf2930c0d2578e4bc4f57252c1ea3b86ebea2bff6374158387dbae",
+      "bytes": 354355,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "providerManifestHashMatches": true,
+      "providerManifestBytesMatches": true,
+      "providerManifestDimensionsMatch": true,
+      "providerReport": {
+        "qaNote": "ball-end rings",
+        "attempt": 1,
+        "phonemeLabels": "L TH DH"
+      },
+      "directObservation": {
+        "mouthAndTeeth": "Tongue lifted/curled centrally. One still cannot validate separate L and TH articulation. Two pointed gold upper canines, white other uppers, silver/chrome lower front caps.",
+        "piercings": "Both lip piercings have prominent ball ends and open arcs; one hoop each nostril.",
+        "issues": [
+          "ball_end_lip_rings",
+          "elongated_canine_shape",
+          "lower_grill_geometry_not_locked"
+        ]
+      },
+      "visualInspection": "individual_original_and_contact_sheet",
+      "status": "needs_user_review",
+      "userApproved": false,
+      "animationTested": false
+    },
+    {
+      "id": "VIS-HD-09",
+      "shape": "S-T-K",
+      "sourceRelativePath": "01_VISEMES/VIS-HD-09_S-T-K.jpg",
+      "sha256": "305909fd6697e1ab1f8c11fb91864bece95d6f725202c95e18bedcf474b0d186",
+      "bytes": 349983,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "providerManifestHashMatches": true,
+      "providerManifestBytesMatches": true,
+      "providerManifestDimensionsMatch": true,
+      "providerReport": {
+        "qaNote": "good (r1 rejected: gold cap on central incisor)",
+        "attempt": 2,
+        "phonemeLabels": "S T D K N G"
+      },
+      "directObservation": {
+        "mouthAndTeeth": "Broad teeth-baring pose, visually close to 04 and 11. Two pointed gold upper canines, white other uppers, silver/chrome lowers. No central gold upper incisor seen in chosen attempt. Distinct S/T/K articulation unproven.",
+        "piercings": "Two plain lip rings; one hoop each nostril.",
+        "issues": [
+          "elongated_canine_shape",
+          "lower_grill_geometry_not_locked",
+          "pose_discriminability_unproven"
+        ]
+      },
+      "visualInspection": "individual_original_and_contact_sheet",
+      "status": "needs_user_review",
+      "userApproved": false,
+      "animationTested": false
+    },
+    {
+      "id": "VIS-HD-10",
+      "shape": "CH-SH",
+      "sourceRelativePath": "01_VISEMES/VIS-HD-10_CH-SH.jpg",
+      "sha256": "074dcb2fe720c655888ecebc690ccce49a08ce8b92d8120de734e8b13e1b46a6",
+      "bytes": 337566,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "providerManifestHashMatches": true,
+      "providerManifestBytesMatches": true,
+      "providerManifestDimensionsMatch": true,
+      "providerReport": {
+        "qaNote": "grill correct; lip funnel weak (r1 rejected: 4 gold upper teeth)",
+        "attempt": 2,
+        "phonemeLabels": "CH SH J ZH"
+      },
+      "directObservation": {
+        "mouthAndTeeth": "Open broad teeth-showing pose with limited visible forward lip funnel. Two pointed gold canines, white other uppers and silver/chrome lower front caps. No four-gold-upper-teeth pattern in chosen attempt.",
+        "piercings": "Two plain lip rings; one hoop each nostril.",
+        "issues": [
+          "weak_lip_funnel",
+          "elongated_canine_shape",
+          "lower_grill_geometry_not_locked"
+        ]
+      },
+      "visualInspection": "individual_original_and_contact_sheet",
+      "status": "needs_user_review",
+      "userApproved": false,
+      "animationTested": false
+    },
+    {
+      "id": "VIS-HD-11",
+      "shape": "GRIN",
+      "sourceRelativePath": "01_VISEMES/VIS-HD-11_GRIN.jpg",
+      "sha256": "6674cb3c9b70c13f31ca38878b6072525af9b52f092bf2d56ee04a064996e6b8",
+      "bytes": 345490,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "providerManifestHashMatches": true,
+      "providerManifestBytesMatches": true,
+      "providerManifestDimensionsMatch": true,
+      "providerReport": {
+        "qaNote": "good (r1 rejected: gold lower canines)",
+        "attempt": 2,
+        "phonemeLabels": "smile"
+      },
+      "directObservation": {
+        "mouthAndTeeth": "Wide grin, visually close to 04 and 09. Two pointed gold canines, white other uppers and silver/chrome lower front caps; no gold lower canines seen in chosen attempt.",
+        "piercings": "Two plain lip rings; one hoop each nostril.",
+        "issues": [
+          "elongated_canine_shape",
+          "lower_grill_geometry_not_locked",
+          "pose_discriminability_unproven"
+        ]
+      },
+      "visualInspection": "individual_original_and_contact_sheet",
+      "status": "needs_user_review",
+      "userApproved": false,
+      "animationTested": false
+    },
+    {
+      "id": "VIS-HD-12",
+      "shape": "SHOUT",
+      "sourceRelativePath": "01_VISEMES/VIS-HD-12_SHOUT.jpg",
+      "sha256": "397e5bd66681e66f41dccbce8ca4a845d454752309b96bc6ba489a5513b4aeb1",
+      "bytes": 300633,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "providerManifestHashMatches": true,
+      "providerManifestBytesMatches": true,
+      "providerManifestDimensionsMatch": true,
+      "providerReport": {
+        "qaNote": "good (r1 rejected: tongue out, doubled lip rings, septum-looking nostril rings)",
+        "attempt": 2,
+        "phonemeLabels": "wide open / yell"
+      },
+      "directObservation": {
+        "mouthAndTeeth": "Wide-open shout-like pose, tongue inside mouth. Two pointed gold canines, other visible uppers white, silver/chrome lower front caps. No protruding tongue or doubled lower-lip rings seen in chosen attempt.",
+        "piercings": "Two plain lip rings; one hoop each nostril.",
+        "issues": [
+          "elongated_canine_shape",
+          "lower_grill_geometry_not_locked"
+        ]
+      },
+      "visualInspection": "individual_original_and_contact_sheet",
+      "status": "needs_user_review",
+      "userApproved": false,
+      "animationTested": false
+    }
+  ],
+  "rejected": [
+    {
+      "providerLabel": "VIS-HD-07_F-V_r2",
+      "sourceRelativePath": "02_REJECTED/VIS-HD-07_F-V_r2_1ae4a53408d4.jpg",
+      "sha256": "1ae4a53408d44881ede1e1ff227361b5502af77f0c3f2fde4dc99d249ce58a99",
+      "providerManifestHashMatches": true,
+      "providerRejectionReason": "r2 failed F/V shape (lips just parted); kept r1 as best-available",
+      "visualInspection": "not_individually_reviewed",
+      "decoded": true,
+      "userApproved": false
+    },
+    {
+      "providerLabel": "VIS-HD-09_S-T-K_r1",
+      "sourceRelativePath": "02_REJECTED/VIS-HD-09_S-T-K_r1_6e6e7eccef41.jpg",
+      "sha256": "6e6e7eccef41f7ca99462941090268f4e69c574d1a573bf3edb7fb8823809dbf",
+      "providerManifestHashMatches": true,
+      "providerRejectionReason": "gold cap on central incisor",
+      "visualInspection": "not_individually_reviewed",
+      "decoded": true,
+      "userApproved": false
+    },
+    {
+      "providerLabel": "VIS-HD-10_CH-SH_r1",
+      "sourceRelativePath": "02_REJECTED/VIS-HD-10_CH-SH_r1_9d21b4657541.jpg",
+      "sha256": "9d21b4657541ff70aff7c39236bbc91233ebdf0d171ec6db80f90e8bf46ca82f",
+      "providerManifestHashMatches": true,
+      "providerRejectionReason": "4 gold upper teeth",
+      "visualInspection": "not_individually_reviewed",
+      "decoded": true,
+      "userApproved": false
+    },
+    {
+      "providerLabel": "VIS-HD-11_GRIN_r1",
+      "sourceRelativePath": "02_REJECTED/VIS-HD-11_GRIN_r1_dcaf71bfc803.jpg",
+      "sha256": "dcaf71bfc803abe982dbc45ad11caf586801408c5b42bc3775b0a88b634f737c",
+      "providerManifestHashMatches": true,
+      "providerRejectionReason": "gold lower canines",
+      "visualInspection": "not_individually_reviewed",
+      "decoded": true,
+      "userApproved": false
+    },
+    {
+      "providerLabel": "VIS-HD-12_SHOUT_r1",
+      "sourceRelativePath": "02_REJECTED/VIS-HD-12_SHOUT_r1_8b5fef5f0b70.jpg",
+      "sha256": "8b5fef5f0b7097a236557ae2873de3512bca3cf51347c29edc7cd7e9fd33fabb",
+      "providerManifestHashMatches": true,
+      "providerRejectionReason": "tongue out, doubled lip rings, septum-looking nostril rings",
+      "visualInspection": "not_individually_reviewed",
+      "decoded": true,
+      "userApproved": false
+    }
+  ],
+  "files": [
+    {
+      "sourceRelativePath": "01_VISEMES/VIS-HD-01_REST.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/01_VISEMES/VIS-HD-01_REST.jpg",
+      "sha256": "5b76b446306e3f7e9f2dee5f206d28a264862b3ddf60818de773db622b59133a",
+      "bytes": 360760,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "01_VISEMES/VIS-HD-02_MBP.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/01_VISEMES/VIS-HD-02_MBP.jpg",
+      "sha256": "b35f9a0dc328ed1df7f59ad6e5121c1ff14e6cf8eefa3793aba6f33aac35a5dd",
+      "bytes": 296636,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "01_VISEMES/VIS-HD-03_AH.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/01_VISEMES/VIS-HD-03_AH.jpg",
+      "sha256": "11bafdd2be5ab7ae0a95a98723a564fd27344799f920eb320444f1963aa085c5",
+      "bytes": 300011,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "01_VISEMES/VIS-HD-04_EE.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/01_VISEMES/VIS-HD-04_EE.jpg",
+      "sha256": "bb94cfd4b528c3d83a7e9143bf2f752e3b0a361fce27d258d22854e628eaad28",
+      "bytes": 346847,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "01_VISEMES/VIS-HD-05_OH.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/01_VISEMES/VIS-HD-05_OH.jpg",
+      "sha256": "8fd90be71d79587db2e63f29c452a33ae7d69dc18f38b5648545dcbb43753708",
+      "bytes": 274693,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "01_VISEMES/VIS-HD-06_OO-W.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/01_VISEMES/VIS-HD-06_OO-W.jpg",
+      "sha256": "860c70ea1081ea3027cde03ec635cd5da96c08f7f3f6a8cfff8323d414df32f5",
+      "bytes": 258044,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "01_VISEMES/VIS-HD-07_F-V.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/01_VISEMES/VIS-HD-07_F-V.jpg",
+      "sha256": "9168d102c9f4ce331853666a566ae36050c0ce4777752405a216889546d558d4",
+      "bytes": 412867,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "01_VISEMES/VIS-HD-08_L-TH.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/01_VISEMES/VIS-HD-08_L-TH.jpg",
+      "sha256": "88d5651aedcf2930c0d2578e4bc4f57252c1ea3b86ebea2bff6374158387dbae",
+      "bytes": 354355,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "01_VISEMES/VIS-HD-09_S-T-K.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/01_VISEMES/VIS-HD-09_S-T-K.jpg",
+      "sha256": "305909fd6697e1ab1f8c11fb91864bece95d6f725202c95e18bedcf474b0d186",
+      "bytes": 349983,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "01_VISEMES/VIS-HD-10_CH-SH.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/01_VISEMES/VIS-HD-10_CH-SH.jpg",
+      "sha256": "074dcb2fe720c655888ecebc690ccce49a08ce8b92d8120de734e8b13e1b46a6",
+      "bytes": 337566,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "01_VISEMES/VIS-HD-11_GRIN.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/01_VISEMES/VIS-HD-11_GRIN.jpg",
+      "sha256": "6674cb3c9b70c13f31ca38878b6072525af9b52f092bf2d56ee04a064996e6b8",
+      "bytes": 345490,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "01_VISEMES/VIS-HD-12_SHOUT.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/01_VISEMES/VIS-HD-12_SHOUT.jpg",
+      "sha256": "397e5bd66681e66f41dccbce8ca4a845d454752309b96bc6ba489a5513b4aeb1",
+      "bytes": 300633,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "02_REJECTED/VIS-HD-07_F-V_r2_1ae4a53408d4.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/02_REJECTED/VIS-HD-07_F-V_r2_1ae4a53408d4.jpg",
+      "sha256": "1ae4a53408d44881ede1e1ff227361b5502af77f0c3f2fde4dc99d249ce58a99",
+      "bytes": 309369,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "02_REJECTED/VIS-HD-09_S-T-K_r1_6e6e7eccef41.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/02_REJECTED/VIS-HD-09_S-T-K_r1_6e6e7eccef41.jpg",
+      "sha256": "6e6e7eccef41f7ca99462941090268f4e69c574d1a573bf3edb7fb8823809dbf",
+      "bytes": 376929,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "02_REJECTED/VIS-HD-10_CH-SH_r1_9d21b4657541.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/02_REJECTED/VIS-HD-10_CH-SH_r1_9d21b4657541.jpg",
+      "sha256": "9d21b4657541ff70aff7c39236bbc91233ebdf0d171ec6db80f90e8bf46ca82f",
+      "bytes": 276880,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "02_REJECTED/VIS-HD-11_GRIN_r1_dcaf71bfc803.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/02_REJECTED/VIS-HD-11_GRIN_r1_dcaf71bfc803.jpg",
+      "sha256": "dcaf71bfc803abe982dbc45ad11caf586801408c5b42bc3775b0a88b634f737c",
+      "bytes": 392053,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "02_REJECTED/VIS-HD-12_SHOUT_r1_8b5fef5f0b70.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/02_REJECTED/VIS-HD-12_SHOUT_r1_8b5fef5f0b70.jpg",
+      "sha256": "8b5fef5f0b7097a236557ae2873de3512bca3cf51347c29edc7cd7e9fd33fabb",
+      "bytes": 314613,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "CONTACT.jpg",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/CONTACT.jpg",
+      "sha256": "41cf41b5b24e02f75d8bb451aaf6d28daa0ee3926b602d40f670da0ac50e5db1",
+      "bytes": 391091,
+      "dimensions": [
+        1650,
+        927
+      ],
+      "decoded": true
+    },
+    {
+      "sourceRelativePath": "manifest.csv",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/manifest.csv",
+      "sha256": "268e87f4156a11e0e0c659eca4a1b8b82b959d5eb289f333e118c1292f82f3ce",
+      "bytes": 2899
+    },
+    {
+      "sourceRelativePath": "manifest.json",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/manifest.json",
+      "sha256": "7c97e88383e3e0b0ad75f46436839e932b10d7d8b2d0000db075ea169230c51b",
+      "bytes": 9683
+    },
+    {
+      "sourceRelativePath": "README.txt",
+      "pathAtReview": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001/GROK-HD-20261009_VIS-HD_v001/README.txt",
+      "sha256": "f7e32fc3a8eea405b936d9c2c082bc346f0e9a0c0a4edb100c6b25b8da062313",
+      "bytes": 3406
+    }
+  ],
+  "limitations": [
+    "Static pose names do not prove phoneme correctness, timing or smooth interpolation.",
+    "Chosen images crop around mouth/nose. Full face, lettering, ear jewelry and neck-tattoo continuity cannot be checked.",
+    "No generation graph or capture metadata independently establishes actual model, seed, reference use or reproducibility. Attempts and source claims remain provider reports.",
+    "Lighting, expression and frontal/oblique view differ from anchor. Apparent geometric differences are qualitative, not registered measurements.",
+    "Closed/pursed lips naturally hide teeth. 01, 02 and 06 are unassessable for grill retention, not failures simply because teeth are hidden.",
+    "These images are not a trained model, an installed viseme rig or a validated conditioning socket. Cloud graph compatibility remains unverified."
+  ],
+  "nextStep": {
+    "decision": "retain_as_review_candidates_with_corrections_needed",
+    "firstCorrection": "Reconcile canine/cap geometry to current anchor; repair 03/05/07/08 lip jewelry, 02 nostril hoop and 07 lower chrome row plus F/V contact before treating this as a mouth master.",
+    "futureBoundedComparison": "Reuse existing two-take maximum brief: A current full anchor; B same inputs/settings plus one accepted same-anchor detail crop as the sole change, only if interface supports that role. This pack does not silently replace baseline or expand budget.",
+    "successCheck": "Normal-speed video with audio plus frame inspection at openings/closures: unchanged gold/silver layout, jewelry, full identity and plausible occlusion; verify actual words. Not performed."
+  },
+  "methodSources": [
+    "docs/notes/explorable_world/comfy/README.md",
+    "docs/notes/explorable_world/comfy/workflows/README.md#choose-by-problem",
+    "docs/notes/explorable_world/comfy/templates/workflow_intake.md#decision-and-feedback",
+    "D:/Documents/Pan_Handlers/Help/CFA_TUTORIAL_LEDGER.md",
+    "D:/Documents/Pan_Handlers/Help/FILE_MAP.md",
+    "D:/Documents/Pan_Handlers/Help/guides/video_handoff.py",
+    "D:/Documents/Pan_Handlers/Help/guides/workflow_decision.py"
+  ],
+  "panhandlerReturnSuggestion": "Teach provider QA versus direct observations, detail-only scope, occlusion versus material loss and static poses versus temporal proof. Link this review and existing mouth brief; no new framework or acceptance."
+}

@@ -1,0 +1,47 @@
+COMFY_UI — MANUAL VERSIONED NOTEBOOK HANDOFF
+Protocol draft supplied with COMFY_UI-MASTER-20261008-v1
+
+The notebooks do not synchronize by themselves. A user or explicitly authorized assistant carries an update packet and any necessary media. A message saying an update exists is not receipt of its files. The repository remains the production evidence source; this protocol does not give Gemini filesystem access or start a task elsewhere.
+
+INITIAL MASTER LOAD
+1. Load the same current common instructions used by all three notebooks from ../shared/.
+2. Add role_instructions.txt, system_overview.txt, workflow_methods_and_status.txt and project_digests.txt from this folder.
+3. Add winner_promotion_registry.json. It currently has one explicitly elevated scene working reference, not a list of favorites.
+4. Add source_index.json if useful for locating exact evidence. It is a path/hash index, not the underlying media.
+5. Confirm the packet version and which files were actually received. Media needed for inspection must be attached separately. This master packet contains text/metadata only.
+
+PROJECT NOTEBOOK TO MASTER
+Use a new ID such as LAG-TO-MASTER-20261008-v001 or HD-TO-MASTER-20261008-v001. These are examples of format, not already-sent packets.
+Include project, prepared date, prior version superseded, author/reviewer, purpose, and observed status.
+List changed decisions only: exact asset ID, filename/path, real SHA-256 if measured (otherwise unknown), role/scope, old state, new state, evidence and unresolved questions.
+For a promotion, supply explicit user approval evidence and its narrow scope; separate creative stage, technical verification and production acceptance. A favorite, successful decode or provider compliment is not sufficient.
+For a workflow result, supply the actual graph/revision, ordered input roles, one intended change, measured output properties, review method/limits, defects and next decision. Include output media or a retrievable attachment if the recipient must inspect it.
+For a withdrawal, mark the prior decision superseded and explain the effect on queued shots; do not erase its history.
+Use an attachment manifest with exact filenames and hashes when known. Say which referenced files are absent.
+
+MASTER RECONCILIATION
+Read the incoming packet, report its ID/version and the files actually present, check conflicts against current scoped decisions, and return a short proposed digest delta. Preserve ambiguous or missing claims as pending. Do not infer full identity approval from an approved scene.
+Apply confirmed updates to a new master digest/register version. Retain the prior version through the repository's history. Return the changed decisions and impacted workflow recommendations to both the originating project notebook and CFA through a new explicit handoff.
+No automatic execution, purchase, upload, external message, cleanup or generation follows a digest update. Existing specific authorization and pending requests retain their recorded scope.
+
+MASTER TO PROJECT NOTEBOOK
+Send a focused workflow recommendation or reusable lesson: problem; baseline; preservation criteria; one change; evidence; known dependencies; unknowns; bounded next check. Include shared-rule version and digest version. Do not send another project's identity or tattoo files as implicit defaults.
+
+RECEIPT FORMAT
+Packet ID / version:
+Recipient notebook:
+Received files and any missing attachments:
+Changes understood and their exact scopes:
+Conflicts or questions:
+Applied / proposed / deferred:
+Returned update ID:
+No receipt should say files were saved in CFA or another notebook unless that action was actually verified.
+
+TEACHING RETURN
+Useful measured findings return manually to Panhandler Nova through CFA's pathfinder_handoff and tutorial ledger. Production media and canonical graphs stay in CFA; Pan's lesson should state the problem, evidence, limits and next experiment. Updating teaching does not upgrade a production result's acceptance.
+
+LIVE PENDING MATTERS TO CARRY FORWARD
+Grok outgoing ZIPs acknowledged; exact content inventory and generated proofs remain pending.
+Flow exact-file upload/one-test authorization is pending; no upload or output exists.
+Lisan T02 is a selected Detailed-design scene, with technical continuity and production review pending.
+Incoming Grok500 download/intake remains unverified and postponed. Do not close these items merely because this notebook packet was prepared.

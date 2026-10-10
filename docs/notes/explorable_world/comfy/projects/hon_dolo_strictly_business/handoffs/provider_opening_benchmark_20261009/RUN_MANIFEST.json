@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "benchmarkID": "HON-OPENING-PROVIDER-20261009",
+  "checkpointUTC": "2026-10-10T01:03:44Z",
+  "status": "restart_checkpoint_no_accepted_starting_frame",
+  "scope": "Compare one current opening still per provider before any dependent video continuation. User explicitly authorized parallel Flow alongside Gemini and Grok; this supersedes the older plan's not-automatically-reopened restriction. No external jobs were submitted by this manifest task.",
+  "restartCheckpoint": {
+    "gemini": "G2 correction response completed per current operator update; output download and independent inspection pending. G1 failed. No accepted starting frame.",
+    "flow": "Project creation verified: Oct 09 - 21:02 at https://flow.google.com/project/91923885-3d6e-4747-806a-f46f66007b22. Empty project; no generation submitted.",
+    "grok": "Existing matching output unknown; do not count as comparable until identical brief and four source inputs are verified.",
+    "video": "All ten-turn lanes pending; zero video turns recorded here.",
+    "nextAction": "After restart, recover Gemini G2 and Flow project state before submitting anything; avoid duplicate jobs. Inspect and score G2, then resume one Flow still only if not already submitted."
+  },
+  "sourceWorkshop": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009",
+  "sourcePlan": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009",
+  "commonPrompt": {
+    "file": "STILL_PROMPT.txt",
+    "sourceFile": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/STARTING_FRAME_REPAIR_PROMPT_SENT.txt",
+    "sha256": "f5332a288bd840ccc201f8a98e77e68243e7cb7b7b97decfe1f4e32e7b442d06",
+    "policy": "Byte-identical provider-neutral copy. Its opening first-frame-failure statement refers to Gemini G1 shared baseline evidence; it does not claim another provider produced G1. Do not silently paraphrase the prompt for different lanes."
+  },
+  "sources": [
+    {
+      "label": "A",
+      "assetID": "HD-RETURN-6c8900223ee9",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/6c8900223ee9__lf_full.png",
+      "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae",
+      "bytes": 1166382,
+      "role": "Exact actor identity, loose dark curls, no forehead marks, cheek text styles and sides, existing neck blaster and chest ship, brown jacket/open white shirt. Older teeth in this image are not authoritative."
+    },
+    {
+      "label": "B",
+      "assetID": "HD-B-91ef00348229",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/91ef00348229__GRILL-LOCK-4GOLD-v2.jpg",
+      "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+      "bytes": 295186,
+      "role": "Mouth only: four upper gold lateral incisor/short canine caps, white central incisors, lower silver chrome grill, two plain silver lower-lip hoops. Nose comes from A; this crop is not nose authority."
+    },
+    {
+      "label": "D",
+      "assetID": "HD-DROP-36679ee9953b",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-03-pay-table.jpg",
+      "sha256": "36679ee9953bfb8d0492009c1a47309fdd8f04f951f2077bce0007067146b1c4",
+      "bytes": 316016,
+      "role": "Translucent glowing rectangular glass-like circuit credits and worn table staging only. Wrong actor and ink must not transfer."
+    },
+    {
+      "label": "F",
+      "assetID": "HD-DROP-b18c4a123579",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-06-scoundrel-detail.jpg",
+      "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+      "bytes": 308775,
+      "role": "Substantial flattened gold curb bracelet plus dark band. Character RIGHT/viewer-left is provisional scene blocking, not identity canon. Do not transfer forearm tattoo or invent clasp/watch/hand ink."
+    }
+  ],
+  "sourceVerification": {
+    "allFourLocalHashesMatched": true,
+    "verifiedUTC": "2026-10-10T01:03:44Z",
+    "originalsModified": false,
+    "imageCopiesCreated": false
+  },
+  "controls": {
+    "sameOriginals": "Attach the four files above, in A/B/D/F order, and verify visible attachment completion. C and E from the six-image workshop are excluded from this still brief because older actor/teeth references conflict.",
+    "sameBrief": "Use exact STILL_PROMPT.txt; save actual sent text, input IDs and attachments in each provider receipt.",
+    "sameOutputTarget": "Exactly one 16:9 level locked medium-wide still; actual dimensions and model/settings must be recorded rather than assumed.",
+    "differencesToDisclose": [
+      "Gemini has prior workshop and failed-frame conversation context; Flow may be a new project.",
+      "Provider hidden defaults and image models may differ. A shared seed is not equivalent across models.",
+      "One matched sample measures these attempts, not a general provider success rate."
+    ],
+    "acceptance": "Independent source-to-output inspection, completed scorecard and no critical defects are necessary before a still can seed a video. Generated, reviewed and accepted remain distinct."
+  },
+  "stillAttempts": [
+    {
+      "id": "G1",
+      "provider": "Gemini",
+      "status": "failed_reference_check",
+      "comparable": false,
+      "reason": "Historical initial prompt, not the exact current four-image repair brief.",
+      "qualitativeEvidence": "Operator reported changed face/hair, cursive know, added neck ink, bracelet wrong side, opaque gold bullion instead of translucent credits.",
+      "evidenceBasis": "Current operator report and repair prompt; no independent numeric grading in this checkpoint.",
+      "outputPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/evidence/G1_rejected_starting_frame.jpg",
+      "outputSHA256": "3193aca5f2a198f67bd27c135a8c9d1a3c8867b718cfdfd003bf1f5d460369f1",
+      "accepted": false
+    },
+    {
+      "id": "G2",
+      "provider": "Gemini",
+      "status": "response_complete_download_and_inspection_pending",
+      "comparable": null,
+      "comparableCondition": "Verify exact repair prompt and A/B/D/F attachment receipt against output lineage.",
+      "chatURL": "https://gemini.google.com/app/988990050e4ad32c",
+      "visibleChatModelLastKnown": "Flash-Lite",
+      "actualImageModel": null,
+      "outputPath": null,
+      "outputSHA256": null,
+      "accepted": false
+    },
+    {
+      "id": "F1",
+      "provider": "Flow",
+      "status": "empty_project_creation_verified_no_generation_submitted",
+      "comparable": null,
+      "projectURL": "https://flow.google.com/project/91923885-3d6e-4747-806a-f46f66007b22",
+      "projectTitle": "Oct 09 - 21:02",
+      "actualImageModel": null,
+      "outputPath": null,
+      "outputSHA256": null,
+      "accepted": false
+    },
+    {
+      "id": "K1",
+      "provider": "Grok",
+      "status": "matching_existing_output_unknown",
+      "comparable": false,
+      "reason": "Existing matching brief/input/output lineage has not been established. An unmatched image cannot be scored as this benchmark candidate.",
+      "outputPath": null,
+      "outputSHA256": null,
+      "accepted": false
+    }
+  ],
+  "bounds": {
+    "geminiStillRequestsAlreadyReported": 2,
+    "flowInitialStillRequestsPlanned": 1,
+    "grok": "First reconcile an existing exact-match candidate; otherwise at most one initial common-brief still under the operator's authorized lane, not an automatic retry.",
+    "automaticStillRetries": 0,
+    "videoPerProvider": {
+      "initialBaseMaximum": 1,
+      "nativeContinuationMaximum": 9,
+      "totalMaximum": 10,
+      "automaticRetries": 0,
+      "status": "pending_accepted_frame_and_native_continuation_verification"
+    },
+    "noAutomaticExtras": [
+      "No provider/model branches or extra seeds.",
+      "No Comfy Cloud jobs or purchases are created by this packet.",
+      "No public release or publication."
+    ]
+  },
+  "videoProtocol": {
+    "separateFromStillScore": true,
+    "startGate": "A reviewed, accepted starting frame and fixed scene brief. If comparing video models directly, use one identical accepted frame across providers. Provider-specific accepted frames belong to a separately labelled end-to-end comparison; do not mix those conclusions.",
+    "continuationGate": "Confirm the interface performs native extension of the selected prior video. Asking chat for the next clip alone does not prove extension. Record exact parent ID, action, prompt and settings before each turn.",
+    "afterEveryTurn": [
+      "Save provider/project/response/output IDs, prompt, settings, reported duration, inspection timestamps and concrete defects.",
+      "Inspect cumulative duration growth, retained earlier segment and seamless new join; distinguish a full cumulative result from suffix-only output, a rewrite, loop or retime.",
+      "Check identity, visible teeth/hoops/tattoos/jewelry, same four credits, hands, fixed camera/set, screen-right gauge and silent audio requirement.",
+      "Mark unavailable evidence unknown and stop; do not declare a native extension from duration metadata alone."
+    ],
+    "stopImmediatelyIf": [
+      "No accepted starting frame.",
+      "The selected action produces a fresh independent clip or suffix-only result.",
+      "Earlier material changes, disappears, loops or is retimed instead of extended.",
+      "A critical visual continuity defect is observed.",
+      "The join, duration or retained prefix cannot be inspected.",
+      "Identity, props or set drift beyond the accepted brief.",
+      "Unexpected audio violates the silent plan.",
+      "A provider limit/error/paywall prevents the authorized operation or the ten-turn bound is reached."
+    ],
+    "downloads": "Keep evidence metadata every turn without bulk intermediate media downloads. Download only the final inspected cumulative output per provider when finished or stopped, if available; record bytes, SHA256, codec, dimensions, duration and retained failure reason. If browser inspection is insufficient, stop and report the evidence gap instead of blindly continuing.",
+    "temporalScoring": "Separate later scorecard for temporal identity/detail stability, prop persistence, motion/hands, join/prefix continuity, camera/composition and audio compliance. No temporal scores or accepted outputs exist at this checkpoint."
+  },
+  "consulted": [
+    "docs/notes/explorable_world/comfy/README.md",
+    "docs/notes/explorable_world/comfy/workflows/README.md#choose-by-problem",
+    "docs/notes/explorable_world/comfy/templates/workflow_intake.md#decision-and-feedback",
+    "../Pan_Handlers/Help/CFA_TUTORIAL_LEDGER.md",
+    "../Pan_Handlers/Help/FILE_MAP.md",
+    "../Pan_Handlers/Help/guides/sampling_lab.py",
+    "../Pan_Handlers/Help/guides/video_handoff.py",
+    "../Pan_Handlers/Help/content/video_routes.py:image_to_video",
+    "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/BENCHMARK.txt"
+  ],
+  "lessonApplication": "Hold references and brief fixed; record one deliberate provider change and remaining setting/context differences. Inspect artifacts, retain defects and avoid promoting a small comparison into universal model rankings. Current workshop cantina/brown-jacket brief supersedes older ship/studded-vest proposals."
+}

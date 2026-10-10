@@ -705,3 +705,8 @@ Other:               2% (10 files)
 - `docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/registry.json` — received Gemini media index and scoped gallery/workflow integration requests. One creative working clip is user-approved at Detailed design; technical verification and production remain pending.
 - `docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/20261008/LAG-VID-PROOF-01_T02.provenance.json` and `.txt` — canonical download selection, unchanged-master hash/bytes, decode evidence, beginning/middle/end review and limits. The source MP4, extracted evidence JPGs/contact sheet and thumbnail stay locally ignored under the existing project media rules.
 - `docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/FILE_MANAGEMENT.txt` — preserve-master/new-take policy, derivative roles, Git/hosted packaging separation and pending verification/backup status.
+
+
+## October 8 Hon Dolo mouth-continuity planning
+
+- `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/START_HERE.txt` — finite Gemini neutral/smile/speech reference experiment, exact current grill roles, separate non-generative lighting baseline and unverified Comfy mouth-conditioning boundary; prepared only, no provider submission.

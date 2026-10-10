@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "decisionID": "HON-CAST-REVIEW-20261009-COLLECTIONS",
+  "date": "2026-10-09",
+  "source": "Direct user dashboard review",
+  "configuration": "../../../visual_library/cast_collections.json",
+  "summary": [
+    "Collapse supporting cast into one cover per character with current views and earlier studies nested together.",
+    "Leia is Hon Dolo's wife; use the ivory-coat portrait.",
+    "Chewy is the working name for the DJ; use the black-background mixer portrait; earlier Chewbacca studies remain his history.",
+    "Keep the General's earlier studies with the current armored enforcer; use source look as cover.",
+    "Hooded traveler Source 2 is the cover and an enhancement candidate.",
+    "Use portrait covers for hippo and gecko-frog concepts.",
+    "Boss shortlist is candidates 2,8,5,10; no final winner.",
+    "Candidate 9 is the bartender; candidate 6 is the club bouncer."
+  ],
+  "bossMapping": [
+    {
+      "assetID": "HD-RETURN-339cdbe1e03a",
+      "titleAtReview": "BOSS-002 · Gecko-frog",
+      "filename": "339cdbe1e03a__BOSS-002_v001.png",
+      "sha256": "339cdbe1e03ae4f6e47012e7219169f5a37961ee0fbdc5c2ebc630cab15d1d93",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/339cdbe1e03a__BOSS-002_v001.png",
+      "role": "Boss shortlist candidate"
+    },
+    {
+      "assetID": "HD-RETURN-8421e7cfa1a0",
+      "titleAtReview": "BOSS-008 · Crocodilian",
+      "filename": "8421e7cfa1a0__BOSS-008_v001.png",
+      "sha256": "8421e7cfa1a012076a33c8182620d28cf6663f068d13c3a321699de030a9078b",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/8421e7cfa1a0__BOSS-008_v001.png",
+      "role": "Boss shortlist candidate"
+    },
+    {
+      "assetID": "HD-RETURN-e18185bdab18",
+      "titleAtReview": "BOSS-005 · Catfish",
+      "filename": "e18185bdab18__BOSS-005_v001.png",
+      "sha256": "e18185bdab18fb3d84a2bf98e06aa57a9a2c0ca2b22357a18eda71de7eea5b7d",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/e18185bdab18__BOSS-005_v001.png",
+      "role": "Boss shortlist candidate"
+    },
+    {
+      "assetID": "HD-RETURN-9143639db1cf",
+      "titleAtReview": "BOSS-010 · Walrus",
+      "filename": "9143639db1cf__BOSS-010_v001.png",
+      "sha256": "9143639db1cf46e9b653002e32189124b6e5ab230775659809b1c3314c5151d2",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/9143639db1cf__BOSS-010_v001.png",
+      "role": "Boss shortlist candidate"
+    },
+    {
+      "assetID": "HD-RETURN-80d3ca6a6858",
+      "titleAtReview": "BOSS-009 · Toad",
+      "filename": "80d3ca6a6858__BOSS-009_v001.png",
+      "sha256": "80d3ca6a6858ee40bf39f6e4d224121ab1c96b498f10a3de18f1d8b6f115debb",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/80d3ca6a6858__BOSS-009_v001.png",
+      "role": "Bartender"
+    },
+    {
+      "assetID": "HD-RETURN-cafa39484145",
+      "titleAtReview": "BOSS-006 · Rhino",
+      "filename": "cafa39484145__BOSS-006_v001.png",
+      "sha256": "cafa39484145fb8dda67c9684134d6d6449f3c5cb66ac4033e27a8f79a28090a",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/cafa39484145__BOSS-006_v001.png",
+      "role": "Club bouncer"
+    }
+  ],
+  "storyboardIntents": [
+    {
+      "id": "HON-BAR-BARTENDER-20261009",
+      "project": "hon",
+      "characterCollectionID": "hon:cast-bartender",
+      "assetIDs": [
+        "HD-RETURN-80d3ca6a6858"
+      ],
+      "status": "user_story_intent",
+      "scene": "Hon Dolo at the bar",
+      "action": "Use this character as the bartender in the bar scene with Hon Dolo.",
+      "timing": "unassigned",
+      "generated": false,
+      "acceptedVideo": false
+    },
+    {
+      "id": "HON-CLUB-BOUNCER-20261009",
+      "project": "hon",
+      "characterCollectionID": "hon:cast-bouncer",
+      "assetIDs": [
+        "HD-RETURN-cafa39484145"
+      ],
+      "status": "user_story_intent",
+      "scene": "Club entrance and subsequent club coverage",
+      "action": "Introduce the imposing, large, heavily breathing bouncer when Hon Dolo enters; then show him doing his job in the background of later club shots.",
+      "timing": "unassigned",
+      "futureAction": "undecided",
+      "generated": false,
+      "acceptedVideo": false
+    }
+  ],
+  "enhancementRequest": {
+    "status": "requested_not_generated",
+    "assetID": "HD-DROP-be1c0a142301",
+    "objective": "Make Source 2 clearer while preserving its identity, expression, facial markings, hood, chains, framing and twin-sun setting.",
+    "constraints": [
+      "Preserve the original file.",
+      "Treat any added fine detail as a candidate reconstruction, not recovered truth.",
+      "Compare the candidate with Source 2 before promotion."
+    ],
+    "nextStep": "Prepare a bounded enhancement comparison from this exact source; preserve the result and defects for user review."
+  },
+  "ambiguities": [
+    {
+      "text": "The spoken sequence called candidate 2 Catfish, but the manifest labels candidate 2 Gecko-frog and candidate 5 Catfish.",
+      "resolution": "Retain the explicit final numeric shortlist 2,8,5,10, covering both named designs."
+    },
+    {
+      "text": "The gecko-frog cover request runs directly into the Chewbacca history request in the transcript.",
+      "resolution": "Keep gecko-frog as its own boss concept; place actual Chewbacca/DJ studies in Chewy history."
+    },
+    {
+      "text": "The phrase immediately before the bouncer request includes \"Max is\".",
+      "resolution": "No character name Max is assigned: the explicit role instruction is candidate 6 as the bouncer."
+    }
+  ],
+  "approval": "Role assignments, groupings and cover choices only; no blanket image approval.",
+  "delivery": "Local record prepared; no message sent to Grok by this subtask."
+}

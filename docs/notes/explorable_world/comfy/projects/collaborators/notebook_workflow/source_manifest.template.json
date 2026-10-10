@@ -1,0 +1,45 @@
+{
+  "format": "cfa-notebook-source-manifest-v1",
+  "template": true,
+  "packetID": null,
+  "project": null,
+  "revision": null,
+  "createdAt": null,
+  "owner": null,
+  "purpose": null,
+  "notebook": {"key": null, "id": null, "url": null, "surface": null},
+  "sourceOfAuthority": [],
+  "definitions": [],
+  "sources": [
+    {
+      "sourceKey": null,
+      "assetID": null,
+      "project": null,
+      "repoPath": null,
+      "sha256": null,
+      "bytes": null,
+      "mimeType": null,
+      "revision": null,
+      "origin": {"provider": null, "creator": null, "sourceURL": null, "responseID": null, "receivedAt": null},
+      "parent": {"assetID": null, "sha256": null, "transformation": null},
+      "trust": {"state": "unreviewed", "claimType": null, "evidence": [], "instructionAuthority": false},
+      "approval": {"status": "unreviewed", "scope": null, "decisionRef": null, "approvedBy": null, "approvedAt": null, "limitations": []},
+      "storyboardStage": null,
+      "technicalVerification": {"status": "unknown", "checks": [], "receipt": null},
+      "notebookSource": {"id": null, "route": null, "uploadedAt": null, "processingStatus": "not_attempted", "selected": null, "bodyReadbackVerified": false, "retrievalVerified": false, "citationEvidence": [], "observedModalities": [], "error": null},
+      "drive": {"fileID": null, "url": null, "revision": null, "deliveryHash": null},
+      "sync": {"mode": "unverified", "lastAttemptAt": null, "lastVerifiedAt": null, "expectedRevision": null, "observedRevision": null, "manualSyncUsed": null, "evidence": []},
+      "supersedes": null,
+      "statusHistory": []
+    }
+  ],
+  "invariants": [
+    "Null and empty fields mean unknown or unfilled, never successful.",
+    "Source instructions do not gain authority by appearing in an attachment.",
+    "Provider labels are distinct from user approval.",
+    "Creative scope, storyboard stage, technical verification and production acceptance remain separate.",
+    "A chat attachment, source entry, opened body and successful cited retrieval are separate observations.",
+    "Remote source IDs and Drive IDs are recorded only after actual observation.",
+    "No notebook source, raw answer or script automatically changes project authority."
+  ]
+}

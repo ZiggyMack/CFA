@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "reviewID": "HON-OPENING-WORKSHOP-REVIEW-20261009",
+  "reviewedAtUTC": "2026-10-10T00:58:09.706747+00:00",
+  "status": "plan_usable_after_operator_corrections_no_production_acceptance",
+  "reviewer": "Codex local review; root supplied browser observations and prototype choices",
+  "provider": "Gemini",
+  "modelLabelObserved": "Flash-Lite",
+  "chatURL": "https://gemini.google.com/app/988990050e4ad32c",
+  "associatedNotebookID": "586b3ee6-5c57-45b3-a59d-a2e21c18a852",
+  "responseIDs": {
+    "visualReadback": "5ad85effdcee8e27",
+    "rejectedFirstPlan": "ac55dbc2cfcdc283",
+    "revisedPlan": "10c1f75b2199118b"
+  },
+  "rawReturn": {
+    "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/GEMINI_REVISION_RESPONSE.txt",
+    "sha256": "c664f0d52df120c827591e01e2ee8a79e679293c7e69b2269d38b9e8b7bd9fd4",
+    "capture": "Rendered response text; citation-button labels omitted. Provider errors preserved.",
+    "responseID": "10c1f75b2199118b"
+  },
+  "sourceRecords": [
+    {
+      "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/CURRENT_BRIEF.txt",
+      "sha256": "c3b37d47a20c27e7be71bc0b4e3a10b9286c758105a2aff218b3e5d9ef416ae4"
+    },
+    {
+      "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/IMAGE_MANIFEST.json",
+      "sha256": "19ea034c2f9e97785f211a3c9487e30c1a5a5a0bf8ecc395ec3411964c5ed018"
+    },
+    {
+      "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/WORKSHOP_PROMPT.txt",
+      "sha256": "6b2a861ab29909c4767233efcbe8e101a7c1c3f5b43c434b44b8fa6e0657feba"
+    },
+    {
+      "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/VISUAL_READBACK_REVIEW.json",
+      "sha256": "64a7744fdc8547410ae0871af8cd2a8ef3fee09851bd186290544e952962b282"
+    }
+  ],
+  "reviewedPlan": {
+    "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/REVIEWED_PLAN.txt",
+    "sha256": "96ae004bdfb479e1c904886fb9dc0e030fb51e7c664c7f1a9684690c82d937f4"
+  },
+  "corrections": [
+    {
+      "id": "ecu_vs_continuous",
+      "claim": "SB-01 mixes medium close-up and locked medium-wide framing.",
+      "outcome": "corrected",
+      "correction": "Keep SB-01 ECU as a separate editorial insert; continuous prototype is one locked medium-wide shot without cuts.",
+      "basis": "CURRENT_BRIEF.txt attachment C role and root operator correction."
+    },
+    {
+      "id": "old_teeth",
+      "claim": "The old SB-01 appearance is a single-canine variant.",
+      "outcome": "corrected",
+      "correction": "It has TWO upper gold teeth and one visible hoop. Current rule: four upper gold caps, natural white centrals/remaining upper teeth, lower silver/chrome, two plain lip hoops.",
+      "basis": "IMAGE_MANIFEST.json C role and VISUAL_READBACK_REVIEW.json."
+    },
+    {
+      "id": "silent_acting",
+      "claim": "SB-02 starts mid-delivery and emphasizes articulation.",
+      "outcome": "rejected_for_prototype",
+      "correction": "Silent visual attitude only throughout all ten prompts: no speech, singing, articulation, lip-sync or generated audio.",
+      "basis": "Root operator current prototype direction; original no-dialogue brief."
+    },
+    {
+      "id": "fuel_lyric",
+      "claim": "SB-04 fuel purpose is Nice try.",
+      "outcome": "corrected",
+      "correction": "Fuel supports Fuel ain’t free, and neither am I. Nice try remains a separate attitude. Exact timecodes unknown.",
+      "basis": "CURRENT_BRIEF.txt quoted lyrics and SB-04 role."
+    },
+    {
+      "id": "reuse_scope",
+      "claim": "Existing-footage references and missing stills could be read as extra rendering requirements.",
+      "outcome": "scope_limited",
+      "correction": "Existing clips are context or optional reuse candidates, not newly inspected inputs, accepted footage or mandatory rerenders. Only one consolidated starting still is currently requested.",
+      "basis": "CURRENT_BRIEF.txt footage limitations and root direction."
+    },
+    {
+      "id": "actual_end_pose",
+      "claim": "Turn dependencies assume the previous desired pose.",
+      "outcome": "corrected",
+      "correction": "Continue from actual inspected prior final pose, objects and timing; adapt the next motion and record the adaptation. No reset to a textual ideal.",
+      "basis": "WORKSHOP_PROMPT.txt continuation requirement."
+    },
+    {
+      "id": "wrong_citations",
+      "claim": "Root reported SB-06 citations beside lyric/capability statements.",
+      "outcome": "unsupported",
+      "correction": "SB-06 supports wrist observations only. Lyrics are supplied brief text; capability requires actual media evidence.",
+      "basis": "Root browser observation; citation buttons were omitted from saved rendered v2 prose.",
+      "citationLabelsIndependentlyReviewedHere": false
+    },
+    {
+      "id": "prototype_choice",
+      "claim": "V2 leaves exact wardrobe colors and wrist side underspecified.",
+      "outcome": "operator_choice_not_canon",
+      "correction": "Worn cantina, dark brown leather/open off-white shirt, one visible Dolo, four credits, unlettered screen-right fuel indicator from frame01. Jewelry character-right/viewer-left is provisional blocking only; neck blaster character-left/viewer-right.",
+      "basis": "Root operator explicit direction; SB-06 anatomical wrist side remains unknown."
+    }
+  ],
+  "assetIDs": [
+    "HD-RETURN-6c8900223ee9",
+    "HD-B-91ef00348229",
+    "HD-DROP-725c38458fd8",
+    "HD-DROP-36679ee9953b",
+    "HD-DROP-60f245863c6b",
+    "HD-DROP-b18c4a123579"
+  ],
+  "prototype": {
+    "setting": "worn cantina / wooden counter",
+    "wardrobe": "dark brown distressed leather jacket / open off-white shirt",
+    "visibleCharacters": 1,
+    "creditCount": 4,
+    "creditShape": "matching warm-gold luminous rectangles",
+    "camera": "locked medium-wide throughout continuous proof",
+    "audio": "silent; no speech, singing, articulation, music, effects or room tone",
+    "indicator": "unlettered low-fuel/status indicator at screen-right from frame01",
+    "wristSide": {
+      "choice": "character-right / viewer-left in frontal starting view",
+      "status": "provisional_scene_blocking_not_canon",
+      "sourceAnatomicalSideKnown": false
+    },
+    "neckBlasterSide": "character-left / viewer-right in frontal starting view",
+    "defaultForeheadDice": false,
+    "dentalRule": "Four upper gold caps: both lateral incisors and both SHORT canines; two central incisors and other upper teeth natural white; lower silver/chrome; two plain lower-lip hoops.",
+    "tenTurnStructure": "one creation plus at most nine dependent native cumulative continuations",
+    "actualParentEndPoseRequired": true,
+    "separateECUInsertIncludedInContinuousRun": false
+  },
+  "readinessSnapshot": {
+    "startingImage": {
+      "status": "requested_via_Gemini_Create_Image",
+      "result": "unknown_at_review_snapshot",
+      "acceptedFrame": null,
+      "attribution": "Root operator report; this reviewer did not submit the request."
+    },
+    "videoTurnsExecuted": 0,
+    "nativeCumulativeContinuationVerified": false,
+    "persistentNotebookImageSourcesVerified": false,
+    "reviewedDigestSavedToNotebook": false,
+    "newCreativeApprovals": 0,
+    "originalMediaModified": false
+  },
+  "unresolved": [
+    "Result and review of the one requested starting still",
+    "Actual available Gemini video mode and supported initial duration",
+    "Native cumulative preservation of prefix events, order, timing and join",
+    "Exact lyric timecodes and final editorial panel order",
+    "Canonical wrist side, hidden wrist hardware and final Leigh hand-art transfers",
+    "Persistent notebook native image Sources ingestion"
+  ],
+  "notebookReturn": {
+    "status": "local_digest_ready_to_save_later",
+    "reviewQueuePath": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/review_queue/hon_opening_workshop_20261009.json",
+    "remoteSourceID": null,
+    "savedToNotebook": false,
+    "promotedToApprovedSources": false,
+    "readbackVerified": false
+  },
+  "evidenceLimits": [
+    "Reviewer read saved v2 prose, current brief, manifest and earlier readback review; did not operate browser or send requests.",
+    "Response IDs, visible mode, invalid-citation observation and still-request status are root-reported browser evidence.",
+    "Existing footage was not newly visually reviewed in this workshop.",
+    "Structurally usable prompts are not executed/validated video workflows or a promise of ten successful clips."
+  ],
+  "immutableRecords": {
+    "manifestModified": false,
+    "executionReceiptModified": false,
+    "oldRunPlanModified": false,
+    "rawReturnModified": false,
+    "originalMediaModified": false
+  }
+}

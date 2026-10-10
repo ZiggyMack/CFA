@@ -3,7 +3,7 @@
     "id": "hon-prime-details",
     "project": "hon",
     "character": "Hon Dolo",
-    "title": "Hon Dolo — details by object",
+    "title": "Hon Dolo — artwork catalog",
     "objects": [
       {
         "id": "hon-eye",
@@ -12,11 +12,19 @@
         "location": "Character-right cheek; viewer-left in frontal LOCK-FACE",
         "status": "current_on_body_original_art_unverified",
         "summary": "Small eye script in current anchor. No verified standalone original, transparent stencil or exact font recovered. Do not substitute the retired literal third eye.",
-        "assetIDs": [
+        "assetIDs": [],
+        "stencilAssetIDs": [],
+        "exampleAssetIDs": [
           "HD-DROP-ef5d59a6402e"
         ],
-        "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": true
       },
       {
         "id": "hon-know",
@@ -25,24 +33,89 @@
         "location": "Character-left cheek; viewer-right in frontal LOCK-FACE",
         "status": "current_on_body_original_art_unverified",
         "summary": "Small know script in current anchor. Independently recover its artwork and placement; the eye and know are separate objects. No verified standalone original recovered.",
-        "assetIDs": [
+        "assetIDs": [],
+        "stencilAssetIDs": [],
+        "exampleAssetIDs": [
           "HD-DROP-ef5d59a6402e"
         ],
-        "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": true
       },
       {
         "id": "hon-neck-blaster",
         "title": "Neck blaster and smoke",
         "kind": "tattoo",
         "location": "Character-left neck; viewer-right in frontal LOCK-FACE",
-        "status": "current_on_body_original_art_unverified",
-        "summary": "Current blaster/smoke treatment. #259 and three stencil-named helpers are on-body photo crops, not original flat art. Their exact file/hash audit is in handoffs/grok_20261008/asset_map.json; no false stencil ID is created here.",
+        "status": "recovered_flat_art_unreviewed_lineage_unverified",
+        "summary": "Recovered panel #3 provides a real flat drawing of the blaster and smoke. The main image is an unaltered RGB crop of that drawing, not a body photograph. The full sheet, threshold black-and-white export and automatic transparent derivative are retained below. Original-upload lineage and exact on-body transfer remain unverified; user approval is still needed.",
         "assetIDs": [
+          "HD-RETURN-93e4112511ce"
+        ],
+        "stencilAssetIDs": [
+          "HD-RETURN-c3ce2dd18e1e",
+          "HD-RETURN-753a7d9432ab",
+          "HD-RETURN-c91af37e775d"
+        ],
+        "exampleAssetIDs": [
           "HD-DROP-ef5d59a6402e"
         ],
-        "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "artworkAssetIDs": [
+          "HD-RETURN-93e4112511ce"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "Verified receipt and provider source records establish received drawing bytes, not user approval or original-upload authorship."
+        },
+        "artworkApprovalSource": "2026-10-09 verified Grok return; no user artwork approval recorded.",
+        "needsArtwork": false,
+        "sourceAssessmentHistory": [
+          {
+            "recorded": "2026-10-09",
+            "status": "current_on_body_original_art_unverified",
+            "summary": "Current blaster/smoke treatment. #259 and three stencil-named helpers are on-body photo crops, not original flat art. Their exact file/hash audit is in handoffs/grok_20261008/asset_map.json; no false stencil ID is created here.",
+            "reason": "Preserved assessment from before the verified Grok return recovered flat sheet artwork."
+          }
+        ],
+        "sourceLineageVerified": false,
+        "sourceReceiptPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/intake_receipt.json",
+        "artworkProvenance": [
+          {
+            "assetID": "HD-RETURN-93e4112511ce",
+            "filename": "ST-HD-BLASTER_sheet-c91af37e_panel3_derived-crop_900-0-1280-330.png",
+            "sha256": "93e4112511ced7856c91c4472facd474ade247019267e22682a1da74bc7e7c14",
+            "role": "Main: unaltered RGB crop of panel #3, source bounds x=900..1280, y=0..330; tight left edge."
+          },
+          {
+            "assetID": "HD-RETURN-c3ce2dd18e1e",
+            "filename": "ST-HD-BLASTER_sheet-c91af37e_panel3_derived-crop_flat-black-on-white.png",
+            "sha256": "c3ce2dd18e1eb940f978526e38ef56384bab23544a59d41aeaeff8672f4befe2",
+            "role": "Deeper derivative: hard threshold of the flat drawing; hatching becomes speckle and smoke loses detail; not hand-cleaned."
+          },
+          {
+            "assetID": "HD-RETURN-753a7d9432ab",
+            "filename": "ST-HD-BLASTER_sheet-c91af37e_panel3_derived-crop_transparent.png",
+            "sha256": "753a7d9432abeb7f0111d4ae1925425a66207f68a8c2bef1c32c76a479f21d55",
+            "role": "Deeper derivative: automatic white-to-alpha export; interior fills, halos and hatching need review; not an original transparent stencil."
+          },
+          {
+            "assetID": "HD-RETURN-c91af37e775d",
+            "filename": "c91af37e775d5e6d941d2bc05fcc2f26f1ad4ad9a50caa1427a5dd3c01755419.jpg",
+            "sha256": "c91af37e775d5e6d941d2bc05fcc2f26f1ad4ad9a50caa1427a5dd3c01755419",
+            "role": "Source context: recovered six-option RGB sheet. Only panel #3 is linked to the current neck design; other motifs are not adopted."
+          }
+        ],
+        "reviewNotes": [
+          "The on-body rendering is rotated/scaled; this drawing is not a measured placement stencil.",
+          "The previous #259 and stencil-named photo helpers remain body-placement evidence only.",
+          "Documentary and pixel-crop evidence support the recovered-sheet link; original-upload status is inferred, not proven."
+        ]
       },
       {
         "id": "hon-chest-current",
@@ -51,14 +124,23 @@
         "location": "Upper chest / collar opening",
         "status": "current_visible_placement_complete_art_unresolved",
         "summary": "Use the visible ship in LOCK-FACE. #107 and #112/116/117/121 are reported but original file associations remain unverified. Hidden full drawing and calibrated physical size are not established.",
-        "assetIDs": [
-          "HD-DROP-ef5d59a6402e"
-        ],
+        "assetIDs": [],
         "stencilAssetIDs": [],
         "exampleAssetIDs": [
+          "HD-DROP-ef5d59a6402e"
+        ],
+        "relatedArtworkAssetIDs": [
           "HD-DROP-a428b6f6fa65",
           "HD-DROP-ef58d546cccd"
-        ]
+        ],
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": true
       },
       {
         "id": "hon-ship-perspective",
@@ -71,7 +153,19 @@
           "HD-DROP-a428b6f6fa65"
         ],
         "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "HD-DROP-a428b6f6fa65"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": false,
+        "archiveOnly": true,
+        "artworkFormat": "White-background JPEG drawing; not a verified transparent/vector original"
       },
       {
         "id": "hon-ship-schematic",
@@ -84,20 +178,62 @@
           "HD-DROP-ef58d546cccd"
         ],
         "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "HD-DROP-ef58d546cccd"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": false,
+        "archiveOnly": true,
+        "artworkFormat": "White-background JPEG drawing; not a verified transparent/vector original"
       },
       {
         "id": "hon-upper-canines",
-        "title": "Upper gold canines",
+        "title": "Upper gold grill · four caps",
         "kind": "grillz",
-        "location": "Two upper canine positions",
-        "status": "current_direction",
-        "summary": "Two slightly extended gold canine caps; other upper teeth natural. No full gold top row or oversized vampire fangs. Small mouth view cannot resolve fabrication geometry.",
-        "assetIDs": [
+        "location": "Two upper lateral incisors and two canine positions",
+        "status": "user_confirmed_current_direction",
+        "summary": "Current rule: two white natural central incisors; gold lateral incisors and short gold canine caps, four gold uppers total. Other upper teeth natural; no full-gold top row or oversized fangs. This supersedes the earlier two-canines-only text. Latest Photo 1 illustrates the four-cap pattern but has nose-jewelry drift; Photo 2 shows excess gold and is a correction example. This is the external-grill-off base; the optional iced-on accessory has its own matched collection.",
+        "assetIDs": [],
+        "stencilAssetIDs": [],
+        "exampleAssetIDs": [
+          "HD-MOUTH-UPDATE-20261009-01",
+          "HD-MOUTH-UPDATE-20261009-02",
           "HD-DROP-ef5d59a6402e"
         ],
-        "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": false,
+        "referenceSummaryBefore20261009Update": "Two slightly extended gold canine caps; other upper teeth natural. No full gold top row or oversized vampire fangs. Small mouth view cannot resolve fabrication geometry.",
+        "latestUserReferenceAssetIDs": [
+          "HD-MOUTH-UPDATE-20261009-01",
+          "HD-MOUTH-UPDATE-20261009-02"
+        ],
+        "latestUserReferenceAssessment": {
+          "date": "2026-10-09",
+          "note": "Current rule: two white natural central incisors; gold lateral incisors and short gold canine caps, four gold uppers total. Other upper teeth natural; no full-gold top row or oversized fangs. This supersedes the earlier two-canines-only text. Latest Photo 1 illustrates the four-cap pattern but has nose-jewelry drift; Photo 2 shows excess gold and is a correction example.",
+          "intakePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/user_mouth_update_20261009/intake.json",
+          "scope": "Static detail evidence only; whole identity and temporal fidelity unestablished",
+          "decisionEvidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/head_library_20261009/grok_conversation_evidence.json"
+        },
+        "referenceUpdateStatus": "resolved_four_upper_gold",
+        "designDecision": {
+          "status": "user_confirmed",
+          "recordedAtUTC": "2026-10-09T15:38:54.522059+00:00",
+          "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/head_library_20261009/grok_conversation_evidence.json",
+          "scope": "Hon Dolo upper dental layout"
+        },
+        "grillState": "external_off"
       },
       {
         "id": "hon-lower-grill",
@@ -105,12 +241,36 @@
         "kind": "grillz",
         "location": "Lower tooth row",
         "status": "current_direction",
-        "summary": "Silver/chrome lower grill. Older iced/full-gold closeups are not automatic current replacements.",
-        "assetIDs": [
+        "summary": "Silver/chrome lower grill. Older iced/full-gold closeups are not automatic current replacements. The two latest user-supplied mouth close-ups provide clearer silver/chrome lower front-row examples. Exact hidden coverage and motion preservation are unverified. This is the external-grill-off base; the optional iced-on accessory has its own matched collection.",
+        "assetIDs": [],
+        "stencilAssetIDs": [],
+        "exampleAssetIDs": [
+          "HD-MOUTH-UPDATE-20261009-01",
+          "HD-MOUTH-UPDATE-20261009-02",
           "HD-DROP-ef5d59a6402e"
         ],
-        "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": false,
+        "referenceSummaryBefore20261009Update": "Silver/chrome lower grill. Older iced/full-gold closeups are not automatic current replacements.",
+        "latestUserReferenceAssetIDs": [
+          "HD-MOUTH-UPDATE-20261009-01",
+          "HD-MOUTH-UPDATE-20261009-02"
+        ],
+        "latestUserReferenceAssessment": {
+          "date": "2026-10-09",
+          "note": "The two latest user-supplied mouth close-ups provide clearer silver/chrome lower front-row examples. Exact hidden coverage and motion preservation are unverified.",
+          "intakePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/user_mouth_update_20261009/intake.json",
+          "scope": "Static detail evidence only; whole identity and temporal fidelity unestablished"
+        },
+        "referenceUpdateStatus": "latest_user_detail_examples_linked",
+        "headReferenceStandardPath": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt",
+        "grillState": "external_off"
       },
       {
         "id": "hon-nose",
@@ -118,12 +278,33 @@
         "kind": "piercing",
         "location": "Nostrils; visible both sides in frontal anchor",
         "status": "current_visible_reference",
-        "summary": "Match actual visible nose hoops. Do not infer hidden construction or assume changed views verify exact dimensions.",
-        "assetIDs": [
+        "summary": "Match actual visible nose hoops. Do not infer hidden construction or assume changed views verify exact dimensions. Latest mouth Photo 2 shows laterally separated nostril hoops. Photo 1 is centrally cropped/ambiguous and must not establish nostril placement.",
+        "assetIDs": [],
+        "stencilAssetIDs": [],
+        "exampleAssetIDs": [
+          "HD-MOUTH-UPDATE-20261009-02",
           "HD-DROP-ef5d59a6402e"
         ],
-        "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": false,
+        "referenceSummaryBefore20261009Update": "Match actual visible nose hoops. Do not infer hidden construction or assume changed views verify exact dimensions.",
+        "latestUserReferenceAssetIDs": [
+          "HD-MOUTH-UPDATE-20261009-02"
+        ],
+        "latestUserReferenceAssessment": {
+          "date": "2026-10-09",
+          "note": "Latest mouth Photo 2 shows laterally separated nostril hoops. Photo 1 is centrally cropped/ambiguous and must not establish nostril placement.",
+          "intakePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/user_mouth_update_20261009/intake.json",
+          "scope": "Static detail evidence only; whole identity and temporal fidelity unestablished"
+        },
+        "referenceUpdateStatus": "latest_user_detail_examples_linked",
+        "headReferenceStandardPath": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt"
       },
       {
         "id": "hon-lips",
@@ -131,12 +312,35 @@
         "kind": "piercing",
         "location": "Lower lip, two visible positions",
         "status": "current_visible_reference",
-        "summary": "Keep two lower lip rings as shown by the current anchor. Do not drop or duplicate them across angles.",
-        "assetIDs": [
+        "summary": "Keep two lower lip rings as shown by the current anchor. Do not drop or duplicate them across angles. The two latest mouth close-ups show plain lower-lip hoops without visible ball ends, unlike several earlier generated visemes. Use these for ring style; positions and dimensions must still track the face anchor.",
+        "assetIDs": [],
+        "stencilAssetIDs": [],
+        "exampleAssetIDs": [
+          "HD-MOUTH-UPDATE-20261009-01",
+          "HD-MOUTH-UPDATE-20261009-02",
           "HD-DROP-ef5d59a6402e"
         ],
-        "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": false,
+        "referenceSummaryBefore20261009Update": "Keep two lower lip rings as shown by the current anchor. Do not drop or duplicate them across angles.",
+        "latestUserReferenceAssetIDs": [
+          "HD-MOUTH-UPDATE-20261009-01",
+          "HD-MOUTH-UPDATE-20261009-02"
+        ],
+        "latestUserReferenceAssessment": {
+          "date": "2026-10-09",
+          "note": "The two latest mouth close-ups show plain lower-lip hoops without visible ball ends, unlike several earlier generated visemes. Use these for ring style; positions and dimensions must still track the face anchor.",
+          "intakePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/user_mouth_update_20261009/intake.json",
+          "scope": "Static detail evidence only; whole identity and temporal fidelity unestablished"
+        },
+        "referenceUpdateStatus": "latest_user_detail_examples_linked",
+        "headReferenceStandardPath": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt"
       },
       {
         "id": "hon-ear-right",
@@ -145,11 +349,19 @@
         "location": "Character-right ear; viewer-left in frontal anchor",
         "status": "current_visible_reference",
         "summary": "Visible stud reference; other jewelry on hidden ear surfaces is unknown.",
-        "assetIDs": [
+        "assetIDs": [],
+        "stencilAssetIDs": [],
+        "exampleAssetIDs": [
           "HD-DROP-ef5d59a6402e"
         ],
-        "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": false
       },
       {
         "id": "hon-ear-left",
@@ -158,11 +370,19 @@
         "location": "Character-left ear; viewer-right in frontal anchor",
         "status": "current_visible_reference",
         "summary": "Visible hoop reference. Do not replace with an invented extra hanging assembly without task-specific creative intent.",
-        "assetIDs": [
+        "assetIDs": [],
+        "stencilAssetIDs": [],
+        "exampleAssetIDs": [
           "HD-DROP-ef5d59a6402e"
         ],
-        "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": false
       },
       {
         "id": "hon-brow",
@@ -171,11 +391,20 @@
         "location": "Character-left brow; viewer-right",
         "status": "reported_direction_visibility_open",
         "summary": "Reported small slit, with subtle visibility. No eyebrow piercing in the Prime default.",
-        "assetIDs": [
+        "assetIDs": [],
+        "stencilAssetIDs": [],
+        "exampleAssetIDs": [
           "HD-DROP-ef5d59a6402e"
         ],
-        "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": false,
+        "archiveOnly": true
       },
       {
         "id": "hon-forearm-scoundrel",
@@ -186,18 +415,54 @@
         "summary": "#206 look is described as small worn blackletter. Source handoff conflicts between locked and soft-keep. Not visible in LOCK-FACE; do not claim a recovered drawing or guess placement.",
         "assetIDs": [],
         "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": true
       },
       {
         "id": "hon-hand-card",
-        "title": "Leigh / Queen of Hearts",
+        "title": "Princess Leigh · hearts / spades options",
         "kind": "tattoo",
         "location": "Character-right hand",
-        "status": "reported_soft_source_missing",
-        "summary": "Reported Leigh / Princess Queen of Hearts direction. Not visible in current anchor; no verified original drawing. Older holstered-blaster/spades hand motifs are retired.",
+        "status": "artwork_options_received_final_transfer_unselected",
+        "summary": "Hearts is the current reported hand direction; both hearts and spades standalone design options are now available. Character-right remains the ledger default. The body crop has Leigh inside the card; the supplied paper drawings place Princess above and Leigh outside. Choose the final composition and suit explicitly. These are white-background raster designs, not exact recovered or transparent transfer originals.",
         "assetIDs": [],
         "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "exampleAssetIDs": [
+          "HD-HAND-LEIGH-PLACEMENT-20261009"
+        ],
+        "artworkAssetIDs": [
+          "HD-HAND-LEIGH-HEARTS-20261009",
+          "HD-HAND-LEIGH-SPADES-20261009"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "options_received_final_selection_pending",
+          "source": "User supplied both as options; no final standalone transfer selected."
+        },
+        "artworkApprovalSource": "User supplied both as options; no final standalone transfer selected.",
+        "needsArtwork": false,
+        "previousSummaryBeforeGrillHandIntake20261009": "Reported Leigh / Princess Queen of Hearts direction. Not visible in current anchor; no verified original drawing. Older holstered-blaster/spades hand motifs are retired.",
+        "exactOriginalArtworkMissing": true,
+        "variantOptions": [
+          {
+            "variant": "hearts",
+            "assetID": "HD-HAND-LEIGH-HEARTS-20261009",
+            "status": "supplied_option"
+          },
+          {
+            "variant": "spades",
+            "assetID": "HD-HAND-LEIGH-SPADES-20261009",
+            "status": "supplied_option"
+          }
+        ],
+        "intakePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/reference_updates/grill_and_hand_20261009/intake.json"
       },
       {
         "id": "hon-bird-optional",
@@ -208,7 +473,16 @@
         "summary": "User retained possible future bird idea. Earlier falcon/Jabba/Chewie/dice era is not restored. No selected new bird drawing or approved current placement exists.",
         "assetIDs": [],
         "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": false,
+        "archiveOnly": true
       },
       {
         "id": "hon-multiverse-armor",
@@ -217,19 +491,58 @@
         "location": "Visible face/body on armor reference",
         "status": "multiverse_only",
         "summary": "Explicit user designation: preserve as Multiverse Dolo creative ingredients. Exclude Prime collaborator handoffs unless that variant is requested. No individual tattoo art match is claimed from this image.",
-        "assetIDs": [
+        "assetIDs": [],
+        "stencilAssetIDs": [],
+        "exampleAssetIDs": [
           "HD-DROP-19593c0144ed"
         ],
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": false,
+        "archiveOnly": true
+      },
+      {
+        "id": "hon-optional-external-grill",
+        "title": "Optional external iced grill",
+        "kind": "grillz",
+        "location": "Upper teeth; optional external accessory",
+        "status": "optional_variant_refinement_pending",
+        "summary": "Keep the current four-gold/silver base as external_off. For external_iced_on, use the separate iced design. Ziggy chose provider r5 as starting inspiration and requested fangs about 10% shorter; the refined anchor is still awaiting selection. Existing Hon iced close-up and pinstripe portrait are accessory/identity-context references with other historical defects, not whole-character masters. Match mouth/view/pitch states between collections.",
+        "optional": true,
+        "availability": "optional_on_request",
+        "defaultEnabled": false,
+        "grillState": "external_iced_on",
+        "assetIDs": [],
         "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "exampleAssetIDs": [
+          "HD-DROP-defe480b085f",
+          "HD-DROP-71cad143227a"
+        ],
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "no_standalone_artwork",
+          "source": "User explicitly retained accessory; forthcoming refined anchor unaccepted."
+        },
+        "artworkApprovalSource": "User requested external-on collection, separate from unchanged off base.",
+        "needsArtwork": false,
+        "referenceRole": "Optional iced accessory; exclude unrelated jewelry/tattoo defects",
+        "intakePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/reference_updates/grill_and_hand_20261009/intake.json"
       }
-    ]
+    ],
+    "artworkCatalogVersion": 1,
+    "artworkApprovalPolicy": "Only approvedArtworkAssetIDs represents user-approved standalone artwork. Body-reference approval, provider choices and favorites do not approve all artwork options."
   },
   {
     "id": "lisan-current-details",
     "project": "lisan",
     "character": "Lisan Al Gaib",
-    "title": "Lisan Al Gaib — details by object",
+    "title": "Lisan Al Gaib — artwork catalog",
     "objects": [
       {
         "id": "lisan-al",
@@ -238,11 +551,19 @@
         "location": "Between eyebrows",
         "status": "current_on_body_original_art_unverified",
         "summary": "Small AL lettering in FACE-NATURAL. Do not import Hon Dolo eye/know. No independently recovered standalone lettering source verified.",
-        "assetIDs": [
+        "assetIDs": [],
+        "stencilAssetIDs": [],
+        "exampleAssetIDs": [
           "LAG-602a9fd4021dc356"
         ],
-        "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": true
       },
       {
         "id": "lisan-gaib",
@@ -251,41 +572,85 @@
         "location": "Central chin",
         "status": "current_on_body_original_art_unverified",
         "summary": "Small vertical G-A-I-B in FACE-NATURAL. No exact font/original flat artwork verified.",
-        "assetIDs": [
-          "LAG-602a9fd4021dc356"
-        ],
+        "assetIDs": [],
         "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "exampleAssetIDs": [
+          "LAG-602a9fd4021dc356"
+        ],
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": true
       },
       {
-        "id": "lisan-neck-left",
-        "title": "Left neck sandworm",
+        "id": "lisan-neck-sandworm",
+        "title": "Neck sandworm",
         "kind": "tattoo",
-        "location": "Character-left neck / viewer-right",
+        "location": "Paired design across character-left and character-right neck, with maws below the jaw",
         "status": "current_body_with_related_design_sheet",
-        "summary": "Maw rises under jaw in current FACE-NATURAL. SH-STENCIL-18.jpg is a related white-background placement design; its worm geometry differs from the body rendering. It is not an exact recovered transparent original.",
+        "summary": "Maw rises under jaw in current FACE-NATURAL. SH-STENCIL-18.jpg is a related white-background placement design; its worm geometry differs from the body rendering. It is not an exact recovered transparent original. Paired worm on opposite neck side. Inspect asymmetry from the actual face anchor rather than mirroring blindly. SH-18 is lineage/placement art, not an exact pixel match.",
         "assetIDs": [
-          "LAG-602a9fd4021dc356"
+          "LAG-999483744679e3bd"
         ],
         "stencilAssetIDs": [
           "LAG-999483744679e3bd"
         ],
-        "exampleAssetIDs": []
-      },
-      {
-        "id": "lisan-neck-right",
-        "title": "Right neck sandworm",
-        "kind": "tattoo",
-        "location": "Character-right neck / viewer-left",
-        "status": "current_body_with_related_design_sheet",
-        "summary": "Paired worm on opposite neck side. Inspect asymmetry from the actual face anchor rather than mirroring blindly. SH-18 is lineage/placement art, not an exact pixel match.",
-        "assetIDs": [
+        "exampleAssetIDs": [
           "LAG-602a9fd4021dc356"
         ],
-        "stencilAssetIDs": [
+        "sourceObjectIDs": [
+          "lisan-neck-left",
+          "lisan-neck-right"
+        ],
+        "sourceObjects": [
+          {
+            "id": "lisan-neck-left",
+            "title": "Left neck sandworm",
+            "kind": "tattoo",
+            "location": "Character-left neck / viewer-right",
+            "status": "current_body_with_related_design_sheet",
+            "summary": "Maw rises under jaw in current FACE-NATURAL. SH-STENCIL-18.jpg is a related white-background placement design; its worm geometry differs from the body rendering. It is not an exact recovered transparent original.",
+            "assetIDs": [
+              "LAG-602a9fd4021dc356"
+            ],
+            "stencilAssetIDs": [
+              "LAG-999483744679e3bd"
+            ],
+            "exampleAssetIDs": []
+          },
+          {
+            "id": "lisan-neck-right",
+            "title": "Right neck sandworm",
+            "kind": "tattoo",
+            "location": "Character-right neck / viewer-left",
+            "status": "current_body_with_related_design_sheet",
+            "summary": "Paired worm on opposite neck side. Inspect asymmetry from the actual face anchor rather than mirroring blindly. SH-18 is lineage/placement art, not an exact pixel match.",
+            "assetIDs": [
+              "LAG-602a9fd4021dc356"
+            ],
+            "stencilAssetIDs": [
+              "LAG-999483744679e3bd"
+            ],
+            "exampleAssetIDs": []
+          }
+        ],
+        "artworkAssetIDs": [
           "LAG-999483744679e3bd"
         ],
-        "exampleAssetIDs": []
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": false,
+        "artworkFormat": "White-background JPEG design sheet; includes placement/body-outline drawing",
+        "artworkMatchStatus": "Related design sheet, not a verified pixel-identical original of the current body rendering",
+        "artworkSelectionHistory": "Provider LOCK-V2 selected SH-13 for the arm and SH-18 for the neck. This does not establish fresh user approval of standalone artwork."
       },
       {
         "id": "lisan-throat-eye",
@@ -294,13 +659,22 @@
         "location": "Center throat",
         "status": "current_body_original_art_unverified",
         "summary": "FACE-NATURAL shows an eye inside a rayed disc. SH-18 has an empty sun center, so it does not supply the missing eye artwork. Do not silently substitute the empty disc.",
-        "assetIDs": [
-          "LAG-602a9fd4021dc356"
-        ],
+        "assetIDs": [],
         "stencilAssetIDs": [],
         "exampleAssetIDs": [
+          "LAG-602a9fd4021dc356"
+        ],
+        "relatedArtworkAssetIDs": [
           "LAG-999483744679e3bd"
-        ]
+        ],
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": true
       },
       {
         "id": "lisan-arm-worm",
@@ -310,12 +684,27 @@
         "status": "current_arm_only_related_design_sheet",
         "summary": "ARM-SH13 is the arm-only placement reference; its face/grill/jewelry are retired. SH-STENCIL-13 is a real black-on-white body-outline design sheet, not a transparent cutout or exact pixel-identical arm rendering.",
         "assetIDs": [
-          "LAG-5c47f12190e9ba68"
+          "LAG-90a23dd1c40fb5c2"
         ],
         "stencilAssetIDs": [
           "LAG-90a23dd1c40fb5c2"
         ],
-        "exampleAssetIDs": []
+        "exampleAssetIDs": [
+          "LAG-5c47f12190e9ba68"
+        ],
+        "artworkAssetIDs": [
+          "LAG-90a23dd1c40fb5c2"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": false,
+        "artworkFormat": "White-background JPEG design sheet; includes placement/body-outline drawing",
+        "artworkMatchStatus": "Related design sheet, not a verified pixel-identical original of the current body rendering",
+        "artworkSelectionHistory": "Provider LOCK-V2 selected SH-13 for the arm and SH-18 for the neck. This does not establish fresh user approval of standalone artwork."
       },
       {
         "id": "lisan-nose",
@@ -324,11 +713,19 @@
         "location": "Character-left nostril / viewer-right",
         "status": "current_visible_reference",
         "summary": "One silver nostril hoop in FACE-NATURAL. Do not copy the two hoops from the arm-only reference.",
-        "assetIDs": [
+        "assetIDs": [],
+        "stencilAssetIDs": [],
+        "exampleAssetIDs": [
           "LAG-602a9fd4021dc356"
         ],
-        "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": false
       },
       {
         "id": "lisan-brow",
@@ -337,11 +734,19 @@
         "location": "Character-left brow / viewer-right",
         "status": "current_visible_reference",
         "summary": "Silver brow ring visible in FACE-NATURAL. This differs intentionally from Prime Hon Dolo.",
-        "assetIDs": [
+        "assetIDs": [],
+        "stencilAssetIDs": [],
+        "exampleAssetIDs": [
           "LAG-602a9fd4021dc356"
         ],
-        "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": false
       },
       {
         "id": "lisan-ear",
@@ -350,11 +755,19 @@
         "location": "Character-left ear / viewer-right",
         "status": "current_visible_reference",
         "summary": "Visible silver ear hoop. Opposite ear jewelry cannot be established from this frame.",
-        "assetIDs": [
+        "assetIDs": [],
+        "stencilAssetIDs": [],
+        "exampleAssetIDs": [
           "LAG-602a9fd4021dc356"
         ],
-        "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": false
       },
       {
         "id": "lisan-teeth",
@@ -362,13 +775,792 @@
         "kind": "teeth",
         "location": "Mouth",
         "status": "current_direction",
-        "summary": "Normal natural white teeth; no grill, gold, iced row or fangs. Later source update and FACE-NATURAL supersede the earlier LOCK-V2 grill paragraph.",
-        "assetIDs": [
+        "summary": "Default: normal natural white teeth, with no grill, gold, iced row or fangs. The separately user-approved LAG-LOCK-FACE iced-grill design remains available for requested optional looks; natural teeth does not retire that accessory.",
+        "assetIDs": [],
+        "stencilAssetIDs": [],
+        "exampleAssetIDs": [
           "LAG-602a9fd4021dc356"
         ],
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "needsArtwork": false,
+        "archiveOnly": true
+      },
+      {
+        "id": "lisan-art-sh-01",
+        "title": "Sandworm design 01",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-01.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-12f5890ef32c1757"
+        ],
+        "stencilAssetIDs": [
+          "LAG-12f5890ef32c1757"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-12f5890ef32c1757"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-art-sh-02",
+        "title": "Sandworm design 02",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-02.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-aef8aaca5b471233"
+        ],
+        "stencilAssetIDs": [
+          "LAG-aef8aaca5b471233"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-aef8aaca5b471233"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-art-sh-03",
+        "title": "Sandworm design 03",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-03.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-58cb9d4c2e2ec87d"
+        ],
+        "stencilAssetIDs": [
+          "LAG-58cb9d4c2e2ec87d"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-58cb9d4c2e2ec87d"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-art-sh-04",
+        "title": "Sandworm design 04",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-04.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-13502173def50452"
+        ],
+        "stencilAssetIDs": [
+          "LAG-13502173def50452"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-13502173def50452"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-art-sh-05",
+        "title": "Sandworm design 05",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-05.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-0eb5bd8d69b0d018"
+        ],
+        "stencilAssetIDs": [
+          "LAG-0eb5bd8d69b0d018"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-0eb5bd8d69b0d018"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-art-sh-06",
+        "title": "Sandworm design 06",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-06.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-40031beac8f33a19"
+        ],
+        "stencilAssetIDs": [
+          "LAG-40031beac8f33a19"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-40031beac8f33a19"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-art-sh-07",
+        "title": "Sandworm design 07",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-07.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-a5fcd445c0e8f920"
+        ],
+        "stencilAssetIDs": [
+          "LAG-a5fcd445c0e8f920"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-a5fcd445c0e8f920"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-art-sh-08",
+        "title": "Sandworm design 08",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-08.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-6d4dd90906ec13f2"
+        ],
+        "stencilAssetIDs": [
+          "LAG-6d4dd90906ec13f2"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-6d4dd90906ec13f2"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-art-sh-09",
+        "title": "Sandworm design 09",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-09.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-1e6e51caaf9acaea"
+        ],
+        "stencilAssetIDs": [
+          "LAG-1e6e51caaf9acaea"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-1e6e51caaf9acaea"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-art-sh-10",
+        "title": "Sandworm design 10",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-10.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-47c68207e0720a35"
+        ],
+        "stencilAssetIDs": [
+          "LAG-47c68207e0720a35"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-47c68207e0720a35"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-art-sh-11",
+        "title": "Sandworm design 11",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-11.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-5d5d430540f7b009"
+        ],
+        "stencilAssetIDs": [
+          "LAG-5d5d430540f7b009"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-5d5d430540f7b009"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-art-sh-12",
+        "title": "Sandworm design 12",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-12.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-0b3449678cb1a8e5"
+        ],
+        "stencilAssetIDs": [
+          "LAG-0b3449678cb1a8e5"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-0b3449678cb1a8e5"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-art-sh-14",
+        "title": "Sandworm design 14",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-14.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-6babc10b380022e6"
+        ],
+        "stencilAssetIDs": [
+          "LAG-6babc10b380022e6"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-6babc10b380022e6"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-art-sh-15",
+        "title": "Sandworm design 15",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-15.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-ec4d97de94eb56ff"
+        ],
+        "stencilAssetIDs": [
+          "LAG-ec4d97de94eb56ff"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-ec4d97de94eb56ff"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-art-sh-16",
+        "title": "Sandworm design 16",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-16.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-60478472c7f598c2"
+        ],
+        "stencilAssetIDs": [
+          "LAG-60478472c7f598c2"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-60478472c7f598c2"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-art-sh-17",
+        "title": "Sandworm design 17",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-17.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-467d69eb63c5a480"
+        ],
+        "stencilAssetIDs": [
+          "LAG-467d69eb63c5a480"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-467d69eb63c5a480"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-art-sh-19",
+        "title": "Sandworm design 19",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-19.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-93a9eaa735eab7a5"
+        ],
+        "stencilAssetIDs": [
+          "LAG-93a9eaa735eab7a5"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-93a9eaa735eab7a5"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-art-sh-20",
+        "title": "Sandworm design 20",
+        "kind": "artwork_candidate",
+        "location": "Placement shown in the source drawing; no current body placement approved",
+        "status": "historical_standalone_design_unreviewed",
+        "summary": "SH-STENCIL-20.jpg is a received white-background JPEG design drawing. Keep its original outline and geometry as an option; it is not a verified transparent/vector original or an automatically approved current tattoo.",
+        "assetIDs": [
+          "LAG-764f5ab0b26651e9"
+        ],
+        "stencilAssetIDs": [
+          "LAG-764f5ab0b26651e9"
+        ],
+        "exampleAssetIDs": [],
+        "artworkAssetIDs": [
+          "LAG-764f5ab0b26651e9"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+        },
+        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
+        "artworkFormat": "White-background JPEG design sheet",
+        "archiveOnly": true,
+        "needsArtwork": false
+      },
+      {
+        "id": "lisan-optional-grill",
+        "title": "Optional iced grill · approved design",
+        "kind": "grillz",
+        "location": "Teeth; only when the shot explicitly requests this accessory",
+        "status": "user_approved_design_optional_when_requested",
+        "summary": "Natural white teeth remain the default. On October 9 Ziggy confirmed that LAG-LOCK-FACE.jpg shows exactly the grill design he wants and that Grok nailed it. The look is still in play; its previous pause was caused by mouth/grill inconsistency, not rejection. Preserve its diamond-iced upper front teeth in gold frames, gold fangs and iced lower row for a separate optional grill mouth/head collection. Match this design exactly across mouth states. This approval covers the grill design only, not the whole portrait or animation fidelity. No standalone Lisan grill artwork has been recovered.",
+        "optional": true,
+        "availability": "optional_on_request",
+        "defaultEnabled": false,
+        "assetIDs": [],
         "stencilAssetIDs": [],
-        "exampleAssetIDs": []
+        "exampleAssetIDs": [
+          "LAG-cb183973ed1fc70e"
+        ],
+        "artworkAssetIDs": [],
+        "approvedArtworkAssetIDs": [],
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "The visible on-character grill design is user-approved. Standalone grill artwork has not been supplied or approved."
+        },
+        "artworkApprovalSource": "User approved the exact visible grill design on October 9; natural teeth remain default. Approval does not create missing standalone artwork.",
+        "needsArtwork": false,
+        "referenceRole": "Approved optional mouth / grill design; current face reference remains the default identity and non-mouth detail authority",
+        "exampleProvenance": {
+          "assetID": "LAG-cb183973ed1fc70e",
+          "filename": "LAG-LOCK-FACE.jpg",
+          "sha256": "cb183973ed1fc70ec906b762fb263b29c8866934a67f9608786b712579eaf056",
+          "scope": "user-approved optional grill design",
+          "evidence": "User October 9 dashboard correction and explicit follow-up; original image retained unchanged."
+        },
+        "designApproval": {
+          "status": "approved",
+          "scope": "exact visible grill design in LAG-LOCK-FACE.jpg",
+          "source": "User October 9 dashboard correction and explicit follow-up: exactly wanted, Grok nailed it perfectly; optional matching mouth shots authorized.",
+          "date": "2026-10-09",
+          "fullPortraitApproved": false,
+          "productionFidelityVerified": false
+        }
       }
+    ],
+    "artworkCatalogVersion": 1,
+    "artworkApprovalPolicy": "Only approvedArtworkAssetIDs represents user-approved standalone artwork. Body-reference approval, provider choices and favorites do not approve all artwork options.",
+    "artworkContactAssetIDs": [
+      "LAG-79c72f43ecaecde0"
     ]
+  },
+  {
+    "id": "boss-003-details",
+    "project": "hon",
+    "character": "BOSS-003 · Slug candidate",
+    "title": "BOSS-003 · Slug candidate — artwork catalog",
+    "status": "candidate_unreviewed",
+    "archiveOnly": true,
+    "objects": [
+      {
+        "id": "boss-003-tattoo",
+        "title": "Hourglass and coins — option A",
+        "kind": "tattoo",
+        "location": "Character-right upper arm / shoulder; viewer-left",
+        "status": "candidate_unreviewed",
+        "summary": "Unapproved hourglass-and-coins drawing, matching option A. The body proof places a rotated, shaded interpretation on the right upper arm/shoulder; it is not a stencil-accurate transfer.",
+        "assetIDs": [
+          "HD-RETURN-1fd928c9f992"
+        ],
+        "artworkAssetIDs": [
+          "HD-RETURN-1fd928c9f992"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "stencilAssetIDs": [
+          "HD-RETURN-01ff8d61702a",
+          "HD-RETURN-9d8cd2cedd64"
+        ],
+        "exampleAssetIDs": [
+          "HD-RETURN-53fdb95a7c44"
+        ],
+        "archiveOnly": true,
+        "needsArtwork": false,
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "Provider RETURN_MANIFEST marks approved:false and needs_user_review. No user artwork approval recorded."
+        },
+        "artworkApprovalSource": "2026-10-09 BOSS round-01 received candidate; no winner selected.",
+        "requestedOption": "A",
+        "matchingOption": "A",
+        "referenceRole": "Candidate-specific tattoo artwork only; body proof is placement evidence, not a default actor cover or Hon Dolo identity reference.",
+        "artworkOrigin": "Provider describes a generated four-option sheet made before the body render. The matching RGB crop and white-to-alpha derivative come from that sheet; neither is an original artist stencil.",
+        "sourceManifestPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/6a4707c10175__RETURN_MANIFEST.json",
+        "sourceReceiptPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/intake_receipt.json",
+        "artworkProvenance": [
+          {
+            "assetID": "HD-RETURN-1fd928c9f992",
+            "filename": "hourglass-coins_matching-option-A.png",
+            "sha256": "1fd928c9f992ec961548342fdf43d3725bfddb916beaaa3fb1fe46a7f7b26797",
+            "role": "Main: matching RGB standalone artwork crop from the four-option design sheet."
+          },
+          {
+            "assetID": "HD-RETURN-01ff8d61702a",
+            "filename": "hourglass-coins_options-A-D.png",
+            "sha256": "01ff8d61702a0083ddb185df1396e442ceea4ac16b3b514ba1267d641ac84ea3",
+            "role": "Deeper: full four-option A-D design sheet; other options remain unapproved."
+          },
+          {
+            "assetID": "HD-RETURN-9d8cd2cedd64",
+            "filename": "hourglass-coins_matching-option-A_transparent.png",
+            "sha256": "9d8cd2cedd645575e8a2ea429eb37065e4d90a657029c70a1e4eb2876c0deb54",
+            "role": "Deeper: automatic white-to-alpha derivative, not hand-cleaned; transparent interiors and JPEG halo need review."
+          },
+          {
+            "assetID": "HD-RETURN-53fdb95a7c44",
+            "filename": "BOSS-003_v001.png",
+            "sha256": "53fdb95a7c4448f7cfe6305ced667aec075b2e7b50c1e5c4a172fc04a69bc338",
+            "role": "Placement example only: generated candidate body proof."
+          }
+        ],
+        "reviewNotes": [
+          "Tattoo design read against option A; on-body render is rotated/shaded artistic interpretation, not a stencil-accurate transfer.",
+          "Artwork bbox reaches the top edge of quadrant A (ornament top sits close to the sheet border); top ornament may be marginally tight.",
+          "Auto white->alpha conversion of a JPEG-derived image: faint JPEG noise/halo and grey hatching become semi-transparent; not hand-cleaned.",
+          "White interior fills (glass, coin faces, pans, etc.) also become transparent - expected for a white->alpha key; a hand-cleaned stencil would need manual fill decisions."
+        ]
+      }
+    ],
+    "artworkCatalogVersion": "standalone-art-v1",
+    "artworkApprovalPolicy": "Only approvedArtworkAssetIDs can place artwork in Approved. Provider option matches and verified file bytes do not imply user approval."
+  },
+  {
+    "id": "boss-006-details",
+    "project": "hon",
+    "character": "BOSS-006 · Rhino candidate",
+    "title": "BOSS-006 · Rhino candidate — artwork catalog",
+    "status": "candidate_unreviewed",
+    "archiveOnly": true,
+    "objects": [
+      {
+        "id": "boss-006-tattoo",
+        "title": "Crowned balance scales — option A",
+        "kind": "tattoo",
+        "location": "Rendered center upper chest; planned character-right neck",
+        "status": "candidate_unreviewed",
+        "summary": "Unapproved crowned-scales drawing, matching option A. The proof puts it at the center of the upper chest, not the planned right neck. A separate unintended partial neck mark has no matching source sheet.",
+        "assetIDs": [
+          "HD-RETURN-6a656929e061"
+        ],
+        "artworkAssetIDs": [
+          "HD-RETURN-6a656929e061"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "stencilAssetIDs": [
+          "HD-RETURN-07c23aae84d9",
+          "HD-RETURN-dae75d392d71"
+        ],
+        "exampleAssetIDs": [
+          "HD-RETURN-cafa39484145"
+        ],
+        "archiveOnly": true,
+        "needsArtwork": false,
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "Provider RETURN_MANIFEST marks approved:false and needs_user_review. No user artwork approval recorded."
+        },
+        "artworkApprovalSource": "2026-10-09 BOSS round-01 received candidate; no winner selected.",
+        "requestedOption": "A",
+        "matchingOption": "A",
+        "referenceRole": "Candidate-specific tattoo artwork only; body proof is placement evidence, not a default actor cover or Hon Dolo identity reference.",
+        "artworkOrigin": "Provider describes a generated four-option sheet made before the body render. The matching RGB crop and white-to-alpha derivative come from that sheet; neither is an original artist stencil.",
+        "sourceManifestPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/6a4707c10175__RETURN_MANIFEST.json",
+        "sourceReceiptPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/intake_receipt.json",
+        "artworkProvenance": [
+          {
+            "assetID": "HD-RETURN-6a656929e061",
+            "filename": "crowned-scales_matching-option-A.png",
+            "sha256": "6a656929e06123be51adac06dbca9339abece92d3c64df2a87dfe71c8f7c741e",
+            "role": "Main: matching RGB standalone artwork crop from the four-option design sheet."
+          },
+          {
+            "assetID": "HD-RETURN-07c23aae84d9",
+            "filename": "crowned-scales_options-A-D.png",
+            "sha256": "07c23aae84d9f235897eae49e00eff8d5796ec4286d622ebcf54084709c7a32b",
+            "role": "Deeper: full four-option A-D design sheet; other options remain unapproved."
+          },
+          {
+            "assetID": "HD-RETURN-dae75d392d71",
+            "filename": "crowned-scales_matching-option-A_transparent.png",
+            "sha256": "dae75d392d71570ceaf4e2f86ff28463f05d68ad486570373369210bccd32be6",
+            "role": "Deeper: automatic white-to-alpha derivative, not hand-cleaned; transparent interiors and JPEG halo need review."
+          },
+          {
+            "assetID": "HD-RETURN-cafa39484145",
+            "filename": "BOSS-006_v001.png",
+            "sha256": "cafa39484145fb8dda67c9684134d6d6449f3c5cb66ac4033e27a8f79a28090a",
+            "role": "Placement example only: generated candidate body proof."
+          }
+        ],
+        "reviewNotes": [
+          "Tattoo placement differs from plan: planned character-right neck, rendered at center upper chest.",
+          "Small unreferenced partial mark on character-left side of neck under the jaw (viewer-right); not part of any design sheet - flagged, not intended.",
+          "This is the 2nd attempt; 1st attempt rejected (tattoo rendered as a coat patch) - see QA_NOTES.txt; rejected file not included.",
+          "Auto white->alpha conversion of a JPEG-derived image: faint JPEG noise/halo and grey hatching become semi-transparent; not hand-cleaned.",
+          "White interior fills (glass, coin faces, pans, etc.) also become transparent - expected for a white->alpha key; a hand-cleaned stencil would need manual fill decisions."
+        ]
+      }
+    ],
+    "artworkCatalogVersion": "standalone-art-v1",
+    "artworkApprovalPolicy": "Only approvedArtworkAssetIDs can place artwork in Approved. Provider option matches and verified file bytes do not imply user approval."
+  },
+  {
+    "id": "boss-009-details",
+    "project": "hon",
+    "character": "BOSS-009 · Toad candidate",
+    "title": "BOSS-009 · Toad candidate — artwork catalog",
+    "status": "candidate_unreviewed",
+    "archiveOnly": true,
+    "objects": [
+      {
+        "id": "boss-009-tattoo",
+        "title": "Serpent and coin — option B",
+        "kind": "tattoo",
+        "location": "Character-right forearm; viewer-left",
+        "status": "candidate_unreviewed",
+        "summary": "Unapproved serpent-and-coin drawing. The proof matches option B (bold serpent biting a star coin), not requested option A (fine-line serpent around a plain coin).",
+        "assetIDs": [
+          "HD-RETURN-21247f27e5b2"
+        ],
+        "artworkAssetIDs": [
+          "HD-RETURN-21247f27e5b2"
+        ],
+        "approvedArtworkAssetIDs": [],
+        "stencilAssetIDs": [
+          "HD-RETURN-5a505ffd89dd",
+          "HD-RETURN-05aa41f76294"
+        ],
+        "exampleAssetIDs": [
+          "HD-RETURN-80d3ca6a6858"
+        ],
+        "archiveOnly": true,
+        "needsArtwork": false,
+        "artworkApproval": {
+          "status": "unreviewed",
+          "source": "Provider RETURN_MANIFEST marks approved:false and needs_user_review. No user artwork approval recorded."
+        },
+        "artworkApprovalSource": "2026-10-09 BOSS round-01 received candidate; no winner selected.",
+        "requestedOption": "A",
+        "matchingOption": "B",
+        "referenceRole": "Candidate-specific tattoo artwork only; body proof is placement evidence, not a default actor cover or Hon Dolo identity reference.",
+        "artworkOrigin": "Provider describes a generated four-option sheet made before the body render. The matching RGB crop and white-to-alpha derivative come from that sheet; neither is an original artist stencil.",
+        "sourceManifestPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/6a4707c10175__RETURN_MANIFEST.json",
+        "sourceReceiptPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/intake_receipt.json",
+        "artworkProvenance": [
+          {
+            "assetID": "HD-RETURN-21247f27e5b2",
+            "filename": "serpent-coin_matching-option-B.png",
+            "sha256": "21247f27e5b22e5f44efa6c322fe20c86528b7e4c0581495a93ccca8cdad119e",
+            "role": "Main: matching RGB standalone artwork crop from the four-option design sheet."
+          },
+          {
+            "assetID": "HD-RETURN-5a505ffd89dd",
+            "filename": "serpent-coin_options-A-D.png",
+            "sha256": "5a505ffd89dd1f23f6d1153ea99b80b51cf4ec7c845aca94329ada1a37a7ae3b",
+            "role": "Deeper: full four-option A-D design sheet; other options remain unapproved."
+          },
+          {
+            "assetID": "HD-RETURN-05aa41f76294",
+            "filename": "serpent-coin_matching-option-B_transparent.png",
+            "sha256": "05aa41f76294049d1b389b88e853ab79aacf54caf1e62ad17dd0a4cc558f269b",
+            "role": "Deeper: automatic white-to-alpha derivative, not hand-cleaned; transparent interiors and JPEG halo need review."
+          },
+          {
+            "assetID": "HD-RETURN-80d3ca6a6858",
+            "filename": "BOSS-009_v001.png",
+            "sha256": "80d3ca6a6858ee40bf39f6e4d224121ab1c96b498f10a3de18f1d8b6f115debb",
+            "role": "Placement example only: generated candidate body proof."
+          }
+        ],
+        "reviewNotes": [
+          "Rendered tattoo matches option B (bold traditional serpent biting a star coin), NOT the requested option A (fine-line serpent coiled around a plain coin).",
+          "Planned missing left arm is not clearly readable in the render.",
+          "Grin is broader / more cartoonish than the brief (restrained expression) wants.",
+          "Auto white->alpha conversion of a JPEG-derived image: faint JPEG noise/halo and grey hatching become semi-transparent; not hand-cleaned.",
+          "White interior fills (glass, coin faces, pans, etc.) also become transparent - expected for a white->alpha key; a hand-cleaned stencil would need manual fill decisions."
+        ]
+      }
+    ],
+    "artworkCatalogVersion": "standalone-art-v1",
+    "artworkApprovalPolicy": "Only approvedArtworkAssetIDs can place artwork in Approved. Provider option matches and verified file bytes do not imply user approval."
   }
 ]

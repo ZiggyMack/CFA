@@ -1,0 +1,327 @@
+{
+  "summary": {
+    "archive_bytes": 14477957,
+    "archive_sha256": "b983e44a8230bcd4de55be6d65a8b5da820645ae9e7972c5131ac4aa57204430",
+    "archive_crc_failure": null,
+    "file_count": 23,
+    "uncompressed_bytes": 14657148,
+    "manifest_records": 22,
+    "kind_counts": {
+      "character_proof": 10,
+      "tattoo_design_sheet_4_options": 3,
+      "derived_crop": 6,
+      "contact_sheet": 2,
+      "notes": 1
+    },
+    "unique_image_hashes": 21,
+    "errors": [],
+    "input_reference_hashes_match_requested_map": true,
+    "candidate_ids": [
+      "BOSS-001",
+      "BOSS-002",
+      "BOSS-003",
+      "BOSS-004",
+      "BOSS-005",
+      "BOSS-006",
+      "BOSS-007",
+      "BOSS-008",
+      "BOSS-009",
+      "BOSS-010"
+    ],
+    "all_character_sizes": [
+      [
+        1280,
+        720
+      ]
+    ],
+    "status_counts": {
+      "needs_user_review": 22
+    },
+    "approved_values": [
+      false
+    ],
+    "selected_winner": null,
+    "next_round_authorized": false,
+    "crop_checks": [
+      {
+        "id": "BOSS-003_TAT_hourglass-coins_matching-option-A_v001",
+        "pixel_exact_parent_crop": true,
+        "parent_hash_matches": true
+      },
+      {
+        "id": "BOSS-006_TAT_crowned-scales_matching-option-A_v001",
+        "pixel_exact_parent_crop": true,
+        "parent_hash_matches": true
+      },
+      {
+        "id": "BOSS-009_TAT_serpent-coin_matching-option-B_v001",
+        "pixel_exact_parent_crop": true,
+        "parent_hash_matches": true
+      }
+    ],
+    "alpha_images": [
+      {
+        "path": "tattoo_designs/BOSS-003/hourglass-coins_matching-option-A_transparent.png",
+        "bytes": 79573,
+        "sha256": "9d8cd2cedd645575e8a2ea429eb37065e4d90a657029c70a1e4eb2876c0deb54",
+        "width": 222,
+        "height": 342,
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ]
+      },
+      {
+        "path": "tattoo_designs/BOSS-006/crowned-scales_matching-option-A_transparent.png",
+        "bytes": 45801,
+        "sha256": "dae75d392d71570ceaf4e2f86ff28463f05d68ad486570373369210bccd32be6",
+        "width": 404,
+        "height": 335,
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ]
+      },
+      {
+        "path": "tattoo_designs/BOSS-009/serpent-coin_matching-option-B_transparent.png",
+        "bytes": 80125,
+        "sha256": "05aa41f76294049d1b389b88e853ab79aacf54caf1e62ad17dd0a4cc558f269b",
+        "width": 389,
+        "height": 327,
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ]
+      }
+    ],
+    "candidate_differences": [
+      {
+        "id": "BOSS-003",
+        "differences": [
+          "Tattoo design read against option A; on-body render is rotated/shaded artistic interpretation, not a stencil-accurate transfer."
+        ],
+        "artwork_origin": "generated_design_sheet_before_body_render (sheet generated first, then fed as a reference image to the body render); not a reconstruction"
+      },
+      {
+        "id": "BOSS-006",
+        "differences": [
+          "Tattoo placement differs from plan: planned character-right neck, rendered at center upper chest.",
+          "Small unreferenced partial mark on character-left side of neck under the jaw (viewer-right); not part of any design sheet - flagged, not intended.",
+          "This is the 2nd attempt; 1st attempt rejected (tattoo rendered as a coat patch) - see QA_NOTES.txt; rejected file not included."
+        ],
+        "artwork_origin": "generated_design_sheet_before_body_render (sheet generated first, then fed as a reference image to the body render); not a reconstruction"
+      },
+      {
+        "id": "BOSS-009",
+        "differences": [
+          "Rendered tattoo matches option B (bold traditional serpent biting a star coin), NOT the requested option A (fine-line serpent coiled around a plain coin).",
+          "Planned missing left arm is not clearly readable in the render.",
+          "Grin is broader / more cartoonish than the brief (restrained expression) wants."
+        ],
+        "artwork_origin": "generated_design_sheet_before_body_render (sheet generated first, then fed as a reference image to the body render); not a reconstruction"
+      }
+    ],
+    "cache_samples": [
+      "D:\\Documents\\CFA\\.cache\\boss_intake_audit_20261009\\BOSS-001-010_contact.jpg",
+      "D:\\Documents\\CFA\\.cache\\boss_intake_audit_20261009\\BOSS-001-010_tattoo-sheets_contact.jpg",
+      "D:\\Documents\\CFA\\.cache\\boss_intake_audit_20261009\\BOSS-003_v001.png",
+      "D:\\Documents\\CFA\\.cache\\boss_intake_audit_20261009\\BOSS-006_v001.png",
+      "D:\\Documents\\CFA\\.cache\\boss_intake_audit_20261009\\BOSS-009_v001.png"
+    ]
+  },
+  "files": [
+    {
+      "path": "QA_NOTES.txt",
+      "bytes": 5394,
+      "sha256": "1f5494ffed8252146fa78bda78d26964b9b0056431220c5ddb1087771ac06a58"
+    },
+    {
+      "path": "RETURN_MANIFEST.json",
+      "bytes": 46484,
+      "sha256": "6a4707c10175fd6abe430a411589f9a4e437edbde9f6e632eed405e0f6112dfb"
+    },
+    {
+      "path": "characters/BOSS-001_v001.png",
+      "bytes": 1088022,
+      "sha256": "eb26cc4c179506569d3db857ba7c6b45ecad3b04006bf6e66784744bac102698",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB"
+    },
+    {
+      "path": "characters/BOSS-002_v001.png",
+      "bytes": 1155084,
+      "sha256": "339cdbe1e03ae4f6e47012e7219169f5a37961ee0fbdc5c2ebc630cab15d1d93",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB"
+    },
+    {
+      "path": "characters/BOSS-003_v001.png",
+      "bytes": 1375663,
+      "sha256": "53fdb95a7c4448f7cfe6305ced667aec075b2e7b50c1e5c4a172fc04a69bc338",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB"
+    },
+    {
+      "path": "characters/BOSS-004_v001.png",
+      "bytes": 1214586,
+      "sha256": "dda4de050a038257cc07d5be96d1205b5088c65a6dffd39afc5395ba0bc5f304",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB"
+    },
+    {
+      "path": "characters/BOSS-005_v001.png",
+      "bytes": 1152715,
+      "sha256": "e18185bdab18fb3d84a2bf98e06aa57a9a2c0ca2b22357a18eda71de7eea5b7d",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB"
+    },
+    {
+      "path": "characters/BOSS-006_v001.png",
+      "bytes": 890548,
+      "sha256": "cafa39484145fb8dda67c9684134d6d6449f3c5cb66ac4033e27a8f79a28090a",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB"
+    },
+    {
+      "path": "characters/BOSS-007_v001.png",
+      "bytes": 980618,
+      "sha256": "2ced18011a7f538a7028825a8d824de5c95dd895001ee25611270189eace3cb7",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB"
+    },
+    {
+      "path": "characters/BOSS-008_v001.png",
+      "bytes": 1066466,
+      "sha256": "8421e7cfa1a012076a33c8182620d28cf6663f068d13c3a321699de030a9078b",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB"
+    },
+    {
+      "path": "characters/BOSS-009_v001.png",
+      "bytes": 1247159,
+      "sha256": "80d3ca6a6858ee40bf39f6e4d224121ab1c96b498f10a3de18f1d8b6f115debb",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB"
+    },
+    {
+      "path": "characters/BOSS-010_v001.png",
+      "bytes": 1320485,
+      "sha256": "9143639db1cf46e9b653002e32189124b6e5ab230775659809b1c3314c5151d2",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB"
+    },
+    {
+      "path": "contact/BOSS-001-010_contact.jpg",
+      "bytes": 707388,
+      "sha256": "fed7635d883ba9d0a7c119534b1e35e83c5b66d9433386da0ce741f7c817ddbd",
+      "width": 3024,
+      "height": 1022,
+      "mode": "RGB"
+    },
+    {
+      "path": "contact/BOSS-001-010_tattoo-sheets_contact.jpg",
+      "bytes": 321874,
+      "sha256": "5f0a84e685f831dae66a0bc40b11960ccc24dc1507ef71c77247f04b492df1d8",
+      "width": 2400,
+      "height": 700,
+      "mode": "RGB"
+    },
+    {
+      "path": "tattoo_designs/BOSS-003/hourglass-coins_matching-option-A.png",
+      "bytes": 118902,
+      "sha256": "1fd928c9f992ec961548342fdf43d3725bfddb916beaaa3fb1fe46a7f7b26797",
+      "width": 222,
+      "height": 342,
+      "mode": "RGB"
+    },
+    {
+      "path": "tattoo_designs/BOSS-003/hourglass-coins_matching-option-A_transparent.png",
+      "bytes": 79573,
+      "sha256": "9d8cd2cedd645575e8a2ea429eb37065e4d90a657029c70a1e4eb2876c0deb54",
+      "width": 222,
+      "height": 342,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "tattoo_designs/BOSS-003/hourglass-coins_options-A-D.png",
+      "bytes": 514292,
+      "sha256": "01ff8d61702a0083ddb185df1396e442ceea4ac16b3b514ba1267d641ac84ea3",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB"
+    },
+    {
+      "path": "tattoo_designs/BOSS-006/crowned-scales_matching-option-A.png",
+      "bytes": 82048,
+      "sha256": "6a656929e06123be51adac06dbca9339abece92d3c64df2a87dfe71c8f7c741e",
+      "width": 404,
+      "height": 335,
+      "mode": "RGB"
+    },
+    {
+      "path": "tattoo_designs/BOSS-006/crowned-scales_matching-option-A_transparent.png",
+      "bytes": 45801,
+      "sha256": "dae75d392d71570ceaf4e2f86ff28463f05d68ad486570373369210bccd32be6",
+      "width": 404,
+      "height": 335,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "tattoo_designs/BOSS-006/crowned-scales_options-A-D.png",
+      "bytes": 453284,
+      "sha256": "07c23aae84d9f235897eae49e00eff8d5796ec4286d622ebcf54084709c7a32b",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB"
+    },
+    {
+      "path": "tattoo_designs/BOSS-009/serpent-coin_matching-option-B.png",
+      "bytes": 141269,
+      "sha256": "21247f27e5b22e5f44efa6c322fe20c86528b7e4c0581495a93ccca8cdad119e",
+      "width": 389,
+      "height": 327,
+      "mode": "RGB"
+    },
+    {
+      "path": "tattoo_designs/BOSS-009/serpent-coin_matching-option-B_transparent.png",
+      "bytes": 80125,
+      "sha256": "05aa41f76294049d1b389b88e853ab79aacf54caf1e62ad17dd0a4cc558f269b",
+      "width": 389,
+      "height": 327,
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "tattoo_designs/BOSS-009/serpent-coin_options-A-D.png",
+      "bytes": 569368,
+      "sha256": "5a505ffd89dd1f23f6d1153ea99b80b51cf4ec7c845aca94329ada1a37a7ae3b",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB"
+    }
+  ]
+}

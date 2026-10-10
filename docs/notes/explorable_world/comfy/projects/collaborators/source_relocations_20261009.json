@@ -1,0 +1,2037 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-09T06:18:35.683203+00:00",
+  "scope": "Current filesystem locations for preserved Grok originals; historical source paths and frozen receipts remain unchanged.",
+  "resolution_rule": "Match an exact file path or a directory prefix followed by slash; append the unchanged suffix to current_path. Validate the file SHA before use. Pending mappings are not live.",
+  "incoming_policy": "From Grok is the incoming drop area. After extraction/integrity verification, root moves retained source remnants to Processed; project review/production copies remain the app inputs. ZIP cleanup requires its own verified receipt and authorization.",
+  "runtime_catalog_check": {
+    "assets_checked": 1257,
+    "src_or_thumb_paths_checked": 2348,
+    "broken_src_or_thumb_paths": 0,
+    "basis": "Every local catalog src/thumb resolved from the visual_library directory using extended Windows filesystem I/O.",
+    "catalog_sha256": "ac42191fb57bf73de31939803c373db16d63864805f87410045a1cca6eb5956f"
+  },
+  "mappings": [
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-MASTER-20261009_part1of2",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/GROK-HD-MASTER-20261009_part1of2",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 1,
+      "completed_move_receipt": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/cleanup_receipt.json"
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-MASTER-20261009_part2of2",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/GROK-HD-MASTER-20261009_part2of2",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 1,
+      "completed_move_receipt": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/cleanup_receipt.json"
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/HD-EXP-ID-TO-FILENAME.csv",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/HD-EXP-ID-TO-FILENAME.csv",
+      "kind": "file",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 1
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part1of4",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part1of4",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 9
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part2of4",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part2of4",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 9
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part3of4",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part3of4",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 14
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part4of4",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part4of4",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 6
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 54
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-500-MASTER-part01",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-500-MASTER-part01",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 4,
+      "completed_move_receipt": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/cleanup_receipt.json"
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-500-MASTER-part02",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-500-MASTER-part02",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 0,
+      "completed_move_receipt": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/cleanup_receipt.json",
+      "note": "Intentionally empty source part after verified nested ZIP cleanup; extracted contents remain in the project received directory."
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-500-MASTER-part03",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-500-MASTER-part03",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 0,
+      "completed_move_receipt": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/cleanup_receipt.json",
+      "note": "Intentionally empty source part after verified nested ZIP cleanup; extracted contents remain in the project received directory."
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-500-MASTER-part04",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-500-MASTER-part04",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 0,
+      "completed_move_receipt": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/cleanup_receipt.json",
+      "note": "Intentionally empty source part after verified nested ZIP cleanup; extracted contents remain in the project received directory."
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-500-MASTER-part05",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-500-MASTER-part05",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 0,
+      "completed_move_receipt": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/cleanup_receipt.json",
+      "note": "Intentionally empty source part after verified nested ZIP cleanup; extracted contents remain in the project received directory."
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-500-MASTER-part06",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-500-MASTER-part06",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 0,
+      "completed_move_receipt": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/cleanup_receipt.json",
+      "note": "Intentionally empty source part after verified nested ZIP cleanup; extracted contents remain in the project received directory."
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-500-MASTER-part07",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-500-MASTER-part07",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 0,
+      "completed_move_receipt": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/cleanup_receipt.json",
+      "note": "Intentionally empty source part after verified nested ZIP cleanup; extracted contents remain in the project received directory."
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-500-MASTER-part08",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-500-MASTER-part08",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 0,
+      "completed_move_receipt": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/cleanup_receipt.json",
+      "note": "Intentionally empty source part after verified nested ZIP cleanup; extracted contents remain in the project received directory."
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 73
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-GUIDE.pdf",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-GUIDE.pdf",
+      "kind": "file",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 1
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/NOVA-CONSOLIDATION-AND-ID-MAP.txt",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/NOVA-CONSOLIDATION-AND-ID-MAP.txt",
+      "kind": "file",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 1
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/NOVA-GUIDE-500.md",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/NOVA-GUIDE-500.md",
+      "kind": "file",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 1,
+      "completed_move_receipt": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/cleanup_receipt.json"
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/NOVA-IMG-BENCH-20261009_part1of2",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/NOVA-IMG-BENCH-20261009_part1of2",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 98,
+      "completed_move_receipt": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/cleanup_receipt.json"
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/NOVA-IMG-BENCH-20261009_part2of2",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/NOVA-IMG-BENCH-20261009_part2of2",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 16,
+      "completed_move_receipt": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/cleanup_receipt.json"
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-20261009_VIS-HD_v001",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/GROK-HD-20261009_VIS-HD_v001",
+      "kind": "directory",
+      "state": "verified_current_location",
+      "original_location_exists": false,
+      "current_file_count": 21,
+      "completed_move_receipt": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/cleanup_receipt.json"
+    }
+  ],
+  "files": [
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-MASTER-20261009_part1of2/GROK-HD-MASTER-20261009/INDEX.txt",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/GROK-HD-MASTER-20261009_part1of2/GROK-HD-MASTER-20261009/INDEX.txt",
+      "sha256": "7cc079b1dacb12e8e8efe5681ee7da5f8541210ffccb166f94f40127584c5d3d",
+      "bytes": 1106,
+      "prior_intake_hash_verified": false,
+      "prior_records": []
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-MASTER-20261009_part2of2/GROK-HD-MASTER-20261009/INDEX.txt",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/GROK-HD-MASTER-20261009_part2of2/GROK-HD-MASTER-20261009/INDEX.txt",
+      "sha256": "7cc079b1dacb12e8e8efe5681ee7da5f8541210ffccb166f94f40127584c5d3d",
+      "bytes": 1106,
+      "prior_intake_hash_verified": false,
+      "prior_records": []
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/HD-EXP-ID-TO-FILENAME.csv",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/HD-EXP-ID-TO-FILENAME.csv",
+      "sha256": "934cb990fe32dcb12cf9b6b3e9837e16cef29ca5ded2d20aaaccabfc1d120eaa",
+      "bytes": 33171,
+      "prior_intake_hash_verified": false,
+      "prior_records": []
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part1of4/README.txt",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part1of4/README.txt",
+      "sha256": "1d640b7f315e9a055263035bd20402702f4f61cc5a9587103cce441046f59474",
+      "bytes": 393,
+      "prior_intake_hash_verified": false,
+      "prior_records": []
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part1of4/hon-dolo/hon-dolo-armor-swap.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part1of4/hon-dolo/hon-dolo-armor-swap.zip",
+      "sha256": "61948bfc920e5bec79a48dd22a6dc1518ff3ddeab9b5d18822634cd930eb0859",
+      "bytes": 1667633,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part1of4/hon-dolo/hon-dolo-cockpit-swap-round2.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part1of4/hon-dolo/hon-dolo-cockpit-swap-round2.zip",
+      "sha256": "c921956270fc476241d5b91bd66e148428131f6afb3c2c6b27a9b3c757a3b5a8",
+      "bytes": 2255657,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part1of4/hon-dolo/hon-dolo-cockpit-swap.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part1of4/hon-dolo/hon-dolo-cockpit-swap.zip",
+      "sha256": "4cb20bc63f32b6f7407a139594afaf516b3367cbfbf285b862663d7b11968c3f",
+      "bytes": 2137938,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part1of4/hon-dolo/hon-dolo-nova-consolidation.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part1of4/hon-dolo/hon-dolo-nova-consolidation.zip",
+      "sha256": "6b27638235abc620466f342dca4389512f23ae8f798e578bad96fe6a0b5c599f",
+      "bytes": 40809,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part1of4/hon-dolo/hon-dolo-ref-sheet-armor.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part1of4/hon-dolo/hon-dolo-ref-sheet-armor.zip",
+      "sha256": "f66003718c822bed7e13b8e35a7c02cedbd834cd5eacab446c54779710f96186",
+      "bytes": 1291153,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part1of4/hon-dolo/hon-dolo-ref-sheet-vest.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part1of4/hon-dolo/hon-dolo-ref-sheet-vest.zip",
+      "sha256": "5c623c95d47c9781adc22931e58727aa514e8c0ab292c66e512e632ddc102236",
+      "bytes": 2270231,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part1of4/hon-dolo/hon-dolo-ref-sheet-yellow.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part1of4/hon-dolo/hon-dolo-ref-sheet-yellow.zip",
+      "sha256": "6df37e4ef04014434b55693fd8b636ff4aa4d1130d8bf95342bbcf6c885874ab",
+      "bytes": 1709802,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part1of4/hon-dolo/hon-dolo-storyboard-strictly-business.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part1of4/hon-dolo/hon-dolo-storyboard-strictly-business.zip",
+      "sha256": "3e614d050ed224ef3813824e9d06811d95d8900616ebc571c106f8c9fdb55d92",
+      "bytes": 10222450,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part2of4/README.txt",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part2of4/README.txt",
+      "sha256": "1d640b7f315e9a055263035bd20402702f4f61cc5a9587103cce441046f59474",
+      "bytes": 393,
+      "prior_intake_hash_verified": false,
+      "prior_records": []
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part2of4/hon-dolo/hon-dolo-drip-20.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part2of4/hon-dolo/hon-dolo-drip-20.zip",
+      "sha256": "01bf213fc53f9fe1fb190d2dedc1cfe3a16f8f4e1501bdffd5e0d64fd3054a80",
+      "bytes": 7009628,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part2of4/hon-dolo/hon-dolo-ref-sheet-cash.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part2of4/hon-dolo/hon-dolo-ref-sheet-cash.zip",
+      "sha256": "321748f479e999406afa21a5154ea7d5bb23574041e3fefdf4fc99b5574cafc0",
+      "bytes": 2471872,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part2of4/hon-dolo/hon-dolo-ref-sheet-coat.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part2of4/hon-dolo/hon-dolo-ref-sheet-coat.zip",
+      "sha256": "6d5365b19569496f097e4d6038e07b0a0fec9843df69babdb232ebaee938edf3",
+      "bytes": 2027896,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part2of4/hon-dolo/hon-dolo-ref-sheet-cream.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part2of4/hon-dolo/hon-dolo-ref-sheet-cream.zip",
+      "sha256": "093f340aa2f07d45f374dfb6cea642fdda540908b5eb18432dbc745827c320c2",
+      "bytes": 2117647,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part2of4/hon-dolo/hon-dolo-ref-sheet-fur.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part2of4/hon-dolo/hon-dolo-ref-sheet-fur.zip",
+      "sha256": "eb86835aaf121196c5ab6ee030e88764af465bc97d47c7a6289843d622eb85ca",
+      "bytes": 2179247,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part2of4/hon-dolo/hon-dolo-ref-sheet-ice.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part2of4/hon-dolo/hon-dolo-ref-sheet-ice.zip",
+      "sha256": "5e5467ec97d8925398eafe0f6db3672da2365be1b6268ad6aa60f03879b567cf",
+      "bytes": 2470707,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part2of4/hon-dolo/hon-dolo-ref-sheet-rain.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part2of4/hon-dolo/hon-dolo-ref-sheet-rain.zip",
+      "sha256": "050c55b1b5a6ca101966999474d1dc033dfe82e7362721aa9e2ff2fcd16f6b0b",
+      "bytes": 2054435,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part2of4/hon-dolo/hon-dolo-ref-sheet-vinyl.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part2of4/hon-dolo/hon-dolo-ref-sheet-vinyl.zip",
+      "sha256": "21dcf23d350b2b7b03f59f4a25e2bb3f96c13ce7efdf6477402320f7f5af2952",
+      "bytes": 2041620,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part3of4/README.txt",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part3of4/README.txt",
+      "sha256": "1d640b7f315e9a055263035bd20402702f4f61cc5a9587103cce441046f59474",
+      "bytes": 393,
+      "prior_intake_hash_verified": false,
+      "prior_records": []
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-baroque.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-baroque.zip",
+      "sha256": "cceec945e83389ce7076d4a7d954414fae696905cc2338750ad3f6974a339ebe",
+      "bytes": 1804670,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-bomber.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-bomber.zip",
+      "sha256": "fa1f67597820e649b73d2771020e4b26f5e5ba24518771e0d4302d36f235dfee",
+      "bytes": 1871819,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-casino.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-casino.zip",
+      "sha256": "ac329d32b5f868980542795d365b388d7c399865edd9347d4f5768fa9e7a1909",
+      "bytes": 1759407,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-dragon.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-dragon.zip",
+      "sha256": "eeeea33f599a46ed488e31cc03e2786a7964d1504b070a6892e444ec11acea15",
+      "bytes": 2009271,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-letterman.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-letterman.zip",
+      "sha256": "74634ece32a598e1b215bba5a1dd83d0c1145749eef395aa6ff7865ced271f7b",
+      "bytes": 1861650,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-parka.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-parka.zip",
+      "sha256": "e5b3b30ef7fb765b523f93046771affc3bf18dc2ecd6da5962c569e01c8af8cd",
+      "bytes": 1811811,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-pilot.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-pilot.zip",
+      "sha256": "4d166c0eace5b44bc02a2fb966346c2e5b35c2693cfd00c6a117d80e33ae91b5",
+      "bytes": 2186272,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-pinstripe.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-pinstripe.zip",
+      "sha256": "e67f49c9d3607a340a5ffb3f46ca5b2591dbc78a76167975818d4e1447f629d5",
+      "bytes": 1652014,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-puffer.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-puffer.zip",
+      "sha256": "b4fc8466333dac0f9f4228b5e2925e87af917886affb7b737366f59eded68f78",
+      "bytes": 1903236,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-saloon.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-saloon.zip",
+      "sha256": "5bdc659bd2e6e7231404a2a72f55c79eb309c32a67e78fb885a002d8a551438f",
+      "bytes": 1798788,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-velour.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-velour.zip",
+      "sha256": "219a6ba5f01f6edf2ae136f75d0709e7a357dcfd79f601cce2669b46bc907554",
+      "bytes": 1882434,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-velvet.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part3of4/hon-dolo/hon-dolo-ref-sheet-velvet.zip",
+      "sha256": "0b34a5390a58e23b266f75f1c9052284e2a570f6f84711ccfe50705d0176ef9a",
+      "bytes": 1672737,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part3of4/side-characters/dark-armor-ref-sheet.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part3of4/side-characters/dark-armor-ref-sheet.zip",
+      "sha256": "7d5da360fac09aa1d7d0a74edafe447b07825970cf6ccafc0bf57d22f048defa",
+      "bytes": 1110977,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part4of4/README.txt",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part4of4/README.txt",
+      "sha256": "1d640b7f315e9a055263035bd20402702f4f61cc5a9587103cce441046f59474",
+      "bytes": 393,
+      "prior_intake_hash_verified": false,
+      "prior_records": []
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part4of4/side-characters/buns-coat-ref-sheet.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part4of4/side-characters/buns-coat-ref-sheet.zip",
+      "sha256": "27be91043c8dafdb686198c55b0b01386e9e0531dacfe1126b2bb563b2434e3d",
+      "bytes": 941516,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part4of4/side-characters/dj-beast-ref-sheet.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part4of4/side-characters/dj-beast-ref-sheet.zip",
+      "sha256": "79f6f92afee95e19435772f45921cffc85b72644a8f5f0ce5056f7cb97ad56d1",
+      "bytes": 1662199,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part4of4/side-characters/hooded-kid-ref-sheet.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part4of4/side-characters/hooded-kid-ref-sheet.zip",
+      "sha256": "76546fa31db6964aba5644bca55b508b90bc1ddb782fa382c8c55838981558af",
+      "bytes": 1223532,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part4of4/side-characters/side-hippo.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part4of4/side-characters/side-hippo.zip",
+      "sha256": "4bbc99950410169af36ac2fb8e8b9fb3c83ed31c8618ec7faae721e4c82e1409",
+      "bytes": 1594031,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/hon-dolo-since-last-drop-part4of4/side-characters/side-lord.zip",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/hon-dolo-since-last-drop-part4of4/side-characters/side-lord.zip",
+      "sha256": "95a915a6edcf0af3c2e536f540e1dbed8b92bd73d8be5c892237ffeea8933392",
+      "bytes": 7481979,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-01.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-01.jpg",
+      "sha256": "c84566f37ef579257ebb702846533e06d99dabcdac79b0732be26608f75fbb12",
+      "bytes": 305590,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-02.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-02.jpg",
+      "sha256": "5ed417c76928c01c07883f27f8cb5b2016e39ce41dbe4985d5029f41d92ad1ac",
+      "bytes": 221516,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-03.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-03.jpg",
+      "sha256": "cd847e5d80fe4152945a6a087b51d85bcbf794746949aea9ddeaafb15032118c",
+      "bytes": 280645,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-04.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-04.jpg",
+      "sha256": "b98d290a32ca07ed70ec56f6f63e7c33f358a6b12c36595ff68440b6c867ad6f",
+      "bytes": 251232,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-05.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-05.jpg",
+      "sha256": "82942a04b90ca995ffb78f1b455da160e05321353ff9775b6c178321d24c9fd5",
+      "bytes": 321685,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-06.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-06.jpg",
+      "sha256": "e19fccbadb357847e1a273eaf10ae6144cc3d912960f003bd2c8dcc93cfdc41e",
+      "bytes": 344606,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-07.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-07.jpg",
+      "sha256": "ea832c79b5bfedafbf1664ed087079ad3717ba683d0aca5ac8ac31e3913f1fea",
+      "bytes": 426463,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-08.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-08.jpg",
+      "sha256": "6cd88f731bfd34979b74b3103878ff0f2b63e00a288554cb4f14e1a2e5985c67",
+      "bytes": 270618,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-09.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-09.jpg",
+      "sha256": "df494c098151967c43201a7679671b8a16fb5b1f32312ff98a565a9ee920f103",
+      "bytes": 258243,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-10.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-10.jpg",
+      "sha256": "82dfca3f6472b18dd7ca3919c02e7ca84dc229295eb3a1853b0a980c61f35833",
+      "bytes": 433495,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-11.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-11.jpg",
+      "sha256": "ed40f2658c588858ecb8507df220c83b892c0b95bb96d9b61bd455ba3fc501dd",
+      "bytes": 297424,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-12.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-12.jpg",
+      "sha256": "8e267ceb15b028c174e5e126fcda961ea7ef9fc4f55c516ab1b499b28b299d80",
+      "bytes": 257829,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-13.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-13.jpg",
+      "sha256": "0ced8bea6305c58873f1e56c59fcf4631a9274b3a5b8ce69a20afafeb15f5383",
+      "bytes": 277301,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-14.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-14.jpg",
+      "sha256": "e9ec71626983bb9705d22b4d32e800eafbeb65d8a72ed1bcbcce3ab6190df4af",
+      "bytes": 307059,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-15.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-15.jpg",
+      "sha256": "ed0b30aa95bb205ab9efe5b2dc66ee2e228bb5099bf2d9b96fbec067a719114c",
+      "bytes": 214455,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-16.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-16.jpg",
+      "sha256": "1d5151c98742d1687a8260cb59afe723323e13e881ad506f4e7f816789483c63",
+      "bytes": 176767,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-17.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-17.jpg",
+      "sha256": "5d0a70af892ec4e57d239a1d6e5a382380a281506c5cc7bfc21233c09e2b8588",
+      "bytes": 323684,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-18.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-18.jpg",
+      "sha256": "467cd70039955ce1b7cca1205cf5c3243a2af16d457a99e63be43feb557c41af",
+      "bytes": 342800,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-19.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-19.jpg",
+      "sha256": "026f2b9f6c1f93f8cb5bacc4de94db7a747b1266278032e19cc4e0382c8c8e0a",
+      "bytes": 342219,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-20.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-20.jpg",
+      "sha256": "ae35e36ab35f467d49bd8c10e3f6a346506e67058cc127f1faab93689dfac593",
+      "bytes": 318013,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-21.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-21.jpg",
+      "sha256": "7b1aa759599ef34f4844c2aef9e4ba8dd9cb6602378d31b830b60fcb734f6851",
+      "bytes": 330953,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-22.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-22.jpg",
+      "sha256": "86141a603576a7c21b2447f4158f7066fab8e99f2e5433b347e7124199ad059d",
+      "bytes": 201262,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-23.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-23.jpg",
+      "sha256": "0d20c5e8d26c193e45a42de998919dbc3ebf91653186a8e2fc6e1ace5c27d5c7",
+      "bytes": 212104,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-24.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-24.jpg",
+      "sha256": "15ad12b4da5d4aee4e780b9e9671f9bb7b73fbf2fdc3151cdeb7745a8c903e6b",
+      "bytes": 259005,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-25.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-25.jpg",
+      "sha256": "94b6449bb2ba60ca00d800b29e04e151bf57b9314923f680c7c42c4a23c25ead",
+      "bytes": 328480,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-26.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-26.jpg",
+      "sha256": "a5fef31ce6e264e19b46008fbd9b50811fac07ad0da0c63fd7b98187530652af",
+      "bytes": 294237,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-27.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-27.jpg",
+      "sha256": "ec4bbdbcf7a748a246e3aef64fc4994749f7537559e3796d0329a62f132df045",
+      "bytes": 306888,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-28.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-28.jpg",
+      "sha256": "84cb8caf73ea091f2b13b6a72195852ab1555e6afd8a960b2333c0fc769803b9",
+      "bytes": 418741,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-29.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-29.jpg",
+      "sha256": "2c3f9d13652438460775d426e5e4449ab04a70f58a691fcc00d7d46b994612ca",
+      "bytes": 276211,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-30.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-30.jpg",
+      "sha256": "9f1e7cfe254511b5a64c1edd256f3c40829093d16489e00dc941f0da91642389",
+      "bytes": 354151,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-31.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-31.jpg",
+      "sha256": "c2ca72f6e2a8d86d4763238b6e80ad4c1b7a2b4e257d30e6491f152d7ad7e6ed",
+      "bytes": 262643,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-32.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-32.jpg",
+      "sha256": "f85245e79d6ce60e25084cdd5456691538da20faa6c713a068b572929b1665ba",
+      "bytes": 229673,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-33.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-33.jpg",
+      "sha256": "36cd73c9790329f09ff2ed68bd6d5c840706d811011001ef30443fc53890e1ec",
+      "bytes": 356213,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-34.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-34.jpg",
+      "sha256": "33ef3d73d436d1f1332968780696f2ce9f5ced86a122e979d7d63753a2ca82b4",
+      "bytes": 206945,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-35.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-35.jpg",
+      "sha256": "169630456365dd641b7cf7713a6a5eae5b7adb1fd5bcf0f7e85fdb4f0876fac6",
+      "bytes": 329044,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-36.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-36.jpg",
+      "sha256": "94b2bc72da58495aac0bbfae9e3121ec2968f96b5f5b0e7f7634e7951455b324",
+      "bytes": 317357,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-37.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-37.jpg",
+      "sha256": "68786771bbacb85e0cde10795084be12181a68291cd4303c56f2b89be0449b1d",
+      "bytes": 182767,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-38.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-38.jpg",
+      "sha256": "68b1514d384010295433c04e07bbee817ed2d9963780e4ae177e727abc2ad1d5",
+      "bytes": 218209,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-39.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-39.jpg",
+      "sha256": "14332bef2bbfebaadb67c25acb5275e6fcedaa013707b152842f2a5e07dd5882",
+      "bytes": 248489,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-40.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-40.jpg",
+      "sha256": "a6eddde2a2b640f38eba3a4c64ef5f036f122df77dcf55cb93a4c90f87c8172f",
+      "bytes": 326557,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-41.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-41.jpg",
+      "sha256": "cde52ae31bb0f7d9a8861d90b7271577373c652417ccb28ca2e61a2ceb678bcc",
+      "bytes": 320083,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-42.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-42.jpg",
+      "sha256": "60a07bcddfb29c0060b5dd61231c2e0711f64414702be674e1a99d4a968219c2",
+      "bytes": 391493,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-43.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-43.jpg",
+      "sha256": "2d638245ad5a614ba67de5a49c62747864916b50e151009481eab58e6ab9a430",
+      "bytes": 261300,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-44.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-44.jpg",
+      "sha256": "399be58c0368c226d2824f43545d329634ad660025b9136c5620328d9495a21c",
+      "bytes": 288080,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-45.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-45.jpg",
+      "sha256": "2b79557b29d8ebdb71f4b36432593ae393f812321fc243dcd3840f3a150efd40",
+      "bytes": 280325,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-46.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-46.jpg",
+      "sha256": "5c5db30d7f609496537dfaa5c625fea84df6abc4ca8c3d7493f522faaae8026a",
+      "bytes": 342862,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-47.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-47.jpg",
+      "sha256": "587c2db5d130b55c20d327b1658bd1a37f63f30079bdccfef77f29fedb91b77f",
+      "bytes": 401420,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-48.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-48.jpg",
+      "sha256": "748f2a9fd5de7813b4d777e5f6e5138c1e5305cc5f25653b671d76507bd5baa0",
+      "bytes": 345833,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-49.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-49.jpg",
+      "sha256": "2a171ea6c24b2047ef7c4455b44613e4c52dc963d1a7fbd86c73b52cb7dfda57",
+      "bytes": 275744,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-50.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-50.jpg",
+      "sha256": "eece9ab297c5f95d4c5dc342b920ac3550e5696892b3d5834954316d18a1bd52",
+      "bytes": 382569,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-CONTACT-SHEET.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/LAG-SC-CONTACT-SHEET.jpg",
+      "sha256": "b6de757b5f99112e5b59690676847f0c09c3028131c44b686ecf4cdc09cac37a",
+      "bytes": 1128531,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/QA.txt",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/QA.txt",
+      "sha256": "2f0249a0011d0a226640533fb901e698ef1b5ab54226864f3fe3c5e0597c0440",
+      "bytes": 1364,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/SCENE-LIST.txt",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/SCENE-LIST.txt",
+      "sha256": "0f4390418a17d766d2d3aa52a7bc9b564e424d21084a0ea454285b4ec298d2aa",
+      "bytes": 3860,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-50-SCENES-FINAL/LAG-50-SCENES/refs/LAG-LOCK-FACE-NATURAL.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-50-SCENES-FINAL/LAG-50-SCENES/refs/LAG-LOCK-FACE-NATURAL.jpg",
+      "sha256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+      "bytes": 212322,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-500-MASTER-part01/CONTACT-INDEX.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-500-MASTER-part01/CONTACT-INDEX.jpg",
+      "sha256": "c3d3f66c7c2dfc6f368efc2b3f93e2bb6900463a25fcc1c316667072bda7537b",
+      "bytes": 801834,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/intake_receipt.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-500-MASTER-part01/LEGEND-500.csv",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-500-MASTER-part01/LEGEND-500.csv",
+      "sha256": "c9cac8335e82a1c8ad07cf2e7d3f2b02405f9a5299d3a8ff7de2ce9c0a183e79",
+      "bytes": 204899,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/intake_receipt.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-500-MASTER-part01/NOVA-GUIDE-500.md",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-500-MASTER-part01/NOVA-GUIDE-500.md",
+      "sha256": "14afe65394df8f977db5428b6ca1e304d5c375f01922622be1aa6d022cb6b20e",
+      "bytes": 37695,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/intake_receipt.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-500-MASTER-part01/QA.txt",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-500-MASTER-part01/QA.txt",
+      "sha256": "f5e2e5ec653bfbbe35dec578361dae1692ad50ee251c08dcea3791aff50a87ef",
+      "bytes": 45570,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/intake_receipt.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/00-GUIDE/LAG-NOVA-GUIDE.md",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/00-GUIDE/LAG-NOVA-GUIDE.md",
+      "sha256": "7322e476dd01633ba919ac415ff331fd1753db4c10488d2a532b40f9ab6fbbc4",
+      "bytes": 17780,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/00-GUIDE/LAG-NOVA-GUIDE.pdf",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/00-GUIDE/LAG-NOVA-GUIDE.pdf",
+      "sha256": "2a415de0ef19aeef2c041c6eac6a604cde5ba0e368fe0f9638727401cd5b96ae",
+      "bytes": 315374,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/00-GUIDE/LAG-SC-CONTACT-SHEET.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/00-GUIDE/LAG-SC-CONTACT-SHEET.jpg",
+      "sha256": "b6de757b5f99112e5b59690676847f0c09c3028131c44b686ecf4cdc09cac37a",
+      "bytes": 1128531,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/00-GUIDE/LAG-STORYBOARD.csv",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/00-GUIDE/LAG-STORYBOARD.csv",
+      "sha256": "ec45b8e7a3cfc05b612ee86046a719e498a609415d4af2e93dde9049d713367c",
+      "bytes": 9102,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/00-GUIDE/LOCK-V2.txt",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/00-GUIDE/LOCK-V2.txt",
+      "sha256": "e9365cb358215a5af0d81f4c7d4fd1849322a082fcdc5c60ea665d18ed8aaca5",
+      "bytes": 1088,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/00-GUIDE/QA.txt",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/00-GUIDE/QA.txt",
+      "sha256": "2f0249a0011d0a226640533fb901e698ef1b5ab54226864f3fe3c5e0597c0440",
+      "bytes": 1364,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/01-CURRENT-REFS/LAG-LOCK-ARM-SH13.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/01-CURRENT-REFS/LAG-LOCK-ARM-SH13.jpg",
+      "sha256": "5c47f12190e9ba68f87f7c3f8d66f571400f8058baf9ff54ecfe406adf037567",
+      "bytes": 259568,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/01-CURRENT-REFS/LAG-LOCK-FACE-NATURAL.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/01-CURRENT-REFS/LAG-LOCK-FACE-NATURAL.jpg",
+      "sha256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+      "bytes": 212322,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/01-CURRENT-REFS/LAG-LOOK-V3-01.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/01-CURRENT-REFS/LAG-LOOK-V3-01.jpg",
+      "sha256": "63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026",
+      "bytes": 327619,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-01.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-01.jpg",
+      "sha256": "0cdf75b3f300323aae92a8f36e54552357924797ad703b244bc69b39522a592b",
+      "bytes": 281486,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-02.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-02.jpg",
+      "sha256": "502bec1e0b23c63ea76e6e5198dc8f25fd95942bfb538ee886b0b54acd4acc8d",
+      "bytes": 355140,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-03.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-03.jpg",
+      "sha256": "9b43d772edcf0d3016d4f2c8615f26f96b0d7232670c460bb432a4c1dfcda980",
+      "bytes": 278035,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-04.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-04.jpg",
+      "sha256": "79eea477394eae7e15ac3baf79422b6716dfa2a460fd27a2689297b6a9598ca5",
+      "bytes": 379792,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-05.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-05.jpg",
+      "sha256": "5352174eff3c0f5c8e4247dd2e6f8130916815eb0456ff36602af86c25853b64",
+      "bytes": 366504,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-06.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-06.jpg",
+      "sha256": "fb1e8c3ccb3c68c46d47e4bd628d15dedfbdc51e7e39db236f24cebe01ffd802",
+      "bytes": 373078,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-07.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-07.jpg",
+      "sha256": "8ae9a2554b5d52e3c4372876df4f4ffbe8f4673fc3f5552abe1eb444b9422791",
+      "bytes": 262615,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-08.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-08.jpg",
+      "sha256": "9f5e3cb1762a060ac56acc932537d617c4de941c1dd14cef0fbe22b472020492",
+      "bytes": 296710,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-09.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-09.jpg",
+      "sha256": "98cbbacec4734dea3cb5f9656a641c54b7556b83bca051d0b8c0a192c71cd2e0",
+      "bytes": 272215,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-10.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOK-10.jpg",
+      "sha256": "137d589cb80a28b5a50ae987233502bce122f98d80839e5d7393befe2e8535cf",
+      "bytes": 304830,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOKS-CONTACT.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/LAG-LOOKS-CONTACT.jpg",
+      "sha256": "4fe58bf99749671be95d90e44ff4a01fa15dd1d606a6fba6a11f429d89349505",
+      "bytes": 600665,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/QA-NOTES.txt",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/a-original-10-looks/QA-NOTES.txt",
+      "sha256": "35415023de44eda5a45846368a5aea9f33ddfd4f3c3bdd8234d17c457c436de2",
+      "bytes": 1274,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-01.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-01.jpg",
+      "sha256": "12f5890ef32c17575bfaa1b10574b610ceff2c966e3b3e1344e48a190b9f2bf8",
+      "bytes": 277563,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-02.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-02.jpg",
+      "sha256": "aef8aaca5b4712331b0889686e46025095cd81a7af50380e6d5e39a807a772b6",
+      "bytes": 124266,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-03.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-03.jpg",
+      "sha256": "58cb9d4c2e2ec87d170cf18f15efa23238107752353d6a4d4bab5e382def601f",
+      "bytes": 167935,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-04.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-04.jpg",
+      "sha256": "13502173def50452f6aa51284292db6d5903f0a53254ef4cca5af498c71b5984",
+      "bytes": 126452,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-05.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-05.jpg",
+      "sha256": "0eb5bd8d69b0d01829e705b8e3b9fc4c5e2f5a02630e8333c86e5673b9dd9be5",
+      "bytes": 251194,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-06.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-06.jpg",
+      "sha256": "40031beac8f33a199c1af3cc1ea3a35d461bc1501109ee670083f3e2f2fc9de9",
+      "bytes": 183226,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-07.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-07.jpg",
+      "sha256": "a5fcd445c0e8f92010e38ba9a7553b0731ea5379b51491330080ff60a3f8631a",
+      "bytes": 125782,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-08.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-08.jpg",
+      "sha256": "6d4dd90906ec13f21d5a1f58301d8e118f7f41dcdb07a693703c30de21a17ed9",
+      "bytes": 55194,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-09.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-09.jpg",
+      "sha256": "1e6e51caaf9acaea7a6aa09d6964cca81ebace47832534db9a60f4496774b96f",
+      "bytes": 267352,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-10.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-10.jpg",
+      "sha256": "47c68207e0720a35f0d711743ff7f82a9881b4751b98eed21cde0ece66ba442f",
+      "bytes": 221502,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-11.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-11.jpg",
+      "sha256": "5d5d430540f7b00916cd29180a951ffd59b3dd631f957a03579d98e741475cdb",
+      "bytes": 228656,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-12.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-12.jpg",
+      "sha256": "0b3449678cb1a8e5bb991a6a772723571a15c66d23f4320644c45c9a49ec2426",
+      "bytes": 164772,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-13.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-13.jpg",
+      "sha256": "90a23dd1c40fb5c20c665fbada84827eb0fc6d2e31a5ef5c685359f90498b5e8",
+      "bytes": 169936,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-14.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-14.jpg",
+      "sha256": "6babc10b380022e68e54575e96c80984c032350d747c74c9bf1fc866f7f8a528",
+      "bytes": 254877,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-15.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-15.jpg",
+      "sha256": "ec4d97de94eb56ff4f391c07acd35fb97bc225cb5583598aaa817bd604b67f11",
+      "bytes": 212140,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-16.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-16.jpg",
+      "sha256": "60478472c7f598c23b9e91839c567c70ff9ed26947314c4aa326fa529702590b",
+      "bytes": 129806,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-17.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-17.jpg",
+      "sha256": "467d69eb63c5a480b7490435bb24e1b380b5a4072145c79bc36f1dd755117ef3",
+      "bytes": 249798,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-18.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-18.jpg",
+      "sha256": "999483744679e3bd350dac9765a39a42db25c73b880bca49cefcdf14dccff559",
+      "bytes": 288816,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-19.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-19.jpg",
+      "sha256": "93a9eaa735eab7a5df94b985dfcc81ca086471936f06f867a0827d05457d4217",
+      "bytes": 125513,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-20.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCIL-20.jpg",
+      "sha256": "764f5ab0b26651e92c7ae402032005c8d0a945122bb0a4af38d132dce40e65b3",
+      "bytes": 145367,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCILS-CONTACT.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/b-sandworm-stencils/SH-STENCILS-CONTACT.jpg",
+      "sha256": "79c72f43ecaecde05e50b8ff1430c1c8364591bb623039c3bee3a27a9f12de80",
+      "bytes": 481356,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/c-sandworm-neck-tryons/LAG-NECK-TRYONS-CONTACT.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/c-sandworm-neck-tryons/LAG-NECK-TRYONS-CONTACT.jpg",
+      "sha256": "35c551dffed8fa1db20156ccf865580276e19e29d07c50feaadc39ff0d852335",
+      "bytes": 437194,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/c-sandworm-neck-tryons/LAG-TRY-SH10.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/c-sandworm-neck-tryons/LAG-TRY-SH10.jpg",
+      "sha256": "227a87f650500c1361ee3386e21fb08276838b23d4dccd7490711ad34a5a321b",
+      "bytes": 234026,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/c-sandworm-neck-tryons/LAG-TRY-SH12.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/c-sandworm-neck-tryons/LAG-TRY-SH12.jpg",
+      "sha256": "dac34147f0ab873c47636f809efce20dc2f779cf28cb3881531ac9bf7ef80951",
+      "bytes": 264564,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/c-sandworm-neck-tryons/LAG-TRY-SH13.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/c-sandworm-neck-tryons/LAG-TRY-SH13.jpg",
+      "sha256": "5c47f12190e9ba68f87f7c3f8d66f571400f8058baf9ff54ecfe406adf037567",
+      "bytes": 259568,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/c-sandworm-neck-tryons/LAG-TRY-SH16.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/c-sandworm-neck-tryons/LAG-TRY-SH16.jpg",
+      "sha256": "305c65c1841fc4366098ff1ebb0bfc365b521881deb1098e7e0daf564c27629b",
+      "bytes": 249590,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/c-sandworm-neck-tryons/LAG-TRY-SH18.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/c-sandworm-neck-tryons/LAG-TRY-SH18.jpg",
+      "sha256": "1710cb4ee33a5d63c3f8d6de05bad82ae9a99f22c83235c431e225373276de56",
+      "bytes": 249576,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/c-sandworm-neck-tryons/LAG-TRY-SH19.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/c-sandworm-neck-tryons/LAG-TRY-SH19.jpg",
+      "sha256": "dd3ae66c9dd895856ad0f0df15b0720eaaf6396fb692f7131d2badcfce37f47c",
+      "bytes": 239802,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/d-looks-v2-iced-grill/LAG-LOOK-V2-01.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/d-looks-v2-iced-grill/LAG-LOOK-V2-01.jpg",
+      "sha256": "702829fc14887684e2d55f3db1ab0646c4ca5a148e9cdc923b77c1d4bad5f534",
+      "bytes": 296545,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/d-looks-v2-iced-grill/LAG-LOOK-V2-02.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/d-looks-v2-iced-grill/LAG-LOOK-V2-02.jpg",
+      "sha256": "cd1cbeed8b6a17c2db1ac8725f4b37210bb6e1cdacf9241cb1048a0b6f953938",
+      "bytes": 360710,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/d-looks-v2-iced-grill/LAG-LOOK-V2-03.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/d-looks-v2-iced-grill/LAG-LOOK-V2-03.jpg",
+      "sha256": "1d836f78abf98937969c4637e2aa33ee208edfdb507f60ebd0a497c3937d4db4",
+      "bytes": 243893,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/d-looks-v2-iced-grill/LAG-LOOK-V2-04.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/d-looks-v2-iced-grill/LAG-LOOK-V2-04.jpg",
+      "sha256": "3e331c3ccfd6cab75bb4b75ac10b77dfb55bff6315bdd7a8b1ad60b3eb1f0ebe",
+      "bytes": 339828,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/d-looks-v2-iced-grill/LAG-LOOK-V2-05.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/d-looks-v2-iced-grill/LAG-LOOK-V2-05.jpg",
+      "sha256": "758946fa0f929430fcfd2e99e1b4c2634428ec9c88d7fe33be257b8b42b7cf1a",
+      "bytes": 326849,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/d-looks-v2-iced-grill/LAG-LOOK-V2-06.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/d-looks-v2-iced-grill/LAG-LOOK-V2-06.jpg",
+      "sha256": "00b939c919e2fa6620942cb745755cb70aca34e7138eb41d3fab0f05c725e93c",
+      "bytes": 378226,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/e-natural-teeth-face-tests/LAG-FACE-NAT-A.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/e-natural-teeth-face-tests/LAG-FACE-NAT-A.jpg",
+      "sha256": "ea096947b28c105000a87b430ad7964b7b28f9213e2aa341b396890479b66b36",
+      "bytes": 213522,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/e-natural-teeth-face-tests/LAG-FACE-NAT-B.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/e-natural-teeth-face-tests/LAG-FACE-NAT-B.jpg",
+      "sha256": "e4442e4c0ea054d2a8fc01e1b407e32ec276bc26f3d5f1004fe8a9bfb2bf8262",
+      "bytes": 218169,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/e-natural-teeth-face-tests/LAG-FACE-NAT-C.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/e-natural-teeth-face-tests/LAG-FACE-NAT-C.jpg",
+      "sha256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+      "bytes": 212322,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/e-natural-teeth-face-tests/LAG-LOOK-V3-01.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/e-natural-teeth-face-tests/LAG-LOOK-V3-01.jpg",
+      "sha256": "63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026",
+      "bytes": 327619,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-01.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-01.jpg",
+      "sha256": "e2b96f98651e2f0fbf0e5b3cfd8a530b53f8628e430267c682718ccb55309d59",
+      "bytes": 335187,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-02.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-02.jpg",
+      "sha256": "96fa3c1c425559dd17d5285c14f9249f08d8d877c4ff81eb8a14142743767db7",
+      "bytes": 253374,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-03.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-03.jpg",
+      "sha256": "a76bcd86315c36f0c7002fd5f932f5777ed0f42c474cb45d68c5e762b02d7d5c",
+      "bytes": 286825,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-04.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-04.jpg",
+      "sha256": "1ed5f4bbb1e9d7102639a6dfbfee215f04fafc059d9bf65eed6e4281cbe39cdb",
+      "bytes": 288650,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-05.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-05.jpg",
+      "sha256": "a34368853650aed22f8052e2154e75f115f0e71454e622d120870de6068c1c60",
+      "bytes": 340054,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-06.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-06.jpg",
+      "sha256": "93661eaf346e3cba625e66e296d0f7696154f38f6d2c2437b1a244c87e2d17b2",
+      "bytes": 385360,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-07.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-07.jpg",
+      "sha256": "7c56d20d380d749ea23d06f9939b9ca6ae53967a905476fb06b74de0cbed5bef",
+      "bytes": 414237,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-08.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-08.jpg",
+      "sha256": "2cc354f1134f0b19c496b20cbe7c72a731af4527589e59770a1eef1e3768c802",
+      "bytes": 260743,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-09.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-09.jpg",
+      "sha256": "2597e98ee1bafee58181df0642f39453adc70549c0d7d9b0d2e3fdc69331200e",
+      "bytes": 269797,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-10.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-10.jpg",
+      "sha256": "6859a9596796822810b09aa689023c242cb2513ff6a727e82c9f37f67d094f04",
+      "bytes": 468902,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-11.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-11.jpg",
+      "sha256": "234b787470be7d0fd39151b97470d69be2e9ef9194eebd47779473db7d8e17bc",
+      "bytes": 316571,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-12.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/f-first-12-scenes-old-spec/LAG-SC-12.jpg",
+      "sha256": "60b3005a12a20db44952aa94011ee7240b705e726ea75948a20ebfeb09f42889",
+      "bytes": 255086,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/g-superseded-refs/HD-EXP-LOCK-FACE.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/g-superseded-refs/HD-EXP-LOCK-FACE.jpg",
+      "sha256": "ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978",
+      "bytes": 246854,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/g-superseded-refs/LAG-LOCK-FACE.jpg",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-DROP-GUIDE-STORYBOARD-HISTORY/LAG-NOVA-DROP/02-HISTORY/g-superseded-refs/LAG-LOCK-FACE.jpg",
+      "sha256": "cb183973ed1fc70ec906b762fb263b29c8866934a67f9608786b712579eaf056",
+      "bytes": 199546,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/LAG-NOVA-GUIDE.pdf",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/LAG-NOVA-GUIDE.pdf",
+      "sha256": "2a415de0ef19aeef2c041c6eac6a604cde5ba0e368fe0f9638727401cd5b96ae",
+      "bytes": 315374,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      ]
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/NOVA-CONSOLIDATION-AND-ID-MAP.txt",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/NOVA-CONSOLIDATION-AND-ID-MAP.txt",
+      "sha256": "b6439f7afd2300ecd634e7d9b845791a203d6bfecea8949b1a9c4446411a98af",
+      "bytes": 8455,
+      "prior_intake_hash_verified": false,
+      "prior_records": []
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/NOVA-GUIDE-500.md",
+      "current_path": "docs/notes/explorable_world/comfy/references/From Grok/Processed/NOVA-GUIDE-500.md",
+      "sha256": "14afe65394df8f977db5428b6ca1e304d5c375f01922622be1aa6d022cb6b20e",
+      "bytes": 37695,
+      "prior_intake_hash_verified": true,
+      "prior_records": [
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/intake_receipt.json"
+      ]
+    }
+  ],
+  "pending_relocations": [],
+  "summary": {
+    "verified_mappings": 20,
+    "verified_files": 175,
+    "verified_bytes": 117422688,
+    "files_matching_prior_intake_hashes": 167,
+    "pending_mappings": 0,
+    "intentionally_empty_source_part_directories": 7,
+    "incoming_root_entries": [
+      "Processed"
+    ]
+  },
+  "historical_nonfiles": {
+    "note": "Previously audited JSON mentions of the 50 LAG500 nested ZIPs are historical provenance after verified deletion, not broken live file links. The five new Hon Dolo return ZIPs are separately recorded in new_historical_deleted_archives.",
+    "cleanup_receipt": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/cleanup_summary.json"
+  },
+  "rendered_html_link_check": {
+    "html_files_scanned": 8,
+    "scope": "Live local HTML in Comfy and Pathfinder handoff, excluding preserved provider/source HTML under references.",
+    "from_grok_href_or_src_count": 0,
+    "broken_relocatable_links": 0,
+    "deleted_archive_links": 0,
+    "html_changes_required": 0
+  },
+  "completed_relocation_receipt": {
+    "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/cleanup_receipt.json",
+    "sha256": "2223b28bc083ff90d777a89be1fa71fa93364f19a7b6f3ff59fcadc795db37fd",
+    "state": "complete",
+    "completed_at_utc": "2026-10-09T04:20:39.0257095Z",
+    "canonical_files_verified": 115,
+    "deleted_archive_count": 5,
+    "archive_bytes_freed": 39855141
+  },
+  "new_historical_deleted_archives": [
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-MASTER-20261009_part1of2/GROK-HD-MASTER-20261009/GROK-BOSS-DISCOVERY-20261008_round01_return_v001.zip",
+      "sha256": "b983e44a8230bcd4de55be6d65a8b5da820645ae9e7972c5131ac4aa57204430",
+      "bytes": 14477957,
+      "state": "verified_deleted_after_extraction",
+      "cleanup_receipt": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/cleanup_receipt.json",
+      "note": "Historical archive path; do not resolve to a live relocated ZIP. Use canonical extracted files recorded by the intake receipt."
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-MASTER-20261009_part1of2/GROK-HD-MASTER-20261009/GROK-HD-20261008_return_v001.zip",
+      "sha256": "739ef8f4cb6395f7f0c6b6a26b1f9e98d9e7338dd01eb62b43eb831747afc239",
+      "bytes": 1733553,
+      "state": "verified_deleted_after_extraction",
+      "cleanup_receipt": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/cleanup_receipt.json",
+      "note": "Historical archive path; do not resolve to a live relocated ZIP. Use canonical extracted files recorded by the intake receipt."
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-MASTER-20261009_part2of2/GROK-HD-MASTER-20261009/GROK-HD-20261008_hip_rollout_v001.zip",
+      "sha256": "92a9e8e989deffdb75bdcc6b8269cf60bea63b6d8bb7e971fc05d518e136a684",
+      "bytes": 7998338,
+      "state": "verified_deleted_after_extraction",
+      "cleanup_receipt": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/cleanup_receipt.json",
+      "note": "Historical archive path; do not resolve to a live relocated ZIP. Use canonical extracted files recorded by the intake receipt."
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-MASTER-20261009_part2of2/GROK-HD-MASTER-20261009/GROK-HD-20261008_recovery_inventory.zip",
+      "sha256": "5f797c5671c7c89ac3d62a73dde27a8edba7c39d1ef5ac897a99c100d29ddf02",
+      "bytes": 8157693,
+      "state": "verified_deleted_after_extraction",
+      "cleanup_receipt": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/cleanup_receipt.json",
+      "note": "Historical archive path; do not resolve to a live relocated ZIP. Use canonical extracted files recorded by the intake receipt."
+    },
+    {
+      "historical_path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-MASTER-20261009_part2of2/GROK-HD-MASTER-20261009/GROK-HD-20261008_return_v002.zip",
+      "sha256": "0d1c60488f73ae43733004dfa0c38afb6b9daaf8af477c99546ffbc2b99f9d4f",
+      "bytes": 7487600,
+      "state": "verified_deleted_after_extraction",
+      "cleanup_receipt": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/cleanup_receipt.json",
+      "note": "Historical archive path; do not resolve to a live relocated ZIP. Use canonical extracted files recorded by the intake receipt."
+    }
+  ],
+  "preserved_frozen_receipt": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/intake_receipt.json",
+    "sha256": "96069a962794403c9d426150158acff20fd6de66f833e129f006cd70d5ce8db9",
+    "modified": false
+  }
+}

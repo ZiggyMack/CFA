@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-08",
+  "updated": "2026-10-09",
   "purpose": "Gemini cast attachment mapping and isolated Comfy likeness targets, prepared for user uploads",
   "path_base": "repository root D:/Documents/CFA",
   "state": "local_sources_verified_gemini_upload_mapping_pending",
@@ -19,7 +19,10 @@
         "HD-FINISH-01",
         "HD-LIKENESS-01",
         "HD-LIKENESS-02",
-        "HD-LIKENESS-03"
+        "HD-LIKENESS-03",
+        "HD-LIKENESS-04",
+        "HD-LIKENESS-05",
+        "HD-LIKENESS-06"
       ],
       "pending": [
         "explicit final on-screen identity selection",
@@ -440,6 +443,63 @@
         "visual_crop_review": "inspected: head and upper body isolated; no adjacent character face"
       },
       "design_approval_changed": false
+    },
+    {
+      "reference_id": "HD-LIKENESS-04",
+      "character_id": "HON-DOLO",
+      "role": "Comfy likeness · cockpit expression",
+      "original_path": "docs/notes/explorable_world/comfy/references/Hon solo_3.jpg",
+      "sha256": "c2a6607b2dc645f27df4aa7e507f211fb1a989685809fcf006a4a6d1298fda23",
+      "selection_status": "available_likeness_candidate_not_selected_master",
+      "use_limits": "Likeness/hair/expression only. Smiling mouth and hand near the ear are not a neutral mouth/anatomy standard. Modest resolution and compression limit fine skin/teeth evidence. Original vest, shirt, cockpit and props do not set Hon Dolo wardrobe, tattoos, grill or scene canon.",
+      "image": {
+        "width": 692,
+        "height": 443,
+        "format": "JPEG"
+      },
+      "defaultGeminiAttachment": false,
+      "allowedDestinations": [
+        "ComfyUI"
+      ],
+      "intakePath": "docs/notes/explorable_world/comfy/references/likeness_intake_20261009/intake.json"
+    },
+    {
+      "reference_id": "HD-LIKENESS-05",
+      "character_id": "HON-DOLO",
+      "role": "Comfy likeness · three-view comparison",
+      "original_path": "docs/notes/explorable_world/comfy/references/Hon solo_4.jpg",
+      "sha256": "a0c61d1d4eb7b94d460e2fa05809cdd616abbac6f45cbb421cc2d1c7990320ae",
+      "selection_status": "available_comparison_sheet_requires_subject_isolation",
+      "use_limits": "Do not pass the whole triptych as a single face anchor: it contains three faces/views and could introduce duplication or blended expressions. Panel crops would be derived assets with parent hash and exact bounds. Visual overlap with _3 is not a byte-identical file or proof of identical source pixels. No outfit/tattoo/grill authority.",
+      "image": {
+        "width": 739,
+        "height": 415,
+        "format": "JPEG"
+      },
+      "defaultGeminiAttachment": false,
+      "allowedDestinations": [
+        "ComfyUI"
+      ],
+      "intakePath": "docs/notes/explorable_world/comfy/references/likeness_intake_20261009/intake.json"
+    },
+    {
+      "reference_id": "HD-LIKENESS-06",
+      "character_id": "HON-DOLO",
+      "role": "Comfy likeness · age comparison",
+      "original_path": "docs/notes/explorable_world/comfy/references/han solo 5.webp",
+      "sha256": "ee049b599008b5bece955497fc4eeca96cd38afc9be65b6e406865ca44bb57a2",
+      "selection_status": "available_era_comparison_requires_subject_isolation",
+      "use_limits": "Do not feed both panels together and average the ages. Faces occupy only part of a wider body image, so whole-file resolution is not face-detail resolution. Source URL, exact dates and original publication provenance are unknown. Neither panel establishes production costume, props, tattoos or grill; no mark removal or image edit was performed.",
+      "image": {
+        "width": 974,
+        "height": 748,
+        "format": "WEBP"
+      },
+      "defaultGeminiAttachment": false,
+      "allowedDestinations": [
+        "ComfyUI"
+      ],
+      "intakePath": "docs/notes/explorable_world/comfy/references/likeness_intake_20261009/intake.json"
     }
   ],
   "rules": [

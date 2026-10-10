@@ -1,5 +1,19 @@
 # CFA evidence for Pathfinder
 
+## October 8 Pathfinder Collaborators teaching adopted
+
+Panhandler read the [debrief](../comfy/projects/collaborators/panhandler_return_20261008.txt) through its **October 9, 01:45:08 UTC** appendix and implemented the bounded teaching request. The new **Collaborators** page starts with ComfyUI and adds Grok, Gemini and Flow: **Role & handoff**, **Preserve or explore**, and **Continue a lesson**. It reuses the existing reference/comparison/prompt/workflow-file/video-audio lessons; it neither duplicates CFA media nor operates provider accounts.
+
+See the [full adoption and checks](../../../../../Pan_Handlers/Help/CFA_FEEDBACK.md), [ledger entry](../../../../../Pan_Handlers/Help/CFA_TUTORIAL_LEDGER.md), [page](../../../../../Pan_Handlers/Help/pages/collaborators.py), [teaching data](../../../../../Pan_Handlers/Help/content/collaborators.py) and [file map](../../../../../Pan_Handlers/Help/FILE_MAP.md).
+
+The current snapshot distinguishes provider-visible Grok packets from unverified local receipt/extraction/acceptance, and Gemini's usable text/chat context from failed or unverified raw visual-media Sources. It preserves project separation, Prime versus Multiverse, scoped favorites/reference approval, creative freedom plus the four-option companion tattoo sheet, original/crop/reconstruction lineage, finite discovery rounds, explicit source correction precedence and export/persistence boundaries. The retained 41-second Flow source supplies a prepared silent six-second excerpt; no Flow execution or acceptance is inferred.
+
+Pathfinder's current evidence summary now includes the executed motion and depth/Canny tests with their preservation failures and review limits. **Video & audio** and **Rewrite a scene > Understand the target** share a case distinguishing the measured local stream-copy soundtrack proof, saved/server-converted but unexecuted Cloud frame assembly, and the separate unexecuted lip-sync candidate. Earlier no-video-execution notes remain historical.
+
+**69 tests passed**, including both themes, embedded navigation, all collaborator/lesson choices, restored choices/prompt draft and unchanged journey/video-plan state. Compilation, independent code/content review and provenance/document link checks passed. Existing journal v1, video-plan v1 and completed curriculum remain intact. The new download is teaching notes only, not media, a selection list or CFA review state.
+
+This is the manual adoption return. Production receipts, verified archive intake, raw visual-source readiness, scoped winner selection, actual runs and creative acceptance remain CFA's work. No media copy, production graph edit, provider upload/job, commit, push or deployment occurred in this teaching integration. Later production progress needs a new dated evidence return.
+
 ## October 8 production review and provider handoffs
 
 The separate [CFA Creative Studio](https://algaib.streamlit.app/) is deployed from `apps/creative_studio/app.py`. Its local and hosted views now have a prepared Mission Control board, scoped review decisions, shot plans and a selection basket separate from favorites. Local autosave requires a user-chosen review JSON; hosted state requires export/import. Removal marks are a queue, not source deletion.

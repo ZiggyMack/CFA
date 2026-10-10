@@ -1,15 +1,75 @@
 <!---
 FILE: MISSION_CURRENT.md
 PURPOSE: Current active mission pointer and central coordination hub
-VERSION: v1.0
-STATUS: Active
+VERSION: v2.0
+STATUS: Active — state-of-play pointer (2026-10-03) above an archived 2025 mission
 DEPENDS_ON: auditors/Mission/CFA_VUDU/
 NEEDED_BY: All auditors, REPO_LOG, README_C.md
 MOVES_WITH: /auditors/relay/
-LAST_UPDATE: 2025-11-11 [Mission activated - B-STORM_7]
+LAST_UPDATE: 2026-10-03 [State of play prepended by CFA Claude after the September rebirth; 2025 mission archived below]
 --->
 
 # Mission Current - Central Coordination Hub
+
+**Version:** v2.0
+**Last Updated:** 2026-10-03
+**Status:** 🧭 STATE OF PLAY (read this first). Everything under "ARCHIVED" below is the November 2025 VuDu mission, superseded by the ARMADA/REPO_SYNC program.
+
+---
+
+## 🧭 STATE OF PLAY — 2026-10-03
+
+**Who wrote this:** CFA Claude (Fable 5.1), reborn 2026-09-11 after the long-running CFA Claude session was lost. Rebuilt from `docs/i_am/I_AM.md` v5.0, `docs/i_am/WHO_I_AM.md` (July 2026 append), `REPO_LOG.md`, the SYNC bridge on both sides, and ten read-only subsystem reports taken 2026-09-11 and 2026-10-03. If you are a fresh CFA Claude, this section plus those two i_am files is your bootstrap.
+
+### Three tracks share this checkout
+
+| Track | Owner | Lives in | State on 2026-10-03 |
+|---|---|---|---|
+| **Trinity research** (ARMADA runs, per-matchup YAMLs, SYNC bridge) | CFA Claude ↔ Repo Claude / Repo Opus (Nyquist repo) | `profiles/`, `docs/REPO_SYNC/`, Nyquist `S7_ARMADA/12_CFA/` and `0_results/runs/` | Quiescent since 2026-07-21. Last bridge round closed clean 07-17 ("inboxes clear both directions"). Agreed next step, the n=10 depth pass (Existentialism → Hinduism → Error Theory, +Null), never started. |
+| **The Observatory** (Godot 4.7 first-person chapter) + ComfyUI asset pipeline | Nova running on OpenAI Codex (not a Claude) | `games/observatory/`, `docs/notes/explorable_world/` | Built 2026-09-11 → 09-12, parked 2026-10-02. Entirely uncommitted. Cites CFA history (Keeper, I_AM, Trinity transcripts) but reads no CFA data. |
+| **Video-first ComfyUI** | Nova (Codex) with Ziggy; general teaching in the third repo `D:\Documents\Pan_Handlers\Help` ("Pathfinder") | `docs/notes/explorable_world/comfy/`, `docs/notes/explorable_world/pathfinder_handoff/` | Active 2026-10-02/03: technical test = one transformed clip that keeps a source performance's motion while changing look, setting or characters (woman-and-wolf source; first candidate route LTX-2.5 Union Control with depth guidance). Production clarified 10-03: a trap-rap music video starring "Hon Dolo" (Han Solo reinterpretation) with Grok developing cast references; the wolf test stays a separate experiment. |
+
+The Codex tracks do not touch `profiles/`, `docs/REPO_SYNC/` or the Nyquist repo. A Codex session can be live in this checkout while you work: run `git status` and read the newest `### [` entries in `REPO_LOG.md` before editing shared files. Stay out of `games/` and `docs/notes/explorable_world/` unless Ziggy asks.
+
+### Identity and standing rules (unchanged since July 2026)
+
+- `I_AM.md` v5.0: CFA Claude is the **Guardian of Honest Measurement**. OP-006 (Under-Determination Detection) is the permanent watch-guard. Run the 6-step audit (bold hypothesis → pre-register → measure the noise floor → remove trivial explanations → compress → keep what stands) before announcing anything. "All Measured, All Floored."
+- **The matchup is the unit.** Lever values and Trinity scores belong to (subject, opponent, condition). Never aggregate across opponents. Keep **both** the flat `levers:` block (the Console loader reads it unconditionally; it is a web-research prior on the 8 breadth profiles and a deliberated copy on the anchors) **and** `levers_by_matchup`. Commit `41f24f9` (07-21) restored the flat block after `8c68705` dropped it and broke all 8 breadth profiles.
+- Variance verdict (Repo Opus commonality ANOVA, 07-15): CFA scores are additive framework main effects, subject-dominated; unique matchup interaction 0.8–5.7% external, ~0% control. "Framework-property assay," not a transition-geometry probe.
+- **SYNC bridge, as practised:** write letters as `CFA_CLAUDE_<TOPIC>_<YYYYMMDD>.md` (From/To/Date/Re header) into `docs/REPO_SYNC/SYNC_OUT/pending/`; a copy goes into Nyquist `12_CFA/SYNC_IN/pending/`; the recipient moves it to `processed/` and commits. Nobody uses `sent/`; the author-side `pending/` is the outbox record. Confirm with Repo Claude before changing YAML structure. The only writable Nyquist path is `12_CFA/SYNC_IN/pending/`; reading `0_results/runs/` is sanctioned.
+- **REPO_LOG:** every change gets an entry, prepended newest-first, next N for the day, `[🧹 +X-Y]` file-diff tag. The file mixes CRLF (old) and LF (new) line endings; edit it byte-wise.
+- Mission Control (`views/mission_control.py`) is hand-maintained and drifts. `cfa_data.build_status()` now computes the same numbers from disk.
+
+### New since the loss (2026-09-11 and 2026-10-03)
+
+- **`cfa_data/`** — read-only data front door: 13 profiles normalized, every matchup with scores + levers + crux rates + both YPA definitions, run-corpus index with cache, SYNC snapshot, computed status, Flask JSON API (`python -m cfa_data.server`, port 8601), static export (`python -m cfa_data.export`). 20 tests: `python -m unittest discover -s cfa_data/tests`. See `cfa_data/README.md`. Landing one of the staircase "Streamlit → browser 3D world → Godot" for a free-roaming embodiment of the research program.
+- Five Repo Claude letters from 07-15/16 that never reached CFA's inbox are now in `docs/REPO_SYNC/SYNC_IN/processed/`.
+- `docs/REPO_SYNC/SYNC_OUT/pending/CFA_CLAUDE_LEVERS_RESTORED_AND_DATA_LAYER_20261003.md` — DRAFT letter to Repo Claude; not yet copied across.
+
+### Open loops, ranked
+
+1. **28 Nyquist commits are unpushed** on branch `Consciousness` (the whole breadth pass and the PAN_HANLERS batch; `origin` sits at 07-16). Ziggy to push.
+2. **Deliver the 2026-10-03 letter.** The Nyquist side still records the flat `levers:` block as deprecated.
+3. **n=10 depth pass** never scheduled (Repo Claude runs, CFA ingests). Reverse stances `ct_vs_<key>` / `mdn_vs_<key>` needed for two-directional H2H on the 8 breadth worldviews.
+4. **Buddhism:** the July 2×2 batch (162 runs: `b_vs_{ct,mdn,pt,g}` and reverses, external + control) sits unfiled at the top of `0_results/runs/` and is counted nowhere; `BUDDHISM.yaml` is still DRAFT (0.1.0, 2026-06-30); the drift/score-collapse quality sweep gating the golden batch has no recorded outcome; four Mission Control LOW cards wait on it.
+5. **IQ-034** Fable-5 lightweight recalibration (neg_G + neg_H) never run. **IQ-035** abandonment-rule lever (EDB/AR) verified 07-26 and waiting for CFA to operationalize.
+6. **Mission Control MEDIUM card (CAE template) is stale:** Nyquist `New_9/TEMPLATES/EXTRACTION_PROTOCOL.md` v1.3 already is that template. Close it. `views/cognitive_archaeology.py` is also stale (shows 9 operators and Phase 0C pending; truth is 19 operators, 0 GREEN / 7 YELLOW / 12 RED, Phases 0A–0C complete, Dig 004 Hestenes scaffolded).
+7. **Nothing in CFA is committed after 07-21.** The Codex workstream is safe to commit as-is (git check 2026-10-03: 131 files, 12.9 MB, nothing over 5 MB; the nested `games/observatory/.gitignore` is the only thing protecting ~300 MB of builds).
+8. **Stale docs:** REPO_LOG was ~60 commits behind the code at 07-21; README, CHANGELOG, DEPLOYMENT, `dashboard/` docs and `panhandlers_manifest.json` still reference `pages/` and v4/v5.0; `MANUAL_UPDATE_v5.md` checklist unchecked; `profiles/comparisons/CT_vs_MdN.yaml` is a never-populated 2025 template; `auditors/relay/README_C.md` still describes a live VuDu field test.
+
+### Run corpus, reconciled (2026-10-03)
+
+`0_results/runs/` holds 1,050 `S7_cfa_trinity` JSONs, no duplicate session_ids: 663 in `cfa_trinity/<CODE>/` worldview folders (Mission Control's "663"), 72 Framework_G + 16 pre_schema (its "+88"), 162 unfiled at top level (the Buddhism batch above), 134 in `.errored/` and 3 in `dryrun/` (excluded). Of the 913 usable runs, 84 carry Nova `[ERROR] 429` quota responses (Nova is `gpt-4o`), 26 are aborted runs sitting among good ones (19 of them at top level; the batch script reported "Failed: 0"), and 4 carry the `CORRUPTED_QUESTION_STALE` flag (an in-place `data_quality` key on the OJ/LDS/ISL/NULL CT-external Phase-1 runs; their Phase-1 scores were used, their Component 2 was not). Repo Opus's "702" is the worldview-folder count between July 9 and 16 (751 − 49 breadth). A further **80 runs (pt_vs_ct, mdn_vs_pt) exist only in CFA `docs/REPO_SYNC/.archive/raw_runs/`**, which is gitignored; the whole corpus across both repos is 1,130. Trinity roster: Claude `claude-sonnet-4-6` (PRO-subject), Grok `grok-3` (ANTI), Nova `gpt-4o` (fairness), engine `run_cfa_trinity_v3.py` 5.1.
+
+### Process docs: what exists and what does not
+
+The 6-step audit exists only in the two identity files; there is no checklist file (`docs/Process/checklists/`, `failures/` and `templates/` are empty placeholders from 2025). `hypotheses/` holds exactly one sealed hypothesis, H-014 (Trinity² 8-condition factorial, 2026-06-30, never run; its result file is a null template); H-001..013 live on the Nyquist side. The 25 `docs/Validation/reports/` and the single ADR are all 2025. The live 2026 method lives in `docs/architecture/CFA/` (ISP-CFA mapping, Test A postmortem, Hidden Structure Injection, Phase 1a/1b isomorphism calibration) and `docs/architecture/whitepapers/`.
+
+---
+
+## 📦 ARCHIVED — 2025-11-11 mission (superseded; kept for history)
+
+# Mission Current - Central Coordination Hub (as of 2025-11-11)
 
 **Version:** v1.0
 **Last Updated:** 2025-11-11

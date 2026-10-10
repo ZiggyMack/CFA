@@ -1,0 +1,37 @@
+FLOW EXPERIMENT 002 — PRESERVE THE CAR-ARRIVAL SHOT, CHANGE LIGHTING ONLY
+Prepared October 8, 2026. State: local excerpt and brief ready; no Flow upload or generation.
+
+EXACT SOURCE
+Use GEM-97D0B65E: gemini_generated_video_97d0b65e.mp4, 40.000 seconds, 960 frames at 24 fps, 1280 x 720. Source SHA256: fe3154c0b727d80909eae9d8ab2c4b42889643d577bbdfb18123c4d23cef695d.
+The similar gemini_generated_video_5a115c59.mp4 is 41 seconds and is a separate asset. The selected screenshot/filename identifies 97d0b65e; do not substitute the sibling merely because the conversation called it 41 seconds.
+
+WHY THIS EXCERPT
+Longer footage is not inherently higher-quality footage. The 40-second source is a montage with multiple cuts and changing views. It exceeds the currently documented up-to-10-second Flow video-edit input. Use one continuous source shot to distinguish preservation from a new edit or montage.
+
+Selected interval: original 00:10.166667 to 00:16.166667, end exclusive; source frames 244 through 387 inclusive. The six-second excerpt shows silver-jacket Dolo, the arriving/descending car, his turn and the opening door. It starts after the preceding cut and ends before the next. All 144 output frames decode; no scene-change trigger above 0.18 occurred within the excerpt. Twenty-four quarter-second samples plus start/middle/end images were visually checked. This is sampled visual inspection, not acceptance of every source detail or normal-speed playback.
+
+BASELINE A — ALREADY PREPARED, NO GENERATION NEEDED
+FLOW-HD-VIDEO-002_input_10p1667-16p1667.mp4 is the actual comparison baseline and the only media input for this experiment.
+SHA256: 54569a91c9117a4e9b8904b80c7cbb57cd6c854ce4e387933712f59f9d866897.
+Six seconds, 1280 x 720, 24 fps, H.264. Frame-accurate trim re-encoded with libx264, preset medium, CRF 21, yuv420p and faststart. Dimensions and timing are retained; this is not a stream-copy or exact-pixel-preservation claim. Audio was intentionally omitted from this visual-only test; the untouched 40-second original retains its original AAC soundtrack. Frame previews are viewing aids, not extra conditioning references.
+
+COMPARISON B — ONE PROPOSED FLOW VIDEO EDIT
+Model/mode candidate: Gemini Omni Flash 1.1, Video to Video editing, standard 720p. Official Google documentation currently lists uploaded-video editing up to 10 seconds for Omni Flash 1.1; Veo 3.1 Lite/Fast/Quality do not list video editing support. This does not verify the selected account's live controls, entitlement, cost or success. Source checked October 8, 2026: https://support.google.com/flow/answer/16352836?hl=en
+
+Unzip the package locally. Upload the six-second MP4, not the ZIP or the full montage. Use the actual uploaded clip as an edit input, then verify the model, edit mode, duration, output count and displayed cost. Request one output. Keep six seconds and matching resolution; record actual output FPS rather than assuming that control is offered. If this edit route is unavailable, stop and report that fact; do not silently switch to still-image-to-video or re-create the entire montage.
+
+PROMPT FOR B
+Edit the attached six-second video. Make only one visual change: give the existing illumination a subtle warmer color balance, keeping the night scene, approximate exposure and neon atmosphere. Preserve the existing performer, face, hair, visible tattoos, grillz and jewelry exactly as they appear in this clip. Keep the silver jacket silver, the car's design and color, all hands and clothing, street layout, signs and reflections coherent. Preserve the complete motion sequence, timing, camera movement, car descent, door opening, character turn and body/door contact. Keep one continuous shot with no new cuts, objects, people, face replacement, tattoo correction, retiming or extra action. Return silent video with no dialogue, lyrics, music or narration.
+
+PRESERVATION SCOPE
+Use this clip's existing performer and details as the baseline. Do not also attach LOCK-FACE or a Han likeness crop: adding another identity would make this a different experiment. Existing lettering/jewelry inconsistencies in the source are not being repaired in a lighting test. The wide moving view is useful for motion, prop and scene checks, but it cannot prove the finest tattoo lettering is correct. Requests to preserve details are test criteria, not guaranteed model behavior.
+
+REVIEW B AGAINST A
+Compare matching beginning, middle and ending moments and normal-speed playback. Check face/hair, jacket seams, hands, car/wheel silhouette, door hinge/motion, character/car overlap, street geometry, reflections and sign layout. Inspect the car's arrival, the turn toward it and entry timing specifically. Pass only if the intended warmth changes without material redesign, new cuts, altered action or timing. Record output duration/FPS/dimensions and audible content. A pleasing regenerated clip may still fail preservation.
+
+BOUNDARY / NEXT DECISION
+One proposed B output, no automatic variants or retries. If it drifts, keep the output with an explicit defect list; do not call it accepted. For a pure color change, conventional grading remains a separate preservation-oriented option. A video-capability experiment is useful even when the model fails this constraint. The 40-second original remains untouched and can supply other independently reviewed shots later.
+
+AUDIO AND RETURN
+The real song is added later from an identified recording/trim. A soundtrack replacement does not repair lip-sync. Do not invent lyrics or copy a scratch voice into the song master.
+Return the downloaded result plus RETURN_RECEIPT.json, recording actual filename/hash, source hash, model/mode, exact prompt/settings, dimensions/FPS/duration, visible defects and user review state. Leave unknown fields null. Do not label the result approved on our behalf.

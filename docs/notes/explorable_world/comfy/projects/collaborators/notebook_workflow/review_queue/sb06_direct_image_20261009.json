@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "observedDate": "2026-10-09",
+  "status": "direct_chat_visual_readback_verified_with_minor_overclaims",
+  "provider": "Gemini",
+  "modelLabelObserved": "Flash-Lite",
+  "chatURL": "https://gemini.google.com/app/988990050e4ad32c",
+  "chatTitle": "Notebook 1 Hon Dolo Setup",
+  "associatedNotebookID": "586b3ee6-5c57-45b3-a59d-a2e21c18a852",
+  "responseContainerObserved": "model-response-message-contentr_b2f7d193ef937dca",
+  "source": {
+    "assetID": "HD-DROP-b18c4a123579",
+    "title": "SB-06 · Proud scoundrel",
+    "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-06-scoundrel-detail.jpg",
+    "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+    "dimensions": [1280, 720],
+    "uploadRoute": "Gemini chat > Upload & tools > Upload files > original JPEG",
+    "originalUnchanged": true,
+    "deliveryCopyCreated": false
+  },
+  "requestScope": "User selected this image after discussion of a direct-image Gemini test. One unchanged JPEG and one visual-inventory question; no media generation or approval promotion.",
+  "rawPrompt": "../foreign_returns/raw/sb06_direct_image_20261009/PROMPT.txt",
+  "rawResponse": "../foreign_returns/raw/sb06_direct_image_20261009/GEMINI_RESPONSE.txt",
+  "capture": "Completed response copied using Gemini Copy and browser clipboard. Visible citation labels recorded separately because the clipboard omits them.",
+  "visibleCitations": {
+    "label": "JPG: SB-06-scoundrel-detail.jpg",
+    "observedOn": ["lettering", "wrist accessories", "sleeve", "cuff", "background", "orientation", "limitations"],
+    "accessoryCitationPopupOpened": true,
+    "popupSourceTitle": "SB-06-scoundrel-detail.jpg",
+    "persistentNotebookSourceID": null
+  },
+  "verification": {
+    "method": "Original independently inspected locally before submission, then response compared against full original by root. Prompt named categories but did not supply visible answers. Existing project chat contains older text; this is a practical readback check, not a context-isolated benchmark.",
+    "matched": [
+      "Scoundrel in black Gothic/blackletter, initial capital followed by lowercase letters",
+      "Broad flattened gold-colored interlocking curb/Cuban links",
+      "Partially visible dark band beneath the chain",
+      "Distressed dark leather cuff and brass-colored round snap",
+      "Warm amber circular bokeh",
+      "Landscape diagonal crop: sleeve upper right, wrist toward lower left",
+      "Anatomical side, hidden surfaces and precise dimensions left unknown"
+    ],
+    "cautions": [
+      "White stitching or a tag edge on the dark wrist band is not confidently supported by the original. Do not add it to specifications.",
+      "The chain runs immediately below the lettering, near the lower edge of the initial S. Wording that it crosses the tattoo must not be converted into a rule to occlude the letters.",
+      "Bar/club/industrial lounge is interpretation; the blurred background does not identify an exact venue.",
+      "No inference about clasp, watch mechanism, arm side, rings, face or neck jewelry is supported."
+    ],
+    "conclusion": "Direct chat attachment supports useful visual discussion with manual verification. This one-image result does not establish perfect visual accuracy or persistent image-source access."
+  },
+  "scopeOfApproval": "Prior user decision locks the visible gold wrist chain plus black band as accessories. This test creates no new approval of the whole image, tattoo master, identity or anatomy.",
+  "persistentNotebookSources": {
+    "testedThisRound": false,
+    "status": "unresolved",
+    "earlierLisanCompatibilityReceipt": "../compatibility_20261009/RESULTS.json",
+    "chatCitationDoesNotProvePersistentSourceIngestion": true
+  },
+  "nextAction": "Use unchanged, explicitly selected images attached directly to the project Gemini chat with a current scoped brief. Verify visual readback before scene planning, preserve the exact return, and feed reviewed findings back as text. Refresh stale project instructions before full storyboard work. Keep persistent Sources investigation separate.",
+  "imageOrVideoGenerationJobs": 0,
+  "newCatalogAssets": 0,
+  "newAcceptedReferences": 0
+}

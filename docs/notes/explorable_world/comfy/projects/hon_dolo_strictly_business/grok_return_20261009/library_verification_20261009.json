@@ -1,0 +1,150 @@
+{
+  "schema": "grok-return-library-verification-v1",
+  "verifiedAt": "2026-10-09T04:29:00.067891+00:00",
+  "catalogSHA256": "b953581853dbc8ce05fa5accece21ee5d614689dd2b2532c6159be2704e8793c",
+  "status": "passed",
+  "scope": "Read-only postbuild filesystem/hash/image and data-link checks; no browser or external generation. Node VM rendering check recorded separately below.",
+  "counts": {
+    "catalogAssets": 1255,
+    "catalogAlbums": 143,
+    "newMedia": 86,
+    "honOutfitParents": 22,
+    "gunVariantsInExistingOutfits": 17,
+    "uniqueSourcePaths": 1248,
+    "sourceHashesChecked": 1091,
+    "originalImagesDecoded": 1060,
+    "thumbnailsDecoded": 1090,
+    "longPathsUsingExtendedWindowsIO": 65,
+    "detailProfiles": 5,
+    "detailObjects": 48,
+    "approvedArtwork": 0
+  },
+  "reviewFileSHA256Before": "5e9f5ca31dfcb12825eb99c23c3cfd3d84e46614ebede901ee9ab301def6e7bf",
+  "reviewFileSHA256After": "5e9f5ca31dfcb12825eb99c23c3cfd3d84e46614ebede901ee9ab301def6e7bf",
+  "reviewAndApprovalChecks": {
+    "sourceReviewUnchangedDuringQA": true,
+    "newMediaNotSeededAsReviewsOrFavorites": true,
+    "newMediaNoWorkingReference": true,
+    "profileApprovalsRemainEmpty": true,
+    "deliveredReviewItemCount": 14,
+    "deliveredFavoritesCount": 36
+  },
+  "failures": [],
+  "browserVisualCheck": "Not performed; earlier browser file-URL policy block respected.",
+  "nodeVM": {
+    "status": "passed",
+    "method": "Executed real outfitExplorer and renderMain from current library.js against actual built catalog with a minimal fake DOM; no browser navigation or storage writes.",
+    "defaultOutfitParents": 22,
+    "innerOutfitGroupsChecked": [
+      {
+        "albumID": "hon:outfit-bomber",
+        "gunVariants": 1
+      },
+      {
+        "albumID": "hon:outfit-cash",
+        "gunVariants": 1
+      },
+      {
+        "albumID": "hon:outfit-casino",
+        "gunVariants": 1
+      },
+      {
+        "albumID": "hon:outfit-coat",
+        "gunVariants": 1
+      },
+      {
+        "albumID": "hon:outfit-cream",
+        "gunVariants": 1
+      },
+      {
+        "albumID": "hon:outfit-dragon",
+        "gunVariants": 1
+      },
+      {
+        "albumID": "hon:outfit-fur",
+        "gunVariants": 1
+      },
+      {
+        "albumID": "hon:outfit-letterman",
+        "gunVariants": 1
+      },
+      {
+        "albumID": "hon:outfit-parka",
+        "gunVariants": 1
+      },
+      {
+        "albumID": "hon:outfit-pilot",
+        "gunVariants": 1
+      },
+      {
+        "albumID": "hon:outfit-pinstripe",
+        "gunVariants": 1
+      },
+      {
+        "albumID": "hon:outfit-rain",
+        "gunVariants": 1
+      },
+      {
+        "albumID": "hon:outfit-saloon",
+        "gunVariants": 1
+      },
+      {
+        "albumID": "hon:outfit-velour",
+        "gunVariants": 1
+      },
+      {
+        "albumID": "hon:outfit-velvet",
+        "gunVariants": 1
+      },
+      {
+        "albumID": "hon:outfit-vinyl",
+        "gunVariants": 1
+      },
+      {
+        "albumID": "hon:outfit-yellow",
+        "gunVariants": 1
+      }
+    ],
+    "gunVariantsChecked": 17,
+    "favoritesAndReviewsUnchanged": true,
+    "visualLayoutNotTested": true
+  },
+  "classificationReview": {
+    "status": "passed_current_batch",
+    "counts": {
+      "cast": 12,
+      "details": 18,
+      "outfits": 20,
+      "review": 36,
+      "newMedia": 86,
+      "newGunVariants": 17,
+      "otherOutfitRevisions": 3,
+      "providerScriptsStoredAsInertDocuments": 6
+    },
+    "findings": [
+      "The 17 SHA-mapped rollout entries are classified before the broad HIP-* rejected-attempt rule. They reuse original outfit album IDs; nine earlier HIP-* attempts remain in the review album.",
+      "The three REV-HD-* outfit revisions reuse parent outfit albums. REV-HD-001 carries the preservation-failure note and is not promoted.",
+      "BOSS character proofs, standalone design sheets/derivatives, and placement/recovery crops retain different categories and roles.",
+      "Blaster artwork, BOSS-006 chest placement and BOSS-009 option-B matching are preserved by the five detail profiles. All 48 objects retain zero approved artwork."
+    ],
+    "nonBlockingFollowup": [
+      {
+        "file": "register_catalog.py",
+        "issue": "Registration reads .cache/grok_hd_return_audit_20261009.json and .cache/boss_intake_audit_20261009/audit.json before copying them into the intake. Preserved hd_audit.json and boss_audit.json should be preferred as rebuild inputs so a clean checkout does not require ephemeral .cache files.",
+        "currentImpact": "Current registration and catalog passed; no data or approval issue in this batch."
+      }
+    ],
+    "currentReturnMaxCanonicalImagePathCharacters": 239
+  },
+  "productionFilesEditedByQA": [],
+  "final_link_check_after_notebook_document_registration": {
+    "atUTC": "2026-10-09T04:34:00.991221+00:00",
+    "catalogSHA256": "ac42191fb57bf73de31939803c373db16d63864805f87410045a1cca6eb5956f",
+    "assets": 1257,
+    "localSourceAndThumbnailLinks": 2348,
+    "missingLinks": 0,
+    "missionAssetLinksMissing": 0,
+    "mediaContentUnchangedSinceFullHashAndDecodeAudit": true,
+    "build": "cdc8334cc9"
+  }
+}

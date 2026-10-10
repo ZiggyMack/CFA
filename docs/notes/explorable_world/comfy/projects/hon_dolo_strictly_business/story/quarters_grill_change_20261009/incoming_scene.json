@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "id": "HON-QUARTERS-GRILL-CHANGE-20261009",
+  "project": "hon",
+  "characterID": "HON-DOLO",
+  "title": "Dolo in his quarters - changing to the external grill",
+  "date": "2026-10-09",
+  "source": "Direct user report, supplemented by root live browser observation of the Chief of Staff conversation on October 9, 2026",
+  "status": "received_verified_draft_needs_fixes",
+  "localReceiptStatus": "verified",
+  "userIntent": "Dolo is in his quarters, taking out his lip piercings to put in his optional external grill.",
+  "provider": "Grok / Chief of Staff",
+  "receivedAssetIDs": [
+    "HD-GRILLUP-40064d98db89",
+    "HD-GRILLUP-a9e6f58d0b70",
+    "HD-GRILLUP-57bce647c089",
+    "HD-GRILLUP-02659c457fb9",
+    "HD-GRILLUP-894990536803",
+    "HD-GRILLUP-aa4962b0cbaa",
+    "HD-GRILLUP-08541ac0b6d8",
+    "HD-GRILLUP-fde483650ebb",
+    "HD-GRILLUP-2369c3b2f126",
+    "HD-GRILLUP-1c67855e0139",
+    "HD-GRILLUP-5c213b5307ad",
+    "HD-GRILLUP-35fbf6bacc3f",
+    "HD-GRILLUP-58a4929ccc45",
+    "HD-GRILLUP-3c64ab207835",
+    "HD-GRILLUP-df8e2349f716",
+    "HD-GRILLUP-0a2075aac343",
+    "HD-GRILLUP-948b39b76e55",
+    "HD-GRILLUP-e7ae983ab70b",
+    "HD-GRILLUP-3ddf7227aaa4"
+  ],
+  "downloadExpected": false,
+  "timing": null,
+  "sourcePanelIDs": [],
+  "storyboardStage": "preliminary",
+  "acceptance": "not_accepted",
+  "continuity": {
+    "scope": "This story sequence only. Do not infer a global rule that every external_iced_on look must lack lip rings.",
+    "initial": "External grill off: preserve the four upper gold caps, two natural-white upper central incisors and lower silver/chrome grill. Plain lip hoops are present before their deliberate removal.",
+    "transition": "Lip jewelry removal and external-grill fitting are intentional state changes. Record state per returned panel; distinguish deliberate removal from accidental disappearance or inconsistent ring counts. Do not invent unseen intermediate panels as received.",
+    "final": "External iced grill fitted, lip piercings removed for this selected look and sequence. User-selected HEAD-HD-ICED-ANCHOR-LOCK-r4.jpg is now locally verified as HD-GRILLUP-40064d98db89. This does not establish a global no-lip-ring rule. Storyboard panels remain unaccepted.",
+    "otherDetails": "Keep face, curls, brow and tattoo identities consistent. Preserve the selected wrist jewelry where visible and the correct hand tattoo/rings. Do not remove nose/ear jewelry merely because lip piercings are being removed.",
+    "mouthLibrary": "Existing external_off macros remain unchanged. This is an additional scene/accessory state, not a replacement for the base mouth library."
+  },
+  "materials": [
+    {
+      "assetID": "HD-DROP-defe480b085f",
+      "sha256": "defe480b085f58e226bf75991c58bd7a16ce30ce9674bac30758c3ae3507a692",
+      "role": "optional_accessory_history",
+      "status": "existing_scoped_reference",
+      "note": "Earlier optional accessory history. The current scoped r4 selection is bound separately; keep historical evidence."
+    },
+    {
+      "assetID": "HD-DROP-b18c4a123579",
+      "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+      "role": "locked_jewelry_component",
+      "status": "existing_scoped_reference",
+      "note": "User-selected visible gold curb wrist chain and black band. Scope is wrist jewelry only; hidden hardware and anatomical side remain unresolved."
+    },
+    {
+      "assetID": "HD-HAND-LEIGH-PLACEMENT-20261009",
+      "sha256": "21c8518a3deba105ffe12882af32579071b7c7b935a9716b125d9f4946e8dfb0",
+      "role": "hand_art_and_rings_context",
+      "status": "existing_scoped_reference",
+      "note": "Existing character-right hand direction and gold-ring context; exact final Leigh transfer remains unresolved. Do not mirror the tattoo onto the other hand or use this crop as face authority."
+    },
+    {
+      "assetID": "HD-GRILLUP-40064d98db89",
+      "sha256": "40064d98db897276b80085273919ccd79ca377a068dcc2bd23c519e4038ee93e",
+      "role": "user_selected_optional_iced_look",
+      "status": "selected_for_this_look_only",
+      "note": "Selected r4 optional external grill with lip rings removed; not a replacement for external_off."
+    }
+  ],
+  "providerBrowserEvidence": {
+    "observedDate": "2026-10-09",
+    "source": "Root live browser inspection, Chief of Staff tab 16",
+    "destination": "https://grok.com/bot/a4a75c63-1565-4448-84a2-f519f40bea15",
+    "userLookDecision": "User accepted the selected grill-on look and requested no lip piercings for this look. This is not a global rule for every iced-grill variant.",
+    "userSceneRequest": "Cabin/quarters on a large ship, with doorway, mirror, ring dish and grill case; ten panels if enough, up to twenty if needed.",
+    "selectedAnchorFilenameReported": "HEAD-HD-ICED-ANCHOR-LOCK-r4.jpg",
+    "selectedAnchorLocalReceipt": "verified_original_received",
+    "packageFilename": "GROK-HD-SB-GRILLUP-v001.zip",
+    "displayedPackageSize": "4.1 MB",
+    "downloadLinkObserved": true,
+    "reportedLayout": "10-beat draft",
+    "providerReportedFindings": [
+      "01 doorway and 04 ring dish reported useful.",
+      "02 mirror and 03 lip removal reported improved identity.",
+      "03 retains long canines and white lower teeth.",
+      "05 grill case retains long fangs.",
+      "06–10 show wide-face identity drift."
+    ],
+    "assessmentLimit": "These entries preserve the earlier provider report. Actual local inspection in REVIEW.txt supersedes conflicting action/state descriptions; no storyboard acceptance follows."
+  },
+  "nextAction": "Review the ordered ten-panel scene and recorded defects; resolve 02/03 action-label mapping and ring/grill continuity before animation. Source-panel or music placement is still open.",
+  "openItems": [
+    "02/03 action-label mapping",
+    "04 ring count and 05 grill geometry",
+    "Later panel identity/tattoo/jewelry continuity",
+    "User review and music placement"
+  ],
+  "oversightRecord": "../../../collaborators/finishing_pass_20261009/STATUS.json",
+  "dispatchStatus": "Finishing coordination sent and acknowledged; no new repair batch launched.",
+  "localEvidence": {
+    "receipt": "intake_receipt.json",
+    "ledger": "asset_ledger.json",
+    "review": "REVIEW.txt",
+    "registry": "registry.json",
+    "counts": {
+      "selectedPanels": 10,
+      "alternatives": 8,
+      "anchor": 1,
+      "notes": 1
+    },
+    "visualReview": "r4, all ten selected panels and one alternate inspected; remaining seven alternatives decoded but not individually visually assessed."
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "format": "cfa-notebook-review-v1",
+  "template": false,
+  "reviewID": "HON-OPENING-WORKSHOP-REVIEW-20261009",
+  "roundID": "HON-OPENING-WORKSHOP-CURRENT-20261009",
+  "project": "hon",
+  "rawReturn": {
+    "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/GEMINI_REVISION_RESPONSE.txt",
+    "sha256": "c664f0d52df120c827591e01e2ee8a79e679293c7e69b2269d38b9e8b7bd9fd4",
+    "provider": "Gemini",
+    "responseID": "10c1f75b2199118b",
+    "capture": "Rendered v2 prose; citation buttons omitted; provider errors preserved."
+  },
+  "sourceChatURL": "https://gemini.google.com/app/988990050e4ad32c",
+  "associatedNotebookID": "586b3ee6-5c57-45b3-a59d-a2e21c18a852",
+  "modelLabelObserved": "Flash-Lite",
+  "relatedResponseIDs": {
+    "visualReadback": "5ad85effdcee8e27",
+    "rejectedFirstPlan": "ac55dbc2cfcdc283",
+    "revisedPlan": "10c1f75b2199118b"
+  },
+  "reviewer": "Codex; local comparison plus explicitly attributed root browser observations",
+  "reviewedAt": "2026-10-10T00:58:09.706747+00:00",
+  "currentDecisionSnapshot": {
+    "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/CURRENT_BRIEF.txt",
+    "sha256": "c3b37d47a20c27e7be71bc0b4e3a10b9286c758105a2aff218b3e5d9ef416ae4"
+  },
+  "reviewedPlan": {
+    "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/REVIEWED_PLAN.txt",
+    "sha256": "96ae004bdfb479e1c904886fb9dc0e030fb51e7c664c7f1a9684690c82d937f4"
+  },
+  "fullReview": {
+    "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/WORKSHOP_REVIEW.json",
+    "sha256": "8dfb2e0d7247f15180c9bb36f1cde904a8c3a4d6326bf68f5559abd6d758ce72"
+  },
+  "claims": [
+    {
+      "id": "ecu_vs_continuous",
+      "claim": "SB-01 mixes medium close-up and locked medium-wide framing.",
+      "type": "provider_claim",
+      "evidence": [
+        "CURRENT_BRIEF.txt attachment C role and root operator correction."
+      ],
+      "conflicts": [
+        "Keep SB-01 ECU as a separate editorial insert; continuous prototype is one locked medium-wide shot without cuts."
+      ],
+      "outcome": "corrected",
+      "reason": "Keep SB-01 ECU as a separate editorial insert; continuous prototype is one locked medium-wide shot without cuts.",
+      "allowedScope": "Hon opening storyboard planning and bounded silent prototype only; no new character or production approval."
+    },
+    {
+      "id": "old_teeth",
+      "claim": "The old SB-01 appearance is a single-canine variant.",
+      "type": "provider_claim",
+      "evidence": [
+        "IMAGE_MANIFEST.json C role and VISUAL_READBACK_REVIEW.json."
+      ],
+      "conflicts": [
+        "It has TWO upper gold teeth and one visible hoop. Current rule: four upper gold caps, natural white centrals/remaining upper teeth, lower silver/chrome, two plain lip hoops."
+      ],
+      "outcome": "corrected",
+      "reason": "It has TWO upper gold teeth and one visible hoop. Current rule: four upper gold caps, natural white centrals/remaining upper teeth, lower silver/chrome, two plain lip hoops.",
+      "allowedScope": "Hon opening storyboard planning and bounded silent prototype only; no new character or production approval."
+    },
+    {
+      "id": "silent_acting",
+      "claim": "SB-02 starts mid-delivery and emphasizes articulation.",
+      "type": "provider_claim",
+      "evidence": [
+        "Root operator current prototype direction; original no-dialogue brief."
+      ],
+      "conflicts": [
+        "Silent visual attitude only throughout all ten prompts: no speech, singing, articulation, lip-sync or generated audio."
+      ],
+      "outcome": "rejected_for_prototype",
+      "reason": "Silent visual attitude only throughout all ten prompts: no speech, singing, articulation, lip-sync or generated audio.",
+      "allowedScope": "Hon opening storyboard planning and bounded silent prototype only; no new character or production approval."
+    },
+    {
+      "id": "fuel_lyric",
+      "claim": "SB-04 fuel purpose is Nice try.",
+      "type": "provider_claim",
+      "evidence": [
+        "CURRENT_BRIEF.txt quoted lyrics and SB-04 role."
+      ],
+      "conflicts": [
+        "Fuel supports Fuel ain’t free, and neither am I. Nice try remains a separate attitude. Exact timecodes unknown."
+      ],
+      "outcome": "corrected",
+      "reason": "Fuel supports Fuel ain’t free, and neither am I. Nice try remains a separate attitude. Exact timecodes unknown.",
+      "allowedScope": "Hon opening storyboard planning and bounded silent prototype only; no new character or production approval."
+    },
+    {
+      "id": "reuse_scope",
+      "claim": "Existing-footage references and missing stills could be read as extra rendering requirements.",
+      "type": "provider_claim",
+      "evidence": [
+        "CURRENT_BRIEF.txt footage limitations and root direction."
+      ],
+      "conflicts": [
+        "Existing clips are context or optional reuse candidates, not newly inspected inputs, accepted footage or mandatory rerenders. Only one consolidated starting still is currently requested."
+      ],
+      "outcome": "scope_limited",
+      "reason": "Existing clips are context or optional reuse candidates, not newly inspected inputs, accepted footage or mandatory rerenders. Only one consolidated starting still is currently requested.",
+      "allowedScope": "Hon opening storyboard planning and bounded silent prototype only; no new character or production approval."
+    },
+    {
+      "id": "actual_end_pose",
+      "claim": "Turn dependencies assume the previous desired pose.",
+      "type": "provider_claim",
+      "evidence": [
+        "WORKSHOP_PROMPT.txt continuation requirement."
+      ],
+      "conflicts": [
+        "Continue from actual inspected prior final pose, objects and timing; adapt the next motion and record the adaptation. No reset to a textual ideal."
+      ],
+      "outcome": "corrected",
+      "reason": "Continue from actual inspected prior final pose, objects and timing; adapt the next motion and record the adaptation. No reset to a textual ideal.",
+      "allowedScope": "Hon opening storyboard planning and bounded silent prototype only; no new character or production approval."
+    },
+    {
+      "id": "wrong_citations",
+      "claim": "Root reported SB-06 citations beside lyric/capability statements.",
+      "type": "provider_claim",
+      "evidence": [
+        "Root browser observation; citation buttons were omitted from saved rendered v2 prose."
+      ],
+      "conflicts": [
+        "SB-06 supports wrist observations only. Lyrics are supplied brief text; capability requires actual media evidence."
+      ],
+      "outcome": "unsupported",
+      "reason": "SB-06 supports wrist observations only. Lyrics are supplied brief text; capability requires actual media evidence.",
+      "allowedScope": "Hon opening storyboard planning and bounded silent prototype only; no new character or production approval."
+    },
+    {
+      "id": "prototype_choice",
+      "claim": "V2 leaves exact wardrobe colors and wrist side underspecified.",
+      "type": "operator_prototype_choice",
+      "evidence": [
+        "Root operator explicit direction; SB-06 anatomical wrist side remains unknown."
+      ],
+      "conflicts": [
+        "Worn cantina, dark brown leather/open off-white shirt, one visible Dolo, four credits, unlettered screen-right fuel indicator from frame01. Jewelry character-right/viewer-left is provisional blocking only; neck blaster character-left/viewer-right."
+      ],
+      "outcome": "operator_choice_not_canon",
+      "reason": "Worn cantina, dark brown leather/open off-white shirt, one visible Dolo, four credits, unlettered screen-right fuel indicator from frame01. Jewelry character-right/viewer-left is provisional blocking only; neck blaster character-left/viewer-right.",
+      "allowedScope": "Hon opening storyboard planning and bounded silent prototype only; no new character or production approval."
+    }
+  ],
+  "proposedActions": [
+    {
+      "action": "Inspect single starting-still result against scoped references and prototype blocking.",
+      "status": "image_requested_outcome_unknown_no_accepted_frame"
+    },
+    {
+      "action": "After chosen frame and actual mode checks, perform at most ten silent native cumulative turns with media inspection and stop conditions.",
+      "status": "planned_not_run"
+    },
+    {
+      "action": "Save reviewed text digest to Hon notebook later; record source ID and verify body/cited retrieval.",
+      "status": "local_digest_ready_not_saved"
+    }
+  ],
+  "unresolved": [
+    "Result and review of the one requested starting still",
+    "Actual available Gemini video mode and supported initial duration",
+    "Native cumulative preservation of prefix events, order, timing and join",
+    "Exact lyric timecodes and final editorial panel order",
+    "Canonical wrist side, hidden wrist hardware and final Leigh hand-art transfers",
+    "Persistent notebook native image Sources ingestion"
+  ],
+  "promotion": {
+    "status": "not_promoted_local_review_ready",
+    "destination": "Hon project notebook as reviewed text, when deliberately saved",
+    "scope": "Opening storyboard proposal/test plan only; visual-source and production limitations retained.",
+    "decisionEvidence": {
+      "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/WORKSHOP_REVIEW.json",
+      "sha256": "8dfb2e0d7247f15180c9bb36f1cde904a8c3a4d6326bf68f5559abd6d758ce72"
+    },
+    "remoteSourceID": null,
+    "savedToNotebook": false,
+    "bodyReadbackVerified": false,
+    "citedRetrievalVerified": false
+  },
+  "notebookTextDigest": "HON OPENING WORKSHOP — REVIEWED TEXT DIGEST / 2026-10-09\nMarker: HON-OPENING-WORKSHOP-REVIEWED-20261009\nLocally prepared for a LATER notebook text save. NOT uploaded, saved as a Source, synced or promoted by this preparation.\nGemini Flash-Lite at https://gemini.google.com/app/988990050e4ad32c received six unchanged originals. Readback response 5ad85effdcee8e27 passed for supervised planning with corrections. First plan ac55dbc2cfcdc283 was rejected. Revised plan 10c1f75b2199118b is structurally usable only with operator corrections. This is not comprehensive visual accuracy or verified video capability.\nScope: Hon SB-01–04 / S01A–S01B, mercenary sales pitch, up-front rectangular credits and fuel cost. Approximate first 10% of story/source panels, NOT measured song seconds. Audio is 234.960 seconds; lyric alignment unknown. Source payment-before-fuel order remains recorded; fuel-before-payment playback is an editorial proposal.\nRoles: A lf_full.png = no-forehead-dice identity, not teeth. B GRILL-LOCK-4GOLD-v2.jpg = four-upper-gold/lower-silver/two-plain-lip-hoop detail, not whole head/nose/motion. C SB-01 = obsolete TWO-gold/one-visible-hoop ECU composition. D SB-03 = credits/counter/contact, not old face. E SB-04 = fuel concept/geography, not old identity/text. F SB-06 = gold curb wrist chain PLUS dark band only. Exact asset IDs/paths/hashes are in IMAGE_MANIFEST.json. SB-02 was text-only, not attached.\nCorrections: SB-01 remains a separate ECU editorial insert; continuous test is one locked medium-wide shot without cuts/zoom. All continuous acting is SILENT, with no articulation or generated audio. SB-04 supports Fuel ain’t free, and neither am I, not Nice try. Existing clips are context/optional reuse, not rerender requirements. Each continuation starts at the actual inspected prior end pose, not a desired text endpoint. Irrelevant SB-06 citations do not support lyrics/capabilities.\nPrototype: one seated current Dolo at a worn cantina counter, dark brown leather/open off-white shirt, four matching warm-gold luminous rectangular credits, unlettered low-fuel indicator screen-right from FRAME 01. Wrist chain plus dark band on CHARACTER-RIGHT/viewer-left is provisional frontal scene blocking, NOT canonical arm-side evidence. Neck blaster/smoke is character-LEFT/viewer-right. Eye cursive character-right/viewer-left; know serif character-left/viewer-right. No forehead dice or Lisan markings.\nExternal-off dental rule: exactly four upper gold caps on both lateral incisors and both SHORT canines; two central incisors and other upper teeth natural white; lower silver/chrome; two plain lower-lip hoops. Hidden teeth are occluded, not absent. No external iced grill/ring removal here.\nTen prepared beats: poise; first count; firm-price look; recount; align row; existing fuel reminder; draw payment closer; passage gesture; silent nice-try half-smile; settle for edit. One creation plus at most nine dependent native cumulative continuations. No automatic retries/filler or assumed total duration. Inspect actual media, duration growth, joins, prefix event order/timing, four credits and continuity. Stop on suffix-only output, rewritten/truncated prefix, uninspectable media or material continuity failure; keep last verified parent. Flow/API/local stitching is not native Gemini continuation.\nSnapshot: one starting still requested through Create Image, result unknown, no accepted frame. ZERO video turns run. Text planning ready after corrections; actual mode, duration and cumulative capability unverified. Direct chat readback does not prove persistent notebook image Sources ingestion, which remains unresolved. No new creative approval.\n",
+  "readinessSnapshot": {
+    "startingImage": {
+      "status": "requested_via_Gemini_Create_Image",
+      "result": "unknown_at_review_snapshot",
+      "acceptedFrame": null,
+      "attribution": "Root operator report; this reviewer did not submit the request."
+    },
+    "videoTurnsExecuted": 0,
+    "nativeCumulativeContinuationVerified": false,
+    "persistentNotebookImageSourcesVerified": false,
+    "reviewedDigestSavedToNotebook": false,
+    "newCreativeApprovals": 0,
+    "originalMediaModified": false
+  },
+  "sent": false,
+  "executed": false,
+  "productionAccepted": false,
+  "flagScopeNote": "sent/executed=false concern this reviewed digest and video plan. Root separately reported completed planning submissions and one starting-image request; this review does not erase those operations."
+}
