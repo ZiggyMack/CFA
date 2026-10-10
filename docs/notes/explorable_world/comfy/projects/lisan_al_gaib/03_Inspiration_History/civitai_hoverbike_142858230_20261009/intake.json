@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-09",
+  "timezone": "America/New_York",
+  "status": "screenshot_received_reviewed_planning_only",
+  "remoteMediaDownloaded": false,
+  "generationSubmitted": false,
+  "remixSubmitted": false,
+  "published": false,
+  "publicPageInspection": {
+    "tool": "web open",
+    "result": "non_retryable_open_error",
+    "liveContentVerified": false
+  },
+  "unknowns": [
+    "Original media bytes, dimensions, duration, frame rate and audio",
+    "Full creator prompt and effective settings",
+    "Exact downloadable graph and model/version identifiers",
+    "Current Cloud node/model compatibility and costs",
+    "License and reuse terms for source media and any model artifacts",
+    "Temporal continuity and actual motion quality; only one screenshot was inspected"
+  ],
+  "intakeID": "LAG-INSP-CIVITAI-142858230-20261009",
+  "project": "lisan",
+  "sourceURL": "https://civitai.com/images/142858230",
+  "creatorAsDisplayed": "cyberpunk8085",
+  "creatorEvidence": "User screenshot; not independently verified on live post",
+  "screenshot": {
+    "originalPath": "C:\\Users\\Stephen\\AppData\\Local\\Temp\\codex-clipboard-bc1298d5-3d19-4b5a-b6f3-99ef1f28045a.png",
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/03_Inspiration_History/civitai_hoverbike_142858230_20261009/source/civitai_142858230_user_screenshot.png",
+    "sha256": "8cf9bf3216adac9de680ae8db2ade1234e4ba707c7c94a90eb1b61844cf72a67",
+    "bytes": 760270,
+    "width": 1920,
+    "height": 1080,
+    "copyVerification": "identical_bytes_sha256_size_png_header",
+    "imageEdited": false,
+    "kind": "user_supplied_browser_screenshot",
+    "originalMediaDownloaded": false
+  },
+  "userDirection": "Use the hover-bike ride as inspiration especially for Lisan storyboard. No adoption of the pictured rider as a character.",
+  "allowedReferenceRoles": [
+    "Vehicle silhouette and material inspiration",
+    "Desert/ruin environment and dust composition",
+    "Proposed riding-shot staging"
+  ],
+  "excludedRoles": [
+    "Lisan identity master",
+    "Lisan costume replacement",
+    "Verified source motion",
+    "Known Comfy execution recipe"
+  ],
+  "visualObservations": [
+    "Weathered cream/brown retro-futurist motorcycle-like hover vehicle with angular front fairing, windshield, two round headlights and luggage-like side blocks.",
+    "Three visible blue/pink exhaust-like plumes under/along the vehicle; complete propulsion layout and hidden geometry are unknown.",
+    "Rider in cream desert clothing leans forward with hands at the handlebar.",
+    "Sand dunes, worn building ruins, a vehicle shadow and a dust-like trail. A pause control suggests a video viewer, but the screenshot alone does not establish actual motion."
+  ],
+  "postClaimsVisibleInScreenshot": {
+    "tools": [
+      "COMFYUI"
+    ],
+    "techniques": [
+      "img2vid"
+    ]
+  },
+  "publicMetadataLookup": {
+    "url": "https://civitai.com/api/v1/images?imageId=142858230&withMeta=true&limit=1",
+    "result": "non_retryable_open_error",
+    "metadataRecovered": false
+  },
+  "identityReferences": {
+    "face": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOCK-FACE-NATURAL.jpg",
+    "wardrobe": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOOK-V3-01.jpg",
+    "breatherPlacementOnly": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/02_Storyboard_Scenes/LAG-SC-48.jpg",
+    "rules": "Keep Lisan face, natural teeth default, AL/GAIB and neck art from own references; tan stillsuit/black cloak/gold chain from own wardrobe. Optional grill is separate. Breather when selected remains attached throughout; no smoking. Do not copy pictured rider identity or clothing."
+  },
+  "shotIdeas": [
+    {
+      "id": "LAG-HOVER-P01",
+      "title": "Crossing the ruins",
+      "proposal": "Wide establishing view: Lisan rides a low hover vehicle past a dune and ruined outpost. One clear travel direction; reveal scale and destination.",
+      "timing": null
+    },
+    {
+      "id": "LAG-HOVER-P02",
+      "title": "The ride",
+      "proposal": "Low front three-quarter tracking view, inspired by the vehicle silhouette and twin headlights. Keep handlebars, hands, legs, lamps and thrusters stable; use restrained sand trail and consistent shadow.",
+      "timing": null
+    },
+    {
+      "id": "LAG-HOVER-P03",
+      "title": "Arrival at the next threshold",
+      "proposal": "Vehicle slows beside a landmark; Lisan remains seated and looks toward his next objective. End before dismounting so that a new physical action can be designed separately.",
+      "timing": null
+    }
+  ],
+  "workflowBasis": {
+    "lesson": "D:/Documents/Pan_Handlers/Help/content/video_routes.py#image_to_video",
+    "existingBaseline": "docs/notes/explorable_world/comfy/workflows/hon_dolo_motion_v001.record.json",
+    "scope": "Use the existing official native LTX-2.5 image-to-video route only as a recipe candidate. The prior Hon motion test does not validate this vehicle or Lisan. Current Cloud preflight and a reviewed project-owned starting frame are still required."
+  },
+  "handoffPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/hoverbike_142858230_20261009/START_HERE.txt"
+}

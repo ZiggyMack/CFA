@@ -1,0 +1,27 @@
+{
+  "localDate": "2026-10-09",
+  "timeZone": "America/New_York",
+  "recordedBy": "CFA Codex Nova",
+  "creativeStudio": {
+    "url": "https://algaib.streamlit.app/",
+    "observedHostedState": "ImportError at apps/creative_studio/app.py line 16 importing library_helpers; full error redacted in public UI",
+    "localChecks": "29 Creative Studio tests passed; fresh-process Streamlit AppTest startup passed for all three projects",
+    "diagnosticEvidence": "Retaining library_helpers from commit 2e67b58 in sys.modules reproduced ImportError: cannot import name DESTINATIONS from library_helpers",
+    "inference": "Stale hosted Python module is the leading explanation; current source imports successfully",
+    "nextAction": "Inspect Manage app logs and reboot the hosted app, then verify a fresh page load",
+    "rebootPerformed": false,
+    "blocker": "Repeated browser-control timeouts prevented log retrieval and reboot; no hosted repair is claimed"
+  },
+  "onboarding": {
+    "welcome": "docs/notes/explorable_world/comfy/projects/collaborators/I_AM.md",
+    "launchPrompt": "docs/notes/explorable_world/comfy/projects/collaborators/onboarding_20261009/START_HERE.txt",
+    "mailbox": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox",
+    "status": "See onboarding_20261009/STATUS.md for invitation and collection evidence"
+  },
+  "backup": {
+    "accountBoundary": "Desktop Google Drive on G: showed Stephen Wright. User confirmed desktop Drive uses the larger separate account, not the Ziggy Mack account used by the browser/plugin.",
+    "doNotRedirect": "A plugin connected to Ziggy Mack does not verify files in the desktop account and must not be used as a replacement backup destination.",
+    "statusSource": "docs/notes/storage/google_drive_20261009/BACKUP_STATUS.txt",
+    "cloudCompletionVerified": false
+  }
+}

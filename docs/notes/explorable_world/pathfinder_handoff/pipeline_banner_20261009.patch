@@ -1,0 +1,20 @@
+--- a/Help/pages/start_here.py
++++ b/Help/pages/start_here.py
+@@ -10,6 +10,7 @@
+ 
+ 
+ def render():
++    path_cards()
+     hero("VIDEO FIRST / THE NEXT EXPERIMENT", "Keep the performance. Change the world.",
+           "Start with your source material, borrow the right workflow, and work toward one convincing shot before finishing it in HD and 4K.")
+     st.caption("PROJECT MEMORY / October 8 CFA records: video-control tests executed but failed strict preservation; local soundtrack swap preserved the picture. Lip-sync and an accepted finished video remain ahead.")
+@@ -42,8 +43,7 @@
+         st.markdown("**Your first milestone**")
+         st.write("One short source shot, one controlled visual change and a saved comparison. Accept the performance before making an HD master and reviewing a 4K derivative.")
+         st.caption("This console is a guide and notebook. Rendering happens in the tool you choose.")
+-    with st.expander("Keep the other paths visible"):
+-        path_cards()
++    with st.expander("Other creative branches"):
+         st.caption("All four tools remain valid options. ComfyUI is the first deep guide. Editable 3D and game development remain future branches.")
+         st.button("Explore the dialogue-rewrite branch →", on_click=go, args=("Rewrite a scene",), key="help_scene_home")
+     st.divider()

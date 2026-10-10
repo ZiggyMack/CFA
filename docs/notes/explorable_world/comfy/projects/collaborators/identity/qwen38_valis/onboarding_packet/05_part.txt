@@ -1,0 +1,50 @@
+CFA / QWEN ONBOARDING - PART 5
+Document: Comfy workshop README
+Document chunk: 4 of 5
+Selection: full_file
+Source: docs/notes/explorable_world/comfy/README.md
+Source SHA-256: dd22d75876ff89e2aba8e1d1069d6f2fc8a044f3b446c278ca70a486c740d581
+Snapshot archived: 2026-10-10T03:11:29Z
+This packet is prepared, not confirmed delivered. Older dated records remain historical.
+
+BEGIN SOURCE TEXT
+**Shared learning, complete local instructions:** consult Pathfinder's general lessons before expanding another tutorial here. The [shared-methods map](../pathfinder_handoff/README.md#shared-methods-and-local-independence) names the relevant sections and CFA's local fallbacks. Pathfinder teaches the broader techniques; CFA retains the steps, recipes, recovery notes and evidence needed to build our world. The sibling checkout is optional; updates are reviewed and adopted deliberately.
+
+**Latest transcript:** the [Episode 4 image-to-image and LoRA notes](SAMPLING_AND_CONTROLS.md#image-to-image-and-loras) add input resizing, denoise comparisons from an unchanged parent, and compatible LoRA wiring/strengths. The [reference-driven image/video guide](REFERENCE_DRIVEN_WORKFLOWS.md) supplies the proposed one-view Observatory study; the earlier sampling notes cover seed, CFG, steps, batches and bypass. Pathfinder carries the fuller exercises; CFA retains the production steps and evidence. These readings did not submit new generation jobs.
+
+This is the asset workshop within the [larger playable-world project](../README.md). The [engine prototype](../../../../games/observatory/README.md) is implemented at games/observatory/ and runs locally without Comfy or an internet connection. Its first walkable rooms use simple authored geometry; automated checks and short rendering checks have passed, with human pacing and comfort review still open. See its [validation record](../../../../games/observatory/VALIDATION.md). Comfy supports the experience as asset needs become clear; accepted generated assets can be imported later.
+
+**Creative delegation, September 12, 2026.** Ziggy gives the assistant creative control over ordinary background set pieces within the established aesthetic and budget. Choose and revise props without asking for individual approvals. Focus Ziggy's reviews on the experience, story tone, and meaningful choices. Purchases, subscription changes, unlimited cloud batches, and public release are outside this delegation. The current priority is a playable visit, so the first pump's repair details can be authored directly in the prototype without another cloud generation.
+
+**Historical connection failure, during the Story Workshop pass (superseded by the October 3 recovery):** `get_server_info`
+again failed with `invalid_grant: refresh token reuse detected`. The normal
+browser login was started, but its callback timed out. Comfy is not currently
+verified as connected in that pass; no generation or import ran. The
+[local Story Workshop](../../../../games/observatory/STORY_WORKSHOP.md) is ready
+independently of that connection.
+
+Earlier verified connection on September 12, 2026: **live Comfy access restored and checked**. The readiness check first encountered `invalid_grant: refresh token reuse detected`; a fresh login for the existing connection succeeded. A subsequent get_server_info call confirmed production host `https://cloud.comfy.org`, version `0.57.0`, authenticated OAuth, and 41 tools. The cause of the recurring refresh rejection remains unknown.
+
+The live account model search returned **zero imported/uploaded models**. The shared SDXL 1.0 checkpoint search returned `realvisxlV50_v50Bakedvae.safetensors`, so an SDXL option is already discoverable without importing a new checkpoint. The Civitai node search returned zero matches. The [Civitai setup procedure](CIVITAI.md) covers the browser import step still required to test the saved key. No model import or paid generation was performed in this readiness check.
+
+**Completed experiment:** the first pump concept [image](outputs/pump_concept_v001.png) is saved locally at 1024 × 1024, with its [experiment record](workflows/pump_concept_v001.record.json) and [workflow files](workflows/README.md). Ziggy called it a fine starting point. It establishes one executed image experiment and a visual reference; it is not a tested game mesh. The usage API returned no records for a reporting window that ended before the job, so actual cost remains unknown.
+
+Preflight initially failed with `invalid_grant: refresh token reuse detected`, and the first browser callback timed out. A fresh login for the existing server succeeded; the production server at `https://cloud.comfy.org` again reported version `0.57.0`, authenticated OAuth, and 41 tools. No IDE restart was needed for this recovery. The exposed toolset has no `get_billing_status`; billing activity did not supply a current balance or subscription entitlement. The [learning record](LESSONS.md) retains the failure and recovery history.
+
+Use Comfy's hosted MCP endpoint, `https://cloud.comfy.org/mcp`, with browser OAuth. Current official documentation supports Codex; a local ComfyUI installation is unnecessary for this route. [Comfy setup](https://docs.comfy.org/agent-tools/mcp)
+
+The documented commands are:
+
+```powershell
+codex mcp add comfy-cloud --url https://cloud.comfy.org/mcp
+codex mcp login comfy-cloud
+```
+
+Codex's CLI and IDE share its configuration. After adding the server, the IDE's MCP settings provide **Restart extension** and **Authenticate** controls. [Codex MCP configuration](https://learn.chatgpt.com/docs/extend/mcp?surface=cli)
+
+The first image used `image_z_image_turbo`; its schema exposes prompt, dimensions, seed, steps, and model choices. Its estimate found no paid API nodes, but excludes GPU runtime, so it does not establish a free run or its total cost. Successful completion confirms generation worked for this job; current balance and actual usage remain unconfirmed. Setup does not authorize purchases or batch generation.
+
+NKD Preview Tools and NKD VFX Tools were not found in the node catalog exposed to this connection. Core 3D preview/render nodes were found. See the [live discovery record](LESSONS.md) for the exact searches and limits of those findings.
+
+
+END SOURCE TEXT

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "recordedAtUTC": "2026-10-10T02:10:04Z",
+  "recordedAtUTC": "2026-10-10T03:15:19Z",
   "localDate": "2026-10-09",
   "timeZone": "America/New_York",
   "scope": "Creative workshop collaborator introductions",
@@ -23,8 +23,8 @@
     {
       "path": "docs/notes/explorable_world/comfy/projects/collaborators/MAILBOX.md",
       "description": "Shared file conversation and receipt protocol",
-      "sha256": "5377ce80e85985eb81a546eae509e7805b2c34d438a68a4104ab887656da7444",
-      "bytes": 7104
+      "sha256": "1d6ab1e44917a89ef04381cde816ef18591a77b28e67bb98b6e9406e216be1df",
+      "bytes": 8265
     }
   ],
   "sharedConversationId": "7a1c301e-e3ab-4f75-99b6-c6a45ae70d4a",
@@ -54,21 +54,61 @@
     {
       "id": "grok_chief",
       "name": "Grok Chief of Staff",
-      "collectionStatus": "prepared_not_received",
+      "collectionStatus": "current_self_authored_received",
       "expectedIntroductionPath": "docs/notes/explorable_world/comfy/projects/collaborators/identity/grok_chief/I_AM.md",
-      "currentIntroduction": null,
+      "currentIntroduction": {
+        "source": {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/grok_chief/I_AM.md",
+          "description": "Chief of Staff self-authored introduction received through the shared local mailbox",
+          "sha256": "cc58e4d752503d8fc8c17b99239b925c8ab11c059f71f1a301645ab6e7467bbd",
+          "bytes": 5618
+        },
+        "authorship": "self_authored",
+        "archiveStatus": "preserved_at_current_path",
+        "authoredLocalDate": "2026-10-09",
+        "authoredTimeZone": "America/New_York",
+        "observedAtUTC": "2026-10-10T03:00:59Z",
+        "replyProvenance": {
+          "messageId": "e1bd0152-5ecf-4dae-afae-4ee7d903a64c",
+          "conversationId": "7a1c301e-e3ab-4f75-99b6-c6a45ae70d4a",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/e1bd0152-5ecf-4dae-afae-4ee7d903a64c.json",
+          "sha256": "4667b97636788d3902754961d4a0ccdca4aa207fd45250f4ca128feb86f95bf3",
+          "createdAtUTC": "2026-10-10T02:44:08Z",
+          "observedAtUTC": "2026-10-10T03:00:59Z",
+          "authorship": "self_authored",
+          "deliveryScope": "received_as_local_mailbox_file"
+        },
+        "reportedSHA256": "cc58e4d752503d8fc8c17b99239b925c8ab11c059f71f1a301645ab6e7467bbd",
+        "matchesReportedSHA256": true,
+        "claimsStatus": "Self-reported capabilities, access and production state; receipt and file hash are verified, claims are not independently audited."
+      },
       "preservedOriginals": [],
       "invitation": {
         "messageId": "9d8ab7e8-a835-47cd-806d-44b4bc97f178",
         "conversationId": "7a1c301e-e3ab-4f75-99b6-c6a45ae70d4a",
         "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/9d8ab7e8-a835-47cd-806d-44b4bc97f178.json",
         "sha256": "6de2a7d91dcc5944f06bca01ec7d7462c55797168c8e49520b71ba6c78730495",
-        "status": "posted_not_relayed",
+        "status": "local_reply_received",
         "postedAtUTC": "2026-10-10T02:10:04Z",
         "remoteDeliveryEvidence": null,
-        "responseEvidence": null
+        "responseEvidence": {
+          "messageId": "e1bd0152-5ecf-4dae-afae-4ee7d903a64c",
+          "conversationId": "7a1c301e-e3ab-4f75-99b6-c6a45ae70d4a",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/e1bd0152-5ecf-4dae-afae-4ee7d903a64c.json",
+          "sha256": "4667b97636788d3902754961d4a0ccdca4aa207fd45250f4ca128feb86f95bf3",
+          "createdAtUTC": "2026-10-10T02:44:08Z",
+          "observedAtUTC": "2026-10-10T03:00:59Z",
+          "authorship": "self_authored",
+          "deliveryScope": "received_as_local_mailbox_file"
+        }
       },
-      "notes": "Introduction request is posted locally. No current self-authored return or external relay is claimed."
+      "notes": "Chief introduction and reply read in full. Reports session-only mailbox access and partial welcome/protocol reads; provider roles, Nyquist lineage and dated handoffs remain unread by Chief. Those reads can resume later. HaL has not supplied his own introduction. Production statements and proposed 20-image task remain reports/proposals, not newly verified or authorized by this receipt. Nova acknowledgment is posted locally; external relay or recipient read is not claimed.",
+      "localAcknowledgment": {
+        "messageId": "912ad8b4-6a8d-4d89-ae2b-ebababce76e7",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/912ad8b4-6a8d-4d89-ae2b-ebababce76e7.json",
+        "status": "posted_locally",
+        "postedAtUTC": "2026-10-10T03:00:59Z"
+      }
     },
     {
       "id": "hal",
@@ -92,7 +132,7 @@
     {
       "id": "gemini_master",
       "name": "Gemini Notebook 0 / CFA COMFY Master",
-      "collectionStatus": "prepared_not_received",
+      "collectionStatus": "response_reported_text_pending",
       "expectedIntroductionPath": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/I_AM.md",
       "currentIntroduction": null,
       "preservedOriginals": [],
@@ -106,7 +146,7 @@
         "remoteDeliveryEvidence": null,
         "responseEvidence": null
       },
-      "notes": "Introduction request is posted locally. No current self-authored return or external relay is claimed."
+      "notes": "Ziggy reports supplying the welcome and receiving a response. Nova has not read that response because browser reads timed out. Active-session helper is allocated; helper note e3c5784e-f4aa-4bc4-890e-ad20fdc11589 is posted locally, not relayed. Actual Gemini text and authorship provenance are required before transcription. This does not claim delivery of the specific invitation UUID."
     },
     {
       "id": "gemini_studio",
@@ -168,9 +208,34 @@
     {
       "id": "deepseek",
       "name": "Deep_SEEK",
-      "collectionStatus": "original_preserved_refresh_pending",
+      "collectionStatus": "current_self_authored_received",
       "expectedIntroductionPath": "docs/notes/explorable_world/comfy/projects/collaborators/identity/deepseek/I_AM.md",
-      "currentIntroduction": null,
+      "currentIntroduction": {
+        "source": {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/deepseek/I_AM.md",
+          "description": "DeepSeek refreshed self-authored introduction",
+          "sha256": "beb585aa6894a03480e6753aa3087c7fb9ea50072fb9289331946c4746603f5c",
+          "bytes": 13507
+        },
+        "authorship": "self_authored",
+        "archiveStatus": "preserved_at_current_path",
+        "observedAtUTC": "2026-10-10T03:15:19Z",
+        "replyProvenance": {
+          "messageId": "44d4b1a5-2d9a-4fcd-8f3e-1016f9eecd37",
+          "conversationId": "7a1c301e-e3ab-4f75-99b6-c6a45ae70d4a",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/44d4b1a5-2d9a-4fcd-8f3e-1016f9eecd37.json",
+          "description": "DeepSeek self-authored local onboarding reply",
+          "sha256": "e0f40e08813a3581adb65ec21278289712b6e8e156b441465a7a89c67c4849c0",
+          "bytes": 5289,
+          "createdAtUTC": "2026-10-10T02:51:57Z",
+          "observedAtUTC": "2026-10-10T03:15:19Z",
+          "authorship": "self_authored",
+          "deliveryScope": "received_as_local_mailbox_file"
+        },
+        "reportedSHA256": "beb585aa6894a03480e6753aa3087c7fb9ea50072fb9289331946c4746603f5c",
+        "matchesReportedSHA256": true,
+        "claimsStatus": "Introduction and original hashes verified; capability, model and ACL repair claims remain attributed author reports, not independently audited."
+      },
       "preservedOriginals": [
         {
           "source": {
@@ -191,19 +256,61 @@
         "conversationId": "7a1c301e-e3ab-4f75-99b6-c6a45ae70d4a",
         "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/0bcfdd69-6306-47ea-9e23-331e5066a49f.json",
         "sha256": "d0b0564193e8bf7868079139836c7547607d47505f94f0feb6d8df7d1150f25b",
-        "status": "posted_not_relayed",
+        "status": "local_reply_received",
         "postedAtUTC": "2026-10-10T02:10:04Z",
         "remoteDeliveryEvidence": null,
-        "responseEvidence": null
+        "responseEvidence": {
+          "messageId": "44d4b1a5-2d9a-4fcd-8f3e-1016f9eecd37",
+          "conversationId": "7a1c301e-e3ab-4f75-99b6-c6a45ae70d4a",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/44d4b1a5-2d9a-4fcd-8f3e-1016f9eecd37.json",
+          "description": "DeepSeek self-authored local onboarding reply",
+          "sha256": "e0f40e08813a3581adb65ec21278289712b6e8e156b441465a7a89c67c4849c0",
+          "bytes": 5289,
+          "createdAtUTC": "2026-10-10T02:51:57Z",
+          "observedAtUTC": "2026-10-10T03:15:19Z",
+          "authorship": "self_authored",
+          "deliveryScope": "received_as_local_mailbox_file"
+        }
       },
-      "notes": "First arrival is preserved. A refreshed introduction following the common guidance is requested but not received."
+      "notes": "Refresh and reply read in full. Original preserved and both hashes independently matched. Harness truncation and recursive-enumeration hangs recorded; causes are not generalized beyond evidence. Proposed Lisan count reconciliation remains unassigned and unstarted. User closed DeepSeek to reduce load and will reopen it for a bounded task. Local acknowledgment does not wake or confirm delivery to the app.",
+      "localAcknowledgment": {
+        "messageId": "394dcb1d-c8a6-41f0-ab2f-0eedb1e17d29",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/394dcb1d-c8a6-41f0-ab2f-0eedb1e17d29.json",
+        "status": "posted_locally",
+        "postedAtUTC": "2026-10-10T03:13:08Z"
+      }
     },
     {
       "id": "qwen",
       "name": "Qwen",
-      "collectionStatus": "prepared_not_received",
-      "expectedIntroductionPath": "docs/notes/explorable_world/comfy/projects/collaborators/identity/qwen/I_AM.md",
-      "currentIntroduction": null,
+      "collectionStatus": "intro_received_orientation_pending",
+      "expectedIntroductionPath": "docs/notes/explorable_world/comfy/projects/collaborators/identity/qwen38_valis/I_AM.md",
+      "currentIntroduction": {
+        "source": {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/qwen38_valis/I_AM.md",
+          "description": "Qwen self-authored Markdown as supplied by the user; wording and self-reported model preserved",
+          "sha256": "0543f5df93f4ac6de5eb44c7c9398eaf8f16546dbc47899bf9389a6429a9aa31",
+          "bytes": 1801
+        },
+        "authorship": "self_authored_supplied_by_user",
+        "archiveStatus": "verbatim_archive",
+        "observedAtUTC": "2026-10-10T03:11:29Z",
+        "authoredDateAsReported": "Saturday October 10 2026",
+        "reportedModel": "Qwen3.8 (VALIS ONLINE)",
+        "modelVerification": "self_reported_not_independently_verified",
+        "provenance": {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/qwen38_valis/source/provenance.json",
+          "description": "Coordinator provenance and source/protocol distinctions",
+          "sha256": "8c9a0603e71f23ef7615c279438f2e98fa711f90da1c686809d2fc98abac5b2a",
+          "bytes": 2619
+        },
+        "relayMessage": {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/72040ff5-f6e7-4911-9b7e-a8c853d76107.json",
+          "description": "Conforming Nova relay of the user-pasted Qwen message; no original-source fields silently rewritten",
+          "sha256": "8c31936c1262d6339fa5f0ab316e4639ab54bfed50e8eea317b3ac62b52e1f81",
+          "bytes": 2590
+        }
+      },
       "preservedOriginals": [],
       "invitation": {
         "messageId": "b302285c-1546-40b0-bb6a-65e893648df9",
@@ -213,16 +320,39 @@
         "status": "posted_not_relayed",
         "postedAtUTC": "2026-10-10T02:10:04Z",
         "remoteDeliveryEvidence": null,
-        "responseEvidence": null
+        "responseEvidence": {
+          "source": "user_pasted_response_in_current_Codex_conversation",
+          "relayMessage": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/72040ff5-f6e7-4911-9b7e-a8c853d76107.json",
+          "introduction": "docs/notes/explorable_world/comfy/projects/collaborators/identity/qwen38_valis/I_AM.md",
+          "note": "An introduction was received; this does not establish that the original invitation or full project packet was delivered or read. Original JSON placeholder and self-reported acknowledgement remain source data."
+        }
       },
-      "notes": "Introduction request is posted locally. No current self-authored return or external relay is claimed."
+      "notes": "Canonical ID remains qwen. qwen38_valis is the reported alias and archival folder. Supplied Markdown/JSON preserved verbatim; model/date/capability claims are not independently verified. Full project orientation and readback remain pending; packet is prepared only.",
+      "reportedAlias": "qwen38_valis",
+      "onboardingPacket": {
+        "manifest": "docs/notes/explorable_world/comfy/projects/collaborators/identity/qwen38_valis/onboarding_packet/manifest.json",
+        "startPrompt": "docs/notes/explorable_world/comfy/projects/collaborators/identity/qwen38_valis/onboarding_packet/START_HERE.txt",
+        "parts": 15,
+        "status": "prepared_not_delivered"
+      }
     },
     {
       "id": "claude",
       "name": "Claude / Claude Code collaborator",
-      "collectionStatus": "prepared_not_received",
+      "collectionStatus": "introduction_observed_reply_pending",
       "expectedIntroductionPath": "docs/notes/explorable_world/comfy/projects/collaborators/identity/claude/I_AM.md",
-      "currentIntroduction": null,
+      "currentIntroduction": {
+        "source": {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/claude/I_AM.md",
+          "description": "Claude self-authored introduction observed and read on local disk",
+          "sha256": "4a80293f02e67f532e3e4d4a3c6597100318bec57ae98ad404c2d8574628c448",
+          "bytes": 13587
+        },
+        "authorship": "self_authored",
+        "archiveStatus": "preserved_at_current_path",
+        "observedAtUTC": "2026-10-10T03:15:19Z",
+        "claimsStatus": "File read and hash recorded. Runtime/model/capability and verification-pass claims are self-reported. Referenced reply and receipt were not present at this checkpoint."
+      },
       "preservedOriginals": [],
       "invitation": {
         "messageId": "d2e6b811-98eb-41d3-b605-5f8c2fc1144f",
@@ -234,7 +364,7 @@
         "remoteDeliveryEvidence": null,
         "responseEvidence": null
       },
-      "notes": "Introduction request is posted locally. No current self-authored return or external relay is claimed."
+      "notes": "Introduction read in full. Distinguishes current Claude Code from historical Arbiter lineage and Panhandler Nova. Proposed mailbox validator is offered, not assigned or started. Referenced message 4d141301-0da3-4ac0-8d49-587169d40ddf and receipt 6e74c673-46dc-47e6-b949-31d3d1fc0519 remain pending on disk; no acknowledgment of an unseen reply is claimed."
     },
     {
       "id": "panhandler_nova",
@@ -289,5 +419,6 @@
     "completed phase",
     "session closing"
   ],
-  "backupStatus": "Introduction collection is separate from full-project backup. Local or Git-visible files do not establish completed Google Drive upload."
+  "backupStatus": "Introduction collection is separate from full-project backup. Local or Git-visible files do not establish completed Google Drive upload.",
+  "welcomeTemplateSnapshotAsOfUTC": "2026-10-10T03:11:29Z"
 }

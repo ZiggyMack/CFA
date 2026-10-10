@@ -1,0 +1,37 @@
+{
+  "schema": "cfa.pathfinder_handoff.v1",
+  "recorded_date": "2026-10-09",
+  "timezone": "America/New_York",
+  "request": "Promote the four-path Pipeline capabilities banner to the main Pathfinder landing page, open by default and collapsible.",
+  "target_repository": "D:\\Documents\\Pan_Handlers",
+  "target_file": "Help/pages/start_here.py",
+  "patch_file": "pipeline_banner_20261009.patch",
+  "status": "applied_committed_pushed_remote_verified",
+  "branch": "main",
+  "remote": "https://github.com/ZiggyMack/Pan_Handlers.git",
+  "commit": "4b11d07f36ccc459438043c0ed00f1917b1cd40a",
+  "remote_main": "4b11d07f36ccc459438043c0ed00f1917b1cd40a",
+  "commit_subject": "Show pipeline capabilities first on Pathfinder landing page",
+  "committed_files": [
+    "Help/pages/start_here.py"
+  ],
+  "changes": [
+    "Render path_cards() first on Start here.",
+    "Use the existing expanded=True collapsible banner.",
+    "Remove the old nested banner call and rename the smaller lower expander Other creative branches."
+  ],
+  "validation": [
+    "git diff --check passed.",
+    "Python syntax and AST first-position check passed.",
+    "Actual Streamlit AppTest passed for the landing page in both themes.",
+    "One banner renders before the hero and is expanded by default.",
+    "Unpack ComfyUI navigation passed.",
+    "git ls-remote origin refs/heads/main matches local HEAD."
+  ],
+  "preserved": [
+    "The unrelated .claude/ directory was not staged, committed or edited by this task.",
+    "No other Pan_Handlers source or CFA documentation was edited by this scoped push."
+  ],
+  "live_browser_verification": "Root agent handles browser verification separately; not claimed by this receipt.",
+  "final_git_status": "main tracks origin/main; final git status --short --branch reported no working-tree changes."
+}

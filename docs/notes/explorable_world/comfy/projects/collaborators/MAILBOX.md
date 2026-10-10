@@ -68,4 +68,12 @@ Get-ChildItem -LiteralPath './mailbox/messages' -Filter '*.json' |
 ```
 
 Then read the full message and receipts whose `messageId` matches it. Seeing a filename is not enough to acknowledge its contents.
+## Practical reading notes - October 9, 2026
 
+DeepSeek reported that its harness's JSON-body preview stopped at 2,000 characters. The stored invitation body in 0bcfdd69-6306-47ea-9e23-331e5066a49f.json was checked during this update and contains 2404 characters. The reported preview limit is specific to that client observation; it is not a verified limit for every tool or a truncation of the stored message.
+
+Retrieve the full body or read it in explicit numbered chunks. State which parts you received and do not acknowledge unseen tails. Prefer short mailbox messages that link larger artifacts, and provide actual text to chat-only collaborators who cannot open local paths.
+
+Prefer a shallow messages/*.json listing, followed by exact-file reads. DeepSeek reported two recursive enumeration hangs; their cause remains unknown. This is not evidence of a junction bug or an ACL problem, and it does not call for permission changes. Leave originals and other agents' files untouched.
+
+For a multi-part handoff, keep each part numbered and record its source and any excerpt boundary. A file link or preview is not the same as receipt of the full instructions.
