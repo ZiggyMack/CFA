@@ -64,6 +64,37 @@ for(const p of roster.providers){
  assert(api.keySection('ArrowLeft'));assert.equal(api.getState().collaboratorSection,'roles','Left arrow wraps across nested tabs');
 }
 assert.equal(api.providerKey('Claude'),'PanhandlerNova','Claude maps to the existing provider key');
+// Project packs are selected by mailbox recipient, rather than shown as a global pile.
+const savedPackIndex=api.C.projectContextPacks,packRoot='docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/';
+const recipientGroups={ComfyUI:[],Flow:['flow'],Gemini:['gemini_master','gemini_chat','gemini_studio'],Grok:['grok_chief','hal'],PanhandlerNova:['claude'],Codex:['nova'],DeepSeek:['deepseek'],Kimi:['kimi'],Qwen:['qwen']};
+api.C.projectContextPacks={schemaVersion:1,status:'prepared_not_delivered',preparedAtUTC:'2026-10-10T15:00:00Z',uploadMapPath:packRoot+'UPLOAD_MAP.txt',allPacksZipPath:packRoot+'all.zip',packs:Object.values(recipientGroups).flat().map(recipientID=>({recipientID,label:recipientID,route:'Recorded route',identityStatus:'Recorded identity',fileCount:4,loadGuidePath:packRoot+recipientID+'/00_LOAD_FIRST.txt',zipPath:packRoot+recipientID+'.zip'}))};
+for(const p of roster.providers){
+ api.chooseProvider(p.id);api.chooseSection('work');
+ const html=page.html(),expected=recipientGroups[p.id];
+ assert(html.includes('Project context packs')&&html.includes('Which files to load'),'The common loading guide is available for '+p.name);
+ assert(html.includes('Prepared snapshots · not sent')&&html.includes('Extract ZIP downloads first'),'Preparation and transport are distinguished from delivery');
+ assert(/href="[^"]+\/all\.zip" download[^>]*>Download all project packs/.test(html),'The complete pack transport has a download action for '+p.name);
+ assert.equal((html.match(/data-context-pack=/g)||[]).length,expected.length,'Only matching recipient packs are exposed for '+p.name);
+ for(const id of Object.values(recipientGroups).flat())assert.equal(html.includes('data-context-pack="'+id+'"'),expected.includes(id),'Recipient routing is exact: '+p.name+' / '+id);
+ if(expected.length)assert(/Download project pack/.test(html)&&/href="[^"]+\.zip" download/.test(html),'Transport ZIPs carry download semantics');
+ api.chooseSection('profile');assert(!page.html().includes('collaborator-context-packs'),'Loading packs stay in Work & handoffs');
+}
+const bundledNames=['a'.repeat(64)+'.txt','b'.repeat(64)+'.txt','c'.repeat(64)+'.zip','d'.repeat(64)+'.zip'];
+api.C.projectContextPacks.uploadMapHref='media/'+bundledNames[0];
+api.C.projectContextPacks.allPacksZipHref='media/'+bundledNames[3];
+const deepseekPack=api.C.projectContextPacks.packs.find(p=>p.recipientID==='deepseek');
+deepseekPack.loadGuideHref='media/'+bundledNames[1];deepseekPack.zipHref='media/'+bundledNames[2];
+api.chooseProvider('DeepSeek');api.chooseSection('work');
+let packHTML=page.html().match(/<section class="collaborator-context-packs">(.*?)<\/section>/s)[1];
+for(const name of bundledNames)assert(packHTML.includes('/media/'+name),'Hosted links use component-relative packaged files: '+name);
+assert(!packHTML.includes(packRoot),'Source locator metadata is not used as a hosted href');
+assert(new RegExp('href="[^"]+/media/'+bundledNames[3]+'" download[^>]*>Download all project packs').test(packHTML),'The global transport ZIP uses its rewritten bundled href and download semantics');
+deepseekPack.loadGuideHref='https://example.com/unapproved.txt';api.renderMain();
+packHTML=page.html().match(/<section class="collaborator-context-packs">(.*?)<\/section>/s)[1];
+assert(!packHTML.includes('unapproved.txt')&&!packHTML.includes('00_LOAD_FIRST.txt'),'An invalid bundled href is suppressed without falling back to repository paths');
+deepseekPack.loadGuideHref='../../outside.txt';api.renderMain();
+assert(!page.html().includes('outside.txt'),'A same-origin path outside the packaged media directory is suppressed');
+api.C.projectContextPacks=savedPackIndex;
 const grades=roster.providers.flatMap(p=>(p.scorecards||[]).filter(c=>c.grade).map(c=>({provider:p.id,...c})));
 assert.equal(grades.length,1,'Only the actual human assessment earns a grade');
 assert.equal(grades[0].provider,'Grok');assert.equal(grades[0].category,'casting');assert.equal(grades[0].grade,'A-');assert.equal(grades[0].assessedBy,'Ziggy');

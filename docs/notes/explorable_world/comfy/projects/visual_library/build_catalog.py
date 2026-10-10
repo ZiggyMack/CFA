@@ -352,6 +352,30 @@ catalog['assistantLikenessAssessments']=assessments
 catalog['sceneReviews']=read(review_path).get('sceneReviews',[]) if review_path.exists() else []
 catalog['storyboardSequences']=storyboard_sequences
 catalog['missionControl']=read(PROJECTS/'collaborators/mission_control.json')
+context_pack_path=PROJECTS/'collaborators/project_context_packs_20261010/index.json'
+catalog['projectContextPacks']=read(context_pack_path) if context_pack_path.exists() else None
+if catalog['projectContextPacks'] is not None:
+    context_packs=catalog['projectContextPacks']
+    assert context_packs.get('schemaVersion')==1 and context_packs.get('status')=='prepared_not_delivered','Context pack schema / status'
+    assert isinstance(context_packs.get('packs'),list) and isinstance(context_packs.get('files'),list),'Context pack lists'
+    context_files={}
+    pack_prefix='docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/'
+    for entry in context_packs['files']:
+        name=entry.get('path','')
+        assert isinstance(name,str) and name.startswith(pack_prefix) and not any(part in ('','.','..') for part in name.split('/')) and not re.search(r'[\\%?#:\x00-\x1f\x7f]',name),'Unsafe context pack path'
+        assert name not in context_files and re.fullmatch(r'[0-9a-f]{64}',entry.get('sha256','')) and type(entry.get('bytes')) is int and entry['bytes']>=0,'Context pack file provenance'
+        logical=(ROOT/name).resolve()
+        assert logical.is_relative_to(ROOT.resolve()) and logical.is_relative_to((ROOT/pack_prefix).resolve()),'Out-of-scope context pack file'
+        original=io_path(logical)
+        assert original.is_file(),'Missing context pack file'
+        data=original.read_bytes()
+        assert len(data)==entry['bytes'] and hashlib.sha256(data).hexdigest()==entry['sha256'],'Changed context pack file: '+name
+        context_files[name]=entry
+    assert len({pack.get('recipientID') for pack in context_packs['packs']})==len(context_packs['packs']),'Repeated context pack recipients'
+    context_refs=[(context_packs,'uploadMapPath','.txt'),(context_packs,'allPacksZipPath','.zip')]
+    context_refs.extend((pack,key,suffix) for pack in context_packs['packs'] for key,suffix in [('loadGuidePath','.txt'),('zipPath','.zip')])
+    for owner,key,suffix in context_refs:
+        assert owner.get(key) in context_files and owner[key].endswith(suffix),'Unverified context pack link: '+key
 scorecards_path=HERE/'provider_scorecards.json'
 catalog['providerScorecards']=read(scorecards_path) if scorecards_path.exists() else {'providers':[],'roleDefinitions':[]}
 catalog['productionWorkflows']=production['workflows']

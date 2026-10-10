@@ -584,8 +584,18 @@
     return `<section class="workflow-references"><h3>${esc(title)}</h3><div class="workflow-reference-grid">${references.map(a=>{if(!isDoc(a)&&!displayed.includes(a.id))displayed.push(a.id);return `<button data-open="${esc(a.id)}" class="workflow-reference">${!isDoc(a)?`<img loading="lazy" src="${esc(href(a.thumb))}" alt="">`:''}<span>${esc(a.title)}</span></button>`;}).join('')}</div></section>`;
   }
   function safeComfyURL(value){try{const url=new URL(value);return url.protocol==='https:'&&url.hostname==='cloud.comfy.org'&&!url.username&&!url.password&&!url.port?url.href:'';}catch{return '';}}
-  function collaboratorFileLink(label,path){const url=safeMissionHref('../../../../../../'+String(path||''));return path&&url?`<a class="pill" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)} ↗</a>`:'';}
+  function collaboratorFileLink(label,path,download=false){const url=safeMissionHref('../../../../../../'+String(path||''));return path&&url?`<a class="pill" href="${esc(url)}" ${download?'download':''} target="_blank" rel="noopener">${esc(label)} ↗</a>`:'';}
   function collaboratorWorkLink(link){if(link?.path)return collaboratorFileLink(link.label||'Open file',link.path);try{const url=new URL(link?.url);return url.protocol==='https:'?`<a class="pill" href="${esc(url.href)}" target="_blank" rel="noopener">${esc(link.label||'Open resource')} ↗</a>`:'';}catch{return '';}}
+  function projectContextPackLink(label,path,bundledHref,download=false){
+    if(bundledHref!==undefined){if(typeof bundledHref!=='string'||!/^media\/[0-9a-f]{64}\.(?:txt|zip)$/.test(bundledHref))return '';const url=safeMissionHref(bundledHref);return url?`<a class="pill" href="${esc(url)}" ${download?'download':''} target="_blank" rel="noopener">${esc(label)} ↗</a>`:'';}
+    return collaboratorFileLink(label,path,download);
+  }
+  function collaboratorContextPacks(provider,profile){
+    const index=C.projectContextPacks;if(!index||index.status!=='prepared_not_delivered')return '';
+    const fallback={Gemini:['gemini_master','gemini_chat','gemini_studio'],Grok:['grok_chief','hal'],Flow:['flow'],Codex:['nova'],DeepSeek:['deepseek'],Kimi:['kimi'],Qwen:['qwen'],PanhandlerNova:['claude']};
+    const recipients=profile?.mailboxIDs?.length?profile.mailboxIDs:fallback[provider]||[],packs=(index.packs||[]).filter(pack=>recipients.includes(pack.recipientID));
+    return '<section class="collaborator-context-packs"><h3>Project context packs</h3><p class="review-help">Prepared snapshots · not sent. Load the listed files into the matching project or chat. Extract ZIP downloads first; a ZIP is transport, not a presumed model input.</p><div class="tools">'+projectContextPackLink('Which files to load',index.uploadMapPath,index.uploadMapHref)+projectContextPackLink('Download all project packs',index.allPacksZipPath,index.allPacksZipHref,true)+'</div>'+packs.map(pack=>'<details class="collaborator-detail" data-context-pack="'+esc(pack.recipientID)+'"><summary>'+esc(pack.label||pack.recipientID)+'</summary><p class="review-help">'+esc(pack.route||'Route unverified')+' · '+esc(pack.identityStatus||'Identity status unrecorded')+'</p><div class="tools">'+projectContextPackLink('Load guide',pack.loadGuidePath,pack.loadGuideHref)+projectContextPackLink('Download project pack',pack.zipPath,pack.zipHref,true)+'</div><p class="review-help">'+esc(pack.fileCount)+' files · '+esc(index.preparedAtUTC||'Date unrecorded')+'</p></details>').join('')+'</section>';
+  }
   const collaboratorSections=[['work','Work & handoffs'],['profile','Profile'],['scorecard','Role scorecard'],['roles','Roles guide']];
   function collaboratorIdentityLink(p){
     if(!p.identity?.path)return '';
@@ -629,6 +639,7 @@
       if(selected==='PanhandlerNova')html+='<div class="tools"><button class="pill" data-mission-export="PanhandlerNova">Export review for Claude</button></div>';
       if(!tasks.length){const briefs=C.assets.filter(a=>isDoc(a)&&/collaborator/i.test(a.album||'')&&(a.album+' '+a.title).toLowerCase().includes(providerName.toLowerCase())&&queryMatch(a));html+=documentGroups(briefs);if(!briefs.length&&!plans.length)html+='<p class="notice">No matching work card is listed. Use the project links below for the next bounded task.</p>';}
     }
+    html+=collaboratorContextPacks(selected,p);
     if(p)html+='<details class="collaborator-detail collaborator-work-links"><summary>Project links & mailbox</summary><div class="tools">'+(p.workLinks||[]).map(collaboratorWorkLink).join('')+collaboratorFileLink('Mailbox guide','docs/notes/explorable_world/comfy/projects/collaborators/MAILBOX.md')+collaboratorFileLink('Mailbox registry','docs/notes/explorable_world/comfy/projects/collaborators/mailbox/registry.json')+'</div><p class="review-help">'+esc(p.communication?.route||'Route unverified')+' · '+esc(p.communication?.note||'')+'</p></details>';
     } else html+=collaboratorProfile(selected,section);
     return html+'</section></section>';

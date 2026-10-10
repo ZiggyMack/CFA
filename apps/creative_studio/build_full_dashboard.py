@@ -47,6 +47,43 @@ def source_file(value: str, source_dir: Path, root: Path) -> Path:
     return target
 
 
+def context_pack_references(index: dict | None) -> list[tuple[dict, str, str, dict]]:
+    """Return only explicitly listed pack guides/downloads, with required provenance."""
+    if index is None:
+        return []
+    if index.get("schemaVersion") != 1 or index.get("status") != "prepared_not_delivered":
+        raise ValueError("Invalid project context pack schema / status.")
+    if not isinstance(index.get("packs"), list) or not isinstance(index.get("files"), list):
+        raise ValueError("Project context pack lists are missing.")
+    records = {}
+    prefix = "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/"
+    for entry in index["files"]:
+        name = entry.get("path", "")
+        if (not isinstance(name, str) or not name.startswith(prefix)
+                or any(part in ("", ".", "..") for part in name.split("/"))
+                or re.search(r"[\\%?#:\x00-\x1f\x7f]", name)):
+            raise ValueError("Unsafe project context pack path.")
+        if (name in records or not re.fullmatch(r"[0-9a-f]{64}", entry.get("sha256", ""))
+                or type(entry.get("bytes")) is not int or entry["bytes"] < 0):
+            raise ValueError("Invalid project context pack file provenance.")
+        records[name] = entry
+    recipients = [pack.get("recipientID") for pack in index["packs"]]
+    if len(set(recipients)) != len(recipients):
+        raise ValueError("Repeated project context pack recipients.")
+    references = [(index, "uploadMapPath", "uploadMapHref", ".txt"),
+                  (index, "allPacksZipPath", "allPacksZipHref", ".zip")]
+    references.extend((pack, key, href, suffix) for pack in index["packs"]
+                      for key, href, suffix in [("loadGuidePath", "loadGuideHref", ".txt"),
+                                                ("zipPath", "zipHref", ".zip")])
+    result = []
+    for owner, key, href, suffix in references:
+        name = owner.get(key)
+        if name not in records or not name.endswith(suffix):
+            raise ValueError("Unverified project context pack link: " + key)
+        result.append((owner, key, href, records[name]))
+    return result
+
+
 def write_generated(target: Path, content: bytes) -> None:
     """Replace generated files atomically; never write through a media hardlink."""
     temporary = target.with_name(target.name + ".tmp")
@@ -117,7 +154,7 @@ def build(source_dir: Path = VISUAL, output: Path = DEFAULT_OUTPUT,
         if asset.get("thumb"):
             asset["thumb"] = package(asset["thumb"])
 
-    # Mission-control prepared downloads are the only additional local files allowed.
+    # Mission-control downloads and explicitly opted-in context packs are allowed.
     # Invalid links remain a recorded gap instead of exposing a broad repository server.
     unresolved = []
     for task in catalog.get("missionControl", {}).get("tasks", []):
@@ -138,6 +175,17 @@ def build(source_dir: Path = VISUAL, output: Path = DEFAULT_OUTPUT,
             except (ValueError, OSError) as exc:
                 unresolved.append({"taskID": task.get("id"), "label": link.get("label"), "href": value, "reason": str(exc)})
                 link.pop("href", None)
+
+    # Opted-in context guides and transport ZIPs are packaged with their exact hashes.
+    # Repository locators remain evidence; component hrefs never expose the checkout.
+    context_refs = context_pack_references(catalog.get("projectContextPacks"))
+    for owner, key, href, entry in context_refs:
+        source = source_file(entry["path"], root, root)
+        pack_root = root / "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010"
+        if not source.is_relative_to(pack_root.resolve()) or source.stat().st_size != entry["bytes"]:
+            raise ValueError("Project context pack source location / size mismatch.")
+        value = os.path.relpath(source, source_dir).replace("\\", "/")
+        owner[href] = package(value, entry["sha256"])
 
     catalog_raw = ("window.REVIEW_CATALOG=" + json.dumps(catalog, ensure_ascii=False, separators=(",", ":")) + ";\n").encode("utf-8")
     index = ("<!doctype html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">"

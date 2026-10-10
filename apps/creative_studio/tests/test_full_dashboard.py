@@ -96,6 +96,81 @@ class FullDashboardBundleTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             build(self.source, self.root.parent / "escape", self.root)
 
+    def context_pack_fixture(self):
+        prefix = "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/"
+        values = {"UPLOAD_MAP.txt": b"Choose a recipient and read its loading guide.",
+                  "all.zip": b"All prepared pack transport bytes.",
+                  "deepseek/00_LOAD_FIRST.txt": b"DeepSeek loading order and dated route.",
+                  "deepseek.zip": b"DeepSeek prepared transport bytes."}
+        records = []
+        for name, data in values.items():
+            target = self.root / (prefix + name)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(data)
+            records.append({"path": prefix + name, "sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data)})
+        # A nearby repository file is never added simply because the folder exists.
+        (self.root / prefix / "not_opted_in.txt").write_bytes(b"Unlisted private working note.")
+        index = {"schemaVersion": 1, "status": "prepared_not_delivered", "releaseID": "test", "files": records,
+                 "uploadMapPath": prefix + "UPLOAD_MAP.txt", "allPacksZipPath": prefix + "all.zip",
+                 "packs": [{"recipientID": "deepseek", "loadGuidePath": prefix + "deepseek/00_LOAD_FIRST.txt",
+                            "zipPath": prefix + "deepseek.zip"}]}
+        self.catalog["projectContextPacks"] = index
+        self.write_catalog()
+        return index
+
+    def test_context_packs_package_only_explicit_hash_verified_links(self):
+        index = self.context_pack_fixture()
+        result = build(self.source, self.output, self.root)
+        snapshot = self.snapshot(result)
+        packaged = read_catalog((snapshot / "catalog.js").read_bytes())["projectContextPacks"]
+        self.assertEqual(packaged["uploadMapPath"], index["uploadMapPath"])
+        for owner, href, path_key in [(packaged, "uploadMapHref", "uploadMapPath"),
+                                      (packaged, "allPacksZipHref", "allPacksZipPath"),
+                                      (packaged["packs"][0], "loadGuideHref", "loadGuidePath"),
+                                      (packaged["packs"][0], "zipHref", "zipPath")]:
+            self.assertTrue(owner[href].startswith("media/"))
+            self.assertEqual((snapshot / owner[href]).read_bytes(), (self.root / owner[path_key]).read_bytes())
+        self.assertEqual(result["fileCount"], 6)
+        source_paths = [name for entry in result["files"] for name in entry["sourcePaths"]]
+        self.assertFalse(any(name.endswith("not_opted_in.txt") for name in source_paths))
+        self.assertEqual(packaged["status"], "prepared_not_delivered")
+
+    def test_context_pack_missing_or_changed_source_does_not_publish(self):
+        index = self.context_pack_fixture()
+        build(self.source, self.output, self.root)
+        current_before = (self.output / "current.json").read_bytes()
+        guide = self.root / index["packs"][0]["loadGuidePath"]
+        original = guide.read_bytes()
+        # Replace atomically: the previous snapshot may hardlink the source.
+        temporary = guide.with_suffix(".tmp")
+        temporary.write_bytes(b"X" + original[1:])
+        temporary.replace(guide)
+        with self.assertRaisesRegex(ValueError, "hash mismatch"):
+            build(self.source, self.output, self.root)
+        self.assertEqual((self.output / "current.json").read_bytes(), current_before)
+        guide.unlink()
+        with self.assertRaisesRegex(ValueError, "Missing"):
+            build(self.source, self.output, self.root)
+        self.assertEqual((self.output / "current.json").read_bytes(), current_before)
+
+    def test_context_pack_paths_and_provenance_cannot_expand_served_scope(self):
+        index = self.context_pack_fixture()
+        index["uploadMapPath"] = "../original.jpg"
+        index["files"].append({"path": "../original.jpg", "sha256": self.sha, "bytes": self.media.stat().st_size})
+        self.write_catalog()
+        with self.assertRaisesRegex(ValueError, "Unsafe project context pack path"):
+            build(self.source, self.output, self.root)
+        index = self.context_pack_fixture()
+        index["files"] = index["files"][1:]
+        self.write_catalog()
+        with self.assertRaisesRegex(ValueError, "Unverified project context pack link"):
+            build(self.source, self.output, self.root)
+        index = self.context_pack_fixture()
+        index["files"][0]["bytes"] += 1
+        self.write_catalog()
+        with self.assertRaisesRegex(ValueError, "size mismatch"):
+            build(self.source, self.output, self.root)
+
     def test_multipage_component_registers_without_changing_compact_page(self):
         from streamlit.testing.v1 import AppTest
         studio = self.root / "studio"
