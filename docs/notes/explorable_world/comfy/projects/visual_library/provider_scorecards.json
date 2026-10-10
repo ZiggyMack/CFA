@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAtUTC": "2026-10-10T06:24:02.924811+00:00",
+  "updatedAtUTC": "2026-10-10T06:38:03.092683+00:00",
   "scope": "Collaborator roster and evidence-based role scorecards across CFA projects",
   "displayOrder": "Current work and handoffs first; role resume and scorecards in a separate section.",
   "roleDefinitions": [
@@ -504,18 +504,18 @@
       "availability": "browser helper during authorized active sessions; opening G2 reviewed and not accepted",
       "identity": {
         "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/I_AM.md",
-        "sha256": "837eaba6a5da0300ce3a50563d0031d9d83c73b30f65433ee06405f59d028b26",
-        "bytes": 4348
+        "sha256": "5f5418ff63c9d7d7515b344cc235daf60001e6c35df77a8a201f0676d6777984",
+        "bytes": 7972
       },
       "communication": {
         "route": "Nova browser courier",
-        "status": "master_intro_received_other_surfaces_separate",
+        "status": "master_role_refresh_received_other_surfaces_separate",
         "note": "Notebook 0, project chat, AI Studio and local chat are distinct contexts. A mailbox post is not delivery; a local path is not an image attachment.",
         "automaticDelivery": false,
         "automaticMonitoring": false
       },
       "capabilities": {
-        "summary": "Notebook 0 text response and introduction were archived; direct local filesystem access is unavailable by author report. The retrieved G2 displayed preview was inspected against the unchanged references: actor likeness, neck blaster and wrist arrangement have critical differences. The exact mouth map is unresolved at displayed size. No starting-frame acceptance or video continuation is recorded.",
+        "summary": "Notebook 0 text response and introduction were archived; direct local filesystem access is unavailable by author report. The retrieved G2 displayed preview was inspected against the unchanged references: actor likeness, neck blaster and wrist arrangement have critical differences. The exact mouth map is unresolved at displayed size. No starting-frame acceptance or video continuation is recorded. Notebook 0 also returned a self-authored role résumé via text relay. Those role claims remain untested; the G2 textual briefing does not establish visual inspection by Notebook 0.",
         "basis": "authored_introduction_and_saved_displayed_output_visual_review",
         "evidenceRefs": [
           "iam_gemini_master",
@@ -702,26 +702,51 @@
         {
           "label": "G2 displayed preview",
           "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/evidence/G2_displayed_preview_20261010.jpg"
+        },
+        {
+          "label": "Gemini Master self-authored role-resume addendum",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/source/role_resume_20261010_c514a920c7fb6b36.md"
+        },
+        {
+          "label": "Raw Gemini Master role response",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/source/role_resume_response_20261010_c514a920c7fb6b36.txt"
+        },
+        {
+          "label": "Gemini Master courier and archive provenance",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/source/role_resume_provenance_20261010_c514a920c7fb6b36.json"
         }
       ],
       "selfReported": {
         "status": "author_report",
-        "basis": "Preserved self-authored I_AM; capability claims and proposed strengths are not earned grades.",
-        "preferredCreativeRoles": null,
-        "benchmarkWillingness": "not_explicitly_reported",
+        "basis": "Preserved self-authored introduction and exact role-resume addendum; role preferences, skills and willingness are author reports, not earned grades.",
+        "preferredCreativeRoles": [
+          "cinematography",
+          "direction",
+          "continuity",
+          "writing"
+        ],
+        "benchmarkWillingness": "willing_bounded_real_work_benchmarks",
         "strengths": [
-          "Summaries, reference-role checks and scoped promotion tracking from supplied text."
+          "Analyzing supplied text, metadata registers, project digests and provenance records.",
+          "Cinematography/direction planning, continuity tracking and writing/story scene framing (author-reported).",
+          "Casting criteria organization, set layout planning, costume/wardrobe alignment checks and workflow recipe selection (claims awaiting bounded benchmarks)."
         ],
         "limitations": [
-          "No direct local filesystem or cross-notebook read access.",
-          "Unuploaded visual bytes are not available from path strings."
+          "No direct local filesystem access, autonomous cross-notebook sync or live background execution.",
+          "Unuploaded visual bytes cannot be inspected from repository paths or a textual relay.",
+          "Nova is needed as filesystem and message courier."
         ],
         "preferences": [
-          "Concise structured summaries and Markdown for Nova to archive."
+          "Cinematography direction planning, continuity tracking, and writing/story scene framing.",
+          "Would like to try deeper cross-project storyboard rhythm analysis and structured shot scheduling.",
+          "Bounded real-work benchmarks with clear inputs, baseline constraints and explicit success checks."
         ],
         "evidenceRefs": [
-          "iam_gemini_master"
-        ]
+          "iam_gemini_master",
+          "gemini_role_resume"
+        ],
+        "summary": "I am the global production, metadata, and cross-project coordinator for CFA, operating as Notebook 0[cite: 1, 2]. I maintain our shared methods, dated project digests, and explicitly promoted winners while coordinating across independent project notebooks[cite: 1, 2].",
+        "curatorNote": "GEM-C0823C60 is a prior project-digest source alias. The current default Hon identity in the later opening comparison is HD-RETURN-6c8900223ee9 (lf_full.png), with mouth and other scoped components controlled separately. G2 is reviewed as failed for actor/neck/wrist defects, with its exact dental map unresolved at preview resolution; no accepted starting frame or video turns follow from this resume. These are curator clarifications outside Gemini's authored text."
       }
     },
     {
@@ -2086,10 +2111,19 @@
       "id": "iam_gemini_master",
       "label": "Gemini Notebook 0 / CFA COMFY Master self-authored introduction",
       "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/I_AM.md",
-      "sha256": "837eaba6a5da0300ce3a50563d0031d9d83c73b30f65433ee06405f59d028b26",
-      "bytes": 4348,
+      "sha256": "5f5418ff63c9d7d7515b344cc235daf60001e6c35df77a8a201f0676d6777984",
+      "bytes": 7972,
       "basis": "author_report_file_bytes_verified",
-      "observedAtUTC": "2026-10-10T05:57:16Z"
+      "observedAtUTC": "2026-10-10T06:38:03.092683+00:00",
+      "captureHistory": [
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/I_AM.md",
+          "sha256": "837eaba6a5da0300ce3a50563d0031d9d83c73b30f65433ee06405f59d028b26",
+          "bytes": 4348,
+          "observedAtUTC": "2026-10-10T05:57:16Z"
+        }
+      ],
+      "authorArchiveAtUTC": "2026-10-10T06:35:28Z"
     },
     {
       "id": "opening_manifest",
@@ -2158,15 +2192,23 @@
       "id": "identity_registry",
       "label": "Canonical identity and attribution registry",
       "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/registry.json",
-      "sha256": "ba141510d94bb0dfc153191b7648ac8a6265e85f46668450f3f128cc56d3fd07",
-      "bytes": 33666,
+      "sha256": "23906eef59148d2c33f888afef321ef4300802b576ba64ccd89ed6b0d547d931",
+      "bytes": 37926,
       "basis": "saved_record",
-      "observedAtUTC": "2026-10-10T06:17:26.480969+00:00",
+      "observedAtUTC": "2026-10-10T06:38:03.092683+00:00",
       "previousCapture": {
         "sha256": "bf1e4c4037bdfb4791db120ac6bda9587eb45752081b80a01b5e789569462f5f",
         "bytes": 33073,
         "observedAtUTC": "2026-10-10T05:57:16Z"
-      }
+      },
+      "captureHistory": [
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/registry.json",
+          "sha256": "ba141510d94bb0dfc153191b7648ac8a6265e85f46668450f3f128cc56d3fd07",
+          "bytes": 33666,
+          "observedAtUTC": "2026-10-10T06:17:26.480969+00:00"
+        }
+      ]
     },
     {
       "id": "intake_procedure",
@@ -2211,6 +2253,33 @@
       "bytes": 6762,
       "basis": "prepared_brief_not_measured_provider_outcomes",
       "observedAtUTC": "2026-10-10T06:16:15.179362+00:00"
+    },
+    {
+      "id": "gemini_role_resume",
+      "label": "Gemini Master self-authored role-resume addendum",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/source/role_resume_20261010_c514a920c7fb6b36.md",
+      "sha256": "843070cfc6b3d201a7380bf507748ceed17e5f4a40bd9112896c0564428ad4b5",
+      "bytes": 3617,
+      "basis": "self_authored_text_not_benchmark_result",
+      "observedAtUTC": "2026-10-10T06:38:03.092683+00:00"
+    },
+    {
+      "id": "gemini_role_resume_response",
+      "label": "Raw Gemini Master role response",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/source/role_resume_response_20261010_c514a920c7fb6b36.txt",
+      "sha256": "51bb710c29082940fa626e4b153f9052f26cb30d0a7708577b7306ef530cad97",
+      "bytes": 4249,
+      "basis": "saved_raw_chat_response",
+      "observedAtUTC": "2026-10-10T06:38:03.092683+00:00"
+    },
+    {
+      "id": "gemini_role_resume_provenance",
+      "label": "Gemini Master courier and archive provenance",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/source/role_resume_provenance_20261010_c514a920c7fb6b36.json",
+      "sha256": "95c5e07321034c3125ab2a3272cf67b5ccb1125826e48d2c028c7d7873bec32d",
+      "bytes": 4491,
+      "basis": "courier_archive_record",
+      "observedAtUTC": "2026-10-10T06:38:03.092683+00:00"
     }
   ],
   "benchmarkPlan": {

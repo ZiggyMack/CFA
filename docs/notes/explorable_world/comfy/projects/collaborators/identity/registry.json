@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "recordedAtUTC": "2026-10-10T04:49:14Z",
+  "recordedAtUTC": "2026-10-10T06:35:28Z",
   "localDate": "2026-10-09",
   "timeZone": "America/New_York",
   "scope": "Creative workshop collaborator introductions",
@@ -150,12 +150,12 @@
       "currentIntroduction": {
         "source": {
           "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/I_AM.md",
-          "description": "Current Gemini Master self-authored introduction; canonical copy of captured response",
-          "sha256": "837eaba6a5da0300ce3a50563d0031d9d83c73b30f65433ee06405f59d028b26",
-          "bytes": 4348
+          "description": "Gemini Master original introduction plus exact self-authored role-resume addendum",
+          "sha256": "5f5418ff63c9d7d7515b344cc235daf60001e6c35df77a8a201f0676d6777984",
+          "bytes": 7972
         },
         "authorship": "self_authored_browser_response_archived_by_nova",
-        "archiveStatus": "verbatim_archive",
+        "archiveStatus": "verbatim_original_plus_verbatim_role_addendum",
         "authoredDateAsWritten": "October 9, 2026, America/New_York (Surface time)",
         "archivedAtUTC": "2026-10-10T03:59:00Z",
         "visibleModelPicker": "Flash-Lite",
@@ -178,7 +178,59 @@
           "sha256": "9c0c20bf6869d61e4eb5f108edf71528f14fb640b10a76db0af11a7732fc0fe0",
           "bytes": 830
         },
-        "claimsStatus": "Gemini author assertions preserved with attribution; archive and receipt verified, capability/winner/source claims not independently audited"
+        "claimsStatus": "Gemini author assertions preserved with attribution; archive and receipt verified, capability/winner/source claims not independently audited",
+        "lastRefreshedAtUTC": "2026-10-10T06:35:28Z",
+        "roleResumeRefresh": {
+          "addendum": {
+            "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/source/role_resume_20261010_c514a920c7fb6b36.md",
+            "description": "Exact copied-code self-authored Gemini role-resume addendum",
+            "sha256": "843070cfc6b3d201a7380bf507748ceed17e5f4a40bd9112896c0564428ad4b5",
+            "bytes": 3617
+          },
+          "fullResponse": {
+            "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/source/role_resume_response_20261010_c514a920c7fb6b36.txt",
+            "description": "Raw full rendered Gemini response including mailbox closing words and UI wrappers",
+            "sha256": "51bb710c29082940fa626e4b153f9052f26cb30d0a7708577b7306ef530cad97",
+            "bytes": 4249
+          },
+          "provenance": {
+            "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/source/role_resume_provenance_20261010_c514a920c7fb6b36.json",
+            "description": "Nova archive provenance and curator clarifications; separate from authored text",
+            "sha256": "95c5e07321034c3125ab2a3272cf67b5ccb1125826e48d2c028c7d7873bec32d",
+            "bytes": 4491
+          },
+          "replyProvenance": {
+            "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/40b118a9-c1ed-4b0d-a381-ce88a57cc41a.json",
+            "description": "Nova verbatim relay of Gemini Master closing mailbox words",
+            "sha256": "b83af556b14b43285aa56bd911139bb7da3732ae464922c315c314e89ddc6385",
+            "bytes": 2464
+          },
+          "receiptSources": [
+            {
+              "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/receipts/ad1d413c-0442-42bb-9ed9-50e803d2c878.json",
+              "description": "relayed evidence receipt for the Gemini role refresh",
+              "sha256": "cca3b784d41ef68523edc3affa329d9dd54ce850cc0507a9fe033950c423d247",
+              "bytes": 682
+            },
+            {
+              "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/receipts/d288dfd5-43bb-48c3-8fed-9ef26cd64c66.json",
+              "description": "acknowledged evidence receipt for the Gemini role refresh",
+              "sha256": "be759b069d10c129fcd2f1a96f196d9f52e2153b3ef8fd06e5651a750aa13772",
+              "bytes": 805
+            },
+            {
+              "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/receipts/b731330a-0b49-4c1d-83b5-53826ed80329.json",
+              "description": "completed evidence receipt for the Gemini role refresh",
+              "sha256": "db4128d4e73d7af71cd67a8e612e5073f306885322f332e5ec0dd36e9bc34ad6",
+              "bytes": 779
+            }
+          ],
+          "authoredDateAsWritten": "October 10, 2026, America/New_York (Surface time)",
+          "browserResponseID": "c514a920c7fb6b36",
+          "invitationID": "efe0d7a3-a0ee-47e9-a0e4-63c6875b0302",
+          "conversationId": "bcfa109b-7349-4990-8bf2-22a67dbe025b",
+          "status": "response_received_addendum_archived"
+        }
       },
       "preservedOriginals": [
         {
@@ -192,6 +244,19 @@
           "archiveStatus": "verbatim_prior_response",
           "authoredDateAsWritten": "2026-10-08",
           "notes": "Earlier source retains its date, noncanonical sender/path and conversation UUID used as Reply To. Correct canonical routing appears only in provenance and the new relay."
+        },
+        {
+          "source": {
+            "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/source/before_role_resume_20261010_c514a920c7fb6b36.md",
+            "description": "Byte-exact Gemini Master canonical introduction before the role addendum",
+            "sha256": "837eaba6a5da0300ce3a50563d0031d9d83c73b30f65433ee06405f59d028b26",
+            "bytes": 4348
+          },
+          "authorship": "self_authored_browser_response_archived_by_nova",
+          "archiveStatus": "byte_exact_prior_canonical_preserved",
+          "authoredDateAsWritten": "October 9, 2026, America/New_York (Surface time)",
+          "observedAtUTC": "2026-10-10T06:35:28Z",
+          "notes": "Saved before appending the exact role resume; original prefix also remains byte-identical inside the combined canonical."
         }
       ],
       "invitation": {
@@ -221,7 +286,7 @@
           "note": "Return captured after a fresh helper prompt and three attachments. This does not establish delivery of the original invitation UUID/JSON."
         }
       },
-      "notes": "Introduction and earlier welcome captured from the actual Gemini Notebook 0 browser session and archived verbatim. I_AM.md, MAILBOX.md and I_AM_TEMPLATE.md were visibly sent and acknowledged; AGENTS, project README, provider roles and invitation JSON were not supplied in this exchange. Original invitation and helper note were not relayed verbatim. Continuity/detail review remains proposed, unassigned and unstarted. Active-session file helper only; no ongoing watcher is promised.",
+      "notes": "Introduction and earlier welcome captured from the actual Gemini Notebook 0 browser session and archived verbatim. I_AM.md, MAILBOX.md and I_AM_TEMPLATE.md were visibly sent and acknowledged; AGENTS, project README, provider roles and invitation JSON were not supplied in this exchange. Original invitation and helper note were not relayed verbatim. Continuity/detail review remains proposed, unassigned and unstarted. Active-session file helper only; no ongoing watcher is promised. October 10 role-resume addendum returned in Notebook 0, archived verbatim after preserving the prior canonical. Preferences/claimed roles and willingness are author reports; no earned score or cross-surface synchronization is inferred. See separate role-resume provenance for current-reference clarifications.",
       "friendlyPointer": "docs/notes/explorable_world/comfy/projects/collaborators/I_AM_Gemini.md",
       "browserHandoff": {
         "status": "three_documents_sent_response_received",
@@ -232,6 +297,16 @@
           "I_AM_TEMPLATE.md"
         ],
         "provenance": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/source/provenance.json"
+      },
+      "roleResumeStatus": {
+        "status": "self_authored_addendum_received_archived",
+        "updatedAtUTC": "2026-10-10T06:35:28Z",
+        "relayMessageID": "40b118a9-c1ed-4b0d-a381-ce88a57cc41a",
+        "receiptIDs": [
+          "ad1d413c-0442-42bb-9ed9-50e803d2c878",
+          "d288dfd5-43bb-48c3-8fed-9ef26cd64c66",
+          "b731330a-0b49-4c1d-83b5-53826ed80329"
+        ]
       }
     },
     {
