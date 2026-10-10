@@ -490,7 +490,7 @@ When files are added or deleted, use diff notation like git commits:
 - Added `docs/notes/explorable_world/comfy/outputs/comfy_connection_20261003.proof.json`: authenticated production v0.67.0, 41 tools, successful saved pump listing/read, and explicit verification limits.
 - Corrected current readiness in Comfy, workflow, project and Pathfinder handoff notes; updated PLAYBOOK/reader, LESSONS and wolf preflight. Manual Agent handoff remains optional.
 
-**Reason:** Earlier empty CLI/not-found observations came from CodexSandboxOffline and did not describe Stephen's configuration. Actual-profile initialization failed invalid_grant. Fresh browser OAuth succeeded; local app-server JSON-RPC now reaches Comfy. Native chat tool exposure was not reloaded. This corrects the interpretation in earlier October 3 entries while preserving their history.
+**Reason:** Earlier empty CLI/not-found observations came from CodexSandboxOffline and did not describe Ziggy's configuration. Actual-profile initialization failed invalid_grant. Fresh browser OAuth succeeded; local app-server JSON-RPC now reaches Comfy. Native chat tool exposure was not reloaded. This corrects the interpretation in earlier October 3 entries while preserving their history.
 
 **Impact:** Direct authenticated reads restored; no new key, generation or account video dependency verification.
 

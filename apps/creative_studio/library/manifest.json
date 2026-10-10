@@ -29,8 +29,8 @@
     "video": 31
   },
   "output_file_count": 1027,
-  "output_bytes": 97721957,
-  "catalog_sha256": "58611b2019e9e33d3666cedba26ee39eef98c59e0c79ff901e5091122295120c",
+  "output_bytes": 97721955,
+  "catalog_sha256": "9a1bf6828f37fce0a543cca7553cd81d0f6ddc0d885acf715b1e5e301fc478ba",
   "sources_preserved": true,
   "sources": [
     {
@@ -6254,11 +6254,15 @@
     },
     {
       "path": "docs/200b6f57be6f6109daccd3486c952e49ae392ff675cfe8c09ad3f7671f393d5e.txt",
-      "sha256": "ab911b3bf01d30c6ef4cbc8bbb15f1e1ffcbfb6c68c10f6ac7148bcbef008b98",
-      "bytes": 2778,
+      "sha256": "641b72b3bcfaf854a7e6ec9edeb6170d61497bb71ba9d2c35babd1384446a8c3",
+      "bytes": 2776,
       "source_sha256": "200b6f57be6f6109daccd3486c952e49ae392ff675cfe8c09ad3f7671f393d5e",
       "role": "inert_text_preview",
-      "inert_helper": false
+      "inert_helper": false,
+      "priorPrivacyCapture": {
+        "sha256": "ab911b3bf01d30c6ef4cbc8bbb15f1e1ffcbfb6c68c10f6ac7148bcbef008b98",
+        "bytes": 2778
+      }
     },
     {
       "path": "docs/2106874f2d5cf0d7e78d05b91da5bb467a01719b43ad3c5c806f6b3953b5d3d1.txt",
@@ -17454,5 +17458,11 @@
         "decode": "passed"
       }
     }
-  ]
+  ],
+  "privacyDerivative": {
+    "editedAtUTC": "2026-10-10T13:01:53.359651+00:00",
+    "sourceFieldsScope": "sources and source_catalog retain the original build capture; output hashes verify current portable copies.",
+    "policy": "docs/notes/privacy_20261010/SHARED_PRIVACY_POLICY.txt",
+    "ledger": "docs/notes/privacy_20261010/redaction_ledger.json"
+  }
 }

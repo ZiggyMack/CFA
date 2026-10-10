@@ -301,7 +301,7 @@ python dashboard/config.py           # Check all paths
 
 ## Contact
 
-**Human:** Ziggy (Stephen)
+**Human:** Ziggy
 **Main Claude:** CFA Claude (Opus)
 **You:** Dashboard Claude (Cold Boot)
 

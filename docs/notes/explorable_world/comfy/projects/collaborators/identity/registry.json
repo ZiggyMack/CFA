@@ -72,12 +72,12 @@
       "currentIntroduction": {
         "source": {
           "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/grok_chief/I_AM.md",
-          "description": "Chief of Staff self-authored introduction received through the shared local mailbox",
-          "sha256": "cc58e4d752503d8fc8c17b99239b925c8ab11c059f71f1a301645ab6e7467bbd",
-          "bytes": 5618
+          "description": "Chief of Staff self-authored introduction, shared privacy-normalized derivative",
+          "sha256": "62a6101067e920683e9d7202775abae348d8b4a7f98e610528b788afe4d6bebc",
+          "bytes": 5870
         },
         "authorship": "self_authored",
-        "archiveStatus": "preserved_at_current_path",
+        "archiveStatus": "privacy_normalized_shared_copy_original_preserved_outside_repository",
         "authoredLocalDate": "2026-10-09",
         "authoredTimeZone": "America/New_York",
         "observedAtUTC": "2026-10-10T03:00:59Z",
@@ -92,8 +92,28 @@
           "deliveryScope": "received_as_local_mailbox_file"
         },
         "reportedSHA256": "cc58e4d752503d8fc8c17b99239b925c8ab11c059f71f1a301645ab6e7467bbd",
-        "matchesReportedSHA256": true,
-        "claimsStatus": "Self-reported capabilities, access and production state; receipt and file hash are verified, claims are not independently audited."
+        "matchesReportedSHA256": false,
+        "claimsStatus": "Self-reported capabilities, access and production state; receipt and file hash are verified, claims are not independently audited.",
+        "currentCopyAuthorship": "self_authored_text_privacy_normalized_by_nova",
+        "reportedSHA256Scope": "Author-reported hash of the original pre-normalization capture; it does not identify the current shared derivative.",
+        "privacyProvenance": {
+          "normalizedBy": "nova",
+          "normalizedAtUTC": "2026-10-10T12:58:58.226831+00:00",
+          "revalidatedAtUTC": "2026-10-10T13:04:02.262710+00:00",
+          "priorSourceCapture": {
+            "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/grok_chief/I_AM.md",
+            "description": "Chief of Staff self-authored introduction received through the shared local mailbox",
+            "sha256": "cc58e4d752503d8fc8c17b99239b925c8ab11c059f71f1a301645ab6e7467bbd",
+            "bytes": 5618
+          },
+          "sharedSource": {
+            "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/grok_chief/I_AM.md",
+            "sha256": "62a6101067e920683e9d7202775abae348d8b4a7f98e610528b788afe4d6bebc",
+            "bytes": 5870
+          },
+          "ledgerPath": "docs/notes/privacy_20261010/redaction_ledger.json",
+          "scope": "Personal-name and profile-path privacy normalization only; no new authored capability claim or benchmark result. Exact originals are preserved outside the current repository."
+        }
       },
       "preservedOriginals": [],
       "invitation": {
@@ -638,5 +658,10 @@
     "session closing"
   ],
   "backupStatus": "Introduction collection is separate from full-project backup. Local or Git-visible files do not establish completed Google Drive upload.",
-  "welcomeTemplateSnapshotAsOfUTC": "2026-10-10T03:11:29Z"
+  "welcomeTemplateSnapshotAsOfUTC": "2026-10-10T03:11:29Z",
+  "privacyMaintenance": {
+    "updatedAtUTC": "2026-10-10T13:04:02.262710+00:00",
+    "ledgerPath": "docs/notes/privacy_20261010/redaction_ledger.json",
+    "scope": "Current Chief introduction metadata only; authored times, reported original hashes, mailbox provenance and other collaborators remain historical."
+  }
 }

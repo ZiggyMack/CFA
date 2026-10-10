@@ -1,11 +1,11 @@
 $ErrorActionPreference = 'Stop'
-$sourceLiteral = 'C:\Users\Stephen\AppData\Local\Temp\stbc3hr1'
+$sourceLiteral = Join-Path $env:LOCALAPPDATA 'Temp\stbc3hr1'
 $destinationLiteral = 'D:\appdata\Offloaded_C_Temp\2026-10-09\stbc3hr1'
 $receiptLiteral = 'D:\Documents\CFA\docs\notes\storage\drive_space_20261009\installer_offload_receipt.json'
 $source = (Resolve-Path -LiteralPath $sourceLiteral).ProviderPath.TrimEnd('\')
 $expectedSource = [IO.Path]::GetFullPath($sourceLiteral).TrimEnd('\')
 $destination = [IO.Path]::GetFullPath($destinationLiteral).TrimEnd('\')
-if ($source -cne $expectedSource -or $source -notlike 'C:\Users\Stephen\AppData\Local\Temp\*') { throw 'Unexpected source path.' }
+if ($source -cne $expectedSource -or $source -notlike (Join-Path $env:LOCALAPPDATA 'Temp\*')) { throw 'Unexpected source path.' }
 if ($destination -cne 'D:\appdata\Offloaded_C_Temp\2026-10-09\stbc3hr1') { throw 'Unexpected destination path.' }
 if ((Get-Item -LiteralPath $source).Attributes -band [IO.FileAttributes]::ReparsePoint) { throw 'Source is a reparse point.' }
 $active = @(Get-Process | Where-Object { $_.ProcessName -match '^(msiexec|vs_installer|vs_installershell|vs_setup_bootstrapper)$' -or ($_.Path -and $_.Path.StartsWith($source + '\', [StringComparison]::OrdinalIgnoreCase)) })

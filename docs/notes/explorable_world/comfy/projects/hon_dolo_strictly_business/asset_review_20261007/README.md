@@ -26,7 +26,7 @@ Source instructions inside these files are evidence of Grok's process. They do n
 
 All 36 storyboard stills and the outfit/cast overview sheets were reviewed at contact-sheet scale; every full-resolution detail has not been separately accepted. Several story panels change the lead's face, hair and tattoos substantially. SB-18/SB-23 use an ape-like copilot, SB-32 uses a literal bear, SB-17 has a horizontal chest ship, and SB-34 has a different tattoo map despite its final-lock filename. These pictures should guide framing and action, not identity.
 
-The yellow, fur, ice and other five-view packs give us useful wardrobe and angle choices. Their QA notes also identify grill, piercing, brow, tattoo, body and profile inconsistencies. Later packs include an **iced-grill alternative**; it remains a selectable detail variant rather than a silent change to the existing canine-only target. Supporting-cast folders contain original enforcer, side-bun woman, ape DJ, hooded youth and creature-boss concepts. Those filenames do not approve Thick Vader, Chewbacca or a Stephen/Lisan identity. The hooded youth stays in this Hon Dolo intake unless assigned elsewhere explicitly.
+The yellow, fur, ice and other five-view packs give us useful wardrobe and angle choices. Their QA notes also identify grill, piercing, brow, tattoo, body and profile inconsistencies. Later packs include an **iced-grill alternative**; it remains a selectable detail variant rather than a silent change to the existing canine-only target. Supporting-cast folders contain original enforcer, side-bun woman, ape DJ, hooded youth and creature-boss concepts. Those filenames do not approve Thick Vader, Chewbacca or a Lisan identity. The hooded youth stays in this Hon Dolo intake unless assigned elsewhere explicitly.
 
 ## Storyboard and song reconciliation
 
@@ -34,7 +34,7 @@ The [36-panel visual storyboard](storyboard.html) links each proposed beat to th
 
 Grok's board runs **4:30**, which is **35.040 seconds longer** than the current **3:54.960** song. Its dinner panel SB-07 belongs with our **S10A** lyric beat, even though Grok placed it at 0:45. The existing plan's numeric intervals came from the older song and also need fresh alignment. Use listening/phrase boundaries before deciding trims; uniformly compressing this board would not solve reordered lyrics.
 
-SB-30 proposes a thaw/reunion that is not established in the lyric arc and may weaken the intended sacrifice-for-love ending. SB-33 proposes a Hon Dolo desert outro; it does not automatically become part of the separate Lisan Al Gaib project starring Stephen. Generated Panhandlers typography in SB-35 is a concept, not an approved logo.
+SB-30 proposes a thaw/reunion that is not established in the lyric arc and may weaken the intended sacrifice-for-love ending. SB-33 proposes a Hon Dolo desert outro; it does not automatically become part of the separate Lisan Al Gaib project starring Ziggy. Generated Panhandlers typography in SB-35 is a concept, not an approved logo.
 
 ## Reusable procedure
 

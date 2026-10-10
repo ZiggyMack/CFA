@@ -761,8 +761,18 @@
       "availability": "verify active Chief/HaL session",
       "identity": {
         "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/grok_chief/I_AM.md",
-        "sha256": "cc58e4d752503d8fc8c17b99239b925c8ab11c059f71f1a301645ab6e7467bbd",
-        "bytes": 5618
+        "sha256": "62a6101067e920683e9d7202775abae348d8b4a7f98e610528b788afe4d6bebc",
+        "bytes": 5870,
+        "privacyProvenance": {
+          "priorCapture": {
+            "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/grok_chief/I_AM.md",
+            "sha256": "cc58e4d752503d8fc8c17b99239b925c8ab11c059f71f1a301645ab6e7467bbd",
+            "bytes": 5618
+          },
+          "currentCopy": "privacy_normalized_shared_derivative",
+          "ledgerPath": "docs/notes/privacy_20261010/redaction_ledger.json",
+          "observedAtUTC": "2026-10-10T13:04:02.262710+00:00"
+        }
       },
       "communication": {
         "route": "Shared files when active or Nova browser courier",
@@ -2066,10 +2076,24 @@
       "id": "iam_grok_chief",
       "label": "Grok Chief of Staff self-authored introduction",
       "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/grok_chief/I_AM.md",
-      "sha256": "cc58e4d752503d8fc8c17b99239b925c8ab11c059f71f1a301645ab6e7467bbd",
-      "bytes": 5618,
-      "basis": "author_report_file_bytes_verified",
-      "observedAtUTC": "2026-10-10T05:57:16Z"
+      "sha256": "62a6101067e920683e9d7202775abae348d8b4a7f98e610528b788afe4d6bebc",
+      "bytes": 5870,
+      "basis": "author_report_privacy_derivative_file_bytes_verified",
+      "observedAtUTC": "2026-10-10T13:04:02.262710+00:00",
+      "captureHistory": [
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/grok_chief/I_AM.md",
+          "sha256": "cc58e4d752503d8fc8c17b99239b925c8ab11c059f71f1a301645ab6e7467bbd",
+          "bytes": 5618,
+          "basis": "author_report_file_bytes_verified",
+          "observedAtUTC": "2026-10-10T05:57:16Z"
+        }
+      ],
+      "privacyProvenance": {
+        "ledgerPath": "docs/notes/privacy_20261010/redaction_ledger.json",
+        "currentCopy": "privacy_normalized_shared_derivative",
+        "updatedAtUTC": "2026-10-10T13:04:02.262710+00:00"
+      }
     },
     {
       "id": "iam_deepseek",
@@ -2192,10 +2216,10 @@
       "id": "identity_registry",
       "label": "Canonical identity and attribution registry",
       "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/registry.json",
-      "sha256": "23906eef59148d2c33f888afef321ef4300802b576ba64ccd89ed6b0d547d931",
-      "bytes": 37926,
+      "sha256": "d5058d7c91ebe50530c65290b55cabbb25fa4947f5a60662a4644faa476aebb7",
+      "bytes": 39647,
       "basis": "saved_record",
-      "observedAtUTC": "2026-10-10T06:38:03.092683+00:00",
+      "observedAtUTC": "2026-10-10T13:04:02.262710+00:00",
       "previousCapture": {
         "sha256": "bf1e4c4037bdfb4791db120ac6bda9587eb45752081b80a01b5e789569462f5f",
         "bytes": 33073,
@@ -2207,8 +2231,20 @@
           "sha256": "ba141510d94bb0dfc153191b7648ac8a6265e85f46668450f3f128cc56d3fd07",
           "bytes": 33666,
           "observedAtUTC": "2026-10-10T06:17:26.480969+00:00"
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/registry.json",
+          "sha256": "23906eef59148d2c33f888afef321ef4300802b576ba64ccd89ed6b0d547d931",
+          "bytes": 37926,
+          "basis": "saved_record",
+          "observedAtUTC": "2026-10-10T06:38:03.092683+00:00"
         }
-      ]
+      ],
+      "privacyProvenance": {
+        "ledgerPath": "docs/notes/privacy_20261010/redaction_ledger.json",
+        "currentCopy": "current_registry_after_privacy_provenance_update",
+        "updatedAtUTC": "2026-10-10T13:04:02.262710+00:00"
+      }
     },
     {
       "id": "intake_procedure",
@@ -2406,5 +2442,10 @@
     ],
     "assignments": []
   },
-  "rolesBriefPath": "docs/notes/explorable_world/comfy/projects/collaborators/benchmark_roles_20261010/ROLES_AND_ROTATION_CURRENT.txt"
+  "rolesBriefPath": "docs/notes/explorable_world/comfy/projects/collaborators/benchmark_roles_20261010/ROLES_AND_ROTATION_CURRENT.txt",
+  "privacyMaintenance": {
+    "updatedAtUTC": "2026-10-10T13:04:02.262710+00:00",
+    "ledgerPath": "docs/notes/privacy_20261010/redaction_ledger.json",
+    "scope": "Current Chief and identity-registry hash/size references only; earned grades and other dated captures are unchanged."
+  }
 }

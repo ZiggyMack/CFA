@@ -51,7 +51,7 @@ def main() -> None:
 
     manifest = {
         "format": "cfa-full-project-zip64-v1", "source": source_display, "startedUtc": stamp(),
-        "targetDesktopAccountObserved": "Stephen Wright (coordinator's installed Drive UI observation)",
+        "targetDesktopAccountObserved": "backup account (name omitted) (coordinator's installed Drive UI observation)",
         "targetAccountNote": "User specifies the separate higher-capacity desktop account, not Ziggy Mack browser/plugin account.",
         "cloudQuotaVerified": False, "cloudUploadVerified": False,
         "archiveRoot": "CFA/", "compression": "ZIP_STORED; ZIP64 enabled", "pythonVersion": sys.version,

@@ -1,0 +1,39 @@
+CFA shared-document privacy
+Updated October 10, 2026
+
+Use Ziggy for the project owner and Lisan for the character. Shared briefs,
+introductions, catalog records and handoff documents should use repository-relative
+paths. When a Windows profile path is necessary, show %USERPROFILE% or an environment
+variable rather than the account's personal name. Executable helpers must resolve
+the real environment variable; a placeholder is not an executable path.
+
+On October 10, personal-profile references in the current CFA text tree were made
+portable. Original bytes were verified and saved outside the repository before
+atomic replacement. The redaction ledger maps each prior SHA-256 to the shared
+copy's SHA-256. This preserves a record of the privacy edit without republishing
+the original text. A coordinator privacy edit is not a new claim by an AI author.
+
+Historical mailbox attachment hashes describe their original posting. They remain
+historical evidence; a current privacy derivative has its own dated hash. Existing
+content-addressed snapshot filenames may retain their prior capture identifier;
+their privacy notes and manifests identify the changed bytes.
+
+This cleanup does not erase earlier Git commits or existing external backup
+archives. Those captures retain the original contents. Do not distribute an old
+snapshot as a scrubbed export. Removing private information from Git history or
+existing backup archives requires a separate, deliberate operation.
+
+Before a new shared export, run scripts/shared_privacy_audit.py from the CFA root.
+The audit checks current text, including ignored local snapshots and caches, while
+excluding Git internals, dependency trees and minified vendor code. Binary media
+needs separate inspection; a zero text result does not inspect pixels. The October
+10 review separately checked linked PDF text/metadata, archive text members and
+the relevant screenshots.
+
+Example audit:
+  python scripts/shared_privacy_audit.py
+
+The script defaults to the current Windows profile name. Use --token for an
+explicit audit token if the machine's profile name has changed. Redaction requires
+--apply, a fresh --backup-root outside CFA, and a new --report path. Never put the
+private originals back into a public payload.
