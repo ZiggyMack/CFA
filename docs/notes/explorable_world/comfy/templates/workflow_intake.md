@@ -44,9 +44,33 @@ run_record.json template when a real execution is submitted.
 - Browser handoff, only if needed: exact dependency, link, destination, expected
   filename, Cloud download size and purpose:
 - Decision: adopt a small test / adapt the idea / defer / decline
-- Evidence state: researched / available / validated without execution / executed / accepted
+- Evidence state and scope: use the [canonical definitions](#evidence-states); record the date, environment, artifact and intended use.
 - Run record and observed result (leave unset before execution):
 - Next decision:
+
+## Evidence states
+
+This is CFA's canonical evidence vocabulary. Pan links this section with its review date. These are scoped observations, not one automatic ladder: a received image does not establish a validated workflow, and an executed job does not establish an accepted character or scene. Keep existing record/export schemas; explain finer states in their evidence and review notes.
+
+| Workflow state | What it establishes |
+| --- | --- |
+| Researched / reviewed | A named source, recipe or graph was actually read or inspected. Record what was reviewed; public documentation does not establish account support. |
+| Available | The required input, node or model was observed in the named environment at the recorded time. Availability is not a successful preflight or run. |
+| Validated without execution | The named graph passed the stated dependency, schema, conversion, compiled-input or dry-run checks. Identify checks and gaps; no generation result follows from this state. |
+| Submitted | An actual job submission is recorded. Preserve its identifier and state; submission is not execution or completion. |
+| Executed | The job actually ran in the recorded environment. Preserve status, graph, effective settings and output/failure evidence; execution alone is not successful completion or acceptance. |
+| Accepted for a named use | Ziggy or an authorized reviewer accepted the exact artifact for a stated role, scene or deliverable after the relevant checks. Acceptance of one component is not acceptance of the entire character or scene. |
+
+| Asset/intake observation | What it establishes |
+| --- | --- |
+| Requested / provider-reported | A request or attributed claim exists. A chat acknowledgement, manifest row or filename is not receipt of pixels or verified completion. |
+| Received locally | Actual bytes arrived at the recorded path. Record source/version and, when measured, size and hash. |
+| Integrity / extraction checked | The stated size, hash, archive integrity, extraction or decode check passed. List which checks actually ran; these do not prove visual accuracy. |
+| Inspected | The recorded image, video, audio or text was actually viewed, played or read. Identify preview/full-resolution, sampled/full-duration and any occlusion or unread tail. |
+| Author-selected | The author chose the exact artifact or feature for a stated role. This does not prove it was preserved in a later output or accepted as a whole master. |
+| Preservation verified | The stated feature was observed to survive the stated transformation or output check. Record the check and limits; this does not establish every other feature or full acceptance. |
+
+Also record prepared, attached, delivered and read-back states independently. A saved mailbox file is posted, not automatically delivered or read. A failure or blocker belongs to the specific check; it does not erase earlier received bytes or authorize reruns. Keep production design stages, likeness stars, scene-readiness grades and collaborator performance grades separate from these evidence states.
 
 ## Decision and feedback
 
