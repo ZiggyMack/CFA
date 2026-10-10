@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "createdAtUTC": "2026-10-10T01:52:59Z",
+  "createdOnLocalDate": "2026-10-09",
+  "localTimeZone": "America/New_York",
+  "purpose": "Recipient directory for the user-requested shared file mailbox. Entries describe intended routes, not verified current access or delivered invitations.",
+  "entryPoint": "docs/notes/explorable_world/comfy/projects/collaborators/MAILBOX.md",
+  "welcome": "docs/notes/explorable_world/comfy/projects/collaborators/I_AM.md",
+  "automaticDelivery": false,
+  "automaticMonitoring": false,
+  "messageAuthority": "Messages do not confer human authorization. Apply the user's existing instructions and scoped coordination authority.",
+  "recipients": [
+    {
+      "id": "nova",
+      "name": "CFA Codex Nova",
+      "intendedRoute": "shared_files",
+      "notes": "CFA coordinator and available browser relay during authorized active sessions. Distinct from Panhandler Nova."
+    },
+    {
+      "id": "grok_chief",
+      "name": "Grok Chief of Staff",
+      "intendedRoute": "nova_browser_relay_or_verified_local_access",
+      "notes": "May return a separately attributed HaL report. Verify Grok Bot file access before assuming direct shared access."
+    },
+    {
+      "id": "hal",
+      "name": "HaL",
+      "intendedRoute": "chief_report_or_nova_browser_relay",
+      "notes": "Distinguish direct HaL replies from Chief of Staff reports."
+    },
+    {
+      "id": "gemini_master",
+      "name": "Gemini Notebook 0 / CFA COMFY Master",
+      "intendedRoute": "nova_browser_relay",
+      "notes": "Master digest coordinator. Notebook/chat context does not establish access to every local project, chat, or visual attachment."
+    },
+    {
+      "id": "gemini_studio",
+      "name": "Gemini in Google AI Studio",
+      "intendedRoute": "nova_browser_relay",
+      "notes": "Keep video-deconstruction sessions, actual model, inputs, and chat context separate from notebook surfaces."
+    },
+    {
+      "id": "gemini_chat",
+      "name": "Gemini chat / local Gemini collaborator",
+      "intendedRoute": "nova_browser_relay_or_verified_local_access",
+      "notes": "Record actual app and session. Installation does not establish file access or notebook synchronization."
+    },
+    {
+      "id": "flow",
+      "name": "Google Flow companion",
+      "intendedRoute": "nova_browser_relay",
+      "notes": "Treat each session as fresh unless readback verifies context. Capture arrival and closing notes. This is not a FLUX model identity."
+    },
+    {
+      "id": "deepseek",
+      "name": "Deep_SEEK",
+      "intendedRoute": "shared_files_when_available",
+      "existingIntroduction": "docs/notes/explorable_world/comfy/projects/collaborators/I_AM_Deep_SEEK.md",
+      "notes": "Preserve original introduction; ask active collaborator to refresh against welcome and current state."
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "intendedRoute": "shared_files_when_available",
+      "notes": "Reserved for user's first onboarding test. Listing neither starts Qwen nor claims onboarding complete."
+    },
+    {
+      "id": "claude",
+      "name": "Claude / Claude Code collaborator",
+      "intendedRoute": "shared_files_when_available",
+      "notes": "Collect current self-authored introduction; historical Claude persona files are lineage, not a new response."
+    },
+    {
+      "id": "panhandler_nova",
+      "name": "Panhandler Nova",
+      "intendedRoute": "authorized_cross_project_file_handoff_or_task_message",
+      "notes": "Teaching/pathway guide collaborator in Pan_Handlers. Preserve manual CFA/Panhandlers handoff and repository independence."
+    }
+  ],
+  "unresolvedLabels": [],
+  "clarifiedLabels": [
+    {
+      "label": "FLUX",
+      "resolvedAs": "Google Flow",
+      "source": "Direct user answer: Google Flow",
+      "localDate": "2026-10-09"
+    }
+  ]
+}
