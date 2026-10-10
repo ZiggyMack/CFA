@@ -43,8 +43,14 @@ def main() -> None:
     if archive.exists() or partial.exists():
         raise SystemExit("A snapshot archive already exists here; choose a new staging directory.")
 
+    source_display = str(source)
+    if os.name == "nt":
+        # Original media includes paths beyond the legacy Windows MAX_PATH limit.
+        # Keep portable names in the manifest; use extended paths for filesystem I/O.
+        source = Path(chr(92) * 2 + "?" + chr(92) + source_display)
+
     manifest = {
-        "format": "cfa-full-project-zip64-v1", "source": str(source), "startedUtc": stamp(),
+        "format": "cfa-full-project-zip64-v1", "source": source_display, "startedUtc": stamp(),
         "targetDesktopAccountObserved": "Stephen Wright (coordinator's installed Drive UI observation)",
         "targetAccountNote": "User specifies the separate higher-capacity desktop account, not Ziggy Mack browser/plugin account.",
         "cloudQuotaVerified": False, "cloudUploadVerified": False,

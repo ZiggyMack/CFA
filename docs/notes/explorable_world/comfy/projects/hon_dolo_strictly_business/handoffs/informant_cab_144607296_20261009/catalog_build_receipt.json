@@ -1,129 +1,236 @@
 {
   "schemaVersion": 1,
-  "recordedUtc": "2026-10-10T02:51:16.5438786Z",
-  "status": "registry-ready-render-pending",
-  "reason": "Backup priority: ordinary local catalog build stopped after more than ten minutes waiting without completion output.",
-  "visibility": "Not verified in rendered supporting-cast catalog",
+  "recordedUtc": "2026-10-10T04:26:25.675277+00:00",
+  "status": "built-and-render-contract-verified",
+  "reason": "The ordinary supported build completed after the heavy backup copy and hash work finished.",
   "execution": "No remote media download or AI generation",
-  "processId": 29044,
-  "stopOutcome": "stopped-verified-python-pid-29044",
+  "build": {
+    "script": "visual_library/build_catalog.py",
+    "processId": 27028,
+    "exitCode": 0,
+    "durationSeconds": 51.20727348327637,
+    "diagnostics": "faulthandler periodic 60-second stack dump was enabled; no timeout reached",
+    "summary": {
+      "assets": 1797,
+      "albums": 170,
+      "documents": 352,
+      "media": 1445
+    }
+  },
+  "verification": {
+    "assetID": "HON-INFORMANT-CIVITAI-144607296-SCREENSHOT",
+    "albumID": "hon:cast-unnamed-informant",
+    "characterID": "HON-UNNAMED-INFORMANT",
+    "exactlyOneImageAsset": true,
+    "exactlyOneAlbum": true,
+    "sourceSHA256": "d5b97912d5492fab6d75ea05847a32e930c16dbae4f602b43159fad92e017ed0",
+    "sourceAndThumbnailPathsExist": true,
+    "intakeAndHandoffDocumentsPresent": true,
+    "documentSourcesMatchCatalogText": true,
+    "renderedSingleSupportingCastCard": true,
+    "inlineExpandCollapsePassed": true,
+    "routeUnchangedWhenToggled": true,
+    "existingCollectionNavigationChecks": 11,
+    "existingCompactBrowseChecks": 9,
+    "browserVisualQA": false,
+    "productionAppearanceAccepted": false
+  },
+  "visibility": "Generated Supporting cast markup contains one collapsed Unnamed informant card; expansion reveals the screenshot. Real-browser visual inspection was not performed by this helper.",
   "activeSourceWriter": false,
-  "changedDuringStop": [],
-  "beforeStop": [
+  "outputs": [
     {
       "path": "visual_library/catalog.js",
-      "bytes": 7120138,
-      "sha256": "e628fef89817cb82dd34bbc80ee4834ad89790f47d37ec2441fd1049afe2c663",
+      "bytes": 7143412,
+      "sha256": "ab548dc5cd49bc98e27658f5ed9416ebce34eb1061497f8713b6801d91de9869",
       "parse": "valid",
-      "modifiedUtc": "2026-10-10T00:28:16.0028054Z"
+      "contentChanged": true,
+      "modifiedUtc": "2026-10-10T04:22:54.630933+00:00"
     },
     {
       "path": "visual_library/browser_media_paths.json",
       "bytes": 41181,
       "sha256": "a8688f60cc2cffb920fc618de41fac1540980ff2689444413319a719959ac60f",
       "parse": "valid",
-      "modifiedUtc": "2026-10-10T00:28:16.0058028Z"
+      "contentChanged": false,
+      "modifiedUtc": "2026-10-10T04:22:54.642923+00:00"
     },
     {
       "path": "visual_library/grok500_preview_paths.json",
       "bytes": 431428,
       "sha256": "3416bfe08adf91f3b1400bbf8788aa54ef3654ba65917d400263ec10d3dea5d3",
       "parse": "valid",
-      "modifiedUtc": "2026-10-10T02:46:32.1391835Z"
+      "contentChanged": false,
+      "modifiedUtc": "2026-10-10T04:22:35.379730+00:00"
     },
     {
       "path": "index.html",
       "bytes": 496,
-      "sha256": "91e08a6f5854556976314a6228e1cec145447eedb04194040c3f88488baa2059",
-      "parse": "not-json",
-      "modifiedUtc": "2026-10-10T00:28:16.0837655Z"
+      "sha256": "3826725f08637d83649314478066767f18aa89071264a5c66d53760c23c39ece",
+      "parse": "valid-html-shell-with-current-cache-hashes",
+      "contentChanged": true,
+      "modifiedUtc": "2026-10-10T04:22:54.790834+00:00"
     },
     {
       "path": "hon_dolo_strictly_business/asset_review_20261007/index.html",
       "bytes": 514,
-      "sha256": "cb2750440368b934be8ea1467ecde940f9e648b1356528814f42d3d33820c364",
-      "parse": "not-json",
-      "modifiedUtc": "2026-10-10T00:28:16.1167454Z"
+      "sha256": "76302dd601044adacbcfbe76b3a2b7361f706f2866a11622e03ca7084583d91b",
+      "parse": "valid-html-shell-with-current-cache-hashes",
+      "contentChanged": true,
+      "modifiedUtc": "2026-10-10T04:22:54.958729+00:00"
     },
     {
       "path": "hon_dolo_strictly_business/asset_review_20261007/storyboard.html",
       "bytes": 521,
-      "sha256": "1622838317f48456666b235dce09f558aa02690e3a23611119eaafbde8a45e2e",
-      "parse": "not-json",
-      "modifiedUtc": "2026-10-10T00:28:16.1502290Z"
+      "sha256": "9285bf7a5a4a6121a954ca15437c387404391e7de9413f5f8f555eb4f8ad925c",
+      "parse": "valid-html-shell-with-current-cache-hashes",
+      "contentChanged": true,
+      "modifiedUtc": "2026-10-10T04:22:55.259545+00:00"
     },
     {
       "path": "hon_dolo_strictly_business/gemini_review_20261007/index.html",
       "bytes": 517,
-      "sha256": "93bcd87bd66ef1c454e7fdf43c4b5a116ba0a05acd29023bec229507b7f0ba73",
-      "parse": "not-json",
-      "modifiedUtc": "2026-10-10T00:28:16.1847168Z"
+      "sha256": "416dba2ecb6cbf5d95ed0e7df397a6a7212cce94f691b32c0c511be207997e8e",
+      "parse": "valid-html-shell-with-current-cache-hashes",
+      "contentChanged": true,
+      "modifiedUtc": "2026-10-10T04:22:55.538373+00:00"
     },
     {
       "path": "lisan_al_gaib/index.html",
       "bytes": 507,
-      "sha256": "66f2cbb2903f5356483339afee585fccdfe571dde15ccd0ca2bebe5d292267ac",
-      "parse": "not-json",
-      "modifiedUtc": "2026-10-10T00:28:16.2177035Z"
+      "sha256": "baed1a2e9f3748e12642752f5109aebb515efc5650ac96931df746c9e1448d96",
+      "parse": "valid-html-shell-with-current-cache-hashes",
+      "contentChanged": true,
+      "modifiedUtc": "2026-10-10T04:22:55.664295+00:00"
     }
   ],
-  "afterStop": [
-    {
-      "path": "visual_library/catalog.js",
-      "bytes": 7120138,
-      "sha256": "e628fef89817cb82dd34bbc80ee4834ad89790f47d37ec2441fd1049afe2c663",
-      "parse": "valid",
-      "modifiedUtc": "2026-10-10T00:28:16.0028054Z"
-    },
-    {
-      "path": "visual_library/browser_media_paths.json",
-      "bytes": 41181,
-      "sha256": "a8688f60cc2cffb920fc618de41fac1540980ff2689444413319a719959ac60f",
-      "parse": "valid",
-      "modifiedUtc": "2026-10-10T00:28:16.0058028Z"
-    },
-    {
-      "path": "visual_library/grok500_preview_paths.json",
-      "bytes": 431428,
-      "sha256": "3416bfe08adf91f3b1400bbf8788aa54ef3654ba65917d400263ec10d3dea5d3",
-      "parse": "valid",
-      "modifiedUtc": "2026-10-10T02:46:32.1391835Z"
-    },
-    {
-      "path": "index.html",
-      "bytes": 496,
-      "sha256": "91e08a6f5854556976314a6228e1cec145447eedb04194040c3f88488baa2059",
-      "parse": "not-json",
-      "modifiedUtc": "2026-10-10T00:28:16.0837655Z"
-    },
-    {
-      "path": "hon_dolo_strictly_business/asset_review_20261007/index.html",
-      "bytes": 514,
-      "sha256": "cb2750440368b934be8ea1467ecde940f9e648b1356528814f42d3d33820c364",
-      "parse": "not-json",
-      "modifiedUtc": "2026-10-10T00:28:16.1167454Z"
-    },
-    {
-      "path": "hon_dolo_strictly_business/asset_review_20261007/storyboard.html",
-      "bytes": 521,
-      "sha256": "1622838317f48456666b235dce09f558aa02690e3a23611119eaafbde8a45e2e",
-      "parse": "not-json",
-      "modifiedUtc": "2026-10-10T00:28:16.1502290Z"
-    },
-    {
-      "path": "hon_dolo_strictly_business/gemini_review_20261007/index.html",
-      "bytes": 517,
-      "sha256": "93bcd87bd66ef1c454e7fdf43c4b5a116ba0a05acd29023bec229507b7f0ba73",
-      "parse": "not-json",
-      "modifiedUtc": "2026-10-10T00:28:16.1847168Z"
-    },
-    {
-      "path": "lisan_al_gaib/index.html",
-      "bytes": 507,
-      "sha256": "66f2cbb2903f5356483339afee585fccdfe571dde15ccd0ca2bebe5d292267ac",
-      "parse": "not-json",
-      "modifiedUtc": "2026-10-10T00:28:16.2177035Z"
-    }
-  ],
-  "nextStep": "After backup, run the ordinary supported visual_library/build_catalog.py and verify exactly one HON-INFORMANT-CIVITAI-144607296-SCREENSHOT asset and hon:cast-unnamed-informant album with working source/intake/handoff links."
+  "previousAttempt": {
+    "schemaVersion": 1,
+    "recordedUtc": "2026-10-10T02:51:16.5438786Z",
+    "status": "registry-ready-render-pending",
+    "reason": "Backup priority: ordinary local catalog build stopped after more than ten minutes waiting without completion output.",
+    "visibility": "Not verified in rendered supporting-cast catalog",
+    "execution": "No remote media download or AI generation",
+    "processId": 29044,
+    "stopOutcome": "stopped-verified-python-pid-29044",
+    "activeSourceWriter": false,
+    "changedDuringStop": [],
+    "beforeStop": [
+      {
+        "path": "visual_library/catalog.js",
+        "bytes": 7120138,
+        "sha256": "e628fef89817cb82dd34bbc80ee4834ad89790f47d37ec2441fd1049afe2c663",
+        "parse": "valid",
+        "modifiedUtc": "2026-10-10T00:28:16.0028054Z"
+      },
+      {
+        "path": "visual_library/browser_media_paths.json",
+        "bytes": 41181,
+        "sha256": "a8688f60cc2cffb920fc618de41fac1540980ff2689444413319a719959ac60f",
+        "parse": "valid",
+        "modifiedUtc": "2026-10-10T00:28:16.0058028Z"
+      },
+      {
+        "path": "visual_library/grok500_preview_paths.json",
+        "bytes": 431428,
+        "sha256": "3416bfe08adf91f3b1400bbf8788aa54ef3654ba65917d400263ec10d3dea5d3",
+        "parse": "valid",
+        "modifiedUtc": "2026-10-10T02:46:32.1391835Z"
+      },
+      {
+        "path": "index.html",
+        "bytes": 496,
+        "sha256": "91e08a6f5854556976314a6228e1cec145447eedb04194040c3f88488baa2059",
+        "parse": "not-json",
+        "modifiedUtc": "2026-10-10T00:28:16.0837655Z"
+      },
+      {
+        "path": "hon_dolo_strictly_business/asset_review_20261007/index.html",
+        "bytes": 514,
+        "sha256": "cb2750440368b934be8ea1467ecde940f9e648b1356528814f42d3d33820c364",
+        "parse": "not-json",
+        "modifiedUtc": "2026-10-10T00:28:16.1167454Z"
+      },
+      {
+        "path": "hon_dolo_strictly_business/asset_review_20261007/storyboard.html",
+        "bytes": 521,
+        "sha256": "1622838317f48456666b235dce09f558aa02690e3a23611119eaafbde8a45e2e",
+        "parse": "not-json",
+        "modifiedUtc": "2026-10-10T00:28:16.1502290Z"
+      },
+      {
+        "path": "hon_dolo_strictly_business/gemini_review_20261007/index.html",
+        "bytes": 517,
+        "sha256": "93bcd87bd66ef1c454e7fdf43c4b5a116ba0a05acd29023bec229507b7f0ba73",
+        "parse": "not-json",
+        "modifiedUtc": "2026-10-10T00:28:16.1847168Z"
+      },
+      {
+        "path": "lisan_al_gaib/index.html",
+        "bytes": 507,
+        "sha256": "66f2cbb2903f5356483339afee585fccdfe571dde15ccd0ca2bebe5d292267ac",
+        "parse": "not-json",
+        "modifiedUtc": "2026-10-10T00:28:16.2177035Z"
+      }
+    ],
+    "afterStop": [
+      {
+        "path": "visual_library/catalog.js",
+        "bytes": 7120138,
+        "sha256": "e628fef89817cb82dd34bbc80ee4834ad89790f47d37ec2441fd1049afe2c663",
+        "parse": "valid",
+        "modifiedUtc": "2026-10-10T00:28:16.0028054Z"
+      },
+      {
+        "path": "visual_library/browser_media_paths.json",
+        "bytes": 41181,
+        "sha256": "a8688f60cc2cffb920fc618de41fac1540980ff2689444413319a719959ac60f",
+        "parse": "valid",
+        "modifiedUtc": "2026-10-10T00:28:16.0058028Z"
+      },
+      {
+        "path": "visual_library/grok500_preview_paths.json",
+        "bytes": 431428,
+        "sha256": "3416bfe08adf91f3b1400bbf8788aa54ef3654ba65917d400263ec10d3dea5d3",
+        "parse": "valid",
+        "modifiedUtc": "2026-10-10T02:46:32.1391835Z"
+      },
+      {
+        "path": "index.html",
+        "bytes": 496,
+        "sha256": "91e08a6f5854556976314a6228e1cec145447eedb04194040c3f88488baa2059",
+        "parse": "not-json",
+        "modifiedUtc": "2026-10-10T00:28:16.0837655Z"
+      },
+      {
+        "path": "hon_dolo_strictly_business/asset_review_20261007/index.html",
+        "bytes": 514,
+        "sha256": "cb2750440368b934be8ea1467ecde940f9e648b1356528814f42d3d33820c364",
+        "parse": "not-json",
+        "modifiedUtc": "2026-10-10T00:28:16.1167454Z"
+      },
+      {
+        "path": "hon_dolo_strictly_business/asset_review_20261007/storyboard.html",
+        "bytes": 521,
+        "sha256": "1622838317f48456666b235dce09f558aa02690e3a23611119eaafbde8a45e2e",
+        "parse": "not-json",
+        "modifiedUtc": "2026-10-10T00:28:16.1502290Z"
+      },
+      {
+        "path": "hon_dolo_strictly_business/gemini_review_20261007/index.html",
+        "bytes": 517,
+        "sha256": "93bcd87bd66ef1c454e7fdf43c4b5a116ba0a05acd29023bec229507b7f0ba73",
+        "parse": "not-json",
+        "modifiedUtc": "2026-10-10T00:28:16.1847168Z"
+      },
+      {
+        "path": "lisan_al_gaib/index.html",
+        "bytes": 507,
+        "sha256": "66f2cbb2903f5356483339afee585fccdfe571dde15ccd0ca2bebe5d292267ac",
+        "parse": "not-json",
+        "modifiedUtc": "2026-10-10T00:28:16.2177035Z"
+      }
+    ],
+    "nextStep": "After backup, run the ordinary supported visual_library/build_catalog.py and verify exactly one HON-INFORMANT-CIVITAI-144607296-SCREENSHOT asset and hon:cast-unnamed-informant album with working source/intake/handoff links."
+  },
+  "nextStep": "Refresh the local visual library to load the new catalog. Production adaptation and any Comfy generation require their separate reviewed workflow."
 }

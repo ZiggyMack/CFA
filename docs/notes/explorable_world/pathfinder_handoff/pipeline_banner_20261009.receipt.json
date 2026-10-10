@@ -32,6 +32,30 @@
     "The unrelated .claude/ directory was not staged, committed or edited by this task.",
     "No other Pan_Handlers source or CFA documentation was edited by this scoped push."
   ],
-  "live_browser_verification": "Root agent handles browser verification separately; not claimed by this receipt.",
+  "live_browser_verification": {
+    "status": "verified_live_after_single_app_reboot",
+    "evidence_reported_by": "Root CFA Codex Nova, from direct Manage app inspection and fresh browser screenshot review",
+    "url": "https://pan-studio.streamlit.app/",
+    "deployment_binding": {
+      "repository": "ziggymack/pan_handlers",
+      "branch": "main",
+      "entry_point": "Help/app.py",
+      "verified_in": "Streamlit Manage app"
+    },
+    "remote_commit": "4b11d07f36ccc459438043c0ed00f1917b1cd40a",
+    "recovery": {
+      "action": "Reboot this Pathfinder app once",
+      "reboot_requested_at_utc": "2026-10-10T03:42:52Z",
+      "server_started_at_utc": "2026-10-10T03:43:06Z",
+      "scope": "Only pan-studio.streamlit.app; CFA Creative Studio was not rebooted"
+    },
+    "fresh_browser_observations": [
+      "Pipeline capabilities is the first main section.",
+      "The banner is expanded by default with all four pathway cards visible.",
+      "The collapse control remains available.",
+      "Other creative branches appears lower on the page."
+    ],
+    "result": "Requested live landing-page layout confirmed; no further source change was needed."
+  },
   "final_git_status": "main tracks origin/main; final git status --short --branch reported no working-tree changes."
 }

@@ -132,10 +132,55 @@
     {
       "id": "gemini_master",
       "name": "Gemini Notebook 0 / CFA COMFY Master",
-      "collectionStatus": "response_reported_text_pending",
+      "collectionStatus": "current_self_authored_received",
       "expectedIntroductionPath": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/I_AM.md",
-      "currentIntroduction": null,
-      "preservedOriginals": [],
+      "currentIntroduction": {
+        "source": {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/I_AM.md",
+          "description": "Current Gemini Master self-authored introduction; canonical copy of captured response",
+          "sha256": "837eaba6a5da0300ce3a50563d0031d9d83c73b30f65433ee06405f59d028b26",
+          "bytes": 4348
+        },
+        "authorship": "self_authored_browser_response_archived_by_nova",
+        "archiveStatus": "verbatim_archive",
+        "authoredDateAsWritten": "October 9, 2026, America/New_York (Surface time)",
+        "archivedAtUTC": "2026-10-10T03:59:00Z",
+        "visibleModelPicker": "Flash-Lite",
+        "modelVerification": "Visible picker observed; underlying model not independently verified",
+        "provenance": {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/source/provenance.json",
+          "description": "Nova archival provenance, delivery evidence boundaries and canonical routing",
+          "sha256": "e050c4ede6f2cdf503f3de1ccfce3daf68829ec232ab96bd684d26cbfce3fbd7",
+          "bytes": 5557
+        },
+        "replyProvenance": {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/01a3cb85-3091-425b-bff3-e7a8d1592923.json",
+          "description": "Conforming Nova relay of Gemini closing words with full self-authored sources attached",
+          "sha256": "af33fd5427b4f2c8d7b2e5aaf5e15ec4c5606bfc9ce588feaa427fa92b132c5b",
+          "bytes": 2819
+        },
+        "receipt": {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/receipts/41daafde-73e2-447c-b531-a08ceeb52629.json",
+          "description": "Nova seen receipt for the archived Gemini return only",
+          "sha256": "9c0c20bf6869d61e4eb5f108edf71528f14fb640b10a76db0af11a7732fc0fe0",
+          "bytes": 830
+        },
+        "claimsStatus": "Gemini author assertions preserved with attribution; archive and receipt verified, capability/winner/source claims not independently audited"
+      },
+      "preservedOriginals": [
+        {
+          "source": {
+            "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/source/earlier_welcome.md",
+            "description": "Exact earlier Gemini Copy-button welcome; original routing/date/path preserved",
+            "sha256": "851e3634fec159727a4b368ba527db686d89038a346d07b8f120a6ee27e073c9",
+            "bytes": 3261
+          },
+          "authorship": "self_authored_browser_response_archived_by_nova",
+          "archiveStatus": "verbatim_prior_response",
+          "authoredDateAsWritten": "2026-10-08",
+          "notes": "Earlier source retains its date, noncanonical sender/path and conversation UUID used as Reply To. Correct canonical routing appears only in provenance and the new relay."
+        }
+      ],
       "invitation": {
         "messageId": "3c577cd3-b701-43f8-af12-03947cb4df6b",
         "conversationId": "7a1c301e-e3ab-4f75-99b6-c6a45ae70d4a",
@@ -144,9 +189,37 @@
         "status": "posted_not_relayed",
         "postedAtUTC": "2026-10-10T02:10:04Z",
         "remoteDeliveryEvidence": null,
-        "responseEvidence": null
+        "responseEvidence": {
+          "kind": "observed_browser_response",
+          "url": "https://gemini.google.com/app/31fab947ecdea074",
+          "responseDomId": "model-response-message-contentr_f524301499ffc79b",
+          "relayMessage": {
+            "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/01a3cb85-3091-425b-bff3-e7a8d1592923.json",
+            "description": "Conforming Nova relay of Gemini closing words with full self-authored sources attached",
+            "sha256": "af33fd5427b4f2c8d7b2e5aaf5e15ec4c5606bfc9ce588feaa427fa92b132c5b",
+            "bytes": 2819
+          },
+          "receipt": {
+            "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/receipts/41daafde-73e2-447c-b531-a08ceeb52629.json",
+            "description": "Nova seen receipt for the archived Gemini return only",
+            "sha256": "9c0c20bf6869d61e4eb5f108edf71528f14fb640b10a76db0af11a7732fc0fe0",
+            "bytes": 830
+          },
+          "note": "Return captured after a fresh helper prompt and three attachments. This does not establish delivery of the original invitation UUID/JSON."
+        }
       },
-      "notes": "Ziggy reports supplying the welcome and receiving a response. Nova has not read that response because browser reads timed out. Active-session helper is allocated; helper note e3c5784e-f4aa-4bc4-890e-ad20fdc11589 is posted locally, not relayed. Actual Gemini text and authorship provenance are required before transcription. This does not claim delivery of the specific invitation UUID."
+      "notes": "Introduction and earlier welcome captured from the actual Gemini Notebook 0 browser session and archived verbatim. I_AM.md, MAILBOX.md and I_AM_TEMPLATE.md were visibly sent and acknowledged; AGENTS, project README, provider roles and invitation JSON were not supplied in this exchange. Original invitation and helper note were not relayed verbatim. Continuity/detail review remains proposed, unassigned and unstarted. Active-session file helper only; no ongoing watcher is promised.",
+      "friendlyPointer": "docs/notes/explorable_world/comfy/projects/collaborators/I_AM_Gemini.md",
+      "browserHandoff": {
+        "status": "three_documents_sent_response_received",
+        "url": "https://gemini.google.com/app/31fab947ecdea074",
+        "observedAttachmentNames": [
+          "I_AM.md",
+          "MAILBOX.md",
+          "I_AM_TEMPLATE.md"
+        ],
+        "provenance": "docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/source/provenance.json"
+      }
     },
     {
       "id": "gemini_studio",
@@ -384,6 +457,54 @@
         "responseEvidence": null
       },
       "notes": "Introduction request is posted locally. No current self-authored return or external relay is claimed."
+    },
+    {
+      "id": "kimi",
+      "name": "Kimi / Moonshot AI collaborator",
+      "collectionStatus": "local_received",
+      "expectedIntroductionPath": "docs/notes/explorable_world/comfy/projects/collaborators/identity/kimi/I_AM.md",
+      "currentIntroduction": {
+        "source": {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/kimi/I_AM.md",
+          "description": "Kimi self-authored introduction received as a local file",
+          "sha256": "aa3c61e3f89ea4c04ae28ee64b85155f927e9ddc49064ffdd45df7f4a278a23f",
+          "bytes": 6740
+        },
+        "authorship": "self_authored",
+        "archiveStatus": "preserved_at_current_path",
+        "authoredLocalDate": "2026-10-10",
+        "authoredTimeZone": "America/New_York",
+        "observedAtUTC": "2026-10-10T04:29:22Z",
+        "replyProvenance": {
+          "messageId": "f83cc660-0cc4-481f-8de1-3df074c6d8d8",
+          "conversationId": "7a1c301e-e3ab-4f75-99b6-c6a45ae70d4a",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/f83cc660-0cc4-481f-8de1-3df074c6d8d8.json",
+          "sha256": "f589384e1f239fb1658fdad2c1fbf87189dcb1e367209dfdfa78fa09ae9864ba",
+          "bytes": 3390,
+          "createdAtUTC": "2026-10-10T04:26:10Z",
+          "observedAtUTC": "2026-10-10T04:29:22Z",
+          "authorship": "self_authored",
+          "deliveryScope": "received_as_local_mailbox_file"
+        },
+        "reportedSHA256": "aa3c61e3f89ea4c04ae28ee64b85155f927e9ddc49064ffdd45df7f4a278a23f",
+        "matchesReportedSHA256": true,
+        "claimsStatus": "Source bytes and local arrival verified. Kimi Work surface and capability claims remain attributed author reports; exact model is unknown. The extra deliveryStatusAtPosting source field is preserved and not treated as independent delivery evidence."
+      },
+      "preservedOriginals": [],
+      "invitation": null,
+      "notes": "Distinct mailbox ID kimi registered from the local onboarding arrival; no borrowed Qwen identity or manufactured invitation. Full introduction and reply read, original bytes preserved. Mailbox/identity consistency pass is offered, unassigned and unstarted. Verify actual active-session route and access before assignment; no automatic app wake or background monitoring.",
+      "localAcknowledgment": {
+        "messageId": "64c8d2e3-5fc9-4aa4-8e0b-e2211118cda4",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/64c8d2e3-5fc9-4aa4-8e0b-e2211118cda4.json",
+        "status": "posted_locally",
+        "postedAtUTC": "2026-10-10T04:29:22Z"
+      },
+      "localSeenReceipt": {
+        "receiptId": "629109e2-e634-41b5-9d95-61effc036a66",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/receipts/629109e2-e634-41b5-9d95-61effc036a66.json",
+        "event": "seen",
+        "postedAtUTC": "2026-10-10T04:29:22Z"
+      }
     }
   ],
   "historicalLineage": [

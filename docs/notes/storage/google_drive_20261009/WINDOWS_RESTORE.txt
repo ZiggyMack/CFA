@@ -1,0 +1,23 @@
+Windows restore with long paths
+
+Use Python 3.12 or newer and the companion restore_snapshot_windows.py.
+Explorer extraction and Expand-Archive may encounter the Windows path-length
+limit; the supplied helper uses extended-length paths and was tested with a
+308-character restored path. It refuses an existing destination, so it cannot
+overwrite a working project.
+
+From the downloaded backup directory:
+
+python restore_snapshot_windows.py --archive "CFA_20261009_233600.zip" --destination "D:\Restored_CFA_20261009" --sha256 7673e24bd9ecddb68e691efadfa1955f4fa68bcc3a70e1ba08f258d93cecca7d
+
+The restored project is D:\Restored_CFA_20261009\CFA. Choose another NEW folder
+if that destination already exists. The archive SHA-256 is checked first and
+ZIP CRC is checked while each file is extracted. See source_manifest.json for
+original file sizes and modification times. File contents and names are
+preserved; account sign-ins, installed applications and NTFS permissions are
+not restored by this content backup.
+
+Base repository cutoff: 767458fc061258738f0700141f928e779e739853.
+Source inventory: 48,580 files / 8,566,141,865 bytes.
+The bounded local restore proof is in restore_probe_verification.json.
+It is not an independent download from the cloud.

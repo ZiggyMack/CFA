@@ -1,49 +1,66 @@
-CFA full-folder Google Drive snapshot — 2026-10-09
+CFA full-folder Google Drive snapshot
+Updated 2026-10-10, America/New_York
 
 Source: D:\Documents\CFA
-Incomplete initial folder: G:\My Drive\CFA_Backups\CFA_20261009_220848
-Archive staging: D:\CFA_Backup_Staging\CFA_20261009_222500
-Planned archive destination: G:\My Drive\CFA_Backups\CFA_20261009_222500
-Target account: installed desktop Google Drive, observed by the coordinator as
-Stephen Wright. The user says this is the separate higher-capacity account,
-not the default Ziggy Mack browser account. Cloud quota is still unverified.
-Do not redirect this snapshot through a plugin connected to another account.
+Verified local archive: D:\CFA_Backup_Staging\CFA_20261009_233600\CFA_20261009_233600.zip
+Drive target: G:\My Drive\CFA_Backups\CFA_20261009_233600
+Cloud folder: https://drive.google.com/drive/u/1/folders/1g34Zzz-GydHroUSvdx9iFOaAp7F7cikt
+Account: Stephen Wright. Both desktop Drive and the independent browser
+account were observed. Browser quota: 672.9 GB of 2 TB used, before this upload.
+Ziggy Mack remains a separate signed-in account; no OpenAI login change is needed.
 
-Scope: the complete project directory, including .git, files ignored by Git,
-original media, incoming packages, generated outputs, and local working files.
-This is a copy into a new snapshot. No source or destination file is deleted,
-and the source project is not moved or converted into a synchronized workspace.
+VERIFIED LOCALLY
+48,580 source files / 8,566,141,865 source bytes.
+Archive size: 8,591,029,302 bytes (about 8.59 GB / 8.00 GiB).
+Archive SHA-256: 7673e24bd9ecddb68e691efadfa1955f4fa68bcc3a70e1ba08f258d93cecca7d
+All archive-entry CRC checks passed. Post-archive inventory passed at
+2026-10-10T03:50:35Z with no failed reads, additions, deletions, changed files,
+or omitted reparse points. Git cutoff: 767458fc061258738f0700141f928e779e739853.
 
-Initial inventory: 48,364 files, 8,559,691,941 bytes, 2,406 directories.
-The source can change while collaborators work; a final delta pass is required.
-The separate reparse-point audit found zero junctions or symbolic links.
-Robocopy uses /XJ, /E, /COPY:DAT, /DCOPY:DA, two threads and bounded retries.
-NTFS permissions and ownership are not part of this portable content copy.
+The complete CFA directory is included regardless of Git ignore rules:
+original images, audio, videos, incoming ZIP packages, generated output,
+working files, and .git history. Verified examples include the LAG-PARTIAL
+incoming package, DeepSeek ACL-recovery artifacts and cfa-review (6).json.
+See verification_receipt.json and critical_content_verification.json.
 
-The three live Robocopy logs are deferred until their writers finish. They are
-copied separately after verification so the complete audit accompanies the
-snapshot without trying to copy a log while that same operation changes it.
+Four local restore samples passed SHA-256 comparison: a long-path original
+image, AGENTS.md, the original Hon MP3, and a video. One restored path was
+308 characters long. WINDOWS_RESTORE.txt and restore_snapshot_windows.py
+provide a no-overwrite Python 3.12+ restore route. This was a local restore,
+not a redownload of the archive from Google.
 
-The initial per-file copy was too slow and was deliberately stopped. Its partial
-folder remains intact and is explicitly marked incomplete. pass1_result.json is
-an interrupted-run record, not a success receipt. No complete copy exists yet.
+TRANSFER / CLOUD CHECKPOINT
+The complete mounted Drive archive was verified at 2026-10-10T04:10:51Z:
+all 8,591,029,302 bytes match the staged archive SHA-256. See transfer_receipt.json.
+At approximately 04:20 UTC, Drive desktop reported the archive 22% uploaded,
+with about 2 hours remaining. The new folder, source manifest, checksum, verification receipts
+and restore companions are independently visible in Stephen Wright's web
+Drive. The large archive itself is not yet confirmed visible at this checkpoint.
+Do not treat the companion files or an earlier Up to date status as proof
+that the archive finished uploading. Mounted-copy, server-upload and cloud
+restore evidence will be recorded separately.
 
-The replacement plan is one ZIP64 archive created on D: after collaborator files
-and the Git checkpoint are stable. It includes every regular file, regardless
-of Git ignore rules. All ZIP entries receive CRC verification and the complete
-archive receives SHA-256 verification before transfer. A matching destination
-archive hash will establish the mounted copy; cloud completion remains separate.
-The archive builder is create_snapshot_archive.py. The external manifest and
-verification receipt live next to the archive; a restore note and manifest also
-live inside it. Wait for those receipts rather than interpreting this planning
-note as completed backup evidence.
+POST-SNAPSHOT WORK
+Gemini's and Kimi's introductions, the finished informant catalog, and final
+status notes were saved after the base snapshot. The supplemental capture is
+staged separately at D:\CFA_Backup_Staging\CFA_20261010_onboarding_supplement
+and targets My Drive/CFA_Backups/CFA_20261010_onboarding_supplement. Read its
+supplement_verification.json and mounted_transfer_receipt.json for completion
+evidence and exact cutoff; this note records the plan before capture. None of
+these newer records should be assumed to be inside the immutable base archive.
 
-IMPORTANT: Reading matching bytes from G: verifies the mounted Google Drive
-copy, which may still be local or queued for upload. It does not establish
-completed server upload, cloud quota sufficiency, or a successful cloud restore.
-Those require Google Drive sync status and independent cloud-side verification.
+EARLIER INCOMPLETE ATTEMPTS
+CFA_20261009_220848: interrupted per-file copy; partial folder preserved.
+CFA_20261009_222500: partial ZIP build with 186 Windows long-path failures.
+These are not complete backups. The 233600 archive uses extended Windows
+paths and passed the complete inventory and entry checks described above.
 
-Restore after cloud completion: download this complete snapshot to a new local
-folder, verify the saved samples, inspect the repository and install the
-documented application dependencies. Account sign-ins, app installations,
-credentials held outside this project, and other drives are outside this backup.
+RESTORE SCOPE
+This is a dated snapshot, not ongoing folder synchronization. Download the
+complete archive and companions to a spacious local drive, verify its SHA-256,
+then restore into a new folder with the supplied helper. Apply any separately
+verified later supplement only after reviewing its manifest/instructions.
+The backup preserves project file content and Git history. It does not install
+apps, restore account sessions or credentials stored outside CFA, preserve
+NTFS permissions, or include sibling projects such as Pan_Handlers and
+Nyquist_Consciousness. Pan_Handlers' banner change is separately pushed to Git.
