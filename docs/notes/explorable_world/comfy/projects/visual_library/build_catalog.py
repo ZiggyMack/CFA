@@ -318,6 +318,37 @@ albums.sort(key=album_order)
 catalog=dict(projects=[dict(id='hon',name='Hon Dolo',subtitle='Strictly Business'),dict(id='lisan',name='Lisan Al Gaib',subtitle='Meta Mirror'),dict(id='unassigned',name='Unassigned',subtitle='Two clips to place')],assets=assets,albums=albums,categories=[['working','Working references'],['outfits','Outfits'],['details','Tattoos & piercings'],['cast','Supporting cast'],['storyboard','Storyboard'],['videos','Videos'],['comfy','Comfy swap targets'],['inspiration','Inspiration'],['review','Needs review']])
 ids=[a['id'] for a in assets];assert len(ids)==len(set(ids)), 'Repeated UI asset IDs'
 catalog['reviewDecisions']=review_decisions
+# Coordinator requests must bind an exact unchanged source; they never mutate decisions.
+requests_path=HERE/'review_requests.json'
+request_document=read(requests_path) if requests_path.exists() else {'format':'cfa-review-requests-v1','requests':[]}
+assert request_document.get('format')=='cfa-review-requests-v1','Review request format'
+review_requests=request_document['requests']
+assert len({r['id'] for r in review_requests})==len(review_requests),'Repeated review requests'
+for request in review_requests:
+    source=by_id[request['id']]
+    assert request['type']=='missing_decision' and request['reason'] and request['requestedBy'],request['id']
+    assert source.get('sha256') and source['sha256']==request['sha256'],request['id']
+    assert hashlib.sha256(io_path(ROOT/source['repoPath']).read_bytes()).hexdigest()==request['sha256'],request['id']
+catalog['reviewRequests']=review_requests
+assessments_path=HERE/'assistant_likeness_assessments.json'
+assessment_document=read(assessments_path) if assessments_path.exists() else {'schemaVersion':1,'assessments':[]}
+assert assessment_document.get('schemaVersion')==1,'Assistant likeness assessment schema'
+assessments=assessment_document['assessments']
+assert len({p['assetID'] for p in assessments})==len(assessments),'Repeated assistant likeness assessments'
+for proposal in assessments:
+    source=by_id[proposal['assetID']]
+    assert proposal['status']=='proposal' and proposal['assessedBy']=='nova',proposal['assetID']
+    assert proposal['likenessRating'] is None or (type(proposal['likenessRating']) is int and 1<=proposal['likenessRating']<=5),proposal['assetID']
+    assert all(isinstance(proposal[field],str) and proposal[field] for field in ['assessedAtUTC','scope','confidence','summary']),proposal['assetID']
+    assert isinstance(proposal['observations'],list) and all(all(isinstance(o.get(field),str) and o[field] for field in ['feature','finding','visibility','severity']) for o in proposal['observations']),proposal['assetID']
+    assert source.get('sha256') and source['sha256']==proposal['sha256'],proposal['assetID']
+    assert hashlib.sha256(io_path(ROOT/source['repoPath']).read_bytes()).hexdigest()==proposal['sha256'],proposal['assetID']
+    assert isinstance(proposal['referenceAssets'],list) and proposal['referenceAssets'],proposal['assetID']
+    for reference in proposal['referenceAssets']:
+        gold=by_id[reference['assetID']]
+        assert gold.get('sha256') and gold['sha256']==reference['sha256'],reference['assetID']
+        assert hashlib.sha256(io_path(ROOT/gold['repoPath']).read_bytes()).hexdigest()==reference['sha256'],reference['assetID']
+catalog['assistantLikenessAssessments']=assessments
 catalog['sceneReviews']=read(review_path).get('sceneReviews',[]) if review_path.exists() else []
 catalog['storyboardSequences']=storyboard_sequences
 catalog['missionControl']=read(PROJECTS/'collaborators/mission_control.json')

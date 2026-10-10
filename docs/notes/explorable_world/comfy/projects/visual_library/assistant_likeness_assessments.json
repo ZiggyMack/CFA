@@ -1,0 +1,368 @@
+{
+  "schemaVersion": 1,
+  "assessmentPolicy": "Assistant proposals are advisory. They never replace user ratings, triage, creative lane, design stage, component locks or reference selection. The user may adopt or revise a proposal using the existing rating control.",
+  "pilot": "Five Hon Dolo yellow-jacket views",
+  "standardPriority": "Full-face anchor establishes identity; newer scoped dental and tattoo anchors establish their specific details. Jewelry tolerance is recorded in character_head_reference_standard.txt.",
+  "rubric": {
+    "5": "Visible defining features closely match the appropriate gold-standard anchors, with no material mismatch.",
+    "4": "Close visible match, with small deviations or bounded detail uncertainty.",
+    "3": "Recognizable character direction, with a material mapping problem or approximate identity.",
+    "2": "Substantial mismatch in multiple defining visible features.",
+    "1": "The visible character largely departs from the approved identity.",
+    "unrated": "Too few defining features are visible to make a likeness judgment."
+  },
+  "coveragePolicy": "Occluded features are not failed features. Confidence and visibility limits must accompany a score; no unseen anatomy, dental material or articulation is inferred.",
+  "referencePolicyPath": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt",
+  "assessments": [
+    {
+      "assetID": "HD-DROP-6c2e98bd1125",
+      "sha256": "6c2e98bd112510f075696602c17da98368e7983e22ea076ee74c2264accd4faf",
+      "assessedBy": "nova",
+      "assessedAtUTC": "2026-10-10T14:36:14.064970+00:00",
+      "status": "proposal",
+      "scope": "Hon Dolo identity and visible character-detail mapping; garment design excluded",
+      "likenessRating": 3,
+      "confidence": "medium",
+      "summary": "Recognizable Dolo direction, with several visible character-detail mismatches. Keep the selected yellow clothing while correcting the mapping.",
+      "observations": [
+        {
+          "feature": "Face and hair",
+          "finding": "Dark curls, brown eyes and stubble broadly resemble the identity anchor; the face is smoother and the expression differs. Identity match is approximate.",
+          "visibility": "visible",
+          "severity": "minor"
+        },
+        {
+          "feature": "Eyebrow",
+          "finding": "A bright white vertical mark appears at the eyebrow; this differs from the anchor brow treatment.",
+          "visibility": "visible",
+          "severity": "material"
+        },
+        {
+          "feature": "Cheek lettering",
+          "finding": "The words are on the expected cheeks, but eye uses plain type rather than the anchor cursive lettering.",
+          "visibility": "visible",
+          "severity": "material"
+        },
+        {
+          "feature": "Neck blaster",
+          "finding": "The blaster is on the expected side, but its shape and orientation differ from the neck-placement anchor.",
+          "visibility": "visible",
+          "severity": "material"
+        },
+        {
+          "feature": "Chest artwork",
+          "finding": "The exposed tattoo is a tall circular/front-facing ship graphic, unlike the broad saucer composition in the chest anchor.",
+          "visibility": "visible",
+          "severity": "material"
+        },
+        {
+          "feature": "Dental details",
+          "finding": "Gold upper areas and lip jewelry are visible; lower chrome material and exact tooth arrangement cannot be verified confidently at this mouth size.",
+          "visibility": "partial",
+          "severity": "unknown"
+        },
+        {
+          "feature": "Necklace",
+          "finding": "A thin gold chain is present. The existing user chain-correction note still requires review; this image does not show the thicker chain from the earlier yellow source.",
+          "visibility": "visible",
+          "severity": "minor"
+        }
+      ],
+      "referenceAssets": [
+        {
+          "assetID": "HD-RETURN-6c8900223ee9",
+          "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae",
+          "role": "identity_and_hair"
+        },
+        {
+          "assetID": "HD-RETURN-9ace849985b4",
+          "sha256": "9ace849985b49dfec444a2171dc85854076e024352aaae8d1c8f53ef0a69daef",
+          "role": "cheek_lettering"
+        },
+        {
+          "assetID": "HD-RETURN-7b156019ddf8",
+          "sha256": "7b156019ddf8b854a68a3549c80aede545384ebc12a6d7403bb7b17075e11ebc",
+          "role": "chest_placement"
+        },
+        {
+          "assetID": "HD-RETURN-7fe77eadd174",
+          "sha256": "7fe77eadd174a629216f2c7b36748fd7e1aebaabeb4e6e2acb51df9d6e88bf94",
+          "role": "neck_placement"
+        },
+        {
+          "assetID": "HD-B-91ef00348229",
+          "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "role": "dental_mouth_only"
+        }
+      ]
+    },
+    {
+      "assetID": "HD-DROP-84bf85a0a2da",
+      "sha256": "84bf85a0a2da42322a046fbd695a76f9137398a179b7bff899afbf7c7bfcc9bc",
+      "assessedBy": "nova",
+      "assessedAtUTC": "2026-10-10T14:36:14.064970+00:00",
+      "status": "proposal",
+      "scope": "Hon Dolo identity and visible character-detail mapping; garment design excluded",
+      "likenessRating": 3,
+      "confidence": "low",
+      "summary": "The overall Dolo look is recognizable, but the small head gives weak evidence for the detailed character mapping. A closer face reference is needed before treating this as a strong likeness.",
+      "observations": [
+        {
+          "feature": "Face and hair",
+          "finding": "Dark curly hair and facial hair follow the broad Dolo appearance; the front face does not provide a close match strong enough to call five-star.",
+          "visibility": "partial",
+          "severity": "minor"
+        },
+        {
+          "feature": "Cheek lettering and eyebrow",
+          "finding": "Small marks are visible, but exact text, typography and brow treatment are not legible enough to verify.",
+          "visibility": "partial",
+          "severity": "unknown"
+        },
+        {
+          "feature": "Neck and chest artwork",
+          "finding": "Tattoo areas are visible, but the small neck motif and partly covered chest do not establish a match to the component anchors.",
+          "visibility": "partial",
+          "severity": "unknown"
+        },
+        {
+          "feature": "Dental and lip details",
+          "finding": "The mouth is too small here to confirm the four-gold upper layout, chrome lowers or both lip rings.",
+          "visibility": "partial",
+          "severity": "unknown"
+        }
+      ],
+      "referenceAssets": [
+        {
+          "assetID": "HD-RETURN-6c8900223ee9",
+          "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae",
+          "role": "identity_and_hair"
+        },
+        {
+          "assetID": "HD-RETURN-9ace849985b4",
+          "sha256": "9ace849985b49dfec444a2171dc85854076e024352aaae8d1c8f53ef0a69daef",
+          "role": "cheek_lettering"
+        },
+        {
+          "assetID": "HD-RETURN-7b156019ddf8",
+          "sha256": "7b156019ddf8b854a68a3549c80aede545384ebc12a6d7403bb7b17075e11ebc",
+          "role": "chest_placement"
+        },
+        {
+          "assetID": "HD-RETURN-7fe77eadd174",
+          "sha256": "7fe77eadd174a629216f2c7b36748fd7e1aebaabeb4e6e2acb51df9d6e88bf94",
+          "role": "neck_placement"
+        },
+        {
+          "assetID": "HD-B-91ef00348229",
+          "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "role": "dental_mouth_only"
+        }
+      ]
+    },
+    {
+      "assetID": "HD-DROP-44e53ee582fc",
+      "sha256": "44e53ee582fcaef07de4882dfea81d6a30de69ddb8a1dc3eb24f4424ad5c7fb6",
+      "assessedBy": "nova",
+      "assessedAtUTC": "2026-10-10T14:36:14.064970+00:00",
+      "status": "proposal",
+      "scope": "Hon Dolo identity and visible character-detail mapping; garment design excluded",
+      "likenessRating": 4,
+      "confidence": "low",
+      "summary": "A comparatively close profile silhouette and curl pattern. Four stars is a provisional visible-profile score; fine lettering and mouth detail remain unverified.",
+      "observations": [
+        {
+          "feature": "Face and hair",
+          "finding": "The curly silhouette, brow, nose and stubble form a plausible Dolo profile.",
+          "visibility": "visible",
+          "severity": "none"
+        },
+        {
+          "feature": "Neck blaster",
+          "finding": "A blaster-like tattoo is visible on the expected side; the precise drawing and angle cannot be confirmed at this size.",
+          "visibility": "partial",
+          "severity": "unknown"
+        },
+        {
+          "feature": "Cheek lettering",
+          "finding": "Exact lettering is not legible in the available profile view.",
+          "visibility": "partial",
+          "severity": "unknown"
+        },
+        {
+          "feature": "Dental and hidden face details",
+          "finding": "Closed lips and the profile conceal tooth layout and the opposite cheek. Neither is treated as a defect.",
+          "visibility": "not_visible",
+          "severity": "unknown"
+        }
+      ],
+      "referenceAssets": [
+        {
+          "assetID": "HD-RETURN-6c8900223ee9",
+          "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae",
+          "role": "identity_and_hair"
+        },
+        {
+          "assetID": "HD-RETURN-9ace849985b4",
+          "sha256": "9ace849985b49dfec444a2171dc85854076e024352aaae8d1c8f53ef0a69daef",
+          "role": "cheek_lettering"
+        },
+        {
+          "assetID": "HD-RETURN-7b156019ddf8",
+          "sha256": "7b156019ddf8b854a68a3549c80aede545384ebc12a6d7403bb7b17075e11ebc",
+          "role": "chest_placement"
+        },
+        {
+          "assetID": "HD-RETURN-7fe77eadd174",
+          "sha256": "7fe77eadd174a629216f2c7b36748fd7e1aebaabeb4e6e2acb51df9d6e88bf94",
+          "role": "neck_placement"
+        },
+        {
+          "assetID": "HD-B-91ef00348229",
+          "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "role": "dental_mouth_only"
+        }
+      ]
+    },
+    {
+      "assetID": "HD-DROP-436a4c39ea4b",
+      "sha256": "436a4c39ea4b14f9b467ae892a1e03ff6542f1f92c38c06750f9885183931ef2",
+      "assessedBy": "nova",
+      "assessedAtUTC": "2026-10-10T14:36:14.064970+00:00",
+      "status": "proposal",
+      "scope": "Hon Dolo identity and visible character-detail mapping; garment design excluded",
+      "likenessRating": 3,
+      "confidence": "low",
+      "summary": "The hair and profile broadly fit Dolo, but the visible cheek appears to lack the required lettering. That agrees with the existing user fix note and prevents a high-confidence match.",
+      "observations": [
+        {
+          "feature": "Face and hair",
+          "finding": "Dark curls and stubble give a plausible Dolo profile.",
+          "visibility": "visible",
+          "severity": "none"
+        },
+        {
+          "feature": "Visible cheek",
+          "finding": "The visible cheek appears unmarked; the required eye lettering is not evident. Confirm in a closer view before a precision repair.",
+          "visibility": "partial",
+          "severity": "material"
+        },
+        {
+          "feature": "Neck blaster and opposite cheek",
+          "finding": "These are on the far/covered side in this view; absence here is not evidence that they are missing.",
+          "visibility": "not_visible",
+          "severity": "unknown"
+        },
+        {
+          "feature": "Dental details",
+          "finding": "Closed lips conceal the gold/silver layout.",
+          "visibility": "not_visible",
+          "severity": "unknown"
+        }
+      ],
+      "referenceAssets": [
+        {
+          "assetID": "HD-RETURN-6c8900223ee9",
+          "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae",
+          "role": "identity_and_hair"
+        },
+        {
+          "assetID": "HD-RETURN-9ace849985b4",
+          "sha256": "9ace849985b49dfec444a2171dc85854076e024352aaae8d1c8f53ef0a69daef",
+          "role": "cheek_lettering"
+        },
+        {
+          "assetID": "HD-RETURN-7b156019ddf8",
+          "sha256": "7b156019ddf8b854a68a3549c80aede545384ebc12a6d7403bb7b17075e11ebc",
+          "role": "chest_placement"
+        },
+        {
+          "assetID": "HD-RETURN-7fe77eadd174",
+          "sha256": "7fe77eadd174a629216f2c7b36748fd7e1aebaabeb4e6e2acb51df9d6e88bf94",
+          "role": "neck_placement"
+        },
+        {
+          "assetID": "HD-B-91ef00348229",
+          "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "role": "dental_mouth_only"
+        }
+      ]
+    },
+    {
+      "assetID": "HD-DROP-c6697a9754cb",
+      "sha256": "c6697a9754cb05f527120a09ae44105a9981375dc40716a2de9fa8cb955da6c4",
+      "assessedBy": "nova",
+      "assessedAtUTC": "2026-10-10T14:36:14.064970+00:00",
+      "status": "proposal",
+      "scope": "Hon Dolo identity and visible character-detail mapping; garment design excluded",
+      "likenessRating": null,
+      "confidence": "not assessable",
+      "summary": "The back view supports the selected wardrobe and curly-hair silhouette, but it does not expose enough identity features for a Dolo-mapping star score. The existing user 5/5 outfit score is preserved.",
+      "observations": [
+        {
+          "feature": "Hair silhouette",
+          "finding": "Dark curls are compatible with the character direction, but no accepted rear identity anchor is supplied.",
+          "visibility": "visible",
+          "severity": "unknown"
+        },
+        {
+          "feature": "Face, cheeks, dental details and neck/chest artwork",
+          "finding": "Face and defining front details are hidden by the rear view and clothing.",
+          "visibility": "not_visible",
+          "severity": "unknown"
+        },
+        {
+          "feature": "Wardrobe",
+          "finding": "The yellow suit is treated as selected. Garment appeal is outside this likeness assessment.",
+          "visibility": "visible",
+          "severity": "not scored"
+        }
+      ],
+      "referenceAssets": [
+        {
+          "assetID": "HD-RETURN-6c8900223ee9",
+          "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae",
+          "role": "identity_and_hair"
+        },
+        {
+          "assetID": "HD-RETURN-9ace849985b4",
+          "sha256": "9ace849985b49dfec444a2171dc85854076e024352aaae8d1c8f53ef0a69daef",
+          "role": "cheek_lettering"
+        },
+        {
+          "assetID": "HD-RETURN-7b156019ddf8",
+          "sha256": "7b156019ddf8b854a68a3549c80aede545384ebc12a6d7403bb7b17075e11ebc",
+          "role": "chest_placement"
+        },
+        {
+          "assetID": "HD-RETURN-7fe77eadd174",
+          "sha256": "7fe77eadd174a629216f2c7b36748fd7e1aebaabeb4e6e2acb51df9d6e88bf94",
+          "role": "neck_placement"
+        },
+        {
+          "assetID": "HD-B-91ef00348229",
+          "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "role": "dental_mouth_only"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "sourceImagesVisuallyInspected": true,
+    "actualFileHashesVerified": [
+      "HD-B-91ef00348229",
+      "HD-DROP-436a4c39ea4b",
+      "HD-DROP-44e53ee582fc",
+      "HD-DROP-6c2e98bd1125",
+      "HD-DROP-84bf85a0a2da",
+      "HD-DROP-c6697a9754cb",
+      "HD-RETURN-6c8900223ee9",
+      "HD-RETURN-7b156019ddf8",
+      "HD-RETURN-7fe77eadd174",
+      "HD-RETURN-9ace849985b4"
+    ],
+    "canonicalReviewSHA256Before": "facf0850bc85312b7651f7380b408789034486a0e094530fd75acf21a091b359",
+    "originalImagesEdited": 0,
+    "userDecisionsEdited": 0
+  }
+}
