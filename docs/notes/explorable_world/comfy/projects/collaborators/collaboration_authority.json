@@ -20,5 +20,43 @@
     "name": "Grok Chief of Staff",
     "url": "https://grok.com/bot/a4a75c63-1565-4448-84a2-f519f40bea15"
   },
-  "firstPreparedMessage": "docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/001_head_library_correction.txt"
+  "firstPreparedMessage": "docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/001_head_library_correction.txt",
+  "repositoryStewardship": {
+    "recordedAtUTC": "2026-10-10T04:49:14Z",
+    "source": "Direct user instruction in the CFA Codex conversation on October 10, 2026",
+    "sourceStatement": "Claude in the collaboration process should be the one that owns the pan handler repo.",
+    "cfa": {
+      "repository": "CFA",
+      "leadMailboxId": "nova",
+      "role": "CFA coordination, canonical production evidence and methodology"
+    },
+    "panHandlers": {
+      "repository": "Pan_Handlers",
+      "leadMailboxId": "claude",
+      "role": "Master Repo steward and current repository lead, including Pathfinder teaching integration"
+    },
+    "historicalRole": {
+      "mailboxId": "panhandler_nova",
+      "status": "Historical teaching collaborator; no second current Pan_Handlers repository lead is assigned"
+    },
+    "panHandlersOperationalRoutes": {
+      "outbound": "D:/Documents/Pan_Handlers/REPO-SYNC/MASTER_REPO_SYNC_OUT.md",
+      "inboundPending": "D:/Documents/Pan_Handlers/REPO-SYNC/SYNC_IN/pending/",
+      "processed": "D:/Documents/Pan_Handlers/REPO-SYNC/SYNC_IN/processed/",
+      "replyFilename": "YYYY-MM-DD_<who>_<topic>.md",
+      "existingProtocol": "Verbatim one-file relay by Ziggy; Claude ingests at an active session, appends a dated disposition and moves the file to processed."
+    },
+    "cfaComplement": "CFA mailbox recipient claude complements established REPO-SYNC for CFA introductions, status and artifact links; it does not replace the Pan_Handlers operational channel.",
+    "teachingArtifactRoutes": {
+      "intake": "Pan_Handlers/Help/CFA_TUTORIAL_LEDGER.md",
+      "adoptionReturn": "Pan_Handlers/Help/CFA_FEEDBACK.md"
+    },
+    "scopeLimits": [
+      "This records repository stewardship and routing, not a new research or production assignment.",
+      "No task, provider job or paused Circle work is started by this decision.",
+      "Posted files do not wake an app or establish delivery, acknowledgement or automatic synchronization.",
+      "Ziggy remains authority for creative intent, acceptance, spending and public release.",
+      "Claude-authored introductions and historical source files remain unchanged."
+    ]
+  }
 }

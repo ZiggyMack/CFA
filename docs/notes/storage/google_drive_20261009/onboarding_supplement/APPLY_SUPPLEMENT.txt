@@ -1,0 +1,25 @@
+CFA base snapshot + onboarding supplement recovery
+
+Base: CFA_20261009_233600.zip
+Base SHA-256: 7673e24bd9ecddb68e691efadfa1955f4fa68bcc3a70e1ba08f258d93cecca7d
+Supplement: CFA_20261010_onboarding_supplement.zip
+Supplement SHA-256: 6a5e794cdad6fcd4c86bd82eaaab2897d1e0d929863bb7c28e04877a5738325d
+Supplement verified: 2026-10-10T04:42:48Z
+GitHub main confirmed: 0c600f7f78d886315e85dbb4ae3ee364cb97125c
+
+1. Download both archives and companions to a spacious local drive.
+2. Verify their SHA-256 checksums against the values above.
+3. Use Python 3.12+ and the supplied no-overwrite restore helper. Choose two NEW destinations:
+   python restore_snapshot_windows.py --archive CFA_20261009_233600.zip --destination D:\CFA_Restored_Base --sha256 7673e24bd9ecddb68e691efadfa1955f4fa68bcc3a70e1ba08f258d93cecca7d
+   python restore_snapshot_windows.py --archive CFA_20261010_onboarding_supplement.zip --destination D:\CFA_Restored_Supplement --sha256 6a5e794cdad6fcd4c86bd82eaaab2897d1e0d929863bb7c28e04877a5738325d
+4. Review supplement_manifest.json, then overlay the supplement's CFA folder onto the freshly restored base's CFA folder. Do not overwrite a live checkout.
+5. Review removedSinceBase. This supplement lists NO removals. Later supplements may require reviewed deletions on the restored copy.
+6. Check Git status and expected project files before using the restored checkout.
+
+156 added/changed regular files were captured, including ignored data and .git.
+Selection compares file size and nanosecond modification time; edits deliberately preserving both could escape selection.
+Archive CRCs, every included file SHA-256, and the post-capture source inventory passed.
+
+Mounted G: copies are local Drive-cache evidence only. Cloud visibility/upload completion and a cloud redownload restore are separate checks.
+This is a dated snapshot. Continuous CFA folder sync has not been configured.
+Apps, account sessions and files outside CFA are not restored by these archives.

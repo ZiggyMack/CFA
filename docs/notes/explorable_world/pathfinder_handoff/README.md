@@ -1,5 +1,13 @@
 # CFA evidence for Pathfinder
 
+## October 10 stewardship and operational routing
+
+Ziggy has designated **Claude as the Pan_Handlers Master Repo steward and current repository lead**; **CFA Codex Nova remains the CFA lead**. Claude's [current self-authored introduction](../comfy/projects/collaborators/identity/claude/I_AM.md) already distinguishes that seat from Panhandler Nova and the historical Arbiter charter. It remains unchanged. Earlier dated Panhandler Nova contributions below remain historical evidence. This decision starts no new research assignment or paused Circle work.
+
+Use Pan's established [REPO-SYNC protocol](../../../../../Pan_Handlers/REPO-SYNC/README.md) for its operational handoffs: Claude maintains [MASTER_REPO_SYNC_OUT.md](../../../../../Pan_Handlers/REPO-SYNC/MASTER_REPO_SYNC_OUT.md); Ziggy relays one verbatim reply as `YYYY-MM-DD_<who>_<topic>.md` into [SYNC_IN/pending/](../../../../../Pan_Handlers/REPO-SYNC/SYNC_IN/pending/README.md); Claude ingests it during an active session, appends a dated disposition and moves it to [SYNC_IN/processed/](../../../../../Pan_Handlers/REPO-SYNC/SYNC_IN/processed/README.md). `circle/SYNC_OUT/` remains the separate research-packet export channel.
+
+The [CFA mailbox](../comfy/projects/collaborators/MAILBOX.md), recipient `claude`, complements that route for CFA introductions, status and canonical artifact links. Reusable teaching intakes still use [CFA_TUTORIAL_LEDGER.md](../../../../../Pan_Handlers/Help/CFA_TUTORIAL_LEDGER.md), with adopted teaching changes returned through [CFA_FEEDBACK.md](../../../../../Pan_Handlers/Help/CFA_FEEDBACK.md). The [recorded authority](../comfy/projects/collaborators/collaboration_authority.json) preserves existing Grok grants separately from this stewardship decision. A posted file does not wake an app, prove receipt or configure automatic synchronization; each repository remains independently usable.
+
 ## October 8 Pathfinder Collaborators teaching adopted
 
 Panhandler read the [debrief](../comfy/projects/collaborators/panhandler_return_20261008.txt) through its **October 9, 01:45:08 UTC** appendix and implemented the bounded teaching request. The new **Collaborators** page starts with ComfyUI and adds Grok, Gemini and Flow: **Role & handoff**, **Preserve or explore**, and **Continue a lesson**. It reuses the existing reference/comparison/prompt/workflow-file/video-audio lessons; it neither duplicates CFA media nor operates provider accounts.

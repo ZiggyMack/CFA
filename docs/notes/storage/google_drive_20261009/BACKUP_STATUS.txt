@@ -41,13 +41,31 @@ that the archive finished uploading. Mounted-copy, server-upload and cloud
 restore evidence will be recorded separately.
 
 POST-SNAPSHOT WORK
-Gemini's and Kimi's introductions, the finished informant catalog, and final
-status notes were saved after the base snapshot. The supplemental capture is
-staged separately at D:\CFA_Backup_Staging\CFA_20261010_onboarding_supplement
-and targets My Drive/CFA_Backups/CFA_20261010_onboarding_supplement. Read its
-supplement_verification.json and mounted_transfer_receipt.json for completion
-evidence and exact cutoff; this note records the plan before capture. None of
-these newer records should be assumed to be inside the immutable base archive.
+The first supplement passed verification at 2026-10-10T04:42:48Z: 156 files,
+10,035,519 archive bytes, SHA-256
+6a5e794cdad6fcd4c86bd82eaaab2897d1e0d929863bb7c28e04877a5738325d.
+It contains Gemini's and Kimi's introductions, the finished informant catalog,
+status notes and Git history through remotely confirmed commit
+0c600f7f78d886315e85dbb4ae3ee364cb97125c. No files were removed since the base.
+Its mounted Drive copies passed SHA-256 comparison at 04:44:02Z. Stage:
+D:\CFA_Backup_Staging\CFA_20261010_onboarding_supplement; target:
+My Drive/CFA_Backups/CFA_20261010_onboarding_supplement.
+Kimi's and Gemini's canonical introductions were locally restored from that
+supplement at 04:53:59Z; both SHA-256 values match their original source files.
+The tracked onboarding_supplement receipts record these verification checks.
+The browser and native Drive UI timed out during the later cloud checks,
+including another browser reconnect at approximately 05:21 UTC;
+server upload of either archive remains unconfirmed. See the supplement's
+verification and mounted transfer receipts, and APPLY_SUPPLEMENT.txt.
+
+Claude's restored Pan_Handlers stewardship, his verified inbox posting,
+the selected shared pilot and the visual-library reference improvements
+were requested after that cutoff. A second supplement is planned at
+D:\CFA_Backup_Staging\CFA_20261010_coordination_supplement, compared directly
+with the same base. Its external receipts are authoritative for completion;
+this note precedes that capture. The second supplement can supersede the
+first when restoring this base. None of these newer records are inside the
+immutable 233600 base archive. Ongoing folder synchronization is not set up.
 
 EARLIER INCOMPLETE ATTEMPTS
 CFA_20261009_220848: interrupted per-file copy; partial folder preserved.
