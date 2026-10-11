@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "state": "bounded_second_provider_return_pending_source_listening",
+  "source_sha256": "d2283a49caf57d35f01eedf6f26036609c7c51e93dd0771edbf3a37948915532",
+  "checked_by": null,
+  "checked_at_utc": null,
+  "method": null,
+  "allowed_for_shot_timing": false,
+  "allowed_for_mouth_matching": false,
+  "landmarks": [
+    {
+      "id": "S01_start",
+      "kind": "section_start",
+      "section_id": "S01",
+      "reported_seconds": 0.0,
+      "verified_seconds": null,
+      "state": "reported_not_listening_verified",
+      "reported_source": "ai_studio_return_02.json"
+    },
+    {
+      "id": "S02_start",
+      "kind": "section_start",
+      "section_id": "S02",
+      "reported_seconds": 19.4,
+      "verified_seconds": null,
+      "state": "reported_not_listening_verified",
+      "reported_source": "ai_studio_return_02.json"
+    },
+    {
+      "id": "S03_start",
+      "kind": "section_start",
+      "section_id": "S03",
+      "reported_seconds": 56.0,
+      "verified_seconds": null,
+      "state": "reported_not_listening_verified",
+      "reported_source": "ai_studio_return_02.json"
+    },
+    {
+      "id": "S04_start",
+      "kind": "section_start",
+      "section_id": "S04",
+      "reported_seconds": 71.75,
+      "verified_seconds": null,
+      "state": "reported_not_listening_verified",
+      "reported_source": "ai_studio_return_02.json"
+    },
+    {
+      "id": "S05_start",
+      "kind": "section_start",
+      "section_id": "S05",
+      "reported_seconds": 103.05,
+      "verified_seconds": null,
+      "state": "reported_not_listening_verified",
+      "reported_source": "ai_studio_return_02.json"
+    },
+    {
+      "id": "S06_start",
+      "kind": "section_start",
+      "section_id": "S06",
+      "reported_seconds": 110.15,
+      "verified_seconds": null,
+      "state": "reported_not_listening_verified",
+      "reported_source": "ai_studio_return_02.json"
+    },
+    {
+      "id": "S07_start",
+      "kind": "section_start",
+      "section_id": "S07",
+      "reported_seconds": 124.75,
+      "verified_seconds": null,
+      "state": "reported_not_listening_verified",
+      "reported_source": "ai_studio_return_02.json"
+    },
+    {
+      "id": "S08_start",
+      "kind": "section_start",
+      "section_id": "S08",
+      "reported_seconds": 150.4,
+      "verified_seconds": null,
+      "state": "reported_not_listening_verified",
+      "reported_source": "ai_studio_return_02.json"
+    },
+    {
+      "id": "S09_start",
+      "kind": "section_start",
+      "section_id": "S09",
+      "reported_seconds": 157.85,
+      "verified_seconds": null,
+      "state": "reported_not_listening_verified",
+      "reported_source": "ai_studio_return_02.json"
+    },
+    {
+      "id": "S10_start",
+      "kind": "section_start",
+      "section_id": "S10",
+      "reported_seconds": 172.45,
+      "verified_seconds": null,
+      "state": "reported_not_listening_verified",
+      "reported_source": "ai_studio_return_02.json"
+    },
+    {
+      "id": "S11_start",
+      "kind": "section_start",
+      "section_id": "S11",
+      "reported_seconds": 200.45,
+      "verified_seconds": null,
+      "state": "reported_not_listening_verified",
+      "reported_source": "ai_studio_return_02.json"
+    },
+    {
+      "id": "S12_start",
+      "kind": "section_start",
+      "section_id": "S12",
+      "reported_seconds": 214.9,
+      "verified_seconds": null,
+      "state": "reported_not_listening_verified",
+      "reported_source": "ai_studio_return_02.json"
+    },
+    {
+      "id": "S07_dont_start_stop",
+      "kind": "accompaniment_stop",
+      "section_id": "S07",
+      "reported_seconds": 133.45,
+      "verified_seconds": null,
+      "state": "reported_not_listening_verified",
+      "reported_source": "ai_studio_return_02.json",
+      "reported_end_seconds": 134.75
+    },
+    {
+      "id": "S05_punch_it",
+      "kind": "vocal_hit",
+      "section_id": "S05",
+      "reported_seconds": 108.8,
+      "verified_seconds": null,
+      "state": "reported_not_listening_verified",
+      "reported_source": "ai_studio_return_02.json"
+    },
+    {
+      "id": "S08_punch_it",
+      "kind": "vocal_hit",
+      "section_id": "S08",
+      "reported_seconds": 156.4,
+      "verified_seconds": null,
+      "state": "reported_not_listening_verified",
+      "reported_source": "ai_studio_return_02.json"
+    }
+  ],
+  "additional_checks": [
+    "first and last lead syllable of every selected mouth-matching phrase",
+    "overlapping doubles, echoes and ad-libs in each selected phrase",
+    "audible discrepancies versus TXT and embedded lyric tags",
+    "audio end and unvoiced tail",
+    "native timebase without frame-grid rounding"
+  ],
+  "acceptance_note": "Check all section starts and musical landmarks against this exact recording. A checked landmark does not validate every word; each selected performance phrase needs its own listening check.",
+  "provider_run_record_path": "execution_record.json",
+  "rejected_return_audit_path": "return_01_audit.json",
+  "provisional_anchor_map_path": "provisional_anchor_map.json"
+}

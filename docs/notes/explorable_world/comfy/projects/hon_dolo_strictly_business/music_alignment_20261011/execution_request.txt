@@ -1,0 +1,147 @@
+Analyze only the attached final Hon_DoLo.mp3 and Hon_DoLo.txt. This is timing and vocal-lane analysis of an existing recording, not a rewrite or generation request. Use the recording's own zero-based timebase. Do not reuse timestamps from an earlier song or the prior video in this conversation.
+
+The exact fully decoded duration is 232.760 seconds at 48 kHz stereo. Preserve the TXT wording, repeated headings, explicit words and punctuation. Sections in order are S01 through S12, including both Verse 2 and Bridge occurrences. Use one-based TXT line numbers. A line may contain a main phrase plus repeated tails: give them separate events rather than a single label. Embedded MP3 lyric tags differ from the supplied TXT; neither tags nor TXT prove which words are actually audible.
+
+First confirm audio access: describe one audible arrangement or delivery detail in the FIRST bridge that the written lyrics alone do not establish, with an approximate timestamp. If you cannot access/hear the recording, stop and report that limitation. Do not infer an audible fact from text.
+
+Then return:
+1. S01-S12 section start/end times in seconds, confidence and audible boundary cues. Include intro, outro and any instrumental tail. Unknown values must be null.
+2. Every nonblank lyric line: section, original TXT line number, unchanged source text, audible text if different, start/end and uncertainty. Give word-level intervals where resolvable, especially BOTH "punch it" hits and S07 "Man, don't start". Do not manufacture word precision.
+3. Separate vocal events: LEAD (main delivery), DOUBLE (near-unison second delivery), ECHO (delayed repeated main words), AD_LIB (independent interjection/tail), UNKNOWN. Multiple events may overlap. Give each event's start/end, exact audible words, confidence, source-line reference and overlap notes. Extra audible words absent from TXT belong in a separate list. Labeling the stereo mix does not isolate a lead stem.
+4. Investigate the accompaniment stop after "Man, don't start": does it occur in THIS version? Give start/end/duration and distinguish drum/instrument silence from residual vocals/reverb. If absent, say absent. Do not assume it exists because a storyboard proposed it.
+5. Locate both "punch it" passages (S05 and S08). Report BPM with evidence and any double-time/half-time ambiguity. Identify significant rests after punchlines only if audible. If BPM is uncertain, report seconds and leave beat counts unknown.
+6. Mark masked, ambiguous or text/audio-mismatched material. List the timestamps most in need of listening verification.
+
+Return a concise summary plus machine-readable JSON or CSV tables. These are provisional reports pending source-audio spot-checks. No interval becomes accepted for shot cuts or lip sync because a model reported it. Do not paraphrase lyrics, invent events, apply constant offsets to old timings, or claim stem separation.
+
+
+The uploaded audio card was automatically titled "Generated Audio October 11, 2026 - 2:34PM.mp3" by this UI; its local selected source was Hon_DoLo.mp3, SHA-256 d2283a49caf57d35f01eedf6f26036609c7c51e93dd0771edbf3a37948915532. Do not treat that UI title as newly generated audio. The TXT attachment was converted to inline text using this page’s Inline media control. The exact text below is Hon_DoLo.txt; count source line numbers from its first [Chorus] line.
+
+BEGIN EXACT Hon_DoLo.txt
+[Chorus]
+
+Strictly business. Count it twice.
+Fuel ain’t free, and neither am I.
+Pay me up front. You’re buying a ride.
+Saving the galaxy costs extra. Nice try.
+
+[Verse]
+Listen - My Bitch got money to spare. -She felling me 
+..but you got ta pay me to care, baby…pay me baby,
+Baby, I Owe big Nigg Gah’s money honey, part of the smuggle game - naga hunting, ducking - ducking, bounty hunt-ahhhs, Jabbah funding,  
+If it’s all the same - then Trust - trust, not safe ta play with my name, my name
+
+Scruffy? - that was a low blow  - If I’m being formal - it’s el capatain Solo - Solo …Han to the Dolo.. Dolo….
+And one thing i know though - the empire’s imperial GO GOs can suck a fat - oh no…
+
+Oh no hoe, …..This junky ship - fastest in the galaxy!
+This junky ship? Dustin Fleet’s, they can’t catch me! My my my Junky ship, Made Kessel - that set me free!
+Beat the Maw,  less than twelve-par! Twelve-Par!
+
+[Chorus]
+Strictly business. Count it twice.
+Fuel ain’t free, and neither am I.
+Got my money. Had my out.
+So why’d I turn this ship around?
+
+[Verse 2]
+Lay Ah, Lay ah, ! This is my junky home, my home, this my everything! I won’t tell  you a gain!, respect! Respect, put some on my name, on my name - So CHECK IT!
+
+Captain Falcon - proud Scoundrel - light skipping, stop trippin - feel that speed, that speed!
+You Got my cut? This ain’t fucking charity!
+I do this for money, and some depravity,
+Chewbacka, status report - on the Gravity, gravity.
+Start flipping switches, this bitch, got me twisted, I’m itching, I’ll show her what’s missing - our mission’s not slipping, HER mission’s our mission! I’m hitting ignition
+
+I will protect you princess…
+Just Dont forget my fee -and Chewy, Chewy - 
+drop that beat..that beat
+
+[Bridge]
+
+Strap in mother fucka,  Line us up, coordinates locked, peddle to the mettle, thrusters hot, hot… hot…hot…punch it - hang on to your butt!
+
+[Chorus]
+Strictly business. Count it twice.
+Fuel ain’t free, and neither am I.
+Got my money. Had my out.
+So why’d I turn this ship around?
+
+[Verse 2]
+Got my cut.
+Crates in the back.
+Told the kid, “Good luck.”
+I ain’t comin’ back.
+
+Chewie givin’ me that look.
+Man, don’t start.
+We ain’t gettin’ paid
+To grow a fuckin’ heart.
+
+Kid out there.
+Whole fleet on his ass.
+I got a clean way out.
+Still ain’t hit the gas.
+
+Fuck it.
+Chewie, swing her back.
+No - extra - charge. 
+Don’t get used to that. Use to that
+
+[Bridge]
+Strap in mother fucka,  Line us up, coordinates locked, peddle to the mettle, thrusters hot, hot… hot…hot…punch it - hang on to your butt!
+
+[Chorus]
+Strictly business. Count it twice.
+Fuel ain’t free, and neither am I.
+Got my money. Had my out.
+So why’d I turn this ship around?
+
+[Verse 3]
+Playing the Hero? Playing the Hero?
+Shoulda red the fine print.
+Dinner date with Darth Vader? —
+I ain’t order this shit.
+
+I Tried to be her knight In that shinin’ armor.
+So Vader put me on ICE!
+Now I’m her Carbon Knight.
+I guess I got the title right …. got the title right.. night night…
+
+Chewie, keep her safe, 
+don’t leave her alone
+She can talk all that shit.
+Just make sure she gets home.
+
+She ain’t ask what I’m worth.
+She ain’t ask what I owe.
+She said, “I love you.”
+
+I know…. I know.
+
+[Final Chorus]
+Strictly business. Count it twice.
+Fuel ain’t free. Still paid that price.
+Got my money. Had my out.
+Still turned this motherfucker around.
+
+[Outro]
+I know.
+I know
+
+….
+LISAN AL Gaib on the mic
+…..
+I know
+…..
+Voice from the outer world ,…
+…
+I know…
+…
+
+Shout out to Panhandlers!
+…
+I know….
+I know…
+
+END EXACT Hon_DoLo.txt

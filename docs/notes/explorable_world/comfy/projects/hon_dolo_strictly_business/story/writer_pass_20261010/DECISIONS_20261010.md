@@ -59,4 +59,28 @@ My recommendation, for Ziggy to accept or reject, not a decision:
 
 Nothing in this section changes a file or a plan. It is here so the next session knows the question exists.
 
+## 7. Answers of October 11, 2026 (afternoon, America/New_York)
+
+Recorded from Ziggy's direct replies in the session after the Prime handoff and the S10 card were posted (mailbox message `00181b08`).
+
+| # | Question | Answer | Effect |
+| --- | --- | --- | --- |
+| 1 | The weave (section 2): Leia across the counter in S01, the informant as the cab passenger and the tip | **Yes, confirmed** | The "pending the weave" flags in `WRITER_PASS_001.md`, `STORYBOARD_UPDATE_20261011.md` (S01 and S03 rows) and the S10 card are resolved in Ziggy's favor of the weave as written. Those posted files keep their hashes; this row is the record. Creative-read update for CFA Nova: S01's implied offscreen customer is Leia; the S03 glance lands on her across the counter. |
+| 2 | Which Vader for S10: the slim concept or Thick Vader | Asked for a reminder of what Thick Vader was, then (with a screenshot of the visual library's "General · armored enforcer" collection): "this was supposed to be our reference for Vader" | **Vader reference for S10 = the armored enforcer collection** (`visual_library` album `cast-enforcer`, cover `HD-DROP-0d83180f0903` REF-dark-armor-source.jpg, chosen by Ziggy on October 9; views DA-01 chest-up `HD-DROP-4ff15b1f8f92`, DA-02 front `HD-DROP-469199cbe042`, DA-03 left `HD-DROP-b84bbc42c40a`, DA-04 right `HD-DROP-241ba78d80a8`, DA-05 back `HD-DROP-442a8f8b3e86`, DA-SHEET `HD-DROP-7e646fdc9c36`; VADER-ARMOR-01 sits in the same character's earlier studies per the October 9 cast review). Creative-read update for CFA Nova: the cast map's VADER-GENERAL entry should point at this set; the "not assigned to any Vader" intake notes are superseded by Ziggy's statement. Whether this is also what "Thick Vader" meant is still his to say. |
+| 3 | Who runs the AI Studio rescoring request | **Nova runs it**; Ziggy will work with her if questions come up | The request text in `PRIME_HANDOFF_20261011.md` section 5 is hers to send, adapt or replace; results go through her intake and spot-check before any card carries a time. |
+| 4 | Card order after S10 | Asked to see the cards again; **pending** | The card list is in the session reply; order stays TBD until he picks. |
+
+**Thick Vader, as the record has it (for question 2):** the Gemini cast map reserves the ID `VADER-THICK`, "Thick Vader", as a *user-named Vader variant; details pending*, with no reference image and three open slots: TV-IDENTITY-01 (helmet/face treatment), TV-BODY-01 (intended proportions) and TV-COSTUME-01. Its note: do not invent what "Thick" means or substitute VADER-ARMOR-01 automatically. VADER-ARMOR-01 (`VADER-EXP-01-black-armor.jpg`) is the slim, narrow-mask armor concept and is explicitly *not* evidence for Thick Vader body proportions. The October 7 drop also holds "armored enforcer" concept candidates that were never assigned to Vader or Thick Vader. The Gemini project instructions list Thick Vader among the identities to keep distinct. Nothing in CFA says what Thick Vader looks like beyond the name; that definition is Ziggy's to give.
+
+## 8. Relayed direction, October 11, 2026 (about 18:56 UTC)
+
+Relayed by CFA Nova (mailbox `72194db2`, coordinator summary) from Ziggy's live call through Personal Assistant Nova. Recorded as relayed intent; Ziggy can correct any line of it directly in the session.
+
+- Keep developing imaginative storyboard shots. The target is astonishing photoreal performance. Ziggy plans to supply selected actual movie clips where useful; none is supplied or selected yet. The shot descriptions help him recall suitable clips; he identifies the choices.
+- **Source stays TBD per shot**: supplied footage, existing asset, generated or animated, transformed material, or a mix. Do not assume all flight is real footage or all performance is generated. The light-skipping / "Solo reboot" attribution is unverified until the actual clip arrives.
+- **Initial production starts at the beginning and proceeds forward**, subject to timing and approval gates. Later source decisions do not pause the writing.
+- No new downloads, sourcing, processing, generation or timing approval. Claude owns writing; Nova owns technical intake and alignment. A per-item source selector in the step-through app is an idea for evaluation, not an implementation instruction.
+
+**Writer consequence, as clarified by Nova at about 19:05 UTC.** "Start at the beginning" concerns the initial *production* order (S01, the opening chorus, with the proposed cab prologue before the song), not the card queue; it is awareness, not an assignment. The card order after S10 therefore stays with Ziggy, as in section 7. I wrote `SCENE_CARD_S02.md` next on my own judgment under the standing brief: the first verse is the section where the per-shot source question (supplied footage, asset, generated, transformed, mix) matters most, so it is the most useful card for Ziggy to match clips against. Each card from here carries a **Source** line per shot reading "TBD" with the kinds the shot could plausibly take; that line is a prompt for his recall, not a sourcing decision, and the relay adds no shot timing, generation approval or source decision.
+
 — Claude

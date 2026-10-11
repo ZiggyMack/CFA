@@ -4,11 +4,11 @@
 
 This is the first Comfy music-video project: **Hon Dolo - Strictly Business**. The supplied lyrics establish the working song text. Ziggy has clarified the central irony: the supposedly immoral, greedy smuggler ends up sacrificing himself for love. That authorial direction governs the proposed visual story below. The creative direction remains lifelike trap-rap, with Hon Dolo leading and Chewbacca serving as MC, DJ and copilot.
 
-**October 7 working source:** use the newly supplied **DoLoSoLo_0 (Remastered).mp3** for the next alignment pass. The latest pasted lyrics preserve the earlier wording, but the recording has changed. The older section times below remain historical planning evidence and must be realigned before cutting shots or preparing lip-sync audio.
+**October 11 final Prime:** use [Hon_DoLo.mp3](Hon_DoLo.mp3), the user-selected trap/radio cut, for every new timing pass. It fully decodes to **232.760 seconds (3:52.760)** at 48 kHz stereo. [Hon_DoLo.txt](Hon_DoLo.txt) is logical lyric master **v003**, preserved byte for byte. All current section and shot times are unset pending fresh listening alignment; old recordings and timecodes remain dated evidence. The [listening handoff](music_alignment_20261011/START_HERE.txt) separates lead vocals, doubles, echoes and ad-libs and requires source-audio checks before mouth matching.
 
 ## Song source and planning files
 
-**October 7 drop received and sorted:** open the [new Grok review library](asset_review_20261007/index.html) or [Gemini video browser](gemini_review_20261007/index.html). The 34 supplied ZIPs yield 293 unique images and 68 document/helper files; original archives remain untouched. The 36 actual storyboard panels have a [visual storyboard](asset_review_20261007/storyboard.html) to our 21 draft cards. Grok's 4:30 timeline exceeds the current song by 35.040 seconds and places some lyric beats differently, so neither it nor our historical timings is ready for cutting. Storyboard faces and tattoos drift; use panels for composition rather than identity. The previously absent consolidation JSON is now received; missing numbered originals and the #277 crop ambiguity remain recorded.
+**October 7 drop received and sorted:** open the [new Grok review library](asset_review_20261007/index.html) or [Gemini video browser](gemini_review_20261007/index.html). The 34 supplied ZIPs yield 293 unique images and 68 document/helper files; original archives remain untouched. The 36 actual storyboard panels have a [visual storyboard](asset_review_20261007/storyboard.html) to our 21 draft cards. Grok's 4:30 timeline exceeds the October 7 song by 35.040 seconds (and the final Prime by 37.240 seconds) and places some lyric beats differently, so neither it nor our historical timings is ready for cutting. Storyboard faces and tattoos drift; use panels for composition rather than identity. The previously absent consolidation JSON is now received; missing numbered originals and the #277 crop ambiguity remain recorded.
 
 **Gemini material:** 25 MP4s and one GIF are inventoried, fully decoded and reviewed through sampled frames. This is 22 new assets beyond the four earlier clips. Twenty-four review copies are provisionally associated with Hon Dolo; two desert/hooded clips remain unassigned in the shared project inbox. No new approval or audible synchronization review is implied by sorting.
 
@@ -19,12 +19,18 @@ This is the first Comfy music-video project: **Hon Dolo - Strictly Business**. T
 - [Gemini creative instructions](../../casting/gemini_project_instructions.txt) provide six project-scoped entries for Ziggy to save, including reference roles, story direction, editable footage, audio handoff and attachment mapping. No account settings were changed.
 
 - [Soundtrack replacement and lip-sync guide](../../workflows/hon_dolo_audio_replace_v001.README.md) links the completed ten-second soundtrack proof, saved and server-converted native Cloud audio-swap editor and separate unexecuted Sync candidate. Opening song excerpts are technical tests, not accepted lyric/shot alignment.
-- [Latest supplied lyrics](lyrics.user.v002.txt) preserve the October 7 paste separately. Comparison with the October 4 text finds the same words after removing the title and normalizing whitespace; this does not verify the words actually sung in the new recording.
+- [Historical October 7 lyrics](lyrics.user.v002.txt) preserve that paste separately. Comparison with the October 4 text finds the same words after removing the title and normalizing whitespace; this does not verify the words actually sung in the new recording.
 - [Original lyrics](lyrics.user.v001.txt) preserve the October 4, 2026 user text, including spelling, phonetic delivery cues, explicit language, repeated headings and outro. No lyric corrections or section renumbering were made. UTF-8 file SHA-256: `6b87662275e6547f9e16c3655221651b9b0a170789b3058be5d8273bd4bc8cab`.
-- [Shot plan](shot_plan.json) maps all 12 sections to 21 proposed shot cards, with source line ranges, visual prompt drafts and reference roles. It now identifies the October 7 working audio and retains the old subtitle-based section times as historical values awaiting realignment. Individual shot cuts remain unset. These are ideas to expand or combine after listening review, not a final shot count or an executable Comfy graph.
+- [Shot plan](shot_plan.json) maps all 12 sections to 21 proposed shot cards, with source line ranges, visual prompt drafts and reference roles. It now identifies the October 11 final Prime and its exact 12-section TXT line map. Old subtitle-based times live only in explicitly historical records; current timing fields are null. Individual shot cuts remain unset. These are ideas to expand or combine after listening review, not a final shot count or an executable Comfy graph.
 - [Production workflow plan](../../workflows/HON_DOLO_PRODUCTION_PLAN.md) contains the reusable routes and their evidence. [Casting brief](../../casting/casting_brief.txt) keeps Hon Dolo's 12-option exploration open and records the supporting cast.
 
 ## Received recordings and provisional timing
+
+**October 11 Prime intake:** the [technical audit](music_intake_20261011.json) records 11,172,480 native-rate stereo sample frames, a clean full decode and unchanged source bytes. Prime is 2.200 seconds shorter than October 7 and 0.720 seconds shorter than October 4; sampled waveform comparisons do not support transferring old timing. The [v002-to-Prime text diff](music_intake_20261011/lyric_diff.v002_to_prime.json) identifies changes in S02, S04, S05, S08 and S10. Both bridges now contain “punch it”; the old 88/light-speed line is absent.
+
+The MP3's embedded lyric metadata also [differs from the supplied TXT](music_intake_20261011/lyric_diff.prime_metadata_to_supplied.json): it repeats an Outro header and an “I know” pair. Whether that extra pair is audible is unverified. Keep the TXT as the author's source and record audible discrepancies separately. BPM, section/word times, vocal lanes and the proposed S07 accompaniment stop are unknown until the listening pass. The [empty alignment template](music_alignment_20261011/timed_lyrics.template.json) is scaffolding, not a provider result.
+
+Claude's [Prime handoff](story/writer_pass_20261010/PRIME_HANDOFF_20261011.md), [storyboard update](story/writer_pass_20261010/STORYBOARD_UPDATE_20261011.md) and [S10 card](story/writer_pass_20261010/SCENE_CARD_S10.md) are preserved writer proposals. Their creative choices do not establish accepted timecodes or generation authorization.
 
 **October 7 music intake:** the new [MP3](<../../references/Music/DoLoSoLo_0 (Remastered).mp3>) fully decodes to **234.960 seconds (3:54.960)** at 48 kHz stereo, **1.480 seconds longer** than the October 4 MP3. The new [MP4](<../../references/Music/DoLoSoLo_0 (Remastered).mp4>) contains an actual H.264 video stream, 824 × 1464 at 10 fps with 2,348 decoded frames, and AAC audio lasting 234.816 seconds. It has no extractable subtitle stream. The [October 7 music audit](music_intake_20261007.json) records unchanged originals, hashes, full decoding and sampled waveform comparisons. The two new files strongly correspond in the sampled audio windows, but the MP4 audio ends 0.144 seconds earlier. The new MP3 differs from the old audio; its embedded lyric text is nevertheless identical to the old MP3's lyric metadata. Neither those tags nor the unchanged pasted wording establishes audible lyric or timing identity. No listening verification or automatic timing shift is claimed.
 
@@ -56,7 +62,7 @@ Love, self-sacrifice and the irony of his greedy identity are confirmed directio
 
 The S numbers are planning IDs only. Both supplied sections labelled Verse 2 retain that label in the original.
 
-**Historical October 4 timing table:** times shown are the old recording's provisional embedded section-marker starts, not valid cuts for the October 7 working audio. That first marker was at 00:02.314, leaving 2.314 seconds for an intro in the old plan. Section ends and the old subtitle-overrun note remain in the shot plan for traceability; realign every section to the selected recording rather than applying a constant duration offset.
+**Historical October 4 timing table:** times shown are the old recording's provisional embedded section-marker starts, not valid cuts for the October 11 final Prime. That first marker was at 00:02.314, leaving 2.314 seconds for an intro in the old plan. Section ends and the old subtitle-overrun note remain in explicitly historical shot-plan fields and the before-Prime snapshot for traceability; realign every section to the selected recording rather than applying a constant duration offset.
 
 | Section | Surface story | First visual coverage |
 | --- | --- | --- |
@@ -64,7 +70,7 @@ The S numbers are planning IDs only. Both supplied sections labelled Verse 2 ret
 | S02 first verse (00:18.910) | Debts behind the boasting | Jabba expects payment; Boba watches the bay. Hon responds to the scruffy insult with exaggerated captainly dignity. Cut from cockpit boasting to a single readable ship evasion. |
 | S03 chorus (01:03.191) | The question first appears | Repeat the opening framing, but his attention drifts from payment toward the cockpit. Hint at reversal without spending the main turn yet. |
 | S04 first Verse 2 (01:16.835) | Love interrupts the transaction | Leia's skeptical reaction; Hon defends his battered ship. Chewie gets a clear DJ/fader shot. Hold the protection promise beside Hon's immediate insistence on a fee; let that contradiction land. |
-| S05 first bridge (01:50.027) | Ignition as swagger | Short launch inserts: restraint, control, thrusters. Each is a separate action/shot; the 88 reference can remain an optional joke. |
+| S05 first bridge (01:50.027) | Ignition as swagger | Short launch inserts: restraint, control, thrusters. Each is a separate action/shot; both final Prime bridges use “punch it”; the earlier 88 joke is retired. |
 | S06 chorus (01:59.601) | Chewie knows the excuse is wearing thin | Return to the performance motif, then let Chewie's held look challenge it. |
 | S07 second Verse 2 (02:14.441) | His actions break his own business rule | Cargo secured, payment collected, hand hovering over the throttle. Distress on a display. Then the decisive ship turn: no extra charge. It foreshadows the love-driven sacrifice rather than resolving the whole arc. |
 | S08 second bridge (02:29.202) | Same speed, changed purpose | Reprise the ignition images with committed movement as they return toward danger. |
@@ -96,7 +102,7 @@ This corrects the earlier plan's omission of the hosted 2K branch. Public source
 ## From lyrics to Comfy inputs
 
 1. Keep the supplied lyric text as the source; use planning IDs to distinguish repeated sections. Do not paste the full song into an image/video prompt and expect timing to follow.
-2. Review the received MP3 against the extracted subtitle timing and confirm the intended delivery mix. Obtain an isolated lead vocal if available. Align actual words, silences, ad-libs and section boundaries by listening, especially at the subtitle overrun. The embedded timings are a starting point, not completed lip-sync alignment.
+2. Review the exact final Prime MP3 and v003 TXT through the dated listening handoff. Obtain an isolated lead vocal if available. Align actual words, silences, doubles, echoes, ad-libs and section boundaries by listening. Spot-check the 12 section starts, both punch-it hits, the possible S07 accompaniment stop, the outro text discrepancy and each selected performance phrase. Historical embedded subtitles are not an alignment for Prime.
 3. Select a shot card and accepted character/setting references. Assign design, appearance, driving performance and audio roles separately. Replace the card's null paths and times only with actual inspected assets.
 4. Map that card to one verified saved or official template. For lip-sync, provide the matching recorded vocal excerpt; for an insert, use the visual brief and retain its intended edit time. Check compiled inputs, model support and cost before a bounded run. The JSON file itself has no execution route.
 5. Save source and output, actual prompt/settings, measured frame rate/duration and defects. Check tattoos, grill, eye line, hand contact and sync where relevant, then accept or revise the take.
@@ -108,3 +114,18 @@ The first song-specific proofs should be one clear Hon Dolo rap phrase, Chewie m
 ### Grill variants and hand options — October 9
 
 The [reference intake](reference_updates/grill_and_hand_20261009/INTAKE_NOTES.txt) links the unchanged four-gold external-off mouth set, the optional iced-on collection, and the Princess Leigh hearts/spades artwork options. The [head ledger](head_library_20261009/expected_intake.json) records paired coverage and the separate prop set. Artwork layout and final iced-anchor selection remain explicit review decisions.
+
+## AI Studio Prime listening pass — October 11
+
+User approval covered the unchanged final recording and lyrics in the existing
+“Visual Analysis of Lil Vader” conversation. The first pass executed, but its
+timing failed validation: 34 of 81 lyric intervals end after the 232.760s source,
+and repeated passages have conflicting seconds/mm:ss claims. No times were
+adopted. Lyric line references were correct; six omitted TXT lines are punctuation
+markers. A bounded correction returned12 section ranges and3 passages within the source duration; these remain provisional until source listening. The actual submissions, raw reports, audit and execution details are in
+[music_alignment_20261011](music_alignment_20261011/START_HERE.txt).
+
+The [listening checklist](music_alignment_20261011/listening_review.html) plays
+the exact local source and exports candidate cue notes. All production timing
+and mouth-matching gates remain pending. Claude's later creative decisions
+are recorded in his decisions file; they do not accept any timing interval.

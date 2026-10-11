@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "audited_at_utc": "2026-10-11T18:48:43.022401Z",
+  "auditor": "nova_with_read_only_intake_review",
+  "state": "rejected_for_timing",
+  "raw_return_path": "ai_studio_return_01.txt",
+  "raw_return_sha256": "8762bcf466d42619f781e86eb643f44122b067230b123790884c3bb41713cc58",
+  "audio_duration_seconds": 232.76,
+  "lyric_rows": 81,
+  "lyric_rows_ending_beyond_audio": 34,
+  "lyric_rows_starting_beyond_audio": 33,
+  "maximum_reported_lyric_end_seconds": 334.5,
+  "overrun_seconds": 101.74,
+  "word_intervals": 22,
+  "word_intervals_beyond_audio": 7,
+  "lyric_intervals_outside_reported_section": 29,
+  "line_reference_fidelity": {
+    "matched_section_line_pairs": 81,
+    "exact_source_texts": 80,
+    "remaining_difference": "L011 omits two trailing spaces; no line-number drift.",
+    "word_containing_lines_present": 81,
+    "omitted_punctuation_only_lines": [
+      112,
+      114,
+      116,
+      118,
+      120,
+      123
+    ],
+    "coordinator_correction": "The initial correction draft and browser status overstated line-number drift. This audit corrects that claim."
+  },
+  "vocal_lane_coverage": {
+    "events": 20,
+    "lines": 7,
+    "sections": 4,
+    "lead": 10,
+    "double": 1,
+    "echo": 4,
+    "ad_lib": 5,
+    "full_alignment": false
+  },
+  "defects": [
+    "S08 section crosses EOF; S09 is after EOF; S10 reverses from252.500 to200.450.",
+    "First bridge prose and JSON differ by40 seconds; second bridge by80; Panhandlers outro by120.",
+    "Man don't start ends133.40 in prose but175.40 in JSON.",
+    "1.30 seconds is not exactly two beats at65BPM; two beats would be1.846 seconds.",
+    "Apparently in-bound intervals have not been verified by listening and are not safe to adopt."
+  ],
+  "adopted_intervals": 0,
+  "allowed_for_shot_timing": false,
+  "allowed_for_mouth_matching": false,
+  "audible_claims_verified": false,
+  "next_step": "Fresh bounded audio check; unresolved anchors must stay null. Do not offset or rescale the failed report."
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-11T18:55:04.948503Z",
+  "destination": {
+    "surface": "Google AI Studio",
+    "conversation_title": "Visual Analysis of Lil Vader",
+    "url": "https://aistudio.google.com/prompts/1Oys2niEp9fADle8kUcI5LIeWx5jxbNLl",
+    "browser_tab_id": "11"
+  },
+  "approval": {
+    "state": "explicit_user_approval_received",
+    "specific_scope": "Unchanged final Hon_DoLo.mp3 and Hon_DoLo.txt to this existing conversation for timing/vocal-lane analysis.",
+    "evidence": "Approve upload and analysis; later user reiterated permission and approval."
+  },
+  "inputs": {
+    "Hon_DoLo.mp3": {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/Hon_DoLo.mp3",
+      "bytes": 5366974,
+      "sha256": "d2283a49caf57d35f01eedf6f26036609c7c51e93dd0771edbf3a37948915532"
+    },
+    "Hon_DoLo.txt": {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/Hon_DoLo.txt",
+      "bytes": 3746,
+      "sha256": "4d8f867b525ad8cc05d5a78a1ac129ed1a9f46acb288c0698c7646dc35af918b"
+    }
+  },
+  "upload": {
+    "audio": "Exact original MP3 selected; audio card appeared with automatic UI filename.",
+    "ui_audio_label": "Generated Audio October 11, 2026 - 2:34PM.mp3",
+    "label_note": "The page auto title does not mean a new recording was generated.",
+    "lyrics": "TXT attachment produced Failed to upload file to Drive; used its Inline media control and then exact original decoded text in the submitted prompt.",
+    "source_bytes_changed": false,
+    "copyright_notice": "Ordinary upload copyright acknowledgement accepted within the exact approved media intake."
+  },
+  "settings": {
+    "visible_model_name": "Gemini 3.8 Flash",
+    "visible_model_id": "gemini-3.8-flash",
+    "thinking_level": "Medium",
+    "api_key_selection": "No API key selected",
+    "structured_outputs": false,
+    "code_execution": false,
+    "function_calling": false,
+    "google_search": false,
+    "google_maps": false,
+    "url_context": false
+  },
+  "runs": [
+    {
+      "id": "01",
+      "state": "completed_return_rejected_for_timing",
+      "visible_model_turn_label": "Model •2:35 PM",
+      "request_path": "execution_request.txt",
+      "raw_return_path": "ai_studio_return_01.txt",
+      "audit_path": "return_01_audit.json",
+      "reported_response_runtime": "1m47.6s",
+      "raw_sha256": "8762bcf466d42619f781e86eb643f44122b067230b123790884c3bb41713cc58"
+    },
+    {
+      "id": "02",
+      "state": "completed_bounded_return_passes_basic_structure_pending_listening",
+      "visible_model_turn_label": "Model •2:49 PM",
+      "request_path": "correction_request_02.txt",
+      "raw_return_path": "ai_studio_return_02.json",
+      "raw_sha256": "684555b12c13aa0968b35dfe6eb1ad6172e153357eb17971d2667a94e02d9635",
+      "provisional_path": "provisional_anchor_map.json",
+      "scope": "12 section ranges and3 key passages; no complete line/vocal-lane map."
+    }
+  ],
+  "correction": {
+    "request_path": "correction_request_02.txt",
+    "state": "completed_return_pending_source_listening",
+    "ui_problem": "Run was temporarily aria-disabled; later the ordinary Run control worked. No bypass, reload, credential or model change.",
+    "user_help_requested": true,
+    "user_help_no_longer_needed": true
+  },
+  "accepted_audio_alignment": false,
+  "source_listening_by_nova": false,
+  "evidence": [
+    "evidence/ai_studio_submitted.jpg",
+    "evidence/claude_timing_hold.jpg",
+    "evidence/ai_studio_corrected_return.jpg"
+  ]
+}

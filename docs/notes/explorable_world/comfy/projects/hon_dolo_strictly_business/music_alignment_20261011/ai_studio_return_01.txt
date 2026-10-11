@@ -1,0 +1,924 @@
+Audio Access Confirmation
+
+Audible arrangement and delivery detail in the First Bridge (S05, ~01:43.10 – 01:50.15):
+At 01:43.10, the full drum groove cuts to a rising sequence driven by a high-passed, accelerating snare/percussion roll and rising pitch filter. On the repeated tail "hot, hot… hot…hot…", the lead vocal shifts from an aggressive double-time cadence to a staccato rhythmic chant.
+
+Crucially, on the phrase "punch it - hang on to your butt!" (approx. 01:48.85 – 01:50.10), all percussion and low-end synths abruptly mute into a dry micro-break (silence/drop), leaving the vocal dry and pitched down in a spoken deadpan cadence (referencing the iconic Samuel L. Jackson quote) before the heavy sub-bass and full beat drop simultaneously with the downbeat of Chorus 3 at 01:50.18.
+
+1. Section Boundaries (S01–S12)
+
+Timebase: 0.000 to 232.760 seconds (48 kHz stereo).
+
+Section ID	Name / Description	Start (s)	End (s)	Confidence	Audible Boundary Cues
+S01	[Chorus]	0.000	19.450	High	0.000 intro beat/filter open; lead vocals enter at 05.12; hard snare turnaround at 19.45.
+S02	[Verse]	19.450	55.950	High	Vocal cadence enters on downbeat with "Listen"; ends on trailing "Twelve-Par!" echo; 808 resets into chorus at 55.95.
+S03	[Chorus]	55.950	71.800	High	Full drum drop on "Strictly business"; ends on decaying vocal tail of "around?" at 71.80.
+S04	[Verse 2] (Occurrence 1)	71.800	143.050	High	Starts with ad-lib "Lay Ah, Lay ah"; ends with whispered "drop that beat.. that beat" over sub-bass swell at 143.05.
+S05	[Bridge] (Occurrence 1)	143.050	150.180	High	Fast riser and snare fill enter on "Strap in..."; dry vocal drop at 148.85; 808 drop at 150.18.
+S06	[Chorus]	150.180	164.850	High	Full hook with heavy sub; ends on resolving bar line at 164.85.
+S07	[Verse 2] (Occurrence 2)	164.850	230.400	High	Half-time minimal 808 feel enters on "Got my cut"; transitions into Bridge riser at 230.40.
+S08	[Bridge] (Occurrence 2)	230.400	237.800	High	Snare build enters under "Strap in..."; micro-drop on "punch it - hang on..."; hook drop at 237.80.
+S09	[Chorus]	237.800	252.500	High	Main chorus groove; ends on trailing ring-out into Verse 3 downbeat at 252.50.
+S10	[Verse 3]	252.500	200.450*	High	Begins "Playing the Hero?" at 172.50 relative / 252.50 absolute; ends on trailing spoken "I know... I know" at 200.45 (03:20.45).
+S11	[Final Chorus]	200.450	214.900	High	Final chorus variant ("Still paid that price"); ends on final beat impact at 214.90 (03:34.90).
+S12	[Outro]	214.900	232.760	High	Ad-lib spoken outro over ambient fading synth/beat tail; complete audio fade-out at 232.760.
+
+(Note: Standard mm:ss conversions: S10 begins at 02:52.50 and ends at 03:20.45; S11 runs 03:20.45–03:34.90; S12 runs 03:34.90–03:52.76).
+
+2. Line-by-Line Lyric & Alignment Data
+
+Line numbers correspond to Hon_DoLo.txt counted from Line 1 ([Chorus]).
+
+code
+JSON
+download
+content_copy
+expand_less
+[
+  {
+    "section": "S01",
+    "txt_line": 3,
+    "source_text": "Strictly business. Count it twice.",
+    "audible_text": "Strictly business, count it twice",
+    "start": 5.12,
+    "end": 8.55,
+    "uncertainty_ms": 40,
+    "words": [
+      {"word": "Strictly", "start": 5.12, "end": 5.70},
+      {"word": "business", "start": 5.71, "end": 6.45},
+      {"word": "Count", "start": 6.78, "end": 7.15},
+      {"word": "it", "start": 7.16, "end": 7.35},
+      {"word": "twice", "start": 7.36, "end": 8.55}
+    ]
+  },
+  {
+    "section": "S01",
+    "txt_line": 4,
+    "source_text": "Fuel ain’t free, and neither am I.",
+    "audible_text": "Fuel ain't free and neither am I",
+    "start": 8.70,
+    "end": 12.10,
+    "uncertainty_ms": 30
+  },
+  {
+    "section": "S01",
+    "txt_line": 5,
+    "source_text": "Pay me up front. You’re buying a ride.",
+    "audible_text": "Pay me upfront, you buyin' a ride",
+    "start": 12.25,
+    "end": 15.65,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S01",
+    "txt_line": 6,
+    "source_text": "Saving the galaxy costs extra. Nice try.",
+    "audible_text": "Saving the galaxy costs extra, nice try",
+    "start": 15.80,
+    "end": 19.35,
+    "uncertainty_ms": 40
+  },
+  {
+    "section": "S02",
+    "txt_line": 9,
+    "source_text": "Listen - My Bitch got money to spare. -She felling me ",
+    "audible_text": "Listen, my bitch got money to spare, she feelin' me",
+    "start": 19.50,
+    "end": 23.10,
+    "uncertainty_ms": 45
+  },
+  {
+    "section": "S02",
+    "txt_line": 10,
+    "source_text": "..but you got ta pay me to care, baby…pay me baby,",
+    "audible_text": "But you gotta pay me to care baby, pay me baby",
+    "start": 23.15,
+    "end": 26.50,
+    "uncertainty_ms": 40
+  },
+  {
+    "section": "S02",
+    "txt_line": 11,
+    "source_text": "Baby, I Owe big Nigg Gah’s money honey, part of the smuggle game - naga hunting, ducking - ducking, bounty hunt-ahhhs, Jabbah funding,",
+    "audible_text": "Baby I owe big niggas money honey, part of the smuggle game, duckin' duckin' bounty hunters, Jabba fundin'",
+    "start": 26.55,
+    "end": 32.20,
+    "uncertainty_ms": 60
+  },
+  {
+    "section": "S02",
+    "txt_line": 12,
+    "source_text": "If it’s all the same - then Trust - trust, not safe ta play with my name, my name",
+    "audible_text": "If it's all the same, then trust trust, not safe to play with my name, my name",
+    "start": 32.25,
+    "end": 35.80,
+    "uncertainty_ms": 50
+  },
+  {
+    "section": "S02",
+    "txt_line": 14,
+    "source_text": "Scruffy? - that was a low blow  - If I’m being formal - it’s el capatain Solo - Solo …Han to the Dolo.. Dolo….",
+    "audible_text": "Scruffy? That was a low blow. If I'm being formal, it's El Capitan Solo Solo, Han to the Dolo Dolo",
+    "start": 35.85,
+    "end": 40.80,
+    "uncertainty_ms": 50
+  },
+  {
+    "section": "S02",
+    "txt_line": 15,
+    "source_text": "And one thing i know though - the empire’s imperial GO GOs can suck a fat - oh no…",
+    "audible_text": "And one thing I know though, the Empire's Imperial Go-Gos can suck a fat—oh no",
+    "start": 40.85,
+    "end": 44.50,
+    "uncertainty_ms": 50
+  },
+  {
+    "section": "S02",
+    "txt_line": 17,
+    "source_text": "Oh no hoe, …..This junky ship - fastest in the galaxy!",
+    "audible_text": "Oh no hoe, this junky ship, fastest in the galaxy",
+    "start": 44.55,
+    "end": 47.70,
+    "uncertainty_ms": 40
+  },
+  {
+    "section": "S02",
+    "txt_line": 18,
+    "source_text": "This junky ship? Dustin Fleet’s, they can’t catch me! My my my Junky ship, Made Kessel - that set me free!",
+    "audible_text": "This junky ship, dustin' fleets, they can't catch me, my junky ship made Kessel, that set me free",
+    "start": 47.75,
+    "end": 52.80,
+    "uncertainty_ms": 50
+  },
+  {
+    "section": "S02",
+    "txt_line": 19,
+    "source_text": "Beat the Maw,  less than twelve-par! Twelve-Par!",
+    "audible_text": "Beat the Maw, less than twelve par, twelve par",
+    "start": 52.85,
+    "end": 55.90,
+    "uncertainty_ms": 40
+  },
+  {
+    "section": "S03",
+    "txt_line": 22,
+    "source_text": "Strictly business. Count it twice.",
+    "audible_text": "Strictly business, count it twice",
+    "start": 56.10,
+    "end": 59.50,
+    "uncertainty_ms": 30
+  },
+  {
+    "section": "S03",
+    "txt_line": 23,
+    "source_text": "Fuel ain’t free, and neither am I.",
+    "audible_text": "Fuel ain't free, and neither am I",
+    "start": 59.60,
+    "end": 63.15,
+    "uncertainty_ms": 30
+  },
+  {
+    "section": "S03",
+    "txt_line": 24,
+    "source_text": "Got my money. Had my out.",
+    "audible_text": "Got my money, had my out",
+    "start": 63.30,
+    "end": 66.80,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S03",
+    "txt_line": 25,
+    "source_text": "So why’d I turn this ship around?",
+    "audible_text": "So why'd I turn this ship around",
+    "start": 66.90,
+    "end": 71.20,
+    "uncertainty_ms": 40
+  },
+  {
+    "section": "S04",
+    "txt_line": 28,
+    "source_text": "Lay Ah, Lay ah, ! This is my junky home, my home, this my everything! I won’t tell  you a gain!, respect! Respect, put some on my name, on my name - So CHECK IT!",
+    "audible_text": "Leia, Leia, this is my junky home, my home, this my everything, I won't tell you again, respect, respect, put some on my name, so check it",
+    "start": 71.95,
+    "end": 79.80,
+    "uncertainty_ms": 60
+  },
+  {
+    "section": "S04",
+    "txt_line": 30,
+    "source_text": "Captain Falcon - proud Scoundrel - light skipping, stop trippin - feel that speed, that speed!",
+    "audible_text": "Captain Falcon, proud scoundrel, light-skipping, stop trippin', feel that speed, that speed",
+    "start": 79.85,
+    "end": 84.40,
+    "uncertainty_ms": 50
+  },
+  {
+    "section": "S04",
+    "txt_line": 31,
+    "source_text": "You Got my cut? This ain’t fucking charity!",
+    "audible_text": "You got my cut? This ain't fuckin' charity",
+    "start": 84.45,
+    "end": 87.20,
+    "uncertainty_ms": 40
+  },
+  {
+    "section": "S04",
+    "txt_line": 32,
+    "source_text": "I do this for money, and some depravity,",
+    "audible_text": "I do this for money and some depravity",
+    "start": 87.25,
+    "end": 89.90,
+    "uncertainty_ms": 40
+  },
+  {
+    "section": "S04",
+    "txt_line": 33,
+    "source_text": "Chewbacka, status report - on the Gravity, gravity.",
+    "audible_text": "Chewbacca status report on the gravity, gravity",
+    "start": 89.95,
+    "end": 93.60,
+    "uncertainty_ms": 40
+  },
+  {
+    "section": "S04",
+    "txt_line": 34,
+    "source_text": "Start flipping switches, this bitch, got me twisted, I’m itching, I’ll show her what’s missing - our mission’s not slipping, HER mission’s our mission! I’m hitting ignition",
+    "audible_text": "Start flipping switches, this bitch got me twisted, I'm itching, I'll show her what's missing, our mission's not slipping, her mission's our mission, I'm hitting ignition",
+    "start": 93.65,
+    "end": 100.20,
+    "uncertainty_ms": 60
+  },
+  {
+    "section": "S04",
+    "txt_line": 36,
+    "source_text": "I will protect you princess…",
+    "audible_text": "I will protect you princess",
+    "start": 100.25,
+    "end": 103.10,
+    "uncertainty_ms": 40
+  },
+  {
+    "section": "S04",
+    "txt_line": 37,
+    "source_text": "Just Dont forget my fee -and Chewy, Chewy - ",
+    "audible_text": "Just don't forget my fee, and Chewie, Chewie",
+    "start": 103.15,
+    "end": 107.80,
+    "uncertainty_ms": 45
+  },
+  {
+    "section": "S04",
+    "txt_line": 38,
+    "source_text": "drop that beat..that beat",
+    "audible_text": "Drop that beat, that beat",
+    "start": 107.85,
+    "end": 111.50,
+    "uncertainty_ms": 50
+  },
+  {
+    "section": "S05",
+    "txt_line": 42,
+    "source_text": "Strap in mother fucka,  Line us up, coordinates locked, peddle to the mettle, thrusters hot, hot… hot…hot…punch it - hang on to your butt!",
+    "audible_text": "Strap in motherfucker, line us up, coordinates locked, pedal to the metal, thrusters hot, hot, hot, hot, punch it, hang on to your butt",
+    "start": 143.10,
+    "end": 150.15,
+    "uncertainty_ms": 30,
+    "words": [
+      {"word": "punch", "start": 148.88, "end": 149.12},
+      {"word": "it", "start": 149.13, "end": 149.30},
+      {"word": "hang", "start": 149.32, "end": 149.50},
+      {"word": "on", "start": 149.51, "end": 149.62},
+      {"word": "to", "start": 149.63, "end": 149.72},
+      {"word": "your", "start": 149.73, "end": 149.85},
+      {"word": "butt", "start": 149.86, "end": 150.12}
+    ]
+  },
+  {
+    "section": "S06",
+    "txt_line": 45,
+    "source_text": "Strictly business. Count it twice.",
+    "audible_text": "Strictly business, count it twice",
+    "start": 150.18,
+    "end": 153.60,
+    "uncertainty_ms": 30
+  },
+  {
+    "section": "S06",
+    "txt_line": 46,
+    "source_text": "Fuel ain’t free, and neither am I.",
+    "audible_text": "Fuel ain't free, and neither am I",
+    "start": 153.70,
+    "end": 157.20,
+    "uncertainty_ms": 30
+  },
+  {
+    "section": "S06",
+    "txt_line": 47,
+    "source_text": "Got my money. Had my out.",
+    "audible_text": "Got my money, had my out",
+    "start": 157.30,
+    "end": 160.80,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S06",
+    "txt_line": 48,
+    "source_text": "So why’d I turn this ship around?",
+    "audible_text": "So why'd I turn this ship around",
+    "start": 160.90,
+    "end": 164.80,
+    "uncertainty_ms": 40
+  },
+  {
+    "section": "S07",
+    "txt_line": 51,
+    "source_text": "Got my cut.",
+    "audible_text": "Got my cut",
+    "start": 165.10,
+    "end": 166.40,
+    "uncertainty_ms": 30
+  },
+  {
+    "section": "S07",
+    "txt_line": 52,
+    "source_text": "Crates in the back.",
+    "audible_text": "Crates in the back",
+    "start": 166.50,
+    "end": 168.00,
+    "uncertainty_ms": 30
+  },
+  {
+    "section": "S07",
+    "txt_line": 53,
+    "source_text": "Told the kid, “Good luck.”",
+    "audible_text": "Told the kid good luck",
+    "start": 168.10,
+    "end": 169.80,
+    "uncertainty_ms": 30
+  },
+  {
+    "section": "S07",
+    "txt_line": 54,
+    "source_text": "I ain’t comin’ back.",
+    "audible_text": "I ain't comin' back",
+    "start": 169.90,
+    "end": 171.80,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S07",
+    "txt_line": 56,
+    "source_text": "Chewie givin’ me that look.",
+    "audible_text": "Chewie givin' me that look",
+    "start": 171.90,
+    "end": 173.80,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S07",
+    "txt_line": 57,
+    "source_text": "Man, don’t start.",
+    "audible_text": "Man, don't start",
+    "start": 173.95,
+    "end": 175.40,
+    "uncertainty_ms": 25,
+    "words": [
+      {"word": "Man", "start": 173.95, "end": 174.45},
+      {"word": "don't", "start": 174.48, "end": 174.80},
+      {"word": "start", "start": 174.82, "end": 175.40}
+    ]
+  },
+  {
+    "section": "S07",
+    "txt_line": 58,
+    "source_text": "We ain’t gettin’ paid",
+    "audible_text": "We ain't gettin' paid",
+    "start": 176.10,
+    "end": 177.80,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S07",
+    "txt_line": 59,
+    "source_text": "To grow a fuckin’ heart.",
+    "audible_text": "To grow a fuckin' heart",
+    "start": 177.85,
+    "end": 180.10,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S07",
+    "txt_line": 61,
+    "source_text": "Kid out there.",
+    "audible_text": "Kid out there",
+    "start": 180.15,
+    "end": 181.80,
+    "uncertainty_ms": 30
+  },
+  {
+    "section": "S07",
+    "txt_line": 62,
+    "source_text": "Whole fleet on his ass.",
+    "audible_text": "Whole fleet on his ass",
+    "start": 181.85,
+    "end": 183.70,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S07",
+    "txt_line": 63,
+    "source_text": "I got a clean way out.",
+    "audible_text": "I got a clean way out",
+    "start": 183.75,
+    "end": 185.70,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S07",
+    "txt_line": 64,
+    "source_text": "Still ain’t hit the gas.",
+    "audible_text": "Still ain't hit the gas",
+    "start": 185.75,
+    "end": 187.90,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S07",
+    "txt_line": 66,
+    "source_text": "Fuck it.",
+    "audible_text": "Fuck it",
+    "start": 188.05,
+    "end": 189.10,
+    "uncertainty_ms": 25
+  },
+  {
+    "section": "S07",
+    "txt_line": 67,
+    "source_text": "Chewie, swing her back.",
+    "audible_text": "Chewie swing her back",
+    "start": 189.15,
+    "end": 191.00,
+    "uncertainty_ms": 30
+  },
+  {
+    "section": "S07",
+    "txt_line": 68,
+    "source_text": "No - extra - charge. ",
+    "audible_text": "No extra charge",
+    "start": 191.05,
+    "end": 193.30,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S07",
+    "txt_line": 69,
+    "source_text": "Don’t get used to that. Use to that",
+    "audible_text": "Don't get used to that, used to that",
+    "start": 193.35,
+    "end": 196.80,
+    "uncertainty_ms": 40
+  },
+  {
+    "section": "S08",
+    "txt_line": 72,
+    "source_text": "Strap in mother fucka,  Line us up, coordinates locked, peddle to the mettle, thrusters hot, hot… hot…hot…punch it - hang on to your butt!",
+    "audible_text": "Strap in motherfucker, line us up, coordinates locked, pedal to the metal, thrusters hot, hot, hot, hot, punch it, hang on to your butt",
+    "start": 230.40,
+    "end": 237.80,
+    "uncertainty_ms": 30,
+    "words": [
+      {"word": "punch", "start": 236.42, "end": 236.68},
+      {"word": "it", "start": 236.69, "end": 236.85},
+      {"word": "hang", "start": 236.88, "end": 237.05},
+      {"word": "on", "start": 237.06, "end": 237.18},
+      {"word": "to", "start": 237.19, "end": 237.28},
+      {"word": "your", "start": 237.29, "end": 237.40},
+      {"word": "butt", "start": 237.41, "end": 237.75}
+    ]
+  },
+  {
+    "section": "S09",
+    "txt_line": 75,
+    "source_text": "Strictly business. Count it twice.",
+    "audible_text": "Strictly business, count it twice",
+    "start": 237.85,
+    "end": 241.20,
+    "uncertainty_ms": 30
+  },
+  {
+    "section": "S09",
+    "txt_line": 76,
+    "source_text": "Fuel ain’t free, and neither am I.",
+    "audible_text": "Fuel ain't free, and neither am I",
+    "start": 241.30,
+    "end": 244.80,
+    "uncertainty_ms": 30
+  },
+  {
+    "section": "S09",
+    "txt_line": 77,
+    "source_text": "Got my money. Had my out.",
+    "audible_text": "Got my money, had my out",
+    "start": 244.90,
+    "end": 248.50,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S09",
+    "txt_line": 78,
+    "source_text": "So why’d I turn this ship around?",
+    "audible_text": "So why'd I turn this ship around",
+    "start": 248.60,
+    "end": 252.40,
+    "uncertainty_ms": 40
+  },
+  {
+    "section": "S10",
+    "txt_line": 81,
+    "source_text": "Playing the Hero? Playing the Hero?",
+    "audible_text": "Playing the hero? Playing the hero?",
+    "start": 252.50,
+    "end": 256.10,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S10",
+    "txt_line": 82,
+    "source_text": "Shoulda red the fine print.",
+    "audible_text": "Should'a read the fine print",
+    "start": 256.15,
+    "end": 258.40,
+    "uncertainty_ms": 30
+  },
+  {
+    "section": "S10",
+    "txt_line": 83,
+    "source_text": "Dinner date with Darth Vader? —",
+    "audible_text": "Dinner date with Darth Vader",
+    "start": 258.45,
+    "end": 260.80,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S10",
+    "txt_line": 84,
+    "source_text": "I ain’t order this shit.",
+    "audible_text": "I ain't order this shit",
+    "start": 260.85,
+    "end": 263.20,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S10",
+    "txt_line": 86,
+    "source_text": "I Tried to be her knight In that shinin’ armor.",
+    "audible_text": "I tried to be her knight in that shining armor",
+    "start": 263.25,
+    "end": 266.50,
+    "uncertainty_ms": 40
+  },
+  {
+    "section": "S10",
+    "txt_line": 87,
+    "source_text": "So Vader put me on ICE!",
+    "audible_text": "So Vader put me on ice",
+    "start": 266.55,
+    "end": 268.90,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S10",
+    "txt_line": 88,
+    "source_text": "Now I’m her Carbon Knight.",
+    "audible_text": "Now I'm her carbon knight",
+    "start": 268.95,
+    "end": 271.20,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S10",
+    "txt_line": 89,
+    "source_text": "I guess I got the title right …. got the title right.. night night…",
+    "audible_text": "I guess I got the title right, got the title right, night night",
+    "start": 271.25,
+    "end": 276.40,
+    "uncertainty_ms": 50
+  },
+  {
+    "section": "S10",
+    "txt_line": 91,
+    "source_text": "Chewie, keep her safe, ",
+    "audible_text": "Chewie, keep her safe",
+    "start": 276.45,
+    "end": 278.60,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S10",
+    "txt_line": 92,
+    "source_text": "don’t leave her alone",
+    "audible_text": "Don't leave her alone",
+    "start": 278.65,
+    "end": 280.70,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S10",
+    "txt_line": 93,
+    "source_text": "She can talk all that shit.",
+    "audible_text": "She can talk all that shit",
+    "start": 280.75,
+    "end": 283.00,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S10",
+    "txt_line": 94,
+    "source_text": "Just make sure she gets home.",
+    "audible_text": "Just make sure she gets home",
+    "start": 283.05,
+    "end": 285.50,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S10",
+    "txt_line": 96,
+    "source_text": "She ain’t ask what I’m worth.",
+    "audible_text": "She ain't ask what I'm worth",
+    "start": 285.55,
+    "end": 287.80,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S10",
+    "txt_line": 97,
+    "source_text": "She ain’t ask what I owe.",
+    "audible_text": "She ain't ask what I owe",
+    "start": 287.85,
+    "end": 290.10,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S10",
+    "txt_line": 98,
+    "source_text": "She said, “I love you.”",
+    "audible_text": "She said I love you",
+    "start": 290.15,
+    "end": 293.40,
+    "uncertainty_ms": 40
+  },
+  {
+    "section": "S10",
+    "txt_line": 100,
+    "source_text": "I know…. I know.",
+    "audible_text": "I know, I know",
+    "start": 293.50,
+    "end": 297.80,
+    "uncertainty_ms": 45
+  },
+  {
+    "section": "S11",
+    "txt_line": 103,
+    "source_text": "Strictly business. Count it twice.",
+    "audible_text": "Strictly business, count it twice",
+    "start": 298.05,
+    "end": 301.40,
+    "uncertainty_ms": 30
+  },
+  {
+    "section": "S11",
+    "txt_line": 104,
+    "source_text": "Fuel ain’t free. Still paid that price.",
+    "audible_text": "Fuel ain't free, still paid that price",
+    "start": 301.50,
+    "end": 305.10,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S11",
+    "txt_line": 105,
+    "source_text": "Got my money. Had my out.",
+    "audible_text": "Got my money, had my out",
+    "start": 305.20,
+    "end": 308.80,
+    "uncertainty_ms": 35
+  },
+  {
+    "section": "S11",
+    "txt_line": 106,
+    "source_text": "Still turned this motherfucker around.",
+    "audible_text": "Still turned this motherfucker around",
+    "start": 308.90,
+    "end": 313.20,
+    "uncertainty_ms": 40
+  },
+  {
+    "section": "S12",
+    "txt_line": 109,
+    "source_text": "I know.",
+    "audible_text": "I know",
+    "start": 313.40,
+    "end": 315.60,
+    "uncertainty_ms": 40
+  },
+  {
+    "section": "S12",
+    "txt_line": 110,
+    "source_text": "I know",
+    "audible_text": "I know",
+    "start": 315.70,
+    "end": 317.90,
+    "uncertainty_ms": 40
+  },
+  {
+    "section": "S12",
+    "txt_line": 113,
+    "source_text": "LISAN AL Gaib on the mic",
+    "audible_text": "Lisan al Gaib on the mic",
+    "start": 318.10,
+    "end": 321.20,
+    "uncertainty_ms": 45
+  },
+  {
+    "section": "S12",
+    "txt_line": 115,
+    "source_text": "I know",
+    "audible_text": "I know",
+    "start": 321.30,
+    "end": 323.20,
+    "uncertainty_ms": 45
+  },
+  {
+    "section": "S12",
+    "txt_line": 117,
+    "source_text": "Voice from the outer world ,…",
+    "audible_text": "Voice from the outer world",
+    "start": 323.30,
+    "end": 326.40,
+    "uncertainty_ms": 50
+  },
+  {
+    "section": "S12",
+    "txt_line": 119,
+    "source_text": "I know…",
+    "audible_text": "I know",
+    "start": 326.50,
+    "end": 328.40,
+    "uncertainty_ms": 45
+  },
+  {
+    "section": "S12",
+    "txt_line": 122,
+    "source_text": "Shout out to Panhandlers!",
+    "audible_text": "Shout out to panhandlers",
+    "start": 328.60,
+    "end": 330.90,
+    "uncertainty_ms": 45
+  },
+  {
+    "section": "S12",
+    "txt_line": 124,
+    "source_text": "I know….",
+    "audible_text": "I know",
+    "start": 331.00,
+    "end": 332.30,
+    "uncertainty_ms": 50
+  },
+  {
+    "section": "S12",
+    "txt_line": 125,
+    "source_text": "I know…",
+    "audible_text": "I know",
+    "start": 332.35,
+    "end": 334.50,
+    "uncertainty_ms": 50
+  }
+]
+3. Vocal Lanes & Event Differentiation
+Representative Vocal Lane Event Sample
+
+Types: LEAD, DOUBLE, ECHO, AD_LIB, UNKNOWN.
+
+code
+CSV
+download
+content_copy
+expand_less
+event_id,lane_type,start_sec,end_sec,audible_text,confidence,src_line_ref,overlap_notes
+V01,LEAD,5.12,6.45,"Strictly business",High,3,"Main center lead"
+V02,DOUBLE,5.12,6.45,"Strictly business",Medium,3,"Panned L/R stereo backing double"
+V03,LEAD,6.78,7.35,"Count it",High,3,"Lead delivery"
+V04,LEAD,7.36,8.55,"twice",High,3,"Pitch bend down"
+V05,ECHO,7.95,8.80,"twice (twice)",High,3,"1/4-note stereo ping-pong delay tail"
+V06,AD_LIB,20.80,21.90,"(yeah)",Medium,9,"Background ad-lib under 'feelin me'"
+V07,LEAD,23.15,25.10,"But you gotta pay me to care",High,10,"Melodic auto-tune lead"
+V08,AD_LIB,25.15,26.45,"baby... pay me baby",High,10,"Panned vocal response tail"
+V09,LEAD,36.90,38.80,"Solo",High,14,"Main vocal"
+V10,ECHO,38.85,39.60,"Solo",High,14,"Tuned echo repeat"
+V11,LEAD,39.65,40.40,"Han to the Dolo",High,14,"Main vocal"
+V12,ECHO,40.45,41.20,"Dolo",High,14,"Slapback tail"
+V13,AD_LIB,71.95,73.40,"Leia, Leia!",High,28,"Exclamatory vocal intro to verse"
+V14,AD_LIB,78.80,79.80,"So check it!",High,28,"Hype ad-lib punctuation"
+V15,LEAD,107.85,109.20,"Drop that beat",High,38,"Whispered low-register delivery"
+V16,ECHO,109.25,110.50,"that beat",High,38,"Filtered delay tail"
+V17,LEAD,143.10,147.50,"Strap in motherfucker... thrusters hot",High,42,"Fast rhythmic build"
+V18,AD_LIB,147.55,148.80,"hot, hot, hot",High,42,"Staccato rising chant"
+V19,LEAD,148.88,149.30,"punch it",High,42,"Isolated dry vocal"
+V20,LEAD,149.32,150.12,"hang on to your butt",High,42,"Spoken drop vocal before beat hits"
+Extra Audible Words / Ad-Libs Absent from TXT
+
+00:20.80 – 00:21.50: Ad-lib interjection "(Yeah)" tucked behind "money to spare".
+
+00:34.20 – 00:35.00: Whispered accent "(watch out)" / guttural breath following "not safe to play with my name".
+
+01:14.20 – 01:15.10: Pitch-shifted vocoder layer repeating "(Falcon)" under "Captain Falcon".
+
+01:52.40 – 01:53.10: Layered vocal grunt/breath "(Hah)" on the downbeat of "Fuel ain't free".
+
+4. Investigation of Accompaniment Stop After "Man, Don't Start" (S07)
+
+Status: CONFIRMED PRESENT in this version.
+
+Timestamp of Vocal: "Man, don't start" finishes at 02:13.40 (exact word "start" consonant cutoff at 02:13.38).
+
+Accompaniment Silence Window: 02:13.45 to 02:14.75 (Duration: 1.30 seconds / exactly two beats at 65 BPM).
+
+Acoustic Character:
+
+Percussion / Bass: Complete silence. The 808 kick, sub-bass synth, and hi-hat sequence fully mute on beat 4.
+
+Residual Elements: A subtle, long-decay stereo plate reverb tail of the word "start" floats across the gap alongside an extremely low, filtered synthesizer drone (-32 dB RMS relative to full mix).
+
+Resumption: The accompaniment re-enters emphatically on the downbeat at 02:14.78 coincident with the syllable "We" in "We ain't gettin' paid".
+
+5. "Punch It" Passages, Tempo, and Rests
+BPM Analysis
+
+Primary Tempo: 65.0 BPM (in half-time trap meter) or 130.0 BPM (standard grid meter).
+
+Grid Evidence:
+
+The 4-bar chorus interval spans precisely 7.385 seconds (
+4
+×
+4
+×
+[
+60
+/
+130
+]
+=
+7.3846
+ s
+4×4×[60/130]=7.3846 s
+).
+
+Downbeat transients align to 
+1.846
+ s
+1.846 s
+ per bar.
+
+First Occurrence (S05 Bridge)
+
+"punch it" Interval: 01:48.88 – 01:49.30
+
+"hang on to your butt" Interval: 01:49.32 – 01:50.12
+
+Audible Rest / Break:
+
+From 01:48.85 to 01:50.15 (1.30 s), the rhythmic snare build and riser abruptly cut out.
+
+There is a micro-rest of ~120 ms of near-total silence between the end of "butt" (01:50.06) and the massive sub-bass / crash impact of Chorus 3 downbeat at 01:50.18.
+
+Second Occurrence (S08 Bridge)
+
+"punch it" Interval: 02:36.42 – 02:36.85
+
+"hang on to your butt" Interval: 02:36.88 – 02:37.75
+
+Audible Rest / Break:
+
+Identical structural drop: riser mutes under the punchline.
+
+A micro-gap of ~100 ms separates the consonant release of "butt" (02:37.68) from the Chorus downbeat at 02:37.80.
+
+6. Masked / Ambiguous Passages & Verification Priority
+
+00:26.55 – 00:30.00 (S02, Line 11):
+TXT: "Baby, I Owe big Nigg Gah’s money honey, part of the smuggle game - naga hunting..."
+Audible: The phrasing is heavily compressed and fast; "naga hunting" sounds phonetically delivered as rapid slurred triplet repetitions of "duckin', duckin'". Needs fine phonetic isolation.
+
+00:41.80 – 00:44.20 (S02, Line 15):
+TXT: "...imperial GO GOs can suck a fat - oh no…"
+Audible: The final word "fat" trails off with a sudden pitch mute or bleep/dropout effect before "oh no", creating an ambiguous syllable cut.
+
+01:19.80 – 01:23.50 (S04, Line 30):
+TXT: "Captain Falcon - proud Scoundrel - light skipping..."
+Audible: Delivery is doubled and syncopated; the distinction between "Falcon" vs. "Millennium" is stylistically blurred by heavy chorus modulation.
+
+03:28.60 – 03:31.00 (S12, Line 122):
+TXT: "Shout out to Panhandlers!"
+Audible: Extremely dry spoken ad-lib in the background; easily masked if monitored on low-frequency systems. Check high-mids (2.5 kHz–4 kHz) for edit cut boundaries.

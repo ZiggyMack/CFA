@@ -1,0 +1,45 @@
+HON DOLO FINAL PRIME: LISTENING AND TIMING HANDOFF — 2026-10-11
+
+CURRENT STATE
+The exact MP3 and lyric text were approved and supplied to the existing Google
+AI Studio conversation. The first analysis finished but FAILED timing checks:
+34 of 81 lyric intervals end after the real 232.760s recording; several seconds
+and mm:ss claims conflict. No returned timing has been adopted.
+The bounded correction ran and returned 12 section ranges and 3 passages within
+the source duration. They remain provider claims awaiting actual listening.
+See provisional_anchor_map.json; execution_record.json records both runs.
+
+INPUTS (unchanged originals in the parent folder)
+  ../Hon_DoLo.mp3 — final Prime, 232.760s (3:52.760), 48 kHz stereo
+  ../Hon_DoLo.txt — logical lyric v003
+  source_map.json — hashes, 12 sections and 87 nonblank TXT lines
+
+READ / VERIFY
+  execution_request.txt — actual first submission with exact inline lyrics
+  ai_studio_return_01.txt — unaltered FAILED provider report; do not use its times
+  return_01_audit.json — bounds, contradictions and coverage findings
+  execution_record.json — approval, exact-source upload route, settings and run state
+  correction_request_02.txt — actual bounded follow-up
+  ai_studio_return_02.json — raw second return
+  provisional_anchor_map.json — provider cues; not verified shoot timing
+  listening_review.html — play the exact local source and record human cue checks
+  validation.json — all listening gates still pending
+  timed_lyrics.template.json — EMPTY scaffold, not a provider return
+
+AI Studio
+https://aistudio.google.com/prompts/1Oys2niEp9fADle8kUcI5LIeWx5jxbNLl
+Title: Visual Analysis of Lil Vader. Hon Dolo is at the bottom of that chat.
+The MP3 card has a page-generated title; it is the selected original, not new
+audio. TXT storage failed, so the approved lyrics were provided inline.
+
+NEXT
+Verify 12 section starts, both punch-it hits and the S07 accompaniment stop
+(which may be absent). Check every selected mouth-matching phrase separately,
+including doubles, echoes and ad-libs. Resolve the extra embedded Outro/I know
+pair by listening. Exported review notes are proposals until reconciled on disk.
+Do not offset or rescale the failed report, historical masters or old subtitles.
+
+Claude owns writer cards and story decisions; Nova owns source/timebase and
+alignment intake. A ready character or drafted scene is not accepted shoot timing.
+No replacement vocals, stem separation, generation, paid lip-sync or install
+is authorized by this handoff.

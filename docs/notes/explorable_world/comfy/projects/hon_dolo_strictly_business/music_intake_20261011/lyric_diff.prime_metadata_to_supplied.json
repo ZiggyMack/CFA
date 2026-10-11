@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "project_id": "hon_dolo_strictly_business",
+  "inspected_date": "2026-10-11",
+  "comparison_method": "Full text whitespace-delimited token comparison preserving spelling/case/punctuation. Compare only the unambiguous first eleven section bodies by ordinal because metadata has an additional outro heading. Metadata text is not listening evidence.",
+  "embedded_source": {
+    "container_path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/Hon_DoLo.mp3",
+    "field": "lyrics-eng",
+    "sha256_utf8": "76f27708cd9ddd575ed553deb1fcfebe0555649e50c01bdf79b0e125ac1b661c",
+    "section_heading_count": 13,
+    "cache_metadata": ".cache/hon_dolo_music_20261011/prime_mp3.ffmetadata.txt"
+  },
+  "supplied_source": {
+    "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/Hon_DoLo.txt",
+    "sha256": "4d8f867b525ad8cc05d5a78a1ac129ed1a9f46acb288c0698c7646dc35af918b",
+    "section_heading_count": 12
+  },
+  "equal_after_whitespace_normalization": false,
+  "first_eleven_sections": [
+    {
+      "production_section_id": "S01",
+      "heading": "[Chorus]",
+      "body_equal_after_whitespace_normalization": true
+    },
+    {
+      "production_section_id": "S02",
+      "heading": "[Verse]",
+      "body_equal_after_whitespace_normalization": true
+    },
+    {
+      "production_section_id": "S03",
+      "heading": "[Chorus]",
+      "body_equal_after_whitespace_normalization": true
+    },
+    {
+      "production_section_id": "S04",
+      "heading": "[Verse 2]",
+      "body_equal_after_whitespace_normalization": true
+    },
+    {
+      "production_section_id": "S05",
+      "heading": "[Bridge]",
+      "body_equal_after_whitespace_normalization": true
+    },
+    {
+      "production_section_id": "S06",
+      "heading": "[Chorus]",
+      "body_equal_after_whitespace_normalization": true
+    },
+    {
+      "production_section_id": "S07",
+      "heading": "[Verse 2]",
+      "body_equal_after_whitespace_normalization": true
+    },
+    {
+      "production_section_id": "S08",
+      "heading": "[Bridge]",
+      "body_equal_after_whitespace_normalization": true
+    },
+    {
+      "production_section_id": "S09",
+      "heading": "[Chorus]",
+      "body_equal_after_whitespace_normalization": true
+    },
+    {
+      "production_section_id": "S10",
+      "heading": "[Verse 3]",
+      "body_equal_after_whitespace_normalization": true
+    },
+    {
+      "production_section_id": "S11",
+      "heading": "[Final Chorus]",
+      "body_equal_after_whitespace_normalization": true
+    }
+  ],
+  "full_text_word_and_punctuation_diff": [
+    {
+      "operation": "delete",
+      "metadata_token_indices_zero_based_half_open": [
+        628,
+        633
+      ],
+      "supplied_token_indices_zero_based_half_open": [
+        628,
+        628
+      ],
+      "metadata_tokens": [
+        "[Outro]",
+        "I",
+        "know.",
+        "I",
+        "know"
+      ],
+      "supplied_tokens": []
+    }
+  ],
+  "metadata_outro_sections": [
+    {
+      "metadata_section_ordinal": 12,
+      "heading": "[Outro]",
+      "body": "I know.\nI know"
+    },
+    {
+      "metadata_section_ordinal": 13,
+      "heading": "[Outro]",
+      "body": "I know.\nI know\n….\nLISAN AL Gaib on the mic\n…..\nI know\n…..\nVoice from the outer world ,…\n…\nI know…\n…\nShout out to Panhandlers!\n…\nI know….\nI know…"
+    }
+  ],
+  "finding": "MP3 lyrics-eng has an additional [Outro] heading and an additional I know. / I know pair compared with the supplied TXT. The first eleven section bodies match the supplied TXT after whitespace normalization.",
+  "decision": "Keep the supplied author lyric text unchanged. Do not assume either representation establishes which repetitions are audible; inspect the extra outro pair during the Prime listening pass.",
+  "audible_words_verified": false
+}

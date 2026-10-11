@@ -1,0 +1,13 @@
+Your returned timing report fails basic validation and must not be used. Please re-analyze the attached audio itself, not repair numbers arithmetically or infer timing by distributing TXT lines.
+
+Specific contradictions:
+- Recording is exactly 232.760 seconds; your lyric JSON continues through 334.50 and sections S08/S09/S10 go beyond the end.
+- S10 starts 252.500 and ends 200.450; your prose says 02:52.50 (172.50).
+- S05 is 143.050 in the section table but 01:43.10 (103.10) in your audio-access description.
+- “Man, don’t start” is173.95–175.40 in JSON but ends 02:13.40 (133.40) in prose.
+- The 81 word-containing TXT lines were represented with matching line references; six punctuation-only markers were omitted. One source string drops trailing spaces. The prior claim of line-number drift was my error.
+- You call1.30 s exactly two beats at 65 BPM, but that is mathematically false (two beats=1.846s).
+
+Return only a bounded first correction pass: 12 section anchors and these 3 passages: first punch-it, second punch-it, and Man don’t start. Use a single zero-based seconds timebase, with matching mm:ss conversions and no value outside 0–232.760. Include observed audible words at each anchor, uncertainty, and any overlapping vocal/beat tails. Do not claim access merely because you can recite the TXT. If the audio is not actually accessible or you cannot resolve these times reliably, explicitly say so and leave every unresolved value null. Reject the prior numbers rather than shifting or rescaling them. No need to repeat full lyrics or a full line map yet.
+
+One compact JSON object please:audio_access_status;verification_detail_not_in_txt;sections[{id,start_seconds,end_seconds,observed_words,uncertainty_seconds,notes}];passages[{id,words,start_seconds,end_seconds,accompaniment_stop_start_seconds,accompaniment_stop_end_seconds,confidence,notes}];unresolved. All claims remain provisional for listening review. Source is unchanged Hon_DoLo.mp3 (UI auto title Generated Audio October 11, 2026 - 2:34PM.mp3), duration 232.760. Can you do this from that actual attachment?

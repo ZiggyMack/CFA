@@ -4,24 +4,25 @@
   "project_id": "hon_dolo_strictly_business",
   "title": "Hon Dolo - Strictly Business",
   "created": "2026-10-04",
-  "status": "draft_story_new_working_audio_requires_timing_realignment",
+  "status": "draft_story_final_prime_received_pending_listening_alignment",
   "lyrics_source": {
-    "path": "lyrics.user.v002.txt",
-    "sha256": "291a2fb6f8a542dcdc4f87d1b4b1c29af3ce0014156a988f293843c71561bc01",
-    "provenance": "User pasted October7; wording unchanged after whitespace normalization and omitting old title; keep user wording.",
+    "path": "Hon_DoLo.txt",
+    "sha256": "4d8f867b525ad8cc05d5a78a1ac129ed1a9f46acb288c0698c7646dc35af918b",
+    "logical_version": "v003",
+    "provenance": "Exact user-supplied finalized Prime lyric file, October 11; five text sections differ from v002. Original bytes retained; audible wording not yet verified.",
     "preserve_wording": true,
     "preserve_duplicate_section_labels": true
   },
   "audio": {
-    "master_mix_path": "../../references/Music/DoLoSoLo_0 (Remastered).mp3",
+    "master_mix_path": "Hon_DoLo.mp3",
     "lead_vocal_stem_path": null,
     "lyrics_alignment_path": null,
     "bpm": null,
-    "duration_seconds": 234.96,
-    "status": "current_working_recording_received_decoded_pending_listening",
+    "duration_seconds": 232.76,
+    "status": "user_selected_final_prime_received_hashed_fully_decoded_pending_listening",
     "embedded_lyric_container_path": null,
-    "media_intake_path": "music_intake_20261007.json",
-    "timing_state": "existing_section_times_are_old_recording_only_not_validated_for_new_master",
+    "media_intake_path": "music_intake_20261011.json",
+    "timing_state": "all_current_section_and_shot_times_unset_pending_prime_audio_review",
     "initial_unlabelled_region_seconds": null,
     "subtitle_end_overrun_seconds": null,
     "historical_v001_audio": {
@@ -39,7 +40,28 @@
         2.314
       ],
       "subtitle_end_overrun_seconds": 3.259
-    }
+    },
+    "historical_october7_audio": {
+      "master_mix_path": "../../references/Music/DoLoSoLo_0 (Remastered).mp3",
+      "lead_vocal_stem_path": null,
+      "lyrics_alignment_path": null,
+      "bpm": null,
+      "duration_seconds": 234.96,
+      "status": "current_working_recording_received_decoded_pending_listening",
+      "embedded_lyric_container_path": null,
+      "media_intake_path": "music_intake_20261007.json",
+      "timing_state": "existing_section_times_are_old_recording_only_not_validated_for_new_master",
+      "initial_unlabelled_region_seconds": null,
+      "subtitle_end_overrun_seconds": null
+    },
+    "master_mix_sha256": "d2283a49caf57d35f01eedf6f26036609c7c51e93dd0771edbf3a37948915532",
+    "sample_rate_hz": 48000,
+    "sample_frames": 11172480,
+    "alignment_handoff_path": "music_alignment_20261011/START_HERE.txt",
+    "alignment_validation_path": "music_alignment_20261011/validation.json",
+    "alignment_execution_record_path": "music_alignment_20261011/execution_record.json",
+    "alignment_provider_state": "second_bounded_return_provisional_pending_source_listening",
+    "provisional_anchor_map_path": "music_alignment_20261011/provisional_anchor_map.json"
   },
   "delivery": {
     "aspect_ratio": null,
@@ -115,13 +137,13 @@
   "sections": [
     {
       "id": "S01",
-      "source_heading": " [Chorus]",
-      "source_line_start": 2,
-      "source_line_end": 8,
+      "source_heading": "[Chorus]",
+      "source_line_start": 1,
+      "source_line_end": 7,
       "beat": "Payment before passage",
       "dramatic_job": "Swagger and transaction",
-      "start_seconds": 2.314,
-      "end_seconds": 18.91,
+      "start_seconds": null,
+      "end_seconds": null,
       "candidate_shots": [
         {
           "id": "S01A",
@@ -170,21 +192,35 @@
         }
       ],
       "timing_evidence": {
-        "source": "lyrics.embedded.v001.srt",
-        "section_marker_cue_id": 1,
-        "state": "provisional_subtitle_metadata_not_listening_verified",
-        "end_boundary": "next_section_marker"
+        "source": "Hon_DoLo.mp3",
+        "source_sha256": "d2283a49caf57d35f01eedf6f26036609c7c51e93dd0771edbf3a37948915532",
+        "state": "unreviewed_no_prime_alignment_received",
+        "listening_validation_path": "music_alignment_20261011/validation.json"
+      },
+      "historical_october4_timing": {
+        "source_heading": " [Chorus]",
+        "source_line_start": 2,
+        "source_line_end": 8,
+        "start_seconds": 2.314,
+        "end_seconds": 18.91,
+        "timing_evidence": {
+          "source": "lyrics.embedded.v001.srt",
+          "section_marker_cue_id": 1,
+          "state": "provisional_subtitle_metadata_not_listening_verified",
+          "end_boundary": "next_section_marker"
+        },
+        "master_mix_path": "SBT_0 (Remastered).mp3"
       }
     },
     {
       "id": "S02",
       "source_heading": "[Verse]",
-      "source_line_start": 9,
-      "source_line_end": 21,
+      "source_line_start": 8,
+      "source_line_end": 20,
       "beat": "Debt beneath the boasting",
       "dramatic_job": "The bravado has creditors",
-      "start_seconds": 18.91,
-      "end_seconds": 63.191,
+      "start_seconds": null,
+      "end_seconds": null,
       "candidate_shots": [
         {
           "id": "S02A",
@@ -277,21 +313,35 @@
         }
       ],
       "timing_evidence": {
-        "source": "lyrics.embedded.v001.srt",
-        "section_marker_cue_id": 6,
-        "state": "provisional_subtitle_metadata_not_listening_verified",
-        "end_boundary": "next_section_marker"
+        "source": "Hon_DoLo.mp3",
+        "source_sha256": "d2283a49caf57d35f01eedf6f26036609c7c51e93dd0771edbf3a37948915532",
+        "state": "unreviewed_no_prime_alignment_received",
+        "listening_validation_path": "music_alignment_20261011/validation.json"
+      },
+      "historical_october4_timing": {
+        "source_heading": "[Verse]",
+        "source_line_start": 9,
+        "source_line_end": 21,
+        "start_seconds": 18.91,
+        "end_seconds": 63.191,
+        "timing_evidence": {
+          "source": "lyrics.embedded.v001.srt",
+          "section_marker_cue_id": 6,
+          "state": "provisional_subtitle_metadata_not_listening_verified",
+          "end_boundary": "next_section_marker"
+        },
+        "master_mix_path": "SBT_0 (Remastered).mp3"
       }
     },
     {
       "id": "S03",
       "source_heading": "[Chorus]",
-      "source_line_start": 22,
-      "source_line_end": 27,
+      "source_line_start": 21,
+      "source_line_end": 26,
       "beat": "First doubt in the hook",
       "dramatic_job": "Foreshadow the turn",
-      "start_seconds": 63.191,
-      "end_seconds": 76.835,
+      "start_seconds": null,
+      "end_seconds": null,
       "candidate_shots": [
         {
           "id": "S03A",
@@ -317,21 +367,35 @@
         }
       ],
       "timing_evidence": {
-        "source": "lyrics.embedded.v001.srt",
-        "section_marker_cue_id": 16,
-        "state": "provisional_subtitle_metadata_not_listening_verified",
-        "end_boundary": "next_section_marker"
+        "source": "Hon_DoLo.mp3",
+        "source_sha256": "d2283a49caf57d35f01eedf6f26036609c7c51e93dd0771edbf3a37948915532",
+        "state": "unreviewed_no_prime_alignment_received",
+        "listening_validation_path": "music_alignment_20261011/validation.json"
+      },
+      "historical_october4_timing": {
+        "source_heading": "[Chorus]",
+        "source_line_start": 22,
+        "source_line_end": 27,
+        "start_seconds": 63.191,
+        "end_seconds": 76.835,
+        "timing_evidence": {
+          "source": "lyrics.embedded.v001.srt",
+          "section_marker_cue_id": 16,
+          "state": "provisional_subtitle_metadata_not_listening_verified",
+          "end_boundary": "next_section_marker"
+        },
+        "master_mix_path": "SBT_0 (Remastered).mp3"
       }
     },
     {
       "id": "S04",
       "source_heading": "[Verse 2]",
-      "source_line_start": 28,
-      "source_line_end": 40,
+      "source_line_start": 27,
+      "source_line_end": 39,
       "beat": "A home and a crew",
       "dramatic_job": "The love-driven protection promise contradicts his demand for a fee",
-      "start_seconds": 76.835,
-      "end_seconds": 110.027,
+      "start_seconds": null,
+      "end_seconds": null,
       "candidate_shots": [
         {
           "id": "S04A",
@@ -402,21 +466,35 @@
         }
       ],
       "timing_evidence": {
-        "source": "lyrics.embedded.v001.srt",
-        "section_marker_cue_id": 21,
-        "state": "provisional_subtitle_metadata_not_listening_verified",
-        "end_boundary": "next_section_marker"
+        "source": "Hon_DoLo.mp3",
+        "source_sha256": "d2283a49caf57d35f01eedf6f26036609c7c51e93dd0771edbf3a37948915532",
+        "state": "unreviewed_no_prime_alignment_received",
+        "listening_validation_path": "music_alignment_20261011/validation.json"
+      },
+      "historical_october4_timing": {
+        "source_heading": "[Verse 2]",
+        "source_line_start": 28,
+        "source_line_end": 40,
+        "start_seconds": 76.835,
+        "end_seconds": 110.027,
+        "timing_evidence": {
+          "source": "lyrics.embedded.v001.srt",
+          "section_marker_cue_id": 21,
+          "state": "provisional_subtitle_metadata_not_listening_verified",
+          "end_boundary": "next_section_marker"
+        },
+        "master_mix_path": "SBT_0 (Remastered).mp3"
       }
     },
     {
       "id": "S05",
       "source_heading": "[Bridge]",
-      "source_line_start": 41,
-      "source_line_end": 44,
+      "source_line_start": 40,
+      "source_line_end": 43,
       "beat": "First ignition",
       "dramatic_job": "The boast becomes movement",
-      "start_seconds": 110.027,
-      "end_seconds": 119.601,
+      "start_seconds": null,
+      "end_seconds": null,
       "candidate_shots": [
         {
           "id": "S05A",
@@ -441,21 +519,35 @@
         }
       ],
       "timing_evidence": {
-        "source": "lyrics.embedded.v001.srt",
-        "section_marker_cue_id": 31,
-        "state": "provisional_subtitle_metadata_not_listening_verified",
-        "end_boundary": "next_section_marker"
+        "source": "Hon_DoLo.mp3",
+        "source_sha256": "d2283a49caf57d35f01eedf6f26036609c7c51e93dd0771edbf3a37948915532",
+        "state": "unreviewed_no_prime_alignment_received",
+        "listening_validation_path": "music_alignment_20261011/validation.json"
+      },
+      "historical_october4_timing": {
+        "source_heading": "[Bridge]",
+        "source_line_start": 41,
+        "source_line_end": 44,
+        "start_seconds": 110.027,
+        "end_seconds": 119.601,
+        "timing_evidence": {
+          "source": "lyrics.embedded.v001.srt",
+          "section_marker_cue_id": 31,
+          "state": "provisional_subtitle_metadata_not_listening_verified",
+          "end_boundary": "next_section_marker"
+        },
+        "master_mix_path": "SBT_0 (Remastered).mp3"
       }
     },
     {
       "id": "S06",
       "source_heading": "[Chorus]",
-      "source_line_start": 45,
-      "source_line_end": 50,
+      "source_line_start": 44,
+      "source_line_end": 49,
       "beat": "Chewie sees through him",
       "dramatic_job": "The hook becomes an argument",
-      "start_seconds": 119.601,
-      "end_seconds": 134.441,
+      "start_seconds": null,
+      "end_seconds": null,
       "candidate_shots": [
         {
           "id": "S06A",
@@ -482,21 +574,35 @@
         }
       ],
       "timing_evidence": {
-        "source": "lyrics.embedded.v001.srt",
-        "section_marker_cue_id": 34,
-        "state": "provisional_subtitle_metadata_not_listening_verified",
-        "end_boundary": "next_section_marker"
+        "source": "Hon_DoLo.mp3",
+        "source_sha256": "d2283a49caf57d35f01eedf6f26036609c7c51e93dd0771edbf3a37948915532",
+        "state": "unreviewed_no_prime_alignment_received",
+        "listening_validation_path": "music_alignment_20261011/validation.json"
+      },
+      "historical_october4_timing": {
+        "source_heading": "[Chorus]",
+        "source_line_start": 45,
+        "source_line_end": 50,
+        "start_seconds": 119.601,
+        "end_seconds": 134.441,
+        "timing_evidence": {
+          "source": "lyrics.embedded.v001.srt",
+          "section_marker_cue_id": 34,
+          "state": "provisional_subtitle_metadata_not_listening_verified",
+          "end_boundary": "next_section_marker"
+        },
+        "master_mix_path": "SBT_0 (Remastered).mp3"
       }
     },
     {
       "id": "S07",
       "source_heading": "[Verse 2]",
-      "source_line_start": 51,
-      "source_line_end": 71,
+      "source_line_start": 50,
+      "source_line_end": 70,
       "beat": "The clean exit and the choice",
       "dramatic_job": "His actions contradict his business rule, foreshadowing the love-driven sacrifice",
-      "start_seconds": 134.441,
-      "end_seconds": 149.202,
+      "start_seconds": null,
+      "end_seconds": null,
       "candidate_shots": [
         {
           "id": "S07A",
@@ -544,21 +650,35 @@
         }
       ],
       "timing_evidence": {
-        "source": "lyrics.embedded.v001.srt",
-        "section_marker_cue_id": 39,
-        "state": "provisional_subtitle_metadata_not_listening_verified",
-        "end_boundary": "next_section_marker"
+        "source": "Hon_DoLo.mp3",
+        "source_sha256": "d2283a49caf57d35f01eedf6f26036609c7c51e93dd0771edbf3a37948915532",
+        "state": "unreviewed_no_prime_alignment_received",
+        "listening_validation_path": "music_alignment_20261011/validation.json"
+      },
+      "historical_october4_timing": {
+        "source_heading": "[Verse 2]",
+        "source_line_start": 51,
+        "source_line_end": 71,
+        "start_seconds": 134.441,
+        "end_seconds": 149.202,
+        "timing_evidence": {
+          "source": "lyrics.embedded.v001.srt",
+          "section_marker_cue_id": 39,
+          "state": "provisional_subtitle_metadata_not_listening_verified",
+          "end_boundary": "next_section_marker"
+        },
+        "master_mix_path": "SBT_0 (Remastered).mp3"
       }
     },
     {
       "id": "S08",
       "source_heading": "[Bridge]",
-      "source_line_start": 72,
-      "source_line_end": 74,
+      "source_line_start": 71,
+      "source_line_end": 73,
       "beat": "Second ignition",
       "dramatic_job": "Now the speed has a purpose",
-      "start_seconds": 149.202,
-      "end_seconds": 156.144,
+      "start_seconds": null,
+      "end_seconds": null,
       "candidate_shots": [
         {
           "id": "S08A",
@@ -584,21 +704,35 @@
         }
       ],
       "timing_evidence": {
-        "source": "lyrics.embedded.v001.srt",
-        "section_marker_cue_id": 56,
-        "state": "provisional_subtitle_metadata_not_listening_verified",
-        "end_boundary": "next_section_marker"
+        "source": "Hon_DoLo.mp3",
+        "source_sha256": "d2283a49caf57d35f01eedf6f26036609c7c51e93dd0771edbf3a37948915532",
+        "state": "unreviewed_no_prime_alignment_received",
+        "listening_validation_path": "music_alignment_20261011/validation.json"
+      },
+      "historical_october4_timing": {
+        "source_heading": "[Bridge]",
+        "source_line_start": 72,
+        "source_line_end": 74,
+        "start_seconds": 149.202,
+        "end_seconds": 156.144,
+        "timing_evidence": {
+          "source": "lyrics.embedded.v001.srt",
+          "section_marker_cue_id": 56,
+          "state": "provisional_subtitle_metadata_not_listening_verified",
+          "end_boundary": "next_section_marker"
+        },
+        "master_mix_path": "SBT_0 (Remastered).mp3"
       }
     },
     {
       "id": "S09",
       "source_heading": "[Chorus]",
-      "source_line_start": 75,
-      "source_line_end": 80,
+      "source_line_start": 74,
+      "source_line_end": 79,
       "beat": "Return toward danger",
       "dramatic_job": "The hook now has an answer",
-      "start_seconds": 156.144,
-      "end_seconds": 170.745,
+      "start_seconds": null,
+      "end_seconds": null,
       "candidate_shots": [
         {
           "id": "S09A",
@@ -625,21 +759,35 @@
         }
       ],
       "timing_evidence": {
-        "source": "lyrics.embedded.v001.srt",
-        "section_marker_cue_id": 58,
-        "state": "provisional_subtitle_metadata_not_listening_verified",
-        "end_boundary": "next_section_marker"
+        "source": "Hon_DoLo.mp3",
+        "source_sha256": "d2283a49caf57d35f01eedf6f26036609c7c51e93dd0771edbf3a37948915532",
+        "state": "unreviewed_no_prime_alignment_received",
+        "listening_validation_path": "music_alignment_20261011/validation.json"
+      },
+      "historical_october4_timing": {
+        "source_heading": "[Chorus]",
+        "source_line_start": 75,
+        "source_line_end": 80,
+        "start_seconds": 156.144,
+        "end_seconds": 170.745,
+        "timing_evidence": {
+          "source": "lyrics.embedded.v001.srt",
+          "section_marker_cue_id": 58,
+          "state": "provisional_subtitle_metadata_not_listening_verified",
+          "end_boundary": "next_section_marker"
+        },
+        "master_mix_path": "SBT_0 (Remastered).mp3"
       }
     },
     {
       "id": "S10",
       "source_heading": "[Verse 3]",
-      "source_line_start": 81,
-      "source_line_end": 102,
+      "source_line_start": 80,
+      "source_line_end": 101,
       "beat": "The price comes due",
       "dramatic_job": "The supposedly immoral smuggler sacrifices himself for love; the farewell and loss of freedom expose the irony",
-      "start_seconds": 170.745,
-      "end_seconds": 201.303,
+      "start_seconds": null,
+      "end_seconds": null,
       "candidate_shots": [
         {
           "id": "S10A",
@@ -708,21 +856,35 @@
         }
       ],
       "timing_evidence": {
-        "source": "lyrics.embedded.v001.srt",
-        "section_marker_cue_id": 63,
-        "state": "provisional_subtitle_metadata_not_listening_verified",
-        "end_boundary": "next_section_marker"
+        "source": "Hon_DoLo.mp3",
+        "source_sha256": "d2283a49caf57d35f01eedf6f26036609c7c51e93dd0771edbf3a37948915532",
+        "state": "unreviewed_no_prime_alignment_received",
+        "listening_validation_path": "music_alignment_20261011/validation.json"
+      },
+      "historical_october4_timing": {
+        "source_heading": "[Verse 3]",
+        "source_line_start": 81,
+        "source_line_end": 102,
+        "start_seconds": 170.745,
+        "end_seconds": 201.303,
+        "timing_evidence": {
+          "source": "lyrics.embedded.v001.srt",
+          "section_marker_cue_id": 63,
+          "state": "provisional_subtitle_metadata_not_listening_verified",
+          "end_boundary": "next_section_marker"
+        },
+        "master_mix_path": "SBT_0 (Remastered).mp3"
       }
     },
     {
       "id": "S11",
       "source_heading": "[Final Chorus]",
-      "source_line_start": 103,
-      "source_line_end": 108,
+      "source_line_start": 102,
+      "source_line_end": 107,
       "beat": "The last bill",
       "dramatic_job": "Repeat the mercenary boast against his sacrifice for love so the irony lands",
-      "start_seconds": 201.303,
-      "end_seconds": 213.431,
+      "start_seconds": null,
+      "end_seconds": null,
       "candidate_shots": [
         {
           "id": "S11A",
@@ -748,21 +910,35 @@
         }
       ],
       "timing_evidence": {
-        "source": "lyrics.embedded.v001.srt",
-        "section_marker_cue_id": 80,
-        "state": "provisional_subtitle_metadata_not_listening_verified",
-        "end_boundary": "next_section_marker"
+        "source": "Hon_DoLo.mp3",
+        "source_sha256": "d2283a49caf57d35f01eedf6f26036609c7c51e93dd0771edbf3a37948915532",
+        "state": "unreviewed_no_prime_alignment_received",
+        "listening_validation_path": "music_alignment_20261011/validation.json"
+      },
+      "historical_october4_timing": {
+        "source_heading": "[Final Chorus]",
+        "source_line_start": 103,
+        "source_line_end": 108,
+        "start_seconds": 201.303,
+        "end_seconds": 213.431,
+        "timing_evidence": {
+          "source": "lyrics.embedded.v001.srt",
+          "section_marker_cue_id": 80,
+          "state": "provisional_subtitle_metadata_not_listening_verified",
+          "end_boundary": "next_section_marker"
+        },
+        "master_mix_path": "SBT_0 (Remastered).mp3"
       }
     },
     {
       "id": "S12",
       "source_heading": "[Outro]",
-      "source_line_start": 109,
-      "source_line_end": 126,
+      "source_line_start": 108,
+      "source_line_end": 125,
       "beat": "Outro and acknowledgement",
       "dramatic_job": "Leave room for the deeper allusions",
-      "start_seconds": 213.431,
-      "end_seconds": 233.48,
+      "start_seconds": null,
+      "end_seconds": null,
       "candidate_shots": [
         {
           "id": "S12A",
@@ -789,17 +965,31 @@
         }
       ],
       "timing_evidence": {
-        "source": "lyrics.embedded.v001.srt",
-        "section_marker_cue_id": 85,
-        "state": "provisional_subtitle_metadata_not_listening_verified",
-        "end_boundary": "MP3_decoded_end_raw_subtitle_overrun_retained_in_SRT"
+        "source": "Hon_DoLo.mp3",
+        "source_sha256": "d2283a49caf57d35f01eedf6f26036609c7c51e93dd0771edbf3a37948915532",
+        "state": "unreviewed_no_prime_alignment_received",
+        "listening_validation_path": "music_alignment_20261011/validation.json"
+      },
+      "historical_october4_timing": {
+        "source_heading": "[Outro]",
+        "source_line_start": 109,
+        "source_line_end": 126,
+        "start_seconds": 213.431,
+        "end_seconds": 233.48,
+        "timing_evidence": {
+          "source": "lyrics.embedded.v001.srt",
+          "section_marker_cue_id": 85,
+          "state": "provisional_subtitle_metadata_not_listening_verified",
+          "end_boundary": "MP3_decoded_end_raw_subtitle_overrun_retained_in_SRT"
+        },
+        "master_mix_path": "SBT_0 (Remastered).mp3"
       }
     }
   ],
   "unresolved_story_choices": [
     "Farewell coverage can precede final carbonite reveal even though lyric mentions ice first; this is a proposed editorial choice.",
     "Keep early turnaround choruses as foreshadowing and reserve the full committed ship turn for S07.",
-    "88 and Captain Falcon references remain lyrical jokes; no additional franchise assets automatically added.",
+    "Captain Falcon remains a lyrical joke unless Ziggy requests an actual crossover; the 88 line is absent from the final Prime TXT.",
     "Every sequence may need more or fewer shots after listening to the recording."
   ],
   "minimax_alternative": {
@@ -845,7 +1035,7 @@
     ],
     "requires_new_acceptance_review": true
   },
-  "updated": "2026-10-07",
+  "updated": "2026-10-11",
   "lyrics_source_v001": {
     "path": "lyrics.user.v001.txt",
     "sha256": "6b87662275e6547f9e16c3655221651b9b0a170789b3058be5d8273bd4bc8cab",
@@ -856,5 +1046,12 @@
     "preserve_duplicate_section_labels": true,
     "normalization": "UTF-8 text; line endings may follow checkout. No lyric edits."
   },
-  "timing_warning": "Existing numeric section intervals were derived from the older233.480s recording. They are retained for historical planning only; do not use them to trim or sync the refreshed234.960s song until realigned."
+  "timing_warning": "Final Prime is the only current timing source. Old subtitle times are historical metadata retained in section historical_october4_timing and shot_plan.before_prime.json. No duration shift, rescale, beat, phrase or vocal-lane inference is accepted. Check source-audio landmarks and every selected mouth-matching phrase first.",
+  "lyrics_source_v002": {
+    "path": "lyrics.user.v002.txt",
+    "sha256": "291a2fb6f8a542dcdc4f87d1b4b1c29af3ce0014156a988f293843c71561bc01",
+    "provenance": "User pasted October7; wording unchanged after whitespace normalization and omitting old title; keep user wording.",
+    "preserve_wording": true,
+    "preserve_duplicate_section_labels": true
+  }
 }
