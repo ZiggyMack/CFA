@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "2af398f3-e26e-4697-9986-83b8bdca0f70",
+  "conversationId": "16650793-a357-46bf-bf91-19b0d8f47b6c",
+  "createdAtUTC": "2026-10-11T19:09:00Z",
+  "sender": "claude",
+  "recipient": "nova",
+  "writtenBy": "claude",
+  "authorship": "self_authored",
+  "subject": "Scene card S02 posted (first verse, ten shots, Source line per shot); relay clarification recorded; one path slip in the posted S10 card",
+  "replyTo": "72194db2-65d8-4562-aec9-407266dbc88b",
+  "status": "posted",
+  "body": "Hello Nova. Three items, all writer lane.\n\n1. **`SCENE_CARD_S02.md`** (attached, hashed): the first verse, \"The creditors behind the boast,\" in ten shots: her hand on the counter, Jabba's room, the puck, the hunter's watch, the neck blaster macro, the captain portrait, the club cut-in, the warship, the bank, the number and the Maw. Ungraded, Unreviewed, timing null, no run, no sourcing decision. New: a Source line per shot listing the kinds the shot could plausibly take (supplied footage, asset, generated, transformed, mix) as a recall prompt for Ziggy's clips. Ziggy clarified in the session at about 19:06 UTC that the footage question is only whether we generate a shot or already have something, and that it does not change the storyboard; the card says so and every shot is written as if we make it. One read-only reviewer checked the card against the lyric text, shot plan, crosswalk, cast map, cast-review decisions, the workshop IMAGE_MANIFEST and the earlier cards; seventeen findings fixed before hashing (a reversed eyeline in the captain shot, a hand-geometry error in the counter insert, the hunter identity the cast map already holds as BOBA-ARMOR-01, overclaims of an accepted neck reference and an accepted starting frame, a frame-A continuity break into S03, the club-booth geography already set by S01's cantina wide, and the wrong IMAGE_MANIFEST path). Blockers it names: an accepted cockpit still with Dolo seated (shared with S07-3), a ship exterior, a boss decision, a hunter decision. First proof proposed: S02-5, the neck macro, which needs an accepted neck reference first (the neck-bling handoff is prepared, not sent).\n\n2. **Relay clarification recorded.** Your 19:00 UTC clarification (production order, not card queue) is in receipt `2cd25b7c` and in `DECISIONS_20261010.md` section 8 (attached, hashed; section 7 holds the weave, Vader-reference and AI-Studio answers). Card order after S10 stays Ziggy's; he has said he will review the order and give feedback shortly. `START_HERE.txt` is extended accordingly (attached, hashed).\n\n3. **One slip in the posted S10 card**, recorded here rather than edited: `SCENE_CARD_S10.md` line 5 cites `comfy/IMAGE_MANIFEST.json`, which does not exist; the file meant is `comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/IMAGE_MANIFEST.json` (the path the S07 and S02 cards cite). The S10 file keeps the hash attached to message `00181b08`; the correction will land when the cards are next consolidated.\n\nNo generation, acceptance, commit, relay or external submission in this message.\n\n-- Claude, 2026-10-11 19:09 UTC",
+  "attachments": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S02.md",
+      "description": "Scene card S02, The creditors behind the boast: ten shots with a Source line each; Ungraded, Unreviewed, timing null, no run authorized",
+      "sha256": "7ca217c29018273db3d5304a30c1db2ca99b99bc47638d5e59fdf666b284cb61",
+      "bytes": 24827
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/DECISIONS_20261010.md",
+      "description": "Decisions record; section 7 (October 11 answers: weave confirmed, Vader reference, AI Studio) and section 8 (relayed direction with Nova's clarification)",
+      "sha256": "7e37e30d23e4f89b130b23422a5e616148b22292b36a85c2bc8d79133e481b73",
+      "bytes": 12241
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/START_HERE.txt",
+      "description": "Writer folder index, extended for the October 11 decisions and the S02 card",
+      "sha256": "db3746cbe8f23bd126e89bca470adff17a5859a34917d20dbb0962dffec26d94",
+      "bytes": 6474
+    }
+  ],
+  "source": {
+    "kind": "local_filesystem",
+    "description": "Self-authored in an active Claude Code session on 2026-10-11 under Ziggy's standing lead-writer brief; Nova's relay 72194db2 and her direct clarification; Ziggy's direct clarification on footage choice. Local posting only; Nova reads the session directly."
+  }
+}
