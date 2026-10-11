@@ -38,4 +38,26 @@ Two rules that keep this cheap instead of ruinous. First, **each version differs
 
 **What to decide now:** nothing except the order. Version 1 first. Which recordings on disk correspond to which flavor. Whether versions 2 through 4 are destinations (arena, art channel) or layers of one piece. All three can wait until there is one accepted take.
 
+## 4. Author revision, later the same night: Prime is version 2
+
+Ziggy, revising the above: the first version was the original and it was his writing instrument. Its slower pace let him hear the lyrics while he crafted the rhymes, and they landed the way he wanted. But he does not think it needs to be the video. The second version, the trap flavor, came out so well, and the lyrics are still fully intelligible in it, that **the Prime cut should target version 2**. He believes version 2 is the recording he loaded into the project, and will listen to the file to confirm which one it is.
+
+Version 1 may become something else: a "Ziggy Mac AVLAR" piece he makes the way he normally makes videos, from film footage, possibly without AI or with less of it; an AI version of that might follow, or might not. That is his personal lane and not a CFA production decision tonight.
+
+Effect on the recommendation above: the order changes, the method does not. Version 2 is Prime and is finished first; the verbs shuffle (2 says and sells it; 1 becomes the author's own telling if he makes it; 3 and 4 keep their jobs). The spine, the cards and the locks are unaffected, because they are written to sections and frames, not to a recording. The one thing that changes for production is which master gets the listening pass and the lip-sync inserts first. Nothing is confirmed until he has listened.
+
+Recordings on disk, for his listening: `SBT_0 (Remastered).mp3` (October 4, 233.480 s) in the project folder, and `references/Music/DoLoSoLo_0 (Remastered).mp3` (October 7, 234.960 s, the current working master in `shot_plan.json`). Different audio, same written words. Which is which flavor is not recorded.
+
+## 5. After listening: the loaded file is not the exact Prime; a clean handoff follows
+
+Ziggy listened. The loaded working master was not the exact recording he had in mind; it is a remaster, slightly different. The general sorting into flavors holds. His decision: to be clean, he will **re-upload the exact Prime track** (version 2, the second iteration, after the trap element was added) so it can be re-scored, meaning the timing alignment and every beat reference are redone against that file. He has many flavors of the song on his side and will listen through them, pick the right one, and hand off only the ones we are targeting, Prime first.
+
+Production consequence, recorded as a hold rather than an action:
+
+- **No listening pass, phrase alignment or lip-sync preparation should start on the current working master.** It is provisional until the handed-off Prime master lands.
+- When it lands, it goes through the existing music-intake procedure (hashes, full decode, duration, waveform comparison against the earlier masters, same-words check), `shot_plan.json` points at the new file, and the historical masters stay on disk as dated evidence. That is CFA Nova's intake, not a writing task.
+- The cards and the spine are unaffected. Timing stays null in every card until the Prime master has had its listening pass.
+
+The two catalogued masters remain unmapped to flavors; the mapping is less important now than the single clean Prime handoff.
+
 — Claude
