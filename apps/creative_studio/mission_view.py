@@ -89,7 +89,7 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
             if asset and (history or mission_visible(asset, reviews)):
                 st.button(asset.get("title", aid), key=f"corner-reference:{context}:{i}", on_click=open_reference, args=(asset,))
 
-    def card(task, context):
+    def card_content(task, context):
         label, color = STATES[task["status"]]
         project = projects.get(task["project"], "Across projects")
         with st.expander(f":{color}-badge[{task.get('statusLabel', label)}] **{task['title']}** · {project}", expanded=False):
@@ -139,6 +139,10 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
                     st.link_button(link["label"], link["href"])
                 else:
                     st.caption(link["label"] + ": " + link.get("unavailableReason", "reference is not included in this snapshot."))
+
+    def card(task, context):
+        with st.container(key=f"mission-state-{task['status']}-{context}"):
+            card_content(task, context)
 
     with priority_slot:
         with st.expander(f"Top priority · {len(priority)} items", expanded=False):

@@ -44,7 +44,7 @@ def apply_theme() -> None:
     [data-testid="stSidebar"] [data-testid="stMarkdownContainer"],
     [data-testid="stSidebar"] label,[data-testid="stSidebar"] h1,
     [data-testid="stSidebar"] h2,[data-testid="stSidebar"] h3 {color:#edf0f5!important;}
-    [data-testid="stCaptionContainer"] {color:#a6b3c5;}
+    [data-testid="stCaptionContainer"],[data-testid="stCaptionContainer"] p {color:#a6b3c5!important;}
     [data-testid="stSidebar"] [data-testid="stCaptionContainer"] {color:#92a1b5!important;}
     [data-testid="stSidebarCollapseButton"] span {color:#edf0f5!important;}
     [data-testid="stSidebar"] button[kind="secondary"] {background:#1b222d;color:#edf0f5;border-color:#303b4b;text-align:left;}
@@ -52,6 +52,71 @@ def apply_theme() -> None:
     [data-testid="stSidebar"] button[kind="primary"] {background:#d4b582;border-color:#d4b582;color:#15191e;}
     [data-testid="stSidebar"] button[kind="primary"] [data-testid="stMarkdownContainer"] {color:#15191e!important;}
     [data-testid="stSidebar"] .stButton button {justify-content:flex-start;}
+    /* Keep native controls readable while an existing Cloud session retains its previous theme. */
+    .stApp :is(.stButton,.stDownloadButton,.stLinkButton,.stFormSubmitButton,[data-testid="stFileUploader"]) :is(button,a) {
+        background:#1b232e!important;color:#edf0f5!important;border:1px solid #394453!important;}
+    .stApp :is(.stButton,.stDownloadButton,.stLinkButton,.stFormSubmitButton,[data-testid="stFileUploader"]) :is(button,a) [data-testid="stMarkdownContainer"] {color:inherit!important;}
+    .stApp :is(.stButton,.stDownloadButton,.stLinkButton,.stFormSubmitButton,[data-testid="stFileUploader"]) :is(button,a):is(:hover,:focus-visible):not(:disabled):not([aria-disabled="true"]) {
+        background:#253345!important;color:#edf0f5!important;border-color:#d4b582!important;}
+    .stApp :is(.stButton,.stDownloadButton,.stLinkButton,.stFormSubmitButton,[data-testid="stFileUploader"]) :is(button,a)[kind="primary"] {
+        background:#d4b582!important;color:#15191e!important;border-color:#d4b582!important;}
+    .stApp :is(.stButton,.stDownloadButton,.stLinkButton,.stFormSubmitButton,[data-testid="stFileUploader"]) :is(button,a)[kind="primary"]:is(:hover,:focus-visible):not(:disabled):not([aria-disabled="true"]) {
+        background:#eed4a6!important;color:#15191e!important;border-color:#eed4a6!important;}
+    .stApp :is(.stButton,.stDownloadButton,.stLinkButton,.stFormSubmitButton,[data-testid="stFileUploader"]) :is(button,a):is(:disabled,[aria-disabled="true"]) {
+        background:#171d25!important;color:#92a1b5!important;border-color:#303b4b!important;opacity:1;}
+    .stApp [kind]:is(:disabled,[aria-disabled="true"]) [data-testid="stMarkdownContainer"] {color:inherit!important;}
+    .stApp [data-testid="stMarkdownContainer"] a {color:#c7dbed;}
+    .stApp [data-testid="stMarkdownContainer"] a:hover {color:#ffe2ae;}
+    .stApp label,.stApp label [data-testid="stMarkdownContainer"],[data-testid="stHeader"] button {color:#edf0f5!important;}
+    .stApp :is([data-baseweb="input"],[data-baseweb="textarea"]),
+    .stApp [data-baseweb="select"]>div {
+        background:#1b232e!important;color:#edf0f5!important;border-color:#394453!important;}
+    .stApp :is([data-baseweb="input"],[data-baseweb="textarea"]) :is(input,textarea),
+    .stApp [data-baseweb="select"] input {
+        background:transparent!important;color:#edf0f5!important;caret-color:#f5ca80;}
+    .stApp :is(input,textarea)::placeholder {color:#92a1b5!important;opacity:1;}
+    .stApp [data-baseweb="select"] :is(div,span) {color:#edf0f5!important;}
+    .stApp [data-baseweb="select"] svg {fill:#a6b3c5!important;}
+    .stApp [data-baseweb="select"] [data-baseweb="tag"] {background:#303e4f!important;}
+    .stApp :is([data-baseweb="input"],[data-baseweb="textarea"],[data-baseweb="select"]):focus-within {outline:2px solid #f5ca80;outline-offset:2px;}
+    .stApp :is(input,textarea):disabled {color:#92a1b5!important;-webkit-text-fill-color:#92a1b5!important;}
+    .stApp [data-testid="stNumberInput"] button {background:#1b232e!important;color:#edf0f5!important;}
+    .stApp [data-testid="stFileUploaderDropzone"] {background:#1a2330!important;color:#edf0f5!important;border:1px dashed #56667c;}
+    .stApp [data-testid="stFileUploaderDropzoneInstructions"] {color:#edf0f5!important;}
+    .stApp [data-testid="stFileUploaderDropzoneInstructions"] :is(span,small) {color:#a6b3c5!important;}
+    .stApp [data-testid="stFileUploaderDropzone"][aria-disabled="true"] {background:#171d25!important;color:#92a1b5!important;}
+    .stApp [data-testid="stText"] {color:#edf0f5!important;}
+    .stApp [data-testid="stCode"],.stApp [data-testid="stCode"] :is(pre,code) {background:#0d1725!important;color:#eef3fb!important;}
+    [data-testid="stAlertContainer"] {background:#314964!important;color:#dcecff!important;}
+    [data-testid="stAlertContainer"]:has([data-testid="stAlertContentSuccess"]) {background:#284c3e!important;color:#d1f0dd!important;}
+    [data-testid="stAlertContainer"]:has([data-testid="stAlertContentWarning"]) {background:#55462f!important;color:#ffe3b0!important;}
+    [data-testid="stAlertContainer"]:has([data-testid="stAlertContentError"]) {background:#59313e!important;color:#f6dae4!important;}
+    [data-testid="stAlertContainer"] [data-testid="stMarkdownContainer"] {color:inherit!important;}
+    /* Base Web dropdown menus render in a portal outside .stApp. */
+    [data-baseweb="menu"],[role="listbox"],[role="option"],[data-baseweb="menu"] li {
+        background:#1b232e!important;color:#edf0f5!important;}
+    [data-baseweb="menu"] :is(div,span),[role="option"] :is(div,span) {color:inherit!important;}
+    [role="option"]:is(:hover,:focus,[aria-selected="true"]),[data-baseweb="menu"] li:is(:hover,:focus,[aria-selected="true"]) {
+        background:#303e4f!important;color:#ffe2ae!important;}
+    [data-baseweb="menu"] [aria-disabled="true"],[role="option"][aria-disabled="true"] {color:#92a1b5!important;}
+    [data-testid="stPopoverBody"],[data-baseweb="tooltip"] {background:#1a2330!important;color:#edf0f5!important;border-color:#394453!important;}
+    .stApp [data-baseweb="tab-list"] {background:#11151b!important;}
+    .stApp [data-baseweb="tab"] {background:#1a2330!important;color:#edf0f5!important;}
+    .stApp [data-baseweb="tab"][aria-selected="true"] {background:#28303a!important;color:#ffe2ae!important;}
+    .stApp [data-baseweb="tab"]:disabled {color:#92a1b5!important;}
+    .stApp [data-baseweb="tab-highlight"] {background:#d4b582!important;}
+    .stApp [data-baseweb="tab-border"] {background:#394453!important;}
+    .stMarkdownBadge {background:#354255!important;color:#dce5f2!important;}
+    [class*="st-key-mission-state-ready-"] {--mission-badge-background:#284c3e;--mission-badge-text:#d1f0dd;}
+    [class*="st-key-mission-state-needs_input-"] {--mission-badge-background:#55462f;--mission-badge-text:#ffe3b0;}
+    [class*="st-key-mission-state-in_progress-"] {--mission-badge-background:#314964;--mission-badge-text:#dcecff;}
+    [class*="st-key-mission-state-done-"] {--mission-badge-background:#34463e;--mission-badge-text:#bed1c6;}
+    [class*="st-key-mission-state-planned-"] {--mission-badge-background:#354255;--mission-badge-text:#dce5f2;}
+    [class*="st-key-mission-state-"] [data-testid="stExpander"]>details>summary .stMarkdownBadge {
+        background:var(--mission-badge-background)!important;color:var(--mission-badge-text)!important;}
+    [data-testid="stExpander"]>details>summary {background:#1a2330!important;color:#edf0f5!important;}
+    [data-testid="stExpander"]>details>summary [data-testid="stMarkdownContainer"] {color:inherit!important;}
+    [data-testid="stExpander"]>details>summary:is(:hover,:focus-visible) {background:#253345!important;}
     .studio-hero {padding:1.5rem 1.75rem;background:#1a2330;border:1px solid #38475b;border-radius:10px;margin:0 0 1.7rem;color:#edf0f5;}
     .studio-hero .eyebrow {font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:#d8b87f;margin-bottom:.7rem;}
     .studio-hero h1 {color:#edf0f5!important;margin:0!important;padding:0!important;font-size:clamp(2rem,4vw,2.7rem)!important;}
@@ -63,15 +128,16 @@ def apply_theme() -> None:
     [data-testid="stMetric"] {background:#1b2532;border:1px solid #3a4759;border-radius:10px;padding:1rem;min-height:6.6rem;}
     [data-testid="stMetricValue"] {color:#eed4a6;}
     [data-testid="stMetricLabel"] {color:#b6c6da;}
-    .st-key-mission-shot-plans button {background:#1b2532;border:1px solid #3a4759;min-height:6.6rem;color:#eed4a6;font-size:1.1rem;}
+    .stApp .st-key-mission-shot-plans button {background:#1b2532!important;border:1px solid #3a4759!important;min-height:6.6rem;color:#eed4a6!important;font-size:1.1rem;}
     .st-key-mission-shot-plans button:hover {background:#253345;border-color:#d4b582;}
     .st-key-mission-priority {background:linear-gradient(135deg,#2b2240,#1e1c2d);border-radius:10px;}
     .st-key-mission-priority [data-testid="stExpander"] {background:transparent;}
     .st-key-mission-priority [data-testid="stExpander"]>details {border-color:#9678c8;}
-    .st-key-mission-priority summary {color:#f3e8ff;}
+    .st-key-mission-priority [data-testid="stExpander"]>details>summary {background:#2b2240!important;color:#f3e8ff!important;}
+    .st-key-mission-priority [data-testid="stExpander"]>details>summary:is(:hover,:focus-visible) {background:#44315e!important;}
     .stButton button,.stDownloadButton button {border-radius:8px;}
     .stApp button[kind="primary"],.stApp button[kind="primary"] [data-testid="stMarkdownContainer"] {color:#15191e!important;}
-    .stApp :is(button,a,input,textarea,select,summary):focus-visible {outline:3px solid #f5ca80;outline-offset:3px;}
+    .stApp :is(button,a,input,textarea,select,summary):focus-visible {outline:3px solid #f5ca80!important;outline-offset:3px;}
     @media(max-width:760px) {.block-container{padding:4.5rem .8rem 3rem;} .studio-hero{padding:1.35rem;} }
     </style>""", unsafe_allow_html=True)
 
