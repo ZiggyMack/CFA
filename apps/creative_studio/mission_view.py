@@ -71,7 +71,7 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
         col.metric(label, number)
     columns[3].button(f"Shot plans · {len(plans)} →", key="mission-shot-plans", width="stretch",
                       on_click=show_collection, args=([], "All shot plans", "shot_plans"))
-    priority_slot = st.container()
+    priority_slot = st.container(key="mission-priority")
     filter_col, search_col = st.columns([1, 2])
     with filter_col:
         provider = st.selectbox("Collaborator", ["all", *dict.fromkeys(t["provider"] for t in tasks)],
