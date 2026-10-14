@@ -13,7 +13,7 @@ import streamlit as st
 APP_DIR = Path(__file__).resolve().parent
 if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
-from library_helpers import (
+from studio_dependencies import (
     DESTINATIONS, EXPORT_FORMAT, MISSION_PROVIDERS, STORYBOARD_STAGES, VISUAL_KINDS, basket_payload, basket_zip,
     collaborator_sections, document_tree, effective_reviews, export_allowed, handoff_payload, handoff_text,
     layout_video_assets, media_path, mission_tasks, mission_review_data, normalize_plan, ordered_assets, production_workflows,
@@ -766,7 +766,8 @@ def open_mission_reference(asset: dict) -> None:
 
 
 def render_mission_control(data: dict, review_data: dict | None = None) -> None:
-    from mission_view import render_corner
+    from studio_dependencies import current_module
+    render_corner = current_module("mission_view").render_corner
     st.button("← Back to library", key="mission-back", on_click=back_to_library)
     st.markdown('<div class="studio-hero"><div class="eyebrow">CFA · Ziggy’s Corner</div>'
                 '<h1>Mission Control</h1><p>Your next moves, prepared handoffs, and ideas waiting for their next pass.</p></div>',

@@ -3,7 +3,7 @@ from pathlib import Path
 
 import streamlit as st
 
-from library_helpers import media_path, mission_pending_requests, mission_task_progress, mission_tasks, mission_visible
+from studio_dependencies import media_path, mission_pending_requests, mission_task_progress, mission_tasks, mission_visible
 
 STATES = {"ready": ("Ready to send", "green"), "needs_input": ("Needs your input", "orange"),
           "in_progress": ("In progress", "blue"), "planned": ("Planned", "gray"), "done": ("Done", "green")}

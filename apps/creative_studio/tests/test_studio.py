@@ -7,6 +7,7 @@ import json
 import shutil
 import sys
 import tempfile
+import types
 import unittest
 import zipfile
 from pathlib import Path
@@ -271,7 +272,7 @@ class StudioAppTest(unittest.TestCase):
         cache.mkdir(exist_ok=True)
         cls.temp = tempfile.TemporaryDirectory(prefix="studio-test-", dir=cache)
         cls.app_dir = Path(cls.temp.name)
-        for name in ("app.py", "library_helpers.py", "mission_view.py"):
+        for name in ("app.py", "library_helpers.py", "mission_view.py", "studio_dependencies.py"):
             shutil.copy2(APP_DIR / name, cls.app_dir / name)
         library = cls.app_dir / "library"
         library.mkdir()
@@ -365,6 +366,35 @@ class StudioAppTest(unittest.TestCase):
             self.assertFalse(any(b.key == "open:corner-only" for b in app.button))
         finally:
             path.unlink(missing_ok=True)
+
+    def test_hot_redeploy_ignores_stale_generic_helper_and_mission_modules(self):
+        import library_helpers as helpers
+        stale_helpers = types.ModuleType("library_helpers")
+        stale_helpers.__dict__.update({key: value for key, value in vars(helpers).items()
+                                      if key != "mission_review_data"})
+        stale_mission = types.ModuleType("mission_view")
+        def stale_render(*args, **kwargs):
+            raise AssertionError("The stale mission renderer was called")
+        stale_mission.render_corner = stale_render
+        missing = object()
+        previous = {name: sys.modules.get(name, missing) for name in ("library_helpers", "mission_view")}
+        sys.modules.update(library_helpers=stale_helpers, mission_view=stale_mission)
+        try:
+            with self.assertRaisesRegex(ImportError, "mission_review_data"):
+                exec("from library_helpers import mission_review_data", {})
+            app = self.app(library=False)
+            self.assertFalse(app.exception)
+            self.assertEqual(app.button(key="mission-shot-plans").label, "Shot plans · 1 →")
+            self.assertTrue(any("Correct the coat reference" in e.label for e in app.expander))
+            app.button(key="mission-shot-plans").click().run()
+            self.assertFalse(app.exception)
+            self.assertTrue(any(h.value == "All shot plans" for h in app.subheader))
+        finally:
+            for name, module in previous.items():
+                if module is missing:
+                    sys.modules.pop(name, None)
+                else:
+                    sys.modules[name] = module
 
     def test_pagination_selection_and_session_notes(self):
         app = self.app()
