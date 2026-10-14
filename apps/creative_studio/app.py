@@ -33,11 +33,12 @@ def apply_theme() -> None:
     st.markdown("""<style>
     :root {--studio-ink:#edf0f5;--studio-accent:#d4b582;--studio-line:#38475b;
         --studio-font:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;}
-    .stApp {background:#11151b;color:var(--studio-ink);font-family:var(--studio-font);}
+    .stApp {background:#11151b;color:var(--studio-ink)!important;font-family:var(--studio-font);}
     .block-container {padding-top:2rem;max-width:1500px;padding-bottom:4rem;}
     .stApp p,.stApp label,.stApp button,.stApp input,.stApp textarea,.stApp select,
     h1,h2,h3,h4,h5,h6 {font-family:var(--studio-font)!important;}
     h1,h2,h3,h4,h5,h6 {color:var(--studio-ink);}
+    .stApp [data-testid="stHeading"] :is(h1,h2,h3,h4,h5,h6) {color:#edf0f5!important;}
     h1 {letter-spacing:-.025em;line-height:1.15!important;}
     [data-testid="stHeader"] {background:#11151bf2;border-bottom:1px solid #2a333e;}
     [data-testid="stSidebar"] {background:#171d25;border-right:1px solid #2a333e;}
@@ -45,6 +46,7 @@ def apply_theme() -> None:
     [data-testid="stSidebar"] label,[data-testid="stSidebar"] h1,
     [data-testid="stSidebar"] h2,[data-testid="stSidebar"] h3 {color:#edf0f5!important;}
     [data-testid="stCaptionContainer"],[data-testid="stCaptionContainer"] p {color:#a6b3c5!important;}
+    .stApp [data-testid="stCaptionContainer"] {opacity:1!important;}
     [data-testid="stSidebar"] [data-testid="stCaptionContainer"] {color:#92a1b5!important;}
     [data-testid="stSidebarCollapseButton"] span {color:#edf0f5!important;}
     [data-testid="stSidebar"] button[kind="secondary"] {background:#1b222d;color:#edf0f5;border-color:#303b4b;text-align:left;}
@@ -86,7 +88,7 @@ def apply_theme() -> None:
     .stApp [data-testid="stFileUploaderDropzoneInstructions"] {color:#edf0f5!important;}
     .stApp [data-testid="stFileUploaderDropzoneInstructions"] :is(span,small) {color:#a6b3c5!important;}
     .stApp [data-testid="stFileUploaderDropzone"][aria-disabled="true"] {background:#171d25!important;color:#92a1b5!important;}
-    .stApp [data-testid="stText"] {color:#edf0f5!important;}
+    .stApp [data-testid="stText"],.stApp [data-testid="stText"]>span {color:#edf0f5!important;}
     .stApp [data-testid="stCode"],.stApp [data-testid="stCode"] :is(pre,code) {background:#0d1725!important;color:#eef3fb!important;}
     [data-testid="stAlertContainer"] {background:#314964!important;color:#dcecff!important;}
     [data-testid="stAlertContainer"]:has([data-testid="stAlertContentSuccess"]) {background:#284c3e!important;color:#d1f0dd!important;}
