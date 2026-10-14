@@ -75,6 +75,7 @@ def apply_theme() -> None:
     .stApp [data-baseweb="select"] input {
         background:transparent!important;color:#edf0f5!important;-webkit-text-fill-color:#edf0f5!important;caret-color:#f5ca80;}
     .stApp :is(input,textarea)::placeholder {color:#92a1b5!important;-webkit-text-fill-color:#92a1b5!important;opacity:1;}
+    .stApp [data-testid="InputInstructions"] {color:#a6b3c5!important;}
     .stApp [data-baseweb="select"] :is(div,span) {color:#edf0f5!important;}
     .stApp [data-baseweb="select"] svg {fill:#a6b3c5!important;}
     .stApp [data-baseweb="select"] [data-baseweb="tag"] {background:#303e4f!important;}
