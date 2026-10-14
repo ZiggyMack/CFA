@@ -68,13 +68,13 @@ def apply_theme() -> None:
     .stApp [data-testid="stMarkdownContainer"] a {color:#c7dbed;}
     .stApp [data-testid="stMarkdownContainer"] a:hover {color:#ffe2ae;}
     .stApp label,.stApp label [data-testid="stMarkdownContainer"],[data-testid="stHeader"] button {color:#edf0f5!important;}
-    .stApp :is([data-baseweb="input"],[data-baseweb="textarea"]),
+    .stApp :is([data-baseweb="input"],[data-baseweb="base-input"],[data-baseweb="textarea"]),
     .stApp [data-baseweb="select"]>div {
         background:#1b232e!important;color:#edf0f5!important;border-color:#394453!important;}
-    .stApp :is([data-baseweb="input"],[data-baseweb="textarea"]) :is(input,textarea),
+    .stApp :is([data-baseweb="input"],[data-baseweb="base-input"],[data-baseweb="textarea"]) :is(input,textarea),
     .stApp [data-baseweb="select"] input {
-        background:transparent!important;color:#edf0f5!important;caret-color:#f5ca80;}
-    .stApp :is(input,textarea)::placeholder {color:#92a1b5!important;opacity:1;}
+        background:transparent!important;color:#edf0f5!important;-webkit-text-fill-color:#edf0f5!important;caret-color:#f5ca80;}
+    .stApp :is(input,textarea)::placeholder {color:#92a1b5!important;-webkit-text-fill-color:#92a1b5!important;opacity:1;}
     .stApp [data-baseweb="select"] :is(div,span) {color:#edf0f5!important;}
     .stApp [data-baseweb="select"] svg {fill:#a6b3c5!important;}
     .stApp [data-baseweb="select"] [data-baseweb="tag"] {background:#303e4f!important;}
