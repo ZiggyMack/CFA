@@ -17,7 +17,16 @@ REVIEW_FORMAT = "cfa-visual-review-v1"
 HANDOFF_FORMAT = "cfa-shot-handoff-v1"
 EXPORT_FORMAT = "cfa-visual-export-v1"
 REVIEW_STATUSES = {"keep", "needs_fixes", "remove"}
-DESTINATIONS = ("undecided", "Gemini", "Flow", "Grok")
+# Opaque, hash-bound review provenance survives the compact editor. These fields
+# do not drive execution or confer approval; unsupported controls remain in the index.
+REVIEW_METADATA_FIELDS = {
+    "updatedAt", "origin", "source", "sourceIntakeID", "scopeNote", "sourceReviewPath",
+    "collectionState", "importEvidence", "archiveReason", "removalState", "handoffPolicy",
+    "creativeReview", "supersededBy", "displayTitle", "humanRatingConfirmation", "history",
+    "reason", "reasonSource", "scopedPropCorrection", "temporalVariant", "lookSelection",
+    "componentSelection", "directUserClarification", "creativeLane", "validationEvidence",
+}
+DESTINATIONS = ("undecided", "Gemini", "Flow", "Grok", "ComfyUI")
 MISSION_PROVIDERS = ("Grok", "Gemini", "Flow", "Panhandler Nova")
 MISSION_STATUSES = {"ready", "needs_input", "planned", "in_progress", "done"}
 VISUAL_KINDS = {"image", "video", "gif"}
@@ -176,12 +185,13 @@ def normalize_plan(value: Any) -> dict[str, Any] | None:
         raise ValueError("A shot plan must be an object or null.")
     destinations = value.get("destinations", ["undecided"])
     if not isinstance(destinations, list) or any(d not in DESTINATIONS for d in destinations):
-        raise ValueError("Choose Gemini, Flow, Grok, or undecided for a shot plan.")
+        raise ValueError("Choose Gemini, Flow, Grok, ComfyUI, or undecided for a shot plan.")
     destinations = [d for d in DESTINATIONS if d in destinations and d != "undecided"] or ["undecided"]
     idea, prompt = value.get("idea", ""), value.get("prompt", "")
     if not isinstance(idea, str) or not isinstance(prompt, str):
         raise ValueError("Shot ideas and prompts must be text.")
-    return {"status": "planned", "destinations": destinations, "idea": idea[:20000], "prompt": prompt[:40000]}
+    status = "requested_bounded_test" if value.get("status") == "requested_bounded_test" else "planned"
+    return {"status": status, "destinations": destinations, "idea": idea[:20000], "prompt": prompt[:40000]}
 
 
 def normalize_decision(value: Any, *, partial: bool = False, allow_catalog_variant: bool = True) -> dict[str, Any]:
@@ -210,11 +220,24 @@ def normalize_decision(value: Any, *, partial: bool = False, allow_catalog_varia
         if ref is not None and (not isinstance(ref, dict) or ref.get("status") not in ("requested", "approved")
                                 or ref.get("scope") not in ("complete_look", "identity", "outfit", "scene", "detail")):
             raise ValueError("A working reference needs a valid status and scope.")
-        result["workingReference"] = {"status": ref["status"], "scope": ref["scope"]} if ref else None
+        result["workingReference"] = json.loads(json.dumps(ref, allow_nan=False)) if ref else None
     if "storyboardStage" in value:
         if value["storyboardStage"] is not None and value["storyboardStage"] not in STORYBOARD_STAGES:
             raise ValueError("Choose a valid storyboard stage.")
         result["storyboardStage"] = value["storyboardStage"]
+    for key in ("likenessRating", "sceneQualityRating"):
+        if key in value:
+            rating = value[key]
+            if rating is not None and (type(rating) is not int or not 1 <= rating <= 5):
+                raise ValueError("A review rating must be 1–5 or null.")
+            result[key] = rating
+    if "workingReferenceScope" in value:
+        scope = value["workingReferenceScope"]
+        if scope is not None and scope not in ("complete_look", "identity", "outfit", "scene", "detail"):
+            raise ValueError("Choose a valid working-reference scope.")
+        result["workingReferenceScope"] = scope
+    for key in REVIEW_METADATA_FIELDS & value.keys():
+        result[key] = json.loads(json.dumps(value[key], allow_nan=False))
     return result
 
 
@@ -361,7 +384,7 @@ def mission_tasks(value: Any) -> list[dict]:
     for item in value["tasks"]:
         if not isinstance(item, dict) or not isinstance(item.get("id"), str) or item["id"] in seen:
             continue
-        if item.get("provider") not in MISSION_PROVIDERS or item.get("status") not in MISSION_STATUSES:
+        if not isinstance(item.get("provider"), str) or not item["provider"].strip() or item.get("status") not in MISSION_STATUSES:
             continue
         if item.get("project") not in ("hon", "lisan", "shared"):
             continue
@@ -369,16 +392,97 @@ def mission_tasks(value: Any) -> list[dict]:
             continue
         task = {key: item[key] for key in ("id", "provider", "project", "title", "status", "summary", "nextAction")}
         task["missing"] = [s for s in item.get("missing", []) if isinstance(s, str)] if isinstance(item.get("missing", []), list) else []
+        for key in ("enablers", "deliverables", "previewAssetIDs", "variantAssetIDs"):
+            task[key] = [s for s in item.get(key, []) if isinstance(s, str)] if isinstance(item.get(key), list) else []
+        for key in ("priority", "statusLabel", "missingLabel", "laterReview"):
+            if isinstance(item.get(key), str):
+                task[key] = item[key]
+        task["comparisonInHistory"] = item.get("comparisonInHistory") is True
         task["links"] = []
         for link in item.get("links", []) if isinstance(item.get("links", []), list) else []:
             if not isinstance(link, dict) or not isinstance(link.get("label", "Reference"), str):
                 continue
             reference = {key: link[key] for key in ("assetID", "downloadPath") if isinstance(link.get(key), str)}
+            if isinstance(link.get("assetIDs"), list):
+                reference["assetIDs"] = [s for s in link["assetIDs"] if isinstance(s, str)]
+            if isinstance(link.get("href"), str) and urlsplit(link["href"]).scheme == "https" and urlsplit(link["href"]).netloc:
+                reference["href"] = link["href"]
+            if isinstance(link.get("unavailableReason"), str):
+                reference["unavailableReason"] = link["unavailableReason"]
             if reference:
                 task["links"].append({"label": link.get("label", "Reference"), **reference})
         tasks.append(task)
         seen.add(item["id"])
     return tasks
+
+
+def mission_review_data(base: dict, snapshot: dict) -> dict:
+    """Union review identities without expanding ordinary browsing collections."""
+    merged = dict(base)
+    for key in ("assets", "reviewDecisions"):
+        records = {item["id"]: item for item in base.get(key, [])}
+        for item in snapshot.get(key, []):
+            old = records.get(item["id"])
+            if old and old.get("sha256") and item.get("sha256") != old["sha256"] and (
+                key == "reviewDecisions" or old.get("kind") not in {"document", "pdf"} or item.get("kind") not in {"document", "pdf"}
+            ):
+                raise ValueError(f"Mission snapshot changes an existing reference hash: {item['id']}")
+            records[item["id"]] = item
+        merged[key] = list(records.values())
+    return merged
+
+
+def mission_visible(asset: dict | None, reviews: dict) -> bool:
+    return bool(asset and not asset.get("archived") and reviews.get(asset["id"], {}).get("status") != "remove")
+
+
+def mission_pending_requests(data: dict, reviews: dict, project: str) -> list[str]:
+    by_id = {a["id"]: a for a in data.get("assets", [])}
+    return list(dict.fromkeys(r["id"] for r in data.get("reviewRequests", [])
+        if (a := by_id.get(r.get("id"))) and a.get("project") == project
+        and r.get("type") == "missing_decision" and a.get("sha256") and r.get("sha256") == a["sha256"]
+        and mission_visible(a, reviews) and reviews.get(a["id"], {}).get("status") not in REVIEW_STATUSES))
+
+
+def mission_task_progress(task: dict, assets: list[dict], reviews: dict) -> dict:
+    """Match index shortlist/gun decisions; a Fix/Remove is an answered review."""
+    task = dict(task)
+    by_id = {a["id"]: a for a in assets}
+    if task["id"] in {"grok-lisan-mouth65-available", "grok-falcon-extension40-available"}:
+        pending, answered, unavailable = [], [], []
+        for aid in dict.fromkeys(task.get("previewAssetIDs", [])):
+            a = by_id.get(aid)
+            if not a or a.get("kind") != "image":
+                unavailable.append(aid)
+            elif reviews.get(aid, {}).get("status") in REVIEW_STATUSES:
+                answered.append(aid)
+            elif mission_visible(a, reviews):
+                pending.append(aid)
+            else:
+                unavailable.append(aid)
+        name = "Lisan mouth" if task["id"] == "grok-lisan-mouth65-available" else "Falcon extension"
+        task.update(title=f"{name} shortlist · {len(pending)} awaiting review",
+                    status="needs_input" if pending else "in_progress",
+                    priority=task.get("priority") if pending or unavailable else "normal",
+                    previewAssetIDs=pending, reviewedPreviewAssetIDs=answered,
+                    summary=f"{len(answered)} of {len(pending) + len(answered) + len(unavailable)} shortlisted images have recorded decisions. {len(pending)} await your decision."
+                            + (f" {len(unavailable)} references are unavailable and need a source check." if unavailable else "")
+                            + " The full collection remains available; images outside this shortlist are not new review requests.",
+                    nextAction="Review the remaining shortlist. Existing decisions stay saved; recorded defects remain separate correction work." if pending else
+                               "The shortlist decisions are saved. The team can follow up on recorded defects; earlier decisions remain available below.")
+    elif task["id"] == "favorites-prop-sweep":
+        received = [a for a in assets if a.get("project") == "hon" and a.get("kind") == "image"
+                    and a.get("sourceIntake") == "HON-GROK-RETURN-20261009" and a.get("propState") == "with_gun" and a.get("outfitAlbumID")]
+        visible = [a for a in received if mission_visible(a, reviews)]
+        pending = [a["id"] for a in visible if reviews.get(a["id"], {}).get("status") not in REVIEW_STATUSES]
+        fixes = sum(reviews.get(a["id"], {}).get("status") == "needs_fixes" for a in visible)
+        task.update(title=f"Review outfit gun variants · {len(pending)} unreviewed" if pending else "Outfit gun variant review",
+                    status="needs_input" if pending else "in_progress" if fixes else "done",
+                    summary=f"{len(received)} distinct gun variants across {len({a['outfitAlbumID'] for a in received})} outfits. {len(visible)} visible; {len(received)-len(visible)} hidden by removal or archive choices. {len(pending)} unreviewed; {fixes} need fixes. Gun approval is separate from character corrections.",
+                    nextAction="Review the remaining variants for outfit and character preservation." if pending else "The recorded decisions are saved; character and other recorded fixes remain separate follow-up work.",
+                    missing=[], previewAssetIDs=pending,
+                    reviewedPreviewAssetIDs=[a["id"] for a in received if reviews.get(a["id"], {}).get("status") in REVIEW_STATUSES])
+    return task
 
 
 def production_workflows(value: Any) -> list[dict]:

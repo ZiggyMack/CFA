@@ -26,7 +26,7 @@ Native `st.image` and `st.video` serve packaged files through Streamlit. No stat
 
 ## Review behavior
 
-- **Ziggy’s Corner / Mission Control:** the first view in a new session. Saved task cards cover all projects and show each collaborator's next action, status, missing inputs, and packaged reference documents. Live review and shot-plan counts reflect your session. The page does not monitor third-party accounts or imply a draft was sent. Hosted links resolve packaged asset IDs; local filesystem links are not exposed.
+- **Ziggy’s Corner / Mission Control:** the first view in a new session. Current index tasks appear as collapsed status/title/project cards, with summary counts first, a closed Top priority section and collaborator handoffs. A compact Image review area offers Review images only when unanswered requests remain. The Shot plans count opens visible saved plans across all projects; review sweep stays in a closed disclosure. Before sending lists prerequisites; Deliverables lists expected returns; later review stays separate. Shortlist counts respect saved Keep/Fix/Remove decisions. References open within the Corner, and reviewed history remains accessible. The page does not monitor third-party accounts or imply a draft was sent.
 - **Library:** filter by category, album, and words; open an item for its larger picture or video and review details. Videos have independent Layout (Grouped or All clips) and Sort (Longest first, Shortest, or Alphabetical A–Z) controls. The default is Grouped with Longest first within each scene category, alphabetical ties, unknown durations last, and turnarounds at the bottom. All clips sorts across the current collection/search.
 - **Storyboard:** filter by planning stage, source-panel position, and story themes. Narrowing the position range also narrows the available themes. Stages are Preliminary, Detailed design, Verification, and Production; changing a stage does not claim a technical check passed. Planning order does not imply measured song timings.
 - **Collaborators:** a global production workspace with ComfyUI first, then Flow, Gemini, Grok, and Panhandler Nova. ComfyUI shows concrete saved workflow records and their actual inputs, outputs/previews, documents, and execution status. Cloud links are restricted to `https://cloud.comfy.org/` and do not run the graph. Other providers show their saved tasks and current briefs across projects. A local FFmpeg result must not be described as a Cloud execution.
@@ -53,6 +53,14 @@ Mission Control reads `catalog.missionControl.tasks` as saved data. Task links m
 The production workspace reads `catalog.productionWorkflows`: each record has `id`, `provider`, `project`, `title`, a human-readable `status`, `summary`, `nextAction`, source/output/document asset ID lists, and an optional bounded `cloudURL`. These are workflow bookkeeping records, not executable instructions. Linked media opens in the same gallery viewer.
 
 JSON/TXT handoffs contain references and notes; the separately prepared basket ZIP contains review media. A star is a shortlist choice, and Keep only records the stated review scope; neither changes the source catalog's production approval. The application never writes review changes to the packaged catalog or original source files.
+
+## Synchronizing Ziggy’s Corner only
+
+Run python apps/creative_studio/build_mission_control.py after the local index catalog is updated. It prepares library/mission_control.json, library/mission_manifest.json and content-addressed files under library/mission_media/. It packages task references, collection links and saved review identities from the same generated catalog used by the index. It verifies original hashes, reuses verified existing previews, and reports missing references. The base library/catalog.json and general browsing collections stay unchanged.
+
+The app uses this snapshot for the Corner when present, otherwise it uses its existing catalog. Reviews merge current snapshot seeds with session overrides; explicit clears remain authoritative. Full review exports and review sweeps retain Corner-only and base-library references, likeness and scene ratings, scoped component notes and review provenance. Mutable document contents can refresh under their existing IDs; reviewed image/video hashes cannot.
+
+Deploy the changed Python files, the two snapshot JSON files, and **every path listed in mission_manifest.json outputs** to the existing app. Some outputs reuse base-library files. Running the builder only prepares local files; it does not commit, upload or update Streamlit. This is a publication snapshot, not live monitoring or automatic two-way browser storage sync. Export/import remains the review-transfer mechanism.
 
 ## Checks
 

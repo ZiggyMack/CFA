@@ -216,7 +216,7 @@ class LibraryHelpersTest(unittest.TestCase):
                 "missing": [], "links": [{"label": "Brief", "assetID": "brief"},
                                             {"label": "Private", "href": "D:/private/notes.txt"}]}
         valid = mission_tasks({"tasks": [task, task, {**task, "id": "bad", "status": "sent"},
-                                         {**task, "id": "other", "provider": "unknown"}]})
+                                         {**task, "id": "other", "provider": None}]})
         self.assertEqual(len(valid), 1)
         self.assertEqual(valid[0]["links"], [{"label": "Brief", "assetID": "brief"}])
         self.assertEqual(task["links"][1]["href"], "D:/private/notes.txt")
@@ -271,7 +271,7 @@ class StudioAppTest(unittest.TestCase):
         cache.mkdir(exist_ok=True)
         cls.temp = tempfile.TemporaryDirectory(prefix="studio-test-", dir=cache)
         cls.app_dir = Path(cls.temp.name)
-        for name in ("app.py", "library_helpers.py"):
+        for name in ("app.py", "library_helpers.py", "mission_view.py"):
             shutil.copy2(APP_DIR / name, cls.app_dir / name)
         library = cls.app_dir / "library"
         library.mkdir()
@@ -334,6 +334,37 @@ class StudioAppTest(unittest.TestCase):
             app.button(key="nav:Library").click().run()
             self.assertFalse(app.exception)
         return app
+
+    def test_corner_supplement_navigation_preserves_base_browsing_and_reviews(self):
+        path = self.app_dir / "library" / "mission_control.json"
+        base = json.loads((path.parent / "catalog.json").read_text(encoding="utf-8"))
+        extra = {**base["assets"][0], "id": "corner-only", "sha256": "exact", "title": "Corner-only image"}
+        snapshot = {"projects": base["projects"], "categories": [], "albums": [], "assets": [extra],
+                    "reviewDecisions": [{"id": extra["id"], "sha256": "exact", "status": "needs_fixes",
+                                         "likenessRating": 2, "sceneQualityRating": 5}],
+                    "missionControl": {"tasks": [{"id": "corner", "provider": "CFA Nova", "project": "hon",
+                         "status": "ready", "title": "Current Corner task", "summary": "Current", "nextAction": "Review",
+                         "links": [{"label": "Open collection", "assetIDs": [extra["id"]]}]}]}}
+        path.write_text(json.dumps(snapshot), encoding="utf-8")
+        try:
+            app = self.app(library=False)
+            self.assertFalse(app.exception)
+            self.assertTrue(any("Current Corner task" in e.label for e in app.expander))
+            app.button(key="mission-collection:corner:0").click().run()
+            app.button(key="corner-collection:corner-only").click().run()
+            next(b for b in app.button if b.label == "← Back to the collection").click().run()
+            self.assertTrue(any(b.key == "corner-collection:corner-only" for b in app.button))
+            app.button(key="corner-collection:corner-only").click().run()
+            app.button(key="favorite:selected:corner-only").click().run()
+            app.button(key="nav:Favorites & notes").click().run()
+            app.button(key="open:corner-only").click().run()
+            self.assertFalse(app.exception)
+            self.assertTrue(any(h.value == "Corner-only image" for h in app.subheader))
+            self.assertEqual(app.session_state["studio_reviews"]["corner-only"]["likenessRating"], 2)
+            app.button(key="nav:Library").click().run()
+            self.assertFalse(any(b.key == "open:corner-only" for b in app.button))
+        finally:
+            path.unlink(missing_ok=True)
 
     def test_pagination_selection_and_session_notes(self):
         app = self.app()
@@ -410,21 +441,97 @@ class StudioAppTest(unittest.TestCase):
         app = self.app(library=False)
         self.assertEqual(app.session_state["studio_view"], "Ziggy’s Corner")
         self.assertTrue(any("Mission Control" in item.value for item in app.markdown))
-        self.assertTrue(any("Correct the coat reference" in item.value for item in app.subheader))
-        self.assertTrue(any("Prepare Lisan motion" in item.value for item in app.subheader))
-        self.assertEqual(len(app.code), 2)
-        self.assertEqual([metric.value for metric in app.metric], ["1", "1", "1"])
+        self.assertTrue(any("Correct the coat reference" in item.label for item in app.expander))
+        self.assertTrue(any("Prepare Lisan motion" in item.label for item in app.expander))
+        self.assertTrue(all(not item.proto.expanded for item in app.expander))
+        self.assertEqual([metric.value for metric in app.metric], ["1", "1", "0"])
+        self.assertEqual(app.button(key="mission-shot-plans").label, "Shot plans · 1 →")
         app.selectbox(key="studio_project").select("lisan").run()
-        self.assertTrue(any("Correct the coat reference" in item.value for item in app.subheader))
+        self.assertTrue(any("Correct the coat reference" in item.label for item in app.expander))
         app.button(key="mission-asset:fix-look:0").click().run()
         self.assertFalse(app.exception)
         self.assertEqual(app.session_state["studio_project"], "hon")
-        self.assertEqual(app.session_state["studio_selected"], "hon-00")
-        app.button(key="nav:Ziggy’s Corner").click().run()
+        self.assertEqual(app.session_state["studio_mission_selected"], "hon-00")
+        app.button(key="corner-selected-back").click().run()
         app.selectbox(key="mission-provider").select("Flow").run()
         self.assertFalse(app.exception)
-        self.assertFalse(any("Correct the coat reference" in item.value for item in app.subheader))
-        self.assertTrue(any("Prepare Lisan motion" in item.value for item in app.subheader))
+        self.assertFalse(any("Correct the coat reference" in item.label for item in app.expander))
+        self.assertTrue(any("Prepare Lisan motion" in item.label for item in app.expander))
+
+    def test_corner_review_strip_has_only_real_unanswered_requests(self):
+        path = self.app_dir / "library" / "catalog.json"
+        original = path.read_bytes()
+        data = json.loads(original)
+        data["reviewRequests"] = [
+            {"id": "hon-03", "sha256": "hash-3", "type": "missing_decision"},
+            {"id": "hon-00", "sha256": "hash-0", "type": "missing_decision"},
+            {"id": "hon-01", "sha256": "hash-1", "type": "missing_decision"},
+            {"id": "hon-04", "sha256": "stale", "type": "missing_decision"},
+            {"id": "hon-05", "sha256": "hash-5", "type": "missing_decision"}]
+        next(a for a in data["assets"] if a["id"] == "hon-05")["archived"] = True
+        path.write_text(json.dumps(data), encoding="utf-8")
+        try:
+            app = self.app(library=False)
+            self.assertFalse(any(item.value == "Current work" for item in app.subheader))
+            self.assertEqual(sum("Correct the coat reference" in e.label for e in app.expander), 1)
+            self.assertFalse(any(b.key in {"mission-shots", "mission-library"} for b in app.button))
+            self.assertEqual(app.button(key="mission-review").label, "Review images · 1")
+            self.assertFalse(next(e for e in app.expander if e.label == "Prepare review sweep").proto.expanded)
+            app.button(key="mission-review").click().run()
+            self.assertEqual({b.key for b in app.button if (b.key or "").startswith("corner-collection:")},
+                             {"corner-collection:hon-03"})
+            app.button(key="corner-collection:hon-03").click().run()
+            app.button(key="review:hon-03:keep").click().run()
+            next(b for b in app.button if b.label == "← Back to the collection").click().run()
+            self.assertFalse(app.exception)
+            self.assertFalse(any((b.key or "").startswith("corner-collection:") for b in app.button))
+            app.button(key="corner-collection-back").click().run()
+            self.assertFalse(any(b.key == "mission-review" for b in app.button))
+            self.assertTrue(any("No image reviews waiting" in c.value for c in app.caption))
+            app.selectbox(key="studio_project").select("lisan").run()
+            self.assertFalse(any(b.key == "mission-review" for b in app.button))
+        finally:
+            path.write_bytes(original)
+
+    def test_corner_shot_plan_counter_opens_all_visible_plans_and_preserves_return(self):
+        path = self.app_dir / "library" / "mission_control.json"
+        base = json.loads((path.parent / "catalog.json").read_text(encoding="utf-8"))
+        extra = {**base["assets"][0], "id": "lisan-plan", "project": "lisan", "sha256": "lisan-exact", "title": "Lisan planned image"}
+        archived = {**extra, "id": "archived-plan", "archived": True}
+        plan = {"status": "requested_bounded_test", "destinations": ["ComfyUI", "Grok"],
+                "idea": "One controlled motion test", "prompt": "Preserve the approved source."}
+        snapshot = {"projects": base["projects"], "categories": [], "albums": [],
+                    "assets": [extra, archived, base["assets"][1]],
+                    "reviewDecisions": [{"id": extra["id"], "sha256": extra["sha256"], "shotPlan": plan},
+                                        {"id": archived["id"], "sha256": archived["sha256"], "shotPlan": plan},
+                                        {"id": "hon-01", "sha256": "hash-1", "status": "remove", "shotPlan": plan}],
+                    "missionControl": {"tasks": []}}
+        path.write_text(json.dumps(snapshot), encoding="utf-8")
+        try:
+            app = self.app()
+            app.button(key="nav:Ziggy’s Corner").click().run()
+            before = copy.deepcopy(app.session_state["studio_reviews"])
+            self.assertEqual(app.button(key="mission-shot-plans").label, "Shot plans · 2 →")
+            app.button(key="mission-shot-plans").click().run()
+            self.assertFalse(app.exception)
+            self.assertTrue(any(h.value == "All shot plans" for h in app.subheader))
+            self.assertEqual({b.key for b in app.button if (b.key or "").startswith("corner-collection:")},
+                             {"corner-collection:hon-02", "corner-collection:lisan-plan"})
+            self.assertTrue(any("ComfyUI" in c.value and "Grok" in c.value for c in app.caption))
+            self.assertTrue(any(m.value == plan["idea"] for m in app.markdown))
+            self.assertTrue(any(t.value == plan["prompt"] for t in app.text))
+            app.button(key="corner-collection:lisan-plan").click().run()
+            self.assertEqual(app.session_state["studio_project"], "lisan")
+            next(b for b in app.button if b.label == "← Back to the collection").click().run()
+            self.assertEqual({b.key for b in app.button if (b.key or "").startswith("corner-collection:")},
+                             {"corner-collection:hon-02", "corner-collection:lisan-plan"})
+            self.assertEqual(app.session_state["studio_reviews"], before)
+            app.button(key="corner-collection-back").click().run()
+            app.button(key="mission-back").click().run()
+            self.assertEqual(app.session_state["studio_view"], "Library")
+            self.assertFalse(app.exception)
+        finally:
+            path.unlink(missing_ok=True)
 
 
     def test_export_basket_is_global_and_independent_of_favorites_and_review(self):

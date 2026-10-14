@@ -16,7 +16,7 @@ if str(APP_DIR) not in sys.path:
 from library_helpers import (
     DESTINATIONS, EXPORT_FORMAT, MISSION_PROVIDERS, STORYBOARD_STAGES, VISUAL_KINDS, basket_payload, basket_zip,
     collaborator_sections, document_tree, effective_reviews, export_allowed, handoff_payload, handoff_text,
-    layout_video_assets, media_path, mission_tasks, normalize_plan, ordered_assets, production_workflows,
+    layout_video_assets, media_path, mission_tasks, mission_review_data, normalize_plan, ordered_assets, production_workflows,
     read_basket, read_review, review_payload, storyboard_stage, storyboard_themes, storyboard_window, sweep_payload,
 )
 
@@ -81,6 +81,8 @@ def navigate(view: str) -> None:
         st.session_state.studio_return_view = st.session_state.studio_view
     st.session_state.studio_view = view
     st.session_state.studio_selected = None
+    st.session_state.pop("studio_mission_selected", None)
+    st.session_state.pop("studio_mission_collection", None)
 
 
 def back_to_library() -> None:
@@ -90,6 +92,12 @@ def back_to_library() -> None:
 
 def clear_selection() -> None:
     st.session_state.studio_selected = None
+    st.session_state.pop("studio_mission_selected", None)
+
+
+def clear_project_selection() -> None:
+    clear_selection()
+    st.session_state.pop("studio_mission_collection", None)
 
 
 def select_asset(asset_id: str, project: str | None = None) -> None:
@@ -750,87 +758,27 @@ def render_shot_plans(data: dict, project: str) -> None:
 
 def open_mission_reference(asset: dict) -> None:
     st.session_state.studio_project = asset["project"]
-    st.session_state.studio_view = "Library"
-    select_asset(asset["id"])
+    if st.session_state.studio_view == CORNER:
+        st.session_state.studio_mission_selected = asset["id"]
+    else:
+        st.session_state.studio_view = "Library"
+        select_asset(asset["id"])
 
 
-def render_mission_control(data: dict) -> None:
+def render_mission_control(data: dict, review_data: dict | None = None) -> None:
+    from mission_view import render_corner
     st.button("← Back to library", key="mission-back", on_click=back_to_library)
     st.markdown('<div class="studio-hero"><div class="eyebrow">CFA · Ziggy’s Corner</div>'
-                '<h1>Mission Control</h1><p>Your projects, the next creative handoffs, and what each collaborator needs.</p></div>',
+                '<h1>Mission Control</h1><p>Your next moves, prepared handoffs, and ideas waiting for their next pass.</p></div>',
                 unsafe_allow_html=True)
-    reviews = st.session_state.studio_reviews
-    counts = {status: sum(item.get("status") == status for item in reviews.values()) for status in ("needs_fixes", "remove")}
-    plans = [item["shotPlan"] for item in reviews.values() if item.get("shotPlan")]
-    metrics = st.columns(3)
-    metrics[0].metric("References needing fixes", counts["needs_fixes"])
-    metrics[1].metric("Marked for removal", counts["remove"])
-    metrics[2].metric("Draft shot plans", len(plans))
-    st.caption("Live totals include both projects. Review decisions and draft plans stay in this session until exported.")
-    queue, shots = st.columns(2)
-    with queue:
-        st.button("Open review queue", key="mission-review", on_click=navigate, args=("Review queue",), width="stretch")
-    with shots:
-        st.button("Open shot plans", key="mission-shots", on_click=navigate, args=("Shot plans",), width="stretch")
-    st.caption("These two views open the project selected in the sidebar. The task cards below cover all projects.")
-    with st.expander("Prepare review sweep"):
-        st.write("Prepare the reviewed items, favorites, and working-reference requests for Panhandler Nova to review. Download and pass it to Nova; this does not invoke an agent, approve promotions, or delete files.")
-        sweep = sweep_payload(data["assets"], reviews, st.session_state.studio_favorites, st.session_state.studio_basket)
-        st.download_button("Prepare review sweep JSON", json.dumps(sweep, ensure_ascii=False, indent=2),
+
+    def sweep():
+        st.write("Save your decisions, favorites, stages and reference roles, then pass the review to Nova. This does not start an agent or delete files.")
+        payload = sweep_payload((review_data or data)["assets"], st.session_state.studio_reviews, st.session_state.studio_favorites, st.session_state.studio_basket)
+        st.download_button("Prepare review sweep JSON", json.dumps(payload, ensure_ascii=False, indent=2),
                            file_name="cfa-review-sweep-for-nova.json", mime="application/json")
-        st.caption(f"{len(sweep['sweep']['promotionQueue'])} eligible working-reference requests · {len(sweep['items'])} review records")
-    control = data.get("missionControl", {})
-    tasks = mission_tasks(control)
-    provider = st.selectbox("Collaborator", ("all", *MISSION_PROVIDERS),
-                            format_func=lambda value: "All collaborators" if value == "all" else value,
-                            key="mission-provider")
-    if provider != "all":
-        tasks = [task for task in tasks if task["provider"] == provider]
-    st.caption("Task statuses come from the saved project handoff. This page does not monitor collaborator accounts or send requests.")
-    if isinstance(control, dict) and control.get("updated"):
-        st.caption(f"Handoff updated: {control['updated']}")
-    if not tasks:
-        st.info("No task cards are included for this collaborator in the current bundle. Your references and review tools are available in the sidebar.")
-    by_id = {asset["id"]: asset for asset in data["assets"]}
-    projects = {project["id"]: project["name"] for project in data["projects"]}
-    states = {"ready": "Ready for handoff", "needs_input": "Needs input", "planned": "Planned", "in_progress": "In progress", "done": "Done"}
-    for task in tasks:
-        with st.container(border=True):
-            st.subheader(task["title"])
-            st.caption(f"{task['provider']} · {projects.get(task['project'], 'Shared projects')} · {states[task['status']]}")
-            st.write(task["summary"])
-            st.markdown("**Next action**")
-            st.write(task["nextAction"])
-            if task["missing"]:
-                st.markdown("**Still needed**")
-                for requirement in task["missing"]:
-                    st.write("• " + requirement)
-            elif task["status"] == "ready":
-                st.caption("The saved brief lists no missing inputs for this handoff.")
-            assigned = sum(task["provider"] in plan["destinations"] for plan in plans)
-            if assigned:
-                st.caption(f"{assigned} draft shot plan{'s' if assigned != 1 else ''} assigned to {task['provider']} across the library.")
-            for index, link in enumerate(task["links"]):
-                if link.get("downloadPath"):
-                    package = media_path(LIBRARY_DIR, link["downloadPath"])
-                    if package and package.suffix.lower() == ".zip":
-                        st.download_button(link["label"], data=package.read_bytes(), file_name=package.name,
-                                           mime="application/zip", key=f"mission-package:{task['id']}:{index}", width="stretch")
-                    else:
-                        st.caption(f"{link['label']}: package is not included in this bundle yet.")
-                    continue
-                asset = by_id.get(link.get("assetID"))
-                if not asset:
-                    st.caption(f"{link['label']}: reference is not included in this bundle yet.")
-                elif asset.get("kind") in {"document", "pdf"}:
-                    with st.expander(link["label"]):
-                        st.caption(asset.get("filename", asset["id"]))
-                        if asset.get("text"):
-                            st.code(asset["text"], language=None, wrap_lines=True)
-                        document_download(asset, context=f"mission:{task['id']}:{index}")
-                elif asset.get("kind") in VISUAL_KINDS:
-                    st.button(link["label"], key=f"mission-asset:{task['id']}:{index}",
-                              on_click=open_mission_reference, args=(asset,))
+
+    render_corner(data, LIBRARY_DIR, open_mission_reference, render_selected, document_download, navigate, sweep, review_data=review_data or data)
 
 
 def render_export_basket(data: dict) -> None:
@@ -893,7 +841,17 @@ def main() -> None:
     except (OSError, ValueError) as error:
         st.error(f"The review library could not be loaded: {error}")
         return
-    st.session_state.studio_reviews = effective_reviews(data["assets"], data.get("reviewDecisions", []), st.session_state.studio_review_overrides)
+    mission_data = data
+    review_data = data
+    mission_path = LIBRARY_DIR / "mission_control.json"
+    if mission_path.is_file():
+        try:
+            mission_data = load_catalog(str(mission_path), mission_path.stat().st_mtime_ns)
+            review_data = mission_review_data(data, mission_data)
+        except (OSError, ValueError) as error:
+            st.error(f"The Ziggy’s Corner snapshot could not be loaded: {error}")
+            return
+    st.session_state.studio_reviews = effective_reviews(review_data["assets"], review_data.get("reviewDecisions", []), st.session_state.studio_review_overrides)
     st.session_state.studio_notes = {key: value.get("note", "") for key, value in st.session_state.studio_reviews.items()}
     if message := st.session_state.pop("studio_flash", None):
         st.success(message)
@@ -905,7 +863,7 @@ def main() -> None:
         st.markdown("## CFA\n### Creative Studio")
         st.caption("A place to look, compare, and create.")
         project = st.selectbox("Project", list(projects), format_func=lambda key: projects[key]["name"],
-                               key="studio_project", on_change=clear_selection)
+                               key="studio_project", on_change=clear_project_selection)
         for label, views in (("START HERE", (CORNER,)), ("BROWSE", ("Library", "Storyboard")), ("CREATE", ("Collaborators", "Shot plans", "Collaborator briefs")),
                              ("KEEP & REFER", ("Review queue", "Export basket", "Favorites & notes", "Documents"))):
             st.caption(label)
@@ -919,13 +877,14 @@ def main() -> None:
     assets = [a for a in data["assets"] if a.get("project") == project]
     view = st.session_state.studio_view
     if view == CORNER:
-        render_mission_control(data)
+        render_mission_control(mission_data, review_data)
         return
     if view == "Collaborators":
         render_collaborators(data)
         return
     hero(projects[project], view, assets)
-    selected = next((a for a in assets if a["id"] == st.session_state.studio_selected and a.get("kind") in VISUAL_KINDS), None)
+    selection_assets = review_data["assets"] if view in ("Favorites & notes", "Shot plans", "Export basket") else assets
+    selected = next((a for a in selection_assets if a["id"] == st.session_state.studio_selected and a.get("kind") in VISUAL_KINDS), None)
     if selected:
         render_selected(selected)
     elif view == "Library":
@@ -935,13 +894,13 @@ def main() -> None:
     elif view == "Collaborator briefs":
         render_collaborator_briefs(data, assets, project)
     elif view == "Favorites & notes":
-        render_favorites(data, project)
+        render_favorites(review_data, project)
     elif view == "Review queue":
         render_review_queue(data, project)
     elif view == "Shot plans":
-        render_shot_plans(data, project)
+        render_shot_plans(review_data, project)
     elif view == "Export basket":
-        render_export_basket(data)
+        render_export_basket(review_data)
     else:
         render_documents(assets)
 
