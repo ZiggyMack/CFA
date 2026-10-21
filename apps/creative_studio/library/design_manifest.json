@@ -2,13 +2,13 @@
   "schema": "cfa-design-manifest-v1",
   "snapshot": {
     "schema": "cfa-design-snapshot-v1",
-    "generatedAtUTC": "2026-10-21T05:21:30.566940+00:00",
+    "generatedAtUTC": "2026-10-21T06:37:40.899280+00:00",
     "sourceCatalog": {
       "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
-      "sha256": "0f59c9f9132b6245f559b4b1dc7f9015c84a9631e7fc84e35544bc80c80045ff"
+      "sha256": "a76e3dcf893d6f25ce642bcfdb93ff0900fdb0583de317ddf18772b6299a113c"
     },
     "purpose": "Complete portable local design snapshot; saved reviews, not live synchronization.",
-    "sourceAssetCount": 2522,
+    "sourceAssetCount": 2524,
     "supplementalAssetCount": 12,
     "unavailableLinks": [],
     "reviewOverlay": {
@@ -30,23 +30,21 @@
       "skipped": []
     },
     "metadataRefresh": {
-      "taskID": "reference-validation-evidence-ui-20261013",
-      "scope": "One task and linked documents; all prior assets and reviews preserved",
-      "priorSnapshotSHA256": "5d7e1461cb1212d36a97a268d8bcbb9c2fa811a3d00cb027465cce6e942f51d7",
-      "packagerSHA256": "5dc34800ac9e76c96b93e6ac429c91622179d1973e64fc46fcf4feb865637251"
+      "scope": "Comfy workspace and workflow diagrams; one existing test record added; prior media, reviews and tasks preserved",
+      "priorSnapshotSHA256": "7dea9e3973bd6a8c85ac0ffc1290a54d7652fd0d5dcd80b8b8254975ebc961d8"
     }
   },
-  "snapshotSHA256": "7dea9e3973bd6a8c85ac0ffc1290a54d7652fd0d5dcd80b8b8254975ebc961d8",
+  "snapshotSHA256": "0c9379b1447257d61a7b3e4a25f00321288dec01b6175134bb0792e90870e5cf",
   "builderSHA256": "0713bdef121e3f51365b5556d296f341668a0af0544174523d67d9a7346a28e0",
   "sourcesPreserved": true,
   "assetKinds": {
     "image": 1976,
-    "document": 517,
+    "document": 519,
     "pdf": 4,
     "gif": 1,
     "video": 36
   },
-  "outputBytes": 395563834,
+  "outputBytes": 395608711,
   "sources": [
     {
       "path": "docs/notes/cfa-review.json",
@@ -12654,6 +12652,11 @@
       "bytes": 11638
     },
     {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_reference_edit_v001.record.json",
+      "sha256": "e8a89ed4736935b2a539c985fab26e271f10fe02ba4f38c338c9dd2a18683a77",
+      "bytes": 12161
+    },
+    {
       "path": "docs/notes/explorable_world/comfy/workflows/seedance_2_5_20261009.README.txt",
       "sha256": "cc55494ad86cd2fa3c3217a862418a135565ad8ce3c437130b426c8771aeca11",
       "bytes": 6623
@@ -12699,8 +12702,8 @@
     },
     {
       "path": "design_catalog.json",
-      "bytes": 22186214,
-      "sha256": "7dea9e3973bd6a8c85ac0ffc1290a54d7652fd0d5dcd80b8b8254975ebc961d8",
+      "bytes": 22211731,
+      "sha256": "0c9379b1447257d61a7b3e4a25f00321288dec01b6175134bb0792e90870e5cf",
       "role": "design_catalog",
       "reused": false
     },
@@ -13543,6 +13546,14 @@
       "source_sha256": "097e4b776769a531dd00730add3d92e5604194370717d0fc05891fca3f923b7f",
       "role": "image_preview",
       "reused": true
+    },
+    {
+      "path": "design_media/0985c8e91f03c462e4fca279bde195e2b75ef35bc82228954abf48330493e7c0.txt",
+      "sha256": "0985c8e91f03c462e4fca279bde195e2b75ef35bc82228954abf48330493e7c0",
+      "bytes": 7333,
+      "source_sha256": "179ff8a4e57c4f0b5d463419e6bd2941750bf03342691a7d0e07a9ba37acca4b",
+      "role": "inert_text",
+      "reused": false
     },
     {
       "path": "design_media/0989c7f96ac307644fe9f239a96617f7eb6de695467f5d57f38a7585d8115b6f.jpg",
@@ -18621,6 +18632,14 @@
       "sha256": "3cfe253265d0947565daf042c0d3cf419651d12324efb0e7db459079628b95b3",
       "bytes": 9631,
       "source_sha256": "9da1db9823d2e892531d394550b3a77280a8343c84ec78637c3de6ec371bdef1",
+      "role": "inert_text",
+      "reused": false
+    },
+    {
+      "path": "design_media/3d1e1ad741d4f247239d189bbc4c952dc45602527b42e02416de7a279918c8e0.txt",
+      "sha256": "3d1e1ad741d4f247239d189bbc4c952dc45602527b42e02416de7a279918c8e0",
+      "bytes": 12027,
+      "source_sha256": "e8a89ed4736935b2a539c985fab26e271f10fe02ba4f38c338c9dd2a18683a77",
       "role": "inert_text",
       "reused": false
     },
@@ -53030,6 +53049,7 @@
     "design_media/092549c2f504a6c0a96273ce9bcca84d285055db7eeaf3e38b6404f48e1d8503.jpg",
     "design_media/095135741efbb08b4e27e6a700949b8ecf69f9bf1b521d7b19d721e381c84399.jpg",
     "design_media/097ef3b3ddc771e7124f8ace1457d37f882652c45c170dfa81769b154cbaa2ad.jpg",
+    "design_media/0985c8e91f03c462e4fca279bde195e2b75ef35bc82228954abf48330493e7c0.txt",
     "design_media/0989c7f96ac307644fe9f239a96617f7eb6de695467f5d57f38a7585d8115b6f.jpg",
     "design_media/0995d85240152dad08dda42ba5e18f4464c10c709bbeeb8970fd1ad7a9e357ea.jpg",
     "design_media/09bfae3e0cb6a55b62a4118c86d9885426a24dee466c1435f52ec67a952217b4.jpg",
@@ -53665,6 +53685,7 @@
     "design_media/3cebb23cfe489be815589d73de2a58315532dde96eadb6bd8a9e61ef389eee90.jpg",
     "design_media/3cf350ce1aaf89272b4afde059325ba5d162d0cd240af2eb44827ac4ca93732a.jpg",
     "design_media/3cfe253265d0947565daf042c0d3cf419651d12324efb0e7db459079628b95b3.txt",
+    "design_media/3d1e1ad741d4f247239d189bbc4c952dc45602527b42e02416de7a279918c8e0.txt",
     "design_media/3d2f28c914f7dfb38af7472ab96b65f8687e191cdd7a2eb9877e76a6875f5bd7.jpg",
     "design_media/3d33c22722b88cf0bc248346bcb82ab7e08738bb52e37bc4c9cf3042e315eef3.jpg",
     "design_media/3d60828c14b925ea0c131e6351b5aec2c55ceb29dc16ef811ce02432bcb4b1e8.txt",

@@ -6,6 +6,7 @@ imported only by the renderer so the grouping rules are independently testable.
 from __future__ import annotations
 
 import re
+from html import escape
 from pathlib import Path
 
 from studio_dependencies import (
@@ -436,6 +437,79 @@ def archive_model(ctx):
             section("Archived pictures, clips and documents", [aid for aid in available if aid not in claimed], description="Open a reference to restore it. Reviews and original files are retained.")]
 
 
+def comfy_workflow_families(ctx, config):
+    """Linked recipe evidence is separate from the workspace's media galleries."""
+    workflows = {w["id"]: w for w in ctx.data.get("productionWorkflows", [])}
+    families = []
+    for family in config.get("workflowFamilies", []):
+        records = [workflows[wid] for wid in unique(family.get("workflowIDs", []))
+                   if wid in workflows and workflows[wid].get("project") in {ctx.project, "shared"}]
+        text = " ".join(str(family.get(key, "")) for key in (
+            "title", "inputLabel", "operationLabel", "outputLabel", "status", "description"))
+        text += " " + " ".join(str(w.get(key, "")) for w in records for key in (
+            "title", "status", "summary", "nextAction"))
+        reference_ids = [link.get("assetID") for link in family.get("links", [])]
+        reference_ids.extend(aid for w in records for key in ("sourceAssetIDs", "outputAssetIDs", "documentAssetIDs") for aid in w.get(key, []))
+        if ctx.query and ctx.query not in text.casefold() and not any(
+                aid in ctx.by_id and ctx.visible(ctx.by_id[aid]) and ctx.matches(ctx.by_id[aid]) for aid in reference_ids):
+            continue
+        text += " " + ctx.query
+        linked_records = []
+        for record in records:
+            linked_records.append({**{k: record.get(k, "") for k in ("id", "title", "status", "summary")},
+                **{key: ctx.ids(record.get(key, []), text) for key in (
+                    "sourceAssetIDs", "outputAssetIDs", "documentAssetIDs")}})
+        links = [dict(link) for link in family.get("links", [])
+                 if ctx.ids([link.get("assetID")], text)]
+        families.append({**{key: family.get(key, "") for key in (
+            "id", "title", "inputLabel", "operationLabel", "outputLabel", "status", "description")},
+            "workflows": linked_records, "links": links})
+    return families
+
+
+def workflow_diagram_html(family):
+    """Plain-text diagram with escaped labels and no external media dependencies."""
+    stages = [("Input", family.get("inputLabel", "")), ("Operation", family.get("operationLabel", "")),
+              ("Result", family.get("outputLabel", ""))]
+    boxes = ['<div class="cfa-workflow-step"><span>' + label + '</span><strong>' + escape(str(text or "")) + '</strong></div>'
+             for label, text in stages]
+    return '<div class="cfa-workflow-diagram" role="group" aria-label="Input to operation to result">' + (
+        '<span class="cfa-workflow-arrow" aria-hidden="true">→</span>'.join(boxes)) + '</div>'
+
+
+def comfy_model(ctx, album_id):
+    """Only recorded workspace roles define outputs; category/provider are not proof."""
+    config = ctx.data.get("browseLayout", {}).get("projects", {}).get(ctx.project, {}).get("comfyWorkspace", {})
+
+    def workspace_ids(key):
+        return [aid for aid in ctx.ids(config.get(key, []))
+                if not album_id or ctx.by_id[aid].get("album") == album_id]
+
+    targets = []
+    for aid in unique(config.get("targetAlbumIDs", [])):
+        album = ctx.albums.get(aid, {})
+        if album.get("project") != ctx.project or album_id and aid != album_id:
+            continue
+        if group := ctx.group(album):
+            group.update(directSingle=True, unit="targets")
+            targets.append(group)
+    output_ids = workspace_ids("outputAssetIDs")
+    return [
+        section("Comfy outputs", output_ids,
+            description="Experiments and candidate results. Each keeps its recorded review; failed preservation tests remain available for comparison.",
+            emptyMessage=("No Comfy outputs match this view." if config.get("outputAssetIDs")
+                          else "No Comfy outputs have been catalogued for this project.")),
+        section("Likeness targets", kind="collections", groups=targets,
+            description="Appearance inputs for swaps. Open a target or a collection of alternate views."),
+        section("Workflow recipes", kind="workflow_families", families=comfy_workflow_families(ctx, config)
+                if not album_id else []),
+        section("Source clips & control guides", workspace_ids("inputAssetIDs"), kind="disclosure",
+            description="Source footage and technical guides used by the recorded experiments. These are inputs, not finished Comfy results."),
+        section("Local finishing", workspace_ids("finishingAssetIDs"), kind="disclosure",
+            description="This soundtrack preview was created locally with the original picture preserved. Its related Cloud graph is saved but has not executed; this is not lip-sync."),
+    ]
+
+
 def build_design_model(data, project, view, reviews=None, query="", album_id=""):
     """Build presentation-only groups using effective reviews and archive state."""
     mode = VIEWS.get(view, view)
@@ -454,16 +528,13 @@ def build_design_model(data, project, view, reviews=None, query="", album_id="")
     elif mode == "archive":
         parts = archive_model(ctx)
     else:
-        groups = [g for al in ctx.albums.values() if al.get("project") == project and al.get("category") == "comfy"
-                  and (not album_id or al["id"] == album_id)
-                  and not (project == "hon" and re.search(r"mouth|head|viseme|breather", al["id"] + al.get("title", ""), re.I))
-                  and (g := ctx.group(al))]
-        parts = [section("Comfy swap targets", kind="collections", groups=groups)]
-    return {"view": mode, "project": project, "sections": parts, "assets": ctx.by_id, "reviews": ctx.reviews}
+        parts = comfy_model(ctx, album_id)
+    return {"view": mode, "project": project, "sections": parts, "assets": ctx.by_id, "reviews": ctx.reviews,
+            "title": "Comfy results & swap targets" if mode == "comfy" else view}
 
 
 def render_design_view(data, project, view, library_dir: Path, render_grid, open_reference,
-                       *, reviews=None, query="", album_id="") -> bool:
+                       *, reviews=None, query="", album_id="", navigate=None) -> bool:
     """Render native Streamlit controls; callbacks own review editing and leaf cards."""
     model = build_design_model(data, project, view, reviews, query, album_id)
     if model is None:
@@ -506,12 +577,17 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
                     if cover and (path := media_path(library_dir, cover.get("thumb") or cover.get("src"))):
                         st.image(str(path), width="stretch")
                     st.markdown("**" + g["title"] + "**")
-                    st.caption(f"{len(model_asset_ids(g))} references")
+                    count = len(model_asset_ids(g))
+                    unit = g.get("unit", "references")
+                    st.caption(f"{count} {unit[:-1] if count == 1 and unit.endswith('s') else unit}")
                     key = context + ":expanded:" + g["id"]
-                    st.button("Hide references" if st.session_state.get(key) else "Show references", key=key + ":toggle", on_click=toggle, args=(key,), width="stretch")
+                    if g.get("directSingle") and count == 1 and cover:
+                        st.button("Open target", key=key + ":open", on_click=open_reference, args=(cover,), width="stretch")
+                    else:
+                        st.button("Hide references" if st.session_state.get(key) else "Show references", key=key + ":toggle", on_click=toggle, args=(key,), width="stretch")
         for g in groups:
             key = context + ":expanded:" + g["id"]
-            if not st.session_state.get(key):
+            if g.get("directSingle") and len(model_asset_ids(g)) == 1 or not st.session_state.get(key):
                 continue
             with st.container(border=True):
                 st.subheader(g["title"])
@@ -529,7 +605,7 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
 
     def render(s, context, heading=True, single_preview=False):
         kind, ids = s.get("kind", "gallery"), s.get("assetIDs", [])
-        if not (model_asset_ids(s) or s.get("emptyMessage")):
+        if not (model_asset_ids(s) or s.get("emptyMessage") or s.get("families")):
             return
         if kind == "disclosure":
             with st.expander(s["title"], expanded=s.get("expanded", False)):
@@ -545,7 +621,44 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
             st.subheader(s["title"])
         if s.get("description"):
             st.caption(s["description"])
-        if kind == "columns":
+        if kind == "workflow_families":
+            st.markdown('''<style>
+                .cfa-workflow-diagram {display:flex;align-items:stretch;gap:5px;margin:10px 0 14px;}
+                .cfa-workflow-step {flex:1;min-width:0;padding:9px 7px;border:1px solid #60718a;border-radius:8px;background:#182334;color:#f5f7fb;}
+                .cfa-workflow-step span {display:block;font-size:11px;color:#d4b582;margin-bottom:5px;}
+                .cfa-workflow-step strong {display:block;font-size:13px;line-height:1.4;overflow-wrap:anywhere;}
+                .cfa-workflow-arrow {align-self:center;color:#d4b582;font-size:18px;}
+                @media(max-width:520px) {.cfa-workflow-diagram {flex-direction:column;}.cfa-workflow-arrow {transform:rotate(90deg);}}
+                </style>''', unsafe_allow_html=True)
+
+            def link_button(aid, label, key):
+                asset = model["assets"].get(aid)
+                if asset:
+                    st.button(label or asset.get("title", aid), key=key, on_click=open_reference, args=(asset,), width="stretch")
+
+            for start in range(0, len(s["families"]), 2):
+                for column, family in zip(st.columns(2), s["families"][start:start + 2]):
+                    with column, st.container(border=True):
+                        st.markdown("**" + family["title"] + "**")
+                        st.caption(family["status"])
+                        st.markdown(workflow_diagram_html(family), unsafe_allow_html=True)
+                        if family.get("description"):
+                            st.caption(family["description"])
+                        family_key = context + ":family:" + family["id"]
+                        with st.expander("Ingredients and records", expanded=False):
+                            for i, link in enumerate(family["links"]):
+                                link_button(link["assetID"], link.get("label"), family_key + ":link:" + str(i))
+                            for workflow in family["workflows"]:
+                                st.markdown("**" + workflow["title"] + "**")
+                                st.caption(workflow["status"])
+                                if workflow["summary"]:
+                                    st.write(workflow["summary"])
+                                for label, field in (("Parent inputs", "sourceAssetIDs"), ("Recorded outputs", "outputAssetIDs"), ("Records and graphs", "documentAssetIDs")):
+                                    if workflow[field]:
+                                        st.caption(label)
+                                        for aid in workflow[field]:
+                                            link_button(aid, None, family_key + ":" + workflow["id"] + ":" + field + ":" + aid)
+        elif kind == "columns":
             for col, child in zip(st.columns(len(s["sections"])), s["sections"]):
                 with col:
                     render(child, context + ":" + child["title"], single_preview=True)
@@ -607,6 +720,10 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
             st.caption(s["emptyMessage"])
 
     context = "design:" + project + ":" + model["view"] + ":" + (album_id or "root")
+    if model["view"] == "comfy":
+        st.caption("Character, mouth and grill references live in Working references.")
+        if navigate:
+            st.button("Open Working references", key=context + ":working", on_click=navigate, args=("Working references",))
     buckets = [s for s in model["sections"] if s["kind"] == "outfit_bucket"]
     if buckets:
         def select_bucket(value):
@@ -630,6 +747,6 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
     else:
         for i, item in enumerate(model["sections"]):
             render(item, context + ":" + str(i))
-    if not any(model_asset_ids(s) for s in model["sections"]):
+    if model["view"] != "comfy" and not any(model_asset_ids(s) for s in model["sections"]):
         st.info("No references match this view.")
     return True

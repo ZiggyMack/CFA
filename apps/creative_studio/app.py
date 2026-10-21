@@ -393,6 +393,12 @@ def change_page(signature: str, value: int) -> None:
 
 
 def hero(project: dict, view: str, assets: list[dict]) -> None:
+    if view == "Comfy swap targets":
+        st.markdown(f'<div class="studio-hero"><div class="eyebrow">CFA · {html.escape(project["name"])}</div>'
+                    '<h1>Comfy results &amp; swap targets</h1>'
+                    '<p>Results first, with the source likenesses and technical inputs used for swaps. '
+                    'Character, mouth and grill references stay in Working references.</p></div>', unsafe_allow_html=True)
+        return
     visuals = [a for a in assets if a.get("kind") in VISUAL_KINDS and normal_visible(a, st.session_state.studio_reviews)]
     videos = sum(a.get("kind") == "video" for a in visuals)
     captions = {
@@ -617,12 +623,13 @@ def render_library(data: dict, project: str, storyboard: bool = False, fixed_cat
 
 def render_design_workspace(data: dict, project: str, view: str) -> None:
     from studio_dependencies import current_module
-    query = st.text_input("Find a reference", key=f"design-search:{project}:{view}",
-                          placeholder="Search names, details, outfits…", on_change=clear_selection)
+    comfy = view == "Comfy swap targets"
+    query = st.text_input("Find a Comfy result or target" if comfy else "Find a reference", key=f"design-search:{project}:{view}",
+                          placeholder="Search results, targets, guides…" if comfy else "Search names, details, outfits…", on_change=clear_selection)
     current_module("design_view").render_design_view(
         data, project, view, LIBRARY_DIR, render_grid,
         lambda asset: select_asset(asset["id"], asset["project"]),
-        reviews=st.session_state.studio_reviews, query=query)
+        reviews=st.session_state.studio_reviews, query=query, navigate=navigate)
 
 
 def render_needs_review(data: dict, project: str) -> None:
