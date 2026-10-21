@@ -220,6 +220,41 @@ class FrozenCatalogParityTest(unittest.TestCase):
 
 
 class NativeDesignControlsTest(unittest.TestCase):
+    def test_outfit_tag_highlight_and_filter_change_together(self):
+        from streamlit.testing.v1 import AppTest
+        data = fixture()
+        names = [("yellow", "Formal sample"), ("rain", "Casual sample"), ("vest", "Scoundrel sample")]
+        data["assets"] = [{"id": name, "sha256": str(i + 1) * 64, "project": "hon", "kind": "image", "title": title,
+                           "album": "hon:outfit-" + name, "category": "outfits"} for i, (name, title) in enumerate(names)]
+        data["albums"] = [{"id": a["album"], "project": "hon", "category": "outfits", "title": a["title"], "assetIDs": [a["id"]]}
+                          for a in data["assets"]]
+        script = """
+import sys
+from pathlib import Path
+sys.path.insert(0, APP_PATH)
+from design_view import render_design_view
+render_design_view(FIXTURE, 'hon', 'outfits', Path(APP_PATH)/'library', lambda rows, context: None, lambda asset: None)
+""".replace("APP_PATH", repr(str(APP))).replace("FIXTURE", repr(data))
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "outfit_tags_app.py"
+            path.write_text(script, encoding="utf-8")
+            app = AppTest.from_file(str(path)).run(timeout=25)
+            self.assertFalse(app.exception)
+            button = lambda label: next(b for b in app.button if b.label == label)
+            self.assertEqual(button("All outfits").proto.type, "primary")
+            button("Casual").click().run(timeout=25)
+            self.assertFalse(app.exception)
+            self.assertEqual(button("Casual").proto.type, "primary")
+            self.assertEqual(button("All outfits").proto.type, "secondary")
+            self.assertEqual([e.label for e in app.expander], ["Casual · 1 outfits"])
+            self.assertIn("**Casual sample**", [m.value for m in app.markdown])
+            self.assertNotIn("**Formal sample**", [m.value for m in app.markdown])
+            button("All outfits").click().run(timeout=25)
+            self.assertFalse(app.exception)
+            self.assertEqual(button("All outfits").proto.type, "primary")
+            self.assertEqual(button("Casual").proto.type, "secondary")
+            self.assertEqual(len(app.expander), 3)
+
     @unittest.skipUnless(CATALOG.is_file(), "The actual nullable Lisan source is not distributed with the hosted app")
     def test_actual_nullable_lisan_slot_renders_without_changing_source(self):
         from streamlit.testing.v1 import AppTest

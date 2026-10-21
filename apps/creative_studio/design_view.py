@@ -609,12 +609,14 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
     context = "design:" + project + ":" + model["view"] + ":" + (album_id or "root")
     buckets = [s for s in model["sections"] if s["kind"] == "outfit_bucket"]
     if buckets:
+        def select_bucket(value):
+            st.session_state[context + ":bucket"] = value
+
         selected = st.session_state.get(context + ":bucket", "all")
         for col, (value, label) in zip(st.columns(4), [("all", "All outfits"), *[(s["bucketID"], s["title"]) for s in buckets]]):
             with col:
-                if st.button(label, key=context + ":tag:" + value, type="primary" if selected == value else "secondary", width="stretch"):
-                    st.session_state[context + ":bucket"] = value
-                    selected = value
+                st.button(label, key=context + ":tag:" + value, type="primary" if selected == value else "secondary",
+                          on_click=select_bucket, args=(value,), width="stretch")
         all_views = st.radio("Outfit view", ["One per outfit", "Show all views"], horizontal=True, key=context + ":layout") == "Show all views"
         for bucket in buckets:
             if selected not in {"all", bucket["bucketID"]} or not bucket["groups"]:
