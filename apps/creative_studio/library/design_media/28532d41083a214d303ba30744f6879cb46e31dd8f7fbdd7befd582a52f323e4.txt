@@ -1,0 +1,22 @@
+- C22-reverse-dj-to-pilot-001.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: built-in decks, curved corridor to cockpit
+- C22-reverse-dj-to-pilot-002.jpg | prelim_likeness=Unrated prelim_scene=4 lane=prime scope=scene stage=preliminary | LUnrated S4 | no bend, lounge sits directly behind seats | preserve: hyperspace canopy, record shelf
+- C22-reverse-dj-to-pilot-003.jpg | prelim_likeness=4 prelim_scene=4 lane=prime scope=scene stage=preliminary | L4 S4 | crossed bandoliers; decks freestanding | preserve: over-back reverse composition
+- C22-reverse-dj-to-pilot-004.jpg | prelim_likeness=3 prelim_scene=4 lane=prime scope=scene stage=preliminary | L3 S4 | Dolo face/tattoos not visible, cannot verify | preserve: over-shoulder, roomy seats
+- C22-reverse-dj-to-pilot-005.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: arch framing, twin built-in decks, planet canopy
+- C22-reverse-dj-to-pilot-006.jpg | prelim_likeness=4 prelim_scene=4 lane=prime scope=scene stage=preliminary | L4 S4 | only one seat visible, co-pilot side unclear | preserve: decks foreground, Chewy from behind
+- C22-reverse-dj-to-pilot-007.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: built-in decks, blank sleeve, curve to cockpit
+- C22-reverse-dj-to-pilot-008.jpg | prelim_likeness=Unrated prelim_scene=4 lane=prime scope=scene stage=preliminary | LUnrated S4 | DJ station reads as rack gear | preserve: low cable angle, hyperspace
+- C22-reverse-dj-to-pilot-009.jpg | prelim_likeness=2 prelim_scene=3 lane=prime scope=complete_look stage=preliminary | L2 S3 | eye and know stacked on same cheek; not reverse (cockpit too close) | preserve: face, jacket. CONTROVERSIAL | RESCORED -1: face reads younger and clean-shaven vs ref lf_full (ref has stubble, nostril hoops)
+- C22-reverse-dj-to-pilot-010.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: overhead plan, lounge to cockpit layout
+- C22-reverse-dj-to-pilot-011.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: desert-planet canopy, dusty beams
+- C22-reverse-dj-to-pilot-012.jpg | prelim_likeness=Unrated prelim_scene=4 lane=prime scope=scene stage=preliminary | LUnrated S4 | mixer only, no turntables | preserve: red night-cycle mood
+- C22-reverse-dj-to-pilot-013.jpg | prelim_likeness=5 prelim_scene=4 lane=prime scope=scene stage=preliminary | L5 S4 | decks freestanding, cockpit too close for reverse | preserve: Chewy profile, nebula canopy
+- C22-reverse-dj-to-pilot-014.jpg | prelim_likeness=Unrated prelim_scene=4 lane=prime scope=scene stage=preliminary | LUnrated S4 | corridor straight, no bend | preserve: symmetry, ribbed corridor
+- C22-reverse-dj-to-pilot-015.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=detail stage=preliminary | L4 S5 | chain/band on viewer-right wrist ok, no band visible | preserve: POV hands on decks, hyperspace
+- C22-reverse-dj-to-pilot-016.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: true reverse, decks fg, starfield canopy
+- C22-reverse-dj-to-pilot-017.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | face hidden (back view) | preserve: Chewy at decks fg, cockpit far end
+- C22-reverse-dj-to-pilot-018.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: hyperspace glow, headphones on deck
+- C22-reverse-dj-to-pilot-019.jpg | prelim_likeness=3 prelim_scene=5 lane=prime scope=scene stage=preliminary | L3 S5 | Dolo too small/no tattoos visible, softer face | preserve: look-back over shoulder, depth
+- C22-reverse-dj-to-pilot-020.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: red alert, cables, low angle
+- C22-reverse-dj-to-pilot-021.jpg | prelim_likeness=Unrated prelim_scene=4 lane=prime scope=scene stage=preliminary | LUnrated S4 | purple cast off-palette | preserve: planet through canopy, haze
+- C22-reverse-dj-to-pilot-022.jpg | prelim_likeness=3 prelim_scene=5 lane=prime scope=scene stage=preliminary | L3 S5 | back view, face unseen | preserve: Leia walking to cockpit, ivory coat

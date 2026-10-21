@@ -7,6 +7,7 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 APP_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(APP_DIR))
@@ -171,22 +172,72 @@ class FullDashboardBundleTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "size mismatch"):
             build(self.source, self.output, self.root)
 
-    def test_multipage_component_registers_without_changing_compact_page(self):
-        from streamlit.testing.v1 import AppTest
+    def studio_fixture(self):
         studio = self.root / "studio"
         pages = studio / "pages"
         pages.mkdir(parents=True)
         (studio / "app.py").write_text("import streamlit as st\nst.title('Existing compact studio')\n", encoding="utf-8")
         shutil.copyfile(APP_DIR / "pages/01_Full_Visual_Library.py", pages / "01_Full_Visual_Library.py")
         shutil.copyfile(APP_DIR / "full_dashboard_component.py", studio / "full_dashboard_component.py")
+        return studio
+
+    def test_multipage_component_registers_without_changing_compact_page(self):
+        from streamlit.testing.v1 import AppTest
+        from streamlit.runtime.pages_manager import PagesManager
+        studio = self.studio_fixture()
+        self.assertFalse((studio / "library/design_catalog.json").exists())
         build(self.source, studio / "full_dashboard_bundle", self.root)
-        app = AppTest.from_file(str(studio / "app.py"), default_timeout=20).run()
-        self.assertFalse(app.exception)
-        self.assertEqual(app.title[0].value, "Existing compact studio")
-        app.switch_page("pages/01_Full_Visual_Library.py").run()
-        self.assertFalse(app.exception)
-        self.assertEqual(app.title[0].value, "Full visual library")
-        self.assertEqual(len(app.get("component_instance")), 1)
+        # Streamlit caches pages-directory discovery process-wide. Earlier
+        # AppTest.from_string fixtures can set False even though this app has pages.
+        with patch.object(PagesManager, "uses_pages_directory", None):
+            app = AppTest.from_file(str(studio / "app.py"), default_timeout=20).run()
+            self.assertFalse(app.exception)
+            self.assertEqual(app.title[0].value, "Existing compact studio")
+            app.switch_page("pages/01_Full_Visual_Library.py").run()
+            self.assertFalse(app.exception)
+            self.assertEqual(app.title[0].value, "Full visual library")
+            self.assertEqual(len(app.get("component_instance")), 1)
+            self.assertNotIn("studio_view", app.session_state)
+            self.assertFalse((studio / "library/design_catalog.json").exists())
+
+    def test_native_full_catalog_redirects_to_library_and_preserves_reviews(self):
+        from streamlit.testing.v1 import AppTest
+        from streamlit.runtime.pages_manager import PagesManager
+        studio = self.studio_fixture()
+        (studio / "library").mkdir()
+        (studio / "library/design_catalog.json").write_text('{"assets": []}', encoding="utf-8")
+        # No mirror is packaged. The native route must run before mirror lookup.
+        self.assertFalse((studio / "full_dashboard_bundle/current.json").exists())
+        with patch.object(PagesManager, "uses_pages_directory", None):
+            app = AppTest.from_file(str(studio / "app.py"), default_timeout=20).run()
+            app.session_state.studio_view = "Favorites & notes"
+            app.session_state.studio_selected = "one"
+            app.session_state.studio_reviews = {"one": {"status": "needs_fixes", "note": "Keep this decision"}}
+            app.session_state.studio_favorites = {"one"}
+            app.session_state.studio_project = "lisan"
+            app.switch_page("pages/01_Full_Visual_Library.py").run()
+            self.assertFalse(app.exception)
+            self.assertEqual(app.title[0].value, "Existing compact studio")
+            self.assertEqual(app.session_state.studio_view, "Library")
+            self.assertIsNone(app.session_state.studio_selected)
+            self.assertEqual(app.session_state.studio_reviews, {"one": {"status": "needs_fixes", "note": "Keep this decision"}})
+            self.assertEqual(app.session_state.studio_favorites, {"one"})
+            self.assertEqual(app.session_state.studio_project, "lisan")
+            self.assertEqual(len(app.get("component_instance")), 0)
+            self.assertFalse(app.info)
+
+    def test_absent_native_and_mirror_catalogs_keep_missing_package_message(self):
+        from streamlit.testing.v1 import AppTest
+        from streamlit.runtime.pages_manager import PagesManager
+        studio = self.studio_fixture()
+        with patch.object(PagesManager, "uses_pages_directory", None):
+            app = AppTest.from_file(str(studio / "app.py"), default_timeout=20).run()
+            app.switch_page("pages/01_Full_Visual_Library.py").run()
+            self.assertFalse(app.exception)
+            self.assertEqual(app.title[0].value, "Full visual library")
+            self.assertIn("has not been prepared", app.info[0].value)
+            self.assertNotIn("studio_view", app.session_state)
+            self.assertEqual(len(app.get("component_instance")), 0)
 
 
 if __name__ == "__main__":

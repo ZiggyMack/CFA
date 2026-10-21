@@ -1,4 +1,4 @@
-"""The complete HTML dashboard, separate from the compact Streamlit studio."""
+"""Open the native full catalog, falling back to the packaged HTML mirror."""
 from pathlib import Path
 import json
 import sys
@@ -12,6 +12,11 @@ from full_dashboard_component import render_dashboard
 
 BUNDLE_DIR = APP_DIR / "full_dashboard_bundle"
 st.set_page_config(page_title="Full Visual Library | CFA", page_icon="🎞️", layout="wide", initial_sidebar_state="collapsed")
+if (APP_DIR / "library/design_catalog.json").is_file():
+    # The full portable catalog now lives in the native workspace, sharing reviews.
+    st.session_state.studio_view = "Library"
+    st.session_state.studio_selected = None
+    st.switch_page("app.py")
 st.markdown("<style>.block-container{padding:1rem .5rem;max-width:none;}@media(max-width:700px){.block-container{padding:3.5rem .2rem .5rem;}}</style>", unsafe_allow_html=True)
 st.page_link("app.py", label="Back to Creative Studio", icon="↩️")
 st.title("Full visual library")

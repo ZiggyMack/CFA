@@ -6,6 +6,7 @@ import html
 import json
 import mimetypes
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 import streamlit as st
@@ -18,12 +19,14 @@ from studio_dependencies import (
     collaborator_sections, document_tree, effective_reviews, export_allowed, handoff_payload, handoff_text,
     layout_video_assets, media_path, mission_tasks, mission_review_data, normalize_plan, ordered_assets, production_workflows,
     read_basket, read_review, review_payload, storyboard_stage, storyboard_themes, storyboard_window, sweep_payload,
+    effective_design_data, normal_visible, approved_multiverse, merge_review_overrides, review_provenance, validated_asset_aliases,
 )
 
 LIBRARY_DIR = APP_DIR / "library"
 PAGE_SIZE = 24
 CORNER = "Ziggy’s Corner"
-VIEWS = (CORNER, "Library", "Storyboard", "Collaborators", "Collaborator briefs", "Review queue", "Shot plans", "Export basket", "Favorites & notes", "Documents")
+DESIGN_VIEWS = ("Working references", "Outfits", "Tattoos & piercings", "Supporting cast", "Comfy swap targets", "Archive")
+VIEWS = (CORNER, "Library", *DESIGN_VIEWS, "Storyboard", "Videos", "Inspiration", "Needs review", "Collaborators", "Collaborator briefs", "Review queue", "Shot plans", "Export basket", "Favorites & notes", "Documents")
 STATUS_LABELS = {None: "Unmarked", "keep": "Keep", "needs_fixes": "Needs fixes", "remove": "Marked for removal"}
 
 st.set_page_config(page_title="Creative Studio | CFA", page_icon="🎬", layout="wide", initial_sidebar_state="auto")
@@ -89,6 +92,7 @@ def apply_theme() -> None:
     .stApp [data-testid="stFileUploaderDropzoneInstructions"] :is(span,small) {color:#a6b3c5!important;}
     .stApp [data-testid="stFileUploaderDropzone"][aria-disabled="true"] {background:#171d25!important;color:#92a1b5!important;}
     .stApp [data-testid="stText"],.stApp [data-testid="stText"]>span {color:#edf0f5!important;}
+    .stApp [data-testid="stMarkdownContainer"] {color:#edf0f5;}
     .stApp [data-testid="stCode"],.stApp [data-testid="stCode"] :is(pre,code) {background:#0d1725!important;color:#eef3fb!important;}
     [data-testid="stAlertContainer"] {background:#314964!important;color:#dcecff!important;}
     [data-testid="stAlertContainer"]:has([data-testid="stAlertContentSuccess"]) {background:#284c3e!important;color:#d1f0dd!important;}
@@ -157,7 +161,8 @@ def load_catalog(path: str, modified: int) -> dict:
 def init_state() -> None:
     for key, default in (("studio_view", CORNER), ("studio_selected", None),
                          ("studio_favorites", set()), ("studio_notes", {}), ("studio_pages", {}),
-                         ("studio_review_overrides", {}), ("studio_reviews", {}), ("studio_basket", set())):
+                         ("studio_review_overrides", {}), ("studio_reviews", {}), ("studio_basket", set()),
+                         ("studio_review_provenance", {})):
         if key not in st.session_state:
             st.session_state[key] = default
     if st.session_state.studio_view == "Collaborator kits":
@@ -175,7 +180,7 @@ def navigate(view: str) -> None:
 
 def back_to_library() -> None:
     view = st.session_state.get("studio_return_view", "Library")
-    navigate(view if view in ("Library", "Storyboard", "Documents", "Review queue", "Shot plans", "Export basket", "Favorites & notes") else "Library")
+    navigate(view if view in VIEWS and view not in (CORNER, "Collaborators") else "Library")
 
 
 def clear_selection() -> None:
@@ -226,6 +231,7 @@ def save_note(asset_id: str, key: str) -> None:
 
 def set_review_field(asset_id: str, field: str, value) -> None:
     st.session_state.studio_review_overrides.setdefault(asset_id, {})[field] = value
+    st.session_state.studio_review_overrides[asset_id]["updatedAt"] = datetime.now(timezone.utc).isoformat()
     st.session_state.pop("studio_basket_zip", None)
 
 
@@ -299,6 +305,10 @@ def render_collaborator_controls(asset: dict) -> None:
 def render_review_controls(asset: dict) -> None:
     asset_id = asset["id"]
     decision = st.session_state.studio_reviews.get(asset_id, {})
+    archived = bool(asset.get("archived"))
+    st.button("Restore from Archive" if archived else "Archive", key=f"archive:{asset_id}",
+              on_click=set_review_field, args=(asset_id, "collectionState", "working" if archived else "archived"), width="stretch")
+    st.caption("Archive keeps this file and its review while hiding it from ordinary browsing. Restore brings it back; any removal flag remains separate.")
     status = decision.get("status")
     st.markdown("**Review decision**")
     st.caption(f"Current: {STATUS_LABELS.get(status, 'Unmarked')}")
@@ -309,6 +319,13 @@ def render_review_controls(asset: dict) -> None:
                           type="primary" if value is not None and status == value else "secondary",
                           on_click=set_review_field, args=(asset_id, "status", value))
     st.caption("Keep applies to the scope in your note. Mark for removal flags the reference; it does not delete a file. Clear keeps your note and shot plan.")
+    for field, label in (("likenessRating", "Character score"), ("sceneQualityRating", "Scene craft score")):
+        rating_key = f"{field}:{asset_id}"
+        if rating_key not in st.session_state:
+            st.session_state[rating_key] = decision.get(field)
+        st.selectbox(label, [None, 1, 2, 3, 4, 5], format_func=lambda value: "Unrated" if value is None else str(value),
+                     key=rating_key, on_change=lambda aid=asset_id, f=field, k=rating_key: set_review_field(aid, f, st.session_state[k]))
+    st.caption("Scores and image validation are separate assessments.")
     note_key = f"asset-note:{asset_id}"
     if note_key not in st.session_state:
         st.session_state[note_key] = decision.get("note", "")
@@ -339,6 +356,14 @@ def render_review_controls(asset: dict) -> None:
             with column:
                 st.button(label, key=f"variant:{asset_id}:{value}", on_click=set_variant, args=(asset_id, value),
                           type="primary" if variant == value else "secondary", width="stretch")
+        if variant == "multiverse":
+            selected = decision.get("multiverseSelection") == "approved"
+            score = decision.get("likenessRating") or 0
+            st.caption("Approved Multiverse" if approved_multiverse(asset, st.session_state.studio_reviews) else "Multiverse candidate")
+            st.button("Return to candidates" if selected else "Approve for Multiverse use", key=f"multiverse-selection:{asset_id}",
+                      disabled=not selected and (score < 2 or archived or status == "remove"),
+                      on_click=set_review_field, args=(asset_id, "multiverseSelection", "candidate" if selected else "approved"))
+            st.caption("Choose the usable subset explicitly. Character scores of 2–5 qualify; a score alone never approves a candidate.")
         scope_key = f"working-scope:{asset_id}"
         st.selectbox("Working-reference scope", ("complete_look", "identity", "outfit", "scene", "detail"),
                      format_func=lambda value: value.replace("_", " ").title(), key=scope_key)
@@ -368,7 +393,7 @@ def change_page(signature: str, value: int) -> None:
 
 
 def hero(project: dict, view: str, assets: list[dict]) -> None:
-    visuals = [a for a in assets if a.get("kind") in VISUAL_KINDS and not a.get("archived")]
+    visuals = [a for a in assets if a.get("kind") in VISUAL_KINDS and normal_visible(a, st.session_state.studio_reviews)]
     videos = sum(a.get("kind") == "video" for a in visuals)
     captions = {
         "Library": "Explore the looks, compare the details, and keep the references you want to return to.",
@@ -383,7 +408,7 @@ def hero(project: dict, view: str, assets: list[dict]) -> None:
     subtitle = project.get("subtitle", "")
     st.markdown(f'<div class="studio-hero"><div class="eyebrow">CFA · Creative Studio · {html.escape(view)}</div>'
                 f'<h1>{html.escape(project["name"])}</h1><p>{html.escape(subtitle)} · '
-                f'{len(visuals) - videos} pictures · {videos} clips</p><p>{captions[view]}</p></div>', unsafe_allow_html=True)
+                f'{len(visuals) - videos} pictures · {videos} clips</p><p>{html.escape(captions.get(view, "Open a collection to explore its references and keep your review choices."))}</p></div>', unsafe_allow_html=True)
 
 
 def favorite_button(asset: dict, context: str = "card") -> None:
@@ -398,6 +423,13 @@ def render_selected(asset: dict) -> None:
     st.subheader(asset.get("title", asset["filename"]))
     if asset.get("archived"):
         st.info("Archived from regular browsing and exports. This entry remains available for review bookkeeping.")
+    if asset.get("kind") in {"document", "pdf"}:
+        if asset.get("text"):
+            st.text(asset["text"])
+        document_download(asset, context="selected")
+        st.button("Restore from Archive" if asset.get("archived") else "Archive", key=f"archive:{asset['id']}",
+                  on_click=set_review_field, args=(asset["id"], "collectionState", "working" if asset.get("archived") else "archived"))
+        return
     left, right = st.columns([3, 2], gap="large")
     with left:
         source = media_path(LIBRARY_DIR, asset.get("src"))
@@ -441,7 +473,7 @@ def render_selected(asset: dict) -> None:
             st.caption("Saved selections are review choices; they do not replace the project's reference instructions.")
 
 
-def render_card(asset: dict) -> None:
+def render_card(asset: dict, context: str = "card") -> None:
     with st.container(border=True):
         preview = media_path(LIBRARY_DIR, asset.get("thumb"))
         if not preview and asset.get("kind") in {"image", "gif"}:
@@ -455,7 +487,9 @@ def render_card(asset: dict) -> None:
         if asset.get("archived"):
             st.caption("Archived")
         if decision.get("variant", asset.get("variant")) == "multiverse":
-            st.caption("Multiverse · creative ingredient")
+            st.caption("Approved Multiverse" if approved_multiverse(asset, st.session_state.studio_reviews) else "Multiverse candidate")
+        if decision.get("likenessRating") is not None:
+            st.caption(f"Character · {decision['likenessRating']}/5")
         if decision.get("status"):
             st.caption(STATUS_LABELS[decision["status"]])
         if decision.get("shotPlan"):
@@ -473,10 +507,10 @@ def render_card(asset: dict) -> None:
         c1, c2 = st.columns([3, 2])
         with c1:
             st.button("Play & review" if asset.get("kind") == "video" else "Open & review",
-                      key=f"open:{asset['id']}", on_click=select_asset, args=(asset["id"], asset["project"]), width="stretch")
+                      key=f"open:{asset['id']}" if context == "card" else f"open:{context}:{asset['id']}", on_click=select_asset, args=(asset["id"], asset["project"]), width="stretch")
         with c2:
-            favorite_button(asset)
-        basket_button(asset)
+            favorite_button(asset, context)
+        basket_button(asset, context)
 
 
 def render_grid(results: list[tuple[dict, dict | None]], signature: str) -> None:
@@ -511,18 +545,21 @@ def render_grid(results: list[tuple[dict, dict | None]], signature: str) -> None
         for row in range(index, end, 3):
             for col, (asset, _) in zip(st.columns(3, gap="medium"), visible[row:min(row + 3, end)]):
                 with col:
-                    render_card(asset)
+                    render_card(asset, signature if signature.startswith(("design:", "story:")) else "card")
         index = end
     if count > PAGE_SIZE:
         st.caption("Use the page controls above to continue through this collection.")
 
 
-def render_library(data: dict, project: str, storyboard: bool = False) -> None:
+def render_library(data: dict, project: str, storyboard: bool = False, fixed_category: str | None = None) -> None:
     albums = [a for a in data["albums"] if a.get("project") == project]
     if storyboard:
         category = "storyboard"
         matching = [a for a in albums if a.get("category") == category]
         st.caption("Panel sequence and story notes are planning references. No song timing is implied.")
+    elif fixed_category:
+        category = fixed_category
+        matching = [a for a in albums if a.get("category") == category]
     else:
         available = {a.get("category") for a in albums}
         options = ["all"] + [key for key, _ in data["categories"] if key in available]
@@ -530,6 +567,9 @@ def render_library(data: dict, project: str, storyboard: bool = False) -> None:
         category = st.selectbox("Explore", options, format_func=lambda key: labels.get(key, key),
                                 key=f"category:{project}", on_change=clear_selection)
         matching = [a for a in albums if category == "all" or a.get("category") == category]
+        if data.get("designSnapshot") and category in {"working", "outfits", "details", "cast", "comfy"}:
+            render_design_workspace(data, project, category)
+            return
         if category == "details" and data.get("detailProfiles"):
             detail_view = st.radio("Detail view", ("By character", "All references"), horizontal=True, key=f"detail-view:{project}")
             if detail_view == "By character" and render_detail_profiles(data, project):
@@ -573,6 +613,31 @@ def render_library(data: dict, project: str, storyboard: bool = False) -> None:
         st.caption("Grouped keeps scene categories and places turnarounds last. All clips sorts across the current collection and search. Unknown durations appear last.")
     signature = json.dumps([project, category, album_id, query, storyboard, layout, order, story_range, themes, stage])
     render_grid(results, signature)
+
+
+def render_design_workspace(data: dict, project: str, view: str) -> None:
+    from studio_dependencies import current_module
+    query = st.text_input("Find a reference", key=f"design-search:{project}:{view}",
+                          placeholder="Search names, details, outfits…", on_change=clear_selection)
+    current_module("design_view").render_design_view(
+        data, project, view, LIBRARY_DIR, render_grid,
+        lambda asset: select_asset(asset["id"], asset["project"]),
+        reviews=st.session_state.studio_reviews, query=query)
+
+
+def render_needs_review(data: dict, project: str) -> None:
+    query = st.text_input("Find a reference needing attention", key=f"needs-review-search:{project}")
+    mode = st.radio("Show", ("All needing attention", "Needs fixes"), horizontal=True)
+    requested = {record["id"] for record in data.get("reviewRequests", []) if record.get("type") == "missing_decision"
+                 and any(asset["id"] == record["id"] and asset.get("sha256") == record.get("sha256") for asset in data["assets"])}
+    def needs_attention(asset):
+        decision = st.session_state.studio_reviews.get(asset["id"], {})
+        return decision.get("status") == "needs_fixes" or (mode != "Needs fixes" and (
+            asset.get("category") == "review" or asset["id"] in requested and not decision.get("status")))
+    results = [(asset, album) for asset, album in ordered_assets(data["assets"], data["albums"], project, query=query)
+               if needs_attention(asset)]
+    st.caption(f"{len(results)} references · grouped by collection. Open a reference to review or archive it.")
+    render_grid(results, f"needs-review:{project}:{mode}:{query}")
 
 
 def render_detail_profiles(data: dict, project: str) -> bool:
@@ -757,7 +822,8 @@ def render_collaborators(data: dict) -> None:
 def render_favorites(data: dict, project: str) -> None:
     if message := st.session_state.pop("studio_import_message", None):
         st.success(message)
-    payload = review_payload(data["assets"], st.session_state.studio_reviews, st.session_state.studio_favorites, st.session_state.studio_basket)
+    payload = review_payload(data["assets"], st.session_state.studio_reviews, st.session_state.studio_favorites, st.session_state.studio_basket,
+                             provenance=st.session_state.studio_review_provenance)
     export_col, import_col = st.columns(2, gap="large")
     with export_col:
         st.markdown("**Keep your review**")
@@ -773,14 +839,17 @@ def render_favorites(data: dict, project: str) -> None:
                 if uploaded.size > 5 * 1024 * 1024:
                     raise ValueError("Choose a review file smaller than 5 MB.")
                 imported = json.loads(uploaded.getvalue())
-                reviews, accepted, skipped = read_review(imported, data["assets"])
-                basket, basket_skipped = read_basket({"format": EXPORT_FORMAT, "items": imported["exportBasket"]}, data["assets"]) if "exportBasket" in imported else (set(), 0)
+                aliases = data.get("assetAliases", [])
+                reviews, accepted, skipped = read_review(imported, data["assets"], aliases=aliases)
+                basket, basket_skipped = read_basket({"format": EXPORT_FORMAT, "items": imported["exportBasket"]}, data["assets"], aliases=aliases) if "exportBasket" in imported else (set(), 0)
+                st.session_state.studio_review_provenance = review_provenance(imported, st.session_state.studio_review_provenance)
                 st.session_state.studio_basket = set(st.session_state.studio_basket) | basket
                 st.session_state.pop("studio_basket_zip", None)
                 st.session_state.studio_favorites = set(st.session_state.studio_favorites) | accepted
-                for asset_id, decision in reviews.items():
-                    st.session_state.studio_review_overrides.setdefault(asset_id, {}).update(decision)
-                    for prefix in ("asset-note", "plan-destinations", "plan-idea", "plan-prompt", "asset-stage"):
+                st.session_state.studio_review_overrides = merge_review_overrides(
+                    st.session_state.studio_review_overrides, reviews, data["assets"], aliases=aliases)
+                for asset_id in reviews:
+                    for prefix in ("asset-note", "plan-destinations", "plan-idea", "plan-prompt", "asset-stage", "likenessRating", "sceneQualityRating"):
                         st.session_state.pop(f"{prefix}:{asset_id}", None)
                 st.session_state.studio_import_message = f"Merged {len(accepted)} favorites and {len(reviews)} review records, plus {len(basket)} basket references. Skipped {skipped + basket_skipped} unmatched or invalid references."
                 st.rerun()
@@ -863,7 +932,8 @@ def render_mission_control(data: dict, review_data: dict | None = None) -> None:
 
     def sweep():
         st.write("Save your decisions, favorites, stages and reference roles, then pass the review to Nova. This does not start an agent or delete files.")
-        payload = sweep_payload((review_data or data)["assets"], st.session_state.studio_reviews, st.session_state.studio_favorites, st.session_state.studio_basket)
+        payload = sweep_payload((review_data or data)["assets"], st.session_state.studio_reviews, st.session_state.studio_favorites, st.session_state.studio_basket,
+                                provenance=st.session_state.studio_review_provenance)
         st.download_button("Prepare review sweep JSON", json.dumps(payload, ensure_ascii=False, indent=2),
                            file_name="cfa-review-sweep-for-nova.json", mime="application/json")
 
@@ -901,7 +971,7 @@ def render_export_basket(data: dict) -> None:
             try:
                 if uploaded.size > 5 * 1024 * 1024:
                     raise ValueError("Choose a selection list smaller than 5 MB.")
-                accepted, skipped = read_basket(json.loads(uploaded.getvalue()), data["assets"])
+                accepted, skipped = read_basket(json.loads(uploaded.getvalue()), data["assets"], aliases=data.get("assetAliases", []))
                 st.session_state.studio_basket = set(basket) | accepted
                 st.session_state.pop("studio_basket_zip", None)
                 st.session_state.studio_flash = f"Added {len(accepted)} basket references. Skipped {skipped} unmatched references."
@@ -920,7 +990,9 @@ def render_export_basket(data: dict) -> None:
 def main() -> None:
     apply_theme()
     init_state()
-    catalog_path = LIBRARY_DIR / "catalog.json"
+    catalog_path = LIBRARY_DIR / "design_catalog.json"
+    if not catalog_path.is_file():
+        catalog_path = LIBRARY_DIR / "catalog.json"
     if not catalog_path.is_file():
         st.title("CFA Creative Studio")
         st.info("The studio is ready for its library bundle. Add library/catalog.json and its packaged media to load the collections.")
@@ -933,14 +1005,27 @@ def main() -> None:
     mission_data = data
     review_data = data
     mission_path = LIBRARY_DIR / "mission_control.json"
-    if mission_path.is_file():
+    if mission_path.is_file() and not data.get("designSnapshot"):
         try:
             mission_data = load_catalog(str(mission_path), mission_path.stat().st_mtime_ns)
             review_data = mission_review_data(data, mission_data)
         except (OSError, ValueError) as error:
             st.error(f"The Ziggy’s Corner snapshot could not be loaded: {error}")
             return
-    st.session_state.studio_reviews = effective_reviews(review_data["assets"], review_data.get("reviewDecisions", []), st.session_state.studio_review_overrides)
+    st.session_state.studio_reviews = effective_reviews(review_data["assets"], review_data.get("reviewDecisions", []), st.session_state.studio_review_overrides,
+                                                       aliases=review_data.get("assetAliases", []))
+    if data.get("designSnapshot"):
+        identity = data["designSnapshot"].get("sourceCatalog", {}).get("sha256")
+        if st.session_state.get("studio_provenance_seed") != identity:
+            st.session_state.studio_review_provenance = review_provenance(data, st.session_state.studio_review_provenance)
+            st.session_state.studio_provenance_seed = identity
+        data = effective_design_data(data, st.session_state.studio_reviews)
+        mission_data = review_data = data
+        aliases = validated_asset_aliases(data["assets"], data.get("assetAliases", []))
+        redirect = lambda aid: aliases.get(aid, {}).get("canonicalID", aid)
+        st.session_state.studio_selected = redirect(st.session_state.studio_selected)
+        st.session_state.studio_favorites = {redirect(aid) for aid in st.session_state.studio_favorites}
+        st.session_state.studio_basket = {redirect(aid) for aid in st.session_state.studio_basket}
     st.session_state.studio_notes = {key: value.get("note", "") for key, value in st.session_state.studio_reviews.items()}
     if message := st.session_state.pop("studio_flash", None):
         st.success(message)
@@ -953,7 +1038,11 @@ def main() -> None:
         st.caption("A place to look, compare, and create.")
         project = st.selectbox("Project", list(projects), format_func=lambda key: projects[key]["name"],
                                key="studio_project", on_change=clear_project_selection)
-        for label, views in (("START HERE", (CORNER,)), ("BROWSE", ("Library", "Storyboard")), ("CREATE", ("Collaborators", "Shot plans", "Collaborator briefs")),
+        browse = ("Library", "Working references", "Outfits", "Tattoos & piercings", "Supporting cast", "Storyboard", "Videos", "Comfy swap targets")
+        if project != "hon":
+            browse += ("Inspiration",)
+        browse += ("Needs review", "Archive")
+        for label, views in (("START HERE", (CORNER,)), ("BROWSE", browse), ("CREATE", ("Collaborators", "Shot plans", "Collaborator briefs")),
                              ("KEEP & REFER", ("Review queue", "Export basket", "Favorites & notes", "Documents"))):
             st.caption(label)
             for view in views:
@@ -973,13 +1062,24 @@ def main() -> None:
         return
     hero(projects[project], view, assets)
     selection_assets = review_data["assets"] if view in ("Favorites & notes", "Shot plans", "Export basket") else assets
-    selected = next((a for a in selection_assets if a["id"] == st.session_state.studio_selected and a.get("kind") in VISUAL_KINDS), None)
+    selected = next((a for a in selection_assets if a["id"] == st.session_state.studio_selected), None)
     if selected:
         render_selected(selected)
     elif view == "Library":
         render_library(data, project)
     elif view == "Storyboard":
-        render_library(data, project, storyboard=True)
+        if data.get("storyboardStories"):
+            from studio_dependencies import current_module
+            current_module("story_view").render_stories(data, project, LIBRARY_DIR, render_grid, select_asset, document_download,
+                                                       reviews=st.session_state.studio_reviews)
+        else:
+            render_library(data, project, storyboard=True)
+    elif view in DESIGN_VIEWS:
+        render_design_workspace(data, project, view)
+    elif view in ("Videos", "Inspiration"):
+        render_library(data, project, fixed_category=view.lower())
+    elif view == "Needs review":
+        render_needs_review(data, project)
     elif view == "Collaborator briefs":
         render_collaborator_briefs(data, assets, project)
     elif view == "Favorites & notes":

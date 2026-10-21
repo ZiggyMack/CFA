@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
+from copy import deepcopy
 import hashlib
 import io
 import json
@@ -24,7 +25,8 @@ REVIEW_METADATA_FIELDS = {
     "collectionState", "importEvidence", "archiveReason", "removalState", "handoffPolicy",
     "creativeReview", "supersededBy", "displayTitle", "humanRatingConfirmation", "history",
     "reason", "reasonSource", "scopedPropCorrection", "temporalVariant", "lookSelection",
-    "componentSelection", "directUserClarification", "creativeLane", "validationEvidence",
+    "componentSelection", "directUserClarification", "creativeLane", "validationEvidence", "multiverseSelection",
+    "shotPlanClearEvidence", "shotPlanUpdatedAt",
 }
 DESTINATIONS = ("undecided", "Gemini", "Flow", "Grok", "ComfyUI")
 MISSION_PROVIDERS = ("Grok", "Gemini", "Flow", "Panhandler Nova")
@@ -32,6 +34,187 @@ MISSION_STATUSES = {"ready", "needs_input", "planned", "in_progress", "done"}
 VISUAL_KINDS = {"image", "video", "gif"}
 STORYBOARD_STAGES = {"preliminary": "Preliminary", "detailed_design": "Detailed design",
                      "verification": "Verification", "production": "Production"}
+HISTORICAL_TATTOO_IDS = {
+    "HD-RETURN-d55b97a3b322", "HD-RETURN-78ad6c79615a", "HD-RETURN-f88ff5ae511e",
+    "HD-TATGUIDE-b80e4d006917", "HD-RETURN-d91685dd99cd", "HD-TATGUIDE-d152270ab369",
+    "HD-TATGUIDE-ad54ba356e7c", "HD-TATGUIDE-3046dd64faa8", "HD-TATGUIDE-440a8cf5e911",
+}
+
+
+def design_archive_membership(data: dict) -> tuple[set[str], set[str]]:
+    """The index's default history policy; explicit review choices are applied later."""
+    assets = data.get("assets", [])
+    by_id = {asset["id"]: asset for asset in assets}
+    characters = data.get("characterBOM", {}).get("characters", [])
+    cast = data.get("castCollections", [])
+    protected = {character.get("coverAssetID") for character in characters}
+    protected.update(entry.get("assetID") for character in characters for entry in character.get("entries", []) if entry.get("recordedSelection"))
+    protected.update(asset_id for group in cast for field in ("currentIDs", "workingReferenceIDs") for asset_id in group.get(field, []))
+    protected.update(asset["id"] for asset in assets if any(
+        approval.get("sourceSHA256") == asset.get("sha256") and approval.get("status") == "user_selected_component"
+        for approval in asset.get("componentApprovals", [])))
+    retired = {asset_id for album in data.get("albums", []) if album.get("id") in {"hon:scene-ideas", "hon:outfit-ideas"}
+               for asset_id in album.get("assetIDs", [])}
+    history = {"HD-LIKENESS-02", *HISTORICAL_TATTOO_IDS, *retired}
+    history.update(asset_id for character in characters for asset_id in character.get("historyAssetIDs", []))
+    history.update(asset_id for group in data.get("sharedReferenceCollections", []) for section in group.get("sections", [])
+                   if section.get("history") is True for asset_id in section.get("assetIDs", []))
+    history.update(asset_id for group in cast for asset_id in group.get("historicalReferenceIDs", group.get("historyIDs", [])))
+    mouth = data.get("mouthCoverage", {})
+    historical_looks = {look.get("id") for look in mouth.get("looks", []) if look.get("history") is True or look.get("planStatus") == "History only"}
+    history.update(row.get("assetID") for row in mouth.get("items", []) if row.get("lookID") in historical_looks
+                   and by_id.get(row.get("assetID"), {}).get("sha256") == row.get("sha256"))
+    return history - protected, retired
+
+
+def asset_archived(asset: dict, reviews: dict[str, dict]) -> bool:
+    decision = reviews.get(asset["id"], {})
+    choice = decision.get("collectionState")
+    if choice in ("archived", "working"):
+        return choice == "archived"
+    selected = asset.get("_retiredInspiration", False) and (
+        (decision.get("workingReference") or {}).get("status") == "approved"
+        or decision.get("status") == "keep" and (decision.get("storyboardStage") or asset.get("storyboardStage")) == "production")
+    return bool(asset.get("_sourceArchived", asset.get("archived", False))
+                or asset.get("_historyArchived", False) and not selected)
+
+
+def normal_visible(asset: dict | None, reviews: dict[str, dict]) -> bool:
+    if not asset or asset_archived(asset, reviews):
+        return False
+    decision = reviews.get(asset["id"], {})
+    return decision.get("status", "remove" if asset.get("_reviewRemoved") else None) != "remove"
+
+
+def effective_design_data(data: dict, reviews: dict[str, dict]) -> dict:
+    """Copy display flags, retaining every original asset and all evidence for history."""
+    historical, retired = design_archive_membership(data)
+    result = dict(data)
+    result["assets"] = []
+    for source in data.get("assets", []):
+        asset = dict(source)
+        asset["_sourceArchived"] = source.get("_sourceArchived", bool(source.get("archived")))
+        asset["_historyArchived"] = asset["id"] in historical
+        asset["_retiredInspiration"] = asset["id"] in retired
+        asset["_reviewRemoved"] = reviews.get(asset["id"], {}).get("status") == "remove"
+        asset["archived"] = asset_archived(asset, reviews)
+        result["assets"].append(asset)
+    return result
+
+
+def approved_multiverse(asset: dict, reviews: dict[str, dict]) -> bool:
+    decision = reviews.get(asset["id"], {})
+    rating = decision.get("likenessRating")
+    return (normal_visible(asset, reviews) and decision.get("variant", asset.get("variant")) == "multiverse"
+            and decision.get("multiverseSelection") == "approved" and type(rating) is int and 2 <= rating <= 5)
+
+
+def validated_asset_aliases(assets: list[dict], aliases: Any = ()) -> dict[str, dict]:
+    """Visual re-encodings are explicit navigation/review aliases, never hash equality."""
+    by_id = {asset["id"]: asset for asset in assets}
+    result, conflicts = {}, set()
+    for alias in aliases if isinstance(aliases, (list, tuple)) else []:
+        if not isinstance(alias, dict) or alias.get("kind") != "visual_duplicate_reencoding":
+            continue
+        old_id, canonical_id = alias.get("id"), alias.get("canonicalID")
+        if not isinstance(old_id, str) or not old_id or old_id in by_id or not isinstance(canonical_id, str):
+            continue
+        target = by_id.get(canonical_id)
+        if not target or any(not isinstance(alias.get(key), str) or not re.fullmatch(r"[a-f0-9]{64}", alias[key])
+                             for key in ("sha256", "canonicalSHA256")) or target.get("sha256") != alias["canonicalSHA256"]:
+            continue
+        prior = result.get(old_id)
+        if prior and any(prior.get(key) != alias.get(key) for key in ("sha256", "canonicalID", "canonicalSHA256")):
+            conflicts.add(old_id)
+        result[old_id] = alias
+    return {key: value for key, value in result.items() if key not in conflicts}
+
+
+def resolve_asset_reference(item: Any, assets: list[dict], aliases: Any = (), *, require_hash: bool = True,
+                            allow_alias_id: bool = False) -> dict | None:
+    by_id = {asset["id"]: asset for asset in assets}
+    if isinstance(item, str):
+        item = {"id": item}
+    if not isinstance(item, dict) or not isinstance(item.get("id"), str):
+        return None
+    asset = by_id.get(item["id"])
+    if asset:
+        return asset if (_hash_matches(item, asset) if require_hash else not item.get("sha256") or _hash_matches(item, asset)) else None
+    alias = validated_asset_aliases(assets, aliases).get(item["id"])
+    if alias and (item.get("sha256") == alias["sha256"] or allow_alias_id and not item.get("sha256")):
+        return by_id[alias["canonicalID"]]
+    return None
+
+
+def _review_time(record: dict) -> float:
+    try:
+        stamp = datetime.fromisoformat(str(record.get("updatedAt", "")).replace("Z", "+00:00"))
+        return (stamp if stamp.tzinfo else stamp.replace(tzinfo=timezone.utc)).timestamp()
+    except (ValueError, TypeError, KeyError, OverflowError):
+        return 0
+
+
+def _guard_plan_clear(prior: dict, incoming: dict) -> dict:
+    """A dated field-only clear must not be undone by an older whole-record import."""
+    incoming = dict(incoming)
+    before = prior.get("shotPlanClearEvidence")
+    after = incoming.get("shotPlanClearEvidence")
+    before_time = _review_time(before) if isinstance(before, dict) else 0
+    after_time = _review_time(after) if isinstance(after, dict) else 0
+    clear_time = max(before_time, after_time)
+    if not clear_time:
+        return incoming
+    if before_time > after_time:
+        incoming["shotPlanClearEvidence"] = deepcopy(before)
+    if "shotPlan" in incoming:
+        incoming_time = max(_review_time(incoming), _review_time({"updatedAt": incoming.get("shotPlanUpdatedAt")}),
+                            after_time if incoming["shotPlan"] is None else 0)
+        prior_time = max(_review_time(prior), _review_time({"updatedAt": prior.get("shotPlanUpdatedAt")}),
+                         before_time if prior.get("shotPlan") is None else 0)
+        if ((incoming["shotPlan"] is not None and incoming_time <= clear_time)
+                or "shotPlan" in prior and incoming_time < prior_time):
+            incoming.pop("shotPlan")
+            if "shotPlan" in prior:
+                incoming["shotPlanUpdatedAt"] = datetime.fromtimestamp(prior_time, timezone.utc).isoformat()
+        else:
+            incoming["shotPlanUpdatedAt"] = datetime.fromtimestamp(incoming_time, timezone.utc).isoformat()
+    return incoming
+
+
+def _merge_decision(result: dict, asset_id: str, incoming: dict, alias_ids: set[str]) -> None:
+    prior = result.get(asset_id)
+    if prior is not None and asset_id in alias_ids:
+        before, after = _review_time(prior), _review_time(incoming)
+        if after < before or after == before and incoming.get("_visualAliasSource"):
+            return
+    incoming = _guard_plan_clear(prior or {}, incoming)
+    merged = {"status": None, "note": "", "shotPlan": None, **(prior or {}), **incoming}
+    if "_visualAliasSource" not in incoming:
+        merged.pop("_visualAliasSource", None)
+    if merged.get("variant") == "multiverse":
+        merged["workingReference"] = None
+    result[asset_id] = merged
+
+
+def merge_review_overrides(existing: dict[str, dict], incoming: dict[str, dict], assets: list[dict], aliases: Any = ()) -> dict[str, dict]:
+    """Merge validated/session decisions without letting an older alias win by order."""
+    result = deepcopy(existing)
+    by_id = {asset["id"]: asset for asset in assets}
+    alias_map = validated_asset_aliases(assets, aliases)
+    alias_ids = {alias["canonicalID"] for alias in alias_map.values()}
+    for asset_id, record in incoming.items():
+        if asset_id not in by_id:
+            continue
+        normalized = normalize_decision(record, partial=True)
+        marker = record.get("_visualAliasSource")
+        if isinstance(marker, dict):
+            alias = alias_map.get(marker.get("id"))
+            if not alias or alias["canonicalID"] != asset_id or marker.get("sha256") != alias["sha256"]:
+                continue
+            normalized.pop("validationEvidence", None)
+            normalized["_visualAliasSource"] = deepcopy(marker)
+        _merge_decision(result, asset_id, normalized, alias_ids)
+    return result
 
 
 def media_path(library_dir: Path, value: str | None) -> Path | None:
@@ -55,7 +238,7 @@ def ordered_assets(
 ) -> list[tuple[dict[str, Any], dict[str, Any] | None]]:
     """Follow supplied album and member order, showing each picture once."""
     by_id = {a["id"]: a for a in assets if a.get("project") == project and a.get("kind") in VISUAL_KINDS
-             and (include_archived or not a.get("archived"))}
+             and (include_archived or not a.get("archived") and not a.get("_reviewRemoved"))}
     eligible_albums = [a for a in albums if a.get("project") == project
                        and (category == "all" or a.get("category") == category)
                        and (album_id == "all" or a.get("id") == album_id)]
@@ -152,28 +335,29 @@ def favorite_payload(assets: list[dict[str, Any]], favorites: set[str], notes: d
             "note_refs": {key: hashes[key] for key, value in notes.items() if key in valid_ids and value.strip()}}
 
 
-def read_favorites(payload: Any, assets: list[dict[str, Any]]) -> tuple[set[str], dict[str, str], int]:
+def read_favorites(payload: Any, assets: list[dict[str, Any]], aliases: Any = ()) -> tuple[set[str], dict[str, str], int]:
     """Import known IDs only, and reject mismatched source hashes."""
     if not isinstance(payload, dict) or payload.get("format") != FAVORITES_FORMAT or not isinstance(payload.get("items"), list):
         raise ValueError("Choose a Creative Studio favorites export (cfa-visual-favorites-v1).")
-    by_id = {a["id"]: a for a in assets}
     accepted, skipped = set(), 0
     for item in payload["items"]:
-        if not isinstance(item, dict) or not isinstance(item.get("id"), str):
-            skipped += 1
-            continue
-        asset = by_id.get(item["id"])
-        if asset and (not item.get("sha256") or item["sha256"] == asset.get("sha256")):
-            accepted.add(item["id"])
+        asset = resolve_asset_reference(item, assets, aliases, require_hash=False, allow_alias_id=True)
+        if asset:
+            accepted.add(asset["id"])
         else:
             skipped += 1
     raw_notes = payload.get("notes", {})
     note_refs = payload.get("note_refs", {})
     if not isinstance(note_refs, dict):
         note_refs = {}
-    notes = {key: value[:20000] for key, value in raw_notes.items()
-             if key in by_id and isinstance(value, str)
-             and (not note_refs.get(key) or note_refs[key] == by_id[key].get("sha256"))} if isinstance(raw_notes, dict) else {}
+    notes = {}
+    for key, value in raw_notes.items() if isinstance(raw_notes, dict) else []:
+        asset = resolve_asset_reference({"id": key, "sha256": note_refs.get(key)}, assets, aliases,
+                                        require_hash=False, allow_alias_id=True)
+        if asset and isinstance(value, str):
+            # A canonical note wins a simultaneous legacy alias note without a timestamp.
+            if asset["id"] not in notes or key == asset["id"]:
+                notes[asset["id"]] = value[:20000]
     return accepted, notes, skipped
 
 
@@ -236,6 +420,11 @@ def normalize_decision(value: Any, *, partial: bool = False, allow_catalog_varia
         if scope is not None and scope not in ("complete_look", "identity", "outfit", "scene", "detail"):
             raise ValueError("Choose a valid working-reference scope.")
         result["workingReferenceScope"] = scope
+    for field, choices in (("collectionState", {"archived", "working"}), ("multiverseSelection", {"candidate", "approved"})):
+        if field in value:
+            if value[field] is not None and value[field] not in choices:
+                raise ValueError(f"Invalid {field} choice.")
+            result[field] = value[field]
     for key in REVIEW_METADATA_FIELDS & value.keys():
         result[key] = json.loads(json.dumps(value[key], allow_nan=False))
     return result
@@ -245,38 +434,36 @@ def _hash_matches(item: dict, asset: dict) -> bool:
     return (item.get("sha256") or None) == (asset.get("sha256") or None)
 
 
-def effective_reviews(assets: list[dict], seeds: Any, overrides: dict[str, dict]) -> dict[str, dict]:
+def effective_reviews(assets: list[dict], seeds: Any, overrides: dict[str, dict], aliases: Any = ()) -> dict[str, dict]:
     """Overlay session choices on supplied seeds; explicit null survives reruns."""
     by_id = {a["id"]: a for a in assets}
     if isinstance(seeds, dict):
         seeds = seeds.get("items", [])
+    alias_map = validated_asset_aliases(assets, aliases)
+    alias_ids = {alias["canonicalID"] for alias in alias_map.values()}
     result = {}
     for asset in assets:
         source_fields = {key: asset[key] for key in ("workingReference", "variant") if key in asset}
         if source_fields:
             if "variant" in source_fields:
                 source_fields["variantSource"] = "catalog"
-            result[asset["id"]] = normalize_decision(source_fields)
+            _merge_decision(result, asset["id"], normalize_decision(source_fields), alias_ids)
     for item in seeds if isinstance(seeds, list) else []:
-        if not isinstance(item, dict) or item.get("id") not in by_id:
-            continue
-        if not _hash_matches(item, by_id[item["id"]]):
+        asset = resolve_asset_reference(item, assets, aliases)
+        if not asset:
             continue
         try:
-            baseline = result.get(item["id"], {})
-            result[item["id"]] = {**baseline, **normalize_decision(item, partial=True)}
-            if "variant" in result[item["id"]]:
-                result[item["id"]]["variantSource"] = "catalog"
+            decision = normalize_decision(item, partial=True)
+            if item["id"] in alias_map:
+                decision.pop("validationEvidence", None)
+                decision["_visualAliasSource"] = {"id": item["id"], "sha256": item["sha256"]}
+            if "variant" in decision:
+                decision["variantSource"] = "catalog"
+            _merge_decision(result, asset["id"], decision, alias_ids)
         except (ValueError, TypeError):
             continue
-    for asset_id, decision in overrides.items():
-        if asset_id not in by_id:
-            continue
-        # Overrides are session data or already hash-validated imports.
-        merged = dict(result.get(asset_id, {"status": None, "note": "", "shotPlan": None}))
-        merged.update(normalize_decision(decision, partial=True))
-        result[asset_id] = merged
-    return result
+    # Overrides are session data or already hash-validated imports.
+    return merge_review_overrides(result, overrides, assets, aliases)
 
 
 def reference_record(asset: dict) -> dict:
@@ -285,7 +472,82 @@ def reference_record(asset: dict) -> dict:
             "path": asset.get("repoPath", asset.get("src")), "role": asset.get("category")}
 
 
-def review_payload(assets: list[dict], reviews: dict[str, dict], favorites: set[str], basket: set[str] | None = None) -> dict:
+def review_provenance(payload: dict, existing: dict | None = None) -> dict:
+    """Preserve source reviews/evidence verbatim, without evaluating or rebinding them.
+
+    This is a backup merger, not a validation engine. Evidence keeps its original
+    target ID, hash and scope; an alias never makes old evidence current.
+    """
+    result = {"validationEvidence": {"format": "cfa-reference-validation-v1", "schemaVersion": 1,
+                                     "assessments": [], "legacyReviewArchive": []}, "sceneReviews": []}
+    envelope = result["validationEvidence"]
+    seen_assessments: dict[str, str] = {}
+
+    def stable(value: Any) -> str:
+        return json.dumps(value, sort_keys=True, ensure_ascii=False, allow_nan=False, separators=(",", ":"))
+
+    def append_unique(target: list, records: list) -> None:
+        seen = {stable(record) for record in target}
+        for record in records:
+            key = stable(record)
+            if key not in seen:
+                target.append(deepcopy(record))
+                seen.add(key)
+
+    def unread(source: str, value: Any, error: str) -> None:
+        append_unique(envelope.setdefault("unreadBackups", []),
+                      [{"sourceKey": source, "raw": stable(value), "error": error}])
+
+    for source in (existing or {}, payload):
+        if not isinstance(source, dict):
+            raise ValueError("Review provenance must be an object.")
+        raw = source.get("items", source.get("reviewDecisions", []))
+        if isinstance(raw, dict):
+            raw = raw.get("items", [])
+        if isinstance(raw, list):
+            append_unique(envelope["legacyReviewArchive"], raw)
+        scenes = source.get("sceneReviews", [])
+        if isinstance(scenes, list):
+            # The native editor does not edit these. Keep source records/order intact.
+            append_unique(result["sceneReviews"], scenes)
+        elif scenes is not None:
+            unread("sceneReviews", scenes, "Unsupported scene-review backup retained.")
+        evidence = source.get("validationEvidence")
+        if evidence is None and isinstance(source.get("referenceValidation"), dict):
+            # Catalog assessments already carry their exact source bindings.
+            evidence = {"format": "cfa-reference-validation-v1", "schemaVersion": 1,
+                        "assessments": source["referenceValidation"].get("assessments", [])}
+        if evidence is None:
+            continue
+        if (not isinstance(evidence, dict) or evidence.get("format") != "cfa-reference-validation-v1"
+                or evidence.get("schemaVersion") != 1 or not isinstance(evidence.get("assessments"), list)
+                or not isinstance(evidence.get("legacyReviewArchive", []), list)
+                or not isinstance(evidence.get("unreadBackups", []), list)
+                or any(not isinstance(row, dict) or not isinstance(row.get("sourceKey"), str)
+                       or not isinstance(row.get("raw"), str) or not isinstance(row.get("error"), str)
+                       for row in evidence.get("unreadBackups", []))
+                or any(not isinstance(row, dict) or not isinstance(row.get("id"), str) or not row["id"]
+                       for row in evidence.get("assessments", []))):
+            unread("validationEvidence", evidence, "Unsupported validation evidence retained without activation.")
+            continue
+        if evidence.keys() - {"format", "schemaVersion", "assessments", "legacyReviewArchive", "unreadBackups"}:
+            unread("validationEvidence", evidence, "Additional evidence envelope fields retained without interpretation.")
+        for record in evidence["assessments"]:
+            key = stable(record)
+            prior = seen_assessments.get(record["id"])
+            if prior is not None and prior != key:
+                raise ValueError("Conflicting immutable evidence ID: " + record["id"])
+            if prior is None:
+                envelope["assessments"].append(deepcopy(record))
+                seen_assessments[record["id"]] = key
+        append_unique(envelope["legacyReviewArchive"], evidence.get("legacyReviewArchive", []))
+        if evidence.get("unreadBackups"):
+            append_unique(envelope.setdefault("unreadBackups", []), evidence["unreadBackups"])
+    return result
+
+
+def review_payload(assets: list[dict], reviews: dict[str, dict], favorites: set[str], basket: set[str] | None = None,
+                   *, provenance: dict | None = None) -> dict:
     payload = {"format": REVIEW_FORMAT, "exported": datetime.now(timezone.utc).isoformat(),
             "status": "session review and draft shot plans; no files deleted and no generation submitted",
             "items": [{**reference_record(a), **normalize_decision(reviews[a["id"]])}
@@ -293,40 +555,53 @@ def review_payload(assets: list[dict], reviews: dict[str, dict], favorites: set[
             "favorites": [reference_record(a) for a in assets if a["id"] in favorites]}
     if basket is not None:
         payload["exportBasket"] = [reference_record(a) for a in assets if a["id"] in basket]
+    if provenance is not None:
+        payload.update(review_provenance({}, provenance))
     return payload
 
 
-def read_review(payload: Any, assets: list[dict]) -> tuple[dict[str, dict], set[str], int]:
+def read_review(payload: Any, assets: list[dict], aliases: Any = ()) -> tuple[dict[str, dict], set[str], int]:
     """Read both formats without changing the catalog, sources, or approvals."""
     if isinstance(payload, dict) and payload.get("format") == FAVORITES_FORMAT:
-        favorites, notes, skipped = read_favorites(payload, assets)
+        favorites, notes, skipped = read_favorites(payload, assets, aliases)
         return {key: {"note": value} for key, value in notes.items()}, favorites, skipped
     if not isinstance(payload, dict) or payload.get("format") != REVIEW_FORMAT or not isinstance(payload.get("items"), list):
         raise ValueError("Choose a CFA review or favorites JSON export.")
     raw_favorites = payload.get("favorites", [])
     if not isinstance(raw_favorites, list):
         raise ValueError("The favorites field must be a list of references.")
-    by_id = {a["id"]: a for a in assets}
+    alias_map = validated_asset_aliases(assets, aliases)
+    alias_ids = {alias["canonicalID"] for alias in alias_map.values()}
     reviews, favorites, skipped = {}, set(), 0
     for item in payload["items"]:
         if not isinstance(item, dict) or not isinstance(item.get("id"), str):
             skipped += 1
             continue
-        asset = by_id.get(item["id"])
-        if not asset or not _hash_matches(item, asset):
+        asset = resolve_asset_reference(item, assets, aliases)
+        if not asset:
             skipped += 1
             continue
         try:
-            reviews[item["id"]] = normalize_decision(item, partial=True, allow_catalog_variant=False)
+            decision = normalize_decision(item, partial=True, allow_catalog_variant=False)
+            if item["id"] in alias_map:
+                decision.pop("validationEvidence", None)
+                decision["_visualAliasSource"] = {"id": item["id"], "sha256": item["sha256"]}
+            # Partial imports must not clear unrelated existing fields.
+            prior = reviews.get(asset["id"])
+            if asset["id"] in alias_ids and prior is not None:
+                if _review_time(decision) < _review_time(prior) or _review_time(decision) == _review_time(prior) and decision.get("_visualAliasSource"):
+                    continue
+            decision = _guard_plan_clear(prior or {}, decision)
+            merged = {**(prior or {}), **decision}
+            if "_visualAliasSource" not in decision:
+                merged.pop("_visualAliasSource", None)
+            reviews[asset["id"]] = merged
         except (ValueError, TypeError):
             skipped += 1
     for item in raw_favorites:
-        if not isinstance(item, dict) or not isinstance(item.get("id"), str):
-            skipped += 1
-            continue
-        asset = by_id.get(item["id"])
-        if asset and _hash_matches(item, asset):
-            favorites.add(item["id"])
+        asset = resolve_asset_reference(item, assets, aliases, require_hash=True, allow_alias_id=True)
+        if asset:
+            favorites.add(asset["id"])
         else:
             skipped += 1
     return reviews, favorites, skipped
@@ -337,7 +612,7 @@ def export_allowed(asset: dict, reviews: dict[str, dict], intent: str = "prime")
         raise ValueError("Unknown export intent.")
     decision = reviews.get(asset["id"], {})
     variant = decision.get("variant", asset.get("variant", "prime"))
-    return not asset.get("archived") and decision.get("status") != "remove" and (variant != "multiverse" or intent == "multiverse_ingredients")
+    return normal_visible(asset, reviews) and (variant != "multiverse" or intent == "multiverse_ingredients")
 
 
 def handoff_payload(assets: list[dict], reviews: dict[str, dict], project: str, destination: str, intent: str = "prime") -> dict:
@@ -433,7 +708,7 @@ def mission_review_data(base: dict, snapshot: dict) -> dict:
 
 
 def mission_visible(asset: dict | None, reviews: dict) -> bool:
-    return bool(asset and not asset.get("archived") and reviews.get(asset["id"], {}).get("status") != "remove")
+    return normal_visible(asset, reviews)
 
 
 def mission_pending_requests(data: dict, reviews: dict, project: str) -> list[str]:
@@ -517,18 +792,17 @@ def basket_payload(assets: list[dict], basket: set[str], reviews: dict[str, dict
             "items": [reference_record(a) for a in assets if a["id"] in basket and export_allowed(a, reviews or {}, intent)]}
 
 
-def read_basket(payload: Any, assets: list[dict]) -> tuple[set[str], int]:
+def read_basket(payload: Any, assets: list[dict], aliases: Any = ()) -> tuple[set[str], int]:
     if not isinstance(payload, dict) or payload.get("format") != EXPORT_FORMAT or not isinstance(payload.get("items"), list):
         raise ValueError("Choose a CFA export-basket JSON selection list.")
-    by_id = {asset["id"]: asset for asset in assets}
     accepted, skipped = set(), 0
     for item in payload["items"]:
         if not isinstance(item, dict) or not isinstance(item.get("id"), str):
             skipped += 1
             continue
-        asset = by_id.get(item["id"])
-        if asset and _hash_matches(item, asset):
-            accepted.add(item["id"])
+        asset = resolve_asset_reference(item, assets, aliases)
+        if asset:
+            accepted.add(asset["id"])
         else:
             skipped += 1
     return accepted, skipped
@@ -633,8 +907,9 @@ def storyboard_themes(asset: dict, album: dict | None = None) -> list[str]:
     return list(dict.fromkeys(values))
 
 
-def sweep_payload(assets: list[dict], reviews: dict[str, dict], favorites: set[str], basket: set[str]) -> dict:
-    payload = review_payload(assets, reviews, favorites, basket)
+def sweep_payload(assets: list[dict], reviews: dict[str, dict], favorites: set[str], basket: set[str],
+                  *, provenance: dict | None = None) -> dict:
+    payload = review_payload(assets, reviews, favorites, basket, provenance=provenance)
     payload["sweep"] = {"status": "prepared; not sent or executed", "requestedCollaborator": "Panhandler Nova",
                         "instruction": "Review these choices against source hashes. Apply only the stated scopes. Confirm promotion requests and keep Multiverse out of Prime working references. Do not infer deletion from a queue flag.",
                         "promotionQueue": [{**reference_record(asset), "workingReference": reviews[asset["id"]]["workingReference"]}

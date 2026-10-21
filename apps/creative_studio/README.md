@@ -31,7 +31,7 @@ Native `st.image` and `st.video` serve packaged files through Streamlit. No stat
 - **Storyboard:** filter by planning stage, source-panel position, and story themes. Narrowing the position range also narrows the available themes. Stages are Preliminary, Detailed design, Verification, and Production; changing a stage does not claim a technical check passed. Planning order does not imply measured song timings.
 - **Collaborators:** a global production workspace with ComfyUI first, then Flow, Gemini, Grok, and Panhandler Nova. ComfyUI shows concrete saved workflow records and their actual inputs, outputs/previews, documents, and execution status. Cloud links are restricted to `https://cloud.comfy.org/` and do not run the graph. Other providers show their saved tasks and current briefs across projects. A local FFmpeg result must not be described as a Cloud execution.
 - **Collaborator briefs:** separate Gemini, Flow, Grok, and Shared roles sections. Current Grok care-package files are included; earlier exploration briefs remain in Documents as history. Flow's recommended first steps sit beside its starter download, with the canonical Start here · Flow guide in its own expander.
-- **Review queue:** Keep, Needs fixes, and Mark for removal apply to the scope in your note. Marking removal never deletes a file or hides it from the library. Clear removes the decision while preserving the note and shot plan.
+- **Needs review / Review queue:** Needs review groups active references needing attention, including saved Needs fixes decisions. Review queue keeps the complete decision history. Marking removal never deletes a file; it hides the reference from ordinary design browsing. Clear removes the decision while preserving the note and shot plan.
 - **Shot plans:** quick Flow / Grok / Gemini toggles appear next to the star and export basket in an open reference. One click queues a local draft and shows that it has not been sent. Expand Plan a shot to refine the idea, prompt, and destinations. Turning off the final provider retains the idea/prompt under undecided; Remove shot plan clears the draft explicitly. Export TXT or JSON handoffs filtered by project, destination, and search. Attach the source images and current character/reference kit separately: a handoff is a reference manifest, not an image ZIP.
 - **Export basket:** a separate selection across both projects, independent of stars and review flags. Export its `cfa-visual-export-v1` JSON selection list, or prepare an in-memory ZIP of hosted review copies plus a manifest. The ZIP retains original-reference hashes alongside actual packaged-copy hashes, includes duplicate content only once, and is limited to 100 MB of selected files. It does not contain original masters. Clearing the basket leaves favorites, reviews, and source files alone.
 - **Favorites & notes:** export the complete review to retain decisions, notes, shot plans, and stars from every project. All changes are held in the current Streamlit session; another browser or a restarted session does not automatically retain them.
@@ -62,6 +62,29 @@ The app uses this snapshot for the Corner when present, otherwise it uses its ex
 
 Deploy the changed Python files, the two snapshot JSON files, and **every path listed in mission_manifest.json outputs** to the existing app. Some outputs reuse base-library files. Running the builder only prepares local files; it does not commit, upload or update Streamlit. This is a publication snapshot, not live monitoring or automatic two-way browser storage sync. Export/import remains the review-transfer mechanism.
 
+## Complete local-design publication
+
+When `library/design_catalog.json` exists, the native app uses that complete snapshot for every view, including Ziggy’s Corner. It takes precedence over both the smaller original catalog and the older Corner-only snapshot. The Full Visual Library page opens the native Library so both entry points share the same session review.
+
+The sidebar provides Working references, Outfits, Tattoos & piercings, Supporting cast, Storyboard, Videos, Comfy swap targets, Needs review, and Archive. Hon’s retired Inspiration collections move to Archive; Lisan retains Inspiration. No second Needs fixes list is added to Ziggy’s Corner.
+
+- Working references opens one character BOM gallery. Dolo appears alongside the supporting characters. His nested sections keep one dental standard, Body art, Bling bling before Wardrobe, explicit Approved Multiverse choices, Video production candidates, one WIP disclosure, and the Verbose BOM. Reference-purpose previews are visible when the character opens.
+- Hon outfits use Formal attire, Casual, and Scoundrel gear tags and expandable collections. Tattoo subjects pair artwork, mannequin placement, and applicable revision-needed proofs before their remaining examples. Creature boss ideas appear once under Supporting cast. Comfy keeps its ancillary swap references.
+- Archive and Restore use `collectionState: archived|working`, separately from review status. Restore overrides default historical membership but does not clear a removal decision. Full review exports retain historical decisions, exact-hash validation evidence, and scene reviews.
+- `multiverseSelection: candidate|approved` records an explicit choice. Approved Multiverse requires a character score of at least two and a visible Multiverse reference; neither stars nor the lane alone selects it.
+- Retired visual-duplicate IDs resolve through the verified `assetAliases` family for navigation and review transfer. Only matching original hashes may redirect review records; validation evidence stays attached to its original ID/hash. Timestamped clear receipts prevent older exports from reviving cleared shot plans.
+- Storyboard starts with the project’s song and offers separate independent sequences and writings. Shot material roles and pending references stay visible without converting availability into acceptance.
+
+Prepare the complete publication with:
+
+```powershell
+python apps/creative_studio/build_design_library.py --expected-source-sha <catalog-sha256> --review-export <verified-review.json> --expected-review-sha <review-sha256>
+```
+
+The builder preserves all current asset identities and configuration, verifies source hashes, reuses verified existing packaged media, and writes missing browser-sized copies under `library/design_media/`. Safe self-contained SVG placement diagrams retain their original bytes. Text comes only from catalog source paths, including publication-safe writer excerpts. Existing verified Corner supplemental downloads are retained without discovering unrelated local files. The supplied review export only contributes the two newer, exact-hash explicit plan clears; it is not bundled or imported wholesale.
+
+Publish `design_catalog.json`, `design_manifest.json`, every manifest `publicationFiles` entry (including reused files), and the changed native Python modules together. The builder is offline and does not publish. Review changes still require export/import between sessions or devices; the snapshot is not automatic two-way synchronization.
+
 ## Checks
 
 From the repository root:
@@ -72,8 +95,8 @@ python -m unittest discover -s apps/creative_studio/tests -v
 
 The checks cover bundle path isolation, collection order, legacy and current hash compatibility, seed restoration, explicit clears, provider-filtered handoffs, draft-only plan state, and unchanged source bytes. Streamlit interaction checks exercise pagination, project navigation, storyboard rendering, collaborator text, review decisions, and plan save/removal. Native widgets keep the sidebar toggle accessible on narrow screens.
 
-## Full dashboard mirror
+## Legacy full dashboard mirror
 
-The separate **Full Visual Library** page reuses the complete HTML dashboard while this compact app remains available. Prepare it with `python apps/creative_studio/build_full_dashboard.py`, then use Streamlit's page sidebar. Local bundles use hardlinks on D: and preserve all original bytes and review IDs; nothing is uploaded by the builder.
+Without a complete design snapshot, the separate **Full Visual Library** page can reuse the older HTML dashboard. Prepare that fallback with `python apps/creative_studio/build_full_dashboard.py`, then use Streamlit's page sidebar. When a design snapshot is present, this entry opens the native Library instead. Local fallback bundles use hardlinks on D: and preserve all original bytes and review IDs; nothing is uploaded by the builder.
 
 See [full dashboard preparation and deployment notes](FULL_DASHBOARD_README.txt) for phone review transfers, an explicit portable-copy option, media size and hosting constraints. The hosted page needs its complete bundle before deployment; preparation is not publication or cross-device autosync.

@@ -1,0 +1,141 @@
+"""Story-specific browsing of the same panels, writings and shot evidence as the index."""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+import streamlit as st
+from studio_dependencies import media_path, normal_visible, storyboard_stage, storyboard_themes, storyboard_window, STORYBOARD_STAGES
+
+ROLES = {"setting_stand_in": "Setting stand-in", "source_frame": "Exact source frame",
+         "character_reference": "Character reference", "storyboard_concept": "Storyboard concept", "result_on_disk": "Result on disk"}
+
+
+def song_panels(data: dict, project: str, reviews: dict) -> list[dict]:
+    sequence_albums = {aid for sequence in data.get("storyboardSequences", []) if sequence.get("project") == project
+                       for aid in sequence.get("sourceAlbumIDs", [])}
+    ids = {aid for album in data.get("albums", []) if album.get("project") == project and album.get("category") == "storyboard"
+           and album["id"] not in sequence_albums for aid in album.get("assetIDs", [])}
+    return sorted((a for a in data["assets"] if a["id"] in ids and normal_visible(a, reviews)
+                   and type(a.get("storyboardPosition")) in (int, float)), key=lambda a: a.get("storyboardOrder", float("inf")))
+
+
+def sequence_coverage(sequence: dict, assets: dict, reviews: dict) -> dict:
+    shots = sequence.get("shots", [])
+    def available(shot, roles):
+        return any(m.get("role") in roles and normal_visible(assets.get(m.get("assetID")), reviews)
+                   for m in shot.get("materials", []))
+    return {"shots": len(shots), "scenes": len(sequence.get("sections", [])),
+            "frames": sum(available(s, {"setting_stand_in", "source_frame"}) for s in shots),
+            "results": sum(available(s, {"result_on_disk"}) for s in shots),
+            "pending": sum(bool(s.get("pendingReferences")) for s in shots)}
+
+
+def choose_story(key: str, value: str) -> None:
+    st.session_state[key] = value
+
+
+def render_stories(data: dict, project: str, library_dir: Path, render_grid, select_asset, document_download, *, reviews: dict) -> None:
+    stories = [s for s in data.get("storyboardStories", []) if s.get("project") == project]
+    if not stories:
+        st.info("No stories are registered for this project yet.")
+        return
+    by_id = {a["id"]: a for a in data["assets"]}
+    sequences = {s["id"]: s for s in data.get("storyboardSequences", []) if s.get("project") == project}
+    story_map = {s["id"]: s for s in stories}
+    key = f"story-select:{project}"
+    if st.session_state.get(key) not in story_map:
+        st.session_state[key] = next((s["id"] for s in stories if s.get("kind") == "song"), stories[0]["id"])
+    selected_id = st.selectbox("Story", list(story_map), format_func=lambda sid: story_map[sid]["title"], key=key)
+    for start in range(0, len(stories), 3):
+        for column, story in zip(st.columns(3), stories[start:start + 3]):
+            with column, st.container(border=True):
+                sequence = sequences.get(story.get("sequenceID"), {})
+                cover = by_id.get(story.get("coverID", sequence.get("coverID")))
+                preview = media_path(library_dir, cover.get("thumb")) if cover and normal_visible(cover, reviews) else None
+                if preview:
+                    st.image(str(preview), width="stretch")
+                st.button(story["title"], key=f"story-cover:{story['id']}", on_click=choose_story,
+                          args=(key, story["id"]), width="stretch", type="primary" if selected_id == story["id"] else "secondary")
+                st.caption({"song": "Song storyboard", "sequence": "Independent sequence", "prose": "Writings & development"}.get(story.get("kind"), "Story"))
+                if sequence.get("shots"):
+                    coverage = sequence_coverage(sequence, by_id, reviews)
+                    st.caption(f"{coverage['shots']} shots · {coverage['scenes']} scenes · {coverage['pending']} with pending references")
+    story = story_map[selected_id]
+    st.subheader(story["title"])
+    if story.get("description"):
+        st.write(story["description"])
+    query = st.text_input("Find a shot or reference", key=f"story-search:{project}").casefold().split()
+    def matches(value):
+        text = json.dumps(value, ensure_ascii=False).casefold()
+        return all(word in text for word in query)
+    if story.get("kind") == "song":
+        panels = song_panels(data, project, reviews)
+        stage = st.selectbox("Stage", ["all", *STORYBOARD_STAGES], key=f"story-stage:{project}",
+                             format_func=lambda value: "All stages" if value == "all" else STORYBOARD_STAGES[value])
+        position = st.slider("Storyboard position (%)", 0, 100, (0, 100), step=5, key=f"story-position:{project}")
+        rows = storyboard_window([(a, None) for a in panels if stage == "all" or storyboard_stage(a, reviews) == stage], *position)
+        themes = sorted({theme for a, album in rows for theme in storyboard_themes(a, album)}, key=str.casefold)
+        theme_key = f"story-themes:{project}"
+        if theme_key in st.session_state:
+            st.session_state[theme_key] = [t for t in st.session_state[theme_key] if t in themes]
+        chosen = st.multiselect("Story themes", themes, key=theme_key)
+        rows = [(a, album) for a, album in rows if matches(a) and (not chosen or any(t in storyboard_themes(a, album) for t in chosen))]
+        st.caption("Source panel order, not song seconds. Independent sequences keep their own shot order.")
+        render_grid(rows, f"story:song:{project}:{position}:{stage}:{chosen}:{query}")
+    elif story.get("kind") == "sequence":
+        sequence = sequences.get(story.get("sequenceID"), {})
+        shots = sequence.get("shots", [])
+        if shots:
+            coverage = sequence_coverage(sequence, by_id, reviews)
+            st.caption(f"{coverage['shots']} shots · {coverage['scenes']} scenes · {coverage['frames']} with frames · {coverage['results']} with a result on disk · {coverage['pending']} with pending references")
+            st.info("Available material does not establish shot readiness. Setting stand-ins supply place and light; received results still need their own review.")
+            shot_map = {s["shotID"]: s for s in shots}
+            for index, section in enumerate(sequence.get("sections", [])):
+                visible = [shot_map[sid] for sid in section.get("shotIDs", []) if sid in shot_map and matches(shot_map[sid])]
+                if not visible:
+                    continue
+                with st.expander(f"Scene {section.get('scene', index + 1)} · {section['title']} · {len(visible)} shots", expanded=index == 0 or bool(query)):
+                    for shot in visible:
+                        with st.container(border=True):
+                            st.markdown(f"**{shot['shotID']} · {shot.get('label', '')}**")
+                            if shot.get("line"):
+                                st.write(shot["line"])
+                            materials = [m for m in shot.get("materials", []) if normal_visible(by_id.get(m.get("assetID")), reviews)]
+                            preview = next((m for m in materials if m.get("role") in {"source_frame", "setting_stand_in"}), next(iter(materials), None))
+                            if preview:
+                                asset = by_id[preview["assetID"]]
+                                path = media_path(library_dir, asset.get("thumb"))
+                                if path:
+                                    st.image(str(path), width=400)
+                                st.caption(ROLES.get(preview.get("role"), preview.get("role", "Reference")))
+                            else:
+                                st.caption("No frame linked yet.")
+                            if shot.get("pendingReferences"):
+                                st.markdown("**Pending references**")
+                                for label in shot["pendingReferences"]:
+                                    st.write("• " + label)
+                            with st.expander(f"Source material · {len(materials)} linked files"):
+                                for n, material in enumerate(materials):
+                                    asset = by_id[material["assetID"]]
+                                    st.button(ROLES.get(material.get("role"), "Reference") + " · " + asset.get("title", asset["id"]),
+                                              key=f"story-material:{story['id']}:{shot['shotID']}:{n}",
+                                              on_click=select_asset, args=(asset["id"], project))
+                                    if material.get("note"):
+                                        st.caption(material["note"])
+        else:
+            for index, section in enumerate(sequence.get("sections", []) or [sequence]):
+                refs = [by_id[aid] for aid in section.get("assetIDs", []) if normal_visible(by_id.get(aid), reviews) and matches(by_id[aid])]
+                if refs:
+                    with st.expander(section.get("title", "References"), expanded=not section.get("history")):
+                        render_grid([(a, None) for a in refs], f"story:sequence:{story['id']}:{index}")
+    else:
+        st.info("No panels yet. This story is available as writings and development notes.")
+    documents = [by_id[aid] for aid in story.get("documentIDs", []) if aid in by_id and by_id[aid].get("kind") in {"document", "pdf"}]
+    if documents:
+        st.subheader("Writings · " + story["title"])
+        for asset in documents:
+            with st.expander(asset.get("title", asset["id"])):
+                if asset.get("text"):
+                    st.text(asset["text"])
+                document_download(asset, context=f"story:{story['id']}")
