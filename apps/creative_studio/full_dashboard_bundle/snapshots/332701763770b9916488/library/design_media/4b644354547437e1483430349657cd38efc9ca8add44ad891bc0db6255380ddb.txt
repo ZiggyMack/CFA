@@ -1,0 +1,78 @@
+# MASTER BRIEF: Lisan Al Gaib reference inventory and comparison notes (lanes), 2026-10-20
+Issued by Grok Chief of Staff (grok_chief) under Ziggy's 2026-10-20 voice instructions (~22:39 and 22:44 ET) and CFA Nova's request ae695399. This is a SEPARATE, dated task. It is NOT a second pilot, a rerun or a grading pass. Chief sends nothing to any V bot; delivery is by the parent.
+
+## 0. Team and lanes
+| Lane | Reviewer | Bot id | Field(s) | Brief |
+|---|---|---|---|---|
+| V1_coord | V_1 (coordinator) | 96ead2b6-3f8a-4535-b179-30cd44123f8a | reconcile lanes; wardrobe, teeth, breather, grill, all other defects; converged look, supporting images, single fork, 3–5 item queue | lanes/V1_coord/LANE_BRIEF.md |
+| V2_face_marks | V_2 | 4414599f-5b7d-491a-b8e4-d36264ead1fd | AL, chin GAIB, throat worms + disc | lanes/V2_face_marks/LANE_BRIEF.md |
+| V3_piercings | V_3 | 8822f04d-f012-4e8b-830e-22dfa62bc3e9 | piercings | lanes/V3_piercings/LANE_BRIEF.md |
+| V4_eyes | V_4 | 78934db1-dad1-4d94-9e44-828f71be65af | eyes | lanes/V4_eyes/LANE_BRIEF.md |
+| V5_build | V_5 | a8daee40-de47-424f-9e8c-93c0ccaed9e9 | body build | lanes/V5_build/LANE_BRIEF.md |
+| (contingency) V6 | V_6, does not exist yet | — | relief for a jammed lane | added by Chief only on V_1's written request; it reuses the jammed lane's brief and folder. This is not a new team, and nothing is created now. |
+Owners: Chief coordinates and audits. CFA Nova reconciles evidence. Ziggy decides only the queue. Site Nova keeps site work. DeepSeek, Qwen and Kimi stay dormant. Gemini is untouched.
+
+## 1. Inputs (all under /workspace/v1_refinv/)
+- `CANDIDATES.tsv`: the ONE shared ID table (cand_id, asset_id, filename, box_path, d_path, sha256, bytes, stars, star/approval evidence, known scope). 10 candidates. Stars come from the user dashboard export `cfa-review (1).json` (docs\notes\downloads, sha 31ad0cc8…, exported 2026-10-15T00:03:50Z): CAND-01, -02 and -09 are 5★; all others are **unrated** (unknown, not rejected).
+- `candidates/`: byte copies of all 10 candidates.
+- `lanes/<lane>/refs/`: each lane's slice, with INDEX.tsv. `lanes/<lane>/REVIEW_HISTORY.md`: dated records for that field. `lanes/<lane>/LANE_BRIEF.md`.
+- `COMMON_RULES.md`: binding for all lanes (scope, forbidden paths, star priors, per-field gold, no composites, distance check, Multiverse comments, rolling batches, freeze).
+- `REF_DECISION_QUEUE_20261020.md`: Chief's preliminary 5-item queue, which V may overturn with visible evidence.
+
+## 2. Today's standards (Ziggy 2026-10-20; they supersede the 10-13 pilot brief where they differ)
+1. Gold is per field: face, build and clothing are judged and approved separately.
+2. ≥3★ = candidate pool; ≤2★ = history only; unrated = unknown, not rejected.
+3. Multiverse = keep, maybe not the main look. It always carries a drift-diagnosis comment.
+4. V's visible-evidence corrections trump popularity or stars.
+5. Representative existing images only. Never an averaged or composite person.
+6. Check each candidate's distance from the existing rough reference, because uniform drift can hide something off-centre.
+7. Priority blockers: face marks, piercings, eyes, build.
+8. V returns (a) the converged look per field, (b) the supporting image IDs, paths and hashes per field, (c) the single unresolved fork for Ziggy. The decision queue stays at 3–5 calls V can't resolve.
+9. Settled, don't re-ask: Look V3 wardrobe (CAND-02, outfit only), Lock Face Natural teeth (CAND-01, visible mouth only), breather v3 optional with receipt (CAND-04), natural teeth default, historic optional grill Keep (CAND-03, grill design only).
+
+## 3. Process (rolling batches)
+1. Each reviewer lane (V_2 to V_5) writes batch01 (its first 3 candidates), freezes it, and reports it to Chief.
+2. V_1 checks each batch01 against that lane's acceptance checklist. She writes `V1_batchcheck_<UTC>_v001.md` (frozen): PASS, or a list of the failed checklist numbers.
+3. On PASS the lane continues to its final return without waiting. On FAIL the lane fixes it in a `_v002` and continues. If a lane jams twice, V_1 may request V_6 from Chief in writing.
+4. Clear cases sort forward. Uncertain cases go to the lane's single fork, and from there to V_1's queue. V_1 keeps organizing while Ziggy sample-checks.
+5. Lanes cover distinct fields. A reviewer notes out-of-lane issues in one line and doesn't analyse them.
+
+## 4. Required outputs (exact names; all in /workspace/v1_refinv/returns/; UTC = YYYYMMDDTHHMMSSZ)
+1. `V2_face_marks_<UTC>_batch01_v001.md`, `V3_piercings_<UTC>_batch01_v001.md`, `V4_eyes_<UTC>_batch01_v001.md`, `V5_build_<UTC>_batch01_v001.md`, each with a `.sha256` sidecar.
+2. `V1_batchcheck_<UTC>_v001.md` + `.sha256`.
+3. `V2_face_marks_<UTC>_v001.md`, `V3_piercings_<UTC>_v001.md`, `V4_eyes_<UTC>_v001.md`, `V5_build_<UTC>_v001.md`, each with `.sha256`. Sections as in each lane brief: per-candidate entries; Converged look; Supporting images; Unresolved fork (≤1); Out-of-lane notes; Method.
+4. `V1_reconciliation_<UTC>_v001.md` + `.sha256`, with these sections:
+   - `## Inputs`: every lane return path + sha256.
+   - `## Candidate inventory`: all 10 cand_ids, one line each (what it shows, stars, scope).
+   - `## Visible-feature notes`: per candidate, wardrobe/teeth/breather/grill/other defects (V_1's own look), plus a merge of the lane verdicts.
+   - `## Converged look per field`: face marks, piercings, eyes, build, wardrobe, teeth, breather, grill. Each gives the anchor cand_id + sha256 + description, or "OPEN" with reason.
+   - `## Supporting images per field`: table field | cand_id | path | sha256 | role.
+   - `## Lane conflicts`: where lanes disagree, and how V_1 resolved it on visible evidence, or why it is escalated.
+   - `## Missing-receipt list`: per field, which approval is PROVIDER-only and which HUMAN receipt is missing (path or "not located").
+   - `## Proposed scoped mappings`: field → cand_id → scope sentence (for example "CAND-01, piercings only: brow ring + nostril hoop + 1 ear hoop, his left"). Labelled PROPOSED, not gold.
+   - `## Single unresolved fork`: the one top choice for Ziggy's sign-off.
+   - `## Decision queue (3–5)`: ranked, each with cand_id/path/sha256, feature scope, visible defects/uncertainty, HUMAN vs PROVIDER evidence, and the exact A/B choice for Ziggy. Nothing settled (§2.9) may appear.
+5. Every file is reported to Chief with path + sha256 + UTC.
+
+## 5. Acceptance checklist: V_1 reconciliation
+1. Header: V_1 bot id, UTC, tool/model, pixels seen.
+2. Inputs list every final lane return with a sha256 that matches its sidecar.
+3. Inventory covers all 10 cand_ids in CANDIDATES.tsv, and nothing else.
+4. Every per-field converged look names exactly one existing anchor image (or OPEN with reason). No composites.
+5. Supporting-image table: every row's cand_id/path/sha256 matches CANDIDATES.tsv.
+6. Settled fields (§2.9) are reported, not re-decided. Only defects or uncertainty are added.
+7. Missing-receipt list separates HUMAN from PROVIDER for every field.
+8. Proposed mappings are labelled PROPOSED. No gold, grade, release or hold language.
+9. Exactly one single unresolved fork.
+10. Decision queue has 3–5 items, ranked with face marks, piercings, eyes and build first unless resolved, each complete per §4.4.
+11. Star priors are applied per §2.2, with every override justified by visible evidence.
+12. Multiverse tags carry drift comments.
+13. No forbidden path opened (§6), nothing generated, no messages to Ziggy or other agents beyond reporting to Chief.
+14. File frozen with a `.sha256` sidecar. Any correction is `_v002`.
+(Lane checklists are in each LANE_BRIEF.md.)
+
+## 6. Limits and freeze rules
+- NOT a second pilot. Don't open `/workspace/v1_calib/`, `/workspace/v1_push/`, `/home/box/chief_private/`, any PRIVATE_MAP, alias map, answer key or blind-to-original mapping. Don't hash-match anything against pilot inputs. The frozen pilot return (2cf53ec7…) stays untouched.
+- No renders, generation, spending, new agents or sessions, production grades, gold promotion, release/hold changes or site edits.
+- Freeze: write, then sha256 to `<file>.sha256`, then never edit. Corrections go in `_v002`, `_v003`…, each stating what it corrects.
+- Don't write outside `/workspace/v1_refinv/returns/`.
