@@ -110,7 +110,7 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
                 st.markdown("**Start with these images**")
                 references(task["previewAssetIDs"], context + ":preview")
             if task.get("reviewedPreviewAssetIDs"):
-                with st.expander(f"Recorded shortlist decisions · {len(task['reviewedPreviewAssetIDs'])}", expanded=False):
+                with st.expander(f"Recorded review decisions · {len(task['reviewedPreviewAssetIDs'])}", expanded=False):
                     references(task["reviewedPreviewAssetIDs"], context + ":history", history=True)
             for comparison in data.get("sourceComparisons", []):
                 if comparison.get("missionTaskID") == task["id"]:
@@ -173,7 +173,7 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
                 card(task, task["id"])
     if not matching:
         st.info("No tasks match this filter.")
-    st.caption("Task states come from the saved handoff. This page does not send requests or monitor collaborator accounts.")
+    st.caption("Task status combines saved handoffs with recorded review decisions. This page does not send requests or monitor collaborator accounts.")
     if control.get("updated"):
         st.caption(f"Handoff updated: {control['updated']}")
     snapshot = data.get("snapshot", {})

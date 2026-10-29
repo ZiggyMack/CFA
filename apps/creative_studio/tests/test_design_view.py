@@ -13,9 +13,9 @@ from design_view import build_design_model, cast_browse_groups, model_asset_ids
 from library_helpers import effective_reviews
 
 CATALOG = APP.parents[1] / "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js"
-# Reconciled 2026-10-28: outputs-first Comfy workspace, current source documents,
-# and unchanged scoped BOM, outfit, tattoo, mouth-coverage and archive assertions.
-CATALOG_HASH = "cd5650c75d6c9c060087b81dc0064d200997cb84b300ef22ae818c8e78a24224"
+# Reconciled 2026-10-28: handoff stages and saved reviews refreshed;
+# media, scoped BOM, outfit, tattoo, mouth-coverage and archive records unchanged.
+CATALOG_HASH = "067f1c621cbf092211cc48f0c78315b7ab3ab17e743655c6f47d7bcd4ed26e4e"
 
 
 def walk(node):

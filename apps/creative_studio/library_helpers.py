@@ -651,6 +651,36 @@ def handoff_text(payload: dict) -> str:
     return "\n".join(lines)
 
 
+def mission_review_gate(value: Any) -> dict | None:
+    """Read an explicit, exact-version review scope without shrinking invalid scopes."""
+    if not isinstance(value, dict) or not isinstance(value.get("label"), str) or not value["label"].strip():
+        return None
+    if not isinstance(value.get("targets"), list) or not value["targets"]:
+        return None
+    targets, seen = [], {}
+    for target in value["targets"]:
+        if not isinstance(target, dict) or not isinstance(target.get("assetID"), str) or not target["assetID"].strip():
+            return None
+        digest = target.get("sha256")
+        if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-fA-F]{64}", digest):
+            return None
+        aid, digest = target["assetID"], digest.lower()
+        if aid in seen:
+            if seen[aid] != digest:
+                return None
+            continue
+        seen[aid] = digest
+        targets.append({"assetID": aid, "sha256": digest})
+    supplied = value.get("completed", {})
+    if not isinstance(supplied, dict):
+        return None
+    completed = {key: supplied[key] for key in ("title", "statusLabel", "nextAction", "summary")
+                 if isinstance(supplied.get(key), str)}
+    completed["missing"] = [text for text in supplied.get("missing", []) if isinstance(text, str)] \
+        if isinstance(supplied.get("missing", []), list) else []
+    return {"label": value["label"], "targets": targets, "completed": completed}
+
+
 def mission_tasks(value: Any) -> list[dict]:
     """Read saved task cards as data. Local hrefs are intentionally not exposed."""
     if not isinstance(value, dict) or not isinstance(value.get("tasks"), list):
@@ -672,6 +702,8 @@ def mission_tasks(value: Any) -> list[dict]:
         for key in ("priority", "statusLabel", "missingLabel", "laterReview"):
             if isinstance(item.get(key), str):
                 task[key] = item[key]
+        if gate := mission_review_gate(item.get("reviewGate")):
+            task["reviewGate"] = gate
         task["comparisonInHistory"] = item.get("comparisonInHistory") is True
         task["links"] = []
         for link in item.get("links", []) if isinstance(item.get("links", []), list) else []:
@@ -720,10 +752,52 @@ def mission_pending_requests(data: dict, reviews: dict, project: str) -> list[st
 
 
 def mission_task_progress(task: dict, assets: list[dict], reviews: dict) -> dict:
-    """Match index shortlist/gun decisions; a Fix/Remove is an answered review."""
+    """Refresh explicit review gates; answering does not approve or send anything."""
     task = dict(task)
+    if task.get("status") == "done":
+        return task
     by_id = {a["id"]: a for a in assets}
-    if task["id"] in {"grok-lisan-mouth65-available", "grok-falcon-extension40-available"}:
+    if gate := mission_review_gate(task.get("reviewGate")):
+        pending, answered, unavailable = [], [], []
+        for target in gate["targets"]:
+            aid = target["assetID"]
+            asset = by_id.get(aid)
+            review = reviews.get(aid, {})
+            if (not asset or asset.get("kind") not in {"image", "video"}
+                    or str(asset.get("sha256", "")).lower() != target["sha256"]
+                    or (review.get("sha256") and str(review["sha256"]).lower() != target["sha256"])):
+                unavailable.append(aid)
+            elif review.get("status") in REVIEW_STATUSES:
+                answered.append(aid)
+            elif mission_visible(asset, reviews):
+                pending.append(aid)
+            else:
+                unavailable.append(aid)
+        counts = (f"{len(answered)} of {len(gate['targets'])} images or clips have recorded decisions. "
+                  f"{len(pending)} await your decision.")
+        if unavailable:
+            counts += f" {len(unavailable)} references are unavailable or have a different version and need a source check."
+        task.update(previewAssetIDs=pending, reviewedPreviewAssetIDs=answered,
+                    reviewProgress={"requested": len(gate["targets"]), "answered": len(answered),
+                                    "pendingIDs": pending, "reviewedIDs": answered, "unavailableIDs": unavailable})
+        completed = gate["completed"]
+        if pending:
+            task.update(status="needs_input", statusLabel="Needs your input",
+                        title=f"{gate['label']} · {len(pending)} awaiting review", summary=counts,
+                        nextAction="Review the remaining images or clips. Existing decisions stay saved; recorded defects remain separate follow-up work.",
+                        missing=[f"{len(pending)} requested versions have no recorded decision."])
+        elif unavailable:
+            task.update(status="in_progress", statusLabel="Reference check needed",
+                        title=f"{gate['label']} · reference check needed", summary=counts,
+                        nextAction="The team needs to resolve the exact missing or mismatched versions before review can continue. Your recorded decisions remain saved.",
+                        missing=[*completed.get("missing", []), "Resolve the unavailable exact versions; do not substitute a different image or clip."])
+        else:
+            task.update(status="in_progress", statusLabel=completed.get("statusLabel") or "Review recorded · team follow-up",
+                        priority="normal", title=completed.get("title") or f"{gate['label']} · review recorded",
+                        summary=counts + (" " + completed["summary"] if completed.get("summary") else ""),
+                        nextAction=completed.get("nextAction", "The review decisions are saved. The team can prepare any recorded follow-up."),
+                        missing=list(completed.get("missing", [])))
+    elif task["id"] in {"grok-lisan-mouth65-available", "grok-falcon-extension40-available"}:
         pending, answered, unavailable = [], [], []
         for aid in dict.fromkeys(task.get("previewAssetIDs", [])):
             a = by_id.get(aid)
