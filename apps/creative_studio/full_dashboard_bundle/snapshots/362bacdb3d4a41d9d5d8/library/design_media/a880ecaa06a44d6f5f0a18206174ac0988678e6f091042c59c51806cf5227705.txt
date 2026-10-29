@@ -1,0 +1,15 @@
+- C46-gunner-well-001.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: ladder to turret seat, starfield dome, amber scope
+- C46-gunner-well-002.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: down-shaft rings, warm glow below
+- C46-gunner-well-003.jpg | prelim_likeness=3 prelim_scene=5 lane=prime scope=complete_look stage=preliminary | L3 S5 | neck blaster on image-LEFT; earrings both visible | preserve: eye LEFT/know RIGHT, lip hoops, grips, starfield canopy | RESCORED -1: face reads younger and clean-shaven vs ref lf_full (ref has stubble, nostril hoops)
+- C46-gunner-well-004.jpg | prelim_likeness=Unrated prelim_scene=4 lane=prime scope=scene stage=preliminary | LUnrated S4 | corridor cold/clean | preserve: ceiling access ring with ladder
+- C46-gunner-well-005.jpg | prelim_likeness=5 prelim_scene=5 lane=prime scope=scene stage=preliminary | L5 S5 | none | preserve: Chewy in turret, grips, canopy
+- C46-gunner-well-006.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | guns inside pod, not outside hull | preserve: seat, ringed planet, scope
+- C46-gunner-well-007.jpg | prelim_likeness=3 prelim_scene=3 lane=prime scope=scene stage=preliminary | L3 S3 | she is climbing outside the hull, not in the well; face hidden | preserve: coat, ladder
+- C46-gunner-well-008.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=detail stage=preliminary | LUnrated S5 | none | preserve: taped yoke, reticle screen
+- C46-gunner-well-009.jpg | prelim_likeness=Unrated prelim_scene=4 lane=prime scope=scene stage=preliminary | LUnrated S4 | geometry confusing | preserve: seat + shaft + second pod idea
+- C46-gunner-well-010.jpg | prelim_likeness=2 prelim_scene=5 lane=prime scope=complete_look stage=preliminary | L2 S5 | 'know' doubled (both cheeks), neck blaster image-LEFT | preserve: relaxed pose, porthole stars. CONTROVERSIAL | RESCORED -1: face reads younger and clean-shaven vs ref lf_full (ref has stubble, nostril hoops)
+- C46-gunner-well-011.jpg | prelim_likeness=5 prelim_scene=5 lane=prime scope=complete_look stage=preliminary | L5 S5 | none | preserve: stubble/age match, eye LEFT know RIGHT, neck blaster RIGHT, nostril+lip hoops, turret arch
+- C46-gunner-well-012.jpg | prelim_likeness=3 prelim_scene=5 lane=prime scope=complete_look stage=preliminary | L3 S5 | eye/know SWAPPED; grill close (white centrals, gold beside) | preserve: swivel grin, canopy. CONTROVERSIAL
+- C46-gunner-well-013.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: twin-ladder hub, star above amber below
+- C46-gunner-well-014.jpg | prelim_likeness=4 prelim_scene=3 lane=prime scope=scene stage=preliminary | L4 S3 | outside the hull, not the well; double bandolier | preserve: Chewy face, low angle
+- C46-gunner-well-015.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: hanging headset, hyperspace canopy, scope

@@ -35,6 +35,81 @@ def choose_story(key: str, value: str) -> None:
     st.session_state[key] = value
 
 
+def render_structure(data, story, project, select_asset):
+    """Read the same evidence projection as the full mirror; never mutate reviews."""
+    model = data.get('storyboardStructure', {})
+    records = {s['storyID']: s for s in model.get('stories', [])}
+    record = records.get(story['id'], {})
+    mode = st.radio('Structure view', ['Planned shots', 'Blank storyboard / shot template'], horizontal=True,
+                    key=f'structure-mode:{project}')
+    labels = {'draft':'Draft', 'missing':'Missing', 'unknown':'Not assessed', 'present':'Present · unreviewed',
+              'not_needed':'Intentionally not needed', 'verified':'Verified for stated scope', 'accepted':'Accepted for stated scope'}
+    assets = {a['id']:a for a in data['assets']}
+    def evidence(rows, key):
+        for i, row in enumerate(rows):
+            asset = assets.get(row.get('assetID'))
+            if asset:
+                st.button('Source · '+asset.get('filename', asset['title']), key=f'{key}:source:{i}',
+                          on_click=select_asset, args=(asset['id'], asset['project']))
+                if row.get('line'): st.caption(f"Source line {row['line']} · {row.get('sha256','')[:12]}")
+    def fields(definitions, values, key, demo=False, fallback=None):
+        by_key = {v['key']:v for v in values}
+        for definition in definitions:
+            value = by_key.get(definition['key'], {})
+            with st.expander(f"{definition.get('section', definition['key'])} · {definition['label']} — {'Empty template' if demo else labels.get(value.get('status','unknown'))}"):
+                st.caption(definition['hint'])
+                st.text(value.get('text') or ('No content entered.' if demo else 'No field-specific content recorded in this source.'))
+                if value.get('note'): st.info(value['note'])
+                st.caption(f"{definition.get('owner','Writer / CFA Nova')} · {definition.get('phase','handoff preparation')}")
+                if not demo: evidence(value.get('evidence') or ([fallback] if fallback else []),f"{key}:{definition['key']}")
+    if mode.startswith('Blank'):
+        st.info('Structural preview only. No actual story, shot, review, queue item, export or production eligibility is created.')
+        fields(model.get('fields',[]), [], f'template:{project}', True)
+        st.subheader('11 · Kitchen / handoff structure')
+        fields(model.get('kitchenFields',[]), [], f'template-kitchen:{project}', True)
+        return
+    shots=record.get('shots',[])
+    st.caption(f"{len(shots)} planned shots · {len(record.get('sections',[]))} sequences · {sum(bool(s.get('kitchenWritten')) for s in shots)} kitchen blocks documented · may contain gaps")
+    st.info('Writing completeness is separate from review, acceptance and execution. Required inputs depend on the phase and selected route.')
+    sections=record.get('sections',[])
+    section_names={s['id']:s['title'] for s in sections}
+    selected_section=st.selectbox('Sequence', list(section_names) or ['unassigned'], format_func=lambda sid:sid+' · '+section_names.get(sid,'No sequence registered'), key=f'structure-sequence:{project}')
+    focus=st.selectbox('Focus', ['All planned shots','No linked art','Clip prompt missing / not assessed','Camera missing / not assessed','Cue missing / not assessed','Kitchen block incomplete'],key=f'structure-focus:{project}')
+    def matches(shot):
+        values={v['key']:v for v in shot['fields']}
+        if focus=='No linked art': return not any(m.get('assetID') in assets and assets[m['assetID']]['kind'] not in {'document','pdf'} for m in shot.get('materials',[]))
+        if focus=='Kitchen block incomplete': return not shot.get('kitchenWritten')
+        key={'Clip prompt missing / not assessed':'prompt_clip','Camera missing / not assessed':'camera','Cue missing / not assessed':'cue'}.get(focus)
+        return not key or values.get(key,{}).get('status','unknown') in {'unknown','missing'}
+    by_shot={s['shotID']:s for s in shots if matches(s)}
+    if not shots: st.info('No canonical shot structure is registered here yet. The full visual library also retains existing sequence maps. The blank template is available for inspection.')
+    for section in record.get('sections',[]):
+        if section['id']!=selected_section: continue
+        visible=[by_shot[sid] for sid in section['shotIDs'] if sid in by_shot]
+        if not visible: continue
+        st.subheader(section['id']+' · '+section['title'])
+        for shot in visible:
+            with st.expander(shot['shotID']+' · '+shot['title']):
+                st.caption(shot['revision']+' · '+shot['authoringStatus'])
+                legacy = shot.get('sourceShotPlanIDs', [])
+                if legacy:
+                    st.caption('Earlier shot-plan IDs: '+', '.join(legacy))
+                    st.caption('Source crosswalk only. These IDs remain distinct; their results and acceptance do not transfer to this authored shot.')
+                    plans = {p['id']:p for p in data.get('shotMaterials',{}).get('shots',[])}
+                    for legacy_id in legacy:
+                        for i, material in enumerate(plans.get(legacy_id,{}).get('materials',[])):
+                            asset = assets.get(material.get('assetID'))
+                            if asset:
+                                st.button(legacy_id+' · '+asset.get('title',asset['id']), key=f"legacy:{project}:{shot['shotID']}:{legacy_id}:{i}", on_click=select_asset, args=(asset['id'],asset['project']))
+                fields(model['fields'],shot['fields'],f"structure:{project}:{shot['shotID']}",fallback=shot['source'])
+                with st.expander('Kitchen / handoff structure'):
+                    fields(model['kitchenFields'],shot['kitchen'],f"kitchen:{project}:{shot['shotID']}",fallback=shot['source'])
+                if shot.get('revisions'):
+                    st.warning('Proposed revision needs review; earlier take and results remain intact.')
+                    for revision in shot['revisions']:
+                        st.write(revision['note']); evidence([revision['source']],f"revision:{shot['shotID']}:{revision['id']}")
+
+
 def render_stories(data: dict, project: str, library_dir: Path, render_grid, select_asset, document_download, *, reviews: dict) -> None:
     stories = [s for s in data.get("storyboardStories", []) if s.get("project") == project]
     if not stories:
@@ -47,6 +122,13 @@ def render_stories(data: dict, project: str, library_dir: Path, render_grid, sel
     if st.session_state.get(key) not in story_map:
         st.session_state[key] = next((s["id"] for s in stories if s.get("kind") == "song"), stories[0]["id"])
     selected_id = st.selectbox("Story", list(story_map), format_func=lambda sid: story_map[sid]["title"], key=key)
+    story = story_map[selected_id]
+    if data.get('storyboardStructure'):
+        view=st.radio('Storyboard view', ['Panels & writings','Structure & gaps'], horizontal=True,key=f'story-view:{project}')
+        if view=='Structure & gaps':
+            st.subheader('Storyboard structure')
+            render_structure(data,story,project,select_asset)
+            return
     for start in range(0, len(stories), 3):
         for column, story in zip(st.columns(3), stories[start:start + 3]):
             with column, st.container(border=True):
