@@ -1,0 +1,11 @@
+/* Hosting adjustments only. library.css is copied byte for byte from local. */
+html[data-hosted-mirror] .hosted-storage-note{font-size:11px;color:#aac0d2;line-height:1.5}
+html[data-hosted-mirror] .nav [data-view="intake"] .count{white-space:nowrap;flex-shrink:0}
+@media(max-width:700px){
+  html[data-hosted-mirror] .sidebar-foot .hosted-storage-note{display:block;flex-basis:100%;margin:5px 7px;font-size:10px}
+  html[data-hosted-mirror] .viewer{width:100vw;height:98dvh;border-radius:8px}
+  html[data-hosted-mirror] .viewer-body{grid-template-rows:48px minmax(180px,42%) minmax(0,1fr)}
+  html[data-hosted-mirror] .viewer-info{overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+  html[data-hosted-mirror] .review-actions button{min-height:42px}
+  html[data-hosted-mirror] input,html[data-hosted-mirror] select,html[data-hosted-mirror] textarea{font-size:16px}
+}

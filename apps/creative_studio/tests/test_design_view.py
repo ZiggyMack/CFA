@@ -15,7 +15,7 @@ from library_helpers import effective_reviews
 CATALOG = APP.parents[1] / "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js"
 # Reconciled 2026-10-29: two received Grok videos have a Videos and Chewy home;
 # source bytes, saved reviews, scoped BOM and intake evidence are unchanged.
-CATALOG_HASH = "4491f7f6f13a7e00a8559a76d9a7beb242b2a6ffbe5733dc7be2a15fc38f0686"
+CATALOG_HASH = "e7d34bc86ee71a9bff0249463d4fca1724819c9709cff9e89c830a2a88484b5f"
 
 
 def walk(node):

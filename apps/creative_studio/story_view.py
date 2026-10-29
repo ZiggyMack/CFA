@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 import streamlit as st
-from studio_dependencies import media_path, normal_visible, storyboard_stage, storyboard_themes, storyboard_window, STORYBOARD_STAGES
+from studio_dependencies import current_module, media_path, normal_visible, storyboard_stage, storyboard_themes, storyboard_window, STORYBOARD_STAGES
 
 ROLES = {"setting_stand_in": "Setting stand-in", "source_frame": "Exact source frame",
          "character_reference": "Character reference", "storyboard_concept": "Storyboard concept", "result_on_disk": "Result on disk"}
@@ -35,7 +35,7 @@ def choose_story(key: str, value: str) -> None:
     st.session_state[key] = value
 
 
-def render_structure(data, story, project, select_asset):
+def render_structure(data, story, project, select_asset, *, reviews=None, scene_reviews=()):
     """Read the same evidence projection as the full mirror; never mutate reviews."""
     model = data.get('storyboardStructure', {})
     records = {s['storyID']: s for s in model.get('stories', [])}
@@ -69,28 +69,83 @@ def render_structure(data, story, project, select_asset):
         fields(model.get('kitchenFields',[]), [], f'template-kitchen:{project}', True)
         return
     shots=record.get('shots',[])
+    foundation_helper = current_module('source_foundation')
+    foundation_model = data.get('storyboardSourceFoundation', {})
+    # Native effective_reviews validates imports before discarding their hashes.
+    # Bind a copy of that current session view; retain any explicit hash so a
+    # mismatching supplied record is still rejected by the shared derivation.
+    foundation_reviews = {aid: {'sha256': assets[aid].get('sha256'), **review}
+                          for aid, review in (reviews or {}).items() if aid in assets}
+    foundations = {shot['shotID']: foundation_helper.derive(
+        foundation_model, shot, project, story['id'], assets, reviews=foundation_reviews, scene_reviews=scene_reviews)
+        for shot in shots}
+    foundation_counts = {state: sum(value['state'] == state for value in foundations.values())
+                         for state in foundation_helper.LABELS}
     st.caption(f"{len(shots)} planned shots · {len(record.get('sections',[]))} sequences · {sum(bool(s.get('kitchenWritten')) for s in shots)} kitchen blocks documented · may contain gaps")
     st.info('Writing completeness is separate from review, acceptance and execution. Required inputs depend on the phase and selected route.')
+    st.caption('Source foundation · ' + ' · '.join(
+        f"{foundation_helper.LABELS[state]}: {count}" for state, count in foundation_counts.items() if count))
+    st.caption('Source foundation describes selected inputs. Storyboard maturity, team checks and final video acceptance remain separate.')
     sections=record.get('sections',[])
     section_names={s['id']:s['title'] for s in sections}
     selected_section=st.selectbox('Sequence', list(section_names) or ['unassigned'], format_func=lambda sid:sid+' · '+section_names.get(sid,'No sequence registered'), key=f'structure-sequence:{project}')
-    focus=st.selectbox('Focus', ['All planned shots','No linked art','Clip prompt missing / not assessed','Camera missing / not assessed','Cue missing / not assessed','Kitchen block incomplete'],key=f'structure-focus:{project}')
+    focus=st.selectbox('Focus', ['All planned shots','No linked art','Clip prompt missing / not assessed','Camera missing / not assessed','Cue missing / not assessed','Kitchen block incomplete','Revision / dependency review'],key=f'structure-focus:{project}')
+    foundation_filter = st.selectbox('Source foundation', ['all', *foundation_helper.LABELS],
+        format_func=lambda value: 'All foundations' if value == 'all' else f"{foundation_helper.LABELS[value]} · {foundation_counts[value]}",
+        key=f'structure-foundation:{project}')
     def matches(shot):
+        if foundation_filter != 'all' and foundations[shot['shotID']]['state'] != foundation_filter: return False
         values={v['key']:v for v in shot['fields']}
         if focus=='No linked art': return not any(m.get('assetID') in assets and assets[m['assetID']]['kind'] not in {'document','pdf'} for m in shot.get('materials',[]))
         if focus=='Kitchen block incomplete': return not shot.get('kitchenWritten')
+        if focus=='Revision / dependency review': return bool(shot.get('dependencyReviewNeeded') or shot.get('revisions') or foundations[shot['shotID']]['dependencyReviewNeeded'])
         key={'Clip prompt missing / not assessed':'prompt_clip','Camera missing / not assessed':'camera','Cue missing / not assessed':'cue'}.get(focus)
         return not key or values.get(key,{}).get('status','unknown') in {'unknown','missing'}
     by_shot={s['shotID']:s for s in shots if matches(s)}
     if not shots: st.info('No canonical shot structure is registered here yet. The full visual library also retains existing sequence maps. The blank template is available for inspection.')
+    elif not any(s['shotID'] in by_shot for s in shots if s.get('sectionID') == selected_section):
+        st.info('No shots in this sequence match these filters.')
     for section in record.get('sections',[]):
         if section['id']!=selected_section: continue
         visible=[by_shot[sid] for sid in section['shotIDs'] if sid in by_shot]
         if not visible: continue
         st.subheader(section['id']+' · '+section['title'])
         for shot in visible:
-            with st.expander(shot['shotID']+' · '+shot['title']):
+            with st.expander(shot['shotID']+' · '+shot['title']+' · '+foundations[shot['shotID']]['label']):
                 st.caption(shot['revision']+' · '+shot['authoringStatus'])
+                st.caption('Storyboard maturity: ' + STORYBOARD_STAGES.get(shot.get('stage'), shot.get('stage') or 'Not recorded'))
+                foundation = foundations[shot['shotID']]
+                st.markdown('**Source foundation: ' + foundation['label'] + '**')
+                if foundation['dependencyReviewNeeded']:
+                    st.warning('Selected input changed. Review dependent packs and checks; earlier decisions remain intact.')
+                with st.expander('Selected input details'):
+                    for note in foundation.get('notes', []): st.write(note)
+                    for index, item in enumerate(foundation.get('inputs', [])):
+                        asset = assets.get(item.get('assetID'))
+                        role = str(item.get('role') or 'Role not recorded').replace('_', ' ')
+                        st.markdown('**' + role + ' · ' + (asset.get('title', asset['id']) if asset else item.get('assetID') or 'Missing asset') + '**')
+                        if asset:
+                            st.button('View selected input', key=f"foundation:{project}:{story['id']}:{shot['shotID']}:{index}",
+                                      on_click=select_asset, args=(asset['id'], asset['project']))
+                        st.caption('Source stage: ' + foundation_helper.STAGES.get(item.get('stage'), 'Maturity not recorded')
+                                   + ' · Scope: ' + str(item.get('scope') or 'Not recorded'))
+                        st.caption('Stage evidence: ' + item.get('stageSource', 'Not recorded'))
+                        st.text('Selected SHA-256: ' + str(item.get('expectedSHA256') or 'Not recorded')
+                                + '\nCurrent SHA-256: ' + str(item.get('actualSHA256') or 'Unavailable')
+                                + '\nBytes: ' + str(item.get('bytes') if item.get('bytes') is not None else 'Not recorded'))
+                        for note in item.get('notes', []): st.write(note)
+                    if foundation.get('bindingEvidence'):
+                        st.caption('Selection provenance')
+                        provenance = foundation['bindingEvidence']
+                        st.text('\n'.join(f'{key}: {value}' for key, value in provenance.items()) if isinstance(provenance, dict) else str(provenance))
+                    if foundation_model.get('rules'):
+                        with st.expander('Foundation rule source'):
+                            rules = foundation_model['rules']
+                            if isinstance(rules, dict):
+                                st.text('\n'.join(f'{key}: {value}' for key, value in rules.items()))
+                            elif isinstance(rules, list):
+                                for rule in rules: st.write(rule)
+                            else: st.text(str(rules))
                 legacy = shot.get('sourceShotPlanIDs', [])
                 if legacy:
                     st.caption('Earlier shot-plan IDs: '+', '.join(legacy))
@@ -127,7 +182,8 @@ def render_stories(data: dict, project: str, library_dir: Path, render_grid, sel
         view=st.radio('Storyboard view', ['Panels & writings','Structure & gaps'], horizontal=True,key=f'story-view:{project}')
         if view=='Structure & gaps':
             st.subheader('Storyboard structure')
-            render_structure(data,story,project,select_asset)
+            scene_reviews = st.session_state.get('studio_review_provenance', {}).get('sceneReviews', data.get('sceneReviews', []))
+            render_structure(data,story,project,select_asset,reviews=reviews,scene_reviews=scene_reviews)
             return
     for start in range(0, len(stories), 3):
         for column, story in zip(st.columns(3), stories[start:start + 3]):

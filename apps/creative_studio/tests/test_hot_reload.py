@@ -83,6 +83,22 @@ class StudioDependencyTest(unittest.TestCase):
         source.write_text("VALUE = 4\n", encoding="utf-8")
         self.assertEqual(self.loader.current_module("library_helpers").VALUE, 4)
 
+    def test_story_view_identity_tracks_source_foundation_helper(self):
+        (self.directory / 'library_helpers.py').write_text('VALUE = 1\n', encoding='utf-8')
+        (self.directory / 'story_view.py').write_text("VIEW = 'unchanged'\n", encoding='utf-8')
+        source = self.directory / 'source_foundation.py'
+        source.write_text("LABEL = 'first'\n", encoding='utf-8')
+        first_helper = self.loader.current_module('source_foundation')
+        first_view = self.loader.current_module('story_view')
+        self.assertIs(first_view, self.loader.current_module('story_view'))
+        source.write_text("LABEL = 'later'\n", encoding='utf-8')
+        second_helper = self.loader.current_module('source_foundation')
+        second_view = self.loader.current_module('story_view')
+        self.assertIsNot(first_helper, second_helper)
+        self.assertIsNot(first_view, second_view)
+        self.assertEqual(first_helper.LABEL, 'first')
+        self.assertEqual(second_helper.LABEL, 'later')
+
     def test_unrelated_module_name_is_rejected(self):
         (self.directory / "unrelated.py").write_text("raise AssertionError('must not execute')", encoding="utf-8")
         with self.assertRaises((ValueError, ImportError)):

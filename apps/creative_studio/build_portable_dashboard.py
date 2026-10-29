@@ -104,7 +104,7 @@ def build(design: Path = APP / 'library', source: Path = VISUAL, output: Path = 
     provenance = manifest.get('snapshot', {}).get('sourceCatalog', {})
     if provenance.get('sha256') != sha(source_catalog):
         raise ValueError('Design publication is stale against the local catalog; rebuild it first')
-    inputs = {name: (source / name).read_bytes() for name in ('library.js', 'library.css')}
+    inputs = {name: (source / name).read_bytes() for name in ('library.js', 'library.css', 'source_foundation.js')}
     inputs.update({name: (APP / name).read_bytes() for name in ('full_dashboard_bridge.js', 'hosted_dashboard.js', 'hosted_dashboard_seed.js', 'hosted_dashboard.css')})
     hashes = {name: sha(raw) for name, raw in inputs.items()}
     hashes.update({'design_catalog.json': sha(raw_catalog), 'design_manifest.json': sha(manifest_raw), 'builder': sha(Path(__file__).read_bytes())})
@@ -208,8 +208,8 @@ def build(design: Path = APP / 'library', source: Path = VISUAL, output: Path = 
     for number, supplement in enumerate(catalog.get('reviewSupplements', []), 1):
         generated_content[f'winners-index-{number}.html'] = winners_index(supplement, by_id)
     catalog_bytes = ('window.REVIEW_CATALOG=' + json.dumps(catalog, ensure_ascii=False, separators=(',', ':')) + ';\n').encode('utf-8')
-    generated_content.update({'catalog.js': catalog_bytes, 'library.js': inputs['library.js'], 'library.css': inputs['library.css'], 'bridge.js': inputs['full_dashboard_bridge.js'], 'hosted.js': inputs['hosted_dashboard.js'], 'seed.js': inputs['hosted_dashboard_seed.js'], 'hosted.css': inputs['hosted_dashboard.css']})
-    generated_content['index.html'] = ('''<!doctype html><html lang="en" data-hosted-mirror="true"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CFA Full Visual Library</title><link rel="stylesheet" href="library.css"><link rel="stylesheet" href="hosted.css"></head><body><div id="app"></div><script>window.REVIEW_INITIAL={project:'hon',view:'intake'};if(!location.hash)location.hash='hon/intake';window.REVIEW_BUILD=''' + json.dumps(build_id) + ''';</script><script src="bridge.js"></script><script src="catalog.js"></script><script src="seed.js"></script><script src="library.js"></script><script src="hosted.js"></script></body></html>''').encode()
+    generated_content.update({'catalog.js': catalog_bytes, 'library.js': inputs['library.js'], 'source_foundation.js': inputs['source_foundation.js'], 'library.css': inputs['library.css'], 'bridge.js': inputs['full_dashboard_bridge.js'], 'hosted.js': inputs['hosted_dashboard.js'], 'seed.js': inputs['hosted_dashboard_seed.js'], 'hosted.css': inputs['hosted_dashboard.css']})
+    generated_content['index.html'] = ('''<!doctype html><html lang="en" data-hosted-mirror="true"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CFA Full Visual Library</title><link rel="stylesheet" href="library.css"><link rel="stylesheet" href="hosted.css"></head><body><div id="app"></div><script>window.REVIEW_INITIAL={project:'hon',view:'intake'};if(!location.hash)location.hash='hon/intake';window.REVIEW_BUILD=''' + json.dumps(build_id) + ''';</script><script src="bridge.js"></script><script src="catalog.js"></script><script src="seed.js"></script><script src="source_foundation.js"></script><script src="library.js"></script><script src="hosted.js"></script></body></html>''').encode()
     files = []
     for relative in sorted(referenced):
         origin, target = design / relative, snapshot / 'library' / relative
@@ -232,7 +232,7 @@ def build(design: Path = APP / 'library', source: Path = VISUAL, output: Path = 
     # silently mix catalogs or local UI revisions.
     if (design / 'design_catalog.json').read_bytes() != raw_catalog or (design / 'design_manifest.json').read_bytes() != manifest_raw or (source / 'catalog.js').read_bytes() != source_catalog:
         raise RuntimeError('Design inputs changed during packaging')
-    if any((source / name).read_bytes() != inputs[name] for name in ('library.js', 'library.css')):
+    if any((source / name).read_bytes() != inputs[name] for name in ('library.js', 'library.css', 'source_foundation.js')):
         raise RuntimeError('Local UI changed during packaging')
     receipt = {'format': FORMAT, 'buildID': build_id, 'builtAt': datetime.now(timezone.utc).isoformat(), 'sourceHashes': hashes, 'sourceCatalogSHA256': provenance['sha256'], 'assetCount': len(catalog['assets']), 'albumCount': len(catalog['albums']), 'mediaMode': mode, 'logicalMediaBytes': sum(media_records[p]['bytes'] for p in referenced), 'fileCount': len(files), 'unresolvedPreparedLinks': unresolved, 'files': files, 'reviewStorage': catalog['hostedMirror']['reviewStorage']}
     receipt['publicationFiles'] = sorted(['current.json', f'snapshots/{build_id}/bundle_manifest.json'] + [f'snapshots/{build_id}/{f["path"]}' for f in files])

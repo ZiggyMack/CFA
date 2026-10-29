@@ -1,0 +1,15 @@
+- C47-holochess-001.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: curved bench, blue holo creatures, porthole
+- C47-holochess-002.jpg | prelim_likeness=5 prelim_scene=4 lane=prime scope=scene stage=preliminary | L5 S4 | holo pieces read as chess not creatures | preserve: on-model beast, single bandolier, hand on edge
+- C47-holochess-003.jpg | prelim_likeness=4 prelim_scene=4 lane=prime scope=identity stage=preliminary | L4 S4 | chess pieces not creatures; chest ship hidden | preserve: eye LEFT know RIGHT, neck blaster RIGHT, hoops, holo underlight
+- C47-holochess-004.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=detail stage=preliminary | LUnrated S5 | none | preserve: top-down board, 4 holo monsters, furry fingers
+- C47-holochess-005.jpg | prelim_likeness=2 prelim_scene=4 lane=prime scope=scene stage=preliminary | L2 S4 | Leia ref path missing, face generic | preserve: ivory coat, folded arms. CONCEPT
+- C47-holochess-006.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | eyebrow not raised | preserve: mid-40s face, ivory coat, holo creatures
+- C47-holochess-007.jpg | prelim_likeness=2 prelim_scene=4 lane=prime scope=scene stage=preliminary | L2 S4 | Dolo profile: wrong lettering, no hoops, generic face | preserve: Chewy on-model, two-shot staging. CONCEPT
+- C47-holochess-008.jpg | prelim_likeness=Unrated prelim_scene=4 lane=prime scope=detail stage=preliminary | LUnrated S4 | creature too cute/cartoonish, square board | preserve: macro holo scanlines
+- C47-holochess-009.jpg | prelim_likeness=5 prelim_scene=5 lane=prime scope=scene stage=preliminary | L5 S5 | none | preserve: triumphant roar, single bandolier, chain, holo wolves
+- C47-holochess-010.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: powered-down alcove, torn bench, jacket
+- C47-holochess-011.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=identity stage=preliminary | L4 S5 | grill missing (plain white teeth) | preserve: eye LEFT know RIGHT, neck blaster RIGHT, hoops, laugh + piece move
+- C47-holochess-012.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | face mostly hidden | preserve: OTS staging, headphones, chain, bandolier
+- C47-holochess-013.jpg | prelim_likeness=Unrated prelim_scene=3 lane=prime scope=detail stage=preliminary | LUnrated S3 | reads as hangar-scale saucer, not a table | preserve: projector housing, glow
+- C47-holochess-014.jpg | prelim_likeness=3 prelim_scene=5 lane=prime scope=scene stage=preliminary | L3 S5 | face/hair drift from ref (lighter grey wavy) | preserve: chin-on-hand pose, ivory coat, holo glow
+- C47-holochess-015.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: establishing lounge, corridor arch, steam
