@@ -8,6 +8,7 @@ import mimetypes
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+from uuid import uuid4
 
 import streamlit as st
 
@@ -26,8 +27,13 @@ LIBRARY_DIR = APP_DIR / "library"
 PAGE_SIZE = 24
 CORNER = "Ziggy’s Corner"
 DESIGN_VIEWS = ("Working references", "Outfits", "Tattoos & piercings", "Supporting cast", "Comfy swap targets", "Archive")
-VIEWS = (CORNER, "Library", *DESIGN_VIEWS, "Storyboard", "Videos", "Inspiration", "Needs review", "Collaborators", "Collaborator briefs", "Review queue", "Shot plans", "Export basket", "Favorites & notes", "Documents")
+VIEWS = (CORNER, "Library", *DESIGN_VIEWS, "Storyboard", "Videos", "Inspiration", "Needs review", "Collaborators", "Collaborator briefs", "Review queue", "Shot plans", "Export basket", "Favorites & notes", "Documents", "Intake verification")
 STATUS_LABELS = {None: "Unmarked", "keep": "Keep", "needs_fixes": "Needs fixes", "remove": "Marked for removal"}
+NOTE_PRESETS_FORMAT = "cfa-review-note-presets-v1"
+NOTE_LIMIT = 20000
+REVIEW_EDITABLE_FIELDS = ("status", "note", "shotPlan", "likenessRating", "sceneQualityRating",
+                          "storyboardStage", "variant", "workingReference", "workingReferenceScope",
+                          "collectionState", "multiverseSelection", "creativeReview")
 
 st.set_page_config(page_title="Creative Studio | CFA", page_icon="🎬", layout="wide", initial_sidebar_state="auto")
 
@@ -162,7 +168,7 @@ def init_state() -> None:
     for key, default in (("studio_view", CORNER), ("studio_selected", None),
                          ("studio_favorites", set()), ("studio_notes", {}), ("studio_pages", {}),
                          ("studio_review_overrides", {}), ("studio_reviews", {}), ("studio_basket", set()),
-                         ("studio_review_provenance", {})):
+                         ("studio_review_provenance", {}), ("studio_note_presets", [])):
         if key not in st.session_state:
             st.session_state[key] = default
     if st.session_state.studio_view == "Collaborator kits":
@@ -229,9 +235,188 @@ def save_note(asset_id: str, key: str) -> None:
     set_review_field(asset_id, "note", st.session_state[key])
 
 
+def read_note_presets(payload: dict) -> list[dict]:
+    """Presets are reusable user text, never review decisions or source evidence."""
+    if "notePresets" not in payload:
+        return []
+    envelope = payload["notePresets"]
+    if not isinstance(envelope, dict) or envelope.get("format") != NOTE_PRESETS_FORMAT:
+        raise ValueError("The saved-note preset format is not supported. Your session is unchanged.")
+    rows = envelope.get("items")
+    if not isinstance(rows, list) or len(rows) > 50:
+        raise ValueError("A saved-note list can contain at most 50 presets.")
+    result, seen = [], set()
+    for row in rows:
+        if (not isinstance(row, dict) or not isinstance(row.get("id"), str) or not row["id"]
+                or row["id"] in seen or not isinstance(row.get("label"), str)
+                or not row["label"].strip() or len(row["label"]) > 80
+                or not isinstance(row.get("text"), str) or not row["text"].strip()
+                or len(row["text"]) > NOTE_LIMIT):
+            raise ValueError("A saved-note preset is invalid. Your session is unchanged.")
+        result.append({key: row[key] for key in ("id", "label", "text")})
+        seen.add(row["id"])
+    return result
+
+
+def merge_note_presets(existing: list[dict], incoming: list[dict]) -> list[dict]:
+    result = [dict(row) for row in existing]
+    for row in incoming:
+        if any((old["label"], old["text"]) == (row["label"], row["text"]) for old in result):
+            continue
+        copy = dict(row)
+        if any(old["id"] == copy["id"] for old in result):
+            copy["id"] = "note-" + uuid4().hex
+        result.append(copy)
+    if len(result) > 50:
+        raise ValueError("Import would exceed 50 note presets. Export your current list, then remove unused presets before importing.")
+    return result
+
+
+def complete_review_payload() -> dict:
+    payload = review_payload(st.session_state.get("studio_export_assets", []), st.session_state.studio_reviews,
+                             st.session_state.studio_favorites, st.session_state.studio_basket,
+                             provenance=st.session_state.studio_review_provenance)
+    payload["notePresets"] = {"format": NOTE_PRESETS_FORMAT,
+                              "items": [dict(row) for row in st.session_state.studio_note_presets]}
+    return payload
+
+
+def export_review_button(context: str) -> None:
+    st.download_button("Export review", json.dumps(complete_review_payload(), ensure_ascii=False, indent=2),
+                       file_name="cfa-visual-review.json", mime="application/json", width="stretch",
+                       key=f"export-review:{context}", help="Save decisions, notes, presets, plans, favorites and evidence from all projects.")
+
+
+def seed_review_selections(data: dict) -> None:
+    """Seed validated snapshot selections once; never undo this session's edits."""
+    seed = data.get("reviewSessionSeed")
+    if not isinstance(seed, dict) or not seed.get("id") or st.session_state.get("studio_selection_seed") == seed["id"]:
+        return
+    envelope = {"format": "cfa-visual-review-v1", "items": [], "favorites": seed.get("favorites", [])}
+    _, favorites, _ = read_review(envelope, data["assets"], aliases=data.get("assetAliases", []))
+    basket, _ = read_basket({"format": EXPORT_FORMAT, "items": seed.get("exportBasket", [])},
+                            data["assets"], aliases=data.get("assetAliases", []))
+    st.session_state.studio_favorites = set(st.session_state.studio_favorites) | favorites
+    st.session_state.studio_basket = set(st.session_state.studio_basket) | basket
+    st.session_state.studio_selection_seed = seed["id"]
+
+
+def choose_note_preset(asset_id: str, select_key: str) -> None:
+    preset_id = st.session_state[select_key]
+    st.session_state[select_key] = ""
+    preset = next((row for row in st.session_state.studio_note_presets if row["id"] == preset_id), None)
+    if not preset:
+        return
+    note_key = f"asset-note:{asset_id}"
+    before = st.session_state.get(note_key, st.session_state.studio_reviews.get(asset_id, {}).get("note", ""))
+    after = before + ("\n" if before and not before.endswith("\n") else "") + preset["text"]
+    if len(after) > NOTE_LIMIT:
+        st.session_state.studio_preset_error = "That preset would exceed the 20,000-character note limit. Your note is unchanged."
+        return
+    st.session_state[note_key] = after
+    save_note(asset_id, note_key)
+
+
+def load_note_preset_editor() -> None:
+    selected = st.session_state.get("preset-editor-id", "")
+    row = next((row for row in st.session_state.studio_note_presets if row["id"] == selected), {})
+    st.session_state["preset-editor-label"] = row.get("label", "")
+    st.session_state["preset-editor-text"] = row.get("text", "")
+
+
+def use_current_note(asset_id: str) -> None:
+    st.session_state["preset-editor-id"] = ""
+    st.session_state["preset-editor-label"] = ""
+    st.session_state["preset-editor-text"] = st.session_state.get(f"asset-note:{asset_id}", "")
+
+
+def save_note_preset() -> None:
+    preset_id = st.session_state.get("preset-editor-id", "")
+    label = st.session_state.get("preset-editor-label", "").strip()
+    text = st.session_state.get("preset-editor-text", "").strip()
+    rows = st.session_state.studio_note_presets
+    if not text or len(text) > NOTE_LIMIT or len(label) > 80:
+        st.session_state.studio_preset_error = "Enter preset text of 1–20,000 characters and a name of at most 80 characters."
+        return
+    if not preset_id and len(rows) >= 50:
+        st.session_state.studio_preset_error = "You have 50 presets. Edit or delete one to make room."
+        return
+    if preset_id and not any(row["id"] == preset_id for row in rows):
+        st.session_state.studio_preset_error = "That preset is no longer available. Choose New preset."
+        return
+    row = {"id": preset_id or "note-" + uuid4().hex, "label": label or " ".join(text.split())[:60], "text": text}
+    st.session_state.studio_note_presets = [row if old["id"] == preset_id else old for old in rows] if preset_id else [*rows, row]
+    st.session_state["preset-editor-id"] = row["id"]
+    st.session_state.studio_flash = "Preset saved in this session. Export your review to keep it."
+
+
+def delete_note_preset() -> None:
+    selected = st.session_state.get("preset-editor-id", "")
+    st.session_state.studio_note_presets = [row for row in st.session_state.studio_note_presets if row["id"] != selected]
+    st.session_state["preset-editor-id"] = ""
+    load_note_preset_editor()
+
+
+def clear_note_presets() -> None:
+    st.session_state.studio_cleared_presets = st.session_state.studio_note_presets
+    st.session_state.studio_note_presets = []
+    st.session_state["preset-editor-id"] = ""
+    load_note_preset_editor()
+
+
+def undo_clear_note_presets() -> None:
+    try:
+        restored = merge_note_presets(st.session_state.studio_note_presets,
+                                     st.session_state.get("studio_cleared_presets", []))
+    except ValueError as error:
+        st.session_state.studio_preset_error = str(error)
+        return
+    st.session_state.studio_note_presets = restored
+    st.session_state.pop("studio_cleared_presets", None)
+
+
+def render_note_presets(asset_id: str) -> None:
+    rows = st.session_state.studio_note_presets
+    names = {row["id"]: row["label"] for row in rows}
+    insert_key = f"preset-insert:{asset_id}"
+    st.selectbox("Add a saved note", ["", *names], format_func=lambda value: names.get(value, "Choose a preset…"),
+                 key=insert_key, disabled=not rows, on_change=choose_note_preset, args=(asset_id, insert_key))
+    if message := st.session_state.pop("studio_preset_error", None):
+        st.warning(message)
+    with st.expander("Manage note presets", expanded=False):
+        st.caption("Choosing a preset appends its text to your note. Editing or clearing presets leaves applied notes intact. Export your review to keep this list between sessions.")
+        if st.session_state.get("preset-editor-id", "") not in ["", *names]:
+            st.session_state["preset-editor-id"] = ""
+        st.selectbox("Create or edit", ["", *names], format_func=lambda value: names.get(value, "New preset"),
+                     key="preset-editor-id", on_change=load_note_preset_editor)
+        st.button("Use current note as a starting point", key="preset-from-note", on_click=use_current_note, args=(asset_id,))
+        st.text_input("Short name (optional)", key="preset-editor-label", max_chars=80)
+        st.text_area("Preset text", key="preset-editor-text", height=100, max_chars=NOTE_LIMIT)
+        left, right = st.columns(2)
+        left.button("Save preset", key="preset-save", on_click=save_note_preset, width="stretch")
+        right.button("Delete preset", key="preset-delete", on_click=delete_note_preset,
+                     disabled=not st.session_state.get("preset-editor-id"), width="stretch")
+        st.button("Clear list", key="presets-clear", on_click=clear_note_presets, disabled=not rows)
+        if st.session_state.get("studio_cleared_presets"):
+            st.button("Undo clear", key="presets-undo", on_click=undo_clear_note_presets)
+
+
 def set_review_field(asset_id: str, field: str, value) -> None:
-    st.session_state.studio_review_overrides.setdefault(asset_id, {})[field] = value
-    st.session_state.studio_review_overrides[asset_id]["updatedAt"] = datetime.now(timezone.utc).isoformat()
+    record = st.session_state.studio_review_overrides.setdefault(asset_id, {})
+    record[field] = value
+    now = datetime.now(timezone.utc).isoformat()
+    record["updatedAt"] = now
+    record["origin"] = "user"
+    prior = st.session_state.studio_reviews.get(asset_id, {})
+    prior_dates = prior.get("fieldUpdatedAt", {})
+    current_dates = record.get("fieldUpdatedAt", {})
+    dates = {**(prior_dates if isinstance(prior_dates, dict) else {}),
+             **(current_dates if isinstance(current_dates, dict) else {})}
+    for old_field in REVIEW_EDITABLE_FIELDS:
+        if old_field in prior and old_field not in dates and isinstance(prior.get("updatedAt"), str):
+            dates[old_field] = prior.get(old_field + "UpdatedAt") or prior["updatedAt"]
+    dates[field] = now
+    record["fieldUpdatedAt"] = dates
     st.session_state.pop("studio_basket_zip", None)
 
 
@@ -306,9 +491,6 @@ def render_review_controls(asset: dict) -> None:
     asset_id = asset["id"]
     decision = st.session_state.studio_reviews.get(asset_id, {})
     archived = bool(asset.get("archived"))
-    st.button("Restore from Archive" if archived else "Archive", key=f"archive:{asset_id}",
-              on_click=set_review_field, args=(asset_id, "collectionState", "working" if archived else "archived"), width="stretch")
-    st.caption("Archive keeps this file and its review while hiding it from ordinary browsing. Restore brings it back; any removal flag remains separate.")
     status = decision.get("status")
     st.markdown("**Review decision**")
     st.caption(f"Current: {STATUS_LABELS.get(status, 'Unmarked')}")
@@ -319,18 +501,22 @@ def render_review_controls(asset: dict) -> None:
                           type="primary" if value is not None and status == value else "secondary",
                           on_click=set_review_field, args=(asset_id, "status", value))
     st.caption("Keep applies to the scope in your note. Mark for removal flags the reference; it does not delete a file. Clear keeps your note and shot plan.")
-    for field, label in (("likenessRating", "Character score"), ("sceneQualityRating", "Scene craft score")):
-        rating_key = f"{field}:{asset_id}"
-        if rating_key not in st.session_state:
-            st.session_state[rating_key] = decision.get(field)
-        st.selectbox(label, [None, 1, 2, 3, 4, 5], format_func=lambda value: "Unrated" if value is None else str(value),
-                     key=rating_key, on_change=lambda aid=asset_id, f=field, k=rating_key: set_review_field(aid, f, st.session_state[k]))
-    st.caption("Scores and image validation are separate assessments.")
     note_key = f"asset-note:{asset_id}"
     if note_key not in st.session_state:
         st.session_state[note_key] = decision.get("note", "")
-    st.text_area("Your review note", key=note_key, height=130, on_change=save_note, args=(asset_id, note_key),
+    st.text_area("Your review note", key=note_key, height=130, max_chars=NOTE_LIMIT, on_change=save_note, args=(asset_id, note_key),
                  placeholder="What works here? What should change in the next pass?")
+    render_note_presets(asset_id)
+    export_review_button("selected:" + asset_id)
+    st.caption("Review choices and saved-note presets stay in this session. Export before closing or reloading; import the file under Favorites & notes to resume.")
+    with st.expander("Scores (optional)", expanded=False):
+        for field, label in (("likenessRating", "Character score"), ("sceneQualityRating", "Scene craft score")):
+            rating_key = f"{field}:{asset_id}"
+            if rating_key not in st.session_state:
+                st.session_state[rating_key] = decision.get(field)
+            st.selectbox(label, [None, 1, 2, 3, 4, 5], format_func=lambda value: "Unrated" if value is None else str(value),
+                         key=rating_key, on_change=lambda aid=asset_id, f=field, k=rating_key: set_review_field(aid, f, st.session_state[k]))
+        st.caption("Scores and image validation are separate assessments.")
     plan = decision.get("shotPlan")
     with st.expander("Plan a shot", expanded=False):
         st.caption("Save a draft for Gemini, Flow, or Grok. This does not send a request or generate media.")
@@ -348,7 +534,11 @@ def render_review_controls(asset: dict) -> None:
         if plan:
             st.caption("Planned for " + ", ".join(plan["destinations"]) + " · not sent")
             st.button("Remove shot plan", key=f"remove-plan:{asset_id}", on_click=remove_shot_plan, args=(asset_id,))
-    st.caption("Review choices, notes, plans, and stars stay in this session. Export them before you leave.")
+    render_collaborator_controls(asset)
+    with st.expander("Archive", expanded=False):
+        st.button("Restore from Archive" if archived else "Archive", key=f"archive:{asset_id}",
+                  on_click=set_review_field, args=(asset_id, "collectionState", "working" if archived else "archived"), width="stretch")
+        st.caption("Archive keeps this file and its review while hiding it from ordinary browsing. Restore brings it back; any removal flag remains separate.")
     variant = decision.get("variant", asset.get("variant", "prime"))
     with st.expander("Reference lane & working-reference request"):
         st.caption(f"Current lane: {'Multiverse' if variant == 'multiverse' else 'Prime'}")
@@ -424,8 +614,18 @@ def favorite_button(asset: dict, context: str = "card") -> None:
               on_click=toggle_favorite, args=(asset["id"],), width="stretch", disabled=bool(asset.get("archived")))
 
 
-def render_selected(asset: dict) -> None:
+def render_selected(asset: dict, intake: dict | None = None) -> None:
     st.button("← Back to the collection", on_click=clear_selection)
+    if st.session_state.studio_view in ("Intake verification", "intake"):
+        sequence = st.session_state.get("studio_intake_sequence", [])
+        if asset["id"] in sequence:
+            position = sequence.index(asset["id"])
+            previous, progress, following = st.columns([2, 3, 2])
+            previous.button("← Previous image", key="intake-selected-prev", disabled=position == 0,
+                            on_click=select_asset, args=(sequence[max(0, position - 1)],), width="stretch")
+            progress.caption(f"Image {position + 1} of {len(sequence)} in this batch")
+            following.button("Next image →", key="intake-selected-next", disabled=position == len(sequence) - 1,
+                             on_click=select_asset, args=(sequence[min(len(sequence) - 1, position + 1)],), width="stretch")
     st.subheader(asset.get("title", asset["filename"]))
     if asset.get("archived"):
         st.info("Archived from regular browsing and exports. This entry remains available for review bookkeeping.")
@@ -454,7 +654,7 @@ def render_selected(asset: dict) -> None:
     with right:
         favorite_button(asset, "selected")
         basket_button(asset, "selected")
-        render_collaborator_controls(asset)
+        render_review_controls(asset)
         if asset.get("beat"):
             st.markdown("**Story beat**")
             st.write(asset["beat"])
@@ -467,7 +667,9 @@ def render_selected(asset: dict) -> None:
         if asset.get("note"):
             st.markdown("**What to look for**")
             st.write(asset["note"])
-        render_review_controls(asset)
+        if intake:
+            from studio_dependencies import current_module
+            current_module("review_intake_view").render_asset_evidence(intake, asset)
         with st.expander("Reference details"):
             st.write(f"Reference: {asset['id']}")
             if asset.get("sceneID"):
@@ -829,12 +1031,11 @@ def render_collaborators(data: dict) -> None:
 def render_favorites(data: dict, project: str) -> None:
     if message := st.session_state.pop("studio_import_message", None):
         st.success(message)
-    payload = review_payload(data["assets"], st.session_state.studio_reviews, st.session_state.studio_favorites, st.session_state.studio_basket,
-                             provenance=st.session_state.studio_review_provenance)
+    payload = complete_review_payload()
     export_col, import_col = st.columns(2, gap="large")
     with export_col:
         st.markdown("**Keep your review**")
-        st.write("Export includes review decisions, notes, shot plans, favorites, and the export basket from all projects. Save it before closing this session.")
+        st.write("Export includes review decisions, notes, saved-note presets, shot plans, favorites, and the export basket from all projects. Save it before closing this session.")
         st.download_button("Export complete review", json.dumps(payload, ensure_ascii=False, indent=2),
                            file_name="cfa-visual-review.json", mime="application/json", width="stretch")
         st.caption(f"{len(payload['items'])} review records · {len(payload['favorites'])} favorites across all projects")
@@ -849,12 +1050,16 @@ def render_favorites(data: dict, project: str) -> None:
                 aliases = data.get("assetAliases", [])
                 reviews, accepted, skipped = read_review(imported, data["assets"], aliases=aliases)
                 basket, basket_skipped = read_basket({"format": EXPORT_FORMAT, "items": imported["exportBasket"]}, data["assets"], aliases=aliases) if "exportBasket" in imported else (set(), 0)
-                st.session_state.studio_review_provenance = review_provenance(imported, st.session_state.studio_review_provenance)
+                presets = merge_note_presets(st.session_state.studio_note_presets, read_note_presets(imported))
+                provenance = review_provenance(imported, st.session_state.studio_review_provenance)
+                overrides = merge_review_overrides(st.session_state.studio_review_overrides, reviews, data["assets"], aliases=aliases)
+                # Validate every independent part before changing the live session.
+                st.session_state.studio_review_provenance = provenance
+                st.session_state.studio_note_presets = presets
                 st.session_state.studio_basket = set(st.session_state.studio_basket) | basket
                 st.session_state.pop("studio_basket_zip", None)
                 st.session_state.studio_favorites = set(st.session_state.studio_favorites) | accepted
-                st.session_state.studio_review_overrides = merge_review_overrides(
-                    st.session_state.studio_review_overrides, reviews, data["assets"], aliases=aliases)
+                st.session_state.studio_review_overrides = overrides
                 for asset_id in reviews:
                     for prefix in ("asset-note", "plan-destinations", "plan-idea", "plan-prompt", "asset-stage", "likenessRating", "sceneQualityRating"):
                         st.session_state.pop(f"{prefix}:{asset_id}", None)
@@ -944,7 +1149,9 @@ def render_mission_control(data: dict, review_data: dict | None = None) -> None:
         st.download_button("Prepare review sweep JSON", json.dumps(payload, ensure_ascii=False, indent=2),
                            file_name="cfa-review-sweep-for-nova.json", mime="application/json")
 
-    render_corner(data, LIBRARY_DIR, open_mission_reference, render_selected, document_download, navigate, sweep, review_data=review_data or data)
+    if data.get("reviewIntake"):
+        st.button("Intake verification →", key="mission-intake", on_click=navigate, args=("Intake verification",))
+    render_corner(data, LIBRARY_DIR, open_mission_reference, lambda asset: render_selected(asset, data.get("reviewIntake")), document_download, navigate, sweep, review_data=review_data or data)
 
 
 def render_export_basket(data: dict) -> None:
@@ -1021,6 +1228,7 @@ def main() -> None:
             return
     st.session_state.studio_reviews = effective_reviews(review_data["assets"], review_data.get("reviewDecisions", []), st.session_state.studio_review_overrides,
                                                        aliases=review_data.get("assetAliases", []))
+    seed_review_selections(review_data)
     if data.get("designSnapshot"):
         identity = data["designSnapshot"].get("sourceCatalog", {}).get("sha256")
         if st.session_state.get("studio_provenance_seed") != identity:
@@ -1034,23 +1242,29 @@ def main() -> None:
         st.session_state.studio_favorites = {redirect(aid) for aid in st.session_state.studio_favorites}
         st.session_state.studio_basket = {redirect(aid) for aid in st.session_state.studio_basket}
     st.session_state.studio_notes = {key: value.get("note", "") for key, value in st.session_state.studio_reviews.items()}
+    st.session_state.studio_export_assets = review_data["assets"]
     if message := st.session_state.pop("studio_flash", None):
         st.success(message)
-    projects = {p["id"]: p for p in data["projects"]}
+    populated_projects = {a.get("project") for a in data["assets"]}
+    projects = {p["id"]: p for p in data["projects"] if p["id"] != "unassigned" or p["id"] in populated_projects}
     if not projects:
         st.info("No projects are included in this library yet.")
         return
+    if st.session_state.get("studio_project") not in projects:
+        st.session_state.studio_project = next(iter(projects))
     with st.sidebar:
         st.markdown("## CFA\n### Creative Studio")
         st.caption("A place to look, compare, and create.")
         project = st.selectbox("Project", list(projects), format_func=lambda key: projects[key]["name"],
                                key="studio_project", on_change=clear_project_selection)
+        export_review_button("sidebar")
         browse = ("Library", "Working references", "Outfits", "Tattoos & piercings", "Supporting cast", "Storyboard", "Videos", "Comfy swap targets")
         if project != "hon":
             browse += ("Inspiration",)
         browse += ("Needs review", "Archive")
-        for label, views in (("START HERE", (CORNER,)), ("BROWSE", browse), ("CREATE", ("Collaborators", "Shot plans", "Collaborator briefs")),
-                             ("KEEP & REFER", ("Review queue", "Export basket", "Favorites & notes", "Documents"))):
+        start = (*(("Intake verification",) if data.get("reviewIntake") else ()), CORNER)
+        for label, views in (("START HERE", start), ("BROWSE", browse), ("CREATE", ("Collaborators", "Shot plans", "Collaborator briefs")),
+                             ("KEEP & REFER", ("Review queue", "Documents", "Export basket", "Favorites & notes"))):
             st.caption(label)
             for view in views:
                 st.button(f"{view} · {len(st.session_state.studio_basket)}" if view == "Export basket" else view,
@@ -1067,11 +1281,20 @@ def main() -> None:
     if view == "Collaborators":
         render_collaborators(data)
         return
+    if view in ("Intake verification", "intake"):
+        selected = next((a for a in data["assets"] if a["id"] == st.session_state.studio_selected), None)
+        if selected:
+            render_selected(selected, data.get("reviewIntake"))
+        else:
+            from studio_dependencies import current_module
+            current_module("review_intake_view").render_intake(data, project, LIBRARY_DIR, select_asset,
+                                                              reviews=st.session_state.studio_reviews)
+        return
     hero(projects[project], view, assets)
     selection_assets = review_data["assets"] if view in ("Favorites & notes", "Shot plans", "Export basket") else assets
     selected = next((a for a in selection_assets if a["id"] == st.session_state.studio_selected), None)
     if selected:
-        render_selected(selected)
+        render_selected(selected, data.get("reviewIntake"))
     elif view == "Library":
         render_library(data, project)
     elif view == "Storyboard":

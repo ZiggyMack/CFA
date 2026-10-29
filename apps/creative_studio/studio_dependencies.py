@@ -7,7 +7,7 @@ import sys
 from threading import RLock
 
 APP_DIR = Path(__file__).resolve().parent
-_MODULES = {"library_helpers", "mission_view", "design_view", "story_view"}
+_MODULES = {"library_helpers", "mission_view", "design_view", "story_view", "review_intake_view"}
 _LOAD_LOCK = RLock()
 
 
@@ -18,7 +18,7 @@ def current_module(name: str):
     path = APP_DIR / (name + ".py")
     source = path.read_bytes()
     identity = str(path.resolve()).encode() + b"\0" + source
-    if name in {"mission_view", "design_view", "story_view"}:
+    if name in {"mission_view", "design_view", "story_view", "review_intake_view"}:
         identity += b"\0" + (APP_DIR / "library_helpers.py").read_bytes()
     digest = hashlib.sha256(identity).hexdigest()
     key = "_cfa_studio_" + name + "_" + digest

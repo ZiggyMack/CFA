@@ -4,6 +4,23 @@ A standalone Streamlit review room for Hon Dolo, Lisan Al Gaib, and clips that s
 
 Hosted entry: [algaib.streamlit.app](https://algaib.streamlit.app/).
 
+## Current local-index mirror and mobile reviews
+
+[Full Visual Library](https://algaib.streamlit.app/Full_Visual_Library) serves the current local index's exact JavaScript and CSS with verified, browser-sized media. It starts at Intake, including Still to review / Reviewed / All families, batch gallery and detailed evidence views, the winners visual map, cast filters, note presets and the current local review layout. Reviews remain in that browser across Streamlit reruns. Export review and import the JSON on the desktop to transfer decisions; this is not automatic cross-device synchronization.
+
+The compact Creative Studio shares the published catalog and offers quick triage, notes, note presets, optional scores and previous/next Intake navigation. Its changes remain in the Streamlit session, so Export review is available in the sidebar and beside the review controls. The two views have separate review storage. Use the Full Visual Library for longer sessions and use JSON export/import when switching views or devices.
+
+The October 28 publication reconciles the latest exact-hash local review export field by field. Newer canonical decisions and equal-time conflicts remain canonical. Provider findings never become user acceptance through this reconciliation. Image identities and source hashes are retained while the hosted images are review copies.
+
+Prepare both current publication snapshots:
+
+```powershell
+python apps/creative_studio/build_design_library.py --expected-source-sha <catalog-sha256> --review-export <latest-review.json> --expected-review-sha <review-sha256> --review-mode latest
+python apps/creative_studio/build_portable_dashboard.py
+```
+
+Publish the changed application modules, all `design_manifest.json` publication files, and the portable dashboard receipt's publication files together. These are explicit allowlists; the older original-master dashboard builder is not needed for this deployment. The full mirror keeps original media outside the publication and supplies an honest hosted-copy label. Registered text-document changes must be reconciled before packaging; an image/hash mismatch fails verification.
+
 ## Run locally
 
 From the CFA repository root:

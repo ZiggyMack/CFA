@@ -91,6 +91,33 @@ class DesignBundleTests(unittest.TestCase):
         self.assertTrue(next(r for r in manifest['outputs'] if r['path'] == relative)['reused'])
         self.assertIn(relative, manifest['publicationFiles'])
 
+    def test_supplements_package_registered_previews_and_evidence(self):
+        evidence = self.source.parent / 'receipt.txt'
+        evidence.write_text('Scoped pass; acceptance remains separate.', encoding='utf-8')
+        self.catalog['reviewSupplements'] = [{
+            'id': 'winners', 'indexURL': 'supplier.html', 'receiptURL': 'receipt.txt',
+            'items': [{'id': 'known', 'sha256': self.asset['sha256'],
+                       'fullImageURL': 'source.png', 'thumbURL': 'source.png'},
+                      {'id': 'preview', 'thumbURL': 'source.png',
+                       'thumbnailSHA256': self.asset['sha256'], 'fullImageURL': None,
+                       'sourceLinks': [{'url': 'receipt.txt', 'sha256': sha(evidence.read_bytes())}]}]}]
+        result = self.run_build()
+        supplement = result['reviewSupplements'][0]
+        self.assertIsNone(supplement['indexURL'])
+        self.assertEqual(supplement['items'][0]['fullImageURL'], result['assets'][0]['src'])
+        self.assertIsNone(supplement['items'][1]['fullImageURL'])
+        self.assertTrue((self.out / supplement['items'][1]['thumbURL']).is_file())
+        self.assertEqual((self.out / supplement['receiptURL']).read_text(), evidence.read_text())
+        self.assertEqual(supplement['items'][1]['sourceLinks'][0]['url'], supplement['receiptURL'])
+
+    def test_supplement_hash_mismatch_never_publishes_wrong_evidence(self):
+        (self.source.parent / 'receipt.txt').write_text('changed', encoding='utf-8')
+        self.catalog['reviewSupplements'] = [{'items': [{'sourceLinks': [
+            {'url': 'receipt.txt', 'sha256': '0' * 64}]}]}]
+        with self.assertRaisesRegex(RuntimeError, 'Registered source hash changed'):
+            self.run_build()
+        self.assertFalse((self.out / 'design_catalog.json').exists())
+
     def test_bad_cached_bytes_are_not_reused_or_overwritten(self):
         relative = self.seed_cache(corrupt=True)
         result = self.run_build()

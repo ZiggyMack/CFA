@@ -64,7 +64,8 @@ def overlay_plan_clears(catalog, export, export_sha):
 
 class DesignBundle(MissionBundle):
     def __init__(self, source=SOURCE, out=OUT, root=ROOT, max_file_bytes=MAX_FILE_BYTES,
-                 expected_source_sha=None, review_export=None, expected_review_sha=None):
+                 expected_source_sha=None, review_export=None, expected_review_sha=None,
+                 review_mode='plan_clears'):
         super().__init__(Path(source), Path(out), Path(root), max_file_bytes)
         if expected_source_sha and sha(self.source_bytes) != expected_source_sha.lower():
             raise RuntimeError('Frozen source catalog hash does not match')
@@ -111,13 +112,26 @@ class DesignBundle(MissionBundle):
                     self.private_sources.add((self.root / relative).resolve())
         self.review_receipt = None
         self.review_source = None
+        publication_registry = Path(__file__).with_name('hosted_publications.json')
+        self.task_publications = json.loads(publication_registry.read_text(encoding='utf-8')).get('documents', []) if publication_registry.is_file() else []
         if review_export:
             self.review_source = Path(review_export).resolve()
             raw = self.review_source.read_bytes()
             if not expected_review_sha or sha(raw) != expected_review_sha.lower():
                 raise RuntimeError('Explicit review export hash does not match')
             self.review_source_bytes = raw
-            self.review_receipt = overlay_plan_clears(self.catalog, json.loads(raw.decode('utf-8-sig')), sha(raw))
+            payload = json.loads(raw.decode('utf-8-sig'))
+            if review_mode == 'latest':
+                from review_snapshot import overlay_review_snapshot
+                self.catalog, report = overlay_review_snapshot(self.catalog, payload)
+                self.review_receipt = {**report, 'sourceSHA256': sha(raw)}
+                self.review_receipt['conflicts'] = [{k: v for k, v in row.items()
+                                                    if k not in {'canonical', 'incoming'}}
+                                                   for row in report['conflicts']]
+            elif review_mode == 'plan_clears':
+                self.review_receipt = overlay_plan_clears(self.catalog, payload, sha(raw))
+            else:
+                raise ValueError('Unsupported review overlay mode')
 
     def verified_cache(self, relative, record):
         if not isinstance(relative, str) or not relative or urlsplit(relative).scheme:
@@ -255,6 +269,19 @@ class DesignBundle(MissionBundle):
             if supplemental:
                 result.update(supplemental)
                 return result
+            publication = next((item for item in self.task_publications
+                                if item.get('taskID') == task_id and item.get('label') == link.get('label')
+                                and item.get('path') == path.relative_to(self.root).as_posix()), None)
+            if publication and path.suffix.lower() in {'.txt', '.md', '.json', '.csv', '.tsv'}:
+                raw, digest = self.source_record(path, publication['sha256'])
+                asset_id = 'mission:document:' + digest
+                self.assets[asset_id] = {
+                    'id': asset_id, 'project': 'shared', 'kind': 'document',
+                    'title': link.get('label', path.name), 'filename': path.name,
+                    'src': href, 'sha256': digest, 'category': 'documents'}
+                self.package_asset(asset_id)
+                result['assetID'] = asset_id
+                return result
             raise ValueError('Local link is not a current catalog asset or a verified existing Mission publication')
         except (ValueError, OSError) as error:
             result['unavailableReason'] = str(error)
@@ -271,6 +298,73 @@ class DesignBundle(MissionBundle):
             return {k: self.clean_config(v) for k, v in source.items()}
         return value
 
+    def package_review_supplements(self, supplements):
+        """Carry only registered supplement media/evidence into the portable bundle."""
+        by_sha = {a.get('sha256'): a for a in self.packaged_assets.values()
+                  if a.get('sha256') and a.get('src')}
+        thumbnail_hashes = {item['thumbURL']: item['thumbnailSHA256']
+                            for supplement in supplements for item in supplement.get('items', [])
+                            if item.get('thumbURL') and item.get('thumbnailSHA256')}
+
+        def evidence(url, expected=None):
+            if not url:
+                return None
+            if safe_https(url):
+                return url
+            # Reference links can identify an unavailable original while pointing
+            # at its separately hash-bound supplied thumbnail.
+            expected = thumbnail_hashes.get(url, expected)
+            try:
+                path = self.local_path(url)
+                known = self.packaged_assets.get(self.by_source.get(path), {})
+                if known.get('src') and (not expected or known.get('sha256') == expected):
+                    return known['src']
+                if path.suffix.lower() in {'.jpg', '.jpeg', '.png', '.webp'}:
+                    raw, digest = self.source_record(path, expected)
+                    return self.write_media(raw, path.suffix.lower(), digest, 'supplement_evidence_image')
+                if path.suffix.lower() not in {'.txt', '.md', '.csv', '.tsv', '.json', '.sha256'}:
+                    raise ValueError('Evidence is not a portable text source')
+                raw, digest = self.source_record(path, expected)
+                suffix = path.suffix.lower() if path.suffix.lower() in {'.csv', '.tsv', '.json'} else '.txt'
+                clean = clean_text(raw.decode('utf-8-sig', 'replace'), self.root).encode('utf-8')
+                return self.write_media(clean, suffix, digest, 'supplement_evidence')
+            except (ValueError, OSError) as error:
+                self.unavailable.append({'supplementURL': url, 'reason': str(error)})
+                return None
+
+        def record(value):
+            if isinstance(value, list):
+                return [record(item) for item in value]
+            if not isinstance(value, dict):
+                return value
+            result = {key: record(item) for key, item in value.items()}
+            asset = by_sha.get(value.get('sha256'))
+            if 'fullImageURL' in value:
+                result['fullImageURL'] = asset.get('src') if asset else None
+            if value.get('thumbURL'):
+                if asset and asset.get('thumb'):
+                    result['thumbURL'] = asset['thumb']
+                else:
+                    try:
+                        raw, digest = self.source_record(self.local_path(value['thumbURL']), value.get('thumbnailSHA256'))
+                        result['thumbURL'] = self.write_media(self.jpeg(raw, 480, 85), '.jpg', digest, 'supplement_thumbnail')
+                    except (ValueError, OSError) as error:
+                        result['thumbURL'] = None
+                        self.unavailable.append({'supplementID': value.get('id'), 'reason': str(error)})
+            if 'url' in value:
+                result['url'] = evidence(value['url'], value.get('sha256'))
+            for key in ('csvURL', 'receiptURL', 'lineageURL'):
+                if value.get(key):
+                    result[key] = evidence(value[key])
+            # The full mirror generates a visual map from these exact records.
+            # Supplier HTML is not copied with its machine-local links.
+            for key in ('indexURL', 'sourceURL'):
+                if key in result and not safe_https(result[key]):
+                    result[key] = None
+            return result
+
+        return record(supplements)
+
     def build(self, generated_at=None):
         source_ids = list(self.assets)
         for index, asset_id in enumerate(source_ids, 1):
@@ -278,6 +372,7 @@ class DesignBundle(MissionBundle):
             if index % 250 == 0:
                 print(f'Packaged {index}/{len(source_ids)} catalog assets', flush=True)
         result = deepcopy(self.catalog)
+        result['reviewSupplements'] = self.package_review_supplements(result.get('reviewSupplements', []))
         mission = deepcopy(result.get('missionControl', {}))
         for task in mission.get('tasks', []):
             if task.get('id') == 'favorites-prop-sweep':
@@ -340,9 +435,11 @@ def main():
     parser.add_argument('--expected-source-sha')
     parser.add_argument('--review-export', type=Path)
     parser.add_argument('--expected-review-sha')
+    parser.add_argument('--review-mode', choices=('plan_clears', 'latest'), default='plan_clears')
     args = parser.parse_args()
     result = build_bundle(args.source, args.out, args.root, expected_source_sha=args.expected_source_sha,
-                          review_export=args.review_export, expected_review_sha=args.expected_review_sha)
+                          review_export=args.review_export, expected_review_sha=args.expected_review_sha,
+                          review_mode=args.review_mode)
     print(json.dumps({'assets': len(result['assets']), **result['designSnapshot']}, indent=2))
 
 

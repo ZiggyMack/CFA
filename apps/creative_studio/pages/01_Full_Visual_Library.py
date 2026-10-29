@@ -1,4 +1,4 @@
-"""Open the native full catalog, falling back to the packaged HTML mirror."""
+"""The current local visual library, served as its portable HTML mirror."""
 from pathlib import Path
 import json
 import sys
@@ -12,20 +12,16 @@ from full_dashboard_component import render_dashboard
 
 BUNDLE_DIR = APP_DIR / "full_dashboard_bundle"
 st.set_page_config(page_title="Full Visual Library | CFA", page_icon="🎞️", layout="wide", initial_sidebar_state="collapsed")
-if (APP_DIR / "library/design_catalog.json").is_file():
-    # The full portable catalog now lives in the native workspace, sharing reviews.
-    st.session_state.studio_view = "Library"
-    st.session_state.studio_selected = None
-    st.switch_page("app.py")
-st.markdown("<style>.block-container{padding:1rem .5rem;max-width:none;}@media(max-width:700px){.block-container{padding:3.5rem .2rem .5rem;}}</style>", unsafe_allow_html=True)
+st.markdown("<style>.block-container{padding:1rem .5rem;max-width:none;}@media(max-width:700px){.block-container{padding:2.5rem .2rem .5rem;}h1{font-size:1.5rem!important;}}</style>", unsafe_allow_html=True)
 st.page_link("app.py", label="Back to Creative Studio", icon="↩️")
 st.title("Full visual library")
-st.caption("The complete dashboard. Reviews save in this browser; use Export review and Import review to carry them between devices.")
+st.caption("Your current local index, with browser-sized review copies. Decisions save in this browser; Export review carries them back to the local library or another device.")
 
 current_path = BUNDLE_DIR / "current.json"
 if not current_path.is_file():
     st.info("The full dashboard package has not been prepared in this deployment yet. The existing Creative Studio is still available.")
-    st.code("python apps/creative_studio/build_full_dashboard.py", language="powershell")
+    st.page_link("app.py", label="Open the compact Studio")
+    st.code("python apps/creative_studio/build_portable_dashboard.py", language="powershell")
     st.stop()
 
 try:

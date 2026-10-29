@@ -146,6 +146,10 @@ def cast_working_groups(ctx):
                  section("Selected design references", selected, description="Selected working set; per-image approvals and ratings remain as recorded."),
                  section("Design reference candidates", unique([*g.get("referenceAssetIDs", []), *g.get("currentIDs", [])]), collapsible=True),
                  section("Animation/setup candidates", unique([*g.get("setupAssetIDs", []), *g.get("candidateSetupIDs", [])]), collapsible=True),
+                 section("Boss dais · character and staging candidates", g.get("characterStudyIDs", []),
+                         description="Returned studies of the selected boss. Individual reviews remain separate."),
+                 section("Counting room · scene candidates", g.get("sceneStudyIDs", [])),
+                 section("Earlier repair versions", g.get("revisionStudyIDs", []), collapsible=True),
                  section("Earlier studies", g.get("historicalReferenceIDs", g.get("historyIDs", [])), collapsible=True)]
         group = ctx.group({**g, "id": g["id"] + "-working", "assetIDs": unique(a for s in parts for a in s["assetIDs"])}, parts)
         if group:
@@ -387,14 +391,53 @@ def detail_model(ctx, album_id=""):
     return [section("Tattoos", kind="collections", groups=tattoo), section("Piercings, grills and props", kind="collections", groups=other)]
 
 
+def cast_browse_facts(ctx, source, visible_ids):
+    """Recorded origins and story links; scene folders alone never imply use."""
+    sources = [{"id": album["id"], "title": album.get("title", album["id"])}
+               for aid in unique(source.get("sourceAlbumIDs", []))
+               if (album := ctx.albums.get(aid)) and album.get("project") == ctx.project]
+    identity_ids = unique([source.get("representativeID"), source.get("coverID"),
+                           *source.get("currentIDs", []), *source.get("workingReferenceIDs", [])])
+    choices = [asset for aid in identity_ids if (asset := ctx.by_id.get(aid)) and
+               (asset.get("roleDecision") == "user_assigned" or asset.get("selectionStatus") == "user_selected_visible_golden_reference")]
+    ids = set(visible_ids)
+    shots = [shot for shot in ctx.data.get("shotMaterials", {}).get("shots", [])
+             if shot.get("project") == ctx.project and (shot.get("characterCollectionID") == source["id"]
+             or any(aid in ids for aid in shot.get("panelAssetIDs", []))
+             or any(material.get("assetID") in ids and material.get("sha256")
+                    and ctx.by_id.get(material["assetID"], {}).get("sha256") == material["sha256"]
+                    for material in shot.get("materials", [])))]
+    sequences = [sequence for sequence in ctx.data.get("storyboardSequences", [])
+                 if sequence.get("project") == ctx.project and any(aid in ids for aid in sequence.get("assetIDs", []))]
+    return {"sources": sources, "choices": choices, "roles": bool(choices),
+            "planned": [shot for shot in shots if not shot.get("panelAssetIDs")],
+            "linked": [shot for shot in shots if shot.get("panelAssetIDs")], "sequences": sequences}
+
+
+def cast_browse_groups(groups, source="all", connection="all"):
+    def matches(group):
+        facts = group.get("browseFacts", {})
+        if source != "all" and not any(item["id"] == source for item in facts.get("sources", [])):
+            return False
+        if connection == "roles":
+            return bool(facts.get("roles"))
+        if connection == "planned":
+            return bool(facts.get("planned"))
+        if connection == "linked":
+            return bool(facts.get("linked") or facts.get("sequences"))
+        return True
+    return [group for group in groups if matches(group)]
+
+
 def cast_model(ctx, album_id):
     definitions = [g for g in ctx.data.get("castCollections", []) if g.get("project") == ctx.project and g["id"] != "hon:creature-ideas"]
+    exact_character = any(g["id"] == album_id for g in definitions)
     covered = {aid for g in definitions for aid in g.get("assetIDs", [])}
     definitions += [{**al, "assetIDs": [aid for aid in al.get("assetIDs", []) if aid not in covered]} for al in ctx.albums.values()
                     if al.get("project") == ctx.project and al.get("category") == "cast" and al["id"] != "hon:creature-ideas"]
     groups = []
     for source in definitions:
-        if album_id and album_id != source["id"] and album_id not in source.get("sourceAlbumIDs", []):
+        if album_id and album_id != source["id"] and (exact_character or album_id not in source.get("sourceAlbumIDs", [])):
             continue
         # The character cover and recorded scene/video appearances lead the hub.
         representative = next(iter(ctx.ids([source.get("representativeID"), source.get("coverID"), source.get("coverAssetID"), *source.get("currentIDs", []), *source.get("workingReferenceIDs", [])])), None)
@@ -404,9 +447,16 @@ def cast_model(ctx, album_id):
         parts = list(source.get("sections", [])) if discovery else []
         if source.get("preferredIDs"):
             parts = [section("Your shortlist", source["preferredIDs"]), section("Other candidates", [a for a in ids if a not in source["preferredIDs"]], collapsible=True)]
-        parts += [section(title, source.get(key, []), collapsible=True) for title, key in (("Scene appearances", "sceneAssetIDs"), ("Video appearances", "videoAssetIDs"), ("Related story material", "relatedAssetIDs"))]
+        studies = set(unique([*source.get("characterStudyIDs", []), *source.get("sceneStudyIDs", []), *source.get("revisionStudyIDs", [])]))
+        parts += [section("Boss dais · character and staging candidates", source.get("characterStudyIDs", [])),
+                  section("Counting room · scene candidates", source.get("sceneStudyIDs", [])),
+                  section("Earlier repair versions", source.get("revisionStudyIDs", []), collapsible=True),
+                  section("Scene appearances", [aid for aid in source.get("sceneAssetIDs", []) if aid not in studies], collapsible=True),
+                  section("Video appearances", source.get("videoAssetIDs", []), collapsible=True),
+                  section("Related story material", source.get("relatedAssetIDs", []), collapsible=True)]
         group = ctx.group({**source, "assetIDs": ids, "coverID": representative}, parts)
         if group:
+            group["browseFacts"] = cast_browse_facts(ctx, source, group["assetIDs"])
             working = next((g for g in cast_working_groups(ctx) if g["castCollectionID"] == source["id"]), None)
             if working:
                 group["sections"].append(section("Design and animation references", kind="collections", groups=[working]))
@@ -580,6 +630,15 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
                     count = len(model_asset_ids(g))
                     unit = g.get("unit", "references")
                     st.caption(f"{count} {unit[:-1] if count == 1 and unit.endswith('s') else unit}")
+                    if facts := g.get("browseFacts"):
+                        labels = [label for key, label in (("roles", "Role choice recorded"), ("planned", "Planned for storyboard")) if facts.get(key)]
+                        if facts.get("linked") or facts.get("sequences"):
+                            labels.append("Storyboard-linked")
+                        if labels:
+                            st.caption(" · ".join(labels))
+                        if facts["sources"]:
+                            st.caption("From " + facts["sources"][0]["title"] +
+                                       (f" · +{len(facts['sources']) - 1} sources" if len(facts["sources"]) > 1 else ""))
                     key = context + ":expanded:" + g["id"]
                     if g.get("directSingle") and count == 1 and cover:
                         st.button("Open target", key=key + ":open", on_click=open_reference, args=(cover,), width="stretch")
@@ -596,6 +655,29 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
                 cover = model["assets"].get(g.get("coverID"))
                 if cover:
                     st.button("Review character / collection cover", key=key + ":cover", on_click=open_reference, args=(cover,))
+                if facts := g.get("browseFacts"):
+                    with st.expander("Origin & story connections", expanded=False):
+                        st.caption("Source collections / runs")
+                        for source in facts["sources"]:
+                            st.write(source["title"])
+                        if not facts["sources"]:
+                            st.caption("No source collection is recorded.")
+                        if facts["choices"]:
+                            st.caption("Recorded character choices")
+                            for choice in facts["choices"]:
+                                st.write(str(choice.get("characterRole") or "Selected boss") + " · " +
+                                         ("role assigned by Ziggy" if choice.get("roleDecision") == "user_assigned" else "visible likeness selected by Ziggy"))
+                            st.caption("These choices assign a role or reference scope; each image keeps its own review.")
+                        if facts["planned"]:
+                            st.caption("Planned storyboard use · no panel linked yet")
+                            for shot in facts["planned"]:
+                                st.write(shot.get("title", shot.get("id", "Planned scene")))
+                        if facts["linked"] or facts["sequences"]:
+                            st.caption("Linked storyboard material · placement and acceptance stay with each shot")
+                            for shot in [*facts["linked"], *facts["sequences"]]:
+                                st.write(shot.get("title", shot.get("id", "Linked story material")))
+                        if navigate and (facts["planned"] or facts["linked"] or facts["sequences"]):
+                            st.button("Browse storyboards", key=key + ":storyboard", on_click=navigate, args=("Storyboard",))
                 for i, child in enumerate(g.get("sections", [])):
                     render(child, key + ":" + str(i))
                 if g.get("notes"):
@@ -724,6 +806,43 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
         st.caption("Character, mouth and grill references live in Working references.")
         if navigate:
             st.button("Open Working references", key=context + ":working", on_click=navigate, args=("Working references",))
+    if model["view"] == "cast" and not album_id:
+        groups = model["sections"][0]["groups"]
+        sources = {}
+        for group in groups:
+            for source in group.get("browseFacts", {}).get("sources", []):
+                entry = sources.setdefault(source["id"], {**source, "count": 0})
+                entry["count"] += 1
+        source_key, filter_key = context + ":source", context + ":connection"
+        if st.session_state.get(source_key, "all") not in {"all", *sources}:
+            st.session_state[source_key] = "all"
+        source = st.selectbox("Source collection / run", ["all", *sources], key=source_key,
+                              format_func=lambda value: "All sources" if value == "all" else f"{sources[value]['title']} · {sources[value]['count']} characters")
+        selected = st.session_state.get(filter_key, "all")
+
+        def select_connection(value):
+            st.session_state[filter_key] = value
+
+        def clear_cast_filters():
+            st.session_state[source_key] = "all"
+            st.session_state[filter_key] = "all"
+
+        filters = [("all", "All characters"), ("roles", "Recorded role choices"),
+                   ("planned", "Planned for storyboard"), ("linked", "Storyboard-linked")]
+        for col, (value, label) in zip(st.columns(4), filters):
+            with col:
+                st.button(f"{label} · {len(cast_browse_groups(groups, source, value))}", key=context + ":filter:" + value,
+                          type="primary" if selected == value else "secondary", on_click=select_connection, args=(value,), width="stretch")
+        visible = cast_browse_groups(groups, source, selected)
+        filtered = source != "all" or selected != "all"
+        if filtered:
+            st.button("Clear filters", key=context + ":clear", on_click=clear_cast_filters)
+        st.caption(f"{len(visible)} characters shown. Storyboard plans and linked drafts are shown separately.")
+        if not visible:
+            st.info("No characters match these filters. Clear filters or change the search.")
+        model["sections"][0] = {**model["sections"][0], "groups": visible}
+        if filtered:
+            model["sections"] = model["sections"][:1]
     buckets = [s for s in model["sections"] if s["kind"] == "outfit_bucket"]
     if buckets:
         def select_bucket(value):

@@ -9,11 +9,13 @@ import unittest
 
 APP = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(APP))
-from design_view import build_design_model, model_asset_ids
+from design_view import build_design_model, cast_browse_groups, model_asset_ids
 from library_helpers import effective_reviews
 
 CATALOG = APP.parents[1] / "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js"
-CATALOG_HASH = "16db6f5f69d6444e093acfe42bf96e81fc37079f88c30c5df42be9a9235479b9"
+# Reconciled 2026-10-28: outputs-first Comfy workspace, current source documents,
+# and unchanged scoped BOM, outfit, tattoo, mouth-coverage and archive assertions.
+CATALOG_HASH = "cd5650c75d6c9c060087b81dc0064d200997cb84b300ef22ae818c8e78a24224"
 
 
 def walk(node):
@@ -49,6 +51,53 @@ def fixture():
 
 
 class DesignModelTest(unittest.TestCase):
+    def test_cast_studies_keep_core_selection_and_exact_character_routes(self):
+        data = fixture()
+        original = data["assets"][-1]
+        for aid in ("dais", "counting", "earlier-repair", "bartender", "bouncer"):
+            data["assets"].append({**original, "id": aid, "title": aid, "sha256": aid[0] * 64})
+        group = data["castCollections"][0]
+        group.update(workingReferenceIDs=["cast"], characterStudyIDs=["dais"], sceneStudyIDs=["counting"],
+                     revisionStudyIDs=["earlier-repair"], sceneAssetIDs=["dais", "counting", "earlier-repair"],
+                     sourceAlbumIDs=["hon:discovery"])
+        for aid in ("bartender", "bouncer"):
+            data["castCollections"].append({"id": "hon:" + aid, "project": "hon", "title": aid, "coverID": aid,
+                                            "currentIDs": [aid], "assetIDs": [aid], "sourceAlbumIDs": ["hon:cast", "hon:discovery"]})
+        before = copy.deepcopy(data)
+        model = build_design_model(data, "hon", "working", album_id="hon:cast")
+        working = model["sections"][0]["groups"][0]
+        self.assertEqual(model_asset_ids(working), ["cast", "dais", "counting", "earlier-repair"])
+        self.assertEqual(named(working, "Selected design references")["assetIDs"], ["cast"])
+        self.assertFalse(any(s["assetIDs"] for s in walk(working) if s.get("title") == "Approved design references"))
+        self.assertEqual(named(working, "Boss dais · character and staging candidates")["assetIDs"], ["dais"])
+        self.assertEqual(named(working, "Earlier repair versions")["kind"], "disclosure")
+        self.assertEqual([g["id"] for g in build_design_model(data, "hon", "cast", album_id="hon:cast")["sections"][0]["groups"]], ["hon:cast"])
+        broad = build_design_model(data, "hon", "cast", album_id="hon:discovery")
+        self.assertEqual([g["id"] for g in broad["sections"][0]["groups"]], ["hon:cast", "hon:bartender", "hon:bouncer"])
+        removed = build_design_model(data, "hon", "working", {"dais": {"status": "remove"}}, album_id="hon:cast")
+        self.assertNotIn("dais", model_asset_ids(removed))
+        self.assertEqual(data, before, "Browsing studies must not change current IDs, selected references or approvals")
+
+    def test_cast_story_links_require_recorded_membership_and_distinguish_plans(self):
+        data = fixture()
+        asset = data["assets"][-1]
+        asset["roleDecision"] = "user_assigned"
+        data["castCollections"][0]["sourceAlbumIDs"] = ["hon:outfit-vest"]
+        data["shotMaterials"] = {"shots": [
+            {"id": "planned", "project": "hon", "characterCollectionID": "hon:cast", "panelAssetIDs": []},
+            {"id": "linked", "project": "hon", "panelAssetIDs": ["cast"]},
+            {"id": "exact-material", "project": "hon", "panelAssetIDs": [], "materials": [{"assetID": "cast", "sha256": asset["sha256"]}]},
+            {"id": "wrong-material", "project": "hon", "panelAssetIDs": [], "materials": [{"assetID": "cast", "sha256": "wrong"}]},
+            {"id": "other-project", "project": "lisan", "characterCollectionID": "hon:cast", "panelAssetIDs": ["cast"]}]}
+        before = copy.deepcopy(data)
+        groups = build_design_model(data, "hon", "cast")["sections"][0]["groups"]
+        facts = groups[0]["browseFacts"]
+        self.assertEqual([s["id"] for s in facts["planned"]], ["planned", "exact-material"])
+        self.assertEqual([s["id"] for s in facts["linked"]], ["linked"])
+        self.assertEqual(len(cast_browse_groups(groups, "hon:outfit-vest", "roles")), 1)
+        self.assertEqual(len(cast_browse_groups(groups, "unrelated", "roles")), 0)
+        self.assertEqual(data, before)
+
     def test_explicit_multiverse_no_rating_approval_or_review_mutation(self):
         data = fixture()
         before = copy.deepcopy(data)
@@ -155,6 +204,28 @@ class FrozenCatalogParityTest(unittest.TestCase):
         self.assertEqual(len(group["assetIDs"]), 8)
         self.assertFalse(any("mouth" in n.get("title", "").lower() for n in walk(single)))
 
+    def test_crocodile_studies_exact_hub_and_cast_origin_counts(self):
+        before = copy.deepcopy(self.data["castCollections"])
+        source = next(g for g in self.data["castCollections"] if g["id"] == "hon:boss-round01")
+        anchor = "HD-RETURN-8421e7cfa1a0"
+        self.assertEqual(source["currentIDs"], [anchor])
+        self.assertEqual(source["workingReferenceIDs"], [anchor])
+        self.assertEqual([len(source.get(key, [])) for key in ("characterStudyIDs", "sceneStudyIDs", "revisionStudyIDs")], [15, 15, 3])
+        working = build_design_model(self.data, "hon", "working", album_id=source["id"])
+        group = working["sections"][0]["groups"][0]
+        self.assertEqual(len(model_asset_ids(group)), 34)
+        self.assertEqual(named(group, "Selected design references")["assetIDs"], [anchor])
+        self.assertFalse(any(s["assetIDs"] for s in walk(group) if s.get("title") == "Approved design references"))
+        hub = build_design_model(self.data, "hon", "cast", album_id=source["id"])
+        self.assertEqual([g["id"] for g in hub["sections"][0]["groups"]], [source["id"]])
+        self.assertEqual(len(model_asset_ids(hub)), 34)
+        groups = build_design_model(self.data, "hon", "cast")["sections"][0]["groups"]
+        self.assertEqual([len(cast_browse_groups(groups, connection=value)) for value in ("all", "roles", "planned", "linked")], [11, 3, 2, 1])
+        self.assertEqual([g["id"] for g in cast_browse_groups(groups, "hon:boss-round01")],
+                         ["hon:boss-round01", "hon:cast-bartender", "hon:cast-bouncer"])
+        self.assertFalse(hub["sections"][0]["groups"][0]["browseFacts"]["linked"], "Crocodile scene-study folders are not storyboard use")
+        self.assertEqual(self.data["castCollections"], before)
+
     def test_real_bom_and_lisan_visible_reference_pins(self):
         model = build_design_model(self.data, "hon", "working")
         detail = named(model, "Approved details and placement")
@@ -204,7 +275,22 @@ class FrozenCatalogParityTest(unittest.TestCase):
 
     def test_comfy_bosses_archive_and_missing_files(self):
         comfy = build_design_model(self.data, "hon", "comfy")
-        self.assertFalse(any(any(term in g["id"].lower() for term in ("mouth", "head", "viseme", "breather")) for g in comfy["sections"][0]["groups"]))
+        self.assertEqual([s["title"] for s in comfy["sections"]], ["Comfy outputs", "Likeness targets", "Workflow recipes",
+                                                                    "Source clips & control guides", "Local finishing"])
+        self.assertEqual(named(comfy, "Comfy outputs")["assetIDs"], ["HD-COMFY-MOTION-V001", "HD-COMFY-RELIGHT-V001",
+                                                                    "HD-COMFY-RELIGHT-V002", "HD-COMFY-IDENTITY-V001"])
+        targets = named(comfy, "Likeness targets")["groups"]
+        self.assertEqual([g["id"] for g in targets], ["hon:comfy-likeness-HON-DOLO", "hon:comfy-likeness-LEIA", "hon:comfy-likeness-LUKE"])
+        self.assertEqual([len(g["assetIDs"]) for g in targets], [5, 1, 1])
+        self.assertTrue(all(g["directSingle"] for g in targets))
+        self.assertFalse(any(any(term in g["id"].lower() for term in ("mouth", "head", "viseme", "breather")) for g in targets))
+        for aid in ("HD-LIKENESS-02", "HD-B-91ef00348229", "HD-B-708df0bb5bff"):
+            self.assertNotIn(aid, model_asset_ids(comfy), "Group photograph and repeated mouth libraries stay out of Comfy galleries")
+        recipes = named(comfy, "Workflow recipes")
+        self.assertEqual(recipes["kind"], "workflow_families")
+        self.assertEqual([family["id"] for family in recipes["families"]],
+                         ["character-still", "animation", "relighting", "actor-replacement", "lip-sync", "soundtrack"])
+        self.assertEqual(model_asset_ids(recipes), [], "Recipe ingredient links do not duplicate image galleries")
         cast = build_design_model(self.data, "hon", "cast")
         boss = named(cast, "Creature boss ideas")
         self.assertEqual(len(boss["assetIDs"]), 12)
@@ -220,6 +306,47 @@ class FrozenCatalogParityTest(unittest.TestCase):
 
 
 class NativeDesignControlsTest(unittest.TestCase):
+    def test_cast_source_and_story_controls_preserve_reviews(self):
+        from streamlit.testing.v1 import AppTest
+        data = fixture()
+        original = data["assets"][-1]
+        original["roleDecision"] = "user_assigned"
+        data["castCollections"][0]["sourceAlbumIDs"] = ["hon:outfit-vest"]
+        for aid in ("bartender", "bouncer"):
+            data["assets"].append({**original, "id": aid, "title": aid, "sha256": aid[0] * 64, "roleDecision": None})
+            data["castCollections"].append({"id": "hon:" + aid, "project": "hon", "title": aid,
+                                            "assetIDs": [aid], "currentIDs": [aid], "coverID": aid})
+        data["shotMaterials"] = {"shots": [
+            {"id": "planned", "project": "hon", "title": "Planned bar", "characterCollectionID": "hon:cast", "panelAssetIDs": []},
+            {"id": "linked", "project": "hon", "title": "Bouncer panel", "panelAssetIDs": ["bouncer"]}]}
+        script = "\n".join([
+            "import sys, json", "from pathlib import Path", "import streamlit as st", f"sys.path.insert(0, {str(APP)!r})",
+            "from design_view import render_design_view", f"data = json.loads({json.dumps(data)!r})",
+            "st.session_state.setdefault('saved_reviews', {'cast': {'status':'needs_fixes','note':'Keep the reference separate'}})",
+            f"render_design_view(data, 'hon', 'cast', Path({str(APP / 'library')!r}), lambda rows, context: None, lambda asset: None, reviews=st.session_state.saved_reviews)"])
+        app = AppTest.from_string(script, default_timeout=20).run()
+        self.assertFalse(app.exception)
+        before = copy.deepcopy(app.session_state["saved_reviews"])
+        context = "design:hon:cast:root"
+        self.assertEqual(app.button(key=context + ":filter:all").label, "All characters · 3")
+        app.button(key=context + ":filter:planned").click().run()
+        self.assertFalse(app.exception)
+        self.assertEqual(app.button(key=context + ":filter:planned").proto.type, "primary")
+        self.assertIn("**Supporting character**", [m.value for m in app.markdown])
+        self.assertNotIn("**bouncer**", [m.value for m in app.markdown])
+        app.selectbox(key=context + ":source").select("hon:outfit-vest").run()
+        self.assertEqual(app.button(key=context + ":filter:linked").label, "Storyboard-linked · 0")
+        app.button(key=context + ":filter:linked").click().run()
+        self.assertTrue(any("No characters match" in item.value for item in app.info))
+        app.button(key=context + ":clear").click().run()
+        self.assertEqual(app.selectbox(key=context + ":source").value, "all")
+        self.assertEqual(app.button(key=context + ":filter:all").proto.type, "primary")
+        app.button(key=context + ":0:expanded:hon:cast:toggle").click().run()
+        self.assertFalse(app.exception)
+        self.assertTrue(any(e.label == "Origin & story connections" for e in app.expander))
+        self.assertTrue(any("no panel linked yet" in c.value for c in app.caption))
+        self.assertEqual(app.session_state["saved_reviews"], before)
+
     def test_outfit_tag_highlight_and_filter_change_together(self):
         from streamlit.testing.v1 import AppTest
         data = fixture()

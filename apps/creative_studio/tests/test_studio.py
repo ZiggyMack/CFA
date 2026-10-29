@@ -424,15 +424,13 @@ class StudioAppTest(unittest.TestCase):
         self.assertEqual([item.value for item in app.subheader], ["Gemini", "Flow", "Grok", "Shared roles"])
         self.assertTrue(any("Character creation" in item.value for item in app.markdown))
 
-    def test_project_switch_and_empty_project(self):
+    def test_project_switch_and_empty_unassigned_hidden(self):
         app = self.app()
         app.selectbox(key="studio_project").select("lisan").run()
         self.assertFalse(app.exception)
         self.assertEqual(len([b for b in app.button if (b.key or "").startswith("open:")]), 1)
         self.assertTrue(any("Placement portraits" in item.value for item in app.subheader))
-        app.selectbox(key="studio_project").select("unassigned").run()
-        self.assertFalse(app.exception)
-        self.assertTrue(app.info)
+        self.assertNotIn("Unassigned", app.selectbox(key="studio_project").options)
 
     def test_seed_controls_explicit_clear_and_shot_plan_without_file_writes(self):
         library = self.app_dir / "library"

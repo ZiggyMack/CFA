@@ -1,0 +1,92 @@
+{
+ "script": "V5_INK_METHOD_v004",
+ "spec": "v009",
+ "image": "/workspace/hon-dolo-outfit-run-278-282/HD-EXP-279-cockpit-hoodie_v003.jpg",
+ "mask": null,
+ "clothing_mask": null,
+ "blaster": {
+  "skin_median": 74.0,
+  "skinbox_ink_px": 0,
+  "skinbox_soft_px": 0,
+  "local_skin_v002": 82.0,
+  "ring_median": 88.0,
+  "ring_clean_frac": 0.903,
+  "lit_skin": {
+   "lit_ref": 80.0,
+   "lit_box": [
+    563,
+    528,
+    577,
+    542
+   ],
+   "lit_box_median": 86.0,
+   "lit_dist": 9.1,
+   "scan_windows": 706
+  },
+  "ring_shadowed": false,
+  "ring_ref_traceability": 88.0,
+  "status": "ok",
+  "main": 0.473,
+  "xcheck": 0.473,
+  "ink_px": 416,
+  "ink_median": 35.0,
+  "stroke_med": 2.0,
+  "stroke_p90": 2.0,
+  "ring_ref": 88.0,
+  "ref_source": "ring",
+  "ref_box": null,
+  "skinbox_dev": -0.159,
+  "skinbox_ok": false
+ },
+ "ship": {
+  "skin_median": 107.0,
+  "skinbox_ink_px": 0,
+  "skinbox_soft_px": 0,
+  "local_skin_v002": 69.0,
+  "ring_median": 76.0,
+  "ring_clean_frac": 0.868,
+  "lit_skin": {
+   "lit_ref": 111.0,
+   "lit_box": [
+    579,
+    623,
+    593,
+    637
+   ],
+   "lit_box_median": 107.0,
+   "lit_dist": 12.0,
+   "scan_windows": 91
+  },
+  "ring_shadowed": true,
+  "ring_ref_traceability": null,
+  "status": "ok",
+  "main": 0.476,
+  "xcheck": 0.318,
+  "ink_px": 619,
+  "ink_median": 34.0,
+  "stroke_med": 2.0,
+  "stroke_p90": 2.0,
+  "ring_ref": NaN,
+  "ref_source": "ring-shadowed INVALID: --skinref required",
+  "ref_box": null,
+  "skinbox_dev": null,
+  "skinbox_ok": false
+ },
+ "status": "ok",
+ "diff_main": 0.003,
+ "diff_xcheck": -0.155,
+ "ink_pass_strict": false,
+ "margin_rule_eligible": false,
+ "tiebreak_eligible": false,
+ "stroke_flag_ADVISORY": {
+  "p90_within_blaster_plus_0p5": true,
+  "note": "advisory only: a stroke FAIL also needs the lines to look heavier at 4x (spec v009 s.4)"
+ },
+ "skinboxes_ok": false,
+ "ring_shadowed": {
+  "blaster": false,
+  "ship": true
+ },
+ "exceptions": [],
+ "skinbox_note": "skin box must be ink-free and within +/-15% of ref; one box shared by original and fix; the original must pass on it (check by running the original)"
+}

@@ -6,6 +6,7 @@ import unittest
 
 APP = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(APP))
+from library_helpers import effective_design_data, mission_visible
 from streamlit.testing.v1 import AppTest
 
 
@@ -18,7 +19,16 @@ class DesignAppTest(unittest.TestCase):
 
     def test_all_design_destinations_and_archive_restore_without_review_loss(self):
         app = self.launch()
-        self.assertEqual(app.button(key="mission-shot-plans").label, "Shot plans · 18 →")
+        snapshot = json.loads((APP / "library/design_catalog.json").read_text(encoding="utf-8"))
+        reviews = app.session_state["studio_reviews"]
+        visible = effective_design_data(snapshot, reviews)
+        plans = [asset for asset in visible["assets"] if reviews.get(asset["id"], {}).get("shotPlan") and mission_visible(asset, reviews)]
+        self.assertGreater(len(plans), 0)
+        self.assertEqual(app.button(key="mission-shot-plans").label, f"Shot plans · {len(plans)} →")
+        app.button(key="mission-shot-plans").click().run()
+        self.assertFalse(app.exception)
+        self.assertIn(f"{len(plans)} saved shot plans across all projects.", [c.value for c in app.caption])
+        app.button(key="corner-collection-back").click().run()
         nav = [b.label for b in app.sidebar.button]
         self.assertEqual(nav[nav.index("Needs review") + 1], "Archive")
         for view in ("Working references", "Outfits", "Tattoos & piercings", "Supporting cast", "Comfy swap targets", "Needs review", "Archive", "Videos", "Storyboard"):

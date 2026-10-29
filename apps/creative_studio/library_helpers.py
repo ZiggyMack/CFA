@@ -26,7 +26,7 @@ REVIEW_METADATA_FIELDS = {
     "creativeReview", "supersededBy", "displayTitle", "humanRatingConfirmation", "history",
     "reason", "reasonSource", "scopedPropCorrection", "temporalVariant", "lookSelection",
     "componentSelection", "directUserClarification", "creativeLane", "validationEvidence", "multiverseSelection",
-    "shotPlanClearEvidence", "shotPlanUpdatedAt",
+    "shotPlanClearEvidence", "shotPlanUpdatedAt", "fieldUpdatedAt",
 }
 DESTINATIONS = ("undecided", "Gemini", "Flow", "Grok", "ComfyUI")
 MISSION_PROVIDERS = ("Grok", "Gemini", "Flow", "Panhandler Nova")

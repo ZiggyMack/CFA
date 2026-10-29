@@ -200,14 +200,14 @@ class FullDashboardBundleTest(unittest.TestCase):
             self.assertNotIn("studio_view", app.session_state)
             self.assertFalse((studio / "library/design_catalog.json").exists())
 
-    def test_native_full_catalog_redirects_to_library_and_preserves_reviews(self):
+    def test_prepared_mirror_takes_priority_over_native_catalog_and_preserves_reviews(self):
         from streamlit.testing.v1 import AppTest
         from streamlit.runtime.pages_manager import PagesManager
         studio = self.studio_fixture()
         (studio / "library").mkdir()
         (studio / "library/design_catalog.json").write_text('{"assets": []}', encoding="utf-8")
-        # No mirror is packaged. The native route must run before mirror lookup.
-        self.assertFalse((studio / "full_dashboard_bundle/current.json").exists())
+        # A design catalog no longer silently redirects the full mirror to native.
+        build(self.source, studio / "full_dashboard_bundle", self.root)
         with patch.object(PagesManager, "uses_pages_directory", None):
             app = AppTest.from_file(str(studio / "app.py"), default_timeout=20).run()
             app.session_state.studio_view = "Favorites & notes"
@@ -217,13 +217,13 @@ class FullDashboardBundleTest(unittest.TestCase):
             app.session_state.studio_project = "lisan"
             app.switch_page("pages/01_Full_Visual_Library.py").run()
             self.assertFalse(app.exception)
-            self.assertEqual(app.title[0].value, "Existing compact studio")
-            self.assertEqual(app.session_state.studio_view, "Library")
-            self.assertIsNone(app.session_state.studio_selected)
+            self.assertEqual(app.title[0].value, "Full visual library")
+            self.assertEqual(app.session_state.studio_view, "Favorites & notes")
+            self.assertEqual(app.session_state.studio_selected, "one")
             self.assertEqual(app.session_state.studio_reviews, {"one": {"status": "needs_fixes", "note": "Keep this decision"}})
             self.assertEqual(app.session_state.studio_favorites, {"one"})
             self.assertEqual(app.session_state.studio_project, "lisan")
-            self.assertEqual(len(app.get("component_instance")), 0)
+            self.assertEqual(len(app.get("component_instance")), 1)
             self.assertFalse(app.info)
 
     def test_absent_native_and_mirror_catalogs_keep_missing_package_message(self):
