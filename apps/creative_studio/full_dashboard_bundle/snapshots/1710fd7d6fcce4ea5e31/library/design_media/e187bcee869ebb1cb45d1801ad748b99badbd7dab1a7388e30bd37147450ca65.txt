@@ -1,0 +1,274 @@
+# CHEWY AT WORK — storyboard and Flow / Gemini prototype briefs, v001
+
+Metadata: video_lane=flow,gemini; stage=prototype brief
+Project: Hon Dolo / Strictly Business. A frame-story beat between the music, not part of any song section.
+Author: Grok Chief of Staff (grok_chief), 2026-10-12, America/New_York. Owner: Chief of Staff.
+Basis:
+- Claude's `SCENE_CARD_CHEWY_AT_WORK.md`, with frames W-1..W-5 from C44-001, C42-001, C67-002, C30-013 and C20-001.
+- Our added picks: C67-011, C21-009 and E13-011.
+
+Standard: `VIDEO_PROTOTYPE_BRIEF_STANDARD.md`. Every frame below fills all eleven fields.
+Status: PROPOSED. All sources are preliminary Grok drafts, not accepted references. This file authorizes no run. Dispatch belongs to CFA Nova under the production method of October 12, and Ziggy's gate is the actual video.
+IP caution: there are no bosses, no enforcer and no Leia in this set, per Ziggy's instruction to take special care with the bosses.
+
+Archive root for every source: `docs\notes\downloads\`.
+Each SHA-256 below was read from that archive's MANIFEST.csv and re-hashed live on D: on 2026-10-12, and all of them match.
+
+## Story beat
+The ship is down on a dry world at sunset, and there is cargo to move. Nobody sings.
+- Chewy brings the crate down the ramp, and then hauls the lever that works the ship.
+- Dolo walks off toward the business.
+- In the hold, Chewy stacks and lashes the cargo, checks the case of credits, and fills the doorway when the job is done.
+- Then his hand goes to the decks.
+
+Each frame has one character action, and Chewy is the one working in every frame.
+
+## Recommended first run: W-1 (the ramp)
+W-1 has one character, one action and no face lock to fail on. W-2 (the lever) is the second clip. Run the rest only after Ziggy has reviewed the W-1 and W-2 videos.
+
+## Common values (they apply to every frame unless the frame says otherwise)
+- **Shot and story place:** "Chewy at work" storyboard, frame W-n, frame-story beat between the music. No song timestamp. Timing stays null until Nova's alignment passes.
+- **Output bound:** one clip at the model's native short length. Flow002 returned 6.0 s, 144 frames at 24 fps, 1280x720, with an audio track despite a silent prompt. Use 8 s only if the selected model offers it. No automatic retries and no extra batches. Record the actual returned duration and whether audio is present.
+- **Mode and model:** TO BE CONFIRMED ON SCREEN at run time, by the dispatcher.
+  - Flow is the video route. Gemini's create tools are a separate route with their own bounds, and the two are not interchangeable.
+  - Flow002 used Omni 1.1 Flash. That is recorded for reference only and is not assumed here.
+  - If the mode isn't offered, stop.
+- **Cost and access check:** check the displayed cost and the current allowance on screen BEFORE pressing Start. The run must stay within the current allowance, with no credits, no purchases, no plan or settings changes and no bypasses. Unknown cost or access means stop.
+- **Provenance:**
+  - Save the original output unchanged, and record its SHA-256 beside the source hash below.
+  - Post a mailbox message to `nova` and `claude` with both hashes.
+  - Save any later edit separately.
+  - Arrival is not acceptance.
+- **Owner:**
+  - Prepared by Chief of Staff (grok_chief).
+  - Dispatched by CFA Nova, or whoever Ziggy names for that provider surface.
+  - Reviewed by Ziggy, on the actual video. Claude reviews this brief against the standard.
+- **Forbidden in every frame:** speech, singing or lip motion, cuts, tattoo redesign, costume change, and characters added by the model. At most one gentle camera move; all frames below use a locked camera.
+- **Chewy lock (copied from the standard):** Chewy per the DJB sheet: a dark gorilla-like beast, black over-ear headphones, gold neck chain, bullet bandolier.
+- **Dolo lock (copied from the standard):** Dolo per `6c8900223ee9__lf_full.png`:
+  - the four-gold external-off mouth
+  - chain and band on the character-right wrist (provisional)
+  - cursive "eye" character-right and serif "know" character-left
+  - neck blaster character-left
+  - upright chest ship
+  - the brown leather jacket over the open off-white shirt
+- **Acceptance checks:** each check is judged at the start, middle and end of the clip. There must be no morph, duplicate, added person or set change. The declared action must be completed, and nothing else. Note any audible content. The output is a candidate until Ziggy reviews it.
+
+---
+
+### W-1 Down the ramp (Claude's W-1) — FIRST RUN
+1. **Shot and story place:** W-1 opens the beat with the cargo coming off the ship.
+2. **Source:** `GROK-HD-FALCON-1000/C44-chewy-boarding/C44-chewy-boarding-001.jpg`, 283,433 bytes.
+   - SHA-256 `9900dcd673ce6b6a1ee13512a6d5c2572bf147a764a48acb415eeddddd6776bb`
+   - Grok L5 S5. Claude L5 S5. Ziggy has not reviewed it.
+   - Preliminary draft, not an accepted reference.
+3. **Locks visible:**
+   - Chewy per the DJB sheet: the beast, headphones, gold neck chain and bullet bandolier.
+   - The ship's ramp and hull (one silhouette candidate, undecided).
+   - No Dolo locks are visible.
+4. **Declared change, one action:** Chewy carries the crate down the ramp toward the ground, three or four steps, and stops at the foot.
+   - Start state: on the ramp, holding the crate.
+   - End state: standing at the foot of the ramp.
+   - The crate stays level, and nothing else moves except dust.
+5. **Sides:** the ramp runs from the hull at screen-right down to the ground at screen-left. He moves screen-left. Camera locked.
+6. **Output bound:** as Common.
+7. **Mode and model:** to be confirmed on screen (Flow first; Gemini as a separate run).
+8. **Cost check:** as Common. Verify on screen before Start; unknown cost means stop.
+9. **Acceptance checks:**
+   - The beast's face, headphones, chain and bandolier hold at start, middle and end.
+   - Four fingers and a thumb on each hand.
+   - The crate's geometry stays constant.
+   - No second figure, and the ramp doesn't morph.
+   - Known defects: none in the frame. The sunset haze may drift.
+10. **Provenance:** as Common. The output hash sits beside 9900dcd6…76bb.
+11. **Owner:** Chief of Staff.
+
+### W-2 The lever (our pick; Z_6) — SECOND RUN
+1. **Shot and story place:** W-2. With the cargo down, Chewy works the ship's lever.
+2. **Source:** `GROK-HD-ENABLERS-03/E13-chewy-hands-actions/E13-chewy-hands-actions-011.jpg`, 321,407 bytes.
+   - SHA-256 `9814893c2ccc9ab577c039f6ad0c4fd29052b61bd3a9afec4847fae74b49df3a`. This matches both the D: MANIFEST and the box copy Z_6 reported.
+   - Grok L5 S5. No Claude grade yet. Ziggy has not reviewed it.
+   - Preliminary draft (an Enablers action reference), not an accepted reference.
+3. **Locks visible:**
+   - Chewy per the DJB sheet: a five-finger grip on the lever, the gold curb chain, a single bandolier, and headphones around the neck.
+   - Lighting: amber overhead with blue spill from the displays.
+4. **Declared change, one action:** a single pull.
+   - Start state: Chewy's hand grips the lever in the up position.
+   - End state: the lever is hauled all the way down.
+   - Nothing else moves except the display glow.
+5. **Sides:** keep the lever and the displays where they are in the source (frame geography is held as shot). The pull travels downward only. Camera locked.
+6. **Output bound:** as Common.
+7. **Mode and model:** to be confirmed on screen.
+8. **Cost check:** as Common.
+9. **Acceptance checks:**
+   - The hand stays on the lever throughout, with five digits including a visible thumb and no extra hand.
+   - The chain, the single bandolier and the headphones on the neck hold.
+   - The amber and blue lighting holds, and the console geometry stays constant.
+   - Known defects: none recorded. The background is a set-neutral console, not a confirmed Falcon location.
+10. **Provenance:** as Common. The output hash sits beside 9814893c…df3a.
+11. **Owner:** Chief of Staff.
+
+### W-3 Walking away from the ship (Claude's W-2; our pick)
+1. **Shot and story place:** W-3. Dolo heads for the business while Chewy works the ramp.
+2. **Source:** `GROK-HD-FALCON-1000/C42-ramp-landing/C42-ramp-landing-001.jpg`, 306,604 bytes.
+   - SHA-256 `9f4d516f4ab8f10f541c7494409eaa406682b04bc0e889d6ef9e681c97a0cf6a`
+   - Grok L5 S5. Claude L4 for Dolo, L5 for Chewy, S5. Ziggy has not reviewed it.
+   - Preliminary.
+3. **Locks visible:**
+   - Dolo: face per lf_full, cheek words on the correct sides, two lip hoops, ear hoop, neck blaster character-left, the jacket over the open shirt.
+   - Chewy carrying a crate on the ramp behind.
+4. **Declared change, one action:** Dolo walks two steps toward camera and out past the right edge of frame.
+   - Start state: Dolo mid-frame.
+   - End state: Dolo out of frame, screen-right.
+   - Chewy takes one step down the ramp as background continuity. This is Claude's wording, and Claude should rule whether it counts as a second action.
+   - The sun stays put.
+5. **Sides:** Dolo exits screen-right. Chewy moves screen-left down the ramp. Camera locked.
+6. **Output bound:** as Common.
+7. **Mode and model:** to be confirmed on screen.
+8. **Cost check:** as Common.
+9. **Acceptance checks:**
+   - Dolo's cheek words, hoops and neck blaster hold at start, middle and end, with no new tattoos.
+   - Chewy's beast holds at small scale, and the crate stays coherent.
+10. **Provenance:** as Common. The output hash sits beside 9f4d516f…0cf6a.
+11. **Owner:** Chief of Staff.
+
+**DEFECT (recorded):** Dolo wears an extra gold neck chain he doesn't have, and it hides the chest ship. Ziggy needs to decide, before this frame is run, between repairing the source first and running it as a motion test with the defect recorded.
+
+### W-4 In the hold (Claude's W-3)
+1. **Shot and story place:** W-4. The cargo goes into the hold.
+2. **Source:** `GROK-HD-FALCON-1000/C67-cargo-hold-dolo-chewy/C67-cargo-hold-dolo-chewy-002.jpg`, 274,946 bytes.
+   - SHA-256 `a1a553116a1d985b0c6a151cf79c52c7b95e4c9b70055daf615ffd72839bf0df`
+   - Grok L5 S5. Claude L5/L5 S5.
+   - Preliminary.
+3. **Locks visible:**
+   - Dolo chest-up: cheek words correct, two lip hoops, both ear pieces, neck blaster character-left.
+   - Chewy among crates and netting, screen-left.
+4. **Declared change, one action:** Chewy lifts the nearest crate and sets it on the stack behind him.
+   - Start state: the crate is on the floor.
+   - End state: the crate is on the stack.
+   - Dolo holds still: one blink, eyes on camera.
+5. **Sides:** Chewy and the crates are screen-left. Dolo is screen-right of center. Camera locked.
+6. **Output bound:** as Common.
+7. **Mode and model:** to be confirmed on screen.
+8. **Cost check:** as Common.
+9. **Acceptance checks:**
+   - Dolo's face and marks stay unchanged. Any drift fails the clip.
+   - Chewy's hands and the crate stay coherent, and the netting doesn't morph.
+   - Known defects: the chest ship isn't visible. That is acceptable for this frame.
+10. **Provenance:** as Common. The output hash sits beside a1a55311…bf0df.
+11. **Owner:** Chief of Staff.
+
+### W-5 Strap it down (our pick)
+1. **Shot and story place:** W-5. With the stack in place, Chewy secures it.
+2. **Source:** `GROK-HD-FALCON-1000/C67-cargo-hold-dolo-chewy/C67-cargo-hold-dolo-chewy-011.jpg`, 279,047 bytes.
+   - SHA-256 `f2d0e3c1ef9211ca347a29d3f8fa97947dd33a833ff2a056e836b9839326a593`
+   - Grok L5 S5. No Claude grade. Ziggy has not reviewed it.
+   - Preliminary.
+3. **Locks visible:**
+   - Chewy, screen-left: the beast, black over-ear headphones on his head, gold neck chain, bullet bandolier.
+   - Dolo, screen-right, chest-up: cursive "eye" character-right and serif "know" character-left, two lip hoops, ear hoop, neck blaster character-left, the brown leather jacket over the open off-white shirt.
+   - Not visible: the chest ship and the wrist.
+4. **Declared change, one action:** Chewy's hands pull the cargo strap across the crate top tight.
+   - Start state: the strap lies slack on the crate.
+   - End state: the strap is pulled taut and buckled.
+   - Dolo holds still with eyes on camera, and nothing else moves.
+5. **Sides:** Chewy and the strapped crate are screen-left. Dolo is screen-right. The netting lamps are in the background. Camera locked.
+6. **Output bound:** as Common.
+7. **Mode and model:** to be confirmed on screen.
+8. **Cost check:** as Common.
+9. **Acceptance checks:**
+   - Dolo's cheek words, lip hoops, neck blaster and jacket are unchanged at start, middle and end. Any face drift fails the clip.
+   - Chewy's hands each show four fingers and a thumb, with no extra hand.
+   - The strap and buckle stay a single object.
+   - Known defects: Dolo reads younger than the late-twenties lock, so check age drift.
+10. **Provenance:** as Common. The output hash sits beside f2d0e3c1…a593.
+11. **Owner:** Chief of Staff.
+
+### W-6 The case (Claude's W-4)
+1. **Shot and story place:** W-6. The pay is checked.
+2. **Source:** `GROK-HD-FALCON-1000/C30-cargo/C30-cargo-013.jpg`, 266,564 bytes.
+   - SHA-256 `d6b65339e87a0da082e8e1627310d9c84877e9cd7a061d91ed8a6f4298d77ef4`
+   - Grok L5 S5. Claude L5 S5.
+   - Preliminary.
+3. **Locks visible:** Chewy per the DJB sheet, in close. The open case holds four luminous credits, with crates behind.
+4. **Declared change, one action:** his eyes drop from the lens to the credits, and the glow brightens one step.
+   - Start state: eyes on the lens.
+   - End state: eyes on the credits.
+   - The lid doesn't move.
+5. **Sides:** the case is screen-left-low, and his face is screen-right. Camera locked.
+6. **Output bound:** as Common.
+7. **Mode and model:** to be confirmed on screen.
+8. **Cost check:** as Common.
+9. **Acceptance checks:**
+   - Four countable credits from start to end, and no readable text.
+   - The beast's face holds.
+   - Known defects: none.
+10. **Provenance:** as Common. The output hash sits beside d6b65339…ef4.
+11. **Owner:** Chief of Staff.
+
+### W-7 Job done, in the doorway (our pick)
+1. **Shot and story place:** W-7. The work is finished, and Chewy fills the lounge doorway.
+2. **Source:** `GROK-HD-FALCON-1000/C21-chewy-holds-room/C21-chewy-holds-room-009.jpg`, 245,862 bytes.
+   - SHA-256 `35bb4f5829bc9a7e0a2b94eb8eb1711af86874e57b143b287d60754486baf4f8`
+   - Grok L5 S5. No Claude grade.
+   - This frame was not flagged in the build audit (only C21-005 and C21-010 were).
+   - Preliminary.
+3. **Locks visible:** Chewy per the DJB sheet, frontal and full-torso: black over-ear headphones around the neck, gold curb chain, bullet bandolier, and both hands on the door frame. The corridor is warm-backlit.
+4. **Declared change, one action:** Chewy lets go of the frame and steps one pace forward through the doorway.
+   - Start state: hands on the door frame.
+   - End state: stepping through, hands lowered to his sides.
+   - The backlight stays constant.
+5. **Sides:** the door frame is the screen edges, and the corridor runs straight back behind him. He moves toward camera. Camera locked.
+6. **Output bound:** as Common.
+7. **Mode and model:** to be confirmed on screen.
+8. **Cost check:** as Common.
+9. **Acceptance checks:**
+   - Face, headphones, chain and bandolier hold.
+   - Four fingers and a thumb on each hand as they release.
+   - His build stays lean per DJB-02, with no bulking up (build-audit rule).
+   - The doorway geometry stays constant.
+   - Known defects: none recorded.
+10. **Provenance:** as Common. The output hash sits beside 35bb4f58…f4f8.
+11. **Owner:** Chief of Staff.
+
+### W-8 The decks (Claude's W-5)
+1. **Shot and story place:** W-8 closes the beat, with his hand going to the decks.
+2. **Source:** `GROK-HD-FALCON-1000/C20-fader-push/C20-fader-push-001.jpg`, 279,611 bytes.
+   - SHA-256 `8c55b4a2cfdc1275e14f532b881f59f57542a43c2ef3890d8490df57f917fade`
+   - Grok L5 S5. Claude L5 S4, noting that the neon club lighting is not the Falcon's warm practicals.
+   - Preliminary.
+   - Alternate source: E13-chewy-hands-actions-004, SHA-256 `b7e2f2956d31c1f74d6eb28c22d5209f21ac94a9c822908fb494886a7e627367`, Claude L5 S4.
+3. **Locks visible:** Chewy per the DJB sheet at a two-deck console, with headphones on, gold neck chain, bullet bandolier, and one hand on the mixer.
+4. **Declared change, one action:** one fader push.
+   - Start state: the fader at screen-left.
+   - End state: the fader at screen-right.
+   - The hand stays in contact with the fader the whole way, and the practicals pulse once as it lands.
+5. **Sides:** the fader travels screen-right. Camera locked.
+6. **Output bound:** as Common.
+7. **Mode and model:** to be confirmed on screen.
+8. **Cost check:** as Common.
+9. **Acceptance checks:**
+   - The hand stays on the fader, the finger count holds and no second hand appears.
+   - The decks' geometry stays constant.
+   - Known defects: the lighting is magenta and cyan neon rather than the Falcon's warm practicals.
+10. **Provenance:** as Common. The output hash sits beside 8c55b4a2…fade.
+11. **Owner:** Chief of Staff.
+
+## Cut logic
+1. W-1 → W-2: the crate reaches the ground; cut to the hand on the lever.
+2. W-2 → W-3: the lever comes down; cut to Dolo walking away.
+3. W-3 → W-4: Dolo leaves frame; cut to the hold.
+4. W-4 → W-5: the crate lands on the stack; cut to the strap.
+5. W-5 → W-6: the buckle closes; cut to the case.
+6. W-6 → W-7: his eyes drop; cut to him in the doorway.
+7. W-7 → W-8: he steps through; cut to the hand on the fader.
+
+That is eight shots, each with a single action. There is no dialogue and no song.
+
+## Required before any run
+- CFA Nova confirms the mode and model on screen, verifies the cost and allowance, and dispatches. Unknown cost or access means stop.
+- Ziggy rules on the W-3 neck-chain defect.
+- Claude grades the sources that have no grade yet: W-2, W-5 and W-7.
+- Each output is saved unchanged with its hash, and posted to the mailbox for `nova` and `claude`. It stays a candidate until Ziggy reviews it.
+
+— Chief of Staff (grok_chief)

@@ -16,7 +16,7 @@ APP_DIR = Path(__file__).resolve().parent
 if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
 from studio_dependencies import (
-    DESTINATIONS, EXPORT_FORMAT, MISSION_PROVIDERS, STORYBOARD_STAGES, VISUAL_KINDS, basket_payload, basket_zip,
+    DESTINATIONS, EXPORT_FORMAT, MISSION_PROVIDERS, STORYBOARD_STAGES, VISUAL_KINDS, basket_payload, basket_zip, destination_label,
     collaborator_sections, document_tree, effective_reviews, export_allowed, handoff_payload, handoff_text,
     layout_video_assets, media_path, mission_tasks, mission_review_data, normalize_plan, ordered_assets, production_workflows,
     read_basket, read_review, review_payload, storyboard_stage, storyboard_themes, storyboard_window, sweep_payload,
@@ -474,13 +474,13 @@ def render_collaborator_controls(asset: dict) -> None:
     plan = st.session_state.studio_reviews.get(asset["id"], {}).get("shotPlan") or {}
     destinations = plan.get("destinations", [])
     st.markdown("**Collaborator**")
-    for column, provider in zip(st.columns(3), ("Flow", "Grok", "Gemini")):
+    for column, provider in zip(st.columns(4), ("Flow", "Grok", "grok_video", "Gemini")):
         with column:
             selected = provider in destinations
-            st.button(("✓ " if selected else "") + provider, key=f"collaborator:{asset['id']}:{provider}",
+            st.button(("✓ " if selected else "") + destination_label(provider), key=f"collaborator:{asset['id']}:{provider}",
                       type="primary" if selected else "secondary", width="stretch",
                       on_click=toggle_collaborator, args=(asset["id"], provider), disabled=bool(asset.get("archived")))
-    queued = [provider for provider in ("Flow", "Grok", "Gemini") if provider in destinations]
+    queued = [destination_label(provider) for provider in ("Flow", "Grok", "grok_video", "Gemini") if provider in destinations]
     if queued:
         st.caption(f"Queued for {', '.join(queued)} — draft not sent.")
     else:
@@ -519,20 +519,20 @@ def render_review_controls(asset: dict) -> None:
         st.caption("Scores and image validation are separate assessments.")
     plan = decision.get("shotPlan")
     with st.expander("Plan a shot", expanded=False):
-        st.caption("Save a draft for Gemini, Flow, or Grok. This does not send a request or generate media.")
+        st.caption("Save a draft for Gemini, Flow, Grok stills, Grok video, or ComfyUI. This does not send a request or generate media.")
         defaults = plan or {"destinations": ["undecided"], "idea": "", "prompt": ""}
         for field in ("destinations", "idea", "prompt"):
             key = f"plan-{field}:{asset_id}"
             if key not in st.session_state:
                 st.session_state[key] = defaults[field]
         with st.form(f"shot-plan:{asset_id}"):
-            st.multiselect("Destination", DESTINATIONS, key=f"plan-destinations:{asset_id}")
+            st.multiselect("Destination", DESTINATIONS, format_func=destination_label, key=f"plan-destinations:{asset_id}")
             st.text_area("Shot idea", key=f"plan-idea:{asset_id}", height=100,
                          placeholder="What should happen in this shot? What must stay the same?")
             st.text_area("Prompt draft", key=f"plan-prompt:{asset_id}", height=150)
             st.form_submit_button("Save shot plan", on_click=save_shot_plan, args=(asset_id,), width="stretch")
         if plan:
-            st.caption("Planned for " + ", ".join(plan["destinations"]) + " · not sent")
+            st.caption("Planned for " + ", ".join(map(destination_label, plan["destinations"])) + " · not sent")
             st.button("Remove shot plan", key=f"remove-plan:{asset_id}", on_click=remove_shot_plan, args=(asset_id,))
     render_collaborator_controls(asset)
     with st.expander("Archive", expanded=False):
@@ -701,7 +701,7 @@ def render_card(asset: dict, context: str = "card") -> None:
         if decision.get("status"):
             st.caption(STATUS_LABELS[decision["status"]])
         if decision.get("shotPlan"):
-            st.caption("Shot planned · " + ", ".join(decision["shotPlan"]["destinations"]))
+            st.caption("Shot planned · " + ", ".join(map(destination_label, decision["shotPlan"]["destinations"])))
         if decision.get("note"):
             st.write(decision["note"])
         if asset.get("kind") == "video":
@@ -1101,7 +1101,7 @@ def render_review_queue(data: dict, project: str) -> None:
 def render_shot_plans(data: dict, project: str) -> None:
     intent = export_intent(f"shot-intent:{project}")
     destination = st.selectbox("Handoff destination", ("all", *DESTINATIONS),
-                               format_func=lambda d: "All destinations" if d == "all" else d)
+                               format_func=lambda d: "All destinations" if d == "all" else destination_label(d))
     query = st.text_input("Find a shot plan", key=f"shot-search:{project}")
     reviews = st.session_state.studio_reviews
     payload = handoff_payload(data["assets"], reviews, project, destination, intent)

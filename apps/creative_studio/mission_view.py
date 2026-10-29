@@ -3,7 +3,7 @@ from pathlib import Path
 
 import streamlit as st
 
-from studio_dependencies import media_path, mission_pending_requests, mission_task_progress, mission_tasks, mission_visible
+from studio_dependencies import destination_label, media_path, mission_pending_requests, mission_task_progress, mission_tasks, mission_visible
 
 STATES = {"ready": ("Ready to send", "green"), "needs_input": ("Needs your input", "orange"),
           "in_progress": ("In progress", "blue"), "planned": ("Planned", "gray"), "done": ("Done", "green")}
@@ -54,7 +54,7 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
                             st.image(str(picture), width="stretch")
                         if is_plans:
                             plan = reviews[asset["id"]]["shotPlan"]
-                            st.caption(projects.get(asset.get("project"), "Across projects") + " · " + ", ".join(plan.get("destinations", ["undecided"])))
+                            st.caption(projects.get(asset.get("project"), "Across projects") + " · " + ", ".join(map(destination_label, plan.get("destinations", ["undecided"]))))
                             if plan.get("idea"):
                                 st.write(plan["idea"])
                             if plan.get("prompt"):

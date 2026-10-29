@@ -1,0 +1,83 @@
+META MIRROR — LISTENING REVIEW
+Lisan Al Gaib | music_alignment_20261013
+
+OPEN FIRST: listening_review.html
+Keep this local page beside prime/ and mm_1/. Its two players reference canonical
+MP3s one directory above. No server or provider session is needed. The page has
+no external scripts, fonts, services, automatic uploads or generation.
+
+TWO CUTS, TWO INDEPENDENT TIMEBASES
+Prime master: ../Meta Mirror_0 (Remastered).mp3
+Decoded duration: 249.720 seconds (4:09.720), 48 kHz stereo.
+Canonical lyrics: ../Meta_Mirror.txt — 93 nonblank rows; 9 literal sections.
+MM_1 secondary: ../MM_1.mp3
+Decoded duration: 271.760 seconds (4:31.760), 48 kHz stereo.
+Canonical lyrics: ../MM_1.txt — 103 nonblank rows; 8 literal sections.
+MM_1 does not replace Prime. Never copy, shift, or rescale times between cuts.
+
+CURRENT STATUS
+All 196 canonical source rows are uniquely covered by completed provider maps.
+Numeric row intervals fall inside each decoded duration; literal heading indices
+match. These are static checks, not listening verification. Audible onset/end,
+vocal lanes, section boundaries, lip sync and timing acceptance remain unverified.
+Provider confidence is uncalibrated. Source words, punctuation and line whitespace
+are preserved. Provider suggestions about audible wording remain separate.
+
+THREE SECTION-CONTAINMENT FLAGS
+Prime L054: reported 115.800–116.800 seconds; S05 ends at 116.000.
+Prime L112: reported 210.800–211.500 seconds; S08 ends at 211.000.
+MM_1 L060: reported 125.800–126.800 seconds; S04 ends at 126.000.
+Derived start/end remain null in each provisional_timed_lyrics.json.
+Listen to the reported ranges to investigate. Do not truncate a row, extend a
+section or silently accept a timing just to make it fit.
+
+REVIEW ROUTE
+1. Choose Prime or MM_1 and listen against its own audio.
+2. Start with flags, then repeated phrases and vocal/event hotspots. Preview uses
+   the reported range, selected lead-in and a 0.35-second tail. Seek sets the exact
+   reported start without playing. Continue listening removes the preview stop.
+   Starting one track pauses the other.
+3. Compare report 02 anchors against report 03 full lines. Prime report 04 remains
+   a separate follow-up; earlier and revised events are not silently merged.
+   MM_1 follow-up 04 is a bounded extract of 56 lines up to source line 80.
+   The completed report 03 remains its primary full-line map.
+4. Check repeated whisper occurrences, CJ!, DOCTOR?, long compound source lines,
+   overlaps and transitions against the actual audio.
+5. Add a note identifying the cut, source line/event, what you heard, proposed
+   onset/ending or occurrence distinction. Export JSON for separate review.
+   The page never auto-accepts or grades timing or writes into project records.
+
+SOURCE STRUCTURE
+Literal [ VERSE 2] whitespace and repeated [BRIDGE] headings remain unchanged.
+MM_1 lines 20–23 (introductory Lisan passage) lack a separate source header and stay
+inside its literal Chorus span. Final refrains contain unheaded closing text;
+audible coda boundaries still need listening.
+
+REPORTS
+source_map.json — common source/hash pointers; independent timebases.
+execution_record.json — preserved analysis workflow and completed report sources.
+google_content_preflight_20261013.json — saved Google content preflight.
+prime/ and mm_1/ each contain:
+  source_line_manifest.json — exact canonical text mapping.
+  provisional_timed_lyrics.json — exact text plus provisional reported timings;
+    containment-flagged derived times remain null.
+  full_map_validation.json — static coverage/bounds/reconciliation checks.
+  provider_anchor_audit.json — static audit of earlier anchor claims.
+  ai_studio_return_02.json — corrected sections/anchors.
+  ai_studio_return_03.json — completed primary full-line provider report.
+prime/ai_studio_return_04.json — separate follow-up response.
+mm_1/bounded_followup_04.extracted.json — bounded follow-up extract.
+mm_1/ai_studio_full_map_proof.png — saved provider full-map screenshot.
+Failed/in-progress snapshots remain historical evidence, not completed maps.
+
+LOCAL NOTES
+Browser storage is convenient, not a repository handoff or backup. Export before
+leaving, then place the JSON in the agreed handoff or give it to Nova for review.
+Export carries source/report hashes and timestamps_accepted:false. Playing audio
+or exporting notes does not establish approved timing, lanes or lip sync.
+
+CANONICAL HASHES
+Prime audio: 477627e4db431ba0ef8cf226b13745f3cdcc32050d88b8f0fc1f7aba3e45e154
+Prime lyrics: 5303adca22ea91cebe00efc9c62c2f8949631865b3265a0c615c06b4f11e605c
+MM_1 audio: 6c563b7938e066bd5b55ff7c7f736f7a7c0d52950ce48efc8b7098a07f95fade
+MM_1 lyrics: ce57412c88e3aa44f4d55b811cee4140e33035a2694b9da7587a03f775188c8f

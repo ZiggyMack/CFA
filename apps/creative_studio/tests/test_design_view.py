@@ -13,9 +13,9 @@ from design_view import build_design_model, cast_browse_groups, model_asset_ids
 from library_helpers import effective_reviews
 
 CATALOG = APP.parents[1] / "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js"
-# Reconciled 2026-10-28: handoff stages and saved reviews refreshed;
-# media, scoped BOM, outfit, tattoo, mouth-coverage and archive records unchanged.
-CATALOG_HASH = "067f1c621cbf092211cc48f0c78315b7ab3ab17e743655c6f47d7bcd4ed26e4e"
+# Reconciled 2026-10-29: two received Grok videos have a Videos and Chewy home;
+# source bytes, saved reviews, scoped BOM and intake evidence are unchanged.
+CATALOG_HASH = "e618ffe66c570adf7b2e25a986f9efbb55a0e47afd3716d40dd14ec3f6c890f2"
 
 
 def walk(node):

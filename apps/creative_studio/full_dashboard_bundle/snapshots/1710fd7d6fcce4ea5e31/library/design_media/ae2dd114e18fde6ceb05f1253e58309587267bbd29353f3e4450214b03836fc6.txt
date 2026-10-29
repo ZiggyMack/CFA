@@ -1,0 +1,39 @@
+PROMPT CARD HD-01  |  Hon Dolo (main) - pinstripe look
+Kit: NOVA-IMG-BENCH-20261009  |  Block: HON DOLO  |  CALIBRATION TEST
+Status flag: calibration
+
+RULES: fresh chat / new session for this test in each tool. Upload the images below IN THIS ORDER, then paste the PROMPT block verbatim (identical for Nano Banana and ChatGPT). Max 2 rerolls (3 attempts total). If refused, copy the refusal text verbatim into LEDGER and do NOT rephrase.
+
+UPLOAD IN ORDER (from refs/HD-01/):
+  image 1: 01_HD-LOCK-FACE.jpg   - identity lock (face, tattoos, piercings, teeth)
+  image 2: 02_HD-LOCK-FACE_face-neck-crop.png   - close crop: cheek text, neck blaster, piercings, teeth
+  image 3: 03_HD-PINSTRIPE_outfit-scene-ref.jpg   - outfit + setting ONLY (its grill/tattoo drift is NOT canon)
+  image 4: 04_PROP-HD-HIP_holster-char-left.png   - hip blaster + tooled holster, character-left / viewer-right
+  image 5: 05_TATTOO-HD-NECK-BLASTER_stencil.png   - neck blaster tattoo design (panel #3 of recovered sheet)
+DO NOT UPLOAD (context for scoring only): CTX_HD-BLASTER-SHEET_recovered-original_6-options.jpg
+
+SAVE AS: RETURNS/A_NANOBANANA/HD-01_NANOBANANA_a1.png  and  RETURNS/B_CHATGPT/HD-01_CHATGPT_a1.png  (a2, a3 for rerolls)
+COMPARE AGAINST: BASELINES/HD-01_GROKBOT.jpg, BASELINES/HD-01_GROKBOT_B.jpg
+
+==================== PROMPT (copy everything between the lines) ====================
+Generate one new image using the 5 attached reference images (numbered in upload order).
+
+IDENTITY + LOCKS (from images 1 and 2; these override anything in the outfit reference):
+- Same man as images 1-2, exact face. Original fictional character, NOT a celebrity or any real person. Messy dark curly hair, light stubble, warm brown eyes, olive skin.
+- Face tattoo text, small black serif lettering, spelled exactly:
+  "eye" on his RIGHT cheek (character-right = VIEWER-LEFT), under the eye.
+  "know" on his LEFT cheek (character-left = VIEWER-RIGHT), under the eye.
+- Neck tattoo: small blaster pistol with a smoke curl from the muzzle (image 5 design) on the LEFT side of his neck (character-left = VIEWER-RIGHT). Nothing on the other side of the neck.
+- Eyebrow: one single shaved vertical slit (notch) in his LEFT eyebrow (character-left = VIEWER-RIGHT), no metal in the brow.
+- Teeth: gold caps on the two UPPER CANINES only (short, not fangs); all other upper teeth natural white; a SILVER grill on the lower teeth.
+- Piercings: two small silver hoops in his RIGHT nostril (character-right = VIEWER-LEFT); two silver rings in the bottom lip; a silver hoop in his LEFT ear (character-left = VIEWER-RIGHT); a small black stud in his RIGHT ear (character-right = VIEWER-LEFT).
+- Chest: covered by the outfit in this shot (his chest disc-ship tattoo stays hidden; do not move it elsewhere). Do not add other chest, hand or face ink.
+- Hip prop: compact silver sci-fi blaster pistol, grip up, in a brown tooled-leather holster on his LEFT hip (character-left = VIEWER-RIGHT when he faces camera), belt loop + thigh tie-down strap (image 4). Nothing on the right hip.
+
+OUTFIT: navy pinstripe three-piece suit (jacket, waistcoat, trousers), white shirt, dark patterned tie with gold tie bar, gold pocket square, gold watch; jacket open so the belt and hip holster show.
+SCENE: penthouse office at night, floor-to-ceiling windows with a FICTIONAL city skyline (no real landmarks), dark marble desk, brass desk lamp. He stands leaning against the desk, relaxed confident smile showing the teeth. Three-quarter shot from head to mid-thigh, 16:9 landscape, cinematic photoreal.
+
+Sides: 'character-left/right' means the character's own left/right; 'viewer-left/right' means as seen in the image when he faces the camera. Keep every listed feature on the stated side - do not mirror the image.
+
+AVOID: celebrity likeness; mirrored/flipped tattoos or piercings; full gold grill or long fangs; extra face/neck/hand tattoos; misspelled or extra tattoo words; holster on his right hip; text, logos or watermarks in the scene; real-city landmarks.
+====================================================================================

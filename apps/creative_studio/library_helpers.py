@@ -28,7 +28,14 @@ REVIEW_METADATA_FIELDS = {
     "componentSelection", "directUserClarification", "creativeLane", "validationEvidence", "multiverseSelection",
     "shotPlanClearEvidence", "shotPlanUpdatedAt", "fieldUpdatedAt",
 }
-DESTINATIONS = ("undecided", "Gemini", "Flow", "Grok", "ComfyUI")
+DESTINATIONS = ("undecided", "Gemini", "Flow", "Grok", "grok_video", "ComfyUI")
+DESTINATION_LABELS = {"undecided": "Undecided", "Grok": "Grok stills", "grok_video": "Grok video"}
+
+
+def destination_label(destination: str) -> str:
+    return DESTINATION_LABELS.get(destination, destination)
+
+
 MISSION_PROVIDERS = ("Grok", "Gemini", "Flow", "Panhandler Nova")
 MISSION_STATUSES = {"ready", "needs_input", "planned", "in_progress", "done"}
 VISUAL_KINDS = {"image", "video", "gif"}
@@ -369,7 +376,7 @@ def normalize_plan(value: Any) -> dict[str, Any] | None:
         raise ValueError("A shot plan must be an object or null.")
     destinations = value.get("destinations", ["undecided"])
     if not isinstance(destinations, list) or any(d not in DESTINATIONS for d in destinations):
-        raise ValueError("Choose Gemini, Flow, Grok, ComfyUI, or undecided for a shot plan.")
+        raise ValueError("Choose Gemini, Flow, Grok stills, Grok video, ComfyUI, or undecided for a shot plan.")
     destinations = [d for d in DESTINATIONS if d in destinations and d != "undecided"] or ["undecided"]
     idea, prompt = value.get("idea", ""), value.get("prompt", "")
     if not isinstance(idea, str) or not isinstance(prompt, str):
@@ -639,14 +646,14 @@ def handoff_payload(assets: list[dict], reviews: dict[str, dict], project: str, 
 
 
 def handoff_text(payload: dict) -> str:
-    lines = ["CFA shot handoff", f"Project: {payload['project']} | Destination: {payload['destination']}",
+    lines = ["CFA shot handoff", f"Project: {payload['project']} | Destination: {destination_label(payload['destination'])}",
              "Status: planned; not sent or generated", payload["attachmentReminder"], ""]
     for item in payload["items"]:
         plan = item["shotPlan"]
         lines.extend([f"Reference: {item.get('filename')} | {item['id']}",
                       f"Source SHA256: {item.get('sha256') or 'unavailable'}", f"Path: {item.get('path')}",
                       f"Role: {item.get('role')} | Review: {item.get('reviewStatus') or 'unmarked'}",
-                      f"Destinations: {', '.join(plan['destinations'])}", f"Review note: {item.get('note', '')}",
+                      f"Destinations: {', '.join(map(destination_label, plan['destinations']))}", f"Review note: {item.get('note', '')}",
                       f"Shot idea: {plan['idea']}", f"Prompt draft: {plan['prompt']}", ""])
     return "\n".join(lines)
 
