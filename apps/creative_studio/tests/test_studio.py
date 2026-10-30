@@ -361,6 +361,32 @@ class StudioAppTest(unittest.TestCase):
         finally:
             path.write_bytes(original)
 
+    def test_hot_redeploy_replaces_stale_dependency_registry_without_mutating_it(self):
+        registry_path = self.app_dir / "studio_dependencies.py"
+        stale = types.ModuleType("studio_dependencies")
+        stale.__file__ = str(registry_path)
+        source = registry_path.read_text(encoding="utf-8")
+        exec(compile(source.replace('"collaborator_review_storage"', '"old_storage_placeholder_xx"'),
+                     str(registry_path), "exec"), stale.__dict__)
+        previous = sys.modules.get("studio_dependencies")
+        sys.modules["studio_dependencies"] = stale
+        try:
+            with self.assertRaisesRegex(ValueError, "Unknown Studio dependency"):
+                stale.current_module("collaborator_review_storage")
+            app = self.app(library=False)
+            self.assertFalse(app.exception)
+            current = sys.modules["studio_dependencies"]
+            self.assertIsNot(current, stale)
+            self.assertIn("collaborator_review_storage", current._MODULES)
+            self.assertNotIn("collaborator_review_storage", stale._MODULES)
+            self.assertEqual(app.session_state.studio_reviews["hon-00"]["status"], "needs_fixes")
+            self.assertEqual(app.session_state.studio_reviews["hon-01"]["status"], "remove")
+        finally:
+            if previous is None:
+                sys.modules.pop("studio_dependencies", None)
+            else:
+                sys.modules["studio_dependencies"] = previous
+
     def test_corner_supplement_navigation_preserves_base_browsing_and_reviews(self):
         path = self.app_dir / "library" / "mission_control.json"
         base = json.loads((path.parent / "catalog.json").read_text(encoding="utf-8"))

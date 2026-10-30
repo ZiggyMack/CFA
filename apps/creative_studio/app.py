@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import html
+import hashlib
+import importlib.util
 import json
 import mimetypes
 import sys
@@ -15,6 +17,26 @@ import streamlit as st
 APP_DIR = Path(__file__).resolve().parent
 if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
+
+
+def _current_dependency_registry():
+    """Refresh the registry itself when a warm server receives new source."""
+    path = APP_DIR / "studio_dependencies.py"
+    source = path.read_bytes()
+    digest = hashlib.sha256(str(path.resolve()).encode() + b"\0" + source).hexdigest()
+    key = "_cfa_studio_registry_" + digest
+    module = sys.modules.get(key)
+    if module is None:
+        spec = importlib.util.spec_from_file_location(key, path)
+        module = importlib.util.module_from_spec(spec)
+        exec(compile(source, str(path), "exec"), module.__dict__)
+        sys.modules[key] = module
+    # Replace the import alias, never reload an older session's module in place.
+    sys.modules["studio_dependencies"] = module
+    return module
+
+
+_current_dependency_registry()
 from studio_dependencies import (
     DESTINATIONS, OUTPUT_KINDS, EXPORT_FORMAT, MISSION_PROVIDERS, STORYBOARD_STAGES, VISUAL_KINDS, basket_payload, basket_zip, destination_label, output_kind_label,
     collaborator_sections, document_tree, effective_reviews, export_allowed, handoff_payload, handoff_text,

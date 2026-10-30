@@ -1,4 +1,6 @@
 """Current source bytes win over warm Python module and bytecode caches."""
+import ast
+import hashlib
 import importlib.util
 import os
 from pathlib import Path
@@ -20,6 +22,7 @@ class StudioDependencyTest(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.directory = Path(self.temp.name)
         (self.directory / "storyboard_takes.py").write_text("VERSION = 1\n", encoding="utf-8")
+        (self.directory / "collaborator_review.py").write_text("VERSION = 1\n", encoding="utf-8")
         spec = importlib.util.spec_from_file_location("studio_dependency_test_loader", APP_DIR / "studio_dependencies.py")
         self.loader = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(self.loader)
@@ -58,6 +61,7 @@ class StudioDependencyTest(unittest.TestCase):
         other.mkdir()
         (other / source.name).write_bytes(source.read_bytes())
         (other / "storyboard_takes.py").write_bytes((self.directory / "storyboard_takes.py").read_bytes())
+        (other / "collaborator_review.py").write_bytes((self.directory / "collaborator_review.py").read_bytes())
         with patch.object(self.loader, "APP_DIR", other):
             second = self.loader.current_module("library_helpers")
         self.assertIsNot(first, second)
@@ -114,6 +118,46 @@ class StudioDependencyTest(unittest.TestCase):
         (self.directory / "storyboard_takes.py").write_text("VERSION = 2\n", encoding="utf-8")
         for name, module in before.items():
             self.assertIsNot(module, self.loader.current_module(name))
+
+    def test_registry_bootstrap_refreshes_warm_alias_and_unchanged_children(self):
+        tree = ast.parse((APP_DIR / "app.py").read_text(encoding="utf-8"))
+        function = next(node for node in tree.body if isinstance(node, ast.FunctionDef)
+                        and node.name == "_current_dependency_registry")
+        namespace = {"APP_DIR": self.directory, "hashlib": hashlib,
+                     "importlib": __import__("importlib"), "sys": sys}
+        exec(compile(ast.Module(body=[function], type_ignores=[]), "app-bootstrap", "exec"), namespace)
+        bootstrap = namespace["_current_dependency_registry"]
+        registry = self.directory / "studio_dependencies.py"
+        current_source = (APP_DIR / registry.name).read_text(encoding="utf-8")
+        registry.write_text(current_source.replace('"collaborator_review_storage"', '"old_storage_placeholder_xx"'), encoding="utf-8")
+        stamp = registry.stat().st_mtime_ns
+        py_compile.compile(str(registry), doraise=True)
+        (self.directory / "library_helpers.py").write_text("VALUE = 1\n", encoding="utf-8")
+        (self.directory / "mission_view.py").write_text(
+            "from studio_dependencies import current_module\n"
+            "def storage(): return current_module('collaborator_review_storage').VALUE\n", encoding="utf-8")
+        (self.directory / "collaborator_review_storage.py").write_text("VALUE = 9\n", encoding="utf-8")
+        with patch.dict(sys.modules):
+            old = bootstrap()
+            old_view = old.current_module("mission_view")
+            with self.assertRaisesRegex(ValueError, "Unknown Studio dependency"):
+                old_view.storage()
+            registry.write_text(current_source, encoding="utf-8")
+            os.utime(registry, ns=(stamp, stamp))
+            new = bootstrap()
+            new_view = new.current_module("mission_view")
+            self.assertIs(sys.modules["studio_dependencies"], new)
+            self.assertIs(bootstrap(), new)
+            self.assertIsNot(new, old)
+            self.assertIsNot(new_view, old_view)
+            self.assertEqual(new_view.storage(), 9)
+            self.assertNotIn("collaborator_review_storage", old._MODULES)
+            with self.assertRaisesRegex(ValueError, "Unknown Studio dependency"):
+                old_view.storage()
+            registry.write_text("raise RuntimeError('partial deployment')\n", encoding="utf-8")
+            with self.assertRaisesRegex(RuntimeError, "partial deployment"):
+                bootstrap()
+            self.assertIs(sys.modules["studio_dependencies"], new)
 
 
 if __name__ == "__main__":

@@ -7,6 +7,7 @@ import sys
 from threading import RLock
 
 APP_DIR = Path(__file__).resolve().parent
+_REGISTRY_SOURCE = Path(__file__).read_bytes()
 _MODULES = {"library_helpers", "mission_view", "design_view", "story_view", "review_intake_view", "source_foundation", "storyboard_takes", "collaborator_review", "collaborator_review_storage"}
 _LOAD_LOCK = RLock()
 
@@ -17,7 +18,9 @@ def current_module(name: str):
         raise ValueError("Unknown Studio dependency")
     path = APP_DIR / (name + ".py")
     source = path.read_bytes()
-    identity = str(path.resolve()).encode() + b"\0" + source
+    # Views import functions from this registry; a registry update must also
+    # refresh otherwise unchanged children that captured the previous version.
+    identity = str(path.resolve()).encode() + b"\0" + source + b"\0" + _REGISTRY_SOURCE
     if name in {"mission_view", "design_view", "story_view", "review_intake_view"}:
         identity += b"\0" + (APP_DIR / "library_helpers.py").read_bytes()
     if name == "story_view":
