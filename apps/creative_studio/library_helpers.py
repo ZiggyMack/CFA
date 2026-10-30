@@ -30,10 +30,16 @@ REVIEW_METADATA_FIELDS = {
 }
 DESTINATIONS = ("undecided", "Gemini", "Flow", "Grok", "grok_video", "ComfyUI")
 DESTINATION_LABELS = {"undecided": "Undecided", "Grok": "Grok stills", "grok_video": "Grok video"}
+OUTPUT_KINDS = ("unspecified", "image", "video")
+OUTPUT_KIND_LABELS = {"unspecified": "Not specified", "image": "Still image", "video": "Video clip"}
 
 
 def destination_label(destination: str) -> str:
     return DESTINATION_LABELS.get(destination, destination)
+
+
+def output_kind_label(kind: str | None) -> str:
+    return OUTPUT_KIND_LABELS.get(kind, OUTPUT_KIND_LABELS["unspecified"])
 
 
 MISSION_PROVIDERS = ("Grok", "Gemini", "Flow", "Panhandler Nova")
@@ -427,8 +433,14 @@ def normalize_plan(value: Any) -> dict[str, Any] | None:
     idea, prompt = value.get("idea", ""), value.get("prompt", "")
     if not isinstance(idea, str) or not isinstance(prompt, str):
         raise ValueError("Shot ideas and prompts must be text.")
+    output_kind = value.get("outputKind", "unspecified")
+    if output_kind not in OUTPUT_KINDS:
+        raise ValueError("Choose image, video, or unspecified for a shot plan's output kind.")
     status = "requested_bounded_test" if value.get("status") == "requested_bounded_test" else "planned"
-    return {"status": status, "destinations": destinations, "idea": idea[:20000], "prompt": prompt[:40000]}
+    plan = {"status": status, "destinations": destinations, "idea": idea[:20000], "prompt": prompt[:40000]}
+    if "outputKind" in value:
+        plan["outputKind"] = output_kind
+    return plan
 
 
 def normalize_cast_use(value: Any) -> dict | None:
@@ -815,6 +827,7 @@ def handoff_text(payload: dict) -> str:
                       f"Source SHA256: {item.get('sha256') or 'unavailable'}", f"Path: {item.get('path')}",
                       f"Role: {item.get('role')} | Review: {item.get('reviewStatus') or 'unmarked'}",
                       f"Destinations: {', '.join(map(destination_label, plan['destinations']))}", f"Review note: {item.get('note', '')}",
+                      f"Output kind: {output_kind_label(plan.get('outputKind'))}",
                       f"Shot idea: {plan['idea']}", f"Prompt draft: {plan['prompt']}", ""])
     return "\n".join(lines)
 
@@ -864,10 +877,12 @@ def mission_tasks(value: Any) -> list[dict]:
         if not all(isinstance(item.get(key), str) for key in ("title", "summary", "nextAction")):
             continue
         task = {key: item[key] for key in ("id", "provider", "project", "title", "status", "summary", "nextAction")}
+        task["direction"] = item.get("direction") if item.get("direction") in ("inbound", "outbound", "internal") else "internal"
+        task["workKind"] = item.get("workKind") if item.get("workKind") in ("image_new", "image_repair", "video", "planning") else "planning"
         task["missing"] = [s for s in item.get("missing", []) if isinstance(s, str)] if isinstance(item.get("missing", []), list) else []
         for key in ("enablers", "deliverables", "previewAssetIDs", "variantAssetIDs"):
             task[key] = [s for s in item.get(key, []) if isinstance(s, str)] if isinstance(item.get(key), list) else []
-        for key in ("priority", "statusLabel", "missingLabel", "laterReview"):
+        for key in ("priority", "statusLabel", "missingLabel", "laterReview", "groupingBasis"):
             if isinstance(item.get(key), str):
                 task[key] = item[key]
         if gate := mission_review_gate(item.get("reviewGate")):
@@ -1019,7 +1034,8 @@ def mission_task_progress(task: dict, assets: list[dict], reviews: dict) -> dict
         pending = [a["id"] for a in visible if reviews.get(a["id"], {}).get("status") not in REVIEW_STATUSES]
         fixes = sum(reviews.get(a["id"], {}).get("status") == "needs_fixes" for a in visible)
         task.update(title=f"Review outfit gun variants · {len(pending)} unreviewed" if pending else "Outfit gun variant review",
-                    status="needs_input" if pending else "in_progress" if fixes else "done",
+                    status="needs_input" if pending else "in_progress",
+                    statusLabel="Needs your input" if pending else "Review recorded · team follow-up",
                     summary=f"{len(received)} distinct gun variants across {len({a['outfitAlbumID'] for a in received})} outfits. {len(visible)} visible; {len(received)-len(visible)} hidden by removal or archive choices. {len(pending)} unreviewed; {fixes} need fixes. Gun approval is separate from character corrections.",
                     nextAction="Review the remaining variants for outfit and character preservation." if pending else "The recorded decisions are saved; character and other recorded fixes remain separate follow-up work.",
                     missing=[], previewAssetIDs=pending,

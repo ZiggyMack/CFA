@@ -268,11 +268,12 @@ class StudioAppTest(unittest.TestCase):
         from PIL import Image
         from streamlit.testing.v1 import AppTest
         cls.AppTest = AppTest
+        cls.previous_dependencies = sys.modules.get("studio_dependencies")
         cache = APP_DIR.parents[1] / ".cache"
         cache.mkdir(exist_ok=True)
         cls.temp = tempfile.TemporaryDirectory(prefix="studio-test-", dir=cache)
         cls.app_dir = Path(cls.temp.name)
-        for name in ("app.py", "library_helpers.py", "mission_view.py", "studio_dependencies.py"):
+        for name in ("app.py", "library_helpers.py", "mission_view.py", "studio_dependencies.py", "storyboard_takes.py"):
             shutil.copy2(APP_DIR / name, cls.app_dir / name)
         library = cls.app_dir / "library"
         library.mkdir()
@@ -326,6 +327,11 @@ class StudioAppTest(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
+        if cls.previous_dependencies is None:
+            sys.modules.pop("studio_dependencies", None)
+        else:
+            sys.modules["studio_dependencies"] = cls.previous_dependencies
+        sys.path[:] = [entry for entry in sys.path if entry != str(cls.app_dir)]
         cls.temp.cleanup()
 
     def app(self, library=True):
@@ -351,6 +357,12 @@ class StudioAppTest(unittest.TestCase):
             app = self.app(library=False)
             self.assertFalse(app.exception)
             self.assertTrue(any("Current Corner task" in e.label for e in app.expander))
+            self.assertTrue(app.get("imgs"))
+            reviews_before = json.dumps(app.session_state["studio_reviews"], sort_keys=True)
+            app.button(key="corner-reference:corner:linked:0:0").click().run()
+            self.assertEqual(app.session_state["studio_mission_selected"], "corner-only")
+            self.assertEqual(json.dumps(app.session_state["studio_reviews"], sort_keys=True), reviews_before)
+            app.button(key="corner-selected-back").click().run()
             app.button(key="mission-collection:corner:0").click().run()
             app.button(key="corner-collection:corner-only").click().run()
             next(b for b in app.button if b.label == "← Back to the collection").click().run()
@@ -448,6 +460,7 @@ class StudioAppTest(unittest.TestCase):
         self.assertIsNone(app.session_state["studio_reviews"]["hon-00"]["status"])
         self.assertEqual(app.text_area(key="asset-note:hon-00").value, "Keep this outfit only.")
         app.multiselect(key="plan-destinations:hon-00").set_value(["Flow", "Grok"])
+        app.selectbox(key="plan-outputKind:hon-00").select("video")
         app.text_area(key="plan-idea:hon-00").input("Board the ship at night")
         app.text_area(key="plan-prompt:hon-00").input("Keep this coat; fix tattoos using LOCK-FACE")
         next(b for b in app.button if b.label == "Save shot plan").click().run()
@@ -455,6 +468,7 @@ class StudioAppTest(unittest.TestCase):
         plan = app.session_state["studio_reviews"]["hon-00"]["shotPlan"]
         self.assertEqual(plan["destinations"], ["Flow", "Grok"])
         self.assertEqual(plan["status"], "planned")
+        self.assertEqual(plan["outputKind"], "video")
         app.button(key="nav:Shot plans").click().run()
         self.assertEqual(len([b for b in app.button if (b.key or "").startswith("open:")]), 2)
         next(s for s in app.selectbox if s.label == "Handoff destination").select("Flow").run()
@@ -622,7 +636,7 @@ class StudioAppTest(unittest.TestCase):
         app.selectbox(key="workspace-provider").select("Flow").run()
         self.assertFalse(app.exception)
         self.assertTrue(any("Prepare Lisan motion" in heading.value for heading in app.subheader))
-        self.assertTrue(any("Flow" == heading.value for heading in app.subheader))
+        self.assertTrue(any("Flow" == heading.value.split(" · ", 1)[0] for heading in app.subheader))
 
     def test_detail_explorer_story_filter_nested_docs_and_back_button(self):
         app = self.app()

@@ -1,0 +1,9 @@
+# All maker outputs PRELIMINARY until V_2 passes. V_2 SCOPED check, HD-EXP-301 v002e (post-cap save authorised by Chief), 20261021T162632Z. Scope: fix box x534-545 y612-645 + diff v002d->v002e outside the box. Rules: TEAM-RULES v012 9dc5bf82 + v013 0136dace + v014 be9cd49a; FAIL = visible at 1x or 4x.
+# FILES: v002e /workspace/hon-dolo-lock-turnaround-outfits/HD-EXP-301-denim-shearling-side_v002e.jpg a8a9d718 | v002d 4f97f2dc | original HD-EXP-301-denim-shearling-side.jpg dfe06213 | context round-2 return 5fa096c3 | Z_4 crop HD-EXP-301_v002d_v002e_4x_fixbox.jpg (not needed; own crops in _crops)
+check	result	measured	note
+3 dark ticks (537-541,627) (535-539,635-637) (537-539,642)	PASS	gone: y627 x537-541 L 19,20,24,24,28 (v002d 15,19,14,8,12); y635-637 x535-539 L 10-25 smooth (v002d 6-40 broken); y642 x537-539 18,20,27 (orig 17,12,16). No ticks at 1x/4x/plain 6x	-
+hard edge / pale band x534-535 y612-640	PASS	soft gradient back: y630 x533-537 = 6,8,10,12,14 (orig 6,8,10,13,9; v002d 5,39,33,31,34); y612 3,7,7,10 (orig 3,6,8,11); no pale band at 4x/6x	-
+4 shirt px (534,612)(534,631)(534,633)(534,634)	PASS	vs original max diff 3/2/1/2 (0 >12)	clothing original
+Z_4 faint right-ray trace x540-544 y631-640	ADVISORY	no luminance dip along the old ray line (e.g. y635 x541-543 = 27,32,31 vs 28/21 beside); invisible at 1x and 4x; at most a barely-there diagonal at plain 6x, faint under autocontrast	final-round rule: 6x-only = ADVISORY
+diff v002d->v002e outside box	PASS	0 px >12 outside x534-545 y612-645 (max 6, re-encode); changes >12 only inside the box (130 px, bbox x534-544 y612-641)	-
+VERDICT	PASS-ADVISORY	301 closes as v002e	advisory: faint ray trace x540-544 y631-640, 6x-only

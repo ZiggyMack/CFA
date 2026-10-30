@@ -16,7 +16,7 @@ APP_DIR = Path(__file__).resolve().parent
 if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
 from studio_dependencies import (
-    DESTINATIONS, EXPORT_FORMAT, MISSION_PROVIDERS, STORYBOARD_STAGES, VISUAL_KINDS, basket_payload, basket_zip, destination_label,
+    DESTINATIONS, OUTPUT_KINDS, EXPORT_FORMAT, MISSION_PROVIDERS, STORYBOARD_STAGES, VISUAL_KINDS, basket_payload, basket_zip, destination_label, output_kind_label,
     collaborator_sections, document_tree, effective_reviews, export_allowed, handoff_payload, handoff_text,
     layout_video_assets, media_path, mission_tasks, mission_review_data, normalize_plan, ordered_assets, production_workflows,
     read_basket, read_review, review_payload, storyboard_stage, storyboard_themes, storyboard_window, sweep_payload,
@@ -454,6 +454,7 @@ def export_intent(key: str) -> str:
 
 def save_shot_plan(asset_id: str) -> None:
     plan = normalize_plan({"destinations": st.session_state[f"plan-destinations:{asset_id}"],
+                           "outputKind": st.session_state.get(f"plan-outputKind:{asset_id}", "unspecified"),
                            "idea": st.session_state[f"plan-idea:{asset_id}"],
                            "prompt": st.session_state[f"plan-prompt:{asset_id}"]})
     set_review_field(asset_id, "shotPlan", plan)
@@ -463,7 +464,7 @@ def save_shot_plan(asset_id: str) -> None:
 
 def remove_shot_plan(asset_id: str) -> None:
     set_review_field(asset_id, "shotPlan", None)
-    for field in ("destinations", "idea", "prompt"):
+    for field in ("destinations", "outputKind", "idea", "prompt"):
         st.session_state.pop(f"plan-{field}:{asset_id}", None)
 
 
@@ -613,19 +614,20 @@ def render_review_controls(asset: dict, data: dict | None = None) -> None:
     plan = decision.get("shotPlan")
     with st.expander("Plan a shot", expanded=False):
         st.caption("Save a draft for Gemini, Flow, Grok stills, Grok video, or ComfyUI. This does not send a request or generate media.")
-        defaults = plan or {"destinations": ["undecided"], "idea": "", "prompt": ""}
-        for field in ("destinations", "idea", "prompt"):
+        defaults = {"destinations": ["undecided"], "outputKind": "unspecified", "idea": "", "prompt": "", **(plan or {})}
+        for field in ("destinations", "outputKind", "idea", "prompt"):
             key = f"plan-{field}:{asset_id}"
             if key not in st.session_state:
                 st.session_state[key] = defaults[field]
         with st.form(f"shot-plan:{asset_id}"):
+            st.selectbox("Output kind", OUTPUT_KINDS, format_func=output_kind_label, key=f"plan-outputKind:{asset_id}")
             st.multiselect("Destination", DESTINATIONS, format_func=destination_label, key=f"plan-destinations:{asset_id}")
             st.text_area("Shot idea", key=f"plan-idea:{asset_id}", height=100,
                          placeholder="What should happen in this shot? What must stay the same?")
             st.text_area("Prompt draft", key=f"plan-prompt:{asset_id}", height=150)
             st.form_submit_button("Save shot plan", on_click=save_shot_plan, args=(asset_id,), width="stretch")
         if plan:
-            st.caption("Planned for " + ", ".join(map(destination_label, plan["destinations"])) + " · not sent")
+            st.caption(output_kind_label(plan.get("outputKind")) + " · Planned for " + ", ".join(map(destination_label, plan["destinations"])) + " · not sent")
             st.button("Remove shot plan", key=f"remove-plan:{asset_id}", on_click=remove_shot_plan, args=(asset_id,))
     render_collaborator_controls(asset)
     with st.expander("Archive", expanded=False):
@@ -795,7 +797,7 @@ def render_card(asset: dict, context: str = "card") -> None:
         if decision.get("status"):
             st.caption(STATUS_LABELS[decision["status"]])
         if decision.get("shotPlan"):
-            st.caption("Shot planned · " + ", ".join(map(destination_label, decision["shotPlan"]["destinations"])))
+            st.caption(output_kind_label(decision["shotPlan"].get("outputKind")) + " · Shot planned · " + ", ".join(map(destination_label, decision["shotPlan"]["destinations"])))
         if decision.get("note"):
             st.write(decision["note"])
         if asset.get("kind") == "video":
@@ -1153,7 +1155,7 @@ def render_favorites(data: dict, project: str) -> None:
                 st.session_state.studio_favorites = set(st.session_state.studio_favorites) | accepted
                 st.session_state.studio_review_overrides = overrides
                 for asset_id in reviews:
-                    for prefix in ("asset-note", "plan-destinations", "plan-idea", "plan-prompt", "asset-stage", "likenessRating", "sceneQualityRating"):
+                    for prefix in ("asset-note", "plan-destinations", "plan-outputKind", "plan-idea", "plan-prompt", "asset-stage", "likenessRating", "sceneQualityRating"):
                         st.session_state.pop(f"{prefix}:{asset_id}", None)
                 st.session_state.studio_import_message = f"Merged {len(accepted)} favorites and {len(reviews)} review records, plus {len(basket)} basket references. Skipped {skipped + basket_skipped} unmatched or invalid references."
                 st.rerun()
@@ -1203,9 +1205,15 @@ def render_shot_plans(data: dict, project: str) -> None:
     intent = export_intent(f"shot-intent:{project}")
     destination = st.selectbox("Handoff destination", ("all", *DESTINATIONS),
                                format_func=lambda d: "All destinations" if d == "all" else destination_label(d))
+    output_kind = st.selectbox("Output kind", ("all", *OUTPUT_KINDS),
+                               format_func=lambda kind: "All output kinds" if kind == "all" else output_kind_label(kind),
+                               key=f"shot-output-kind:{project}")
     query = st.text_input("Find a shot plan", key=f"shot-search:{project}")
     reviews = st.session_state.studio_reviews
     payload = handoff_payload(data["assets"], reviews, project, destination, intent)
+    if output_kind != "all":
+        payload["items"] = [item for item in payload["items"]
+                            if item["shotPlan"].get("outputKind", "unspecified") == output_kind]
     terms = query.casefold().split()
     if terms:
         payload["items"] = [item for item in payload["items"]
@@ -1215,15 +1223,20 @@ def render_shot_plans(data: dict, project: str) -> None:
     st.info(payload["attachmentReminder"])
     st.caption("Prime exports exclude Multiverse, removal flags, and archived entries. Multiverse creative ingredients includes variants intentionally; removals and archives stay excluded.")
     txt_col, json_col = st.columns(2)
-    filename = f"cfa-shot-handoff-{project}-{destination}"
+    filename = f"cfa-shot-handoff-{project}-{destination}-{output_kind}"
     with txt_col:
         st.download_button("Export handoff TXT", handoff_text(payload), file_name=filename + ".txt", mime="text/plain", disabled=not ids, width="stretch")
     with json_col:
         st.download_button("Export handoff JSON", json.dumps(payload, ensure_ascii=False, indent=2),
                            file_name=filename + ".json", mime="application/json", disabled=not ids, width="stretch")
-    st.caption("Exports contain only the project, destination, and search results shown here. Use the complete review export to restore your session later.")
+    st.caption("Exports contain only the project, destination, output kind, and search results shown here. Use the complete review export to restore your session later.")
     results = [(asset, album) for asset, album in ordered_assets(data["assets"], data["albums"], project) if asset["id"] in ids]
-    render_grid(results, f"shot:{project}:{destination}:{query}")
+    for kind in ("image", "video", "unspecified"):
+        group = [(asset, album) for asset, album in results
+                 if reviews[asset["id"]]["shotPlan"].get("outputKind", "unspecified") == kind]
+        if group:
+            st.subheader(output_kind_label(kind))
+            render_grid(group, f"shot:{project}:{destination}:{kind}:{query}")
 
 
 def open_mission_reference(asset: dict) -> None:
@@ -1417,6 +1430,11 @@ def main() -> None:
         else:
             render_library(data, project, storyboard=True)
     elif view in DESIGN_VIEWS:
+        if view == "Archive":
+            from studio_dependencies import current_module
+            current_module("mission_view").render_corner(
+                mission_data, LIBRARY_DIR, open_mission_reference, render_selected, document_download,
+                navigate, lambda: None, review_data=review_data, archived=True)
         render_design_workspace(data, project, view)
     elif view in ("Videos", "Inspiration"):
         render_library(data, project, fixed_category=view.lower())
