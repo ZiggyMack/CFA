@@ -400,6 +400,12 @@ class StudioAppTest(unittest.TestCase):
             self.assertFalse(deep.exception)
             self.assertEqual(deep.session_state.studio_project, "criminal_mind")
             self.assertEqual(deep.session_state.studio_view, "Casa Baldadoon")
+            # Reusing a mounted Project widget must respect a changed deep link too.
+            app.query_params.update(project="criminal_mind", view="project_home")
+            app.run()
+            self.assertFalse(app.exception)
+            self.assertEqual(app.session_state.studio_project, "criminal_mind")
+            self.assertEqual(app.selectbox(key="studio_project").value, "criminal_mind")
         finally:
             path.write_bytes(original)
 
@@ -428,6 +434,74 @@ class StudioAppTest(unittest.TestCase):
                 sys.modules.pop("studio_dependencies", None)
             else:
                 sys.modules["studio_dependencies"] = previous
+
+    def test_late_registry_alias_replacement_cannot_break_new_controller_route(self):
+        """Reproduce a warm alias replacement after bootstrap but before main imports."""
+        path = self.app_dir / "app.py"
+        original = path.read_text(encoding="utf-8")
+        hook = '''    import types
+    obsolete = types.ModuleType("studio_dependencies")
+    def stale_current_module(name):
+        if name in {"controller_routing", "project_intake_view"}:
+            raise ValueError("Unknown Studio dependency")
+        return _studio_dependencies.current_module(name)
+    obsolete.current_module = stale_current_module
+    obsolete.__getattr__ = lambda name: getattr(_studio_dependencies, name)
+    sys.modules["studio_dependencies"] = obsolete
+    return data
+'''
+        poisoned = original.replace("    return data\n", hook, 1)
+        try:
+            # This single late import was the live failing path.
+            vulnerable = poisoned.replace("    # Streamlit resolves the declaring frame", "    from studio_dependencies import current_module\n    # Streamlit resolves the declaring frame", 1)
+            path.write_text(vulnerable, encoding="utf-8")
+            broken = self.AppTest.from_file(str(path), default_timeout=45).run()
+            self.assertTrue(any("Unknown Studio dependency" in str(error.message) for error in broken.exception))
+            path.write_text(poisoned, encoding="utf-8")
+            fixed = self.AppTest.from_file(str(path), default_timeout=45).run()
+            self.assertFalse(fixed.exception)
+            self.assertEqual(fixed.session_state.studio_view, "Ziggy’s Corner")
+            self.assertEqual(fixed.session_state.studio_reviews["hon-00"]["note"], "Keep this outfit only.")
+        finally:
+            path.write_text(original, encoding="utf-8")
+
+    def test_browser_backup_early_reruns_preserve_deep_link_project_selection(self):
+        catalog = self.app_dir / "library" / "catalog.json"
+        original = catalog.read_bytes()
+        storage = self.app_dir / "collaborator_review_storage.py"
+        old_storage = storage.read_bytes()
+        data = json.loads(original)
+        data["projects"].append({"id": "criminal_mind", "name": "Baldadoon", "subtitle": "The Criminal Mind",
+            "controllerID": "baldadoon", "landing": {"title": "The Criminal Mind", "sourceBlocks": []}})
+        try:
+            catalog.write_text(json.dumps(data), encoding="utf-8")
+            storage.write_text('''import streamlit as st
+def sync(component):
+    step = st.session_state.get("fixture_storage_step", 0)
+    st.session_state.fixture_storage_step = step + 1
+    if step in (1, 2):
+        st.rerun()
+''', encoding="utf-8")
+            app = self.AppTest.from_file(str(self.app_dir / "app.py"), default_timeout=45)
+            app.query_params.update(project="criminal_mind", view="casa_baldadoon")
+            app.run()
+            self.assertFalse(app.exception)
+            self.assertEqual(app.selectbox(key="studio_project").value, "criminal_mind")
+            app.run()  # Browser loaded/saved events rerun before the Project widget mounts.
+            self.assertFalse(app.exception)
+            self.assertGreaterEqual(app.session_state.fixture_storage_step, 4)
+            self.assertEqual(app.session_state.studio_view, "Casa Baldadoon")
+            self.assertEqual(app.session_state.studio_project, "criminal_mind")
+            self.assertEqual(app.selectbox(key="studio_project").value, "criminal_mind")
+            app.button(key="nav:Ziggy’s Corner").click().run()
+            app.session_state.fixture_storage_step = 1
+            app.run()
+            self.assertFalse(app.exception)
+            self.assertEqual(app.session_state.studio_view, "Ziggy’s Corner")
+            self.assertEqual(app.selectbox(key="studio_project").value, "hon")
+        finally:
+            catalog.write_bytes(original)
+            storage.write_bytes(old_storage)
 
     def test_component_registration_survives_removed_hashed_module_in_inspect_cache(self):
         from streamlit.components.v1.component_registry import _get_module_name

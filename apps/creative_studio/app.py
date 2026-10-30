@@ -37,15 +37,19 @@ def _current_dependency_registry():
     return module
 
 
-_current_dependency_registry()
-from studio_dependencies import (
-    DESTINATIONS, OUTPUT_KINDS, EXPORT_FORMAT, MISSION_PROVIDERS, STORYBOARD_STAGES, VISUAL_KINDS, basket_payload, basket_zip, destination_label, output_kind_label,
-    collaborator_sections, document_tree, effective_reviews, export_allowed, handoff_payload, handoff_text,
-    layout_video_assets, media_path, mission_tasks, mission_review_data, normalize_plan, ordered_assets, production_workflows,
-    read_basket, read_review, review_payload, storyboard_stage, storyboard_themes, storyboard_window, sweep_payload,
-    effective_design_data, normal_visible, approved_multiverse, merge_review_overrides, review_provenance, validated_asset_aliases,
-    navigation_reference_count, navigation_storyboard_shot_count, mission_pending_requests,
-)
+_studio_dependencies = _current_dependency_registry()
+current_module = _studio_dependencies.current_module
+# Keep this script's imports attached to the registry whose bytes it validated.
+# Another warm session can replace the process-wide import alias at any time.
+for _helper_name in (
+    "DESTINATIONS", "OUTPUT_KINDS", "EXPORT_FORMAT", "MISSION_PROVIDERS", "STORYBOARD_STAGES", "VISUAL_KINDS", "basket_payload", "basket_zip", "destination_label", "output_kind_label",
+    "collaborator_sections", "document_tree", "effective_reviews", "export_allowed", "handoff_payload", "handoff_text",
+    "layout_video_assets", "media_path", "mission_tasks", "mission_review_data", "normalize_plan", "ordered_assets", "production_workflows",
+    "read_basket", "read_review", "review_payload", "storyboard_stage", "storyboard_themes", "storyboard_window", "sweep_payload",
+    "effective_design_data", "normal_visible", "approved_multiverse", "merge_review_overrides", "review_provenance", "validated_asset_aliases",
+    "navigation_reference_count", "navigation_storyboard_shot_count", "mission_pending_requests", "cast_use_state",
+):
+    globals()[_helper_name] = getattr(_studio_dependencies, _helper_name)
 
 LIBRARY_DIR = APP_DIR / "library"
 PAGE_SIZE = 24
@@ -222,13 +226,13 @@ def navigate(view: str) -> None:
     st.session_state.pop("studio_human_task_context", None)
     if view in (CORNER, CASA):
         data = st.session_state.get("studio_controller_data", {})
-        from studio_dependencies import current_module
         routing = current_module("controller_routing")
         owner = "baldadoon" if view == CASA else "ziggy"
         owned = [p["id"] for p in data.get("projects", []) if routing.project_controller(data, p["id"]) == owner]
         if owned and st.session_state.get("studio_project") not in owned:
             st.session_state.studio_project = owned[0]
     if "studio_project" in st.session_state:
+        st.session_state.studio_project_selection = st.session_state.studio_project
         st.query_params["project"] = st.session_state.studio_project
         st.query_params["view"] = {CORNER: "mission_control", CASA: "casa_baldadoon", "Project home": "project_home"}.get(view, view)
         st.session_state.studio_route_seen = (st.query_params.get("project"), st.query_params.get("view"))
@@ -258,6 +262,7 @@ def clear_project_selection() -> None:
 def select_asset(asset_id: str, project: str | None = None) -> None:
     if project is not None:
         st.session_state.studio_project = project
+        st.session_state.studio_project_selection = project
     st.session_state.studio_selected = asset_id
 
 
@@ -462,7 +467,6 @@ def set_review_field(asset_id: str, field: str, value) -> bool:
     attribution = {}
     data = st.session_state.get("studio_controller_data")
     if data:
-        from studio_dependencies import current_module
         routing = current_module("controller_routing")
         asset = next((a for a in st.session_state.get("studio_export_assets", []) if a["id"] == asset_id), None)
         if not asset:
@@ -579,7 +583,6 @@ def render_collaborator_controls(asset: dict) -> None:
 
 
 def cast_control_state(asset: dict, data: dict) -> dict:
-    from studio_dependencies import cast_use_state
     reviews = dict(st.session_state.studio_reviews)
     reviews[asset['id']] = {**reviews.get(asset['id'], {}), **st.session_state.studio_review_overrides.get(asset['id'], {})}
     return cast_use_state(data, asset, reviews)
@@ -661,7 +664,6 @@ def render_cast_controls(asset: dict, data: dict) -> None:
 def render_human_review_identity(asset: dict, data: dict | None = None) -> None:
     asset_id = asset["id"]
     if data is not None:
-        from studio_dependencies import current_module
         routing = current_module("controller_routing")
         owner = routing.project_controller(data, asset["project"])
         people = routing.controllers(data)
@@ -870,7 +872,6 @@ def render_selected(asset: dict, intake: dict | None = None, data: dict | None =
             st.markdown("**What to look for**")
             st.write(asset["note"])
         if intake:
-            from studio_dependencies import current_module
             current_module("review_intake_view").render_asset_evidence(intake, asset)
         with st.expander("Reference details"):
             st.write(f"Reference: {asset['id']}")
@@ -1026,7 +1027,6 @@ def render_library(data: dict, project: str, storyboard: bool = False, fixed_cat
 
 
 def render_design_workspace(data: dict, project: str, view: str) -> None:
-    from studio_dependencies import current_module
     comfy = view == "Comfy swap targets"
     query = st.text_input("Find a Comfy result or target" if comfy else "Find a reference", key=f"design-search:{project}:{view}",
                           placeholder="Search results, targets, guides…" if comfy else "Search names, details, outfits…", on_change=clear_selection)
@@ -1358,7 +1358,6 @@ def open_mission_reference(asset: dict) -> None:
 
 
 def render_mission_control(data: dict, review_data: dict | None = None) -> None:
-    from studio_dependencies import current_module
     render_corner = current_module("mission_view").render_corner
     st.button("← Back to library", key="mission-back", on_click=back_to_library)
     controller = "baldadoon" if st.session_state.studio_view == CASA else "ziggy"
@@ -1429,6 +1428,8 @@ def render_export_basket(data: dict) -> None:
 def main() -> None:
     apply_theme()
     init_state()
+    if "studio_project_selection" in st.session_state and "studio_project" in st.session_state:
+        st.session_state.studio_project_selection = st.session_state.studio_project
     catalog_path = LIBRARY_DIR / "design_catalog.json"
     if not catalog_path.is_file():
         catalog_path = LIBRARY_DIR / "catalog.json"
@@ -1479,7 +1480,6 @@ def main() -> None:
     st.session_state.studio_notes = {key: value.get("note", "") for key, value in st.session_state.studio_reviews.items()}
     st.session_state.studio_export_assets = review_data["assets"]
     st.session_state.studio_controller_data = {**data, "missionControl": mission_data.get("missionControl", data.get("missionControl", {}))}
-    from studio_dependencies import current_module
     # Streamlit resolves the declaring frame through inspect's filename cache.
     # This stable entrypoint avoids stale names from source-hashed helper modules.
     reply_storage = declare_component("cfa_collaborator_review_storage",
@@ -1492,14 +1492,22 @@ def main() -> None:
     if not projects:
         st.info("No projects are included in this library yet.")
         return
+    saved_project = st.session_state.get("studio_project_selection")
+    if saved_project not in projects:
+        # First render (including an older warm session) reapplies its deep link.
+        st.session_state.pop("studio_route_seen", None)
     if st.session_state.get("studio_project") not in projects:
-        st.session_state.studio_project = next(iter(projects))
+        st.session_state.studio_project = saved_project if saved_project in projects else next(iter(projects))
     current_module("controller_routing").apply_route(st.session_state, st.query_params, data)
+    # Browser-backup events can rerun before the Project widget mounts. Streamlit
+    # then removes widget state, so keep the selected project in durable state too.
+    st.session_state.studio_project_selection = st.session_state.studio_project
     with st.sidebar:
         st.markdown("## CFA\n### Creative Studio")
         st.caption("A place to look, compare, and create.")
         project = st.selectbox("Project", list(projects), format_func=lambda key: projects[key]["name"],
                                key="studio_project", on_change=clear_project_selection)
+        st.session_state.studio_project_selection = project
         st.caption(projects[project].get("subtitle", ""))
         export_review_button("sidebar")
         browse = (*(("Project home",) if projects[project].get("landing") else ()), "Library", "Working references", "Outfits", "Tattoos & piercings", "Supporting cast", "Storyboard", "Videos", "Comfy swap targets")
@@ -1542,7 +1550,6 @@ def main() -> None:
         if selected:
             render_selected(selected, data.get("reviewIntake"), data)
         else:
-            from studio_dependencies import current_module
             current_module("review_intake_view").render_intake(data, project, LIBRARY_DIR, select_asset,
                                                               reviews=st.session_state.studio_reviews)
         return
@@ -1557,14 +1564,12 @@ def main() -> None:
         render_library(data, project)
     elif view == "Storyboard":
         if data.get("storyboardStories"):
-            from studio_dependencies import current_module
             current_module("story_view").render_stories(data, project, LIBRARY_DIR, render_grid, select_asset, document_download,
                                                        reviews=st.session_state.studio_reviews)
         else:
             render_library(data, project, storyboard=True)
     elif view in DESIGN_VIEWS:
         if view == "Archive":
-            from studio_dependencies import current_module
             current_module("mission_view").render_corner(
                 mission_data, LIBRARY_DIR, open_mission_reference, render_selected, document_download,
                 navigate, lambda: None, review_data=review_data, archived=True,

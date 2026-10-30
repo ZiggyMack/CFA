@@ -1,6 +1,7 @@
 """Load each deployed Studio module version without stale process-wide imports."""
 
 import hashlib
+import builtins
 import importlib.util
 from pathlib import Path
 import sys
@@ -10,6 +11,27 @@ APP_DIR = Path(__file__).resolve().parent
 _REGISTRY_SOURCE = Path(__file__).read_bytes()
 _MODULES = {"library_helpers", "mission_view", "design_view", "story_view", "review_intake_view", "source_foundation", "storyboard_takes", "collaborator_review", "collaborator_review_storage", "controller_routing", "project_intake_view"}
 _LOAD_LOCK = RLock()
+
+
+class _BoundRegistry:
+    """Each source snapshot imports its own registry, not a shared mutable alias."""
+    __name__ = "studio_dependencies"
+
+    def __getattr__(self, name):
+        if name == "__path__":
+            raise AttributeError(name)
+        if name in globals():
+            return globals()[name]
+        return getattr(current_module("library_helpers"), name)
+
+
+_BOUND_REGISTRY = _BoundRegistry()
+
+
+def _bound_import(name, globals=None, locals=None, fromlist=(), level=0):
+    if name == "studio_dependencies" and level == 0:
+        return _BOUND_REGISTRY
+    return builtins.__import__(name, globals, locals, fromlist, level)
 
 
 def current_module(name: str):
@@ -38,6 +60,7 @@ def current_module(name: str):
             return sys.modules[key]
         spec = importlib.util.spec_from_file_location(key, path)
         module = importlib.util.module_from_spec(spec)
+        module.__dict__["__builtins__"] = {**vars(builtins), "__import__": _bound_import}
         # Execute the bytes we hashed. Timestamp-based bytecode can also be stale
         # during an in-place deployment; don't reload shared module dictionaries.
         exec(compile(source, str(path), "exec"), module.__dict__)

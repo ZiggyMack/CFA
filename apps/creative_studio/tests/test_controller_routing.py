@@ -98,6 +98,8 @@ class HumanRoutingTest(unittest.TestCase):
         tree = ast.parse((APP / "app.py").read_text(encoding="utf8"))
         nodes = [n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "set_review_field"]
         scope = {"st": SimpleNamespace(session_state=state), "datetime": datetime, "timezone": timezone, "REVIEW_EDITABLE_FIELDS": ("status", "note")}
+        from studio_dependencies import current_module
+        scope["current_module"] = current_module
         exec(compile(ast.Module(body=nodes, type_ignores=[]), str(APP / "app.py"), "exec"), scope)
         scope["set_review_field"](ASSET["id"], "status", "keep")
         self.assertFalse(state.studio_review_overrides)

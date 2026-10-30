@@ -161,6 +161,27 @@ class StudioDependencyTest(unittest.TestCase):
                 bootstrap()
             self.assertIs(sys.modules["studio_dependencies"], new)
 
+    def test_child_imports_stay_bound_after_another_session_replaces_the_alias(self):
+        import types
+        stale = types.ModuleType("studio_dependencies")
+        def obsolete(name):
+            raise ValueError("Unknown Studio dependency")
+        stale.current_module = obsolete
+        (self.directory / "library_helpers.py").write_text("VALUE = 17\n", encoding="utf-8")
+        (self.directory / "project_intake_view.py").write_text(
+            "from studio_dependencies import current_module, VALUE\n"
+            "import math\n"
+            "def route():\n"
+            "    from studio_dependencies import current_module as deferred\n"
+            "    return current_module('controller_routing').VERSION, deferred('controller_routing').VERSION, VALUE, math.sqrt(4)\n",
+            encoding="utf-8")
+        with patch.dict(sys.modules, {"studio_dependencies": stale}):
+            view = self.loader.current_module("project_intake_view")
+            self.assertEqual(view.route(), (1, 1, 17, 2))
+            self.assertIs(sys.modules["studio_dependencies"], stale)
+            with self.assertRaisesRegex(ValueError, "Unknown Studio dependency"):
+                stale.current_module("controller_routing")
+
 
 if __name__ == "__main__":
     unittest.main()
