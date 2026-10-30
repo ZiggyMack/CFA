@@ -1,0 +1,20 @@
+NOVA-IMG-BENCH-20261009 - START HERE (stills only, no video)
+Built 2026-10-09 by Grok Bot for Nova / Ziggy. All rows needs_user_review. Nothing approved. No outside-tool results included.
+
+1. Read PLAN.md (or PLAN.pdf) - goal, contenders, rules, run order.
+2. For each test in run order (HD-01, HD-02, HD-03 calibrate -> HD-04 -> LAG-01 -> BOSS-001..010 -> PROBE-03, 02, 01):
+   - open PROMPTS/<TEST-ID>_PROMPT.txt
+   - new chat in the tool; upload refs/<TEST-ID>/01_..., 02_..., ... in order (never the CTX_ files)
+   - paste the PROMPT block; save output to RETURNS/A_NANOBANANA/ or RETURNS/B_CHATGPT/ as <TEST-ID>_<TOOL>_a<N>.png
+   - log the attempt in LEDGER.xlsx (dropdowns) or LEDGER.csv; refusals verbatim
+3. Score with SCORING_GUIDE.md. Compare with COMPARE/COMPARE.html (open in Chrome/Firefox from inside this folder)
+   or run: python3 COMPARE/build_compare_sheets.py  (needs Pillow) -> COMPARE/sheets/*.jpg
+4. Send LEDGER + RETURNS back to Ziggy.
+
+Folders: refs/ (exact reference copies + refs_manifest.csv with original path + sha256), PROMPTS/, BASELINES/ (Grok Bot renders + manifest),
+RETURNS/ (empty drop folders), COMPARE/ (html + sheet script + tests.json).
+Tests: 18  (HD-01, HD-02, HD-03, HD-04, LAG-01, BOSS-001, BOSS-002, BOSS-003, BOSS-004, BOSS-005, BOSS-006, BOSS-007, BOSS-008, BOSS-009, BOSS-010, PROBE-01, PROBE-02, PROBE-03)
+
+ZIP PARTS: the kit ships as NOVA-IMG-BENCH-20261009_part1of2.zip (docs, prompts, ledger, compare, baselines, HD/LAG/PROBE refs)
+and NOVA-IMG-BENCH-20261009_part2of2.zip (refs/BOSS-001..010). Unzip BOTH into the same place; they merge into one
+NOVA-IMG-BENCH-20261009/ folder. KIT_MANIFEST.csv lists every file with sha256 so you can check nothing is missing.

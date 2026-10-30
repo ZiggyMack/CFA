@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "recordedAtUTC": "2026-10-09T16:05:51.581667+00:00",
+  "status": "received_and_reviewed_for_reference_roles",
+  "source": "User attachments plus live Grok conversation",
+  "files": [
+    {
+      "assetID": "HD-GRILL-PLAN-20261009",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/reference_updates/grill_and_hand_20261009/source/Hon_iced_grill_and_favorite_head_chat.jpg",
+      "sha256": "682b92ff3b11170daa194068e2a32e8ffd2a38af80c7d18f816bda8cd2d66e05",
+      "bytes": 122726,
+      "width": 589,
+      "height": 1280,
+      "role": "conversation_screenshot",
+      "sourceAttachment": "%USERPROFILE%\\.codex\\codex-remote-attachments\\01a097fb-6d17-7cb3-9773-e5c986d40b13\\00FE04BA-A8DC-4E78-AD9C-1E67E161068D\\1-Photo-1.jpg"
+    },
+    {
+      "assetID": "HD-HAND-LEIGH-PLACEMENT-20261009",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/reference_updates/grill_and_hand_20261009/source/Hon_Leigh_hearts_hand_placement.jpg",
+      "sha256": "21c8518a3deba105ffe12882af32579071b7c7b935a9716b125d9f4946e8dfb0",
+      "bytes": 25917,
+      "width": 401,
+      "height": 268,
+      "role": "on_body_reference",
+      "sourceAttachment": "%USERPROFILE%\\.codex\\codex-remote-attachments\\01a097fb-6d17-7cb3-9773-e5c986d40b13\\00FE04BA-A8DC-4E78-AD9C-1E67E161068D\\2-Photo-2.jpg"
+    },
+    {
+      "assetID": "HD-HAND-LEIGH-HEARTS-20261009",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/reference_updates/grill_and_hand_20261009/source/Princess_Leigh_hearts_artwork.jpg",
+      "sha256": "31ae502b943769928ec1ce116869217d20abf314b857c7f5fba6d108367b910d",
+      "bytes": 181202,
+      "width": 1280,
+      "height": 720,
+      "role": "standalone_design_option",
+      "sourceAttachment": "%USERPROFILE%\\.codex\\codex-remote-attachments\\01a097fb-6d17-7cb3-9773-e5c986d40b13\\00FE04BA-A8DC-4E78-AD9C-1E67E161068D\\3-Photo-3.jpg"
+    },
+    {
+      "assetID": "HD-HAND-LEIGH-SPADES-20261009",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/reference_updates/grill_and_hand_20261009/source/Princess_Leigh_spades_artwork.jpg",
+      "sha256": "f846f5ebfe65cd57f50c1e2c94c745b9db7d9b72926173dfbfe06f157f7b8cf7",
+      "bytes": 184168,
+      "width": 1280,
+      "height": 720,
+      "role": "standalone_design_option",
+      "sourceAttachment": "%USERPROFILE%\\.codex\\codex-remote-attachments\\01a097fb-6d17-7cb3-9773-e5c986d40b13\\00FE04BA-A8DC-4E78-AD9C-1E67E161068D\\4-Photo-4.jpg"
+    }
+  ],
+  "grillVariants": {
+    "external_off": {
+      "default": true,
+      "rule": "Existing four upper gold caps plus silver/chrome lower; no optional external iced accessory",
+      "preserveExisting50Mouths": true,
+      "referenceAssetIDs": [
+        "HD-MOUTH-UPDATE-20261009-01"
+      ],
+      "acceptedNewHeadAssetID": null
+    },
+    "external_iced_on": {
+      "default": false,
+      "status": "user_selected_r5_as_starting_inspiration_refinement_pending",
+      "existingScopedReferenceIDs": [
+        "HD-DROP-defe480b085f",
+        "HD-DROP-71cad143227a"
+      ],
+      "providerAnchorLabel": "r5",
+      "requestedFangLengthChange": "About 10 percent shorter relative to r5; only iced-on variant",
+      "acceptedNewHeadAssetID": null
+    }
+  },
+  "tattoo": {
+    "placementAssetID": "HD-HAND-LEIGH-PLACEMENT-20261009",
+    "artworkOptionIDs": [
+      "HD-HAND-LEIGH-HEARTS-20261009",
+      "HD-HAND-LEIGH-SPADES-20261009"
+    ],
+    "defaultCharacterSide": "character_right",
+    "sideEvidence": "Existing ledger; crop alone cannot establish unmirrored side",
+    "currentReportedMotif": "hearts",
+    "optionalAlternative": "spades",
+    "selectedFinalArtworkAssetID": null,
+    "exactPlacementArtworkRecovered": false,
+    "difference": "Body example: Leigh inside card; supplied artwork: Princess above and Leigh outside right. Raster paper drawings, no alpha/vector."
+  },
+  "existingCleanReference": {
+    "assetID": "HD-DROP-71cad143227a",
+    "relationship": "Clean catalog candidate matching screenshot composition",
+    "scope": "Favored fuller face/curls and optional iced accessory; historical detail defects retained"
+  },
+  "providerStatus": {
+    "observedVia": "Grok Chief of Staff browser conversation",
+    "url": "https://grok.com/bot/a4a75c63-1565-4448-84a2-f519f40bea15",
+    "r4": "Provider reports iced, one nostril hoop",
+    "r5": "Provider reports both nostril hoops, iced; user chose starting inspiration",
+    "r6": "Provider reports lower white, uneven gold; not base master",
+    "refinedIcedAnchor": "Provider says fangs shortened too far; awaiting user call",
+    "visualInspectionOfNewAnchors": false,
+    "newHeadFilesReceived": false
+  },
+  "approvalScope": "User retained the optional accessory and supplied tattoo alternatives. No blanket acceptance of head batches or final standalone hand transfer follows from attachment receipt.",
+  "coordinationReceiptPath": "docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/002_delivery.json",
+  "liveUserClarifications": [
+    {
+      "scope": "preserve external-off mouth work",
+      "text": "Don’t change that the old with the external go off. I don’t wanna change anything about how his teeth were coming out and you need a new set with this new girl in.",
+      "note": "Speech-transcribed grill wording retained from visible Grok user message."
+    },
+    {
+      "scope": "r5 starting inspiration only",
+      "text": "I would say it’s the starting anchor for sure you could definitely enhance the details enough to stick to it. That’s the inspiration because as a matter of fact, the length of the canines are a little long. I would reduce them by like 10%."
+    }
+  ]
+}

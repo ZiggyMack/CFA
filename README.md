@@ -1,3 +1,15 @@
+# Creative Studio
+
+A story and visual production workshop for Hon Dolo, Lisan Al Gaib and Baldadoon.
+
+[Open Creative Studio](https://algaib.streamlit.app/) to explore project libraries, storyboards, reference reviews and collaborator handoffs.
+
+## Shared repository and the original CFA system
+
+This front page prioritizes the Creative Studio deployment. The original CFA / Contextual Framework Analysis work remains in this repository; its historical Comparative Framework Audit and Interactive Console documentation follows unchanged. The creative app's public entry points and branding still need a later separation from the original analysis system. This update does not move the repository, replace that system or rewrite its history.
+
+---
+
 # CFA v5.0.0 - Interactive Console
 ## "All Named, All Priced" → "All Seen, All Passed"
 ### Epistemic Engineering Platform

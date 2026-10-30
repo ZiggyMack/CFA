@@ -64,7 +64,7 @@ REVIEW_EDITABLE_FIELDS = ("status", "note", "shotPlan", "likenessRating", "scene
                           "storyboardStage", "variant", "workingReference", "workingReferenceScope",
                           "collectionState", "multiverseSelection", "creativeReview", "castUse")
 
-st.set_page_config(page_title="Creative Studio | CFA", page_icon="🎬", layout="wide", initial_sidebar_state="auto")
+st.set_page_config(page_title="Creative Studio | Stories & Visual Production", page_icon="🎬", layout="wide", initial_sidebar_state="auto")
 
 
 def apply_theme() -> None:
