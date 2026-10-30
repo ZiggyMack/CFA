@@ -3,7 +3,9 @@
 import copy
 import hashlib
 import io
+import inspect
 import json
+import os
 import shutil
 import sys
 import tempfile
@@ -386,6 +388,56 @@ class StudioAppTest(unittest.TestCase):
                 sys.modules.pop("studio_dependencies", None)
             else:
                 sys.modules["studio_dependencies"] = previous
+
+    def test_component_registration_survives_removed_hashed_module_in_inspect_cache(self):
+        from streamlit.components.v1.component_registry import _get_module_name
+        storage_path = str(self.app_dir / "collaborator_review_storage.py")
+        stale_name = "_cfa_studio_collaborator_review_storage_removed_revision"
+        stale = types.ModuleType(stale_name)
+        stale.__file__ = storage_path
+        exec(compile("import inspect\ndef frame(): return inspect.currentframe()\n", storage_path, "exec"), stale.__dict__)
+        cached_paths = {os.path.normcase(os.path.abspath(storage_path)): stale_name,
+                        os.path.realpath(storage_path): stale_name}
+        missing = object()
+        previous_module = sys.modules.get(stale_name, missing)
+        previous_paths = {path: inspect.modulesbyfile.get(path, missing) for path in cached_paths}
+        try:
+            inspect.modulesbyfile.update(cached_paths)
+            sys.modules[stale_name] = stale
+            old_frame = stale.frame()
+            self.assertIs(inspect.getmodule(old_frame), stale)
+            del sys.modules[stale_name]  # Streamlit's watcher unloads the prior version.
+            self.assertIsNone(inspect.getmodule(old_frame))
+            with self.assertRaisesRegex(RuntimeError, "module is None"):
+                _get_module_name(old_frame)
+            app = self.app(library=False)
+            component = app.get("component_instance")[0].proto
+            self.assertEqual(component.component_name, "app.cfa_collaborator_review_storage")
+            first_id = component.id
+            reviews = copy.deepcopy(app.session_state.studio_reviews)
+            original_source = Path(storage_path).read_bytes()
+            try:
+                Path(storage_path).write_bytes(original_source + b"\n# Synthetic deployment of a new helper version.\n")
+                app.run(timeout=30)
+            finally:
+                Path(storage_path).write_bytes(original_source)
+            self.assertFalse(app.exception)
+            second = app.get("component_instance")[0].proto
+            self.assertEqual(second.component_name, component.component_name)
+            self.assertEqual(second.id, first_id)
+            self.assertEqual(app.session_state.studio_reviews, reviews)
+            self.assertEqual(inspect.modulesbyfile[os.path.normcase(os.path.abspath(storage_path))], stale_name)
+            del old_frame
+        finally:
+            if previous_module is missing:
+                sys.modules.pop(stale_name, None)
+            else:
+                sys.modules[stale_name] = previous_module
+            for path, value in previous_paths.items():
+                if value is missing:
+                    inspect.modulesbyfile.pop(path, None)
+                else:
+                    inspect.modulesbyfile[path] = value
 
     def test_corner_supplement_navigation_preserves_base_browsing_and_reviews(self):
         path = self.app_dir / "library" / "mission_control.json"

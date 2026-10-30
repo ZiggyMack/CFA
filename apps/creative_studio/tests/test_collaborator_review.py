@@ -198,16 +198,16 @@ class BrowserBackupTest(unittest.TestCase):
         state = State(studio_review_provenance={}, studio_reviews={"untouched": {"status": "keep"}})
         fake_st = SimpleNamespace(session_state=state, rerun=rerun)
         event = {"kind": "loaded", "eventID": "first:1", "token": "sha", "raw": json.dumps({pilot.TASK_ID: ready})}
-        with patch.object(storage, "st", fake_st), patch.object(storage, "declare_component", return_value=lambda **kw: event):
+        with patch.object(storage, "st", fake_st):
             with self.assertRaises(Rerun):
-                storage.sync()
+                storage.sync(lambda **kw: event)
         self.assertEqual(state.studio_review_provenance["collaboratorReviews"][pilot.TASK_ID], ready)
         self.assertEqual(state.studio_reply_storage_ack, "sha")
         self.assertEqual(state.studio_reviews, {"untouched": {"status": "keep"}})
         broken = {"kind": "loaded", "eventID": "second:1", "token": "bad", "raw": "{broken json"}
-        with patch.object(storage, "st", fake_st), patch.object(storage, "declare_component", return_value=lambda **kw: broken):
+        with patch.object(storage, "st", fake_st):
             with self.assertRaises(Rerun):
-                storage.sync()
+                storage.sync(lambda **kw: broken)
         self.assertTrue(state.studio_reply_storage_blocked)
         self.assertEqual(state.studio_reply_storage_ack, "sha")
         self.assertEqual(state.studio_review_provenance["collaboratorReviews"][pilot.TASK_ID], ready)

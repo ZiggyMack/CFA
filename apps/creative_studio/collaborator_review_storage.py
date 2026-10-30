@@ -1,15 +1,13 @@
 """Browser backup handshake for task questionnaires, independent of image reviews."""
 import json
-from pathlib import Path
 
 import streamlit as st
-from streamlit.components.v1 import declare_component
 
 
-def sync():
+def sync(component):
+    """Use the component declared by the stable app entrypoint."""
     from studio_dependencies import current_module
     pilot = current_module("collaborator_review")
-    component = declare_component("cfa_collaborator_review_storage", path=str(Path(__file__).with_suffix("")))
     provenance = st.session_state.get("studio_review_provenance", {})
     records = provenance.get("collaboratorReviews", {})
     event = component(records=records, ack=st.session_state.get("studio_reply_storage_ack"),

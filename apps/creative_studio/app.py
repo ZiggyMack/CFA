@@ -13,6 +13,7 @@ from pathlib import Path
 from uuid import uuid4
 
 import streamlit as st
+from streamlit.components.v1 import declare_component
 
 APP_DIR = Path(__file__).resolve().parent
 if str(APP_DIR) not in sys.path:
@@ -1398,7 +1399,11 @@ def main() -> None:
     st.session_state.studio_notes = {key: value.get("note", "") for key, value in st.session_state.studio_reviews.items()}
     st.session_state.studio_export_assets = review_data["assets"]
     from studio_dependencies import current_module
-    current_module("collaborator_review_storage").sync()
+    # Streamlit resolves the declaring frame through inspect's filename cache.
+    # This stable entrypoint avoids stale names from source-hashed helper modules.
+    reply_storage = declare_component("cfa_collaborator_review_storage",
+                                      path=str(APP_DIR / "collaborator_review_storage"))
+    current_module("collaborator_review_storage").sync(reply_storage)
     if message := st.session_state.pop("studio_flash", None):
         st.success(message)
     populated_projects = {a.get("project") for a in data["assets"]}
