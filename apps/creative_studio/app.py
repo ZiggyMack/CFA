@@ -193,6 +193,8 @@ def navigate(view: str) -> None:
     st.session_state.studio_selected = None
     st.session_state.pop("studio_mission_selected", None)
     st.session_state.pop("studio_mission_collection", None)
+    st.session_state.pop("studio_mission_questionnaire", None)
+    st.session_state.pop("studio_mission_task_focus", None)
 
 
 def back_to_library() -> None:
@@ -208,6 +210,8 @@ def clear_selection() -> None:
 def clear_project_selection() -> None:
     clear_selection()
     st.session_state.pop("studio_mission_collection", None)
+    st.session_state.pop("studio_mission_questionnaire", None)
+    st.session_state.pop("studio_mission_task_focus", None)
 
 
 def select_asset(asset_id: str, project: str | None = None) -> None:
@@ -711,7 +715,8 @@ def favorite_button(asset: dict, context: str = "card") -> None:
 
 
 def render_selected(asset: dict, intake: dict | None = None, data: dict | None = None) -> None:
-    st.button("← Back to the collection", on_click=clear_selection)
+    if st.session_state.get("studio_mission_questionnaire") != "grok-proof-package":
+        st.button("← Back to the collection", on_click=clear_selection)
     if st.session_state.studio_view in ("Intake verification", "intake"):
         sequence = st.session_state.get("studio_intake_sequence", [])
         if asset["id"] in sequence:
@@ -1154,6 +1159,9 @@ def render_favorites(data: dict, project: str) -> None:
                 st.session_state.pop("studio_basket_zip", None)
                 st.session_state.studio_favorites = set(st.session_state.studio_favorites) | accepted
                 st.session_state.studio_review_overrides = overrides
+                for key in list(st.session_state):
+                    if key.startswith("return-answer:") or key in {"return-direction", "return-direction-note", "return-direction-asset"}:
+                        st.session_state.pop(key, None)
                 for asset_id in reviews:
                     for prefix in ("asset-note", "plan-destinations", "plan-outputKind", "plan-idea", "plan-prompt", "asset-stage", "likenessRating", "sceneQualityRating"):
                         st.session_state.pop(f"{prefix}:{asset_id}", None)
@@ -1343,6 +1351,16 @@ def main() -> None:
     st.session_state.studio_reviews = effective_reviews(review_data["assets"], review_data.get("reviewDecisions", []), st.session_state.studio_review_overrides,
                                                        aliases=review_data.get("assetAliases", []))
     seed_review_selections(review_data)
+    if not data.get("designSnapshot"):
+        reply_seed = (str(catalog_path), catalog_path.stat().st_mtime_ns,
+                      mission_path.stat().st_mtime_ns if mission_path.is_file() else None)
+        if st.session_state.get("studio_reply_source_seed") != reply_seed:
+            provenance = st.session_state.studio_review_provenance
+            for source in (data, mission_data):
+                subset = {key: source[key] for key in ("collaboratorReviews", "collaboratorReviewBackups") if key in source}
+                provenance = review_provenance(subset, provenance, strict_takes=False)
+            st.session_state.studio_review_provenance = provenance
+            st.session_state.studio_reply_source_seed = reply_seed
     if data.get("designSnapshot"):
         identity = data["designSnapshot"].get("sourceCatalog", {}).get("sha256")
         if st.session_state.get("studio_provenance_seed") != identity:
@@ -1357,6 +1375,8 @@ def main() -> None:
         st.session_state.studio_basket = {redirect(aid) for aid in st.session_state.studio_basket}
     st.session_state.studio_notes = {key: value.get("note", "") for key, value in st.session_state.studio_reviews.items()}
     st.session_state.studio_export_assets = review_data["assets"]
+    from studio_dependencies import current_module
+    current_module("collaborator_review_storage").sync()
     if message := st.session_state.pop("studio_flash", None):
         st.success(message)
     populated_projects = {a.get("project") for a in data["assets"]}

@@ -1,0 +1,457 @@
+{
+  "format": "cfa-notebook-operating-inputs-v1",
+  "preparedDate": "2026-10-09",
+  "scope": "Local source snapshot and prompt mapping. No file listed here has been uploaded by this preparation.",
+  "caveats": [
+    "Historical winner receipt has stale inventory text; lisan_intake supersedes inventory only. notebook_setup_receipt supersedes historical delivery status; winner scope remains scene/Detailed design.",
+    "Media descriptions do not establish visual source ingestion. Select actual usable visuals before image-led work.",
+    "M02/M03 need the exact returned result and open-question record in addition to the listed background."
+  ],
+  "sources": [
+    {
+      "key": "shared_methods",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/gemini_notebooks_20261008/shared/gemini_shared_instructions.txt",
+      "sha256": "d7f5015b10a24f28cd3f9d15189e548a7236f872bc181cbdb5943b11b689857b",
+      "bytes": 5340,
+      "role": "source record; inspect current scoped decisions",
+      "remoteSourceStatus": "not_verified_by_this_preparation",
+      "snapshotHistory": [
+        {
+          "sha256": "68e40288afebabd4414e2d1235a276376f6423defbfaec89d962ebf1fb669cd0",
+          "bytes": 4174,
+          "supersededLocallyAtUTC": "2026-10-09T16:52:06.168287+00:00",
+          "remoteRevisionUnknown": true
+        }
+      ],
+      "localSnapshotAtUTC": "2026-10-09T16:52:06.168287+00:00"
+    },
+    {
+      "key": "master_role",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/gemini_notebooks_20261008/00_master/role_instructions.txt",
+      "sha256": "53321f05a8823a12a75dbb1bb31afa4651b9703bd4fee17cba0fe390a931622e",
+      "bytes": 2795,
+      "role": "source record; inspect current scoped decisions",
+      "remoteSourceStatus": "not_verified_by_this_preparation",
+      "snapshotHistory": [
+        {
+          "sha256": "17dfea75f1ab0fbc076ad5a6b92ba270a26a3cf2992f828c779ec95a6f31d22f",
+          "bytes": 2245,
+          "supersededLocallyAtUTC": "2026-10-09T16:52:06.168287+00:00",
+          "remoteRevisionUnknown": true
+        }
+      ],
+      "localSnapshotAtUTC": "2026-10-09T16:52:06.168287+00:00"
+    },
+    {
+      "key": "current_source_status",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/notebook_registry_snapshot.json",
+      "sha256": "25bc8c55fd60a9ad2c83d1d8a78469d64d87c0336a13b7471adad0755f41e4c2",
+      "bytes": 5183,
+      "role": "source record; inspect current scoped decisions",
+      "remoteSourceStatus": "not_verified_by_this_preparation"
+    },
+    {
+      "key": "current_detail_roles",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/detail_profiles.json",
+      "sha256": "faadc51bd49e875a4654051d8577e00977c3f15fa84a6040f7dbaecabe194cb5",
+      "bytes": 83862,
+      "role": "source record; inspect current scoped decisions",
+      "remoteSourceStatus": "not_verified_by_this_preparation",
+      "snapshotHistory": [
+        {
+          "sha256": "37538efb37253f9ed6ded867c9b4be138ddcf1afe4234c1c4430e5c11a44c39e",
+          "bytes": 74846,
+          "supersededLocallyAtUTC": "2026-10-09T16:52:06.168287+00:00",
+          "remoteRevisionUnknown": true
+        }
+      ],
+      "localSnapshotAtUTC": "2026-10-09T16:52:06.168287+00:00"
+    },
+    {
+      "key": "hon_story",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/shot_plan.json",
+      "sha256": "cb33bbb2480ae60229c598a5081201f76308874beba2fe449fee58d25e3b7412",
+      "bytes": 34848,
+      "role": "source record; inspect current scoped decisions",
+      "remoteSourceStatus": "not_verified_by_this_preparation"
+    },
+    {
+      "key": "hon_lyrics",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/lyrics.user.v002.txt",
+      "sha256": "291a2fb6f8a542dcdc4f87d1b4b1c29af3ce0014156a988f293843c71561bc01",
+      "bytes": 3616,
+      "role": "source record; inspect current scoped decisions",
+      "remoteSourceStatus": "not_verified_by_this_preparation"
+    },
+    {
+      "key": "hon_materials",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/visual_library/shot_materials.json",
+      "sha256": "0c3eb34132f9646f69bc59b869278ef00c12daaee42fbe293837e1c773c81cb9",
+      "bytes": 76222,
+      "role": "source record; inspect current scoped decisions",
+      "remoteSourceStatus": "not_verified_by_this_preparation",
+      "snapshotHistory": [
+        {
+          "sha256": "4bc2204d65a43c4aaa803df04128cecc31d2e1d57047cd9ff47f87b150ba78d1",
+          "bytes": 69617,
+          "supersededLocallyAtUTC": "2026-10-09T16:52:06.168287+00:00",
+          "remoteRevisionUnknown": true
+        }
+      ],
+      "localSnapshotAtUTC": "2026-10-09T16:52:06.168287+00:00"
+    },
+    {
+      "key": "hon_intake",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/START_HERE.txt",
+      "sha256": "dd10817e01ab7bd6d19c76e640c35072e7f6dcf49cba4943ba2a470a9abb2f18",
+      "bytes": 2854,
+      "role": "source record; inspect current scoped decisions",
+      "remoteSourceStatus": "not_verified_by_this_preparation"
+    },
+    {
+      "key": "hon_cash_and_prop_audit",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/hd_audit.json",
+      "sha256": "7f2c9b854f90ce2785e3e6c51088977f2d2b99c49354059760308bc9bd8cf8b6",
+      "bytes": 303648,
+      "role": "source record; inspect current scoped decisions",
+      "remoteSourceStatus": "not_verified_by_this_preparation"
+    },
+    {
+      "key": "hon_mouth_plan",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/START_HERE.txt",
+      "sha256": "78d8a5186b8562826e6c592ae2d7bc4a1d8e166703da2429f6b839bad04d919d",
+      "bytes": 11605,
+      "role": "source record; inspect current scoped decisions",
+      "remoteSourceStatus": "not_verified_by_this_preparation",
+      "snapshotHistory": [
+        {
+          "sha256": "57475caaa32a9f80504dffec54c3a7c2ba5a656b4338603152a0f55d0cb07792",
+          "bytes": 9367,
+          "supersededLocallyAtUTC": "2026-10-09T16:52:06.168287+00:00",
+          "remoteRevisionUnknown": true
+        }
+      ],
+      "localSnapshotAtUTC": "2026-10-09T16:52:06.168287+00:00"
+    },
+    {
+      "key": "lisan_direction",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/gemini_instructions.txt",
+      "sha256": "c9527f0301f1ee5e42d6aac2a0da28e2617a07c5844acd9f2c27ccda4f2a22e9",
+      "bytes": 8403,
+      "role": "source record; inspect current scoped decisions",
+      "remoteSourceStatus": "not_verified_by_this_preparation",
+      "snapshotHistory": [
+        {
+          "sha256": "e384224ef87bfe6e24e872898dd8ba5d13c7a171794331ef006c94cf567175ef",
+          "bytes": 7411,
+          "supersededLocallyAtUTC": "2026-10-09T16:52:06.168287+00:00",
+          "remoteRevisionUnknown": true
+        }
+      ],
+      "localSnapshotAtUTC": "2026-10-09T16:52:06.168287+00:00"
+    },
+    {
+      "key": "lisan_reference_roles",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/reference_map.txt",
+      "sha256": "77d10552142aece8857e682b96a6d7aa5313722b73b337c28c687a1a8ddf5035",
+      "bytes": 13108,
+      "role": "source record; inspect current scoped decisions",
+      "remoteSourceStatus": "not_verified_by_this_preparation"
+    },
+    {
+      "key": "lisan_scene_map",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/scene_map.json",
+      "sha256": "d2b31946e47c865814d41870d13802d96969dd8ac15ddd96b013af33f5298181",
+      "bytes": 51677,
+      "role": "source record; inspect current scoped decisions",
+      "remoteSourceStatus": "not_verified_by_this_preparation"
+    },
+    {
+      "key": "lisan_intake",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/receipt_summary.txt",
+      "sha256": "571d3fd1785b1c6263e000185f6e20c7d2088462476fed08c2e7f7d27ad5f74b",
+      "bytes": 6662,
+      "role": "source record; inspect current scoped decisions",
+      "remoteSourceStatus": "not_verified_by_this_preparation"
+    },
+    {
+      "key": "lisan_project",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/README.md",
+      "sha256": "ece094fbb4dd4853444a18a31276067d830ed3a89ffa9f020f0f910bbf3c523b",
+      "bytes": 7197,
+      "role": "source record; inspect current scoped decisions",
+      "remoteSourceStatus": "not_verified_by_this_preparation",
+      "snapshotHistory": [
+        {
+          "sha256": "a57e4666c715a0344cc5eee88b6eb5f4966491db97f53f0bee9bef74cfabfeff",
+          "bytes": 5959,
+          "supersededLocallyAtUTC": "2026-10-09T16:52:06.168287+00:00",
+          "remoteRevisionUnknown": true
+        }
+      ],
+      "localSnapshotAtUTC": "2026-10-09T16:52:06.168287+00:00"
+    },
+    {
+      "key": "lisan_scene_winner",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/gemini_notebooks_20261008/02_lisan_al_gaib/NOTEBOOK0_WINNER_RECEIPT.txt",
+      "sha256": "9245756efb04d145e9ed35110e55d7d062103ba2b2a019abe2528298b64f63e6",
+      "bytes": 2082,
+      "role": "source record; inspect current scoped decisions",
+      "remoteSourceStatus": "not_verified_by_this_preparation"
+    },
+    {
+      "key": "notebook_setup_receipt",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/gemini_notebooks_20261008/setup_status.json",
+      "sha256": "ef531bc87341524d64526df8e090e7f28fa8bdbb6f47cfd7d3bfcb7121bac776",
+      "bytes": 37187,
+      "role": "source record; inspect current scoped decisions",
+      "remoteSourceStatus": "not_verified_by_this_preparation"
+    },
+    {
+      "key": "storyboard_workflow",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/shared/STORYBOARD_WORKFLOW.txt",
+      "sha256": "6ac0bf8ccba50f908b556d3423b1f84259483d09f6ae16d9505c4c70f8d8ecaa",
+      "bytes": 7030,
+      "role": "Prepared storyboard detail Source candidate; no new remote ingestion.",
+      "remoteSourceStatus": "not_uploaded_by_this_preparation",
+      "localSnapshotAtUTC": "2026-10-09T16:52:06.168287+00:00"
+    },
+    {
+      "key": "hon_storyboard_detail",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/SOURCE_UPLOAD.txt",
+      "sha256": "70b37fb5ffcf23b7f0898df5fe9ac934eb159b1cff8a7248b89732e600a75c02",
+      "bytes": 20116,
+      "role": "Prepared storyboard detail Source candidate; no new remote ingestion.",
+      "remoteSourceStatus": "not_uploaded_by_this_preparation",
+      "localSnapshotAtUTC": "2026-10-09T16:52:06.168287+00:00"
+    },
+    {
+      "key": "lisan_storyboard_detail",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/02_lisan/SOURCE_UPLOAD.txt",
+      "sha256": "c6fc9cc4c5c76e6d33de79b577cbc1b1998f0acc546c71654e1fe688506315ad",
+      "bytes": 22230,
+      "role": "Prepared storyboard detail Source candidate; no new remote ingestion.",
+      "remoteSourceStatus": "not_uploaded_by_this_preparation",
+      "localSnapshotAtUTC": "2026-10-09T16:52:06.168287+00:00"
+    },
+    {
+      "key": "master_storyboard_detail",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/00_master/SOURCE_UPLOAD.txt",
+      "sha256": "2734799bc06fd5cd44d7d6d1c9fa87110cbeea43030afcc1c788333faf6bac37",
+      "bytes": 9679,
+      "role": "Prepared storyboard detail Source candidate; no new remote ingestion.",
+      "remoteSourceStatus": "not_uploaded_by_this_preparation",
+      "localSnapshotAtUTC": "2026-10-09T16:52:06.168287+00:00"
+    }
+  ],
+  "cards": [
+    {
+      "id": "M01",
+      "promptFile": "00_MASTER_PROMPTS.txt",
+      "sourceKeys": [
+        "shared_methods",
+        "master_role",
+        "hon_story",
+        "hon_materials",
+        "hon_intake",
+        "lisan_project",
+        "lisan_intake",
+        "lisan_scene_winner"
+      ],
+      "sourceSelection": "Choose only the current topic-specific subset; supporting raw visual assets must be added separately for image-led work.",
+      "runStatus": "prepared_not_sent"
+    },
+    {
+      "id": "M02",
+      "promptFile": "00_MASTER_PROMPTS.txt",
+      "sourceKeys": [
+        "shared_methods",
+        "hon_mouth_plan",
+        "hon_cash_and_prop_audit",
+        "lisan_reference_roles",
+        "lisan_scene_winner"
+      ],
+      "sourceSelection": "Choose only the current topic-specific subset; supporting raw visual assets must be added separately for image-led work.",
+      "runStatus": "prepared_not_sent"
+    },
+    {
+      "id": "M03",
+      "promptFile": "00_MASTER_PROMPTS.txt",
+      "sourceKeys": [
+        "shared_methods",
+        "hon_mouth_plan",
+        "lisan_scene_winner"
+      ],
+      "sourceSelection": "Choose only the current topic-specific subset; supporting raw visual assets must be added separately for image-led work.",
+      "runStatus": "prepared_not_sent"
+    },
+    {
+      "id": "M04",
+      "promptFile": "00_MASTER_PROMPTS.txt",
+      "sourceKeys": [
+        "hon_story",
+        "hon_materials",
+        "hon_intake",
+        "lisan_project",
+        "lisan_intake",
+        "lisan_scene_winner"
+      ],
+      "sourceSelection": "Choose only the current topic-specific subset; supporting raw visual assets must be added separately for image-led work.",
+      "runStatus": "prepared_not_sent"
+    },
+    {
+      "id": "M05",
+      "promptFile": "00_MASTER_PROMPTS.txt",
+      "sourceKeys": [
+        "shared_methods",
+        "hon_materials",
+        "lisan_project",
+        "lisan_scene_winner"
+      ],
+      "sourceSelection": "Choose only the current topic-specific subset; supporting raw visual assets must be added separately for image-led work.",
+      "runStatus": "prepared_not_sent"
+    },
+    {
+      "id": "H01",
+      "promptFile": "01_HON_PROMPTS.txt",
+      "sourceKeys": [
+        "hon_story",
+        "hon_lyrics",
+        "current_detail_roles",
+        "hon_materials",
+        "hon_intake"
+      ],
+      "sourceSelection": "Choose only the current topic-specific subset; supporting raw visual assets must be added separately for image-led work.",
+      "runStatus": "prepared_not_sent"
+    },
+    {
+      "id": "H02",
+      "promptFile": "01_HON_PROMPTS.txt",
+      "sourceKeys": [
+        "hon_story",
+        "hon_lyrics",
+        "hon_materials",
+        "hon_mouth_plan"
+      ],
+      "sourceSelection": "Choose only the current topic-specific subset; supporting raw visual assets must be added separately for image-led work.",
+      "runStatus": "prepared_not_sent"
+    },
+    {
+      "id": "H03",
+      "promptFile": "01_HON_PROMPTS.txt",
+      "sourceKeys": [
+        "hon_story",
+        "hon_lyrics",
+        "current_detail_roles",
+        "hon_materials",
+        "hon_intake"
+      ],
+      "sourceSelection": "Choose only the current topic-specific subset; supporting raw visual assets must be added separately for image-led work.",
+      "runStatus": "prepared_not_sent"
+    },
+    {
+      "id": "H04",
+      "promptFile": "01_HON_PROMPTS.txt",
+      "sourceKeys": [
+        "hon_story",
+        "hon_lyrics",
+        "hon_materials"
+      ],
+      "sourceSelection": "Choose only the current topic-specific subset; supporting raw visual assets must be added separately for image-led work.",
+      "runStatus": "prepared_not_sent"
+    },
+    {
+      "id": "H05",
+      "promptFile": "01_HON_PROMPTS.txt",
+      "sourceKeys": [
+        "hon_story",
+        "current_detail_roles",
+        "hon_materials",
+        "hon_intake"
+      ],
+      "sourceSelection": "Choose only the current topic-specific subset; supporting raw visual assets must be added separately for image-led work.",
+      "runStatus": "prepared_not_sent"
+    },
+    {
+      "id": "L01",
+      "promptFile": "02_LISAN_PROMPTS.txt",
+      "sourceKeys": [
+        "lisan_direction",
+        "lisan_reference_roles",
+        "lisan_scene_map",
+        "lisan_intake",
+        "lisan_scene_winner"
+      ],
+      "sourceSelection": "Choose only the current topic-specific subset; supporting raw visual assets must be added separately for image-led work.",
+      "runStatus": "prepared_not_sent"
+    },
+    {
+      "id": "L02",
+      "promptFile": "02_LISAN_PROMPTS.txt",
+      "sourceKeys": [
+        "lisan_direction",
+        "lisan_reference_roles",
+        "lisan_scene_map",
+        "lisan_intake",
+        "lisan_scene_winner"
+      ],
+      "sourceSelection": "Choose only the current topic-specific subset; supporting raw visual assets must be added separately for image-led work.",
+      "runStatus": "prepared_not_sent"
+    },
+    {
+      "id": "L03",
+      "promptFile": "02_LISAN_PROMPTS.txt",
+      "sourceKeys": [
+        "lisan_direction",
+        "lisan_reference_roles",
+        "lisan_scene_map"
+      ],
+      "sourceSelection": "Choose only the current topic-specific subset; supporting raw visual assets must be added separately for image-led work.",
+      "runStatus": "prepared_not_sent"
+    },
+    {
+      "id": "L04",
+      "promptFile": "02_LISAN_PROMPTS.txt",
+      "sourceKeys": [
+        "lisan_direction",
+        "lisan_reference_roles",
+        "lisan_project",
+        "lisan_intake",
+        "lisan_scene_winner"
+      ],
+      "sourceSelection": "Choose only the current topic-specific subset; supporting raw visual assets must be added separately for image-led work.",
+      "runStatus": "prepared_not_sent"
+    },
+    {
+      "id": "H06",
+      "promptFile": "../storyboard_detail_20261009/01_hon/TASK_PROMPT.txt",
+      "sourceKeys": [
+        "storyboard_workflow",
+        "hon_storyboard_detail"
+      ],
+      "sourceSelection": "Verify actual SOURCE_UPLOAD text and project visual Sources; metadata is not visual ingestion. Master requires reviewed project returns for result synthesis.",
+      "runStatus": "prepared_not_sent"
+    },
+    {
+      "id": "L05",
+      "promptFile": "../storyboard_detail_20261009/02_lisan/TASK_PROMPT.txt",
+      "sourceKeys": [
+        "storyboard_workflow",
+        "lisan_storyboard_detail"
+      ],
+      "sourceSelection": "Verify actual SOURCE_UPLOAD text and project visual Sources; metadata is not visual ingestion. Master requires reviewed project returns for result synthesis.",
+      "runStatus": "prepared_not_sent"
+    },
+    {
+      "id": "M06",
+      "promptFile": "../storyboard_detail_20261009/00_master/TASK_PROMPT.txt",
+      "sourceKeys": [
+        "storyboard_workflow",
+        "master_storyboard_detail"
+      ],
+      "sourceSelection": "Verify actual SOURCE_UPLOAD text and project visual Sources; metadata is not visual ingestion. Master requires reviewed project returns for result synthesis.",
+      "runStatus": "prepared_not_sent"
+    }
+  ],
+  "updatedAtUTC": "2026-10-09T16:52:06.168287+00:00"
+}

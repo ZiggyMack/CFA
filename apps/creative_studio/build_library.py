@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter
+from copy import deepcopy
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from fractions import Fraction
 import hashlib
@@ -61,7 +62,7 @@ def clean_text(value: str) -> str:
 def clean_values(value):
     if isinstance(value,str): return clean_text(value)
     if isinstance(value,list): return [clean_values(x) for x in value]
-    if isinstance(value,dict): return {k:clean_values(v) for k,v in value.items()}
+    if isinstance(value,dict): return {k:deepcopy(v) if k in {'collaboratorReviews','collaboratorReviewBackups'} else clean_values(v) for k,v in value.items()}
     return value
 
 catalog_bytes = SOURCE.read_bytes()

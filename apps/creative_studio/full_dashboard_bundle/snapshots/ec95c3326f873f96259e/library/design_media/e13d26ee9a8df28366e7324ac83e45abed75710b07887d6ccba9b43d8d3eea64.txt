@@ -1,0 +1,182 @@
+{
+  "testID": "HD-01",
+  "adapterID": "CFA-HD01-four-gold-reference-reconciliation-v2",
+  "state": "needs_reference_reconciliation",
+  "preparedAtUTC": "2026-10-09T06:03:13.236626+00:00",
+  "purpose": "Selected-winner new-rendition comparison, not a pixel-preserving edit or upscale.",
+  "originalPrompt": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/ae2dd114e18f__HD-01_PROMPT.txt",
+    "sha256": "ae2dd114e18fde6ceb05f1253e58309587267bbd29353f3e4450214b03836fc6",
+    "unchanged": true
+  },
+  "outboundPrompt": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/HD01_PROMPT.txt",
+    "sha256": "123f7121fdf65c17fbda0f624ada55ce8ae3a2cdd82209cb9eefaf6e62a0b741",
+    "status": "draft_do_not_submit_until_references_reconciled"
+  },
+  "uploads": [
+    {
+      "order": 1,
+      "member": "refs/HD-01/01_HD-LOCK-FACE.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/hon-dolo-armor-swap/HD-EXP-LOCK-FACE.jpg",
+      "absolutePath": "[local path]",
+      "sha256": "ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978",
+      "assetID": "HD-DROP-ef5d59a6402e",
+      "role": "Legacy face/identity anchor; retired two-canines-only mouth. Replace with received/inspected compatible corrected primary image before submission."
+    },
+    {
+      "order": 2,
+      "member": "refs/HD-01/02_HD-LOCK-FACE_face-neck-crop.png",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/89000d0149be__02_HD-LOCK-FACE_face-neck-crop.png",
+      "absolutePath": "[local path]",
+      "sha256": "89000d0149bef4f8d846500d0e111c9bde5e03bdd3be5ad4650b074799cc20a5",
+      "assetID": null,
+      "role": "Legacy same-parent face/neck crop: lettering and piercing-placement evidence; retired teeth. Replace with crop of corrected primary image before submission."
+    },
+    {
+      "order": 3,
+      "member": "refs/HD-01/03_HD-PINSTRIPE_outfit-scene-ref.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/hon-dolo-ref-sheet-pinstripe/HD-PINSTRIPE-01-chest-up.jpg",
+      "absolutePath": "[local path]",
+      "sha256": "71cad143227a3e44bab318aa6f7f17c303bb01383b455fb17f19d6caec2e3db6",
+      "assetID": "HD-DROP-71cad143227a",
+      "role": "Pinstripe outfit and scene only; its tattoo/grill drift is not authority."
+    },
+    {
+      "order": 4,
+      "member": "refs/HD-01/04_PROP-HD-HIP_holster-char-left.png",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/41b93f64e7ea__PROP-HD-HIP_v001.png",
+      "absolutePath": "[local path]",
+      "sha256": "41b93f64e7ea7199974101575b5704ce037f019e02e507e2b70cb1b499263350",
+      "assetID": "HD-RETURN-41b93f64e7ea",
+      "role": "Hip blaster and holster on character-left; prop geometry and placement only."
+    },
+    {
+      "order": 5,
+      "member": "refs/HD-01/05_TATTOO-HD-NECK-BLASTER_stencil.png",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/c3ce2dd18e1e__ST-HD-BLASTER_sheet-c91af37e_panel3_derived-crop_flat-black-on-white.png",
+      "absolutePath": "[local path]",
+      "sha256": "c3ce2dd18e1eb940f978526e38ef56384bab23544a59d41aeaeff8672f4befe2",
+      "assetID": "HD-RETURN-c3ce2dd18e1e",
+      "role": "Recovered neck-blaster stencil, panel 3; tattoo artwork only."
+    }
+  ],
+  "contextOnly": {
+    "member": "refs/HD-01/CTX_HD-BLASTER-SHEET_recovered-original_6-options.jpg",
+    "upload": false
+  },
+  "historicalBaselines": [
+    {
+      "member": "BASELINES/HD-01_GROKBOT.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/f4da84245bd2__HD-01_GROKBOT.jpg",
+      "absolutePath": "[local path]",
+      "sha256": "f4da84245bd2ba40e3ea6ccf335f657b4f62f093a7afde68faca0c855ef51a1d",
+      "assetID": null,
+      "role": "Historical Grok asset baseline; prior attempts unknown, not a fresh matched run."
+    },
+    {
+      "member": "BASELINES/HD-01_GROKBOT_B.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/8b4faedeee99__HIP-PINSTRIPE-01_v001.jpg",
+      "absolutePath": "[local path]",
+      "sha256": "8b4faedeee99872bbf71bb8a0e9fe92e1f89e7ece775c8334b4e765ad350cfab",
+      "assetID": "HD-RETURN-8b4faedeee99",
+      "role": "Historical Grok asset baseline; prior attempts unknown, not a fresh matched run."
+    }
+  ],
+  "adapterDeltas": [
+    {
+      "field": "nostril placement",
+      "from": "two small silver hoops in his RIGHT nostril (character-right = VIEWER-LEFT)",
+      "to": "one small silver hoop in EACH nostril (two total), matching the visible anchor in images 1 and 2",
+      "evidence": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/89000d0149be__02_HD-LOCK-FACE_face-neck-crop.png",
+      "reason": "The viewed identity crop has one hoop per nostril. Scope this reference-first correction to the comparison; no global canon or raw provider prompt is changed."
+    },
+    {
+      "field": "attempt count",
+      "from": "Provider prompt card permits 3 attempts per tool.",
+      "to": "One proposed output per lane; no automatic rerolls."
+    },
+    {
+      "field": "ChatGPT model label",
+      "from": "Provider labels lane ChatGPT Images 2.5.",
+      "to": "Use the actual available image route and record runtime label. Built-in documented route is gpt-image-2, with no model selector. Do not label as 2.5."
+    },
+    {
+      "field": "Hon current dental design and lip-ring style",
+      "from": "Two gold upper canine caps only, other uppers natural; unspecific lip rings.",
+      "to": "Exactly four gold upper caps: two lateral incisors plus two SHORT canines. Two central upper incisors and all other uppers natural white; lower silver/chrome grill; two plain lower-lip hoops. Keep one hoop per nostril, no septum substitution.",
+      "evidence": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/head_library_20261009/grok_conversation_evidence.json",
+      "reason": "Later user approval supersedes the older tooth map. Source pictures/raw prompt remain unchanged; compatible corrected primary reference pair is still pending."
+    }
+  ],
+  "proposedLanes": [
+    {
+      "id": "A_NANOBANANA",
+      "destination": "Existing Google Flow project",
+      "requestedModel": "Nano Banana Pro",
+      "accountModelVerified": false,
+      "outputCount": 1,
+      "runStatus": "not_submitted"
+    },
+    {
+      "id": "B_CHATGPT",
+      "destination": "Built-in image generation",
+      "requestedModel": "Actual available route; no 2.5 claim",
+      "accountModelVerified": false,
+      "outputCount": 1,
+      "runStatus": "not_submitted"
+    }
+  ],
+  "sharedControls": {
+    "aspectRatio": "16:9",
+    "prompt": "Identical HD01_PROMPT.txt",
+    "orderedReferences": "Same five reconciled files after corrected source-pair receipt; current legacy list must not be submitted unchanged.",
+    "seed": "Unknown/not comparable across providers",
+    "rerolls": 0,
+    "finishing": "None for first comparison"
+  },
+  "successCheck": "Compare native outputs for useful material/lighting/face detail against unchanged historical baselines, while reviewing the new current design separately: four gold upper caps at lateral incisors and short canines, white central incisors/natural other uppers, lower silver/chrome grill, two plain lip hoops and original nostril placement. Preserve identity, tattoo text/side, outfit and holster. Historic baseline teeth belong to the earlier design version; no pixel-unchanged dental claim. Mark obscured detail unobserved.",
+  "recordOnRun": [
+    "actual model label/version and effective prompt",
+    "reference order and hashes",
+    "actual settings/dimensions",
+    "start/end time, credits and operator effort",
+    "output original and SHA-256",
+    "defects with crops; scoped user review"
+  ],
+  "limitations": [
+    "A new rendition changes pose/scene details; sharper imagery alone is not proof of preservation.",
+    "Historical Grok baseline was not generated under matched one-shot conditions.",
+    "No general provider ranking from one pinstripe case.",
+    "Provider still-image scoring is 0-5; keep separate from existing video 0-4 scores.",
+    "Provider failure or timeout is separate from a content refusal.",
+    "New dental design differs from the immutable old anchor/baselines. Corrected primary references must be received and inspected before submitting this adapter; head count/provider status is not receipt or acceptance."
+  ],
+  "outputs": [],
+  "scores": [],
+  "sourceScoresModified": false,
+  "uploaded": false,
+  "generationPerformed": false,
+  "adapterHistory": [
+    {
+      "adapterID": "CFA-HD01-anchor-nostrils-v1",
+      "state": "prepared_not_sent",
+      "outboundPromptSHA256": "5761c04f723bfe7451ed7e357aa2173bfdce0455ef5a520df51eaa691f4b1e1e",
+      "preparedAtUTC": "2026-10-09T06:03:13.236626+00:00"
+    }
+  ],
+  "updatedAtUTC": "2026-10-09T15:37:55.482560+00:00",
+  "referenceReadiness": {
+    "canSubmit": false,
+    "status": "awaiting_received_inspected_corrected_primary_pair",
+    "missing": [
+      "Compatible corrected primary image showing current four-gold dental rule without identity or jewelry drift.",
+      "Exact crop of that same corrected primary image with source ID, hash and crop bounds.",
+      "Reconciled identical ordered reference list for both lanes."
+    ],
+    "expectedIntakePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/head_library_20261009/expected_intake.json",
+    "correctedPrimaryAssetID": null,
+    "correctedCropAssetID": null,
+    "legacyAnchorsHaveCurrentTeeth": false
+  }
+}

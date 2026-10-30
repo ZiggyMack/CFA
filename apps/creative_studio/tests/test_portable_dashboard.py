@@ -11,6 +11,7 @@ APP = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(APP))
 from build_portable_dashboard import build
 from build_full_dashboard import read_catalog
+from collaborator_review_fixture import records as collaborator_records, backups as collaborator_backups
 
 
 def sha(raw):
@@ -26,7 +27,7 @@ class PortableDashboardTest(unittest.TestCase):
         self.source, self.design, self.output = [self.root / x for x in ('visual', 'library', 'bundle')]
         self.source.mkdir()
         self.design.mkdir()
-        for name in ('library.js', 'library.css', 'source_foundation.js', 'storyboard_takes.js'):
+        for name in ('library.js', 'library.css', 'source_foundation.js', 'storyboard_takes.js', 'collaborator_reviews.js'):
             (self.source / name).write_text('/* exact current local UI */', encoding='utf-8')
         (self.source / 'catalog.js').write_bytes(b'window.REVIEW_CATALOG={"current":true};')
         self.source_sha = 'a' * 64
@@ -91,14 +92,24 @@ class PortableDashboardTest(unittest.TestCase):
         self.assertEqual((snapshot / 'library.js').read_bytes(), (self.source / 'library.js').read_bytes())
         self.assertEqual((snapshot / 'library.css').read_bytes(), (self.source / 'library.css').read_bytes())
         self.assertEqual((snapshot / 'storyboard_takes.js').read_bytes(), (self.source / 'storyboard_takes.js').read_bytes())
+        self.assertEqual((snapshot / 'collaborator_reviews.js').read_bytes(), (self.source / 'collaborator_reviews.js').read_bytes())
         index = (snapshot / 'index.html').read_text()
         self.assertLess(index.index('src="storyboard_takes.js"'), index.index('src="library.js"'))
+        self.assertLess(index.index('src="collaborator_reviews.js"'), index.index('src="library.js"'))
         self.assertFalse((snapshot / 'library/private.txt').exists())
         self.assertFalse((snapshot / 'library/design_media/unreferenced.txt').exists())
         self.assertEqual(receipt['logicalMediaBytes'], sum(len(v) for k, v in self.media.items() if not k.endswith('unreferenced.txt')))
         self.assertEqual(self.make()[0]['buildID'], receipt['buildID'])
         self.assertIn('current.json', receipt['publicationFiles'])
         self.assertTrue(all((self.output / p).is_file() for p in receipt['publicationFiles']))
+
+    def test_collaborator_answers_and_snapshot_metadata_are_not_navigation(self):
+        self.catalog['collaboratorReviews'] = collaborator_records()
+        self.catalog['collaboratorReviewBackups'] = collaborator_backups()
+        self.write_manifest()
+        _, _, catalog = self.make()
+        self.assertEqual(catalog['collaboratorReviews'], self.catalog['collaboratorReviews'])
+        self.assertEqual(catalog['collaboratorReviewBackups'], collaborator_backups())
 
     def test_internal_links_and_visual_winners_map_are_usable_and_scoped(self):
         receipt, snapshot, catalog = self.make()

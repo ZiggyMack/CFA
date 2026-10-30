@@ -129,7 +129,19 @@ class DesignBundle(MissionBundle):
                                                     if k not in {'canonical', 'incoming'}}
                                                    for row in report['conflicts']]
             elif review_mode == 'plan_clears':
+                collaborator_reviews = None
+                collaborator_backups = None
+                if 'collaboratorReviews' in payload:
+                    from collaborator_review import merge
+                    collaborator_reviews = merge(self.catalog.get('collaboratorReviews', {}), payload['collaboratorReviews'])
+                if 'collaboratorReviewBackups' in payload:
+                    from collaborator_review import merge_backups
+                    collaborator_backups = merge_backups(self.catalog.get('collaboratorReviewBackups', []), payload['collaboratorReviewBackups'])
                 self.review_receipt = overlay_plan_clears(self.catalog, payload, sha(raw))
+                if collaborator_reviews is not None:
+                    self.catalog['collaboratorReviews'] = collaborator_reviews
+                if collaborator_backups is not None:
+                    self.catalog['collaboratorReviewBackups'] = collaborator_backups
             else:
                 raise ValueError('Unsupported review overlay mode')
 
@@ -295,7 +307,7 @@ class DesignBundle(MissionBundle):
             return [self.clean_config(x) for x in value]
         if isinstance(value, dict):
             source = self.portable_link(value) if 'href' in value else value
-            return {k: deepcopy(v) if k in {'storyboardTakes', 'storyboardTakeBackups'} else self.clean_config(v)
+            return {k: deepcopy(v) if k in {'storyboardTakes', 'storyboardTakeBackups', 'collaboratorReviews', 'collaboratorReviewBackups'} else self.clean_config(v)
                     for k, v in source.items()}
         return value
 

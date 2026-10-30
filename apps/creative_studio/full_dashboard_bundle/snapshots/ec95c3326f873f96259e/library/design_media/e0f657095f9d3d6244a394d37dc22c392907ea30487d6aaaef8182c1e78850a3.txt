@@ -1,0 +1,202 @@
+GEMINI CAST AND IMAGE REFERENCE MAP
+Updated October 8, 2026
+
+Upload this map alongside the relevant pictures. The filenames below are verified local sources, not proof you can see them in Gemini. Confirm actual attached files before using them.
+Picture numbers in Ziggy's example were placeholders. Do not claim #3, #32, #885 or any other example has been assigned. Repeated Hon Dolo entries describe the same character.
+
+HOW TO USE THIS MAP
+- Treat the user message picture numbers as illustrative examples, not actual file selections.
+- Stable reference IDs are labels in this map; source files have not been renamed.
+- A file inventoried in CFA is not proof that it has been attached to Gemini. Verify actual attachments before using it.
+- Bind upload batch ID + picture number + exact filename + reference ID explicitly. Never infer a mapping from upload order or a similar filename.
+- Do not use bare #3 across batches; use e.g. CAST-BATCH-001/P03 with its exact filename. Leave unbound fields empty until actually supplied.
+- Latest direct user corrections override older instructions. Only explicit user selection promotes a candidate to primary/approved.
+- Use only each reference's assigned role; do not merge faces, transfer one character's tattoos onto another, or restore retired details.
+- Existing video continuity is a separate brief from creating a new likeness. Do not silently replace a liked clip's face.
+- Keep rejected/superseded sources as history, excluded from active generation unless requested.
+- If a listed picture is missing or ambiguous, say which one; ask only the blocking question and proceed with independent planning.
+- Do not include every cast reference in every generation. Supply the characters and details required by that shot.
+- For the Han Solo.png group source, use the separate HD-LIKENESS-03, LEIA-LIKENESS-01 or LUKE-LIKENESS-01 crop for the intended character. The group image remains provenance, not a direct multi-face conditioning input. Exact-pixel cropping creates no design approval.
+
+HON DOLO [HON-DOLO]
+Story role: lead performer and smuggler
+Repeated Hon Dolo headings are one character with multiple reference roles, not additional identities.
+  HD-DESIGN-01 = HD-EXP-LOCK-FACE.jpg
+    USE FOR: current Grok design anchor
+    LIMIT: Current through-314 design anchor; not proof of a final accepted on-screen likeness or every hidden tattoo. Do not blend its face with other references without an explicit identity brief.
+    LOCAL SOURCE: docs/notes/explorable_world/comfy/references/hon-dolo-lock-turnaround-outfits/hon-dolo-lock-turnaround-outfits/HD-EXP-LOCK-FACE.jpg
+    GEMINI BATCH / PICTURE NUMBER: not yet bound
+  HD-FINISH-01 = HD-EXP-289.jpg
+    USE FOR: optional photographic finish
+    LIMIT: Separate soft-polish asset, not identical to LOCK-FACE. Use only for requested finish; do not replace the design anchor automatically.
+    LOCAL SOURCE: docs/notes/explorable_world/comfy/references/hon-dolo-lock-turnaround-outfits/hon-dolo-lock-turnaround-outfits/HD-EXP-289.jpg
+    GEMINI BATCH / PICTURE NUMBER: not yet bound
+  HD-LIKENESS-01 = han solo 2.png
+    USE FOR: intended likeness reference
+    LIMIT: Separate user-supplied intended Han Solo likeness source. Not a wardrobe/tattoo source or automatic request to replace the face in an existing liked video.
+    LOCAL SOURCE: docs/notes/explorable_world/comfy/references/han solo 2.png
+    GEMINI BATCH / PICTURE NUMBER: not yet bound
+  HD-LIKENESS-02 = Han Solo.png
+    USE FOR: historical group-photo source for isolated likeness crops
+    LIMIT: Retain this multi-person source for provenance. Do not use the unisolated group photo as a face-conditioning input. Use HD-LIKENESS-03 for Han on image-right, LEIA-LIKENESS-01 for Leia at center, or LUKE-LIKENESS-01 for Luke on image-left; each is a separate character reference.
+    LOCAL SOURCE: docs/notes/explorable_world/comfy/references/Han Solo.png
+    GEMINI BATCH / PICTURE NUMBER: not yet bound
+  HD-LIKENESS-03 = han_source_crop.png
+    USE FOR: Han Solo isolated likeness target for Comfy body/likeness swaps
+    LIMIT: Use the isolated Han Solo head/upper-body crop for this character's likeness only. It does not approve a generated identity, body, wardrobe, tattoos or an existing video face replacement. Original scene clothing and background are not production design instructions.
+    LOCAL SOURCE: docs/notes/explorable_world/comfy/casting/likeness_crops/han_source_crop.png
+    VERIFIED: exact source pixels; 275 x 361; source bounds and hashes in likeness_crops/manifest.json
+    STATUS: available likeness target; production design approval unchanged
+    GEMINI BATCH / PICTURE NUMBER: not yet bound
+  TO SUPPLY / SELECT: explicit final on-screen identity selection
+  TO SUPPLY / SELECT: approved full-body/wardrobe master
+  TO SUPPLY / SELECT: mapped detail originals where required
+
+CHEWBACCA [CHEWBACCA]
+Story role: MC/DJ and copilot
+Current DJ/MC studies do not establish Wookiee anatomy.
+  CHEW-STAGE-01 = CHEW-EXP-01-furry-dj.jpg
+    USE FOR: DJ booth and deck staging
+    LIMIT: Ape-like placeholder anatomy. Use decks, headphones, styling and pose only; Wookiee appearance reference is still needed.
+    LOCAL SOURCE: docs/notes/explorable_world/comfy/references/hon-dolo-stills-51-95/cast/CHEW-EXP-01-furry-dj.jpg
+    GEMINI BATCH / PICTURE NUMBER: not yet bound
+  CHEW-STAGE-02 = CHEW-EXP-02-mic.jpg
+    USE FOR: MC microphone pose
+    LIMIT: Ape-like styling candidate; not an approved Wookiee face, fur, hands or body model.
+    LOCAL SOURCE: docs/notes/explorable_world/comfy/references/hon-dolo-stills-51-95/cast/CHEW-EXP-02-mic.jpg
+    GEMINI BATCH / PICTURE NUMBER: not yet bound
+  CHEW-STAGE-03 = CHEW-EXP-03-hype.jpg
+    USE FOR: crowd-hype composition
+    LIMIT: Raised-arm staging; cropped hands, exaggerated mouth and different bandolier orientation are not continuity locks.
+    LOCAL SOURCE: docs/notes/explorable_world/comfy/references/hon-dolo-stills-51-95/cast/CHEW-EXP-03-hype.jpg
+    GEMINI BATCH / PICTURE NUMBER: not yet bound
+  CHEW-STYLE-01 = DJ-STYLE-01-human-booth.jpg
+    USE FOR: human DJ styling and equipment layout
+    LIMIT: Human anatomy is excluded. Still image supplies no timed DJ performance.
+    LOCAL SOURCE: docs/notes/explorable_world/comfy/references/hon-dolo-stills-51-95/cast/DJ-STYLE-01-human-booth.jpg
+    GEMINI BATCH / PICTURE NUMBER: not yet bound
+  TO SUPPLY / SELECT: CHEW-IDENTITY-01: intended Wookiee face/fur/body/hands/scale
+  TO SUPPLY / SELECT: copilot reference if needed
+
+BOUNTY HUNTER 1 [BH-01]
+Story role: reserved distinct bounty hunter
+No identity or image-number assignment inferred. Boba is separate until assigned.
+  TO SUPPLY / SELECT: BH01-IDENTITY-01
+  TO SUPPLY / SELECT: BH01-BODY-01
+  TO SUPPLY / SELECT: BH01-ARMOR-01
+
+BOUNTY HUNTER 2 [BH-02]
+Story role: reserved distinct bounty hunter
+Keep identity, armor and props separate from BH-01.
+  TO SUPPLY / SELECT: BH02-IDENTITY-01
+  TO SUPPLY / SELECT: BH02-BODY-01
+  TO SUPPLY / SELECT: BH02-ARMOR-01
+
+THICK VADER [VADER-THICK]
+Story role: user-named Vader variant; details pending
+No verified matching variant identified in the labelled cast set. Do not invent the meaning/proportions of Thick or substitute VADER-ARMOR-01 automatically.
+  TO SUPPLY / SELECT: TV-IDENTITY-01: helmet/face treatment
+  TO SUPPLY / SELECT: TV-BODY-01: intended proportions
+  TO SUPPLY / SELECT: TV-COSTUME-01
+
+DARTH VADER GENERAL CONCEPT [VADER-GENERAL]
+Story role: available armor concept; distinct from unassigned Thick Vader
+  VADER-ARMOR-01 = VADER-EXP-01-black-armor.jpg
+    USE FOR: armor/material/lighting concept
+    LIMIT: Slim/narrow-mask concept. Not evidence for Thick Vader body proportions; do not assign to that variant unless user selects it for a specific detail.
+    LOCAL SOURCE: docs/notes/explorable_world/comfy/references/hon-dolo-stills-51-95/cast/VADER-EXP-01-black-armor.jpg
+    GEMINI BATCH / PICTURE NUMBER: not yet bound
+  TO SUPPLY / SELECT: final helmet and body selection
+
+BOBA FETT [BOBA-FETT]
+Story role: available supporting-cast concept
+  BOBA-ARMOR-01 = BOBA-EXP-01-olive-armor.jpg
+    USE FOR: weathered olive armor concept
+    LIMIT: Helmet geometry/rangefinder unresolved. Available Boba concept; not automatically Bounty Hunter 1 or 2.
+    LOCAL SOURCE: docs/notes/explorable_world/comfy/references/hon-dolo-stills-51-95/cast/BOBA-EXP-01-olive-armor.jpg
+    GEMINI BATCH / PICTURE NUMBER: not yet bound
+  TO SUPPLY / SELECT: final helmet/body selection
+  TO SUPPLY / SELECT: whether assigned to either numbered bounty hunter
+
+PRINCESS LEIA [LEIA]
+Story role: co-star and emotional center
+  LEIA-STYLE-01 = LEIA-EXP-01-ivory-coat.jpg
+    USE FOR: ivory wardrobe and hair styling
+    LIMIT: Style candidate, not final approved facial identity or full-body anatomy.
+    LOCAL SOURCE: docs/notes/explorable_world/comfy/references/hon-dolo-stills-51-95/cast/LEIA-EXP-01-ivory-coat.jpg
+    GEMINI BATCH / PICTURE NUMBER: not yet bound
+  LEIA-LIKENESS-01 = leia_source_crop.png
+    USE FOR: Princess Leia isolated likeness target for Comfy body/likeness swaps
+    LIMIT: Use the isolated Princess Leia head/upper-body crop for this character's likeness only. It does not approve a generated identity, body, wardrobe, tattoos or an existing video face replacement. Original scene clothing and background are not production design instructions.
+    LOCAL SOURCE: docs/notes/explorable_world/comfy/casting/likeness_crops/leia_source_crop.png
+    VERIFIED: exact source pixels; 175 x 292; source bounds and hashes in likeness_crops/manifest.json
+    STATUS: available likeness target; production design approval unchanged
+    GEMINI BATCH / PICTURE NUMBER: not yet bound
+  TO SUPPLY / SELECT: approved full-body/wardrobe reference
+  TO SUPPLY / SELECT: final generated identity acceptance
+
+LUKE SKYWALKER [LUKE]
+Story role: young pilot; separate supporting character and likeness swap target
+Separate from Hon Dolo and Leia. The isolated source crop supplies likeness only; no new production design approval.
+  LUKE-LIKENESS-01 = luke_source_crop.png
+    USE FOR: Luke Skywalker isolated likeness target for Comfy body/likeness swaps
+    LIMIT: Use the isolated Luke Skywalker head/upper-body crop for this character's likeness only. It does not approve a generated identity, body, wardrobe, tattoos or an existing video face replacement. Original scene clothing and background are not production design instructions.
+    LOCAL SOURCE: docs/notes/explorable_world/comfy/casting/likeness_crops/luke_source_crop.png
+    VERIFIED: exact source pixels; 208 x 307; source bounds and hashes in likeness_crops/manifest.json
+    STATUS: available likeness target; production design approval unchanged
+    GEMINI BATCH / PICTURE NUMBER: not yet bound
+  TO SUPPLY / SELECT: approved full-body/wardrobe reference
+  TO SUPPLY / SELECT: final generated identity acceptance
+
+JABBA THE HUTT [JABBA]
+Story role: underworld host
+  JABBA-STAGE-01 = JABBA-EXP-01-host-dais.jpg
+    USE FOR: host/dais environment and styling
+    LIMIT: Palace, gold/red velvet and host attitude. Intended Hutt proportions, arms and tail need clearer reference before motion.
+    LOCAL SOURCE: docs/notes/explorable_world/comfy/references/hon-dolo-stills-51-95/cast/JABBA-EXP-01-host-dais.jpg
+    GEMINI BATCH / PICTURE NUMBER: not yet bound
+  TO SUPPLY / SELECT: approved species proportions and complete body reference
+
+BIND EACH NEW UPLOAD
+Batch: CAST-BATCH-001
+Picture number in this batch: [fill after upload]
+Exact uploaded filename: [fill]
+Stable reference ID: [choose from above or add a new distinct ID]
+Character: [choose]
+Use only for: [identity / tattoos / grillz / wardrobe / body / pose / setting / camera]
+Status: [candidate / detail approved / primary approved / superseded]
+Do not copy: [specific unwanted details]
+
+GEMINI RECEIPT
+After upload, return a compact table: actual filename | character | reference role | approval state | missing/ambiguous details. Do not claim you inspected a file you cannot access. Resolve a critical conflict before generating.
+
+SHOT REQUEST TEMPLATE
+Characters: [character IDs]
+Appearance master: [explicitly selected reference ID]
+Detail / wardrobe / pose references: [IDs and roles]
+Action and emotional beat: [one clear beat]
+Keep: [approved features and continuity]
+Change: [the deliberate creative change]
+Audio: [visual-only / ambience / exact supplied recording and time range]
+Output: [aspect ratio, continuous shot or requested montage]
+
+Current Hon Dolo design follows the latest through-314 handoff. Older bird/Jabba/Chewie/dice/third-eye experiments are not active defaults. A favorite Gemini clip can supply motion/staging without restoring those details.
+This map does not authorize changing Gemini settings, generating a batch, renaming originals or promoting an uncertain image to an approved design.
+
+OCTOBER 7 ORGANIZED DROP FOLLOW-UP
+The new Hon Dolo review library contains 293 unique images, including 36 storyboard panels. Browse projects/hon_dolo_strictly_business/asset_review_20261007/index.html locally, choose a filename and allowed purpose, then attach that actual file to Gemini. Storyboard panels can change face, hair, tattoos and even character anatomy; use them for composition, not identity. New iced-grill and supporting-cast variants remain candidates. Existing selections above have not been silently replaced.
+The expanded Gemini video inventory has 26 assets; two desert/hooded clips remain project-unassigned. A liked scene does not approve all its visible tattoos.
+Lisan Al Gaib / Meta Mirror has its own map at projects/lisan_al_gaib/gemini/reference_map.txt. Keep the projects and audio separate.
+
+OCTOBER 8 ISOLATED LIKENESS TARGETS
+Three separately named PNGs were cropped from the unchanged Han Solo.png group source with the user's approval. Every output pixel matches its source region; no resize, enhancement or AI generation was applied. Use one character crop per intended likeness role. Crop creation and local verification do not mean Gemini has received the file or that a generated character design has been approved.
+
+
+OCTOBER 9 — COMFY LIKENESS ADDITIONS
+Three user-supplied source files are available for separate Comfy likeness work, not default Gemini attachments or new design masters.
+HD-LIKENESS-04: docs/notes/explorable_world/comfy/references/Hon solo_3.jpg
+Likeness/hair/expression only. Smiling mouth and hand near the ear are not a neutral mouth/anatomy standard. Modest resolution and compression limit fine skin/teeth evidence. Original vest, shirt, cockpit and props do not set Hon Dolo wardrobe, tattoos, grill or scene canon.
+HD-LIKENESS-05: docs/notes/explorable_world/comfy/references/Hon solo_4.jpg
+Do not pass the whole triptych as a single face anchor: it contains three faces/views and could introduce duplication or blended expressions. Panel crops would be derived assets with parent hash and exact bounds. Visual overlap with _3 is not a byte-identical file or proof of identical source pixels. No outfit/tattoo/grill authority.
+HD-LIKENESS-06: docs/notes/explorable_world/comfy/references/han solo 5.webp
+Do not feed both panels together and average the ages. Faces occupy only part of a wider body image, so whole-file resolution is not face-detail resolution. Source URL, exact dates and original publication provenance are unknown. Neither panel establishes production costume, props, tattoos or grill; no mark removal or image edit was performed.

@@ -639,9 +639,10 @@ def review_provenance(payload: dict, existing: dict | None = None, *, strict_tak
     """
     from studio_dependencies import current_module
     takes = current_module("storyboard_takes")
+    collaborator = current_module("collaborator_review")
     result = {"validationEvidence": {"format": "cfa-reference-validation-v1", "schemaVersion": 1,
                                      "assessments": [], "legacyReviewArchive": []}, "sceneReviews": [],
-              "storyboardTakes": takes.empty(), "storyboardTakeBackups": []}
+              "storyboardTakes": takes.empty(), "storyboardTakeBackups": [], "collaboratorReviews": {}, "collaboratorReviewBackups": []}
     envelope = result["validationEvidence"]
     seen_assessments: dict[str, str] = {}
 
@@ -663,6 +664,21 @@ def review_provenance(payload: dict, existing: dict | None = None, *, strict_tak
     for source in (existing or {}, payload):
         if not isinstance(source, dict):
             raise ValueError("Review provenance must be an object.")
+        if "collaboratorReviews" in source:
+            try:
+                result["collaboratorReviews"] = collaborator.merge(result["collaboratorReviews"], source["collaboratorReviews"])
+            except ValueError as error:
+                if strict_takes:
+                    raise
+                result["collaboratorReviewBackups"] = collaborator.merge_backups(result["collaboratorReviewBackups"],
+                    [{"origin": "source collaboratorReviews", "reason": str(error), "data": source["collaboratorReviews"]}])
+        try:
+            result["collaboratorReviewBackups"] = collaborator.merge_backups(result["collaboratorReviewBackups"], source.get("collaboratorReviewBackups", []))
+        except ValueError as error:
+            if strict_takes:
+                raise
+            result["collaboratorReviewBackups"] = collaborator.merge_backups(result["collaboratorReviewBackups"],
+                [{"origin": "source collaboratorReviewBackups", "reason": str(error), "data": source["collaboratorReviewBackups"]}])
         # Take snapshots are immutable. Validate the complete union before this
         # function returns, so callers can reject a conflicting import atomically.
         if "storyboardTakes" in source:

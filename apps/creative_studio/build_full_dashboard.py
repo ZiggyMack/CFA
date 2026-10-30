@@ -99,7 +99,7 @@ def build(source_dir: Path = VISUAL, output: Path = DEFAULT_OUTPUT,
     if output == source_dir or source_dir.is_relative_to(output):
         raise ValueError("The generated bundle must be separate from dashboard sources.")
     sources = {name: (source_dir / name).read_bytes()
-               for name in ("catalog.js", "library.js", "library.css", "source_foundation.js", "storyboard_takes.js")}
+               for name in ("catalog.js", "library.js", "library.css", "source_foundation.js", "storyboard_takes.js", "collaborator_reviews.js")}
     bridge = (APP / "full_dashboard_bridge.js").read_bytes()
     hashes = {name: digest(raw) for name, raw in sources.items()}
     hashes["bridge.js"] = digest(bridge)
@@ -196,11 +196,13 @@ def build(source_dir: Path = VISUAL, output: Path = DEFAULT_OUTPUT,
              f"<script src=\"catalog.js?v={digest(catalog_raw)[:12]}\"></script>"
              f"<script src=\"source_foundation.js?v={hashes['source_foundation.js'][:12]}\"></script>"
              f"<script src=\"storyboard_takes.js?v={hashes['storyboard_takes.js'][:12]}\"></script>"
+             f"<script src=\"collaborator_reviews.js?v={hashes['collaborator_reviews.js'][:12]}\"></script>"
              f"<script src=\"library.js?v={hashes['library.js'][:12]}\"></script></body></html>\n").encode()
     for name, raw in {"index.html": index, "library.js": sources["library.js"], "library.css": sources["library.css"],
                       "catalog.js": catalog_raw, "bridge.js": bridge,
                       "source_foundation.js": sources["source_foundation.js"],
-                      "storyboard_takes.js": sources["storyboard_takes.js"]}.items():
+                      "storyboard_takes.js": sources["storyboard_takes.js"],
+                      "collaborator_reviews.js": sources["collaborator_reviews.js"]}.items():
         write_generated(snapshot / name, raw)
     receipt = {"format": "cfa-full-dashboard-bundle-v1", "buildID": build_id,
                "builtAt": datetime.now(timezone.utc).isoformat(), "sourceHashes": hashes,

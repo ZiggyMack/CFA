@@ -1,0 +1,43 @@
+HON DOLO — FIRST FLOW STILL PRESERVATION PROOF
+Prepared October 8, 2026. Experiment ID: FLOW-HD-STILL-001.
+State: planned; user is still sorting. No upload, model invocation or approved shot is claimed.
+
+PURPOSE
+Establish whether Flow keeps the current Hon Dolo face and visible details from one reference before introducing another outfit, character, pose or motion. This still-first sequence takes priority over the earlier proposed first-video test in project_brief.txt. That video prompt remains a later candidate.
+
+SINGLE PLANNED INPUT
+Reference ID: HD-DESIGN-01
+Asset ID: HD-DROP-ef5d59a6402e
+Exact filename: HD-EXP-LOCK-FACE.jpg
+Repository source: docs/notes/explorable_world/comfy/references/hon-dolo-lock-turnaround-outfits/hon-dolo-lock-turnaround-outfits/HD-EXP-LOCK-FACE.jpg
+SHA256: ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978
+Role: current visible Grok design/face reference; no new final production identity approval.
+Planned package home: Characters/Hon Dolo. This is organizational intent, not a verified Flow folder-import action.
+Flow asset ID / upload batch / picture number: unbound.
+
+READY CONDITIONS
+Finish sorting and choose this input deliberately. Upload the actual file once through Upload, then verify it is visible and record its Flow binding. Add from project can reuse it only after it exists in that project. Confirm image mode, displayed model label, output count, any available aspect setting and cost in the live UI. The screenshot's Format menu was not opened, so its options remain unknown. No other character or outfit image is attached for this baseline.
+
+BASELINE A — ONE STILL, NANO BANANA 2.1
+This is our proposed comparison baseline, not an executed result. Retain source composition and framing rather than introducing a pose change immediately. Where a setting is unavailable, record unavailable; do not invent a seed or a hidden control.
+
+Prompt to use only after the actual source is attached:
+Create one reference-faithful still of the same Hon Dolo character shown in HD-EXP-LOCK-FACE.jpg. Keep the face shape, age, curls, facial hair, expression, skin finish, head angle, crop, clothing, lighting and setting closely matched. Preserve the actual eye lettering under his right eye (viewer-left) and know under his left eye (viewer-right), with their existing size and direction. Preserve the neck blaster with its smoke curl, the visible chest artwork, the two gold upper canine caps with the other upper teeth natural, the metallic lower grill and visible nose, lip and ear jewelry. Let existing clothing occlude the same details. Return one still with no extra characters, new lettering, props or design embellishments. No anatomical third eye, retired bird/Jabba/Chewie/dice motifs, new tattoo reconstruction or actor-likeness replacement.
+
+REVIEW BEFORE ANY EXPANSION
+Compare side-by-side at the same displayed scale: facial proportions and hair; exact eye/know text and side; mouth/grill; visible jewelry; neck/chest drawing; clothing and background. Note the location of each mismatch. If the result looks pleasing but alters the identity or required details, mark it failed_preservation rather than accepted. Do not claim exact pixel preservation for a generated image.
+
+CONDITIONAL MODEL COMPARISON B
+If A fails a specific required detail, one Nano Banana Pro comparison is proposed. Use the same original input and exact prompt, with matching available framing/resolution/settings. Change only the model and record any settings that cannot be matched. Do not feed A into Pro as an automatic finishing pass; that would test a different operation and could accumulate drift. Keep both originals and report which defects each retains. Stop after this bounded comparison and decide from evidence; do not open a retry batch.
+
+WHY THESE MODELS
+Google's current documentation positions 2.1 as the standard fast image model, and Pro for complex designs and detailed control. Our sequence is a practical hypothesis to test, not proof Pro will preserve this character better. 2 Lite remains a separate efficiency option. Check current UI cost before generation. Source checked October 8, 2026: Google Flow models and supported features — https://support.google.com/flow/answer/16352836?hl=en
+
+LATER CHANGE — ONE VARIABLE
+After the baseline is reviewed, choose either a very small head turn with the same framing OR a slightly wider crop with the same head pose. Do not change both, introduce a second outfit, add another face or reveal unreferenced hidden tattoos in the same test. A wardrobe reference may later supply clothing alone; it must not overwrite current identity. Use a separately reviewed coherent scene still before testing camera movement or two-person Flow video.
+
+RECORD TO RETURN
+Experiment ID; A or B; actual downloaded filename; actual source attachment ID and filename; exact prompt; displayed model; visible format/resolution; output count; displayed cost; settings actually available; output dimensions; file SHA256 computed from actual bytes; defect list; user review state. Leave unavailable values null/unknown. Suggested local result labels FLOW-HD-STILL-001_A_2p1 and FLOW-HD-STILL-001_B_Pro are planning labels, not files that already exist.
+
+AUDIO / TIMING
+This is a still test. Later video takes should use no spoken dialogue, singing, invented lyrics or added score. The current supplied song is added separately; soundtrack replacement does not create accurate mouth timing. No song timecode or Caleb lyric change is assigned by this experiment.

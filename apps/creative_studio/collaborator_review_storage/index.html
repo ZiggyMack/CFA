@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Task review browser backup</title></head><body>
+<script>
+(() => {
+  'use strict';
+  const key = 'cfa-collaborator-reviews-v1';
+  let latest = null, running = false, lastEvent = '', serial = 0;
+  const instance = typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function'
+    ? crypto.randomUUID() : String(Date.now()) + ':' + Math.random();
+  const post = (type, extra = {}) => window.parent.postMessage({isStreamlitMessage: true, type, ...extra}, '*');
+  const emit = value => {
+    const identity = JSON.stringify(value);
+    if (identity === lastEvent) return;
+    lastEvent = identity;
+    post('streamlit:setComponentValue', {value: {...value, eventID: instance + ':' + (++serial)}, dataType: 'json'});
+  };
+  const token = async raw => raw === null ? 'empty' : Array.from(new Uint8Array(
+    await crypto.subtle.digest('SHA-256', new TextEncoder().encode(raw))))
+    .map(value => value.toString(16).padStart(2, '0')).join('');
+  async function process() {
+    if (running) return;
+    running = true;
+    try {
+      while (latest) {
+        const args = latest;
+        latest = null;
+        if (!args.enabled) continue;
+        const before = localStorage.getItem(key);
+        const beforeToken = await token(before);
+        if (args.ack !== beforeToken) {
+          emit({kind: 'loaded', token: beforeToken, raw: before});
+          continue;
+        }
+        const desired = JSON.stringify(args.records || {});
+        // Hashing awaits; another tab may have written meanwhile. Read again
+        // before the synchronous compare/write to avoid replacing unseen data.
+        if (localStorage.getItem(key) !== before) {
+          latest = latest || args;
+          continue;
+        }
+        if (before !== desired && !(before === null && desired === '{}')) localStorage.setItem(key, desired);
+        const saved = localStorage.getItem(key);
+        emit({kind: 'saved', token: await token(saved)});
+      }
+    } catch (error) {
+      emit({kind: 'error', message: String(error && error.message || error)});
+    } finally {
+      running = false;
+    }
+  }
+  window.addEventListener('message', event => {
+    if (event.source !== window.parent || !event.data || event.data.type !== 'streamlit:render') return;
+    latest = event.data.args;
+    process();
+  });
+  window.addEventListener('storage', event => {
+    if (event.key !== key) return;
+    // Force the Python side to validate and merge every external write.
+    token(event.newValue).then(value => emit({kind: 'loaded', token: value, raw: event.newValue}))
+      .catch(error => emit({kind: 'error', message: String(error)}));
+  });
+  post('streamlit:componentReady', {apiVersion: 1});
+  post('streamlit:setFrameHeight', {height: 0});
+})();
+</script></body></html>

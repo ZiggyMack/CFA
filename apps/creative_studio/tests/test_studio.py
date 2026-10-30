@@ -273,8 +273,9 @@ class StudioAppTest(unittest.TestCase):
         cache.mkdir(exist_ok=True)
         cls.temp = tempfile.TemporaryDirectory(prefix="studio-test-", dir=cache)
         cls.app_dir = Path(cls.temp.name)
-        for name in ("app.py", "library_helpers.py", "mission_view.py", "studio_dependencies.py", "storyboard_takes.py"):
+        for name in ("app.py", "library_helpers.py", "mission_view.py", "studio_dependencies.py", "storyboard_takes.py", "collaborator_review.py", "collaborator_review_storage.py"):
             shutil.copy2(APP_DIR / name, cls.app_dir / name)
+        shutil.copytree(APP_DIR / "collaborator_review_storage", cls.app_dir / "collaborator_review_storage")
         library = cls.app_dir / "library"
         library.mkdir()
         Image.new("RGB", (20, 12), "#176b62").save(library / "review.jpg")
@@ -335,12 +336,30 @@ class StudioAppTest(unittest.TestCase):
         cls.temp.cleanup()
 
     def app(self, library=True):
-        app = self.AppTest.from_file(str(self.app_dir / "app.py"), default_timeout=15).run()
+        # First render also registers the browser-backup component; allow its
+        # cold Streamlit import without relaxing subsequent interaction timeouts.
+        app = self.AppTest.from_file(str(self.app_dir / "app.py"), default_timeout=15).run(timeout=45)
         self.assertFalse(app.exception)
         if library:
             app.button(key="nav:Library").click().run()
             self.assertFalse(app.exception)
         return app
+
+    def test_base_snapshot_restores_task_reply_drafts_without_image_review_changes(self):
+        from collaborator_review import empty, TASK_ID
+        path = self.app_dir / "library" / "catalog.json"
+        original = path.read_bytes()
+        data = json.loads(original)
+        record = empty("2026-10-30T12:00:00Z")
+        data["collaboratorReviews"] = {TASK_ID: record}
+        try:
+            path.write_text(json.dumps(data), encoding="utf-8")
+            app = self.app(library=False)
+            self.assertEqual(app.session_state.studio_review_provenance["collaboratorReviews"][TASK_ID], record)
+            self.assertEqual(app.session_state.studio_reviews["hon-00"]["status"], "needs_fixes")
+            self.assertEqual(app.session_state.studio_reviews["hon-01"]["status"], "remove")
+        finally:
+            path.write_bytes(original)
 
     def test_corner_supplement_navigation_preserves_base_browsing_and_reviews(self):
         path = self.app_dir / "library" / "mission_control.json"

@@ -37,7 +37,7 @@ class FullDashboardBundleTest(unittest.TestCase):
                             {"label": "Source evidence", "href": "https://example.com/evidence"},
                             {"label": "Outfits", "href": "../index.html#hon/outfits"}]}]}}
         self.write_catalog()
-        for name in ("library.js", "library.css", "source_foundation.js", "storyboard_takes.js"):
+        for name in ("library.js", "library.css", "source_foundation.js", "storyboard_takes.js", "collaborator_reviews.js"):
             (self.source / name).write_text("/* exact existing dashboard code */", encoding="utf-8")
         self.output = self.root / "bundle"
 

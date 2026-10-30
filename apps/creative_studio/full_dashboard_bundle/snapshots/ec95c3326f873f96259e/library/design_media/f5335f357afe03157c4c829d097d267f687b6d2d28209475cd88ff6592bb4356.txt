@@ -1,0 +1,22 @@
+- C25-corridors-arches-001.jpg | prelim_likeness=Unrated prelim_scene=4 lane=prime scope=scene stage=preliminary | LUnrated S4 | clean tube, less lived-in | preserve: curving ribbed ring, glowing grates
+- C25-corridors-arches-002.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: hub junction, four arches, ceiling hatch + ladder
+- C25-corridors-arches-003.jpg | prelim_likeness=Unrated prelim_scene=4 lane=prime scope=scene stage=preliminary | LUnrated S4 | disorienting angle | preserve: oval arches, steam, end lamp
+- C25-corridors-arches-004.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | back view only, face unverifiable | preserve: curls, jacket, blue strip lights
+- C25-corridors-arches-005.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | cockpit seats missing | preserve: fisheye lounge-to-cockpit layout, built-in decks
+- C25-corridors-arches-006.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | reads like troop ship, many bunks | preserve: quilted panels, curve, lamps
+- C25-corridors-arches-007.jpg | prelim_likeness=Unrated prelim_scene=4 lane=prime scope=detail stage=preliminary | LUnrated S4 | not top-down, angled | preserve: open crawlspace with beam
+- C25-corridors-arches-008.jpg | prelim_likeness=5 prelim_scene=5 lane=prime scope=scene stage=preliminary | L5 S5 | none | preserve: ducking under arch, steam
+- C25-corridors-arches-009.jpg | prelim_likeness=Unrated prelim_scene=4 lane=prime scope=scene stage=preliminary | LUnrated S4 | too long/straight for Falcon scale | preserve: viewport wall
+- C25-corridors-arches-010.jpg | prelim_likeness=Unrated prelim_scene=4 lane=prime scope=scene stage=preliminary | LUnrated S4 | sterile, less lived-in | preserve: red emergency light, half-open door
+- C25-corridors-arches-011.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: lived-in props, bend to warm light
+- C25-corridors-arches-012.jpg | prelim_likeness=3 prelim_scene=5 lane=prime scope=scene stage=preliminary | L3 S5 | Leia face drift, expression too alarmed | preserve: sparking cables, arches
+- C25-corridors-arches-013.jpg | prelim_likeness=Unrated prelim_scene=4 lane=prime scope=detail stage=preliminary | LUnrated S4 | grim, less Falcon | preserve: vertical shaft, daylight hatch
+- C25-corridors-arches-014.jpg | prelim_likeness=3 prelim_scene=5 lane=prime scope=identity stage=preliminary | L3 S5 | extra 'mw' lettering under eye; chest tattoo hidden; stud not visible | preserve: eye LEFT/know RIGHT correct, neck blaster RIGHT, hoops, curls, arch rim light | RESCORED -1: face reads younger and clean-shaven vs ref lf_full (ref has stubble, nostril hoops)
+- C25-corridors-arches-015.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: ring/ramp crossroads, white ramp glow
+- C25-corridors-arches-016.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | corridor straight-ish not curved | preserve: padded ribbed arches, grating, haze
+- C25-corridors-arches-017.jpg | prelim_likeness=Unrated prelim_scene=4 lane=prime scope=scene stage=preliminary | LUnrated S4 | reads like subway tunnel, scale large | preserve: low-angle arches, red floor strips, pipes
+- C25-corridors-arches-018.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: junction cockpit/hold, gunner ladder center
+- C25-corridors-arches-019.jpg | prelim_likeness=5 prelim_scene=5 lane=prime scope=scene stage=preliminary | L5 S5 | none | preserve: Chewy on-model walking to camera, backlit arch
+- C25-corridors-arches-020.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: hyperspace viewports along arches
+- C25-corridors-arches-021.jpg | prelim_likeness=4 prelim_scene=4 lane=prime scope=scene stage=preliminary | L4 S4 | corridor scale too big/subway-like | preserve: Leia under sparking conduit, cool blue
+- C25-corridors-arches-022.jpg | prelim_likeness=Unrated prelim_scene=3 lane=prime scope=scene stage=preliminary | LUnrated S3 | abstract, layout not Falcon-readable | preserve: overhead map-like view, light pools

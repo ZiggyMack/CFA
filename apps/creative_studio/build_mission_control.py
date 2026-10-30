@@ -331,6 +331,10 @@ class MissionBundle:
                                'categories': self.catalog.get('categories', []), 'assets': list(self.packaged_assets.values()),
                                'albums': list(self.selected_albums.values()), 'missionControl': mission,
                                'sourceComparisons': comparisons, 'reviewRequests': requests, 'reviewDecisions': decisions}, self.root)
+        # Answers and immutable prepared replies are evidence, not links to sanitize.
+        for key in ('collaboratorReviews', 'collaboratorReviewBackups'):
+            if key in self.catalog:
+                result[key] = deepcopy(self.catalog[key])
         for path, record in self.sources.items():
             if not path.is_file() or sha(path.read_bytes()) != record['sha256']:
                 raise RuntimeError('Source file changed during packaging; retry with a stable snapshot')

@@ -57,6 +57,14 @@ def overlay_review_snapshot(catalog: dict, payload: dict, *, source_label: str =
             or not isinstance(payload.get("items"), list)):
         raise ValueError("Expected a CFA review export with an items list.")
     result = deepcopy(catalog)
+    if 'collaboratorReviews' in catalog or 'collaboratorReviews' in payload:
+        from collaborator_review import merge
+        result['collaboratorReviews'] = merge(catalog.get('collaboratorReviews', {}),
+                                              payload.get('collaboratorReviews', {}))
+    if 'collaboratorReviewBackups' in catalog or 'collaboratorReviewBackups' in payload:
+        from collaborator_review import merge_backups
+        result['collaboratorReviewBackups'] = merge_backups(catalog.get('collaboratorReviewBackups', []),
+                                                          payload.get('collaboratorReviewBackups', []))
     # Take plans are immutable shot records, not image decisions. Reconcile them
     # separately so a review export cannot lose the earlier take history.
     if 'storyboardTakes' in catalog or 'storyboardTakes' in payload:
@@ -83,6 +91,8 @@ def overlay_review_snapshot(catalog: dict, payload: dict, *, source_label: str =
                                                        allow_nan=False, separators=(",", ":")).encode()).hexdigest(),
               "inputRecords": len(payload["items"]), "applied": [], "conflicts": [], "skipped": [],
               "aliases": [], "unchangedFields": 0}
+    report['changedCollaboratorTasks'] = [task_id for task_id, record in result.get('collaboratorReviews', {}).items()
+                                         if catalog.get('collaboratorReviews', {}).get(task_id) != record]
     by_id, by_index, mismatched_ids = {}, {}, set()
     for index, row in enumerate(rows):
         if not isinstance(row, dict):
@@ -191,5 +201,5 @@ def overlay_review_snapshot(catalog: dict, payload: dict, *, source_label: str =
         result["reviewSessionSeed"] = {"id": report["sourceDigest"], **selections}
     report["changedRecords"] = len({row["id"] for row in report["applied"]})
     report["changedFields"] = sum(len(row["fields"]) for row in report["applied"])
-    result["reviewSnapshot"] = {key: report[key] for key in ("sourceLabel", "sourceDigest", "exported", "changedRecords", "changedFields")}
+    result["reviewSnapshot"] = {key: report[key] for key in ("sourceLabel", "sourceDigest", "exported", "changedRecords", "changedFields", "changedCollaboratorTasks")}
     return result, report
