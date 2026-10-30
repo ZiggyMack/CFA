@@ -3,14 +3,36 @@ from copy import deepcopy
 import json
 from pathlib import Path
 import sys
+import tempfile
 import unittest
 from streamlit.testing.v1 import AppTest
 
 APP=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(APP))
-from library_helpers import effective_reviews
+from library_helpers import effective_reviews, review_payload, review_provenance
+import storyboard_takes
 
 class StructureAppTest(unittest.TestCase):
+    def test_story_without_sequence_never_displays_unbound_work(self):
+        data = dict(assets=[], storyboardStructure=dict(fields=[], kitchenFields=[], stories=[]),
+                    shotMaterials=dict(shots=[dict(id=f'work-{number}', project='lisan',
+                        title=f'Unbound work {number}', fields=[], materials=[]) for number in range(7)]))
+        script = f"""
+import sys
+sys.path.insert(0, {str(APP)!r})
+from story_view import render_structure
+render_structure({data!r}, {{'id':'lisan:meta-mirror','project':'lisan','kind':'song'}},
+                 'lisan', lambda *args: None, reviews={{}})
+"""
+        with tempfile.TemporaryDirectory(prefix='story-unbound-') as temporary:
+            source = Path(temporary)/'unbound_story_app.py'
+            source.write_text(script, encoding='utf-8')
+            app = AppTest.from_file(str(source), default_timeout=60).run()
+            self.assertFalse(app.exception)
+            self.assertTrue(any('0 planned shots' in caption.value for caption in app.caption))
+            self.assertFalse(any('Unbound work' in expander.label for expander in app.expander))
+            self.assertTrue(any('No canonical shot structure' in info.value for info in app.info))
+
     def test_structure_and_empty_template_preserve_reviews(self):
         app=AppTest.from_file(str(APP/'app.py'),default_timeout=60).run()
         self.assertFalse(app.exception)
@@ -147,7 +169,7 @@ render_structure(st.session_state.fixture_data, {{'id':'hon:fixture'}}, 'hon', l
         self.assertIsNotNone(app.button(key='structure-map:hon:hon:fixture:source:0'))
         self.assertIsNotNone(app.button(key='structure-coverage:hon:missing:source:0'))
         group_labels = ['Context & references · A–D', 'Creative direction · 0–7', 'Generation handoff · 8–9',
-                        'Takes, results & review · 10–11', 'Kitchen / handoff structure']
+                        'Takes, results & review · 10–11', 'Kitchen / handoff structure · 0/1 sections written']
         groups = [e for e in app.expander if e.label in group_labels]
         self.assertEqual([e.label for e in groups], group_labels * 8)
         self.assertFalse(any(e.proto.expanded for e in groups))
@@ -156,8 +178,8 @@ render_structure(st.session_state.fixture_data, {{'id':'hon:fixture'}}, 'hon', l
         for group, expected_keys in zip([first_groups[0], first_groups[1], first_groups[2], first_groups[3]],
                                        [keys[:4], keys[4:12], keys[12:14], keys[14:]]):
             self.assertEqual([e.label.split(' · ', 1)[1].split(' — ', 1)[0]
-                              for e in group.expander if e.label != group.label], expected_keys)
-        self.assertEqual(len(first_groups[3].button), 3)
+                              for e in group.expander if ' — ' in e.label], expected_keys)
+        self.assertEqual(len(first_groups[3].button), 4)
         self.assertTrue(any(m.value == 'Revision proposal remains pending.' for m in first_groups[3].markdown))
         self.assertTrue(first_groups[3].warning)
         expected = dict(missing=['missing'], draft=['draft', 'selected'], present=[s['shotID'] for s in shots[:8]],
@@ -201,5 +223,117 @@ render_structure(st.session_state.fixture_data, {{'id':'hon:fixture'}}, 'hon', l
         self.assertEqual(shown(), ['other-sequence'])
         self.assertEqual(app.session_state.fixture_data, data)
         self.assertEqual(app.session_state.fixture_reviews, reviews)
+
+    def test_explicit_next_take_preserves_history_and_blocks_conflicting_branches(self):
+        definitions = [dict(key=key, section=section, label=key, hint='Fixture field') for key, section in
+                       [('purpose','A'), ('camera','2'), ('prompt_clip','8'), ('settings','9'), ('results','10'), ('acceptance','11')]]
+        shot = dict(shotID='S01-1', sectionID='S01', title='Original scene', stage='production', revision='take 1',
+                    authoringStatus='Written source', kitchenWritten=True, source={}, materials=[], revisions=[],
+                    fields=[dict(key=d['key'], text='Original '+d['key'], status='accepted', evidence=[]) for d in definitions],
+                    kitchen=[dict(key='delivery', text='Original handoff', status='accepted', evidence=[]),
+                             dict(key='k1', text='None intentionally needed', status='not_needed'),
+                             dict(key='k2', text='Placeholder only', status='unknown'),
+                             dict(key='k3', text='Not supplied', status='missing'),
+                             dict(key='k4', text='  ', status='draft')],
+                    coverageUpdate='Dated coverage context', sourceShotPlanIDs=['legacy-source'])
+        data = dict(assets=[], storyboardStructure=dict(fields=definitions,
+            kitchenFields=[dict(key=key, section=str(index+1), label=key, hint='Fixture kitchen')
+                           for index, key in enumerate(['delivery', *['k'+str(i) for i in range(1,12)]])],
+            stories=[dict(storyID='hon:fixture', sections=[dict(id='S01', title='Opening', shotIDs=['S01-1'],
+                spineBeat='Shared sequence purpose')], shots=[shot])]))
+        reviews = {'untouched': {'status': 'keep', 'note': 'Earlier review'}}
+        script = f"""
+import sys
+sys.path.insert(0, {str(APP)!r})
+import streamlit as st
+from story_view import render_structure
+from library_helpers import review_payload
+if 'fixture_data' not in st.session_state: st.session_state.fixture_data = {data!r}
+if 'fixture_reviews' not in st.session_state: st.session_state.fixture_reviews = {reviews!r}
+render_structure(st.session_state.fixture_data, {{'id':'hon:fixture'}}, 'hon', lambda *args: None,
+                 reviews=st.session_state.fixture_reviews)
+st.session_state.fixture_export = review_payload([], {{}}, set(), provenance=st.session_state.get('studio_review_provenance', {{}}))
+"""
+        app = AppTest.from_string(script, default_timeout=60).run()
+        self.assertFalse(app.exception)
+        self.assertTrue(any('Take 1 · written plan' in e.label for e in app.expander))
+        self.assertTrue(app.button(key='take-plan:hon:hon:fixture:S01-1').disabled)
+        self.assertEqual(app.session_state.fixture_export['storyboardTakes'], storyboard_takes.empty())
+        self.assertTrue(any(e.label == 'Kitchen / handoff structure · 2/12 sections written' for e in app.expander))
+        linked = next(e for e in app.expander if e.label == 'Linked references')
+        self.assertFalse(linked.proto.expanded)
+        self.assertTrue(any(t.value == 'Dated coverage context' for t in linked.text))
+        context = next(e for e in app.expander if e.label == 'Context & references · A–D')
+        self.assertTrue(any(t.value == 'Shared sequence purpose' for t in context.text))
+        app.text_area(key='take-change:hon:hon:fixture:S01-1').input('Move the camera closer; retain the story beat.').run()
+        app.button(key='take-plan:hon:hon:fixture:S01-1').click().run()
+        self.assertFalse(app.exception)
+        ledger = app.session_state.fixture_export['storyboardTakes']
+        self.assertEqual(len(ledger['takes']), 2)
+        current = storyboard_takes.current(ledger, 'hon', 'hon:fixture', 'S01-1')
+        original = next(row for row in ledger['takes'] if row['state'] == 'written')
+        self.assertEqual(original['snapshot']['shot'], shot)
+        self.assertEqual(current['number'], 2)
+        self.assertEqual(current['state'], 'planned')
+        self.assertEqual(current['snapshot']['shot']['stage'], 'preliminary')
+        self.assertTrue(any('Take 2 · planned' in e.label for e in app.expander))
+        self.assertTrue(any(e.label == 'Kitchen / handoff structure · 2/12 sections written' for e in app.expander))
+        self.assertFalse(any('The live source foundation differs' in m.value for m in app.markdown))
+        self.assertEqual({v['key']:v['status'] for v in current['snapshot']['shot']['fields'] if v['key'] in ('results','acceptance')},
+                         dict(results='unknown', acceptance='unknown'))
+        self.assertEqual(app.text_area(key='take-change:hon:hon:fixture:S01-1').value, '')
+        self.assertEqual(app.session_state.fixture_reviews, reviews)
+        self.assertEqual(app.session_state.fixture_data, data)
+        self.assertEqual(review_provenance(app.session_state.fixture_export)['storyboardTakes'], ledger)
+        # A later source catalog edit cannot overwrite the saved current plan.
+        app.session_state.fixture_data['storyboardStructure']['stories'][0]['shots'][0]['title'] = 'Changed live source'
+        app.run()
+        self.assertFalse(app.exception)
+        self.assertTrue(any(e.label.startswith('S01-1 · Original scene · Take 2') for e in app.expander))
+        self.assertTrue(any('Source writing changed after this take was saved' in info.value for info in app.info))
+        self.assertEqual(app.session_state.fixture_export['storyboardTakes'], ledger)
+        # A second device can create a branch; both survive, neither becomes current.
+        other = storyboard_takes.plan(storyboard_takes.empty(), dict(project='hon', storyID='hon:fixture', shot=shot,
+            foundation=original['snapshot']['foundation'], changeNote='Alternate camera direction', id='other-device-take',
+            recordedAt='2026-10-29T13:00:00Z'))
+        union = storyboard_takes.merge(ledger, other)
+        app.session_state.studio_review_provenance = review_provenance({'storyboardTakes': union})
+        app.run()
+        self.assertFalse(app.exception)
+        self.assertIsNone(storyboard_takes.current(union, 'hon', 'hon:fixture', 'S01-1'))
+        self.assertTrue(app.button(key='take-plan:hon:hon:fixture:S01-1').disabled)
+        self.assertTrue(any('More than one take branch' in w.value for w in app.warning))
+        self.assertEqual(app.session_state.fixture_export['storyboardTakes'], union)
+        self.assertEqual(app.session_state.fixture_reviews, reviews)
+        app.session_state.fixture_data['storyboardStructure']['stories'][0]['shots'][0]['kitchen'] = []
+        app.run()
+        self.assertFalse(app.exception)
+        self.assertTrue(any(e.label == 'Kitchen / handoff structure · 0/12 sections written' for e in app.expander))
+
+    def test_review_take_union_is_atomic_and_source_failures_keep_backups(self):
+        shot = dict(shotID='S01-1', revision='take 1', fields=[], kitchen=[])
+        first = storyboard_takes.plan(storyboard_takes.empty(), dict(project='hon', storyID='fixture', shot=shot,
+            foundation=None, changeNote='Camera change', id='take-two', recordedAt='2026-10-29T12:00:00Z'))
+        second = storyboard_takes.plan(first, dict(project='hon', storyID='fixture', shot=shot,
+            foundation=None, changeNote='Lighting change', id='take-three', recordedAt='2026-10-29T13:00:00Z'))
+        old_backup = dict(origin='Older import', reason='Unsupported record', data={'raw':'preserve'})
+        provenance = review_provenance({'storyboardTakes': first, 'storyboardTakeBackups': [old_backup]})
+        before = deepcopy(provenance)
+        merged = review_provenance({'storyboardTakes': second}, provenance)
+        self.assertEqual(len(merged['storyboardTakes']['takes']), 3)
+        self.assertEqual(merged['storyboardTakeBackups'], [old_backup])
+        self.assertEqual(review_provenance({'storyboardTakes': first}, merged), merged)
+        exported = review_payload([], {}, set(), provenance=merged)
+        self.assertEqual(exported['storyboardTakes'], second)
+        conflict = deepcopy(first)
+        next(t for t in conflict['takes'] if t['id']=='take-two')['changeNote'] = 'Overwrite immutable history'
+        with self.assertRaisesRegex(ValueError, 'immutable record conflict'):
+            review_provenance({'storyboardTakes': conflict}, provenance)
+        self.assertEqual(provenance, before)
+        unknown = {'format':'future-format','takes':['unread']}
+        safe = review_provenance({'storyboardTakes': unknown}, provenance, strict_takes=False)
+        self.assertEqual(safe['storyboardTakes'], first)
+        self.assertEqual(safe['storyboardTakeBackups'][1]['data'], unknown)
+        self.assertEqual(review_provenance({}, safe)['storyboardTakeBackups'], safe['storyboardTakeBackups'])
 
 if __name__=='__main__': unittest.main()

@@ -1,0 +1,479 @@
+# Verse packet: S02-1 to S02-10 in the shot-direction structure, each with a kitchen block (2026-10-29)
+
+Author: Claude, lead writer, recorded at about 13:01 UTC by the clock. Status: **proposed detailed design**, nothing accepted. Built from `SCENE_CARD_S02.md` (posted 2026-10-11; sha256 7ca217c29018273db3d5304a30c1db2ca99b99bc47638d5e59fdf666b284cb61, 24827 bytes), which stands unchanged; every shot is take 1; where this packet and the card differ the difference is named and the card's wording is kept as the alternate. Structure: the shot-direction card (sections 0 to 7 written; 8 and 9 CFA Nova's, 10 Ziggy's, all three empty) plus section 11 KITCHEN per shot, under `KITCHEN_BLOCK_SPEC_20261029.md` as amended by `KITCHEN_BLOCK_ADDENDUM_A_20261029.md` (revision CFA-SHOT-BUNDLE-20261029-v1-A): status triplets in 11.2, the cue line in 11.5, the arc line in 11.6, modes in the adapter notes. Timing is **null** everywhere: lyric cues are sections and TXT lines of `Hon_DoLo.txt` (lyric master v003, sha256 4d8f867b...); the section's claimed bounds (19.40 to 56.00 s) and every event placement are the provider's October 11 claims, not adopted; holds are design on the Fibonacci half-second ladder, offered for this section, never timing. Nothing here authorizes a generation, a run, a download, a sourcing decision or a spend. The Source line is a make-or-have note and never alters a shot. Shot titles here are descriptive; the card's titles stand in the card and are cited by line range in each 11.1. No franchise or film name and no real person appears in any section 7, 7b or 11.10.
+
+**Holds reconciled since the card (current as of the record read today).** The first creditor is the crocodile boss BOSS-008 `HD-RETURN-8421e7cfa1a0` (DECISIONS section 9 row 2; catalog "Selected boss, visible likeness and proportions"; review keep, likeness 5, scene 5, production, 2026-10-28); the card's shortlist question is closed and one staging round follows. The hunter is the olive-armored supporting character BOBA-ARMOR-01 (`comfy/references/hon-dolo-stills-51-95/cast/BOBA-EXP-01-olive-armor.jpg`; catalog available_candidate; helmet geometry and rangefinder unresolved; DECISIONS 9 row 2). Chewy's established reference is the DJB beast sheet (DJB-01, DJB-02; since 2026-10-12); the card's "no accepted anatomy" is superseded and what is missing is a frame of him in the club. Leia is the customer across the counter, unseen in this section (DECISIONS 7 row 1, 9 row 1). Mouth B is the current scoped dental reference (BOM; review keep, likeness 5, production, detail, 2026-10-10); face A the default identity. The neck: the card says no neck reference is accepted; the record holds a placement candidate `lf_neck.png` (`HD-RETURN-7fe77eadd174`, BOM neck_placement with no recorded selection, review keep at production stage with no blanket approval), so S02-5 binds it as a design reference for placement and nothing more; the "neck-bling handoff" the card cites is the chains and mouth-props packet, prepared and not sent, and does not govern the tattoo. Frame A's consolidated starting frame: none accepted. The ship exterior, the warship, the Maw, the HUD plate, the bay, the counting room, the club: undesigned. The cockpit: COCKPIT-R2-01 `HD-DROP-14f8eb9979b5` needs fixes (grill and neck), the same repair S07-3 names.
+
+
+## 1. The verse as one thought
+
+The chorus named a price; the verse explains it. The bravado has creditors: the boss who funded him, the hunters who want him, a name he will not let anyone play with, a title he insists on, and the junk ship that is the only thing he has ever been proud of. He is still at the counter the whole time, still selling the ride to the woman with money; every cut-away is a bill, and the eye returns to the counter at the end at the angle it left, so the second chorus reads as the same man a little less sure. The first half (S02-1 to S02-7) is rooms and faces, warm; the second (S02-8 to S02-10) is space, cold, and the one boast that is true. The words are a guide: the verse crowds its creditors into one line (TXT line 11), so the pictures take them one at a time and let the words run across the cuts.
+
+
+## 2. The spine: order, cues, anchors, holds, cuts
+
+| Order | Shot (take 1) | Place | Cue (TXT line) | Anchor in | Hold (ladder pick, alternate) | Cut to the next |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | S02-1 Money to spare (her hand) | the counter top, frame A's orientation | line 9 "money to spare" | EVENT EVT-HON-03 (the snare turnaround into the verse) with WORD line 9 | 2.5 (4) | on the new stack leaving screen-left, to the ledgers |
+| 2 | S02-2 The counting room | the first creditor's room | line 11, the debt words ("I Owe") | WORD line 11 | 4 (6.5) | on the boss's eyes landing on camera, to the puck's light |
+| 3 | S02-3 The puck | a bar top, insert | line 11 "ducking" | WORD line 11 | 1.5 (2.5) | on the gloved hand leaving screen-right, to the hunter at screen-right |
+| 4 | S02-4 The watch | the loading bay | line 11 "bounty hunt-ahhhs" | WORD line 11 | 2.5 (4) | on the helmet's turn, to the light crossing the neck |
+| 5 | S02-5 My name (the neck blaster) | macro, frame A's light | line 12 "not safe ta play with my name" | WORD line 12 | 1.5 (2.5) | on the dark after the light, to the man, same side, wider |
+| 6 | S02-6 The captain portrait (frame B) | the cockpit | line 14, the formal line and the two names | WORD line 14 | 6.5 (10.5) | on the look screen-left for agreement, to the crowd that gives it |
+| 7 | S02-7 The club cut-in | the club floor, looking up at the booth | line 14, the trailing names (the ad-lib tail, Nova's call) | WORD line 14 tail, or GRID the last bar of line 14 | 2.5 (4) | the hardest cut in the verse, club colour to cold grey |
+| 8 | S02-8 The warship | space, the hull | line 15 "imperial" | WORD line 15 | 4 (6.5) | inside the same vector, the ship crossing to the ship banking |
+| 9 | S02-9 The bank | space, the flank | lines 17 to 18 "junky ship", "can't catch me" | WORD line 17 | 4 (6.5) | the exit screen-right, to the number |
+| 10 | S02-10 The number and the Maw | the HUD, then the widest shot | line 19 "less than twelve-par", "Beat the Maw" | WORD line 19; out on EVENT EVT-HON-04 (the turnaround into S03 under the echo) | 1 then 2.5 (1.5 then 4) | hard cut to frame A at the angle and light S01 left it |
+
+**The words of line 11 and the order of the cuts (a proposal, with the coverage map's reading as the alternate).** Line 11 runs: the debt words, then the smuggling words, then "ducking, ducking", then "bounty hunt-ahhhs", then "Jabbah funding". The coverage map cues S02-2 on the first creditor's name and S02-3 on the hunters' words, which, taken literally, puts the puck before the room. The card's order (room, then puck, then watch) is story logic: the creditor first, then the instrument, then the face. This packet keeps the card's order and anchors it to the line's earlier words: the room on the debt words, the puck on "ducking", the watch on "bounty hunt-ahhhs", so that the first creditor's name is sung as the picture leaves his room and lands on the hunters, the sum of the two debts. The alternate, if Ziggy wants the names on their pictures: swap S02-2 and S02-3 (puck, room, watch). Nothing generated differs either way.
+
+**Holds.** The ladder picks sum to 32.5 seconds of design against a claimed section length of 36.6 seconds (unverified); the difference is the edit's slack, most of it S02-6's (the lip-sync anchor takes the next ladder step, 10.5, if the performance earns it). About 31 beats across the ten shots, toward the hundred across the song (DECISIONS section 11). Seconds of song time stay null; the beat grid (bars and downbeats of S02) is asked of the alignment lane in the message that carries this file.
+
+**Screen geography, carried from the card.** Frame A's orientation holds for S02-1 and S02-5. The ship travels toward screen-right in S02-8, S02-9 and S02-10 (the exit vector S07 later reverses). In the cockpit Chewie sits screen-left of Dolo (S02-6, S07). The hunter stands screen-right in S02-4 and his hand enters from screen-right in S02-3. The club is frame C's room seen from the floor, Chewy screen-left of the booth's edge.
+
+
+## 3. The shots
+
+Dolo's locks, wherever he is in frame, copied from the handoff and the prototype (filtered per shot in 11.4): cursive "eye" character-right/viewer-left; serif "know" character-left/viewer-right; neck blaster character-left/viewer-right; no forehead dice; mouth external-off (four upper gold caps on both lateral incisors and both short canines, the two central incisors and the other upper teeth natural white, lower row silver-chrome, two plain lower-lip hoops, one per side); one hoop per nostril and the ear hoop with crystal stud as targets; the chest ship upright where the open shirt shows it; the wrist chain and dark band on the character-right wrist, viewer-left when he faces camera, set for this scene and not canon; the opening outfit (dark brown distressed leather jacket over the open off-white shirt). Chewy's lock: the DJB sheet (a dark gorilla-like beast, black over-ear headphones, gold neck chain, bullet bandolier, lean build).
+
+Repo paths in 11.2 are under `docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/` unless marked otherwise. Status is the triplet: catalog intake label | BOM scoped selection | canonical review. The cue line of every block reads: cue, the fixed master `Hon_DoLo.mp3` (sha256 d2283a49...) with lyric master v003; state, master fixed, events proposed and not listened. Sections 8 to 10 are CFA Nova's (8, 9) and Ziggy's (10) in every block and are not written here.
+
+
+### S02-1 Money to spare (her hand, not her face)
+
+0. **SHOT.** S02-1, take 1. S02, the first verse, TXT line 9 ("money to spare"); the first shot of the verse. What it is for: the first picture of the customer without showing her; the money arrives from her side.
+1. **SOURCE LINEAGE.** No start frame; frame A's consolidated still is unaccepted, and this insert's four credits must match whatever is accepted. Composition and props: SB-03 `HD-DROP-36679ee9953b` (the pay table, reference D of the prototype). Wrist jewelry: SB-06 `HD-DROP-b18c4a123579`, visible jewelry only. Her sleeve: undecided (LEIA-STYLE-01 is a wardrobe candidate only and is not bound); the frame shows no deciding detail. Prior takes: none.
+2. **LIGHTING.** Frame A's practicals, unchanged: the counter's warm amber key from front-left (viewer-left), the room dim behind. No light change over the shot.
+3. **CAMERA.** Tight insert on the counter top from frame A's own orientation dropped to the surface, slight high angle, locked; the counter edge horizontal; the four credits at frame centre-left. Her hand enters from the near foreground at screen-right (the customer's side); his from screen-left. Off-screen: both faces, her body, the room.
+4. **CHARACTER DIRECTION.** Her hand: a woman's hand, bare, no ring, no cuff, a plain dark sleeve edge that decides nothing; it sets a stack of credits down beside the four and withdraws screen-right, unhurried. His character-right hand (viewer-left), the chain and band on that wrist, enters from screen-left, draws the new stack toward him and takes it out of frame at screen-left; the four credits stay where the prototype has them. The read: the money comes to him and he does not have to look at it.
+5. **BACKGROUND ACTION.** None. Nothing else on the counter moves.
+6. **TIME BEATS.**
+
+| Beat | Anchor | Lighting | Camera | Character | Background |
+| --- | --- | --- | --- | --- | --- |
+| b1 | EVENT EVT-HON-03, provisional (the snare turnaround into the verse), with WORD line 9 in | warm key, unchanged | locked insert | the four credits alone | none |
+| b2 | GRID, provisional: bar 1 of S02, beat 3 | unchanged | locked | her hand sets the stack, withdraws screen-right | none |
+| b3 | WORD line 10 "pay me" | unchanged | locked | his hand enters from screen-left, draws the stack out | none |
+
+7. **RESULTING PROMPT (silent still, the start frame).** Landscape 16:9, a tight high-angle close-up of a worn wooden cantina counter top, the counter's edge running level across the frame. Four small metal credit coins lie in a short row left of centre. Warm amber light from a lamp at the front-left, the room behind the counter dark and out of focus. No hands, no people, no text.
+
+**7b. RESULTING PROMPT, the clip (from 2 to 6; one variable against the still: the two hands).** Tight high-angle close-up of a worn wooden cantina counter top, locked camera, warm amber light from the front-left, dark room behind. Four small metal coins lie in a row left of centre and stay where they are. From the near right edge a woman's bare hand with a plain dark sleeve reaches in, sets a small stack of the same coins beside the four and withdraws to the right. Then a man's hand with a gold chain and a dark band on the wrist enters from the left, draws the new stack toward the left edge and out of frame. No faces, no second hand on either side, no text. The light does not change.
+
+8. to 10. CFA Nova's (8, 9) and Ziggy's (10).
+
+11. **KITCHEN.**
+**11.1** Project hon; S02 (first verse); S02-1 take 1. Parent `story/writer_pass_20261010/SCENE_CARD_S02.md` sha256 7ca217c2...; excerpt lines 19 to 28, sha256 b6ea02c03fa122e61e6cc5e8e3ce8b652ec7b0308700c1640696b03680479c42. Authority: DECISIONS sections 7 to 14. Full story retained at the writer folder, not active wholesale.
+**11.2 Inputs.** | SB-03 `HD-DROP-36679ee9953b` | asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-03-pay-table.jpg | 36679ee9953bfb8d0492009c1a47309fdd8f04f951f2077bce0007067146b1c4 | 316016 | inspiration (composition and props) | storyboard | none | keep 2026-10-09 |. | SB-06 `HD-DROP-b18c4a123579` | .../series-01-cold-open/SB-06-scoundrel-detail.jpg | b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a | 308775 | design_reference (the wrist chain and band only) | storyboard | BOM visible_jewelry_only, user_selected_component | keep, likeness 5, scene 4, production, 2026-10-14 |. start_frame: missing (STILL PREP from prompt 7). end_frame_review_target: none.
+**11.3 Inspiration.** SB-03 (reference_d; the credits and the counter surface). No other panel.
+**11.4 Locks visible.** The wrist chain and band on his character-right wrist (viewer-left). Not visible, do not force: everything else.
+**11.5 Anchors, beats, duration.** In: EVT-HON-03 with WORD line 9; out: on the stack leaving, before line 10 ends. Beats 3. Hold 2.5 s (alternate 4). Native lengths as last measured per the spec; the edit trims. Cue: the fixed master; state: events proposed, not listened; relationship: picture follows the music event (the cut into the verse lands on the turnaround); fixed: the counter, the four credits, the light; flexible: where inside the hold her hand lands.
+**11.6 Sound.** Song: lines 9 to 10 heard over the shot. Speech: none. Ambience: none proposed. Route audio: recorded, unused. Arc: the beat turns over into the verse and the groove settles, so the hands move on the groove, unhurried; the action lands with the cue.
+**11.7** Preserve: the four credits' count and placement; the counter's wood and light; the chain and band on his wrist; the hands' sides. May change: the two hands' motion (this take's variable). Must not: faces; a ring, cuff or sleeve detail that decides her look; a third hand; text; a camera move; the credits moving on their own. Comfy change class: new action from a still, props preserved.
+**11.8** Start: the four credits alone. End: her hand gone, his hand and the new stack gone at screen-left, the four credits unchanged. Cut in on the turnaround; cut out to S02-2 on the stack leaving. Context, not action: before, frame A's settle (S01-3); after, the counting room. Excluded: the prototype's turns; any face.
+**11.9** Missing: the start frame (STILL PREP); frame A's accepted still, which decides the credits this must match. Inherited: SB-03's props if copied rather than described; her sleeve, undecided, so a result that shows a deciding sleeve inherits a question, not a fault.
+**11.10** Prompt 7 (still) and 7b (clip). Repeated requirements: four coins left of centre, unmoved; her hand from the right, bare, plain dark sleeve; his hand from the left with the chain and band; warm light from the front-left; no faces, no text; camera locked. Negatives: faces, a ring, a cuff, a third hand, text, a camera move.
+**11.11** Review: coin count constant; hands' sides correct; no face; chain and band present on his wrist; light steady; native length and audio recorded. Reviewer Ziggy; site fields likenessRating (the wrist jewelry against SB-06), sceneQualityRating, status.
+**11.12** Writer: done. Operator: STILL PREP route; mode per route (first_frame from the prepared still; ingredients only where a route exposes it, with SB-06 as design_reference); cost. Ziggy: whether her hand may show any sleeve at all before the costume call.
+**Adapter notes (modes).** A2 Gemini clip: clip pack from this block, images described in text. A3 Flow: first_frame from the prepared still. A4-S: prompt 7 as a still, SB-06 as design_reference if the graph takes one; A4-M: one frame plus 7b. A5 Grok still: prompt 7, SB-03 described not attached, SB-06 attached by id and hash as the jewelry reference. A6 Grok video: first_frame from the prepared still; reference mode only if observed.
+
+Source: TBD. Plausible: generated insert from the pay-table still; a supplied close-up of hands on a counter; transformed material. Missing art: nothing new of its own; the frame A still its credits must match; her sleeve waits on the costume call.
+
+
+### S02-2 The counting room (the first creditor)
+
+0. **SHOT.** S02-2, take 1. S02, TXT line 11, the debt words (the card cues the creditor's name later in the same line; section 2). What it is for: the first creditor, told as pressure without a word. The shot plan's S02A.
+1. **SOURCE LINEAGE.** No start frame. Staging: SB-10 `HD-DROP-df1418147b5d` (low, wide, gold, pressure; its boss does not govern). Identity of the boss: BOSS-008 `HD-RETURN-8421e7cfa1a0` (the selected boss). The room: undesigned. Prior takes: none.
+2. **LIGHTING.** Key: warm gold from above the dais, soft. Fill: deep shadow at the room's edges. One cold blue-white accent on the ledgers in the foreground. No change over the shot.
+3. **CAMERA.** Wide and low, the dais centred, symmetrical; locked, or one slow push of a few inches across the hold. The line runs from the boss to camera; the camera sits on it. Off-screen: Dolo (not in this shot); the room's doors.
+4. **CHARACTER DIRECTION.** The boss (BOSS-008's likeness and proportions): seated on the dais, nearly still, head turned away toward frame-left (his character-right); one slow turn of the head toward camera, and the eyes land. Jaw still; no speech. The read: he already knows the man owes him. A lieutenant in the foreground counts, back to camera, out of focus.
+5. **BACKGROUND ACTION.** Ledgers and stacked cargo tokens on long tables; the lieutenant's hands count coins at a steady rate; nothing else moves; no one enters.
+6. **TIME BEATS.**
+
+| Beat | Anchor | Lighting | Camera | Character | Background |
+| --- | --- | --- | --- | --- | --- |
+| b1 | WORD line 11, the debt words, in | gold from above, cold accent on the ledgers | wide, low, locked or the push begins | the boss looks away, frame-left | the lieutenant counts |
+| b2 | GRID, provisional: the next downbeat | unchanged | the push continues | the head turns toward camera | counting continues |
+| b3 | WORD line 11 "Jabbah funding" (the name is sung as the picture leaves; section 2) | unchanged | settles | the eyes land on camera and hold | counting continues |
+
+7. **RESULTING PROMPT (silent still, the start frame).** Landscape 16:9, a low wide shot of a gold-lit counting room. At the centre, on a raised stone dais, a heavy crocodilian crime boss in dark layered robes sits nearly motionless, his head turned away toward the left of the frame. Long tables with open ledgers and stacked cargo tokens run toward the camera; in the near foreground a lean lieutenant counts coins with his back to camera, out of focus. Warm gold light from above the dais, deep shadow at the room's edges, one cold blue-white light on the ledgers. Symmetrical, locked camera. No text, no raised weapons, no second large figure.
+
+**7b. RESULTING PROMPT, the clip (from 2 to 6; one variable against the still: the head's turn).** A low wide shot of a gold-lit counting room, camera locked or pushing in very slowly. A heavy crocodilian crime boss in dark robes sits on a raised dais at the centre, head turned toward the left. Over the clip he turns his head slowly toward the camera until his eyes land on it, and holds. In the near foreground a lieutenant with his back to camera keeps counting coins at a steady rate, out of focus. Warm gold light from above, deep shadow at the edges, one cold light on the ledgers. Nothing else moves; no one enters; no text. The light does not change.
+
+8. to 10. CFA Nova's (8, 9) and Ziggy's (10).
+
+11. **KITCHEN.**
+**11.1** hon; S02; S02-2 take 1. Parent `SCENE_CARD_S02.md` sha256 7ca217c2...; excerpt lines 30 to 39, sha256 00b155fe7f2ef98700d97c247158ed02d413165752be5e5a85ae8251e65309b8. Authority: DECISIONS 9 row 2 (the boss), 10 to 14.
+**11.2 Inputs.** | BOSS-008 `HD-RETURN-8421e7cfa1a0` | grok_return_20261009/received/content/8421e7cfa1a0__BOSS-008_v001.png (1280 by 720) | 8421e7cfa1a012076a33c8182620d28cf6663f068d13c3a321699de030a9078b | 1066466 | identity_reference (the boss: likeness and proportions) | "Selected boss, visible likeness and proportions" | none (not a Dolo part) | keep, likeness 5, scene 5, production, 2026-10-28 |. | SB-10 `HD-DROP-df1418147b5d` | asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-02-bounty-heat/SB-10-crime-boss-dais.jpg | df1418147b5d86de989b65feaa553090af4129d9efed778eff9bc5ef488a373c | 454078 | inspiration (staging) | storyboard | none | none read here |. start_frame missing (STILL PREP from 7). end_frame_review_target none.
+**11.3** SB-10 (staging: low, wide, gold, pressure). Its boss, robes and room do not govern.
+**11.4** Dolo is not in frame; no Dolo lock applies. The boss's lock is the BOSS-008 likeness and proportions; his wardrobe is undecided (dark robes proposed here).
+**11.5** In: WORD line 11, the debt words; out: on the eyes landing, as the creditor's name is sung. Beats 3. Hold 4 s (alternate 6.5). Cue: the fixed master; events proposed, not listened; relationship: score supports a fixed visual action (the head turn is the shot; the words run across it); fixed: the turn and the landing; flexible: where the name falls.
+**11.6** Song: line 11 heard. Speech: none. Ambience: coins counted (proposal). Route audio: recorded, unused. Arc: the verse's first line crowds its creditors, so the picture slows and gives one of them the whole hold; the action leads the words (the eyes land before the name).
+**11.7** Preserve: the boss's likeness and proportions; the dais centred; gold from above, cold on the ledgers; the lieutenant's back. May change: the head's turn. Must not: a second large figure; raised weapons; speech; text; Dolo in the room; the gold reappearing later before the dinner (continuity note for S10). Comfy change class: new action from a still, identity preserved.
+**11.8** Start: the boss looking away frame-left. End: his eyes on camera, held. Cut in on the debt words; out on the eyes landing to S02-3. Context, not action: before, her hand on the counter; after, the puck. Excluded: the shortlist's other boss designs; SB-10's boss.
+**11.9** Missing: the start frame; the room as a set (described here, not designed). Inherited: whatever Ziggy has not reviewed in BOSS-008's lower body and hands (the review covers the visible likeness and proportions); SB-10's staging if copied.
+**11.10** Prompts 7 and 7b. Repeated: crocodilian boss, dark robes, dais centred, head from frame-left to camera; lieutenant foreground back to camera; gold above, cold on ledgers; no text, no weapons raised, no second large figure; camera locked or a slow push. Negatives: text, raised weapons, a second boss, a camera swing, a light change.
+**11.11** Review: likeness against BOSS-008 through the turn; the eyes land and hold; symmetry; the cold accent present; no one enters; native length and audio recorded. Site fields likenessRating (the boss), sceneQualityRating, status.
+**11.12** Writer: done. Operator: STILL PREP route; mode; whether the push is requested or left locked. Ziggy: the boss's wardrobe (dark robes proposed); the push or the lock.
+**Adapter notes (modes).** first_frame from the prepared still on every clip route; ingredients where exposed, with BOSS-008 as identity_reference; A5 Grok still: BOSS-008 attached by id and hash, SB-10 described; A4-S: the edit graph with BOSS-008 as identity_reference and SB-10 as design_reference for staging, if the operator validates the slots.
+
+Source: TBD. Plausible: generated from the selected boss still with a slow move; transformed material if a supplied throne-room clip exists; a mix. Missing art: the room as a set; the boss's wardrobe.
+
+
+### S02-3 The puck
+
+0. **SHOT.** S02-3, take 1. S02, TXT line 11 "ducking" (the card cues the hunters' words; section 2). What it is for: the hunters, announced by their instrument before their face.
+1. **SOURCE LINEAGE.** No start frame. Idea: SB-09 `HD-DROP-af2c7daaf039` (its card art does not govern). The likeness on the puck's face: face A `HD-RETURN-6c8900223ee9`, too small to read any lettering (continuity rule of the card). Prior takes: none.
+2. **LIGHTING.** Key on the glove: the puck's own glow, cool. Practicals: the bar's warm lamps behind, out of focus. The glow moves with the puck.
+3. **CAMERA.** Insert, locked, slight high angle; the puck at frame centre; the hand enters from screen-right (the hunter stands screen-right in S02-4). Off-screen: every face.
+4. **CHARACTER DIRECTION.** A gloved hand (dark, worn glove, no insignia) enters from screen-right, closes on the puck, lifts it; the puck's light slides across the glove; the hand leaves at screen-right. No face. The read: someone is already carrying his picture.
+5. **BACKGROUND ACTION.** None; the bar top still; nothing passes behind.
+6. **TIME BEATS.**
+
+| Beat | Anchor | Lighting | Camera | Character | Background |
+| --- | --- | --- | --- | --- | --- |
+| b1 | WORD line 11 "ducking", in | the puck glows at centre | locked insert | the puck alone | none |
+| b2 | GRID, provisional: the following beat | the glow moves onto the glove | locked | the hand lifts it | none |
+| b3 | WORD line 11 "bounty hunt-ahhhs" (cut to S02-4 on these words) | glow leaving frame | locked | the puck out at screen-right | none |
+
+7. **RESULTING PROMPT (silent still, the start frame).** Landscape 16:9, a slight high-angle insert of a dark bar top. At the centre a small round handheld tracking device lies flat, its face glowing cool blue-white with a tiny portrait of a man, far too small for any detail to read. Warm bar lamps out of focus in the background. The device's glow is the brightest thing in frame. No hands, no faces, no legible text.
+
+**7b. RESULTING PROMPT, the clip (one variable against the still: the hand).** A slight high-angle insert of a dark bar top, camera locked, warm bar lamps out of focus behind. A small round tracking device lies at the centre, its face glowing cool blue-white with a tiny unreadable portrait. A dark worn gloved hand enters from the right edge, closes on the device and lifts it; the glow slides across the glove as it rises; the hand carries it out of frame at the right. No face, no second hand, no legible text. The lamps behind do not change.
+
+8. to 10. CFA Nova's (8, 9) and Ziggy's (10).
+
+11. **KITCHEN.**
+**11.1** hon; S02; S02-3 take 1. Parent `SCENE_CARD_S02.md` sha256 7ca217c2...; excerpt lines 41 to 50, sha256 3c7efe5111fcf64610a05dca3a22f8a83f6da55e15ef8ef06bb98f55c76a8549. Authority: DECISIONS 9 row 2, 10 to 14.
+**11.2 Inputs.** | SB-09 `HD-DROP-af2c7daaf039` | .../series-02-bounty-heat/SB-09-bounty-puck.jpg | af2c7daaf039014c1a60db373598137f3c834b5c4b99d509a1d9ff10277c5e9d | 254191 | inspiration (idea; inspect its hands and invented marks) | storyboard | none | none read here |. | face A `HD-RETURN-6c8900223ee9` | grok_return_20261009/received/content/6c8900223ee9__lf_full.png | 6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae | 1166382 | identity_reference (the portrait on the puck, at a size where nothing reads) | candidate, not approved | BOM identity, user_selected_default | keep 2026-10-09, default look |. start_frame missing. end_frame_review_target none.
+**11.3** SB-09 (idea). Its card art does not govern; its puck shape may inform the prop.
+**11.4** Dolo's locks: not visible (a portrait too small to read); do not force. If any route renders the portrait legibly, the cheek lettering must be correct (cursive "eye" character-right, serif "know" character-left) or the result is scored needs_fixes.
+**11.5** In: WORD line 11 "ducking"; out: on the hunters' words, to S02-4. Beats 3. Hold 1.5 s (alternate 2.5). Cue: fixed master; events proposed; relationship: picture follows the words (the puck leaves on the hunters' words); fixed: the lift and the exit right; flexible: the instant of the lift.
+**11.6** Song: line 11 heard. Speech: none. Ambience: none proposed. Route audio: recorded, unused. Arc: the line hurries through its list, so this is the shortest shot of the warm half; the action lands with the cue.
+**11.7** Preserve: the puck at centre; the glow as the key; the hand from screen-right; the portrait unreadable. May change: the hand's lift (the variable). Must not: a face; a second hand; legible text; an insignia on the glove; a camera move. Comfy change class: new action from a still, prop preserved.
+**11.8** Start: the puck alone, glowing. End: the puck gone at screen-right, the bar top empty. Context, not action: before, the boss's eyes; after, the hunter standing at screen-right. Excluded: SB-09's card art; any hunter's face.
+**11.9** Missing: the start frame; the puck as a prop design. Inherited: a route that renders the portrait large inherits the lettering rule; SB-09's invented marks if copied.
+**11.10** Prompts 7 and 7b. Repeated: round device at centre, cool glow, tiny unreadable portrait; gloved hand from the right, lifts, exits right; warm lamps out of focus; no face, no text; camera locked. Negatives: faces, a second hand, legible text, insignia, a camera move.
+**11.11** Review: hand side; portrait unreadable (or lettering correct); glow travels with the device; no face; native length and audio recorded. Site fields sceneQualityRating, status; likenessRating not applicable unless the portrait reads.
+**11.12** Writer: done. Operator: STILL PREP route; mode; whether a route can hold the portrait unreadable. Ziggy: none beyond the standing choices.
+**Adapter notes (modes).** first_frame on every clip route; A5 Grok still: face A attached by id and hash as the portrait source with the "too small to read" requirement repeated; A4-S: edit graph with face A as identity_reference only if the graph scales the likeness down as asked.
+
+Source: TBD. Plausible: generated insert; a supplied close-up of a hand lifting a small object; a mix. Missing art: the puck as a prop with A's likeness.
+
+
+### S02-4 The watch (the hunter, motionless)
+
+0. **SHOT.** S02-4, take 1. S02, TXT line 11 "bounty hunt-ahhhs" (the card carries no cue; section 2). What it is for: one hunter, one look. The shot plan's S02B; the alley-run panel reassigned to a held watch because running contradicts the bravado.
+1. **SOURCE LINEAGE.** No start frame. Reassigned panel: SB-11 `HD-DROP-ac71d8209a11` (its running figure does not govern; its neon and crowd may inform the bay). The hunter: BOBA-ARMOR-01 (the olive armor concept; helmet geometry and rangefinder unresolved). The bay and the ship exterior: undesigned. Prior takes: none.
+2. **LIGHTING.** Key: hard bay light from high screen-left, cool white. Fill: none; the hunter half in shadow on his character-left (viewer-right) side. Practicals: the bay's work lamps, the ship's running lights far behind at screen-left.
+3. **CAMERA.** Medium wide, locked; the hunter at the right third, the crowd crossing in the near foreground, the parked ship small and soft far behind at screen-left. The line runs from the hunter to the ship, screen-right to screen-left; the camera keeps the near side. Off-screen: the bay's roof; the ship's full silhouette (soft, undecided).
+4. **CHARACTER DIRECTION.** The hunter: completely still, weight even, arms at rest; the helmet faces the crowd (frame-left of him, toward camera-left); one slight turn of the helmet toward the ship, far screen-left, and it holds. Nothing else about him moves. No face (a full helmet). The read: he has all day.
+5. **BACKGROUND ACTION.** Crews and cargo cross the near foreground screen-left to screen-right and back, steady; the ship does not move; no one looks at the hunter.
+6. **TIME BEATS.**
+
+| Beat | Anchor | Lighting | Camera | Character | Background |
+| --- | --- | --- | --- | --- | --- |
+| b1 | WORD line 11 "bounty hunt-ahhhs", in | hard key from high left | locked medium wide | helmet facing the crowd | crews cross |
+| b2 | GRID, provisional: the next downbeat | unchanged | locked | the helmet turns toward the ship, screen-left | crews cross |
+| b3 | WORD line 11 end ("Jabbah funding" sung over the held watch; section 2) | unchanged | locked | the helmet holds on the ship | crews cross |
+
+7. **RESULTING PROMPT (silent still, the start frame).** Landscape 16:9, a medium wide shot of a busy spaceport loading bay under hard cool light from high at the left. Crews and cargo crates fill the near foreground, slightly blurred. At the right third of the frame an armored figure in weathered olive-green plate armor and a full helmet with a narrow dark visor stands completely still, half in shadow, facing toward the left. Far in the background at the left a parked freighter sits small and soft in haze, its shape indistinct. No text, no weapons raised, no face visible.
+
+**7b. RESULTING PROMPT, the clip (one variable against the still: the helmet's turn).** A medium wide shot of a busy spaceport loading bay, camera locked, hard cool light from high at the left. Crews and cargo cross the near foreground from left to right and back at a steady pace. At the right third an armored figure in weathered olive-green plate armor and a full helmet stands completely still, half in shadow. Over the clip only the helmet moves: a slight slow turn toward the far left of the frame, where a parked freighter sits small and indistinct in haze, and it holds there. The body does not move. No one looks at him. No text, no raised weapons. The light does not change.
+
+8. to 10. CFA Nova's (8, 9) and Ziggy's (10).
+
+11. **KITCHEN.**
+**11.1** hon; S02; S02-4 take 1. Parent `SCENE_CARD_S02.md` sha256 7ca217c2...; excerpt lines 52 to 61, sha256 27f840bdb29ca3a593ffc1ddd4987a09c56781539e929cda93199ef19a3c7e09. Authority: DECISIONS 9 row 2, 10 to 14.
+**11.2 Inputs.** | BOBA-ARMOR-01 | `docs/notes/explorable_world/comfy/references/hon-dolo-stills-51-95/cast/BOBA-EXP-01-olive-armor.jpg` | 9bf5548a5bce0276cf521078b88a46a7df75982872a190853f4190fe9469e969 | at dispatch | design_reference (the armor; the helmet's geometry unresolved) | available_candidate | none | none; assigned to the hunter role by DECISIONS 9 row 2 |. | SB-11 `HD-DROP-ac71d8209a11` | .../series-02-bounty-heat/SB-11-neon-alley-run.jpg | ac71d8209a11427f2aafa7ff0e04cc88992e9fdb918ae6cea8fa2ac55fc6f3ae | 316542 | inspiration (repurposed; neon and crowd only) | storyboard | none | none read here |. start_frame missing. end_frame_review_target none.
+**11.3** SB-11 (repurposed). Its running Dolo does not govern; the shot is a held watch.
+**11.4** Dolo not in frame. The hunter's lock: the olive armor concept as a design reference; no production reference accepted; the ship far behind is deliberately indistinct because its exterior is undecided.
+**11.5** In: WORD line 11 "bounty hunt-ahhhs"; out: on the helmet's hold, to S02-5. Beats 3. Hold 2.5 s (alternate 4). Cue: fixed master; events proposed; relationship: score supports a fixed visual action (one turn, held); fixed: the stillness and the single turn; flexible: when inside the hold the turn begins.
+**11.6** Song: line 11's end heard. Speech: none. Ambience: the bay's crews (proposal). Route audio: recorded, unused. Arc: the list ends on the creditor's name as the picture holds on a man who is not hurrying, so the stillness is the point; the action leads the words.
+**11.7** Preserve: the hunter's stillness; the helmet as the only moving part; his place at screen-right; the hard key from high left; the ship indistinct. May change: the helmet's turn. Must not: a visible face; a step or gesture; raised weapons; a readable ship silhouette; a camera move; text. Comfy change class: new action from a still, identity preserved.
+**11.8** Start: helmet toward the crowd. End: helmet toward the ship, held. Context, not action: before, the puck leaving screen-right; after, the light crossing the neck. Excluded: SB-11's run; any second hunter.
+**11.9** Missing: the start frame; the bay as a set; the ship exterior (indistinct by design until the silhouette round). Inherited: the concept's helmet geometry and rangefinder, unresolved; a route that sharpens the ship invents a silhouette, scored as an inherited gap, not a design.
+**11.10** Prompts 7 and 7b. Repeated: armored figure at the right third, olive armor, full helmet, completely still; only the helmet turns, toward the far left; crews cross the foreground; ship far left, small, indistinct; hard cool light from high left; no face, no text, no raised weapons; camera locked. Negatives: a face, a step, raised weapons, a sharp ship, a camera move, text.
+**11.11** Review: stillness of the body; one helmet turn only; crowd crosses, no one looks; ship indistinct; armor against the concept; native length and audio recorded. Site fields sceneQualityRating, status; likenessRating against BOBA-ARMOR-01 for the armor only.
+**11.12** Writer: done. Operator: STILL PREP route; mode. Ziggy: the helmet's geometry (one identity round, as the card says) before this shot's still is accepted.
+**Adapter notes (modes).** first_frame on every clip route; ingredients where exposed with BOBA-ARMOR-01 as design_reference; A5 Grok still: the concept attached by hash as design, SB-11 described for the bay's feel; A4-S: edit graph with the concept as design_reference.
+
+Source: TBD. Plausible: generated from an accepted hunter still over a bay set; a supplied clip of a motionless armored figure at the edge of a crowd; transformed material. Missing art: the hunter's accepted design; the bay; the ship exterior.
+
+
+### S02-5 My name (the neck blaster)
+
+0. **SHOT.** S02-5, take 1. S02, TXT line 12 ("not safe ta play with my name"). What it is for: the tattoo as a threat, in one catch-light.
+1. **SOURCE LINEAGE.** No start frame. Idea: SB-12 `HD-DROP-e5e5bb2eb7ee` (neck blaster detail; not scale or placement acceptance). Placement candidate: `lf_neck.png` `HD-RETURN-7fe77eadd174` (BOM neck_placement, no recorded selection; keep at production stage with no blanket approval). Skin: face A. Prior takes: none.
+2. **LIGHTING.** Key: frame A's warm amber practical from front-left (viewer-left). One moving cold blue-white light (a passing running light or a door opening off-screen) crossing the skin from screen-right to screen-left over the hold, then gone. The room dim.
+3. **CAMERA.** Macro insert, locked; the character-left side of the neck fills the frame (viewer-right side when he faces camera); the jawline at the top edge; the jacket collar and open shirt collar at the lower edge; the face out of frame above.
+4. **CHARACTER DIRECTION.** Jaw still; a slow breath; nothing else. No mouth. The smoke of the tattoo seems to move only because the light moves. The read: the warning is written on him.
+5. **BACKGROUND ACTION.** None but the light.
+6. **TIME BEATS.**
+
+| Beat | Anchor | Lighting | Camera | Character | Background |
+| --- | --- | --- | --- | --- | --- |
+| b1 | WORD line 12 "not safe", in | warm key only; dark | locked macro | still | none |
+| b2 | WORD line 12 "my name" (first) | the cold light crosses right to left | locked | a slow breath | none |
+| b3 | WORD line 12 "my name" (second) | dark again | locked | still | none |
+
+7. **RESULTING PROMPT (silent still, the start frame; the card's prompt, unchanged).** Landscape 16:9, macro close-up of the character-left side of a man's neck (his own left, the side that appears at the viewer's right when he faces camera), from his collarbone to his jawline, the face out of frame above. Warm brown skin, a small tattoo of a smoking blaster pistol with a thin trail of smoke rising toward the jaw, fine linework. A dark brown distressed leather jacket collar at the frame's lower edge, an off-white shirt collar open beneath it. Warm amber practical light from the left; a single cold blue-white light passing across the skin from the right. Shallow focus on the tattoo. No text, no second person, no jewelry in frame.
+
+**7b. RESULTING PROMPT, the clip (one variable against the still: the passing light).** Macro close-up of the left side of a man's neck, from collarbone to jawline, the face out of frame above, camera locked, shallow focus on a small fine-line tattoo of a smoking pistol with a thin smoke trail rising toward the jaw. Warm brown skin; a dark brown leather jacket collar and an open off-white shirt collar at the bottom edge. Steady warm amber light from the left. Over the clip one cold blue-white light sweeps slowly across the skin from the right edge to the left edge and is gone, so the frame begins and ends dark except for the warm key. The neck is still but for one slow breath. No text, no second person, no jewelry, no hand.
+
+8. to 10. CFA Nova's (8, 9) and Ziggy's (10).
+
+11. **KITCHEN.**
+**11.1** hon; S02; S02-5 take 1. Parent `SCENE_CARD_S02.md` sha256 7ca217c2...; excerpt lines 63 to 72, sha256 51eeb98d871d7942c67bbccb6c1f2c47a25f67d19af67c17d3f1240489dde4fd. Authority: DECISIONS 10 to 14; the head standard.
+**11.2 Inputs.** | `HD-RETURN-7fe77eadd174` | grok_return_20261009/received/content/7fe77eadd174__lf_neck.png (440 by 390) | 7fe77eadd174a629216f2c7b36748fd7e1aebaabeb4e6e2acb51df9d6e88bf94 | 256504 | design_reference (the tattoo's placement and side; not its final artwork) | candidate, not approved | BOM neck_placement, no recorded selection | keep, production stage, no blanket approval, 2026-10-09 |. | face A `HD-RETURN-6c8900223ee9` | as above | 6c8900223ee9... | 1166382 | identity_reference (the skin) | candidate | BOM identity, user_selected_default | keep 2026-10-09 |. | SB-12 `HD-DROP-e5e5bb2eb7ee` | .../series-02-bounty-heat/SB-12-neck-blaster-cu.jpg | e5e5bb2eb7eece96f131d8280e87ed422c3378574e5c181ab722f54ec6d1164b | 308854 | inspiration (idea) | storyboard | none | none read here |. start_frame missing. end_frame_review_target none.
+**11.3** SB-12 (idea). Not scale or placement acceptance.
+**11.4** Visible: the neck blaster, character-left/viewer-right, smoke rising toward the jaw; the jacket and shirt collars. Not visible, do not force: the mouth, the cheeks, the nostril and ear jewelry, the chest ship, the wrist.
+**11.5** In: WORD line 12 "not safe"; out: after the light has crossed, on the second "my name", to S02-6. Beats 3. Hold 1.5 s (alternate 2.5). Cue: fixed master; events proposed; relationship: timing may move together (the light's crossing and the repeated words are one gesture); fixed: dark to dark, one crossing; flexible: the crossing's speed.
+**11.6** Song: line 12 heard. Speech: none. Ambience: none. Route audio: recorded, unused. Arc: the line is a warning said twice, so one light crosses once and the frame returns to dark; the action lands with the cue.
+**11.7** Preserve: the tattoo's side, linework and smoke direction; the warm key from the left; the collars at the bottom edge; the stillness. May change: the passing light. Must not: a mouth; a hand; jewelry in frame; a mirrored placement; extra ink; a camera move. Comfy change class: localized edit (a light pass) on a preserved still.
+**11.8** Start: dark but for the warm key. End: dark again, after the crossing. Context, not action: before, the helmet's hold; after, the man in the cockpit, same side, wider. Excluded: S02-6's medium scale; any other tattoo.
+**11.9** Missing: the start frame; an accepted neck artwork (the placement candidate is placement, not final art). Inherited: whatever the candidate's linework is, the result inherits it; SB-12's scale if copied.
+**11.10** Prompts 7 and 7b. Repeated: left side of the neck (viewer's right), collarbone to jaw, face out of frame; small fine-line smoking pistol tattoo, smoke toward the jaw; warm light from the left; one cold light crossing right to left; no text, no jewelry, no hand; camera locked. Negatives: a mouth, a hand, jewelry, mirrored placement, extra ink, a camera move.
+**11.11** Review: side correct; smoke direction; linework matches the placement candidate; one crossing, dark to dark; no morph on the skin. Site fields likenessRating (the tattoo against the candidate), sceneQualityRating, status.
+**11.12** Writer: done. Operator: STILL PREP route; mode; whether a route can do a light pass on a still (edit mode) rather than regenerate. Ziggy: the neck artwork's acceptance, which the card names as this shot's first proof.
+**Adapter notes (modes).** edit mode is the natural fit (a light pass over a preserved still) where a route exposes it; otherwise first_frame from the prepared still; A4-S: edit graph with face A as identity_reference and the placement candidate as design_reference; A5 Grok still: the candidate attached by hash as placement, SB-12 described.
+
+Source: TBD. Plausible: generated macro from an accepted neck reference; a transformed still with a light pass; a supplied clip the least likely kind. Missing art: an accepted neck artwork.
+
+
+### S02-6 The captain portrait (frame B)
+
+0. **SHOT.** S02-6, take 1. S02, TXT line 14 (the formal line and the two names; which words are lead and which are doubled is the alignment lane's call). What it is for: the boast that names him; the verse's lip-sync anchor. The shot plan's S02C.
+1. **SOURCE LINEAGE.** No start frame. The cockpit idea: COCKPIT-R2-01 `HD-DROP-14f8eb9979b5` (needs fixes: grill and neck). Staging: SB-14 `HD-DROP-d36a3316372d` (its face and tattoo drift do not govern). Concept: SB-06 `HD-DROP-b18c4a123579` (the scoundrel forearm, and the wrist jewelry lock). Identity: face A; mouth B (dental); chest placement candidate `lf_chest.png`; neck placement candidate `lf_neck.png`; cheek lettering gold standard `HD-RETURN-9ace849985b4`. Prior takes: none. The same still serves S07-3.
+2. **LIGHTING.** Key: warm cockpit practicals from front-left (viewer-left) on the body. A touch of cool blue-white from the display at screen-right on the face's character-left side (viewer-right). The scheme S07 keeps. No change over the shot.
+3. **CAMERA.** Medium close-up, locked, slightly low to give him the dignity he is claiming; the pilot seat and the throttle in frame; the unlettered display's edge at screen-right; the copilot seat's edge at screen-left, its occupant out of frame (Chewie is there, never shown). The line runs from him to camera; on the look it swings to screen-left.
+4. **CHARACTER DIRECTION.** Dolo in the pilot seat, leaning back, chin up; the character-left hand (viewer-right) on the armrest well clear of the face; the character-right hand (viewer-left), the chain and band on that wrist, resting on the throttle at rest. He sings the formal line to camera, lips parting on the sung words, mouth external-off (the lip-sync is this shot's layer and is dispatched only when timing is accepted); on the second name he looks screen-left (his character-right, viewer-left, level; the copilot seat is on that side) for agreement he does not get, and holds a beat. The read: exaggerated captainly dignity, played straight.
+5. **BACKGROUND ACTION.** The display's light steady; nothing passes the window; the copilot seat still.
+6. **TIME BEATS.**
+
+| Beat | Anchor | Lighting | Camera | Character | Background |
+| --- | --- | --- | --- | --- | --- |
+| b1 | WORD line 14 "If I'm being formal", in | warm key, cool from the right | locked, slightly low | the lean back, chin up | display steady |
+| b2 | WORD line 14, the first name (lead on his mouth) | unchanged | locked | sings to camera | steady |
+| b3 | WORD line 14, the second name | unchanged | locked | the look screen-left to the copilot seat | steady |
+| b4 | WORD line 14, the trailing names (ad-lib; not mouthed) | unchanged | locked | holds the look; the mouth closes | steady |
+
+7. **RESULTING PROMPT (silent still, the start frame; lips closed, since the still carries no words).** Landscape 16:9, a medium close-up from slightly below of a brown-skinned man in the pilot seat of a worn freighter cockpit, leaning back with his chin up and a restrained closed-mouth half-smile. He wears a dark brown distressed leather jacket over an open off-white shirt; a small upright tattoo of a spaceship shows on his chest where the shirt opens. One hand rests on the armrest well away from his face; the other rests on a throttle lever, a gold chain and a dark band on that wrist. Fine tattooed lettering on both cheeks: a cursive word "eye" on his right cheek, a serif word "know" on his left cheek; a small smoking-pistol tattoo on the left side of his neck. One small hoop in each nostril, a hoop and a crystal stud in one ear. Warm practical light from the front-left; a cool blue-white glow from an unlettered display at the right edge of frame. The edge of an empty-looking copilot seat at the left edge. No text on any display, no second person visible.
+
+**7b. RESULTING PROMPT, the clip.** Not yet. The clip is the lip-sync layer (the sung words on his mouth), which needs accepted timing and the lip-sync lane proven; neither exists. What can be made now: the still (7), and a silent clip of the look screen-left with the mouth closed, as a motion test only, if Ziggy wants one (not proposed as the shot).
+
+8. to 10. CFA Nova's (8, 9) and Ziggy's (10).
+
+11. **KITCHEN.**
+**11.1** hon; S02; S02-6 take 1. Parent `SCENE_CARD_S02.md` sha256 7ca217c2...; excerpt lines 74 to 84, sha256 9b06f99d6648cfa762048fe6baac52b45331d674b0e09db7851b07d686b97dd3. Authority: DECISIONS 10 to 14; `SCENE_CARD_S07.md` S07-3 (the shared still).
+**11.2 Inputs.** | face A `HD-RETURN-6c8900223ee9` | grok_return_20261009/received/content/6c8900223ee9__lf_full.png | 6c8900223ee9... | 1166382 | identity_reference (face) | candidate | BOM identity, user_selected_default | keep 2026-10-09 |. | mouth B `HD-B-91ef00348229` | grok_drop_b_20261009/received/content/91ef00348229__GRILL-LOCK-4GOLD-v2.jpg | 91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86 | 295186 | identity_reference (dental, mouth only; ignore its cropped nose jewelry) | candidate | BOM dental_mouth_only, current_scoped_dental_reference | keep, likeness 5, production, detail, 2026-10-10 |. | SB-06 `HD-DROP-b18c4a123579` | .../series-01-cold-open/SB-06-scoundrel-detail.jpg | b18c4a123579... | 308775 | design_reference (wrist jewelry only) | storyboard | BOM visible_jewelry_only | keep, likeness 5, scene 4, production, 2026-10-14 |. | `HD-RETURN-7b156019ddf8` | grok_return_20261009/received/content/7b156019ddf8__lf_chest.png (960 by 330) | 7b156019ddf8b854a68a3549c80aede545384ebc12a6d7403bb7b17075e11ebc | 255365 | design_reference (chest ship placement) | candidate | BOM chest_placement, no recorded selection | keep, production stage, no blanket approval, 2026-10-09 |. | `HD-RETURN-7fe77eadd174` | lf_neck.png, as S02-5 | 7fe77eadd174... | 256504 | design_reference (neck placement) | candidate | BOM neck_placement, none | keep 2026-10-09 |. | `HD-RETURN-9ace849985b4` | path: the BOM carries the hash; the catalog row was not located by id in this read; the operator binds by hash | 9ace849985b49dfec444a2171dc85854076e024352aaae8d1c8f53ef0a69daef | at dispatch | design_reference (the cheek lettering, the gold standard) | not located | BOM cheek_detail, user_selected_gold_standard_component | keep, production, detail, 2026-10-09 |. | COCKPIT-R2-01 `HD-DROP-14f8eb9979b5` | asset_review_20261007/needs_review/hon-dolo-cockpit-swap-round2/HD-COCKPIT-R2-01.jpg | 14f8eb9979b5217ece058c612eb04fcddee5870f4910eacf2d7112ed2b38ee9b | at dispatch | inspiration (the cockpit idea; its grill and neck are wrong and do not govern) | needs_review | none | needs_fixes, preliminary, 2026-10-09 |. | SB-14 `HD-DROP-d36a3316372d` | .../series-03-kessel-run/SB-14-cockpit-captain.jpg | d36a3316372d3685b17b99249b1b4f27539ea602a57d905f4dc6bc89250c392e | 355129 | inspiration (staging) | storyboard | none | none read here |. start_frame missing (the shared cockpit still, STILL PREP, the single most important new frame per STORYBOARD_UPDATE section 4 item 1). end_frame_review_target none.
+**11.3** SB-14 (staging), SB-06 (concept), COCKPIT-R2-01 (the kept pilot idea). None governs the face, the teeth or the tattoos.
+**11.4** Visible: both cheeks' lettering (cursive "eye" character-right/viewer-left; serif "know" character-left/viewer-right); the neck blaster character-left/viewer-right; the mouth external-off when the lips part; nostril hoops, ear hoop and stud; the chest ship where the shirt opens; the chain and band on the character-right wrist (viewer-left), the throttle hand; no forehead dice; the opening outfit. Not visible, do not force: the iced grill (later); the full forearm artwork of SB-06.
+**11.5** In: WORD line 14 "If I'm being formal"; out: on the held look, to S02-7. Beats 4. Hold 6.5 s (alternate 10.5). Cue: fixed master; events proposed; relationship: picture follows the words (the mouth is the words); fixed: the look on the second name; flexible: nothing in the mouth until alignment lands (the lip-sync layer waits).
+**11.6** Song: line 14 heard; the lead words are mouthed in the eventual lip-sync clip and nowhere else; the trailing names are ad-lib and never mouthed. Speech: none beyond the sung words. Ambience: cockpit hum (proposal). Route audio: recorded, unused. Arc: the boast is formal and the music is not, so the dignity is played straight while the beat keeps moving under him; the action lands with the words.
+**11.7** Preserve: every lock in 11.4; the lean, the hands clear of the face; the cool from the right, warm from the left; the copilot seat empty of any visible occupant; the locked low camera. May change (the eventual take's variable): the sung words on the mouth. Must not: a visible Chewie; a forehead dice; the iced grill; display text; a camera move; any franchise or film name in provider-facing text. Comfy change class: replace performance on a preserved still (the lip-sync lane, unproven).
+**11.8** Start: the lean back, chin up, mouth closed. End: the look screen-left, held. Context, not action: before, the neck macro; after, the club from the floor. Excluded: S07-3 (the same still, a different action); any shot with Chewie visible.
+**11.9** Missing: the shared cockpit still (STILL PREP); accepted timing for the words; the lip-sync lane's proof. Inherited: COCKPIT-R2-01's grill and neck errors if the still is made from it rather than corrected; the chest and neck placements are candidates, so a result inherits their unreviewed parts.
+**11.10** Prompt 7 (still). Repeated: slightly low medium close-up; pilot seat, throttle, display edge right, copilot seat edge left and empty; jacket over open shirt, chest ship; cheek lettering "eye" right cheek, "know" left cheek; pistol tattoo left neck; chain and band on the throttle wrist; hoops and stud; closed-mouth half-smile; warm left, cool right; no display text, no second person. Negatives: a second person, display text, dice on the forehead, an iced grill, a camera move.
+**11.11** Review: every lock in 11.4 at medium scale; the cheek words legible and on the right cheeks; the teeth map if the lips part; hands clear of the face; the cool light from the right. Site fields likenessRating (against face A and mouth B), sceneQualityRating, status. Hidden: the forearm artwork under the sleeve, occluded, unknown.
+**11.12** Writer: done for the still; the clip waits on timing. Operator: STILL PREP route for the shared cockpit still (S07-3's repair); the lip-sync lane's proof is separate. Ziggy: acceptance of the cockpit still; the go for any lip-sync test, later.
+**Adapter notes (modes).** The still is the deliverable today: A4-S with face A and mouth B as identity_reference and SB-06, chest and neck candidates as design_reference, if the graph's slots allow; A5 Grok still with the same by id and hash; image modes of A2 and A3 where exposed. No clip route is bound until timing is accepted; edit mode for a performance replacement is the lane the record says is unproven.
+
+Source: TBD. Plausible: generated lip-sync over an accepted cockpit still; a mix (supplied cockpit plate, generated performance); a supplied performance clip of Ziggy himself if one exists. Missing art: the accepted cockpit still with Dolo seated (shared with S07-3).
+
+
+### S02-7 The club cut-in
+
+0. **SHOT.** S02-7, take 1. S02, TXT line 14's trailing names (the ad-lib tail; or GRID, the last bar of the line). What it is for: the same boast, thrown to a room; one beat, so the portrait does not carry the whole verse. A new insert proposed by pass 001.
+1. **SOURCE LINEAGE.** No start frame. Idea: SB-08 `HD-DROP-e1250a0bce91` (a close-up; this is a wide; its mouth, hair, marks and neck ink drift). Continuity: SB-05 `HD-DROP-6e8eb6a956c9` (S01's cantina wide, proposed; the booth's geography). Chewy: DJB-01 `HD-DROP-ca406436d384` and DJB-02 `HD-DROP-b5a646eb5662`. Bouncer: BOSS-006 rhino `HD-RETURN-cafa39484145`, story intent, candidate. Bartender: BOSS-009 toad `HD-RETURN-80d3ca6a6858`, optional, candidate. The club: undesigned. Prior takes: none.
+2. **LIGHTING.** Club colour: one hard warm key on Dolo from high screen-right; the mixer's small lights on Chewy's hands and headphones at screen-left; the entrance a cold slot of light in the deep background at screen-right. Crowd backs in the foreground as dark shapes.
+3. **CAMERA.** Wide from the floor looking up at the booth; a handheld feel but no swing, a slow drift of a few inches screen-left over the hold. Dolo at the booth's edge, centre-right; Chewy at the decks behind him, screen-left; the bouncer a large shape at the entrance, deep background screen-right. The mouth is far enough from camera to be a shape, not a lip-sync.
+4. **CHARACTER DIRECTION.** Dolo: at the booth's edge, mid-boast, one arm (character-left, viewer-right) going out over the crowd; the body leans into it; the mouth moves as a shape only. Chewy: head down over the mixer, hands working, headphones on; he does not look up. The bouncer: a still shape. The read: the room gives him the agreement the copilot did not.
+5. **BACKGROUND ACTION.** The crowd's backs sway and lift on the beat; a few arms rise at the end; nothing enters from the sides; the bouncer does not move.
+6. **TIME BEATS.**
+
+| Beat | Anchor | Lighting | Camera | Character | Background |
+| --- | --- | --- | --- | --- | --- |
+| b1 | WORD line 14, the trailing names, in (or GRID, the line's last bar) | hard key on him, mixer lights left | wide from the floor, drift begins | the arm goes out | crowd sways |
+| b2 | GRID, provisional: the following beat | unchanged | drifting | he holds the pose; Chewy's head down | arms begin to rise |
+| b3 | WORD line 15 "And one thing i know", the cut to the warship on these words | unchanged | settles | unchanged | the crowd's reaction, half a beat |
+
+7. **RESULTING PROMPT (silent still, the start frame).** Landscape 16:9, a wide shot from a crowded club floor looking up at a raised DJ booth. At the booth's edge, centre-right, a brown-skinned man in a dark brown distressed leather jacket over an open off-white shirt stands mid-shout with one arm thrust out over the crowd, his face small at this distance. Behind him at the left of the booth a large dark gorilla-like beast with black over-ear headphones, a gold neck chain and a bullet bandolier bends over a mixer dotted with small lights. The backs and raised hands of a packed crowd fill the foreground as dark shapes. Far in the background at the right a very large doorman's silhouette stands in a cold slot of light at the entrance. One hard warm key on the man from high right; club colour elsewhere. No legible text, no second performer.
+
+**7b. RESULTING PROMPT, the clip (one variable against the still: the arm and the room).** A wide shot from a packed club floor looking up at a raised DJ booth, the camera drifting a few inches to the left over the clip with a handheld feel and no swing. A brown-skinned man in a dark leather jacket over an open off-white shirt stands at the booth's edge, centre-right, and thrusts one arm out over the crowd as he shouts, his face small at this distance. Behind him at the left a large dark gorilla-like beast with black headphones, a gold chain and a bullet bandolier keeps his head down over a mixer with small lights, hands working. The crowd's backs sway and a few arms rise toward the end. A very large doorman's silhouette stands still at the far entrance in cold light at the right. One hard warm key on the man from high right. No legible text, no second performer, no one entering from the sides.
+
+8. to 10. CFA Nova's (8, 9) and Ziggy's (10).
+
+11. **KITCHEN.**
+**11.1** hon; S02; S02-7 take 1. Parent `SCENE_CARD_S02.md` sha256 7ca217c2...; excerpt lines 86 to 95, sha256 363b7ca4be5fa2e3c1ccea573be01c30802fedd9aa00581028f2686f2e04659d. Authority: DECISIONS 9 row 5 (Chewy), 10 to 14.
+**11.2 Inputs.** | DJB-01 `HD-DROP-ca406436d384` | asset_review_20261007/reference_candidates/dj-beast-ref-sheet/DJB-01-chest-up.jpg | ca406436d3845cc5d8753193734ceb2bee92ec5c2cbb40ebe14a34bfaf74befa | at dispatch | identity_reference (Chewy, chest up) | reference_candidates | none | established reference, DECISIONS 9 row 5 |. | DJB-02 `HD-DROP-b5a646eb5662` | .../dj-beast-ref-sheet/DJB-02-full-front.jpg | b5a646eb5662bcfd8b017bb7feac467867aa42e737475d54d3085ac47ffa2249 | at dispatch | identity_reference (Chewy, full front, lean build) | reference_candidates | none | as above |. | face A `HD-RETURN-6c8900223ee9` | as above | 6c8900223ee9... | 1166382 | identity_reference (Dolo, small in frame) | candidate | BOM identity | keep |. | BOSS-006 `HD-RETURN-cafa39484145` | grok_return_20261009/received/content/cafa39484145__BOSS-006_v001.png | cafa39484145fb8dda67c9684134d6d6449f3c5cb66ac4033e27a8f79a28090a | 890548 | design_reference (the bouncer's shape, story intent) | candidate, not approved | none | none read here |. | SB-08 `HD-DROP-e1250a0bce91` | .../series-02-bounty-heat/SB-08-debt-flex-cu.jpg | e1250a0bce91bcd16078f69452504d621e799ddbde5c5e743c7d59a2dd64c4c3 | 224125 | inspiration (idea) | storyboard | none | none read here |. | SB-05 `HD-DROP-6e8eb6a956c9` | .../series-01-cold-open/SB-05-cantina-walk.jpg | 6e8eb6a956c9146a0adc3f1c8c3c71db7d0cc34bbf646f4d681cd6e54ae24428 | 271645 | inspiration (continuity: the booth's place in the room) | storyboard | none | none read here |. Bartender BOSS-009 `HD-RETURN-80d3ca6a6858` (80d3ca6a6858ee40bf39f6e4d224121ab1c96b498f10a3de18f1d8b6f115debb, 1247159): optional, not bound. start_frame missing. end_frame_review_target none.
+**11.3** SB-08 (idea), SB-05 (continuity). SB-08's drift does not govern.
+**11.4** Dolo at this distance: the outfit and the arm; the face too small for the lettering to read; do not force the mouth or the jewelry. Chewy: the DJB sheet's headphones, chain and bandolier, lean build. The bouncer: a shape only.
+**11.5** In: WORD line 14's trailing names, or GRID the last bar of the line; out: on "And one thing i know" (line 15), to S02-8. Beats 3. Hold 2.5 s (alternate 4). Cue: fixed master; events proposed; relationship: timing may move together (the room moves on the beat); fixed: the arm out and the crowd's reaction; flexible: the drift and the swell.
+**11.6** Song: the ad-lib tail of line 14 heard; nothing mouthed (the mouth is a shape). Speech: none. Ambience: the room (proposal; the master carries the music). Route audio: recorded, unused. Arc: the names are thrown away as echoes, so the room answers them with its arms; the action follows the words by half a beat.
+**11.7** Preserve: Chewy screen-left at the decks, head down; Dolo centre-right at the booth's edge; the bouncer a shape far right; the hard key from high right; the drift's smallness. May change: the arm and the crowd (the variable). Must not: a lip-sync; Chewy looking up; a second performer; legible text; a camera swing; a cut inside the shot. Comfy change class: new action from a still, two identities preserved.
+**11.8** Start: the arm beginning to go out. End: the crowd's reaction, half a beat. Context, not action: before, the look screen-left in the cockpit; after, the warship (the hardest cut, club colour to cold grey). Excluded: S04B, S06A and S12A, which return to the booth from its own side.
+**11.9** Missing: the start frame; the club as a set; a frame of Chewy in this room; the bouncer and bartender as accepted designs. Inherited: the DJB sheet's build if a route stretches it; SB-05's room if copied (it is the other axis).
+**11.10** Prompts 7 and 7b. Repeated: wide from the floor, booth raised; man centre-right, arm out, face small; beast at the left over a mixer, headphones, chain, bandolier, head down; doorman's silhouette far right in cold light; crowd backs in the foreground; hard warm key from high right; no legible text, no second performer; a drift of a few inches, no swing. Negatives: text, a second performer, a camera swing, a cut, the beast looking up.
+**11.11** Review: Chewy against the DJB sheet; Dolo's outfit and arm side; the bouncer still; the drift small; the crowd's reaction present; native length and audio recorded. Site fields likenessRating (Chewy), sceneQualityRating, status.
+**11.12** Writer: done. Operator: STILL PREP route; mode (ingredients would carry two identities where exposed). Ziggy: the bouncer as the rhino design or another shape.
+**Adapter notes (modes).** first_frame on every clip route; ingredients where exposed with DJB-01/02 and face A as identity_reference and BOSS-006 as design_reference; A5 Grok still with the same by id and hash, SB-08 and SB-05 described; A4-S: edit graph if its slots take two identities, else two preparation steps.
+
+Source: TBD. Plausible: generated wide from accepted stills; a supplied club crowd clip with the booth composited; a mix. Missing art: the club; Chewy in the room; the bouncer and bartender.
+
+
+### S02-8 The warship
+
+0. **SHOT.** S02-8, take 1. S02, TXT line 15 ("imperial"). What it is for: the second creditor's reach, the one he pretends not to fear; the first flight exterior in the piece. New coverage per the card.
+1. **SOURCE LINEAGE.** No start frame. No panel. A writer-batch graded frame exists for this shot (SB-W04-S02-8-warship-v002.jpg, graded 4 as staging on 2026-10-12 in `CLAUDE_GRADES_20261012.md`): grey hull filling the frame, hangar bays lit, a freighter crossing toward screen-right about one sixth of the frame height; its path and hash were not located in this read, and it is bound only if the operator finds it by hash. The warship and the ship exterior: undesigned. Prior takes: none.
+2. **LIGHTING.** Key: cold starlight from high screen-left, hard, on the hull's plating. Fill: none. Practicals: the hangar bays' warm light, the only warmth in frame; the small ship's engine glow at the end.
+3. **CAMERA.** Wide, locked or a slow drift screen-right; the hull fills the frame edge to edge as texture; no horizon. The small ship enters from frame-bottom-left and crosses toward screen-right. Off-screen: the warship's ends; any planet.
+4. **CHARACTER DIRECTION.** None (no character in frame).
+5. **BACKGROUND ACTION.** The hull moves slowly screen-left to screen-right (or the camera drifts); in the last beat the small battered freighter enters from bottom-left and crosses the hull toward screen-right, small, indistinct in silhouette, engine glow trailing left. No weapons fire; nothing else moves.
+6. **TIME BEATS.**
+
+| Beat | Anchor | Lighting | Camera | Character | Background |
+| --- | --- | --- | --- | --- | --- |
+| b1 | WORD line 15 "imperial", in | cold key, bays warm | wide, locked or drifting | none | the hull alone, moving slowly right |
+| b2 | GRID, provisional: the next downbeat | unchanged | unchanged | none | the hull continues |
+| b3 | WORD line 15 "suck a fat" into "oh no" | the engine glow appears | unchanged | none | the small ship enters bottom-left, crosses right |
+
+7. **RESULTING PROMPT (silent still, the start frame).** Landscape 16:9, a wide shot in deep space of the flank of an enormous warship, its cold grey armored hull filling the frame from edge to edge with no horizon, plating and ribs in hard cold starlight from the upper left, a row of open hangar bays glowing warm amber as the only warm light. Fine detail on the hull. No small ships, no weapons fire, no text, no planet.
+
+**7b. RESULTING PROMPT, the clip (one variable against the still: the small ship's crossing).** A wide locked shot in deep space of the flank of an enormous cold grey warship filling the frame edge to edge, its plating lit by hard starlight from the upper left, a row of hangar bays glowing warm amber. The hull slides slowly from left to right across the clip. In the final moment a small battered freighter, indistinct in silhouette, enters from the bottom-left corner and crosses the hull toward the right, engine glow trailing behind it to the left. No weapons fire, no text, nothing else moves.
+
+8. to 10. CFA Nova's (8, 9) and Ziggy's (10).
+
+11. **KITCHEN.**
+**11.1** hon; S02; S02-8 take 1. Parent `SCENE_CARD_S02.md` sha256 7ca217c2...; excerpt lines 97 to 106, sha256 57c45535486df5a2faac6f85119029b2591ca81c7b1719a18d71f5012fc94e07. Authority: DECISIONS 8 (source TBD; attribution unverified), 10 to 14.
+**11.2 Inputs.** | SB-W04-S02-8-warship-v002.jpg | writer batch of 2026-10-12, path and hash not located in this read | at dispatch | at dispatch | inspiration (staging; the freighter's silhouette in it is not the ship design) | graded 4, staging only (CLAUDE_GRADES_20261012.md) | none | none |. No identity input. start_frame missing (STILL PREP from 7). end_frame_review_target none.
+**11.3** None on the board. SB-13 is the ship's differing exterior concept and is not a reference for this shot.
+**11.4** No character. The ship's lock: none exists; its silhouette is kept indistinct by design.
+**11.5** In: WORD line 15 "imperial"; out: on the crossing, to S02-9 inside the same vector. Beats 3. Hold 4 s (alternate 6.5). Cue: fixed master; events proposed; relationship: score supports a fixed visual action (the slow pass; the crossing at the end); fixed: the direction of travel screen-right; flexible: when the small ship enters.
+**11.6** Song: line 15 heard. Speech: none. Ambience: none (space). Route audio: recorded, unused. Arc: the line sneers and then catches itself ("oh no"), so the picture is cold scale and then the small ship appears exactly on the catch; the action lands with the cue.
+**11.7** Preserve: the hull edge to edge; cold key, warm bays; travel screen-right; the ship small and indistinct. May change: the crossing. Must not: weapons fire; a readable ship design; a planet or horizon; text; a cut. Comfy change class: new action from a still.
+**11.8** Start: the hull alone. End: the small ship crossing it, small. Context, not action: before, the club; after, the bank past the flank. Excluded: SB-13's silhouette; any pursuit.
+**11.9** Missing: the start frame; the warship design; the ship exterior (indistinct by design). Inherited: the graded frame's freighter silhouette if bound and copied; it is not the design answer.
+**11.10** Prompts 7 and 7b. Repeated: hull edge to edge, no horizon; cold starlight from upper left; hangar bays warm; slow travel left to right; small indistinct freighter from bottom-left crossing right at the end; no weapons fire, no text. Negatives: weapons fire, a sharp ship design, a planet, text, a cut.
+**11.11** Review: scale reads; bays the only warmth; the small ship enters late and crosses right; silhouette unreadable; native length and audio recorded. Site fields sceneQualityRating, status.
+**11.12** Writer: done. Operator: STILL PREP route; mode; whether the drift is the camera's or the hull's. Ziggy: whether supplied footage of a capital ship pass exists (the card's most likely supplied shot); the silhouette round.
+**Adapter notes (modes).** first_frame on every clip route from the prepared still; no identity inputs; A5 Grok still: prompt 7 alone; A4-S: a plain still from prompt 7, no references.
+
+Source: TBD. Plausible: supplied footage of a capital ship pass; generated or transformed otherwise; a mix. The light-skipping attribution the record mentions is unverified; nothing assumes which film. Missing art: the warship; the ship exterior.
+
+
+### S02-9 The bank
+
+0. **SHOT.** S02-9, take 1. S02, TXT lines 17 to 18 ("junky ship"; "can't catch me"). What it is for: the one boast that is true. The shot plan's S02D.
+1. **SOURCE LINEAGE.** No start frame. Idea: SB-13 `HD-DROP-8896508767b4` (fastest junk exterior; silhouette differs). No accepted ship exterior; the silhouette round of `STORYBOARD_UPDATE_20261011.md` item 9 serves this shot, S02-4's background, S02-8, S02-10, S05, S07-7 and S08. Prior takes: none.
+2. **LIGHTING.** Cold starlight; the warship's bay light raking the ship's underside for one beat as it passes the flank, then starlight only.
+3. **CAMERA.** Wide exterior, trailing the ship then letting it leave frame screen-right; the warship's flank at screen-left receding. The line is the ship's path; the camera stays below and behind it.
+4. **CHARACTER DIRECTION.** None.
+5. **BACKGROUND ACTION.** The ship makes one clean evasive bank past the flank and away screen-right, one move, no cuts; the hull passes close enough to read its wear; no pursuit shown; the warship recedes.
+6. **TIME BEATS.**
+
+| Beat | Anchor | Lighting | Camera | Character | Background |
+| --- | --- | --- | --- | --- | --- |
+| b1 | WORD line 17 "This junky ship", in | starlight | wide, trailing | none | the ship small against the hull |
+| b2 | WORD line 18 "they can't catch me" | the bay light rakes the underside | trailing, then easing | none | the bank, close past the flank |
+| b3 | WORD line 18 "set me free" | starlight only | lets it go | none | the ship leaves screen-right; the warship recedes |
+
+7. **RESULTING PROMPT.** Not yet. Blocked by the ship exterior: a prompt written now would invent the silhouette every later shot must match. What can be made now: the silhouette round itself (three views, Ziggy picks), which is a design request and not this shot; and S02-8's still, which serves this shot's background.
+
+8. to 10. CFA Nova's (8, 9) and Ziggy's (10).
+
+11. **KITCHEN.**
+**11.1** hon; S02; S02-9 take 1. Parent `SCENE_CARD_S02.md` sha256 7ca217c2...; excerpt lines 108 to 117, sha256 a0b0ba2e6a0ce6baf46ce3b5785f4e408a3732bb60775ad3a5804cfadbc0fb8c. Authority: DECISIONS 10 to 14; STORYBOARD_UPDATE_20261011 item 9.
+**11.2 Inputs.** | SB-13 `HD-DROP-8896508767b4` | .../series-03-kessel-run/SB-13-junk-ship-exterior.jpg | 8896508767b4deb140202f313d7cb054a765cebd56abd29affbb72621f090bde | 443711 | inspiration (idea; the silhouette differs and does not govern) | storyboard | none | none read here |. start_frame missing and not yet writable. end_frame_review_target none.
+**11.3** SB-13 (idea).
+**11.4** No character. The ship's lock: none exists.
+**11.5** In: WORD line 17; out: on the exit screen-right, to S02-10. Beats 3. Hold 4 s (alternate 6.5). Cue: fixed master; events proposed; relationship: timing may move together (the bank and the boast are one gesture); fixed: one move, exit right; flexible: the bank's speed.
+**11.6** Song: lines 17 to 18 heard. Speech: none. Ambience: none. Route audio: recorded, unused. Arc: the one true boast gets the one clean move, so nothing cuts inside it; the action lands with the cue.
+**11.7** Preserve: one continuous move; exit screen-right; the wear readable; the warship's light raking once. May change: nothing yet (no take exists). Must not: pursuit; weapons fire; a cut; a silhouette unmatched to the accepted exterior. Comfy change class: not yet.
+**11.8** Start: the ship small against the hull. End: gone screen-right, the warship receding. Context, not action: before, the crossing; after, the number. Excluded: SB-13's silhouette; S05, S07-7 and S08, which reuse the accepted exterior later.
+**11.9** Missing: the ship exterior (the silhouette round); then the start frame. Inherited: none yet.
+**11.10** None yet (section 7 is "not yet").
+**11.11** Review, when a take exists: silhouette matches the accepted exterior; one move; exit right; wear readable. Site fields sceneQualityRating, status.
+**11.12** Writer: waits on the exterior. Operator: nothing to dispatch. Ziggy: the silhouette round (three views), or supplied flight footage, which turns the round into a match.
+**Adapter notes (modes).** None bound; when the exterior exists, first_frame from a prepared still of the ship at the flank; edit or extend modes only if supplied footage is the source.
+
+Source: TBD. Plausible: supplied flight footage with one clean bank; generated from an accepted exterior still; transformed; a mix. Missing art: the ship exterior.
+
+
+### S02-10 The number and the Maw
+
+0. **SHOT.** S02-10, take 1. S02, TXT line 19 ("less than twelve-par"; "Beat the Maw"); the verse's last shot. What it is for: the receipt for the boast, in two beats, then the hand-off to frame A.
+1. **SOURCE LINEAGE.** No start frame for either beat. Idea: SB-15 `HD-DROP-a962c9148eb5` (the HUD; final text editorial). Concept: SB-16 `HD-DROP-0c8852c50251` (the gravity well, story and VFX concept only). The HUD plate, the Maw and the ship exterior: undesigned. Prior takes: none.
+2. **LIGHTING.** Beat one: the display's own cool light, nothing else. Beat two: the gravity well's glow from screen-left, the ship a silhouette against it.
+3. **CAMERA.** Beat one: an insert on the display, locked. Beat two: the widest shot in the verse, locked; the well fills the left two thirds; the ship a speck skimming its edge toward screen-right.
+4. **CHARACTER DIRECTION.** None.
+5. **BACKGROUND ACTION.** Beat one: the display's readout changes (the number itself is typeset in the edit, never generated legibly). Beat two: the speck skims the well's edge and clears it screen-right; the well's dust turns slowly.
+6. **TIME BEATS.**
+
+| Beat | Anchor | Lighting | Camera | Character | Background |
+| --- | --- | --- | --- | --- | --- |
+| b1 | WORD line 19 "less than twelve-par", in | display light | locked insert | none | the readout area changes, no legible figure |
+| b2 | WORD line 19 "Twelve-Par!" | unchanged | locked | none | the readout holds |
+| b3 | WORD line 19 "Beat the Maw" | the well's glow from the left | locked widest | none | the speck skims the edge |
+| b4 | EVENT EVT-HON-04, provisional (the turnaround into S03 under the echo of the twelve-par line), out | unchanged | locked | none | the speck clears the edge screen-right; hard cut to frame A |
+
+7. **RESULTING PROMPT, beat one (silent still, the HUD plate).** Landscape 16:9, a close locked insert of a worn cockpit display panel glowing soft blue-green in a dark cockpit, a few dials and a wide readout strip whose characters are soft and unreadable, no legible letters or digits anywhere. Scratched glass, fingerprints. No hands, no reflection of a face.
+
+**7 (second), beat two (silent still, the widest shot).** Landscape 16:9, the widest possible shot in deep space of a vast dark gravity well, a slowly turning disk of dust and light glowing from the left side of the frame, its edge sharp against black space at the right. A tiny ship, no more than a speck in silhouette, skims the well's edge toward the right. No text, no planet, no other ships.
+
+**7b. RESULTING PROMPT, the clip, beat two (one variable against the still: the speck's skim).** The widest shot in deep space of a vast dark gravity well, a slowly turning disk of dust and light glowing from the left, camera locked. A tiny ship, a speck in silhouette, skims along the well's bright edge from left to right and clears it at the right side of the frame. The dust turns slowly. No text, no planet, no other ships, no cut.
+
+8. to 10. CFA Nova's (8, 9) and Ziggy's (10).
+
+11. **KITCHEN.**
+**11.1** hon; S02; S02-10 take 1. Parent `SCENE_CARD_S02.md` sha256 7ca217c2...; excerpt lines 119 to 128, sha256 de0b1ee4b8219f0aad7c2ac18454b835dd247f80f4d487774541d6051cce6132. Authority: DECISIONS 10 to 14.
+**11.2 Inputs.** | SB-15 `HD-DROP-a962c9148eb5` | .../series-03-kessel-run/SB-15-parsec-hud.jpg | a962c9148eb589f8e5bfb4e75856393dcd3ee8377ca1651a1f948e3fedf3f1a5 | 307253 | inspiration (idea; its text does not govern) | storyboard | none | none read here |. | SB-16 `HD-DROP-0c8852c50251` | .../series-03-kessel-run/SB-16-maw-skim.jpg | 0c8852c50251b198d124fbeaa416d696bc4d39c1b0c43487df23e8e03a47e831 | 331284 | inspiration (concept) | storyboard | none | none read here |. start_frame missing for both beats (two STILL PREP stills). end_frame_review_target none.
+**11.3** SB-15 (idea), SB-16 (concept). Neither governs the plate or the well's look.
+**11.4** No character. The ship: a speck, so no lock applies and none is invented.
+**11.5** In: WORD line 19 "less than twelve-par"; out: EVT-HON-04 (the turnaround under the echo), hard cut to frame A. Beats 4 (two per picture). Holds: beat one 1 s (alternate 1.5); beat two 2.5 s (alternate 4). Cue: fixed master; events proposed; relationship: picture follows the music event (the cut to frame A lands on the turnaround); fixed: the two pictures' order and the exit right; flexible: the split between them.
+**11.6** Song: line 19 heard, its echo across the cut. Speech: none. Ambience: none. Route audio: recorded, unused. Arc: the number is the punchline and the well is the proof, so the plate is quick and the wide is held until the beat turns over into the chorus; the action follows the words and the cut lands with the event.
+**11.7** Preserve: no legible figure in any generated frame (the number is typeset in the edit); the well's glow from the left; the speck's travel screen-right. May change: the skim (the variable). Must not: legible digits or letters; a readable ship; a second ship; a cut inside beat two. Comfy change class: new action from a still (beat two); the plate is a still.
+**11.8** Start: the display above the number (unreadable). End: the speck clearing the well's edge screen-right; hard cut to frame A at the angle and light S01 left it. Context, not action: before, the bank's exit; after, frame A and the second chorus (S03-1). Excluded: any legible number; any other flight shot.
+**11.9** Missing: both start frames; the HUD plate and the well as designs. Inherited: a route that writes legible characters on the plate inherits an editorial rule, scored needs_fixes; SB-15's text if copied.
+**11.10** Prompts 7 (two stills) and 7b. Repeated: display soft and unreadable, no legible characters; the well glowing from the left, edge sharp at the right; a speck skimming left to right and clearing; no text, no planet, no other ships; camera locked. Negatives: legible characters, a readable ship, a second ship, a planet, a cut.
+**11.11** Review: no legible characters; the speck's direction; the well's edge readable; the turn of the dust slow; native length and audio recorded. Site fields sceneQualityRating, status.
+**11.12** Writer: done. Operator: two STILL PREP stills; mode for beat two. Ziggy: whether the plate is a title-card graphic over a cockpit plate (the card's intent) or a generated insert.
+**Adapter notes (modes).** first_frame from the beat-two still on every clip route; the plate is a still only (A5 Grok still or A4-S), with the "no legible characters" requirement repeated; the number is the edit's.
+
+Source: TBD. Plausible: the plate as a title-card graphic over a generated or supplied cockpit plate; the well generated or transformed, or supplied if a clip of a ship skimming a gravity well exists; a mix. Missing art: the HUD plate; the well.
+
+
+## 4. What exists, what is missing, and the order of work
+
+| Ingredient | State today | Serves |
+| --- | --- | --- |
+| Face A, mouth B (scoped), wrist F, cheek lettering gold standard | Ready as the BOM scopes them | S02-3, S02-5, S02-6, S02-7 |
+| The selected boss BOSS-008 | Ready (keep, 5 and 5, production); wardrobe undecided; the room undesigned | S02-2 |
+| The hunter's armor concept BOBA-ARMOR-01 | Candidate; helmet geometry unresolved; one identity round | S02-4 |
+| Chewy's DJB sheet | Ready as reference; no frame of him in the club | S02-7 |
+| Neck and chest placement candidates | Candidates (keep, no blanket approval); no accepted neck artwork | S02-5, S02-6 |
+| The shared cockpit still with Dolo seated | Missing; COCKPIT-R2-01 needs fixes; the single most important new frame | S02-6 (and S07-3, S04, S05, S08, S09) |
+| Frame A's consolidated starting frame | Missing; S02-1's credits must match it | S02-1 |
+| The ship exterior | Missing; the silhouette round | S02-4 (background), S02-8, S02-9, S02-10 |
+| The counting room, the bay, the club, the warship, the Maw, the HUD plate | Missing as designs; described in the prompts where a prompt exists | S02-2, S02-4, S02-7, S02-8, S02-10 |
+| Leia's sleeve | Undecided; S02-1 shows no deciding detail | S02-1 |
+| Timing | Null; the beat grid for S02 asked of the alignment lane | all |
+
+**Order of work proposed (nothing here is a run request).** 1. The shared cockpit still (S02-6, S07-3): STILL PREP from the corrected idea, reviewed as a still. 2. The counting-room still (S02-2) from the selected boss. 3. The three silent inserts whose prompts are complete and whose inputs exist by hash: S02-1 (the counter top), S02-3 (the puck), S02-5 (the neck macro, which the card names as the verse's first proof). 4. The silhouette round for the ship exterior, which unblocks S02-8's crossing, S02-9 and S02-10. 5. The club wide (S02-7) after a frame of Chewy in the room. The lip-sync clip of S02-6 waits on accepted timing and the lane's proof and is not in this order.
+
+
+## 5. Open for Ziggy (new in this packet)
+
+1. The order of the first creditor's room and the puck against the words of line 11: the card's order anchored to the line's earlier words (this packet), or the swap that puts each name on its picture (section 2).
+2. The ladder picks for the verse (section 2), or discard the ladder for S02.
+3. The boss's wardrobe (dark robes proposed) and the push or the lock in S02-2.
+4. The bouncer: the rhino candidate's shape, or another.
+5. The HUD: a title-card graphic over a plate (the card's intent), or a generated insert.
+6. Whether S02-6's silent look (mouth closed) may be tested as motion before timing exists, as a test only, not the shot.
+
+The card's four blockers stand (the cockpit still; the ship exterior; the boss's staging round now that the design is chosen; the hunter's identity round).
+
+
+## 6. What this packet does not do
+
+It does not accept a shot, time a beat, approve a reference, choose a source, request a run, upload a file, name a provider's current controls, or alter the card. Sections 8 to 10 stay empty until a run and a review. Every event and bar is provisional until the alignment lane places it. The names in the creative sections are the record's working names and appear in no prompt.
+
+Claude, lead writer

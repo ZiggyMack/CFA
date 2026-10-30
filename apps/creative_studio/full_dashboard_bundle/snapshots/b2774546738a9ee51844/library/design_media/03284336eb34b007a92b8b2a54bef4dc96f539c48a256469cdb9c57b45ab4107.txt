@@ -1,0 +1,66 @@
+QA NOTES - GROK-HD-20261008_return_v002 (FULL CORRECTION/CALEB BATCH; supersedes the partial v001 checkpoint, which remains as delivered)
+Built 2026-10-08 18:23 UTC by Grok Bot. Everything needs_user_review; user_approved=false everywhere.
+Model for new images: Grok Bot image generation (internal). Prompts not recorded verbatim; seeds unknown. Hashes = sha256 of the exact bytes in this ZIP.
+All generated JPEGs converted to PNG losslessly (decoded pixels verified identical). Output names keep the _v001 names from START_HERE.txt.
+Seven initial stills (bounded set): REV-HD-001..004, PROP-HD-HIP, CALEB-K_REF, CAL-P01. BOSS-P01 not included (HOLD).
+
+REV-HD-001 (01_REVISIONS/REV-HD-001_v001.png) - carried byte-identical from v001 (sha256 bc5b8c111da73c15d0e0a69462ba2a416e1fc2b7364577354c439509655aeb00)
+  Continuity FAIL on outfit/scene (studded vest -> plain leather vest, chain thinner, table/money/background redrawn).
+  Ziggy reviewed on 2026-10-08 and ACCEPTED the detail correction despite the vest/table drift -> request status completed_candidate,
+  status_detail=user_accepted_detail_correction_despite_outfit_scene_drift_2026-10-08. Still needs_user_review / user_approved=false per protocol.
+  Remaining issues: canines long; lip ring unclear; chest ship loose match.
+
+REV-HD-002 (01_REVISIONS/REV-HD-002_v001.png) <- 4171721425d50629a0efaf77720cf3d97316407a0a34abb7de2cc88725fa2d44.jpg
+  Inputs: REF-coat-source.jpg (HD-DROP-56a50dabe9e0) + HD-EXP-LOCK-FACE.jpg + lockface_face_neck_crop.png
+  Preserved: black open overcoat, gold rope chain, open bare chest, night ship-boarding hatch + stairs, fog, cool night light.
+  Changed: face to LOCK-FACE identity; Chewie/bird/"I know" removed; eye char-right cheek (viewer-left), know char-left cheek (viewer-right);
+           neck blaster char-left (viewer-right); chest freighter replaced by round disc ship.
+  Drift: ship/hatch/stairs redrawn (similar composition, not identical); chest disc oversized concentric-ring disc, loose match to LOCK-FACE ship;
+         upper teeth read mostly gold (not canine caps only); extra lip rings on both corners.
+
+REV-HD-003 (01_REVISIONS/REV-HD-003_v001.png) <- 7ecb11d0f4cb91f16cdd644945bbb9da9f0c6b97d5026dff235dbee2e1cc17b2.jpg  [best of the batch]
+  Inputs: REF-pinstripe-source.jpg (HD-DROP-1966838931ad) + lockface_face_neck_crop.png
+  Preserved: navy pinstripe three-piece, tie, gold tie bar, gold pocket square, gold watch, hands-in-pockets lean on marble desk, penthouse night skyline; chest covered.
+  Changed: full gold upper grill -> canine caps + lower grill; eye/know/neck blaster on correct sides; nose hoop, lip rings, ear hoop.
+  Drift: desk marble lighter; room re-staged; skyline changed; canine caps read silver-ish rather than gold.
+
+REV-HD-004 (01_REVISIONS/REV-HD-004_v001.png) <- 04b0e7cd5ea887681f0c01170905cfc6ce7d2ce98e14bbbf194d4991f915cff9.jpg (2nd pass = mouth-only edit of first pass)
+  Inputs: REF-saloon-source.jpg (HD-DROP-bb0780a46f7d) + lockface_face_neck_crop.png. HD-SALOON-01 alpha (HD-DROP-9cecaad5ed57) NOT fed.
+  First pass NOT included: cb25ff15464864bc1e256f3839d7e794fa00b32e2d97b5463b55641fc8fc8343.jpg (sha256 cb25ff15464864bc1e256f3839d7e794fa00b32e2d97b5463b55641fc8fc8343) - stern face + long fangs.
+  HIP SIDE: holster on CHARACTER-LEFT front hip = VIEWER-RIGHT of the belt buckle; retained from source depiction; PROVISIONAL, global hip-side decision pending.
+  Prop: compact silver blaster pistol, grip/hammer up, seated in brown tooled-leather holster on belt with visible loop + thigh tie-down strap, fringe overlapping.
+        Reads coherent, BUT looks closer to a western revolver than a clearly sci-fi blaster - FLAG.
+  Drift: saloon re-staged (doors/bar redrawn), expression changed; canines still too long (fang-like) after one fix pass. eye/know/neck blaster sides correct.
+
+PROP-HD-HIP (03_DETAILS/PROP-HD-HIP_v001.png) - derived_crop of REV-HD-004_v001.png (sha256 26a91590b6c03f3c8de62f4ab69e0b4ce7d466b7707a2e9cf426c771a69c79ec)
+  Bounds x0=520,y0=400,x1=920,y1=720 on the 1280x720 image (requested 560,400,920,720; left edge moved to 520 because 560 clipped the buckle).
+  Upscaled 2x with LANCZOS (400x320 -> 800x640); no other edits. Shows buckle, holster, grip/hammer, thigh strap. Character-left / viewer-right.
+
+SC-CAL-001
+  CALEB-K_REF (00_CHARACTER_REFS/CALEB-K_REF_v001.png) <- a1bc5e8c696a70092b3578c4b07c5d01b8b222954786629f8c25c7db3ffe00e5.jpg - text-only generation, no image refs.
+    Original fictional middle-aged white male lawyer; no real-person likeness intended. Salt-and-pepper hair, trimmed grey beard, brown herringbone
+    tweed jacket, light blue oxford, burgundy knit tie, steel watch, glasses in pocket. No tattoos/piercings -> no tattoo sheets needed.
+  CAL-P01 (02_SCENES/CALEB/CAL-P01_v001.png) <- ef45dfad129c0f8c466cddd8181192c658b91aaf63cd98de4c78592f9ca81449.jpg (2nd attempt)
+    Refs fed: HD-SALOON-01-chest-up.jpg (HD-DROP-9cecaad5ed57) + CALEB-K_REF_v001 output.
+    1st attempt NOT included: eec5001ebae417ba6dec714e1fdc7e2634fdc7a95dda3bbc35cd76b3087d770a.jpg (sha256 eec5001ebae417ba6dec714e1fdc7e2634fdc7a95dda3bbc35cd76b3087d770a) - both looking at camera, oversized face text, neck blaster wrong side, extra wrist tattoo.
+    PASS: two distinct faces, eyelines meet, friendly amused recognition, hands separate on bar, nonviolent, warm saloon, Caleb matches reference, Dolo fringe/bolo kept.
+    FAIL (continuity): Dolo shows his character-right side; "eye" correctly on char-right cheek, but neck blaster sits on character-RIGHT neck
+      (should be char-left, mostly hidden at this angle) and "know" landed on neck/upper chest under the blaster instead of char-left cheek. Hip not visible.
+    Request status failed_continuity_check. No further retries per the bounded rule.
+
+HOLD: SC-BOSS-001 / BOSS-P01 until a boss winner is selected (GROK-BOSS-DISCOVERY round 01 returned separately; selected_winner=null). No dummy file.
+
+TATTOO RECOVERY (03_DETAILS/ST-*, 04_RECOVERED_ORIGINALS) - unchanged from v001
+  ST-HD-BLASTER: original sheet recovered unchanged -> 04_RECOVERED_ORIGINALS/c91af37e775d5e6d941d2bc05fcc2f26f1ad4ad9a50caa1427a5dd3c01755419.jpg (6-option RGB JPEG on white, no alpha; panel #3 = current neck design). Needs Ziggy confirmation.
+     03_DETAILS/ST-HD-BLASTER: panel #3 derived_crop (900,0,1280,330), flat black-on-white export, white->alpha export, LOCK-FACE neck placement crop.
+  ST-HD-EYE: original_missing. Placement evidence only (LOCK-FACE crop, char-right cheek / viewer-left). Unconfirmed candidate d55b97a3...jpg not included.
+  ST-HD-KNOW: original_missing. Placement evidence only (LOCK-FACE crop, char-left cheek / viewer-right).
+  ST-HD-SHIP: original_missing. LOCK-FACE upper-chest crop (partial). SHIP-TATTOO-REF-05.jpg = derived_crop of saucer-sheet panel #5 (parent encoding ambiguous). SHIP-SCHEMATIC-REF is a different design - not merged.
+  REC-HD-ORIGINALS: #101 #103 #107 #206 #112 #116 #117 #121 #152 #154 all original_missing.
+  No proposed_reconstruction produced.
+
+ROLLOUT REFS: 19/19 (17 primaries + 2 alternates) located locally by exact sha256; only HD-SALOON-01 is inside the package. See RETURN_MANIFEST.json rollout_reference_check.
+REVIEW CONTACT SHEET: outside this ZIP (START_HERE fixes the ZIP contents): GROK-HD-20261008_return_v002_REVIEW_CONTACT.jpg next to the ZIP.
+MISSING SOURCES: see MISSING_SOURCES.txt (verbatim copy, unchanged from v001).
+Rejected attempts not included: REV-HD-001 x2, REV-HD-004 first pass, CAL-P01 first attempt (hashes in RETURN_MANIFEST.json rejected_attempts_not_included).
+No dialogue, lyric timing, subtitles or animation produced.

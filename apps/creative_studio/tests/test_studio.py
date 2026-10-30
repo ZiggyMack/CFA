@@ -421,7 +421,8 @@ class StudioAppTest(unittest.TestCase):
         app.button(key="nav:Collaborator briefs").click().run()
         self.assertFalse(app.exception)
         self.assertEqual(len(app.code), 2)
-        self.assertEqual([item.value for item in app.subheader], ["Gemini", "Flow", "Grok", "Shared roles"])
+        self.assertEqual([item.value.split(' · ', 1)[0] for item in app.subheader], ["Gemini", "Flow", "Grok", "Shared roles"])
+        self.assertTrue(all(item.value.endswith(' documents') for item in app.subheader))
         self.assertTrue(any("Character creation" in item.value for item in app.markdown))
 
     def test_project_switch_and_empty_unassigned_hidden(self):
@@ -439,7 +440,7 @@ class StudioAppTest(unittest.TestCase):
         self.assertEqual(app.session_state["studio_reviews"]["hon-00"]["status"], "needs_fixes")
         app.button(key="nav:Review queue").click().run()
         self.assertEqual({b.key for b in app.button if (b.key or "").startswith("open:")},
-                         {"open:hon-00", "open:hon-01", "open:hon-02"})  # Includes the plan-only reference.
+                         {"open:hon-00", "open:hon-02"})  # The removal is in Archive; the plan-only reference remains.
         app.button(key="open:hon-00").click().run()
         app.button(key="review:hon-00:keep").click().run()
         self.assertEqual(app.session_state["studio_reviews"]["hon-00"]["status"], "keep")
@@ -506,14 +507,15 @@ class StudioAppTest(unittest.TestCase):
             self.assertEqual(app.button(key="mission-review").label, "Review images · 1")
             self.assertFalse(next(e for e in app.expander if e.label == "Prepare review sweep").proto.expanded)
             app.button(key="mission-review").click().run()
-            self.assertEqual({b.key for b in app.button if (b.key or "").startswith("corner-collection:")},
-                             {"corner-collection:hon-03"})
-            app.button(key="corner-collection:hon-03").click().run()
+            self.assertEqual(app.session_state.studio_view, 'Review queue')
+            self.assertEqual(app.radio(key='review-queue-view').value, 'Awaiting your decision')
+            self.assertTrue(any(b.key == 'open:hon-03' for b in app.button))
+            app.button(key="open:hon-03").click().run()
             app.button(key="review:hon-03:keep").click().run()
             next(b for b in app.button if b.label == "← Back to the collection").click().run()
             self.assertFalse(app.exception)
-            self.assertFalse(any((b.key or "").startswith("corner-collection:") for b in app.button))
-            app.button(key="corner-collection-back").click().run()
+            self.assertTrue(any('0 unanswered requests' in c.value for c in app.caption))
+            app.button(key='nav:Ziggy’s Corner').click().run()
             self.assertFalse(any(b.key == "mission-review" for b in app.button))
             self.assertTrue(any("No image reviews waiting" in c.value for c in app.caption))
             app.selectbox(key="studio_project").select("lisan").run()

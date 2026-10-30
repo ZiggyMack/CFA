@@ -3,7 +3,7 @@ from pathlib import Path
 
 import streamlit as st
 
-from studio_dependencies import destination_label, media_path, mission_pending_requests, mission_task_progress, mission_tasks, mission_visible
+from studio_dependencies import destination_label, media_path, mission_pending_requests, mission_storyboard_requests, mission_task_progress, mission_tasks, mission_visible
 
 STATES = {"ready": ("Ready to send", "green"), "needs_input": ("Needs your input", "orange"),
           "in_progress": ("In progress", "blue"), "planned": ("Planned", "gray"), "done": ("Done", "green")}
@@ -19,6 +19,13 @@ def show_collection(ids, label, mode="references", project=None):
 def close_collection():
     st.session_state.pop("studio_mission_collection", None)
     st.session_state.pop("studio_mission_selected", None)
+
+
+def open_storyboard_review(project, story_id, structure, navigate):
+    st.session_state.studio_project = project
+    st.session_state[f'story-select:{project}'] = story_id
+    st.session_state[f'story-view:{project}'] = 'Structure & gaps' if structure else 'Panels & writings'
+    navigate('Storyboard')
 
 
 def render_corner(data, library_dir: Path, open_reference, render_selected, document_download, navigate, sweep, review_data=None):
@@ -98,8 +105,18 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
             if task["nextAction"]:
                 st.markdown("**Next**")
                 st.write(task["nextAction"])
+            writing_requests = mission_storyboard_requests(data, [task], task['project'])
+            if writing_requests:
+                request = writing_requests[0]
+                st.markdown('**For you now**')
+                st.caption('Open the written shots to inspect their context. Discuss your choices in chat.')
+                st.button('Storyboard · Structure & gaps' if request['structure'] else 'Storyboard · Panels & writings',
+                          key='mission-writing-workspace:'+context, on_click=open_storyboard_review,
+                          args=(request['project'], request['storyID'], request['structure'], navigate))
             for field, heading in (("enablers", "Before sending"), ("deliverables", "Deliverables"), ("missing", task.get("missingLabel", "Other open items"))):
                 if task.get(field):
+                    if field == 'missing' and writing_requests:
+                        heading = 'Author choices · discuss in chat'
                     st.markdown(f"**{heading}**")
                     for value in task[field]:
                         (st.warning if field == "enablers" else st.write)(value)
@@ -107,8 +124,12 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
                 st.markdown("**Your later review**")
                 st.write(task["laterReview"])
             if task.get("previewAssetIDs"):
-                st.markdown("**Start with these images**")
-                references(task["previewAssetIDs"], context + ":preview")
+                if writing_requests:
+                    with st.expander('Reference images · optional', expanded=False):
+                        references(task["previewAssetIDs"], context + ":preview")
+                else:
+                    st.markdown("**Start with these images**")
+                    references(task["previewAssetIDs"], context + ":preview")
             if task.get("reviewedPreviewAssetIDs"):
                 with st.expander(f"Recorded review decisions · {len(task['reviewedPreviewAssetIDs'])}", expanded=False):
                     references(task["reviewedPreviewAssetIDs"], context + ":history", history=True)
@@ -117,28 +138,29 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
                     with st.expander("Selected starting image and earlier comparison", expanded=False):
                         st.write(comparison.get("summary", ""))
                         references([r["assetID"] for r in comparison.get("items", [])], context + ":comparison")
-            for i, link in enumerate(task["links"]):
-                key = f"{context}:{i}"
-                if link.get("downloadPath"):
-                    package = media_path(library_dir, link["downloadPath"])
-                    if package and package.suffix.lower() == ".zip":
-                        st.download_button(link["label"], package.read_bytes(), file_name=package.name, mime="application/zip", key="mission-package:" + key)
+            with st.expander('Briefs and records', expanded=False):
+                for i, link in enumerate(task["links"]):
+                    key = f"{context}:{i}"
+                    if link.get("downloadPath"):
+                        package = media_path(library_dir, link["downloadPath"])
+                        if package and package.suffix.lower() == ".zip":
+                            st.download_button(link["label"], package.read_bytes(), file_name=package.name, mime="application/zip", key="mission-package:" + key)
+                        else:
+                            st.caption(link["label"] + ": package is not included in this snapshot.")
+                    elif link.get("assetIDs") is not None:
+                        st.button(link["label"], key="mission-collection:" + key, on_click=show_collection, args=(link["assetIDs"], link["label"]))
+                    elif asset := by_id.get(link.get("assetID")):
+                        if asset.get("kind") in {"document", "pdf"}:
+                            with st.expander(link["label"], expanded=False):
+                                if asset.get("text"):
+                                    st.text(asset["text"])
+                                document_download(asset, context="mission:" + key)
+                        else:
+                            st.button(link["label"], key="mission-asset:" + key, on_click=open_reference, args=(asset,))
+                    elif link.get("href"):
+                        st.link_button(link["label"], link["href"])
                     else:
-                        st.caption(link["label"] + ": package is not included in this snapshot.")
-                elif link.get("assetIDs") is not None:
-                    st.button(link["label"], key="mission-collection:" + key, on_click=show_collection, args=(link["assetIDs"], link["label"]))
-                elif asset := by_id.get(link.get("assetID")):
-                    if asset.get("kind") in {"document", "pdf"}:
-                        with st.expander(link["label"], expanded=False):
-                            if asset.get("text"):
-                                st.text(asset["text"])
-                            document_download(asset, context="mission:" + key)
-                    else:
-                        st.button(link["label"], key="mission-asset:" + key, on_click=open_reference, args=(asset,))
-                elif link.get("href"):
-                    st.link_button(link["label"], link["href"])
-                else:
-                    st.caption(link["label"] + ": " + link.get("unavailableReason", "reference is not included in this snapshot."))
+                        st.caption(link["label"] + ": " + link.get("unavailableReason", "reference is not included in this snapshot."))
 
     def card(task, context):
         with st.container(key=f"mission-state-{task['status']}-{context}"):
@@ -151,16 +173,28 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
             if not priority:
                 st.caption("No top-priority reviews waiting." if not query else "No top-priority items match this search.")
     project = st.session_state.studio_project
-    pending = mission_pending_requests(data, reviews, project)
-    review_label, review_action = st.columns([3, 1])
-    with review_label:
-        st.markdown("**Image review · " + projects.get(project, project) + "**")
-        st.caption(f"{len(pending)} images await your decision." if pending else "No image reviews waiting for your decision.")
-    if pending:
-        review_action.button(f"Review images · {len(pending)}", key="mission-review", width="stretch", on_click=show_collection,
-                             args=(pending, "Unanswered review requests", "review_requests", project))
-    with st.expander("Prepare review sweep", expanded=False):
-        sweep()
+    pending = [aid for aid in mission_pending_requests(data, reviews, project)
+               if by_id.get(aid, {}).get('kind') not in {'document', 'pdf'}]
+    with st.container(key='mission-image-review'):
+        review_label, review_action = st.columns([3, 1])
+        with review_label:
+            st.markdown("**Image review · " + projects.get(project, project) + "**")
+            st.caption(f"{len(pending)} images await your decision." if pending else "No image reviews waiting for your decision.")
+        if pending:
+            review_action.button(f"Review images · {len(pending)}", key="mission-review", width="stretch", on_click=navigate,
+                                 args=('Review queue',))
+        with st.expander("Prepare review sweep", expanded=False):
+            sweep()
+    storyboard_requests = mission_storyboard_requests(data, tasks, project)
+    if storyboard_requests:
+        with st.container(key='mission-storyboard-review'):
+            st.markdown('**Storyboard review · '+projects.get(project, project)+'**')
+            st.caption(f'{len(storyboard_requests)} writing '+('package awaits' if len(storyboard_requests) == 1 else 'packages await')+' your choices.')
+            for request in storyboard_requests:
+                st.write(request['title'])
+                st.button('Review storyboard', key='mission-storyboard-review:'+request['id'],
+                          on_click=open_storyboard_review,
+                          args=(project, request['storyID'], request['structure'], navigate))
     st.subheader("Collaborator handoffs")
     providers = list(dict.fromkeys(t["provider"] for t in regular))
     columns = st.columns(2)

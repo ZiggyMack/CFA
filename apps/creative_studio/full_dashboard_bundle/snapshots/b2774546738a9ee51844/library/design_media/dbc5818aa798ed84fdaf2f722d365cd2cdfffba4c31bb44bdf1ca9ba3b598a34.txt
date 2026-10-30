@@ -1,0 +1,40 @@
+GEMINI NOTEBOOK COMPATIBILITY — TEMPORARY DELIVERY COPY POLICY
+October 9, 2026. User-directed storage and preservation rule.
+This is a CFA-specific application of the existing notebook source/return procedure, not a separate asset library or replacement methodology.
+
+ORIGINALS REMAIN AUTHORITATIVE
+Keep the original asset ID, source path, filename, bytes, hash, dimensions and quality unchanged. Compatibility work creates a delivery copy only. Never resize, crop, retouch, re-encode or replace the original to satisfy an upload route. No compatibility derivative becomes a new character master, accepted reference, gallery item or permanent catalog duplicate merely because a notebook can ingest it. Preserve the original's existing scoped approval and limitations.
+
+PREFER THE UNCHANGED FILE
+Try the existing unchanged-source route when appropriate and use observed errors to choose a bounded next test. A failed transfer, a failed Sources entry and successful usable ingestion are different outcomes. Do not diagnose the root cause solely from an error label or a failed format. Avoid repeated blind retries.
+
+ONE CONTROLLED TEST BEFORE BATCHES
+Prepare one temporary copy of one known source, record the conversion, and test that exact file in the intended notebook Sources interface. Resolve the test result before considering a larger delivery conversion. Do not make a second permanent media tree or automatically convert the full catalog.
+Prefer a lossless format or container change first. A PNG can preserve the decoded RGB samples of a JPEG without changing dimensions, although its file bytes differ; it does not restore information lost in the original JPEG. A PDF wrapper can embed the original JPEG compressed bytes unchanged; verify that claim by extraction/hash comparison. Distinguish pixel identity from byte identity and record any color-profile, orientation or metadata handling.
+Do not resize, crop, retouch, upscale or otherwise alter the visible content unless the actual destination requires that operation for the selected task. If a change is required, it applies only to a clearly labeled informational delivery derivative. Record the reason and exact operation; keep it out of identity/detail acceptance and full-resolution quality judgments. A resized or cropped derivative cannot prove preservation of details omitted or changed by that operation.
+
+RECIPE AND MANIFEST
+Use the original parent asset ID plus original SHA-256 and a versioned operation recipe to identify a reusable delivery copy. Reuse the same matching copy for a retry or destination when appropriate instead of creating numbered duplicates. Record:
+- Parent asset ID, original repo path, SHA-256, bytes and dimensions.
+- Destination notebook ID/URL and intended source role.
+- Temporary derivative path, filename, format/container, SHA-256, bytes and dimensions.
+- Exact conversion/wrapping recipe, tool/version and relevant settings; pixel/embedded-byte identity checks as applicable.
+- Test date, attempted upload route, actual remote source ID/title, processing/selection state, error or readback evidence, and limitations.
+- Cleanup state/date and whether a remote entry remains.
+The small manifest/recipe/receipt remains as provenance after local delivery bytes are removed. The manifest does not itself contain the source image or grant the notebook access to local files.
+
+VERIFY THE ACTUAL SOURCE
+A successful upload click, processing spinner, chat attachment, source count or filename is not verified ingestion. Confirm that the intended persistent Sources entry finishes processing and is selectable; inspect/open it and test source-grounded use with that exact entry selected. Keep the readback tied to the source ID/title and revision. For visual evidence, use a narrowly scoped visual question and record the cited response and whether it actually demonstrates use of the image. Text descriptions, cached chat context, OCR and a YouTube transcript do not alone establish use of the image's visual content. A PDF being selectable does not by itself prove its embedded image is visually usable. Leave uncertain results explicitly pending.
+
+LOCAL CLEANUP WITHOUT A SECOND LIBRARY
+Keep delivery copies only in the designated temporary area while the controlled test needs them. Remove transient local bytes after either verified remote ingestion/use is recorded or a failed/abandoned test's evidence is recorded. If processing or evidence capture is still pending, retain the exact test copy until that state is resolved. Before removing files, verify their resolved paths stay inside the intended temporary area and target only recorded delivery derivatives. Never remove the original or a permanent reference through this cleanup.
+Keep the compact recipe, parent/derivative checksums and outcome receipt so the same copy can be reproduced. Deleting a local temporary file does not delete the notebook's remote copy or failed remote entry. Record remote retention separately; remote cleanup requires its own action and receipt. Local cleanup is not proof that the upload succeeded or that the underlying failure was repaired.
+
+DATED TEST RESULT — OCTOBER 9
+The one-image tests use LAG-LOCK-FACE-NATURAL.jpg, original SHA-256 602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f, at 1280 x 720. The original remains unchanged.
+- PNG: identical decoded RGB samples, unchanged dimensions, 778252 bytes. Native source 5db3fd0c-9121-4fb2-804c-840a226bd1f0 failed with “This image content is not supported.” No selectable checkbox.
+- Image-only PDF: unchanged JPEG compressed bytes embedded in one page, no added description/OCR, 256144 bytes. Native source e8db0cd3-ad05-40ff-91c1-2bb306016012 failed with “Error uploading source, try again!” No selectable checkbox.
+- Text control: 02_lisan/SOURCE_UPLOAD.txt uploaded through the same chooser, source c0e6a4c9-4a78-4a20-96df-1a9b0193dcc1 processed and selected. Its opened body visibly contains revision CFA-GEMINI-STORY-20261009-v1, the full workflow, scenes 01–10 and natural-teeth/Jet context. No query/cited retrieval or task prompt has been sent.
+The source panel has 16 total entries, six usable selected sources and zero usable visual Sources. Existing JPEG remains unsupported. These conversion candidates did not cure ingestion; the root cause is unknown. Local inspection found 19 RGB 1280 x 720 JPEGs around 91–433 KB without embedded ICC profiles; that is not a diagnosis of the remote failure.
+Google documents image Sources, including JPEG/PNG, with a caveat that some image types may not work well: https://support.google.com/gemininotebook/answer/16215270?hl=en (checked October 9). Do not turn the observed failure into a universal product limitation.
+See RESULTS.json, png_test.json, pdf_test.json and text_source_control.json for exact outcomes and source IDs. Failure evidence is now recorded, so only the temporary PNG/PDF/render bytes are eligible for scoped local cleanup; actual cleanup has its own receipt. No remote failed entry was deleted. No batch conversion, permanent derivative catalog, new master or altered original follows from these tests.

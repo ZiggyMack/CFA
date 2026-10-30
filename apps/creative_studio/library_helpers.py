@@ -39,6 +39,52 @@ def destination_label(destination: str) -> str:
 MISSION_PROVIDERS = ("Grok", "Gemini", "Flow", "Panhandler Nova")
 MISSION_STATUSES = {"ready", "needs_input", "planned", "in_progress", "done"}
 VISUAL_KINDS = {"image", "video", "gif"}
+
+
+def navigation_reference_count(assets: list[dict], selected_ids=None, *, documents: bool = False) -> int:
+    """Count sidebar references without changing the displayed collections."""
+    selected = set(selected_ids) if selected_ids is not None else None
+    return len({asset["id"] for asset in assets
+                if (selected is None or asset["id"] in selected)
+                and (asset.get("kind") in {"document", "pdf"}) == documents})
+
+
+def navigation_storyboard_shot_count(data: dict, project: str) -> int:
+    """Count authored parent shots, independent of panels, references and takes."""
+    stories = {story["id"]: story for story in data.get("storyboardStories", [])
+               if story.get("project") == project and story.get("id")}
+    structures = {row["storyID"]: row for row in data.get("storyboardStructure", {}).get("stories", [])
+                  if row.get("storyID") and row.get("project", project) == project}
+    sequences = {row["id"]: row for row in data.get("storyboardSequences", [])
+                 if row.get("id") and row.get("project") == project}
+    counted = set()
+    for story_id, story in stories.items():
+        if story_id in structures:
+            shots = structures[story_id].get("shots", [])
+        elif story.get("sequenceID"):
+            sequence = sequences.get(story["sequenceID"], {})
+            shots = sequence.get("shots")
+            if shots is None:
+                shots = [shot for shot in data.get("shotMaterials", {}).get("shots", [])
+                         if shot.get("project") == project
+                         and shot.get("independentSequenceID") == story["sequenceID"]]
+        else:
+            shots = []
+        by_id = {}
+        for shot in shots:
+            shot_id = shot.get("shotID") or shot.get("id")
+            if isinstance(shot_id, str) and shot_id:
+                by_id.setdefault(shot_id, shot)
+        for shot_id, shot in by_id.items():
+            parent = shot.get("parent")
+            parent_id = (shot.get("parentShotID") or shot.get("parent_shot_id")
+                         or (parent.get("shotID") if isinstance(parent, dict) else None))
+            if isinstance(parent_id, str) and parent_id != shot_id and parent_id in by_id:
+                continue
+            counted.add((story_id, shot_id))
+    return len(counted)
+
+
 STORYBOARD_STAGES = {"preliminary": "Preliminary", "detailed_design": "Detailed design",
                      "verification": "Verification", "production": "Production"}
 HISTORICAL_TATTOO_IDS = {
@@ -385,6 +431,98 @@ def normalize_plan(value: Any) -> dict[str, Any] | None:
     return {"status": status, "destinations": destinations, "idea": idea[:20000], "prompt": prompt[:40000]}
 
 
+def normalize_cast_use(value: Any) -> dict | None:
+    if value is None:
+        return None
+    if not isinstance(value, dict):
+        raise ValueError("Cast use must be an object or null.")
+    result = json.loads(json.dumps(value, allow_nan=False))
+    for field in ("roleSelected", "storyboardPlanned"):
+        if field in value and type(value[field]) is not bool:
+            raise ValueError("Cast role and storyboard choices must be true or false.")
+    if "role" in value and (not isinstance(value["role"], str) or len(value["role"]) > 300):
+        raise ValueError("A cast role must be text up to 300 characters.")
+    links = value.get("storyboardLinks", [])
+    if not isinstance(links, list):
+        raise ValueError("Cast storyboard links must be a list.")
+    unique_links, seen = [], set()
+    for link in links:
+        if not isinstance(link, dict) or any(not isinstance(link.get(key), str) or not link[key].strip()
+                                           or len(link[key]) > 512 for key in ("storyID", "shotID")):
+            raise ValueError("A cast storyboard link needs a story and shot identifier.")
+        identity = (link["storyID"], link["shotID"])
+        if identity not in seen:
+            unique_links.append(deepcopy(link)); seen.add(identity)
+    result["storyboardLinks"] = unique_links
+    return result
+
+
+def cast_member_ids(group: dict) -> list[str]:
+    """Full character membership, including versions outside the visible cover."""
+    ids = []
+    def visit(node):
+        if isinstance(node, dict):
+            for key, value in node.items():
+                if key in {"representativeID", "coverID", "coverAssetID", "assetID"} and isinstance(value, str):
+                    ids.append(value)
+                elif key.endswith("IDs") and isinstance(value, list):
+                    ids.extend(item for item in value if isinstance(item, str))
+                elif isinstance(value, (dict, list)):
+                    visit(value)
+        elif isinstance(node, list):
+            for item in node: visit(item)
+    visit(group)
+    return list(dict.fromkeys(ids))
+
+
+def cast_story_targets(data: dict, project: str) -> list[dict]:
+    """Only real shots in registered stories from the same project are linkable."""
+    structures = {row["storyID"]: row for row in data.get("storyboardStructure", {}).get("stories", [])}
+    sequences = {row["id"]: row for row in data.get("storyboardSequences", []) if row.get("project") == project}
+    targets = {}
+    for story in data.get("storyboardStories", []):
+        if story.get("project") != project: continue
+        declared = structures.get(story["id"])
+        if declared is not None:
+            shots = declared.get("shots", [])
+        elif story.get("sequenceID"):
+            sequence = sequences.get(story["sequenceID"], {})
+            shots = sequence.get("shots")
+            if shots is None:
+                shots = [shot for shot in data.get("shotMaterials", {}).get("shots", [])
+                         if shot.get("project") == project and shot.get("independentSequenceID") == story["sequenceID"]]
+        else:
+            shots = []
+        for shot in shots:
+            sid = shot.get("shotID") or shot.get("id")
+            if not isinstance(sid, str) or not sid: continue
+            targets[(story["id"], sid)] = {"storyID": story["id"], "storyTitle": story.get("title", story["id"]),
+                "shotID": sid, "shotTitle": shot.get("title") or shot.get("label") or sid}
+    return list(targets.values())
+
+
+def cast_use_state(data: dict, asset: dict, reviews: dict) -> dict:
+    groups = [group for group in data.get("castCollections", []) if group.get("project") == asset.get("project")
+              and asset["id"] in cast_member_ids(group)]
+    raw = reviews.get(asset["id"], {}).get("castUse")
+    manual = normalize_cast_use(raw) or {}
+    source_selected = asset.get("roleDecision") == "user_assigned" or asset.get("selectionStatus") == "user_selected_visible_golden_reference"
+    source_role = asset.get("characterRole") or next((group.get("role") or group.get("title") for group in groups), "") or ""
+    role = manual.get("role", source_role)
+    selected = manual.get("roleSelected", source_selected)
+    choices = cast_story_targets(data, asset.get("project"))
+    available = {(row["storyID"], row["shotID"]) for row in choices}
+    links = manual.get("storyboardLinks", [])
+    valid = [link for link in links if (link["storyID"], link["shotID"]) in available]
+    unresolved = [link for link in links if (link["storyID"], link["shotID"]) not in available]
+    return {"groups": groups, "sourceSelected": source_selected, "sourceRole": source_role,
+            "roleSelected": selected, "role": role, "storyboardPlanned": manual.get("storyboardPlanned", False),
+            "storyboardLinks": links, "validLinks": valid, "unresolvedLinks": unresolved, "targets": choices,
+            "editable": bool(groups) or asset.get("category") == "cast" or raw is not None,
+            "value": {**manual, "roleSelected": selected, "role": role,
+                      "storyboardPlanned": manual.get("storyboardPlanned", False), "storyboardLinks": links}}
+
+
 def normalize_decision(value: Any, *, partial: bool = False, allow_catalog_variant: bool = True) -> dict[str, Any]:
     if not isinstance(value, dict):
         raise ValueError("A review decision must be an object.")
@@ -399,6 +537,8 @@ def normalize_decision(value: Any, *, partial: bool = False, allow_catalog_varia
         result["note"] = value["note"][:20000]
     if "shotPlan" in value:
         result["shotPlan"] = normalize_plan(value["shotPlan"])
+    if "castUse" in value:
+        result["castUse"] = normalize_cast_use(value["castUse"])
     if "variant" in value:
         if value["variant"] not in ("prime", "multiverse"):
             raise ValueError("A reference lane must be prime or multiverse.")
@@ -479,14 +619,17 @@ def reference_record(asset: dict) -> dict:
             "path": asset.get("repoPath", asset.get("src")), "role": asset.get("category")}
 
 
-def review_provenance(payload: dict, existing: dict | None = None) -> dict:
+def review_provenance(payload: dict, existing: dict | None = None, *, strict_takes: bool = True) -> dict:
     """Preserve source reviews/evidence verbatim, without evaluating or rebinding them.
 
     This is a backup merger, not a validation engine. Evidence keeps its original
     target ID, hash and scope; an alias never makes old evidence current.
     """
+    from studio_dependencies import current_module
+    takes = current_module("storyboard_takes")
     result = {"validationEvidence": {"format": "cfa-reference-validation-v1", "schemaVersion": 1,
-                                     "assessments": [], "legacyReviewArchive": []}, "sceneReviews": []}
+                                     "assessments": [], "legacyReviewArchive": []}, "sceneReviews": [],
+              "storyboardTakes": takes.empty(), "storyboardTakeBackups": []}
     envelope = result["validationEvidence"]
     seen_assessments: dict[str, str] = {}
 
@@ -508,6 +651,24 @@ def review_provenance(payload: dict, existing: dict | None = None) -> dict:
     for source in (existing or {}, payload):
         if not isinstance(source, dict):
             raise ValueError("Review provenance must be an object.")
+        # Take snapshots are immutable. Validate the complete union before this
+        # function returns, so callers can reject a conflicting import atomically.
+        if "storyboardTakes" in source:
+            try:
+                result["storyboardTakes"] = takes.merge(result["storyboardTakes"], source["storyboardTakes"])
+            except ValueError as error:
+                if strict_takes:
+                    raise
+                append_unique(result["storyboardTakeBackups"], [{"origin": "source review provenance",
+                    "reason": str(error), "data": source["storyboardTakes"]}])
+        backups = source.get("storyboardTakeBackups", [])
+        if not isinstance(backups, list):
+            if strict_takes:
+                raise ValueError("Storyboard take backups must be a list.")
+            append_unique(result["storyboardTakeBackups"], [{"origin": "source review provenance",
+                "reason": "Storyboard take backups must be a list.", "data": backups}])
+        else:
+            append_unique(result["storyboardTakeBackups"], backups)
         raw = source.get("items", source.get("reviewDecisions", []))
         if isinstance(raw, dict):
             raw = raw.get("items", [])
@@ -756,6 +917,31 @@ def mission_pending_requests(data: dict, reviews: dict, project: str) -> list[st
         if (a := by_id.get(r.get("id"))) and a.get("project") == project
         and r.get("type") == "missing_decision" and a.get("sha256") and r.get("sha256") == a["sha256"]
         and mission_visible(a, reviews) and reviews.get(a["id"], {}).get("status") not in REVIEW_STATUSES))
+
+
+def mission_storyboard_requests(data: dict, tasks: list[dict], project: str) -> list[dict]:
+    """Explicit author-choice packages, never inferred from missing shot fields."""
+    stories = {story['id'] for story in data.get('storyboardStories', []) if story.get('project') == project}
+    source_tasks = {task.get('id'): task for task in data.get('missionControl', {}).get('tasks', [])}
+    result = []
+    for task in tasks:
+        if task.get('project') != project or task.get('status') != 'needs_input':
+            continue
+        action = source_tasks.get(task['id'], {}).get('userAction')
+        if not isinstance(action, dict) or not isinstance(action.get('links'), list):
+            continue
+        for link in action['links']:
+            if not isinstance(link, dict) or link.get('project') != project or link.get('view') != 'storyboard':
+                continue
+            album = link.get('album')
+            if not isinstance(album, str) or not album.startswith(('structure:', 'story:')):
+                continue
+            story_id = album.split(':', 1)[1]
+            if story_id in stories:
+                result.append(dict(id=task['id'], title=task['title'], project=project, storyID=story_id,
+                                   structure=album.startswith('structure:')))
+                break
+    return result
 
 
 def mission_task_progress(task: dict, assets: list[dict], reviews: dict) -> dict:

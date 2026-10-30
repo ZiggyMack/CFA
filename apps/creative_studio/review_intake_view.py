@@ -397,7 +397,6 @@ def render_intake(data: dict, project: str, library_dir: Path, open_asset, *, re
     intake = data.get("reviewIntake") or {}
     st.title("Intake verification")
     st.write("Review the frozen handoff by image family. Originals, current provider candidates and earlier repairs stay together.")
-    st.caption("Provider QA remains separate from your choices. Both views use the same images and saved reviews.")
     if not intake.get("families"):
         st.info("No frozen handoff is included in this publication yet.")
         return
@@ -410,6 +409,8 @@ def render_intake(data: dict, project: str, library_dir: Path, open_asset, *, re
     if focused and not any(family.get("id") == focused for family in families):
         focused = st.session_state[focus_key] = ""
     layout_key = "intake-layout:" + project
+    if layout_key not in st.session_state:
+        st.session_state[layout_key] = 'gallery'
     if focused:
         st.session_state[layout_key] = "evidence"
     layout = st.selectbox("View", list(LAYOUT_LABELS), format_func=LAYOUT_LABELS.get, key=layout_key,
@@ -448,7 +449,6 @@ def render_intake(data: dict, project: str, library_dir: Path, open_asset, *, re
     metrics[3].metric("Families awaiting files", progress["unavailable"])
     st.caption("Keep, Needs fixes or Mark for removal completes this pass for that image. Notes and ratings are optional. "
                "Each original and nominated current version has its own decision; earlier attempts stay in the evidence.")
-    st.caption(str(intake.get("id", "Frozen intake")) + " · " + str(len(intake.get("packages", []))) + " verified package manifests")
     # The selected-image view does not rerun this renderer. Preserve this list
     # while triage removes families from Still to review behind that view.
     st.session_state["studio_intake_sequence"] = []
@@ -487,5 +487,7 @@ def render_intake(data: dict, project: str, library_dir: Path, open_asset, *, re
             for family in rows:
                 _family(family, assets, library_dir, open_asset, intake, reviews)
     with st.expander("Handoff coverage and receipts · optional", expanded=False):
+        st.caption("Provider QA remains separate from your choices. Both views use the same images and saved reviews.")
+        st.caption(str(intake.get("id", "Frozen intake")) + " · " + str(len(intake.get("packages", []))) + " verified package manifests")
         st.caption("Unavailable versions stay linked here. Nothing is inferred from a matching filename.")
         st.json({key: intake.get(key) for key in ("id", "schemaVersion", "receipt", "sourceIndex", "packages", "summary")}, expanded=False)

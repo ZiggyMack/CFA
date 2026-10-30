@@ -67,6 +67,16 @@ class DesignBundleTests(unittest.TestCase):
                 with Image.open(self.out / asset[key]) as image:
                     self.assertLessEqual(max(image.size), edge)
 
+    def test_immutable_take_snapshots_and_backups_bypass_link_cleaning(self):
+        frozen = {'format': 'cfa-storyboard-takes-v1', 'takes': [{'id': 'same-immutable-id',
+                  'snapshot': {'href': '../original.png', 'sourceURL': str(self.root/'source.txt'),
+                               'src': 'D:/Documents/CFA/original.png'}}]}
+        self.catalog['storyboardTakes'] = deepcopy(frozen)
+        self.catalog['storyboardTakeBackups'] = [{'data': {'href': '../unread.json'}}]
+        result = self.run_build()
+        self.assertEqual(result['storyboardTakes'], frozen)
+        self.assertEqual(result['storyboardTakeBackups'], self.catalog['storyboardTakeBackups'])
+
     def seed_cache(self, catalog_name='mission_control.json', corrupt=False):
         relative = 'mission_media/cached.jpg'
         target = self.out / relative

@@ -16,7 +16,7 @@ from library_helpers import normalize_decision, reference_record, resolve_asset_
 
 EDITABLE_FIELDS = ("status", "note", "shotPlan", "likenessRating", "sceneQualityRating",
                    "storyboardStage", "variant", "workingReference", "workingReferenceScope",
-                   "collectionState", "multiverseSelection", "creativeReview")
+                   "collectionState", "multiverseSelection", "creativeReview", "castUse")
 
 
 def _time(value) -> float:
@@ -57,6 +57,21 @@ def overlay_review_snapshot(catalog: dict, payload: dict, *, source_label: str =
             or not isinstance(payload.get("items"), list)):
         raise ValueError("Expected a CFA review export with an items list.")
     result = deepcopy(catalog)
+    # Take plans are immutable shot records, not image decisions. Reconcile them
+    # separately so a review export cannot lose the earlier take history.
+    if 'storyboardTakes' in catalog or 'storyboardTakes' in payload:
+        from storyboard_takes import empty, merge
+        result['storyboardTakes'] = merge(catalog.get('storyboardTakes', empty()),
+                                          payload.get('storyboardTakes', empty()))
+    if 'storyboardTakeBackups' in catalog or 'storyboardTakeBackups' in payload:
+        retained = []
+        for value in (catalog.get('storyboardTakeBackups', []), payload.get('storyboardTakeBackups', [])):
+            if not isinstance(value, list):
+                raise ValueError('Storyboard take backups must be a list.')
+            for record in value:
+                if record not in retained:
+                    retained.append(deepcopy(record))
+        result['storyboardTakeBackups'] = retained
     assets, aliases = result.get("assets", []), result.get("assetAliases", [])
     raw = result.get("reviewDecisions", [])
     wrapped = isinstance(raw, dict)

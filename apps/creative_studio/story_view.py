@@ -2,7 +2,11 @@
 from __future__ import annotations
 
 import json
+import re
+from copy import deepcopy
+from datetime import datetime, timezone
 from pathlib import Path
+from uuid import uuid4
 
 import streamlit as st
 from studio_dependencies import current_module, media_path, normal_visible, storyboard_stage, storyboard_themes, storyboard_window, STORYBOARD_STAGES
@@ -35,8 +39,42 @@ def choose_story(key: str, value: str) -> None:
     st.session_state[key] = value
 
 
+def focus_authored_shot(project: str, story_id: str, shot: dict) -> None:
+    st.session_state[f'structure-mode:{project}'] = 'Planned shots'
+    st.session_state[f'structure-sequence:{project}'] = shot['sectionID']
+    st.session_state[f'structure-focus:{project}'] = 'All planned shots'
+    st.session_state[f'structure-foundation:{project}'] = 'all'
+    st.session_state[f'structure-status:{project}'] = 'all'
+    st.session_state[f'structure-shot-focus:{project}:{story_id}'] = shot['shotID']
+
+
+def render_author_choices(data: dict, story: dict, project: str, record: dict) -> None:
+    helper = current_module('library_helpers')
+    tasks = helper.mission_tasks(data.get('missionControl', {}))
+    packages = {row['id'] for row in helper.mission_storyboard_requests(data, tasks, project)
+                if row['storyID'] == story['id']}
+    if not packages:
+        return
+    for task in tasks:
+        if task['id'] not in packages:
+            continue
+        questions = list(dict.fromkeys(q.strip() for q in task['missing'] if q.strip()))
+        with st.expander(f'Author choices · {len(questions)} questions', expanded=False):
+            st.write(task['title'])
+            st.caption('Discuss these choices in chat. Open a written shot here to inspect its context.')
+            for index, question in enumerate(questions, 1):
+                key = task['id']+':'+str(index)
+                matched = [shot for shot in record.get('shots', []) if re.search(
+                    r'(?<![A-Za-z0-9])'+re.escape(shot['shotID'])+r'(?![A-Za-z0-9])', question, re.IGNORECASE)]
+                with st.expander(f'Question {index}'):
+                    st.write(question)
+                    for shot in sorted(matched, key=lambda row: question.casefold().find(row['shotID'].casefold())):
+                        st.button('Open written shot · '+shot['shotID'], key='author-shot:'+key+':'+shot['shotID'],
+                                  on_click=focus_authored_shot, args=(project, story['id'], shot))
+
+
 def render_structure(data, story, project, select_asset, *, reviews=None, scene_reviews=()):
-    """Read the same evidence projection as the full mirror; never mutate reviews."""
+    """Browse shared evidence and explicitly plan immutable storyboard takes."""
     model = data.get('storyboardStructure', {})
     records = {s['storyID']: s for s in model.get('stories', [])}
     record = records.get(story['id'], {})
@@ -75,6 +113,7 @@ def render_structure(data, story, project, select_asset, *, reviews=None, scene_
         st.subheader('Kitchen / handoff structure')
         fields(model.get('kitchenFields',[]), [], f'template-kitchen:{project}', True)
         return
+    render_author_choices(data, story, project, record)
     shots=record.get('shots',[])
     foundation_helper = current_module('source_foundation')
     foundation_model = data.get('storyboardSourceFoundation', {})
@@ -86,13 +125,69 @@ def render_structure(data, story, project, select_asset, *, reviews=None, scene_
     foundations = {shot['shotID']: foundation_helper.derive(
         foundation_model, shot, project, story['id'], assets, reviews=foundation_reviews, scene_reviews=scene_reviews)
         for shot in shots}
+    take_helper = current_module('storyboard_takes')
+    provenance = st.session_state.get('studio_review_provenance', {})
+    take_backups = []
+    for source in (data, provenance):
+        backups = source.get('storyboardTakeBackups', [])
+        take_backups.extend(backups if isinstance(backups, list) else [dict(
+            origin='Source take backup', reason='Unsupported backup envelope', data=backups)])
+    take_error = None
+    take_ledger = take_helper.empty()
+    for source in (provenance, data):
+        try:
+            take_ledger = take_helper.merge(take_ledger, source.get('storyboardTakes', take_helper.empty()))
+        except ValueError as error:
+            take_error = str(error)
+    # merge() already validated the ledger. Group it once rather than copying
+    # and validating every saved shot snapshot again for each card.
+    take_histories = {}
+    for take in take_ledger['takes']:
+        if take['project'] == project and take['storyID'] == story['id']:
+            take_histories.setdefault(take['shotID'], []).append(take)
+    current_takes, branched_shots, changed_sources = {}, set(), set()
+    effective_shots = []
+    for source_shot in shots:
+        sid = source_shot['shotID']
+        history = take_histories.setdefault(sid, [])
+        parent_ids = {take['parentID'] for take in history}
+        leaves = [take for take in history if take['id'] not in parent_ids]
+        selected_take = leaves[0] if len(leaves) == 1 else None
+        current_takes[sid] = selected_take
+        if history and selected_take is None:
+            branched_shots.add(sid)
+        if selected_take:
+            roots = [take for take in history if take['parentID'] is None]
+            if len(roots) == 1 and roots[0]['snapshot']['shot'] != source_shot:
+                changed_sources.add(sid)
+            effective_shots.append(deepcopy(selected_take['snapshot']['shot']))
+            saved_foundation = {**foundations[sid], **deepcopy(selected_take['snapshot']['foundation'] or {})}
+            # A planned take intentionally adds a reconciliation note. Compare
+            # source selection/provenance without treating that note as a source edit.
+            saved_inputs = {key: value for key, value in saved_foundation.items()
+                            if key not in {'notes', 'dependencyReviewNeeded'}}
+            live_inputs = {key: value for key, value in foundations[sid].items()
+                           if key not in {'notes', 'dependencyReviewNeeded'}}
+            if saved_inputs != live_inputs:
+                saved_foundation['dependencyReviewNeeded'] = True
+                saved_foundation.setdefault('notes', []).append(
+                    'The live source foundation differs from this saved take. Its snapshot remains unchanged; review dependencies.')
+            foundations[sid] = saved_foundation
+        else:
+            effective_shots.append(source_shot)
+    shots = effective_shots
+    if take_error or take_backups:
+        st.warning('Saved take records need reconciliation. Planning another take is blocked; existing image reviews are unchanged.')
+        with st.expander('Saved take record issue'):
+            if take_error: st.text(take_error)
+            if take_backups: st.json(take_backups)
     foundation_counts = {state: sum(value['state'] == state for value in foundations.values())
                          for state in foundation_helper.LABELS}
     st.subheader('Story plan & coverage')
     st.caption('Planned shots connect the song sections, scene writing and original panels. '
                'Written coverage does not mean every shot has an image or an aligned song cue.')
     evidence([record['source']] if record.get('source') else [], f'structure-map:{project}:{story["id"]}')
-    st.caption(f"{len(shots)} planned shots · {len(record.get('sections',[]))} sequences · {sum(bool(s.get('kitchenWritten')) for s in shots)} kitchen blocks documented · may contain gaps")
+    st.caption(f"{len(shots)} planned shots · {len(record.get('sections',[]))} sequences · may contain gaps")
     st.info('Writing completeness is separate from review, acceptance and execution. Required inputs depend on the phase and selected route.')
     st.caption('Source foundation · ' + ' · '.join(
         f"{foundation_helper.LABELS[state]}: {count}" for state, count in foundation_counts.items() if count))
@@ -143,19 +238,27 @@ def render_structure(data, story, project, select_asset, *, reviews=None, scene_
         if not visible: continue
         st.subheader(section['id']+' · '+section['title'])
         for shot in visible:
-            with st.expander(shot['shotID']+' · '+shot['title']+' · '+foundations[shot['shotID']]['label']):
-                st.caption(shot['revision']+' · '+shot['authoringStatus'])
-                st.caption('Storyboard maturity: ' + STORYBOARD_STAGES.get(shot.get('stage'), shot.get('stage') or 'Not recorded'))
-                if shot.get('coverageUpdate'):
-                    st.markdown('**Coverage notes' + (' · ' + shot['coverageAsOf'] if shot.get('coverageAsOf') else '') + '**')
-                    st.text(shot['coverageUpdate'])
-                    evidence([shot['coverageEvidence']] if shot.get('coverageEvidence') else [],
-                             f'structure-coverage:{project}:{shot["shotID"]}')
+            sid = shot['shotID']
+            selected_take = current_takes[sid]
+            take_label = (f"Take {selected_take['number']} · " + ('written plan' if selected_take['state'] == 'written' else 'planned')) if selected_take else str(shot.get('revision') or 'Take 1').capitalize() + ' · written plan'
+            if sid in branched_shots: take_label = 'Take branches · current unresolved'
+            with st.expander(sid+' · '+shot.get('title', 'Untitled shot')+' · '+take_label+' · '+foundations[sid]['label'],
+                             expanded=st.session_state.get(f'structure-shot-focus:{project}:{story["id"]}') == sid):
+                if selected_take and selected_take['state'] == 'planned':
+                    st.markdown('**Change for this take**')
+                    st.text(selected_take['changeNote'])
+                if sid in branched_shots:
+                    st.warning('More than one take branch remains. No current take was chosen automatically; reconcile the saved branches before planning another.')
                 foundation = foundations[shot['shotID']]
-                st.markdown('**Source foundation: ' + foundation['label'] + '**')
-                if foundation['dependencyReviewNeeded']:
-                    st.warning('Selected input changed. Review dependent packs and checks; earlier decisions remain intact.')
-                with st.expander('Selected input details'):
+                with st.expander('Linked references'):
+                    if shot.get('coverageUpdate'):
+                        st.markdown('**Coverage notes' + (' · ' + shot['coverageAsOf'] if shot.get('coverageAsOf') else '') + '**')
+                        st.text(shot['coverageUpdate'])
+                        evidence([shot['coverageEvidence']] if shot.get('coverageEvidence') else [],
+                                 f'structure-coverage:{project}:{shot["shotID"]}')
+                    st.markdown('**Source foundation: ' + foundation['label'] + '**')
+                    if foundation['dependencyReviewNeeded']:
+                        st.warning('Selected input changed. Review dependent packs and checks; earlier decisions remain intact.')
                     for note in foundation.get('notes', []): st.write(note)
                     for index, item in enumerate(foundation.get('inputs', [])):
                         asset = assets.get(item.get('assetID'))
@@ -183,25 +286,43 @@ def render_structure(data, story, project, select_asset, *, reviews=None, scene_
                             elif isinstance(rules, list):
                                 for rule in rules: st.write(rule)
                             else: st.text(str(rules))
-                legacy = shot.get('sourceShotPlanIDs', [])
-                if legacy:
-                    st.caption('Earlier shot-plan IDs: '+', '.join(legacy))
-                    st.caption('Source crosswalk only. These IDs remain distinct; their results and acceptance do not transfer to this authored shot.')
-                    plans = {p['id']:p for p in data.get('shotMaterials',{}).get('shots',[])}
-                    for legacy_id in legacy:
-                        for i, material in enumerate(plans.get(legacy_id,{}).get('materials',[])):
-                            asset = assets.get(material.get('assetID'))
-                            if asset:
-                                st.button(legacy_id+' · '+asset.get('title',asset['id']), key=f"legacy:{project}:{shot['shotID']}:{legacy_id}:{i}", on_click=select_asset, args=(asset['id'],asset['project']))
+                    materials = shot.get('materials', [])
+                    st.caption(f'{len(materials)} linked references · {len(shot.get("pendingReferences", []))} recorded gaps')
+                    for index, material in enumerate(materials):
+                        asset = assets.get(material.get('assetID'))
+                        if asset:
+                            st.button(asset.get('title', asset['id']), key=f'material:{project}:{sid}:{index}',
+                                      on_click=select_asset, args=(asset['id'], asset['project']))
+                            st.caption(ROLES.get(material.get('role'), str(material.get('role') or 'Reference').replace('_', ' ')))
+                        if material.get('note'): st.write(material['note'])
+                    for pending in shot.get('pendingReferences', []):
+                        st.write(pending)
+                    legacy = shot.get('sourceShotPlanIDs', [])
+                    if legacy:
+                        st.caption('Earlier shot-plan IDs: '+', '.join(legacy))
+                        st.caption('Source crosswalk only. These IDs remain distinct; their results and acceptance do not transfer to this authored shot.')
+                        plans = {p['id']:p for p in data.get('shotMaterials',{}).get('shots',[])}
+                        for legacy_id in legacy:
+                            for i, material in enumerate(plans.get(legacy_id,{}).get('materials',[])):
+                                asset = assets.get(material.get('assetID'))
+                                if asset:
+                                    st.button(legacy_id+' · '+asset.get('title',asset['id']), key=f"legacy:{project}:{shot['shotID']}:{legacy_id}:{i}", on_click=select_asset, args=(asset['id'],asset['project']))
                 def field_group(title, keys, include_history=False):
                     definitions = [definition for definition in model['fields'] if definition['key'] in keys]
-                    if not definitions and not include_history:
+                    if not definitions and not include_history and 'purpose' not in keys:
                         return
                     values = {value['key']: value for value in shot.get('fields', [])}
                     group_matches = status_filter != 'all' and any(
                         field_status(values.get(definition['key'], {})) == status_filter for definition in definitions)
                     with st.expander(title, expanded=group_matches):
-                        fields(definitions,shot['fields'],f"structure:{project}:{shot['shotID']}",fallback=shot['source'])
+                        if 'purpose' in keys:
+                            st.caption(shot.get('authoringStatus', 'Written plan'))
+                            st.caption('Storyboard maturity: ' + STORYBOARD_STAGES.get(shot.get('stage'), shot.get('stage') or 'Not recorded'))
+                            if sid in changed_sources:
+                                st.info('Source writing changed after this take was saved. The saved plan remains intact; reconcile the newer writing before handoff.')
+                            if section.get('spineBeat'): st.text(section['spineBeat'])
+                            if section.get('context'): st.text(section['context'])
+                        fields(definitions,shot['fields'],f"structure:{project}:{shot['shotID']}",fallback=shot.get('source'))
                         if include_history:
                             evidence([row for row in [shot.get('parent') or shot.get('source'),
                                                       *shot.get('priorDependencyEvidence', [])] if row],
@@ -212,17 +333,62 @@ def render_structure(data, story, project, select_asset, *, reviews=None, scene_
                                     st.write(revision['note']); evidence([revision['source']],f"revision:{shot['shotID']}:{revision['id']}")
                             st.caption('Changes to direction, cue, source or prompt require review of dependent packs. '
                                        'Earlier results and human reviews are retained; timings are never moved automatically.')
+                            st.caption('Take numbers track written plans and revisions. They do not indicate that a video was generated.')
+                            for saved_take in take_histories[sid]:
+                                saved_label = (f"Take {saved_take['number']} · " if saved_take['number'] is not None else '') + ('written plan' if saved_take['state'] == 'written' else 'planned')
+                                if selected_take and saved_take['id'] == selected_take['id']: saved_label += ' · current'
+                                with st.expander(saved_label):
+                                    st.caption(saved_take['recordedAt'] or 'Written source · recording time not supplied')
+                                    if saved_take['changeNote']: st.text(saved_take['changeNote'])
+                                    snapshot = saved_take['snapshot']
+                                    fields(model['fields'], snapshot['shot'].get('fields', []),
+                                           f'saved-take:{project}:{sid}:{saved_take["id"]}', fallback=snapshot['shot'].get('source'))
+                                    fields(model['kitchenFields'], snapshot['shot'].get('kitchen', []),
+                                           f'saved-kitchen:{project}:{sid}:{saved_take["id"]}', fallback=snapshot['shot'].get('source'))
+                                    with st.expander('Frozen source, references and evidence'):
+                                        st.json(snapshot)
+                            with st.expander('Plan next take'):
+                                st.caption('Save the current plan as history and start another planned take with your change brief. '
+                                           'Nothing is generated; earlier results and acceptance stay with the earlier take.')
+                                blocked = bool(take_error or take_backups or sid in branched_shots)
+                                if st.session_state.pop(f'take-clear:{project}:{story["id"]}:{sid}', False):
+                                    st.session_state[f'take-change:{project}:{story["id"]}:{sid}'] = ''
+                                brief = st.text_area('What should change?', key=f'take-change:{project}:{story["id"]}:{sid}',
+                                                     disabled=blocked)
+                                if st.button('Plan next take', key=f'take-plan:{project}:{story["id"]}:{sid}',
+                                             disabled=blocked or not brief.strip()):
+                                    try:
+                                        updated = take_helper.plan(take_ledger, dict(project=project, storyID=story['id'],
+                                            shot=shot, foundation=foundation, changeNote=brief, id='take-'+str(uuid4()),
+                                            recordedAt=datetime.now(timezone.utc).isoformat()))
+                                        saved = current_module('library_helpers').review_provenance(
+                                            {'storyboardTakes': updated}, st.session_state.get('studio_review_provenance', {}))
+                                    except ValueError as error:
+                                        st.error(str(error))
+                                    else:
+                                        st.session_state.studio_review_provenance = saved
+                                        st.session_state[f'take-clear:{project}:{story["id"]}:{sid}'] = True
+                                        st.session_state[f'take-saved:{project}:{story["id"]}:{sid}'] = True
+                                        st.rerun()
+                                if st.session_state.get(f'take-saved:{project}:{story["id"]}:{sid}'):
+                                    st.success('Planned take saved in this session. Export the review file to keep it across devices.')
                 field_group('Context & references · A–D', {'purpose', 'context', 'lineage', 'references'})
                 field_group('Creative direction · 0–7',
                             {'start_frame', 'lighting', 'camera', 'character', 'background', 'beats', 'cue', 'prompt_still'})
                 field_group('Generation handoff · 8–9', {'prompt_clip', 'settings'})
                 field_group('Takes, results & review · 10–11', {'results', 'acceptance'}, include_history=True)
-                with st.expander('Kitchen / handoff structure'):
-                    fields(model['kitchenFields'],shot['kitchen'],f"kitchen:{project}:{shot['shotID']}",fallback=shot['source'])
+                kitchen_by_key = {value['key']: value for value in shot.get('kitchen', [])}
+                kitchen_written = sum(
+                    bool(str(kitchen_by_key.get(definition['key'], {}).get('text') or '').strip())
+                    and kitchen_by_key.get(definition['key'], {}).get('status') in {'draft', 'present', 'verified', 'accepted', 'not_needed'}
+                    for definition in model.get('kitchenFields', []))
+                with st.expander(f'Kitchen / handoff structure · {kitchen_written}/{len(model.get("kitchenFields", []))} sections written'):
+                    st.caption('Written sections describe the handoff; they do not indicate execution or acceptance.')
+                    fields(model['kitchenFields'],shot.get('kitchen', []),f"kitchen:{project}:{shot['shotID']}",fallback=shot.get('source'))
 
 
 def render_stories(data: dict, project: str, library_dir: Path, render_grid, select_asset, document_download, *, reviews: dict) -> None:
-    stories = [s for s in data.get("storyboardStories", []) if s.get("project") == project]
+    stories = list({s["id"]: s for s in data.get("storyboardStories", []) if s.get("project") == project}.values())
     if not stories:
         st.info("No stories are registered for this project yet.")
         return
@@ -241,20 +407,27 @@ def render_stories(data: dict, project: str, library_dir: Path, render_grid, sel
             scene_reviews = st.session_state.get('studio_review_provenance', {}).get('sceneReviews', data.get('sceneReviews', []))
             render_structure(data,story,project,select_asset,reviews=reviews,scene_reviews=scene_reviews)
             return
-    for start in range(0, len(stories), 3):
-        for column, story in zip(st.columns(3), stories[start:start + 3]):
-            with column, st.container(border=True):
-                sequence = sequences.get(story.get("sequenceID"), {})
-                cover = by_id.get(story.get("coverID", sequence.get("coverID")))
-                preview = media_path(library_dir, cover.get("thumb")) if cover and normal_visible(cover, reviews) else None
-                if preview:
-                    st.image(str(preview), width="stretch")
-                st.button(story["title"], key=f"story-cover:{story['id']}", on_click=choose_story,
-                          args=(key, story["id"]), width="stretch", type="primary" if selected_id == story["id"] else "secondary")
-                st.caption({"song": "Song storyboard", "sequence": "Independent sequence", "prose": "Writings & development"}.get(story.get("kind"), "Story"))
-                if sequence.get("shots"):
-                    coverage = sequence_coverage(sequence, by_id, reviews)
-                    st.caption(f"{coverage['shots']} shots · {coverage['scenes']} scenes · {coverage['pending']} with pending references")
+    groups = {}
+    for story in stories:
+        group = story.get("group") or ("Series and seeds" if story.get("kind") == "prose" else "Stories")
+        groups.setdefault(group, []).append(story)
+    for group, group_stories in groups.items():
+        unit = "storyboards" if group == "Stories" else "writing collections"
+        st.subheader(f"{group} · {len(group_stories)} {unit}")
+        for start in range(0, len(group_stories), 3):
+            for column, story in zip(st.columns(3), group_stories[start:start + 3]):
+                with column, st.container(border=True):
+                    sequence = sequences.get(story.get("sequenceID"), {})
+                    cover = by_id.get(story.get("coverID", sequence.get("coverID")))
+                    preview = media_path(library_dir, cover.get("thumb")) if cover and normal_visible(cover, reviews) else None
+                    if preview:
+                        st.image(str(preview), width="stretch")
+                    st.button(story["title"], key=f"story-cover:{story['id']}", on_click=choose_story,
+                              args=(key, story["id"]), width="stretch", type="primary" if selected_id == story["id"] else "secondary")
+                    st.caption({"song": "Song storyboard", "sequence": "Independent sequence", "prose": "Writings & development"}.get(story.get("kind"), "Story"))
+                    if sequence.get("shots"):
+                        coverage = sequence_coverage(sequence, by_id, reviews)
+                        st.caption(f"{coverage['shots']} shots · {coverage['scenes']} scenes · {coverage['pending']} with pending references")
     story = story_map[selected_id]
     st.subheader(story["title"])
     if story.get("description"):
@@ -327,7 +500,7 @@ def render_stories(data: dict, project: str, library_dir: Path, render_grid, sel
         st.info("No panels yet. This story is available as writings and development notes.")
     documents = [by_id[aid] for aid in story.get("documentIDs", []) if aid in by_id and by_id[aid].get("kind") in {"document", "pdf"}]
     if documents:
-        st.subheader("Writings · " + story["title"])
+        st.subheader(f"Writings · {story['title']} · {len(documents)} documents")
         for asset in documents:
             with st.expander(asset.get("title", asset["id"])):
                 if asset.get("text"):

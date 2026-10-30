@@ -10,8 +10,8 @@ from html import escape
 from pathlib import Path
 
 from studio_dependencies import (
-    approved_multiverse, effective_design_data, effective_reviews, media_path,
-    normal_visible, storyboard_stage,
+    approved_multiverse, cast_member_ids, cast_use_state, effective_design_data, effective_reviews, media_path,
+    navigation_reference_count, normal_visible, storyboard_stage,
 )
 
 VIEWS = {
@@ -398,8 +398,13 @@ def cast_browse_facts(ctx, source, visible_ids):
                if (album := ctx.albums.get(aid)) and album.get("project") == ctx.project]
     identity_ids = unique([source.get("representativeID"), source.get("coverID"),
                            *source.get("currentIDs", []), *source.get("workingReferenceIDs", [])])
-    choices = [asset for aid in identity_ids if (asset := ctx.by_id.get(aid)) and
-               (asset.get("roleDecision") == "user_assigned" or asset.get("selectionStatus") == "user_selected_visible_golden_reference")]
+    member_ids = unique([*cast_member_ids(source), *visible_ids])
+    members = [asset for aid in member_ids if (asset := ctx.by_id.get(aid)) and asset.get("project") == ctx.project]
+    states = {asset["id"]: cast_use_state(ctx.data, asset, ctx.reviews) for asset in members}
+    choices = [{**asset, "characterRole": states[asset["id"]]["role"],
+                "manualCastChoice": isinstance(ctx.review(asset["id"]).get("castUse"), dict)}
+               for asset in members if states[asset["id"]]["roleSelected"]
+               and (asset["id"] in identity_ids or isinstance(ctx.review(asset["id"]).get("castUse"), dict))]
     ids = set(visible_ids)
     shots = [shot for shot in ctx.data.get("shotMaterials", {}).get("shots", [])
              if shot.get("project") == ctx.project and (shot.get("characterCollectionID") == source["id"]
@@ -409,9 +414,21 @@ def cast_browse_facts(ctx, source, visible_ids):
                     for material in shot.get("materials", [])))]
     sequences = [sequence for sequence in ctx.data.get("storyboardSequences", [])
                  if sequence.get("project") == ctx.project and any(aid in ids for aid in sequence.get("assetIDs", []))]
+    manual_plans, manual_links, unresolved = [], [], []
+    for asset in members:
+        state = states[asset["id"]]
+        if state["storyboardPlanned"] or state["validLinks"]:
+            manual_plans.append({"id": "manual:"+asset["id"], "assetID": asset["id"],
+                                 "title": asset.get("title", asset["id"])+" · planned by you"})
+        targets = {(row["storyID"], row["shotID"]): row for row in state["targets"]}
+        for link in state["validLinks"]:
+            target = targets[(link["storyID"], link["shotID"])]
+            manual_links.append({**link, "assetID": asset["id"], "title": target["storyTitle"]+" · "+target["shotID"]+" · "+target["shotTitle"]})
+        unresolved.extend({**link, "assetID": asset["id"]} for link in state["unresolvedLinks"])
     return {"sources": sources, "choices": choices, "roles": bool(choices),
-            "planned": [shot for shot in shots if not shot.get("panelAssetIDs")],
-            "linked": [shot for shot in shots if shot.get("panelAssetIDs")], "sequences": sequences}
+            "planned": [shot for shot in shots if not shot.get("panelAssetIDs")]+manual_plans,
+            "linked": [shot for shot in shots if shot.get("panelAssetIDs")]+manual_links,
+            "sequences": sequences, "unresolved": unresolved}
 
 
 def cast_browse_groups(groups, source="all", connection="all"):
@@ -471,6 +488,8 @@ def cast_model(ctx, album_id):
 
 def archive_model(ctx):
     available = [a["id"] for a in ctx.by_id.values() if a.get("project") == ctx.project and ctx.visible(a) and ctx.matches(a)]
+    removals = [a['id'] for a in ctx.by_id.values() if a.get('project') == ctx.project
+                and not a.get('archived') and ctx.review(a['id']).get('status') == 'remove' and ctx.matches(a)]
     definitions = [{"id": "hon:tattoo-source-history", "title": "Earlier tattoo alternatives and source sheets", "assetIDs": HISTORICAL_TATTOOS}] if ctx.project == "hon" else []
     for g in ctx.data.get("sharedReferenceCollections", []):
         if g.get("project") == ctx.project:
@@ -483,7 +502,9 @@ def archive_model(ctx):
         group = ctx.group({**source, "assetIDs": [aid for aid in source["assetIDs"] if aid in available and aid not in claimed]})
         if group:
             groups.append(group); claimed.update(group["assetIDs"])
-    return [section("Earlier reference collections", kind="collections", groups=groups),
+    return [section(f'Saved removal decisions and archive · {len(removals)}', removals, kind='disclosure',
+                    description='These references are marked for removal but have not been archived. Their decisions, notes and original files are retained.'),
+            section("Earlier reference collections", kind="collections", groups=groups),
             section("Archived pictures, clips and documents", [aid for aid in available if aid not in claimed], description="Open a reference to restore it. Reviews and original files are retained.")]
 
 
@@ -615,9 +636,11 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
                 preview(a, context + ":" + str(index))
         elif visuals:
             render_grid(visuals, context)
-        for a, _ in rows:
-            if a.get("kind") in {"document", "pdf"}:
-                st.button(a.get("title", a["id"]), key=context + ":doc:" + a["id"], on_click=open_reference, args=(a,))
+        documents = [a for a, _ in rows if a.get("kind") in {"document", "pdf"}]
+        if documents:
+            st.markdown(f'**Documents · {len(documents)}**')
+        for a in documents:
+            st.button(a.get("title", a["id"]), key=context + ":doc:" + a["id"], on_click=open_reference, args=(a,))
 
     def collections(groups, context):
         for start in range(0, len(groups), 3):
@@ -665,17 +688,22 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
                         if facts["choices"]:
                             st.caption("Recorded character choices")
                             for choice in facts["choices"]:
-                                st.write(str(choice.get("characterRole") or "Selected boss") + " · " +
-                                         ("role assigned by Ziggy" if choice.get("roleDecision") == "user_assigned" else "visible likeness selected by Ziggy"))
+                                st.write(str(choice.get("characterRole") or "Selected character") + " · " +
+                                         ("this version selected by you" if choice.get("manualCastChoice") else
+                                          "role assigned by Ziggy" if choice.get("roleDecision") == "user_assigned" else "visible likeness selected by Ziggy"))
                             st.caption("These choices assign a role or reference scope; each image keeps its own review.")
                         if facts["planned"]:
-                            st.caption("Planned storyboard use · no panel linked yet")
+                            st.caption("Planned storyboard use" + (" · see linked shots below" if facts["linked"] or facts["sequences"] else " · no panel linked yet"))
                             for shot in facts["planned"]:
                                 st.write(shot.get("title", shot.get("id", "Planned scene")))
                         if facts["linked"] or facts["sequences"]:
                             st.caption("Linked storyboard material · placement and acceptance stay with each shot")
                             for shot in [*facts["linked"], *facts["sequences"]]:
                                 st.write(shot.get("title", shot.get("id", "Linked story material")))
+                        if facts.get("unresolved"):
+                            st.warning('Some saved storyboard links no longer resolve. They are retained for review and excluded from linked counts.')
+                            for link in facts['unresolved']:
+                                st.caption(link['storyID']+' · '+link['shotID']+' · '+link['assetID'])
                         if navigate and (facts["planned"] or facts["linked"] or facts["sequences"]):
                             st.button("Browse storyboards", key=key + ":storyboard", on_click=navigate, args=("Storyboard",))
                 for i, child in enumerate(g.get("sections", [])):
@@ -737,7 +765,8 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
                                     st.write(workflow["summary"])
                                 for label, field in (("Parent inputs", "sourceAssetIDs"), ("Recorded outputs", "outputAssetIDs"), ("Records and graphs", "documentAssetIDs")):
                                     if workflow[field]:
-                                        st.caption(label)
+                                        suffix = (' · '+str(navigation_reference_count(list(model['assets'].values()), workflow[field], documents=True))+' documents') if field == 'documentAssetIDs' else ''
+                                        st.caption(label+suffix)
                                         for aid in workflow[field]:
                                             link_button(aid, None, family_key + ":" + workflow["id"] + ":" + field + ":" + aid)
         elif kind == "columns":

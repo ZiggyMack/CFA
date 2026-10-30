@@ -19,6 +19,7 @@ class StudioDependencyTest(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory(prefix="studio-dependency-", dir=cache)
         self.addCleanup(self.temp.cleanup)
         self.directory = Path(self.temp.name)
+        (self.directory / "storyboard_takes.py").write_text("VERSION = 1\n", encoding="utf-8")
         spec = importlib.util.spec_from_file_location("studio_dependency_test_loader", APP_DIR / "studio_dependencies.py")
         self.loader = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(self.loader)
@@ -56,6 +57,7 @@ class StudioDependencyTest(unittest.TestCase):
         other = self.directory / "other"
         other.mkdir()
         (other / source.name).write_bytes(source.read_bytes())
+        (other / "storyboard_takes.py").write_bytes((self.directory / "storyboard_takes.py").read_bytes())
         with patch.object(self.loader, "APP_DIR", other):
             second = self.loader.current_module("library_helpers")
         self.assertIsNot(first, second)
@@ -103,6 +105,15 @@ class StudioDependencyTest(unittest.TestCase):
         (self.directory / "unrelated.py").write_text("raise AssertionError('must not execute')", encoding="utf-8")
         with self.assertRaises((ValueError, ImportError)):
             self.loader.current_module("unrelated")
+
+    def test_take_helper_update_refreshes_review_and_story_modules(self):
+        (self.directory / "library_helpers.py").write_text("VALUE = 1\n", encoding="utf-8")
+        (self.directory / "story_view.py").write_text("VALUE = 1\n", encoding="utf-8")
+        (self.directory / "source_foundation.py").write_text("VALUE = 1\n", encoding="utf-8")
+        before = {name: self.loader.current_module(name) for name in ("library_helpers", "story_view")}
+        (self.directory / "storyboard_takes.py").write_text("VERSION = 2\n", encoding="utf-8")
+        for name, module in before.items():
+            self.assertIsNot(module, self.loader.current_module(name))
 
 
 if __name__ == "__main__":

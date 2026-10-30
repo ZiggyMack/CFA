@@ -112,6 +112,30 @@ class ReviewSnapshotTest(unittest.TestCase):
         self.assertNotIn("reviewSessionSeed", result)
         self.assertEqual(report["skipped"][0]["reason"], "unmatched_id_or_hash")
 
+    def test_cast_choices_survive_publication_and_review_export(self):
+        catalog, asset = self.fixture()
+        choice = {"roleSelected": True, "role": "Dolo's wife", "storyboardPlanned": True,
+                  "storyboardLinks": [{"storyID": "strictly-business", "shotID": "S07-4"}]}
+        result, report = overlay_review_snapshot(catalog, self.payload(asset, updatedAt=LATE, castUse=choice))
+        self.assertEqual(result["reviewDecisions"][0]["castUse"], choice)
+        self.assertEqual(report["changedFields"], 1)
+        reviews = effective_reviews(result["assets"], result["reviewDecisions"], {})
+        exported = review_payload(result["assets"], reviews, set())
+        self.assertEqual(exported["items"][0]["castUse"], choice)
+        self.assertEqual(result["reviewDecisions"][0]["acceptedScope"], catalog["reviewDecisions"][0]["acceptedScope"])
+        self.assertNotIn("castUse", catalog["reviewDecisions"][0])
+
+    def test_cast_clear_is_dated_and_unrelated_note_does_not_restore_it(self):
+        catalog, asset = self.fixture()
+        cleared = {"roleSelected": False, "role": "Dolo's wife", "storyboardPlanned": False, "storyboardLinks": []}
+        catalog["reviewDecisions"][0].update(castUse=cleared, fieldUpdatedAt={"castUse": LATE})
+        old_choice = {**cleared, "roleSelected": True, "storyboardPlanned": True}
+        result, report = overlay_review_snapshot(catalog, self.payload(asset, updatedAt=MIDDLE, castUse=old_choice))
+        self.assertEqual(result["reviewDecisions"][0]["castUse"], cleared)
+        self.assertEqual(report["conflicts"][0]["field"], "castUse")
+        result, _ = overlay_review_snapshot(catalog, self.payload(asset, updatedAt=LATE, note="Reconsider the scene"))
+        self.assertEqual(result["reviewDecisions"][0]["castUse"], cleared)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -17,6 +17,30 @@ class DesignAppTest(unittest.TestCase):
         self.assertFalse(app.exception)
         return app
 
+    def test_storyboard_review_lane_opens_exact_authored_package(self):
+        app = self.launch()
+        before = json.dumps(app.session_state.studio_reviews, sort_keys=True)
+        self.assertTrue(any('1 writing package awaits your choices.' == caption.value for caption in app.caption))
+        button = app.button(key='mission-storyboard-review:hon-coverage-review-queue-20261028')
+        self.assertEqual(button.label, 'Review storyboard')
+        button.click().run()
+        self.assertFalse(app.exception)
+        self.assertEqual(app.session_state.studio_view, 'Storyboard')
+        self.assertEqual(app.selectbox(key='story-select:hon').value, 'hon:strictly-business')
+        self.assertEqual(app.radio(key='story-view:hon').value, 'Structure & gaps')
+        app.button(key='author-shot:hon-coverage-review-queue-20261028:1:P-6b').click().run()
+        self.assertFalse(app.exception)
+        self.assertEqual(app.selectbox(key='structure-sequence:hon').value, 'PROLOGUE')
+        self.assertTrue(next(expander for expander in app.expander if expander.label.startswith('P-6b ·')).proto.expanded)
+        self.assertFalse(any(area.label == 'Your answer' for area in app.text_area))
+        self.assertNotIn('authorResponses', app.session_state.studio_review_provenance)
+        app.button(key='nav:Ziggy’s Corner').click().run()
+        self.assertTrue(all(not expander.proto.expanded for expander in app.expander if expander.label == 'Briefs and records'))
+        app.button(key='mission-writing-workspace:hon-coverage-review-queue-20261028').click().run()
+        self.assertEqual(app.session_state.studio_view, 'Storyboard')
+        self.assertEqual(app.radio(key='story-view:hon').value, 'Structure & gaps')
+        self.assertEqual(json.dumps(app.session_state.studio_reviews, sort_keys=True), before)
+
     def test_all_design_destinations_and_archive_restore_without_review_loss(self):
         app = self.launch()
         snapshot = json.loads((APP / "library/design_catalog.json").read_text(encoding="utf-8"))
@@ -30,8 +54,9 @@ class DesignAppTest(unittest.TestCase):
         self.assertIn(f"{len(plans)} saved shot plans across all projects.", [c.value for c in app.caption])
         app.button(key="corner-collection-back").click().run()
         nav = [b.label for b in app.sidebar.button]
-        self.assertEqual(nav[nav.index("Needs review") + 1], "Archive")
-        for view in ("Working references", "Outfits", "Tattoos & piercings", "Supporting cast", "Comfy swap targets", "Needs review", "Archive", "Videos", "Storyboard"):
+        self.assertFalse(any(label == 'Needs review' for label in nav))
+        self.assertEqual(nav[next(i for i, label in enumerate(nav) if label.startswith('Review queue ·')) + 1], "Archive")
+        for view in ("Working references", "Outfits", "Tattoos & piercings", "Supporting cast", "Comfy swap targets", "Review queue", "Archive", "Videos", "Storyboard"):
             app.button(key="nav:" + view).click().run()
             self.assertFalse(app.exception, view)
         app.button(key="nav:Working references").click().run()

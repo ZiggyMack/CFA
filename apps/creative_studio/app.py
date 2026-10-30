@@ -21,6 +21,7 @@ from studio_dependencies import (
     layout_video_assets, media_path, mission_tasks, mission_review_data, normalize_plan, ordered_assets, production_workflows,
     read_basket, read_review, review_payload, storyboard_stage, storyboard_themes, storyboard_window, sweep_payload,
     effective_design_data, normal_visible, approved_multiverse, merge_review_overrides, review_provenance, validated_asset_aliases,
+    navigation_reference_count, navigation_storyboard_shot_count, mission_pending_requests,
 )
 
 LIBRARY_DIR = APP_DIR / "library"
@@ -33,7 +34,7 @@ NOTE_PRESETS_FORMAT = "cfa-review-note-presets-v1"
 NOTE_LIMIT = 20000
 REVIEW_EDITABLE_FIELDS = ("status", "note", "shotPlan", "likenessRating", "sceneQualityRating",
                           "storyboardStage", "variant", "workingReference", "workingReferenceScope",
-                          "collectionState", "multiverseSelection", "creativeReview")
+                          "collectionState", "multiverseSelection", "creativeReview", "castUse")
 
 st.set_page_config(page_title="Creative Studio | CFA", page_icon="🎬", layout="wide", initial_sidebar_state="auto")
 
@@ -62,6 +63,8 @@ def apply_theme() -> None:
     [data-testid="stSidebar"] button[kind="secondary"]:hover {background:#242e3b;border-color:#d2b37b;color:white;}
     [data-testid="stSidebar"] button[kind="primary"] {background:#d4b582;border-color:#d4b582;color:#15191e;}
     [data-testid="stSidebar"] button[kind="primary"] [data-testid="stMarkdownContainer"] {color:#15191e!important;}
+    .st-key-mission-image-review {background:#16262c;border:1px solid #38515a;border-radius:12px;padding:1rem;}
+    .st-key-mission-storyboard-review {background:#1a232e;border:1px solid #394859;border-radius:12px;padding:1rem;}
     [data-testid="stSidebar"] .stButton button {justify-content:flex-start;}
     /* Keep native controls readable while an existing Cloud session retains its previous theme. */
     .stApp :is(.stButton,.stDownloadButton,.stLinkButton,.stFormSubmitButton,[data-testid="stFileUploader"]) :is(button,a) {
@@ -173,11 +176,19 @@ def init_state() -> None:
             st.session_state[key] = default
     if st.session_state.studio_view == "Collaborator kits":
         st.session_state.studio_view = "Collaborator briefs"
+    if st.session_state.studio_view == "Needs review":
+        st.session_state.studio_view = "Review queue"
+        st.session_state['review-queue-view'] = 'Review collections'
 
 
 def navigate(view: str) -> None:
     if st.session_state.studio_view not in (CORNER, "Collaborators"):
         st.session_state.studio_return_view = st.session_state.studio_view
+    if view == 'Needs review':
+        view = 'Review queue'
+        st.session_state['review-queue-view'] = 'Review collections'
+    elif view == 'Review queue':
+        st.session_state['review-queue-view'] = 'Awaiting your decision'
     st.session_state.studio_view = view
     st.session_state.studio_selected = None
     st.session_state.pop("studio_mission_selected", None)
@@ -487,7 +498,87 @@ def render_collaborator_controls(asset: dict) -> None:
         st.caption("Choose a collaborator to queue a draft locally. Add the idea or prompt under Plan a shot.")
 
 
-def render_review_controls(asset: dict) -> None:
+def cast_control_state(asset: dict, data: dict) -> dict:
+    from studio_dependencies import cast_use_state
+    reviews = dict(st.session_state.studio_reviews)
+    reviews[asset['id']] = {**reviews.get(asset['id'], {}), **st.session_state.studio_review_overrides.get(asset['id'], {})}
+    return cast_use_state(data, asset, reviews)
+
+
+def save_cast_field(asset: dict, data: dict, field: str, key: str) -> None:
+    value = cast_control_state(asset, data)['value']
+    value[field] = st.session_state[key]
+    set_review_field(asset['id'], 'castUse', value)
+
+
+def add_cast_link(asset: dict, data: dict, story_id: str, shot_id: str) -> None:
+    state = cast_control_state(asset, data)
+    if not any(row['storyID'] == story_id and row['shotID'] == shot_id for row in state['targets']):
+        st.session_state.studio_flash = 'Choose an existing shot in this project before linking.'
+        return
+    value = state['value']
+    link = dict(storyID=story_id, shotID=shot_id)
+    if not any(row['storyID'] == story_id and row['shotID'] == shot_id for row in value['storyboardLinks']):
+        value['storyboardLinks'] = [*value['storyboardLinks'], link]
+    value['storyboardPlanned'] = True
+    set_review_field(asset['id'], 'castUse', value)
+    st.session_state['cast-planned:'+asset['id']] = True
+
+
+def remove_cast_link(asset: dict, data: dict, story_id: str, shot_id: str) -> None:
+    value = cast_control_state(asset, data)['value']
+    value['storyboardLinks'] = [row for row in value['storyboardLinks']
+                               if (row['storyID'], row['shotID']) != (story_id, shot_id)]
+    set_review_field(asset['id'], 'castUse', value)
+
+
+def render_cast_controls(asset: dict, data: dict) -> None:
+    state = cast_control_state(asset, data)
+    if not state['editable']: return
+    aid = asset['id']
+    with st.expander('Character role & storyboard use', expanded=False):
+        st.caption('Choose this exact version for a role or storyboard. These choices do not change its score or technical approval.')
+        for key, default in [('cast-role-selected:'+aid, state['roleSelected']), ('cast-role:'+aid, state['role']),
+                             ('cast-planned:'+aid, state['storyboardPlanned'])]:
+            if st.session_state.get(key) != default: st.session_state[key] = default
+        st.checkbox('Use this version for a character role', key='cast-role-selected:'+aid,
+                    on_change=save_cast_field, args=(asset, data, 'roleSelected', 'cast-role-selected:'+aid))
+        st.text_input('Character role', key='cast-role:'+aid, max_chars=300,
+                      on_change=save_cast_field, args=(asset, data, 'role', 'cast-role:'+aid))
+        if state['sourceSelected']:
+            st.caption('Recorded source choice: '+(state['sourceRole'] or 'selected character version')+'. Your current choice is stored separately.')
+        st.checkbox('Plan this version for storyboard', key='cast-planned:'+aid,
+                    on_change=save_cast_field, args=(asset, data, 'storyboardPlanned', 'cast-planned:'+aid))
+        st.caption('Existing authored plans and links remain recorded. A linked shot also counts as planned use. Plan a shot below remains a separate generation draft.')
+        targets = {(row['storyID'], row['shotID']): row for row in state['targets']}
+        if state['storyboardLinks']:
+            st.markdown('**Your storyboard links**')
+            for index, link in enumerate(state['storyboardLinks']):
+                target = targets.get((link['storyID'], link['shotID']))
+                label = (target['storyTitle']+' · '+target['shotID']+' · '+target['shotTitle']) if target else link['storyID']+' · '+link['shotID']+' · unresolved'
+                st.write(label)
+                st.button('Remove this link', key=f'cast-unlink:{aid}:{index}',
+                          on_click=remove_cast_link, args=(asset, data, link['storyID'], link['shotID']))
+        if state['unresolvedLinks']:
+            st.warning('Unresolved links are saved for review, but do not count as storyboard-linked.')
+        stories = {row['storyID']: row['storyTitle'] for row in state['targets']}
+        if not stories:
+            st.caption('No registered storyboard shots are available in this project yet.')
+            return
+        story_key, shot_key = 'cast-link-story:'+aid, 'cast-link-shot:'+aid
+        if st.session_state.get(story_key) not in {None, *stories}: st.session_state[story_key] = None
+        story_id = st.selectbox('Link to a storyboard', [None, *stories],
+            format_func=lambda value: 'Choose a story' if value is None else stories[value], key=story_key)
+        shots = {row['shotID']: row['shotTitle'] for row in state['targets'] if row['storyID'] == story_id}
+        if st.session_state.get(shot_key) not in {None, *shots}: st.session_state[shot_key] = None
+        shot_id = st.selectbox('Storyboard shot', [None, *shots],
+            format_func=lambda value: 'Choose a shot' if value is None else value+' · '+shots[value], key=shot_key,
+            disabled=not story_id)
+        st.button('Link this version to shot', key='cast-link-add:'+aid, disabled=not story_id or not shot_id,
+                  on_click=add_cast_link, args=(asset, data, story_id, shot_id))
+
+
+def render_review_controls(asset: dict, data: dict | None = None) -> None:
     asset_id = asset["id"]
     decision = st.session_state.studio_reviews.get(asset_id, {})
     archived = bool(asset.get("archived"))
@@ -509,6 +600,8 @@ def render_review_controls(asset: dict) -> None:
     render_note_presets(asset_id)
     export_review_button("selected:" + asset_id)
     st.caption("Review choices and saved-note presets stay in this session. Export before closing or reloading; import the file under Favorites & notes to resume.")
+    if data is not None:
+        render_cast_controls(asset, data)
     with st.expander("Scores (optional)", expanded=False):
         for field, label in (("likenessRating", "Character score"), ("sceneQualityRating", "Scene craft score")):
             rating_key = f"{field}:{asset_id}"
@@ -596,7 +689,8 @@ def hero(project: dict, view: str, assets: list[dict]) -> None:
         "Storyboard": "Follow the story in pictures. Open a panel for its beat, lyric connection, and review notes.",
         "Collaborator briefs": "Instructions, references, and current care packages for Gemini, Flow, and Grok.",
         "Favorites & notes": "Your working shortlist. Export it to keep your choices and carry them between review sessions.",
-        "Review queue": "Keep what works, record corrections, and flag unwanted references for review.",
+        "Review queue": "Answer review requests or browse the earlier review collections. Saved removal decisions are in Archive.",
+        "Archive": "Saved removal decisions and archived references. These remain separate choices; your notes and original files are retained.",
         "Shot plans": "Turn references into draft shots, then export a handoff for Gemini, Flow, or Grok.",
         "Export basket": "Choose references to take with you. The basket is separate from favorites and review decisions.",
         "Documents": "The supporting notes behind the pictures, grouped so the useful details are easy to find.",
@@ -614,7 +708,7 @@ def favorite_button(asset: dict, context: str = "card") -> None:
               on_click=toggle_favorite, args=(asset["id"],), width="stretch", disabled=bool(asset.get("archived")))
 
 
-def render_selected(asset: dict, intake: dict | None = None) -> None:
+def render_selected(asset: dict, intake: dict | None = None, data: dict | None = None) -> None:
     st.button("← Back to the collection", on_click=clear_selection)
     if st.session_state.studio_view in ("Intake verification", "intake"):
         sequence = st.session_state.get("studio_intake_sequence", [])
@@ -654,7 +748,7 @@ def render_selected(asset: dict, intake: dict | None = None) -> None:
     with right:
         favorite_button(asset, "selected")
         basket_button(asset, "selected")
-        render_review_controls(asset)
+        render_review_controls(asset, data)
         if asset.get("beat"):
             st.markdown("**Story beat**")
             st.write(asset["beat"])
@@ -835,18 +929,15 @@ def render_design_workspace(data: dict, project: str, view: str) -> None:
 
 
 def render_needs_review(data: dict, project: str) -> None:
-    query = st.text_input("Find a reference needing attention", key=f"needs-review-search:{project}")
-    mode = st.radio("Show", ("All needing attention", "Needs fixes"), horizontal=True)
-    requested = {record["id"] for record in data.get("reviewRequests", []) if record.get("type") == "missing_decision"
-                 and any(asset["id"] == record["id"] and asset.get("sha256") == record.get("sha256") for asset in data["assets"])}
-    def needs_attention(asset):
-        decision = st.session_state.studio_reviews.get(asset["id"], {})
-        return decision.get("status") == "needs_fixes" or (mode != "Needs fixes" and (
-            asset.get("category") == "review" or asset["id"] in requested and not decision.get("status")))
-    results = [(asset, album) for asset, album in ordered_assets(data["assets"], data["albums"], project, query=query)
-               if needs_attention(asset)]
-    st.caption(f"{len(results)} references · grouped by collection. Open a reference to review or archive it.")
-    render_grid(results, f"needs-review:{project}:{mode}:{query}")
+    query = st.text_input("Find a review collection or reference", key=f"needs-review-search:{project}")
+    albums = [album for album in data['albums'] if album.get('project') == project and album.get('category') == 'review']
+    labels = {'all': 'All review collections', **{album['id']: album['title'] for album in albums}}
+    selected = st.selectbox('Review collection', list(labels), format_func=lambda value: labels[value],
+                            key=f'review-collection:{project}')
+    results = ordered_assets(data['assets'], data['albums'], project, category='review', album_id=selected, query=query)
+    collections = {album['id'] if album else asset.get('album') or 'ungrouped' for asset, album in results}
+    st.caption(f"{len(collections)} collections · {len(results)} references. Earlier batches keep their original groupings and saved decisions.")
+    render_grid(results, f"needs-review:{project}:{selected}:{query}")
 
 
 def render_detail_profiles(data: dict, project: str) -> bool:
@@ -925,7 +1016,7 @@ def render_collaborator_briefs(data: dict, assets: list[dict], project: str, pro
     for provider, documents in sections.items():
         if provider_filter is not None and provider != provider_filter:
             continue
-        st.subheader(provider)
+        st.subheader(f"{provider} · {len(documents)} documents")
         packages = [(task, index, link) for task in tasks if task["provider"] == provider and task["project"] in (project, "shared")
                     for index, link in enumerate(task["links"]) if link.get("downloadPath")]
         if provider == "Flow":
@@ -1003,7 +1094,8 @@ def render_collaborators(data: dict) -> None:
                     for asset_id in workflow["outputAssetIDs"]:
                         render_workflow_reference(data, asset_id, f"{workflow['id']}:output")
                 if workflow["documentAssetIDs"]:
-                    st.markdown("**Workflow files and instructions**")
+                    count = navigation_reference_count(data['assets'], workflow['documentAssetIDs'], documents=True)
+                    st.markdown(f"**Workflow files and instructions · {count} documents**")
                     for asset_id in workflow["documentAssetIDs"]:
                         render_workflow_reference(data, asset_id, f"{workflow['id']}:document")
         return
@@ -1044,8 +1136,8 @@ def render_favorites(data: dict, project: str) -> None:
         uploaded = st.file_uploader("Review or favorites JSON", type=["json"], key="favorites-upload")
         if uploaded is not None and st.button("Add this review to my session", width="stretch"):
             try:
-                if uploaded.size > 5 * 1024 * 1024:
-                    raise ValueError("Choose a review file smaller than 5 MB.")
+                if uploaded.size > 50 * 1024 * 1024:
+                    raise ValueError("Choose a review file no larger than 50 MiB.")
                 imported = json.loads(uploaded.getvalue())
                 aliases = data.get("assetAliases", [])
                 reviews, accepted, skipped = read_review(imported, data["assets"], aliases=aliases)
@@ -1079,23 +1171,32 @@ def render_favorites(data: dict, project: str) -> None:
 
 
 def render_review_queue(data: dict, project: str) -> None:
-    status = st.selectbox("Review status", ("all", "keep", "needs_fixes", "remove", "notes"),
-                          format_func=lambda s: {"all": "All reviewed references", "notes": "Notes without a decision"}.get(s, STATUS_LABELS.get(s, s)))
-    query = st.text_input("Find a reviewed reference", key=f"review-search:{project}")
-    results = ordered_assets(data["assets"], data["albums"], project, include_archived=True)
+    tab = st.radio('Review queue view', ('Awaiting your decision', 'Review collections'),
+                   horizontal=True, key='review-queue-view', label_visibility='collapsed')
+    if tab == 'Review collections':
+        render_needs_review(data, project)
+        return
+    query = st.text_input("Find a review request", key=f"review-search:{project}")
     reviews = st.session_state.studio_reviews
-    def matches(asset):
-        decision = reviews.get(asset["id"], {})
-        if status == "notes":
-            return not decision.get("status") and bool(decision.get("note", "").strip())
-        return bool(asset.get("archived") or decision.get("status") or decision.get("note", "").strip()
-                    or decision.get("workingReference") or decision.get("variant") or decision.get("storyboardStage")
-                    or decision.get("shotPlan")) if status == "all" else decision.get("status") == status
+    pending = set(mission_pending_requests(data, reviews, project))
     terms = query.casefold().split()
-    results = [(asset, album) for asset, album in results if matches(asset)
+    results = [(asset, album) for asset, album in ordered_assets(data['assets'], data['albums'], project)
+               if not asset.get('archived') and reviews.get(asset['id'], {}).get('status') != 'remove'
                and all(term in (json.dumps(asset, ensure_ascii=False) + " " + json.dumps(reviews.get(asset["id"], {}), ensure_ascii=False)).casefold() for term in terms)]
-    st.caption("Flags stay in your review. Archived items remain here for bookkeeping while ordinary library views omit them. Export the complete review from Favorites & notes.")
-    render_grid(results, f"review:{project}:{status}:{query}")
+    awaiting = [(asset, album) for asset, album in results if asset['id'] in pending]
+    st.subheader('Awaiting your decision')
+    st.caption(f'{len(awaiting)} unanswered requests. Saved removal decisions and archived references are in Archive.')
+    if awaiting:
+        render_grid(awaiting, f'review-awaiting:{project}:{query}')
+    else:
+        st.info('No unanswered image review requests.')
+    saved = [(asset, album) for asset, album in results if asset['id'] not in pending and any(
+        reviews.get(asset['id'], {}).get(field) for field in
+        ('status', 'note', 'workingReference', 'variant', 'storyboardStage', 'shotPlan'))]
+    if saved:
+        with st.expander(f'Saved review decisions and plans · {len(saved)}', expanded=False):
+            st.caption('These decisions are saved. Correction work and planned shots remain separate from unanswered reviews.')
+            render_grid(saved, f'review-saved:{project}:{query}')
 
 
 def render_shot_plans(data: dict, project: str) -> None:
@@ -1151,7 +1252,7 @@ def render_mission_control(data: dict, review_data: dict | None = None) -> None:
 
     if data.get("reviewIntake"):
         st.button("Intake verification →", key="mission-intake", on_click=navigate, args=("Intake verification",))
-    render_corner(data, LIBRARY_DIR, open_mission_reference, lambda asset: render_selected(asset, data.get("reviewIntake")), document_download, navigate, sweep, review_data=review_data or data)
+    render_corner(data, LIBRARY_DIR, open_mission_reference, lambda asset: render_selected(asset, data.get("reviewIntake"), data), document_download, navigate, sweep, review_data=review_data or data)
 
 
 def render_export_basket(data: dict) -> None:
@@ -1232,7 +1333,7 @@ def main() -> None:
     if data.get("designSnapshot"):
         identity = data["designSnapshot"].get("sourceCatalog", {}).get("sha256")
         if st.session_state.get("studio_provenance_seed") != identity:
-            st.session_state.studio_review_provenance = review_provenance(data, st.session_state.studio_review_provenance)
+            st.session_state.studio_review_provenance = review_provenance(data, st.session_state.studio_review_provenance, strict_takes=False)
             st.session_state.studio_provenance_seed = identity
         data = effective_design_data(data, st.session_state.studio_reviews)
         mission_data = review_data = data
@@ -1261,13 +1362,24 @@ def main() -> None:
         browse = ("Library", "Working references", "Outfits", "Tattoos & piercings", "Supporting cast", "Storyboard", "Videos", "Comfy swap targets")
         if project != "hon":
             browse += ("Inspiration",)
-        browse += ("Needs review", "Archive")
+        browse += ("Review queue", "Archive")
         start = (*(("Intake verification",) if data.get("reviewIntake") else ()), CORNER)
         for label, views in (("START HERE", start), ("BROWSE", browse), ("CREATE", ("Collaborators", "Shot plans", "Collaborator briefs")),
-                             ("KEEP & REFER", ("Review queue", "Documents", "Export basket", "Favorites & notes"))):
+                             ("KEEP & REFER", ("Documents", "Export basket", "Favorites & notes"))):
             st.caption(label)
             for view in views:
-                st.button(f"{view} · {len(st.session_state.studio_basket)}" if view == "Export basket" else view,
+                nav_label = view
+                if view == 'Export basket':
+                    nav_label += ' · '+str(navigation_reference_count(review_data['assets'], st.session_state.studio_basket))
+                elif view == 'Documents':
+                    nav_label += ' · '+str(navigation_reference_count(
+                        [asset for asset in data['assets'] if asset.get('project') == project], documents=True))
+                elif view == 'Storyboard':
+                    nav_label += f' · {navigation_storyboard_shot_count(data, project)}'
+                elif view == 'Review queue':
+                    nav_label += ' · '+str(navigation_reference_count(data['assets'],
+                        mission_pending_requests(data, st.session_state.studio_reviews, project)))
+                st.button(nav_label,
                           key=f"nav:{view}", type="primary" if st.session_state.studio_view == view else "secondary",
                           on_click=navigate, args=(view,), width="stretch")
         st.divider()
@@ -1284,7 +1396,7 @@ def main() -> None:
     if view in ("Intake verification", "intake"):
         selected = next((a for a in data["assets"] if a["id"] == st.session_state.studio_selected), None)
         if selected:
-            render_selected(selected, data.get("reviewIntake"))
+            render_selected(selected, data.get("reviewIntake"), data)
         else:
             from studio_dependencies import current_module
             current_module("review_intake_view").render_intake(data, project, LIBRARY_DIR, select_asset,
@@ -1294,7 +1406,7 @@ def main() -> None:
     selection_assets = review_data["assets"] if view in ("Favorites & notes", "Shot plans", "Export basket") else assets
     selected = next((a for a in selection_assets if a["id"] == st.session_state.studio_selected), None)
     if selected:
-        render_selected(selected, data.get("reviewIntake"))
+        render_selected(selected, data.get("reviewIntake"), data)
     elif view == "Library":
         render_library(data, project)
     elif view == "Storyboard":

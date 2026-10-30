@@ -1,0 +1,1064 @@
+{
+  "schema_version": 1,
+  "request_id": "GROK-BOSS-DISCOVERY-20261008",
+  "round": 1,
+  "producer": "Grok",
+  "state": "needs_user_review",
+  "return_batch_id": "GROK-BOSS-DISCOVERY-20261008_round01_return_v001",
+  "created_utc": "2026-10-08T17:10:48Z",
+  "generation_model": "Grok Bot image generation (internal)",
+  "seed_policy": "seeds not exposed by the generator; recorded as null/unknown",
+  "hash_policy": "sha256 computed from the exact bytes of each file in this ZIP; manifest itself not self-hashed",
+  "reference_inputs": [
+    {
+      "asset_id": "HD-DROP-e8d54a7bd4cf",
+      "filename": "HIPPO-01-chest-up.jpg",
+      "bundle_path": "references/HIPPO-01-chest-up.jpg",
+      "sha256": "e8d54a7bd4cfc5af3caa73aae6fa1ac03b96e57d3e08f9e0d88ed7c0d1d0df69",
+      "hash_matches_asset_map": true,
+      "use": "text-only artistic direction; reference image NOT fed to the generator"
+    },
+    {
+      "asset_id": "HD-DROP-b4a5874b195e",
+      "filename": "LORD-01-chest-up.jpg",
+      "bundle_path": "references/LORD-01-chest-up.jpg",
+      "sha256": "b4a5874b195e045e2d39f68a5ceb189ae8af8b5aad69beabce4b1d89488f7475",
+      "hash_matches_asset_map": true,
+      "use": "text-only artistic direction; reference image NOT fed to the generator"
+    },
+    {
+      "asset_id": "JABBA-STAGE-01",
+      "filename": "JABBA-EXP-01-host-dais.jpg",
+      "bundle_path": "references/JABBA-EXP-01-host-dais.jpg",
+      "sha256": "0cfc363be1df59f63ae4ef8a15c93b431672f29c4d924676cfa8afe9c6e5c09e",
+      "hash_matches_asset_map": true,
+      "use": "text-only artistic direction; reference image NOT fed to the generator"
+    }
+  ],
+  "files": [
+    {
+      "candidate_id": "BOSS-001",
+      "output_id": "BOSS-001_v001",
+      "relative_path": "characters/BOSS-001_v001.png",
+      "filename": "BOSS-001_v001.png",
+      "sha256": "eb26cc4c179506569d3db857ba7c6b45ecad3b04006bf6e66784744bac102698",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 1088022,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "kind": "character_proof",
+      "source_asset_ids": [
+        "HD-DROP-e8d54a7bd4cf"
+      ],
+      "source_filenames": [
+        "HIPPO-01-chest-up.jpg"
+      ],
+      "source_sha256": [
+        "e8d54a7bd4cfc5af3caa73aae6fa1ac03b96e57d3e08f9e0d88ed7c0d1d0df69"
+      ],
+      "intentional_features": [
+        "river-hippo anatomy, cinematic (less cartoon) finish",
+        "charcoal double-breasted suit",
+        "burgundy tie",
+        "gold signet ring",
+        "recording-studio console setting"
+      ],
+      "tattoo_region": null,
+      "body_side": null,
+      "design_sheet_output_id": null,
+      "matching_option": null,
+      "artwork_origin": "new_generated_character_proof",
+      "parent_output_id": null,
+      "known_differences": [],
+      "status": "needs_user_review",
+      "approved": false,
+      "source_role": "text-only direction: the reference image was NOT fed to the generator; its role (per ASSET_MAP.json) was described in the prompt only",
+      "generation": {
+        "model": "Grok Bot image generation (internal)",
+        "seed": null,
+        "seed_status": "unknown",
+        "prompt_summary": "River-hippo mogul, charcoal double-breasted suit, burgundy tie, gold signet ring, recording-studio console; cinematic, restrained expression.",
+        "generated_source_file": "f4b06cea015bf9cd30768a94ecd500c0b4acc0e9c7674585236cf0473bfd2b8a.jpg",
+        "generated_source_sha256": "f4b06cea015bf9cd30768a94ecd500c0b4acc0e9c7674585236cf0473bfd2b8a",
+        "conversion": "lossless JPEG-decode to PNG (PIL); pixel-identical to the generated JPEG"
+      },
+      "tattoo_note": "no tattoos on this candidate"
+    },
+    {
+      "candidate_id": "BOSS-002",
+      "output_id": "BOSS-002_v001",
+      "relative_path": "characters/BOSS-002_v001.png",
+      "filename": "BOSS-002_v001.png",
+      "sha256": "339cdbe1e03ae4f6e47012e7219169f5a37961ee0fbdc5c2ebc630cab15d1d93",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 1155084,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "kind": "character_proof",
+      "source_asset_ids": [
+        "HD-DROP-b4a5874b195e"
+      ],
+      "source_filenames": [
+        "LORD-01-chest-up.jpg"
+      ],
+      "source_sha256": [
+        "b4a5874b195e045e2d39f68a5ceb189ae8af8b5aad69beabce4b1d89488f7475"
+      ],
+      "intentional_features": [
+        "tree-frog/gecko anatomy, olive granular skin",
+        "realistic amber slit-pupil eyes (replacing the cartoon eyes of the reference direction)",
+        "emerald velvet smoking jacket",
+        "gold rings",
+        "cigar lounge setting"
+      ],
+      "tattoo_region": null,
+      "body_side": null,
+      "design_sheet_output_id": null,
+      "matching_option": null,
+      "artwork_origin": "new_generated_character_proof",
+      "parent_output_id": null,
+      "known_differences": [],
+      "status": "needs_user_review",
+      "approved": false,
+      "source_role": "text-only direction: the reference image was NOT fed to the generator; its role (per ASSET_MAP.json) was described in the prompt only",
+      "generation": {
+        "model": "Grok Bot image generation (internal)",
+        "seed": null,
+        "seed_status": "unknown",
+        "prompt_summary": "Tree-frog/gecko aristocrat, olive granular skin, realistic amber slit-pupil eyes, emerald velvet smoking jacket, gold rings, cigar lounge.",
+        "generated_source_file": "b31845750025ad0dfaf15d1e6392f314b05ee80d43126a1534d13dc6cce81c8d.jpg",
+        "generated_source_sha256": "b31845750025ad0dfaf15d1e6392f314b05ee80d43126a1534d13dc6cce81c8d",
+        "conversion": "lossless JPEG-decode to PNG (PIL); pixel-identical to the generated JPEG"
+      },
+      "tattoo_note": "no tattoos on this candidate"
+    },
+    {
+      "candidate_id": "BOSS-003",
+      "output_id": "BOSS-003_v001",
+      "relative_path": "characters/BOSS-003_v001.png",
+      "filename": "BOSS-003_v001.png",
+      "sha256": "53fdb95a7c4448f7cfe6305ced667aec075b2e7b50c1e5c4a172fc04a69bc338",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 1375663,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "kind": "character_proof",
+      "source_asset_ids": [
+        "JABBA-STAGE-01"
+      ],
+      "source_filenames": [
+        "JABBA-EXP-01-host-dais.jpg"
+      ],
+      "source_sha256": [
+        "0cfc363be1df59f63ae4ef8a15c93b431672f29c4d924676cfa8afe9c6e5c09e"
+      ],
+      "intentional_features": [
+        "slug-like gastropod body with eye stalks",
+        "reclining on velvet dais",
+        "burgundy silk robe",
+        "gold rings",
+        "lantern throne-room setting",
+        "invented tattoo: hourglass-with-coins (option A)"
+      ],
+      "tattoo_region": "upper arm / shoulder",
+      "body_side": {
+        "character": "right",
+        "viewer": "left"
+      },
+      "design_sheet_output_id": "BOSS-003_TAT_hourglass-coins_options-A-D_v001",
+      "matching_option": "A",
+      "artwork_origin": "new_generated_character_proof",
+      "parent_output_id": null,
+      "known_differences": [
+        "Tattoo design read against option A; on-body render is rotated/shaded artistic interpretation, not a stencil-accurate transfer."
+      ],
+      "status": "needs_user_review",
+      "approved": false,
+      "source_role": "text-only direction: the reference image was NOT fed to the generator; its role (per ASSET_MAP.json) was described in the prompt only; the BOSS-003 tattoo design sheet (630f9e63...) WAS fed as a reference image to the body render",
+      "generation": {
+        "model": "Grok Bot image generation (internal)",
+        "seed": null,
+        "seed_status": "unknown",
+        "prompt_summary": "Slug-like gastropod magnate reclining on a velvet dais, eye stalks, burgundy silk robe, gold rings, lantern-lit throne room; hourglass-with-coins tattoo on character-right upper arm/shoulder per design option A.",
+        "generated_source_file": "c5524994276f005f3ee7bf2759b7fb96c6d10e818bb0b61375f81f48473111e7.jpg",
+        "generated_source_sha256": "c5524994276f005f3ee7bf2759b7fb96c6d10e818bb0b61375f81f48473111e7",
+        "conversion": "lossless JPEG-decode to PNG (PIL); pixel-identical to the generated JPEG"
+      },
+      "requested_option": "A",
+      "tattoo_artwork_origin": "generated_design_sheet_before_body_render (sheet generated first, then fed as a reference image to the body render); not a reconstruction",
+      "source_sha256_design_sheet": "630f9e6352fbe214cd91f91740ea892dda6ba187e2f324eeb54e100692a846ec"
+    },
+    {
+      "candidate_id": "BOSS-003",
+      "output_id": "BOSS-003_TAT_hourglass-coins_options-A-D_v001",
+      "relative_path": "tattoo_designs/BOSS-003/hourglass-coins_options-A-D.png",
+      "filename": "hourglass-coins_options-A-D.png",
+      "sha256": "01ff8d61702a0083ddb185df1396e442ceea4ac16b3b514ba1267d641ac84ea3",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 514292,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "kind": "tattoo_design_sheet_4_options",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [
+        "four-option standalone design sheet for invented tattoo 'hourglass-coins' (2x2 grid, letters A-D in panel corners)"
+      ],
+      "tattoo_region": "upper arm / shoulder",
+      "body_side": {
+        "character": "right",
+        "viewer": "left"
+      },
+      "design_sheet_output_id": null,
+      "matching_option": "A",
+      "artwork_origin": "generated_design_sheet_before_body_render",
+      "parent_output_id": null,
+      "known_differences": [],
+      "status": "needs_user_review",
+      "approved": false,
+      "requested_option": "A",
+      "generation": {
+        "model": "Grok Bot image generation (internal)",
+        "seed": null,
+        "seed_status": "unknown",
+        "prompt_summary": "Four-option black-and-white tattoo design sheet, motif hourglass-coins, labelled A-D.",
+        "generated_source_file": "630f9e6352fbe214cd91f91740ea892dda6ba187e2f324eeb54e100692a846ec.jpg",
+        "generated_source_sha256": "630f9e6352fbe214cd91f91740ea892dda6ba187e2f324eeb54e100692a846ec",
+        "conversion": "lossless JPEG-decode to PNG (PIL); pixel-identical"
+      },
+      "not_original_stencil": true
+    },
+    {
+      "candidate_id": "BOSS-003",
+      "output_id": "BOSS-003_TAT_hourglass-coins_matching-option-A_v001",
+      "relative_path": "tattoo_designs/BOSS-003/hourglass-coins_matching-option-A.png",
+      "filename": "hourglass-coins_matching-option-A.png",
+      "sha256": "1fd928c9f992ec961548342fdf43d3725bfddb916beaaa3fb1fe46a7f7b26797",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 118902,
+      "width": 222,
+      "height": 342,
+      "mode": "RGB",
+      "kind": "derived_crop",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [
+        "option A panel only"
+      ],
+      "tattoo_region": "upper arm / shoulder",
+      "body_side": {
+        "character": "right",
+        "viewer": "left"
+      },
+      "design_sheet_output_id": "BOSS-003_TAT_hourglass-coins_options-A-D_v001",
+      "matching_option": "A",
+      "artwork_origin": "derived_crop of generated design sheet (not an original stencil)",
+      "parent_output_id": "BOSS-003_TAT_hourglass-coins_options-A-D_v001",
+      "known_differences": [
+        "Artwork bbox reaches the top edge of quadrant A (ornament top sits close to the sheet border); top ornament may be marginally tight."
+      ],
+      "status": "needs_user_review",
+      "approved": false,
+      "parent_sha256": "01ff8d61702a0083ddb185df1396e442ceea4ac16b3b514ba1267d641ac84ea3",
+      "crop_bounds": {
+        "x0": 209,
+        "y0": 4,
+        "x1": 431,
+        "y1": 346,
+        "quadrant": {
+          "x0": 4,
+          "y0": 4,
+          "x1": 634,
+          "y1": 346
+        },
+        "method": "2x2 divider lines detected at x=638-639 and y=350/359 (dark-pixel column/row scan); quadrant inset from dividers; then trimmed to artwork bbox (pixels L<200, label zone excluded) + 12px pad, clipped to quadrant"
+      },
+      "label_letter_removed": true,
+      "label_removal_method": "crop excludes the panel-corner letter (letter lies outside artwork bbox); no pixels painted",
+      "not_original_stencil": true
+    },
+    {
+      "candidate_id": "BOSS-003",
+      "output_id": "BOSS-003_TAT_hourglass-coins_matching-option-A_transparent_v001",
+      "relative_path": "tattoo_designs/BOSS-003/hourglass-coins_matching-option-A_transparent.png",
+      "filename": "hourglass-coins_matching-option-A_transparent.png",
+      "sha256": "9d8cd2cedd645575e8a2ea429eb37065e4d90a657029c70a1e4eb2876c0deb54",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 79573,
+      "width": 222,
+      "height": 342,
+      "mode": "RGBA",
+      "kind": "derived_crop",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [],
+      "tattoo_region": "upper arm / shoulder",
+      "body_side": {
+        "character": "right",
+        "viewer": "left"
+      },
+      "design_sheet_output_id": "BOSS-003_TAT_hourglass-coins_options-A-D_v001",
+      "matching_option": "A",
+      "artwork_origin": "derived_crop of generated design sheet, white->alpha conversion (not an original stencil)",
+      "parent_output_id": "BOSS-003_TAT_hourglass-coins_matching-option-A_v001",
+      "known_differences": [
+        "Auto white->alpha conversion of a JPEG-derived image: faint JPEG noise/halo and grey hatching become semi-transparent; not hand-cleaned.",
+        "White interior fills (glass, coin faces, pans, etc.) also become transparent - expected for a white->alpha key; a hand-cleaned stencil would need manual fill decisions.",
+        "Artwork bbox reaches the top edge of quadrant A (ornament top sits close to the sheet border); top ornament may be marginally tight."
+      ],
+      "status": "needs_user_review",
+      "approved": false,
+      "parent_sha256": "1fd928c9f992ec961548342fdf43d3725bfddb916beaaa3fb1fe46a7f7b26797",
+      "crop_bounds": {
+        "x0": 209,
+        "y0": 4,
+        "x1": 431,
+        "y1": 346,
+        "quadrant": {
+          "x0": 4,
+          "y0": 4,
+          "x1": 634,
+          "y1": 346
+        },
+        "method": "2x2 divider lines detected at x=638-639 and y=350/359 (dark-pixel column/row scan); quadrant inset from dividers; then trimmed to artwork bbox (pixels L<200, label zone excluded) + 12px pad, clipped to quadrant"
+      },
+      "label_letter_removed": true,
+      "alpha_method": "color-to-alpha against white: alpha=(255-min(R,G,B))/255, colour un-premultiplied from white; pixels with luminance>=245 set fully transparent",
+      "not_original_stencil": true
+    },
+    {
+      "candidate_id": "BOSS-004",
+      "output_id": "BOSS-004_v001",
+      "relative_path": "characters/BOSS-004_v001.png",
+      "filename": "BOSS-004_v001.png",
+      "sha256": "dda4de050a038257cc07d5be96d1205b5088c65a6dffd39afc5395ba0bc5f304",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 1214586,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "kind": "character_proof",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [
+        "elderly pangolin, bronze scales",
+        "round wire spectacles",
+        "cream three-piece suit",
+        "pocket-watch chain",
+        "ledger",
+        "banker's lamp"
+      ],
+      "tattoo_region": null,
+      "body_side": null,
+      "design_sheet_output_id": null,
+      "matching_option": null,
+      "artwork_origin": "new_generated_character_proof",
+      "parent_output_id": null,
+      "known_differences": [],
+      "status": "needs_user_review",
+      "approved": false,
+      "source_role": "no reference image used; original concept from the GROK-BOSS-DISCOVERY-20261008 brief (none of the three references fed to the generator)",
+      "generation": {
+        "model": "Grok Bot image generation (internal)",
+        "seed": null,
+        "seed_status": "unknown",
+        "prompt_summary": "Elderly pangolin financier, bronze scales, round wire spectacles, cream three-piece suit, pocket-watch chain, ledger, banker's lamp.",
+        "generated_source_file": "b03b857b1dd31217c7fd0ee77869ee5a7504339a4071ac5f0691d3ffc962e822.jpg",
+        "generated_source_sha256": "b03b857b1dd31217c7fd0ee77869ee5a7504339a4071ac5f0691d3ffc962e822",
+        "conversion": "lossless JPEG-decode to PNG (PIL); pixel-identical to the generated JPEG"
+      },
+      "tattoo_note": "no tattoos on this candidate"
+    },
+    {
+      "candidate_id": "BOSS-005",
+      "output_id": "BOSS-005_v001",
+      "relative_path": "characters/BOSS-005_v001.png",
+      "filename": "BOSS-005_v001.png",
+      "sha256": "e18185bdab18fb3d84a2bf98e06aa57a9a2c0ca2b22357a18eda71de7eea5b7d",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 1152715,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "kind": "character_proof",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [
+        "catfish/amphibian anatomy, wet slate skin",
+        "gold-cuffed barbels (invented jewellery)",
+        "white linen suit",
+        "gold chain",
+        "neon club booth setting"
+      ],
+      "tattoo_region": null,
+      "body_side": null,
+      "design_sheet_output_id": null,
+      "matching_option": null,
+      "artwork_origin": "new_generated_character_proof",
+      "parent_output_id": null,
+      "known_differences": [],
+      "status": "needs_user_review",
+      "approved": false,
+      "source_role": "no reference image used; original concept from the GROK-BOSS-DISCOVERY-20261008 brief (none of the three references fed to the generator)",
+      "generation": {
+        "model": "Grok Bot image generation (internal)",
+        "seed": null,
+        "seed_status": "unknown",
+        "prompt_summary": "Catfish amphibian kingpin, wet slate skin, gold-cuffed barbels, white linen suit, gold chain, neon club booth.",
+        "generated_source_file": "8696e7e810cd0a257e50226d8a113037895dfb4531471c83a1b07a979ec80b67.jpg",
+        "generated_source_sha256": "8696e7e810cd0a257e50226d8a113037895dfb4531471c83a1b07a979ec80b67",
+        "conversion": "lossless JPEG-decode to PNG (PIL); pixel-identical to the generated JPEG"
+      },
+      "tattoo_note": "no tattoos on this candidate"
+    },
+    {
+      "candidate_id": "BOSS-006",
+      "output_id": "BOSS-006_v001",
+      "relative_path": "characters/BOSS-006_v001.png",
+      "filename": "BOSS-006_v001.png",
+      "sha256": "cafa39484145fb8dda67c9684134d6d6449f3c5cb66ac4033e27a8f79a28090a",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 890548,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "kind": "character_proof",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [
+        "rhino anatomy",
+        "steel-capped horn",
+        "cybernetic LEFT-arm prosthetic (character-left / viewer-right)",
+        "black leather greatcoat",
+        "hangar setting",
+        "invented tattoo: crowned balance scales (option A)"
+      ],
+      "tattoo_region": "center upper chest (planned: right side of neck; landed on chest)",
+      "body_side": {
+        "character": "center (upper chest)",
+        "viewer": "center",
+        "planned": "character-right neck"
+      },
+      "design_sheet_output_id": "BOSS-006_TAT_crowned-scales_options-A-D_v001",
+      "matching_option": "A",
+      "artwork_origin": "new_generated_character_proof",
+      "parent_output_id": null,
+      "known_differences": [
+        "Tattoo placement differs from plan: planned character-right neck, rendered at center upper chest.",
+        "Small unreferenced partial mark on character-left side of neck under the jaw (viewer-right); not part of any design sheet - flagged, not intended.",
+        "This is the 2nd attempt; 1st attempt rejected (tattoo rendered as a coat patch) - see QA_NOTES.txt; rejected file not included."
+      ],
+      "status": "needs_user_review",
+      "approved": false,
+      "source_role": "no reference image used; original concept from the GROK-BOSS-DISCOVERY-20261008 brief (none of the three references fed to the generator); the BOSS-006 design sheet (07696aa3...) WAS fed as a reference image",
+      "generation": {
+        "model": "Grok Bot image generation (internal)",
+        "seed": null,
+        "seed_status": "unknown",
+        "prompt_summary": "Rhino warlord, steel-capped horn, cybernetic prosthetic on character-left arm, black leather greatcoat, hangar; crowned balance-scales tattoo per design option A (planned for right neck).",
+        "generated_source_file": "467c5e87e6a48070af455771be13461b6944d2af401dd77dac01b70d53610602.jpg",
+        "generated_source_sha256": "467c5e87e6a48070af455771be13461b6944d2af401dd77dac01b70d53610602",
+        "conversion": "lossless JPEG-decode to PNG (PIL); pixel-identical to the generated JPEG"
+      },
+      "requested_option": "A",
+      "tattoo_artwork_origin": "generated_design_sheet_before_body_render (sheet generated first, then fed as a reference image to the body render); not a reconstruction",
+      "source_sha256_design_sheet": "07696aa37e0ad9e7119e39400c7f7b31ac8aba66feafae04f292ece36fe47dc5",
+      "prosthetic_side": {
+        "character": "left arm",
+        "viewer": "right"
+      }
+    },
+    {
+      "candidate_id": "BOSS-006",
+      "output_id": "BOSS-006_TAT_crowned-scales_options-A-D_v001",
+      "relative_path": "tattoo_designs/BOSS-006/crowned-scales_options-A-D.png",
+      "filename": "crowned-scales_options-A-D.png",
+      "sha256": "07c23aae84d9f235897eae49e00eff8d5796ec4286d622ebcf54084709c7a32b",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 453284,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "kind": "tattoo_design_sheet_4_options",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [
+        "four-option standalone design sheet for invented tattoo 'crowned-scales' (2x2 grid, letters A-D in panel corners)"
+      ],
+      "tattoo_region": "center upper chest (planned: right side of neck; landed on chest)",
+      "body_side": {
+        "character": "center (upper chest)",
+        "viewer": "center",
+        "planned": "character-right neck"
+      },
+      "design_sheet_output_id": null,
+      "matching_option": "A",
+      "artwork_origin": "generated_design_sheet_before_body_render",
+      "parent_output_id": null,
+      "known_differences": [],
+      "status": "needs_user_review",
+      "approved": false,
+      "requested_option": "A",
+      "generation": {
+        "model": "Grok Bot image generation (internal)",
+        "seed": null,
+        "seed_status": "unknown",
+        "prompt_summary": "Four-option black-and-white tattoo design sheet, motif crowned-scales, labelled A-D.",
+        "generated_source_file": "07696aa37e0ad9e7119e39400c7f7b31ac8aba66feafae04f292ece36fe47dc5.jpg",
+        "generated_source_sha256": "07696aa37e0ad9e7119e39400c7f7b31ac8aba66feafae04f292ece36fe47dc5",
+        "conversion": "lossless JPEG-decode to PNG (PIL); pixel-identical"
+      },
+      "not_original_stencil": true
+    },
+    {
+      "candidate_id": "BOSS-006",
+      "output_id": "BOSS-006_TAT_crowned-scales_matching-option-A_v001",
+      "relative_path": "tattoo_designs/BOSS-006/crowned-scales_matching-option-A.png",
+      "filename": "crowned-scales_matching-option-A.png",
+      "sha256": "6a656929e06123be51adac06dbca9339abece92d3c64df2a87dfe71c8f7c741e",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 82048,
+      "width": 404,
+      "height": 335,
+      "mode": "RGB",
+      "kind": "derived_crop",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [
+        "option A panel only"
+      ],
+      "tattoo_region": "center upper chest (planned: right side of neck; landed on chest)",
+      "body_side": {
+        "character": "center (upper chest)",
+        "viewer": "center",
+        "planned": "character-right neck"
+      },
+      "design_sheet_output_id": "BOSS-006_TAT_crowned-scales_options-A-D_v001",
+      "matching_option": "A",
+      "artwork_origin": "derived_crop of generated design sheet (not an original stencil)",
+      "parent_output_id": "BOSS-006_TAT_crowned-scales_options-A-D_v001",
+      "known_differences": [],
+      "status": "needs_user_review",
+      "approved": false,
+      "parent_sha256": "07c23aae84d9f235897eae49e00eff8d5796ec4286d622ebcf54084709c7a32b",
+      "crop_bounds": {
+        "x0": 109,
+        "y0": 4,
+        "x1": 513,
+        "y1": 339,
+        "quadrant": {
+          "x0": 4,
+          "y0": 4,
+          "x1": 634,
+          "y1": 346
+        },
+        "method": "2x2 divider lines detected at x=638-639 and y=350/359 (dark-pixel column/row scan); quadrant inset from dividers; then trimmed to artwork bbox (pixels L<200, label zone excluded) + 12px pad, clipped to quadrant"
+      },
+      "label_letter_removed": true,
+      "label_removal_method": "crop excludes the panel-corner letter (letter lies outside artwork bbox); no pixels painted",
+      "not_original_stencil": true
+    },
+    {
+      "candidate_id": "BOSS-006",
+      "output_id": "BOSS-006_TAT_crowned-scales_matching-option-A_transparent_v001",
+      "relative_path": "tattoo_designs/BOSS-006/crowned-scales_matching-option-A_transparent.png",
+      "filename": "crowned-scales_matching-option-A_transparent.png",
+      "sha256": "dae75d392d71570ceaf4e2f86ff28463f05d68ad486570373369210bccd32be6",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 45801,
+      "width": 404,
+      "height": 335,
+      "mode": "RGBA",
+      "kind": "derived_crop",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [],
+      "tattoo_region": "center upper chest (planned: right side of neck; landed on chest)",
+      "body_side": {
+        "character": "center (upper chest)",
+        "viewer": "center",
+        "planned": "character-right neck"
+      },
+      "design_sheet_output_id": "BOSS-006_TAT_crowned-scales_options-A-D_v001",
+      "matching_option": "A",
+      "artwork_origin": "derived_crop of generated design sheet, white->alpha conversion (not an original stencil)",
+      "parent_output_id": "BOSS-006_TAT_crowned-scales_matching-option-A_v001",
+      "known_differences": [
+        "Auto white->alpha conversion of a JPEG-derived image: faint JPEG noise/halo and grey hatching become semi-transparent; not hand-cleaned.",
+        "White interior fills (glass, coin faces, pans, etc.) also become transparent - expected for a white->alpha key; a hand-cleaned stencil would need manual fill decisions."
+      ],
+      "status": "needs_user_review",
+      "approved": false,
+      "parent_sha256": "6a656929e06123be51adac06dbca9339abece92d3c64df2a87dfe71c8f7c741e",
+      "crop_bounds": {
+        "x0": 109,
+        "y0": 4,
+        "x1": 513,
+        "y1": 339,
+        "quadrant": {
+          "x0": 4,
+          "y0": 4,
+          "x1": 634,
+          "y1": 346
+        },
+        "method": "2x2 divider lines detected at x=638-639 and y=350/359 (dark-pixel column/row scan); quadrant inset from dividers; then trimmed to artwork bbox (pixels L<200, label zone excluded) + 12px pad, clipped to quadrant"
+      },
+      "label_letter_removed": true,
+      "alpha_method": "color-to-alpha against white: alpha=(255-min(R,G,B))/255, colour un-premultiplied from white; pixels with luminance>=245 set fully transparent",
+      "not_original_stencil": true
+    },
+    {
+      "candidate_id": "BOSS-007",
+      "output_id": "BOSS-007_v001",
+      "relative_path": "characters/BOSS-007_v001.png",
+      "filename": "BOSS-007_v001.png",
+      "sha256": "2ced18011a7f538a7028825a8d824de5c95dd895001ee25611270189eace3cb7",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 980618,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "kind": "character_proof",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [
+        "pale axolotl anatomy (female boss)",
+        "coral feathery gills",
+        "invented piercings: gold rings through gills",
+        "black high-collar gown with gold embroidery",
+        "gold pendant",
+        "record-label office skyline setting"
+      ],
+      "tattoo_region": null,
+      "body_side": null,
+      "design_sheet_output_id": null,
+      "matching_option": null,
+      "artwork_origin": "new_generated_character_proof",
+      "parent_output_id": null,
+      "known_differences": [],
+      "status": "needs_user_review",
+      "approved": false,
+      "source_role": "no reference image used; original concept from the GROK-BOSS-DISCOVERY-20261008 brief (none of the three references fed to the generator)",
+      "generation": {
+        "model": "Grok Bot image generation (internal)",
+        "seed": null,
+        "seed_status": "unknown",
+        "prompt_summary": "Pale axolotl matriarch (she), coral feathery gills pierced with gold rings, black high-collar gown with gold embroidery, gold pendant, record-label office with skyline.",
+        "generated_source_file": "9d65f3cec6a85713c387a89c641638cb5a7cb7c4c5bc309dc2c194e0237587dd.jpg",
+        "generated_source_sha256": "9d65f3cec6a85713c387a89c641638cb5a7cb7c4c5bc309dc2c194e0237587dd",
+        "conversion": "lossless JPEG-decode to PNG (PIL); pixel-identical to the generated JPEG"
+      },
+      "tattoo_note": "no tattoos on this candidate"
+    },
+    {
+      "candidate_id": "BOSS-008",
+      "output_id": "BOSS-008_v001",
+      "relative_path": "characters/BOSS-008_v001.png",
+      "filename": "BOSS-008_v001.png",
+      "sha256": "8421e7cfa1a012076a33c8182620d28cf6663f068d13c3a321699de030a9078b",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 1066466,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "kind": "character_proof",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [
+        "crocodilian anatomy",
+        "invented prosthetic: brass eye with red lens, character-left eye (viewer-right)",
+        "snout scar",
+        "burgundy suit",
+        "gold collar bar",
+        "betting slips",
+        "gambling den setting"
+      ],
+      "tattoo_region": null,
+      "body_side": null,
+      "design_sheet_output_id": null,
+      "matching_option": null,
+      "artwork_origin": "new_generated_character_proof",
+      "parent_output_id": null,
+      "known_differences": [],
+      "status": "needs_user_review",
+      "approved": false,
+      "source_role": "no reference image used; original concept from the GROK-BOSS-DISCOVERY-20261008 brief (none of the three references fed to the generator)",
+      "generation": {
+        "model": "Grok Bot image generation (internal)",
+        "seed": null,
+        "seed_status": "unknown",
+        "prompt_summary": "Scarred crocodilian bookie, brass prosthetic eye with red lens on character-left eye, snout scar, burgundy suit, gold collar bar, betting slips, gambling den.",
+        "generated_source_file": "0ff25b0abe3e6be649d3168f3efad087555037e597148abfbf0e45514093b212.jpg",
+        "generated_source_sha256": "0ff25b0abe3e6be649d3168f3efad087555037e597148abfbf0e45514093b212",
+        "conversion": "lossless JPEG-decode to PNG (PIL); pixel-identical to the generated JPEG"
+      },
+      "tattoo_note": "no tattoos on this candidate",
+      "prosthetic_side": {
+        "character": "left eye",
+        "viewer": "right"
+      }
+    },
+    {
+      "candidate_id": "BOSS-009",
+      "output_id": "BOSS-009_v001",
+      "relative_path": "characters/BOSS-009_v001.png",
+      "filename": "BOSS-009_v001.png",
+      "sha256": "80d3ca6a6858ee40bf39f6e4d224121ab1c96b498f10a3de18f1d8b6f115debb",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 1247159,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "kind": "character_proof",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [
+        "toad-like anatomy, warty ochre skin",
+        "bat-like ears",
+        "invented piercings: multiple gold hoops in ears",
+        "mustard waistcoat",
+        "spaceport bar setting",
+        "invented tattoo: serpent-and-coin (rendered matches option B)"
+      ],
+      "tattoo_region": "forearm",
+      "body_side": {
+        "character": "right",
+        "viewer": "left"
+      },
+      "design_sheet_output_id": "BOSS-009_TAT_serpent-coin_options-A-D_v001",
+      "matching_option": "B",
+      "artwork_origin": "new_generated_character_proof",
+      "parent_output_id": null,
+      "known_differences": [
+        "Rendered tattoo matches option B (bold traditional serpent biting a star coin), NOT the requested option A (fine-line serpent coiled around a plain coin).",
+        "Planned missing left arm is not clearly readable in the render.",
+        "Grin is broader / more cartoonish than the brief (restrained expression) wants."
+      ],
+      "status": "needs_user_review",
+      "approved": false,
+      "source_role": "no reference image used; original concept from the GROK-BOSS-DISCOVERY-20261008 brief (none of the three references fed to the generator); the BOSS-009 tattoo design sheet (c1aeb322...) WAS fed as a reference image to the body render",
+      "generation": {
+        "model": "Grok Bot image generation (internal)",
+        "seed": null,
+        "seed_status": "unknown",
+        "prompt_summary": "Toad-like spaceport bar owner, warty ochre skin, bat-like ears with multiple gold hoop piercings, mustard waistcoat, bar; serpent-and-coin tattoo on character-right forearm (requested design option A); planned missing left arm.",
+        "generated_source_file": "e7d2f7f65796e8c80c27e00aaf5822997291b5dbb73df02c8582c97e8cfca139.jpg",
+        "generated_source_sha256": "e7d2f7f65796e8c80c27e00aaf5822997291b5dbb73df02c8582c97e8cfca139",
+        "conversion": "lossless JPEG-decode to PNG (PIL); pixel-identical to the generated JPEG"
+      },
+      "requested_option": "A",
+      "tattoo_artwork_origin": "generated_design_sheet_before_body_render (sheet generated first, then fed as a reference image to the body render); not a reconstruction",
+      "source_sha256_design_sheet": "c1aeb3227a5b109b875fc988ab6d58406b097c59a04b64b495aa3fe7671eed6e"
+    },
+    {
+      "candidate_id": "BOSS-009",
+      "output_id": "BOSS-009_TAT_serpent-coin_options-A-D_v001",
+      "relative_path": "tattoo_designs/BOSS-009/serpent-coin_options-A-D.png",
+      "filename": "serpent-coin_options-A-D.png",
+      "sha256": "5a505ffd89dd1f23f6d1153ea99b80b51cf4ec7c845aca94329ada1a37a7ae3b",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 569368,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "kind": "tattoo_design_sheet_4_options",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [
+        "four-option standalone design sheet for invented tattoo 'serpent-coin' (2x2 grid, letters A-D in panel corners)"
+      ],
+      "tattoo_region": "forearm",
+      "body_side": {
+        "character": "right",
+        "viewer": "left"
+      },
+      "design_sheet_output_id": null,
+      "matching_option": "B",
+      "artwork_origin": "generated_design_sheet_before_body_render",
+      "parent_output_id": null,
+      "known_differences": [
+        "Body render matches option B, not requested option A."
+      ],
+      "status": "needs_user_review",
+      "approved": false,
+      "requested_option": "A",
+      "generation": {
+        "model": "Grok Bot image generation (internal)",
+        "seed": null,
+        "seed_status": "unknown",
+        "prompt_summary": "Four-option black-and-white tattoo design sheet, motif serpent-coin, labelled A-D.",
+        "generated_source_file": "c1aeb3227a5b109b875fc988ab6d58406b097c59a04b64b495aa3fe7671eed6e.jpg",
+        "generated_source_sha256": "c1aeb3227a5b109b875fc988ab6d58406b097c59a04b64b495aa3fe7671eed6e",
+        "conversion": "lossless JPEG-decode to PNG (PIL); pixel-identical"
+      },
+      "not_original_stencil": true
+    },
+    {
+      "candidate_id": "BOSS-009",
+      "output_id": "BOSS-009_TAT_serpent-coin_matching-option-B_v001",
+      "relative_path": "tattoo_designs/BOSS-009/serpent-coin_matching-option-B.png",
+      "filename": "serpent-coin_matching-option-B.png",
+      "sha256": "21247f27e5b22e5f44efa6c322fe20c86528b7e4c0581495a93ccca8cdad119e",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 141269,
+      "width": 389,
+      "height": 327,
+      "mode": "RGB",
+      "kind": "derived_crop",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [
+        "option B panel only"
+      ],
+      "tattoo_region": "forearm",
+      "body_side": {
+        "character": "right",
+        "viewer": "left"
+      },
+      "design_sheet_output_id": "BOSS-009_TAT_serpent-coin_options-A-D_v001",
+      "matching_option": "B",
+      "artwork_origin": "derived_crop of generated design sheet (not an original stencil)",
+      "parent_output_id": "BOSS-009_TAT_serpent-coin_options-A-D_v001",
+      "known_differences": [],
+      "status": "needs_user_review",
+      "approved": false,
+      "parent_sha256": "5a505ffd89dd1f23f6d1153ea99b80b51cf4ec7c845aca94329ada1a37a7ae3b",
+      "crop_bounds": {
+        "x0": 756,
+        "y0": 13,
+        "x1": 1145,
+        "y1": 340,
+        "quadrant": {
+          "x0": 643,
+          "y0": 4,
+          "x1": 1276,
+          "y1": 355
+        },
+        "method": "2x2 divider lines detected at x=638-639 and y=350/359 (dark-pixel column/row scan); quadrant inset from dividers; then trimmed to artwork bbox (pixels L<200, label zone excluded) + 12px pad, clipped to quadrant"
+      },
+      "label_letter_removed": true,
+      "label_removal_method": "crop excludes the panel-corner letter (letter lies outside artwork bbox); no pixels painted",
+      "not_original_stencil": true
+    },
+    {
+      "candidate_id": "BOSS-009",
+      "output_id": "BOSS-009_TAT_serpent-coin_matching-option-B_transparent_v001",
+      "relative_path": "tattoo_designs/BOSS-009/serpent-coin_matching-option-B_transparent.png",
+      "filename": "serpent-coin_matching-option-B_transparent.png",
+      "sha256": "05aa41f76294049d1b389b88e853ab79aacf54caf1e62ad17dd0a4cc558f269b",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 80125,
+      "width": 389,
+      "height": 327,
+      "mode": "RGBA",
+      "kind": "derived_crop",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [],
+      "tattoo_region": "forearm",
+      "body_side": {
+        "character": "right",
+        "viewer": "left"
+      },
+      "design_sheet_output_id": "BOSS-009_TAT_serpent-coin_options-A-D_v001",
+      "matching_option": "B",
+      "artwork_origin": "derived_crop of generated design sheet, white->alpha conversion (not an original stencil)",
+      "parent_output_id": "BOSS-009_TAT_serpent-coin_matching-option-B_v001",
+      "known_differences": [
+        "Auto white->alpha conversion of a JPEG-derived image: faint JPEG noise/halo and grey hatching become semi-transparent; not hand-cleaned.",
+        "White interior fills (glass, coin faces, pans, etc.) also become transparent - expected for a white->alpha key; a hand-cleaned stencil would need manual fill decisions."
+      ],
+      "status": "needs_user_review",
+      "approved": false,
+      "parent_sha256": "21247f27e5b22e5f44efa6c322fe20c86528b7e4c0581495a93ccca8cdad119e",
+      "crop_bounds": {
+        "x0": 756,
+        "y0": 13,
+        "x1": 1145,
+        "y1": 340,
+        "quadrant": {
+          "x0": 643,
+          "y0": 4,
+          "x1": 1276,
+          "y1": 355
+        },
+        "method": "2x2 divider lines detected at x=638-639 and y=350/359 (dark-pixel column/row scan); quadrant inset from dividers; then trimmed to artwork bbox (pixels L<200, label zone excluded) + 12px pad, clipped to quadrant"
+      },
+      "label_letter_removed": true,
+      "alpha_method": "color-to-alpha against white: alpha=(255-min(R,G,B))/255, colour un-premultiplied from white; pixels with luminance>=245 set fully transparent",
+      "not_original_stencil": true
+    },
+    {
+      "candidate_id": "BOSS-010",
+      "output_id": "BOSS-010_v001",
+      "relative_path": "characters/BOSS-010_v001.png",
+      "filename": "BOSS-010_v001.png",
+      "sha256": "9143639db1cf46e9b653002e32189124b6e5ab230775659809b1c3314c5151d2",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 1320485,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "kind": "character_proof",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [
+        "walrus anatomy",
+        "gold-banded ivory tusks",
+        "navy velvet coat",
+        "silver-grey fur stole",
+        "jewelled brooch",
+        "starship lounge with porthole"
+      ],
+      "tattoo_region": null,
+      "body_side": null,
+      "design_sheet_output_id": null,
+      "matching_option": null,
+      "artwork_origin": "new_generated_character_proof",
+      "parent_output_id": null,
+      "known_differences": [],
+      "status": "needs_user_review",
+      "approved": false,
+      "source_role": "no reference image used; original concept from the GROK-BOSS-DISCOVERY-20261008 brief (none of the three references fed to the generator)",
+      "generation": {
+        "model": "Grok Bot image generation (internal)",
+        "seed": null,
+        "seed_status": "unknown",
+        "prompt_summary": "Walrus mogul, gold-banded ivory tusks, navy velvet coat, silver-grey fur stole, jewelled brooch, starship lounge porthole.",
+        "generated_source_file": "3cc19e85dc67116b0032f29c8c9ed33c7adee926ecf5583365fd9af70d8e8d3d.jpg",
+        "generated_source_sha256": "3cc19e85dc67116b0032f29c8c9ed33c7adee926ecf5583365fd9af70d8e8d3d",
+        "conversion": "lossless JPEG-decode to PNG (PIL); pixel-identical to the generated JPEG"
+      },
+      "tattoo_note": "no tattoos on this candidate"
+    },
+    {
+      "candidate_id": null,
+      "output_id": "BOSS-001-010_contact_v001",
+      "relative_path": "contact/BOSS-001-010_contact.jpg",
+      "filename": "BOSS-001-010_contact.jpg",
+      "sha256": "fed7635d883ba9d0a7c119534b1e35e83c5b66d9433386da0ce741f7c817ddbd",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 707388,
+      "width": 3024,
+      "height": 1022,
+      "mode": "RGB",
+      "kind": "contact_sheet",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [
+        "2x5 labelled grid of BOSS-001..BOSS-010 with 3-4 word concept captions",
+        "title line with request id, round and needs_user_review"
+      ],
+      "tattoo_region": null,
+      "body_side": null,
+      "design_sheet_output_id": null,
+      "matching_option": null,
+      "artwork_origin": "composited from the ten character PNGs (downscaled)",
+      "parent_output_id": null,
+      "known_differences": [],
+      "status": "needs_user_review",
+      "approved": false,
+      "source_output_ids": [
+        "BOSS-001_v001",
+        "BOSS-002_v001",
+        "BOSS-003_v001",
+        "BOSS-004_v001",
+        "BOSS-005_v001",
+        "BOSS-006_v001",
+        "BOSS-007_v001",
+        "BOSS-008_v001",
+        "BOSS-009_v001",
+        "BOSS-010_v001"
+      ]
+    },
+    {
+      "candidate_id": null,
+      "output_id": "BOSS-001-010_tattoo-sheets_contact_v001",
+      "relative_path": "contact/BOSS-001-010_tattoo-sheets_contact.jpg",
+      "filename": "BOSS-001-010_tattoo-sheets_contact.jpg",
+      "sha256": "5f0a84e685f831dae66a0bc40b11960ccc24dc1507ef71c77247f04b492df1d8",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 321874,
+      "width": 2400,
+      "height": 700,
+      "mode": "RGB",
+      "kind": "contact_sheet",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [
+        "three 4-option tattoo sheets (BOSS-003, BOSS-006, BOSS-009); matching quadrant outlined in red; matching option noted under each"
+      ],
+      "tattoo_region": null,
+      "body_side": null,
+      "design_sheet_output_id": null,
+      "matching_option": null,
+      "artwork_origin": "composited from the three design-sheet PNGs (downscaled)",
+      "parent_output_id": null,
+      "known_differences": [],
+      "status": "needs_user_review",
+      "approved": false,
+      "source_output_ids": [
+        "BOSS-003_TAT_hourglass-coins_options-A-D_v001",
+        "BOSS-006_TAT_crowned-scales_options-A-D_v001",
+        "BOSS-009_TAT_serpent-coin_options-A-D_v001"
+      ]
+    },
+    {
+      "candidate_id": null,
+      "output_id": "QA_NOTES_round01_v001",
+      "relative_path": "QA_NOTES.txt",
+      "filename": "QA_NOTES.txt",
+      "sha256": "1f5494ffed8252146fa78bda78d26964b9b0056431220c5ddb1087771ac06a58",
+      "hash_status": "computed_from_file_bytes",
+      "bytes": 5394,
+      "kind": "notes",
+      "source_asset_ids": [],
+      "source_filenames": [],
+      "source_sha256": [],
+      "intentional_features": [],
+      "tattoo_region": null,
+      "body_side": null,
+      "design_sheet_output_id": null,
+      "matching_option": null,
+      "artwork_origin": null,
+      "parent_output_id": null,
+      "known_differences": [],
+      "status": "needs_user_review",
+      "approved": false
+    }
+  ],
+  "rejected_attempts_not_included": [
+    {
+      "candidate_id": "BOSS-006",
+      "file": "15463ad046a460a6a7983bc72cda94082a6ce66c28e6227bacbd5b8722a3004c.jpg",
+      "sha256": "15463ad046a460a6a7983bc72cda94082a6ce66c28e6227bacbd5b8722a3004c",
+      "reason": "tattoo rendered as a coat patch",
+      "included": false
+    }
+  ],
+  "selected_winner": null,
+  "winner_four_view_filenames": null,
+  "next_round_authorized": false
+}

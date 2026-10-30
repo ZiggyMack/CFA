@@ -26,7 +26,7 @@ class PortableDashboardTest(unittest.TestCase):
         self.source, self.design, self.output = [self.root / x for x in ('visual', 'library', 'bundle')]
         self.source.mkdir()
         self.design.mkdir()
-        for name in ('library.js', 'library.css', 'source_foundation.js'):
+        for name in ('library.js', 'library.css', 'source_foundation.js', 'storyboard_takes.js'):
             (self.source / name).write_text('/* exact current local UI */', encoding='utf-8')
         (self.source / 'catalog.js').write_bytes(b'window.REVIEW_CATALOG={"current":true};')
         self.source_sha = 'a' * 64
@@ -90,6 +90,9 @@ class PortableDashboardTest(unittest.TestCase):
         self.assertNotEqual(sha((snapshot / asset['src']).read_bytes()), asset['sha256'])
         self.assertEqual((snapshot / 'library.js').read_bytes(), (self.source / 'library.js').read_bytes())
         self.assertEqual((snapshot / 'library.css').read_bytes(), (self.source / 'library.css').read_bytes())
+        self.assertEqual((snapshot / 'storyboard_takes.js').read_bytes(), (self.source / 'storyboard_takes.js').read_bytes())
+        index = (snapshot / 'index.html').read_text()
+        self.assertLess(index.index('src="storyboard_takes.js"'), index.index('src="library.js"'))
         self.assertFalse((snapshot / 'library/private.txt').exists())
         self.assertFalse((snapshot / 'library/design_media/unreferenced.txt').exists())
         self.assertEqual(receipt['logicalMediaBytes'], sum(len(v) for k, v in self.media.items() if not k.endswith('unreferenced.txt')))
@@ -115,6 +118,18 @@ class PortableDashboardTest(unittest.TestCase):
     def test_copy_mode_is_independent(self):
         _, snapshot, catalog = self.make(copy_media=True)
         self.assertFalse(os.path.samefile(snapshot / catalog['assets'][0]['src'], self.design / 'design_media/review.jpg'))
+
+    def test_take_snapshots_and_unread_backups_are_never_rewritten(self):
+        from copy import deepcopy
+        frozen = {'format': 'cfa-storyboard-takes-v1', 'takes': [{'id': 'same-immutable-id',
+                  'snapshot': {'sourceURL': '../source.txt', 'href': '../original.jpg',
+                               'src': 'D:/Documents/CFA/source.jpg', 'url': 'https://example.com/source'}}]}
+        self.catalog['storyboardTakes'] = deepcopy(frozen)
+        self.catalog['storyboardTakeBackups'] = [{'data': {'href': '../unread.json'}}]
+        self.write_manifest()
+        _, _, catalog = self.make()
+        self.assertEqual(catalog['storyboardTakes'], frozen)
+        self.assertEqual(catalog['storyboardTakeBackups'], self.catalog['storyboardTakeBackups'])
 
     def test_changed_media_and_stale_catalog_never_replace_current(self):
         self.make()

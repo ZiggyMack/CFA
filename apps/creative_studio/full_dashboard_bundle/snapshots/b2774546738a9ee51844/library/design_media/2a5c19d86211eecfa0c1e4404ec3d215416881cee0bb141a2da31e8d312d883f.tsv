@@ -1,0 +1,20 @@
+# V5 FALCON QA, C06-lurch-no-grin-008 v007, full-scale rebuild at disc 150.1 (round 2 of 2; round-1 FIX = stroke p90 2.83). CANDIDATE per Chief + Z_6 (12:02 ET); v008 is the fallback.
+# Rules: TEAM-RULES v013 0136dace + V_1 11:57 ET rulings (a stair-step at the cloth is FIX only if visible at plain 4x or it leaves a gap/halo/overlap; clearance on the L<0.60 ink mask, L<0.70 ADVISORY). Spec v014 6439c0f3, V5_INK_METHOD_v004.py c62c6789, V5_EDGE_METRICS_v001.py 94719844. Pilot v011 d68287f1: main 0.482, p90 2.0. Anchor 0.482+/-0.08 (0.402-0.562). V_5 20261021T160548Z (UTC; 12:0x EDT). Scratch in /tmp/v5c06 only. Maker files read only.
+# Files (sha256): v007 438a0e4fd8fd19ca4b3106ab200a31596f46bb1f68cbf86b4d3faf508e18a842 (matches); v006 c7a1a6ecac585dc7e84f8da73cd7933b4b5c87dd0793c0e9c25aaf35f15c658a; orig 33b3d0f03a192d86fa6fa351f188a388445fd831816fecc138724928e70f1642. Z_9 cloth mask Z9_C06-lurch-no-grin-008-v007_mask_cloth_v002.png 79d24fa48c07abf4349e13bc6c374f7fad11b115ccffae5e52321e567b45b905 (8.4%; byte-identical to the v008 mask), cross-check only.
+# Crop: V5_FALCON_C06-008v007v008_redocheck_20261021T160548Z_4x_v006_v007_v008_v011_v001.png (d29cd8d4): v006|v007|v008 crop 595,380,705,545 and pilot v011 crop 608,495,718,660, all 4x nearest plain.
+item	measured	result	note
+stroke_p90	2.0 (med 2.0) = v011 2.0	PASS	the fix item is closed
+ink_main	ship 612,387,684,490 / skin 642,440,656,458 (0 ink px): main 0.456, xcheck 0.360, ink L41 on skin 114	PASS	0.402-0.562 (-0.026 vs 0.482)
+weight_style_4x	thin warm-black grid, same family as v011; BB 1.70, hard step 0.202 (v011 1.95/0.144); lines continuous, nothing fades out	PASS	56 fragments vs v006's 30: fine grid, not breakup at plain 4x
+size_eye	disc 150.1 / corrected eye span ~121.5 (my corners (563,172)/(683,154) = 121.3; Z_9 (564,171)/(686,152) = 123.5) = 1.235 (1.215-1.24)	PASS	inside 1.061-1.415
+size_shoulder (governs, v013 rule 4)	jacket shoulder points ~(350,378) and ~(965,410): span ~616 (range 590-630). disc/shoulder = 0.244 (0.238-0.254), band 0.239-0.314, target 0.275 = ~169 px	PASS (low edge)	inside the band but 11% under the shoulder target, near the undersize edge; at the widest span read (630) it is 0.238, inside the 0.01 margin. Low-angle shot, jacket silhouette (V_2: jacket adds 10-20 px a side, which favours the pass)
+geometry	spire tip y388; spire outer span 52 px at tip+30 (v006: 59) -> 0.88 x v006 (disc ratio 0.85; consistent within ~3%)	PASS	-
+rim	tip 388 + 0.607 x 150.1 = y479.1 -> (479.1-392)/150.1 = 0.580 DW	PASS (band edge)	Z_9 0.58
+clearance	L<0.60: image-left 51.9 (631,391), image-right 17.8 (spire 669,388). L<0.70 (ADVISORY): same 51.9 / 17.8	PASS	Z_9 50.6/17.2
+cloth	my b>r+5 cloth (governing, original pixels): 0 px >12. Z_9 v002: 0	PASS	-
+collar_cut	clean at plain 4x on both V-neck edges, following the collar's lit rim, no gap/halo/overlap. Profile L_new/L_orig: 1.0 at 0-1 px (the collar's own rim) then 0.91/0.70 (left), 1.0/0.75 (right)	PASS	-
+pistol	original pistol ink (L<0.70, +2 px): 0 px >12	PASS	-
+outside_diff	2 px >12 (645-646,541) outside the ship footprint and old box	PASS	<25
+old_saucer	plain 4x: no ghost on the skin between the spires or around the hull; the old area is under the hull or cloth	PASS	-
+tone	same warm-black recipe	ADVISORY	v013 rule 2
+VERDICT	-	PASS	recommended (candidate). Size: passes under v013 on both ratios (eye 1.235; shoulder 0.244, low edge)
