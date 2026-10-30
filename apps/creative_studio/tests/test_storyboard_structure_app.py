@@ -31,7 +31,10 @@ class StructureAppTest(unittest.TestCase):
         app.radio(key='structure-mode:hon').set_value('Blank storyboard / shot template').run()
         self.assertFalse(app.exception)
         self.assertEqual(sum('Empty template' in e.label for e in app.expander),28)
+        self.assertTrue(any(h.value == 'Kitchen / handoff structure' for h in app.subheader))
+        self.assertFalse(any(e.label == 'Context & references · A–D' for e in app.expander))
         self.assertFalse(any(s.key == 'structure-foundation:hon' for s in app.selectbox))
+        self.assertFalse(any(s.key == 'structure-status:hon' for s in app.selectbox))
         self.assertFalse(any(e.label.startswith('S02-') for e in app.expander))
         self.assertEqual(app.session_state['studio_reviews'],before)
 
@@ -86,5 +89,93 @@ render_structure(st.session_state.fixture_data, {{'id':'hon:fixture'}}, 'hon', l
         self.assertTrue(any('Source stage: Preliminary' in c.value for c in app.caption))
         self.assertTrue(any(e.label.startswith('selected ·') for e in app.expander))
         self.assertEqual(app.session_state.fixture_data, data)
+
+    def test_field_status_matches_any_main_field_and_scopes_counts(self):
+        keys = ['camera', 'prompt_clip', 'cue', *[f'field_{i}' for i in range(3, 16)]]
+        sections = ['A', 'B', 'C', 'D', *map(str, range(12))]
+        definitions = [dict(key=key, section=section, label=key, hint='Fixture field')
+                       for key, section in zip(keys, sections)]
+        def shot(sid, overrides=None, sequence='S01'):
+            values = [dict(key=key, status=(overrides or {}).get(key, 'present'), text=key) for key in keys]
+            return dict(shotID=sid, sectionID=sequence, title=sid, stage='preliminary', revision='take 1',
+                        authoringStatus='Writer draft', fields=values, kitchen=[dict(key='delivery', status='missing')],
+                        materials=[], kitchenWritten=False, source={}, revisions=[])
+        shots = [shot('missing', dict(camera='unknown', prompt_clip='missing', cue='missing')),
+                 shot('draft', dict(prompt_clip='draft')), shot('kitchen-only'),
+                 shot('verified', dict(prompt_clip='verified')), shot('accepted', dict(prompt_clip='accepted')),
+                 shot('unknown', dict(camera='unknown', prompt_clip='unsupported')),
+                 shot('not-needed', dict(prompt_clip='not_needed')), shot('selected', dict(field_4='draft')),
+                 shot('other-sequence', dict(prompt_clip='draft'), 'S02')]
+        # Absent main fields are also not assessed. Extra fields never enter the main-field filter.
+        shots[5]['fields'] = [value for value in shots[5]['fields'] if value['key'] != 'cue']
+        shots[5]['fields'][0]['text'] = ''
+        shots[2]['fields'].append(dict(key='non-main-field', status='missing'))
+        provenance = dict(assetID='coverage-map', line=12, sha256='c'*64)
+        shots[0].update(coverageUpdate='The earlier hold is superseded; the named scene remains a proposal.',
+                        coverageAsOf='2026-10-28', coverageEvidence=provenance)
+        asset = dict(id='frame', project='hon', kind='image', title='Frame', sha256='a'*64, bytes=100,
+                     storyboardStage='detailed_design', workingReferenceScope='scene')
+        document = dict(id='coverage-map', project='hon', kind='document', title='Coverage map', filename='coverage.md')
+        data = dict(assets=[asset, document], storyboardStructure=dict(fields=definitions,
+            kitchenFields=[dict(key='delivery', section='1', label='Delivery', hint='Fixture kitchen')], stories=[dict(
+                storyID='hon:fixture', source=provenance, sections=[dict(id=section, title=section,
+                    shotIDs=[s['shotID'] for s in shots if s['sectionID'] == section]) for section in ['S01', 'S02']],
+                shots=shots)]), storyboardSourceFoundation=dict(bindings=[dict(project='hon', storyID='hon:fixture',
+                    shotID='selected', mode='first_frame', inputs=[dict(assetID='frame', sha256='a'*64,
+                    bytes=100, role='start_frame', required=True)])]))
+        reviews = dict(frame=dict(status='keep', note='Keep existing review unchanged.'))
+        script = f"""
+import sys
+sys.path.insert(0, {str(APP)!r})
+import streamlit as st
+from story_view import render_structure
+if 'fixture_data' not in st.session_state: st.session_state.fixture_data = {data!r}
+if 'fixture_reviews' not in st.session_state: st.session_state.fixture_reviews = {reviews!r}
+render_structure(st.session_state.fixture_data, {{'id':'hon:fixture'}}, 'hon', lambda *args: None,
+                 reviews=st.session_state.fixture_reviews)
+"""
+        app = AppTest.from_string(script, default_timeout=60).run()
+        self.assertFalse(app.exception)
+        self.assertTrue(any(h.value == 'Story plan & coverage' for h in app.subheader))
+        self.assertTrue(any('Written coverage does not mean every shot has an image' in c.value for c in app.caption))
+        self.assertTrue(any('Coverage notes · 2026-10-28' in m.value for m in app.markdown))
+        self.assertTrue(any(t.value == shots[0]['coverageUpdate'] for t in app.text))
+        self.assertTrue(any(c.value == 'Planning context · no field-specific material recorded' for c in app.caption))
+        self.assertIsNotNone(app.button(key='structure-map:hon:hon:fixture:source:0'))
+        self.assertIsNotNone(app.button(key='structure-coverage:hon:missing:source:0'))
+        self.assertFalse(any(e.proto.expanded for e in app.expander if e.label == 'Context & references · A–D'))
+        expected = dict(missing=['missing'], draft=['draft', 'selected'], present=[s['shotID'] for s in shots[:8]],
+                        verified=['verified'], accepted=['accepted'], unknown=['missing', 'unknown'], not_needed=['not-needed'])
+        def shown():
+            return [s['shotID'] for s in shots if any(e.label.startswith(s['shotID']+' · ') for e in app.expander)]
+        self.assertIn('Missing · 1', app.selectbox(key='structure-status:hon').options)
+        self.assertIn('Draft · 2', app.selectbox(key='structure-status:hon').options)
+        for status, ids in expected.items():
+            app.selectbox(key='structure-status:hon').select(status).run()
+            self.assertFalse(app.exception)
+            self.assertEqual(shown(), ids)
+            if status == 'draft':
+                self.assertEqual([e.proto.expanded for e in app.expander if e.label == 'Context & references · A–D'],
+                                 [True, False])
+        app.selectbox(key='structure-status:hon').select('all').run()
+        self.assertEqual(shown(), [s['shotID'] for s in shots[:8]])
+        app.selectbox(key='structure-foundation:hon').select('no_frame').run()
+        self.assertIn('All field statuses · 7', app.selectbox(key='structure-status:hon').options)
+        self.assertIn('Draft · 1', app.selectbox(key='structure-status:hon').options)
+        app.selectbox(key='structure-status:hon').select('draft').run()
+        self.assertEqual(shown(), ['draft'])
+        app.selectbox(key='structure-focus:hon').select('Camera missing / not assessed').run()
+        self.assertIn('Draft · 0', app.selectbox(key='structure-status:hon').options)
+        self.assertIn('Not assessed · 2', app.selectbox(key='structure-status:hon').options)
+        self.assertEqual(shown(), [])
+        app.selectbox(key='structure-status:hon').select('all').run()
+        self.assertEqual(shown(), ['missing', 'unknown'])
+        app.selectbox(key='structure-focus:hon').select('All planned shots').run()
+        app.selectbox(key='structure-sequence:hon').select('S02').run()
+        self.assertIn('All field statuses · 1', app.selectbox(key='structure-status:hon').options)
+        self.assertIn('Missing · 0', app.selectbox(key='structure-status:hon').options)
+        self.assertEqual(shown(), ['other-sequence'])
+        self.assertEqual(app.session_state.fixture_data, data)
+        self.assertEqual(app.session_state.fixture_reviews, reviews)
 
 if __name__=='__main__': unittest.main()

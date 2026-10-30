@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "characterID": null,
+  "headRevision": null,
+  "mouthStateDefinitions": [],
+  "keyStateIDs": [],
+  "files": [
+    {
+      "filename": null,
+      "sourceID": null,
+      "role": null,
+      "mouthStateID": null,
+      "view": null,
+      "headPitch": null,
+      "grillState": null,
+      "outfitID": null,
+      "propState": null,
+      "parentReferenceIDs": [],
+      "parentMacroID": null,
+      "model": null,
+      "prompt": null,
+      "width": null,
+      "height": null,
+      "sha256": null,
+      "hashStatus": "not_computed",
+      "providerAssessment": null,
+      "observedAssessment": null,
+      "approvalStatus": "needs_user_review",
+      "pairedVariantSourceID": null,
+      "visibleHands": [],
+      "handTattooVariantID": null,
+      "handTattooSourceIDs": [],
+      "jewelryReferenceIDs": [],
+      "occludedDetails": [],
+      "takeID": null
+    }
+  ],
+  "note": "Template only, not received assets. Each file supplies its actual values. Use character-left/right; head frame and mouth macro are different roles. Hon grill states are paired by character/head revision/state/view/pitch. Prop collection is separate; do not generate the full cross-product. Unknown or occluded details remain explicit.",
+  "grillStateDefinitions": {
+    "external_off": "Unchanged four-upper-gold/silver base; optional external accessory absent",
+    "external_iced_on": "Separate optional iced accessory; scoped selected reference required"
+  }
+}

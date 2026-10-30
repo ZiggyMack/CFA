@@ -42,8 +42,12 @@ def render_structure(data, story, project, select_asset, *, reviews=None, scene_
     record = records.get(story['id'], {})
     mode = st.radio('Structure view', ['Planned shots', 'Blank storyboard / shot template'], horizontal=True,
                     key=f'structure-mode:{project}')
-    labels = {'draft':'Draft', 'missing':'Missing', 'unknown':'Not assessed', 'present':'Present · unreviewed',
-              'not_needed':'Intentionally not needed', 'verified':'Verified for stated scope', 'accepted':'Accepted for stated scope'}
+    labels = {'missing':'Missing', 'draft':'Draft', 'present':'Present · unreviewed',
+              'verified':'Verified for stated scope', 'accepted':'Accepted for stated scope',
+              'unknown':'Not assessed', 'not_needed':'Intentionally not needed'}
+    def field_status(value):
+        status = value.get('status', 'unknown')
+        return status if status in labels else 'unknown'
     assets = {a['id']:a for a in data['assets']}
     def evidence(rows, key):
         for i, row in enumerate(rows):
@@ -56,16 +60,19 @@ def render_structure(data, story, project, select_asset, *, reviews=None, scene_
         by_key = {v['key']:v for v in values}
         for definition in definitions:
             value = by_key.get(definition['key'], {})
-            with st.expander(f"{definition.get('section', definition['key'])} · {definition['label']} — {'Empty template' if demo else labels.get(value.get('status','unknown'))}"):
+            with st.expander(f"{definition.get('section', definition['key'])} · {definition['label']} — {'Empty template' if demo else labels[field_status(value)]}"):
                 st.caption(definition['hint'])
                 st.text(value.get('text') or ('No content entered.' if demo else 'No field-specific content recorded in this source.'))
                 if value.get('note'): st.info(value['note'])
                 st.caption(f"{definition.get('owner','Writer / CFA Nova')} · {definition.get('phase','handoff preparation')}")
-                if not demo: evidence(value.get('evidence') or ([fallback] if fallback else []),f"{key}:{definition['key']}")
+                if not demo:
+                    if not value.get('text'):
+                        st.caption('Planning context · no field-specific material recorded')
+                    evidence(value.get('evidence') or ([fallback] if fallback else []),f"{key}:{definition['key']}")
     if mode.startswith('Blank'):
         st.info('Structural preview only. No actual story, shot, review, queue item, export or production eligibility is created.')
         fields(model.get('fields',[]), [], f'template:{project}', True)
-        st.subheader('11 · Kitchen / handoff structure')
+        st.subheader('Kitchen / handoff structure')
         fields(model.get('kitchenFields',[]), [], f'template-kitchen:{project}', True)
         return
     shots=record.get('shots',[])
@@ -81,6 +88,10 @@ def render_structure(data, story, project, select_asset, *, reviews=None, scene_
         for shot in shots}
     foundation_counts = {state: sum(value['state'] == state for value in foundations.values())
                          for state in foundation_helper.LABELS}
+    st.subheader('Story plan & coverage')
+    st.caption('Planned shots connect the song sections, scene writing and original panels. '
+               'Written coverage does not mean every shot has an image or an aligned song cue.')
+    evidence([record['source']] if record.get('source') else [], f'structure-map:{project}:{story["id"]}')
     st.caption(f"{len(shots)} planned shots · {len(record.get('sections',[]))} sequences · {sum(bool(s.get('kitchenWritten')) for s in shots)} kitchen blocks documented · may contain gaps")
     st.info('Writing completeness is separate from review, acceptance and execution. Required inputs depend on the phase and selected route.')
     st.caption('Source foundation · ' + ' · '.join(
@@ -101,9 +112,30 @@ def render_structure(data, story, project, select_asset, *, reviews=None, scene_
         if focus=='Revision / dependency review': return bool(shot.get('dependencyReviewNeeded') or shot.get('revisions') or foundations[shot['shotID']]['dependencyReviewNeeded'])
         key={'Clip prompt missing / not assessed':'prompt_clip','Camera missing / not assessed':'camera','Cue missing / not assessed':'cue'}.get(focus)
         return not key or values.get(key,{}).get('status','unknown') in {'unknown','missing'}
-    by_shot={s['shotID']:s for s in shots if matches(s)}
+    sequence_shot_ids = {sid for section in sections if section['id'] == selected_section
+                         for sid in section.get('shotIDs', [])}
+    candidates = [shot for shot in shots if shot['shotID'] in sequence_shot_ids and matches(shot)]
+    def shot_statuses(shot):
+        values = {value['key']: value for value in shot.get('fields', [])}
+        return {field_status(values.get(definition['key'], {})) for definition in model.get('fields', [])}
+    statuses = {shot['shotID']: shot_statuses(shot) for shot in candidates}
+    status_counts = {status: sum(status in values for values in statuses.values()) for status in labels}
+    status_options = ['all', *labels]
+    status_key = f'structure-status:{project}'
+    # Count labels change with the other filters. Keep the selected status even
+    # when Streamlit treats those formatted options as a new widget identity.
+    previous_status = st.session_state.get(status_key, 'all')
+    status_filter = st.selectbox('Field status', status_options,
+        index=status_options.index(previous_status) if previous_status in status_options else 0,
+        format_func=lambda value: f'All field statuses · {len(candidates)}' if value == 'all'
+            else f'{labels[value]} · {status_counts[value]}', key=status_key)
+    by_shot = {shot['shotID']: shot for shot in candidates
+               if status_filter == 'all' or status_filter in statuses[shot['shotID']]}
+    st.caption(f'{len(by_shot)} of {len(candidates)} shots in this view. Match any of the '
+               f"{len(model.get('fields', []))} main storyboard fields; kitchen subfields are excluded. "
+               'Choose All field statuses to clear.')
     if not shots: st.info('No canonical shot structure is registered here yet. The full visual library also retains existing sequence maps. The blank template is available for inspection.')
-    elif not any(s['shotID'] in by_shot for s in shots if s.get('sectionID') == selected_section):
+    elif not by_shot:
         st.info('No shots in this sequence match these filters.')
     for section in record.get('sections',[]):
         if section['id']!=selected_section: continue
@@ -114,6 +146,11 @@ def render_structure(data, story, project, select_asset, *, reviews=None, scene_
             with st.expander(shot['shotID']+' · '+shot['title']+' · '+foundations[shot['shotID']]['label']):
                 st.caption(shot['revision']+' · '+shot['authoringStatus'])
                 st.caption('Storyboard maturity: ' + STORYBOARD_STAGES.get(shot.get('stage'), shot.get('stage') or 'Not recorded'))
+                if shot.get('coverageUpdate'):
+                    st.markdown('**Coverage notes' + (' · ' + shot['coverageAsOf'] if shot.get('coverageAsOf') else '') + '**')
+                    st.text(shot['coverageUpdate'])
+                    evidence([shot['coverageEvidence']] if shot.get('coverageEvidence') else [],
+                             f'structure-coverage:{project}:{shot["shotID"]}')
                 foundation = foundations[shot['shotID']]
                 st.markdown('**Source foundation: ' + foundation['label'] + '**')
                 if foundation['dependencyReviewNeeded']:
@@ -156,7 +193,14 @@ def render_structure(data, story, project, select_asset, *, reviews=None, scene_
                             asset = assets.get(material.get('assetID'))
                             if asset:
                                 st.button(legacy_id+' · '+asset.get('title',asset['id']), key=f"legacy:{project}:{shot['shotID']}:{legacy_id}:{i}", on_click=select_asset, args=(asset['id'],asset['project']))
-                fields(model['fields'],shot['fields'],f"structure:{project}:{shot['shotID']}",fallback=shot['source'])
+                context_fields = model['fields'][:4]
+                if context_fields:
+                    values = {value['key']: value for value in shot.get('fields', [])}
+                    context_matches = status_filter != 'all' and any(
+                        field_status(values.get(definition['key'], {})) == status_filter for definition in context_fields)
+                    with st.expander('Context & references · A–D', expanded=context_matches):
+                        fields(context_fields,shot['fields'],f"structure:{project}:{shot['shotID']}",fallback=shot['source'])
+                fields(model['fields'][4:],shot['fields'],f"structure:{project}:{shot['shotID']}",fallback=shot['source'])
                 with st.expander('Kitchen / handoff structure'):
                     fields(model['kitchenFields'],shot['kitchen'],f"kitchen:{project}:{shot['shotID']}",fallback=shot['source'])
                 if shot.get('revisions'):
