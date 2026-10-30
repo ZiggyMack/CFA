@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "record_state": "completed_run_review_pending",
+  "purpose": "Project evidence record; not a Comfy workflow or executable control",
+  "asset_id": "hon_dolo_motion_v001",
+  "experiment_id": "hon_dolo_motion_v001",
+  "phase": "image_to_video_capability_preview",
+  "question": "Can the existing clean Hon Dolo candidate become a short lifelike shot while retaining face, hair, clothing, jewelry, framing and background? Add gentle motion only. This is a single capability trial, not an A/B model comparison or an accepted identity/performance master.",
+  "created_at_utc": "2026-10-04T13:43:00.82084Z",
+  "parent_experiment_id": "hon_dolo_reference_edit_v001",
+  "provider": "Comfy Cloud",
+  "evidence_status": "executed_sampled_frames_reviewed_acceptance_pending",
+  "source": {
+    "url": "https://cloud.comfy.org/templates/video_ltx2_5_i2v.json",
+    "revision": null,
+    "retrieved_at_utc": "2026-10-04",
+    "template_id": "video_ltx2_5_i2v",
+    "template_version": null,
+    "model_identifiers": [
+      "ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors",
+      "ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors",
+      "ltx-2.5-video-vae-bf16.safetensors",
+      "ltx-2.5-audio-vae-bf16.safetensors",
+      "gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors",
+      "gemma4_e2b_it_int8_convrot.safetensors"
+    ],
+    "node_package_versions": []
+  },
+  "workflow": {
+    "editor_json_path": "hon_dolo_motion_v001.editor.json",
+    "editor_json_sha256": "103235b3086f98fe41b2b4155f76616f5b4958c98ff82fd75867995115ecdc9c",
+    "execution_json_path": "hon_dolo_motion_v001.executed.api.json",
+    "execution_json_sha256": "83a16d8835c7edf1358fa840ad477f94b00b6df85d9f7ca20c8b7ffbda03f181",
+    "exact_remote_version_known": true
+  },
+  "inputs": {
+    "prompt_path": null,
+    "prompt_sha256": null,
+    "reference_files": [
+      {
+        "path": "../outputs/hon_dolo_clean_identity_v001.png",
+        "sha256": "82d6c4bd9aa8e41cadfed602210dfe137f9626c6ee418c9d153f07395f47f6f6",
+        "width": 1360,
+        "height": 768,
+        "role": "first frame and appearance reference; candidate not accepted master",
+        "source_job_id": "64483248-7a46-4612-8829-fb9cc3f2a868",
+        "cloud_input": "5b27635f9cf4e0dad8018043a82436261e405f73378429247bfe42bb09689a3c.png"
+      }
+    ],
+    "seed": 42,
+    "width": 960,
+    "height": 512,
+    "batch_size": 1,
+    "resolved_parameters": {
+      "template": "video_ltx2_5_i2v",
+      "input_overrides": {
+        "75": {
+          "filename_prefix": "CFA/HonDolo/video_motion_v001"
+        },
+        "395": {
+          "image": "5b27635f9cf4e0dad8018043a82436261e405f73378429247bfe42bb09689a3c.png"
+        },
+        "403": {
+          "aspect_ratio": "16:9 (Widescreen)",
+          "megapixels": 0.5,
+          "multiple": 32
+        },
+        "398:376": {
+          "value": "A photorealistic continuous studio portrait shot of the same smiling adult man shown in the first frame. He wears the same black open-collar shirt and gold chain against the same plain gray studio background. He breathes gently, blinks once naturally, and makes a small relaxed head turn of a few degrees before settling, keeping his familiar smile. His facial proportions, hairstyle, eyes, skin texture, clothing and jewelry remain consistent throughout. The camera stays locked at the same distance and angle. Soft studio lighting remains steady. Quiet room ambience, no speech or music. One uninterrupted shot."
+        },
+        "398:383": {
+          "value": false
+        },
+        "398:362": {
+          "value": 4
+        },
+        "398:339": {
+          "noise_seed": 42
+        },
+        "398:361": {
+          "value": 24
+        }
+      },
+      "queue_repetitions": 1,
+      "saved_workflow_id": "bfe78175-2366-4a28-bb76-518c89bef525",
+      "saved_workflow_version": 1,
+      "saved_workflow_url": "https://cloud.comfy.org/#bfe78175-2366-4a28-bb76-518c89bef525",
+      "compiled_node_count": 50,
+      "saved_editor_recompiled_node_count": 50,
+      "semantic_reopen_differences": [],
+      "prompt_enhance": false,
+      "duration_requested_seconds": 4,
+      "fps": 24,
+      "frames": 97,
+      "resolution_selector_megapixels": 0.5,
+      "resolution_selector_aspect": "16:9 (Widescreen)",
+      "resolution_selector_multiple": 32,
+      "actual_delivery_dimensions": [
+        960,
+        512
+      ],
+      "dimension_note": "Encoded output is 960x512 (15:8), not exactly 16:9. Do not infer output aspect from selector label. Template half-resolution latent then x2 refinement can change alignment.",
+      "sampler_stage1": "euler_ancestral",
+      "sampler_stage2": "euler_ancestral",
+      "video_cfg": 1,
+      "audio_cfg": 1,
+      "stage1_sigmas": {
+        "sigmas": "1.0, 0.99375, 0.9875, 0.98125, 0.975, 0.909375, 0.725, 0.421875, 0.0"
+      },
+      "stage2_sigmas": {
+        "sigmas": "0.85, 0.7250, 0.4219, 0.0"
+      },
+      "stage1_image_strength": 0.7,
+      "stage2_image_strength": 1,
+      "refinement_seed": 42,
+      "intrinsic_latent_upscale": 2,
+      "optional_hd_4k_finishing": false,
+      "audio": "Native generated AAC track; no supplied source audio",
+      "override_recovery": "First slot_overrides call failed definitively before queue: 398.value lacked proxy mapping. Retried once via reported flattened input addresses. Exactly one successful job. Executed overrides were missing from template UI metadata, so save_workflow server-converted the exact executed graph to a fresh 50-node editor. Re-read API semantically matches all node classes and inputs after server ID remapping."
+    }
+  },
+  "job": {
+    "id": "b57756c5-9de7-48ca-90ae-968c763ea2f5",
+    "status": "completed",
+    "submitted_at_utc": null,
+    "completed_at_utc": null,
+    "error_node": null,
+    "error_message": null
+  },
+  "usage": {
+    "estimate_credits": 0,
+    "estimate_source": "estimate_credits(template_name=video_ltx2_5_i2v): paid API nodes only; native GPU runtime excluded",
+    "balance_before": null,
+    "balance_after": null,
+    "reported_job_credits": null,
+    "observed_at_utc": "2026-10-04",
+    "attribution_notes": "Billing event cloud_workflow_b57756c5-9de7-48ca-90ae-968c763ea2f5 reports 9.570995 GPU seconds on rtx_pro_6000; no per-job credits or invoice dollar amount supplied. Not a free-run claim or comparative speed benchmark."
+  },
+  "outputs": [
+    {
+      "path": "../outputs/hon_dolo_motion_v001.mp4",
+      "sha256": "cee41a38a60d0782e78ae621fcbc28397f5546c439894dbae24829c3c4fa2c46",
+      "bytes": 397048,
+      "source_node_id": "75",
+      "cloud_filename": "e5c09bcf0a2e59d900a5c46276ba8bbef280a152920f1cdc4ababab004d2571f.mp4",
+      "width": 960,
+      "height": 512,
+      "fps": 24,
+      "frame_count": 97,
+      "duration_seconds": 4.041666666666667,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "audio_codec": "aac",
+      "audio_sample_rate": 48000,
+      "audio_channels": 2,
+      "decoded_successfully": true
+    },
+    {
+      "path": "../outputs/hon_dolo_motion_v001_contact_sheet.png",
+      "role": "12 labelled frame samples at 0,0.375,0.708,1.083,1.458,1.833,2.167,2.542,2.917,3.292,3.625,4.0 seconds; review evidence, not a replacement for playback"
+    },
+    {
+      "path": "../outputs/hon_dolo_motion_v001.media_review.json",
+      "role": "FFmpeg metadata and sampling receipt"
+    }
+  ],
+  "review": {
+    "decision": "Capability demonstrated for image-to-video; performance and identity acceptance pending Ziggy. No extra generations submitted.",
+    "observations": [
+      "97 video frames decoded without a decoding failure. Twelve sampled frames visually inspected.",
+      "Small head tilt and expression motion; face, hair, black shirt, chain and gray studio background broadly consistent across inspected samples.",
+      "Eye closure appears in samples at 0.375, 0.708 and 1.083 seconds, and again at 2.917; not the requested single brief blink.",
+      "Broad smile relaxes rapidly into closed-mouth expression; requested smile preservation was incomplete.",
+      "No obvious scene cut or major identity replacement in sampled frames. Normal-speed temporal smoothness and audio content were not reviewed.",
+      "Browser security policy rejected local file playback; no alternate-browser workaround attempted. Codex file-panel open returned queued, not confirmed playback.",
+      "After successful completion, download, Cloud save and re-read, get_output refresh and get_server_info returned MCP authentication required. Reconnect is required before further native Cloud calls; cause unknown. Initial get_output supplied signed storage URLs instead of documented shortlinks; none were persisted or published."
+    ],
+    "cleanup_needed": [
+      "Review full clip at normal speed with sound.",
+      "Resolve connector authentication before another Cloud run.",
+      "Review output aspect/alignment before HD delivery.",
+      "Finish/accept character identity and tattoos/grill separately before production takes."
+    ],
+    "mesh_triangles": null,
+    "material_slots": null,
+    "texture_dimensions": [],
+    "engine_import_tested": false,
+    "target_pc_performance_tested": false,
+    "performance_notes": "Sampled-frame assessment only; audio exists but was not auditioned. This is generated motion from one still, not preservation of a source-video performance, rap lip-sync, tattoo continuity, or an HD/4K master.",
+    "next_change": "After user review, one controlled prompt-only comparison: request a steady relaxed open-eyed pose without an explicit blink instruction; keep image, seed, duration, model and sampling fixed. Do not change multiple controls at once."
+  },
+  "provenance": {
+    "repository_license_url": "https://github.com/Comfy-Org/workflow_templates",
+    "model_terms_urls": [
+      "https://huggingface.co/Lightricks/LTX-2.5"
+    ],
+    "asset_terms_urls": [],
+    "attribution_notes": "Route chosen from Pan_Handlers/Help/content/video_routes.py::image_to_video and CFA workflows/README.md#choose-by-problem, reviewed 2026-10-04. Official Comfy LTX-2.5 native I2V template reused, with first frame/prompt/duration/preview size/seed adapted for a first capability trial, not an optimization comparison. Baseline still and parent graph: hon_dolo_reference_edit_v001.record.json. Success check: recognizable appearance and static scene with small natural movement, without long eye closure or unwanted expression changes. User explicitly authorized either I2V or video edit now. Wolf Union selected depth nodes absent; see wolf_care_union_control_v001.preflight.json. No Civitai resource required and no new Civitai import proven. Original Grok design and Han Solo likeness lineage retained in parent record. Official guide: https://docs.comfy.org/tutorials/video/ltx/ltx-2-5.",
+    "shareable_export_reviewed": true
+  },
+  "archive": {
+    "backup_location": null,
+    "backup_verified_at_utc": null
+  },
+  "storage": {
+    "execution_location": "cloud",
+    "local_download_required": true,
+    "local_download_reason": "Verify encoding, inspect frames and retain the first motion-test artifact. No model weights or local diffusion runtime.",
+    "local_download_directory": "docs/notes/explorable_world/comfy/outputs",
+    "estimated_download_bytes": 397048,
+    "free_bytes_before_download": null,
+    "persistent_remote_copies": [
+      "Comfy Cloud asset from completed job b57756c5-9de7-48ca-90ae-968c763ea2f5; retention/independent backup not verified.",
+      "Private saved Cloud workflow bfe78175-2366-4a28-bb76-518c89bef525 version 1."
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "id": "HON-MOUTH-USER-UPDATE-20261009",
+  "receivedAtUTC": "2026-10-09T11:25:57.826244+00:00",
+  "status": "received_verified_linked",
+  "project": "hon",
+  "userRequest": "Grok improved mouth consistency and fixed sample issues; start updating golden references.",
+  "sourceType": "User-supplied JPEG attachments; reported Grok revisions",
+  "scope": "Mouth detail development, not whole-face identity or temporal approval",
+  "assets": [
+    {
+      "id": "HD-MOUTH-UPDATE-20261009-01",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/user_mouth_update_20261009/source/HD_MOUTH_USER_UPDATE_20261009_01.jpg",
+      "originalAttachmentPath": "%USERPROFILE%/.codex/codex-remote-attachments/01a097fb-6d17-7cb3-9773-e5c986d40b13/DC93FF88-53B4-4775-93E6-9935655E0C95/1-Photo-1.jpg",
+      "sha256": "b3a89714149fb27240728959f818c803d745165c8ab27ee884f6612052eff7cb",
+      "bytes": 222877,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "JPEG",
+      "verification": "exact_bytes_sha256_size_decode",
+      "observed": {
+        "pose": "Moderately open mouth; phoneme not supplied.",
+        "upper": "Four clearly visible gold upper caps, two per side, flanking two natural white central incisors. Farther posterior teeth are partly occluded.",
+        "nose": "Top-center jewelry is tightly cropped and appears closely paired/central; cannot establish one hoop in each nostril from this image.",
+        "count": 4
+      },
+      "lowerGrill": "Silver/chrome visible front row. No diamonds or gold seen in the lower front caps.",
+      "lipRings": "Two plain hoops without visible ball ends.",
+      "model": null,
+      "prompt": null,
+      "parentVisemeID": null,
+      "motionTested": false,
+      "edited": false
+    },
+    {
+      "id": "HD-MOUTH-UPDATE-20261009-02",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/user_mouth_update_20261009/source/HD_MOUTH_USER_UPDATE_20261009_02.jpg",
+      "originalAttachmentPath": "%USERPROFILE%/.codex/codex-remote-attachments/01a097fb-6d17-7cb3-9773-e5c986d40b13/DC93FF88-53B4-4775-93E6-9935655E0C95/2-Photo-2.jpg",
+      "sha256": "84abd26d31ddd3f6367e85f8a46449e94ecc30efd4bc7b9425dd11acbe68e2f9",
+      "bytes": 237635,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "JPEG",
+      "verification": "exact_bytes_sha256_size_decode",
+      "observed": {
+        "pose": "More widely open mouth; phoneme not supplied.",
+        "upper": "Six visible gold upper caps, three per side, flanking two natural white central incisors; outermost caps are smaller/partly exposed.",
+        "nose": "Two laterally separated nostril hoops are visible. Exact dimensions and hidden construction are unknown.",
+        "count": 6
+      },
+      "lowerGrill": "Silver/chrome visible front row. No diamonds or gold seen in the lower front caps.",
+      "lipRings": "Two plain hoops without visible ball ends.",
+      "model": null,
+      "prompt": null,
+      "parentVisemeID": null,
+      "motionTested": false,
+      "edited": false
+    }
+  ],
+  "previousReferenceIDs": [
+    "HD-DROP-ef5d59a6402e",
+    "IMG-BENCH-89000d0149be",
+    "HD-VIS-41cf41b5b24e"
+  ],
+  "findings": [
+    "Both images visibly retain a silver/chrome lower front grill and two plain lower-lip hoops.",
+    "Both show more upper gold than the earlier two-canines-only rule.",
+    "Photo 1 exposes four gold caps; Photo 2 exposes six. Different openings can expose more posterior teeth; a topology mismatch cannot be concluded from counts alone.",
+    "Photo 1 nose jewelry is cropped and centrally positioned; do not adopt it for nostril placement.",
+    "No phoneme labels, timing, audio or generated transition are supplied. Neither image demonstrates repair of F/V lower-lip contact."
+  ],
+  "upperGoldDecision": {
+    "status": "resolved_from_observed_user_confirmation",
+    "rule": "Exactly four upper gold caps: two lateral incisors plus two short canines. Two central incisors and all remaining upper teeth natural; silver/chrome lower grill.",
+    "supersedes": "Earlier two-gold-canine-only rule",
+    "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/head_library_20261009/grok_conversation_evidence.json",
+    "globalCanonChanged": true,
+    "scope": "Hon Dolo dental pattern only; face/tattoos/nose remain separately governed.",
+    "resolvedAtUTC": "2026-10-09T15:38:54.522059+00:00"
+  },
+  "externalExecution": false,
+  "sourceImagesUnchanged": true,
+  "decisionHistory": [
+    {
+      "recordedAtUTC": "2026-10-09T15:38:54.522059+00:00",
+      "status": "awaiting_user_clarification",
+      "priorRule": "Two gold upper canine caps; all other upper teeth natural",
+      "proposedDirection": "Two natural white central incisors with gold caps on both sides; exact posterior extent unverified",
+      "question": "Should these replace the earlier two-gold-canine rule?",
+      "globalCanonChanged": false
+    }
+  ],
+  "currentUseAssessment": {
+    "HD-MOUTH-UPDATE-20261009-01": "Four visible gold caps match intended layout; nose jewelry has central/septum-looking drift and lip articulation is not verified. Mouth-pattern/ring-material detail only.",
+    "HD-MOUTH-UPDATE-20261009-02": "Six visible gold caps exceed the four-gold rule; retain as a correction example, not a gold-layout master. Silver lower row/plain lip rings remain visible observations."
+  }
+}

@@ -1,0 +1,22 @@
+import csv, collections
+rows=list(csv.DictReader(open('/workspace/hd-sb/recovery/image_hash_index.csv')))
+PKG='/workspace/hd-sb/'
+by_hash=collections.defaultdict(list); by_name=collections.defaultdict(list)
+for r in rows:
+    by_hash[r['sha256']].append(r); by_name[r['filename']].append(r)
+def best_paths(h, exclude_pkg=False):
+    rs=by_hash.get(h,[])
+    if exclude_pkg: rs=[r for r in rs if not r['path'].startswith(PKG)]
+    # prefer plain files, then zip members
+    rs=sorted(rs,key=lambda r:(r['source_type']!='file', r['path']))
+    return rs
+def lookup(filename, sha):
+    hr=best_paths(sha) if sha else []
+    ext=[r for r in hr if not r['path'].startswith(PKG)]
+    pk=[r for r in hr if r['path'].startswith(PKG)]
+    fn=[r for r in by_name.get(filename,[]) if r['sha256']!=sha] if filename else []
+    return hr, ext, pk, fn
+def preferred(hr, filename):
+    def key(r):
+        return (r['filename']!=filename, r['source_type']!='file', not r['path'].startswith('/workspace/') or r['path'].startswith(PKG), r['path'])
+    return sorted(hr,key=key)
