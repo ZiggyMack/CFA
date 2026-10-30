@@ -1,0 +1,167 @@
+# Hon Dolo — Nova consolidation + conversational ID map
+**Date:** 2026-10-07  
+**For:** Nova (file re-org on D: / references)  
+**Keep everything Ziggy said hang onto.** This doc only sorts **ACTIVE reference pool** vs **ARCHIVE / do-not-contaminate**.
+
+Companion machine files in this folder:
+- `HD-EXP-ID-TO-FILENAME.csv` — every numbered ID we can prove on the Grok box
+- `HD-EXP-ID-TO-FILENAME.json` — same + missing-ID notes
+- `UNMAPPED-HASH-FILES.json` — 159 hash-named stills with no proven EXP#
+
+---
+
+## 0. How download names broke the conversation numbers
+
+| What Nova saw | What it means in chat |
+|---|---|
+| Folders like `hon-dolo-recent-263-277` / `… (1)` | Zip unpacks; `(1)` = browser duplicate of same zip |
+| `HD-EXP-291-cantina-leather-front.jpg` | Chat shorthand **#291** |
+| `HD-EXP-LOCK-FACE.jpg` | Chat **LOCK-FACE** (not an EXP number) |
+| `ef5d59a6…jpg` (agent attachment stem) | **Same bytes as LOCK-FACE** (SHA-256 `ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978`) |
+| Hash filenames in `unmapped/` | Mid-range EXP stills whose # was never written onto the filename |
+| Root MP4s + walk-pack MP4s | Exact copies of the same two clips |
+
+**Rule:** Prefer `HD-EXP-NNN-*.jpg` / `HD-EXP-NNN.jpg` as the conversational ID. Ignore Windows `(1)` folder suffixes. Deduplicate by SHA, not by folder.
+
+Nova’s measurement is correct: **LOCK-FACE ≠ #277 ≠ #289** (different bytes and pixels). The brief’s old “same pixels” claim for #289 was wrong; treat #289 as a **related soft polish**, not a clone.
+
+---
+
+## 1. Folder → role map (collapse 7+ folders into 4 logical buckets)
+
+Ziggy keeps all files on disk. Nova should **re-home copies** (or symlink/index) into roles without deleting archives.
+
+### A. `00_ACTIVE_POOL` — only these contaminate Comfy / IP-Adapter
+
+| Put here | Source folder(s) | Files |
+|---|---|---|
+| Identity | `hon-dolo-lock-turnaround-outfits`, `hon-dolo-walk-pack`, `hon-dolo-stills-95-plus` | **`HD-EXP-LOCK-FACE.jpg` only** (one copy) |
+| Soft polish (optional) | same | `#289` — label soft; not identity |
+| Artwork map (fallback) | `hon-dolo-recent-263-277` | `#277` — no-dice map; LOCK-FACE wins on conflict |
+| Finish refs | workspace REFs / 95-plus | `REF-184-finish-hoodie.jpg`, `REF-186-finish-fur.jpg`, `REF-95-denim-shearling.jpg` (+ named `#184` / `#186` if needed) |
+| Neck blaster placement heritage | 95-plus | `#259` (and stencil sheets if compositing) |
+| Turnaround scaffolds | `hon-dolo-lock-turnaround-outfits` | `#291–305` — wardrobe/angle only |
+| Walk pose scaffolds | `hon-dolo-walk-pack` | **`#306–311` only** |
+| Docs | `hon-dolo-nova-brief-through-314` | Journey through 314 + gap update (current). Older journey = history. |
+
+### B. `01_ARCHIVE_HISTORY` — keep, do not feed as identity
+
+| Source | Why archive |
+|---|---|
+| `hon-dolo-stills` / 01–50 + 51–95 zips | Early wardrobe exploration `#1–95` (gaps 74, 86–89 never generated) |
+| `hon-dolo-stills-95-plus` named mid files | Dice/falcon/third-eye/Leigh-stack era (`#176`, `#193–247`, brow-dice `#261–266`, etc.) |
+| `hon-dolo-recent-263-277` | Dice cleanup arc; rejected healed-ink `#272–276`; cheek-dice `#263` |
+| `hon-dolo-outfit-run-278-282` | Outfit tests with known drift; **withdrawn as working base** |
+| `hon-dolo-recent-263-277 (1)` | Exact image dupe of recent pack + older journey docs |
+| Stencils: dice candidates / 195–262 dice | Dice **DROPPED** — archive only |
+| Contact sheets / brow zooms / compare sheets | QA helpers, not masters |
+| Walk clips (both copies) | Still-loop/morph demos only — not performance drivers |
+| Walk `#312–314` | Drifted 3/4 poses |
+
+### C. `02_QUARANTINE_DO_NOT_CONTAMINATE` — highest risk of poisoning the pool
+
+These are the ones Ziggy likely does **not** want inside the “real” reference pool used for Comfy locking:
+
+1. **Photoreal dump family:** `#278` (as identity), `#285–288`, `#290`, and any remaster that changed face/grill/piercings. Outfit `#279–282` OK as wardrobe scaffolds only if clearly labeled SCAFFOLD.
+2. **Dice era locked-then-void:** brow/cheek dice stills `#195` (as tattoo), `#261–266`, `#263`, `#272–276`, dice stencils.
+3. **Dropped tattoo eras:** falcon/bird/Jabba/Chewie/DoLo/third-eye heavy stills (esp. `#176`, many `#193–249`).
+4. **Walk rejects:** `#312–314`.
+5. **Fake backs / prop inventions:** e.g. `#293` (not true back), `#305` prop risks, `#313` prop blaster in hand.
+6. **Supporting-cast / other-character stills** if any landed in the drop (`CHEW-EXP-*`, `LEIA-EXP-*`, `JABBA-EXP-*`, `BOBA-EXP-*`, `VADER-EXP-*`, `DJ-STYLE-*`) — not Hon Dolo identity.
+7. **`unmapped/` (159 hashes)** — treat as contaminated until visually tagged; do **not** bulk-add to ACTIVE. Many are mid-EXP experiments with dropped designs.
+
+### D. `03_UNMAPPED_HOLDING`
+
+Keep `unmapped/` intact. Do not rename until an ID is proven. CSV/JSON here lists SHA for each.
+
+---
+
+## 2. Conversational anchors Nova asked for (#107, #206, etc.)
+
+Honest status from the Grok export on this box:
+
+| Chat ID | File present as `HD-EXP-NNN*`? | What survives |
+|---|---|---|
+| **LOCK-FACE** | YES | Active identity |
+| **#277** | YES | Older artwork map |
+| **#289** | YES | Soft polish (≠ LOCK-FACE bytes) |
+| **#259** | YES | Neck blaster placement heritage |
+| **#291–305** | YES | Outfit×angle scaffolds |
+| **#306–314** | YES | Walk; prefer 306–311 |
+| **#184 / #186 / #95** | YES (+ REF-* copies) | Finish / denim wardrobe |
+| **#101** | **NO** | Grill intent only; Jabba **DROPPED** |
+| **#103** | **NO** | Falcon **DROPPED** |
+| **#107** | **NO** | Chest ship **position/scale concept** only |
+| **#112 / 116 / 117 / 121** | **NO** | Chest ship **drawing** refs (missing numbered) |
+| **#152 / 154** | **NO** | Piercing direction (missing numbered) |
+| **#206** | **NO** | Scoundrel forearm **concept** (worn pass); no file |
+| **#267–271** | **NO** | Rejected generator misses (never packed) |
+| **#283–284** | **NO** | Not in numbered export |
+
+A new copy of every image is unnecessary. **The mapping is the missing piece** — and for 101/103/107/206 the answer is: **those IDs were conversational locks without surviving numbered filenames in the packs we sent.** If they exist, they are somewhere in `unmapped/` without proof, or only on Ziggy’s older local Comfy exports outside this drop.
+
+---
+
+## 3. Suggested target tree (copy/index, don’t delete)
+
+```
+references/hon-dolo/
+  00_ACTIVE_POOL/
+    identity/HD-EXP-LOCK-FACE.jpg
+    polish/HD-EXP-289.jpg
+    artwork_map/HD-EXP-277.jpg
+    finish/REF-184-finish-hoodie.jpg
+    finish/REF-186-finish-fur.jpg
+    finish/REF-95-denim-shearling.jpg
+    placement/HD-EXP-259-blaster.jpg
+    turnaround/291-305/…
+    walk_poses/306-311/…
+    docs/HON-DOLO-DESIGN-JOURNEY-FOR-NOVA.md
+    docs/HON-DOLO-NOVA-GAP-UPDATE-THROUGH-314.md
+  01_ARCHIVE_HISTORY/
+    stills_01_95/
+    stills_95_plus_named/
+    recent_263_277/
+    outfit_278_282/
+    dice_stencils/
+    walk_clips/   (keyframe + morph + contact sheet)
+    walk_rejects_312_314/
+    docs_superseded/
+  02_QUARANTINE_DO_NOT_CONTAMINATE/
+    photoreal_dumps_278_285_290/
+    dice_void/
+    dropped_tattoo_eras/
+    supporting_cast/
+  03_UNMAPPED_HOLDING/
+    (159 hash files, untouched)
+  _index/
+    HD-EXP-ID-TO-FILENAME.csv
+    HD-EXP-ID-TO-FILENAME.json
+    UNMAPPED-HASH-FILES.json
+    NOVA-CONSOLIDATION-AND-ID-MAP.md   (this file)
+```
+
+Deduplicate: keep one file per SHA in ACTIVE; leave extras in archive folders Ziggy already has.
+
+---
+
+## 4. One-line roles (for design_handoff)
+
+- **Identity:** LOCK-FACE  
+- **Outfit/angle:** 291–305 (scaffolds)  
+- **Walk pose:** 306–311 (scaffolds); clips = demos only  
+- **Do not contaminate:** dice void, photoreal dumps, 312–314, supporting cast, bulk unmapped  
+
+---
+
+## 5. Pack → chat range cheat sheet
+
+| Received folder / zip | Chat range / contents |
+|---|---|
+| `hon-dolo-stills` / 01-50 / 51-95 | #1–95 (gaps 74, 86–89) |
+| `hon-dolo-stills-95-plus` (+ parts 1–3) | #95, #176+, named mid, `unmapped/`, `stencils/` |
+| `hon-dolo-recent-263-277` (+ `(1)`) | #263–277 + zooms; `(1)` adds older brief |
+| `hon-dolo-outfit-run-278-282` | #278–282 (dual names OK) |
+| `hon-dolo-lock-turnaround-outfits` | LOCK-FACE, #289, #291–305, contacts |
+| `hon-dolo-walk-pack` | LOCK-FACE, #306–314, contact, 2 clips |
+| `hon-dolo-nova-brief-through-314` | Current docs (use these) |

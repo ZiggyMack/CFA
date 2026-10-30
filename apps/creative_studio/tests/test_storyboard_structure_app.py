@@ -91,7 +91,8 @@ render_structure(st.session_state.fixture_data, {{'id':'hon:fixture'}}, 'hon', l
         self.assertEqual(app.session_state.fixture_data, data)
 
     def test_field_status_matches_any_main_field_and_scopes_counts(self):
-        keys = ['camera', 'prompt_clip', 'cue', *[f'field_{i}' for i in range(3, 16)]]
+        keys = ['purpose', 'context', 'lineage', 'references', 'start_frame', 'lighting', 'camera', 'character',
+                'background', 'beats', 'cue', 'prompt_still', 'prompt_clip', 'settings', 'results', 'acceptance']
         sections = ['A', 'B', 'C', 'D', *map(str, range(12))]
         definitions = [dict(key=key, section=section, label=key, hint='Fixture field')
                        for key, section in zip(keys, sections)]
@@ -102,9 +103,9 @@ render_structure(st.session_state.fixture_data, {{'id':'hon:fixture'}}, 'hon', l
                         materials=[], kitchenWritten=False, source={}, revisions=[])
         shots = [shot('missing', dict(camera='unknown', prompt_clip='missing', cue='missing')),
                  shot('draft', dict(prompt_clip='draft')), shot('kitchen-only'),
-                 shot('verified', dict(prompt_clip='verified')), shot('accepted', dict(prompt_clip='accepted')),
+                 shot('verified', dict(purpose='verified')), shot('accepted', dict(acceptance='accepted')),
                  shot('unknown', dict(camera='unknown', prompt_clip='unsupported')),
-                 shot('not-needed', dict(prompt_clip='not_needed')), shot('selected', dict(field_4='draft')),
+                 shot('not-needed', dict(prompt_clip='not_needed')), shot('selected', dict(start_frame='draft')),
                  shot('other-sequence', dict(prompt_clip='draft'), 'S02')]
         # Absent main fields are also not assessed. Extra fields never enter the main-field filter.
         shots[5]['fields'] = [value for value in shots[5]['fields'] if value['key'] != 'cue']
@@ -112,7 +113,9 @@ render_structure(st.session_state.fixture_data, {{'id':'hon:fixture'}}, 'hon', l
         shots[2]['fields'].append(dict(key='non-main-field', status='missing'))
         provenance = dict(assetID='coverage-map', line=12, sha256='c'*64)
         shots[0].update(coverageUpdate='The earlier hold is superseded; the named scene remains a proposal.',
-                        coverageAsOf='2026-10-28', coverageEvidence=provenance)
+                        coverageAsOf='2026-10-28', coverageEvidence=provenance, parent=provenance,
+                        priorDependencyEvidence=[dict(provenance, line=4)],
+                        revisions=[dict(id='take-2', note='Revision proposal remains pending.', source=provenance)])
         asset = dict(id='frame', project='hon', kind='image', title='Frame', sha256='a'*64, bytes=100,
                      storyboardStage='detailed_design', workingReferenceScope='scene')
         document = dict(id='coverage-map', project='hon', kind='document', title='Coverage map', filename='coverage.md')
@@ -143,7 +146,20 @@ render_structure(st.session_state.fixture_data, {{'id':'hon:fixture'}}, 'hon', l
         self.assertTrue(any(c.value == 'Planning context · no field-specific material recorded' for c in app.caption))
         self.assertIsNotNone(app.button(key='structure-map:hon:hon:fixture:source:0'))
         self.assertIsNotNone(app.button(key='structure-coverage:hon:missing:source:0'))
-        self.assertFalse(any(e.proto.expanded for e in app.expander if e.label == 'Context & references · A–D'))
+        group_labels = ['Context & references · A–D', 'Creative direction · 0–7', 'Generation handoff · 8–9',
+                        'Takes, results & review · 10–11', 'Kitchen / handoff structure']
+        groups = [e for e in app.expander if e.label in group_labels]
+        self.assertEqual([e.label for e in groups], group_labels * 8)
+        self.assertFalse(any(e.proto.expanded for e in groups))
+        self.assertFalse(any(e.label == 'Prior takes, revisions & dependency evidence' for e in app.expander))
+        first_groups = groups[:5]
+        for group, expected_keys in zip([first_groups[0], first_groups[1], first_groups[2], first_groups[3]],
+                                       [keys[:4], keys[4:12], keys[12:14], keys[14:]]):
+            self.assertEqual([e.label.split(' · ', 1)[1].split(' — ', 1)[0]
+                              for e in group.expander if e.label != group.label], expected_keys)
+        self.assertEqual(len(first_groups[3].button), 3)
+        self.assertTrue(any(m.value == 'Revision proposal remains pending.' for m in first_groups[3].markdown))
+        self.assertTrue(first_groups[3].warning)
         expected = dict(missing=['missing'], draft=['draft', 'selected'], present=[s['shotID'] for s in shots[:8]],
                         verified=['verified'], accepted=['accepted'], unknown=['missing', 'unknown'], not_needed=['not-needed'])
         def shown():
@@ -156,7 +172,15 @@ render_structure(st.session_state.fixture_data, {{'id':'hon:fixture'}}, 'hon', l
             self.assertEqual(shown(), ids)
             if status == 'draft':
                 self.assertEqual([e.proto.expanded for e in app.expander if e.label == 'Context & references · A–D'],
+                                 [False, False])
+                self.assertEqual([e.proto.expanded for e in app.expander if e.label == 'Creative direction · 0–7'],
+                                 [False, True])
+                self.assertEqual([e.proto.expanded for e in app.expander if e.label == 'Generation handoff · 8–9'],
                                  [True, False])
+            if status == 'verified':
+                self.assertTrue(next(e for e in app.expander if e.label == 'Context & references · A–D').proto.expanded)
+            if status == 'accepted':
+                self.assertTrue(next(e for e in app.expander if e.label == 'Takes, results & review · 10–11').proto.expanded)
         app.selectbox(key='structure-status:hon').select('all').run()
         self.assertEqual(shown(), [s['shotID'] for s in shots[:8]])
         app.selectbox(key='structure-foundation:hon').select('no_frame').run()

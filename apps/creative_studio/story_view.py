@@ -193,20 +193,32 @@ def render_structure(data, story, project, select_asset, *, reviews=None, scene_
                             asset = assets.get(material.get('assetID'))
                             if asset:
                                 st.button(legacy_id+' · '+asset.get('title',asset['id']), key=f"legacy:{project}:{shot['shotID']}:{legacy_id}:{i}", on_click=select_asset, args=(asset['id'],asset['project']))
-                context_fields = model['fields'][:4]
-                if context_fields:
+                def field_group(title, keys, include_history=False):
+                    definitions = [definition for definition in model['fields'] if definition['key'] in keys]
+                    if not definitions and not include_history:
+                        return
                     values = {value['key']: value for value in shot.get('fields', [])}
-                    context_matches = status_filter != 'all' and any(
-                        field_status(values.get(definition['key'], {})) == status_filter for definition in context_fields)
-                    with st.expander('Context & references · A–D', expanded=context_matches):
-                        fields(context_fields,shot['fields'],f"structure:{project}:{shot['shotID']}",fallback=shot['source'])
-                fields(model['fields'][4:],shot['fields'],f"structure:{project}:{shot['shotID']}",fallback=shot['source'])
+                    group_matches = status_filter != 'all' and any(
+                        field_status(values.get(definition['key'], {})) == status_filter for definition in definitions)
+                    with st.expander(title, expanded=group_matches):
+                        fields(definitions,shot['fields'],f"structure:{project}:{shot['shotID']}",fallback=shot['source'])
+                        if include_history:
+                            evidence([row for row in [shot.get('parent') or shot.get('source'),
+                                                      *shot.get('priorDependencyEvidence', [])] if row],
+                                     f"history:{project}:{shot['shotID']}")
+                            if shot.get('revisions'):
+                                st.warning('Proposed revision needs review; earlier take and results remain intact.')
+                                for revision in shot['revisions']:
+                                    st.write(revision['note']); evidence([revision['source']],f"revision:{shot['shotID']}:{revision['id']}")
+                            st.caption('Changes to direction, cue, source or prompt require review of dependent packs. '
+                                       'Earlier results and human reviews are retained; timings are never moved automatically.')
+                field_group('Context & references · A–D', {'purpose', 'context', 'lineage', 'references'})
+                field_group('Creative direction · 0–7',
+                            {'start_frame', 'lighting', 'camera', 'character', 'background', 'beats', 'cue', 'prompt_still'})
+                field_group('Generation handoff · 8–9', {'prompt_clip', 'settings'})
+                field_group('Takes, results & review · 10–11', {'results', 'acceptance'}, include_history=True)
                 with st.expander('Kitchen / handoff structure'):
                     fields(model['kitchenFields'],shot['kitchen'],f"kitchen:{project}:{shot['shotID']}",fallback=shot['source'])
-                if shot.get('revisions'):
-                    st.warning('Proposed revision needs review; earlier take and results remain intact.')
-                    for revision in shot['revisions']:
-                        st.write(revision['note']); evidence([revision['source']],f"revision:{shot['shotID']}:{revision['id']}")
 
 
 def render_stories(data: dict, project: str, library_dir: Path, render_grid, select_asset, document_download, *, reviews: dict) -> None:

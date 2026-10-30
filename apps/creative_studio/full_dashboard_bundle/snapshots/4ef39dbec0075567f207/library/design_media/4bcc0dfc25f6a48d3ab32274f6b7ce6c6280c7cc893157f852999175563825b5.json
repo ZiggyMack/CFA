@@ -1,0 +1,107 @@
+{
+ "script": "V5_INK_METHOD_v004",
+ "spec": "v009",
+ "image": "hon-dolo-storyboard-strictly-business/series-02-bounty-heat/SB-12-neck-blaster-cu_v004.jpg",
+ "mask": null,
+ "clothing_mask": null,
+ "blaster": {
+  "skin_median": 91.0,
+  "skinbox_ink_px": 0,
+  "skinbox_soft_px": 0,
+  "local_skin_v002": 77.0,
+  "ring_median": 77.0,
+  "ring_clean_frac": 0.917,
+  "lit_skin": {
+   "lit_ref": 97.0,
+   "lit_box": [
+    695,
+    177,
+    709,
+    191
+   ],
+   "lit_box_median": 91.0,
+   "lit_dist": 9.1,
+   "scan_windows": 2905
+  },
+  "ring_shadowed": true,
+  "ring_ref_traceability": null,
+  "status": "ok",
+  "main": 0.395,
+  "xcheck": 0.165,
+  "ink_px": 14495,
+  "ink_median": 15.0,
+  "stroke_med": 2.0,
+  "stroke_p90": 2.83,
+  "ring_ref": NaN,
+  "ref_source": "ring-shadowed INVALID: --skinref required",
+  "ref_box": null,
+  "skinbox_dev": null,
+  "skinbox_ok": false
+ },
+ "ship": {
+  "skin_median": 110.0,
+  "skinbox_ink_px": 0,
+  "skinbox_soft_px": 0,
+  "local_skin_v002": 95.0,
+  "ring_median": 100.0,
+  "ring_clean_frac": 0.99,
+  "lit_skin": {
+   "lit_ref": 100.0,
+   "lit_box": [
+    507,
+    582,
+    521,
+    596
+   ],
+   "lit_box_median": 95.0,
+   "lit_dist": 9.1,
+   "scan_windows": 1827
+  },
+  "ring_shadowed": false,
+  "ring_ref_traceability": 100.0,
+  "skinref_check": {
+   "skinref_override": true,
+   "skinref_dist": 38.5,
+   "skinref_edge_dist": 22.6,
+   "skinref_limit": 40,
+   "skinref_median": 110.0,
+   "skinref_ink_px": 0,
+   "skinref_vs_lit": 0.1,
+   "skinref_ok": true
+  },
+  "status": "ok",
+  "main": 0.485,
+  "xcheck": 0.391,
+  "ink_px": 1863,
+  "ink_median": 43.0,
+  "stroke_med": 2.0,
+  "stroke_p90": 2.0,
+  "ring_ref": 110.0,
+  "ref_source": "skinref_override (ring valid)",
+  "ref_box": [
+   445,
+   600,
+   475,
+   630
+  ],
+  "skinbox_dev": 0.0,
+  "skinbox_ok": true
+ },
+ "status": "ok",
+ "diff_main": 0.09,
+ "diff_xcheck": 0.226,
+ "ink_pass_strict": false,
+ "margin_rule_eligible": false,
+ "tiebreak_eligible": false,
+ "stroke_flag_ADVISORY": {
+  "p90_within_blaster_plus_0p5": true,
+  "note": "advisory only: a stroke FAIL also needs the lines to look heavier at 4x (spec v009 s.4)"
+ },
+ "skinboxes_ok": false,
+ "ring_shadowed": {
+  "blaster": true,
+  "ship": false
+ },
+ "exceptions": [],
+ "skinbox_note": "skin box must be ink-free and within +/-15% of ref; one box shared by original and fix; the original must pass on it (check by running the original)"
+}
