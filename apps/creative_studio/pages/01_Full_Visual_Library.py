@@ -8,7 +8,7 @@ import streamlit as st
 APP_DIR = Path(__file__).resolve().parents[1]
 if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
-from full_dashboard_component import render_dashboard
+from full_dashboard_component import render_dashboard, route_config, query_route, route_query_update
 
 BUNDLE_DIR = APP_DIR / "full_dashboard_bundle"
 st.set_page_config(page_title="Full Visual Library | CFA", page_icon="🎞️", layout="wide", initial_sidebar_state="collapsed")
@@ -44,4 +44,16 @@ with st.sidebar.expander("Review storage and publication"):
     st.caption("The library fits your window automatically. This page and the compact Studio have separate saved review state; transfer a complete review JSON when switching.")
     st.caption(f"{current.get('assetCount', 0):,} catalog entries · dashboard {current.get('buildID', '')}")
 
-render_dashboard(snapshot)
+config = route_config(snapshot)
+initial_route = query_route(st.query_params, config)
+navigation = render_dashboard(snapshot, initial_route=initial_route)
+updated_query = route_query_update(navigation, initial_route, config)
+if updated_query:
+    # Keep the outer URL shareable and refreshable without touching native Studio
+    # selections, image reviews, browser backup, or unrelated query parameters.
+    for key, value in updated_query.items():
+        if value is None:
+            if key in st.query_params:
+                del st.query_params[key]
+        elif st.query_params.get(key) != value:
+            st.query_params[key] = value

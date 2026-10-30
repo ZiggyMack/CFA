@@ -22,7 +22,7 @@ from urllib.parse import quote, unquote, urlsplit
 from build_full_dashboard import APP, ROOT, VISUAL, DEFAULT_OUTPUT, write_generated
 
 FORMAT = "cfa-portable-dashboard-v1"
-ALLOWED_SUFFIXES = {'.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif', '.svg', '.mp4', '.webm', '.mov', '.mp3', '.wav', '.m4a', '.pdf', '.txt', '.json', '.csv', '.tsv', '.md', '.zip'}
+ALLOWED_SUFFIXES = {'.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif', '.svg', '.mp4', '.webm', '.mov', '.mp3', '.wav', '.m4a', '.pdf', '.doc', '.txt', '.json', '.csv', '.tsv', '.md', '.zip'}
 
 
 def sha(raw: bytes) -> str:

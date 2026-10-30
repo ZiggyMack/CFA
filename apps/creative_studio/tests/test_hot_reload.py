@@ -23,6 +23,7 @@ class StudioDependencyTest(unittest.TestCase):
         self.directory = Path(self.temp.name)
         (self.directory / "storyboard_takes.py").write_text("VERSION = 1\n", encoding="utf-8")
         (self.directory / "collaborator_review.py").write_text("VERSION = 1\n", encoding="utf-8")
+        (self.directory / "controller_routing.py").write_text("VERSION = 1\n", encoding="utf-8")
         spec = importlib.util.spec_from_file_location("studio_dependency_test_loader", APP_DIR / "studio_dependencies.py")
         self.loader = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(self.loader)
@@ -62,6 +63,7 @@ class StudioDependencyTest(unittest.TestCase):
         (other / source.name).write_bytes(source.read_bytes())
         (other / "storyboard_takes.py").write_bytes((self.directory / "storyboard_takes.py").read_bytes())
         (other / "collaborator_review.py").write_bytes((self.directory / "collaborator_review.py").read_bytes())
+        (other / "controller_routing.py").write_bytes((self.directory / "controller_routing.py").read_bytes())
         with patch.object(self.loader, "APP_DIR", other):
             second = self.loader.current_module("library_helpers")
         self.assertIsNot(first, second)

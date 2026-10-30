@@ -164,6 +164,12 @@ def build_one(a):
                 if n and abs(original['streams'][n]['duration_seconds']-proxy['streams'][n]['duration_seconds'])>0.022:
                     raise ValueError(f'Audio duration changed beyond one AAC frame: {source.name}')
             records.append(output_record(dest,digest,'video_proxy_full_duration_full_audio',source_probe=original,proxy_probe=proxy))
+    elif kind == 'document' and a.get('downloadOnly'):
+        if source.suffix.lower() != '.doc':raise ValueError('Unsupported original document download')
+        dest=OUT/'docs'/f'{digest}.doc'
+        if not cached(dest,digest):shutil.copyfile(source,dest)
+        if sha(dest.read_bytes())!=digest:raise ValueError('Unchanged document copy mismatch')
+        records.append(output_record(dest,digest,'unchanged_source_document'))
     elif kind in ('gif','pdf'):
         dest=OUT/('animations' if kind=='gif' else 'docs')/(digest+('.gif' if kind=='gif' else '.pdf'))
         if not cached(dest,digest):shutil.copyfile(source,dest)

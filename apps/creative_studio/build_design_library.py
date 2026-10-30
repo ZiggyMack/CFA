@@ -211,6 +211,19 @@ class DesignBundle(MissionBundle):
 
     def package_asset(self, asset_id):
         asset = self.assets[asset_id]
+        # Legacy screenplays remain unchanged downloads alongside readable text.
+        # They are never decoded as text or used as generated-media references.
+        if asset.get('kind') == 'document' and asset.get('downloadOnly'):
+            path = self.local_path(asset['src'])
+            if path.suffix.lower() != '.doc':
+                raise ValueError('Unsupported original document download')
+            raw, digest = self.source_record(path, asset.get('sha256'))
+            relative = self.write_media(raw, '.doc', digest, 'unchanged_source_document')
+            item = self.clean_config({**deepcopy(asset), 'src': relative, 'sha256': digest,
+                                      'text': '', 'inert': False, 'downloadOnly': True})
+            item.pop('thumb', None)
+            self.packaged_assets[asset_id] = item
+            return item
         # Canonical writer IDs retain their old names, but src/hash must bind the safe copy.
         for original, binding in self.publication_bindings.items():
             if asset_id.endswith(original.relative_to(self.root).as_posix()):

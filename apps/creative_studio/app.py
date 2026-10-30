@@ -50,8 +50,9 @@ from studio_dependencies import (
 LIBRARY_DIR = APP_DIR / "library"
 PAGE_SIZE = 24
 CORNER = "Ziggy’s Corner"
+CASA = "Casa Baldadoon"
 DESIGN_VIEWS = ("Working references", "Outfits", "Tattoos & piercings", "Supporting cast", "Comfy swap targets", "Archive")
-VIEWS = (CORNER, "Library", *DESIGN_VIEWS, "Storyboard", "Videos", "Inspiration", "Needs review", "Collaborators", "Collaborator briefs", "Review queue", "Shot plans", "Export basket", "Favorites & notes", "Documents", "Intake verification")
+VIEWS = (CORNER, CASA, "Project home", "Library", *DESIGN_VIEWS, "Storyboard", "Videos", "Inspiration", "Needs review", "Collaborators", "Collaborator briefs", "Review queue", "Shot plans", "Export basket", "Favorites & notes", "Documents", "Intake verification")
 STATUS_LABELS = {None: "Unmarked", "keep": "Keep", "needs_fixes": "Needs fixes", "remove": "Marked for removal"}
 NOTE_PRESETS_FORMAT = "cfa-review-note-presets-v1"
 NOTE_LIMIT = 20000
@@ -205,7 +206,7 @@ def init_state() -> None:
 
 
 def navigate(view: str) -> None:
-    if st.session_state.studio_view not in (CORNER, "Collaborators"):
+    if st.session_state.studio_view not in (CORNER, CASA, "Collaborators"):
         st.session_state.studio_return_view = st.session_state.studio_view
     if view == 'Needs review':
         view = 'Review queue'
@@ -218,11 +219,24 @@ def navigate(view: str) -> None:
     st.session_state.pop("studio_mission_collection", None)
     st.session_state.pop("studio_mission_questionnaire", None)
     st.session_state.pop("studio_mission_task_focus", None)
+    st.session_state.pop("studio_human_task_context", None)
+    if view in (CORNER, CASA):
+        data = st.session_state.get("studio_controller_data", {})
+        from studio_dependencies import current_module
+        routing = current_module("controller_routing")
+        owner = "baldadoon" if view == CASA else "ziggy"
+        owned = [p["id"] for p in data.get("projects", []) if routing.project_controller(data, p["id"]) == owner]
+        if owned and st.session_state.get("studio_project") not in owned:
+            st.session_state.studio_project = owned[0]
+    if "studio_project" in st.session_state:
+        st.query_params["project"] = st.session_state.studio_project
+        st.query_params["view"] = {CORNER: "mission_control", CASA: "casa_baldadoon", "Project home": "project_home"}.get(view, view)
+        st.session_state.studio_route_seen = (st.query_params.get("project"), st.query_params.get("view"))
 
 
 def back_to_library() -> None:
     view = st.session_state.get("studio_return_view", "Library")
-    navigate(view if view in VIEWS and view not in (CORNER, "Collaborators") else "Library")
+    navigate(view if view in VIEWS and view not in (CORNER, CASA, "Collaborators") else "Library")
 
 
 def clear_selection() -> None:
@@ -235,6 +249,10 @@ def clear_project_selection() -> None:
     st.session_state.pop("studio_mission_collection", None)
     st.session_state.pop("studio_mission_questionnaire", None)
     st.session_state.pop("studio_mission_task_focus", None)
+    st.session_state.pop("studio_human_task_context", None)
+    project = next((p for p in st.session_state.get("studio_controller_data", {}).get("projects", [])
+                    if p["id"] == st.session_state.get("studio_project")), {})
+    navigate("Project home" if project.get("landing") else "Library")
 
 
 def select_asset(asset_id: str, project: str | None = None) -> None:
@@ -269,8 +287,8 @@ def basket_button(asset: dict, context: str = "card") -> None:
 
 
 def save_note(asset_id: str, key: str) -> None:
-    st.session_state.studio_notes[asset_id] = st.session_state[key]
-    set_review_field(asset_id, "note", st.session_state[key])
+    if set_review_field(asset_id, "note", st.session_state[key]):
+        st.session_state.studio_notes[asset_id] = st.session_state[key]
 
 
 def read_note_presets(payload: dict) -> list[dict]:
@@ -439,10 +457,40 @@ def render_note_presets(asset_id: str) -> None:
             st.button("Undo clear", key="presets-undo", on_click=undo_clear_note_presets)
 
 
-def set_review_field(asset_id: str, field: str, value) -> None:
+def set_review_field(asset_id: str, field: str, value) -> bool:
+    now = datetime.now(timezone.utc).isoformat()
+    attribution = {}
+    data = st.session_state.get("studio_controller_data")
+    if data:
+        from studio_dependencies import current_module
+        routing = current_module("controller_routing")
+        asset = next((a for a in st.session_state.get("studio_export_assets", []) if a["id"] == asset_id), None)
+        if not asset:
+            st.session_state.studio_flash = "This review's source is not in the current snapshot. No decision was changed."
+            return False
+        owner = routing.project_controller(data, asset["project"])
+        task = next((t for t in data.get("missionControl", {}).get("tasks", [])
+                     if t.get("id") == st.session_state.get("studio_human_task_context")), None)
+        try:
+            attribution = routing.human_action(data, asset,
+                st.session_state.get("human-actor:" + owner, "ziggy" if owner == "ziggy" else None),
+                st.session_state.get("human-scope:" + asset_id, "project_decision" if owner == "ziggy" else None),
+                [field], now, task)
+        except ValueError as error:
+            st.session_state.studio_flash = str(error)
+            return False
+        prior_record = {**st.session_state.studio_reviews.get(asset_id, {}),
+                        **st.session_state.studio_review_overrides.get(asset_id, {})}
+        touched = st.session_state.setdefault("studio_human_review_touched", set())
+        if prior_record and (asset_id not in touched or any(prior_record.get(key) != attribution.get(key)
+                for key in ("reviewerControllerID", "decisionScope"))):
+            snapshot = {**prior_record, "id": asset_id, "sha256": asset.get("sha256")}
+            st.session_state.studio_review_provenance = current_module("library_helpers").review_provenance(
+                {"items": [snapshot]}, st.session_state.get("studio_review_provenance", {}))
+        touched.add(asset_id)
     record = st.session_state.studio_review_overrides.setdefault(asset_id, {})
     record[field] = value
-    now = datetime.now(timezone.utc).isoformat()
+    record.update(attribution)
     record["updatedAt"] = now
     record["origin"] = "user"
     prior = st.session_state.studio_reviews.get(asset_id, {})
@@ -456,6 +504,7 @@ def set_review_field(asset_id: str, field: str, value) -> None:
     dates[field] = now
     record["fieldUpdatedAt"] = dates
     st.session_state.pop("studio_basket_zip", None)
+    return True
 
 
 def set_variant(asset_id: str, variant: str) -> None:
@@ -484,13 +533,15 @@ def save_shot_plan(asset_id: str) -> None:
                            "outputKind": st.session_state.get(f"plan-outputKind:{asset_id}", "unspecified"),
                            "idea": st.session_state[f"plan-idea:{asset_id}"],
                            "prompt": st.session_state[f"plan-prompt:{asset_id}"]})
-    set_review_field(asset_id, "shotPlan", plan)
+    if not set_review_field(asset_id, "shotPlan", plan):
+        return
     st.session_state[f"plan-destinations:{asset_id}"] = plan["destinations"]
     st.session_state.studio_flash = "Shot plan saved in this session. Export it from Shot plans or Favorites & notes."
 
 
 def remove_shot_plan(asset_id: str) -> None:
-    set_review_field(asset_id, "shotPlan", None)
+    if not set_review_field(asset_id, "shotPlan", None):
+        return
     for field in ("destinations", "outputKind", "idea", "prompt"):
         st.session_state.pop(f"plan-{field}:{asset_id}", None)
 
@@ -505,7 +556,8 @@ def toggle_collaborator(asset_id: str, provider: str) -> None:
         destinations.add(provider)
     plan["destinations"] = list(destinations)
     plan = normalize_plan(plan)
-    set_review_field(asset_id, "shotPlan", plan)
+    if not set_review_field(asset_id, "shotPlan", plan):
+        return
     st.session_state[f"plan-destinations:{asset_id}"] = plan["destinations"]
 
 
@@ -549,8 +601,8 @@ def add_cast_link(asset: dict, data: dict, story_id: str, shot_id: str) -> None:
     if not any(row['storyID'] == story_id and row['shotID'] == shot_id for row in value['storyboardLinks']):
         value['storyboardLinks'] = [*value['storyboardLinks'], link]
     value['storyboardPlanned'] = True
-    set_review_field(asset['id'], 'castUse', value)
-    st.session_state['cast-planned:'+asset['id']] = True
+    if set_review_field(asset['id'], 'castUse', value):
+        st.session_state['cast-planned:'+asset['id']] = True
 
 
 def remove_cast_link(asset: dict, data: dict, story_id: str, shot_id: str) -> None:
@@ -606,11 +658,36 @@ def render_cast_controls(asset: dict, data: dict) -> None:
                   on_click=add_cast_link, args=(asset, data, story_id, shot_id))
 
 
+def render_human_review_identity(asset: dict, data: dict | None = None) -> None:
+    asset_id = asset["id"]
+    if data is not None:
+        from studio_dependencies import current_module
+        routing = current_module("controller_routing")
+        owner = routing.project_controller(data, asset["project"])
+        people = routing.controllers(data)
+        actor_key, scope_key = "human-actor:" + owner, "human-scope:" + asset_id
+        if actor_key not in st.session_state:
+            st.session_state[actor_key] = "ziggy" if owner == "ziggy" else None
+        st.selectbox("Recording review as", [None, *people], key=actor_key,
+                     format_func=lambda who: "Choose the actual reviewer" if who is None else people[who]["name"])
+        task = next((t for t in data.get("missionControl", {}).get("tasks", [])
+                     if t.get("id") == st.session_state.get("studio_human_task_context") and routing.task_contains_asset(t, asset)), None)
+        scopes = ["asset_review", "project_decision", "story", "scene", "character", "location", "reference", "technical_assistance"]
+        if task and task.get("decisionScope") and task["decisionScope"] not in scopes:
+            scopes.append(task["decisionScope"])
+        if scope_key not in st.session_state:
+            st.session_state[scope_key] = task.get("decisionScope") if task else ("project_decision" if owner == "ziggy" else None)
+        st.selectbox("Decision scope", [None, *scopes], key=scope_key,
+                     format_func=lambda scope: "Choose the scope" if scope is None else scope.replace("_", " "))
+        st.caption("Project controller: " + people[owner]["name"] + ". Reviewer attribution is a declared identity in this shared app, not a separate authenticated login.")
+
+
 def render_review_controls(asset: dict, data: dict | None = None) -> None:
     asset_id = asset["id"]
     decision = st.session_state.studio_reviews.get(asset_id, {})
     archived = bool(asset.get("archived"))
     status = decision.get("status")
+    render_human_review_identity(asset, data)
     st.markdown("**Review decision**")
     st.caption(f"Current: {STATUS_LABELS.get(status, 'Unmarked')}")
     for row in ((("Keep", "keep"), ("Needs fixes", "needs_fixes")), (("Mark for removal", "remove"), ("Clear", None))):
@@ -757,6 +834,7 @@ def render_selected(asset: dict, intake: dict | None = None, data: dict | None =
         if asset.get("text"):
             st.text(asset["text"])
         document_download(asset, context="selected")
+        render_human_review_identity(asset, data)
         st.button("Restore from Archive" if asset.get("archived") else "Archive", key=f"archive:{asset['id']}",
                   on_click=set_review_field, args=(asset["id"], "collectionState", "working" if asset.get("archived") else "archived"))
         return
@@ -1272,7 +1350,7 @@ def render_shot_plans(data: dict, project: str) -> None:
 
 def open_mission_reference(asset: dict) -> None:
     st.session_state.studio_project = asset["project"]
-    if st.session_state.studio_view == CORNER:
+    if st.session_state.studio_view in (CORNER, CASA):
         st.session_state.studio_mission_selected = asset["id"]
     else:
         st.session_state.studio_view = "Library"
@@ -1283,7 +1361,9 @@ def render_mission_control(data: dict, review_data: dict | None = None) -> None:
     from studio_dependencies import current_module
     render_corner = current_module("mission_view").render_corner
     st.button("← Back to library", key="mission-back", on_click=back_to_library)
-    st.markdown('<div class="studio-hero"><div class="eyebrow">CFA · Ziggy’s Corner</div>'
+    controller = "baldadoon" if st.session_state.studio_view == CASA else "ziggy"
+    home = CASA if controller == "baldadoon" else CORNER
+    st.markdown(f'<div class="studio-hero"><div class="eyebrow">CFA · {html.escape(home)}</div>'
                 '<h1>Mission Control</h1><p>Your next moves, prepared handoffs, and ideas waiting for their next pass.</p></div>',
                 unsafe_allow_html=True)
 
@@ -1294,9 +1374,9 @@ def render_mission_control(data: dict, review_data: dict | None = None) -> None:
         st.download_button("Prepare review sweep JSON", json.dumps(payload, ensure_ascii=False, indent=2),
                            file_name="cfa-review-sweep-for-nova.json", mime="application/json")
 
-    if data.get("reviewIntake"):
+    if data.get("reviewIntake") and controller == "ziggy":
         st.button("Intake verification →", key="mission-intake", on_click=navigate, args=("Intake verification",))
-    render_corner(data, LIBRARY_DIR, open_mission_reference, lambda asset: render_selected(asset, data.get("reviewIntake"), data), document_download, navigate, sweep, review_data=review_data or data)
+    render_corner(data, LIBRARY_DIR, open_mission_reference, lambda asset: render_selected(asset, data.get("reviewIntake"), data), document_download, navigate, sweep, review_data=review_data or data, controller=controller)
 
 
 def render_export_basket(data: dict) -> None:
@@ -1398,6 +1478,7 @@ def main() -> None:
         st.session_state.studio_basket = {redirect(aid) for aid in st.session_state.studio_basket}
     st.session_state.studio_notes = {key: value.get("note", "") for key, value in st.session_state.studio_reviews.items()}
     st.session_state.studio_export_assets = review_data["assets"]
+    st.session_state.studio_controller_data = {**data, "missionControl": mission_data.get("missionControl", data.get("missionControl", {}))}
     from studio_dependencies import current_module
     # Streamlit resolves the declaring frame through inspect's filename cache.
     # This stable entrypoint avoids stale names from source-hashed helper modules.
@@ -1413,17 +1494,20 @@ def main() -> None:
         return
     if st.session_state.get("studio_project") not in projects:
         st.session_state.studio_project = next(iter(projects))
+    current_module("controller_routing").apply_route(st.session_state, st.query_params, data)
     with st.sidebar:
         st.markdown("## CFA\n### Creative Studio")
         st.caption("A place to look, compare, and create.")
         project = st.selectbox("Project", list(projects), format_func=lambda key: projects[key]["name"],
                                key="studio_project", on_change=clear_project_selection)
+        st.caption(projects[project].get("subtitle", ""))
         export_review_button("sidebar")
-        browse = ("Library", "Working references", "Outfits", "Tattoos & piercings", "Supporting cast", "Storyboard", "Videos", "Comfy swap targets")
+        browse = (*(("Project home",) if projects[project].get("landing") else ()), "Library", "Working references", "Outfits", "Tattoos & piercings", "Supporting cast", "Storyboard", "Videos", "Comfy swap targets")
         if project != "hon":
             browse += ("Inspiration",)
         browse += ("Review queue", "Archive")
-        start = (*(("Intake verification",) if data.get("reviewIntake") else ()), CORNER)
+        start = (*(("Intake verification",) if data.get("reviewIntake") else ()), CORNER,
+                 *((CASA,) if any(p.get("controllerID") == "baldadoon" for p in projects.values()) else ()))
         for label, views in (("START HERE", start), ("BROWSE", browse), ("CREATE", ("Collaborators", "Shot plans", "Collaborator briefs")),
                              ("KEEP & REFER", ("Documents", "Export basket", "Favorites & notes"))):
             st.caption(label)
@@ -1447,7 +1531,7 @@ def main() -> None:
         st.caption("Export your complete review to keep decisions, notes, plans, and favorites between sessions.")
     assets = [a for a in data["assets"] if a.get("project") == project]
     view = st.session_state.studio_view
-    if view == CORNER:
+    if view in (CORNER, CASA):
         render_mission_control(mission_data, review_data)
         return
     if view == "Collaborators":
@@ -1467,6 +1551,8 @@ def main() -> None:
     selected = next((a for a in selection_assets if a["id"] == st.session_state.studio_selected), None)
     if selected:
         render_selected(selected, data.get("reviewIntake"), data)
+    elif view == "Project home":
+        current_module("project_intake_view").render_project_home(data, projects[project], document_download, navigate)
     elif view == "Library":
         render_library(data, project)
     elif view == "Storyboard":
@@ -1481,7 +1567,8 @@ def main() -> None:
             from studio_dependencies import current_module
             current_module("mission_view").render_corner(
                 mission_data, LIBRARY_DIR, open_mission_reference, render_selected, document_download,
-                navigate, lambda: None, review_data=review_data, archived=True)
+                navigate, lambda: None, review_data=review_data, archived=True,
+                controller=current_module("controller_routing").project_controller(data, project))
         render_design_workspace(data, project, view)
     elif view in ("Videos", "Inspiration"):
         render_library(data, project, fixed_category=view.lower())

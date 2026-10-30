@@ -359,33 +359,56 @@ def open_storyboard_review(project, story_id, structure, navigate):
     navigate('Storyboard')
 
 
-def render_corner(data, library_dir: Path, open_reference, render_selected, document_download, navigate, sweep, review_data=None, archived=False):
+def render_corner(data, library_dir: Path, open_reference, render_selected, document_download, navigate, sweep, review_data=None, archived=False, controller="ziggy"):
+    routing = current_module("controller_routing")
+    people = routing.controllers(data)
+    home_label = people[controller].get("homeLabel", people[controller]["name"])
+    owned = {p["id"] for p in data["projects"] if routing.project_controller(data, p["id"]) == controller}
+    raw_tasks = [t for t in mission_tasks(data.get("missionControl", {})) if (t["status"] == "done") == archived]
+    actionable, delegated = routing.controller_tasks(data, raw_tasks, controller)
+    portfolio = owned | {t["project"] for t in actionable if t["project"] != "shared"}
+    project_filter = None
+    if not archived:
+        options = [None, *[p["id"] for p in data["projects"] if p["id"] in portfolio]]
+        project_key = "mission-project:" + controller
+        if st.session_state.get(project_key) not in options:
+            st.session_state[project_key] = None
+        project_filter = st.selectbox("Projects in " + home_label, options,
+            format_func=lambda key: "All owned and assigned work" if key is None else next(p.get("subtitle") or p["name"] for p in data["projects"] if p["id"] == key), key=project_key)
+        st.caption("Human controller: " + people[controller]["name"] + ". Assigned help retains its originating project and decision authority.")
+    else:
+        project_filter = st.session_state.get("studio_project")
+    actionable, delegated = routing.controller_tasks(data, raw_tasks, controller, project_filter)
     reviews = st.session_state.studio_reviews
     by_id = {a["id"]: a for a in data["assets"]}
     review_by_id = {a["id"]: a for a in (review_data or data)["assets"]}
-    plans = [a for aid, a in review_by_id.items() if reviews.get(aid, {}).get("shotPlan") and mission_visible(a, reviews)]
+    plans = [a for aid, a in review_by_id.items() if a.get("project") in owned and (not project_filter or a.get("project") == project_filter)
+             and reviews.get(aid, {}).get("shotPlan") and mission_visible(a, reviews)]
     projects = {p["id"]: p["name"] for p in data["projects"]}
-    if not archived and (selected := review_by_id.get(st.session_state.get("studio_mission_selected"))):
+    def accessible(asset):
+        return asset.get("project") in owned or any(routing.task_contains_asset(t, asset) for t in actionable)
+
+    if not archived and (selected := review_by_id.get(st.session_state.get("studio_mission_selected"))) and accessible(selected):
         if st.session_state.get("studio_mission_questionnaire") == "grok-proof-package":
             st.button("← Back to the return questionnaire", on_click=back_to_questionnaire, key="corner-selected-back")
             st.caption("Ziggy’s Corner › Bounded Hon still return › Optional library image review")
         else:
-            st.button("← Back to Ziggy’s Corner", on_click=close_collection, key="corner-selected-back")
+            st.button("← Back to " + home_label, on_click=close_collection, key="corner-selected-back")
         render_selected(selected)
         return
-    if not archived and st.session_state.get("studio_mission_questionnaire") == "grok-proof-package":
+    if not archived and controller == "ziggy" and st.session_state.get("studio_mission_questionnaire") == "grok-proof-package":
         render_return_review({**data, "assets": list(review_by_id.values())}, library_dir, open_reference, document_download)
         return
     if not archived and (collection := st.session_state.get("studio_mission_collection")):
-        st.button("← Back to Ziggy’s Corner", on_click=close_collection, key="corner-collection-back")
+        st.button("← Back to " + home_label, on_click=close_collection, key="corner-collection-back")
         st.subheader(collection["label"])
         is_plans = collection.get("mode") == "shot_plans"
         if is_plans:
             items = plans
-            st.caption(f"{len(items)} saved shot plans across all projects.")
+            st.caption(f"{len(items)} saved shot plans for this controller's projects.")
         else:
             ids = mission_pending_requests(data, reviews, collection["project"]) if collection.get("mode") == "review_requests" else collection["ids"]
-            items = [by_id[aid] for aid in dict.fromkeys(ids) if aid in by_id and mission_visible(by_id[aid], reviews)]
+            items = [by_id[aid] for aid in dict.fromkeys(ids) if aid in by_id and accessible(by_id[aid]) and mission_visible(by_id[aid], reviews)]
         if not items:
             st.info("No visible shot plans saved." if is_plans else "No unanswered image reviews remain." if collection.get("mode") == "review_requests" else
                     "No visible references in this collection. Recorded removal and archive decisions remain saved.")
@@ -409,8 +432,7 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
         return
 
     control = data.get("missionControl", {})
-    tasks = sorted((returned_task_progress(mission_task_progress(t, data["assets"], reviews), (review_data or data)["assets"]) for t in mission_tasks(control)
-                    if (t["status"] == "done") == archived), key=lambda t: RANK[t["status"]])
+    tasks = sorted((returned_task_progress(mission_task_progress(t, data["assets"], reviews), (review_data or data)["assets"]) for t in actionable), key=lambda t: RANK[t["status"]])
     if archived:
         st.subheader("Completed tasks")
         st.caption("Completed handoffs and their records remain available here.")
@@ -426,15 +448,16 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
     with filter_col:
         families = list(dict.fromkeys(family for task in tasks for family in provider_families(task["provider"])))
         provider_options = ["all", *families, *(["Teamwork"] if any(len(provider_families(task["provider"])) > 1 for task in tasks) else [])]
-        selected_provider = st.session_state.get("mission-provider", "all")
+        provider_key = "mission-provider" if controller == "ziggy" else "mission-provider:" + controller
+        selected_provider = st.session_state.get(provider_key, "all")
         if selected_provider not in provider_options:
             members = provider_families(selected_provider)
             replacement = members[0] if len(members) == 1 else "Teamwork"
-            st.session_state["mission-provider"] = replacement if replacement in provider_options else "all"
+            st.session_state[provider_key] = replacement if replacement in provider_options else "all"
         provider = st.selectbox("Collaborator", provider_options,
-                                format_func=lambda s: "All collaborators" if s == "all" else s, key="mission-provider")
+                                format_func=lambda s: "All collaborators" if s == "all" else s, key=provider_key)
     with search_col:
-        query = st.text_input("Find a task", key="mission-search").casefold().strip()
+        query = st.text_input("Find a task", key="mission-search" if controller == "ziggy" else "mission-search:" + controller).casefold().strip()
     matching = [t for t in tasks if provider_matches(t["provider"], provider) and
                 query in " ".join(str(t.get(k, "")) for k in ("title", "provider", "project", "summary", "nextAction")).casefold()]
     focused = None if archived else st.session_state.get("studio_mission_task_focus")
@@ -442,7 +465,22 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
         matching = [t for t in tasks if t["id"] == focused]
         st.button("← All Corner tasks", key="corner-all-tasks", on_click=close_collection)
 
-    def references(ids, context, history=False, limit=None):
+    def task_reference(asset, task=None):
+        if task:
+            st.session_state.studio_human_task_context = task["id"]
+        open_reference(asset)
+
+    def task_collection(ids, label, task):
+        show_collection(ids, label)
+        st.session_state.studio_human_task_context = task["id"]
+
+    def task_project(task):
+        st.session_state.studio_project = task["project"]
+        project_row = next((p for p in data["projects"] if p["id"] == task["project"]), {})
+        navigate("Project home" if project_row.get("landing") else "Library")
+        st.session_state.studio_human_task_context = task["id"]
+
+    def references(ids, context, history=False, limit=None, task=None):
         items = [(i, by_id[aid]) for i, aid in enumerate(dict.fromkeys(ids))
                  if aid in by_id and (history or mission_visible(by_id[aid], reviews))]
         if limit is not None:
@@ -454,13 +492,21 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
                     if picture:
                         st.image(str(picture), width="stretch")
                     st.button(asset.get("title", asset["id"]), key=f"corner-reference:{context}:{i}",
-                              on_click=open_reference, args=(asset,), width="stretch")
+                              on_click=task_reference, args=(asset, task), width="stretch")
 
     def card_content(task, context):
         label, color = STATES[task["status"]]
         project = projects.get(task["project"], "Across projects")
         with st.expander(f":{color}-badge[{task.get('statusLabel', label)}] **{task['title']}** · {project}", expanded=task["id"] == focused):
             st.caption(task["provider"] + " · " + DIRECTIONS[task["direction"]] + " · " + WORK_KINDS[task["workKind"]])
+            route = routing.task_routing(data, task)
+            names = lambda key: people.get(route[key], {}).get("name", route[key])
+            st.caption("Project owner: " + names("ownerControllerID") + " · Assigned to: " + names("assigneeControllerID") +
+                       " · Decision authority: " + names("decisionAuthorityControllerID") + " · Scope: " + route["decisionScope"].replace("_", " "))
+            if task["project"] in portfolio:
+                st.button("Open originating project", key="mission-project-open:" + context, on_click=task_project, args=(task,))
+            if route["ownerControllerID"] != controller:
+                st.caption("Delegated help from " + people.get(route["ownerControllerID"], {}).get("homeLabel", route["ownerControllerID"]) + ". Assignment does not transfer creative approval.")
             st.write(task["summary"])
             if task["nextAction"]:
                 st.markdown("**Next**")
@@ -490,18 +536,18 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
             if task.get("previewAssetIDs"):
                 if writing_requests:
                     with st.expander('Reference images · optional', expanded=False):
-                        references(task["previewAssetIDs"], context + ":preview")
+                        references(task["previewAssetIDs"], context + ":preview", task=task)
                 else:
                     st.markdown("**Start with these images**")
-                    references(task["previewAssetIDs"], context + ":preview")
+                    references(task["previewAssetIDs"], context + ":preview", task=task)
             if task.get("reviewedPreviewAssetIDs"):
                 with st.expander(f"Recorded review decisions · {len(task['reviewedPreviewAssetIDs'])}", expanded=False):
-                    references(task["reviewedPreviewAssetIDs"], context + ":history", history=True)
+                    references(task["reviewedPreviewAssetIDs"], context + ":history", history=True, task=task)
             for comparison in data.get("sourceComparisons", []):
                 if comparison.get("missionTaskID") == task["id"]:
                     with st.expander("Selected starting image and earlier comparison", expanded=False):
                         st.write(comparison.get("summary", ""))
-                        references([r["assetID"] for r in comparison.get("items", [])], context + ":comparison")
+                        references([r["assetID"] for r in comparison.get("items", [])], context + ":comparison", task=task)
             if task["id"] == "grok-proof-package":
                 render_return_map(task, data, library_dir, open_reference, document_download, context)
                 return
@@ -515,8 +561,8 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
                         else:
                             st.caption(link["label"] + ": package is not included in this snapshot.")
                     elif link.get("assetIDs") is not None:
-                        st.button(link["label"], key="mission-collection:" + key, on_click=show_collection, args=(link["assetIDs"], link["label"]))
-                        references(link["assetIDs"], context + ":linked:" + str(i), limit=8)
+                        st.button(link["label"], key="mission-collection:" + key, on_click=task_collection, args=(link["assetIDs"], link["label"], task))
+                        references(link["assetIDs"], context + ":linked:" + str(i), limit=8, task=task)
                     elif asset := by_id.get(link.get("assetID")):
                         if asset.get("kind") in {"document", "pdf"}:
                             with st.expander(link["label"], expanded=False):
@@ -524,7 +570,7 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
                                     st.text(asset["text"])
                                 document_download(asset, context="mission:" + key)
                         else:
-                            st.button(link["label"], key="mission-asset:" + key, on_click=open_reference, args=(asset,))
+                            st.button(link["label"], key="mission-asset:" + key, on_click=task_reference, args=(asset, task))
                     elif link.get("href"):
                         st.link_button(link["label"], link["href"])
                     else:
@@ -570,15 +616,25 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
                         task_group(planning_work)
         if not matching:
             st.info("No completed tasks match this filter." if archived else "No tasks match this filter.")
+    if delegated:
+        with st.expander("Delegated work · " + str(len(delegated)), expanded=False):
+            st.caption("These are the same originating tasks, actionable in the assignee's Corner. They are not a second decision queue.")
+            for task in delegated:
+                route = routing.task_routing(data, task)
+                st.markdown("**" + task["title"] + "**")
+                st.caption(projects.get(task["project"], task["project"]) + " · Assigned to " + people.get(route["assigneeControllerID"], {}).get("name", route["assigneeControllerID"]) + " · " + STATES[task["status"]][0])
+                st.write(task["nextAction"])
     if archived:
         return
-    project = st.session_state.studio_project
+    project = project_filter or st.session_state.studio_project
+    if project not in owned:
+        project = next((p["id"] for p in data["projects"] if p["id"] in owned), None)
     pending = [aid for aid in mission_pending_requests(data, reviews, project)
                if by_id.get(aid, {}).get('kind') not in {'document', 'pdf'}]
     with st.container(key='mission-image-review'):
         review_label, review_action = st.columns([3, 1])
         with review_label:
-            st.markdown("**Image review · " + projects.get(project, project) + "**")
+            st.markdown("**Image review · " + projects.get(project, project or "Owned projects") + "**")
             st.caption(f"{len(pending)} images await your decision." if pending else "No image reviews waiting for your decision.")
         if pending:
             review_action.button(f"Review images · {len(pending)}", key="mission-review", width="stretch", on_click=navigate,

@@ -586,6 +586,8 @@ def normalize_decision(value: Any, *, partial: bool = False, allow_catalog_varia
             result[field] = value[field]
     for key in REVIEW_METADATA_FIELDS & value.keys():
         result[key] = json.loads(json.dumps(value[key], allow_nan=False))
+    from studio_dependencies import current_module
+    result.update(current_module("controller_routing").normalize_human_attribution(value))
     return result
 
 
@@ -888,13 +890,18 @@ def mission_tasks(value: Any) -> list[dict]:
             continue
         if not isinstance(item.get("provider"), str) or not item["provider"].strip() or item.get("status") not in MISSION_STATUSES:
             continue
-        if item.get("project") not in ("hon", "lisan", "shared"):
+        if not isinstance(item.get("project"), str) or not re.fullmatch(r"[a-z][a-z0-9_:-]*", item["project"]):
             continue
         if not all(isinstance(item.get(key), str) for key in ("title", "summary", "nextAction")):
             continue
         task = {key: item[key] for key in ("id", "provider", "project", "title", "status", "summary", "nextAction")}
-        task["direction"] = item.get("direction") if item.get("direction") in ("inbound", "outbound", "internal") else "internal"
-        task["workKind"] = item.get("workKind") if item.get("workKind") in ("image_new", "image_repair", "video", "planning") else "planning"
+        for key in ("ownerControllerID", "assigneeControllerID", "decisionAuthorityControllerID", "decisionScope"):
+            if isinstance(item.get(key), str) and item[key].strip():
+                task[key] = item[key]
+        direction = {"incoming": "inbound", "outgoing": "outbound"}.get(item.get("direction"), item.get("direction"))
+        task["direction"] = direction if direction in ("inbound", "outbound", "internal") else "internal"
+        work_kind = item.get("workKind") or {"writing_planning": "planning"}.get(item.get("workCategory"))
+        task["workKind"] = work_kind if work_kind in ("image_new", "image_repair", "video", "planning") else "planning"
         task["missing"] = [s for s in item.get("missing", []) if isinstance(s, str)] if isinstance(item.get("missing", []), list) else []
         for key in ("enablers", "deliverables", "previewAssetIDs", "variantAssetIDs"):
             task[key] = [s for s in item.get(key, []) if isinstance(s, str)] if isinstance(item.get(key), list) else []

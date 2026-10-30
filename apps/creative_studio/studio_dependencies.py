@@ -8,7 +8,7 @@ from threading import RLock
 
 APP_DIR = Path(__file__).resolve().parent
 _REGISTRY_SOURCE = Path(__file__).read_bytes()
-_MODULES = {"library_helpers", "mission_view", "design_view", "story_view", "review_intake_view", "source_foundation", "storyboard_takes", "collaborator_review", "collaborator_review_storage"}
+_MODULES = {"library_helpers", "mission_view", "design_view", "story_view", "review_intake_view", "source_foundation", "storyboard_takes", "collaborator_review", "collaborator_review_storage", "controller_routing", "project_intake_view"}
 _LOAD_LOCK = RLock()
 
 
@@ -29,6 +29,8 @@ def current_module(name: str):
         identity += b"\0" + (APP_DIR / "storyboard_takes.py").read_bytes()
     if name in {"library_helpers", "mission_view"}:
         identity += b"\0" + (APP_DIR / "collaborator_review.py").read_bytes()
+    if name in {"library_helpers", "mission_view", "project_intake_view"}:
+        identity += b"\0" + (APP_DIR / "controller_routing.py").read_bytes()
     digest = hashlib.sha256(identity).hexdigest()
     key = "_cfa_studio_" + name + "_" + digest
     with _LOAD_LOCK:

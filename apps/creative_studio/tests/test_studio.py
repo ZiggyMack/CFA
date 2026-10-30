@@ -275,7 +275,7 @@ class StudioAppTest(unittest.TestCase):
         cache.mkdir(exist_ok=True)
         cls.temp = tempfile.TemporaryDirectory(prefix="studio-test-", dir=cache)
         cls.app_dir = Path(cls.temp.name)
-        for name in ("app.py", "library_helpers.py", "mission_view.py", "studio_dependencies.py", "storyboard_takes.py", "collaborator_review.py", "collaborator_review_storage.py"):
+        for name in ("app.py", "library_helpers.py", "mission_view.py", "studio_dependencies.py", "storyboard_takes.py", "collaborator_review.py", "collaborator_review_storage.py", "controller_routing.py", "project_intake_view.py"):
             shutil.copy2(APP_DIR / name, cls.app_dir / name)
         shutil.copytree(APP_DIR / "collaborator_review_storage", cls.app_dir / "collaborator_review_storage")
         library = cls.app_dir / "library"
@@ -360,6 +360,46 @@ class StudioAppTest(unittest.TestCase):
             self.assertEqual(app.session_state.studio_review_provenance["collaboratorReviews"][TASK_ID], record)
             self.assertEqual(app.session_state.studio_reviews["hon-00"]["status"], "needs_fixes")
             self.assertEqual(app.session_state.studio_reviews["hon-01"]["status"], "remove")
+        finally:
+            path.write_bytes(original)
+
+    def test_baldadoon_project_home_casa_and_corner_keep_separate_routes(self):
+        path = self.app_dir / "library" / "catalog.json"
+        original = path.read_bytes()
+        data = json.loads(original)
+        for project in data["projects"]:
+            project["controllerID"] = "ziggy"
+        data["projects"].append({"id": "criminal_mind", "name": "Baldadoon", "subtitle": "The Criminal Mind",
+            "controllerID": "baldadoon", "landing": {"title": "The Criminal Mind", "author": "Baldadoon",
+            "stage": "Preliminary", "sourceBlocks": [{"id": str(i), "heading": "Script heading", "text": "Source text",
+                "lineStart": i, "lineEnd": i+1} for i in range(41)]}})
+        data["missionControl"]["tasks"].append({"id": "bald-scope", "project": "criminal_mind", "provider": "CFA Nova",
+            "status": "needs_input", "title": "Choose adaptation scope", "summary": "Read the screenplay notes",
+            "nextAction": "Choose the adaptation scope", "direction": "incoming", "workCategory": "writing_planning"})
+        try:
+            path.write_text(json.dumps(data), encoding="utf-8")
+            app = self.app(library=False)
+            app.selectbox(key="studio_project").select("criminal_mind").run()
+            self.assertFalse(app.exception)
+            self.assertEqual(app.session_state.studio_view, "Project home")
+            self.assertEqual(app.query_params["view"], ["project_home"])
+            self.assertEqual(len([e for e in app.expander if "Script heading" in e.label]), 41)
+            app.button(key="nav:Casa Baldadoon").click().run()
+            self.assertFalse(app.exception)
+            self.assertTrue(any("Choose adaptation scope" in e.label for e in app.expander))
+            self.assertFalse(any("Correct the coat reference" in e.label for e in app.expander))
+            app.button(key="nav:Ziggy’s Corner").click().run()
+            self.assertFalse(app.exception)
+            self.assertEqual(app.session_state.studio_project, "hon")
+            self.assertFalse(any("Choose adaptation scope" in e.label for e in app.expander))
+            self.assertEqual(app.session_state.studio_reviews["hon-00"]["note"], "Keep this outfit only.")
+            # A fresh native deep link opens the same controller page without a prior selector action.
+            deep = self.AppTest.from_file(str(self.app_dir / "app.py"), default_timeout=15)
+            deep.query_params.update(project="criminal_mind", view="casa_baldadoon")
+            deep.run(timeout=45)
+            self.assertFalse(deep.exception)
+            self.assertEqual(deep.session_state.studio_project, "criminal_mind")
+            self.assertEqual(deep.session_state.studio_view, "Casa Baldadoon")
         finally:
             path.write_bytes(original)
 
@@ -587,6 +627,8 @@ class StudioAppTest(unittest.TestCase):
         self.assertEqual([metric.value for metric in app.metric], ["1", "1", "0"])
         self.assertEqual(app.button(key="mission-shot-plans").label, "Shot plans · 1 →")
         app.selectbox(key="studio_project").select("lisan").run()
+        self.assertEqual(app.session_state.studio_view, "Library")
+        app.button(key="nav:Ziggy’s Corner").click().run()
         self.assertTrue(any("Correct the coat reference" in item.label for item in app.expander))
         app.button(key="mission-asset:fix-look:0").click().run()
         self.assertFalse(app.exception)

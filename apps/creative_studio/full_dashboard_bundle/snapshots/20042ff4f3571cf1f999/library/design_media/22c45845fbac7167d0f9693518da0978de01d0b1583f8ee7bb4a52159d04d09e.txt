@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "package_id": "GROK-HD-20261008",
+  "return_batch_id": null,
+  "created_utc": null,
+  "producer": "Grok",
+  "instructions": "One files[] entry per actual ZIP file except this manifest; keep unknown values null. Compute SHA256 from actual bytes if tools allow. Otherwise set hash_status=not_computed, never fabricate. Add one request_results[] entry for every request, including missing/deferred.",
+  "files": [
+    {
+      "request_id": null,
+      "panel_id": null,
+      "output_id": null,
+      "relative_path": null,
+      "exact_filename": null,
+      "sha256": null,
+      "hash_status": "not_computed",
+      "bytes": null,
+      "width": null,
+      "height": null,
+      "mode": null,
+      "source_asset_id": null,
+      "source_filename": null,
+      "source_sha256": null,
+      "additional_source_ids": [],
+      "kind": null,
+      "kind_allowed": [
+        "corrected_still",
+        "new_scene_candidate",
+        "neutral_character_candidate",
+        "original_source_art",
+        "source_art_export",
+        "derived_crop",
+        "proposed_reconstruction",
+        "recovered_original",
+        "notes"
+      ],
+      "region": null,
+      "character_id": null,
+      "body_side": null,
+      "viewer_side": null,
+      "mirrored": null,
+      "crop_bounds": null,
+      "preserve": [],
+      "change": [],
+      "status": "needs_user_review",
+      "source_lineage_verified": false,
+      "unresolved": [],
+      "prompt": null,
+      "model": null,
+      "seed": null,
+      "parent_output_id": null,
+      "user_approved": false,
+      "tattoo_design_sheet_id": null,
+      "matching_option": null,
+      "artwork_origin": null
+    }
+  ],
+  "request_results": [
+    {
+      "request_id": null,
+      "status": null,
+      "allowed_statuses": [
+        "completed_candidate",
+        "original_recovered",
+        "original_missing",
+        "deferred",
+        "blocked_by_reference_gap",
+        "failed_continuity_check"
+      ],
+      "output_ids": [],
+      "what_changed": [],
+      "what_was_preserved": [],
+      "known_defects": [],
+      "missing_sources": [],
+      "user_approved": false
+    }
+  ],
+  "boss_confirmation": {
+    "slot_id": "BOSS-DISCOVERY-PENDING",
+    "selected_candidate_id": null,
+    "confirmed_by_user": false,
+    "request_id": "GROK-BOSS-DISCOVERY-20261008"
+  },
+  "lyric_alignment": {
+    "caleb_cue_verified": false,
+    "song_timecodes": null
+  },
+  "all_original_inputs_unchanged": null
+}

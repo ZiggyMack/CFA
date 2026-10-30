@@ -125,7 +125,7 @@ def build(source_dir: Path = VISUAL, output: Path = DEFAULT_OUTPUT,
             raise ValueError(f"Original hash mismatch: {source.name}")
         suffix = ".txt" if inert else source.suffix.lower()
         # A component serves files; it never needs executable HTML, JS or Python as media.
-        if suffix not in {".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif", ".svg", ".mp4", ".webm", ".mov", ".mp3", ".wav", ".m4a", ".pdf", ".txt", ".json", ".csv", ".md", ".zip"}:
+        if suffix not in {".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif", ".svg", ".mp4", ".webm", ".mov", ".mp3", ".wav", ".m4a", ".pdf", ".doc", ".txt", ".json", ".csv", ".md", ".zip"}:
             suffix = ".txt"
         relative = f"media/{actual}{suffix}"
         target = snapshot / relative
@@ -150,7 +150,7 @@ def build(source_dir: Path = VISUAL, output: Path = DEFAULT_OUTPUT,
         return relative
 
     for asset in catalog["assets"]:
-        asset["src"] = package(asset["src"], asset.get("sha256"), asset.get("kind") == "document")
+        asset["src"] = package(asset["src"], asset.get("sha256"), asset.get("kind") == "document" and not asset.get('downloadOnly'))
         if asset.get("thumb"):
             asset["thumb"] = package(asset["thumb"])
 
