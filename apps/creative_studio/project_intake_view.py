@@ -3,14 +3,14 @@ import streamlit as st
 from studio_dependencies import current_module
 
 
-def render_project_home(data, project, document_download, navigate):
+def render_project_home(data, project, document_download, navigate, *, inline=False):
     landing = project.get("landing", {})
     if not landing:
         st.info("Open the library to browse this project's material.")
         return
     routing = current_module("controller_routing")
     person = routing.controllers(data)[routing.project_controller(data, project["id"])]
-    st.subheader(landing.get("title") or project.get("subtitle") or project["name"])
+    st.subheader("Project overview" if inline else landing.get("title") or project.get("subtitle") or project["name"])
     st.caption("Original screenplay: " + landing.get("author", person["name"]) + " · Adaptation and visual development: " + landing.get("stage", "Preliminary"))
     st.write(landing.get("description", ""))
     st.caption("Human controller: " + person["name"] + ". Controller routing identifies responsibility; this shared app does not authenticate the selected reviewer.")

@@ -212,6 +212,8 @@ def init_state() -> None:
 def navigate(view: str) -> None:
     if st.session_state.studio_view not in (CORNER, CASA, "Collaborators"):
         st.session_state.studio_return_view = st.session_state.studio_view
+    if view == "Project home" and st.session_state.get("studio_project") == "criminal_mind":
+        view = "Library"
     if view == 'Needs review':
         view = 'Review queue'
         st.session_state['review-queue-view'] = 'Review collections'
@@ -256,7 +258,7 @@ def clear_project_selection() -> None:
     st.session_state.pop("studio_human_task_context", None)
     project = next((p for p in st.session_state.get("studio_controller_data", {}).get("projects", [])
                     if p["id"] == st.session_state.get("studio_project")), {})
-    navigate("Project home" if project.get("landing") else "Library")
+    navigate("Project home" if project.get("landing") and project.get("id") != "criminal_mind" else "Library")
 
 
 def select_asset(asset_id: str, project: str | None = None) -> None:
@@ -1079,7 +1081,14 @@ def render_detail_profiles(data: dict, project: str) -> bool:
 def document_download(asset: dict, context: str = "doc") -> None:
     text = asset.get("text", "")
     source = media_path(LIBRARY_DIR, asset.get("src"))
-    if text:
+    if asset.get("textPreviewOnly") is True:
+        if source:
+            st.download_button("Download complete document", source.read_bytes(),
+                               file_name=asset.get("downloadFilename", asset.get("filename", source.name)),
+                               mime="text/plain", key=f"{context}-download:{asset['id']}")
+        else:
+            st.caption("The complete document is unavailable in this bundle; the text above is only a preview.")
+    elif text:
         st.download_button("Download text", text, file_name=asset.get("downloadFilename", asset.get("filename", "reference.txt")),
                            mime="text/plain", key=f"{context}-download:{asset['id']}")
     elif source:
@@ -1499,6 +1508,8 @@ def main() -> None:
     if st.session_state.get("studio_project") not in projects:
         st.session_state.studio_project = saved_project if saved_project in projects else next(iter(projects))
     current_module("controller_routing").apply_route(st.session_state, st.query_params, data)
+    if st.session_state.studio_project == "criminal_mind" and st.session_state.studio_view == "Project home":
+        st.session_state.studio_view = "Library"
     # Browser-backup events can rerun before the Project widget mounts. Streamlit
     # then removes widget state, so keep the selected project in durable state too.
     st.session_state.studio_project_selection = st.session_state.studio_project
@@ -1510,7 +1521,7 @@ def main() -> None:
         st.session_state.studio_project_selection = project
         st.caption(projects[project].get("subtitle", ""))
         export_review_button("sidebar")
-        browse = (*(("Project home",) if projects[project].get("landing") else ()), "Library", "Working references", "Outfits", "Tattoos & piercings", "Supporting cast", "Storyboard", "Videos", "Comfy swap targets")
+        browse = (*(("Project home",) if projects[project].get("landing") and project != "criminal_mind" else ()), "Library", "Working references", "Outfits", "Tattoos & piercings", "Supporting cast", "Storyboard", "Videos", "Comfy swap targets")
         if project != "hon":
             browse += ("Inspiration",)
         browse += ("Review queue", "Archive")
@@ -1561,6 +1572,9 @@ def main() -> None:
     elif view == "Project home":
         current_module("project_intake_view").render_project_home(data, projects[project], document_download, navigate)
     elif view == "Library":
+        if project == "criminal_mind" and projects[project].get("landing"):
+            current_module("project_intake_view").render_project_home(data, projects[project], document_download, navigate, inline=True)
+            st.divider()
         render_library(data, project)
     elif view == "Storyboard":
         if data.get("storyboardStories"):

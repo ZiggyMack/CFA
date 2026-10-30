@@ -11,6 +11,7 @@ from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from build_design_library import DesignBundle, build_bundle, overlay_plan_clears, sha
+from collaborator_review_fixture import records as collaborator_records, backups as collaborator_backups
 
 
 class DesignBundleTests(unittest.TestCase):
@@ -93,6 +94,14 @@ class DesignBundleTests(unittest.TestCase):
             target.write_bytes(b'broken cache')
         return relative
 
+    def test_collaborator_answers_and_frozen_replies_bypass_path_cleaning(self):
+        self.catalog['collaboratorReviews'] = collaborator_records()
+        self.catalog['collaboratorReviewBackups'] = collaborator_backups()
+        before = deepcopy(self.catalog['collaboratorReviews'])
+        result = self.run_build()
+        self.assertEqual(result['collaboratorReviews'], before)
+        self.assertEqual(result['collaboratorReviewBackups'], collaborator_backups())
+
     def test_reuses_verified_media_by_hash_even_when_id_changed(self):
         relative = self.seed_cache()
         result = self.run_build()
@@ -161,6 +170,33 @@ class DesignBundleTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, 'Writer-only original'):
             self.run_build()
 
+    def test_explicit_large_document_preview_keeps_complete_packaged_source(self):
+        complete = ('A complete screenplay coverage line.\n' * 40000).encode('utf-8')
+        source = self.source.parent / 'coverage.md'
+        source.write_bytes(complete)
+        preview = '165 Preliminary coverage shots. Open the complete source.\n' + str(self.root / 'coverage.md')
+        self.catalog['assets'].extend([
+            {'id': 'preview', 'kind': 'document', 'project': 'hon', 'src': source.name,
+             'sha256': sha(complete), 'filename': source.name, 'text': preview, 'textPreviewOnly': True},
+            {'id': 'ordinary', 'kind': 'document', 'project': 'hon', 'src': source.name,
+             'sha256': sha(complete), 'text': 'Old catalog preview', 'textPreviewOnly': False}])
+        result = self.run_build()
+        short, ordinary = result['assets'][1:]
+        self.assertTrue(short['textPreviewOnly'])
+        self.assertTrue(short['inert'])
+        self.assertLess(len(short['text']), 200)
+        self.assertNotIn(str(self.root), short['text'])
+        self.assertEqual((self.out / short['src']).read_bytes(), complete)
+        self.assertEqual(short['sha256'], sha(complete))
+        self.assertEqual(source.read_bytes(), complete)
+        self.assertEqual(ordinary['text'], complete.decode('utf-8'))
+        self.assertEqual(ordinary['src'], short['src'])
+        outputs = json.loads((self.out / 'design_manifest.json').read_text())['outputs']
+        record = next(row for row in outputs if row['path'] == short['src'])
+        self.assertEqual(record['sha256'], sha(complete))
+        self.assertEqual(record['source_sha256'], sha(complete))
+        self.assertEqual(record['bytes'], len(complete))
+
     def test_unknown_document_link_is_not_copied_from_disk(self):
         unregistered = self.source.parent / 'unregistered.md'
         unregistered.write_text('Not an approved publication source')
@@ -203,6 +239,19 @@ class DesignBundleTests(unittest.TestCase):
             self.run_build(review_export=review, expected_review_sha='0' * 64)
         with self.assertRaisesRegex(RuntimeError, 'Frozen source catalog'):
             self.run_build(expected_source_sha='0' * 64)
+
+    def test_review_bundle_carries_collaborator_records_in_both_overlay_modes(self):
+        reviews = collaborator_records()
+        payload = {'format': 'cfa-visual-review-v1', 'items': [], 'collaboratorReviews': reviews,
+                   'collaboratorReviewBackups': collaborator_backups()}
+        review = self.root / 'review.json'
+        review.write_text(json.dumps(payload), encoding='utf-8')
+        for mode in ['plan_clears', 'latest']:
+            with self.subTest(mode=mode):
+                result = self.run_build(review_export=review, expected_review_sha=sha(review.read_bytes()), review_mode=mode)
+                self.assertEqual(result['collaboratorReviews'], reviews)
+                self.assertEqual(result['collaboratorReviewBackups'], collaborator_backups())
+                self.assertEqual(result['reviewDecisions'], self.catalog['reviewDecisions'])
 
     def test_allowlist_covers_every_asset_path_and_all_output_hashes(self):
         result = self.run_build()
@@ -258,7 +307,7 @@ class DesignBundleTests(unittest.TestCase):
         # Page discovery is process-wide. An earlier real-app test may enable
         # multipage mode, while this small generated fixture has no pages directory.
         with patch.object(PagesManager, 'uses_pages_directory', None):
-            app = AppTest.from_string('import streamlit as st\nst.image(' + repr(str(self.out / mapped['src'])) + ')').run()
+            app = AppTest.from_string('import streamlit as st\nst.image(' + repr(str(self.out / mapped['src'])) + ')').run(timeout=15)
             self.assertFalse(app.exception)
             self.assertEqual(len(app.get('imgs')), 1)
         self.assertIs(PagesManager.uses_pages_directory, inherited_pages_state)

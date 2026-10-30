@@ -28,10 +28,22 @@ class DashboardRouteTest(unittest.TestCase):
         self.config = route_config(self.snapshot)
 
     def test_project_and_casa_direct_links_have_distinct_routes(self):
-        self.assertEqual(query_route({'project': 'criminal_mind'}, self.config), '#criminal_mind/project_home')
+        self.assertEqual(query_route({'project': 'criminal_mind'}, self.config), '#criminal_mind/all')
         self.assertEqual(query_route({'project': 'criminal_mind', 'view': 'casa_baldadoon'}, self.config), '#criminal_mind/casa_baldadoon')
         self.assertEqual(query_route({'project': 'hon', 'view': 'storyboard'}, self.config), '#hon/storyboard')
         self.assertEqual(query_route({'project': 'lisan'}, self.config), '#lisan/all')
+
+    def test_native_library_and_legacy_overview_aliases_normalize_only_at_query_boundary(self):
+        for project in ('hon', 'lisan', 'criminal_mind'):
+            for label in ('Library', 'All files'):
+                self.assertEqual(query_route({'project': project, 'view': label}, self.config), f'#{project}/all')
+                self.assertIsNone(valid_route(f'#{project}/{label}', self.config))
+        self.assertEqual(query_route({'project': 'criminal_mind', 'view': 'project_home'}, self.config), '#criminal_mind/all')
+        self.assertEqual(query_route({'project': 'hon', 'view': 'project_home'}, self.config), '#hon/project_home')
+        self.assertEqual(query_route({'project': 'criminal_mind', 'view': 'Library', 'album': 'source block'}, self.config),
+                         '#criminal_mind/all/source%20block')
+        for label in ('library', 'All Files', 'Library/asset', ['Library']):
+            self.assertIsNone(query_route({'project': 'criminal_mind', 'view': label}, self.config))
 
     def test_unknown_projects_external_urls_and_path_tricks_are_rejected(self):
         for value in ('https://example.com', '#missing/all', '#criminal_mind/missing',
@@ -48,6 +60,15 @@ class DashboardRouteTest(unittest.TestCase):
         self.assertIsNone(route_query_update(value, '#hon/all', self.config))
         self.assertIsNone(route_query_update({'route': '#missing/all', 'requestedRoute': None}, None, self.config))
         self.assertIsNone(route_query_update(None, None, self.config))
+
+    def test_alias_request_uses_canonical_acknowledgement_without_accepting_old_route(self):
+        initial = query_route({'project': 'criminal_mind', 'view': 'Library'}, self.config)
+        self.assertEqual(route_query_update({'route': initial, 'requestedRoute': initial}, initial, self.config),
+                         {'project': 'criminal_mind', 'view': 'all', 'album': None})
+        self.assertIsNone(route_query_update({'route': '#hon/all', 'requestedRoute': '#criminal_mind/project_home'},
+                                            initial, self.config))
+        self.assertIsNone(route_query_update({'route': '#criminal_mind/Library', 'requestedRoute': initial},
+                                            initial, self.config))
 
     def test_full_page_passes_route_and_keeps_native_state_on_rerun(self):
         from streamlit.testing.v1 import AppTest
@@ -79,6 +100,14 @@ class DashboardRouteTest(unittest.TestCase):
             self.assertEqual(app.query_params['project'], ['criminal_mind'])
             self.assertEqual(app.session_state.studio_project, 'hon')
             self.assertEqual(app.session_state.studio_reviews, {'existing': {'status': 'keep'}})
+            for label in ('Library', 'project_home'):
+                app.query_params['view'] = label
+                app.run()
+                self.assertFalse(app.exception)
+                args = json.loads(app.get('component_instance')[0].proto.json_args)
+                self.assertEqual(args['initialRoute'], '#criminal_mind/all')
+                self.assertEqual(app.session_state.studio_project, 'hon')
+                self.assertEqual(app.session_state.studio_reviews, {'existing': {'status': 'keep'}})
 
 
 if __name__ == '__main__':

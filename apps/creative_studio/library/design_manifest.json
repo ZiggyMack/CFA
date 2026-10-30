@@ -5,10 +5,10 @@
     "generatedAtUTC": "2026-10-30T02:09:06.348285+00:00",
     "sourceCatalog": {
       "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
-      "sha256": "a75f2803b3b29a4dc15d5b0056661a28a9233494beb366a14957e6fa22f8fe05"
+      "sha256": "359a30a9716710847aa41c2c9d92b4ca354f0ede3684f8572ac114ffb2eb745c"
     },
     "purpose": "Complete portable local design snapshot; saved reviews, not live synchronization.",
-    "sourceAssetCount": 4664,
+    "sourceAssetCount": 4669,
     "supplementalAssetCount": 12,
     "unavailableLinks": [
       {
@@ -156,20 +156,34 @@
         "existingReviewsChanged": false,
         "existingAssetsChanged": false,
         "acceptanceGranted": false
+      },
+      {
+        "atUTC": "2026-10-30T20:23:53.256638+00:00",
+        "reason": "Integrate 165 Preliminary Criminal Mind coverage shots and fold Baldadoon overview into All files",
+        "assetIDs": [
+          "TCM-PRELIMINARY-SHOT-CARDS-20261030",
+          "TCM-STORYBOARD-STRUCTURE-20261030",
+          "TCM-STORYBOARD-VERIFICATION-20261030",
+          "TCM-GROK-CASTING-BRIEF-20261030",
+          "TCM-GROK-SETS-BRIEF-20261030"
+        ],
+        "existingReviewsChanged": false,
+        "existingAssetsChanged": false,
+        "acceptanceGranted": false
       }
     ]
   },
-  "snapshotSHA256": "6b48f82fca534e62156d7a6ca44285ece983a675e06726d7377b14cd4cf78770",
+  "snapshotSHA256": "dcfe6d580438b1169ce3a682527b57760e9b6a240d532e41e42b08555a3e6cbb",
   "builderSHA256": "dc26983c57cf3aa2772a20a187029670d6839cac2b6276762a1e95f12390994e",
   "sourcesPreserved": true,
   "assetKinds": {
     "image": 4094,
-    "document": 522,
+    "document": 527,
     "pdf": 4,
     "gif": 1,
     "video": 43
   },
-  "outputBytes": 830190838,
+  "outputBytes": 839461872,
   "sources": [
     {
       "path": "docs/notes/cfa-review.json",
@@ -9722,6 +9736,16 @@
       "bytes": 21367
     },
     {
+      "path": "docs/notes/explorable_world/comfy/projects/the_criminal_mind/handoffs/grok_casting_and_sets_20261030/GROK_CASTING_HANDOFF_v001.txt",
+      "sha256": "a55f0ec56d1d31437f22dc234213e1f2681710a5827b0b8f0e434f1fded851ae",
+      "bytes": 25334
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/the_criminal_mind/handoffs/grok_casting_and_sets_20261030/GROK_SETS_HANDOFF_v001.txt",
+      "sha256": "391352e7504209aa398a1e7ae60934e6da145d453b5863dbde43c46392b0b3be",
+      "bytes": 17424
+    },
+    {
       "path": "docs/notes/explorable_world/comfy/projects/the_criminal_mind/source_intake_20261030/FIRST_READ.txt",
       "sha256": "4fcaac613b3b735d12e6bd146f35d77ef1e7e790fdf0e17be5b690580eedb132",
       "bytes": 7039
@@ -9745,6 +9769,21 @@
       "path": "docs/notes/explorable_world/comfy/projects/the_criminal_mind/source_intake_20261030/The Criminal Mind (final).doc",
       "sha256": "5aabf6e669b7c0c402fe9b3cd80bfb2d4f65e661fcd16b2b7bd97ad4467f9b81",
       "bytes": 208896
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/the_criminal_mind/story/preliminary_pass_20261030/TCM_PRELIMINARY_SHOT_CARDS_v001.md",
+      "sha256": "8f79c29dbab12718f25b8a67909af917e576d4398b03f6df6fcef3333bd4cd9b",
+      "bytes": 1029304
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/the_criminal_mind/story/preliminary_pass_20261030/TCM_STORYBOARD_STRUCTURE_v001.json",
+      "sha256": "12b738e8861d2feff5a1237b2e689876f8bf5593999e8170d0b3cb3dbd481484",
+      "bytes": 4715895
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/the_criminal_mind/story/preliminary_pass_20261030/VERIFICATION_v001.json",
+      "sha256": "abeae3f9a0af5186d8ad111a72194d4ae0cac787fad8769ea56a8a9f782b3e1b",
+      "bytes": 1058
     },
     {
       "path": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_VALIDATION_GUIDE.txt",
@@ -24697,8 +24736,8 @@
     },
     {
       "path": "design_catalog.json",
-      "bytes": 35395001,
-      "sha256": "6b48f82fca534e62156d7a6ca44285ece983a675e06726d7377b14cd4cf78770",
+      "bytes": 38877027,
+      "sha256": "dcfe6d580438b1169ce3a682527b57760e9b6a240d532e41e42b08555a3e6cbb",
       "role": "design_catalog",
       "reused": false
     },
@@ -35303,6 +35342,14 @@
       "reused": true
     },
     {
+      "path": "design_media/2c361f5b15f1dcc268f120890672123904a3ec9a61a6c6698739df2dcd68bee7.txt",
+      "sha256": "2c361f5b15f1dcc268f120890672123904a3ec9a61a6c6698739df2dcd68bee7",
+      "bytes": 25333,
+      "source_sha256": "a55f0ec56d1d31437f22dc234213e1f2681710a5827b0b8f0e434f1fded851ae",
+      "role": "inert_text",
+      "reused": false
+    },
+    {
       "path": "design_media/2c3d762262f3be516ea9a9cb1758a9c4e94e92365ef296f95a9a1651dd338afb.jpg",
       "sha256": "2c3d762262f3be516ea9a9cb1758a9c4e94e92365ef296f95a9a1651dd338afb",
       "bytes": 30519,
@@ -44647,6 +44694,14 @@
       "reused": true
     },
     {
+      "path": "design_media/530ecd5157184788e856a7e37b59181bc4b4a86b24791d5404a03fb1a88750ac.txt",
+      "sha256": "530ecd5157184788e856a7e37b59181bc4b4a86b24791d5404a03fb1a88750ac",
+      "bytes": 1057,
+      "source_sha256": "abeae3f9a0af5186d8ad111a72194d4ae0cac787fad8769ea56a8a9f782b3e1b",
+      "role": "inert_text",
+      "reused": false
+    },
+    {
       "path": "design_media/530f5ba220ec1e3c545c126dcf20df2c33c57be6e445882774fce5985abf4b86.jpg",
       "sha256": "530f5ba220ec1e3c545c126dcf20df2c33c57be6e445882774fce5985abf4b86",
       "bytes": 149381,
@@ -46084,6 +46139,14 @@
       "bytes": 37493,
       "source_sha256": "5999d36fdc589915688d0953f4b72793c444364bd028ec2cf2b0531734ecc7d2",
       "role": "supplement_evidence_image",
+      "reused": false
+    },
+    {
+      "path": "design_media/59a25a0a4fa4d0caddf64973b6a7285a69024607925966fcde9862cb2c480028.txt",
+      "sha256": "59a25a0a4fa4d0caddf64973b6a7285a69024607925966fcde9862cb2c480028",
+      "bytes": 1029301,
+      "source_sha256": "8f79c29dbab12718f25b8a67909af917e576d4398b03f6df6fcef3333bd4cd9b",
+      "role": "inert_text",
       "reused": false
     },
     {
@@ -51245,6 +51308,14 @@
       "source_sha256": "d57fcf3931285b38159d8af1453c4f470eeb61d68eccb7abaf97f5f1c91ef82f",
       "role": "image_preview",
       "reused": true
+    },
+    {
+      "path": "design_media/70660318eecfabd2d6acf94c23dc5ee8399b6836c74552188991c4acd4af963e.txt",
+      "sha256": "70660318eecfabd2d6acf94c23dc5ee8399b6836c74552188991c4acd4af963e",
+      "bytes": 17423,
+      "source_sha256": "391352e7504209aa398a1e7ae60934e6da145d453b5863dbde43c46392b0b3be",
+      "role": "inert_text",
+      "reused": false
     },
     {
       "path": "design_media/70754b2bca58d30d2abfb912f3224be8d3fd75c6a9efc181799c6491ec1c9d52.jpg",
@@ -67077,6 +67148,14 @@
       "source_sha256": "a9961b741e189e8e95e3d06a2ccfe8306f9b19f8e1fab2c393e5d6619ec9fbe9",
       "role": "thumbnail",
       "reused": true
+    },
+    {
+      "path": "design_media/b4d58a8429c9041154261c38669646cd36834de42a94bf80013240239ec4be70.txt",
+      "sha256": "b4d58a8429c9041154261c38669646cd36834de42a94bf80013240239ec4be70",
+      "bytes": 4715894,
+      "source_sha256": "12b738e8861d2feff5a1237b2e689876f8bf5593999e8170d0b3cb3dbd481484",
+      "role": "inert_text",
+      "reused": false
     },
     {
       "path": "design_media/b4e5a182b445bbc2c77154d05dbe15136a2127944f0b33ef86b616968d078e6f.png",
@@ -102144,6 +102223,7 @@
     "design_media/2c00118891846595111a038ece6f9312f5039ee7e5b7f7d4f4fcb1800bffdec4.jpg",
     "design_media/2c0ff93ef10ae37c3a606bfc2e96840e90c1cc8875b0ac341754607730d98e0b.jpg",
     "design_media/2c289759b0b7230f91cb26ad575e4940a1e84ecda7d5df98357094069d02705c.jpg",
+    "design_media/2c361f5b15f1dcc268f120890672123904a3ec9a61a6c6698739df2dcd68bee7.txt",
     "design_media/2c3d762262f3be516ea9a9cb1758a9c4e94e92365ef296f95a9a1651dd338afb.jpg",
     "design_media/2c6bbcfeeed426caf6f04711422d48fa1f695c0da1525c5c927826ffeb1d6e40.txt",
     "design_media/2c6f99abaff65d8803d7df444e4da2fbcfa37ea41b8a8be2aa13120f0b321db1.jpg",
@@ -103312,6 +103392,7 @@
     "design_media/52d82ada75cf148804f6f9903f1f04507e37482d824638d9d91b94313c7c962a.jpg",
     "design_media/52dcdcd065406653edaaf76b33a6949c887f2f6b826f009e22484748e2884134.jpg",
     "design_media/52e85183406bc278a554234fce291700251ef89740600087766b8a4553840db6.jpg",
+    "design_media/530ecd5157184788e856a7e37b59181bc4b4a86b24791d5404a03fb1a88750ac.txt",
     "design_media/530f5ba220ec1e3c545c126dcf20df2c33c57be6e445882774fce5985abf4b86.jpg",
     "design_media/53101dca4af390258255fc352342cf395ed7fd9cae7c83b80392d319c23e2a4a.jpg",
     "design_media/5317025c1c4624b9081261fcd91f125221cba65d40680ea3da0a1fe8eedcb80f.jpg",
@@ -103492,6 +103573,7 @@
     "design_media/596410912e6ae109301752ecd1abd2be8704a9cb5e0cb6a95e66c8dac27b23f1.jpg",
     "design_media/5996d9965f45baf384322a0a49873185e5f398890789bea5c3c715704b4d234c.jpg",
     "design_media/5999d36fdc589915688d0953f4b72793c444364bd028ec2cf2b0531734ecc7d2.png",
+    "design_media/59a25a0a4fa4d0caddf64973b6a7285a69024607925966fcde9862cb2c480028.txt",
     "design_media/59a42c231c7579d34514c6c6e10f4f84391c442f32679e67e0a84dcd3420383d.jpg",
     "design_media/59a494d49754aaab6b4a28b3364189ae4770b39284a239bbb439f32ff02e1b85.jpg",
     "design_media/59a7cb65ab0a6f582a9efdc73cad5807dc9dd75b366b81ab3ea9954cb173edd3.jpg",
@@ -104137,6 +104219,7 @@
     "design_media/70375471f9e62366dcd338540e236fa8fa3941f406a79a84175b1ee65d718edd.jpg",
     "design_media/704cbf094b43c43115d03c5121872b00c7c1bc906157586bd7ac5b21b81aa128.jpg",
     "design_media/70593d2c071ef982b7c28afbecd1633252cf6c8f90c981abaf6d14d80ace730c.jpg",
+    "design_media/70660318eecfabd2d6acf94c23dc5ee8399b6836c74552188991c4acd4af963e.txt",
     "design_media/70754b2bca58d30d2abfb912f3224be8d3fd75c6a9efc181799c6491ec1c9d52.jpg",
     "design_media/707f558f1633446fd45cb0fa5ec0fcbeef1d5d993eb3a57d95cc99ab48056428.jpg",
     "design_media/7080b4d8b0147dc51f47c26dc927eb23ddf1b6a6713f486494b4a4cb1c39f2f0.jpg",
@@ -106116,6 +106199,7 @@
     "design_media/b4bb84b36f105770a34b97d31ec07a319829e99c304a35221cbcf711243bd3bf.jpg",
     "design_media/b4c358e61e77c8d11371597e7831deeb2336d316b22c2d5331242451f0d5aaab.jpg",
     "design_media/b4c72eadf36f30c5033475c55807181a8753fc00745c0a4a72dda86b1db8ab90.jpg",
+    "design_media/b4d58a8429c9041154261c38669646cd36834de42a94bf80013240239ec4be70.txt",
     "design_media/b4e5a182b445bbc2c77154d05dbe15136a2127944f0b33ef86b616968d078e6f.png",
     "design_media/b4ec234edba537da876147d3ff246f6a8a1a3a352769180168b71a01457eb3f9.jpg",
     "design_media/b4f2f98f149d1813587f56e02e1e26d1d0f828b48f9f213c7e05107ce19aa4f8.jpg",

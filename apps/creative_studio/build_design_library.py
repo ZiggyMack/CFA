@@ -238,7 +238,17 @@ class DesignBundle(MissionBundle):
                                       'previewStatus': 'Unchanged local placement diagram; scope and reviews preserved.'})
             self.packaged_assets[asset_id] = item
             return item
-        return super().package_asset(asset_id)
+        item = super().package_asset(asset_id)
+        if (item and item.get('src') and asset.get('kind') == 'document'
+                and asset.get('textPreviewOnly') is True):
+            # The complete inert document is still packaged above. Large authored
+            # packets may provide a compact reading preview without replacing it.
+            preview = asset.get('text', '')
+            if not isinstance(preview, str):
+                raise ValueError('Document preview must be text')
+            item['text'] = clean_text(preview, self.root)
+            item['textPreviewOnly'] = True
+        return item
 
     def mission_supplement(self, task_id, link, source_path):
         """Reuse only an existing Mission publication, not an unregistered local document."""

@@ -87,6 +87,9 @@ def render_structure(data, story, project, select_asset, *, reviews=None, scene_
         status = value.get('status', 'unknown')
         return status if status in labels else 'unknown'
     assets = {a['id']:a for a in data['assets']}
+    routing = current_module('controller_routing')
+    controller = routing.project_controller(data, story.get('project') or project)
+    acceptance_owner = routing.controllers(data).get(controller, {}).get('name', controller)
     def evidence(rows, key):
         for i, row in enumerate(rows):
             asset = assets.get(row.get('assetID'))
@@ -102,7 +105,9 @@ def render_structure(data, story, project, select_asset, *, reviews=None, scene_
                 st.caption(definition['hint'])
                 st.text(value.get('text') or ('No content entered.' if demo else 'No field-specific content recorded in this source.'))
                 if value.get('note'): st.info(value['note'])
-                st.caption(f"{definition.get('owner','Writer / CFA Nova')} · {definition.get('phase','handoff preparation')}")
+                owner = value.get('owner') or (acceptance_owner if definition['key'] == 'acceptance'
+                                              else definition.get('owner', 'Writer / CFA Nova'))
+                st.caption(f"{owner} · {definition.get('phase','handoff preparation')}")
                 if not demo:
                     if not value.get('text'):
                         st.caption('Planning context · no field-specific material recorded')
@@ -185,7 +190,10 @@ def render_structure(data, story, project, select_asset, *, reviews=None, scene_
                          for state in foundation_helper.LABELS}
     st.subheader('Story plan & coverage')
     st.caption('Planned shots connect the song sections, scene writing and original panels. '
-               'Written coverage does not mean every shot has an image or an aligned song cue.')
+               'Written coverage does not mean every shot has an image or an aligned song cue.'
+               if story.get('kind') == 'song' else
+               'Planned shots connect source writing, scene direction and linked references. '
+               'Written coverage does not mean every shot has an image or accepted timing.')
     evidence([record['source']] if record.get('source') else [], f'structure-map:{project}:{story["id"]}')
     st.caption(f"{len(shots)} planned shots · {len(record.get('sections',[]))} sequences · may contain gaps")
     st.info('Writing completeness is separate from review, acceptance and execution. Required inputs depend on the phase and selected route.')

@@ -80,7 +80,7 @@ class HumanRoutingTest(unittest.TestCase):
     def test_deep_links_refresh_and_controller_switch_clear_context(self):
         state = {"studio_mission_questionnaire": "grok-proof-package", "studio_human_task_context": "old"}
         apply_route(state, {"project": "criminal_mind", "view": "project_home"}, DATA)
-        self.assertEqual((state["studio_project"], state["studio_view"]), ("criminal_mind", "Project home"))
+        self.assertEqual((state["studio_project"], state["studio_view"]), ("criminal_mind", "Library"))
         self.assertNotIn("studio_human_task_context", state)
         apply_route(state, {"project": "criminal_mind", "view": "casa_baldadoon"}, DATA)
         self.assertEqual(state["studio_view"], "Casa Baldadoon")
@@ -117,6 +117,38 @@ class HumanRoutingTest(unittest.TestCase):
 
 
 class ControllerAppTest(unittest.TestCase):
+    def test_no_media_story_waits_for_registered_coverage_then_exposes_existing_views(self):
+        from streamlit.testing.v1 import AppTest
+        data = {"assets": [], "albums": [], "storyboardStories": [], "storyboardSequences": [],
+            "storyboardStructure": {"fields": [{"key": "purpose", "section": "A", "label": "Purpose", "hint": "Story context"},
+                {"key": "acceptance", "section": "11", "label": "Acceptance", "hint": "Exact result", "owner": "Ziggy", "phase": "review"}],
+                "kitchenFields": [], "stories": [{"storyID": "criminal_mind:fixture", "shots": [], "sections": []}]}}
+        source = f'''import sys
+from pathlib import Path
+sys.path.insert(0, {str(APP)!r})
+import streamlit as st
+from story_view import render_stories
+data = {data!r}
+if st.checkbox("Register synthetic source coverage", key="coverage"):
+    data["storyboardStories"] = [{{"id": "criminal_mind:fixture", "project": "criminal_mind", "title": "Synthetic screenplay", "kind": "sequence", "sequenceID": "fixture"}}]
+render_stories(data, "criminal_mind", Path({str(APP)!r}), lambda *a: None, lambda *a: None, lambda *a, **kw: None, reviews={{}})
+'''
+        app = AppTest.from_string(source.encode("ascii", "backslashreplace").decode()).run()
+        self.assertFalse(app.exception)
+        self.assertTrue(any("No stories are registered" in row.value for row in app.info))
+        app.checkbox(key="coverage").check().run()
+        self.assertFalse(app.exception)
+        self.assertEqual(app.radio(key="story-view:criminal_mind").options, ["Panels & writings", "Structure & gaps"])
+        app.radio(key="story-view:criminal_mind").set_value("Structure & gaps").run()
+        self.assertFalse(app.exception)
+        self.assertTrue(any("No canonical shot structure" in row.value for row in app.info))
+        self.assertFalse(any("song sections" in row.value for row in app.caption))
+        app.radio(key="structure-mode:criminal_mind").set_value("Blank storyboard / shot template").run()
+        self.assertFalse(app.exception)
+        self.assertTrue(any("Purpose" in row.label and "Empty template" in row.label for row in app.expander))
+        self.assertTrue(any("No actual story, shot, review" in row.value for row in app.info))
+        self.assertTrue(any("Baldadoon · review" == row.value for row in app.caption))
+
     def test_casa_actionable_delegated_and_corner_are_distinct(self):
         from streamlit.testing.v1 import AppTest
         data = {**DATA, "assets": [], "missionControl": {"tasks": [TASK,

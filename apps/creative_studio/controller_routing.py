@@ -110,14 +110,16 @@ def apply_route(state, params, data):
         return
     state["studio_route_seen"] = signature
     ids = {p["id"] for p in data.get("projects", [])}
-    views = {"project_home": "Project home", "casa_baldadoon": "Casa Baldadoon", "mission_control": "Ziggy’s Corner"}
+    views = {"project_home": "Library" if project == "criminal_mind" else "Project home",
+             "casa_baldadoon": "Casa Baldadoon", "mission_control": "Ziggy’s Corner"}
     ordinary = {"Library", "Working references", "Outfits", "Tattoos & piercings", "Supporting cast", "Storyboard",
                 "Videos", "Comfy swap targets", "Archive", "Review queue", "Documents", "Shot plans", "Favorites & notes",
                 "Export basket", "Intake verification", "Collaborators", "Collaborator briefs", "Inspiration"}
     if project in ids:
         state["studio_project"] = project
         row = next(p for p in data["projects"] if p["id"] == project)
-        state["studio_view"] = views.get(view, view if view in ordinary else ("Project home" if row.get("landing") else "Library"))
+        state["studio_view"] = views.get(view, view if view in ordinary else (
+            "Project home" if row.get("landing") and project != "criminal_mind" else "Library"))
         for key in ("studio_selected", "studio_mission_selected", "studio_mission_collection",
                     "studio_mission_questionnaire", "studio_mission_task_focus", "studio_human_task_context"):
             state.pop(key, None)

@@ -37,7 +37,13 @@ def query_route(query, config: dict) -> str | None:
     project = query.get('project')
     if project not in config['projects']:
         return None
-    view = query.get('view') or ('project_home' if project == 'criminal_mind' else 'all')
+    view = query.get('view') or 'all'
+    if not isinstance(view, str):
+        return None
+    # Native navigation uses display labels; the iframe uses canonical keys.
+    # Baldadoon's earlier overview now lives inside All files.
+    if view in {'Library', 'All files'} or (project == 'criminal_mind' and view == 'project_home'):
+        view = 'all'
     parts = [project, view]
     if query.get('album'):
         parts.append(query['album'])

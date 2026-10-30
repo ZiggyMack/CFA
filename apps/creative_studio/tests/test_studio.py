@@ -363,7 +363,7 @@ class StudioAppTest(unittest.TestCase):
         finally:
             path.write_bytes(original)
 
-    def test_baldadoon_project_home_casa_and_corner_keep_separate_routes(self):
+    def test_baldadoon_library_overview_casa_and_corner_keep_separate_routes(self):
         path = self.app_dir / "library" / "catalog.json"
         original = path.read_bytes()
         data = json.loads(original)
@@ -381,8 +381,10 @@ class StudioAppTest(unittest.TestCase):
             app = self.app(library=False)
             app.selectbox(key="studio_project").select("criminal_mind").run()
             self.assertFalse(app.exception)
-            self.assertEqual(app.session_state.studio_view, "Project home")
-            self.assertEqual(app.query_params["view"], ["project_home"])
+            self.assertEqual(app.session_state.studio_view, "Library")
+            self.assertEqual(app.query_params["view"], ["Library"])
+            self.assertFalse(any(button.key == "nav:Project home" for button in app.button))
+            self.assertTrue(any(heading.value == "Project overview" for heading in app.subheader))
             self.assertEqual(len([e for e in app.expander if "Script heading" in e.label]), 41)
             app.button(key="nav:Casa Baldadoon").click().run()
             self.assertFalse(app.exception)
@@ -406,6 +408,8 @@ class StudioAppTest(unittest.TestCase):
             self.assertFalse(app.exception)
             self.assertEqual(app.session_state.studio_project, "criminal_mind")
             self.assertEqual(app.selectbox(key="studio_project").value, "criminal_mind")
+            self.assertEqual(app.session_state.studio_view, "Library")
+            self.assertEqual(len([e for e in app.expander if "Script heading" in e.label]), 41)
         finally:
             path.write_bytes(original)
 
