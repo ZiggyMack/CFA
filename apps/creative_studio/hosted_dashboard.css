@@ -1,4 +1,7 @@
 /* Hosting adjustments only. library.css is copied byte for byte from local. */
+/* Streamlit sets scrolling="no" on the iframe. Own scrolling inside it. */
+html[data-hosted-mirror],html[data-hosted-mirror] body{height:100%;min-height:0;overflow:hidden}
+html[data-hosted-mirror] #app{height:100%;min-height:0;overflow:auto;overscroll-behavior-y:contain;scrollbar-gutter:stable;-webkit-overflow-scrolling:touch}
 html[data-hosted-mirror] .hosted-storage-note{font-size:11px;color:#aac0d2;line-height:1.5}
 html[data-hosted-mirror] .nav [data-view="intake"] .count{white-space:nowrap;flex-shrink:0}
 @media(max-width:700px){

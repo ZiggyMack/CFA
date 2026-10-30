@@ -26,7 +26,7 @@ class PortableDashboardTest(unittest.TestCase):
         self.source, self.design, self.output = [self.root / x for x in ('visual', 'library', 'bundle')]
         self.source.mkdir()
         self.design.mkdir()
-        for name in ('library.js', 'library.css'):
+        for name in ('library.js', 'library.css', 'source_foundation.js'):
             (self.source / name).write_text('/* exact current local UI */', encoding='utf-8')
         (self.source / 'catalog.js').write_bytes(b'window.REVIEW_CATALOG={"current":true};')
         self.source_sha = 'a' * 64

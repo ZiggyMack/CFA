@@ -1,0 +1,22 @@
+RECEIPT: CFA-SUPP-WINNERS r003 (media/reports/lineage addendum)
+Folder: CFA-SUPP-WINNERS-20261021_r003. This is NOT the frozen CFA-META-20261021 r002.
+Built: 2026-10-21 ET by Grok Bot (Chief of Staff), at Nova's (site index) request.
+Parents:
+  CFA-SUPP-WINNERS r002: ..\CFA-SUPP-WINNERS-20261021_r002, RECEIPT_WINNERS_r002.txt sha256 e815a2e9b62b92f2648c93294412ea73ef3263e4f45f714725c32ee88362efab, WINNERS_list.csv sha256 80d36b230ada1b7f6f496c8921208ef4b10c870ba1418ffbedb18593ac6d639a. Frozen; verified and linked by Nova at 13:07 ET.
+  CFA-SUPP-WINNERS r001: RECEIPT_WINNERS_r001.txt sha256 2a7d78cb17564f4866e8dd21ea2799648a59540fa6578cdc8556c5187e020c43
+  CFA-META-20261021 r002: START_HERE_r002.md sha256 5f570d54b6f61467bc049146383576917f9dbe86f2fe3ea59fe91df6104d02a1; START_HERE_r002.tsv sha256 1f30ae11b39232ae7feed0be8b2e4fb690c15ee3ad9dd40390ad84acc90a70e5
+This folder only adds new files. No parent file was edited.
+
+Contents
+  media/: 41 full-resolution winner images, copied byte-for-byte (each sha256 equals the winner sha in WINNERS_list_r002_carryover.csv): the 28 V-validated chest frames and the 13 HD-MOUTH v004 picks.
+  v_reports/: 220 files, copied byte-for-byte from /workspace/v1_refinv/returns/. They are the scoped V return TSVs for these winners (with .sha256 sidecars) and the crops each return lists for that frame. Batch returns are whole files, so they also carry other frames' rows; only the winning frame's crops are included. V4_FREEZE_MANIFEST is included as a cross-reference. No PRIVATE_MAP, v1_calib, v1_push, calibration or answer-key material is included. The per-winner mapping is in WINNERS_v_reports.csv.
+  WINNERS_lineage.csv: 210 rows. 46 ROOT rows give the original family root (image id and sha256); 164 rows give the other versions. Statuses: {'FIX': 85, 'SUPERSEDED': 74, 'LATER SAVE, not the winner': 2, 'ROUND-CAP': 3}.
+    How the status was set: the first FIX/ROUND-CAP/FAIL/SUPERSEDED token on the maker-manifest line that carries that version's sha, falling back to the V return line. "FIX (logged as FAIL)" keeps the original FAIL token. Rows with no token are SUPERSEDED (inferred), and their source column says so. "LATER SAVE, not the winner" marks saves after the winning version.
+  WINNERS_index_full.html: the r002 cards word for word (labels, scope, goldrefs with the INFERRED markings unchanged, advisories), plus links to the full-resolution image and V reports and the lineage on each card.
+  WINNERS_list_r002_carryover.csv: byte-identical copy of r002's WINNERS_list.csv.
+  thumbs/ and THUMBS_SHA256SUMS.txt: byte-identical copies from r002.
+  SHA256SUMS.txt: sha256 of every file in this folder except itself.
+Lineage not located: ZIGGY_STENCIL twin-tower sheet (stencil a906752d, panel 1) (no root), HD-CHAIN-A01 staple neck chain (no root), HD-CHAIN-A04 staple neck chain (no root), HD-CHAIN-A06 staple neck chain (no root), HD-CHAIN-B05 staple neck chain (no root), Hip blaster on character-LEFT hip (REV-HD-004 saloon proof) (no root).
+Counts: 320 files including this receipt and SHA256SUMS.txt; 26.6 MB excluding those two.
+
+Note on r002: before the r002 freeze was relayed, an earlier build of this same addendum (266 files, 25,432,192 bytes; created 13:11:58 to 13:12:10 ET) was written into the CFA-SUPP-WINNERS-20261021_r002 folder. Those files were media/ (41), v_reports/ (220), WINNERS_lineage.csv, WINNERS_v_reports.csv, WINNERS_index_full.html, RECEIPT_WINNERS_r002_addendum_A.txt and SHA256SUMS.txt. They have NOT been deleted. The 56 files Nova verified there (receipt e815a2e9, CSV 80d36b23, index, thumbs) are byte-unchanged. This r003 folder is the canonical home of this addendum.

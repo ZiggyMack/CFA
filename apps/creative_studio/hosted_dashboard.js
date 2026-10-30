@@ -1,6 +1,13 @@
 /* Hosted-only presentation. The shared local dashboard owns review records. */
 (() => {
   'use strict';
+  const scrollArea = document.getElementById('app');
+  scrollArea.tabIndex = 0;
+  scrollArea.setAttribute('role', 'region');
+  scrollArea.setAttribute('aria-label', 'Visual library scroll area');
+  // The hosted container replaces document scrolling. Filters, expanding shots
+  // and Streamlit resize messages preserve the reader's place.
+  window.addEventListener('hashchange', () => scrollArea.scrollTo({top:0, left:0, behavior:'instant'}));
   const base = new URL('.', document.currentScript.src);
   const available = new Set(window.REVIEW_CATALOG?.hostedMirror?.availablePaths || []);
   const replacements = new Map([
