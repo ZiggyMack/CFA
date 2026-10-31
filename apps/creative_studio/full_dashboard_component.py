@@ -81,11 +81,11 @@ def route_query_update(value, initial_route: str | None, config: dict,
 
 
 def render_dashboard(snapshot: Path, height: int = 850, initial_route: str | None = None,
-                     request_id: int | None = None):
+                     request_id: int | None = None, report_navigation: bool = False):
     # Stable registration name and browser origin preserve localStorage reviews
     # when a new content-addressed snapshot replaces the previous deployment.
     component = declare_component("cfa_full_visual_library", path=str(snapshot))
     config = route_config(snapshot)
     return component(height=height, initialRoute=valid_route(initial_route, config),
-                     requestID=request_id, routeConfig=config,
+                     requestID=request_id, reportNavigation=report_navigation, routeConfig=config,
                      key="cfa-full-visual-library", default=None)

@@ -144,7 +144,7 @@ class DashboardRouteTest(unittest.TestCase):
                 self.assertEqual(app.session_state.studio_project, 'hon')
                 self.assertEqual(app.session_state.studio_reviews, {'existing': {'status': 'keep'}})
 
-    def test_full_page_acknowledges_clicks_without_bounce_or_parameter_loss(self):
+    def test_full_page_keeps_clicks_local_without_outer_query_writes(self):
         from streamlit.testing.v1 import AppTest
         from streamlit.runtime.pages_manager import PagesManager
         self.page_fixture()
@@ -158,16 +158,17 @@ class DashboardRouteTest(unittest.TestCase):
             self.assertFalse(app.exception)
             self.assertEqual(render.call_args.kwargs['initial_route'], '#hon/all')
             self.assertEqual(render.call_args.kwargs['request_id'], 1)
-            # Simulate the reports from successive project and Casa clicks.
+            self.assertFalse(render.call_args.kwargs['report_navigation'])
+            # Ignore even a stale component report from the previous deployment.
+            # Updating the query can remount Community Cloud's app frame.
             for route in ('#criminal_mind/all', '#criminal_mind/casa_baldadoon', '#hon/all'):
                 render.return_value = {'route': route, 'requestedRoute': '#hon/all', 'requestID': 1}
                 app.run()
                 self.assertFalse(app.exception)
-                project, view = route[1:].split('/')
-                self.assertEqual(app.query_params['project'], [project])
-                self.assertEqual(app.query_params['view'], [view])
+                self.assertNotIn('project', app.query_params)
+                self.assertNotIn('view', app.query_params)
                 self.assertEqual(app.query_params['trace'], ['one', 'two'])
-                app.run()  # The URL reflection causes an ordinary rerun.
+                app.run()  # Unrelated Streamlit reruns must not change the command.
                 self.assertFalse(app.exception)
                 self.assertEqual(render.call_args.kwargs['initial_route'], '#hon/all')
                 self.assertEqual(render.call_args.kwargs['request_id'], 1)

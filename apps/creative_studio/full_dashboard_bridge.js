@@ -4,7 +4,7 @@
     try { return new URL(document.referrer).origin; } catch { return location.origin; }
   })();
   const send = (type, extra = {}) => window.parent.postMessage({isStreamlitMessage: true, type, ...extra}, parentOrigin);
-  let routeConfig = null, requestedRoute = null, requestID = null, lastRequest, lastReported = '';
+  let routeConfig = null, requestedRoute = null, requestID = null, reportNavigation = false, lastRequest, lastReported = '';
   const validRoute = value => {
     if (!routeConfig || typeof value !== 'string' || !value.startsWith('#') || value.length > 700) return null;
     let parts;
@@ -14,6 +14,7 @@
     return '#' + parts.map(encodeURIComponent).join('/');
   };
   const reportRoute = () => {
+    if (!reportNavigation) return;
     const route = validRoute(location.hash);
     if (!route) return;
     const value = {route, requestedRoute, requestID};
@@ -32,6 +33,7 @@
     routeConfig = event.data.args?.routeConfig || null;
     requestedRoute = validRoute(event.data.args?.initialRoute);
     requestID = event.data.args?.requestID ?? null;
+    reportNavigation = event.data.args?.reportNavigation === true;
     // Apply each outer navigation request once. Ordinary rerenders must not
     // reset a route the reader has just chosen inside the library.
     const request = JSON.stringify([requestID, requestedRoute]);

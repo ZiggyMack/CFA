@@ -1,0 +1,22 @@
+- C23-hold-hatch-001.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | Leia prelim ref, not locked | preserve: round hatch screen-right, nets, haze
+- C23-hold-hatch-002.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | none | preserve: ducking through hatch, junk hold
+- C23-hold-hatch-003.jpg | prelim_likeness=Unrated prelim_scene=4 lane=prime scope=scene stage=preliminary | LUnrated S4 | hatch is floor hatch, not wall at screen-right | preserve: smuggling compartments
+- C23-hold-hatch-004.jpg | prelim_likeness=3 prelim_scene=5 lane=prime scope=scene stage=preliminary | L3 S5 | face small/turned; reads like ship ramp | preserve: volumetric beam, nets
+- C23-hold-hatch-005.jpg | prelim_likeness=Unrated prelim_scene=4 lane=prime scope=detail stage=preliminary | LUnrated S4 | vault-door look, more bank than ship | preserve: steam, wheel, sleeve
+- C23-hold-hatch-006.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | none | preserve: sliding hatch screen-right, mid-stride
+- C23-hold-hatch-007.jpg | prelim_likeness=4 prelim_scene=4 lane=prime scope=identity stage=preliminary | L4 S4 | reads as porthole not hatch | preserve: framed face, condensation
+- C23-hold-hatch-008.jpg | prelim_likeness=3 prelim_scene=5 lane=prime scope=scene stage=preliminary | L3 S5 | Leia tiny silhouette | preserve: chains, deep hold, backlight
+- C23-hold-hatch-009.jpg | prelim_likeness=2 prelim_scene=5 lane=prime scope=complete_look stage=preliminary | L2 S5 | eye/know placed right but extra 'omw' word on cheek; neck blaster on image-LEFT; lower lip hoops ok | preserve: two-shot staging, Leia at hatch. CONTROVERSIAL | RESCORED -1: face reads younger and clean-shaven vs ref lf_full (ref has stubble, nostril hoops)
+- C23-hold-hatch-010.jpg | prelim_likeness=Unrated prelim_scene=3 lane=prime scope=scene stage=preliminary | LUnrated S3 | very dark, hatch centered-right, generic | preserve: pistons
+- C23-hold-hatch-011.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | none | preserve: threshold step, swinging lamp, engine parts
+- C23-hold-hatch-012.jpg | prelim_likeness=3 prelim_scene=5 lane=prime scope=scene stage=preliminary | L3 S5 | face drifts from ref | preserve: crate foreground, light shaft
+- C23-hold-hatch-013.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | Leia face drift slight | preserve: Chewy + Leia staging, hatch right
+- C23-hold-hatch-014.jpg | prelim_likeness=3 prelim_scene=4 lane=prime scope=scene stage=preliminary | L3 S4 | hold reads warehouse, bland | preserve: top-down shadow
+- C23-hold-hatch-015.jpg | prelim_likeness=5 prelim_scene=5 lane=prime scope=identity stage=preliminary | L5 S5 | none | preserve: chest-up, lever hand, composure
+- C23-hold-hatch-016.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | none major | preserve: Leia enters hatch screen-RIGHT, nets, floor hatch
+- C23-hold-hatch-017.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | wooden crates read terrestrial | preserve: ducking through round hatch screen-RIGHT, steam
+- C23-hold-hatch-018.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: open smuggling hatch glow, side hatch screen-right
+- C23-hold-hatch-019.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: coat hem + boot over sill insert
+- C23-hold-hatch-020.jpg | prelim_likeness=5 prelim_scene=5 lane=prime scope=scene stage=preliminary | L5 S5 | none | preserve: Chewy on-model hauling crate, hatch light screen-right
+- C23-hold-hatch-021.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | eyebrow not raised | preserve: suspicious look at floor hatch, screen-RIGHT door
+- C23-hold-hatch-022.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: top-down smuggling compartment, lamp

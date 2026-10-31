@@ -13,8 +13,8 @@ const context = {window, location, document:{referrer:'https://studio.example/Fu
 vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../full_dashboard_bridge.js'), 'utf8'), context);
 const emit = (type, event={}) => (listeners.get(type) || []).forEach(fn => fn(event));
 const config = {projects:['hon', 'lisan', 'criminal_mind'], views:['all', 'intake', 'project_home', 'casa_baldadoon', 'documents']};
-const render = (initialRoute, extra={}, requestID=null) => emit('message', {source:parent, origin:'https://studio.example',
-  data:{type:'streamlit:render', args:{initialRoute, requestID, routeConfig:config, height:700}}, ...extra});
+const render = (initialRoute, extra={}, requestID=null, reportNavigation=true) => emit('message', {source:parent, origin:'https://studio.example',
+  data:{type:'streamlit:render', args:{initialRoute, requestID, reportNavigation, routeConfig:config, height:700}}, ...extra});
 const reported = () => messages.filter(m => m.value.type === 'streamlit:setComponentValue');
 
 render('#criminal_mind/project_home', {origin:'https://other.example'});
@@ -72,4 +72,18 @@ assert.equal(reported().length, repeated, 'Acknowledgement rerenders do not crea
 render('#hon/all', {}, 2);
 assert.equal(location.hash, '#hon/all', 'A fresh request token must apply even when its route was requested earlier');
 assert.equal(reported().at(-1).value.value.requestID, 2);
-console.log('Hosted dashboard bridge: deep links, rapid project/Casa navigation, URL acknowledgements, Back requests, origin checks and route validation passed.');
+// Production keeps internal navigation inside the iframe. Community Cloud may
+// remount the app if those clicks update its outer query, resetting the route.
+const beforeLocalClicks = reported().length;
+render('#criminal_mind/casa_baldadoon', {}, 3, false);
+for (const route of ['#hon/all', '#criminal_mind/all', '#criminal_mind/casa_baldadoon']) {
+  location.hash = route;
+  emit('hashchange');
+  render('#criminal_mind/casa_baldadoon', {}, 3, false);
+  assert.equal(location.hash, route, 'Ordinary rerenders preserve the latest in-library click');
+}
+assert.equal(reported().length, beforeLocalClicks, 'In-library clicks must not trigger Streamlit reruns');
+render('#hon/intake', {}, 4, false);
+assert.equal(location.hash, '#hon/intake', 'Explicit entry links still apply with reporting disabled');
+assert.equal(reported().length, beforeLocalClicks);
+console.log('Hosted dashboard bridge: client-owned rapid navigation, no Streamlit reruns, explicit deep links, optional report tokens, origin checks and route validation passed.');

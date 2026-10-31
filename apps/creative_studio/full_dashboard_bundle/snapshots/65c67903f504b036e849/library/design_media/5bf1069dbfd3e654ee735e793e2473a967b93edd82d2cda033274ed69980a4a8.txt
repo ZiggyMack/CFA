@@ -1,0 +1,30 @@
+import sys,io,zipfile,csv
+sys.path.insert(0,'.')
+from _common import *
+from PIL import Image
+import numpy as np
+seen=set(); res=[]
+for r in rows:
+    h=r['sha256']
+    if h in seen: continue
+    seen.add(h)
+    try:
+        if r['source_type']=='file': b=open(r['path'],'rb').read()
+        else:
+            # read via container chain
+            parts=r['path'].split('!'); f=parts[0]; data=None
+            z=zipfile.ZipFile(f)
+            for p in parts[1:-1]: z=zipfile.ZipFile(io.BytesIO(z.read(p)))
+            b=z.read(parts[-1])
+        im=Image.open(io.BytesIO(b)); mode=im.mode
+        alpha = 'A' in im.getbands() or 'transparency' in im.info
+        g=np.asarray(im.convert('L').resize((128,128)))
+        white=(g>235).mean(); dark=(g<60).mean()
+        res.append((h,r['filename'],r['path'],mode,alpha,round(float(white),3),round(float(dark),3),im.width,im.height))
+    except Exception as e:
+        res.append((h,r['filename'],r['path'],'ERR',False,0,0,0,0))
+with open('_flatart_scan.csv','w',newline='') as f:
+    w=csv.writer(f); w.writerow(['sha256','filename','path','mode','alpha','white_frac','dark_frac','w','h']); w.writerows(res)
+print(len(res))
+for x in sorted(res,key=lambda x:-x[5]):
+    if x[4] or x[5]>0.45: print(x[1],x[3],x[4],x[5],x[6],x[7],x[8],x[2][:120])
