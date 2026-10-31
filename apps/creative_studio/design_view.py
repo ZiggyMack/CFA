@@ -23,6 +23,11 @@ OUTFIT_BUCKETS = (
     ("casual", "Casual", ("rain", "baroque", "letterman", "bomber", "dragon", "parka", "puffer", "velour")),
     ("scoundrel", "Scoundrel gear", ("armor", "vest", "cash", "coat", "ice", "vinyl", "pilot", "saloon")),
 )
+ALL_FILES_PURPOSES = (
+    ("all", "All"), ("outfits", "Outfits"), ("details", "Details"), ("cast", "Supporting cast"),
+    ("storyboard", "Storyboards"), ("videos", "Videos"), ("comfy", "Comfy"),
+    ("inspiration", "Inspiration"), ("history", "History"), ("documents", "Documents"),
+)
 DENTAL_STANDARD = "HD-B-91ef00348229"
 LEGACY_TATTOO_PROOF = "HD-TATGUIDE-b6eb3258a6ae"
 HISTORICAL_TATTOOS = (
@@ -34,6 +39,73 @@ HISTORICAL_TATTOOS = (
 
 def unique(values):
     return list(dict.fromkeys(v for v in values if v))
+
+
+def all_files_model(data, project, reviews=None, query=""):
+    """Group recorded project material for browsing without inventing design roles."""
+    reviews = reviews if reviews is not None else effective_reviews(
+        data.get("assets", []), data.get("reviewDecisions", []), {}, aliases=data.get("assetAliases", []))
+    by_id = {a["id"]: a for a in data.get("assets", []) if a.get("project") == project
+             and a.get("kind") in {"image", "gif", "video", "document", "pdf"}}
+    albums = [a for a in data.get("albums", []) if a.get("project") == project]
+
+    def is_set(album):
+        return bool(album.get("locationFamilyID") or album.get("setFamilyID")
+                    or album.get("category") in {"sets", "locations"})
+
+    choices = list(ALL_FILES_PURPOSES)
+    if any(is_set(album) for album in albums):
+        choices.insert(4, ("sets", "Sets & locations"))
+    labels = dict(choices)
+    groups = {key: [] for key in labels if key != "all"}
+    terms = query.casefold().split()
+    claimed = set()
+    archive_ids = set(data.get("browseLayout", {}).get("projects", {}).get(project, {}).get("archiveAlbumIDs", []))
+
+    def purpose(asset, album):
+        if not normal_visible(asset, reviews) or album.get("id") in archive_ids:
+            return "history"
+        if asset.get("kind") in {"document", "pdf"}:
+            return "documents"
+        if is_set(album):
+            return "sets"
+        if asset.get("kind") == "video":
+            return "videos"
+        category = album.get("category") or asset.get("category")
+        return category if category in groups and category != "documents" else "inspiration"
+
+    def add_group(source, ids):
+        partitions = {}
+        for aid in ids:
+            if aid in claimed or aid not in by_id:
+                continue
+            asset = by_id[aid]
+            claimed.add(aid)
+            haystack = " ".join(str(asset.get(k, "")) for k in ("title", "filename", "note", "beat", "lyric", "tags"))
+            haystack += " " + str(source.get("title", ""))
+            if all(term in haystack.casefold() for term in terms):
+                partitions.setdefault(purpose(asset, source), []).append(aid)
+        for key, member_ids in partitions.items():
+            cover = next((aid for aid in (source.get("coverID"), source.get("coverAssetID")) if aid in member_ids), member_ids[0])
+            groups[key].append({"id": source["id"], "title": source.get("title", source["id"]),
+                                "assetIDs": member_ids, "coverID": cover,
+                                "description": source.get("description", "")})
+
+    # Existing character albums remain in catalog order; a collection without an
+    # album is still discoverable. No selected/approved cover is written back.
+    album_ids = {a["id"] for a in albums}
+    for album in albums:
+        add_group(album, album.get("assetIDs", []))
+    for collection in data.get("castCollections", []):
+        if collection.get("project") == project and collection["id"] not in album_ids:
+            add_group({**collection, "category": "cast"}, collection.get("assetIDs", []))
+    for key in groups:
+        remaining = [aid for aid, asset in by_id.items() if aid not in claimed and purpose(asset, {}) == key]
+        add_group({"id": project + ":uncollected-" + key, "title": labels[key]}, remaining)
+    order = ["cast", *[key for key, _ in choices if key not in {"all", "cast"}]]
+    sections = [{"id": key, "title": labels[key], "groups": groups[key],
+                 "count": sum(len(g["assetIDs"]) for g in groups[key])} for key in order]
+    return {"choices": choices, "sections": sections, "assets": by_id}
 
 
 def section(title, ids=(), *, kind="gallery", description="", children=(), **extra):
@@ -611,6 +683,20 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
     if model is None:
         return False
     import streamlit as st
+    if model["view"] == "cast":
+        st.markdown('''<style>
+        [class*="st-key-character-hub-"] {border-radius:14px;padding:16px;border:1px solid #3c5064;background:#192431;}
+        [class*="st-key-character-hub-hero-"] {background:#242725;border-color:#655a44;}
+        [class*="st-key-character-hub-scenes-"] {border-top:3px solid #87c6b5;background:#182b29;}
+        [class*="st-key-character-hub-videos-"] {border-top:3px solid #c0a8e0;background:#262333;}
+        [class*="st-key-character-hub-story-"] {border-top:3px solid #ddbf85;background:#2a2923;}
+        [class*="st-key-character-hub-plans-"] {border-top:3px solid #91bbdf;background:#1c2938;}
+        @media(max-width:740px) {
+          [data-testid="stHorizontalBlock"]:has([class*="st-key-character-hub-"]) {flex-direction:column;}
+          [data-testid="stHorizontalBlock"]:has([class*="st-key-character-hub-"]) > [data-testid="stColumn"] {width:100%!important;flex:1 1 100%;}
+          [class*="st-key-character-hub-"] {padding:12px;}
+        }
+        </style>''', unsafe_allow_html=True)
 
     def toggle(key):
         st.session_state[key] = not st.session_state.get(key, False)
@@ -646,8 +732,10 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
         for start in range(0, len(groups), 3):
             for col, g in zip(st.columns(3), groups[start:start + 3]):
                 with col, st.container(border=True):
+                    key = context + ":expanded:" + g["id"]
                     cover = model["assets"].get(g.get("coverID"))
-                    if cover and (path := media_path(library_dir, cover.get("thumb") or cover.get("src"))):
+                    expanded_character = model["view"] in {"working", "cast"} and st.session_state.get(key)
+                    if not expanded_character and cover and (path := media_path(library_dir, cover.get("thumb") or cover.get("src"))):
                         st.image(str(path), width="stretch")
                     st.markdown("**" + g["title"] + "**")
                     count = len(model_asset_ids(g))
@@ -662,7 +750,6 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
                         if facts["sources"]:
                             st.caption("From " + facts["sources"][0]["title"] +
                                        (f" · +{len(facts['sources']) - 1} sources" if len(facts["sources"]) > 1 else ""))
-                    key = context + ":expanded:" + g["id"]
                     if g.get("directSingle") and count == 1 and cover:
                         st.button("Open target", key=key + ":open", on_click=open_reference, args=(cover,), width="stretch")
                     else:
@@ -671,8 +758,36 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
             key = context + ":expanded:" + g["id"]
             if g.get("directSingle") and len(model_asset_ids(g)) == 1 or not st.session_state.get(key):
                 continue
+            if model["view"] == "cast" and g.get("browseFacts") is not None:
+                character_hub(g, key)
+                continue
             with st.container(border=True):
                 st.subheader(g["title"])
+                if model["view"] == "working":
+                    ids = model_asset_ids(g)
+                    visuals = [aid for aid in ids if model["assets"][aid].get("kind") not in {"document", "pdf"}]
+                    # Each short grid is fully visible: do not hide later references behind pagination.
+                    for start in range(0, len(visuals), 24):
+                        assets(visuals[start:start + 24], key + ":tiles:" + str(start))
+                    with st.expander("Reference context & notes", expanded=False):
+                        if g.get("description"):
+                            st.write(g["description"])
+                        for child in g.get("sections", []):
+                            st.markdown("**" + child["title"] + "**")
+                            if child.get("description"):
+                                st.caption(child["description"])
+                            st.caption(str(len(model_asset_ids(child))) + " references in the tiles above")
+                        def detailed_context(node, node_key):
+                            if node.get("kind") in {"mouth_slots", "reference_board", "workflow_families"}:
+                                render(node, node_key)
+                            else:
+                                for number, child in enumerate(node.get("sections", [])):
+                                    detailed_context(child, node_key + ":" + str(number))
+                        detailed_context(g, key + ":context")
+                        for note in g.get("notes", []):
+                            st.write(note)
+                        assets([aid for aid in ids if model["assets"][aid].get("kind") in {"document", "pdf"}], key + ":records")
+                    continue
                 if g.get("description"):
                     st.caption(g["description"])
                 cover = model["assets"].get(g.get("coverID"))
@@ -712,6 +827,97 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
                     with st.expander("Reference notes", expanded=False):
                         for note in g["notes"]:
                             st.write(note)
+
+    def character_hub(group, key):
+        """Arrange existing character evidence; no new role or scene links are inferred."""
+        slug = re.sub(r"[^a-z0-9-]", "-", key.lower())
+        facts = group.get("browseFacts", {})
+        cover = model["assets"].get(group.get("coverID"))
+        sections = list(enumerate(group.get("sections", [])))
+        scene_titles = {"Scene appearances", "Counting room · scene candidates", "Boss dais · character and staging candidates", "Earlier repair versions"}
+        scenes = [(i, child) for i, child in sections if child["title"] in scene_titles]
+        videos = [(i, child) for i, child in sections if child["title"] == "Video appearances"]
+        references = [(i, child) for i, child in sections if child["title"] == "Design and animation references"]
+        handled = {i for i, _ in [*scenes, *videos, *references]}
+        related = [(i, child) for i, child in sections if i not in handled]
+        design_parts = [*references, *[(i, child) for i, child in related if child["title"] != "Related story material"]]
+        reference_ids = unique(aid for _, child in design_parts for aid in model_asset_ids(child))
+        related = [(i, child) for i, child in related if child["title"] == "Related story material"]
+        separate_cover = cover and cover["id"] not in reference_ids
+        with st.container(key="character-hub-hero-" + slug):
+            if separate_cover:
+                portrait, identity = st.columns([2, 7])
+                with portrait:
+                    if path := media_path(library_dir, cover.get("thumb") or cover.get("src")):
+                        st.image(str(path), width="stretch")
+                    st.button("Review character / collection cover", key=key + ":cover", on_click=open_reference, args=(cover,))
+            else:
+                identity = st.container()
+            with identity:
+                st.subheader(group["title"])
+                if group.get("description"):
+                    st.write(group["description"])
+                st.caption(f"{len(model_asset_ids(group))} related references")
+                if not facts.get("choices"):
+                    st.caption("Collection preview · no casting choice recorded")
+        if reference_ids:
+            with st.expander(f"Reference candidates · {len(reference_ids)}", expanded=len(reference_ids) < 12):
+                for start in range(0, len(reference_ids), 24):
+                    assets(reference_ids[start:start + 24], key + ":references:" + str(start))
+
+        def lane(title, parts, empty, style):
+            with st.container(key="character-hub-" + style + "-" + slug):
+                st.markdown("**" + title + "**")
+                if not any(model_asset_ids(child) for _, child in parts):
+                    st.caption(empty)
+                for number, child in parts:
+                    # These lanes are already open; retain the original leaf callbacks.
+                    render({**child, "kind": "gallery"} if child.get("kind") == "disclosure" else child,
+                           key + ":" + str(number))
+        left, right = st.columns([7, 5])
+        with left, st.container(key="character-hub-scenes-" + slug):
+            st.markdown("**Scenes & planned work**")
+            for number, child in scenes:
+                render({**child, "kind": "gallery"} if child.get("kind") == "disclosure" else child, key + ":" + str(number))
+            for label, field in (("Planned scenes", "planned"), ("Recorded storyboard use", "linked"), ("Recorded sequence use", "sequences")):
+                if facts.get(field):
+                    st.markdown("**" + label + "**")
+                    for shot in facts[field]:
+                        st.write(shot.get("title", shot.get("id", "Story material")))
+            uses = [*facts.get("planned", []), *facts.get("linked", []), *facts.get("sequences", [])]
+            if uses and navigate:
+                st.button("Browse storyboards", key=key + ":storyboard", on_click=navigate, args=("Storyboard",))
+            plans = [(model["assets"][aid], model["reviews"].get(aid, {}).get("shotPlan"))
+                     for aid in model_asset_ids(group) if model["reviews"].get(aid, {}).get("shotPlan")]
+            if plans:
+                st.markdown("**Saved generation plans**")
+            for asset, plan in plans:
+                st.write(plan.get("idea") or asset.get("title", asset["id"]))
+                st.button("Open saved plan · " + asset.get("title", asset["id"]), key=key + ":plan:" + asset["id"],
+                          on_click=open_reference, args=(asset,))
+            if not uses and not plans and not any(model_asset_ids(child) for _, child in scenes):
+                st.caption("No scenes or planned work are recorded yet.")
+        with right:
+            lane("Videos", videos, "No videos are linked to this character yet.", "videos")
+        if related:
+            lane("Related material", related, "No related material is recorded.", "related")
+        with st.expander("Origin & story connections", expanded=False):
+            for source in facts.get("sources", []):
+                st.write(source["title"])
+            if not facts.get("sources"):
+                st.caption("No source collection is recorded.")
+            for choice in facts.get("choices", []):
+                st.write(str(choice.get("characterRole") or "Selected character") + " · " +
+                         ("this version selected by you" if choice.get("manualCastChoice") else
+                          "role assigned by Ziggy" if choice.get("roleDecision") == "user_assigned" else "visible likeness selected by Ziggy"))
+            if facts.get("planned"):
+                st.caption("Planned storyboard use" + (" · see linked shots above" if facts.get("linked") or facts.get("sequences") else " · no panel linked yet"))
+            if facts.get("unresolved"):
+                st.warning("Some saved storyboard links no longer resolve. They are retained for review and excluded from linked counts.")
+                for link in facts["unresolved"]:
+                    st.caption(link["storyID"] + " · " + link["shotID"] + " · " + link["assetID"])
+            for note in group.get("notes", []):
+                st.write(note)
 
     def render(s, context, heading=True, single_preview=False):
         kind, ids = s.get("kind", "gallery"), s.get("assetIDs", [])

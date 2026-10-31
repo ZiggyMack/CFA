@@ -1,0 +1,46 @@
+import csv
+U='/workspace/hon-dolo-stills-95-plus/unmapped/'
+LF='HD-EXP-LOCK-FACE.jpg [ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978]'
+rows=[
+dict(item='ST-HD-EYE',ids='ST-HD-EYE',region='character-right cheek / viewer-left (frontal LOCK-FACE)',status='original_missing',
+ original_path='',original_sha256='',
+ candidate_standalone_art=f'{U}d55b97a3b3222e5db70b5c38d66f2f57b3a59f3eb23f228ae16e2d137c37d8e6.jpg [d55b97a3b3222e5db70b5c38d66f2f57b3a59f3eb23f228ae16e2d137c37d8e6] 1280x720 RGB JPEG, white bg, no alpha',
+ evidence='Unmapped hash-named flat sheet (dice / "eye" / "know" / "Chewie" / bird). Its cursive "eye" letterform visually matches the LOCK-FACE "eye" (long looped y). NO documentary or pixel lineage ties it to the tattoo; sheet also carries retired motifs (dice, Chewie, bird). Treat as unconfirmed candidate needing Ziggy confirmation, not as verified original.',
+ derived_crop_or_placement_evidence=f'on-body placement: {LF}; HD-EXP-289.jpg [4836234de5b3a94f3cd9e4407870c88e7cfbc2a1db65ea09695a24699d63c0d7]. No derived crop made.',
+ notes='Literal third eye / I-know script variants are retired; do not substitute.'),
+dict(item='ST-HD-KNOW',ids='ST-HD-KNOW',region='character-left cheek / viewer-right (frontal LOCK-FACE)',status='original_missing',
+ original_path='',original_sha256='',
+ candidate_standalone_art='none matching',
+ evidence='Only flat "know" found is the cursive script on d55b97a3...jpg; current LOCK-FACE "know" is a different serif/typewriter-style letterform -> NOT a match. Older "I know" script stills (HD-EXP-46/59/80) are retired era.',
+ derived_crop_or_placement_evidence=f'on-body placement: {LF}; HD-EXP-289.jpg [4836234d...]',
+ notes='Request exact source art for the current serif "know".'),
+dict(item='ST-HD-BLASTER',ids='ST-HD-BLASTER (heritage HD-EXP-259; "Heavy blaster stencil #3")',region='character-left neck / viewer-right',status='found_exact_original',
+ original_path=f'{U}c91af37e775d5e6d941d2bc05fcc2f26f1ad4ad9a50caa1427a5dd3c01755419.jpg (byte-identical copies also in agent assets/ and attachments/ and 3 zips)',
+ original_sha256='c91af37e775d5e6d941d2bc05fcc2f26f1ad4ad9a50caa1427a5dd3c01755419',
+ candidate_standalone_art='same file; the relevant design is PANEL #3 (top-right) of a 6-option blaster sheet',
+ evidence='(1) Design journey doc (/workspace/hon-dolo-recent-263-277/HON-DOLO-DESIGN-JOURNEY-FOR-NOVA.md) names the neck design "Heavy blaster stencil #3 (angled, with a smoke curl)" composited across HD-EXP-250-259. (2) This sheet\'s panel #3 is the angled scoped blaster with row of holes, flared muzzle, wood grip and smoke curl. (3) /workspace/b3crop.png (380x330 L) is a pixel-identical grayscale crop of this file at bounds x0=900,y0=0,x1=1280,y1=330 (mean abs diff 0.001) - i.e. an earlier extraction of panel #3. (4) Visual match to the on-body neck blaster in HD-EXP-259 and LOCK-FACE. Only one encoding of this sheet exists. Caveats: white-background RGB JPEG multi-option sheet, no alpha; NOT a transparent stencil; on-body version is rotated/scaled/rendered. Other blaster sheets 000da3c8 (4-opt) and e08cee0f (8-opt) do not match.',
+ derived_crop_or_placement_evidence='derived_crop: /workspace/b3crop.png [sha256 in image_hash_index.csv] parent c91af37e..., bounds 900,0,1280,330, converted to grayscale. On-body: HD-EXP-259-blaster.jpg [f761a8fd707bef88637e76a6aa204721302849db1e75e5c99a92a1abe5fe8a69]; LOCK-FACE; stencil-blaster-259-260.jpg [378d0ece...] and stencil-blaster-placements-254-258.jpg [38761e3c...] (on-skin photo sheets); SB-12-neck-blaster-cu.jpg [e5e5bb2e...] (storyboard).',
+ notes='Copied unchanged to 04_RECOVERED_ORIGINALS/. Needs Ziggy confirmation; provenance is documentary + pixel-lineage, not artist metadata.'),
+dict(item='ST-HD-SHIP',ids='ST-HD-SHIP (#107 placement, #112/116/117/121 drawing refs)',region='upper chest',status='derived_crop_available',
+ original_path='',original_sha256='',
+ candidate_standalone_art=f'6-option perspective-saucer sheet, two near-identical encodings (neither byte-proven as parent): {U}9f62f9733312c2cb638e34e333dd02411da182b3cdd2a3ca6e39ee5c765974be.jpg [9f62f973...] (in unmapped pack) and /home/box/agent-data/agents/a4a75c63-1565-4448-84a2-f519f40bea15/attachments/d430b5f72e9b3ca4271229533880f24ba9b6c97adaca89fc8bc36ce77d7c9717.jpg [d430b5f7...] (later attachment, 10-07 14:43 UTC); the two differ by mean 0.46/255.',
+ evidence='SHIP-TATTOO-REF-05.jpg [a428b6f6fa659494fcbecf9c518055666548fb151cd9832183a0df73ca0d8f26] (426x360) is a re-encoded crop of panel #5 at bounds 426,360,852,720 of that sheet (gray MAD 0.79 vs 9f62f973, 0.63 vs d430b5f7). LOCK-FACE visible chest ship is visually consistent with panel #5 (hub ring, side pod) but only partly visible. SHIP-SCHEMATIC-REF.jpg [ef58d546...] is a re-encode (MAD 0.44) of unmapped 8df88113f0dfb015f34fbfd5c7726f3ec04813861cf4f8220c8fcdab2e26fe1f.jpg - a different top-view forked ship; a104e80880b2beb38810b95ae93b389589265b2bb0e1f54f412bc4378012d6d8.jpg is a third schematic variant. None is linked to #107/#112/#116/#117/#121.',
+ derived_crop_or_placement_evidence='derived_crop: SHIP-TATTOO-REF-05.jpg (parent = saucer sheet panel #5, bounds 426,360,852,720; parent encoding ambiguous). On-body: LOCK-FACE; SB-17-chest-ship-peek.jpg [baf5e3cc...]; HD-VEST-01A-chest-up-tattoo-map.jpg [f9e8c138...] (different round/prong variant).',
+ notes='Do not merge schematic and perspective art. Candidate sheets copied to 05_CANDIDATE_SOURCE_ART_UNCONFIRMED/.'),
+]
+rec={101:'grill / Jabba face lock era (Jabba DROPPED)',103:'falcon/bird chase start (DROPPED)',107:'chest ship position/scale (collar placement) heritage',206:'Scoundrel forearm worn pass (206 look)',112:'chest ship drawing detail ref',116:'chest ship drawing detail ref',117:'chest ship drawing detail ref',121:'chest ship drawing detail ref',152:'piercing base',154:'small left-ear hoop'}
+for k,v in rec.items():
+    rows.append(dict(item='REC-HD-ORIGINALS',ids=f'HD-EXP-{k}',region=v,status='original_missing',original_path='',original_sha256='',candidate_standalone_art='',
+      evidence=f'No file named HD-EXP-{k}* anywhere (files or zip members); numbers only appear inside unrelated hash strings. HD-EXP-ID-TO-FILENAME.json [8d2141f7...] lists {k} as conversational anchor with NO numbered file; the 159 hash-named unmapped stills have no proven EXP link. Not inferable by look-alike.',
+      derived_crop_or_placement_evidence='',notes='Needs Ziggy\'s original local Comfy export (exact file).'))
+rows.append(dict(item='FOREARM-SCOUNDREL',ids='HD-EXP-206 / hon-scoundrel-forearm',region='forearm (side not established)',status='original_missing',original_path='',original_sha256='',
+ candidate_standalone_art=f'related but NON-matching flat art: {U}1e8c86b1c7293db98fdf9112db2382b698a1795b171f6fc8f621885160bfb2c3.jpg (all-caps blackletter SCOUNDREL with gold N) and {U}10ac9771fdeb921c85c573a67beee340bbfef55c46fbbf279e41c15d0ec8a94c.jpg (4-option Scoundrel sheet incl. dice/card banners)',
+ evidence='Only on-body forearm evidence is storyboard SB-06-scoundrel-detail.jpg [b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a] showing mixed-case "Scoundrel" blackletter - different letterform/case from the flat art. stencil-scoundrel-blaster-ship-sheet.png shows neck/chest crops, no forearm. HD-EXP-250-*-scoundrel stills show no forearm.',
+ derived_crop_or_placement_evidence='SB-06-scoundrel-detail.jpg (storyboard_variant, placement only)',notes='Flat Scoundrel sheets copied to 05_CANDIDATE... as related variants only.'))
+rows.append(dict(item='RIGHT-HAND-LEIGH-CARD',ids='hon-hand-card (Leigh / Princess Queen of Hearts, right hand)',region='right hand (viewer-left in frontal HD-EXP-215/224/238)',status='original_missing',original_path='',original_sha256='',
+ candidate_standalone_art=f'{U}aa147b8c0c2633f61ba2c1ecd6d79b732398c9a336da7daa46c5042c849de1b1.jpg [aa147b8c...] hearts "P" card, portrait, "Leigh" script - strong visual match to the viewer-left hand card in HD-EXP-215/222/224/238. Variants: 106ae508f3c2...jpg (spades P = shelved left-hand variant, matches viewer-right hand in 215/222/224); ea8ca93c3eb8...jpg, 5524a8c7f619...jpg, b3a2278408a4...jpg (Princess/Leigh variants); a7bd855cda1e...jpg (Princess Queen of Hearts).',
+ evidence='Visual match only; no documentary/pixel lineage. Hand stills are historical-era (dice/falcon/DoLo present). SB-09-bounty-puck.jpg [af2c7daa...] shows a different simple outlined heart card. README of 95-plus pack: "no separate cards sheet file was found".',
+ derived_crop_or_placement_evidence='on-body: HD-EXP-215 [8a175599...], HD-EXP-222 [7ba4c32d...], HD-EXP-224 [5f452c70...], HD-EXP-230 [17895c98...], HD-EXP-238 [219f890d...], HD-EXP-247 [18631cb0...]',notes='Candidate card sheets copied to 05_CANDIDATE... ; needs Ziggy confirmation which is the default right-hand card.'))
+with open('tattoo_sources.csv','w',newline='') as f:
+    w=csv.DictWriter(f,fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
+print(len(rows))

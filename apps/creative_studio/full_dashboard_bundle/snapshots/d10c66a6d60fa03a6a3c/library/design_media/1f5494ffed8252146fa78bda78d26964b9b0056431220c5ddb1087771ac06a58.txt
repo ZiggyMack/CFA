@@ -1,0 +1,38 @@
+QA NOTES - GROK-BOSS-DISCOVERY-20261008_round01_return_v001
+Built 2026-10-08 17:10 UTC by Grok Bot. State: needs_user_review. Nothing approved. selected_winner=null, next_round_authorized=false.
+Model for all new images: Grok Bot image generation (internal). Seeds: unknown (not exposed). Prompt summaries in RETURN_MANIFEST.json are summaries, not verbatim prompts.
+Character PNGs are lossless PNG conversions of the generated JPEGs (pixel-identical; verified). Hashes in the manifest are sha256 of the PNG bytes in this ZIP; generated-JPEG hashes are recorded under generation.generated_source_sha256.
+
+REFERENCES (exact package files, sha256 verified against ASSET_MAP.json):
+  HD-DROP-e8d54a7bd4cf  HIPPO-01-chest-up.jpg  e8d54a7bd4cfc5af3caa73aae6fa1ac03b96e57d3e08f9e0d88ed7c0d1d0df69  -> text-only direction; image NOT fed to the generator
+  HD-DROP-b4a5874b195e  LORD-01-chest-up.jpg  b4a5874b195e045e2d39f68a5ceb189ae8af8b5aad69beabce4b1d89488f7475  -> text-only direction; image NOT fed to the generator
+  JABBA-STAGE-01  JABBA-EXP-01-host-dais.jpg  0cfc363be1df59f63ae4ef8a15c93b431672f29c4d924676cfa8afe9c6e5c09e  -> text-only direction; image NOT fed to the generator
+  BOSS-001 <- HIPPO-01 direction; BOSS-002 <- LORD-01 (gecko-frog) direction; BOSS-003 <- JABBA-EXP-01 (original slug/dais) direction.
+  BOSS-004..010: original concepts from the brief; no reference image used.
+
+PER-CANDIDATE
+  BOSS-001: River-hippo mogul at studio console. Charcoal DB suit, burgundy tie, gold signet ring. Cinematic, heavier and less cartoon than HIPPO-01. No tattoos.
+  BOSS-002: Tree-frog/gecko aristocrat, olive granular skin, realistic amber slit pupils (fixes cartoon eyes of LORD-01), emerald velvet smoking jacket, gold rings, cigar lounge. No tattoos.
+  BOSS-003: Slug magnate reclining on velvet dais, eye stalks, burgundy silk robe, gold rings, lantern throne room. TATTOO hourglass-with-coins on character-RIGHT upper arm/shoulder (viewer-left), matches option A. Design sheet generated FIRST and fed as reference to the body render (artwork_origin generated_design_sheet_before_body_render; not a reconstruction). On-body version is a rendered interpretation, not stencil-exact.
+  BOSS-004: Elderly pangolin financier, bronze scales, round wire spectacles, cream three-piece suit, pocket-watch chain, ledger, banker's lamp. No tattoos.
+  BOSS-005: Catfish amphibian kingpin, wet slate skin, gold-cuffed barbels, white linen suit, gold chain, neon club booth. No tattoos.
+  BOSS-006: Rhino warlord, steel-capped horn, cybernetic prosthetic on character-LEFT arm (viewer-right), black leather greatcoat, hangar. TATTOO crowned balance scales, matches option A, BUT placement differs: planned character-right neck, landed at CENTER UPPER CHEST. FLAG: small unreferenced partial mark on character-left side of neck under the jaw (viewer-right) - not from any design sheet. This file is the 2nd attempt.
+  BOSS-007: Pale axolotl matriarch (she), coral feathery gills pierced with gold rings (invented piercings), black high-collar gown with gold embroidery, gold pendant, record-label office skyline. No tattoos.
+  BOSS-008: Scarred crocodilian bookie, brass prosthetic eye with red lens on character-LEFT eye (viewer-right), snout scar, burgundy suit, gold collar bar, betting slips, gambling den. No tattoos.
+  BOSS-009: Toad-like spaceport bar owner, warty ochre skin, bat-like ears with multiple gold hoop piercings, mustard waistcoat, bar. TATTOO serpent-and-coin on character-RIGHT forearm (viewer-left). HONEST NOTE: the render matches option B (bold traditional serpent biting a star coin), NOT the requested option A. Known differences: planned missing left arm is not clearly readable; grin is broader/more cartoonish than the restrained brief.
+  BOSS-010: Walrus mogul, gold-banded ivory tusks, navy velvet coat, silver-grey fur stole, jewelled brooch, starship lounge porthole. No tattoos.
+
+REJECTED ATTEMPT (listed for traceability only; file NOT included in this ZIP)
+  BOSS-006 attempt 1: 15463ad046a460a6a7983bc72cda94082a6ce66c28e6227bacbd5b8722a3004c.jpg (sha256 15463ad046a460a6a7983bc72cda94082a6ce66c28e6227bacbd5b8722a3004c) - rejected because the crowned-scales tattoo rendered as a coat patch instead of skin ink.
+
+TATTOO DESIGN SHEETS (four options each, same delivery)
+  BOSS-003 hourglass-coins_options-A-D.png -> matching option A (requested A)
+  BOSS-006 crowned-scales_options-A-D.png -> matching option A (requested A); body placement differs from plan (chest, not neck)
+  BOSS-009 serpent-coin_options-A-D.png -> matching option B (requested A)
+  *_matching-option-X.png = derived_crop of the sheet (divider lines detected at x=638-639 / y=350 or 359, quadrant inset, trimmed to artwork bbox +12px). Panel letter is excluded by the crop (no pixels painted). Crop bounds + parent hash in manifest.
+  *_transparent.png = automatic white->alpha of that crop; white interior fills also become transparent; JPEG halo not hand-cleaned.
+  None of these are original stencils; all are generated companion design art for new characters, for review. Expand any motif to 10-12 options only if Ziggy asks.
+
+OPEN / NEXT
+  Pause for Ziggy feedback before BOSS-011..020. Winner four-view set (front/back/character-left/character-right) and SC-BOSS-001 pinstripe meeting proof remain ON HOLD until a winner is selected.
+  No dialogue, lyric timing or animation produced.

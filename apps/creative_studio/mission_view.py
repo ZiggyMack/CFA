@@ -1,4 +1,4 @@
-"""Compact Ziggy's Corner, using the index's prepared task and review records."""
+"""Controller workrooms and casting sessions using existing task and review records."""
 from pathlib import Path
 from datetime import date, datetime, timezone
 import json
@@ -359,7 +359,298 @@ def open_storyboard_review(project, story_id, structure, navigate):
     navigate('Storyboard')
 
 
-def render_corner(data, library_dir: Path, open_reference, render_selected, document_download, navigate, sweep, review_data=None, archived=False, controller="ziggy"):
+def casting_roles(data, project="criminal_mind"):
+    """Read casting pools without turning a provider pairing into a cast choice."""
+    assets = {a["id"]: a for a in data.get("assets", [])
+              if a.get("project") == project and a.get("kind") == "image" and a.get("role") == "casting_option"}
+    project_row = next((p for p in data.get("projects", []) if p["id"] == project), {})
+    blocks = project_row.get("landing", {}).get("sourceBlocks", [])
+    roles = []
+    for collection in data.get("castCollections", []):
+        if collection.get("project") != project or not collection.get("castingGroupID"):
+            continue
+        members = [assets[aid] for aid in dict.fromkeys(collection.get("assetIDs", []))
+                   if aid in assets and assets[aid].get("castingGroupID") == collection["castingGroupID"]]
+        if not members:
+            continue
+        candidates = {}
+        for asset in members:
+            # Missing identity stays a separate portrait; never infer a triple from a filename.
+            identity = asset.get("physicalCandidateID") or asset["id"]
+            candidates.setdefault(identity, {"id": identity, "assets": []})["assets"].append(asset)
+        context = collection.get("sourceContext", {})
+        source_ids = set(context.get("sourceScenes", []))
+        first = members[0]
+        roles.append({"id": collection["id"], "title": first.get("characterRole") or collection["title"].split(" · ")[0],
+                      "collection": collection, "candidates": list(candidates.values()),
+                      "sourceAppearance": first.get("sourceAppearance", ""), "roleContext": first.get("roleContext", ""),
+                      "sourceBlocks": [block for block in blocks if block.get("id") in source_ids]})
+    return roles
+
+
+def _casting_step(key, position):
+    st.session_state[key] = position
+
+
+def casting_review_payload(assets, reviews, favorites=(), basket=(), project="criminal_mind"):
+    scoped = [a for a in assets if a.get("project") == project and a.get("role") == "casting_option"]
+    ids = {a["id"] for a in scoped}
+    payload = current_module("library_helpers").review_payload(scoped, reviews, set(favorites) & ids, set(basket) & ids)
+    payload.update(project=project, controllerID="baldadoon")
+    return payload
+
+
+def director_stage(project, viewed=None):
+    """A viewing preference is separate from review completion or production state."""
+    choices = {"script", "casting", "locations"}
+    default = project.get("directorDefaultStage", "casting")
+    default = default if default in choices else "casting"
+    return viewed if viewed in choices else default
+
+
+def _director_stage_step(key, stage):
+    st.session_state[key] = stage
+    st.session_state.pop("studio_human_task_context", None)
+
+
+def render_director_navigation(data, project="criminal_mind"):
+    record = next((p for p in data.get("projects", []) if p.get("id") == project), {})
+    key = "casa-director-stage:" + project
+    stage = director_stage(record, st.session_state.get(key))
+    st.session_state[key] = stage
+    stages = ["script", "casting", "locations"]
+    labels = {"script": "Script desk", "casting": "Casting room", "locations": "Locations"}
+    position = stages.index(stage)
+    previous_stage, next_stage = stages[max(0, position - 1)], stages[min(len(stages) - 1, position + 1)]
+    _, label, previous, following = st.columns([7, 2, 1, 1])
+    label.caption(labels[stage])
+    previous.button("←", key="casa-stage-prev", help="Previous stage · " + labels[previous_stage], disabled=position == 0,
+                    on_click=_director_stage_step, args=(key, previous_stage), width="stretch")
+    following.button("→", key="casa-stage-next", help="Next stage · " + labels[next_stage], disabled=position == len(stages) - 1,
+                     on_click=_director_stage_step, args=(key, next_stage), width="stretch")
+    return stage
+
+
+def script_desk_model(data, project="criminal_mind"):
+    record = next((p for p in data.get("projects", []) if p.get("id") == project), {})
+    landing = record.get("landing", {})
+    stories = [s for s in data.get("storyboardStructure", {}).get("stories", []) if s.get("project") == project]
+    scenes = []
+    for block in landing.get("sourceBlocks", []):
+        coverage = []
+        for story in stories:
+            for section in story.get("sections", []):
+                if block.get("id") not in section.get("sourceBlockIDs", []):
+                    continue
+                shots = {s.get("shotID"): s for s in story.get("shots", [])}
+                coverage.append({"storyID": story["storyID"], "section": section,
+                                 "shots": [shots[sid] for sid in section.get("shotIDs", []) if sid in shots]})
+        scenes.append({"block": block, "coverage": coverage})
+    return {"project": record, "landing": landing, "scenes": scenes,
+            "assets": {a["id"]: a for a in data.get("assets", []) if a.get("project") == project}}
+
+
+def open_script_shot(project, story_id, shot, navigate):
+    st.session_state[f"structure-mode:{project}"] = "Planned shots"
+    st.session_state[f"structure-sequence:{project}"] = shot["sectionID"]
+    st.session_state[f"structure-focus:{project}"] = "All planned shots"
+    st.session_state[f"structure-foundation:{project}"] = "all"
+    st.session_state[f"structure-status:{project}"] = "all"
+    st.session_state[f"structure-shot-focus:{project}:{story_id}"] = shot["shotID"]
+    open_storyboard_review(project, story_id, True, navigate)
+
+
+def render_script_desk(data, document_download, open_reference, navigate, project="criminal_mind"):
+    model = script_desk_model(data, project)
+    st.subheader("Script desk")
+    st.write("Read the original scene alongside its proposed storyboard coverage.")
+    scenes = {item["block"]["id"]: item for item in model["scenes"]}
+    if scenes:
+        key = "casa-script-scene:" + project
+        if st.session_state.get(key) not in scenes:
+            st.session_state[key] = next(iter(scenes))
+        scene_id = st.selectbox("Source scene", list(scenes), key=key,
+            format_func=lambda sid: sid + " · " + scenes[sid]["block"].get("heading", "Source scene"))
+        scene = scenes[scene_id]
+        block = scene["block"]
+        script, coverage = st.columns([3, 2])
+        with script, st.container(border=True):
+            st.markdown("**Original screenplay**")
+            st.caption(f"Script lines {block.get('lineStart', '?')}–{block.get('lineEnd', '?')}")
+            if block.get("containsUnheadedFlashback"):
+                st.caption("This source block includes an unheaded flashback and return.")
+            st.code(block.get("text", ""), language=None, wrap_lines=True)
+        with coverage:
+            st.markdown("**Proposed storyboard coverage**")
+            if not scene["coverage"]:
+                st.caption("No storyboard coverage is linked to this source scene yet.")
+            for entry in scene["coverage"]:
+                st.write(entry["section"].get("title", entry["section"]["id"]))
+                for shot in entry["shots"]:
+                    with st.expander(shot["shotID"] + " · " + shot.get("title", "Planned shot"), expanded=False):
+                        st.caption(shot.get("authoringStatus") or shot.get("stage") or "Stage not recorded")
+                        purpose = next((f.get("text", "") for f in shot.get("fields", []) if f.get("key") == "purpose"), "")
+                        if purpose:
+                            st.write(purpose)
+                        st.button("Open storyboard shot", key="casa-script-shot:" + entry["storyID"] + ":" + shot["shotID"],
+                                  on_click=open_script_shot, args=(project, entry["storyID"], shot, navigate))
+            st.caption("Reading a scene does not approve the adaptation or mark its shots complete.")
+    else:
+        st.info("Source scene text is not included in this snapshot.")
+    assets, landing = model["assets"], model["landing"]
+    with st.expander("Original screenplay & source records", expanded=False):
+        for field in ("originalAssetID", "scriptAssetID", "inventoryAssetID"):
+            if asset := assets.get(landing.get(field)):
+                st.markdown("**" + asset.get("title", asset["id"]) + "**")
+                document_download(asset, context="casa-script:" + field)
+        if (script_asset := assets.get(landing.get("scriptAssetID"))) and script_asset.get("text"):
+            with st.expander("Read the complete screenplay", expanded=False):
+                st.code(script_asset["text"], language=None, wrap_lines=True)
+    if notes := assets.get(landing.get("notesAssetID")):
+        with st.expander("Existing adaptation notes", expanded=False):
+            if notes.get("text"):
+                st.write(notes["text"])
+            document_download(notes, context="casa-script:notes")
+            st.button("Open notes & review", key="casa-script-notes-review", on_click=open_reference, args=(notes,))
+
+
+def location_collections(data, project="criminal_mind"):
+    assets = {a["id"]: a for a in data.get("assets", [])
+              if a.get("project") == project and a.get("kind") in {"image", "gif", "video"}}
+    collections, seen = [], set()
+    for album in data.get("albums", []):
+        if album.get("project") != project or not (album.get("locationFamilyID") or album.get("setFamilyID")
+                                                  or album.get("category") in {"sets", "locations"}):
+            continue
+        members = [assets[aid] for aid in dict.fromkeys(album.get("assetIDs", [])) if aid in assets and aid not in seen]
+        seen.update(a["id"] for a in members)
+        if members:
+            collections.append({"id": album["id"], "title": album.get("title", album["id"]),
+                                "description": album.get("description", ""), "assets": members})
+    return collections
+
+
+def render_location_session(data, library_dir, open_reference, project="criminal_mind"):
+    st.subheader("Locations")
+    st.write("Upcoming location review · explore the received sets and record your direction.")
+    collections = location_collections(data, project)
+    if not collections:
+        st.info("Location references will appear here when they are received.")
+        return
+    reviews = st.session_state.get("studio_reviews", {})
+    for collection in collections:
+        st.markdown("**" + collection["title"] + "**")
+        if collection["description"]:
+            st.caption(collection["description"])
+        st.caption(f"{len(collection['assets'])} received references · no location choice is made by browsing")
+        for start in range(0, len(collection["assets"]), 3):
+            for column, asset in zip(st.columns(3), collection["assets"][start:start + 3]):
+                with column, st.container(border=True):
+                    if picture := media_path(library_dir, asset.get("thumb") or asset.get("src")):
+                        st.image(str(picture), width="stretch")
+                    st.markdown("**" + asset.get("title", asset["id"]) + "**")
+                    st.caption({"keep": "Keep", "needs_fixes": "Needs fixes", "remove": "Marked for removal"}.get(
+                        reviews.get(asset["id"], {}).get("status"), "Not reviewed"))
+                    st.button("Open & review", key="casa-location-review:" + asset["id"],
+                              on_click=open_reference, args=(asset,), width="stretch")
+
+
+def render_casting_session(data, library_dir, open_reference, review_asset=None, project="criminal_mind", export_review=None):
+    roles = casting_roles(data, project)
+    st.subheader("Casting session")
+    st.write("Meet one candidate at a time, with the character and screenplay beside you.")
+    if not roles:
+        st.info("Casting portraits will appear here when the first role is received.")
+        return
+    by_role = {role["id"]: role for role in roles}
+    role_key = "casa-casting-role"
+    if st.session_state.get(role_key) not in by_role:
+        st.session_state[role_key] = roles[0]["id"]
+    briefing, stage = st.columns([1, 3])
+    with briefing:
+        role_id = st.selectbox("Cast a role", list(by_role), format_func=lambda key: by_role[key]["title"], key=role_key)
+        role = by_role[role_id]
+        st.markdown("**The character**")
+        if role["roleContext"]:
+            st.write(role["roleContext"])
+        if role["sourceAppearance"]:
+            st.caption(role["sourceAppearance"])
+        with st.expander("Read the script context", expanded=False):
+            blocks = role["sourceBlocks"]
+            if blocks:
+                block_ids = [b["id"] for b in blocks]
+                block_key = "casa-casting-script:" + role_id
+                if st.session_state.get(block_key) not in block_ids:
+                    st.session_state[block_key] = block_ids[0]
+                block_id = st.selectbox("Source scene", block_ids,
+                    format_func=lambda key: next(b.get("heading", key) for b in blocks if b["id"] == key), key=block_key)
+                block = next(b for b in blocks if b["id"] == block_id)
+                st.caption(f"{block_id} · Script lines {block.get('lineStart', '?')}–{block.get('lineEnd', '?')}")
+                st.text(block.get("text", ""))
+            else:
+                st.caption("This role's source excerpt is not included in this snapshot.")
+            st.caption("Scene context can include a role being heard or discussed; it does not assign this candidate to a shot.")
+    with stage:
+        candidates = role["candidates"]
+        position_key = "casa-casting-index:" + role_id
+        position = st.session_state.get(position_key, 0)
+        if not isinstance(position, int) or not 0 <= position < len(candidates):
+            position = 0
+        st.session_state[position_key] = position
+        candidate = candidates[position]
+        previous, title, following = st.columns([1, 3, 1])
+        previous.button("← Previous", key="casa-casting-prev", disabled=position == 0,
+                        on_click=_casting_step, args=(position_key, position - 1), width="stretch")
+        title.markdown(f"**Candidate {position + 1} of {len(candidates)} · {candidate['id']}**")
+        following.button("Next →", key="casa-casting-next", disabled=position == len(candidates) - 1,
+                         on_click=_casting_step, args=(position_key, position + 1), width="stretch")
+        reviews = st.session_state.get("studio_reviews", {})
+        reviewed = sum(all(reviews.get(a["id"], {}).get("status") in {"keep", "needs_fixes", "remove"}
+                           for a in unit["assets"]) for unit in candidates)
+        st.caption(f"{reviewed} of {len(candidates)} candidates reviewed · all portraits remain available to compare")
+        members = candidate["assets"]
+        if len(members) > 1:
+            st.caption("One proposed physical identity, shown in different performances. Review each portrait; the pairing still needs your judgment.")
+            member_ids = [a["id"] for a in members]
+            portrait_key = "casa-casting-portrait:" + role_id
+            if st.session_state.get(portrait_key) not in member_ids:
+                st.session_state[portrait_key] = member_ids[0]
+            portrait_id = st.selectbox("Review a portrait", member_ids,
+                format_func=lambda key: next((a.get("performanceState") or key).title() for a in members if a["id"] == key), key=portrait_key)
+            asset = next(a for a in members if a["id"] == portrait_id)
+        else:
+            asset = members[0]
+        picture_column, review_column = st.columns([3, 2])
+        with picture_column:
+            picture = media_path(library_dir, asset.get("src") or asset.get("thumb"))
+            if picture:
+                st.image(str(picture), width="stretch")
+            else:
+                st.info("Portrait unavailable in this snapshot.")
+            st.caption((asset.get("performanceState") or "").replace("_", " ").title() or role["title"])
+            state = reviews.get(asset["id"], {})
+            st.caption({"keep": "Keep", "needs_fixes": "Needs fixes", "remove": "Marked for removal"}.get(state.get("status"), "Not reviewed"))
+            if asset.get("providerLookNote"):
+                with st.expander("About this look", expanded=False):
+                    st.write(asset["providerLookNote"])
+                    if asset.get("providerSourceVsProposal"):
+                        st.caption(asset["providerSourceVsProposal"])
+        with review_column:
+            st.caption("Reviewing " + asset["id"] + ". A review keeps your feedback; it does not cast the role or choose a starting frame.")
+            task = next((t for t in data.get("missionControl", {}).get("tasks", [])
+                         if t.get("id") == "tcm-grok-casting-20261030" and asset["id"] in t.get("previewAssetIDs", [])), None)
+            if task:
+                st.session_state.studio_human_task_context = task["id"]
+            if review_asset:
+                review_asset(asset)
+            else:
+                st.button("Review this portrait", key="casa-casting-review:" + asset["id"],
+                          on_click=open_reference, args=(asset,))
+    if export_review:
+        export_review([asset for role in roles for candidate in role["candidates"] for asset in candidate["assets"]])
+
+
+def render_corner(data, library_dir: Path, open_reference, render_selected, document_download, navigate, sweep, review_data=None, archived=False, controller="ziggy", review_asset=None, export_casting=None):
     routing = current_module("controller_routing")
     people = routing.controllers(data)
     home_label = people[controller].get("homeLabel", people[controller]["name"])
@@ -368,7 +659,7 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
     actionable, delegated = routing.controller_tasks(data, raw_tasks, controller)
     portfolio = owned | {t["project"] for t in actionable if t["project"] != "shared"}
     project_filter = None
-    if not archived:
+    if not archived and controller != "baldadoon":
         options = [None, *[p["id"] for p in data["projects"] if p["id"] in portfolio]]
         project_key = "mission-project:" + controller
         if st.session_state.get(project_key) not in options:
@@ -376,7 +667,7 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
         project_filter = st.selectbox("Projects in " + home_label, options,
             format_func=lambda key: "All owned and assigned work" if key is None else next(p.get("subtitle") or p["name"] for p in data["projects"] if p["id"] == key), key=project_key)
         st.caption("Human controller: " + people[controller]["name"] + ". Assigned help retains its originating project and decision authority.")
-    else:
+    elif archived:
         project_filter = st.session_state.get("studio_project")
     actionable, delegated = routing.controller_tasks(data, raw_tasks, controller, project_filter)
     reviews = st.session_state.studio_reviews
@@ -436,13 +727,24 @@ def render_corner(data, library_dir: Path, open_reference, render_selected, docu
     if archived:
         st.subheader("Completed tasks")
         st.caption("Completed handoffs and their records remain available here.")
-    else:
+    elif controller != "baldadoon":
         columns = st.columns(4)
         counts = [(STATES[s][0], sum(t["status"] == s for t in tasks)) for s in ("ready", "needs_input", "in_progress")]
         for col, (label, number) in zip(columns, counts):
             col.metric(label, number)
         columns[3].button(f"Shot plans · {len(plans)} →", key="mission-shot-plans", width="stretch",
                           on_click=show_collection, args=([], "All shot plans", "shot_plans"))
+    if not archived and controller == "baldadoon":
+        director_data = review_data or data
+        stage = render_director_navigation(director_data)
+        if stage == "script":
+            render_script_desk(director_data, document_download, open_reference, navigate)
+        elif stage == "locations":
+            render_location_session(director_data, library_dir, open_reference)
+        else:
+            render_casting_session(director_data, library_dir, open_reference, review_asset, export_review=export_casting)
+        st.divider()
+        st.subheader("Collaborator handoffs")
     priority_slot = st.container(key="mission-priority")
     filter_col, search_col = st.columns([1, 2])
     with filter_col:

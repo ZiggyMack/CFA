@@ -104,6 +104,8 @@ def apply_theme() -> None:
         background:#d4b582!important;color:#15191e!important;border-color:#d4b582!important;}
     .stApp :is(.stButton,.stDownloadButton,.stLinkButton,.stFormSubmitButton,[data-testid="stFileUploader"]) :is(button,a)[kind="primary"]:is(:hover,:focus-visible):not(:disabled):not([aria-disabled="true"]) {
         background:#eed4a6!important;color:#15191e!important;border-color:#eed4a6!important;}
+    [data-testid="stSidebar"] :is(.st-key-sidebar-home-ziggy,.st-key-sidebar-home-casa) button {
+        border-color:#d4b582!important;}
     .stApp :is(.stButton,.stDownloadButton,.stLinkButton,.stFormSubmitButton,[data-testid="stFileUploader"]) :is(button,a):is(:disabled,[aria-disabled="true"]) {
         background:#171d25!important;color:#92a1b5!important;border-color:#303b4b!important;opacity:1;}
     .stApp [kind]:is(:disabled,[aria-disabled="true"]) [data-testid="stMarkdownContainer"] {color:inherit!important;}
@@ -294,8 +296,15 @@ def basket_button(asset: dict, context: str = "card") -> None:
 
 
 def save_note(asset_id: str, key: str) -> None:
+    casting = st.session_state.get("studio_view") == CASA
+    if casting:
+        # A draft is not a human disposition. Keep it when reviewer attribution is
+        # still missing, including after Streamlit removes an unmounted widget.
+        st.session_state.setdefault("studio_casting_note_drafts", {})[asset_id] = st.session_state[key]
     if set_review_field(asset_id, "note", st.session_state[key]):
         st.session_state.studio_notes[asset_id] = st.session_state[key]
+        if casting:
+            st.session_state.studio_casting_note_drafts.pop(asset_id, None)
 
 
 def read_note_presets(payload: dict) -> list[dict]:
@@ -703,11 +712,15 @@ def render_review_controls(asset: dict, data: dict | None = None) -> None:
     st.caption("Keep applies to the scope in your note. Mark for removal flags the reference; it does not delete a file. Clear keeps your note and shot plan.")
     note_key = f"asset-note:{asset_id}"
     if note_key not in st.session_state:
-        st.session_state[note_key] = decision.get("note", "")
+        st.session_state[note_key] = st.session_state.get("studio_casting_note_drafts", {}).get(asset_id, decision.get("note", "")) if st.session_state.get("studio_view") == CASA else decision.get("note", "")
     st.text_area("Your review note", key=note_key, height=130, max_chars=NOTE_LIMIT, on_change=save_note, args=(asset_id, note_key),
                  placeholder="What works here? What should change in the next pass?")
+    if st.session_state.get("studio_view") == CASA and asset_id in st.session_state.get("studio_casting_note_drafts", {}):
+        st.caption("Draft note retained. Choose the reviewer and scope, then save it to include it in your export.")
+        st.button("Save review note", key="casa-save-note:" + asset_id, on_click=save_note, args=(asset_id, note_key))
     render_note_presets(asset_id)
-    export_review_button("selected:" + asset_id)
+    if st.session_state.get("studio_view") != CASA or asset.get("role") != "casting_option":
+        export_review_button("selected:" + asset_id)
     st.caption("Review choices and saved-note presets stay in this session. Export before closing or reloading; import the file under Favorites & notes to resume.")
     if data is not None:
         render_cast_controls(asset, data)
@@ -965,6 +978,9 @@ def render_grid(results: list[tuple[dict, dict | None]], signature: str) -> None
 
 
 def render_library(data: dict, project: str, storyboard: bool = False, fixed_category: str | None = None) -> None:
+    if project == "criminal_mind" and not storyboard and not fixed_category:
+        render_all_files(data, project)
+        return
     albums = [a for a in data["albums"] if a.get("project") == project]
     if storyboard:
         category = "storyboard"
@@ -997,6 +1013,9 @@ def render_library(data: dict, project: str, storyboard: bool = False, fixed_cat
         query = st.text_input("Find a picture or moment", placeholder="Try: neck, coat, cockpit…",
                               key=f"search:{project}:{storyboard}", on_change=clear_selection)
     results = ordered_assets(data["assets"], data["albums"], project, category, album_id, query)
+    if project == "criminal_mind" and category == "all" and album_id == "all":
+        # Start the visual library with the people; script records remain below it.
+        results = sorted(results, key=lambda row: row[0].get("category") != "cast")
     story_range, themes, stage = (0, 100), [], "all"
     if storyboard:
         metadata = data.get("storyboardMetadata", {}).get(project, {})
@@ -1026,6 +1045,84 @@ def render_library(data: dict, project: str, storyboard: bool = False, fixed_cat
         st.caption("Grouped keeps scene categories and places turnarounds last. All clips sorts across the current collection and search. Unknown durations appear last.")
     signature = json.dumps([project, category, album_id, query, storyboard, layout, order, story_range, themes, stage])
     render_grid(results, signature)
+
+
+def set_all_files_sections(keys, expanded):
+    for key in keys:
+        st.session_state[key] = expanded
+
+
+def set_all_files_open(key, expanded):
+    st.session_state[key] = expanded
+
+
+def render_all_files(data, project):
+    """Purpose and collection browsing; existing leaf controls own all reviews."""
+    query = st.text_input("Find a picture or moment", placeholder="Search characters, sets, outfits…",
+                          key=f"all-files-search:{project}", on_change=clear_selection)
+    model = current_module("design_view").all_files_model(data, project, st.session_state.studio_reviews, query)
+    labels = dict(model["choices"])
+    purpose_key = f"all-files-purpose:{project}"
+    if st.session_state.get(purpose_key, "all") not in labels:
+        st.session_state[purpose_key] = "all"
+    purpose = st.radio("Purpose", list(labels), format_func=labels.get, horizontal=True, key=purpose_key,
+                       on_change=clear_selection)
+    sections = [s for s in model["sections"] if s["groups"] and purpose in {"all", s["id"]}]
+    if not sections:
+        if query:
+            st.info("No references match this search in " + labels[purpose] + ".")
+        elif purpose == "all":
+            st.info("No visual collections have been added yet.")
+        elif purpose == "outfits":
+            st.info("No outfit collections have been added yet.")
+        else:
+            st.info("No collections have been added for " + labels[purpose] + " yet.")
+        return
+    search_scope = hashlib.sha256(query.encode("utf-8")).hexdigest()[:12]
+    context = f"all-files:{project}:{search_scope}"
+    section_keys = [context + ":section:" + section["id"] for section in sections]
+    expand, collapse, _ = st.columns([2, 2, 5])
+    expand.button("Expand sections", key=context + ":expand", on_click=set_all_files_sections,
+                  args=(section_keys, True), width="stretch")
+    collapse.button("Collapse sections", key=context + ":collapse", on_click=set_all_files_sections,
+                    args=(section_keys, False), width="stretch")
+    for section, section_key in zip(sections, section_keys):
+        opened = st.session_state.get(section_key, True)
+        with st.container(border=True):
+            st.button(("▾ " if opened else "▸ ") + section["title"] + f" · {section['count']}",
+                      key=section_key + ":toggle", on_click=set_all_files_open, args=(section_key, not opened),
+                      width="stretch")
+            if not opened:
+                continue
+            groups = section["groups"]
+            for start in range(0, len(groups), 3):
+                expanded_groups = []
+                for column, group in zip(st.columns(3), groups[start:start + 3]):
+                    group_key = section_key + ":collection:" + group["id"]
+                    group_open = st.session_state.get(group_key, bool(query))
+                    with column, st.container(border=True):
+                        if not group_open:
+                            cover = model["assets"][group["coverID"]]
+                            if cover.get("kind") in VISUAL_KINDS and (preview := media_path(LIBRARY_DIR, cover.get("thumb") or cover.get("src"))):
+                                st.image(str(preview), width="stretch")
+                        st.markdown("**" + group["title"] + "**")
+                        st.caption(str(len(group["assetIDs"])) + " references")
+                        st.button("Hide references" if group_open else "Show references", key=group_key + ":toggle",
+                                  on_click=set_all_files_open, args=(group_key, not group_open), width="stretch")
+                    if group_open:
+                        expanded_groups.append((group, group_key))
+                for group, group_key in expanded_groups:
+                    st.subheader(group["title"])
+                    if group["description"]:
+                        st.caption(group["description"])
+                    rows = [(model["assets"][aid], None) for aid in group["assetIDs"]]
+                    visuals = [(asset, album) for asset, album in rows if asset.get("kind") in VISUAL_KINDS]
+                    if visuals:
+                        render_grid(visuals, "design:" + group_key)
+                    for asset, _ in rows:
+                        if asset.get("kind") in {"document", "pdf"}:
+                            st.button(asset.get("title", asset["id"]), key=group_key + ":document:" + asset["id"],
+                                      on_click=select_asset, args=(asset["id"], project), width="stretch")
 
 
 def render_design_workspace(data: dict, project: str, view: str) -> None:
@@ -1371,8 +1468,10 @@ def render_mission_control(data: dict, review_data: dict | None = None) -> None:
     st.button("← Back to library", key="mission-back", on_click=back_to_library)
     controller = "baldadoon" if st.session_state.studio_view == CASA else "ziggy"
     home = CASA if controller == "baldadoon" else CORNER
+    title = "Casa Baldadoon" if controller == "baldadoon" else "Mission Control"
+    introduction = "Your director’s room. Read the script, meet the characters, explore locations, and record your direction." if controller == "baldadoon" else "Your next moves, prepared handoffs, and ideas waiting for their next pass."
     st.markdown(f'<div class="studio-hero"><div class="eyebrow">CFA · {html.escape(home)}</div>'
-                '<h1>Mission Control</h1><p>Your next moves, prepared handoffs, and ideas waiting for their next pass.</p></div>',
+                f'<h1>{title}</h1><p>{introduction}</p></div>',
                 unsafe_allow_html=True)
 
     def sweep():
@@ -1384,7 +1483,46 @@ def render_mission_control(data: dict, review_data: dict | None = None) -> None:
 
     if data.get("reviewIntake") and controller == "ziggy":
         st.button("Intake verification →", key="mission-intake", on_click=navigate, args=("Intake verification",))
-    render_corner(data, LIBRARY_DIR, open_mission_reference, lambda asset: render_selected(asset, data.get("reviewIntake"), data), document_download, navigate, sweep, review_data=review_data or data, controller=controller)
+    def export_casting(assets):
+        payload = current_module("mission_view").casting_review_payload(assets, st.session_state.studio_reviews,
+                                 st.session_state.studio_favorites, st.session_state.studio_basket)
+        st.download_button("Export casting review", json.dumps(payload, ensure_ascii=False, indent=2),
+                           file_name="baldadoon-casting-review.json", mime="application/json", key="casa-casting-export")
+        st.caption("Only this project's casting portraits and saved feedback are included. The sidebar export keeps your full library backup.")
+    render_corner(data, LIBRARY_DIR, open_mission_reference, lambda asset: render_selected(asset, data.get("reviewIntake"), data), document_download, navigate, sweep, review_data=review_data or data, controller=controller,
+                  review_asset=lambda asset: render_review_controls(asset, review_data or data), export_casting=export_casting)
+
+
+def render_library_script(data, project):
+    """Keep source access beside the library without placing a text landing above images."""
+    landing = project.get("landing", {})
+    if not landing:
+        return
+    by_id = {asset["id"]: asset for asset in data["assets"] if asset.get("project") == project["id"]}
+    with st.expander("Screenplay & source records", expanded=False):
+        st.caption("Original screenplay: " + landing.get("author", "Baldadoon"))
+        for key in ("originalAssetID", "scriptAssetID", "inventoryAssetID", "notesAssetID"):
+            if asset := by_id.get(landing.get(key)):
+                document_download(asset, context="library-source:" + key)
+        if script := by_id.get(landing.get("scriptAssetID")):
+            if script.get("text"):
+                with st.expander("Read the screenplay", expanded=False):
+                    st.text(script["text"])
+        for block in landing.get("sourceBlocks", []):
+            with st.expander(str(block.get("id", "")) + " · " + block.get("heading", "Source block"), expanded=False):
+                st.caption(f"Script lines {block.get('lineStart', '?')}–{block.get('lineEnd', '?')}")
+                st.text(block.get("text", ""))
+
+
+def sidebar_navigation_button(view, label):
+    def button():
+        st.button(label, key=f"nav:{view}", type="primary" if st.session_state.studio_view == view else "secondary",
+                  on_click=navigate, args=(view,), width="stretch")
+    if view in (CORNER, CASA):
+        with st.container(key="sidebar-home-casa" if view == CASA else "sidebar-home-ziggy"):
+            button()
+    else:
+        button()
 
 
 def render_export_basket(data: dict) -> None:
@@ -1521,13 +1659,13 @@ def main() -> None:
         st.session_state.studio_project_selection = project
         st.caption(projects[project].get("subtitle", ""))
         export_review_button("sidebar")
-        browse = (*(("Project home",) if projects[project].get("landing") and project != "criminal_mind" else ()), "Library", "Working references", "Outfits", "Tattoos & piercings", "Supporting cast", "Storyboard", "Videos", "Comfy swap targets")
+        browse = (*(("Project home",) if projects[project].get("landing") and project != "criminal_mind" else ()), "Library", "Working references", "Outfits", "Tattoos & piercings", "Supporting cast", "Storyboard", "Videos", "Comfy swap targets", "Collaborators")
         if project != "hon":
             browse += ("Inspiration",)
         browse += ("Review queue", "Archive")
         start = (*(("Intake verification",) if data.get("reviewIntake") else ()), CORNER,
                  *((CASA,) if any(p.get("controllerID") == "baldadoon" for p in projects.values()) else ()))
-        for label, views in (("START HERE", start), ("BROWSE", browse), ("CREATE", ("Collaborators", "Shot plans", "Collaborator briefs")),
+        for label, views in (("START HERE", start), ("BROWSE", browse), ("CREATE", ("Shot plans", "Collaborator briefs")),
                              ("KEEP & REFER", ("Documents", "Export basket", "Favorites & notes"))):
             st.caption(label)
             for view in views:
@@ -1542,9 +1680,7 @@ def main() -> None:
                 elif view == 'Review queue':
                     nav_label += ' · '+str(navigation_reference_count(data['assets'],
                         mission_pending_requests(data, st.session_state.studio_reviews, project)))
-                st.button(nav_label,
-                          key=f"nav:{view}", type="primary" if st.session_state.studio_view == view else "secondary",
-                          on_click=navigate, args=(view,), width="stretch")
+                sidebar_navigation_button(view, nav_label)
         st.divider()
         st.caption("Stars are a personal shortlist. Source references keep their existing status.")
         st.caption("Export your complete review to keep decisions, notes, plans, and favorites between sessions.")
@@ -1566,16 +1702,15 @@ def main() -> None:
         return
     hero(projects[project], view, assets)
     selection_assets = review_data["assets"] if view in ("Favorites & notes", "Shot plans", "Export basket") else assets
-    selected = next((a for a in selection_assets if a["id"] == st.session_state.studio_selected), None)
+    selected = next((a for a in selection_assets if a["id"] == st.session_state.get("studio_selected")), None)
     if selected:
         render_selected(selected, data.get("reviewIntake"), data)
     elif view == "Project home":
         current_module("project_intake_view").render_project_home(data, projects[project], document_download, navigate)
     elif view == "Library":
-        if project == "criminal_mind" and projects[project].get("landing"):
-            current_module("project_intake_view").render_project_home(data, projects[project], document_download, navigate, inline=True)
-            st.divider()
         render_library(data, project)
+        if project == "criminal_mind":
+            render_library_script(data, projects[project])
     elif view == "Storyboard":
         if data.get("storyboardStories"):
             current_module("story_view").render_stories(data, project, LIBRARY_DIR, render_grid, select_asset, document_download,

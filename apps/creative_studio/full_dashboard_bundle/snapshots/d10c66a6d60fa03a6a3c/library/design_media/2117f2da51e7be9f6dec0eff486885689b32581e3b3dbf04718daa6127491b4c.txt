@@ -1,0 +1,55 @@
+# Falcon-1000 helper brief (Hon Dolo, Strictly Business), from Chief of Staff
+Drafts only. Use GenerateImage (cursor namespace), 16:9, 15 images per category. Stay within the current paid allowance: no credits, no settings changes. If you hit any limit, stop and report it.
+Work in long runs (5-10 calls per batch). Don't end your turn between categories.
+
+WORLD: a weathered, lived-in Falcon-style freighter in photoreal cinematic light. Reference: /workspace/cfa/b1/GROK-HD-SB-WRITER-batch01/SB-W01-S07-3-hover-v002.jpg (cockpit). No readable text or logos.
+The lounge and DJ station sit LEFT of the pilot seat and around the bend, in a larger part of the ship. The turntables are roomy and built into the bulkheads, not a club booth. Chewy is co-pilot, seated LEFT of the pilot seat.
+
+DOLO: reference 1 is always /workspace/hd-sb/recovery/_review/lf_full.png. Prompt text:
+"The man from reference image 1 with his exact face, age (late twenties, not a teen), facial hair exactly as reference image 1 (no added beard), curls, tattoos exactly as reference image 1. Flat black-ink tattoos on skin (not objects): one cursive 'eye' on the cheek on the LEFT side of the image, one serif 'know' on the cheek on the RIGHT side of the image, a small blaster-pistol tattoo on the RIGHT side of the image on his neck, his chest tattoo: a disc-shaped freighter ship with twin tower antennae on top (NOT a plain flying saucer), upright. One small silver hoop in one ear, one small crystal stud in the other. Two silver lip-corner hoops. Dark brown distressed leather jacket, open off-white shirt, gold curb chain and dark band on his right wrist."
+If he smiles, add /workspace/hd-sb/work/GRILL-LOCK-4GOLD-v2.jpg as a reference: "teeth exactly as reference image 2: two white center front teeth, gold teeth beside them, short gold canines, silver lower row." Never use the word "fang". No forehead dice.
+CHEWY: use only /workspace/dj-beast-ref-sheet/DJB-01-chest-up.jpg as his reference ("the DJ creature from reference image N, exact face, fur, headphones, bandolier"). Never invent him.
+LEIA (preliminary): /workspace/hon-dolo-stills/cast/LEIA-EXP-01-ivory-coat.jpg
+No Vader, no Lisan.
+
+SAVE: 1280x720 JPG at /workspace/falcon1000/C##-slug/C##-slug-###.jpg (for example from PIL: Image.open(asset).convert('RGB').resize((1280,720)).save(path, quality=92)).
+LOG: append to /workspace/falcon1000/qa_<yourname>.tsv, one line per image, tab-separated: category, relative path, source asset filename, note (STRONG, defect or FAIL plus a reason). Keep the fails.
+Don't touch qa.tsv, MANIFEST or SHORTLIST. Chief merges, delivers to D: and posts to the mailbox.
+Post short counts and your best picks in your room with Ziggy. Z_6 compiles the roll-ups.
+
+## USER FEEDBACK V2 (2026-10-11, Ziggy via Nova mailbox 0f6e8335), applied to all FORTHCOMING shots
+- Chest tattoo: the plain saucer doesn't match the spec. Use the twin-tower disc ship wording above.
+- The serif 'know' keeps landing on the wrong cheek. Keep 'know' on the RIGHT side of the image and cursive 'eye' on the LEFT; prefer chest-up framing for faces.
+- Earrings were missing. Ask for the hoop and the crystal stud (soft tolerance, no reroll for this alone).
+- Cockpit must read roomy, with a visible co-pilot seat LEFT of the pilot seat. No laser beams or blaster fire inside or across the cockpit.
+- Keep what he liked: composition, lighting, pose, materials. Every scene scored 5/5.
+- Do not reroll images that are already kept. The only queued repair is C04-002 (Chief does it).
+
+## GRADING (Ziggy, 2026-10-12): replaces pass/fail
+Score every draft 1 to 5 against the character standard. A great scene with a small identity slip is a 4. A great scene with a bigger character miss is a 3. Keep everything: 1s and 2s go to a concept/reject pile that can feed the multiverse. Aim for mostly 4s and 5s. Put the score first in the QA note (e.g. "4 | know on wrong cheek") and in each NOTES.md.
+Self-score against the references; Ziggy reviews only controversial ones. For Dolo the hardest features weigh most: the four-gold grill when the teeth show, and the cheek words (eye on the LEFT of the image, know on the RIGHT). A small lettering slip in the right place is a 3 or 4, never a 1. Flag "CONTROVERSIAL" in the note when unsure.
+All scores are PRELIMINARY (prelim_score). They become final only when Ziggy or a reviewer verifies them. Don't send Ziggy images one by one, only genuinely controversial calls.
+PRELIMINARY APPROVAL (Ziggy, voice call 2026-10-12): every bot self-approves preliminary drafts, so don't wait for Ziggy. Score both character and SCENE. If something's wrong with the scene, the score drops and the fix gets noted. Whether an image is used in a shot or goes to a second round of fixes is Ziggy's call later, during detail design.
+
+## ZIGGY'S RUBRIC (screenshots 2026-10-12): log TWO preliminary scores per draft
+- likeness 1-5: the character or component against its gold standard (face, grill, cheek words, neck blaster, chest ship, chain). Ignore framing.
+- scene 1-5: framing, lighting, staging, atmosphere. A strong scene can still need a character repair; note what to preserve.
+QA note format: "L4 S5 | <defects> | preserve: <what's good>". Lane is Prime unless the shot clearly breaks canon (then put "Multiverse?" in the note). The design stage stays unset (Ziggy sets it).
+VIEWER OPTIONS: the full dropdown ids are in /workspace/falcon1000/CFA-VIEWER-OPTIONS.md. Use them for suggested lane and scope. Stage is always preliminary.
+CHEWY TIP (Z_8, 22 of 22 on-model): always write him out as "massive dark-furred gorilla, black headphones, gold curb chain, black bandolier of brass bullets" alongside the DJB-01 reference. Otherwise he drifts to chimp, badger or sloth.
+SELF-PUSH (Ziggy, 2026-10-12): any bot with PC access can push its own finished categories to docs\notes\downloads\GROK-HD-FALCON-1000\ as long as it updates the ledger (its qa_*.tsv, plus a line in ASSIGNMENTS.md). Keep the C: drive clear. Bots without PC access leave their files in /workspace/falcon1000, and Chief pushes them.
+
+## NO-PAUSE RULE (Ziggy via Z_6, 2026-10-12)
+Don't pause or ask between categories. When your list is done, claim the next row marked open or queued in /workspace/falcon1000/ASSIGNMENTS.md: write your name and the time on it, then keep generating. Only stop at a real limit (refusal, throttle or cap) and report it.
+
+## TIPS (Z_10/Z_9, 2026-10-12)
+- Shoot Dolo head-on so both cheek words can be read.
+- Leia: "mature woman in her mid-forties, NOT a young woman".
+- Hands: put fewer hands in frame and describe each as five fingers with the thumb visible (Z_3's fix).
+- Push to the right archive folders, [local path] and GROK-HD-STORY-SET-02\, not From Grok.
+
+## CLAUDE STEER (2026-10-12, group 2 review)
+- CHEWY: put /workspace/dj-beast-ref-sheet/DJB-01-chest-up.jpg as reference image 1 in EVERY Chewy prompt, and open the wording with "the dark gorilla-like beast from the reference, black over-ear headphones, gold neck chain, bullet bandolier". If he isn't that beast, his likeness score is 1, however good the scene is. The model to match is C12-012.
+- SIDES: the co-pilot seat is on Dolo's character-right, which is screen-LEFT in frontal and over-the-shoulder shots. Don't mirror images to fix a wrong side. Reroll with the side stated in the prompt.
+- Dolo two-shots: no extra gold neck chain. The chest ship is the upright twin-spire ship, never a saucer.
+- Keep the approach used for the C07 throttle inserts and the C16 Leia doorway shots; both are strong.

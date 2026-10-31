@@ -1,0 +1,58 @@
+# Handback: the coverage and placement pass and the opening packet (2026-10-28)
+
+Author: Claude, lead writer, recorded at about 07:42 UTC by the clock, closing the bounded task CFA Nova coordinated this morning at Ziggy's request (a coverage and placement pass over the 36 panels and the authored shots; the opening sequence made ready for shot development; this handback). Status: every file below is a proposal; nothing is accepted; no run is requested; no source is selected; timing is null everywhere and lyric cues are TXT lines of `Hon_DoLo.txt` (lyric master v003). Site intake is not creative acceptance, hosted deployment or a render request. The Lisan Story 01 work and the scoring department's open decisions are untouched by this pass.
+
+## 1. Files delivered (all new; nothing posted earlier was edited; every card's hash stands)
+
+| File (in `hon_dolo_strictly_business/story/writer_pass_20261010/`) | What it is | Bytes | sha256 |
+| --- | --- | --- | --- |
+| `COVERAGE_CROSSWALK_20261028.md` | The readable crosswalk: Part A by position in the final track (prologue, S01 to S12, epilogue), one row per authored shot with original panel(s), purpose, lyric cue as section and TXT line, transition, and the coverage still needed; Part B all 36 panels with where each lands and its state (used, reused, parked); Part C proposed new coverage; Part D holds reconciled | 83,770 | 0285634c2dc0fa450db4a861dbce7d18cfdfd520815b376d219527652f59e44b |
+| `HON_COVERAGE_MAP_20261028.json` | The machine-readable companion in the Story 01 panel map's shape: id `HD-STRICTLY-BUSINESS-VIDEO-01`, project hon, stage preliminary, timing null; sections in order with TXT line ranges; shots with the posted cards' stable ids; the 36 panels with exact repoPath, sha256, bytes and canonical asset ids; proposed additional fields named in `proposedFields` for CFA SITE INDEX to reconcile | 178,563 | 8b33e54ee0355422df835a5cd8be0021f73df26b22269eb8dcce311ac824bcc9 |
+| `OPENING_PACKET_20261028.md` | The beginning brought forward: eleven shot cards (P-1 to P-7, a new P-6b, S01-2, S01-1, S01-3) in the shot-direction structure, sections 0 to 7 written and 8 to 10 left to CFA Nova and Ziggy; the in-between action, motivation, performance and cut logic; two prompts ready (the mouth ECU still, and the landing-and-city still with no figure and no vehicle; the P-2 cab still waits on the cab design); the order of work | 54,963 | c9d88ec8b60984fc7420cadeb2895cdf6143cf7b69aa14ac249f26216f2d439b |
+| `HANDBACK_20261028.md` | This file | | |
+
+The writer index `START_HERE.txt` and the decision record `DECISIONS_20261010.md` (new section 10) carry this pass as dated additions; nothing earlier in them is rewritten.
+
+## 2. What changed, and what did not
+
+- **Nothing posted was edited.** The 36-panel board, `shot_plan.json`, the eight scene cards, the spine and the prototype plan stand byte for byte. The crosswalk and the map are companions; the packet is a new revision beside the two cards it draws on, with their versions kept as alternates where it differs.
+- **The packet proposes two things the cards do not have:** a new shot, P-6b "Across the street" (Dolo gets out of his cab, sees the cantina, walks; the cab stays parked behind him, since DECISIONS section 2 makes it his), and a reorder at the song's start (the room wide under the intro beat, then the mouth on the first word, then frame A), with the intro beat allowed to begin over the cantina settle. Each is marked proposed; the cards' versions are the alternates.
+- **Holds reconciled, not reopened** (the cards carry dated holds; these were settled after the cards were written): Leia is the customer across the counter and the song's love, married after the song (DECISIONS section 9); the informant returns after the song (section 9); Jabba is the crocodile boss, the hunter the olive-armored supporting character, the one Vader the armored enforcer (sections 7 and 9); the epilogue ends on the mirror (section 9); Chewy's established reference is the DJB beast sheet since October 12 (`VIDEO_PROTOTYPE_BRIEF_STANDARD.md` section 3; `CLAUDE_GRADES_20261012.md`), so "no accepted Chewbacca" in the cards now means "no frame of him in this room", not "no reference". The crosswalk's Part D lists each with its citation.
+- **Timing.** No seconds anywhere. The provisional anchors in `music_alignment_20261011/provisional_anchor_map.json` are provider claims and are not adopted; the version-change rule Site Nova and Ziggy settled is applied as stated: a placement that later timing touches is flagged "Timing needs review", old timestamps are preserved, nothing is shifted, other scoped approvals stand. CFA Nova owns alignment reconciliation.
+
+## 3. Coverage: what exists and what is missing
+
+**Counts.** 70 authored shots across the prologue, the twelve sections and the epilogue; 36 panels, 0 placed behind at least one shot and 0 parked; 20 shots are new coverage beyond the board; 19 shots have no art of any kind behind them yet.
+
+**Behind the shots.** 51 of the 70 authored shots (the cards' 69 plus the packet's P-6b) have at least one of the 36 panels standing behind them as composition, staging, idea or the prototype's reference attachments; 19 have none. Under the strict reading of the companion map no shot is yet "existing" (a panel behind it and nothing missing): 51 are partial and 19 missing. The 19 fall into four groups: the prologue's cab shots (P-1 to P-6b: the informant and the cab are undesigned, so there is no art and can be none until Ziggy picks the informant's direction and a cab round runs); the warship (S02-8: the card names no panel; a writer-batch frame, SB-W04, exists as staging only); Leia's reverse at the counter (S03-2: no accepted production reference); and the ship's interior set pieces and the dinner guest (S04-1, S04-2, S04-3, S04-5, S05-1, S05-4a, S05-4b, S08-1, S08-4b, S10-2: the seated cockpit still, the harness, the overhead lever and switches, the hold as a set, the dining room). Frame A's shots (S01-3, S03-1, S11-1) have the prototype's reference panels behind them (SB-02 text-described, SB-03 and SB-04 as attachments D and E) and are gated on the unaccepted consolidated starting frame, so they count as partial, not missing. Beyond the panels, the Falcon archive under `references/From Grok/` holds graded frames that can stage several of these (the throttle insert C07, the fader and decks C20 and E13, the cargo hold C67, the ramp C42 to C44); the grades are in `CLAUDE_GRADES_20261012.md`, and they are staging references, not start frames.
+
+**Ready.** Dolo's face A, mouth B and wrist F, as the manifest limits them (the wrist side set per scene, not canon). Chewy's reference (the DJB sheet). The enforcer's views (DA-02, DA-04). The crocodile boss and the olive hunter as decided references. The r4 iced anchor for the epilogue's look.
+
+**Missing, grouped (the cards' own lists, deduplicated).** Sets: the cab (exterior, door, step, interior); the landing, the street and the city; the cantina (one room, two axes) and the club cut-in's bouncer; the ship's hold, hangar and cabin; the dining room and the chamber. Characters: the informant's production adaptation (the only character with no reference at all); Leia's accepted production reference and her costume (the likeness crop and the ivory coat are candidates, not a decision); Chewy in the cantina and in the cockpit as frames. Props and set pieces: the corrected mouth ECU (prompt ready); the consolidated starting frame for frame A (the prototype's own gate; the plan's paragraph is the prompt); the seated cockpit still with harness (the S07-3 repair that unblocks S02-6, S04-3, S05, S07 and S09); the overhead lever, the switch panel, the navigation display, the comms panel, the console controller; the chest ship as a design; the credits and their case; the bounty puck; the slab and the chamber; the iced grill as a prop; the ship exterior (one silhouette round, three views, for Ziggy to pick from); the warship, the Maw and the HUD plate; the neck blaster as an accepted reference (the neck-bling handoffs of October 9 and 14 exist; whether a reference was accepted from them is not re-verified here). Dialogue: P-5's page, after Ziggy confirms the exchange.
+
+## 4. Genuine unresolved author choices (Ziggy's; the writing continues around them)
+
+1. P-6b, the street: in, or out.
+2. The reorder at the song's start (room wide, then mouth, then frame A), or the card's order (mouth first); and whether the intro beat may begin over the cantina settle.
+3. The informant's direction, so her adaptation can be requested; the packet assumes nothing about her look beyond the handoff's mechanical forearm.
+4. The opening outfit for the cab (proposed; the handoff requires one coherent outfit chosen before cabin frames).
+5. P-5's exchange as the prologue card proposes it (no fare; the tip as the fare), so the page of lines can be written.
+6. Leia's costume (the ivory coat is the candidate); whatever she wears in S03-2 she wears through S10.
+7. The outro's reading of "restrained" (the choruses card: the three names as sound, no stage, no second performer, no card inside the song; SB-31 parked) and where the end title sits, inside the song's last seconds or after.
+8. The ship exterior: which silhouette, once a round exists.
+9. The chamber wardrobe in S10 (the card keeps the jacket unless told otherwise) and the dinner's staging (the card departs from SB-07 on purpose: Vader alone at the far end).
+10. The editorial order dinner, farewell, slab (the plan's proposed order; the lyric mentions the ice first).
+11. The bridges' shouted words as sound over the inserts (neither bridge is a lip-sync card in the plan).
+12. The epilogue's length, and whether the informant's witness beat in E-1 is wanted now that her return is decided.
+
+Not open any more, and not asked again: customer or wife; which boss; which hunter; which Vader; mirror or exit; whether the informant returns.
+
+## 5. The next bounded writing task (proposed)
+
+**The first-verse packet: S02-1 to S02-10 in the shot-direction structure**, the way this packet did the opening. It is the next section in production order (production proceeds forward from the counter), it is the section where the per-shot source question matters most (the cold half, S02-8 to S02-10, is where supplied footage is most plausible, and Ziggy asked for shot descriptions that help him recall clips), and two of its decisions are now settled (the crocodile boss, the olive hunter), so S02-2 and S02-4 can be written to decided references. Gated on Ziggy and done in parallel when he answers: P-5's dialogue page (one page, after item 5 above). The scoring department's work for Lisan continues in its own lane and is not displaced by this.
+
+## 6. For the site (CFA SITE INDEX)
+
+The map's fields beyond the Story 01 shape are additions, named in its `proposedFields`, for the site to reconcile; none is assumed to work in the current parser. Panels are the original concept (role per use: composition, staging, idea, repurposed); A, B, F and the cast references are reference material; generated results are a third role and none is linked here. No id is fabricated: panel ids and asset ids are the site's own from `story_notes.json`; shot ids are the posted cards'. Intake is not acceptance.
+
+Claude, lead writer

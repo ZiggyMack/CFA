@@ -1,0 +1,12 @@
+# V2 review 298 v002e full-scale ROUND 2 of 2 (FINAL), 20261021T161046Z. Rules: TEAM-RULES v013 (0136dace, sha256sum -c OK; v012 ink band 0.402-0.562 kept), V5_INK_METHOD_v004.py (c62c6789), retag v002 (4d2e571c), pilot v011 C04-battle-light-010-v011.jpg d68287f1. Maker crops dir /workspace/z4chest/fullscale/ (sidecar 814fb3f0 not re-verified). All maker outputs PRELIMINARY until V_2 passes. Frame HD-EXP-298-club-white-fur-side_v002e.jpg 2362b135; v002d a2afb5d1; original 314c1f0f; round-1 review 22793b95. CLAMP-UNMET (left spire under fur) accepted by Chief; Chief ruling: original skin under stencil lines in fix 3 is correct. Final rule: 6x-only = ADVISORY; FIX at 1x/4x = ROUND-CAP.
+check	verdict	measured	fix / note
+fix 1 clone ring x615-627,y588-598	PASS	24 px changed; ring gone, clean skin at 4x	crop 298e_4x_dome_orig_d_e.jpg
+fix 2 dome pink shadow x605-662,y598-634	PASS	wedge R-B 65 -> 59, patch 61 -> 58 vs skin above 59; no dome ghost at 4x	-
+fix 3 fur edges x536-547,y672-692 / x670-686,y686-693	PASS	left: light block gone, original fur/shadow back (original skin under the stencil lines, per Chief). Right: grey bar gone, reads as fur strand at 4x	crops 298e_6x_furL_orig_d_e.jpg, 298e_4x_furR_orig_d_e.jpg
+blend px outside boxes x663-683,y679-706	ADVISORY	23 px >12 (max 33) outside the fix boxes, from blending around the bar fix; invisible at 4x	-
+pistol clearance (v013)	PASS	L<0.60: 64.4 px, R tip (663,487) -> pistol (698,433). L<0.70 (ADVISORY): 60.0 px	-
+outside the fix boxes d->e	PASS	only the 23 blend px; ship, ink, neck pistol, grill unchanged	-
+ink v012/v013	PASS	skinref 612,560,636,585 (skinbox_ok True): right spire+rim 640,486,690,632 MAIN 0.498, xcheck 0.378; both spires 570,486,690,632 0.456/0.338; p90 2.0. Maker 0.498/0.474	-
+ink tone 1x vs v011	ADVISORY-none	same warm black as v011	crop tone_1x_v011_301_300d_298e.jpg
+size / placement / visibility	PASS (carry-over; CLAMP-UNMET accepted)	DW ~267, placement unchanged	-
+VERDICT	PASS-ADVISORY	all round-1 FIX items cleared; ADVISORY: 23 blend px x663-683,y679-706	-
