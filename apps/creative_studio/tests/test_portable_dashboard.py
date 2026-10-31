@@ -94,6 +94,8 @@ class PortableDashboardTest(unittest.TestCase):
         self.assertEqual((snapshot / 'storyboard_takes.js').read_bytes(), (self.source / 'storyboard_takes.js').read_bytes())
         self.assertEqual((snapshot / 'collaborator_reviews.js').read_bytes(), (self.source / 'collaborator_reviews.js').read_bytes())
         index = (snapshot / 'index.html').read_text()
+        self.assertIn("window.REVIEW_INITIAL={project:'hon',view:'all'}", index)
+        self.assertIn("if(!location.hash)location.hash='hon/all'", index)
         self.assertLess(index.index('src="storyboard_takes.js"'), index.index('src="library.js"'))
         self.assertLess(index.index('src="collaborator_reviews.js"'), index.index('src="library.js"'))
         self.assertFalse((snapshot / 'library/private.txt').exists())

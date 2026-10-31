@@ -52,9 +52,26 @@ def query_route(query, config: dict) -> str | None:
     return valid_route('#' + '/'.join(quote(part, safe='') for part in parts), config)
 
 
-def route_query_update(value, initial_route: str | None, config: dict) -> dict | None:
+def navigation_request(query, config: dict, previous: dict | None = None) -> dict:
+    """Separate an outside navigation command from our own URL acknowledgements.
+
+    A child route reported to the URL is already on screen. Reissuing it as a
+    command on the next rerun can rewind a more recent click in the iframe.
+    """
+    current = query_route(query, config)
+    if previous and current == previous.get('queryRoute'):
+        return dict(previous)
+    project = 'hon' if 'hon' in config['projects'] else config['projects'][0]
+    return {'queryRoute': current, 'requestedRoute': current or f'#{project}/all',
+            'requestID': (previous.get('requestID', 0) if previous else 0) + 1}
+
+
+def route_query_update(value, initial_route: str | None, config: dict,
+                       request_id: int | None = None) -> dict | None:
     """Ignore stale iframe results when a different direct link has just opened."""
     if not isinstance(value, dict) or value.get('requestedRoute') != initial_route:
+        return None
+    if request_id is not None and value.get('requestID') != request_id:
         return None
     route = valid_route(value.get('route'), config)
     if not route:
@@ -63,10 +80,12 @@ def route_query_update(value, initial_route: str | None, config: dict) -> dict |
     return {'project': parts[0], 'view': parts[1], 'album': parts[2] if len(parts) == 3 else None}
 
 
-def render_dashboard(snapshot: Path, height: int = 850, initial_route: str | None = None):
+def render_dashboard(snapshot: Path, height: int = 850, initial_route: str | None = None,
+                     request_id: int | None = None):
     # Stable registration name and browser origin preserve localStorage reviews
     # when a new content-addressed snapshot replaces the previous deployment.
     component = declare_component("cfa_full_visual_library", path=str(snapshot))
     config = route_config(snapshot)
     return component(height=height, initialRoute=valid_route(initial_route, config),
-                     routeConfig=config, key="cfa-full-visual-library", default=None)
+                     requestID=request_id, routeConfig=config,
+                     key="cfa-full-visual-library", default=None)

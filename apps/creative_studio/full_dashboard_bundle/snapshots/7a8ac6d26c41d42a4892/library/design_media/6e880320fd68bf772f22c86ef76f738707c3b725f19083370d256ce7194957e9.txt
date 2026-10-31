@@ -1,0 +1,112 @@
+SEEDANCE 2.5 — FIRST-FRAME BENCHMARK CANDIDATE
+Reviewed and saved: October 9, 2026
+
+STATUS
+The official editor graph is saved unchanged and parses locally. Its structure
+was reviewed. This is not a Cloud-validated, compiled, executed or accepted CFA
+workflow. No image was uploaded, no video was generated and no credits were spent.
+
+FILES
+seedance_2_5_first_frame.official.json — unchanged official example, four nodes.
+seedance_2_5_20261009.discovery.json — retrieval, SHA-256, settings and evidence.
+
+Source:
+https://github.com/Comfy-Org/workflow_templates/blob/main/templates/api_seedance2_5_flf2v.json
+Downloaded raw source on 2026-10-09 at 05:51:08 UTC; 4,205 bytes.
+SHA-256: 62eb1b0312fc02988bf2b2f3790946b80f053fa5ad3e0e08926701df84e2acc9
+The main-branch URL is mutable; the hash identifies this local snapshot.
+Graph revision 0 is an editor field, not a resolved Git commit.
+
+WHY THIS RECIPE
+Material: one approved 16:9 starting image plus the common action prompt.
+Change: create new motion for the same short opening-scene test.
+Preserve: character, visible tattoos/grill/piercings, outfit, four credit props,
+composition and the specified camera/action. A still contains no complete
+performance to preserve. Judge generated motion and detail continuity directly.
+
+This uses the existing CFA image-to-video route and comparison procedure.
+Seedance is an additional model family accessed through Comfy. It is not a new
+workflow engine or evidence that Comfy itself is one single video model.
+
+THE SAVED EXAMPLE IS NOT THE BENCHMARK CONFIGURATION
+The downloaded graph still has the official pool prompt, two example images,
+both first and last frames connected, five-second duration, 720p and audio on.
+The example images were not downloaded. Do not submit that example as our test.
+
+Prepare a separate working copy when the shared image is selected:
+1. Load that exact image at node 41 and record its file/hash and any preprocessing.
+2. Disconnect link 32 into node 38's last_frame input. Remove unused node 40
+   (the pool ending image) from the working copy. Leave last_frame_asset_id empty.
+3. Keep node 38, ByteDance2FirstLastFrameNode, on Seedance 2.5. Replace the example
+   prompt with the current shared benchmark prompt. Target eight seconds and
+   720p, with audio off for this visual comparison.
+4. Keep the SaveVideo branch, node 16, with a unique experiment output prefix.
+   Queue once for one output; no automatic rerolls, finishing or upscaling.
+5. Check actual Cloud node schema, model choice, account access and price.
+   Convert and inspect the compiled inputs before submitting an authorized run.
+   Retain both the working editor graph and actual submission/run evidence.
+
+For Seedance 2.5, this node's aspect ratio follows the first image; there is no
+separate ratio widget. The common 16:9 source supplies the target aspect.
+Documented choices are 480p/720p/1080p, 4–30 seconds, and an audio toggle.
+The last frame is optional. A numeric seed does not make this service
+deterministic, and equal seed numbers across different models are not equal noise.
+Image validation and oversized-image downscaling exist upstream; inspect any
+actual preprocessing and output rather than assuming exact pixel preservation.
+
+The official file named api_seedance2_5_i2v_1080p.json instead uses a general
+reference-image node. The first/last-frame recipe selected here has an explicit
+first_frame input, which better matches our common starting-frame comparison.
+
+EXTENSION IS A SEPARATE TEST
+The official Seedance 2.5 reference-video route supports task_type=extend.
+Its result contains ONLY THE NEWLY GENERATED SEGMENT at the requested duration,
+with the source clip's aspect ratio. It is not automatically an accumulated
+full movie. Preserve the parent, record the join and assemble deliberately.
+Review continuity at that join. No extension graph has been prepared or run here.
+The optional draft-to-final route also belongs in a separate efficiency test;
+do not silently compare a 480p draft against the other native 720p candidates.
+
+ACCESS AND EVIDENCE
+Use the existing Comfy Partner Nodes account/credit route. This calls hosted
+Seedance; it does not need local weights or a new local GPU setup. Current Cloud
+support, credit balance, quote and reference acceptance remain unknown. Cloud
+can trail upstream/stable node releases. Provider portrait/asset checks may apply
+to actual inputs; none were submitted during this intake. No new account or
+credentials were created. Model-specific controls must be rechecked if selecting
+2.0, Fast, Mini or Draft instead; do not inherit 2.5 settings blindly.
+
+Read the native outputs with the current benchmark criteria: identity and visible
+detail, hands/prop count, temporal stability, instruction following and usability.
+Record defect times, actual dimensions/duration, latency, credit use and operator
+effort. Mark obscured details unobserved; do not promote provider claims into a
+measured quality result. The previous native LTX-2.5 motion test is an executed
+comparison reference with eye/smile drift, not an accepted master.
+
+EXISTING METHOD AND PROJECT LINKS
+Problem-to-recipe lookup:
+docs/notes/explorable_world/comfy/workflows/README.md#choose-by-problem
+Pan lesson — image_to_video entry:
+[local path]
+Pan controlled comparisons:
+[local path]
+Tutorial ledger and file map:
+[local path]
+[local path]
+Intake and decision/feedback:
+docs/notes/explorable_world/comfy/templates/workflow_intake.md#decision-and-feedback
+Actual-run template — keep the existing schema unchanged:
+docs/notes/explorable_world/comfy/templates/run_record.json
+Current shared benchmark:
+docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/BENCHMARK.txt
+Existing native motion evidence:
+docs/notes/explorable_world/comfy/workflows/hon_dolo_motion_v001.record.json
+Reusable findings return:
+docs/notes/explorable_world/pathfinder_handoff/README.md
+
+CURRENT PRIMARY DOCUMENTATION
+https://docs.comfy.org/tutorials/partner-nodes/bytedance/seedance-2-5
+https://github.com/Comfy-Org/embedded-docs/blob/main/comfyui_embedded_docs/docs/ByteDance2FirstLastFrameNode/en.md
+https://github.com/Comfy-Org/ComfyUI/blob/master/comfy_api_nodes/nodes_bytedance.py
+https://docs.comfy.org/tutorials/partner-nodes/overview
+https://seed.bytedance.com/en/seedance2_5

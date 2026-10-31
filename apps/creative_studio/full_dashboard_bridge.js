@@ -4,7 +4,7 @@
     try { return new URL(document.referrer).origin; } catch { return location.origin; }
   })();
   const send = (type, extra = {}) => window.parent.postMessage({isStreamlitMessage: true, type, ...extra}, parentOrigin);
-  let routeConfig = null, requestedRoute = null, lastRequest, lastReported = '';
+  let routeConfig = null, requestedRoute = null, requestID = null, lastRequest, lastReported = '';
   const validRoute = value => {
     if (!routeConfig || typeof value !== 'string' || !value.startsWith('#') || value.length > 700) return null;
     let parts;
@@ -16,7 +16,7 @@
   const reportRoute = () => {
     const route = validRoute(location.hash);
     if (!route) return;
-    const value = {route, requestedRoute};
+    const value = {route, requestedRoute, requestID};
     const encoded = JSON.stringify(value);
     if (encoded === lastReported) return;
     lastReported = encoded;
@@ -31,10 +31,12 @@
     resize(event.data.args?.height);
     routeConfig = event.data.args?.routeConfig || null;
     requestedRoute = validRoute(event.data.args?.initialRoute);
+    requestID = event.data.args?.requestID ?? null;
     // Apply each outer navigation request once. Ordinary rerenders must not
     // reset a route the reader has just chosen inside the library.
-    if (requestedRoute !== lastRequest) {
-      lastRequest = requestedRoute;
+    const request = JSON.stringify([requestID, requestedRoute]);
+    if (request !== lastRequest) {
+      lastRequest = request;
       if (requestedRoute && validRoute(location.hash) !== requestedRoute) location.hash = requestedRoute;
     }
     queueMicrotask(reportRoute);

@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 APP = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(APP))
-from full_dashboard_component import query_route, route_config, route_query_update, valid_route
+from full_dashboard_component import query_route, route_config, route_query_update, valid_route, navigation_request
 
 
 class DashboardRouteTest(unittest.TestCase):
@@ -70,9 +70,39 @@ class DashboardRouteTest(unittest.TestCase):
         self.assertIsNone(route_query_update({'route': '#criminal_mind/Library', 'requestedRoute': initial},
                                             initial, self.config))
 
-    def test_full_page_passes_route_and_keeps_native_state_on_rerun(self):
-        from streamlit.testing.v1 import AppTest
-        from streamlit.runtime.pages_manager import PagesManager
+    def test_fresh_landing_opens_hon_library_and_explicit_intake_still_works(self):
+        request = navigation_request({}, self.config)
+        self.assertEqual(request['requestedRoute'], '#hon/all')
+        self.assertEqual(request['requestID'], 1)
+        self.assertEqual(navigation_request({'project': 'hon', 'view': 'intake'}, self.config)['requestedRoute'],
+                         '#hon/intake')
+
+    def test_child_navigation_updates_url_without_reissuing_an_old_command(self):
+        request = navigation_request({'project': 'hon', 'view': 'all'}, self.config)
+        for destination in ('#criminal_mind/all', '#criminal_mind/casa_baldadoon', '#hon/all'):
+            report = {'route': destination, 'requestedRoute': request['requestedRoute'],
+                      'requestID': request['requestID']}
+            query = route_query_update(report, request['requestedRoute'], self.config, request['requestID'])
+            self.assertIsNotNone(query)
+            acknowledged = {**request, 'queryRoute': query_route(query, self.config)}
+            next_request = navigation_request(query, self.config, acknowledged)
+            self.assertEqual(next_request['requestedRoute'], '#hon/all')
+            self.assertEqual(next_request['requestID'], 1,
+                             'A URL acknowledgement must not turn into a navigation command')
+            request = next_request
+
+    def test_external_navigation_to_original_route_gets_a_fresh_token(self):
+        first = navigation_request({'project': 'hon', 'view': 'all'}, self.config)
+        acknowledged = {**first, 'queryRoute': '#criminal_mind/casa_baldadoon'}
+        back = navigation_request({'project': 'hon', 'view': 'all'}, self.config, acknowledged)
+        self.assertEqual(back['requestedRoute'], first['requestedRoute'])
+        self.assertEqual(back['requestID'], 2)
+        stale = {'route': '#criminal_mind/all', 'requestedRoute': '#hon/all', 'requestID': 1}
+        self.assertIsNone(route_query_update(stale, back['requestedRoute'], self.config, back['requestID']))
+        self.assertIsNotNone(route_query_update({**stale, 'requestID': 2}, back['requestedRoute'],
+                                                self.config, back['requestID']))
+
+    def page_fixture(self):
         shutil.copyfile(APP / 'full_dashboard_component.py', self.root / 'full_dashboard_component.py')
         page = self.root / '01_Full_Visual_Library.py'
         # This page's APP_DIR is its parent.parent, so retain its normal folder.
@@ -83,6 +113,11 @@ class DashboardRouteTest(unittest.TestCase):
         (self.root / 'full_dashboard_bundle/current.json').write_text(json.dumps({
             'snapshot': 'snapshots/test', 'assetCount': 0, 'buildID': 'test'}), encoding='utf-8')
         (self.root / 'app.py').write_text("import streamlit as st\nst.title('Studio')\n", encoding='utf-8')
+
+    def test_full_page_passes_route_and_keeps_native_state_on_rerun(self):
+        from streamlit.testing.v1 import AppTest
+        from streamlit.runtime.pages_manager import PagesManager
+        self.page_fixture()
         with patch.object(PagesManager, 'uses_pages_directory', None):
             app = AppTest.from_file(str(self.root / 'app.py'), default_timeout=30).run()
             app.switch_page('pages/01_Full_Visual_Library.py')
@@ -108,6 +143,43 @@ class DashboardRouteTest(unittest.TestCase):
                 self.assertEqual(args['initialRoute'], '#criminal_mind/all')
                 self.assertEqual(app.session_state.studio_project, 'hon')
                 self.assertEqual(app.session_state.studio_reviews, {'existing': {'status': 'keep'}})
+
+    def test_full_page_acknowledges_clicks_without_bounce_or_parameter_loss(self):
+        from streamlit.testing.v1 import AppTest
+        from streamlit.runtime.pages_manager import PagesManager
+        self.page_fixture()
+        with patch.object(PagesManager, 'uses_pages_directory', None), \
+                patch('full_dashboard_component.render_dashboard', return_value=None) as render:
+            app = AppTest.from_file(str(self.root / 'app.py'), default_timeout=30).run()
+            app.switch_page('pages/01_Full_Visual_Library.py')
+            app.query_params['trace'] = ['one', 'two']
+            app.session_state.studio_reviews = {'existing': {'status': 'keep'}}
+            app.run()
+            self.assertFalse(app.exception)
+            self.assertEqual(render.call_args.kwargs['initial_route'], '#hon/all')
+            self.assertEqual(render.call_args.kwargs['request_id'], 1)
+            # Simulate the reports from successive project and Casa clicks.
+            for route in ('#criminal_mind/all', '#criminal_mind/casa_baldadoon', '#hon/all'):
+                render.return_value = {'route': route, 'requestedRoute': '#hon/all', 'requestID': 1}
+                app.run()
+                self.assertFalse(app.exception)
+                project, view = route[1:].split('/')
+                self.assertEqual(app.query_params['project'], [project])
+                self.assertEqual(app.query_params['view'], [view])
+                self.assertEqual(app.query_params['trace'], ['one', 'two'])
+                app.run()  # The URL reflection causes an ordinary rerun.
+                self.assertFalse(app.exception)
+                self.assertEqual(render.call_args.kwargs['initial_route'], '#hon/all')
+                self.assertEqual(render.call_args.kwargs['request_id'], 1)
+            # An explicit outside route must win over the old component value.
+            app.query_params['project'] = 'criminal_mind'
+            app.query_params['view'] = 'casa_baldadoon'
+            app.run()
+            self.assertFalse(app.exception)
+            self.assertEqual(render.call_args.kwargs['request_id'], 2)
+            self.assertEqual(app.query_params['project'], ['criminal_mind'])
+            self.assertEqual(app.query_params['view'], ['casa_baldadoon'])
+            self.assertEqual(app.session_state.studio_reviews, {'existing': {'status': 'keep'}})
 
 
 if __name__ == '__main__':

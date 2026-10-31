@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUTC": "2026-10-09T17:11:59.636409+00:00",
+  "observedDate": "2026-10-09",
+  "observedBy": "Root agent through actual IAB tab 33 native notebook Sources UI; local records updated by delegated agent",
+  "notebookID": "114707d8-29b3-4505-bc06-dd7abcc60e4d",
+  "notebookURL": "https://notebook.google.com/notebook/114707d8-29b3-4505-bc06-dd7abcc60e4d",
+  "status": "text_source_processed_visual_sources_failed_task_prompt_not_sent",
+  "existingJPEG": {
+    "status": "still_unsupported",
+    "error": "This image content is not supported.",
+    "newRetryByThisReceiptClaimed": false
+  },
+  "PNG": {
+    "receipt": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/compatibility_20261009/png_test.json",
+    "remoteSourceID": "5db3fd0c-9121-4fb2-804c-840a226bd1f0",
+    "bytes": 778252,
+    "status": "failed",
+    "selectableCheckbox": false,
+    "error": "This image content is not supported."
+  },
+  "PDF": {
+    "receipt": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/compatibility_20261009/pdf_test.json",
+    "remoteSourceID": "e8db0cd3-ad05-40ff-91c1-2bb306016012",
+    "bytes": 256144,
+    "status": "failed",
+    "selectableCheckbox": false,
+    "error": "Error uploading source, try again!"
+  },
+  "textControl": {
+    "receipt": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/compatibility_20261009/text_source_control.json",
+    "remoteSourceID": "c0e6a4c9-4a78-4a20-96df-1a9b0193dcc1",
+    "sha256": "c6fc9cc4c5c76e6d33de79b577cbc1b1998f0acc546c71654e1fe688506315ad",
+    "status": "processed_selected_body_opened_revision_verified",
+    "citedRetrievalVerified": false,
+    "taskPromptSent": false
+  },
+  "sourcePanelAfter": {
+    "totalEntries": 16,
+    "usableSelectedSources": 6,
+    "usableVisualSources": 0,
+    "countIsNotVisualReadiness": true
+  },
+  "localImageHealthCheck": {
+    "reportedBy": "Root agent local inspection",
+    "imageCount": 19,
+    "format": "JPEG",
+    "mode": "RGB",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "byteSizeRangeApproximateKB": [
+      91,
+      433
+    ],
+    "embeddedICCProfilesObserved": 0,
+    "interpretation": "Healthy local dimensions/mode and modest sizes do not identify the remote failure root cause."
+  },
+  "conclusion": "Lossless PNG and exact-JPEG PDF wrapping did not cure ingestion. Text succeeded through the same chooser. Root cause remains unknown; this does not establish universal image incompatibility.",
+  "officialDocumentation": {
+    "url": "https://support.google.com/gemininotebook/answer/16215270?hl=en",
+    "checkedDate": "2026-10-09",
+    "finding": "Google lists JPEG/PNG image Sources and PDF/text support, while cautioning that some image types may not work well. Documented support does not override these observed failures."
+  },
+  "nextAction": "Retain the usable Lisan text source; perform a separately recorded cited readback before delivering the planning prompt. Keep visual-grounded checks pending. No bulk conversion; use temporary delivery-copy policy for any justified further test.",
+  "deliveryCopyPolicy": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/compatibility_20261009/DELIVERY_COPY_POLICY.txt",
+  "cleanup": {
+    "localTemporaryPNGPDFRender": "removed; cleanup_receipt.json preserves paths, hashes and bytes",
+    "remoteFailedEntries": "retained; local cleanup does not remove them",
+    "completedAtUTC": "2026-10-09T17:14:25.869608+00:00"
+  },
+  "originalsUnchanged": true,
+  "newCatalogAssets": 0,
+  "newAcceptedReferences": 0,
+  "bulkConversionPerformed": false,
+  "taskPromptSent": false,
+  "generationJobs": 0
+}

@@ -198,7 +198,7 @@ def load_catalog(path: str, modified: int) -> dict:
 
 
 def init_state() -> None:
-    for key, default in (("studio_view", CORNER), ("studio_selected", None),
+    for key, default in (("studio_view", "Library"), ("studio_selected", None),
                          ("studio_favorites", set()), ("studio_notes", {}), ("studio_pages", {}),
                          ("studio_review_overrides", {}), ("studio_reviews", {}), ("studio_basket", set()),
                          ("studio_review_provenance", {}), ("studio_note_presets", [])):
@@ -1699,7 +1699,7 @@ def main() -> None:
         render_collaborators(data)
         return
     if view in ("Intake verification", "intake"):
-        selected = next((a for a in data["assets"] if a["id"] == st.session_state.studio_selected), None)
+        selected = next((a for a in data["assets"] if a["id"] == st.session_state.get("studio_selected")), None)
         if selected:
             render_selected(selected, data.get("reviewIntake"), data)
         else:

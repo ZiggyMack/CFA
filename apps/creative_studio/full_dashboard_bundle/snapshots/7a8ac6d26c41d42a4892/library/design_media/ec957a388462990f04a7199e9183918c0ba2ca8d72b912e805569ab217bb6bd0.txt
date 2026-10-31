@@ -1,0 +1,65 @@
+{
+  "schema": "grok-return-intake-v1",
+  "intakeID": "GROK-HD-SB-GRILLUP-v001",
+  "recordedAtUTC": "2026-10-09T22:57:54.633800+00:00",
+  "state": "received_verified_draft_pending_review",
+  "archive": {
+    "path": "docs/notes/downloads/GROK-HD-SB-GRILLUP-v001.zip",
+    "sha256": "06c70f712abda6192d74383a8c646f20e0636a1b3758e75512f6e5ef79d12b95",
+    "bytes": 4297117,
+    "preserved": true,
+    "crcVerified": true
+  },
+  "safety": {
+    "memberPathsValidated": true,
+    "symbolicLinksRejected": true,
+    "sizeAndRatioLimitsPassed": true,
+    "providerCodeExecuted": false
+  },
+  "counts": {
+    "members": 20,
+    "uniqueFiles": 20,
+    "images": 19,
+    "selects": 10,
+    "alternatives": 8,
+    "anchors": 1,
+    "documents": 1,
+    "withinPackageDuplicateOccurrences": 0,
+    "reusedExistingCatalogFiles": 0
+  },
+  "uncompressedBytes": 4520109,
+  "selectedR4AnchorIncluded": true,
+  "orderedSelectAssetIDs": [
+    "HD-GRILLUP-a9e6f58d0b70",
+    "HD-GRILLUP-57bce647c089",
+    "HD-GRILLUP-02659c457fb9",
+    "HD-GRILLUP-894990536803",
+    "HD-GRILLUP-aa4962b0cbaa",
+    "HD-GRILLUP-08541ac0b6d8",
+    "HD-GRILLUP-fde483650ebb",
+    "HD-GRILLUP-2369c3b2f126",
+    "HD-GRILLUP-1c67855e0139",
+    "HD-GRILLUP-5c213b5307ad"
+  ],
+  "providerManifest": "No separate machine-readable manifest found; provider NOTES_FOR_NOVA_AND_CODEX.md contains ten-beat ordered sheet and QA text.",
+  "acceptance": "not_accepted",
+  "visualReview": "REVIEW.txt",
+  "ledger": "asset_ledger.json",
+  "catalogSnapshot": {
+    "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+    "sha256": "9b55eadba747474b010fb1e7dbaafce9e012203a9fb5cc7026c81f3d650c2896"
+  },
+  "visualInspection": {
+    "count": 12,
+    "scope": "All ten selected panels, r4 anchor and alternative03 inspected; seven remaining alternatives technically decoded but not visually reviewed.",
+    "labelContentConflict": "Selected files02 and03 appear transposed relative to filenames/provider beat sheet; original order and names preserved pending review.",
+    "criticalFindings": [
+      "Panel02 removal close-up has long upper canines and white lower teeth.",
+      "Panel03 mirror portrait lacks the removal action attributed to its filename and has inconsistent reflection.",
+      "Panel04 shows three hoops in total; panel10 shows two.",
+      "Panel05 case grill has long canines unlike r4.",
+      "Panels06–10 drift in face, tattoos, jewelry and grill details."
+    ],
+    "acceptance": "not_accepted"
+  }
+}
