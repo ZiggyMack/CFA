@@ -1,0 +1,14 @@
+# V4 FALCON QA, C04-battle-light-011 v006 (9f11b942ec0d415b ok; raw original 2d0afb26), full-scale round 1 of 2. Rules: TEAM-RULES v014 (be9cd49a, incl. v013) + V_1 12:06 ET steering (clearance on spec L<0.60, L<0.70 advisory; cloth stair-step FIX only at plain 4x or gap/halo/overlap). Ink V5_INK_METHOD_v004.py c62c6789 + cloth mask, band 0.402-0.562. Z_ numbers PRELIMINARY. No Z_ script; nothing edited. V_4 20261021T161224Z. Crops: V4_FALCON_C04-011v006_fullchest_20261021T161224Z_1x_v001.png, V4_FALCON_C04-011v006_fullchest_20261021T161224Z_4x_v001.png, V4_FALCON_C04-011v006_fullchest_20261021T161224Z_pistolspire6x_v001.png, V4_FALCON_C04-011v006_fullchest_20261021T161224Z_collarstep4x_v001.png.
+item	measured	result	note
+sideways	sternum x640, ship centre x640 (Z_6 exception, 15 px left)	NOT FAILED	per brief
+size	disc 214.5; eye 1.23 (650,188/824,200)	PASS	shoulder not measured
+placement	pit (655,520), rim 633.6 = 0.530 DW	PASS	-
+pistol_clearance	14.9 px on L<0.60, on L<0.70 and on -16-below-median (specks <6 dropped, fill included), spire 676,534 -> pistol 690,529 (Z_8 68.4/11.4)	PASS	<15: 6x crop
+ink_stroke_fill	main 0.481, p90 2.0; 4x stencil grid like v011; lower disc darker wash at 1x, similar to v011's disc	PASS (ADVISORY wash)	-
+spires_rim	both spires read at 1x; left spire along the left collar edge stays clear of it; rim on skin	PASS	-
+erase	no saucer, beam or pod traces at 1x/4x	PASS	-
+cloth	5 px >12 (max 22) <25; nothing visible at 4x	PASS	-
+collar_step	x637-645 y690-720: slight stair-step, no gap/halo/overlap at plain 4x	ADVISORY	-
+pistol_box	non-ship px in 680,430,748,540: 0 px >12, max 10, but only 41% exactly equal (full re-encode)	PASS (not literal bytes)	v009 rule 3 tolerance
+outside	6 px >12 (max 22) incl. face px (829,240-247; 760,264; 768,392)	PASS (ADVISORY)	encode noise on face edges, not visible
+VERDICT	-	PASS-ADVISORY	round 1 of 2

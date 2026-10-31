@@ -799,6 +799,7 @@ def change_page(signature: str, value: int) -> None:
 
 
 def hero(project: dict, view: str, assets: list[dict]) -> None:
+    view = "Accessories" if view == "Tattoos & piercings" else view
     if view == "Comfy swap targets":
         st.markdown(f'<div class="studio-hero"><div class="eyebrow">CFA · {html.escape(project["name"])}</div>'
                     '<h1>Comfy results &amp; swap targets</h1>'
@@ -1133,6 +1134,11 @@ def render_design_workspace(data: dict, project: str, view: str) -> None:
         data, project, view, LIBRARY_DIR, render_grid,
         lambda asset: select_asset(asset["id"], asset["project"]),
         reviews=st.session_state.studio_reviews, query=query, navigate=navigate)
+    if view == "Tattoos & piercings":
+        current_module("review_intake_view").render_golden_references(
+            data, project, query, LIBRARY_DIR,
+            select_asset,
+            reviews=st.session_state.studio_reviews)
 
 
 def render_needs_review(data: dict, project: str) -> None:
@@ -1669,7 +1675,7 @@ def main() -> None:
                              ("KEEP & REFER", ("Documents", "Export basket", "Favorites & notes"))):
             st.caption(label)
             for view in views:
-                nav_label = view
+                nav_label = "Accessories" if view == "Tattoos & piercings" else view
                 if view == 'Export basket':
                     nav_label += ' · '+str(navigation_reference_count(review_data['assets'], st.session_state.studio_basket))
                 elif view == 'Documents':

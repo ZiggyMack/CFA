@@ -1,0 +1,673 @@
+{
+  "schema_version": 1,
+  "workflow": "hon_dolo_audio_replace_v001",
+  "reviewed_on_local": "2026-10-07",
+  "checked_at_utc": "2026-10-08T02:25:21.774Z",
+  "status": "saved_and_server_converted_live_inputs_verified_not_executed",
+  "scope": "Preparation and editable Cloud save only; no generation, partner call, GPU job or paid run was submitted.",
+  "authentication": {
+    "server_name": "comfyui-cloud",
+    "version": "0.70.0",
+    "auth_state": "authenticated (OAuth)",
+    "known_workflow_read": "fa384c55-d9d5-4afe-9f41-d0bbe30b15d1 version 1"
+  },
+  "cloud": {
+    "workflow_id": "2c490a37-6110-4c7b-b073-a3354493645b",
+    "name": "Hon Dolo - Replace Video Soundtrack",
+    "version": 2,
+    "editor_url": "https://cloud.comfy.org/#2c490a37-6110-4c7b-b073-a3354493645b",
+    "node_count": 8,
+    "executable_node_count": 7,
+    "conversion": "get_saved_workflow server conversion and readback",
+    "conversion_warnings": [],
+    "run": false,
+    "prompt_id": null,
+    "accepted": false
+  },
+  "artifacts": {
+    "editor": "hon_dolo_audio_replace_v001.cloud.editor.json",
+    "compiled_debug_evidence": "hon_dolo_audio_replace_v001.cloud.api.json",
+    "original_preflight": "hon_dolo_audio_replace_v001.preflight.json",
+    "original_local_proof": "hon_dolo_audio_replace_v001.record.json",
+    "editor_sha256": "b4865b519f7a6f0612124fbab5ebee7438fa0ddebb712a5a485347c138424cad",
+    "compiled_debug_evidence_sha256": "92850720c62e99a99ac52c4f80f0e723d938227533b682cdbbdd1e2486007fa8"
+  },
+  "input_files": [
+    {
+      "role": "source_picture",
+      "local_path": "docs/notes/explorable_world/comfy/references/Gemini Video/gemini_generated_video_c0823c60.mp4",
+      "source_sha256": "b5deff1982da0cbbdee24a7dfc253fe6825018549a37ca531c7b3586cdbee525",
+      "cloud": {
+        "name": "b5249035821d68ba31f8feacad93ac6f3f2c86534ca19ae3067c8f8f7cf03197.mp4",
+        "subfolder": "",
+        "type": "input"
+      },
+      "source_audio": "not connected",
+      "local_file_hash_rechecked": true
+    },
+    {
+      "role": "replacement_song",
+      "local_path": "docs/notes/explorable_world/comfy/references/Music/DoLoSoLo_0 (Remastered).mp3",
+      "source_sha256": "0d49d0b51df77c60d6fa41f3638cce9b58438c710cbccd706278c2aaaf9cb72e",
+      "cloud": {
+        "name": "17f57ae6cc27b389a66519357726beffa1763843ebdcacedc7beb3158df4f875.mp3",
+        "subfolder": "",
+        "type": "input"
+      },
+      "start_index": 0,
+      "duration": 10,
+      "selection": "technical preview; not lyric-aligned",
+      "local_file_hash_rechecked": true
+    }
+  ],
+  "validation": {
+    "schema_catalog": {
+      "source": "live",
+      "refreshed_at": "2026-10-08T02:22:21.447Z",
+      "node_count": 3778,
+      "refresh": {
+        "requested": true,
+        "outcome": "swapped"
+      }
+    },
+    "loader_catalog": {
+      "source": "live",
+      "refreshed_at": "2026-10-08T02:24:20.920Z",
+      "node_count": 3778,
+      "refresh": {
+        "requested": true,
+        "outcome": "swapped"
+      }
+    },
+    "assertions": [
+      {
+        "check": "eight editor nodes",
+        "passed": true
+      },
+      {
+        "check": "seven executable nodes",
+        "passed": true
+      },
+      {
+        "check": "no converter warnings",
+        "passed": true
+      },
+      {
+        "check": "node available LoadVideo",
+        "passed": true
+      },
+      {
+        "check": "native, not paid: LoadVideo",
+        "passed": true
+      },
+      {
+        "check": "node available GetVideoComponents",
+        "passed": true
+      },
+      {
+        "check": "native, not paid: GetVideoComponents",
+        "passed": true
+      },
+      {
+        "check": "link 2.video source exists",
+        "passed": true
+      },
+      {
+        "check": "link 2.video type matches",
+        "passed": true
+      },
+      {
+        "check": "node available LoadAudio",
+        "passed": true
+      },
+      {
+        "check": "native, not paid: LoadAudio",
+        "passed": true
+      },
+      {
+        "check": "node available TrimAudioDuration",
+        "passed": true
+      },
+      {
+        "check": "native, not paid: TrimAudioDuration",
+        "passed": true
+      },
+      {
+        "check": "link 4.audio source exists",
+        "passed": true
+      },
+      {
+        "check": "link 4.audio type matches",
+        "passed": true
+      },
+      {
+        "check": "node available CreateVideo",
+        "passed": true
+      },
+      {
+        "check": "native, not paid: CreateVideo",
+        "passed": true
+      },
+      {
+        "check": "link 5.images source exists",
+        "passed": true
+      },
+      {
+        "check": "link 5.images type matches",
+        "passed": true
+      },
+      {
+        "check": "link 5.audio source exists",
+        "passed": true
+      },
+      {
+        "check": "link 5.audio type matches",
+        "passed": true
+      },
+      {
+        "check": "link 5.fps source exists",
+        "passed": true
+      },
+      {
+        "check": "link 5.fps type matches",
+        "passed": true
+      },
+      {
+        "check": "node available PreviewAudio",
+        "passed": true
+      },
+      {
+        "check": "native, not paid: PreviewAudio",
+        "passed": true
+      },
+      {
+        "check": "link 6.audio source exists",
+        "passed": true
+      },
+      {
+        "check": "link 6.audio type matches",
+        "passed": true
+      },
+      {
+        "check": "node available SaveVideo",
+        "passed": true
+      },
+      {
+        "check": "native, not paid: SaveVideo",
+        "passed": true
+      },
+      {
+        "check": "link 7.video source exists",
+        "passed": true
+      },
+      {
+        "check": "link 7.video type matches",
+        "passed": true
+      },
+      {
+        "check": "source FPS used",
+        "passed": true
+      },
+      {
+        "check": "only replacement audio used",
+        "passed": true
+      },
+      {
+        "check": "source audio disconnected",
+        "passed": true
+      },
+      {
+        "check": "song start 0 duration 10",
+        "passed": true
+      },
+      {
+        "check": "source uploaded name in live options",
+        "passed": true
+      },
+      {
+        "check": "song uploaded name in live options",
+        "passed": true
+      },
+      {
+        "check": "MP4 dynamic combo resolved",
+        "passed": true
+      }
+    ],
+    "dry_run": "not_performed",
+    "dry_run_reason": "The save-format tool readback identifies api_format as debug-only and explicitly says never pass it to submit_workflow. No dry-run endpoint exists for saved workflows in this tool version; inspect conversion here and use run_saved_workflow for an authorized execution.",
+    "authoritative_execution_validation": "not_performed",
+    "missing_nodes": [],
+    "missing_models": [],
+    "missing_inputs": [],
+    "local_proof_preserved": true,
+    "original_files_modified": false
+  },
+  "conversion_repair": {
+    "version_1_warning": "Node 3 (LoadAudio): 1 extra widget values not mapped",
+    "version_2_fix": "Removed a redundant trailing null from LoadAudio editor widgets; file value and routing unchanged.",
+    "version_2_warnings": []
+  },
+  "live_node_schemas": [
+    {
+      "name": "LoadVideo",
+      "display_name": "Load Video",
+      "description": "",
+      "category": "video",
+      "pack": "core",
+      "inputs": {
+        "required": [
+          "COMBO"
+        ]
+      },
+      "input_details": [
+        {
+          "name": "file",
+          "type": "COMBO",
+          "required": true,
+          "options": [
+            "a3e2a994509d82c2b5722423ac074b9a1f3064bdc0ba460b9e02d311f0f02e06.mp4"
+          ]
+        }
+      ],
+      "outputs": [
+        "VIDEO"
+      ],
+      "api_node": false,
+      "output_node": false,
+      "deprecated": false
+    },
+    {
+      "name": "GetVideoComponents",
+      "display_name": "Get Video Components",
+      "description": "Extracts video frames, audio, frame rate, bit depth, and color space.",
+      "category": "video",
+      "pack": "core",
+      "inputs": {
+        "required": [
+          "VIDEO"
+        ]
+      },
+      "input_details": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "required": true,
+          "tooltip": "The video to extract components from."
+        }
+      ],
+      "outputs": [
+        "IMAGE",
+        "AUDIO",
+        "FLOAT",
+        "COMBO",
+        "COMBO"
+      ],
+      "api_node": false,
+      "output_node": false,
+      "deprecated": false
+    },
+    {
+      "name": "LoadAudio",
+      "display_name": "Load Audio",
+      "description": "",
+      "category": "audio",
+      "pack": "core",
+      "inputs": {
+        "required": [
+          "COMBO"
+        ]
+      },
+      "input_details": [
+        {
+          "name": "audio",
+          "type": "COMBO",
+          "required": true,
+          "options": [
+            "a3e2a994509d82c2b5722423ac074b9a1f3064bdc0ba460b9e02d311f0f02e06.mp4"
+          ]
+        }
+      ],
+      "outputs": [
+        "AUDIO"
+      ],
+      "api_node": false,
+      "output_node": false,
+      "deprecated": false
+    },
+    {
+      "name": "TrimAudioDuration",
+      "display_name": "Trim Audio Duration",
+      "description": "Trim audio tensor into chosen time range.",
+      "category": "audio",
+      "pack": "core",
+      "inputs": {
+        "required": [
+          "AUDIO",
+          "FLOAT",
+          "FLOAT"
+        ]
+      },
+      "input_details": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "required": true
+        },
+        {
+          "name": "start_index",
+          "type": "FLOAT",
+          "required": true,
+          "default": 0,
+          "min": -18446744073709552000,
+          "max": 18446744073709552000,
+          "tooltip": "Start time in seconds, can be negative to count from the end (supports sub-seconds)."
+        },
+        {
+          "name": "duration",
+          "type": "FLOAT",
+          "required": true,
+          "default": 60,
+          "min": 0,
+          "tooltip": "Duration in seconds"
+        }
+      ],
+      "outputs": [
+        "AUDIO"
+      ],
+      "api_node": false,
+      "output_node": false,
+      "deprecated": false
+    },
+    {
+      "name": "CreateVideo",
+      "display_name": "Create Video",
+      "description": "Create a video from images.",
+      "category": "video",
+      "pack": "core",
+      "inputs": {
+        "required": [
+          "IMAGE",
+          "FLOAT"
+        ],
+        "optional": [
+          "AUDIO",
+          "COMBO",
+          "COMBO",
+          "COMBO"
+        ]
+      },
+      "input_details": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "required": true,
+          "tooltip": "The images to create a video from."
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "required": true,
+          "default": 30,
+          "min": 1,
+          "max": 120
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "required": false,
+          "tooltip": "The audio to add to the video."
+        },
+        {
+          "name": "bit_depth",
+          "type": "COMBO",
+          "required": false,
+          "default": "auto",
+          "options": [
+            "auto",
+            8,
+            10
+          ],
+          "tooltip": "Auto uses 8-bit for sRGB and 10-bit for HDR. Explicit 8-bit and 10-bit choices are independent of colorspace."
+        },
+        {
+          "name": "color_space",
+          "type": "COMBO",
+          "required": false,
+          "default": "sRGB",
+          "options": [
+            "sRGB",
+            "HDR",
+            "HDR PQ"
+          ],
+          "tooltip": "Colorspace of the input images. HDR selects BT.2020/HLG and HDR PQ selects BT.2020/PQ."
+        },
+        {
+          "name": "codec",
+          "type": "COMBO",
+          "required": false,
+          "default": "none",
+          "options": [
+            "none",
+            "auto",
+            "h264",
+            "av1"
+          ],
+          "tooltip": "Optionally encode the video immediately. None keeps the images in tensor form; Auto uses H.264."
+        }
+      ],
+      "outputs": [
+        "VIDEO"
+      ],
+      "api_node": false,
+      "output_node": false,
+      "deprecated": false
+    },
+    {
+      "name": "PreviewAudio",
+      "display_name": "Preview Audio",
+      "description": "Preview the audio without saving it to the ComfyUI output directory.",
+      "category": "audio",
+      "pack": "core",
+      "inputs": {
+        "required": [
+          "AUDIO"
+        ]
+      },
+      "input_details": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "required": true
+        }
+      ],
+      "outputs": [
+        "AUDIO"
+      ],
+      "api_node": false,
+      "output_node": true,
+      "deprecated": false
+    },
+    {
+      "name": "SaveVideo",
+      "display_name": "Save Video",
+      "description": "Saves the input videos to your ComfyUI output directory.",
+      "category": "video",
+      "pack": "core",
+      "inputs": {
+        "required": [
+          "VIDEO",
+          "STRING",
+          "COMFY_DYNAMICCOMBO_V3",
+          "COMFY_DYNAMICCOMBO_V3",
+          "COMFY_DYNAMICCOMBO_V3",
+          "FLOAT"
+        ],
+        "optional": [
+          "COMFY_DYNAMICCOMBO_V3",
+          "COMFY_DYNAMICCOMBO_V3",
+          "FLOAT"
+        ]
+      },
+      "input_details": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "required": true,
+          "tooltip": "The video to save."
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "required": true,
+          "default": "video/ComfyUI",
+          "tooltip": "The prefix for the file to save. This may include formatting information such as %date:yyyy-MM-dd% or %Empty Latent Image.width% to include values from nodes."
+        },
+        {
+          "name": "format",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "required": true,
+          "dynamic_combo": true,
+          "options": [
+            "auto",
+            "mp4",
+            "mkv",
+            "webm"
+          ],
+          "tooltip": "The output container. Auto uses MP4 for Auto/H.264 and WebM for AV1. MP4, MKV, and WebM select a specific container.",
+          "hint": "Dynamic combo: pick one `options` value for `format`, then send each conditional sub-field below using its full dotted name (prefixed with `format.`, e.g. `format.<sub_field>`). Auto-grow list slots nest one level deeper (e.g. `format.<list>.<slot_1>`). Sending these fields flat (without the prefix) fails with required_input_missing."
+        },
+        {
+          "name": "format.codec",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "required": true,
+          "dynamic_combo": true,
+          "options": [
+            "auto",
+            "h264",
+            "av1"
+          ],
+          "tooltip": "The output video codec. Auto preserves a compatible source stream. H.264 and AV1 re-encoding support SDR, HDR (HLG), and HDR PQ.",
+          "hint": "Dynamic combo: pick one `options` value for `format.codec`, then send each conditional sub-field below using its full dotted name (prefixed with `format.codec.`, e.g. `format.codec.<sub_field>`). Auto-grow list slots nest one level deeper (e.g. `format.codec.<list>.<slot_1>`). Sending these fields flat (without the prefix) fails with required_input_missing.",
+          "conditional": true,
+          "applies_when": [
+            "auto",
+            "mp4",
+            "mkv",
+            "webm"
+          ],
+          "options_by_key": {
+            "auto": [
+              "auto",
+              "h264",
+              "av1"
+            ],
+            "mp4": [
+              "auto",
+              "h264",
+              "av1"
+            ],
+            "mkv": [
+              "auto",
+              "h264",
+              "av1"
+            ],
+            "webm": [
+              "auto",
+              "av1"
+            ]
+          }
+        },
+        {
+          "name": "format.codec.encoding",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "required": false,
+          "dynamic_combo": true,
+          "options": [
+            "auto",
+            "re-encode"
+          ],
+          "tooltip": "Automatic preserves compatible H.264 streams. Re-encode applies custom encoding options.",
+          "hint": "Dynamic combo: pick one `options` value for `format.codec.encoding`, then send each conditional sub-field below using its full dotted name (prefixed with `format.codec.encoding.`, e.g. `format.codec.encoding.<sub_field>`). Auto-grow list slots nest one level deeper (e.g. `format.codec.encoding.<list>.<slot_1>`). Sending these fields flat (without the prefix) fails with required_input_missing.",
+          "conditional": true,
+          "applies_when": [
+            "h264",
+            "av1"
+          ]
+        },
+        {
+          "name": "format.codec.encoding.crf",
+          "type": "FLOAT",
+          "required": true,
+          "conditional": true,
+          "applies_when": [
+            "re-encode"
+          ],
+          "default": 18,
+          "min": 0,
+          "max": 51,
+          "tooltip": "Lower values produce higher quality and larger files."
+        },
+        {
+          "name": "codec",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "required": false,
+          "dynamic_combo": true,
+          "options": [
+            "auto",
+            "h264",
+            "av1"
+          ],
+          "tooltip": "The output video codec. Auto preserves a compatible source stream. H.264 and AV1 re-encoding support SDR, HDR (HLG), and HDR PQ.",
+          "hint": "Dynamic combo: pick one `options` value for `codec`, then send each conditional sub-field below using its full dotted name (prefixed with `codec.`, e.g. `codec.<sub_field>`). Auto-grow list slots nest one level deeper (e.g. `codec.<list>.<slot_1>`). Sending these fields flat (without the prefix) fails with required_input_missing."
+        },
+        {
+          "name": "codec.encoding",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "required": false,
+          "dynamic_combo": true,
+          "options": [
+            "auto",
+            "re-encode"
+          ],
+          "tooltip": "Automatic preserves compatible H.264 streams. Re-encode applies custom encoding options.",
+          "hint": "Dynamic combo: pick one `options` value for `codec.encoding`, then send each conditional sub-field below using its full dotted name (prefixed with `codec.encoding.`, e.g. `codec.encoding.<sub_field>`). Auto-grow list slots nest one level deeper (e.g. `codec.encoding.<list>.<slot_1>`). Sending these fields flat (without the prefix) fails with required_input_missing.",
+          "conditional": true,
+          "applies_when": [
+            "h264",
+            "av1"
+          ]
+        },
+        {
+          "name": "codec.encoding.crf",
+          "type": "FLOAT",
+          "required": true,
+          "conditional": true,
+          "applies_when": [
+            "re-encode"
+          ],
+          "default": 18,
+          "min": 0,
+          "max": 51,
+          "tooltip": "Lower values produce higher quality and larger files."
+        }
+      ],
+      "outputs": [
+        "VIDEO"
+      ],
+      "api_node": false,
+      "output_node": true,
+      "deprecated": false
+    }
+  ],
+  "limitations": [
+    "This Cloud native graph re-encodes picture; local stream-copy identity evidence does not apply to an unexecuted Cloud export.",
+    "No lyric change, mouth editing, lip-sync, source ambience preservation or user acceptance.",
+    "Opening ten seconds remain a provisional selection; audition and choose the intended song phrase.",
+    "No normal-speed playback or listening review occurred during this preflight."
+  ],
+  "next_steps": [
+    "Open the saved graph and select the intended song phrase in Trim Audio Duration.",
+    "For an audio-only preview, mute Save Video before one bounded run, then restore it for output.",
+    "After authorized Cloud execution inspect 240 frames at 24 fps, duration, audio and picture quality; retain actual graph/output/usage."
+  ]
+}

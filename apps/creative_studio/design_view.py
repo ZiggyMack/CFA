@@ -432,6 +432,9 @@ def tattoo_groups(ctx):
 def detail_model(ctx, album_id=""):
     tattoo = tattoo_groups(ctx)
     claimed = {aid for g in tattoo for aid in g["assetIDs"]}
+    jewelry = [g for source in ctx.data.get("accessoryCollections", [])
+               if source.get("project") == ctx.project and (g := ctx.group(source))]
+    jewelry_ids = {aid for g in jewelry for aid in g["assetIDs"]}
     designs = [DENTAL_STANDARD, "HD-GRILLUP-40064d98db89"] if ctx.project == "hon" else ["LAG-cb183973ed1fc70e"]
     other = []
     grills = ctx.group({"id": ctx.project + ":grill-designs", "title": "Grills", "assetIDs": designs, "coverID": designs[0],
@@ -445,13 +448,10 @@ def detail_model(ctx, album_id=""):
     for al in ctx.albums.values():
         if al.get("project") != ctx.project or al.get("category") != "details" or al["id"] in excluded:
             continue
-        source = {**al, "assetIDs": [aid for aid in al.get("assetIDs", []) if aid not in claimed | setup]}
+        source = {**al, "assetIDs": [aid for aid in al.get("assetIDs", []) if aid not in claimed | setup | jewelry_ids]}
         if al["id"] == "hon:piercings":
-            accessories = [g for g in ctx.data.get("accessoryCollections", []) if g.get("project") == "hon"]
-            source.update(title="Piercings and jewelry", assetIDs=unique([*source["assetIDs"], *(aid for g in accessories for aid in g.get("assetIDs", []))]),
-                sections=[section("Jewelry on display", emptyMessage="Standalone display references are pending; no returned display-image package is recorded."),
-                          section("Dolo · earrings and facial piercings", source["assetIDs"], collapsible=True),
-                          *(dict(s, title="Dolo · " + s["title"], collapsible=True) for g in accessories for s in g.get("sections", []))])
+            source.update(title="Piercings", description="Earrings and facial-piercing references retain their individual reviews.",
+                          sections=[section("Dolo · earrings and facial piercings", source["assetIDs"], collapsible=True)])
         if al["id"] == "hon:return-detail-art" and source["assetIDs"] == ["HD-RETURN-41b93f64e7ea"]:
             source.update(title="Guns", description="On-character evidence. Standalone display images and accepted variations are pending.")
         if g := ctx.group(source):
@@ -459,8 +459,9 @@ def detail_model(ctx, album_id=""):
     if album_id:
         def matches(group):
             return group["id"] == album_id or album_id in group.get("sourceAlbumIDs", []) or any(ctx.by_id[aid].get("album") == album_id for aid in group["assetIDs"])
-        tattoo, other = [g for g in tattoo if matches(g)], [g for g in other if matches(g)]
-    return [section("Tattoos", kind="collections", groups=tattoo), section("Piercings, grills and props", kind="collections", groups=other)]
+        jewelry, tattoo, other = ([g for g in groups if matches(g)] for groups in (jewelry, tattoo, other))
+    return [section("Jewelry", kind="collections", groups=jewelry), section("Tattoos", kind="collections", groups=tattoo),
+            section("Piercings, grills and props", kind="collections", groups=other)]
 
 
 def cast_browse_facts(ctx, source, visible_ids):
@@ -673,7 +674,7 @@ def build_design_model(data, project, view, reviews=None, query="", album_id="")
     else:
         parts = comfy_model(ctx, album_id)
     return {"view": mode, "project": project, "sections": parts, "assets": ctx.by_id, "reviews": ctx.reviews,
-            "title": "Comfy results & swap targets" if mode == "comfy" else view}
+            "title": "Comfy results & swap targets" if mode == "comfy" else "Accessories" if mode == "details" else view}
 
 
 def render_design_view(data, project, view, library_dir: Path, render_grid, open_reference,
@@ -895,29 +896,16 @@ def render_design_view(data, project, view, library_dir: Path, render_grid, open
                 st.write(plan.get("idea") or asset.get("title", asset["id"]))
                 st.button("Open saved plan · " + asset.get("title", asset["id"]), key=key + ":plan:" + asset["id"],
                           on_click=open_reference, args=(asset,))
+            if facts.get("unresolved"):
+                st.warning("Some saved storyboard links no longer resolve. They are retained for review and excluded from linked counts.")
+                for link in facts["unresolved"]:
+                    st.caption(link["storyID"] + " · " + link["shotID"] + " · " + link["assetID"])
             if not uses and not plans and not any(model_asset_ids(child) for _, child in scenes):
                 st.caption("No scenes or planned work are recorded yet.")
         with right:
             lane("Videos", videos, "No videos are linked to this character yet.", "videos")
         if related:
             lane("Related material", related, "No related material is recorded.", "related")
-        with st.expander("Origin & story connections", expanded=False):
-            for source in facts.get("sources", []):
-                st.write(source["title"])
-            if not facts.get("sources"):
-                st.caption("No source collection is recorded.")
-            for choice in facts.get("choices", []):
-                st.write(str(choice.get("characterRole") or "Selected character") + " · " +
-                         ("this version selected by you" if choice.get("manualCastChoice") else
-                          "role assigned by Ziggy" if choice.get("roleDecision") == "user_assigned" else "visible likeness selected by Ziggy"))
-            if facts.get("planned"):
-                st.caption("Planned storyboard use" + (" · see linked shots above" if facts.get("linked") or facts.get("sequences") else " · no panel linked yet"))
-            if facts.get("unresolved"):
-                st.warning("Some saved storyboard links no longer resolve. They are retained for review and excluded from linked counts.")
-                for link in facts["unresolved"]:
-                    st.caption(link["storyID"] + " · " + link["shotID"] + " · " + link["assetID"])
-            for note in group.get("notes", []):
-                st.write(note)
 
     def render(s, context, heading=True, single_preview=False):
         kind, ids = s.get("kind", "gallery"), s.get("assetIDs", [])

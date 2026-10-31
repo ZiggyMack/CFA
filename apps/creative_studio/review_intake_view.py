@@ -329,18 +329,22 @@ def _source_link(label: str, value: str | None, library_dir: Path, key: str) -> 
 
 
 def _supplements(data: dict, project: str, query: str, assets: dict[str, dict], reviews: dict,
-                 library_dir: Path, open_asset) -> None:
+                 library_dir: Path, open_asset, *, golden_only=False) -> None:
+    from contextlib import nullcontext
     groups = {"approved": "Golden references", "validated": "V-Team scoped passes", "preliminary": "Preliminary mouth picks"}
     for index, supplement in enumerate(data.get("reviewSupplements") or []):
-        project_items = [item for item in supplement.get("items", []) if item.get("project") == project]
+        project_items = [item for item in supplement.get("items", []) if item.get("project") == project
+                         and (not golden_only or item.get("group") == "approved")]
         if not project_items:
             continue
         needle = query.strip().casefold()
         items = [item for item in project_items if not needle or needle in
                  " ".join(str(item.get(field) or "") for field in ("title", "version", "sha256", "label", "notes")).casefold()]
-        prefix = f"intake-supplement:{project}:{index}"
-        with st.expander(f"{supplement.get('title', 'Winners supplement')} · {len(items)} entries", expanded=False):
-            st.caption("Later delivery · separate from the frozen intake. Your saved choices remain separate from scoped team findings.")
+        prefix = f"{'accessories-golden' if golden_only else 'intake-supplement'}:{project}:{index}"
+        title = "Golden references" if golden_only else supplement.get("title", "Winners supplement")
+        with st.expander(f"{title} · {len(items)} entries", expanded=golden_only and len(items) < 12):
+            st.caption("Selected reference scopes. Each image keeps its own review; component selection does not accept the whole image or scene." if golden_only
+                       else "Later delivery · separate from the frozen intake. Your saved choices remain separate from scoped team findings.")
             _source_link("Supplied winners index", supplement.get("indexURL") or supplement.get("sourceURL"), library_dir, prefix + ":index")
             with st.expander("Source details · optional"):
                 delivery = supplement.get("mediaDelivery") or {}
@@ -353,7 +357,7 @@ def _supplements(data: dict, project: str, query: str, assets: dict[str, dict], 
                 rows = [item for item in items if item.get("group") == group]
                 if not rows:
                     continue
-                with st.expander(f"{title} · {len(rows)}"):
+                with (nullcontext() if golden_only else st.expander(f"{title} · {len(rows)}")):
                     if group == "preliminary":
                         st.caption("Preliminary team picks; V-Team has not validated them.")
                     for start in range(0, len(rows), 3):
@@ -373,8 +377,13 @@ def _supplements(data: dict, project: str, query: str, assets: dict[str, dict], 
                                     preview = media_path(library_dir, item.get("thumbURL"))
                                     if preview:
                                         st.image(str(preview), width="stretch")
-                                    st.caption("Preview only · no exact full image available for review here.")
-                                st.caption(" · ".join(str(item.get(field)) for field in ("label", "vVerdict", "reviewScope") if item.get(field)))
+                                    st.caption("Original verified in the local archive; this hosted view is preview-only."
+                                               if item.get("availability") == "local_original_verified"
+                                               else "Preview only · the original full image has not been received.")
+                                if golden_only:
+                                    st.caption(GOLDEN_REFERENCE_SCOPES.get(item.get("sha256"), "Read the recorded reference scope below; image and scene reviews remain separate."))
+                                else:
+                                    st.caption(" · ".join(str(item.get(field)) for field in ("label", "vVerdict", "reviewScope") if item.get(field)))
                                 if item.get("advisories"):
                                     st.write("Advisory: " + str(item["advisories"]))
                                 with st.expander("Source and version evidence"):
@@ -384,13 +393,34 @@ def _supplements(data: dict, project: str, query: str, assets: dict[str, dict], 
                                         for link_index, link in enumerate(item.get(section) or []):
                                             _source_link(link.get("label", "Source record"), link.get("url"), library_dir,
                                                          f"{item_key}:{section}:{link_index}")
-                                for family_id in item.get("familyIDs", []):
+                                for family_id in ([] if golden_only else item.get("familyIDs", [])):
                                     if any(f.get("id") == family_id and f.get("project") == project
                                            for f in (data.get("reviewIntake") or {}).get("families", [])):
                                         st.button("Earlier family · " + family_id.split(":", 1)[-1], key=item_key + ":" + family_id,
                                                   on_click=_focus_family, args=(project, family_id))
             if not items:
                 st.info("No supplement entries match this search.")
+
+
+GOLDEN_REFERENCE_SCOPES = {
+    "d68287f16c0b6b9189579c501ecf9c80a1f94870f16b3aacfd06d826038f8b93": "Full-scale chest ink reference; the original is not received here.",
+    "a906752ddb4c6136fd09e3272add4e32aa21ef1585a267d61dd4fdbbc053d67e": "Chest artwork stencil reference; the original is not received here.",
+    "2f20842f8e57d9cc3b833781f73faba590c5458fe240bd9d20e38b59535541cb": "Selected chain style A01; each returned angle has its own review.",
+    "b80c81439a2c74318b68fd8efbe2ab0f6b27c8d44ea5110870a79d7c586423ec": "Selected chain style A04; each returned angle has its own review.",
+    "91f4fc612f113730037710ae1f350f77d83f70c8bd77379960fe96ef74497570": "Selected chain style A06; each returned angle has its own review.",
+    "b11b90ab2e756b8ba37f7d13a326b45c9a1a3bd15cf9eaee8f9cf9b919419a41": "Selected chain style B05; each returned angle has its own review.",
+    "40064d98db897276b80085273919ccd79ca377a068dcc2bd23c519e4038ee93e": "Selected iced-grill anchor / look; image and scene reviews remain separate.",
+    "26a91590b6c03f3c8de62f4ab69e0b4ce7d466b7707a2e9cf426c771a69c79ec": "Blaster placement on the character's left hip only; this does not approve the whole image.",
+    "104b30b1f4b7af4c7c3d4ee94405789198e558a41ade560562ca966f7e1dfcd6": "Younger-years / flashback pilot reference; not the current Prime head.",
+    "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f": "Lisan build / proportions reference; not exclusive identity, derivative or scene approval.",
+    "116907b6390bbbbdc362c898fcb5e764167204650ddf6219d786f0437bebf4c0": "Lisan throat-worm style reference only.",
+}
+
+
+def render_golden_references(data, project, query, library_dir, open_asset, *, reviews=None):
+    """Browse existing scoped records; no catalog/review mutation or cross-project transfer."""
+    _supplements(data, project, query, {a['id']: a for a in data.get('assets', [])},
+                 reviews or {}, library_dir, open_asset, golden_only=True)
 
 
 def render_intake(data: dict, project: str, library_dir: Path, open_asset, *, reviews: dict | None = None) -> None:
