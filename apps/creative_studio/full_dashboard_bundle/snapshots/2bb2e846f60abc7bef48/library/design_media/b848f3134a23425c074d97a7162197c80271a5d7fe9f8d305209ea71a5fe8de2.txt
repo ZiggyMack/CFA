@@ -1,0 +1,48 @@
+# Replace a clip soundtrack and prepare new mouth timing
+
+Use these separate recipes when the picture is worth keeping but the words or soundtrack need to change. The first proof replaces Gemini's complete soundtrack with the opening ten seconds of the current song. It changes no words within that recording; supply a new recording when the words themselves must change.
+
+## Review the completed soundtrack proof
+
+Open the [ten-second preview](../outputs/hon_dolo_audio_replace_v001_local_preview.mp4). It uses all of `gemini_generated_video_c0823c60.mp4` and song time 0:00–0:10 from `DoLoSoLo_0 (Remastered).mp3`. This is a technical replacement proof, not an approved lyric-to-shot cut or lip-sync result.
+
+Local FFmpeg copied the compressed video stream and encoded only the replacement audio. The [record](hon_dolo_audio_replace_v001.record.json) verifies matching compressed video packet hashes and all 240 decoded frame hashes/timestamps, with clean full AV decode. The output audio matches the prepared song excerpt closely after AAC encoding. Source files are unchanged. No listening or normal-speed review is claimed.
+
+All original Gemini sound is removed, including any ambience, music and dialogue. To retain ambience while replacing speech later, prepare separate dialogue/ambience stems or a deliberate new mix. A whole-track swap cannot selectively preserve original sound effects.
+
+## Comfy soundtrack replacement
+
+Open [Hon Dolo - Replace Video Soundtrack](https://cloud.comfy.org/#2c490a37-6110-4c7b-b073-a3354493645b), saved as version 2 on October 7. The full original ten-second Gemini clip and current song are uploaded and selected. The [Cloud editor snapshot](hon_dolo_audio_replace_v001.cloud.editor.json) preserves this layout locally. Set **Trim Audio Duration** to the desired song start and a ten-second duration, then audition the excerpt. To preview audio alone, mute Save Video with Ctrl+M before running; unmute it for the final export.
+
+The wiring is:
+
+```text
+Load Video → Get Video Components.images → Create Video → Save Video
+                   .fps ────────────────────────┘
+Load Audio → Trim Audio Duration.audio ─────────┘
+                      └→ Preview Audio
+```
+
+The source video's audio socket is deliberately disconnected. Source FPS controls the export; changing it would change picture timing. There is no sampler or generative model in this graph, so it does not invent new face detail or mouth movement. Native frame assembly re-encodes the video: the exact stream-preservation measurement above belongs to the local preview, not to this unexecuted Cloud graph. Inspect the eventual Cloud export for encoding and color changes.
+
+The [new Cloud preflight](hon_dolo_audio_replace_v001.cloud_preflight.json) records successful renewed authentication, live native schemas, uploaded inputs and server conversion/readback. All 38 explicit schema/routing/media checks passed; the final conversion has no warnings. This is a saved, inspected workflow, not an executed or accepted Cloud result. No generation or paid node was run.
+
+The [server-compiled API snapshot](hon_dolo_audio_replace_v001.cloud.api.json) is debug evidence only. The tool explicitly prohibits submitting that readback to `submit_workflow`, so no submit dry-run is claimed. The saved-workflow tool has no dry-run option. Use `run_saved_workflow` with the saved UUID for a future authorized execution. The [original editor](hon_dolo_audio_replace_v001.editor.json), [earlier public-schema preflight](hon_dolo_audio_replace_v001.preflight.json) and local stream-copy record remain unchanged as dated preparation evidence.
+
+## Change the visible words with lip sync
+
+Import the separate [lip-sync editor](hon_dolo_lipsync_v001.editor.json). It adapts the official Sync template and is prepared for a **2.375-second continuous opening shot**, not the complete montage. Use the matching [song excerpt](../outputs/hon_dolo_audio_replace_v001_song_000_002375.wav); replace it with an isolated lead vocal when available.
+
+```text
+Load Video + Load replacement vocal → Sync Lip Sync → Save Video
+```
+
+The prepared settings are `sync-3`, fixed seed 42 and `cut_off`, with equal-length video/audio. Fixed seed is not a guarantee of deterministic generation. `cut_off` avoids the official template's default `bounce`, which can reverse short footage to fill longer audio. This is a paid partner candidate, not an executed or accepted result. Obtain the actual Comfy estimate and explicit spend agreement before submitting it.
+
+Sync documents support for songs and recommends isolated vocals. Our available excerpt is a full mix; fast rap, metallic teeth, lip rings and nearby lettering remain untested. After one short pass, compare mouth timing and preserved details, then restore the matching full song mix in the final edit. A lip-sync model changes pixels and re-encodes the clip; it cannot promise to keep everything else exact. [Official Sync model guidance](https://sync.so/docs/models/lipsync), [duration modes](https://sync.so/docs/developer-guides/sync-mode), [Comfy node source](https://github.com/Comfy-Org/ComfyUI/blob/master/comfy_api_nodes/nodes_sync_so.py).
+
+For ordinary dialogue, supply the corrected spoken recording in the same audio input. The lip-sync node has no lyric/text field and does not rewrite or synthesize the replacement speech itself. Keep intentional pauses and match the chosen shot length. Preserve the original recording and picture as the baseline.
+
+## Reuse and evidence
+
+This applies Panhandlers' [video and audio handoff lesson](../../../../../../Pan_Handlers/Help/guides/video_handoff.py) and the existing [decision procedure](../templates/workflow_intake.md#decision-and-feedback). The [lip-sync preflight](hon_dolo_lipsync_v001.preflight.json) retains source links and unverified account requirements. Public native definitions are [video nodes](https://github.com/Comfy-Org/ComfyUI/blob/master/comfy_extras/nodes_video.py) and [audio nodes](https://github.com/Comfy-Org/ComfyUI/blob/master/comfy_extras/nodes_audio.py). All production media stays on D:; these recipes require no local ComfyUI installation.

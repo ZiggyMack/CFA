@@ -1,0 +1,38 @@
+# LAG-SIGNAL-002, take two — the writer's attributed preliminary assessment, and a proposed delta for a take three (2026-10-14)
+
+Reviewer: Claude, lead writer, 2026-10-14 02:55 UTC by the clock, from CFA Nova's frame sheets, not from playback (no video viewing here); qualified at 03:00 UTC on Nova's three points (the rig's timing in take two; the diagnosis as a hypothesis; the source's parted-lips exception kept in any mouth-as-state wording). Status: preliminary; likeness and scene are the writer's attributed aesthetic judgment, the performance read is against the card; technical checks and human acceptance stay separate; nothing accepted; no third take requested or implied; the delta in §4 is a writer's proposal only. Ziggy's gate is the video.
+
+## 1. What was reviewed
+
+- Take two: `flow/signal_prototype_20261013/take_002/FLOW-LAG-SIGNAL-002_original.mp4`, sha256 `38ff31d1e9de551509112e35eacad8b96804a6e3b65811fe2992b0f4d00f6e6c`, 4,310,690 bytes; 1280 by 720, 24 fps, 192 frames, 8.0 s; audio present and substantial (mean -15.6 dBFS, peak 0 dBFS), contents not auditioned. Scene 25ca7370-c0f5-4630-96a4-1d3f568bca70. Run: Flow, Omni 1.1 Flash, frames mode with the start frame only, 720p, 16:9, 8 s, one output, 12 credits displayed; the submitted prompt was the card's section 7 with Nova's native-settings prefix (ACTUAL_SUBMITTED_PROMPT.txt, sha256 b725c3f1…); the card frozen at submission is the final aa04a82c… version.
+- Frames: `take_002/result_review/SOURCE_AND_BEAT_FRAMES.png` (sha256 aa9286ad…bb0b; frames 0, 24, 36, 48, 60, 96, 120, 132, 191) and `TAKE_ONE_AND_TWO_MATCHED_FRAMES.png` (sha256 2b9de466…ea74d; takes one and two at 0, 48, 96, 120, 191). Both viewed at full size.
+
+## 2. Grades (reviewer claude; preliminary)
+
+- **Likeness: L4.** The carriers hold in every sampled frame: the AL, the vertical G-A-I-B, the two segmented worms facing the eye in the disc, the blue eyes, the breather on his right cheek (viewer-left), the hoops and brow ring where the still has them; the armour and hood constant; no new piercings; the hand is his right throughout, five fingers. The same L4 as the still (the inherited drift is the still's, not the take's).
+- **Scene: S5** (an attributed aesthetic judgment). The maw closes over the rig; rig structure and fire are still visible inside the dust at 5.5 s (frame 132) and the rig is gone by the last sample (frame 191, 7.958 s), so the beat at which it goes under is somewhere between and is not established from these samples (take one's "gone by the fifth second" does not transfer); the dust wave rolls and thins; the maw settles open at the end; the fire flickers and gutters as in take one; no second worm, nothing reaches him; the haze key constant; the locked frame held. As a scene it is as good as take one and more alive.
+- **Performance: does not read as directed.** What read: the face. From the first to the second second the brows draw down and together, the eyes narrow, the jaw sets, and concern is legible; the mouth closes as asked in the first half-second. What failed, by beat:
+  1. **0.5 to 1.5 s, the eyeline, inverted.** The head and gaze go to VIEWER-RIGHT (his left, the maw's side), the opposite of the directed up and to his right (viewer-left). He is looking toward the worm, not the teammates.
+  2. **1.5 to 2.5 s, the first push, wrong direction and too big.** The hand leaves the frame's left edge and comes toward the camera, crossing in front of his face by 2.5 s; the card asked for a hand's-width push toward the teammates, away from the camera, the hand staying where it was. At 2.5 s the eyes are shut (a blink or a flinch at the hand).
+  3. **About 4.0 s, the look is lost.** The gaze returns source-like toward the camera and the mouth has reopened; the card asked for the look held on the teammates and the mouth closed for the rest of the take.
+  4. **5.0 to 5.5 s, the second push, again at the camera.** The open hand is up in front of the face toward the lens, fingers spread; the mouth open; at 5.5 s the eyes roll up rather than hold a target.
+  5. **5.5 to 8.0 s, no held target.** The last frame has the eyes toward the camera and the mouth slightly open, the hand back at the edge.
+- **Against take one:** take one was static and correct; take two is active and wrong-sided. The one new variable produced motion. **Hypothesis, not a finding:** the result is consistent with the generator resolving "his own right" as frame-right, "pushes forward" as toward the camera, and "the lips press closed" as a mouth action to keep performing; one result does not prove how the words were interpreted.
+
+## 3. The next approach for the structure (proposed; untested)
+
+In the card, sides stay written as the character's and the viewer's. **In the prompt, the next approach to try is directions in frame terms only, with a landmark in the frame**: "toward the top-left corner of the frame, past his raised palm", never "his right" or "his left"; a hand's motion as a direction in the frame with a limit ("a few inches toward the top-left corner, staying beside his head, never in front of his face"); and the mouth as a state after the first half-second, keeping the source's exact exception (the lips are slightly parted at frame zero and close during the first half-second; from then on, closed and still). This is an untested approach drawn from one result and the hypothesis above; whether it works is what a take three would test.
+
+## 4. Proposed delta for a take three (writer's proposal only; not a request; no run implied)
+
+Everything of the aa04a82c… card stands except the prompt's performance paragraph and the negatives, which would read:
+
+```text
+His performance: within the first second his eyes leave the camera and look up toward the top-left corner of the frame, past and above his raised palm, at companions who are out of frame up there; the eyes stay fixed on that top-left point for the rest of the shot and never return to the camera or turn toward the worm. His chin lifts slightly and his head turns a few degrees toward that top-left point; his shoulders do not move. His brows draw down and together, his eyes narrow against the dust, his jaw sets. His lips, slightly parted in the first frame, close during the first half-second; from then on the mouth stays closed and the lips still, no speech. His raised right hand stays beside his head at the left edge of the frame and gives two small pushes of the open palm toward that same top-left point, away from the camera, a few inches each: one as the maw begins to close, one sharper as the rig goes under; the hand never comes toward the camera and never passes in front of his face; otherwise it stays open and still, five fingers spread. He does not step, turn his body, or lower the hand.
+
+Do not: add a second worm or any creature movement toward him; add other people in frame; add a second hand; move the hand toward the camera or in front of his face; open the mouth or move the lips after it closes in the first half-second; look toward the camera or toward the worm after the first second; move the camera; change the clothing, the breather or the jewelry; add lettering or watermark; add music, voice or any sound.
+```
+
+The character-side statement (up and to HIS RIGHT, viewer-left) stays in the card's sections 3, 4 and 6 for the record; it leaves the prompt. One new variable against take two: the prompt's wording of the same direction, as an untested approach. Whether a take three runs is Ziggy's and Nova's call; none is executed by this note; the audio question (a substantial track despite the silence prefix) is Nova's lane and is noted, not diagnosed, here.
+
+— Claude

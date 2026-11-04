@@ -1,0 +1,55 @@
+HON DOLO — ADDITIONAL LIKENESS REFERENCES
+Verified October 9, 2026. Intake only; original images remain unchanged.
+
+Three distinct originals are present. The repeated spoken mention of _3 does not
+add a fourth file, and the actual fifth filename ends in .webp, not .jpg.
+Proposed IDs continue after HD-LIKENESS-01/02/03 already in the reference map.
+
+HD-LIKENESS-04 — Hon solo_3.jpg
+692 x 443, JPEG, RGB, 29,483 bytes. Decodes and was visually inspected.
+docs/notes/explorable_world/comfy/references/Hon solo_3.jpg
+SHA-256: c2a6607b2dc645f27df4aa7e507f211fb1a989685809fcf006a4a6d1298fda23
+One readable face in a cockpit scene, open-mouth smile, hand/device beside the
+head. Useful likeness/expression candidate, but not a neutral mouth or teeth
+standard. Use face/hair only; scene, vest, shirt and props are not design canon.
+
+HD-LIKENESS-05 — Hon solo_4.jpg
+739 x 415, JPEG, RGB, 26,376 bytes. Decodes and was visually inspected.
+docs/notes/explorable_world/comfy/references/Hon solo_4.jpg
+SHA-256: a0c61d1d4eb7b94d460e2fa05809cdd616abbac6f45cbb421cc2d1c7990320ae
+Three-panel comparison sheet. The center portrait may supply a later isolated,
+restrained-smile crop; face resolution will be limited. The right cockpit view
+visually overlaps _3. Do not condition on all three faces at once. No crop made.
+
+HD-LIKENESS-06 — han solo 5.webp
+974 x 748, WEBP, RGB, 130,398 bytes. Decodes and was visually inspected.
+docs/notes/explorable_world/comfy/references/han solo 5.webp
+SHA-256: ee049b599008b5bece955497fc4eeca96cd38afc9be65b6e406865ca44bb57a2
+Two-panel younger/older appearance comparison. Keep ages separate. Image-left is
+a possible future crop for a younger direction; image-right is an older option.
+No age/era was selected here. Full-body framing limits face pixels; an
+Entertainment Weekly mark is visible at lower right. Original URL/dates unknown.
+
+DUPLICATES
+Checked 4,217 CFA image files using size matches then SHA-256, with Windows long
+paths included: no other byte-identical files, no scan errors. This is an exact
+file check, not a test for every recompressed or visually similar image. The
+_4 right panel's overlap with _3 is a useful limitation, not a deletion decision.
+
+ROLE AND NEXT USE
+These are Comfy likeness/face-swap references. They do not replace the current
+Grok design anchor, approve an identity master, change clothing/tattoos/grill,
+or request a face replacement in existing liked footage. Start any later test
+with one selected isolated face and an independently role-scoped design source.
+Reuse the existing reference-edit recipe and controlled comparison procedure.
+Any later crop needs its original hash, exact bounds and new derived-file hash.
+No crops, generation, uploads, catalog changes or global instruction edits were
+performed. intake.json records machine-readable properties and proposed IDs.
+
+EXISTING RECORDS
+docs/notes/explorable_world/comfy/casting/gemini_cast_reference_map.json
+docs/notes/explorable_world/comfy/casting/likeness_crops/manifest.json
+docs/notes/explorable_world/comfy/workflows/hon_dolo_reference_edit_v001.record.json
+docs/notes/explorable_world/comfy/workflows/README.md#choose-by-problem
+docs/notes/explorable_world/comfy/templates/workflow_intake.md#decision-and-feedback
+docs/notes/explorable_world/comfy/templates/run_record.json

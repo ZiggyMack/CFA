@@ -1,0 +1,530 @@
+{
+  "schema": "hon-opening-continuation-plan-v1",
+  "id": "HON-OPENING-CONTINUATION-20261009",
+  "created": "2026-10-09T04:49:52.930809+00:00",
+  "status": "workshop_payload_approved_upload_verification_in_progress_no_scene_frame",
+  "storyboardScope": {
+    "sourceShotIDs": [
+      "S01A",
+      "S01B"
+    ],
+    "interpretation": "opening roughly first tenth by story meaning, not an audio interval",
+    "songStartSeconds": null,
+    "songEndSeconds": null,
+    "audioAlignment": "not_established_for_current_recording",
+    "narrative": "Mercenary payment-before-passage setup; later love/sacrifice arc unchanged.",
+    "primaryShotID": "S01B",
+    "contextShotIDs": [
+      "S01A"
+    ],
+    "canonicalPanelIDsByShot": {
+      "S01A": [
+        "SB-01",
+        "SB-02",
+        "SB-04",
+        "SB-05"
+      ],
+      "S01B": [
+        "SB-03",
+        "SB-19"
+      ]
+    },
+    "openingPanelConceptIDs": [
+      "SB-01",
+      "SB-02",
+      "SB-03",
+      "SB-04"
+    ],
+    "semanticReuseNote": "SB-19 is also mapped to S01B in the existing crosswalk; its later panel order does not move this prototype to a later song time. This package does not replace the crosswalk or claim literal first-ten-percent coverage."
+  },
+  "bounds": {
+    "grokStillCandidates": 1,
+    "geminiCreationAttempts": 1,
+    "geminiDependentContinuationAttempts": 9,
+    "maximumGeminiAttempts": 10,
+    "automaticRetries": 0,
+    "requestedInitialSeconds": 8,
+    "actualInitialSeconds": null,
+    "promisedTotalSeconds": null,
+    "stopEarlyAllowed": true,
+    "externalActionsPerformed": false,
+    "boundsAreExecutionAuthorization": false,
+    "chatGPTStillCandidates": 1,
+    "maximumInitialStillCandidates": 2
+  },
+  "referenceSources": [
+    {
+      "attachmentLabel": "A",
+      "assetID": "HD-DROP-ef5d59a6402e",
+      "filename": "HD-EXP-LOCK-FACE.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/hon-dolo-armor-swap/HD-EXP-LOCK-FACE.jpg",
+      "sha256": "ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978",
+      "role": "Legacy face/hair/tattoo and jewelry-placement evidence; retired two-canines-only mouth. Replace A with received/inspected corrected primary before either still lane; do not claim a corrected source exists yet.",
+      "attachToGrok": false,
+      "attachToGeminiInitially": false,
+      "attachToChatGPTStill": false,
+      "replacementRequiredBeforeSubmission": true
+    },
+    {
+      "attachmentLabel": "B",
+      "assetID": "HD-DROP-2691712601a9",
+      "filename": "REF-cash-source.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/inspiration/hon-dolo-ref-sheet-cash/REF-cash-source.jpg",
+      "sha256": "2691712601a9da9ab3c629b2c1d3204cdd1106cb64c301218aec1eb63182b702",
+      "role": "Studded armor-vest construction, substantial chain, seated counting pose, ship-counter geometry and lighting only. Ignore the old face tattoos, mouth and chest artwork.",
+      "attachToGrok": true,
+      "attachToGeminiInitially": false,
+      "attachToChatGPTStill": true
+    },
+    {
+      "attachmentLabel": "C",
+      "assetID": "HD-DROP-36679ee9953b",
+      "filename": "SB-03-pay-table.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-03-pay-table.jpg",
+      "sha256": "36679ee9953bfb8d0492009c1a47309fdd8f04f951f2077bce0007067146b1c4",
+      "role": "Rectangular luminous credit props and pay-up-front transaction only. Keep + requested complete-look review record is not an approved identity.",
+      "attachToGrok": true,
+      "attachToGeminiInitially": false,
+      "attachToChatGPTStill": true
+    },
+    {
+      "attachmentLabel": "audit",
+      "assetID": "HD-DROP-ca4a23c89777",
+      "filename": "HD-CASH-01A-chest-up.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/hon-dolo-ref-sheet-cash/HD-CASH-01A-chest-up.jpg",
+      "sha256": "ca4a23c89777d191850320883452e6ef1b1bbdc42e61fe3124bf63ba1db790ca",
+      "role": "Cash wardrobe candidate; recorded younger-face, missing lip-ring and chest differences. Audit-only, not a competing identity input.",
+      "attachToGrok": false,
+      "attachToGeminiInitially": false,
+      "attachToChatGPTStill": false
+    },
+    {
+      "attachmentLabel": "audit",
+      "assetID": "HD-RETURN-bc5b8c111da7",
+      "filename": "REV-HD-001_v001.png",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/bc5b8c111da7__REV-HD-001_v001.png",
+      "sha256": "bc5b8c111da73c15d0e0a69462ba2a416e1fc2b7364577354c439509655aeb00",
+      "role": "REV-HD-001 preservation-failure evidence: vest, chain, money, table and background drift; do not use as the starting frame.",
+      "attachToGrok": false,
+      "attachToGeminiInitially": false,
+      "attachToChatGPTStill": false
+    },
+    {
+      "attachmentLabel": "audit",
+      "assetID": "HD-RETURN-a460b7c979de",
+      "filename": "HIP-CASH-01_v001.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/a460b7c979de__HIP-CASH-01_v001.jpg",
+      "sha256": "a460b7c979de8e2c633dea1ac337f442fa2130b068eae4570990ffd4df706bac",
+      "role": "HIP-CASH-01 evidence: invented screen text and compass/mandala-like chest. Not an accepted scene master.",
+      "attachToGrok": false,
+      "attachToGeminiInitially": false,
+      "attachToChatGPTStill": false
+    }
+  ],
+  "proposedFrame": {
+    "outputID": "HON-OPENING-FRAME-PROPOSED-01",
+    "providerOutputID": null,
+    "path": null,
+    "sha256": null,
+    "selectionStatus": "awaiting_corrected_primary_reference_then_finite_still_screen_and_scene_frame_selection",
+    "identityAssetID": null,
+    "wardrobeSceneAssetID": "HD-DROP-2691712601a9",
+    "propAssetID": "HD-DROP-36679ee9953b",
+    "outfitAlbumID": "hon:outfit-cash",
+    "visibleCharacterCount": 1,
+    "creditPieceCount": 4,
+    "camera": "fixed medium frontal three-quarter view, no axis crossing",
+    "audio": "no dialogue/music; room tone optional",
+    "creator": null,
+    "legacyIdentityAssetID": "HD-DROP-ef5d59a6402e"
+  },
+  "capabilityEvidence": {
+    "reviewed": "2026-10-09",
+    "officialURL": "https://support.google.com/gemini/answer/16126339?hl=en",
+    "documented": "Reference-based video generation and multi-turn editing.",
+    "notEstablished": [
+      "append-only continuation",
+      "immutable prefix",
+      "fixed ten-second increments",
+      "account-specific mode availability",
+      "any exact total duration"
+    ],
+    "userHistory": "User-reported cumulative extensions are a hypothesis for this controlled test, not this run result.",
+    "accountPreflight": null
+  },
+  "sourceCaveats": [
+    "SB-03 has keep and requested complete_look status, not approval; its separate darts/bar shotPlan is not overwritten.",
+    "Provider return v002 says REV-HD-001 detail correction was accepted, while its user_approved field is false and outfit/scene defects persist. This plan does not infer full-frame approval from that provider text.",
+    "HIP-CASH-01 has invented COUNT IN PROGRESS screen text and compass/mandala-like chest drift; neither cash return is the selected starting frame.",
+    "The former A mouth design is now obsolete. User-confirmed four-upper-gold rule changes dental design deliberately; no unchanged-pixel preservation of the old tooth map is claimed."
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "kind": "creation",
+      "title": "Create the short opening proof",
+      "requires": "BENCHMARK_FRAME_SELECTED",
+      "newAction": "The four pieces are offered fare already lying on the counter. Dolo looks from the credits toward the implied customer just beside the lens, gives a restrained businesslike half-smile, then lowers his gaze toward the money. His character-right index finger comes to rest above the first piece, ready to count. End there; do not already complete the transaction.",
+      "expectedEndState": "Poised to start the first count; all four credit pieces remain in the original row.",
+      "status": "not_submitted",
+      "actualParentProviderID": null,
+      "actualOutputProviderID": null,
+      "actualDurationSeconds": null,
+      "prefixCheck": null,
+      "defects": []
+    },
+    {
+      "turn": 2,
+      "kind": "dependent_continuation",
+      "title": "First count — the actual continuation test",
+      "requires": "TURN_01_VERIFIED",
+      "newAction": "Dolo uses the poised index finger to touch each of the same four credit pieces once, in row order, without picking them up. He makes four distinct, unhurried touches, then withdraws the fingertip slightly. The four pieces remain separate and stationary.",
+      "expectedEndState": "First count completed; same four pieces and same seated blocking.",
+      "status": "not_submitted",
+      "actualParentProviderID": null,
+      "actualOutputProviderID": null,
+      "actualDurationSeconds": null,
+      "prefixCheck": null,
+      "defects": []
+    },
+    {
+      "turn": 3,
+      "kind": "dependent_continuation",
+      "title": "Strictly business",
+      "requires": "TURN_02_VERIFIED",
+      "newAction": "Dolo raises his gaze from the counted row toward the same off-camera customer. Hold a brief skeptical look and a subtle head tilt, conveying that the price is firm. His hands stay beside the same four pieces. No spoken words or lip-synced performance.",
+      "expectedEndState": "Gaze toward customer; money unchanged.",
+      "status": "not_submitted",
+      "actualParentProviderID": null,
+      "actualOutputProviderID": null,
+      "actualDurationSeconds": null,
+      "prefixCheck": null,
+      "defects": []
+    },
+    {
+      "turn": 4,
+      "kind": "dependent_continuation",
+      "title": "Count it twice",
+      "requires": "TURN_03_VERIFIED",
+      "newAction": "Dolo looks down and checks the SAME four credit pieces a second time, touching each once in the reverse row order. This is a recount of existing money, not a second payment. End with his finger lifted clear; no extra pieces appear.",
+      "expectedEndState": "Second count completed; four pieces total, unchanged identity/set.",
+      "status": "not_submitted",
+      "actualParentProviderID": null,
+      "actualOutputProviderID": null,
+      "actualDurationSeconds": null,
+      "prefixCheck": null,
+      "defects": []
+    },
+    {
+      "turn": 5,
+      "kind": "dependent_continuation",
+      "title": "Make the offered payment neat",
+      "requires": "TURN_04_VERIFIED",
+      "newAction": "Dolo gently nudges the edges of the same four pieces into one straight, evenly spaced row. Keep each piece visible, with only small sliding movements on the counter; do not stack, transform or replace them. End with hands relaxed beside the row.",
+      "expectedEndState": "Four pieces aligned; no teleporting or duplication.",
+      "status": "not_submitted",
+      "actualParentProviderID": null,
+      "actualOutputProviderID": null,
+      "actualDurationSeconds": null,
+      "prefixCheck": null,
+      "defects": []
+    },
+    {
+      "turn": 6,
+      "kind": "dependent_continuation",
+      "title": "Fuel costs extra",
+      "requires": "TURN_05_VERIFIED",
+      "newAction": "Dolo glances once toward the existing dim fuel-status area established in the starting frame, then back toward the customer. If no such indicator was established, glance toward the same fixed console instead; do not invent a new display now. Raise one index finger briefly as a matter-of-fact fee reminder. Credits remain untouched.",
+      "expectedEndState": "One-finger fee gesture settled; four credits unchanged.",
+      "status": "not_submitted",
+      "actualParentProviderID": null,
+      "actualOutputProviderID": null,
+      "actualDurationSeconds": null,
+      "prefixCheck": null,
+      "defects": []
+    },
+    {
+      "turn": 7,
+      "kind": "dependent_continuation",
+      "title": "Payment before passage",
+      "requires": "TURN_06_VERIFIED",
+      "newAction": "Dolo lowers the raised finger. He uses the flat side of one hand to draw the same four aligned credit pieces a short distance toward his side of the counter, keeping them visible and separate. The pieces move by contact, not by disappearing beneath his hand. Stop once the row is closer to him.",
+      "expectedEndState": "Payment drawn closer to Dolo; all four pieces visible.",
+      "status": "not_submitted",
+      "actualParentProviderID": null,
+      "actualOutputProviderID": null,
+      "actualDurationSeconds": null,
+      "prefixCheck": null,
+      "defects": []
+    },
+    {
+      "turn": 8,
+      "kind": "dependent_continuation",
+      "title": "You are buying a ride",
+      "requires": "TURN_07_VERIFIED",
+      "newAction": "With the other hand, Dolo gives one small directional gesture toward the existing offscreen entrance, granting passage only after taking the payment. His seat, torso and camera position stay fixed. No new customer, doorway view, location or cut appears. The four credits remain where turn 07 left them.",
+      "expectedEndState": "Small passage gesture completed; transaction geography unchanged.",
+      "status": "not_submitted",
+      "actualParentProviderID": null,
+      "actualOutputProviderID": null,
+      "actualDurationSeconds": null,
+      "prefixCheck": null,
+      "defects": []
+    },
+    {
+      "turn": 9,
+      "kind": "dependent_continuation",
+      "title": "Nice try",
+      "requires": "TURN_08_VERIFIED",
+      "newAction": "Dolo rests both hands near his side of the counter and gives the customer a brief knowing half-smile, as if dismissing an attempt to get a free extra. Keep the mouth restrained; when teeth show, preserve exactly four gold upper caps (both lateral incisors and both SHORT canines), two natural white central incisors and natural other uppers, the lower silver/chrome grill, two plain lip hoops and original nostril placement. He is still mercenary, not suddenly heroic.",
+      "expectedEndState": "Restrained smile settles; four credits still on his side.",
+      "status": "not_submitted",
+      "actualParentProviderID": null,
+      "actualOutputProviderID": null,
+      "actualDurationSeconds": null,
+      "prefixCheck": null,
+      "defects": []
+    },
+    {
+      "turn": 10,
+      "kind": "dependent_continuation",
+      "title": "Close the opening beat",
+      "requires": "TURN_09_VERIFIED",
+      "newAction": "Dolo lets the smile fade to calm confidence and turns his attention slightly toward the ship console without getting up. The four luminous credits remain clearly in frame. Finish with a short natural settle suitable for an editorial cut; do not loop, fade, add text, start a chase, introduce a boss or move into the later rescue story.",
+      "expectedEndState": "Stable end pose; opening payment beat complete.",
+      "status": "not_submitted",
+      "actualParentProviderID": null,
+      "actualOutputProviderID": null,
+      "actualDurationSeconds": null,
+      "prefixCheck": null,
+      "defects": []
+    }
+  ],
+  "stopConditions": [
+    "Corrected primary source or selected current-design scene frame is missing/unreconciled",
+    "Any reference inaccessible or reference role ignored",
+    "Starting frame or current turn fails identity/mouth/wardrobe/credit/hand/set checks",
+    "Actual continuation support absent or cannot be distinguished from replacement",
+    "Output is not longer or earlier content is removed, looped, retimed or materially redrawn",
+    "Output inspection or download is unavailable",
+    "Join introduces discontinuity or actual end state invalidates the next prompt",
+    "Opening beat completed or finite attempt bound reached"
+  ],
+  "receiptTemplate": {
+    "turn": null,
+    "submittedAt": null,
+    "providerMode": null,
+    "model": null,
+    "seed": null,
+    "settings": null,
+    "effectivePrompt": null,
+    "referenceIDsAndHashes": [],
+    "parentOutputID": null,
+    "parentSHA256": null,
+    "outputID": null,
+    "filename": null,
+    "sha256": null,
+    "dimensions": null,
+    "fpsOrTimebase": null,
+    "frameCount": null,
+    "durationSeconds": null,
+    "audioObserved": null,
+    "prefixMethod": null,
+    "prefixResult": "not_checked",
+    "joinReview": null,
+    "normalSpeedReview": null,
+    "defectTimeRanges": [],
+    "decision": "not_reviewed",
+    "usageObserved": null
+  },
+  "delivery": {
+    "designatedLongestVerifiedOutput": null,
+    "artifactType": "one native cumulative video if validated, otherwise last verified proof",
+    "supportingEvidence": "lightweight per-turn receipts, actual source/frame hashes, relevant boundary samples and failure evidence",
+    "cleanup": "No existing/user files deleted; earlier downloads retained only where needed for proof; no automatic purge",
+    "newApprovals": [],
+    "temporaryDownloadsMayBeRequiredForVerification": true,
+    "permanentMasterCount": 1
+  },
+  "optionalComfy": {
+    "soundtrack": "Local picture-preserving stream-copy proof completed; saved/server-converted native Cloud graph unexecuted and re-encodes. No song alignment inferred.",
+    "lipsync": "Separate candidate unexecuted; exact recording/trim and mouth-detail test required.",
+    "relight": "Recorded depth/Canny trials drifted; not a preservation-safe default.",
+    "thisPackageRunsComfy": false,
+    "freshCompatibilityCheckRequiredBeforeAnyFutureRun": true
+  },
+  "evidence": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "5a9404d1c24f41be4c28fbeecc825668bd4a26f16c616fe51ab47911cec05c93",
+      "role": "Project workflow/reference requirements"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/README.md",
+      "sha256": "f7a5aa08e54e57f924ca3c6b0bb4b706b946d59cf93c64bb17ae91a0874069d6",
+      "role": "Current dated workshop status"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/README.md",
+      "sha256": "a2426a25e1049a299eaa047948387c4d19b6f74fb51ebb9e8cef6adb60c2dfcc",
+      "role": "Choose-by-problem recipe lookup"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/templates/workflow_intake.md",
+      "sha256": "32a3e67520dd9643824f1bfab0b1315d42d2928cfd89f9cfc14036b8cac2aa9b",
+      "role": "Decision and feedback procedure"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/shot_plan.json",
+      "sha256": "cb33bbb2480ae60229c598a5081201f76308874beba2fe449fee58d25e3b7412",
+      "role": "S01A/S01B concepts; obsolete numeric interval warning"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/shot_materials.json",
+      "sha256": "03e1790aaec1d0e02dd7e7421ff68568e94d2a0b8e321fc9ba451b4a2fa2b990",
+      "role": "Current S01A/S01B material and failed cash-correction state"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/mission_control.json",
+      "sha256": "05dc52e65426bbde11e9edb078a6857562fbe305375ee3611c8f62526ad3cdb4",
+      "role": "grok-hon-money-handling planned task"
+    },
+    {
+      "path": "docs/notes/cfa-review.json",
+      "sha256": "5e9f5ca31dfcb12825eb99c23c3cfd3d84e46614ebede901ee9ab301def6e7bf",
+      "role": "Direct user money note; keep + requested complete look, not approved"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_design_instructions.txt",
+      "sha256": "1b70c5c19a840e15c5438b77145fc0cdcc47b8aed884b7f05db7f53c73a62445",
+      "role": "Current scoped reference and finite-delivery rules"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/hd_audit.json",
+      "sha256": "7f2c9b854f90ce2785e3e6c51088977f2d2b99c49354059760308bc9bd8cf8b6",
+      "role": "Cash-revision and cash-hip-return defects"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/START_HERE.txt",
+      "sha256": "f633f92c814ee1eab3cf8363772e937c681ce57a2a2b3bfb2b8cb920b5842cb0",
+      "role": "Current mouth specification and unexecuted proof"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_audio_replace_v001.README.md",
+      "sha256": "08689fca02dd80a270b06ac5f294fbc1dff126f3f10f35a3ccedc896a888dc7a",
+      "role": "Soundtrack-swap state and limits"
+    },
+    {
+      "path": "../Pan_Handlers/Help/CFA_TUTORIAL_LEDGER.md",
+      "sha256": "314e74d95422ff8b84023b32054b92bee171e747f1a6b955e15112996a28b9f6",
+      "role": "Relevant Pan lesson/ledger/file map consulted; not a live Cloud compatibility test"
+    },
+    {
+      "path": "../Pan_Handlers/Help/FILE_MAP.md",
+      "sha256": "0278b1bfc651e4b6de921892f93dbd1f516d626b9f03ec26b14cf41f0344651a",
+      "role": "Relevant Pan lesson/ledger/file map consulted; not a live Cloud compatibility test"
+    },
+    {
+      "path": "../Pan_Handlers/Help/guides/video_handoff.py",
+      "sha256": "c81fc4cf2be37c08a1e0d546e0cae467f13183aa31f78c655c699730c8a6bf5c",
+      "role": "Relevant Pan lesson/ledger/file map consulted; not a live Cloud compatibility test"
+    }
+  ],
+  "draftValidation": {
+    "status": "text_consistency_checked_reference_reconciliation_pending",
+    "updatedAtUTC": "2026-10-09T15:40:53.970509+00:00",
+    "scope": "Current draft dental text and identical first-video prompt checked; source reconciliation still pending. No output/account verification.",
+    "tenPromptBlocks": 10,
+    "creationBlocks": 1,
+    "dependentContinuationBlocks": 9,
+    "benchmarkAndTurn01PromptsIdentical": true,
+    "actualGeneratedOutputs": 0,
+    "textFilesSHA256": {
+      "START_HERE.txt": "ecba2b3889ee2d93a0c3b4e95a79234cc1de2f46f63a9cc2518c70fcd52349a7",
+      "GROK_STARTING_FRAME.txt": "779b40af96d7a710eae7bb2b568e52e60f521c796515102a4217b0f841ad2db0",
+      "BENCHMARK.txt": "6edea30591c8a00fd2ef3008ec09fee9d9638e5534514f97e146c0aad8cfbf42",
+      "GEMINI_10_TURNS.txt": "b329246ca7aad1c9b6d5d702492ac5d77310b6e5bc1c2d7e97b0e3c4294f72bd"
+    },
+    "priorHashesPreservedInRevisionHistory": true
+  },
+  "executionPolicy": "The user has authorized workshop first, then the bounded Gemini continuation test. After automatic approval review initially rejected the exact six-image workshop upload, the user explicitly approved that payload. Upload and visual checks are in progress, not yet verified. No completed workshop submission, storyboard reply, selected starting frame or video output is recorded for this run. Once the material/runtime checks pass, Nova inspects and proceeds autonomously within the existing one-creation-plus-nine-continuations limit, without repeated confirmation for passing routine checks. Pause on an actual failure, unavailable capability or unresolved creative choice. This authorization does not automatically reopen the separate still screen or multi-provider benchmark.",
+  "benchmark": {
+    "id": "HON-OPENING-BENCHMARK-20261009",
+    "planPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/BENCHMARK_PLAN.json",
+    "initialDurationUpdate": "Eight-second shared benchmark target supersedes the earlier approximate ten-second first take. Ten total Gemini turns remains the bound.",
+    "reusePassingGeminiTakeAsTurn01": true,
+    "samePromptSHA256": "b7d461272ce646207df08c8c7571648ad3cf2223941b35bd39dabd2f4cad4c49",
+    "actualBenchmarkRunRecord": null
+  },
+  "evidenceSnapshotNote": "Evidence and draftValidation hashes capture the earlier dated plan revision; they are not a fresh validation of this workshop reconciliation. Evolving Mission Control, shot materials and the current workshop are not frozen by those historical hashes.",
+  "revisionHistory": [
+    {
+      "status": "prepared_local_not_sent",
+      "draftValidation": {
+        "status": "passed",
+        "scope": "Package text, dependency sequence, exact local reference bytes, unchanged delivered review; not generation, visual-output or account-capability validation.",
+        "tenPromptBlocks": 10,
+        "creationBlocks": 1,
+        "dependentContinuationBlocks": 9,
+        "firstPasteBlockContainsSceneContract": true,
+        "sourceHashesVerified": 6,
+        "actualGeneratedOutputs": 0,
+        "deliveredReviewFileUnchanged": true,
+        "textFilesSHA256": {
+          "GEMINI_10_TURNS.txt": "927de87783c7027f4aeda28e1d01f3a32a6565c90f460f159536914291359eea",
+          "GROK_STARTING_FRAME.txt": "32642138863eba3372e1ce1328b28fb77e866a890fd5ce0a9cd97dd77e9b7c6d",
+          "START_HERE.txt": "538a0d20cbe12ff3d12260252e55dcb3ae7f308a5e6cf471b190ed9731224693",
+          "BENCHMARK.txt": "12d085decd7d8917c33d734e4ad284db56fd235b250461b0b1b789e7a4793b1e"
+        },
+        "grokPasteBlockContainsExactAttachmentNames": true,
+        "updatedAtUTC": "2026-10-09T05:36:26.748683+00:00",
+        "benchmarkAndTurn01PromptsIdentical": true
+      },
+      "benchmarkPromptSHA256": "db4aa1fcac8fec5d097acfddec3613cdb9d0438b5750bf69ef3f84cc3c2c5a4b",
+      "reason": "Retained pre-four-gold prompt validation as dated history."
+    }
+  ],
+  "updatedAtUTC": "2026-10-10T00:37:40+00:00",
+  "referenceReadiness": {
+    "canSubmit": false,
+    "status": "current_scoped_inputs_available_workshop_pending_no_consolidated_scene_frame",
+    "correctedPrimaryAssetID": null,
+    "standardPath": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt",
+    "expectedIntakePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/head_library_20261009/expected_intake.json",
+    "currentRule": "External off: four gold upper caps, lateral incisors + SHORT canines; white central incisors and natural other uppers; lower silver/chrome grill; two plain lip hoops. No forehead dice by default; cursive eye on character-right/viewer-left, serif know on character-left/viewer-right. Preserve visible SB-06 gold curb wrist chain and dark band without inventing side/clasp or final hand art. One hoop per nostril and face-reference ear jewelry are targets; minor nose/ear variations alone do not require a reroll. Iced r4/no-lip-ring quarters look is separate.",
+    "required": [
+      "Complete the approved exact workshop upload and visual checks, then obtain/review the detailed storyboard proposal using the current scoped face/mouth/story/accessory inputs.",
+      "Reconcile one coherent setting, wardrobe and blocking; replace historical A and update exact source filenames/hashes and effective prompts before any still or video submission. The full 130-head batch is not a prerequisite for one compatible scene.",
+      "Select one passing consolidated current-design scene frame with exact hash for this Gemini run. If the separate benchmark later resumes, use one reconciled shared frame across its lanes."
+    ]
+  },
+  "currentReferenceStandard": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt",
+    "evidence": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/head_library_20261009/grok_conversation_evidence.json"
+  },
+  "currentWorkshop": {
+    "revisionMarker": "HON-OPENING-WORKSHOP-CURRENT-20261009",
+    "packetPath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009",
+    "brief": "CURRENT_BRIEF.txt",
+    "exactOriginalImageManifest": "IMAGE_MANIFEST.json",
+    "prompt": "WORKSHOP_PROMPT.txt",
+    "operatorNote": "OPERATOR_NOTE.txt",
+    "imageCount": 6,
+    "exactUploadStatus": "user_exact_payload_approval_received_upload_and_visual_verification_in_progress",
+    "approvalHistory": "Automatic approval review initially rejected the exact upload; the user then explicitly approved that same six-image payload. This records approval, not successful attachment or image understanding.",
+    "planningChatURL": "https://gemini.google.com/app/988990050e4ad32c",
+    "recordedGenerationChatURL": "https://gemini.google.com/app/75a1bed38a68132b",
+    "generationChatState": "requires_live_inspection_start_new_opening_not_unrelated_existing_scene",
+    "storyboardStatus": "pending_workshop_not_sent",
+    "sceneFrameStatus": "no_consolidated_frame_selected_or_accepted",
+    "referenceRoles": {
+      "HD-RETURN-6c8900223ee9": "Current no-forehead-dice face/look direction only; older teeth are not authoritative.",
+      "HD-B-91ef00348229": "Four-gold and silver-lower dental pattern with plain lip hoops; cropped nose jewelry is not a nose reference.",
+      "HD-DROP-b18c4a123579": "Visible gold curb wrist chain and dark band only; anatomical side, hidden hardware and tattoo transfer are not established."
+    },
+    "sceneReconciliation": "Current workshop proposes worn counter/cantina evidence and asks for one explicit setting/wardrobe choice. The older ship-counter/studded-vest proposal and ten actions remain drafts until review; no silent setting combination or song timing assignment.",
+    "unchangedBounds": "One creation plus nine dependent continuations; zero automatic retries; existing per-turn review, native-prefix and stop rules remain in force.",
+    "separatePlans": "The earlier Grok/ChatGPT still screen and multi-provider benchmark are not automatically reopened by this workshop or Gemini-run authorization.",
+    "generatedOutputs": 0
+  }
+}

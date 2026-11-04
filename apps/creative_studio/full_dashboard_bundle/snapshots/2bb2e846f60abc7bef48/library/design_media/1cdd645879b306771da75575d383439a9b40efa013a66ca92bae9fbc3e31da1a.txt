@@ -1,0 +1,38 @@
+{
+  "schema": "cfa-scoped-character-return-review-v1",
+  "intakeID": "CUR-DROP-20261009A",
+  "characterID": "LAG-JET-BLACK",
+  "reviewer": "Codex",
+  "date": "2026-10-09",
+  "scope": "Initial contact-sheet review and selected individual views; not full-resolution review of every supplied image.",
+  "reviewedContactSheets": ["01_CHARACTER_REFS/_CONTACT_SHEET.jpg", "02_TURNAROUND_MOODS_SETTINGS/_CONTACT_SHEET.jpg", "03_SCENES_50_ORB_HELMET/_CONTACT_1of2.jpg", "03_SCENES_50_ORB_HELMET/_CONTACT_2of2.jpg", "04_STORYBOARD_75/_CONTACT_ARC5.jpg"],
+  "reviewedIndividualImages": ["01_CHARACTER_REFS/CUR-REF-04_HEAD-ORB.jpg", "05_LISAN_SCENES/CUR-LAG-01_DESERT-MEETING.jpg", "04_STORYBOARD_75/CUR-SB-ARC5-14_REUNION.jpg"],
+  "localObservations": [
+    {"evidence": "CUR-REF-04 and existing Jet Black solo user reference", "finding": "Same visible composition and design; SHA and decoded RGB hashes differ. Receipt records mean absolute channel differences 0.54–0.68/255. Keep both sources; no exact-derivative claim.", "outcome": "Supports association to existing Jet Black; no new character or new approval."},
+    {"evidence": "Existing Jet Black registry; CUR-REF-04 individual image", "finding": "User names Jet Black a watcher working for Lisan. Provider Curator name and mentor lore remain proposals. Received orb reference visibly shows character-right cosmic hand and character-left glove, conflicting with provider left/right prose.", "outcome": "Preserve existing name, role and source-specific orientation."},
+    {"evidence": "Turnaround/mood contact sheet, MOOD-01/02/03/05", "finding": "MOOD-01/02/03 have tech/armoured collars; MOOD-05 has a luminous bodysuit-like silhouette. These differ from black suit/shirt/tie reference.", "outcome": "Mood exploration only; wardrobe scope held."},
+    {"evidence": "CUR-LAG-01_DESERT-MEETING individual image", "finding": "Lisan chin lettering reads AL rather than the current vertical GAIB. Existing reference and received version remain scene context.", "outcome": "Not Lisan tattoo/identity authority."},
+    {"evidence": "CUR-SB-ARC5-14_REUNION individual image", "finding": "White shirt, lapel glyph instead of two tie marks, changed Lisan facial details. Provider marks DRAFT.", "outcome": "DRAFT; retain for review, no acceptance."},
+    {"evidence": "ARC5 contact sheet, frame 13", "finding": "Rebirth visibly uses a round orb head.", "outcome": "Head preference remains a creative choice; no approved default inferred."}
+  ],
+  "providerClaimsNotIndependentlyEstablished": [
+    "Storybeat/headtype maps, especially 50 scene associations, were supplied by the provider; matching hashes establish which bytes the rows describe, not narrative correctness.",
+    "Both head variants being official; the user approvals quoted within provider prose.",
+    "All remaining 47 scene images meeting the slim-proportion preference.",
+    "Complete hidden/occluded detail consistency or suitability for animation."
+  ],
+  "deliveryDiscrepancy": {
+    "claimed": "Separate Lisan facial headshots/natural-teeth anchors were described as available.",
+    "received": "This package's five references are cosmic-avatar/orb/helmet references. Six manifests cover 149 images: 5 refs, 11 moods/turnaround/settings, 50 scenes, 75 storyboard frames, 1 Lisan meeting and 7 superseded variants.",
+    "state": "No dedicated Lisan facial head library found in CUR-DROP-20261009A."
+  },
+  "preservedAuthority": [
+    "Existing two Jet Black user references retain their precise roles.",
+    "Lisan natural teeth remain default; the user's live optional LAG-LOCK-FACE grill direction remains separate and is not modified here.",
+    "Hon Dolo four-cap/grill rules are not borrowed for Lisan.",
+    "No new candidate approvals, registry reference replacements, production acceptance or provider sends."
+  ],
+  "newApprovals": [],
+  "productionAccepted": false,
+  "generationExecuted": false
+}
