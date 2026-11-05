@@ -1,0 +1,80 @@
+HON DOLO / STRICTLY BUSINESS - MISSING SOURCES (source-recovery pass, 2026-10-08)
+Scope searched: /workspace (recursive, incl. 113 zips + nested zips) and
+/home/box/agent-data (agent assets/ + attachments/, incl. 63 zips + nested).
+Matching = exact SHA-256 of file bytes. Filename-only matches are NOT matches.
+Index: image_hash_index.csv (8,614 image instances, 1,662 unique hashes; 378 zip containers incl. 202 nested).
+
+=====================================================================
+A. ROLLOUT (favorite-look hip-blaster sweep)
+=====================================================================
+NOTHING MISSING. 19/19 primary+alternate refs exist by exact hash (see rollout_refs_19.csv);
+the 14 context-only refs are also 14/14 exact (rollout_context_only_14.csv).
+Only the Saloon primary (HD-SALOON-01-chest-up.jpg) is inside the package; the other 18
+exist on this machine only - they must be attached explicitly if Grok needs them.
+Non-image note: GEM-97D0B65E gemini_generated_video_97d0b65e.mp4
+(sha256 fe3154c0b727d80909eae9d8ab2c4b42889643d577bbdfb18123c4d23cef695d) and the current
+Flow source GEM-5A115C59 (854dd279...) are not on this machine. Not needed for the 7-still batch.
+
+=====================================================================
+B. TATTOO ORIGINALS
+=====================================================================
+ID                       exact filename needed                 why needed
+-----------------------  ------------------------------------  ------------------------------------------
+ST-HD-EYE                standalone source art for current     Current cheek "eye" (char-right / viewer-left).
+                         "eye" lettering (filename unknown)    Candidate only: d55b97a3b3222e5db70b5c38d66f2f57b3a59f3eb23f228ae16e2d137c37d8e6.jpg
+                                                               (eye/know/Chewie/dice/bird sheet) - visual letterform
+                                                               match for "eye", unconfirmed. Ziggy must confirm.
+ST-HD-KNOW               standalone source art for current     Current cheek "know" (char-left / viewer-right) is a
+                         serif "know" (filename unknown)       serif letterform; no matching flat art exists here.
+ST-HD-SHIP (exact)       first-generation 6-option saucer      SHIP-TATTOO-REF-05.jpg is a crop (panel #5) of this
+                         sheet - two near-identical            sheet. Two encodings exist (9f62f973...jpg and
+                         encodings, neither byte-proven        d430b5f7...jpg); confirm which is the original upload.
+ST-HD-SHIP (#107)        HD-EXP-107 (chest placement/scale)    Heritage chest position/size lock; no file anywhere.
+ST-HD-SHIP (#112)        HD-EXP-112                            Chest-ship drawing detail ref; no file.
+ST-HD-SHIP (#116)        HD-EXP-116                            Chest-ship drawing detail ref; no file.
+ST-HD-SHIP (#117)        HD-EXP-117                            Chest-ship drawing detail ref; no file.
+ST-HD-SHIP (#121)        HD-EXP-121                            Chest-ship drawing detail ref; no file.
+REC-HD-ORIGINALS #101    HD-EXP-101                            Grill-intent lock (Jabba era - history only); no file.
+REC-HD-ORIGINALS #103    HD-EXP-103                            Falcon chase start (history only); no file.
+REC-HD-ORIGINALS #206    HD-EXP-206                            Scoundrel forearm "worn pass" look; no file.
+REC-HD-ORIGINALS #152    HD-EXP-152                            Piercing base; no file.
+REC-HD-ORIGINALS #154    HD-EXP-154                            Small left-ear hoop; no file.
+FOREARM-SCOUNDREL        standalone mixed-case blackletter     Only on-body evidence is storyboard SB-06-scoundrel-
+                         "Scoundrel" art (filename unknown)    detail.jpg. Flat Scoundrel sheets here (1e8c86b1...jpg,
+                                                               10ac9771...jpg) are an all-caps gold-N variant - NOT a match.
+RIGHT-HAND-LEIGH-CARD    standalone right-hand Leigh/          Candidate only: aa147b8c0c2633f61ba2c1ecd6d79b732398c9a336da7daa46c5042c849de1b1.jpg
+                         Princess hearts card (confirm)        (hearts "P" Leigh card) visually matches the hand in
+                                                               HD-EXP-215/222/224/238 (historical-era stills). Unconfirmed;
+                                                               Princess / Queen-of-Hearts variants also exist.
+Notes: For all HD-EXP-1xx/206 numbers no filename exists on this machine (only hash substrings).
+HD-EXP-ID-TO-FILENAME.json (8d2141f7...) records them as conversational anchors without numbered
+files. They are likely only in Ziggy's local Comfy export or among the 159 hash-named unmapped
+stills (unprovable without a mapping). Do not substitute look-alikes.
+
+FOUND (not missing): ST-HD-BLASTER source sheet
+  c91af37e775d5e6d941d2bc05fcc2f26f1ad4ad9a50caa1427a5dd3c01755419.jpg (panel #3, "Heavy blaster stencil #3")
+  copied unchanged to 04_RECOVERED_ORIGINALS/. RGB JPEG option sheet, no alpha; not a transparent stencil.
+
+=====================================================================
+C. TATTOO AUDIT SOURCES (audit/tattoo_audit_20261008.json, 422 records)
+=====================================================================
+416/422 present by exact hash (421 unique hashes in the audit). 6 NOT on this machine
+(all audit lane likeness_only; asset_map lists "actor-likeness crops" as not bundled):
+  #53  HD-LIKENESS-03          han_source_crop.png                 e8a66e490bd14c486e5143426e0035df64f4835cb239c762a238565ec689fc50
+  #54  HD-LIKENESS-01          han solo 2.png                      708f7a748431021825fb0090609037bdb6a89b4b40f574f159f627f2ba13e981
+  #55  LEIA-LIKENESS-01        leia_source_crop.png                b725ae7c92f4e35a732d056756029b045ddf15345909a6b2c30917b43d3f0d8a
+  #56  LUKE-LIKENESS-01        luke_source_crop.png                6faf10399e0af0d34b0988701d58ee4836b1107857e50d42a79428827cafa41f
+  #57  HD-COMFY-IDENTITY-V001  hon_dolo_clean_identity_v001.png    82d6c4bd9aa8e41cadfed602210dfe137f9626c6ee418c9d153f07395f47f6f6
+  #58  HD-LIKENESS-02          Han Solo.png                        5a6bd67a77920d3f2eae4bbaa98db0aa1e3dad288d38327c963d15cee1722974
+Why: needed only for likeness/identity work (separate Comfy task); not needed for the
+7-still correction/Caleb batch or the tattoo recovery. No filename-only near-misses.
+
+=====================================================================
+D. OTHER PACKAGE REFERENCES (requests.json, asset_map.json, PACKAGE_CONTENTS, review_context, boss pkg)
+=====================================================================
+All image refs (with sha256) in these docs exist by exact hash, incl. the 13 named stencil
+files in asset_map.stencil_audit and the 43 HD-DROP-<12hex> IDs mentioned in package text.
+The 7-still batch inputs (LOCK-FACE, REF-cash/coat/pinstripe/saloon-source, HD-SALOON-01) are all
+in the package and hash-verified. Nothing additional is required for the 7-still batch.
+Not on machine (non-image, informational): document hashes cited in asset_map.source_documents
+except HD-EXP-ID-TO-FILENAME.json (present, matches 8d2141f7...); GEM-* Flow videos.

@@ -1,0 +1,462 @@
+{
+  "config": {},
+  "extra": {
+    "cfa_evidence": {
+      "cloud_workflow_id": "2c490a37-6110-4c7b-b073-a3354493645b",
+      "reviewed_on": "2026-10-07",
+      "server_conversion": "get_saved_workflow debug readback",
+      "state": "cloud_inputs_uploaded_live_schemas_verified_conversion_inspected_not_executed"
+    },
+    "comfy_mcp": {
+      "description": "Keep source video frames and timing; replace Gemini soundtrack with a selectable excerpt of DoLoSoLo. No lip-sync or generative processing. Native nodes; preflight only, not executed.",
+      "name": "Hon Dolo - Replace Video Soundtrack"
+    },
+    "ds": {
+      "offset": [
+        10,
+        10
+      ],
+      "scale": 0.65
+    },
+    "workflowRendererVersion": "LG"
+  },
+  "groups": [
+    {
+      "bounding": [
+        30,
+        70,
+        830,
+        420
+      ],
+      "color": "#3f789e",
+      "flags": {},
+      "id": 1,
+      "title": "PICTURE | Keep source frames and timing"
+    },
+    {
+      "bounding": [
+        30,
+        530,
+        1270,
+        280
+      ],
+      "color": "#3f8e67",
+      "flags": {},
+      "id": 2,
+      "title": "SOUND | Select replacement song excerpt"
+    },
+    {
+      "bounding": [
+        900,
+        70,
+        950,
+        500
+      ],
+      "color": "#8e723f",
+      "flags": {},
+      "id": 3,
+      "title": "ASSEMBLE + SAVE | No lip-sync"
+    }
+  ],
+  "id": "5212149f-83d6-44cf-95a0-41caaed4753c",
+  "last_link_id": 7,
+  "last_node_id": 8,
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "VIDEO"
+    ],
+    [
+      2,
+      2,
+      0,
+      5,
+      0,
+      "IMAGE"
+    ],
+    [
+      3,
+      2,
+      2,
+      5,
+      2,
+      "FLOAT"
+    ],
+    [
+      4,
+      3,
+      0,
+      4,
+      0,
+      "AUDIO"
+    ],
+    [
+      5,
+      4,
+      0,
+      5,
+      1,
+      "AUDIO"
+    ],
+    [
+      6,
+      4,
+      0,
+      6,
+      0,
+      "AUDIO"
+    ],
+    [
+      7,
+      5,
+      0,
+      7,
+      0,
+      "VIDEO"
+    ]
+  ],
+  "nodes": [
+    {
+      "bgcolor": "#335",
+      "color": "#223",
+      "flags": {},
+      "id": 1,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            1
+          ],
+          "name": "VIDEO",
+          "type": "VIDEO"
+        }
+      ],
+      "pos": [
+        70,
+        130
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        340,
+        340
+      ],
+      "title": "01 | Source Gemini video - full 10 seconds",
+      "type": "LoadVideo",
+      "widgets_values": [
+        "b5249035821d68ba31f8feacad93ac6f3f2c86534ca19ae3067c8f8f7cf03197.mp4",
+        "image"
+      ]
+    },
+    {
+      "bgcolor": "#335",
+      "color": "#223",
+      "flags": {},
+      "id": 2,
+      "inputs": [
+        {
+          "link": 1,
+          "name": "video",
+          "type": "VIDEO"
+        }
+      ],
+      "mode": 0,
+      "order": 2,
+      "outputs": [
+        {
+          "links": [
+            2
+          ],
+          "name": "images",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "audio",
+          "type": "AUDIO"
+        },
+        {
+          "links": [
+            3
+          ],
+          "name": "fps",
+          "type": "FLOAT"
+        },
+        {
+          "links": [],
+          "name": "bit_depth",
+          "type": "COMBO"
+        },
+        {
+          "links": [],
+          "name": "color_space",
+          "type": "COMBO"
+        }
+      ],
+      "pos": [
+        500,
+        130
+      ],
+      "properties": {
+        "Node name for S&R": "GetVideoComponents",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        320,
+        150
+      ],
+      "title": "02 | Keep picture and original FPS",
+      "type": "GetVideoComponents",
+      "widgets_values": []
+    },
+    {
+      "bgcolor": "#353",
+      "color": "#232",
+      "flags": {},
+      "id": 3,
+      "inputs": [],
+      "mode": 0,
+      "order": 1,
+      "outputs": [
+        {
+          "links": [
+            4
+          ],
+          "name": "AUDIO",
+          "type": "AUDIO"
+        }
+      ],
+      "pos": [
+        70,
+        590
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        340,
+        180
+      ],
+      "title": "03 | Current song - DoLoSoLo remaster",
+      "type": "LoadAudio",
+      "widgets_values": [
+        "17f57ae6cc27b389a66519357726beffa1763843ebdcacedc7beb3158df4f875.mp3",
+        null
+      ]
+    },
+    {
+      "bgcolor": "#353",
+      "color": "#232",
+      "flags": {},
+      "id": 4,
+      "inputs": [
+        {
+          "link": 4,
+          "name": "audio",
+          "type": "AUDIO"
+        }
+      ],
+      "mode": 0,
+      "order": 3,
+      "outputs": [
+        {
+          "links": [
+            5,
+            6
+          ],
+          "name": "AUDIO",
+          "type": "AUDIO"
+        }
+      ],
+      "pos": [
+        500,
+        590
+      ],
+      "properties": {
+        "Node name for S&R": "TrimAudioDuration",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        320,
+        130
+      ],
+      "title": "04 | Song selection - seconds",
+      "type": "TrimAudioDuration",
+      "widgets_values": [
+        0,
+        10
+      ]
+    },
+    {
+      "bgcolor": "#335",
+      "color": "#223",
+      "flags": {},
+      "id": 5,
+      "inputs": [
+        {
+          "link": 2,
+          "name": "images",
+          "type": "IMAGE"
+        },
+        {
+          "link": 5,
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO"
+        },
+        {
+          "link": 3,
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 4,
+      "outputs": [
+        {
+          "links": [
+            7
+          ],
+          "name": "VIDEO",
+          "type": "VIDEO"
+        }
+      ],
+      "pos": [
+        940,
+        200
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        340,
+        180
+      ],
+      "title": "05 | Same frames + replacement song",
+      "type": "CreateVideo",
+      "widgets_values": [
+        24,
+        "auto",
+        "sRGB",
+        "none"
+      ]
+    },
+    {
+      "bgcolor": "#353",
+      "color": "#232",
+      "flags": {},
+      "id": 6,
+      "inputs": [
+        {
+          "link": 6,
+          "name": "audio",
+          "type": "AUDIO"
+        }
+      ],
+      "mode": 0,
+      "order": 5,
+      "outputs": [
+        {
+          "links": [],
+          "name": "audio",
+          "type": "AUDIO"
+        }
+      ],
+      "pos": [
+        940,
+        590
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewAudio",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        340,
+        180
+      ],
+      "title": "Listen | Selected song excerpt",
+      "type": "PreviewAudio",
+      "widgets_values": []
+    },
+    {
+      "bgcolor": "#335",
+      "color": "#223",
+      "flags": {},
+      "id": 7,
+      "inputs": [
+        {
+          "link": 7,
+          "name": "video",
+          "type": "VIDEO"
+        }
+      ],
+      "mode": 0,
+      "order": 6,
+      "outputs": [
+        {
+          "links": [],
+          "name": "video",
+          "type": "VIDEO"
+        }
+      ],
+      "pos": [
+        1370,
+        130
+      ],
+      "properties": {
+        "Node name for S&R": "SaveVideo",
+        "cnr_id": "comfy-core"
+      },
+      "size": [
+        450,
+        420
+      ],
+      "title": "06 | Save soundtrack replacement",
+      "type": "SaveVideo",
+      "widgets_values": [
+        "video/hon_dolo_audio_replace_v001",
+        "mp4",
+        "auto"
+      ]
+    },
+    {
+      "bgcolor": "#653",
+      "color": "#432",
+      "flags": {},
+      "id": 8,
+      "inputs": [],
+      "mode": 0,
+      "order": 7,
+      "outputs": [],
+      "pos": [
+        70,
+        850
+      ],
+      "properties": {},
+      "size": [
+        1080,
+        310
+      ],
+      "title": "READ ME | Audio replacement only",
+      "type": "Note",
+      "widgets_values": [
+        "Replace the soundtrack of the full 10-second Gemini c0823c60 clip with the current DoLoSoLo remaster.\n\nThe source video audio port is deliberately disconnected. Frames and source FPS feed Create Video; only the trimmed song feeds its audio port.\n\nTrim Audio Duration: start_index is seconds into the song (currently 0.00); duration is 10.00 seconds. This opening selection is a draft preview, not a lyric-aligned edit. Use Preview Audio to audition the selected excerpt after execution.\n\nThis graph does not generate a face, change mouth movements or perform lip-sync. It decodes and re-encodes the picture when saving: the separate local FFmpeg stream-copy preview retains original compressed video bits.\n\nCloud filenames now select the uploaded source video and current song. Native schemas were refreshed on October 7, 2026 (October 8 UTC). This workflow is prepared for soundtrack replacement; no Cloud output has been generated or accepted. Use the dated cloud preflight record for conversion and validation results.\n\nKeep the original files untouched. Save and inspect the output for 1280 x 720, 24 fps, 240 frames and a 10-second song excerpt before acceptance."
+      ]
+    }
+  ],
+  "revision": 0,
+  "version": 0.4
+}

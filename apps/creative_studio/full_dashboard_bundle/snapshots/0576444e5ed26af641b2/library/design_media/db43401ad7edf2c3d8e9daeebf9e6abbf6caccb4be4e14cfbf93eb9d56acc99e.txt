@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "recorded": "2026-10-08",
+  "id": "LAG-VID-PROOF-01-T02",
+  "project": "lisan",
+  "provider": "Gemini",
+  "source": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/20261008/LAG-VID-PROOF-01_T02_original.mp4",
+    "sha256": "640000faabc0b1f018a6fda0f05c9560579750c662f33d5da4cd4920d67befa0",
+    "bytes": 3365125,
+    "chatURL": "https://gemini.google.com/app/e6a2bab576bff5a3",
+    "responseID": "f99dd9db45225da3",
+    "selection": "Second generated video in the conversation, take 02; selected browser download reported by the parent task.",
+    "promptExcerpt": "regenerate the video using this as the character actor..",
+    "attachedImageCountReported": 3,
+    "attachedImageFileIdentities": null,
+    "initialDesignPromptPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/first_video_prompt.txt",
+    "effectiveGenerationPrompt": null,
+    "modelVersion": null,
+    "seed": null,
+    "cost": null
+  },
+  "media": {
+    "containerSeconds": 10.005,
+    "containerSecondsEvidence": "Measured by parent download intake; FFmpeg displays rounded 10.01 seconds.",
+    "videoSeconds": 10.0,
+    "frameCount": 240,
+    "fps": 24,
+    "width": 1280,
+    "height": 720,
+    "videoCodec": "h264 High",
+    "audioCodec": "aac LC",
+    "audioSampleRate": 48000,
+    "audioChannels": 2,
+    "fullDecode": {
+      "passed": true,
+      "tool": "FFmpeg 7.1",
+      "videoAndAudio": true,
+      "logPath": ".cache/visual_library_20261008/lisan_video_intake/decode.log"
+    }
+  },
+  "approval": {
+    "sourceStatus": "User approved · detailed design",
+    "storyboardStage": "detailed_design",
+    "scope": "User-approved creative scene working reference at Detailed design; no new identity or tattoo standard.",
+    "basis": "Explicit user approval and elevation to a working file at detailed design, reported by the parent task.",
+    "notImplied": [
+      "New canonical tattoo or identity standard",
+      "Technical continuity verification passed",
+      "Production approval",
+      "Measured song alignment",
+      "Comfy execution"
+    ],
+    "workingReference": {
+      "status": "approved",
+      "scope": "scene"
+    }
+  },
+  "review": {
+    "method": "Visual inspection of decoded frames 0, 120 and 239; full video/audio decode for file integrity.",
+    "frames": [
+      {
+        "frameIndex": 0,
+        "seconds": 0.0,
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/20261008/LAG-VID-PROOF-01_T02_frame_000.jpg",
+        "sha256": "4767734428b77a89df79aaaaa0c0e75f664b911b2df96b2608278f110b13d6f5"
+      },
+      {
+        "frameIndex": 120,
+        "seconds": 5.0,
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/20261008/LAG-VID-PROOF-01_T02_frame_120.jpg",
+        "sha256": "2653f1202364da1842f68451e6389fe2f9a0a06496f896f7cd3bc1b9adcfa89e"
+      },
+      {
+        "frameIndex": 239,
+        "seconds": 9.958333333333334,
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/20261008/LAG-VID-PROOF-01_T02_frame_239.jpg",
+        "sha256": "25288856a9a24376da7e7994557365a5e44da1ae069cbb0e368e18134806d6fe"
+      }
+    ],
+    "contactSheet": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/20261008/LAG-VID-PROOF-01_T02_samples.jpg",
+    "observations": [
+      "The samples move from a centered medium desert portrait to a closer face/neck view.",
+      "Black cloak, tan suit, gold chain, dark curls and strong blue eyes remain visible across the sampled views.",
+      "AL between brows, vertical GAIB on chin, paired neck-creature tattoos and central throat eye/sun are visible. This is descriptive evidence, not validation against a canonical stencil.",
+      "Expression moves from neutral to a slight smile; visible teeth in the later samples appear natural white.",
+      "The background shows dunes rather than the desert architecture requested by the earlier prepared prompt. The effective regeneration prompt and exact three attachment identities are not preserved in this intake.",
+      "An ear hoop is visible on each side in the starting frame. The earlier prepared prompt asked for piercings on the character left only; confirm whether this belongs to the accepted variant before a strict continuity pass."
+    ],
+    "limits": [
+      "Three sampled frames do not establish continuity across all 240 frames.",
+      "No normal-speed or audible review performed in this intake.",
+      "Breeze, blink duration, dialogue/music content and timing remain unverified.",
+      "Do not treat the retained earlier prompt as the verified exact regeneration prompt."
+    ],
+    "technicalVerification": "Pending; decode integrity passed only.",
+    "production": "Pending"
+  },
+  "preservation": {
+    "originalUnchanged": true,
+    "derivatives": [
+      "Extracted JPEG evidence frames",
+      "Contact sheet",
+      "480-pixel thumbnail"
+    ],
+    "noGeneration": true,
+    "noCloudExecution": true
+  },
+  "reusableLesson": {
+    "path": "../Pan_Handlers/Help/guides/video_handoff.py",
+    "topic": "Video/audio handoff: keep source FPS, distinguish decoded file from accepted motion/audio, record reference roles and actual observations.",
+    "nextStep": "Review normal-speed motion and audio, compare exact identity/tattoo/piercing references, then choose a bounded finishing or soundtrack task."
+  }
+}

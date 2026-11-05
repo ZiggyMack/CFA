@@ -1,0 +1,15 @@
+# V4 FALCON QA, C04-005 v005 full-chest, ROUND 2 of 2 (round 1 = V4_FALCON_C04-005v004_fullchest_20261021T151244Z_v002.tsv, FIX placement/pistol). V_4 20261021T151744Z (11:17 EDT). Rules: TEAM-RULES v009 (V1_TEAM-RULES_ziggy_decisions_20261021T151510Z_v009.md, sha 4594b721 verified; note: its title line still reads "v004", but the v009 section is present). Files verified: v005 12453ef438ccf530faa8865f886ccfdef62bdd826629b6faeb8f8f4670521715; orig 381883a6; v004 29f89f1a; v011 d68287f1. Masks z9/full/*005-v005*: cloth 881405 px, erase 9334 (x592-712 y553-686), pistolguard 3961 (x668-750 y396-505), ship 12023 (x598-701 y517-718). V5_INK_METHOD_v004.py c62c6789. Low-usage scope: changed items only. No Z_ script; nothing edited.
+# CROPS: V4_FALCON_C04-005v005_fullchest_20261021T151744Z_1x_v001.png e2b5f248 (orig | v004 | v005 | v011) ; V4_FALCON_C04-005v005_fullchest_20261021T151744Z_6x_pistol_spire_v001.png baa7f43f (orig | v005, x640-730 y420-530, 10 px grid)
+item	box_or_anchor	measured	result	note
+pistol_clearance	closest spire px (680,518) R spire; L spire tip (621,518)	spire tips first ink row y518 (Z_9 517). Grip ink bottom ~y482 (x689-718). Nearest guard-mask px is 32.6 px away (euclid); vertical gap tip y518 vs guard ymax y505 = 13 px; to grip ink ~37 px. Clear at 1x and 6x	PASS	hard rule >=10 px met
+placement	pit (650,528)	rim ~y645 (0.56 DW), centre x650, disc 209 unchanged	PASS	inside v009 band 0.25-0.58
+on_skin	spires x617-628 / x672-682 y518-645; rim y640-650 x598-699	both spires fully on bare skin; top rim/hull bar visible on skin between the lapels at 1x/4x; lower disc runs under the shirt	PASS	-
+vacated_v004_area	y452-545 x580-730 minus ship/cloth (13291 px)	vs orig: 0 px >12, max 7 (encode noise); no v004 spire ghost	PASS	-
+vacated_erase	y545-641 (6832 px)	all 1945 px >12 lie inside the saucer erase mask; non-erase max 7. Erase-only skin now exposed 3187 px (x592-710 y553-657): L 66.3 vs ring 69.2, hp std 4.28 vs 4.50; no saucer or ray ghost at 4x/6x. 6 old px at lapel edge x719-722 y560-569 (same as v004), not visible	PASS	-
+cloth	cloth mask	1 px >12 (1197,336 d14), far from the chest; ship∩cloth 0; cloth within 2 px of ship max 7	PASS	v009: <25 px >12
+edges_at_clothing	L x585-630 y640-700; R x675-720 y630-690	6x: ink stops cleanly at both lapels, no halo or seam	PASS	-
+ink_vs_v011	V5: blaster 655,395,745,500/707,488,722,503; ship 587,500,709,718/590,500,605,515; --mask v005 cloth; skinbox_ok True	v005 diff +0.168 / +0.348 vs v011 +0.208 / +0.311 = -0.040 / +0.037 (within ±0.08); ship main 0.492 (v004 0.510 same boxes); 4x matches v011 weight and style (thin warm-black grid)	PASS	v009 rule 2
+stroke	p90	ship 2.0 = v011 2.0	PASS	-
+outside_diff	frame minus ship|erase	1 px >12 (1197,336 d14); pistolguard 0 px >12 (max 5)	PASS	-
+carried_advisory	spires	v004 6x-only note: spire edges a bit softer than v011 (0.71 vs 0.83 grad/contrast); same stencil moved straight down	ADVISORY	no redo
+VERDICT	-	-	PASS-ADVISORY	round 2 of 2; no FIX; nothing to Chief

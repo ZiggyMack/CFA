@@ -1,0 +1,44 @@
+CANTINA TOAST IDENTITY TEST - MEASURED CFA/PAN RETURN
+Session: 2026-10-12; completion evidence archived on 2026-10-13 UTC.
+Disposition: Technical black-window repair passed. Actor likeness and faithful facial performance did not pass. Both identity outputs remain Preliminary and unaccepted. No user acceptance, third run or automatic retry.
+
+QUESTION AND LESSON
+Could the existing Multiverse Cantina toast use the supplied Han Solo/Harrison Ford actor likeness while retaining its performance, tattoos, grill, jewelry, costume, hand/glass and bar? The existing Pan lesson Help/content/video_routes.py, wan_mix, selects Wan2.2 Animate Mix for replacement with the source setting. Its background_video and character_mask requirement informed the saved official-template-derived graph. The separate wan_animate entry covers the newer Wan Animate2 route and is not validated by this test.
+
+The original 10-second Gemini source remains unchanged. The actor input is casting/likeness_crops/han_source_crop.png (275x361), intended as likeness only. After source/mask review, the test narrowed the proposed77 frames to original zero-basedF168-236:69frames at24fps,2.875seconds,768x432. The uploaded77-frame batch was trimmed at index6, length69. Batch1, fixedseed42,6steps,CFG1,Euler/simple,denoise1 and all actual Cloud resources were held constant between the two identity jobs. Protected details are restored by the strict final composite mask, not guaranteed by character-replacement conditioning alone.
+
+BASELINE AND ONE DELIBERATE CHANGE
+Baseline job569bec13-c8d8-4767-bddf-070b6765708b completed in45.46seconds (UI reported0.013compute hours). The strict final edit mask9006 also conditioned generation and blacked the source background. All69 frames had black edit windows; mean mask-core RGB was2.417/255 and96.365% of core pixels were dark in every channel (<=16/255, averaged per frame). Intended actor transfer failed.
+
+Comparison v004 jobae13aefd-845b-445c-a118-d8418a728785 completed in43.99seconds (UI reported0.012compute hours). Exactly two mask inputs changed:275.mask and232:62.character_mask now use the full feathered face1833034495877259. Final ImageCompositeMasked548748812020021.mask stayed9006. No model, media binding, seed, sampling setting, final output or preservation-mask change was introduced. Actual compiled API and job-attached editor audits confirmed this; only editor order fields were normalized. One root Run per identity job; no automatic retries. Compute hours are not dollar cost; exact charged credits/cost are unknown.
+
+MEASURED RESULT
+The comparison removed the large black windows: mean coreRGB rose to64.571/255 and the dark-core fraction fell to0.1819%. Both downloaded proofs are69frames,768x432, exact24fps PTS from0,2.875seconds. Outside the edit area plus8pixels, all69 comparison frames best matched the corresponding source frame at offset0; mean error2.11841/255 versus persistent diagnostic2.12454/255. This is evidence at lossy H.264 tolerance, not bit-exact preservation. It verifies source composition outside the edit, not facial performance within it.
+
+AAC audio is48kHz stereo with decoded PTS0; correlation to the69-frame source WAV is0.999047 at lag0. The240 additional decoded samples are5ms of AAC padding, not established drift. Source tattoos/grill/jewelry/costume/hand/glass/background remained visibly preserved. Root and benchmark reviewed all69 matched pairs across four contacts, fullframeF198 and the actor reference. Harrison likeness is weak/mixed: retained original cheeks, mouth and hair dominate. F198 output eyes are closed while source eyes are open. The root additionally played the actual comparison natively at768x432/2.875seconds without an error banner. Technical repair does not satisfy the actor/performance goal.
+
+CAUSE AND NEXT QUESTION
+No decoded-sampler bypass or contrary mask polarity was found in the actual graph audit. Current official Comfy/Wan source supports white character-mask values for replacement; exact Cloud server source version remains unknown. Small fragmented masks survived a local96x54nearest-exact check on every frame, so complete spatial disappearance was ruled out at that resize. Broader conditioning coincided with successful filling; the exact baseline failure mechanism is still unproved.
+
+The next design question is how much of the face must change to establish Harrison likeness while retaining the protected tattoos, mouth/grill, hair and original eye performance. Do not mistake outside-mask alignment for faithful generated expressions, or broaden the final preservation mask without a deliberate review. No further generation is part of this return.
+
+CANONICAL ARTIFACTS (relative to this test folder)
+Baseline executed editor: WAN_FACE_PROTECTION69_JOB_569bec13_EDITOR_20261012.json
+Baseline actual API: WAN_FACE_PROTECTION69_GENERATION_API_ACTUAL_20261012.json
+Baseline output: IDENTITY_JOB_569bec13_RESULT_20261012/2026-10-13T00-48-44/video/hon_dolo_face_identity_composite_00001_.mp4
+Baseline verification: IDENTITY_JOB_569bec13_RESULT_20261012/VERIFICATION/FINAL_PROOF_VERIFICATION.json
+Comparison executed editor: WAN_FACE_PROTECTION69_JOB_ae13aefd_EDITOR_20261012.json
+Comparison actual API: WAN_FACE_PROTECTION69_BROAD_GENERATION_COMPARISON_API_ACTUAL_20261012.json
+Comparison output: IDENTITY_JOB_ae13aefd_RESULT_20261012/2026-10-13T01-14-55/video/hon_dolo_face_identity_composite_00001_.mp4
+Comparison videoSHA256: b2d3dfac19971b6a8bb1454f77dea02487c9496ec0adc61764db332911c0e308
+Comparison verification: IDENTITY_JOB_ae13aefd_RESULT_20261012/VERIFICATION/FINAL_PROOF_VERIFICATION.json
+VerificationSHA256: 81763df5dd621fef62092386f984875b17e8120fe0f20e9fb189479886a1f00e (final root-review disposition included; supersedes098c99...)
+Black-window comparison: IDENTITY_JOB_ae13aefd_RESULT_20261012/VERIFICATION/BLACK_PATCH_COMPARISON.json
+Black comparisonSHA256: 7f19de1e182d10aa761157b4861016ea6f33b018347b1386445f8c28f7ffbeed
+Receipts: CLOUD_PREFLIGHT_EVIDENCE/IDENTITY_JOB_569bec13_COMPLETED.png; CLOUD_PREFLIGHT_EVIDENCE/IDENTITY_JOB_ae13aefd_COMPLETED.png
+Repaired native preview: CLOUD_PREFLIGHT_EVIDENCE/IDENTITY_JOB_ae13aefd_REPAIRED_PREVIEW.png
+PreviewSHA256: b73c19ba4b4ef9cc72cce1c2f16369c57ca9f9aa98fa92fb5a8b6eee87bdb399
+Full graph audits, settings, input hashes, preprocessing evidence and root review are in CLOUD_PREFLIGHT_STATUS.json and TEST_MANIFEST.json. Originals, failed baseline and comparison remain archived.
+
+BOUNDED MANUAL TEACHING TASK - PAN ADOPTION PENDING
+Owner: Panhandler Nova under the existing CFA/Pan handoff. Read this return and the cited evidence; propose a small update to the existing wan_mix lesson, contrasting generation-conditioning breadth with the final preservation mask. Teach that source alignment, audio preservation, technical mask filling, actor likeness and generated facial performance are separate checks. Retain the failed baseline, the two-input diff, dated settings and uncertainty about cause. Do not promote either output to an accepted recipe or validate Wan Animate2. Link the canonical CFA artifacts; no copied media, new framework, provider operation or automatic rerun. Return the proposed lesson changes/tests through the existing manual feedback route. No Pan files were edited by this task.

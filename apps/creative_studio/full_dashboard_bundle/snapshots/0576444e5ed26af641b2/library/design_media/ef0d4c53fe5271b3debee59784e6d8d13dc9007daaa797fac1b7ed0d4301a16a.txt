@@ -1,0 +1,47 @@
+import os, sys, zipfile, hashlib, io, csv, struct
+IMG=('.jpg','.jpeg','.png','.webp')
+roots=['/workspace','/home/box/agent-data']
+rows=[]; zips_seen=[]; errors=[]
+def dims(b):
+    try:
+        from PIL import Image
+        im=Image.open(io.BytesIO(b)); return im.width, im.height, im.mode
+    except Exception as e: return '', '', ''
+def handle_zip(zf_bytes_or_path, container_label, depth):
+    try:
+        z=zipfile.ZipFile(zf_bytes_or_path)
+    except Exception as e:
+        errors.append((container_label,str(e))); return
+    zips_seen.append(container_label)
+    for info in z.infolist():
+        if info.is_dir(): continue
+        n=info.filename; low=n.lower()
+        if low.endswith(IMG) or low.endswith('.zip'):
+            try: b=z.read(info)
+            except Exception as e: errors.append((container_label+'!'+n,str(e))); continue
+            if low.endswith('.zip'):
+                if depth<4: handle_zip(io.BytesIO(b), container_label+'!'+n, depth+1)
+            else:
+                w,h,m=dims(b)
+                rows.append(dict(sha256=hashlib.sha256(b).hexdigest(), bytes=len(b), filename=os.path.basename(n), source_type='zip_member' if depth==0 else 'nested_zip_member', container=container_label, member=n, path=container_label+'!'+n, width=w,height=h,mode=m))
+for r in roots:
+    for dp, dn, fn in os.walk(r, followlinks=True):
+        if '/hd-sb/recovery' in dp: continue
+        if any(s in dp for s in ('/managed-skills','/plugin-skills','/plugins','/.cache','/node_modules')): continue
+        for f in fn:
+            p=os.path.join(dp,f); low=f.lower()
+            if low.endswith(IMG):
+                try: b=open(p,'rb').read()
+                except Exception as e: errors.append((p,str(e))); continue
+                w,h,m=dims(b)
+                rows.append(dict(sha256=hashlib.sha256(b).hexdigest(), bytes=len(b), filename=f, source_type='file', container='', member='', path=p, width=w,height=h,mode=m))
+            elif low.endswith('.zip'):
+                handle_zip(p, p, 0)
+with open('/workspace/hd-sb/recovery/image_hash_index.csv','w',newline='') as fh:
+    w=csv.DictWriter(fh, fieldnames=['sha256','bytes','filename','source_type','width','height','mode','path','container','member'])
+    w.writeheader(); [w.writerow(x) for x in sorted(rows,key=lambda x:(x['path']))]
+with open('/workspace/hd-sb/recovery/_zips_scanned.txt','w') as fh:
+    fh.write('\n'.join(zips_seen)+'\n')
+with open('/workspace/hd-sb/recovery/_index_errors.txt','w') as fh:
+    for e in errors: fh.write('\t'.join(e)+'\n')
+print('rows',len(rows),'unique',len({x['sha256'] for x in rows}),'zips',len(zips_seen),'errors',len(errors))

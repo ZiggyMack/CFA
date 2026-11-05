@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "record_state": "completed_run_reviewed_not_accepted",
+  "purpose": "First bounded Gemini source-video lighting experiment",
+  "asset_id": "gemini_c0823c60_opening57",
+  "experiment_id": "hon_dolo_gemini_relight_v001",
+  "phase": "video_to_video_depth_control",
+  "question": "Can a small warmer face-light change retain the supplied source performance, identity, tattoo/grill shapes and timing?",
+  "created_at_utc": "2026-10-07T12:35:01.277339+00:00",
+  "parent_experiment_id": null,
+  "provider": "Comfy Cloud",
+  "evidence_status": "executed_reviewed_preservation_failed",
+  "source": {
+    "url": "https://cloud.comfy.org/templates/video_ltx2_3_ic_lora.json",
+    "revision": null,
+    "retrieved_at_utc": null,
+    "template_id": "video_ltx2_3_ic_lora",
+    "template_version": null,
+    "model_identifiers": [
+      "ltx-2.3-22b-distilled-fp8.safetensors",
+      "gemma_3_12B_it_fp4_mixed.safetensors",
+      "ltx-2.3-22b-ic-lora-union-control-ref0.5.safetensors",
+      "moge_2_vitl_normal_fp16.safetensors"
+    ],
+    "node_package_versions": []
+  },
+  "workflow": {
+    "editor_json_path": "hon_dolo_gemini_relight_v001.editor.json",
+    "editor_json_sha256": "81c8b81e050ffc4394f02db1cb1fb3b42cef8466ad0951f79d2862f13fb681cc",
+    "execution_json_path": "hon_dolo_gemini_relight_v001.executed.api.json",
+    "execution_json_sha256": "55af9786be0e39f098e9a909d411cec43974962177352e6a67a462c520685f04",
+    "exact_remote_version_known": true
+  },
+  "inputs": {
+    "prompt_path": "hon_dolo_gemini_relight_v001.prompt.txt",
+    "prompt_sha256": "a07e09ef3e9f67fa09a54802582d29ede1a163fe34a4f31e59829206bbcc40d0",
+    "reference_files": [
+      {
+        "role": "picture",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_intake_20261007/source_excerpts/c0823c60_opening_57f.mp4",
+        "bytes": 1134514,
+        "sha256": "b96cf9cc21274451515e331e432d86851b5fa7a2234fd7e182390a3da22c6e96",
+        "command": [
+          "[local path]",
+          "-v",
+          "error",
+          "-nostdin",
+          "-i",
+          "[local path] Video\\gemini_generated_video_c0823c60.mp4",
+          "-map",
+          "0:v:0",
+          "-frames:v",
+          "57",
+          "-an",
+          "-c:v",
+          "libx264",
+          "-preset",
+          "slow",
+          "-crf",
+          "16",
+          "-profile:v",
+          "high",
+          "-pix_fmt",
+          "yuv420p",
+          "-movflags",
+          "+faststart",
+          "[local path]"
+        ]
+      },
+      {
+        "role": "first_frame",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_intake_20261007/source_excerpts/c0823c60_opening_frame0.png",
+        "bytes": 938273,
+        "sha256": "765941faa55c3c129a9fd7817f33c8f99fdbbfd5f55e61fd597bc777305a7552",
+        "command": [
+          "[local path]",
+          "-v",
+          "error",
+          "-nostdin",
+          "-i",
+          "[local path] Video\\gemini_generated_video_c0823c60.mp4",
+          "-map",
+          "0:v:0",
+          "-frames:v",
+          "1",
+          "[local path]"
+        ]
+      },
+      {
+        "role": "audio",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_intake_20261007/source_excerpts/c0823c60_opening_audio.wav",
+        "bytes": 456078,
+        "sha256": "fa0de491200bf77c7a40d30840210a536ecd06184282e89e94c3dee398dc1d00",
+        "command": [
+          "[local path]",
+          "-v",
+          "error",
+          "-nostdin",
+          "-i",
+          "[local path] Video\\gemini_generated_video_c0823c60.mp4",
+          "-map",
+          "0:a:0",
+          "-vn",
+          "-af",
+          "atrim=end_sample=114000,asetpts=PTS-STARTPTS",
+          "-c:a",
+          "pcm_s16le",
+          "[local path]"
+        ]
+      }
+    ],
+    "seed": 42,
+    "width": 1024,
+    "height": 576,
+    "batch_size": 1,
+    "resolved_parameters": {
+      "frames": 57,
+      "fps": 24,
+      "steps": 8,
+      "cfg": 1,
+      "denoise": 1,
+      "sampler": "euler_ancestral",
+      "scheduler": "linear_quadratic",
+      "prompt_enhancement": false,
+      "control": "MoGe depth",
+      "control_strength": 1,
+      "ic_lora_strength": 1,
+      "first_frame_strength": 1,
+      "saved_workflow_id": "a63aca02-3ec8-45fe-a830-5baf40bd9eeb",
+      "saved_workflow_version": 2,
+      "editor_readback_equivalence": "All executed inputs preserved, after adding a text primitive to retain literal switch input;0 readback differences across46nodes.44otherexistingnodes unchanged.",
+      "generated_audio": true
+    }
+  },
+  "job": {
+    "id": "e7aa5020-d013-4081-beab-d59b9d056eb8",
+    "status": "completed",
+    "submitted_at_utc": null,
+    "completed_at_utc": null,
+    "error_node": null,
+    "error_message": null
+  },
+  "usage": {
+    "estimate_credits": null,
+    "estimate_source": "estimate_credits template: no paid API nodes; native GPU excluded",
+    "balance_before": null,
+    "balance_after": null,
+    "reported_job_credits": null,
+    "observed_at_utc": "2026-10-07T12:35:01.278064+00:00",
+    "attribution_notes": "Billing feed reports31.536398GPU seconds,rtx_pro_6000. Per-job dollar amount unavailable; no zero-cost claim."
+  },
+  "outputs": [
+    {
+      "path": "../outputs/hon_dolo_gemini_relight_v001.mp4",
+      "sha256": "8359777d2bfb19e1c340d417afd83b0997881b7a059ee3f1411922b26ded6afa",
+      "bytes": 806385,
+      "width": 1024,
+      "height": 576,
+      "fps": 24,
+      "frames": 57,
+      "picture_duration_seconds": 2.375,
+      "audio_duration_seconds": 2.3466666666666667,
+      "full_decode_exit_code": 0,
+      "comparison_path": "../outputs/hon_dolo_gemini_relight_v001_comparison.jpg",
+      "review_path": "../outputs/hon_dolo_gemini_relight_v001.review.json"
+    }
+  ],
+  "review": {
+    "decision": "Do not accept for strict lighting-only preservation",
+    "observations": [
+      "Frame timestamps match the source exactly; this does not establish matching mouth performance.",
+      "Frame0 closely follows source, later matched frames change mouth shape, lower metallic grill, lip rings, eye/know lettering, head positioning and background detail.",
+      "Neon atmosphere remains; intendedface warming is subtle.",
+      "Eight matched frame pairs andfullAVdecode reviewed; normal-speed playback and audio not heard."
+    ],
+    "cleanup_needed": [
+      "Avoid using distorted mouth, grill and tattoo details as production references."
+    ],
+    "mesh_triangles": null,
+    "material_slots": null,
+    "texture_dimensions": [],
+    "engine_import_tested": false,
+    "target_pc_performance_tested": false,
+    "performance_notes": null,
+    "next_change": "Change controlpreprocessing from depth toCanny; retain same source,firstframe,prompt,seed,steps,CFG,FPS,outputdimensions."
+  },
+  "provenance": {
+    "repository_license_url": null,
+    "model_terms_urls": [],
+    "asset_terms_urls": [],
+    "attribution_notes": "PanHandlers Help/content/video_routes.py ltx_union and Help/guides/video_handoff.py, reviewed2026-10-07. Decision in linkedintake. Two slot-mapping failures occurred before queue; direct interior overrides produced one job. Savedv1 lost literal switch text; savedv2 addsone Text(Multiline)source so reopenable graph preserves effective prompt. Reviewimage is a contact sheet, not normal-speed playback.",
+    "shareable_export_reviewed": false
+  },
+  "archive": {
+    "backup_location": null,
+    "backup_verified_at_utc": null
+  },
+  "storage": {
+    "execution_location": "cloud",
+    "local_download_required": true,
+    "local_download_reason": "Preserve measured evidence and compare matched source/output frames",
+    "local_download_directory": "[local path]",
+    "estimated_download_bytes": null,
+    "free_bytes_before_download": null,
+    "persistent_remote_copies": [
+      {
+        "workflow_id": "a63aca02-3ec8-45fe-a830-5baf40bd9eeb",
+        "version": 2
+      }
+    ]
+  }
+}

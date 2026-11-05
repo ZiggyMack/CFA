@@ -1,0 +1,260 @@
+{
+  "schema_version": 2,
+  "project": "lisan_al_gaib",
+  "intake_id": "LAG-500-20261008",
+  "source_conversation": "https://grok.com/bot/a4a75c63-1565-4448-84a2-f519f40bea15",
+  "status": "received_extracted_integrity_verified",
+  "user_request": "Download all eight parts and guides, extract the outer and nested ZIPs, verify all files, then remove the downloaded ZIP copies. Preserve unpacked originals and intake provenance.",
+  "expected_archives": [
+    "LAG-500-MASTER-part01.zip",
+    "LAG-500-MASTER-part02.zip",
+    "LAG-500-MASTER-part03.zip",
+    "LAG-500-MASTER-part04.zip",
+    "LAG-500-MASTER-part05.zip",
+    "LAG-500-MASTER-part06.zip",
+    "LAG-500-MASTER-part07.zip",
+    "LAG-500-MASTER-part08.zip"
+  ],
+  "expected_loose_guide": "NOVA-GUIDE-500.md",
+  "provider_reported": {
+    "image_count": 500,
+    "look_count": 50,
+    "images_per_look": 10,
+    "qa_clean": 220,
+    "qa_drift_note": 271,
+    "qa_flagged": 9,
+    "flagged_rows": [
+      4,
+      19,
+      61,
+      192,
+      200,
+      216,
+      291,
+      301,
+      319
+    ],
+    "hero_picks": 75,
+    "caveat": "Rows 1-362 clean versus drift labels were inferred by Grok from older free-form notes; borderline labels may differ. These are provider reports, not independent verification or user approval."
+  },
+  "verified_local_image_count": 500,
+  "zip_deletion_completed": true,
+  "notes": "All 500 exact CSV-mapped sources, 50 contacts, one index and four document copies are received and integrity-verified. Later cleanup removed only 58 verified ZIP copies; all 555 outputs were reverified. Provider QA/hero/feature labels remain unreviewed locally. Root viewed only the 50 V1 thumbnails on the contact index; this is not the individual500 tattoo/creative audit. Frozen receipt and source ledger retain their earlier observations and exact hashes.",
+  "verified_utc": "2026-10-09T02:16:53.192404+00:00",
+  "verified_contact_sheet_count": 50,
+  "verified_contact_index_count": 1,
+  "verified_extracted_file_count": 555,
+  "verified_extracted_bytes": 157332928,
+  "verified_reference_view_studies": 250,
+  "verified_story_scene_studies": 250,
+  "delivery_mode": "eight_pre_extracted_outer_folders_and_loose_guide",
+  "receipt": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/intake_receipt.json",
+    "sha256": "96069a962794403c9d426150158acff20fd6de66f833e129f006cd70d5ce8db9",
+    "bytes": 820212,
+    "state": "eight_folders_nested_CRC_csv_hash_size_decode_verified",
+    "verifiedUTC": "2026-10-09T02:16:53.192404+00:00",
+    "snapshotScope": "Completed extraction before any ZIP cleanup; receipt hash identifies this exact observation."
+  },
+  "asset_ledger": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/asset_ledger.json",
+    "sha256": "862bf97eb9028e25018fd1191bda9d43ccc7827f17a8f33c93d489c3e08626b9",
+    "source_assets": 500,
+    "contacts": 50,
+    "index_images": 1
+  },
+  "outer_zip_verification": {
+    "received": true,
+    "CRCVerified": true,
+    "verified_at_utc": "2026-10-09T02:53:08.073520+00:00",
+    "count": 8,
+    "members_matched_to_original_input_hashes": 54,
+    "receiptPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/outer_cleanup_summary.json",
+    "receiptSHA256": "7e06628a3e1c478fefff4b33e0735996e0e139cd47e4955d0f65d6316087e35a",
+    "note": "Original outer ZIPs were found later in Downloads and verified before removal. The earlier receipt correctly preserves its then-unavailable outer ZIP observation.",
+    "archives": [
+      {
+        "filename": "LAG-500-MASTER-part01.zip",
+        "sha256": "6a18c3b00d6e7f4b4b253f4dd5660b40d800505afc5e3557df9047d3bdfa8260",
+        "bytes": 20284143,
+        "member_count": 10,
+        "CRCVerified": true,
+        "allMembersMatchExtractionInputs": true
+      },
+      {
+        "filename": "LAG-500-MASTER-part02.zip",
+        "sha256": "1a4e6e511c31f0be992fea3cf8b4e9824789edc8fb214ad2fcd90629184ff321",
+        "bytes": 21106085,
+        "member_count": 7,
+        "CRCVerified": true,
+        "allMembersMatchExtractionInputs": true
+      },
+      {
+        "filename": "LAG-500-MASTER-part03.zip",
+        "sha256": "0a8f8076401e02295c461dd4aed7fff95f12c1b147a88fa3db068bfd80d3b418",
+        "bytes": 21844385,
+        "member_count": 7,
+        "CRCVerified": true,
+        "allMembersMatchExtractionInputs": true
+      },
+      {
+        "filename": "LAG-500-MASTER-part04.zip",
+        "sha256": "c0dbda8faf85ed984f12bf9c7384f08cd275128739de8c9c20a35fc1bd000c9c",
+        "bytes": 20359254,
+        "member_count": 7,
+        "CRCVerified": true,
+        "allMembersMatchExtractionInputs": true
+      },
+      {
+        "filename": "LAG-500-MASTER-part05.zip",
+        "sha256": "e453c7fee9f4c90d2ebf16b78949fa2122de029ad937ac1d6cc91bd559318651",
+        "bytes": 22298138,
+        "member_count": 7,
+        "CRCVerified": true,
+        "allMembersMatchExtractionInputs": true
+      },
+      {
+        "filename": "LAG-500-MASTER-part06.zip",
+        "sha256": "9992d761629753fb766d941ddba0cd1a5c34f9de913bb4eab18967f8aff59f96",
+        "bytes": 21014244,
+        "member_count": 7,
+        "CRCVerified": true,
+        "allMembersMatchExtractionInputs": true
+      },
+      {
+        "filename": "LAG-500-MASTER-part07.zip",
+        "sha256": "652b8b0280cd08cd2454b0f2440a12008f126bb27b2e39fe61668a4febe0185e",
+        "bytes": 23523679,
+        "member_count": 7,
+        "CRCVerified": true,
+        "allMembersMatchExtractionInputs": true
+      },
+      {
+        "filename": "LAG-500-MASTER-part08.zip",
+        "sha256": "a990f5ab0f0f8573c8d49ff6d546bdc627468f21677eb56cfd5152f83d569882",
+        "bytes": 6997875,
+        "member_count": 2,
+        "CRCVerified": true,
+        "allMembersMatchExtractionInputs": true
+      }
+    ]
+  },
+  "nested_zip_CRC_verified_count": 50,
+  "cleanup_observation": {
+    "status": "verified_zip_cleanup_complete",
+    "completed_at_utc": "2026-10-09T02:53:25.757735+00:00",
+    "nested_zip_files_removed": 50,
+    "nested_zip_bytes_freed": 156330213,
+    "outer_zip_files_removed": 8,
+    "outer_zip_bytes_freed": 157427803,
+    "total_zip_files_removed": 58,
+    "total_bytes_freed": 313758016,
+    "preserved_output_files_reverified": 555,
+    "images_or_documents_removed": 0,
+    "receipts": [
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/cleanup_summary.json",
+        "sha256": "8d843f84f5a1449ec37551b63bb07a2c68104dfe0fe3841123e4db24723f42a9",
+        "bytes": 63550,
+        "completedUTC": "2026-10-09T02:53:02.127814+00:00"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/outer_cleanup_summary.json",
+        "sha256": "7e06628a3e1c478fefff4b33e0735996e0e139cd47e4955d0f65d6316087e35a",
+        "bytes": 3333,
+        "completedUTC": "2026-10-09T02:53:25.757735+00:00"
+      }
+    ],
+    "frozen_extraction_receipt_unchanged": true,
+    "frozen_source_ledger_unchanged": true
+  },
+  "new_user_approvals": [],
+  "prior_observations": [
+    {
+      "superseded_at_utc": "2026-10-09T02:16:53.192404+00:00",
+      "observation": {
+        "schema_version": 1,
+        "project": "lisan_al_gaib",
+        "intake_id": "LAG-500-20261008",
+        "source_conversation": "https://grok.com/bot/a4a75c63-1565-4448-84a2-f519f40bea15",
+        "status": "download_not_yet_verified",
+        "user_request": "Download all eight parts and guides, extract the outer and nested ZIPs, verify all files, then remove the downloaded ZIP copies. Preserve unpacked originals and intake provenance.",
+        "expected_archives": [
+          "LAG-500-MASTER-part01.zip",
+          "LAG-500-MASTER-part02.zip",
+          "LAG-500-MASTER-part03.zip",
+          "LAG-500-MASTER-part04.zip",
+          "LAG-500-MASTER-part05.zip",
+          "LAG-500-MASTER-part06.zip",
+          "LAG-500-MASTER-part07.zip",
+          "LAG-500-MASTER-part08.zip"
+        ],
+        "expected_loose_guide": "NOVA-GUIDE-500.md",
+        "provider_reported": {
+          "image_count": 500,
+          "look_count": 50,
+          "images_per_look": 10,
+          "qa_clean": 220,
+          "qa_drift_note": 271,
+          "qa_flagged": 9,
+          "flagged_rows": [
+            4,
+            19,
+            61,
+            192,
+            200,
+            216,
+            291,
+            301,
+            319
+          ],
+          "hero_picks": 75,
+          "caveat": "Rows 1-362 clean versus drift labels were inferred by Grok from older free-form notes; borderline labels may differ. These are provider reports, not independent verification or user approval."
+        },
+        "verified_local_image_count": 0,
+        "zip_deletion_completed": false,
+        "notes": "The in-app download controls responded, but no local ZIP receipt was found yet. No archive has been extracted or removed. The existing 422-image tattoo audit does not cover this incoming set."
+      },
+      "reason": "User supplied all eight unpacked outer folders and loose guide; completed extraction receipt replaces the pending download observation."
+    },
+    {
+      "superseded_at_utc": "2026-10-09T03:00:02.475982+00:00",
+      "observation": {
+        "zip_deletion_completed": false,
+        "cleanup_observation": {
+          "at_utc": "2026-10-09T02:16:53.192404+00:00",
+          "performed": false,
+          "note": "All original nested ZIP inputs retained at this receipt snapshot. Cleanup is a separate root-coordinated action."
+        },
+        "outer_zip_verification": {
+          "received": false,
+          "CRCVerified": null,
+          "reason": "Only unpacked outer folders were received; outer ZIP bytes were unavailable."
+        }
+      },
+      "reason": "Later authorized ZIP cleanup completed after separately discovering and verifying all eight outer ZIPs. The original extraction receipt and ledger remain frozen."
+    }
+  ],
+  "local_catalog_verification": {
+    "status": "local_catalog_built_and_file_audit_passed",
+    "assets": 1133,
+    "media": 1005,
+    "documents": 128,
+    "albums": 136,
+    "new_batch_media": 551,
+    "new_batch_documents": 4,
+    "all_551_original_hashes_and_decode_verified": true,
+    "all_551_preview_files_decoded": true,
+    "browser_render_verified": false,
+    "browser_render_note": "Browser file URL was blocked by URL security policy; no rendered gallery verification is claimed.",
+    "hosted_publication": "not_established_by_this_record"
+  },
+  "visual_review_scope": {
+    "reviewer": "root",
+    "viewed": "CONTACT-INDEX.jpg",
+    "scope": "50 V1 portrait thumbnails on the index only",
+    "individual_500_image_review": false,
+    "new_tattoo_audit": false,
+    "new_user_approval": false
+  }
+}
