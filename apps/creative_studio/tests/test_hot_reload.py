@@ -161,6 +161,31 @@ class StudioDependencyTest(unittest.TestCase):
                 bootstrap()
             self.assertIs(sys.modules["studio_dependencies"], new)
 
+    def test_sequence_navigation_survives_a_mixed_deployment_snapshot(self):
+        tree = ast.parse((APP_DIR / "app.py").read_text(encoding="utf-8"))
+        function = next(node for node in tree.body if isinstance(node, ast.FunctionDef)
+                        and node.name == "navigation_storyboard_sequence_count")
+
+        class OldRegistry:
+            pass
+
+        namespace = {"_studio_dependencies": OldRegistry()}
+        exec(compile(ast.Module(body=[function], type_ignores=[]), "app-sequence-fallback", "exec"), namespace)
+        count = namespace["navigation_storyboard_sequence_count"]
+        data = {"storyboardStructure": {"stories": [{
+            "storyID": "criminal-mind", "project": "criminal_mind",
+            "sections": [{"id": "S01"}, {"id": "S02"}, {"id": "S02"}],
+        }]}}
+        self.assertEqual(count(data, "criminal_mind"), 2)
+
+        class CurrentRegistry:
+            @staticmethod
+            def navigation_storyboard_sequence_count(data, project):
+                return 41
+
+        namespace["_studio_dependencies"] = CurrentRegistry()
+        self.assertEqual(count(data, "criminal_mind"), 41)
+
     def test_child_imports_stay_bound_after_another_session_replaces_the_alias(self):
         import types
         stale = types.ModuleType("studio_dependencies")

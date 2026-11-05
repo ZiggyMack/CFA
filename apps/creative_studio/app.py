@@ -47,9 +47,30 @@ for _helper_name in (
     "layout_video_assets", "media_path", "mission_tasks", "mission_review_data", "normalize_plan", "ordered_assets", "production_workflows",
     "read_basket", "read_review", "review_payload", "storyboard_stage", "storyboard_themes", "storyboard_window", "sweep_payload",
     "effective_design_data", "normal_visible", "approved_multiverse", "merge_review_overrides", "review_provenance", "validated_asset_aliases",
-    "navigation_reference_count", "navigation_storyboard_shot_count", "navigation_storyboard_sequence_count", "mission_pending_requests", "cast_use_state",
+    "navigation_reference_count", "navigation_storyboard_shot_count", "mission_pending_requests", "cast_use_state",
 ):
     globals()[_helper_name] = getattr(_studio_dependencies, _helper_name)
+
+
+def navigation_storyboard_sequence_count(data: dict, project: str) -> int:
+    """Keep navigation available while a deployment is replacing helpers in place."""
+    try:
+        helper = getattr(_studio_dependencies, "navigation_storyboard_sequence_count")
+    except AttributeError:
+        counted = set()
+        for story in data.get("storyboardStructure", {}).get("stories", []):
+            if story.get("project", project) != project:
+                continue
+            story_id = story.get("storyID") or story.get("id")
+            for index, section in enumerate(story.get("sections", [])):
+                section_id = section.get("id") or section.get("sequenceID") or index
+                counted.add((story_id, section_id))
+        if counted:
+            return len(counted)
+        return len({story.get("id") for story in data.get("storyboardStories", [])
+                    if story.get("project") == project and story.get("id")})
+    return helper(data, project)
+
 
 LIBRARY_DIR = APP_DIR / "library"
 PAGE_SIZE = 24
