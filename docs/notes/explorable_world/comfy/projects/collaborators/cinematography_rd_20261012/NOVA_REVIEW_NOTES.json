@@ -1,0 +1,29 @@
+{
+  "reviewer": "nova",
+  "createdAtUTC": "2026-10-12T16:50:34.497913Z",
+  "status": "proposed_for_review_with_Ziggy",
+  "originalsChanged": false,
+  "candidateAssigned": null,
+  "gradesAssigned": false,
+  "findings": [
+    {
+      "issue": "Fixed-camera wording can imply a locked-off shot.",
+      "location": "PROPOSAL.txt:64",
+      "clarification": "Preserve the source camera movement and action; do not freeze existing movement. PILOT_PACKAGE and the actual prompt already make this correct."
+    },
+    {
+      "issue": "Compare supplied input access explicitly.",
+      "clarification": "Text-only, still-only and video-access responses are different evidence; a path is not proof of viewing."
+    },
+    {
+      "issue": "Evaluate first written plans for actionability and CFA operator effort.",
+      "clarification": "Do not conflate a strong written plan with measured rendering ability or camera expertise."
+    },
+    {
+      "issue": "Dramatic intention remains unresolved.",
+      "clarification": "Specific camera treatment stays provisional until intended beat, emphasis and choreography are identified."
+    }
+  ],
+  "generations": 0,
+  "paidRuns": 0
+}

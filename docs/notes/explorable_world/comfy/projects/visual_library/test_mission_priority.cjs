@@ -1,0 +1,56 @@
+/* Priority reviews use the real library and existing DOM double.
+   Checks review/navigation boundaries; no claim of browser visual QA. */
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const clone=value=>JSON.parse(JSON.stringify(value));
+const root=__dirname,source=fs.readFileSync(path.join(root,'library.js'),'utf8');
+const raw=fs.readFileSync(path.join(root,'catalog.js'),'utf8');
+const catalog=JSON.parse(raw.slice(raw.indexOf('=')+1).trim().replace(/;$/,''));
+const byID=new Map(catalog.assets.map(a=>[a.id,a]));
+const REVIEW_KEY='cfa-visual-review-v1',FAVORITES_KEY='cfa-visual-favorites-v1',EXPORT_KEY='cfa-visual-export-v1';
+const existing=fs.readFileSync(path.join(root,'test_collections_navigation.cjs'),'utf8');
+const bootSource=existing.slice(existing.indexOf('function boot()'),existing.indexOf('const page = boot()'));
+const oldHook='window.__collectionsTest={normalVisible,collectionCards,collectionGroups,sharedCharacterReferences,castExplorer,castHubGroups,castWorkingGroups,parseHash,detailAlbumGroups,renderMain,expandedCollections,reviews,reviewRecord,reviewPayload,basketPayload,setState(p){Object.assign(state,p);},getState(){return state;}};';
+const hook='window.__collectionsTest={C,reviews,reviewRecord,missionControl,renderMain,reviewPayload,setState(p){Object.assign(state,p);},getCurrentID(){return currentID;},clickPreview(id){const button=[...document.querySelectorAll("[data-open]")].find(b=>b.dataset.open===id);if(!button)throw new Error("Preview is bound: "+id);button.click();}};';
+assert(bootSource.includes(oldHook));
+const boot=new Function('source','catalog','byID','clone','assert','vm','REVIEW_KEY','FAVORITES_KEY','EXPORT_KEY',bootSource.replace(oldHook,hook)+';return boot;')(source,catalog,byID,clone,assert,vm,REVIEW_KEY,FAVORITES_KEY,EXPORT_KEY);
+const page=boot(),api=page.api;
+const task=api.C.missionControl.tasks.find(t=>t.priority==='top'&&/Falcon/i.test(t.title));
+assert(task,'Grok intake has one explicitly elevated review task');
+// The actual shortlist may already be reviewed. Test a pending clone in this DOM only.
+task.status='needs_input';
+assert.equal(task.status,'needs_input','Pending fixture does not turn provider picks into human acceptance');
+for(const id of task.previewAssetIDs)api.reviews.set(id,{...api.reviewRecord(id),status:null,collectionState:'working'});
+const originalReview=clone(api.reviewPayload().items),originalAssets=clone(api.C.assets);
+const overview=api.C.albums.find(a=>a.id==='hon:falcon-group1');
+assert(overview&&overview.assetIDs.length===50,'Full first-50 group remains accessible');
+assert.equal(new Set(overview.assetIDs).size,50,'The overview does not duplicate images');
+for(const id of overview.assetIDs){const a=byID.get(id);assert(a&&a.kind==='image'&&a.project==='hon');assert.notEqual(a.sourceStatus,'production','Intake does not approve assets');}
+assert.equal(task.previewAssetIDs.length,13,'All provider shortlist picks are retained');
+api.setState({view:'mission_control',project:'hon',search:''});api.renderMain();
+let html=page.html();
+assert(html.indexOf('class="mission-counts"')<html.indexOf('class="mission-priority"'),'Summary counts come first');
+const priorityParent=html.match(/<details class="mission-priority"[^>]*>/)[0];
+assert(!/\sopen(?:\s|=|>)/.test(priorityParent),'Top priority parent starts collapsed');
+assert(html.includes('<summary class="mission-priority-heading">'),'Native summary keeps the parent keyboard-toggleable');
+assert(html.indexOf('Top priority')<html.indexOf('Image review'),'The new lane outranks default work');
+assert.equal((html.match(new RegExp('data-task-id="'+task.id+'"','g'))||[]).length,1);
+assert.equal((html.match(new RegExp(task.title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'g'))||[]).length,1,'Priority task is not repeated in ordinary work');
+const taskMarkup=html.match(new RegExp('<article[^>]*data-task-id="'+task.id+'"[\\s\\S]*?</article>'))[0];
+const firstGrid=taskMarkup.match(/<div class="mission-priority-previews">(.*?)<\/div>/s)[1];
+assert.equal((firstGrid.match(/data-open=/g)||[]).length,7,'Seven recommended start images are inside the expandable priority card');
+for(const opening of html.matchAll(/<details\b[^>]*class="mission-(?:task|priority-task)"[^>]*>/g))assert(!/\sopen(?:\s|=|>)/.test(opening[0]),'Every task begins collapsed');
+assert(html.includes('<details class="mission-priority-more">')&&!html.includes('<details class="mission-priority-more" open'),'The six additional picks use an optional drawer');
+for(const id of task.previewAssetIDs)assert.equal((taskMarkup.match(new RegExp('data-open="'+id+'"','g'))||[]).length,1,'Each shortlisted picture has one action within its priority card');
+assert(taskMarkup.indexOf('Start with these images')<taskMarkup.indexOf('Read briefs and records'),'Visual review comes before reading');
+api.clickPreview(task.previewAssetIDs[0]);assert.equal(api.getCurrentID(),task.previewAssetIDs[0],'Preview uses the existing image viewer');
+assert.deepEqual(clone(api.reviewPayload().items),originalReview,'Opening a preview does not assign review decisions');
+api.setState({project:'lisan',view:'mission_control',search:''});api.renderMain();
+assert(page.html().includes(task.title),'Priority reviews remain visible across project tabs');
+api.setState({search:'no-such-mission-review-xyz'});api.renderMain();
+assert(page.html().includes('No top-priority items match this search.')&&!page.html().includes(task.title),'Search does not fall back to unrelated urgent work');
+api.setState({search:''});task.status='done';api.renderMain();
+assert(!page.html().includes('data-task-id="'+task.id+'"'),'Finished work leaves the top lane');
+assert(page.html().includes('Collaborator handoffs')&&page.html().includes(task.title),'Finished task remains in its ordinary provider history');
+assert.deepEqual(clone(api.reviewPayload().items),originalReview,'Priority/status rendering never changes saved reviews');
+assert.deepEqual(clone(api.C.assets),originalAssets,'Priority rendering preserves source asset metadata');
+console.log(JSON.stringify({passed:true,verifiedGroupSize:50,shortlist:13,initialPreviews:7,countsFirst:true,priorityParentCollapsed:true,priorityBeforeDefault:true,viewerNavigation:true,reviewWrites:0,browserVisualQA:false}));

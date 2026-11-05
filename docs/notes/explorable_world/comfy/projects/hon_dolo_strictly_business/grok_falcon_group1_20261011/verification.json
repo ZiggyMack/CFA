@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "intakeID": "HON-FALCON-GROUP1-20261011",
+  "verifiedAtUTC": "2026-10-12T03:04:37.344282+00:00",
+  "status": "local_build_and_behavior_checks_passed",
+  "sourceMessageID": "39ce2274-9c4b-4490-b7c8-96f4937210e3",
+  "media": {
+    "count": 50,
+    "hashSizeDecodeVerified": 50,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "categoryCounts": {
+      "C01-pilot-hover": 15,
+      "C02-captain-portrait": 15,
+      "C03-look-back-softened": 15,
+      "C04-battle-light": 5
+    },
+    "preservedOriginals": true,
+    "newApprovals": 0,
+    "newLikenessRatings": 0,
+    "songTimingAssigned": false
+  },
+  "sourceDocuments": {
+    "snapshotsVerified": 6,
+    "manifestSHA256": "0ddff02fd6f20ddd5c28fd4454ad96ad9a90f1058788c47546658d3b0c2ecd89",
+    "shortlistSHA256": "ed3eccbd97f001cca0cbff59556c5ac1c608dcd79c283909a79ab4f08c66ebc1"
+  },
+  "missionControl": {
+    "taskID": "grok-falcon-first50-review",
+    "priority": "top",
+    "status": "needs_input",
+    "previewCount": 13,
+    "linkedAssetAndAlbumRoutesVerified": true
+  },
+  "build": {
+    "assets": 1857,
+    "albums": 175,
+    "documents": 362,
+    "media": 1495,
+    "catalogSHA256": "8c10a49eef7df13c5fb035fe727c2d8a706113a21ed60d293e1d4cad1a2a0ef5",
+    "registrySHA256": "d601e9fd9e974a5ea61a4d266f7ba3683ec0695faf7f9eb46324b2b26b967bc3"
+  },
+  "tests": [
+    {
+      "test": "test_mission_priority.cjs",
+      "passed": true,
+      "exitCode": 0,
+      "executedBy": "/root",
+      "evidence": "Root reported a successful actual rerun after fixing the test hook VM scope. No production change or rebuild was needed.",
+      "checks": {
+        "verifiedGroupSize": 50,
+        "shortlist": 13,
+        "initialPreviews": 7,
+        "priorityBeforeDefault": true,
+        "viewerNavigation": true,
+        "reviewWrites": 0,
+        "browserVisualQA": false
+      }
+    },
+    {
+      "test": "test_collaborator_profiles.cjs",
+      "passed": true,
+      "exitCode": 0,
+      "executedBy": "/root/falcon_priority_intake",
+      "output": "{\"passed\":true,\"profiles\":9,\"tabHandlers\":9,\"nestedSections\":4,\"nestedSectionChecks\":36,\"keyboardNavigation\":true,\"actualHumanGrades\":1,\"browserVisualQA\":false}"
+    },
+    {
+      "test": "test_scene_readiness.cjs",
+      "passed": true,
+      "exitCode": 0,
+      "executedBy": "/root/falcon_priority_intake",
+      "output": "{\"passed\":true,\"scenarios\":11,\"sceneIDs\":[\"S01B\",\"S02A\"],\"catalogAssets\":1857,\"browserVisualQA\":false,\"projectGradesAssigned\":false}"
+    },
+    {
+      "test": "test_review_requests.cjs",
+      "passed": true,
+      "exitCode": 0,
+      "executedBy": "/root/falcon_priority_intake",
+      "output": "Review requests and assistant proposals: 7 checks passed."
+    }
+  ],
+  "diffCheck": {
+    "exitCode": 0,
+    "output": "warning: in the working copy of 'docs/notes/explorable_world/comfy/projects/collaborators/mission_control.json', LF will be replaced by CRLF the next time Git touches it"
+  },
+  "initialTestIssue": "Priority test first stopped at an injected test hook using assert outside its VM scope. Root repaired only the test hook and its actual rerun passed.",
+  "browserVisualQA": false,
+  "providerContacted": false,
+  "gitCommittedOrPushed": false
+}

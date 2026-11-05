@@ -39,7 +39,127 @@
         "hon:return-contact-sheets",
         "hon:image-benchmark-review",
         "hon:mouth-continuity-rejected"
-      ]
+      ],
+      "comfyWorkspace": {
+        "outputAssetIDs": [
+          "HD-COMFY-MOTION-V001",
+          "HD-COMFY-RELIGHT-V001",
+          "HD-COMFY-RELIGHT-V002",
+          "HD-COMFY-IDENTITY-V001"
+        ],
+        "targetAlbumIDs": [
+          "hon:comfy-likeness-HON-DOLO",
+          "hon:comfy-likeness-LEIA",
+          "hon:comfy-likeness-LUKE"
+        ],
+        "inputAssetIDs": [
+          "GEM-C0823C60",
+          "HD-COMFY-RELIGHT-V002-CONTROL"
+        ],
+        "finishingAssetIDs": [
+          "HD-AUDIO-REPLACE-V001"
+        ],
+        "workflowFamilies": [
+          {
+            "id": "character-still",
+            "title": "Build a character still",
+            "inputLabel": "Earlier design + likeness crop",
+            "operationLabel": "Two-reference edit",
+            "outputLabel": "Candidate starting image",
+            "status": "Executed · not accepted",
+            "description": "The saved test combined an earlier Dolo design with a Han likeness crop. Separate outfit and grill inputs were not wired into this test.",
+            "workflowIDs": [],
+            "links": [
+              {
+                "label": "Clean identity candidate",
+                "assetID": "HD-COMFY-IDENTITY-V001"
+              },
+              {
+                "label": "Recorded inputs and still tests",
+                "assetID": "hon:doc:docs/notes/explorable_world/comfy/workflows/hon_dolo_reference_edit_v001.record.json"
+              }
+            ]
+          },
+          {
+            "id": "animation",
+            "title": "Animate a still",
+            "inputLabel": "Starting image + motion direction",
+            "operationLabel": "Image to video",
+            "outputLabel": "Short motion take",
+            "status": "LTX tested · Seedance prepared",
+            "description": "LTX has a candidate take with blink and smile drift. Seedance is an unrun two-frame example; the project-specific starting-frame version remains planned.",
+            "workflowIDs": [
+              "comfy-motion",
+              "comfy-seedance25-first-frame"
+            ],
+            "links": []
+          },
+          {
+            "id": "relighting",
+            "title": "Relight footage",
+            "inputLabel": "Clip excerpt + first frame + depth or edges",
+            "operationLabel": "Controlled relight",
+            "outputLabel": "Lighting comparison",
+            "status": "Two tests · preservation failed",
+            "description": "Depth and Canny were tested on the same parent clip. Both drifted in the face, grill or tattoos.",
+            "workflowIDs": [
+              "comfy-depth-relight",
+              "comfy-edge-relight"
+            ],
+            "links": []
+          },
+          {
+            "id": "actor-replacement",
+            "title": "Replace an actor in footage",
+            "inputLabel": "Performance + actor crop + masks",
+            "operationLabel": "Wan Animate Mix + protected composite",
+            "outputLabel": "Identity-test clip",
+            "status": "Two tests · likeness and performance failed",
+            "description": "Broader conditioning repaired black patches, but actor likeness and eye performance did not pass. The source and executed-test evidence remain linked below.",
+            "workflowIDs": [],
+            "links": [
+              {
+                "label": "Parent performance clip",
+                "assetID": "GEM-2E361055"
+              },
+              {
+                "label": "Actor likeness crop",
+                "assetID": "HD-LIKENESS-03"
+              },
+              {
+                "label": "Measured return and output locations",
+                "assetID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/comfy/cantina_toast_identity_20261012/MEASURED_RETURN_20261012.txt"
+              }
+            ]
+          },
+          {
+            "id": "lip-sync",
+            "title": "Match mouth motion to vocals",
+            "inputLabel": "Video excerpt + vocal audio",
+            "operationLabel": "Lip sync",
+            "outputLabel": "Mouth-synced candidate",
+            "status": "Prepared · not executed",
+            "description": "The excerpt and vocal signal still need selection. The saved example uses an earlier song mix, not Hon Dolo Prime. There is no mouth or grill fidelity result yet.",
+            "workflowIDs": [
+              "comfy-lipsync"
+            ],
+            "links": []
+          },
+          {
+            "id": "soundtrack",
+            "title": "Replace a soundtrack",
+            "inputLabel": "Original video + new audio",
+            "operationLabel": "Replace audio track",
+            "outputLabel": "Picture-preserving preview",
+            "status": "Local preview · Cloud not run",
+            "description": "The local preview keeps the source picture unchanged and uses an earlier song mix, not Hon Dolo Prime. Soundtrack replacement does not animate the mouth.",
+            "workflowIDs": [
+              "comfy-soundtrack"
+            ],
+            "links": []
+          }
+        ]
+      }
     }
   }
 }

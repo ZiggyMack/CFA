@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "request_id": "GROK-BOSS-DISCOVERY-20261008",
-  "state": "prepared_not_sent",
-  "character_slot": "Hon Dolo boss — unresolved",
+  "state": "user_selected_visible_reference",
+  "character_slot": "Hon Dolo boss — BOSS-008 crocodilian selected",
   "supersedes": "The old Jabba-only assumption and no-roster restriction in GROK-HD-20261008 are superseded. SC-BOSS-001 interaction waits for selection.",
   "user_intent": "Explore 50 candidate boss concepts, pick a winner, then front/back/left/right; Flow later.",
   "provider_history": {
@@ -139,10 +139,33 @@
     }
   ],
   "post_selection": {
-    "selected_id": null,
+    "selected_id": "BOSS-008",
     "deliverable": "Exactly front, back, left, right of the same selected identity; no 50 four-view sets.",
     "consistency": "Keep anatomy, color, jewelry, tattoos, outfit and scale stable. Label anatomical left/right.",
-    "next": "Then one two-person boss/pinstripe Hon Dolo master under SC-BOSS-001; evaluate before any Flow motion proof."
+    "next": "Then one two-person boss/pinstripe Hon Dolo master under SC-BOSS-001; evaluate before any Flow motion proof.",
+    "selected_asset_id": "HD-RETURN-8421e7cfa1a0",
+    "selection_status": "user_selected_visible_identity_and_proportions",
+    "selected_visible_reference": {
+      "repo_path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/8421e7cfa1a0__BOSS-008_v001.png",
+      "sha256": "8421e7cfa1a012076a33c8182620d28cf6663f068d13c3a321699de030a9078b",
+      "bytes": 1066466,
+      "scope": "Golden visible likeness, identity and proportions only; unseen body and future outputs remain unapproved."
+    },
+    "selection_receipt": {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/boss_selection_20261014_46c7936e-274a-4e8e-9a3f-82a92a9c7983/SELECTION_RECEIPT.json",
+      "sha256": "8d2814cd33cb4f00a049eb9ea0380c8358b27d8d3673ea73519dfc6c6c8c6bf0",
+      "recorded_at_utc": "2026-10-14T03:55:15.790801Z"
+    },
+    "revision_boundaries": {
+      "preserve_selected_visible_identity": true,
+      "preserve_selected_visible_proportions": true,
+      "permitted_change": "Slight improvements only.",
+      "avoid": "Arbitrary drift or excess bulk.",
+      "unseen_body_approved": false,
+      "future_outputs_blanket_approved": false
+    },
+    "discovery_freedom_superseded_for_selected_identity": true,
+    "followup_execution_state": "not_dispatched_or_generated_by_this_intake"
   },
   "generation_status": "No generation, uploads or external messages performed by CFA.",
   "return_zip": "GROK-BOSS-DISCOVERY-20261008_round01_return_v001.zip"

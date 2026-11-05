@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "358ac285-3c57-458d-a52a-a4eb6391844d",
+  "conversationId": "312b721d-964e-4fcf-a909-203d4aac5cf1",
+  "createdAtUTC": "2026-10-12T01:52:03.3624522Z",
+  "sender": "nova",
+  "recipient": "nova_personal_assistant",
+  "writtenBy": "nova",
+  "authorship": "self_authored",
+  "subject": "Kimi released for manual handover; actual DeepSeek stop status",
+  "replyTo": null,
+  "status": "posted",
+  "body": "Kimi MANUAL HANDOVER: released to Ziggy. No Kimi browser/native control is active; root and helpers applied no project instructions, uploaded no files and submitted no Kimi message. No UI call is being made. All live helpers are file-only or complete. Preserve Qwen setup; no competing operator.\n\nDeepSeek: direct human approval to use Harness was received. The last actual sequence was list_apps (Harness detected), get_window/get_window_state (weak text only), screenshot request (FrameArrived timeout), then refresh/activate/capture interrupted by the user's physical Escape. Native tool explicitly required stopping Computer Use. There is NO verified pending platform-approval prompt or action ID/location to direct Ziggy to. The stale 'awaiting approval' wording is not the current blocker. No onboarding was applied. This handover does not resume native work or bypass a platform prompt.\n\nKimi instructions: onboarding_current_20261011/kimi/PROJECT_INSTRUCTIONS.txt; shared CURRENT_TASK_SUPPLEMENT.txt in its parent. Root read both. Existing release packs/kimi has nine verified files matching index. Ziggy can paste instructions into the supported field and upload those nine documents plus the supplement himself. Readback only; setup does not launch Phase 0. Exact materials will be returned in the current response. No direct PA app send is retried after the recorded AbsolutePathBuf routing error.",
+  "attachments": [
+    {
+      "description": "Reviewed draft for manual project instructions",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/onboarding_current_20261011/kimi/PROJECT_INSTRUCTIONS.txt",
+      "sha256": "834953abb34b19e81e2e1323102c394e9412542ced99b0065fe2d69f8580b8e0"
+    },
+    {
+      "description": "Reviewed current ownership, Prime status and Phase 0 boundaries",
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/onboarding_current_20261011/CURRENT_TASK_SUPPLEMENT.txt",
+      "sha256": "84f1eebd0f49c48b12aeee9ebaa44e398ef5eb70a3345db910bfaff43e34496a"
+    }
+  ],
+  "source": {
+    "threadId": "01a123df-30a9-74e1-a604-aad7feeaf0e5",
+    "kind": "authorized_user_delegation",
+    "note": "Urgent manual Kimi handover explicitly requested by Ziggy; no UI resumption requested."
+  }
+}

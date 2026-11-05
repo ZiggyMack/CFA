@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "id": "b4e6e8d5-d9bd-4bf9-935b-415b6c056611",
+  "checkedAtUTC": "2026-10-14T23:18:42.395048Z",
+  "authoredBy": "nova_personal_assistant",
+  "assignmentID": "storyboard-story-selector-story01-intake-20261014",
+  "outcome": "local_requested_implementation_verified_with_explicit_qa_limits",
+  "siteOwner": "cfa_site_index",
+  "siteOwnershipRetained": true,
+  "sourceHandoffMessageID": "8b44dfe3-8265-44cd-b050-0e69165f9644",
+  "siteCompletionMessage": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/5f7aa49c-b029-4605-b0bd-9a149b5aea24.json",
+    "bytes": 3517,
+    "sha256": "64419d37a2b2843959dc1b551603f59bb138dffae438c96f54893b74e593b2d1"
+  },
+  "siteCompletedTurnID": "01a13c7b-4cf2-7fb2-98b1-6cdb06d537ed",
+  "ownerPublication": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_implementation_20261014/LOCAL_PUBLICATION_20261014.json",
+    "bytes": 7607,
+    "sha256": "baf26c50f20eebbda3c28a7b312295fc7669b0d39ce9013fd30f54fc2e51a62b"
+  },
+  "verifiedCurrentPins": {
+    "catalog": {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+      "bytes": 11083117,
+      "sha256": "3dc3211e7e457a005d0c4b32ee4af63b34287455eb3e10f2589f112053575583"
+    },
+    "renderer": {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "bytes": 256259,
+      "sha256": "1b9356615a50ba8de4f53a946d17f347af515d3468242a41df7bd787d19634c6"
+    },
+    "canonicalReviews": {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "bytes": 204969,
+      "sha256": "b37518b802a24d141a64933d13f61f5aad6462de9874f9a79319f26cfa0aa566"
+    }
+  },
+  "navigation": {
+    "entryPath": "docs/notes/explorable_world/comfy/projects/index.html",
+    "verifiedRoute": "#lisan/storyboard",
+    "instructions": "Open the local project index, choose Lisan then Storyboard. Meta Mirror is the default; select Story01 The Gloved Hand for its own shots. Hon Dolo has its own Storyboard landing and sequences.",
+    "songs": {
+      "MetaMirrorPanels": 50,
+      "HonStrictlyBusinessPanels": 36
+    },
+    "storyCards": 11,
+    "proseOnlyCards": 7,
+    "proseState": "No panels yet",
+    "secondaryStageFilter": true
+  },
+  "independentDataAudit": {
+    "assetsBefore": 2455,
+    "assetsAfter": 2512,
+    "albumsBefore": 233,
+    "albumsAfter": 234,
+    "priorIDsRetained": 2455,
+    "priorAssetRecordsUnchanged": 2453,
+    "priorMediaHashesBytesChanged": 0,
+    "allowedPriorRecordRefreshes": [
+      "DECISIONS_20261012.md",
+      "START_HERE.txt"
+    ],
+    "recordRefreshReason": "Existing document identities now resolve to pinned and clearly labelled site-reading excerpts; canonical originals remain unchanged.",
+    "addedFrames": 50,
+    "addedDocuments": 7,
+    "reusedMaterialIdentities": 6,
+    "story01SequenceCount": 1,
+    "story01Shots": 38,
+    "story01Scenes": 9,
+    "uniqueMaterials": 56,
+    "materialAssociations": 98,
+    "sourceAndFullSizePinsMatched": 56,
+    "shotsWithFrames": 33,
+    "preliminaryResultShots": 1,
+    "shotsWithPendingReferences": 21,
+    "shotsWithPendingCharacters": 20,
+    "shotsWithPendingObjects": 5,
+    "objectOnlyPendingShot": "S01-5.3",
+    "canonicalReviewsPreserved": 199,
+    "metaMirrorSceneMapAndTimingPreserved": true,
+    "all50ApprovedTimingsRemainNull": true,
+    "sourceChoicesPreserved": true,
+    "referenceValidationPreserved": true,
+    "canonicalShotMaterialsPreserved": true,
+    "generatedFlowAssociationOnly": {
+      "shotID": "LAG-FLOW-SW2-001",
+      "storyShotID": "S01-4.1",
+      "independentSequenceID": "LAG-STORY-01-THE-GLOVED-HAND"
+    },
+    "newRatingsOrApprovals": 0,
+    "newFramesMasterApproved": false,
+    "newStage": "preliminary",
+    "newAcceptance": "not_accepted"
+  },
+  "independentFunctionalTests": [
+    {
+      "command": "node test_story_selector.cjs --published",
+      "result": "passed",
+      "checks": 52,
+      "reviewWrites": 0
+    },
+    {
+      "command": "node test_writer_publication.cjs",
+      "result": "passed",
+      "checks": 6,
+      "storageWrites": 0
+    },
+    {
+      "command": "node test_compact_browse.cjs",
+      "result": "passed",
+      "checks": 9
+    }
+  ],
+  "independentPrivacyAudit": {
+    "result": "passed",
+    "sourceAndPublicationPinsMatched": 4,
+    "stableDocumentIDsReused": true,
+    "publicDialogSourceAndExportLinksResolveToPublicationCopies": true,
+    "normalizedOmittedPassagesAbsent": 9,
+    "privateOriginalDirectLinks": 0,
+    "minorLabelObservation": "Generic Open original file button resolves to the clearly labelled publication excerpt, not the private canonical original."
+  },
+  "qaAndExecutionLimits": {
+    "browserVisualQA": false,
+    "browserLimitation": "Existing local-file browser policy block. Real renderer and handlers were exercised with in-memory DOM/storage doubles; native appearance was not verified.",
+    "hostedDeployment": false,
+    "hostedURL": "https://algaib.streamlit.app/",
+    "hostedStateClaim": "This task did not deploy the new storyboard to the hosted site.",
+    "headAnchorTest": {
+      "file": "test_head_anchor_group.cjs",
+      "line": 118,
+      "actualResult": "failed",
+      "assertion": "All Files Working References purpose chip",
+      "ownerClassification": "baseline/stale expectation",
+      "independentClassification": "not yet established",
+      "sourceEvidence": {
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_implementation_20261014/UI_TEST_RESULTS_20261014.json",
+        "bytes": 6751,
+        "sha256": "1d661c9e1181948df49eb1b3f16fe71f796e0fa1b8ce16d52cff6485ba7de335"
+      },
+      "baselineProofRequestSent": true,
+      "siteFollowupTurnID": "01a13cab-fefc-71b3-b355-ca5b4a8e58aa",
+      "lastObservedStatus": "active; no approval flags; latest command exec-701c1cf3-1c41-4114-abac-44797623f410 completed exit0, no returned baseline disposition as of23:17:29UTC",
+      "noExtraBuildAuthorizedForBaselineInvestigation": true
+    },
+    "optionalExtraNavigationVerifier": {
+      "status": "pending_init",
+      "lastConfirmedProgress": "22:59UTC: core published tests passed and artifact hashes stable.",
+      "additionalAll11HrefBackHashchangeCompletionClaimed": false,
+      "confirmedRunningVerificationCommand": false,
+      "limitation": "Additional verifier initialization/model progress did not complete; no broad viewer pass is claimed."
+    }
+  },
+  "boundaries": {
+    "helperCodeEdits": false,
+    "helperBuilds": 0,
+    "providerOrChiefDispatch": false,
+    "generationOrSpend": false,
+    "pushOrHostedDeployment": false,
+    "backupWarningApprovalInferred": false,
+    "backupWarningStatus": "separate approval still pending"
+  },
+  "supportingEvidence": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_implementation_20261014/PRESERVATION_RESULT.json",
+      "bytes": 878,
+      "sha256": "b1ca60e90a718a748b01040f729ee1513b42e7638cfe4edc17884f97e3b36fb1"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_implementation_20261014/INTAKE_VERIFICATION.json",
+      "bytes": 21345,
+      "sha256": "76392bdd2aa2aa369a53dac1e53bf3bb5e82ed5dc7152f12b9f8cd21ddcef4ed"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_implementation_20261014/UI_TEST_RESULTS_20261014.json",
+      "bytes": 6751,
+      "sha256": "1d661c9e1181948df49eb1b3f16fe71f796e0fa1b8ce16d52cff6485ba7de335"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_implementation_20261014/site_safe_writer/SITE_SAFE_WRITER_SOURCES.json",
+      "bytes": 3802,
+      "sha256": "323f594d8486f4d58c481229a0ad547beb4e76f75d0b72946f04fe6653744081"
+    }
+  ]
+}

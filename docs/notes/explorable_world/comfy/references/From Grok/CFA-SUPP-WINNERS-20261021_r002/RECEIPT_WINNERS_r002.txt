@@ -1,0 +1,28 @@
+RECEIPT: CFA-SUPP-WINNERS-20261021_r002 (new, separate supplement; revision of WINNERS r001)
+Built: 2026-10-21 13:07 ET by Grok Bot (Chief of Staff)
+Reason: V_1's labelling request. Category B is relabelled "V-validated (scoped), awaiting Ziggy". Each B card now shows its review scope, its goldrefs per scope and, for PASS-ADVISORY items, the advisories logged in its return. A section line says a V pass covers only the chest rebuild and is not Ziggy's acceptance.
+Parents:
+  WINNERS r001: ..\CFA-SUPP-WINNERS-20261021_r001\RECEIPT_WINNERS_r001.txt sha256 2a7d78cb17564f4866e8dd21ea2799648a59540fa6578cdc8556c5187e020c43 (r001 left unchanged)
+  CFA-META-20261021 r002: START_HERE_r002\START_HERE_r002.md sha256 5f570d54b6f61467bc049146383576917f9dbe86f2fe3ea59fe91df6104d02a1 ; START_HERE_r002.tsv sha256 1f30ae11b39232ae7feed0be8b2e4fb690c15ee3ad9dd40390ad84acc90a70e5
+r002 and WINNERS r001 are UNCHANGED. Only new files were added, in this new folder.
+
+Item counts (same items as r001)
+  A. APPROVED BY ZIGGY: 11. Shown first, in a separately boxed section.
+  B. V-validated (scoped), awaiting Ziggy: 28. V verdicts: 10 PASS, 18 PASS-ADVISORY.
+  C. PRELIMINARY: 13 (HD-MOUTH v004 Chief picks).
+  Open appendix: 20 lines, the same as r001.
+Advisory notes attached: 27, across the 18 PASS-ADVISORY cards. Every PASS-ADVISORY card has at least one note, quoted or closely paraphrased from its return and cited with the return's sha8.
+Goldrefs on the B cards:
+  look = pilot C04-010 v011 d68287f1. Named in 7 returns (298, ARMOR-SWAP-01, C06-008, C06-014, C04-005, C04-013, C04-015); INFERRED from the review scope elsewhere.
+  shape = stencil a906752d panel 1. INFERRED on all 28; no winner's return names it.
+  cloth / tattoos / chain / outside-diff = SELF-ORIGINAL with its sha. Named in the frame's own return on 16 cards. On the other 12 it is INFERRED: the hash of the frame's original file on the box, with an earlier return that lists that sha.
+  grill = HEAD-HD-ICED-ANCHOR-r4 40064d98. Added only where the return checked the grill (285, 287, 2703428d, 298, 299, ARMOR-SWAP-01). INFERRED: the returns check it as unchanged and don't name the anchor.
+  ARMOR-SWAP-01 also lists its swap base frame, HD-ARMOR-SWAP-01.jpg aea8323a. This return names it as the original, and V4_FALCON_armorswap01_neck (d52b7f8a) names it as BASE.
+  Unanchored cards: none.
+Thumbnails: copied byte-for-byte from r001 (same 52 hashes; see THUMBS_SHA256SUMS.txt).
+Security: PRIVATE_MAP.json, v1_calib and v1_push were not opened. Pilot 2cf53ec7 untouched.
+
+Files (sha256)
+e697dbd96c43660f1b03a08db28da04677fd05e8070b2c99ef4a93961ee5fd6e  WINNERS_index.html
+80d36b230ada1b7f6f496c8921208ef4b10c870ba1418ffbedb18593ac6d639a  WINNERS_list.csv
+6df2a2484c2377eb2f623bec68f790794fc9f1fd83281fce7ee070fa5f794415  THUMBS_SHA256SUMS.txt

@@ -1,0 +1,157 @@
+{
+  "status": "complete",
+  "scope": "Unified review navigation and Archive removal history, editable supporting cast use, Gecko-frog grouping, document and shot counts, planned take history, storyboard cleanup and Kitchen counts",
+  "liveURL": "https://algaib.streamlit.app/Full_Visual_Library",
+  "buildID": "b2774546738a9ee51844",
+  "commit": "18a3a40c5ec533fc9a1717d96daee7f899dab7ba",
+  "cast": {
+    "controls": [
+      "Use this version for a role",
+      "Plan this version for storyboard",
+      "Link to an existing storyboard shot"
+    ],
+    "countUnit": "distinct characters",
+    "noOpCounts": [
+      11,
+      3,
+      2,
+      1
+    ],
+    "syntheticWifePlanCounts": [
+      11,
+      3,
+      3,
+      1
+    ],
+    "persistence": "Normal review export/import; manual choices preserve authored source evidence"
+  },
+  "storyboard": {
+    "plannedTakes": "Required change brief, immutable prior snapshots, review export/import, no generation or approval implied",
+    "drawerOrder": [
+      "Linked references",
+      "Context & references A-D",
+      "Creative direction 0-7",
+      "Generation handoff 8-9",
+      "Takes, results & review 10-11",
+      "Kitchen / handoff structure"
+    ],
+    "kitchenCount": "Meaningful written sections out of 12, excluding missing and unknown; no execution implication"
+  },
+  "verification": {
+    "buildID": "b2774546738a9ee51844",
+    "assetCount": 4669,
+    "fileCount": 9013,
+    "reviewsPreserved": 320,
+    "onlyAuthorizedGeckoGroupingChanged": true,
+    "reviewDataUnchanged": true,
+    "sharedUIExactlyMirrored": true,
+    "mediaVerification": "All existing files verified by portable builder; no media changes",
+    "unresolvedPreparedLinks": 29,
+    "tests": {
+      "ledger": "JS/Python parity and immutable history",
+      "native": "synthetic planning and cleanup AppTests",
+      "publication": "round-trip and exact helper packaging"
+    }
+  },
+  "liveVerification": {
+    "buildID": "b2774546738a9ee51844",
+    "url": "https://algaib.streamlit.app/Full_Visual_Library",
+    "browser": "Codex in-app browser; separate verification tab",
+    "castControlsVisible": true,
+    "kitchenCountVisible": true,
+    "takeControlsVisible": true,
+    "storyboardNavigationText": "Storyboard 71",
+    "prologueShotCount": 8,
+    "S02ShotCount": 10,
+    "reviewQueueTabs": [
+      "Awaiting your decision",
+      "Review collections"
+    ],
+    "separateNeedsReviewSidebarEntries": 0,
+    "reviewCollectionsVisualCount": 81,
+    "pendingImageRequests": 4,
+    "savedRemovalsInQueue": 0,
+    "savedRemovalDrawerInArchive": true,
+    "hostedSavedRemovalCount": 58,
+    "intakeDefault": "Batch gallery",
+    "frozenHandoffMainBannerPresent": false,
+    "storyboardReviewPackages": 1,
+    "P6bButtonOpensWrittenShot": true,
+    "P6bSequence": "PROLOGUE",
+    "P6bKitchenSummary": "Kitchen / handoff structure \u00b7 0/12 sections written",
+    "interviewGuideChoices": 17,
+    "individualAuthorAnswerForms": false,
+    "briefsCollapsedLast": true,
+    "geckoDesignReferenceCount": 8,
+    "geckoStudy09Present": true,
+    "userDataMutatedDuringQA": false,
+    "physicalPhoneTest": false,
+    "screenshot": "D:/Documents/CFA/.cache/storyboard_takes_20261029/live-final.png"
+  },
+  "geckoGrouping": {
+    "sourceBefore": "3838ca5390511583a16ccf91d41c0acfd20a837d88fae59c8e1c38d2085aef6f",
+    "sourceAfter": "2e981963086cd106cc2052e94d6f25bf0acf6358b564d3299d4467585eee74e9",
+    "nativeBefore": "fc9911ad27bccd6ac261ac8f30f093019a63d3512d122fb218dc117c3cfe367b",
+    "nativeAfter": "5597d4307150c44cdd41c1f57cb9d19dc3a887972dc6acdfa1fe8edb5342625a",
+    "manifestAfter": "66161f0d04060843b0b8c6ffefc1d329bae8391aabe11988b9e5c5257982309d",
+    "reviewCount": 320,
+    "assetCount": 4669,
+    "mediaRecordsUnchanged": 9002,
+    "change": {
+      "atUTC": "2026-10-30T03:40:56.642923+00:00",
+      "reason": "Direct user character-group correction",
+      "assetID": "HD-DROP-6783943c414c",
+      "sha256": "6783943c414cf7abf6061779eef7ee9d58d2f9441575eace1f8e0f7b5f12228a",
+      "fromAlbum": "hon:creature-ideas",
+      "toAlbum": "hon:cast-gecko",
+      "reviewsChanged": false,
+      "mediaChanged": false
+    }
+  },
+  "documentCounts": "Non-document navigation totals exclude documents; Documents and inline writings sections retain their own counts",
+  "storyboardNavigation": {
+    "unit": "authored parent shots",
+    "hon": 71,
+    "lisan": 38,
+    "prologue": 8,
+    "S02": 10,
+    "display": "plain number without unit suffix",
+    "excludes": [
+      "duplicate shot records",
+      "additional takes",
+      "reference images",
+      "documents"
+    ]
+  },
+  "reviewNavigation": {
+    "entry": "Review queue",
+    "views": [
+      "Awaiting your decision",
+      "Review collections"
+    ],
+    "pendingCountIsSeparateFromCollections": true,
+    "savedRemovalDecisions": "Moved to Archive, preserving decisions and notes; no automatic archival"
+  },
+  "cornerReviewSections": {
+    "image": "Distinct shade, links to the Review queue",
+    "storyboard": "Links to actual storyboard author-review requests",
+    "firstTask": "hon-coverage-review-queue-20261028",
+    "countUnit": "review packages, not shots"
+  },
+  "authorInterview": {
+    "workflow": "Nova interviews Ziggy in chat, then prepares one consolidated handback for PH Claude",
+    "siteRole": "Navigation and source context, without individual answer forms",
+    "writtenShotExample": "P-6b, Across the street, proposed without artwork"
+  },
+  "intakePresentation": {
+    "default": "Batch gallery",
+    "alternative": "Detailed evidence",
+    "removedMainBanner": "Frozen handoff r002"
+  },
+  "limits": [
+    "No real user cast choices or planned takes created during QA",
+    "29 pre-existing prepared technical links remain unavailable in hosted publication",
+    "No physical-phone browser test performed"
+  ],
+  "execution": "Project runtimes, cache, output and temporary Git index on D:"
+}

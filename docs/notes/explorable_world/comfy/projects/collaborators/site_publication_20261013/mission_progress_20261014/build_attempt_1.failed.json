@@ -1,0 +1,55 @@
+{
+  "status": "build_failed",
+  "startedAtUTC": "2026-10-14T04:11:48.458234+00:00",
+  "buildInvocations": 1,
+  "inputs": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/build_catalog.py",
+      "bytes": 54708,
+      "sha256": "d285b1a093d25a500bbe372ae15c43d5919492d4a480f6795dd694ee36204529"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "bytes": 239179,
+      "sha256": "ec867e40e092c79be150791bf17974722260f1e0dc0ab80e6d65389fd7909ecb"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.css",
+      "bytes": 55834,
+      "sha256": "0afe9abb76ae567ca58c981882bcb684d121aee7b420441829fb3ee66d007d3e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/cast_collections.json",
+      "bytes": 64886,
+      "sha256": "95db055fcc6b8693bc00c3672f5163311899fc366494f5c3a4e3128a426850c6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/cast_revisions.json",
+      "bytes": 2507,
+      "sha256": "73043cd71cb451012820f5f58954ea70488fc302078e840b4fca12d585920283"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/writer_development.json",
+      "bytes": 59645,
+      "sha256": "6a7a4824e90c15d03a233dab7e4caef77eb0db3460d2e5cb1081f173a91bc24a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/mission_control.json",
+      "bytes": 145997,
+      "sha256": "6eb808a422d7d5f9c24ea8c41d1685c8c59fde44d9c197f0a0f074c746b4e38e"
+    }
+  ],
+  "reviewSource": {
+    "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+    "bytes": 204969,
+    "sha256": "b37518b802a24d141a64933d13f61f5aad6462de9874f9a79319f26cfa0aa566"
+  },
+  "exitCode": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\visual_library\\build_catalog.py\", line 509, in <module>\n    assert by_id[association['documentID']]['project']==by_id[association['assetID']]['project'],association\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: {'documentID': 'lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/CHARACTER_JAMES_20261014.md', 'assetID': 'HD-RETURN-957897bd45c4', 'label': 'James \ufffd original selected character', 'evidence': 'Exact adoption record; original Hon review preserved'}\n",
+  "catalog": {
+    "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+    "bytes": 10754340,
+    "sha256": "29e0ff04e59d3c7b2ddf7e1458928a4d9f7f0e4987fa9d3dbb940cb977bb14c7"
+  }
+}

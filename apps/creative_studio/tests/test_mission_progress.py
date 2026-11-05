@@ -10,6 +10,18 @@ from library_helpers import (effective_reviews, mission_pending_requests, missio
 
 
 class MissionProgressTest(unittest.TestCase):
+    def test_reviewed_prop_sweep_stays_active_until_source_completion(self):
+        task = {"id": "favorites-prop-sweep", "status": "needs_input"}
+        assets = [{"id": "gun", "project": "hon", "kind": "image", "sourceIntake": "HON-GROK-RETURN-20261009",
+                   "propState": "with_gun", "outfitAlbumID": "coat"}]
+        reviews = {"gun": {"status": "keep"}}
+        shown = mission_task_progress(task, assets, reviews)
+        self.assertEqual(shown["status"], "in_progress")
+        self.assertEqual(shown["statusLabel"], "Review recorded · team follow-up")
+        self.assertEqual(task["status"], "needs_input")
+        completed = {**task, "status": "done"}
+        self.assertEqual(mission_task_progress(completed, assets, reviews), completed)
+
     def gated_task(self):
         return {"id": "returned-repairs", "provider": "Grok", "project": "hon", "status": "needs_input",
                 "title": "Returned repairs need review", "summary": "Waiting for your decision", "nextAction": "Review both returns",

@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "FLOW-HD-VIDEO-002",
+  "recordedAtUTC": "2026-10-12T03:17:56.4964378Z",
+  "localDate": "2026-10-11",
+  "localTimeZone": "America/New_York",
+  "operator": "CFA Codex Nova /root",
+  "state": "blocked_at_provider_rights_agreement_before_verified_upload",
+  "authorization": {
+    "scope": "ONE subtle warmer-light edit; supported mode/input and displayed cost within existing allowance must be verified. No purchases or broad Google uploads.",
+    "manualHandbackReceived": true,
+    "exactClipAndOneWarmEditApproved": true
+  },
+  "source": {
+    "bytes": 1837099,
+    "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667.mp4",
+    "durationSeconds": 6,
+    "silent": true,
+    "sha256": "f8f2aa30265392634b67dbddebdc6ac0f05007de1abb2730f27d27513e72d378"
+  },
+  "destination": {
+    "projectId": "e8a547ef-f801-4021-a5ee-fad3080b439c",
+    "tabId": "31",
+    "title": "Google Flow - Oct 08 - 01:09",
+    "url": "https://flow.google.com/project/e8a547ef-f801-4021-a5ee-fad3080b439c"
+  },
+  "access": {
+    "lookupError": "Tab not found in browser 2.",
+    "priorDelegatedNoBrowserFailureResolvedForRoot": true,
+    "projectVisibleMediaBeforeUpload": 0,
+    "recovery": "Opened the same approved project as new background tab31 in the existing browser2 binding, then bound returnedtab31.",
+    "reached": true,
+    "projectDisplayedText": "Start creating or drop media"
+  },
+  "preflight": {
+    "displayedTier": "ULTRA",
+    "settingsChanged": false,
+    "supportedActualSourceEditVerified": false,
+    "videoAspectDefault": "16:9",
+    "selectedVideoDefaultModel": "Omni 1.1 Flash",
+    "confirmBeforeGenerating": "Always",
+    "allowanceVerified": false,
+    "videoOutputDefault": 1,
+    "exactEditPlan": null,
+    "displayedCost": null
+  },
+  "upload": {
+    "inputAssetID": null,
+    "completedToolReturnedRightsDialog": true,
+    "selectedExactFile": true,
+    "uploadedBytesServerVerified": false,
+    "verifiedUploaded": false,
+    "tool": "flowPrototypeTab.playwright.waitForEvent(filechooser) / menuitem Upload / chooser.setFiles(exactapprovedMP4)"
+  },
+  "providerPrompt": {
+    "userQuestionPosted": true,
+    "requiredAction": "I agree once",
+    "text": "Make sure you have the necessary rights to any content or files that you upload, including content of minors. When using Flow, you must comply with Google Prohibited Use Policy.",
+    "accepted": false,
+    "otherButtons": [
+      "Cancel",
+      "I agree, do not show again"
+    ],
+    "title": "Rights to use this video",
+    "reason": "Browser confirmation policy requires action-time confirmation before accepting a legally binding agreement. Specific upload/run approval is already received, but this provider agreement was not previously affirmed."
+  },
+  "platformApproval": {
+    "verifiedPendingPrompt": false,
+    "denialObserved": false,
+    "reviewReason": null,
+    "approvalId": null,
+    "note": "The upload chooser call took a long time and eventually completed showing the provider rights dialog. No platform approval ID/rejection reason was exposed. The visible blocker is the Flow provider dialog, not its Always confirmation setting."
+  },
+  "execution": {
+    "outputPath": null,
+    "accepted": false,
+    "generationSubmitted": false,
+    "substituteGeneration": false,
+    "jobId": null,
+    "promptSubmitted": false,
+    "outputCount": 0
+  },
+  "evidence": {
+    "screenshotSHA256": "8fe17effe034173c593bf2b841287da2562149ebce641863660fec6d84807419",
+    "screenshotPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/rights_dialog_20261011.png"
+  },
+  "nextAction": "Await Ziggy action-time affirmation or his own click on I agree. Then verify actual completed upload/inputasset, one-output edit plan, displayed cost/allowance before one run. No current output claimed."
+}

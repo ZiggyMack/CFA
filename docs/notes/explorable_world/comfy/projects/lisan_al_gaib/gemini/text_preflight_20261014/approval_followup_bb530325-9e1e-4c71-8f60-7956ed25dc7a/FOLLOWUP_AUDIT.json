@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUTC": "2026-10-14T05:44:54.837Z",
+  "status": "same_chat_text_preflight_blocked_by_new_chat_requirement",
+  "userApproval": {
+    "questionItemId": "[\"request_user_input_async\",\"call_11d0aa7733ab418cae06c624d1b62681\",0]",
+    "answer": "Temporarily deselect and restore Videos",
+    "scope": "One text-only inquiry; temporary mode change in the same chat, then restore; no render.",
+    "authorizesNewChat": false
+  },
+  "chatURLBefore": "https://gemini.google.com/app/e6a2bab576bff5a3",
+  "chatURLAfter": "https://gemini.google.com/app/e6a2bab576bff5a3",
+  "observedNotice": "Start a new chat? Selecting this tool will start a new chat. You can return to this conversation at any time.",
+  "actions": {
+    "deselectVideosClicked": 1,
+    "newChatClicked": 0,
+    "dontAskAgainChanged": false,
+    "noticeClosed": true,
+    "modeChangeApplied": false,
+    "originalVideosModeRetained": true,
+    "composerEmpty": true,
+    "inquiriesSubmitted": 0,
+    "rendersStarted": 0,
+    "uploads": 0
+  },
+  "preparedInquiryPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/text_preflight_20261014/PREPARED_INQUIRY_NOT_SENT.txt",
+  "evidence": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/text_preflight_20261014/approval_followup_bb530325-9e1e-4c71-8f60-7956ed25dc7a/BEFORE_MODE_DOM.txt",
+      "bytes": 20791,
+      "sha256": "43fb2cfea8c2697b3afb0c5e3ce3d44c14e8166045dafccea7b8e8d47dd7dea0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/text_preflight_20261014/approval_followup_bb530325-9e1e-4c71-8f60-7956ed25dc7a/MODE_ATTEMPT_AX.txt",
+      "bytes": 866,
+      "sha256": "72106ddf542c8c67c5857d095d19468e63d892c01b671c1f2abbfcc3a0650eb7"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/text_preflight_20261014/approval_followup_bb530325-9e1e-4c71-8f60-7956ed25dc7a/MODE_ATTEMPT.jpg",
+      "bytes": 60714,
+      "sha256": "e529004a0c4ae9573833f859dda7550339a3d0f473c848f86f90b8e8ea7c6506"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/text_preflight_20261014/approval_followup_bb530325-9e1e-4c71-8f60-7956ed25dc7a/AFTER_CLOSE_DOM.txt",
+      "bytes": 20790,
+      "sha256": "f0eaf31c9e5df768668cf20b4dcfb5677eb810005ead59c40dc63ed6d22bc01d"
+    }
+  ],
+  "previousAuditModified": false,
+  "reason": "The user approved the same-chat mode switch; the visible UI requires a different chat, which is outside that scope and would not prove text access to the original video-chat context."
+}

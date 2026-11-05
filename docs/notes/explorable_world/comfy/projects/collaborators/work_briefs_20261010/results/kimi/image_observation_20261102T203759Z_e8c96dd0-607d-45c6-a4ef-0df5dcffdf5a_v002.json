@@ -1,0 +1,93 @@
+{
+  "reportId": "e8c96dd0-607d-45c6-a4ef-0df5dcffdf5a",
+  "author": "kimi",
+  "task": "KIMI-TWO-IMAGE-COACHED-CORRECTION-V002-20261014",
+  "assignmentMessage": "784eabab-bded-4029-baa1-b0cd7d68c2bb",
+  "createdAtUTC": "2026-11-02T20:37:59Z",
+  "version": "v002_frozen",
+  "coachedStatus": "coached_correction_completed; v001 preserved unchanged",
+  "v001": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/work_briefs_20261010/results/kimi/image_observation_20261014T053941Z_ba8bd2ff-efad-4723-ad23-9664f9f1dfc6_v001.json",
+    "sha256": "1263275d448cb9b9e1b436f24297728507ae294d203c7f9333679624c1b79e7e",
+    "bytes": 6164,
+    "preserved": true
+  },
+  "surface": {
+    "app": "Kimi Work desktop runtime on Windows",
+    "provider": "Moonshot AI",
+    "visibleModel": "unknown (not surfaced)",
+    "tool": "ReadMediaFile full view plus in-tool region zoom (no crop files saved)"
+  },
+  "sessionNote": "Executed 2026-11-02 UTC at the next active checkpoint after the Oct 14 assignment; Ziggy reopened this session ('welcome back'), which I treat as the activation. No other current assignment existed.",
+  "pixelsSeen": true,
+  "deliveryEvidence": {
+    "image1": "full view 1280x720 plus two native-resolution regions: face (x470,y120,400x260) and chin/neck (x430,y290,480x340)",
+    "image2": "full view delivered downsampled to 169KB (softening noted) plus two native-resolution regions: face (x430,y110,400x260) and chin/neck/garments (x420,y290,500x360). Native regions bypassed the downsampling for the details under correction."
+  },
+  "inputs": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOCK-FACE-NATURAL.jpg",
+      "sha256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+      "bytes": 212322,
+      "hashVerifiedLocally": true
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOOK-V3-01.jpg",
+      "sha256": "63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026",
+      "bytes": 327619,
+      "hashVerifiedLocally": true
+    }
+  ],
+  "jewelryWithSides": {
+    "nostrilHoop": {
+      "image1": "IMAGE-RIGHT nostril = CHARACTER-LEFT nostril, hoop clearly resolved at native zoom",
+      "image2": "IMAGE-RIGHT nostril = CHARACTER-LEFT nostril; a septum location is NOT established"
+    },
+    "eyebrowRing": {
+      "both": "IMAGE-RIGHT eyebrow = CHARACTER-LEFT eyebrow; appears as one small ring, possibly two linked small rings — count uncertain"
+    },
+    "earHoop": {
+      "both": "IMAGE-RIGHT ear = CHARACTER-LEFT ear, single hoop visible in both"
+    },
+    "image1RightEar": "image-left ear (character-right) shows no jewelry visible at this angle (visible absence, medium confidence)"
+  },
+  "letteringLiteral": {
+    "forehead": "AL, both images, high confidence",
+    "chin": "G A I B stacked vertically, both images, high confidence. The A renders in a triangular form in image 2; recorded literally, no intent or stylization inferred."
+  },
+  "correctedRetainedRetracted": {
+    "corrected": [
+      "Nostril-hoop side (both images): v001 said viewer's-left for image 1 and 'suggested near septum/nostril' for image 2; corrected to image-right/character-left nostril in both, septum not established."
+    ],
+    "retracted": [
+      "Forked tongues on the serpent heads: not resolvable at native resolution in either image; fangs and open mouths remain, tongue morphology withdrawn.",
+      "Hood ownership (image 2): v001 attributed the hood to the beige under-garment; at native zoom the hood fabric at the neckline cannot be confidently assigned to the beige layer versus the dark outer robe. Unresolved.",
+      "Garment closure (image 2): v001 said 'laced/zippered'; the tan layer shows a center-front closure but the mechanism (zipper, lacing or buttons) is not resolvable. Withdrawn to 'center-front closure present'.",
+      "Any inference of artistic intent behind the chin A's triangular form: retracted; lettering read literally."
+    ],
+    "retained": [
+      "Same apparent identity across both images; saturated blue eyes; dark curly hair; stubble.",
+      "Expression difference: broad open smile with natural-looking teeth (image 1) vs subtle near-closed smile (image 2).",
+      "No tooth metal visible in image 1 (mouth open; reads as absence, medium-high confidence); image 2 mouth metal indeterminate at its narrow opening — tooth appearance natural where seen, dental claims limited.",
+      "Neck motif in both: two facing serpent heads with open mouths and fangs, plus a central eye-in-sun/sunburst element; serpents larger and more detailed in image 2 (visible variation).",
+      "Wardrobe contrast: plain black crew-neck tee (image 1) vs layered tan/beige garments, dark outer robe and thick gold Cuban-link chain (image 2).",
+      "Background contrast: dim warm interior with stone wall (image 1) vs bright desert dunes with a large golden multi-pointed star-and-ring structure haloing the head (image 2).",
+      "Crop/occlusion boundaries: no hands or below-chest content in either image; lower neck work occluded by collar (image 1) and by garments/chain (image 2)."
+    ]
+  },
+  "remainingLimits": [
+    "Eyebrow ring count (one vs two linked rings) uncertain at native resolution.",
+    "Image 2 full-frame delivery is downsampled; claims here rest on native-resolution regions.",
+    "No statement about any body features outside the framed regions."
+  ],
+  "reusableChecklist": [
+    "1. Pixel access: confirm actual pixels delivered (dimensions, encoding, any downsampling) before any claim; hash/decode is not seeing.",
+    "2. Sides: label every sided feature as image-side AND character-side; never write bare 'left/right'.",
+    "3. Literal details: describe only resolved features; if a detail (tongue, closure, ring count) cannot be resolved, withdraw it rather than approximate.",
+    "4. Uncertainty: separate visible absence, occlusion/crop and scale-limited uncertainty; keep confidence labels on lettering and jewelry.",
+    "5. Scope: observations only — no ratings, gold declarations, symbolism, production passes or motion claims.",
+    "6. Provenance: record input paths/hashes, tool/surface, regions viewed, elapsed time; preserve prior versions, corrections as new versions."
+  ],
+  "elapsed": "assignment read ~2026-11-02T20:35Z; observations and this record completed within the 10-minute bound",
+  "boundariesKept": "Same two approved images only; no new files except this v002 record; v001 untouched; no V1/peer material; no ratings; no generation/uploads/installs; no automatic next round."
+}

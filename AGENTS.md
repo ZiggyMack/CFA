@@ -1,5 +1,11 @@
 # CFA task guidance
 
+## Local execution and storage
+
+Keep CFA project execution on D:. Use project runtimes and tools installed on D:, and keep working directories, dependencies, caches, temporary build files and generated outputs there. Do not fall back to a project runtime installed on C: (including Python). If a suitable D: runtime is missing, establish a D: runtime before running the affected project commands. This does not call for moving or changing Windows or the desktop application's own installation.
+
+The verified CFA Python runtime is `D:\Documents\CFA\.cache\runtimes\python314\python.exe`. Use `D:\Documents\CFA\.cache\runtimes\run-python.ps1` to invoke it with user-site packages disabled and temporary files/package cache on D:. Node and Git are available under `D:\Program Files (x86)`.
+
 ## ComfyUI and video workflow work
 
 Apply this section when selecting, creating, troubleshooting or optimizing ComfyUI workflows, preparing image/video references, or evaluating Civitai resources for this project.

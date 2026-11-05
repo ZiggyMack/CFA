@@ -1,0 +1,21 @@
+# The Criminal Mind, set camera maps v001, Addendum B: the car as a writer's assumption, an unmarked SUV (2026-11-02)
+
+Author: Claude, lead writer, recorded at about 15:38 UTC by the clock. Status: **addendum to v001 and to Addendum A** (v001 sha256 f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e; Addendum A sha256 cf5300516fdeb14fde62b319112701e0cd526039f1f3842629f8853b1531d2c5); both unchanged; where this addendum and Addendum A section 2 differ, this addendum rules. Authorship: Claude, draft 1, Detailed design by the author's rule | specialist review: none | adopted contributions: none. Source: Ziggy, in chat (2026-11-01 evening, New York), in substance: do not wait on the author for the car; make an assumption, he reviews the stills and we itemize what needs to be different; it is not critical; an unmarked SUV, as discussed. The author's own doubt about the model he named (interview S-f1) stays open as a review item: he sees these stills and itemizes what differs. Nothing here generates; the round runs on Ziggy's go already given in the room.
+
+## 1. The identity (writer's assumption, provisional until the author's review)
+
+**Body (P08, P13, P14, and anything seen through glass or in the door mirror).** A present-day unmarked mid-size or full-size SUV: tall two-box body, upright glasshouse, roof rails or none, a short hood, a wide tailgate; near-black paint; plain black steel wheels or dark plain alloys; no emblems on the grille, wheel centres or tailgate; no light bar, no push bar, no spotlight, no roof antenna cluster; any hidden emergency lights unlit and unseen; blank plate recesses; dark tint so the empty cabin reads as shapes. It must pass as a private car at a glance: nothing that says police.
+
+**Cabin (every interior position).** Black cloth seats with high headrests, the seating position high; a present-day dash with a hooded binnacle (two round dials flanking a dark central display, needles only, every marking abstract and unreadable), a centre stack with a dark unlit display above the vents; a console shifter; the console-mounted two-way radio with its coiled handset in a clip (kept from v001; display blank or glowing illegibly); no laptop mount; a plain rear-view mirror; a thick-rimmed steering wheel with a blank centre pad; left-hand drive confirmed. The phone that lives on the seat or console is a present-day smartphone, face down and dark. The rear positions (P09, P12) sit in the second row, higher than a sedan's; behind the second row a dark cargo area, empty.
+
+**What changes against Addendum A section 2.** The body type (SUV, not a performance sedan) and the seating height; everything else in Addendum A (present day, screens dark, smartphones, the struck v001 lines, marked vehicles as SUVs at re-cut, delivered stills stand) is unchanged.
+
+## 2. Take 2 of the car family (the hold is lifted)
+
+Take 1 (TCM-SET-IMPALA-L11-L41, 31 stills) stands under its filenames. Take 2 is sixteen stills on the identity above, numbered L42 onward, same axes, light states and backings as their take-1 twins: P03 in LS01, LS03 and LS04 (console and dash display; twins L20 to L22); P06 variants (a) to (f) (dash top and hood line from the higher eye line; L26 to L31); P08 in LS01 and LS05 (body at the driver door; L33, L34); P11 in LS01 (cluster; L37); P12 in LS01 and LS04 (dash and wheel from the second row; L38, L39); P13 in LS01 (the stopped car at the empty corner, where an SUV's silhouette reads even at distance; L40); P14 in LS04 (body abeam on the highway; L41). The fifteen take-1 stills of P01, P02, P04, P05, P07, P09 and P10 stay the family's plates. V_1's two position misses in take 1 (L16 and L18, P02) remain the team's own fix list. The writer binds take 2 when the hashes are read back; the author reviews the contact sheet and itemizes what should differ; a third take follows only for the items he names.
+
+## 3. Elsewhere
+
+The same identity is the car wherever a family places John's vehicle at its re-cut (STREET-RESIDENTIAL P01, P02, P03, P05, P06; JUNKYARD P05, P06; HIGHWAY P01, P02, P04 if any body shows; HENDERSON-EXTERIOR when the sedan is placed later). Provider-facing prose now says "a dark unmarked SUV" where v001 and Addendum A said "a dark unmarked sedan". Rules for every still otherwise as Addendum A section 4.
+
+Claude, lead writer

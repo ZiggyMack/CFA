@@ -1,0 +1,139 @@
+CFA STREAMLIT PARITY — CHECKPOINT, October 14, 2026
+
+User requested all completed local design changes flow into https://algaib.streamlit.app/.
+Then user requested a natural stopping point because only 100 purchased credits remain,
+with work to resume Tuesday, October 20. No future automation has been scheduled.
+
+STATE AT STOP
+The completed local index redesign remains intact. Streamlit parity is NOT completed
+and nothing from this parity pass was pushed or deployed. Existing live main was
+f255c597e00da92e276a2998a2ce3f03666c5fc3. Runnable app.py and studio_dependencies.py
+were restored to their pre-pass contents after saving drafts here. library_helpers.py
+was restored to that baseline plus the pre-existing multiverseSelection metadata field.
+CHECKPOINT.json records exact draft/restored hashes. Do not mistake drafts for tested code.
+
+Shared checkout D:/Documents/CFA has many unrelated concurrent edits and deliberately
+old HEAD e58074d0fe345e8b429ed44b5b938a82f55f1fdd. Do NOT reset, checkout, stage all,
+or move the shared HEAD. Publication previously used an isolated GIT_INDEX_FILE based
+on current remote main, allowlisted blobs, commit-tree, and a normal non-force push.
+User request authorizes publication after implementation and checks; no new permission
+question is needed just because this work spans sessions.
+
+LOCAL TARGET
+P = docs/notes/explorable_world/comfy/projects
+V = P/visual_library
+Latest local build 60df986268; V/catalog.js SHA256:
+16db6f5f69d6444e093acfe42bf96e81fc37079f88c30c5df42be9a9235479b9
+2511 assets,234 albums,499 documents/PDFs,2012 visual assets.
+See P/collaborators/reference_cleanup_20261014/LOCAL_PUBLICATION.json,
+CATALOG_VERIFICATION.json, CONSOLIDATION.json for completed local changes/checks.
+Do not rebuild/intake newly arriving provider files without reconciling their versions.
+
+REQUIRED DESIGN PARITY
+1. One Character bill of materials gallery: Dolo alongside supporting cast. Open Dolo
+   to see all his nested BOM sections. Visible Lisan character-reference previews.
+2. Compact approved details: Proud scoundrel and on-body chest/neck/hand/eye references,
+   only ONE dental gold standard. All other dental images and tile sheets remain in
+   Mouth shapes & teeth details. Body art, then Bling bling, then Wardrobe.
+3. Explicit Approved Multiverse subset; independent multiverseSelection candidate/
+   approved, existing variant and character scores preserved. Approval requires explicit
+   choice and likenessRating 2–5. Never infer approval from score or multiverse flag.
+4. Video production candidates; WIP (work in progress) one collapsed disclosure,
+   no second Review these scoped choices expander. Verbose BOM reusable detail library.
+5. Archive immediately after Needs review. Archive/Restore uses collectionState
+   archived/working, independent of Keep/Fix/Remove. Restore overrides historical
+   default but does not clear remove. Archive omitted ordinary browsing/search/counts/
+   favorites/media exports; full review backups preserve everything.
+6. Historical BOM/mouth refs and earlier tattoo sheets go Archive. Do not archive
+   candidate cast sections just because their disclosure is styled history:true.
+7. Hon Outfits top tags + collapsible Formal attire/Casual/Scoundrel gear (6/8/8).
+   Explicit mapping in local library.js/test_outfit_categories.cjs. Preserve variants.
+8. Tattoo subject artwork + mannequin map + applicable v001 revision-needed proof
+   side by side first, body examples follow. Eye: HD-TATGUIDE-91d44599bd8c,
+   HD-LOCATION-EYE-20261012, HD-TATGUIDE-b6eb3258a6ae. Source proof not newly approved.
+9. Comfy removes repeated mouth/head library; original group photo HD-LIKENESS-02
+   in Archive. Hon Inspiration becomes Archive except 12 Creature boss ideas now
+   Supporting cast, no duplication. Lisan Inspiration stays.
+10. User CANCELLED extra Needs fixes section in Ziggy's Corner. Do NOT implement it.
+11. No returned standalone jewelry display image package was found. Keep pending
+   accurate. Provider acknowledgment is not media delivery. No generation requested.
+12. Existing local Storyboard story selector/song default/independent sequences and
+   publication-safe writings should also survive complete catalog publication.
+
+DUPLICATE + REVIEWS
+Canonical HD-B-91ef00348229 (91ef00348229__GRILL-LOCK-4GOLD-v2.jpg) replaces retired
+HD-MOUTH-UPDATE-20261009-01 (HD_MOUTH_USER_UPDATE_20261009_01.jpg).
+V/asset_aliases.json records exact old/canonical hashes. Visual re-encoding, NOT equal
+hash. Source old file deleted with recoverable exact Git copy verified. Active links
+migrated; raw historical review records untouched. Browser aliases oldID+oldhash
+to canonical for reviews/baskets/navigation; newest updatedAt wins, canonical ties.
+Keep old hash-bound validation historical; NEVER transfer validation evidence.
+
+Fresh user export P's ancestor docs/notes/downloads/cfa-review (1).json
+SHA256 31ad0cc84612b403c097841c80ddabe40ab3508967b611be394532e61b541f0d
+contains 203 records and explains 18 versus 20 plans: newer exact-hash shotPlan:null
+for HD-FALCON-1f55da287bbf7416 and HD-RETURN-d55b97a3b322. Preserve both clears.
+Do not overwrite all canonical reviews blindly; source has 199 raw records preserved.
+One mutable document hash no longer matches. Retain original export/provenance.
+See P/collaborators/reference_previews_20261014/SHOT_PLAN_RECONCILIATION.json.
+
+WORK SAVED THIS PASS
+- app.py.draft: partial UI controls and future navigation declarations, NOT wired.
+  It imports nonexistent review_provenance and cannot run yet. Timestamp field was
+  mistakenly written updated; change to updatedAt before reuse. No renderer integration.
+- library_helpers.py.draft: partial archive visibility, alias resolution/import/merge,
+  approved_multiverse helpers. No new focused tests or provenance helper completed.
+- studio_dependencies.py.draft: source-hash loading extended for future design_view
+  and story_view modules. Those modules do not exist yet.
+- apps/creative_studio/build_design_library.py and tests/test_design_bundle.py were
+  written by packaging agent before usage stopped it. They remain in app source,
+  unused by runtime. Verify tests/log; no actual design_catalog.json bundle built.
+  Builder aims to retain all catalog config, reuse exact base/mission media, create
+  missing 1280px views/480px thumbs, preserve video bytes, publish only catalog-safe
+  document sources, and overlay ONLY the two verified newer explicit-null plan clears.
+  Source originals total roughly731MB. Manifest should enumerate new AND reused files.
+  Existing mission snapshot supplemental docs/ZIPs only reused after checksummatch;
+  don't crawl arbitrary local links or original private writer documents.
+
+NEXT IMPLEMENTATION
+Finish helper tests/provenance preservation first. Integrate effective_design_data
+after effective_reviews; aliases passed on seeds/import/favorites/basket. Session edits
+stamp updatedAt, import uses timestamp-aware merge. Full backup keeps raw legacyreview/
+validation history. Normal browse excludes archived/removed, Archive can Restore.
+Implement design_view.py from local library.js. Proposed signature:
+render_design_view(data, project, view, library_dir, render_grid, open_reference,
+                   *, reviews=None, query='', album_id='') -> bool
+Use unique context keys for repeated refs across nested galleries. Cover toggles should
+render only open character body, not every character at once. Root render_grid draft
+passes unique signature to render_card for design:/story: prefixes.
+Wire Working references, Outfits, Tattoos & piercings, Supporting cast, Comfy swap
+targets, Archive into sidebar + routing; Needs review existing destination, no extra
+Corner pull. Retain Library, Storyboard, Videos, plans, reviews/import/export and briefs.
+Load complete design_catalog when available instead of stale578-asset base catalog.
+Avoid older mission snapshot overriding newer design assets/reviews.
+Add Storyboard selector if not reusing full existing component; keep independent
+sequences separate from song source panels. Review full_visual_library page too so
+it does not imply parity from an old/absent snapshot.
+Run unittest discover -s apps/creative_studio/tests, new grouping/state/bundle tests,
+and AppTest route/review/archive/alias checks. Inspect HTTP live UI after deployment.
+Local file:// computer-use was explicitly policy-blocked: do not proxy/bypass it.
+Native Streamlit AppTest and file-source checks remain available.
+
+PUBLICATION
+Do not publish draft helpers/UI. Re-fetch/verify remote main and exact manifest.
+Publish code, config, packaged catalog/manifest and required new/reused media only.
+No unrelated local sources, private writer originals, credential files or raw exports.
+Normal push isolated index; preserve shared checkout/index and all concurrent changes.
+Live site https://algaib.streamlit.app/, main, apps/creative_studio/app.py.
+Saved review export/import still required between browser sessions/devices; no claim
+of automatic live two-way review sync.
+
+OTHER THREAD MESSAGE (NOT INTAKEN HERE)
+CFA Nova reported Bellglass HUMAN_REVIEW_20261014.json and clip-specific active source
+method GEMINI_CLIP_SOURCES.txt/CLIP_SOURCE_PACK.template.txt. No site/data/build intake
+was performed here. Keep separate from bounded design parity; do not infer new video
+execution, audio semantics, provider guarantees or general production acceptance.
+
+FINAL CHECK: 73 existing and builder unit/AppTest checks passed in35.844sec after
+restoring the runnable baseline. See verification.log. Draft helper/UI not tested or
+published. Packaging script/tests also copied here as .saved for recoverability.

@@ -1,6 +1,6 @@
 {
   "format": "cfa-visual-review-v1",
-  "updated": "2026-10-10",
+  "updated": "2026-10-30T14:15:54.392283+00:00",
   "items": [
     {
       "id": "HD-DROP-2691712601a9",
@@ -50,18 +50,30 @@
       "sha256": "1966838931adb71d4443b608d65b9c3613bdc7de7fd6ce3e38c9b35e344e51f7",
       "filename": "REF-pinstripe-source.jpg",
       "project": "hon",
-      "status": null,
-      "note": "Selected pinstripe outfit for a future boss interaction. Boss discovery compares hippo, gecko-frog and original slug directions; no boss identity has been selected.",
+      "status": "needs_fixes",
+      "note": "Need to fix his teeth - check our verisons, we may already have a fix...",
       "shotPlan": {
-        "status": "waiting_for_boss_selection",
+        "status": "planned",
         "destinations": [
-          "Grok",
-          "Flow"
+          "Flow",
+          "Grok"
         ],
         "idea": "Develop a readable two-character boss-meeting scene from the pinstripe-suit look. Grok supplies corrected stills and coverage; Flow is a proposed animation test after references are ready.",
         "prompt": ""
       },
-      "source": "Direct user visual-library comment, 2026-10-08"
+      "source": "Direct user visual-library comment, 2026-10-08",
+      "shotPlanUpdatedAt": "2026-10-14T13:16:05.450000+00:00",
+      "likenessRating": 3,
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/inspiration/hon-dolo-ref-sheet-pinstripe/REF-pinstripe-source.jpg",
+      "role": "outfits",
+      "fieldUpdatedAt": {
+        "status": "2026-10-14T13:16:05.450000+00:00",
+        "note": "2026-10-14T13:16:05.450000+00:00",
+        "shotPlan": "2026-10-14T13:16:05.450000+00:00",
+        "likenessRating": "2026-10-14T13:16:05.450000+00:00"
+      },
+      "updatedAt": "2026-10-14T13:16:05.450000+00:00",
+      "origin": "user"
     },
     {
       "id": "HD-DROP-9cecaad5ed57",
@@ -707,7 +719,7 @@
       "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/831f6171619f__cards_zoom.png",
       "sha256": "831f6171619fe93baf6c0ab4784f3f7fc04c319040631cb5dc3fcf381dccf3ce",
       "role": "review",
-      "status": "keep",
+      "status": "remove",
       "note": "looks good - moving to detailed design...need more hand refrences from Grok",
       "shotPlan": {
         "status": "planned",
@@ -717,7 +729,7 @@
         "idea": "Need more Hand options...with different swag ring options...n=20",
         "prompt": ""
       },
-      "updatedAt": "2026-10-09T18:25:15.424Z",
+      "updatedAt": "2026-10-14T03:11:32.976Z",
       "origin": "user",
       "workingReference": {
         "status": "requested",
@@ -965,23 +977,25 @@
       "role": "review",
       "status": "needs_fixes",
       "note": "add refrence dummy pointing out where each tattoo goes...",
-      "shotPlan": {
-        "status": "planned",
-        "destinations": [
-          "Grok"
-        ],
-        "idea": "just need a refrence head with a legend indicating where each tatto should go.",
-        "prompt": ""
-      },
+      "shotPlan": null,
       "variant": "multiverse",
       "variantSource": "user",
       "workingReference": null,
-      "updatedAt": "2026-10-09T18:38:52.274Z",
+      "updatedAt": "2026-10-14T13:17:56.030000+00:00",
       "origin": "user",
       "storyboardStage": "verification",
       "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
       "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
-      "scopeNote": "Add a reference head/dummy with a keyed legend locating each tattoo in this stencil set. Preserve clean stencils and separate placement evidence. Unknown placements must be flagged, not invented."
+      "scopeNote": "Add a reference head/dummy with a keyed legend locating each tattoo in this stencil set. Preserve clean stencils and separate placement evidence. Unknown placements must be flagged, not invented.",
+      "shotPlanUpdatedAt": "2026-10-14T13:17:56.030000+00:00",
+      "fieldUpdatedAt": {
+        "status": "2026-10-09T18:38:52.274000+00:00",
+        "note": "2026-10-09T18:38:52.274000+00:00",
+        "shotPlan": "2026-10-14T13:17:56.030000+00:00",
+        "storyboardStage": "2026-10-09T18:38:52.274000+00:00",
+        "variant": "2026-10-09T18:38:52.274000+00:00",
+        "workingReference": "2026-10-09T18:38:52.274000+00:00"
+      }
     },
     {
       "id": "HD-RETURN-ea8ca93c3eb8",
@@ -1026,10 +1040,10 @@
       "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/1e8c86b1c729__1e8c86b1c7293db98fdf9112db2382b698a1795b171f6fc8f621885160bfb2c3.jpg",
       "sha256": "1e8c86b1c7293db98fdf9112db2382b698a1795b171f6fc8f621885160bfb2c3",
       "role": "review",
-      "status": "needs_fixes",
+      "status": "keep",
       "note": "need the dummy treatment to identify the location",
       "shotPlan": null,
-      "updatedAt": "2026-10-09T18:39:55.817Z",
+      "updatedAt": "2026-10-14T02:11:09.596Z",
       "origin": "user",
       "storyboardStage": "production",
       "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
@@ -1272,10 +1286,15 @@
       "filename": "gemini_generated_video_8b51108e.mp4",
       "path": "docs/notes/explorable_world/comfy/projects/00_Unassigned_Gemini/gemini_generated_video_8b51108e.mp4",
       "sha256": "c56a8ee9cbb97d2bd354b51c235a03b074cf269822c83f7c8cf520ec5b274f5a",
-      "updatedAt": "2026-10-10T03:20:52.402Z",
+      "updatedAt": "2026-10-14T03:14:13.323Z",
       "origin": "user",
       "source": "User dashboard export 2026-10-10T05:05:09.832Z, scoped working-reference reconciliation",
-      "sourceIntakeID": "CFA-REVIEW-20261010-WORKING-BOM"
+      "sourceIntakeID": "CFA-REVIEW-20261010-WORKING-BOM",
+      "role": "videos",
+      "shotPlan": null,
+      "variant": "multiverse",
+      "variantSource": "user",
+      "workingReference": null
     },
     {
       "status": "keep",
@@ -1287,11 +1306,15 @@
       "filename": "SB-06-scoundrel-detail.jpg",
       "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-06-scoundrel-detail.jpg",
       "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
-      "updatedAt": "2026-10-10T05:04:08.787Z",
+      "updatedAt": "2026-10-14T03:35:38.631Z",
       "origin": "user",
       "source": "User dashboard export 2026-10-10T05:05:09.832Z, scoped working-reference reconciliation",
       "sourceIntakeID": "CFA-REVIEW-20261010-WORKING-BOM",
-      "scopeNote": "Production use covers the selected visible wrist jewelry. The broad dropdown does not approve the unseen hand, wrist side or whole identity."
+      "scopeNote": "Production use covers the selected visible wrist jewelry. The broad dropdown does not approve the unseen hand, wrist side or whole identity.",
+      "role": "storyboard",
+      "shotPlan": null,
+      "sceneQualityRating": 4,
+      "likenessRating": 5
     },
     {
       "status": "keep",
@@ -1337,17 +1360,27 @@
       "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/efc1886a0d62__HIP-VELVET-01_v001.jpg",
       "sha256": "efc1886a0d62645ce44b164090ad2312d039570f2a119e71b84c34d8e4370a4d",
       "role": "outfits",
-      "status": "keep",
+      "status": "needs_fixes",
       "note": "as far as adding the gun to the outfit - approved...but we still have no reference of the complete package for our DoLO",
       "shotPlan": null,
       "origin": "user",
-      "updatedAt": "2026-10-10T12:56:35.886Z",
+      "updatedAt": "2026-10-14T03:22:57.162Z",
       "variant": "multiverse",
       "variantSource": "user",
       "workingReference": null,
       "storyboardStage": "detailed_design",
       "likenessRating": 2,
-      "source": "User dashboard export 2026-10-10T14:00:39.105Z, mouth-grill review intake"
+      "source": "User dashboard export 2026-10-10T14:00:39.105Z, mouth-grill review intake",
+      "sceneQualityRating": 5,
+      "creativeReview": {
+        "status": "queued",
+        "recipients": [
+          "grok_chief"
+        ],
+        "purpose": "find_story_use",
+        "scope": "music_video_and_interstitials",
+        "note": ""
+      }
     },
     {
       "id": "HD-B-91ef00348229",
@@ -2402,11 +2435,11 @@
       "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/5b76b446306e__VIS-HD-01_REST.jpg",
       "sha256": "5b76b446306e3f7e9f2dee5f206d28a264862b3ddf60818de773db622b59133a",
       "role": "comfy",
-      "status": null,
+      "status": "keep",
       "note": "",
       "shotPlan": null,
       "workingReferenceScope": "detail",
-      "updatedAt": "2026-10-10T13:40:54.088Z",
+      "updatedAt": "2026-10-12T16:46:10.399Z",
       "origin": "user",
       "storyboardStage": "production",
       "likenessRating": 5,
@@ -2453,15 +2486,18 @@
       "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/bb94cfd4b528__VIS-HD-04_EE.jpg",
       "sha256": "bb94cfd4b528c3d83a7e9143bf2f752e3b0a361fce27d258d22854e628eaad28",
       "role": "comfy",
-      "status": null,
-      "note": "",
+      "status": "keep",
+      "note": "if we are msising this mouth in our required set, make a new one...otherwise...just keep this a multiverse...",
       "shotPlan": null,
       "workingReferenceScope": "detail",
-      "updatedAt": "2026-10-10T13:42:59.541Z",
+      "updatedAt": "2026-10-12T16:45:45.043Z",
       "origin": "user",
       "storyboardStage": "preliminary",
       "likenessRating": 2,
-      "source": "User dashboard export 2026-10-10T14:00:39.105Z, mouth-grill review intake"
+      "source": "User dashboard export 2026-10-10T14:00:39.105Z, mouth-grill review intake",
+      "variant": "multiverse",
+      "variantSource": "user",
+      "workingReference": null
     },
     {
       "id": "HD-VIS-8fd90be71d79",
@@ -2735,6 +2771,3619 @@
       "storyboardStage": "verification",
       "likenessRating": 1,
       "source": "User dashboard export 2026-10-10T14:00:39.105Z, mouth-grill review intake"
+    },
+    {
+      "id": "HD-FALCON-194702e9e041362d",
+      "project": "hon",
+      "filename": "C01-pilot-hover-002.jpg",
+      "path": "docs/notes/downloads/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-002.jpg",
+      "sha256": "194702e9e041362ddbe647083209e8ad5e4a7ac696defa2193c842cf60563a9f",
+      "role": "storyboard",
+      "status": "keep",
+      "note": "'know' on the wrong side of the face...missing earing...",
+      "shotPlan": null,
+      "origin": "user",
+      "updatedAt": "2026-10-12T03:43:36.135Z",
+      "workingReferenceScope": "scene",
+      "storyboardStage": "detailed_design",
+      "sceneQualityRating": 5,
+      "likenessRating": 4,
+      "importEvidence": {
+        "originalExportSHA256": "76e7914bc59514703d97db09e64c45c162b59615a936e859e6ee7aa061775249",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+        "originalExport": "docs/notes/downloads/cfa-review (13).json",
+        "sha256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574"
+      }
+    },
+    {
+      "id": "HD-FALCON-ba27929770216e19",
+      "project": "hon",
+      "filename": "C02-captain-portrait-007.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-007.jpg",
+      "sha256": "ba27929770216e19c42cdddd02897ac40184ca9e74b7927176655583aa1551bd",
+      "role": "storyboard",
+      "status": "remove",
+      "note": "4/5 is only becasue the chest tatoos isnt what we spec'd ....and missing ear-rings.",
+      "shotPlan": null,
+      "workingReferenceScope": "scene",
+      "updatedAt": "2026-10-28T04:01:21.567000+00:00",
+      "origin": "user",
+      "storyboardStage": "production",
+      "likenessRating": 4,
+      "sceneQualityRating": 5,
+      "importEvidence": {
+        "originalExportSHA256": "76e7914bc59514703d97db09e64c45c162b59615a936e859e6ee7aa061775249",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+        "originalExport": "docs/notes/downloads/cfa-review (13).json",
+        "sha256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574"
+      },
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:01:21.567000+00:00",
+        "note": "2026-10-12T03:43:03.959000+00:00",
+        "shotPlan": "2026-10-12T03:43:03.959000+00:00",
+        "likenessRating": "2026-10-12T03:43:03.959000+00:00",
+        "sceneQualityRating": "2026-10-12T03:43:03.959000+00:00",
+        "storyboardStage": "2026-10-12T03:43:03.959000+00:00",
+        "workingReferenceScope": "2026-10-12T03:43:03.959000+00:00"
+      }
+    },
+    {
+      "id": "HD-FALCON-883bf1079583b958",
+      "project": "hon",
+      "filename": "C03-look-back-softened-001.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-001.jpg",
+      "sha256": "883bf1079583b95857865cd1934dccb07ea01f6280596e80ff40e2f546c18e7d",
+      "role": "storyboard",
+      "status": "remove",
+      "note": "4/5 is only becasue the chest tatoos isnt what we spec'd ....and missing ear-rings.",
+      "shotPlan": null,
+      "workingReferenceScope": "scene",
+      "updatedAt": "2026-10-28T04:13:23.723000+00:00",
+      "origin": "user",
+      "storyboardStage": "production",
+      "likenessRating": 3,
+      "sceneQualityRating": 5,
+      "importEvidence": {
+        "originalExportSHA256": "76e7914bc59514703d97db09e64c45c162b59615a936e859e6ee7aa061775249",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+        "originalExport": "docs/notes/downloads/cfa-review (13).json",
+        "sha256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574"
+      },
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:13:23.723000+00:00",
+        "note": "2026-10-12T03:42:57.693000+00:00",
+        "shotPlan": "2026-10-12T03:42:57.693000+00:00",
+        "likenessRating": "2026-10-12T03:42:57.693000+00:00",
+        "sceneQualityRating": "2026-10-12T03:42:57.693000+00:00",
+        "storyboardStage": "2026-10-12T03:42:57.693000+00:00",
+        "workingReferenceScope": "2026-10-12T03:42:57.693000+00:00"
+      }
+    },
+    {
+      "id": "HD-FALCON-96ba2c890ef9256c",
+      "project": "hon",
+      "filename": "C03-look-back-softened-007.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-007.jpg",
+      "sha256": "96ba2c890ef9256cdcf3ecc82687bb00a27d3d37e088ba7cbc778c1458c666a8",
+      "role": "storyboard",
+      "status": "remove",
+      "note": "4/5 is only becasue the chest tatoos isnt what we spec'd ....and 'know' is in the wrong location...",
+      "shotPlan": null,
+      "workingReferenceScope": "scene",
+      "updatedAt": "2026-10-28T04:15:42.319000+00:00",
+      "origin": "user",
+      "storyboardStage": "production",
+      "likenessRating": 3,
+      "sceneQualityRating": 5,
+      "importEvidence": {
+        "originalExportSHA256": "76e7914bc59514703d97db09e64c45c162b59615a936e859e6ee7aa061775249",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+        "originalExport": "docs/notes/downloads/cfa-review (13).json",
+        "sha256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574"
+      },
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:15:42.319000+00:00",
+        "note": "2026-10-12T03:42:41.149000+00:00",
+        "shotPlan": "2026-10-12T03:42:41.149000+00:00",
+        "likenessRating": "2026-10-12T03:42:41.149000+00:00",
+        "sceneQualityRating": "2026-10-12T03:42:41.149000+00:00",
+        "storyboardStage": "2026-10-12T03:42:41.149000+00:00",
+        "workingReferenceScope": "2026-10-12T03:42:41.149000+00:00"
+      }
+    },
+    {
+      "id": "HD-FALCON-1f55da287bbf7416",
+      "project": "hon",
+      "filename": "C04-battle-light-002.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-002.jpg",
+      "sha256": "1f55da287bbf74168834922ab7fc13758ae0c196feba30ee63cfeab52fc43641",
+      "role": "storyboard",
+      "status": "keep",
+      "note": "missing nose and ear piercings, ..marking as multiverse 4/5 stars",
+      "shotPlan": null,
+      "updatedAt": "2026-10-28T03:18:53.604000+00:00",
+      "origin": "user",
+      "importEvidence": {
+        "originalExportSHA256": "76e7914bc59514703d97db09e64c45c162b59615a936e859e6ee7aa061775249",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+        "originalExport": "docs/notes/downloads/cfa-review (13).json",
+        "sha256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574"
+      },
+      "shotPlanUpdatedAt": "2026-10-28T03:18:53.604000+00:00",
+      "likenessRating": 4,
+      "sceneQualityRating": 5,
+      "variant": "multiverse",
+      "variantSource": "user",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:18:53.604000+00:00",
+        "note": "2026-10-28T03:18:53.604000+00:00",
+        "shotPlan": "2026-10-28T03:18:53.604000+00:00",
+        "likenessRating": "2026-10-28T03:18:53.604000+00:00",
+        "sceneQualityRating": "2026-10-28T03:18:53.604000+00:00",
+        "variant": "2026-10-28T03:18:53.604000+00:00"
+      }
+    },
+    {
+      "id": "HD-FALCON-5a2d17265fd6bfed",
+      "project": "hon",
+      "filename": "C04-battle-light-003.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-003.jpg",
+      "sha256": "5a2d17265fd6bfed30386cda96f01222cedd26999f716a62f9abdc070d2c41b0",
+      "role": "storyboard",
+      "status": "remove",
+      "note": "4/5 is only becasue the chest tatoos isnt what we spec'd ....",
+      "shotPlan": null,
+      "workingReferenceScope": "scene",
+      "updatedAt": "2026-10-28T04:19:11.767000+00:00",
+      "origin": "user",
+      "storyboardStage": "production",
+      "likenessRating": 4,
+      "sceneQualityRating": 5,
+      "importEvidence": {
+        "originalExportSHA256": "76e7914bc59514703d97db09e64c45c162b59615a936e859e6ee7aa061775249",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+        "originalExport": "docs/notes/downloads/cfa-review (13).json",
+        "sha256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574"
+      },
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:19:11.767000+00:00",
+        "note": "2026-10-12T03:42:16.797000+00:00",
+        "shotPlan": "2026-10-12T03:42:16.797000+00:00",
+        "likenessRating": "2026-10-12T03:42:16.797000+00:00",
+        "sceneQualityRating": "2026-10-12T03:42:16.797000+00:00",
+        "storyboardStage": "2026-10-12T03:42:16.797000+00:00",
+        "workingReferenceScope": "2026-10-12T03:42:16.797000+00:00"
+      }
+    },
+    {
+      "id": "HD-FALCON-381883a6beb1ed5e",
+      "project": "hon",
+      "filename": "C04-battle-light-005.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-005.jpg",
+      "sha256": "381883a6beb1ed5e280a2bd0c9c4b93fe624eb7d3613f5fdf90c1f15a08c120c",
+      "role": "storyboard",
+      "status": "remove",
+      "note": "4/5 is only becasue the chest tatoos isnt what we spec'd ....",
+      "shotPlan": null,
+      "workingReferenceScope": "scene",
+      "updatedAt": "2026-10-28T04:22:50.331000+00:00",
+      "origin": "user",
+      "sceneQualityRating": 5,
+      "likenessRating": 4,
+      "directUserClarification": {
+        "resolvedAsset": "C04-battle-light-005.jpg",
+        "source": "Direct Ziggy answer following the explicit C04-005 question",
+        "text": "C45 is a keep. I just answered that",
+        "recordedAtUTC": "2026-10-12T03:57:00.6358653Z"
+      },
+      "importEvidence": {
+        "originalExportSHA256": "76e7914bc59514703d97db09e64c45c162b59615a936e859e6ee7aa061775249",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+        "originalExport": "docs/notes/downloads/cfa-review (13).json",
+        "sha256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574"
+      },
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:22:50.331000+00:00",
+        "note": "2026-10-12T03:57:00.635865+00:00",
+        "shotPlan": "2026-10-12T03:57:00.635865+00:00",
+        "likenessRating": "2026-10-12T03:57:00.635865+00:00",
+        "sceneQualityRating": "2026-10-12T03:57:00.635865+00:00",
+        "workingReferenceScope": "2026-10-12T03:57:00.635865+00:00"
+      }
+    },
+    {
+      "id": "HD-FALCON-842566bfcfef466d",
+      "project": "hon",
+      "filename": "C01-pilot-hover-004.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-004.jpg",
+      "sha256": "842566bfcfef466df088434bf09e88f145579b28fd697204769cbf6c06399c72",
+      "role": "storyboard",
+      "status": "keep",
+      "note": "",
+      "shotPlan": null,
+      "workingReferenceScope": "scene",
+      "updatedAt": "2026-10-12T04:07:44.017Z",
+      "origin": "user",
+      "storyboardStage": "production",
+      "likenessRating": 5,
+      "sceneQualityRating": 5,
+      "importEvidence": {
+        "originalExportSHA256": "76e7914bc59514703d97db09e64c45c162b59615a936e859e6ee7aa061775249",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+        "originalExport": "docs/notes/downloads/cfa-review (13).json",
+        "sha256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574"
+      }
+    },
+    {
+      "id": "HD-FALCON-324dc694f8a3d311",
+      "project": "hon",
+      "filename": "C01-pilot-hover-008.jpg",
+      "path": "docs/notes/downloads/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-008.jpg",
+      "sha256": "324dc694f8a3d311f0844ddcb66345b16ef5b7f6aa3a49f5320531a5de0d1877",
+      "role": "storyboard",
+      "status": "keep",
+      "note": "",
+      "shotPlan": null,
+      "workingReferenceScope": "scene",
+      "updatedAt": "2026-10-12T03:44:19.979Z",
+      "origin": "user",
+      "storyboardStage": "verification",
+      "likenessRating": 3,
+      "sceneQualityRating": 5,
+      "importEvidence": {
+        "originalExportSHA256": "76e7914bc59514703d97db09e64c45c162b59615a936e859e6ee7aa061775249",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+        "originalExport": "docs/notes/downloads/cfa-review (13).json",
+        "sha256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574"
+      }
+    },
+    {
+      "id": "HD-FALCON-047f5df94092eba9",
+      "project": "hon",
+      "filename": "C01-pilot-hover-010.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-010.jpg",
+      "sha256": "047f5df94092eba92385589213bc0a903478d83310f67166dbaa73016b67e350",
+      "role": "storyboard",
+      "status": "keep",
+      "note": "",
+      "shotPlan": {
+        "status": "planned",
+        "destinations": [
+          "undecided"
+        ],
+        "idea": "",
+        "prompt": ""
+      },
+      "workingReferenceScope": "scene",
+      "updatedAt": "2026-10-28T03:39:52.249000+00:00",
+      "origin": "user",
+      "storyboardStage": "production",
+      "likenessRating": 5,
+      "sceneQualityRating": 5,
+      "importEvidence": {
+        "originalExportSHA256": "76e7914bc59514703d97db09e64c45c162b59615a936e859e6ee7aa061775249",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+        "originalExport": "docs/notes/downloads/cfa-review (13).json",
+        "sha256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574"
+      },
+      "shotPlanUpdatedAt": "2026-10-28T03:39:52.249000+00:00",
+      "fieldUpdatedAt": {
+        "status": "2026-10-12T03:45:01.223000+00:00",
+        "note": "2026-10-12T03:45:01.223000+00:00",
+        "shotPlan": "2026-10-28T03:39:52.249000+00:00",
+        "likenessRating": "2026-10-12T03:45:01.223000+00:00",
+        "sceneQualityRating": "2026-10-12T03:45:01.223000+00:00",
+        "storyboardStage": "2026-10-12T03:45:01.223000+00:00",
+        "workingReferenceScope": "2026-10-12T03:45:01.223000+00:00"
+      }
+    },
+    {
+      "id": "HD-FALCON-25d3e53bd2619bb6",
+      "project": "hon",
+      "filename": "C02-captain-portrait-013.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-013.jpg",
+      "sha256": "25d3e53bd2619bb65e71c9ecd0ea79c619864eb68c12efc44f36fcfe30cf7dc6",
+      "role": "storyboard",
+      "status": "remove",
+      "note": "seems like a duplicate? ",
+      "shotPlan": null,
+      "workingReferenceScope": "scene",
+      "updatedAt": "2026-10-28T04:11:39.698000+00:00",
+      "origin": "user",
+      "storyboardStage": "verification",
+      "likenessRating": 4,
+      "sceneQualityRating": 5,
+      "importEvidence": {
+        "originalExportSHA256": "76e7914bc59514703d97db09e64c45c162b59615a936e859e6ee7aa061775249",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+        "originalExport": "docs/notes/downloads/cfa-review (13).json",
+        "sha256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574"
+      },
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:11:39.698000+00:00",
+        "note": "2026-10-12T03:46:16.230000+00:00",
+        "shotPlan": "2026-10-12T03:46:16.230000+00:00",
+        "likenessRating": "2026-10-12T03:46:16.230000+00:00",
+        "sceneQualityRating": "2026-10-12T03:46:16.230000+00:00",
+        "storyboardStage": "2026-10-12T03:46:16.230000+00:00",
+        "workingReferenceScope": "2026-10-12T03:46:16.230000+00:00"
+      }
+    },
+    {
+      "id": "HD-FALCON-ec339b70aa3f085e",
+      "project": "hon",
+      "filename": "C02-captain-portrait-015.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-015.jpg",
+      "sha256": "ec339b70aa3f085ee32d3d1c0a380741f3f07af73a732d8c775a9137441590a0",
+      "role": "storyboard",
+      "status": "remove",
+      "note": "",
+      "shotPlan": null,
+      "workingReferenceScope": "identity",
+      "updatedAt": "2026-10-28T04:13:09.142000+00:00",
+      "origin": "user",
+      "storyboardStage": "production",
+      "likenessRating": 4,
+      "sceneQualityRating": 5,
+      "importEvidence": {
+        "originalExportSHA256": "76e7914bc59514703d97db09e64c45c162b59615a936e859e6ee7aa061775249",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+        "originalExport": "docs/notes/downloads/cfa-review (13).json",
+        "sha256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574"
+      },
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:13:09.142000+00:00",
+        "note": "2026-10-12T03:46:12.654000+00:00",
+        "shotPlan": "2026-10-12T03:46:12.654000+00:00",
+        "likenessRating": "2026-10-12T03:46:12.654000+00:00",
+        "sceneQualityRating": "2026-10-12T03:46:12.654000+00:00",
+        "storyboardStage": "2026-10-12T03:46:12.654000+00:00",
+        "workingReferenceScope": "2026-10-12T03:46:12.654000+00:00"
+      }
+    },
+    {
+      "id": "HD-FALCON-44f47d59c87af316",
+      "project": "hon",
+      "filename": "C03-look-back-softened-006.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-006.jpg",
+      "sha256": "44f47d59c87af316f8fb613d33a6e467cebffbea0740889a498b2dae24998a27",
+      "role": "storyboard",
+      "status": "remove",
+      "note": "",
+      "shotPlan": null,
+      "workingReferenceScope": "scene",
+      "updatedAt": "2026-10-28T04:15:05.752000+00:00",
+      "origin": "user",
+      "likenessRating": 4,
+      "sceneQualityRating": 5,
+      "importEvidence": {
+        "originalExportSHA256": "76e7914bc59514703d97db09e64c45c162b59615a936e859e6ee7aa061775249",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+        "originalExport": "docs/notes/downloads/cfa-review (13).json",
+        "sha256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574"
+      },
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:15:05.752000+00:00",
+        "note": "2026-10-12T03:47:00.946000+00:00",
+        "shotPlan": "2026-10-12T03:47:00.946000+00:00",
+        "likenessRating": "2026-10-12T03:47:00.946000+00:00",
+        "sceneQualityRating": "2026-10-12T03:47:00.946000+00:00",
+        "workingReferenceScope": "2026-10-12T03:47:00.946000+00:00"
+      }
+    },
+    {
+      "id": "FLOW-HD-VIDEO-002-A",
+      "project": "hon",
+      "filename": "FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667.mp4",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667.mp4",
+      "sha256": "f8f2aa30265392634b67dbddebdc6ac0f05007de1abb2730f27d27513e72d378",
+      "role": "video",
+      "status": "needs_fixes",
+      "note": "Ziggy review, relayed through the Personal Assistant and summarized by Nova on 2026-10-12: Scene / Preliminary / Needs fixes. Outfit is perfect; actor insufficiently resembles the established character. Tattoos are mostly hard to see, with some neck tattoo/chain visible. Car descent, entry and body interaction look unrealistic / AI-like; improve natural motion. The spoken action sequence is ambiguous, so no frame-specific defect is inferred. Phenomenal aesthetic, cool blue hue, but subjectively grainy / low resolution. Measured 1280x720; the earlier 480p-versus-1080p impression was subjective. No numerical stars supplied. This review applies only to the six-second excerpt; untouched parent GEM-5A115C59 remains separate.",
+      "workingReferenceScope": "scene",
+      "storyboardStage": "preliminary",
+      "updatedAt": "2026-10-12T16:25:21.394024Z",
+      "origin": "user",
+      "source": {
+        "authoredBy": "Ziggy",
+        "relayedBy": "nova_personal_assistant",
+        "writtenBy": "nova",
+        "authorship": "coordinator_summary",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/USER_REVIEW_20261012.json"
+      }
+    },
+    {
+      "id": "FLOW-HD-VIDEO-002-B",
+      "project": "hon",
+      "filename": "FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667_20261012004113.mp4",
+      "path": "docs/notes/downloads/FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667_20261012004113.mp4",
+      "sha256": "8d090aaa5a45cc42cb9d52e7b26d9419a8d8aa8c029c22a1859752ec7e0cf3c2",
+      "role": "video",
+      "status": "needs_fixes",
+      "note": "Ziggy review, relayed through the Personal Assistant and summarized by Nova on 2026-10-12: Scene / Preliminary / Needs fixes. Warmth is visibly successful, including yellow streetlights, but appears like a global yellow filter / surface wash rather than motivated emitters, local falloff, shadows and reflections. Technical test success with artistic improvements required; not production acceptance. Inherited source likeness and unnatural car/body-motion issues remain separate from this B-specific lighting result. The executed prompt requested subtle warmer color balance; physically motivated relighting would be a distinct declared change. Measured 1280x720; no numerical stars supplied. Cost remains unknown; near-silent AAC is present; no final-track sync.",
+      "workingReferenceScope": "scene",
+      "storyboardStage": "preliminary",
+      "updatedAt": "2026-10-12T16:25:21.394024Z",
+      "origin": "user",
+      "source": {
+        "authoredBy": "Ziggy",
+        "relayedBy": "nova_personal_assistant",
+        "writtenBy": "nova",
+        "authorship": "coordinator_summary",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/USER_REVIEW_20261012.json"
+      }
+    },
+    {
+      "id": "LAG-VIS-afcdf01dce1fc114",
+      "project": "lisan",
+      "filename": "VIS-LAG-20_SMIRK-RIGHT_Z_5.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-VIS-NATURAL-v001/01_VISEMES/VIS-LAG-20_SMIRK-RIGHT_Z_5.jpg",
+      "sha256": "afcdf01dce1fc1143471d4275475567f83a05899e5cc5c435000f5ed13a27f76",
+      "role": "detail",
+      "status": "keep",
+      "note": "Ziggy review relayed through the Personal Assistant and recorded by Nova: Keep / Detail only / Production. Approval and likeness score apply only to this mouth/detail reference: natural mouth and teeth, spelling and central chin GAIB/Al-Gaib placement, and tattoo-on-skin realism. They do not approve the whole head, actor, scene, motion or phoneme mapping. Font perfection does not block this mouth work; lip/nose piercing variations are tolerated. Cropped or surrounding neck, ear and nose features are not newly verified. Scene quality is unrated. Ziggy particularly liked the realistic faded smirk and the grimace.",
+      "workingReferenceScope": "detail",
+      "storyboardStage": "production",
+      "workingReference": {
+        "status": "approved",
+        "scope": "detail"
+      },
+      "likenessRating": 5,
+      "sceneQualityRating": null,
+      "updatedAt": "2026-10-12T16:49:27.774209Z",
+      "origin": "user",
+      "source": {
+        "authoredBy": "Ziggy",
+        "relayedBy": "nova_personal_assistant",
+        "writtenBy": "nova",
+        "authorship": "coordinator_summary",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/lisan_mouth_seven_review_20261012/INTAKE_RECORD.json"
+      }
+    },
+    {
+      "id": "LAG-VIS-c111c9d91f8ff1c2",
+      "project": "lisan",
+      "filename": "VIS-LAG-20_SMIRK-RIGHT_r2_Z_5.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-VIS-NATURAL-v001/01_VISEMES/VIS-LAG-20_SMIRK-RIGHT_r2_Z_5.jpg",
+      "sha256": "c111c9d91f8ff1c2da3f03b29dd4b0e3d8da66ed7b70cc3947db907048c3f137",
+      "role": "detail",
+      "status": "keep",
+      "note": "Ziggy review relayed through the Personal Assistant and recorded by Nova: Keep / Detail only / Production. Approval and likeness score apply only to this mouth/detail reference: natural mouth and teeth, spelling and central chin GAIB/Al-Gaib placement, and tattoo-on-skin realism. They do not approve the whole head, actor, scene, motion or phoneme mapping. Font perfection does not block this mouth work; lip/nose piercing variations are tolerated. Cropped or surrounding neck, ear and nose features are not newly verified. Scene quality is unrated. Ziggy particularly liked the realistic faded smirk and the grimace.",
+      "workingReferenceScope": "detail",
+      "storyboardStage": "production",
+      "workingReference": {
+        "status": "approved",
+        "scope": "detail"
+      },
+      "likenessRating": 5,
+      "sceneQualityRating": null,
+      "updatedAt": "2026-10-12T16:49:27.774209Z",
+      "origin": "user",
+      "source": {
+        "authoredBy": "Ziggy",
+        "relayedBy": "nova_personal_assistant",
+        "writtenBy": "nova",
+        "authorship": "coordinator_summary",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/lisan_mouth_seven_review_20261012/INTAKE_RECORD.json"
+      }
+    },
+    {
+      "id": "LAG-VIS-00b8cf30f072b0a3",
+      "project": "lisan",
+      "filename": "VIS-LAG-21_SNEER_Z_5.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-VIS-NATURAL-v001/01_VISEMES/VIS-LAG-21_SNEER_Z_5.jpg",
+      "sha256": "00b8cf30f072b0a377f76df5ed78fba5d1f00039eac26fbf0f126cac99fa48f3",
+      "role": "detail",
+      "status": "keep",
+      "note": "Ziggy review relayed through the Personal Assistant and recorded by Nova: Keep / Detail only / Production. Approval and likeness score apply only to this mouth/detail reference: natural mouth and teeth, spelling and central chin GAIB/Al-Gaib placement, and tattoo-on-skin realism. They do not approve the whole head, actor, scene, motion or phoneme mapping. Font perfection does not block this mouth work; lip/nose piercing variations are tolerated. Cropped or surrounding neck, ear and nose features are not newly verified. Scene quality is unrated. Ziggy particularly liked the realistic faded smirk and the grimace.",
+      "workingReferenceScope": "detail",
+      "storyboardStage": "production",
+      "workingReference": {
+        "status": "approved",
+        "scope": "detail"
+      },
+      "likenessRating": 5,
+      "sceneQualityRating": null,
+      "updatedAt": "2026-10-12T16:49:27.774209Z",
+      "origin": "user",
+      "source": {
+        "authoredBy": "Ziggy",
+        "relayedBy": "nova_personal_assistant",
+        "writtenBy": "nova",
+        "authorship": "coordinator_summary",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/lisan_mouth_seven_review_20261012/INTAKE_RECORD.json"
+      }
+    },
+    {
+      "id": "LAG-VIS-69298b8068e57282",
+      "project": "lisan",
+      "filename": "VIS-LAG-22_SNARL_Z_5.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-VIS-NATURAL-v001/01_VISEMES/VIS-LAG-22_SNARL_Z_5.jpg",
+      "sha256": "69298b8068e57282c0aa0af4980dec0186b22c03a64dc1b275e25d6b6cb70148",
+      "role": "detail",
+      "status": "keep",
+      "note": "Ziggy review relayed through the Personal Assistant and recorded by Nova: Keep / Detail only / Production. Approval and likeness score apply only to this mouth/detail reference: natural mouth and teeth, spelling and central chin GAIB/Al-Gaib placement, and tattoo-on-skin realism. They do not approve the whole head, actor, scene, motion or phoneme mapping. Font perfection does not block this mouth work; lip/nose piercing variations are tolerated. Cropped or surrounding neck, ear and nose features are not newly verified. Scene quality is unrated. Ziggy particularly liked the realistic faded smirk and the grimace. Original VIS-LAG-22_SNARL_Z_5 gets 4/5 because the tattoo looks printed/paper-like; its r2 retry gets 5/5.",
+      "workingReferenceScope": "detail",
+      "storyboardStage": "production",
+      "workingReference": {
+        "status": "approved",
+        "scope": "detail"
+      },
+      "likenessRating": 4,
+      "sceneQualityRating": null,
+      "updatedAt": "2026-10-12T16:49:27.774209Z",
+      "origin": "user",
+      "source": {
+        "authoredBy": "Ziggy",
+        "relayedBy": "nova_personal_assistant",
+        "writtenBy": "nova",
+        "authorship": "coordinator_summary",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/lisan_mouth_seven_review_20261012/INTAKE_RECORD.json"
+      }
+    },
+    {
+      "id": "LAG-VIS-13465b4300927d08",
+      "project": "lisan",
+      "filename": "VIS-LAG-22_SNARL_r2_Z_5.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-VIS-NATURAL-v001/01_VISEMES/VIS-LAG-22_SNARL_r2_Z_5.jpg",
+      "sha256": "13465b4300927d085ea99a0c24c1a0d78f63f43d225832b2f072f54277f8a51e",
+      "role": "detail",
+      "status": "keep",
+      "note": "Ziggy review relayed through the Personal Assistant and recorded by Nova: Keep / Detail only / Production. Approval and likeness score apply only to this mouth/detail reference: natural mouth and teeth, spelling and central chin GAIB/Al-Gaib placement, and tattoo-on-skin realism. They do not approve the whole head, actor, scene, motion or phoneme mapping. Font perfection does not block this mouth work; lip/nose piercing variations are tolerated. Cropped or surrounding neck, ear and nose features are not newly verified. Scene quality is unrated. Ziggy particularly liked the realistic faded smirk and the grimace.",
+      "workingReferenceScope": "detail",
+      "storyboardStage": "production",
+      "workingReference": {
+        "status": "approved",
+        "scope": "detail"
+      },
+      "likenessRating": 5,
+      "sceneQualityRating": null,
+      "updatedAt": "2026-10-12T16:49:27.774209Z",
+      "origin": "user",
+      "source": {
+        "authoredBy": "Ziggy",
+        "relayedBy": "nova_personal_assistant",
+        "writtenBy": "nova",
+        "authorship": "coordinator_summary",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/lisan_mouth_seven_review_20261012/INTAKE_RECORD.json"
+      }
+    },
+    {
+      "id": "LAG-VIS-3056ae61d9993a75",
+      "project": "lisan",
+      "filename": "VIS-LAG-23_GRIMACE_Z_5.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-VIS-NATURAL-v001/01_VISEMES/VIS-LAG-23_GRIMACE_Z_5.jpg",
+      "sha256": "3056ae61d9993a75d36e6b3fbbf1c5c9c4b7d11ba16259667bc95e44a3f1ed92",
+      "role": "detail",
+      "status": "keep",
+      "note": "Ziggy review relayed through the Personal Assistant and recorded by Nova: Keep / Detail only / Production. Approval and likeness score apply only to this mouth/detail reference: natural mouth and teeth, spelling and central chin GAIB/Al-Gaib placement, and tattoo-on-skin realism. They do not approve the whole head, actor, scene, motion or phoneme mapping. Font perfection does not block this mouth work; lip/nose piercing variations are tolerated. Cropped or surrounding neck, ear and nose features are not newly verified. Scene quality is unrated. Ziggy particularly liked the realistic faded smirk and the grimace.",
+      "workingReferenceScope": "detail",
+      "storyboardStage": "production",
+      "workingReference": {
+        "status": "approved",
+        "scope": "detail"
+      },
+      "likenessRating": 5,
+      "sceneQualityRating": null,
+      "updatedAt": "2026-10-12T16:49:27.774209Z",
+      "origin": "user",
+      "source": {
+        "authoredBy": "Ziggy",
+        "relayedBy": "nova_personal_assistant",
+        "writtenBy": "nova",
+        "authorship": "coordinator_summary",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/lisan_mouth_seven_review_20261012/INTAKE_RECORD.json"
+      }
+    },
+    {
+      "id": "LAG-VIS-cb41547abc0f110b",
+      "project": "lisan",
+      "filename": "VIS-LAG-24_CLENCHED-JAW_Z_5.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-VIS-NATURAL-v001/01_VISEMES/VIS-LAG-24_CLENCHED-JAW_Z_5.jpg",
+      "sha256": "cb41547abc0f110ba5e66ac1e5eedb43d5659864072e71f37067e862917634f6",
+      "role": "detail",
+      "status": "keep",
+      "note": "Ziggy review relayed through the Personal Assistant and recorded by Nova: Keep / Detail only / Production. Approval and likeness score apply only to this mouth/detail reference: natural mouth and teeth, spelling and central chin GAIB/Al-Gaib placement, and tattoo-on-skin realism. They do not approve the whole head, actor, scene, motion or phoneme mapping. Font perfection does not block this mouth work; lip/nose piercing variations are tolerated. Cropped or surrounding neck, ear and nose features are not newly verified. Scene quality is unrated. Ziggy particularly liked the realistic faded smirk and the grimace.",
+      "workingReferenceScope": "detail",
+      "storyboardStage": "production",
+      "workingReference": {
+        "status": "approved",
+        "scope": "detail"
+      },
+      "likenessRating": 5,
+      "sceneQualityRating": null,
+      "updatedAt": "2026-10-12T16:49:27.774209Z",
+      "origin": "user",
+      "source": {
+        "authoredBy": "Ziggy",
+        "relayedBy": "nova_personal_assistant",
+        "writtenBy": "nova",
+        "authorship": "coordinator_summary",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/lisan_mouth_seven_review_20261012/INTAKE_RECORD.json"
+      }
+    },
+    {
+      "id": "GEM-2E361055",
+      "project": "hon",
+      "filename": "gemini_generated_video_2e361055.mp4",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_review_20261007/review_copies/performance/gemini_generated_video_2e361055.mp4",
+      "sha256": "fe4100afa5185a9d794f53744f18ef1fe144724a1e7b4cf942b3efa3418035ca",
+      "role": "scene",
+      "status": "keep",
+      "creativeLane": "multiverse",
+      "workingReferenceScope": "scene",
+      "storyboardStage": "production",
+      "likenessRating": 3,
+      "sceneQualityRating": 5,
+      "updatedAt": "2026-10-12T17:00:42.132463Z",
+      "origin": "user",
+      "note": "Ziggy explicitly selected this existing Cantina toast as alternate-universe Dolo: Keep / Multiverse / Scene / Production; character likeness3/5 against the normal gold standard and scene craft5/5. Preserve the enjoyable bar/toast scene and this intentional older bird/tattoo look. This accepts this existing alternate-universe scene only, not a new main-universe identity standard. Requested bounded Comfy test: apply the Harrison Ford likeness reference to the performer while preserving this scene, outfit, tattoos, toast action, glass/hand contact, camera and timing. Any new test output starts Preliminary and needs separate review.",
+      "shotPlan": {
+        "destinations": [
+          "ComfyUI"
+        ],
+        "status": "requested_bounded_test",
+        "idea": "Harrison Ford identity into this alternate-universe Dolo Cantina toast; preserve existing scene/action/outfit/tattoos. One short Comfy proof with explicit preservation checks.",
+        "prompt": ""
+      },
+      "source": {
+        "authoredBy": "Ziggy",
+        "writtenBy": "nova",
+        "authorship": "coordinator_summary",
+        "kind": "direct_user_browser_annotation",
+        "sourceURL": "file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/index.html#hon/videos",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/cantina_toast_review_20261012/INTAKE_RECORD.json"
+      },
+      "variant": "multiverse",
+      "variantSource": "user"
+    },
+    {
+      "id": "LAG-602a9fd4021dc356",
+      "project": "lisan",
+      "filename": "LAG-LOCK-FACE-NATURAL.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOCK-FACE-NATURAL.jpg",
+      "sha256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+      "role": "working",
+      "likenessRating": 5,
+      "updatedAt": "2026-10-14T02:47:19.376043Z",
+      "origin": "user",
+      "source": "attributed Ziggy voice relay",
+      "humanRatingConfirmation": {
+        "field": "likenessRating",
+        "value": 5,
+        "recordedAtUTC": "2026-10-14T02:47:19.376043Z",
+        "source": "attributed Ziggy voice relay",
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/collaborators/reviewer_prototypes_20261014/coordination/PORTRAIT_UPLOAD_BINDING_fce06585-cfb3-424a-9ef3-8e242c2ffc44.json",
+        "evidenceSHA256": "a2f9166a637484a2759d4d4df5cdad48ad44864719f5124783f10e88b604ef10",
+        "assetID": "LAG-602a9fd4021dc356",
+        "assetSHA256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+        "scope": "Visible character/look only; no scene rating, unseen-body approval, exclusive primary choice, criteria pass or derivative acceptance.",
+        "sourceCaptureDescription": "Ziggy voice call2026-10-14 approximately01:48UTC; actual wording relayed by parent",
+        "authorship": "coordinator_summary",
+        "decisionAtUTC": "2026-10-14T01:48:00Z",
+        "timePrecision": "approximate"
+      }
+    },
+    {
+      "id": "LAG-63126392af1ccf8b",
+      "project": "lisan",
+      "filename": "LAG-LOOK-V3-01.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOOK-V3-01.jpg",
+      "sha256": "63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026",
+      "role": "working",
+      "likenessRating": 5,
+      "updatedAt": "2026-10-14T02:47:19.376043Z",
+      "origin": "user",
+      "source": "attributed Ziggy voice relay",
+      "humanRatingConfirmation": {
+        "field": "likenessRating",
+        "value": 5,
+        "recordedAtUTC": "2026-10-14T02:47:19.376043Z",
+        "source": "attributed Ziggy voice relay",
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/collaborators/reviewer_prototypes_20261014/coordination/PORTRAIT_UPLOAD_BINDING_fce06585-cfb3-424a-9ef3-8e242c2ffc44.json",
+        "evidenceSHA256": "a2f9166a637484a2759d4d4df5cdad48ad44864719f5124783f10e88b604ef10",
+        "assetID": "LAG-63126392af1ccf8b",
+        "assetSHA256": "63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026",
+        "scope": "Visible character/look only; no scene rating, unseen-body approval, exclusive primary choice, criteria pass or derivative acceptance.",
+        "sourceCaptureDescription": "Ziggy voice call2026-10-14 approximately01:48UTC; actual wording relayed by parent",
+        "authorship": "coordinator_summary",
+        "decisionAtUTC": "2026-10-14T01:48:00Z",
+        "timePrecision": "approximate"
+      }
+    },
+    {
+      "id": "HD-B-d98197d470ce",
+      "project": "hon",
+      "filename": "d98197d470ce__VIS-HD-11_GRIN.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/d98197d470ce__VIS-HD-11_GRIN.jpg",
+      "sha256": "d98197d470ceba82d430d257e99b687ad861bc4b7cf5a09b164088f77486bc79",
+      "role": "comfy",
+      "status": "keep",
+      "note": "",
+      "shotPlan": null,
+      "origin": "user",
+      "updatedAt": "2026-10-12T16:44:52.110Z"
+    },
+    {
+      "id": "HD-RETURN-c35561756692",
+      "project": "hon",
+      "filename": "c35561756692__HIP-PARKA-01_v001.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/c35561756692__HIP-PARKA-01_v001.jpg",
+      "sha256": "c3556175669257e2e52cfd00f04891a63f6a55302748dc843506b3eb66bc2c46",
+      "role": "outfits",
+      "status": "needs_fixes",
+      "note": "like the scene, outfit - but this is not Prime DoLo...also do better on th eGun...",
+      "shotPlan": null,
+      "origin": "user",
+      "updatedAt": "2026-10-14T03:32:17.219Z",
+      "variant": "multiverse",
+      "variantSource": "user",
+      "workingReference": null,
+      "sceneQualityRating": 5
+    },
+    {
+      "id": "HD-DROP-88f20c203f5b",
+      "project": "hon",
+      "filename": "SB-21-ship-turnaround.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-04-turnaround/SB-21-ship-turnaround.jpg",
+      "sha256": "88f20c203f5b3fc228f982ba9bc0ab11e08bbf912f881ff297436185665eed86",
+      "role": "storyboard",
+      "status": "keep",
+      "note": "",
+      "shotPlan": {
+        "status": "planned",
+        "destinations": [
+          "Gemini"
+        ],
+        "idea": "flying through space",
+        "prompt": ""
+      },
+      "origin": "user",
+      "updatedAt": "2026-10-14T13:14:41.147000+00:00",
+      "creativeReview": {
+        "status": "queued",
+        "recipients": [
+          "gemini_chat"
+        ],
+        "purpose": "find_story_use",
+        "scope": "music_video_and_interstitials",
+        "note": ""
+      },
+      "workingReferenceScope": "scene",
+      "fieldUpdatedAt": {
+        "status": "2026-10-14T13:14:41.147000+00:00",
+        "note": "2026-10-14T02:46:19.524000+00:00",
+        "shotPlan": "2026-10-14T02:46:19.524000+00:00",
+        "creativeReview": "2026-10-14T02:46:19.524000+00:00",
+        "workingReferenceScope": "2026-10-14T13:14:41.147000+00:00"
+      }
+    },
+    {
+      "id": "HD-TATGUIDE-f6420e93035e",
+      "project": "hon",
+      "filename": "CA09_SCOUNDREL_lettering_1e8c.png",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/tattoo_placement_guide_20261009/received/clean_art/CA09_SCOUNDREL_lettering_1e8c.png",
+      "sha256": "f6420e93035eedc8bb28bda9e758d3ee0c6f1158c80bf33835882abe188b01a2",
+      "role": "details",
+      "status": "remove",
+      "note": "",
+      "shotPlan": null,
+      "updatedAt": "2026-10-14T02:57:52.581Z",
+      "origin": "user"
+    },
+    {
+      "id": "HD-DROP-0f3a9ae0f699",
+      "project": "hon",
+      "filename": "HD-LETTERMAN-01A-chest-up.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/hon-dolo-ref-sheet-letterman/HD-LETTERMAN-01A-chest-up.jpg",
+      "sha256": "0f3a9ae0f6990834d65310e219d3d229c820c2bacf7245488a8434972775a701",
+      "role": "outfits",
+      "status": "remove",
+      "note": "",
+      "shotPlan": null,
+      "updatedAt": "2026-10-14T02:59:16.324Z",
+      "origin": "user"
+    },
+    {
+      "id": "HD-FALCON-11868f1948c1cebf",
+      "project": "hon",
+      "filename": "C05-lurch-grin-006.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C05-lurch-grin/C05-lurch-grin-006.jpg",
+      "sha256": "11868f1948c1cebf328fd8626d2e0060fd91b037861c0b05092aa486f556341c",
+      "role": "storyboard",
+      "status": "remove",
+      "note": "",
+      "shotPlan": null,
+      "updatedAt": "2026-10-14T03:15:07.013Z",
+      "origin": "user"
+    },
+    {
+      "id": "HD-FALCON-580d85f3fa90e675",
+      "project": "hon",
+      "filename": "C06-lurch-no-grin-014.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C06-lurch-no-grin/C06-lurch-no-grin-014.jpg",
+      "sha256": "580d85f3fa90e67564fde90f1a584eca1007e6d9b6d973a5103e1cd250306934",
+      "role": "storyboard",
+      "status": "needs_fixes",
+      "note": "eye know font too large....wrong chest tattoo",
+      "shotPlan": null,
+      "updatedAt": "2026-10-14T03:16:20.091Z",
+      "origin": "user",
+      "creativeReview": {
+        "status": "queued",
+        "recipients": [
+          "grok_chief"
+        ],
+        "purpose": "find_story_use",
+        "scope": "music_video_and_interstitials",
+        "note": ""
+      }
+    },
+    {
+      "id": "HD-RETURN-2f30bc9f7c38",
+      "project": "hon",
+      "filename": "2f30bc9f7c38__HIP-BOMBER-01_v001.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/2f30bc9f7c38__HIP-BOMBER-01_v001.jpg",
+      "sha256": "2f30bc9f7c38468c596202864df9835585d27652de4756eb9167e4f621b98c11",
+      "role": "outfits",
+      "status": "needs_fixes",
+      "note": "doent even look like a gun",
+      "shotPlan": null,
+      "updatedAt": "2026-10-14T03:26:08.036Z",
+      "origin": "user"
+    },
+    {
+      "id": "HD-RETURN-a460b7c979de",
+      "project": "hon",
+      "filename": "a460b7c979de__HIP-CASH-01_v001.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/a460b7c979de__HIP-CASH-01_v001.jpg",
+      "sha256": "a460b7c979de8e2c633dea1ac337f442fa2130b068eae4570990ffd4df706bac",
+      "role": "outfits",
+      "status": "needs_fixes",
+      "note": "The Gun is okay...but DoLo needs fixing...i do like his chains though...",
+      "shotPlan": null,
+      "updatedAt": "2026-10-14T03:26:44.812Z",
+      "origin": "user"
+    },
+    {
+      "id": "HD-RETURN-8b34de066ace",
+      "project": "hon",
+      "filename": "8b34de066ace__HIP-CASINO-01_v001.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/8b34de066ace__HIP-CASINO-01_v001.jpg",
+      "sha256": "8b34de066acec74ebca2f940f69aa2d73419acd5f40fc82332da18918e0e8244",
+      "role": "outfits",
+      "status": "needs_fixes",
+      "note": "Gun is good ...now get DoLo Wearing it!",
+      "shotPlan": null,
+      "likenessRating": 2,
+      "updatedAt": "2026-10-14T03:28:18.164Z",
+      "origin": "user",
+      "sceneQualityRating": 5
+    },
+    {
+      "id": "HD-RETURN-957897bd45c4",
+      "project": "hon",
+      "filename": "957897bd45c4__HIP-COAT-01_v001.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/957897bd45c4__HIP-COAT-01_v001.jpg",
+      "sha256": "957897bd45c4fc03d685c4a40af7670385ab3970108cdbd319d839385dceacc1",
+      "role": "outfits",
+      "status": "needs_fixes",
+      "note": "Keep the Gun...get it on DoLo",
+      "shotPlan": null,
+      "updatedAt": "2026-10-14T03:30:02.786Z",
+      "origin": "user"
+    },
+    {
+      "id": "HD-RETURN-766f51a7e850",
+      "project": "hon",
+      "filename": "766f51a7e850__HIP-CREAM-01_v001.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/766f51a7e850__HIP-CREAM-01_v001.jpg",
+      "sha256": "766f51a7e850d9fb1a4e61e386a6f78be05c2bc68e11f46035ac82dfe4160478",
+      "role": "outfits",
+      "status": "needs_fixes",
+      "note": "Not a good looking gun - improve please",
+      "shotPlan": null,
+      "updatedAt": "2026-10-14T03:30:29.278Z",
+      "origin": "user",
+      "sceneQualityRating": 5,
+      "creativeReview": {
+        "status": "queued",
+        "recipients": [
+          "grok_chief"
+        ],
+        "purpose": "find_story_use",
+        "scope": "music_video_and_interstitials",
+        "note": ""
+      }
+    },
+    {
+      "id": "HD-RETURN-6aec219ca1aa",
+      "project": "hon",
+      "filename": "6aec219ca1aa__HIP-DRAGON-01_v001.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/6aec219ca1aa__HIP-DRAGON-01_v001.jpg",
+      "sha256": "6aec219ca1aa643e8dcd938f2ffa2d5c695e77b8ef1d6a5c985b0d8466871d9d",
+      "role": "outfits",
+      "status": "needs_fixes",
+      "note": "Keep the Gun...get it on DoLo",
+      "shotPlan": null,
+      "updatedAt": "2026-10-14T03:30:46.706Z",
+      "origin": "user"
+    },
+    {
+      "id": "HD-RETURN-4c2ad7996c90",
+      "project": "hon",
+      "filename": "4c2ad7996c90__HIP-FUR-01_v001.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/4c2ad7996c90__HIP-FUR-01_v001.jpg",
+      "sha256": "4c2ad7996c903cd9624688e71e105ecd98d6dba10e91e474868f82031fa94f30",
+      "role": "outfits",
+      "status": "needs_fixes",
+      "note": "Keep the Scene...Gun fails...put any version of DoLo in this scene",
+      "shotPlan": null,
+      "likenessRating": 1,
+      "updatedAt": "2026-10-14T03:31:29.618Z",
+      "origin": "user",
+      "sceneQualityRating": 5,
+      "creativeReview": {
+        "status": "queued",
+        "recipients": [
+          "grok_chief"
+        ],
+        "purpose": "find_story_use",
+        "scope": "music_video_and_interstitials",
+        "note": ""
+      }
+    },
+    {
+      "id": "HD-RETURN-ec68c973d240",
+      "project": "hon",
+      "filename": "ec68c973d240__HIP-LETTERMAN-01_v001.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/ec68c973d240__HIP-LETTERMAN-01_v001.jpg",
+      "sha256": "ec68c973d240b467c52d6c96abf051a7c16dfd0f19ff644c0fc7a43a4da6ac71",
+      "role": "outfits",
+      "status": "needs_fixes",
+      "note": "Keep the Gun...get it on DoLo",
+      "shotPlan": null,
+      "sceneQualityRating": 3,
+      "updatedAt": "2026-10-14T03:31:52.168Z",
+      "origin": "user"
+    },
+    {
+      "id": "HD-RETURN-a0217b496d6c",
+      "project": "hon",
+      "filename": "a0217b496d6c__HIP-PILOT-01_v001.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/a0217b496d6c__HIP-PILOT-01_v001.jpg",
+      "sha256": "a0217b496d6cf1f4c45fc411438edd3b8dc223314ec390401ddd1a25fb08f2c9",
+      "role": "outfits",
+      "status": "remove",
+      "note": "",
+      "shotPlan": null,
+      "updatedAt": "2026-10-14T03:32:25.872Z",
+      "origin": "user"
+    },
+    {
+      "id": "HD-RETURN-8b4faedeee99",
+      "project": "hon",
+      "filename": "8b4faedeee99__HIP-PINSTRIPE-01_v001.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/8b4faedeee99__HIP-PINSTRIPE-01_v001.jpg",
+      "sha256": "8b4faedeee99872bbf71bb8a0e9fe92e1f89e7ece775c8334b4e765ad350cfab",
+      "role": "outfits",
+      "status": "needs_fixes",
+      "note": "Fix the gun...put it on DoLo",
+      "shotPlan": null,
+      "updatedAt": "2026-10-14T03:32:49.542Z",
+      "origin": "user",
+      "sceneQualityRating": 5,
+      "likenessRating": 2
+    },
+    {
+      "id": "HD-RETURN-7d5aa7ef2c92",
+      "project": "hon",
+      "filename": "7d5aa7ef2c92__HIP-RAIN-01_v001.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/7d5aa7ef2c92__HIP-RAIN-01_v001.jpg",
+      "sha256": "7d5aa7ef2c92c65865c92ed0cc4c490fcccf88fdfcf96ceed30be70f958c1330",
+      "role": "outfits",
+      "status": "needs_fixes",
+      "note": "Fix the Gun, get it on DoLo",
+      "shotPlan": null,
+      "updatedAt": "2026-10-14T03:33:07.523Z",
+      "origin": "user"
+    },
+    {
+      "id": "HD-RETURN-26a91590b6c0",
+      "project": "hon",
+      "filename": "26a91590b6c0__HIP-SALOON-01_v001.png",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/26a91590b6c0__HIP-SALOON-01_v001.png",
+      "sha256": "26a91590b6c03f3c8de62f4ab69e0b4ce7d466b7707a2e9cf426c771a69c79ec",
+      "role": "outfits",
+      "status": "needs_fixes",
+      "note": "Nice looking gun...but DoLo needs to be fixed!",
+      "shotPlan": null,
+      "storyboardStage": "preliminary",
+      "updatedAt": "2026-10-14T03:33:55.316Z",
+      "origin": "user",
+      "likenessRating": 2,
+      "sceneQualityRating": 5
+    },
+    {
+      "id": "HD-RETURN-3b8efde8889d",
+      "project": "hon",
+      "filename": "3b8efde8889d__HIP-VELOUR-01_v001.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/3b8efde8889d__HIP-VELOUR-01_v001.jpg",
+      "sha256": "3b8efde8889d022540b397aa8e0beb21b8715d81a25d624d7ffee8a2042a7721",
+      "role": "outfits",
+      "status": "needs_fixes",
+      "note": "Nice looking gun...but DoLo needs to be fixed!",
+      "shotPlan": null,
+      "updatedAt": "2026-10-14T03:34:14.384Z",
+      "origin": "user",
+      "likenessRating": 2,
+      "storyboardStage": "preliminary",
+      "sceneQualityRating": 5
+    },
+    {
+      "id": "HD-RETURN-53315f76a5d4",
+      "project": "hon",
+      "filename": "53315f76a5d4__HIP-VINYL-01_v001.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/53315f76a5d4__HIP-VINYL-01_v001.jpg",
+      "sha256": "53315f76a5d4306bbe24d339e142394c65759bf2e233bdd715583c5233401b59",
+      "role": "outfits",
+      "status": "keep",
+      "note": "",
+      "shotPlan": null,
+      "variant": "multiverse",
+      "variantSource": "user",
+      "workingReference": null,
+      "updatedAt": "2026-10-14T03:34:39.519Z",
+      "origin": "user",
+      "sceneQualityRating": 3,
+      "likenessRating": 2,
+      "storyboardStage": "detailed_design"
+    },
+    {
+      "id": "HD-WINNERS-04cd3cfc9757e1897623",
+      "sha256": "04cd3cfc9757e189762383ec7624d8b18cad727906445831c50459ae5b2c1b36",
+      "project": "hon",
+      "filename": "HD-EXP-285_v004.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-EXP-285_v004.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "04cd3cfc9757e189762383ec7624d8b18cad727906445831c50459ae5b2c1b36",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-EXP-285_v004.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-4eb9362256e5c9e49578",
+      "sha256": "4eb9362256e5c9e49578b7c0a1e8f44a43624695bcbc71d2847c6eceb4f11770",
+      "project": "hon",
+      "filename": "HD-EXP-287_v002j.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-EXP-287_v002j.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "4eb9362256e5c9e49578b7c0a1e8f44a43624695bcbc71d2847c6eceb4f11770",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-EXP-287_v002j.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-54b20c7a3406ce21ebf7",
+      "sha256": "54b20c7a3406ce21ebf748bb723a68cba8fd65769d4a4412181c10b8de377ca1",
+      "project": "hon",
+      "filename": "SB-12-neck-blaster-cu_v004.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/SB-12-neck-blaster-cu_v004.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "54b20c7a3406ce21ebf748bb723a68cba8fd65769d4a4412181c10b8de377ca1",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "SB-12-neck-blaster-cu_v004.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-89d118ac439aa5a628df",
+      "sha256": "89d118ac439aa5a628dffd1365a1997303842bda1d69cbfa5a5c6069a14ab789",
+      "project": "hon",
+      "filename": "SB-34-final-lock-face_v004.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/SB-34-final-lock-face_v004.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "89d118ac439aa5a628dffd1365a1997303842bda1d69cbfa5a5c6069a14ab789",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "SB-34-final-lock-face_v004.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-d51a07b32a21ab8a7d09",
+      "sha256": "d51a07b32a21ab8a7d0993eb5585a01274b63cf6f0fcb7a1e858005e6173b7c1",
+      "project": "hon",
+      "filename": "2703428d5f0f8dd63005c544984078b71373112aaac66bd0c4cd15092ad5c073_v002h.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/2703428d5f0f8dd63005c544984078b71373112aaac66bd0c4cd15092ad5c073_v002h.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "d51a07b32a21ab8a7d0993eb5585a01274b63cf6f0fcb7a1e858005e6173b7c1",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "2703428d5f0f8dd63005c544984078b71373112aaac66bd0c4cd15092ad5c073_v002h.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-2362b13501080c494ba9",
+      "sha256": "2362b13501080c494ba9b429e122d2a188cf31557e4b9c876565c678f2de76e6",
+      "project": "hon",
+      "filename": "HD-EXP-298-club-white-fur-side_v002e.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-EXP-298-club-white-fur-side_v002e.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "2362b13501080c494ba9b429e122d2a188cf31557e4b9c876565c678f2de76e6",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-EXP-298-club-white-fur-side_v002e.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-6bf9409a5cce20529023",
+      "sha256": "6bf9409a5cce20529023f99366818dfb8c8a6b6f93f7e55575d22f1d6b60d5b7",
+      "project": "hon",
+      "filename": "HD-EXP-299-club-white-fur-back_v002f.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-EXP-299-club-white-fur-back_v002f.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "6bf9409a5cce20529023f99366818dfb8c8a6b6f93f7e55575d22f1d6b60d5b7",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-EXP-299-club-white-fur-back_v002f.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-a8a9d71811777b9d9575",
+      "sha256": "a8a9d71811777b9d95751f563dd0f77d0214a3f7ddfa67f2f188d62864f968b1",
+      "project": "hon",
+      "filename": "HD-EXP-301-denim-shearling-side_v002e.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-EXP-301-denim-shearling-side_v002e.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "a8a9d71811777b9d95751f563dd0f77d0214a3f7ddfa67f2f188d62864f968b1",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-EXP-301-denim-shearling-side_v002e.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-022f0480ca1166b7c3c1",
+      "sha256": "022f0480ca1166b7c3c1fa2042ada6789800dc8c8bea5d033de9f418ca027909",
+      "project": "hon",
+      "filename": "HD-EXP-279-cockpit-hoodie_v004.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-EXP-279-cockpit-hoodie_v004.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "022f0480ca1166b7c3c1fa2042ada6789800dc8c8bea5d033de9f418ca027909",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-EXP-279-cockpit-hoodie_v004.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-efde01c96c136963a159",
+      "sha256": "efde01c96c136963a15983ecef28326e32f95ebf0f84cd9d24573c53c89858aa",
+      "project": "hon",
+      "filename": "HD-EXP-293-cantina-leather-back_v005.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-EXP-293-cantina-leather-back_v005.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "efde01c96c136963a15983ecef28326e32f95ebf0f84cd9d24573c53c89858aa",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-EXP-293-cantina-leather-back_v005.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-056bc38e646bf5cd3c9f",
+      "sha256": "056bc38e646bf5cd3c9fd84b60a57821be5e1a83ad3e26b84283632b370900b0",
+      "project": "hon",
+      "filename": "HD-ARMOR-SWAP-01_v007.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-ARMOR-SWAP-01_v007.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "056bc38e646bf5cd3c9fd84b60a57821be5e1a83ad3e26b84283632b370900b0",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-ARMOR-SWAP-01_v007.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-89fe95e30a0cc7625620",
+      "sha256": "89fe95e30a0cc7625620e40a8dff477cd10f351d856881e17f14aa5696cc923f",
+      "project": "hon",
+      "filename": "C15-cockpit-twoshot-003-v008.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/C15-cockpit-twoshot-003-v008.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "89fe95e30a0cc7625620e40a8dff477cd10f351d856881e17f14aa5696cc923f",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "C15-cockpit-twoshot-003-v008.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-438a0e4fd8fd19ca4b31",
+      "sha256": "438a0e4fd8fd19ca4b3106ab200a31596f46bb1f68cbf86b4d3faf508e18a842",
+      "project": "hon",
+      "filename": "C06-lurch-no-grin-008-v007.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/C06-lurch-no-grin-008-v007.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "438a0e4fd8fd19ca4b3106ab200a31596f46bb1f68cbf86b4d3faf508e18a842",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "C06-lurch-no-grin-008-v007.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-b9a90fc1118bfd8a78bd",
+      "sha256": "b9a90fc1118bfd8a78bd202a25f7b3881a331c58935c18f877a7e9a2e63a5ecf",
+      "project": "hon",
+      "filename": "C06-lurch-no-grin-014-v006.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/C06-lurch-no-grin-014-v006.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "b9a90fc1118bfd8a78bd202a25f7b3881a331c58935c18f877a7e9a2e63a5ecf",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "C06-lurch-no-grin-014-v006.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-38cfd152fcb1f0e6b449",
+      "sha256": "38cfd152fcb1f0e6b449a1196ecfe951b3bd95713b7cf357b9a01f9bbea6768f",
+      "project": "hon",
+      "filename": "C06-lurch-no-grin-012-v005.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/C06-lurch-no-grin-012-v005.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "38cfd152fcb1f0e6b449a1196ecfe951b3bd95713b7cf357b9a01f9bbea6768f",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "C06-lurch-no-grin-012-v005.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-03cd0fce58d49e273d25",
+      "sha256": "03cd0fce58d49e273d25f7bb0e59a6f320a92766de08671d2a02a1b698564f57",
+      "project": "hon",
+      "filename": "C06-lurch-no-grin-005-v005.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/C06-lurch-no-grin-005-v005.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "03cd0fce58d49e273d25f7bb0e59a6f320a92766de08671d2a02a1b698564f57",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "C06-lurch-no-grin-005-v005.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-108cb18a01c17c1f0f56",
+      "sha256": "108cb18a01c17c1f0f56e312a81bc287ce41009c08329053519dc2e83ba682fb",
+      "project": "hon",
+      "filename": "C06-lurch-no-grin-003-v005.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/C06-lurch-no-grin-003-v005.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "108cb18a01c17c1f0f56e312a81bc287ce41009c08329053519dc2e83ba682fb",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "C06-lurch-no-grin-003-v005.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-c4fb9200526eada2eb8b",
+      "sha256": "c4fb9200526eada2eb8b3aa1134bde5c83b0d076fb8a36340d68f81f2e1d234d",
+      "project": "hon",
+      "filename": "C06-lurch-no-grin-001-v008.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/C06-lurch-no-grin-001-v008.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "c4fb9200526eada2eb8b3aa1134bde5c83b0d076fb8a36340d68f81f2e1d234d",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "C06-lurch-no-grin-001-v008.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-e82128754e60d8fc4879",
+      "sha256": "e82128754e60d8fc48790601f0272fa0b8651d8b7207d6466004f4a994f58754",
+      "project": "hon",
+      "filename": "C04-battle-light-003-v007.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/C04-battle-light-003-v007.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "e82128754e60d8fc48790601f0272fa0b8651d8b7207d6466004f4a994f58754",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "C04-battle-light-003-v007.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-a9ad7c4dce0818bc5a15",
+      "sha256": "a9ad7c4dce0818bc5a15492ab323b2d4af00d64414a2548744f50c6999c0f71c",
+      "project": "hon",
+      "filename": "C04-battle-light-001-v004.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/C04-battle-light-001-v004.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "a9ad7c4dce0818bc5a15492ab323b2d4af00d64414a2548744f50c6999c0f71c",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "C04-battle-light-001-v004.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-12453ef438ccf530faa8",
+      "sha256": "12453ef438ccf530faa8865f886ccfdef62bdd826629b6faeb8f8f4670521715",
+      "project": "hon",
+      "filename": "C04-battle-light-005-v005.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/C04-battle-light-005-v005.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "12453ef438ccf530faa8865f886ccfdef62bdd826629b6faeb8f8f4670521715",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "C04-battle-light-005-v005.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-647138905192b428fe53",
+      "sha256": "647138905192b428fe530bb9e404595ab6e3ae81a063d3852c0a8be653f14d7a",
+      "project": "hon",
+      "filename": "C42-ramp-landing-022-v005.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/C42-ramp-landing-022-v005.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "647138905192b428fe530bb9e404595ab6e3ae81a063d3852c0a8be653f14d7a",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "C42-ramp-landing-022-v005.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-0713fae490e70c926075",
+      "sha256": "0713fae490e70c926075278fa9f37f0cb299daac9dd93586b1a3e2922dce9048",
+      "project": "hon",
+      "filename": "C03-look-back-softened-007-v007.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/C03-look-back-softened-007-v007.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "0713fae490e70c926075278fa9f37f0cb299daac9dd93586b1a3e2922dce9048",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "C03-look-back-softened-007-v007.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-9f11b942ec0d415b7acc",
+      "sha256": "9f11b942ec0d415b7accead60bf4824935867949d388131630d23dc0d9bf6f32",
+      "project": "hon",
+      "filename": "C04-battle-light-011-v006.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/C04-battle-light-011-v006.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "9f11b942ec0d415b7accead60bf4824935867949d388131630d23dc0d9bf6f32",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "C04-battle-light-011-v006.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-e1b76ec63de0e1f7ca9d",
+      "sha256": "e1b76ec63de0e1f7ca9daa008ba62e211f356458f344cb82f8adcc7f2f300c25",
+      "project": "hon",
+      "filename": "C04-battle-light-013-v006.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/C04-battle-light-013-v006.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "e1b76ec63de0e1f7ca9daa008ba62e211f356458f344cb82f8adcc7f2f300c25",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "C04-battle-light-013-v006.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-295b62bd297b7d6b9a67",
+      "sha256": "295b62bd297b7d6b9a6725c0ba94a8a64428fca681a87ca1d8ba24599421d498",
+      "project": "hon",
+      "filename": "C04-battle-light-015-v005.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/C04-battle-light-015-v005.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "295b62bd297b7d6b9a6725c0ba94a8a64428fca681a87ca1d8ba24599421d498",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "C04-battle-light-015-v005.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-55753d0986ced436a418",
+      "sha256": "55753d0986ced436a418a4ed51068ccc7de5cec57740431537242f847884500f",
+      "project": "hon",
+      "filename": "C26-quarters-009-v007.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/C26-quarters-009-v007.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "55753d0986ced436a418a4ed51068ccc7de5cec57740431537242f847884500f",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "C26-quarters-009-v007.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-97a01da9f4ae711317b1",
+      "sha256": "97a01da9f4ae711317b1f3d02404b827f155cb8f606c46b41c95996346f6ef46",
+      "project": "hon",
+      "filename": "C26-quarters-011-v009.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/C26-quarters-011-v009.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+      "acceptedScope": {
+        "kind": "chest_correction",
+        "accepted": true,
+        "sha256": "97a01da9f4ae711317b1f3d02404b827f155cb8f606c46b41c95996346f6ef46",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "C26-quarters-011-v009.jpg",
+        "text": "Ziggy accepts this chest correction on first visual review. Keep this repaired version. Some images may still lack nose or ear piercings; Ziggy requested a one-star deduction for affected images, but did not identify which versions. No numeric score assigned here. Acceptance is limited to the chest correction.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-a323ac1966edb474f060",
+      "sha256": "a323ac1966edb474f060c69c305aca0adf6b8a63bb9513ded124ce4207c8e637",
+      "project": "hon",
+      "filename": "HD-MOUTH-v004_CHUCKLE_a2.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-MOUTH-v004_CHUCKLE_a2.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+      "acceptedScope": {
+        "kind": "mouth_candidate",
+        "accepted": true,
+        "sha256": "a323ac1966edb474f060c69c305aca0adf6b8a63bb9513ded124ce4207c8e637",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-MOUTH-v004_CHUCKLE_a2.jpg",
+        "text": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-8558b2a4945a6fc5457b",
+      "sha256": "8558b2a4945a6fc5457b2de8a3d5e63a38f024d318d53967950967f6ab6b889e",
+      "project": "hon",
+      "filename": "HD-MOUTH-v004_R-SOUND_a3.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-MOUTH-v004_R-SOUND_a3.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+      "acceptedScope": {
+        "kind": "mouth_candidate",
+        "accepted": true,
+        "sha256": "8558b2a4945a6fc5457b2de8a3d5e63a38f024d318d53967950967f6ab6b889e",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-MOUTH-v004_R-SOUND_a3.jpg",
+        "text": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-94140285b8dba86703e0",
+      "sha256": "94140285b8dba86703e0187145b872e8696ab0ceca2bc5dd8605224f453c66e8",
+      "project": "hon",
+      "filename": "HD-MOUTH-v004_CH-SH_a1.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-MOUTH-v004_CH-SH_a1.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+      "acceptedScope": {
+        "kind": "mouth_candidate",
+        "accepted": true,
+        "sha256": "94140285b8dba86703e0187145b872e8696ab0ceca2bc5dd8605224f453c66e8",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-MOUTH-v004_CH-SH_a1.jpg",
+        "text": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-e4dc58989f253ef93861",
+      "sha256": "e4dc58989f253ef93861ed110a72589f97365f4416476555958d2eebed5add25",
+      "project": "hon",
+      "filename": "HD-MOUTH-v004_Y-SOUND_a3.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-MOUTH-v004_Y-SOUND_a3.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+      "acceptedScope": {
+        "kind": "mouth_candidate",
+        "accepted": true,
+        "sha256": "e4dc58989f253ef93861ed110a72589f97365f4416476555958d2eebed5add25",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-MOUTH-v004_Y-SOUND_a3.jpg",
+        "text": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-a98d6645fd550db612ff",
+      "sha256": "a98d6645fd550db612ff29a917cccd75af9701b2186ead05124d5417fe1fc508",
+      "project": "hon",
+      "filename": "HD-MOUTH-v004_WHISPER-SH_a2.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-MOUTH-v004_WHISPER-SH_a2.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+      "acceptedScope": {
+        "kind": "mouth_candidate",
+        "accepted": true,
+        "sha256": "a98d6645fd550db612ff29a917cccd75af9701b2186ead05124d5417fe1fc508",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-MOUTH-v004_WHISPER-SH_a2.jpg",
+        "text": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-51589b93b40beb04bb36",
+      "sha256": "51589b93b40beb04bb36d8f4d188bbb37023b0644a41dd16b29774d0610421f2",
+      "project": "hon",
+      "filename": "HD-MOUTH-v004_SING-VOWEL_a1.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-MOUTH-v004_SING-VOWEL_a1.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+      "acceptedScope": {
+        "kind": "mouth_candidate",
+        "accepted": true,
+        "sha256": "51589b93b40beb04bb36d8f4d188bbb37023b0644a41dd16b29774d0610421f2",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-MOUTH-v004_SING-VOWEL_a1.jpg",
+        "text": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-ab037501dcaeb286a448",
+      "sha256": "ab037501dcaeb286a448fe73ae03a09bf6d2ab7ae9f50c1c8f8c772c4267680d",
+      "project": "hon",
+      "filename": "HD-MOUTH-v004_SMIRK-RIGHT_a2.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-MOUTH-v004_SMIRK-RIGHT_a2.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+      "acceptedScope": {
+        "kind": "mouth_candidate",
+        "accepted": true,
+        "sha256": "ab037501dcaeb286a448fe73ae03a09bf6d2ab7ae9f50c1c8f8c772c4267680d",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-MOUTH-v004_SMIRK-RIGHT_a2.jpg",
+        "text": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-67b0691b7de9586f49a2",
+      "sha256": "67b0691b7de9586f49a2a22df7c69890cc278237800c7d692985db79bb95789e",
+      "project": "hon",
+      "filename": "HD-MOUTH-v004_FROWN_a1.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-MOUTH-v004_FROWN_a1.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+      "acceptedScope": {
+        "kind": "mouth_candidate",
+        "accepted": true,
+        "sha256": "67b0691b7de9586f49a2a22df7c69890cc278237800c7d692985db79bb95789e",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-MOUTH-v004_FROWN_a1.jpg",
+        "text": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-f5ce7fdbb093369f30ca",
+      "sha256": "f5ce7fdbb093369f30ca0cd1dd2613d678ca64ef24221e8481cb3b2819124395",
+      "project": "hon",
+      "filename": "HD-MOUTH-v004_LIPS-PRESSED-THIN_a3.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-MOUTH-v004_LIPS-PRESSED-THIN_a3.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+      "acceptedScope": {
+        "kind": "mouth_candidate",
+        "accepted": true,
+        "sha256": "f5ce7fdbb093369f30ca0cd1dd2613d678ca64ef24221e8481cb3b2819124395",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-MOUTH-v004_LIPS-PRESSED-THIN_a3.jpg",
+        "text": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-9bf70ad38a0343579b97",
+      "sha256": "9bf70ad38a0343579b971ba5f7287147444be9dc32ebe2f6721f5ed14d6ad2dd",
+      "project": "hon",
+      "filename": "HD-MOUTH-v004_BLOW-KISS_a2.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-MOUTH-v004_BLOW-KISS_a2.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+      "acceptedScope": {
+        "kind": "mouth_candidate",
+        "accepted": true,
+        "sha256": "9bf70ad38a0343579b971ba5f7287147444be9dc32ebe2f6721f5ed14d6ad2dd",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-MOUTH-v004_BLOW-KISS_a2.jpg",
+        "text": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-f133a3bef56b13d61c11",
+      "sha256": "f133a3bef56b13d61c11d0a7db598e460ea193417a2566a50d9783be20c613f5",
+      "project": "hon",
+      "filename": "HD-MOUTH-v004_HALF-SMILE_a3.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-MOUTH-v004_HALF-SMILE_a3.jpg",
+      "status": "remove",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy rejected this mouth candidate: HD-MOUTH v004 HALF-SMILE. Marked for removal from the working selection; source file retained. No repair requested.",
+      "acceptedScope": {
+        "kind": "mouth_candidate",
+        "accepted": false,
+        "sha256": "f133a3bef56b13d61c11d0a7db598e460ea193417a2566a50d9783be20c613f5",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-MOUTH-v004_HALF-SMILE_a3.jpg",
+        "text": "Ziggy rejected this mouth candidate: HD-MOUTH v004 HALF-SMILE. Marked for removal from the working selection; source file retained. No repair requested.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-d236f35bcd717fd802fe",
+      "sha256": "d236f35bcd717fd802fe37ac769d76ce63fe29ec314bfab1159d56c2d6a04c8a",
+      "project": "hon",
+      "filename": "HD-MOUTH-v004_CHAIN-BITE_a2.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-MOUTH-v004_CHAIN-BITE_a2.jpg",
+      "status": "keep",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+      "acceptedScope": {
+        "kind": "mouth_candidate",
+        "accepted": true,
+        "sha256": "d236f35bcd717fd802fe37ac769d76ce63fe29ec314bfab1159d56c2d6a04c8a",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-MOUTH-v004_CHAIN-BITE_a2.jpg",
+        "text": "Ziggy accepts this mouth candidate on visual review. The supplier pick remains preliminary; no V-Team final validation is recorded.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "HD-WINNERS-3c477fb469b899f7c229",
+      "sha256": "3c477fb469b899f7c229ae68fe894e199370cc587573d6d18cedc54c674af5ca",
+      "project": "hon",
+      "filename": "HD-MOUTH-v004_LIP-LICK_a2.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/CFA-SUPP-WINNERS-20261021_r003/media/HD-MOUTH-v004_LIP-LICK_a2.jpg",
+      "status": "remove",
+      "origin": "user",
+      "updatedAt": "2026-10-28T03:47:10.209670+00:00",
+      "note": "Ziggy rejected this mouth candidate: HD-MOUTH v004 LIP-LICK. Marked for removal from the working selection; source file retained. No repair requested.",
+      "acceptedScope": {
+        "kind": "mouth_candidate",
+        "accepted": false,
+        "sha256": "3c477fb469b899f7c229ae68fe894e199370cc587573d6d18cedc54c674af5ca",
+        "source": "Ziggy direct voice review",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      },
+      "directUserClarification": {
+        "source": "Ziggy direct voice review, 2026-10-27",
+        "resolvedAsset": "HD-MOUTH-v004_LIP-LICK_a2.jpg",
+        "text": "Ziggy rejected this mouth candidate: HD-MOUTH v004 LIP-LICK. Marked for removal from the working selection; source file retained. No repair requested.",
+        "recordedAtUTC": "2026-10-28T03:47:10.209670+00:00"
+      }
+    },
+    {
+      "id": "GEM-HON-74F6D0E491DA",
+      "sha256": "74f6d0e491da805fc7966b4da70ffe31407a4cf39aa4b53566583ec5ec19252d",
+      "project": "hon",
+      "filename": "(SCOUNDREL).mp4",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/ziggy/(SCOUNDREL).mp4",
+      "note": "",
+      "status": "keep",
+      "sceneQualityRating": 5,
+      "likenessRating": 5,
+      "origin": "user",
+      "updatedAt": "2026-10-28T05:11:59.220Z",
+      "reviewer": "Ziggy",
+      "directUserClarification": {
+        "source": "Direct user request in CFA NOVA chat, 2026-10-28 America/New_York",
+        "sourceThreadID": "01a097fb-6d17-7cb3-9773-e5c986d40b13",
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/collaborators/user_video_review_20261028_c55f5280-0db3-4d20-937f-a5490a7be5fc/REQUEST.json",
+        "evidenceSHA256": "6812f9f00f30ec9cfffd5fc46c5e42399b625c230c94dfff1f2e9fd26d14ce01",
+        "recordedAtUTC": "2026-10-28T05:11:59.220Z",
+        "text": "I downloaded the 3 video tests i had made in gemini..please tag them all as 'keep' and 5/5 scene 5/5 character..."
+      }
+    },
+    {
+      "id": "GEM-HON-EA7CBB79F834",
+      "sha256": "ea7cbb79f8341eb52db78aa1e98170041e148c49e6161107914beb53083bda34",
+      "project": "hon",
+      "filename": "DoLo_0.mp4",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/ziggy/DoLo_0.mp4",
+      "note": "",
+      "status": null,
+      "sceneQualityRating": 5,
+      "likenessRating": 5,
+      "origin": "user",
+      "updatedAt": "2026-10-28T05:23:24.470000+00:00",
+      "reviewer": "Ziggy",
+      "directUserClarification": {
+        "source": "Direct user request in CFA NOVA chat, 2026-10-28 America/New_York",
+        "sourceThreadID": "01a097fb-6d17-7cb3-9773-e5c986d40b13",
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/collaborators/user_video_review_20261028_c55f5280-0db3-4d20-937f-a5490a7be5fc/REQUEST.json",
+        "evidenceSHA256": "6812f9f00f30ec9cfffd5fc46c5e42399b625c230c94dfff1f2e9fd26d14ce01",
+        "recordedAtUTC": "2026-10-28T05:11:59.220Z",
+        "text": "I downloaded the 3 video tests i had made in gemini..please tag them all as 'keep' and 5/5 scene 5/5 character..."
+      },
+      "role": "videos",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T05:23:24.470000+00:00",
+        "note": "2026-10-28T05:11:59.220000+00:00",
+        "likenessRating": "2026-10-28T05:11:59.220000+00:00",
+        "sceneQualityRating": "2026-10-28T05:11:59.220000+00:00"
+      }
+    },
+    {
+      "id": "GEM-LAG-812D9101BEC8",
+      "sha256": "812d9101bec8a6460259fc8de63068bba5068ca10b6a1324e38494536211e55d",
+      "project": "lisan",
+      "filename": "AL_GAIB_0.mp4",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/ziggy/AL_GAIB_0.mp4",
+      "note": "",
+      "status": "keep",
+      "sceneQualityRating": 5,
+      "likenessRating": 5,
+      "origin": "user",
+      "updatedAt": "2026-10-28T05:11:59.220Z",
+      "reviewer": "Ziggy",
+      "directUserClarification": {
+        "source": "Direct user request in CFA NOVA chat, 2026-10-28 America/New_York",
+        "sourceThreadID": "01a097fb-6d17-7cb3-9773-e5c986d40b13",
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/collaborators/user_video_review_20261028_c55f5280-0db3-4d20-937f-a5490a7be5fc/REQUEST.json",
+        "evidenceSHA256": "6812f9f00f30ec9cfffd5fc46c5e42399b625c230c94dfff1f2e9fd26d14ce01",
+        "recordedAtUTC": "2026-10-28T05:11:59.220Z",
+        "text": "I downloaded the 3 video tests i had made in gemini..please tag them all as 'keep' and 5/5 scene 5/5 character..."
+      }
+    },
+    {
+      "status": "keep",
+      "shotPlan": {
+        "status": "planned",
+        "destinations": [
+          "Gemini",
+          "Flow",
+          "Grok"
+        ],
+        "idea": "",
+        "prompt": ""
+      },
+      "shotPlanUpdatedAt": "2026-10-28T06:16:49.152000+00:00",
+      "likenessRating": 5,
+      "sceneQualityRating": 5,
+      "storyboardStage": "production",
+      "id": "HD-RETURN-8421e7cfa1a0",
+      "sha256": "8421e7cfa1a012076a33c8182620d28cf6663f068d13c3a321699de030a9078b",
+      "project": "hon",
+      "filename": "8421e7cfa1a0__BOSS-008_v001.png",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/8421e7cfa1a0__BOSS-008_v001.png",
+      "role": "cast",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T06:16:49.152000+00:00",
+        "shotPlan": "2026-10-28T06:16:49.152000+00:00",
+        "likenessRating": "2026-10-28T06:16:49.152000+00:00",
+        "sceneQualityRating": "2026-10-28T06:16:49.152000+00:00",
+        "storyboardStage": "2026-10-28T06:16:49.152000+00:00"
+      },
+      "updatedAt": "2026-10-28T06:16:49.152000+00:00",
+      "origin": "user"
+    },
+    {
+      "sceneQualityRating": 5,
+      "id": "LAG-c2ca72f6e2a8d86d",
+      "sha256": "c2ca72f6e2a8d86d4763238b6e80ad4c1b7a2b4e257d30e6491f152d7ad7e6ed",
+      "project": "lisan",
+      "filename": "LAG-SC-31.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/02_Storyboard_Scenes/LAG-SC-31.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "sceneQualityRating": "2026-10-14T21:06:32.763000+00:00"
+      },
+      "updatedAt": "2026-10-14T21:06:32.763000+00:00",
+      "origin": "user"
+    },
+    {
+      "likenessRating": 5,
+      "sceneQualityRating": 5,
+      "id": "LAG-CAST-JET-BLACK-REF-01",
+      "sha256": "e2188aa3de4756017fa82d5b14757d24993033604de18625fd9a8a08044d3c1b",
+      "project": "lisan",
+      "filename": "Jet_Black_with_Lisan_user_reference.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/cast/jet_black/source/Jet_Black_with_Lisan_user_reference.jpg",
+      "role": "cast",
+      "fieldUpdatedAt": {
+        "likenessRating": "2026-10-14T23:57:33.540000+00:00",
+        "sceneQualityRating": "2026-10-14T23:57:33.540000+00:00"
+      },
+      "updatedAt": "2026-10-14T23:57:33.540000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "note": "i think this image was replaced.....multi verse eitherway....",
+      "variant": "multiverse",
+      "variantSource": "user",
+      "id": "HD-FALCON-16c5b38527e04579",
+      "sha256": "16c5b38527e045791922c7927438581b66558a6b2f306ae69e84894b2f0f892c",
+      "project": "hon",
+      "filename": "C04-battle-light-006.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-006.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T02:15:30.439000+00:00",
+        "note": "2026-10-28T02:15:30.439000+00:00",
+        "variant": "2026-10-28T02:15:30.439000+00:00"
+      },
+      "updatedAt": "2026-10-28T02:15:30.439000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "likenessRating": 4,
+      "sceneQualityRating": 5,
+      "variant": "multiverse",
+      "variantSource": "user",
+      "multiverseSelection": "approved",
+      "id": "HD-FALCON-23cf062929643817",
+      "sha256": "23cf062929643817e71cc6656294f247b4d82410c7a08556d2a8753c4c6f1a4c",
+      "project": "hon",
+      "filename": "C04-battle-light-010.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-010.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:04:30.191000+00:00",
+        "likenessRating": "2026-10-28T03:04:30.191000+00:00",
+        "sceneQualityRating": "2026-10-28T03:04:30.191000+00:00",
+        "variant": "2026-10-28T03:04:30.191000+00:00",
+        "multiverseSelection": "2026-10-28T03:04:30.191000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:04:30.191000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "note": "keeping for multiverse, rather than re-making/fixing the chest tattoo...",
+      "likenessRating": 3,
+      "sceneQualityRating": 5,
+      "variant": "multiverse",
+      "variantSource": "user",
+      "workingReferenceScope": "scene",
+      "multiverseSelection": "approved",
+      "id": "HD-FALCON-b7549fdbbd3f1e40",
+      "sha256": "b7549fdbbd3f1e409bca52d4eb1c3a9ea61e3123dd87ff35865a0774d6f64c82",
+      "project": "hon",
+      "filename": "C04-battle-light-013.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-013.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:07:33.545000+00:00",
+        "note": "2026-10-28T03:07:33.545000+00:00",
+        "likenessRating": "2026-10-28T03:07:33.545000+00:00",
+        "sceneQualityRating": "2026-10-28T03:07:33.545000+00:00",
+        "variant": "2026-10-28T03:07:33.545000+00:00",
+        "workingReferenceScope": "2026-10-28T03:07:33.545000+00:00",
+        "multiverseSelection": "2026-10-28T03:07:33.545000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:07:33.545000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "likenessRating": 4,
+      "sceneQualityRating": 5,
+      "id": "HD-FALCON-9915b91bb11a3663",
+      "sha256": "9915b91bb11a36631136f41f3fb17c6cb066693dca0c5ebc0f41d7ce00638e7f",
+      "project": "hon",
+      "filename": "C04-battle-light-012.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-012.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:10:24.196000+00:00",
+        "likenessRating": "2026-10-28T03:10:24.196000+00:00",
+        "sceneQualityRating": "2026-10-28T03:10:24.196000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:10:24.196000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "note": "missing nose and ear piercings, 4/5 stars",
+      "likenessRating": 4,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "id": "HD-FALCON-403a1fabfbf5ccc0",
+      "sha256": "403a1fabfbf5ccc078d1b754c99b2f85ef45b01e88b8f82feca29472b9a4737d",
+      "project": "hon",
+      "filename": "C05-lurch-grin-009.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C05-lurch-grin/C05-lurch-grin-009.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:11:52.351000+00:00",
+        "note": "2026-10-28T03:11:52.351000+00:00",
+        "likenessRating": "2026-10-28T03:11:52.351000+00:00",
+        "sceneQualityRating": "2026-10-28T03:11:52.351000+00:00",
+        "storyboardStage": "2026-10-28T03:11:52.351000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:11:52.351000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "note": "missing nose and ear piercings, 4/5 stars",
+      "likenessRating": 4,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "id": "HD-FALCON-ce767669b8a98b97",
+      "sha256": "ce767669b8a98b973f07c84ebb54ac98eeb8f9bc3e24e5d981eec46e0c12dbf3",
+      "project": "hon",
+      "filename": "C05-lurch-grin-007.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C05-lurch-grin/C05-lurch-grin-007.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:13:17.771000+00:00",
+        "note": "2026-10-28T03:13:17.771000+00:00",
+        "likenessRating": "2026-10-28T03:13:17.771000+00:00",
+        "sceneQualityRating": "2026-10-28T03:13:17.771000+00:00",
+        "storyboardStage": "2026-10-28T03:13:17.771000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:13:17.771000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "note": "missing nose and ear piercings.... the eye know tats are bit large....3/5 stars",
+      "likenessRating": 3,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "id": "HD-FALCON-0a3bef50a05b5fd3",
+      "sha256": "0a3bef50a05b5fd33d7c2de4d207f1e3ffef466d62e92d2e414df7a08510b3a9",
+      "project": "hon",
+      "filename": "C05-lurch-grin-012.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C05-lurch-grin/C05-lurch-grin-012.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:13:59.693000+00:00",
+        "note": "2026-10-28T03:13:59.693000+00:00",
+        "likenessRating": "2026-10-28T03:13:59.693000+00:00",
+        "sceneQualityRating": "2026-10-28T03:13:59.693000+00:00",
+        "storyboardStage": "2026-10-28T03:13:59.693000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:13:59.693000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "note": "teeth too long...marking for multiverse...",
+      "likenessRating": 2,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "variant": "multiverse",
+      "variantSource": "user",
+      "id": "HD-FALCON-b701f8494419ea1d",
+      "sha256": "b701f8494419ea1d13f1891ac2c0e3eead6bb0c5cd5be62740d0ee23d09c80a7",
+      "project": "hon",
+      "filename": "C05-lurch-grin-011.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C05-lurch-grin/C05-lurch-grin-011.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:14:59.706000+00:00",
+        "note": "2026-10-28T03:14:59.706000+00:00",
+        "likenessRating": "2026-10-28T03:14:59.706000+00:00",
+        "sceneQualityRating": "2026-10-28T03:14:59.706000+00:00",
+        "storyboardStage": "2026-10-28T03:14:59.706000+00:00",
+        "variant": "2026-10-28T03:14:59.706000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:14:59.706000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "note": "missing nose and ear piercings, wrong neck tattoo...marking as multiverse 3/5 stars",
+      "likenessRating": 3,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "variant": "multiverse",
+      "variantSource": "user",
+      "id": "HD-FALCON-37df4e133f1ca915",
+      "sha256": "37df4e133f1ca9153c8bfcedfd71234c50b0e4cbf84ce3820378bfe70b32786e",
+      "project": "hon",
+      "filename": "C05-lurch-grin-015.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C05-lurch-grin/C05-lurch-grin-015.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:15:52.493000+00:00",
+        "note": "2026-10-28T03:15:52.493000+00:00",
+        "likenessRating": "2026-10-28T03:15:52.493000+00:00",
+        "sceneQualityRating": "2026-10-28T03:15:52.493000+00:00",
+        "storyboardStage": "2026-10-28T03:15:52.493000+00:00",
+        "variant": "2026-10-28T03:15:52.493000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:15:52.493000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "note": "missing nose and ear piercings, wrong neck tattoo...marking as multiverse 3/5 stars",
+      "likenessRating": 3,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "variant": "multiverse",
+      "variantSource": "user",
+      "id": "HD-FALCON-6ec8d92e9859491f",
+      "sha256": "6ec8d92e9859491fb532cdb4134ae29ea1bb8178563830dd821b67a78ad07c35",
+      "project": "hon",
+      "filename": "C06-lurch-no-grin-001.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C06-lurch-no-grin/C06-lurch-no-grin-001.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:16:18.537000+00:00",
+        "note": "2026-10-28T03:16:18.537000+00:00",
+        "likenessRating": "2026-10-28T03:16:18.537000+00:00",
+        "sceneQualityRating": "2026-10-28T03:16:18.537000+00:00",
+        "storyboardStage": "2026-10-28T03:16:18.537000+00:00",
+        "variant": "2026-10-28T03:16:18.537000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:16:18.537000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "note": "missing nose and ear piercings, wrong neck tattoo...marking as multiverse 3/5 stars",
+      "likenessRating": 3,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "variant": "multiverse",
+      "variantSource": "user",
+      "id": "HD-FALCON-c23b1cee1f7f47a1",
+      "sha256": "c23b1cee1f7f47a176a46cca7cb9305bdbd213c1ea3b4ec24874be373088219b",
+      "project": "hon",
+      "filename": "C06-lurch-no-grin-006.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C06-lurch-no-grin/C06-lurch-no-grin-006.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:16:49.732000+00:00",
+        "note": "2026-10-28T03:16:49.732000+00:00",
+        "likenessRating": "2026-10-28T03:16:49.732000+00:00",
+        "sceneQualityRating": "2026-10-28T03:16:49.732000+00:00",
+        "storyboardStage": "2026-10-28T03:16:49.732000+00:00",
+        "variant": "2026-10-28T03:16:49.732000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:16:49.732000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "note": "delete..",
+      "id": "HD-FALCON-93aab2bdd17ff2ed",
+      "sha256": "93aab2bdd17ff2ed331d03492682aa8d5b4da730d89cb2201f1cae7acecb5daa",
+      "project": "hon",
+      "filename": "C06-lurch-no-grin-007.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C06-lurch-no-grin/C06-lurch-no-grin-007.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:17:28.812000+00:00",
+        "note": "2026-10-28T03:17:28.812000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:17:28.812000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "note": "missing nose and ear piercings, wrong neck tattoo...marking as multiverse 3/5 stars",
+      "likenessRating": 3,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "variant": "multiverse",
+      "variantSource": "user",
+      "id": "HD-FALCON-049ebc62e9c3d082",
+      "sha256": "049ebc62e9c3d0822cbdb048456867b6173051f3e3f0a934a4460b0639891fab",
+      "project": "hon",
+      "filename": "C06-lurch-no-grin-012.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C06-lurch-no-grin/C06-lurch-no-grin-012.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:17:54.037000+00:00",
+        "note": "2026-10-28T03:17:54.037000+00:00",
+        "likenessRating": "2026-10-28T03:17:54.037000+00:00",
+        "sceneQualityRating": "2026-10-28T03:17:54.037000+00:00",
+        "storyboardStage": "2026-10-28T03:17:54.037000+00:00",
+        "variant": "2026-10-28T03:17:54.037000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:17:54.037000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "needs_fixes",
+      "note": "\"eye\" above the right eye needs to be removed....",
+      "likenessRating": 4,
+      "sceneQualityRating": 5,
+      "variant": "multiverse",
+      "variantSource": "user",
+      "id": "HD-FALCON-af69f68b13ef0012",
+      "sha256": "af69f68b13ef00126bbab23c57dfd28971104916e9478062f988a4e4a6b04ebe",
+      "project": "hon",
+      "filename": "C04-battle-light-002-v003.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-002-v003.jpg",
+      "role": "review",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:20:08.444000+00:00",
+        "note": "2026-10-28T03:20:08.444000+00:00",
+        "likenessRating": "2026-10-28T03:20:08.444000+00:00",
+        "sceneQualityRating": "2026-10-28T03:20:08.444000+00:00",
+        "variant": "2026-10-28T03:20:08.444000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:20:08.444000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "note": "neck tattoo on the wrong side.",
+      "likenessRating": 3,
+      "sceneQualityRating": 5,
+      "workingReferenceScope": "scene",
+      "id": "HD-FALCON-ec72be43fed328eb",
+      "sha256": "ec72be43fed328eb949eeaa9e7088c4fcbd5dd7fa63235b3b0f382c57386c945",
+      "project": "hon",
+      "filename": "C01-pilot-hover-001.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-001.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:37:43.661000+00:00",
+        "note": "2026-10-28T03:37:43.661000+00:00",
+        "likenessRating": "2026-10-28T03:37:43.661000+00:00",
+        "sceneQualityRating": "2026-10-28T03:37:43.661000+00:00",
+        "workingReferenceScope": "2026-10-28T03:37:43.661000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:37:43.661000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "note": "keeping for scene only",
+      "likenessRating": 2,
+      "sceneQualityRating": 5,
+      "workingReferenceScope": "scene",
+      "id": "HD-FALCON-3c39af32a0486634",
+      "sha256": "3c39af32a0486634a21e458989f704754eac979096f041bac65ec77e13e3af25",
+      "project": "hon",
+      "filename": "C01-pilot-hover-003.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-003.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:37:27.665000+00:00",
+        "note": "2026-10-28T03:37:27.665000+00:00",
+        "likenessRating": "2026-10-28T03:37:27.665000+00:00",
+        "sceneQualityRating": "2026-10-28T03:37:27.665000+00:00",
+        "workingReferenceScope": "2026-10-28T03:37:27.665000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:37:27.665000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-e83af7450b980775",
+      "sha256": "e83af7450b9807751c3b555260535eda278b7ec26194b0fe723a238495e72fab",
+      "project": "hon",
+      "filename": "C01-pilot-hover-005.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-005.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:38:08.014000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:38:08.014000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "likenessRating": 2,
+      "sceneQualityRating": 5,
+      "variant": "multiverse",
+      "variantSource": "user",
+      "workingReferenceScope": "scene",
+      "id": "HD-FALCON-4fde7e5460bbb9f5",
+      "sha256": "4fde7e5460bbb9f59a7af676d1e22ceea8f5fc2443bd5993ef6189e3cb0d2bf7",
+      "project": "hon",
+      "filename": "C01-pilot-hover-006.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-006.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:38:47.293000+00:00",
+        "likenessRating": "2026-10-28T03:38:47.293000+00:00",
+        "sceneQualityRating": "2026-10-28T03:38:47.293000+00:00",
+        "variant": "2026-10-28T03:38:47.293000+00:00",
+        "workingReferenceScope": "2026-10-28T03:38:47.293000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:38:47.293000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "likenessRating": 2,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "variant": "multiverse",
+      "variantSource": "user",
+      "workingReferenceScope": "scene",
+      "multiverseSelection": "approved",
+      "id": "HD-FALCON-38008fe0885bda69",
+      "sha256": "38008fe0885bda695d6a02459b843e04f094052f9ea6d5fb0f2d2c1a97a3b26c",
+      "project": "hon",
+      "filename": "C01-pilot-hover-007.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-007.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:39:17.001000+00:00",
+        "likenessRating": "2026-10-28T03:39:17.001000+00:00",
+        "sceneQualityRating": "2026-10-28T03:39:17.001000+00:00",
+        "storyboardStage": "2026-10-28T03:39:17.001000+00:00",
+        "variant": "2026-10-28T03:39:17.001000+00:00",
+        "workingReferenceScope": "2026-10-28T03:39:17.001000+00:00",
+        "multiverseSelection": "2026-10-28T03:39:17.001000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:39:17.001000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "shotPlan": {
+        "status": "planned",
+        "destinations": [
+          "undecided"
+        ],
+        "idea": "",
+        "prompt": ""
+      },
+      "shotPlanUpdatedAt": "2026-10-28T03:39:42.428000+00:00",
+      "likenessRating": 4,
+      "sceneQualityRating": 5,
+      "id": "HD-FALCON-19d2f1f3a1b6e150",
+      "sha256": "19d2f1f3a1b6e150eb405d60ce94f9eec24dc12856338a3d02e6e1969196b231",
+      "project": "hon",
+      "filename": "C01-pilot-hover-009.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-009.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:39:42.428000+00:00",
+        "shotPlan": "2026-10-28T03:39:42.428000+00:00",
+        "likenessRating": "2026-10-28T03:39:42.428000+00:00",
+        "sceneQualityRating": "2026-10-28T03:39:42.428000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:39:42.428000+00:00",
+      "origin": "user"
+    },
+    {
+      "likenessRating": 2,
+      "sceneQualityRating": 4,
+      "storyboardStage": "verification",
+      "variant": "multiverse",
+      "variantSource": "user",
+      "workingReferenceScope": "scene",
+      "id": "HD-FALCON-58e98e9c8f1d16b6",
+      "sha256": "58e98e9c8f1d16b6431aa5a9b0c6b66e8c3b8fb4e353548e80fdf3488d9b496f",
+      "project": "hon",
+      "filename": "C01-pilot-hover-011.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-011.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "likenessRating": "2026-10-28T03:40:29.187000+00:00",
+        "sceneQualityRating": "2026-10-28T03:40:29.187000+00:00",
+        "storyboardStage": "2026-10-28T03:40:29.187000+00:00",
+        "variant": "2026-10-28T03:40:29.187000+00:00",
+        "workingReferenceScope": "2026-10-28T03:40:29.187000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:40:29.187000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "likenessRating": 2,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "variant": "multiverse",
+      "variantSource": "user",
+      "workingReferenceScope": "scene",
+      "id": "HD-FALCON-1d5e8e85d62afb9e",
+      "sha256": "1d5e8e85d62afb9e9982e10a17d0f12a170692e11d1ba34158e76d9a1fb74ee2",
+      "project": "hon",
+      "filename": "C01-pilot-hover-012.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-012.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:41:03.683000+00:00",
+        "likenessRating": "2026-10-28T03:41:03.683000+00:00",
+        "sceneQualityRating": "2026-10-28T03:41:03.683000+00:00",
+        "storyboardStage": "2026-10-28T03:41:03.683000+00:00",
+        "variant": "2026-10-28T03:41:03.683000+00:00",
+        "workingReferenceScope": "2026-10-28T03:41:03.683000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:41:03.683000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-50a2d39ec64614f1",
+      "sha256": "50a2d39ec64614f139d0701553f1b6126d933224b3a926bf80681ee2e62dbcc0",
+      "project": "hon",
+      "filename": "C01-pilot-hover-013.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-013.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:55:55.899000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:55:55.899000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "likenessRating": 2,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "variant": "multiverse",
+      "variantSource": "user",
+      "id": "HD-FALCON-cc0dd9f4b35bb2d2",
+      "sha256": "cc0dd9f4b35bb2d2eb055f9c086d6e0b860a32d551008a1e0eb5db9991f63119",
+      "project": "hon",
+      "filename": "C01-pilot-hover-014.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-014.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:56:19.112000+00:00",
+        "likenessRating": "2026-10-28T03:56:19.112000+00:00",
+        "sceneQualityRating": "2026-10-28T03:56:19.112000+00:00",
+        "storyboardStage": "2026-10-28T03:56:19.112000+00:00",
+        "variant": "2026-10-28T03:56:19.112000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:56:19.112000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-6366a67b93da3a3d",
+      "sha256": "6366a67b93da3a3dc4fe687366834053bea96b3d49fe9a0a68629dc754670c7b",
+      "project": "hon",
+      "filename": "C01-pilot-hover-015.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-015.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:56:30.342000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:56:30.342000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "note": "gun on the wrong side - 4/5\ncock pit a bit cramped 4/5",
+      "likenessRating": 4,
+      "sceneQualityRating": 4,
+      "storyboardStage": "verification",
+      "workingReferenceScope": "complete_look",
+      "id": "HD-FALCON-acbefbee1432ea47",
+      "sha256": "acbefbee1432ea47af59382e0aafd2440abec97c7b7ab9e63179f8f3dc2c49df",
+      "project": "hon",
+      "filename": "C02-captain-portrait-001.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-001.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:57:44.437000+00:00",
+        "note": "2026-10-28T03:57:44.437000+00:00",
+        "likenessRating": "2026-10-28T03:57:44.437000+00:00",
+        "sceneQualityRating": "2026-10-28T03:57:44.437000+00:00",
+        "storyboardStage": "2026-10-28T03:57:44.437000+00:00",
+        "workingReferenceScope": "2026-10-28T03:57:44.437000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:57:44.437000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "likenessRating": 3,
+      "sceneQualityRating": 4,
+      "storyboardStage": "verification",
+      "variant": "multiverse",
+      "variantSource": "user",
+      "id": "HD-FALCON-96b827a5e46b0fd1",
+      "sha256": "96b827a5e46b0fd161c43b0015e4df32996bd82175dccfc926c45ee6367b6d19",
+      "project": "hon",
+      "filename": "C02-captain-portrait-002.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-002.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T03:58:39.009000+00:00",
+        "likenessRating": "2026-10-28T03:58:39.009000+00:00",
+        "sceneQualityRating": "2026-10-28T03:58:39.009000+00:00",
+        "storyboardStage": "2026-10-28T03:58:39.009000+00:00",
+        "variant": "2026-10-28T03:58:39.009000+00:00"
+      },
+      "updatedAt": "2026-10-28T03:58:39.009000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "shotPlan": {
+        "status": "planned",
+        "destinations": [
+          "undecided"
+        ],
+        "idea": "",
+        "prompt": ""
+      },
+      "shotPlanUpdatedAt": "2026-10-28T04:00:00.796000+00:00",
+      "likenessRating": 3,
+      "sceneQualityRating": 5,
+      "workingReferenceScope": "scene",
+      "id": "HD-FALCON-a817082a2ce2e066",
+      "sha256": "a817082a2ce2e0665055fdda3bfb6be123e3e1b9ba7d70dbef6d8d20b4715073",
+      "project": "hon",
+      "filename": "C02-captain-portrait-003.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-003.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:00:00.796000+00:00",
+        "shotPlan": "2026-10-28T04:00:00.796000+00:00",
+        "likenessRating": "2026-10-28T04:00:00.796000+00:00",
+        "sceneQualityRating": "2026-10-28T04:00:00.796000+00:00",
+        "workingReferenceScope": "2026-10-28T04:00:00.796000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:00:00.796000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-bd9358cfeebfa4f5",
+      "sha256": "bd9358cfeebfa4f5b516a24cca84eac71e1c09b43147c224ed8ce1ddca4bcf1b",
+      "project": "hon",
+      "filename": "C02-captain-portrait-004.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-004.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:00:06.158000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:00:06.158000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "sceneQualityRating": 5,
+      "storyboardStage": "production",
+      "variant": "multiverse",
+      "variantSource": "user",
+      "workingReferenceScope": "scene",
+      "id": "HD-FALCON-2c2532265f106bf3",
+      "sha256": "2c2532265f106bf3db276ea8feca5eb95e8121b61f8121fc4c7686c8816d2de8",
+      "project": "hon",
+      "filename": "C02-captain-portrait-005.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-005.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:00:31.912000+00:00",
+        "sceneQualityRating": "2026-10-28T04:00:31.912000+00:00",
+        "storyboardStage": "2026-10-28T04:00:31.912000+00:00",
+        "variant": "2026-10-28T04:00:31.912000+00:00",
+        "workingReferenceScope": "2026-10-28T04:00:31.912000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:00:31.912000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-7c932a6f88f1991a",
+      "sha256": "7c932a6f88f1991a5ce29382aeb052ae48200b0389b0904f1b93cf048484e843",
+      "project": "hon",
+      "filename": "C02-captain-portrait-006.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-006.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:00:40.461000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:00:40.461000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "likenessRating": 3,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "id": "HD-INTAKE-06850c59537f638f857d",
+      "sha256": "06850c59537f638f857dec3b2b5d057096c5cfee8a4428a535b6bc9c3dca0a2e",
+      "project": "hon",
+      "filename": "C02-captain-portrait-006-v002.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C02-captain-portrait-006-v002.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:01:09.223000+00:00",
+        "likenessRating": "2026-10-28T04:01:09.223000+00:00",
+        "sceneQualityRating": "2026-10-28T04:01:09.223000+00:00",
+        "storyboardStage": "2026-10-28T04:01:09.223000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:01:09.223000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-INTAKE-e67578e64e1c1b2d4480",
+      "sha256": "e67578e64e1c1b2d4480b4d3b096404c0300ffd0be6780aa878b211f5107a4f4",
+      "project": "hon",
+      "filename": "C02-captain-portrait-007-v002.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C02-captain-portrait-007-v002.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:01:29.750000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:01:29.750000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-43f40035592da808",
+      "sha256": "43f40035592da808a5e65adb025a31a73b0fc19c509be051e6c7b5089aea2d4a",
+      "project": "hon",
+      "filename": "C02-captain-portrait-008.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-008.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:01:35.692000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:01:35.692000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "likenessRating": 3,
+      "sceneQualityRating": 5,
+      "id": "HD-INTAKE-0020aef8e97c6f67fdcd",
+      "sha256": "0020aef8e97c6f67fdcd90351ce50344f95ccdeba85b4b604bf96dabc9163694",
+      "project": "hon",
+      "filename": "C02-captain-portrait-008-v002.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C02-captain-portrait-008-v002.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:08:19.832000+00:00",
+        "likenessRating": "2026-10-28T04:08:19.832000+00:00",
+        "sceneQualityRating": "2026-10-28T04:08:19.832000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:08:19.832000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "likenessRating": 4,
+      "sceneQualityRating": 4,
+      "storyboardStage": "verification",
+      "variant": "multiverse",
+      "variantSource": "user",
+      "id": "HD-FALCON-78aecc9e39f62bb8",
+      "sha256": "78aecc9e39f62bb879bf5247cd0124631a57a4cd1c44add53d2d0d59f508e168",
+      "project": "hon",
+      "filename": "C02-captain-portrait-009.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-009.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:09:04.169000+00:00",
+        "likenessRating": "2026-10-28T04:09:04.169000+00:00",
+        "sceneQualityRating": "2026-10-28T04:09:04.169000+00:00",
+        "storyboardStage": "2026-10-28T04:09:04.169000+00:00",
+        "variant": "2026-10-28T04:09:04.169000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:09:04.169000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "likenessRating": 3,
+      "sceneQualityRating": 4,
+      "storyboardStage": "verification",
+      "id": "HD-INTAKE-eb769822c6bc8b7a8c4a",
+      "sha256": "eb769822c6bc8b7a8c4aacc160e364cb875380b6e29d1f253b419680e165ac0f",
+      "project": "hon",
+      "filename": "C02-captain-portrait-009-v002.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C02-captain-portrait-009-v002.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:09:25.376000+00:00",
+        "likenessRating": "2026-10-28T04:09:25.376000+00:00",
+        "sceneQualityRating": "2026-10-28T04:09:25.376000+00:00",
+        "storyboardStage": "2026-10-28T04:09:25.376000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:09:25.376000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-986114f230b432e4",
+      "sha256": "986114f230b432e49f001e1f5bd69ca3d6c1ae3b28d924280d1c61c9a506daf3",
+      "project": "hon",
+      "filename": "C02-captain-portrait-010.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-010.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:10:11.069000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:10:11.069000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "note": "i like the scene - gun on wrong side of the neck...missing piercings...",
+      "likenessRating": 3,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "id": "HD-INTAKE-95bc6a44d306f4a5e37f",
+      "sha256": "95bc6a44d306f4a5e37fb0279cbb80a88b5955783da3557d32b48da456ea7705",
+      "project": "hon",
+      "filename": "C02-captain-portrait-010-v002.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C02-captain-portrait-010-v002.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:10:37.950000+00:00",
+        "note": "2026-10-28T04:10:37.950000+00:00",
+        "likenessRating": "2026-10-28T04:10:37.950000+00:00",
+        "sceneQualityRating": "2026-10-28T04:10:37.950000+00:00",
+        "storyboardStage": "2026-10-28T04:10:37.950000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:10:37.950000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-70e8f4060c9b5418",
+      "sha256": "70e8f4060c9b54186a0d52404715498251f15aa742dfcc4d13cc7b73bf555021",
+      "project": "hon",
+      "filename": "C02-captain-portrait-011.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-011.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:10:49.802000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:10:49.802000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-INTAKE-8a59f1c331ecbd6c9029",
+      "sha256": "8a59f1c331ecbd6c9029a93a55b46b89a3ccc6b6ecc6d34848215efd10758ff8",
+      "project": "hon",
+      "filename": "C02-captain-portrait-011-v003.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C02-captain-portrait-011-v003.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:10:55.081000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:10:55.081000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-ba19d6ae5df0964b",
+      "sha256": "ba19d6ae5df0964b70e8a92044b29c4dfb362bb0fa3a927122fa77d0d8c343b5",
+      "project": "hon",
+      "filename": "C02-captain-portrait-012.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-012.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:11:04.682000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:11:04.682000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "likenessRating": 3,
+      "sceneQualityRating": 4,
+      "storyboardStage": "verification",
+      "id": "HD-INTAKE-c791994dfa340be19086",
+      "sha256": "c791994dfa340be19086a1b49b66de57a3f731cec1ec6bb7aa93bcb7c6e07c68",
+      "project": "hon",
+      "filename": "C02-captain-portrait-012-v002.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C02-captain-portrait-012-v002.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:11:29.888000+00:00",
+        "likenessRating": "2026-10-28T04:11:29.888000+00:00",
+        "sceneQualityRating": "2026-10-28T04:11:29.888000+00:00",
+        "storyboardStage": "2026-10-28T04:11:29.888000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:11:29.888000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "likenessRating": 4,
+      "sceneQualityRating": 4,
+      "storyboardStage": "verification",
+      "id": "HD-INTAKE-fccc2593dbcd1ac8ee94",
+      "sha256": "fccc2593dbcd1ac8ee94462efab5c7c173cbd42fb555585c7633f422d67ed42d",
+      "project": "hon",
+      "filename": "C02-captain-portrait-013-v002.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C02-captain-portrait-013-v002.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:12:02.192000+00:00",
+        "likenessRating": "2026-10-28T04:12:02.192000+00:00",
+        "sceneQualityRating": "2026-10-28T04:12:02.192000+00:00",
+        "storyboardStage": "2026-10-28T04:12:02.192000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:12:02.192000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-5c5e2c1e82388daa",
+      "sha256": "5c5e2c1e82388daa0b27edadc1002f8ffe84398e23cc1690d748f8e120cdc022",
+      "project": "hon",
+      "filename": "C02-captain-portrait-014.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-014.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:12:10.506000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:12:10.506000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "note": "right cheek pierced for some reason. ",
+      "likenessRating": 3,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "workingReferenceScope": "scene",
+      "id": "HD-INTAKE-b339b3923eba2e24e277",
+      "sha256": "b339b3923eba2e24e2773fd49aafbe141870d1a142e4ab4fc357feb2ef8cbfa0",
+      "project": "hon",
+      "filename": "C02-captain-portrait-014-v004.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C02-captain-portrait-014-v004.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:12:42.685000+00:00",
+        "note": "2026-10-28T04:12:42.685000+00:00",
+        "likenessRating": "2026-10-28T04:12:42.685000+00:00",
+        "sceneQualityRating": "2026-10-28T04:12:42.685000+00:00",
+        "storyboardStage": "2026-10-28T04:12:42.685000+00:00",
+        "workingReferenceScope": "2026-10-28T04:12:42.685000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:12:42.685000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-INTAKE-4e189d79713e5dede755",
+      "sha256": "4e189d79713e5dede755db408000dfc0472a8140fa182be95ba53310fe97cb6c",
+      "project": "hon",
+      "filename": "C02-captain-portrait-014-v007.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v002_supplement/C02-captain-portrait-014-v007.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:12:56.596000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:12:56.596000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-INTAKE-e4064d98b74e7878a5f0",
+      "sha256": "e4064d98b74e7878a5f07643e3c5a931350260415602ee565696f901cec57b34",
+      "project": "hon",
+      "filename": "C02-captain-portrait-015-v004.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C02-captain-portrait-015-v004.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:13:18.012000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:13:18.012000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-INTAKE-6b1fb2a9d668bdd8fc67",
+      "sha256": "6b1fb2a9d668bdd8fc67cce750b16de53aba61ff9d86a74e134b559f1354c135",
+      "project": "hon",
+      "filename": "C03-look-back-softened-001-v003.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C03-look-back-softened-001-v003.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:13:29.857000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:13:29.857000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-2b2f89c058fc0b47",
+      "sha256": "2b2f89c058fc0b4748dea407116d3439fcf667ea4750faf70ffc72d41ed6febb",
+      "project": "hon",
+      "filename": "C03-look-back-softened-002.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-002.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:13:34.392000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:13:34.392000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "likenessRating": 3,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "workingReferenceScope": "scene",
+      "id": "HD-FALCON-18f0e41db65dad5b",
+      "sha256": "18f0e41db65dad5b9d3bc4d02802b17ba56cd97e112ee28fe500f574332d9014",
+      "project": "hon",
+      "filename": "C03-look-back-softened-003.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-003.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:13:56.123000+00:00",
+        "likenessRating": "2026-10-28T04:13:56.123000+00:00",
+        "sceneQualityRating": "2026-10-28T04:13:56.123000+00:00",
+        "storyboardStage": "2026-10-28T04:13:56.123000+00:00",
+        "workingReferenceScope": "2026-10-28T04:13:56.123000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:13:56.123000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-3a3f60cb5b216627",
+      "sha256": "3a3f60cb5b21662738e726bd70951fa86a8c3bd58b91694d7972ac856b35a9ca",
+      "project": "hon",
+      "filename": "C03-look-back-softened-004.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-004.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:14:01.845000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:14:01.845000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-c080b2baa21621f7",
+      "sha256": "c080b2baa21621f7275f8eac13e6673ba19e3db1425d7e6968d4d8506039a28e",
+      "project": "hon",
+      "filename": "C03-look-back-softened-005.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-005.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:15:01.270000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:15:01.270000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-INTAKE-6f75ffa27f72c7caaf68",
+      "sha256": "6f75ffa27f72c7caaf6889d05cf556e33ca85238ee6aaf6a175246ac4e8266b0",
+      "project": "hon",
+      "filename": "C03-look-back-softened-006-v003.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C03-look-back-softened-006-v003.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:15:10.236000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:15:10.236000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-INTAKE-6c04d6c0383d40855204",
+      "sha256": "6c04d6c0383d408552040465f50c30c396e6c5c665a03860ff5b7f16cdaad30d",
+      "project": "hon",
+      "filename": "C03-look-back-softened-007-v005.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C03-look-back-softened-007-v005.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:15:46.498000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:15:46.498000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-eef99e3d0de83bcb",
+      "sha256": "eef99e3d0de83bcbf4755850b783062b7348906d45c726516b246276124e2832",
+      "project": "hon",
+      "filename": "C03-look-back-softened-008.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-008.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:15:51.594000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:15:51.594000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-INTAKE-45e1c157bd66f2827424",
+      "sha256": "45e1c157bd66f2827424674fa50ec7a1b8a7a8caad356d2441e20c45da3a4cb0",
+      "project": "hon",
+      "filename": "C03-look-back-softened-008-v004.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C03-look-back-softened-008-v004.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:15:57.484000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:15:57.484000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-c3496ef758b7a1be",
+      "sha256": "c3496ef758b7a1be859fd72ee7847b5f7d92ec7aaab38ec5eb7708e56f4c9425",
+      "project": "hon",
+      "filename": "C03-look-back-softened-009.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-009.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:16:06.245000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:16:06.245000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-INTAKE-261223e6c13e956703b2",
+      "sha256": "261223e6c13e956703b298f2232c0f073838d059fac5922541a3461a9e25d902",
+      "project": "hon",
+      "filename": "C03-look-back-softened-009-v004.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C03-look-back-softened-009-v004.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:16:10.036000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:16:10.036000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-95010e73281daa1d",
+      "sha256": "95010e73281daa1d5d6b4be41adcd068183b04bf1dc74398b309293f98588a36",
+      "project": "hon",
+      "filename": "C03-look-back-softened-010.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-010.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:16:15.059000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:16:15.059000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-INTAKE-20ec58793fad1b8813fa",
+      "sha256": "20ec58793fad1b8813fa4556ed314828c00f3bb59c14e7b2d1d0da84a84a87d4",
+      "project": "hon",
+      "filename": "C03-look-back-softened-010-v005.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C03-look-back-softened-010-v005.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:16:20.446000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:16:20.446000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-f090b6c24a1c4f77",
+      "sha256": "f090b6c24a1c4f77aadb8622e21094a63a6f8c13ecdd6e3ddbfb1bb17888c0f1",
+      "project": "hon",
+      "filename": "C03-look-back-softened-011.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-011.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:16:26.216000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:16:26.216000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-f3bb71a574dcf950",
+      "sha256": "f3bb71a574dcf9508e2f610be3ecd7b7ed9d3edcb4037b2d9253c215baf5c1e7",
+      "project": "hon",
+      "filename": "C03-look-back-softened-012.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-012.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:16:31.151000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:16:31.151000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-f14d7434172fd991",
+      "sha256": "f14d7434172fd9913bb53f1a26760413e9f911f093a0e1f23465c59b5b5d189f",
+      "project": "hon",
+      "filename": "C03-look-back-softened-013.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-013.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:16:39.197000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:16:39.197000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-3397fc9e08130c79",
+      "sha256": "3397fc9e08130c79165f2f102114a3d92f0db90fc981b62639f64b2801898201",
+      "project": "hon",
+      "filename": "C03-look-back-softened-014.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-014.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:16:46.579000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:16:46.579000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-efab93f115673d62",
+      "sha256": "efab93f115673d6237705f4056ac617d63ff87bf77e42042b5e5650aa8d856b1",
+      "project": "hon",
+      "filename": "C03-look-back-softened-015.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-015.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:16:51.878000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:16:51.878000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-1e86e3b9e033a9c2",
+      "sha256": "1e86e3b9e033a9c2e02ea03f00e4cf7a413e70e9dd9ec1fc249a3a798b8834c2",
+      "project": "hon",
+      "filename": "C04-battle-light-001.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-001.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:16:56.202000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:16:56.202000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "note": "eye know text a bit large..but otherwise, good.",
+      "likenessRating": 5,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "workingReferenceScope": "scene",
+      "id": "HD-INTAKE-72d8d6df82f75060db39",
+      "sha256": "72d8d6df82f75060db39c2add130c2e4cff986975db2002ee60821a317035e62",
+      "project": "hon",
+      "filename": "C04-battle-light-001-v002.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C04-battle-light-001-v002.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:17:29.764000+00:00",
+        "note": "2026-10-28T04:17:29.764000+00:00",
+        "likenessRating": "2026-10-28T04:17:29.764000+00:00",
+        "sceneQualityRating": "2026-10-28T04:17:29.764000+00:00",
+        "storyboardStage": "2026-10-28T04:17:29.764000+00:00",
+        "workingReferenceScope": "2026-10-28T04:17:29.764000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:17:29.764000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "shotPlan": {
+        "status": "planned",
+        "destinations": [
+          "undecided"
+        ],
+        "idea": "",
+        "prompt": ""
+      },
+      "shotPlanUpdatedAt": "2026-10-28T04:18:12.997000+00:00",
+      "likenessRating": 1,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "workingReferenceScope": "scene",
+      "id": "HD-FALCON-ee485849b0e6528a",
+      "sha256": "ee485849b0e6528a242cfdf1ae0b73e64156b4819514dcd65e48bcb7e10175ee",
+      "project": "hon",
+      "filename": "C04-battle-light-002-v002.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-002-v002.jpg",
+      "role": "review",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:18:12.997000+00:00",
+        "shotPlan": "2026-10-28T04:18:12.997000+00:00",
+        "likenessRating": "2026-10-28T04:18:12.997000+00:00",
+        "sceneQualityRating": "2026-10-28T04:18:12.997000+00:00",
+        "storyboardStage": "2026-10-28T04:18:12.997000+00:00",
+        "workingReferenceScope": "2026-10-28T04:18:12.997000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:18:12.997000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "shotPlan": {
+        "status": "planned",
+        "destinations": [
+          "undecided"
+        ],
+        "idea": "",
+        "prompt": ""
+      },
+      "shotPlanUpdatedAt": "2026-10-28T04:19:04.868000+00:00",
+      "likenessRating": 5,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "workingReferenceScope": "scene",
+      "id": "HD-INTAKE-9b7f5e7626edc0fe707f",
+      "sha256": "9b7f5e7626edc0fe707f20788f0744863c4c91e6b2c4af31b983b7fb21836c02",
+      "project": "hon",
+      "filename": "C04-battle-light-003-v005.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C04-battle-light-003-v005.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:19:04.868000+00:00",
+        "shotPlan": "2026-10-28T04:19:04.868000+00:00",
+        "likenessRating": "2026-10-28T04:19:04.868000+00:00",
+        "sceneQualityRating": "2026-10-28T04:19:04.868000+00:00",
+        "storyboardStage": "2026-10-28T04:19:04.868000+00:00",
+        "workingReferenceScope": "2026-10-28T04:19:04.868000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:19:04.868000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "likenessRating": 5,
+      "sceneQualityRating": 5,
+      "storyboardStage": "production",
+      "workingReferenceScope": "scene",
+      "id": "HD-INTAKE-3dc76f7d9d325f21cd1b",
+      "sha256": "3dc76f7d9d325f21cd1b64de4e0e025e32b200cb6c29504aa8593df8441985b8",
+      "project": "hon",
+      "filename": "gorilla-stew-booth_v001.mp4",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-VIDEO-TEST_v001/gorilla-stew-booth_v001.mp4",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:21:00.939000+00:00",
+        "likenessRating": "2026-10-28T04:21:00.939000+00:00",
+        "sceneQualityRating": "2026-10-28T04:21:00.939000+00:00",
+        "storyboardStage": "2026-10-28T04:21:00.939000+00:00",
+        "workingReferenceScope": "2026-10-28T04:21:00.939000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:21:00.939000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "likenessRating": 5,
+      "sceneQualityRating": 5,
+      "storyboardStage": "production",
+      "workingReferenceScope": "scene",
+      "id": "HD-INTAKE-3ea5959c05259fd65f8d",
+      "sha256": "3ea5959c05259fd65f8d30cb4caa8317245b599e770824c826620c97bfc489c5",
+      "project": "hon",
+      "filename": "gorilla-workshop-argument_v001.mp4",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-VIDEO-TEST_v001/gorilla-workshop-argument_v001.mp4",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:21:08.720000+00:00",
+        "likenessRating": "2026-10-28T04:21:08.720000+00:00",
+        "sceneQualityRating": "2026-10-28T04:21:08.720000+00:00",
+        "storyboardStage": "2026-10-28T04:21:08.720000+00:00",
+        "workingReferenceScope": "2026-10-28T04:21:08.720000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:21:08.720000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "remove",
+      "id": "HD-FALCON-40b085e7dd9f0007",
+      "sha256": "40b085e7dd9f000707fdcd4bb045254288c3abb512f99494bddd639c8882efeb",
+      "project": "hon",
+      "filename": "C04-battle-light-004.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-004.jpg",
+      "role": "storyboard",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:22:16.719000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:22:16.719000+00:00",
+      "origin": "user"
+    },
+    {
+      "status": "keep",
+      "likenessRating": 5,
+      "sceneQualityRating": 5,
+      "storyboardStage": "verification",
+      "workingReferenceScope": "scene",
+      "id": "HD-INTAKE-0b52b8d81ce1edd46b71",
+      "sha256": "0b52b8d81ce1edd46b71943c66e0bd14e025aa78e2172fc5928cc7e22c7e6e1c",
+      "project": "hon",
+      "filename": "C04-battle-light-005-v002.jpg",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/HD-FALCON-CHEST_v001/C04-battle-light-005-v002.jpg",
+      "role": "intake",
+      "fieldUpdatedAt": {
+        "status": "2026-10-28T04:23:16.031000+00:00",
+        "likenessRating": "2026-10-28T04:23:16.031000+00:00",
+        "sceneQualityRating": "2026-10-28T04:23:16.031000+00:00",
+        "storyboardStage": "2026-10-28T04:23:16.031000+00:00",
+        "workingReferenceScope": "2026-10-28T04:23:16.031000+00:00"
+      },
+      "updatedAt": "2026-10-28T04:23:16.031000+00:00",
+      "origin": "user"
+    },
+    {
+      "id": "HD-DROP-16ad386979c6",
+      "sha256": "16ad386979c6b27642d99d8e20e4a96e57e6e1e74d9a0ae52fd5263c4d1e7895",
+      "filename": "SB-27-carbonite-slab.jpg",
+      "project": "hon",
+      "status": null,
+      "likenessRating": 1,
+      "note": "The frozen imprint is not yet a passing Dolo likeness. User rated character likeness 1/5.",
+      "origin": "user",
+      "updatedAt": "2026-10-30T14:15:54.392283+00:00",
+      "source": "Direct user storyboard comment, 2026-10-30 America/New_York"
     }
   ],
   "favorites": [
@@ -3050,6 +6699,19 @@
       "newUserRecords": 83,
       "updatedUserRecords": 1,
       "exported": "2026-10-10T14:00:39.105Z"
+    },
+    {
+      "otherReviewsPreserved": true,
+      "keep": 12,
+      "type": "scoped_falcon_shortlist_import",
+      "feedbackPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+      "needsFixes": 1,
+      "source": "docs/notes/downloads/cfa-review (13).json",
+      "feedbackSHA256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574",
+      "directUserOverrides": 1,
+      "assetCount": 13,
+      "importedAtUTC": "2026-10-12T03:57:00.6535090Z",
+      "sha256": "76e7914bc59514703d97db09e64c45c162b59615a936e859e6ee7aa061775249"
     }
   ],
   "lastIntake": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261010_mouth_grills/intake.json",
@@ -3066,5 +6728,25 @@
     "sourceExported": "2026-10-10T14:00:39.105Z",
     "sourceSHA256": "d2176b6563c083ab374ef0d79c7b3b40c8d9724891dc0cb51049326497d543cc",
     "policy": "Only newer explicit user records; preserve original scores, scope, stages, notes and planned scene uses. No inferred approvals, stages, ratings or physical deletion."
+  },
+  "falconShortlistIntake": {
+    "otherReviewsPreserved": true,
+    "keep": 12,
+    "type": "scoped_falcon_shortlist_import",
+    "feedbackPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+    "needsFixes": 1,
+    "source": "docs/notes/downloads/cfa-review (13).json",
+    "feedbackSHA256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574",
+    "directUserOverrides": 1,
+    "assetCount": 13,
+    "importedAtUTC": "2026-10-12T03:57:00.6535090Z",
+    "sha256": "76e7914bc59514703d97db09e64c45c162b59615a936e859e6ee7aa061775249"
+  },
+  "lastReconciliation": {
+    "source": "docs/notes/downloads/cfa-review (6).json",
+    "sha256": "06d79ea2917bb7ef24ff65aeae709aeddafabe34b33c6a1566a1ffa378fe1f01",
+    "receipt": ".cache/handoff_refresh_20261028/audit.json",
+    "changedRecords": 91,
+    "changedFields": 270
   }
 }

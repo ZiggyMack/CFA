@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUTC": "2026-10-15T02:28:38.269Z",
+  "localReviewDate": "2026-10-14",
+  "reviewer": "Ziggy",
+  "authorship": "direct_user_feedback",
+  "result": "RESULT.json",
+  "originalSHA256": "0597c4efef067280dab2ef1abfa06e313d06893187ce9ae1d9d436f75c28392b",
+  "acceptedScope": "Notebook source context can contribute scene details to Gemini video output in this observed workflow; use alongside production prompts.",
+  "observations": {
+    "dog": "confirmed present",
+    "headMotion": "quick motion as if barking",
+    "mouthMotion": "dog mouth did not move",
+    "defectSeverity": "minor according to user",
+    "audibleBarking": "not separately stated in this feedback; do not infer from head motion"
+  },
+  "userReviewVerbatim": "OK after my review, I can confirm the dog is there even makes the motions you would expect of his head like a quick side in motion as if he barked but the dogs mouth itself did not move but that’s a minor. This is a confirmation. The video generator will absolutely pull from the sources. Might be hard to tell what it will pull, but the point is we definitely should load any screen storyboarding details there in addition to whatever we prompt make sure that’s flown into our methodologies and the panhandler as a understanding for Gemini as a collaborator",
+  "sourceScopeRefinementVerbatim": "The one thing we have to maybe be cautious of is if we load everything, like for, like a 10-minute scene, and the clips we're having it generate is only for a portion of, like, the 10-minute scene, we might not get the results we want. So we might actually have to be surgical when we're going to go get a certain clip. We only load the things pertinent to that clip.",
+  "operatingDecision": "Use clip-specific verified active sources with necessary scene/storyboard/direction/lighting/camera/background/continuity details; retain full story separately and repeat critical requirements in the prompt.",
+  "limits": {
+    "sourceSelectionPredictability": "unknown",
+    "directRendererRetrievalVersusPromptAssembly": "unexposed",
+    "sourceBleedPrevention": "user-directed method; not separately tested"
+  },
+  "automaticRegenerationAuthorized": false,
+  "productionCanonChanged": false
+}

@@ -1,0 +1,474 @@
+{
+  "format": "cfa-grok-image-intake-v1",
+  "project": "criminal_mind",
+  "batchID": "TCM-SET-JUNKYARD-L11-L19",
+  "lane": "set_round",
+  "taskID": "tcm-grok-sets-20261030",
+  "intakeRole": "site_index_receipt",
+  "verifiedAtUTC": "2026-11-04T13:41:07Z",
+  "receivedAtUTC": null,
+  "receivedTimeStatus": "not_recorded_in_archive",
+  "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19.zip",
+  "archiveSHA256": "11b257300334b7ea740ac1d730802d7ed050b084276b588a927943e488b5645f",
+  "archiveBytes": 3980730,
+  "archiveMemberCount": 18,
+  "receivedOriginals": 9,
+  "acceptedOriginals": 0,
+  "humanVerdictsCreated": 0,
+  "selectedStartingFrames": 0,
+  "assets": [
+    {
+      "candidateID": "TCM-SET-JUNKYARD-L11__P01-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-JUNKYARD-L11-L19\\TCM-SET-JUNKYARD-L11__P01-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L11__P01-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19.zip",
+      "archiveMember": "TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L11__P01-LS1.jpg",
+      "sha256": "ca95e49ec36bb0fa7ec18f3cb965577be22d691f448f600d79f51484cd42b7a8",
+      "bytes": 414914,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "H3 'fresh drag marks' (SS:L508), 'he points to the ground' (SS:L505); card §6 'Drag marks read as a BODY drag (two heel furrows / one broad smear), not tyre ruts'; WRITER'S DEFAULT MAPS:L5; JY-P01 spec MAPS:L454",
+        "note": "PRELIMINARY; slot S01; position JY-P01; light JY-LS1; needed; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; overcast soft light = JY-LS1 OK; H1 day (SS:L467) OK; H2 old car + appliances (SS:L441) OK: stripped rust-eaten sedan at left close to L01's car (no badge/plate visible, quad-lamp front blank), white appliance stack at right with blank dark panels/vents only (2.2x: no glyphs, no brand plates), chain-link and northern deciduous trees behind, sky top third; cabin at 6x gamma-lift shows only dark seat backs, nobody inside; FINDING: the two marks are even, parallel, vehicle-width furrows with raised berms running from the bottom edge to the gap = tyre ruts, not a body drag (V_1 known flag: wheel tracks only = DRIFT); reference ids (maker value, index column present): TCM-SET-JUNKYARD-L01,TCM-SET-JUNKYARD-L02 | FAMILY NOTE for Claude (V_1 ruling): the H3 body-drag reading (SS:L508) is missing across L11-L15; not a separate tag",
+        "cardVersion": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001.md sha256 b3409b4007ef3d3c824f816ddada9844f21ad31216d963b90d506f67d7b29f08; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/SCREENING_ROWS_JUNKYARD_PRELIMINARY.tsv",
+        "sourceSHA256": "8fb99b05d67e2313852a496ddb574faede4d4d9fe8da799501f1244c85b17053",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S01; Overcast master: stripped rust-eaten old sedan left, stacked white appliances right, bare gap, two furrows from bottom to gap, chain-link and northeastern trees behind",
+        "sourceVsProposal": null,
+        "defectNote": "DRAG READ: the two furrows are parallel and even and read as tyre ruts, not a body drag; old car looks two-door/coupe-like; small dark control panels on appliances (no legible text seen); no people",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-JUNKYARD",
+      "sourceScenes": [
+        "TCM-SRC-16"
+      ],
+      "eligibleShotIDs": [
+        "TCM-16-01",
+        "TCM-16-02",
+        "TCM-16-03",
+        "TCM-16-04"
+      ],
+      "locationTitle": "Scrap-metal junkyard",
+      "sourceConstraints": "Daylight, abandoned car and appliance stacks, accessible ground for drag marks, clear investigation area. No body or injury in the scout image."
+    },
+    {
+      "candidateID": "TCM-SET-JUNKYARD-L12__P02-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-JUNKYARD-L11-L19\\TCM-SET-JUNKYARD-L12__P02-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L12__P02-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19.zip",
+      "archiveMember": "TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L12__P02-LS1.jpg",
+      "sha256": "622c4594854ef488bdc17b5f00dbb717159bf29434a0627dd2095e51a8047b07",
+      "bytes": 419255,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "H3 'fresh drag marks' (SS:L508), 'he points to the ground' (SS:L505); card §6 'Drag marks read as a BODY drag (two heel furrows / one broad smear), not tyre ruts'; WRITER'S DEFAULT MAPS:L5; JY-P02 spec MAPS:L455",
+        "note": "PRELIMINARY; slot S02; position JY-P02; light JY-LS1; needed; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; overcast = JY-LS1 OK; car rear quarter at left, washer/dryer stack at right, trampled strip between, fence soft behind = framing matches P02; washer top panels/knob at 2.5x blank, no glyphs; car side glass at 3x gamma-lift shows only grey haze, nobody inside; FINDING: the two furrow ends are straight parallel ridged ruts that read as tyre tracks, not a body drag; continuity note: the car is a rounded 1940s-50s fastback body, not L01/L11's 1970s sedan (old-car identity drift, set-wide item); reference ids (maker value, index column present): TCM-SET-JUNKYARD-L01,TCM-SET-JUNKYARD-L02,TCM-SET-JUNKYARD-L06 | FAMILY NOTE for Claude (V_1 ruling): the H3 body-drag reading (SS:L508) is missing across L11-L15; not a separate tag",
+        "cardVersion": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001.md sha256 b3409b4007ef3d3c824f816ddada9844f21ad31216d963b90d506f67d7b29f08; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/SCREENING_ROWS_JUNKYARD_PRELIMINARY.tsv",
+        "sourceSHA256": "8fb99b05d67e2313852a496ddb574faede4d4d9fe8da799501f1244c85b17053",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S02; Overcast medium on the gap: rusted rear quarter/doors of old car left, washer/dryer stack right, trampled strip with two furrow ends, chain-link behind",
+        "sourceVsProposal": null,
+        "defectNote": "DRAG READ: furrows read as tyre ruts; old car is a rounded 1950s-style body that does not match L11's car (identity drift); washer has a small dark panel at top (no legible text seen)",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-JUNKYARD",
+      "sourceScenes": [
+        "TCM-SRC-16"
+      ],
+      "eligibleShotIDs": [
+        "TCM-16-01",
+        "TCM-16-02",
+        "TCM-16-03",
+        "TCM-16-04"
+      ],
+      "locationTitle": "Scrap-metal junkyard",
+      "sourceConstraints": "Daylight, abandoned car and appliance stacks, accessible ground for drag marks, clear investigation area. No body or injury in the scout image."
+    },
+    {
+      "candidateID": "TCM-SET-JUNKYARD-L13__P03-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-JUNKYARD-L11-L19\\TCM-SET-JUNKYARD-L13__P03-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L13__P03-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19.zip",
+      "archiveMember": "TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L13__P03-LS1.jpg",
+      "sha256": "5ba9fdb0ed7b61b44b81e77d65d4c999177e95f8ae8b8e899087a523a78319ef",
+      "bytes": 359323,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "H3 'fresh drag marks' (SS:L508), 'he points to the ground' (SS:L505); card §6 'Drag marks read as a BODY drag (two heel furrows / one broad smear), not tyre ruts'; WRITER'S DEFAULT MAPS:L5; JY-P03 spec MAPS:L456",
+        "note": "PRELIMINARY; slot S03; position JY-P03; light JY-LS1; needed; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; overcast = JY-LS1 OK; low insert, marks sharp in foreground converging toward the gap, car wheel and appliances soft in the upper third = geometry matches P03; wheel/appliance crop 2x: no badge, no text; FINDING: the marks are two pairs of raised-berm furrows with a tread-like channel = tyre ruts, not heel furrows or a broad smear; continuity note: wheel has a full tyre on a steel rim (L01/L11 car is on flat/stripped wheels); reference ids (maker value, index column present): TCM-SET-JUNKYARD-L01,TCM-SET-JUNKYARD-L02,TCM-SET-JUNKYARD-L04,TCM-SET-JUNKYARD-L06 | FAMILY NOTE for Claude (V_1 ruling): the H3 body-drag reading (SS:L508) is missing across L11-L15; not a separate tag",
+        "cardVersion": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001.md sha256 b3409b4007ef3d3c824f816ddada9844f21ad31216d963b90d506f67d7b29f08; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/SCREENING_ROWS_JUNKYARD_PRELIMINARY.tsv",
+        "sourceSHA256": "8fb99b05d67e2313852a496ddb574faede4d4d9fe8da799501f1244c85b17053",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S03; Overcast low insert: two raised-edge furrows sharp in foreground converging toward a tyred wheel left and white appliance boxes right",
+        "sourceVsProposal": null,
+        "defectNote": "DRAG READ: furrows still read as tyre ruts; car wheel has a full tyre and steel rim (not clearly the stripped L11 car); no text",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-JUNKYARD",
+      "sourceScenes": [
+        "TCM-SRC-16"
+      ],
+      "eligibleShotIDs": [
+        "TCM-16-01",
+        "TCM-16-02",
+        "TCM-16-03",
+        "TCM-16-04"
+      ],
+      "locationTitle": "Scrap-metal junkyard",
+      "sourceConstraints": "Daylight, abandoned car and appliance stacks, accessible ground for drag marks, clear investigation area. No body or injury in the scout image."
+    },
+    {
+      "candidateID": "TCM-SET-JUNKYARD-L14__P03-LS2",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-JUNKYARD-L11-L19\\TCM-SET-JUNKYARD-L14__P03-LS2.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L14__P03-LS2.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19.zip",
+      "archiveMember": "TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L14__P03-LS2.jpg",
+      "sha256": "e1d2e0e598778fae3775523f2a5c7da6d5b7ab9747900998bdfdae0ddd68fd5e",
+      "bytes": 418728,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "H3 'fresh drag marks' (SS:L508), 'he points to the ground' (SS:L505); card §6 'Drag marks read as a BODY drag (two heel furrows / one broad smear), not tyre ruts'; WRITER'S DEFAULT MAPS:L5; JY-P03 spec MAPS:L456; card §6 'Northern-US region: no red dirt or razor wire (L05), no desert (L10)'",
+        "note": "PRELIMINARY; slot S04; position JY-P03; light JY-LS2; needed; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; clear low sun, hard shadows, blue sky = JY-LS2 (exploratory) OK, marks raked into relief as spec says; car/appliance crops 2.2x: no badge, no plate, no text, no shadow figures; FINDING 1: furrows are even parallel tyre ruts, not a body drag; FINDING 2: dry tan dirt, sparse low scrub and haze read semi-arid, leaning toward the L10 regional drift (note, not separately tagged); continuity note: red-brown 1970s sedan with chrome bumper differs from L11's car (identity drift, set-wide item); reference ids (maker value, index column present): TCM-SET-JUNKYARD-L01,TCM-SET-JUNKYARD-L04,TCM-SET-JUNKYARD-L06 | FAMILY NOTE for Claude (V_1 ruling): the H3 body-drag reading (SS:L508) is missing across L11-L15; not a separate tag | V_1 ruling: semi-arid look is note only; DRIFT only if it reads as red dirt, desert or razor wire (it does not)",
+        "cardVersion": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001.md sha256 b3409b4007ef3d3c824f816ddada9844f21ad31216d963b90d506f67d7b29f08; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/SCREENING_ROWS_JUNKYARD_PRELIMINARY.tsv",
+        "sourceSHA256": "8fb99b05d67e2313852a496ddb574faede4d4d9fe8da799501f1244c85b17053",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S04; Low sun hard light, blue sky: low insert along two raked furrows toward a red-brown rusted sedan left and white appliance piles right",
+        "sourceVsProposal": null,
+        "defectNote": "REGION: dry tan dirt and sparse scrub read arid (risk of the L05/L10 regional SCRIPT-DRIFT); DRAG READ: furrows read as tyre ruts; car body differs from L11; no text, no people, no shadow figures",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-JUNKYARD",
+      "sourceScenes": [
+        "TCM-SRC-16"
+      ],
+      "eligibleShotIDs": [
+        "TCM-16-01",
+        "TCM-16-02",
+        "TCM-16-03",
+        "TCM-16-04"
+      ],
+      "locationTitle": "Scrap-metal junkyard",
+      "sourceConstraints": "Daylight, abandoned car and appliance stacks, accessible ground for drag marks, clear investigation area. No body or injury in the scout image."
+    },
+    {
+      "candidateID": "TCM-SET-JUNKYARD-L15__P04-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-JUNKYARD-L11-L19\\TCM-SET-JUNKYARD-L15__P04-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L15__P04-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19.zip",
+      "archiveMember": "TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L15__P04-LS1.jpg",
+      "sha256": "c0ff5c8200e02092b4f39e9a66f08391c0f5f45da5cfd232f2211a0487a73fa6",
+      "bytes": 416568,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "H3 'fresh drag marks' (SS:L508), 'he points to the ground' (SS:L505); card §6 'Drag marks read as a BODY drag (two heel furrows / one broad smear), not tyre ruts'; WRITER'S DEFAULT MAPS:L5; JY-P04 spec MAPS:L457 'the drag marks leading away from camera'",
+        "note": "PRELIMINARY; slot S05; position JY-P04; light JY-LS1; needed; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; overcast = JY-LS1 OK; reverse from the gap: car at left, fridge stack at right, open dirt, access track to a gate in the far fence, autumn trees = P04 geometry OK; gate/fence crop 3x: no signs, no figures; car window crop 2.5x gamma-lift: gutted interior and a hanging mirror bracket only, nobody inside; FINDING: one single curving smooth-bottomed track (not two marks) that reads as a vehicle/wheel track, not a body drag; note: the gate reads closed (P04 does not require it open; P05 does); reference ids (maker value, index column present): TCM-SET-JUNKYARD-L01,TCM-SET-JUNKYARD-L02 | FAMILY NOTE for Claude (V_1 ruling): the H3 body-drag reading (SS:L508) is missing across L11-L15; not a separate tag",
+        "cardVersion": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001.md sha256 b3409b4007ef3d3c824f816ddada9844f21ad31216d963b90d506f67d7b29f08; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/SCREENING_ROWS_JUNKYARD_PRELIMINARY.tsv",
+        "sourceSHA256": "8fb99b05d67e2313852a496ddb574faede4d4d9fe8da799501f1244c85b17053",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S05; Overcast reverse from the gap: rusted old car left, white fridge stacks right, one curved scuffed track across open dirt to a chain-link gate, autumn trees",
+        "sourceVsProposal": null,
+        "defectNote": "DRAG READ: the single curving track reads as a tyre/vehicle track rather than a body drag; gate partly shut; old car body (rounded) differs from L11; no text, no people",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-JUNKYARD",
+      "sourceScenes": [
+        "TCM-SRC-16"
+      ],
+      "eligibleShotIDs": [
+        "TCM-16-01",
+        "TCM-16-02",
+        "TCM-16-03",
+        "TCM-16-04"
+      ],
+      "locationTitle": "Scrap-metal junkyard",
+      "sourceConstraints": "Daylight, abandoned car and appliance stacks, accessible ground for drag marks, clear investigation area. No body or injury in the scout image."
+    },
+    {
+      "candidateID": "TCM-SET-JUNKYARD-L16__P05-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-JUNKYARD-L11-L19\\TCM-SET-JUNKYARD-L16__P05-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L16__P05-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19.zip",
+      "archiveMember": "TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L16__P05-LS1.jpg",
+      "sha256": "bdea5177777f82c262fae7735900e96972a824d75c3a116c40cf641cc15b74c1",
+      "bytes": 398614,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "ADVISORY",
+        "hardTrait": "JY-P05 spec MAPS:L458 ('dark unmarked sedan parked just inside the gate facing out'); card §6 'no brand, emblem, logo, plate'; slot check 'vehicles: no plate/emblem/lettering, nobody inside'",
+        "note": "PRELIMINARY; slot S06; position JY-P05; light JY-LS1; needed; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; overcast = JY-LS1 OK; dirt track to the open chain-link gate, near-black plain four-door sedan on black steel wheels parked just inside the gate nose-out (rear to camera), appliance/AC stacks at both edges, trees beyond = P05 OK and matches the round's car identity (MAPS:L5); 2.5x gamma-lift: cabin shows headrests only, nobody inside; no boot emblem or badge; ADVISORY: the boot carries a plain blank plate-shaped panel (no glyphs, no strokes at 2.5x) - blank plate area, not a legible plate (V_1 ruling: unresolved/no strokes = ADVISORY); AC-unit grilles and panels at 2x blank; reference ids (maker value, index column present): TCM-SET-JUNKYARD-L01,TCM-SET-JUNKYARD-L02",
+        "cardVersion": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001.md sha256 b3409b4007ef3d3c824f816ddada9844f21ad31216d963b90d506f67d7b29f08; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/SCREENING_ROWS_JUNKYARD_PRELIMINARY.tsv",
+        "sourceSHA256": "8fb99b05d67e2313852a496ddb574faede4d4d9fe8da799501f1244c85b17053",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S06; Overcast mid-lot toward gate: near-black plain four-door sedan on black steel wheels parked inside the open gate facing out (rear to camera), appliance/AC-unit stacks both edges, trees beyond",
+        "sourceVsProposal": null,
+        "defectNote": "Blank plate recess on boot (no glyphs seen - plate check); empty cabin; no emblem visible; AC units mixed into appliance stacks",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-JUNKYARD",
+      "sourceScenes": [
+        "TCM-SRC-16"
+      ],
+      "eligibleShotIDs": [
+        "TCM-16-01",
+        "TCM-16-02",
+        "TCM-16-03",
+        "TCM-16-04"
+      ],
+      "locationTitle": "Scrap-metal junkyard",
+      "sourceConstraints": "Daylight, abandoned car and appliance stacks, accessible ground for drag marks, clear investigation area. No body or injury in the scout image."
+    },
+    {
+      "candidateID": "TCM-SET-JUNKYARD-L17__P06-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-JUNKYARD-L11-L19\\TCM-SET-JUNKYARD-L17__P06-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L17__P06-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19.zip",
+      "archiveMember": "TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L17__P06-LS1.jpg",
+      "sha256": "008f2fe5d0975adab3853bba5ad7b55a3847b68c835528039bb94fda78440fd8",
+      "bytes": 536960,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "JY-P06 spec MAPS:L459; slot check 'signs/plates blank, no glyphs'; H4 drive-off (SS:L518) plate",
+        "note": "PRELIMINARY; slot S07; position JY-P06; light JY-LS1; exploratory; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; overcast = JY-LS1 OK; from the approach road outside the open chain-link gate, cracked asphalt foreground, dirt track leading in, the lot with open ground where the sedan parks and the stacks beyond = P06 geometry OK; no signs on gate or fence; pile crop 2.2x: appliances blank, no brand plates, no figures; note: a burnt/crushed car wreck sits on top of the appliance pile (extra scrap, not the separate old car; not a rule issue); exploratory slot; reference ids (maker value, index column present): TCM-SET-JUNKYARD-L01,TCM-SET-JUNKYARD-L02",
+        "cardVersion": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001.md sha256 b3409b4007ef3d3c824f816ddada9844f21ad31216d963b90d506f67d7b29f08; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/SCREENING_ROWS_JUNKYARD_PRELIMINARY.tsv",
+        "sourceSHA256": "8fb99b05d67e2313852a496ddb574faede4d4d9fe8da799501f1244c85b17053",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S07; Overcast from approach road outside open chain-link gate: cracked asphalt foreground, dirt track into lot, white appliance pile and burnt-out wreck beyond, bare trees",
+        "sourceVsProposal": null,
+        "defectNote": "No sedan parking place clearly marked (empty dirt only); wreck behind reads burnt/crushed rather than the single old car; no text, no people",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-JUNKYARD",
+      "sourceScenes": [
+        "TCM-SRC-16"
+      ],
+      "eligibleShotIDs": [
+        "TCM-16-01",
+        "TCM-16-02",
+        "TCM-16-03",
+        "TCM-16-04"
+      ],
+      "locationTitle": "Scrap-metal junkyard",
+      "sourceConstraints": "Daylight, abandoned car and appliance stacks, accessible ground for drag marks, clear investigation area. No body or injury in the scout image."
+    },
+    {
+      "candidateID": "TCM-SET-JUNKYARD-L18__P07-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-JUNKYARD-L11-L19\\TCM-SET-JUNKYARD-L18__P07-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L18__P07-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19.zip",
+      "archiveMember": "TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L18__P07-LS1.jpg",
+      "sha256": "b4d1f14b30f0a382187043950dc0987cf1ad1991c77368049bb36c34e224a988",
+      "bytes": 454255,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "JY-P07 spec MAPS:L460; slot check 'reflections show only the empty set; nobody through glass; no plate/emblem/lettering'",
+        "note": "PRELIMINARY; slot S08; position JY-P07; light JY-LS1; exploratory; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; overcast = JY-LS1 OK; rusted flank and rear quarter fill the frame, empty glassless window openings, gutted interior, fence and trees behind = P07 OK; interior crop 1.2x gamma-lift: seat frames and springs only, nobody inside; rear lamp/bumper crop 3x: no badge, no plate, no script; continuity note: boxy 1970s-80s four-door, plausible as L01's car type but a different body from L11/L12/L15 (old-car identity drift, set-wide item); ground is gravel rather than packed dirt (note); exploratory slot; reference ids (maker value, index column present): TCM-SET-JUNKYARD-L01,TCM-SET-JUNKYARD-L02",
+        "cardVersion": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001.md sha256 b3409b4007ef3d3c824f816ddada9844f21ad31216d963b90d506f67d7b29f08; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/SCREENING_ROWS_JUNKYARD_PRELIMINARY.tsv",
+        "sourceSHA256": "8fb99b05d67e2313852a496ddb574faede4d4d9fe8da799501f1244c85b17053",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S08; Overcast flank of a stripped rust-eaten four-door sedan, glassless windows, gutted interior, missing rear wheel, chain-link and trees behind",
+        "sourceVsProposal": null,
+        "defectNote": "Car body (boxy 1970s/80s four-door with chrome bumper) differs from L11/L12/L15 old car (identity drift across family); no badge or plate seen; no people",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-JUNKYARD",
+      "sourceScenes": [
+        "TCM-SRC-16"
+      ],
+      "eligibleShotIDs": [
+        "TCM-16-01",
+        "TCM-16-02",
+        "TCM-16-03",
+        "TCM-16-04"
+      ],
+      "locationTitle": "Scrap-metal junkyard",
+      "sourceConstraints": "Daylight, abandoned car and appliance stacks, accessible ground for drag marks, clear investigation area. No body or injury in the scout image."
+    },
+    {
+      "candidateID": "TCM-SET-JUNKYARD-L19__P08-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-JUNKYARD-L11-L19\\TCM-SET-JUNKYARD-L19__P08-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L19__P08-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-JUNKYARD-L11-L19.zip",
+      "archiveMember": "TCM-SET-JUNKYARD-L11-L19/TCM-SET-JUNKYARD-L19__P08-LS1.jpg",
+      "sha256": "35bd1b0a86ce7eb38a8adf487b1637c87e3ef8b88d17ffacf9c226ee68b83efd",
+      "bytes": 383067,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "JY-P08 spec MAPS:L461 ('no brand plates legible'); slot check 'signs/plates blank, no glyphs'",
+        "note": "PRELIMINARY; slot S09; position JY-P08; light JY-LS1; exploratory; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; overcast = JY-LS1 OK; square-on wall of stacked white washers, fridges and stoves filling the frame edge to edge, rust streaks, dials and doors = P08 OK; label-plate row crop 1.6x and stove/dial crop 1.6x: all rectangular plates blank, dials unnumbered, oven windows plain dark glass, no brand marks; note: very orderly staged stacking (not marked down); exploratory slot; reference ids (maker value, index column present): TCM-SET-JUNKYARD-L01,TCM-SET-JUNKYARD-L02",
+        "cardVersion": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-JUNKYARD_card_v001.md sha256 b3409b4007ef3d3c824f816ddada9844f21ad31216d963b90d506f67d7b29f08; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/SCREENING_ROWS_JUNKYARD_PRELIMINARY.tsv",
+        "sourceSHA256": "8fb99b05d67e2313852a496ddb574faede4d4d9fe8da799501f1244c85b17053",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S09; Overcast square-on wall of stacked white washers, fridges and stoves, rust streaks, dials and doors filling frame",
+        "sourceVsProposal": null,
+        "defectNote": "Small blank rectangular label plates on fridge tops (blank, no glyphs seen - check); dials unnumbered; oven windows dark glass (not screens); wall reads very orderly/staged",
+        "sourceMember": "TCM-SET-JUNKYARD-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "608ee716a67bcd95c91881ac2bdc2152c6f079560c56d378418ea1f7c6de4324"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-JUNKYARD",
+      "sourceScenes": [
+        "TCM-SRC-16"
+      ],
+      "eligibleShotIDs": [
+        "TCM-16-01",
+        "TCM-16-02",
+        "TCM-16-03",
+        "TCM-16-04"
+      ],
+      "locationTitle": "Scrap-metal junkyard",
+      "sourceConstraints": "Daylight, abandoned car and appliance stacks, accessible ground for drag marks, clear investigation area. No body or injury in the scout image."
+    }
+  ],
+  "verification": {
+    "zipCRC": true,
+    "archiveHash": true,
+    "safeMemberPaths": true,
+    "noSymlinks": true,
+    "noEncryptedMembers": true,
+    "uniqueCandidateIDs": true,
+    "indexedBytesAndHashes": true,
+    "JPEGDecode": true,
+    "humanReviewOrAcceptanceCreated": false
+  },
+  "note": "Technical receipt for unreviewed originals. Provider/V-team screening remains attributed preliminary evidence, never a human verdict or acceptance."
+}

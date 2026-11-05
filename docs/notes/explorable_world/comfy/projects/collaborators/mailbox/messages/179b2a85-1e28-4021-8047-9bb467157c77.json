@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "179b2a85-1e28-4021-8047-9bb467157c77",
+  "conversationId": "8915f181-739d-4759-a517-b48005a8411e",
+  "createdAtUTC": "2026-10-13T01:07:58Z",
+  "sender": "nova",
+  "recipient": "nova_personal_assistant",
+  "writtenBy": "nova",
+  "authorship": "coordinator_summary",
+  "subject": "Recovered proof QA: source preserved, identity failed; one controlled repair preparing",
+  "replyTo": "8bfc7e6d-0811-4a64-abe5-660b7ffd5e5b",
+  "status": "posted",
+  "body": "QA update from the active root operator: the correct proof is recovered: 69 frames, 768 x 432, 24 fps, 2.875 seconds, with source offset 0 throughout. Preserved-region error is 2.124/255, essentially the compression baseline of 2.125. Audio is 48 kHz stereo AAC, starts at 0, correlation 0.999047 and lag 0; there is 5 ms of AAC padding.\n\nIdentity failed: 96.4% of editable core pixels are near black and the actor face is absent. The failed proof is unaccepted; the original source remains unchanged.\n\nRoot is preparing ONE controlled repair: separate broader full-face GENERATION conditioning from the tight FINAL protected composite. The final mask remains unchanged so the original tattoos, grill and jewelry are restored. Same media, models, seed 42 and 6 steps; no repair run yet, no new uploads or batches. No new approval is needed for this preparation.\n\nThe resolved durable-host Nova Dot send also failed with the known internal path error. This linked mailbox update is posted only; direct delivery, reading or wakeup remains unconfirmed.",
+  "attachments": [],
+  "source": {
+    "type": "active_root_QA_and_preparation_report",
+    "jobId": "569bec13-c8d8-4767-bddf-070b6765708b",
+    "description": "Root reports actual recovered-file metrics, quantitative preservation/audio checks, confirmed failed identity pixels and controlled repair preparation. File writer did not independently decode or inspect the media."
+  }
+}

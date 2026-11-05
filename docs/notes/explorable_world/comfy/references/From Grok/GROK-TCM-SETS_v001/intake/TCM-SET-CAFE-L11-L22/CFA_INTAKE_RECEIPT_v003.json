@@ -1,0 +1,892 @@
+{
+  "format": "cfa-grok-image-intake-v1",
+  "project": "criminal_mind",
+  "batchID": "TCM-SET-CAFE-L11-L22",
+  "lane": "set_round",
+  "taskID": "tcm-grok-sets-20261030",
+  "intakeRole": "site_index_receipt",
+  "sealStatus": "complete_only_when_pinned_by_required_aggregate",
+  "requiredAggregatePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/CFA_SET_INTAKE_035-118_SITE_INDEX_v003.json",
+  "supersedesReceipt": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22/CFA_INTAKE_RECEIPT_v002.json",
+  "verifiedAtUTC": "2026-11-04T13:41:07Z",
+  "receivedAtUTC": null,
+  "receivedTimeStatus": "not_recorded_in_archive",
+  "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22.zip",
+  "archiveSHA256": "019d66a77488a1b5f4c8635c5887057a57b4c7bad1e23e3784ed58140e0204ea",
+  "archiveBytes": 3020613,
+  "archiveMemberCount": 22,
+  "receivedOriginals": 12,
+  "acceptedOriginals": 0,
+  "humanVerdictsCreated": 0,
+  "selectedStartingFrames": 0,
+  "assets": [
+    {
+      "candidateID": "TCM-SET-CAFE-L11__P01-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-CAFE-L11-L22\\TCM-SET-CAFE-L11__P01-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L11__P01-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22.zip",
+      "archiveMember": "TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L11__P01-LS1.jpg",
+      "sha256": "9f02a624c6157dc4c2c98655b674ca9dd893d8f556b13ad64a7d6db07768dc2e",
+      "bytes": 289122,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "-",
+        "note": "P01-LS1: true corner table (two walls meet behind it), window on the LEFT, both chairs, two cups on the table, room-side table and counter edge at right, empty patron zone. Street through glass is empty of people; parked cars have blank pale plates and only an unresolvable pale grille blob (no emblem shape at 8x). No reflections with figures, no text, no brand marks. | screener sha256 own (R12), matches BATCH_B2_01_index sha256; manifest row has reference_ids; inspected at 1x and 4-10x crops; PRELIMINARY; maker index id TCM-SET-CAFE-L11__P01",
+        "cardVersion": "TCMSET_B2_CAFE_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-CAFE_card_v001.md sha256:ea71659d818c95d4885d72cc03204e7c13daa54eaa2ad124a831894af4771725",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/SCREENING_ROWS_CAFE_PRELIMINARY.tsv",
+        "sourceSHA256": "05a410019881b6405ebbd04547337d6590c73123279c5eba6e2be6f937eef995",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Corner two-top in a true corner, window left of table, city street with trees and parked cars; warm plaster cafe; sun patches. Family look anchor for this batch (no writer base image named for the cafe).",
+        "sourceVsProposal": null,
+        "defectNote": "none observed at 3x (street empty; plates not legible)",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-CAFE-L11__P01-LS1",
+        "cameraPositionID": "CAFE-P01",
+        "lightState": "CAFE-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "MAPS:L258",
+          "TCMSET_B2_TCM-SET-CAFE_card_v001.md",
+          "slot S01",
+          "img_ref: none (text-only)"
+        ],
+        "servesShotsRaw": "TCM-18-01",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-18-01"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-CAFE",
+      "providerCandidateID": "TCM-SET-CAFE-L11__P01-LS1",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-18-01"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-18"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Cafe corner/window table",
+      "sourceConstraints": "Small table in a corner by the window, seating for two, coffee and a believable patron background zone. A shared environment, not two disconnected close-up sets."
+    },
+    {
+      "candidateID": "TCM-SET-CAFE-L12__P01-LS2",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-CAFE-L11-L22\\TCM-SET-CAFE-L12__P01-LS2.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L12__P01-LS2.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22.zip",
+      "archiveMember": "TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L12__P01-LS2.jpg",
+      "sha256": "967cc6312e120edc8c51a110fcdb6ad3aa1979202ee7f79aaef8f1b11346eda2",
+      "bytes": 281020,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "-",
+        "note": "P01-LS2: same geometry as L11 (true corner, window left, two cups, empty patron zone). LS2 overcast reads soft and the street is still fairly bright (lighting note only). Plates blank, no people through glass, no text or brand marks. | screener sha256 own (R12), matches BATCH_B2_01_index sha256; manifest row has reference_ids; inspected at 1x and 4-10x crops; PRELIMINARY; maker index id TCM-SET-CAFE-L12__P01",
+        "cardVersion": "TCMSET_B2_CAFE_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-CAFE_card_v001.md sha256:ea71659d818c95d4885d72cc03204e7c13daa54eaa2ad124a831894af4771725",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/SCREENING_ROWS_CAFE_PRELIMINARY.tsv",
+        "sourceSHA256": "05a410019881b6405ebbd04547337d6590c73123279c5eba6e2be6f937eef995",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Same framing as L11, overcast relight; pendants carry the room.",
+        "sourceVsProposal": null,
+        "defectNote": "overcast read is soft: street still looks fairly bright; otherwise none observed",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-CAFE-L12__P01-LS2",
+        "cameraPositionID": "CAFE-P01",
+        "lightState": "CAFE-LS2",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "MAPS:L258",
+          "TCMSET_B2_TCM-SET-CAFE_card_v001.md",
+          "slot S02",
+          "img_ref: B2 CAFE-L11"
+        ],
+        "servesShotsRaw": "TCM-18-01",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-18-01"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-CAFE",
+      "providerCandidateID": "TCM-SET-CAFE-L12__P01-LS2",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-18-01"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-18"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Cafe corner/window table",
+      "sourceConstraints": "Small table in a corner by the window, seating for two, coffee and a believable patron background zone. A shared environment, not two disconnected close-up sets."
+    },
+    {
+      "candidateID": "TCM-SET-CAFE-L13__P02-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-CAFE-L11-L22\\TCM-SET-CAFE-L13__P02-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L13__P02-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22.zip",
+      "archiveMember": "TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L13__P02-LS1.jpg",
+      "sha256": "ab21170de76c622d80f0fa2acb60e38ff51ba902e6c8000afe683ff20c9f135c",
+      "bytes": 187570,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "-",
+        "note": "P02: wall-side chair centred against the side wall in the corner, window soft at the left edge, near table edge with one cup at the bottom edge (other cup out of frame = OK with note). Blurred warm blob on the far pavement at 8x is a planter/shrub, not a figure. No text, no brand marks. | screener sha256 own (R12), matches BATCH_B2_01_index sha256; manifest row has reference_ids; inspected at 1x and 4-10x crops; PRELIMINARY; maker index id TCM-SET-CAFE-L13__P02",
+        "cardVersion": "TCMSET_B2_CAFE_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-CAFE_card_v001.md sha256:ea71659d818c95d4885d72cc03204e7c13daa54eaa2ad124a831894af4771725",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/SCREENING_ROWS_CAFE_PRELIMINARY.tsv",
+        "sourceSHA256": "05a410019881b6405ebbd04547337d6590c73123279c5eba6e2be6f937eef995",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Close plate on the wall-side chair in the corner, window soft at left, one cup at bottom edge, 75mm feel.",
+        "sourceVsProposal": null,
+        "defectNote": "far chair back not in frame (optional per spec); none else observed",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-CAFE-L13__P02-LS1",
+        "cameraPositionID": "CAFE-P02",
+        "lightState": "CAFE-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "MAPS:L259",
+          "TCMSET_B2_TCM-SET-CAFE_card_v001.md",
+          "slot S03",
+          "img_ref: B2 CAFE-L11"
+        ],
+        "servesShotsRaw": "TCM-18-02",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-18-02"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-CAFE",
+      "providerCandidateID": "TCM-SET-CAFE-L13__P02-LS1",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-18-02"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-18"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Cafe corner/window table",
+      "sourceConstraints": "Small table in a corner by the window, seating for two, coffee and a believable patron background zone. A shared environment, not two disconnected close-up sets."
+    },
+    {
+      "candidateID": "TCM-SET-CAFE-L14__P03-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-CAFE-L11-L22\\TCM-SET-CAFE-L14__P03-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L14__P03-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22.zip",
+      "archiveMember": "TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L14__P03-LS1.jpg",
+      "sha256": "14459f1a189107bf1be5bb8ec935566cfba91f2541dfafd53becc50085be728d",
+      "bytes": 169909,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "-",
+        "note": "P03: room-side chair centred with the counter, pendants and empty tables behind; window wall on the right as the reverse of P01 requires. Note: a second window further along the window wall and a framed picture are blurred, shelf jars unlabelled and unreadable at 4x. No people, reflections, text or brand. | screener sha256 own (R12), matches BATCH_B2_01_index sha256; manifest row has reference_ids; inspected at 1x and 4-10x crops; PRELIMINARY; maker index id TCM-SET-CAFE-L14__P03",
+        "cardVersion": "TCMSET_B2_CAFE_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-CAFE_card_v001.md sha256:ea71659d818c95d4885d72cc03204e7c13daa54eaa2ad124a831894af4771725",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/SCREENING_ROWS_CAFE_PRELIMINARY.tsv",
+        "sourceSHA256": "05a410019881b6405ebbd04547337d6590c73123279c5eba6e2be6f937eef995",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Reverse on the room-side chair with counter, espresso machine, pendants and empty tables soft behind; window frame at right.",
+        "sourceVsProposal": null,
+        "defectNote": "a second window appears behind the chair (extra window vs L11 geography); framed wall pictures (blurred, no readable content); espresso machine fascia blank at zoom",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-CAFE-L14__P03-LS1",
+        "cameraPositionID": "CAFE-P03",
+        "lightState": "CAFE-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "MAPS:L260",
+          "TCMSET_B2_TCM-SET-CAFE_card_v001.md",
+          "slot S04",
+          "img_ref: B2 CAFE-L11"
+        ],
+        "servesShotsRaw": "TCM-18-02",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-18-02"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-CAFE",
+      "providerCandidateID": "TCM-SET-CAFE-L14__P03-LS1",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-18-02"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-18"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Cafe corner/window table",
+      "sourceConstraints": "Small table in a corner by the window, seating for two, coffee and a believable patron background zone. A shared environment, not two disconnected close-up sets."
+    },
+    {
+      "candidateID": "TCM-SET-CAFE-L15__P04-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-CAFE-L11-L22\\TCM-SET-CAFE-L15__P04-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L15__P04-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22.zip",
+      "archiveMember": "TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L15__P04-LS1.jpg",
+      "sha256": "93e15b925fb78238acae07c0ea43db4788db35c4bbd435830db478f9f284ff4f",
+      "bytes": 242312,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "G-POS (P04 camera spec)",
+        "note": "Card P04: 'Camera tight to the window glass at seated eye height, 1 to 1.3 m from the chair nearest the glass, 50 to 65 mm feel, looking back along the window wall into the room: the near chair in close profile position, the glass and its mullion at the near frame edge, the cafe interior ... receding behind the chair.' Image looks OUT through the window at the street with the chair only clipped at the lower-right corner; the interior does not recede behind a near chair. Also only one cup on the table vs the two-cup continuity (writer notes: two coffee cups present from the first frame). Street empty: grey shapes at 8x are a parked scooter/bicycle, no person. Hard rules pass. | screener sha256 own (R12), matches BATCH_B2_01_index sha256; manifest row has reference_ids; inspected at 1x and 4-10x crops; PRELIMINARY; maker index id TCM-SET-CAFE-L15__P04",
+        "cardVersion": "TCMSET_B2_CAFE_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-CAFE_card_v001.md sha256:ea71659d818c95d4885d72cc03204e7c13daa54eaa2ad124a831894af4771725",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/SCREENING_ROWS_CAFE_PRELIMINARY.tsv",
+        "sourceSHA256": "05a410019881b6405ebbd04547337d6590c73123279c5eba6e2be6f937eef995",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Intended camera tight to the glass looking inward; result reads as a three-quarter of the corner table from inside the room, window at left edge.",
+        "sourceVsProposal": null,
+        "defectNote": "WRONG CAMERA vs card: not at the glass, chair not in close profile, near-duplicate of P01 framing; only one cup on table (spec: two cups)",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-CAFE-L15__P04-LS1",
+        "cameraPositionID": "CAFE-P04",
+        "lightState": "CAFE-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "MAPS:L261",
+          "TCMSET_B2_TCM-SET-CAFE_card_v001.md",
+          "slot S05",
+          "img_ref: B2 CAFE-L11"
+        ],
+        "servesShotsRaw": "TCM-18-03",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-18-03"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-CAFE",
+      "providerCandidateID": "TCM-SET-CAFE-L15__P04-LS1",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-18-03"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-18"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Cafe corner/window table",
+      "sourceConstraints": "Small table in a corner by the window, seating for two, coffee and a believable patron background zone. A shared environment, not two disconnected close-up sets."
+    },
+    {
+      "candidateID": "TCM-SET-CAFE-L16__P04-LS2",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-CAFE-L11-L22\\TCM-SET-CAFE-L16__P04-LS2.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L16__P04-LS2.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22.zip",
+      "archiveMember": "TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L16__P04-LS2.jpg",
+      "sha256": "0a5819c7c3bf6f3a6e9f18eeadbcb90b8190648cab4361ebe496dc1335a4d26b",
+      "bytes": 244401,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "G-POS (P04 camera spec)",
+        "note": "Card P04 (same quote as L15): looking back along the window wall into the room with the near chair in close profile. Image is the same outward-through-the-glass framing as L15 (chair clipped lower right), so the P04 camera spec is not met. LS2 overcast reads correctly; street empty, no people, plates or text. Note: cup count differs from L15 within the same pair. | screener sha256 own (R12), matches BATCH_B2_01_index sha256; manifest row has reference_ids; inspected at 1x and 4-10x crops; PRELIMINARY; maker index id TCM-SET-CAFE-L16__P04",
+        "cardVersion": "TCMSET_B2_CAFE_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-CAFE_card_v001.md sha256:ea71659d818c95d4885d72cc03204e7c13daa54eaa2ad124a831894af4771725",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/SCREENING_ROWS_CAFE_PRELIMINARY.tsv",
+        "sourceSHA256": "05a410019881b6405ebbd04547337d6590c73123279c5eba6e2be6f937eef995",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Same framing as L15, overcast relight; two cups.",
+        "sourceVsProposal": null,
+        "defectNote": "inherits L15 camera defect (not at the glass, reads as P01 variant)",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-CAFE-L16__P04-LS2",
+        "cameraPositionID": "CAFE-P04",
+        "lightState": "CAFE-LS2",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "MAPS:L261",
+          "TCMSET_B2_TCM-SET-CAFE_card_v001.md",
+          "slot S06",
+          "img_ref: B2 CAFE-L15"
+        ],
+        "servesShotsRaw": "TCM-18-03",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-18-03"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-CAFE",
+      "providerCandidateID": "TCM-SET-CAFE-L16__P04-LS2",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-18-03"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-18"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Cafe corner/window table",
+      "sourceConstraints": "Small table in a corner by the window, seating for two, coffee and a believable patron background zone. A shared environment, not two disconnected close-up sets."
+    },
+    {
+      "candidateID": "TCM-SET-CAFE-L17__P05-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-CAFE-L11-L22\\TCM-SET-CAFE-L17__P05-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L17__P05-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22.zip",
+      "archiveMember": "TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L17__P05-LS1.jpg",
+      "sha256": "95763a2f3080334b33f523046403d45e6028adb464c7487fa24941994fe72002",
+      "bytes": 245494,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "ADVISORY",
+        "hardTrait": "-",
+        "note": "P05: standing height wide, both chairs and table in the lower two-thirds, two cups, window left, route to the entrance door at right. Advisory: through the door glass a small red blob beside a pale rounded shape across the street (about 10x6 px native) is ambiguous at 6-10x: it could be a seated figure in red at a far cafe table or a red object; it does not resolve as a person. Note: the door sits beside the counter vs L11 layout (minor). No text, no brand. | screener sha256 own (R12), matches BATCH_B2_01_index sha256; manifest row has reference_ids; inspected at 1x and 4-10x crops; PRELIMINARY; maker index id TCM-SET-CAFE-L17__P05",
+        "cardVersion": "TCMSET_B2_CAFE_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-CAFE_card_v001.md sha256:ea71659d818c95d4885d72cc03204e7c13daa54eaa2ad124a831894af4771725",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/SCREENING_ROWS_CAFE_PRELIMINARY.tsv",
+        "sourceSHA256": "05a410019881b6405ebbd04547337d6590c73123279c5eba6e2be6f937eef995",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Standing-height loose medium, both chairs and table low in frame with headroom, window left, glazed entrance door with transom at right beyond the counter.",
+        "sourceVsProposal": null,
+        "defectNote": "CHECK: small reddish blur across the street through the door glass could read as a distant figure at 3x (ambiguous, probably street furniture); counter placement shifts vs L11 (door appears beside counter)",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-CAFE-L17__P05-LS1",
+        "cameraPositionID": "CAFE-P05",
+        "lightState": "CAFE-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "MAPS:L262",
+          "TCMSET_B2_TCM-SET-CAFE_card_v001.md",
+          "slot S07",
+          "img_ref: B2 CAFE-L11"
+        ],
+        "servesShotsRaw": "TCM-18-04",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-18-04"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-CAFE",
+      "providerCandidateID": "TCM-SET-CAFE-L17__P05-LS1",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-18-04"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-18"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Cafe corner/window table",
+      "sourceConstraints": "Small table in a corner by the window, seating for two, coffee and a believable patron background zone. A shared environment, not two disconnected close-up sets."
+    },
+    {
+      "candidateID": "TCM-SET-CAFE-L18__P06-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-CAFE-L11-L22\\TCM-SET-CAFE-L18__P06-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L18__P06-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22.zip",
+      "archiveMember": "TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L18__P06-LS1.jpg",
+      "sha256": "e6b8f21b8ccd9aa3ae6ddfb3ad4c2b1990dd554b524a3766e5c0b2d4b5e3f9c0",
+      "bytes": 280546,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "ADVISORY",
+        "hardTrait": "-",
+        "note": "P06: corner table, counter and empty patron zone in view; street through the windows empty, no people. Advisory: Card family check 'Cups and machines without brand marks.' The espresso machine fascia carries a round swirl badge and the black box beside it a logo-like icon; generic, not a recognisable real maker emblem at 6x (plain generic badge = ADVISORY per V_1 ruling). Note: camera reads mid-room rather than 'Standing eye height just inside the entrance door, 24 to 28 mm' (soft, minor). | screener sha256 own (R12), matches BATCH_B2_01_index sha256; manifest row has reference_ids; inspected at 1x and 4-10x crops; PRELIMINARY; maker index id TCM-SET-CAFE-L18__P06",
+        "cardVersion": "TCMSET_B2_CAFE_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-CAFE_card_v001.md sha256:ea71659d818c95d4885d72cc03204e7c13daa54eaa2ad124a831894af4771725",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/SCREENING_ROWS_CAFE_PRELIMINARY.tsv",
+        "sourceSHA256": "05a410019881b6405ebbd04547337d6590c73123279c5eba6e2be6f937eef995",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Wide of the room: corner table at window left, counter with espresso machine at right, empty tables between.",
+        "sourceVsProposal": null,
+        "defectNote": "camera reads from mid-room rather than just inside the entrance; a small black box beside the espresso machine carries a logo-like icon at 3x (no legible text) - blank it",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-CAFE-L18__P06-LS1",
+        "cameraPositionID": "CAFE-P06",
+        "lightState": "CAFE-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "MAPS:L263",
+          "TCMSET_B2_TCM-SET-CAFE_card_v001.md",
+          "slot S08",
+          "img_ref: B2 CAFE-L11"
+        ],
+        "servesShotsRaw": "exploratory",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-CAFE",
+      "providerCandidateID": "TCM-SET-CAFE-L18__P06-LS1",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-18"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Cafe corner/window table",
+      "sourceConstraints": "Small table in a corner by the window, seating for two, coffee and a believable patron background zone. A shared environment, not two disconnected close-up sets."
+    },
+    {
+      "candidateID": "TCM-SET-CAFE-L19__P07-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-CAFE-L11-L22\\TCM-SET-CAFE-L19__P07-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L19__P07-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22.zip",
+      "archiveMember": "TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L19__P07-LS1.jpg",
+      "sha256": "e2f031f31ed50d0ea61d6d6ca0648f06448ada1966381c533fd50ac8c476e7c7",
+      "bytes": 195346,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "-",
+        "note": "P07: table-top close, two cups, raking window light, glass soft behind, no hands. A car outside is a heavy blur with no plate or badge resolvable at 8x. No text, no brand. | screener sha256 own (R12), matches BATCH_B2_01_index sha256; manifest row has reference_ids; inspected at 1x and 4-10x crops; PRELIMINARY; maker index id TCM-SET-CAFE-L19__P07",
+        "cardVersion": "TCMSET_B2_CAFE_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-CAFE_card_v001.md sha256:ea71659d818c95d4885d72cc03204e7c13daa54eaa2ad124a831894af4771725",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/SCREENING_ROWS_CAFE_PRELIMINARY.tsv",
+        "sourceSHA256": "05a410019881b6405ebbd04547337d6590c73123279c5eba6e2be6f937eef995",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Two cups and saucers insert, low raking sun across the table, window and street soft behind, 90mm feel.",
+        "sourceVsProposal": null,
+        "defectNote": "none observed (no hands; cups plain)",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-CAFE-L19__P07-LS1",
+        "cameraPositionID": "CAFE-P07",
+        "lightState": "CAFE-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "MAPS:L264",
+          "TCMSET_B2_TCM-SET-CAFE_card_v001.md",
+          "slot S09",
+          "img_ref: B2 CAFE-L11"
+        ],
+        "servesShotsRaw": "exploratory",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-CAFE",
+      "providerCandidateID": "TCM-SET-CAFE-L19__P07-LS1",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-18"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Cafe corner/window table",
+      "sourceConstraints": "Small table in a corner by the window, seating for two, coffee and a believable patron background zone. A shared environment, not two disconnected close-up sets."
+    },
+    {
+      "candidateID": "TCM-SET-CAFE-L20__P08-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-CAFE-L11-L22\\TCM-SET-CAFE-L20__P08-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L20__P08-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22.zip",
+      "archiveMember": "TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L20__P08-LS1.jpg",
+      "sha256": "c92c3b954fafe0dbfa2f8087b025499d9349db08a7a65aaafc00fa45c4c761cb",
+      "bytes": 268826,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "ADVISORY",
+        "hardTrait": "-",
+        "note": "P08 (exploratory): window view to the street, row houses, trees, three parked cars, no people on pavement or steps at 2-6x. Advisory: slot check 'no people, no legible signs or plates' / family 'no cars with plates': the cars carry blank pale plate rectangles (no characters at 6-8x) and the right car has a faint unresolvable grille mark; nothing legible, no real emblem. No text elsewhere. | screener sha256 own (R12), matches BATCH_B2_01_index sha256; manifest row has reference_ids; inspected at 1x and 4-10x crops; PRELIMINARY; maker index id TCM-SET-CAFE-L20__P08",
+        "cardVersion": "TCMSET_B2_CAFE_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-CAFE_card_v001.md sha256:ea71659d818c95d4885d72cc03204e7c13daa54eaa2ad124a831894af4771725",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/SCREENING_ROWS_CAFE_PRELIMINARY.tsv",
+        "sourceSHA256": "05a410019881b6405ebbd04547337d6590c73123279c5eba6e2be6f937eef995",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Implied POV out of the window: frame, mullion, sill with potted plant, sunny tree-lined street with parked cars.",
+        "sourceVsProposal": null,
+        "defectNote": "right-hand car shows a white front plate shape (not legible at 3x) and a grille badge shape - advisory; no people observed",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-CAFE-L20__P08-LS1",
+        "cameraPositionID": "CAFE-P08",
+        "lightState": "CAFE-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "MAPS:L265",
+          "TCMSET_B2_TCM-SET-CAFE_card_v001.md",
+          "slot S10",
+          "img_ref: B2 CAFE-L11"
+        ],
+        "servesShotsRaw": "exploratory",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-CAFE",
+      "providerCandidateID": "TCM-SET-CAFE-L20__P08-LS1",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-18"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Cafe corner/window table",
+      "sourceConstraints": "Small table in a corner by the window, seating for two, coffee and a believable patron background zone. A shared environment, not two disconnected close-up sets."
+    },
+    {
+      "candidateID": "TCM-SET-CAFE-L21__P09-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-CAFE-L11-L22\\TCM-SET-CAFE-L21__P09-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L21__P09-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22.zip",
+      "archiveMember": "TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L21__P09-LS1.jpg",
+      "sha256": "e6a05a471c6875360db2e09981b3b8446988867a6c1824d1a0023aa75baf3b1a",
+      "bytes": 248744,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "QUALITY-FAIL",
+        "hardTrait": "G-PEOPLE (family 6: no people/figures through glass)",
+        "note": "Card family check: 'the city street outside is EMPTY - no pedestrians'; V_1 ruling: windows or glass showing people = QUALITY-FAIL. Through the door glass, left of the tree at about x960-1000 y280-330 (native), a small dark standing figure with a pale head and legs resolves at 6x (about 8x25 px native); a bluish cluster behind the tree may be further seated figures. Small and soft, but it reads as a pedestrian on zoom. Rest of frame (door, handle, room) clean: no text, no brand. Reroll candidate. | screener sha256 own (R12), matches BATCH_B2_01_index sha256; manifest row has reference_ids; inspected at 1x and 4-10x crops; PRELIMINARY; maker index id TCM-SET-CAFE-L21__P09",
+        "cardVersion": "TCMSET_B2_CAFE_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-CAFE_card_v001.md sha256:ea71659d818c95d4885d72cc03204e7c13daa54eaa2ad124a831894af4771725",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/SCREENING_ROWS_CAFE_PRELIMINARY.tsv",
+        "sourceSHA256": "05a410019881b6405ebbd04547337d6590c73123279c5eba6e2be6f937eef995",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Route from the corner table area across the room to the glazed entrance door, counter at right.",
+        "sourceVsProposal": null,
+        "defectNote": "CHECK: faint dark vertical blur left of the tree trunk through the door glass could read as a distant figure at 3x (ambiguous); none else",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-CAFE-L21__P09-LS1",
+        "cameraPositionID": "CAFE-P09",
+        "lightState": "CAFE-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "MAPS:L266",
+          "TCMSET_B2_TCM-SET-CAFE_card_v001.md",
+          "slot S11",
+          "img_ref: B2 CAFE-L17"
+        ],
+        "servesShotsRaw": "exploratory",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-CAFE",
+      "providerCandidateID": "TCM-SET-CAFE-L21__P09-LS1",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-18"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Cafe corner/window table",
+      "sourceConstraints": "Small table in a corner by the window, seating for two, coffee and a believable patron background zone. A shared environment, not two disconnected close-up sets."
+    },
+    {
+      "candidateID": "TCM-SET-CAFE-L22__P10-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-CAFE-L11-L22\\TCM-SET-CAFE-L22__P10-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L22__P10-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-L11-L22.zip",
+      "archiveMember": "TCM-SET-CAFE-L11-L22/TCM-SET-CAFE-L22__P10-LS1.jpg",
+      "sha256": "5beb54c4cfdd192afdfeaf0505ea9e5f5c7763c5006e3c884b45dd8ca5214eb2",
+      "bytes": 242455,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "-",
+        "note": "P10: reverse from the corner behind the table: counter, espresso machine, grinder, shelves, pendant, empty tables, window grazing the right edge. Machine fascia and grinder are blank at 3x; jars and tins unlabelled. No people, reflections, text or brand. | screener sha256 own (R12), matches BATCH_B2_01_index sha256; manifest row has reference_ids; inspected at 1x and 4-10x crops; PRELIMINARY; maker index id TCM-SET-CAFE-L22__P10",
+        "cardVersion": "TCMSET_B2_CAFE_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-CAFE_card_v001.md sha256:ea71659d818c95d4885d72cc03204e7c13daa54eaa2ad124a831894af4771725",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/SCREENING_ROWS_CAFE_PRELIMINARY.tsv",
+        "sourceSHA256": "05a410019881b6405ebbd04547337d6590c73123279c5eba6e2be6f937eef995",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Reverse from the corner over the table and chair backs into the room: counter, espresso machine, pendants, empty tables; window grazes right edge.",
+        "sourceVsProposal": null,
+        "defectNote": "handedness: window at right edge is consistent with a reverse from the corner; none else observed",
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-CAFE-L22__P10-LS1",
+        "cameraPositionID": "CAFE-P10",
+        "lightState": "CAFE-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "MAPS:L267",
+          "TCMSET_B2_TCM-SET-CAFE_card_v001.md",
+          "slot S12",
+          "img_ref: B2 CAFE-L11"
+        ],
+        "servesShotsRaw": "exploratory",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-CAFE-L11-L22/MAKER_BATCH_B2_01_index.tsv",
+        "sourceSHA256": "24a52fba59b7863099211126849d0fd023f5900064cf6fdd12a4ee0bccaa5b84",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-CAFE",
+      "providerCandidateID": "TCM-SET-CAFE-L22__P10-LS1",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-18"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Cafe corner/window table",
+      "sourceConstraints": "Small table in a corner by the window, seating for two, coffee and a believable patron background zone. A shared environment, not two disconnected close-up sets."
+    }
+  ],
+  "verification": {
+    "zipCRC": true,
+    "archiveHash": true,
+    "safeMemberPaths": true,
+    "noSymlinks": true,
+    "noEncryptedMembers": true,
+    "uniqueCandidateIDs": true,
+    "indexedBytesAndHashes": true,
+    "JPEGDecode": true,
+    "humanReviewOrAcceptanceCreated": false
+  },
+  "note": "Technical receipt for unreviewed originals. It is a completed site intake only when its exact hash is pinned by the required lane aggregate. Provider/V-team screening remains attributed preliminary evidence, never a human verdict or acceptance."
+}

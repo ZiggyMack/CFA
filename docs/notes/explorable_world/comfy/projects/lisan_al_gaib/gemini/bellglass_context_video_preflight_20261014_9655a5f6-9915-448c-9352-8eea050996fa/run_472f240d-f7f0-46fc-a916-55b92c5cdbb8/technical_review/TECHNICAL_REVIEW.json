@@ -1,0 +1,347 @@
+{
+  "schema": "cfa-local-video-technical-review-v1",
+  "checkedAtUTC": "2026-10-15T00:46:23.962711+00:00",
+  "source": {
+    "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/BELLGLASS_CONTEXT_001_original.mp4",
+    "bytes": 5798077,
+    "sha256": "0597c4efef067280dab2ef1abfa06e313d06893187ce9ae1d9d436f75c28392b"
+  },
+  "sourceUnchanged": true,
+  "scope": "Local-file verification, full-file decode, audio extraction and still-frame indexing only; no generation, network, browser, upload, model, source or canonical changes.",
+  "metadata": {
+    "method": "Saved exact FFmpeg 7.1 input/stream stderr log, strict full-file decoding, and standard-library MP4 duration/sample/edit table parsing. No ffprobe executable was available.",
+    "inputLog": {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/ffmpeg_metadata.stderr.log",
+      "bytes": 1908,
+      "sha256": "31340568968d6a08e839c9d9e2eeb19706591b560946243c488f4cc9b3161bce"
+    },
+    "container": "MP4",
+    "encoderTag": "Google",
+    "containerDurationRoundedInFFmpegSeconds": 10.01,
+    "mp4MovieHeader": {
+      "timescale": 1000,
+      "durationTicks": 10006,
+      "durationSeconds": 10.006,
+      "headerVersion": 0
+    },
+    "trackTiming": [
+      {
+        "handler": "vide",
+        "mediaHeader": {
+          "timescale": 12288,
+          "durationTicks": 122880,
+          "durationSeconds": 10.0,
+          "headerVersion": 0
+        },
+        "timeToSampleCount": 240,
+        "timeToSampleDurationTicks": 122880,
+        "timeToSampleDurationSeconds": 10.0,
+        "sampleDeltaEntries": [
+          {
+            "sampleCount": 240,
+            "sampleDelta": 512
+          }
+        ],
+        "editList": [
+          {
+            "segmentDurationMovieTicks": 10000,
+            "segmentDurationSeconds": 10.0,
+            "mediaStartTrackTicks": 1024,
+            "rateInteger": 1,
+            "rateFraction": 0
+          }
+        ]
+      },
+      {
+        "handler": "soun",
+        "mediaHeader": {
+          "timescale": 48000,
+          "durationTicks": 481280,
+          "durationSeconds": 10.026666666666667,
+          "headerVersion": 0
+        },
+        "timeToSampleCount": 470,
+        "timeToSampleDurationTicks": 481280,
+        "timeToSampleDurationSeconds": 10.026666666666667,
+        "sampleDeltaEntries": [
+          {
+            "sampleCount": 470,
+            "sampleDelta": 1024
+          }
+        ],
+        "editList": [
+          {
+            "segmentDurationMovieTicks": 10005,
+            "segmentDurationSeconds": 10.005,
+            "mediaStartTrackTicks": 1024,
+            "rateInteger": 1,
+            "rateFraction": 0
+          }
+        ]
+      }
+    ],
+    "video": {
+      "codec": "H.264 High",
+      "width": 1280,
+      "height": 720,
+      "pixelFormat": "yuv420p",
+      "progressive": true,
+      "framesPerSecond": 24,
+      "decodedFrameCount": 240,
+      "decodedVideoDurationSeconds": 10.0,
+      "timeBase": "1/12288"
+    },
+    "audio": {
+      "present": true,
+      "codec": "AAC LC",
+      "channels": 2,
+      "channelLayout": "stereo",
+      "sampleRateHz": 48000,
+      "decoderSampleFormat": "fltp",
+      "nominalBitrateKbps": 128
+    }
+  },
+  "decodeHealth": {
+    "method": "FFmpeg -xerror -err_detect explode; mapped complete video and any audio to null output.",
+    "exitCode": 0,
+    "stderrBytes": 0,
+    "decodeErrorsObserved": 0,
+    "warningMessagesObserved": 0,
+    "finalProgress": "end",
+    "decodedFrames": 240,
+    "dupFrames": 0,
+    "dropFrames": 0,
+    "finalOutputTimeSeconds": 10.0,
+    "limits": "Successful technical decode does not establish intended action, sound content, continuity or creative acceptance.",
+    "stderrLog": {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/ffmpeg_full_decode.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "progressLog": {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/ffmpeg_full_decode.stdout.log",
+      "bytes": 369,
+      "sha256": "3f19bcf678e7f58ad3424218c7792942d708757b8d1077cfd4f6baa1b7851f0d"
+    }
+  },
+  "audioExtraction": {
+    "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/BELLGLASS_audio_f32.wav",
+    "bytes": 3842140,
+    "sha256": "c82853a3789025a63ed6dd69b560da29c3a1ef6129ee97194c58e5f3f93dedcd",
+    "formatTag": 3,
+    "channels": 2,
+    "sampleRateHz": 48000,
+    "byteRate": 384000,
+    "blockAlign": 8,
+    "bitsPerSample": 32,
+    "dataBytes": 3842048,
+    "sampleFrames": 480256,
+    "durationSeconds": 10.005333333333333,
+    "codec": "pcm_f32le",
+    "preservation": "Uncompressed float32 WAV of the decoded AAC stream; no resampling or channel remix. Original AAC compression cannot be undone.",
+    "ffmpegExitCode": 0,
+    "listeningStatus": "unlistened",
+    "audibleContentAssessment": "unknown",
+    "barkingConfirmed": null,
+    "speechOrTranscriptionAssessment": "not_performed",
+    "methodLimit": "No documented actual local audio-understanding/listening tool was available or used. Audio presence and decoded samples do not establish audible barking.",
+    "derivedOutputRename": {
+      "fromFilename": "BELLGLASS_CONTEXT_001_decoded_original_audio_f32.wav",
+      "toFilename": "BELLGLASS_audio_f32.wav",
+      "reason": "Shortened only the newly derived WAV filename to avoid the Windows 260-character path limit; exact PCM file bytes retained.",
+      "beforeAndAfterSHA256": "c82853a3789025a63ed6dd69b560da29c3a1ef6129ee97194c58e5f3f93dedcd"
+    }
+  },
+  "frames": [
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/BELLGLASS_CONTEXT_001_frame_00p000s.png",
+      "bytes": 1639295,
+      "sha256": "f91ae5afdf4e786520edb00c188747c0d2733008bf8be7c78f567213f46cd01e",
+      "requestedSeconds": 0,
+      "actualPresentationSeconds": 0.0,
+      "frameIndex": 0,
+      "width": 1280,
+      "height": 720,
+      "wholeFrame": true,
+      "pixelDecodeVerified": true
+    },
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/BELLGLASS_CONTEXT_001_frame_02p000s.png",
+      "bytes": 1795897,
+      "sha256": "df72c1fc9b272ebac9d314fc9ce6afcb35732347c745646e68dcf4b996b3ba31",
+      "requestedSeconds": 2,
+      "actualPresentationSeconds": 2.0,
+      "frameIndex": 48,
+      "width": 1280,
+      "height": 720,
+      "wholeFrame": true,
+      "pixelDecodeVerified": true
+    },
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/BELLGLASS_CONTEXT_001_frame_04p000s.png",
+      "bytes": 1775637,
+      "sha256": "5573295d760764006fa712eb62bdb98c9117350d2617327811d883cc622c5ddd",
+      "requestedSeconds": 4,
+      "actualPresentationSeconds": 4.0,
+      "frameIndex": 96,
+      "width": 1280,
+      "height": 720,
+      "wholeFrame": true,
+      "pixelDecodeVerified": true
+    },
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/BELLGLASS_CONTEXT_001_frame_06p000s.png",
+      "bytes": 1756303,
+      "sha256": "5cc51c09ce72643cb423959b98acb9ff3c86818683184e4570cb62b1d2cdc18f",
+      "requestedSeconds": 6,
+      "actualPresentationSeconds": 6.0,
+      "frameIndex": 144,
+      "width": 1280,
+      "height": 720,
+      "wholeFrame": true,
+      "pixelDecodeVerified": true
+    },
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/BELLGLASS_CONTEXT_001_frame_08p000s.png",
+      "bytes": 1678064,
+      "sha256": "ed3db0a7a0d262aeeec6d384fa3e119137749e7b5f7cb9c2280e28d4cc706c91",
+      "requestedSeconds": 8,
+      "actualPresentationSeconds": 8.0,
+      "frameIndex": 192,
+      "width": 1280,
+      "height": 720,
+      "wholeFrame": true,
+      "pixelDecodeVerified": true
+    },
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/BELLGLASS_CONTEXT_001_frame_09p500s.png",
+      "bytes": 1613052,
+      "sha256": "920d7f9c951eba889ccec35419946591c18589dfdd76ec320225e265023f140a",
+      "requestedSeconds": 9.5,
+      "actualPresentationSeconds": 9.5,
+      "frameIndex": 228,
+      "width": 1280,
+      "height": 720,
+      "wholeFrame": true,
+      "pixelDecodeVerified": true
+    }
+  ],
+  "contactSheet": {
+    "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/BELLGLASS_CONTEXT_001_contact_sheet.png",
+    "bytes": 2429102,
+    "sha256": "b53f578d77ee0081d8262ec13db602aef7f4c2ced0fb62934710fd93b124190b",
+    "width": 1984,
+    "height": 836,
+    "orderSeconds": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      9.5
+    ],
+    "layout": "3 columns by 2 rows, left-to-right then top-to-bottom; actual timestamps labeled below each cell.",
+    "method": "Pillow labeled 640x360 thumbnails of the six unmodified extracted 1280x720 full-frame PNGs; aspect ratio and complete scene retained.",
+    "visualJudgment": "not_graded; parent owns visual result review"
+  },
+  "commands": {
+    "audioExtraction": [
+      "D:/Documents/CFA/.cache/hon_dolo_i2v_20261004/python_packages/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+      "-nostdin",
+      "-n",
+      "-hide_banner",
+      "-nostats",
+      "-loglevel",
+      "info",
+      "-i",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\gemini\\bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa\\run_472f240d-f7f0-46fc-a916-55b92c5cdbb8\\BELLGLASS_CONTEXT_001_original.mp4",
+      "-map",
+      "0:a:0",
+      "-vn",
+      "-c:a",
+      "pcm_f32le",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\gemini\\bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa\\run_472f240d-f7f0-46fc-a916-55b92c5cdbb8\\technical_review\\BELLGLASS_CONTEXT_001_decoded_original_audio_f32.wav"
+    ],
+    "frameExtraction": [
+      "D:/Documents/CFA/.cache/hon_dolo_i2v_20261004/python_packages/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+      "-nostdin",
+      "-n",
+      "-hide_banner",
+      "-nostats",
+      "-loglevel",
+      "info",
+      "-i",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\gemini\\bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa\\run_472f240d-f7f0-46fc-a916-55b92c5cdbb8\\BELLGLASS_CONTEXT_001_original.mp4",
+      "-map",
+      "0:v:0",
+      "-an",
+      "-vf",
+      "select='eq(n,0)+eq(n,48)+eq(n,96)+eq(n,144)+eq(n,192)+eq(n,228)',showinfo",
+      "-fps_mode",
+      "passthrough",
+      "-frames:v",
+      "6",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\gemini\\bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa\\run_472f240d-f7f0-46fc-a916-55b92c5cdbb8\\technical_review\\frame_sequence_%02d.png"
+    ],
+    "recordingNote": "Extraction commands recovered exactly from the successful invocation after a later Windows long-path read failed. Extraction itself passed; outputs were preserved. Initial metadata and full-decode commands with actual execution timestamps remain in COMMANDS_INITIAL.json."
+  },
+  "rawLogPins": [
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/COMMANDS_INITIAL.json",
+      "bytes": 2375,
+      "sha256": "460dd0f9989f3edd248904a4d5db8332d404271adb67fa74772a1b4590734047"
+    },
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/ffmpeg_audio_extract.stderr.log",
+      "bytes": 1942,
+      "sha256": "3b5c08ee3c95f71cba4b4c5e8127edf8e1b8c6676ffcc1de463e050722619100"
+    },
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/ffmpeg_audio_extract.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/ffmpeg_frame_extract.stderr.log",
+      "bytes": 4773,
+      "sha256": "43349235cb32707c3756f8edbd2337a4559493e24aeaa517be647681337972ad"
+    },
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/ffmpeg_frame_extract.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/ffmpeg_full_decode.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/ffmpeg_full_decode.stdout.log",
+      "bytes": 369,
+      "sha256": "3f19bcf678e7f58ad3424218c7792942d708757b8d1077cfd4f6baa1b7851f0d"
+    },
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/ffmpeg_metadata.stderr.log",
+      "bytes": 1908,
+      "sha256": "31340568968d6a08e839c9d9e2eeb19706591b560946243c488f4cc9b3161bce"
+    },
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/ffmpeg_metadata.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/ffmpeg_version.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/technical_review/ffmpeg_version.stdout.log",
+      "bytes": 1479,
+      "sha256": "f0d11220d4773bb6a4338eaee8c3defd2d09dea7f841066656186ae96ec39f7c"
+    }
+  ],
+  "acceptance": "not_inferred",
+  "originalModified": false
+}

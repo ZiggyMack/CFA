@@ -1,0 +1,93 @@
+{
+  "assignmentID": "live-site-browsing-refinements-20261014",
+  "status": "complete",
+  "completedAtUTC": "2026-10-14T02:20:18.202989+00:00",
+  "changes": [
+    "All files starts with Outfits; Working references stays in its dedicated view.",
+    "Major browsing sections collapse independently by project and view; child expansion is retained.",
+    "Mouth count badges removed; all coverage grids open by default with closed child groups.",
+    "Reference guide opens in the reusable readable text/Markdown viewer. Original files remain available; scripts and JSON remain inert raw text.",
+    "Main working BOM cover shown once with a View character cover control;43 Hon and7 Lisan approved mouth-detail entries are in collapsed groups without recategorizing scene uses."
+  ],
+  "sourceFiles": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "bytes": 222148,
+      "sha256": "0484e2d3f58c36944a4ef0dc81067710cb797e2b32e909c5897f46c7321454af"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.css",
+      "bytes": 53653,
+      "sha256": "71f45f0d7af045a0db25f4cf989c5b1c19739c0b86110400be66879769d0920f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_cast_character_hub.cjs",
+      "bytes": 10602,
+      "sha256": "ae52a61f8c43ca77e75d54e764c42f9ec688af004b0649e56010af42a2aa7783"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_reference_validation.cjs",
+      "bytes": 20973,
+      "sha256": "281a1539475c55c75ecc7f1466024db9f7088acfc3e1071bec013ffb92bacd6e"
+    }
+  ],
+  "catalog": {
+    "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+    "bytes": 10619448,
+    "sha256": "75a3b708d3fbea50877d461daa234a2da59b048a5f1f20649a7efb8148834fcc"
+  },
+  "catalogRebuilt": false,
+  "mediaAndReviewSourceEdits": false,
+  "validation": {
+    "compactBrowse": 9,
+    "outfitNavigation": 11,
+    "workingReferences": 9,
+    "tattooCollections": 9,
+    "collectionsNavigation": 11,
+    "castHub": 6,
+    "referenceValidation": 19,
+    "documentReaderRenderedCatalogChecks": 6,
+    "liveCollapseInteractionChecks": "Hon/Lisan collapse/reopen, shared references retained, dedicated-category state independent, Lisan fallback album, child state retained",
+    "readerFormattingAndSafety": "Headings, paragraphs, lists, tables, code, escaped HTML and inert script/JSON paths passed.",
+    "storageWrites": 0,
+    "browserVisualQA": false,
+    "workingBrowseIndependentCheck": "Passed:43Hon/7Lisan mouth details; cover once; exact cover button; chain-bite and both smirk-right search results retained; unchanged source metadata/reviews/storage."
+  },
+  "writerLiveSourceDrift": [
+    {
+      "published": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/DECISIONS_20261012.md",
+        "bytes": 61500,
+        "sha256": "5c15b2557bd11e835a3791eb6ea08935c1ce68a89c867157c76e9bc8126aed60"
+      },
+      "live": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/DECISIONS_20261012.md",
+        "bytes": 65858,
+        "sha256": "5c22461684fcb9fba2021583b0d6c9208f085d85994e95cc5ab51dead642355c"
+      }
+    },
+    {
+      "published": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/START_HERE.txt",
+        "bytes": 19356,
+        "sha256": "0eedc100de5f69fbc0d413cffaa4cdcc8978c680fcb0d91a51d3bf5bb2d8f776"
+      },
+      "live": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/START_HERE.txt",
+        "bytes": 20525,
+        "sha256": "3eb441fd4eae66bfa701de9e17bac22232c2d6722cda8dab4e9b6022d6060bac"
+      }
+    }
+  ],
+  "writerNote": "External author revision changed after last catalog publication. Full writer source-pin test correctly failed. Renderer-only portion passed against published catalog. No automatic re-pin or catalog build performed for these UI edits.",
+  "readOnlyFindings": {
+    "mouthSheets3and5": "Original exact sources remain needs_fixes. CFA Nova targeted mail/intake search found no sent repair request or corrected return. Rejected original16 and separate Lisan fixes are not corrections.",
+    "LFcheeks": "Exact520x240 pixel crop of LFfull at380,180..900,420. Kept existing file/ID/cheek approval; no standalone LF crop relocation performed.",
+    "uploadedPinstripePortrait": "Exact decoded RGB match to HD-DROP-71cad143227a; optional iced-look button correctly maps a different gray-background r4head. No new reference choice inferred."
+  },
+  "queuedSeparateWork": [
+    "c13-patch-c-scoped-source-choice-20261014",
+    "lisan-character-look-reference-board-20261014",
+    "Exact-bound portrait5/5 character/look approvals received from Nova Dot; no local review mutation yet."
+  ]
+}

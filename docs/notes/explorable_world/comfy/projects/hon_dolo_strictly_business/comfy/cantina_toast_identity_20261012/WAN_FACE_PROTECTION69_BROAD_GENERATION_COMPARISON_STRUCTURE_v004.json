@@ -1,0 +1,197 @@
+{
+  "createdAtUTC": "2026-10-13T01:09:49.709809+00:00",
+  "status": "PREPARED_OFFLINE_ONLY_NOT_IMPORTED_NOT_RUN",
+  "baselineExecutedJob": "569bec13-c8d8-4767-bddf-070b6765708b",
+  "baselineEditor": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\WAN_FACE_PROTECTION69_JOB_569bec13_EDITOR_20261012.json",
+  "baselineEditorSHA256": "03368b323fce54349a97abdb1c5d5e8e0144d5edb2cd40a81bc0ab9f5a21a53b",
+  "baselineActualAPI": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\WAN_FACE_PROTECTION69_GENERATION_API_ACTUAL_20261012.json",
+  "baselineActualAPISHA256": "8fb666f7fe99016c9138e19bbb48a6215990494e82c53c74308e44267bd21b17",
+  "baselineFinalProofVerification": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\IDENTITY_JOB_569bec13_RESULT_20261012\\VERIFICATION\\FINAL_PROOF_VERIFICATION.json",
+  "baselineFinalProofVerificationSHA256": "d832da1f9a6a39b5437ea6a383311335abdc6853bfdd7c803d1242fea8f9b1c5",
+  "editorPath": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\WAN_FACE_PROTECTION69_BROAD_GENERATION_COMPARISON_EDITOR_v004_PREPARED.json",
+  "editorSHA256": "8500146b7c286dc35f501bff61a2e78ca8615eeb928bc6913a8244d027241f46",
+  "editorBytes": 94884,
+  "deliberateVariable": "Generation conditioning mask breadth; final preservation mask remains the identical strict protected edit mask.",
+  "explicitDiff": [
+    {
+      "linkID": 93010,
+      "target": "275.mask",
+      "before": [
+        "9006",
+        0
+      ],
+      "after": [
+        "1833034495877259",
+        0
+      ]
+    },
+    {
+      "linkID": 93011,
+      "target": "232.character_mask / expected compiled232:62.character_mask",
+      "before": [
+        "9006",
+        0
+      ],
+      "after": [
+        "1833034495877259",
+        0
+      ]
+    },
+    {
+      "node": 1833034495877259,
+      "outputSlot": 0,
+      "linksAdded": [
+        93010,
+        93011
+      ]
+    },
+    {
+      "node": 9006,
+      "outputSlot": 0,
+      "linksRemoved": [
+        93010,
+        93011
+      ]
+    }
+  ],
+  "hypothesis": "Wan may produce coherent facial identity when conditioned to regenerate the broad parsed and feathered face. The final pixel composite still restores all original content outside the same manually protected edit mask. This separates generation context from final preservation; it does not establish why the baseline produced black windows and success is not guaranteed.",
+  "unchanged": {
+    "all52NodesAndTypes": true,
+    "all61LinkIDsAndTargets": true,
+    "allModes": true,
+    "allWidgetsAndSamplingControls": true,
+    "subgraphDefinitions": true,
+    "allCloudRemoteResourceMetadata": true,
+    "all4ActualAssetBindings": true,
+    "sourceTrimBatchIndex": 6,
+    "sourceFrameRange": [
+      168,
+      236
+    ],
+    "requestedFrames": 69,
+    "width": 768,
+    "height": 432,
+    "fps": 24,
+    "batchSize": 1,
+    "seed": 42,
+    "controlAfterGenerate": "fixed",
+    "steps": 6,
+    "cfg": 1,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "denoise": 1,
+    "modelsAndLoRAStrengths": true,
+    "finalCompositeDestination": "212 unmodified source",
+    "finalCompositeSource": "9002 decoded and post-trim sampler output",
+    "finalCompositeMask": "9006 unchanged strict protection",
+    "parserCategoriesAndFeatherSettings": true,
+    "finalSaveNode": "3365632822813953",
+    "originalSave19Mode": 2,
+    "extraOutputNodesAdded": 0
+  },
+  "structuralValidation": {
+    "outerNodes": 52,
+    "outerLinks": 61,
+    "innerNodes": 6,
+    "bidirectionalLinksAndTypesPass": true,
+    "unchangedSubgraphLinksPass": true,
+    "exactMutationAllowlistPass": true,
+    "predictedCompiledFinalAncestors": 41,
+    "predictedCompiledReachableIDs": [
+      "1",
+      "10",
+      "100",
+      "101",
+      "145",
+      "158",
+      "159",
+      "160",
+      "18",
+      "1833034495877259",
+      "1956377300393751",
+      "2",
+      "20",
+      "21",
+      "212",
+      "23",
+      "232:15",
+      "232:230",
+      "232:57",
+      "232:58",
+      "232:62",
+      "232:63",
+      "275",
+      "3",
+      "3095296998173597",
+      "324475594538284",
+      "3365632822813953",
+      "4",
+      "4085252815952851",
+      "4427161206989702",
+      "4458611668371917",
+      "548748812020021",
+      "60",
+      "9",
+      "9001",
+      "9002",
+      "9003",
+      "9004",
+      "9005",
+      "9006",
+      "99"
+    ],
+    "predictedKSamplerIDs": [
+      "232:63"
+    ],
+    "predictedSaveVideoIDs": [
+      "3365632822813953"
+    ],
+    "predictedGraphCycleFree": true,
+    "generationMaskExpectedCompiled": [
+      "1833034495877259",
+      0
+    ],
+    "backgroundDrawMaskExpectedCompiled": [
+      "1833034495877259",
+      0
+    ],
+    "finalCompositeMaskExpectedCompiled": [
+      "9006",
+      0
+    ]
+  },
+  "officialMaskSemantics": {
+    "meaning": "White at WanAnimateToVideo.character_mask means replacement/unknown; Comfy WAN21.concat_cond inverts it before model conditioning, matching Alibaba replacement-mask inversion. No polarity change.",
+    "sources": [
+      "https://raw.githubusercontent.com/Comfy-Org/ComfyUI/master/comfy_extras/nodes_wan.py",
+      "https://raw.githubusercontent.com/Comfy-Org/ComfyUI/master/comfy/model_base.py",
+      "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/animate.py"
+    ],
+    "cloudServerCodeVersionVerified": false
+  },
+  "baselineFinding": "Correct69-frame24fps2.875-second video, source alignment and audio synchronization, but black editable windows all69 and no intended identity; outside preservation passed lossy-export tolerance.",
+  "successChecks": [
+    "Actor identity visibly appears in editable facial features with no persistent black windows; compare matched frames to failed baseline and actor portrait.",
+    "All69 frames remain temporally stable, with natural seams and no protected tattoo/grill/jewelry/mouth/hair or background replacement introduced by final composite.",
+    "Repeat the existing final-proof verifier for69-frame24fps768x432 count/alignment, audio at lag0, outside-edit preservation and hand/glass contact.",
+    "One final output only; record actual compiled API/editor, job result and usage before deciding whether the comparison passed."
+  ],
+  "cloudCompiledComparisonVerified": false,
+  "comparisonImported": false,
+  "comparisonExecuted": false,
+  "comparisonAccepted": false,
+  "localGraphChangesOnly": true,
+  "cloudRunsByThisPreparation": 0,
+  "allowedComparisonRunsIfRootChooses": 1,
+  "automaticRetries": 0,
+  "requiredBeforeRun": [
+    "Root review of this deliberate change and prior proof QA.",
+    "Import prepared EDITOR through supported UI and export actual compiled API to verify the two intended mask inputs and all unchanged bindings/resources.",
+    "Root decides and submits at most one comparison; no unlimited batch or automatic retry."
+  ],
+  "unknowns": [
+    "Cause of baseline black-window failure remains unresolved.",
+    "Actual Cloud compiled v004 inputs and current node implementation pending UI export.",
+    "Broad-face generated identity, seams and temporal quality are untested."
+  ]
+}

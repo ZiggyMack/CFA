@@ -1,0 +1,24 @@
+# C03 wasteland-highway (Z_11), stage = preliminary
+Refs: refs/FACE-REF-v3.jpg (ref 1, NO breather tube), refs/LOOK-01.jpg (outfit). Requested 22 / Returned 22.
+- C03-01: L2 S4 | worms read as thin snakes, AL missing (a stray mark instead), GAIB horizontal, extra mini worms | preserve: cracked highway, WASTELAND HWY sign, dust convoy
+- C03-02: L3 S4 | worms are plain blobby worms with no open jaws, GAIB garbled on the jaw side | preserve: broken highway, burnt car, telephone poles at dusk
+- C03-03: L4 S5 | GAIB reads GIB, worm jaws closed | preserve: rusted war-rig, skull mile marker, sunrise highway, clear eye sun-disc
+- C03-04: L4 S5 | GAIB reads GAB, AL is garbled, worms look like horns | preserve: night spiked car headlights, broken overpass, eye sun-disc
+- C03-05: L4 S5 | GAIB reads GAB, disc is a sun with no eye, highway asphalt barely visible | preserve: rusted guardrail, toppled billboard, vulture, golden hour
+- C03-06: L4 S5 | GAIB reads GIB, AL drawn as A/L stacked | preserve: storm-cloud two-lane highway with vanishing point, tires, crisp eye sun-disc and open-jawed worms
+- C03-07: L4 S5 | GAB, AL on forehead | preserve: JUNCTION 1 MILE sign, abandoned motorbike, dawn mist, crisp eye disc
+- C03-08: L4 S5 | GAB, slight stubble | preserve: collapsed bridge, incoming dust storm, open-jawed worms, eye disc
+- C03-09: L5 S5 | AL high with an extra dot, slight teeth showing | preserve: full vertical GAIB, spiked war-car convoy, eye disc
+- C03-10: L3 S5 | GAB, AL garbled, stray face marks | preserve: ruined TOLL booth and B-2 gantry, sunset
+- C03-11: L4 S5 | GAB, extra small tattoos below the disc | preserve: blue-hour overturned tanker, burning drum, smoke
+- C03-12: L4 S5 | GAB | preserve: mesa highway vanishing point, golden hour, lone buggy, clean worms and eye disc
+- C03-13: L3 S5 | AL garbled, eyes paler blue, extra mini worms under the disc, the sign reads SIETCH TABR (Dune nod) | preserve: sand-buried highway, EXIT 12 sign, streetlights
+- C03-14: L3 S5 | GAB, worms are plain wavy snakes with no jaws | preserve: car-door and barbed-wire roadblock, skull totems, harsh sun
+- C03-15: L4 S5 | eyes paler blue, AL small | preserve: full vertical GAIB, night highway, war-rig with amber lights, roadside lamp
+- C03-16: L3 S5 | GAB, worms are thin and jawless | preserve: red dust wall swallowing highway and power lines
+- C03-17: L3 S5 | GAB, AL garbled, eyes paler | preserve: GAS pump, DINER sign, cracked highway at golden hour
+- C03-18: L4 S5 | GAB | preserve: hooded, jackknifed semi trailer, crows on guardrail, crisp worms and eye disc
+- C03-19: L4 S5 | GIB, AL high, cobra-like worm heads | preserve: flame-painted pursuit car, dust, highway
+- C03-20: L3 S5 | GAB, AL garbled, one worm only | preserve: WATER 50 MI sign, cattle skulls, cracked road at dusk
+- C03-21: L4 S5 | GAB, AL high | preserve: night convoy headlights, burning barrel
+- C03-22: L4 S4 | GAB, worms less open-jawed | preserve: collapsed overpass, orange dust sky

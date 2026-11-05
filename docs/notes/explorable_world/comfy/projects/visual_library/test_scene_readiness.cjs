@@ -176,7 +176,9 @@ async function main() {
 
   const handoff=clone(api.shotHandoffPayload()), bound=handoff.items.find(i=>i.id===frame.id), legacy=handoff.items.find(i=>i.id===otherFrame.id);
   assert(bound && legacy,'Both plans remain exportable');
-  assert.equal(bound.handoffPurpose,'production_target','Explicit suitable scene binding can target production');
+  assert.equal(bound.handoffPurpose,'planning_or_repair','Human-ready scene remains planning-only until declared technical validation passes');
+  assert.equal(bound.sceneReadiness[0].productionEligible,true,'Existing human readiness gate is preserved');
+  assert.equal(bound.sceneReadiness[0].technicalValidation.technicalReady,false,'No declared scopes cannot produce technical readiness');
   assert.equal(legacy.handoffPurpose,'planning_or_repair','Unbound legacy plan remains planning-only');
   assert(Array.isArray(bound.sceneReadiness) && bound.sceneReadiness.length===1,'Only explicitly bound scene controls reference handoff');
   assert(Array.isArray(handoff.scenes) && handoff.scenes.some(s=>s.shotID===shot.id),'Handoff carries stable scene records and gates');

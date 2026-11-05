@@ -1,0 +1,635 @@
+{
+  "format": "cfa-shot-plan-count-audit-v1",
+  "auditedAtUTC": "2026-10-14T21:08:03.384862+00:00",
+  "scope": "Read-only saved-file and published-commit comparison. Does not read or change live browser/session state.",
+  "sources": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+      "bytes": 10808134,
+      "sha256": "c8035de3a1d87fe7d595751115c5807c1381a0b381d969e8d5cfbca0dbb18a5a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "bytes": 241961,
+      "sha256": "794059ce263eeab7d5a41203498aae60745ac7b036fbcdae6f3436ab0cddc41a"
+    },
+    {
+      "path": "apps/creative_studio/library/mission_control.json",
+      "bytes": 7365592,
+      "sha256": "3e2a3f92d8d841a6a50edcd3e5c93a88692c7ea47891756f86a7b33f823e3317"
+    },
+    {
+      "path": "apps/creative_studio/library/catalog.json",
+      "bytes": 1354507,
+      "sha256": "9a1bf6828f37fce0a543cca7553cd81d0f6ddc0d885acf715b1e5e301fc478ba"
+    },
+    {
+      "path": "apps/creative_studio/library_helpers.py",
+      "bytes": 37011,
+      "sha256": "63e28a62ef9bb8e4a0bad87ad5b1068bf6342078f67c6b3dc9bb89c57be53102"
+    },
+    {
+      "path": "apps/creative_studio/mission_view.py",
+      "bytes": 11587,
+      "sha256": "9d03dcabe82eda350c5b1dcc880864d9d629757ee00a7856faf9f19a4f250c7e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "bytes": 204969,
+      "sha256": "b37518b802a24d141a64933d13f61f5aad6462de9874f9a79319f26cfa0aa566"
+    }
+  ],
+  "publishedCommit": "d0a41b177829b2071c39ff606864ff8e10af74f0",
+  "publishedFileVerification": [
+    {
+      "path": "apps/creative_studio/library/mission_control.json",
+      "commitSHA256": "3e2a3f92d8d841a6a50edcd3e5c93a88692c7ea47891756f86a7b33f823e3317",
+      "currentFileSHA256": "3e2a3f92d8d841a6a50edcd3e5c93a88692c7ea47891756f86a7b33f823e3317",
+      "bytesMatchCommit": true
+    },
+    {
+      "path": "apps/creative_studio/library_helpers.py",
+      "commitSHA256": "63e28a62ef9bb8e4a0bad87ad5b1068bf6342078f67c6b3dc9bb89c57be53102",
+      "currentFileSHA256": "63e28a62ef9bb8e4a0bad87ad5b1068bf6342078f67c6b3dc9bb89c57be53102",
+      "bytesMatchCommit": true
+    },
+    {
+      "path": "apps/creative_studio/mission_view.py",
+      "commitSHA256": "9d03dcabe82eda350c5b1dcc880864d9d629757ee00a7856faf9f19a4f250c7e",
+      "currentFileSHA256": "9d03dcabe82eda350c5b1dcc880864d9d629757ee00a7856faf9f19a4f250c7e",
+      "bytesMatchCommit": true
+    }
+  ],
+  "snapshotMetadata": {
+    "schema": "cfa-mission-control-snapshot-v1",
+    "generatedAtUTC": "2026-10-14T05:47:44.464385+00:00",
+    "sourceCatalog": {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+      "sha256": "4e46f62bcf1dd00586ca3d26cca45a7ec5e8417f748f967b2033f7986ba8e11a"
+    },
+    "purpose": "Saved local index state for Ziggy’s Corner; not a live or two-way review sync.",
+    "unavailableLinks": [
+      {
+        "assetID": "ee3f7e84-462d-41e5-b8c2-0ea1d9624aa1",
+        "reason": "Reference is absent from the source catalog"
+      }
+    ]
+  },
+  "counts": {
+    "savedPlanRecords": 22,
+    "visibleGlobal": 20,
+    "visibleByProject": {
+      "hon": 19,
+      "unassigned": 1
+    },
+    "hiddenSavedPlans": 2
+  },
+  "plans": [
+    {
+      "assetID": "GEM-2E361055",
+      "sha256": "fe4100afa5185a9d794f53744f18ef1fe144724a1e7b4cf942b3efa3418035ca",
+      "title": "Cantina toast",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_review_20261007/review_copies/performance/gemini_generated_video_2e361055.mp4",
+      "reviewStatus": "keep",
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "requested_bounded_test",
+      "destinations": [
+        "ComfyUI"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "GEM-5A115C59",
+      "sha256": "854dd279179300173f89339e707c326e7a48cb594cc52f6879229e4d45dc395e",
+      "title": "Silver jacket city/car/action montage A",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_review_20261007/review_copies/action/gemini_generated_video_5a115c59.mp4",
+      "reviewStatus": "keep",
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "Flow"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "GEM-92EF6FD7",
+      "sha256": "4f6933adccef283d48659d52837907c129bf8822682c47a943677c81fdd587c9",
+      "title": "Hooded desert and cockpit character",
+      "project": "unassigned",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/00_Unassigned_Gemini/gemini_generated_video_92ef6fd7.mp4",
+      "reviewStatus": "needs_fixes",
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "Grok"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "GEM-97D0B65E",
+      "sha256": "fe3154c0b727d80909eae9d8ab2c4b42889643d577bbdfb18123c4d23cef695d",
+      "title": "Silver jacket city/car/action montage B",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_review_20261007/review_copies/action/gemini_generated_video_97d0b65e.mp4",
+      "reviewStatus": "remove",
+      "archived": true,
+      "visible": false,
+      "visibilityReasons": [
+        "asset_archived",
+        "review_marked_for_removal"
+      ],
+      "shotPlanStatus": "superseded",
+      "destinations": [],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": false
+    },
+    {
+      "assetID": "HD-B-b465a10fd62e",
+      "sha256": "b465a10fd62ee8936c25a2c95032485efecc2f3b8fe41e8f2aab14260f1a973a",
+      "title": "VIS-HD-33 · Lip Lick · v003",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/b465a10fd62e__VIS-HD-33_LIP-LICK.jpg",
+      "reviewStatus": "keep",
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "Gemini",
+        "Flow"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "HD-B-d22e8c910d3d",
+      "sha256": "d22e8c910d3d1e4288bc81014c90c3000fccfc7dfc3d3b4474b49858fc37e456",
+      "title": "VIS-HD-21 · Sneer · v003",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/d22e8c910d3d__VIS-HD-21_SNEER.jpg",
+      "reviewStatus": "keep",
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "Gemini",
+        "Flow"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "HD-DROP-104b30b1f4b7",
+      "sha256": "104b30b1f4b7af4c7c3d4ee94405789198e558a41ade560562ca966f7e1dfcd6",
+      "title": "Cockpit R2-04 · Younger-years / flashback",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/needs_review/hon-dolo-cockpit-swap-round2/HD-COCKPIT-R2-04.jpg",
+      "reviewStatus": "keep",
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "Gemini",
+        "Grok"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "HD-DROP-1225728294b2",
+      "sha256": "1225728294b297d823069a58563acfb558657d087269bc40df42c03eb52bff2b",
+      "title": "Cockpit round 2 · 03",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/needs_review/hon-dolo-cockpit-swap-round2/HD-COCKPIT-R2-03.jpg",
+      "reviewStatus": "needs_fixes",
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "Gemini"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "HD-DROP-1966838931ad",
+      "sha256": "1966838931adb71d4443b608d65b9c3613bdc7de7fd6ce3e38c9b35e344e51f7",
+      "title": "Pinstripe suit · Source look",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/inspiration/hon-dolo-ref-sheet-pinstripe/REF-pinstripe-source.jpg",
+      "reviewStatus": null,
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "waiting_for_boss_selection",
+      "destinations": [
+        "Grok",
+        "Flow"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "HD-DROP-1c375c9d2ea9",
+      "sha256": "1c375c9d2ea9fbef200033e4ada946f942ef1fd1698a9449864661a4a912ce0f",
+      "title": "Armor pass 04",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/retired_or_conflicting/hon-dolo-armor-swap/HD-ARMOR-SWAP-04.jpg",
+      "reviewStatus": "keep",
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "Grok"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "HD-DROP-36679ee9953b",
+      "sha256": "36679ee9953bfb8d0492009c1a47309fdd8f04f951f2077bce0007067146b1c4",
+      "title": "SB-03 · Pay up front",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-03-pay-table.jpg",
+      "reviewStatus": "keep",
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "Flow",
+        "Grok"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "HD-DROP-790b795bb74a",
+      "sha256": "790b795bb74a060e56bc60e36fd3c6e95bef5dc35d9e37204fee1040742ead00",
+      "title": "Winter parka · Portrait",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/hon-dolo-ref-sheet-parka/HD-PARKA-01-chest-up.jpg",
+      "reviewStatus": null,
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": null,
+      "destinations": [
+        "undecided"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "HD-DROP-88f20c203f5b",
+      "sha256": "88f20c203f5b3fc228f982ba9bc0ab11e08bbf912f881ff297436185665eed86",
+      "title": "SB-21 · Swing her back",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-04-turnaround/SB-21-ship-turnaround.jpg",
+      "reviewStatus": null,
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "Gemini"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "HD-DROP-8ef3180997c8",
+      "sha256": "8ef3180997c8dd596a9cd27b83c50d4aee42b4d04200f8371625010523bac356",
+      "title": "Cockpit round 2 · 05",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/needs_review/hon-dolo-cockpit-swap-round2/HD-COCKPIT-R2-05.jpg",
+      "reviewStatus": "needs_fixes",
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "Grok"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "HD-DROP-9cecaad5ed57",
+      "sha256": "9cecaad5ed5764a4109c053b17fb09afd7bb0f97557fe61f88a2f72ac73cca5a",
+      "title": "Western fringe · Portrait",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/hon-dolo-ref-sheet-saloon/HD-SALOON-01-chest-up.jpg",
+      "reviewStatus": "keep",
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "Grok",
+        "undecided"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "HD-DROP-bb0780a46f7d",
+      "sha256": "bb0780a46f7d6f0ef5493939ba1f1920366dd670ff8b5da3738c3c04672ec596",
+      "title": "Western fringe · Source look",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/inspiration/hon-dolo-ref-sheet-saloon/REF-saloon-source.jpg",
+      "reviewStatus": "needs_fixes",
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "Grok"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "HD-FALCON-1f55da287bbf7416",
+      "sha256": "1f55da287bbf74168834922ab7fc13758ae0c196feba30ee63cfeab52fc43641",
+      "title": "C04-002 · Battle light",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-002.jpg",
+      "reviewStatus": "needs_fixes",
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "undecided"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "HD-RETURN-19cf3cd478dd",
+      "sha256": "19cf3cd478dd327371d646694fc5db4e1f23d345afe86d7d77a76865f7139ab4",
+      "title": "scoundrel.jpg",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/19cf3cd478dd__scoundrel.jpg",
+      "reviewStatus": "keep",
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "Flow"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "HD-RETURN-4c42885da490",
+      "sha256": "4c42885da4901d23a260c73cb82e815633915005f03660a6aa5c850fe8ce1684",
+      "title": "Rejected attempt · HIP-CASH-a1_4c42885d.jpg",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/4c42885da490__HIP-CASH-a1_4c42885d.jpg",
+      "reviewStatus": "keep",
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "undecided"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "HD-RETURN-6c8900223ee9",
+      "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae",
+      "title": "lf_full.png",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/6c8900223ee9__lf_full.png",
+      "reviewStatus": "keep",
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "Gemini",
+        "Flow"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    },
+    {
+      "assetID": "HD-RETURN-831f6171619f",
+      "sha256": "831f6171619fe93baf6c0ab4784f3f7fc04c319040631cb5dc3fcf381dccf3ce",
+      "title": "cards_zoom.png",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/831f6171619f__cards_zoom.png",
+      "reviewStatus": "remove",
+      "archived": false,
+      "visible": false,
+      "visibilityReasons": [
+        "review_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "Grok"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": false
+    },
+    {
+      "assetID": "HD-RETURN-d55b97a3b322",
+      "sha256": "d55b97a3b3222e5db70b5c38d66f2f57b3a59f3eb23f228ae16e2d137c37d8e6",
+      "title": "d55b97a3b3222e5db70b5c38d66f2f57b3a59f3eb23f228ae16e2d137c37d8e6.jpg",
+      "project": "hon",
+      "localAssetPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/d55b97a3b322__d55b97a3b3222e5db70b5c38d66f2f57b3a59f3eb23f228ae16e2d137c37d8e6.jpg",
+      "reviewStatus": "needs_fixes",
+      "archived": false,
+      "visible": true,
+      "visibilityReasons": [
+        "saved_shot_plan_and_not_archived_or_marked_for_removal"
+      ],
+      "shotPlanStatus": "planned",
+      "destinations": [
+        "Grok"
+      ],
+      "snapshotMatchesIdentityAndVisibility": true,
+      "presentInHostedEffectiveVisiblePlans": true
+    }
+  ],
+  "reviewExports": [
+    {
+      "path": "docs/notes/downloads/cfa-review.json",
+      "bytes": 808636,
+      "sha256": "084220dad9be271ddeaf1b6c86ed01b1a5a038e2c21d27f173eb600042c4b100",
+      "exportedAtUTC": "2026-10-14T13:14:51.333Z",
+      "reviewRecords": 201,
+      "importSkipped": 0,
+      "visibleGlobalAfterOverlay": 20,
+      "visibleHonAfterOverlay": 19,
+      "missingVisibleIDsComparedWithHosted": [],
+      "additionalVisibleIDsComparedWithHosted": []
+    },
+    {
+      "path": "docs/notes/downloads/cfa-review (21).json",
+      "bytes": 783881,
+      "sha256": "c42149660bc225aa8c6db09784fa70eda7e95f7304251e5dcf70ae30d6df052d",
+      "exportedAtUTC": "2026-10-14T03:35:48.721Z",
+      "reviewRecords": 200,
+      "importSkipped": 0,
+      "visibleGlobalAfterOverlay": 20,
+      "visibleHonAfterOverlay": 19,
+      "missingVisibleIDsComparedWithHosted": [],
+      "additionalVisibleIDsComparedWithHosted": []
+    },
+    {
+      "path": "docs/notes/downloads/review_decisions.json",
+      "bytes": 204969,
+      "sha256": "b37518b802a24d141a64933d13f61f5aad6462de9874f9a79319f26cfa0aa566",
+      "exportedAtUTC": null,
+      "reviewRecords": 199,
+      "importSkipped": 0,
+      "visibleGlobalAfterOverlay": 20,
+      "visibleHonAfterOverlay": 19,
+      "missingVisibleIDsComparedWithHosted": [],
+      "additionalVisibleIDsComparedWithHosted": []
+    }
+  ],
+  "findings": {
+    "same22PlanIDsInLocalAndHostedSnapshot": true,
+    "sameSavedIdentityProjectAndVisibility": true,
+    "actualHostedMergeAndVisibilityHelpersYield": 20,
+    "latestAvailableExportDoesNotExplain18": true,
+    "savedFilesContainTwoDifferingAssets": false
+  },
+  "browserState": {
+    "status": "unknown_not_inspected",
+    "reportedLocalCount": 18,
+    "reportedHostedCount": 20,
+    "unknowns": [
+      "Exact local loaded catalog version and build stamp",
+      "Exact local browser review overrides, including shotPlan:null and review removal choices",
+      "Current project, all-projects scope, collaborator/destination filter and search",
+      "Hosted session overrides after the saved snapshot"
+    ],
+    "liveInspection": {
+      "status": "blocked_by_browser_security",
+      "reportedBy": "CFA NOVA",
+      "details": "Direct local file navigation denied by browser policy; no existing local tab available to the checking session. No bypass attempted. Hosted UI checking remains available."
+    },
+    "clarificationRequested": "Which local UI counter shows18: all-project card, project sidebar, or filtered collection?",
+    "syncBehavior": "Hosted app loads a packaged snapshot plus its session overrides. Local browser review changes transfer by review export/import, not automatic shared storage.",
+    "userClarification": {
+      "answer": "A filtered shot-plan collection",
+      "source": "Direct user answer to count-scope question on2026-10-14"
+    }
+  },
+  "comparisonForNova": {
+    "expectedGlobalVisibleAssetIDs": [
+      "GEM-2E361055",
+      "GEM-5A115C59",
+      "GEM-92EF6FD7",
+      "HD-B-b465a10fd62e",
+      "HD-B-d22e8c910d3d",
+      "HD-DROP-104b30b1f4b7",
+      "HD-DROP-1225728294b2",
+      "HD-DROP-1966838931ad",
+      "HD-DROP-1c375c9d2ea9",
+      "HD-DROP-36679ee9953b",
+      "HD-DROP-790b795bb74a",
+      "HD-DROP-88f20c203f5b",
+      "HD-DROP-8ef3180997c8",
+      "HD-DROP-9cecaad5ed57",
+      "HD-DROP-bb0780a46f7d",
+      "HD-FALCON-1f55da287bbf7416",
+      "HD-RETURN-19cf3cd478dd",
+      "HD-RETURN-4c42885da490",
+      "HD-RETURN-6c8900223ee9",
+      "HD-RETURN-d55b97a3b322"
+    ],
+    "expectedHonVisibleAssetIDs": [
+      "GEM-2E361055",
+      "GEM-5A115C59",
+      "HD-B-b465a10fd62e",
+      "HD-B-d22e8c910d3d",
+      "HD-DROP-104b30b1f4b7",
+      "HD-DROP-1225728294b2",
+      "HD-DROP-1966838931ad",
+      "HD-DROP-1c375c9d2ea9",
+      "HD-DROP-36679ee9953b",
+      "HD-DROP-790b795bb74a",
+      "HD-DROP-88f20c203f5b",
+      "HD-DROP-8ef3180997c8",
+      "HD-DROP-9cecaad5ed57",
+      "HD-DROP-bb0780a46f7d",
+      "HD-FALCON-1f55da287bbf7416",
+      "HD-RETURN-19cf3cd478dd",
+      "HD-RETURN-4c42885da490",
+      "HD-RETURN-6c8900223ee9",
+      "HD-RETURN-d55b97a3b322"
+    ],
+    "request": "Compare these exact IDs against the currently visible local list and a fresh browser export. Identify any omitted IDs and whether each omission comes from scope, filter, removal, explicit plan deletion, or stale loaded data. Preserve every existing decision and plan.",
+    "minimalSafeRemedy": "Reconcile a fresh browser export by exact ID/hash before refreshing the saved Corner snapshot. Rebuilding the currently inspected saved files alone still yields 20 globally."
+  },
+  "resolution": {
+    "status": "different_view_scope_confirmed_by_user",
+    "localReported18": "filtered shot-plan collection",
+    "hostedVerified20": "all visible shot plans across all projects",
+    "savedPlanRecordsMatch": true,
+    "dataChangesNeeded": false,
+    "filterExcludedIDs": "Not inspected; no claim about the exact two filtered-out items."
+  }
+}

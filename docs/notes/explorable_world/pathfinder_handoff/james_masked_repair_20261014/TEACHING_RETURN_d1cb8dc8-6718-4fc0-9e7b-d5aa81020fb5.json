@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUTC": "2026-10-14T04:06:43.981529Z",
+  "writtenBy": "nova",
+  "recipientRole": "Pan_Handlers teaching steward Claude",
+  "status": "prepared_local_manual_handoff_not_adopted",
+  "sourceLesson": "../Pan_Handlers/Help/guides/node_atlas.py",
+  "problem": "Remove one prop without changing an adopted character/scene",
+  "evidence": {
+    "source": {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/957897bd45c4__HIP-COAT-01_v001.jpg",
+      "bytes": 306212,
+      "sha256": "957897bd45c4fc03d685c4a40af7670385ab3970108cdbd319d839385dceacc1",
+      "assetID": "HD-RETURN-957897bd45c4",
+      "project": "hon",
+      "width": 1280,
+      "height": 720
+    },
+    "result": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/957897bd45c4__HIP-COAT-01_JAMES-NOGUN_v001.jpg",
+      "bytes": 291259,
+      "sha256": "0223fd8d0c6f4c8af225a19daca05d213dd9d261322953aa89c04e6ed2b30a79",
+      "assetID": "LAG-JAMES-NOGUN-0223fd8d0c6f",
+      "project": "lisan",
+      "characterID": "LAG-CAST-JAMES",
+      "width": 1280,
+      "height": 720
+    },
+    "technicalReview": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/TECHNICAL_RETURN_REVIEW.json",
+      "bytes": 19178,
+      "sha256": "b36149209595038a3e9a8d81f60e269f9a1f2af57817b497a91c651eaa54392b"
+    },
+    "resultIntake": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/RESULT_INTAKE.json",
+      "bytes": 7518,
+      "sha256": "0143813bd5876ff8e6144db2f7fd3f622a549f66fed60bac22bd82545e0dda5b"
+    }
+  },
+  "measuredFindings": [
+    "The one reference-driven generative edit returned a different man/outfit/hangar and was rejected; this single result does not establish model-wide incapability.",
+    "Localized classical repair retained broad identity/scene while leaving visible belt/texture/metal-remnant defects; not an accepted method or master.",
+    "Final JPEG re-encoding changes decoded pixels outside the edit. State the comparison domain and distinguish pixel max-channel mean from mean RGB channel error.",
+    "Keep rejected attempts, mask, settings and final artifact distinct; an earlier lossless PNG is not a lossless final."
+  ],
+  "boundedTeachingTask": "Teach localized edit masks versus reference conditioning, protected-region review and encoding-aware preservation using this unaccepted example. Cite actual metrics and defects; do not recommend untested Cloud settings.",
+  "ownership": "Production evidence stays in CFA; teaching adoption is manual through existing Pan_Handlers route.",
+  "newProviderJob": false
+}

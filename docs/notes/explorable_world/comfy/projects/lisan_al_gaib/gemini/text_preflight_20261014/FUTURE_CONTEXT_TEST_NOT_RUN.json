@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUTC": "2026-10-14T05:07:14.815057Z",
+  "writtenBy": "nova",
+  "authorship": "coordinator_summary",
+  "state": "proposed_unrun",
+  "humanProposal": "Set instructions mention creatures/dogs behind a barn occasionally barking; immediate scene prompt omits them.",
+  "questions": [
+    "What text context is actually accessible?",
+    "What context enters actual video-generator prompt/reference conditioning?",
+    "Does the selected mode support and generate audio?"
+  ],
+  "observedConfound": "The existing readable reference_map.txt already mentions a dog in LAG-SC-14. This mixed chat history cannot be assumed to be a dog-free baseline.",
+  "futureControlDesign": "Only after separate authorization, establish a known controlled context and compare identical immediate scene prompt/reference/supported settings with versus without only the barn/dog instruction. Retain actually exposed payloads and blind output/audio observations. A textual self-report, one coincidental dog/bark, or different-session answer does not establish conditioning or causation.",
+  "runsStarted": 0,
+  "newChatsCreated": 0,
+  "notebooksCreated": 0,
+  "creditsCommitted": 0,
+  "currentSettingsOrPromptsOverwritten": false,
+  "hierarchyProposal": [
+    "shared tool-agnostic goals/requirements",
+    "reusable Gemini/Flow/Comfy profiles",
+    "world/project and shot overlays"
+  ]
+}

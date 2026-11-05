@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-12",
+  "status": "checkout_unresolved_no_payment_submitted",
+  "userReported": {
+    "separateNewAccountTried": true,
+    "newAccountTopUpAmountUSD": 100,
+    "newAccountError": "Checkout could not start. Try again.",
+    "phoneScreenshotAccount": "User thinks it may show the new account; attribution uncertain. Same error was reported on both accounts.",
+    "paymentMethodUpdated": "Reported by user; not independently verified in this follow-up.",
+    "renewalDeclined": "Unknown",
+    "automaticRenewalEnabled": "Unknown"
+  },
+  "observedThisFollowup": {
+    "cloudBanner": "Your Pro plan has ended",
+    "cloudCreditBalance": 0,
+    "fullInvoiceHistoryRoute": "Opened billing.comfy.org root, which still says to open billing from the Comfy product. No renewal invoice was exposed through this route.",
+    "resubscribeRoute": "Opened Choose a Plan; yearly billing was selected by default.",
+    "preparedView": "Monthly billing selected; no Subscribe button clicked.",
+    "monthlyProQuote": "100 USD per month, billed monthly, 21100 monthly credits; displayed chooser quote only.",
+    "proof": "CLOUD_MONTHLY_RENEWAL_OPTIONS_20261012.png"
+  },
+  "earlierObservation": {
+    "externalPaymentPortalOpened": true,
+    "invoice": "September 12, 2026: 100 USD, Paid, Pro.",
+    "laterFailedRenewalConfirmed": false,
+    "portalSecretURLRetained": false
+  },
+  "interpretation": {
+    "newAccountFailure": "Makes an original-account-only problem less likely; does not establish a universal outage or isolate shared card, browser or checkout dependencies.",
+    "cardDeclineOrCompromise": "Not established by either checkout error.",
+    "automaticRetry": "Official guidance says failed payments may retry. No guarantee that updating a card retries an ended subscription."
+  },
+  "officialPaymentGuidance": "https://support.comfy.org/articles/9417822617-payment-issues",
+  "supportDestination": "https://comfysupport.portal.usepylon.com/forms/billing-refund-issue",
+  "supportDraft": "Cloud reports that my Pro plan has ended and my balance is zero. Top-up checkout reports 'Checkout could not start. Try again.' I tried a separate new account and received the same error attempting a 100 USD top-up. Payment methods also displayed 'Embedded checkout is disabled.' An external payment portal opened and showed a paid September 12 Pro invoice, but Cloud's Full invoice history link now opens an empty billing page asking me to open billing from the product. Resubscribe opens the plan chooser. Please investigate checkout initialization and the original subscription's renewal/retry status. I have not confirmed a bank decline or a failed renewal invoice.",
+  "supportRequestSent": false,
+  "purchaseSubmitted": false,
+  "subscriptionChanged": false,
+  "generationSubmitted": false,
+  "lisanDependency": "Separate project uses its existing avatar. No external actor face replacement is required, per October 12 user clarification."
+}

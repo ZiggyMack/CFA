@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "id": "2d33fb25-5a77-4514-a011-d8b689f3438e",
+  "conversationId": "f052fcf2-ef4c-410f-a399-98ab5ef6f48e",
+  "createdAtUTC": "2026-10-14T03:43:44.618238Z",
+  "writtenBy": "nova",
+  "recipient": "grok_chief",
+  "authorship": "coordinator_summary",
+  "authority": {
+    "sourceKind": "attributed_direct_user_relay",
+    "human": "Ziggy",
+    "relayedBy": "cfa_site_index",
+    "relayThreadID": "01a13383-26f6-7923-8e18-98faf1fa3ede",
+    "recordedAtUTC": "2026-10-14T03:43:44.618238Z",
+    "decisionAtUTC": null,
+    "summary": "Ziggy adopts this exact pictured character as James, Lisan al-Gaib’s brother, in the Lisan project and requests Grok remove the gun only."
+  },
+  "state": "prepared_not_sent",
+  "title": "James — remove the gun from exact HIP-COAT-01 source",
+  "source": {
+    "assetID": "HD-RETURN-957897bd45c4",
+    "project": "hon",
+    "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/957897bd45c4__HIP-COAT-01_v001.jpg",
+    "bytes": 306212,
+    "sha256": "957897bd45c4fc03d685c4a40af7670385ab3970108cdbd319d839385dceacc1",
+    "width": 1280,
+    "height": 720
+  },
+  "excludedSource": {
+    "assetID": "HD-DROP-45892924b234",
+    "reason": "Different ancestor tattoo, coat and composition; not the selected gun variant."
+  },
+  "outputCount": 1,
+  "requestedChange": "Remove only the visible physical gun. Reconstruct only pixels revealed by removing the gun.",
+  "mustPreserve": [
+    "exact character identity and face",
+    "all tattoos including circular astrolabe chest tattoo",
+    "long open black leather coat and other clothing",
+    "jewelry and layered chains",
+    "smile and pose",
+    "hands and body",
+    "lighting",
+    "1280x720 framing",
+    "sci-fi hangar and ship ramp",
+    "leather holster and straps"
+  ],
+  "methodRequirement": "Use a localized edit where available; report actual method/settings. A prompt alone is not proof that other pixels were preserved.",
+  "returnRequirements": [
+    "new derivative file, never replace original",
+    "parent asset ID and SHA256",
+    "output relative path, bytes, SHA256, dimensions",
+    "actual method/model/settings where known, otherwise unknown",
+    "preservation observations and any drift/defects",
+    "needs_user_review; no automatic acceptance or rerolls"
+  ],
+  "noBatchExpansion": true,
+  "duplicateCheck": {
+    "checkedAtUTC": "2026-10-14T03:43:44.618238Z",
+    "scopedMailboxAndHandoffs": "No prior James gun-removal dispatch found.",
+    "notice": "7491e6f7-e7c9-4c28-9773-813d6e8acc7a asks Nova Dot not to duplicate; posted only."
+  },
+  "relevantLesson": {
+    "path": "../Pan_Handlers/Help/guides/node_atlas.py",
+    "reviewBasis": "Source image and masks are distinct; whole-image denoise does not guarantee preservation.",
+    "verifiedDedicatedCFAFinishingGraph": false
+  }
+}

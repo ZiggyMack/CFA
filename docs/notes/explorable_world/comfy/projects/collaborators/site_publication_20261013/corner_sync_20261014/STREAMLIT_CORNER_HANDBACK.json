@@ -1,0 +1,219 @@
+{
+  "status": "published_main_live_ui_verified",
+  "scope": "Ziggy’s Corner only; base catalog and library media unchanged",
+  "appEntry": "apps/creative_studio/app.py",
+  "hostedURL": "https://algaib.streamlit.app/",
+  "deploymentBranch": "main; user supplied cfa/main/apps/creative_studio/app.py deployment label",
+  "files": [
+    {
+      "path": "apps/creative_studio/library_helpers.py",
+      "bytes": 37011,
+      "sha256": "63e28a62ef9bb8e4a0bad87ad5b1068bf6342078f67c6b3dc9bb89c57be53102"
+    },
+    {
+      "path": "apps/creative_studio/build_mission_control.py",
+      "bytes": 20433,
+      "sha256": "da55644b619c5187a42ce74bd5fa8901807393e21a0489f65f9c03a10db6c0d4"
+    },
+    {
+      "path": "apps/creative_studio/README.md",
+      "bytes": 12743,
+      "sha256": "04b4cf21226879afccb07290bd95314c17a2839bdfead56d038e171ac7d6879c"
+    },
+    {
+      "path": "apps/creative_studio/tests/test_mission_bundle.py",
+      "bytes": 10610,
+      "sha256": "63d3e8d5432edb48d9a806293949b879ffd5029a1ea012b00ddee5aabfd154b4"
+    },
+    {
+      "path": "apps/creative_studio/tests/test_mission_progress.py",
+      "bytes": 4816,
+      "sha256": "0aaff10e4a05dc878ba855319680fe73ff8fc28982bcade0278baf4ad9691b7e"
+    },
+    {
+      "path": "apps/creative_studio/library/mission_control.json",
+      "bytes": 7365592,
+      "sha256": "3e2a3f92d8d841a6a50edcd3e5c93a88692c7ea47891756f86a7b33f823e3317"
+    },
+    {
+      "path": "apps/creative_studio/library/mission_manifest.json",
+      "bytes": 505433,
+      "sha256": "c42e59cd0d185ef3dd4212cb0e09920eef7763a2e729c85dc1ec68ee42fdf590"
+    },
+    {
+      "path": "apps/creative_studio/studio_dependencies.py",
+      "sha256": "74a17734ec9dc4475ce40e70db2502853f3c3bd8240f5b113f0ee917ad753cbd",
+      "bytes": 1416
+    },
+    {
+      "path": "apps/creative_studio/tests/test_studio.py",
+      "sha256": "76377982e663042d51f22da342249ac648f248744c4b600b8f4d639420ed9570",
+      "bytes": 48548
+    },
+    {
+      "path": "apps/creative_studio/tests/test_hot_reload.py",
+      "sha256": "82b9fe2632261c6f5bbec07d928a6c46f2653949cca2fc5d206c7f1910d73a5f",
+      "bytes": 4329
+    },
+    {
+      "path": "apps/creative_studio/.streamlit/config.toml",
+      "bytes": 1115,
+      "sha256": "0755f319f216e4f588993987d99cc0bf6458d334d57e62e54370c782dceb7df6"
+    },
+    {
+      "path": "apps/creative_studio/app.py",
+      "bytes": 64470,
+      "sha256": "d0a3226c2219709a3e04d5d6944bf3438c1534c33e78fc1de47aa1573cd942a5"
+    },
+    {
+      "path": "apps/creative_studio/mission_view.py",
+      "bytes": 11587,
+      "sha256": "9d03dcabe82eda350c5b1dcc880864d9d629757ee00a7856faf9f19a4f250c7e"
+    }
+  ],
+  "sourceCatalog": {
+    "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+    "sha256": "4e46f62bcf1dd00586ca3d26cca45a7ec5e8417f748f967b2033f7986ba8e11a"
+  },
+  "tasks": 43,
+  "requiredAssets": 537,
+  "reviewSeeds": 199,
+  "outputFiles": 921,
+  "outputBytes": 91171382,
+  "newOutputBytes": 71605623,
+  "unavailableEvidence": [
+    {
+      "assetID": "ee3f7e84-462d-41e5-b8c2-0ea1d9624aa1",
+      "reason": "Reference is absent from the source catalog"
+    }
+  ],
+  "baseCatalog": {
+    "path": "apps/creative_studio/library/catalog.json",
+    "bytes": 1354507,
+    "sha256": "9a1bf6828f37fce0a543cca7553cd81d0f6ddc0d885acf715b1e5e301fc478ba"
+  },
+  "sourceReviews": {
+    "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+    "bytes": 204969,
+    "sha256": "b37518b802a24d141a64933d13f61f5aad6462de9874f9a79319f26cfa0aa566"
+  },
+  "verification": {
+    "packagedOutputHashes": true,
+    "actualSnapshotNativeAppTest": true,
+    "allTaskExpandersClosed": true,
+    "all199ReviewIdentitiesRatingsScopesPlansPreserved": true,
+    "baseOnlySessionReviewAndFavoriteSweep": true,
+    "browserVisualQA": false,
+    "fullSuite": "55 tests passed; final sweep callback then checked against real AppTest",
+    "localIndexSuites": [
+      "test_mission_progress_publication.cjs",
+      "test_mission_gun_variants.cjs"
+    ],
+    "priorityParentClosedAndCountersFirst": true,
+    "latestCornerUI": "32 test_studio tests passed after compact review and all-project plan changes; four local mission suites passed; source diff reviewed independently",
+    "compactReviewArea": true,
+    "zeroPendingReviewActionHidden": true,
+    "shotPlanCountOpensAllVisibleProjects": true,
+    "allProjectShotHandoffExportScope": true,
+    "hotReload": "33 studio tests and 5 module-loader tests passed",
+    "palette": "33 studio tests passed; app-scoped config loads with pinned Streamlit; no browser visual QA",
+    "contrast": "Focused Corner and Shot plans tests passed; no browser visual QA of contrast follow-up",
+    "inputPaint": "3 focused studio tests, independent CSS cascade checks and independent live hosted QA passed in fresh and existing sessions",
+    "inputHint": "Focused Corner AppTest, syntax, installed-component warning preservation, and independent live parent/span computed colors passed.",
+    "expandedText": {
+      "cornerAndShotPlanTests": "2 passed",
+      "syntax": "passed",
+      "independentReview": "Exactly four CSS rule changes; 27 semantic/status/control rules unchanged; application logic unchanged",
+      "liveBrowserAfterPublication": true,
+      "liveQa": {
+        "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\collaborators\\site_publication_20261013\\expanded_text_live_20261014_be762e14-b2fb-46c0-af12-0b30cbe17bf1\\LIVE_QA.json",
+        "bytes": 4870,
+        "sha256": "c64655debbdd763a302cc82593237fa0c770908e3a1373cf615ea0aaf8ccf254",
+        "checkedBy": "CFA NOVA",
+        "result": "All3 reported stText direct spans light#edf0f5, headings light, captions opacity1; prior input, badge and primary control colors retained."
+      }
+    },
+    "shotPlanCountScope": "User confirmed local18 is filtered; hosted20 covers all projects. Saved plan records match; no data changes."
+  },
+  "deployment": {
+    "uploaded": true,
+    "committed": true,
+    "pushed": true,
+    "branch": "main",
+    "commit": "f255c597e00da92e276a2998a2ce3f03666c5fc3",
+    "remoteMainVerified": true,
+    "temporaryBranchRemoved": true,
+    "liveSiteHTTPStatus": 200,
+    "liveUIVersionVerified": true,
+    "publicationReceipt": "PUBLICATION_20261014.json",
+    "importHotfixReceipt": "IMPORT_HOTFIX_20261014.json",
+    "liveRecoveryReportedByUser": true,
+    "palettePublicationReceipt": "PALETTE_PUBLICATION_20261014.json",
+    "contrastPublicationReceipt": "CONTRAST_PUBLICATION_20261014.json",
+    "paletteVisualAcceptanceReportedByUser": true,
+    "inputPaintPublicationReceipt": "INPUT_PAINT_PUBLICATION_20261014.json",
+    "inputPaintLiveQa": {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\collaborators\\site_publication_20261013\\hosted_contrast_20261014_9a354e36-c03e-4fe5-9d92-91b236704cf1\\LIVE_QA.json",
+      "bytes": 16315,
+      "sha256": "ca8ea380f8cbc1fab8079cb89838768f963fe4a8e2a3c242464917c4f7b03a25",
+      "checkedBy": "CFA NOVA",
+      "result": "Passed in fresh and original user sessions: input empty, typed focused and blurred; nested wrapper background, text fill and placeholder; priority/normal status pills; primary button colors. Original search restored."
+    },
+    "inputHintPublicationReceipt": "INPUT_HINT_PUBLICATION_20261014.json",
+    "inputHintLiveQa": {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\collaborators\\site_publication_20261013\\hosted_contrast_20261014_9a354e36-c03e-4fe5-9d92-91b236704cf1\\FINAL_LIVE_QA.json",
+      "bytes": 1137,
+      "sha256": "75c119bea8ca949e8468e750f760da654e1c2d7ec21bad774e7227564078edf5",
+      "checkedBy": "CFA NOVA",
+      "result": "Parent and hint span both #a6b3c5; focused input text and fill #edf0f5 on #1b232e; status colors retained."
+    },
+    "expandedTextPublicationReceipt": "EXPANDED_TEXT_PUBLICATION_20261014.json",
+    "expandedTextLiveQa": {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\collaborators\\site_publication_20261013\\expanded_text_live_20261014_be762e14-b2fb-46c0-af12-0b30cbe17bf1\\LIVE_QA.json",
+      "bytes": 4870,
+      "sha256": "c64655debbdd763a302cc82593237fa0c770908e3a1373cf615ea0aaf8ccf254",
+      "checkedBy": "CFA NOVA",
+      "result": "All3 reported stText direct spans light#edf0f5, headings light, captions opacity1; prior input, badge and primary control colors retained."
+    }
+  },
+  "publicationScope": {
+    "repository": "ZiggyMack/CFA",
+    "visibility": "public",
+    "newMediaAndDocumentsBytes": 71605623,
+    "note": "Public upload requires final confirmation for newly packaged local artwork and task documents; no shared-checkout staging or commits performed."
+  },
+  "localUIChanges": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "bytes": 241961,
+      "sha256": "794059ce263eeab7d5a41203498aae60745ac7b036fbcdae6f3436ab0cddc41a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.css",
+      "bytes": 57543,
+      "sha256": "9ba2a24288d2f9568a6b1c81ed0d77242eb663a18b5d4253076c19a6fded8a00"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_mission_priority.cjs",
+      "bytes": 6218,
+      "sha256": "00b43d631eda6262a8758f961d1eb46c07d59356a9c6aee78f568dc64765f226"
+    }
+  ],
+  "localCornerUI": {
+    "versions": {
+      "library.css": "9ba2a24288",
+      "catalog.js": "c8035de3a1",
+      "library.js": "794059ce26"
+    },
+    "build": "b9d0b1065c",
+    "reviewButtons": "Only when project has unanswered requests",
+    "reviewSweep": "Secondary closed disclosure",
+    "shotPlans": "Counter opens all visible plans across projects",
+    "duplicateCurrentWorkCardsRemoved": true
+  },
+  "publicationApproval": {
+    "source": "Direct user reply Yes to publish matching Streamlit update to main",
+    "date": "2026-10-14"
+  },
+  "localRepairPublication": "C04_002_LOCAL_PUBLICATION_20261014.json"
+}

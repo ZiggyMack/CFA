@@ -1,0 +1,21 @@
+# V5 re-audit of the 17 earlier PASSes under the clarified 25-px outside rule | reviewer V_5
+# RESULT: NO VERDICT CHANGES. All 17 stay PASS: every frame has <25 px >12/255 outside the chest (vs the correct base).
+# Caveat: the automated blaster-ink re-measure picked up jacket/hair texture instead of the neck blaster on most frames (seen in the overlay sheets), so its ink deltas (e.g. C05-003 0.12, C05-011 0.09) are not valid. The earlier hand-measured ink calls stand. No frame flagged on reliable data.
+frame	outside_max	px_over12	verdict
+C02-006	14	3	PASS (no change)
+C02-007	12	0	PASS (no change)
+C02-008	16	13	PASS (no change)
+C02-009	12	0	PASS (no change)
+C02-010	14	4	PASS (no change)
+C02-012	14	10	PASS (no change)
+C02-013	15 vs face-fixed base (24/188 vs original incl. face fix)	5	PASS (no change)
+C05-003	9	0	PASS (no change)
+C05-005	7	0	PASS (no change)
+C05-006	9	0	PASS (no change)
+C05-008	10	0	PASS (no change)
+C05-011	10	0	PASS (no change)
+C05-013	12	0	PASS (no change)
+C05-015	10	0	PASS (no change)
+C04-001	12 vs face-fixed base (21/122 vs original)	0	PASS (no change)
+C04-005	14	5	PASS (no change)
+C04-008	11 vs Z_1 retry base (18/222 vs original = face retry pixels; face OPEN)	0	PASS (no change)

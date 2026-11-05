@@ -1,0 +1,86 @@
+{
+  "recordedAtUTC": "2026-10-14T03:29:39.672Z",
+  "scope": "Actual library.js renderer with DOM/storage double; no build or source-data writes. Native outfit anchor URLs are followed via the real parseHash/router; browser layout is not exercised.",
+  "result": {
+    "passed": true,
+    "uniqueVariants": 17,
+    "uniqueOutfits": 17,
+    "initialUnreviewed": 15,
+    "initialReviewed": 2,
+    "initialKeep": 1,
+    "initialNeedsFixes": 1,
+    "yellowFullOutfit": 8,
+    "yellowVariantIncluded": true,
+    "boundImageButtonsVerified": 17,
+    "outfitAnchorRoutesVerified": 17,
+    "browserOverlayImport": true,
+    "liveReviewRefresh": true,
+    "archiveAndRemovalFiltering": true,
+    "fullOutfitCountsRespectRemoval": true,
+    "scopedGunNotesPreserved": true,
+    "allReviewedStatusDerived": true,
+    "fabricatedApprovals": 0,
+    "localStorageWrites": 0,
+    "catalogMutations": 0,
+    "canonicalTaskMutations": 0,
+    "browserVisualQA": false,
+    "sourcePins": {
+      "libraryJS": "9527d59f7de3c2acc0e485c8fd67b37482d882307083d09bb660756bc2c373ca",
+      "catalogJS": "c5a53ab8e94cf907c51fd81078e1951c129e30bf588bfc090d5449371100c486"
+    },
+    "reviewedAssets": [
+      {
+        "id": "HD-RETURN-86cb39e4d5b6",
+        "status": "needs_fixes",
+        "note": "fine for an alternative universe DoLO - but it has failed to adhere to our design standard...strictly from a add a gun accessor yto this look - yes APPROVED"
+      },
+      {
+        "id": "HD-RETURN-efc1886a0d62",
+        "status": "keep",
+        "note": "as far as adding the gun to the outfit - approved...but we still have no reference of the complete package for our DoLO"
+      }
+    ]
+  },
+  "relatedTests": [
+    {
+      "test": "test_mission_priority.cjs",
+      "exitCode": 0,
+      "result": {
+        "passed": true,
+        "verifiedGroupSize": 50,
+        "shortlist": 13,
+        "initialPreviews": 7,
+        "priorityBeforeDefault": true,
+        "viewerNavigation": true,
+        "reviewWrites": 0,
+        "browserVisualQA": false
+      }
+    },
+    {
+      "test": "test_mission_hash_navigation.cjs",
+      "exitCode": 0,
+      "result": {
+        "passed": true,
+        "origins": [
+          "file:",
+          "localhost http:"
+        ],
+        "routeChecks": 4,
+        "routeCounts": [
+          40,
+          90
+        ],
+        "hashLinksTargetCurrentViewer": true,
+        "relativeBriefBasePreserved": true,
+        "unsafeLinksRejected": true,
+        "likenessAndSceneControls": true,
+        "reviewWrites": 0,
+        "browserVisualQA": false
+      }
+    }
+  ],
+  "filesCreated": [
+    "visual_library/test_mission_gun_variants.cjs",
+    "collaborators/site_publication_20261013/reference_board_and_flow_20261014/gun_variants_test_result.json"
+  ]
+}

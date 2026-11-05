@@ -1,0 +1,30 @@
+{
+  "status": "published_main",
+  "parent": "baa7747a6bc9187e7608a36c04abe87b0a7c39d7",
+  "tree": "cacf7aff7e8744a1ce67381a0ebb8f99f8387617",
+  "commit": "74e6122f74a6ed70f7e77023f9f087a88617fc1e",
+  "createdAt": "2026-10-14T20:45:20.072202+00:00",
+  "files": {
+    "apps/creative_studio/app.py": {
+      "bytes": 64194,
+      "sha256": "e4c9f3e3a0d59abb449d5a9997d7a4b78b6c98d4a856a34e66ed54b211237a31"
+    }
+  },
+  "scope": "Theme only: dark nested base-input wrapper and explicit WebKit text/placeholder fill. Existing status badge rules unchanged.",
+  "verification": {
+    "focusedStudioTests": "3 passed",
+    "syntax": "passed",
+    "independentCssCascade": "passed for empty, filled/focused, disabled and placeholder against observed live DOM",
+    "liveBrowserAfterPublication": true,
+    "liveQa": {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\collaborators\\site_publication_20261013\\hosted_contrast_20261014_9a354e36-c03e-4fe5-9d92-91b236704cf1\\LIVE_QA.json",
+      "bytes": 16315,
+      "sha256": "ca8ea380f8cbc1fab8079cb89838768f963fe4a8e2a3c242464917c4f7b03a25",
+      "checkedBy": "CFA NOVA",
+      "result": "Passed in fresh and original user sessions: input empty, typed focused and blurred; nested wrapper background, text fill and placeholder; priority/normal status pills; primary button colors. Original search restored."
+    }
+  },
+  "diagnosis": "Live DOM had dark outer input but light focused inner base-input wrapper; input transparent with light text. Ready and Needs input pills independently confirmed correct after rerun.",
+  "remoteMainVerified": true,
+  "sharedHeadAndIndexPreserved": true
+}

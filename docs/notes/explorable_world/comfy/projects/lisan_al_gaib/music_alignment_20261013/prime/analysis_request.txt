@@ -1,0 +1,17 @@
+META MIRROR PRIME — independent analysis
+The two uploads are Meta Mirror_0 (Remastered).mp3 (the UI may display an embedded Generated Audio title) and Meta_Mirror.txt. Audio SHA256 477627e4db431ba0ef8cf226b13745f3cdcc32050d88b8f0fc1f7aba3e45e154, bytes 6438669. Exact complete native decode duration 249.720 seconds, 48000 Hz stereo. No other cut belongs in this chat. Prime lyrics SHA256 5303adca22ea91cebe00efc9c62c2f8949631865b3265a0c615c06b4f11e605c.
+Source headers (one-based TXT physical lines including blank lines): S01 Chorus line1; S02 BRIDGE line18; S03 Verse1 line24; S04 BRIDGE line33; S05 VERSE2 line41; S06 BRIDGE line56; S07 Refrain line67; S08 Verse3 line75; S09 Final Refrain line114. Preserve actual source spelling/spacing.
+Distinctive anchors: opening Voice from the outer world; first Lisan to the silence break; Birth pains inside the Handle; Engineers talking shit; Jung in the back room and CJ echoed adlib; DOCTOR interjection; Outer world inner world same breath two doors; final We do; final whispered who's meta mirrors all; Find the signal in the noise; last one for every womb and man. Return exact source line indices from the uploaded TXT.
+This is source-audio listening, lyric timing and vocal-event analysis of an EXISTING recording for a private music-video production. Do not rewrite, generate music, or copy timings from another song. Use zero-based seconds from this attached file only. Embedded MP3 tags and the lyric TXT can disagree: source_text comes from TXT; audible_text comes from listening. Never treat the text as proof of audibility.
+
+FIRST verify actual audio access: report three arrangement/delivery details not inferable from the TXT, each with approximate seconds (early, middle, late). If you cannot hear this attachment, return audio_access=false and explain; stop instead of estimating timings from text.
+
+Return a compact JSON object with these keys:
+audio_access, audio_witnesses, duration_check, sections, anchors, vocal_character, tempo, text_audio_differences, uncertainties.
+- duration_check: observed ending seconds, vocal ending seconds, instrumental/reverb tail, uncertainty.
+- sections: source section_id, source header line, label, start_s,end_s,confidence (0-1), audible boundary cue. Include intro/outro/tail if present. Do not fill a written section with estimated proportional timing: use null if missing/unresolved. All numeric timestamps must satisfy 0<=start_s<end_s<=the stated exact decoded duration. Repeated bridges are separate occurrences.
+- anchors: listen to EACH listed distinctive passage, report exact audible words, source_line, start_s,end_s, lane LEAD/DOUBLE/ECHO/AD_LIB/UNKNOWN,confidence and uncertainty_s. Independent interjections and delayed repeats need separate events; overlapping events are allowed. Missing/inaudible anchors use null, not invented timestamps.
+- vocal_character: voices, delivery, overlap; do not claim isolated stems from a stereo mix.
+- tempo: BPM with audible beat evidence/measurement interval and half/double-time ambiguity; if not confident, BPM=null. Do not derive tempo from lyric length.
+- text_audio_differences: omissions, additions, changed wording, ambiguous masked phrases including repeated tails. Distinguish actual listening observations from textual suggestions.
+This is first anchor pass; a full source-line/phrase map follows after structural checks. Reports are provisional, not accepted shot cuts or lip sync. No millisecond or word-level precision without audible evidence.

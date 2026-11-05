@@ -1,0 +1,686 @@
+{
+  "format": "cfa-grok-image-intake-v1",
+  "project": "criminal_mind",
+  "batchID": "TCM-SET-INTERROGATION-L11-L19",
+  "lane": "set_round",
+  "taskID": "tcm-grok-sets-20261030",
+  "intakeRole": "site_index_receipt",
+  "sealStatus": "complete_only_when_pinned_by_required_aggregate",
+  "requiredAggregatePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/CFA_SET_INTAKE_035-118_SITE_INDEX_v003.json",
+  "supersedesReceipt": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19/CFA_INTAKE_RECEIPT_v002.json",
+  "verifiedAtUTC": "2026-11-04T13:41:07Z",
+  "receivedAtUTC": null,
+  "receivedTimeStatus": "not_recorded_in_archive",
+  "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19.zip",
+  "archiveSHA256": "378b7ae56dc1df8582980bb257f54851839273a5cbf4ea9e785954ee1bf0c0e1",
+  "archiveBytes": 2097467,
+  "archiveMemberCount": 18,
+  "receivedOriginals": 9,
+  "acceptedOriginals": 0,
+  "humanVerdictsCreated": 0,
+  "selectedStartingFrames": 0,
+  "assets": [
+    {
+      "candidateID": "TCM-SET-INTERROGATION-L11__P01-L1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-INTERROGATION-L11-L19\\TCM-SET-INTERROGATION-L11__P01-L1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L11__P01-L1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19.zip",
+      "archiveMember": "TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L11__P01-L1.jpg",
+      "sha256": "13584096e4fa1348ff9ac268802328e5cbfdbe957d4a6f8d9f6c556f21c147dc",
+      "bytes": 234162,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "ADVISORY",
+        "hardTrait": "H3 observation glass 'John waves at the glass' (SS:L552); card §6 'observation glass dark, reflecting only the empty room'; IN-P01 spec MAPS:L412; H2 file (SS:L522); H4 door (SS:L566)",
+        "note": "PRELIMINARY; slot S01; position IN-P01; light IN-L1; needed; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; IN-L1 single pendant over table, restrained fill OK; L01 geometry: door with wired glass in back wall, wide observation glass on the camera-right side wall, whole table with two hard chairs, floor path to the door clear = P01 OK; H2 closed blank tan folder (no text); door wired-glass crop 4x: blank, nobody beyond; ADVISORY: glass crop 2.4x gamma-lift shows a door, a pendant and a table edge inside the pane - reads either as the empty room's reflection or as clear glass into a twin room, not as a dark one-way pane; it shows no figures, faces or camera (empty-room content only = fine per known flag); reference ids (maker value, index column present): TCM-SET-INTERROGATION-L01,TCM-SET-INTERROGATION-L05 | V_1 ruling (card: observation glass DARK): judged at 1x, the pane shows a dark reflection of the empty room (door, pendant, table), no lit second room, so ADVISORY stands",
+        "cardVersion": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001.md sha256 ee0b649a5ee07ea1b2c3e02e177f162e64d2e0d4dc9a76f696434f5d7547ca5e; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/SCREENING_ROWS_INTERROGATION_PRELIMINARY.tsv",
+        "sourceSHA256": "fc8cd5a1f62117650a8d64927f348ad7c83001a43efb39068756c4f22235a377",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S01; Master: grey block room, steel table, two metal chairs, closed blank folder, back-wall door with wired glass, wide observation glass camera-right, single pendant",
+        "sourceVsProposal": null,
+        "defectNote": "Observation glass shows a door, table and pendant - reads either as the empty room's reflection or as clear glass into a second room (screen for one-way-mirror read); no figures in glass; no text",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-INTERROGATION-L11",
+        "cameraPositionID": "IN-P01",
+        "lightState": "IN-L1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-INTERROGATION-L01",
+          "TCM-SET-INTERROGATION-L05"
+        ],
+        "servesShotsRaw": "TCM-17-01,TCM-17-04",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-17-01",
+          "TCM-17-04"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-INTERROGATION",
+      "providerCandidateID": "TCM-SET-INTERROGATION-L11",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-17-01",
+        "TCM-17-04"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-17"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Interrogation room",
+      "sourceConstraints": "Table for seated Wallace and standing John, file, observation glass and an escort door. Spatially usable for close/reverse coverage."
+    },
+    {
+      "candidateID": "TCM-SET-INTERROGATION-L12__P01-L2",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-INTERROGATION-L11-L19\\TCM-SET-INTERROGATION-L12__P01-L2.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L12__P01-L2.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19.zip",
+      "archiveMember": "TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L12__P01-L2.jpg",
+      "sha256": "1afb0d360e0d3dd3bcf4fa187e36e979edd374d73682853a4e009a6c019beea3",
+      "bytes": 237382,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "H3 observation glass 'John waves at the glass' (SS:L552); card §6 'observation glass dark, reflecting only the empty room'; IN-P01 spec MAPS:L412; IN-L2 MAPS:L408; H1 'Day' (SS:L520)",
+        "note": "PRELIMINARY; slot S02; position IN-P01; light IN-L2; needed; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; IN-L2 OK: pendant plus a daylight wedge from a small high window raking the back wall; L01 geometry (door back wall, glass camera-right) OK; blank folder crop 4x: no text; door wired glass 4x: blank; ADVISORY: glass crop 2.4x gamma-lift shows a lit tiled room with a steel table beyond - reads as clear glass into an adjoining room rather than a dark one-way pane; no figures, faces or camera; continuity note: bistro-style chairs differ from L11's chairs (not marked down); exploratory light state; reference ids (maker value, index column present): TCM-SET-INTERROGATION-L01,TCM-SET-INTERROGATION-L03,TCM-SET-INTERROGATION-L05,TCM-SET-INTERROGATION-L06 | V_1 ruling (card: observation glass DARK): judged at 1x, the pane shows a lit tiled room with a steel table beyond, i.e. clear glass into an adjoining room, so tag changed ADVISORY to SCRIPT-DRIFT in this version (v006); nothing readable and no figures",
+        "cardVersion": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001.md sha256 ee0b649a5ee07ea1b2c3e02e177f162e64d2e0d4dc9a76f696434f5d7547ca5e; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0 ; V_1 rulings relayed in V Team room 2026-10-31 14:37 ET",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/SCREENING_ROWS_INTERROGATION_PRELIMINARY.tsv",
+        "sourceSHA256": "fc8cd5a1f62117650a8d64927f348ad7c83001a43efb39068756c4f22235a377",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S02; Master day variant: same layout, pendant plus daylight wedge from small high window raking back/side wall, blank folder",
+        "sourceVsProposal": null,
+        "defectNote": "Chairs are bistro-style metal chairs, differ from L11's (continuity); glass shows a table beyond (reads as clear glass, not dark mirror); no figures; no text",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-INTERROGATION-L12",
+        "cameraPositionID": "IN-P01",
+        "lightState": "IN-L2",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-INTERROGATION-L01",
+          "TCM-SET-INTERROGATION-L03",
+          "TCM-SET-INTERROGATION-L05",
+          "TCM-SET-INTERROGATION-L06"
+        ],
+        "servesShotsRaw": "TCM-17-01,TCM-17-04 (exploratory light state)",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-17-01",
+          "TCM-17-04"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-INTERROGATION",
+      "providerCandidateID": "TCM-SET-INTERROGATION-L12",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-17-01",
+        "TCM-17-04"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-17"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Interrogation room",
+      "sourceConstraints": "Table for seated Wallace and standing John, file, observation glass and an escort door. Spatially usable for close/reverse coverage."
+    },
+    {
+      "candidateID": "TCM-SET-INTERROGATION-L13__P02-L1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-INTERROGATION-L11-L19\\TCM-SET-INTERROGATION-L13__P02-L1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L13__P02-L1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19.zip",
+      "archiveMember": "TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L13__P02-L1.jpg",
+      "sha256": "0e39afe4484a6228be36dca00123945b4bcd902d6ec2059f9c523783c3b67d31",
+      "bytes": 234802,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "IN-P02 spec MAPS:L413; H2 file (SS:L522); slot check 'paper/labels blank (not blurred pseudo-text)'",
+        "note": "PRELIMINARY; slot S03; position IN-P02; light IN-L1; needed; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; IN-L1 single pendant OK; across the table onto the empty suspect's chair with the block wall behind (wall option allowed by spec), table top and folder spot in the lower third = P02 OK; folder crop 3x: closed, blank, no pseudo-text; note: suspect chair has armrests (style differs from L11; not marked down); reference ids (maker value, index column present): TCM-SET-INTERROGATION-L01,TCM-SET-INTERROGATION-L05",
+        "cardVersion": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001.md sha256 ee0b649a5ee07ea1b2c3e02e177f162e64d2e0d4dc9a76f696434f5d7547ca5e; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/SCREENING_ROWS_INTERROGATION_PRELIMINARY.tsv",
+        "sourceSHA256": "fc8cd5a1f62117650a8d64927f348ad7c83001a43efb39068756c4f22235a377",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S03; Across steel table onto empty metal armchair against block wall, closed blank grey folder lower third, pendant above",
+        "sourceVsProposal": null,
+        "defectNote": "Suspect chair has armrests (differs from L11 chairs); no glass in frame; no text",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-INTERROGATION-L13",
+        "cameraPositionID": "IN-P02",
+        "lightState": "IN-L1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-INTERROGATION-L01",
+          "TCM-SET-INTERROGATION-L05"
+        ],
+        "servesShotsRaw": "TCM-17-01,TCM-17-02,TCM-17-03",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-17-01",
+          "TCM-17-02",
+          "TCM-17-03"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-INTERROGATION",
+      "providerCandidateID": "TCM-SET-INTERROGATION-L13",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-17-01",
+        "TCM-17-02",
+        "TCM-17-03"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-17"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Interrogation room",
+      "sourceConstraints": "Table for seated Wallace and standing John, file, observation glass and an escort door. Spatially usable for close/reverse coverage."
+    },
+    {
+      "candidateID": "TCM-SET-INTERROGATION-L14__P03-L1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-INTERROGATION-L11-L19\\TCM-SET-INTERROGATION-L14__P03-L1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L14__P03-L1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19.zip",
+      "archiveMember": "TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L14__P03-L1.jpg",
+      "sha256": "42467ebf16b5038da51aa205377720d12d9b37c4bca9a9e4a1cfe5dadbd76fa9",
+      "bytes": 204017,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "ADVISORY",
+        "hardTrait": "H3 observation glass 'John waves at the glass' (SS:L552); card §6 'observation glass dark, reflecting only the empty room'; IN-P03 spec MAPS:L414 ('the door in the back wall and the glass edge at one side'); MAPS:L423 geometry note",
+        "note": "PRELIMINARY; slot S04; position IN-P03; light IN-L1; needed; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; IN-L1 pendant OK; from behind the empty suspect's chair (chair back soft lower left), across the table, door with wired glass in the back wall, dark observation glass at one side = P03 spec met; glass crop 2x gamma-lift: dark pane with faint wall reflection only, no figures; door wired-glass crop 6x gamma-lift: indistinct corridor wall/frame shapes, no figure; ADVISORY (geometry, card unsettled): with the door still in the back wall the glass sits camera-LEFT, the mirror of L11's camera-right; the P03 text itself keeps the door in the back wall, which conflicts with L11's chairs sitting at the table's left/right sides - noted as a question, judged against the position text; reference ids (maker value, index column present): TCM-SET-INTERROGATION-L01,TCM-SET-INTERROGATION-L05,TCM-SET-INTERROGATION-L10",
+        "cardVersion": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001.md sha256 ee0b649a5ee07ea1b2c3e02e177f162e64d2e0d4dc9a76f696434f5d7547ca5e; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/SCREENING_ROWS_INTERROGATION_PRELIMINARY.tsv",
+        "sourceSHA256": "fc8cd5a1f62117650a8d64927f348ad7c83001a43efb39068756c4f22235a377",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S04; Reverse from behind suspect chair: chair back soft lower left, steel table, back-wall door with wired glass right, dark observation glass left, pendant",
+        "sourceVsProposal": null,
+        "defectNote": "No chair on the interrogator side (only one chair visible); glass dark with no figures; no text; geometry plausible vs L11 (glass flips to left on reverse)",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-INTERROGATION-L14",
+        "cameraPositionID": "IN-P03",
+        "lightState": "IN-L1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-INTERROGATION-L01",
+          "TCM-SET-INTERROGATION-L05",
+          "TCM-SET-INTERROGATION-L10"
+        ],
+        "servesShotsRaw": "TCM-17-02,TCM-17-04",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-17-02",
+          "TCM-17-04"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-INTERROGATION",
+      "providerCandidateID": "TCM-SET-INTERROGATION-L14",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-17-02",
+        "TCM-17-04"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-17"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Interrogation room",
+      "sourceConstraints": "Table for seated Wallace and standing John, file, observation glass and an escort door. Spatially usable for close/reverse coverage."
+    },
+    {
+      "candidateID": "TCM-SET-INTERROGATION-L15__P04-L1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-INTERROGATION-L11-L19\\TCM-SET-INTERROGATION-L15__P04-L1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L15__P04-L1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19.zip",
+      "archiveMember": "TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L15__P04-L1.jpg",
+      "sha256": "326f4b5175194c3ccb7d7471552ab0ab6e08a987c2dfafddc9208c7920dd7937",
+      "bytes": 217253,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "H3 observation glass 'John waves at the glass' (SS:L552); card §6 'observation glass dark, reflecting only the empty room'; IN-P04 spec MAPS:L415 ('dark pane showing only the empty room's faint reflection ... No faces or figures in the reflection')",
+        "note": "PRELIMINARY; slot S05; position IN-P04; light IN-L1; needed; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; IN-L1 OK; square onto the framed observation glass, table edge and chair back at the bottom, bare block wall around = P04 OK; pane crop 1.4x gamma-lift: dark glass with a faint reflection of the pendant, block wall and table only, no faces, figures or camera; note: the reflection has some depth and could read as a recessed room (minor); reference ids (maker value, index column present): TCM-SET-INTERROGATION-L01,TCM-SET-INTERROGATION-L05",
+        "cardVersion": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001.md sha256 ee0b649a5ee07ea1b2c3e02e177f162e64d2e0d4dc9a76f696434f5d7547ca5e; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/SCREENING_ROWS_INTERROGATION_PRELIMINARY.tsv",
+        "sourceSHA256": "fc8cd5a1f62117650a8d64927f348ad7c83001a43efb39068756c4f22235a377",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S05; Square onto framed observation window in block wall, dark pane with faint reflection of pendant and table, steel table edge and chair back at bottom",
+        "sourceVsProposal": null,
+        "defectNote": "Reflection shows pendant/table only, no figures; pane reads slightly like a recessed room (depth ambiguity); no text",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-INTERROGATION-L15",
+        "cameraPositionID": "IN-P04",
+        "lightState": "IN-L1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-INTERROGATION-L01",
+          "TCM-SET-INTERROGATION-L05"
+        ],
+        "servesShotsRaw": "TCM-17-04",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-17-04"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-INTERROGATION",
+      "providerCandidateID": "TCM-SET-INTERROGATION-L15",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-17-04"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-17"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Interrogation room",
+      "sourceConstraints": "Table for seated Wallace and standing John, file, observation glass and an escort door. Spatially usable for close/reverse coverage."
+    },
+    {
+      "candidateID": "TCM-SET-INTERROGATION-L16__P05-L1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-INTERROGATION-L11-L19\\TCM-SET-INTERROGATION-L16__P05-L1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L16__P05-L1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19.zip",
+      "archiveMember": "TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L16__P05-L1.jpg",
+      "sha256": "66a248b9f9a2d57d4f31d8a9de46fc552ae17c1ea0d4dde5f5a3a16a5586c498",
+      "bytes": 254736,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "IN-P05 spec MAPS:L416 ('wired-glass window ... a sliver of lit corridor through the door opened a hand's width'); writer's set description MAPS:L406 'a single door with a small wired-glass window'; H4 door (SS:L566)",
+        "note": "PRELIMINARY; slot S06; position IN-P05; light IN-L1; needed; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; door from inside beside the table, frame, handle side, threshold strip, bare wall each side = P05 framing OK; H4 escort door readable; window crop 4x: blank, nobody beyond; ceiling crop 4x: the faint round ring is a fixture/stain outline, not a camera dome; FINDING: the door window is pebbled frosted glass, not wired glass (breaks the spec and L11/L12/L14 continuity), and the door is open only a hairline at the hinge side with a pale, barely lit corridor sliver rather than a hand's width of lit corridor; pendant out of frame (light still reads IN-L1); reference ids (maker value, index column present): TCM-SET-INTERROGATION-L01,TCM-SET-INTERROGATION-L05,TCM-SET-INTERROGATION-L10",
+        "cardVersion": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001.md sha256 ee0b649a5ee07ea1b2c3e02e177f162e64d2e0d4dc9a76f696434f5d7547ca5e; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/SCREENING_ROWS_INTERROGATION_PRELIMINARY.tsv",
+        "sourceSHA256": "fc8cd5a1f62117650a8d64927f348ad7c83001a43efb39068756c4f22235a377",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S06; Toward the door: steel table corner left, grey steel door ajar a sliver, frosted/wired-glass window, lever handle, block walls",
+        "sourceVsProposal": null,
+        "defectNote": "Door gap shows dark, not a lit corridor; window reads frosted more than wired; faint round ceiling fixture at top centre - check it does not read as a camera dome; pendant out of frame; no text",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-INTERROGATION-L16",
+        "cameraPositionID": "IN-P05",
+        "lightState": "IN-L1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-INTERROGATION-L01",
+          "TCM-SET-INTERROGATION-L05",
+          "TCM-SET-INTERROGATION-L10"
+        ],
+        "servesShotsRaw": "TCM-17-04",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-17-04"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-INTERROGATION",
+      "providerCandidateID": "TCM-SET-INTERROGATION-L16",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-17-04"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-17"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Interrogation room",
+      "sourceConstraints": "Table for seated Wallace and standing John, file, observation glass and an escort door. Spatially usable for close/reverse coverage."
+    },
+    {
+      "candidateID": "TCM-SET-INTERROGATION-L17__P06-L1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-INTERROGATION-L11-L19\\TCM-SET-INTERROGATION-L17__P06-L1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L17__P06-L1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19.zip",
+      "archiveMember": "TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L17__P06-L1.jpg",
+      "sha256": "dc8e3c9620c8409bec7277d9230b03c3b594e3acd318730024b52e63974eefdc",
+      "bytes": 257469,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "IN-P06 spec MAPS:L417 ('Shoot once bare ... no hands'); slot check 'paper/labels blank'",
+        "note": "PRELIMINARY; slot S07; position IN-P06; light IN-L1; needed; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; IN-L1 OK; high angle across the bare scratched steel table top with the overhead hot spot, empty chair beyond = P06 bare option OK; no hands, no papers; chair/wall crop 1.6x gamma-lift: nothing in the corner shadows; note: spindle-back chair style differs from L11 (not marked down); reference ids (maker value, index column present): TCM-SET-INTERROGATION-L01,TCM-SET-INTERROGATION-L05",
+        "cardVersion": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001.md sha256 ee0b649a5ee07ea1b2c3e02e177f162e64d2e0d4dc9a76f696434f5d7547ca5e; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/SCREENING_ROWS_INTERROGATION_PRELIMINARY.tsv",
+        "sourceSHA256": "fc8cd5a1f62117650a8d64927f348ad7c83001a43efb39068756c4f22235a377",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S07; High-angle across bare scratched brushed-steel table top, pendant hot spot, empty metal chair beyond, dim block wall",
+        "sourceVsProposal": null,
+        "defectNote": "Chair style (spindle back) differs from L11 chairs; no pendant in frame (hot spot only); no hands, no text",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-INTERROGATION-L17",
+        "cameraPositionID": "IN-P06",
+        "lightState": "IN-L1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-INTERROGATION-L01",
+          "TCM-SET-INTERROGATION-L05"
+        ],
+        "servesShotsRaw": "TCM-17-01",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-17-01"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-INTERROGATION",
+      "providerCandidateID": "TCM-SET-INTERROGATION-L17",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-17-01"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-17"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Interrogation room",
+      "sourceConstraints": "Table for seated Wallace and standing John, file, observation glass and an escort door. Spatially usable for close/reverse coverage."
+    },
+    {
+      "candidateID": "TCM-SET-INTERROGATION-L18__P07-L1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-INTERROGATION-L11-L19\\TCM-SET-INTERROGATION-L18__P07-L1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L18__P07-L1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19.zip",
+      "archiveMember": "TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L18__P07-L1.jpg",
+      "sha256": "111d472f8bbaa44bc1e2c9238885849fc7580fb2d4f09cec03f400a97ef5aee4",
+      "bytes": 234804,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "IN-P07 spec MAPS:L418",
+        "note": "PRELIMINARY; slot S08; position IN-P07; light IN-L1; needed; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; IN-L1 OK; seated-height view along the table's length, both chairs at the frame sides, standing side clear, pendant directly above the table centre = P07 OK; no glass or door in frame (not required); no text; reference ids (maker value, index column present): TCM-SET-INTERROGATION-L01,TCM-SET-INTERROGATION-L05",
+        "cardVersion": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001.md sha256 ee0b649a5ee07ea1b2c3e02e177f162e64d2e0d4dc9a76f696434f5d7547ca5e; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/SCREENING_ROWS_INTERROGATION_PRELIMINARY.tsv",
+        "sourceSHA256": "fc8cd5a1f62117650a8d64927f348ad7c83001a43efb39068756c4f22235a377",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S08; End-on along steel table, two empty metal chairs facing across at left and right, single pendant above centre, block walls",
+        "sourceVsProposal": null,
+        "defectNote": "Symmetric/staged look; no door or glass in frame; no text",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-INTERROGATION-L18",
+        "cameraPositionID": "IN-P07",
+        "lightState": "IN-L1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-INTERROGATION-L01",
+          "TCM-SET-INTERROGATION-L05"
+        ],
+        "servesShotsRaw": "TCM-17-02",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-17-02"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-INTERROGATION",
+      "providerCandidateID": "TCM-SET-INTERROGATION-L18",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-17-02"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-17"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Interrogation room",
+      "sourceConstraints": "Table for seated Wallace and standing John, file, observation glass and an escort door. Spatially usable for close/reverse coverage."
+    },
+    {
+      "candidateID": "TCM-SET-INTERROGATION-L19__P08-L1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-INTERROGATION-L11-L19\\TCM-SET-INTERROGATION-L19__P08-L1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L19__P08-L1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-INTERROGATION-L11-L19.zip",
+      "archiveMember": "TCM-SET-INTERROGATION-L11-L19/TCM-SET-INTERROGATION-L19__P08-L1.jpg",
+      "sha256": "075460c87a3d9b13ddc2bd78a6d473c165472cd1b782c946d692313c5da12083",
+      "bytes": 174588,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "ADVISORY",
+        "hardTrait": "IN-P08 spec MAPS:L419 ('no reflections of people in the pane'); card §6 'not a modern tech room (no camera dome, keypad with digits)'",
+        "note": "PRELIMINARY; slot S09; position IN-P08; light IN-L1; exploratory; own sha256 matches maker index; 1280x720 16:9; filename matches card regex, L in range; no people/hands/faces/figures/silhouettes/cameras anywhere incl. reflections and glass; no weapons, blood or body; IN-L1 OK; from the dark observation room through the glass edge to edge, lit empty interview room with table, two chairs, wired-glass door and one pendant, empty observer's office-chair back in silhouette at the bottom = P08 OK; chair crop 2x gamma-lift: chair back only, no head or figure; pane shows no reflections of people; door hardware crop 8x: a lock box with a knob, no digits or keypad; ADVISORY (geometry): seen through a side-wall glass the door should sit on a side wall, but here it is on the far wall opposite the glass (as in L07), which does not match L11's layout; note: mesh-back chairs differ (not marked down); exploratory slot; reference ids (maker value, index column present): TCM-SET-INTERROGATION-L01,TCM-SET-INTERROGATION-L05,TCM-SET-INTERROGATION-L07 | V_1 ruling: P08 text names no door wall, so the far-wall door is a layout note for Claude and ADVISORY stands",
+        "cardVersion": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001 (v001 B2)",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-INTERROGATION_card_v001.md sha256 ee0b649a5ee07ea1b2c3e02e177f162e64d2e0d4dc9a76f696434f5d7547ca5e; CARDS_INDEX_B2_v001 sha256 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; maker index BATCH_SETROUND_02_index.tsv sha256 24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/SCREENING_ROWS_INTERROGATION_PRELIMINARY.tsv",
+        "sourceSHA256": "fc8cd5a1f62117650a8d64927f348ad7c83001a43efb39068756c4f22235a377",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "slot S09; From dark observation room through wide window into lit empty interrogation room: table, two chairs, back-wall door with wired glass, one pendant; dark office-chair back foreground",
+        "sourceVsProposal": null,
+        "defectNote": "Small box beside door handle could read as a keypad/lock box (card says no keypad) - check; chairs mesh-back, differ from L11; no figures or reflections; no text",
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-INTERROGATION-L19",
+        "cameraPositionID": "IN-P08",
+        "lightState": "IN-L1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-INTERROGATION-L01",
+          "TCM-SET-INTERROGATION-L05",
+          "TCM-SET-INTERROGATION-L07"
+        ],
+        "servesShotsRaw": "exploratory",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-INTERROGATION-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "24cb676b7e6b78d2ec5a69b1685a4edf6ff50be7b926733a9d837c1871e31fb0",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-INTERROGATION",
+      "providerCandidateID": "TCM-SET-INTERROGATION-L19",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-17"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Interrogation room",
+      "sourceConstraints": "Table for seated Wallace and standing John, file, observation glass and an escort door. Spatially usable for close/reverse coverage."
+    }
+  ],
+  "verification": {
+    "zipCRC": true,
+    "archiveHash": true,
+    "safeMemberPaths": true,
+    "noSymlinks": true,
+    "noEncryptedMembers": true,
+    "uniqueCandidateIDs": true,
+    "indexedBytesAndHashes": true,
+    "JPEGDecode": true,
+    "humanReviewOrAcceptanceCreated": false
+  },
+  "note": "Technical receipt for unreviewed originals. It is a completed site intake only when its exact hash is pinned by the required lane aggregate. Provider/V-team screening remains attributed preliminary evidence, never a human verdict or acceptance."
+}

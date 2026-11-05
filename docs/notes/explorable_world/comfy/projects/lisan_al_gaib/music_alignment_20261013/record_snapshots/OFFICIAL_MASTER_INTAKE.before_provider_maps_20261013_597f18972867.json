@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "id": "LAG-OFFICIAL-MASTER-INTAKE-20261012",
+  "correlation": "LISAN-TWO-TRACK-20261012-234228Z",
+  "conversationId": "8915f181-739d-4759-a517-b48005a8411e",
+  "createdAtUTC": "2026-10-12T23:58:01Z",
+  "updatedAtUTC": "2026-10-13T02:09:18Z",
+  "owner": "nova",
+  "writtenBy": "nova",
+  "authorship": "self_authored",
+  "status": "prime_masters_received_validated_timing_unaligned",
+  "existingDependency": {
+    "recordPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/COORDINATION_DIRECTION_f4ae4c4c-8de8-4962-a9b5-8f4045ee9a50.json",
+    "jsonPointer": "/task/intakeDependency",
+    "originalRecordSha256": "bef6ed8fcf20518798343f27e13e24279ba42df5e60ed42224870f5c5920eb43"
+  },
+  "readinessAcknowledgement": {
+    "actor": "nova",
+    "recordedAtUTC": "2026-10-12T23:58:01Z",
+    "mailboxMessageId": "11a93764-d632-4b9a-8df8-b9bcabb3c3db",
+    "meaning": "CFA is ready to receive and validate exact official audio and lyric masters; it does not claim they were received or validated."
+  },
+  "audioMaster": {
+    "receivedFilename": "Meta Mirror_0 (Remastered).mp3",
+    "canonicalPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/Meta Mirror_0 (Remastered).mp3",
+    "byteCount": 6438669,
+    "sha256": "477627e4db431ba0ef8cf226b13745f3cdcc32050d88b8f0fc1f7aba3e45e154",
+    "masterDesignation": "Prime Meta Mirror track",
+    "version": "prime.v001",
+    "sourceProvenance": {
+      "type": "direct_user_attachment",
+      "attachmentId": "4997DBD4-1687-47B6-B0CB-64D48B6BA56C",
+      "deliveredFilename": "1-Meta-Mirror_0-Remastered-.mp3",
+      "designation": "Direct user request in this CFA chat: take this file and these lyrics as the prime Meta Mirror track."
+    },
+    "audioFormatAndStreams": {
+      "format": "mp3",
+      "sampleRateHz": 48000,
+      "channels": 2,
+      "streams": [
+        "Stream #0:0: Audio: mp3 (mp3float), 48000 Hz, stereo, fltp, 205 kb/s",
+        "Stream #0:1: Video: mjpeg (Baseline), yuvj420p(pc, bt470bg/unknown/unknown), 360x360 [SAR 1:1 DAR 1:1], 90k tbr, 90k tbn (attached pic)"
+      ],
+      "attachedPicturePresent": true,
+      "movingVideoPresent": false
+    },
+    "measuredDurationSeconds": 249.72,
+    "validationMethod": "Source/canonical SHA-256 match; complete native-rate/channel FFmpeg float32 decode with zero exit code and no errors. No listening or phrase alignment.",
+    "validationRecord": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_intake_20261012/AUDIO_VALIDATION.json",
+    "bytesUnchanged": true
+  },
+  "lyricMaster": {
+    "canonicalPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/Meta_Mirror.txt",
+    "byteCount": 4194,
+    "sha256": "5303adca22ea91cebe00efc9c62c2f8949631865b3265a0c615c06b4f11e605c",
+    "masterDesignation": "Prime Meta Mirror lyric text",
+    "version": "user.prime.v001",
+    "sourceProvenance": {
+      "type": "direct_user_text",
+      "suppliedTextArchive": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_intake_20261012/lyrics.supplied.prime.v001.txt",
+      "policy": "Preserve supplied words, section labels, punctuation and interior/trailing spaces; text file uses UTF-8 and normalized file line endings, with a terminal newline."
+    },
+    "linesExcludingTerminalBlankLines": 134,
+    "matchesEarlierClaudeDraftIgnoringOnlyLineEndingsAndTrailingWhitespace": true,
+    "earlierDraft": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/lyrics_user_20261013/META_MIRROR_0_REMASTERED.lyrics.user.v001.txt",
+      "sha256": "57ca7406428c164a449763559d4d8e03df6027bb937ff93ea32dd6baa1a5f6ed",
+      "status": "preserved_dated_provisional_source"
+    },
+    "timed": false,
+    "audioWordCorrespondenceVerified": false
+  },
+  "timedLyricMap": null,
+  "timestampsAccepted": false,
+  "expectedMetadata": [
+    "receivedFilename",
+    "canonicalPath",
+    "byteCount",
+    "sha256",
+    "masterDesignation",
+    "version",
+    "sourceProvenance",
+    "audioFormatAndStreams",
+    "measuredDuration",
+    "lyricVersionAndProvenance",
+    "validationMethod",
+    "timedMapVersionAndAlignmentEvidence"
+  ],
+  "currentEvidence": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/scene_map.json",
+      "sha256": "62769bcbeca814a4dae0e250146528bfe41e39e9a5686f5f1caaf91957a36ac5",
+      "bytes": 52386,
+      "finding": "Existing scene map contains 50 panels with approved_timing null and 4.5-second source placeholders; these are not accepted song synchronization."
+    },
+    {
+      "scope": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib",
+      "finding": "Read-only intake probe found no audio file under the current Lisan project tree; official audio and lyric master designation remain absent. This is not an audit of every CFA directory."
+    },
+    {
+      "sourceMessageId": "08373ad8-bd67-4bfc-9d09-11b3a185e5ca",
+      "finding": "Human-reported main lyrics available to Claude are provisional creative context; no local official-master receipt is established."
+    },
+    {
+      "recordedAtUTC": "2026-10-13T00:08:26Z",
+      "source": "visible Claude response reported by root browser operator",
+      "finding": "Claude reports only per-panel cue snippets. The earlier attributed claim that he has the main lyrics remains recorded as a discrepancy, not verified full-text availability.",
+      "evidenceScreenshot": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/CLAUDE_TWO_TRACK_ACK_VISIBLE.png"
+    },
+    {
+      "recordedAtUTC": "2026-10-13T02:09:18Z",
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_intake_20261012.json",
+      "sha256": "631844696abd68b7099c318cfe9e0414900e8b587a96080cbdc8fc3ec20c3194",
+      "finding": "Exact Prime audio/lyric receipt verified. Audio fully decodes,249.720 seconds,48kHz stereo. No timed lyric map or accepted scene synchronization."
+    }
+  ],
+  "writingDependencies": {
+    "songCreativeWorkMayProceed": true,
+    "standaloneWritingMayProceed": true,
+    "validatedSongTimingBlockedUntilMasterIntake": false,
+    "songFullLyricTextVerified": true,
+    "songCreativeContextLimit": "Prime full lyric text is received and designated. Available text is not a timed map; no listening-based word correspondence or synchronization has been accepted.",
+    "validatedSongTimingBlockedUntilAlignment": true
+  },
+  "scoringSeparation": [
+    "character_or_component_likeness",
+    "scene_craft",
+    "provider_role_grade",
+    "user_acceptance"
+  ],
+  "nextAction": "Use the designated Prime recording and supplied full lyrics for creative planning. Align sections, vocal lanes and scene timings to this exact audio before accepting timestamps. MM_0 remains a later separate cut.",
+  "sourceAttribution": {
+    "humanDirectionBy": "Ziggy",
+    "coordinatorRelayBy": "nova_personal_assistant",
+    "sourceThreadId": "01a12392-6543-7410-b29a-822656fb60d4",
+    "relaySourceMessageIds": [
+      "08373ad8-bd67-4bfc-9d09-11b3a185e5ca",
+      "b5c60a1d-0525-4622-abf1-00368f1882d5"
+    ],
+    "recordedBy": "nova",
+    "attributionLimit": "CFA acknowledgement of attributed human direction and repository readiness; not Claude-authored creative output or independent visual review."
+  },
+  "execution": {
+    "uploadStarted": false,
+    "generationStarted": false,
+    "paidRunStarted": false,
+    "newProviderAssignment": false
+  },
+  "lyricSourceAvailability": {
+    "status": "resolved_direct_user_prime_text_received",
+    "earlierHumanCoordinatorClaim": {
+      "sourceMessageIds": [
+        "08373ad8-bd67-4bfc-9d09-11b3a185e5ca",
+        "b0cb2b62-c990-4193-a0ce-230ae0fd85c7"
+      ],
+      "relayedBy": "nova_personal_assistant",
+      "attributedHuman": "Ziggy",
+      "claim": "Claude already has the main lyrics, usable as provisional creative context.",
+      "independentlyVerified": false
+    },
+    "claudeCurrentReport": {
+      "recordedAtUTC": "2026-10-13T00:08:26Z",
+      "reportedVia": "nova_root_browser_operator",
+      "availableContext": "per-panel cue snippets only",
+      "fullMainLyricsVerifiedAvailable": false,
+      "exactVisibleResponse": "Noted on both tracks — intro/action focus for the first story and the scoped Jet proportion caution. Before naming the output, I need to resolve a discrepancy: the intake record claims I already have the main lyrics, but I only have per-panel cue snippets, so I’m checking the relay source message now."
+    },
+    "officialLyricMasterReceived": true,
+    "resolutionNeeded": null,
+    "resolvedAtUTC": "2026-10-13T02:09:18Z",
+    "resolutionEvidence": {
+      "canonicalLyricPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/Meta_Mirror.txt",
+      "sha256": "5303adca22ea91cebe00efc9c62c2f8949631865b3265a0c615c06b4f11e605c",
+      "matchingEarlierClaudeDraftSha256": "57ca7406428c164a449763559d4d8e03df6027bb937ff93ea32dd6baa1a5f6ed",
+      "method": "All134 lines compare equal after removing only file line-ending differences and trailing whitespace. Direct user paste supplies designation."
+    }
+  },
+  "history": [
+    {
+      "recordedAtUTC": "2026-10-13T02:09:18Z",
+      "previousStatus": "ready_for_intake_official_masters_expected_from_user",
+      "previousAudioMaster": null,
+      "previousLyricMaster": null,
+      "previousWritingDependencies": {
+        "songCreativeWorkMayProceed": true,
+        "standaloneWritingMayProceed": true,
+        "validatedSongTimingBlockedUntilMasterIntake": false,
+        "songFullLyricTextVerified": true,
+        "songCreativeContextLimit": "Prime full lyric text is received and designated. Available text is not a timed map; no listening-based word correspondence or synchronization has been accepted.",
+        "validatedSongTimingBlockedUntilAlignment": true
+      },
+      "previousLyricSourceAvailability": {
+        "status": "resolved_direct_user_prime_text_received",
+        "earlierHumanCoordinatorClaim": {
+          "sourceMessageIds": [
+            "08373ad8-bd67-4bfc-9d09-11b3a185e5ca",
+            "b0cb2b62-c990-4193-a0ce-230ae0fd85c7"
+          ],
+          "relayedBy": "nova_personal_assistant",
+          "attributedHuman": "Ziggy",
+          "claim": "Claude already has the main lyrics, usable as provisional creative context.",
+          "independentlyVerified": false
+        },
+        "claudeCurrentReport": {
+          "recordedAtUTC": "2026-10-13T00:08:26Z",
+          "reportedVia": "nova_root_browser_operator",
+          "availableContext": "per-panel cue snippets only",
+          "fullMainLyricsVerifiedAvailable": false,
+          "exactVisibleResponse": "Noted on both tracks — intro/action focus for the first story and the scoped Jet proportion caution. Before naming the output, I need to resolve a discrepancy: the intake record claims I already have the main lyrics, but I only have per-panel cue snippets, so I’m checking the relay source message now."
+        },
+        "officialLyricMasterReceived": true,
+        "resolutionNeeded": null,
+        "resolvedAtUTC": "2026-10-13T02:09:18Z",
+        "resolutionEvidence": {
+          "canonicalLyricPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/Meta_Mirror.txt",
+          "sha256": "5303adca22ea91cebe00efc9c62c2f8949631865b3265a0c615c06b4f11e605c",
+          "matchingEarlierClaudeDraftSha256": "57ca7406428c164a449763559d4d8e03df6027bb937ff93ea32dd6baa1a5f6ed",
+          "method": "All134 lines compare equal after removing only file line-ending differences and trailing whitespace. Direct user paste supplies designation."
+        }
+      },
+      "snapshot": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_intake_20261012/OFFICIAL_MASTER_INTAKE.before_prime.json",
+      "snapshotSha256": "d7e634b31af3e99d0474645764c386a63137ef9679339315b7d37b8494b6bb6f",
+      "reason": "Direct user audio/lyric receipt and Prime designation; technical decode passed; synchronization remains unaccepted."
+    }
+  ],
+  "canonicalMusicIntake": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_intake_20261012.json"
+}

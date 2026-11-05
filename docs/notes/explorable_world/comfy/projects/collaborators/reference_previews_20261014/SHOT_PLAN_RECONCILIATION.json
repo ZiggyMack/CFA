@@ -1,0 +1,171 @@
+{
+  "format": "cfa-shot-plan-reconciliation-evidence-v1",
+  "recordedAtUTC": "2026-10-15T00:11:04.626063+00:00",
+  "purpose": "Explain global Mission Control Shot plans 20 hosted versus 18 local using the fresh user export. This replaces the unsupported project-filter explanation.",
+  "scope": "Read-only source/export comparison and in-memory render/import simulations; no canonical review update, catalog build, publish, or source asset removal.",
+  "pins": {
+    "freshReviewExport": {
+      "path": "docs/notes/downloads/cfa-review (1).json",
+      "bytes": 874931,
+      "sha256": "31ad0cc84612b403c097841c80ddabe40ab3508967b611be394532e61b541f0d",
+      "lastModifiedUTC": "2026-10-15T00:03:51.402822+00:00"
+    },
+    "previousReviewExport": {
+      "path": "docs/notes/downloads/cfa-review.json",
+      "bytes": 808636,
+      "sha256": "084220dad9be271ddeaf1b6c86ed01b1a5a038e2c21d27f173eb600042c4b100",
+      "lastModifiedUTC": "2026-10-14T13:14:51.642501+00:00"
+    },
+    "hostedBaseCatalog": {
+      "path": "apps/creative_studio/library/catalog.json",
+      "bytes": 1354507,
+      "sha256": "9a1bf6828f37fce0a543cca7553cd81d0f6ddc0d885acf715b1e5e301fc478ba",
+      "lastModifiedUTC": "2026-10-10T13:03:07.257876+00:00"
+    },
+    "hostedMissionSnapshot": {
+      "path": "apps/creative_studio/library/mission_control.json",
+      "bytes": 7365592,
+      "sha256": "3e2a3f92d8d841a6a50edcd3e5c93a88692c7ea47891756f86a7b33f823e3317",
+      "lastModifiedUTC": "2026-10-14T05:47:48.549416+00:00"
+    },
+    "hostedMissionManifest": {
+      "path": "apps/creative_studio/library/mission_manifest.json",
+      "bytes": 505433,
+      "sha256": "c42e59cd0d185ef3dd4212cb0e09920eef7763a2e729c85dc1ec68ee42fdf590",
+      "lastModifiedUTC": "2026-10-14T05:47:48.563408+00:00"
+    },
+    "currentLocalCatalog": {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+      "bytes": 11083117,
+      "sha256": "3dc3211e7e457a005d0c4b32ee4af63b34287455eb3e10f2589f112053575583",
+      "lastModifiedUTC": "2026-10-14T22:48:47.174424+00:00"
+    },
+    "currentLocalRenderer": {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "bytes": 256470,
+      "sha256": "b90d48e69ca5094272269c85683e219a8c3aef533b49d408df5d42465528908a",
+      "lastModifiedUTC": "2026-10-15T00:09:50.535422+00:00"
+    },
+    "hostedReviewHelpers": {
+      "path": "apps/creative_studio/library_helpers.py",
+      "bytes": 37011,
+      "sha256": "63e28a62ef9bb8e4a0bad87ad5b1068bf6342078f67c6b3dc9bb89c57be53102",
+      "lastModifiedUTC": "2026-10-14T05:50:24.099355+00:00"
+    }
+  },
+  "exports": {
+    "freshExportedUTC": "2026-10-15T00:03:50.252Z",
+    "freshItems": 203,
+    "previousExportedUTC": "2026-10-14T13:14:51.333Z",
+    "previousItems": 201
+  },
+  "hostedSnapshotMetadata": {
+    "schema": "cfa-mission-control-snapshot-v1",
+    "generatedAtUTC": "2026-10-14T05:47:44.464385+00:00",
+    "sourceCatalog": {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+      "sha256": "4e46f62bcf1dd00586ca3d26cca45a7ec5e8417f748f967b2033f7986ba8e11a"
+    },
+    "purpose": "Saved local index state for Ziggy’s Corner; not a live or two-way review sync.",
+    "unavailableLinks": [
+      {
+        "assetID": "ee3f7e84-462d-41e5-b8c2-0ea1d9624aa1",
+        "reason": "Reference is absent from the source catalog"
+      }
+    ]
+  },
+  "sharedCounterRule": "Count existing assets across all projects with a truthy normalized shotPlan, not archived, and effective review status other than remove. Project/provider/search filters do not constrain the global metric.",
+  "verification": {
+    "actualLocalJavaScript": {
+      "method": "Executed actual library.js with actual catalog.js in the existing test_reference_scope.cjs Node DOM harness; supplied fresh export under cfa-visual-review-v1. Instrumented functions exposed in-memory only.",
+      "seedOnlyVisiblePlans": 20,
+      "previousExportVisiblePlans": 20,
+      "freshExportVisiblePlans": 18,
+      "newVisiblePlanIDs": [],
+      "removedVisiblePlanIDs": [
+        "HD-FALCON-1f55da287bbf7416",
+        "HD-RETURN-d55b97a3b322"
+      ]
+    },
+    "actualHostedPythonHelpers": {
+      "method": "Imported current library_helpers.py with python -B; mission_review_data, read_review, effective_reviews, mission_visible executed in memory against the pinned files.",
+      "seedOnlyVisiblePlans": 20,
+      "freshExportVisiblePlans": 18,
+      "matchedReviewItems": 202,
+      "skippedReviewItems": 1
+    },
+    "assetDeletionOccurred": false,
+    "evidenceLimit": "These are pinned saved-file simulations, not inspection of the live hosted Python session or the local browser localStorage. The fresh user export reproduces the screenshot difference exactly."
+  },
+  "clearedPlans": [
+    {
+      "id": "HD-FALCON-1f55da287bbf7416",
+      "title": "C04-002 · Battle light",
+      "catalogTitle": "C04-002 · Battle light",
+      "project": "hon",
+      "assetSHA256": "1f55da287bbf74168834922ab7fc13758ae0c196feba30ee63cfeab52fc43641",
+      "exportSHA256MatchesAsset": true,
+      "assetArchived": false,
+      "earlierHostedRecord": {
+        "status": "needs_fixes",
+        "shotPlan": {
+          "status": "planned",
+          "destinations": [
+            "undecided"
+          ],
+          "idea": "",
+          "prompt": ""
+        },
+        "updatedAt": "2026-10-12T03:41:08.119Z"
+      },
+      "freshReviewRecord": {
+        "status": "needs_fixes",
+        "shotPlan": null,
+        "updatedAt": "2026-10-14T13:18:15.369Z"
+      },
+      "explicitShotPlanNull": true,
+      "disposition": "Plan cleared; asset and needs_fixes review remain."
+    },
+    {
+      "id": "HD-RETURN-d55b97a3b322",
+      "title": "Recovered mixed tattoo source sheet · dice, eye/know, Chewie and bird",
+      "catalogTitle": "d55b97a3b3222e5db70b5c38d66f2f57b3a59f3eb23f228ae16e2d137c37d8e6.jpg",
+      "project": "hon",
+      "assetSHA256": "d55b97a3b3222e5db70b5c38d66f2f57b3a59f3eb23f228ae16e2d137c37d8e6",
+      "exportSHA256MatchesAsset": true,
+      "assetArchived": false,
+      "earlierHostedRecord": {
+        "status": "needs_fixes",
+        "shotPlan": {
+          "status": "planned",
+          "destinations": [
+            "Grok"
+          ],
+          "idea": "just need a refrence head with a legend indicating where each tatto should go.",
+          "prompt": ""
+        },
+        "updatedAt": "2026-10-09T18:38:52.274Z"
+      },
+      "freshReviewRecord": {
+        "status": "needs_fixes",
+        "shotPlan": null,
+        "updatedAt": "2026-10-14T13:17:56.030Z"
+      },
+      "explicitShotPlanNull": true,
+      "disposition": "Plan cleared; asset and needs_fixes review remain."
+    }
+  ],
+  "unrelatedUnimportedReviewRecords": [
+    {
+      "id": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/START_HERE.txt",
+      "filename": "START_HERE.txt",
+      "exportPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/START_HERE.txt",
+      "exportSHA256": null,
+      "hostedAssetSHA256": "10ad6fc904612a644c7e5e0dd4db01f546e128a6b0f9d4a4aa2846631069623f",
+      "currentLocalAssetSHA256": null,
+      "reason": "hosted asset hash mismatch",
+      "disposition": "Not imported by the read-only hosted helper simulation. Original fresh export remains preserved; no source review data was modified."
+    }
+  ],
+  "conclusion": "Two explicit shotPlan:null updates were made just after the previous review export. Hosted seed data retains the old plans. The discrepancy is stale review data, not a project filter or two missing assets."
+}

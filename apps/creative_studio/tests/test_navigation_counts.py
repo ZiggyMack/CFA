@@ -10,7 +10,7 @@ from streamlit.testing.v1 import AppTest
 
 APP = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(APP))
-from library_helpers import navigation_reference_count, navigation_storyboard_shot_count
+from library_helpers import navigation_reference_count, navigation_storyboard_sequence_count, navigation_storyboard_shot_count
 
 
 class NavigationCountsTest(unittest.TestCase):
@@ -41,6 +41,17 @@ class NavigationCountsTest(unittest.TestCase):
         self.assertEqual(navigation_storyboard_shot_count(data, 'lisan'), 0)
         self.assertEqual(data, before)
 
+    def test_storyboard_navigation_counts_sequences_not_planned_shots(self):
+        data = dict(storyboardStructure=dict(stories=[
+            dict(storyID='criminal-mind', project='criminal_mind', sections=[
+                dict(id='S01'), dict(id='S02'), dict(id='S02')],
+                shots=[dict(shotID=f'shot-{number}') for number in range(12)])]),
+            storyboardStories=[dict(id='fallback', project='lisan'), dict(id='fallback', project='lisan')])
+        before = deepcopy(data)
+        self.assertEqual(navigation_storyboard_sequence_count(data, 'criminal_mind'), 2)
+        self.assertEqual(navigation_storyboard_sequence_count(data, 'lisan'), 1)
+        self.assertEqual(data, before)
+
     def test_navigation_counts_separate_documents_and_preserve_selections(self):
         assets = [dict(id='image',kind='image'), dict(id='video',kind='video'),
                   dict(id='note',kind='document'), dict(id='pdf',kind='pdf')]
@@ -66,8 +77,8 @@ class NavigationCountsTest(unittest.TestCase):
         count = navigation_reference_count([a for a in assets if a.get('project')==app.session_state.studio_project], documents=True)
         self.assertEqual(app.button(key='nav:Documents').label, 'Documents · '+str(count))
         catalog = json.loads((APP/'library/design_catalog.json').read_text(encoding='utf-8'))
-        shots = navigation_storyboard_shot_count(catalog, app.session_state.studio_project)
-        self.assertEqual(app.button(key='nav:Storyboard').label, f'Storyboard · {shots}')
+        sequences = navigation_storyboard_sequence_count(catalog, app.session_state.studio_project)
+        self.assertEqual(app.button(key='nav:Storyboard').label, f'Storyboard · {sequences}')
 
     def test_writings_heading_counts_documents_and_keeps_every_document(self):
         docs = [dict(id='note', project='hon', kind='document', title='Written scene', filename='scene.md'),

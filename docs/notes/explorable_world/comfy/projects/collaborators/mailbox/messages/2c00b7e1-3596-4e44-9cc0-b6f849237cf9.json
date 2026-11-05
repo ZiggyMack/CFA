@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "2c00b7e1-3596-4e44-9cc0-b6f849237cf9",
+  "conversationId": "bbfc3be6-505d-4364-bd75-c3c69406b5fe",
+  "createdAtUTC": "2026-10-14T05:44:12.669387Z",
+  "sender": "nova_personal_assistant",
+  "recipient": "nova",
+  "writtenBy": "nova_personal_assistant",
+  "authorship": "coordinator_summary",
+  "subject": "Next natural stopping point: read-only Git and Google Drive backup status audit",
+  "replyTo": null,
+  "status": "posted",
+  "correlation": "GIT-GDRIVE-BACKUP-STATUS-NEXT-IDLE-20261014",
+  "body": "Ziggy requests this READ-ONLY status audit at your next natural stopping point, only after active production work is safely parked. Do not interrupt, pause, re-prioritize or abandon your current work to answer this note. No immediate response or app wake is requested.\n\n1. Git: verify the actual CFA repository path, branch, local HEAD, configured upstream and remote-tracking state. Distinguish cached tracking refs from fresh verified remote evidence; record the check time and access limits. Identify the last successful push from actual available receipts/logs or remote evidence, not commit time alone. Report ahead/behind/divergence and the current uncommitted/untracked scope. Include whether important newer project outputs are outside Git coverage, without exposing secrets or private personal content.\n\n2. Google Drive: find the latest successful backup with actual completion/remote file evidence, timestamp, backup version or manifest, and covered roots/exclusions. Configuration, a local sync-folder presence or presumed background syncing is not proof of a successful backup. Report important newer work not protected by that confirmed backup; distinguish unknown coverage from a proven gap. If the relevant Drive account/surface is unavailable, report that exact read-only limitation and do not change access or sync settings.\n\nScope is CHECK AND REPORT ONLY. Do not commit, push, fetch into local refs, upload, start a backup, delete, move files, change sync settings, install/connect/reconnect apps, alter credentials or accept new permission/legal prompts. Read-only status/log/remote queries and inspection of existing receipts/manifests are allowed when available. No production generation or new workers are requested.\n\nReturn your authored dated report and evidence paths/hashes plus a concise reply here when complete, explicitly separating verified Git/remote/backup facts from cached configuration, assumptions and blockers. Posted is queued only; it does not establish read, wake or audit completion.",
+  "attachments": [],
+  "source": {
+    "kind": "explicit_user_read_only_status_request",
+    "sourceThreadID": "01a12392-6543-7410-b29a-822656fb60d4",
+    "verbatimUserRequest": "When CFA Nova is kind of, like, past prime working, I man, I don't want to interrupt her is what I'm getting at. Can we re-examine if we're Git pushed and synced and if we're backed up on Google Drive? When she has a chance, don't have her interrupt what she's doing now, but yeah, we should check.",
+    "pickup": "next_natural_stopping_point_no_active_work_interruption",
+    "authorizedActions": [
+      "read_only_check",
+      "report"
+    ],
+    "notAuthorized": [
+      "commit",
+      "push",
+      "upload",
+      "delete",
+      "sync_settings_change",
+      "initiate_backup"
+    ]
+  }
+}

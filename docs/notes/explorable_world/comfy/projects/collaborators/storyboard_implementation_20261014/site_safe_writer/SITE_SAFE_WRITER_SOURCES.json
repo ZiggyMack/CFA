@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "id": "site-safe-writer-20261014",
+  "createdAtUTC": "2026-10-14T22:28:43.032620Z",
+  "updatedAtUTC": "2026-11-04T14:18:41Z",
+  "purpose": "Durable source-to-publication provenance for reviewed site reading excerpts and frozen exact-byte site revisions. Source pins belong in the writer manifest; public document content must resolve only to the publication files.",
+  "sourceRevisionDate": "2026-10-14",
+  "records": [
+    {
+      "documentID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/DECISIONS_20261010.md",
+      "source": {
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/DECISIONS_20261010.md",
+        "bytes": 27343,
+        "sha256": "58cddd62d8b9f2bc040282de1e5ac0ee7334a1413cba74c31293541b32b65e7c"
+      },
+      "publication": {
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_implementation_20261014/site_safe_writer/hon/DECISIONS_20261010.md",
+        "bytes": 27343,
+        "sha256": "58cddd62d8b9f2bc040282de1e5ac0ee7334a1413cba74c31293541b32b65e7c"
+      },
+      "omissionsAndRewrites": [],
+      "publicationNotes": [
+        "Frozen exact-byte site revision; the live append-only writer record continued and its current hash is pinned separately in writer_development.json."
+      ]
+    },
+    {
+      "documentID": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/START_HERE.txt",
+      "source": {
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/START_HERE.txt",
+        "bytes": 13126,
+        "sha256": "d4d2e6e47ab5ee4e851b258dcde32e551d16640cf602115baae2992bb4880472"
+      },
+      "publication": {
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_implementation_20261014/site_safe_writer/hon/START_HERE.txt",
+        "bytes": 13126,
+        "sha256": "d4d2e6e47ab5ee4e851b258dcde32e551d16640cf602115baae2992bb4880472"
+      },
+      "omissionsAndRewrites": [],
+      "publicationNotes": [
+        "Frozen exact-byte site revision; the live append-only writer index continued and its current hash is pinned separately in writer_development.json."
+      ]
+    },
+    {
+      "documentID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/DECISIONS_20261012.md",
+      "source": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/DECISIONS_20261012.md",
+        "bytes": 89252,
+        "sha256": "992c5c5b15ea2ccdf1a4af7ea6fa85157b649314cc4f60f9afd2b5370b4a69d5"
+      },
+      "publication": {
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_implementation_20261014/site_safe_writer/DECISIONS_20261012.md",
+        "bytes": 88084,
+        "sha256": "e584f484ff38bfd23ea9db16e1037fc1eafb9c8f19cf0a541ff8efaf15624e8e"
+      },
+      "omissionsAndRewrites": [
+        {
+          "sourceLines": [
+            64,
+            64
+          ],
+          "section": "Decision item 59",
+          "action": "Replace complete item with labelled nonpublication marker."
+        },
+        {
+          "sourceLines": [
+            67,
+            67
+          ],
+          "section": "Decision item 62",
+          "action": "Omit writer-only source reference from method list; retain adjoining separator."
+        },
+        {
+          "sourceLines": [
+            104,
+            104
+          ],
+          "section": "Open item 24",
+          "action": "Omit final writer-only source question; finish preceding creative question with a full stop."
+        }
+      ],
+      "publicationNotes": [
+        "Labelled site reading excerpt; original writer file unchanged."
+      ]
+    },
+    {
+      "documentID": "lisan:doc:docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/START_HERE.txt",
+      "source": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/START_HERE.txt",
+        "bytes": 27067,
+        "sha256": "ec3ca7122d3fa94f507c205fe45d53b44d9c7863a4c8c8129e013186c6e5b5b6"
+      },
+      "publication": {
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_implementation_20261014/site_safe_writer/START_HERE.txt",
+        "bytes": 27393,
+        "sha256": "21a4464acc0bc3c1630b798561c3a8c925f67d3a80d822fd215bff2af6d87e1a"
+      },
+      "omissionsAndRewrites": [
+        {
+          "sourceLines": [
+            364,
+            365
+          ],
+          "section": "James ink heading",
+          "action": "Replace heading with JAMES'S INK (DECISIONS item 58)."
+        },
+        {
+          "sourceLines": [
+            373,
+            377
+          ],
+          "section": "Unpublished James delta index entry",
+          "action": "Omit filename and complete description."
+        }
+      ],
+      "publicationNotes": [
+        "Labelled site reading excerpt; original writer file unchanged.",
+        "Separate coverage correction: 21 pending-reference shots, 20 character, 5 object/design, 4 overlapping, S01-5.3 object/design only."
+      ]
+    }
+  ],
+  "verification": {
+    "sourcePinsMatchedBeforeWrite": true,
+    "sourceFilesUnchanged": true,
+    "unmodifiedAuthoredLinesPreserved": true,
+    "completePrivateItemAbsentFromBothPublicationFiles": true,
+    "privateDeltaFilenameAbsentFromBothPublicationFiles": true,
+    "writerOnlySourcePhrasesAbsentFromBothPublicationFiles": true,
+    "lineEndings": "LF; source files already used LF"
+  },
+  "excludedDocumentBasenames": [
+    "CHARACTER_JAMES_DELTA_2_20261014.md"
+  ]
+}

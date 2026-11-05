@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "id": "HON-OPENING-CONTROL-RECONCILIATION-20261011",
+  "checkedAtUTC": "2026-10-12T01:45:41.9385622Z",
+  "localDate": "2026-10-11",
+  "state": "prepared_no_external_dispatch",
+  "geminiChatURL": "https://gemini.google.com/app/988990050e4ad32c",
+  "controlPrompt": {
+    "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/STILL_PROMPT.txt",
+    "sha256": "f5332a288bd840ccc201f8a98e77e68243e7cb7b7b97decfe1f4e32e7b442d06",
+    "unchanged": true,
+    "proposedG3": "Reuse exact current STILL_PROMPT.txt and same four A/B/D/F originals. This is the separately authorized bounded corrective retry of G2, not a new best-of-many experiment.",
+    "proposedF1": "One initial Flow control using byte-identical STILL_PROMPT.txt and the same four original files in order.",
+    "additionalCorrectionRule": "If operator changes any textual requirement or source, issue a separate named adapter/version to both lanes and disclose difference from G2; never silently correct only Gemini then call prompts matched."
+  },
+  "sources": [
+    {
+      "label": "A",
+      "assetID": "HD-RETURN-6c8900223ee9",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/6c8900223ee9__lf_full.png",
+      "absolutePath": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\grok_return_20261009\\received\\content\\6c8900223ee9__lf_full.png",
+      "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae",
+      "matchesManifest": true,
+      "bytes": 1166382,
+      "role": "Exact actor identity, loose dark curls, no forehead marks, cheek text styles and sides, existing neck blaster and chest ship, brown jacket/open white shirt. Older teeth in this image are not authoritative."
+    },
+    {
+      "label": "B",
+      "assetID": "HD-B-91ef00348229",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/91ef00348229__GRILL-LOCK-4GOLD-v2.jpg",
+      "absolutePath": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\grok_drop_b_20261009\\received\\content\\91ef00348229__GRILL-LOCK-4GOLD-v2.jpg",
+      "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+      "matchesManifest": true,
+      "bytes": 295186,
+      "role": "Mouth only: four upper gold lateral incisor/short canine caps, white central incisors, lower silver chrome grill, two plain silver lower-lip hoops. Nose comes from A; this crop is not nose authority."
+    },
+    {
+      "label": "D",
+      "assetID": "HD-DROP-36679ee9953b",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-03-pay-table.jpg",
+      "absolutePath": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\asset_review_20261007\\storyboard\\hon-dolo-storyboard-strictly-business\\series-01-cold-open\\SB-03-pay-table.jpg",
+      "sha256": "36679ee9953bfb8d0492009c1a47309fdd8f04f951f2077bce0007067146b1c4",
+      "matchesManifest": true,
+      "bytes": 316016,
+      "role": "Translucent glowing rectangular glass-like circuit credits and worn table staging only. Wrong actor and ink must not transfer."
+    },
+    {
+      "label": "F",
+      "assetID": "HD-DROP-b18c4a123579",
+      "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-06-scoundrel-detail.jpg",
+      "absolutePath": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\asset_review_20261007\\storyboard\\hon-dolo-storyboard-strictly-business\\series-01-cold-open\\SB-06-scoundrel-detail.jpg",
+      "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+      "matchesManifest": true,
+      "bytes": 308775,
+      "role": "Substantial flattened gold curb bracelet plus dark band. Character RIGHT/viewer-left is provisional scene blocking, not identity canon. Do not transfer forearm tattoo or invent clasp/watch/hand ink."
+    }
+  ],
+  "historicalAttempts": [
+    {
+      "reason": "Different original prompt and six-image context from current four-input control.",
+      "id": "G1",
+      "comparable": false,
+      "state": "failed_historical_six_image_prompt"
+    },
+    {
+      "visibleChatModelLastKnown": "Flash-Lite",
+      "state": "reviewed_critical_defects_not_accepted",
+      "actualImageModel": null,
+      "outputPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/evidence/G2_displayed_preview_20261010.jpg",
+      "sourceEvidence": "Prompt text and four thumbnails observed by operator; uploaded binary hashes and copied prompt bytes were not independently verified.",
+      "responseID": "0752e9995688a8c5",
+      "observedDimensions": {
+        "height": 572,
+        "width": 1024
+      },
+      "id": "G2",
+      "outputSHA256": "4329013cacd87cf51adae031fd72492b565ea580e6a61b5c99dd094477b6de1a"
+    }
+  ],
+  "grokReconciliation": {
+    "state": "no_evidenced_matching_output_in_inspected_records",
+    "batch01": {
+      "notesSHA256": "a2b5b00fc17ca257272c06fbd9357053b9c53d954ddc897d76e1a77fad0b2a3b",
+      "mismatches": [
+        "W01 cockpit hover; lf_full only, mouth occluded, no cantina/control four-prop setup",
+        "W02 Leia eyeline; Leia reference, not Dolo",
+        "W03 credits in open CASE; no reference used/no Dolo, separate environment and invented lettering",
+        "W04 warship exterior; no reference used"
+      ],
+      "path": "docs/notes/downloads/GROK-HD-SB-WRITER-batch01"
+    },
+    "historicalPayTable": "SB-03-pay-table is D prop/table-only authority with wrong actor expressly excluded; no exact-match input/output lineage supports treating it as K1.",
+    "notAbsenceProofForAllProviderHistory": true,
+    "examined": [
+      "Current RUN_MANIFEST and G2 review",
+      "Grok return/drop_b document provenance",
+      "Explicit downloads text/document search",
+      "batch01 current NOTES",
+      "batch02 current NOTES"
+    ],
+    "batch02": {
+      "notesSHA256": "78fc7ab61edc68aec95e58faa8f45379e876e50039d9c8ef7724b6c137c50d22",
+      "mismatches": [
+        "Falcon interior/DJ/co-pilot scenes, not the cantina control",
+        "Uses batch01 W01 as world and DJB sheets for Chewy, not A/B/D/F",
+        "Earlier invented Chewy variants labelled EXPLORATORY; separate production history"
+      ],
+      "path": "docs/notes/downloads/GROK-HD-SB-WRITER-batch02"
+    },
+    "id": "K1",
+    "newRequestSent": false,
+    "nextAction": "Ask current assigned Grok/Claude operator only for existing exact matching request/inputs/output IDs if such evidence exists; do not automatically issue new Grok generation.",
+    "matchingExistingOutput": null
+  },
+  "fairness": {
+    "noGeneralWinnerFromOne": "Separate controlled still, exploration, assisted correction, production and temporal conclusions.",
+    "historicalG2Original": "Retrieved 1024x572 displayed JPEG, not independently verified native full-size server original.",
+    "G3RetryVsFlowFirstAttempt": "Record all G1/G2/G3 attempt counts, failures, effort/elapsed usage and prior context. Matched current prompt does not imply matched attempt history.",
+    "sameControlPromptProposed": true,
+    "sameOriginalsVerified": true,
+    "context": "Gemini retains six original uploads/prior rejected frames/workshop; fresh Flow project differs. Do not claim strict context equality.",
+    "settings": "Record actual selected image model/account controls/dimensions/output count and costs; no inferred cross-model seed equivalence."
+  },
+  "draftFiles": [
+    "prep/EXPLORATORY_PROMPT_DRAFT.txt",
+    "prep/EXPLORATORY_CONTRACT_DRAFT.json"
+  ],
+  "originalPromptsModified": false,
+  "resultsScoredByThisTask": false,
+  "accepted": false,
+  "externalActionsPerformed": false
+}

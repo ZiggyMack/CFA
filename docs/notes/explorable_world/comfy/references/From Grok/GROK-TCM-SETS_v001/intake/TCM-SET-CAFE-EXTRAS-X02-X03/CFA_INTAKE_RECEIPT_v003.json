@@ -1,0 +1,186 @@
+{
+  "format": "cfa-grok-image-intake-v1",
+  "project": "criminal_mind",
+  "batchID": "TCM-SET-CAFE-EXTRAS-X02-X03",
+  "lane": "set_round",
+  "taskID": "tcm-grok-sets-20261030",
+  "intakeRole": "site_index_receipt",
+  "sealStatus": "complete_only_when_pinned_by_required_aggregate",
+  "requiredAggregatePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/CFA_SET_INTAKE_035-118_SITE_INDEX_v003.json",
+  "supersedesReceipt": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-EXTRAS-X02-X03/CFA_INTAKE_RECEIPT_v002.json",
+  "verifiedAtUTC": "2026-11-04T13:41:07Z",
+  "receivedAtUTC": null,
+  "receivedTimeStatus": "not_recorded_in_archive",
+  "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-EXTRAS-X02-X03.zip",
+  "archiveSHA256": "cb22f2ab97cdfa44b8c0cc286f869b463a4cb4e96fa4de70623a668cf192312a",
+  "archiveBytes": 523049,
+  "archiveMemberCount": 15,
+  "receivedOriginals": 2,
+  "acceptedOriginals": 0,
+  "humanVerdictsCreated": 0,
+  "selectedStartingFrames": 0,
+  "assets": [
+    {
+      "candidateID": "TCMSET_B3_CAFE_X02__P02-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-CAFE-EXTRAS-X02-X03\\TCMSET_B3_CAFE_X02__P02-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-EXTRAS-X02-X03/TCMSET_B3_CAFE_X02__P02-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-EXTRAS-X02-X03.zip",
+      "archiveMember": "TCM-SET-CAFE-EXTRAS-X02-X03/TCMSET_B3_CAFE_X02__P02-LS1.jpg",
+      "sha256": "24ed4f99e8876775435b39b38652cb5cfb2cd494434bbfcbe4dbf11b356cfdee",
+      "bytes": 199943,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "CAFE-P02 position text (MAPS:L259); card s6 'the city street outside is EMPTY - no pedestrians'; CAFE-L21 precedent (standing figure through glass = QF)",
+        "note": "Disclosed extra, redo of failed L33 (does not replace it). Correction worked: no figure through the glass. Window left: facade, two trunks and a thin pole at (265,60,276,300) - uniform dark, no pale top, no head/torso at 2x or 4x contrast-stretched; street empty, no cars or plates. P02 met: chair back, one cup at the bottom edge, far chair back breaking the right edge. Notes: chair right of centre (P02 'centered'; composition, not marked down); small wall sconce top right; follows L34 geometry (mean abs diff 6.0/255, different sha256). Z_11 Q-X2 (X02 or L34 for P02-LS1-b) is for Claude. No text or brand. | screener sha256 own (R12); matches EXTRAS_B3_CAFE_index (sha256 2a2a4733...2701) and Z6_B3_CAFE_EXTRAS_HANDOFF_v001 (sha256 26ef66a7...41cf, found in screening before freeze; no Z6 handoff existed when assigned, so I hashed images and index myself first); manifest has reference_ids; no exact duplicate sha256 among the 39 CAFE jpgs; order of work: (1) read maker index and hashed every still, compared with index; (2) cross-checked Z6 handoff(s); (3) judged 1x then 2x and 4x+ before comparing with Z_11 flags; inspected 1x then 2x-4x; PRELIMINARY",
+        "cardVersion": "TCMSET_B2_TCM-SET-CAFE_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-CAFE_card_v001.md sha256:ea71659d818c95d4885d72cc03204e7c13daa54eaa2ad124a831894af4771725 (= TCMSET_B2_CARDS_INDEX_B2_v001 row); TCM_SET_CAMERA_MAPS_v001_ADDENDUM_D_20261102.md sha256:2a10c3961a50db331f10773cbc17f326bc37dc12b8b7f332453430a2748282b0; TCM_SET_CAMERA_MAPS_v001_ADDENDUM_A_20261101.md sha256:cf5300516fdeb14fde62b319112701e0cd526039f1f3842629f8853b1531d2c5; TCM_HELD_POSITIONS_RULINGS_20261102.md sha256:74cfc1e6d66463a4d4a7bc84c6f4f14d0630167de6e00724c3d87f202b9ad6a3; TCM_SET_CAMERA_MAPS_v001_20261031.md sha256:f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e; V1_SCREEN_RULINGS_20261030T211400Z_v001.md sha256:ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df; V1_SCREEN_RULINGS_ADDENDUM_20261030T213705Z_v002.md sha256:e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265; V2_TCMSET_20261102T050450Z_v006.tsv sha256:a900f22600a48594608c28c5bc2b95ed9152fed841120935cbf1739fd80efcba (CAFE-X01 row)",
+        "sourceMember": "TCM-SET-CAFE-EXTRAS-X02-X03/SCREENING_ROWS_CAFE_B3_EXTRAS_PRELIMINARY.tsv",
+        "sourceSHA256": "1b3b9c1c5ce580b67360a322e1484004263cbf488e6d7056a7408d962759e748",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY. EXTRA, redo of failed L33 (figure-shaped blur). Chair back, window at its shoulder at the left edge, street soft, tree-lined and empty, ONE cup at the bottom edge, far chair back breaking the right edge, sun patches. Correction worked: YES (no figure-shaped blur, no pale-topped poles, no cars at zoom).",
+        "sourceVsProposal": null,
+        "defectNote": "ADVISORY: one thin dark upright near the window mullion reads as a slim tree trunk/pole (no pale top, not figure-shaped); chair right of centre, not centred; street fairly sharp rather than very soft; small wall sconce top right",
+        "sourceMember": "TCM-SET-CAFE-EXTRAS-X02-X03/MAKER_EXTRAS_B3_CAFE_index.tsv",
+        "sourceSHA256": "2a2a473337dbb0d2de72734bedca8ccbf900d304d2fad5709a9009a8592a2701"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCMSET_B3_CAFE_X02__P02-LS1",
+        "cameraPositionID": "CAFE-P02",
+        "lightState": "CAFE-LS1",
+        "variant": null,
+        "variantOf": "TCMSET_B3_CAFE_L33__P02-LS1-b",
+        "carID": null,
+        "referenceIDs": [
+          "MAPS:L259",
+          "TCMSET_B2_TCM-SET-CAFE_card_v001.md",
+          "Addendum D",
+          "img_ref: B3 CAFE-L34 (working variant of the same position",
+          "clean street",
+          "correct geometry)",
+          "failed L33 NOT used"
+        ],
+        "servesShotsRaw": "TCM-18-02",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-18-02"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-CAFE-EXTRAS-X02-X03/MAKER_EXTRAS_B3_CAFE_index.tsv",
+        "sourceSHA256": "2a2a473337dbb0d2de72734bedca8ccbf900d304d2fad5709a9009a8592a2701",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-CAFE",
+      "providerCandidateID": "TCMSET_B3_CAFE_X02__P02-LS1",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-18-02"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-18"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Cafe corner/window table",
+      "sourceConstraints": "Small table in a corner by the window, seating for two, coffee and a believable patron background zone. A shared environment, not two disconnected close-up sets."
+    },
+    {
+      "candidateID": "TCMSET_B3_CAFE_X03__P05-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-CAFE-EXTRAS-X02-X03\\TCMSET_B3_CAFE_X03__P05-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-EXTRAS-X02-X03/TCMSET_B3_CAFE_X03__P05-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-CAFE-EXTRAS-X02-X03.zip",
+      "archiveMember": "TCM-SET-CAFE-EXTRAS-X02-X03/TCMSET_B3_CAFE_X03__P05-LS1.jpg",
+      "sha256": "937d028cee85adff1efc2c5f405088aa6d61298fede0f5379e8349319ce12cfb",
+      "bytes": 281541,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "QUALITY-FAIL",
+        "hardTrait": "card s6 'the city street outside is EMPTY - no pedestrians'; CAFE-L21 precedent (standing figure through glass = QF); brief rule 'a figure-shaped speck that reads as a figure at 1x or 2x is QUALITY-FAIL'",
+        "note": "Disclosed extra, redo of failed L27 (does not replace it). FAIL, correction did not work: through the WINDOW on the far pavement at least three standing people - (236,272,248,318) pale head, blue top, legs; (288,268,300,312) pale head, red top, dark legs; (335,265,346,300) red/orange top - small coloured uprights at 1x, clearly head/torso/legs at 2x and 4x (agree with Z_11). Also red posts/hydrants, bollards, a pale shopfront sign panel at about (275,218,296,230) with a dark pseudo-text blob, not readable at 1x-4x (ADVISORY on its own); through the DOOR glass a red car-like blur at about (1198,262,1214,282), no plate or emblem readable. P05 geometry otherwise met (two cups, window left, door route right, headroom). Z_11 Q-X1 (reframe P05 or soften the glass) is for Claude. | screener sha256 own (R12); matches EXTRAS_B3_CAFE_index (sha256 2a2a4733...2701) and Z6_B3_CAFE_EXTRAS_HANDOFF_v001 (sha256 26ef66a7...41cf, found in screening before freeze; no Z6 handoff existed when assigned, so I hashed images and index myself first); manifest has reference_ids; no exact duplicate sha256 among the 39 CAFE jpgs; order of work: (1) read maker index and hashed every still, compared with index; (2) cross-checked Z6 handoff(s); (3) judged 1x then 2x and 4x+ before comparing with Z_11 flags; inspected 1x then 2x-4x; PRELIMINARY",
+        "cardVersion": "TCMSET_B2_TCM-SET-CAFE_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-CAFE_card_v001.md sha256:ea71659d818c95d4885d72cc03204e7c13daa54eaa2ad124a831894af4771725 (= TCMSET_B2_CARDS_INDEX_B2_v001 row); TCM_SET_CAMERA_MAPS_v001_ADDENDUM_D_20261102.md sha256:2a10c3961a50db331f10773cbc17f326bc37dc12b8b7f332453430a2748282b0; TCM_SET_CAMERA_MAPS_v001_ADDENDUM_A_20261101.md sha256:cf5300516fdeb14fde62b319112701e0cd526039f1f3842629f8853b1531d2c5; TCM_HELD_POSITIONS_RULINGS_20261102.md sha256:74cfc1e6d66463a4d4a7bc84c6f4f14d0630167de6e00724c3d87f202b9ad6a3; TCM_SET_CAMERA_MAPS_v001_20261031.md sha256:f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e; V1_SCREEN_RULINGS_20261030T211400Z_v001.md sha256:ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df; V1_SCREEN_RULINGS_ADDENDUM_20261030T213705Z_v002.md sha256:e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265; V2_TCMSET_20261102T050450Z_v006.tsv sha256:a900f22600a48594608c28c5bc2b95ed9152fed841120935cbf1739fd80efcba (CAFE-X01 row)",
+        "sourceMember": "TCM-SET-CAFE-EXTRAS-X02-X03/SCREENING_ROWS_CAFE_B3_EXTRAS_PRELIMINARY.tsv",
+        "sourceSHA256": "1b3b9c1c5ce580b67360a322e1484004263cbf488e6d7056a7408d962759e748",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY. EXTRA, redo of failed L27 (red specks through door glass). Standing loose medium: both chairs and table with TWO cups in the lower two-thirds, headroom, window left, clear route to the glazed door right, counter with espresso machine, two pendants. Correction worked: NO.",
+        "sourceVsProposal": null,
+        "defectNote": "DEFECT (disqualifying): through the WINDOW, small upright coloured shapes along the far pavement read as figures, plus red posts/hydrants, bollards and shopfront sign shapes (not legible); through the DOOR glass, a small red car-like blur near a tree trunk at low left; storefronts not empty",
+        "sourceMember": "TCM-SET-CAFE-EXTRAS-X02-X03/MAKER_EXTRAS_B3_CAFE_index.tsv",
+        "sourceSHA256": "2a2a473337dbb0d2de72734bedca8ccbf900d304d2fad5709a9009a8592a2701"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCMSET_B3_CAFE_X03__P05-LS1",
+        "cameraPositionID": "CAFE-P05",
+        "lightState": "CAFE-LS1",
+        "variant": null,
+        "variantOf": "TCMSET_B3_CAFE_L27__P05-LS1-b",
+        "carID": null,
+        "referenceIDs": [
+          "MAPS:L262",
+          "TCMSET_B2_TCM-SET-CAFE_card_v001.md",
+          "Addendum D",
+          "img_ref: none (text-only",
+          "failed L27 NOT used)"
+        ],
+        "servesShotsRaw": "TCM-18-04",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-18-04"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-CAFE-EXTRAS-X02-X03/MAKER_EXTRAS_B3_CAFE_index.tsv",
+        "sourceSHA256": "2a2a473337dbb0d2de72734bedca8ccbf900d304d2fad5709a9009a8592a2701",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-CAFE",
+      "providerCandidateID": "TCMSET_B3_CAFE_X03__P05-LS1",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-18-04"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-18"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Cafe corner/window table",
+      "sourceConstraints": "Small table in a corner by the window, seating for two, coffee and a believable patron background zone. A shared environment, not two disconnected close-up sets."
+    }
+  ],
+  "verification": {
+    "zipCRC": true,
+    "archiveHash": true,
+    "safeMemberPaths": true,
+    "noSymlinks": true,
+    "noEncryptedMembers": true,
+    "uniqueCandidateIDs": true,
+    "indexedBytesAndHashes": true,
+    "JPEGDecode": true,
+    "humanReviewOrAcceptanceCreated": false
+  },
+  "note": "Technical receipt for unreviewed originals. It is a completed site intake only when its exact hash is pinned by the required lane aggregate. Provider/V-team screening remains attributed preliminary evidence, never a human verdict or acceptance."
+}

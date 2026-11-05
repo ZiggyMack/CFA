@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-09",
+  "updated": "2026-10-12",
   "media": [
     {
       "id": "HD-AUDIO-REPLACE-V001",
@@ -117,6 +117,54 @@
       ],
       "duration": 2.375,
       "thumbnailPath": ".cache/visual_library_20261008/production_thumbs/HD-COMFY-RELIGHT-V002-CONTROL.jpg"
+    },
+    {
+      "project": "hon",
+      "kind": "video",
+      "category": "videos",
+      "group": "video-flow-edit-experiments",
+      "groupTitle": "Flow lighting edit - source and returned result",
+      "duration": 6,
+      "storyboardStage": "preliminary",
+      "provider": "Flow",
+      "tags": [
+        "Flow",
+        "lighting experiment",
+        "single video edit"
+      ],
+      "id": "FLOW-HD-VIDEO-002-A",
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667.mp4",
+      "title": "A - original six-second car-arrival excerpt",
+      "note": "Ziggy review, relayed through the Personal Assistant and summarized by Nova on 2026-10-12: Scene / Preliminary / Needs fixes. Outfit is perfect; actor insufficiently resembles the established character. Tattoos are mostly hard to see, with some neck tattoo/chain visible. Car descent, entry and body interaction look unrealistic / AI-like; improve natural motion. The spoken action sequence is ambiguous, so no frame-specific defect is inferred. Phenomenal aesthetic, cool blue hue, but subjectively grainy / low resolution. Measured 1280x720; the earlier 480p-versus-1080p impression was subjective. No numerical stars supplied. This review applies only to the six-second excerpt; untouched parent GEM-5A115C59 remains separate.",
+      "thumbnailPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/result_review_20261012/A_frame_000.png",
+      "sha256": "f8f2aa30265392634b67dbddebdc6ac0f05007de1abb2730f27d27513e72d378",
+      "sourceStatus": "User reviewed; needs fixes; nonproduction",
+      "parentAssetID": "GEM-5A115C59",
+      "defaultReferenceScope": "scene"
+    },
+    {
+      "project": "hon",
+      "kind": "video",
+      "category": "videos",
+      "group": "video-flow-edit-experiments",
+      "groupTitle": "Flow lighting edit - source and returned result",
+      "duration": 6,
+      "storyboardStage": "preliminary",
+      "provider": "Flow",
+      "tags": [
+        "Flow",
+        "lighting experiment",
+        "single video edit"
+      ],
+      "id": "FLOW-HD-VIDEO-002-B",
+      "path": "docs/notes/downloads/FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667_20261012004113.mp4",
+      "title": "B - returned warmer Flow edit",
+      "note": "Ziggy review, relayed through the Personal Assistant and summarized by Nova on 2026-10-12: Scene / Preliminary / Needs fixes. Warmth is visibly successful, including yellow streetlights, but appears like a global yellow filter / surface wash rather than motivated emitters, local falloff, shadows and reflections. Technical test success with artistic improvements required; not production acceptance. Inherited source likeness and unnatural car/body-motion issues remain separate from this B-specific lighting result. The executed prompt requested subtle warmer color balance; physically motivated relighting would be a distinct declared change. Measured 1280x720; no numerical stars supplied. Cost remains unknown; near-silent AAC is present; no final-track sync.",
+      "thumbnailPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/result_review_20261012/B_frame_000.png",
+      "sha256": "8d090aaa5a45cc42cb9d52e7b26d9419a8d8aa8c029c22a1859752ec7e0cf3c2",
+      "sourceStatus": "User reviewed; needs fixes; nonproduction",
+      "parentAssetID": "FLOW-HD-VIDEO-002-A",
+      "defaultReferenceScope": "scene"
     }
   ],
   "documents": [
@@ -191,6 +239,16 @@
     {
       "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/grok_viseme_return_20261009/visual_review.json",
       "title": "Grok mouth set · exact findings and hashes"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/RETURN_RECEIPT_20261012.json",
+      "title": "Flow 002 - actual output, metadata and scoped review",
+      "album": "Flow result records"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/RESULT_20261012.txt",
+      "title": "Flow 002 - result and review boundary",
+      "album": "Flow result records"
     }
   ],
   "workflows": [
@@ -319,7 +377,7 @@
       "nextAction": "Receive the new macros/head views, review exact tooth layout and difficult articulations, then select corrected compatible inputs for the existing bounded motion proof. Do not use the whole library as an assumed model input.",
       "sourceAssetIDs": [
         "HD-DROP-ef5d59a6402e",
-        "HD-MOUTH-UPDATE-20261009-01",
+        "HD-B-91ef00348229",
         "HD-MOUTH-UPDATE-20261009-02"
       ],
       "outputAssetIDs": [
@@ -344,10 +402,30 @@
         "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/user_mouth_update_20261009/intake.json"
       ],
       "latestReferenceAssetIDs": [
-        "HD-MOUTH-UPDATE-20261009-01",
+        "HD-B-91ef00348229",
         "HD-MOUTH-UPDATE-20261009-02"
       ],
       "dentalDecisionStatus": "resolved_four_upper_gold"
+    },
+    {
+      "id": "flow-lighting-edit-002",
+      "provider": "Flow",
+      "project": "hon",
+      "title": "Flow 002 - warmer car-arrival video",
+      "status": "Technical test complete; A/B need artistic fixes",
+      "summary": "One Omni 1.1 Flash video edit completed. Ziggy reviewed both clips as Scene / Preliminary / Needs fixes: source likeness and natural-motion issues are separate from the returned global yellow wash. No numeric scores; cost unknown.",
+      "nextAction": "Read the saved A/B review and preserve the scene strengths. One motivated-lighting diagnostic is prepared only; source likeness and action repairs are separate changes. No new run is requested.",
+      "sourceAssetIDs": [
+        "FLOW-HD-VIDEO-002-A"
+      ],
+      "outputAssetIDs": [
+        "FLOW-HD-VIDEO-002-B"
+      ],
+      "documentAssetIDs": [
+        "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/RETURN_RECEIPT_20261012.json",
+        "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/RESULT_20261012.txt",
+        "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/USER_REVIEW_20261012.txt"
+      ]
     }
   ]
 }

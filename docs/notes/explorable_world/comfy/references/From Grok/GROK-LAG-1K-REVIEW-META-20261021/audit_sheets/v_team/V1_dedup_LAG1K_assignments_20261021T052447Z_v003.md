@@ -1,0 +1,3 @@
+# v003 addendum (assignments unchanged; this supersedes the tag name in v002)
+This aligns our tags with HaL, Chief and Z_6. Wherever v002 said VARIANT plus an IDENTITY-DRIFT note, use the single tag KEEP-IDEA-FIX-FACE. It means the expression, scene or composition is worth keeping, but the character's face or identity has drifted. Name the drifted feature in the note. These images go on a fix list to be redone from the locked anchor with only the face corrected. They are not DUPLICATE and not plain DRIFT-MULTIVERSE.
+Use DRIFT-MULTIVERSE only when the shot itself adds nothing new beyond the keeper and the character drifted.

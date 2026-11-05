@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "recordType": "provider-submission-receipt",
+  "createdAtUTC": "2026-10-14T02:09:34.702451+00:00",
+  "project": "Lisan Al Gaib / Meta Mirror",
+  "shotTitle": "The signal",
+  "assetID": "LAG500-L19-S3",
+  "scope": "Append-only receipt of one root-operated Flow companion submission; no completion or result claimed at this observed checkpoint.",
+  "provider": "Google Flow",
+  "projectID": "61e89a80-1bff-4ac3-8cdd-0c298b7a3385",
+  "projectTitle": "Lisan Al Gaib · Meta Mirror · Sandworm prototypes",
+  "projectURL": "https://flow.google.com/project/61e89a80-1bff-4ac3-8cdd-0c298b7a3385",
+  "observedBy": "CFA Nova root, sole UI operator",
+  "helperIndependentlyObservedUI": false,
+  "preflightObservedAtUTC": "2026-10-14T02:07:48.272Z",
+  "submissionObservedAtUTC": "2026-10-14T02:08:02.547Z",
+  "startClickedAtUTC": null,
+  "reportedAction": "Root clicked Start generation exactly once after live preflight verification.",
+  "reportedUIEvidence": [
+    "Exact original L19 source uploaded and bound to START; END frame empty.",
+    "Omni 1.1 Flash explicitly selected from the mode-family menu.",
+    "Preflight showed Video/Frames, 16:9, 720p, 8 seconds, one output and Agent 0.",
+    "Submission request card contains exact prompt and the L19 starting image.",
+    "Composer empty and disabled after submission.",
+    "No visible job ID or result reported at submission checkpoint."
+  ],
+  "preflightScreenshot": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/signal_prototype_20261013/FLOW_SIGNAL_PREFLIGHT_1791943668000.jpg",
+    "bytes": 159419,
+    "sha256": "b01cf4b7100d2c8802f1b5ea4068ca5a4a93a7be6a5d48488592276893d925e4"
+  },
+  "submissionScreenshot": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/signal_prototype_20261013/FLOW_SIGNAL_SUBMITTED_1791943682335.jpg",
+    "bytes": 136666,
+    "sha256": "ef48c17bc27450e90479350aa5ca431d8bfe4ae11440157b26aedb2f35e86e2c"
+  },
+  "screenshotVerification": "Both files independently verified by byte count and SHA256; UI observations are supplied by root.",
+  "preparationRecord": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/signal_prototype_20261013/PREFLIGHT.json",
+    "bytes": 7773,
+    "sha256": "d2fa70e5f8ee9ac4df5b148f5d9d9c6a69939365722a432a32e986f2ec441594"
+  },
+  "selectedStartFrame": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part03/LAG-L19-fire-trial-armor.zip.contents/LAG-L19-fire-trial-armor/LAG-L19-fire-trial-armor__S3-worm-vs-harvester.jpg",
+    "bytes": 388976,
+    "sha256": "b26aa61a04528cd8c3ef820ccc946e74738db634f29aed018286c138efd8bb09"
+  },
+  "startFrameBoundConfirmed": true,
+  "endFrameEmptyConfirmed": true,
+  "actualSubmittedPrompt": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/signal_prototype_20261013/ACTUAL_PROMPT_CANDIDATE.txt",
+    "bytes": 1401,
+    "sha256": "4d96acd1a95c9ece335b62f5c97ffc69e681c1007b29c85eec34e22821fdce69",
+    "comparisonEvidence": "Root reports the exact candidate wording on the submitted request card.",
+    "text": "Use the supplied image as the exact first frame. One uninterrupted 8-second landscape shot with a locked eye-height camera in the same framing. At screen-right the single sandworm maw closes over the burning wheeled rig: the rig tilts and disappears beneath it, sand spills from the worm's lip, and a wave of dust rolls toward the camera then thins. End with the rig gone, the maw closing and dust settling. No second worm, no lunge toward the man and no additional teeth animation beyond the closing. The man stays unchanged at screen-left: right palm raised and open, five fingers, eyes toward the camera, mouth closed, one blink at most; no step, head turn or gesture. Preserve his face geometry, curls, blue eyes, small AL between the brows, vertical G-A-I-B on the chin, paired segmented neck worms and throat eye-disc. Keep the single breather tube on the same cheek, the existing jewelry on the same side, and the bronze armor and tan hood exactly as supplied. Do not repair, mirror, duplicate or add features. Preserve the warm overcast haze as the key light. Only the existing fire flickers on the rig, worm lip and dust, with a faint local reflection on his far cheek; it gutters as the rig disappears. No new light, whole-frame wash or color shift. No camera movement, cuts, new characters, objects, text or watermarks. Silent output: no speech, singing, music, narration or sound effects."
+  },
+  "confirmedSettings": {
+    "mediaMode": "VIDEO",
+    "conditioningMode": "FRAMES",
+    "modelLabel": "Omni 1.1 Flash",
+    "modelSelectionEvidence": "Explicitly selected in the mode-family menu by root.",
+    "nativeModelRevision": null,
+    "resolutionLabel": "720p",
+    "aspectRatioLabel": "16:9",
+    "durationSecondsLabel": 8,
+    "outputCount": 1,
+    "agentLabel": "Agent 0",
+    "directAgent": "off"
+  },
+  "displayedPreflightCost": {
+    "value": 12,
+    "unit": "Flow credits",
+    "quoteConfirmedByRoot": true,
+    "actualDebitVerified": false
+  },
+  "status": "submitted_result_pending_at_observation",
+  "executionCountReported": 1,
+  "submissionClaimed": true,
+  "completionClaimed": false,
+  "resultReceivedClaimed": false,
+  "resultReviewedClaimed": false,
+  "acceptedClaimed": false,
+  "jobID": null,
+  "providerOutputID": null,
+  "localOutputPath": null,
+  "localOutputSHA256": null,
+  "actualDebit": null,
+  "accountBalanceAfter": null,
+  "actualReturnedDurationSeconds": null,
+  "actualReturnedFPS": null,
+  "actualReturnedDimensions": null,
+  "actualReturnedAudioPresent": null,
+  "automaticRetriesPerformed": false,
+  "providerInteractionByPreparer": false,
+  "experimentDesign": "Distinct companion scene in an artistic progression, not a controlled A/B isolating fire: starting source, framing, wardrobe, breather, raised hand, rig and action differ from SW2.",
+  "pendingEvidence": [
+    "Provider completion or error.",
+    "Any visible provider request/output ID.",
+    "Actual credit debit if observable.",
+    "Verified local output receipt and hash.",
+    "Measured duration, dimensions, FPS and audio presence.",
+    "Normal-speed playback and sampled preservation review before acceptance."
+  ],
+  "preservedPriorRecords": [
+    "Signal PREFLIGHT.json unchanged; its unknown settings and uploading state remain a historical snapshot.",
+    "Signal ACTUAL_PROMPT_CANDIDATE.txt unchanged.",
+    "SW2 SUBMISSION_RECEIPT.json unchanged; SW2 completion and technical review are tracked separately.",
+    "Original L19 source unchanged."
+  ],
+  "storage": "New receipt only in project-owned D: storage; source media, author files and site files unchanged."
+}

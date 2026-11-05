@@ -1,0 +1,205 @@
+{
+  "status": "ACTUAL_UI_COMPILED_DIAGNOSTIC_STATIC_CHECK_PASS",
+  "actual_api": "WAN_FACE_PROTECTION69_PERSISTENT_DIAGNOSTIC_API_ACTUAL_20261012.json",
+  "sha256": "6c51b2d592dc9a164bfb57560882192e5a167b03af16a3ae965a80d71cc19c05",
+  "active_terminal_outputs": [
+    "9103",
+    "9105"
+  ],
+  "active_ancestors": [
+    "23",
+    "145",
+    "159",
+    "160",
+    "212",
+    "275",
+    "9001",
+    "9003",
+    "9004",
+    "9005",
+    "9006",
+    "9101",
+    "9102",
+    "9103",
+    "9104",
+    "9105",
+    "324475594538284",
+    "1833034495877259",
+    "1956377300393751",
+    "3095296998173597",
+    "4458611668371917"
+  ],
+  "active_input_edges": [
+    [
+      "9103",
+      "video",
+      "9102",
+      0
+    ],
+    [
+      "9102",
+      "images",
+      "9101",
+      0
+    ],
+    [
+      "9101",
+      "mask",
+      "9006",
+      0
+    ],
+    [
+      "9006",
+      "destination",
+      "1833034495877259",
+      0
+    ],
+    [
+      "1833034495877259",
+      "mask",
+      "324475594538284",
+      0
+    ],
+    [
+      "324475594538284",
+      "result",
+      "1956377300393751",
+      1
+    ],
+    [
+      "1956377300393751",
+      "model",
+      "3095296998173597",
+      0
+    ],
+    [
+      "1956377300393751",
+      "processor",
+      "4458611668371917",
+      0
+    ],
+    [
+      "1956377300393751",
+      "image",
+      "212",
+      0
+    ],
+    [
+      "212",
+      "width",
+      "159",
+      0
+    ],
+    [
+      "212",
+      "height",
+      "160",
+      0
+    ],
+    [
+      "212",
+      "image",
+      "9001",
+      0
+    ],
+    [
+      "9001",
+      "image",
+      "23",
+      0
+    ],
+    [
+      "23",
+      "video",
+      "145",
+      0
+    ],
+    [
+      "9006",
+      "source",
+      "9005",
+      0
+    ],
+    [
+      "9005",
+      "image",
+      "9004",
+      0
+    ],
+    [
+      "9004",
+      "video",
+      "9003",
+      0
+    ],
+    [
+      "9105",
+      "video",
+      "9104",
+      0
+    ],
+    [
+      "9104",
+      "images",
+      "275",
+      0
+    ],
+    [
+      "275",
+      "image",
+      "212",
+      0
+    ],
+    [
+      "275",
+      "mask",
+      "9006",
+      0
+    ]
+  ],
+  "actual_export_nodes": 39,
+  "reachable_node_count": 21,
+  "ksampler_nodes": 0,
+  "savevideo_nodes": 2,
+  "generation_reachable": false,
+  "source_trim": {
+    "batch_index": 6,
+    "length": 69,
+    "original_frames": [
+      168,
+      236
+    ]
+  },
+  "dimensions": [
+    768,
+    432
+  ],
+  "fps": 24,
+  "assets": {
+    "source": "4892e99a9a1a2083870c45c082bf38bf0500d460ccf801c86a3c5326e5ff931a.mp4",
+    "protection": "c76f160edfaa71c8feb66c2ef9593c8f76476118be39a25101d4bbd06f0ad1db.mp4"
+  },
+  "final_mask_source": "9006",
+  "mask_video_path": [
+    "9006",
+    "9101",
+    "9102",
+    "9103"
+  ],
+  "source_overlay_path": [
+    "275",
+    "9104",
+    "9105"
+  ],
+  "bound_preflight_inputs_unchanged": true,
+  "ready_for_bounded_preflight_diagnostic_run": true,
+  "generation_hold": true,
+  "cloud_runtime_executed": false,
+  "required_after_run": [
+    "Download both persistent videos",
+    "Decode and confirm69frames24fps768x432",
+    "Compare everyframe against local protection/source with compression tolerance",
+    "Do not use tempgallerylabels alone forframeidentity"
+  ],
+  "gallery_correction": "Benchmark subsequently matched presumedframe69PNG to galleryframe2/localframe1/sourceF169 with zero overreach; previous reported mismatch was galleryassociation error rather than demonstratedruntimealignmentfailure. Persistentdiagnostic still needed to verify fullsequence."
+}

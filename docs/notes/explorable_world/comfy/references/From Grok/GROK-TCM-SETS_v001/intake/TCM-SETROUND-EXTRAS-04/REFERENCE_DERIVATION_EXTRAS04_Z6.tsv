@@ -1,0 +1,19 @@
+source	positions_named	variant	light_state_scope	verbatim_quote	z6_treatment
+v001 maps Existing images entry TCM-SET-IMPALA-L01	(exterior, no position)	-	-	usable as the night exterior reference for the scene 3 street (car at the alley entrance) and as the exterior identity if this colour and body are chosen; not a cabin position	EXCLUDED (no position named; scene 3 street, not the P13 scene 23 corner; identity superseded by Addenda A/B; Z_6 judgement, flagged)
+v001 maps Existing images entry TCM-SET-IMPALA-L02	(look)	-	-	usable as the cabin-geometry and dash-glow reference for LS01/LS03	EXCLUDED (look-only, no position named)
+v001 maps Existing images entry TCM-SET-IMPALA-L02	P09	-	IMPALA-LS01	as a de facto P09 night	INCLUDED, light-scoped to night (no take-2 still at P09)
+v001 maps Existing images entry TCM-SET-IMPALA-L03	(none)	-	-	alley backing could serve an alley exterior family, not this one	EXCLUDED (negative mention)
+v001 maps Existing images entry TCM-SET-IMPALA-L04	(none)	-	-	not usable as any position; only the day overpass backing is a useful LS04 reference	EXCLUDED (negative mention / look-only)
+v001 maps Existing images entry TCM-SET-IMPALA-L05	(none)	-	-	usable only as a reference if the exploratory LS06 is shot	EXCLUDED (light-state look, no position named)
+v001 maps Existing images entry TCM-SET-IMPALA-L06	P01,P12	-	IMPALA-LS01	closest existing image to P01/P12 night parked	INCLUDED, light-scoped IMPALA-LS01 ("night parked")
+v001 maps Existing images entry TCM-SET-IMPALA-L06	P01	-	-	usable as an LS01 lighting reference, not as the P01 plate	EXCLUDED (look-only / negative for P01)
+v001 maps Existing images entry TCM-SET-IMPALA-L07	(none)	-	-	not usable in a set-only round	EXCLUDED (negative mention)
+v001 maps Existing images entry TCM-SET-IMPALA-L08	P06	e	IMPALA-LS04	usable as P06 variant (e) day highway for TCM-35-01	INCLUDED, scoped to P06 variant (e), IMPALA-LS04
+v001 maps Existing images entry TCM-SET-IMPALA-L08	P05	-	-	as a P05 framing reference	INCLUDED (no take-2 still at P05)
+v001 maps Existing images entry TCM-SET-IMPALA-L09	(none)	-	-	the legible emblem makes it unusable in a set-only round	EXCLUDED (negative mention)
+v001 maps Existing images entry TCM-SET-IMPALA-L10	P09	-	IMPALA-LS01	a P09 night alternate	INCLUDED, light-scoped to night (no take-2 still at P09)
+v001 maps Existing images entry TCM-SET-IMPALA-L10	(look)	-	-	usable as a night cabin-geometry reference	EXCLUDED (look-only, no position named)
+v001 maps position row IMPALA-P09	P09	-	night	the night version already exists as L02 and L10	INCLUDED (L02,L10; night only; no take-2 still at P09)
+v001 maps other position rows	-	-	-	-	No other IMPALA position row names an existing id (string-checked); none names one for P13.
+Addendum A section 2 Existing images (TCM_SET_CAMERA_MAPS_v001_ADDENDUM_A_20261101.md, sha256 cf5300516fdeb14fde62b319112701e0cd526039f1f3842629f8853b1531d2c5)	-	-	-	None of the ten existing IMPALA images shows this car; they remain lighting and framing references only (L02 for the dash glow and cabin geometry, L08 for the day highway plate), not identity references.	CONTEXT ONLY: keeps the existing images as lighting and framing references and names no new position, so no derived value changes; the derived ids are framing/lighting references, not identity references.
+X08 (P06c, IMPALA-LS04): same position, variant and light state as L47 and X06	P06	c	IMPALA-LS04	-	Same derivation as L47 and X06 in pack16 (TCM-SET-IMPALA-L42-L57 and TCM-SETROUND-EXTRAS-03): the only P06 line ties L08 to variant (e), so P06(c) gets NO_REFERENCE_LINE_IN_MAPS. The maker reference_ids cell (TCM-SET-IMPALA-L04) is kept untouched in the maker columns.

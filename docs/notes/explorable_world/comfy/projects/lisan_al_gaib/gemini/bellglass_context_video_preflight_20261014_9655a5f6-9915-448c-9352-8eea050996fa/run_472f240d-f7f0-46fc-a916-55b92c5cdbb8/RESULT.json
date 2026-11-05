@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUTC": "2026-10-15T00:49:08.674Z",
+  "status": "completed_visual_cues_present_audio_semantics_pending_human_listen",
+  "test": "Bellglass source-only notebook context to video",
+  "notebookURL": "https://gemini.google.com/notebook/f45abc78-2ca6-4006-91f9-a61595de19b0",
+  "chatURL": "https://gemini.google.com/app/12b06948a38928a8",
+  "chatID": "12b06948a38928a8",
+  "responseID": "41bd8eb3d33aa17c",
+  "submissions": 1,
+  "retries": 0,
+  "outputCount": 1,
+  "toolMode": "Videos",
+  "chatModeLabel": "Argon High",
+  "actualVideoEngineVariant": "not exposed; chat label does not identify renderer",
+  "assembledGeneratorRequest": "not exposed",
+  "source": {
+    "file": "SOURCE.txt",
+    "sha256": "35770c9aa67e57e0acca698c234beeeb348a4f0172d6eae1c8a0bfa88a881d33",
+    "readbackMatchedBeforeSubmission": true,
+    "edited": false,
+    "sourceOnlyCues": [
+      "background dog",
+      "vivid blue collar",
+      "ambient barking"
+    ]
+  },
+  "immediatePrompt": {
+    "file": "PROMPT.txt",
+    "sha256": "dde40d35205cdcdd6f031286f7fbcddccbed70fe919a1bfdb89a96267023c61b",
+    "dogBarkCollarAbsent": true,
+    "unchanged": true
+  },
+  "original": {
+    "file": "BELLGLASS_CONTEXT_001_original.mp4",
+    "bytes": 5798077,
+    "sha256": "0597c4efef067280dab2ef1abfa06e313d06893187ce9ae1d9d436f75c28392b",
+    "containerDurationSeconds": 10.006,
+    "videoDurationSeconds": 10,
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "frames": 240,
+    "videoCodec": "H.264 High",
+    "audioCodec": "AAC LC",
+    "sampleRateHz": 48000,
+    "audioChannels": 2,
+    "decodeCheck": "full decode exit0; no warning/error log"
+  },
+  "visualAssessment": {
+    "method": "Root actually viewed native completed preview and six timestamped decoded full-scene frames/contact sheet",
+    "framesSeconds": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      9.5
+    ],
+    "dog": "present; tan/golden dog in courtyard background",
+    "collar": "vivid blue/cyan collar visible",
+    "residentAction": "resident crosses courtyard left to right",
+    "camera": "framing shifts gently forward/right through the shot",
+    "scope": "Observed sampled frames; not production character approval"
+  },
+  "audioAssessment": {
+    "audioStream": "present and decodes",
+    "audibleBarking": "unverified",
+    "listeningPerformed": false,
+    "limitation": "Nova Dot independently attempted audition through functions.audio; runtime explicitly reported audio input unsupported. Root has no supported auditory route and does not infer barking from waveform, stream presence or an open mouth.",
+    "nextStep": "Human listen to this exact10-second original; report whether barking is audible. No new render needed."
+  },
+  "interpretation": "Positive visual cue evidence in this one notebook workflow: source-only dog/collar details appear in output. This does not distinguish direct renderer retrieval from intermediate prompt assembly, prove causal exclusivity, or establish reliability. A single absence would also be inconclusive.",
+  "execution": {
+    "includedAccount": "ULTRA",
+    "preRunCurrentUsage": "0% used",
+    "preRunWeeklyUsage": "2% used",
+    "extraChargeOrPurchasePromptObserved": false,
+    "newPurchases": 0,
+    "exactPerRunQuotaDebit": "not exposed/measured",
+    "hiddenMetadataNotUsedAsGate": true
+  },
+  "retrieval": {
+    "firstCombinedInspectionDownloadStep": "30-second tool timeout; kernel reset; exact phase not established; no render failure inferred",
+    "successfulMethod": "Existing video element PlaywrightLocator.downloadMedia",
+    "downloadPath": "D:/Documents/CFA/docs/notes/downloads/video.mp4",
+    "originalCopyHashMatches": true
+  },
+  "technicalReceipt": "technical_review/TECHNICAL_REVIEW.json",
+  "contactSheet": "technical_review/BELLGLASS_CONTEXT_001_contact_sheet.png",
+  "resultScreenshot": "COMPLETED_RESULT.jpg",
+  "productionDataOrSourcesChanged": false
+}

@@ -1,0 +1,24 @@
+# C02 dune-crest-silhouette (Z_11), stage = preliminary
+Refs: refs/FACE-REF-v3.jpg (ref 1, NO breather tube), refs/LOOK-01.jpg (outfit). Requested 22 / Returned 22. The tool returns 16:9 even when 3:4 is requested.
+- C02-01_FAIL: L2 S3 | AL on forehead, GAIB on the jaw side, disc is a sun not an eye | preserve: face, golden-hour cloak motion
+- C02-02: L3 S4 | AL on forehead, GAIB in two garbled columns | preserve: backlit crest, eye sun-disc, neck-pinned worms
+- C02-03: L3 S5 | GAIB horizontal, AL small and high | preserve: hood-up blue-hour dune sea, mood, worms
+- C02-04: L4 S5 | GAIB vertical but drops the I (reads GAB), AL slightly high | preserve: giant sunset sun, red dunes, bold open-jawed worms
+- C02-05: L4 S4 | worm heads look like snakes, GAIB reads GAB, AL on forehead | preserve: moonlit twilight crest, eye sun-disc, wind-blown sand
+- C02-06: L4 S3 | GAIB reads GAB, disc is a sun not an eye, AL on forehead, scene is washed out | preserve: open-jawed ringed worms, noon heat haze
+- C02-07: L4 S5 | GAIB reads GAB, AL high | preserve: purple dusk dunes, convoy headlights in the valley, open-jawed worms, eye sun-disc
+- C02-08: L4 S5 | GAIB reads GAB, AL high | preserve: pink dawn knife-edge crest with sand plume, open-jawed worms, small eye disc
+- C02-09: L5 S5 | AL slightly high | preserve: full vertical GAIB, Milky Way night crest, eye sun-disc, hood
+- C02-10: L4 S4 | GAB, worms curl like horns, AL stacked | preserve: hazy layered dunes, pale sun
+- C02-11: L5 S5 | AL slightly high, chain mostly hidden | preserve: full vertical GAIB, moonlit monochrome, hood, eye disc
+- C02-12: L4 S5 | GAB | preserve: breaching sandworm behind, sunrise dunes, open-jawed worms, eye disc
+- C02-13: L3 S5 | GAB, AL split wide apart, freckle-like stray dots | preserve: massive convoy on the flats below, worm with ringed body
+- C02-14: L4 S5 | GAB; BREATHER-ON variant (1 in 8 quota) | preserve: blazing sunset crest, clean breather tube, eye disc, open-jawed worms
+- C02-15: L5 S4 | AL stacked vertically on the forehead | preserve: full vertical GAIB, open-jawed worms, eye disc; the white sky is a bit flat
+- C02-16: L4 S5 | GAB, doubled chain | preserve: harpoon war-pole with black flag, dusk dunes, clean worms and eye disc
+- C02-17: L4 S5 | GIB, standing not crouched | preserve: green-gold twilight, crescent moon, bold open-jawed worms, hood
+- C02-18: L4 S5 | GAB | preserve: nomad tribe procession on the ridge, golden hour, clean eye disc
+- C02-19: L3 S5 | GAB, eyes paler, disc reads as sun and worms are thin | preserve: misty dawn valleys, sunbeams, hood
+- C02-20: L4 S5 | GAB, AL with stray dot, teeth show slightly | preserve: half-buried war-rig cab with sand pouring off, sunset, open-jawed worms
+- C02-21: L4 S5 | GAB, AL high on forehead | preserve: storm clouds, lightning, wind-whipped cloak, crisp worms + disc
+- C02-22: L4 S5 | GIB, AL high | preserve: ringed planet over pastel dunes, hood

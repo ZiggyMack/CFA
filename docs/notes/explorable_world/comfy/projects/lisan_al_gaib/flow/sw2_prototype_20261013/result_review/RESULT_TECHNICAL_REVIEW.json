@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "recordType": "returned-provider-media-technical-and-sampled-visual-review",
+  "reviewedAtUTC": "2026-10-14T02:13:06.063598+00:00",
+  "reviewer": "CFA Nova helper / sw2_result_technical_review",
+  "project": "Lisan Al Gaib / Meta Mirror",
+  "shotID": "SW-2",
+  "provider": "Google Flow",
+  "reviewScope": "Offline verification of the root-received original. No provider, browser, network, site, source, prompt or earlier record mutations. No creative acceptance or grade.",
+  "output": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/FLOW-LAG-SW2-001_original.mp4",
+    "bytes": 2614493,
+    "sha256": "8f0c3d3bb4f7c8ff6fd6c98ec0f5cc4c8a5ae02daad375b4d2b9e63df0edebaf"
+  },
+  "selectedSource": {
+    "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-1K-C13/C13-sandworm-rising/repairs/C13-04_Z_1_R1-try5-patch-c.jpg",
+    "bytes": 447799,
+    "sha256": "23817577d3d32f0df03d57ac1e49c4c85246e86c405b13c492194f7aa2f52bad"
+  },
+  "measuredMediaEvidence": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/result_review/MEASURED_MEDIA_EVIDENCE.json",
+    "bytes": 13060,
+    "sha256": "6ea51d036e543debaee5eb3c15ffea3851a8c3055d788b7a89d51a1b858c26df"
+  },
+  "contactSheet": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/result_review/SW2_SOURCE_AND_SAMPLED_FRAMES.jpg",
+    "bytes": 824427,
+    "sha256": "9b9855ac2276e254848d112182b67f5739e4e2ecdb65438f86f775416e360619"
+  },
+  "technicalResult": {
+    "video": {
+      "codec": "H.264 High",
+      "pixelFormat": "yuv420p",
+      "width": 1280,
+      "height": 720,
+      "nominalFPS": 24,
+      "decodedFrames": 192,
+      "timebase": "1/24",
+      "firstPTS": 0,
+      "lastPTS": 191,
+      "firstFrameTimeSeconds": 0.0,
+      "lastFrameTimeSeconds": 7.958333333333333,
+      "decodedPictureDurationSeconds": 8.0,
+      "contiguousPTS": true,
+      "sourceFirstFrameMeanAbsoluteRGBDifference0To255": 4.125904224537037,
+      "firstFrameDifferenceScope": "Compression/color-pipeline pixels differ; this number does not establish perceptual identity or character acceptance."
+    },
+    "audio": {
+      "present": true,
+      "codec": "AAC LC",
+      "sampleRateHz": 48000,
+      "channels": 2,
+      "decodedPCMFormat": "signed 16-bit little-endian",
+      "decodedInterleavedSamples": 768000,
+      "decodedSamplesPerChannel": 384000,
+      "decodedDurationSeconds": 8.0,
+      "peakAbsPCM16": 13483,
+      "rmsPCM16": 2163.6733193413065,
+      "peakDBFS": -7.71326800878756,
+      "rmsDBFS": -23.605164904305656,
+      "allDecodedPCM16SamplesZero": false,
+      "listeningReviewPerformed": false,
+      "scope": "Signal-level measurement does not identify words, music or sound effects."
+    },
+    "decodeHealth": "Both video and audio fully decoded with exit code 0; no decoder errors appeared in retained full_decode.log.",
+    "displayedDurationResolutionAndFrameGridMet": true,
+    "silentOutputInstructionMet": false,
+    "originalPreserved": true,
+    "sourcePreserved": true
+  },
+  "inspection": {
+    "sourceViewedAtOriginalResolution": true,
+    "contactSheetViewed": true,
+    "fullResolutionFramesViewed": [
+      24,
+      191
+    ],
+    "sampledFrameIndices": [
+      0,
+      24,
+      48,
+      72,
+      96,
+      120,
+      144,
+      168,
+      191
+    ],
+    "sampleTimesSeconds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      7.958333333333333
+    ],
+    "normalSpeedPlaybackPerformedByHelper": false,
+    "listeningPerformedByHelper": false,
+    "allFramesDecodedButNotAllFramesVisuallyInspected": true
+  },
+  "visualObservations": [
+    {
+      "criterion": "Starting composition",
+      "state": "Broadly retained in first decoded frame",
+      "evidenceFrames": [
+        0
+      ],
+      "observation": "The first sampled frame closely follows the selected patch-c composition, face, dark clothing and right-side maw. RGB mean absolute source/first-frame difference is 4.126 on a 0–255 scale; it is not pixel-identical. Compression and color conversion are possible contributors, not an established causal allocation."
+    },
+    {
+      "criterion": "Closed mouth",
+      "state": "Visible prompt failure",
+      "evidenceFrames": [
+        24,
+        48
+      ],
+      "observation": "At 1.0 seconds his lips open and teeth are visible; the 2.0-second sample still has parted lips. This contradicts the closed-mouth instruction. It does not by itself prove speaking or singing."
+    },
+    {
+      "criterion": "Expression and head pose",
+      "state": "Small visible movement",
+      "evidenceFrames": [
+        0,
+        24,
+        191
+      ],
+      "observation": "The 1.0-second sample shows partially closed eyes and a changed mouth/head pose before returning toward the neutral front-facing look. At least one blink-related state is sampled; the total blink count and exact number of breaths were not established."
+    },
+    {
+      "criterion": "Camera and framing",
+      "state": "Strict camera lock unproven",
+      "evidenceFrames": [
+        0,
+        191
+      ],
+      "observation": "The later image appears slightly recentered/reframed, with more visible space around the hair and a modest apparent change in subject scale. Camera motion, subject movement and generative shape drift cannot be distinguished from these samples alone."
+    },
+    {
+      "criterion": "Character identity and feature motifs",
+      "state": "Broad preservation observed, exact detail preservation unverified",
+      "evidenceFrames": [
+        0,
+        24,
+        191
+      ],
+      "observation": "Dark curls, blue eyes, small forehead AL, vertical chin marks, paired neck worms, central throat eye motif and hoops on the same visible ear remain recognizable. Exact glyph fidelity, tattoo geometry, tooth details and hoop count are not established by this review."
+    },
+    {
+      "criterion": "Wardrobe",
+      "state": "Broad preservation observed",
+      "evidenceFrames": [
+        0,
+        24,
+        191
+      ],
+      "observation": "The dark shirt and hooded cloak remain, with one visible chain. No deliberate source correction or new wardrobe is apparent in sampled frames."
+    },
+    {
+      "criterion": "Worm action and geography",
+      "state": "Rise observed, specified magnitude unverified",
+      "evidenceFrames": [
+        0,
+        24,
+        48,
+        72,
+        96,
+        120,
+        144,
+        168,
+        191
+      ],
+      "observation": "One maw remains on screen-right and lifts while more of the upright body becomes visible through dust. The maw rim and teeth change apparent shape/detail during the motion. A full one-maw-height rise and exact design stability were not measured or verified."
+    },
+    {
+      "criterion": "Lighting, dust and additions",
+      "state": "Broad lighting continuity observed in samples",
+      "evidenceFrames": [
+        0,
+        24,
+        48,
+        72,
+        96,
+        120,
+        144,
+        168,
+        191
+      ],
+      "observation": "Warm diffuse haze persists with dust around the worm. No new visible sun, emitter, second worm, character, text or watermark is apparent in these samples. Dust direction, sand spill direction and frame-to-frame flicker remain unverified."
+    },
+    {
+      "criterion": "Shot continuity",
+      "state": "No cut apparent in sampled composition",
+      "evidenceFrames": [
+        0,
+        24,
+        48,
+        72,
+        96,
+        120,
+        144,
+        168,
+        191
+      ],
+      "observation": "The sampled frames follow the same composition. This is not a complete normal-speed continuity or temporal-coherence review."
+    }
+  ],
+  "audioObservation": "AAC stereo is present and nonzero after full 16-bit PCM decode: peak -7.713 dBFS, RMS -23.605 dBFS. Silent output was not achieved. No assertion is made about its words, music or sound-effect content because listening was not performed.",
+  "status": {
+    "providerSubmission": "Root-attributed prior receipt; not independently observed by helper",
+    "localOriginalReceivedAndHashVerified": true,
+    "measured": true,
+    "sampledVisualReview": "Completed with visible closed-mouth failure and preservation/framing limits",
+    "normalSpeedPlaybackAndListening": "Still required",
+    "humanAccepted": false,
+    "productionAccepted": false,
+    "overallGrade": null,
+    "automaticRetryPerformed": false
+  },
+  "nextReview": [
+    "Normal-speed visual and listening review by root/user before scoped acceptance.",
+    "Keep mouth opening, non-silent audio and strict camera/design uncertainty visible in any publication or reuse note."
+  ],
+  "methodPointers": [
+    "../Pan_Handlers/Help/guides/video_handoff.py",
+    "docs/notes/explorable_world/comfy/workflows/README.md#choose-by-problem"
+  ],
+  "appendOnlyEvidence": true
+}

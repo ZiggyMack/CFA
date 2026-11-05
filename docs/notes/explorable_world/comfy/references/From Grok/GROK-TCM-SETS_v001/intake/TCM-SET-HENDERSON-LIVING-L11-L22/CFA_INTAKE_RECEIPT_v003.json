@@ -1,0 +1,908 @@
+{
+  "format": "cfa-grok-image-intake-v1",
+  "project": "criminal_mind",
+  "batchID": "TCM-SET-HENDERSON-LIVING-L11-L22",
+  "lane": "set_round",
+  "taskID": "tcm-grok-sets-20261030",
+  "intakeRole": "site_index_receipt",
+  "sealStatus": "complete_only_when_pinned_by_required_aggregate",
+  "requiredAggregatePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/CFA_SET_INTAKE_035-118_SITE_INDEX_v003.json",
+  "supersedesReceipt": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22/CFA_INTAKE_RECEIPT_v002.json",
+  "verifiedAtUTC": "2026-11-04T13:41:07Z",
+  "receivedAtUTC": null,
+  "receivedTimeStatus": "not_recorded_in_archive",
+  "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22.zip",
+  "archiveSHA256": "2a0067143776583a0f0999fe6c07a1ef2108722e5d424ed84398278bf1ce0539",
+  "archiveBytes": 2826327,
+  "archiveMemberCount": 23,
+  "receivedOriginals": 11,
+  "acceptedOriginals": 0,
+  "humanVerdictsCreated": 0,
+  "selectedStartingFrames": 0,
+  "assets": [
+    {
+      "candidateID": "TCM-SET-HENDERSON-LIVING-L11__P01-L1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HENDERSON-LIVING-L11-L22\\TCM-SET-HENDERSON-LIVING-L11__P01-L1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L11__P01-L1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22.zip",
+      "archiveMember": "TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L11__P01-L1.jpg",
+      "sha256": "621bf975b3a6d0a39cdf8f135b8029ac1d840626875c1c865682bccaf7477d26",
+      "bytes": 298271,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "ADVISORY",
+        "hardTrait": "H1; H2; H3; H4; H5; H7; G-LS",
+        "note": "[S01] Slot P01 entry master met: couch + street window one side, kitchen opening with wall clock ahead, bedroom doorway at far edge, fan light lit at top, hardwood run; nicely furnished (H1). ADVISORY: kitchen clock carries garbled numeral-like glyphs, not legible at zoom (no Q-TEXT; family check \"hands only, no numerals\"); street window shows more street detail than L1 \"dark with only a faint porch/streetlamp glow\". Index look_note says \"day\" for an L1 night still - image reads night (index text only). Mirror reflects a door only; no figures in window. Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HENDERSON-LIVING_card_v001 / 155c1fc64eebca4b2b9caa15adac237d1cd022bcb1d048427f915c9377eb426d ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/SCREENING_ROWS_HENDERSON-LIVING_PRELIMINARY.tsv",
+        "sourceSHA256": "4da31dfd835ed18c422f73508e19fd879db913dddcff7a48d90327e6937b95dc",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "HLIV-L1 P01 entry master | light: night, lived-in (lamps and fan light on, window dark)",
+        "sourceVsProposal": null,
+        "defectNote": "check geometry vs L01",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L11",
+        "cameraPositionID": "HLIV-P01",
+        "lightState": "HLIV-L1 (night, lived-in (lamps and fan light on, window dark))",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-HENDERSON-LIVING-L01"
+        ],
+        "servesShotsRaw": "TCM-06-01, TCM-22-01, TCM-26-01",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-06-01",
+          "TCM-22-01",
+          "TCM-26-01"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HENDERSON-LIVING",
+      "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L11",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-06-01",
+        "TCM-22-01",
+        "TCM-26-01"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-06",
+        "TCM-SRC-09",
+        "TCM-SRC-22",
+        "TCM-SRC-26",
+        "TCM-SRC-36"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Henderson living room",
+      "sourceConstraints": "Nicely furnished, hardwood floor, front entry, couch, window, bedroom access, ceiling fan/light and a reflective surface. Must be reconciled to the chosen house family later."
+    },
+    {
+      "candidateID": "TCM-SET-HENDERSON-LIVING-L12__P01-L3",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HENDERSON-LIVING-L11-L22\\TCM-SET-HENDERSON-LIVING-L12__P01-L3.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L12__P01-L3.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22.zip",
+      "archiveMember": "TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L12__P01-L3.jpg",
+      "sha256": "219f0761e0f9a7a14c5aadb7d5e576f96854c67f530fe34f66f10aea53566223",
+      "bytes": 198866,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "G-LS; H8; G-REFL",
+        "note": "[S02] Slot P01 L3 met: same frame as L11; front-door leaf opening at left edge with a porch-light wedge on the floor, fan and lamps off, only streetlamp spill through the window. Note: bedroom beyond far right faintly visible (not lit as a practical). Mirror/window: no figures. Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HENDERSON-LIVING_card_v001 / 155c1fc64eebca4b2b9caa15adac237d1cd022bcb1d048427f915c9377eb426d ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/SCREENING_ROWS_HENDERSON-LIVING_PRELIMINARY.tsv",
+        "sourceSHA256": "4da31dfd835ed18c422f73508e19fd879db913dddcff7a48d90327e6937b95dc",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "HLIV-L3 variant of P01 | light: night, house dark (streetlamp/porch spill only)",
+        "sourceVsProposal": null,
+        "defectNote": "none noted",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L12",
+        "cameraPositionID": "HLIV-P01",
+        "lightState": "HLIV-L3 (night, house dark (streetlamp/porch spill only))",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-HENDERSON-LIVING-L01"
+        ],
+        "servesShotsRaw": "TCM-06-01, TCM-22-01, TCM-26-01",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-06-01",
+          "TCM-22-01",
+          "TCM-26-01"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HENDERSON-LIVING",
+      "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L12",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-06-01",
+        "TCM-22-01",
+        "TCM-26-01"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-06",
+        "TCM-SRC-09",
+        "TCM-SRC-22",
+        "TCM-SRC-26",
+        "TCM-SRC-36"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Henderson living room",
+      "sourceConstraints": "Nicely furnished, hardwood floor, front entry, couch, window, bedroom access, ceiling fan/light and a reflective surface. Must be reconciled to the chosen house family later."
+    },
+    {
+      "candidateID": "TCM-SET-HENDERSON-LIVING-L13__P02-L1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HENDERSON-LIVING-L11-L22\\TCM-SET-HENDERSON-LIVING-L13__P02-L1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L13__P02-L1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22.zip",
+      "archiveMember": "TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L13__P02-L1.jpg",
+      "sha256": "ae217f4c16c0faf49e5d1f27796dfa8f5b72c49164d43ebd66cc6a9bfe212adc",
+      "bytes": 267212,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "F-HAND; G-GEO; H4",
+        "note": "[S03] DRIFT: P02 looks back at the front door, so the street window that sits LEFT on entry (P01: L11/L12/L18/L20/L21) must sit RIGHT here; it sits left (mirrored; family check \"street window position consistent across all positions\"). Front door is placed on the kitchen/bedroom wall beside the bedroom door, contradicting P01 where those openings lie ahead of the entry; galley kitchen vs P01 island kitchen; slatted blind vs roman shade. Coat hook, closed door, hardwood present; L1 lamps + fan light read. Kitchen clock tiny, no legible numerals. Index look_note \"day\" is index text only. Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HENDERSON-LIVING_card_v001 / 155c1fc64eebca4b2b9caa15adac237d1cd022bcb1d048427f915c9377eb426d ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/SCREENING_ROWS_HENDERSON-LIVING_PRELIMINARY.tsv",
+        "sourceSHA256": "4da31dfd835ed18c422f73508e19fd879db913dddcff7a48d90327e6937b95dc",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "HLIV-L1 P02 reverse to door | light: night, lived-in (lamps and fan light on, window dark)",
+        "sourceVsProposal": null,
+        "defectNote": "framing geometry differs from P01 frames",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L13",
+        "cameraPositionID": "HLIV-P02",
+        "lightState": "HLIV-L1 (night, lived-in (lamps and fan light on, window dark))",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-HENDERSON-LIVING-L01"
+        ],
+        "servesShotsRaw": "TCM-06-02, TCM-09-05, TCM-22-02, TCM-22-03, TCM-22-04, TCM-36-01",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-06-02",
+          "TCM-09-05",
+          "TCM-22-02",
+          "TCM-22-03",
+          "TCM-22-04",
+          "TCM-36-01"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HENDERSON-LIVING",
+      "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L13",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-06-02",
+        "TCM-09-05",
+        "TCM-22-02",
+        "TCM-22-03",
+        "TCM-22-04",
+        "TCM-36-01"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-06",
+        "TCM-SRC-09",
+        "TCM-SRC-22",
+        "TCM-SRC-26",
+        "TCM-SRC-36"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Henderson living room",
+      "sourceConstraints": "Nicely furnished, hardwood floor, front entry, couch, window, bedroom access, ceiling fan/light and a reflective surface. Must be reconciled to the chosen house family later."
+    },
+    {
+      "candidateID": "TCM-SET-HENDERSON-LIVING-L14__P02-L2",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HENDERSON-LIVING-L11-L22\\TCM-SET-HENDERSON-LIVING-L14__P02-L2.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L14__P02-L2.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22.zip",
+      "archiveMember": "TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L14__P02-L2.jpg",
+      "sha256": "c7678031ad90c11f3828cdaa30b1243371d8701ea409b75cb68ac5c77549ba48",
+      "bytes": 233550,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "F-HAND; G-GEO; G-LS pass",
+        "note": "[S04] DRIFT: window at LEFT when facing the front door (mirrored vs P01, as L13) and the couch sits on the right side wall, not under the street window as in every P01 frame; layout also differs from L13/L15 of the same position. L2 passes: one table lamp on, fan light off, window cold blue with no sun. Closed door, side table, coat hook, hardwood run present. Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HENDERSON-LIVING_card_v001 / 155c1fc64eebca4b2b9caa15adac237d1cd022bcb1d048427f915c9377eb426d ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/SCREENING_ROWS_HENDERSON-LIVING_PRELIMINARY.tsv",
+        "sourceSHA256": "4da31dfd835ed18c422f73508e19fd879db913dddcff7a48d90327e6937b95dc",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "HLIV-L2 P02 | light: pre-dawn, one lamp on, window cold blue",
+        "sourceVsProposal": null,
+        "defectNote": "ceiling fan light off; geometry differs from P01",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L14",
+        "cameraPositionID": "HLIV-P02",
+        "lightState": "HLIV-L2 (pre-dawn, one lamp on, window cold blue)",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-HENDERSON-LIVING-L01"
+        ],
+        "servesShotsRaw": "TCM-06-02, TCM-09-05, TCM-22-02, TCM-22-03, TCM-22-04, TCM-36-01",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-06-02",
+          "TCM-09-05",
+          "TCM-22-02",
+          "TCM-22-03",
+          "TCM-22-04",
+          "TCM-36-01"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HENDERSON-LIVING",
+      "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L14",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-06-02",
+        "TCM-09-05",
+        "TCM-22-02",
+        "TCM-22-03",
+        "TCM-22-04",
+        "TCM-36-01"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-06",
+        "TCM-SRC-09",
+        "TCM-SRC-22",
+        "TCM-SRC-26",
+        "TCM-SRC-36"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Henderson living room",
+      "sourceConstraints": "Nicely furnished, hardwood floor, front entry, couch, window, bedroom access, ceiling fan/light and a reflective surface. Must be reconciled to the chosen house family later."
+    },
+    {
+      "candidateID": "TCM-SET-HENDERSON-LIVING-L15__P02-L4",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HENDERSON-LIVING-L11-L22\\TCM-SET-HENDERSON-LIVING-L15__P02-L4.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L15__P02-L4.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22.zip",
+      "archiveMember": "TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L15__P02-L4.jpg",
+      "sha256": "6746980e3380962e32016e2ce1b9dc8c18ffb4f2fcc1d3b6d67e28d44ca635b2",
+      "bytes": 264981,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "F-HAND; G-GEO; G-LS pass",
+        "note": "[S05] DRIFT: window at LEFT facing the front door (mirrored vs P01); door on a plain wall with no kitchen/bedroom relation to P01. L4 passes: sun through the street window, fan light off, no lamps. Closed door, side table, coat hooks, hardwood present. Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HENDERSON-LIVING_card_v001 / 155c1fc64eebca4b2b9caa15adac237d1cd022bcb1d048427f915c9377eb426d ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/SCREENING_ROWS_HENDERSON-LIVING_PRELIMINARY.tsv",
+        "sourceSHA256": "4da31dfd835ed18c422f73508e19fd879db913dddcff7a48d90327e6937b95dc",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "HLIV-L4 P02 | light: day, sun through window, fan light off",
+        "sourceVsProposal": null,
+        "defectNote": "none noted",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L15",
+        "cameraPositionID": "HLIV-P02",
+        "lightState": "HLIV-L4 (day, sun through window, fan light off)",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-HENDERSON-LIVING-L01"
+        ],
+        "servesShotsRaw": "TCM-06-02, TCM-09-05, TCM-22-02, TCM-22-03, TCM-22-04, TCM-36-01",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-06-02",
+          "TCM-09-05",
+          "TCM-22-02",
+          "TCM-22-03",
+          "TCM-22-04",
+          "TCM-36-01"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HENDERSON-LIVING",
+      "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L15",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-06-02",
+        "TCM-09-05",
+        "TCM-22-02",
+        "TCM-22-03",
+        "TCM-22-04",
+        "TCM-36-01"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-06",
+        "TCM-SRC-09",
+        "TCM-SRC-22",
+        "TCM-SRC-26",
+        "TCM-SRC-36"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Henderson living room",
+      "sourceConstraints": "Nicely furnished, hardwood floor, front entry, couch, window, bedroom access, ceiling fan/light and a reflective surface. Must be reconciled to the chosen house family later."
+    },
+    {
+      "candidateID": "TCM-SET-HENDERSON-LIVING-L16__P03-L2",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HENDERSON-LIVING-L11-L22\\TCM-SET-HENDERSON-LIVING-L16__P03-L2.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L16__P03-L2.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22.zip",
+      "archiveMember": "TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L16__P03-L2.jpg",
+      "sha256": "6e66da12a83b65f6e6add355ab23892c251e11508cb9795dbbe47ab996d3cb6e",
+      "bytes": 211583,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "G-GEO; G-POS; G-LS pass",
+        "note": "[S06] Slot P03 partly met: window at side edge, table lamp + side table at the other, coffee table cutting the bottom, empty couch with dressed cushions; L2 one lamp, window deep blue, no sun. DRIFT: the couch is moved onto the kitchen-opening wall (P01/L11/L18/L21 put it under the street window), so \"the street window at the established side edge\" holds only by relocating the couch; framing is a wide high view, not \"seated eye height, 50mm, square to the couch\". Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HENDERSON-LIVING_card_v001 / 155c1fc64eebca4b2b9caa15adac237d1cd022bcb1d048427f915c9377eb426d ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/SCREENING_ROWS_HENDERSON-LIVING_PRELIMINARY.tsv",
+        "sourceSHA256": "4da31dfd835ed18c422f73508e19fd879db913dddcff7a48d90327e6937b95dc",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "HLIV-L2 P03 | light: pre-dawn, one lamp on, window cold blue",
+        "sourceVsProposal": null,
+        "defectNote": "none noted",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L16",
+        "cameraPositionID": "HLIV-P03",
+        "lightState": "HLIV-L2 (pre-dawn, one lamp on, window cold blue)",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-HENDERSON-LIVING-L01"
+        ],
+        "servesShotsRaw": "TCM-09-01, TCM-09-02",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-09-01",
+          "TCM-09-02"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HENDERSON-LIVING",
+      "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L16",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-09-01",
+        "TCM-09-02"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-06",
+        "TCM-SRC-09",
+        "TCM-SRC-22",
+        "TCM-SRC-26",
+        "TCM-SRC-36"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Henderson living room",
+      "sourceConstraints": "Nicely furnished, hardwood floor, front entry, couch, window, bedroom access, ceiling fan/light and a reflective surface. Must be reconciled to the chosen house family later."
+    },
+    {
+      "candidateID": "TCM-SET-HENDERSON-LIVING-L18__P05-L1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HENDERSON-LIVING-L11-L22\\TCM-SET-HENDERSON-LIVING-L18__P05-L1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L18__P05-L1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22.zip",
+      "archiveMember": "TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L18__P05-L1.jpg",
+      "sha256": "8c712830e572e845088c47c5c5efd462102dfe9f8c263a638b90ed3b3b7b9320",
+      "bytes": 289713,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "G-POS; H7; G-GEO",
+        "note": "[S08] DRIFT (G-POS): frame is the P01 entry master again, not \"from the couch area toward the bedroom doorway: full door frame, door open, a sliver of dark bedroom, floor path in the lower frame\" - the bedroom doorway is a small mid-frame opening. The opening that is a hall with doors in L11/L20 is now a lamp-lit bedroom, giving two bedroom openings (centre and far right). Furnished, L1 lamps + fan read; no figures. Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HENDERSON-LIVING_card_v001 / 155c1fc64eebca4b2b9caa15adac237d1cd022bcb1d048427f915c9377eb426d ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/SCREENING_ROWS_HENDERSON-LIVING_PRELIMINARY.tsv",
+        "sourceSHA256": "4da31dfd835ed18c422f73508e19fd879db913dddcff7a48d90327e6937b95dc",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "HLIV-L1 P05 | light: night, lived-in (lamps and fan light on, window dark)",
+        "sourceVsProposal": null,
+        "defectNote": "none noted",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L18",
+        "cameraPositionID": "HLIV-P05",
+        "lightState": "HLIV-L1 (night, lived-in (lamps and fan light on, window dark))",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-HENDERSON-LIVING-L01"
+        ],
+        "servesShotsRaw": "TCM-06-03, TCM-26-01, TCM-36-07",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-06-03",
+          "TCM-26-01",
+          "TCM-36-07"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HENDERSON-LIVING",
+      "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L18",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-06-03",
+        "TCM-26-01",
+        "TCM-36-07"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-06",
+        "TCM-SRC-09",
+        "TCM-SRC-22",
+        "TCM-SRC-26",
+        "TCM-SRC-36"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Henderson living room",
+      "sourceConstraints": "Nicely furnished, hardwood floor, front entry, couch, window, bedroom access, ceiling fan/light and a reflective surface. Must be reconciled to the chosen house family later."
+    },
+    {
+      "candidateID": "TCM-SET-HENDERSON-LIVING-L19__P06-L4",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HENDERSON-LIVING-L11-L22\\TCM-SET-HENDERSON-LIVING-L19__P06-L4.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L19__P06-L4.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22.zip",
+      "archiveMember": "TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L19__P06-L4.jpg",
+      "sha256": "ac86b156ab74b254b11556fba1b6f3c42093eb3c507c0c475d88f2bc3e2a1c90",
+      "bytes": 180743,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "H5; G-REFL; G-LS",
+        "note": "[S09] Slot P06 met: fixture from below, blades, glass bowl, pull chain, ceiling; glass unlit (L4 fan light off); zoom: no face or figure in the glass. Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HENDERSON-LIVING_card_v001 / 155c1fc64eebca4b2b9caa15adac237d1cd022bcb1d048427f915c9377eb426d ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/SCREENING_ROWS_HENDERSON-LIVING_PRELIMINARY.tsv",
+        "sourceSHA256": "4da31dfd835ed18c422f73508e19fd879db913dddcff7a48d90327e6937b95dc",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "HLIV-L4 P06 | light: day, sun through window, fan light off",
+        "sourceVsProposal": null,
+        "defectNote": "none noted",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L19",
+        "cameraPositionID": "HLIV-P06",
+        "lightState": "HLIV-L4 (day, sun through window, fan light off)",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-HENDERSON-LIVING-L01"
+        ],
+        "servesShotsRaw": "TCM-36-01, TCM-36-03, TCM-36-04",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-36-01",
+          "TCM-36-03",
+          "TCM-36-04"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HENDERSON-LIVING",
+      "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L19",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-36-01",
+        "TCM-36-03",
+        "TCM-36-04"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-06",
+        "TCM-SRC-09",
+        "TCM-SRC-22",
+        "TCM-SRC-26",
+        "TCM-SRC-36"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Henderson living room",
+      "sourceConstraints": "Nicely furnished, hardwood floor, front entry, couch, window, bedroom access, ceiling fan/light and a reflective surface. Must be reconciled to the chosen house family later."
+    },
+    {
+      "candidateID": "TCM-SET-HENDERSON-LIVING-L20__P07-L4",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HENDERSON-LIVING-L11-L22\\TCM-SET-HENDERSON-LIVING-L20__P07-L4.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L20__P07-L4.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22.zip",
+      "archiveMember": "TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L20__P07-L4.jpg",
+      "sha256": "c288f0016b6450579709145e8709db860c289f567155ebf470c9920b4b90ece9",
+      "bytes": 258657,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-MISS",
+        "hardTrait": "H1; H6; G-POS",
+        "note": "[S10] SCRIPT-MISS (R10): the room is BARE - no couch, rug, lamps or coffee table, only a console - vs H1 \"a nicely furnished living room with Hardwood floors\" (SS:L171); R10 bare = SCRIPT-MISS. Also G-POS: framed wide (maker flag \"framed wide, not a mirror medium\") vs \"wall mirror medium, about 1.5 m, 50mm\"; mirror shows a door, not \"the empty room and the daylight window\". No face in mirror. Daylight L4 reads. Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HENDERSON-LIVING_card_v001 / 155c1fc64eebca4b2b9caa15adac237d1cd022bcb1d048427f915c9377eb426d ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/SCREENING_ROWS_HENDERSON-LIVING_PRELIMINARY.tsv",
+        "sourceSHA256": "4da31dfd835ed18c422f73508e19fd879db913dddcff7a48d90327e6937b95dc",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "HLIV-L4 P07 | light: day, sun through window, fan light off",
+        "sourceVsProposal": null,
+        "defectNote": "framed wide rather than the 1.5 m mirror medium",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L20",
+        "cameraPositionID": "HLIV-P07",
+        "lightState": "HLIV-L4 (day, sun through window, fan light off)",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-HENDERSON-LIVING-L01"
+        ],
+        "servesShotsRaw": "TCM-36-07, TCM-36-04",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-36-07",
+          "TCM-36-04"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HENDERSON-LIVING",
+      "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L20",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-36-07",
+        "TCM-36-04"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-06",
+        "TCM-SRC-09",
+        "TCM-SRC-22",
+        "TCM-SRC-26",
+        "TCM-SRC-36"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Henderson living room",
+      "sourceConstraints": "Nicely furnished, hardwood floor, front entry, couch, window, bedroom access, ceiling fan/light and a reflective surface. Must be reconciled to the chosen house family later."
+    },
+    {
+      "candidateID": "TCM-SET-HENDERSON-LIVING-L21__P08-L4",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HENDERSON-LIVING-L11-L22\\TCM-SET-HENDERSON-LIVING-L21__P08-L4.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L21__P08-L4.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22.zip",
+      "archiveMember": "TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L21__P08-L4.jpg",
+      "sha256": "50396b65c5772ab1b556a7985b8c5af02796ce0cffc4524957f80e0c99a15c8a",
+      "bytes": 314109,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "G-POS; G-GEO",
+        "note": "[S11] Low wide, hardwood + rug lower half, couch + window one side, fan just in at top, furnished, L4 lamps/fan off. DRIFT (G-POS): camera is not \"from the kitchen-opening side looking at the window wall\" - the kitchen opening is in frame at right, so this is the entry-side view; mirror hangs on the window wall, not the other side; floor not clear (coffee table centre). Geography agrees with P01. Kitchen clock tiny, no legible numerals. Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HENDERSON-LIVING_card_v001 / 155c1fc64eebca4b2b9caa15adac237d1cd022bcb1d048427f915c9377eb426d ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/SCREENING_ROWS_HENDERSON-LIVING_PRELIMINARY.tsv",
+        "sourceSHA256": "4da31dfd835ed18c422f73508e19fd879db913dddcff7a48d90327e6937b95dc",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "HLIV-L4 P08 | light: day, sun through window, fan light off",
+        "sourceVsProposal": null,
+        "defectNote": "none noted",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L21",
+        "cameraPositionID": "HLIV-P08",
+        "lightState": "HLIV-L4 (day, sun through window, fan light off)",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-HENDERSON-LIVING-L01"
+        ],
+        "servesShotsRaw": "TCM-36-02, TCM-36-03, TCM-36-05, TCM-36-06",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-36-02",
+          "TCM-36-03",
+          "TCM-36-05",
+          "TCM-36-06"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HENDERSON-LIVING",
+      "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L21",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-36-02",
+        "TCM-36-03",
+        "TCM-36-05",
+        "TCM-36-06"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-06",
+        "TCM-SRC-09",
+        "TCM-SRC-22",
+        "TCM-SRC-26",
+        "TCM-SRC-36"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Henderson living room",
+      "sourceConstraints": "Nicely furnished, hardwood floor, front entry, couch, window, bedroom access, ceiling fan/light and a reflective surface. Must be reconciled to the chosen house family later."
+    },
+    {
+      "candidateID": "TCM-SET-HENDERSON-LIVING-L22__P09-L1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HENDERSON-LIVING-L11-L22\\TCM-SET-HENDERSON-LIVING-L22__P09-L1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L22__P09-L1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HENDERSON-LIVING-L11-L22.zip",
+      "archiveMember": "TCM-SET-HENDERSON-LIVING-L11-L22/TCM-SET-HENDERSON-LIVING-L22__P09-L1.jpg",
+      "sha256": "1f88b4856880a992ceef25995fab9929057701d7665fcc184dd24b1fcb0d874e",
+      "bytes": 180862,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "QUALITY-FAIL",
+        "hardTrait": "Q-TEXT; H4; R10",
+        "note": "[S12] QUALITY-FAIL Q-TEXT: dial shows LEGIBLE numerals 1-12 (confirmed at 1x; maker flag \"LEGIBLE NUMERALS 1-12\") vs P09 \"Blank or hands-only dial with no numerals; the 10:05 reading (686) is composited later\" and maps \"no numerals or legible hands on any clock face\". Also the clock hangs on the living-room wall beside the kitchen opening, not in the kitchen (R10 = DRIFT, secondary). Kitchen and island in soft focus at right. Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HENDERSON-LIVING_card_v001 / 155c1fc64eebca4b2b9caa15adac237d1cd022bcb1d048427f915c9377eb426d ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/SCREENING_ROWS_HENDERSON-LIVING_PRELIMINARY.tsv",
+        "sourceSHA256": "4da31dfd835ed18c422f73508e19fd879db913dddcff7a48d90327e6937b95dc",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "HLIV-L1 kitchen clock insert | light: night, lived-in (lamps and fan light on, window dark)",
+        "sourceVsProposal": null,
+        "defectNote": "LEGIBLE NUMERALS 1-12 on clock face (violates no-numbers rule); not regenerated per no-retry rule",
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L22",
+        "cameraPositionID": "HLIV-P09",
+        "lightState": "HLIV-L1 (night, lived-in (lamps and fan light on, window dark))",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-HENDERSON-LIVING-L01"
+        ],
+        "servesShotsRaw": "TCM-22-01, TCM-26-01",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-22-01",
+          "TCM-26-01"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HENDERSON-LIVING-L11-L22/MAKER_BATCH_SETROUND_02_index_v002.tsv",
+        "sourceSHA256": "45691bc2030efeba0fb9e530a00773303b5c4c83b94f7bfebb45f190d3c57e4b",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HENDERSON-LIVING",
+      "providerCandidateID": "TCM-SET-HENDERSON-LIVING-L22",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-22-01",
+        "TCM-26-01"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-06",
+        "TCM-SRC-09",
+        "TCM-SRC-22",
+        "TCM-SRC-26",
+        "TCM-SRC-36"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Henderson living room",
+      "sourceConstraints": "Nicely furnished, hardwood floor, front entry, couch, window, bedroom access, ceiling fan/light and a reflective surface. Must be reconciled to the chosen house family later."
+    }
+  ],
+  "verification": {
+    "zipCRC": true,
+    "archiveHash": true,
+    "safeMemberPaths": true,
+    "noSymlinks": true,
+    "noEncryptedMembers": true,
+    "uniqueCandidateIDs": true,
+    "indexedBytesAndHashes": true,
+    "JPEGDecode": true,
+    "humanReviewOrAcceptanceCreated": false
+  },
+  "note": "Technical receipt for unreviewed originals. It is a completed site intake only when its exact hash is pinned by the required lane aggregate. Provider/V-team screening remains attributed preliminary evidence, never a human verdict or acceptance."
+}

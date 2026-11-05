@@ -1,0 +1,172 @@
+# The Criminal Mind, decisions record (opened 2026-10-31; the writer keeps it, as DECISIONS_20261010.md is kept for the song)
+
+Author: Claude, lead writer, recorded at about 17:30 UTC by the clock. Status: the record of what the author's relay (Ziggy) and the author (Baldadoon, relayed) decided, in substance, and what the writer did with it; nothing here is in anyone's name but the writer's. Authorship: Claude, draft 1, Detailed design by the author's rule | specialist review: none | adopted contributions: none.
+
+## 1. Decisions of October 31, 2026 (afternoon, America/New_York)
+
+| # | Topic | Decision, in substance | Applied |
+| --- | --- | --- | --- |
+| 1 | The reviewed edits | Make every correction the shot audit found now; cover cards are re-cut again when the cast is chosen; the cost accepted. | `TCM_SHOT_MAP_DELTA_v002_20261031.md` and `.tsv` (Part 2). |
+| 2 | Character generation | Held until the casting call is complete: inspiration built on candidate faces would have to be retraced, some for faces never chosen. Batch TCM-01 as posted (48 stills with John on base C01) is withdrawn; V_1 withdrew her TCM-01 cards. | Dispatch note in `START_HERE.txt`; this record. |
+| 3 | Set-only images | Every image attached to the board until casting is set-only: no people, no hands; the space is known before anyone inhabits it; after casting the actors are placed into these frames (a figure still prepared from the set still), and feedback on the setup at that point is a take 2. | `TCM_SET_CAMERA_MAPS_v001_20261031.md`; the Pent House work order. |
+| 4 | Scale | A camera map per set, read from each shot's Camera and Lighting fields, not two angles; proof sets first (the car, the bathroom and bedroom), the other families after; the Chief of Staff's hard cap of 300 stills for the round. | The maps file's totals table. |
+| 5 | The Henderson house | Baldadoon chose `TCM-SET-HENDERSON-EXTERIOR-L03` (a small white clapboard house, dark shingle roof, gabled porch on two square columns, black door with a wall lantern, white picket fence). The first author selection on a set. The interiors (living, bedroom, bathroom) are rooms of that house; exterior positions continue it without the sprinkler or the child in L03. | The maps file's header and every Henderson family. |
+| 6 | Where the set work lands | The set camera work is each shot's field 2 Camera (and 1 Lighting) in Structure & gaps; a returned image is bound to the shots its position serves; the kitchen roll-up (11.2) is downstream and not yet settled. | The maps' servesShots lists; the delta's setPositions column. |
+| 7 | The Pent House | Ziggy gave his go in the room for the set-only round (no people, no hands, about 300 stills in two batches, Claude drives, the team takes requests from him). The Chief's plan: batch 1 the car (Z_10), the bathroom (Z_7), the bedroom (Z_8); batch 2 to each set's original maker; one image per call, no automatic retries; V_1 screens; Z_6 ledger and packaging; the Chief pushes to D: and reads hashes back. | The work order posted at 17:28 UTC. |
+
+**Not decided today (held with the casting rule):** John's base among the ten candidates (the writer's best guess for a later exploratory pass would be C08, with C04 the alternate; not used); every character still; the reflection test for scene 27 (one face in two states cannot be tested without a face). Baldadoon's questions A to O stand as the writer pass lists them; the delta's Part 5 adds the open items the conversion surfaced.
+
+## 2. The writer's choices for the set round (defaults; the author may change any)
+
+Writer's choices made for this round, so every position of a family is shot in one place (the author may change any of them; each is labelled a writer's default in the record): (1) The car: one identity for every car still, a near-black four-door sedan on plain steel wheels, no emblem on the grille, wheel centres or boot, a black cloth cabin with high headrests, a plain dark dash with a low gauge glow, a console-mounted two-way radio with a coiled handset, a console shifter, a plain rear-view mirror, no laptop mount, no screens; left-hand drive, so passenger-side positions look screen-left toward the driver's seat. (2) The Henderson bathroom: the look of TCM-SET-HENDERSON-BATHROOM-L01 (white subway tile, a white floating vanity under a wide wall mirror, a chrome shower mixer at chest height, clear shower glass, the door opening straight off the bedroom; door at the right of the room map, shower at the left, vanity at the centre); no window needed, a frosted one allowed as a night cue. (3) The Henderson bedroom: the look of TCM-SET-HENDERSON-BEDROOM-L09 (both stands, the closet, the bathroom door's edge), with the exit door to the living room on the wall opposite the bathroom door, the window on the wall facing the foot of the bed, analog clocks with hands only; John's stand is the one nearer the exit door, Jill's the one nearer the bathroom. The threshold positions (BATH-P01, BATH-P07, BED-P04) show the other room in its chosen look through the door. (4) The precinct bullpen: TCM-SET-PRECINCT-OFFICE-L01 is the geometry anchor; windows along one long wall, the captain's glazed office on the far wall with the plain washroom door beside it, the glazed double exit doors on the end wall, John's and Diego's paired desks mid-floor on the window side, the galvanised barrel in the aisle between those desks and the exit. The washroom's entry door is the same leaf seen from inside (BATH-P05 of the precinct washroom). (5) Every reflection in this round (mirrors, chrome, glass) shows only the empty room; no camera, no figure, no face. Phone and clock faces carry no readable characters. Batch 2 look decisions (writer's defaults, so each family is shot in one place): rooftop, L01's brick bulkhead is canonical and the rain state is reshot on it; alley A, a through-alley far end (L02), wet ground, plain unlettered tape; the diner alley, L01's geography; the cafe, a true corner table with the window to the left of the table and a city street outside; the late bar, the television over the back bar, a plain corded phone behind the bar under it, the back door with a stair up to the roof matching the rooftop's door; the hostage house, pairing A (the L02 exterior with the L04 interior, overcast day, one door to the street), the mirror on the side wall between the entry and the window; the hospital, the cuff on the window-side rail and the nurse's working side toward the door; the Henderson exterior, the L03 house with the driveway on the right and the sprinklers off at night; the child home, a neutral era, a dark hall, the mother on the floor; the interrogation room, L01's geometry with L05's single pendant light; the meeting room, briefing rows (L05 base) with the door at the front right; the junkyard, overcast day on L01's stripped rusted sedan, drag marks reading as a body drag; the captain's office, the clean starter L05 with the cluttered desk the script gives it; the Henderson living room, handedness agreeing with the driveway on the right.
+
+## 3. Files of today
+
+| File | sha256 | Bytes | What it is |
+| --- | --- | --- | --- |
+| `TCM_SHOT_MAP_DELTA_v002_20261031.md` | 93f7341506a7c3bde0a5adadacfa5bcbd29c8a73cc62b601558a86400373721b | 78480 | the shot audit as actions: 24 placeholder swaps, 8 under-splits (12 sub-shots), 33 inserts, 92 roster trims, 202 card-text corrections for the card author, 8 set gaps, the open items |
+| `TCM_SHOT_MAP_DELTA_v002_20261031.tsv` | b69ae207a24b520cb05a286b454e6fd8fc8f621f71d2847d7cc0713e36748508 | 151451 | the same, one row per shot, sub-shot and insert (210 rows) for the beat table and the cover cards |
+| `TCM_SET_CAMERA_MAPS_v001_20261031.md` | f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e | 223620 | set-only camera maps for all twenty set families plus four new gap families: positions, light states, the shots each serves, existing coverage, the writer's choices, the counts under the cap |
+
+## 4. Open for the author, through Ziggy
+
+Baldadoon's questions A to O (`TCM_WRITER_PASS_001_20261031.md`, Part 4); of them, B (era and phone), K (agency) and O (screen length) shape the most set work. New from the delta: the time of day of scenes 8, 10 and 20; the coda's staging (on camera or inner voice); which hand is cuffed at 1877; the bedroom's exit-door wall and window wall (the writer's defaults above stand until changed).
+
+Claude, lead writer
+
+## 5. Decisions of November 1, 2026 (the author's first answers, relayed by Ziggy; recorded at about 17:10 UTC)
+
+Ziggy relayed two screenshots of the author's replies to B, K and O. The author's words are quoted in `BALDADOON_AUTHOR_INTERVIEW_20261101.json`; this table is the writer's reading of them.
+
+| # | Topic | The author, in substance | Decision | Applied |
+| --- | --- | --- | --- | --- |
+| 1 | Era and the phone (B) | Written in the flip-phone years; update every cell phone to a smartphone. | Present day. The writer's period-neutral default is withdrawn; screens are allowed dark; phone screens stay prepared graphics; 818 is staged as a hard end-call and the phone thrown to the seat (writer's staging). | Addendum A, sections 1 and 2. |
+| 2 | The agency (K) | State police and federal agents; the federal side is the FBI; the uniformed cops are the Massachusetts State Police. | Massachusetts State Police for John, Diego, the captain and the uniforms; the agents are FBI as the script already has them (334, 1764). Nothing lettered in any set still. | Addendum A, sections 1 and 3; the character brief when it is written. |
+| 3 | John's car (S, unasked) | The unmarked car is a present-day performance sedan of the model he named; police do not use the brand he wrote any more; police cars are SUVs now (the writer applies that to the marked vehicles). | The IMPALA family keeps its id and positions; its delivered take 1 (31 stills) stands and a fifteen-still take 2 carries the present-day identity where it reads; marked vehicles are present-day SUVs in a two-tone blue livery, unlettered, at their re-cut. Provider-facing text keeps "a dark unmarked sedan". | Addendum A, sections 2 and 3; the take-2 request posted in the Pent House. |
+| 4 | Screen length (O) | "Single film", said to Ziggy's gloss (one or multiple parts; show or movie). | The writer reads it as the whole screenplay as one film; the excerpt-first option was not put to him, so O-f1 asks it in one line; Part 9's length estimate is the planning figure; the two technical gates still come first. | Card delta v2 (the card's scope question answered in substance). |
+
+**Still open for the author:** N (the ending's tone) next, then A, C to J, L, M, P to R as the interview file lists them; three follow-ups from today's answers: B-f1 (does the present-day script need an on-screen reason the calls cannot be traced; the author's own remark, read by the writer as being about the phone), O-f1 (the whole screenplay, not an excerpt first) and S-f1 (the sedan he named, or an SUV, for John). The author's real name is not written in the record.
+
+**Files of today**
+
+| File | sha256 | Bytes | What it is |
+| --- | --- | --- | --- |
+| `BALDADOON_AUTHOR_INTERVIEW_20261101.json` | fa7fe89dd60077147011a69374b880d6b23cc8821c22a2d5fe4a116f161d63cc | 22309 | the interview file with answers B, K, O, S recorded (replaces the posted hash 6feeecba; this file is the living record by its own workflow field) |
+| `TCM_SET_CAMERA_MAPS_v001_ADDENDUM_A_20261101.md` | cf5300516fdeb14fde62b319112701e0cd526039f1f3842629f8853b1531d2c5 | 11193 | the answers applied to the set round: present day, the car's identity, the agency's vehicles, the flashback's year |
+| `MISSION_CONTROL_CARD_DELTA_PROPOSED_TCM_20261101_v2.json` | 8c8170a91f1bfb9f1fc5140707a59e77d5a3b6a973bdad32bf5366ff98a9e119 | 9019 | card delta: B, K, O, S answered, two follow-ups added, Addendum A linked, the scope question answered |
+
+Claude, lead writer
+
+## 5a. Correction to section 5 (November 1, 2026, about 17:19 UTC)
+
+Ziggy, in chat: the author's remark "Only issue is what brand can he have that has actual privacy" was about the car, not the phone. The writer's reading in section 5 (row 1's follow-up B-f1, the phone's traceability) is withdrawn; the traceability of the calls in the present day stays a writer's note under question A and is not put to the author. The remark now belongs to row 3: the author named a model and then doubted it himself, since that model reads as an unmarked police car to most people. Consequences: (1) the car's identity in Addendum A section 2 is provisional until the author answers S-f1 (drive the model he named anyway, or a present-day car that passes as a private car); (2) the fifteen-still car take 2 asked of Z_10 in the Pent House at about 17:12 UTC is HELD by a second post, so nothing is cut on an identity that may change; the delivered take 1 stands; (3) card delta v3 withdraws B-f1 and moves S-f1 to ask-first. Section 5's text stands as written; this section corrects it.
+
+| File | sha256 | Bytes | What it is |
+| --- | --- | --- | --- |
+| `BALDADOON_AUTHOR_INTERVIEW_20261101.json` | 77824756484f01d70af6f5936a1edb5a6cf1753164dc5d2ae6ecedde2c576cc1 | 22950 | B-f1 withdrawn, S re-worded as provisional with the author's remark and S-f1 (replaces fa7fe89d) |
+| `MISSION_CONTROL_CARD_DELTA_PROPOSED_TCM_20261101_v3.json` | 79a0f4d47c8c5da6b8cbe9862602c2ddbfaf9abf7a4ef7e7782fedc502ecdb6b | 3262 | the correction for the site card, after v2 |
+
+Claude, lead writer
+
+## 5b. Ziggy's rule for author questions, applied (November 1, 2026, about 17:52 UTC)
+
+Ziggy's rule for author questions (in chat, 2026-11-01, in substance): the author's original ideas stand by default; the writer never asks him to confirm what he wrote. A question goes to the author only where the script is silent, where it contradicts itself, or where production must change something and his intent decides how. Everything else is the writer's decision, recorded as a note the author may glance at, with no answer needed.
+
+Applied to the eighteen questions and the follow-ups:
+
+| Outcome | Questions | In substance |
+| --- | --- | --- |
+| Answered | B, K, O | O is closed: one whole experience, not an episodic series (Ziggy's reading of "Single film"); O-f1 withdrawn, since pieces shown to the author are proofs, not a scope choice. |
+| Provisional, live | S (the car) | S-f1 goes to the author first: the model he named reads as a police car; drive it anyway, or a present-day car or SUV that passes as private. The car's set stills wait. |
+| Open, in order | F, G, A, Q | Who fires at 1471; the ammonia slip at 154 (a possible error, his to fix or confirm); whether anyone else could notice the phone; how the two states appear in the coda. The writer's defaults stand meanwhile. |
+| Notes for his glance, no answer needed | H, I, J, M, P | Played and lit as written; contradictions carried in the continuity notes; slugs yield to the text. |
+| Withdrawn as written | D, E, L, N | The slurs, the unexplained British delivery, the unresolved witness and the ending stand as the author wrote them. N was the writer asking him to confirm his own ending. |
+| The writer's | R | The cuffed hand follows the bed geometry. |
+| Moved to Ziggy | C | A rating target is a production decision: as written where the tools allow, implication where a provider refuses the image. |
+
+| File | sha256 | Bytes | What it is |
+| --- | --- | --- | --- |
+| `BALDADOON_AUTHOR_INTERVIEW_20261101.json` | 6d1b0534e560173605550d1816e845d1da80591ba1c2821ce0b8436ddaaec1e2 | 27500 | statuses on every question under the rule; O closed; O-f1 withdrawn (replaces 77824756) |
+| `MISSION_CONTROL_CARD_DELTA_PROPOSED_TCM_20261101_v4.json` | 8a94bd42f2d241fa7ab5d7823786c838d7b6228a35f7235231dec65491ad5063 | 6576 | the same for the site card, after v3 |
+
+Claude, lead writer
+
+## 5c. F and G answered (November 1, 2026, about 02:30 UTC; relayed by Ziggy in chat)
+
+| # | Topic | The author, as relayed | Decision | Applied |
+| --- | --- | --- | --- | --- |
+| 1 | Who fires at 1471 (F) | "Gun fires it's Johnny (it's to hint there is a 3rd)" | Johnny is on camera when the gun fires; it is the audience's first hint of a third state, before the roof names him. The writer's default (the body goes still, no state speaking) is withdrawn. Scene 36's key frame reads as neither John nor Jack, with no mirror to carry it; the scene 36 take-2 card chooses performance, light and lens for that; the roof claim lands as confirmation. Supersedes the delta's Part 5 note on F. | The scene 36 take-2 card, when written. |
+| 2 | The ammonia (G) | "deliberate slip" | John knows because he was there. Played straight, no underline, no reaction insert; nothing in the script changes; the continuity note stays so nobody later fixes it. Scene 4 unblocked. | The scene 4 cards. |
+
+Open for the author: S-f1 (the car). A and Q wait for the scene 3 and scene 27 proofs. For Ziggy: C (rating target as a production decision).
+
+| File | sha256 | Bytes | What it is |
+| --- | --- | --- | --- |
+| `BALDADOON_AUTHOR_INTERVIEW_20261101.json` | 6847eb0cbdc8671173e6d6a6dc714e023ad2fc57907e7b5905e61e10f66e4e9f | 29712 | answers F and G added (replaces 6d1b0534) |
+| `MISSION_CONTROL_CARD_DELTA_PROPOSED_TCM_20261101_v5.json` | a00b3a2ebd340558857fec69f3a9756c223e1ab486a6974e4621bd01d36820bf | 2173 | the same for the site card, after v4 |
+
+Claude, lead writer
+
+## 5d. C decided by Ziggy (evening of November 1, 2026, New York; 2026-11-02T02:46:31Z)
+
+Ziggy, in chat: "Yes - we hold to the source material as best we can." Rating target (Ziggy's production decision, in chat): hold to the source material as written wherever the tools allow; implication only where a provider refuses the image, and then the nearest honest substitute, never a softened rewrite. Replaces the writer pass's grammar G8 (implication over display). The set-only round's no-blood, no-weapons rule is unchanged: it is a rule of that round, not a rating rule. Scope: Every card that shows violence or the bodies (36, 682, 827, 962, 1471, 1759, 1827) is written as the script has it; a provider refusal is recorded per shot with the substitute used; nothing is pre-softened.
+
+| File | sha256 | Bytes | What it is |
+| --- | --- | --- | --- |
+| `BALDADOON_AUTHOR_INTERVIEW_20261101.json` | cb907a79cfcd2c0ab74ffd2b4b0f2d461f1dab6271e72d4ac64b520030277ddf | 31006 | C recorded as Ziggy's production decision (replaces 6847eb0c) |
+| `MISSION_CONTROL_CARD_DELTA_PROPOSED_TCM_20261101_v6.json` | 91ec3480c31b28c20a18c293f19aaf0e93a66b2ff0c82aebc3b1d976db76954e | 1913 | the same for the site card, after v5 |
+
+Claude, lead writer
+
+## 5e. The placeholder rule, refining 5d (2026-11-02T04:50:36Z)
+
+Ziggy, in chat, in substance: "even the scenes we may have issues with doesn't mean we shy away - we do place holder things in lieu of going through and really making the juice worth the squeeze". Placeholder rule (Ziggy, in substance): a scene the tools refuse, or one that is hard to make well now, is never shied away from, rewritten or cut. It gets a labelled placeholder that holds the shot's place on the board (the frame, the duration, the intent, the refusal or difficulty recorded), and the production comes back to make it properly when it is far enough along that the effort is worth it. A placeholder is always marked as one; it is never passed off as the shot. This refines 5d's "nearest honest substitute": the substitute is a placeholder, marked as one. It also matches the casting rule already in force (cover cards re-cut at casting; placeholder faces carry breadcrumbs in the cast dependency ledger), so one convention covers faces, refused images and hard scenes alike: hold the place, label it, come back.
+
+| File | sha256 | Bytes | What it is |
+| --- | --- | --- | --- |
+| `BALDADOON_AUTHOR_INTERVIEW_20261101.json` | 257bea28fc3dba93e993268effcd2e3c38e5d9e71952dc08d538fc5af53c9bc9 | 32819 | C's answer carries the refinement and the file carries the placeholder rule (replaces cb907a79) |
+
+Claude, lead writer
+
+## 5f. The car as a writer's assumption (2026-11-02T15:38:07Z)
+
+Ziggy, in chat (2026-11-01 evening, New York), in substance: do not wait on the author for the car; make an assumption, he reviews the stills and we itemize what needs to be different; it is not critical; an unmarked SUV, as discussed. Decision: John's car is a present-day unmarked SUV, near-black and plain, passing as a private car; `TCM_SET_CAMERA_MAPS_v001_ADDENDUM_B_20261102.md` carries the identity and supersedes Addendum A section 2 as the working one; the car take 2 hold is lifted in the Pent House as sixteen stills (Addendum A's fifteen plus P13, since an SUV's silhouette reads at the empty corner). The author's doubt (S-f1) becomes a review: he sees the contact sheet and itemizes what should differ; a third take follows only for what he names. This is the placeholder rule of 5e applied to a vehicle: make it, mark it provisional, come back.
+
+| File | sha256 | Bytes | What it is |
+| --- | --- | --- | --- |
+| `TCM_SET_CAMERA_MAPS_v001_ADDENDUM_B_20261102.md` | ae51ec7b0fd1c55bce066ea93d0cb64836853ddc031dc2f4dc6b86f43e91950d | 4345 | the SUV identity; the sixteen-still take 2; the other families' car at re-cut |
+| `BALDADOON_AUTHOR_INTERVIEW_20261101.json` | 18811d39029b597cf13753d857a6db2a4438700175f6ba0418fe60746539a1a5 | 33163 | S carries Ziggy's direction and the assumption; S-f1 is a review item (replaces 257bea28) |
+
+Claude, lead writer
+
+## 5g. Variants for the director, everything at once (2026-11-02T15:49:34Z)
+
+Ziggy, in chat, in substance: give the Chief everything at once; enough variation for the director to make a choice; the writer picks the numbers. The writer's numbers: variation at the level of the look, not the camera position. A car identity sheet of ten present-day unmarked SUVs in two frames each (20 stills, Addendum C) comes before the sixteen-position take 2, which is cut in the car the director picks; the held positions follow the writer's rulings; the director's pass over the existing ten looks per family needs no generation and becomes a selection page proposal for the site. Routing from today: requests go to the Chief of Staff's own chat, not the room, so all the bots' work is tracked in one place (Ziggy). The record of every Criminal Mind request made so far was given to the Chief at about 15:50 UTC.
+
+| File | sha256 | Bytes | What it is |
+| --- | --- | --- | --- |
+| `TCM_SET_CAMERA_MAPS_v001_ADDENDUM_C_20261102.md` | 7aea1e51ddcb3a585c0538ac8228c4591393fcd8b7bb11327d8a3c85d021d81b | 4213 | the car identity sheet; the sequencing; the count against the cap; the director's pass |
+
+Claude, lead writer
+
+## 5h. Variation for quality; the cap lifted (2026-11-02T15:51:04Z)
+
+Ziggy, in chat (2026-11-02), in substance: do not feel limited to 300; give a real director a good experience; do not keep showing mediocre frames when they can be better; each round should be better than the last, in what the team itself thinks it is generating too; he wants to see the variants so the choice of what to bring to the front is a true judgement. The writer's numbers, in `TCM_SET_CAMERA_MAPS_v001_ADDENDUM_D_20261102.md`: three variants of every bound camera position (proof or needed), one of every exploratory position; the car identity sheet (20) first, then the car take 2 at three deep (48), then the held positions at three deep (about 66), then a quality pass over the delivered take 1 giving every bound position two more variants (about 400), proof families first, then families in the order of their first scene, V_1's misses first within each. The director marks one per row on a per-family contact sheet; his marks are the author's selections; the writer binds the pick. Usage within the Grok allowance as the Chief manages it; no purchases.
+
+| File | sha256 | Bytes | What it is |
+| --- | --- | --- | --- |
+| `TCM_SET_CAMERA_MAPS_v001_ADDENDUM_D_20261102.md` | 2a10c3961a50db331f10773cbc17f326bc37dc12b8b7f332453430a2748282b0 | 4513 | the rule of three; the order of work; the contact-sheet layout; the counts |
+
+Claude, lead writer
+
+## 5i. Rulings on the held positions (2026-11-02T15:56:14Z)
+
+The Chief of Staff listed 23 held stills and his open questions in his chat today. The writer's rulings are in `TCM_HELD_POSITIONS_RULINGS_20261102.md` (sha256 74cfc1e6d66463a4d4a7bc84c6f4f14d0630167de6e00724c3d87f202b9ad6a3, 8523 bytes): driveway on the right, no garage; sprinklers only in the day departure; the L03 facade kept without the child; the highway sign blank, the highway plates without dash or pillar; the hostage-house exterior in overcast day, two angles; the agents on the speaker's right and the meeting-room door front right; BAR-STREET L01 dropped (ROOFTOP owns the ledge-down views; three storeys, not four; two marked SUVs in two-tone blue); STREET-P05 dropped into HEXT-P05's pre-dawn state; 09-03 is the morning view from the living room window with the car in the driveway (scene 9 is morning by the script); the captain's door in the glazed wall, the window behind his chair; the bullpen entry on the end wall; the washroom door toward the bullpen; drift stills corrected as variants under the rule of three, no individual rerolls; the six maps quotes ruled when the Chief's file is on D:. Z_10's sixteen SUV stills (L42 to L57) are variant a of the car take 2; Z_10's car is ID01 on the identity sheet.
+
+Claude, lead writer
+
+## 5j. The set binding v001 reviewed and accepted (2026-11-05T00:43:04Z)
+
+PH_Claude_Lite (Claude (lite), the Sonnet shift of the writer) delivered the binding of the Grok set round on 2026-11-05 at 00:33 UTC: 756 stills accounted for, 617 bound in 2,150 rows across 208 of 210 shots, every shot linked at cover, options and family, two shots with the family link only (HENDERSON-LIVING P04 was held, never delivered), none bare; seven scripted checks at zero failures. The writer's review and rulings on its eleven questions are in `TCM_SET_BINDING_v001_REVIEW_20261105.md` (sha256 3692b9d66b22d1e775a345342be8bba4bb5b0d791a09f75384bd50ababade793, 7462 bytes): accepted as the PRELIMINARY binding of record; a v002 by the same hand applies the rulings (HLIV-P04 asked and an interim cover from HEXT-P05 morning; HEXT-P05 pre-dawn as options on TCM-08-01; priority filled for the new families; labelled rerolls bound; the SUV identity outranks the sedan for car covers; the 43 non-OK covers kept and flagged, their nineteen cover files sent to the Chief as a correction list; 39-08 and 39-15 take the rooftop ledge views); Nova strips screening notes from anything provider-facing. Independent check: PASS on 2026-11-05 at about 00:45 UTC by an independent scripted agent: the three hashes as stated; 2,150 rows and 208 shots recounted; a random sample of 60 rows opened in their zips with every sha256 equal to the member's bytes; every shot id in the delta's 210; every position id in the maps; exactly one default placeholder in each of 694 groups; the JSON loads with 210 shots and 24 families and every binding row's hash in the TSV (the 5 authorPick hashes and the 465 sheet hashes are look and contact sheets, not binding rows); no dash violations in the report.
+
+Claude, lead writer

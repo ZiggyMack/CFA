@@ -90,13 +90,19 @@ function boot() {
 }
 
 const page = boot(), api = page.api;
+function expectCollapsed(id) {
+  const panel='collection-'+id.replace(/[^a-z0-9_-]/gi,'-');
+  assert(page.html().includes('<div id="'+panel+'" class="collection-inline-views" hidden></div>'),'Collapsed panel is hidden and empty: '+id);
+  const toggles=page.toggles(id);assert(toggles.length,'Collapsed collection has controls: '+id);
+  for(const toggle of toggles)assert.equal(toggle.attributes['aria-expanded'],'false','Controls report collapsed: '+id);
+}
 let checks = 0;
 const initialReview = clone(api.reviewPayload()), initialBasket = clone(api.basketPayload(true));
 const initialStorage = Object.fromEntries(page.storage);
 const albumByID = new Map(catalog.albums.map(a => [a.id,a]));
 const originalAssets = clone(catalog.assets);
 const thumbURL = id => new URL(byID.get(id).thumb, 'file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/visual_library/').href;
-const hasLeaf = id => page.html().includes('data-open="' + id + '"');
+const hasLeaf = id => page.html().includes('class="media-open" data-open="' + id + '"');
 const active = a => a && !a.archived && api.reviewRecord(a.id).status !== 'remove';
 const members = id => albumByID.get(id).assetIDs.map(id => byID.get(id)).filter(active);
 function summary(id) {
@@ -131,18 +137,20 @@ assert(catalog.sharedReferenceCollections.some(g=>(g.assetIDs||[]).includes(iced
 checks++;
 
 // Six story sections become covers. Ordered shot cards remain one click away.
-const storyAlbums = catalog.albums.filter(a => a.project === 'hon' && a.category === 'storyboard' && a.id !== 'hon:story-quarters-grill-change');
+const storyAlbums = catalog.albums.filter(a => a.project === 'hon' && a.category === 'storyboard' && a.assetIDs.some(id => byID.get(id)?.storyboardOrder));
 assert.equal(storyAlbums.length,6,'Six original story sections remain');
 const storyCovers = {'hon:story-ship':16,'hon:story-turn':23,'hon:story-love':30,'hon:story-outro':36};
 for (const [id,number] of Object.entries(storyCovers)) expectCover(id,catalog.assets.find(a => a.project === 'hon' && a.storyboardOrder === number).id);
 for (const al of storyAlbums) {
   const assets = members(al.id).filter(a => a.storyboardOrder);
   assert(page.toggles(al.id).length,'Each story section has an inline control: ' + al.id);
+  expectCollapsed(al.id);
   for (const a of assets) assert(!hasLeaf(a.id),'Story shots do not flood the initial page: ' + a.title);
   toggleWithoutNavigation(al.id);
-  const actual = [...page.html().matchAll(/data-open="([^"]+)"/g)].map(m=>byID.get(m[1])).filter(a=>a && a.album===al.id).map(a=>a.storyboardOrder);
+  const actual = [...page.html().matchAll(/class="media-open" data-open="([^"]+)"/g)].map(m=>byID.get(m[1])).filter(a=>a && a.album===al.id).map(a=>a.storyboardOrder);
   assert.deepEqual(actual,assets.map(a=>a.storyboardOrder).sort((a,b)=>a-b),'Expanded shots use numeric SB order: ' + al.id);
   toggleWithoutNavigation(al.id);
+  expectCollapsed(al.id);
   for (const a of assets) assert(!hasLeaf(a.id),'Collapsed story hides its children again: ' + a.title);
 }
 checks++;

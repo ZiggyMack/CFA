@@ -1,0 +1,94 @@
+{
+  "status": "LOCAL_STRUCTURAL_CHECK_ONLY",
+  "source_sha256": "9d5324752449027e3977e2672762f76b120fa9b7cf7141497e48cd61168e5a41",
+  "archived_source": "WAN_BOUND_EDITOR_AUDIO_PLACEHOLDER_ACTUAL_20261012.json",
+  "editor": "WAN_FACE_PROTECTION69_PREFLIGHT_EDITOR_v002.json",
+  "active_terminal_outputs": [
+    124,
+    1481734536190884
+  ],
+  "active_preflight_ancestors": [
+    23,
+    124,
+    145,
+    159,
+    160,
+    212,
+    275,
+    9001,
+    9003,
+    9004,
+    9005,
+    9006,
+    324475594538284,
+    1481734536190884,
+    1833034495877259,
+    1956377300393751,
+    3095296998173597,
+    4458611668371917
+  ],
+  "sampling_reachable_from_preflight": false,
+  "source_trim": {
+    "node": 9001,
+    "batch_index": 6,
+    "length": 69,
+    "source_original_frames": [
+      168,
+      236
+    ]
+  },
+  "dimensions": [
+    768,
+    432
+  ],
+  "fps": 24,
+  "sampling_plan": {
+    "seed": 42,
+    "control_after_generate": "fixed",
+    "steps": 6,
+    "cfg": 1,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "denoise": 1,
+    "batch_size": 1,
+    "length": 69,
+    "sampler_disabled": true
+  },
+  "conditioning_and_composite_mask": {
+    "node": 9006,
+    "operation": "subtract",
+    "destination": 1833034495877259,
+    "source": 9005,
+    "outputs_to": [
+      275,
+      232,
+      548748812020021,
+      1481734536190884
+    ]
+  },
+  "composite_generated_source": {
+    "node": 9002,
+    "input": "232.VIDEO",
+    "compiled_origin": "232:15 CreateVideo after232:230 ImageFromBatch",
+    "codec": "none"
+  },
+  "uploads_still_required": {
+    "9003": "PROTECTION_FRONTAL_69_768x432_LOSSLESS.mp4",
+    "4427161206989702": "SOURCE_FRONTAL_AUDIO_168_236_PCM.wav"
+  },
+  "cloud_runtime_validated": false,
+  "cloud_runs": 0,
+  "unknowns": [
+    "Cloud loaded schemas/exported compiled inputs for added nodes",
+    "Actual protection/video frame counts and alignment on Cloud",
+    "Face-parser coverage and protected-region boundary preview",
+    "Current remote model availability on generation branch",
+    "Actual GPU usage and costs"
+  ],
+  "sources": [
+    "https://raw.githubusercontent.com/Comfy-Org/ComfyUI/master/comfy_extras/nodes_mask.py",
+    "https://raw.githubusercontent.com/Comfy-Org/ComfyUI/master/comfy_extras/nodes_video.py",
+    "../../../../../../../../Pan_Handlers/Help/content/video_routes.py:wan_mix"
+  ],
+  "editor_sha256": "157d0934ccd382f262ec46488ef9ace228850abb881860b48d59b4be4084928e"
+}

@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "assignmentID": "storyboard-story-selector-story01-intake-20261014",
+  "completedAtUTC": "2026-10-14T22:56:59.444106Z",
+  "status": "local_implementation_complete",
+  "sourceMessageID": "8b44dfe3-8265-44cd-b050-0e69165f9644",
+  "hostedPublication": false,
+  "providerDispatch": false,
+  "newApprovals": 0,
+  "browserVisualQA": false,
+  "browserLimitation": "Browser automation was unavailable for this local-file surface; actual-renderer DOM/storage tests are recorded separately and are not visual QA.",
+  "changes": [
+    "Primary Story selector with song default; Stage secondary; song-only theme/range.",
+    "Both-project landing cards with cover, stage, counts and story-scoped writings; prose cards show no panels yet.",
+    "Story01: 38 shots, nine scenes, 56 unique material files, 98 role associations; 50 new images and six reused canonical assets.",
+    "SW2 linked to S01-4.1; Signal remains Meta Mirror. Existing GrillUp planning/readiness remains reachable under its story.",
+    "Two pinned site-safe writer excerpts keep original writer files unchanged. Seven new story/writer document records.",
+    "Catalog promotion uses a complete temporary file and rejects a concurrently changed catalog."
+  ],
+  "coverage": {
+    "shots": 38,
+    "scenes": 9,
+    "shotsWithFrames": 33,
+    "shotsWithResults": 1,
+    "shotsWithPendingReferences": 21,
+    "shotsWithPendingCharacters": 20,
+    "shotsWithPendingObjects": 5,
+    "objectOnlyPendingShot": "S01-5.3"
+  },
+  "tests": [
+    {
+      "command": "python -m unittest test_story01_intake.py",
+      "exitCode": 0,
+      "checks": 7
+    },
+    {
+      "command": "node test_source_comparison_publication.cjs",
+      "exitCode": 0,
+      "checks": 9
+    },
+    {
+      "command": "node test_reference_validation.cjs",
+      "exitCode": 0,
+      "scenarios": 19
+    },
+    {
+      "command": "node test_scene_readiness.cjs",
+      "exitCode": 0,
+      "scenarios": 11
+    },
+    {
+      "command": "python -X utf8 verify_preservation.py",
+      "exitCode": 0
+    },
+    {
+      "command": "git diff --check (existing CRLF permitted)",
+      "exitCode": 0
+    }
+  ],
+  "uiTests": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_implementation_20261014/UI_TEST_RESULTS_20261014.json",
+    "bytes": 6751,
+    "sha256": "1d661c9e1181948df49eb1b3f16fe71f796e0fa1b8ce16d52cff6485ba7de335"
+  },
+  "knownUnrelatedTestFailure": "Full test_head_anchor_group.cjs retains an old All-files expectation for a removed Working References chip at line 118. The storyboard selector and collection navigation tests pass; isolated remaining head/story checks are diagnostic only.",
+  "preservation": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_implementation_20261014/PRESERVATION_RESULT.json",
+    "bytes": 878,
+    "sha256": "b1ca60e90a718a748b01040f729ee1513b42e7638cfe4edc17884f97e3b36fb1"
+  },
+  "intakeVerification": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_implementation_20261014/INTAKE_VERIFICATION.json",
+    "bytes": 21345,
+    "sha256": "76392bdd2aa2aa369a53dac1e53bf3bb5e82ed5dc7152f12b9f8cd21ddcef4ed"
+  },
+  "siteSafeSources": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_implementation_20261014/site_safe_writer/SITE_SAFE_WRITER_SOURCES.json",
+    "bytes": 3802,
+    "sha256": "323f594d8486f4d58c481229a0ad547beb4e76f75d0b72946f04fe6653744081"
+  },
+  "shellCacheVersionsVerified": 5,
+  "artifacts": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/build_catalog.py",
+      "bytes": 59882,
+      "sha256": "5681f20204da4afa19587a7dbfc54c98e4c6872b47c47b40c1a21dbcb166235e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/story01_intake.py",
+      "bytes": 17047,
+      "sha256": "515145d98529bbc086cad8a0a9a5808ae4ddb27137cde228e3e1ede4a68e0c60"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/writer_development.json",
+      "bytes": 64701,
+      "sha256": "8840aa94f866277dfbe96002d079c88dc1c164aa279480577e7fc2dff8837bfe"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/storyboard_stories.json",
+      "bytes": 13155,
+      "sha256": "fc658498ccab5c760b83b1658032c466ee44322bcebd79f25e4472bdb0115941"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+      "bytes": 11083117,
+      "sha256": "3dc3211e7e457a005d0c4b32ee4af63b34287455eb3e10f2589f112053575583"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "bytes": 256259,
+      "sha256": "1b9356615a50ba8de4f53a946d17f347af515d3468242a41df7bd787d19634c6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.css",
+      "bytes": 62086,
+      "sha256": "104eec7cc5cac6b17fe2427a5a8b42a8fa6cf19185055fff6a375e594262f4f0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_story01_intake.py",
+      "bytes": 9600,
+      "sha256": "c2321686a9d188642f2497f7b5ac954b0a8d1c9bb138d8e106bc36ca8857419f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_story_selector.cjs",
+      "bytes": 13485,
+      "sha256": "ca75d5361b0ba440323854ccc303c2c68081968471ef46a273b7dbf6118beff4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_writer_publication.cjs",
+      "bytes": 10463,
+      "sha256": "2e20ea196fe1757b29621a3a3104e1a94051306f6c493cf94adb1509493d4036"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_flow_prototypes.cjs",
+      "bytes": 10534,
+      "sha256": "edb1bd56e603b45bcc1ab581ea12458463ca188b160b4bc2774ff4c515447973"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_collections_navigation.cjs",
+      "bytes": 20869,
+      "sha256": "30f40a8f0e1231b98b67caaf239e80bd6029e42349778e170cc2f40857f6bf6f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_head_anchor_group.cjs",
+      "bytes": 14032,
+      "sha256": "e06dfab5f4dc58a63e9db3bd3b18b47aec25a74fb52e0906a02e6a610d2f4091"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/index.html",
+      "bytes": 496,
+      "sha256": "f3e50d568e6d744a5e802c1c071c9bebea7b18670c4761593cd988d47a7a0882"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/index.html",
+      "bytes": 514,
+      "sha256": "136de2c85406920da868c87a59f9228df8e1abc47212e1d4c07b209175bed958"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard.html",
+      "bytes": 521,
+      "sha256": "42e2c42a8fd02da6170667f6d8fc36c20508cf02a61fdad09648373c0041f939"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_review_20261007/index.html",
+      "bytes": 517,
+      "sha256": "0ebd086964458d3aa51932869fbc73fca5ab7024972333aaf535d4b12a107f99"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/index.html",
+      "bytes": 507,
+      "sha256": "71d79b40620205bd3b62e8479066a1c559d5ca99e0e32406f947edd3ec1e0b47"
+    }
+  ]
+}

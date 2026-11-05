@@ -1,0 +1,24 @@
+- C22-01_Z_2: pass (soft): bone ribcages noon; worm heads snake-like
+- C22-02_Z_2: pass (soft): worm skeleton sunset; worm heads cobra-like
+- C22-03_Z_2: pass, skull poles; round-mouth worms
+- C22-04_Z_2: pass, top pick: moonlit rib cathedral, toothed worm mouths
+- C22-05_Z_2_FAIL: GAIB duplicated on throat, eye disc missing, worms got eyes
+- C22-06_Z_2: pass, breather image, sandstorm skull
+- C22-07_Z_2: pass (soft): skull throne red dusk; worm heads cobra-like
+- C22-08_Z_2_FAIL: doubled eye disc, worms with eyes
+- C22-09_Z_2_FAIL: AL doubled (extra small AL on forehead)
+- C22-10_Z_2: pass, top pick: car in ribcage, best toothed worms
+- C22-11_Z_2_FAIL: AL shifted off-center, GAIB last letters garbled
+- C22-12_Z_2: pass (soft): salt-flat mirage; worm heads snake-like
+- C22-13_Z_2: pass, bone wind-chimes lavender dusk
+- C22-14_Z_2_FAIL: GAIB read GAICB, worms cobras
+- C22-15_Z_2_FAIL: AL letters split far apart
+- C22-16_Z_2: pass, green storm light; toothed worms
+- C22-17_Z_2: pass, horse skeleton + wagon wheel
+- C22-18_Z_2: pass, crashed helicopter smoky dawn
+- C22-19_Z_2: pass (soft): blood moon; worm heads cobra-like
+- C22-20_Z_2: pass, top pick: horned skull gateway
+- C22-21_Z_2: pass, bone-gathering nomads
+- C22-22_Z_2_FAIL: GAIB extended into GAIBI running onto throat
+
+SUMMARY: requested 22, returned 22, pass 15 (several soft: cobra-like worm heads), fail 7. Breather in C22-06. Best: C22-10, C22-04, C22-20.

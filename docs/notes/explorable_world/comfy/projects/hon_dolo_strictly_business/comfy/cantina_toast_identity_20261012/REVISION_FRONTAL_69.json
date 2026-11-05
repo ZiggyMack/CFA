@@ -1,0 +1,2465 @@
+{
+  "createdAtUTC": "2026-10-13T00:06:39.113251+00:00",
+  "status": "controlled_comparison_technical_mask_repair_pass_actor_likeness_not_met_preliminary",
+  "revisionReason": "Original77-frame excerpt crosses hard cut F167 to168. This69-frame4n+1 excerpt is continuous frontal toast. Frozen original77 brief/artifacts remain unchanged.",
+  "originalSource": {
+    "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_review_20261007/review_copies/performance/gemini_generated_video_2e361055.mp4",
+    "sha256": "fe4100afa5185a9d794f53744f18ef1fe144724a1e7b4cf942b3efa3418035ca",
+    "unchanged": true
+  },
+  "excerpt": {
+    "sourceFramesInclusive": [
+      168,
+      236
+    ],
+    "sourceStartSeconds": 7.0,
+    "sourceEndExclusiveSeconds": 9.875,
+    "frameCount": 69,
+    "fps": 24,
+    "durationSeconds": 2.875,
+    "decodedRGBFramesEqualOriginal": true,
+    "allPTSVerifiedAt24fps": true,
+    "sourceResolution": [
+      1280,
+      720
+    ],
+    "workflowResolution": [
+      768,
+      432
+    ]
+  },
+  "video": {
+    "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\SOURCE_FRONTAL_FRAMES_168_236_24FPS_LOSSLESS.mp4",
+    "bytes": 56449643,
+    "sha256": "6fc5685d320748af1cb05f853d6f6e62ed9fb922983260d4465b2dbd019a2b0a",
+    "audioStream": false,
+    "purpose": "Local lossless archive; Cloud may reuse already-uploaded77 input and trim images."
+  },
+  "audio": {
+    "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\SOURCE_FRONTAL_AUDIO_168_236_PCM.wav",
+    "bytes": 552044,
+    "sha256": "91ea68c1e283b407af773eba0479f7f198ffefb641649ddfe1b25070a85bf705",
+    "rate": 48000,
+    "channels": 2,
+    "sampleWidthBytes": 2,
+    "samples": 138000,
+    "originalDecodedPCMSamplesExclusive": [
+      336000,
+      474000
+    ],
+    "existing77ExcerptPCMSamplesExclusive": [
+      12000,
+      150000
+    ],
+    "bothComparisonsExact": true
+  },
+  "executionInputStrategy": {
+    "reuseUploaded77FrameVideo": true,
+    "imageTrim": {
+      "nodeType": "ImageFromBatch",
+      "batch_index": 6,
+      "length": 69,
+      "between": "23.images and212.image; all face/pose/conditioning uses trimmed212 output"
+    },
+    "WanLength": 69,
+    "batchSize": 1,
+    "offset": 0,
+    "outputFPS": 24,
+    "audio": "Load revised69-frame WAV into final CreateVideo; uploaded lossless video has no audio.",
+    "noNewUploadOfArchived69VideoRequired": true
+  },
+  "mask": {
+    "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\PROTECTION_FRONTAL_69_768x432_LOSSLESS.mp4",
+    "bytes": 94428,
+    "sha256": "7d0c0541a85bdb72a88dd8b90ce28bdd56bde78ec7fae6c0246b6c11c7edbdd9",
+    "encoding": "Lossless libx264rgb, grayscale identical RGB channels",
+    "frameCount": 69,
+    "fps": 24,
+    "width": 768,
+    "height": 432,
+    "decodedValuesEqualPreparedRGB": true,
+    "allPTSVerifiedAt24fps": true,
+    "white": "protected source",
+    "black": "editable; semantic face mask still limits edit region",
+    "gray": "inward feather transition",
+    "scope": "Conservative lead eye/brow,nose bridge,clean chin and visible unmarked lower cheek interiors. All remaining pixels WHITE/protected, including every other person/background/costume andmarkedface/mouth. Lowercheek window collapses during later leftwardturn.",
+    "construction": "Manually selected editable polygon keyframes in original1280x720 coordinates, piecewise linear vertex interpolation, x/y multiplied0.6, rasterized at768x432,1.5px Gaussian inward-only feather via min(binary,blur). Protection=255-edit. No automated tracking and no learned segmentation used.",
+    "keyframeCoordinatesOriginal": {
+      "168": {
+        "left_eye_brow": [
+          [
+            571,
+            214
+          ],
+          [
+            622,
+            214
+          ],
+          [
+            625,
+            217
+          ],
+          [
+            625,
+            241
+          ],
+          [
+            622,
+            244
+          ],
+          [
+            571,
+            244
+          ],
+          [
+            568,
+            241
+          ],
+          [
+            568,
+            217
+          ]
+        ],
+        "right_eye_brow": [
+          [
+            658,
+            213
+          ],
+          [
+            684,
+            213
+          ],
+          [
+            687,
+            216
+          ],
+          [
+            687,
+            241
+          ],
+          [
+            684,
+            244
+          ],
+          [
+            658,
+            244
+          ],
+          [
+            655,
+            241
+          ],
+          [
+            655,
+            216
+          ]
+        ],
+        "nose_bridge": [
+          [
+            628,
+            233
+          ],
+          [
+            643,
+            233
+          ],
+          [
+            646,
+            236
+          ],
+          [
+            646,
+            266
+          ],
+          [
+            643,
+            269
+          ],
+          [
+            628,
+            269
+          ],
+          [
+            625,
+            266
+          ],
+          [
+            625,
+            236
+          ]
+        ],
+        "clean_chin": [
+          [
+            580,
+            357
+          ],
+          [
+            619,
+            355
+          ],
+          [
+            654,
+            353
+          ],
+          [
+            649,
+            375
+          ],
+          [
+            621,
+            386
+          ],
+          [
+            590,
+            379
+          ]
+        ],
+        "unmarked_lower_cheek": [
+          [
+            535,
+            315
+          ],
+          [
+            558,
+            316
+          ],
+          [
+            575,
+            346
+          ],
+          [
+            553,
+            355
+          ],
+          [
+            539,
+            340
+          ]
+        ]
+      },
+      "174": {
+        "left_eye_brow": [
+          [
+            573,
+            230
+          ],
+          [
+            623,
+            230
+          ],
+          [
+            626,
+            233
+          ],
+          [
+            626,
+            261
+          ],
+          [
+            623,
+            264
+          ],
+          [
+            573,
+            264
+          ],
+          [
+            570,
+            261
+          ],
+          [
+            570,
+            233
+          ]
+        ],
+        "right_eye_brow": [
+          [
+            655,
+            226
+          ],
+          [
+            688,
+            226
+          ],
+          [
+            691,
+            229
+          ],
+          [
+            691,
+            264
+          ],
+          [
+            688,
+            267
+          ],
+          [
+            655,
+            267
+          ],
+          [
+            652,
+            264
+          ],
+          [
+            652,
+            229
+          ]
+        ],
+        "nose_bridge": [
+          [
+            632,
+            250
+          ],
+          [
+            647,
+            250
+          ],
+          [
+            650,
+            253
+          ],
+          [
+            650,
+            283
+          ],
+          [
+            647,
+            286
+          ],
+          [
+            632,
+            286
+          ],
+          [
+            629,
+            283
+          ],
+          [
+            629,
+            253
+          ]
+        ],
+        "clean_chin": [
+          [
+            577,
+            375
+          ],
+          [
+            610,
+            372
+          ],
+          [
+            650,
+            370
+          ],
+          [
+            660,
+            389
+          ],
+          [
+            630,
+            400
+          ],
+          [
+            599,
+            395
+          ]
+        ],
+        "unmarked_lower_cheek": [
+          [
+            547,
+            333
+          ],
+          [
+            570,
+            332
+          ],
+          [
+            586,
+            365
+          ],
+          [
+            573,
+            378
+          ],
+          [
+            555,
+            362
+          ]
+        ]
+      },
+      "182": {
+        "left_eye_brow": [
+          [
+            556,
+            242
+          ],
+          [
+            602,
+            242
+          ],
+          [
+            605,
+            245
+          ],
+          [
+            605,
+            268
+          ],
+          [
+            602,
+            271
+          ],
+          [
+            556,
+            271
+          ],
+          [
+            553,
+            268
+          ],
+          [
+            553,
+            245
+          ]
+        ],
+        "right_eye_brow": [
+          [
+            645,
+            250
+          ],
+          [
+            684,
+            250
+          ],
+          [
+            687,
+            253
+          ],
+          [
+            687,
+            279
+          ],
+          [
+            684,
+            282
+          ],
+          [
+            645,
+            282
+          ],
+          [
+            642,
+            279
+          ],
+          [
+            642,
+            253
+          ]
+        ],
+        "nose_bridge": [
+          [
+            613,
+            269
+          ],
+          [
+            633,
+            269
+          ],
+          [
+            636,
+            272
+          ],
+          [
+            636,
+            298
+          ],
+          [
+            633,
+            301
+          ],
+          [
+            613,
+            301
+          ],
+          [
+            610,
+            298
+          ],
+          [
+            610,
+            272
+          ]
+        ],
+        "clean_chin": [
+          [
+            573,
+            390
+          ],
+          [
+            607,
+            389
+          ],
+          [
+            650,
+            383
+          ],
+          [
+            650,
+            405
+          ],
+          [
+            613,
+            416
+          ],
+          [
+            583,
+            409
+          ]
+        ],
+        "unmarked_lower_cheek": [
+          [
+            545,
+            338
+          ],
+          [
+            564,
+            336
+          ],
+          [
+            579,
+            373
+          ],
+          [
+            568,
+            388
+          ],
+          [
+            552,
+            371
+          ]
+        ]
+      },
+      "190": {
+        "left_eye_brow": [
+          [
+            562,
+            244
+          ],
+          [
+            606,
+            244
+          ],
+          [
+            609,
+            247
+          ],
+          [
+            609,
+            266
+          ],
+          [
+            606,
+            269
+          ],
+          [
+            562,
+            269
+          ],
+          [
+            559,
+            266
+          ],
+          [
+            559,
+            247
+          ]
+        ],
+        "right_eye_brow": [
+          [
+            651,
+            253
+          ],
+          [
+            687,
+            253
+          ],
+          [
+            690,
+            256
+          ],
+          [
+            690,
+            276
+          ],
+          [
+            687,
+            279
+          ],
+          [
+            651,
+            279
+          ],
+          [
+            648,
+            276
+          ],
+          [
+            648,
+            256
+          ]
+        ],
+        "nose_bridge": [
+          [
+            618,
+            270
+          ],
+          [
+            638,
+            270
+          ],
+          [
+            641,
+            273
+          ],
+          [
+            641,
+            303
+          ],
+          [
+            638,
+            306
+          ],
+          [
+            618,
+            306
+          ],
+          [
+            615,
+            303
+          ],
+          [
+            615,
+            273
+          ]
+        ],
+        "clean_chin": [
+          [
+            587,
+            390
+          ],
+          [
+            620,
+            390
+          ],
+          [
+            661,
+            381
+          ],
+          [
+            658,
+            405
+          ],
+          [
+            626,
+            418
+          ],
+          [
+            599,
+            410
+          ]
+        ],
+        "unmarked_lower_cheek": [
+          [
+            557,
+            336
+          ],
+          [
+            577,
+            332
+          ],
+          [
+            587,
+            373
+          ],
+          [
+            579,
+            394
+          ],
+          [
+            562,
+            374
+          ]
+        ]
+      },
+      "198": {
+        "left_eye_brow": [
+          [
+            571,
+            275
+          ],
+          [
+            604,
+            275
+          ],
+          [
+            607,
+            278
+          ],
+          [
+            607,
+            296
+          ],
+          [
+            604,
+            299
+          ],
+          [
+            571,
+            299
+          ],
+          [
+            568,
+            296
+          ],
+          [
+            568,
+            278
+          ]
+        ],
+        "right_eye_brow": [
+          [
+            647,
+            266
+          ],
+          [
+            688,
+            266
+          ],
+          [
+            691,
+            269
+          ],
+          [
+            691,
+            294
+          ],
+          [
+            688,
+            297
+          ],
+          [
+            647,
+            297
+          ],
+          [
+            644,
+            294
+          ],
+          [
+            644,
+            269
+          ]
+        ],
+        "nose_bridge": [
+          [
+            617,
+            286
+          ],
+          [
+            635,
+            286
+          ],
+          [
+            638,
+            289
+          ],
+          [
+            638,
+            320
+          ],
+          [
+            635,
+            323
+          ],
+          [
+            617,
+            323
+          ],
+          [
+            614,
+            320
+          ],
+          [
+            614,
+            289
+          ]
+        ],
+        "clean_chin": [
+          [
+            593,
+            401
+          ],
+          [
+            632,
+            401
+          ],
+          [
+            666,
+            392
+          ],
+          [
+            665,
+            421
+          ],
+          [
+            633,
+            439
+          ],
+          [
+            606,
+            429
+          ]
+        ],
+        "unmarked_lower_cheek": [
+          [
+            563,
+            358
+          ],
+          [
+            578,
+            355
+          ],
+          [
+            591,
+            400
+          ],
+          [
+            580,
+            416
+          ],
+          [
+            566,
+            392
+          ]
+        ]
+      },
+      "206": {
+        "left_eye_brow": [
+          [
+            579,
+            263
+          ],
+          [
+            605,
+            263
+          ],
+          [
+            608,
+            266
+          ],
+          [
+            608,
+            286
+          ],
+          [
+            605,
+            289
+          ],
+          [
+            579,
+            289
+          ],
+          [
+            576,
+            286
+          ],
+          [
+            576,
+            266
+          ]
+        ],
+        "right_eye_brow": [
+          [
+            645,
+            254
+          ],
+          [
+            685,
+            254
+          ],
+          [
+            688,
+            257
+          ],
+          [
+            688,
+            279
+          ],
+          [
+            685,
+            282
+          ],
+          [
+            645,
+            282
+          ],
+          [
+            642,
+            279
+          ],
+          [
+            642,
+            257
+          ]
+        ],
+        "nose_bridge": [
+          [
+            617,
+            278
+          ],
+          [
+            635,
+            278
+          ],
+          [
+            638,
+            281
+          ],
+          [
+            638,
+            311
+          ],
+          [
+            635,
+            314
+          ],
+          [
+            617,
+            314
+          ],
+          [
+            614,
+            311
+          ],
+          [
+            614,
+            281
+          ]
+        ],
+        "clean_chin": [
+          [
+            606,
+            389
+          ],
+          [
+            645,
+            389
+          ],
+          [
+            680,
+            376
+          ],
+          [
+            683,
+            402
+          ],
+          [
+            652,
+            425
+          ],
+          [
+            618,
+            415
+          ]
+        ],
+        "unmarked_lower_cheek": [
+          [
+            573,
+            346
+          ],
+          [
+            588,
+            341
+          ],
+          [
+            604,
+            387
+          ],
+          [
+            595,
+            407
+          ],
+          [
+            578,
+            389
+          ]
+        ]
+      },
+      "214": {
+        "left_eye_brow": [
+          [
+            592,
+            244
+          ],
+          [
+            627,
+            244
+          ],
+          [
+            630,
+            247
+          ],
+          [
+            630,
+            265
+          ],
+          [
+            627,
+            268
+          ],
+          [
+            592,
+            268
+          ],
+          [
+            589,
+            265
+          ],
+          [
+            589,
+            247
+          ]
+        ],
+        "right_eye_brow": [
+          [
+            673,
+            228
+          ],
+          [
+            711,
+            228
+          ],
+          [
+            714,
+            231
+          ],
+          [
+            714,
+            250
+          ],
+          [
+            711,
+            253
+          ],
+          [
+            673,
+            253
+          ],
+          [
+            670,
+            250
+          ],
+          [
+            670,
+            231
+          ]
+        ],
+        "nose_bridge": [
+          [
+            639,
+            262
+          ],
+          [
+            657,
+            262
+          ],
+          [
+            660,
+            265
+          ],
+          [
+            660,
+            293
+          ],
+          [
+            657,
+            296
+          ],
+          [
+            639,
+            296
+          ],
+          [
+            636,
+            293
+          ],
+          [
+            636,
+            265
+          ]
+        ],
+        "clean_chin": [
+          [
+            625,
+            378
+          ],
+          [
+            656,
+            378
+          ],
+          [
+            689,
+            364
+          ],
+          [
+            690,
+            387
+          ],
+          [
+            663,
+            408
+          ],
+          [
+            638,
+            401
+          ]
+        ],
+        "unmarked_lower_cheek": [
+          [
+            589,
+            336
+          ],
+          [
+            605,
+            335
+          ],
+          [
+            619,
+            371
+          ],
+          [
+            607,
+            389
+          ],
+          [
+            594,
+            371
+          ]
+        ]
+      },
+      "222": {
+        "left_eye_brow": [
+          [
+            563,
+            258
+          ],
+          [
+            594,
+            258
+          ],
+          [
+            597,
+            261
+          ],
+          [
+            597,
+            278
+          ],
+          [
+            594,
+            281
+          ],
+          [
+            563,
+            281
+          ],
+          [
+            560,
+            278
+          ],
+          [
+            560,
+            261
+          ]
+        ],
+        "right_eye_brow": [
+          [
+            641,
+            249
+          ],
+          [
+            684,
+            249
+          ],
+          [
+            687,
+            252
+          ],
+          [
+            687,
+            274
+          ],
+          [
+            684,
+            277
+          ],
+          [
+            641,
+            277
+          ],
+          [
+            638,
+            274
+          ],
+          [
+            638,
+            252
+          ]
+        ],
+        "nose_bridge": [
+          [
+            605,
+            277
+          ],
+          [
+            625,
+            277
+          ],
+          [
+            628,
+            280
+          ],
+          [
+            628,
+            307
+          ],
+          [
+            625,
+            310
+          ],
+          [
+            605,
+            310
+          ],
+          [
+            602,
+            307
+          ],
+          [
+            602,
+            280
+          ]
+        ],
+        "clean_chin": [
+          [
+            620,
+            394
+          ],
+          [
+            643,
+            394
+          ],
+          [
+            672,
+            382
+          ],
+          [
+            670,
+            404
+          ],
+          [
+            644,
+            417
+          ],
+          [
+            628,
+            410
+          ]
+        ],
+        "unmarked_lower_cheek": [
+          [
+            613,
+            388
+          ],
+          [
+            613,
+            388
+          ],
+          [
+            613,
+            388
+          ],
+          [
+            613,
+            388
+          ],
+          [
+            613,
+            388
+          ]
+        ]
+      },
+      "230": {
+        "left_eye_brow": [
+          [
+            551,
+            270
+          ],
+          [
+            568,
+            270
+          ],
+          [
+            571,
+            273
+          ],
+          [
+            571,
+            283
+          ],
+          [
+            568,
+            286
+          ],
+          [
+            551,
+            286
+          ],
+          [
+            548,
+            283
+          ],
+          [
+            548,
+            273
+          ]
+        ],
+        "right_eye_brow": [
+          [
+            614,
+            263
+          ],
+          [
+            650,
+            263
+          ],
+          [
+            653,
+            266
+          ],
+          [
+            653,
+            280
+          ],
+          [
+            650,
+            283
+          ],
+          [
+            614,
+            283
+          ],
+          [
+            611,
+            280
+          ],
+          [
+            611,
+            266
+          ]
+        ],
+        "nose_bridge": [
+          [
+            581,
+            283
+          ],
+          [
+            596,
+            283
+          ],
+          [
+            599,
+            286
+          ],
+          [
+            599,
+            309
+          ],
+          [
+            596,
+            312
+          ],
+          [
+            581,
+            312
+          ],
+          [
+            578,
+            309
+          ],
+          [
+            578,
+            286
+          ]
+        ],
+        "clean_chin": [
+          [
+            613,
+            401
+          ],
+          [
+            631,
+            402
+          ],
+          [
+            652,
+            390
+          ],
+          [
+            651,
+            410
+          ],
+          [
+            632,
+            425
+          ],
+          [
+            618,
+            418
+          ]
+        ],
+        "unmarked_lower_cheek": [
+          [
+            626,
+            411
+          ],
+          [
+            626,
+            411
+          ],
+          [
+            626,
+            411
+          ],
+          [
+            626,
+            411
+          ],
+          [
+            626,
+            411
+          ]
+        ]
+      },
+      "236": {
+        "left_eye_brow": [
+          [
+            538,
+            267
+          ],
+          [
+            558,
+            267
+          ],
+          [
+            561,
+            270
+          ],
+          [
+            561,
+            283
+          ],
+          [
+            558,
+            286
+          ],
+          [
+            538,
+            286
+          ],
+          [
+            535,
+            283
+          ],
+          [
+            535,
+            270
+          ]
+        ],
+        "right_eye_brow": [
+          [
+            594,
+            251
+          ],
+          [
+            639,
+            251
+          ],
+          [
+            642,
+            254
+          ],
+          [
+            642,
+            274
+          ],
+          [
+            639,
+            277
+          ],
+          [
+            594,
+            277
+          ],
+          [
+            591,
+            274
+          ],
+          [
+            591,
+            254
+          ]
+        ],
+        "nose_bridge": [
+          [
+            572,
+            284
+          ],
+          [
+            587,
+            284
+          ],
+          [
+            590,
+            287
+          ],
+          [
+            590,
+            304
+          ],
+          [
+            587,
+            307
+          ],
+          [
+            572,
+            307
+          ],
+          [
+            569,
+            304
+          ],
+          [
+            569,
+            287
+          ]
+        ],
+        "clean_chin": [
+          [
+            597,
+            402
+          ],
+          [
+            618,
+            403
+          ],
+          [
+            641,
+            389
+          ],
+          [
+            643,
+            410
+          ],
+          [
+            627,
+            426
+          ],
+          [
+            607,
+            420
+          ]
+        ],
+        "unmarked_lower_cheek": [
+          [
+            617,
+            413
+          ],
+          [
+            617,
+            413
+          ],
+          [
+            617,
+            413
+          ],
+          [
+            617,
+            413
+          ],
+          [
+            617,
+            413
+          ]
+        ]
+      }
+    },
+    "interpolation": "linear per corresponding vertex between listed source frames; reviewed overlays pending",
+    "perFrame": [
+      {
+        "sourceFrame": 168,
+        "excerptIndex": 0,
+        "editableAreaPixelsGreaterThanZero": 2350,
+        "fullyProtectedPixels": 329426
+      },
+      {
+        "sourceFrame": 169,
+        "excerptIndex": 1,
+        "editableAreaPixelsGreaterThanZero": 2389,
+        "fullyProtectedPixels": 329387
+      },
+      {
+        "sourceFrame": 170,
+        "excerptIndex": 2,
+        "editableAreaPixelsGreaterThanZero": 2458,
+        "fullyProtectedPixels": 329318
+      },
+      {
+        "sourceFrame": 171,
+        "excerptIndex": 3,
+        "editableAreaPixelsGreaterThanZero": 2495,
+        "fullyProtectedPixels": 329281
+      },
+      {
+        "sourceFrame": 172,
+        "excerptIndex": 4,
+        "editableAreaPixelsGreaterThanZero": 2509,
+        "fullyProtectedPixels": 329267
+      },
+      {
+        "sourceFrame": 173,
+        "excerptIndex": 5,
+        "editableAreaPixelsGreaterThanZero": 2657,
+        "fullyProtectedPixels": 329119
+      },
+      {
+        "sourceFrame": 174,
+        "excerptIndex": 6,
+        "editableAreaPixelsGreaterThanZero": 2683,
+        "fullyProtectedPixels": 329093
+      },
+      {
+        "sourceFrame": 175,
+        "excerptIndex": 7,
+        "editableAreaPixelsGreaterThanZero": 2667,
+        "fullyProtectedPixels": 329109
+      },
+      {
+        "sourceFrame": 176,
+        "excerptIndex": 8,
+        "editableAreaPixelsGreaterThanZero": 2555,
+        "fullyProtectedPixels": 329221
+      },
+      {
+        "sourceFrame": 177,
+        "excerptIndex": 9,
+        "editableAreaPixelsGreaterThanZero": 2641,
+        "fullyProtectedPixels": 329135
+      },
+      {
+        "sourceFrame": 178,
+        "excerptIndex": 10,
+        "editableAreaPixelsGreaterThanZero": 2553,
+        "fullyProtectedPixels": 329223
+      },
+      {
+        "sourceFrame": 179,
+        "excerptIndex": 11,
+        "editableAreaPixelsGreaterThanZero": 2577,
+        "fullyProtectedPixels": 329199
+      },
+      {
+        "sourceFrame": 180,
+        "excerptIndex": 12,
+        "editableAreaPixelsGreaterThanZero": 2556,
+        "fullyProtectedPixels": 329220
+      },
+      {
+        "sourceFrame": 181,
+        "excerptIndex": 13,
+        "editableAreaPixelsGreaterThanZero": 2546,
+        "fullyProtectedPixels": 329230
+      },
+      {
+        "sourceFrame": 182,
+        "excerptIndex": 14,
+        "editableAreaPixelsGreaterThanZero": 2526,
+        "fullyProtectedPixels": 329250
+      },
+      {
+        "sourceFrame": 183,
+        "excerptIndex": 15,
+        "editableAreaPixelsGreaterThanZero": 2493,
+        "fullyProtectedPixels": 329283
+      },
+      {
+        "sourceFrame": 184,
+        "excerptIndex": 16,
+        "editableAreaPixelsGreaterThanZero": 2443,
+        "fullyProtectedPixels": 329333
+      },
+      {
+        "sourceFrame": 185,
+        "excerptIndex": 17,
+        "editableAreaPixelsGreaterThanZero": 2441,
+        "fullyProtectedPixels": 329335
+      },
+      {
+        "sourceFrame": 186,
+        "excerptIndex": 18,
+        "editableAreaPixelsGreaterThanZero": 2381,
+        "fullyProtectedPixels": 329395
+      },
+      {
+        "sourceFrame": 187,
+        "excerptIndex": 19,
+        "editableAreaPixelsGreaterThanZero": 2367,
+        "fullyProtectedPixels": 329409
+      },
+      {
+        "sourceFrame": 188,
+        "excerptIndex": 20,
+        "editableAreaPixelsGreaterThanZero": 2434,
+        "fullyProtectedPixels": 329342
+      },
+      {
+        "sourceFrame": 189,
+        "excerptIndex": 21,
+        "editableAreaPixelsGreaterThanZero": 2398,
+        "fullyProtectedPixels": 329378
+      },
+      {
+        "sourceFrame": 190,
+        "excerptIndex": 22,
+        "editableAreaPixelsGreaterThanZero": 2357,
+        "fullyProtectedPixels": 329419
+      },
+      {
+        "sourceFrame": 191,
+        "excerptIndex": 23,
+        "editableAreaPixelsGreaterThanZero": 2326,
+        "fullyProtectedPixels": 329450
+      },
+      {
+        "sourceFrame": 192,
+        "excerptIndex": 24,
+        "editableAreaPixelsGreaterThanZero": 2363,
+        "fullyProtectedPixels": 329413
+      },
+      {
+        "sourceFrame": 193,
+        "excerptIndex": 25,
+        "editableAreaPixelsGreaterThanZero": 2377,
+        "fullyProtectedPixels": 329399
+      },
+      {
+        "sourceFrame": 194,
+        "excerptIndex": 26,
+        "editableAreaPixelsGreaterThanZero": 2398,
+        "fullyProtectedPixels": 329378
+      },
+      {
+        "sourceFrame": 195,
+        "excerptIndex": 27,
+        "editableAreaPixelsGreaterThanZero": 2431,
+        "fullyProtectedPixels": 329345
+      },
+      {
+        "sourceFrame": 196,
+        "excerptIndex": 28,
+        "editableAreaPixelsGreaterThanZero": 2425,
+        "fullyProtectedPixels": 329351
+      },
+      {
+        "sourceFrame": 197,
+        "excerptIndex": 29,
+        "editableAreaPixelsGreaterThanZero": 2484,
+        "fullyProtectedPixels": 329292
+      },
+      {
+        "sourceFrame": 198,
+        "excerptIndex": 30,
+        "editableAreaPixelsGreaterThanZero": 2462,
+        "fullyProtectedPixels": 329314
+      },
+      {
+        "sourceFrame": 199,
+        "excerptIndex": 31,
+        "editableAreaPixelsGreaterThanZero": 2493,
+        "fullyProtectedPixels": 329283
+      },
+      {
+        "sourceFrame": 200,
+        "excerptIndex": 32,
+        "editableAreaPixelsGreaterThanZero": 2499,
+        "fullyProtectedPixels": 329277
+      },
+      {
+        "sourceFrame": 201,
+        "excerptIndex": 33,
+        "editableAreaPixelsGreaterThanZero": 2488,
+        "fullyProtectedPixels": 329288
+      },
+      {
+        "sourceFrame": 202,
+        "excerptIndex": 34,
+        "editableAreaPixelsGreaterThanZero": 2482,
+        "fullyProtectedPixels": 329294
+      },
+      {
+        "sourceFrame": 203,
+        "excerptIndex": 35,
+        "editableAreaPixelsGreaterThanZero": 2484,
+        "fullyProtectedPixels": 329292
+      },
+      {
+        "sourceFrame": 204,
+        "excerptIndex": 36,
+        "editableAreaPixelsGreaterThanZero": 2464,
+        "fullyProtectedPixels": 329312
+      },
+      {
+        "sourceFrame": 205,
+        "excerptIndex": 37,
+        "editableAreaPixelsGreaterThanZero": 2475,
+        "fullyProtectedPixels": 329301
+      },
+      {
+        "sourceFrame": 206,
+        "excerptIndex": 38,
+        "editableAreaPixelsGreaterThanZero": 2449,
+        "fullyProtectedPixels": 329327
+      },
+      {
+        "sourceFrame": 207,
+        "excerptIndex": 39,
+        "editableAreaPixelsGreaterThanZero": 2422,
+        "fullyProtectedPixels": 329354
+      },
+      {
+        "sourceFrame": 208,
+        "excerptIndex": 40,
+        "editableAreaPixelsGreaterThanZero": 2381,
+        "fullyProtectedPixels": 329395
+      },
+      {
+        "sourceFrame": 209,
+        "excerptIndex": 41,
+        "editableAreaPixelsGreaterThanZero": 2347,
+        "fullyProtectedPixels": 329429
+      },
+      {
+        "sourceFrame": 210,
+        "excerptIndex": 42,
+        "editableAreaPixelsGreaterThanZero": 2240,
+        "fullyProtectedPixels": 329536
+      },
+      {
+        "sourceFrame": 211,
+        "excerptIndex": 43,
+        "editableAreaPixelsGreaterThanZero": 2235,
+        "fullyProtectedPixels": 329541
+      },
+      {
+        "sourceFrame": 212,
+        "excerptIndex": 44,
+        "editableAreaPixelsGreaterThanZero": 2189,
+        "fullyProtectedPixels": 329587
+      },
+      {
+        "sourceFrame": 213,
+        "excerptIndex": 45,
+        "editableAreaPixelsGreaterThanZero": 2123,
+        "fullyProtectedPixels": 329653
+      },
+      {
+        "sourceFrame": 214,
+        "excerptIndex": 46,
+        "editableAreaPixelsGreaterThanZero": 2129,
+        "fullyProtectedPixels": 329647
+      },
+      {
+        "sourceFrame": 215,
+        "excerptIndex": 47,
+        "editableAreaPixelsGreaterThanZero": 2028,
+        "fullyProtectedPixels": 329748
+      },
+      {
+        "sourceFrame": 216,
+        "excerptIndex": 48,
+        "editableAreaPixelsGreaterThanZero": 1930,
+        "fullyProtectedPixels": 329846
+      },
+      {
+        "sourceFrame": 217,
+        "excerptIndex": 49,
+        "editableAreaPixelsGreaterThanZero": 1818,
+        "fullyProtectedPixels": 329958
+      },
+      {
+        "sourceFrame": 218,
+        "excerptIndex": 50,
+        "editableAreaPixelsGreaterThanZero": 1731,
+        "fullyProtectedPixels": 330045
+      },
+      {
+        "sourceFrame": 219,
+        "excerptIndex": 51,
+        "editableAreaPixelsGreaterThanZero": 1665,
+        "fullyProtectedPixels": 330111
+      },
+      {
+        "sourceFrame": 220,
+        "excerptIndex": 52,
+        "editableAreaPixelsGreaterThanZero": 1680,
+        "fullyProtectedPixels": 330096
+      },
+      {
+        "sourceFrame": 221,
+        "excerptIndex": 53,
+        "editableAreaPixelsGreaterThanZero": 1596,
+        "fullyProtectedPixels": 330180
+      },
+      {
+        "sourceFrame": 222,
+        "excerptIndex": 54,
+        "editableAreaPixelsGreaterThanZero": 1584,
+        "fullyProtectedPixels": 330192
+      },
+      {
+        "sourceFrame": 223,
+        "excerptIndex": 55,
+        "editableAreaPixelsGreaterThanZero": 1533,
+        "fullyProtectedPixels": 330243
+      },
+      {
+        "sourceFrame": 224,
+        "excerptIndex": 56,
+        "editableAreaPixelsGreaterThanZero": 1353,
+        "fullyProtectedPixels": 330423
+      },
+      {
+        "sourceFrame": 225,
+        "excerptIndex": 57,
+        "editableAreaPixelsGreaterThanZero": 1336,
+        "fullyProtectedPixels": 330440
+      },
+      {
+        "sourceFrame": 226,
+        "excerptIndex": 58,
+        "editableAreaPixelsGreaterThanZero": 1260,
+        "fullyProtectedPixels": 330516
+      },
+      {
+        "sourceFrame": 227,
+        "excerptIndex": 59,
+        "editableAreaPixelsGreaterThanZero": 1197,
+        "fullyProtectedPixels": 330579
+      },
+      {
+        "sourceFrame": 228,
+        "excerptIndex": 60,
+        "editableAreaPixelsGreaterThanZero": 1136,
+        "fullyProtectedPixels": 330640
+      },
+      {
+        "sourceFrame": 229,
+        "excerptIndex": 61,
+        "editableAreaPixelsGreaterThanZero": 1041,
+        "fullyProtectedPixels": 330735
+      },
+      {
+        "sourceFrame": 230,
+        "excerptIndex": 62,
+        "editableAreaPixelsGreaterThanZero": 999,
+        "fullyProtectedPixels": 330777
+      },
+      {
+        "sourceFrame": 231,
+        "excerptIndex": 63,
+        "editableAreaPixelsGreaterThanZero": 1027,
+        "fullyProtectedPixels": 330749
+      },
+      {
+        "sourceFrame": 232,
+        "excerptIndex": 64,
+        "editableAreaPixelsGreaterThanZero": 1121,
+        "fullyProtectedPixels": 330655
+      },
+      {
+        "sourceFrame": 233,
+        "excerptIndex": 65,
+        "editableAreaPixelsGreaterThanZero": 1110,
+        "fullyProtectedPixels": 330666
+      },
+      {
+        "sourceFrame": 234,
+        "excerptIndex": 66,
+        "editableAreaPixelsGreaterThanZero": 1141,
+        "fullyProtectedPixels": 330635
+      },
+      {
+        "sourceFrame": 235,
+        "excerptIndex": 67,
+        "editableAreaPixelsGreaterThanZero": 1222,
+        "fullyProtectedPixels": 330554
+      },
+      {
+        "sourceFrame": 236,
+        "excerptIndex": 68,
+        "editableAreaPixelsGreaterThanZero": 1253,
+        "fullyProtectedPixels": 330523
+      }
+    ],
+    "overlayContacts": [
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\SOURCE_REVIEW_CONTACTS_20261012\\protection_overlay_168_187.jpg",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\SOURCE_REVIEW_CONTACTS_20261012\\protection_overlay_188_207.jpg",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\SOURCE_REVIEW_CONTACTS_20261012\\protection_overlay_208_227.jpg",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\SOURCE_REVIEW_CONTACTS_20261012\\protection_overlay_228_236.jpg"
+    ],
+    "all69OverlayReviewCompleted": true,
+    "previousUnreviewedMaskSHA256": "f633456bd4a4516a724de0350fcded027967d70e0530648571f9a25e3641488e",
+    "revision": 2,
+    "protectionOutsideExplicitEditEligibility": "White everywhere outside manuallykeyframed editableleadface polygons; nobackgroundactorcanbeeditedbythismask.",
+    "overlayReviewer": "benchmark_specialties assistant; root independent review pending",
+    "overlayReviewUTC": "2026-10-13T00:10:43.222775+00:00",
+    "overlayReviewFinding": "All69 overlays visually inspected after revision2. No visible editable overlap with forehead lettering,under-eye lettering,dice,bird,nose/lip jewelry,mouth/grill,hands/glass,or otheractors. Late-turn chinpolygon tightened toremaininsidevisiblechin. This is conservative visual review,not learnedtracking or independentgroundtruthpixelannotation.",
+    "fullyProtectedOutsideEligibility": true,
+    "rootReviewCompleted": true,
+    "finalCompositeConnection": "GetVideoComponents(mask video).images -> ImageToMask(channel red) -> MaskComposite(operation subtract,source protection,destination feathered semantic leadface mask) -> ImageCompositeMasked.mask; white protects,black permits.",
+    "rootCloudCountCheck": "Require69source frames,69mask frames,69generated post-trimframes; no implicit batchrepeat accepted.",
+    "rootReviewUTC": "2026-10-13T00:20:20.276769+00:00",
+    "rootReviewEvidence": "Root reports independent view_image review of all four final69-frame overlay contacts; no obvious editable overlap with protected tattoos,grill or jewelry.",
+    "cloudUploadReported": {
+      "reportedAtUTC": "2026-10-13T00:20:20.276769+00:00",
+      "filename": "c76f160edfaa71c8feb66c2ef9593c8f76476118be39a25101d4bbd06f0ad1db.mp4",
+      "localSourceSHA256": "7d0c0541a85bdb72a88dd8b90ce28bdd56bde78ec7fae6c0246b6c11c7edbdd9",
+      "evidence": "Root reported upload; filename is Cloud identifier,not asserted to equal local content hash.",
+      "independentlyDownloadedOrHashVerified": false
+    },
+    "cloudPreflight": {
+      "status": "preprocessing_complete_root_reported_actual_mask_frames1_to3_within_allowed_caps",
+      "reportedAtUTC": "2026-10-13T00:20:20.276769+00:00",
+      "KSamplerRun": false,
+      "actualPreviewEvidenceReceivedByThisAgent": true,
+      "interpretation": "Browser video preview reportedly pink/green; neither browser appearance nor upload alone validates decoded red-channel mask or batch alignment.",
+      "jobID": "16fc8010-8f8f-45ab-ad82-a8c84a11d2d9",
+      "durationSecondsReported": 81.9,
+      "computeHoursReported": 0.023,
+      "gallerySourceCountReported": 69,
+      "galleryMaskCountReported": 69,
+      "pixelVerifiedMaskFrames": [
+        1,
+        2,
+        3
+      ],
+      "all69MasksPixelVerified": false,
+      "sourcePreviewFramesPixelVerified": false,
+      "singleMaskComparisonPath": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\CLOUD_PREFLIGHT_EVIDENCE\\MASK_069_COMPARISON.json",
+      "correctedSequentialComparisonPath": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\CLOUD_PREFLIGHT_EVIDENCE\\MASK_SEQUENTIAL_001_003_COMPARISON.json",
+      "initialFrameAssociationCorrected": true,
+      "actualFrame69Downloaded": false
+    },
+    "persistentCloudPreflight": {
+      "report": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\CLOUD_PREFLIGHT_EVIDENCE\\PERSISTENT_DIAGNOSTIC_0fdf978b_20261013\\PERSISTENT_PREFLIGHT_VERIFICATION.json",
+      "reportSHA256": "43a73e7626385eacad7aa3ba2a811565a50b9bc75f88cde22ac9c284902c25e7",
+      "jobID": "0fdf978b-a29f-471f-99f0-e1a4a1e32f26",
+      "countsAndTimingPass": true,
+      "all69SourceFramesAligned": true,
+      "preprocessingPassAtExportTolerance": true,
+      "pixelExactProtectionProvenForAll69": false,
+      "contacts": [
+        {
+          "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\CLOUD_PREFLIGHT_EVIDENCE\\PERSISTENT_DIAGNOSTIC_0fdf978b_20261013\\ACTUAL_OVERLAY_168_187.jpg",
+          "sourceFrames": [
+            168,
+            187
+          ],
+          "sha256": "db120b1ad8a5867c340015ecf7411d878d47e27493dd8bef86e7152cfd29200d"
+        },
+        {
+          "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\CLOUD_PREFLIGHT_EVIDENCE\\PERSISTENT_DIAGNOSTIC_0fdf978b_20261013\\ACTUAL_OVERLAY_188_207.jpg",
+          "sourceFrames": [
+            188,
+            207
+          ],
+          "sha256": "dad54166b79bb281464dad7e632f7d896f25e6f04978e2dca3adf92d5671e67d"
+        },
+        {
+          "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\CLOUD_PREFLIGHT_EVIDENCE\\PERSISTENT_DIAGNOSTIC_0fdf978b_20261013\\ACTUAL_OVERLAY_208_227.jpg",
+          "sourceFrames": [
+            208,
+            227
+          ],
+          "sha256": "fae85736e177f3ba03371817f423e1c71026ace5eaf97dc668f3ffc65f3883c5"
+        },
+        {
+          "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\CLOUD_PREFLIGHT_EVIDENCE\\PERSISTENT_DIAGNOSTIC_0fdf978b_20261013\\ACTUAL_OVERLAY_228_236.jpg",
+          "sourceFrames": [
+            228,
+            236
+          ],
+          "sha256": "568cb4ee29707f379d3edc85f819e0dfcad244a162c037c7ed9634b78d10e1c5"
+        }
+      ],
+      "rootActualOverlayReviewCompleted": true,
+      "summary": {
+        "countsAndTimingPass": true,
+        "maskRGBChannelsMaximumDifference": 0,
+        "maskAllFramesHaveEditAbove16": true,
+        "maskMaxCapExcess": 47,
+        "maskTotals": {
+          "capExcessAbove1": 24288,
+          "protectedPixelsAbove1": 8502,
+          "protectedBeyond1pxAbove1": 2889,
+          "protectedBeyond2pxAbove1": 766,
+          "protectedBeyond4pxAbove1": 69,
+          "capExcessAbove8": 2319,
+          "protectedPixelsAbove8": 849,
+          "protectedBeyond1pxAbove8": 152,
+          "protectedBeyond2pxAbove8": 30,
+          "protectedBeyond4pxAbove8": 0,
+          "capExcessAbove16": 342,
+          "protectedPixelsAbove16": 218,
+          "protectedBeyond1pxAbove16": 4,
+          "protectedBeyond2pxAbove16": 2,
+          "protectedBeyond4pxAbove16": 0
+        },
+        "overlayMeanFrameMAEOutside8px": 2.1245415793059954,
+        "overlayMaximumFrameMAEOutside8px": 2.4134643202284884,
+        "overlayAllBestNearbyOffsetsZero": true,
+        "overlayNonzeroBestOffsets": []
+      },
+      "verdict": {
+        "preprocessingPass": true,
+        "scope": "Counts, timestamps, correct source frame alignment, and spatial protection at exported-video tolerance pass. No generated identity/performance result exists in this diagnostic.",
+        "pixelExactProtectionProvenForAll69": false,
+        "reason": "Final masks were exported through lossy H.264. Edge ringing exists, including max cap excess47/255; no pixels exceed8/255 beyond a4-pixel neighborhood of the allowed edit area. Earlier three lossless PNGs had no cap overreach; encoded current video creates nonzero values where those PNGs are exactly zero. Do not reimport the lossy exported diagnostic mask as a production mask. Generation must use original lossless uploaded protection and in-graph subtraction.",
+        "independentVisualReviewCompleted": true,
+        "visualReviewer": "benchmark_specialties",
+        "visualReviewUTC": "2026-10-13T00:46:39.197667+00:00",
+        "visualFinding": "Reviewed all69 actual overlay crops across4 contact sheets. Edit windows stay on eyes/brows, nose bridge, unmarked chin and limited cheek. No obvious window overlap with forehead lettering, cheek marks, nose/lip jewelry, mouth/grill or hand/glass. Late chin coverage contracts and is patchy; identity strength and visible seams remain output-review questions."
+      },
+      "rootActualOverlayReviewRecordedAtUTC": "2026-10-13T00:51:57.797076+00:00",
+      "rootActualOverlayReviewEvidence": "Root message confirms independently reviewed all four actual contact sheets, then submitted one generation job 569bec13-c8d8-4767-bddf-070b6765708b. This records review, not generated-output acceptance."
+    }
+  },
+  "visualObservations": {
+    "all77SourceFramesInspected": true,
+    "hardCut": "BetweenF167 andF168",
+    "handGlass": "No face occlusion observed; raised glass approaches beside/lower than jaw F198-207. Glass/hand remain outside editable interiors.",
+    "tattoos": "Forehead script; cheek dice and under-eye lettering; opposite cheek bird and under-eye lettering; neck/chest designs.",
+    "jewelry": "Nose,lip andear jewelry; metallicgrill. Protected zones are conservative, not exact recovered alpha artwork.",
+    "motion": "Frontal down-tiltF174-189,upright smile/toastF190-217,left/down tiltF218-236.",
+    "existingLighting": "Moving purple/blue light sweeps already present in source and must not be attributed to generated output."
+  },
+  "limitations": [
+    "All69 local maskoverlays reviewed by assistant; rootindependentoverlayreview andCloudbatchpreflight stillpending.",
+    "Preserving mostmarkedface andoriginalmouthlimits achievableHarrisonFordlikeness; this is a constrainedidentityproof.",
+    "Generated eyes/chinmaynotregisterwithoriginal protectedmouth/tattoos; inspect seams andgeometry.",
+    "Final compositeprotectionholds beforelossyvideoencoding; no claimbit-exact encodedvideo.",
+    "CurrentCloudnode/modelcompatibility,69-framebatchalignment,andexecutionnotverifiedbythislocalprep."
+  ],
+  "uploadedByThisPreparation": false,
+  "generated": false,
+  "accepted": false,
+  "frozen77InputSHA256": "b38b990404a97c37c6a0fc343a5c3cf9dd38219231ba0a3fc32b7c685c40b48d",
+  "frozen77InputUnchanged": true,
+  "downloadedIdentityResult": {
+    "jobID": "569bec13-c8d8-4767-bddf-070b6765708b",
+    "proof": {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\IDENTITY_JOB_569bec13_RESULT_20261012\\2026-10-13T00-48-44\\video\\hon_dolo_face_identity_composite_00001_.mp4",
+      "bytes": 831363,
+      "sha256": "95dd4b0f4543dc90ba69458f9cf024d6e71274dd2a37d507f533bdaef2b1bb30",
+      "width": 768,
+      "height": 432,
+      "decodedFrames": 69,
+      "timeBase": [
+        1,
+        12288
+      ],
+      "pts": [
+        0,
+        512,
+        1024,
+        1536,
+        2048,
+        2560,
+        3072,
+        3584,
+        4096,
+        4608,
+        5120,
+        5632,
+        6144,
+        6656,
+        7168,
+        7680,
+        8192,
+        8704,
+        9216,
+        9728,
+        10240,
+        10752,
+        11264,
+        11776,
+        12288,
+        12800,
+        13312,
+        13824,
+        14336,
+        14848,
+        15360,
+        15872,
+        16384,
+        16896,
+        17408,
+        17920,
+        18432,
+        18944,
+        19456,
+        19968,
+        20480,
+        20992,
+        21504,
+        22016,
+        22528,
+        23040,
+        23552,
+        24064,
+        24576,
+        25088,
+        25600,
+        26112,
+        26624,
+        27136,
+        27648,
+        28160,
+        28672,
+        29184,
+        29696,
+        30208,
+        30720,
+        31232,
+        31744,
+        32256,
+        32768,
+        33280,
+        33792,
+        34304,
+        34816
+      ],
+      "startSeconds": 0.0,
+      "exact24fpsPTS": true,
+      "durationAt24fps": 2.875,
+      "sourceStreamDescription": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-1, progressive), 768x432, 1981 kb/s, 24 fps, 24 tbr, 12288 tbn (default)"
+      ]
+    },
+    "verificationReport": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\IDENTITY_JOB_569bec13_RESULT_20261012\\VERIFICATION\\FINAL_PROOF_VERIFICATION.json",
+    "verificationReportSHA256": "d832da1f9a6a39b5437ea6a383311335abdc6853bfdd7c803d1242fea8f9b1c5",
+    "archiveReceipt": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\IDENTITY_JOB_569bec13_RESULT_20261012\\ARCHIVE_RECEIPT.json",
+    "disposition": "failed_identity_transfer_black_edit_windows_nonproduction",
+    "videoShapeTimingPass": true,
+    "audio": {
+      "presentAndDecoded": true,
+      "streamDescription": [
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 126 kb/s (default)"
+      ],
+      "nativeRatesObserved": [
+        48000
+      ],
+      "firstDecodedPTSSeconds": 0.0,
+      "comparisonSampleRate": 48000,
+      "comparisonChannels": 2,
+      "decodedSamples": 138240,
+      "decodedDurationSeconds": 2.88,
+      "expectedSamples": 138000,
+      "expectedDurationSeconds": 2.875,
+      "sampleCountDelta": 240,
+      "referencePath": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\SOURCE_FRONTAL_AUDIO_168_236_PCM.wav",
+      "referenceSHA256": "91ea68c1e283b407af773eba0479f7f198ffefb641649ddfe1b25070a85bf705",
+      "crossCorrelationSearchSeconds": [
+        -0.25,
+        0.25
+      ],
+      "bestLagSamples": 0,
+      "bestLagSeconds": 0.0,
+      "bestNormalizedCorrelation": 0.9990468395056972,
+      "zeroLagNormalizedCorrelation": 0.9990468395056972,
+      "bestLagAtSearchBoundary": false,
+      "alignedOverlapSamples": 138000,
+      "alignedRMSEPCM16": 108.28479512411919,
+      "sourceRMSPCM16": 2003.3458167344788,
+      "outputRMSPCM16": 1994.1582188529676,
+      "caution": "AAC priming/padding and lossy coding can alter sample count and PCM values. Correlation and decoded PTS establish evidence, not exact bit identity. A search-boundary lag is inconclusive."
+    },
+    "visualReview": {
+      "reviewer": "benchmark_specialties",
+      "recordedAtUTC": "2026-10-13T01:06:40.500184+00:00",
+      "framesReviewed": 69,
+      "fourFaceContactSheetsReviewed": true,
+      "fullFrameComparisonReviewed": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\IDENTITY_JOB_569bec13_RESULT_20261012\\VERIFICATION\\FULL_FRAME_SOURCE_PROOF_F198.jpg",
+      "finding": "The requested identity transfer failed: black edit windows persist across all frames. Outside those windows, visible tattoos, grill, jewelry, costume, hand/glass and bar scene remain aligned with the source. No acceptance or numeric subjective rating is inferred.",
+      "rootReviewCompleted": false
+    },
+    "accepted": false
+  },
+  "downloadedControlledComparisonResult": {
+    "jobID": "ae13aefd-845b-445c-a118-d8418a728785",
+    "proof": {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\IDENTITY_JOB_ae13aefd_RESULT_20261012\\2026-10-13T01-14-55\\video\\hon_dolo_face_identity_composite_00001_.mp4",
+      "bytes": 829630,
+      "sha256": "b2d3dfac19971b6a8bb1454f77dea02487c9496ec0adc61764db332911c0e308",
+      "width": 768,
+      "height": 432,
+      "decodedFrames": 69,
+      "timeBase": [
+        1,
+        12288
+      ],
+      "pts": [
+        0,
+        512,
+        1024,
+        1536,
+        2048,
+        2560,
+        3072,
+        3584,
+        4096,
+        4608,
+        5120,
+        5632,
+        6144,
+        6656,
+        7168,
+        7680,
+        8192,
+        8704,
+        9216,
+        9728,
+        10240,
+        10752,
+        11264,
+        11776,
+        12288,
+        12800,
+        13312,
+        13824,
+        14336,
+        14848,
+        15360,
+        15872,
+        16384,
+        16896,
+        17408,
+        17920,
+        18432,
+        18944,
+        19456,
+        19968,
+        20480,
+        20992,
+        21504,
+        22016,
+        22528,
+        23040,
+        23552,
+        24064,
+        24576,
+        25088,
+        25600,
+        26112,
+        26624,
+        27136,
+        27648,
+        28160,
+        28672,
+        29184,
+        29696,
+        30208,
+        30720,
+        31232,
+        31744,
+        32256,
+        32768,
+        33280,
+        33792,
+        34304,
+        34816
+      ],
+      "startSeconds": 0.0,
+      "exact24fpsPTS": true,
+      "durationAt24fps": 2.875,
+      "sourceStreamDescription": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-1, progressive), 768x432, 1976 kb/s, 24 fps, 24 tbr, 12288 tbn (default)"
+      ]
+    },
+    "verificationReport": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\IDENTITY_JOB_ae13aefd_RESULT_20261012\\VERIFICATION\\FINAL_PROOF_VERIFICATION.json",
+    "verificationReportSHA256": "81763df5dd621fef62092386f984875b17e8120fe0f20e9fb189479886a1f00e",
+    "archiveReceipt": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\IDENTITY_JOB_ae13aefd_RESULT_20261012\\ARCHIVE_RECEIPT.json",
+    "disposition": "technical_mask_repair_pass_actor_likeness_not_met_preliminary",
+    "videoShapeTimingPass": true,
+    "audio": {
+      "presentAndDecoded": true,
+      "streamDescription": [
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 126 kb/s (default)"
+      ],
+      "nativeRatesObserved": [
+        48000
+      ],
+      "firstDecodedPTSSeconds": 0.0,
+      "comparisonSampleRate": 48000,
+      "comparisonChannels": 2,
+      "decodedSamples": 138240,
+      "decodedDurationSeconds": 2.88,
+      "expectedSamples": 138000,
+      "expectedDurationSeconds": 2.875,
+      "sampleCountDelta": 240,
+      "referencePath": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\SOURCE_FRONTAL_AUDIO_168_236_PCM.wav",
+      "referenceSHA256": "91ea68c1e283b407af773eba0479f7f198ffefb641649ddfe1b25070a85bf705",
+      "crossCorrelationSearchSeconds": [
+        -0.25,
+        0.25
+      ],
+      "bestLagSamples": 0,
+      "bestLagSeconds": 0.0,
+      "bestNormalizedCorrelation": 0.9990468395056972,
+      "zeroLagNormalizedCorrelation": 0.9990468395056972,
+      "bestLagAtSearchBoundary": false,
+      "alignedOverlapSamples": 138000,
+      "alignedRMSEPCM16": 108.28479512411919,
+      "sourceRMSPCM16": 2003.3458167344788,
+      "outputRMSPCM16": 1994.1582188529676,
+      "caution": "AAC priming/padding and lossy coding can alter sample count and PCM values. Correlation and decoded PTS establish evidence, not exact bit identity. A search-boundary lag is inconclusive."
+    },
+    "visualReview": {
+      "reviewer": "benchmark_specialties",
+      "recordedAtUTC": "2026-10-13T01:28:19.376057+00:00",
+      "framesReviewed": 69,
+      "fourFaceContactSheetsReviewed": true,
+      "fullFrameComparisonReviewed": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\IDENTITY_JOB_ae13aefd_RESULT_20261012\\VERIFICATION\\FULL_FRAME_SOURCE_PROOF_F198.jpg",
+      "finding": "The large black edit windows present in the baseline proof are absent. The source/proof pairs show generated facial pixels in their place. Protected visible details, costume, hand/glass and background remain aligned. Eye expression changes are visible (F198 closed output eyes versus open source eyes), so unchanged facial performance is not established. Requested actor likeness remains unaccepted; this technical improvement is not production approval.",
+      "rootReviewCompleted": true,
+      "rootReviewRecordedAtUTC": "2026-10-13T01:29:11.555174+00:00",
+      "rootReviewEvidence": "Root confirmed all 69 comparisons across four face sheets, full F198 and Han reference were visually reviewed.",
+      "rootFinding": "Technical mask repair worked: black windows are resolved and eyes, nose and brow changed. Actor likeness remains weak/mixed because original protected cheeks, mouth and hair dominate; full Harrison Ford identity goal is not met."
+    },
+    "accepted": false,
+    "stage": "preliminary",
+    "userAcceptance": false
+  }
+}

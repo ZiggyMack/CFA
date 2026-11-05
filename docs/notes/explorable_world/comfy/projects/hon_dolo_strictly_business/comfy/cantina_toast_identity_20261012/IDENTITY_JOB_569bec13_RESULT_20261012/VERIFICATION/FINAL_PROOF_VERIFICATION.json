@@ -1,0 +1,2356 @@
+{
+  "createdAtUTC": "2026-10-13T01:03:47.365808+00:00",
+  "jobID": "569bec13-c8d8-4767-bddf-070b6765708b",
+  "scope": "Downloaded result verification only; no generation, edits or automatic acceptance.",
+  "actualVideo": {
+    "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\IDENTITY_JOB_569bec13_RESULT_20261012\\2026-10-13T00-48-44\\video\\hon_dolo_face_identity_composite_00001_.mp4",
+    "bytes": 831363,
+    "sha256": "95dd4b0f4543dc90ba69458f9cf024d6e71274dd2a37d507f533bdaef2b1bb30",
+    "width": 768,
+    "height": 432,
+    "decodedFrames": 69,
+    "timeBase": [
+      1,
+      12288
+    ],
+    "pts": [
+      0,
+      512,
+      1024,
+      1536,
+      2048,
+      2560,
+      3072,
+      3584,
+      4096,
+      4608,
+      5120,
+      5632,
+      6144,
+      6656,
+      7168,
+      7680,
+      8192,
+      8704,
+      9216,
+      9728,
+      10240,
+      10752,
+      11264,
+      11776,
+      12288,
+      12800,
+      13312,
+      13824,
+      14336,
+      14848,
+      15360,
+      15872,
+      16384,
+      16896,
+      17408,
+      17920,
+      18432,
+      18944,
+      19456,
+      19968,
+      20480,
+      20992,
+      21504,
+      22016,
+      22528,
+      23040,
+      23552,
+      24064,
+      24576,
+      25088,
+      25600,
+      26112,
+      26624,
+      27136,
+      27648,
+      28160,
+      28672,
+      29184,
+      29696,
+      30208,
+      30720,
+      31232,
+      31744,
+      32256,
+      32768,
+      33280,
+      33792,
+      34304,
+      34816
+    ],
+    "startSeconds": 0.0,
+    "exact24fpsPTS": true,
+    "durationAt24fps": 2.875,
+    "sourceStreamDescription": [
+      "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-1, progressive), 768x432, 1981 kb/s, 24 fps, 24 tbr, 12288 tbn (default)"
+    ]
+  },
+  "expected": {
+    "frames": 69,
+    "fps": 24,
+    "width": 768,
+    "height": 432,
+    "durationSeconds": 2.875,
+    "sourceFramesInclusive": [
+      168,
+      236
+    ]
+  },
+  "videoShapeTimingPass": true,
+  "audio": {
+    "presentAndDecoded": true,
+    "streamDescription": [
+      "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 126 kb/s (default)"
+    ],
+    "nativeRatesObserved": [
+      48000
+    ],
+    "firstDecodedPTSSeconds": 0.0,
+    "comparisonSampleRate": 48000,
+    "comparisonChannels": 2,
+    "decodedSamples": 138240,
+    "decodedDurationSeconds": 2.88,
+    "expectedSamples": 138000,
+    "expectedDurationSeconds": 2.875,
+    "sampleCountDelta": 240,
+    "referencePath": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\SOURCE_FRONTAL_AUDIO_168_236_PCM.wav",
+    "referenceSHA256": "91ea68c1e283b407af773eba0479f7f198ffefb641649ddfe1b25070a85bf705",
+    "crossCorrelationSearchSeconds": [
+      -0.25,
+      0.25
+    ],
+    "bestLagSamples": 0,
+    "bestLagSeconds": 0.0,
+    "bestNormalizedCorrelation": 0.9990468395056972,
+    "zeroLagNormalizedCorrelation": 0.9990468395056972,
+    "bestLagAtSearchBoundary": false,
+    "alignedOverlapSamples": 138000,
+    "alignedRMSEPCM16": 108.28479512411919,
+    "sourceRMSPCM16": 2003.3458167344788,
+    "outputRMSPCM16": 1994.1582188529676,
+    "caution": "AAC priming/padding and lossy coding can alter sample count and PCM values. Correlation and decoded PTS establish evidence, not exact bit identity. A search-boundary lag is inconclusive."
+  },
+  "preservation": {
+    "reference": {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\SOURCE_FRONTAL_FRAMES_168_236_24FPS_LOSSLESS.mp4",
+      "bytes": 56449643,
+      "sha256": "6fc5685d320748af1cb05f853d6f6e62ed9fb922983260d4465b2dbd019a2b0a",
+      "width": 1280,
+      "height": 720,
+      "decodedFrames": 69,
+      "timeBase": [
+        1,
+        12288
+      ],
+      "pts": [
+        0,
+        512,
+        1024,
+        1536,
+        2048,
+        2560,
+        3072,
+        3584,
+        4096,
+        4608,
+        5120,
+        5632,
+        6144,
+        6656,
+        7168,
+        7680,
+        8192,
+        8704,
+        9216,
+        9728,
+        10240,
+        10752,
+        11264,
+        11776,
+        12288,
+        12800,
+        13312,
+        13824,
+        14336,
+        14848,
+        15360,
+        15872,
+        16384,
+        16896,
+        17408,
+        17920,
+        18432,
+        18944,
+        19456,
+        19968,
+        20480,
+        20992,
+        21504,
+        22016,
+        22528,
+        23040,
+        23552,
+        24064,
+        24576,
+        25088,
+        25600,
+        26112,
+        26624,
+        27136,
+        27648,
+        28160,
+        28672,
+        29184,
+        29696,
+        30208,
+        30720,
+        31232,
+        31744,
+        32256,
+        32768,
+        33280,
+        33792,
+        34304,
+        34816
+      ],
+      "startSeconds": 0.0,
+      "exact24fpsPTS": true,
+      "durationAt24fps": 2.875,
+      "sourceStreamDescription": [
+        "Stream #0:0[0x1](und): Video: h264 (High 4:4:4 Predictive) (avc1 / 0x31637661), gbrp(pc, gbr/bt709/iec61966-2-1, progressive), 1280x720, 159383 kb/s, 24.35 fps, 24 tbr, 12288 tbn (default)"
+      ]
+    },
+    "protectionCap": {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\PROTECTION_FRONTAL_69_768x432_LOSSLESS.mp4",
+      "bytes": 94428,
+      "sha256": "7d0c0541a85bdb72a88dd8b90ce28bdd56bde78ec7fae6c0246b6c11c7edbdd9",
+      "width": 768,
+      "height": 432,
+      "decodedFrames": 69,
+      "timeBase": [
+        1,
+        12288
+      ],
+      "pts": [
+        0,
+        512,
+        1024,
+        1536,
+        2048,
+        2560,
+        3072,
+        3584,
+        4096,
+        4608,
+        5120,
+        5632,
+        6144,
+        6656,
+        7168,
+        7680,
+        8192,
+        8704,
+        9216,
+        9728,
+        10240,
+        10752,
+        11264,
+        11776,
+        12288,
+        12800,
+        13312,
+        13824,
+        14336,
+        14848,
+        15360,
+        15872,
+        16384,
+        16896,
+        17408,
+        17920,
+        18432,
+        18944,
+        19456,
+        19968,
+        20480,
+        20992,
+        21504,
+        22016,
+        22528,
+        23040,
+        23552,
+        24064,
+        24576,
+        25088,
+        25600,
+        26112,
+        26624,
+        27136,
+        27648,
+        28160,
+        28672,
+        29184,
+        29696,
+        30208,
+        30720,
+        31232,
+        31744,
+        32256,
+        32768,
+        33280,
+        33792,
+        34304,
+        34816
+      ],
+      "startSeconds": 0.0,
+      "exact24fpsPTS": true,
+      "durationAt24fps": 2.875,
+      "sourceStreamDescription": [
+        "Stream #0:0[0x1](und): Video: h264 (High 4:4:4 Predictive) (avc1 / 0x31637661), gbrp(pc, gbr/unknown/unknown, progressive), 768x432, 259 kb/s, 24 fps, 24 tbr, 12288 tbn (default)"
+      ]
+    },
+    "expectedResize": "Pillow RGB Lanczos; Cloud scaling/color and H.264 export may differ.",
+    "outsideEditMarginPixels": 8,
+    "meanFrameMAE": 2.123947643581922,
+    "maximumFrameMAE": 2.4076567010753482,
+    "allBestNearbyOffsetsZero": true,
+    "diagnosticBaselineMeanFrameMAE": 2.1245415793059954,
+    "interpretation": "Compare against the diagnostic baseline; no arbitrary numeric visual-acceptance threshold. Outside-mask alignment confirms source composition, not generated eye/performance alignment inside the edit window.",
+    "perFrame": [
+      {
+        "frame": 1,
+        "sourceFrame": 168,
+        "maeOutsideEditPlus8px": 1.786767118680219,
+        "p99AbsoluteErrorOutsideEditPlus8px": 8.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": 0,
+            "mae": 1.786767118680219
+          },
+          {
+            "offset": 1,
+            "mae": 13.597521308624353
+          },
+          {
+            "offset": 2,
+            "mae": 19.171195005701442
+          }
+        ]
+      },
+      {
+        "frame": 2,
+        "sourceFrame": 169,
+        "maeOutsideEditPlus8px": 1.9101002486988181,
+        "p99AbsoluteErrorOutsideEditPlus8px": 8.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -1,
+            "mae": 13.583251544752967
+          },
+          {
+            "offset": 0,
+            "mae": 1.9101002486988181
+          },
+          {
+            "offset": 1,
+            "mae": 13.792447760428685
+          },
+          {
+            "offset": 2,
+            "mae": 19.25742430069482
+          }
+        ]
+      },
+      {
+        "frame": 3,
+        "sourceFrame": 170,
+        "maeOutsideEditPlus8px": 1.914560581303152,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.157830493592762
+          },
+          {
+            "offset": -1,
+            "mae": 13.817456532018754
+          },
+          {
+            "offset": 0,
+            "mae": 1.914560581303152
+          },
+          {
+            "offset": 1,
+            "mae": 13.832255801286884
+          },
+          {
+            "offset": 2,
+            "mae": 19.379461551953867
+          }
+        ]
+      },
+      {
+        "frame": 4,
+        "sourceFrame": 171,
+        "maeOutsideEditPlus8px": 1.8764213681447357,
+        "p99AbsoluteErrorOutsideEditPlus8px": 8.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.299018416109917
+          },
+          {
+            "offset": -1,
+            "mae": 13.91262477522252
+          },
+          {
+            "offset": 0,
+            "mae": 1.8764213681447357
+          },
+          {
+            "offset": 1,
+            "mae": 13.931341443274011
+          },
+          {
+            "offset": 2,
+            "mae": 19.353341478151066
+          }
+        ]
+      },
+      {
+        "frame": 5,
+        "sourceFrame": 172,
+        "maeOutsideEditPlus8px": 1.9676673488333922,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.353922458672493
+          },
+          {
+            "offset": -1,
+            "mae": 13.879163140428894
+          },
+          {
+            "offset": 0,
+            "mae": 1.9676673488333922
+          },
+          {
+            "offset": 1,
+            "mae": 13.6845589253566
+          },
+          {
+            "offset": 2,
+            "mae": 19.35849656608554
+          }
+        ]
+      },
+      {
+        "frame": 6,
+        "sourceFrame": 173,
+        "maeOutsideEditPlus8px": 1.90324202782986,
+        "p99AbsoluteErrorOutsideEditPlus8px": 8.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.305139154431195
+          },
+          {
+            "offset": -1,
+            "mae": 13.71021149995741
+          },
+          {
+            "offset": 0,
+            "mae": 1.90324202782986
+          },
+          {
+            "offset": 1,
+            "mae": 13.869319318857045
+          },
+          {
+            "offset": 2,
+            "mae": 19.343871899312514
+          }
+        ]
+      },
+      {
+        "frame": 7,
+        "sourceFrame": 174,
+        "maeOutsideEditPlus8px": 1.9745624946120026,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.304083178364266
+          },
+          {
+            "offset": -1,
+            "mae": 13.79673497621071
+          },
+          {
+            "offset": 0,
+            "mae": 1.9745624946120026
+          },
+          {
+            "offset": 1,
+            "mae": 13.589192395637056
+          },
+          {
+            "offset": 2,
+            "mae": 19.418486270356368
+          }
+        ]
+      },
+      {
+        "frame": 8,
+        "sourceFrame": 175,
+        "maeOutsideEditPlus8px": 1.9700988904077537,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.312665484415216
+          },
+          {
+            "offset": -1,
+            "mae": 13.591483889771473
+          },
+          {
+            "offset": 0,
+            "mae": 1.9700988904077537
+          },
+          {
+            "offset": 1,
+            "mae": 13.743403201110002
+          },
+          {
+            "offset": 2,
+            "mae": 19.340629015242012
+          }
+        ]
+      },
+      {
+        "frame": 9,
+        "sourceFrame": 176,
+        "maeOutsideEditPlus8px": 1.8999577235572138,
+        "p99AbsoluteErrorOutsideEditPlus8px": 8.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.451105036437777
+          },
+          {
+            "offset": -1,
+            "mae": 13.814958472630108
+          },
+          {
+            "offset": 0,
+            "mae": 1.8999577235572138
+          },
+          {
+            "offset": 1,
+            "mae": 13.647451407743977
+          },
+          {
+            "offset": 2,
+            "mae": 19.532408177002846
+          }
+        ]
+      },
+      {
+        "frame": 10,
+        "sourceFrame": 177,
+        "maeOutsideEditPlus8px": 1.9235271535061518,
+        "p99AbsoluteErrorOutsideEditPlus8px": 8.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.354084676483932
+          },
+          {
+            "offset": -1,
+            "mae": 13.591799236708608
+          },
+          {
+            "offset": 0,
+            "mae": 1.9235271535061518
+          },
+          {
+            "offset": 1,
+            "mae": 13.92881661092874
+          },
+          {
+            "offset": 2,
+            "mae": 19.59760809359866
+          }
+        ]
+      },
+      {
+        "frame": 11,
+        "sourceFrame": 178,
+        "maeOutsideEditPlus8px": 1.920570804020874,
+        "p99AbsoluteErrorOutsideEditPlus8px": 8.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.516874227100363
+          },
+          {
+            "offset": -1,
+            "mae": 14.000749167449188
+          },
+          {
+            "offset": 0,
+            "mae": 1.920570804020874
+          },
+          {
+            "offset": 1,
+            "mae": 13.965684025800096
+          },
+          {
+            "offset": 2,
+            "mae": 19.691139812092384
+          }
+        ]
+      },
+      {
+        "frame": 12,
+        "sourceFrame": 179,
+        "maeOutsideEditPlus8px": 1.9662878216359414,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.59991870895033
+          },
+          {
+            "offset": -1,
+            "mae": 13.90040512092557
+          },
+          {
+            "offset": 0,
+            "mae": 1.9662878216359414
+          },
+          {
+            "offset": 1,
+            "mae": 14.108119148866287
+          },
+          {
+            "offset": 2,
+            "mae": 19.42936659697396
+          }
+        ]
+      },
+      {
+        "frame": 13,
+        "sourceFrame": 180,
+        "maeOutsideEditPlus8px": 1.939141405586746,
+        "p99AbsoluteErrorOutsideEditPlus8px": 8.739999999990687,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.635897578036538
+          },
+          {
+            "offset": -1,
+            "mae": 14.12101194197471
+          },
+          {
+            "offset": 0,
+            "mae": 1.939141405586746
+          },
+          {
+            "offset": 1,
+            "mae": 13.560173365485198
+          },
+          {
+            "offset": 2,
+            "mae": 18.934731303002586
+          }
+        ]
+      },
+      {
+        "frame": 14,
+        "sourceFrame": 181,
+        "maeOutsideEditPlus8px": 1.9767571723467527,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.35831708911889
+          },
+          {
+            "offset": -1,
+            "mae": 13.458389662007425
+          },
+          {
+            "offset": 0,
+            "mae": 1.9767571723467527
+          },
+          {
+            "offset": 1,
+            "mae": 13.268094720450671
+          },
+          {
+            "offset": 2,
+            "mae": 18.497858227271188
+          }
+        ]
+      },
+      {
+        "frame": 15,
+        "sourceFrame": 182,
+        "maeOutsideEditPlus8px": 1.9761673071869663,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 18.858572296675863
+          },
+          {
+            "offset": -1,
+            "mae": 13.311690111351991
+          },
+          {
+            "offset": 0,
+            "mae": 1.9761673071869663
+          },
+          {
+            "offset": 1,
+            "mae": 13.071530925633951
+          },
+          {
+            "offset": 2,
+            "mae": 18.424169171265273
+          }
+        ]
+      },
+      {
+        "frame": 16,
+        "sourceFrame": 183,
+        "maeOutsideEditPlus8px": 2.0091835027462235,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 18.48833098793222
+          },
+          {
+            "offset": -1,
+            "mae": 12.994962263163243
+          },
+          {
+            "offset": 0,
+            "mae": 2.0091835027462235
+          },
+          {
+            "offset": 1,
+            "mae": 13.173485779273634
+          },
+          {
+            "offset": 2,
+            "mae": 18.43253097007227
+          }
+        ]
+      },
+      {
+        "frame": 17,
+        "sourceFrame": 184,
+        "maeOutsideEditPlus8px": 1.998989118398353,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 18.35011088909346
+          },
+          {
+            "offset": -1,
+            "mae": 13.191007361475867
+          },
+          {
+            "offset": 0,
+            "mae": 1.998989118398353
+          },
+          {
+            "offset": 1,
+            "mae": 13.319976354607004
+          },
+          {
+            "offset": 2,
+            "mae": 19.152802194588038
+          }
+        ]
+      },
+      {
+        "frame": 18,
+        "sourceFrame": 185,
+        "maeOutsideEditPlus8px": 2.0103938966644703,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 18.392896067190875
+          },
+          {
+            "offset": -1,
+            "mae": 13.198082342485463
+          },
+          {
+            "offset": 0,
+            "mae": 2.0103938966644703
+          },
+          {
+            "offset": 1,
+            "mae": 13.808760716653428
+          },
+          {
+            "offset": 2,
+            "mae": 19.553872157534034
+          }
+        ]
+      },
+      {
+        "frame": 19,
+        "sourceFrame": 186,
+        "maeOutsideEditPlus8px": 2.022166130546535,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.096427746910255
+          },
+          {
+            "offset": -1,
+            "mae": 13.847036974332928
+          },
+          {
+            "offset": 0,
+            "mae": 2.022166130546535
+          },
+          {
+            "offset": 1,
+            "mae": 14.19468804990791
+          },
+          {
+            "offset": 2,
+            "mae": 20.10251642990165
+          }
+        ]
+      },
+      {
+        "frame": 20,
+        "sourceFrame": 187,
+        "maeOutsideEditPlus8px": 2.018549184734654,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.577957055441328
+          },
+          {
+            "offset": -1,
+            "mae": 14.140785634257151
+          },
+          {
+            "offset": 0,
+            "mae": 2.018549184734654
+          },
+          {
+            "offset": 1,
+            "mae": 14.715894493624392
+          },
+          {
+            "offset": 2,
+            "mae": 20.290525233621846
+          }
+        ]
+      },
+      {
+        "frame": 21,
+        "sourceFrame": 188,
+        "maeOutsideEditPlus8px": 2.052963261753591,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 20.04495955036344
+          },
+          {
+            "offset": -1,
+            "mae": 14.630951721136654
+          },
+          {
+            "offset": 0,
+            "mae": 2.052963261753591
+          },
+          {
+            "offset": 1,
+            "mae": 14.851509497094318
+          },
+          {
+            "offset": 2,
+            "mae": 20.67838690010654
+          }
+        ]
+      },
+      {
+        "frame": 22,
+        "sourceFrame": 189,
+        "maeOutsideEditPlus8px": 2.027585704404723,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 20.27442855178387
+          },
+          {
+            "offset": -1,
+            "mae": 14.819129481740545
+          },
+          {
+            "offset": 0,
+            "mae": 2.027585704404723
+          },
+          {
+            "offset": 1,
+            "mae": 15.035098629591545
+          },
+          {
+            "offset": 2,
+            "mae": 21.121896980257663
+          }
+        ]
+      },
+      {
+        "frame": 23,
+        "sourceFrame": 190,
+        "maeOutsideEditPlus8px": 2.0533896496240107,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 20.68563442025416
+          },
+          {
+            "offset": -1,
+            "mae": 15.022215586313335
+          },
+          {
+            "offset": 0,
+            "mae": 2.0533896496240107
+          },
+          {
+            "offset": 1,
+            "mae": 15.18276421863199
+          },
+          {
+            "offset": 2,
+            "mae": 21.498647505992842
+          }
+        ]
+      },
+      {
+        "frame": 24,
+        "sourceFrame": 191,
+        "maeOutsideEditPlus8px": 2.020523569018388,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.134218293625022
+          },
+          {
+            "offset": -1,
+            "mae": 15.151677433717746
+          },
+          {
+            "offset": 0,
+            "mae": 2.020523569018388
+          },
+          {
+            "offset": 1,
+            "mae": 15.545465271002419
+          },
+          {
+            "offset": 2,
+            "mae": 21.30456750720454
+          }
+        ]
+      },
+      {
+        "frame": 25,
+        "sourceFrame": 192,
+        "maeOutsideEditPlus8px": 2.0397285360336097,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.4919427730157
+          },
+          {
+            "offset": -1,
+            "mae": 15.50608947230729
+          },
+          {
+            "offset": 0,
+            "mae": 2.0397285360336097
+          },
+          {
+            "offset": 1,
+            "mae": 14.95358027731183
+          },
+          {
+            "offset": 2,
+            "mae": 20.63595512534433
+          }
+        ]
+      },
+      {
+        "frame": 26,
+        "sourceFrame": 193,
+        "maeOutsideEditPlus8px": 2.0436298831611737,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.244045200661553
+          },
+          {
+            "offset": -1,
+            "mae": 14.861696604820473
+          },
+          {
+            "offset": 0,
+            "mae": 2.0436298831611737
+          },
+          {
+            "offset": 1,
+            "mae": 14.519383877308972
+          },
+          {
+            "offset": 2,
+            "mae": 20.037110793740688
+          }
+        ]
+      },
+      {
+        "frame": 27,
+        "sourceFrame": 194,
+        "maeOutsideEditPlus8px": 2.002003631774953,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 20.586947154596658
+          },
+          {
+            "offset": -1,
+            "mae": 14.5878981871903
+          },
+          {
+            "offset": 0,
+            "mae": 2.002003631774953
+          },
+          {
+            "offset": 1,
+            "mae": 14.239046710371078
+          },
+          {
+            "offset": 2,
+            "mae": 19.695859366183456
+          }
+        ]
+      },
+      {
+        "frame": 28,
+        "sourceFrame": 195,
+        "maeOutsideEditPlus8px": 2.031752334051503,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 20.05358058889915
+          },
+          {
+            "offset": -1,
+            "mae": 14.196537396121883
+          },
+          {
+            "offset": 0,
+            "mae": 2.031752334051503
+          },
+          {
+            "offset": 1,
+            "mae": 14.166984713245101
+          },
+          {
+            "offset": 2,
+            "mae": 19.30591156253206
+          }
+        ]
+      },
+      {
+        "frame": 29,
+        "sourceFrame": 196,
+        "maeOutsideEditPlus8px": 1.990450982806024,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.68363597193155
+          },
+          {
+            "offset": -1,
+            "mae": 14.227644753580368
+          },
+          {
+            "offset": 0,
+            "mae": 1.990450982806024
+          },
+          {
+            "offset": 1,
+            "mae": 13.680953260289712
+          },
+          {
+            "offset": 2,
+            "mae": 19.21622655833231
+          }
+        ]
+      },
+      {
+        "frame": 30,
+        "sourceFrame": 197,
+        "maeOutsideEditPlus8px": 2.0131447305638073,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.291072152359842
+          },
+          {
+            "offset": -1,
+            "mae": 13.56988820309173
+          },
+          {
+            "offset": 0,
+            "mae": 2.0131447305638073
+          },
+          {
+            "offset": 1,
+            "mae": 13.764880686686471
+          },
+          {
+            "offset": 2,
+            "mae": 19.253687143099018
+          }
+        ]
+      },
+      {
+        "frame": 31,
+        "sourceFrame": 198,
+        "maeOutsideEditPlus8px": 2.0185154976367015,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.139539774924927
+          },
+          {
+            "offset": -1,
+            "mae": 13.747377903081675
+          },
+          {
+            "offset": 0,
+            "mae": 2.0185154976367015
+          },
+          {
+            "offset": 1,
+            "mae": 13.695255038232395
+          },
+          {
+            "offset": 2,
+            "mae": 19.27027168443116
+          }
+        ]
+      },
+      {
+        "frame": 32,
+        "sourceFrame": 199,
+        "maeOutsideEditPlus8px": 2.0868702476481276,
+        "p99AbsoluteErrorOutsideEditPlus8px": 10.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.118397494893035
+          },
+          {
+            "offset": -1,
+            "mae": 13.50511517479626
+          },
+          {
+            "offset": 0,
+            "mae": 2.0868702476481276
+          },
+          {
+            "offset": 1,
+            "mae": 13.404697485966743
+          },
+          {
+            "offset": 2,
+            "mae": 18.645432355648033
+          }
+        ]
+      },
+      {
+        "frame": 33,
+        "sourceFrame": 200,
+        "maeOutsideEditPlus8px": 2.129772817283206,
+        "p99AbsoluteErrorOutsideEditPlus8px": 10.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.03861039118274
+          },
+          {
+            "offset": -1,
+            "mae": 13.287220638721818
+          },
+          {
+            "offset": 0,
+            "mae": 2.129772817283206
+          },
+          {
+            "offset": 1,
+            "mae": 12.803354900403638
+          },
+          {
+            "offset": 2,
+            "mae": 18.163353628131176
+          }
+        ]
+      },
+      {
+        "frame": 34,
+        "sourceFrame": 201,
+        "maeOutsideEditPlus8px": 2.0567558610443326,
+        "p99AbsoluteErrorOutsideEditPlus8px": 9.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 18.51538200290782
+          },
+          {
+            "offset": -1,
+            "mae": 12.738362816830886
+          },
+          {
+            "offset": 0,
+            "mae": 2.0567558610443326
+          },
+          {
+            "offset": 1,
+            "mae": 12.622085894606371
+          },
+          {
+            "offset": 2,
+            "mae": 18.037565679916028
+          }
+        ]
+      },
+      {
+        "frame": 35,
+        "sourceFrame": 202,
+        "maeOutsideEditPlus8px": 2.131866226267763,
+        "p99AbsoluteErrorOutsideEditPlus8px": 10.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 18.01937878307481
+          },
+          {
+            "offset": -1,
+            "mae": 12.405581532797507
+          },
+          {
+            "offset": 0,
+            "mae": 2.131866226267763
+          },
+          {
+            "offset": 1,
+            "mae": 12.819608833014732
+          },
+          {
+            "offset": 2,
+            "mae": 19.429634167238714
+          }
+        ]
+      },
+      {
+        "frame": 36,
+        "sourceFrame": 203,
+        "maeOutsideEditPlus8px": 2.139675523488225,
+        "p99AbsoluteErrorOutsideEditPlus8px": 10.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 17.855604668915756
+          },
+          {
+            "offset": -1,
+            "mae": 12.688142817273675
+          },
+          {
+            "offset": 0,
+            "mae": 2.139675523488225
+          },
+          {
+            "offset": 1,
+            "mae": 14.025702430495702
+          },
+          {
+            "offset": 2,
+            "mae": 20.85710372085006
+          }
+        ]
+      },
+      {
+        "frame": 37,
+        "sourceFrame": 204,
+        "maeOutsideEditPlus8px": 2.095213030112743,
+        "p99AbsoluteErrorOutsideEditPlus8px": 10.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.34479439854546
+          },
+          {
+            "offset": -1,
+            "mae": 13.985978920669318
+          },
+          {
+            "offset": 0,
+            "mae": 2.095213030112743
+          },
+          {
+            "offset": 1,
+            "mae": 14.570910851997324
+          },
+          {
+            "offset": 2,
+            "mae": 22.029417076063716
+          }
+        ]
+      },
+      {
+        "frame": 38,
+        "sourceFrame": 205,
+        "maeOutsideEditPlus8px": 2.1113245258703834,
+        "p99AbsoluteErrorOutsideEditPlus8px": 10.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 20.75124355138576
+          },
+          {
+            "offset": -1,
+            "mae": 14.341488239615526
+          },
+          {
+            "offset": 0,
+            "mae": 2.1113245258703834
+          },
+          {
+            "offset": 1,
+            "mae": 15.050803999064259
+          },
+          {
+            "offset": 2,
+            "mae": 24.25421391546313
+          }
+        ]
+      },
+      {
+        "frame": 39,
+        "sourceFrame": 206,
+        "maeOutsideEditPlus8px": 2.1385119225335423,
+        "p99AbsoluteErrorOutsideEditPlus8px": 10.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.758622175573812
+          },
+          {
+            "offset": -1,
+            "mae": 14.878598536731007
+          },
+          {
+            "offset": 0,
+            "mae": 2.1385119225335423
+          },
+          {
+            "offset": 1,
+            "mae": 16.962085512282655
+          },
+          {
+            "offset": 2,
+            "mae": 24.388964641256962
+          }
+        ]
+      },
+      {
+        "frame": 40,
+        "sourceFrame": 207,
+        "maeOutsideEditPlus8px": 2.339454756261479,
+        "p99AbsoluteErrorOutsideEditPlus8px": 12.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 23.949536737772032
+          },
+          {
+            "offset": -1,
+            "mae": 16.528157929838603
+          },
+          {
+            "offset": 0,
+            "mae": 2.339454756261479
+          },
+          {
+            "offset": 1,
+            "mae": 15.891979355844901
+          },
+          {
+            "offset": 2,
+            "mae": 22.63333743753912
+          }
+        ]
+      },
+      {
+        "frame": 41,
+        "sourceFrame": 208,
+        "maeOutsideEditPlus8px": 2.4076567010753482,
+        "p99AbsoluteErrorOutsideEditPlus8px": 13.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 24.01211998104137
+          },
+          {
+            "offset": -1,
+            "mae": 15.620622228787981
+          },
+          {
+            "offset": 0,
+            "mae": 2.4076567010753482
+          },
+          {
+            "offset": 1,
+            "mae": 15.375245446543435
+          },
+          {
+            "offset": 2,
+            "mae": 22.41326529565408
+          }
+        ]
+      },
+      {
+        "frame": 42,
+        "sourceFrame": 209,
+        "maeOutsideEditPlus8px": 2.2293443041636025,
+        "p99AbsoluteErrorOutsideEditPlus8px": 11.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 22.458117296391915
+          },
+          {
+            "offset": -1,
+            "mae": 15.346723777346302
+          },
+          {
+            "offset": 0,
+            "mae": 2.2293443041636025
+          },
+          {
+            "offset": 1,
+            "mae": 15.211011037500423
+          },
+          {
+            "offset": 2,
+            "mae": 22.01134418313163
+          }
+        ]
+      },
+      {
+        "frame": 43,
+        "sourceFrame": 210,
+        "maeOutsideEditPlus8px": 2.3200951182671985,
+        "p99AbsoluteErrorOutsideEditPlus8px": 12.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 22.282278531634823
+          },
+          {
+            "offset": -1,
+            "mae": 15.042338703475263
+          },
+          {
+            "offset": 0,
+            "mae": 2.3200951182671985
+          },
+          {
+            "offset": 1,
+            "mae": 14.954243560597904
+          },
+          {
+            "offset": 2,
+            "mae": 21.605929817977106
+          }
+        ]
+      },
+      {
+        "frame": 44,
+        "sourceFrame": 211,
+        "maeOutsideEditPlus8px": 2.2587583691995,
+        "p99AbsoluteErrorOutsideEditPlus8px": 12.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.873020951584007
+          },
+          {
+            "offset": -1,
+            "mae": 14.842306796984678
+          },
+          {
+            "offset": 0,
+            "mae": 2.2587583691995
+          },
+          {
+            "offset": 1,
+            "mae": 14.772391614444093
+          },
+          {
+            "offset": 2,
+            "mae": 21.0244023245583
+          }
+        ]
+      },
+      {
+        "frame": 45,
+        "sourceFrame": 212,
+        "maeOutsideEditPlus8px": 2.2292532385976243,
+        "p99AbsoluteErrorOutsideEditPlus8px": 11.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.495488263127406
+          },
+          {
+            "offset": -1,
+            "mae": 14.707612178254873
+          },
+          {
+            "offset": 0,
+            "mae": 2.2292532385976243
+          },
+          {
+            "offset": 1,
+            "mae": 14.431291491728567
+          },
+          {
+            "offset": 2,
+            "mae": 21.015847725676554
+          }
+        ]
+      },
+      {
+        "frame": 46,
+        "sourceFrame": 213,
+        "maeOutsideEditPlus8px": 2.2782592471855057,
+        "p99AbsoluteErrorOutsideEditPlus8px": 11.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 20.885569859536684
+          },
+          {
+            "offset": -1,
+            "mae": 14.184235345253546
+          },
+          {
+            "offset": 0,
+            "mae": 2.2782592471855057
+          },
+          {
+            "offset": 1,
+            "mae": 14.550110406505064
+          },
+          {
+            "offset": 2,
+            "mae": 21.479950506721778
+          }
+        ]
+      },
+      {
+        "frame": 47,
+        "sourceFrame": 214,
+        "maeOutsideEditPlus8px": 2.282790536502049,
+        "p99AbsoluteErrorOutsideEditPlus8px": 12.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 20.765155406285146
+          },
+          {
+            "offset": -1,
+            "mae": 14.359026092590714
+          },
+          {
+            "offset": 0,
+            "mae": 2.282790536502049
+          },
+          {
+            "offset": 1,
+            "mae": 14.75172311979258
+          },
+          {
+            "offset": 2,
+            "mae": 21.536525628683705
+          }
+        ]
+      },
+      {
+        "frame": 48,
+        "sourceFrame": 215,
+        "maeOutsideEditPlus8px": 2.2331664602521433,
+        "p99AbsoluteErrorOutsideEditPlus8px": 11.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.29070642937704
+          },
+          {
+            "offset": -1,
+            "mae": 14.65881881721917
+          },
+          {
+            "offset": 0,
+            "mae": 2.2331664602521433
+          },
+          {
+            "offset": 1,
+            "mae": 14.957952900610639
+          },
+          {
+            "offset": 2,
+            "mae": 21.29918325409679
+          }
+        ]
+      },
+      {
+        "frame": 49,
+        "sourceFrame": 216,
+        "maeOutsideEditPlus8px": 2.3462062117396556,
+        "p99AbsoluteErrorOutsideEditPlus8px": 12.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.358983887148618
+          },
+          {
+            "offset": -1,
+            "mae": 14.709536678746186
+          },
+          {
+            "offset": 0,
+            "mae": 2.3462062117396556
+          },
+          {
+            "offset": 1,
+            "mae": 14.72844112769486
+          },
+          {
+            "offset": 2,
+            "mae": 21.3081577708167
+          }
+        ]
+      },
+      {
+        "frame": 50,
+        "sourceFrame": 217,
+        "maeOutsideEditPlus8px": 2.25638901078892,
+        "p99AbsoluteErrorOutsideEditPlus8px": 11.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.133052434744272
+          },
+          {
+            "offset": -1,
+            "mae": 14.702402982066886
+          },
+          {
+            "offset": 0,
+            "mae": 2.25638901078892
+          },
+          {
+            "offset": 1,
+            "mae": 14.780996279576954
+          },
+          {
+            "offset": 2,
+            "mae": 21.4888095771484
+          }
+        ]
+      },
+      {
+        "frame": 51,
+        "sourceFrame": 218,
+        "maeOutsideEditPlus8px": 2.315541379786239,
+        "p99AbsoluteErrorOutsideEditPlus8px": 12.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.240685139466056
+          },
+          {
+            "offset": -1,
+            "mae": 14.626108291291613
+          },
+          {
+            "offset": 0,
+            "mae": 2.315541379786239
+          },
+          {
+            "offset": 1,
+            "mae": 14.8687286277276
+          },
+          {
+            "offset": 2,
+            "mae": 21.585304566063005
+          }
+        ]
+      },
+      {
+        "frame": 52,
+        "sourceFrame": 219,
+        "maeOutsideEditPlus8px": 2.2397462030069426,
+        "p99AbsoluteErrorOutsideEditPlus8px": 12.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.38349910854317
+          },
+          {
+            "offset": -1,
+            "mae": 14.857893096701355
+          },
+          {
+            "offset": 0,
+            "mae": 2.2397462030069426
+          },
+          {
+            "offset": 1,
+            "mae": 14.91855405191395
+          },
+          {
+            "offset": 2,
+            "mae": 21.537084093242807
+          }
+        ]
+      },
+      {
+        "frame": 53,
+        "sourceFrame": 220,
+        "maeOutsideEditPlus8px": 2.3483863652382837,
+        "p99AbsoluteErrorOutsideEditPlus8px": 13.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.460799906837913
+          },
+          {
+            "offset": -1,
+            "mae": 14.743879853596598
+          },
+          {
+            "offset": 0,
+            "mae": 2.3483863652382837
+          },
+          {
+            "offset": 1,
+            "mae": 14.426284988135114
+          },
+          {
+            "offset": 2,
+            "mae": 21.00600343841649
+          }
+        ]
+      },
+      {
+        "frame": 54,
+        "sourceFrame": 221,
+        "maeOutsideEditPlus8px": 2.2430859876219964,
+        "p99AbsoluteErrorOutsideEditPlus8px": 12.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.410658598404925
+          },
+          {
+            "offset": -1,
+            "mae": 14.39830917652487
+          },
+          {
+            "offset": 0,
+            "mae": 2.2430859876219964
+          },
+          {
+            "offset": 1,
+            "mae": 14.245343957633459
+          },
+          {
+            "offset": 2,
+            "mae": 20.962596502188045
+          }
+        ]
+      },
+      {
+        "frame": 55,
+        "sourceFrame": 222,
+        "maeOutsideEditPlus8px": 2.334212633565399,
+        "p99AbsoluteErrorOutsideEditPlus8px": 13.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 20.93506949226022
+          },
+          {
+            "offset": -1,
+            "mae": 14.106849259174254
+          },
+          {
+            "offset": 0,
+            "mae": 2.334212633565399
+          },
+          {
+            "offset": 1,
+            "mae": 14.012211256471069
+          },
+          {
+            "offset": 2,
+            "mae": 20.86104302144697
+          }
+        ]
+      },
+      {
+        "frame": 56,
+        "sourceFrame": 223,
+        "maeOutsideEditPlus8px": 2.246673927631029,
+        "p99AbsoluteErrorOutsideEditPlus8px": 12.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 20.874577038627923
+          },
+          {
+            "offset": -1,
+            "mae": 13.981815975345354
+          },
+          {
+            "offset": 0,
+            "mae": 2.246673927631029
+          },
+          {
+            "offset": 1,
+            "mae": 14.295381537162472
+          },
+          {
+            "offset": 2,
+            "mae": 21.495778034766968
+          }
+        ]
+      },
+      {
+        "frame": 57,
+        "sourceFrame": 224,
+        "maeOutsideEditPlus8px": 2.3594141496274244,
+        "p99AbsoluteErrorOutsideEditPlus8px": 13.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 20.78444606795726
+          },
+          {
+            "offset": -1,
+            "mae": 14.133494529814726
+          },
+          {
+            "offset": 0,
+            "mae": 2.3594141496274244
+          },
+          {
+            "offset": 1,
+            "mae": 14.319036570814879
+          },
+          {
+            "offset": 2,
+            "mae": 21.754613510547568
+          }
+        ]
+      },
+      {
+        "frame": 58,
+        "sourceFrame": 225,
+        "maeOutsideEditPlus8px": 2.2166259168704157,
+        "p99AbsoluteErrorOutsideEditPlus8px": 11.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.283811124694378
+          },
+          {
+            "offset": -1,
+            "mae": 14.243607375713122
+          },
+          {
+            "offset": 0,
+            "mae": 2.2166259168704157
+          },
+          {
+            "offset": 1,
+            "mae": 14.32611858190709
+          },
+          {
+            "offset": 2,
+            "mae": 20.94447025264874
+          }
+        ]
+      },
+      {
+        "frame": 59,
+        "sourceFrame": 226,
+        "maeOutsideEditPlus8px": 2.299270452087521,
+        "p99AbsoluteErrorOutsideEditPlus8px": 12.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.662831550197662
+          },
+          {
+            "offset": -1,
+            "mae": 14.156103293556475
+          },
+          {
+            "offset": 0,
+            "mae": 2.299270452087521
+          },
+          {
+            "offset": 1,
+            "mae": 13.872167197228451
+          },
+          {
+            "offset": 2,
+            "mae": 20.316298328475792
+          }
+        ]
+      },
+      {
+        "frame": 60,
+        "sourceFrame": 227,
+        "maeOutsideEditPlus8px": 2.2265840977472693,
+        "p99AbsoluteErrorOutsideEditPlus8px": 11.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 20.811609116781277
+          },
+          {
+            "offset": -1,
+            "mae": 13.830506732135515
+          },
+          {
+            "offset": 0,
+            "mae": 2.2265840977472693
+          },
+          {
+            "offset": 1,
+            "mae": 14.053995513266806
+          },
+          {
+            "offset": 2,
+            "mae": 20.05647095227044
+          }
+        ]
+      },
+      {
+        "frame": 61,
+        "sourceFrame": 228,
+        "maeOutsideEditPlus8px": 2.328351754795634,
+        "p99AbsoluteErrorOutsideEditPlus8px": 12.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 20.223033492365346
+          },
+          {
+            "offset": -1,
+            "mae": 13.951184396751799
+          },
+          {
+            "offset": 0,
+            "mae": 2.328351754795634
+          },
+          {
+            "offset": 1,
+            "mae": 13.628524421028855
+          },
+          {
+            "offset": 2,
+            "mae": 19.68845598537272
+          }
+        ]
+      },
+      {
+        "frame": 62,
+        "sourceFrame": 229,
+        "maeOutsideEditPlus8px": 2.224532220303439,
+        "p99AbsoluteErrorOutsideEditPlus8px": 11.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 20.05262280043366
+          },
+          {
+            "offset": -1,
+            "mae": 13.699123936448272
+          },
+          {
+            "offset": 0,
+            "mae": 2.224532220303439
+          },
+          {
+            "offset": 1,
+            "mae": 13.672433186678626
+          },
+          {
+            "offset": 2,
+            "mae": 20.35749271303071
+          }
+        ]
+      },
+      {
+        "frame": 63,
+        "sourceFrame": 230,
+        "maeOutsideEditPlus8px": 2.2806327285222947,
+        "p99AbsoluteErrorOutsideEditPlus8px": 11.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 19.69773477983719
+          },
+          {
+            "offset": -1,
+            "mae": 13.631080516422617
+          },
+          {
+            "offset": 0,
+            "mae": 2.2806327285222947
+          },
+          {
+            "offset": 1,
+            "mae": 14.434574370204542
+          },
+          {
+            "offset": 2,
+            "mae": 21.824783730999894
+          }
+        ]
+      },
+      {
+        "frame": 64,
+        "sourceFrame": 231,
+        "maeOutsideEditPlus8px": 2.1971530951117186,
+        "p99AbsoluteErrorOutsideEditPlus8px": 11.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 20.48837261325898
+          },
+          {
+            "offset": -1,
+            "mae": 14.601742430250932
+          },
+          {
+            "offset": 0,
+            "mae": 2.1971530951117186
+          },
+          {
+            "offset": 1,
+            "mae": 15.222144604628177
+          },
+          {
+            "offset": 2,
+            "mae": 21.258396427285874
+          }
+        ]
+      },
+      {
+        "frame": 65,
+        "sourceFrame": 232,
+        "maeOutsideEditPlus8px": 2.247653925383383,
+        "p99AbsoluteErrorOutsideEditPlus8px": 11.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.925858447140204
+          },
+          {
+            "offset": -1,
+            "mae": 15.20571399506625
+          },
+          {
+            "offset": 0,
+            "mae": 2.247653925383383
+          },
+          {
+            "offset": 1,
+            "mae": 13.967937743190662
+          },
+          {
+            "offset": 2,
+            "mae": 20.587694107474377
+          }
+        ]
+      },
+      {
+        "frame": 66,
+        "sourceFrame": 233,
+        "maeOutsideEditPlus8px": 2.178122647459765,
+        "p99AbsoluteErrorOutsideEditPlus8px": 11.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.304410059207715
+          },
+          {
+            "offset": -1,
+            "mae": 14.019242507477262
+          },
+          {
+            "offset": 0,
+            "mae": 2.178122647459765
+          },
+          {
+            "offset": 1,
+            "mae": 14.545366131559136
+          },
+          {
+            "offset": 2,
+            "mae": 20.726270117398116
+          }
+        ]
+      },
+      {
+        "frame": 67,
+        "sourceFrame": 234,
+        "maeOutsideEditPlus8px": 2.269010881675137,
+        "p99AbsoluteErrorOutsideEditPlus8px": 12.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 20.579596986299975
+          },
+          {
+            "offset": -1,
+            "mae": 14.457686613860782
+          },
+          {
+            "offset": 0,
+            "mae": 2.269010881675137
+          },
+          {
+            "offset": 1,
+            "mae": 14.844912473482594
+          },
+          {
+            "offset": 2,
+            "mae": 21.29544027796855
+          }
+        ]
+      },
+      {
+        "frame": 68,
+        "sourceFrame": 235,
+        "maeOutsideEditPlus8px": 2.267451885737087,
+        "p99AbsoluteErrorOutsideEditPlus8px": 11.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 20.727958338804623
+          },
+          {
+            "offset": -1,
+            "mae": 14.895490741560728
+          },
+          {
+            "offset": 0,
+            "mae": 2.267451885737087
+          },
+          {
+            "offset": 1,
+            "mae": 15.158493324009239
+          }
+        ]
+      },
+      {
+        "frame": 69,
+        "sourceFrame": 236,
+        "maeOutsideEditPlus8px": 2.3997739664309603,
+        "p99AbsoluteErrorOutsideEditPlus8px": 12.0,
+        "bestNearbyFrameOffset": 0,
+        "nearbyOffsetMAE": [
+          {
+            "offset": -2,
+            "mae": 21.297376686979142
+          },
+          {
+            "offset": -1,
+            "mae": 15.056961477567187
+          },
+          {
+            "offset": 0,
+            "mae": 2.3997739664309603
+          }
+        ]
+      }
+    ]
+  },
+  "faceComparisonContacts": [
+    {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\IDENTITY_JOB_569bec13_RESULT_20261012\\VERIFICATION\\FACE_SOURCE_PROOF_168_187.jpg",
+      "sourceFramesInclusive": [
+        168,
+        187
+      ],
+      "sha256": "f4658253aa3b46ade4381e0f81c0d628e920aa10d47efde3c5f818d82c3dc7e6"
+    },
+    {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\IDENTITY_JOB_569bec13_RESULT_20261012\\VERIFICATION\\FACE_SOURCE_PROOF_188_207.jpg",
+      "sourceFramesInclusive": [
+        188,
+        207
+      ],
+      "sha256": "f1cc45fde333b55e093e03a5e76066ce47e1e2e7e0e01f285e49b5bf981d0cfe"
+    },
+    {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\IDENTITY_JOB_569bec13_RESULT_20261012\\VERIFICATION\\FACE_SOURCE_PROOF_208_227.jpg",
+      "sourceFramesInclusive": [
+        208,
+        227
+      ],
+      "sha256": "7c71853e6893751122ae513222de2902f8e3f33bdec4ceb9f69aba170b8b4f44"
+    },
+    {
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\IDENTITY_JOB_569bec13_RESULT_20261012\\VERIFICATION\\FACE_SOURCE_PROOF_228_236.jpg",
+      "sourceFramesInclusive": [
+        228,
+        236
+      ],
+      "sha256": "d7961e35cef6db04b3f2896a0d25c982d3ed60afc1bb99a80d919dca09897f48"
+    }
+  ],
+  "downloadedSourceUnchanged": true,
+  "visualReviewCompleted": true,
+  "accepted": false,
+  "visualReview": {
+    "reviewer": "benchmark_specialties",
+    "recordedAtUTC": "2026-10-13T01:06:40.500184+00:00",
+    "framesReviewed": 69,
+    "fourFaceContactSheetsReviewed": true,
+    "fullFrameComparisonReviewed": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\IDENTITY_JOB_569bec13_RESULT_20261012\\VERIFICATION\\FULL_FRAME_SOURCE_PROOF_F198.jpg",
+    "finding": "The requested identity transfer failed: black edit windows persist across all frames. Outside those windows, visible tattoos, grill, jewelry, costume, hand/glass and bar scene remain aligned with the source. No acceptance or numeric subjective rating is inferred.",
+    "rootReviewCompleted": false
+  },
+  "disposition": "failed_identity_transfer_black_edit_windows_nonproduction",
+  "blackPatchComparison": {
+    "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\IDENTITY_JOB_569bec13_RESULT_20261012\\VERIFICATION\\BLACK_PATCH_COMPARISON.json",
+    "sha256": "8e4416ac26179da5e7821b585ad23041f9cb3c5a57c1b0c2f15d677b3e17a91a"
+  }
+}

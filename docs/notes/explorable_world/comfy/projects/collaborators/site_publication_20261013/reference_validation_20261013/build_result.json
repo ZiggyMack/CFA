@@ -1,0 +1,89 @@
+{
+  "assignmentID": "reference-validation-evidence-ui-20261013",
+  "owner": "cfa_site_index",
+  "buildInvocations": 1,
+  "startedAtUTC": "2026-10-14T01:14:27.966328+00:00",
+  "status": "complete",
+  "catalogBefore": {
+    "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+    "bytes": 10349395,
+    "sha256": "d1022b2c6c20a39477b0859205ab31e3f7a32dc5a8e5592285d667f2ad97954f"
+  },
+  "sourceInputs": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "bytes": 217638,
+      "sha256": "ad7a3e38a0ccb617bbb2d71c6cbee880897fb0d89163f85e90610c0775b4241d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.css",
+      "bytes": 51208,
+      "sha256": "fed16b2722fd8ad07462be1748482a590b404781df5aa6ac3370a6da035bdbdf"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/build_catalog.py",
+      "bytes": 49730,
+      "sha256": "b693986c78b1ab407ef897623f9456a2d5f2a2d665c958d978ecbf0ec4c78a36"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/reference_validation.json",
+      "bytes": 89056,
+      "sha256": "6a349b56b2b3534a2c2f04670f76002e27803ca6a1957e9eafed3ef3dc35af60"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/mouth_coverage.json",
+      "bytes": 174313,
+      "sha256": "c65c4b7829b32bb8aaa5c965d565b92639701f3947b044343a487aaec923a7e5"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/writer_development.json",
+      "bytes": 46973,
+      "sha256": "21c6254ebaf5918c95981a259251a6e8cbad27a5bafb3a426123f2bb9561c300"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_VALIDATION_GUIDE.txt",
+      "bytes": 7753,
+      "sha256": "2769fd664e41112b1fcafe7d3f2ee27aae2e8b53a76639a7c607de655381f07d"
+    }
+  ],
+  "completedAtUTC": "2026-10-14T01:15:16.002774+00:00",
+  "build": {
+    "name": "build_catalog.py",
+    "exitCode": 0,
+    "stdout": "{\"assets\": 2434, \"albums\": 229, \"documents\": 477, \"media\": 1957}\n",
+    "stderr": "",
+    "result": {
+      "assets": 2434,
+      "albums": 229,
+      "documents": 477,
+      "media": 1957
+    }
+  },
+  "checkedAtUTC": "2026-10-14T01:15:31.835711+00:00",
+  "verificationCompletedAtUTC": "2026-10-14T01:25:35.766393Z",
+  "catalogAfter": {
+    "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+    "bytes": 10598280,
+    "sha256": "b10ccce2252c723bba49f2410535623457833dc9b456cb1a261afc4203d79370"
+  },
+  "verification": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/reference_validation_20261013/preservation.after.json",
+    "bytes": 9107,
+    "sha256": "8314495f9d753200f3c9250e66ae559bc5fd09022c925af79b5ff587bf2c19bc"
+  },
+  "tests": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/reference_validation_20261013/test_results.json",
+    "bytes": 18946,
+    "sha256": "38476ba0233183486ad1f03fdfc83bbeff43d199e74fecbef8ca6dce45fbbb19"
+  },
+  "handback": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/reference_validation_20261013/SITE_PUBLICATION_HANDBACK.json",
+    "bytes": 4783,
+    "sha256": "b6a3f5823f94ef1e98ec0d436c3c98626ce7f1ef8ad36e43bdae2451b1a7f496"
+  },
+  "closeoutScript": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/reference_validation_20261013/closeout_verification.py",
+    "bytes": 10985,
+    "sha256": "d3f38ffa52c262f48993f38b7563ca66f32ddac181ed060522d25909b7a976f0"
+  }
+}

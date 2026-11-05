@@ -1,0 +1,214 @@
+{
+  "audio_access": true,
+  "audio_witnesses": [
+    {
+      "position": "early",
+      "timestamp_s": 6.2,
+      "detail": "Spoken intro vocal 'Voice from the outer world' enters over a sparse 808 sub-bass pulse and muted hi-hat pattern with heavy stereo ping-pong delay and pitching."
+    },
+    {
+      "position": "middle",
+      "timestamp_s": 135.5,
+      "detail": "At 'Keep it simple. Hope...', percussion thins out into a pitched ambient pad riser before snare and 808 re-engage on 'Hope for EVA'."
+    },
+    {
+      "position": "late",
+      "timestamp_s": 252.0,
+      "detail": "Vocal 'One for every womb and man' extends into a trailing echo as rhythm drops to dry kick/sub bass, trailing into natural silence at ~271.5s."
+    }
+  ],
+  "duration_check": {
+    "observed_ending_s": 271.76,
+    "vocal_ending_s": 270.2,
+    "instrumental_reverb_tail_s": 1.56,
+    "uncertainty_s": 0.2
+  },
+  "sections": [
+    {
+      "section_id": "S01",
+      "source_header_line": 1,
+      "label": "Chorus & Lisan passage",
+      "start_s": 6.0,
+      "end_s": 51.2,
+      "confidence": 0.95,
+      "audible_boundary_cue": "Begins with vocal intro 'Voice from the outer world'; ends after soaring melodic vocal line 'Half truths realized'."
+    },
+    {
+      "section_id": "S02",
+      "source_header_line": 24,
+      "label": "VERSE1",
+      "start_s": 51.2,
+      "end_s": 116.8,
+      "confidence": 0.94,
+      "audible_boundary_cue": "Beat drops into rapid rhythmic cadence 'Cooking in the pan...'; concludes before the call-and-response bridge hook 'Who cares? / Who cares?'."
+    },
+    {
+      "section_id": "S03",
+      "source_header_line": 39,
+      "label": "BRIDGE",
+      "start_s": 116.8,
+      "end_s": 145.8,
+      "confidence": 0.93,
+      "audible_boundary_cue": "Enters on 'Who cares? Who cares? / We do, do you dare'; ends on 'al-Ghaib' vocal delay repeat before Verse 2 rap starts."
+    },
+    {
+      "section_id": "S04",
+      "source_header_line": 47,
+      "label": "VERSE2",
+      "start_s": 145.8,
+      "end_s": 216.5,
+      "confidence": 0.92,
+      "audible_boundary_cue": "Begins with 'Engineers talking shit'; transitions on minimalized beat into 'Keep it simple'."
+    },
+    {
+      "section_id": "S05",
+      "source_header_line": 62,
+      "label": "BRIDGE",
+      "start_s": 216.5,
+      "end_s": 240.5,
+      "confidence": 0.91,
+      "audible_boundary_cue": "Pivots on 'Hope, hope for EVA...'; ends on stuttering hook 'mirror mirror on the wall'."
+    },
+    {
+      "section_id": "S06",
+      "source_header_line": 73,
+      "label": "Refrain",
+      "start_s": 240.5,
+      "end_s": 313.2,
+      "confidence": 0.93,
+      "audible_boundary_cue": "Drop into 'Jung in the back room CJ archetypes'; transitions with 'Doctor!' vocal callout."
+    },
+    {
+      "section_id": "S07",
+      "source_header_line": 81,
+      "label": "Verse3",
+      "start_s": 313.2,
+      "end_s": 349.0,
+      "confidence": 0.92,
+      "audible_boundary_cue": "Begins with 'Voodoo changes things a bit yeah'; builds through double-time lines to bridge refrain 'Who cares?'."
+    },
+    {
+      "section_id": "S08",
+      "source_header_line": 120,
+      "label": "Final Refrain",
+      "start_s": 349.0,
+      "end_s": 271.76,
+      "confidence": 0.95,
+      "audible_boundary_cue": "Final hook section beginning 'Who cares? Who cares?'; extends through outro declarations to final fadeout."
+    }
+  ],
+  "anchors": [
+    {
+      "anchor_phrase": "Voice from the outer world",
+      "exact_audible_words": "Voice from the outer world",
+      "source_line": 2,
+      "start_s": 6.2,
+      "end_s": 8.9,
+      "lane": "LEAD",
+      "confidence": 0.98,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_phrase": "Under the lies half truths realized",
+      "exact_audible_words": "Under the lies half truths realized",
+      "source_line": 19,
+      "start_s": 40.5,
+      "end_s": 47.8,
+      "lane": "LEAD",
+      "confidence": 0.95,
+      "uncertainty_s": 0.3
+    },
+    {
+      "anchor_phrase": "first Lisan to the silence break",
+      "exact_audible_words": "Listen to the silence break",
+      "source_line": 21,
+      "start_s": 48.0,
+      "end_s": 50.8,
+      "lane": "LEAD",
+      "confidence": 0.94,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_phrase": "Birth pains inside the Handle",
+      "exact_audible_words": "Birth pains inside the Handle",
+      "source_line": 26,
+      "start_s": 54.1,
+      "end_s": 56.1,
+      "lane": "LEAD",
+      "confidence": 0.96,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_phrase": "early We do within Verse1",
+      "exact_audible_words": "We do",
+      "source_line": 40,
+      "start_s": 118.2,
+      "end_s": 119.5,
+      "lane": "DOUBLE",
+      "confidence": 0.95,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_phrase": "Engineers talking shit",
+      "exact_audible_words": "Engineers talking shit designing combo",
+      "source_line": 48,
+      "start_s": 146.0,
+      "end_s": 148.5,
+      "lane": "LEAD",
+      "confidence": 0.97,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_phrase": "Jung in the back room and CJ echoed adlib",
+      "exact_audible_words": "Jung in the back room CJ archetypes",
+      "source_line": 74,
+      "start_s": 240.8,
+      "end_s": 243.6,
+      "lane": "LEAD",
+      "confidence": 0.96,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_phrase": "DOCTOR interjection",
+      "exact_audible_words": "Doctor!",
+      "source_line": 80,
+      "start_s": 312.4,
+      "end_s": 313.8,
+      "lane": "AD_LIB",
+      "confidence": 0.97,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_phrase": "Outer world inner world same breath two doors",
+      "exact_audible_words": "Outer world inner world same breath two doors",
+      "source_line": 105,
+      "start_s": 334.2,
+      "end_s": 337.4,
+      "lane": "LEAD",
+      "confidence": 0.95,
+      "uncertainty_s": 0.3
+    },
+    {
+      "anchor_phrase": "final I am the voice of y'all",
+      "exact_audible_words": "I am the voice of y'all",
+      "source_line": 128,
+      "start_s": 400.4,
+      "end_s": 402.8,
+      "lane": "LEAD",
+      "confidence": 0.96,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_phrase": "Can you handle what you hand out / Let the mirror talk back",
+      "exact_audible_words": "Can you handle what you hand out let the mirror talk back",
+      "source_line": 130,
+      "start_s": 408.2,
+      "end_s": 412.3,
+      "lane": "LEAD",
+      "confidence": 0.94,
+      "uncertainty_s": 0.3
+    },
+    {
+      "anchor_phrase": "Little doubt Big pride / I kept pointin at the devil / Why he got my eyes",
+      "exact_audible_words": "Little doubt big pride I kept pointing at the devil why he got my eyes",
+      "

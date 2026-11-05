@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "fb34beae-9485-407b-9e3d-189d094fcdd6",
+  "created_at_utc": "2026-10-13T04:38:45.998246Z",
+  "kind": "SITE_OWNER_ASSIGNMENT",
+  "assignment_id": "site-c13-original-patch-c-comparison-20261013",
+  "source_coordination_thread": "01a123df-30a9-74e1-a604-aad7feeaf0e5",
+  "current_owner": "nova",
+  "proposed_publication_owner": "cfa_site_index",
+  "destination_thread": "01a13383-26f6-7923-8e18-98faf1fa3ede",
+  "destination_title": "CFA SITE INDEX",
+  "ownership_state": "CFA NOVA accepts bounded transfer; successor acceptance pending",
+  "edit_gate": "No site edits/build until successor accepts these boundaries and PA reports acceptance. CFA NOVA then releases the site publication slot; only one site writer/build at a time.",
+  "scope": {
+    "first_job": "Publish the exact original versus try5-patch-c paired full-size comparison in the EXISTING project index and Lisan review queue. Label each source clearly and preserve useful independent full-size access.",
+    "publication_only": true,
+    "production_direction_owner": "nova",
+    "successor_executes_only_explicit_SITE_OWNER_ASSIGNMENT_tasks": true,
+    "messages_addressed_to_nova_are_not_successor_assignments": true,
+    "successor_may_acknowledge_for_nova": false,
+    "later_validation_ui_task": "reference-validation-evidence-ui-20261013 remains queued; no automatic transfer or implementation from this assignment.",
+    "no_source_acceptance_or_video_launch": true,
+    "no_generation_spending_public_release": true,
+    "no_duplicate_build": true,
+    "no_media_regeneration_or_substitution": true,
+    "registry": "cfa_site_index is a proposed distinct mailbox ID, currently absent. Follow existing mailbox registry convention when handoff is accepted; retain nova identity and all existing recipients."
+  },
+  "activity_checkpoint": {
+    "own_site_writers": "finished",
+    "own_catalog_build": {
+      "exit_code": 0,
+      "assets": 2347,
+      "albums": 226,
+      "documents": 433,
+      "media": 1914,
+      "finished_at_utc_observed": "2026-10-13T04:10:44.476499Z"
+    },
+    "successor_observed": "read-only inspection; waiting for publication handoff",
+    "global_process_command_line_audit": "unavailable: OS access denied. No claim that every other process is a writer or idle.",
+    "python_processes_at_checkpoint": "none observed by Get-Process",
+    "current_production": "Both Meta Mirror maps saved/registered; Prime remains master, timing unaccepted. Comfy correction work deferred. Exact C13 patch-c source choice remains pending and existing generic first-clip go remains recognized."
+  },
+  "sources": [
+    {
+      "label": "Original C13-04",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-1K-C13/C13-sandworm-rising/C13-04_Z_1.jpg",
+      "sha256": "7eafd9ac048dc6d6125dc38281c1b664f7ae0cac1159909c34d90a5e3eef93a3",
+      "bytes": 268027,
+      "display_only": true,
+      "accepted_by_this_assignment": false
+    },
+    {
+      "label": "Repaired try5-patch-c",
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-1K-C13/C13-sandworm-rising/repairs/C13-04_Z_1_R1-try5-patch-c.jpg",
+      "sha256": "23817577d3d32f0df03d57ac1e49c4c85246e86c405b13c492194f7aa2f52bad",
+      "bytes": 447799,
+      "display_only": true,
+      "accepted_by_this_assignment": false
+    }
+  ],
+  "source_choice_record": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/c13_repaired_intake_20261013/SOURCE_INTAKE.json",
+  "source_choice_caveats": [
+    "Patch-c centers hero and moves worm maw to screen-right compared with the original.",
+    "Patch-c dark shirt/cloak and jewelry differ from original/standard.",
+    "Do not label repaired as selected, approved or production-ready."
+  ],
+  "publication_context": {
+    "entry": "docs/notes/explorable_world/comfy/projects/index.html",
+    "implementation": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+    "builder": "docs/notes/explorable_world/comfy/projects/visual_library/build_catalog.py",
+    "build_command_from_CFA_root": "python docs/notes/explorable_world/comfy/projects/visual_library/build_catalog.py",
+    "generated_output": "visual_library/catalog.js and index shells; make durable source changes, do not patch generated output directly",
+    "existing_exact_source_catalog_matches": 0,
+    "source_match_basis": "No exact source filename/path/hash match in current catalog; intake separately records received/viewed, not accepted.",
+    "test_context": {
+      "collection_navigation": "passed11checks",
+      "compact_browse": "passed9checks",
+      "mission_priority_and_hash": "existing tests fail at stale shared hook literal before library execution; do not mistake this for tested mission behavior"
+    },
+    "local_browser_preview": "Root was prevented by browser policy from opening local HTML. Do not work around that denial through another browser or local host. Use available permitted file/static checks and report preview limitations."
+  },
+  "preservation_guard_at_handoff": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "sha256": "da4f71f778c44aba475c790f2d5bf0d4584207229f7b0ad8b614920fdf2fc32a",
+      "bytes": 186911
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/review_requests.json",
+      "sha256": "31e5e1a9010c71c717e5b5ed0047c2a4fc3f6c5652b3dc680783fec95ce3c355",
+      "bytes": 1158
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/scene_map.json",
+      "sha256": "62769bcbeca814a4dae0e250146528bfe41e39e9a5686f5f1caaf91957a36ac5",
+      "bytes": 52386
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/mission_control.json",
+      "sha256": "fdd1edfbe613a828ff04d9baba8f5a7c2a8781e28c812420c4d5b39586a3c882",
+      "bytes": 140177
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/c13_repaired_intake_20261013/SOURCE_INTAKE.json",
+      "sha256": "3dc0ae624529e9c9b3e60b71c07f33e1c5d4ab46ca9cfb9d2da71d133a55abd9",
+      "bytes": 14597
+    }
+  ],
+  "preservation_rule": "Take fresh before/after snapshots in successor session, compare canonical review decisions/scores/selections/reference scopes/accepted scene times. These guard hashes describe this checkpoint; never restore them over legitimate concurrent edits. No existing review ID remapping.",
+  "latest_analysis_evidence": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/local_registration_validation.json"
+}

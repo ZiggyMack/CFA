@@ -1,0 +1,85 @@
+{
+  "checkedAtUTC": "2026-10-14T01:14:27.732055+00:00",
+  "guards": 539,
+  "writerPins": 51,
+  "inputs": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "bytes": 217638,
+      "sha256": "ad7a3e38a0ccb617bbb2d71c6cbee880897fb0d89163f85e90610c0775b4241d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.css",
+      "bytes": 51208,
+      "sha256": "fed16b2722fd8ad07462be1748482a590b404781df5aa6ac3370a6da035bdbdf"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/build_catalog.py",
+      "bytes": 49730,
+      "sha256": "b693986c78b1ab407ef897623f9456a2d5f2a2d665c958d978ecbf0ec4c78a36"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/reference_validation.json",
+      "bytes": 89056,
+      "sha256": "6a349b56b2b3534a2c2f04670f76002e27803ca6a1957e9eafed3ef3dc35af60"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/mouth_coverage.json",
+      "bytes": 174313,
+      "sha256": "c65c4b7829b32bb8aaa5c965d565b92639701f3947b044343a487aaec923a7e5"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/writer_development.json",
+      "bytes": 46973,
+      "sha256": "21c6254ebaf5918c95981a259251a6e8cbad27a5bafb3a426123f2bb9561c300"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_VALIDATION_GUIDE.txt",
+      "bytes": 7753,
+      "sha256": "2769fd664e41112b1fcafe7d3f2ee27aae2e8b53a76639a7c607de655381f07d"
+    }
+  ],
+  "tests": [
+    {
+      "name": "syntax",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "validation-prebuild",
+      "exitCode": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"scenarios\": 19,\n  \"checks\": [\n    \"176 canonical reviews and runtime legacy behavior preserved\",\n    \"independent axes, N/A and scoped pass\",\n    \"missing target/reference pixels and required occlusion cannot pass\",\n    \"required jewelry versus allowed natural variation\",\n    \"target, reference, nomination, scope, version and criteria invalidation\",\n    \"atomic nested validation and immutable collisions\",\n    \"history and old backup imports never clear evidence\",\n    \"sidecar restart and full-review round trip retain raw archive and history\",\n    \"evidence-only storage failure does not interrupt legacy saves\",\n    \"corrupt/future evidence storage remains exportable and unmodified\",\n    \"failed evidence save keeps the visible export warning\",\n    \"unread stores retain raw metadata and valid histories independently\",\n    \"newer unrelated N/A cannot hide a current applicable pass\",\n    \"character and scene form criteria with identical IDs remain independent\",\n    \"all scopes stay visible; narrower pass cannot hide unresolved work\",\n    \"technical readiness requires declarations bound to ingredients and shoot plan\",\n    \"mouth board counts and actual toggle/asset handlers\",\n    \"actual evidence form saves a scoped record without changing stars\",\n    \"real serialized review-file writer includes evidence and preserved legacy archive\"\n  ],\n  \"browserVisualQA\": false,\n  \"productionWrites\": 0,\n  \"syntheticAssessmentsPersistedToSource\": 0\n}\n",
+      "stderr": "",
+      "result": {
+        "passed": true,
+        "scenarios": 19,
+        "checks": [
+          "176 canonical reviews and runtime legacy behavior preserved",
+          "independent axes, N/A and scoped pass",
+          "missing target/reference pixels and required occlusion cannot pass",
+          "required jewelry versus allowed natural variation",
+          "target, reference, nomination, scope, version and criteria invalidation",
+          "atomic nested validation and immutable collisions",
+          "history and old backup imports never clear evidence",
+          "sidecar restart and full-review round trip retain raw archive and history",
+          "evidence-only storage failure does not interrupt legacy saves",
+          "corrupt/future evidence storage remains exportable and unmodified",
+          "failed evidence save keeps the visible export warning",
+          "unread stores retain raw metadata and valid histories independently",
+          "newer unrelated N/A cannot hide a current applicable pass",
+          "character and scene form criteria with identical IDs remain independent",
+          "all scopes stay visible; narrower pass cannot hide unresolved work",
+          "technical readiness requires declarations bound to ingredients and shoot plan",
+          "mouth board counts and actual toggle/asset handlers",
+          "actual evidence form saves a scoped record without changing stars",
+          "real serialized review-file writer includes evidence and preserved legacy archive"
+        ],
+        "browserVisualQA": false,
+        "productionWrites": 0,
+        "syntheticAssessmentsPersistedToSource": 0
+      }
+    }
+  ],
+  "passed": true
+}

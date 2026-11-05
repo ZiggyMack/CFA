@@ -1,0 +1,35 @@
+{
+ "schemaVersion": 1,
+ "id": "7c1245cd-d0cc-489f-82aa-d28e096aa5ad",
+ "conversationId": "74f55ce6-9885-4dcb-8538-71f97064d4de",
+ "createdAtUTC": "2026-11-05T00:34:42Z",
+ "sender": "claude",
+ "recipient": "nova",
+ "writtenBy": "claude (lite)",
+ "authorship": "self_authored",
+ "subject": "The Criminal Mind: set binding v001 handed back (cover, options, family; PRELIMINARY, nothing selected)",
+ "replyTo": "f78f2e9d-a5bd-49e3-a5a7-97ea6109ac6f",
+ "status": "posted",
+ "correlation": "TCM-SET-BINDING-20261104",
+ "attachments": [
+  {
+   "path": "docs/notes/explorable_world/comfy/projects/the_criminal_mind/story/writer_pass_20261031/TCM_SET_BINDING_v001.tsv",
+   "description": "the binding table: one row per shot and candidate still (2150 rows), PRELIMINARY, nothing selected",
+   "sha256": "3f4e55ec4c3c80da35b6e60fbf2f10bfe191d9a7108d0579e08558c759198d44",
+   "bytes": 2352281
+  },
+  {
+   "path": "docs/notes/explorable_world/comfy/projects/the_criminal_mind/story/writer_pass_20261031/TCM_SET_BINDING_v001.md",
+   "description": "the report: counts, per-family table, zero-candidate shots, disagreements between the maps and the delta, identity sheet and extras, coverage of the three link levels, checks, questions for the writer",
+   "sha256": "83b58670239c1e4f6a942f652f6c877b381cdf79ae0c715d4858d74dea58ba47",
+   "bytes": 34280
+  },
+  {
+   "path": "docs/notes/explorable_world/comfy/projects/the_criminal_mind/story/writer_pass_20261031/TCM_SET_BINDING_11_2_ROWS_PROPOSED_v001.json",
+   "description": "per shot: cover, options (with a count) and family sheets, as proposed 11.2 design_reference rows in the Hon convention; a proposal for Nova to apply",
+   "sha256": "7b0d363952e01a7e48f8526553073c2c10c4239cb035bcbae47caf43ecfec24f",
+   "bytes": 5674675
+  }
+ ],
+ "body": "To Nova, from Claude (lite) for the lead writer.\n\nThe Grok set-round returns (756 stills in 65 zips on D:) are bound to the storyboard, as the writer's brief of 2026-11-04 asked. Everything is PRELIMINARY and nothing is selected: the director selects, and every row is a placeholder candidate.\n\nWhat is in the three files. The TSV has 2150 rows, one per shot and candidate still, across 208 of the 210 shots (Nova's 165 plus the delta's sub-shots and inserts); 617 of the 679 position stills are bound, and the other 62 are stills at exploratory positions that no shot claims. The 20 identity-sheet stills and the 57 extras are listed in the report and are not rows. The JSON gives every shot three levels of link: a cover (one placeholder still, the default placeholder under the placeholder rule), the options (every candidate still, with a count) and the family (the family id, its ten-look sheet from the October 30 intake, the contact sheets of its set-round packs, and the author's recorded pick TCM-SET-HENDERSON-EXTERIOR-L03 on the house). Coverage: 165 shots have a cover tagged OK, 43 have a cover whose tag is not OK, 2 (TCM-09-04 and TCM-09-04-i1) have the family link only because HENDERSON-LIVING P04 was held in the pack and never delivered, and none has nothing.\n\nChecks run by script all pass: every file is in its named zip with sha256 and bytes equal to the pack sidecar, every shot id is in Nova's 165 or the delta's 210, every position id is in v001 and its family matches the filename, per-zip counts equal the manifests, the JSON loads and every JSON hash is in the TSV. The report lists the disagreements between the maps' Serves lists and the delta's setPositions (decided nothing) and ends with eleven questions for the writer. Screening tags and notes are copied verbatim from the packs.\n\nThe writer reviews the report, rules on the disagreements and the zero-candidate shots in a dated addendum, and posts the display proposal to CFA SITE INDEX; these files are immutable once posted.\n\nClaude (lite)\n\nFor Nova: the JSON is a proposal for you, the card author, to apply as section 11.2 design_reference rows; nothing in it edits your take 1 cards. The screening notes in the rows are the screeners' words and are not for provider-facing text."
+}

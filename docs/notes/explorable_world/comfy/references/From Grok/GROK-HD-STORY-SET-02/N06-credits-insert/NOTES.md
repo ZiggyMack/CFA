@@ -1,0 +1,15 @@
+N06	N06-credits-insert/N06-credits-insert-001.jpg	5e4f00f087539eaa6189ba58b923ca9a396dad865197b3152ae1590f9d01af4c.jpg	L4 S5 | five stacks plus placing (six) | preserve: tattooed hand + curb bracelet from left, glowing gold rect credits, teal/amber
+N06	N06-credits-insert/N06-credits-insert-002.jpg	bb9e40250c34e73f43ee4cdeda64c60abf46e19e8d8947186b1917f0a247bd4b.jpg	L3 S4 | no tattoos on hand, credits not luminous | preserve: overhead layout, fist with bracelet from left
+N06	N06-credits-insert/N06-credits-insert-003.jpg	b280dea4b5b094b52a167ad4746f9cbc10f450f15d68278489f4c86cfbb8ffd6.jpg	L2 S3 | round coins not rectangular credits, gloved hand | preserve: bokeh bar, low macro angle
+N06	N06-credits-insert/N06-credits-insert-004.jpg	2f928ac64c3b89a1cc1110ff0254e31d07bcde61907d99f2e63b53c23a6525e6.jpg	L4 S5 | four stacks total incl placing (brief wants 4+1) | preserve: glowing placement, tattooed hand+bracelet left
+N06	N06-credits-insert/N06-credits-insert-005.jpg	2037a3f84b7cf110f60c7228e1bc540b4e78f9490a69705af33289b0ccb22820.jpg	L4 S5 | none major | preserve: 4+1 stacks, hand sliding flat from left, warm glow
+N06	N06-credits-insert/N06-credits-insert-006.jpg	c386df8288275f92b2ebb2b4b0c07c1f7eb097a0bce871e6d47c7de1edfe490c.jpg	L4 S4 | credits read as gold bars | preserve: five-in-a-row composition, hand withdrawing right
+N06	N06-credits-insert/N06-credits-insert-007.jpg	6c953d1511aa241d6a132f781cf16a512ea00ce87d21e7ff2c5c894ebb00aaa8.jpg	L3 S4 | only two stacks visible, tight crop | preserve: macro glow, sparks, bracelet foreground
+N06	N06-credits-insert/N06-credits-insert-008.jpg	fca50a549e142bcccd0cb1fde6746de44a3e80240688c09d541a6221aaa9319c.jpg	L4 S5 | none major | preserve: top-down 4+1 layout, finger pointing from left
+N06	N06-credits-insert/N06-credits-insert-009.jpg	8e75faa44e1c06e46949a23e2236c54c86d352d14161652cfe88b97762f780d1.jpg	L4 S5 | close to 005 | preserve: smoke haze, hand curling around nearest stack
+N06	N06-credits-insert/N06-credits-insert-010.jpg	3b7159e5680bd176c21bf86d71840e4f9e6144224a9be3c9b7395aab04f201e3.jpg	L4 S5 | near-dup of 008 | preserve: glass in back, 4+1 layout
+N06	N06-credits-insert/N06-credits-insert-011.jpg	cbedf5f6f960c8ff3ba1e3bd25ea2c35a407bad53458384e369185e65764ac52.jpg	L4 S4 | credits dimmer | preserve: foreground blurred hand, low angle
+N06	N06-credits-insert/N06-credits-insert-012.jpg	82fb6700280c53b0bbb6daa19453a62eb2436cc99eadaed6c9d42695e24635dc.jpg	L4 S4 | six stacks, odd glow on fingers | preserve: teal neon edge, overhead
+N06	N06-credits-insert/N06-credits-insert-013.jpg	60461f0b21aff4ceee4e7edb4e5e3fe66aa8fc79a6ea0de678ac057e566f88af.jpg	L4 S5 | none major | preserve: fifth stack lowered from above, row of four
+N06	N06-credits-insert/N06-credits-insert-014.jpg	531b4442ca0f94b7a99f9b8a6fc529432d9f7c12492ab6095ebf0b6e3138055d.jpg	L4 S4 | near-dup of 005 | preserve: hand pulling back right
+N06	N06-credits-insert/N06-credits-insert-015.jpg	ae40736cbc7d5fb3254cde71ab09160b278cfcb6254d8879bff9185eabfa4a64.jpg	L4 S5 | not dutch angle | preserve: amber light beam, dust motes

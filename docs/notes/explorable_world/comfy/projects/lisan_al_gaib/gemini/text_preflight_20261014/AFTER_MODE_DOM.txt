@@ -1,0 +1,350 @@
+- main:
+  - link "New chat":
+    - /url: /
+    - generic: Gemini
+  - text: side_nav_expand
+  - generic: play_arrow
+  - button "Open menu for conversation actions.":
+    - img: more_vert
+  - navigation "Side Navigation":
+    - button "Search chats":
+      - generic: search
+    - button "Close sidebar" [expanded]:
+      - img: side_nav
+    - navigation "Main actions menu":
+      - link "New chat":
+        - /url: /app
+        - img: gemini_chat
+        - generic: New chat
+    - navigation "Additional actions menu":
+      - link "Library":
+        - /url: library
+        - img: features
+        - generic: Library
+      - link "Images":
+        - /url: /images
+        - img: image_create
+        - generic: Images
+      - generic "Scheduled":
+        - link "Scheduled":
+          - /url: /scheduled
+          - img: schedule
+          - generic: Scheduled
+      - link "Daily brief":
+        - /url: daily-brief
+        - img: today
+        - generic: Daily brief
+      - generic "More":
+        - button "More":
+          - img: more_horiz
+          - generic: More
+    - button "Toggle Notebooks" [expanded]:
+      - generic: Notebooks
+      - img: keyboard_arrow_down
+    - navigation:
+      - link "New notebook":
+        - /url: /notebooks/create
+        - img: add_2
+        - generic: New notebook
+      - link "Notebook 2 — Lisan Al Gaib · Meta Mirror":
+        - /url: /notebook/114707d8-29b3-4505-bc06-dd7abcc60e4d
+        - img: notebook
+        - generic: Notebook 2 — Lisan Al Gaib · Meta Mirror
+      - link "Nagual":
+        - /url: /notebook/167cfa37-ddca-4f34-a408-2d67d4e65ee3
+        - img: notebook
+        - generic: Nagual
+      - link "Notebook 1 — Hon Dolo · Strictly Business":
+        - /url: /notebook/586b3ee6-5c57-45b3-a59d-a2e21c18a852
+        - img: notebook
+        - generic: Notebook 1 — Hon Dolo · Strictly Business
+      - link "All notebooks":
+        - /url: /notebooks/view
+        - img: more_horiz
+        - generic: All notebooks
+    - button "Toggle All" [expanded]:
+      - generic: All
+      - img: keyboard_arrow_down
+    - button "Filter":
+      - img: filter_alt
+    - navigation:
+      - link "Logo Design for Practice":
+        - /url: /app/181be15451cf86c9
+        - generic: Logo Design for Practice
+      - link "Logo Design for Mental Health Practice":
+        - /url: /app/9418077211b5a1b5
+        - generic: Logo Design for Mental Health Practice
+      - link "Hikers Celebrating at Mountain Summit":
+        - /url: /app/d18231a69189b008
+        - generic: Hikers Celebrating at Mountain Summit
+      - link "Download Capabilities and Browser Limitations":
+        - /url: /app/135a6244a57830a3
+        - generic: Download Capabilities and Browser Limitations
+      - link "Missing Video Project Status":
+        - /url: /app/551397eaf18c5fc0
+        - generic: Missing Video Project Status
+      - link "Gemini Spark Setup":
+        - /url: /app/540a9a4dcdad3bbc
+        - generic: Gemini Spark Setup
+      - link "Suno Prompt for Muffled Lo-Fi":
+        - /url: /app/df9d85239adcc725
+        - generic: Suno Prompt for Muffled Lo-Fi
+      - link "Trap Beat Musical Analysis":
+        - /url: /app/bb31979e1bcff491
+        - generic: Trap Beat Musical Analysis
+      - 'link "AI Math Proof: SME Role & Stone Soup"':
+        - /url: /app/e0f702608e9caa96
+        - generic: "AI Math Proof: SME Role & Stone Soup"
+      - 'link "Benefit of Doubt: Grace or Denial?"':
+        - /url: /app/848a87d61fe04677
+        - generic: "Benefit of Doubt: Grace or Denial?"
+      - link "Designing Classical Theism Profile Image":
+        - /url: /app/8dc9ee45ecaa16a1
+        - generic: Designing Classical Theism Profile Image
+      - link "Designing Classical Theism Visual Identity":
+        - /url: /app/881d778b45decdf6
+        - generic: Designing Classical Theism Visual Identity
+      - link "Transforming Project into State Float":
+        - /url: /app/80cbc3294278230d
+        - generic: Transforming Project into State Float
+      - link "Maryland State Float Project Guide":
+        - /url: /app/6aff13a830900d1e
+        - generic: Maryland State Float Project Guide
+      - 'link "Create the following image: An eerie metaphysical landscape inspired by Carlos Castaneda’s inorganic beings from The Art of Dreaming. Vast dark void filled with glowing filament-like entities made of blue-white and amber energy. The beings are elongated, semi-transparent, intelligent luminous fibers rather than humanoid aliens. Their forms resemble shifting vertical ribbons, crystalline tendrils, and living currents of awareness. Some appear as towering columns of light with hidden faces emerging from within. Others resemble geometric cocoons woven from luminous threads. The environment feels outside normal reality — silent, ancient, dreamlike, cosmic, and unsettling. Atmosphere of forbidden knowledge and predatory intelligence. Surreal, hyper-detailed, cinematic lighting, mystical energy fog, non-Euclidean depth, dream-realm aesthetic."':
+        - /url: /app/9c234bcd8ba2800d
+        - generic: "Create the following image: An eerie metaphysical landscape inspired by Carlos Castaneda’s inorganic beings from The Art of Dreaming. Vast dark void filled with glowing filament-like entities made of blue-white and amber energy. The beings are elongated, semi-transparent, intelligent luminous fibers rather than humanoid aliens. Their forms resemble shifting vertical ribbons, crystalline tendrils, and living currents of awareness. Some appear as towering columns of light with hidden faces emerging from within. Others resemble geometric cocoons woven from luminous threads. The environment feels outside normal reality — silent, ancient, dreamlike, cosmic, and unsettling. Atmosphere of forbidden knowledge and predatory intelligence. Surreal, hyper-detailed, cinematic lighting, mystical energy fog, non-Euclidean depth, dream-realm aesthetic."
+      - link "Front Door Color Options for Home":
+        - /url: /app/4016ebb2b5bcbad2
+        - generic: Front Door Color Options for Home
+      - link "Dress Accessory Suggestions":
+        - /url: /app/35bc77338fde33cc
+        - generic: Dress Accessory Suggestions
+      - link "Warm Earthy Vibe Update":
+        - /url: /app/d58cf9357b3d7621
+        - generic: Warm Earthy Vibe Update
+      - link "Change the cabinets to a lighter shade":
+        - /url: /app/efbdcc8e966bd632
+        - generic: Change the cabinets to a lighter shade
+      - link "Continuous Cinematic Video Generation":
+        - /url: /app/2854dfeaa3cec48a
+        - generic: Continuous Cinematic Video Generation
+      - 'link "Video Generation: Parents'' Date"':
+        - /url: /app/56faa4c2ad36b013
+        - generic: "Video Generation: Parents' Date"
+      - link "Dreams as Religions Video Creation":
+        - /url: /app/c8684a0b2d2d8b2b
+        - generic: Dreams as Religions Video Creation
+    - 'link "Google Account: Ziggy Mack (Gunk242@gmail.com)"':
+      - /url: https://accounts.google.com/SignOutOptions?continue=https://gemini.google.com
+      - generic: Ziggy Mack
+      - generic: Ultra
+    - button "Settings":
+      - img: settings
+  - heading "Conversation with Gemini" [level=1]
+  - button "first_video_prompt.txt":
+    - generic: TXT
+    - generic: first_video_prompt
+  - button "reference_map.txt":
+    - generic: TXT
+    - generic: reference_map
+  - heading "You said GEMINI PROJECT INSTRUCTIONS — LISAN AL GAIB / META MIRROR Paste the instructions below into a dedic…" [level=5]
+  - paragraph: GEMINI PROJECT INSTRUCTIONS — LISAN AL GAIB / META MIRROR
+  - paragraph
+  - paragraph: Paste the instructions below into a dedicated Lisan Gem or the start of its chat. If saving them in account-wide instructions, keep the project scope in the first sentence. Attach the actual files named in reference_map.txt; PC paths and this text do not give Gemini access to them.
+  - paragraph
+  - list:
+    - listitem: CREATIVE DIRECTION
+  - paragraph: When we work on Lisan Al Gaib / Meta Mirror, act as my director, cinematographer and creative collaborator. Lisan is my alter ego, a desert-prophet trap performer. Build from the supplied Lisan avatar; do not substitute Hon Dolo or infer my real facial appearance without photographs I provide for that purpose. Bring swagger, intelligence, humor, physical presence and moments of vulnerability to a cinematic, lifelike world. Use mirrors, desert light, signals, shadows, ritual and performance as recurring visual ideas. The supplied storyboard moves from reflection and finding a voice through creation and community into archetypes, shadow work and the signal in the noise. Treat that as a creative starting point; my latest direction governs its meaning. Suggest bold visual ideas that serve the song, while keeping each individual shot readable.
+  - paragraph
+  - paragraph: 2. CURRENT CHARACTER
+  - paragraph: "LAG-LOCK-FACE-NATURAL.jpg controls the avatar's face and current facial details: messy dark curls, light stubble, electric-blue eyes and normal natural white teeth. One small AL sits between the eyebrows; small G-A-I-B runs vertically down the center of the chin. Two mirrored sandworms rise on the neck with their mouths facing toward each other under the jaw; a small rayed sun disc with an eye sits at the throat. Match the portrait's artwork rather than inventing a new tattoo on every shot. One small silver nostril hoop, one eyebrow ring and one ear hoop belong on the character's left side, image-right in the front-facing reference. Keep the other side bare. No grillz, fangs, lip rings, ear stacks, extra face/chest/hand ink, brow slit, eye/know lettering, gun tattoo or anatomical third eye. Preserve skin texture, facial proportions and eye detail through motion."
+  - paragraph
+  - paragraph: 3. REFERENCES EACH HAVE A JOB
+  - paragraph: "Use reference_map.txt to identify actual attachments by exact filename and stable reference ID. LAG-LOOK-V3-01.jpg supplies the signature tan stillsuit, black hooded cloak and gold Cuban chain; its pose and backdrop are not mandatory. LAG-LOCK-ARM-SH13.jpg supplies ONLY the striped coiled sandworm artwork on his left arm. That arm image contains retired grillz and extra piercings: do not copy its face, mouth, jewelry or neck details. Add it only for shots that expose that arm. Let sleeves and collars cover tattoos naturally. A thin black stillsuit nose-breather is an occasional accessory for appropriate desert shots, not a permanent facial feature."
+  - paragraph
+  - paragraph: LAG-SC-01 through LAG-SC-50 are scene and costume ideas, not fifty competing identity masters. Some contain duplicated lettering, misplaced piercings or extra ink. Follow the current portrait and reference map when a scene disagrees. History images are for discussing ideas only unless I explicitly revive a detail. Hon Dolo's references, cast, song and design rules remain in his separate project.
+  - paragraph
+  - paragraph: 4. MAKE EDITABLE VIDEO
+  - paragraph: "Default to landscape 16:9, one continuous shot, one main action and one purposeful camera move. Give the performer intention: he notices something, chooses, reacts, commands attention or settles into a thought. Use subtle breathing, eye movements, believable hands and prop contact, cloth motion and environmental movement to make a still feel alive. Keep short usable holds at the beginning and end when duration permits. Preserve direction of movement and eyelines across related takes. Mirrors should behave coherently unless a specific supernatural reflection effect is requested. Do not add cuts, costume changes, extra people or a collage of actions to a single-shot request."
+  - paragraph
+  - paragraph: "When animating an attached still, inspect it first. If it visibly conflicts with the current design, identify the specific conflict and prepare a corrected starting frame before animation, or label the result as a motion study. Do not promise that a prompt alone will fix an incorrect starting frame while preserving it exactly. Use the supported attachment controls: an initial frame controls composition; extra identity/detail references have separate roles where the available video tool supports them. If only one image is supported, use one consolidated, reviewed starting frame instead of claiming the tool consumed multiple references."
+  - paragraph
+  - paragraph: 5. SONG AND SPEECH
+  - paragraph: Use the actual Meta Mirror recording and my lyric master when supplied. The current storyboard has lyric snippets and placeholder 4.5-second holds; these are not verified music timings. Never use Hon Dolo's Strictly Business recording as Lisan's song. For now, make visual footage with no invented lyrics, narration or singing unless I request them. Generated sound is optional temporary ambience, separate from the final song. Exact sung/spoken words require the specified recording and timing where supported; soundtrack replacement and visible lip-sync are separate tasks. Preserve my wording when I request an exact line. Do not claim synchronized performance without checking it.
+  - paragraph
+  - paragraph: 6. WORKING TOGETHER
+  - paragraph: When I ask for a take and the brief is clear, generate it using the available tool. In exploration, offer a few distinct directions; once we select a baseline, change the requested element and preserve the rest. A favorite location or tattoo detail does not approve an entire character design. Use names such as LAG-SC-28_T01 for takes if naming is available; otherwise report the actual download filename and its intended scene ID. Keep source and output separate. With each result, briefly give the scene/purpose, references actually used, effective prompt, any known limitations and visible defects. Report only controls and settings you can verify. Do not invent file access, background progress, seeds or successful exports. Ask one focused question only when a missing detail blocks the requested result. Final favorites and approvals belong to me.
+  - paragraph
+  - paragraph: SETUP NOTE
+  - paragraph: This brief follows the latest natural-teeth direction in the supplied Grok handoff. Its older LOCK-V2 text and arm reference still contain superseded features. Current source-designated references are working anchors; this kit does not claim I independently approved every frame or changed Gemini settings. Latest direct user corrections take precedence.
+  - button "Expand":
+    - img: expand_more
+  - button "Copy prompt":
+    - img: copy
+  - button "Edit":
+    - img: edit
+  - heading "Gemini said" [level=6]
+  - paragraph: Your video is ready!
+  - button "Download video":
+    - img: download
+  - button "Share video":
+    - img: share_1
+  - button "Mute video":
+    - img: volume_up
+  - button "Play video":
+    - img: play_arrow
+  - group "0 seconds elapsed, 10 seconds remaining":
+    - generic: 0:00 / 0:10
+  - slider "Seek slider": "0"
+  - button "Good response":
+    - img: thumb_up
+  - button "Bad response":
+    - img: thumb_down
+  - button "Share video":
+    - img: share_1
+  - button "Show more options":
+    - img: more_horiz
+  - button "01_Flagship_References.zip":
+    - img "ZIP icon"
+    - generic: 01_Flagship_References
+  - heading "You said should of given you these first" [level=5]
+  - paragraph: should of given you these first
+  - button "Copy prompt":
+    - img: copy
+  - button "Edit":
+    - img: edit
+  - heading "Gemini said" [level=6]
+  - paragraph: I can only generate videos. Try another prompt.
+  - button "Good response":
+    - img: thumb_up
+  - button "Bad response":
+    - img: thumb_down
+  - button "Copy":
+    - img: copy
+  - button "Show more options":
+    - img: more_horiz
+  - button "Show the uploaded image in a lightbox" [active]:
+    - img "Uploaded image preview"
+  - button "Show the uploaded image in a lightbox":
+    - img "Uploaded image preview"
+  - button "Show the uploaded image in a lightbox":
+    - img "Uploaded image preview"
+  - heading "You said regenerate the video using this as the character actor.." [level=5]
+  - paragraph: regenerate the video using this as the character actor..
+  - button "Copy prompt":
+    - img: copy
+  - button "Edit":
+    - img: edit
+  - heading "Gemini said" [level=6]
+  - paragraph: Your video is ready!
+  - button "Show captions":
+    - img: subtitles
+  - button "Download video":
+    - img: download
+  - button "Share video":
+    - img: share_1
+  - button "Mute video":
+    - img: volume_up
+  - button "Play video":
+    - img: play_arrow
+  - group "0 seconds elapsed, 10 seconds remaining":
+    - generic: 0:00 / 0:10
+  - slider "Seek slider": "0"
+  - button "Good response":
+    - img: thumb_up
+  - button "Bad response":
+    - img: thumb_down
+  - button "Share video":
+    - img: share_1
+  - button "Show more options":
+    - img: more_horiz
+  - button "Show the uploaded image in a lightbox":
+    - img "Uploaded image preview"
+  - heading "You said Use the supplied image as the exact first frame. One uninterrupted 8-second landscape shot with a lo…" [level=5]
+  - paragraph: "Use the supplied image as the exact first frame. One uninterrupted 8-second landscape shot with a locked eye-height camera, no zoom or push. The open sandworm maw at screen-right rises vertically approximately one apparent maw-height through the existing haze; sand spills from its rim and fine dust drifts screen-left. Keep one worm with the same maw design and teeth, no lunge or lateral movement. The man stays in the same position and takes one slow breath: his chest rises and settles once, mouth closed, gaze toward the camera as in the starting frame, one blink at most. No head turn, step or hand gesture. Preserve his face geometry, dark curls, blue eyes, small AL between the brows, vertical G-A-I-B on the chin, paired segmented neck worms and the throat eye-disc. Preserve the dark shirt, cloak, single chain and existing ear hoops on the same ear; do not repair, add or change tattoos, piercings or clothing. Keep the warm diffuse haze, soft near-frontal face illumination and dark maw interior; dust catches only the existing haze light. No new emitter, visible sun, flicker or color wash. No cuts, camera movement, new characters, objects, text or watermarks. Silent output: no speech, singing, music, narration or sound effects."
+  - button "Expand":
+    - img: expand_more
+  - button "Copy prompt":
+    - img: copy
+  - button "Edit":
+    - img: edit
+  - heading "Gemini said" [level=6]
+  - paragraph: I seem to be encountering an error. Can I try something else for you?
+  - button "Download video":
+    - img: download
+  - button "Share video":
+    - img: share_1
+  - button "Mute video":
+    - img: volume_up
+  - button "Play video":
+    - img: play_arrow
+  - group "8 seconds elapsed, 0 seconds remaining":
+    - generic: 0:08 / 0:08
+  - slider "Seek slider": "1"
+  - button "Good response":
+    - img: thumb_up
+  - button "Bad response":
+    - img: thumb_down
+  - button "Share video":
+    - img: share_1
+  - button "Show more options":
+    - img: more_horiz
+  - button "Show the uploaded image in a lightbox":
+    - img "Uploaded image preview"
+  - heading "You said now add on to this scene...and have the character turn around and walk though one of these doors.." [level=5]
+  - paragraph: now add on to this scene...and have the character turn around and walk though one of these doors..
+  - button "Copy prompt":
+    - img: copy
+  - button "Edit":
+    - img: edit
+  - heading "Gemini said" [level=6]
+  - paragraph: Your video is ready!
+  - button "Download video":
+    - img: download
+  - button "Share video":
+    - img: share_1
+  - button "Mute video":
+    - img: volume_up
+  - button "Play video":
+    - img: play_arrow
+  - group "0 seconds elapsed, 16 seconds remaining":
+    - generic: 0:00 / 0:16
+  - slider "Seek slider": "0"
+  - button "Good response":
+    - img: thumb_up
+  - button "Bad response":
+    - img: thumb_down
+  - button "Redo":
+    - img: refresh
+  - button "Share video":
+    - img: share_1
+  - button "Show more options":
+    - img: more_horiz
+  - button "Scroll to bottom":
+    - img: arrow_downward
+  - textbox "Enter a prompt for Gemini":
+    - text: Describe your video
+    - paragraph
+  - button "Upload & tools":
+    - img: plus
+  - button "Deselect Videos":
+    - img: movie
+    - generic: Videos
+    - text: close
+  - button "Open mode picker, currently Flash-Lite":
+    - generic: Flash-Lite
+    - img: keyboard_arrow_down
+  - button "Dictate (^⇧D)":
+    - img: mic
+  - button "File upload":
+    - img: add_image
+  - button "Aspect ratio":
+    - img: aspect_ratio
+    - generic: Aspect ratio
+    - img: keyboard_arrow_down
+  - button "Format":
+    - generic: Format
+    - img: keyboard_arrow_down
+  - paragraph: Gemini is AI and can make mistakes.
+- region "Notifications"
+- iframe

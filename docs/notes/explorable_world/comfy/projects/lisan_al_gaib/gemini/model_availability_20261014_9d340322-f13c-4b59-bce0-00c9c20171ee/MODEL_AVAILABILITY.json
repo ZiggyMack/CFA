@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUTC": "2026-10-14T12:32:54.782Z",
+  "kind": "read_only_model_availability_check",
+  "mailboxNoteRead": {
+    "id": "73a5c148-5062-4eff-a5f0-d83758ec77dc",
+    "conversationId": "9db1d89f-1748-452d-8d84-bdd1e9316577"
+  },
+  "chats": [
+    {
+      "url": "https://gemini.google.com/app/ffc5580aa01acae1",
+      "title": "Lisan Notebook Access Audit",
+      "currentSelectedModel": "3.5 Flash-Lite",
+      "argonAvailable": "4 Argon · Complex tasks · New",
+      "thinkingLevel": "not exposed in this observation",
+      "toolMode": "text composer; no Videos chip",
+      "priorRootExecution": {
+        "recordedAtUTC": "2026-10-14T06:06:59Z",
+        "model": "Flash-Lite",
+        "textAnswers": 1,
+        "renders": 0
+      }
+    },
+    {
+      "url": "https://gemini.google.com/app/e6a2bab576bff5a3",
+      "title": "Lisan Al Gaib Project Setup",
+      "currentSelectedChatModel": "Argon High",
+      "toolMode": "Videos",
+      "priorRootExecution": {
+        "submittedAtUTC": "2026-10-14T02:16:35Z",
+        "selectedChatModel": "Flash-Lite",
+        "videoPreviewDurationLabelSeconds": 8,
+        "generatorEngine": "unexposed",
+        "export": "unresolved"
+      },
+      "newExistingReturns": [
+        {
+          "responseId": "fed76d8751b7c930",
+          "prompt": "now add on to this scene...and have the character turn around and walk though one of these doors..",
+          "visibleStatus": "Your video is ready!",
+          "previewDurationLabelSeconds": 16,
+          "rootSubmitted": false,
+          "downloadedByThisCheck": false
+        },
+        {
+          "responseId": "de9adf947efe5f82",
+          "prompt": "Let’s see how good you are Argon ... worm about to eat main character, back flip and mount; requested 5 continuous shots if short 8s clips",
+          "visibleStatus": "Your video is ready!",
+          "previewDurationLabelSeconds": 24,
+          "rootSubmitted": false,
+          "downloadedByThisCheck": false
+        }
+      ],
+      "generatorEngine": "unexposed",
+      "perRunCostAndRemainingAllowance": "unexposed",
+      "selectedChatModelDoesNotProveHistoricalRenderer": true
+    }
+  ],
+  "officialReferences": [
+    {
+      "url": "https://ai.google.dev/gemini-api/docs/latest-model",
+      "claim": "Gemini 4 Argon latest model; API id gemini-4-argon and thinking levels low, medium, high"
+    },
+    {
+      "url": "https://ai.google.dev/gemini-api/docs/omni",
+      "claim": "Video generation is separately documented; no mapping of this particular app run inferred"
+    }
+  ],
+  "actions": {
+    "newPrompts": 0,
+    "renders": 0,
+    "uploads": 0,
+    "modelChanges": 0,
+    "depthChanges": 0,
+    "sourceEdits": 0,
+    "purchases": 0
+  },
+  "conclusion": "Root has not executed a verified Gemini4 test. Prior root notebook/SW2 runs used Flash-Lite. Account now offers 4 Argon; original video chat is currently Argon High and contains two newer existing ready previews. Actual video renderer and quality remain unverified."
+}

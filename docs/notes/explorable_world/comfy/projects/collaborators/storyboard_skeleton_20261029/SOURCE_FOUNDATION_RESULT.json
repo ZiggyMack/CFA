@@ -1,0 +1,98 @@
+{
+  "status": "complete",
+  "completedAtUTC": "2026-10-29T15:34:20.557605+00:00",
+  "scope": "Derived source foundation indicator/filter in Structure & gaps; no generation or selected-input changes",
+  "commit": "8ffad0c0fcade3bc1d56290ba127fc2d806f2aab",
+  "parent": "9c2f4a09a35c6d970359eefd3a8ac6a38c72bed9",
+  "liveURL": "https://algaib.streamlit.app/Full_Visual_Library",
+  "compactURL": "https://algaib.streamlit.app/",
+  "buildID": "784402bcdf9e766f4e1b",
+  "checks": {
+    "sourceCatalogSHA256": "e7d34bc86ee71a9bff0249463d4fca1724819c9709cff9e89c830a2a88484b5f",
+    "snapshotSHA256": "bdc322acc8f408caaffa2364d239c6b2de3fc0a037384aaa8ad02b2d3ee8c77a",
+    "changedSourceKeys": [
+      "storyboardSourceFoundation"
+    ],
+    "sourceAssets": 4657,
+    "hostedAssets": 4669,
+    "reviewCount": 320,
+    "reviewsPreserved": true,
+    "sourceMetadataExceptFoundationPreserved": true,
+    "nativeMetadataExceptFoundationAndSnapshotPreserved": true,
+    "selectedBindings": 0,
+    "ruleEvidence": {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_skeleton_20261029/SOURCE_MATURITY_RULES_20261029.txt",
+      "sha256": "124a5fa33f6811b7179bb91560cac8628a21d109893178004318f6784e7aff16",
+      "bytes": 4663
+    },
+    "runtime": "D:\\Documents\\CFA\\.cache\\runtimes\\python314\\python.exe",
+    "localBuild": "91be3dd35d",
+    "buildID": "784402bcdf9e766f4e1b",
+    "fileCount": 9012,
+    "mediaHashVerification": "All existing publication files verified by build_portable_dashboard; no media replacements",
+    "unresolvedPreparedLinks": 29,
+    "verifiedReviewCount": 320,
+    "unchangedHumanAndMediaRecords": true,
+    "helperSHA256": "3f59d1b1151bd2177bc3576e67805a9f5e43f92edd33cf1d20f80b1d4d74afd9",
+    "nativeHelperSHA256": "d37800cff2e57c4cb22300a7f966fa0a8b2bd8e4c7da9e6848824b1fd1cd0b54",
+    "tests": {
+      "sharedPythonJavaScriptCases": 28,
+      "checkpointTests": "two serialized and independently loaded catalogs; saved exact-story fallback change; conflicting saved/registry selection",
+      "renderer": "70 no-frame entries; foundation filters; blank isolated; scene readiness 11 scenarios",
+      "native": "2 structure AppTests; 6 warm-cache tests; 6 frozen-catalog parity tests"
+    }
+  },
+  "liveProof": {
+    "verifiedAtUTC": "2026-10-29T15:33:25.758Z",
+    "full": {
+      "buildID": "784402bcdf9e766f4e1b",
+      "filterVerified": true,
+      "detailedCount": 0,
+      "noFrameRestoredCards": 70,
+      "blankTemplateIsolated": true,
+      "screenshot": ".cache/source_foundation_20261029/live-full-foundation.png"
+    },
+    "compact": {
+      "filterVerified": true,
+      "detailedShowsNoMatches": true,
+      "noFrameTotal": 70,
+      "prologueCardsRestored": true,
+      "blankTemplate": {
+        "emptyFields": 28,
+        "foundationControl": false
+      },
+      "screenshot": ".cache/source_foundation_20261029/live-compact-foundation.png"
+    },
+    "mobilePhysicalDeviceTested": false
+  },
+  "independentLocalAudit": "ROOT_FOUNDATION_VERIFICATION.json",
+  "independentLiveAudit": "LIVE_FOUNDATION_READBACK.json",
+  "sourceFiles": [
+    "apps/creative_studio/source_foundation.py",
+    "apps/creative_studio/story_view.py",
+    "apps/creative_studio/studio_dependencies.py",
+    "docs/notes/explorable_world/comfy/projects/visual_library/source_foundation.js",
+    "docs/notes/explorable_world/comfy/projects/visual_library/storyboard_foundation.py",
+    "docs/notes/explorable_world/comfy/projects/visual_library/storyboard_input_bindings.json"
+  ],
+  "limits": [
+    "No current Hon starting-frame selection is documented; all 70 remain No starting frame selected.",
+    "Existing 29 unavailable bookkeeping links and 5 native unavailable records retained.",
+    "No physical-phone test; live desktop full/compact QA and native AppTest performed."
+  ],
+  "execution": "Project Python, Node, Git, cache, temporary files and outputs stayed on D:.",
+  "maintenanceLesson": {
+    "topic": "Redundant Git publication transfer",
+    "verifiedFacts": {
+      "newRevisionObjects": 25,
+      "newCommitCount": 1,
+      "stagedReusedVerifiedBlobs": 9007,
+      "pushEnumeratedObjects": 8141,
+      "pushWrittenObjectsReported": 8126,
+      "observedUploadMiBAtHalfway": 322
+    },
+    "condition": "Upload made progress and completed successfully; no restart or second deployment. A bounded stop diagnostic selected no unique exact process and made no process changes.",
+    "rootCause": "Not established; push.negotiate=true did not prevent redundant object transfer in this run.",
+    "followUp": "Before the next publication, compare rev-list new objects with a dry-run pack plan and inspect negotiation/reuse settings. Keep isolated verified staging and exact-parent protection. No media deletion or release changes performed."
+  }
+}

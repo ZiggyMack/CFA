@@ -47,7 +47,7 @@ for _helper_name in (
     "layout_video_assets", "media_path", "mission_tasks", "mission_review_data", "normalize_plan", "ordered_assets", "production_workflows",
     "read_basket", "read_review", "review_payload", "storyboard_stage", "storyboard_themes", "storyboard_window", "sweep_payload",
     "effective_design_data", "normal_visible", "approved_multiverse", "merge_review_overrides", "review_provenance", "validated_asset_aliases",
-    "navigation_reference_count", "navigation_storyboard_shot_count", "mission_pending_requests", "cast_use_state",
+    "navigation_reference_count", "navigation_storyboard_shot_count", "navigation_storyboard_sequence_count", "mission_pending_requests", "cast_use_state",
 ):
     globals()[_helper_name] = getattr(_studio_dependencies, _helper_name)
 
@@ -1682,7 +1682,7 @@ def main() -> None:
                     nav_label += ' · '+str(navigation_reference_count(
                         [asset for asset in data['assets'] if asset.get('project') == project], documents=True))
                 elif view == 'Storyboard':
-                    nav_label += f' · {navigation_storyboard_shot_count(data, project)}'
+                    nav_label += f' · {navigation_storyboard_sequence_count(data, project)}'
                 elif view == 'Review queue':
                     nav_label += ' · '+str(navigation_reference_count(data['assets'],
                         mission_pending_requests(data, st.session_state.studio_reviews, project)))

@@ -1,0 +1,15 @@
+RECEIPT ADDENDUM A: CFA-SUPP-WINNERS r002
+(Folder CFA-SUPP-WINNERS-20261021_r002. This is NOT the frozen CFA-META-20261021 r002.)
+Built: 2026-10-21 ET by Grok Bot (Chief of Staff), at Nova's (site index) request relayed by V_1/Chief.
+Parents: CFA-SUPP-WINNERS r001 (RECEIPT_WINNERS_r001.txt sha256 2a7d78cb17564f4866e8dd21ea2799648a59540fa6578cdc8556c5187e020c43) and CFA-META-20261021 r002 (START_HERE_r002.md sha256 5f570d54b6f61467bc049146383576917f9dbe86f2fe3ea59fe91df6104d02a1; START_HERE_r002.tsv sha256 1f30ae11b39232ae7feed0be8b2e4fb690c15ee3ad9dd40390ad84acc90a70e5).
+Additive only. Every file first delivered in this folder is unchanged, including RECEIPT_WINNERS_r002.txt (sha256 e815a2e9b62b92f2648c93294412ea73ef3263e4f45f714725c32ee88362efab), WINNERS_index.html, WINNERS_list.csv and thumbs/. In that first receipt, "WINNERS r001" means CFA-SUPP-WINNERS r001 and "r002" means CFA-META-20261021 r002. CFA-SUPP-WINNERS r001 and CFA-META-20261021 r002 are unchanged.
+
+Added in this addendum
+  media/: 41 full-resolution winner images, copied byte-for-byte (sha256 equals the winner sha in WINNERS_list.csv): the 28 V-validated chest frames and the 13 HD-MOUTH v004 picks.
+  v_reports/: 220 files, copied byte-for-byte from /workspace/v1_refinv/returns/. They are the scoped V return TSVs (with their .sha256 sidecars) and the crops each return lists for its frame. Batch returns are whole files, so they also contain other frames' rows; only the winning frame's crops are included. V4_FREEZE_MANIFEST is included as a cross-reference. No PRIVATE_MAP, v1_calib, v1_push, calibration or answer-key material is included. The per-winner mapping is in WINNERS_v_reports.csv.
+  WINNERS_lineage.csv: 210 rows: 46 ROOT rows (original family root, image id and sha256) and 164 other-version rows. Statuses: {'FIX': 85, 'SUPERSEDED': 74, 'LATER SAVE, not the winner': 2, 'ROUND-CAP': 3}.
+    How the status was set: the first FIX/ROUND-CAP/FAIL/SUPERSEDED token on the maker-manifest line that carries the version's sha. Where no manifest line has a token, the V return line is used instead. "FIX (logged as FAIL)" keeps the original FAIL token. Rows with no token are SUPERSEDED (inferred) and say so in the source column. Saves later than the winner are marked "LATER SAVE, not the winner".
+  WINNERS_index_full.html: a new page. It is the same index plus a full-resolution link, V report links and lineage on every card.
+  SHA256SUMS.txt: sha256 of every file in the folder except itself.
+Lineage not located: ZIGGY_STENCIL twin-tower sheet (stencil a906752d, panel 1) (no root), HD-CHAIN-A01 staple neck chain (no root), HD-CHAIN-A04 staple neck chain (no root), HD-CHAIN-A06 staple neck chain (no root), HD-CHAIN-B05 staple neck chain (no root), Hip blaster on character-LEFT hip (REV-HD-004 saloon proof) (no root).
+Counts: 322 files in the folder (including this receipt and SHA256SUMS.txt); 26.7 MB excluding those two.

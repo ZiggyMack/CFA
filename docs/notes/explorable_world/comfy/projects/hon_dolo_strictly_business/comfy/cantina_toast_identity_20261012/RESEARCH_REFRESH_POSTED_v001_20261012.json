@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "reviewDateLocal": "2026-10-12",
+  "timezone": "America/New_York",
+  "sourceAccessDateUTC": "2026-10-13",
+  "status": "research_reviewed_no_new_execution",
+  "researchNote": "RESEARCH_REFRESH_20261012.txt",
+  "baseline": {
+    "jobId": "ae13aefd-845b-445c-a118-d8418a728785",
+    "graph": "WAN_FACE_PROTECTION69_BROAD_GENERATION_COMPARISON_API_ACTUAL_20261012.json",
+    "measuredReturn": "MEASURED_RETURN_20261012.txt",
+    "frames": 69,
+    "originalFrameRangeZeroBased": [
+      168,
+      236
+    ],
+    "fps": 24,
+    "dimensions": [
+      768,
+      432
+    ],
+    "seconds": 2.875,
+    "derivedAcceptance": false,
+    "derivedStage": "preliminary"
+  },
+  "lesson": {
+    "matchingPanEntry": "../Pan_Handlers/Help/content/video_routes.py:wan_mix",
+    "cfaProcedure": "docs/notes/explorable_world/comfy/templates/workflow_intake.md#decision-and-feedback",
+    "adoption": "manual_return_pending"
+  },
+  "gaps": [
+    {
+      "id": "final_mask_identity_authority",
+      "evidence": "local_actual_graph_and_mask_audit",
+      "finding": "Final protection restores most original facial geometry; raw decoded generation was not separately saved.",
+      "causality": "plausible_identity_limit_not_proven",
+      "nextCheck": "Inspect raw output before choosing a final-mask experiment."
+    },
+    {
+      "id": "face_video_representation",
+      "evidence": "actual_binding_and_primary_upstream_code",
+      "finding": "Inherited Comfy template uses landmark IMAGE; official Wan preprocessing uses cropped RGB faces.",
+      "causality": "investigation_target_not_established_bug",
+      "nextCheck": "Inspect all69 actual guides against aligned lead RGB crops."
+    },
+    {
+      "id": "reference_aspect",
+      "evidence": "published_native_resize_math",
+      "finding": "VAE reference center-cropping differs from the uncropped CLIP branch and official Wan padding.",
+      "causality": "predicted_not_cloud_intermediate_observation",
+      "nextCheck": "Capture actual donor preparation before changing only that branch."
+    },
+    {
+      "id": "architecture_comparison",
+      "evidence": "developer_code_and_docs",
+      "finding": "Dedicated swaps and identity-specific video diffusion are plausible alternatives; acceptance untested.",
+      "nextCheck": "Verify Cloud schemas, weights and compiled inputs for one selected candidate."
+    }
+  ],
+  "candidates": [
+    {
+      "name": "FaceFusion",
+      "observedVersion": "3.9.1",
+      "source": "https://github.com/facefusion/facefusion",
+      "cloudAvailability": "unknown",
+      "executedHere": false
+    },
+    {
+      "name": "ReActor",
+      "observedVersion": "0.7.1",
+      "source": "https://github.com/Gourieff/ComfyUI-ReActor",
+      "cloudAvailability": "unknown",
+      "executedHere": false
+    },
+    {
+      "name": "DreamID-V",
+      "source": "https://github.com/bytedance/DreamID-V",
+      "cloudAvailability": "unknown",
+      "executedHere": false
+    }
+  ],
+  "nextExperimentPolicy": {
+    "preSamplerDiagnosticFirst": true,
+    "holdBaselineSettingsForWanComparisons": true,
+    "oneDeliberateTreatmentPerComparison": true,
+    "saveRawAndProtectedOutputFromSameSampler": true,
+    "newModelSettingsRequireSeparateVerification": true,
+    "automaticModelGrid": false
+  },
+  "unknowns": [
+    "Cloud server source revision",
+    "actual prepared donor/face images",
+    "raw cached output availability",
+    "dedicated swap Cloud nodes/models",
+    "selected weight production terms",
+    "baseline black-window cause",
+    "whether revised guides or masks improve identity"
+  ],
+  "actionsThisRefresh": {
+    "newGenerations": 0,
+    "installs": 0,
+    "modelImports": 0,
+    "panFileEdits": 0,
+    "productionAcceptance": false
+  }
+}

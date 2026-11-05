@@ -1,0 +1,36 @@
+CFA-SUPP-GOLDREF r001
+Gold-reference linkage supplement. Grok Bot (Chief of Staff), 2026-10-21, ET (UTC-4).
+D: folder: D:\Documents\CFA\docs\notes\explorable_world\comfy\references\From Grok\CFA-SUPP-GOLDREF-20261021_r001
+STATUS
+- PRELIMINARY supplement. It is additive and replaces or edits nothing.
+- The registry (GOLDREF_REGISTRY_PROPOSED_r001.csv) is PROPOSED, not adopted, pending Ziggy's sign-off on TEAM-RULES v015.
+
+PARENTS (unchanged; read-only)
+- CFA-META-20261021 r002: START_HERE_r002.md sha256 5f570d54..., START_HERE_r002.tsv sha256 1f30ae11...
+- CFA-SUPP-WINNERS r003: RECEIPT_WINNERS_r003.txt sha256 2b78b9120a248e5b3192b338747db09c1d04d33397029e90883703cf86eaff48
+
+VALIDATION RULE (Ziggy)
+- Only V-Team (V_1-V_5) verdicts are VALIDATED. Z-bot and Chief scoring is PRELIMINARY, and a goldref tag never promotes anything.
+- A V pass with a required scope that has no gold reference is marked UNANCHORED: not a winner (see UNANCHORED_returns_r001.txt).
+
+TAGS
+- DECLARED tags mean the review itself names the gold reference, by hash or by name.
+- INFERRED tags are ours (Chief of Staff), added from each review's scope and date. They are NOT the reviewers' and do not change any frozen verdict.
+
+CORRECTIONS
+- The iced anchor's ID is HEAD-HD-ICED-ANCHOR-LOCK-r4 (40064d98). HEAD-HD-ICED-ANCHOR-r4 is recorded as an alias only.
+- LINEAGE_CORRECTIONS_r001.csv amends CFA-SUPP-WINNERS r003's lineage ADDITIVELY, without editing r003:
+  twin-tower stencil sheet ROOT = itself (Ziggy's upload, a906752d..., panel 1 = chest ship) with the saucer sheet (e723521f...) as companion;
+  iced anchor lock = r4, and r2/r3 = NOT-A-LOCK / not found (no r2 or r3 lock recorded, per Z_6).
+
+FILES (sha256)
+- GOLDREF_LINKAGE_SUPPLEMENT_r001.md  40fc7af2315cdab12f85ef17d453c31e00b75366aa890f5d624d4e3d07637213
+- GOLDREF_crosswalk_r001.csv  748f58633bb21d0a43aaead6d0ef83ec9fea0dec801326705835ad3397e0993f
+- GOLDREF_REGISTRY_PROPOSED_r001.csv  78dd86e438917c30a3284cf943f3d5d52b3b591c84da01648a4e75d2821e6fee
+- UNANCHORED_returns_r001.txt  a9c1308308f18161f56856bd17010e72d5a6d07de743234a9085cd7d938c8144
+- LINEAGE_CORRECTIONS_r001.csv  fb11916f73ebb3cac1c7c6eb0ae5e9e94f052889d1d91251ec45e527f6682394
+- SHA256SUMS.txt covers every file except itself.
+
+COUNTS
+- Crosswalk: 335 reviews and 452 tag rows (167 DECLARED, 134 INFERRED, 151 NONE). V-Team returns: 286. Maker files: 34. D: packages: 15.
+- UNANCHORED V-Team return files: 96.

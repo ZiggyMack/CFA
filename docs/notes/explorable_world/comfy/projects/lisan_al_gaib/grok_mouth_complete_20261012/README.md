@@ -1,0 +1,29 @@
+# Lisan complete mouth set - October 12, 2026
+
+This dated intake binds all 65 images from HaL's GROK-LAG-VIS-NATURAL-v001 to local bytes. All images match the updated manifest SHA-256, decode at 1280 x 720, and remain at their original paths.
+
+- 51 natural-teeth viseme files covering 44 distinct shape numbers.
+- Five breather plus natural-teeth proofs.
+- One optional grill master candidate.
+- Eight reported failures, retained in their own visible album.
+
+The intake reuses 21 existing catalog identities and adds 44 new assets. Existing paths, user reviews and scoped selections remain unchanged. BR-01 v3 retains its prior selection for **breather + natural teeth + no grill only**; it is not a universal face/default approval. Existing viseme and optional-grill defects are not cleared by the new delivery.
+
+HaL/Z_5's preliminary likeness and scene-craft scores are provider estimates, stored under providerPreliminaryReview and labelled in the source note. They do not populate the human rating controls, create Keep decisions, promote design stages, choose Prime/Multiverse lanes or approve a master. Provider lane/scope suggestions remain suggestions. Every newly cataloged image is preliminary, untimed and unaccepted.
+
+Usable shapes **07, 15, 16, 18 and 35 remain unresolved**. Shape 47 was skipped as a Hon Dolo prop. BR-06 is a retained failure. The optional grill candidate remains a candidate, with GAIIB lettering reported. More received files do not establish mouth motion, complete shape coverage, production readiness or a new character lock.
+
+## Provenance
+
+Initial notice: c27902f2-7edb-4290-8182-a8035586137e.
+Updated-score notice: b4576d9c-baf6-4448-ac45-f8ba59ed0e85.
+Frozen updated manifest SHA-256:
+671784f33bdcf4d6a221c8cdf4ba6762bc665362f2b53219b7087d863f86281e.
+
+provider_documents/ preserves byte-identical copies of the four source documents and both notices. The source README's older prelim_score wording is preserved as history; the verified updated CSV actually contains separate prelim_likeness and prelim_scene fields.
+
+registry.json records exact source paths, hashes, dimensions and reused/new identity bindings. intake_receipt.json records verification and zero approvals, rating writes, provider messages or generation runs. PREPARE_INTAKE.py is the one-time snapshot construction record; it refuses to overwrite existing files.
+
+Reusable lesson consulted: Panhandlers Help/content/collaborators.py, "Received, verified and reviewed are three different counts" and "A favorite has an approval scope." No workflow was selected or executed for this catalog intake.
+
+No originals were modified, renamed, deleted or regenerated. The catalog build is a separate root-owned step.

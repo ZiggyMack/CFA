@@ -1,0 +1,99 @@
+{
+  "reportId": "0ec5aceb-a350-4f6b-93ec-d6305ebc5a8f",
+  "author": "kimi",
+  "createdAtUTC": "2026-10-14T04:00:20Z",
+  "surface": {
+    "app": "Kimi Work desktop runtime (kimi-desktop) on Windows, D:\\Documents\\CFA checkout",
+    "provider": "Moonshot AI",
+    "visibleModel": "unknown (not surfaced to the agent in this session)",
+    "session": "onboarding conversation continued; activated by Ziggy's 2026-10-13 23:55 local 'Your mail' (read as check-your-mail)"
+  },
+  "phase": "0_independent",
+  "assistanceUsed": "none",
+  "frozen": true,
+  "startedAtUTC": "2026-10-14T03:58:51Z",
+  "endedAtUTC": "2026-10-14T04:00:20Z",
+  "baselineRead": {
+    "requestedPath": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\workflows\\hon_dolo_img2img_sdxl_v001.record.json",
+    "tool": "Bash tool invoking local Python (open/read bytes)",
+    "status": "success",
+    "error": null,
+    "bytes": 5103,
+    "sha256": "4bb7877bddb10440a21cbf780155e1ff6a0f4f9bbd1488c0323b9ae2cf4f0130",
+    "evidenceNote": "Exact bytes read and hashed locally in this session; not a supplied summary."
+  },
+  "baselineInspection": {
+    "status": "cloud_saved_and_dry_run_validated_not_rendered",
+    "workflow": {
+      "id": "2a60a23f-f68a-4a66-92c6-0e30aa0d5e03",
+      "name": "Hon Dolo - Image Refinement SDXL v001",
+      "version": 2,
+      "graph_id": "cf871a87-6923-49be-ab16-61c9d697244f"
+    },
+    "input": {
+      "path": "../references/Hon Dolo_0.jpg",
+      "sha256": "36b8a58c1df187fc87e6270be2814207fc151e125fef3ef69583c0d80df7e82b",
+      "source_dimensions": [
+        1280,
+        720
+      ],
+      "role": "Grok styling template with placeholder identity, not an accepted likeness master"
+    },
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "seed": 42,
+    "seed_mode": "fixed",
+    "steps": 30,
+    "cfg": 5,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "denoise": 0.3,
+    "graphPaths": {
+      "editor": "hon_dolo_img2img_sdxl_v001.editor.json",
+      "preflight_api": "hon_dolo_img2img_sdxl_v001.preflight.api.json"
+    },
+    "rendered": false,
+    "job_submitted": false,
+    "evidenceLimit": "This record proves the SDXL img2img graph was cloud-saved and dry-run validated with these exact settings on 2026-10-04; it proves no render, no visual quality, no identity preservation, and no current Cloud availability."
+  },
+  "reportWrite": {
+    "intendedPath": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\collaborators\\work_briefs_20261010\\results\\kimi\\phase0_20261014T040020Z_0ec5aceb-a350-4f6b-93ec-d6305ebc5a8f.json",
+    "tool": "local Python open(mode='x') exclusive create",
+    "status": "pending at compose time; final status recorded by re-read below"
+  },
+  "capabilities": {
+    "filesystemRead": {
+      "state": "tested",
+      "result": "success",
+      "evidence": "exact baseline bytes read, 5103 bytes, sha256 recorded above"
+    },
+    "filesystemWrite": {
+      "state": "tested",
+      "result": "success pending re-read verification in this same script",
+      "evidence": "this report file"
+    },
+    "jsonParsing": {
+      "state": "tested",
+      "result": "success",
+      "evidence": "baseline parsed; 13 top-level keys; fields extracted without error"
+    },
+    "shell": {
+      "state": "tested",
+      "result": "success",
+      "evidence": "Git Bash + managed Python executed read/hash/list operations this session"
+    },
+    "vision": {
+      "state": "unknown",
+      "reason": "no image inspected in this task; capability self-reported by runtime, untested here"
+    },
+    "uiControl": {
+      "state": "unknown",
+      "reason": "browser/UI tooling announced in runtime but not exercised; a visible chat UI is not computer control"
+    },
+    "web": {
+      "state": "self_reported",
+      "reason": "WebSearch/FetchURL tools exist in this runtime but were not used in this task"
+    }
+  },
+  "blockers": [],
+  "nextSuggestedStep": "Bounded proposal only: after Nova verifies this report's bytes, compare Phase 0 blocker matrices across kimi/deepseek/qwen before any Phase 1 pairing; separately, my light cold-boot I_AM refresh (requested via c588df2a) can proceed without touching this frozen record."
+}

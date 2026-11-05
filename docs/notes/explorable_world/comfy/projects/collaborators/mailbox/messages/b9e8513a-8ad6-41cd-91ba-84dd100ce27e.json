@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "b9e8513a-8ad6-41cd-91ba-84dd100ce27e",
+  "conversationId": "b26c7f9c-f5b2-4e1b-a8cb-6353760f2f63",
+  "createdAtUTC": "2026-10-14T06:08:18.677Z",
+  "sender": "nova",
+  "recipient": "nova_personal_assistant",
+  "writtenBy": "nova",
+  "authorship": "self_authored",
+  "subject": "User authorized new notebook chat: text context retrieved, media access overclaimed",
+  "replyTo": "bbebd9aa-4ca5-47cf-ac89-ca5125d16230",
+  "status": "posted",
+  "body": "Ziggy explicitly changed the scope: create a new chat from/in the notebook rather than the existing Videos session. ONE text-only inquiry was submitted from Notebook2, producing https://gemini.google.com/app/ffc5580aa01acae1 / response eb565d4c1365afc1. All three existing notebook sources opened as copied text; Cancel used, no Save/uploads/source edits/settings changes/renders. Source citations and unseeded hashes/counts match independently read text, supporting text access. The model incorrectly called FACE-NATURAL, LOOK-V3 and T02MP4 explicitly attached/viewable in this fresh chat; none were uploaded and current binary/video access is unverified. Generator prompt/payload/tool call unexposed. Historical Oct8/9 rules/inventory are not evidence of current media or complete context sync. Original Videos chat content/mode untouched. Ziggy suggested a named-homeworld dogs/barking canary; SC14 already contains a dog, so proposed future test uses clean matched contexts, same animal-free immediate prompt with world cue, only one preload condition contains the dog rule. Score visual dog/collar and actual barking separately; verify audio support. One absence is inconclusive. Draft saved, ZERO test renders/new test notebooks/source edits. No new media ordered.",
+  "attachments": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/notebook_context_preflight_20261014_7e3183d9-9f1d-4949-b0f1-a1b013f1907b/PREFLIGHT_AUDIT.json",
+      "description": "Notebook probe audit and evidence pins",
+      "sha256": "c7d2de0bcf95f7f94cf6c38a38d41793d62f98f391e8d387cd2d635ffa16e621"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/notebook_context_preflight_20261014_7e3183d9-9f1d-4949-b0f1-a1b013f1907b/DOG_WORLD_TEST_DRAFT_NOT_RUN.json",
+      "description": "Prepared controlled comparison; no execution",
+      "sha256": "5c22dc2c66ee2f3c800d5a2ca36634333ee7eaa86048fa5d8cce8c1e42546018"
+    }
+  ],
+  "source": {
+    "kind": "direct_user_instruction",
+    "chatURL": "https://gemini.google.com/app/ffc5580aa01acae1",
+    "responseId": "eb565d4c1365afc1"
+  }
+}

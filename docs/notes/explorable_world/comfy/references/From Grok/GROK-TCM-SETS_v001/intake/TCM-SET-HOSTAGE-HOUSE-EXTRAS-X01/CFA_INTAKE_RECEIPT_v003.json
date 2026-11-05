@@ -1,0 +1,112 @@
+{
+  "format": "cfa-grok-image-intake-v1",
+  "project": "criminal_mind",
+  "batchID": "TCM-SET-HOSTAGE-HOUSE-EXTRAS-X01",
+  "lane": "set_round",
+  "taskID": "tcm-grok-sets-20261030",
+  "intakeRole": "site_index_receipt",
+  "sealStatus": "complete_only_when_pinned_by_required_aggregate",
+  "requiredAggregatePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/CFA_SET_INTAKE_035-118_SITE_INDEX_v003.json",
+  "supersedesReceipt": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-EXTRAS-X01/CFA_INTAKE_RECEIPT_v002.json",
+  "verifiedAtUTC": "2026-11-04T13:41:07Z",
+  "receivedAtUTC": null,
+  "receivedTimeStatus": "not_recorded_in_archive",
+  "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-EXTRAS-X01.zip",
+  "archiveSHA256": "0db43a335591b80616595c3bc40b29a8895df19f77668e581931f204ad7d601c",
+  "archiveBytes": 2588508,
+  "archiveMemberCount": 19,
+  "receivedOriginals": 1,
+  "acceptedOriginals": 0,
+  "humanVerdictsCreated": 0,
+  "selectedStartingFrames": 0,
+  "assets": [
+    {
+      "candidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-X01__P03-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSTAGE-HOUSE-EXTRAS-X01\\TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-X01__P03-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-EXTRAS-X01/TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-X01__P03-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-EXTRAS-X01.zip",
+      "archiveMember": "TCM-SET-HOSTAGE-HOUSE-EXTRAS-X01/TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-X01__P03-LS1.jpg",
+      "sha256": "1a64b83f535b7c37e41026ac81d3dd7fbf0c7cf8c507d30693486ffba98993f6",
+      "bytes": 297547,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "ADVISORY",
+        "hardTrait": "S03 HH-P03 camera spec (MAPS:L306) interior master wide from the entry door, HH-LS1; empty set, reflections show only the empty set",
+        "note": "PRELIMINARY; disclosed X-series extra (Z_10, one text-only call, per Chief order 5:32 PM ET; not selected; does not replace L36), vs L36 (V5 v038 OK) and take-1 L13 (V5 v004 OK). HARD CHECKS at 1x and 2x: no person, hand, silhouette or figure-shaped speck; no readable text, numerals or emblem; no body, blood, weapon or object on the floor; reflection in the gilt mirror shows only an empty set (curtain and sash window), no figure; windows show bare trees, nobody outside; lamp, table, jamb and mirror crops at 2x-3x clean. POSITION TEXT P03 (eye 1.6 m, 24 mm, just inside the door, down the long axis; whole living room; window wall at far end; mirror on the side wall at frame left; sofa and low table; open floor mid-room; lamp on; splintered jamb at frame edges): all present - two-window far wall, gilt mirror over marble fireplace on the LEFT wall, sofa left, table and rug centre with open floor, armchair and lit lamp right, splintered jamb big at right edge and a thin strip at left; eye height reads standing; HH-LS1 day, brighter grey overcast than L13/L36 (not a state change). Vantage is a diagonal from the right of the door toward the far-left corner (L13/L36 are symmetric through the doorway): a framing difference only. ADVISORY (disclosed continuity items, none stated in the card or README_v001, so not DRIFT): pale cream curtains at both windows; lighter green walls; cast-iron radiators under both windows (new element); the mirror on the left wall reflects a curtained window, which does not match the room layout (nothing opposite shows a window at frame right) - reads plausible at 1x, a layout question only. QUESTIONS FOR CLAUDE: are curtains, radiators and wall tone fixed across the P03/P04/P05 family or free; should the mirror reflection match the opposite wall? Disclosed extra, no retry suggested. CHECK ORDER (1) own sha256+bytes of the still first (1a64b83f535b7c37e41026ac81d3dd7fbf0c7cf8c507d30693486ffba98993f6, 297,547 B: matches V_1's re-hash), (2) maker X-series index BATCH_B3_XSERIES_HOSTAGE-HOUSE_index.tsv ed34bea321063c8eb790b44a1783b717bb8feb20668ee4f107636d0a6a87dfa7 (lists X01 and the filename) and README_XSERIES.md, with README_v001 f814ef86 as judging basis; (3) Z_6 handoff: no X01 handoff existed at freeze (the v001 handoff eec98c64 has 0 X01 rows), so no cross-check; the maker contact sheet HOSTAGE-HOUSE_X01_contact_sheet.jpg is 7e87b1895ff2f5d420fdda2510a20e587ad1a99343bed096c900d053e22a1d70. Take-1 L13 tag OK (V5 v004 15e31170).",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSTAGE-HOUSE_card_v001 (08a38154) slot S03 HH-P03 HH-LS1",
+        "judgedAgainst": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE_README_v001 f814ef86 + FIDELITY_RUBRIC_v002 4b4de5b4 + held rulings 20261102 + Addendum D + R1 ec6c2634 + R2 e6d45312",
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-EXTRAS-X01/SCREENING_ROWS_HOSTAGE-HOUSE_X01_PRELIMINARY.tsv",
+        "sourceSHA256": "467819d68a29cd9741f5413c52c5cc43d39caf10b244bbe07ea71158de4303c6",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "disclosed X-series extra, PRELIMINARY, not selected; ONE-call text-only alternative to near-duplicate TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L36 (V_5 v038 freeze of L24-L41; L36 and other family files untouched) per Chief order 5:32 PM EST; HH-P03 wording (MAPS:L306), HH-LS1. Camera 1.6 m, 24 mm, about 1 m inside the door near the RIGHT side wall, diagonal to the far-left corner (vs L13/L36 centred symmetric through the doorway with both jambs, and L37 low hinge-side diagonal): splintered jamb at right edge only; gilt mirror over marble fireplace on LEFT side wall seen at an angle; two sash windows at far end with pale curtains drawn open; much brighter grey overcast daylight; sofa left, low table on rug mid-room, armchair and side table with lamp on at right; open floor clear. Luminance diff /255: vs L36 43.7, vs L13 45.2, vs L37 44.4.",
+        "sourceVsProposal": null,
+        "defectNote": "hard-rule fails: none confirmed (mirror at 4x reflects only ceiling, green wall, pale curtain and a window - no figure, no camera; windows at 3x show bare trees only, nobody outside; side table at 6x: two small dishes and a coaster, plain, unmarked). POSSIBLES/DRIFT: the mirror reflection shows a curtained window on what would be the near/side wall (geometry not strictly consistent with the room, plausible as the far window at an angle); CONTINUITY DRIFT vs L13/L36/L37 - pale cream curtains (family has dark green drapes), lighter jade wall colour, cast-iron radiators under the windows, brighter white ceiling cornice, sofa/armchair different upholstery; the left frame edge carries a plain painted door-frame strip (unsplintered) as well as the splintered right jamb; window wall seen off-axis so 'the window wall where the man and wife will stand' reads at the upper right rather than centred; armchair and side table crowd the right foreground. Room empty, floor clear except rug.",
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-EXTRAS-X01/MAKER_BATCH_B3_XSERIES_HOSTAGE-HOUSE_index.tsv",
+        "sourceSHA256": "ed34bea321063c8eb790b44a1783b717bb8feb20668ee4f107636d0a6a87dfa7"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-X01",
+        "cameraPositionID": "HH-P03",
+        "lightState": "HH-LS1",
+        "variant": "X01",
+        "variantOf": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L36",
+        "carID": null,
+        "referenceIDs": [
+          "(none",
+          "text-only",
+          "no image references)"
+        ],
+        "servesShotsRaw": "TCM-40-05, TCM-40-06, TCM-40-07",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-40-05",
+          "TCM-40-06",
+          "TCM-40-07"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-EXTRAS-X01/MAKER_BATCH_B3_XSERIES_HOSTAGE-HOUSE_index.tsv",
+        "sourceSHA256": "ed34bea321063c8eb790b44a1783b717bb8feb20668ee4f107636d0a6a87dfa7",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSTAGE-HOUSE",
+      "providerCandidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-X01",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-40-05",
+        "TCM-40-06",
+        "TCM-40-07"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-40"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Four-months-earlier hostage house",
+      "sourceConstraints": "Exterior entry and an interior confrontation space with a mirror and clear exit. Distinct from both the childhood room and Henderson home. Time of day unspecified; label any light/time choice as a proposal."
+    }
+  ],
+  "verification": {
+    "zipCRC": true,
+    "archiveHash": true,
+    "safeMemberPaths": true,
+    "noSymlinks": true,
+    "noEncryptedMembers": true,
+    "uniqueCandidateIDs": true,
+    "indexedBytesAndHashes": true,
+    "JPEGDecode": true,
+    "humanReviewOrAcceptanceCreated": false
+  },
+  "note": "Technical receipt for unreviewed originals. It is a completed site intake only when its exact hash is pinned by the required lane aggregate. Provider/V-team screening remains attributed preliminary evidence, never a human verdict or acceptance."
+}

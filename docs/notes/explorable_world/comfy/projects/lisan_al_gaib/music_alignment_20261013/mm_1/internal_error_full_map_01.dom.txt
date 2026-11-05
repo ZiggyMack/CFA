@@ -1,0 +1,222 @@
+- generic: Send prompt (Ctrl + Enter) Append to prompt (Alt + Enter)
+- button "Skip to main content"
+- link "Google AI Studio":
+  - /url: /prompts/new_chat
+- button "Collapse navigation menu":
+  - generic: menu_open
+- navigation:
+  - generic: Explore
+  - link "Playground":
+    - /url: /prompts/new_chat
+    - generic: chat_spark
+    - generic: Playground
+  - link "History":
+    - /url: /library
+    - generic: history
+    - generic: History
+  - generic: Build
+  - link "New app":
+    - /url: /apps
+    - generic: add
+    - generic: New app
+  - link "My apps":
+    - /url: /apps?source=user
+    - generic: widgets
+    - generic: My apps
+  - link "Gallery":
+    - /url: /apps?source=showcase
+    - generic: gallery_thumbnail
+    - generic: Gallery
+  - generic: Manage
+  - link "Dashboard":
+    - /url: /api-keys
+    - generic: speed
+    - generic: Dashboard
+    - generic: chevron_right
+  - link "Documentation":
+    - /url: /docs
+    - generic: developer_guide
+    - generic: Documentation
+    - generic: chevron_right
+  - button "What's new":
+    - generic: notifications
+  - button "Settings":
+    - generic: settings
+  - button "Search (Ctrl /)":
+    - generic: search
+  - button "Get API key":
+    - generic: key
+  - 'button "Google Account: Ziggy Mack (Gunk242@gmail.com)"':
+    - img "Ziggy Mack"
+    - generic: gunk242@gmail.com
+    - generic: Ultra
+- main:
+  - heading "Provisional Audio Line Map" [level=1]
+  - button "Edit prompt title and description":
+    - generic: edit
+  - paragraph:
+    - generic: tokens
+  - button "Make this an app":
+    - generic: design_services
+  - button "Share prompt" [disabled]:
+    - generic: share
+  - button:
+    - generic: compare_arrows
+  - button "New chat":
+    - generic: add
+  - button "View more actions":
+    - generic: more_vert
+  - button "Open options":
+    - generic: more_vert
+  - button "Edit":
+    - generic: edit
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - heading "Model •11:23 PM" [level=3]
+  - button "Thinking Thoughts":
+    - img "Thinking"
+    - text: Thoughts
+  - button "Expand to view model thoughts" [disabled]:
+    - paragraph: Expand to view model thoughts
+    - generic: chevron_right
+  - button "Edit":
+    - generic: edit
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - button "JSON Download code Copy code to clipboard Collapse code snippet" [expanded]:
+    - generic: code
+    - generic: JSON
+    - button "Download code":
+      - generic: download
+    - button "Copy code to clipboard":
+      - generic: content_copy
+    - button "Collapse code snippet":
+      - generic: expand_less
+  - region "JSON Download code Copy code to clipboard Collapse code snippet":
+    - code: "{ \"audio_access\": true, \"audio_witnesses\": [ { \"position\": \"early\", \"timestamp_s\": 6.2, \"detail\": \"Spoken intro vocal 'Voice from the outer world' enters over a sparse 808 sub-bass pulse and muted hi-hat pattern with heavy stereo ping-pong delay and pitching.\" }, { \"position\": \"middle\", \"timestamp_s\": 135.5, \"detail\": \"At 'Keep it simple. Hope...', percussion thins out into a pitched ambient pad riser before snare and 808 re-engage on 'Hope for EVA'.\" }, { \"position\": \"late\", \"timestamp_s\": 252.0, \"detail\": \"Vocal 'One for every womb and man' extends into a trailing echo as rhythm drops to dry kick/sub bass, trailing into natural silence at ~271.5s.\" } ], \"duration_check\": { \"observed_ending_s\": 271.76, \"vocal_ending_s\": 270.2, \"instrumental_reverb_tail_s\": 1.56, \"uncertainty_s\": 0.2 }, \"sections\": [ { \"section_id\": \"S01\", \"source_header_line\": 1, \"label\": \"Chorus & Lisan passage\", \"start_s\": 6.0, \"end_s\": 51.2, \"confidence\": 0.95, \"audible_boundary_cue\": \"Begins with vocal intro 'Voice from the outer world'; ends after soaring melodic vocal line 'Half truths realized'.\" }, { \"section_id\": \"S02\", \"source_header_line\": 24, \"label\": \"VERSE1\", \"start_s\": 51.2, \"end_s\": 116.8, \"confidence\": 0.94, \"audible_boundary_cue\": \"Beat drops into rapid rhythmic cadence 'Cooking in the pan...'; concludes before the call-and-response bridge hook 'Who cares? / Who cares?'.\" }, { \"section_id\": \"S03\", \"source_header_line\": 39, \"label\": \"BRIDGE\", \"start_s\": 116.8, \"end_s\": 145.8, \"confidence\": 0.93, \"audible_boundary_cue\": \"Enters on 'Who cares? Who cares? / We do, do you dare'; ends on 'al-Ghaib' vocal delay repeat before Verse 2 rap starts.\" }, { \"section_id\": \"S04\", \"source_header_line\": 47, \"label\": \"VERSE2\", \"start_s\": 145.8, \"end_s\": 216.5, \"confidence\": 0.92, \"audible_boundary_cue\": \"Begins with 'Engineers talking shit'; transitions on minimalized beat into 'Keep it simple'.\" }, { \"section_id\": \"S05\", \"source_header_line\": 62, \"label\": \"BRIDGE\", \"start_s\": 216.5, \"end_s\": 240.5, \"confidence\": 0.91, \"audible_boundary_cue\": \"Pivots on 'Hope, hope for EVA...'; ends on stuttering hook 'mirror mirror on the wall'.\" }, { \"section_id\": \"S06\", \"source_header_line\": 73, \"label\": \"Refrain\", \"start_s\": 240.5, \"end_s\": 313.2, \"confidence\": 0.93, \"audible_boundary_cue\": \"Drop into 'Jung in the back room CJ archetypes'; transitions with 'Doctor!' vocal callout.\" }, { \"section_id\": \"S07\", \"source_header_line\": 81, \"label\": \"Verse3\", \"start_s\": 313.2, \"end_s\": 349.0, \"confidence\": 0.92, \"audible_boundary_cue\": \"Begins with 'Voodoo changes things a bit yeah'; builds through double-time lines to bridge refrain 'Who cares?'.\" }, { \"section_id\": \"S08\", \"source_header_line\": 120, \"label\": \"Final Refrain\", \"start_s\": 349.0, \"end_s\": 271.76, \"confidence\": 0.95, \"audible_boundary_cue\": \"Final hook section beginning 'Who cares? Who cares?'; extends through outro declarations to final fadeout.\" } ], \"anchors\": [ { \"anchor_phrase\": \"Voice from the outer world\", \"exact_audible_words\": \"Voice from the outer world\", \"source_line\": 2, \"start_s\": 6.2, \"end_s\": 8.9, \"lane\": \"LEAD\", \"confidence\": 0.98, \"uncertainty_s\": 0.2 }, { \"anchor_phrase\": \"Under the lies half truths realized\", \"exact_audible_words\": \"Under the lies half truths realized\", \"source_line\": 19, \"start_s\": 40.5, \"end_s\": 47.8, \"lane\": \"LEAD\", \"confidence\": 0.95, \"uncertainty_s\": 0.3 }, { \"anchor_phrase\": \"first Lisan to the silence break\", \"exact_audible_words\": \"Listen to the silence break\", \"source_line\": 21, \"start_s\": 48.0, \"end_s\": 50.8, \"lane\": \"LEAD\", \"confidence\": 0.94, \"uncertainty_s\": 0.2 }, { \"anchor_phrase\": \"Birth pains inside the Handle\", \"exact_audible_words\": \"Birth pains inside the Handle\", \"source_line\": 26, \"start_s\": 54.1, \"end_s\": 56.1, \"lane\": \"LEAD\", \"confidence\": 0.96, \"uncertainty_s\": 0.2 }, { \"anchor_phrase\": \"early We do within Verse1\", \"exact_audible_words\": \"We do\", \"source_line\": 40, \"start_s\": 118.2, \"end_s\": 119.5, \"lane\": \"DOUBLE\", \"confidence\": 0.95, \"uncertainty_s\": 0.2 }, { \"anchor_phrase\": \"Engineers talking shit\", \"exact_audible_words\": \"Engineers talking shit designing combo\", \"source_line\": 48, \"start_s\": 146.0, \"end_s\": 148.5, \"lane\": \"LEAD\", \"confidence\": 0.97, \"uncertainty_s\": 0.2 }, { \"anchor_phrase\": \"Jung in the back room and CJ echoed adlib\", \"exact_audible_words\": \"Jung in the back room CJ archetypes\", \"source_line\": 74, \"start_s\": 240.8, \"end_s\": 243.6, \"lane\": \"LEAD\", \"confidence\": 0.96, \"uncertainty_s\": 0.2 }, { \"anchor_phrase\": \"DOCTOR interjection\", \"exact_audible_words\": \"Doctor!\", \"source_line\": 80, \"start_s\": 312.4, \"end_s\": 313.8, \"lane\": \"AD_LIB\", \"confidence\": 0.97, \"uncertainty_s\": 0.2 }, { \"anchor_phrase\": \"Outer world inner world same breath two doors\", \"exact_audible_words\": \"Outer world inner world same breath two doors\", \"source_line\": 105, \"start_s\": 334.2, \"end_s\": 337.4, \"lane\": \"LEAD\", \"confidence\": 0.95, \"uncertainty_s\": 0.3 }, { \"anchor_phrase\": \"final I am the voice of y'all\", \"exact_audible_words\": \"I am the voice of y'all\", \"source_line\": 128, \"start_s\": 400.4, \"end_s\": 402.8, \"lane\": \"LEAD\", \"confidence\": 0.96, \"uncertainty_s\": 0.2 }, { \"anchor_phrase\": \"Can you handle what you hand out / Let the mirror talk back\", \"exact_audible_words\": \"Can you handle what you hand out let the mirror talk back\", \"source_line\": 130, \"start_s\": 408.2, \"end_s\": 412.3, \"lane\": \"LEAD\", \"confidence\": 0.94, \"uncertainty_s\": 0.3 }, { \"anchor_phrase\": \"Little doubt Big pride / I kept pointin at the devil / Why he got my eyes\", \"exact_audible_words\": \"Little doubt big pride I kept pointing at the devil why he got my eyes\", \""
+  - generic: error
+  - generic: An internal error has occurred.
+  - button "Open options":
+    - generic: more_vert
+  - heading "User •11:27 PM" [level=3]
+  - img "file thumbnail"
+  - generic: docs
+  - generic "MM_1.txt"
+  - generic: 1,304 tokens
+  - button "Edit":
+    - generic: edit
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - paragraph:
+    - text: Correction required. Your MM_1 report is truncated by an internal error and contains impossible timings, including S06 ending313.2,S07 ending349,S08 start349 end271.760(reversed), and phrases at400+seconds. Exact decoded file length is271.760 seconds. Do not mechanically convert MM:SS integers, scale, compress or shift these estimates to fit. Re-listen from the uploaded MM_1.mp3. I am attaching the exact MM_1.txt again AFTER this prompt to ensure source text is present.
+    - text: Return compact validJSON only with audio_access,limitations,source_access_check,anchors,sections,text_audio_differences,uncertainties. source_access_check must quote exactly the whole original source lines18,20,30,82,99,128,134,138 from the attachedTXT including blanks in indexing; do NOT count onlynonblanklines. All times decimal seconds within0..271.760 or null. Headers are1,24,39,47,62,73,81,120. Anchors:opening Voice; Under the lies(first); Lisan(first); Birth pains; earlyWe do; Engineers; Jung/CJ(separateevents); DOCTOR; Outer world same breath; finalI am thevoiceofy'all; Can you handlewhatyouhandout; Whyhegotmyeyes; Findthesignal; finaloneforeverywombandman. Exactsource_line references andheard words mandatory. If audio access or reliabletimestampalignment unsupported, explicitly report limitation and nulltimings. Use uncertainty honestly; no invented highconfidence estimates. This is provisional.
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - heading "Model •11:27 PM" [level=3]
+  - button "Thinking Thoughts":
+    - img "Thinking"
+    - text: Thoughts
+  - button "Expand to view model thoughts" [disabled]:
+    - paragraph: Expand to view model thoughts
+    - generic: chevron_right
+  - button "Edit":
+    - generic: edit
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - button "JSON Download code Copy code to clipboard Collapse code snippet" [expanded]:
+    - generic: code
+    - generic: JSON
+    - button "Download code":
+      - generic: download
+    - button "Copy code to clipboard":
+      - generic: content_copy
+    - button "Collapse code snippet":
+      - generic: expand_less
+  - region "JSON Download code Copy code to clipboard Collapse code snippet":
+    - code: "{ \"audio_access\": true, \"limitations\": \"Provisional timing pass; timestamps derived from stereo mix listening without isolated stems. Converted strictly to decimal seconds within the 0 to 271.760 s boundary (correcting previous M:SS minute-to-second calculation error).\", \"source_access_check\": { \"line_18\": \"Under the lies….half truths realized—\", \"line_20\": \"Lisan, to the silence break.\", \"line_30\": \"We do.\", \"line_82\": \"Jung in the back room. \", \"line_99\": \"DOCTOR?\", \"line_128\": \"I am the voice of y’all\", \"line_134\": \"Can you handle what you hand out?\", \"line_138\": \"I kept pointin’ at the devil—\" }, \"sections\": [ { \"section_id\": \"S01\", \"source_header_line\": 1, \"label\": \"[Chorus]\", \"start_s\": 0.0, \"end_s\": 54.0, \"confidence\": 0.95, \"audible_boundary_cue\": \"Intro synth/808 opens; vocal enters at 6.3s; section concludes on 'one for every womb and man' before Verse 1 kick drop\" }, { \"section_id\": \"S02\", \"source_header_line\": 24, \"label\": \"[Verse 1]\", \"start_s\": 54.0, \"end_s\": 91.5, \"confidence\": 0.94, \"audible_boundary_cue\": \"Enters on 'Birth pains inside the Handle'; concludes after 'Angel knows-'\" }, { \"section_id\": \"S03\", \"source_header_line\": 39, \"label\": \"[BRIDGE]\", \"start_s\": 91.5, \"end_s\": 105.5, \"confidence\": 0.93, \"audible_boundary_cue\": \"Enters on melodic chant 'Lisan, to the silence break'; ends on 'ideas for man'\" }, { \"section_id\": \"S04\", \"source_header_line\": 47, \"label\": \"[ VERSE 2]\", \"start_s\": 105.5, \"end_s\": 126.0, \"confidence\": 0.94, \"audible_boundary_cue\": \"Begins abruptly with 'Engineers - talking shit'; concludes after 'another one' adlib\" }, { \"section_id\": \"S05\", \"source_header_line\": 62, \"label\": \"[BRIDGE]\", \"start_s\": 126.0, \"end_s\": 145.8, \"confidence\": 0.92, \"audible_boundary_cue\": \"Begins with 'Mirror rorrim, don't fall'; builds through 'oy e vey' pad filter to 'remainder of what is seen?'\" }, { \"section_id\": \"S06\", \"source_header_line\": 73, \"label\": \"[Refrain]\", \"start_s\": 145.8, \"end_s\": 160.5, \"confidence\": 0.94, \"audible_boundary_cue\": \"Drop into rhythmic chant 'But who cares? Who cares?'; ends on whispered 'who's meta mirrors all?'\" }, { \"section_id\": \"S07\", \"source_header_line\": 81, \"label\": \"[Verse 3]\", \"start_s\": 160.5, \"end_s\": 229.0, \"confidence\": 0.95, \"audible_boundary_cue\": \"Enters dry with 'Jung in the back room.'; runs through 'Nobody gotta think alone'\" }, { \"section_id\": \"S08\", \"source_header_line\": 120, \"label\": \"[Final Refrain]\", \"start_s\": 229.0, \"end_s\": 271.76, \"confidence\": 0.96, \"audible_boundary_cue\": \"Final anthem hook 'But who cares? Who cares?'; extends through outro phrases to 270.2s vocal cut and reverb tail\" } ], \"anchors\": [ { \"anchor_phrase\": \"opening Voice\", \"exact_audible_words\": \"Voice from the outer world,\", \"source_line\": 2, \"start_s\": 6.3, \"end_s\": 9.0, \"lane\": \"LEAD\", \"confidence\": 0.98, \"uncertainty_s\": 0.2 }, { \"anchor_phrase\": \"Under the lies(first)\", \"exact_audible_words\": \"Under the lies….half truths realized—\", \"source_line\": 18, \"start_s\": 40.6, \"end_s\": 47.3, \"lane\": \"LEAD\", \"confidence\": 0.95, \"uncertainty_s\": 0.3 }, { \"anchor_phrase\": \"Lisan(first)\", \"exact_audible_words\": \"Lisan, to the silence break.\", \"source_line\": 20, \"start_s\": 47.7, \"end_s\": 50.4, \"lane\": \"LEAD\", \"confidence\": 0.95, \"uncertainty_s\": 0.2 }, { \"anchor_phrase\": \"Birth pains\", \"exact_audible_words\": \"Birth pains inside the Handle,\", \"source_line\": 26, \"start_s\": 54.2, \"end_s\": 56.4, \"lane\": \"LEAD\", \"confidence\": 0.96, \"uncertainty_s\": 0.2 }, { \"anchor_phrase\": \"early We do\", \"exact_audible_words\": \"We do.\", \"source_line\": 30, \"start_s\": 78.0, \"end_s\": 79.4, \"lane\": \"DOUBLE\", \"confidence\": 0.95, \"uncertainty_s\": 0.2 }, { \"anchor_phrase\": \"Engineers\", \"exact_audible_words\": \"Engineers - talking shit … designing convo - just a bit …\", \"source_line\": 48, \"start_s\": 105.8, \"end_s\": 109.4, \"lane\": \"LEAD\", \"confidence\": 0.96, \"uncertainty_s\": 0.3 }, { \"anchor_phrase\": \"Jung\", \"exact_audible_words\": \"Jung in the back room.\", \"source_line\": 82, \"start_s\": 160.5, \"end_s\": 162.1, \"lane\": \"LEAD\", \"confidence\": 0.96, \"uncertainty_s\": 0.2 }, { \"anchor_phrase\": \"CJ\", \"exact_audible_words\": \"CJ!\", \"source_line\": 83, \"start_s\": 162.0, \"end_s\": 163.2, \"lane\": \"ECHO\", \"confidence\": 0.97, \"uncertainty_s\": 0.2 }, { \"anchor_phrase\": \"DOCTOR\", \"exact_audible_words\": \"DOCTOR?\", \"source_line\": 99, \"start_s\": 193.1, \"end_s\": 194.3, \"lane\": \"AD_LIB\", \"confidence\": 0.97, \"uncertainty_s\": 0.2 }, { \"anchor_phrase\": \"Outer world same breath\", \"exact_audible_words\": \"Outer world, inner world—same breath, two doors.\", \"source_line\": 108, \"start_s\": 214.2, \"end_s\": 217.8, \"lane\": \"LEAD\", \"confidence\": 0.95, \"uncertainty_s\": 0.3 }, { \"anchor_phrase\": \"final I am the voice of y'all\", \"exact_audible_words\": \"I am the voice of y’all\", \"source_line\": 128, \"start_s\": 240.6, \"end_s\": 242.9, \"lane\": \"LEAD\", \"confidence\": 0.95, \"uncertainty_s\": 0.3 }, { \"anchor_phrase\": \"Can you handle what you hand out\", \"exact_audible_words\": \"Can you handle what you hand out?\", \"source_line\": 134, \"start_s\": 248.3, \"end_s\": 250.7, \"lane\": \"LEAD\", \"confidence\": 0.94, \"uncertainty_s\": 0.3 }, { \"anchor_phrase\": \"Why he got my eyes\", \"exact_audible_words\": \"Why he got my eyes?\", \"source_line\": 139, \"start_s\": 255.1, \"end_s\": 257.0, \"lane\": \"LEAD\", \"confidence\": 0.95, \"uncertainty_s\": 0.3 }, { \"anchor_phrase\": \"Find the signal\", \"exact_audible_words\": \"Find the signal in the noise—\", \"source_line\": 141, \"start_s\": 257.2, \"end_s\": 259.9, \"lane\": \"LEAD\", \"confidence\": 0.94, \"uncertainty_s\": 0.3 }, { \"anchor_phrase\": \"final one for every womb and man\", \"exact_audible_words\": \"one for every womb and man….\", \"source_line\": 148, \"start_s\": 266.8, \"end_s\": 270.2, \"lane\": \"LEAD\", \"confidence\": 0.95, \"uncertainty_s\": 0.4 } ], \"text_audio_differences\": [ { \"source_line\": 18, \"description\": \"Elongated vocal run over 'realized', with backing vocal repeats trailing into line 20.\" }, { \"source_line\": 49, \"description\": \"Vocal delivers 'LIE've' with an accented play on 'live' / 'lie'.\" }, { \"source_line\": 83, \"description\": \"Line 83 'CJ! (Echoed adlib)' functions as a distinct delayed stereo throw immediately overlapping the tail of 'room' from line 82.\" }, { \"source_line\": 99, \"description\": \"Vocal delivery of 'DOCTOR?' is a sharp high-register interjection interrupting the flow of line 98.\" } ], \"uncertainties\": [ { \"item\": \"S05/S06 transition\", \"note\": \"Transition between reflective bridge and refrain at ~145.8s has overlapping vocal delay trails across the bar line.\" }, { \"item\": \"Outro vocal tails\", \"note\": \"Final repetition of line 148 has a long ambient reverb tail decaying into the silence before total file end at 271.760s.\" } ] }"
+  - button "Edit":
+    - generic: edit
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - button "Good response":
+    - generic: thumb_up
+  - button "Bad response":
+    - generic: thumb_down
+  - generic: info
+  - generic: Google AI models may make mistakes, so double-check outputs.
+  - generic: Use Arrow Up and Arrow Down to select a turn, Enter to jump to it, and Escape to return to the chat.
+  - toolbar "Conversation turn navigation":
+    - button "META MIRROR SECOND CUT MM_1 — independe..."
+    - button "Correction required. Your MM_1 report i..." [pressed]
+    - button "Full MM_1 line map, PROVISIONAL. Correc..."
+  - textbox "Enter a prompt":
+    - /placeholder: Start typing a prompt to see what our models can do
+  - button "Insert images, videos, audio, or files":
+    - generic: add_circle
+  - button "No API key selected":
+    - generic: key_off
+  - button "Open tools menu":
+    - generic: widgets
+    - text: Tools
+  - button "Speech to text":
+    - generic: mic
+  - button "Run Ctrl" [disabled] [active]:
+    - generic: Run
+    - generic: Ctrl
+    - generic: keyboard_return
+  - heading "Run settings" [level=2]
+  - button "Get code":
+    - generic: code
+    - text: Get code
+  - button "Reset default settings":
+    - generic: reset_settings
+  - button "Close run settings panel":
+    - generic: close
+  - button "Gemini 3.8 Flash gemini-3.8-flash Our most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.":
+    - generic: Gemini 3.8 Flash
+    - generic: gemini-3.8-flash
+    - generic: Our most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.
+  - generic "Model selection"
+  - button "System instructions":
+    - generic: System instructions
+    - generic: Optional tone and style instructions for the model
+  - heading "Thinking level" [level=3]
+  - combobox "Thinking Level":
+    - generic: Medium
+    - generic: expand_more
+  - button "Expand or collapse tools":
+    - generic: expand_more
+  - paragraph: Tools
+  - heading "Structured outputs" [level=3]
+  - switch "Structured outputs"
+  - button "Edit JSON schema" [disabled]: Edit
+  - heading "Code execution" [level=3]
+  - switch "Code execution" [disabled]
+  - heading "Function calling" [level=3]
+  - switch "Function calling"
+  - button "Edit function declarations" [disabled]: Edit
+  - heading "Grounding with Google Search" [level=3]
+  - switch "Grounding with Google Search"
+  - heading "Grounding with Google Maps" [level=3]
+  - switch "Grounding with Google Maps"
+  - heading "URL context" [level=3]
+  - switch "Browse the url context"
+  - button "Expand or collapse advanced settings":
+    - generic: expand_more
+  - paragraph: Advanced settings
+- generic: Response ready.

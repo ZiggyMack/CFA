@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "recordType": "bounded-provider-preflight",
+  "preparedAtUTC": "2026-10-14T01:58:36.661037+00:00",
+  "project": "Lisan Al Gaib / Meta Mirror",
+  "shotID": "SW-2",
+  "shotTitle": "The rise",
+  "preparer": "CFA Nova helper; root remains sole Flow/Claude/Gemini UI operator",
+  "recordScope": "Preparation snapshot only: one Flow clip using the selected repaired starting frame. No provider interaction was performed by the preparer.",
+  "sourcePins": {
+    "selectedStartFrame": {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-1K-C13/C13-sandworm-rising/repairs/C13-04_Z_1_R1-try5-patch-c.jpg",
+      "bytes": 447799,
+      "sha256": "23817577d3d32f0df03d57ac1e49c4c85246e86c405b13c492194f7aa2f52bad"
+    },
+    "retainedOriginal": {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-1K-C13/C13-sandworm-rising/C13-04_Z_1.jpg",
+      "bytes": 268027,
+      "sha256": "7eafd9ac048dc6d6125dc38281c1b664f7ae0cac1159909c34d90a5e3eef93a3"
+    },
+    "creativeHandoff": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/FIRST_CLIP_HANDOFF_20261014.md",
+      "bytes": 7189,
+      "sha256": "ae735ec2f2a7cd8e6c8f63f10f476d41cd2d31bc3d5ff69f1bef8279ead90e8f"
+    },
+    "separatelyRequestedCompanion": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part03/LAG-L19-fire-trial-armor.zip.contents/LAG-L19-fire-trial-armor/LAG-L19-fire-trial-armor__S3-worm-vs-harvester.jpg",
+      "bytes": 388976,
+      "sha256": "b26aa61a04528cd8c3ef820ccc946e74738db634f29aed018286c138efd8bb09"
+    }
+  },
+  "pinsIndependentlyVerifiedAtUTC": "2026-10-14T01:58:36.661037+00:00",
+  "authorship": {
+    "creativeHandoff": "Claude, lead writer",
+    "promptAdaptation": "CFA Nova root; exact supplied wording retained",
+    "helperRole": "Verify pins and write new preparation artifacts only"
+  },
+  "creativeHandoffInterpretation": {
+    "eyes": "On the lens; no past-lens adaptation.",
+    "sourceAndLightAndSide": "Corrected handoff replaces base fields 2, 4a and 5: repaired patch-c, diffuse warm haze without sun disc, worm screen-right.",
+    "action": "One vertical rise, approximately one apparent maw-height; one slow breath; at most one blink.",
+    "nativeDuration": "Eight seconds permitted by the selected UI mode.",
+    "audio": "Silent prompt is a request, not evidence of a silent returned file."
+  },
+  "authorizationEvidence": {
+    "sourceChoice": {
+      "route": "Direct user asynchronous question reply",
+      "questionItemID": "[\"request_user_input_async\",\"call_615d88e37e154383a33e7d84716f5740\",0]",
+      "answer": "Use repaired patch-c (Recommended)",
+      "scope": "Starting source for the short sandworm-rise prototype; keep both original and repaired files. No character-canon or whole-look acceptance inferred."
+    },
+    "imageRights": {
+      "route": "Direct user asynchronous question reply",
+      "questionItemID": "[\"request_user_input_async\",\"call_56caf0ee093b4983a15e2b00439459f7\",0]",
+      "answer": "I agree—accept this image-rights notice",
+      "scope": "Flow current Rights to use this image notice for C13-04 patch-c.",
+      "rootReportedUIState": "Rights notice cleared on the next UI read without a root click; selected image uploaded and bound as START frame."
+    },
+    "executionAuthority": "Existing bounded prototype authority is assessed by root. Source preference and rights assent do not confer additional batch, retry, generation or spending authority."
+  },
+  "uiObservation": {
+    "reportedBy": "CFA Nova root, sole UI operator",
+    "reportRecordedAtUTC": "2026-10-14T01:58:36.661037+00:00",
+    "observedAtUTC": null,
+    "independentlyObservedByHelper": false,
+    "provider": "Google Flow",
+    "projectID": "61e89a80-1bff-4ac3-8cdd-0c298b7a3385",
+    "projectTitle": "Lisan Al Gaib Meta Mirror SW2 The Rise",
+    "projectURL": "https://flow.google.com/project/61e89a80-1bff-4ac3-8cdd-0c298b7a3385",
+    "directAgent": "off",
+    "mediaMode": "VIDEO",
+    "conditioningMode": "FRAMES",
+    "startFrameBinding": "Selected patch-c image uploaded and bound, as reported by root",
+    "modelLabel": "Omni 1.1 Flash",
+    "resolutionLabel": "720p",
+    "aspectRatioLabel": "16:9",
+    "durationSecondsLabel": 8,
+    "outputCount": 1,
+    "displayedCost": {
+      "value": 12,
+      "unit": "Flow credits",
+      "scope": "UI quote before generation; actual debit not yet measured"
+    },
+    "accountBalanceBeforeGenerationReported": 25050,
+    "nativeModelRevision": null,
+    "actualReturnedFrameRate": null,
+    "actualReturnedResolution": null,
+    "actualReturnedDurationSeconds": null,
+    "actualReturnedAudioPresent": null
+  },
+  "promptCandidate": {
+    "path": "ACTUAL_PROMPT_CANDIDATE.txt",
+    "bytes": 1245,
+    "sha256": "20b5a0e2be1c267c3db5c8ba42082313256f686129408b337574c0a3d7783fa6",
+    "wordCount": 204,
+    "status": "Candidate, not submitted. Root must preserve actual submitted prompt and execution evidence separately."
+  },
+  "execution": {
+    "statusAsOfRootBriefing": "Start not clicked; no result yet.",
+    "providerExecutionClaimed": false,
+    "submittedPromptClaimed": false,
+    "jobID": null,
+    "outputPath": null,
+    "outputSHA256": null,
+    "actualCreditDebit": null,
+    "automaticRetries": false,
+    "outputCountBound": 1
+  },
+  "preservationChecks": [
+    "Compare source against first, last and sampled returned frames: face geometry, AL, vertical G-A-I-B, paired segmented worms and throat eye-disc, blue eyes.",
+    "Existing ear hoops remain on the same ear; no added or removed jewelry or changed tattoos.",
+    "Dark shirt, cloak and single chain remain constant; inherited wardrobe and composition details are not repaired in this motion test.",
+    "One worm, maw screen-right, vertical rise only, same maw/teeth; no lunge, lateral move or second worm.",
+    "Closed mouth, no speech or singing, eyes on lens, one breath, at most one blink; no head turn, step or hand gesture.",
+    "Fixed eye-height camera; no zoom, push, cut or added characters/objects/text/watermarks. Preserve diffuse warm haze and dark maw interior.",
+    "Measure actual duration, FPS, resolution and audio stream presence after verified local receipt. Prompt silence and UI selector labels do not establish returned media properties.",
+    "Normal-speed playback and sampled-frame review precede any acceptance; provider completion is distinct from receipt, verification, review and human acceptance."
+  ],
+  "catalogChoice": {
+    "owner": "CFA SITE INDEX",
+    "durableUIRecordStatus": "Pending at this preparation checkpoint; source preference is direct user evidence, not a claim that Site publication is complete.",
+    "siteEditedByHelper": false
+  },
+  "separatelyRequestedCompanion": {
+    "assetLabel": "L19 / S3 worm vs harvester",
+    "status": "User requested a companion test; creative brief and separate run remain pending. Not used as this first starting frame.",
+    "promptPrepared": false,
+    "executionClaimed": false
+  },
+  "methodPointers": [
+    "docs/notes/explorable_world/comfy/workflows/README.md#choose-by-problem",
+    "../Pan_Handlers/Help/content/video_routes.py:image_to_video",
+    "../Pan_Handlers/Help/guides/video_handoff.py",
+    "docs/notes/explorable_world/pathfinder_handoff/README.md"
+  ],
+  "storage": "New artifacts only in project-owned D: storage; repository-relative paths in this record. No source/media copies or edits."
+}

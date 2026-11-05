@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUTC": "2026-10-14T11:50:50.324619Z",
+  "scope": [
+    "D:/Documents/VUDU_Fidelity",
+    "D:/Documents/WHO_CARES"
+  ],
+  "method": {
+    "gitOptionalLocks": "0",
+    "gitTerminalPrompt": "0",
+    "gcmInteractive": "Never",
+    "gitCredentialInteractive": "false",
+    "gitReads": "Host-user read-only execution after sandbox ownership check; no safe.directory exception or Git settings change",
+    "freshRemoteCommand": "git ls-remote only, no fetch or local ref update",
+    "inventory": "Git-listed tracked/untracked/ignored paths plus file stat metadata; source/media/secrets contents not read"
+  },
+  "guidance": {
+    "checkedAGENTS": [
+      "D:/AGENTS.md",
+      "D:/Documents/AGENTS.md",
+      "D:/Documents/VUDU_Fidelity/AGENTS.md",
+      "D:/Documents/WHO_CARES/AGENTS.md"
+    ],
+    "applicableAGENTSFound": [],
+    "nestedAGENTSFound": [],
+    "readmePaths": [
+      "D:/Documents/VUDU_Fidelity/README.md",
+      "D:/Documents/WHO_CARES/README.md"
+    ]
+  },
+  "supersededFailedEvidence": {
+    "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/VUDU_WHOCARES_GIT.json",
+    "bytes": 8169,
+    "sha256": "6a53437dba81e197a19d97b9f2d0f6e7e370b08a86dc7340fc1e579bab2a61f0",
+    "qualification": "Initial sandbox Git reads failed ownership checks. Its zero inventory counts are UNAVAILABLE results, not absence of files, media or coverage. This original failed evidence is preserved unchanged."
+  },
+  "repositories": [
+    {
+      "root": "D:/Documents/VUDU_Fidelity",
+      "canonicalRepositoryName": "VUDU_Fidelity",
+      "spokenAlias": "Lulu Fidelity",
+      "identityEvidence": {
+        "readmeTitle": "# EXP3 Human Validation - Streamlit App",
+        "directoryAlias": "VUDU_Fidelity",
+        "sanitizedRemoteURL": "https://github.com/ZiggyMack/VUDU_Fidelity.git",
+        "readmeMechanism": "README deployment option says push folder to GitHub and connect GitHub to Streamlit Cloud; this is deployment guidance, not backup execution evidence"
+      },
+      "localGitCheckedAtUTC": "2026-10-14T11:22:59.485465Z",
+      "head": "6dc8b810fdea4c2bc110da28e504c3deeb97a6c3",
+      "branch": "main",
+      "upstream": "origin/main",
+      "upstreamBranchRef": "refs/heads/main",
+      "cachedUpstreamCommit": "6dc8b810fdea4c2bc110da28e504c3deeb97a6c3",
+      "cachedAheadBehind": {
+        "ahead": 0,
+        "behind": 0
+      },
+      "freshRemote": {
+        "checkStartedUTC": "2026-10-14T11:22:59.917314Z",
+        "checkCompletedUTC": "2026-10-14T11:23:17.708223Z",
+        "exitCode": 0,
+        "ref": "refs/heads/main",
+        "commit": "6dc8b810fdea4c2bc110da28e504c3deeb97a6c3",
+        "headMatchesFreshRemote": true,
+        "cachedUpstreamMatchesFreshRemote": true
+      },
+      "headCommitDate": "2025-12-14T06:13:24-05:00",
+      "pushTimestampUTC": null,
+      "pushTimestampQualification": "Unknown; commit date does not establish push date",
+      "workingTree": {
+        "trackedChangeCount": 2,
+        "trackedChanges": [
+          {
+            "status": " M",
+            "path": ".claude/settings.local.json",
+            "contentsRead": false
+          },
+          {
+            "status": " D",
+            "path": "NYQUIST_SYNC/IN/EXP3_Review_Feedback.md",
+            "contentsRead": false
+          }
+        ],
+        "untrackedFileCount": 1
+      },
+      "inventories": {
+        "trackedPresent": {
+          "files": 56,
+          "bytes": 529546,
+          "mediaFiles": 0,
+          "mediaBytes": 0,
+          "archiveFiles": 0,
+          "archiveBytes": 0,
+          "newestModifiedUTC": "2025-12-14T11:13:14.405685Z",
+          "byRoot": {
+            ".claude": {
+              "files": 1,
+              "bytes": 5885,
+              "newestModifiedUTC": "2025-12-14T11:10:53.211044Z"
+            },
+            "(root files)": {
+              "files": 12,
+              "bytes": 114020,
+              "newestModifiedUTC": "2025-12-14T11:13:14.405685Z"
+            },
+            "NYQUIST_SYNC": {
+              "files": 26,
+              "bytes": 332451,
+              "newestModifiedUTC": "2025-12-14T10:01:04.736377Z"
+            },
+            "dashboard": {
+              "files": 17,
+              "bytes": 77190,
+              "newestModifiedUTC": "2025-12-13T18:52:22.814913Z"
+            }
+          },
+          "qualification": "Present files only; tracked deletion listed separately"
+        },
+        "untracked": {
+          "files": 1,
+          "bytes": 10212,
+          "mediaFiles": 0,
+          "mediaBytes": 0,
+          "archiveFiles": 0,
+          "archiveBytes": 0,
+          "newestModifiedUTC": "2025-12-13T15:47:57.270876Z",
+          "byRoot": {
+            "NYQUIST_SYNC": {
+              "files": 1,
+              "bytes": 10212,
+              "newestModifiedUTC": "2025-12-13T15:47:57.270876Z"
+            }
+          }
+        },
+        "ignored": {
+          "files": 0,
+          "bytes": 0,
+          "mediaFiles": 0,
+          "mediaBytes": 0,
+          "archiveFiles": 0,
+          "archiveBytes": 0,
+          "byRoot": {}
+        }
+      },
+      "lfs": {
+        "commandExitCode": 0,
+        "listedFiles": null,
+        "qualification": "git lfs ls-files --json returned files:null; no tracked LFS file entries"
+      },
+      "trackedGitattributes": [],
+      "filesystemStaging": {
+        "path": "D:/Documents/VUDU_Fidelity/.tmp.driveupload",
+        "exists": true,
+        "entryCount": 0,
+        "checkedAtUTC": "2026-10-14T11:45:01.144074Z",
+        "qualification": "Empty staging directory by stat/list metadata; neither upload receipt nor remote Drive backup proof"
+      },
+      "finding": "Committed main tip is freshly equal to origin/main; two tracked working-tree changes and one untracked file remain outside that committed snapshot. No media extension files were found in the Git-listed scope. Actual backup automation/push date/Drive state unknown."
+    },
+    {
+      "root": "D:/Documents/WHO_CARES",
+      "canonicalRepositoryName": "WHO_CARES",
+      "spokenAlias": "Who Cares",
+      "identityEvidence": {
+        "readmeTitle": "# WHO CARES? — Discord edition",
+        "directoryAlias": "WHO_CARES",
+        "sanitizedRemoteURL": "https://github.com/ZiggyMack/WHO_CARES.git",
+        "readmeMechanism": "README describes Discord and Streamlit deployment surfaces; it does not document an automatic backup schedule"
+      },
+      "localGitCheckedAtUTC": "2026-10-14T11:23:20.382506Z",
+      "head": "baf2e2233b475c1fa07728cbb4495a5e33e80f14",
+      "branch": "claude/phase1-table",
+      "upstream": null,
+      "upstreamBranchRef": null,
+      "cachedUpstreamCommit": null,
+      "cachedAheadBehind": null,
+      "freshRemote": {
+        "checkStartedUTC": "2026-10-14T11:42:04.358451Z",
+        "checkCompletedUTC": "2026-10-14T11:42:11.564028Z",
+        "exitCode": 0,
+        "requestedRefs": [
+          "HEAD",
+          "refs/heads/main",
+          "refs/heads/claude/phase1-table"
+        ],
+        "defaultBranch": "refs/heads/main",
+        "HEAD": "baf2e2233b475c1fa07728cbb4495a5e33e80f14",
+        "main": "baf2e2233b475c1fa07728cbb4495a5e33e80f14",
+        "exactCurrentBranchReturned": false,
+        "headMatchesFreshDefaultMain": true,
+        "qualification": "Current branch has no configured upstream. Exact current branch ref was not returned, but the committed HEAD equals the fresh remote default/main commit; no inference of unsynced committed work or resync requirement from branch name alone."
+      },
+      "localRefInventoryCheckedAtUTC": "2026-10-14T11:42:11.564028Z",
+      "localRefs": [
+        {
+          "ref": "refs/heads/claude/phase1-table",
+          "commit": "baf2e2233b475c1fa07728cbb4495a5e33e80f14",
+          "upstream": null
+        },
+        {
+          "ref": "refs/heads/main",
+          "commit": "baf2e2233b475c1fa07728cbb4495a5e33e80f14",
+          "upstream": "refs/remotes/origin/main"
+        },
+        {
+          "ref": "refs/remotes/origin/HEAD",
+          "commit": "baf2e2233b475c1fa07728cbb4495a5e33e80f14"
+        },
+        {
+          "ref": "refs/remotes/origin/main",
+          "commit": "baf2e2233b475c1fa07728cbb4495a5e33e80f14"
+        }
+      ],
+      "headCommitDate": "2026-09-12T01:22:58Z",
+      "pushTimestampUTC": null,
+      "pushTimestampQualification": "Unknown; commit date does not establish push date",
+      "workingTree": {
+        "trackedChangeCount": 1,
+        "trackedChanges": [
+          {
+            "status": " M",
+            "path": "package.json",
+            "contentsRead": false
+          }
+        ],
+        "untrackedFileCount": 13
+      },
+      "inventories": {
+        "trackedPresent": {
+          "files": 33,
+          "bytes": 152221,
+          "mediaFiles": 0,
+          "mediaBytes": 0,
+          "archiveFiles": 0,
+          "archiveBytes": 0,
+          "newestModifiedUTC": "2026-09-12T10:56:49.532523Z",
+          "byRoot": {
+            "(root files)": {
+              "files": 8,
+              "bytes": 32879
+            },
+            ".streamlit": {
+              "files": 1,
+              "bytes": 140
+            },
+            "activity": {
+              "files": 1,
+              "bytes": 1228
+            },
+            "data": {
+              "files": 1,
+              "bytes": 4220
+            },
+            "python": {
+              "files": 14,
+              "bytes": 62208
+            },
+            "scripts": {
+              "files": 1,
+              "bytes": 1275
+            },
+            "src": {
+              "files": 6,
+              "bytes": 43733
+            },
+            "test": {
+              "files": 1,
+              "bytes": 6538
+            }
+          }
+        },
+        "untracked": {
+          "files": 13,
+          "bytes": 156482,
+          "mediaFiles": 0,
+          "mediaBytes": 0,
+          "archiveFiles": 0,
+          "archiveBytes": 0,
+          "newestModifiedUTC": "2026-09-12T17:08:14.042154Z",
+          "byRoot": {
+            "activity": {
+              "files": 11,
+              "bytes": 94981,
+              "newestModifiedUTC": "2026-09-12T11:11:36.573597Z"
+            },
+            "docs": {
+              "files": 1,
+              "bytes": 17070,
+              "newestModifiedUTC": "2026-09-12T17:08:14.042154Z"
+            },
+            "(root files)": {
+              "files": 1,
+              "bytes": 44431,
+              "newestModifiedUTC": "2026-09-12T10:51:44.076516Z",
+              "filename": "package-lock.json"
+            }
+          }
+        },
+        "ignored": {
+          "files": 4892,
+          "bytes": 40752177,
+          "mediaFiles": 0,
+          "mediaBytes": 0,
+          "archiveFiles": 0,
+          "archiveBytes": 0,
+          "newestModifiedUTC": "2026-09-12T10:51:44.112077Z",
+          "byRoot": {
+            "node_modules": {
+              "files": 4892,
+              "bytes": 40752177,
+              "newestModifiedUTC": "2026-09-12T10:51:44.112077Z"
+            }
+          }
+        }
+      },
+      "lfs": {
+        "commandExitCode": 0,
+        "listedFiles": null,
+        "qualification": "git lfs ls-files --json returned files:null; no tracked LFS file entries"
+      },
+      "trackedGitattributes": [],
+      "filesystemStaging": {
+        "path": "D:/Documents/WHO_CARES/.tmp.driveupload",
+        "exists": true,
+        "entryCount": 0,
+        "checkedAtUTC": "2026-10-14T11:45:01.144074Z",
+        "qualification": "Empty staging directory by stat/list metadata; neither upload receipt nor remote Drive backup proof"
+      },
+      "finding": "Committed HEAD is freshly present at remote main, although local work branch has no upstream and its exact remote ref was not returned. Modified package.json, 13 untracked files and ignored node_modules are not part of this committed snapshot. No media extension files were found in the Git-listed scope. Actual backup automation/push date/Drive state unknown."
+    }
+  ],
+  "limits": [
+    "No fetch, ref update, Git settings changes, commit, push, upload, backup, move or deletion.",
+    "Fresh remote tips verify committed object equality only, not current working-tree backup or timed synchronization jobs.",
+    "Media inventory covers filename extensions .jpg,.jpeg,.png,.gif,.webp,.svg,.bmp,.tif,.tiff,.mp4,.mov,.mkv,.webm,.avi,.m4v,.mp3,.wav,.m4a,.aac,.flac,.ogg,.aiff,.opus,.blend,.psd,.heic,.avif in Git-listed paths; no contents inspected.",
+    "Git LFS metadata and tracked .gitattributes only; absence does not prove remote Drive or other backup coverage.",
+    "The .tmp.driveupload directory name is staging evidence only. Root owns Drive comparison.",
+    "Default-sandbox Git follow-up at11:45 was again denied by ownership guard; it supplies no corrected Git counts. Verified Git results above come exclusively from successful host-user reads."
+  ]
+}

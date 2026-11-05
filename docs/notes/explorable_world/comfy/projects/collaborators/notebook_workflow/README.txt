@@ -37,3 +37,6 @@ approved_sources/: current material approved for a defined role and destination.
 promotions/: immutable decision history linking source, review and approved revision.
 
 All template IDs are placeholders. No automatic approval, processing, upload or synchronization is implemented. No media masters or Nyquist source files were copied into this folder.
+
+GEMINI VIDEO SOURCE CONTEXT - OCTOBER 14
+Read GEMINI_CLIP_SOURCES.txt before preparing a short Gemini clip. Ziggy reviewed the Bellglass source-only visual cue result and directs clip-specific active source packs, with the full story retained separately and critical requirements repeated in the prompt. The note links the exact result and human review; source_packet/CLIP_SOURCE_PACK.template.txt records the scoped selection.

@@ -1,0 +1,40 @@
+{
+  "checkedAtUTC": "2026-10-14T01:52:23.209895+00:00",
+  "passed": true,
+  "results": [
+    {
+      "name": "mission_links",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"origins\":[\"file:\",\"localhost http:\"],\"routeChecks\":4,\"routeCounts\":[40,90],\"hashLinksTargetCurrentViewer\":true,\"relativeBriefBasePreserved\":true,\"unsafeLinksRejected\":true,\"likenessAndSceneControls\":true,\"reviewWrites\":0,\"browserVisualQA\":false}\n{\"passed\":true,\"exactFileChecks\":15,\"entryPages\":5,\"localFiles\":20,\"reviewWrites\":0,\"browserVisualQA\":false,\"harnessOnlyAdaptations\":[\"current hook extraction\",\"named unsafe fixture\"]}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_source_comparison_publication.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":[\"exact sources and labels\",\"task route\",\"full-source pair\",\"independent source links\",\"thumbnail/source separation\",\"review/favorite/basket/scope preservation\"],\"catalogMode\":\"generated catalog\",\"browserVisualQA\":false,\"route\":\"#lisan/review_queue\",\"images\":[{\"id\":\"LAG-C13-ORIGINAL-7eafd9ac048d\",\"label\":\"ORIGINAL\",\"src\":\"file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/references/From%20Grok/GROK-LAG-1K-C13/C13-sandworm-rising/C13-04_Z_1.jpg\",\"sha256\":\"7eafd9ac048dc6d6125dc38281c1b664f7ae0cac1159909c34d90a5e3eef93a3\",\"bytes\":268027},{\"id\":\"LAG-C13-PATCH-C-23817577d3d3\",\"label\":\"REPAIRED patch-c\",\"src\":\"file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/references/From%20Grok/GROK-LAG-1K-C13/C13-sandworm-rising/repairs/C13-04_Z_1_R1-try5-patch-c.jpg\",\"sha256\":\"23817577d3d32f0df03d57ac1e49c4c85246e86c405b13c492194f7aa2f52bad\",\"bytes\":447799}],\"storageWrites\":0}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_writer_publication.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":6,\"writerDocuments\":43,\"sharedMethodDocuments\":1,\"excludedSources\":8,\"exactAssociations\":31,\"storageWrites\":0,\"browserVisualQA\":false,\"evidenceLimit\":\"Actual renderer and bound click handlers exercised with DOM/storage doubles; no browser visual rendering, screenshots or native details/anchor behavior tested.\"}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_reference_validation.cjs",
+      "exitCode": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"scenarios\": 19,\n  \"checks\": [\n    \"176 canonical reviews and runtime legacy behavior preserved\",\n    \"independent axes, N/A and scoped pass\",\n    \"missing target/reference pixels and required occlusion cannot pass\",\n    \"required jewelry versus allowed natural variation\",\n    \"target, reference, nomination, scope, version and criteria invalidation\",\n    \"atomic nested validation and immutable collisions\",\n    \"history and old backup imports never clear evidence\",\n    \"sidecar restart and full-review round trip retain raw archive and history\",\n    \"evidence-only storage failure does not interrupt legacy saves\",\n    \"corrupt/future evidence storage remains exportable and unmodified\",\n    \"failed evidence save keeps the visible export warning\",\n    \"unread stores retain raw metadata and valid histories independently\",\n    \"newer unrelated N/A cannot hide a current applicable pass\",\n    \"character and scene form criteria with identical IDs remain independent\",\n    \"all scopes stay visible; narrower pass cannot hide unresolved work\",\n    \"technical readiness requires declarations bound to ingredients and shoot plan\",\n    \"mouth board counts and actual toggle/asset handlers\",\n    \"actual evidence form saves a scoped record without changing stars\",\n    \"real serialized review-file writer includes evidence and preserved legacy archive\"\n  ],\n  \"browserVisualQA\": false,\n  \"productionWrites\": 0,\n  \"syntheticAssessmentsPersistedToSource\": 0\n}\n",
+      "stderr": ""
+    }
+  ],
+  "browserVisualQA": false,
+  "provenanceHelperIndependentReview": {
+    "checks": 11,
+    "actualProvenanceChecks": 32,
+    "currentSources": 25,
+    "historicalSources": 7,
+    "criteriaDigests": 9,
+    "passed": true,
+    "method": "Read-only subagent compiled helper and mocked Path.read_bytes; no builder import or writes."
+  }
+}

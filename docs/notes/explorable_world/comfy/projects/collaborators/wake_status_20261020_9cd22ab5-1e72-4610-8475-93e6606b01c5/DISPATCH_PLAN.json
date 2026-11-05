@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "startedAtUTC": "2026-10-21T01:41:37.271Z",
+  "localDate": "2026-10-20",
+  "scope": "one status-only wake per verified existing route",
+  "conversationId": "3d646a06-6859-40ed-92c0-5cccad2719a4",
+  "roster": [
+    {
+      "recipient": "grok_chief",
+      "messageId": "e16ef496-fba1-4276-84e6-79af7469ef90",
+      "mailboxStatus": "posted",
+      "externalStatus": "not_yet_delivered"
+    },
+    {
+      "recipient": "claude",
+      "messageId": "b25c358c-2e8c-4b58-bc60-8b949161d648",
+      "mailboxStatus": "posted",
+      "externalStatus": "not_yet_delivered"
+    },
+    {
+      "recipient": "gemini_master",
+      "messageId": "82c24277-0c2d-4e0d-aa34-cfb315523a8b",
+      "mailboxStatus": "posted",
+      "externalStatus": "not_yet_delivered"
+    },
+    {
+      "recipient": "deepseek",
+      "messageId": "7eb00d06-1855-4efe-b343-bbaec32a397d",
+      "mailboxStatus": "posted",
+      "externalStatus": "not_yet_delivered"
+    },
+    {
+      "recipient": "qwen",
+      "messageId": "b40dabd4-9617-4f6f-b4eb-54f3dd624940",
+      "mailboxStatus": "posted",
+      "externalStatus": "not_yet_delivered"
+    },
+    {
+      "recipient": "kimi",
+      "messageId": "b3725c2b-1665-46a2-b278-7c132c341ee8",
+      "mailboxStatus": "posted",
+      "externalStatus": "not_yet_delivered"
+    },
+    {
+      "recipient": "cfa_site_index",
+      "messageId": "c4270540-2c37-43b5-b10e-69930eab27fe",
+      "mailboxStatus": "posted",
+      "externalStatus": "native_request_dispatched_unacknowledged"
+    },
+    {
+      "recipient": "gemini_studio",
+      "messageId": "f72212d3-1a8c-4f35-911b-804cf5c285cf",
+      "mailboxStatus": "posted",
+      "externalStatus": "not_yet_delivered"
+    }
+  ],
+  "excluded": [
+    {
+      "id": "panhandler_nova",
+      "reason": "Historical teaching identity; Claude is current Pan lead"
+    },
+    {
+      "id": "hal",
+      "reason": "No verified direct current session or self-authored introduction; Chief may provide separately attributed status"
+    },
+    {
+      "id": "gemini_chat",
+      "reason": "Invitation-only separate identity; Bellglass result chat is not proof of this collaborator seat"
+    },
+    {
+      "id": "flow",
+      "reason": "Existing Flow tab reports project not found; no verified conversational status route; no render initiated"
+    }
+  ],
+  "initialBrowserBlocker": "Grok existing-tab binding/AX read timed out after30 seconds and reset CUA kernel; no browser wake sent by that attempt.",
+  "siteAlreadyActive": true,
+  "newProductionJobs": 0,
+  "newAgents": 0,
+  "newPurchases": 0
+}

@@ -1,0 +1,13 @@
+# All maker outputs PRELIMINARY until V_2 passes. V_2 review HD-EXP-279 v004 full-scale ROUND 2 of 2 (FINAL), 20261021T161555Z. Rules: TEAM-RULES v012 9dc5bf82 + v013 0136dace + v014 be9cd49a (sha256sum -c OK). Final rule: 6x-only = ADVISORY; FIX at 1x/4x = ROUND-CAP.
+# FILES: v004 /workspace/hon-dolo-outfit-run-278-282/HD-EXP-279-cockpit-hoodie_v004.jpg 022f0480 | v003 4339e2aa | original e11f45dd | round-1 return V2_review_fullscale_279v003_20261021T160912Z_v002.tsv 47d69e0e | maker crop /workspace/z2_saucer/fullscale_prep/279_v004/crop4x_v003_v004.png | V5_INK_METHOD_v004.py c62c6789
+check	verdict	measured	note
+fix 1 right chain x607-627,y690-719	PASS	v003->v004 38 px >12 in box (max 212); chain px (orig L>150) 34: v004 vs original 0 >12 (max 5), v003 had 16. Bright lower edge continuous again at 1x/4x/plain 6x, same as original. Ship lines stop at the chain edge: no gap, halo or overlap at 4x/6x	Z_2 claim confirmed (0 over 12 on chain)
+fix 2 SMG wedge x708-716,y455-463	PASS	diagonal wedge (v003 L 5-9 at (712-715,458-460), (708-710,462)) gone incl. flat top: v004 L 18-30 in the wedge rows, matching skin above/below (v004 px L<20 in x700-724,y452-468: 48 vs 90 in v003, the rest is natural dark skin also in v003). Blend into x717-721 shows no seam or halo at 4x/plain 6x. y464 and below unchanged (lettering untouched)	-
+fix 3 old-gun stroke x614-618,y489-497	PASS	tick (v003 L 57-69) now L 70-82 = skin around it; spire outline x619-621 unchanged (26->26); no seam at 4x/plain 6x	-
+outside the boxes v003->v004	PASS	whole-frame re-encode: 0 px >12 outside the 3 boxes (max 10, encode noise)	Z_2 claim confirmed
+pistol clearance (v013)	PASS	L<0.60: 20.6 px (628,487)->(644,474); L<0.70 (ADVISORY): 20.2 px. Identical to v003	-
+ink / stroke	PASS (unchanged)	V5 same boxes as round 1: L 0.473/0.473, R 0.469/0.487, disc 0.477/0.308 (v003 0.473/0.473, 0.470/0.487, 0.476/0.318); stroke p90 2.0 everywhere	-
+tone 1x vs v011	ADVISORY-none	unchanged from v003 (reads black like v011)	-
+size / placement / old saucer / stencil	PASS (carry-over v003)	DW ~280, rim y640 +0.286 DW, centre (587,780); not touched by the diff	-
+cracked-ground tattoo	not flagged	stays erased per Chief's ruling	-
+VERDICT	PASS	all 3 round-1 FIX items cleared at 1x/4x/plain 6x; no new defects, no ADVISORY items	-

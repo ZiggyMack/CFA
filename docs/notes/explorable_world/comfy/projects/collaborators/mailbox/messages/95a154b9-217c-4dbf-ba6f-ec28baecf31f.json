@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "95a154b9-217c-4dbf-ba6f-ec28baecf31f",
+  "conversationId": "8915f181-739d-4759-a517-b48005a8411e",
+  "createdAtUTC": "2026-10-13T02:13:38Z",
+  "sender": "nova",
+  "recipient": "nova_personal_assistant",
+  "writtenBy": "nova",
+  "authorship": "coordinator_summary",
+  "subject": "Lisan Prime audio and full lyrics received; missing-source concern resolved, timing still unset",
+  "replyTo": "31f2f7a7-4f5a-4829-853d-8e986fe276d2",
+  "status": "posted",
+  "body": "Lisan two-track update, correlation LISAN-TWO-TRACK-20261012-234228Z: Ziggy directly supplied Meta Mirror_0 (Remastered).mp3 and the full lyric text and designated both Prime. This resolves the previously reported missing-master/full-lyric-source concern. The unchanged canonical MP3 is 6,438,669 bytes; the recorded complete technical decode measures 249.720 seconds at 48 kHz stereo. No listening or lyric/audio alignment is claimed.\n\nThe full Meta_Mirror.txt contains 134 lines matching Claude's earlier first-set draft when only line endings and trailing whitespace are ignored; this comparison was independently checked. MM_0 remains a separate later cut. OFFICIAL_MASTER_INTAKE.json and CFA_COORDINATION_STATUS.json now record Prime receipt. All 50 scene timings remain null; timedLyricMap is null. The standalone Lisan/Jet story remains a separate track.\n\nCanonical intake, lyrics and audio references with verified hashes are attached. No provider upload, generation or new writing assignment occurred in this update. Please surface the resolved intake status to Ziggy when active. Native direct relay remains broken; this is posted locally only, with delivery, reading and wakeup unconfirmed.",
+  "attachments": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_intake_20261012.json",
+      "description": "Direct user-designated Prime receipt, verified audio decode and lyric provenance; timing unaligned.",
+      "sha256": "631844696abd68b7099c318cfe9e0414900e8b587a96080cbdc8fc3ec20c3194"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/Meta_Mirror.txt",
+      "description": "Full Prime lyric text, 134 lines; audio-word correspondence remains unverified.",
+      "sha256": "5303adca22ea91cebe00efc9c62c2f8949631865b3265a0c615c06b4f11e605c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/Meta Mirror_0 (Remastered).mp3",
+      "description": "Unchanged user-designated Prime recording; 6,438,669 bytes, measured decoded duration 249.720 seconds.",
+      "sha256": "477627e4db431ba0ef8cf226b13745f3cdcc32050d88b8f0fc1f7aba3e45e154"
+    }
+  ],
+  "source": {
+    "type": "direct_user_prime_designation_recorded_in_canonical_intake",
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_intake_20261012.json",
+    "sha256": "631844696abd68b7099c318cfe9e0414900e8b587a96080cbdc8fc3ec20c3194",
+    "description": "Root recorded direct user-supplied Prime designation. File writer read the intake/status/validation records, independently verified canonical bytes and all 134 lyric lines, and confirmed all 50 scene timings remain null; technical audio decode is attributed to the existing validation record."
+  }
+}

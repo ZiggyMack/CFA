@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "recordType": "bounded-provider-preflight-and-submission-receipt",
+  "createdAtUTC": "2026-10-14T02:41:36.346100+00:00",
+  "project": "Lisan Al Gaib / Meta Mirror",
+  "shotTitle": "The signal",
+  "writerShotID": "LAG-SIGNAL-002",
+  "takeNumber": 2,
+  "sourceAssetID": "LAG500-L19-S3",
+  "scope": "One user-directed acting revision submitted by CFA Nova root after Claude authored the corrected direction card. Result pending at the recorded submission checkpoint.",
+  "provider": "Google Flow",
+  "projectID": "61e89a80-1bff-4ac3-8cdd-0c298b7a3385",
+  "projectTitle": "Lisan Al Gaib · Meta Mirror · Sandworm prototypes",
+  "projectURL": "https://flow.google.com/project/61e89a80-1bff-4ac3-8cdd-0c298b7a3385",
+  "observedBy": "CFA Nova root, sole UI operator",
+  "helperUIInteraction": false,
+  "helperIndependentlyObservedUI": false,
+  "preflightObservedAtUTC": "2026-10-14T02:38:34.599Z",
+  "submissionObservedAtUTC": "2026-10-14T02:38:52.529Z",
+  "reportedStartClickAtUTC": "2026-10-14T02:38:52.529Z",
+  "startClickCountReported": 1,
+  "reportedUIEvidence": [
+    "Same exact original L19 source bound to START; END frame empty.",
+    "Fresh model-family text confirmed Omni 1.1 Flash.",
+    "Video/Frames, 720p, 16:9, 8 seconds, one output, Agent 0 confirmed.",
+    "Displayed cost 12 Flow credits before submission.",
+    "Exact submitted prompt request card appeared; composer cleared and Start disabled."
+  ],
+  "preflightScreenshot": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/signal_prototype_20261013/take_002/FLOW_SIGNAL_T02_PREFLIGHT_1791945513882.jpg",
+    "bytes": 194887,
+    "sha256": "06e27afd1963a104e47d8af1349a60745f329de169a636832c077cbaa36dd6a2"
+  },
+  "submissionScreenshot": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/signal_prototype_20261013/take_002/FLOW_SIGNAL_T02_SUBMITTED_1791945532376.jpg",
+    "bytes": 148281,
+    "sha256": "a29bca8e59fe32c55d92ddb8c4932ac116d88ad27df99177b5c5ee897c41e0af"
+  },
+  "writerCorrectionScreenshot": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/signal_prototype_20261013/take_002/CLAUDE_PREFLIGHT_CORRECTIONS_1791945115433.jpg",
+    "bytes": 135241,
+    "sha256": "4f637faf6ba34b8c73a744c2c84c42c8cc0d891a269e70e4e1e758b2204d2f90"
+  },
+  "screenshotVerification": "File bytes and SHA256 independently verified by preparer; UI-content observations supplied by root.",
+  "selectedStartFrame": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part03/LAG-L19-fire-trial-armor.zip.contents/LAG-L19-fire-trial-armor/LAG-L19-fire-trial-armor__S3-worm-vs-harvester.jpg",
+    "bytes": 388976,
+    "sha256": "b26aa61a04528cd8c3ef820ccc946e74738db634f29aed018286c138efd8bb09"
+  },
+  "startFrameBoundConfirmed": true,
+  "endFrameEmptyConfirmed": true,
+  "actualSubmittedPrompt": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/signal_prototype_20261013/take_002/ACTUAL_SUBMITTED_PROMPT.txt",
+    "bytes": 2883,
+    "sha256": "b725c3f13d6ce940ac746b418f7019ce5c223e4092b9ac62fcf2e90c499c1e3a"
+  },
+  "frozenWriterCardAtSubmission": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/signal_prototype_20261013/take_002/WRITER_CARD_AT_SUBMISSION.md",
+    "bytes": 12477,
+    "sha256": "aa04a82c2e4fff1781e20b3f9effc83159045b13c942a6b22d606f2bfb284c8f"
+  },
+  "authorshipAndPromptHandling": {
+    "creativeDirectionAndPrompt": "Claude, lead writer. Frozen writer card supersedes the earlier SIGNAL_PERFORMANCE_DELTA for this take, as stated in its header.",
+    "technicalAdaptationByRoot": "Copied the corrected author prompt unchanged apart from the explicit native-duration/aspect-ratio/silence prefix.",
+    "technicalPrefix": "One 8-second landscape 16:9 shot. Silent output: no speech, singing, music, narration or sound effects.",
+    "rootReportedVerbatimAuthorBodyPreserved": true,
+    "unexecutedEarlierCandidate": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/signal_prototype_20261013/take_002/ACTUAL_PROMPT_CANDIDATE.txt",
+      "bytes": 2162,
+      "sha256": "86bdd4061011f52dc6d039d8eec28cc67ad25b54b9f8c39b5dfcf8d0d392454f",
+      "status": "Retained, not submitted or executed. This is not the actual prompt for take two."
+    }
+  },
+  "confirmedSettings": {
+    "mediaMode": "VIDEO",
+    "conditioningMode": "FRAMES",
+    "modelLabel": "Omni 1.1 Flash",
+    "modelVerification": "Fresh model-family text read by root.",
+    "nativeModelRevision": null,
+    "resolutionLabel": "720p",
+    "aspectRatioLabel": "16:9",
+    "durationSecondsLabel": 8,
+    "outputCount": 1,
+    "agentLabel": "Agent 0",
+    "directAgent": "off"
+  },
+  "displayedPreflightCost": {
+    "value": 12,
+    "unit": "Flow credits",
+    "actualDebitDetermined": false
+  },
+  "revisionAuthority": {
+    "reportedBy": "CFA Nova root",
+    "basis": "Direct user-requested acting correction after positive scene feedback: concerned offscreen/up-right teammate attention and proper character motion.",
+    "creativeOwner": "Claude; storyboard direction writing goes through the writer.",
+    "scope": "This single corrected take. No automatic retry, batch or production acceptance inferred."
+  },
+  "baseline": {
+    "firstTakeOriginal": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/signal_prototype_20261013/FLOW-LAG-SIGNAL-001_original.mp4",
+      "bytes": 3635702,
+      "sha256": "e6ace86c4ebe59a3fa7c695cb3e1960840e0424a7fc57a7deed984c0417b524a"
+    },
+    "firstTakeTechnicalAndSampledReview": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/signal_prototype_20261013/result_review/RESULT_TECHNICAL_REVIEW.json",
+      "bytes": 10873,
+      "sha256": "8274eb00f9ec3579481fbb7a22055799121689b5a3f948cbe892907275025ee0"
+    },
+    "firstTakeFeedbackIntake": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/signal_prototype_20261013/RESULT_INTAKE.json",
+      "bytes": 7758,
+      "sha256": "e782756d84e5dd98394bedbe76dbacacdca9da4dee8e2102da1d9af44ece11fd"
+    },
+    "firstTakeSubmissionReceipt": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/signal_prototype_20261013/SUBMISSION_RECEIPT.json",
+      "bytes": 6766,
+      "sha256": "5506997c6e1810ca965530e11ab72e67afadf760c330d5d56276441fa298b545"
+    },
+    "sameOriginalStartingSource": true,
+    "qualification": "Performance revision comparison from the same starting source; positive first-take scene feedback is not a numeric grade, Keep decision or production approval."
+  },
+  "status": "submitted_result_pending_at_observation",
+  "submissionClaimed": true,
+  "providerExecutionCountReported": 1,
+  "completionClaimed": false,
+  "resultReceivedClaimed": false,
+  "resultReviewedClaimed": false,
+  "acceptedClaimed": false,
+  "jobID": null,
+  "providerSceneID": null,
+  "providerOutputID": null,
+  "actualCreditDebit": null,
+  "accountBalanceAfter": null,
+  "localOutputPath": null,
+  "localOutputBytes": null,
+  "localOutputSHA256": null,
+  "actualReturnedDimensions": null,
+  "actualReturnedFPS": null,
+  "actualReturnedDurationSeconds": null,
+  "actualReturnedAudioPresent": null,
+  "automaticRetriesPerformed": false,
+  "newProviderJobsCreatedByPreparer": false,
+  "pendingEvidence": [
+    "Provider completion or error and any visible scene/output identifier.",
+    "Verified original output receipt with byte count and SHA256.",
+    "Measured dimensions, duration, frame rate and audio presence/levels.",
+    "Normal-speed acting and preservation review against source, writer card and first take."
+  ],
+  "preservedEarlierEvidence": "First-take originals, reviews, intake and receipt; earlier take-two candidate; actual prompt and frozen writer card remain unchanged.",
+  "storage": "One new append-only receipt in project-owned D: storage. No media edits, site edits, author-file edits or canonical review changes."
+}

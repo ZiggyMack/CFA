@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "id": "ac455a3c-44e8-4c48-850e-ee40ebcd14e5",
+  "messageId": "8b44dfe3-8265-44cd-b050-0e69165f9644",
+  "createdAtUTC": "2026-10-14T22:16:57.443341Z",
+  "actor": "nova_personal_assistant",
+  "event": "relayed",
+  "replyMessageId": null,
+  "evidence": {
+    "kind": "observed_native_delivery_and_read",
+    "observer": "nova_personal_assistant",
+    "siteAuthoredMailboxAcknowledgementClaimed": false,
+    "mailbox": {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/8b44dfe3-8265-44cd-b050-0e69165f9644.json",
+      "bytes": 6783,
+      "sha256": "6606cc5dc43496fad982cdc3ddbe18b29533bce57d6cdafb92d494375790e969"
+    },
+    "nativeTarget": {
+      "threadId": "01a13383-26f6-7923-8e18-98faf1fa3ede",
+      "hostId": "local",
+      "title": "CFA SITE INDEX",
+      "deliveryCallReturnedThreadId": true,
+      "turnId": "01a13c7b-4cf2-7fb2-98b1-6cdb06d537ed"
+    },
+    "actualAssistantResponse": {
+      "messageId": "msg_051db6f62d44ca6d016acffeddd00887d1b96c4ee0c1e88d3b",
+      "phase": "commentary",
+      "verbatim": "I’ll read the storyboard handoff, verify its scope and source files, and check the current site state before making changes."
+    },
+    "actualCompletedRead": {
+      "commandId": "exec-0ff8155e-6194-417c-95e7-536499ea7102",
+      "status": "completed",
+      "exitCode": 0,
+      "readExactMessageFile": true,
+      "printedVerifiedMessageBytes": 6783,
+      "printedVerifiedSHA256": "6606cc5dc43496fad982cdc3ddbe18b29533bce57d6cdafb92d494375790e969"
+    },
+    "lastObservedState": "active_in_progress_no_approval_flags",
+    "currentWork": "Reading the full request, map, maintained metadata and builder paths before implementation.",
+    "implementedOrPublishedClaimed": false,
+    "blockerObserved": null,
+    "audit": {
+      "documentPinsMatched": 4,
+      "uniqueAssetPinsMatched": 56,
+      "shots": 38,
+      "scenes": 9,
+      "materialLinks": 98,
+      "frameBearingShots": 33,
+      "shotsWithPendingReferences": 21,
+      "shotsWithPendingCharacters": 20,
+      "latticeOnlyShot": "S01-5.3",
+      "preliminaryFlowResults": 1,
+      "registeredExactAssets": 6,
+      "assetsNeedingCatalogIntake": 50,
+      "catalogCheckpoint": {
+        "assets": 2455,
+        "albums": 233,
+        "sha256": "c8035de3a1d87fe7d595751115c5807c1381a0b381d969e8d5cfbca0dbb18a5a"
+      }
+    },
+    "remaining": "Owner implementation/tests/publication and handback not yet complete. Backup warning approval remains separate and pending. No Chief character dispatch authorized."
+  }
+}

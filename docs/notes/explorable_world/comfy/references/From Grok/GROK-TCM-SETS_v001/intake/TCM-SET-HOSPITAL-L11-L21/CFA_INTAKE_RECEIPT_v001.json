@@ -1,0 +1,583 @@
+{
+  "format": "cfa-grok-image-intake-v1",
+  "project": "criminal_mind",
+  "batchID": "TCM-SET-HOSPITAL-L11-L21",
+  "lane": "set_round",
+  "taskID": "tcm-grok-sets-20261030",
+  "intakeRole": "site_index_receipt",
+  "verifiedAtUTC": "2026-11-04T13:41:07Z",
+  "receivedAtUTC": null,
+  "receivedTimeStatus": "not_recorded_in_archive",
+  "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21.zip",
+  "archiveSHA256": "650433b2d8143e89b88aa6aea8d63d2360b2b7aa0b9f063e686c7cb183322ea8",
+  "archiveBytes": 2347378,
+  "archiveMemberCount": 20,
+  "receivedOriginals": 11,
+  "acceptedOriginals": 0,
+  "humanVerdictsCreated": 0,
+  "selectedStartingFrames": 0,
+  "assets": [
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L11__P01-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSPITAL-L11-L21\\TCM-SET-HOSPITAL-L11__P01-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L11__P01-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21.zip",
+      "archiveMember": "TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L11__P01-LS1.jpg",
+      "sha256": "8e94227df9af68c4a147660fe9ff51f37fb0dae5cc19818a25a1b67f50354aa1",
+      "bytes": 240822,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "S01 HOS-P01 spec (MAPS:L326); family check cuff on WINDOW-SIDE rail (Layer C MAPS:L5); H2 \"INT-Hospital Room- Night\" (SS:L1875); H3 \"hand cuffed to the bed IV's are plugged into him his legs are in a cast\" (SS:L1877)",
+        "note": "PRELIMINARY; S01 HOS-P01 establishing from the foot corner, door side, light HOS-LS1 (tube off, wall reading light, monitor glow, cool corridor spill, blinds dark) met. Met: empty bed with both rails raised, trapeze with a rigid triangular grab handle on a chain (plain grab handle = OK per V_1 ruling, not noose-like at 1x or 4x), IV stand with two containers at the head, monitor cart, open door to a dim empty corridor at left, blinded window at right. DRIFT: the cuff hangs loose under the NEAR (camera/door-side) rail toward the foot instead of locked to the far window-side rail at pillow-to-hip height. Notes: IV containers are rigid bottles rather than bags; monitor side buttons carry tiny pseudo-label marks at 4x only (not text at 1x). family checks: no people/hands/figures/shadows in corridor, door glass, blinds or chrome (zoomed 2-6x); no blood, no injured body, empty bed; no noose-like loops; monitor shows an abstract trace only, no digits; door plaque blank; outlets plain; no logo or institution name; blinds closed with nothing recognisable outside, so nothing contradicts Boston General (SS:L1865) - generic worn institutional room per the writer description (MAPS:L320). ref ids: maker index reference_ids = TCM-SET-HOSPITAL-L02 (maker value, not derived); own sha256 matches maker index; 1280x720 16:9; filename matches card regex.",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001.md sha256 a94d2a404aaf3f77f2967e110dc3ad0f1afd93b646a5ea76c3813c66d8c1a971 (matches CARDS_INDEX_B2) ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; FIDELITY_RUBRIC_v002 4b4de5b47bab0109a9dd77ab0593e97ebf8ecdb7824c9495ab17a91e3f39a65e ; V1 rulings v001 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1 rulings addendum v002 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265 ; maker index out/SETS/TCM-SET-HOSPITAL/BATCH_02_index.tsv sha256 8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "209996f2a6d0025728246e0991e7bb4a17bd9a87fb880415d3f6fea49e57df34",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY, not selected. Establishing from foot corner, door side: starter L02 room (green tiled dado, terrazzo, chrome bed, rails up, trapeze with one rigid triangle grab bar on chain, IV stand two bags, monitor cart, open wooden door to dim corridor at left, blinds right) relit to HOS-LS1 (tube off, wall reading light, monitor glow, corridor spill).",
+        "sourceVsProposal": null,
+        "defectNote": "No people in corridor; monitor shows abstract trace, no digits at 1x; blank door plaque; no blood; 1280x720 16:9. CARD MISMATCH: handcuff hangs loose below the NEAR (camera/door-side) long rail toward the foot, not locked on the far window-side rail at pillow-to-hip height. Trapeze triangle on chain: rigid metal, not rope - flag for noose screen anyway. Very close to L02 composition.",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/MAKER_BATCH_02_index.tsv",
+        "sourceSHA256": "8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L12__P01-LS2",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSPITAL-L11-L21\\TCM-SET-HOSPITAL-L12__P01-LS2.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L12__P01-LS2.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21.zip",
+      "archiveMember": "TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L12__P01-LS2.jpg",
+      "sha256": "1795f2fbd23b96c41aa3f1d655d5b764c0347593014fcdd45096fcd6051c1ae9",
+      "bytes": 279031,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "S02 HOS-P01 spec (MAPS:L326); cuff on WINDOW-SIDE rail (MAPS:L5); light HOS-LS2 (MAPS:L322)",
+        "note": "PRELIMINARY; S02 HOS-P01 with the ceiling tube on, light HOS-LS2 (exploratory, binds no shot): tube visibly lit, though the room still reads fairly dim for flat clinical light (note). Same framing as L11. DRIFT: cuff in the same near-rail hanging position as L11 (not the window-side rail); trapeze grab handle and chain missing (frame only) vs L11 - continuity. Monitor trace only, no digits at 4x. family checks: no people/hands/figures/shadows in corridor, door glass, blinds or chrome (zoomed 2-6x); no blood, no injured body, empty bed; no noose-like loops; monitor shows an abstract trace only, no digits; door plaque blank; outlets plain; no logo or institution name; blinds closed with nothing recognisable outside, so nothing contradicts Boston General (SS:L1865) - generic worn institutional room per the writer description (MAPS:L320). ref ids: maker index reference_ids = TCM-SET-HOSPITAL-L11 (maker value, not derived); own sha256 matches maker index; 1280x720 16:9; filename matches card regex.",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001.md sha256 a94d2a404aaf3f77f2967e110dc3ad0f1afd93b646a5ea76c3813c66d8c1a971 (matches CARDS_INDEX_B2) ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; FIDELITY_RUBRIC_v002 4b4de5b47bab0109a9dd77ab0593e97ebf8ecdb7824c9495ab17a91e3f39a65e ; V1 rulings v001 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1 rulings addendum v002 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265 ; maker index out/SETS/TCM-SET-HOSPITAL/BATCH_02_index.tsv sha256 8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "209996f2a6d0025728246e0991e7bb4a17bd9a87fb880415d3f6fea49e57df34",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY, not selected. Same as L11 with ceiling fluorescent tube on (HOS-LS2, exploratory).",
+        "sourceVsProposal": null,
+        "defectNote": "No people/text/digits seen; 1280x720 16:9. Notes: room still fairly dim for a tube-on state; trapeze grab bar/chain MISSING (frame only) vs L11; cuff same placement as L11 (near rail, hanging) = card mismatch.",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/MAKER_BATCH_02_index.tsv",
+        "sourceSHA256": "8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L13__P02-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSPITAL-L11-L21\\TCM-SET-HOSPITAL-L13__P02-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L13__P02-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21.zip",
+      "archiveMember": "TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L13__P02-LS1.jpg",
+      "sha256": "f0f7ed5f8ae716bea3c99693120fa86fb56f59e5b45d308867afd8f4ba8ba99f",
+      "bytes": 214769,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "S03 HOS-P02 spec (MAPS:L327); H3 \"hand cuffed to the bed IV's are plugged into him his legs are in a cast\" (SS:L1877)",
+        "note": "PRELIMINARY; S03 HOS-P02 bedside medium, cuff side, light HOS-LS1. Met: cuff prominent in the foreground, empty bed, pillow, door half-open to the corridor beyond, monitor glow at the left edge, reading light. DRIFT: framed as a three-quarter from the foot, not a 2 m cross-bed medium; the cuff is locked to the footboard post, not the near side rail; no near side rail, no IV stand, no trapeze in frame, so it cannot fix which side is cuffed. Door plaque blank at 5x; monitor trace with no digits. family checks: no people/hands/figures/shadows in corridor, door glass, blinds or chrome (zoomed 2-6x); no blood, no injured body, empty bed; no noose-like loops; monitor shows an abstract trace only, no digits; door plaque blank; outlets plain; no logo or institution name; blinds closed with nothing recognisable outside, so nothing contradicts Boston General (SS:L1865) - generic worn institutional room per the writer description (MAPS:L320). ref ids: maker index reference_ids = TCM-SET-HOSPITAL-L11 (maker value, not derived); own sha256 matches maker index; 1280x720 16:9; filename matches card regex.",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001.md sha256 a94d2a404aaf3f77f2967e110dc3ad0f1afd93b646a5ea76c3813c66d8c1a971 (matches CARDS_INDEX_B2) ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; FIDELITY_RUBRIC_v002 4b4de5b47bab0109a9dd77ab0593e97ebf8ecdb7824c9495ab17a91e3f39a65e ; V1 rulings v001 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1 rulings addendum v002 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265 ; maker index out/SETS/TCM-SET-HOSPITAL/BATCH_02_index.tsv sha256 8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "209996f2a6d0025728246e0991e7bb4a17bd9a87fb880415d3f6fea49e57df34",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY, not selected. Bedside view with cuff in foreground, empty bed, door half open to corridor at left, reading light, blinds top-right (HOS-LS1).",
+        "sourceVsProposal": null,
+        "defectNote": "No people/text seen; monitor at left edge abstract trace; 1280x720 16:9. CARD MISMATCH: framed as a three-quarter from the foot, not a 2 m cross-bed medium; cuff is on the foot-end post/footboard rather than the near side rail; near side rail absent; no IV stand, no trapeze; window placement ambiguous.",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/MAKER_BATCH_02_index.tsv",
+        "sourceSHA256": "8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L14__P03-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSPITAL-L11-L21\\TCM-SET-HOSPITAL-L14__P03-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L14__P03-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21.zip",
+      "archiveMember": "TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L14__P03-LS1.jpg",
+      "sha256": "ea2096fc7154836fdb59876af7137985e57671e527016d2740d03baef2ee788f",
+      "bytes": 240737,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "S04 HOS-P03 spec (MAPS:L328); H3 \"hand cuffed to the bed IV's are plugged into him his legs are in a cast\" (SS:L1877)",
+        "note": "PRELIMINARY; S04 HOS-P03 bedside medium, free side, light HOS-LS1. DRIFT: the position was not delivered - the still is a near-duplicate of L11 (same foot-corner framing; mean absolute luminance difference 5.8/255 by V_5 PIL compare), not the reverse from the free-side rail; NO cuff visible anywhere (cuff is placeable, so not a MISS on H3); trapeze grab handle missing; monitor screen dark (allowed). Q-DUP-style near-duplicate noted for V_1, not marked down for variety. family checks: no people/hands/figures/shadows in corridor, door glass, blinds or chrome (zoomed 2-6x); no blood, no injured body, empty bed; no noose-like loops; monitor shows an abstract trace only, no digits; door plaque blank; outlets plain; no logo or institution name; blinds closed with nothing recognisable outside, so nothing contradicts Boston General (SS:L1865) - generic worn institutional room per the writer description (MAPS:L320). ref ids: maker index reference_ids = TCM-SET-HOSPITAL-L11 (maker value, not derived); own sha256 matches maker index; 1280x720 16:9; filename matches card regex.",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001.md sha256 a94d2a404aaf3f77f2967e110dc3ad0f1afd93b646a5ea76c3813c66d8c1a971 (matches CARDS_INDEX_B2) ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; FIDELITY_RUBRIC_v002 4b4de5b47bab0109a9dd77ab0593e97ebf8ecdb7824c9495ab17a91e3f39a65e ; V1 rulings v001 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1 rulings addendum v002 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265 ; maker index out/SETS/TCM-SET-HOSPITAL/BATCH_02_index.tsv sha256 8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "209996f2a6d0025728246e0991e7bb4a17bd9a87fb880415d3f6fea49e57df34",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY, not selected. Intended reverse (free side toward window); generator returned an L11-like foot-corner view: door left, trapeze frame (no grab bar), IV stand, monitor (screen dark), blinds (HOS-LS1).",
+        "sourceVsProposal": null,
+        "defectNote": "No people/text seen; 1280x720 16:9. CARD MISMATCH: not the reverse/free-side angle - near-duplicate of L11 framing; NO CUFF visible; trapeze grab bar missing.",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/MAKER_BATCH_02_index.tsv",
+        "sourceSHA256": "8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L15__P04-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSPITAL-L11-L21\\TCM-SET-HOSPITAL-L15__P04-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L15__P04-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21.zip",
+      "archiveMember": "TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L15__P04-LS1.jpg",
+      "sha256": "878242eff58d3fb17cb55d2e513520728521a36b1c422536eec9de216d35a227",
+      "bytes": 165441,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "S05 HOS-P04 pass checks (MAPS:L329); H2 \"INT-Hospital Room- Night\" (SS:L1875)",
+        "note": "PRELIMINARY; S05 HOS-P04 head of bed close background, light HOS-LS1 met: pillow with dent, sheet, chrome headboard and side rail at the bottom edge, green-tiled headwall with plain outlets (no labels at 2-6x) and a warm reading light. No paper, no labels, no loops. Note: background only mildly soft, less defocus than the 60 mm feel suggests. family checks: no people/hands/figures/shadows in corridor, door glass, blinds or chrome (zoomed 2-6x); no blood, no injured body, empty bed; no noose-like loops; monitor shows an abstract trace only, no digits; door plaque blank; outlets plain; no logo or institution name; blinds closed with nothing recognisable outside, so nothing contradicts Boston General (SS:L1865) - generic worn institutional room per the writer description (MAPS:L320). ref ids: maker index reference_ids = TCM-SET-HOSPITAL-L11 (maker value, not derived); own sha256 matches maker index; 1280x720 16:9; filename matches card regex.",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001.md sha256 a94d2a404aaf3f77f2967e110dc3ad0f1afd93b646a5ea76c3813c66d8c1a971 (matches CARDS_INDEX_B2) ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; FIDELITY_RUBRIC_v002 4b4de5b47bab0109a9dd77ab0593e97ebf8ecdb7824c9495ab17a91e3f39a65e ; V1 rulings v001 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1 rulings addendum v002 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265 ; maker index out/SETS/TCM-SET-HOSPITAL/BATCH_02_index.tsv sha256 8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "209996f2a6d0025728246e0991e7bb4a17bd9a87fb880415d3f6fea49e57df34",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY, not selected. Head-of-bed background plate: pillow with dent, sheet, chrome headboard and side rails, green-tiled headwall with outlets and warm reading light (HOS-LS1).",
+        "sourceVsProposal": null,
+        "defectNote": "none seen: no people/hands/loops; outlets plain, no labels/text; 1280x720 16:9. Note: background only mildly soft (less defocus than asked).",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/MAKER_BATCH_02_index.tsv",
+        "sourceSHA256": "8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L16__P05-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSPITAL-L11-L21\\TCM-SET-HOSPITAL-L16__P05-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L16__P05-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21.zip",
+      "archiveMember": "TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L16__P05-LS1.jpg",
+      "sha256": "f5e9a53b4395fcbd50adae622d73ab6cbd24408e408ac550f4e149e711daf630",
+      "bytes": 217703,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "S06 HOS-P05 pass checks (MAPS:L330); cuff WINDOW-SIDE (MAPS:L5); H3 \"hand cuffed to the bed IV's are plugged into him his legs are in a cast\" (SS:L1877)",
+        "note": "PRELIMINARY; S06 HOS-P05 foot of bed low along the bed, light HOS-LS1 met: long empty sheet where the casts will lie, rails up, cuff locked on the RIGHT (window-side) rail, trapeze overhead with a rigid metal triangle grab handle on a chain (plain grab handle per V_1 ruling; does not read as a noose at 1x or 4x), IV lines dropping in, headwall and reading light behind, open door at left. Note: camera reads somewhat above 1.0 m; IV containers are rigid bottles. Monitor trace only, no digits at 4x. family checks: no people/hands/figures/shadows in corridor, door glass, blinds or chrome (zoomed 2-6x); no blood, no injured body, empty bed; no noose-like loops; monitor shows an abstract trace only, no digits; door plaque blank; outlets plain; no logo or institution name; blinds closed with nothing recognisable outside, so nothing contradicts Boston General (SS:L1865) - generic worn institutional room per the writer description (MAPS:L320). ref ids: maker index reference_ids = TCM-SET-HOSPITAL-L11 (maker value, not derived); own sha256 matches maker index; 1280x720 16:9; filename matches card regex.",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001.md sha256 a94d2a404aaf3f77f2967e110dc3ad0f1afd93b646a5ea76c3813c66d8c1a971 (matches CARDS_INDEX_B2) ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; FIDELITY_RUBRIC_v002 4b4de5b47bab0109a9dd77ab0593e97ebf8ecdb7824c9495ab17a91e3f39a65e ; V1 rulings v001 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1 rulings addendum v002 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265 ; maker index out/SETS/TCM-SET-HOSPITAL/BATCH_02_index.tsv sha256 8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "209996f2a6d0025728246e0991e7bb4a17bd9a87fb880415d3f6fea49e57df34",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY, not selected. Low view down the bed from the foot: long empty sheet for casts, rails up, cuff locked on RIGHT (window-side) rail, trapeze with rigid triangle grab bar on chain, IV bags with lines, reading light, monitor, open door left (HOS-LS1).",
+        "sourceVsProposal": null,
+        "defectNote": "No people/text/digits seen; 1280x720 16:9. Flag: trapeze triangle on a chain over the pillow - rigid metal, not a rope loop, but V screen should confirm it does not read as a noose. Camera reads somewhat higher than 1.0 m.",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/MAKER_BATCH_02_index.tsv",
+        "sourceSHA256": "8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L17__P06-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSPITAL-L11-L21\\TCM-SET-HOSPITAL-L17__P06-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L17__P06-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21.zip",
+      "archiveMember": "TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L17__P06-LS1.jpg",
+      "sha256": "69f4d0005d23b4cc4fbcbd3344e87a1b6aec7235c7b9e3a7fc97946c4733122e",
+      "bytes": 183693,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "ADVISORY",
+        "hardTrait": "S07 HOS-P06 pass checks (MAPS:L331) \"no stamped numbers visible\"; H3 \"hand cuffed to the bed IV's are plugged into him his legs are in a cast\" (SS:L1877)",
+        "note": "PRELIMINARY; S07 HOS-P06 cuff insert, light HOS-LS1 met: one bracelet locked round the chrome rail tube, chain, sheet edge, soft tiled background; no hand. ADVISORY: a small stamped rectangular mark on the hanging bracelet near the chain shows character-like strokes at 6x but resolves to no letters or numerals and does not read as text at 1x (zoom-only pseudo-text = ADVISORY, not a hard-rule failure); the second bracelet hangs CLOSED, not open as carded (soft). family checks: no people/hands/figures/shadows in corridor, door glass, blinds or chrome (zoomed 2-6x); no blood, no injured body, empty bed; no noose-like loops; monitor shows an abstract trace only, no digits; door plaque blank; outlets plain; no logo or institution name; blinds closed with nothing recognisable outside, so nothing contradicts Boston General (SS:L1865) - generic worn institutional room per the writer description (MAPS:L320). ref ids: maker index reference_ids = TCM-SET-HOSPITAL-L16 (maker value, not derived); own sha256 matches maker index; 1280x720 16:9; filename matches card regex.",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001.md sha256 a94d2a404aaf3f77f2967e110dc3ad0f1afd93b646a5ea76c3813c66d8c1a971 (matches CARDS_INDEX_B2) ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; FIDELITY_RUBRIC_v002 4b4de5b47bab0109a9dd77ab0593e97ebf8ecdb7824c9495ab17a91e3f39a65e ; V1 rulings v001 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1 rulings addendum v002 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265 ; maker index out/SETS/TCM-SET-HOSPITAL/BATCH_02_index.tsv sha256 8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "209996f2a6d0025728246e0991e7bb4a17bd9a87fb880415d3f6fea49e57df34",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY, not selected. Cuff insert: one bracelet locked round the chrome rail tube, chain, second bracelet hanging; sheet edge; soft green-tiled background (HOS-LS1).",
+        "sourceVsProposal": null,
+        "defectNote": "No hand/people. DEFECT: a stamped pseudo-glyph mark (illegible, character-like) on the hanging bracelet near the chain at 4x zoom - violates \"no stamped numbers\"/no-glyph rule; second bracelet hangs CLOSED, not open as carded; 1280x720 16:9.",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/MAKER_BATCH_02_index.tsv",
+        "sourceSHA256": "8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L18__P07-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSPITAL-L11-L21\\TCM-SET-HOSPITAL-L18__P07-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L18__P07-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21.zip",
+      "archiveMember": "TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L18__P07-LS1.jpg",
+      "sha256": "1c00fbde2ac7bb851e1b0faf4fc6a85a9e9fa98eb979d2cd1a308e3f34e95e15",
+      "bytes": 184784,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "S08 HOS-P07 spec (MAPS:L332); room geometry continuity with S01 L11 and S06 L16",
+        "note": "PRELIMINARY; S08 HOS-P07 door and corridor from the bed, light HOS-LS1 met: door half-open, empty corridor with cool spill across the terrazzo, chair at the right edge, bed end at the bottom; door plaque blank at 6x; no figures or shadows in the corridor. DRIFT (geometry): the door sits square ahead beyond the FOOT of the bed, while L11/L12/L14/L16/L19 place the door in the left wall near the head end - from the head of the bed the door should be beside or behind camera. family checks: no people/hands/figures/shadows in corridor, door glass, blinds or chrome (zoomed 2-6x); no blood, no injured body, empty bed; no noose-like loops; monitor shows an abstract trace only, no digits; door plaque blank; outlets plain; no logo or institution name; blinds closed with nothing recognisable outside, so nothing contradicts Boston General (SS:L1865) - generic worn institutional room per the writer description (MAPS:L320). ref ids: maker index reference_ids = TCM-SET-HOSPITAL-L11 (maker value, not derived); own sha256 matches maker index; 1280x720 16:9; filename matches card regex.",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001.md sha256 a94d2a404aaf3f77f2967e110dc3ad0f1afd93b646a5ea76c3813c66d8c1a971 (matches CARDS_INDEX_B2) ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; FIDELITY_RUBRIC_v002 4b4de5b47bab0109a9dd77ab0593e97ebf8ecdb7824c9495ab17a91e3f39a65e ; V1 rulings v001 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1 rulings addendum v002 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265 ; maker index out/SETS/TCM-SET-HOSPITAL/BATCH_02_index.tsv sha256 8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "209996f2a6d0025728246e0991e7bb4a17bd9a87fb880415d3f6fea49e57df34",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY, not selected. From the bed toward the door: half-open wooden door, empty corridor with cool spill across terrazzo, chair at right edge, bed end/rail at bottom (HOS-LS1).",
+        "sourceVsProposal": null,
+        "defectNote": "No people/shadows in corridor; door plaque blank; no text; 1280x720 16:9. CONTINUITY NOTE: the visible bed rail is a foot-end rail and the door sits square opposite the bed end, while L11 has the door at the left side of the room - geometry drift.",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/MAKER_BATCH_02_index.tsv",
+        "sourceSHA256": "8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L19__P08-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSPITAL-L11-L21\\TCM-SET-HOSPITAL-L19__P08-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L19__P08-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21.zip",
+      "archiveMember": "TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L19__P08-LS1.jpg",
+      "sha256": "da83f4d64461984e59e41520198112fab6f1445f060a7faf95cb9880fd229aae",
+      "bytes": 222266,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "S09 HOS-P08 spec (MAPS:L333), exploratory",
+        "note": "PRELIMINARY; S09 HOS-P08 nurse entry POV from the doorway, light HOS-LS1 (exploratory, binds no shot). DRIFT: the camera is not at the threshold - the open door and corridor are in frame at left - and the composition near-repeats L16 (foot-of-bed view; mean luminance difference 20/255), not the doorway view with the free side nearer and the cuffed side far. Cuff on the right (window-side) rail; trapeze rigid triangle grab handle OK (not noose-like). Monitor trace only. family checks: no people/hands/figures/shadows in corridor, door glass, blinds or chrome (zoomed 2-6x); no blood, no injured body, empty bed; no noose-like loops; monitor shows an abstract trace only, no digits; door plaque blank; outlets plain; no logo or institution name; blinds closed with nothing recognisable outside, so nothing contradicts Boston General (SS:L1865) - generic worn institutional room per the writer description (MAPS:L320). ref ids: maker index reference_ids = TCM-SET-HOSPITAL-L16 (maker value, not derived); own sha256 matches maker index; 1280x720 16:9; filename matches card regex.",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001.md sha256 a94d2a404aaf3f77f2967e110dc3ad0f1afd93b646a5ea76c3813c66d8c1a971 (matches CARDS_INDEX_B2) ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; FIDELITY_RUBRIC_v002 4b4de5b47bab0109a9dd77ab0593e97ebf8ecdb7824c9495ab17a91e3f39a65e ; V1 rulings v001 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1 rulings addendum v002 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265 ; maker index out/SETS/TCM-SET-HOSPITAL/BATCH_02_index.tsv sha256 8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "209996f2a6d0025728246e0991e7bb4a17bd9a87fb880415d3f6fea49e57df34",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY, not selected. Intended nurse entry POV from the threshold; returned a foot-of-bed view like L16 with the door in frame at left: rails up, cuff on right (window-side) rail, trapeze with triangle, IV, monitor, blinds (HOS-LS1).",
+        "sourceVsProposal": null,
+        "defectNote": "No people/text/digits seen; 1280x720 16:9. CARD MISMATCH: camera is not at the threshold (door visible in frame); near-duplicate of L16 composition. Trapeze triangle flag as L16.",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/MAKER_BATCH_02_index.tsv",
+        "sourceSHA256": "8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L20__P09-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSPITAL-L11-L21\\TCM-SET-HOSPITAL-L20__P09-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L20__P09-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21.zip",
+      "archiveMember": "TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L20__P09-LS1.jpg",
+      "sha256": "9d65e2d01ef4433fb7ea5dda2e728bca79a3ac9afb0c0e6fad48bc0735ad68b5",
+      "bytes": 182827,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "S10 HOS-P09 pass checks (MAPS:L334) \"no landmark skyline\"; H1 \"Boston general in the intensive care unit\" (SS:L1865); H2 \"INT-Hospital Room- Night\" (SS:L1875)",
+        "note": "PRELIMINARY; S10 HOS-P09 window wall square-on, light HOS-LS1 met: venetian blinds half-closed, anonymous dark night outside with no skyline, no lights, no landmark (3x brightened: only a faint lighter patch), sill and old painted radiator below, green tile. No reflections of figures in the glass. Blind cord short and straight with a plain pull, no loop. Notes: tile runs higher on this wall than the L11 dado; slightly clean/CG finish. family checks: no people/hands/figures/shadows in corridor, door glass, blinds or chrome (zoomed 2-6x); no blood, no injured body, empty bed; no noose-like loops; monitor shows an abstract trace only, no digits; door plaque blank; outlets plain; no logo or institution name; blinds closed with nothing recognisable outside, so nothing contradicts Boston General (SS:L1865) - generic worn institutional room per the writer description (MAPS:L320). ref ids: maker index reference_ids = TCM-SET-HOSPITAL-L11 (maker value, not derived); own sha256 matches maker index; 1280x720 16:9; filename matches card regex.",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001.md sha256 a94d2a404aaf3f77f2967e110dc3ad0f1afd93b646a5ea76c3813c66d8c1a971 (matches CARDS_INDEX_B2) ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; FIDELITY_RUBRIC_v002 4b4de5b47bab0109a9dd77ab0593e97ebf8ecdb7824c9495ab17a91e3f39a65e ; V1 rulings v001 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1 rulings addendum v002 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265 ; maker index out/SETS/TCM-SET-HOSPITAL/BATCH_02_index.tsv sha256 8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "209996f2a6d0025728246e0991e7bb4a17bd9a87fb880415d3f6fea49e57df34",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY, not selected. Window wall square-on: venetian blinds half-closed, anonymous dark night outside (no skyline/lights), sill, old painted radiator, green tile (HOS-LS1).",
+        "sourceVsProposal": null,
+        "defectNote": "none seen: no skyline/landmark, no people/reflections, blind cord short and straight, no text; 1280x720 16:9. Notes: tiles run to full window height (vs dado in L11); slightly CG/clean look.",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/MAKER_BATCH_02_index.tsv",
+        "sourceSHA256": "8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L21__P10-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSPITAL-L11-L21\\TCM-SET-HOSPITAL-L21__P10-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L21__P10-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSPITAL-L11-L21.zip",
+      "archiveMember": "TCM-SET-HOSPITAL-L11-L21/TCM-SET-HOSPITAL-L21__P10-LS1.jpg",
+      "sha256": "d89fa7e22f563b82662421788e1ef4be75cac26fc8a4a03365e36b518db6a7e7",
+      "bytes": 154795,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "QUALITY-FAIL",
+        "hardTrait": "Q-TEXT; S11 HOS-P10 pass check \"paper/labels blank (not blurred pseudo-text)\" and \"no legible digits or labels\" (MAPS:L335); family check \"no logo\"",
+        "note": "PRELIMINARY; S11 HOS-P10 IV stand and monitor detail, light HOS-LS1. Met: pole with two containers and straight lines, boxy monitor on a cart with a green abstract trace, no digits on the trace. QUALITY-FAIL (Q-TEXT): the monitor bezel carries a brand-style wordmark top-left that reads as a word at native 1x (illegible at 8x - no real letters resolve), plus a column of pseudo-label button text and a model-number-like mark on the lower bezel; the P10 check asks for blank labels, not blurred pseudo-text. NOT a hard-rule reroll candidate: no actual letters or numerals can be read (Chief's test); not a real maker emblem. IV containers are rigid bottles with faint graduation lines rather than bags (note). family checks: no people/hands/figures/shadows in corridor, door glass, blinds or chrome (zoomed 2-6x); no blood, no injured body, empty bed; no noose-like loops; monitor shows an abstract trace only, no digits; door plaque blank; outlets plain; no logo or institution name; blinds closed with nothing recognisable outside, so nothing contradicts Boston General (SS:L1865) - generic worn institutional room per the writer description (MAPS:L320). ref ids: maker index reference_ids = TCM-SET-HOSPITAL-L16 (maker value, not derived); own sha256 matches maker index; 1280x720 16:9; filename matches card regex.",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-HOSPITAL_card_v001.md sha256 a94d2a404aaf3f77f2967e110dc3ad0f1afd93b646a5ea76c3813c66d8c1a971 (matches CARDS_INDEX_B2) ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; FIDELITY_RUBRIC_v002 4b4de5b47bab0109a9dd77ab0593e97ebf8ecdb7824c9495ab17a91e3f39a65e ; V1 rulings v001 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1 rulings addendum v002 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265 ; maker index out/SETS/TCM-SET-HOSPITAL/BATCH_02_index.tsv sha256 8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "209996f2a6d0025728246e0991e7bb4a17bd9a87fb880415d3f6fea49e57df34",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY, not selected. IV pole with two clear bottles and straight lines, old boxy monitor on cart with green abstract trace (HOS-LS1).",
+        "sourceVsProposal": null,
+        "defectNote": "No people/digits on the trace. DEFECT: at 3x the monitor bezel carries a brand-like pseudo-word top-left and pseudo-glyph button labels (illegible but character-like) - text/brand rule risk; IV containers are rigid bottles with faint graduation lines rather than plain bags; 1280x720 16:9.",
+        "sourceMember": "TCM-SET-HOSPITAL-L11-L21/MAKER_BATCH_02_index.tsv",
+        "sourceSHA256": "8b8a19109f1b3cd291854de7ce77d94a8a00aaf7401ffb8635d728199bd5d9d6"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    }
+  ],
+  "verification": {
+    "zipCRC": true,
+    "archiveHash": true,
+    "safeMemberPaths": true,
+    "noSymlinks": true,
+    "noEncryptedMembers": true,
+    "uniqueCandidateIDs": true,
+    "indexedBytesAndHashes": true,
+    "JPEGDecode": true,
+    "humanReviewOrAcceptanceCreated": false
+  },
+  "note": "Technical receipt for unreviewed originals. Provider/V-team screening remains attributed preliminary evidence, never a human verdict or acceptance."
+}

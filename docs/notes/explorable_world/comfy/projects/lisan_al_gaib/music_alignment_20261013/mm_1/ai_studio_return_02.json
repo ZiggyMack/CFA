@@ -1,0 +1,268 @@
+{
+  "audio_access": true,
+  "limitations": "Provisional timing pass; timestamps derived from stereo mix listening without isolated stems. Converted strictly to decimal seconds within the 0 to 271.760 s boundary (correcting previous M:SS minute-to-second calculation error).",
+  "source_access_check": {
+    "line_18": "Under the lies….half truths realized—",
+    "line_20": "Lisan, to the silence break.",
+    "line_30": "We do.",
+    "line_82": "Jung in the back room. ",
+    "line_99": "DOCTOR?",
+    "line_128": "I am the voice of y’all",
+    "line_134": "Can you handle what you hand out?",
+    "line_138": "I kept pointin’ at the devil—"
+  },
+  "sections": [
+    {
+      "section_id": "S01",
+      "source_header_line": 1,
+      "label": "[Chorus]",
+      "start_s": 0.0,
+      "end_s": 54.0,
+      "confidence": 0.95,
+      "audible_boundary_cue": "Intro synth/808 opens; vocal enters at 6.3s; section concludes on 'one for every womb and man' before Verse 1 kick drop"
+    },
+    {
+      "section_id": "S02",
+      "source_header_line": 24,
+      "label": "[Verse 1]",
+      "start_s": 54.0,
+      "end_s": 91.5,
+      "confidence": 0.94,
+      "audible_boundary_cue": "Enters on 'Birth pains inside the Handle'; concludes after 'Angel knows-'"
+    },
+    {
+      "section_id": "S03",
+      "source_header_line": 39,
+      "label": "[BRIDGE]",
+      "start_s": 91.5,
+      "end_s": 105.5,
+      "confidence": 0.93,
+      "audible_boundary_cue": "Enters on melodic chant 'Lisan, to the silence break'; ends on 'ideas for man'"
+    },
+    {
+      "section_id": "S04",
+      "source_header_line": 47,
+      "label": "[ VERSE 2]",
+      "start_s": 105.5,
+      "end_s": 126.0,
+      "confidence": 0.94,
+      "audible_boundary_cue": "Begins abruptly with 'Engineers - talking shit'; concludes after 'another one' adlib"
+    },
+    {
+      "section_id": "S05",
+      "source_header_line": 62,
+      "label": "[BRIDGE]",
+      "start_s": 126.0,
+      "end_s": 145.8,
+      "confidence": 0.92,
+      "audible_boundary_cue": "Begins with 'Mirror rorrim, don't fall'; builds through 'oy e vey' pad filter to 'remainder of what is seen?'"
+    },
+    {
+      "section_id": "S06",
+      "source_header_line": 73,
+      "label": "[Refrain]",
+      "start_s": 145.8,
+      "end_s": 160.5,
+      "confidence": 0.94,
+      "audible_boundary_cue": "Drop into rhythmic chant 'But who cares? Who cares?'; ends on whispered 'who's meta mirrors all?'"
+    },
+    {
+      "section_id": "S07",
+      "source_header_line": 81,
+      "label": "[Verse 3]",
+      "start_s": 160.5,
+      "end_s": 229.0,
+      "confidence": 0.95,
+      "audible_boundary_cue": "Enters dry with 'Jung in the back room.'; runs through 'Nobody gotta think alone'"
+    },
+    {
+      "section_id": "S08",
+      "source_header_line": 120,
+      "label": "[Final Refrain]",
+      "start_s": 229.0,
+      "end_s": 271.76,
+      "confidence": 0.96,
+      "audible_boundary_cue": "Final anthem hook 'But who cares? Who cares?'; extends through outro phrases to 270.2s vocal cut and reverb tail"
+    }
+  ],
+  "anchors": [
+    {
+      "anchor_phrase": "opening Voice",
+      "exact_audible_words": "Voice from the outer world,",
+      "source_line": 2,
+      "start_s": 6.3,
+      "end_s": 9.0,
+      "lane": "LEAD",
+      "confidence": 0.98,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_phrase": "Under the lies(first)",
+      "exact_audible_words": "Under the lies….half truths realized—",
+      "source_line": 18,
+      "start_s": 40.6,
+      "end_s": 47.3,
+      "lane": "LEAD",
+      "confidence": 0.95,
+      "uncertainty_s": 0.3
+    },
+    {
+      "anchor_phrase": "Lisan(first)",
+      "exact_audible_words": "Lisan, to the silence break.",
+      "source_line": 20,
+      "start_s": 47.7,
+      "end_s": 50.4,
+      "lane": "LEAD",
+      "confidence": 0.95,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_phrase": "Birth pains",
+      "exact_audible_words": "Birth pains inside the Handle,",
+      "source_line": 26,
+      "start_s": 54.2,
+      "end_s": 56.4,
+      "lane": "LEAD",
+      "confidence": 0.96,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_phrase": "early We do",
+      "exact_audible_words": "We do.",
+      "source_line": 30,
+      "start_s": 78.0,
+      "end_s": 79.4,
+      "lane": "DOUBLE",
+      "confidence": 0.95,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_phrase": "Engineers",
+      "exact_audible_words": "Engineers - talking shit … designing convo - just a bit …",
+      "source_line": 48,
+      "start_s": 105.8,
+      "end_s": 109.4,
+      "lane": "LEAD",
+      "confidence": 0.96,
+      "uncertainty_s": 0.3
+    },
+    {
+      "anchor_phrase": "Jung",
+      "exact_audible_words": "Jung in the back room.",
+      "source_line": 82,
+      "start_s": 160.5,
+      "end_s": 162.1,
+      "lane": "LEAD",
+      "confidence": 0.96,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_phrase": "CJ",
+      "exact_audible_words": "CJ!",
+      "source_line": 83,
+      "start_s": 162.0,
+      "end_s": 163.2,
+      "lane": "ECHO",
+      "confidence": 0.97,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_phrase": "DOCTOR",
+      "exact_audible_words": "DOCTOR?",
+      "source_line": 99,
+      "start_s": 193.1,
+      "end_s": 194.3,
+      "lane": "AD_LIB",
+      "confidence": 0.97,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_phrase": "Outer world same breath",
+      "exact_audible_words": "Outer world, inner world—same breath, two doors.",
+      "source_line": 108,
+      "start_s": 214.2,
+      "end_s": 217.8,
+      "lane": "LEAD",
+      "confidence": 0.95,
+      "uncertainty_s": 0.3
+    },
+    {
+      "anchor_phrase": "final I am the voice of y'all",
+      "exact_audible_words": "I am the voice of y’all",
+      "source_line": 128,
+      "start_s": 240.6,
+      "end_s": 242.9,
+      "lane": "LEAD",
+      "confidence": 0.95,
+      "uncertainty_s": 0.3
+    },
+    {
+      "anchor_phrase": "Can you handle what you hand out",
+      "exact_audible_words": "Can you handle what you hand out?",
+      "source_line": 134,
+      "start_s": 248.3,
+      "end_s": 250.7,
+      "lane": "LEAD",
+      "confidence": 0.94,
+      "uncertainty_s": 0.3
+    },
+    {
+      "anchor_phrase": "Why he got my eyes",
+      "exact_audible_words": "Why he got my eyes?",
+      "source_line": 139,
+      "start_s": 255.1,
+      "end_s": 257.0,
+      "lane": "LEAD",
+      "confidence": 0.95,
+      "uncertainty_s": 0.3
+    },
+    {
+      "anchor_phrase": "Find the signal",
+      "exact_audible_words": "Find the signal in the noise—",
+      "source_line": 141,
+      "start_s": 257.2,
+      "end_s": 259.9,
+      "lane": "LEAD",
+      "confidence": 0.94,
+      "uncertainty_s": 0.3
+    },
+    {
+      "anchor_phrase": "final one for every womb and man",
+      "exact_audible_words": "one for every womb and man….",
+      "source_line": 148,
+      "start_s": 266.8,
+      "end_s": 270.2,
+      "lane": "LEAD",
+      "confidence": 0.95,
+      "uncertainty_s": 0.4
+    }
+  ],
+  "text_audio_differences": [
+    {
+      "source_line": 18,
+      "description": "Elongated vocal run over 'realized', with backing vocal repeats trailing into line 20."
+    },
+    {
+      "source_line": 49,
+      "description": "Vocal delivers 'LIE've' with an accented play on 'live' / 'lie'."
+    },
+    {
+      "source_line": 83,
+      "description": "Line 83 'CJ! (Echoed adlib)' functions as a distinct delayed stereo throw immediately overlapping the tail of 'room' from line 82."
+    },
+    {
+      "source_line": 99,
+      "description": "Vocal delivery of 'DOCTOR?' is a sharp high-register interjection interrupting the flow of line 98."
+    }
+  ],
+  "uncertainties": [
+    {
+      "item": "S05/S06 transition",
+      "note": "Transition between reflective bridge and refrain at ~145.8s has overlapping vocal delay trails across the bar line."
+    },
+    {
+      "item": "Outro vocal tails",
+      "note": "Final repetition of line 148 has a long ambient reverb tail decaying into the silence before total file end at 271.760s."
+    }
+  ]
+}

@@ -1,0 +1,348 @@
+{
+  "schemaVersion": 1,
+  "recordType": "CFA_current_local_V1_reference_reconciliation",
+  "createdAtUTC": "2026-10-21T02:41:37.868Z",
+  "writtenBy": "CFA Nova",
+  "status": "local_evidence_checked_chief_return_pending",
+  "handoffMessageID": "ae695399-e913-4149-a53d-ae722e195258",
+  "conversationID": "2880600d-c556-4045-bf32-e302c5abab1a",
+  "publicFrozenArtifacts": [
+    {
+      "path": "v1_workshop/active_run_v001/ACTIVE_RUN_MANIFEST_v001.json",
+      "bytes": 3007,
+      "sha256": "b0fde2d01194c2f2a7f431b1b36695a16fe769dcacd54616e842ad55cd55ad49"
+    },
+    {
+      "path": "v1_workshop/active_run_v001/REFERENCE_MAP_PER_CRITERION_v001.md",
+      "bytes": 923,
+      "sha256": "c33c23bae6b0d85e7acc2488d30012012298e3ba05d4799874bf9923b2a11ae4"
+    },
+    {
+      "path": "v1_workshop/active_run_v001/V1_TASK.md",
+      "bytes": 2998,
+      "sha256": "9480027661d91484bfbf36cb8ef75632526903fff1a889a5987e25152723f6b5"
+    },
+    {
+      "path": "v1_workshop/active_run_v001/calibration_20261014T011535Z_87237267-ade9-4ad5-b9bf-e9272bb424be_v001.md",
+      "bytes": 10697,
+      "sha256": "2cf53ec7dfcf470238dfec55cd7f4f356352973ab2a8fd2ee9599f41ba1c1321"
+    }
+  ],
+  "frozenArtifactMatchToOct14Pins": true,
+  "pilot": {
+    "runID": "V1-OBS-CAL-20261014T011535Z",
+    "entries": 15,
+    "uniqueInputHashes": 14,
+    "observationsOnly": true,
+    "formalGrades": false,
+    "originalReturnEdited": false,
+    "actualPilotImagesViewedByThisPass": 0,
+    "viewingClaim": "Frozen self-authored V1 return states every image opened with Grok Bot built-in Read image tool; exact model/version not identified there.",
+    "independentVerificationLimits": [
+      "No original pilot pixel-viewing/tool log inspected",
+      "No private key or blind-to-original map opened",
+      "No independent freeze-versus-key-access chronology verified",
+      "No completed full Chief audit independently located before live follow-up"
+    ]
+  },
+  "currentSourceSnapshots": [
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "bytes": 204969,
+      "sha256": "b37518b802a24d141a64933d13f61f5aad6462de9874f9a79319f26cfa0aa566"
+    },
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/visual_library/character_reference_board.json",
+      "sha256": "ebac15f9086b4b73997be88e43ad52b11a7bca328c6466c22433b65f332600aa"
+    },
+    {
+      "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/visual_library/reference_validation.json",
+      "sha256": "6a349b56b2b3534a2c2f04670f76002e27803ca6a1957e9eafed3ef3dc35af60"
+    }
+  ],
+  "refs": [
+    {
+      "rowID": "natural-face",
+      "id": "LAG-602a9fd4021dc356",
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOCK-FACE-NATURAL.jpg",
+      "bytes": 212322,
+      "sha256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+      "version": "sha256:602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+      "actualBytes": 212322,
+      "actualSHA256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+      "exactSourceVerified": true,
+      "scope": "Existing identity reference for the visible face, natural teeth and neck marks. No automatic ink-criterion binding.",
+      "unresolved": {
+        "status": "owner_reconciliation",
+        "owner": "CFA Nova",
+        "summary": "Accepted visible variation remains separate from formal face-mark criteria."
+      },
+      "provenance": [
+        {
+          "kind": "existing_source_nomination",
+          "summary": "Current identity nomination and existing character cover; earlier selection history was reported by Chief."
+        },
+        {
+          "kind": "canonical_attributed_human_rating",
+          "summary": "Ziggy rated the visible character/look 5/5 through the recorded voice relay. Both portrait examples are acceptable; this is separate from scene quality and from this row’s reference purpose."
+        }
+      ]
+    },
+    {
+      "rowID": "signature-outfit",
+      "id": "LAG-63126392af1ccf8b",
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOOK-V3-01.jpg",
+      "bytes": 327619,
+      "sha256": "63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026",
+      "version": "sha256:63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026",
+      "actualBytes": 327619,
+      "actualSHA256": "63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026",
+      "exactSourceVerified": true,
+      "scope": "Outfit only: the visible signature stillsuit and cloak. This nomination does not govern face, body build or the whole scene.",
+      "unresolved": {
+        "status": "none_for_named_scope",
+        "owner": "CFA Nova",
+        "summary": "The existing outfit-only reference purpose is retained; the portrait rating does not approve unseen garments or body proportions."
+      },
+      "provenance": [
+        {
+          "kind": "existing_source_nomination",
+          "summary": "Existing current wardrobe nomination."
+        },
+        {
+          "kind": "canonical_attributed_human_rating",
+          "summary": "Ziggy rated the visible character/look 5/5 through the recorded voice relay. Both portrait examples are acceptable; this is separate from scene quality and from this row’s reference purpose."
+        }
+      ]
+    },
+    {
+      "rowID": "optional-breather",
+      "id": "LAG-PART-1b60815fa2bb",
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/reference_updates/breather_partial_20261009/received/content/1b60815fa2bb__LAG-BR-01_REST_front_v3_STANDARD.jpg",
+      "bytes": 201192,
+      "sha256": "1b60815fa2bb4f8f488ebcf123a6a71af4cba144d06667c73b2ceeb2de053c00",
+      "version": "sha256:1b60815fa2bb4f8f488ebcf123a6a71af4cba144d06667c73b2ceeb2de053c00",
+      "actualBytes": 201192,
+      "actualSHA256": "1b60815fa2bb4f8f488ebcf123a6a71af4cba144d06667c73b2ceeb2de053c00",
+      "exactSourceVerified": true,
+      "scope": "Settled optional combination: breather, natural teeth and no grill. Does not set default face, artwork, jewelry or outfit.",
+      "unresolved": {
+        "status": "owner_reconciliation",
+        "owner": "CFA Nova",
+        "summary": "Bind the existing scoped selection in the owner records. The absence of a sidecar does not require the user to repeat the settled choice."
+      },
+      "provenance": [
+        {
+          "kind": "retained_observation_of_human_selection",
+          "summary": "A retained coordinator observation records the actual scoped human selection on 2026-10-09. The direct transcript is not embedded; provider self-scores are not human ratings."
+        }
+      ]
+    },
+    {
+      "rowID": "optional-grill",
+      "id": "LAG-cb183973ed1fc70e",
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/03_Inspiration_History/g-superseded-refs/LAG-LOCK-FACE.jpg",
+      "bytes": 199546,
+      "sha256": "cb183973ed1fc70ec906b762fb263b29c8866934a67f9608786b712579eaf056",
+      "version": "sha256:cb183973ed1fc70ec906b762fb263b29c8866934a67f9608786b712579eaf056",
+      "actualBytes": 199546,
+      "actualSHA256": "cb183973ed1fc70ec906b762fb263b29c8866934a67f9608786b712579eaf056",
+      "exactSourceVerified": true,
+      "scope": "Exact optional grill design only. Natural teeth remain the default; the historic face, tattoos and piercings are outside this selection.",
+      "unresolved": {
+        "status": "owner_reconciliation",
+        "owner": "CFA Nova",
+        "summary": "Reconcile matching optional mouth views to the existing grill-design choice without broadening it. No repeated human confirmation is needed solely for a missing sidecar."
+      },
+      "provenance": [
+        {
+          "kind": "existing_canonical_human_record",
+          "summary": "An exact canonical user Keep record already exists for this optional grill design, recorded on 2026-10-09. This board preserves that scoped record and creates no new nomination."
+        }
+      ]
+    },
+    {
+      "rowID": "body-build-candidate",
+      "id": "LAG500-L01-V2",
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part01/LAG-L01-mirror-voice-signature.zip.contents/LAG-L01-mirror-voice-signature/LAG-L01-mirror-voice-signature__V2-front.jpg",
+      "bytes": 310928,
+      "sha256": "545a335e0d33e62cf2aa55520118311b8e65057b9596bc3abdf903ddff8801f1",
+      "version": "sha256:545a335e0d33e62cf2aa55520118311b8e65057b9596bc3abdf903ddff8801f1",
+      "actualBytes": 310928,
+      "actualSHA256": "545a335e0d33e62cf2aa55520118311b8e65057b9596bc3abdf903ddff8801f1",
+      "exactSourceVerified": true,
+      "scope": "Provisional full-body candidate only; no accepted physique role or body-build approval is established.",
+      "unresolved": {
+        "status": "missing_human_choice_or_prior_evidence",
+        "owner": "CFA Nova",
+        "summary": "Locate prior accepted body-build evidence or request the genuinely missing body-build source and scope choice. Keep this row provisional until then."
+      },
+      "provenance": [
+        {
+          "kind": "unaccepted_provider_candidate",
+          "summary": "Existing catalog candidate with provider QA, awaiting accuracy review. Provider QA is not human acceptance."
+        }
+      ]
+    }
+  ],
+  "laterHumanPortraitEvidence": [
+    {
+      "id": "LAG-602a9fd4021dc356",
+      "sha256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+      "likenessRating": 5,
+      "humanRatingConfirmation": {
+        "field": "likenessRating",
+        "value": 5,
+        "recordedAtUTC": "2026-10-14T02:47:19.376043Z",
+        "source": "attributed Ziggy voice relay",
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/collaborators/reviewer_prototypes_20261014/coordination/PORTRAIT_UPLOAD_BINDING_fce06585-cfb3-424a-9ef3-8e242c2ffc44.json",
+        "evidenceSHA256": "a2f9166a637484a2759d4d4df5cdad48ad44864719f5124783f10e88b604ef10",
+        "assetID": "LAG-602a9fd4021dc356",
+        "assetSHA256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+        "scope": "Visible character/look only; no scene rating, unseen-body approval, exclusive primary choice, criteria pass or derivative acceptance.",
+        "sourceCaptureDescription": "Ziggy voice call2026-10-14 approximately01:48UTC; actual wording relayed by parent",
+        "authorship": "coordinator_summary",
+        "decisionAtUTC": "2026-10-14T01:48:00Z",
+        "timePrecision": "approximate"
+      }
+    },
+    {
+      "id": "LAG-63126392af1ccf8b",
+      "sha256": "63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026",
+      "likenessRating": 5,
+      "humanRatingConfirmation": {
+        "field": "likenessRating",
+        "value": 5,
+        "recordedAtUTC": "2026-10-14T02:47:19.376043Z",
+        "source": "attributed Ziggy voice relay",
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/collaborators/reviewer_prototypes_20261014/coordination/PORTRAIT_UPLOAD_BINDING_fce06585-cfb3-424a-9ef3-8e242c2ffc44.json",
+        "evidenceSHA256": "a2f9166a637484a2759d4d4df5cdad48ad44864719f5124783f10e88b604ef10",
+        "assetID": "LAG-63126392af1ccf8b",
+        "assetSHA256": "63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026",
+        "scope": "Visible character/look only; no scene rating, unseen-body approval, exclusive primary choice, criteria pass or derivative acceptance.",
+        "sourceCaptureDescription": "Ziggy voice call2026-10-14 approximately01:48UTC; actual wording relayed by parent",
+        "authorship": "coordinator_summary",
+        "decisionAtUTC": "2026-10-14T01:48:00Z",
+        "timePrecision": "approximate"
+      }
+    }
+  ],
+  "portraitInterpretation": "Two 5/5 visible looks with accepted variation. Do not re-ask their settled visible-look rating or invent an exclusive primary choice. This does not approve unseen body proportions, derivatives or a formal V1 criterion pass.",
+  "breatherEvidence": {
+    "path": "D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/optional_grill_dispatch_20261009/delivery_receipt.json",
+    "bytes": 7304,
+    "sha256": "f0c1b73c8115d82c7f08a741b954c6de10ca8e10ce4f709e98947a8b86468ad3",
+    "humanSelection": {
+      "recordedAtUTC": "2026-10-09T23:12:51.511875+00:00",
+      "source": "Root observed actual USER messages in HaL and relayed their scope; not inferred from provider claims.",
+      "providerProofLabel": "v3",
+      "userConfirmedWording": [
+        "breather with regular teeth",
+        "It isn't a default"
+      ],
+      "correction": "Earlier no-teeth wording was a typo; regular natural teeth, no grill is the confirmed combination.",
+      "userReportedResult": "Accessory successfully placed on the desired character.",
+      "providerAcknowledgedScope": true,
+      "selectionScope": "Base for optional breather + natural teeth only. Does not replace the general face, natural-teeth default without accessory, or separate optional-grill design.",
+      "localFileReceived": false,
+      "sourceAssetID": null,
+      "sha256": null,
+      "independentLocalVisualVerification": false,
+      "remainingBreatherPosesWithinExistingScope": 5,
+      "baseSelectionStillPending": false,
+      "newGenerationScope": false
+    },
+    "localBinding": {
+      "path": "../../reference_updates/breather_partial_20261009/intake_receipt.json",
+      "assetID": "LAG-PART-1b60815fa2bb",
+      "counts": {
+        "naturalMouthCandidates": 15,
+        "breatherViews": 5,
+        "optionalGrillMasterCandidates": 1,
+        "matchingOptionalGrillStates": 0
+      }
+    }
+  },
+  "optionalGrill": {
+    "assetID": "LAG-cb183973ed1fc70e",
+    "recordedHumanKeep": {
+      "id": "LAG-cb183973ed1fc70e",
+      "project": "lisan",
+      "filename": "LAG-LOCK-FACE.jpg",
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/03_Inspiration_History/g-superseded-refs/LAG-LOCK-FACE.jpg",
+      "sha256": "cb183973ed1fc70ec906b762fb263b29c8866934a67f9608786b712579eaf056",
+      "role": "review",
+      "status": "keep",
+      "note": "",
+      "shotPlan": null,
+      "updatedAt": "2026-10-09T18:05:44.728Z",
+      "origin": "user",
+      "storyboardStage": "detailed_design",
+      "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+      "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+      "scopeNote": "Keep exact optional Lisan grill source available; natural teeth remains default. Scope is the user-approved grill design, not a new universal face/piercing standard."
+    },
+    "newerChiefDiscontinuationReport": "Observed live; later human decision receipt/date requested before reconciling current use.",
+    "currentRootChange": false
+  },
+  "actualSourceViews": [
+    {
+      "assetID": "LAG-602a9fd4021dc356",
+      "tool": "view_image original",
+      "observation": "Near-frontal bust; natural visible upper teeth, blue eyes, centered AL, vertical chin letters, paired inward-facing worm mouths around a sun-eye, jewelry on subject-left. No full body."
+    },
+    {
+      "assetID": "LAG-63126392af1ccf8b",
+      "tool": "view_image original",
+      "observation": "Chest-up portrait in tan layer, dark cloak and gold chain; blue eyes, AL and vertical chin text; similar subject-left jewelry. Neck worm/sun artwork differs in shape from the natural-face image. Both look approvals remain intact."
+    },
+    {
+      "assetID": "LAG500-L01-V2",
+      "tool": "view_image original",
+      "observation": "Existing full-length clothed frontal candidate. Stillsuit and cloak conceal physique; no side or back. Forehead mark and small throat artwork visibly differ from the accepted portraits. Suitable for a body-only comparison proposal, not whole-character gold."
+    }
+  ],
+  "ownerWorkBeforeHumanChoices": [
+    {
+      "rank": 1,
+      "owner": "Chief / existing V1; CFA Nova approval-history reconciliation",
+      "work": "Compare the two already 5/5 portraits and propose feature-scoped anchors with documented accepted variation, without re-rating them or declaring a new exclusive face."
+    },
+    {
+      "rank": 2,
+      "owner": "Chief / existing V1",
+      "work": "Inventory existing full-body candidates with visible proportions/occlusion notes; nominate a small body-only choice only if no prior acceptance can be located."
+    },
+    {
+      "rank": 3,
+      "owner": "CFA Nova / Chief",
+      "work": "Bind the already settled optional breather selection; no human re-approval solely for missing packet attachment."
+    },
+    {
+      "rank": 4,
+      "owner": "Chief",
+      "work": "Return the dated later grill decision evidence; preserve historical optional-design Keep and natural-teeth default."
+    }
+  ],
+  "dispatch": {
+    "browserURL": "https://grok.com/bot/a4a75c63-1565-4448-84a2-f519f40bea15",
+    "oneSubmitObserved": true,
+    "userMessageVisible": true,
+    "composerCleared": true,
+    "chiefReadAcknowledgmentObserved": true,
+    "chiefCommitment": "Evidence report, ranked 3–5 decision queue and separate existing-V1 inventory task; no rerun/generation, sealed key.",
+    "ackAX": "CHIEF_ACK.ax.txt",
+    "ackScreenshot": "CHIEF_ACK.jpg"
+  },
+  "restrictions": {
+    "newGeneration": false,
+    "newBotsOrSessions": false,
+    "pilotRerun": false,
+    "privateKeyOrMappingRead": false,
+    "gradesOrGoldPromotion": false,
+    "productionDataOrSiteWrites": false,
+    "deepseekQwenKimiDormant": true,
+    "geminiUntouched": true
+  },
+  "chiefReturn": "pending; this record does not claim task delivery to V1 or a completed audit"
+}

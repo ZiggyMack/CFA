@@ -1,0 +1,231 @@
+CFA CINEMATOGRAPHY PILOT PACKAGE: HON DOLO CAR SCENE A/B
+Prepared October 12, 2026 for review with Ziggy, CFA Nova and Claude
+Status: DRAFT / PROPOSED. Reusable input package, not an assignment or run order.
+Companion: PROPOSAL.txt. Candidate pool: Gemini Master, Kimi, Qwen, DeepSeek, Nova.
+
+BRIEF
+Explain how to improve cinematography in the selected original car-arrival/entry
+excerpt and its existing warmer edit. Cinematography includes BOTH lighting and
+camera. Preserve the attractive blue night mood; develop warm local practical
+lighting with coherent falloff, shadows, material response and reflections, rather
+than a yellow filter. Propose a useful camera treatment separately from the fixed
+camera/action lighting diagnostic. Give CFA an actionable, bounded handoff.
+
+KNOWN STORY INTENTION / MISSING CONTEXT
+Project: Hon Dolo / Strictly Business. Ziggy selected this existing car-scene pair
+as the pilot. Existing visible outfit, blue night aesthetic, car/street environment
+and continuous action are the starting material. The exact dramatic beat, desired
+subject emphasis, intended arrival/entry choreography and storyboard scene-card ID
+have not been established in this package. Do not invent them or frame-specific
+defects from the user's ambiguous spoken action sequence. State the minimum missing
+information needed to finalize camera/blocking decisions. An exact lens, fixture
+position or geometry claim requires actual evidence, not the clip's filename.
+
+VERIFIED INPUTS AND LINEAGE
+CFA checkout root: D:\Documents\CFA
+
+Original long-source record (not the A/B editing input):
+  Reference ID: GEM-5A115C59
+  File: D:\Documents\CFA\docs\notes\explorable_world\comfy\references\Gemini Video\gemini_generated_video_5a115c59.mp4
+  Recorded SHA-256: 854dd279179300173f89339e707c326e7a48cb594cc52f6879229e4d45dc395e
+  Manifest: 41 seconds, 984 frames, 1280x720, 24fps; original AAC retained.
+  This draft did not independently rehash the long original.
+
+Source A / baseline and sole actual edit input:
+  Asset ID: FLOW-HD-VIDEO-002-A
+  File: D:\Documents\CFA\docs\notes\explorable_world\comfy\projects\hon_dolo_strictly_business\flow\video_test_002\FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667.mp4
+  SHA-256: f8f2aa30265392634b67dbddebdc6ac0f05007de1abb2730f27d27513e72d378
+  Bytes: 1837099
+  Prepared from long-source frames [244,388), corresponding to 10.1667-16.1667s.
+  Manifest operation: frame trim, libx264 re-encode (medium, CRF21, yuv420p),
+  setpts=PTS-STARTPTS, +faststart; no resize/retime; audio removed. Original intact.
+  A is a prepared excerpt, not a new Flow generation or accepted character source.
+
+Output B / received warmer edit of A:
+  Asset ID: FLOW-HD-VIDEO-002-B
+  File: D:\Documents\CFA\docs\notes\downloads\FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667_20261012004113.mp4
+  SHA-256: 8d090aaa5a45cc42cb9d52e7b26d9419a8d8aa8c029c22a1859752ec7e0cf3c2
+  Bytes: 2325046
+  Actual model/mode: Omni 1.1 Flash, video edit with A as the video ingredient.
+  Received outputs: 1. Recorded download: 720p (Original size).
+  Editor route: https://flow.google.com/project/e8a547ef-f801-4021-a5ee-fad3080b439c/edit/ee3f7e84-462d-41e5-b8c2-0ea1d9624aa1
+  Editor-route ID is not a verified generation-job ID. Job ID, hidden seed/settings
+  and actual cost remain unknown. No higher-quality drop-in edit route is verified.
+  B must not become input for the proposed lighting diagnostic: use unchanged A.
+
+A/B hashes were independently rechecked against local bytes for this draft on
+October 12. Manifest and actual return receipt establish lineage; the older
+manifest's pre-run state is dated history, superseded by the actual return record.
+
+CURRENT TECHNICAL EVIDENCE
+Both: 1280x720; 144 frames; nominal 24 tbr; about six seconds packet presentation.
+A: FFmpeg rounded header 5.96s; reported average about 24.17fps.
+B: FFmpeg header/container 6.02s; reported 24fps; historical video duration 6.0s.
+Exact source avg_frame_rate/stream duration are unverified: ffprobe was unavailable.
+Do not equate nominal 24 tbr with identical native average rates. These figures
+come from the current attributed review/receipt, not a fresh probe in this draft.
+A has no audio stream. B has AAC LC stereo 48kHz, measured near-silent (mean -91dB,
+peak -84.3dB), despite the silence request. No listening judgment is claimed.
+Grain/softness is a subjective quality issue; measured files are 720p, not 480p.
+Resolution/export quality, lighting physics, likeness and motion are separate axes.
+
+EXACT ACTUAL B EDIT PROMPT
+Source: video_test_002/ACTUAL_PROMPT_20261012.txt. Verbatim text between markers:
+BEGIN ACTUAL PROMPT
+Edit the attached six-second video. Make only one visual change: give the existing illumination a subtle warmer color balance, keeping the night scene, approximate exposure and neon atmosphere. Preserve the existing performer, face, hair, visible tattoos, grillz and jewelry exactly as they appear in this clip. Keep the silver jacket silver, the car’s design and color, all hands and clothing, street layout, signs and reflections coherent. Preserve the complete motion sequence, timing, camera movement, car descent, door opening, character turn and body/door contact. Keep one continuous shot with no new cuts, objects, people, face replacement, tattoo correction, retiming or extra action. Return silent video with no dialogue, lyrics, music or narration.
+END ACTUAL PROMPT
+
+ZIGGY'S CURRENT REVIEW: ATTRIBUTED, NOT A NEW GRADER'S OBSERVATION
+Review: FLOW-HD-VIDEO-002-USER-REVIEW-20261012, reviewer Ziggy.
+Both A/B: purpose Scene; stage Preliminary; verdict Needs fixes; numeric scores
+unsupplied; not production-accepted. Earlier warmth-only acceptance is retained as
+history, clarified by this current technical-success/artistic-needs-fixes review.
+
+A: Outfit perfect for the intended look; actor insufficiently matches established
+likeness. Tattoos mostly hard to see; some neck tattoo and chain visible. Car
+descent/entry/body interaction is unrealistic and motion feels AI-generated.
+Beautiful, even phenomenal, cool blue aesthetic; appears grainy/low-resolution.
+The 480p-versus-1080p comparison was subjective, not measured metadata.
+B: Warmth visibly changed, including yellower streetlights; reads as a yellow filter
+or surface wash rather than source-motivated light with convincing local falloff,
+shadows and reflections. Lighting technical effect succeeded; production did not.
+The actual B prompt requested color balance, not a fully specified relighting plan.
+A's likeness/tattoo-visibility/motion defects predate B. Do not blame B for inherited
+issues without an observed A/B difference. No whole-actor, mouth or tattoo approval
+follows from the praised outfit or aesthetic.
+
+SCOPED REFERENCE / STORYBOARD ATTACHMENT REGISTER
+Verified metadata from current working_reference_bom.json and Hon canonical
+feedback/review_decisions.json; image bytes were not independently viewed here:
+- Default no-forehead-dice face/look option: HD-RETURN-6c8900223ee9.
+  File: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/6c8900223ee9__lf_full.png
+  SHA-256: 6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae
+  User Keep; selected default, updated 2026-10-09T18:23:34.085Z. Canonical review
+  records requested complete-look scope requiring reconciliation, not automatic
+  whole-actor approval; not a replacement dental master. Use as scoped look
+  comparison, with this limitation explicit. Do not describe A as matching it.
+- Four-gold upper / silver-lower dental layout and plain lip hoops:
+  HD-B-91ef00348229, current mouth/detail reference only.
+  File: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/91ef00348229__GRILL-LOCK-4GOLD-v2.jpg
+  SHA-256: 91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86
+  Canonical user review: Keep, detail, Production, likeness 5, updated
+  2026-10-10T13:04:39.768Z. BOM limits this to mouth; cropped nose jewelry is ignored.
+  Context only for this fixed-source test; no dental correction is requested.
+- No canonical accepted silver-outfit reference is established by the two Hon
+  wardrobe BOM entries: cash/rain outfit options both have recordedSelection=null.
+  Do not substitute them for A's outfit or promote praise of A into global approval.
+Keep all scoped reference stages and A's actor mismatch intact. Pending: a reconciled
+accepted actor scope if required for later production; matching accepted outfit if
+applicable; scene-card/shot intention; which exact reference bytes each candidate
+actually received. Unneeded tattoo/mouth details need not expand this lighting test.
+
+ALREADY-SUPPLIED VISUAL EXAMPLES — EXACT ARCHIVED SOURCES
+These are user-described motion targets. The existing_visual_examples worker
+actually inspected the three archived screenshots and matched their intake hashes;
+the observations below are attributed still-image findings from that worker. This
+draft author read the intake records, not live playback. No verified motion,
+camera movement or audio is available for any example. Live Civitai access attempts
+by the parent failed; original media and complete recipes remain unavailable.
+
+1. User-described cab-exit woman target:
+  https://civitai.com/images/144607296
+  Intake ID: HON-INSP-CIVITAI-144607296-20261009
+  Intake: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/cast/unnamed_informant/intake_20261009.json
+  Screenshot: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/cast/unnamed_informant/source/civitai_144607296_user_screenshot.png
+  SHA-256: d5b97912d5492fab6d75ea05847a32e930c16dbae4f602b43159fad92e017ed0
+  Still target: medium/full seated woman left, deep city/cab background, cool
+  blue-gray night, localized pink signage/neck accent, warm distant vehicle lamps
+  and wet reflection/highlight bands. The seated still does not prove cab-exit
+  action. Screenshot labels name MiniMax H3 and a truncated workflow, not a verified
+  model/version/settings recipe. Informant inspiration is not accepted adaptation.
+
+2. User-described sword-pulling character/AI target:
+  https://civitai.red/images/142237147
+  Intake ID: SHARED-INSP-CIVITAI-142237147-20261009
+  Intake: docs/notes/explorable_world/comfy/references/civitai_android_sword_142237147_20261009/intake.json
+  Screenshot: docs/notes/explorable_world/comfy/references/civitai_android_sword_142237147_20261009/source/civitai_142237147_user_screenshot.png
+  SHA-256: 268ad764aaa3a76cd9beb55802eab159bcbe2b542330d14d54f01f0db671f392
+  Still target: wide central android/boulder with spectators around it, bright
+  cloudy opening behind subject, darker foreground and glossy armor highlights;
+  front three-quarter composition. A grip on the sword does not prove pulling
+  motion. MiniMax H3 / Comfy / IMG2VID are screenshot page claims, not verified
+  execution or settings. Shared inspiration remains unassigned to a project.
+
+3. User-described futuristic dirtbike in sand target:
+  https://civitai.com/images/142858230
+  Intake ID: LAG-INSP-CIVITAI-142858230-20261009
+  Intake: docs/notes/explorable_world/comfy/projects/lisan_al_gaib/03_Inspiration_History/civitai_hoverbike_142858230_20261009/intake.json
+  Screenshot: docs/notes/explorable_world/comfy/projects/lisan_al_gaib/03_Inspiration_History/civitai_hoverbike_142858230_20261009/source/civitai_142858230_user_screenshot.png
+  SHA-256: 8cf9bf3216adac9de680ae8db2ade1234e4ba707c7c94a90eb1b61844cf72a67
+  Still target: low front three-quarter rider/vehicle filling a portrait frame,
+  ruins/dunes behind, warm directional daylight, a clear vehicle shadow and blue/
+  pink thruster accents. No ride motion verified. COMFYUI/img2vid are visible
+  labels only; model/settings are not visible. Lisan inspiration only, not identity
+  or costume adoption. Do not mix its cast or references into the Hon pilot.
+
+BOUNDED VISUAL R&D, PROPOSED
+Use those existing examples first. If actual Civitai visual/video/still access is
+available, examine up to these three supplied examples; no broad hunt or substitute
+clips. Visually excellent work can be a target even with an incomplete recipe.
+For each: exact link/creator; what was actually seen; observed light/camera behavior;
+separately documented model/version/settings/workflow; separately technique
+hypotheses and transfer limits. Cite only researched pages. A still-image recipe
+does not demonstrate Flow video compatibility. Only the archived intake/still
+evidence above is established; no live creator-workflow research or verified
+full-motion recipe was added here.
+If inaccessible, say so; Ziggy may curate additional exact examples after the
+existing ones are used. Proposed collaboration: Ziggy curator, specialist analyst,
+CFA operator. These are proposed functions, not role assignments.
+
+CANDIDATE DELIVERABLE: ONE ACTIONABLE PAGE, FIRST INDEPENDENT ATTEMPT
+Record author, actual visible model/session, exact inputs received and visual-access
+limits. Path-only or text-only access cannot support claims of visual inspection.
+- Lighting: source positions/directions and warm-cool relationship grounded in A;
+  falloff, occlusion, shadows/highlights/reflections and material response; retain
+  blue ambience, plausible skin and silver jacket. Mark assumptions explicitly.
+- Camera: framing, movement, coverage, subject emphasis and spatial/temporal
+  continuity tied to the intended beat. Separate observed source behavior from a
+  proposed treatment. Avoid invented lens or geometry measurements.
+- Target-tool prompt: concise, mode-compatible instruction; invariants; unsupported
+  controls labeled; reproducible test specification and minimal missing inputs.
+- Evaluation: observable pass/fail cues, inherited versus new defects, evidence and
+  uncertainty. No fabricated completed asset stars or collaborator grades.
+- Example lessons, if actually researched, with citations and transfer limits.
+
+TWO DISTINCT PROPOSED PASSES
+Pass A — isolate lighting: existing single proposed C, fed from unchanged A and
+compared with existing B. Hold full action, timing AND camera movement fixed.
+Warm only existing emitters and their illuminated surfaces; no relocated/added
+lamps or objects, global wash, redesign, retime, new cuts or extra actions. Refer
+to USER_REVIEW_20261012.txt, BEGIN CURRENT PROPOSED C PROMPT V2 / END CURRENT
+PROPOSED C PROMPT V2, as the current adapter; expert suggestions refine one C,
+not add another test. One output; no extra seeds/models/automatic retries.
+Pass B — camera treatment: separately declared proposed change, with a separate
+baseline/test and explicit action/identity/outfit/scene invariants. Camera/coverage
+changes may require regeneration if the verified edit route cannot support them.
+They must never be smuggled into Pass A's preserve-camera contract. Not launched.
+Before any later rendering submission, verify actual mode/settings/cost and existing
+allowance. This package requests no upload, generation, purchase or alternate model.
+
+REVIEW AND HANDOFF
+Compare identical-package written responses first for grounded specificity,
+actionability, continuity and CFA integration/repair burden. Save first independent
+outputs verbatim; preserve later assistance separately. CFA/Claude propose one
+lead or a justified small team, with evidence for the recommendation. Ziggy reviews
+it before role assignment or new generation. No rankings are completed here.
+Authorized exploration stays Preliminary and continues without per-image approval.
+An accepted character reference does not accept a new scene. Verify the scene's
+likeness/action against storyboard and a strong accepted foundation before video
+Detailed Design; Ziggy retains final actual motion/acting/edit review. Verdict,
+notes, independent character/scene-or-outfit scores and stage remain separate.
+
+CANONICAL RECORDS READ FOR THIS PACKAGE
+docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/manifest.json
+docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/RETURN_RECEIPT_20261012.json
+docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/USER_REVIEW_20261012.json
+docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/ACTUAL_PROMPT_20261012.txt
+docs/notes/explorable_world/comfy/projects/collaborators/identity/gemini_master/I_AM.md
+docs/notes/explorable_world/comfy/projects/collaborators/provider_roles.txt
+docs/notes/explorable_world/comfy/projects/collaborators/benchmark_roles_20261010/ROLES_AND_ROTATION_CURRENT.txt
+docs/notes/explorable_world/comfy/projects/visual_library/working_reference_bom.json
+docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json

@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUTC": "2026-10-14T12:34:24.358822+00:00",
+  "sourceManifests": [
+    {
+      "path": "D:/CFA_Backup_Staging/CFA_20261009_233600/source_manifest.json",
+      "bytes": 9946018,
+      "sha256": "094c4430eb036eea9d5c2eeb82233140f41755d9ab4eb38c11faf8703c180804"
+    },
+    {
+      "path": "D:/CFA_Backup_Staging/CFA_20261010_coordination_supplement/supplement_manifest.json",
+      "bytes": 177134,
+      "sha256": "e3341a826e302ea627d3294494c57ec48b9692a41b293add9a6c99dbf5c62984"
+    },
+    {
+      "path": "G:/My Drive/CFA_Backups/CFA_Prime_20261011_185936/prime_coordination_snapshot_20261011T185936Z_b293e4.manifest.json",
+      "bytes": 9701,
+      "sha256": "493d944f680ac1acc7b6f7cf2f545ea336e4307d6bfe4ba70af32619e613b476"
+    },
+    {
+      "path": "G:/My Drive/CFA_Backups/CFA_Prime_20261011_185936/prime_post_checkpoint_20261011T191749Z_b1c65e.manifest.json",
+      "bytes": 36413,
+      "sha256": "79b42dde54d59a9348946193ff08fbdebd423c29795462891daaa7345541f875"
+    },
+    {
+      "path": "G:/My Drive/CFA_Backups/CFA_Prime_20261011_185936/writer_followup_e58074d.manifest.json",
+      "bytes": 1738,
+      "sha256": "42df7752fbbaf498286eb707981d74313e2413c9e462a1e664b157d0e57a6ddd"
+    }
+  ],
+  "archives": [
+    {
+      "path": "D:/CFA_Backup_Staging/CFA_20261009_233600/CFA_20261009_233600.zip",
+      "scope": "full CFA base",
+      "cutoffFromManifest": "2026-10-10T03:50:35.518746+00:00",
+      "selectedSourceCount": 48580,
+      "existsNow": true,
+      "observedFileBytes": 8591029302,
+      "freshWholeArchiveChecksumComputed": false
+    },
+    {
+      "path": "D:/CFA_Backup_Staging/CFA_20261010_coordination_supplement/CFA_20261010_coordination_supplement.zip",
+      "scope": "delta against base",
+      "cutoffFromManifest": "2026-10-10T06:43:10.975661+00:00",
+      "selectedSourceCount": 534,
+      "existsNow": true,
+      "observedFileBytes": 18808665,
+      "freshWholeArchiveChecksumComputed": false
+    },
+    {
+      "path": "G:/My Drive/CFA_Backups/CFA_Prime_20261011_185936/prime_coordination_snapshot_20261011T185936Z_b293e4.zip",
+      "scope": "selected Prime source/audio/writer/analysis",
+      "cutoffFromManifest": "2026-10-11T18:59:36.348780Z",
+      "selectedSourceCount": 35,
+      "existsNow": true,
+      "observedFileBytes": 6131335,
+      "freshWholeArchiveChecksumComputed": false
+    },
+    {
+      "path": "G:/My Drive/CFA_Backups/CFA_Prime_20261011_185936/prime_post_checkpoint_20261011T191749Z_b1c65e.zip",
+      "scope": "selected post-Prime working records",
+      "cutoffFromManifest": "2026-10-11T19:17:49.950343Z",
+      "selectedSourceCount": 58,
+      "existsNow": true,
+      "observedFileBytes": 1082959,
+      "freshWholeArchiveChecksumComputed": false
+    },
+    {
+      "path": "G:/My Drive/CFA_Backups/CFA_Prime_20261011_185936/writer_followup_e58074d.zip",
+      "scope": "five writer followup files",
+      "cutoffFromManifest": "2026-10-11T19:26:01.298233Z",
+      "selectedSourceCount": 5,
+      "existsNow": true,
+      "observedFileBytes": 20549,
+      "freshWholeArchiveChecksumComputed": false
+    }
+  ],
+  "fullSnapshotScope": {
+    "baseCount": 48580,
+    "coordinationCount": 49032,
+    "baseManifestDeclaresEntireCFARegardlessOfGitIgnore": true,
+    "baseDeclaredScope": "All regular project files, including .git and Git-ignored media; no ignore rules applied.",
+    "coordinationSelectedDeltaFiles": 534,
+    "siblingRepositoriesIncluded": false
+  },
+  "historicalVersions": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "currentBytes": 241948,
+      "currentSHA256": "a545a6ac732c84a307b11e3e25304209fd0dd011b407ab8e80fa3562c760f56f",
+      "baseEntryMatches": 1,
+      "baseBytes": 110852,
+      "baseSHA256": "a428b2ec41de8cd74107a051d625a39a3d4458be52a25e37ba1d43a307375af5",
+      "baseDiffersFromCurrent": true,
+      "coordinationBytes": 143084,
+      "coordinationSHA256": "aae540972af471c31235859f3ae9e2ac6da080e583b0454802a076400b9f7ec4",
+      "coordinationDiffersFromCurrent": true
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "currentBytes": 204969,
+      "currentSHA256": "b37518b802a24d141a64933d13f61f5aad6462de9874f9a79319f26cfa0aa566",
+      "baseEntryMatches": 1,
+      "baseBytes": 81783,
+      "baseSHA256": "abcca10e518098667fd9bdf2d2aab13f5d72d7be76eb5296463dd1409ae05bff",
+      "baseDiffersFromCurrent": true,
+      "coordinationBytes": 86808,
+      "coordinationSHA256": "2b72b38b261aa93e5208b4cd8acb50309a4258b8db3bc681e0277ee80c6063c3",
+      "coordinationDiffersFromCurrent": true
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/provider_roles.txt",
+      "currentBytes": 7143,
+      "currentSHA256": "ae8c6d4a5de514afa1018d03a670bba86f45782e0623a56f7d183c2283ad9e34",
+      "baseEntryMatches": 1,
+      "baseBytes": 4459,
+      "baseSHA256": "4cca16cbb1a8313462a3323433283f23afb95d3314e1213f5d1791d7ea6bc3c9",
+      "baseDiffersFromCurrent": true,
+      "coordinationBytes": 5567,
+      "coordinationSHA256": "11b90f2aa818a9f7093f90b7c11771f73a78d32272fb45def51688669c4b6125",
+      "coordinationDiffersFromCurrent": true
+    }
+  ],
+  "currentComfyMediaFilenameStatComparison": {
+    "paths": 7936,
+    "logicalBytes": 2626281262,
+    "samePathInAnyListedOlderManifest": 3732,
+    "notSamePathInAnyListedOlderManifest": 4204,
+    "notSamePathLogicalBytes": 1212245153,
+    "groupsWithoutSamePath": {
+      "projects/collaborators": {
+        "paths": 142,
+        "bytes": 30354995
+      },
+      "projects/hon_dolo_strictly_business": {
+        "paths": 76,
+        "bytes": 125603509
+      },
+      "projects/lisan_al_gaib": {
+        "paths": 266,
+        "bytes": 100317213
+      },
+      "projects/visual_library": {
+        "paths": 19,
+        "bytes": 1954776
+      },
+      "references/From Grok": {
+        "paths": 3700,
+        "bytes": 947256023
+      },
+      "references/From NotebookLM": {
+        "paths": 1,
+        "bytes": 6758637
+      }
+    },
+    "selectedRecentExamples": [
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/model_availability_20261014_9d340322-f13c-4b59-bce0-00c9c20171ee/VIDEOS_CHAT_CURRENT.jpg",
+        "bytes": 85773,
+        "mtimeUTC": "2026-10-14T12:31:26.158297+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/model_availability_20261014_9d340322-f13c-4b59-bce0-00c9c20171ee/NOTEBOOK_CHAT_MODEL.jpg",
+        "bytes": 115264,
+        "mtimeUTC": "2026-10-14T12:30:19.584001+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/TRACE-OVERLAY-FULL-4x_v006b.png",
+        "bytes": 123340,
+        "mtimeUTC": "2026-10-14T06:05:16+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sheets/JAMES-TATTOO-PLACEMENT-MAP_v006b.png",
+        "bytes": 1382684,
+        "mtimeUTC": "2026-10-14T06:05:16+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sheets/JAMES-TRACE-STENCIL-SHEET_v006b.png",
+        "bytes": 62645,
+        "mtimeUTC": "2026-10-14T06:05:16+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-1-CHEST_v006b.png",
+        "bytes": 28265,
+        "mtimeUTC": "2026-10-14T06:05:14+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-2-NECK_v006b.png",
+        "bytes": 5376,
+        "mtimeUTC": "2026-10-14T06:05:14+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-3-FACE_v006b.png",
+        "bytes": 4011,
+        "mtimeUTC": "2026-10-14T06:05:14+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-4-ABDOMEN_v006b.png",
+        "bytes": 7888,
+        "mtimeUTC": "2026-10-14T06:05:14+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-5-L-FOREARM-HAND_v006b.png",
+        "bytes": 11949,
+        "mtimeUTC": "2026-10-14T06:05:14+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/TRACE-OVERLAY-FULL_v006b.png",
+        "bytes": 16940,
+        "mtimeUTC": "2026-10-14T06:05:14+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sbs/SBS-1-CHEST_v006b.png",
+        "bytes": 893164,
+        "mtimeUTC": "2026-10-14T06:05:14+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sbs/SBS-2-NECK_v006b.png",
+        "bytes": 271545,
+        "mtimeUTC": "2026-10-14T06:05:14+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sbs/SBS-3-FACE_v006b.png",
+        "bytes": 338490,
+        "mtimeUTC": "2026-10-14T06:05:14+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sbs/SBS-4-ABDOMEN_v006b.png",
+        "bytes": 271414,
+        "mtimeUTC": "2026-10-14T06:05:14+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sbs/SBS-5-L-FOREARM-HAND_v006b.png",
+        "bytes": 371541,
+        "mtimeUTC": "2026-10-14T06:05:14+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/notebook_context_preflight_20261014_7e3183d9-9f1d-4949-b0f1-a1b013f1907b/RESPONSE.jpg",
+        "bytes": 117821,
+        "mtimeUTC": "2026-10-14T06:02:50.536657+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/notebook_context_preflight_20261014_7e3183d9-9f1d-4949-b0f1-a1b013f1907b/SUBMITTED.jpg",
+        "bytes": 52198,
+        "mtimeUTC": "2026-10-14T05:58:05.702367+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/text_preflight_20261014/approval_followup_bb530325-9e1e-4c71-8f60-7956ed25dc7a/MODE_ATTEMPT.jpg",
+        "bytes": 60714,
+        "mtimeUTC": "2026-10-14T05:42:58.470779+00:00",
+        "samePathInOlderManifest": false
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_delivery_20261014/ACK.jpg",
+        "bytes": 149365,
+        "mtimeUTC": "2026-10-14T05:37:22.686398+00:00",
+        "samePathInOlderManifest": false
+      }
+    ],
+    "statErrors": [],
+    "privateNameExclusions": 0,
+    "limits": [
+      "Path occurrence counts/logical bytes include hardlinks and alternate named copies; not unique physical storage.",
+      "Same path does not verify the current version; absent path does not rule out identical bytes archived under another name.",
+      "This compares named older dated archives, not the new live computer sync or every unrelated backup.",
+      "Media bytes were not read for this inventory. Current Drive coverage was separately checked through web metadata and one independent matching retrieval."
+    ]
+  },
+  "preservation": {
+    "existingArchivesModified": false,
+    "extractionPerformed": false,
+    "newBackupCreated": false,
+    "uploadsStarted": false,
+    "movesOrDeletes": false
+  }
+}

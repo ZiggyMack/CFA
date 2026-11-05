@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "createdAtUTC": "2026-10-14T12:45:41.060Z",
+  "timezone": "America/New_York",
+  "kind": "read_only_git_and_drive_backup_audit",
+  "repositoryStatus": [
+    {
+      "path": "D:/Documents/CFA",
+      "branch": "main",
+      "ahead": 0,
+      "behind": 1,
+      "checkedAtUTC": "2026-10-14T12:15:53Z",
+      "source": "CFA_GIT_REMOTE_FOLLOWUP.json"
+    },
+    {
+      "path": "D:/Documents/Nyquist_Consciousness",
+      "branch": "Consciousness",
+      "ahead": 28,
+      "behind": 0,
+      "checkedAtUTC": "2026-10-14T11:21:41Z",
+      "source": "NYQUIST_PAN_GIT_VERIFIED.json"
+    },
+    {
+      "path": "D:/Documents/Pan_Handlers",
+      "branch": "main",
+      "ahead": 0,
+      "behind": 0,
+      "workingTree": "clean",
+      "checkedAtUTC": "2026-10-14T11:21:43Z",
+      "source": "NYQUIST_PAN_GIT_VERIFIED.json"
+    },
+    {
+      "path": "D:/Documents/VUDU_Fidelity",
+      "branch": "main",
+      "headMatchesFreshRemote": true,
+      "workingTreeChangesRemain": true,
+      "checkedAtUTC": "2026-10-14T11:23:17Z",
+      "source": "VUDU_WHOCARES_GIT_VERIFIED.json"
+    },
+    {
+      "path": "D:/Documents/WHO_CARES",
+      "branch": "claude/phase1-table",
+      "upstream": null,
+      "headMatchesFreshDefaultMain": true,
+      "exactWorkBranchRemoteRef": "not returned",
+      "workingTreeChangesRemain": true,
+      "checkedAtUTC": "2026-10-14T11:42:11Z",
+      "source": "VUDU_WHOCARES_GIT_VERIFIED.json"
+    }
+  ],
+  "drive": {
+    "mechanism": "live computer folder sync",
+    "freshFiveFoldersObserved": true,
+    "oneRecentIgnoredVideoRecoveredAndHashMatched": true,
+    "wholeFiveRepositoryUploadCompletion": "unverified",
+    "wholeCloudInventoryOrChecksum": "unavailable",
+    "source": "CLOUD_SAMPLE_VERIFICATION.json",
+    "computerURL": "https://drive.google.com/drive/u/1/folders/1nYKL-Rq3BGPWs7pAmGMcFPqS94d3SgRY"
+  },
+  "olderBackups": {
+    "fullCFAState": "October9/10 base plus October10 coordination delta",
+    "latestDatedScopedCapture": "October11 five writer followups at19:26:01UTC",
+    "latestDatedFinalVisibilityReceipt": "2026-10-11T19:27:14.336Z",
+    "freshPrimeFolderVisibilityRechecked": true,
+    "siblingRepositoriesIncluded": false,
+    "threeOrdinaryDocumentHistoricalVersionsDifferFromCurrent": true,
+    "wholeArchiveHashes": "dated existing verification receipts; not freshly recomputed",
+    "baseManifestTimestampClarification": "OLDER_BACKUP_SCOPE_AND_CURRENT_MEDIA.json archives[0].cutoffFromManifest is completion/verification time from completedUtc, not an independently proved source freeze instant",
+    "retirementOrCleanup": "not justified; preserve all copies",
+    "source": "OLDER_BACKUP_SCOPE_AND_CURRENT_MEDIA.json"
+  },
+  "limits": [
+    "Current findings are dated checks, not continuing sync monitoring.",
+    "Git excludes working-tree/untracked/ignored current changes unless separately protected.",
+    "New Drive folder presence and one matching retrieval are not whole upload completion.",
+    "Older-manifest same-path comparison does not verify current bytes or disprove copies under another name.",
+    "Logical byte/path counts can include hardlinks and duplicate named copies.",
+    "Private initial failed sandbox reports are preserved but excluded from final attachments."
+  ],
+  "actions": {
+    "sourceOrGitMutations": false,
+    "commits": false,
+    "pushes": false,
+    "fetchIntoRefs": false,
+    "uploads": false,
+    "newBackups": false,
+    "moves": false,
+    "deletes": false,
+    "settingsOrAccessChanges": false,
+    "inboundVerificationDownloads": 1,
+    "auditReportsCreated": true
+  },
+  "report": "REPORT.txt"
+}

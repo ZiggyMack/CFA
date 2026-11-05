@@ -1,0 +1,47 @@
+
+Preflight complete — nothing edited or run. Here's the full diagnosis.
+
+1. The requested 77-frame segment — settings are all supported
+
+Every value you want is expressible in the native Wan2.2 Animate graph, and 768×432 is legal (both axes are multiples of 16, which the "about size" note requires: 768=48×16, 432=27×16; and 77 frames = 4×19+1, the 4n+1 length Wan Animate wants).
+
+Exact widget addresses to set (base path only, subgraph 232):
+
+Width 768 / Height 432 → the primitives feeding everything: Width (#159).value = 768, Height (#160).value = 432. These drive Upscale Image (#212), Pixel Perfect Resolution (#158) and the subgraph, so set them at the source, not on the proxy.
+24 fps → 232.fps = 24 (currently 16).
+Seed 42 fixed → 232.seed = 42, and the interior sampler currently has control_after_generate = "randomize" (232/63). Set 232/63.control_after_generate = "fixed" so 42 holds across runs; if that interior address is refused, the fix lives on the promoted 232.seed widget's own control. This is the one spot to verify at build time.
+Length 77 / batch 1 → already correct inside the node (232/62.length = 77, 232/62.batch_size = 1). No change.
+Keep steps 6 / cfg 1 / euler / simple — those are required by the lightx2v distill LoRA on the model, not arbitrary.
+2. Single-segment compilation
+
+Base 232 → Save Video (#19) is your one 77-frame output. But Video Extend (#242) → Save Video (#243) is still active and would run a second pass and emit a 154-frame extended video. For exactly one segment, bypass #242 and #243. (#278/#277 are already bypassed.) Note both extend subgraphs also carry a bug — WanAnimateToVideo there has height = IN.width, so they'd render square anyway; another reason to leave them off.
+
+3. The "quarantine" on the 8 promoted widgets
+
+Those eight (width, height, fps, seed, steps, cfg, sampler_name, scheduler) are exactly the promoted widgets of subgraph 232. In the live draft they are intact and readable/writable (640, 640, 16, 1106558644923357, 6, 1, euler, simple) — I can't reproduce a missing-source error from the current graph. width/height are fed by the two PrimitiveInt nodes (#159/#160), which both exist and are "fixed"; the other six are literal promoted values. So the "repair" is simply to write valid values onto each 232.<name> (and #159/#160) — there is no dangling source node visible in the compiled graph to reconnect.
+
+4. The real problem: this graph does whole-body replacement, not face-only identity swap
+
+Why it won't preserve clothes/tattoos/hands/glass/background as-is:
+
+Whole-person mask. Points Editor (#229) has a single positive point at (256,256) → Sam2Segmentation (#107) segments the entire person; Grow Mask (#274) +10 and Blockify Mask (#276) block-32 make a coarse full-body mask.
+Background blacked out. Draw Mask On Image (#275) paints 0,0,0 into that whole-person region, so background_video has the person removed and Wan Animate rebuilds the full body from the reference image — clothes, tattoos and hands included.
+No post-decode composite. The subgraph ends at CreateVideo→Save Video; every pixel goes through the VAE round-trip, so even "untouched" areas aren't bit-exact, and nothing pastes a face back onto the original frames.
+5. A Cloud-supported face-region + source-composite route — yes, the nodes exist
+
+Confirmed live:
+
+Face-region tracked mask (replaces the center-point whole-person mask): Sam2Segmentation already exposes a bboxes (BBOX) input and runs in video segmentor mode, so a face box can track only the face across frames. Face detectors available: node(FaceParsing) + BBoxDetect(FaceParsing) (face_yolov8), BboxDetectorSEGS (Impact), or FaceParse(FaceParsing) for a tighter semantic face mask. (Your DWPose Estimator (#100) with detect_face already locates the face, but it outputs a pose stick image, not a mask.)
+Preserve everything but the face: drive Draw Mask On Image (#275) with the face mask instead of the body mask, so only the face region is blacked and Wan Animate regenerates only the face; clothes/hands/background feed through as conditioning.
+True pixel preservation (the missing composite): ImageCompositeMasked is available — destination = original scaled frames (#212 output), source = Wan Animate's decoded frames (232.IMAGE, which is exposed at the top level), mask = a feathered face mask → pastes only the new face onto untouched original frames. A top-level CreateVideo + Save Video then encodes that. (Links can't cross the subgraph boundary, so the composite has to consume the exposed 232.IMAGE at top level rather than tap inside 232.)
+
+No dedicated video face-swap model (ReActor/InsightFace) exists in this catalog (0 hits), and the curated video-edit picks (Seedance 2.5 edit, Flux-3 edit, Wan VACE inpainting) are instruction/removal edits, not identity-preserving swaps — so this mask-tightening + composite on top of your existing Wan Animate graph is the supported path. Wan VACE inpainting is the only OSS alternative template, but it carries the same VAE-roundtrip caveat and would still need the face mask + composite.
+
+6. Limitations to expect
+Wan Animate is reference-driven re-synthesis, not a cut-and-paste swap — the face follows the DWPose face track, and head/jaw motion near the glass can create seam/contact artifacts at the mask edge. Feather the mask and keep it off the hands/glass.
+Blockify Mask block-32 is far too coarse for a face; reduce block_size or drop it in favor of GrowMask + blur.
+SAM2 bbox tracking can lose the face on fast motion/occlusion (a hand crossing the face during the toast) — stabilize with per-frame face-bbox detection and/or negative points.
+Only the post-decode ImageCompositeMasked gives true bit-exact clothes/tattoos/hands; Wan Animate's own "unmasked area preserved" is approximate. With the composite you can also lower/drop the relight LoRA (#99) since only the face survives.
+
+Recommendation: keep this template (its sizing/DWPose/SAM2 preprocessing is already wired) and convert it face-only by swapping the center point for a face-bbox-driven SAM2 mask, feathering instead of Blockify, and adding a top-level ImageCompositeMasked + CreateVideo/Save Video. Say the word and I'll build that conversion (still without running).
+

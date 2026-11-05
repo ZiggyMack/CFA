@@ -1,0 +1,56 @@
+/* Sidebar counts are visual-only except Storyboard, which counts authored parent shots. */
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const clone=v=>JSON.parse(JSON.stringify(v)),REVIEW_KEY='cfa-visual-review-v1',FAVORITES_KEY='cfa-visual-favorites-v1';
+const raw=fs.readFileSync(path.join(__dirname,'catalog.js'),'utf8'),catalog=JSON.parse(raw.slice(raw.indexOf('=')+1).trim().replace(/;$/,'')),source=fs.readFileSync(path.join(__dirname,'library.js'),'utf8');
+const documents=['document','pdf'].map((kind,index)=>({id:'count-doc-'+index,project:'hon',category:'notes_only',kind,album:'count-docs',sha256:String(index+7).repeat(64),title:'Count document '+index,filename:'count.'+(index?'pdf':'txt'),src:'count.txt',text:'Preserved text'}));
+catalog.assets.push(...documents);catalog.categories.push(['notes_only','Document-only category']);catalog.albums.push({id:'count-docs',project:'hon',category:'notes_only',title:'Count documents',assetIDs:documents.map(a=>a.id)});
+catalog.albums.find(a=>a.project==='hon'&&a.category==='storyboard').assetIDs.push(...documents.map(a=>a.id));
+catalog.reviewRequests=[...(catalog.reviewRequests||[]),...documents.map(a=>({id:a.id,sha256:a.sha256,type:'missing_decision',requestedBy:'nova',reason:'Synthetic document request'}))];
+const assets=catalog.assets,harness=fs.readFileSync(path.join(__dirname,'test_reference_scope.cjs'),'utf8');
+let boot=harness.slice(harness.indexOf('function boot('),harness.indexOf('async function main()'));
+boot=boot.replace('window.__scopeTest={openViewer,reviewRecord,reviewPayload,importReview,exportReference,inReviewQueue,whenFileWritesSettle(){return fileWriteChain;}};', 'window.__scopeTest={C,render,route,openViewer,reviewRecord,reviewPayload,importReview,exportReference,inReviewQueue,normalVisible,projectAssets,workingReferenceVisibleIDs,comfyWorkspaceIDs,comfyMouthAlbum,storyStructure,storyboardShotCount,storyboardStories,storyLandingCards,documentGroups,storyWritings,writerDevelopment,toggleFavorite,toggleBasket,basketPayload,updateReview,whenFileWritesSettle(){return fileWriteChain;}};');
+boot=boot.replace('this.children.clear(); this._html = html;',`this.children.clear(); this._html = html;
+      for(const match of html.matchAll(/<button[^>]*data-view="([^"]+)"[^>]*>[^<]*<span class="count">([^<]*)<\\/span><\\/button>/g)){const count=new Element('span');count.textContent=match[2];nodes.set('[data-view="'+match[1]+'"] .count',count);}`);
+boot=boot.replace('querySelector:selector => nodes.get(selector) || null, querySelectorAll:() => []', 'querySelector:selector => nodes.get(selector) || null, querySelectorAll:selector => nodes.has(selector)?[nodes.get(selector)]:[]');
+const makePage=new Function('source','catalog','clone','assert','vm','REVIEW_KEY','FAVORITES_KEY','assets',boot+';return boot;')(source,catalog,clone,assert,vm,REVIEW_KEY,FAVORITES_KEY,assets);
+const p=makePage(),isDoc=a=>['document','pdf'].includes(a.kind),count=view=>parseInt(p.node('[data-view="'+view+'"] .count').textContent,10),byID=new Map(catalog.assets.map(a=>[a.id,a]));
+p.api.route('hon','all');
+const before=JSON.stringify(p.api.reviewPayload().items),catalogBefore=JSON.stringify(p.api.C),normal=items=>items.filter(p.api.normalVisible),visual=items=>items.filter(a=>!isDoc(a));
+const storyIDs=[...new Set(catalog.albums.filter(a=>a.project==='hon'&&a.category==='storyboard').flatMap(a=>a.assetIDs))],storyItems=normal(storyIDs.map(id=>byID.get(id)));
+assert(storyItems.some(isDoc),'Mixed storyboard fixture exercises documents alongside actual image membership');
+assert.equal(count('storyboard'),71,'Strictly Business70 authored shots plus GrillUp1');assert.equal(p.node('[data-view="storyboard"] .count').textContent,'71');
+assert.equal(p.api.storyboardShotCount('lisan'),38,'Only explicitly bound Gloved Hand authored shots count; unrelated work cannot populate Meta Mirror');
+assert.equal(p.api.storyStructure(p.api.storyboardStories('lisan').find(s=>s.kind==='song')).shots.length,0,'Structure & gaps also excludes unbound work when a story has no explicit sequence');
+assert.equal(p.api.storyboardShotCount('unassigned'),0,'An unrelated project does not inherit another project’s storyboards');
+const stories=p.api.storyboardStories('hon'),landing=p.api.storyLandingCards(stories,stories[0]);assert.match(landing,/Stories · 2 storyboards<\/h2>/);assert.match(landing,/Series and seeds · 1 writing collection<\/h2>/);
+assert.equal(count('all'),visual(p.api.projectAssets()).length);
+assert.equal(count('documents'),p.api.projectAssets().filter(isDoc).length);
+assert.equal(count('review_queue'),p.api.projectAssets().filter(a=>!isDoc(a)&&(catalog.reviewRequests||[]).some(r=>r.id===a.id&&r.sha256===a.sha256&&r.type==='missing_decision')&&!['keep','needs_fixes','remove'].includes(p.api.reviewRecord(a.id).status)).length,'Pending document requests do not inflate the image review count');
+assert.equal(count('notes_only'),0,'A document-only category remains navigable with zero visuals');
+for(const [id] of catalog.categories){
+  if(id==='intake'||id==='inspiration'||id==='storyboard'||id==='review')continue;
+  const ids=id==='working'?p.api.workingReferenceVisibleIDs():id==='comfy'?p.api.comfyWorkspaceIDs():[...new Set(catalog.albums.filter(a=>a.project==='hon'&&a.category===id).flatMap(a=>a.assetIDs))];
+  const rows=normal(ids.map(id=>byID.get(id)).filter(Boolean));if(rows.length||['review','comfy'].includes(id))assert.equal(count(id),visual(rows).length,id+' sidebar excludes documents');
+}
+const storyHTML=p.api.storyWritings({id:'test',title:'Test story',documentIDs:documents.map(a=>a.id)});
+assert.match(storyHTML,/<h2>Writings · Test story · 2 documents<\/h2>/);for(const a of documents)assert(storyHTML.includes('data-open="'+a.id+'"'));
+const docHTML=p.api.documentGroups(documents);assert.match(docHTML,/2 documents/);for(const a of documents)assert(docHTML.includes('data-open="'+a.id+'"'));
+p.api.route('hon','documents');for(const a of documents)assert(p.node('#main').innerHTML.includes('data-open="'+a.id+'"'),'Document navigation still contains '+a.kind);
+assert.equal(JSON.stringify(p.api.reviewPayload().items),before,'Counting and document browsing do not change reviews');assert.equal(JSON.stringify(p.api.C),catalogBefore);
+const duplicateCatalog=clone(catalog);duplicateCatalog.storyboardStories.push(clone(duplicateCatalog.storyboardStories.find(s=>s.id==='hon:strictly-business')),{id:'hon:extra-seed',project:'hon',title:'Seed only',kind:'sequence',group:'Series and seeds',documentIDs:[]});
+duplicateCatalog.albums.filter(a=>a.project==='hon'&&a.category==='storyboard').forEach(a=>a.assetIDs=[]);
+const duplicatePage=makePage({},duplicateCatalog);assert.equal(duplicatePage.api.storyboardShotCount('hon'),71,'Duplicate IDs, source sequence registration, seed-only records and absent image membership do not inflate shot totals');assert.equal(parseInt(duplicatePage.node('[data-view="storyboard"] .count').textContent,10),71,'Registered authored shots retain their navigation when there are no image-album members');
+const authored=duplicateCatalog.storyboardStructure.stories.find(s=>s.storyID==='hon:strictly-business');
+assert.equal(authored.sections.find(s=>s.id==='PROLOGUE').shotIDs.length,8);assert.equal(authored.sections.find(s=>s.id==='S02').shotIDs.length,10);
+authored.shots.push(clone(authored.shots[0]),{shotID:'P-1B',title:'Distinct authored suffix',parent:{path:'source.md'}},{shotID:'P-1-detail',parentShotID:'P-1'},{shotID:'P-1-detail-two',parent_shot_id:'P-1'},{shotID:'P-1-detail-three',parent:{shotID:'P-1'}});
+const parentPage=makePage({},duplicateCatalog);assert.equal(parentPage.api.storyboardShotCount('hon'),72,'Duplicate rows and explicit children do not add shots; a B suffix and source-document parent remain a distinct authored shot');
+// Live sidebar refreshes use the same visual-only totals without altering selections.
+const image=p.api.projectAssets().find(a=>!isDoc(a)&&!p.api.reviewRecord(a.id).variant),doc=documents[0],pdf=documents[1];
+p.api.route('hon','all');const favoritesBefore=count('favorites'),basketBefore=count('export_basket'),plansBefore=count('shot_plans');
+p.api.toggleFavorite(doc.id);p.api.toggleFavorite(pdf.id);assert.equal(count('favorites'),favoritesBefore);
+p.api.toggleBasket(doc.id);p.api.toggleBasket(pdf.id);assert.equal(count('export_basket'),basketBefore);assert(p.api.basketPayload(true).items.some(a=>a.id===pdf.id),'PDF remains in exported selection backup');
+p.api.toggleBasket(image.id);assert.equal(count('export_basket'),basketBefore+1);
+const plan={status:'planned',destinations:['Flow'],idea:'Counting test',prompt:''};p.api.updateReview(doc.id,{shotPlan:plan});assert.equal(count('shot_plans'),plansBefore);assert.deepEqual(clone(p.api.reviewRecord(doc.id).shotPlan),plan);
+p.api.render();assert.equal(count('favorites'),favoritesBefore);assert.equal(count('export_basket'),basketBefore+1);assert.equal(count('shot_plans'),plansBefore);
+const archiveBefore=count('archive');p.api.updateReview(doc.id,{collectionState:'archived'});assert.equal(count('archive'),archiveBefore,'Archived document is excluded from sidebar visual total');p.api.route('hon','archive');assert(p.node('#main').innerHTML.includes('data-open="'+doc.id+'"'));
+console.log('Document counts passed: Storyboard counts authored parent shots, other sidebar totals count visuals, live updates and document navigation preserve selections and reviews.');

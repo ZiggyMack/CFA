@@ -1,0 +1,84 @@
+CFA / SITE NOVA CHECKPOINT — 30 October 2026
+
+Pause / next session
+Ziggy requested that Site Nova finish the current navigation fix, save the state,
+and go quiet to conserve usage. No new requests to Claude or other collaborators.
+CFA Nova has already been told by Ziggy. Ziggy plans to work with Claude on
+writing and storyboard gaps after Claude's usage resets; resume sorting when asked.
+
+Chris / Baldadoon feedback export test
+Original upload: 1-cfa-review.json, exported 2026-10-31T01:25:27.610Z.
+Frozen exact copy:
+D:/Documents/CFA/.cache/chris_feedback_roundtrip_20261030/evidence/20261031T012527Z_aa955723e8a5_cfa-review.json
+SHA256: aa955723e8a59a304e4f5685ff0244681a6baad3d4918cd74b6dcd0c7262f69f
+
+Recovered selection: TCM-SET-HENDERSON-EXTERIOR-L03 (Henderson house option L03)
+is newly favorited and is the sole export-basket entry, compared with the prior
+local export. No Criminal Mind review item, note, rating, status, or reviewer
+attribution is in the uploaded file. Do not turn this favorite into final approval.
+
+IMPORTANT NEW DIRECTION RELAYED BY ZIGGY
+Chris said he wrote a note asking to make the neighborhood denser.
+This direction was reported in chat by Ziggy; it was NOT recovered from the JSON.
+Associate it with the house-location feedback conversation, provisionally L03;
+retain that provenance and reconcile with Chris's next export. Do not fabricate
+a saved Chris review record or claim the note successfully roundtripped.
+
+Next feedback test
+Chris should choose Baldadoon as reviewer, save his note, and export from the
+same interface/browser where he entered it. Full Library and compact Studio have
+separate saved state. A full review export includes house-location selections;
+the casting-only export is scoped to casting. Save note explicitly commits the
+note; normal full casting-field blur also attempts saving. A draft surviving
+Next/Back does not alone prove it was saved, especially without a reviewer.
+
+Verified this session
+All 320 exported review records, 37 favorites, and one basket item roundtripped
+through the native import/export path without losing incoming fields. All 357
+item/favorite references (347 unique originals) passed disk hash verification.
+The 321-to-320 count is a historical mouth-image alias consolidation, not a lost
+decision. Raw historical records remain preserved. No canonical reviews were
+overwritten for this test. Audit and roundtrip reports:
+D:/Documents/CFA/.cache/chris_feedback_roundtrip_20261030/audit-summary.json
+D:/Documents/CFA/.cache/review_roundtrip_audit_20261031/report.json
+
+Future intake caution
+Treat old exports as versioned evidence, not replacement databases. Validate
+format, exact asset identity/hash, dates and field conflicts. Preserve originals;
+report skipped/conflicting entries. The publication review_snapshot overlay
+does not yet carry all new human attribution/clear-evidence fields; use explicit
+preservation when ingesting a future attributed review. This upload has no such
+new fields, so this limitation did not lose Chris's note.
+
+Navigation fix
+Reproduced Full Library jumping back after Casa/project navigation. Delayed
+Streamlit URL acknowledgements were reissued as new navigation commands.
+The fix separates command IDs from acknowledgements, updates query parameters
+atomically, and defaults fresh sessions and project picks to All files.
+Explicit Intake URLs still work. Also fixed compact Intake deep-link handling
+when no selected image is present. Reviews and storage identity are preserved.
+Final published commit: 375d484d87c6b4f26b3f7fa8f564c1ce4ed295f1
+Final portable build: 65c67903f504b036e849
+Deployment receipt:
+D:/Documents/CFA/.cache/full_navigation_client_publication_20261030/deployment-receipt.json
+27 route/portable Python tests, Node race tests, six actual full-library handler
+checks, and six native app checks passed. All 321 canonical reviews and all media
+were preserved. Publication used an isolated Git index and a normal push; no
+unrelated working-tree changes were included.
+
+Live QA caught an additional Community Cloud wrapper remount when the first
+fix reflected child navigation into the outer URL. That first release
+(795acff5, build 7a8ac6d26c41d42a4892) is superseded. The final release keeps
+ordinary navigation inside the library iframe and sends no navigation events
+back to Streamlit. Direct entry links still work; the outer address bar retains
+the entry link while browsing. The fallback passed 20 Python tests and the
+Node race harness. Its same reviewed commit was successfully pushed over
+HTTP/1.1 after an initial network upload failure; remote commit was read back.
+Final live check passed on build 65c67903f504b036e849: a no-query entry opened
+Hon Dolo / All files. Rapid Casa -> Hon Dolo -> Baldadoon project -> Casa clicks
+all stayed on the requested destination, including Baldadoon / All files.
+The outer URL remained stable during those clicks, preventing the cloud wrapper
+from remounting the page. No real review decisions were entered for QA.
+Live check evidence: D:/Documents/CFA/.cache/full_navigation_fix_20261030/live-final.json
+The current work is closed out; no new collaborator dispatches or polling work
+are queued by Site Nova. Await Ziggy's next request.

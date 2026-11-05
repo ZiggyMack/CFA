@@ -1,0 +1,2653 @@
+{
+  "verifiedAtUTC": "2026-10-13T17:10:48.905048+00:00",
+  "existingAssetIDsPreserved": 2349,
+  "unchangedExistingAssetRecords": 2348,
+  "unchangedMediaRecords": 1916,
+  "newDocuments": 42,
+  "unchangedAlbumRecords": 227,
+  "unchangedReviewRecords": 176,
+  "unchangedExistingCatalogSections": [
+    "projects",
+    "albums",
+    "categories",
+    "sourceComparisons",
+    "reviewDecisions",
+    "reviewRequests",
+    "assistantLikenessAssessments",
+    "sceneReviews",
+    "storyboardSequences",
+    "missionControl",
+    "projectContextPacks",
+    "providerScorecards",
+    "productionWorkflows",
+    "detailProfiles",
+    "characterBOM",
+    "castCollections",
+    "detailDisplayGroups",
+    "tattooPlacementGuides",
+    "browseLayout",
+    "sharedReferenceCollections",
+    "accessoryCollections",
+    "characterAccessories",
+    "shotMaterials",
+    "storyboardMetadata"
+  ],
+  "canonicalSourceGuardsUnchanged": [
+    {
+      "path": "docs/notes/explorable_world/comfy/casting/gemini_cast_reference_map.txt",
+      "bytes": 15685,
+      "sha256": "4c074ed26b3db9bd5512c385b28c46c39baf667b7eed713cdaebed1ecaa66876"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/casting/gemini_project_instructions.txt",
+      "bytes": 9552,
+      "sha256": "d1f988d1a066e28801a92fa53e8a6e21a72ee1cafa54f9ce74a9a26d705643fd"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/casting/grok_project_instructions.txt",
+      "bytes": 5781,
+      "sha256": "f036b4587a673e63bc89be69a926565f801758ea9862d36964856a543a52f1c5"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt",
+      "bytes": 16509,
+      "sha256": "3b2ac815fb16380c482aabafa66a1d80f36905a84b4fa57d0b8e68e0e4420967"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/collaboration_authority.json",
+      "bytes": 5450,
+      "sha256": "5d84c349f06997940d71ccf7a0f83044181d3c1698118281712913eb6b2046be"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/finishing_pass_20261009/CHIEF_CORRECTIONS_FOR_APPROVAL.txt",
+      "bytes": 2189,
+      "sha256": "f88e43459020fd0123c4f9ee018df15f3ff08abfa6025a503a007a789eacb237"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/finishing_pass_20261009/CHIEF_MESSAGE_001.txt",
+      "bytes": 2535,
+      "sha256": "ba59a3a935ea37209013aa3ecf6cc49b9449db9689a79ce5ce2354c0c004133f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/finishing_pass_20261009/HAL_CORRECTIONS_FOR_APPROVAL.txt",
+      "bytes": 1494,
+      "sha256": "15ea318405413f583c95375ef559e774770cb4c7a9064ace9408a10c0bad4422"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/flow_brief.txt",
+      "bytes": 3860,
+      "sha256": "df2ac89ad394ea0291aeec4b0a82e5f76849519c8381ffcd11e745607c2d6cfd"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/flow_intake_20261008.txt",
+      "bytes": 6434,
+      "sha256": "e94819743f2f4b0245bc4a910bc0568954f4cce7db43d95b202fbb30f07254ac"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/flow_shot_template.txt",
+      "bytes": 1359,
+      "sha256": "9775b7daf20e02c9f1424fd57caacbc87941ea6445d01501388356da546c5ac6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/flow_start_here.txt",
+      "bytes": 3055,
+      "sha256": "a2f148b88f141bf2f7ceddfae6dc491a785d210cceb66952a0eda91dca86e793"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/001_delivery.json",
+      "bytes": 1911,
+      "sha256": "7ce55529efeacfa4199050aa248b785f0c187059e9bc53476298d67a0bc1e17f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/001_grok_acknowledgement.txt",
+      "bytes": 1859,
+      "sha256": "09a3afd15a0b20201156b7c61f0562b34334a9787b9ada3248121120b3daab81"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/001_head_library_correction.txt",
+      "bytes": 3855,
+      "sha256": "73352f416ddc53deae2edc87d48f3ab198543a44c29d184c3ecd9f74bcdaecc9"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/002_delivery.json",
+      "bytes": 1077,
+      "sha256": "6d836d5e00da24dc321179544cf68685247e4f64d42d0c92fec6a3ab3ccb49da"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/002_grill_variants_and_hand_options.txt",
+      "bytes": 2746,
+      "sha256": "4b5ab89d64bf0cdd21f9be07e968b909c87d3afbc6e1fbb791d84fa6c09b3bc1"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/002_grok_acknowledgement.txt",
+      "bytes": 1543,
+      "sha256": "eb22329d6a9c0bc5fbe0f12486ccdafa8a127c5f93706ca37b30c57e5fd92a14"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/003_delivery.json",
+      "bytes": 1256,
+      "sha256": "e09c23a4d58a59deaeab5b251d580cc3491d5f96b40001c880a01604bb3cc585"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_coordination_20261009/003_grok_acknowledgement.txt",
+      "bytes": 1201,
+      "sha256": "78a907bb1327f2a997e1afbd0f9e7c4e75acabeec8a773cee01c0ec1cce0bdd5"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_design_instructions.txt",
+      "bytes": 24772,
+      "sha256": "938be3298404548c5ea07063d56569369e68d2b3a20f09411ccb444da78d7820"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/asset_ledger.json",
+      "bytes": 445153,
+      "sha256": "7cc5f568c67e4cc7b8eb8749674bf6a216c94a45b057915f67a75de3724a06db"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/cleanup_receipt.json",
+      "bytes": 1694,
+      "sha256": "373da95674148375efd574b3130bb3b231701c76474171bc302bd14eedb048a0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/FLOW_HANDOFF.txt",
+      "bytes": 3238,
+      "sha256": "2279faf0919cec4f86a25a5b39487c6431742fda0e63ebf5a6fecdbfead834b0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/HD01_HANDOFF.json",
+      "bytes": 11456,
+      "sha256": "1f5facf3f56b65d728b6708b93badd13005e7551120457ed734198f4be1c221c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/HD01_HANDOFF.txt",
+      "bytes": 5611,
+      "sha256": "dbc0da649bf747f40034e5ed916c571f19d1213072bea8ce5794d552b11d54f0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/HD01_PROMPT.txt",
+      "bytes": 2924,
+      "sha256": "123f7121fdf65c17fbda0f624ada55ce8ae3a2cdd82209cb9eefaf6e62a0b741"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/INTAKE_STATUS.json",
+      "bytes": 8649,
+      "sha256": "1cc3ef786ae9710f1a992b1538c53a2dad776ad442f762207bc7674490499fdf"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/083fce121af9___DROP_NANOBANANA_RESULTS_HERE.txt",
+      "bytes": 137,
+      "sha256": "083fce121af95f30cc96e00267e9a9cbf681b80620fada0a7e66d0f2c0ac2698"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/090cf5b32812__PLAN.pdf",
+      "bytes": 163162,
+      "sha256": "090cf5b328127bbb08f49e11bf54de520407055e02d47a36fea48f68ef1b5a64"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/0bb7e3d475ee__CTX_HIPPO_QA-NOTES.txt",
+      "bytes": 1032,
+      "sha256": "0bb7e3d475eeb66de6fecd12bf7e7875d17aef56db64f7f2a3e650a790156f13"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/0c2583ec4d88__BOSS-010_PROMPT.txt",
+      "bytes": 1866,
+      "sha256": "0c2583ec4d88ebe0099db774b263cb47d08b6186d97e765f8b7ec90a30b5f17e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/0d4f575ecd82__BOSS-008_PROMPT.txt",
+      "bytes": 1963,
+      "sha256": "0d4f575ecd828254025b2ca936ad2668c4ec587f1436aaa2bdd9c0339583ac22"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/1245f7e31500__BOSS-002_PROMPT.txt",
+      "bytes": 1874,
+      "sha256": "1245f7e3150088700a7ff0935534c078c84a73f95d4a8a41890409e03641c15d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/16d8c3291e0c__CTX_GECKO-FROG_QA-NOTES.txt",
+      "bytes": 1502,
+      "sha256": "16d8c3291e0c59136f047111f50dcd82911969910d9275fb12b1b5defee64cdf"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/21c104b53a43__HD-03_PROMPT.txt",
+      "bytes": 4028,
+      "sha256": "21c104b53a4369382fa9a5ffe05b0d36e38536afbf1b00e906db6d8c1cfe2f41"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/268e87f4156a__manifest.csv",
+      "bytes": 2899,
+      "sha256": "268e87f4156a11e0e0c659eca4a1b8b82b959d5eb289f333e118c1292f82f3ce"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/2bae46a5b292__LEDGER.csv",
+      "bytes": 12963,
+      "sha256": "2bae46a5b2924656ac8660b9dd3c5c9f7cfbb5861d258afd5e660ab34623f49d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/44e26c908a55__START_HERE.txt",
+      "bytes": 1716,
+      "sha256": "44e26c908a55ecb51feb1ab58388990c77816b41cbe39dc2929efefd6a475097"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/4bea28933b8a__LAG-01_PROMPT.txt",
+      "bytes": 3241,
+      "sha256": "4bea28933b8afa10b91ee7e9303d27c7e252b45b780d9bbc45fecb692e91d984"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/4c21a719bd04__KIT_MANIFEST.csv",
+      "bytes": 12483,
+      "sha256": "4c21a719bd04fb3e9402ab2e80a63c0662b8b2301f67372cf657fe87a223601c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/5a25a45579be__BOSS-006_PROMPT.txt",
+      "bytes": 2229,
+      "sha256": "5a25a45579be1a3ffcaa125286b30e2583e960d8364b8a97aad1808030022b0b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/5d80ee30efe7__refs_manifest.csv",
+      "bytes": 16337,
+      "sha256": "5d80ee30efe7cf4da7533a55985ed7291f06e5dbd075b90d1c239921421d7662"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/60ac08a06dd9__PLAN.md",
+      "bytes": 10490,
+      "sha256": "60ac08a06dd971fc437bdea05f0b28b6f8f521431282062049fd3e7e6ec93309"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/76bcc6718635__HD-04_PROMPT.txt",
+      "bytes": 4035,
+      "sha256": "76bcc6718635861970d909ad6e74686c8d644870d64a598a54b3599812868f78"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/7c97e88383e3__manifest.json",
+      "bytes": 9683,
+      "sha256": "7c97e88383e3e0b0ad75f46436839e932b10d7d8b2d0000db075ea169230c51b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/7e3cc2145ea5__BOSS-003_PROMPT.txt",
+      "bytes": 2246,
+      "sha256": "7e3cc2145ea5264e29a2b42273ec4f9697cac3ecef877e7778390623e79dd457"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/7e449a2c1f7a__HD-02_PROMPT.txt",
+      "bytes": 3941,
+      "sha256": "7e449a2c1f7a8e70700098ff8517a6ded4fa154e52985f6772a30a4f206dfcdd"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/884b18a6cb3c__baselines_manifest.csv",
+      "bytes": 8139,
+      "sha256": "884b18a6cb3c1163d67278acb02c2fea5c224b8bdfc1557173f3218d73e0f173"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/a09ab2249fb5__BOSS-005_PROMPT.txt",
+      "bytes": 1847,
+      "sha256": "a09ab2249fb548c5a4966d4f39867035a7da73b03491e768ea0a80f069d4e4e0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/ae2dd114e18f__HD-01_PROMPT.txt",
+      "bytes": 4097,
+      "sha256": "ae2dd114e18fde6ceb05f1253e58309587267bbd29353f3e4450214b03836fc6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/b6365b0e3532__BOSS-007_PROMPT.txt",
+      "bytes": 1949,
+      "sha256": "b6365b0e3532fcadc75a58d9d7ca6a10f925202e7c9853b9380dc982835c3863"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/b869abb55c00__PROBE-02_PROMPT.txt",
+      "bytes": 2131,
+      "sha256": "b869abb55c0091ffe98c74213d492389e892fff8c6f5a572c72089d661f2a24e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/c32bec082501__PROBE-01_PROMPT.txt",
+      "bytes": 2110,
+      "sha256": "c32bec08250111f9e95363f3ff0234a155483b7edbdf51bc446858b378e50a5f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/c74a3b66eabb__BOSS-004_PROMPT.txt",
+      "bytes": 1901,
+      "sha256": "c74a3b66eabb591cb9807897ff115cda4c3bc8e9671afbc274b41ff4fab4333e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/c95bba0a1510___DROP_CHATGPT_RESULTS_HERE.txt",
+      "bytes": 128,
+      "sha256": "c95bba0a1510a0f79631e46dfd3dd5b3fe774e999356b4d62d414ec7c802a009"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/cd919a4e8d44__SCORING_GUIDE.md",
+      "bytes": 4754,
+      "sha256": "cd919a4e8d441c7dfb53b3a7faa1ed226405d6acbde144062eb475e8c6789370"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/ce591a50cb88__build_compare_sheets.py.txt",
+      "bytes": 3716,
+      "sha256": "ce591a50cb88392ca4d858d1b6096403b44b5f96bb991541e2512a8942018d2e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/cf7ae046a030__BOSS-009_PROMPT.txt",
+      "bytes": 2423,
+      "sha256": "cf7ae046a0305309283c4a4ef5c20edb92128d710e8f1f5d2c9ebe6d7af7a46e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/df770966929e__tests.json",
+      "bytes": 6619,
+      "sha256": "df770966929e6e5a1824b44f2c9ad6431890456f7b9815a6b61175cbd7286ad4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/e9365cb35821__CTX_LAG-LOCK-V2.txt",
+      "bytes": 1088,
+      "sha256": "e9365cb358215a5af0d81f4c7d4fd1849322a082fcdc5c60ea665d18ed8aaca5"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/e949a392e00b__BOSS-001_PROMPT.txt",
+      "bytes": 1994,
+      "sha256": "e949a392e00baa31dded5d269022c968ef4d9241a4505eb81a754ab8a3dfa0fb"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/f1a793d021f0__COMPARE_README.txt",
+      "bytes": 931,
+      "sha256": "f1a793d021f0c0c0b750848e15748bc2ab64b4a61cbe199b7c7a5d6b40362e03"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/f3fef9e01759__COMPARE.html.txt",
+      "bytes": 7346,
+      "sha256": "f3fef9e01759e821269a782cadf7b4745a7df01a20a478f9ac7232635987ab40"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/f4578bb9359f__PROBE-03_PROMPT.txt",
+      "bytes": 2184,
+      "sha256": "f4578bb9359fe67fca30823e6816fc4232ba4d2676a0ba111c3f1cc7c67d64aa"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/f7e32fc3a8ee__README.txt",
+      "bytes": 3406,
+      "sha256": "f7e32fc3a8eea405b936d9c2c082bc346f0e9a0c0a4edb100c6b25b8da062313"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/part1_manifest_review.json",
+      "bytes": 4938,
+      "sha256": "157e9d2e63d0b510f29d704851cdd19b5461e348ade898e3c2beb2eabf1a2749"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/START_HERE.txt",
+      "bytes": 7259,
+      "sha256": "39c9075346b91743ff102f63be383570538a4ac49fd60bedc019f3c9fb87b310"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/registry.json",
+      "bytes": 41190,
+      "sha256": "4c62b82ef5edb0d6555d02c9690ecdf4a5245c97cc4728209c5fc6b48e386473"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/registry.json",
+      "bytes": 9699,
+      "sha256": "6048a68545fd2954f7505dae753b3d6c90c8f098b4c5c1d42f660daf85eb391c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/mission_control.json",
+      "bytes": 140177,
+      "sha256": "fdd1edfbe613a828ff04d9baba8f5a7c2a8781e28c812420c4d5b39586a3c882"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/00_MASTER_PROMPTS.txt",
+      "bytes": 7276,
+      "sha256": "59b023be5c4850579b24fe9c23730f70e420ccd448d8ac234fe6b23eaa6423aa"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/01_HON_PROMPTS.txt",
+      "bytes": 7672,
+      "sha256": "54bf6f8ff9f5b6c685df3129d4a91d35cdb20d4e47338c3c821cf5e45ff4acbc"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/02_LISAN_PROMPTS.txt",
+      "bytes": 6300,
+      "sha256": "2da54bb0b87492c362bcfdb2f1e8a71c1eabb1e5a987a93fb9b003fe37bc98ff"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/compatibility_20261009/DELIVERY_COPY_POLICY.txt",
+      "bytes": 7199,
+      "sha256": "c47b6ca5a10c058781a6cceee9ec73384c7ef4fbe0bf6387686929b4ee20487b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/compatibility_20261009/RESULTS.json",
+      "bytes": 3770,
+      "sha256": "e2911092c012114beb328bc3604df69a40b661c70c63c0a501b713e23bf0d918"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/double_dip_queue.json",
+      "bytes": 4425,
+      "sha256": "5b6057bf747cdb5d70116a8e951f94d8578bcff62fca8aef94aa8a43ee76bf8a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/DOUBLE_DIP_RETURN.txt",
+      "bytes": 2297,
+      "sha256": "5419b7b8ebdd5b49af5e7d086b1c383ee42c8f8b42337cd31cc0539939625801"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/METHOD_AND_CONTROLS_AUDIT.json",
+      "bytes": 5459,
+      "sha256": "15485914426018331d811da8ecc3bc363ac9305552d7088e8c3986e31bfc3af6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/operating_sources.json",
+      "bytes": 19473,
+      "sha256": "02491ea54b8579e157f46d20a79eaf62706f9e9fbfd8426f187b838aa43bafa4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/OPERATOR_MENU.txt",
+      "bytes": 7704,
+      "sha256": "cc6d6c35d87d9d781fa5d86818f6796a8d944c9257fd753dd15056f8dfa48850"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/README.txt",
+      "bytes": 3918,
+      "sha256": "0b33c3ebb523fb0a6d7496bc8fb6139945dd776f773c7d6057d875c3a1beca8f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/SOURCE_AUDIT.json",
+      "bytes": 164786,
+      "sha256": "02ea93d364b51aa28051fb95116925d14492c669b7c387cd7d1127ce2cdc41e8"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/START_HERE.txt",
+      "bytes": 13449,
+      "sha256": "e825edf756d9341d4df652f7fb1f9f21bec516ad9ad018350f737ea45371630c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/STUDIO_SETTINGS.txt",
+      "bytes": 4819,
+      "sha256": "ea2031ff6449959bd1e3ac172622f70882efc24f0f170b4ce95d231cff71968f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/panhandler_return_20261008.txt",
+      "bytes": 49470,
+      "sha256": "a186474fb5615841a631342dfc76343b997ea4711e2216feac7947203a88eef9"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/PRODUCTION_METHOD_20261012.txt",
+      "bytes": 13759,
+      "sha256": "b854511b001e5f35f98330c04947f1c4fd4a30308ef9c61ffe5ea766aa93bebf"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/provider_roles.txt",
+      "bytes": 7143,
+      "sha256": "ae8c6d4a5de514afa1018d03a670bba86f45782e0623a56f7d183c2283ad9e34"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/00_master/SOURCE_UPLOAD.txt",
+      "bytes": 9679,
+      "sha256": "2734799bc06fd5cd44d7d6d1c9fa87110cbeea43030afcc1c788333faf6bac37"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/00_master/TASK_PROMPT.txt",
+      "bytes": 1020,
+      "sha256": "7e67822467287dcc09b56b0a43d880b223ffec57a70ab924770dc9dbe2ad8e67"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/media_manifest.json",
+      "bytes": 23413,
+      "sha256": "e43093c6c1eb64269f7ba8ea0e6af6b81c964046f16c8fb5eb88f99f8936460e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/source_manifest.json",
+      "bytes": 22034,
+      "sha256": "9836b9984088698ac8ff489cbdb3f27c19d02f8b8298c63643dccb9944ed78e9"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/SOURCE_UPLOAD.txt",
+      "bytes": 20116,
+      "sha256": "70b37fb5ffcf23b7f0898df5fe9ac934eb159b1cff8a7248b89732e600a75c02"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/TASK_PROMPT.txt",
+      "bytes": 5752,
+      "sha256": "43a95aed33ca337656c35f8c849f81adc95b38c0da059f8f2d9b9fcc39708802"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/02_lisan/media_manifest.json",
+      "bytes": 19007,
+      "sha256": "7e121d218e21387d286da9d379a2f5f06ce8ff20a98d640ef722312101426a79"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/02_lisan/source_manifest.json",
+      "bytes": 44152,
+      "sha256": "72719745150c827f290818c608ea3818105cef9f34e3b699d80bc3ab69c993e0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/02_lisan/SOURCE_UPLOAD.txt",
+      "bytes": 22230,
+      "sha256": "c6fc9cc4c5c76e6d33de79b577cbc1b1998f0acc546c71654e1fe688506315ad"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/02_lisan/TASK_PROMPT.txt",
+      "bytes": 5569,
+      "sha256": "16a8f9aacc76dbe40b0beac4db634c9b0b4c2e29b98df85c581ee12c9a724916"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/delivery_status.json",
+      "bytes": 5887,
+      "sha256": "e581b488f7c23db8e40c0fb27fe48232c9fd54f0a3044ffaa968938379861794"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/shared/STORYBOARD_WORKFLOW.txt",
+      "bytes": 7030,
+      "sha256": "6ac0bf8ccba50f908b556d3423b1f84259483d09f6ae16d9505c4c70f8d8ecaa"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/START_HERE.txt",
+      "bytes": 4924,
+      "sha256": "0e7472424f1cf9ef0fdb88f07971b34c73c2c34abf2cda1ca103472ff0e8670b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/video_studies/lil_vader_MwHocQFlw_c_20261009/CFA_REVIEW_PROMPT.txt",
+      "bytes": 3749,
+      "sha256": "661b69d9ccd58d2583a46c710d97773c02f9bdae8b8db6b5c43eecb7fb56ecbf"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/video_studies/lil_vader_MwHocQFlw_c_20261009/foreign_returns/raw/gemini_r1.txt",
+      "bytes": 16986,
+      "sha256": "0ee26e4ba6ae034b3dfe07027f6ef87ed9162f87acfdbb642b286f38bf9f664c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/video_studies/lil_vader_MwHocQFlw_c_20261009/NOTEBOOK_SOURCE.txt",
+      "bytes": 4693,
+      "sha256": "53c2532663a05403cc2b06fd65a517c1b3ce045252695a130d0d860d447cb395"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/video_studies/lil_vader_MwHocQFlw_c_20261009/review.json",
+      "bytes": 49903,
+      "sha256": "53941278b931f0e52a8b123b122aaefc796a3655a7cce17dc9842a1aa6ea0e59"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/video_studies/lil_vader_MwHocQFlw_c_20261009/source_packet/submitted_prompt.txt",
+      "bytes": 3115,
+      "sha256": "ecc73ac688a393b6e9c6fa29e8b8c7b63226afe1514b47652401a615fb7d9098"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/video_studies/lil_vader_MwHocQFlw_c_20261009/START_HERE.txt",
+      "bytes": 5785,
+      "sha256": "c3624a0abcc1a6a9515f485302a5cef220fc495064c1fadaf799ad4f94c2dc99"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/buns-coat-ref-sheet/build_sheet_and_zip.py",
+      "bytes": 1833,
+      "sha256": "1a4b00e0bfd8d6e4fa917018ac9699f8def120c16672af72ba227f2a10580112"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/buns-coat-ref-sheet/QA-NOTES.txt",
+      "bytes": 975,
+      "sha256": "a5e4c9488a29e37d89485d893acb8d6e218548e8db31a0bd54dff2844b9a57e2"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/dark-armor-ref-sheet/build_sheet_and_zip.py",
+      "bytes": 1836,
+      "sha256": "ba1b7ae47d89417ecbddda2d93c7b8cb3449936b22e72b53afe90334da12988e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/dark-armor-ref-sheet/QA-NOTES.txt",
+      "bytes": 1357,
+      "sha256": "bdb271d00d6ee1a45dce962c5f96344145cffcb7df4247be259d6b04ee8eba65"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/dj-beast-ref-sheet/build_sheet_and_zip.py",
+      "bytes": 1834,
+      "sha256": "c7e92816f5d9b40956e14ab9a2274550a1b2ca364c4b62363ea16b56e4a57573"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/dj-beast-ref-sheet/QA-NOTES.txt",
+      "bytes": 1024,
+      "sha256": "b1d24fdfe55348e96d5ae9699be809b667db3ee571788713984af51f00ef300f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-armor-swap/IDENTITY-PROCESS.txt",
+      "bytes": 759,
+      "sha256": "7dbc03deaec9a1954a87e95fa9ceab50b52aa9516325f7cbb81ca4f676136c6a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-armor-swap/QA-NOTES.txt",
+      "bytes": 414,
+      "sha256": "2c769f2071e0b1c8b5a3255f594f0cf0f391ffd154cdf7a0e9464512dd1d67f2"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-cockpit-swap/QA-NOTES.txt",
+      "bytes": 637,
+      "sha256": "36c7cdcf1d9256c5df89cad1086e9fb763782bb4bcf620be68f686f3db6d9cd9"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-cockpit-swap-round2/QA-NOTES.txt",
+      "bytes": 944,
+      "sha256": "85f08764a524fee65816330148dbed174bd4a907e83a8635815457bed3d5667b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-drip-20/QA-NOTES.txt",
+      "bytes": 753,
+      "sha256": "2bb01bcdb67bac964abeab7748e50ce4c799fd78913e42611430edbf306da910"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-nova-consolidation/HD-EXP-ID-TO-FILENAME.csv",
+      "bytes": 33171,
+      "sha256": "934cb990fe32dcb12cf9b6b3e9837e16cef29ca5ded2d20aaaccabfc1d120eaa"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-nova-consolidation/HD-EXP-ID-TO-FILENAME.json",
+      "bytes": 71798,
+      "sha256": "8d2141f74b66108ea34862a81ac108ec6a8e29e8db6f13f0043dd54267b82276"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-nova-consolidation/NOVA-CONSOLIDATION-AND-ID-MAP.md",
+      "bytes": 8455,
+      "sha256": "b6439f7afd2300ecd634e7d9b845791a203d6bfecea8949b1a9c4446411a98af"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-nova-consolidation/UNMAPPED-HASH-FILES.json",
+      "bytes": 37367,
+      "sha256": "aefe714e4c768dcbe80f706a8eee172b926318a5f343f1452d507b59887b2ca6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-armor/QA-NOTES.txt",
+      "bytes": 697,
+      "sha256": "b0fc89355bf617d464cfc3e7947af41cf07da6bfe9107b798b4eb81349256bed"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-baroque/build_sheet_and_zip.py",
+      "bytes": 1886,
+      "sha256": "26530cbf99bc094c6fb192f76f348103c973303f69a6426a5a6c310b46de7a9f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-baroque/QA-NOTES.txt",
+      "bytes": 995,
+      "sha256": "065ab08916d7965cd4eb0177db743ae9e31dd2fc6e2c4ee0ca7b268f40df9f91"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-bomber/build_sheet_and_zip.py",
+      "bytes": 1879,
+      "sha256": "16f324cb0f6887ab45c59feada414b225e2c259d89329ac81d289156114d74a1"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-bomber/QA-NOTES.txt",
+      "bytes": 1014,
+      "sha256": "1726d774575c6013f1230db69eff985e5971e37cc3dafb6e0eac20a6d201214a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-cash/build_sheet_and_zip.py",
+      "bytes": 1865,
+      "sha256": "3132b6fab6ff86f4eac1ef031c8a41c7832921f9b87a798ee27ceed29e34f32d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-cash/QA-NOTES.txt",
+      "bytes": 1255,
+      "sha256": "f88871ce3b8b27f1c5cb599ab51bca2f52b2843da2cd7133475cc85e516c8cde"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-casino/build_sheet_and_zip.py",
+      "bytes": 1879,
+      "sha256": "25ab1ad3cbe7ba216351aec9aded1ef4d75e96ca56528cf670fc21dc253140b2"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-casino/QA-NOTES.txt",
+      "bytes": 1162,
+      "sha256": "902ebbd8e43cbe7f61ff90d4532b4a95781b24d976e9d63aafe9bf0f7bf6f332"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-coat/build_sheet_and_zip.py",
+      "bytes": 1865,
+      "sha256": "9596b3c41bff623c2f17811f99bffe04dbf7daf9581bba10860efdc9be0d9ca2"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-coat/QA-NOTES.txt",
+      "bytes": 1103,
+      "sha256": "e839dcbc6c2168d84a5f238e386cac4f1f492cc57487709bdfec7dad54d1332d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-cream/build_sheet_and_zip.py",
+      "bytes": 1872,
+      "sha256": "f381b312cb8482d5dfd609dc8f219ea4a5908bc1cb8a433e64a1c8508baaf9b1"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-cream/PROMPTS.txt",
+      "bytes": 3794,
+      "sha256": "01a1ce4e0572009a8cb98329214e7a8d9d97daa3eda99657d67ff2d6038fcddf"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-cream/QA-NOTES.txt",
+      "bytes": 1024,
+      "sha256": "b64eb8c3844caed8411b38382e4af6fdd16535188c35d6f8604395f496b59239"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-dragon/build_sheet_and_zip.py",
+      "bytes": 1879,
+      "sha256": "41221a7c7b754eeea545933d105f62c94084aefec366dbe53d5110a8de67b313"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-dragon/QA-NOTES.txt",
+      "bytes": 1036,
+      "sha256": "e07b8c7b8802eb202c54188306aa35d8eee40a200a6b0198cf8f746e19ba9c37"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-fur/build_sheet_and_zip.py",
+      "bytes": 1858,
+      "sha256": "857e002c399a908b89ebc1538e108197914f68aca9d00fca2076099010895d57"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-fur/QA-NOTES.txt",
+      "bytes": 818,
+      "sha256": "40e139961b7f52ab413ccfef5e60dc0cc8089cbf31806446dc1cdd35f2a0819b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-ice/build_sheet_and_zip.py",
+      "bytes": 1858,
+      "sha256": "4adb7a77bcf0c9e65638ebe39c275d859918b6c772c46f1eff3c28952e0b5502"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-ice/QA-NOTES.txt",
+      "bytes": 989,
+      "sha256": "d37b11905b2b2ecd5df12909f7e4212ffb8a51c98629cbab8ce3c27c10f2aea1"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-letterman/build_sheet_and_zip.py",
+      "bytes": 1900,
+      "sha256": "9f88c64011bb487581ee63dffdcbe1eff302818884d8fcec4073ec62db582eb1"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-letterman/QA-NOTES.txt",
+      "bytes": 1099,
+      "sha256": "712e79e2d18df164e02b1c8d1579f2a631e6c4a74cd7eb91bd6d254f60d96bc5"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-parka/build_sheet_and_zip.py",
+      "bytes": 1872,
+      "sha256": "2c6fc78a6fa5b1ec037c80c61f74cb7f131ff74cdf14998abc884dfab1417082"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-parka/QA-NOTES.txt",
+      "bytes": 1029,
+      "sha256": "a79697ac8891ac470af31969921b93e82fd5efc1cc0ff71e7b34b60a97d1d4af"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-pilot/build_sheet_and_zip.py",
+      "bytes": 1872,
+      "sha256": "0b04bd83104201c0cab88786eed3f4e797ba924f20b68e567b5db6f5bd1e55b7"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-pilot/QA-NOTES.txt",
+      "bytes": 1022,
+      "sha256": "44c4efee323c1650f8487daf42bcdf0a2af32992086af2e61a8af94f905d183b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-pinstripe/build_sheet_and_zip.py",
+      "bytes": 1900,
+      "sha256": "acd82a7d9ad8612e07d4757245f1de41159e90d3db4e52fc8548cdf421c024a7"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-pinstripe/QA-NOTES.txt",
+      "bytes": 968,
+      "sha256": "9cfdc79d85b54e6f6299728618f5341afa7350195464fb31165878bb7691f832"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-puffer/build_sheet_and_zip.py",
+      "bytes": 1879,
+      "sha256": "eb7a69e16066bd7484bf75e491954ac541f98b58ce3446d3f4d1a7d96b72d9b1"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-puffer/QA-NOTES.txt",
+      "bytes": 1086,
+      "sha256": "efe02c31601d9b9a8b345b7e00282615b78ec68ecfb63ac5d5e4dffcb6032f36"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-rain/build_sheet_and_zip.py",
+      "bytes": 1865,
+      "sha256": "6629cdc3f718c24a0b3f6d6086ec6f6f36714e60860f6a363f7de324fc903178"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-rain/QA-NOTES.txt",
+      "bytes": 887,
+      "sha256": "ce27c678375d13eaa0fc5eb7427645d7296f2d974a7342e96e573ea170355976"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-saloon/build_sheet_and_zip.py",
+      "bytes": 1879,
+      "sha256": "94fddb075d41fa0636c0688ad75c2aee991eddf5ef4b8356ce080f48e3d4273b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-saloon/QA-NOTES.txt",
+      "bytes": 1077,
+      "sha256": "68f376271d15c485218d42920eda236c7cb03522bcd768726af45c58b434b361"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-velour/build_sheet_and_zip.py",
+      "bytes": 1879,
+      "sha256": "d75ce26d347758a4aca7928cbd2c34dafe14d04fc5db9d45889526ac1ef3ec18"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-velour/QA-NOTES.txt",
+      "bytes": 1028,
+      "sha256": "1e9ec3a16bd8c80ae4908c64b75991c3dfb8a89fbf4e1c19fa19f82f1e53e660"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-velvet/build_sheet_and_zip.py",
+      "bytes": 1879,
+      "sha256": "4a789060e93e0c1c9a80ae1f2b23d79013bddc6d8ed5066f83e7ec789bfff783"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-velvet/QA-NOTES.txt",
+      "bytes": 737,
+      "sha256": "158558bd7422c8973cc3f153c94df89d83f1edc43380fbcda42edf16faeb1276"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-vest/QA-NOTES.txt",
+      "bytes": 1004,
+      "sha256": "8450342916f9c2b465d6a97b6b6788f2f7dcf25998afeadc375d2578a8c9392d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-vinyl/build_sheet_and_zip.py",
+      "bytes": 1872,
+      "sha256": "0e86bc2e15f7280e79cef5be62d0c8d669efd37b52f551cbc623455f6bdbe6d0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-vinyl/QA-NOTES.txt",
+      "bytes": 1236,
+      "sha256": "302ec3184f05601a702cd0a31ff34260097e02dd302f522f975fd3f233275165"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-ref-sheet-yellow/QA-NOTES.txt",
+      "bytes": 794,
+      "sha256": "d732bfc64785dd66d6fbc5409e629319f9af1e80c8458c92a65b0b89e814ff19"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-since-last-drop-part1of4/README.txt",
+      "bytes": 393,
+      "sha256": "1d640b7f315e9a055263035bd20402702f4f61cc5a9587103cce441046f59474"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-storyboard-strictly-business/docs/QA-NOTES.txt",
+      "bytes": 835,
+      "sha256": "cacab34247ca3eb6a97280392a39bf561d2dda1c5020b6fab58d43e46569b8ab"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-storyboard-strictly-business/docs/README.txt",
+      "bytes": 527,
+      "sha256": "681cb58fd9435a08e4395f6ed25827ddfd7d76992837e56712577a667147350a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-storyboard-strictly-business/docs/SHOT-LIST-STRICTLY-BUSINESS.md",
+      "bytes": 7602,
+      "sha256": "2106874f2d5cf0d7e78d05b91da5bb467a01719b43ad3c5c806f6b3953b5d3d1"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hon-dolo-storyboard-strictly-business/docs/SHOT-LIST.csv",
+      "bytes": 2380,
+      "sha256": "b80a987ce387b155a2ba107d13b859c023084999b441d362202d733b68934d39"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hooded-kid-ref-sheet/build_sheet_and_zip.py",
+      "bytes": 1836,
+      "sha256": "accb35334ed3a62d991490279ec0e71723c71f614b51fe25fc991100bea18fee"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/hooded-kid-ref-sheet/QA-NOTES.txt",
+      "bytes": 868,
+      "sha256": "f2973bb75d8e3ee6a3d9afd16242191bfb90988ea7760ba8f704a856fef9241a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/side-hippo/build_sheet_and_zip.py",
+      "bytes": 1818,
+      "sha256": "cb1b611668d4695cf30296e6fd9b0f3780fe42283a6f0b7f85f482dfcc357f50"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/side-hippo/QA-NOTES.txt",
+      "bytes": 1032,
+      "sha256": "0bb7e3d475eeb66de6fecd12bf7e7875d17aef56db64f7f2a3e650a790156f13"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/side-lord/build_sheet_and_zip.py",
+      "bytes": 1811,
+      "sha256": "456c78381b346da0fcd217923378f8050b59a7a995c50f855c13606ddc9a173d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/documents/side-lord/QA-NOTES.txt",
+      "bytes": 1502,
+      "sha256": "16d8c3291e0c59136f047111f50dcd82911969910d9275fb12b1b5defee64cdf"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/cast/unnamed_informant/intake_20261009.json",
+      "bytes": 5566,
+      "sha256": "0528aa1853976a1d0ac09d6c30f7b41a6c7e7a96eb909ba507ffe1d53d37f13b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/boss_discovery_20261008.txt",
+      "bytes": 3559,
+      "sha256": "b41e90849b4928709b8ffcc82fd65334a13884bcee579475c0e57f0de64e20c6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/grok_favorite_prop_sweep_20261008.json",
+      "bytes": 28595,
+      "sha256": "2b1ec18c5a1827051dc43cc825b727670aa8afef3feeaae62b63719a0c3678fc"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/grok_favorite_prop_sweep_20261008.txt",
+      "bytes": 2276,
+      "sha256": "c7508b7eb07141dbdca259b58102044c99d1112c7b5006f265f426a8506ae826"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/grok_revision_queue.txt",
+      "bytes": 4748,
+      "sha256": "a228ad45365828d761c5ba35fa832046ddc801c8e4328deb4d376bbd66526b1f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/GROK_REVIEW_DIGEST.txt",
+      "bytes": 2948,
+      "sha256": "e2f19d91c85e0bb5044fea80d029df149330b6e7ad91ac2d892690fde5ac3ea0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/intake.json",
+      "bytes": 32385,
+      "sha256": "72d2cade4d12252c4716c7172c20fc26f6c3f14c33a5e6df32d0527d10066ec9"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_162912/REVIEW_NOTES.txt",
+      "bytes": 3751,
+      "sha256": "e967f80d8e8eb7fa28e39c261ae57fd2989271c6a16650f1304ec521c1d625a2"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261009_latest_finish/REVIEW_NOTES.txt",
+      "bytes": 13479,
+      "sha256": "fd98696a122485c5a8647443a5d1a282c46363376b770d1938ee93ac1cfbd1ec"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "bytes": 186911,
+      "sha256": "da4f71f778c44aba475c790f2d5bf0d4584207229f7b0ad8b614920fdf2fc32a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_sweep_20261008.txt",
+      "bytes": 911,
+      "sha256": "599cf64967e156757e381fbd014d7828c8bd3e1a7fbd3e861ab4777e7836c051"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/first_experiment_20261008.txt",
+      "bytes": 5555,
+      "sha256": "3e4fb519f0c4ea50862568c4652acb0bbb7002c8b80639fc6acf937a2927eede"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/project_brief.txt",
+      "bytes": 2320,
+      "sha256": "fc0ff71b55e453fbcb31a13d180ec2787bf44715fa382ee0fa33ef77dbf26faa"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/second_video_experiment_20261008.txt",
+      "bytes": 6091,
+      "sha256": "5c6ed5cfacbda542468ed290c88fc8c1e87f717b012ab630bb4e2cc3df5261b5"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/RESULT_20261012.txt",
+      "bytes": 3419,
+      "sha256": "4d3fcb99e1410054fa00abeda9e27ba535683be3a8f08b2b5d7bbfeb22303115"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/RETURN_RECEIPT_20261012.json",
+      "bytes": 8355,
+      "sha256": "5426eb88e496df33eab2dccba392983419999203636ebdf5fd780a0340dd1d87"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/USER_REVIEW_20261012.txt",
+      "bytes": 8709,
+      "sha256": "75b2bd13c58686a405f4ea39f3780ae768d571accd587908ab2063f430d3fa56"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/asset_ledger.json",
+      "bytes": 835205,
+      "sha256": "210ed6892fe0cd36e1aed38b9cb51a3f1ba2d568d39eddca1e15b6392260b4a9"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/coverage.json",
+      "bytes": 35423,
+      "sha256": "d646ad60a12f3e218863e60bda47ce6c6531cfd553e93e42248b3dba18454863"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/outfit_inventory_mapping.json",
+      "bytes": 66488,
+      "sha256": "d7c0611e5bb0b8c54d92f35e4f3e590ac794961ec0d0ced6969a8800de24de9e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/1d7ada7e75b9__manifest.csv",
+      "bytes": 19666,
+      "sha256": "1d7ada7e75b90deab0b034e367111e4be3d0d92df25e15a4844fbfe66cfad94b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/3d60828c14b9__README.txt",
+      "bytes": 1954,
+      "sha256": "3d60828c14b925ea0c131e6351b5aec2c55ceb29dc16ef811ce02432bcb4b1e8"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/40581afaf9f1__NOVA_README.md",
+      "bytes": 18510,
+      "sha256": "40581afaf9f151dcc1052e7b4f3503001de9cc59bfd9d934deff75cc25b6760e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/6936e9681f35__FILE_INDEX.csv",
+      "bytes": 31114,
+      "sha256": "6936e9681f35f245f19c018b22d8d32d99a1b7a45a2385887f25573db3d1b5c2"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/96e4dac39236__LOOKS.csv",
+      "bytes": 38481,
+      "sha256": "96e4dac3923634e45a8ab5847132bed25849013a7589520d901d9534543a1b69"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/a523df3cd5e1__manifest.json",
+      "bytes": 27744,
+      "sha256": "a523df3cd5e14c1a3cbdca74f8c154800682412ee0c36b0b8c3527e6c19ea8d6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/b30b25ebc596__README.txt",
+      "bytes": 323,
+      "sha256": "b30b25ebc59627a4b643226cff45656f26c1e9e73574f98fc8fdb0497ddd6822"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/db71da76441b__NOVA_README.pdf",
+      "bytes": 249596,
+      "sha256": "db71da76441b9995441cfd00916648b8274d0dd37bcf62404bc38abd2439a370"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/ea8b16ee8ffa__manifest.json",
+      "bytes": 4238,
+      "sha256": "ea8b16ee8ffad9f76bb18ec093e8b0725ff7d5c91bd030079c6ab052e8e6c854"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/START_HERE.txt",
+      "bytes": 4036,
+      "sha256": "af76a5724b0b030cb3cf804b616b540c4635fe4aa86a35185557f085d06aff84"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/visual_review.json",
+      "bytes": 2124,
+      "sha256": "e1072db8842c5dd55be8bb6318b1413b3fac6efb7bf74f023a0926997c456e3a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/provider_documents/C01-pilot-hover/NOTES.md",
+      "bytes": 2304,
+      "sha256": "ac8ef2635fd59cf6c1e1ec6ae4f1a449a87200e84967a9b7e2b407fed668f8b7"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/provider_documents/C02-captain-portrait/NOTES.md",
+      "bytes": 2563,
+      "sha256": "ee60c90c5a1ad7441023b7303066f70f629a8765955cdc1277c41d4472f24fd2"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/provider_documents/C03-look-back-softened/NOTES.md",
+      "bytes": 2320,
+      "sha256": "d7d93a0c11a977a7ee62b7bf162ece44a8604f01094377d3477d6d26508fa286"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/provider_documents/C04-battle-light/NOTES.md",
+      "bytes": 1108,
+      "sha256": "eccafd5af16991ff0ac55fc50ba2d5a0455310bd15e4c12feea378a649e8e83c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/provider_documents/MANIFEST.csv",
+      "bytes": 10990,
+      "sha256": "0ddff02fd6f20ddd5c28fd4454ad96ad9a90f1058788c47546658d3b0c2ecd89"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/provider_documents/SHORTLIST.md",
+      "bytes": 514,
+      "sha256": "ed3eccbd97f001cca0cbff59556c5ac1c608dcd79c283909a79ab4f08c66ebc1"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/registry.json",
+      "bytes": 94549,
+      "sha256": "d601e9fd9e974a5ea61a4d266f7ba3683ec0695faf7f9eb46324b2b26b967bc3"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+      "bytes": 40416,
+      "sha256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/GROK_FEEDBACK.v2.txt",
+      "bytes": 10135,
+      "sha256": "4cbb9e6b62642c930a13fedff6cb3b89fc0bbde646c1864c53c94a9be743f1a7"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_extension_20261012/provider_documents/C01-pilot-hover/NOTES.md",
+      "bytes": 2065,
+      "sha256": "0cc8ba5752d9a1777a997273cd5d206dfa206252cbaea3e226e166b7b7deff94"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_extension_20261012/provider_documents/C02-captain-portrait/NOTES.md",
+      "bytes": 2324,
+      "sha256": "e1114811b6363eae51f6af2e8c0ab6961531436f6d5ecbdcd75ca43d59cca5df"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_extension_20261012/provider_documents/C03-look-back-softened/NOTES.md",
+      "bytes": 2081,
+      "sha256": "243d3af762c64f758056078f884f39eff7c3d90f866e85138ff8dc7087a13664"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_extension_20261012/provider_documents/C04-battle-light/NOTES.md",
+      "bytes": 1714,
+      "sha256": "ed0f9802a8a4b73888364b514b83597dbbe28eea9e94c1e3e7d26deec2bce062"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_extension_20261012/provider_documents/C05-lurch-grin/NOTES.md",
+      "bytes": 1834,
+      "sha256": "3b1fd8c7cdda3856746aabd52c7cc58ecbb986796566b8460ff8073f3d129c95"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_extension_20261012/provider_documents/C06-lurch-no-grin/NOTES.md",
+      "bytes": 1496,
+      "sha256": "3a9d568fa06f7df75aa004df079fc8d2a4e29f455ced16cf5f6c4a5bc2ec66bd"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_extension_20261012/provider_documents/MANIFEST.csv",
+      "bytes": 18336,
+      "sha256": "f41bf1f7c3edc22216486d0c1c4689c732a6928b45b91dd28ab2d35dd956c891"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_extension_20261012/provider_documents/SHORTLIST.md",
+      "bytes": 934,
+      "sha256": "2998a99ee1b5200cc573cdf63fadb66e76030b6f1e7b6a97e778a3e9f41eccc0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_extension_20261012/README.txt",
+      "bytes": 1653,
+      "sha256": "1b50cfd6b581f8c111f1ed7fe798c8799f84f65f3d66970c70bbb39137d29a58"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/asset_ledger.json",
+      "bytes": 364048,
+      "sha256": "78d8228f15818521fe65eaf90a7cbbd62b6e3a850db18098519d56cd327778b3"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/boss_audit.json",
+      "bytes": 10648,
+      "sha256": "4a2f4bf47c63b5bb40c2ff1e85bd0a3a7fe6ed2e31f3667254cc7fe085763508"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/hd_audit.json",
+      "bytes": 303648,
+      "sha256": "7f2c9b854f90ce2785e3e6c51088977f2d2b99c49354059760308bc9bd8cf8b6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/0264aafc3f09__README.txt",
+      "bytes": 1300,
+      "sha256": "0264aafc3f095d2c19b0877c6e9104709bcde126d947ca9be5abdc5db4e3eae0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/03284336eb34__QA_NOTES.txt",
+      "bytes": 7641,
+      "sha256": "03284336eb34b007a92b8b2a54bef4dc96f539c48a256469cdb9c57b45ab4107"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/0832560f95cb___pkg_refs.py",
+      "bytes": 1431,
+      "sha256": "0832560f95cb84352a05c51318c3b52c8441008e629d83e5e7949fc94d368835"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/1f5494ffed82__QA_NOTES.txt",
+      "bytes": 5394,
+      "sha256": "1f5494ffed8252146fa78bda78d26964b9b0056431220c5ddb1087771ac06a58"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/2a003d2630ef__RETURN_MANIFEST.json",
+      "bytes": 43801,
+      "sha256": "2a003d2630ef0684e8b7df27f8331981c3e3c1114453d935b3a3a1a4928dd829"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/47a18613d05d___common.py",
+      "bytes": 1061,
+      "sha256": "47a18613d05d9b09b4079d1082c616216dc2dc4986bc7047413261a63f0ff5fb"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/49a5b8ec9b16__rollout_context_only_14.csv",
+      "bytes": 3073,
+      "sha256": "49a5b8ec9b16b9be4ed40299bbe36a0270b209e1e3d1630e24d0f0b580b9a8ea"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/50e0a85ba911___write_tattoo.py",
+      "bytes": 9019,
+      "sha256": "50e0a85ba91139a087615f6dff20ba2683011a70812a549095bf8f692ada150b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/5481593036f2___crop_parent_scan.py",
+      "bytes": 1582,
+      "sha256": "5481593036f2c0eaf4d5a6196f985c85932a84a4c980ae7eb5d976c279279b3d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/580140329f7a__manifest.csv",
+      "bytes": 5402,
+      "sha256": "580140329f7a3e1b44542c72b08c6393ea7d7417dc4fbbbb34131043b96931e5"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/58ffefea94d0___zips_scanned.txt",
+      "bytes": 41825,
+      "sha256": "58ffefea94d033d047592c55712cbe2dba1798ef79741530cdda270bc90724c6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/5bf1069dbfd3___flatart_scan.py",
+      "bytes": 1292,
+      "sha256": "5bf1069dbfd3e654ee735e793e2473a967b93edd82d2cda033274ed69980a4a8"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/5ccf6c9ce8a2__README.txt",
+      "bytes": 5930,
+      "sha256": "5ccf6c9ce8a216585b61daa45aa54b8fbc4f485354b6c36028a75c1bb9a08305"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/5f2f95f4eb21__image_hash_index.csv",
+      "bytes": 3225320,
+      "sha256": "5f2f95f4eb21de1e947899ecc98062db49b986c28e4f7e8ed6bad33b532f065a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/68896b2f7db5__MISSING_SOURCES.txt",
+      "bytes": 7272,
+      "sha256": "68896b2f7db5a17c7f7c7fd7b5a608a6ed98725eb7399dc5b2cb3a9b2773c37a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/69cc8526c707__RETURN_MANIFEST.json",
+      "bytes": 31839,
+      "sha256": "69cc8526c7072538d1d054576be1da75d1a035961b8c61d8c7d3d3e3b6b37fa8"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/6a4707c10175__RETURN_MANIFEST.json",
+      "bytes": 46484,
+      "sha256": "6a4707c10175fd6abe430a411589f9a4e437edbde9f6e632eed405e0f6112dfb"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/7cc079b1dacb__INDEX.txt",
+      "bytes": 1106,
+      "sha256": "7cc079b1dacb12e8e8efe5681ee7da5f8541210ffccb166f94f40127584c5d3d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/7e8c684cc276__rollout_refs_19.csv",
+      "bytes": 52017,
+      "sha256": "7e8c684cc27675d96a6e1a297631842a86de33623fbeb95c7376d88755d3172a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/87cc11d3df2d__tattoo_sources.csv",
+      "bytes": 11651,
+      "sha256": "87cc11d3df2d83afc93b9ffa0bf9438df4adace0fb5a687360d71f95cb6b302f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/8914757239d4__RETURN_MANIFEST.json",
+      "bytes": 68884,
+      "sha256": "8914757239d4313029c71822f5da39c7d9e54c5e5bd9449e80359d3f2b53a4dd"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/979772de33d6__audit_sources_availability.csv",
+      "bytes": 187969,
+      "sha256": "979772de33d63f107ecd32eb1aebd1f74c28624b15990632193a12dfab89343d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/b82e12223543__manifest.json",
+      "bytes": 31038,
+      "sha256": "b82e122235439dae4b5b262b2e95d10a3f519e886419dbc2bcbccee7277b1ef8"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/bbb5061988c2__QA_NOTES.txt",
+      "bytes": 3714,
+      "sha256": "bbb5061988c25a2672e10a14e9045af2cf77abee07e12242c8433d361f91a2ba"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/db2c147458d1___flatart_scan.csv",
+      "bytes": 490201,
+      "sha256": "db2c147458d1d72e058529c6db257c2e475b21a2315c66ec8d39dc2930773105"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/e3b0c44298fc___index_errors.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/ee7f67a80e5c___crop_parent_scan.csv",
+      "bytes": 3636,
+      "sha256": "ee7f67a80e5c3d009f3876a4b464e5fe69e6d2c3f7e68004bcc7a56346445e88"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/ef0d4c53fe52___build_index.py",
+      "bytes": 2652,
+      "sha256": "ef0d4c53fe5271b3debee59784e6d8d13dc9007daaa797fac1b7ed0d4301a16a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/START_HERE.txt",
+      "bytes": 2854,
+      "sha256": "dd10817e01ab7bd6d19c76e640c35072e7f6dcf49cba4943ba2a470a9abb2f18"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/boss_discovery_20261008/ASSET_MAP.json",
+      "bytes": 1879,
+      "sha256": "5a3012cddbb89b31e1c8be8a96690c99d8e68583ba7b8d7b375503fc53a3926c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/grok_viseme_return_20261009/visual_review.json",
+      "bytes": 31669,
+      "sha256": "182b25448d199018c5a98ff287013cfd3cff8bd877f9ad427ac1fd4810731231"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/grok_viseme_return_20261009/visual_review.txt",
+      "bytes": 7588,
+      "sha256": "d12a1d4afa22ef7c925b56bb919dc940b89bc9f02e5b9b0589ac3a96735b2d73"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/START_HERE.txt",
+      "bytes": 11605,
+      "sha256": "78d8a5186b8562826e6c592ae2d7bc4a1d8e166703da2429f6b839bad04d919d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/user_mouth_update_20261009/intake.json",
+      "bytes": 5660,
+      "sha256": "0eb38df9ad66f83cc153eb2b6a5576d48b2b8fe125fdaccadeca24f51ebf5795"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/user_mouth_update_20261009/UPDATE_NOTES.txt",
+      "bytes": 2996,
+      "sha256": "94ab762cd92c50686445168b4b08bf104c42b042b9f6320baf113df09502d133"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/BENCHMARK.txt",
+      "bytes": 20769,
+      "sha256": "6edea30591c8a00fd2ef3008ec09fee9d9638e5534514f97e146c0aad8cfbf42"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/BENCHMARK_PLAN.json",
+      "bytes": 25995,
+      "sha256": "9131250833a523e77bbb4d0950a4f0403a69ee8674780f6a8efa9a7a9046dc0c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/GEMINI_10_TURNS.txt",
+      "bytes": 17802,
+      "sha256": "b329246ca7aad1c9b6d5d702492ac5d77310b6e5bc1c2d7e97b0e3c4294f72bd"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/GROK_STARTING_FRAME.txt",
+      "bytes": 7951,
+      "sha256": "779b40af96d7a710eae7bb2b568e52e60f521c796515102a4217b0f841ad2db0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/RUN_PLAN.json",
+      "bytes": 30081,
+      "sha256": "b0530610d0fa47d95504cfed45305140cd7893bfb209df3bbc870ab5b4cfa81d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/START_HERE.txt",
+      "bytes": 10973,
+      "sha256": "04bee2f279e05b4c58229b7846b837ab0f47732f2f42a96e89256d6eecdb0417"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/asset_map.json",
+      "bytes": 50257,
+      "sha256": "b9e88ae6ce640c3dd3061d87f5de974804b26e8c697f0a0d7fadbff9b4a6e265"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/panel_plan.txt",
+      "bytes": 5897,
+      "sha256": "67d8cfa2099b6925a493c6160d04b46f767d949edbe01fa5ee0232e577944492"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/requests.json",
+      "bytes": 30275,
+      "sha256": "44a8d69e8eb307cc8514ee4f39773b0a9d2e89596f93e63c581b34bd8ba75ec1"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/return_manifest.template.json",
+      "bytes": 2569,
+      "sha256": "ea5f7b4e36d1b06bb104e0ce1a3e716a88446843685634c13c24327f450354a3"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/grok_20261008/START_HERE.txt",
+      "bytes": 10485,
+      "sha256": "56a80126d9990736496440eb1b511386aee499e4ca2656033f5b5361089a1386"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/informant_cab_144607296_20261009/START_HERE.txt",
+      "bytes": 7119,
+      "sha256": "cc363b27df76321d9692f3190944aec2ce712cbcfc1300872174e61479df5ad4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/GROK_FOLLOWUP.txt",
+      "bytes": 5824,
+      "sha256": "45f3f55d8188eb740cc40d8c20571cf7815a326e93ea0d9c162cf0d6bccecc5b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/permanent_accessories.json",
+      "bytes": 2453,
+      "sha256": "af9b486635746a625ee46dd4d1dfea8b0851a37847d4f99d46966e49e511f0c8"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/PLAN.json",
+      "bytes": 3755,
+      "sha256": "a1600f3a55630a28b9e88dd7c7b220d272538a2c1d7bfe9a700236cba9948643"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/reference_map.json",
+      "bytes": 5161,
+      "sha256": "b98c7aaa4fdd867323d7493285946c89c210568ca459a22b42c6c48170ad1d8b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/START_HERE.txt",
+      "bytes": 6770,
+      "sha256": "10ad6fc904612a644c7e5e0dd4db01f546e128a6b0f9d4a4aa2846631069623f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/tattoo_placement_guide_20261009/asset_ledger.json",
+      "bytes": 39541,
+      "sha256": "3da6f20e871cf0f112eabb26248fce71f1bfff71db95796873c8b6ae6d2f227e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/tattoo_placement_guide_20261009/brief.json",
+      "bytes": 20598,
+      "sha256": "a6ab3e66f489f16727b944c851c7f9a558211f42c0e950cd3f9b0147b1c4dfa6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/tattoo_placement_guide_20261009/intake_receipt.json",
+      "bytes": 55879,
+      "sha256": "7bbea45dbc7dd7000061d9d798bf77bfe070de708edc51caa9054576d1e0fe8d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/tattoo_placement_guide_20261009/received/flat_0_INDEX.csv",
+      "bytes": 3449,
+      "sha256": "42d76876249c683253c9f3423bafd0e204fd9d17f2b6bb41f0bd8a4d80a4e070"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/tattoo_placement_guide_20261009/received/MANIFEST.csv",
+      "bytes": 9248,
+      "sha256": "ca5bf82bcb463d77a6edd36acf8f8d4a11fa6bb3b6a1f251623ca6acd67b8d56"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/tattoo_placement_guide_20261009/received/README.md",
+      "bytes": 3433,
+      "sha256": "6bf338cbf5cf8998f2392bc3a2b3883f565f957d5b55e961e53d50f8074e7c35"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/tattoo_placement_guide_20261009/REVIEW.txt",
+      "bytes": 6830,
+      "sha256": "ce267c90c534d8a28ebefc2b82e7f4eb6940c044c0ea5902da8251bb1c55852c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/tattoo_placement_guide_20261009/START_HERE.txt",
+      "bytes": 2798,
+      "sha256": "282a236fd95fc869ba1006a2cf1aee21d29e37e635bb87372fc49258d63f6cd2"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/head_library_20261009/expected_intake.json",
+      "bytes": 67780,
+      "sha256": "33536782b9a4fbff3225835c645a5819993e9b2482ffd40ca38cbcfe4f7f5b91"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/head_library_20261009/grok_conversation_evidence.json",
+      "bytes": 4532,
+      "sha256": "9cd954813f3907d360e030da0e0fe1bba5ad23f7bdd690df6ac9520d7ac21db9"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/head_library_20261009/return_manifest.template.json",
+      "bytes": 1520,
+      "sha256": "957ab04cf66140976972764639e350f7303323beec2eaeca0d7f5f5a6945c22e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/Hon_DoLo.txt",
+      "bytes": 3746,
+      "sha256": "4d8f867b525ad8cc05d5a78a1ac129ed1a9f46acb288c0698c7646dc35af918b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/lyrics.user.v001.txt",
+      "bytes": 3644,
+      "sha256": "6b87662275e6547f9e16c3655221651b9b0a170789b3058be5d8273bd4bc8cab"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/lyrics.user.v002.txt",
+      "bytes": 3616,
+      "sha256": "291a2fb6f8a542dcdc4f87d1b4b1c29af3ce0014156a988f293843c71561bc01"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/media_intake.v001.json",
+      "bytes": 6508,
+      "sha256": "c4f708ac8ca8bc1494aa09a25031b00b4039a1bda3b08c4fb362017699a15748"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_alignment_20261011/ai_studio_return_01.txt",
+      "bytes": 28891,
+      "sha256": "8762bcf466d42619f781e86eb643f44122b067230b123790884c3bb41713cc58"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_alignment_20261011/ai_studio_return_02.json",
+      "bytes": 5916,
+      "sha256": "684555b12c13aa0968b35dfe6eb1ad6172e153357eb17971d2667a94e02d9635"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_alignment_20261011/analysis_request.txt",
+      "bytes": 2927,
+      "sha256": "f1082a03cfa9466762be5ba5e4e0b727e63aef647304535f3ac20e914682d5ba"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_alignment_20261011/claude_combined_relay.txt",
+      "bytes": 1802,
+      "sha256": "449f4d307a00fd9407831a3da87804016d02c83f661a9c21ceb31e595de0dc95"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_alignment_20261011/coordination_record.json",
+      "bytes": 1527,
+      "sha256": "1056417de58aa5a9ec641b8c362e4f8add6b8b9669ed93b8a1eac9730a42a757"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_alignment_20261011/correction_request_02.txt",
+      "bytes": 2104,
+      "sha256": "157d5b6c10ee51339bec0d8e9ec853a4d27fc4af6c4dd0c97e14ed1169a2d1a6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_alignment_20261011/execution_record.json",
+      "bytes": 3622,
+      "sha256": "46e6053d109cc5a76c93c3b96a8837cfc2a9a7cd3dc052e9a55229e3cf7d9b23"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_alignment_20261011/execution_request.txt",
+      "bytes": 7188,
+      "sha256": "3d7237c56e82dc897730e18968249379b35528409b898943452e81e5bd1eea5d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_alignment_20261011/listening_review.html",
+      "bytes": 25606,
+      "sha256": "f54de70da1c2c566f7eaa3704dda7cc9a3a819965dd6e7528803efed025a6d25"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_alignment_20261011/provisional_anchor_map.json",
+      "bytes": 6631,
+      "sha256": "3d709457add010d6b339c71139b980ff5ed621d06aadc484cff806dd0c1dcba1"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_alignment_20261011/return_01_audit.json",
+      "bytes": 2056,
+      "sha256": "9b1cf276ed8c5f301d394f43c26fccf236a6c8fd6536ab95c21c37b78d9ff2be"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_alignment_20261011/shot_plan.before_prime.json",
+      "bytes": 34848,
+      "sha256": "cb33bbb2480ae60229c598a5081201f76308874beba2fe449fee58d25e3b7412"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_alignment_20261011/source_map.json",
+      "bytes": 15028,
+      "sha256": "4ca4dd2f0fa7aeee337851735939277ec7f72254818481cae197856be13c7946"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_alignment_20261011/START_HERE.txt",
+      "bytes": 2593,
+      "sha256": "fec6bbdac1052e7cae0b37c4fefebfe061eb23b270d15f759883855325918c80"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_alignment_20261011/timed_lyrics.template.json",
+      "bytes": 30193,
+      "sha256": "3fc4c7a4d94e23fd143df5f6b2fc7d59f0e5611d1b49a9352b412598fd876a44"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_alignment_20261011/validation.json",
+      "bytes": 5218,
+      "sha256": "67d1060083ceb7830b3f14ddbbf94af37cdb4d34ff436cade1449e98bd33bbe7"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_intake_20261007.json",
+      "bytes": 27874,
+      "sha256": "d6ccbe9e75826788b44cc1f354c5d32037a2bcddefbb40ddfe85900555956700"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_intake_20261011.json",
+      "bytes": 16492,
+      "sha256": "6b655742eae732f7085be8c92de58f01d9fd82f201e2e3fa2b35769d70f961b8"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/reference_updates/grill_and_hand_20261009/intake.json",
+      "bytes": 5897,
+      "sha256": "4c965b8156f32e53e912694e0edb98e8b3d92f31ce5ef20f597e0addf22d1f9a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/reference_updates/grill_and_hand_20261009/INTAKE_NOTES.txt",
+      "bytes": 2910,
+      "sha256": "1f4911b26fdf37ed0d96382cd23310154f474cf13ef22b5814ead235025bff28"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/shot_plan.json",
+      "bytes": 43689,
+      "sha256": "d386fe7651f29c3f71b3d6e737dc3eb972e667c3cb46ffc792705963f69fa58d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/asset_ledger.json",
+      "bytes": 26248,
+      "sha256": "cb3e6f14ad46226301ed1096a5cb4f764aa5921a24214cd7e66b9a29b062d145"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/incoming_scene.json",
+      "bytes": 6695,
+      "sha256": "b764bfa8663f09efbc123e343980c302fdab9b5e2bc024ffbdad39b5e73d8d0b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/intake_receipt.json",
+      "bytes": 2566,
+      "sha256": "f588a9c02d6fa6b89d679c7523fc27c401872ae77168fed1e2df2d49fdec6f1d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/received/content/156489f3ac15__NOTES_FOR_NOVA_AND_CODEX.md",
+      "bytes": 2168,
+      "sha256": "156489f3ac154e992e2955074a625b7975808fce9ac177ed362e32fcddb71e0a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/registry.json",
+      "bytes": 33611,
+      "sha256": "080e06cc16224731462ae4051910e17c87743e005970c80e8aa689cd42da6ff0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/REVIEW.txt",
+      "bytes": 5963,
+      "sha256": "5c75f73ed48055d0ec36bb300bba4160a691f56addaf282d1e540e6932cd1516"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/START_HERE.txt",
+      "bytes": 2095,
+      "sha256": "d04c74a73c50c72569290330cc82c605e907431458a3c567bc8d82015218310b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/03_Inspiration_History/a-original-10-looks/QA-NOTES.txt",
+      "bytes": 1274,
+      "sha256": "35415023de44eda5a45846368a5aea9f33ddfd4f3c3bdd8234d17c457c436de2"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/04_Source_Documents/guide_pack/LAG-NOVA-GUIDE.md",
+      "bytes": 17780,
+      "sha256": "7322e476dd01633ba919ac415ff331fd1753db4c10488d2a532b40f9ab6fbbc4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/04_Source_Documents/guide_pack/LAG-NOVA-GUIDE.pdf",
+      "bytes": 315374,
+      "sha256": "2a415de0ef19aeef2c041c6eac6a604cde5ba0e368fe0f9638727401cd5b96ae"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/04_Source_Documents/guide_pack/LAG-STORYBOARD.csv",
+      "bytes": 9102,
+      "sha256": "ec45b8e7a3cfc05b612ee86046a719e498a609415d4af2e93dde9049d713367c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/04_Source_Documents/guide_pack/LOCK-V2.txt",
+      "bytes": 1088,
+      "sha256": "e9365cb358215a5af0d81f4c7d4fd1849322a082fcdc5c60ea665d18ed8aaca5"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/04_Source_Documents/scene_pack/QA.txt",
+      "bytes": 1364,
+      "sha256": "2f0249a0011d0a226640533fb901e698ef1b5ab54226864f3fe3c5e0597c0440"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/04_Source_Documents/scene_pack/SCENE-LIST.txt",
+      "bytes": 3860,
+      "sha256": "0f4390418a17d766d2d3aa52a7bc9b564e424d21084a0ea454285b4ec298d2aa"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/cast/jet_black/grok_return_20261009/asset_ledger.json",
+      "bytes": 245647,
+      "sha256": "2aabc3bdb688c27c7975283fbad403a30ea7ffac8e907c497f0eeac86a3d2f61"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/cast/jet_black/grok_return_20261009/received/content/0441b089376d__FILE_INDEX.csv",
+      "bytes": 68001,
+      "sha256": "0441b089376d0223e71a52ee051e636346f3b0dd6bba84c6830113ee823d1f43"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/cast/jet_black/grok_return_20261009/received/content/06e2e45a2db4__manifest.csv",
+      "bytes": 620,
+      "sha256": "06e2e45a2db4e0cc9f062d7847ca975e00f114ade1c154bbc0cf90970215a27a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/cast/jet_black/grok_return_20261009/received/content/132a909d4910__NOVA_README.md",
+      "bytes": 39518,
+      "sha256": "132a909d491011ac6b65f674044b9d5a701e7585b4203ca6da1c3b1feaccab94"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/cast/jet_black/grok_return_20261009/received/content/1d5c519f1aa0__CHARACTER.md",
+      "bytes": 4261,
+      "sha256": "1d5c519f1aa044fde684add47ff5f23ab0b7ff4d70c9d661f9cd854ff4653607"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/cast/jet_black/grok_return_20261009/received/content/2eb2c2f16b7a__manifest.csv",
+      "bytes": 29513,
+      "sha256": "2eb2c2f16b7af634547bef40d1a50099b8bbfadfd254382c08d03576dea3ce7c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/cast/jet_black/grok_return_20261009/received/content/7afce06975af__STORY-BIBLE.md",
+      "bytes": 1431,
+      "sha256": "7afce06975af1a8380b8e3cc6d6ab0db8d035975f22ce917872c56a95e2173ca"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/cast/jet_black/grok_return_20261009/received/content/aa672b674419__manifest.csv",
+      "bytes": 1815,
+      "sha256": "aa672b674419171c664d701c579da8f51147d5369e93e2e2fcd4edb770bc1883"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/cast/jet_black/grok_return_20261009/received/content/bc256cb551ac__NOVA_README.pdf",
+      "bytes": 518369,
+      "sha256": "bc256cb551ac979ddda23a893faca8486821f0621c933b28df52c649c83ee747"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/cast/jet_black/grok_return_20261009/received/content/bd25f77f9098__manifest.csv",
+      "bytes": 25456,
+      "sha256": "bd25f77f9098a878d3df0b2ec760d518338aedcdfb2a2f716fc68ae16e8f54d9"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/cast/jet_black/grok_return_20261009/received/content/c91f11288e1c__manifest.csv",
+      "bytes": 5262,
+      "sha256": "c91f11288e1cdbd1810c65ecabd6d167bdb4afbc162bf58e3ebff1336a7a8b91"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/cast/jet_black/grok_return_20261009/received/content/d87c41028bee__manifest.csv",
+      "bytes": 3754,
+      "sha256": "d87c41028beee054e639cc4fb9242b1ff11281f4b29e1d6e22e5d5d8bcb5c98e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/cast/jet_black/grok_return_20261009/received/content/dfee4979e9b4__DESIGN-LOCK.txt",
+      "bytes": 1503,
+      "sha256": "dfee4979e9b46d59ef19a4051f09fd321a92d96b71891a6318a67f4f131d13bb"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/cast/jet_black/grok_return_20261009/START_HERE.txt",
+      "bytes": 6130,
+      "sha256": "8b62c99ed9ae09540af032065457f44d0979ccd144dd2552458f2e50540bac19"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/cast/jet_black/grok_return_20261009/visual_review.json",
+      "bytes": 3928,
+      "sha256": "1cdd645879b306771da75575d383439a9b40efa013a66ca92bae9fbc3e31da1a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/project_brief.txt",
+      "bytes": 2485,
+      "sha256": "8e3147dd5f8eb0940db962682b6d9ae305fe07da597d06b97f68b1eca0a28b85"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/first_video_prompt.txt",
+      "bytes": 2467,
+      "sha256": "6cc390df0666ab7b753c2cc076201d1069ba46785844750460871c75c700f9f3"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/gemini_instructions.txt",
+      "bytes": 11485,
+      "sha256": "943c34d6d5c306aea87c328cf75de88d916762fd4052d89addb601db4f2a98fb"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/20261008/LAG-VID-PROOF-01_T02.provenance.json",
+      "bytes": 5569,
+      "sha256": "8b2ee84299ec0205f10b2cabe3bbeeb73e2786e2108c476d5b15b6c61aa20746"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/20261008/LAG-VID-PROOF-01_T02.provenance.txt",
+      "bytes": 3411,
+      "sha256": "5f4c0ae222ad8cea35164b4c13714c1e378702ef69293d9b55dd81467ae047e9"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/outputs/FILE_MANAGEMENT.txt",
+      "bytes": 1113,
+      "sha256": "4e491c728826ffad9b4e8e86781beb255fab3c9db6d4fa51dfd6f0ab1d10a500"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/reference_map.txt",
+      "bytes": 14406,
+      "sha256": "ea5e445a7c2e3d019bcf9e6f58f7bd2764b31a32b0d99481b760c1b40183c531"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/receipt_summary.txt",
+      "bytes": 6662,
+      "sha256": "571d3fd1785b1c6263e000185f6e20c7d2088462476fed08c2e7f7d27ad5f74b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part01/LEGEND-500.csv",
+      "bytes": 204899,
+      "sha256": "c9cac8335e82a1c8ad07cf2e7d3f2b02405f9a5299d3a8ff7de2ce9c0a183e79"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part01/NOVA-GUIDE-500.md",
+      "bytes": 37695,
+      "sha256": "14afe65394df8f977db5428b6ca1e304d5c375f01922622be1aa6d022cb6b20e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part01/QA.txt",
+      "bytes": 45570,
+      "sha256": "f5e2e5ec653bfbbe35dec578361dae1692ad50ee251c08dcea3791aff50a87ef"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_mouth_complete_20261012/intake_receipt.json",
+      "bytes": 23126,
+      "sha256": "79addd79b1e8c3a6d6a19d1bda07fd1fe6c9dc522eb200c536f8b5f18bc766ff"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_mouth_complete_20261012/provider_documents/DECISION-LAG-BREATHER-V3.md",
+      "bytes": 1599,
+      "sha256": "b6bde9408da7ef9a82b51db2cf641d5ab4d69fff70e617a2f6eb92ecbec2929a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_mouth_complete_20261012/provider_documents/MANIFEST.csv",
+      "bytes": 11268,
+      "sha256": "671784f33bdcf4d6a221c8cdf4ba6762bc665362f2b53219b7087d863f86281e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_mouth_complete_20261012/provider_documents/NOTES_Z5_20-50.md",
+      "bytes": 2811,
+      "sha256": "7e26b6f1d291763471a0e33f18576abb3669e51bccd45e722a0e213aff297e68"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_mouth_complete_20261012/provider_documents/NOTICE-b4576d9c-baf6-4448-ac45-f8ba59ed0e85.json",
+      "bytes": 1415,
+      "sha256": "232b060fa0443a73d9da609669142d8e1c0e540d439ebde04b992c8aac68bd55"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_mouth_complete_20261012/provider_documents/NOTICE-c27902f2-7edb-4290-8182-a8035586137e.json",
+      "bytes": 2054,
+      "sha256": "e66b2521492966b6124cef17267abde930532ec087a97a7b8893d1d1491b38b4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_mouth_complete_20261012/provider_documents/README.md",
+      "bytes": 802,
+      "sha256": "0e4832ae4702a8e3051ca3a659e39e58e14a3f1be891bdfc4700f5ef5c9d1377"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_mouth_complete_20261012/README.md",
+      "bytes": 2714,
+      "sha256": "41a74a372a9609d5135d786712c56bc350da420576f09d40b56e7859555be8cc"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_mouth_complete_20261012/registry.json",
+      "bytes": 152883,
+      "sha256": "b5f76fa4bd33f771f2a05ea1beb2ec4f90f4d42c5fda5ebda62fdf0a2c366663"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/jet_black_20261009/brief.json",
+      "bytes": 12228,
+      "sha256": "f815d4eacbcf32fcdea3211987fca7cea0ae8fcf5a2241f6fde7a2a18c31a872"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/jet_black_20261009/GROK_PROMPT.txt",
+      "bytes": 5357,
+      "sha256": "2b06a932c44590efca6a3083b5922e3e2e80ffafa5087d53cb00e5f9a6492b1d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/jet_black_20261009/START_HERE.txt",
+      "bytes": 5393,
+      "sha256": "a8f1f9faf38a1baf071fd7239f3e9b3c8e96c05b68cffd6ded2bb6c8d4fca41e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/optional_grill_dispatch_20261009/delivery_receipt.json",
+      "bytes": 7304,
+      "sha256": "f0c1b73c8115d82c7f08a741b954c6de10ca8e10ce4f709e98947a8b86468ad3"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/optional_grill_dispatch_20261009/reference_metadata.json",
+      "bytes": 4666,
+      "sha256": "9c3c04ec1074df291383d8ce1f4e62ac6a09ca71f9cea6a2b6f37877990cebf4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json",
+      "bytes": 74953,
+      "sha256": "bd87e0378f0b6adda0613ceb726f1ac30b46801e0517c3d19524c2823ff672ad"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/Meta_Mirror.txt",
+      "bytes": 4194,
+      "sha256": "5303adca22ea91cebe00efc9c62c2f8949631865b3265a0c615c06b4f11e605c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/MM_1.txt",
+      "bytes": 4398,
+      "sha256": "ce57412c88e3aa44f4d55b811cee4140e33035a2694b9da7587a03f775188c8f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/execution_record.json",
+      "bytes": 10060,
+      "sha256": "68387c18d14a488ce496453a5d1019f6471d14d3991f181c8895cb25667f8c13"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/google_content_preflight_20261013.json",
+      "bytes": 1923,
+      "sha256": "8d0828ee0171f2aaa69bef278acbbdc0ecb1982dd59eade2e49494fd0d93f04f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/listening_review.html",
+      "bytes": 253993,
+      "sha256": "6e35899a52b278b9b5e3fc9d3023c6a7c04f43d95a08aff81579daa28ef79941"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/local_registration_validation.json",
+      "bytes": 6847,
+      "sha256": "a190a07eceb58c40ed258792023e9280112b4ae5f2ee1ae77a31e288bc2b65a6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/ai_studio_return_01.partial.txt",
+      "bytes": 6747,
+      "sha256": "66ba0781f86e6615968daf0ac2b423399a6a8776f356636e12d31fbf00ae1b67"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/ai_studio_return_02.json",
+      "bytes": 8074,
+      "sha256": "5812fcb561caeea27865f63a090faab7ea7b293308fbd2cdd211ad379a056abe"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/ai_studio_return_03.json",
+      "bytes": 7887,
+      "sha256": "350a68bc54cf2b916238f47660522d72d6c9c0c32573b5d16bb9df16669473f1"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/analysis_request.txt",
+      "bytes": 3897,
+      "sha256": "d7abec3971cdb244d8c3d500112633a978584113f251f569b182427453e4075a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/AUDIO_VALIDATION.json",
+      "bytes": 2153,
+      "sha256": "2952a03c7558954280179488fb2a2163a5e186bb265ebfef2b21cfc2554e3090"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/bounded_followup_04.extracted.json",
+      "bytes": 7393,
+      "sha256": "17c5a162900d312801078abf9292d16b2ee18d90923f16e8d7b708b51a2ac10b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/full_map_validation.json",
+      "bytes": 80575,
+      "sha256": "2bdb44a9c45997494660a157ef0dfe6469d495f5c489f70ef3d4ab8b3185a850"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/internal_error_01.dom.txt",
+      "bytes": 8594,
+      "sha256": "208ebf4fb1c838aba7f909c2c2c84e7c9d3bcdbf68c01d1349b807cadea18b22"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/internal_error_02.dom.txt",
+      "bytes": 15417,
+      "sha256": "96715779956ba86097b8bc1f4393f34061c23d00175696d66654240050d5f47b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/internal_error_full_map_01.dom.txt",
+      "bytes": 21799,
+      "sha256": "b769199ffec8685500b704e7a636629ef1c56755867800cfa83ceeef6db96ecc"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/metadata.ffmetadata.txt",
+      "bytes": 4620,
+      "sha256": "00cc014933924457faddedcb0d652c4dd8a32bfe64e86843f163e4c43cae73d4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/probe.txt",
+      "bytes": 15052,
+      "sha256": "d6abff70e26cb694409268b48ca55bb9132fb89a08fff0a2f51b2017879605a3"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/provider_anchor_audit.json",
+      "bytes": 45882,
+      "sha256": "57fb03216c2953e5f423bbd29f86cda079df9cb5f732bfc46c5ed79443609511"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/provisional_timed_lyrics.json",
+      "bytes": 107502,
+      "sha256": "49bff621d69696de09e3c9854104e2d2f5dd3b8dce35129b1cb8bda92c987ea7"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/source_line_manifest.json",
+      "bytes": 29592,
+      "sha256": "33c196d90ec4062ac739471040fb0558d014185dbf031d285f58402ffe5eb3fc"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/SOURCE_LINE_SUMMARY.txt",
+      "bytes": 2145,
+      "sha256": "fb814a740a25dc904fb87263bfe46b7aaa958ed4ede22e634022c7128f2b8348"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/studio.current.dom.txt",
+      "bytes": 30385,
+      "sha256": "1bbe716f0b7162a6ba05bdd6607ef422b5579e9a46f59b93d870695ee9f3806e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/studio.final.dom.txt",
+      "bytes": 30989,
+      "sha256": "dbdf5e2117e8b5e354fc97281a21326dc98fb1e0acdc13a993487a60b36a98f7"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/music_intake.before_ai_studio.json",
+      "bytes": 3928,
+      "sha256": "631844696abd68b7099c318cfe9e0414900e8b587a96080cbdc8fc3ec20c3194"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/ai_studio_return_01.json",
+      "bytes": 8348,
+      "sha256": "47a100ee3d581d923d199d7424f8c14cfa2022c923741295734df334d8369562"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/ai_studio_return_02.json",
+      "bytes": 7248,
+      "sha256": "3e8e53a1a6003e5edeefdfbcc3471a379eb5d8b42261c2bcc76923c863e52850"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/ai_studio_return_03.json",
+      "bytes": 7301,
+      "sha256": "4a7346a05f73440a6738397851154aac9a8fe649b69a258791cd2e3057bfb2aa"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/ai_studio_return_03.partial.txt",
+      "bytes": 4073,
+      "sha256": "3bd572b54e32beeea743e28fe3125aa8d0c61fedeb297cbf0cee1c1496a32026"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/ai_studio_return_04.json",
+      "bytes": 5271,
+      "sha256": "fdcb5ddca64ab92a434806f4b53400f4f235b98633e624c99119f70bea4a3ce1"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/analysis_request.txt",
+      "bytes": 3516,
+      "sha256": "8758044acfa88991b7f13bdaa9a38963684a09b04d7f6a1ba46f29f8b0deb2fa"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/full_map_validation.json",
+      "bytes": 95024,
+      "sha256": "d3e76dee8e8050dc8cd34a0a86669a0ffd227f296b36cb65aa655c4baf197d50"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/internal_error_compact_map_01.dom.txt",
+      "bytes": 29344,
+      "sha256": "88629a553e07e8ba50201035be24bb455aeaa4c64102758fa428d367b04cab92"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/internal_error_full_map_01.dom.txt",
+      "bytes": 22882,
+      "sha256": "5c6e4cb4221469c188fd36b89004d51441708c7742d4d38445755253f4e598a9"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/partial_rows_extracted.json",
+      "bytes": 7501,
+      "sha256": "a7dc17190bd14f82cb02e71d59c1db52bbcfc7daa11d1cf5de3ac979c89aa1e0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/provider_anchor_audit.json",
+      "bytes": 41872,
+      "sha256": "2fdc6e495926636b08e395937aa65902c2bed96482982ab62df3e32ab80f43b4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/provisional_timed_lyrics.json",
+      "bytes": 128611,
+      "sha256": "d997dee90872c20f1b3c0719941782baf3b4a03ad6f9883e6bd492f1a716153b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/source_line_manifest.json",
+      "bytes": 26728,
+      "sha256": "d9653414f86a70edeba798864dc9ab4e561d00c8fecde28eb9181af7519245ac"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/SOURCE_LINE_SUMMARY.txt",
+      "bytes": 1868,
+      "sha256": "6c59161451d80efe042d275d84bb81916c6551465492a78def08183c767020f0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/studio.current.dom.txt",
+      "bytes": 35083,
+      "sha256": "383f6ad0926b9b4a018a31b9dee20f22b34db1e8df3755f79535cf0f431bac49"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/studio.final.dom.txt",
+      "bytes": 35083,
+      "sha256": "383f6ad0926b9b4a018a31b9dee20f22b34db1e8df3755f79535cf0f431bac49"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/record_snapshots/CFA_COORDINATION_STATUS.before_provider_maps_20261013_02474f456118.json",
+      "bytes": 8561,
+      "sha256": "02474f4561181843bd884d5d243966e91bcd54cbf6d7d3d7550128469fb1c1ff"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/record_snapshots/OFFICIAL_MASTER_INTAKE.before_provider_maps_20261013_597f18972867.json",
+      "bytes": 12336,
+      "sha256": "597f18972867aae41af2a3515f09dca11a0d8e024b2c84efe271515f3db90016"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/source_map.json",
+      "bytes": 5154,
+      "sha256": "8869ab22c277f0c0f11a8757903fbb5c8d565846219c72122342f42301df9e6d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/START_HERE.txt",
+      "bytes": 4778,
+      "sha256": "fd04bf051537deaf6632882377c7752c980f1bc3bbd0156cf0a93e571a169587"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_intake_20261012.json",
+      "bytes": 4868,
+      "sha256": "7728aec5e0a26bfb21d6195ba97a88c8c17cc5884ee2d0199af5eb381e32ab49"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/reference_updates/breather_partial_20261009/coverage.json",
+      "bytes": 2865,
+      "sha256": "2463588cffb10448a04b1007398ed1bbbf907b4f4e6ee0856f93ae2348593c0a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/reference_updates/breather_partial_20261009/intake_receipt.json",
+      "bytes": 26855,
+      "sha256": "fa7a0783bb3fa3d4bd45687ec7ca2e7b080c195f518adbc2216bbf1b04dd7d2e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/reference_updates/breather_partial_20261009/received/content/b6bde9408da7__DECISION-LAG-BREATHER-V3.md",
+      "bytes": 1599,
+      "sha256": "b6bde9408da7ef9a82b51db2cf641d5ab4d69fff70e617a2f6eb92ecbec2929a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/reference_updates/breather_partial_20261009/received/content/dde7fde12c44__STATUS.md",
+      "bytes": 579,
+      "sha256": "dde7fde12c4439f64204b29d7429631c2ca7e960cb3f400e87ec17e247c54775"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/reference_updates/breather_partial_20261009/REVIEW.txt",
+      "bytes": 3615,
+      "sha256": "75a60a6d7dfbb9e1f542e7f378f0979614a27de0838f1b25bd87128d254b139d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/reference_updates/breather_partial_20261009/START_HERE.txt",
+      "bytes": 1395,
+      "sha256": "2f73fb572d21275f2e53d136f79eeb307af0c5bd258352b35bd037109feae117"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/reference_updates/breather_partial_20261009/visual_review.json",
+      "bytes": 19676,
+      "sha256": "e1a303e4200a0439974dd5d7e1eb8bbfe5fd0fed34dfd2daef8f2458c9a9815c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/scene_map.json",
+      "bytes": 52386,
+      "sha256": "62769bcbeca814a4dae0e250146528bfe41e39e9a5686f5f1caaf91957a36ac5"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/jet_black_mission_20261009/START_HERE.txt",
+      "bytes": 2634,
+      "sha256": "44b9bc079a2f83fe02d97c0ed5a18370eb6234000174785a2995d3605ea1b8ef"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/jet_black_mission_20261009/STORYBOARD_HANDOFF.txt",
+      "bytes": 8642,
+      "sha256": "5f2547bf1569309bc67a6356bb8a34f01c4ac89d13e222c765a585488674d350"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/jet_black_mission_20261009/storyline.json",
+      "bytes": 15460,
+      "sha256": "5e74c6038874c0494cdf8588e0ec93f2469599fa999e2c2297876873248dd8eb"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/c13_repaired_intake_20261013/SOURCE_INTAKE.json",
+      "bytes": 14597,
+      "sha256": "3dc0ae624529e9c9b3e60b71c07f33e1c5d4ab46ca9cfb9d2da71d133a55abd9"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/assistant_likeness_assessments.json",
+      "bytes": 16248,
+      "sha256": "c6946d77fe3e8cf8d3053811670c4017b2c83b7e3acdeee8bce4fabf88746a1b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/browse_layout.json",
+      "bytes": 1518,
+      "sha256": "e17159d13064ba221d04a5df49c7a2ebfed1c50eeaaf3861f38fab577c5bf0ea"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/cast_collections.json",
+      "bytes": 62841,
+      "sha256": "98f3a57017df9d7bb7fa86da5c979671cef704ec3ebdae591644037f8c651b41"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/cast_scene_intake_20261012.json",
+      "bytes": 1958602,
+      "sha256": "1f6ff5b94daaaa401d99c8f7cd20d5d1eedf04217d98f42b8054b84c007524ea"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/cast_scene_intake_verification_20261012.json",
+      "bytes": 9973,
+      "sha256": "4f057b030fb6e85f090dc2d7d5a5d88686f93c6d431141cc5f8398afc935405c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/CHEWY_PUBLISHED_BROWSER_QA_20261012.json",
+      "bytes": 1226,
+      "sha256": "61255566e72a4ab09306c17ae21f7dc15074012689f5dfcfafb5986eb547368e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/CLAUDE_VISIBLE_READBACK_20261012.json",
+      "bytes": 7925,
+      "sha256": "018c5369a4b905f1ac2d61aca8a415a30968ef71ce3729e565d5a096dabca80d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/collections.json",
+      "bytes": 348025,
+      "sha256": "49e5a1228116ebeb568dc214d603020b04f498a4852b0d65fdc5abd39cc795d0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/detail_display_groups.json",
+      "bytes": 30581,
+      "sha256": "aa2c7cef1d7fd4462ea7dbf9b4209ee939c602222cb89b9f0b75617858f0aaa8"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/grok500_preview_paths.json",
+      "bytes": 431428,
+      "sha256": "3416bfe08adf91f3b1400bbf8788aa54ef3654ba65917d400263ec10d3dea5d3"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/grok_benchmark_preview_paths.json",
+      "bytes": 21738,
+      "sha256": "2e0103ac23dd776727cda554cc53432e73672f7bee33ae402b261fd7635fb07d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/grok_return_preview_paths.json",
+      "bytes": 61097,
+      "sha256": "0253c547e31e8a8790f5b8350d05a572c19c79dd90a4084526e74394264712ae"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/preview_paths.json",
+      "bytes": 661999,
+      "sha256": "5d60ad7fc303ce98be9e7715dca94982890ac8709d8dff949b56cdc357632a5b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/provider_scorecards.json",
+      "bytes": 90110,
+      "sha256": "26ef5bdf883193898e61c1a9c81aee1b3183604fa993f405ba38fd00040e032e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/review_requests.json",
+      "bytes": 1158,
+      "sha256": "31e5e1a9010c71c717e5b5ed0047c2a4fc3f6c5652b3dc680783fec95ce3c355"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/shared_reference_collections.json",
+      "bytes": 12186,
+      "sha256": "4e8eaa35a2af2144c7f8da533dfa346671ffdb5ffd1504b81c134127d3ca42aa"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/shot_materials.json",
+      "bytes": 124840,
+      "sha256": "b37b425d1e5431250a20fc609570849b678dc1d86f986ab57768397238184a6d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/source_comparisons.json",
+      "bytes": 2669,
+      "sha256": "956ec7bb4de1b5f97d0ac5eb7584277783af5b097b913759451ab85a143bc240"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/story_notes.json",
+      "bytes": 35261,
+      "sha256": "abcad66eddd86f983f6cc9c4838e7026026b66dcbe5bc41d91e711080d5b2dd4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/tattoo_audit_20261008.json",
+      "bytes": 742801,
+      "sha256": "c74feb4e7842bd362b13d67671f7dd7add3ddce923911cc149f838e6f240897c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/tattoo_audit_20261008.txt",
+      "bytes": 472073,
+      "sha256": "748295634c3a41eb599cfaaa2b96d3415bb327e0345d9d343a481b808149e0ac"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/TATTOO_NAVIGATION_VERIFICATION_20261012.json",
+      "bytes": 2845,
+      "sha256": "3309f70018e002ac6e4c200408659af7c1986edf40ad55aa32d98a0620e5e1be"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/tattoo_subject_assets.json",
+      "bytes": 20630,
+      "sha256": "39092a02ca93526e168fa2b91b794270310be22b0c90c462967819d57b6fe72a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/verification_20261009_compact_browse.json",
+      "bytes": 1871,
+      "sha256": "878d4f11099bdc2074a9e978fe5b9d073d5676d5bceb70a00f845f5d4d4aa522"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/verification_20261009_inline_collections.json",
+      "bytes": 1659,
+      "sha256": "df95c61f760a5e19176b9089f8ac40ffdef4bfcd7f462d1c2801c5c3d433d6c4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/verification_20261009_outfits_and_intakes.json",
+      "bytes": 1115,
+      "sha256": "14001f1cb866b00888dfebfc35c9ce5da4cb9b194409b062e7b879e6ed668c5b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/verification_20261010_working_bom.json",
+      "bytes": 8283,
+      "sha256": "cb730f129aa52a13b21e0af50a47f167c56c5c49b1a34236a8a3f32985d65f45"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/working_reference_bom.json",
+      "bytes": 9927,
+      "sha256": "da07aff47b66a5d47d0d7dec3d0fa8a7f216a6f6e2aa0a535fb378621103c6ea"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-ENABLERS-03/E12-chewy-turnaround/NOTES.md",
+      "bytes": 4564,
+      "sha256": "499bcbfd64e8eac56c652267f3e7f972dd8729dca58d415e2e00ddf6c6fc8a52"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-ENABLERS-03/E13-chewy-hands-actions/NOTES.md",
+      "bytes": 5393,
+      "sha256": "7fc0bff6dea81cd00545cbd5d2d32e79d597f377231203215c90a0c4b6cc43af"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-ENABLERS-03/E33-medbay-bedside/NOTES.md",
+      "bytes": 4475,
+      "sha256": "c4d11ab2d8de8a19189f258985d4ade05fd31b25da4782101ba836057828ab01"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-ENABLERS-03/E49-dolo-chewy-cockpit/NOTES.md",
+      "bytes": 2586,
+      "sha256": "8bbbc851672135d15e14d0cb4661daf319e76ee26b0e9473d989de96af4e60ae"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-ENABLERS-03/GROK_REQUEST_03_ENABLERS.md",
+      "bytes": 15851,
+      "sha256": "b0cc1898504a5d0507ff25e7a9ad0fec9cf36b5941e4724ba5c4228003744ca4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-ENABLERS-03/HD-BUILD-AUDIT.csv",
+      "bytes": 4945,
+      "sha256": "396e11db721f097bccf5ae71a4517b91a7537cb508fb1e6d1a2519df0cd0583b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-ENABLERS-03/MANIFEST.csv",
+      "bytes": 108402,
+      "sha256": "e12e5f0babe2e42c19002f3eda40d400a407952c12eabffb5fa283c12059c986"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/BRIEF.md",
+      "bytes": 7597,
+      "sha256": "228baac43a8697fafafd9d60c0cf32a79dbe83cbdb58e21f34f1f6edb4113dbe"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C07-throttle-insert/NOTES.md",
+      "bytes": 2839,
+      "sha256": "b9ad4762b04345c109a9fd9ab889167628f507dc674e3e106713f1e82bc084f0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C12-chewy-switches/NOTES.md",
+      "bytes": 1723,
+      "sha256": "a23cc4fac91bd3c35717acc3fefffbda60e32e860382ac589327e9a73c42fe98"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C12-chewy-switches/NOTES_z7.md",
+      "bytes": 1131,
+      "sha256": "0f79173cc2829db9fe01c51ecae2b16242a4fdd44229b2c1f06c162f95bcb073"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C13-chewy-levers/NOTES.md",
+      "bytes": 1482,
+      "sha256": "1a1713b7b280323fa2c0940c2564caa8012ac37581c984601b2d641cea735e63"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C13-chewy-levers/NOTES_z7.md",
+      "bytes": 892,
+      "sha256": "8a5389a16d6772b7a7b34cd1d011a1c81116127210cdb935274889575bd7e8af"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C14-chewy-look/NOTES.md",
+      "bytes": 1038,
+      "sha256": "92150a6f7ecc4097dc01e972c4eed18452fcb4f1040e2c0f17043475aeb76829"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C15-cockpit-twoshot/NOTES.md",
+      "bytes": 1959,
+      "sha256": "bd5abd4460e9a3adb4628e673bed7c3378a83608c39381a97401c7c4bbf2494c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C19-chewy-decks/NOTES.md",
+      "bytes": 1876,
+      "sha256": "80084c40f37a5d4bd6bcec32368a98d290ea1b1f144d3382b2a9dae66f9e88f5"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C20-fader-push/NOTES.md",
+      "bytes": 1749,
+      "sha256": "523729becb17d9b04c3c50c22927ccba6b44f69834c9611b981abb9ca3082e9f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C21-chewy-holds-room/NOTES.md",
+      "bytes": 5004,
+      "sha256": "92ce41cbf14b929e07606af4dde2af061412369387f96c38cbeb276277152b38"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C22-reverse-dj-to-pilot/NOTES.md",
+      "bytes": 4489,
+      "sha256": "28532d41083a214d303ba30744f6879cb46e31dd8f7fbdd7befd582a52f323e4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C23-hold-hatch/NOTES.md",
+      "bytes": 4172,
+      "sha256": "6feea736f96453792ca695dbcfc36599911f4bd90edbe86257ff991ba3f51e73"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C24-leia-surveys/NOTES.md",
+      "bytes": 4360,
+      "sha256": "4bd8917f072c80902cba15858b6308b3ae348ef5cbc907a934b399a765b4cccf"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C25-corridors-arches/NOTES.md",
+      "bytes": 4466,
+      "sha256": "f5335f357afe03157c4c829d097d267f687b6d2d28209475cd88ff6592bb4356"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C29-galley/NOTES.md",
+      "bytes": 4565,
+      "sha256": "0033893c97cb03737441a83917dab4c2ad95a743f6deb70b22d0a2dd6b252867"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C30-cargo/NOTES.md",
+      "bytes": 4670,
+      "sha256": "e143c8f9010f7a458a7c517ba1fde37e80ac5774bbc33f16c87d98f781424f01"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C31-comms/NOTES.md",
+      "bytes": 4524,
+      "sha256": "c1d879777848efb2c57bcec39e336f8e04771fbdbc4539d62a627812ca1af0c4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C32-engine/NOTES.md",
+      "bytes": 4418,
+      "sha256": "13a38370acff89764fbbaaffcd2dc5ee87f4b35236b51e99ac3da8c91716f6f3"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C33-ramp-inside/NOTES.md",
+      "bytes": 3479,
+      "sha256": "69caaca7abbd6252738245e8bbcf7ea4080400270c756ecd9d5f5ff98f24ea58"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C41-cockpit-ext/NOTES.md",
+      "bytes": 2837,
+      "sha256": "6da073261cfaa4ba5ccb981978afc8f027be1f043e15f798ded790b0f0d622cf"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C42-ramp-landing/NOTES.md",
+      "bytes": 2695,
+      "sha256": "3e879e04b6da234f6de6115ad4b7f54e303ffa01c4c530bad2915104875b4adb"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C44-chewy-boarding/NOTES.md",
+      "bytes": 2484,
+      "sha256": "2a8e25b5f9c0325de686e1566916ce246eb3d567bcc267f75a47b10b71bcee41"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C45-leia-boarding/NOTES.md",
+      "bytes": 2492,
+      "sha256": "affc093153b86091123f37f54d68a1f80594e428ff33ad84598825761aaaaf56"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C46-gunner-well/NOTES.md",
+      "bytes": 3147,
+      "sha256": "a880ecaa06a44d6f5f0a18206174ac0988678e6f091042c59c51806cf5227705"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C47-holochess/NOTES.md",
+      "bytes": 2963,
+      "sha256": "939508b673e77baa0506884183b290c3c929b44ea450d9f20103cdb7b5b5db23"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C67-cargo-hold-dolo-chewy/NOTES.md",
+      "bytes": 387,
+      "sha256": "31f9bea9b96035937bd26893ede299b7223cbf3b6023cc0217056de3d1036a83"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C77-galley-breakfast-dolo-chewy/NOTES.md",
+      "bytes": 277,
+      "sha256": "e31e23855743231d316feafdc908cee55d4a1c872adcc403d7efef0ff0767eae"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/HD-BUILD-AUDIT.csv",
+      "bytes": 4945,
+      "sha256": "396e11db721f097bccf5ae71a4517b91a7537cb508fb1e6d1a2519df0cd0583b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/MANIFEST.csv",
+      "bytes": 160391,
+      "sha256": "9199567bb5476d0f7a2419d810f862f170a670d7a0ea4d6139b3f063a8df1679"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-STORY-SET-02/GROK_REQUEST_02_STORY_SET.md",
+      "bytes": 11243,
+      "sha256": "85645e9aa1ded73a0faba77f13614d1a092975ef255f5b66ec090830f8ff3d78"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-STORY-SET-02/MANIFEST.csv",
+      "bytes": 62995,
+      "sha256": "79275b789042a2c98717a4937c32ae805687e19e930389b4130a7847abd78f7d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-STORY-SET-02/N01-cantina-wide/NOTES.md",
+      "bytes": 2875,
+      "sha256": "49dc1f6200e75b5c8c254834b719a523b5f544351d811bd66c0fb164415fd370"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-STORY-SET-02/N02-reverse-to-door/NOTES.md",
+      "bytes": 2922,
+      "sha256": "b76c6d3f475a3ee0c32209ae7df5fcb236c63e4140b4df56015cc8ca00f27523"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-STORY-SET-02/N04-booth-boast/NOTES.md",
+      "bytes": 3393,
+      "sha256": "bc8d0b659c03713d5a0e86802a74d62a0935d18992d54fd17c09b52046156c11"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-STORY-SET-02/N16-chewy-doorway/NOTES.md",
+      "bytes": 1948,
+      "sha256": "642228600ce61d1f18af23654627455a15758b1b0b3e7f53ab5efb4947c30950"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-STORY-SET-02/N21-the-thaw/NOTES.md",
+      "bytes": 2588,
+      "sha256": "68c2c0900d1641b885d534d70d59e8fcb38e0f58e9994ba7f3ee967cb09494d5"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-1K-C13/C13-sandworm-rising/C13-04_Z_1.jpg",
+      "bytes": 268027,
+      "sha256": "7eafd9ac048dc6d6125dc38281c1b664f7ae0cac1159909c34d90a5e3eef93a3"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-1K-C13/C13-sandworm-rising/repairs/C13-04_Z_1_R1-try5-patch-c.jpg",
+      "bytes": 447799,
+      "sha256": "23817577d3d32f0df03d57ac1e49c4c85246e86c405b13c492194f7aa2f52bad"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/likeness_intake_20261009/intake.json",
+      "bytes": 9081,
+      "sha256": "450a1ae2da6a8b856ea04e74e1781e82e472a3e4b4849a2f25d5aef44b8ba87c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/likeness_intake_20261009/README.txt",
+      "bytes": 3466,
+      "sha256": "f82d1adce17d50942bd8421072e7d7650a49aa4c278224916ed69be87bbd2e68"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_audio_replace_v001.cloud.editor.json",
+      "bytes": 9476,
+      "sha256": "b4865b519f7a6f0612124fbab5ebee7438fa0ddebb712a5a485347c138424cad"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_audio_replace_v001.cloud_preflight.json",
+      "bytes": 20835,
+      "sha256": "6aac9a300d58fde4db2a6a6c7616154b2703fde4e3d21a161d6534b4c72b43bb"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_audio_replace_v001.README.md",
+      "bytes": 6287,
+      "sha256": "08689fca02dd80a270b06ac5f294fbc1dff126f3f10f35a3ccedc896a888dc7a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_gemini_relight_v001.editor.json",
+      "bytes": 50002,
+      "sha256": "81c8b81e050ffc4394f02db1cb1fb3b42cef8466ad0951f79d2862f13fb681cc"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_gemini_relight_v001.record.json",
+      "bytes": 9212,
+      "sha256": "79973e0b1f224200707df27d5c6471c7e0bdf806a412c832ba78c98f169a10d2"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_gemini_relight_v002.editor.json",
+      "bytes": 39925,
+      "sha256": "b470a1017f0c47a71f5256078a07c9d75ba40c14ff1e1d2d110d8e2359a85876"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_gemini_relight_v002.record.json",
+      "bytes": 10562,
+      "sha256": "c35efefb05b6e03ea68da5db05609b3f6423388fea973d0eb09a83ae828bb762"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_lipsync_v001.editor.json",
+      "bytes": 4623,
+      "sha256": "95d29febea4617855c98669999ce0db8f83d65b03e18cc1eda3fb88eb6b0505c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_lipsync_v001.preflight.json",
+      "bytes": 12339,
+      "sha256": "bff8a2a9f3cabd7c16810513b9b5f73244223f0049305e9db61b8445eb9841cf"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_motion_v001.editor.json",
+      "bytes": 44464,
+      "sha256": "103235b3086f98fe41b2b4155f76616f5b4958c98ff82fd75867995115ecdc9c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/hon_dolo_motion_v001.record.json",
+      "bytes": 11638,
+      "sha256": "c2009f3e367681c2eb060408c7ab63feb4078f9f642bc86f34cad6b950fce4fd"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/seedance_2_5_20261009.discovery.json",
+      "bytes": 8312,
+      "sha256": "0249bcc595bdf4892c53edd56173118834f5417fc2dc7618bab4a0d4177fa783"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/seedance_2_5_20261009.README.txt",
+      "bytes": 6623,
+      "sha256": "cc55494ad86cd2fa3c3217a862418a135565ad8ce3c437130b426c8771aeca11"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/seedance_2_5_first_frame.official.json",
+      "bytes": 4205,
+      "sha256": "62eb1b0312fc02988bf2b2f3790946b80f053fa5ad3e0e08926701df84e2acc9"
+    },
+    {
+      "path": "docs/notes/explorable_world/pathfinder_handoff/claude_return_20261010/2026-10-10_nova_cfa_teaching_delta.md",
+      "bytes": 6044,
+      "sha256": "cff03e0d5819666bbdeda0d32eff97969aff85a3e9df7002805d2300481c8571"
+    },
+    {
+      "path": "docs/notes/explorable_world/pathfinder_handoff/claude_return_20261010/pan_inbox_post_receipt.json",
+      "bytes": 816,
+      "sha256": "249fac8b582d2ff4741a9e3b36d4e2378549cdf2d07c1f30a0115218c1f09833"
+    },
+    {
+      "path": "docs/notes/explorable_world/pathfinder_handoff/claude_return_20261010/RECONCILIATION.json",
+      "bytes": 9642,
+      "sha256": "5ffbef4a46460e387a6a178481ca466f8effdf05d31c6b1cf157cfdc22203448"
+    }
+  ],
+  "publishedAndExcludedSourceHashesCurrent": true,
+  "allCurrentWriterFilesAccountedFor": true,
+  "documentPreviewRefresh": {
+    "id": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/collaboration_authority.json",
+    "changedFields": [
+      "text"
+    ],
+    "reason": "Existing coordinator source already recorded standing site ownership before this task; builder refreshed its previously stale catalog preview. Canonical source hash is unchanged from this task baseline."
+  },
+  "localStorageWrites": 0,
+  "browserVisualQA": false
+}

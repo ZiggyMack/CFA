@@ -1,0 +1,233 @@
+{
+  "audio_access": true,
+  "limitation": "Previous output suffered an arithmetic unit error converting MM:SS display time into raw seconds (e.g., treating 04:06 as 406s instead of 246s). Timings have been recalculated and verified directly within the absolute 0.000 to 249.720 second bounds.",
+  "relistening_evidence": [
+    {
+      "time_range_s": "94.5 - 102.5",
+      "observation": "Bridge percussion drops out at 94.5s for an upbeat snare pickup directly into Verse 2 ('Engineers talking shit' at 95.0s), followed by an abrupt pause and punchy vocal inflection on 'Fuck it, I'll do it live' at 101.0s over isolated sub and dry hi-hats."
+    },
+    {
+      "time_range_s": "179.5 - 183.0",
+      "observation": "The vocal cadence trails off hesitantly on 'what kind of doc ta...' at 179.8s before an isolated, high-register shout 'DOCTOR?' strikes at 180.8s, triggering an eerie phaser/flange modulation on the instrumental as 'voodoo changes things' begins."
+    }
+  ],
+  "anchors": [
+    {
+      "anchor_name": "opening Voice from the outer world",
+      "source_line": 2,
+      "audible_words": "Voice from the outer world",
+      "start_s": 1.8,
+      "end_s": 4.5,
+      "lane": "LEAD",
+      "confidence": 0.98,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_name": "first Lisan to the silence break",
+      "source_line": 19,
+      "audible_words": "Lisan, to the silence break",
+      "start_s": 35.0,
+      "end_s": 37.8,
+      "lane": "LEAD",
+      "confidence": 0.96,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_name": "Birth pains inside the Handle",
+      "source_line": 25,
+      "audible_words": "Birth pains inside the Handle",
+      "start_s": 48.0,
+      "end_s": 50.6,
+      "lane": "LEAD",
+      "confidence": 0.97,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_name": "Engineers - talking shit",
+      "source_line": 42,
+      "audible_words": "Engineers - talking shit",
+      "start_s": 95.0,
+      "end_s": 97.2,
+      "lane": "LEAD",
+      "confidence": 0.98,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_name": "Jung in the back room",
+      "source_line": 76,
+      "audible_words": "Jung in the back room",
+      "start_s": 150.8,
+      "end_s": 152.4,
+      "lane": "LEAD",
+      "confidence": 0.97,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_name": "CJ echoed adlib",
+      "source_line": 77,
+      "audible_words": "CJ!",
+      "start_s": 152.2,
+      "end_s": 153.2,
+      "lane": "AD_LIB",
+      "confidence": 0.95,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_name": "DOCTOR interjection",
+      "source_line": 93,
+      "audible_words": "DOCTOR?",
+      "start_s": 180.8,
+      "end_s": 182.0,
+      "lane": "DOUBLE",
+      "confidence": 0.97,
+      "uncertainty_s": 0.15
+    },
+    {
+      "anchor_name": "Outer world, inner world—same breath, two doors",
+      "source_line": 102,
+      "audible_words": "Outer world, inner world—same breath, two doors",
+      "start_s": 200.0,
+      "end_s": 202.8,
+      "lane": "LEAD",
+      "confidence": 0.96,
+      "uncertainty_s": 0.25
+    },
+    {
+      "anchor_name": "final We do",
+      "source_line": 116,
+      "audible_words": "We do",
+      "start_s": 213.0,
+      "end_s": 214.2,
+      "lane": "LEAD",
+      "confidence": 0.98,
+      "uncertainty_s": 0.15
+    },
+    {
+      "anchor_name": "final whispered who's meta mirrors all",
+      "source_line": 125,
+      "audible_words": "who's meta mirrors all?",
+      "start_s": 226.0,
+      "end_s": 227.8,
+      "lane": "LEAD",
+      "confidence": 0.93,
+      "uncertainty_s": 0.3
+    },
+    {
+      "anchor_name": "Find the signal in the noise",
+      "source_line": 127,
+      "audible_words": "Find the signal in the noise",
+      "start_s": 235.0,
+      "end_s": 237.2,
+      "lane": "LEAD",
+      "confidence": 0.97,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_name": "last one for every womb and man",
+      "source_line": 134,
+      "audible_words": "one for every womb and man",
+      "start_s": 246.2,
+      "end_s": 248.8,
+      "lane": "LEAD",
+      "confidence": 0.96,
+      "uncertainty_s": 0.2
+    }
+  ],
+  "sections": [
+    {
+      "section_id": "S01",
+      "header_line": 1,
+      "label": "Chorus",
+      "start_s": 1.5,
+      "end_s": 35.0,
+      "confidence": 0.98,
+      "boundary_cue": "Begins with synth intro and lead vocal; transitions at 'Lisan' entry"
+    },
+    {
+      "section_id": "S02",
+      "header_line": 18,
+      "label": "BRIDGE",
+      "start_s": 35.0,
+      "end_s": 48.0,
+      "confidence": 0.95,
+      "boundary_cue": "Begins on 'Lisan, to the silence break'; ends before Verse 1 pickup"
+    },
+    {
+      "section_id": "S03",
+      "header_line": 24,
+      "label": "Verse 1",
+      "start_s": 48.0,
+      "end_s": 85.0,
+      "confidence": 0.96,
+      "boundary_cue": "Begins on 'Birth pains inside the Handle'; ends on 'Angel knows-'"
+    },
+    {
+      "section_id": "S04",
+      "header_line": 33,
+      "label": "BRIDGE",
+      "start_s": 85.0,
+      "end_s": 94.8,
+      "confidence": 0.94,
+      "boundary_cue": "Second bridge hook ('Lisan' through 'ideas for man'); ends at drum cut"
+    },
+    {
+      "section_id": "S05",
+      "header_line": 41,
+      "label": "VERSE 2",
+      "start_s": 94.8,
+      "end_s": 116.0,
+      "confidence": 0.97,
+      "boundary_cue": "Begins on 'Engineers - talking shit'; concludes on second 'another one'"
+    },
+    {
+      "section_id": "S06",
+      "header_line": 56,
+      "label": "BRIDGE",
+      "start_s": 116.0,
+      "end_s": 136.8,
+      "confidence": 0.93,
+      "boundary_cue": "Begins on 'Mirror rorrim, don't fall'; ends after 'what is seen?'"
+    },
+    {
+      "section_id": "S07",
+      "header_line": 67,
+      "label": "Refrain",
+      "start_s": 136.8,
+      "end_s": 150.8,
+      "confidence": 0.96,
+      "boundary_cue": "Hook reprise starting 'But who cares? Who cares?'; ends at Verse 3 entry"
+    },
+    {
+      "section_id": "S08",
+      "header_line": 75,
+      "label": "Verse 3",
+      "start_s": 150.8,
+      "end_s": 211.0,
+      "confidence": 0.97,
+      "boundary_cue": "Begins on 'Jung in the back room'; finishes on 'Nobody gotta think alone'"
+    },
+    {
+      "section_id": "S09",
+      "header_line": 114,
+      "label": "Final Refrain",
+      "start_s": 211.0,
+      "end_s": 249.72,
+      "confidence": 0.97,
+      "boundary_cue": "Begins on 'But who cares? Who cares? We do.'; continues through whisper outro to final decay"
+    }
+  ],
+  "uncertain_source_lines": [
+    {
+      "source_line": 78,
+      "text": "Arch types on the ready.  Tail Recursion hold Steady - set-go",
+      "status": "audible_but_compressed",
+      "comment": "Cadence between 153.0s and 155.5s is highly compressed in a rapid triplet flow, making the transition between 'recursion' and 'hold steady' phonetically blurred."
+    },
+    {
+      "source_line": 121,
+      "text": "I said, I said, mirror mirror on the wall - (whispered) who’s meta mirrors all?",
+      "status": "composite_delivery",
+      "comment": "Lead vocal delivers 'mirror mirror on the wall' at 222.0s - 225.0s, while the parenthetical '(whispered)' phrase is delivered as a distinct separate phrase at 226.0s - 227.8s and echoed again at 233.0s."
+    }
+  ]
+}

@@ -1,0 +1,747 @@
+"""Build the local visual browser from preserved project manifests. No network or source mutation."""
+from pathlib import Path
+import hashlib, json, os, re, tempfile, urllib.parse
+from grok500_catalog import build_thumbnails, io_path, load_grok500
+from browser_media_paths import BrowserMediaPaths
+from source_relocations import resolve_source
+from reference_provenance import verify_evidence_source
+from falcon_priority_intake import load_falcon_group1
+from flow_prototype_intake import add_flow_prototypes, append_flow_shots
+from story01_intake import load_story01
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[5]
+COMFY = ROOT / 'docs/notes/explorable_world/comfy'
+PROJECTS = COMFY / 'projects'
+catalog_path=HERE/'catalog.js'
+catalog_before=hashlib.sha256(catalog_path.read_bytes()).digest() if catalog_path.exists() else None
+browser_media_paths = BrowserMediaPaths(ROOT, PROJECTS / 'browser_media')
+def read(p): return json.loads(Path(p).read_text(encoding='utf-8'))
+def url(p):
+    p = Path(p) if Path(p).is_absolute() else ROOT / p
+    p = resolve_source(ROOT, p)
+    assert io_path(p).is_file(), p
+    p = browser_media_paths.resolve(p)
+    return urllib.parse.quote(os.path.relpath(p, HERE).replace('\\', '/'), safe='/')
+previews = read(HERE / 'preview_paths.json')['by_path']
+grouping = read(HERE / 'collections.json')
+story = read(HERE / 'story_notes.json')
+def thumb(p): return url(previews.get(str(p).replace('\\','/'), {}).get('thumbnail_path', p))
+assets = []; albums = []
+def add_album(project, id, category, title, description='', related=None):
+    key = project + ':' + id
+    existing=next((a for a in albums if a['id']==key),None)
+    if existing is None:
+        albums.append(dict(id=key, project=project, category=category, title=title, description=description, related=related or []))
+    elif related:
+        existing['related']=list(dict.fromkeys(existing['related']+related))
+    return key
+def image(project, id, p, title, category, album, **kw):
+    a=dict(id=id, project=project, src=url(p), thumb=thumb(p), filename=Path(p).name,
+           repoPath=resolve_source(ROOT,p).relative_to(ROOT).as_posix(), title=title, category=category, album=album, kind='image', **kw)
+    historical=str(p).replace('\\','/')
+    if a['repoPath']!=historical:a['historicalRepoPath']=historical
+    assets.append(a); return a
+def doc(project, p, title=None, album='Project notes'):
+    ext=Path(p).suffix.lower()
+    if ext not in ['.txt','.md','.json','.csv','.py','.pdf','.html']: return
+    content = '' if ext=='.pdf' else resolve_source(ROOT,p).read_text(encoding='utf-8-sig',errors='replace')
+    assets.append(dict(id=project+':doc:'+str(p),project=project,src=url(p),filename=Path(p).name,title=title or Path(p).name,
+        repoPath=resolve_source(ROOT,p).relative_to(ROOT).as_posix(),historicalRepoPath=str(p),category='documents',album=album,kind='pdf' if ext=='.pdf' else 'document',text=content[:40000],
+        note='Preview shortened; open the original for the full text.' if len(content)>40000 else '',inert=ext=='.py'))
+
+hon = read(PROJECTS / 'hon_dolo_strictly_business/asset_review_20261007/manifest.json')
+meta={a['asset_id']:a for a in grouping['assets']}
+for g in grouping['albums']:
+    if g['collection_id']=='storyboard':continue
+    add_album('hon',g['id'],g['collection_id'],g['title'],g['short_description'],g.get('related_asset_ids',[]))
+for g in story['hon_groups']: add_album('hon','story-'+g['id'],'storyboard',g['title'],g['description'])
+for a in hon['assets']:
+    p=a['review_path']
+    if not a.get('image'):
+        pack=a['sources'][0].get('archive_label','Drop notes')
+        label=pack.replace('hon-dolo-ref-sheet-','').replace('hon-dolo-','').replace('-',' ').title()
+        label=('Helper scripts (kept as text)' if Path(p).suffix=='.py' else
+               'Storyboard notes' if 'storyboard' in pack else
+               'Reference maps and drop notes' if any(x in pack for x in ['consolidation','since-last']) else
+               'Design and outfit notes · '+label)
+        doc('hon',p,album=label);continue
+    m=meta[a['asset_id']]; c=m['collection_id']; al='hon:'+m['album_id']
+    extra=dict(note=a.get('review_note',a.get('allowed_use','')),tags=m['tags'],sha256=a['sha256'],sourceStatus=a['category'])
+    title=m['display_label']
+    match=re.search(r'SB-\d+',a['filename'])
+    if match:
+        sid=match.group(); n=story['hon_panels'][sid]
+        title=sid+' · '+n['beat_title']
+        group=next(g for g in story['hon_groups'] if sid in g['panel_ids'])
+        al='hon:story-'+group['id'];c='storyboard'
+        extra.update(beat=n['lyric_connection'],lyric=n.get('lyric_cue',''),note=n['review_note'],sceneID=sid)
+    image('hon',a['asset_id'],p,title,c,al,**extra)
+
+cast=read(COMFY/'casting/gemini_cast_reference_map.json')
+existing={a.get('sha256') for a in assets if a['project']=='hon'}
+for a in cast['references']:
+    if a['sha256'] in existing: continue
+    char=a['character_id']; islead=char=='HON-DOLO'
+    if 'LIKENESS' in a['reference_id']:
+        c='comfy'
+        label={'HON-DOLO':'Han Solo','LEIA':'Princess Leia','LUKE':'Luke Skywalker'}.get(char,char)
+        source_group=a['reference_id']=='HD-LIKENESS-02'
+        al=add_album('hon','source-group-photo' if source_group else 'comfy-likeness-'+char,c,'Original group photograph' if source_group else label+' · likeness targets','Source preserved; individual character crops are available for separate inputs.' if source_group else 'Appearance targets for a separate likeness or swap experiment; not a wardrobe or tattoo standard.')
+    elif islead:
+        c='details'; al=add_album('hon','optional-finish',c,'Optional photographic finish','A finish study only. Keep the current design anchor as the working reference.')
+    else:
+        c='cast'; al=add_album('hon','cast-existing-'+char,c,char.replace('-',' ').title()+' · earlier studies')
+    image('hon',a['reference_id'],a['original_path'],a['role'].capitalize(),c,al,note=a['use_limits'],sha256=a['sha256'],tags=[char,a['role']],sourceStatus=a['selection_status'])
+    existing.add(a['sha256'])
+
+lm=read(PROJECTS/'lisan_al_gaib/manifest.json')
+ls=read(PROJECTS/'lisan_al_gaib/scene_map.json')['scenes']; ls={s['scene_id']:s for s in ls}
+for g in story['lisan_groups']: add_album('lisan','story-'+g['id'],'storyboard',g['title'],g['description'])
+seen=set()
+for a in lm['files']:
+    if a['sha256'] in seen:continue
+    seen.add(a['sha256']);p=a['review_path'];name=Path(p).name
+    if not a.get('image'):
+        doc('lisan',p,album='Story and character notes' if Path(p).suffix!='.csv' else 'Storyboard table');continue
+    c='inspiration'; aid='history';title=Path(p).stem.replace('-',' ').title();note=a['role'];tags=[]
+    if '/01_Flagship_References/' in p:
+        c='details' if 'ARM' in name else 'working';aid='current-arm' if c=='details' else 'current-face'
+        title={'LAG-LOCK-FACE-NATURAL.jpg':'Current face · natural teeth','LAG-LOCK-ARM-SH13.jpg':'Left arm · sandworm artwork','LAG-LOOK-V3-01.jpg':'Signature stillsuit and cloak'}[name]
+        note='Arm tattoo only. The teeth, piercings and neck design in this image are retired.' if 'ARM' in name else 'Current working reference. Face portrait governs teeth and facial details; outfit picture supplies wardrobe.'
+        add_album('lisan',aid,c,'Arm tattoo' if c=='details' else 'Face and signature look')
+    elif name == 'LAG-LOCK-FACE.jpg':
+        c='details';aid='optional-grill';title='Optional iced grill · approved design'
+        note='Ziggy approved this exact grill design on October 9. Still in play for optional grill looks; natural teeth remain the default. Mouth-shot matching is requested because consistency was difficult. This approves the grill design, not the complete portrait or production readiness.'
+        tags=['optional grill','approved grill design','natural teeth default','mouth consistency']
+        add_album('lisan',aid,c,'Optional iced grill','User-approved grill design for requested looks. Separate mouth/head collection; natural teeth remain the default.')
+    elif '/02_Storyboard_Scenes/' in p:
+        match=re.fullmatch(r'(LAG-SC-\d+)\.jpg',name)
+        if not match: c='inspiration';aid='overview';add_album('lisan',aid,c,'Scene overview sheets')
+        else:
+            sid=match.group(1);s=ls[sid];n=int(sid[-2:]);g=next(g for g in story['lisan_groups'] if g['first_scene']<=n<=g['last_scene'])
+            c='storyboard';aid='story-'+g['id'];title=sid+' · '+s['scene_outfit_reported'].split(',')[0].capitalize();note='Grok notes: '+s['grok_qa_reported'];tags=[s['lyric_cue_reported']]
+    else:
+        folder=Path(p).parent.name
+        defs={'a-original-10-looks':('outfits','early-outfits','Early outfit ideas'), 'b-sandworm-stencils':('details','worm-stencils','Sandworm tattoo designs'), 'c-sandworm-neck-tryons':('details','neck-tryons','Neck tattoo placement'), 'd-looks-v2-iced-grill':('inspiration','grill-history','Retired grill exploration'), 'e-natural-teeth-face-tests':('inspiration','face-tests','Face studies'), 'f-first-12-scenes-old-spec':('inspiration','old-scenes','Earlier storyboard versions'), 'g-superseded-refs':('review','old-refs','Superseded references')}
+        c,aid,label=defs.get(folder,('inspiration','history','Design history'));add_album('lisan',aid,c,label)
+        note='Historical exploration. Current face and natural teeth take precedence.'
+    extra=dict(note=note,tags=tags,sha256=a['sha256'],sourceStatus=a['role'])
+    if c=='storyboard':extra.update(sceneID=sid,beat=s['scene_outfit_reported'],lyric=s['lyric_cue_reported'],motion=s['motion_suggestion'])
+    image('lisan','LAG-'+a['sha256'][:16],p,title,c,'lisan:'+aid,**extra)
+
+# Local references and standalone story sequences retain their source scope.
+storyboard_sequences=[]
+registry_paths=[PROJECTS/project/folder/'registry.json'
+                for project in ['hon_dolo_strictly_business','lisan_al_gaib']
+                for folder in ['cast','reference_updates']]
+for project in ['hon_dolo_strictly_business','lisan_al_gaib']:
+    registry_paths.extend(sorted((PROJECTS/project/'story').glob('*/registry.json')))
+registry_paths.append(PROJECTS/'hon_dolo_strictly_business/handoffs/tattoo_placement_guide_20261009/registry.json')
+for registry_path in registry_paths:
+    if not registry_path.exists():continue
+    registered=read(registry_path)
+    storyboard_sequences.extend(registered.get('storyboardSequences',[]))
+    for a in registered['albums']:
+        add_album(a['project'],a['id'].split(':',1)[1],a['category'],a['title'],a.get('description',''),a.get('related',[]))
+    for a in registered['assets']:
+        assert not any(item['id']==a['id'] for item in assets),a['id']
+        assert hashlib.sha256(io_path(ROOT/a['path']).read_bytes()).hexdigest()==a['sha256'],a['id']
+        extra={k:v for k,v in a.items() if k not in {'project','id','path','title','category','album'}}
+        image(a['project'],a['id'],a['path'],a['title'],a['category'],a['album'],**extra)
+    for d in registered.get('documents',[]):
+        doc(d['project'],d['path'],d['title'],d['album'])
+
+# Falcon intakes are dated snapshots; extending them never replaces old asset IDs.
+from falcon_extension_intake import load_falcon_group1_extension
+falcon=load_falcon_group1(ROOT, PROJECTS/'hon_dolo_strictly_business/grok_falcon_group1_20261011')
+falcon_extension=load_falcon_group1_extension(ROOT, PROJECTS/'hon_dolo_strictly_business/grok_falcon_group1_extension_20261012', falcon)
+for intake in [item for item in [falcon, falcon_extension] if item]:
+    for a in intake['albums']:
+        add_album(a['project'],a['id'].split(':',1)[1],a['category'],a['title'],a['description'],a.get('related',[]))
+    for a in intake['assets']:
+        assert not any(item['id']==a['id'] for item in assets),a['id']
+        extra={k:v for k,v in a.items() if k not in {'project','id','path','title','category','album'}}
+        image(a['project'],a['id'],a['path'],a['title'],a['category'],a['album'],**extra)
+    for d in intake['documents']:
+        doc(d['project'],d['path'],d['title'],d['album'])
+
+# Chewy joins character references to the supplied scene and animation/setup drops.
+# Source hashes/aliases and attributed provider claims stay separate from reviews.
+from PIL import Image
+cast_scene_intake=read(HERE/'cast_scene_intake_20261012.json')
+assert cast_scene_intake['receiptState']=='verified_hash_and_size'
+for al in cast_scene_intake['albums']:
+    add_album(al['project'],al['id'].split(':',1)[1],al['section'],al['title'],al['description'],al.get('related',[]))
+for item in cast_scene_intake['assets']:
+    a=dict(item); source=a['path']; physical=resolve_source(ROOT,source,expected_sha256=a['sha256'],expected_bytes=a['bytes']); raw=io_path(physical).read_bytes()
+    assert len(raw)==a['bytes'] and hashlib.sha256(raw).hexdigest()==a['sha256'],source
+    assert not any(old['id']==a['id'] or old.get('sha256')==a['sha256'] for old in assets),a['id']
+    extra={k:v for k,v in a.items() if k not in {'project','id','path','repoPath','title','category','album','kind','filename'}}
+    with Image.open(io_path(physical)) as decoded:
+        decoded.load(); extra.update(width=decoded.width,height=decoded.height,decoded=True)
+    image(a['project'],a['id'],source,a['title'],a['category'],a['album'],**extra)
+for record in cast_scene_intake['documents']:
+    doc('hon',record['path'],album='Chewy source briefs and provider notes')
+
+# Complete Lisan mouth intake reuses exact SHA identities and preserves reviews.
+from lisan_mouth_intake import load_lisan_mouth_complete, apply_existing_lisan_metadata
+lisan_mouth=load_lisan_mouth_complete(ROOT, PROJECTS/'lisan_al_gaib/grok_mouth_complete_20261012', assets)
+if lisan_mouth:
+    for a in lisan_mouth['albums']:
+        add_album(a['project'],a['id'].split(':',1)[1],a['category'],a['title'],a['description'],a['related'])
+    apply_existing_lisan_metadata(assets, lisan_mouth['reusedAssets'])
+    for a in lisan_mouth['assets']:
+        assert not any(item['id']==a['id'] for item in assets),a['id']
+        extra={k:v for k,v in a.items() if k not in {'project','id','path','title','category','album'}}
+        image(a['project'],a['id'],a['path'],a['title'],a['category'],a['album'],**extra)
+    for d in lisan_mouth['documents']:
+        doc(d['project'],d['path'],d['title'],d['album'])
+    for name,title in [('README.md','Lisan complete mouth set · intake and limits'),('registry.json','Lisan complete mouth set · hash identities'),('intake_receipt.json','Lisan complete mouth set · verified receipt')]:
+        p=PROJECTS/'lisan_al_gaib/grok_mouth_complete_20261012'/name
+        doc('lisan',p.relative_to(ROOT).as_posix(),title,'Lisan complete mouth set · intake records')
+# Optional, verified look-pack intake. Provider QA is metadata, never approval.
+grok500=load_grok500(ROOT, PROJECTS/'lisan_al_gaib/grok_500_20261008')
+if grok500:
+    previews.update(build_thumbnails(ROOT, grok500, PROJECTS/'review_previews_20261008', HERE/'grok500_preview_paths.json'))
+    for a in grok500['albums']:
+        add_album(a['project'],a['id'].split(':',1)[1],a['category'],a['title'],a['description'],a['related'])
+    for a in grok500['assets']:
+        extra={k:v for k,v in a.items() if k not in {'project','id','path','title','category','album'}}
+        image(a['project'],a['id'],a['path'],a['title'],a['category'],a['album'],**extra)
+    for a in grok500['documents']:
+        doc('lisan',a['path'],a['title'],a['album'])
+
+# The HD return is deduplicated at intake; new prop views reuse existing outfits.
+return_dir=PROJECTS/'hon_dolo_strictly_business/grok_return_20261009'
+if (return_dir/'asset_ledger.json').exists():
+    returned=read(return_dir/'asset_ledger.json')
+    receipt=return_dir/'received/intake_receipt.json'
+    assert hashlib.sha256(receipt.read_bytes()).hexdigest()==returned['receiptSHA256'], 'Return receipt changed'
+    assert read(receipt)['state']=='verified_crc_hash_size_decode'
+    for a in returned['assets']:
+        assert hashlib.sha256((ROOT/a['path']).read_bytes()).hexdigest()==a['sha256'],a['id']
+    previews.update(build_thumbnails(ROOT,returned,PROJECTS/'review_previews_20261008',HERE/'grok_return_preview_paths.json'))
+    for a in returned['albums']:
+        add_album(a['project'],a['id'].split(':',1)[1],a['category'],a['title'],a['description'],a['related'])
+    for a in returned['assets']:
+        extra={k:v for k,v in a.items() if k not in {'project','id','path','title','category','album','providerRecords'}}
+        image(a['project'],a['id'],a['path'],a['title'],a['category'],a['album'],**extra)
+    for a in returned['documents']:
+        doc('hon',a['path'],a['title'],a['album'])
+    for name,title in [('START_HERE.txt','Grok return · verified intake and next steps'),('asset_ledger.json','Grok return · assets and source aliases'),('hd_audit.json','Grok HD return · measured checks'),('boss_audit.json','Boss round 1 · measured checks')]:
+        p=return_dir/name
+        if p.exists():doc('hon',p.relative_to(ROOT).as_posix(),title,'Grok returns · October 9')
+
+# A later benchmark return reuses existing IDs; only genuinely new bytes get cards.
+benchmark_dir=PROJECTS/'collaborators/grok_image_benchmark_20261009'
+if (benchmark_dir/'asset_ledger.json').exists():
+    benchmark=read(benchmark_dir/'asset_ledger.json')
+    receipt=ROOT/benchmark['receiptPath']
+    assert hashlib.sha256(receipt.read_bytes()).hexdigest()==benchmark['receiptSHA256'], 'Benchmark receipt changed'
+    assert read(receipt)['package_completeness']['complete'], 'Benchmark intake incomplete'
+    existing_ids={a['id'] for a in assets}
+    existing_hashes={a.get('sha256') for a in assets}
+    for a in benchmark['assets']:
+        assert a['id'] not in existing_ids and a['sha256'] not in existing_hashes, a['id']
+        assert hashlib.sha256(io_path(ROOT/a['path']).read_bytes()).hexdigest()==a['sha256'],a['id']
+        existing_ids.add(a['id']); existing_hashes.add(a['sha256'])
+    previews.update(build_thumbnails(ROOT,benchmark,PROJECTS/'review_previews_20261008',HERE/'grok_benchmark_preview_paths.json'))
+    for a in benchmark['albums']:
+        add_album(a['project'],a['id'].split(':',1)[1],a['category'],a['title'],a['description'],a.get('related',[]))
+    for a in benchmark['assets']:
+        extra={k:v for k,v in a.items() if k not in {'project','id','path','title','category','album','providerRecords'}}
+        image(a['project'],a['id'],a['path'],a['title'],a['category'],a['album'],**extra)
+    for a in benchmark['documents']:
+        doc(a.get('project','hon'),a['path'],a['title'],a['album'])
+
+vid=read(PROJECTS/'hon_dolo_strictly_business/gemini_review_20261007/inventory.json')
+for a in vid['items']:
+    project='hon' if a['project']=='hon_dolo_strictly_business' else 'unassigned';p=a['review_copy_path'];cat=a['initial_scene_folder']
+    al=add_album(project,'video-'+cat,'videos',cat.replace('_',' ').title()+' videos')
+    assets.append(dict(id=a['reference_id'],project=project,src=url(p),thumb=thumb(p),filename=a['filename'],repoPath=p,title=a['title'],category='videos',album=al,kind='gif' if a['filename'].endswith('.gif') else 'video',duration=a['video_duration_seconds'],note=a['review_notes'],beat=a['observed_content'],sha256=a['sha256'],tags=[cat],sourceStatus=a.get('user_selection') or 'Candidate'))
+
+# A production result has one asset ID. The project and collaborator workspace
+# both point to it; experiments never become accepted references implicitly.
+production=read(PROJECTS/'collaborators/comfy_workflows.json')
+for item in production['media']:
+    a=dict(item); p=a.pop('path'); group=a.pop('group'); title=a.pop('groupTitle')
+    preview=a.pop('thumbnailPath',p)
+    a.update(src=url(p),thumb=url(preview),repoPath=p,filename=Path(p).name,
+             album=add_album(a['project'],group,a['category'],title))
+    assets.append(a)
+for d in production['documents']:
+    doc('hon',d['path'],title=d['title'],album=d.get('album','ComfyUI production records'))
+# Local mannequin region diagrams and newly indexed original ship drawings.
+tattoo_subject_assets=read(HERE/'tattoo_subject_assets.json')
+for item in tattoo_subject_assets.get('media',[]):
+    a=dict(item); source=a.pop('path'); group=a.pop('group'); title=a.pop('groupTitle')
+    raw=io_path(ROOT/source).read_bytes()
+    assert len(raw)==a['bytes'] and hashlib.sha256(raw).hexdigest()==a['sha256'],source
+    assert not any(old['id']==a['id'] for old in assets),a['id']
+    a.update(src=url(source),thumb=url(source),repoPath=source,filename=Path(source).name,
+             album=add_album(a['project'],group,a['category'],title))
+    assets.append(a)
+for asset_id,fields in tattoo_subject_assets.get('presentationOverrides',{}).items():
+    assert set(fields).issubset({'title'}),asset_id
+    target=next(item for item in assets if item['id']==asset_id)
+    target.update(fields)
+# Provider output registries keep immutable originals separate from review state.
+provider_outputs=PROJECTS/'lisan_al_gaib/gemini/outputs/registry.json'
+if provider_outputs.exists():
+    registry=read(provider_outputs)
+    for item in registry.get('media',[]):
+        a=dict(item); p=a.pop('path'); group=a.pop('group'); group_title=a.pop('groupTitle')
+        preview=a.pop('thumbnailPath',p)
+        a.update(src=url(p),thumb=url(preview),repoPath=p,filename=Path(p).name,
+                 album=add_album(a['project'],group,a['category'],group_title))
+        assets.append(a)
+        if a.get('storyboardStage'):
+            add_album(a['project'],'story-developed-takes','storyboard','Developed video takes',
+                      'Selected footage beyond preliminary panels. Exact song placement and verification remain separate.',[a['id']])
+        if a.get('workingReference',{}).get('status')=='approved':
+            add_album(a['project'],'selected-video-references','working','Selected video references',
+                      'Selected for scene and motion use; the current identity and tattoo references still govern.',[a['id']])
+    for d in registry.get('documents',[]):
+        doc('lisan',d['path'],title=d['title'],album='Gemini production records')
+for project,folder,paths in [('hon',COMFY/'casting',['gemini_project_instructions.txt','gemini_cast_reference_map.txt']),('lisan',PROJECTS/'lisan_al_gaib/gemini',['gemini_instructions.txt','reference_map.txt','first_video_prompt.txt'])]:
+    for p in paths: doc(project,str((folder/p).relative_to(ROOT)).replace('\\','/'),title=p.replace('_',' ').replace('.txt','').capitalize(),album='Gemini instructions and image maps')
+
+for name,title in [('Meta_Mirror.txt','Meta Mirror Prime - supplied lyric master'),('music_intake_20261012.json','Meta Mirror Prime - audio and lyric intake')]:
+    doc('lisan',(PROJECTS/'lisan_al_gaib'/name).relative_to(ROOT).as_posix(),title=title,album='Meta Mirror Prime song records')
+
+for name,title in [('MM_1.txt','MM_1 - supplied lyrics for the independent second cut'),('music_alignment_20261013/START_HERE.txt','Meta Mirror song alignment - start here'),('music_alignment_20261013/listening_review.html','Meta Mirror song alignment - listening review')]:
+    doc('lisan',(PROJECTS/'lisan_al_gaib'/name).relative_to(ROOT).as_posix(),title=title,album='Meta Mirror song alignment')
+
+for project,folder in [('hon','hon_dolo_strictly_business'),('lisan','lisan_al_gaib')]:
+    for name in ['provider_roles.txt','flow_brief.txt','flow_shot_template.txt']:
+        doc(project,str((PROJECTS/'collaborators'/name).relative_to(ROOT)).replace('\\','/'),title=name.replace('_',' ').replace('.txt','').capitalize(),album='Collaborator briefs · Flow')
+    doc(project,str((PROJECTS/folder/'flow/project_brief.txt').relative_to(ROOT)).replace('\\','/'),title='Flow project brief',album='Collaborator briefs · Flow')
+doc('hon',str((COMFY/'casting/grok_project_instructions.txt').relative_to(ROOT)).replace('\\','/'),title='Earlier Grok exploration brief (historical)',album='Historical collaborator briefs')
+for project in ['hon','lisan']:
+    doc(project,(PROJECTS/'collaborators/grok_design_instructions.txt').relative_to(ROOT).as_posix(),title='Grok design instructions · current',album='Collaborator briefs · Grok')
+for name,title in [('tattoo_audit_20261008.txt','Tattoo source recovery · visual audit'),('tattoo_audit_20261008.json','Tattoo source recovery · exact image map')]:
+    p=HERE/name
+    if p.exists():doc('hon',p.relative_to(ROOT).as_posix(),title=title,album='Tattoo source recovery')
+handoff=PROJECTS/'hon_dolo_strictly_business/handoffs/grok_20261008'
+for name, title in [('START_HERE.txt','Grok current care package · start here'),('requests.json','Grok requests and exact regions'),('asset_map.json','Grok package image map'),('panel_plan.txt','Boss and Caleb panel plans'),('return_manifest.template.json','Grok return manifest template')]:
+    doc('hon',str((handoff/name).relative_to(ROOT)).replace('\\','/'),title=title,album='Grok care package · October 8')
+for project in ['hon','lisan']:
+    doc(project,str((PROJECTS/'collaborators/flow_start_here.txt').relative_to(ROOT)).replace('\\','/'),title='Start here · Flow',album='Collaborator briefs · Flow')
+    doc(project,str((PROJECTS/'collaborators/flow_intake_20261008.txt').relative_to(ROOT)).replace('\\','/'),title='Flow upload roles and model choices',album='Collaborator briefs · Flow')
+    doc(project,str((PROJECTS/'collaborators/panhandler_return_20261008.txt').relative_to(ROOT)).replace('\\','/'),title='Panhandler Nova · studio progress handoff',album='Collaborator handoffs')
+doc('hon',str((PROJECTS/'hon_dolo_strictly_business/flow/first_experiment_20261008.txt').relative_to(ROOT)).replace('\\','/'),title='Flow first character experiment',album='Collaborator briefs · Flow')
+doc('hon',str((PROJECTS/'hon_dolo_strictly_business/flow/second_video_experiment_20261008.txt').relative_to(ROOT)).replace('\\','/'),title='Flow second experiment · six-second video edit',album='Collaborator briefs · Flow')
+mouth_plan=PROJECTS/'hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/START_HERE.txt'
+if mouth_plan.exists():doc('hon',mouth_plan.relative_to(ROOT).as_posix(),'Mouth and grill continuity · next proof','Collaborator briefs · Gemini')
+
+# Panel order supplies navigation only. It is not fitted to the current song.
+for project in ['hon','lisan']:
+    original_scene_ids=set(story['hon_panels']) if project=='hon' else set(ls)
+    panels=sorted([a for a in assets if a['project']==project and a['category']=='storyboard' and not a.get('storySequenceID') and a.get('sceneID') in original_scene_ids],key=lambda a:int(re.search(r'(\d+)$',a['sceneID']).group()))
+    for index,a in enumerate(panels):
+        a['storyboardOrder']=index+1
+        a['storyboardPosition']=round(index/max(1,len(panels)-1)*100,4)
+
+review_path=PROJECTS/'hon_dolo_strictly_business/feedback/review_decisions.json'
+review_decisions=read(review_path)['items'] if review_path.exists() else []
+queue_path=PROJECTS/'hon_dolo_strictly_business/feedback/grok_revision_queue.txt'
+if queue_path.exists():doc('hon',str(queue_path.relative_to(ROOT)).replace('\\','/'),title='Grok revision queue',album='Grok revisions and review notes')
+for name,title in [('review_sweep_20261008.txt','Review sweep · saved favorites and decisions'),('grok_favorite_prop_sweep_20261008.txt','Grok · favorite-look hardware sweep'),('boss_discovery_20261008.txt','Boss discovery · select a character before turnarounds')]:
+    p=PROJECTS/'hon_dolo_strictly_business/feedback'/name
+    if p.exists():doc('hon',p.relative_to(ROOT).as_posix(),title=title,album='Grok revisions and review notes')
+
+# Keep every prepared Mission Control attachment reachable in the document viewer.
+known_document_ids={a['id'] for a in assets}
+flow_document_ids={item['documentAssetID'] for item in read(HERE/'flow_prototypes.json')['intakes']}
+for task in read(PROJECTS/'collaborators/mission_control.json')['tasks']:
+    for link in task.get('links',[]):
+        aid=link.get('assetID','')
+        if ':doc:' in aid and aid not in known_document_ids and aid not in flow_document_ids:
+            project,path=aid.split(':doc:',1)
+            target=(ROOT/path).resolve()
+            if target.is_relative_to(ROOT) and target.is_file():
+                doc(project,path,link.get('label'),album='Collaborator briefs · attachments')
+                known_document_ids.add(aid)
+
+# Writer publication shares canonical documents across views and pins reviewed revisions.
+writer_source=read(HERE/'writer_development.json')
+assert writer_source['format']=='cfa-writer-development-v1'
+writer_development=dict(projects=writer_source['projects'],associations=[])
+for item in writer_source['documents']:
+    raw=(ROOT/item['path']).read_bytes()
+    assert len(raw)==item['bytes'] and hashlib.sha256(raw).hexdigest()==item['sha256'], 'Writer revision changed: '+item['path']
+    publication=item.get('publication',item)
+    publication_path=(ROOT/publication['path']).resolve()
+    assert publication_path.is_relative_to(ROOT.resolve()), 'Writer publication outside repository'
+    publication_raw=publication_path.read_bytes()
+    assert len(publication_raw)==publication['bytes'] and hashlib.sha256(publication_raw).hexdigest()==publication['sha256'], 'Writer publication changed: '+publication['path']
+    document_id=item['project']+':doc:'+item['path']
+    existing_document=next((a for a in assets if a['id']==document_id),None)
+    if existing_document is None:
+        doc(item['project'],publication['path'],item['title'],item['documentGroup'])
+        existing_document=assets[-1]
+        existing_document['id']=document_id
+    if item.get('publication'):
+        # Preserve the canonical document ID while every reading/download surface
+        # uses the explicitly pinned site-safe excerpt, never the private source.
+        existing_document.update(src=url(publication['path']),repoPath=publication['path'],
+            historicalRepoPath=publication['path'],filename=publication_path.name,
+            text=publication_raw.decode('utf-8-sig')[:40000],note='')
+    if item.get('fullTextPreview'):
+        existing_document['text']=publication_raw.decode('utf-8-sig').replace('\r\n','\n').replace('\r','\n')
+        existing_document['note']=''
+    existing_document.update(documentGroup=item['documentGroup'],documentCategory=item['documentCategory'],author=item['author'],sha256=publication['sha256'],bytes=publication['bytes'],sourceStatus=item['status'])
+    existing_document['note']=' '.join(s for s in [existing_document['note'],item['author']+' · '+item['status']+'.',item.get('context','')] if s)
+    writer_development['associations'].extend(dict(documentID=document_id,**related) for related in item.get('relatedAssets',[]))
+
+# Source pairs preserve exact-byte identities; scoped choices do not seed reviews.
+source_comparison_document=read(HERE/'source_comparisons.json')
+assert source_comparison_document.get('format')=='cfa-source-comparisons-v1','Source comparison format'
+source_comparisons=source_comparison_document['comparisons']
+assert len({pair['id'] for pair in source_comparisons})==len(source_comparisons),'Repeated source comparison'
+for item in source_comparison_document['media']:
+    a=dict(item); source=a.pop('path'); group=a.pop('group'); group_title=a.pop('groupTitle')
+    raw=io_path(ROOT/source).read_bytes()
+    assert len(raw)==a['bytes'] and hashlib.sha256(raw).hexdigest()==a['sha256'],source
+    assert a['kind']=='image' and a['sourceStatus'] in ['Pending comparison','Selected for prototype video','Retained comparison original'],a['id']
+    assert not any(old['id']==a['id'] for old in assets),a['id']
+    a.update(src=url(source),thumb=url(source),repoPath=source,filename=Path(source).name,
+             album=add_album(a['project'],group,a['category'],group_title))
+    assets.append(a)
+
+
+# Received cast revisions are separate from their adopted originals and human reviews.
+cast_revisions=read(HERE/'cast_revisions.json')
+assert cast_revisions['format']=='cfa-cast-revisions-v1'
+for pinned in cast_revisions['sourcePins']:
+    raw=io_path(ROOT/pinned['path']).read_bytes()
+    assert len(raw)==pinned['bytes'] and hashlib.sha256(raw).hexdigest()==pinned['sha256'],pinned['path']
+for item in cast_revisions['media']:
+    a=dict(item); source=a.pop('path'); group=a.pop('group'); group_title=a.pop('groupTitle')
+    raw=io_path(ROOT/source).read_bytes()
+    assert len(raw)==a['bytes'] and hashlib.sha256(raw).hexdigest()==a['sha256'],source
+    assert a['kind']=='image' and a['referenceRole']=='cast_revision_draft' and a['masterApproved'] is False and a['productionReady'] is False,a['id']
+    assert not any(old['id']==a['id'] or old.get('sha256')==a['sha256'] for old in assets),a['id']
+    a.update(src=url(source),thumb=url(source),repoPath=source,filename=Path(source).name,
+             album=add_album(a['project'],group,a['category'],group_title))
+    assets.append(a)
+
+flow_prototypes=add_flow_prototypes(HERE/'flow_prototypes.json',root=ROOT,assets=assets,add_album=add_album,url=url,doc=doc,io_path=io_path,resolve_source=resolve_source)
+
+# Additive received mouth candidates and scoped reference evidence.
+mouth_coverage_source=read(HERE/'mouth_coverage.json')
+validation_source=read(HERE/'reference_validation.json')
+assert mouth_coverage_source['format']=='cfa-mouth-coverage-v1'
+assert validation_source['format']=='cfa-reference-validation-catalog-v1'
+provenance_snapshots=read(HERE/'reference_provenance_snapshots.json')
+assert provenance_snapshots['format']=='cfa-reference-provenance-snapshots-v1'
+snapshot_rows=provenance_snapshots['snapshots']
+snapshot_keys=[(r['source']['path'],r['source']['bytes'],r['source']['sha256']) for r in snapshot_rows]
+assert len(set(snapshot_keys))==len(snapshot_keys),'Repeated historical source mapping'
+for pinned in mouth_coverage_source['sourcePins']:
+    verify_evidence_source(ROOT,pinned,snapshot_rows)
+# Executable graph inputs require the live exact source, never a text-history fallback.
+pinned=mouth_coverage_source['recipe']['graph']
+raw=(ROOT/pinned['path']).read_bytes()
+assert len(raw)==pinned['bytes'] and hashlib.sha256(raw).hexdigest()==pinned['sha256'], 'Mouth graph changed: '+pinned['path']
+for item in mouth_coverage_source['media']:
+    a=dict(item);group=a.pop('group');title=a.pop('groupTitle');source=a['repoPath']
+    raw=io_path(ROOT/source).read_bytes()
+    assert len(raw)==a['bytes'] and hashlib.sha256(raw).hexdigest()==a['sha256'],source
+    assert not any(old['id']==a['id'] or (old.get('sha256')==a['sha256'] and old.get('kind')=='image') for old in assets),a['id']
+    a.update(src=url(source),thumb=url(source),album=add_album(a['project'],group,a['category'],title))
+    assets.append(a)
+doc('hon',(HERE/'REFERENCE_VALIDATION_GUIDE.txt').relative_to(ROOT).as_posix(),'Reference validation and mouth coverage · reviewer guide','Site evidence methods')
+
+# Story 01 is an independent preliminary sequence; canonical material records
+# are reused without changing their review, stage, timing, or reference scope.
+story01=load_story01(ROOT,assets)
+for entry in story01['albums']:
+    add_album(entry['project'],entry['id'].split(':',1)[1],entry['category'],entry['title'],entry['description'],entry['related'])
+for entry in story01['assets']:
+    item=dict(entry)
+    image(item.pop('project'),item.pop('id'),item.pop('path'),item.pop('title'),item.pop('category'),item.pop('album'),**item)
+for item in story01['documents']:
+    doc(item['project'],item['path'],item['title'],item['album'])
+    assets[-1].update(sha256=item['sha256'],bytes=item['bytes'])
+storyboard_sequences.append(story01['sequence'])
+
+# Approved promotions are applied only by a recorded sweep. Requests remain
+# requests; unresolved fixes/removals and Multiverse stay out of Prime references.
+by_id={a['id']:a for a in assets}
+for decision in review_decisions:
+    a=by_id.get(decision['id'])
+    if not a:continue
+    if decision.get('variant'):a['variant']=decision['variant']
+    if decision.get('collectionState')=='archived':a['archived']=True
+    if decision.get('displayTitle'):a['title']=decision['displayTitle']
+    if decision.get('storyboardStage'):a['storyboardStage']=decision['storyboardStage']
+    wr=decision.get('workingReference') or {}
+    if wr.get('status')=='approved' and not a.get('archived') and decision.get('variant')!='multiverse' and decision.get('status') not in ['needs_fixes','remove']:
+        a['workingReference']=wr
+        al=add_album(a['project'],'promoted-working','working','Selected working references','Selected for the recorded scope; a scene or outfit selection does not redefine facial details.',[a['id']])
+        next(g for g in albums if g['id']==al)['related'].append(a['id'])
+
+for al in albums:
+    primary=[a['id'] for a in assets if a['album']==al['id']]
+    if al['category']=='videos':
+        by_id={a['id']:a for a in assets}
+        primary.sort(key=lambda id: {'starting_source':0,'dinner_candidate':1}.get(by_id[id].get('sourceStatus'),2))
+    al['assetIDs']=list(dict.fromkeys(primary+al.pop('related')))
+albums=[al for al in albums if al['assetIDs']]
+# Show designs on the character before the standalone stencil options.
+category_order=['working','outfits','details','cast','storyboard','videos','comfy','inspiration','review']
+video_order=['action','performance','gemini_approved','dinner','cockpit','supporting_cast','soundtrack_experiments','comfy_experiments','needs_review','turnaround']
+def album_order(al):
+    group=al['id'].split('video-',1)[-1]
+    return (category_order.index(al['category']) if al['category'] in category_order else 99,
+            (video_order.index(group) if group in video_order else len(video_order)-1) if al['category']=='videos' else int('stencil' in al['id'].lower()))
+albums.sort(key=album_order)
+catalog=dict(projects=[dict(id='hon',name='Hon Dolo',subtitle='Strictly Business'),dict(id='lisan',name='Lisan Al Gaib',subtitle='Meta Mirror'),dict(id='unassigned',name='Unassigned',subtitle='Two clips to place')],assets=assets,albums=albums,categories=[['working','Working references'],['outfits','Outfits'],['details','Tattoos & piercings'],['cast','Supporting cast'],['storyboard','Storyboard'],['videos','Videos'],['comfy','Comfy swap targets'],['inspiration','Inspiration'],['review','Needs review']])
+ids=[a['id'] for a in assets];assert len(ids)==len(set(ids)), 'Repeated UI asset IDs'
+# Validate the separate human source-choice receipt without changing asset reviews.
+for pair in source_comparisons:
+    assert pair['status'] in ['pending_comparison','source_selected'] and len(pair['items'])==2,pair['id']
+    assert len({item['assetID'] for item in pair['items']})==2,pair['id']
+    assert all(item['label'] and by_id[item['assetID']]['project']==pair['project']
+               and by_id[item['assetID']]['kind']=='image' for item in pair['items']),pair['id']
+    if pair['status']=='source_selected':
+        choice=pair['sourceChoice'];member_ids={item['assetID'] for item in pair['items']}
+        assert choice['scope']=='prototype_video_source' and choice['selectedAssetID'] in member_ids,pair['id']
+        selected=by_id[choice['selectedAssetID']]
+        assert selected['sha256']==choice['sha256'] and selected['bytes']==choice['bytes'],pair['id']
+        assert set(choice['retainedAssetIDs'])==member_ids and len(choice['retainedAssetIDs'])==2,pair['id']
+        receipt=choice['record'];raw=(ROOT/receipt['path']).read_bytes()
+        assert len(raw)==receipt['bytes'] and hashlib.sha256(raw).hexdigest()==receipt['sha256'],receipt['path']
+        evidence=json.loads(raw)
+        assert evidence['format']=='cfa-scoped-source-choice-v1' and evidence['status']=='recorded',pair['id']
+        assert evidence['decisionID']==choice['decisionID'] and evidence['scope']==choice['scope'],pair['id']
+        assert evidence['selectedSource']['assetID']==selected['id'] and evidence['selectedSource']['sha256']==selected['sha256'],pair['id']
+        assert evidence['selectedSource']['path']==selected['repoPath'] and evidence['selectedSource']['bytes']==selected['bytes'],pair['id']
+        assert evidence['decisionMaker']==choice['decidedBy'] and evidence['humanEvidence']['kind']=='attributed_human_relay',pair['id']
+        assert len(evidence['retainedSources'])==2,pair['id']
+        assert {row['assetID'] for row in evidence['retainedSources']}==member_ids,pair['id']
+        for row in evidence['retainedSources']:
+            asset=by_id[row['assetID']]
+            assert row['path']==asset['repoPath'] and row['sha256']==asset['sha256'] and row['bytes']==asset['bytes'],row['assetID']
+    else:
+        assert not pair.get('sourceChoice'),pair['id']
+catalog['writerDevelopment']=writer_development
+for project in writer_development['projects']:
+    writer_ids=project['featuredDocumentIDs']+project['contextDocumentIDs']+[id for group in project['groups'] for id in group['documentIDs']]
+    assert all(id in by_id and by_id[id]['kind']=='document' for id in writer_ids),project['id']
+    assert all(by_id[id]['project']==project['id'] for group in project['groups'] for id in group['documentIDs']),project['id']
+for association in writer_development['associations']:
+    assert by_id[association['documentID']]['kind']=='document' and by_id[association['assetID']]['kind'] not in ['document','pdf'],association
+    assert by_id[association['documentID']]['project']==by_id[association['assetID']]['project'],association
+catalog['sourceComparisons']=source_comparisons
+catalog['reviewDecisions']=review_decisions
+
+character_board=read(HERE/'character_reference_board.json')
+assert character_board['format']=='cfa-character-reference-board-v1' and character_board['status']=='published'
+assert character_board['project']=='lisan' and len(character_board['rows'])==5
+assert len({row['asset']['id'] for row in character_board['rows']})==5
+for row in character_board['rows']:
+    ref=row['asset'];asset=by_id[ref['id']]
+    assert asset['project']=='lisan' and asset['kind']=='image'
+    assert asset['repoPath']==ref['path'] and asset['sha256']==ref['sha256']
+    raw=io_path(ROOT/ref['path']).read_bytes()
+    assert len(raw)==ref['bytes'] and hashlib.sha256(raw).hexdigest()==ref['sha256']
+    assert ref['version']=='sha256:'+ref['sha256']
+catalog['characterReferenceBoard']=character_board
+
+catalog['referenceValidation']=validation_source
+catalog['mouthCoverage']={k:v for k,v in mouth_coverage_source.items() if k!='media'}
+assert len({r['id'] for r in validation_source['inventory']})==len(validation_source['inventory'])
+for row in validation_source['inventory']:
+    ref=row['reference'];a=by_id[ref['assetID']]
+    assert a['sha256']==ref['sha256'] and ref['version']=='sha256:'+a['sha256']
+    assert hashlib.sha256(io_path(ROOT/a['repoPath']).read_bytes()).hexdigest()==ref['sha256']
+for definition in validation_source['criteriaSets']:
+    content={k:v for k,v in definition.items() if k!='sha256'}
+    assert hashlib.sha256(json.dumps(content,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()==definition['sha256'],definition['id']
+    for source in definition['provenance']:
+        verify_evidence_source(ROOT,source,snapshot_rows)
+for item in mouth_coverage_source['items']:
+    assert item['assetID'] in by_id and by_id[item['assetID']]['sha256']==item['sha256']
+for record in validation_source['assessments']:
+    assert record['schemaVersion']==1 and record['target']['assetID'] in by_id
+    assert record['target']['sha256']==by_id[record['target']['assetID']]['sha256']
+    for seen in record['imagesSeen']:
+        assert seen['sha256']==by_id[seen['assetID']]['sha256']
+
+# Coordinator requests must bind an exact unchanged source; they never mutate decisions.
+requests_path=HERE/'review_requests.json'
+request_document=read(requests_path) if requests_path.exists() else {'format':'cfa-review-requests-v1','requests':[]}
+assert request_document.get('format')=='cfa-review-requests-v1','Review request format'
+review_requests=request_document['requests']
+assert len({r['id'] for r in review_requests})==len(review_requests),'Repeated review requests'
+for request in review_requests:
+    source=by_id[request['id']]
+    assert request['type']=='missing_decision' and request['reason'] and request['requestedBy'],request['id']
+    assert source.get('sha256') and source['sha256']==request['sha256'],request['id']
+    assert hashlib.sha256(io_path(ROOT/source['repoPath']).read_bytes()).hexdigest()==request['sha256'],request['id']
+catalog['reviewRequests']=review_requests
+assessments_path=HERE/'assistant_likeness_assessments.json'
+assessment_document=read(assessments_path) if assessments_path.exists() else {'schemaVersion':1,'assessments':[]}
+assert assessment_document.get('schemaVersion')==1,'Assistant likeness assessment schema'
+assessments=assessment_document['assessments']
+assert len({p['assetID'] for p in assessments})==len(assessments),'Repeated assistant likeness assessments'
+for proposal in assessments:
+    source=by_id[proposal['assetID']]
+    assert proposal['status']=='proposal' and proposal['assessedBy']=='nova',proposal['assetID']
+    assert proposal['likenessRating'] is None or (type(proposal['likenessRating']) is int and 1<=proposal['likenessRating']<=5),proposal['assetID']
+    assert all(isinstance(proposal[field],str) and proposal[field] for field in ['assessedAtUTC','scope','confidence','summary']),proposal['assetID']
+    assert isinstance(proposal['observations'],list) and all(all(isinstance(o.get(field),str) and o[field] for field in ['feature','finding','visibility','severity']) for o in proposal['observations']),proposal['assetID']
+    assert source.get('sha256') and source['sha256']==proposal['sha256'],proposal['assetID']
+    assert hashlib.sha256(io_path(ROOT/source['repoPath']).read_bytes()).hexdigest()==proposal['sha256'],proposal['assetID']
+    assert isinstance(proposal['referenceAssets'],list) and proposal['referenceAssets'],proposal['assetID']
+    for reference in proposal['referenceAssets']:
+        gold=by_id[reference['assetID']]
+        assert gold.get('sha256') and gold['sha256']==reference['sha256'],reference['assetID']
+        assert hashlib.sha256(io_path(ROOT/gold['repoPath']).read_bytes()).hexdigest()==reference['sha256'],reference['assetID']
+catalog['assistantLikenessAssessments']=assessments
+catalog['sceneReviews']=read(review_path).get('sceneReviews',[]) if review_path.exists() else []
+catalog['storyboardSequences']=storyboard_sequences
+storyboard_stories=read(HERE/'storyboard_stories.json')
+assert storyboard_stories['format']=='cfa-storyboard-stories-v1'
+catalog['storyboardStories']=storyboard_stories['stories']
+assert len({story['id'] for story in catalog['storyboardStories']})==len(catalog['storyboardStories']), 'Repeated story ID'
+sequence_lookup={sequence['id']:sequence for sequence in storyboard_sequences}
+for story_entry in catalog['storyboardStories']:
+    project=story_entry['project']
+    assert project in ['hon','lisan'] and story_entry['kind'] in ['song','sequence','prose'],story_entry['id']
+    assert all(id in by_id and by_id[id]['project']==project and by_id[id]['kind']=='document' for id in story_entry['documentIDs']),story_entry['id']
+    if story_entry.get('coverID'):
+        assert by_id[story_entry['coverID']]['project']==project and by_id[story_entry['coverID']]['kind']=='image',story_entry['id']
+    if story_entry['kind']=='sequence':
+        assert sequence_lookup[story_entry['sequenceID']]['project']==project,story_entry['id']
+    else:
+        assert not story_entry.get('sequenceID'),story_entry['id']
+for project in ['hon','lisan']:
+    assert sum(story['project']==project and story['kind']=='song' for story in catalog['storyboardStories'])==1,project
+catalog['missionControl']=read(PROJECTS/'collaborators/mission_control.json')
+context_pack_path=PROJECTS/'collaborators/project_context_packs_20261010/index.json'
+catalog['projectContextPacks']=read(context_pack_path) if context_pack_path.exists() else None
+if catalog['projectContextPacks'] is not None:
+    context_packs=catalog['projectContextPacks']
+    assert context_packs.get('schemaVersion')==1 and context_packs.get('status')=='prepared_not_delivered','Context pack schema / status'
+    assert isinstance(context_packs.get('packs'),list) and isinstance(context_packs.get('files'),list),'Context pack lists'
+    context_files={}
+    pack_prefix='docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/'
+    for entry in context_packs['files']:
+        name=entry.get('path','')
+        assert isinstance(name,str) and name.startswith(pack_prefix) and not any(part in ('','.','..') for part in name.split('/')) and not re.search(r'[\\%?#:\x00-\x1f\x7f]',name),'Unsafe context pack path'
+        assert name not in context_files and re.fullmatch(r'[0-9a-f]{64}',entry.get('sha256','')) and type(entry.get('bytes')) is int and entry['bytes']>=0,'Context pack file provenance'
+        logical=(ROOT/name).resolve()
+        assert logical.is_relative_to(ROOT.resolve()) and logical.is_relative_to((ROOT/pack_prefix).resolve()),'Out-of-scope context pack file'
+        original=io_path(logical)
+        assert original.is_file(),'Missing context pack file'
+        data=original.read_bytes()
+        assert len(data)==entry['bytes'] and hashlib.sha256(data).hexdigest()==entry['sha256'],'Changed context pack file: '+name
+        context_files[name]=entry
+    assert len({pack.get('recipientID') for pack in context_packs['packs']})==len(context_packs['packs']),'Repeated context pack recipients'
+    context_refs=[(context_packs,'uploadMapPath','.txt'),(context_packs,'allPacksZipPath','.zip')]
+    context_refs.extend((pack,key,suffix) for pack in context_packs['packs'] for key,suffix in [('loadGuidePath','.txt'),('zipPath','.zip')])
+    for owner,key,suffix in context_refs:
+        assert owner.get(key) in context_files and owner[key].endswith(suffix),'Unverified context pack link: '+key
+scorecards_path=HERE/'provider_scorecards.json'
+catalog['providerScorecards']=read(scorecards_path) if scorecards_path.exists() else {'providers':[],'roleDefinitions':[]}
+catalog['productionWorkflows']=production['workflows']
+profiles_path=PROJECTS/'collaborators/detail_profiles.json'
+catalog['detailProfiles']=read(profiles_path) if profiles_path.exists() else []
+bom_path=HERE/'working_reference_bom.json'
+catalog['characterBOM']=read(bom_path) if bom_path.exists() else {'characters':[]}
+for character in catalog['characterBOM']['characters']:
+    assert character['coverAssetID'] in by_id,character['id']
+    for component in character['entries']:
+        source=by_id[component['assetID']]
+        assert source['project']==character['project'] and source['sha256']==component['sha256'],component['assetID']
+        assert hashlib.sha256(io_path(ROOT/source['repoPath']).read_bytes()).hexdigest()==component['sha256'],component['assetID']
+        assert (ROOT/component['evidencePath']).is_file(),component['evidencePath']
+    assert all(i in by_id for i in character.get('historyAssetIDs',[])),character['id']
+assert (ROOT/catalog['characterBOM']['policyPath']).is_file()
+
+cast_config=read(HERE/'cast_collections.json') if (HERE/'cast_collections.json').exists() else {}
+catalog['castCollections']=cast_config.get('collections',[])
+for group in catalog['castCollections']:
+    for ref in group.get('sharedReferences',[]):
+        a=by_id[ref['assetID']]
+        assert a['project']==ref['sourceProject'] and a['sha256']==ref['sha256'],ref['assetID']
+        assert ref['assetID'] in group['assetIDs'] and (ROOT/ref['evidencePath']).is_file(),ref['assetID']
+for asset_id,override in cast_config.get('assetOverrides',{}).items():
+    assert asset_id in by_id,asset_id
+    for key,value in override.items():
+        if key=='noteAppend':by_id[asset_id]['note']=(by_id[asset_id].get('note','')+' '+value).strip()
+        else:by_id[asset_id][key]=value
+catalog['detailDisplayGroups']=read(HERE/'detail_display_groups.json').get('groups',[]) if (HERE/'detail_display_groups.json').exists() else []
+catalog['tattooPlacementGuides']=tattoo_subject_assets.get('guides',[])
+for guide in catalog['tattooPlacementGuides']:
+    assert all(i in by_id and by_id[i]['referenceRole']=='Location guide only' for i in guide['assetIDs']),guide['tattooKey']
+catalog['browseLayout']=read(HERE/'browse_layout.json') if (HERE/'browse_layout.json').exists() else {'projects':{}}
+album_lookup={al['id']:al for al in albums}
+for project,layout in catalog['browseLayout'].get('projects',{}).items():
+    for key in ['storyCovers','videoCovers']:
+        for album_id,cover_id in layout.get(key,{}).items():
+            assert album_id in album_lookup and album_lookup[album_id]['project']==project,album_id
+            assert cover_id in album_lookup[album_id]['assetIDs'],(album_id,cover_id)
+    for key in ['comfyAlbumIDs','archiveAlbumIDs']:
+        assert all(i in album_lookup and album_lookup[i]['project']==project for i in layout.get(key,[])),key
+catalog['sharedReferenceCollections']=read(HERE/'shared_reference_collections.json').get('collections',[]) if (HERE/'shared_reference_collections.json').exists() else []
+accessories_path=PROJECTS/'hon_dolo_strictly_business/handoffs/neck_bling_20261009/permanent_accessories.json'
+catalog['accessoryCollections']=[]
+if accessories_path.exists():
+    accessories=read(accessories_path)
+    catalog['characterAccessories']=accessories
+    for component in accessories.get('lockedComponents',[]):
+        source=by_id[component['sourceAssetID']]
+        assert source['sha256']==component['sourceSHA256'],component['componentID']
+        source.setdefault('componentApprovals',[]).append(component)
+        source['note']=(source.get('note','')+' User-selected permanent wrist jewelry: preserve the visible gold curb-link chain and black band when the wrist appears. This selection covers the jewelry only; unseen hardware and anatomical side are unresolved.').strip()
+    sections=[dict(title=g['label'],assetIDs=g.get('assetIDs',[])) for g in accessories['groups'] if g.get('assetIDs')]
+    catalog['accessoryCollections'].append(dict(id=accessories['groupID'],project=accessories['project'],title=accessories['title'],coverID=accessories['coverAssetID'],assetIDs=list(dict.fromkeys(i for s in sections for i in s['assetIDs'])),sections=sections,description=accessories['userDecision'],notes=['Wrist jewelry is a selected character component. Associated hand and chain-mouth references keep their existing review status.','Four interchangeable neck-chain styles: 24 first-round candidates planned; winner angles wait for selection.']))
+for key in ['castCollections','detailDisplayGroups','sharedReferenceCollections','accessoryCollections','storyboardSequences']:
+    for group in catalog[key]:
+        assert all(id in by_id for id in group['assetIDs']),group['id']
+        assert group.get('coverID',group.get('coverAssetID')) in group['assetIDs'],group['id']
+shot_materials_path=HERE/'shot_materials.json'
+catalog['shotMaterials']=read(shot_materials_path) if shot_materials_path.exists() else {'version':1,'shots':[]}
+append_flow_shots(catalog['shotMaterials'],flow_prototypes)
+# The source Flow intake stays intact; only this derived navigation binding
+# assigns its sandworm result to the writer's exact Story 01 shot.
+sw2_shots=[shot for shot in catalog['shotMaterials']['shots'] if shot['id']=='LAG-FLOW-SW2-001']
+assert len(sw2_shots)==1 and any(material['assetID']=='FLOW-LAG-SW2-001' for material in sw2_shots[0]['materials'])
+assert any(shot['shotID']=='S01-4.1' and any(material['assetID']=='FLOW-LAG-SW2-001' and material['role']=='result_on_disk' for material in shot['materials']) for shot in story01['sequence']['shots'])
+sw2_shots[0].update(independentSequenceID=story01['sequence']['id'],storyShotID='S01-4.1')
+for shot in catalog['shotMaterials']['shots']:
+    assert all(m['assetID'] in by_id and m.get('sha256')==by_id[m['assetID']].get('sha256') for m in shot['materials']),shot['id']
+    assert all(id in by_id for id in shot['panelAssetIDs']),shot['id']
+catalog['storyboardMetadata']={p:dict(timingStatus='Source panel order only; not aligned to current song timings. Separate scene drafts below have their own order and no song placement.',positionBasis='source_panel_order',panelCount=sum(a['project']==p and bool(a.get('storyboardOrder')) and not a.get('storySequenceID') for a in assets),independentSequenceCount=sum(s['project']==p for s in storyboard_sequences)) for p in ['hon','lisan']}
+for workflow in catalog['productionWorkflows']:
+    assert all(id in by_id for key in ['sourceAssetIDs','outputAssetIDs','documentAssetIDs'] for id in workflow[key]),workflow['id']
+# Publish a complete catalog atomically; leave the previous working file intact
+# if validation, writing, or concurrent-publisher reconciliation fails.
+catalog_text='window.REVIEW_CATALOG = '+json.dumps(catalog,ensure_ascii=False).replace('<','\\u003c')+';\n'
+with tempfile.NamedTemporaryFile(mode='w',encoding='utf-8',dir=HERE,prefix='catalog-',suffix='.pending',delete=False) as pending:
+    pending.write(catalog_text)
+pending_path=Path(pending.name)
+try:
+    current_digest=hashlib.sha256(catalog_path.read_bytes()).digest() if catalog_path.exists() else None
+    assert current_digest==catalog_before, 'Catalog changed during build; reconcile the other publication first.'
+    os.replace(pending_path,catalog_path)
+finally:
+    if pending_path.exists():pending_path.unlink()
+browser_media_paths.write_manifest(HERE/'browser_media_paths.json')
+
+def shell(path,project,view='all'):
+    prefix=os.path.relpath(HERE,path.parent).replace('\\','/')+'/'
+    versions={name:hashlib.sha256((HERE/name).read_bytes()).hexdigest()[:10] for name in ['library.css','catalog.js','library.js']}
+    build=hashlib.sha256(json.dumps(versions,sort_keys=True).encode()).hexdigest()[:10]
+    path.write_text('<!doctype html>\n<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Visual reference library</title>\n<link rel="stylesheet" href="'+prefix+'library.css?v='+versions['library.css']+'">\n<div id="app"></div><script>window.REVIEW_INITIAL='+json.dumps(dict(project=project,view=view))+';window.REVIEW_BUILD='+json.dumps(build)+';</script>\n<script src="'+prefix+'catalog.js?v='+versions['catalog.js']+'"></script><script src="'+prefix+'library.js?v='+versions['library.js']+'"></script></html>\n',encoding='utf-8')
+shell(PROJECTS/'index.html','hon')
+shell(PROJECTS/'hon_dolo_strictly_business/asset_review_20261007/index.html','hon')
+shell(PROJECTS/'hon_dolo_strictly_business/asset_review_20261007/storyboard.html','hon','storyboard')
+shell(PROJECTS/'hon_dolo_strictly_business/gemini_review_20261007/index.html','hon','videos')
+shell(PROJECTS/'lisan_al_gaib/index.html','lisan')
+print(json.dumps({'assets':len(assets),'albums':len(albums),'documents':sum(a['kind'] in ['document','pdf'] for a in assets),'media':sum(a['kind'] not in ['document','pdf'] for a in assets)}))

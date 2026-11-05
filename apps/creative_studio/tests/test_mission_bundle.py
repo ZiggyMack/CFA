@@ -11,6 +11,7 @@ from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from build_mission_control import MissionBundle, build_bundle, sha, safe_https
+from collaborator_review_fixture import records as collaborator_records, backups as collaborator_backups
 
 
 class MissionBundleTests(unittest.TestCase):
@@ -54,6 +55,14 @@ class MissionBundleTests(unittest.TestCase):
             with Image.open(self.out / asset[key]) as image:
                 self.assertLessEqual(max(image.size), limit)
             self.assertTrue(asset[key].startswith('mission_media/'))
+
+    def test_collaborator_records_survive_corner_snapshot_without_text_rewriting(self):
+        self.catalog['collaboratorReviews'] = collaborator_records()
+        self.catalog['collaboratorReviewBackups'] = collaborator_backups()
+        before = deepcopy(self.catalog['collaboratorReviews'])
+        result = self.run_build()
+        self.assertEqual(result['collaboratorReviews'], before)
+        self.assertEqual(result['collaboratorReviewBackups'], collaborator_backups())
 
     def test_registered_hash_mismatch_fails_without_publishing(self):
         self.asset['sha256'] = '0' * 64

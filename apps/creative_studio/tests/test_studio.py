@@ -275,7 +275,7 @@ class StudioAppTest(unittest.TestCase):
         cache.mkdir(exist_ok=True)
         cls.temp = tempfile.TemporaryDirectory(prefix="studio-test-", dir=cache)
         cls.app_dir = Path(cls.temp.name)
-        for name in ("app.py", "library_helpers.py", "mission_view.py", "studio_dependencies.py", "storyboard_takes.py", "collaborator_review.py", "collaborator_review_storage.py", "controller_routing.py", "project_intake_view.py"):
+        for name in ("app.py", "library_helpers.py", "mission_view.py", "design_view.py", "studio_dependencies.py", "storyboard_takes.py", "collaborator_review.py", "collaborator_review_storage.py", "controller_routing.py", "project_intake_view.py"):
             shutil.copy2(APP_DIR / name, cls.app_dir / name)
         shutil.copytree(APP_DIR / "collaborator_review_storage", cls.app_dir / "collaborator_review_storage")
         library = cls.app_dir / "library"
@@ -384,7 +384,8 @@ class StudioAppTest(unittest.TestCase):
             self.assertEqual(app.session_state.studio_view, "Library")
             self.assertEqual(app.query_params["view"], ["Library"])
             self.assertFalse(any(button.key == "nav:Project home" for button in app.button))
-            self.assertTrue(any(heading.value == "Project overview" for heading in app.subheader))
+            self.assertFalse(any(heading.value == "Project overview" for heading in app.subheader))
+            self.assertTrue(any(e.label == "Screenplay & source records" for e in app.expander))
             self.assertEqual(len([e for e in app.expander if "Script heading" in e.label]), 41)
             app.button(key="nav:Casa Baldadoon").click().run()
             self.assertFalse(app.exception)

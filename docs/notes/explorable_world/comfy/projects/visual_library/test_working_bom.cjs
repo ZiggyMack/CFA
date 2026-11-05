@@ -8,7 +8,7 @@ const clone = value => JSON.parse(JSON.stringify(value));
 const REVIEW_KEY = 'cfa-visual-review-v1', FAVORITES_KEY = 'cfa-visual-favorites-v1';
 const catalogJS = fs.readFileSync(path.join(__dirname, 'catalog.js'), 'utf8');
 const catalog = JSON.parse(catalogJS.slice(catalogJS.indexOf('=') + 1).trim().replace(/;$/, ''));
-const overlay = JSON.parse(fs.readFileSync(path.join(__dirname, '../../../../downloads/cfa-review (9).json'), 'utf8'));
+const overlay = JSON.parse(fs.readFileSync(path.join(__dirname, 'test_fixtures/working_bom_legacy_overlay.json'), 'utf8'));
 const ids = {
   face:'HD-RETURN-6c8900223ee9', cheek:'HD-RETURN-9ace849985b4', chest:'HD-RETURN-7b156019ddf8',
   neck:'HD-RETURN-7fe77eadd174', wrist:'HD-DROP-b18c4a123579', chain:'HD-B-708df0bb5bff',
@@ -83,8 +83,8 @@ async function main() {
   assert.equal(api.inReviewQueue(asset(ids.unknown)), true);
   api.setState({view:'all', search:''}); api.renderMain();
   assert(!page.node('#main').innerHTML.includes('data-open="' + ids.unknown + '"'), 'Normal browse hides removed preview');
-  api.setState({view:'review_queue'}); api.renderMain();
-  assert(page.node('#main').innerHTML.includes('data-open="' + ids.unknown + '"'), 'Review queue opens original');
+  api.setState({view:'archive'}); api.renderMain();
+  assert(page.node('#main').innerHTML.includes('data-open="' + ids.unknown + '"'), 'Retired cockpit inspiration remains reviewable in Archive after removal');
   assert(api.reviewPayload().items.some(r => r.id === ids.unknown && r.status === 'remove'));
   assert.deepEqual(clone(api.C.assets), originalAssets, 'Filtering never deletes or rewrites originals');
   checks++;

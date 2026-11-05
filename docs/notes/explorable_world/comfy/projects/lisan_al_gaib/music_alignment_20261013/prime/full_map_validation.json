@@ -1,0 +1,3368 @@
+{
+  "schema_version": 1,
+  "track_id": "prime",
+  "created_at_utc": "2026-10-13T03:42:26.928680+00:00",
+  "decoded_duration_seconds": 249.72,
+  "source_timebase": {
+    "duration_seconds": 249.72,
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "sample_frames": 11986560,
+    "timing_state": "independent_source_timebase_no_accepted_alignment"
+  },
+  "source_hashes": {
+    "audio": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/Meta Mirror_0 (Remastered).mp3",
+      "bytes": 6438669,
+      "sha256": "477627e4db431ba0ef8cf226b13745f3cdcc32050d88b8f0fc1f7aba3e45e154"
+    },
+    "lyrics": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/Meta_Mirror.txt",
+      "bytes": 4194,
+      "sha256": "5303adca22ea91cebe00efc9c62c2f8949631865b3265a0c615c06b4f11e605c"
+    },
+    "audio_validation": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_intake_20261012/AUDIO_VALIDATION.json",
+      "bytes": 1056,
+      "sha256": "dbaaa013cf16b41b2d230caf438d4a41b1cf38dd7c318c7bec2a125f2f7fb066"
+    }
+  },
+  "reports": {
+    "source_line_manifest": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/source_line_manifest.json",
+      "bytes": 26728,
+      "sha256": "d9653414f86a70edeba798864dc9ab4e561d00c8fecde28eb9181af7519245ac"
+    },
+    "corrected_section_report": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/ai_studio_return_02.json",
+      "bytes": 7248,
+      "sha256": "3e8e53a1a6003e5edeefdfbcc3471a379eb5d8b42261c2bcc76923c863e52850"
+    },
+    "full_map_report": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/ai_studio_return_03.json",
+      "bytes": 7301,
+      "sha256": "4a7346a05f73440a6738397851154aac9a8fe649b69a258791cd2e3057bfb2aa"
+    },
+    "followup_report": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/ai_studio_return_04.json",
+      "bytes": 5271,
+      "sha256": "fdcb5ddca64ab92a434806f4b53400f4f235b98633e624c99119f70bea4a3ce1"
+    },
+    "provider_anchor_audit": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/provider_anchor_audit.json",
+      "bytes": 41872,
+      "sha256": "2fdc6e495926636b08e395937aa65902c2bed96482982ab62df3e32ab80f43b4"
+    }
+  },
+  "external_provider_claims_only": true,
+  "timestamps_accepted": false,
+  "independent_listening_performed": false,
+  "audio_access_independently_verified": false,
+  "lip_sync_accepted": false,
+  "independent_timebase": true,
+  "timing_transfer_or_rescaling_performed": false,
+  "artifact_kind": "static_full_map_validation_not_audio_alignment",
+  "summary": {
+    "expected_canonical_lyric_lines": 93,
+    "provider_rows": 93,
+    "coverage_unique_exact": true,
+    "all_track_duration_bounds_valid": true,
+    "all_source_heading_indices_match": true,
+    "decreasing_start_count": 0,
+    "section_containment_conflict_source_lines": [
+      54,
+      112
+    ],
+    "derived_provisional_intervals_retained": 91,
+    "derived_intervals_withheld": 2,
+    "quoted_source_checks": 4,
+    "quoted_source_exact_matches": 4,
+    "main_sparse_vocal_event_count": 17,
+    "followup_sparse_vocal_event_count": 17,
+    "main_event_interval_bounds_all_valid": true,
+    "anchor_to_line_reconciliation_source_lines": [
+      76,
+      102,
+      125
+    ],
+    "audio_accuracy_established": false,
+    "timings_accepted": false,
+    "state": "complete_source_coverage_provisional_provider_claims_with_boundary_reconciliation_pending"
+  },
+  "source_coverage": {
+    "canonical_count": 93,
+    "provider_row_count": 93,
+    "unique_provider_source_lines": 93,
+    "missing_source_lines": [],
+    "unexpected_source_lines": [],
+    "duplicate_source_lines": [],
+    "exact_coverage_unique": true,
+    "id_policy": "Provider compact rows use one-based physical TXT line numbers. Derived IDs are taken unchanged from the source manifest."
+  },
+  "section_checks": [
+    {
+      "section_id": "S01",
+      "exact_source_heading": "[Chorus]",
+      "exact_source_heading_line": 1,
+      "reported_header_line": 1,
+      "header_matches": true,
+      "bounds_valid": true,
+      "reported_interval_s": [
+        1.5,
+        35.0
+      ]
+    },
+    {
+      "section_id": "S02",
+      "exact_source_heading": "[BRIDGE]",
+      "exact_source_heading_line": 18,
+      "reported_header_line": 18,
+      "header_matches": true,
+      "bounds_valid": true,
+      "reported_interval_s": [
+        35.0,
+        48.0
+      ]
+    },
+    {
+      "section_id": "S03",
+      "exact_source_heading": "[Verse 1]",
+      "exact_source_heading_line": 24,
+      "reported_header_line": 24,
+      "header_matches": true,
+      "bounds_valid": true,
+      "reported_interval_s": [
+        48.0,
+        85.0
+      ]
+    },
+    {
+      "section_id": "S04",
+      "exact_source_heading": "[BRIDGE]",
+      "exact_source_heading_line": 33,
+      "reported_header_line": 33,
+      "header_matches": true,
+      "bounds_valid": true,
+      "reported_interval_s": [
+        85.0,
+        94.8
+      ]
+    },
+    {
+      "section_id": "S05",
+      "exact_source_heading": "[ VERSE 2]",
+      "exact_source_heading_line": 41,
+      "reported_header_line": 41,
+      "header_matches": true,
+      "bounds_valid": true,
+      "reported_interval_s": [
+        94.8,
+        116.0
+      ]
+    },
+    {
+      "section_id": "S06",
+      "exact_source_heading": "[BRIDGE]",
+      "exact_source_heading_line": 56,
+      "reported_header_line": 56,
+      "header_matches": true,
+      "bounds_valid": true,
+      "reported_interval_s": [
+        116.0,
+        136.8
+      ]
+    },
+    {
+      "section_id": "S07",
+      "exact_source_heading": "[Refrain]",
+      "exact_source_heading_line": 67,
+      "reported_header_line": 67,
+      "header_matches": true,
+      "bounds_valid": true,
+      "reported_interval_s": [
+        136.8,
+        150.8
+      ]
+    },
+    {
+      "section_id": "S08",
+      "exact_source_heading": "[Verse 3]",
+      "exact_source_heading_line": 75,
+      "reported_header_line": 75,
+      "header_matches": true,
+      "bounds_valid": true,
+      "reported_interval_s": [
+        150.8,
+        211.0
+      ]
+    },
+    {
+      "section_id": "S09",
+      "exact_source_heading": "[Final Refrain]",
+      "exact_source_heading_line": 114,
+      "reported_header_line": 114,
+      "header_matches": true,
+      "bounds_valid": true,
+      "reported_interval_s": [
+        211.0,
+        249.72
+      ]
+    }
+  ],
+  "section_order_issues": [],
+  "rows": [
+    {
+      "canonical_line_id": "PM.S01.L002",
+      "source_line": 2,
+      "source_section_id": "S01",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        2,
+        1.8,
+        4.5,
+        "heard",
+        0.98
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S01.L003",
+      "source_line": 3,
+      "source_section_id": "S01",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        3,
+        4.8,
+        7.5,
+        "heard",
+        0.98
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S01.L004",
+      "source_line": 4,
+      "source_section_id": "S01",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        4,
+        7.8,
+        11.2,
+        "heard",
+        0.98
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S01.L005",
+      "source_line": 5,
+      "source_section_id": "S01",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        5,
+        11.5,
+        13.8,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S01.L006",
+      "source_line": 6,
+      "source_section_id": "S01",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        6,
+        13.8,
+        15.5,
+        "heard",
+        0.94
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S01.L007",
+      "source_line": 7,
+      "source_section_id": "S01",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        7,
+        15.5,
+        17.2,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S01.L008",
+      "source_line": 8,
+      "source_section_id": "S01",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        8,
+        17.2,
+        18.8,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S01.L009",
+      "source_line": 9,
+      "source_section_id": "S01",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        9,
+        18.8,
+        20.6,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S01.L010",
+      "source_line": 10,
+      "source_section_id": "S01",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        10,
+        20.6,
+        22.4,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S01.L011",
+      "source_line": 11,
+      "source_section_id": "S01",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        11,
+        22.4,
+        24.2,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S01.L012",
+      "source_line": 12,
+      "source_section_id": "S01",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        12,
+        24.2,
+        25.8,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S01.L013",
+      "source_line": 13,
+      "source_section_id": "S01",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        13,
+        25.8,
+        27.5,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S01.L014",
+      "source_line": 14,
+      "source_section_id": "S01",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        14,
+        27.5,
+        29.8,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S01.L015",
+      "source_line": 15,
+      "source_section_id": "S01",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        15,
+        29.8,
+        32.2,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S01.L016",
+      "source_line": 16,
+      "source_section_id": "S01",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        16,
+        32.2,
+        35.0,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S02.L019",
+      "source_line": 19,
+      "source_section_id": "S02",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        19,
+        35.0,
+        37.8,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S02.L020",
+      "source_line": 20,
+      "source_section_id": "S02",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        20,
+        37.8,
+        41.2,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S02.L021",
+      "source_line": 21,
+      "source_section_id": "S02",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        21,
+        41.5,
+        44.5,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S02.L022",
+      "source_line": 22,
+      "source_section_id": "S02",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        22,
+        44.5,
+        47.8,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S03.L025",
+      "source_line": 25,
+      "source_section_id": "S03",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        25,
+        48.0,
+        61.5,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S03.L026",
+      "source_line": 26,
+      "source_section_id": "S03",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        26,
+        61.5,
+        75.5,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S03.L028",
+      "source_line": 28,
+      "source_section_id": "S03",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        28,
+        75.5,
+        79.5,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S03.L030",
+      "source_line": 30,
+      "source_section_id": "S03",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        30,
+        79.5,
+        81.8,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S03.L031",
+      "source_line": 31,
+      "source_section_id": "S03",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        31,
+        81.8,
+        84.8,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S04.L034",
+      "source_line": 34,
+      "source_section_id": "S04",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        34,
+        85.0,
+        87.5,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S04.L035",
+      "source_line": 35,
+      "source_section_id": "S04",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        35,
+        87.5,
+        89.2,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S04.L037",
+      "source_line": 37,
+      "source_section_id": "S04",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        37,
+        89.2,
+        91.8,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S04.L039",
+      "source_line": 39,
+      "source_section_id": "S04",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        39,
+        91.8,
+        94.8,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S05.L042",
+      "source_line": 42,
+      "source_section_id": "S05",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        42,
+        95.0,
+        100.8,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S05.L043",
+      "source_line": 43,
+      "source_section_id": "S05",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        43,
+        100.8,
+        103.0,
+        "heard",
+        0.98
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S05.L045",
+      "source_line": 45,
+      "source_section_id": "S05",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        45,
+        103.0,
+        105.0,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S05.L046",
+      "source_line": 46,
+      "source_section_id": "S05",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        46,
+        105.0,
+        106.8,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S05.L047",
+      "source_line": 47,
+      "source_section_id": "S05",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        47,
+        106.8,
+        108.8,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S05.L048",
+      "source_line": 48,
+      "source_section_id": "S05",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        48,
+        108.8,
+        110.2,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S05.L049",
+      "source_line": 49,
+      "source_section_id": "S05",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        49,
+        110.2,
+        111.8,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S05.L051",
+      "source_line": 51,
+      "source_section_id": "S05",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        51,
+        111.8,
+        113.2,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S05.L052",
+      "source_line": 52,
+      "source_section_id": "S05",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        52,
+        113.2,
+        114.6,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S05.L053",
+      "source_line": 53,
+      "source_section_id": "S05",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        53,
+        114.6,
+        115.8,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S05.L054",
+      "source_line": 54,
+      "source_section_id": "S05",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": false,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        54,
+        115.8,
+        116.8,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": false,
+      "flags": [
+        "outside_corrected_source_section"
+      ]
+    },
+    {
+      "canonical_line_id": "PM.S06.L057",
+      "source_line": 57,
+      "source_section_id": "S06",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        57,
+        116.8,
+        119.5,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S06.L058",
+      "source_line": 58,
+      "source_section_id": "S06",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        58,
+        119.5,
+        122.8,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S06.L060",
+      "source_line": 60,
+      "source_section_id": "S06",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        60,
+        122.8,
+        124.5,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S06.L061",
+      "source_line": 61,
+      "source_section_id": "S06",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        61,
+        124.5,
+        128.2,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S06.L063",
+      "source_line": 63,
+      "source_section_id": "S06",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        63,
+        128.2,
+        131.5,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S06.L064",
+      "source_line": 64,
+      "source_section_id": "S06",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        64,
+        131.5,
+        133.2,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S06.L065",
+      "source_line": 65,
+      "source_section_id": "S06",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        65,
+        133.2,
+        136.8,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S07.L068",
+      "source_line": 68,
+      "source_section_id": "S07",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        68,
+        136.8,
+        139.0,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S07.L069",
+      "source_line": 69,
+      "source_section_id": "S07",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        69,
+        139.0,
+        140.5,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S07.L070",
+      "source_line": 70,
+      "source_section_id": "S07",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        70,
+        140.5,
+        142.2,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S07.L071",
+      "source_line": 71,
+      "source_section_id": "S07",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        71,
+        142.2,
+        144.5,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S07.L072",
+      "source_line": 72,
+      "source_section_id": "S07",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        72,
+        144.5,
+        147.0,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S07.L073",
+      "source_line": 73,
+      "source_section_id": "S07",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        73,
+        147.0,
+        150.8,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L076",
+      "source_line": 76,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        76,
+        150.8,
+        152.2,
+        "heard",
+        0.98
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L077",
+      "source_line": 77,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        77,
+        152.2,
+        153.2,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L078",
+      "source_line": 78,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        78,
+        153.2,
+        155.8,
+        "heard",
+        0.94
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L080",
+      "source_line": 80,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        80,
+        155.8,
+        158.2,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L081",
+      "source_line": 81,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        81,
+        158.2,
+        160.0,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L082",
+      "source_line": 82,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        82,
+        160.0,
+        162.5,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L083",
+      "source_line": 83,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        83,
+        162.5,
+        165.0,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L085",
+      "source_line": 85,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        85,
+        165.0,
+        167.5,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L087",
+      "source_line": 87,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        87,
+        167.5,
+        169.2,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L088",
+      "source_line": 88,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        88,
+        169.2,
+        171.0,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L090",
+      "source_line": 90,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        90,
+        171.0,
+        174.5,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L092",
+      "source_line": 92,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        92,
+        174.5,
+        180.8,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L093",
+      "source_line": 93,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        93,
+        180.8,
+        182.0,
+        "heard",
+        0.98
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L094",
+      "source_line": 94,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        94,
+        182.0,
+        183.8,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L096",
+      "source_line": 96,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        96,
+        183.8,
+        190.5,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L097",
+      "source_line": 97,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        97,
+        190.5,
+        193.8,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L099",
+      "source_line": 99,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        99,
+        193.8,
+        196.5,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L100",
+      "source_line": 100,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        100,
+        196.5,
+        199.8,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L102",
+      "source_line": 102,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        102,
+        200.0,
+        202.5,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L103",
+      "source_line": 103,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        103,
+        202.5,
+        203.8,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L104",
+      "source_line": 104,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        104,
+        203.8,
+        205.0,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L106",
+      "source_line": 106,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        106,
+        205.0,
+        206.5,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L107",
+      "source_line": 107,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        107,
+        206.5,
+        208.0,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L108",
+      "source_line": 108,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        108,
+        208.0,
+        209.0,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L110",
+      "source_line": 110,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        110,
+        209.0,
+        210.0,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L111",
+      "source_line": 111,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        111,
+        210.0,
+        210.8,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S08.L112",
+      "source_line": 112,
+      "source_section_id": "S08",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": false,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        112,
+        210.8,
+        211.5,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": false,
+      "flags": [
+        "outside_corrected_source_section"
+      ]
+    },
+    {
+      "canonical_line_id": "PM.S09.L115",
+      "source_line": 115,
+      "source_section_id": "S09",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        115,
+        211.2,
+        213.0,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S09.L116",
+      "source_line": 116,
+      "source_section_id": "S09",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        116,
+        213.0,
+        214.2,
+        "heard",
+        0.98
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S09.L117",
+      "source_line": 117,
+      "source_section_id": "S09",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        117,
+        214.2,
+        215.5,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S09.L118",
+      "source_line": 118,
+      "source_section_id": "S09",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        118,
+        215.5,
+        217.0,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S09.L119",
+      "source_line": 119,
+      "source_section_id": "S09",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        119,
+        217.0,
+        219.0,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S09.L120",
+      "source_line": 120,
+      "source_section_id": "S09",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        120,
+        219.0,
+        221.5,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S09.L121",
+      "source_line": 121,
+      "source_section_id": "S09",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        121,
+        221.5,
+        227.2,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S09.L123",
+      "source_line": 123,
+      "source_section_id": "S09",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        123,
+        227.5,
+        231.2,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S09.L125",
+      "source_line": 125,
+      "source_section_id": "S09",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        125,
+        232.8,
+        234.6,
+        "heard",
+        0.95
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S09.L127",
+      "source_line": 127,
+      "source_section_id": "S09",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        127,
+        235.0,
+        237.2,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S09.L129",
+      "source_line": 129,
+      "source_section_id": "S09",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        129,
+        237.2,
+        239.5,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S09.L130",
+      "source_line": 130,
+      "source_section_id": "S09",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        130,
+        239.8,
+        242.0,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S09.L132",
+      "source_line": 132,
+      "source_section_id": "S09",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        132,
+        242.0,
+        245.5,
+        "heard",
+        0.96
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    },
+    {
+      "canonical_line_id": "PM.S09.L134",
+      "source_line": 134,
+      "source_section_id": "S09",
+      "row_present": true,
+      "row_shape_valid": true,
+      "bounds_valid": true,
+      "within_corrected_source_section": true,
+      "confidence_range_valid": true,
+      "provider_row_raw": [
+        134,
+        246.0,
+        248.8,
+        "heard",
+        0.97
+      ],
+      "derived_interval_retained": true,
+      "flags": []
+    }
+  ],
+  "row_start_order_issues": [],
+  "adjacent_row_overlaps_for_review": [
+    {
+      "previous_source_line": 112,
+      "next_source_line": 115,
+      "overlap_s": [
+        211.2,
+        211.5
+      ],
+      "policy": "Overlap is possible in stereo vocals; requires explicit event/occurrence review, not automatic rejection."
+    }
+  ],
+  "quoted_source_access_checks": [
+    {
+      "report_file": "ai_studio_return_03.json",
+      "quoted_field": "line25",
+      "source_line": 25,
+      "exact_match_including_whitespace": true,
+      "returned_text": "Birth pains inside the Handle, Doctors on stand by for the channel. Did I mention we got a lawyer - non contingent and pro bono … Kaleb K on retainer, that’s my dog dipped in flavor. Sassy Frass, yeah she’s a bitch -",
+      "exact_source_text": "Birth pains inside the Handle, Doctors on stand by for the channel. Did I mention we got a lawyer - non contingent and pro bono … Kaleb K on retainer, that’s my dog dipped in flavor. Sassy Frass, yeah she’s a bitch -",
+      "source_trailing_ascii_whitespace_count": 0,
+      "returned_trailing_ascii_whitespace_count": 0
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "quoted_field": "line121",
+      "source_line": 121,
+      "exact_match_including_whitespace": true,
+      "returned_text": "I said, I said, mirror mirror on the wall - (whispered) who’s meta mirrors all? ",
+      "exact_source_text": "I said, I said, mirror mirror on the wall - (whispered) who’s meta mirrors all? ",
+      "source_trailing_ascii_whitespace_count": 1,
+      "returned_trailing_ascii_whitespace_count": 1
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "quoted_field": "line125",
+      "source_line": 125,
+      "exact_match_including_whitespace": true,
+      "returned_text": "who’s meta mirrors all? ",
+      "exact_source_text": "who’s meta mirrors all? ",
+      "source_trailing_ascii_whitespace_count": 1,
+      "returned_trailing_ascii_whitespace_count": 1
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "quoted_field": "line25",
+      "source_line": 25,
+      "exact_match_including_whitespace": true,
+      "returned_text": "Birth pains inside the Handle, Doctors on stand by for the channel. Did I mention we got a lawyer - non contingent and pro bono … Kaleb K on retainer, that’s my dog dipped in flavor. Sassy Frass, yeah she’s a bitch -",
+      "exact_source_text": "Birth pains inside the Handle, Doctors on stand by for the channel. Did I mention we got a lawyer - non contingent and pro bono … Kaleb K on retainer, that’s my dog dipped in flavor. Sassy Frass, yeah she’s a bitch -",
+      "source_trailing_ascii_whitespace_count": 0,
+      "returned_trailing_ascii_whitespace_count": 0
+    }
+  ],
+  "sparse_vocal_event_checks": [
+    {
+      "report_file": "ai_studio_return_03.json",
+      "provider_event_index": 1,
+      "canonical_line_id": "PM.S03.L025",
+      "source_line": 25,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 25,
+        "start_s": 48.0,
+        "end_s": 52.0,
+        "audible_words": "Birth pains inside the Handle, Doctors on stand by for the channel",
+        "lane": "LEAD",
+        "notes": "Phrase 1 of run-on line 25"
+      },
+      "raw_external_claim": [
+        25,
+        48.0,
+        52.0,
+        "Birth pains inside the Handle, Doctors on stand by for the channel",
+        "LEAD",
+        "Phrase 1 of run-on line 25"
+      ],
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "provider_event_index": 2,
+      "canonical_line_id": "PM.S03.L025",
+      "source_line": 25,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 25,
+        "start_s": 52.0,
+        "end_s": 55.2,
+        "audible_words": "Did I mention we got a lawyer - non contingent and pro bono",
+        "lane": "LEAD",
+        "notes": "Phrase 2 of run-on line 25"
+      },
+      "raw_external_claim": [
+        25,
+        52.0,
+        55.2,
+        "Did I mention we got a lawyer - non contingent and pro bono",
+        "LEAD",
+        "Phrase 2 of run-on line 25"
+      ],
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "provider_event_index": 3,
+      "canonical_line_id": "PM.S03.L025",
+      "source_line": 25,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 25,
+        "start_s": 55.2,
+        "end_s": 58.5,
+        "audible_words": "Kaleb K on retainer, that’s my dog dipped in flavor",
+        "lane": "LEAD",
+        "notes": "Phrase 3 of run-on line 25"
+      },
+      "raw_external_claim": [
+        25,
+        55.2,
+        58.5,
+        "Kaleb K on retainer, that’s my dog dipped in flavor",
+        "LEAD",
+        "Phrase 3 of run-on line 25"
+      ],
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "provider_event_index": 4,
+      "canonical_line_id": "PM.S03.L025",
+      "source_line": 25,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 25,
+        "start_s": 58.5,
+        "end_s": 61.5,
+        "audible_words": "Sassy Frass, yeah she’s a bitch -",
+        "lane": "LEAD",
+        "notes": "Phrase 4 of run-on line 25"
+      },
+      "raw_external_claim": [
+        25,
+        58.5,
+        61.5,
+        "Sassy Frass, yeah she’s a bitch -",
+        "LEAD",
+        "Phrase 4 of run-on line 25"
+      ],
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "provider_event_index": 5,
+      "canonical_line_id": "PM.S03.L026",
+      "source_line": 26,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 26,
+        "start_s": 61.5,
+        "end_s": 65.5,
+        "audible_words": "Baddest bitch, in the mirror - with respect love endearing",
+        "lane": "LEAD",
+        "notes": "Phrase 1 of run-on line 26"
+      },
+      "raw_external_claim": [
+        26,
+        61.5,
+        65.5,
+        "Baddest bitch, in the mirror - with respect love endearing",
+        "LEAD",
+        "Phrase 1 of run-on line 26"
+      ],
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "provider_event_index": 6,
+      "canonical_line_id": "PM.S03.L026",
+      "source_line": 26,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 26,
+        "start_s": 65.5,
+        "end_s": 69.2,
+        "audible_words": "Power is a funny thang - what would you do with the rang?",
+        "lane": "LEAD",
+        "notes": "Phrase 2 of run-on line 26"
+      },
+      "raw_external_claim": [
+        26,
+        65.5,
+        69.2,
+        "Power is a funny thang - what would you do with the rang?",
+        "LEAD",
+        "Phrase 2 of run-on line 26"
+      ],
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "provider_event_index": 7,
+      "canonical_line_id": "PM.S03.L026",
+      "source_line": 26,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 26,
+        "start_s": 69.2,
+        "end_s": 73.0,
+        "audible_words": "micro macro - express the same .. but she’s the queen - no mistake she is the qwang",
+        "lane": "LEAD",
+        "notes": "Phrase 3 of run-on line 26"
+      },
+      "raw_external_claim": [
+        26,
+        69.2,
+        73.0,
+        "micro macro - express the same .. but she’s the queen - no mistake she is the qwang",
+        "LEAD",
+        "Phrase 3 of run-on line 26"
+      ],
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "provider_event_index": 8,
+      "canonical_line_id": "PM.S03.L026",
+      "source_line": 26,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 26,
+        "start_s": 73.0,
+        "end_s": 75.5,
+        "audible_words": "Salute, mama - auf Wiedersehen",
+        "lane": "LEAD",
+        "notes": "Phrase 4 of run-on line 26"
+      },
+      "raw_external_claim": [
+        26,
+        73.0,
+        75.5,
+        "Salute, mama - auf Wiedersehen",
+        "LEAD",
+        "Phrase 4 of run-on line 26"
+      ],
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "provider_event_index": 9,
+      "canonical_line_id": "PM.S08.L077",
+      "source_line": 77,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 77,
+        "start_s": 152.2,
+        "end_s": 153.2,
+        "audible_words": "CJ!",
+        "lane": "AD_LIB",
+        "notes": "Panned hype callout over beat drop"
+      },
+      "raw_external_claim": [
+        77,
+        152.2,
+        153.2,
+        "CJ!",
+        "AD_LIB",
+        "Panned hype callout over beat drop"
+      ],
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "provider_event_index": 10,
+      "canonical_line_id": "PM.S08.L092",
+      "source_line": 92,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 92,
+        "start_s": 174.5,
+        "end_s": 178.0,
+        "audible_words": "Then you realized there is no escape - life forces you to your knees",
+        "lane": "LEAD",
+        "notes": "Phrase 1 of run-on line 92"
+      },
+      "raw_external_claim": [
+        92,
+        174.5,
+        178.0,
+        "Then you realized there is no escape - life forces you to your knees",
+        "LEAD",
+        "Phrase 1 of run-on line 92"
+      ],
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "provider_event_index": 11,
+      "canonical_line_id": "PM.S08.L092",
+      "source_line": 92,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 92,
+        "start_s": 178.0,
+        "end_s": 180.8,
+        "audible_words": "It’s never late … you should have asked what kind of doc ta…",
+        "lane": "LEAD",
+        "notes": "Cadence trails off before shout"
+      },
+      "raw_external_claim": [
+        92,
+        178.0,
+        180.8,
+        "It’s never late … you should have asked what kind of doc ta…",
+        "LEAD",
+        "Cadence trails off before shout"
+      ],
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "provider_event_index": 12,
+      "canonical_line_id": "PM.S08.L093",
+      "source_line": 93,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 93,
+        "start_s": 180.8,
+        "end_s": 182.0,
+        "audible_words": "DOCTOR?",
+        "lane": "DOUBLE",
+        "notes": "Sudden loud vocal interjection"
+      },
+      "raw_external_claim": [
+        93,
+        180.8,
+        182.0,
+        "DOCTOR?",
+        "DOUBLE",
+        "Sudden loud vocal interjection"
+      ],
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "provider_event_index": 13,
+      "canonical_line_id": "PM.S08.L096",
+      "source_line": 96,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 96,
+        "start_s": 183.8,
+        "end_s": 187.2,
+        "audible_words": "Well if it is to be voodoo, how do you do. Do voodoo? Quite simple i declare",
+        "lane": "LEAD",
+        "notes": "Phrase 1 of run-on line 96"
+      },
+      "raw_external_claim": [
+        96,
+        183.8,
+        187.2,
+        "Well if it is to be voodoo, how do you do. Do voodoo? Quite simple i declare",
+        "LEAD",
+        "Phrase 1 of run-on line 96"
+      ],
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "provider_event_index": 14,
+      "canonical_line_id": "PM.S08.L096",
+      "source_line": 96,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 96,
+        "start_s": 187.2,
+        "end_s": 190.5,
+        "audible_words": "How do you feel- let’s start there … Vudology ain’t for the faint of heart",
+        "lane": "LEAD",
+        "notes": "Phrase 2 of run-on line 96"
+      },
+      "raw_external_claim": [
+        96,
+        187.2,
+        190.5,
+        "How do you feel- let’s start there … Vudology ain’t for the faint of heart",
+        "LEAD",
+        "Phrase 2 of run-on line 96"
+      ],
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "provider_event_index": 15,
+      "canonical_line_id": "PM.S09.L121",
+      "source_line": 121,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 121,
+        "start_s": 221.5,
+        "end_s": 225.2,
+        "audible_words": "I said, I said, mirror mirror on the wall",
+        "lane": "LEAD",
+        "notes": "Spoken lead hook phrase"
+      },
+      "raw_external_claim": [
+        121,
+        221.5,
+        225.2,
+        "I said, I said, mirror mirror on the wall",
+        "LEAD",
+        "Spoken lead hook phrase"
+      ],
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "provider_event_index": 16,
+      "canonical_line_id": "PM.S09.L121",
+      "source_line": 121,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 121,
+        "start_s": 225.5,
+        "end_s": 227.2,
+        "audible_words": "who's meta mirrors all?",
+        "lane": "ECHO",
+        "notes": "First whispered occurrence embedded in line 121"
+      },
+      "raw_external_claim": [
+        121,
+        225.5,
+        227.2,
+        "who's meta mirrors all?",
+        "ECHO",
+        "First whispered occurrence embedded in line 121"
+      ],
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_03.json",
+      "provider_event_index": 17,
+      "canonical_line_id": "PM.S09.L125",
+      "source_line": 125,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 125,
+        "start_s": 232.8,
+        "end_s": 234.6,
+        "audible_words": "who's meta mirrors all?",
+        "lane": "ECHO",
+        "notes": "Second independent whispered repetition at line 125 after line 123 pan line"
+      },
+      "raw_external_claim": [
+        125,
+        232.8,
+        234.6,
+        "who's meta mirrors all?",
+        "ECHO",
+        "Second independent whispered repetition at line 125 after line 123 pan line"
+      ],
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "provider_event_index": 1,
+      "canonical_line_id": "PM.S03.L025",
+      "source_line": 25,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 25,
+        "start_s": 48.0,
+        "end_s": 52.0,
+        "audible_words": "Birth pains inside the Handle, Doctors on stand by for the channel",
+        "lane": "LEAD",
+        "notes": "Phrase break 1 of run-on line 25"
+      },
+      "raw_external_claim": {
+        "source_line": 25,
+        "start_s": 48.0,
+        "end_s": 52.0,
+        "audible_words": "Birth pains inside the Handle, Doctors on stand by for the channel",
+        "lane": "LEAD",
+        "notes": "Phrase break 1 of run-on line 25"
+      },
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "provider_event_index": 2,
+      "canonical_line_id": "PM.S03.L025",
+      "source_line": 25,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 25,
+        "start_s": 52.0,
+        "end_s": 55.2,
+        "audible_words": "Did I mention we got a lawyer - non contingent and pro bono",
+        "lane": "LEAD",
+        "notes": "Phrase break 2 of run-on line 25"
+      },
+      "raw_external_claim": {
+        "source_line": 25,
+        "start_s": 52.0,
+        "end_s": 55.2,
+        "audible_words": "Did I mention we got a lawyer - non contingent and pro bono",
+        "lane": "LEAD",
+        "notes": "Phrase break 2 of run-on line 25"
+      },
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "provider_event_index": 3,
+      "canonical_line_id": "PM.S03.L025",
+      "source_line": 25,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 25,
+        "start_s": 55.2,
+        "end_s": 58.5,
+        "audible_words": "Kaleb K on retainer, that’s my dog dipped in flavor",
+        "lane": "LEAD",
+        "notes": "Phrase break 3 of run-on line 25"
+      },
+      "raw_external_claim": {
+        "source_line": 25,
+        "start_s": 55.2,
+        "end_s": 58.5,
+        "audible_words": "Kaleb K on retainer, that’s my dog dipped in flavor",
+        "lane": "LEAD",
+        "notes": "Phrase break 3 of run-on line 25"
+      },
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "provider_event_index": 4,
+      "canonical_line_id": "PM.S03.L025",
+      "source_line": 25,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 25,
+        "start_s": 58.5,
+        "end_s": 61.5,
+        "audible_words": "Sassy Frass, yeah she’s a bitch -",
+        "lane": "LEAD",
+        "notes": "Phrase break 4 of run-on line 25"
+      },
+      "raw_external_claim": {
+        "source_line": 25,
+        "start_s": 58.5,
+        "end_s": 61.5,
+        "audible_words": "Sassy Frass, yeah she’s a bitch -",
+        "lane": "LEAD",
+        "notes": "Phrase break 4 of run-on line 25"
+      },
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "provider_event_index": 5,
+      "canonical_line_id": "PM.S03.L026",
+      "source_line": 26,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 26,
+        "start_s": 61.5,
+        "end_s": 65.5,
+        "audible_words": "Baddest bitch, in the mirror - with respect love endearing",
+        "lane": "LEAD",
+        "notes": "Phrase break 1 of run-on line 26"
+      },
+      "raw_external_claim": {
+        "source_line": 26,
+        "start_s": 61.5,
+        "end_s": 65.5,
+        "audible_words": "Baddest bitch, in the mirror - with respect love endearing",
+        "lane": "LEAD",
+        "notes": "Phrase break 1 of run-on line 26"
+      },
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "provider_event_index": 6,
+      "canonical_line_id": "PM.S03.L026",
+      "source_line": 26,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 26,
+        "start_s": 65.5,
+        "end_s": 69.2,
+        "audible_words": "Power is a funny thang - what would you do with the rang?",
+        "lane": "LEAD",
+        "notes": "Phrase break 2 of run-on line 26"
+      },
+      "raw_external_claim": {
+        "source_line": 26,
+        "start_s": 65.5,
+        "end_s": 69.2,
+        "audible_words": "Power is a funny thang - what would you do with the rang?",
+        "lane": "LEAD",
+        "notes": "Phrase break 2 of run-on line 26"
+      },
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "provider_event_index": 7,
+      "canonical_line_id": "PM.S03.L026",
+      "source_line": 26,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 26,
+        "start_s": 69.2,
+        "end_s": 73.0,
+        "audible_words": "micro macro - express the same .. but she’s the queen - no mistake she is the qwang",
+        "lane": "LEAD",
+        "notes": "Phrase break 3 of run-on line 26"
+      },
+      "raw_external_claim": {
+        "source_line": 26,
+        "start_s": 69.2,
+        "end_s": 73.0,
+        "audible_words": "micro macro - express the same .. but she’s the queen - no mistake she is the qwang",
+        "lane": "LEAD",
+        "notes": "Phrase break 3 of run-on line 26"
+      },
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "provider_event_index": 8,
+      "canonical_line_id": "PM.S03.L026",
+      "source_line": 26,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 26,
+        "start_s": 73.0,
+        "end_s": 75.5,
+        "audible_words": "Salute, mama - auf Wiedersehen",
+        "lane": "LEAD",
+        "notes": "Phrase break 4 of run-on line 26"
+      },
+      "raw_external_claim": {
+        "source_line": 26,
+        "start_s": 73.0,
+        "end_s": 75.5,
+        "audible_words": "Salute, mama - auf Wiedersehen",
+        "lane": "LEAD",
+        "notes": "Phrase break 4 of run-on line 26"
+      },
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "provider_event_index": 9,
+      "canonical_line_id": "PM.S08.L077",
+      "source_line": 77,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 77,
+        "start_s": 152.2,
+        "end_s": 153.2,
+        "audible_words": "CJ!",
+        "lane": "AD_LIB",
+        "notes": "Pitch-shifted stereo callout ad-lib answering 'Jung in the back room'"
+      },
+      "raw_external_claim": {
+        "source_line": 77,
+        "start_s": 152.2,
+        "end_s": 153.2,
+        "audible_words": "CJ!",
+        "lane": "AD_LIB",
+        "notes": "Pitch-shifted stereo callout ad-lib answering 'Jung in the back room'"
+      },
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "provider_event_index": 10,
+      "canonical_line_id": "PM.S08.L092",
+      "source_line": 92,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 92,
+        "start_s": 174.5,
+        "end_s": 178.0,
+        "audible_words": "Then you realized there is no escape - life forces you to your knees",
+        "lane": "LEAD",
+        "notes": "Phrase break 1 of run-on line 92"
+      },
+      "raw_external_claim": {
+        "source_line": 92,
+        "start_s": 174.5,
+        "end_s": 178.0,
+        "audible_words": "Then you realized there is no escape - life forces you to your knees",
+        "lane": "LEAD",
+        "notes": "Phrase break 1 of run-on line 92"
+      },
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "provider_event_index": 11,
+      "canonical_line_id": "PM.S08.L092",
+      "source_line": 92,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 92,
+        "start_s": 178.0,
+        "end_s": 180.8,
+        "audible_words": "It’s never late … you should have asked what kind of doc ta…",
+        "lane": "LEAD",
+        "notes": "Phrase break 2 of run-on line 92, trailing hesitantly before shout"
+      },
+      "raw_external_claim": {
+        "source_line": 92,
+        "start_s": 178.0,
+        "end_s": 180.8,
+        "audible_words": "It’s never late … you should have asked what kind of doc ta…",
+        "lane": "LEAD",
+        "notes": "Phrase break 2 of run-on line 92, trailing hesitantly before shout"
+      },
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "provider_event_index": 12,
+      "canonical_line_id": "PM.S08.L093",
+      "source_line": 93,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 93,
+        "start_s": 180.8,
+        "end_s": 182.0,
+        "audible_words": "DOCTOR?",
+        "lane": "DOUBLE",
+        "notes": "Sudden loud doubled vocal interjection over transitional break"
+      },
+      "raw_external_claim": {
+        "source_line": 93,
+        "start_s": 180.8,
+        "end_s": 182.0,
+        "audible_words": "DOCTOR?",
+        "lane": "DOUBLE",
+        "notes": "Sudden loud doubled vocal interjection over transitional break"
+      },
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "provider_event_index": 13,
+      "canonical_line_id": "PM.S08.L096",
+      "source_line": 96,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 96,
+        "start_s": 183.8,
+        "end_s": 187.2,
+        "audible_words": "Well if it is to be voodoo, how do you do. Do voodoo? Quite simple i declare",
+        "lane": "LEAD",
+        "notes": "Phrase break 1 of run-on line 96"
+      },
+      "raw_external_claim": {
+        "source_line": 96,
+        "start_s": 183.8,
+        "end_s": 187.2,
+        "audible_words": "Well if it is to be voodoo, how do you do. Do voodoo? Quite simple i declare",
+        "lane": "LEAD",
+        "notes": "Phrase break 1 of run-on line 96"
+      },
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "provider_event_index": 14,
+      "canonical_line_id": "PM.S08.L096",
+      "source_line": 96,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 96,
+        "start_s": 187.2,
+        "end_s": 190.5,
+        "audible_words": "How do you feel- let’s start there … Vudology ain’t for the faint of heart",
+        "lane": "LEAD",
+        "notes": "Phrase break 2 of run-on line 96"
+      },
+      "raw_external_claim": {
+        "source_line": 96,
+        "start_s": 187.2,
+        "end_s": 190.5,
+        "audible_words": "How do you feel- let’s start there … Vudology ain’t for the faint of heart",
+        "lane": "LEAD",
+        "notes": "Phrase break 2 of run-on line 96"
+      },
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "provider_event_index": 15,
+      "canonical_line_id": "PM.S09.L121",
+      "source_line": 121,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 121,
+        "start_s": 225.5,
+        "end_s": 227.2,
+        "audible_words": "who's meta mirrors all?",
+        "lane": "ECHO",
+        "notes": "First whispered occurrence, embedded parenthetical phrase following spoken lead at 221.5-225.2s"
+      },
+      "raw_external_claim": {
+        "source_line": 121,
+        "start_s": 225.5,
+        "end_s": 227.2,
+        "audible_words": "who's meta mirrors all?",
+        "lane": "ECHO",
+        "notes": "First whispered occurrence, embedded parenthetical phrase following spoken lead at 221.5-225.2s"
+      },
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "provider_event_index": 16,
+      "canonical_line_id": "PM.S09.L125",
+      "source_line": 125,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": true,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 125,
+        "start_s": 232.8,
+        "end_s": 234.6,
+        "audible_words": "who's meta mirrors all?",
+        "lane": "ECHO",
+        "notes": "Second independent whispered repetition at line 125, positioned between line 123 pan repeat and line 127"
+      },
+      "raw_external_claim": {
+        "source_line": 125,
+        "start_s": 232.8,
+        "end_s": 234.6,
+        "audible_words": "who's meta mirrors all?",
+        "lane": "ECHO",
+        "notes": "Second independent whispered repetition at line 125, positioned between line 123 pan repeat and line 127"
+      },
+      "independent_listening_performed": false,
+      "accepted": false
+    },
+    {
+      "report_file": "ai_studio_return_04.json",
+      "provider_event_index": 17,
+      "canonical_line_id": "PM.S09.L125",
+      "source_line": 125,
+      "source_line_is_canonical": true,
+      "bounds_valid": true,
+      "within_provider_line_envelope": false,
+      "within_corrected_source_section": true,
+      "normalized_external_claim": {
+        "source_line": 125,
+        "start_s": 234.6,
+        "end_s": 235.8,
+        "audible_words": "[diffuse echo tail: all... all...]",
+        "lane": "ECHO",
+        "notes": "Filtered stereo delay tail trailing from line 125 into the ambient synth bed"
+      },
+      "raw_external_claim": {
+        "source_line": 125,
+        "start_s": 234.6,
+        "end_s": 235.8,
+        "audible_words": "[diffuse echo tail: all... all...]",
+        "lane": "ECHO",
+        "notes": "Filtered stereo delay tail trailing from line 125 into the ambient synth bed"
+      },
+      "independent_listening_performed": false,
+      "accepted": false
+    }
+  ],
+  "anchor_to_full_line_checks": [
+    {
+      "source_line": 2,
+      "canonical_line_id": "PM.S01.L002",
+      "anchor_report": "ai_studio_return_02.json",
+      "full_map_report": "ai_studio_return_03.json",
+      "anchor_interval_s": [
+        1.8,
+        4.5
+      ],
+      "line_interval_s": [
+        1.8,
+        4.5
+      ],
+      "anchor_contained_in_full_line": true,
+      "intervals_overlap": true,
+      "requires_reconciliation": false,
+      "interpretation": "A longer full-line interval can contain a short anchor. Disjoint intervals or an anchor extending beyond its line are retained as provider revisions, not silently merged."
+    },
+    {
+      "source_line": 19,
+      "canonical_line_id": "PM.S02.L019",
+      "anchor_report": "ai_studio_return_02.json",
+      "full_map_report": "ai_studio_return_03.json",
+      "anchor_interval_s": [
+        35.0,
+        37.8
+      ],
+      "line_interval_s": [
+        35.0,
+        37.8
+      ],
+      "anchor_contained_in_full_line": true,
+      "intervals_overlap": true,
+      "requires_reconciliation": false,
+      "interpretation": "A longer full-line interval can contain a short anchor. Disjoint intervals or an anchor extending beyond its line are retained as provider revisions, not silently merged."
+    },
+    {
+      "source_line": 25,
+      "canonical_line_id": "PM.S03.L025",
+      "anchor_report": "ai_studio_return_02.json",
+      "full_map_report": "ai_studio_return_03.json",
+      "anchor_interval_s": [
+        48.0,
+        50.6
+      ],
+      "line_interval_s": [
+        48.0,
+        61.5
+      ],
+      "anchor_contained_in_full_line": true,
+      "intervals_overlap": true,
+      "requires_reconciliation": false,
+      "interpretation": "A longer full-line interval can contain a short anchor. Disjoint intervals or an anchor extending beyond its line are retained as provider revisions, not silently merged."
+    },
+    {
+      "source_line": 42,
+      "canonical_line_id": "PM.S05.L042",
+      "anchor_report": "ai_studio_return_02.json",
+      "full_map_report": "ai_studio_return_03.json",
+      "anchor_interval_s": [
+        95.0,
+        97.2
+      ],
+      "line_interval_s": [
+        95.0,
+        100.8
+      ],
+      "anchor_contained_in_full_line": true,
+      "intervals_overlap": true,
+      "requires_reconciliation": false,
+      "interpretation": "A longer full-line interval can contain a short anchor. Disjoint intervals or an anchor extending beyond its line are retained as provider revisions, not silently merged."
+    },
+    {
+      "source_line": 76,
+      "canonical_line_id": "PM.S08.L076",
+      "anchor_report": "ai_studio_return_02.json",
+      "full_map_report": "ai_studio_return_03.json",
+      "anchor_interval_s": [
+        150.8,
+        152.4
+      ],
+      "line_interval_s": [
+        150.8,
+        152.2
+      ],
+      "anchor_contained_in_full_line": false,
+      "intervals_overlap": true,
+      "requires_reconciliation": true,
+      "interpretation": "A longer full-line interval can contain a short anchor. Disjoint intervals or an anchor extending beyond its line are retained as provider revisions, not silently merged."
+    },
+    {
+      "source_line": 77,
+      "canonical_line_id": "PM.S08.L077",
+      "anchor_report": "ai_studio_return_02.json",
+      "full_map_report": "ai_studio_return_03.json",
+      "anchor_interval_s": [
+        152.2,
+        153.2
+      ],
+      "line_interval_s": [
+        152.2,
+        153.2
+      ],
+      "anchor_contained_in_full_line": true,
+      "intervals_overlap": true,
+      "requires_reconciliation": false,
+      "interpretation": "A longer full-line interval can contain a short anchor. Disjoint intervals or an anchor extending beyond its line are retained as provider revisions, not silently merged."
+    },
+    {
+      "source_line": 93,
+      "canonical_line_id": "PM.S08.L093",
+      "anchor_report": "ai_studio_return_02.json",
+      "full_map_report": "ai_studio_return_03.json",
+      "anchor_interval_s": [
+        180.8,
+        182.0
+      ],
+      "line_interval_s": [
+        180.8,
+        182.0
+      ],
+      "anchor_contained_in_full_line": true,
+      "intervals_overlap": true,
+      "requires_reconciliation": false,
+      "interpretation": "A longer full-line interval can contain a short anchor. Disjoint intervals or an anchor extending beyond its line are retained as provider revisions, not silently merged."
+    },
+    {
+      "source_line": 102,
+      "canonical_line_id": "PM.S08.L102",
+      "anchor_report": "ai_studio_return_02.json",
+      "full_map_report": "ai_studio_return_03.json",
+      "anchor_interval_s": [
+        200.0,
+        202.8
+      ],
+      "line_interval_s": [
+        200.0,
+        202.5
+      ],
+      "anchor_contained_in_full_line": false,
+      "intervals_overlap": true,
+      "requires_reconciliation": true,
+      "interpretation": "A longer full-line interval can contain a short anchor. Disjoint intervals or an anchor extending beyond its line are retained as provider revisions, not silently merged."
+    },
+    {
+      "source_line": 116,
+      "canonical_line_id": "PM.S09.L116",
+      "anchor_report": "ai_studio_return_02.json",
+      "full_map_report": "ai_studio_return_03.json",
+      "anchor_interval_s": [
+        213.0,
+        214.2
+      ],
+      "line_interval_s": [
+        213.0,
+        214.2
+      ],
+      "anchor_contained_in_full_line": true,
+      "intervals_overlap": true,
+      "requires_reconciliation": false,
+      "interpretation": "A longer full-line interval can contain a short anchor. Disjoint intervals or an anchor extending beyond its line are retained as provider revisions, not silently merged."
+    },
+    {
+      "source_line": 125,
+      "canonical_line_id": "PM.S09.L125",
+      "anchor_report": "ai_studio_return_02.json",
+      "full_map_report": "ai_studio_return_03.json",
+      "anchor_interval_s": [
+        226.0,
+        227.8
+      ],
+      "line_interval_s": [
+        232.8,
+        234.6
+      ],
+      "anchor_contained_in_full_line": false,
+      "intervals_overlap": false,
+      "requires_reconciliation": true,
+      "interpretation": "A longer full-line interval can contain a short anchor. Disjoint intervals or an anchor extending beyond its line are retained as provider revisions, not silently merged."
+    },
+    {
+      "source_line": 127,
+      "canonical_line_id": "PM.S09.L127",
+      "anchor_report": "ai_studio_return_02.json",
+      "full_map_report": "ai_studio_return_03.json",
+      "anchor_interval_s": [
+        235.0,
+        237.2
+      ],
+      "line_interval_s": [
+        235.0,
+        237.2
+      ],
+      "anchor_contained_in_full_line": true,
+      "intervals_overlap": true,
+      "requires_reconciliation": false,
+      "interpretation": "A longer full-line interval can contain a short anchor. Disjoint intervals or an anchor extending beyond its line are retained as provider revisions, not silently merged."
+    },
+    {
+      "source_line": 134,
+      "canonical_line_id": "PM.S09.L134",
+      "anchor_report": "ai_studio_return_02.json",
+      "full_map_report": "ai_studio_return_03.json",
+      "anchor_interval_s": [
+        246.2,
+        248.8
+      ],
+      "line_interval_s": [
+        246.0,
+        248.8
+      ],
+      "anchor_contained_in_full_line": true,
+      "intervals_overlap": true,
+      "requires_reconciliation": false,
+      "interpretation": "A longer full-line interval can contain a short anchor. Disjoint intervals or an anchor extending beyond its line are retained as provider revisions, not silently merged."
+    }
+  ],
+  "followup_comparison": {
+    "report_file": "ai_studio_return_04.json",
+    "row_comparisons": [
+      {
+        "source_line": 129,
+        "main_row_raw": [
+          129,
+          237.2,
+          239.5,
+          "heard",
+          0.96
+        ],
+        "followup_row_raw": [
+          129,
+          237.2,
+          239.5,
+          "heard",
+          0.96
+        ],
+        "exact_match": true,
+        "followup_adopted": false
+      },
+      {
+        "source_line": 130,
+        "main_row_raw": [
+          130,
+          239.8,
+          242.0,
+          "heard",
+          0.96
+        ],
+        "followup_row_raw": [
+          130,
+          239.8,
+          242.0,
+          "heard",
+          0.96
+        ],
+        "exact_match": true,
+        "followup_adopted": false
+      },
+      {
+        "source_line": 132,
+        "main_row_raw": [
+          132,
+          242.0,
+          245.5,
+          "heard",
+          0.96
+        ],
+        "followup_row_raw": [
+          132,
+          242.0,
+          245.5,
+          "heard",
+          0.96
+        ],
+        "exact_match": true,
+        "followup_adopted": false
+      },
+      {
+        "source_line": 134,
+        "main_row_raw": [
+          134,
+          246.0,
+          248.8,
+          "heard",
+          0.97
+        ],
+        "followup_row_raw": [
+          134,
+          246.0,
+          248.8,
+          "heard",
+          0.97
+        ],
+        "exact_match": true,
+        "followup_adopted": false
+      }
+    ],
+    "missing_lines_added_to_main_map": [],
+    "reason_no_merge": "Completed report03 already contains all93 canonical lines. Report04 is preserved as a separate followup, not an override.",
+    "event_core_shared_count": 16,
+    "main_events_absent_from_followup": [
+      {
+        "source_line": 121,
+        "start_s": 221.5,
+        "end_s": 225.2,
+        "audible_words": "I said, I said, mirror mirror on the wall",
+        "lane": "LEAD",
+        "notes": "Spoken lead hook phrase"
+      }
+    ],
+    "followup_additional_events": [
+      {
+        "source_line": 125,
+        "start_s": 234.6,
+        "end_s": 235.8,
+        "audible_words": "[diffuse echo tail: all... all...]",
+        "lane": "ECHO",
+        "notes": "Filtered stereo delay tail trailing from line 125 into the ambient synth bed"
+      }
+    ],
+    "event_versions_merged": false
+  },
+  "cross_report_concerns": [
+    {
+      "kind": "second_whisper_revision",
+      "source_line": 125,
+      "anchor02_s": [
+        226.0,
+        227.8
+      ],
+      "row03_s": [
+        232.8,
+        234.6
+      ],
+      "detail": "Full map separates first embedded line121 whisper from later independent line125. This resolves prior shared-event ambiguity as a new provider claim; independent listening has not established the revision."
+    },
+    {
+      "kind": "followup_event_set_changes",
+      "detail": "Report04 omits the report03 line121 LEAD event221.5-225.2 and adds line125 echo tail234.6-235.8. Keep both versions. The added tail extends beyond the line125 envelope234.6 and overlaps line127 beginning235.0; it may be a valid echo, not a proven contradiction."
+    },
+    {
+      "kind": "row_section_containment_conflict",
+      "source_line": 54,
+      "row_s": [
+        115.8,
+        116.8
+      ],
+      "corrected_section_id": "S05",
+      "corrected_section_s": [
+        94.8,
+        116.0
+      ],
+      "derived_interval_withheld": true,
+      "detail": "Do not extend or truncate the reported row or section without explicit audible-boundary reconciliation."
+    },
+    {
+      "kind": "row_section_containment_conflict",
+      "source_line": 112,
+      "row_s": [
+        210.8,
+        211.5
+      ],
+      "corrected_section_id": "S08",
+      "corrected_section_s": [
+        150.8,
+        211.0
+      ],
+      "derived_interval_withheld": true,
+      "detail": "Do not extend or truncate the reported row or section without explicit audible-boundary reconciliation."
+    }
+  ],
+  "provider_confidence_policy": "Values are uncalibrated external claims. Static bounds and textual access are not verification of onsets, offsets or vocal lanes.",
+  "historical_partial_snapshot_policy": "Any ai_studio_return_03.partial.txt is an earlier in-progress snapshot. Completed ai_studio_return_03.json is the full response; no failed-output disposition is inferred from the snapshot."
+}

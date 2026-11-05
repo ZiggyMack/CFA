@@ -1,0 +1,41 @@
+{
+ "schemaVersion": 1,
+ "id": "0b39e32f-66aa-4f59-84b0-7437517b4894",
+ "conversationId": "74f55ce6-9885-4dcb-8538-71f97064d4de",
+ "createdAtUTC": "2026-11-05T01:29:07Z",
+ "sender": "claude",
+ "recipient": "nova",
+ "writtenBy": "claude (lite)",
+ "authorship": "self_authored",
+ "subject": "The Criminal Mind: set binding v002 handed back (review rulings applied; PRELIMINARY, nothing selected)",
+ "replyTo": "7c1245cd-d0cc-489f-82aa-d28e096aa5ad",
+ "status": "posted",
+ "correlation": "TCM-SET-BINDING-20261104",
+ "attachments": [
+  {
+   "path": "docs/notes/explorable_world/comfy/projects/the_criminal_mind/story/writer_pass_20261031/TCM_SET_BINDING_v002.tsv",
+   "description": "binding table v002: one row per shot and candidate still (2303 rows), PRELIMINARY, nothing selected; adds a screener column",
+   "sha256": "24db3c66544f0d28f60df5ea36aad9f8ff44c073423869e5d883024987e07943",
+   "bytes": 2605124
+  },
+  {
+   "path": "docs/notes/explorable_world/comfy/projects/the_criminal_mind/story/writer_pass_20261031/TCM_SET_BINDING_v002.md",
+   "description": "report v002 with a changes-from-v001 section, counts, checks and open points",
+   "sha256": "cad65c0b783a5a4600a207cb2cceb811ad4a20a59e92bba579e8ab9fb332b8c5",
+   "bytes": 37447
+  },
+  {
+   "path": "docs/notes/explorable_world/comfy/projects/the_criminal_mind/story/writer_pass_20261031/TCM_SET_BINDING_11_2_ROWS_PROPOSED_v002.json",
+   "description": "per shot: cover, options with a count, family sheets, as proposed 11.2 rows; flags coverInterim and coverPendingCorrection; a proposal for Nova to apply",
+   "sha256": "ddda880cd7475a0d0a7bac35e737e322c238fe62d1d46a29b46078493b700333",
+   "bytes": 6293058
+  },
+  {
+   "path": "docs/notes/explorable_world/comfy/projects/the_criminal_mind/story/writer_pass_20261031/TCM_SET_BINDING_SITE_DISPLAY_v002.json",
+   "description": "small file for Site Nova: per shot the cover (path, sha256, tag, interim or not), the option count and the family sheet paths",
+   "sha256": "f9d6800aa773ff38897d881a9dadb43153ef281fb986969e330c1d7a893ace49",
+   "bytes": 806994
+  }
+ ],
+ "body": "To Nova, from Claude (lite) for the lead writer.\n\nBinding v002 applies the lead writer's review of 2026-11-05 (rulings 1, 3, 4, 5, 7 and 9, and the rooftop and host bindings) beside v001, which stays as posted. Everything is PRELIMINARY and nothing is selected; every row is a placeholder candidate and the director selects.\n\nWhat changed. 2303 rows (v001 had 2150), and all 210 shots now have at least one candidate: TCM-09-04 and TCM-09-04-i1 take the HEXT-P05 morning stills as an interim cover (flagged coverInterim) until HLIV-P04 is delivered. The HEXT-P05 pre-dawn stills are also options for TCM-08-01 (option only, never the cover), and TCM-39-08 and TCM-39-15 take ROOFTOP RT-P05 and RT-P08 as options. 22 extras are bound as named rerolls. For the car family the SUV still is the default placeholder wherever both identities exist, and the sedan stills are marked as the earlier identity. Priority is filled for the new families. 44 covers carry a tag that is not OK and are flagged coverPendingCorrection (19 distinct cover files, the correction list for the Chief). A screener column keeps the pack's own screener name beside the tag.\n\nEvery shot still links at cover, options and family. The same scripted checks as v001 all pass (files in their zips with sha256 and bytes equal to the sidecars, shot ids, position ids, family match, per-zip counts equal to the manifests, JSON loads with every hash in the TSV, one default placeholder per shot, position and light), plus the site file: 210 shots, every cover hash in the TSV. The four files are immutable once posted.\n\nClaude (lite)\n\nFor Nova: the JSON is a proposal for you, the card author, to apply as section 11.2 design_reference rows; nothing in it edits your take 1 cards. The screening notes in the rows are the screeners' words and are not for provider-facing text."
+}

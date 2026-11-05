@@ -1,0 +1,16 @@
+# V4 FALCON QA, HD-ARMOR-SWAP-01 v004 (NON-SPEC), lane = grill patch v002 + outside-diff + quick plain-4x star confirm (star erase passed by V_2: L 141 vs 140-147). V_4 20261021T142912Z (10:29 EDT 2026-10-21). FIX ROUND 2 of 2 (v002 + v003 reviewed FIX) -> ROUND-CAP on fail. Cites previous return V4_FALCON_armorswap01v003_grillerase_20261021T121520Z_v001.tsv. Existing images only; no Z_ script run; nothing edited.
+# INPUT SHAS (verified): v004 948bae97a494df625f2c2b2a1449d9b4528873a4dab7d3663d88ba735c5cba86 | base = ORIGINAL HD-ARMOR-SWAP-01.jpg aea8323ad9b2969839ad2581b153f1343e9324047645148ca6140f790033af24 (note: aea8323a is the original, not v003 a1d0426d; compose log confirms built on original) | v003 a1d0426d | grill patch v002 e33e9c98 / mask v002 3b24752b (1395 px) | Z_5 patch v004r6 13d2a065 / mask 7b50225d (10623 px) / chainmask b6d832df | union adfee281 (12018 px = my union, xor 0).
+# CROPS: V4_FALCON_armorswap01v004_grill_20261021T142912Z_mouth4x_v001.png ad1840f9 | V4_FALCON_armorswap01v004_grill_20261021T142912Z_T1canine6x_v001.png f3e74ddd | V4_FALCON_armorswap01v004_grill_20261021T142912Z_startop4x_v001.png 7860e43c
+item	box	measured	result	note
+outside_diff_vs_orig	frame minus union(z5 mask + grill mask)	0 px >12 (max 12)	PASS	claim confirmed
+outside_diff_vs_v003	frame minus union	56 px >12, all x572-633 y299-329 = v003's old grill px now back to original (v004-orig <=12)	PASS	expected (grill v001 dropped)
+grill_patch_applied	grill mask 3b24752b	v004 vs patch v002 e33e9c98 inside mask: max 10, 0 px >12	PASS	single save q97 per log
+chain	chainmask minus grill mask	0 px >12 vs orig (the 645 changed chainmask px are all tooth px inside the grill mask)	PASS	-
+glyph_hoops	glyph x655-778 y345-535; hoops L/R; nostril	glyph v004-v003 0 px >12 (max 2); hoops 0 >12 (max 9/6); nostril 0 (max 5)	PASS	unchanged
+centrals	T3 x595-612, T4 x613-632	WHITE now; T3 L med 195, T4 211 (T7 ref 179); smooth, no gold; at 1x/4x read as white teeth	PASS	-
+laterals_rcanine	T2 x584-594, T5 x632-644, T6 x645-656	gold, unchanged from original/v001 carry-over	PASS	-
+lower_row	x585-650 y326-340	original silver-white	PASS	as v003 ruling
+T1_canine_evenness	img-left canine x575-583 y310-330	visible at plain 4x and 6x: pocked/speckled texture with a regular pattern of dark 1-px dots (12% of tooth px < local median-15, vs T2 4%) and an olive/greenish cast against T2's warm gold. Reads gold at 1x	FIX (critical grill) - ROUND-CAP	Gold must be even, not blotchy; defect visible at plain 4x so not advisory
+T1_tip_length	T1 vs T2 gold bottom	T1 median y329.5 vs T2 y326 = +3.5 px (target 1-3)	ADVISORY	per Chief ruling (1 px over, not visible at 4x)
+star_quick_4x	x615-670 y505-585 plain 4x	v003's lighter top-arm patch between the spires is gone; reads as skin; specks from v003 list now at local L (+-6)	PASS (confirm of V_2)	no full star analysis per instruction
+VERDICT	-	-	FIX - ROUND-CAP	Only item: T1 img-left canine speckle/olive cast. To Chief as a Ziggy call: (a) accept as is (reads gold at 1x), or (b) redo option: re-texture T1 x575-583 y310-330 from T2's own gold (no mirror-tile dot pattern), warm hue to T2, keep shape/tip; everything else stays v004. No round 3 without Chief.

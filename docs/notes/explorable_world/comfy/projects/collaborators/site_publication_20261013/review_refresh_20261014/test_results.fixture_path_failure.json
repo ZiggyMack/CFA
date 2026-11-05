@@ -1,0 +1,48 @@
+{
+  "passed": false,
+  "results": [
+    {
+      "name": "test_review_direct_clarification.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"scenarios\":6,\"portraitRatingCases\":48,\"portraitFixtures\":[\"LAG-602a9fd4021dc356\",\"LAG-63126392af1ccf8b\"],\"fixture\":\"HD-FALCON-381883a6beb1ed5e\",\"staleStatusResolved\":true,\"newerIntentPreserved\":true,\"bootReviewWrites\":0,\"projectGradesAssigned\":false,\"browserVisualQA\":false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_review_requests.cjs",
+      "exitCode": 0,
+      "stdout": "Review requests and assistant proposals: 7 checks passed.\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_reference_scope.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"scenarios\":8,\"browserVisualQA\":false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_creative_review.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"scenarios\":5,\"fixture\":\"HD-FALCON-194702e9e041362d\",\"namedRecipients\":true,\"productionPlanIndependent\":true,\"providerMessagesSent\":0,\"projectGradesAssigned\":false,\"browserVisualQA\":false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_reference_validation.cjs",
+      "exitCode": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"scenarios\": 19,\n  \"checks\": [\n    \"Canonical reviews and runtime legacy behavior preserved\",\n    \"independent axes, N/A and scoped pass\",\n    \"missing target/reference pixels and required occlusion cannot pass\",\n    \"required jewelry versus allowed natural variation\",\n    \"target, reference, nomination, scope, version and criteria invalidation\",\n    \"atomic nested validation and immutable collisions\",\n    \"history and old backup imports never clear evidence\",\n    \"sidecar restart and full-review round trip retain raw archive and history\",\n    \"evidence-only storage failure does not interrupt legacy saves\",\n    \"corrupt/future evidence storage remains exportable and unmodified\",\n    \"failed evidence save keeps the visible export warning\",\n    \"unread stores retain raw metadata and valid histories independently\",\n    \"newer unrelated N/A cannot hide a current applicable pass\",\n    \"character and scene form criteria with identical IDs remain independent\",\n    \"all scopes stay visible; narrower pass cannot hide unresolved work\",\n    \"technical readiness requires declarations bound to ingredients and shoot plan\",\n    \"mouth board counts and actual toggle/asset handlers\",\n    \"actual evidence form saves a scoped record without changing stars\",\n    \"real serialized review-file writer includes evidence and preserved legacy archive\"\n  ],\n  \"browserVisualQA\": false,\n  \"productionWrites\": 0,\n  \"syntheticAssessmentsPersistedToSource\": 0\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_working_bom.cjs",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "node:fs:440\n    return binding.readFileUtf8(path, stringToFlags(options.flag));\n                   ^\n\nError: ENOENT: no such file or directory, open 'D:\\Documents\\CFA\\docs\\notes\\downloads\\cfa-review (9).json'\n    at Object.readFileSync (node:fs:440:20)\n    at Object.<anonymous> (D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\visual_library\\test_working_bom.cjs:11:31)\n    at Module._compile (node:internal/modules/cjs/loader:1761:14)\n    at Object..js (node:internal/modules/cjs/loader:1893:10)\n    at Module.load (node:internal/modules/cjs/loader:1481:32)\n    at Module._load (node:internal/modules/cjs/loader:1300:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47 {\n  errno: -4058,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: 'D:\\\\Documents\\\\CFA\\\\docs\\\\notes\\\\downloads\\\\cfa-review (9).json'\n}\n\nNode.js v24.11.1\n"
+    },
+    {
+      "name": "test_mission_gun_variants.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"uniqueVariants\":17,\"uniqueOutfits\":17,\"initialUnreviewed\":0,\"initialReviewed\":16,\"initialHidden\":1,\"initialKeep\":1,\"initialNeedsFixes\":15,\"yellowFullOutfit\":8,\"yellowVariantIncluded\":true,\"boundImageButtonsVerified\":16,\"outfitAnchorRoutesVerified\":16,\"browserOverlayImport\":true,\"liveReviewRefresh\":true,\"archiveAndRemovalFiltering\":true,\"fullOutfitCountsRespectRemoval\":true,\"scopedGunNotesPreserved\":true,\"allReviewedStatusDerived\":true,\"fabricatedApprovals\":0,\"localStorageWrites\":0,\"catalogMutations\":0,\"canonicalTaskMutations\":0,\"browserVisualQA\":false,\"sourcePins\":{\"libraryJS\":\"08fd98ecf26685395bd42249eacd0c050816ba4e5e22370634fc73dcc86f2955\",\"catalogJS\":\"29e0ff04e59d3c7b2ddf7e1458928a4d9f7f0e4987fa9d3dbb940cb977bb14c7\"},\"reviewedAssets\":[{\"id\":\"HD-RETURN-86cb39e4d5b6\",\"status\":\"needs_fixes\",\"note\":\"fine for an alternative universe DoLO - but it has failed to adhere to our design standard...strictly from a add a gun accessor yto this look - yes APPROVED\"},{\"id\":\"HD-RETURN-efc1886a0d62\",\"status\":\"needs_fixes\",\"note\":\"as far as adding the gun to the outfit - approved...but we still have no reference of the complete package for our DoLO\"}]}\n",
+      "stderr": ""
+    }
+  ],
+  "browserVisualQA": false
+}

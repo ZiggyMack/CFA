@@ -1,0 +1,24 @@
+- C21-01_Z_2: pass, glassed dunes; worm tails slightly doubled
+- C21-02_Z_2: pass, top pick: mirror-glass sunset (Meta Mirrors mood)
+- C21-03_Z_2_FAIL: worms became headless striped tubes, AL tilted
+- C21-04_Z_2_FAIL: worms rendered as dragon/lizard heads
+- C21-05_Z_2: pass, breather image, glittering glass flat
+- C21-06_Z_2: pass, melted car, violet dusk
+- C21-07_Z_2_FAIL: face drifted off ref, GAIB lost G; reflection concept good
+- C21-08_Z_2_FAIL: AL became triangle glyph, worms cobra-like
+- C21-09_Z_2: pass, green glass dunes sunrise; toothed worm mouths
+- C21-10_Z_2: pass, top pick: lightning glass storm, best worm mouths yet
+- C21-11_Z_2: pass (soft): glass statues; worm heads a bit snake-like
+- C21-12_Z_2: pass (soft): Milky Way; AL serif-stylized
+- C21-13_Z_2_FAIL: AL became triangle glyph, worms dragon-headed
+- C21-14_Z_2: pass, top pick: prismatic shards, toothed worm mouths
+- C21-15_Z_2: pass, frozen lava glass; clean AL fix worked
+- C21-16_Z_2: pass, top pick: fog + glass tree, crisp identity
+- C21-17_Z_2: pass, glazed jet fuselage; worm heads slightly snake-like
+- C21-18_Z_2_FAIL: GAB (I missing), worms alien-like, setting reads as ocean
+- C21-19_Z_2: pass (soft): smoky glass sheets; worm heads snake-like
+- C21-20_Z_2: pass, glass flame spires red sunset
+- C21-21_Z_2_FAIL: worms turned biomechanical/alien
+- C21-22_Z_2: pass (soft): aurora glass; worm heads dragon-ish
+
+SUMMARY: requested 22, returned 22, pass 15 (several soft: snake-like worm heads), fail 7. Breather in C21-05. Best: C21-10, C21-14, C21-16, C21-02.

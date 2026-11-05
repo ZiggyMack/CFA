@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "recordType": "scoped_rework_metadata_backlog",
+  "id": "LAG-JET-PROPORTION-REVIEW-20261012",
+  "project": "lisan",
+  "characterID": "LAG-JET-BLACK",
+  "provider": "Grok",
+  "existingTaskID": "grok-lisan-jet-black",
+  "existingTaskPath": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\collaborators\\mission_control.json",
+  "status": "prepared_not_sent",
+  "userDirection": "Preserve the liked looks and existing identity/look reviews; separately audit potential body-proportion drift against the supplied character references.",
+  "referenceAssetIDs": [
+    "LAG-CAST-JET-BLACK-REF-02",
+    "LAG-CAST-JET-BLACK-REF-01"
+  ],
+  "targets": [
+    {
+      "assetID": "LAG-JET-BLACK-DROP-5597b435a085",
+      "providerID": "CUR-SCENE-07-HELMET",
+      "priority": "focused_comparison",
+      "finding": "Visual agent observes boxier/wider upper torso and upper arms than tapered solo reference. No linked prior helmet-moon repair return found.",
+      "disposition": "comparison_required_before_exact_rework_selection",
+      "reviewer": "Codex",
+      "assessmentStatus": "provisional",
+      "humanNumericGrade": null,
+      "existingUserRatingsChanged": false,
+      "metadataFlags": [
+        "needs_fixes_proportions_provisional",
+        "reference_comparison_required"
+      ]
+    },
+    {
+      "assetID": "LAG-JET-BLACK-DROP-2c7a64ee70bd",
+      "providerID": "CUR-SCENE-24-HELMET",
+      "priority": "secondary_comparison",
+      "finding": "Wide upper chest, but cropping and pose make this uncertain.",
+      "disposition": "comparison_only_no_confirmed_defect",
+      "reviewer": "Codex",
+      "assessmentStatus": "provisional",
+      "humanNumericGrade": null,
+      "existingUserRatingsChanged": false,
+      "metadataFlags": [
+        "proportions_review_required",
+        "pose_crop_uncertainty"
+      ]
+    },
+    {
+      "assetIDs": [
+        "LAG-JET-BLACK-DROP-083c1c99b8b2",
+        "LAG-JET-BLACK-DROP-7395c055b930",
+        "LAG-JET-BLACK-DROP-9adc3c0462ea"
+      ],
+      "priority": "returned_repair_followup",
+      "finding": "Historical v2 body repair returns exist. Compare forward hand/forearm scale, with foreshortening considered.",
+      "disposition": "scoped_comparison_no_failed_repair_claim",
+      "reviewer": "Codex",
+      "assessmentStatus": "provisional",
+      "humanNumericGrade": null,
+      "existingUserRatingsChanged": false,
+      "metadataFlags": [
+        "repair_return_received",
+        "accepted_fix_unverified",
+        "hand_forearm_comparison_required"
+      ]
+    }
+  ],
+  "historicalProportionRepairPairs": [
+    {
+      "historicalAssetID": "LAG-JET-BLACK-DROP-cc0e4d27d27e",
+      "historicalMember": "90_SUPERSEDED/CUR-SCENE-07_ORB-MOON-SURFACE_v1-BULKY_cc0e4d27d27ef3f05c2fd7650bb7824c1b8840fd5946f34a38b7b64332888af1.jpg",
+      "historicalProviderQA": "Scene 07 moon, orb head, v1: too thick/bulky at the top. Replaced by CUR-SCENE-07_ORB-MOON-SURFACE (v2, 083c1c99)",
+      "historicalProviderStatus": "SUPERSEDED",
+      "returnedAssetID": "LAG-JET-BLACK-DROP-083c1c99b8b2",
+      "returnedMember": "03_SCENES_50_ORB_HELMET/CUR-SCENE-07_ORB-MOON-SURFACE.jpg",
+      "returnedProviderID": "CUR-SCENE-07-ORB",
+      "returnedProviderQA": "v2 proportion fix (slim, normal build); v1 bulky version in 90_SUPERSEDED",
+      "returnedProviderStatus": "KEEPER-candidate (needs_user_review)",
+      "humanApproval": null,
+      "localReviewStatus": "needs_user_review",
+      "returnEvidenced": true,
+      "acceptedFixEvidenced": false
+    },
+    {
+      "historicalAssetID": "LAG-JET-BLACK-DROP-48e6cc177dbd",
+      "historicalMember": "90_SUPERSEDED/CUR-SCENE-14_HELMET-AURORA-FOREST_v1-BULKY_48e6cc177dbdb50c559e8223945f8ec1274ebf80e26c40854d16b763d42e06f5.jpg",
+      "historicalProviderQA": "Scene 14 aurora, helmet head, v1: too thick/bulky at the top. Replaced by v2 (7395c055)",
+      "historicalProviderStatus": "SUPERSEDED",
+      "returnedAssetID": "LAG-JET-BLACK-DROP-7395c055b930",
+      "returnedMember": "03_SCENES_50_ORB_HELMET/CUR-SCENE-14_HELMET-AURORA-FOREST.jpg",
+      "returnedProviderID": "CUR-SCENE-14-HELMET",
+      "returnedProviderQA": "v2 proportion fix (slim, normal build); v1 bulky version in 90_SUPERSEDED",
+      "returnedProviderStatus": "KEEPER-candidate (needs_user_review)",
+      "humanApproval": null,
+      "localReviewStatus": "needs_user_review",
+      "returnEvidenced": true,
+      "acceptedFixEvidenced": false
+    },
+    {
+      "historicalAssetID": "LAG-JET-BLACK-DROP-1bc0725e4df3",
+      "historicalMember": "90_SUPERSEDED/CUR-SCENE-14_ORB-AURORA-FOREST_v1-BULKY_1bc0725e4df31f4243791d0ae94b4ac18dea471ad0e00d700207321d1ed673a4.jpg",
+      "historicalProviderQA": "Scene 14 aurora, orb head, v1: too thick/bulky at the top. Replaced by v2 (9adc3c04)",
+      "historicalProviderStatus": "SUPERSEDED",
+      "returnedAssetID": "LAG-JET-BLACK-DROP-9adc3c0462ea",
+      "returnedMember": "03_SCENES_50_ORB_HELMET/CUR-SCENE-14_ORB-AURORA-FOREST.jpg",
+      "returnedProviderID": "CUR-SCENE-14-ORB",
+      "returnedProviderQA": "v2 proportion fix (slim, normal build); v1 bulky version in 90_SUPERSEDED",
+      "returnedProviderStatus": "KEEPER-candidate (needs_user_review)",
+      "humanApproval": null,
+      "localReviewStatus": "needs_user_review",
+      "returnEvidenced": true,
+      "acceptedFixEvidenced": false
+    }
+  ],
+  "requestedScope": "Body and limb proportions only where an image-specific mismatch is confirmed. Preserve each chosen source look, pose, head variant, outfit, composition and atmosphere. Keep source-specific hand/glove/trim differences explicit.",
+  "preserveHumanReviews": "Leave all existing numeric ratings, user decisions and accepted scopes unchanged. The current user instruction adds no new numeric ratings or liked asset IDs.",
+  "preserveProviderReview": "Keep provider QA, status and grades separately attributed; do not apply the unrelated Hon bulk-audit minus-one rule to Jet user ratings.",
+  "returnPolicy": "Any later authorized correction is a new version with source hash, change list and unresolved differences; originals and historical versions remain intact.",
+  "nextAction": "Coordinator records the caution and exact candidates alongside the existing Jet task. Confirm image-specific targets before adding a scoped repair to the next declared Grok handoff.",
+  "execution": {
+    "sentToGrok": false,
+    "generationStarted": false,
+    "freshOutputRequested": false,
+    "freshOutputReceived": false,
+    "generationAuthorizedByThisProposal": false
+  },
+  "queueStatusNote": "New Lisan-scoped metadata backlog linked to existing grok-lisan-jet-black task. The established Hon-only queue is untouched. No provider dispatch.",
+  "proposedNewBacklogSchema": "cfa-lisan-scoped-rework-backlog-v1",
+  "proposedNewBacklogPath": "docs/notes/explorable_world/comfy/projects/collaborators/jet_black_rework_20261012/backlog.json",
+  "existingBacklogFound": false,
+  "bulkExecutionState": "Metadata recorded; exact rework selection/dispatch remains pending.",
+  "createdAtUTC": "2026-10-12T23:54:14.997244Z",
+  "writtenBy": "nova_personal_assistant",
+  "authorship": "coordinator_summary",
+  "source": "Ziggy's explicit Jet proportion audit direction via Personal Nova thread 01a12392-6543-7410-b29a-822656fb60d4; provisional Codex image assessment, not new human grades.",
+  "auditEvidence": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/jet_black_rework_20261012/metadata_audit.json",
+    "sha256": "72d494777f83e019dd29f59545d9123a5d43803aaff05378cf232d7842054953",
+    "bytes": 15669
+  },
+  "visualInspection": {
+    "individualImages": 19,
+    "contactSheets": 3,
+    "checkedMediaHashesMatched": true,
+    "reviewer": "Codex",
+    "assessmentStatus": "provisional",
+    "numericScoresAdded": false
+  },
+  "historicalAuroraLabelConflict": "Original 48e6cc177dbd filename HELMET visibly has round orb; original 1bc0725e4df3 filename ORB visibly has oval helmet. Preserve provider-declared v1-to-v2 links separately from visible-head evidence; no filename-based identity assumption."
+}

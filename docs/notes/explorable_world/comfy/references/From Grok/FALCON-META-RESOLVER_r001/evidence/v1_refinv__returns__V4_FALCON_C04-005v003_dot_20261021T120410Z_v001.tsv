@@ -1,0 +1,8 @@
+# V_4 C04-005 v003 dot-fix check | UTC 20261021T120410Z | no renders, no Z_ scripts, images untouched | crop sheet V4_FALCON_C04-005v003_dot_20261021T120410Z_v001_crops4x6x.png sha 69c3821b203a55956294f5b0c9a8bda64b855ba24d978ab552e9547e9718e678 (v002 4x | v003 4x | v002 6x | v003 6x | v003 5x highpass 4x; window x664-716 y567-619)
+frame	target	target_sha	base_sha	check	metric	value	limit	result
+C04-005	v003	b6ce2932aef7587b7bacd7ecae75abc4f0afbce2c2f6618a723c971976f1052e	0b52b8d81ce1edd46b71943c66e0bd14e025aa78e2172fc5928cc7e22c7e6e1c	1_residual	box x684-695 y587-598 px<0.85*skin(61)	0 (min L56; v002 min L45, 1 px)	0	PASS
+C04-005	v003			1_ghost	4x/6x/5x highpass visual	no dot, no ghost	none	PASS
+C04-005	v003			2_texture	box L std vs ring; highpass std box vs ring	2.44 vs 4.20; 2.26 vs 2.39; no seam/repeat/flat at 4x (src-dst corr 0.67)	visual	PASS
+C04-005	v003			3_outside	px>12 vs v002 outside box	0 (max diff 12; all >12 px at x688 y593-594 inside box)	25	PASS
+C04-005	v003			4_jpeg	quant tables / subsampling	match v002 / 4:4:4 (note: v002 itself was 4:2:0, so chroma resave touches many px at <=12)	match/4:4:4	PASS
+C04-005	v003			VERDICT		PASS		PASS

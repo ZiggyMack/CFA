@@ -1,0 +1,164 @@
+{
+  "review_id": "FLOW-HD-VIDEO-002-USER-REVIEW-20261012",
+  "experiment_id": "FLOW-HD-VIDEO-002",
+  "review_date": "2026-10-12",
+  "recorded_at_utc": "2026-10-12T16:20:59.9850663Z",
+  "reviewer": "Ziggy",
+  "recorded_by": "CFA Nova, transcribing the user's A/B review supplied in this session",
+  "exact_user_review_timestamp": null,
+  "status": "needs_fixes",
+  "accepted_for_production": false,
+  "numeric_grade": null,
+  "supersedes": "The earlier current shorthand 'warmer lighting accepted'. Retain that dated observation as history; the user now distinguishes a visible technical warmth change from convincing relighting or production acceptance.",
+  "historical_receipt_before_clarification_sha256": "599c4deb91502832cc4f30bf5eac979c862a40167f95939d0b5fd66eb9c577e2",
+  "source_A": {
+    "asset_id": "FLOW-HD-VIDEO-002-A",
+    "sha256": "f8f2aa30265392634b67dbddebdc6ac0f05007de1abb2730f27d27513e72d378",
+    "repo_path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667.mp4",
+    "user_observations": [
+      "The outfit is perfect for the intended look; this is not whole-actor acceptance.",
+      "Actor likeness is insufficient. Tattoos are hard to see; some neck tattoo and a chain are visible.",
+      "Car entry, descent and body interaction look physically unrealistic / like AI motion.",
+      "The blue aesthetic is beautiful, but the picture looks grainy and low resolution to the user."
+    ],
+    "disposition": "needs_fixes_nonproduction",
+    "technical_dimensions": {
+      "width": 1280,
+      "height": 720,
+      "frames": 144,
+      "nominal_tbr": 24,
+      "ffmpeg_header_duration_seconds": 5.96,
+      "ffmpeg_reported_average_fps": 24.17,
+      "packet_presentation_seconds_approx": 6,
+      "exact_avg_frame_rate": null,
+      "exact_stream_duration_seconds": null,
+      "evidence": "Fresh FFmpeg observations supplied by Personal Assistant and relayed by CFA Nova. ffprobe unavailable; exact source avg_frame_rate and stream duration remain unknown. This transcriber did not rerun the probe."
+    },
+    "resolution_scope": "Grainy/low-resolution is a subjective appearance judgment, not evidence of 480p encoding. Existing measured metadata is 1280x720.",
+    "mouth_or_full_tattoo_acceptance": false,
+    "review_scope": "Scene",
+    "stage": "preliminary",
+    "status": "needs_fixes",
+    "numeric_grade": null,
+    "production_eligible": false
+  },
+  "output_B": {
+    "asset_id": "FLOW-HD-VIDEO-002-B",
+    "sha256": "8d090aaa5a45cc42cb9d52e7b26d9419a8d8aa8c029c22a1859752ec7e0cf3c2",
+    "repo_path": "docs/notes/downloads/FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667_20261012004113.mp4",
+    "user_observations": [
+      "The warm streetlight change is visible: the requested warmer balance produced a technical effect.",
+      "The result reads as a yellow filter or surface wash rather than lighting motivated by sources, with convincing local falloff, shadows and reflections."
+    ],
+    "inherited_defects": "A's likeness, tattoo-visibility and unrealistic car/body motion problems predate B. Do not attribute them to the Flow edit without a demonstrated new difference.",
+    "disposition": "needs_fixes_nonproduction",
+    "lighting_technical_effect_observed": true,
+    "convincing_relighting_accepted": false,
+    "technical_dimensions": {
+      "width": 1280,
+      "height": 720,
+      "frames": 144,
+      "nominal_tbr": 24,
+      "ffmpeg_header_duration_seconds": 6.02,
+      "ffmpeg_reported_average_fps": 24,
+      "packet_presentation_seconds_approx": 6,
+      "historical_recorded_video_seconds": 6.0,
+      "evidence": "Fresh FFmpeg observations supplied by Personal Assistant and relayed by CFA Nova. Historical receipt video_seconds=6.0 is retained as earlier evidence, not an inference that A/B native average rates are identical."
+    },
+    "numeric_grade": null,
+    "review_scope": "Scene",
+    "stage": "preliminary",
+    "status": "needs_fixes",
+    "production_eligible": false
+  },
+  "actual_request_context": {
+    "prompt_file": "ACTUAL_PROMPT_20261012.txt",
+    "requested_change": "Give existing illumination a subtle warmer color balance while preserving identity, motion, timing, car/door contact and scene.",
+    "interpretation": "The actual prompt asked for warmer color balance, not a clearly specified source-motivated relighting design. B's surface wash is therefore insufficient evidence that a different model is required. The newly requested physically motivated relight is a different declared lighting change, requiring its own named test adapter.",
+    "model": "Omni 1.1 Flash",
+    "mode": "Video edit using A as sole video ingredient",
+    "cost": null,
+    "current_ui_observation": "Root reports a read-only October 12 inspection of the same edit URL: actual prompt matches the saved prompt and Omni 1.1 Flash is displayed. No higher-quality/model selection or resolution control was visible in this editor; no menus were opened and no settings changed. Alternatives remain unverified.",
+    "current_ui_observation_independently_repeated_by_this_transcriber": false,
+    "official_documentation": {
+      "url": "https://support.google.com/flow/answer/16352836?hl=en",
+      "reviewed_date": "2026-10-12",
+      "verified_by": "CFA Nova root; facts supplied to this transcriber",
+      "documented_omni_flash_1_1_video_editing": "Standard 720p / draft 360p",
+      "documented_veo_3_1_quality_video_editing": "Not supported",
+      "account_export_options": "unverified",
+      "interpretation": "Documentation does not establish the account export menu or a higher-quality drop-in video edit route."
+    }
+  },
+  "one_future_diagnostic": {
+    "id": "FLOW-HD-VIDEO-002-C-MOTIVATED-LIGHTING-PROPOSED",
+    "status": "proposed_not_executed",
+    "question": "Can an explicit source-motivated lighting prompt improve local light behavior on the same source without changing its motion?",
+    "input_asset_id": "FLOW-HD-VIDEO-002-A",
+    "input_sha256": "f8f2aa30265392634b67dbddebdc6ac0f05007de1abb2730f27d27513e72d378",
+    "comparison_baseline": "Compare proposed C against received B, with A as their common unchanged source. Do not edit B to make C.",
+    "deliberate_change": "One named lighting-prompt adapter: preserve blue ambience; warm existing lamp emitters and the surfaces they actually illuminate, with local falloff, occlusion, shadows and reflections. Keep skin and silver-jacket material colors; no global yellow wash.",
+    "controls": "Same currently offered Omni 1.1 Flash video-edit route; one output from unchanged A, about-six-second source, same 1280x720/original-size target where offered. Preserve actual source timing/motion. Record actual dimensions, nominal tbr, average rate evidence and forced differences separately; do not claim source/output average rates are identical. Hidden original seed/settings remain unknown. Account export options are unverified.",
+    "bound": {
+      "outputs": 1,
+      "extra_seeds": 0,
+      "extra_models": 0,
+      "automatic_retries": 0
+    },
+    "preflight": "Inspect existing lighting cues in A before selecting the source direction. Verify actual edit mode, displayed cost and existing allowance before future submission. If support or cost cannot be established, stop. This record submits nothing.",
+    "prompt_file": "USER_REVIEW_20261012.txt",
+    "prompt_delimiters": [
+      "BEGIN CURRENT PROPOSED C PROMPT V2",
+      "END CURRENT PROPOSED C PROMPT V2"
+    ],
+    "success_check": "Blue ambience remains. Only existing lamp emitters and their illuminated surfaces gain warm light, with falloff, occlusion and coherent shadows/reflections tied to geometry. Skin and silver-jacket material colors remain plausible. A's action/timing/contact/identity show no new changes. A's inherited motion/likeness defects remain separate; this lighting result cannot promote the source to production.",
+    "conclusion_limit": "One result can inform this prompt/configuration comparison. It cannot establish a universal best model or fix A's production readiness. No rerender, upscale, motion repair or alternate-model run is authorized by this proposal.",
+    "prompt_revision": 2
+  },
+  "evidence": {
+    "existing_measurement_sources": [
+      "manifest.json",
+      "RETURN_RECEIPT_20261012.json"
+    ],
+    "source_and_output_hashes_rechecked": true,
+    "new_independent_visual_review_by_transcriber": false,
+    "new_generation": false,
+    "media_modified": false,
+    "new_audio_listening": false
+  },
+  "method_breadcrumbs": [
+    "docs/notes/explorable_world/comfy/templates/workflow_intake.md#decision-and-feedback",
+    "docs/notes/explorable_world/comfy/workflows/README.md#choose-by-problem",
+    "../Pan_Handlers/Help/guides/sampling_lab.py"
+  ],
+  "refinement_history": [
+    {
+      "recorded_at_utc": "2026-10-12T16:24:05.7139114Z",
+      "source": "Ziggy's explicit refinement relayed through Personal Assistant to CFA Nova in the current session.",
+      "prior_source_A_technical_dimensions": {
+        "video_seconds": 6.0,
+        "width": 1280,
+        "fps": 24,
+        "height": 720,
+        "frames": 144
+      },
+      "prior_output_B_technical_dimensions": {
+        "height": 720,
+        "frames": 144,
+        "container_seconds": 6.02,
+        "fps": 24,
+        "video_seconds": 6.0,
+        "width": 1280
+      },
+      "prior_prompt_delimiters": [
+        "BEGIN PROPOSED C PROMPT",
+        "END PROPOSED C PROMPT"
+      ],
+      "note": "Earlier notes remain preserved. Both current scene reviews are expressly Preliminary / Needs fixes, with no numerical scores. Nominal tbr must not be equated to identical native average rates. The former C prompt in the text record is superseded by the current v2 adapter; there remains exactly one proposed output, not two."
+    }
+  ],
+  "review_scope": "Scene",
+  "stage": "preliminary",
+  "production_eligible": false,
+  "technical_comparison_note": "Both files are 1280x720 with 144 frames and nominal 24 tbr. A header reports 5.96s and average about 24.17fps; B header 6.02s and 24fps. Packet presentation is about six seconds. Do not collapse those facts into identical native average rates or exact source stream duration."
+}

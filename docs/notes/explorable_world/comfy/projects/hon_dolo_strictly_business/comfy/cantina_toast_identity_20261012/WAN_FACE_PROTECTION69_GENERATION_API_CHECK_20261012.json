@@ -1,0 +1,506 @@
+{
+  "status": "ACTUAL_UI_COMPILED_GENERATION_STATIC_CHECK_PASS_HOLD_RUNTIME_SEQUENCE_REVIEW",
+  "actual_api": "WAN_FACE_PROTECTION69_GENERATION_API_ACTUAL_20261012.json",
+  "sha256": "8fb666f7fe99016c9138e19bbb48a6215990494e82c53c74308e44267bd21b17",
+  "actual_export_nodes": 41,
+  "final_output_node": "3365632822813953",
+  "sampler_nodes": [
+    "232:63"
+  ],
+  "save_video_nodes": [
+    "3365632822813953"
+  ],
+  "reachable_ancestors": [
+    "1",
+    "10",
+    "100",
+    "101",
+    "145",
+    "158",
+    "159",
+    "160",
+    "18",
+    "1833034495877259",
+    "1956377300393751",
+    "2",
+    "20",
+    "21",
+    "212",
+    "23",
+    "232:15",
+    "232:230",
+    "232:57",
+    "232:58",
+    "232:62",
+    "232:63",
+    "275",
+    "3",
+    "3095296998173597",
+    "324475594538284",
+    "3365632822813953",
+    "4",
+    "4085252815952851",
+    "4427161206989702",
+    "4458611668371917",
+    "548748812020021",
+    "60",
+    "9",
+    "9001",
+    "9002",
+    "9003",
+    "9004",
+    "9005",
+    "9006",
+    "99"
+  ],
+  "node_count_reachable": 41,
+  "input_edges": [
+    [
+      "3365632822813953",
+      "video",
+      "4085252815952851",
+      0
+    ],
+    [
+      "4085252815952851",
+      "images",
+      "548748812020021",
+      0
+    ],
+    [
+      "548748812020021",
+      "destination",
+      "212",
+      0
+    ],
+    [
+      "212",
+      "width",
+      "159",
+      0
+    ],
+    [
+      "212",
+      "height",
+      "160",
+      0
+    ],
+    [
+      "212",
+      "image",
+      "9001",
+      0
+    ],
+    [
+      "9001",
+      "image",
+      "23",
+      0
+    ],
+    [
+      "23",
+      "video",
+      "145",
+      0
+    ],
+    [
+      "548748812020021",
+      "source",
+      "9002",
+      0
+    ],
+    [
+      "9002",
+      "video",
+      "232:15",
+      0
+    ],
+    [
+      "232:15",
+      "images",
+      "232:230",
+      0
+    ],
+    [
+      "232:230",
+      "batch_index",
+      "232:62",
+      4
+    ],
+    [
+      "232:62",
+      "width",
+      "159",
+      0
+    ],
+    [
+      "232:62",
+      "height",
+      "160",
+      0
+    ],
+    [
+      "232:62",
+      "positive",
+      "21",
+      0
+    ],
+    [
+      "21",
+      "clip",
+      "2",
+      0
+    ],
+    [
+      "232:62",
+      "negative",
+      "1",
+      0
+    ],
+    [
+      "1",
+      "clip",
+      "2",
+      0
+    ],
+    [
+      "232:62",
+      "vae",
+      "3",
+      0
+    ],
+    [
+      "232:62",
+      "clip_vision_output",
+      "9",
+      0
+    ],
+    [
+      "9",
+      "clip_vision",
+      "4",
+      0
+    ],
+    [
+      "9",
+      "image",
+      "10",
+      0
+    ],
+    [
+      "232:62",
+      "reference_image",
+      "10",
+      0
+    ],
+    [
+      "232:62",
+      "face_video",
+      "100",
+      0
+    ],
+    [
+      "100",
+      "resolution",
+      "158",
+      0
+    ],
+    [
+      "158",
+      "image_gen_width",
+      "159",
+      0
+    ],
+    [
+      "158",
+      "image_gen_height",
+      "160",
+      0
+    ],
+    [
+      "158",
+      "original_image",
+      "9001",
+      0
+    ],
+    [
+      "100",
+      "image",
+      "212",
+      0
+    ],
+    [
+      "232:62",
+      "pose_video",
+      "101",
+      0
+    ],
+    [
+      "101",
+      "resolution",
+      "158",
+      0
+    ],
+    [
+      "101",
+      "image",
+      "212",
+      0
+    ],
+    [
+      "232:62",
+      "background_video",
+      "275",
+      0
+    ],
+    [
+      "275",
+      "image",
+      "212",
+      0
+    ],
+    [
+      "275",
+      "mask",
+      "9006",
+      0
+    ],
+    [
+      "9006",
+      "destination",
+      "1833034495877259",
+      0
+    ],
+    [
+      "1833034495877259",
+      "mask",
+      "324475594538284",
+      0
+    ],
+    [
+      "324475594538284",
+      "result",
+      "1956377300393751",
+      1
+    ],
+    [
+      "1956377300393751",
+      "model",
+      "3095296998173597",
+      0
+    ],
+    [
+      "1956377300393751",
+      "processor",
+      "4458611668371917",
+      0
+    ],
+    [
+      "1956377300393751",
+      "image",
+      "212",
+      0
+    ],
+    [
+      "9006",
+      "source",
+      "9005",
+      0
+    ],
+    [
+      "9005",
+      "image",
+      "9004",
+      0
+    ],
+    [
+      "9004",
+      "video",
+      "9003",
+      0
+    ],
+    [
+      "232:62",
+      "character_mask",
+      "9006",
+      0
+    ],
+    [
+      "232:230",
+      "image",
+      "232:58",
+      0
+    ],
+    [
+      "232:58",
+      "samples",
+      "232:57",
+      0
+    ],
+    [
+      "232:57",
+      "trim_amount",
+      "232:62",
+      3
+    ],
+    [
+      "232:57",
+      "samples",
+      "232:63",
+      0
+    ],
+    [
+      "232:63",
+      "model",
+      "60",
+      0
+    ],
+    [
+      "60",
+      "model",
+      "99",
+      0
+    ],
+    [
+      "99",
+      "model",
+      "18",
+      0
+    ],
+    [
+      "18",
+      "model",
+      "20",
+      0
+    ],
+    [
+      "232:63",
+      "positive",
+      "232:62",
+      0
+    ],
+    [
+      "232:63",
+      "negative",
+      "232:62",
+      1
+    ],
+    [
+      "232:63",
+      "latent_image",
+      "232:62",
+      2
+    ],
+    [
+      "232:58",
+      "vae",
+      "3",
+      0
+    ],
+    [
+      "232:15",
+      "audio",
+      "4427161206989702",
+      0
+    ],
+    [
+      "548748812020021",
+      "mask",
+      "9006",
+      0
+    ],
+    [
+      "4085252815952851",
+      "audio",
+      "4427161206989702",
+      0
+    ]
+  ],
+  "settings": {
+    "width": 768,
+    "height": 432,
+    "fps": 24,
+    "frames": 69,
+    "batch_size": 1,
+    "seed": 42,
+    "control_after_generate": "fixed_in_prepared_editor",
+    "steps": 6,
+    "cfg": 1,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "denoise": 1
+  },
+  "source_trim": {
+    "batch_index": 6,
+    "length": 69,
+    "original_frames": [
+      168,
+      236
+    ]
+  },
+  "same_final_mask_for_conditioning_background_and_composite": true,
+  "posttrim_composite_source": [
+    "232:15",
+    "9002",
+    "548748812020021"
+  ],
+  "assets": {
+    "source": "4892e99a9a1a2083870c45c082bf38bf0500d460ccf801c86a3c5326e5ff931a.mp4",
+    "actor": "328407ab94d1444502f770ba4f67edacada31bfa50e789c8df1debd833071ad4.png",
+    "protection": "c76f160edfaa71c8feb66c2ef9593c8f76476118be39a25101d4bbd06f0ad1db.mp4",
+    "audio": "998987106ed91b5232cbcafd420c392508162b6082328a5b9af01d0d86c877d6.wav"
+  },
+  "all_four_asset_bindings_match_actual_preflight": true,
+  "model_reference_inputs_unchanged": true,
+  "prepared_editor_remote_download_metadata_unchanged": true,
+  "remote_model_metadata": {
+    "99": [
+      {
+        "directory": "loras",
+        "name": "WanAnimate_relight_lora_fp16.safetensors",
+        "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/LoRAs/Wan22_relight/WanAnimate_relight_lora_fp16.safetensors"
+      }
+    ],
+    "2": [
+      {
+        "directory": "text_encoders",
+        "name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors"
+      }
+    ],
+    "3": [
+      {
+        "directory": "vae",
+        "name": "wan_2.1_vae.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors"
+      }
+    ],
+    "4": [
+      {
+        "directory": "clip_vision",
+        "name": "clip_vision_h.safetensors",
+        "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors"
+      }
+    ],
+    "18": [
+      {
+        "directory": "loras",
+        "name": "lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors",
+        "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Lightx2v/lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors"
+      }
+    ],
+    "20": [
+      {
+        "directory": "diffusion_models",
+        "name": "Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors",
+        "url": "https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/resolve/main/Wan22Animate/Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors"
+      }
+    ]
+  },
+  "cloud_generative_model_availability_validated": false,
+  "cloud_jobs_submitted_by_this_audit": 0,
+  "identity_generation_executed": false,
+  "identity_output_accepted": false,
+  "hold_reason": "Root must review full69-frame persistent diagnostics before single identity run. Browser transient InvalidURL does not change actual compiled protection filename; this audit does not independently prove current remote asset fetchability.",
+  "metadata_warning": "UI import warning Unable to find workflow was root reported; actual graph compiled to41nodes with expected wiring. Warning is not resolved by this static audit."
+}

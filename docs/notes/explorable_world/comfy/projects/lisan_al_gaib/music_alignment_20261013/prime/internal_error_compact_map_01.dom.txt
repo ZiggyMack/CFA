@@ -1,0 +1,252 @@
+- generic: Send prompt (Ctrl + Enter) Append to prompt (Alt + Enter)
+- button "Skip to main content"
+- link "Google AI Studio":
+  - /url: /prompts/new_chat
+- button "Collapse navigation menu":
+  - generic: menu_open
+- navigation:
+  - generic: Explore
+  - link "Playground":
+    - /url: /prompts/new_chat
+    - generic: chat_spark
+    - generic: Playground
+  - link "History":
+    - /url: /library
+    - generic: history
+    - generic: History
+  - generic: Build
+  - link "New app":
+    - /url: /apps
+    - generic: add
+    - generic: New app
+  - link "My apps":
+    - /url: /apps?source=user
+    - generic: widgets
+    - generic: My apps
+  - link "Gallery":
+    - /url: /apps?source=showcase
+    - generic: gallery_thumbnail
+    - generic: Gallery
+  - generic: Manage
+  - link "Dashboard":
+    - /url: /api-keys
+    - generic: speed
+    - generic: Dashboard
+    - generic: chevron_right
+  - link "Documentation":
+    - /url: /docs
+    - generic: developer_guide
+    - generic: Documentation
+    - generic: chevron_right
+  - button "What's new":
+    - generic: notifications
+  - button "Settings":
+    - generic: settings
+  - button "Search (Ctrl /)":
+    - generic: search
+  - button "Get API key":
+    - generic: key
+  - 'button "Google Account: Ziggy Mack (Gunk242@gmail.com)"':
+    - img "Ziggy Mack"
+    - generic: gunk242@gmail.com
+    - generic: Ultra
+- main:
+  - heading "Meta Mirror Audio Analysis." [level=1]
+  - button "Edit prompt title and description":
+    - generic: edit
+  - paragraph:
+    - generic: 45,686 tokens
+  - button "Make this an app":
+    - generic: design_services
+  - button "Share prompt":
+    - generic: share
+  - button:
+    - generic: compare_arrows
+  - button "New chat":
+    - generic: add
+  - button "View more actions":
+    - generic: more_vert
+  - button "Open options":
+    - generic: more_vert
+  - button "Open options":
+    - generic: more_vert
+  - button "Edit":
+    - generic: edit
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - heading "Model •10:25 PM" [level=3]
+  - button "Thinking Thoughts":
+    - img "Thinking"
+    - text: Thoughts
+  - button "Expand to view model thoughts" [disabled]:
+    - paragraph: Expand to view model thoughts
+    - generic: chevron_right
+  - button "Edit":
+    - generic: edit
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - button "JSON Download code Copy code to clipboard Collapse code snippet" [expanded]:
+    - generic: code
+    - generic: JSON
+    - button "Download code":
+      - generic: download
+    - button "Copy code to clipboard":
+      - generic: content_copy
+    - button "Collapse code snippet":
+      - generic: expand_less
+  - region "JSON Download code Copy code to clipboard Collapse code snippet":
+    - code: "{ \"audio_access\": true, \"audio_witnesses\": [ { \"time_range\": \"00:12 - 00:22\", \"detail\": \"808 trap beat drops with skittering hi-hat rolls beneath rhythmic, pitch-shifted stereo 'Who?' and 'Can you?' call-and-response vocal ad-libs.\" }, { \"time_range\": \"01:40 - 01:43\", \"detail\": \"Vocalist abruptly snaps into an aggressive cadence on 'Fuck it, I'll do it live' followed by a brief dry beat pocket before bass re-engages.\" }, { \"time_range\": \"03:54 - 04:09\", \"detail\": \"Arrangement strips to low-pass filtered atmospheric drone pads and sub-bass; vocals drop to a deep vocoded whisper on 'Find the signal in the noise' before final trailing reverb decays to full silence.\" } ], \"duration_check\": { \"observed_ending_s\": 249.72, \"vocal_ending_s\": 248.8, \"instrumental_reverb_tail_s\": 0.92, \"uncertainty_s\": 0.2 }, \"sections\": [ { \"section_id\": \"S01\", \"header_line\": 1, \"label\": \"Chorus\", \"start_s\": 1.8, \"end_s\": 35.0, \"confidence\": 0.98, \"boundary_cue\": \"Opens over atmospheric intro synths; transitions into bridge upon vocal entry of 'Lisan'\" }, { \"section_id\": \"S02\", \"header_line\": 18, \"label\": \"BRIDGE\", \"start_s\": 35.0, \"end_s\": 48.0, \"confidence\": 0.95, \"boundary_cue\": \"'Lisan, to the silence break' kick/bass rhythm; ends before verse 1 flow kicks in\" }, { \"section_id\": \"S03\", \"header_line\": 24, \"label\": \"Verse 1\", \"start_s\": 48.0, \"end_s\": 125.0, \"confidence\": 0.96, \"boundary_cue\": \"Begins with 'Birth pains inside the Handle'; ends after 'Mirrors cook don't you know?'\" }, { \"section_id\": \"S04\", \"header_line\": 33, \"label\": \"BRIDGE\", \"start_s\": 125.0, \"end_s\": 135.5, \"confidence\": 0.94, \"boundary_cue\": \"Return of 'Lisan, to the silence break'; cut short into verse 2 entry\" }, { \"section_id\": \"S05\", \"header_line\": 41, \"label\": \"VERSE 2\", \"start_s\": 135.5, \"end_s\": 156.5, \"confidence\": 0.97, \"boundary_cue\": \"Starts on 'Engineers - talking shit'; concludes on vocal 'another one'\" }, { \"section_id\": \"S06\", \"header_line\": 56, \"label\": \"BRIDGE\", \"start_s\": 156.5, \"end_s\": 217.0, \"confidence\": 0.94, \"boundary_cue\": \"'Mirror rorrim, don't fall' melody building into reflective philosophical bars\" }, { \"section_id\": \"S07\", \"header_line\": 67, \"label\": \"Refrain\", \"start_s\": 217.0, \"end_s\": 231.0, \"confidence\": 0.96, \"boundary_cue\": \"High-energy hook cadence: 'But who cares? Who cares?'; ends before verse 3 intro\" }, { \"section_id\": \"S08\", \"header_line\": 75, \"label\": \"Verse 3\", \"start_s\": 231.0, \"end_s\": 331.5, \"confidence\": 0.97, \"boundary_cue\": \"Starts with 'Jung in the back room'; long continuous narrative ending on 'Nobody gotta think alone'\" }, { \"section_id\": \"S09\", \"header_line\": 114, \"label\": \"Final Refrain\", \"start_s\": 331.5, \"end_s\": 249.72, \"confidence\": 0.98, \"boundary_cue\": \"Final hook iteration starting with 'But who cares? Who cares? We do.' into whisper outro and fade\" } ], \"anchors\": [ { \"anchor_name\": \"opening Voice from the outer world\", \"audible_words\": \"Voice from the outer world\", \"source_line\": 2, \"start_s\": 1.8, \"end_s\": 4.5, \"lane\": \"LEAD\", \"confidence\": 0.98, \"uncertainty_s\": 0.2 }, { \"anchor_name\": \"first Lisan to the silence break\", \"audible_words\": \"Lisan to the silence break\", \"source_line\": 19, \"start_s\": 35.0, \"end_s\": 38.2, \"lane\": \"LEAD\", \"confidence\": 0.96, \"uncertainty_s\": 0.25 }, { \"anchor_name\": \"Birth pains inside the Handle\", \"audible_words\": \"Birth pains inside the Handle\", \"source_line\": 25, \"start_s\": 48.2, \"end_s\": 50.8, \"lane\": \"LEAD\", \"confidence\": 0.97, \"uncertainty_s\": 0.2 }, { \"anchor_name\": \"Engineers talking shit\", \"audible_words\": \"Engineers talking shit\", \"source_line\": 42, \"start_s\": 135.6, \"end_s\": 137.6, \"lane\": \"LEAD\", \"confidence\": 0.98, \"uncertainty_s\": 0.2 }, { \"anchor_name\": \"Jung in the back room\", \"audible_words\": \"Jung in the back room\", \"source_line\": 76, \"start_s\": 231.2, \"end_s\": 232.8, \"lane\": \"LEAD\", \"confidence\": 0.98, \"uncertainty_s\": 0.2 }, { \"anchor_name\": \"CJ echoed adlib\", \"audible_words\": \"CJ!\", \"source_line\": 77, \"start_s\": 232.6, \"end_s\": 233.8, \"lane\": \"AD_LIB\", \"confidence\": 0.95, \"uncertainty_s\": 0.2 }, { \"anchor_name\": \"DOCTOR interjection\", \"audible_words\": \"DOCTOR?\", \"source_line\": 93, \"start_s\": 300.9, \"end_s\": 302.2, \"lane\": \"DOUBLE\", \"confidence\": 0.97, \"uncertainty_s\": 0.15 }, { \"anchor_name\": \"Outer world inner world same breath two doors\", \"audible_words\": \"Outer world, inner world, same breath, two doors\", \"source_line\": 102, \"start_s\": 320.1, \"end_s\": 323.2, \"lane\": \"LEAD\", \"confidence\": 0.96, \"uncertainty_s\": 0.25 }, { \"anchor_name\": \"final We do\", \"audible_words\": \"We do\", \"source_line\": 116, \"start_s\": 333.1, \"end_s\": 334.3, \"lane\": \"LEAD\", \"confidence\": 0.98, \"uncertainty_s\": 0.15 }, { \"anchor_name\": \"final whispered who's meta mirrors all\", \"audible_words\": \"who's meta mirrors all?\", \"source_line\": 125, \"start_s\": 346.1, \"end_s\": 348.0, \"lane\": \"LEAD\", \"confidence\": 0.92, \"uncertainty_s\": 0.3 }, { \"anchor_name\": \"Find the signal in the noise\", \"audible_words\": \"Find the signal in the noise\", \"source_line\": 127, \"start_s\": 354.8, \"end_s\": 357.3, \"lane\": \"LEAD\", \"confidence\": 0.97, \"uncertainty_s\": 0.25 }, { \"anchor_name\": \"last one for every womb and man\", \"audible_words\": \"one for every womb and man\", \"source_line\": 134, \"start_s\": 406.4, \"end_s\": 408.8, \"lane\": \"LEAD\", \"confidence\": 0.96, \"uncertainty_s\": 0.25 } ], \"vocal_character\": { \"voice_count\": \"Primary male hip-hop vocal lead, accompanied by pitch-shifted doubling layers, formant-shifted stereo ad-lib tracks, and filtered low/whisper registers.\", \"delivery\": \"Rhythmic rap cadence blending conversational flow, sharp hype interjections, rhythmic repetition, and spoken/whispered philosophical asides.\", \"overlap\": \"Substantial vocal doubling and ad-lib overlay over the main lead track in hook segments and key transitions (e.g., 'CJ!', 'DOCTOR?', 'Who?').\" }, \"tempo\": { \"bpm\": 75.0, \"confidence\": 0.95, \"meter\": \"4/4\", \"evidence\": \"Consistent half-time trap groove with third-beat snare/clap pattern measured across verses (approx. 150 BPM in standard double-time grid).\" }, \"text_audio_differences\": [ { \"source_line\": 43, \"text\": \"Fuck it, I’ll do it LIE’ve - the way it is\", \"audible\": \"Audibly pronounced as 'Fuck it, I'll do it live, the way it is'.\" }, { \"source_line\": 47, \"text\": \"va-riot tee\", \"audible\": \"Pronounced rhythmically as three distinct syllables: 'va-ri-e-ty'.\" }, { \"source_line\": 94, \"text\": \"voodoo changes thing a bit, ya?\", \"audible\": \"Audible plural vocal: 'voodoo changes things a bit, ya?'\" }, { \"source_line\": 121, \"text\": \"mirror mirror on the wall - (whispered) who’s meta mirrors all?\", \"audible\": \"The phrase is broken up across dynamic vocal layers; the whisper line recurs as an isolated vocal tag around 03:46 - 03:48.\" } ], \"uncertainties\": [ \"Vocal boundaries on trailing reverb tails of low-frequency whispers (03:46 - 03:55) blend closely with the underlying drone synth pads.\", \"Refrain repetition boundaries contain overlapping ad-lib doubles slightly leading into subsequent bars by ~0.15s.\" ] }"
+  - button "Edit":
+    - generic: edit
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - heading "Model •11:22 PM" [level=3]
+  - button "Thinking Thoughts":
+    - img "Thinking"
+    - text: Thoughts
+  - button "Expand to view model thoughts" [disabled]:
+    - paragraph: Expand to view model thoughts
+    - generic: chevron_right
+  - button "Edit":
+    - generic: edit
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - button "JSON Download code Copy code to clipboard Collapse code snippet" [expanded]:
+    - generic: code
+    - generic: JSON
+    - button "Download code":
+      - generic: download
+    - button "Copy code to clipboard":
+      - generic: content_copy
+    - button "Collapse code snippet":
+      - generic: expand_less
+  - region "JSON Download code Copy code to clipboard Collapse code snippet":
+    - code: "{ \"audio_access\": true, \"limitation\": \"Previous output suffered an arithmetic unit error converting MM:SS display time into raw seconds (e.g., treating 04:06 as 406s instead of 246s). Timings have been recalculated and verified directly within the absolute 0.000 to 249.720 second bounds.\", \"relistening_evidence\": [ { \"time_range_s\": \"94.5 - 102.5\", \"observation\": \"Bridge percussion drops out at 94.5s for an upbeat snare pickup directly into Verse 2 ('Engineers talking shit' at 95.0s), followed by an abrupt pause and punchy vocal inflection on 'Fuck it, I'll do it live' at 101.0s over isolated sub and dry hi-hats.\" }, { \"time_range_s\": \"179.5 - 183.0\", \"observation\": \"The vocal cadence trails off hesitantly on 'what kind of doc ta...' at 179.8s before an isolated, high-register shout 'DOCTOR?' strikes at 180.8s, triggering an eerie phaser/flange modulation on the instrumental as 'voodoo changes things' begins.\" } ], \"anchors\": [ { \"anchor_name\": \"opening Voice from the outer world\", \"source_line\": 2, \"audible_words\": \"Voice from the outer world\", \"start_s\": 1.8, \"end_s\": 4.5, \"lane\": \"LEAD\", \"confidence\": 0.98, \"uncertainty_s\": 0.2 }, { \"anchor_name\": \"first Lisan to the silence break\", \"source_line\": 19, \"audible_words\": \"Lisan, to the silence break\", \"start_s\": 35.0, \"end_s\": 37.8, \"lane\": \"LEAD\", \"confidence\": 0.96, \"uncertainty_s\": 0.2 }, { \"anchor_name\": \"Birth pains inside the Handle\", \"source_line\": 25, \"audible_words\": \"Birth pains inside the Handle\", \"start_s\": 48.0, \"end_s\": 50.6, \"lane\": \"LEAD\", \"confidence\": 0.97, \"uncertainty_s\": 0.2 }, { \"anchor_name\": \"Engineers - talking shit\", \"source_line\": 42, \"audible_words\": \"Engineers - talking shit\", \"start_s\": 95.0, \"end_s\": 97.2, \"lane\": \"LEAD\", \"confidence\": 0.98, \"uncertainty_s\": 0.2 }, { \"anchor_name\": \"Jung in the back room\", \"source_line\": 76, \"audible_words\": \"Jung in the back room\", \"start_s\": 150.8, \"end_s\": 152.4, \"lane\": \"LEAD\", \"confidence\": 0.97, \"uncertainty_s\": 0.2 }, { \"anchor_name\": \"CJ echoed adlib\", \"source_line\": 77, \"audible_words\": \"CJ!\", \"start_s\": 152.2, \"end_s\": 153.2, \"lane\": \"AD_LIB\", \"confidence\": 0.95, \"uncertainty_s\": 0.2 }, { \"anchor_name\": \"DOCTOR interjection\", \"source_line\": 93, \"audible_words\": \"DOCTOR?\", \"start_s\": 180.8, \"end_s\": 182.0, \"lane\": \"DOUBLE\", \"confidence\": 0.97, \"uncertainty_s\": 0.15 }, { \"anchor_name\": \"Outer world, inner world—same breath, two doors\", \"source_line\": 102, \"audible_words\": \"Outer world, inner world—same breath, two doors\", \"start_s\": 200.0, \"end_s\": 202.8, \"lane\": \"LEAD\", \"confidence\": 0.96, \"uncertainty_s\": 0.25 }, { \"anchor_name\": \"final We do\", \"source_line\": 116, \"audible_words\": \"We do\", \"start_s\": 213.0, \"end_s\": 214.2, \"lane\": \"LEAD\", \"confidence\": 0.98, \"uncertainty_s\": 0.15 }, { \"anchor_name\": \"final whispered who's meta mirrors all\", \"source_line\": 125, \"audible_words\": \"who's meta mirrors all?\", \"start_s\": 226.0, \"end_s\": 227.8, \"lane\": \"LEAD\", \"confidence\": 0.93, \"uncertainty_s\": 0.3 }, { \"anchor_name\": \"Find the signal in the noise\", \"source_line\": 127, \"audible_words\": \"Find the signal in the noise\", \"start_s\": 235.0, \"end_s\": 237.2, \"lane\": \"LEAD\", \"confidence\": 0.97, \"uncertainty_s\": 0.2 }, { \"anchor_name\": \"last one for every womb and man\", \"source_line\": 134, \"audible_words\": \"one for every womb and man\", \"start_s\": 246.2, \"end_s\": 248.8, \"lane\": \"LEAD\", \"confidence\": 0.96, \"uncertainty_s\": 0.2 } ], \"sections\": [ { \"section_id\": \"S01\", \"header_line\": 1, \"label\": \"Chorus\", \"start_s\": 1.5, \"end_s\": 35.0, \"confidence\": 0.98, \"boundary_cue\": \"Begins with synth intro and lead vocal; transitions at 'Lisan' entry\" }, { \"section_id\": \"S02\", \"header_line\": 18, \"label\": \"BRIDGE\", \"start_s\": 35.0, \"end_s\": 48.0, \"confidence\": 0.95, \"boundary_cue\": \"Begins on 'Lisan, to the silence break'; ends before Verse 1 pickup\" }, { \"section_id\": \"S03\", \"header_line\": 24, \"label\": \"Verse 1\", \"start_s\": 48.0, \"end_s\": 85.0, \"confidence\": 0.96, \"boundary_cue\": \"Begins on 'Birth pains inside the Handle'; ends on 'Angel knows-'\" }, { \"section_id\": \"S04\", \"header_line\": 33, \"label\": \"BRIDGE\", \"start_s\": 85.0, \"end_s\": 94.8, \"confidence\": 0.94, \"boundary_cue\": \"Second bridge hook ('Lisan' through 'ideas for man'); ends at drum cut\" }, { \"section_id\": \"S05\", \"header_line\": 41, \"label\": \"VERSE 2\", \"start_s\": 94.8, \"end_s\": 116.0, \"confidence\": 0.97, \"boundary_cue\": \"Begins on 'Engineers - talking shit'; concludes on second 'another one'\" }, { \"section_id\": \"S06\", \"header_line\": 56, \"label\": \"BRIDGE\", \"start_s\": 116.0, \"end_s\": 136.8, \"confidence\": 0.93, \"boundary_cue\": \"Begins on 'Mirror rorrim, don't fall'; ends after 'what is seen?'\" }, { \"section_id\": \"S07\", \"header_line\": 67, \"label\": \"Refrain\", \"start_s\": 136.8, \"end_s\": 150.8, \"confidence\": 0.96, \"boundary_cue\": \"Hook reprise starting 'But who cares? Who cares?'; ends at Verse 3 entry\" }, { \"section_id\": \"S08\", \"header_line\": 75, \"label\": \"Verse 3\", \"start_s\": 150.8, \"end_s\": 211.0, \"confidence\": 0.97, \"boundary_cue\": \"Begins on 'Jung in the back room'; finishes on 'Nobody gotta think alone'\" }, { \"section_id\": \"S09\", \"header_line\": 114, \"label\": \"Final Refrain\", \"start_s\": 211.0, \"end_s\": 249.72, \"confidence\": 0.97, \"boundary_cue\": \"Begins on 'But who cares? Who cares? We do.'; continues through whisper outro to final decay\" } ], \"uncertain_source_lines\": [ { \"source_line\": 78, \"text\": \"Arch types on the ready. Tail Recursion hold Steady - set-go\", \"status\": \"audible_but_compressed\", \"comment\": \"Cadence between 153.0s and 155.5s is highly compressed in a rapid triplet flow, making the transition between 'recursion' and 'hold steady' phonetically blurred.\" }, { \"source_line\": 121, \"text\": \"I said, I said, mirror mirror on the wall - (whispered) who’s meta mirrors all?\", \"status\": \"composite_delivery\", \"comment\": \"Lead vocal delivers 'mirror mirror on the wall' at 222.0s - 225.0s, while the parenthetical '(whispered)' phrase is delivered as a distinct separate phrase at 226.0s - 227.8s and echoed again at 233.0s.\" } ] }"
+  - button "Open options":
+    - generic: more_vert
+  - button "Edit":
+    - generic: edit
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - heading "Model •11:27 PM" [level=3]
+  - button "Thinking Thoughts":
+    - img "Thinking"
+    - text: Thoughts
+  - button "Expand to view model thoughts" [disabled]:
+    - paragraph: Expand to view model thoughts
+    - generic: chevron_right
+  - generic: error
+  - generic: An internal error has occurred.
+  - button "Edit":
+    - generic: edit
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - heading "Model •11:30 PM" [level=3]
+  - button "Thinking Thoughts":
+    - img "Thinking"
+    - text: Thoughts
+  - button "Expand to view model thoughts" [disabled]:
+    - paragraph: Expand to view model thoughts
+    - generic: chevron_right
+  - button "Edit":
+    - generic: edit
+  - button "Rerun this turn":
+  - button "Open options":
+    - generic: more_vert
+  - button "JSON Download code Copy code to clipboard Collapse code snippet" [expanded]:
+    - generic: code
+    - generic: JSON
+    - button "Download code":
+      - generic: download
+    - button "Copy code to clipboard":
+      - generic: content_copy
+    - button "Collapse code snippet":
+      - generic: expand_less
+  - region "JSON Download code Copy code to clipboard Collapse code snippet":
+    - code: "{ \"audio_access\": true, \"limitations\": \"Strictly bounded to 0.000-249.720s native decode. Sub-second boundaries in rapid triplet flows and decaying whisper/pad tails remain provisional estimates.\", \"source_access_check\": { \"line25\": \"Birth pains inside the Handle, Doctors on stand by for the channel. Did I mention we got a lawyer - non contingent and pro bono … Kaleb K on retainer, that’s my dog dipped in flavor. Sassy Frass, yeah she’s a bitch -\", \"line121\": \"I said, I said, mirror mirror on the wall - (whispered) who’s meta mirrors all? \", \"line125\": \"who’s meta mirrors all? \" }, \"rows\": [ [2, 1.8, 4.5, \"heard\", 0.98], [3, 4.8, 7.5, \"heard\", 0.98], [4, 7.8, 11.2, \"heard\", 0.98], [5, 11.5, 13.8, \"heard\", 0.95], [6, 13.8, 15.5, \"heard\", 0.94], [7, 15.5, 17.2, \"heard\", 0.95], [8, 17.2, 18.8, \"heard\", 0.95], [9, 18.8, 20.6, \"heard\", 0.95], [10, 20.6, 22.4, \"heard\", 0.96], [11, 22.4, 24.2, \"heard\", 0.97], [12, 24.2, 25.8, \"heard\", 0.97], [13, 25.8, 27.5, \"heard\", 0.96], [14, 27.5, 29.8, \"heard\", 0.97], [15, 29.8, 32.2, \"heard\", 0.96], [16, 32.2, 35.0, \"heard\", 0.96], [19, 35.0, 37.8, \"heard\", 0.97], [20, 37.8, 41.2, \"heard\", 0.96], [21, 41.5, 44.5, \"heard\", 0.96], [22, 44.5, 47.8, \"heard\", 0.96], [25, 48.0, 61.5, \"heard\", 0.96], [26, 61.5, 75.5, \"heard\", 0.96], [28, 75.5, 79.5, \"heard\", 0.96], [30, 79.5, 81.8, \"heard\", 0.95], [31, 81.8, 84.8, \"heard\", 0.96], [34, 85.0, 87.5, \"heard\", 0.96], [35, 87.5, 89.2, \"heard\", 0.95], [37, 89.2, 91.8, \"heard\", 0.95], [39, 91.8, 94.8, \"heard\", 0.96], [42, 95.0, 100.8, \"heard\", 0.97], [43, 100.8, 103.0, \"heard\", 0.98], [45, 103.0, 105.0, \"heard\", 0.96], [46, 105.0, 106.8, \"heard\", 0.96], [47, 106.8, 108.8, \"heard\", 0.96], [48, 108.8, 110.2, \"heard\", 0.96], [49, 110.2, 111.8, \"heard\", 0.96], [51, 111.8, 113.2, \"heard\", 0.96], [52, 113.2, 114.6, \"heard\", 0.95], [53, 114.6, 115.8, \"heard\", 0.95], [54, 115.8, 116.8, \"heard\", 0.95], [57, 116.8, 119.5, \"heard\", 0.96], [58, 119.5, 122.8, \"heard\", 0.96], [60, 122.8, 124.5, \"heard\", 0.95], [61, 124.5, 128.2, \"heard\", 0.96], [63, 128.2, 131.5, \"heard\", 0.95], [64, 131.5, 133.2, \"heard\", 0.95], [65, 133.2, 136.8, \"heard\", 0.96], [68, 136.8, 139.0, \"heard\", 0.97], [69, 139.0, 140.5, \"heard\", 0.97], [70, 140.5, 142.2, \"heard\", 0.96], [71, 142.2, 144.5, \"heard\", 0.97], [72, 144.5, 147.0, \"heard\", 0.96], [73, 147.0, 150.8, \"heard\", 0.95], [76, 150.8, 152.2, \"heard\", 0.98], [77, 152.2, 153.2, \"heard\", 0.96], [78, 153.2, 155.8, \"heard\", 0.94], [80, 155.8, 158.2, \"heard\", 0.96], [81, 158.2, 160.0, \"heard\", 0.96], [82, 160.0, 162.5, \"heard\", 0.96], [83, 162.5, 165.0, \"heard\", 0.96], [85, 165.0, 167.5, \"heard\", 0.95], [87, 167.5, 169.2, \"heard\", 0.97], [88, 169.2, 171.0, \"heard\", 0.97], [90, 171.0, 174.5, \"heard\", 0.96], [92, 174.5, 180.8, \"heard\", 0.96], [93, 180.8, 182.0, \"heard\", 0.98], [94, 182.0, 183.8, \"heard\", 0.97], [96, 183.8, 190.5, \"heard\", 0.96], [97, 190.5, 193.8, \"heard\", 0.96], [99, 193.8, 196.5, \"heard\", 0.96], [100, 196.5, 199.8, \"heard\", 0.96], [102, 200.0, 202.5, \"heard\", 0.97], [103, 202.5, 203.8, \"heard\", 0.96], [104, 203.8, 205.0, \"heard\", 0.96], [106, 205.0, 206.5, \"heard\", 0.96], [107, 206.5, 208.0, \"heard\", 0.96], [108, 208.0, 209.0, \"heard\", 0.96], [110, 209.0, 210.0, \"heard\", 0.95], [111, 210.0, 210.8, \"heard\", 0.96], [112, 210.8, 211.5, \"heard\", 0.96], [115, 211.2, 213.0, \"heard\", 0.97], [116, 213.0, 214.2, \"heard\", 0.98], [117, 214.2, 215.5, \"heard\", 0.97], [118, 215.5, 217.0, \"heard\", 0.97], [119, 217.0, 219.0, \"heard\", 0.97], [120, 219.0, 221.5, \"heard\", 0.96], [121, 221.5, 227.2, \"heard\", 0.95], [123, 227.5, 231.2, \"heard\", 0.96], [125, 232.8, 234.6, \"heard\", 0.95], [127, 235.0, 237.2, \"heard\", 0.97], [129, 237.2, 239.5, \"heard\", 0.96], [130, 239.8, 242.0, \"heard\", 0.96], [132, 242.0, 245.5, \"heard\", 0.96], [134, 246.0, 248.8, \"heard\", 0.97] ], \"changes\": [ [43, \"Fuck it, I'll do it live - the way it is\", \"Spoken as live, rhymes with give/biz context\"], [47, \"Or was it the mystical magical variety\", \"Pronounced standard 4-syllable variety rather than written va-riot tee\"], [94, \"voodoo changes things a bit, ya?\", \"Audibly pluralized 'things'\"] ], \"vocal_events\": [ [25, 48.0, 52.0, \"Birth pains inside the Handle, Doctors on stand by for the channel\", \"LEAD\", \"Phrase 1 of run-on line 25\"], [25, 52.0, 55.2, \"Did I mention we got a lawyer - non contingent and pro bono\", \"LEAD\", \"Phrase 2 of run-on line 25\"], [25, 55.2, 58.5, \"Kaleb K on retainer, that’s my dog dipped in flavor\", \"LEAD\", \"Phrase 3 of run-on line 25\"], [25, 58.5, 61.5, \"Sassy Frass, yeah she’s a bitch -\", \"LEAD\", \"Phrase 4 of run-on line 25\"], [26, 61.5, 65.5, \"Baddest bitch, in the mirror - with respect love endearing\", \"LEAD\", \"Phrase 1 of run-on line 26\"], [26, 65.5, 69.2, \"Power is a funny thang - what would you do with the rang?\", \"LEAD\", \"Phrase 2 of run-on line 26\"], [26, 69.2, 73.0, \"micro macro - express the same .. but she’s the queen - no mistake she is the qwang\", \"LEAD\", \"Phrase 3 of run-on line 26\"], [26, 73.0, 75.5, \"Salute, mama - auf Wiedersehen\", \"LEAD\", \"Phrase 4 of run-on line 26\"], [77, 152.2, 153.2, \"CJ!\", \"AD_LIB\", \"Panned hype callout over beat drop\"], [92, 174.5, 178.0, \"Then you realized there is no escape - life forces you to your knees\", \"LEAD\", \"Phrase 1 of run-on line 92\"], [92, 178.0, 180.8, \"It’s never late … you should have asked what kind of doc ta…\", \"LEAD\", \"Cadence trails off before shout\"], [93, 180.8, 182.0, \"DOCTOR?\", \"DOUBLE\", \"Sudden loud vocal interjection\"], [96, 183.8, 187.2, \"Well if it is to be voodoo, how do you do. Do voodoo? Quite simple i declare\", \"LEAD\", \"Phrase 1 of run-on line 96\"], [96, 187.2, 190.5, \"How do you feel- let’s start there … Vudology ain’t for the faint of heart\", \"LEAD\", \"Phrase 2 of run-on line 96\"], [121, 221.5, 225.2, \"I said, I said, mirror mirror on the wall\", \"LEAD\", \"Spoken lead hook phrase\"], [121, 225.5, 227.2, \"who's meta mirrors all?\", \"ECHO\", \"First whispered occurrence embedded in line 121\"], [125, 232.8, 234.6, \"who's meta mirrors all?\", \"ECHO\", \"Second independent whispered repetition at line 125 after line 123 pan line\"] ], \"verification_hotspots\": [ { \"event\": \"First whisper vs second whisper\", \"detail\": \"Line 121 whisper occurs at 225.5-227.2s directly following 'mirror mirror on the wall'. Line 125 whisper is an independent repeat occurring at 232.8-234.6s following the line 123 repeat of 'Cooking in the pan'.\" }, { \"event\": \"Verse 2 pickup\", \"detail\": \"Line 42 begins at 95.0s following a brief drum dropout at 94.5s; line 43 'Fuck it I'll do it live' hits cleanly at 100.8-103.0s.\" }, { \"event\": \"Final vocal termination\", \"detail\": \"Line 134 vocal ends cleanly at 248.8s; instrumental sub and drone reverb tail completely decays to silence by 249.72s.\" } ] }"
+  - button "Good response":
+    - generic: thumb_up
+  - button "Bad response":
+    - generic: thumb_down
+  - generic: info
+  - generic: Google AI models may make mistakes, so double-check outputs.
+  - generic: Use Arrow Up and Arrow Down to select a turn, Enter to jump to it, and Escape to return to the chat.
+  - toolbar "Conversation turn navigation":
+    - button "META MIRROR PRIME — independent analysi..."
+    - button "Your first report fails basic bounds an..."
+    - button "Full Prime source-line and vocal-event ..."
+    - button "The full-map request failed with a Goog..." [pressed]
+  - textbox "Enter a prompt":
+    - /placeholder: Start typing a prompt to see what our models can do
+  - button "Insert images, videos, audio, or files":
+    - generic: add_circle
+  - button "No API key selected":
+    - generic: key_off
+  - button "Open tools menu":
+    - generic: widgets
+    - text: Tools
+  - button "Speech to text":
+    - generic: mic
+  - button "Run Ctrl" [disabled] [active]:
+    - generic: Run
+    - generic: Ctrl
+    - generic: keyboard_return
+  - heading "Run settings" [level=2]
+  - button "Get code":
+    - generic: code
+    - text: Get code
+  - button "Reset default settings":
+    - generic: reset_settings
+  - button "Close run settings panel":
+    - generic: close
+  - button "Gemini 3.8 Flash gemini-3.8-flash Our most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.":
+    - generic: Gemini 3.8 Flash
+    - generic: gemini-3.8-flash
+    - generic: Our most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.
+  - generic "Model selection"
+  - button "System instructions":
+    - generic: System instructions
+    - generic: Optional tone and style instructions for the model
+  - heading "Thinking level" [level=3]
+  - combobox "Thinking Level":
+    - generic: Medium
+    - generic: expand_more
+  - button "Expand or collapse tools":
+    - generic: expand_more
+  - paragraph: Tools
+  - heading "Structured outputs" [level=3]
+  - switch "Structured outputs"
+  - button "Edit JSON schema" [disabled]: Edit
+  - heading "Code execution" [level=3]
+  - switch "Code execution" [disabled]
+  - heading "Function calling" [level=3]
+  - switch "Function calling"
+  - button "Edit function declarations" [disabled]: Edit
+  - heading "Grounding with Google Search" [level=3]
+  - switch "Grounding with Google Search"
+  - heading "Grounding with Google Maps" [level=3]
+  - switch "Grounding with Google Maps"
+  - heading "URL context" [level=3]
+  - switch "Browse the url context"
+  - button "Expand or collapse advanced settings":
+    - generic: expand_more
+  - paragraph: Advanced settings
+- generic: Response ready.

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "03913fb9-1999-4819-bd64-601b163dc2aa",
+  "conversationId": "7a1c301e-e3ab-4f75-99b6-c6a45ae70d4a",
+  "createdAtUTC": "2026-10-31T14:18:01Z",
+  "sender": "nyquist_claude",
+  "recipient": "claude",
+  "writtenBy": "nyquist_claude",
+  "authorship": "self_authored",
+  "subject": "HON-IMPROVE-OPENING-CAM-002 return landed: raw folder, review entry, two runs (run B verified v2-only), hashes",
+  "replyTo": null,
+  "status": "posted",
+  "body": "The notebook round HON-IMPROVE-OPENING-CAM-002 ran on 2026-10-31 on Ziggy's go in Notebook 1 (586b3ee6-5c57-45b3-a59d-a2e21c18a852) by the Nyquist session driving the desktop browser. Raw return: docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/foreign_returns/raw/HON-IMPROVE-OPENING-CAM-002_20261031/ (PROMPT_Q1..4, PROMPT_READBACK, PROMPT_SECONDPASS, GEMINI_RESPONSE_Q1..4, READBACK_RESPONSE, GEMINI_RESPONSE_SECONDPASS, PROBE_V2ONLY, the *_v2only run B files, RETURN_SIDECAR.md, MANIFEST.csv sha256 a0b73506f7bafe810aa148a4cd4581c3a3156075b020c69ba6fd71f7881106d3, 1,884 B). Review entry: notebook_workflow/review_queue/HON-IMPROVE-OPENING-CAM-002.json, 70 claims (35 per run), every outcome unreviewed, sent/executed/productionAccepted false, one unresolved item. Two runs: run A (09:25-09:50) with uncertain source selection (probably v2 + the three synced Gemini chat sources; import off); run B (09:58-10:13) verified three ways as v2 only (drawn checkbox state, composer chip docs (1), a probe that listed only the v2 title) and satisfying the contract; run B shares the chat thread with run A so it is not a fresh blind run; its content is near-identical to run A. Source added by Copied text with Ziggy's paste; retrieval readback PASS (marker sentence, first line, eleven headings, four credits, no fare meter). The chat filter's Google Drive search switch was found ON by default and turned OFF before Q2; left OFF. Sources restored to as-found (all ticked) after the run. Nyquist mirror: REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/CFA_ROUNDS/HON-IMPROVE-OPENING-CAM-002/ (MANIFEST.csv 2eb2f5b1401cd84aa9ef7daec909b6a91bc4c09934a4457914ee54ea8118e6a7). Nothing promoted, executed, generated or committed. Sender id nyquist_claude is not yet in the mailbox registry; please add it or tell me the id to use.",
+  "attachments": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/foreign_returns/raw/HON-IMPROVE-OPENING-CAM-002_20261031/MANIFEST.csv",
+      "sha256": "a0b73506f7bafe810aa148a4cd4581c3a3156075b020c69ba6fd71f7881106d3",
+      "bytes": 1884
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/review_queue/HON-IMPROVE-OPENING-CAM-002.json",
+      "sha256": "ba6b692f4d7464c7c862a3dac2e31b9855ed37833791b42a3b810bd24fc5128e",
+      "bytes": 42129
+    }
+  ],
+  "source": null
+}

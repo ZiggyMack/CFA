@@ -1,0 +1,546 @@
+{
+  "schemaVersion": 1,
+  "recordType": "verified_scoped_read_only_git_backup_audit",
+  "writtenBy": "CFA Nova helper /root/gemini_preflight_context_audit",
+  "authorship": "coordinator_summary",
+  "authorization": {
+    "mailboxMessages": [
+      "2c00b7e1-3596-4e44-9cc0-b6f849237cf9",
+      "2da85f0d-1dc2-4bdc-9664-5c356e296ff2"
+    ],
+    "scope": "Check/report only. User personally reported five-repository sync; do not repeat."
+  },
+  "AGENTS": {
+    "rootAndParentFilesChecked": true,
+    "rootFilesFound": [],
+    "recursiveAGENTSInventory": "rg --files --hidden -g AGENTS.md -g !.git completed with exit1/no matches in either repository"
+  },
+  "initialFailedAttempt": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/NYQUIST_PAN_GIT.json",
+    "bytes": 10970,
+    "sha256": "ec3801930ffebfcf96d96f83a5536784f877221d945a9f9b6a4a904f08fa51ff",
+    "qualification": "Preserved initial sandbox ownership failures. Zero-count placeholders in that artifact are NOT valid coverage results. Verified checks below ran in owning-host context without security exceptions/settings changes."
+  },
+  "repositories": [
+    {
+      "path": "D:/Documents/Nyquist_Consciousness",
+      "canonicalName": "Nyquist_Consciousness",
+      "remote": "https://github.com/ZiggyMack/Nyquist_Consciousness.git",
+      "branch": "Consciousness",
+      "localHEAD": "66b6dcb31f2082b5c701ab7f1bff2357b971ecca",
+      "upstream": "origin/Consciousness",
+      "cachedUpstreamHEAD": "cc76866b22eef5e663e0d6140ec5d931f7c0f31f",
+      "ahead": 28,
+      "behind": 0,
+      "checkedAtUTC": "2026-10-14T11:21:41.928598Z",
+      "finishedAtUTC": "2026-10-14T11:21:42.269371Z",
+      "remoteRef": "refs/heads/Consciousness",
+      "latestCommitAt": "2026-07-26T10:34:40-04:00",
+      "localFolderMatchesRemoteName": true,
+      "reportedNexusNameMatch": "Actual folder and remote identify Nyquist_Consciousness; no separate Nexus repository asserted.",
+      "freshRemoteEvidence": {
+        "command": "git ls-remote --exit-code --heads origin refs/heads/Consciousness",
+        "exitCode": 0,
+        "checkedAtUTC": "2026-10-14T11:21:41.928598Z",
+        "finishedAtUTC": "2026-10-14T11:21:42.269371Z",
+        "remoteRef": "refs/heads/Consciousness",
+        "remoteHEAD": "cc76866b22eef5e663e0d6140ec5d931f7c0f31f",
+        "localHEADMatchesFreshRemote": false,
+        "cachedUpstreamMatchesFreshRemote": true
+      },
+      "relationEvidence": {
+        "command": "git rev-list --left-right --count HEAD...@{u}",
+        "ahead": 28,
+        "behind": 0,
+        "qualification": "Successful cached relation computation applies to freshly observed remote commit because its SHA exactly equals cached upstream SHA; no fetch/refs update."
+      },
+      "filenameStatScope": {
+        "path": "D:/Documents/Nyquist_Consciousness",
+        "scopes": {
+          "tracked": {
+            "checkedAtUTC": "2026-10-14T11:22:46.900126Z",
+            "finishedAtUTC": "2026-10-14T11:22:46.992815Z",
+            "exitCode": 0,
+            "fileCount": 7358,
+            "omittedSensitivePathCount": 282,
+            "mediaCount": 665,
+            "mediaBytes": 1469025600,
+            "mediaExtensionCounts": {
+              ".png": 552,
+              ".m4a": 7,
+              ".mp4": 10,
+              ".jpeg": 2,
+              ".svg": 94
+            },
+            "mediaDirectoryTotals": {
+              "REPO-SYNC/LLM_BOOK": {
+                "count": 103,
+                "bytes": 1168473132
+              },
+              "experiments/temporal_stability": {
+                "count": 279,
+                "bytes": 124134188
+              },
+              "WHITE-PAPER/reviewers": {
+                "count": 203,
+                "bytes": 111594836
+              },
+              "WHITE-PAPER/figures": {
+                "count": 70,
+                "bytes": 63306317
+              },
+              "REPO-SYNC/Logos": {
+                "count": 1,
+                "bytes": 642529
+              },
+              "experiments/S8": {
+                "count": 5,
+                "bytes": 501599
+              },
+              "experiments/compression_tests": {
+                "count": 4,
+                "bytes": 372999
+              }
+            },
+            "newestMediaExamples": [
+              {
+                "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/New_8_Cognative_Physics/_IN2/Vintage_Probabilities_to_Quantum_Theory.png",
+                "bytes": 5844966,
+                "modifiedAtUTC": "2026-07-10T23:21:57.691917Z"
+              },
+              {
+                "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/New_8_Cognative_Physics/_IN2/Two_Scientific_Discovery_Architectures.png",
+                "bytes": 7448128,
+                "modifiedAtUTC": "2026-07-10T23:21:57.561463Z"
+              },
+              {
+                "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/New_8_Cognative_Physics/_IN2/The_Noether_Lens_Discovery_Framework.png",
+                "bytes": 4752903,
+                "modifiedAtUTC": "2026-07-10T23:21:56.852062Z"
+              },
+              {
+                "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/New_8_Cognative_Physics/_IN2/The_Cognitive_Operator_Taxonomy.png",
+                "bytes": 5210458,
+                "modifiedAtUTC": "2026-07-10T23:21:56.278329Z"
+              }
+            ],
+            "largestMediaExamples": [
+              {
+                "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/CHEWED/Gnostic-1-2-x3/Jesus_s_Hidden_Teachings.mp4",
+                "bytes": 76420896,
+                "modifiedAtUTC": "2026-02-04T05:33:35.359062Z"
+              },
+              {
+                "path": "REPO-SYNC/LLM_BOOK/RnD/Gnostic/Jesus_s_Hidden_Teachings.mp4",
+                "bytes": 76420896,
+                "modifiedAtUTC": "2025-12-30T06:14:58.568872Z"
+              },
+              {
+                "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/New_8_Cognative_Physics/_IN/Structural_Smuggling__The_Under-Determination_Pattern_in_Physic.mp4",
+                "bytes": 61691569,
+                "modifiedAtUTC": "2026-07-07T22:00:14.078286Z"
+              },
+              {
+                "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/New_8_Cognative_Physics/_IN/The_Teleporter_Discontinuity__Causal_Webs_vs.mp4",
+                "bytes": 60127339,
+                "modifiedAtUTC": "2026-07-07T22:00:18.490573Z"
+              }
+            ]
+          },
+          "untracked": {
+            "checkedAtUTC": "2026-10-14T11:22:47.557998Z",
+            "finishedAtUTC": "2026-10-14T11:22:47.701311Z",
+            "exitCode": 0,
+            "fileCount": 108,
+            "omittedSensitivePathCount": 0,
+            "mediaCount": 1,
+            "mediaBytes": 6758637,
+            "mediaExtensionCounts": {
+              ".png": 1
+            },
+            "mediaDirectoryTotals": {
+              "REPO-SYNC/LLM_BOOK": {
+                "count": 1,
+                "bytes": 6758637
+              }
+            },
+            "newestMediaExamples": [
+              {
+                "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/New_11/_IN/studio/20261013_infographic_two-halves-one-gate.png",
+                "bytes": 6758637,
+                "modifiedAtUTC": "2026-10-13T04:01:39.723149Z"
+              }
+            ],
+            "largestMediaExamples": [
+              {
+                "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/New_11/_IN/studio/20261013_infographic_two-halves-one-gate.png",
+                "bytes": 6758637,
+                "modifiedAtUTC": "2026-10-13T04:01:39.723149Z"
+              }
+            ]
+          },
+          "ignored": {
+            "checkedAtUTC": "2026-10-14T11:22:47.705239Z",
+            "finishedAtUTC": "2026-10-14T11:22:51.224232Z",
+            "exitCode": 0,
+            "fileCount": 4240,
+            "omittedSensitivePathCount": 60,
+            "mediaCount": 375,
+            "mediaBytes": 215035214,
+            "mediaExtensionCounts": {
+              ".png": 247,
+              ".svg": 128
+            },
+            "mediaDirectoryTotals": {
+              "experiments/.archive": {
+                "count": 375,
+                "bytes": 215035214
+              }
+            },
+            "newestMediaExamples": [
+              {
+                "path": "experiments/.archive/compression_tests_Euclidean/EXP2_SSTACK/results/phase25/analysis/factor_loadings_heatmap.svg",
+                "bytes": 105496,
+                "modifiedAtUTC": "2025-12-19T17:13:16.923218Z"
+              },
+              {
+                "path": "experiments/.archive/compression_tests_Euclidean/EXP2_SSTACK/results/phase25/analysis/factor_loadings_heatmap.png",
+                "bytes": 139201,
+                "modifiedAtUTC": "2025-12-19T17:13:16.921219Z"
+              },
+              {
+                "path": "experiments/.archive/compression_tests_Euclidean/EXP2_SSTACK/results/phase25/analysis/ablation_subdim_importance.png",
+                "bytes": 79504,
+                "modifiedAtUTC": "2025-12-19T17:13:16.917221Z"
+              },
+              {
+                "path": "experiments/.archive/compression_tests_Euclidean/EXP2_SSTACK/results/phase25/analysis/ablation_pillar_importance.png",
+                "bytes": 48798,
+                "modifiedAtUTC": "2025-12-19T17:13:16.821280Z"
+              }
+            ],
+            "largestMediaExamples": [
+              {
+                "path": "experiments/.archive/temporal_stability_Euclidean/S7_ARMADA/visualizations/pics/2_phase_portrait/run009_phase_portrait.png",
+                "bytes": 6832697,
+                "modifiedAtUTC": "2025-12-18T06:55:15.689878Z"
+              },
+              {
+                "path": "experiments/.archive/temporal_stability_Euclidean/S7_ARMADA/visualizations/pics/run009/run009_phase_portrait.png",
+                "bytes": 6227799,
+                "modifiedAtUTC": "2025-12-18T06:55:41.419748Z"
+              },
+              {
+                "path": "experiments/.archive/temporal_stability_Euclidean/S7_ARMADA/visualizations/pics/1_vortex/run009_vortex.png",
+                "bytes": 5851516,
+                "modifiedAtUTC": "2025-12-18T06:55:39.621496Z"
+              },
+              {
+                "path": "experiments/.archive/temporal_stability_Euclidean/S7_ARMADA/visualizations/pics/run009/run009_vortex.png",
+                "bytes": 5851516,
+                "modifiedAtUTC": "2025-12-18T06:55:41.485708Z"
+              }
+            ]
+          }
+        },
+        "gitattributes": [
+          {
+            "path": "REPO-SYNC/Logos/.archive/Logos_Legacy/.gitattributes",
+            "bytes": 68,
+            "sha256": "d8fb0de4792538f93822b2c0d235604921299d5e54a3d6ec7a6cb34536e8bf1e",
+            "lfsRules": []
+          }
+        ],
+        "status": {
+          "checkedAtUTC": "2026-10-14T11:22:51.529870Z",
+          "exitCode": 0,
+          "changeCount": 131,
+          "byStatus": {
+            " M": 5,
+            "R ": 13,
+            "RM": 1,
+            " D": 4,
+            "??": 108
+          },
+          "examples": [
+            {
+              "state": " M",
+              "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/CHEWED/CHEW_SUMMARY.md"
+            },
+            {
+              "state": " M",
+              "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/CHEWED/EXPERIMENTS_INDEX.md"
+            },
+            {
+              "state": " M",
+              "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/New_10_TOE/README.md"
+            },
+            {
+              "state": "R ",
+              "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/New_11/_IN/castaneda_extracted.txt"
+            },
+            {
+              "state": "R ",
+              "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/New_11/_ROUND_1/CONNECTIONS/SHAMAN.md"
+            },
+            {
+              "state": "R ",
+              "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/New_11/_ROUND_1/EXPERIMENTS/SHAMAN.md"
+            },
+            {
+              "state": "R ",
+              "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/New_11/_ROUND_1/INSIGHTS/SHAMAN.md"
+            },
+            {
+              "state": "R ",
+              "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/New_11/_ROUND_1/QUESTIONS_OUT.md"
+            },
+            {
+              "state": "RM",
+              "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/New_11/_ROUND_1/REVIEW_NOTES_SHAMAN.md"
+            },
+            {
+              "state": "R ",
+              "path": "REPO-SYNC/LLM_BOOK/0_SOURCE_MANIFESTS/STAGING/New_11/_ROUND_1/chat.md"
+            }
+          ]
+        },
+        "lfs": {
+          "checkedAtUTC": "2026-10-14T11:22:52.179830Z",
+          "exitCode": 0,
+          "fileCount": 0,
+          "examples": [],
+          "error": null,
+          "remoteObjectAvailabilityVerified": false
+        }
+      },
+      "treeReachabilityAttempt": {
+        "path": "D:/Documents/Nyquist_Consciousness",
+        "checkedAtUTC": "2026-10-14T11:30:50.550901Z",
+        "freshRemoteHEADFromPriorLsRemote": "cc76866b22eef5e663e0d6140ec5d931f7c0f31f",
+        "commandExitCodes": {
+          "index": 128,
+          "headTree": 128,
+          "remoteTree": 128,
+          "relation": 128
+        },
+        "limit": "Default caller context rejects sibling repository Git ownership; no safe.directory exception applied.",
+        "aheadBehindFromAlreadyPresentObjects": null
+      },
+      "lastSuccessfulPushAtUTC": null,
+      "lastSuccessfulPushTimeEvidence": "Unknown; commit timestamp is not push time. No actual successful push receipt/remote push-event evidence inspected.",
+      "coverage": {
+        "uncommittedUntrackedIgnoredExcludedFromCommittedGitBranch": true,
+        "trackedMediaRemoteBlobReachability": "Not separately proven; follow-up local tree comparison failed default sandbox ownership checks. No security exception applied.",
+        "lfsRemoteAvailabilityVerified": false,
+        "driveCoverage": "Not inspected; parent audit owns comparison.",
+        "syncMechanism": "Exact user sync tool/mechanism unknown; branch equality alone does not establish it."
+      }
+    },
+    {
+      "path": "D:/Documents/Pan_Handlers",
+      "canonicalName": "Pan_Handlers",
+      "remote": "https://github.com/ZiggyMack/Pan_Handlers.git",
+      "branch": "main",
+      "localHEAD": "17f7cbc4323564e6974bee901141d8982b3ce50b",
+      "upstream": "origin/main",
+      "cachedUpstreamHEAD": "17f7cbc4323564e6974bee901141d8982b3ce50b",
+      "ahead": 0,
+      "behind": 0,
+      "checkedAtUTC": "2026-10-14T11:21:43.106643Z",
+      "finishedAtUTC": "2026-10-14T11:21:43.466921Z",
+      "remoteRef": "refs/heads/main",
+      "latestCommitAt": "2026-10-10T13:06:00-04:00",
+      "localFolderMatchesRemoteName": true,
+      "reportedNexusNameMatch": null,
+      "freshRemoteEvidence": {
+        "command": "git ls-remote --exit-code --heads origin refs/heads/main",
+        "exitCode": 0,
+        "checkedAtUTC": "2026-10-14T11:21:43.106643Z",
+        "finishedAtUTC": "2026-10-14T11:21:43.466921Z",
+        "remoteRef": "refs/heads/main",
+        "remoteHEAD": "17f7cbc4323564e6974bee901141d8982b3ce50b",
+        "localHEADMatchesFreshRemote": true,
+        "cachedUpstreamMatchesFreshRemote": true
+      },
+      "relationEvidence": {
+        "command": "git rev-list --left-right --count HEAD...@{u}",
+        "ahead": 0,
+        "behind": 0,
+        "qualification": "Successful cached relation computation applies to freshly observed remote commit because its SHA exactly equals cached upstream SHA; no fetch/refs update."
+      },
+      "filenameStatScope": {
+        "path": "D:/Documents/Pan_Handlers",
+        "scopes": {
+          "tracked": {
+            "checkedAtUTC": "2026-10-14T11:23:59.362725Z",
+            "finishedAtUTC": "2026-10-14T11:23:59.535634Z",
+            "exitCode": 0,
+            "fileCount": 361,
+            "omittedSensitivePathCount": 1,
+            "mediaCount": 1,
+            "mediaBytes": 859874,
+            "mediaExtensionCounts": {
+              ".png": 1
+            },
+            "mediaDirectoryTotals": {
+              "Help/examples": {
+                "count": 1,
+                "bytes": 859874
+              }
+            },
+            "newestMediaExamples": [
+              {
+                "path": "Help/examples/cfa_pump_v001/pump_concept_v001.png",
+                "bytes": 859874,
+                "modifiedAtUTC": "2026-09-12T14:10:21.339320Z"
+              }
+            ],
+            "largestMediaExamples": [
+              {
+                "path": "Help/examples/cfa_pump_v001/pump_concept_v001.png",
+                "bytes": 859874,
+                "modifiedAtUTC": "2026-09-12T14:10:21.339320Z"
+              }
+            ]
+          },
+          "untracked": {
+            "checkedAtUTC": "2026-10-14T11:23:59.561861Z",
+            "finishedAtUTC": "2026-10-14T11:23:59.608126Z",
+            "exitCode": 0,
+            "fileCount": 0,
+            "omittedSensitivePathCount": 0,
+            "mediaCount": 0,
+            "mediaBytes": 0,
+            "mediaExtensionCounts": {},
+            "mediaDirectoryTotals": {},
+            "newestMediaExamples": [],
+            "largestMediaExamples": []
+          },
+          "ignored": {
+            "checkedAtUTC": "2026-10-14T11:23:59.608217Z",
+            "finishedAtUTC": "2026-10-14T11:23:59.905818Z",
+            "exitCode": 0,
+            "fileCount": 161,
+            "omittedSensitivePathCount": 0,
+            "mediaCount": 13,
+            "mediaBytes": 2123821,
+            "mediaExtensionCounts": {
+              ".png": 13
+            },
+            "mediaDirectoryTotals": {
+              "Help/.preview": {
+                "count": 13,
+                "bytes": 2123821
+              }
+            },
+            "newestMediaExamples": [
+              {
+                "path": "Help/.preview/models-mobile.png",
+                "bytes": 76422,
+                "modifiedAtUTC": "2026-09-12T15:40:58.618641Z"
+              },
+              {
+                "path": "Help/.preview/civitai-pack-desktop.png",
+                "bytes": 222230,
+                "modifiedAtUTC": "2026-09-12T15:40:58.073232Z"
+              },
+              {
+                "path": "Help/.preview/models-desktop.png",
+                "bytes": 208509,
+                "modifiedAtUTC": "2026-09-12T15:40:57.334315Z"
+              },
+              {
+                "path": "Help/.preview/atlas-mobile.png",
+                "bytes": 61748,
+                "modifiedAtUTC": "2026-09-12T15:40:54.879719Z"
+              }
+            ],
+            "largestMediaExamples": [
+              {
+                "path": "Help/.preview/scene-desktop.png",
+                "bytes": 254037,
+                "modifiedAtUTC": "2026-09-12T15:40:45.736925Z"
+              },
+              {
+                "path": "Help/.preview/fit-tradeoffs.png",
+                "bytes": 250046,
+                "modifiedAtUTC": "2026-09-12T12:05:01.860134Z"
+              },
+              {
+                "path": "Help/.preview/desktop.png",
+                "bytes": 243911,
+                "modifiedAtUTC": "2026-09-12T12:04:56.921209Z"
+              },
+              {
+                "path": "Help/.preview/civitai-pack-desktop.png",
+                "bytes": 222230,
+                "modifiedAtUTC": "2026-09-12T15:40:58.073232Z"
+              }
+            ]
+          }
+        },
+        "gitattributes": [],
+        "status": {
+          "checkedAtUTC": "2026-10-14T11:23:59.934651Z",
+          "exitCode": 0,
+          "changeCount": 0,
+          "byStatus": {},
+          "examples": []
+        },
+        "lfs": {
+          "checkedAtUTC": "2026-10-14T11:24:00.067853Z",
+          "exitCode": 0,
+          "fileCount": 0,
+          "examples": [],
+          "error": null,
+          "remoteObjectAvailabilityVerified": false
+        }
+      },
+      "treeReachabilityAttempt": {
+        "path": "D:/Documents/Pan_Handlers",
+        "checkedAtUTC": "2026-10-14T11:30:50.730286Z",
+        "freshRemoteHEADFromPriorLsRemote": "17f7cbc4323564e6974bee901141d8982b3ce50b",
+        "commandExitCodes": {
+          "index": 128,
+          "headTree": 128,
+          "remoteTree": 128,
+          "relation": 128
+        },
+        "limit": "Default caller context rejects sibling repository Git ownership; no safe.directory exception applied.",
+        "aheadBehindFromAlreadyPresentObjects": null
+      },
+      "lastSuccessfulPushAtUTC": null,
+      "lastSuccessfulPushTimeEvidence": "Unknown; commit timestamp is not push time. No actual successful push receipt/remote push-event evidence inspected.",
+      "coverage": {
+        "uncommittedUntrackedIgnoredExcludedFromCommittedGitBranch": true,
+        "trackedMediaRemoteBlobReachability": "Not separately proven; follow-up local tree comparison failed default sandbox ownership checks. No security exception applied.",
+        "lfsRemoteAvailabilityVerified": false,
+        "driveCoverage": "Not inspected; parent audit owns comparison.",
+        "syncMechanism": "Exact user sync tool/mechanism unknown; branch equality alone does not establish it."
+      }
+    }
+  ],
+  "conclusions": [
+    "Nyquist Consciousness branch is28commits ahead/0behind freshly observed configured GitHub upstream; that branch is not fully synced as of check.",
+    "Pan main committed HEAD matches fresh GitHub origin/main; working tree is clean.13ignored preview PNGs remain outside Git coverage at those paths.",
+    "Nyquist108untracked files include one6,758,637-byte Oct13 infographic.375ignored archive media total215,035,214bytes; their separate Drive/older-backup coverage is unknown.",
+    "Media totals use filename/stat only and exclude sensitive/private paths; PDF/text/data files are counted in full file scopes but not media totals."
+  ],
+  "bounds": {
+    "gitOptionalLocks": "0",
+    "terminalPromptsDisabled": true,
+    "fetch": false,
+    "push": false,
+    "commits": false,
+    "uploads": false,
+    "backupStarted": false,
+    "settingsChanged": false,
+    "securityExceptionsAdded": false,
+    "repositoriesWritten": false,
+    "privateCalibrationOrAnswerKeyContentsRead": false,
+    "mediaContentsRead": false,
+    "onlyNewCFAEvidenceFileWritten": true
+  },
+  "recordedAtUTC": "2026-10-14T11:35:42.311170Z"
+}

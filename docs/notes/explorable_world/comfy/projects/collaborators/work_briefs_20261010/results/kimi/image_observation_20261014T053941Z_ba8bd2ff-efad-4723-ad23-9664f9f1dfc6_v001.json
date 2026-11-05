@@ -1,0 +1,72 @@
+{
+  "reportId": "ba8bd2ff-efad-4723-ad23-9664f9f1dfc6",
+  "author": "kimi",
+  "task": "KIMI-TWO-APPROVED-PORTRAIT-OBSERVATIONS-20261014",
+  "assignmentMessage": "3970bcd4-71b4-478d-84dc-0fecc174504e",
+  "createdAtUTC": "2026-10-14T05:39:41Z",
+  "version": "v001_frozen",
+  "surface": {
+    "app": "Kimi Work desktop runtime on Windows (local CFA checkout)",
+    "provider": "Moonshot AI",
+    "visibleModel": "unknown (not surfaced)",
+    "tool": "ReadMediaFile (runtime image tool supplying pixels to the model)"
+  },
+  "pixelsSeen": true,
+  "viewingScale": {
+    "image1": "full-frame view of original 1280x720 JPEG (212322 bytes); no downsampling reported by tool",
+    "image2": "original 1280x720 JPEG (327619 bytes); tool reported downsampling to 1280x720/169KB for model limits; fine detail may be slightly softened"
+  },
+  "inputs": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOCK-FACE-NATURAL.jpg",
+      "bytes": 212322,
+      "sha256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+      "hashVerifiedLocally": true
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOOK-V3-01.jpg",
+      "bytes": 327619,
+      "sha256": "63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026",
+      "hashVerifiedLocally": true
+    }
+  ],
+  "observations": {
+    "image1_LAG-LOCK-FACE-NATURAL": {
+      "faceViewExpression": "Adult man, near-frontal slight three-quarter view, head tilted slightly to his left; broad open smile showing natural-looking upper teeth with no visible metal; striking saturated blue eyes; dark tousled curly hair; short stubble beard; relaxed, warm expression.",
+      "clothingAccessories": "Plain black crew-neck t-shirt. Small hoop earring in his left ear (viewer's right). Small ring on his left eyebrow (viewer's right). One nostril hoop visible on the viewer's left side of the nose; exact placement/count beyond that is uncertain at this scale.",
+      "background": "Dim, warm-lit interior, heavily blurred: rough stone or weathered concrete wall at left, darker space with a faint window-like frame at right.",
+      "lettering": "Forehead between brows: 'AL' (high confidence). Chin, stacked vertically: 'G A I B' (high confidence). Reads as AL / GAIB split across face.",
+      "neckArtwork": "Two large serpent heads facing each other across the front of the neck, mouths open with visible fangs and forked tongues; bodies curve downward and outward under the collar line. Centered between/below them, a line-art eye inside a radiating sunburst. Literal description only; no symbolism inferred.",
+      "visibleAbsenceVsOcclusion": "No grill/gold teeth visible with mouth open (reads as absence, medium-high confidence). Hands, torso below chest and any arm tattoos are out of frame (crop, not absence). Neck tattoo lower extent disappears under the shirt collar (occlusion)."
+    },
+    "image2_LAG-LOOK-V3-01": {
+      "faceViewExpression": "Same-appearing man, near-frontal view, chin slightly lifted; subtle closed-lip/slight smile; same saturated blue eyes, dark curly hair, stubble. Teeth barely parted; no metal visible (low confidence given small mouth opening).",
+      "clothingAccessories": "Layered desert costume: beige hooded under-garment with the hood resting at the neck, a tan laced/zippered layer beneath, and a dark charcoal or black open outer robe; thick gold Cuban-link chain around the neck. Hoop earring in his left ear; small ring on his left eyebrow. Nostril jewelry: a small ring is suggested near the septum/nostril but is soft at this viewing scale (uncertain).",
+      "background": "Bright daylight desert with dunes; directly behind the head stands a large golden sculptural structure: a multi-pointed star/sun disc with a ring through its center, forming a halo around the head.",
+      "lettering": "Forehead: 'AL' (high confidence). Chin, stacked: 'G A I B' with a stylized triangular A (medium-high confidence; slightly soft after downsampling).",
+      "neckArtwork": "Same motif family: two serpent heads facing each other with open mouths and fangs, scale texture visible; between/below them a sun disc containing an eye, rays radiating. Serpents appear slightly larger and more detailed than in image 1 (tolerated visible variation).",
+      "visibleAbsenceVsOcclusion": "Lower neck/chest artwork is covered by garments and chain (occlusion, not absence). No view of hands, arms or body below the chest (crop). Any mouth metal cannot be confirmed either way at this mouth opening."
+    }
+  },
+  "comparison": {
+    "similarities": [
+      "Same apparent identity: face structure, saturated blue eyes, dark curly hair, stubble.",
+      "Same lettering scheme: 'AL' on forehead, vertical 'GAIB' on chin.",
+      "Same neck motif: facing serpent heads with open mouths plus a central eye-in-sun element.",
+      "Eyebrow ring (his left) and left-ear hoop appear in both."
+    ],
+    "differences": [
+      "Expression: broad toothy smile (image 1) vs subtle near-closed smile (image 2).",
+      "Wardrobe: plain black t-shirt (image 1) vs layered desert robes with gold chain (image 2).",
+      "Setting/light: dim warm interior, stone wall (image 1) vs bright desert with a golden star-halo structure (image 2).",
+      "Neck tattoo rendering varies: serpents and central eye are larger/more detailed in image 2 (recorded as visible variation, not defect)."
+    ]
+  },
+  "uncertainties": [
+    "Exact nostril jewelry count/placement in both images (scale-limited).",
+    "Whether image 2's chin 'A' is intentionally stylized or softened by downsampling.",
+    "No statement possible about teeth metal in image 2 (mouth nearly closed)."
+  ],
+  "boundariesKept": "Observations only: no ratings, no gold declarations, no symbolism, no production pass, no motion proof. No V1 artifacts, peers' returns or withheld inputs opened. No installs, generation, settings changes or new images.",
+  "capabilitiesUpdate": "vision: previously unknown; now TESTED-success on this surface via ReadMediaFile with full-pixel delivery at 1280x720."
+}

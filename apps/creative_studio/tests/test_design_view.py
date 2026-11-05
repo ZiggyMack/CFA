@@ -13,9 +13,9 @@ from design_view import build_design_model, cast_browse_groups, model_asset_ids
 from library_helpers import effective_reviews
 
 CATALOG = APP.parents[1] / "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js"
-# Reconciled 2026-10-29: two received Grok videos have a Videos and Chewy home;
-# source bytes, saved reviews, scoped BOM and intake evidence are unchanged.
-CATALOG_HASH = "3838ca5390511583a16ccf91d41c0acfd20a837d88fae59c8e1c38d2085aef6f"
+# Reconciled 2026-11-04: the complete TCM review intake and dated technical
+# lineage are indexed; saved reviews and established Hon/Lisan evidence remain intact.
+CATALOG_HASH = "c84191003dc22dfb97ca55f64a316c1c0bb288d244b8b324fd405ba17124f85e"
 
 
 def walk(node):
@@ -263,7 +263,10 @@ class FrozenCatalogParityTest(unittest.TestCase):
 
     def test_tattoo_overview_order_no_duplicate_map_or_acceptance(self):
         model = build_design_model(self.data, "hon", "details")
-        eye = next(g for g in model["sections"][0]["groups"] if g["id"] == "hon:tattoo-eye")
+        self.assertEqual([section["title"] for section in model["sections"]],
+                         ["Jewelry", "Tattoos", "Piercings, grills and props"])
+        eye = next(g for section in model["sections"] for g in section.get("groups", [])
+                   if g["id"] == "hon:tattoo-eye")
         overview = eye["sections"][0]
         self.assertEqual(overview["kind"], "columns")
         self.assertEqual([s["assetIDs"] for s in overview["sections"]], [["HD-TATGUIDE-91d44599bd8c"], ["HD-LOCATION-EYE-20261012"], ["HD-TATGUIDE-b6eb3258a6ae"]])
@@ -271,7 +274,7 @@ class FrozenCatalogParityTest(unittest.TestCase):
         self.assertEqual(occurrences.count("HD-LOCATION-EYE-20261012"), 1)
         self.assertIn("revision needed", overview["sections"][2]["title"])
         self.assertEqual(eye["sections"][2]["title"], "Body appearances")
-        self.assertEqual([g["title"] for g in model["sections"][1]["groups"]], ["Grills", "Piercings and jewelry", "Guns"])
+        self.assertEqual([g["title"] for g in model["sections"][2]["groups"]], ["Grills", "Piercings", "Guns"])
 
     def test_comfy_bosses_archive_and_missing_files(self):
         comfy = build_design_model(self.data, "hon", "comfy")
@@ -293,7 +296,9 @@ class FrozenCatalogParityTest(unittest.TestCase):
         self.assertEqual(model_asset_ids(recipes), [], "Recipe ingredient links do not duplicate image galleries")
         cast = build_design_model(self.data, "hon", "cast")
         boss = named(cast, "Creature boss ideas")
-        self.assertEqual(len(boss["assetIDs"]), 12)
+        self.assertEqual(len(boss["assetIDs"]), 11)
+        self.assertNotIn("HD-DROP-6783943c414c", boss["assetIDs"])
+        self.assertIn("HD-DROP-6783943c414c", named(cast, "Gecko-frog boss")["assetIDs"])
         self.assertFalse(set(boss["assetIDs"]) & set(model_asset_ids(cast["sections"][0])))
         archive = build_design_model(self.data, "hon", "archive")
         self.assertIn("HD-LIKENESS-02", model_asset_ids(archive))
@@ -343,8 +348,11 @@ class NativeDesignControlsTest(unittest.TestCase):
         self.assertEqual(app.button(key=context + ":filter:all").proto.type, "primary")
         app.button(key=context + ":0:expanded:hon:cast:toggle").click().run()
         self.assertFalse(app.exception)
-        self.assertTrue(any(e.label == "Origin & story connections" for e in app.expander))
-        self.assertTrue(any("no panel linked yet" in c.value for c in app.caption))
+        self.assertTrue(any(m.value == "**Scenes & planned work**" for m in app.markdown))
+        self.assertTrue(any("Reference candidates" in e.label for e in app.expander))
+        self.assertTrue(any("Planned bar" in m.value for m in app.markdown))
+        self.assertTrue(any("From Smuggler vest" in c.value for c in app.caption))
+        self.assertTrue(any("No videos are linked to this character yet." in c.value for c in app.caption))
         self.assertEqual(app.session_state["saved_reviews"], before)
 
     def test_outfit_tag_highlight_and_filter_change_together(self):
@@ -446,7 +454,7 @@ render_design_view(data, 'hon', 'working', Path(APP_PATH)/'library', grid, open_
             self.assertNotIn("Body art", [n.value for n in app.subheader])
             next(b for b in app.button if b.label == "Show references").click().run(timeout=25)
             self.assertFalse(app.exception)
-            self.assertIn("Body art", [n.value for n in app.subheader])
+            self.assertIn("**Body art**", [n.value for n in app.markdown])
             next(b for b in app.button if b.label == "tattoo").click().run(timeout=25)
             self.assertFalse(app.exception)
             self.assertEqual(app.session_state["selected"], "tattoo")

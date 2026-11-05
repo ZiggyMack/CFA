@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "name": "test_review_requests.cjs",
+      "exitCode": 0,
+      "stdout": "Review requests and assistant proposals: 14 checks passed.\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_mission_priority.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"verifiedGroupSize\":50,\"shortlist\":13,\"initialPreviews\":7,\"priorityBeforeDefault\":true,\"viewerNavigation\":true,\"reviewWrites\":0,\"browserVisualQA\":false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_mission_hash_navigation.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"origins\":[\"file:\",\"localhost http:\"],\"routeChecks\":4,\"routeCounts\":[40,90],\"hashLinksTargetCurrentViewer\":true,\"relativeBriefBasePreserved\":true,\"unsafeLinksRejected\":true,\"likenessAndSceneControls\":true,\"reviewWrites\":0,\"browserVisualQA\":false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_mission_gun_variants.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"uniqueVariants\":17,\"uniqueOutfits\":17,\"initialUnreviewed\":0,\"initialReviewed\":16,\"initialHidden\":1,\"initialKeep\":1,\"initialNeedsFixes\":15,\"yellowFullOutfit\":8,\"yellowVariantIncluded\":true,\"boundImageButtonsVerified\":16,\"outfitAnchorRoutesVerified\":16,\"browserOverlayImport\":true,\"liveReviewRefresh\":true,\"archiveAndRemovalFiltering\":true,\"fullOutfitCountsRespectRemoval\":true,\"scopedGunNotesPreserved\":true,\"allReviewedStatusDerived\":true,\"fabricatedApprovals\":0,\"localStorageWrites\":0,\"catalogMutations\":0,\"canonicalTaskMutations\":0,\"browserVisualQA\":false,\"sourcePins\":{\"libraryJS\":\"0a6302b2f09070dc988112b20fa866dff3e5f9c3c3f0dddf0838d0dcea87e51c\",\"catalogJS\":\"e5164fbed87bf1f6228b9ab13298171414c24f905e6bf9da6d6fe65ebd68776a\"},\"reviewedAssets\":[{\"id\":\"HD-RETURN-86cb39e4d5b6\",\"status\":\"needs_fixes\",\"note\":\"fine for an alternative universe DoLO - but it has failed to adhere to our design standard...strictly from a add a gun accessor yto this look - yes APPROVED\"},{\"id\":\"HD-RETURN-efc1886a0d62\",\"status\":\"needs_fixes\",\"note\":\"as far as adding the gun to the outfit - approved...but we still have no reference of the complete package for our DoLO\"}]}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_source_comparison_publication.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":[\"exact sources and labels\",\"task route\",\"full-source pair\",\"independent source links\",\"thumbnail/source separation\",\"review/favorite/basket/scope preservation\"],\"catalogMode\":\"generated catalog\",\"browserVisualQA\":false,\"route\":\"#lisan/review_queue\",\"images\":[{\"id\":\"LAG-C13-ORIGINAL-7eafd9ac048d\",\"label\":\"ORIGINAL\",\"src\":\"file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/references/From%20Grok/GROK-LAG-1K-C13/C13-sandworm-rising/C13-04_Z_1.jpg\",\"sha256\":\"7eafd9ac048dc6d6125dc38281c1b664f7ae0cac1159909c34d90a5e3eef93a3\",\"bytes\":268027},{\"id\":\"LAG-C13-PATCH-C-23817577d3d3\",\"label\":\"REPAIRED patch-c\",\"src\":\"file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/references/From%20Grok/GROK-LAG-1K-C13/C13-sandworm-rising/repairs/C13-04_Z_1_R1-try5-patch-c.jpg\",\"sha256\":\"23817577d3d32f0df03d57ac1e49c4c85246e86c405b13c492194f7aa2f52bad\",\"bytes\":447799}],\"storageWrites\":0}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_cast_character_hub.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":6,\"sourceFiles\":323,\"newUniqueAssets\":321,\"hubReferences\":277,\"selectedDesignReferences\":7,\"setupCandidates\":51,\"workingReferences\":62,\"comfyUIDestination\":true,\"reviewWrites\":0,\"browserVisualQA\":false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_collections_navigation.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":11,\"castCovers\":6,\"detailCovers\":22,\"detailAssets\":9,\"mouthMembers\":76,\"browserVisualQA\":false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_writer_publication.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":6,\"writerDocuments\":50,\"sharedMethodDocuments\":1,\"excludedSources\":8,\"exactAssociations\":41,\"storageWrites\":0,\"browserVisualQA\":false,\"evidenceLimit\":\"Actual renderer and bound click handlers exercised with DOM/storage doubles; no browser visual rendering, screenshots or native details/anchor behavior tested.\"}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_flow_prototypes.cjs",
+      "exitCode": 0,
+      "stdout": "{\n  \"checks\": 6,\n  \"videoAssets\": 3,\n  \"intakeDocuments\": 3,\n  \"sharedAlbums\": 2,\n  \"unplacedShots\": 3,\n  \"videoSourceAndIntakeLinks\": true,\n  \"sourceResultLinks\": true,\n  \"signalTakeOneAndTwoLinks\": true,\n  \"videoAndStoryboardMembership\": true,\n  \"unplacedShotProgress\": true,\n  \"preliminaryWithoutReviewSeeds\": true,\n  \"existingAssetsAndShotsPreserved\": true,\n  \"storageWrites\": 0,\n  \"reviewFileWrites\": 0,\n  \"browserQA\": false,\n  \"catalogMode\": \"published\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_mission_progress_publication.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\": true, \"missionCardsClosed\": true, \"lisanShortlist\": {\"reviewed\": 7, \"pending\": 0}, \"falconShortlist\": {\"reviewed\": 2, \"pending\": 13}, \"filterBeforePreviewLimit\": true, \"reviewTransitions\": true, \"sw2ReceivedReviewLink\": true, \"sourceComparisonClosed\": true, \"selectedBossPreserved\": true, \"bossHistoryPreserved\": true, \"jamesHashBoundSharing\": true, \"jamesDraftUnaccepted\": true, \"honSourceAndReviewUnchanged\": true, \"reviewWrites\": 0, \"browserVisualQA\": false}\n",
+      "stderr": "",
+      "testSource": {
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_mission_progress_publication.cjs",
+        "bytes": 9999,
+        "sha256": "4f32804bbe067e7616f2f6d85a5507bdc7c71b099e43bf764b0dc2ad8baca060"
+      },
+      "verification": "Final direct node run exited0 after fixture restoration preserved absent review entries."
+    }
+  ],
+  "browserVisualQA": false
+}

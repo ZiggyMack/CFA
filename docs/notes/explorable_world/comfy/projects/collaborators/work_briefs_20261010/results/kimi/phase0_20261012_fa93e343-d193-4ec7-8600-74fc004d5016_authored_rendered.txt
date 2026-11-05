@@ -1,0 +1,74 @@
+Attempt complete. The CFA checkout, any D: mount, and the baseline JSON are all absent from this browser sandbox — the pack deliberately withheld the baseline bytes. This is the chat-only fallback case. Freezing my independent Phase 0 record now, before any courier or peer assistance.
+FROZEN INDEPENDENT PHASE 0 REPORT — kimi
+JSON
+Copy
+{
+  "reportId": "8f3c1a2e-7b4d-4c9e-a1f5-2d6e8b9c0a41",
+  "author": "kimi",
+  "createdAtUTC": "2026-10-12T04:45:44Z",
+  "phase": "0_independent",
+  "assistanceUsed": "none",
+  "frozen": true,
+  "startUTC": "2026-10-12T04:45:44Z",
+  "endUTC": "2026-10-12T04:46:05Z",
+  "appSession": "Kimi Chat browser session (this conversation), 2026-10-12 ~00:44-00:46 America/New_York",
+  "provider": "Moonshot AI",
+  "visibleModel": "Kimi (exact model version not shown to me — unknown)",
+
+  "baselineRead": {
+    "requestedPath": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\workflows\\hon_dolo_img2img_sdxl_v001.record.json",
+    "actualAction": "Single non-invasive existence probe of the exact path under four plausible locations (Windows path as given; /mnt/d/... equivalent; /mnt/agents/upload/; /mnt/agents/temp/) via the sandbox Python tool. No recursion, no permission changes, no repair.",
+    "status": "blocked",
+    "error": "File not present: exists=false at all four probed locations. /mnt contains only 'agents' and 'portal-overlay'; no D: mount exists in this sandbox. The CFA checkout is not reachable from this browser surface.",
+    "bytes": null,
+    "sha256": null,
+    "sourceOfBytes": "none — no baseline JSON was supplied in this pack (deliberately withheld per 00_LOAD_FIRST.txt); nothing was filled from summaries or memory."
+  },
+
+  "baselineInspection": {
+    "status": null, "workflowId": null, "workflowVersion": null,
+    "inputPath": null, "inputHash": null, "inputDimensions": null, "inputRole": null,
+    "checkpoint": null, "seed": null, "steps": null, "cfg": null,
+    "sampler": null, "scheduler": null, "denoise": null,
+    "graphPaths": null, "renderedFlag": null, "jobSubmittedFlag": null,
+    "evidenceLimit": "No baseline bytes exist in this surface, so zero fields could be extracted; nothing below is inferred from the common notes."
+  },
+
+  "reportWrite": {
+    "intendedPath": "docs/notes/explorable_world/comfy/projects/collaborators/work_briefs_20261010/results/kimi/phase0_<UTC>_<UUID>.json",
+    "actualAction": "none to the canonical path — the CFA checkout is not writable (not present) from this browser sandbox",
+    "status": "blocked",
+    "fallback": "This exact authored report is frozen in-chat per the assignment's chat-only fallback. Any later saving to the CFA results folder by Nova is an attributed operator/courier action, not my direct write and not a successful independent access test.",
+    "reReadEvidence": null
+  },
+
+  "capabilities": {
+    "filesystemRead": {"state": "tested", "result": "success on the nine uploaded snapshot documents in /mnt/agents/upload (read in full, this session); failure/absent for the CFA checkout and baseline JSON"},
+    "filesystemWrite": {"state": "tested", "result": "sandbox write tool exists and is unused here; write to the allocated CFA results folder is blocked (folder unreachable)"},
+    "jsonParsing": {"state": "self_reported", "note": "Python json available in sandbox; not exercised on target because no baseline bytes exist here"},
+    "shell": {"state": "tested", "result": "sandbox Python/shell available (used for the path probes and timestamps); it is a Linux sandbox, not Ziggy's Windows machine"},
+    "vision": {"state": "unknown", "note": "image tools exist but no images were supplied and none were inspected; untested"},
+    "uiControl": {"state": "blocked", "reason": "chat-only browser surface; no computer-use capability; a visible chat UI is not UI control"},
+    "web": {"state": "self_reported", "note": "search/fetch tools exist in this runtime; not needed or used for this preflight"}
+  },
+
+  "blockers": [
+    {
+      "category": "filesystem",
+      "symptom": "Exact baseline record path not found at any probed location; no D: mount; CFA checkout absent from this browser sandbox",
+      "evidence": "exists=false × 4 probes, 2026-10-12T04:45:44Z; /mnt listing = ['agents', 'portal-overlay']",
+      "wouldResolve": "Performing Phase 0 in a session whose surface actually mounts the CFA checkout (e.g., the Kimi Work desktop runtime on Ziggy's machine), or a courier supplying the exact baseline bytes — the latter is a separate later phase, not this independent record",
+      "whoseAction": "Ziggy/Nova (surface selection or later assisted Phase 1)"
+    }
+  ],
+
+  "nextSuggestedStep": "Nova archives this frozen chat report verbatim with courier attribution, then either (a) has the desktop-surface Kimi perform the identical preflight locally, or (b) after all three independent records freeze, supplies baseline bytes for an explicitly labeled assisted parse. No generation, install, purchase, upload or repair is proposed."
+}
+Readback (per the launch message)
+Files actually received and read, in 00_LOAD_FIRST order — all nine, in full:
+00_LOAD_FIRST.txt 2. 01_CFA_PROJECT_CONTEXT.txt 3. 02_CURRENT_WORK_AND_REVIEW.txt 4. 03_COMMUNICATION_AND_IDENTITY_GUIDE.txt (mailbox protocol, full registry, templates) 5. 04_SHARED_WELCOME.md 6. 05_YOUR_I_AM.md (my earlier self-authored introduction; its "proposed ID" sentence is historical — kimi is now registered) 7. 06_YOUR_CURRENT_WORK.txt 8. 07_PHASE0_ASSIGNMENT.md 9. SOURCE_COPY_NOTE.txt. Also read: CURRENT_TASK_SUPPLEMENT.txt (governs the older ownership statements in 01/02).
+App/session/model: Kimi Chat, browser session, 2026-10-12 ~00:44–00:46 EDT. Provider Moonshot AI; exact model version not visible → unknown. Canonical mailbox ID: kimi (registered; distinct from Qwen). This is a browser surface, not the Kimi Work desktop runtime my I_AM described — the desktop filesystem claims in that historical document do not apply here.
+The three reviews, kept separate: asset likeness stars (1–5, picture vs. scoped gold standard only); scene readiness (B-or-better handoff target requiring every ingredient Ready plus a verified direction/camera/lighting plan); collaborator role grades (the named author's actual contribution). They are not interchangeable and none was graded here.
+Missing/withheld: the baseline JSON, COMMON_REQUIREMENTS.md, peer results, media — all deliberately omitted from this pack, consistent with the independence rule. I filled nothing from memory.
+Capability summary: read tested-success on uploaded docs / tested-absent on the CFA checkout; write blocked at the canonical path; JSON parsing self-reported; shell tested (Linux sandbox, not the target machine); vision unknown; UI control blocked; web self-reported, unused.
+Next bounded step: as in the report — archive this frozen record verbatim, then decide surface or assisted bytes after all three independent records freeze. Independent record is frozen; I have stopped, asked no courier, and read no peer results.

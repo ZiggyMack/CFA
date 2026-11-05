@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "project_id": "lisan_al_gaib",
+  "inspected_date": "2026-10-12",
+  "recorded_at_utc": "2026-10-13T02:09:18Z",
+  "intake_role": "Direct user-designated Prime Meta Mirror audio and lyrics; technical receipt, no listening/alignment",
+  "selection_basis": "Direct user instruction accompanying attached remastered MP3 and full lyric paste.",
+  "status": "prime_masters_received_copy_and_audio_decode_verified_timing_unaligned",
+  "current_working_audio": {
+    "receivedFilename": "Meta Mirror_0 (Remastered).mp3",
+    "canonicalPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/Meta Mirror_0 (Remastered).mp3",
+    "byteCount": 6438669,
+    "sha256": "477627e4db431ba0ef8cf226b13745f3cdcc32050d88b8f0fc1f7aba3e45e154",
+    "masterDesignation": "Prime Meta Mirror track",
+    "version": "prime.v001",
+    "sourceProvenance": {
+      "type": "direct_user_attachment",
+      "attachmentId": "4997DBD4-1687-47B6-B0CB-64D48B6BA56C",
+      "deliveredFilename": "1-Meta-Mirror_0-Remastered-.mp3",
+      "designation": "Direct user request in this CFA chat: take this file and these lyrics as the prime Meta Mirror track."
+    },
+    "audioFormatAndStreams": {
+      "format": "mp3",
+      "sampleRateHz": 48000,
+      "channels": 2,
+      "streams": [
+        "Stream #0:0: Audio: mp3 (mp3float), 48000 Hz, stereo, fltp, 205 kb/s",
+        "Stream #0:1: Video: mjpeg (Baseline), yuvj420p(pc, bt470bg/unknown/unknown), 360x360 [SAR 1:1 DAR 1:1], 90k tbr, 90k tbn (attached pic)"
+      ],
+      "attachedPicturePresent": true,
+      "movingVideoPresent": false
+    },
+    "measuredDurationSeconds": 249.72,
+    "validationMethod": "Source/canonical SHA-256 match; complete native-rate/channel FFmpeg float32 decode with zero exit code and no errors. No listening or phrase alignment.",
+    "validationRecord": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_intake_20261012/AUDIO_VALIDATION.json",
+    "bytesUnchanged": true
+  },
+  "latest_supplied_lyrics": {
+    "canonicalPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/Meta_Mirror.txt",
+    "byteCount": 4194,
+    "sha256": "5303adca22ea91cebe00efc9c62c2f8949631865b3265a0c615c06b4f11e605c",
+    "masterDesignation": "Prime Meta Mirror lyric text",
+    "version": "user.prime.v001",
+    "sourceProvenance": {
+      "type": "direct_user_text",
+      "suppliedTextArchive": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_intake_20261012/lyrics.supplied.prime.v001.txt",
+      "policy": "Preserve supplied words, section labels, punctuation and interior/trailing spaces; text file uses UTF-8 and normalized file line endings, with a terminal newline."
+    },
+    "linesExcludingTerminalBlankLines": 134,
+    "matchesEarlierClaudeDraftIgnoringOnlyLineEndingsAndTrailingWhitespace": true,
+    "earlierDraft": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/lyrics_user_20261013/META_MIRROR_0_REMASTERED.lyrics.user.v001.txt",
+      "sha256": "57ca7406428c164a449763559d4d8e03df6027bb937ff93ea32dd6baa1a5f6ed",
+      "status": "preserved_dated_provisional_source"
+    },
+    "timed": false,
+    "audioWordCorrespondenceVerified": false
+  },
+  "timing": {
+    "status": "not_aligned",
+    "timestamps_accepted": false,
+    "timed_lyric_map": null,
+    "source_scene_holds_are_placeholders": true
+  },
+  "other_cut": {
+    "name": "MM_0",
+    "lyric_path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/lyrics_user_20261013/MM_0.lyrics.user.v001.txt",
+    "status": "separate_later_cut_not_selected_as_prime"
+  },
+  "execution": {
+    "provider_upload": false,
+    "generation": false,
+    "audio_transcode": false,
+    "embedded_metadata_changed": false,
+    "listening_analysis": false,
+    "song_alignment": false
+  },
+  "author": "nova",
+  "updated_sources_are_local_only": true
+}

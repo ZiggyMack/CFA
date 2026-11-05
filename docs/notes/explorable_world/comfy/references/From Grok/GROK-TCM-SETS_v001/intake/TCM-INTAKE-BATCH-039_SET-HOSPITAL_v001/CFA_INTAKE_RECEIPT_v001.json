@@ -1,0 +1,533 @@
+{
+  "format": "cfa-grok-image-intake-v1",
+  "project": "criminal_mind",
+  "batchID": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001",
+  "lane": "base_set",
+  "taskID": "tcm-grok-sets-20261030",
+  "intakeRole": "site_index_receipt",
+  "verifiedAtUTC": "2026-11-04T13:41:07Z",
+  "receivedAtUTC": null,
+  "receivedTimeStatus": "not_recorded_in_archive",
+  "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001.zip",
+  "archiveSHA256": "315e28ae4ad09eb67500feb6f6905484ccc838f632fbdcbfc3039430c17e378c",
+  "archiveBytes": 2505068,
+  "archiveMemberCount": 17,
+  "receivedOriginals": 10,
+  "acceptedOriginals": 0,
+  "humanVerdictsCreated": 0,
+  "selectedStartingFrames": 0,
+  "assets": [
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L01",
+      "project": "criminal_mind",
+      "lane": "base_set",
+      "role": "set_design_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001\\TCM-SET-HOSPITAL-L01.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L01.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001.zip",
+      "archiveMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L01.jpg",
+      "sha256": "65ece06d7ba812c8de60b04c313ccfa9e0990d97bf9cb07fd29625ef9073f931",
+      "bytes": 243770,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "checked H1 \"Boston general in the intensive care unit\" (SS:L1865); H2 \"INT-Hospital Room- Night\" (SS:L1875); H3 \"hand cuffed to the bed IV's are plugged into him his legs are in a cast\" (SS:L1877)",
+        "note": "PRELIMINARY; Night (H2 met): modern glass-front ICU bay, IV pole, monitor, bed with handcuff on footboard (H3 cuff met), overhead trapeze frame with plain triangle grab handles (not noose-like), glass door to unstaffed nurse station (nurse access). Window skyline is dominated by a centred Empire State-style spired tower - strong Manhattan read vs 'Boston general' (SS:L1865) = regional mismatch DRIFT. Nurse-station screen glows, no legible text. 1280x720 16:9; empty - no patient/people seen incl. glass, windows, corridors; no logos; monitor waveforms have no legible numbers at 1x. No patient by design (card: 'no injured body ... in scout images'), so H3 casts/IV-in-patient judged as permitted: bed, IV, cuff point and leg support/traction present or placeable. Roster constraint: 'Night room with hospital bed, IV, leg casts, room for restraint and nurse access.' Screener sha256 matches maker index BATCH_01_index.tsv (R12).",
+        "cardVersion": "v002",
+        "judgedAgainst": "TCM-SET-HOSPITAL / v002 / 1476db27f70d63d01be58b4b7025f590a9c1591c1236de46e38cb53351a66147 ; linked shots TCM-41-01..TCM-41-05 ; V1_SCREEN_RULINGS_20261030T211400Z_v001.md / ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1_SCREEN_RULINGS_ADDENDUM_20261030T213705Z_v002.md / e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "a61ef4c47133d8904418760f4058225118ac8a8bddb06ae6ed26a0b2873e294c",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Modern glass-front ICU bay, teal curtain, sliding glass door to unstaffed nurse station, Boston skyline window",
+        "sourceVsProposal": null,
+        "defectNote": "overhead frame reads as patient-lift trapeze handles, not leg-traction slings; nurse-station screen in background glows (no legible text seen); no people; 1280x720 16:9",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/MAKER_BATCH_01_index.tsv",
+        "sourceSHA256": "4040a1a85c242808c1b26bcd1d884bf450926eec8c2185b1a43e663a2fd2e09a"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L02",
+      "project": "criminal_mind",
+      "lane": "base_set",
+      "role": "set_design_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001\\TCM-SET-HOSPITAL-L02.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L02.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001.zip",
+      "archiveMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L02.jpg",
+      "sha256": "564534f6266803c39c771bdfc89334f1859d4474f8c135285a43c0dde38a1292",
+      "bytes": 275392,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "checked H1 \"Boston general in the intensive care unit\" (SS:L1865); H2 \"INT-Hospital Room- Night\" (SS:L1875); H3 \"hand cuffed to the bed IV's are plugged into him his legs are in a cast\" (SS:L1877)",
+        "note": "PRELIMINARY; Night implied (fluorescent, blinds closed; OK with note): dated mint-tile room, chrome bed with handcuff on rail (H3), IV pole with two bags, CRT monitor, overhead trapeze with plain triangle handles (not noose-like), door ajar to corridor (nurse access). Door plaque blank (checked at zoom). Era open (R5). Reads ward/ICU - OK. 1280x720 16:9; empty - no patient/people seen incl. glass, windows, corridors; no logos; monitor waveforms have no legible numbers at 1x. No patient by design (card: 'no injured body ... in scout images'), so H3 casts/IV-in-patient judged as permitted: bed, IV, cuff point and leg support/traction present or placeable. Roster constraint: 'Night room with hospital bed, IV, leg casts, room for restraint and nurse access.' Screener sha256 matches maker index BATCH_01_index.tsv (R12).",
+        "cardVersion": "v002",
+        "judgedAgainst": "TCM-SET-HOSPITAL / v002 / 1476db27f70d63d01be58b4b7025f590a9c1591c1236de46e38cb53351a66147 ; linked shots TCM-41-01..TCM-41-05 ; V1_SCREEN_RULINGS_20261030T211400Z_v001.md / ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1_SCREEN_RULINGS_ADDENDUM_20261030T213705Z_v002.md / e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "a61ef4c47133d8904418760f4058225118ac8a8bddb06ae6ed26a0b2873e294c",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Dated 1980s ICU room: mint-green tile, closed beige blinds, fluorescent, chrome bed, boxy CRT monitor, wooden door ajar to hall",
+        "sourceVsProposal": null,
+        "defectNote": "overhead rig reads as trapeze handles not leg slings; small blank plaque on door (no legible text); no people; 1280x720 16:9",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/MAKER_BATCH_01_index.tsv",
+        "sourceSHA256": "4040a1a85c242808c1b26bcd1d884bf450926eec8c2185b1a43e663a2fd2e09a"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L03",
+      "project": "criminal_mind",
+      "lane": "base_set",
+      "role": "set_design_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001\\TCM-SET-HOSPITAL-L03.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L03.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001.zip",
+      "archiveMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L03.jpg",
+      "sha256": "413487677de48fdf03870a4d4479011d7d1fe88888b9a2bb2f960371152a4896",
+      "bytes": 271751,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "checked H1 \"Boston general in the intensive care unit\" (SS:L1865); H2 \"INT-Hospital Room- Night\" (SS:L1875); H3 \"hand cuffed to the bed IV's are plugged into him his legs are in a cast\" (SS:L1877)",
+        "note": "PRELIMINARY; Night (H2 met): contemporary private ICU, wood panels, bed with handcuff on rail (H3), IV pole, wall monitor, overhead frame with black padded slings (plain, not noose-like), recliner, door right (nurse access). Note/flag: river skyline includes a spired tower that could read Manhattan; smaller and less dominant than L01 and river can read as the Charles - kept OK, open question. 1280x720 16:9; empty - no patient/people seen incl. glass, windows, corridors; no logos; monitor waveforms have no legible numbers at 1x. No patient by design (card: 'no injured body ... in scout images'), so H3 casts/IV-in-patient judged as permitted: bed, IV, cuff point and leg support/traction present or placeable. Roster constraint: 'Night room with hospital bed, IV, leg casts, room for restraint and nurse access.' Screener sha256 matches maker index BATCH_01_index.tsv (R12).",
+        "cardVersion": "v002",
+        "judgedAgainst": "TCM-SET-HOSPITAL / v002 / 1476db27f70d63d01be58b4b7025f590a9c1591c1236de46e38cb53351a66147 ; linked shots TCM-41-01..TCM-41-05 ; V1_SCREEN_RULINGS_20261030T211400Z_v001.md / ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1_SCREEN_RULINGS_ADDENDUM_20261030T213705Z_v002.md / e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "a61ef4c47133d8904418760f4058225118ac8a8bddb06ae6ed26a0b2873e294c",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Contemporary private ICU: warm wood panels, floor-to-ceiling river skyline window, recliner, door right",
+        "sourceVsProposal": null,
+        "defectNote": "overhead straps read as trapeze/lift loops not leg slings; small blue screen detail on bed rail; no people; 1280x720 16:9",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/MAKER_BATCH_01_index.tsv",
+        "sourceSHA256": "4040a1a85c242808c1b26bcd1d884bf450926eec8c2185b1a43e663a2fd2e09a"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L04",
+      "project": "criminal_mind",
+      "lane": "base_set",
+      "role": "set_design_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001\\TCM-SET-HOSPITAL-L04.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L04.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001.zip",
+      "archiveMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L04.jpg",
+      "sha256": "36277486b745262ba99f7729bdd0a06fd1f1da17eb65b8679ad08beff219a321",
+      "bytes": 245291,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "checked H1 \"Boston general in the intensive care unit\" (SS:L1865); H2 \"INT-Hospital Room- Night\" (SS:L1875); H3 \"hand cuffed to the bed IV's are plugged into him his legs are in a cast\" (SS:L1877)",
+        "note": "PRELIMINARY; Night (H2 met; dark window): equipment-heavy ICU cubicle (H1 ICU read strong: ventilator, twin monitors, gas outlets), IV, handcuff on footboard (H3), foam leg-support rolls as cast stand-in (no traction), curtain + aisle (nurse access). Monitor waveforms, no legible numbers at 1x. 1280x720 16:9; empty - no patient/people seen incl. glass, windows, corridors; no logos; monitor waveforms have no legible numbers at 1x. No patient by design (card: 'no injured body ... in scout images'), so H3 casts/IV-in-patient judged as permitted: bed, IV, cuff point and leg support/traction present or placeable. Roster constraint: 'Night room with hospital bed, IV, leg casts, room for restraint and nurse access.' Screener sha256 matches maker index BATCH_01_index.tsv (R12).",
+        "cardVersion": "v002",
+        "judgedAgainst": "TCM-SET-HOSPITAL / v002 / 1476db27f70d63d01be58b4b7025f590a9c1591c1236de46e38cb53351a66147 ; linked shots TCM-41-01..TCM-41-05 ; V1_SCREEN_RULINGS_20261030T211400Z_v001.md / ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1_SCREEN_RULINGS_ADDENDUM_20261030T213705Z_v002.md / e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "a61ef4c47133d8904418760f4058225118ac8a8bddb06ae6ed26a0b2873e294c",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Cramped equipment-heavy ICU cubicle: blue curtain, ventilator, twin wall monitors, foam leg-support rolls on mattress, warm reading lamp",
+        "sourceVsProposal": null,
+        "defectNote": "no overhead traction; monitors show colourful waveforms, no legible numbers seen at this size; no people; 1280x720 16:9",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/MAKER_BATCH_01_index.tsv",
+        "sourceSHA256": "4040a1a85c242808c1b26bcd1d884bf450926eec8c2185b1a43e663a2fd2e09a"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L05",
+      "project": "criminal_mind",
+      "lane": "base_set",
+      "role": "set_design_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001\\TCM-SET-HOSPITAL-L05.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L05.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001.zip",
+      "archiveMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L05.jpg",
+      "sha256": "2decfbf658e5c71eee4f4c9aafb0090b447fd4d8443f173332ab9bbb835c0087",
+      "bytes": 316640,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "QUALITY-FAIL",
+        "hardTrait": "checked H1 \"Boston general in the intensive care unit\" (SS:L1865); H2 \"INT-Hospital Room- Night\" (SS:L1875); H3 \"hand cuffed to the bed IV's are plugged into him his legs are in a cast\" (SS:L1877)",
+        "note": "PRELIMINARY; Night (H2 met): old brick-wing room, arched window to sodium-lit courtyard, iron bed with handcuff (H3), IV, small monitor. At 1x the traction slings are thin rope teardrop loops hanging from a gallows-like iron frame - reads as NOOSES = weapon/injury content (brief L2157 'injuries'; Q-CONTENT) per V_1 instruction. Also: room reads derelict, not a working ICU (would be DRIFT on H1 'intensive care unit' if regenerated). 1280x720 16:9; empty - no patient/people seen incl. glass, windows, corridors; no logos; monitor waveforms have no legible numbers at 1x. No patient by design (card: 'no injured body ... in scout images'), so H3 casts/IV-in-patient judged as permitted: bed, IV, cuff point and leg support/traction present or placeable. Roster constraint: 'Night room with hospital bed, IV, leg casts, room for restraint and nurse access.' Screener sha256 matches maker index BATCH_01_index.tsv (R12).",
+        "cardVersion": "v002",
+        "judgedAgainst": "TCM-SET-HOSPITAL / v002 / 1476db27f70d63d01be58b4b7025f590a9c1591c1236de46e38cb53351a66147 ; linked shots TCM-41-01..TCM-41-05 ; V1_SCREEN_RULINGS_20261030T211400Z_v001.md / ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1_SCREEN_RULINGS_ADDENDUM_20261030T213705Z_v002.md / e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "a61ef4c47133d8904418760f4058225118ac8a8bddb06ae6ed26a0b2873e294c",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Old brick-wing hospital room: arched multi-pane window with sodium-lit brick courtyard, radiator, terrazzo, iron bed, pulley-and-weight traction frame, panelled door",
+        "sourceVsProposal": null,
+        "defectNote": "traction slings read uncomfortably like NOOSES; iron bed looks derelict rather than a working ICU; no people; 1280x720 16:9",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/MAKER_BATCH_01_index.tsv",
+        "sourceSHA256": "4040a1a85c242808c1b26bcd1d884bf450926eec8c2185b1a43e663a2fd2e09a"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L06",
+      "project": "criminal_mind",
+      "lane": "base_set",
+      "role": "set_design_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001\\TCM-SET-HOSPITAL-L06.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L06.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001.zip",
+      "archiveMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L06.jpg",
+      "sha256": "c7b72f61294b5aad34d1565374bfa4a49b46c1e5efe895196695e0e88fd05325",
+      "bytes": 181934,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "checked H1 \"Boston general in the intensive care unit\" (SS:L1865); H2 \"INT-Hospital Room- Night\" (SS:L1875); H3 \"hand cuffed to the bed IV's are plugged into him his legs are in a cast\" (SS:L1877)",
+        "note": "PRELIMINARY; Night (H2 met; dark clerestory): stark white isolation ICU seen through glass anteroom, open sliding door (nurse access), bed with cuff on rail (H3), IV, monitors, overhead frame with black padded slings (plain sling read, not noose-like). Very dark foreground - underlit note, traits confirmable. Glove dispensers unlabeled; glass reflections empty (checked at zoom). 1280x720 16:9; empty - no patient/people seen incl. glass, windows, corridors; no logos; monitor waveforms have no legible numbers at 1x. No patient by design (card: 'no injured body ... in scout images'), so H3 casts/IV-in-patient judged as permitted: bed, IV, cuff point and leg support/traction present or placeable. Roster constraint: 'Night room with hospital bed, IV, leg casts, room for restraint and nurse access.' Screener sha256 matches maker index BATCH_01_index.tsv (R12).",
+        "cardVersion": "v002",
+        "judgedAgainst": "TCM-SET-HOSPITAL / v002 / 1476db27f70d63d01be58b4b7025f590a9c1591c1236de46e38cb53351a66147 ; linked shots TCM-41-01..TCM-41-05 ; V1_SCREEN_RULINGS_20261030T211400Z_v001.md / ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1_SCREEN_RULINGS_ADDENDUM_20261030T213705Z_v002.md / e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "a61ef4c47133d8904418760f4058225118ac8a8bddb06ae6ed26a0b2873e294c",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Stark white isolation ICU seen through glass anteroom, open sliding door, glove boxes, green monitor glow",
+        "sourceVsProposal": null,
+        "defectNote": "glove dispensers have no labels; padded slings read as lift/traction loops; very dark foreground; no people; 1280x720 16:9",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/MAKER_BATCH_01_index.tsv",
+        "sourceSHA256": "4040a1a85c242808c1b26bcd1d884bf450926eec8c2185b1a43e663a2fd2e09a"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L07",
+      "project": "criminal_mind",
+      "lane": "base_set",
+      "role": "set_design_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001\\TCM-SET-HOSPITAL-L07.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L07.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001.zip",
+      "archiveMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L07.jpg",
+      "sha256": "6efc26ad39910dc0fd8490d0ef4dcf6f433082cfb2f68c0102f7cd87447fcaa6",
+      "bytes": 260080,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "checked H1 \"Boston general in the intensive care unit\" (SS:L1865); H2 \"INT-Hospital Room- Night\" (SS:L1875); H3 \"hand cuffed to the bed IV's are plugged into him his legs are in a cast\" (SS:L1877)",
+        "note": "PRELIMINARY; Night, rain window with city lights (H2 met; skyline generic): 1990s ortho room, Balkan traction frame with weights and padded leg slings - plain sling read at 1x, not noose-like (H3 leg-cast support strong), IV, monitor, cuff on rail, door propped to corridor (nurse access). Corridor exit-style box is a green blank, no text. 1280x720 16:9; empty - no patient/people seen incl. glass, windows, corridors; no logos; monitor waveforms have no legible numbers at 1x. No patient by design (card: 'no injured body ... in scout images'), so H3 casts/IV-in-patient judged as permitted: bed, IV, cuff point and leg support/traction present or placeable. Roster constraint: 'Night room with hospital bed, IV, leg casts, room for restraint and nurse access.' Screener sha256 matches maker index BATCH_01_index.tsv (R12).",
+        "cardVersion": "v002",
+        "judgedAgainst": "TCM-SET-HOSPITAL / v002 / 1476db27f70d63d01be58b4b7025f590a9c1591c1236de46e38cb53351a66147 ; linked shots TCM-41-01..TCM-41-05 ; V1_SCREEN_RULINGS_20261030T211400Z_v001.md / ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1_SCREEN_RULINGS_ADDENDUM_20261030T213705Z_v002.md / e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "a61ef4c47133d8904418760f4058225118ac8a8bddb06ae6ed26a0b2873e294c",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "1990s ortho ICU: dusty-rose wall, acoustic ceiling, Balkan traction frame with weights and padded leg slings, rain window with city lights, door propped to corridor",
+        "sourceVsProposal": null,
+        "defectNote": "small glowing green exit-style box at far corridor end (no legible text); no people; 1280x720 16:9",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/MAKER_BATCH_01_index.tsv",
+        "sourceSHA256": "4040a1a85c242808c1b26bcd1d884bf450926eec8c2185b1a43e663a2fd2e09a"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L08",
+      "project": "criminal_mind",
+      "lane": "base_set",
+      "role": "set_design_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001\\TCM-SET-HOSPITAL-L08.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L08.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001.zip",
+      "archiveMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L08.jpg",
+      "sha256": "adf151f523aa49db52349158a3a0df8fa131165e5f56faec8a2b3d22bb33c62c",
+      "bytes": 162941,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "QUALITY-FAIL",
+        "hardTrait": "checked H1 \"Boston general in the intensive care unit\" (SS:L1865); H2 \"INT-Hospital Room- Night\" (SS:L1875); H3 \"hand cuffed to the bed IV's are plugged into him his legs are in a cast\" (SS:L1877)",
+        "note": "PRELIMINARY; Near-dark night (H2 met): only monitor glow and door-crack light; bed with handcuff (H3), IVs, vertical blinds. At 1x two loops hanging from the ceiling in silhouette read clearly as NOOSES = weapon/injury content per V_1 instruction. Also very low key - set geography hard to read (underlit). 1280x720 16:9; empty - no patient/people seen incl. glass, windows, corridors; no logos; monitor waveforms have no legible numbers at 1x. No patient by design (card: 'no injured body ... in scout images'), so H3 casts/IV-in-patient judged as permitted: bed, IV, cuff point and leg support/traction present or placeable. Roster constraint: 'Night room with hospital bed, IV, leg casts, room for restraint and nurse access.' Screener sha256 matches maker index BATCH_01_index.tsv (R12).",
+        "cardVersion": "v002",
+        "judgedAgainst": "TCM-SET-HOSPITAL / v002 / 1476db27f70d63d01be58b4b7025f590a9c1591c1236de46e38cb53351a66147 ; linked shots TCM-41-01..TCM-41-05 ; V1_SCREEN_RULINGS_20261030T211400Z_v001.md / ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1_SCREEN_RULINGS_ADDENDUM_20261030T213705Z_v002.md / e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "a61ef4c47133d8904418760f4058225118ac8a8bddb06ae6ed26a0b2873e294c",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Noir near-dark ICU: only monitor glow and wedge of corridor light from door ajar, vertical blinds",
+        "sourceVsProposal": null,
+        "defectNote": "overhead slings read as NOOSES in silhouette; very low key may hide set geography; no people; 1280x720 16:9",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/MAKER_BATCH_01_index.tsv",
+        "sourceSHA256": "4040a1a85c242808c1b26bcd1d884bf450926eec8c2185b1a43e663a2fd2e09a"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L09",
+      "project": "criminal_mind",
+      "lane": "base_set",
+      "role": "set_design_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001\\TCM-SET-HOSPITAL-L09.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L09.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001.zip",
+      "archiveMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L09.jpg",
+      "sha256": "897d2910a8ad3ea1ada73366b01c851ec9ec1a34239d7e35d602ed49c8ff94b5",
+      "bytes": 218007,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "checked H1 \"Boston general in the intensive care unit\" (SS:L1865); H2 \"INT-Hospital Room- Night\" (SS:L1875); H3 \"hand cuffed to the bed IV's are plugged into him his legs are in a cast\" (SS:L1877)",
+        "note": "PRELIMINARY; Night, snow + moon through two windows over rooftops (H2 met): room with sink, chair, bed with handcuff on rail (H3), IV, arm-mounted monitor, overhead frame with fabric slings - plain sling read, not noose-like. Door with glass strip (nurse access). Note: reads general ward more than ICU (little ICU equipment) - H1 implied, OK with note. 1280x720 16:9; empty - no patient/people seen incl. glass, windows, corridors; no logos; monitor waveforms have no legible numbers at 1x. No patient by design (card: 'no injured body ... in scout images'), so H3 casts/IV-in-patient judged as permitted: bed, IV, cuff point and leg support/traction present or placeable. Roster constraint: 'Night room with hospital bed, IV, leg casts, room for restraint and nurse access.' Screener sha256 matches maker index BATCH_01_index.tsv (R12).",
+        "cardVersion": "v002",
+        "judgedAgainst": "TCM-SET-HOSPITAL / v002 / 1476db27f70d63d01be58b4b7025f590a9c1591c1236de46e38cb53351a66147 ; linked shots TCM-41-01..TCM-41-05 ; V1_SCREEN_RULINGS_20261030T211400Z_v001.md / ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1_SCREEN_RULINGS_ADDENDUM_20261030T213705Z_v002.md / e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "a61ef4c47133d8904418760f4058225118ac8a8bddb06ae6ed26a0b2873e294c",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Corner ICU room, two windows with falling snow and moonlit rooftops, beige/grey, sink and chair, door with window strip",
+        "sourceVsProposal": null,
+        "defectNote": "wall dispensers unlabeled; small display on bed footboard; slings read as lift straps; no people; 1280x720 16:9",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/MAKER_BATCH_01_index.tsv",
+        "sourceSHA256": "4040a1a85c242808c1b26bcd1d884bf450926eec8c2185b1a43e663a2fd2e09a"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    },
+    {
+      "candidateID": "TCM-SET-HOSPITAL-L10",
+      "project": "criminal_mind",
+      "lane": "base_set",
+      "role": "set_design_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001\\TCM-SET-HOSPITAL-L10.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L10.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001.zip",
+      "archiveMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/TCM-SET-HOSPITAL-L10.jpg",
+      "sha256": "5008c1978012a6e5ab78e1367dce33cad2e4143d23cffd60581840639a335ad9",
+      "bytes": 241861,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "checked H1 \"Boston general in the intensive care unit\" (SS:L1865); H2 \"INT-Hospital Room- Night\" (SS:L1875); H3 \"hand cuffed to the bed IV's are plugged into him his legs are in a cast\" (SS:L1877)",
+        "note": "PRELIMINARY; Night implied (no window; violet LED night mode - OK with note): high-tech ICU with ceiling booms, IV pumps, monitor, glass sliding doors to corridor (nurse access), foam leg-elevation supports (cast stand-in). Note: cuff on side rail reads as a ring/loop rather than a clear handcuff - restraint point present, room for restraint - note only. Glass reflections empty (checked at zoom). 1280x720 16:9; empty - no patient/people seen incl. glass, windows, corridors; no logos; monitor waveforms have no legible numbers at 1x. No patient by design (card: 'no injured body ... in scout images'), so H3 casts/IV-in-patient judged as permitted: bed, IV, cuff point and leg support/traction present or placeable. Roster constraint: 'Night room with hospital bed, IV, leg casts, room for restraint and nurse access.' Screener sha256 matches maker index BATCH_01_index.tsv (R12).",
+        "cardVersion": "v002",
+        "judgedAgainst": "TCM-SET-HOSPITAL / v002 / 1476db27f70d63d01be58b4b7025f590a9c1591c1236de46e38cb53351a66147 ; linked shots TCM-41-01..TCM-41-05 ; V1_SCREEN_RULINGS_20261030T211400Z_v001.md / ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; V1_SCREEN_RULINGS_ADDENDUM_20261030T213705Z_v002.md / e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/SCREENING_ROWS_HOSPITAL_PRELIMINARY.tsv",
+        "sourceSHA256": "a61ef4c47133d8904418760f4058225118ac8a8bddb06ae6ed26a0b2873e294c",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "High-tech renovated ICU: twin ceiling booms, graphite panels, violet LED cove night mode, foam leg-elevation supports, glass sliding doors to corridor",
+        "sourceVsProposal": null,
+        "defectNote": "handcuff reads as a ring/loop and is less clearly a cuff; no overhead traction; no people; 1280x720 16:9",
+        "sourceMember": "TCM-INTAKE-BATCH-039_SET-HOSPITAL_v001/MAKER_BATCH_01_index.tsv",
+        "sourceSHA256": "4040a1a85c242808c1b26bcd1d884bf450926eec8c2185b1a43e663a2fd2e09a"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSPITAL",
+      "sourceScenes": [
+        "TCM-SRC-41"
+      ],
+      "eligibleShotIDs": [
+        "TCM-41-01",
+        "TCM-41-02",
+        "TCM-41-03",
+        "TCM-41-04",
+        "TCM-41-05"
+      ],
+      "locationTitle": "Boston General hospital room",
+      "sourceConstraints": "Night room with hospital bed, IV, leg casts, room for restraint and nurse access. Ten room looks; no injured body or real institutional logo in scout images."
+    }
+  ],
+  "verification": {
+    "zipCRC": true,
+    "archiveHash": true,
+    "safeMemberPaths": true,
+    "noSymlinks": true,
+    "noEncryptedMembers": true,
+    "uniqueCandidateIDs": true,
+    "indexedBytesAndHashes": true,
+    "JPEGDecode": true,
+    "humanReviewOrAcceptanceCreated": false
+  },
+  "note": "Technical receipt for unreviewed originals. Provider/V-team screening remains attributed preliminary evidence, never a human verdict or acceptance."
+}

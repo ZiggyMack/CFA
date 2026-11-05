@@ -1,0 +1,30 @@
+{
+  "checkedAtUTC": "2026-10-14T22:53:53.367680Z",
+  "status": "passed",
+  "baseline": "PRESERVATION_BEFORE.json",
+  "assetsBefore": 2455,
+  "assetsAfter": 2512,
+  "addedImages": 50,
+  "addedDocuments": 7,
+  "existingMediaChanged": 0,
+  "removedAssetIDs": 0,
+  "canonicalReviewsChanged": false,
+  "sourceChoicesChanged": false,
+  "referenceValidationChanged": false,
+  "songPanelOrderAndTimingChanged": false,
+  "honSongPanels": 36,
+  "lisanSongPanels": 50,
+  "allowedExistingDocumentChanges": [
+    "DECISIONS_20261012.md",
+    "START_HERE.txt"
+  ],
+  "allowedDerivedNavigationChange": {
+    "shotID": "LAG-FLOW-SW2-001",
+    "independentSequenceID": "LAG-STORY-01-THE-GLOVED-HAND",
+    "storyShotID": "S01-4.1"
+  },
+  "command": "python -X utf8 verify_preservation.py",
+  "exitCode": 0,
+  "browserVisualQA": false,
+  "hostedPublication": false
+}

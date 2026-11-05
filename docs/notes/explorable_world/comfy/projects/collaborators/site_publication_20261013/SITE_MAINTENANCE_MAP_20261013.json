@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-13T04:48:13.212449Z",
+  "authored_by": "nova",
+  "kind": "READ_ONLY_SITE_MAINTAINER_CONTEXT",
+  "scope": "Breadcrumbs and operating context, not a new SITE_OWNER_ASSIGNMENT or build instruction",
+  "active_publication_assignment": "site-c13-original-patch-c-comparison-20261013",
+  "ownership": "CFA SITE INDEX owns the released single comparison publication slot. CFA NOVA retains production/generator direction and registry ownership. No root site writes/builds while the slot is with the successor.",
+  "rules": [
+    {
+      "topic": "Source versus output",
+      "rule": "Update source JSON/manifests or renderer/style code as needed, then use the existing catalog builder. Do not solve a durable change only in generated catalog/HTML shells. Keep source IDs stable.",
+      "reference": "docs/notes/explorable_world/comfy/projects/visual_library/build_catalog.py",
+      "sha256_at_read_checkpoint": "66ebdd123157f0594108b3625524d910ba56e52ea2ebc82ad3ea4989034bcf30"
+    },
+    {
+      "topic": "Routing and display",
+      "rule": "library.js owns hash routes, state, search, viewer and interactions; library.css owns presentation. browse_layout covers/grouping cannot change canon or source bytes.",
+      "reference": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "sha256_at_read_checkpoint": "0907818ed1f7a6e329b250880b443a157f3cea8be9c7fd61122a13408cddd74a"
+    },
+    {
+      "topic": "Artwork first",
+      "rule": "Keep purpose filters and expandable collections, readable covers and reachable media. Routine browsing should not expose every technical preparation image.",
+      "reference": "docs/notes/explorable_world/comfy/projects/visual_library/browse_layout.json",
+      "sha256_at_read_checkpoint": "e17159d13064ba221d04a5df49c7a2ebfed1c50eeaaf3861f38fab577c5bf0ea"
+    },
+    {
+      "topic": "Character hubs",
+      "rule": "Supporting-cast hubs bring related scenes together. Working references carry approved scoped components, angles and motion-enablement material. Ordinary hubs need representative anchors, not every viseme.",
+      "reference": "docs/notes/explorable_world/comfy/projects/visual_library/cast_collections.json",
+      "sha256_at_read_checkpoint": "98f3a57017df9d7bb7fa86da5c979671cef704ec3ebdae591644037f8c651b41"
+    },
+    {
+      "topic": "Tattoos",
+      "rule": "Hon defaults to All references; group by tattoo subject. Expand stencils first, then distinct body appearances and placement-guide evidence. Placement is not standalone stencil approval.",
+      "reference": "docs/notes/explorable_world/comfy/projects/visual_library/detail_display_groups.json",
+      "sha256_at_read_checkpoint": "aa2c7cef1d7fd4462ea7dbf9b4209ee939c602222cb89b9f0b75617858f0aaa8"
+    },
+    {
+      "topic": "Storyboard",
+      "rule": "Preserve original panels, later sequences, provenance and independent asset stages. Source-panel positions and percentages are not measured song timing.",
+      "reference": "docs/notes/explorable_world/comfy/projects/visual_library/story_notes.json",
+      "sha256_at_read_checkpoint": "abcad66eddd86f983f6cc9c4838e7026026b66dcbe5bc41d91e711080d5b2dd4"
+    },
+    {
+      "topic": "Videos",
+      "rule": "Keep scene clips and experiments intelligible, retaining each asset stage and defects. A provider name or visual polish cannot promote a clip automatically.",
+      "reference": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "sha256_at_read_checkpoint": "0907818ed1f7a6e329b250880b443a157f3cea8be9c7fd61122a13408cddd74a"
+    },
+    {
+      "topic": "Collaborators",
+      "rule": "Use Work & handoffs, Profile, Role scorecard and Roles guide as nested information. Self-reported capabilities and earned role grades are distinct.",
+      "reference": "docs/notes/explorable_world/comfy/projects/visual_library/provider_scorecards.json",
+      "sha256_at_read_checkpoint": "26ef5bdf883193898e61c1a9c81aee1b3183604fa993f405ba38fd00040e032e"
+    },
+    {
+      "topic": "Priority queue",
+      "rule": "mission_control.json is saved work metadata. Unfinished top-priority cards appear above ordinary work; publishing a task does not execute or approve it.",
+      "reference": "docs/notes/explorable_world/comfy/projects/collaborators/mission_control.json",
+      "sha256_at_read_checkpoint": "fdd1edfbe613a828ff04d9baba8f5a7c2a8781e28c812420c4d5b39586a3c882"
+    },
+    {
+      "topic": "Review identity",
+      "rule": "Exact asset ID and original hash bind reviews. Preserve independent-field merges, explicit clears and newer direct/browser intent. Never erase an omitted field by treating it as an instruction.",
+      "reference": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "sha256_at_read_checkpoint": "0907818ed1f7a6e329b250880b443a157f3cea8be9c7fd61122a13408cddd74a"
+    },
+    {
+      "topic": "Complete backup",
+      "rule": "Full reviews retain decisions, scene reviews, favorites and basket, including history excluded from outbound production selections. A selection manifest contains metadata; delivery still needs actual files.",
+      "reference": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt",
+      "sha256_at_read_checkpoint": "ac5734de6fce7ec80ab7526493b4d07fcd522760fe1d0b5792ec8a55b82c5fb0"
+    },
+    {
+      "topic": "Persistence",
+      "rule": "Local browser state, saved review file, canonical intake and hosted app state are different. File writes are serialized; imports merge by ID/hash. Omitted favorite/basket records are not deletions.",
+      "reference": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "sha256_at_read_checkpoint": "0907818ed1f7a6e329b250880b443a157f3cea8be9c7fd61122a13408cddd74a"
+    },
+    {
+      "topic": "Canonical review intake",
+      "rule": "Use the existing intake to check export freshness, autosave stability and catalog/disk hashes, and reconcile later direct user clarifications before merging.",
+      "reference": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_intake_plan.py",
+      "sha256_at_read_checkpoint": "0b509f5a02f907d1e57d9c7426968dc986c5b15dac864b4cbfb2848ae1f01e38"
+    },
+    {
+      "topic": "Scores and scope",
+      "rule": "Gold-standard likeness, scene craft, favorites, triage, lane, stage, component approval and scene readiness answer different questions. A named weaker scene reference governs only that scene. Required blockers cannot be averaged away.",
+      "reference": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt",
+      "sha256_at_read_checkpoint": "ac5734de6fce7ec80ab7526493b4d07fcd522760fe1d0b5792ec8a55b82c5fb0"
+    },
+    {
+      "topic": "Production loop",
+      "rule": "Grok exploration arrives Preliminary; provider/Claude grades are attributed reviewer evidence. Preserve settled human scoped reference acceptance. Actual video action/motion and final judgment remain distinct.",
+      "reference": "docs/notes/explorable_world/comfy/projects/collaborators/PRODUCTION_METHOD_20261012.txt",
+      "sha256_at_read_checkpoint": "b854511b001e5f35f98330c04947f1c4fd4a30308ef9c61ffe5ea766aa93bebf"
+    },
+    {
+      "topic": "Media aliases",
+      "rule": "Long-path aliases can be NTFS hardlinks: editing an alias changes original bytes. Do not modify aliases or originals to repair display. Preserve exact bytes and use the existing source resolver.",
+      "reference": "docs/notes/explorable_world/comfy/projects/browser_media/README.txt",
+      "sha256_at_read_checkpoint": "6e965f37dac814f701692f8c80f971ffa0571fb93dd99382487b595bc8b541b0"
+    },
+    {
+      "topic": "Hosted mirror",
+      "rule": "The compact Streamlit app and full dashboard mirror are separate views. Mirror packaging follows the local catalog build; preparation is not deployment or review synchronization.",
+      "reference": "apps/creative_studio/FULL_DASHBOARD_README.txt",
+      "sha256_at_read_checkpoint": "7f21c16f7b43eb44c512d3aab9dc6f5256894e6467a98fd37059b612a0eb7996"
+    },
+    {
+      "topic": "Coordination",
+      "rule": "Use one addressed mailbox file per message and explicit receipts. Posted is not received. cfa_site_index consumes only explicit site assignments, never nova production messages or acknowledgements.",
+      "reference": "docs/notes/explorable_world/comfy/projects/collaborators/MAILBOX.md",
+      "sha256_at_read_checkpoint": "1d6ab1e44917a89ef04381cde816ef18591a77b28e67bb98b6e9406e216be1df"
+    }
+  ],
+  "commands_from_CFA_root": {
+    "publication": "python docs/notes/explorable_world/comfy/projects/visual_library/build_catalog.py",
+    "javascript_syntax": "node --check docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+    "tests_choose_for_change": [
+      "node docs/notes/explorable_world/comfy/projects/visual_library/test_reference_scope.cjs",
+      "node docs/notes/explorable_world/comfy/projects/visual_library/test_review_direct_clarification.cjs",
+      "node docs/notes/explorable_world/comfy/projects/visual_library/test_scene_readiness.cjs",
+      "node docs/notes/explorable_world/comfy/projects/visual_library/test_compact_browse.cjs",
+      "node docs/notes/explorable_world/comfy/projects/visual_library/test_tattoo_subject_collections.cjs",
+      "node docs/notes/explorable_world/comfy/projects/visual_library/test_cast_character_hub.cjs"
+    ]
+  },
+  "known_testing_limits": [
+    "DOM/storage tests do not prove actual rendered appearance. Report visual QA separately.",
+    "Current mission priority/hash tests fail at an outdated exact shared harness export literal before executing library code; do not report those assertions as passed.",
+    "Root local HTML visual preview was rejected by browser file-protocol policy. No hosting/alternate-browser workaround follows this packet."
+  ],
+  "design_breadcrumbs": {
+    "artwork_and_navigation": "Compact consistent covers; expandable parent groups; filters and clear linked detail views; show enough meaningful artwork by default.",
+    "information_density": "Use nested tabs/subsections rather than repeated ungraded lists. The user pointed to Nyquist dashboard AI_ARMADA.py as a hierarchy/tab reference. Consult local code before borrowing; no separate live-site crawl implied.",
+    "source": "Direct user site-design instructions plus existing renderer, source groupings, tests and dated screenshots; design context is distributed."
+  },
+  "current_caveats": [
+    "Exact C13 patch-c source choice is pending; paired display does not choose it.",
+    "Reference-family lineage is incomplete; record gaps rather than fabricate inheritance.",
+    "reference-validation-evidence-ui-20261013 is authorized and queued separately; schema/serializer/import-export preservation design remains future assigned work.",
+    "Meta Mirror Prime and MM_1 maps are independent/provisional. Prime remains master; no accepted timing/lip sync.",
+    "Hon needs the requested Harrison Ford actor-injection test; Lisan is the intended fantasy personification and has no equivalent face-replacement requirement."
+  ],
+  "verification_rule": "Record actual inputs, source changes, build exit/counts, applicable tests, before/after review integrity, and permitted display checks. Snapshot current inputs before editing; do not overwrite concurrent work from an older guard. A passed check supports only what it tests."
+}

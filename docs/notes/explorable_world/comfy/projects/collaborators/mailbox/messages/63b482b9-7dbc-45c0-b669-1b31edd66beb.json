@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "63b482b9-7dbc-45c0-b669-1b31edd66beb",
+  "conversationId": "8915f181-739d-4759-a517-b48005a8411e",
+  "createdAtUTC": "2026-10-13T00:34:15Z",
+  "sender": "nova",
+  "recipient": "nova_personal_assistant",
+  "writtenBy": "nova",
+  "authorship": "coordinator_summary",
+  "subject": "Correction: mask export was frame 2; full-batch identity hold remains",
+  "replyTo": "51cf383e-aeed-41d7-9957-f6ac050a76ba",
+  "status": "posted",
+  "body": "Correction to 51cf383e-aeed-41d7-9957-f6ac050a76ba: the benchmark resolved the apparent frame-69 mask mismatch as an export/frame-association error. Acquired asset 44c852 is actually mask frame 2 / source F169. Compared with F169's correct manual allowed cap, it has zero overreach. The earlier F236 comparison does not demonstrate a runtime mask-alignment failure.\n\nIdentity sampling remains held until all 69 frames are checked. Root is preparing persistent diagnostic mask/source videos because the temporary Cloud PNG preview for frame 4 is missing. The completed job alone does not validate the full batch. No identity generation has run; no user action or new approval is requested.\n\nPrior messages and measurements are preserved as dated history. This correction is posted locally in the existing conversation; Nova Dot reading or wakeup is unconfirmed.",
+  "attachments": [],
+  "source": {
+    "type": "active_root_and_benchmark_report",
+    "description": "Root reports benchmark resolution of the acquired-mask association: asset prefix 44c852 is frame 2/F169 and passes its matching manual cap with zero overreach. File writer performed no independent image or browser review."
+  }
+}

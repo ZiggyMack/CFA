@@ -1,0 +1,36 @@
+{
+  "status": "published_main",
+  "parent": "264c47cd3f44d1b32f3c7a8cd414d924298363f3",
+  "tree": "0e224f0a71e86aeb9c89ac864635053d4be9a582",
+  "commit": "16c10938a6e1a45c78f8f8f896cb2924ae8bc96a",
+  "files": {
+    "apps/creative_studio/app.py": {
+      "sha256": "76754c40225965846efef32a8e39533da54dccd9d68a8e57c4806cb8c4b7d2d4",
+      "bytes": 55247
+    },
+    "apps/creative_studio/mission_view.py": {
+      "sha256": "b0bc5b9cbfbd585867b3bd0a33b2c322cdc189a96fe033edccd387420ef403a9",
+      "bytes": 11229
+    },
+    "apps/creative_studio/studio_dependencies.py": {
+      "sha256": "74a17734ec9dc4475ce40e70db2502853f3c3bd8240f5b113f0ee917ad753cbd",
+      "bytes": 1416
+    },
+    "apps/creative_studio/tests/test_studio.py": {
+      "sha256": "76377982e663042d51f22da342249ac648f248744c4b600b8f4d639420ed9570",
+      "bytes": 48548
+    },
+    "apps/creative_studio/tests/test_hot_reload.py": {
+      "sha256": "82b9fe2632261c6f5bbec07d928a6c46f2653949cca2fc5d206c7f1910d73a5f",
+      "bytes": 4329
+    }
+  },
+  "tests": {
+    "studio": 33,
+    "hot_reload": 5,
+    "passed": true
+  },
+  "diagnosis": "Reproduced missing mission_review_data using cached helper from e58074d; live logs not read.",
+  "remoteMainVerified": true,
+  "liveRecovery": "User screenshot confirms live site restored, reported before hotfix push; exact version not asserted."
+}

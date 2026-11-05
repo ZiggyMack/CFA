@@ -1,0 +1,10 @@
+# V4 FALCON QA, HD-ARMOR-SWAP-01 v005, GRILL ONLY (ship to be redone at full scale; not judged). Redo after ROUND-CAP return V4_FALCON_armorswap01v004_grill_20261021T142912Z_v001.tsv (30cf3c56). V_4 20261021T144717Z (10:47 EDT 2026-10-21). Existing images only; no Z_ script; nothing edited.
+# FILES (verified): v005 /workspace/hon-dolo-armor-swap/HD-ARMOR-SWAP-01_v005.jpg 131c22163c856ab5219b93ee4325c8450c03232ad94ce18b42ad709d76de6178 | v004 948bae97 | original aea8323a. Z_5 crop z5chest/render_v003/v005/ARMOR01_v005_canine_4x_v004_v005.png not needed.
+# CROPS: V4_FALCON_armorswap01v005_canine_20261021T144717Z_canine6x_v001.png eeb53a11 (orig | v004 | v005, x564-604 y296-336) | V4_FALCON_armorswap01v005_canine_20261021T144717Z_mouth4x_v001.png a5d967f1
+item	box	measured	result	note
+outside_diff_vs_v004	frame minus canine box x575-583 y309-330	0 px >12 (max 11); all 175 changed px inside the box	PASS	-
+T1_evenness	x576-583 y312-327	dark-dot % 1.9 (v004 12.4; lateral T2 3.9); warm gold r-b 99 / g-b 61 vs T2 96 / 58 (v004 69 / 40 = olive); even at plain 4x and 6x, no pattern, no olive cast	PASS	-
+T1_outline	img-left canine	clean outline and seam to the premolar at x575, no halo, at 4x/6x	PASS	-
+T1_tip	gold bottom per column	T1 median y326 (324-327) vs T2 median y326 (max 327) = +0 px; target 1-3; reads the same length as the lateral at 4x, not a visible artefact	ADVISORY	1 px under target, Chief ruling (1 px off, not visible at plain 4x) -> advisory
+rest_of_grill	centrals, T2, T5, T6, lower row, hoops	0 px >12 vs v004 outside the box	PASS	unchanged, four-gold layout intact
+VERDICT	-	-	PASS-ADVISORY	ROUND-CAP item cleared. Only note: canine tip level with the lateral (+0 vs 1-3).

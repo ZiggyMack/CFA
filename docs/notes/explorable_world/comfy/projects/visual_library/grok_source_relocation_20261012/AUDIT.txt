@@ -1,0 +1,32 @@
+GROK SOURCE RELOCATION PLAN
+State: planned; transferPerformed=false
+Created UTC: 2026-10-12T17:05:07.418970Z
+
+Scope: exactly the three listed Downloads packages. No moves, removals, provider sends, source edits, or loader edits were performed.
+Root GO is required before any actual transfer.
+
+Total: 2,774 files / 596,636,707 bytes.
+Reuse verified preferred: 192 files / 45,515,679 bytes.
+Move unique to package wrapper: 2,582 files / 551,121,028 bytes.
+
+Every source file, including MANIFEST.csv and SHORTLIST.md, is mapped with freshly computed SHA-256 and size. Every current manifest row was checked against actual bytes. No reparse/symlink source, destination, or ancestor paths were accepted. Source listings, sizes, modification times, and manifest hashes were rechecked before writing this plan.
+
+Verified reusable copies: 180 Falcon JPGs plus 12 SHA256SUMS.txt files under bare preferred C29-galley through C40-maw.
+The 12 preferred NOTES.md differ; retain those existing files, and move each current Downloads note into the GROK-HD-FALCON-1000 package wrapper destination shown in the map. The wrapper must contain the newer source notes.
+
+All other files go to preferred/{package}/{same relative path}. The earlier content audit found no other preferred media byte equivalents for these packages. Different packages are not merged, and same-content documents from unrelated contexts are not deduplicated.
+
+Migration constraints: catalog, original review paths, validators, intake registries, source provenance, mailbox attachments, and Claude scene cards can refer to old Downloads paths. A resolver or deliberate updates must preserve original IDs, hashes, review decisions, provenance, and context. Frozen exported reviews and already dispatched attachments must remain recoverable.
+Original paths in this planned map are provenance identifiers; physical paths are future locations and are not evidence of a completed transfer. Revalidate hashes and source listing immediately before any transfer because Grok packages may grow.
+
+GROK-HD-FALCON-1000: 1345 files / 315724142 bytes; 1343 manifest rows all valid; actions {"move_unique": 1153, "reuse_verified_preferred": 192}
+GROK-HD-STORY-SET-02: 534 files / 107742601 bytes; 532 manifest rows all valid; actions {"move_unique": 534}
+GROK-HD-ENABLERS-03: 895 files / 173169964 bytes; 893 manifest rows all valid; actions {"move_unique": 895}
+
+Manifest snapshot SHA-256:
+docs/notes/downloads/GROK-HD-FALCON-1000/MANIFEST.csv  9199567bb5476d0f7a2419d810f862f170a670d7a0ea4d6139b3f063a8df1679
+docs/notes/downloads/GROK-HD-STORY-SET-02/MANIFEST.csv  79275b789042a2c98717a4937c32ae805687e19e930389b4130a7847abd78f7d
+docs/notes/downloads/GROK-HD-ENABLERS-03/MANIFEST.csv  e12e5f0babe2e42c19002f3eda40d400a407952c12eabffb5fa283c12059c986
+
+Artifacts: relocation_map.planned.json; relocation_plan.csv; AUDIT.txt.
+No deletion is authorized by this plan.

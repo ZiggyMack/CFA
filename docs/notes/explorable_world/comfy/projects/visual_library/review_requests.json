@@ -1,6 +1,6 @@
 {
   "format": "cfa-review-requests-v1",
-  "updated": "2026-10-10",
+  "updated": "2026-10-14",
   "requests": [
     {
       "id": "HD-B-d98197d470ce",
@@ -25,6 +25,22 @@
       "requestedBy": "nova",
       "requestedAt": "2026-10-10",
       "reason": "Older EE has a saved 2/5 rating and Preliminary stage, but its Keep / Needs fixes / Remove decision is unset."
+    },
+    {
+      "id": "HD-FALCON-ee485849b0e6528a",
+      "sha256": "ee485849b0e6528a242cfdf1ae0b73e64156b4819514dcd65e48bcb7e10175ee",
+      "type": "missing_decision",
+      "requestedBy": "cfa_site_index",
+      "requestedAt": "2026-10-14",
+      "reason": "Earlier C04-002 repair with reported identity regression needs its own Keep / Needs fixes / Remove decision. Provider and Claude assessments are separate from human acceptance; the original review remains saved."
+    },
+    {
+      "id": "HD-FALCON-af69f68b13ef0012",
+      "sha256": "af69f68b13ef00126bbab23c57dfd28971104916e9478062f988a4e4a6b04ebe",
+      "type": "missing_decision",
+      "requestedBy": "cfa_site_index",
+      "requestedAt": "2026-10-14",
+      "reason": "Returned C04-002 repair needs its own Keep / Needs fixes / Remove decision. Provider and Claude assessments are separate from human acceptance; the original review remains saved."
     }
   ]
 }

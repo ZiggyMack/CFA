@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 1,
+  "recordType": "offline-media-technical-evidence",
+  "measuredAtUTC": "2026-10-14T02:10:48.327278+00:00",
+  "source": {
+    "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-1K-C13/C13-sandworm-rising/repairs/C13-04_Z_1_R1-try5-patch-c.jpg",
+    "bytes": 447799,
+    "sha256": "23817577d3d32f0df03d57ac1e49c4c85246e86c405b13c492194f7aa2f52bad"
+  },
+  "output": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/FLOW-LAG-SW2-001_original.mp4",
+    "bytes": 2614493,
+    "sha256": "8f0c3d3bb4f7c8ff6fd6c98ec0f5cc4c8a5ae02daad375b4d2b9e63df0edebaf"
+  },
+  "preflight": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/PREFLIGHT.json",
+    "bytes": 7560,
+    "sha256": "c9a79916a99f7055d733ce8cfd8cc72f8eb572f6e38a825ce228bea1499a47e4"
+  },
+  "promptCandidate": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/ACTUAL_PROMPT_CANDIDATE.txt",
+    "bytes": 1245,
+    "sha256": "20b5a0e2be1c267c3db5c8ba42082313256f686129408b337574c0a3d7783fa6"
+  },
+  "submissionReceipt": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/SUBMISSION_RECEIPT.json",
+    "bytes": 5069,
+    "sha256": "2ede10308a567bc3ad099f5ccb9e5aae131a168f3a95404e712e2c10b8b69aa5"
+  },
+  "decoderExecutable": ".cache/hon_dolo_i2v_20261004/python_packages/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+  "fullDecodeExitCode": 0,
+  "containerDurationSeconds": 8.0,
+  "video": {
+    "codec": "H.264 High",
+    "pixelFormat": "yuv420p",
+    "width": 1280,
+    "height": 720,
+    "nominalFPS": 24,
+    "decodedFrames": 192,
+    "timebase": "1/24",
+    "firstPTS": 0,
+    "lastPTS": 191,
+    "firstFrameTimeSeconds": 0.0,
+    "lastFrameTimeSeconds": 7.958333333333333,
+    "decodedPictureDurationSeconds": 8.0,
+    "contiguousPTS": true,
+    "sourceFirstFrameMeanAbsoluteRGBDifference0To255": 4.125904224537037,
+    "firstFrameDifferenceScope": "Compression/color-pipeline pixels differ; this number does not establish perceptual identity or character acceptance."
+  },
+  "audio": {
+    "present": true,
+    "codec": "AAC LC",
+    "sampleRateHz": 48000,
+    "channels": 2,
+    "decodedPCMFormat": "signed 16-bit little-endian",
+    "decodedInterleavedSamples": 768000,
+    "decodedSamplesPerChannel": 384000,
+    "decodedDurationSeconds": 8.0,
+    "peakAbsPCM16": 13483,
+    "rmsPCM16": 2163.6733193413065,
+    "peakDBFS": -7.71326800878756,
+    "rmsDBFS": -23.605164904305656,
+    "allDecodedPCM16SamplesZero": false,
+    "listeningReviewPerformed": false,
+    "scope": "Signal-level measurement does not identify words, music or sound effects."
+  },
+  "sampledFrameIndices": [
+    0,
+    24,
+    48,
+    72,
+    96,
+    120,
+    144,
+    168,
+    191
+  ],
+  "derivedArtifacts": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/result_review/full_decode.log",
+      "bytes": 2012,
+      "sha256": "c31f57f896a7e5b0a2683bd22b06bb639a3b36ff5d79cc0c73f7db1f6d1ea1d5"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/result_review/decoded_frames.framemd5",
+      "bytes": 15575,
+      "sha256": "d29af4dfd44605b079a8efafa83ea4b578468a617c4cc3a402d20170c946bd6c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/result_review/SW2_SOURCE_AND_SAMPLED_FRAMES.jpg",
+      "bytes": 824427,
+      "sha256": "9b9855ac2276e254848d112182b67f5739e4e2ecdb65438f86f775416e360619"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/result_review/frame_000.png",
+      "bytes": 974688,
+      "sha256": "b78a3242ededd228c4da57c52c140411724724dc7d3bfce8908ae2335be616ac"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/result_review/frame_024.png",
+      "bytes": 1062633,
+      "sha256": "c98ba7fbdd96e75e6c32f9103f6f4f63fbe85608044224d04905f88e98a1c722"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/result_review/frame_048.png",
+      "bytes": 1110468,
+      "sha256": "5058d145ec8415afd583a2e8451665075266ca287c3b11f5a9dcbb6551986c00"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/result_review/frame_072.png",
+      "bytes": 1101158,
+      "sha256": "a7fdf3930d4acca957307496aadeb1689f9278c2878d3a08ef8bd6c3d848f040"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/result_review/frame_096.png",
+      "bytes": 1085039,
+      "sha256": "26f0a8b76bfbff8ff4db6fe70e7d333fa52468af2cda3239d3ceacfc34500382"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/result_review/frame_120.png",
+      "bytes": 1107782,
+      "sha256": "e85a9ed88fd71118b48efedf21e7f68697a1d80499430913d61acf3492f32bee"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/result_review/frame_144.png",
+      "bytes": 1092691,
+      "sha256": "35322fd744a620473d78d360031020c5ed5fcd45ebe17862d34a84770b7daae3"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/result_review/frame_168.png",
+      "bytes": 1074323,
+      "sha256": "01ea9385cda6ce7c1789237cb70af41b434b1c31e5123c5bef3bfa629db2fe73"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/sw2_prototype_20261013/result_review/frame_191.png",
+      "bytes": 1053579,
+      "sha256": "0e35fa3e235ce209845ed6732d83e53f825614343ebaf36046ab4b0af19c9455"
+    }
+  ],
+  "originalPreserved": true,
+  "sourcePreserved": true,
+  "acceptance": {
+    "humanAcceptanceClaimed": false,
+    "overallGrade": null
+  },
+  "lesson": "../Pan_Handlers/Help/guides/video_handoff.py: inspect actual streams; frame/FPS measurements are separate from coherence and acceptance.",
+  "commandArgumentArrays": [
+    [
+      ".cache/hon_dolo_i2v_20261004/python_packages/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+      "-nostdin",
+      "-hide_banner",
+      "-i",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\FLOW-LAG-SW2-001_original.mp4",
+      "-map",
+      "0:v:0",
+      "-map",
+      "0:a?",
+      "-f",
+      "null",
+      "NUL"
+    ],
+    [
+      ".cache/hon_dolo_i2v_20261004/python_packages/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+      "-nostdin",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\FLOW-LAG-SW2-001_original.mp4",
+      "-map",
+      "0:v:0",
+      "-an",
+      "-f",
+      "framemd5",
+      "pipe:1"
+    ],
+    [
+      ".cache/hon_dolo_i2v_20261004/python_packages/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+      "-nostdin",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\FLOW-LAG-SW2-001_original.mp4",
+      "-vf",
+      "select=eq(n\\,0)",
+      "-frames:v",
+      "1",
+      "-fps_mode",
+      "vfr",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\result_review\\frame_000.png"
+    ],
+    [
+      ".cache/hon_dolo_i2v_20261004/python_packages/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+      "-nostdin",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\FLOW-LAG-SW2-001_original.mp4",
+      "-vf",
+      "select=eq(n\\,24)",
+      "-frames:v",
+      "1",
+      "-fps_mode",
+      "vfr",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\result_review\\frame_024.png"
+    ],
+    [
+      ".cache/hon_dolo_i2v_20261004/python_packages/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+      "-nostdin",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\FLOW-LAG-SW2-001_original.mp4",
+      "-vf",
+      "select=eq(n\\,48)",
+      "-frames:v",
+      "1",
+      "-fps_mode",
+      "vfr",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\result_review\\frame_048.png"
+    ],
+    [
+      ".cache/hon_dolo_i2v_20261004/python_packages/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+      "-nostdin",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\FLOW-LAG-SW2-001_original.mp4",
+      "-vf",
+      "select=eq(n\\,72)",
+      "-frames:v",
+      "1",
+      "-fps_mode",
+      "vfr",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\result_review\\frame_072.png"
+    ],
+    [
+      ".cache/hon_dolo_i2v_20261004/python_packages/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+      "-nostdin",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\FLOW-LAG-SW2-001_original.mp4",
+      "-vf",
+      "select=eq(n\\,96)",
+      "-frames:v",
+      "1",
+      "-fps_mode",
+      "vfr",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\result_review\\frame_096.png"
+    ],
+    [
+      ".cache/hon_dolo_i2v_20261004/python_packages/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+      "-nostdin",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\FLOW-LAG-SW2-001_original.mp4",
+      "-vf",
+      "select=eq(n\\,120)",
+      "-frames:v",
+      "1",
+      "-fps_mode",
+      "vfr",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\result_review\\frame_120.png"
+    ],
+    [
+      ".cache/hon_dolo_i2v_20261004/python_packages/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+      "-nostdin",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\FLOW-LAG-SW2-001_original.mp4",
+      "-vf",
+      "select=eq(n\\,144)",
+      "-frames:v",
+      "1",
+      "-fps_mode",
+      "vfr",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\result_review\\frame_144.png"
+    ],
+    [
+      ".cache/hon_dolo_i2v_20261004/python_packages/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+      "-nostdin",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\FLOW-LAG-SW2-001_original.mp4",
+      "-vf",
+      "select=eq(n\\,168)",
+      "-frames:v",
+      "1",
+      "-fps_mode",
+      "vfr",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\result_review\\frame_168.png"
+    ],
+    [
+      ".cache/hon_dolo_i2v_20261004/python_packages/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+      "-nostdin",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\FLOW-LAG-SW2-001_original.mp4",
+      "-vf",
+      "select=eq(n\\,191)",
+      "-frames:v",
+      "1",
+      "-fps_mode",
+      "vfr",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\result_review\\frame_191.png"
+    ],
+    [
+      ".cache/hon_dolo_i2v_20261004/python_packages/imageio_ffmpeg/binaries/ffmpeg-win-x86_64-v7.1.exe",
+      "-nostdin",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\flow\\sw2_prototype_20261013\\FLOW-LAG-SW2-001_original.mp4",
+      "-map",
+      "0:a:0",
+      "-vn",
+      "-acodec",
+      "pcm_s16le",
+      "-f",
+      "s16le",
+      "pipe:1"
+    ]
+  ]
+}

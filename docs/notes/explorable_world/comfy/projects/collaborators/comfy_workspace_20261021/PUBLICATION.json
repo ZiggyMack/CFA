@@ -1,0 +1,58 @@
+{
+  "parent": "678607495a8953c18290e5b0291ec668c8f3aaf4",
+  "commit": "8963d33bfaaeefbe7376406ba71dfb518c209e48",
+  "tree": "cf98058756180f93ca5b5831da32ab089525c9c5",
+  "files": {
+    "apps/creative_studio/app.py": {
+      "sha256": "f58cc32163cccb0fddd5e42525321161bd36accf9cc28d7177ae625a322d1639",
+      "bytes": 71930
+    },
+    "apps/creative_studio/design_view.py": {
+      "sha256": "18f3a80df5f00bf50e7b748c97bbb1efacde639721fe8c061f3e9f59ff84787b",
+      "bytes": 53155
+    },
+    "apps/creative_studio/tests/test_comfy_workspace.py": {
+      "sha256": "96aa7febbcbfbda502bf592a4c11ae3436303b65bb551801cc989d34e7d11a3e",
+      "bytes": 15544
+    },
+    "apps/creative_studio/library/design_catalog.json": {
+      "sha256": "0c9379b1447257d61a7b3e4a25f00321288dec01b6175134bb0792e90870e5cf",
+      "bytes": 22211731
+    },
+    "apps/creative_studio/library/design_manifest.json": {
+      "sha256": "f1497a495c77719f6b045273c47e23b4f32db0693865418104de20666a6274f7",
+      "bytes": 2906233
+    },
+    "apps/creative_studio/library/design_media/0985c8e91f03c462e4fca279bde195e2b75ef35bc82228954abf48330493e7c0.txt": {
+      "sha256": "0985c8e91f03c462e4fca279bde195e2b75ef35bc82228954abf48330493e7c0",
+      "bytes": 7333
+    },
+    "apps/creative_studio/library/design_media/3d1e1ad741d4f247239d189bbc4c952dc45602527b42e02416de7a279918c8e0.txt": {
+      "sha256": "3d1e1ad741d4f247239d189bbc4c952dc45602527b42e02416de7a279918c8e0",
+      "bytes": 12027
+    }
+  },
+  "checks": {
+    "nativeRecipeAndModelTests": 15,
+    "nativeAppRoutesBeforeRecipes": 2,
+    "localComfyDOM": "passed",
+    "allPriorAssetsReviewsAndTasksPreserved": true,
+    "newImagesOrVideo": 0,
+    "newDocuments": 2,
+    "workflowFamilies": 6,
+    "knownUnrelatedRegression": "test_compact_browse.cjs: Cantina toast child collapse expectation fails identically before and after this task",
+    "fullBuilder": "Prior unrelated writer hash mismatch; used bounded presentation/document refresh"
+  },
+  "sharedStateBefore": {
+    "head": "e58074d0fe345e8b429ed44b5b938a82f55f1fdd",
+    "indexSHA256": "de5bc03922c34956a05fabf64f434f407df71440c06d9f8f01211a48817fcb6e"
+  },
+  "liveStatus": "live_verified",
+  "publishedAtUTC": "2026-10-21T06:45:08.162138+00:00",
+  "remoteMain": "8963d33bfaaeefbe7376406ba71dfb518c209e48",
+  "sharedStateAfter": {
+    "head": "e58074d0fe345e8b429ed44b5b938a82f55f1fdd",
+    "indexSHA256": "de5bc03922c34956a05fabf64f434f407df71440c06d9f8f01211a48817fcb6e"
+  },
+  "liveVerificationRecord": "LIVE_VERIFICATION.json"
+}

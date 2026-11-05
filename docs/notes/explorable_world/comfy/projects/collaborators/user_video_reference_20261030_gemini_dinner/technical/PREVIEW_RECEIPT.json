@@ -1,0 +1,96 @@
+[
+  {
+    "path": "docs/notes/explorable_world/comfy/projects/00_Unassigned_Gemini/gemini_generated_video_5ecc4396.mp4",
+    "sha256": "203a795fbf120f444f4210ccf92f9310942121858ecdf1fe2932518ab59bac2f",
+    "bytes": 2110205,
+    "poster": "docs/notes/explorable_world/comfy/projects/collaborators/user_video_reference_20261030_gemini_dinner/previews/203a795fbf120f44.jpg",
+    "posterSHA256": "eb33bf1c811c37942339d260ca6e876403b3956371363bc8d159074fe1f11f43",
+    "contactSheet": "docs/notes/explorable_world/comfy/projects/collaborators/user_video_reference_20261030_gemini_dinner/previews/5ecc4396_contact_sheet.jpg",
+    "contactSheetSHA256": "ab11cd8c0cf1f0427350139d23d4bdf2fcb6568f760aa1443cf3a4ddcd41f7c9",
+    "commands": [
+      {
+        "command": [
+          "D:\\Documents\\CFA\\.cache\\hon_dolo_i2v_20261004\\python_packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+          "-hide_banner",
+          "-nostdin",
+          "-v",
+          "error",
+          "-xerror",
+          "-i",
+          "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\00_Unassigned_Gemini\\gemini_generated_video_5ecc4396.mp4",
+          "-f",
+          "null",
+          "-"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "D:\\Documents\\CFA\\.cache\\hon_dolo_i2v_20261004\\python_packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+          "-hide_banner",
+          "-nostdin",
+          "-i",
+          "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\00_Unassigned_Gemini\\gemini_generated_video_5ecc4396.mp4",
+          "-vf",
+          "select=eq(n\\,12)+eq(n\\,60)+eq(n\\,108)+eq(n\\,156)+eq(n\\,204),scale=640:-1",
+          "-fps_mode",
+          "vfr",
+          "-frames:v",
+          "5",
+          "-q:v",
+          "2",
+          "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\collaborators\\user_video_reference_20261030_gemini_dinner\\previews\\5ecc4396_frame_%02d.jpg"
+        ],
+        "returncode": 0
+      }
+    ],
+    "sourceUnchanged": true
+  },
+  {
+    "path": "docs/notes/explorable_world/comfy/projects/00_Unassigned_Gemini/gemini_generated_video_5cfe73f5.mp4",
+    "sha256": "44141c686aa5ac3ec2c85774ac5ff195b3f92c7e0b3a91198341688ace97380d",
+    "bytes": 4309838,
+    "poster": "docs/notes/explorable_world/comfy/projects/collaborators/user_video_reference_20261030_gemini_dinner/previews/44141c686aa5ac3e.jpg",
+    "posterSHA256": "db04e83ae924bc49663620437d3b8266de5e3615b40cdc9d053ec2aecc7c05a9",
+    "contactSheet": "docs/notes/explorable_world/comfy/projects/collaborators/user_video_reference_20261030_gemini_dinner/previews/5cfe73f5_contact_sheet.jpg",
+    "contactSheetSHA256": "24525a2f068b405c297b7ac3d57454d1a985efc3c42486ae14a903321f84f70c",
+    "commands": [
+      {
+        "command": [
+          "D:\\Documents\\CFA\\.cache\\hon_dolo_i2v_20261004\\python_packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+          "-hide_banner",
+          "-nostdin",
+          "-v",
+          "error",
+          "-xerror",
+          "-i",
+          "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\00_Unassigned_Gemini\\gemini_generated_video_5cfe73f5.mp4",
+          "-f",
+          "null",
+          "-"
+        ],
+        "returncode": 0
+      },
+      {
+        "command": [
+          "D:\\Documents\\CFA\\.cache\\hon_dolo_i2v_20261004\\python_packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+          "-hide_banner",
+          "-nostdin",
+          "-i",
+          "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\00_Unassigned_Gemini\\gemini_generated_video_5cfe73f5.mp4",
+          "-vf",
+          "select=eq(n\\,12)+eq(n\\,60)+eq(n\\,108)+eq(n\\,156)+eq(n\\,204),scale=640:-1",
+          "-fps_mode",
+          "vfr",
+          "-frames:v",
+          "5",
+          "-q:v",
+          "2",
+          "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\collaborators\\user_video_reference_20261030_gemini_dinner\\previews\\5cfe73f5_frame_%02d.jpg"
+        ],
+        "returncode": 0
+      }
+    ],
+    "sourceUnchanged": true
+  }
+]

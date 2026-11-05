@@ -1,0 +1,43 @@
+FIVE-REPOSITORY GIT AND GOOGLE DRIVE AUDIT
+Report created 2026-10-14T12:45:41.060Z (America/New_York: EDT, UTC minus 4 hours)
+CFA Nova — read-only check of Ziggy's reported sync; no resync performed.
+
+The five repository folders are present in the new Google Drive computer sync. A recent Git-ignored Flow video was downloaded from that sync and matches its original byte for byte. This establishes useful current protection for that sample, but does not prove that every file in all five repositories has finished uploading. Keep the older dated archives: they preserve different versions of the library, review decisions and collaborator roles brief.
+
+GIT STATUS — EACH RESULT IS DATED, NOT A PERMANENT LIVE STATUS
+D:/Documents/CFA: main, local e58074d0fe345e8b429ed44b5b938a82f55f1fdd; fresh remote main 264c47cd3f44d1b32f3c7a8cd414d924298363f3 at 12:15:53 UTC / 08:15:53 EDT. Local is 0 ahead, 1 behind, not diverged. A concurrent push changed the remote during this audit; the earlier matching check is historical. Local push-log evidence records 12:01:46 UTC / 08:01:46 EDT, with no author inferred. At the follow-up, 0 staged and 58 unstaged tracked changes remained; 56 current tracked versions differ from the fresh remote and 2 match. The broader inventory at 12:07:14 UTC recorded 3,203 untracked and 72,119 ignored paths, excluding the audit folder.
+
+D:/Documents/Nyquist_Consciousness: Consciousness, upstream origin/Consciousness. Local 66b6dcb31f2082b5c701ab7f1bff2357b971ecca is 28 ahead and 0 behind fresh remote cc76866b22eef5e663e0d6140ec5d931f7c0f31f at 11:21:41 UTC. Working tree: 131 status entries, including 108 untracked. There are local committed and working-tree changes outside the remote snapshot.
+
+D:/Documents/Pan_Handlers: main, upstream origin/main; local and fresh remote 17f7cbc4323564e6974bee901141d8982b3ce50b match at 11:21:43 UTC. Clean working tree, no untracked files. Ignored preview files remain outside Git.
+
+D:/Documents/VUDU_Fidelity: main, upstream origin/main; local and fresh remote 6dc8b810fdea4c2bc110da28e504c3deeb97a6c3 match at 11:23:17 UTC. Two tracked changes and one untracked file remain outside that committed snapshot. Canonical folder/remote and README identify this repository; the spoken name was approximate.
+
+D:/Documents/WHO_CARES: local claude/phase1-table has no configured upstream. HEAD baf2e2233b475c1fa07728cbb4495a5e33e80f14 matches fresh remote default/main at 11:42:11 UTC. The exact work-branch remote ref was not returned, so that absence is not evidence of unsynced committed work. Modified package.json, 13 untracked files and ignored node_modules remain outside HEAD.
+
+Fresh remote checks used read-only ls-remote and existing local objects; no fetch into refs or Git changes. Matching HEADs do not protect working-tree changes. Except CFA's dated push log, successful push times remain unknown; commit dates were not substituted for push dates.
+
+ASSET COVERAGE
+CFA's earlier media-plus-archive inventory found 8,745 Comfy paths / 2,639,559,135 logical bytes: 219 clean tracked, 244 untracked and 8,282 ignored. No tracked LFS files were found. Nyquist has 665 tracked media files / 1,469,025,600 bytes, one untracked October 13 infographic / 6,758,637 bytes, and 375 ignored archive images / 215,035,214 bytes. Pan has one tracked PNG / 859,874 bytes and 13 ignored preview PNGs / 2,123,821 bytes. VUDU and WHO have no media extensions in the Git-listed scope; WHO's ignored dependencies total 40,752,177 bytes. Counts describe path occurrences/logical sizes and can include hardlinks or alternate named copies; they are not unique physical storage.
+
+A separate later inventory limited to selected media extensions found 7,936 Comfy paths / 2,626,281,262 bytes. Of those, 4,204 paths / 1,212,245,153 bytes have no same path in the listed older archive manifests. This is a filename/stat comparison, not a claim that those bytes are absent under other names or missing from the new live sync. Same path also does not establish the same current version. The differing inventory definitions and check times are intentional.
+
+CURRENT DRIVE EVIDENCE
+Fresh signed-in web view shows My Computer (1) with exactly CFA, Nyquist_Consciousness, Pan_Handlers, VUDU_Fidelity and WHO_CARES. CFA's cloud root includes .git and ignored folders. Drive describes this as live folder sync: edits, moves and deletions propagate between computer and cloud. It is different from a dated ZIP snapshot.
+Computer entry: https://drive.google.com/drive/u/1/folders/1nYKL-Rq3BGPWs7pAmGMcFPqS94d3SgRY
+
+The October 13 FLOW-LAG-SIGNAL-002_original.mp4 is visible by its direct cloud folder path. Independent inbound retrieval at 12:10:09 UTC yielded 4,310,690 bytes, SHA256 38ff31d1e9de551509112e35eacad8b96804a6e3b65811fe2992b0f4d00f6e6c, matching the unchanged original. The verification download is retained at D:/Documents/CFA/docs/notes/downloads/FLOW-LAG-SIGNAL-002_original.mp4. Canonical source and detailed verification are in CLOUD_SAMPLE_VERIFICATION.json. An exact-name Drive search failed to find this same file before direct browsing found it, so a search miss is not absence proof.
+
+No global desktop transfer-queue completion receipt or whole-five-folder cloud manifest/checksum was available. The new computer entry was not exposed in the inspected G: Other computers mount. These limits prevent a full-completion claim; they do not negate the fresh web folder and matching sample evidence.
+
+OLDER DATED BACKUPS — PRESERVE ALL COPIES
+Full CFA base: D:/CFA_Backup_Staging/CFA_20261009_233600/CFA_20261009_233600.zip, 8,591,029,302 bytes, 48,580 source files including .git and ignored media. Its completion/verification time is October 10 03:50:35 UTC; this is not asserted to be the exact capture freeze instant. Existing receipts record full local CRC/source checks, mounted-copy hash verification and sample restore probes. October 10 web visibility was recorded; a full cloud re-download/checksum was not.
+
+Coordination supplement: D:/CFA_Backup_Staging/CFA_20261010_coordination_supplement/CFA_20261010_coordination_supplement.zip, 18,808,665 bytes, 534 changed/added files against that base, cutoff October 10 06:43:11 UTC. This delta is needed with the base for its later full-scope state. Local/mounted verification and cloud visibility receipts exist. These full CFA archives do not include the four sibling repositories.
+
+October 11 Prime folder has three later scoped archives: 35 Prime audio/source/writer/analysis files (6,131,335 bytes; 18:59:36 UTC), 58 post-checkpoint working records (1,082,959 bytes; 19:17:49 UTC), and 5 writer followups (20,549 bytes; 19:26:01 UTC). Latest final web visibility receipt is October 11 19:27:14 UTC; all three were freshly visible again during this audit. Local/mounted hashes and CRC evidence exist, but no full independent cloud restoration was performed for them. Their scope is selected files, not a new full CFA or five-repository snapshot.
+Prime cloud folder: https://drive.google.com/drive/u/1/folders/11lbFAVBHU5DMfVYHdl9sQ-7OZ4bM4P4w
+
+Three ordinary document samples read from the older base ZIP and coordination manifest—the library JS, Hon Dolo review decisions and provider_roles.txt—all differ from their current versions. Those dated copies preserve useful history. This does not prove global uniqueness across every other copy or provider version history. Earlier partial attempts, onboarding supplements and privacy-preservation copies were left intact and are not promoted into verified complete backups.
+
+No cleanup, archival move or retirement is justified yet. Optional next work is to verify the desktop sync queue, compare a complete current source-to-cloud inventory and restore representative recent files from each repository. Any Git publication or backup cleanup is separate work. This audit created reports/evidence and one verification download only; it did not commit, push, upload, create a new backup, move/delete existing files or alter settings/access. Initial failed sandbox artifacts remain preserved but are excluded from the final evidence attachments.

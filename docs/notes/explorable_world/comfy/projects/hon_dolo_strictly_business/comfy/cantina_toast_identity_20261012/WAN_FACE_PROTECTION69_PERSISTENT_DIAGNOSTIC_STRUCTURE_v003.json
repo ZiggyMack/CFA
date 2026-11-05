@@ -1,0 +1,86 @@
+{
+  "status": "PREPARED_ONLY_NOT_IMPORTED_OR_EXECUTED",
+  "source_bound_editor": "WAN_FACE_PROTECTION69_BOUND_PREFLIGHT_EDITOR_ACTUAL_20261012.json",
+  "source_sha256": "b51fb7b59a008a6a66da35022bd8952cdb40bd9dbd4192ce1d73728073f0f64e",
+  "diagnostic_editor": "WAN_FACE_PROTECTION69_PERSISTENT_DIAGNOSTIC_EDITOR_v003.json",
+  "editor_sha256": "fb4687fba5aa449e61c67cbf4b274dc481ebceb9c3fc28d7c79d941e3f92c273",
+  "active_output_nodes": [
+    9103,
+    9105
+  ],
+  "output1": {
+    "source": "9006 final editable mask after protected-region subtraction",
+    "path": [
+      9006,
+      9101,
+      9102,
+      9103
+    ],
+    "filename_prefix": "video/cantina_preflight_finalmask69_v003",
+    "format": "auto",
+    "codec": "auto",
+    "fps": 24,
+    "intended_frames": 69,
+    "audio": null
+  },
+  "output2": {
+    "source": "275 blacked source images",
+    "path": [
+      275,
+      9104,
+      9105
+    ],
+    "filename_prefix": "video/cantina_preflight_sourceoverlay69_v003",
+    "format": "auto",
+    "codec": "auto",
+    "fps": 24,
+    "intended_frames": 69,
+    "audio": null
+  },
+  "dimensions": [
+    768,
+    432
+  ],
+  "sampling_reachable": false,
+  "sampler_modes": {
+    "232": 2,
+    "232:63": 2
+  },
+  "active_ancestors": [
+    23,
+    145,
+    159,
+    160,
+    212,
+    275,
+    9001,
+    9003,
+    9004,
+    9005,
+    9006,
+    9101,
+    9102,
+    9103,
+    9104,
+    9105,
+    324475594538284,
+    1833034495877259,
+    1956377300393751,
+    3095296998173597,
+    4458611668371917
+  ],
+  "remote_model_metadata_and_actual_asset_bindings_preserved": true,
+  "prepared_generation_editor_unchanged": true,
+  "generation_editor_sha256": "73a04432229a168d0c33be677b03f3b049667a3fc90fcf1f6d0d857d0b7f8f8b",
+  "comparison_note": "SaveVideo auto/auto normally produces encoded MP4. Video encoding is lossy: use compression tolerance for gray mask values and edges, then compare frame positions, frame counts and regions against the authored69-frame protection mask. These diagnostics do not establish bit-exact masks or accepted identity output.",
+  "reason": "Native temp preview export reports69 frames but contains missing assets and a mismatched frame69; persistent video avoids relying on gallery label/association. Sampling remains held.",
+  "cloud_jobs_submitted": 0,
+  "required_runtime_checks": [
+    "Both outputs decode to69frames24fps768x432",
+    "Full mask frame order corresponds source original168-236",
+    "Final edit-mask pixels respect external protection with encoding tolerance",
+    "Mask and blacked-source overlay positions agree perframe",
+    "Resolve colored browser playback discrepancy and previous mislabeled preview before sampling"
+  ],
+  "clarification_after_preparation": "Benchmark subsequently matched presumedframe69PNG to galleryframe2/localframe1/sourceF169 with zero overreach; previous reported mismatch was galleryassociation error rather than demonstratedruntimealignmentfailure. Persistentdiagnostic still needed to verify fullsequence."
+}

@@ -88,6 +88,56 @@
       "name": "Kimi / Moonshot AI collaborator",
       "intendedRoute": "shared_files_when_available",
       "notes": "Distinct recipient registered after self-authored introduction and reply arrived as local files on 2026-10-10. Kimi Work surface and capabilities are author reports; exact model remains unknown. Active-session access only; no automatic app wake, delivery or monitoring is established."
+    },
+    {
+      "id": "cfa_site_index",
+      "name": "CFA Site Index",
+      "intendedRoute": "shared_files_and_user_authorized_task_message",
+      "threadId": "01a13383-26f6-7923-8e18-98faf1fa3ede",
+      "hostId": "local",
+      "scope": "CFA_site_maintenance_and_present_future_site_updates",
+      "requiredAssignmentMarker": "SITE_OWNER_ASSIGNMENT",
+      "consumesMessagesAddressedTo": [
+        "cfa_site_index"
+      ],
+      "mayConsumeNovaProductionMessages": false,
+      "mayAcknowledgeForNova": false,
+      "productionAuthorityDelegated": false,
+      "providerExecutionDelegated": false,
+      "spendingDelegated": false,
+      "automaticActivation": false,
+      "notes": "Standing CFA site maintenance owner by direct Ziggy instruction on October 13 after CFA NOVA reviewed and signed off the C13 publication. Retain site edit/build ownership across requested updates; no per-job return of control. Accept direct user work and SITE_OWNER_ASSIGNMENT coordination. Preserve canonical decisions and use one serialized publisher. CFA NOVA retains production, intake and registry stewardship; never acknowledge for nova or consume its production messages.",
+      "registeredAtUTC": "2026-10-13T04:40:09.798720Z",
+      "registrationSource": "Nova PA coordination from existing source thread 01a123df-30a9-74e1-a604-aad7feeaf0e5; existing CFA SITE INDEX user-owned thread inspected read-only.",
+      "publicationHandoff": {
+        "state": "completed_signed_off_owner_retained",
+        "assignment": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/SITE_OWNER_ASSIGNMENT_fb34beae-9485-407b-9e3d-189d094fcdd6.json",
+        "release": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/SITE_PUBLICATION_RELEASE_189d652e-8b83-49e7-bc8e-3ccc8404e7d9.json",
+        "acceptedTurnId": "01a1338e-7b91-7b22-b35a-a5a309576bfb",
+        "releasedAtUTC": "2026-10-13T04:41:18.666974Z",
+        "handback": {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/c13_original_patch_c/SITE_PUBLICATION_HANDBACK.json",
+          "bytes": 9617,
+          "sha256": "76ccc5c998352526d125738abded6bc542017a10155ab663f6e7f64a3939dc8f"
+        }
+      },
+      "standingOwnership": {
+        "state": "standing_owner",
+        "owner": "cfa_site_index",
+        "threadId": "01a13383-26f6-7923-8e18-98faf1fa3ede",
+        "hostId": "local",
+        "effectiveAtUTC": "2026-10-13T12:11:48.456208Z",
+        "source": "Direct human instruction in CFA conversation",
+        "sourceStatement": "Please revise the site maintenance work site nova just completed...she gave you back control she said but if she did everything corrrect and you sign off she can handle maintenance tell her to Keep it... we're going to her for all present and future site updates ...yes?",
+        "scope": "All present and future CFA site maintenance and site updates requested by Ziggy or routed through authorized coordination.",
+        "routing": "Direct user requests are accepted. SITE_OWNER_ASSIGNMENT identifies coordinated work; it is not a new per-job ownership approval gate.",
+        "singleWriter": "CFA SITE INDEX retains the site edit/build slot across jobs. CFA NOVA remains read-only for site code/data/builds unless an explicit temporary handoff is arranged. Return results and preservation evidence without returning ownership after each job.",
+        "productionOwner": "nova",
+        "decisionPreservation": "Preserve original media, exact IDs and hashes, manual/provider review separation, existing notes/stars/clears/history/scopes, source selections and accepted timing. Site changes do not invent acceptance.",
+        "separateScope": "Provider/generator execution, spending, new creative decisions and public release keep their existing authorization boundaries. This site role grants none of them.",
+        "activation": "Active-session work; no new background monitoring or automatic wake is established.",
+        "record": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/SITE_MAINTENANCE_SIGNOFF_e61bbcde-2312-46f0-ba0b-f19c633122dd.json"
+      }
     }
   ],
   "unresolvedLabels": [],

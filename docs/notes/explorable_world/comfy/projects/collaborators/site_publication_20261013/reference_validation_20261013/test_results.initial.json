@@ -1,0 +1,260 @@
+{
+  "checkedAtUTC": "2026-10-14T01:15:31.834540+00:00",
+  "passed": false,
+  "suites": 17,
+  "results": [
+    {
+      "name": "test_reference_validation.cjs",
+      "exitCode": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"scenarios\": 19,\n  \"checks\": [\n    \"176 canonical reviews and runtime legacy behavior preserved\",\n    \"independent axes, N/A and scoped pass\",\n    \"missing target/reference pixels and required occlusion cannot pass\",\n    \"required jewelry versus allowed natural variation\",\n    \"target, reference, nomination, scope, version and criteria invalidation\",\n    \"atomic nested validation and immutable collisions\",\n    \"history and old backup imports never clear evidence\",\n    \"sidecar restart and full-review round trip retain raw archive and history\",\n    \"evidence-only storage failure does not interrupt legacy saves\",\n    \"corrupt/future evidence storage remains exportable and unmodified\",\n    \"failed evidence save keeps the visible export warning\",\n    \"unread stores retain raw metadata and valid histories independently\",\n    \"newer unrelated N/A cannot hide a current applicable pass\",\n    \"character and scene form criteria with identical IDs remain independent\",\n    \"all scopes stay visible; narrower pass cannot hide unresolved work\",\n    \"technical readiness requires declarations bound to ingredients and shoot plan\",\n    \"mouth board counts and actual toggle/asset handlers\",\n    \"actual evidence form saves a scoped record without changing stars\",\n    \"real serialized review-file writer includes evidence and preserved legacy archive\"\n  ],\n  \"browserVisualQA\": false,\n  \"productionWrites\": 0,\n  \"syntheticAssessmentsPersistedToSource\": 0\n}\n",
+      "stderr": "",
+      "result": {
+        "passed": true,
+        "scenarios": 19,
+        "checks": [
+          "176 canonical reviews and runtime legacy behavior preserved",
+          "independent axes, N/A and scoped pass",
+          "missing target/reference pixels and required occlusion cannot pass",
+          "required jewelry versus allowed natural variation",
+          "target, reference, nomination, scope, version and criteria invalidation",
+          "atomic nested validation and immutable collisions",
+          "history and old backup imports never clear evidence",
+          "sidecar restart and full-review round trip retain raw archive and history",
+          "evidence-only storage failure does not interrupt legacy saves",
+          "corrupt/future evidence storage remains exportable and unmodified",
+          "failed evidence save keeps the visible export warning",
+          "unread stores retain raw metadata and valid histories independently",
+          "newer unrelated N/A cannot hide a current applicable pass",
+          "character and scene form criteria with identical IDs remain independent",
+          "all scopes stay visible; narrower pass cannot hide unresolved work",
+          "technical readiness requires declarations bound to ingredients and shoot plan",
+          "mouth board counts and actual toggle/asset handlers",
+          "actual evidence form saves a scoped record without changing stars",
+          "real serialized review-file writer includes evidence and preserved legacy archive"
+        ],
+        "browserVisualQA": false,
+        "productionWrites": 0,
+        "syntheticAssessmentsPersistedToSource": 0
+      }
+    },
+    {
+      "name": "test_scene_readiness.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"scenarios\":11,\"sceneIDs\":[\"S01B\",\"S02A\"],\"catalogAssets\":2434,\"browserVisualQA\":false,\"projectGradesAssigned\":false}\n",
+      "stderr": "",
+      "result": {
+        "passed": true,
+        "scenarios": 11,
+        "sceneIDs": [
+          "S01B",
+          "S02A"
+        ],
+        "catalogAssets": 2434,
+        "browserVisualQA": false,
+        "projectGradesAssigned": false
+      }
+    },
+    {
+      "name": "test_review_direct_clarification.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"scenarios\":4,\"fixture\":\"HD-FALCON-381883a6beb1ed5e\",\"staleStatusResolved\":true,\"newerIntentPreserved\":true,\"bootReviewWrites\":0,\"projectGradesAssigned\":false,\"browserVisualQA\":false}\n",
+      "stderr": "",
+      "result": {
+        "passed": true,
+        "scenarios": 4,
+        "fixture": "HD-FALCON-381883a6beb1ed5e",
+        "staleStatusResolved": true,
+        "newerIntentPreserved": true,
+        "bootReviewWrites": 0,
+        "projectGradesAssigned": false,
+        "browserVisualQA": false
+      }
+    },
+    {
+      "name": "test_reference_scope.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"scenarios\":8,\"browserVisualQA\":false}\n",
+      "stderr": "",
+      "result": {
+        "passed": true,
+        "scenarios": 8,
+        "browserVisualQA": false
+      }
+    },
+    {
+      "name": "test_working_bom.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"scenarios\":9,\"catalogAssets\":2434,\"browserOverlay\":\"2026-10-10T05:05:09.832Z\",\"browserVisualQA\":false}\n",
+      "stderr": "",
+      "result": {
+        "passed": true,
+        "scenarios": 9,
+        "catalogAssets": 2434,
+        "browserOverlay": "2026-10-10T05:05:09.832Z",
+        "browserVisualQA": false
+      }
+    },
+    {
+      "name": "test_creative_review.cjs",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "node:internal/assert/utils:77\n    throw err;\n    ^\n\nAssertionError [ERR_ASSERTION]: Reuse collection DOM and real bound button handlers\n    at Object.<anonymous> (D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\visual_library\\test_creative_review.cjs:19:1)\n    at Module._compile (node:internal/modules/cjs/loader:1761:14)\n    at Object..js (node:internal/modules/cjs/loader:1893:10)\n    at Module.load (node:internal/modules/cjs/loader:1481:32)\n    at Module._load (node:internal/modules/cjs/loader:1300:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.11.1\n"
+    },
+    {
+      "name": "test_scene_craft.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"scenarios\":5,\"fixture\":\"HD-FALCON-194702e9e041362d\",\"separateScores\":true,\"projectGradesAssigned\":false,\"browserVisualQA\":false}\n",
+      "stderr": "",
+      "result": {
+        "passed": true,
+        "scenarios": 5,
+        "fixture": "HD-FALCON-194702e9e041362d",
+        "separateScores": true,
+        "projectGradesAssigned": false,
+        "browserVisualQA": false
+      }
+    },
+    {
+      "name": "test_collections_navigation.cjs",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "node:internal/assert/utils:77\n    throw err;\n    ^\n\nAssertionError [ERR_ASSERTION]: Individual mouth views start collapsed\n    at Object.<anonymous> (D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\visual_library\\test_collections_navigation.cjs:149:1)\n    at Module._compile (node:internal/modules/cjs/loader:1761:14)\n    at Object..js (node:internal/modules/cjs/loader:1893:10)\n    at Module.load (node:internal/modules/cjs/loader:1481:32)\n    at Module._load (node:internal/modules/cjs/loader:1300:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.11.1\n"
+    },
+    {
+      "name": "test_compact_browse.cjs",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "node:internal/assert/utils:77\n    throw err;\n    ^\n\nAssertionError [ERR_ASSERTION]: Story shots do not flood the initial page: SB-06 · Proud scoundrel\n    at Object.<anonymous> (D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\visual_library\\test_compact_browse.cjs:141:27)\n    at Module._compile (node:internal/modules/cjs/loader:1761:14)\n    at Object..js (node:internal/modules/cjs/loader:1893:10)\n    at Module.load (node:internal/modules/cjs/loader:1481:32)\n    at Module._load (node:internal/modules/cjs/loader:1300:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.11.1\n"
+    },
+    {
+      "name": "test_source_comparison_publication.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":[\"exact sources and labels\",\"task route\",\"full-source pair\",\"independent source links\",\"thumbnail/source separation\",\"review/favorite/basket/scope preservation\"],\"catalogMode\":\"generated catalog\",\"browserVisualQA\":false,\"route\":\"#lisan/review_queue\",\"images\":[{\"id\":\"LAG-C13-ORIGINAL-7eafd9ac048d\",\"label\":\"ORIGINAL\",\"src\":\"file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/references/From%20Grok/GROK-LAG-1K-C13/C13-sandworm-rising/C13-04_Z_1.jpg\",\"sha256\":\"7eafd9ac048dc6d6125dc38281c1b664f7ae0cac1159909c34d90a5e3eef93a3\",\"bytes\":268027},{\"id\":\"LAG-C13-PATCH-C-23817577d3d3\",\"label\":\"REPAIRED patch-c\",\"src\":\"file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/references/From%20Grok/GROK-LAG-1K-C13/C13-sandworm-rising/repairs/C13-04_Z_1_R1-try5-patch-c.jpg\",\"sha256\":\"23817577d3d32f0df03d57ac1e49c4c85246e86c405b13c492194f7aa2f52bad\",\"bytes\":447799}],\"storageWrites\":0}\n",
+      "stderr": "",
+      "result": {
+        "passed": true,
+        "checks": [
+          "exact sources and labels",
+          "task route",
+          "full-source pair",
+          "independent source links",
+          "thumbnail/source separation",
+          "review/favorite/basket/scope preservation"
+        ],
+        "catalogMode": "generated catalog",
+        "browserVisualQA": false,
+        "route": "#lisan/review_queue",
+        "images": [
+          {
+            "id": "LAG-C13-ORIGINAL-7eafd9ac048d",
+            "label": "ORIGINAL",
+            "src": "file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/references/From%20Grok/GROK-LAG-1K-C13/C13-sandworm-rising/C13-04_Z_1.jpg",
+            "sha256": "7eafd9ac048dc6d6125dc38281c1b664f7ae0cac1159909c34d90a5e3eef93a3",
+            "bytes": 268027
+          },
+          {
+            "id": "LAG-C13-PATCH-C-23817577d3d3",
+            "label": "REPAIRED patch-c",
+            "src": "file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/references/From%20Grok/GROK-LAG-1K-C13/C13-sandworm-rising/repairs/C13-04_Z_1_R1-try5-patch-c.jpg",
+            "sha256": "23817577d3d32f0df03d57ac1e49c4c85246e86c405b13c492194f7aa2f52bad",
+            "bytes": 447799
+          }
+        ],
+        "storageWrites": 0
+      }
+    },
+    {
+      "name": "test_tattoo_subject_collections.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":9,\"tattooCollections\":10,\"shipReferences\":17,\"shipGuideAssets\":1,\"reviewWrites\":0,\"browserVisualQA\":false}\n",
+      "stderr": "",
+      "result": {
+        "passed": true,
+        "checks": 9,
+        "tattooCollections": 10,
+        "shipReferences": 17,
+        "shipGuideAssets": 1,
+        "reviewWrites": 0,
+        "browserVisualQA": false
+      }
+    },
+    {
+      "name": "test_cast_character_hub.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":6,\"sourceFiles\":323,\"newUniqueAssets\":321,\"hubReferences\":277,\"selectedDesignReferences\":7,\"setupCandidates\":51,\"workingReferences\":62,\"comfyUIDestination\":true,\"reviewWrites\":0,\"browserVisualQA\":false}\n",
+      "stderr": "",
+      "result": {
+        "passed": true,
+        "checks": 6,
+        "sourceFiles": 323,
+        "newUniqueAssets": 321,
+        "hubReferences": 277,
+        "selectedDesignReferences": 7,
+        "setupCandidates": 51,
+        "workingReferences": 62,
+        "comfyUIDestination": true,
+        "reviewWrites": 0,
+        "browserVisualQA": false
+      }
+    },
+    {
+      "name": "test_head_anchor_group.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":12,\"headVariants\":3,\"FalconDrafts\":90,\"sourceStoryPanels\":36,\"reviewWrites\":0,\"browserVisualQA\":false}\n",
+      "stderr": "",
+      "result": {
+        "passed": true,
+        "checks": 12,
+        "headVariants": 3,
+        "FalconDrafts": 90,
+        "sourceStoryPanels": 36,
+        "reviewWrites": 0,
+        "browserVisualQA": false
+      }
+    },
+    {
+      "name": "test_collaborator_profiles.cjs",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "node:internal/assert/utils:77\n    throw err;\n    ^\n\nAssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(bootSource.includes(oldHook))\n\n    at Object.<anonymous> (D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\visual_library\\test_collaborator_profiles.cjs:14:1)\n    at Module._compile (node:internal/modules/cjs/loader:1761:14)\n    at Object..js (node:internal/modules/cjs/loader:1893:10)\n    at Module.load (node:internal/modules/cjs/loader:1481:32)\n    at Module._load (node:internal/modules/cjs/loader:1300:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.11.1\n"
+    },
+    {
+      "name": "test_review_requests.cjs",
+      "exitCode": 0,
+      "stdout": "Review requests and assistant proposals: 7 checks passed.\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_outfit_navigation.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"outfits\":22,\"armorViews\":7,\"checks\":11,\"browserVisualQA\":false}\n",
+      "stderr": "",
+      "result": {
+        "passed": true,
+        "outfits": 22,
+        "armorViews": 7,
+        "checks": 11,
+        "browserVisualQA": false
+      }
+    },
+    {
+      "name": "test_writer_publication.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":6,\"writerDocuments\":42,\"sharedMethodDocuments\":1,\"excludedSources\":8,\"exactAssociations\":31,\"storageWrites\":0,\"browserVisualQA\":false,\"evidenceLimit\":\"Actual renderer and bound click handlers exercised with DOM/storage doubles; no browser visual rendering, screenshots or native details/anchor behavior tested.\"}\n",
+      "stderr": "",
+      "result": {
+        "passed": true,
+        "checks": 6,
+        "writerDocuments": 42,
+        "sharedMethodDocuments": 1,
+        "excludedSources": 8,
+        "exactAssociations": 31,
+        "storageWrites": 0,
+        "browserVisualQA": false,
+        "evidenceLimit": "Actual renderer and bound click handlers exercised with DOM/storage doubles; no browser visual rendering, screenshots or native details/anchor behavior tested."
+      }
+    }
+  ],
+  "browserVisualQA": false,
+  "limits": "Real renderer and bound handlers with DOM/storage doubles; no native browser layout or screenshot verification."
+}

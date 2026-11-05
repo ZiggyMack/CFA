@@ -1,0 +1,1096 @@
+{
+  "format": "cfa-notebook-review-v1",
+  "template": false,
+  "reviewID": null,
+  "roundID": "HON-IMPROVE-OPENING-CAM-002",
+  "project": "hon_dolo",
+  "rawReturn": {
+    "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/foreign_returns/raw/HON-IMPROVE-OPENING-CAM-002_20261031/GEMINI_RESPONSE_Q1.txt",
+    "sha256": "941a79ccef900b63c75123d3e88975d9018204908cbcd815fc3a618df9577d08",
+    "provider": "Gemini Notebook (NotebookLM), model not displayed",
+    "responseID": null,
+    "folder": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/foreign_returns/raw/HON-IMPROVE-OPENING-CAM-002_20261031",
+    "otherFiles": {
+      "GEMINI_RESPONSE_Q2.txt": "3460ab0bfd198b2a40570e5a8df224b623184b270e42882ea7189299ea367ef7",
+      "GEMINI_RESPONSE_Q3.txt": "b8ffb89ac1772f0486a9a2d635557dfa1764d709d8acf2b80ac90dc302000264",
+      "GEMINI_RESPONSE_Q4.txt": "257888bc36e51ff65ebec51c79136829f8de1e6c90f15376a7a8a9568c52a1cf",
+      "GEMINI_RESPONSE_SECONDPASS.txt": "577f7d01953e4ff8fdf45949e4f2c346c5be4d534ff8c8b2f865786482fde1ea",
+      "READBACK_RESPONSE.txt": "00201369f80cad1a9eb02b479300917efe63f005ca9704a1c0a399ae4191a706"
+    },
+    "capture": "Chat panel innerText from the marker line; prompt echo, Thoughts toggle and UI chrome removed; one line per proposal restored; words unchanged. No per-message URL in NotebookLM; see RETURN_SIDECAR.md.",
+    "runA": {
+      "window": "2026-10-31 09:25-09:50 EDT",
+      "selection": "uncertain: probably v2 + the three Gemini chat sources, import off",
+      "primary": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/foreign_returns/raw/HON-IMPROVE-OPENING-CAM-002_20261031/GEMINI_RESPONSE_Q1.txt"
+    },
+    "runB": {
+      "window": "2026-10-31 09:58-10:15 EDT",
+      "selection": "v2 only, verified three ways (drawn state, chip docs (1), probe)",
+      "primary": {
+        "repoPath": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/foreign_returns/raw/HON-IMPROVE-OPENING-CAM-002_20261031/GEMINI_RESPONSE_Q1_v2only.txt",
+        "sha256": "cdb80d8ed86c2e1656aa00cf588cc889b39b33b974bc95d167e3ea546f442196"
+      },
+      "files": {
+        "PROBE_V2ONLY.txt": "f423ababb821a508fda864f859242cbe111665a96d46ddc650de7765271dccd7",
+        "PROMPT_READBACK.txt": "68ab120e783201e8ac3fcf2341f7deaeacb247c5d6da6425104e8fba671bc2d9",
+        "READBACK_RESPONSE_v2only.txt": "2073b4736b9850afae3e75d7636cd917dd842f8c1b438d3ee7b2962e4bfa443a",
+        "GEMINI_RESPONSE_Q1_v2only.txt": "cdb80d8ed86c2e1656aa00cf588cc889b39b33b974bc95d167e3ea546f442196",
+        "GEMINI_RESPONSE_Q2_v2only.txt": "fdb762fa982b3aca6c2b23dd7449fd9f4c12f6be553a404785d1174c8259b888",
+        "GEMINI_RESPONSE_Q3_v2only.txt": "190cb8829d59ab3d3a17f73fc8c3a26cf5d5366adc6fbe95244a1410ae548116",
+        "GEMINI_RESPONSE_Q4_v2only.txt": "3587aab522bd7003b51038979c4176153d72789ec1ad750a8adf8280960cccf7",
+        "GEMINI_RESPONSE_SECONDPASS_v2only.txt": "9a72ffa22c324315cb66b6cd98962e3071df834ca20207c3a4e3f70509abb7ce"
+      },
+      "satisfiesV2OnlyContract": true
+    }
+  },
+  "associatedNotebookID": "586b3ee6-5c57-45b3-a59d-a2e21c18a852",
+  "reviewer": "claude (the writer's reconciliation of 2026-10-31; adoption is Ziggy's through the site queue; the operator's fields sent, executed and productionAccepted are untouched)",
+  "reviewedAt": "2026-10-31T14:35:56Z",
+  "currentDecisionSnapshot": {
+    "repoPath": null,
+    "sha256": null
+  },
+  "claims": [
+    {
+      "id": "Q1-P-1-B",
+      "claim": "P-1 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: camera specification (deferred: landing/city set and informant adaptation missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "no_change_agreed",
+      "reason": "Before equals after; deferred for missing art; agreed.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q1-P-2-B",
+      "claim": "P-2 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: camera specification (deferred: cab design missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "no_change_agreed",
+      "reason": "Before equals after; deferred for missing art; agreed.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q1-P-3-B",
+      "claim": "P-3 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: camera specification (deferred: informant adaptation, cab design, and boarding proof start/end frames missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "no_change_agreed",
+      "reason": "Before equals after; deferred for missing art; agreed.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q1-P-4-B",
+      "claim": "P-4 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: camera specification (deferred: cab design and P-2 parent still missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "no_change_agreed",
+      "reason": "Before equals after; deferred for missing art; agreed.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q1-P-5-B",
+      "claim": "P-5 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: camera specification (deferred: two-character cabin frame, cab interior, and informant adaptation missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "no_change_agreed",
+      "reason": "Before equals after; deferred for missing art; agreed.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q1-P-6-B",
+      "claim": "P-6 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: camera specification (deferred: cab design, street set, and informant adaptation missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "no_change_agreed",
+      "reason": "Before equals after; deferred for missing art; agreed.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q1-P-6b-B",
+      "claim": "P-6b (parent: OPENING_PACKET_20261028.md) | A/B: one variable: camera specification (deferred: cab design, street set, and cantina exterior/sign missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "no_change_agreed",
+      "reason": "Before equals after; deferred for missing art; agreed.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q1-P-7-B",
+      "claim": "P-7 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: camera specification (deferred: cantina room set and partner frame missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "no_change_agreed",
+      "reason": "Before equals after; deferred for missing art; agreed.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q1-S01-2-B",
+      "claim": "S01-2 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: camera specification (deferred: cantina room set and partner frame missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "no_change_agreed",
+      "reason": "Before equals after; deferred for missing art; agreed.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q1-S01-1-B",
+      "claim": "S01-1 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: camera specification (deferred: corrected mouth ECU still missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "no_change_agreed",
+      "reason": "Before equals after; deferred for missing art; agreed.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q1-S01-3-B",
+      "claim": "S01-3 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: camera specification (deferred: consolidated starting frame A missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "no_change_agreed",
+      "reason": "Before equals after; deferred for missing art; agreed.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q2-P-1-B",
+      "claim": "P-1 (parent: SCENE_CARD_PROLOGUE.md) | no change",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "no_change_agreed",
+      "reason": "Before equals after; agreed.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q2-P-2-B",
+      "claim": "P-2 (parent: SCENE_CARD_PROLOGUE.md) | no change",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "no_change_agreed",
+      "reason": "Before equals after; agreed.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q2-P-3-B",
+      "claim": "P-3 (parent: SCENE_CARD_PROLOGUE.md) | no change",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "no_change_agreed",
+      "reason": "Before equals after; agreed.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q2-P-4-B",
+      "claim": "P-4 (parent: SCENE_CARD_PROLOGUE.md) | no change",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "no_change_agreed",
+      "reason": "Before equals after; agreed.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q2-P-5-B",
+      "claim": "P-5 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: lighting specification and wardrobe bounce (deferred: two-character cabin frame and cab interior missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "proposed_in_part",
+      "reason": "Side labels check out. Forwarded for adoption: the wardrobe bounce sentence; sides stated twice for light sources. Not copied: hue words (the set rounds decide hue). Adoption is Ziggy's through the site queue (review file section 2).",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q2-P-6-B",
+      "claim": "P-6 (parent: SCENE_CARD_PROLOGUE.md) | no change",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "no_change_agreed",
+      "reason": "Before equals after; agreed.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q2-P-6b-B",
+      "claim": "P-6b (parent: OPENING_PACKET_20261028.md) | A/B: one variable: lighting specification and wardrobe bounce (deferred: cab design, street set, cantina exterior/sign missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "proposed_in_part",
+      "reason": "Forwarded for adoption: the bounce sentence; sides stated twice. Not copied: \"character-back\" (not a term of the record); hue words. Adoption is Ziggy's through the site queue (review file section 2).",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q2-P-7-B",
+      "claim": "P-7 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: lighting specification and wardrobe bounce (deferred: cantina room set and partner frame missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "proposed_in_part",
+      "reason": "Forwarded for adoption: the bounce sentence; sides stated twice. Not copied: the key label \"character-left\" (the counter at screen-left is at his character-right while he walks toward camera and in front of him once seated); \"character-back\"; hue words. Adoption is Ziggy's through the site queue (review file section 2).",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q2-S01-2-B",
+      "claim": "S01-2 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: lighting specification and wardrobe bounce (deferred: cantina room set and partner frame missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "proposed_in_part",
+      "reason": "Forwarded for adoption: the bounce sentence; sides stated twice. Not copied: the key label \"character-right, viewer-right for Dolo\" (the counter is in front of him when he faces it); hue words. Adoption is Ziggy's through the site queue (review file section 2).",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q2-S01-1-B",
+      "claim": "S01-1 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: lighting specification and wardrobe bounce (deferred: corrected mouth ECU still missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "proposed_in_part",
+      "reason": "Side labels check out. Forwarded for adoption: the bounce sentence; sides stated twice. Adoption is Ziggy's through the site queue (review file section 2).",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q2-S01-3-B",
+      "claim": "S01-3 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: lighting specification and wardrobe bounce (deferred: consolidated starting frame A missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "proposed_in_part",
+      "reason": "Side labels check out. Forwarded for adoption: the bounce sentence; sides stated twice. Adoption is Ziggy's through the site queue (review file section 2).",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q3-P-7-B",
+      "claim": "P-7 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: pacing hold ladder and time beats (deferred: cantina room set and partner frame missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "restates_source",
+      "reason": "The ladder values, anchors and the EVT-HON-01 conditionality are the Source's own; the per-beat anchor kinds and lead-or-land relationships are already 11.5 of each block. Nothing to adopt.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q3_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q3-S01-2-B",
+      "claim": "S01-2 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: pacing hold ladder and time beats (deferred: cantina room set and partner frame missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "restates_source",
+      "reason": "The ladder values, anchors and the EVT-HON-01 conditionality are the Source's own; the per-beat anchor kinds and lead-or-land relationships are already 11.5 of each block. Nothing to adopt.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q3_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q3-S01-1-B",
+      "claim": "S01-1 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: pacing hold ladder and time beats (deferred: corrected mouth ECU still missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "restates_source",
+      "reason": "The ladder values, anchors and the EVT-HON-01 conditionality are the Source's own; the per-beat anchor kinds and lead-or-land relationships are already 11.5 of each block. Nothing to adopt.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q3_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q3-S01-3-B",
+      "claim": "S01-3 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: pacing hold ladder and time beats (deferred: consolidated starting frame A missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "restates_source",
+      "reason": "The ladder values, anchors and the EVT-HON-01 conditionality are the Source's own; the per-beat anchor kinds and lead-or-land relationships are already 11.5 of each block. Nothing to adopt.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q3_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q4-P-6b-B",
+      "claim": "P-6b | section 4 | When Dolo steps down from the driver side of the cab facing camera-left (toward cantina door at screen-left), his trailing arm facing the cab behind him at screen-right is his character-right arm; the card incorrectly assigns his character-left arm to the cab door frame and his character-right arm (with locked wrist jewelry F) to the forward free position.",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "refuted",
+      "reason": "For a man facing camera-left, the character-left side is the viewer-right side, the cab's side; the hand on the door frame behind him at screen-right is the character-left hand, as the card writes it. Which hand he leaves on the frame is the writer's choice.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q4_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q4-S01-2-B",
+      "claim": "S01-2 | section 4 | In S01-2, Dolo is seated at the counter along the right-hand wall (screen-right) facing the counter/wall; with the entrance behind camera (foreground) and the DJ booth at the back wall (background), facing the right wall places his character-left side toward camera/entrance and his character-right side toward the back wall, swapping his body sides.",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "refuted",
+      "reason": "Facing the right-hand wall puts a seated man's left side toward the back wall and his right side toward the entrance and the camera; the card is correct and the claim swaps the sides.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q4_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q4-P-5-B",
+      "claim": "P-5 | section 4 | In P-5 frontal windscreen view, the informant sits at screen-right facing camera with Dolo at screen-left; her arm at frame-right (screen-right) is her character-left arm on the outer cabin edge, whereas her arm nearest to Dolo (frame-center) is her character-right arm, creating a spatial contradiction by labeling the frame-right outer arm as the near arm.",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "wording_fix_proposed",
+      "reason": "\"Near arm\" names nothing in a frontal two-shot and contradicts \"frame-right\" if read as near Dolo. The adaptation brief fixes the arm as her character-left (viewer-right, the door side), so \"frame-right\" stands and \"near arm\" is replaced in P-5 take 2.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q4_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q4-UNTESTED-1-B",
+      "claim": "UNTESTED | For P-3, the physical boarding proof remains unexecuted until an accepted informant production adaptation, cab design, and matching start/end frames are established in the record.",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "acknowledged_untested",
+      "reason": "Section 4's order of work restated; acknowledged.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q4_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q4-UNTESTED-2-B",
+      "claim": "UNTESTED | For P-5, the two-character cabin frame must be tested to confirm Dolo's facial identity locks, wrist jewelry F, and the informant's look under passing neon and dashboard key before generating the first clip.",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "acknowledged_untested",
+      "reason": "Section 4's order of work restated; acknowledged.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q4_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q4-UNTESTED-3-B",
+      "claim": "UNTESTED | For S01-3, the ten-turn prototype continuation chain remains untested because no video jobs have been run and the consolidated starting frame A has not been accepted by the author.",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "acknowledged_untested",
+      "reason": "Section 4's order of work restated; acknowledged.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q4_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "SECONDPASS-UNTESTED-1-B",
+      "claim": "UNTESTED | For P-1, a set-only silent still of the landing and city must be prepared and reviewed as a Preliminary foundation before any character or vehicle assets are placed (HON-OPENING-SOURCE v2 | HON-IMPROVE-OPENING-CAM-0…, Section 3: The shots, ### P-1 Waiting above the city).",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "acknowledged_untested",
+      "reason": "P-1's set-only still and S01-2's timing flag are the record's own; the P-6b diagram is moot after the refutation. Acknowledged.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_SECONDPASS_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "SECONDPASS-UNTESTED-2-B",
+      "claim": "UNTESTED | For S01-2, the intro beat pacing placement remains an unverified provider claim flagged \"Timing needs review\" until CFA Nova completes the alignment lane listening pass (HON-OPENING-SOURCE v2 | HON-IMPROVE-OPENING-CAM-0…, WORDS USED IN THE CARDS & Section 2: Order of shots, cues and cuts (the spine of the packet)).",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "acknowledged_untested",
+      "reason": "P-1's set-only still and S01-2's timing flag are the record's own; the P-6b diagram is moot after the refutation. Acknowledged.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_SECONDPASS_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "SECONDPASS-UNTESTED-3-B",
+      "claim": "UNTESTED | For P-6b, a 3D spatial blocking diagram should be constructed to verify Dolo's character-right arm trailing reach and wrist jewelry visibility when stepping down facing camera-left (from the answers only).",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "acknowledged_untested",
+      "reason": "P-1's set-only still and S01-2's timing flag are the record's own; the P-6b diagram is moot after the refutation. Acknowledged.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_SECONDPASS_v2only.txt",
+      "note": "Run B: v2 only, verified three ways (drawn state, chip docs (1), probe)."
+    },
+    {
+      "id": "Q1-P-1-A",
+      "claim": "P-1 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: camera specification (deferred: landing/city set and informant adaptation missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q1-P-2-A",
+      "claim": "P-2 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: camera specification (deferred: cab design missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q1-P-3-A",
+      "claim": "P-3 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: camera specification (deferred: informant adaptation, cab design, and boarding proof start/end frames missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q1-P-4-A",
+      "claim": "P-4 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: camera specification (deferred: cab design and P-2 parent still missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q1-P-5-A",
+      "claim": "P-5 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: camera specification (deferred: two-character cabin frame, cab interior, and informant adaptation missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q1-P-6-A",
+      "claim": "P-6 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: camera specification (deferred: cab design, street set, and informant adaptation missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q1-P-6b-A",
+      "claim": "P-6b (parent: OPENING_PACKET_20261028.md) | A/B: one variable: camera specification (deferred: cab design, street set, and cantina exterior/sign missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q1-P-7-A",
+      "claim": "P-7 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: camera specification (deferred: cantina room set and partner frame missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q1-S01-2-A",
+      "claim": "S01-2 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: camera specification (deferred: cantina room set and partner frame missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q1-S01-1-A",
+      "claim": "S01-1 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: camera specification (deferred: corrected mouth ECU still missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q1-S01-3-A",
+      "claim": "S01-3 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: camera specification (deferred: consolidated starting frame A missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q1.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q2-P-1-A",
+      "claim": "P-1 (parent: SCENE_CARD_PROLOGUE.md) | no change",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q2-P-2-A",
+      "claim": "P-2 (parent: SCENE_CARD_PROLOGUE.md) | no change",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q2-P-3-A",
+      "claim": "P-3 (parent: SCENE_CARD_PROLOGUE.md) | no change",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q2-P-4-A",
+      "claim": "P-4 (parent: SCENE_CARD_PROLOGUE.md) | no change",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q2-P-5-A",
+      "claim": "P-5 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: lighting specification and wardrobe bounce (deferred: two-character cabin frame and cab interior missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q2-P-6-A",
+      "claim": "P-6 (parent: SCENE_CARD_PROLOGUE.md) | no change",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q2-P-6b-A",
+      "claim": "P-6b (parent: OPENING_PACKET_20261028.md) | A/B: one variable: lighting specification and wardrobe bounce (deferred: cab design, street set, cantina exterior/sign missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q2-P-7-A",
+      "claim": "P-7 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: lighting specification and wardrobe bounce (deferred: cantina room set and partner frame missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q2-S01-2-A",
+      "claim": "S01-2 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: lighting specification and wardrobe bounce (deferred: cantina room set and partner frame missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q2-S01-1-A",
+      "claim": "S01-1 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: lighting specification and wardrobe bounce (deferred: corrected mouth ECU still missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q2-S01-3-A",
+      "claim": "S01-3 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: lighting specification and wardrobe bounce (deferred: consolidated starting frame A missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q2.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q3-P-7-A",
+      "claim": "P-7 (parent: SCENE_CARD_PROLOGUE.md) | A/B: one variable: pacing hold ladder and time beats (deferred: cantina room set and partner frame missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q3.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q3-S01-2-A",
+      "claim": "S01-2 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: pacing hold ladder and time beats (deferred: cantina room set and partner frame missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q3.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q3-S01-1-A",
+      "claim": "S01-1 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: pacing hold ladder and time beats (deferred: corrected mouth ECU still missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q3.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q3-S01-3-A",
+      "claim": "S01-3 (parent: SCENE_CARD_CHORUSES_OUTRO.md) | A/B: one variable: pacing hold ladder and time beats (deferred: consolidated starting frame A missing)",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q3.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q4-P-6b-A",
+      "claim": "P-6b | section 4 | When Dolo steps down from the driver side of the cab facing camera-left (toward cantina door at screen-left), his trailing arm facing the cab behind him at screen-right is his character-right arm; the card incorrectly assigns his character-left arm to the cab door frame and his character-right arm (with locked wrist jewelry F) to the forward free position.",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q4.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q4-S01-2-A",
+      "claim": "S01-2 | section 4 | In S01-2, Dolo is seated at the counter along the right-hand wall (screen-right) facing the counter/wall; with the entrance behind camera (foreground) and the DJ booth at the back wall (background), facing the right wall places his character-left side toward camera/entrance and his character-right side toward the back wall, swapping his body sides.",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q4.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q4-P-5-A",
+      "claim": "P-5 | section 4 | In P-5 frontal windscreen view, the informant sits at screen-right facing camera with Dolo at screen-left; her arm at frame-right (screen-right) is her character-left arm on the outer cabin edge, whereas her arm nearest to Dolo (frame-center) is her character-right arm, creating a spatial contradiction by labeling the frame-right outer arm as the near arm.",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q4.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q4-UNTESTED-1-A",
+      "claim": "UNTESTED | For P-3, the physical boarding proof remains unexecuted until an accepted informant production adaptation, cab design, and matching start/end frames are established in the record.",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q4.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q4-UNTESTED-2-A",
+      "claim": "UNTESTED | For P-5, the two-character cabin frame must be tested to confirm Dolo's facial identity locks, wrist jewelry F, and the informant's look under passing neon and dashboard key before generating the first clip.",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q4.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "Q4-UNTESTED-3-A",
+      "claim": "UNTESTED | For S01-3, the ten-turn prototype continuation chain remains untested because no video jobs have been run and the consolidated starting frame A has not been accepted by the author.",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_Q4.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "SECONDPASS-UNTESTED-1-A",
+      "claim": "UNTESTED | For P-1, a set-only silent still of the landing and city must be prepared and reviewed as a Preliminary foundation before any character or vehicle assets are placed (HON-OPENING-SOURCE v2 | HON-IMPROVE-OPENING-CAM-0…, Section 3: The shots, ### P-1 Waiting above the city).",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_SECONDPASS.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "SECONDPASS-UNTESTED-2-A",
+      "claim": "UNTESTED | For S01-2, the intro beat pacing placement remains an unverified provider claim flagged \"Timing needs review\" until CFA Nova completes the alignment lane listening pass (HON-OPENING-SOURCE v2 | HON-IMPROVE-OPENING-CAM-0…, Section: WORDS USED IN THE CARDS & Section 2: Order of shots, cues and cuts (the spine of the packet)).",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_SECONDPASS.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    },
+    {
+      "id": "SECONDPASS-UNTESTED-3-A",
+      "claim": "UNTESTED | For P-6b, a 3D spatial blocking diagram should be constructed to verify Dolo's character-right arm trailing reach and wrist jewelry visibility when stepping down facing camera-left (from the answers only).",
+      "type": "provider_claim",
+      "evidence": [
+        "Review: docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/IMPROVEMENT_ROUND_OPENING_v2_REVIEW_20261031.md, section 2 (claude, 2026-10-31)."
+      ],
+      "conflicts": [],
+      "outcome": "superseded_by_run_B",
+      "reason": "Run A's source selection is uncertain (chip 'docs (4)'); run B is the return of record. Kept as history.",
+      "allowedScope": null,
+      "rawFile": "GEMINI_RESPONSE_SECONDPASS.txt",
+      "note": "Run A: source selection uncertain (chip docs (4), chats group drawn checked); superseded by run B for provenance."
+    }
+  ],
+  "proposedActions": [
+    {
+      "action": "adopt_or_decline",
+      "owner": "Ziggy",
+      "claims": [
+        "Q2-P-5-B",
+        "Q2-P-6b-B",
+        "Q2-P-7-B",
+        "Q2-S01-2-B",
+        "Q2-S01-1-B",
+        "Q2-S01-3-B"
+      ],
+      "item": "the wardrobe bounce sentence in section 2 of the six take-2 blocks"
+    },
+    {
+      "action": "adopt_or_decline",
+      "owner": "Ziggy",
+      "claims": [
+        "Q2-P-5-B",
+        "Q2-P-6b-B",
+        "Q2-P-7-B",
+        "Q2-S01-2-B",
+        "Q2-S01-1-B",
+        "Q2-S01-3-B"
+      ],
+      "item": "every light source labelled on both sides (character and viewer), with the four wrong labels corrected by the writer"
+    },
+    {
+      "action": "writer_correction",
+      "owner": "claude",
+      "claims": [
+        "Q4-P-5-B"
+      ],
+      "item": "P-5 take 2 replaces \"the near arm\" with \"her character-left arm (viewer-right, the door side)\""
+    },
+    {
+      "action": "template_field",
+      "owner": "nova (notebook lane)",
+      "claims": [],
+      "item": "ROUND_REQUEST.template.txt gains \"Drive search: OFF\" and the source-count verification step (chip count plus a listing probe)"
+    },
+    {
+      "action": "registry",
+      "owner": "mailbox registry owner",
+      "claims": [],
+      "item": "the sender id nyquist_claude is not in mailbox/registry.json; add it or assign one"
+    }
+  ],
+  "unresolved": [
+    "Run A (09:25-09:50) source selection uncertain: the composer chip read docs (4) and the Gemini-chats group box was drawn checked while its DOM .checked read false, so run A probably used the v2 Source plus the three synced Gemini chat sources (import off). The earlier 'Notebook 0' evidence is withdrawn (run B, v2 only, also mentions it). Run B (09:58-10:13) was verified three ways as v2 only (drawn state, chip docs (1), a probe listing only the v2 title) and satisfies the round's contract; run B shares the chat thread with run A, so it is not a fresh blind run. Run B content is near-identical to run A.",
+    "Ziggy's adoption decisions on the two Q2 items (the review file, section 2); the five opening take-2 blocks are held for them."
+  ],
+  "promotion": {
+    "status": "not_requested",
+    "destination": null,
+    "scope": null,
+    "decisionEvidence": null
+  },
+  "sent": false,
+  "executed": false,
+  "productionAccepted": false
+}

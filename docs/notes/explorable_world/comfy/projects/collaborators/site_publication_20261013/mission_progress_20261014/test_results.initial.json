@@ -1,0 +1,66 @@
+{
+  "passed": false,
+  "results": [
+    {
+      "name": "test_review_requests.cjs",
+      "exitCode": 0,
+      "stdout": "Review requests and assistant proposals: 14 checks passed.\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_mission_priority.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"verifiedGroupSize\":50,\"shortlist\":13,\"initialPreviews\":7,\"priorityBeforeDefault\":true,\"viewerNavigation\":true,\"reviewWrites\":0,\"browserVisualQA\":false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_mission_hash_navigation.cjs",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "node:assert:152\n  throw new AssertionError(obj);\n  ^\n\nAssertionError [ERR_ASSERTION]: The actual route includes its complete album membership\n\n39 !== 40\n\n    at Object.<anonymous> (D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\visual_library\\test_mission_hash_navigation.cjs:73:42)\n    at Module._compile (node:internal/modules/cjs/loader:1761:14)\n    at Object..js (node:internal/modules/cjs/loader:1893:10)\n    at Module.load (node:internal/modules/cjs/loader:1481:32)\n    at Module._load (node:internal/modules/cjs/loader:1300:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: 39,\n  expected: 40,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.11.1\n"
+    },
+    {
+      "name": "test_mission_gun_variants.cjs",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "node:assert:152\n  throw new AssertionError(obj);\n  ^\n\nAssertionError [ERR_ASSERTION]: One real bound image button: HD-RETURN-2f30bc9f7c38\n\n2 !== 1\n\n    at Object.<anonymous> (D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\visual_library\\test_mission_gun_variants.cjs:92:44)\n    at Module._compile (node:internal/modules/cjs/loader:1761:14)\n    at Object..js (node:internal/modules/cjs/loader:1893:10)\n    at Module.load (node:internal/modules/cjs/loader:1481:32)\n    at Module._load (node:internal/modules/cjs/loader:1300:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: 2,\n  expected: 1,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.11.1\n"
+    },
+    {
+      "name": "test_source_comparison_publication.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":[\"exact sources and labels\",\"task route\",\"full-source pair\",\"independent source links\",\"thumbnail/source separation\",\"review/favorite/basket/scope preservation\"],\"catalogMode\":\"generated catalog\",\"browserVisualQA\":false,\"route\":\"#lisan/review_queue\",\"images\":[{\"id\":\"LAG-C13-ORIGINAL-7eafd9ac048d\",\"label\":\"ORIGINAL\",\"src\":\"file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/references/From%20Grok/GROK-LAG-1K-C13/C13-sandworm-rising/C13-04_Z_1.jpg\",\"sha256\":\"7eafd9ac048dc6d6125dc38281c1b664f7ae0cac1159909c34d90a5e3eef93a3\",\"bytes\":268027},{\"id\":\"LAG-C13-PATCH-C-23817577d3d3\",\"label\":\"REPAIRED patch-c\",\"src\":\"file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/references/From%20Grok/GROK-LAG-1K-C13/C13-sandworm-rising/repairs/C13-04_Z_1_R1-try5-patch-c.jpg\",\"sha256\":\"23817577d3d32f0df03d57ac1e49c4c85246e86c405b13c492194f7aa2f52bad\",\"bytes\":447799}],\"storageWrites\":0}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_cast_character_hub.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":6,\"sourceFiles\":323,\"newUniqueAssets\":321,\"hubReferences\":277,\"selectedDesignReferences\":7,\"setupCandidates\":51,\"workingReferences\":62,\"comfyUIDestination\":true,\"reviewWrites\":0,\"browserVisualQA\":false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_collections_navigation.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":11,\"castCovers\":6,\"detailCovers\":22,\"detailAssets\":9,\"mouthMembers\":76,\"browserVisualQA\":false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_writer_publication.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":6,\"writerDocuments\":50,\"sharedMethodDocuments\":1,\"excludedSources\":8,\"exactAssociations\":41,\"storageWrites\":0,\"browserVisualQA\":false,\"evidenceLimit\":\"Actual renderer and bound click handlers exercised with DOM/storage doubles; no browser visual rendering, screenshots or native details/anchor behavior tested.\"}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_flow_prototypes.cjs",
+      "exitCode": 0,
+      "stdout": "{\n  \"checks\": 6,\n  \"videoAssets\": 3,\n  \"intakeDocuments\": 3,\n  \"sharedAlbums\": 2,\n  \"unplacedShots\": 3,\n  \"videoSourceAndIntakeLinks\": true,\n  \"sourceResultLinks\": true,\n  \"signalTakeOneAndTwoLinks\": true,\n  \"videoAndStoryboardMembership\": true,\n  \"unplacedShotProgress\": true,\n  \"preliminaryWithoutReviewSeeds\": true,\n  \"existingAssetsAndShotsPreserved\": true,\n  \"storageWrites\": 0,\n  \"reviewFileWrites\": 0,\n  \"browserQA\": false,\n  \"catalogMode\": \"published\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_mission_progress_publication.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"missionCardsClosed\":true,\"sw2ReceivedReviewLink\":true,\"sourceComparisonClosed\":true,\"selectedBossPreserved\":true,\"bossHistoryPreserved\":true,\"jamesHashBoundSharing\":true,\"jamesDraftUnaccepted\":true,\"honSourceAndReviewUnchanged\":true,\"reviewWrites\":0,\"browserVisualQA\":false}\n",
+      "stderr": ""
+    }
+  ],
+  "browserVisualQA": false
+}

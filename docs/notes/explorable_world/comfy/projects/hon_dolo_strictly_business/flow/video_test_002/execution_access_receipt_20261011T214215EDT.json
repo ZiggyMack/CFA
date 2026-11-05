@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "FLOW-HD-VIDEO-002",
+  "recordedAtUTC": "2026-10-12T01:42:15Z",
+  "localDate": "2026-10-11",
+  "localTimezone": "America/New_York",
+  "operator": "CFA Nova delegated Flow operator /root/release_flow_production_status",
+  "state": "blocked_before_upload_no_browser_surface_exposed_to_delegated_operator",
+  "authorization": {
+    "scope": "Root relayed explicit Ziggy release approval for the unchanged six-second silent MP4 to Google Flow and ONE subtle warmer-lighting edit, only after supported edit mode and displayed cost within existing allowance are verified.",
+    "historicalReceipt": "delivery_status.json",
+    "historicalPendingApprovalSupersededForThisScope": true,
+    "otherProviderTestsAuthorizedByThisReceipt": false
+  },
+  "source": {
+    "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667.mp4",
+    "sha256": "f8f2aa30265392634b67dbddebdc6ac0f05007de1abb2730f27d27513e72d378",
+    "bytes": 1837099,
+    "hashRecheckedBeforeAttempt": true,
+    "originalModified": false
+  },
+  "destination": {
+    "provider": "Google Flow",
+    "projectId": "e8a547ef-f801-4021-a5ee-fad3080b439c",
+    "url": "https://flow.google.com/project/e8a547ef-f801-4021-a5ee-fad3080b439c",
+    "sourceOfTarget": "Existing delivery_status.json destination.project_id"
+  },
+  "accessAttempts": [
+    { "action": "cua.getTab exact project URL with browser 2", "result": "Browser is not available: 2" },
+    { "action": "cua.getState inventory", "result": { "apps": [], "browsers": [] } },
+    { "action": "One cua.createBrowserTab iab with exact approved project URL", "result": "Browser is not available: iab" }
+  ],
+  "livePreflight": {
+    "supportedEditInputVerified": false,
+    "actualModel": null,
+    "actualMode": null,
+    "actualPlan": null,
+    "displayedCost": null,
+    "existingAllowanceVerified": false
+  },
+  "execution": {
+    "uploadAttempted": false,
+    "uploaded": false,
+    "generationSubmitted": false,
+    "jobId": null,
+    "outputCount": 0,
+    "outputPath": null,
+    "accepted": false,
+    "settingsChanged": false,
+    "captchaAttempted": false,
+    "purchasesOrAccountChanges": false
+  },
+  "evidence": {
+    "kind": "Documented CUA tool results; no browser page was reached.",
+    "screenshotPath": null,
+    "screenshotLimit": "No enabled browser or app surface was exposed, so no page screenshot could be captured.",
+    "consulted": [
+      "CFA AGENTS.md supplied task guidance",
+      "docs/notes/explorable_world/comfy/README.md",
+      "docs/notes/explorable_world/comfy/workflows/README.md#choose-by-problem",
+      "D:/Documents/Pan_Handlers/Help/CFA_TUTORIAL_LEDGER.md",
+      "D:/Documents/Pan_Handlers/Help/FILE_MAP.md",
+      "D:/Documents/Pan_Handlers/Help/guides/video_handoff.py",
+      "Computer-use skill and returned CUA browser API documentation"
+    ]
+  },
+  "nextAction": "Root may reclaim the sole Flow operator role through an actually exposed browser route, preserving the approved exact source, one-output bound and mode/cost checks. Otherwise ask Ziggy to expose the intended browser. No further delegated browser attempts or alternate provider execution.",
+  "boundary": "This is an access-failure receipt, not a Flow compatibility failure or generation result. Historical delivery_status.json and all source/package files remain unchanged."
+}

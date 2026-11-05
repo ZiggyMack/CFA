@@ -1,0 +1,72 @@
+{
+  "passed": false,
+  "results": [
+    {
+      "name": "test_flow_prototypes.cjs",
+      "exitCode": 0,
+      "stdout": "{\n  \"checks\": 6,\n  \"videoAssets\": 3,\n  \"intakeDocuments\": 3,\n  \"sharedAlbums\": 2,\n  \"unplacedShots\": 3,\n  \"videoSourceAndIntakeLinks\": true,\n  \"sourceResultLinks\": true,\n  \"signalTakeOneAndTwoLinks\": true,\n  \"videoAndStoryboardMembership\": true,\n  \"unplacedShotProgress\": true,\n  \"preliminaryWithoutReviewSeeds\": true,\n  \"existingAssetsAndShotsPreserved\": true,\n  \"storageWrites\": 0,\n  \"reviewFileWrites\": 0,\n  \"browserQA\": false,\n  \"catalogMode\": \"published\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_source_comparison_publication.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":[\"exact sources and labels\",\"task route\",\"full-source pair\",\"independent source links\",\"thumbnail/source separation\",\"review/favorite/basket/scope preservation\"],\"catalogMode\":\"generated catalog\",\"browserVisualQA\":false,\"route\":\"#lisan/review_queue\",\"images\":[{\"id\":\"LAG-C13-ORIGINAL-7eafd9ac048d\",\"label\":\"ORIGINAL\",\"src\":\"file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/references/From%20Grok/GROK-LAG-1K-C13/C13-sandworm-rising/C13-04_Z_1.jpg\",\"sha256\":\"7eafd9ac048dc6d6125dc38281c1b664f7ae0cac1159909c34d90a5e3eef93a3\",\"bytes\":268027},{\"id\":\"LAG-C13-PATCH-C-23817577d3d3\",\"label\":\"REPAIRED patch-c\",\"src\":\"file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/references/From%20Grok/GROK-LAG-1K-C13/C13-sandworm-rising/repairs/C13-04_Z_1_R1-try5-patch-c.jpg\",\"sha256\":\"23817577d3d32f0df03d57ac1e49c4c85246e86c405b13c492194f7aa2f52bad\",\"bytes\":447799}],\"storageWrites\":0}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_writer_publication.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":6,\"writerDocuments\":49,\"sharedMethodDocuments\":1,\"excludedSources\":8,\"exactAssociations\":40,\"storageWrites\":0,\"browserVisualQA\":false,\"evidenceLimit\":\"Actual renderer and bound click handlers exercised with DOM/storage doubles; no browser visual rendering, screenshots or native details/anchor behavior tested.\"}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_review_direct_clarification.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"scenarios\":6,\"portraitRatingCases\":48,\"portraitFixtures\":[\"LAG-602a9fd4021dc356\",\"LAG-63126392af1ccf8b\"],\"fixture\":\"HD-FALCON-381883a6beb1ed5e\",\"staleStatusResolved\":true,\"newerIntentPreserved\":true,\"bootReviewWrites\":0,\"projectGradesAssigned\":false,\"browserVisualQA\":false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_reference_validation.cjs",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "node:internal/assert/utils:77\n    throw err;\n    ^\n\nAssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(toggle)\n\n    at D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\visual_library\\test_reference_validation.cjs:169:98\n    at check (D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\visual_library\\test_reference_validation.cjs:24:41)\n    at Object.<anonymous> (D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\visual_library\\test_reference_validation.cjs:166:1)\n    at Module._compile (node:internal/modules/cjs/loader:1761:14)\n    at Object..js (node:internal/modules/cjs/loader:1893:10)\n    at Module.load (node:internal/modules/cjs/loader:1481:32)\n    at Module._load (node:internal/modules/cjs/loader:1300:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: undefined,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.11.1\n"
+    },
+    {
+      "name": "test_working_bom.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"scenarios\":9,\"catalogAssets\":2447,\"browserOverlay\":\"2026-10-10T05:05:09.832Z\",\"browserVisualQA\":false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_collections_navigation.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":11,\"castCovers\":6,\"detailCovers\":22,\"detailAssets\":9,\"mouthMembers\":76,\"browserVisualQA\":false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_outfit_navigation.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"outfits\":22,\"armorViews\":7,\"checks\":15,\"browserVisualQA\":false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_tattoo_subject_collections.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":9,\"tattooCollections\":10,\"shipReferences\":17,\"shipGuideAssets\":1,\"reviewWrites\":0,\"browserVisualQA\":false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_compact_browse.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":9,\"storySections\":6,\"requestedStoryCovers\":4,\"videoCovers\":5,\"tattooGroups\":19,\"archiveAlbums\":4,\"browserVisualQA\":false}\n",
+      "stderr": ""
+    },
+    {
+      "name": "test_scene_readiness.cjs",
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"scenarios\":11,\"sceneIDs\":[\"S01B\",\"S02A\"],\"catalogAssets\":2447,\"browserVisualQA\":false,\"projectGradesAssigned\":false}\n",
+      "stderr": ""
+    }
+  ],
+  "browserVisualQA": false
+}

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "6b7f01b0-9527-4f07-bf69-af62703839d8",
+  "createdAtUTC": "2026-10-15T00:40:52.798Z",
+  "writtenBy": "nova_personal_assistant",
+  "authorship": "self_authored",
+  "recordType": "independent_same_result_observation",
+  "original": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/BELLGLASS_CONTEXT_001_original.mp4",
+    "bytes": 5798077,
+    "sha256": "0597c4efef067280dab2ef1abfa06e313d06893187ce9ae1d9d436f75c28392b"
+  },
+  "chatURL": "https://gemini.google.com/app/12b06948a38928a8",
+  "responseDOMID": "41bd8eb3d33aa17c",
+  "oneGenerationOnly": "CFA owns the one accepted submission. Helper performed no submission, regeneration, upload or provider call.",
+  "source": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/SOURCE.txt",
+    "bytes": 275,
+    "sha256": "35770c9aa67e57e0acca698c234beeeb348a4f0172d6eae1c8a0bfa88a881d33"
+  },
+  "immediatePrompt": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/run_472f240d-f7f0-46fc-a916-55b92c5cdbb8/PROMPT.txt",
+    "bytes": 210,
+    "sha256": "dde40d35205cdcdd6f031286f7fbcddccbed70fe919a1bfdb89a96267023c61b"
+  },
+  "setup": "One copied-text notebook world source; source-only dog/blue-collar/barking cues; immediate prompt requests a resident crossing a daylight courtyard, gentle forward camera and natural ambience. Actual source-readback verification is CFA operator evidence.",
+  "visualObservations": {
+    "reviewer": "nova_personal_assistant",
+    "actuallyViewed": "Three native-size decoded frames at0,5,9seconds, viewed through view_image; not normal-speed full-video playback.",
+    "dog": "Golden/tan dog visible screen-right/background at0and5seconds, nearer centre-left at9seconds.",
+    "collar": "Distinct vivid blue/cyan collar visible in all three sampled frames.",
+    "other": "Brown-clothed resident crosses the courtyard; dog stands in early samples and sits in9-second sample.",
+    "noAuditoryInference": "Open dog mouth is visible; this is not proof of an audible bark."
+  },
+  "frames": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/priority_20261015/bellglass_observation_706010fa-3db0-4764-a4cd-0dad9229c076/frame_00.png",
+      "bytes": 1639295,
+      "sha256": "f91ae5afdf4e786520edb00c188747c0d2733008bf8be7c78f567213f46cd01e",
+      "seconds": 0
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/priority_20261015/bellglass_observation_706010fa-3db0-4764-a4cd-0dad9229c076/frame_05.png",
+      "bytes": 1767184,
+      "sha256": "5b3579b7b9dd53b71c6d8020ef28e5586596b29d3297ac05a8b61d968702357f",
+      "seconds": 5
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/priority_20261015/bellglass_observation_706010fa-3db0-4764-a4cd-0dad9229c076/frame_09.png",
+      "bytes": 1640061,
+      "sha256": "4fe4ce23b91f1eb2bb7bd940c26522f985e5b583683c7133255962355505cc79",
+      "seconds": 9
+    }
+  ],
+  "containerMetadata": {
+    "durationSecondsReportedByFFmpeg": 10.01,
+    "video": "H264 High",
+    "width": 1280,
+    "height": 720,
+    "nominalFPS": 24,
+    "audio": "AAC LC",
+    "audioSampleRateHz": 48000,
+    "audioChannels": 2,
+    "reportedAudioBitrateKbps": 128,
+    "encoderTag": "Google",
+    "actualRendererVariant": "unexposed; encoder tag does not identify model"
+  },
+  "audioEvidence": {
+    "fullAudioDecodeExitCode": 0,
+    "attemptedAudition": "Full audio decoded to an in-memory mono16kHz16kbps MP3 derivative and forwarded through functions.audio.",
+    "runtimeResult": "audio content omitted because you do not support audio input",
+    "helperActuallyListened": false,
+    "barking": "UNVERIFIED",
+    "needed": "Human listening to this exact10-second original, or another supported auditory input route. No new generation needed.",
+    "limits": "Audio stream, successful decode, any non-silence or UI playback cannot establish semantic barking."
+  },
+  "inference": {
+    "supported": "Both distinctive visual cues omitted from the immediate prompt but present in the notebook source appear in the returned video. Positive notebook-context-consistent evidence for this one workflow/take.",
+    "notProven": [
+      "Direct renderer retrieval versus intermediate prompt assembly",
+      "Causality or reliability from a single uncontrolled take",
+      "Audible barking",
+      "All future notebook sources/shots will be followed"
+    ],
+    "productionGuidance": "Keep critical production requirements explicit in prompts; this R&D result does not gate action footage."
+  },
+  "acceptance": "No human stars, validation pass, creative approval or production selection added.",
+  "preservation": "Original SHA verified unchanged after sample extraction; no canonical sources/reviews/site files changed."
+}

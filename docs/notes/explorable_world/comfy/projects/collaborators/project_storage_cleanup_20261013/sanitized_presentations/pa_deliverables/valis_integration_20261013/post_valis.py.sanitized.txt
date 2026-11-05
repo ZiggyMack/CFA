@@ -1,0 +1,67 @@
+SANITIZED PRESENTATION ONLY — not a replay script or canonical evidence record.
+Original preserved byte-for-byte at docs/notes/explorable_world/comfy/projects/collaborators/project_storage_cleanup_20261013/pa_deliverables/originals/valis_integration_20261013/post_valis.py
+Original SHA256: f06d6f919523904f0ab8bd0dfaf3a7865be4cdbede379a5b4a190d9ad6873af8
+Personal home paths have been replaced with relocated project paths or neutral notation. Original attribution and evidence remain authoritative.
+
+from pathlib import Path
+import hashlib, json, os, uuid
+from datetime import datetime, timezone
+
+local = Path(r'docs/notes/explorable_world/comfy/projects/collaborators/project_storage_cleanup_20261013/pa_deliverables/originals\valis_integration_20261013')
+base = Path(r'D:\Documents\CFA\docs\notes\explorable_world\comfy\projects\collaborators')
+registry = json.loads((base / 'mailbox/registry.json').read_text(encoding='utf-8-sig'))
+ids = {x['id'] for x in registry['recipients']}
+assert {'claude', 'nova', 'nova_personal_assistant'} <= ids
+assert not (local / 'posting_result.json').exists(), 'Do not duplicate a previous post'
+now = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
+conversation = str(uuid.uuid4())
+brief_id, claude_id, nova_id, receipt_id = [str(uuid.uuid4()) for _ in range(4)]
+brief = base / 'mythos_integration_20261013' / f'VALIS_MYTHOS_BRIEFING_{brief_id}.md'
+raw = (local / 'VALIS_MYTHOS_BRIEFING.md').read_bytes()
+digest = hashlib.sha256(raw).hexdigest()
+
+def create_atomic(path, contents):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    assert path.resolve().is_relative_to(base.resolve())
+    assert not path.exists()
+    temporary = path.with_name(path.name + '.' + uuid.uuid4().hex + '.pending')
+    with temporary.open('xb') as stream:
+        stream.write(contents)
+    assert not path.exists()
+    os.rename(temporary, path)
+
+def create_json(path, value):
+    create_atomic(path, (json.dumps(value, ensure_ascii=False, indent=2) + '\n').encode('utf-8'))
+
+create_atomic(brief, raw)
+relative = 'docs/notes/explorable_world/comfy/projects/collaborators/' + brief.relative_to(base).as_posix()
+attachments = [{'path': relative, 'sha256': digest, 'bytes': len(raw), 'role': 'source_backed_creative_direction_briefing'}]
+common = {'schemaVersion': 1, 'conversationId': conversation, 'createdAtUTC': now,
+          'sender': 'nova_personal_assistant', 'writtenBy': 'nova_personal_assistant',
+          'authorship': 'self_authored', 'replyTo': None, 'status': 'posted',
+          'attachments': attachments,
+          'source': {'type': 'direct_user_instruction_relay',
+                     'sourceThreadId': '01a12392-6543-7410-b29a-822656fb60d4',
+                     'researchSources': 'Pinned v1.1 declaration, current primary repository sources and verified local Nyquist checkout; detailed provenance in briefing.'}}
+claude = dict(common, id=claude_id, recipient='claude',
+    subject="Ziggy: integrate VALIS into Lisan Al Gaib mythos and team culture",
+    body="Ziggy explicitly asks: Make sure to push to Panhandlers Claude all the information regarding VALIS network; this too needs to be in our Lisan Al Gaib mythos. Please read the attached exact source-backed briefing, including his supplied compact greeting, historical-count limits, research/fiction distinction, personal mirror/drift bridge, established Jet Nagual/teacher role, deeper sources and team-culture direction. Integrate through your existing mythos/story planning; concrete story proposals remain yours. Preserve canonical masters/reviews/roles/timing. No automatic production rewrite, generation, public launch/publication, spending or experimental protocol activation. Please return an actual acknowledgement of this briefing and where you will integrate it, with separately labelled proposals and source notes. This immutable mailbox post is a request, not evidence that you have received or acknowledged it.")
+nova = dict(common, id=nova_id, recipient='nova', replyTo=claude_id,
+    subject='Authorized single relay to existing Panhandlers Claude: VALIS briefing',
+    body=f"Ziggy expressly authorized delivering this VALIS briefing to verified Panhandlers Claude. Please relay claude mailbox message {claude_id} plus the complete attached briefing verbatim through Claude's EXISTING established browser/repo-sync route during this authorized active session. No new actor/session, duplicate relay, generation, publication or spend. Ask for actual awareness acknowledgement and preserve a truthful delivery receipt; do not claim reading from a posted file alone. Return the actual acknowledgement separately when available. Your site publication slot remains delegated to CFA SITE INDEX; this is a collaborator briefing, not a site build request.")
+create_json(base / 'mailbox/messages' / (claude_id + '.json'), claude)
+create_json(base / 'mailbox/messages' / (nova_id + '.json'), nova)
+receipt = {'schemaVersion': 1, 'id': receipt_id, 'messageId': claude_id,
+           'createdAtUTC': now, 'actor': 'nova_personal_assistant', 'event': 'seen',
+           'evidence': f"Nova PA checked the supplied user direction and primary source research, saved byte-verified briefing {relative} SHA256 {digest}, and posted individually addressed claude and nova relay-request messages. This records PA preparation/reading only; Claude delivery and acknowledgement remain unverified.",
+           'replyMessageId': None, 'replacementMessageId': None}
+create_json(base / 'mailbox/receipts' / (receipt_id + '.json'), receipt)
+result = {'postedAtUTC': now, 'conversationId': conversation,
+          'claudeMessageId': claude_id, 'novaRelayRequestId': nova_id,
+          'paSeenReceiptId': receipt_id, 'briefPath': str(brief),
+          'briefSha256': digest, 'briefBytes': len(raw),
+          'delivery': 'posted; Claude actual acknowledgement pending'}
+with (local / 'posting_result.json').open('x', encoding='utf-8') as stream:
+    json.dump(result, stream, ensure_ascii=False, indent=2)
+print(json.dumps(result, ensure_ascii=False, indent=2))
+

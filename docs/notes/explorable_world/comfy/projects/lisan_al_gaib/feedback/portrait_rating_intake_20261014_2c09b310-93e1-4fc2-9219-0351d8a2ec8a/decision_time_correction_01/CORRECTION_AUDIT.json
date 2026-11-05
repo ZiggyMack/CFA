@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "recordType": "append_only_portrait_rating_decision_time_correction",
+  "createdAtUTC": "2026-10-14T02:49:36.325840Z",
+  "authority": "Root owner requested only approximate human decision time fields for the two existing humanRatingConfirmation receipts.",
+  "canonicalPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+  "changedIDs": [
+    "LAG-602a9fd4021dc356",
+    "LAG-63126392af1ccf8b"
+  ],
+  "onlyAddedFields": {
+    "humanRatingConfirmation.decisionAtUTC": "2026-10-14T01:48:00Z",
+    "humanRatingConfirmation.timePrecision": "approximate"
+  },
+  "preservedRecordedAtUTC": "2026-10-14T02:47:19.376043Z",
+  "timeQualification": "Decision time is approximate and supplied by the attributed binding; recordedAtUTC remains the actual earlier import time. No exact source clock verification is claimed.",
+  "evidence": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/reviewer_prototypes_20261014/coordination/PORTRAIT_UPLOAD_BINDING_fce06585-cfb3-424a-9ef3-8e242c2ffc44.json",
+    "bytes": 3346,
+    "sha256": "a2f9166a637484a2759d4d4df5cdad48ad44864719f5124783f10e88b604ef10",
+    "sourceCaptureDescription": "Ziggy voice call2026-10-14 approximately01:48UTC; actual wording relayed by parent"
+  },
+  "before": {
+    "bytes": 189841,
+    "sha256": "f246804b6d382e2763a023e2ab9609e3f3ef89a7dd6e84be42c3a6de765ff495",
+    "itemCount": 178,
+    "snapshotPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/feedback/portrait_rating_intake_20261014_2c09b310-93e1-4fc2-9219-0351d8a2ec8a/decision_time_correction_01/CANONICAL_BEFORE.json"
+  },
+  "after": {
+    "bytes": 190023,
+    "sha256": "81fdb0ecabcd3e83ce38fee57cc0dd453e60eed5f371ff87a6eac73a0d9745b3",
+    "itemCount": 178
+  },
+  "originalIntakeAudit": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/feedback/portrait_rating_intake_20261014_2c09b310-93e1-4fc2-9219-0351d8a2ec8a/INTAKE_RECORD.json",
+    "bytes": 6598,
+    "sha256": "eeef9c69903d078a3d0da054ea9c2cd0aeebb280001b4e2acbbb15f3faf6f0d5",
+    "rewritten": false
+  },
+  "preservation": {
+    "original176RecordsExactlyEqual": true,
+    "allOtherFieldsOfTwoTargetRecordsExactlyEqual": true,
+    "topLevelMetadataAndFavoritesExactlyEqual": true,
+    "previousFileRecoveredByRemovingOnlyTwoInsertions": true,
+    "ratingsAndActualImportTimesUnchanged": true,
+    "statusAndDirectUserClarificationUnchanged": true,
+    "noSceneStageScopeOrCriteriaChanges": true,
+    "noSiteBrowserWriterOrMediaEdits": true
+  },
+  "status": "applied_and_verified"
+}

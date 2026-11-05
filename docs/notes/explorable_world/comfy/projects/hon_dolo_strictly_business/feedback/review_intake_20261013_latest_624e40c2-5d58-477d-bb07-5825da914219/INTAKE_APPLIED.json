@@ -1,0 +1,3042 @@
+{
+  "schemaVersion": 1,
+  "recordType": "bounded_explicit_user_export_canonical_merge",
+  "intakeID": "CFA-REVIEW-20261014-EXPORT19-624e40c2-5d58-477d-bb07-5825da914219",
+  "recordedAtUTC": "2026-10-14T03:38:41.087248Z",
+  "source": {
+    "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_intake_20261013_latest_624e40c2-5d58-477d-bb07-5825da914219/SOURCE_EXPORT.json",
+    "bytes": 573768,
+    "sha256": "a8bf34c2f21c5c44ae564b90bebeb8994e2ab31e7edb58db271e4e651fb64625",
+    "exported": "2026-10-14T03:23:19.908Z",
+    "immutableFullProducerJSONPreserved": true
+  },
+  "canonicalPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+  "before": {
+    "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_intake_20261013_latest_624e40c2-5d58-477d-bb07-5825da914219/CANONICAL_BEFORE.json",
+    "bytes": 190023,
+    "sha256": "81fdb0ecabcd3e83ce38fee57cc0dd453e60eed5f371ff87a6eac73a0d9745b3",
+    "itemCount": 178
+  },
+  "after": {
+    "snapshotPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_intake_20261013_latest_624e40c2-5d58-477d-bb07-5825da914219/CANONICAL_AFTER.json",
+    "bytes": 195409,
+    "sha256": "904e3e8033ebd36b2401f15299ad3334533da1b563d9549e6bdc1186b236820c",
+    "itemCount": 185
+  },
+  "freshPlanVerifiedOccurrences": 219,
+  "savedReadOnlyPlan": {
+    "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_intake_20261013_latest_624e40c2-5d58-477d-bb07-5825da914219/READ_ONLY_INTAKE_PLAN.json",
+    "bytes": 143649,
+    "sha256": "59b204a5214d1eb56f80e1c8417714b08b59102db2a0550ce91fda44bbd4545d"
+  },
+  "policy": "Apply only hashed origin=user records newer than existing canonical records. Explicit newer null/empty values clear only their present fields. Preserve omitted fields, equal/older records, confirmation receipts, history and all top-level metadata. New user records retain the complete export fields without inferred grades, stages or scopes.",
+  "fieldTimeQualification": "Export updatedAt is the whole-record browser timestamp, not an independently established action time for each field. recordedAtUTC is this actual import time.",
+  "newRecords": [
+    {
+      "id": "HD-B-d98197d470ce",
+      "record": {
+        "id": "HD-B-d98197d470ce",
+        "project": "hon",
+        "filename": "d98197d470ce__VIS-HD-11_GRIN.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/d98197d470ce__VIS-HD-11_GRIN.jpg",
+        "sha256": "d98197d470ceba82d430d257e99b687ad861bc4b7cf5a09b164088f77486bc79",
+        "role": "comfy",
+        "status": "keep",
+        "note": "",
+        "shotPlan": null,
+        "origin": "user",
+        "updatedAt": "2026-10-12T16:44:52.110Z"
+      },
+      "exportRecordUpdatedAt": "2026-10-12T16:44:52.110Z"
+    },
+    {
+      "id": "HD-RETURN-c35561756692",
+      "record": {
+        "id": "HD-RETURN-c35561756692",
+        "project": "hon",
+        "filename": "c35561756692__HIP-PARKA-01_v001.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/c35561756692__HIP-PARKA-01_v001.jpg",
+        "sha256": "c3556175669257e2e52cfd00f04891a63f6a55302748dc843506b3eb66bc2c46",
+        "role": "outfits",
+        "status": null,
+        "note": "like the scene, outfit, gun -  but this is not Prime DoLo",
+        "shotPlan": null,
+        "origin": "user",
+        "updatedAt": "2026-10-14T02:45:33.301Z",
+        "variant": "multiverse",
+        "variantSource": "user",
+        "workingReference": null,
+        "sceneQualityRating": 5
+      },
+      "exportRecordUpdatedAt": "2026-10-14T02:45:33.301Z"
+    },
+    {
+      "id": "HD-DROP-88f20c203f5b",
+      "record": {
+        "id": "HD-DROP-88f20c203f5b",
+        "project": "hon",
+        "filename": "SB-21-ship-turnaround.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-04-turnaround/SB-21-ship-turnaround.jpg",
+        "sha256": "88f20c203f5b3fc228f982ba9bc0ab11e08bbf912f881ff297436185665eed86",
+        "role": "storyboard",
+        "status": null,
+        "note": "",
+        "shotPlan": {
+          "status": "planned",
+          "destinations": [
+            "Gemini"
+          ],
+          "idea": "flying through space",
+          "prompt": ""
+        },
+        "origin": "user",
+        "updatedAt": "2026-10-14T02:46:19.524Z",
+        "creativeReview": {
+          "status": "queued",
+          "recipients": [
+            "gemini_chat"
+          ],
+          "purpose": "find_story_use",
+          "scope": "music_video_and_interstitials",
+          "note": ""
+        }
+      },
+      "exportRecordUpdatedAt": "2026-10-14T02:46:19.524Z"
+    },
+    {
+      "id": "HD-TATGUIDE-f6420e93035e",
+      "record": {
+        "id": "HD-TATGUIDE-f6420e93035e",
+        "project": "hon",
+        "filename": "CA09_SCOUNDREL_lettering_1e8c.png",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/tattoo_placement_guide_20261009/received/clean_art/CA09_SCOUNDREL_lettering_1e8c.png",
+        "sha256": "f6420e93035eedc8bb28bda9e758d3ee0c6f1158c80bf33835882abe188b01a2",
+        "role": "details",
+        "status": "remove",
+        "note": "",
+        "shotPlan": null,
+        "updatedAt": "2026-10-14T02:57:52.581Z",
+        "origin": "user"
+      },
+      "exportRecordUpdatedAt": "2026-10-14T02:57:52.581Z"
+    },
+    {
+      "id": "HD-DROP-0f3a9ae0f699",
+      "record": {
+        "id": "HD-DROP-0f3a9ae0f699",
+        "project": "hon",
+        "filename": "HD-LETTERMAN-01A-chest-up.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/hon-dolo-ref-sheet-letterman/HD-LETTERMAN-01A-chest-up.jpg",
+        "sha256": "0f3a9ae0f6990834d65310e219d3d229c820c2bacf7245488a8434972775a701",
+        "role": "outfits",
+        "status": "remove",
+        "note": "",
+        "shotPlan": null,
+        "updatedAt": "2026-10-14T02:59:16.324Z",
+        "origin": "user"
+      },
+      "exportRecordUpdatedAt": "2026-10-14T02:59:16.324Z"
+    },
+    {
+      "id": "HD-FALCON-11868f1948c1cebf",
+      "record": {
+        "id": "HD-FALCON-11868f1948c1cebf",
+        "project": "hon",
+        "filename": "C05-lurch-grin-006.jpg",
+        "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C05-lurch-grin/C05-lurch-grin-006.jpg",
+        "sha256": "11868f1948c1cebf328fd8626d2e0060fd91b037861c0b05092aa486f556341c",
+        "role": "storyboard",
+        "status": "remove",
+        "note": "",
+        "shotPlan": null,
+        "updatedAt": "2026-10-14T03:15:07.013Z",
+        "origin": "user"
+      },
+      "exportRecordUpdatedAt": "2026-10-14T03:15:07.013Z"
+    },
+    {
+      "id": "HD-FALCON-580d85f3fa90e675",
+      "record": {
+        "id": "HD-FALCON-580d85f3fa90e675",
+        "project": "hon",
+        "filename": "C06-lurch-no-grin-014.jpg",
+        "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C06-lurch-no-grin/C06-lurch-no-grin-014.jpg",
+        "sha256": "580d85f3fa90e67564fde90f1a584eca1007e6d9b6d973a5103e1cd250306934",
+        "role": "storyboard",
+        "status": "needs_fixes",
+        "note": "eye know font too large....wrong chest tattoo",
+        "shotPlan": null,
+        "updatedAt": "2026-10-14T03:16:20.091Z",
+        "origin": "user",
+        "creativeReview": {
+          "status": "queued",
+          "recipients": [
+            "grok_chief"
+          ],
+          "purpose": "find_story_use",
+          "scope": "music_video_and_interstitials",
+          "note": ""
+        }
+      },
+      "exportRecordUpdatedAt": "2026-10-14T03:16:20.091Z"
+    }
+  ],
+  "changedRecords": [
+    {
+      "id": "HD-RETURN-831f6171619f",
+      "classification": "review_fields_changed",
+      "exportRecordUpdatedAt": "2026-10-14T03:11:32.976Z",
+      "canonicalPreviousUpdatedAt": "2026-10-09T18:25:15.424Z",
+      "fields": {
+        "status": {
+          "before": "keep",
+          "after": "remove"
+        },
+        "updatedAt": {
+          "before": "2026-10-09T18:25:15.424Z",
+          "after": "2026-10-14T03:11:32.976Z"
+        }
+      },
+      "omittedCanonicalFieldsPreserved": [
+        "source",
+        "sourceIntakeID",
+        "scopeNote"
+      ],
+      "beforeRecord": {
+        "id": "HD-RETURN-831f6171619f",
+        "project": "hon",
+        "filename": "831f6171619f__cards_zoom.png",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/831f6171619f__cards_zoom.png",
+        "sha256": "831f6171619fe93baf6c0ab4784f3f7fc04c319040631cb5dc3fcf381dccf3ce",
+        "role": "review",
+        "status": "keep",
+        "note": "looks good - moving to detailed design...need more hand refrences from Grok",
+        "shotPlan": {
+          "status": "planned",
+          "destinations": [
+            "Grok"
+          ],
+          "idea": "Need more Hand options...with different swag ring options...n=20",
+          "prompt": ""
+        },
+        "updatedAt": "2026-10-09T18:25:15.424Z",
+        "origin": "user",
+        "workingReference": {
+          "status": "requested",
+          "scope": "complete_look"
+        },
+        "storyboardStage": "detailed_design",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Queue requested 20 hand/ring variations as a separate future task; preserve hand tattoo/side and current jewelry constraints. Do not start batch during finishing work."
+      },
+      "afterRecord": {
+        "id": "HD-RETURN-831f6171619f",
+        "project": "hon",
+        "filename": "831f6171619f__cards_zoom.png",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/831f6171619f__cards_zoom.png",
+        "sha256": "831f6171619fe93baf6c0ab4784f3f7fc04c319040631cb5dc3fcf381dccf3ce",
+        "role": "review",
+        "status": "remove",
+        "note": "looks good - moving to detailed design...need more hand refrences from Grok",
+        "shotPlan": {
+          "status": "planned",
+          "destinations": [
+            "Grok"
+          ],
+          "idea": "Need more Hand options...with different swag ring options...n=20",
+          "prompt": ""
+        },
+        "updatedAt": "2026-10-14T03:11:32.976Z",
+        "origin": "user",
+        "workingReference": {
+          "status": "requested",
+          "scope": "complete_look"
+        },
+        "storyboardStage": "detailed_design",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Queue requested 20 hand/ring variations as a separate future task; preserve hand tattoo/side and current jewelry constraints. Do not start batch during finishing work."
+      }
+    },
+    {
+      "id": "HD-RETURN-1e8c86b1c729",
+      "classification": "review_fields_changed",
+      "exportRecordUpdatedAt": "2026-10-14T02:11:09.596Z",
+      "canonicalPreviousUpdatedAt": "2026-10-09T18:39:55.817Z",
+      "fields": {
+        "status": {
+          "before": "needs_fixes",
+          "after": "keep"
+        },
+        "updatedAt": {
+          "before": "2026-10-09T18:39:55.817Z",
+          "after": "2026-10-14T02:11:09.596Z"
+        }
+      },
+      "omittedCanonicalFieldsPreserved": [
+        "source",
+        "sourceIntakeID",
+        "scopeNote"
+      ],
+      "beforeRecord": {
+        "id": "HD-RETURN-1e8c86b1c729",
+        "project": "hon",
+        "filename": "1e8c86b1c729__1e8c86b1c7293db98fdf9112db2382b698a1795b171f6fc8f621885160bfb2c3.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/1e8c86b1c729__1e8c86b1c7293db98fdf9112db2382b698a1795b171f6fc8f621885160bfb2c3.jpg",
+        "sha256": "1e8c86b1c7293db98fdf9112db2382b698a1795b171f6fc8f621885160bfb2c3",
+        "role": "review",
+        "status": "needs_fixes",
+        "note": "need the dummy treatment to identify the location",
+        "shotPlan": null,
+        "updatedAt": "2026-10-09T18:39:55.817Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Add the same reference-dummy placement treatment to locate this tattoo. Production stage does not override needs_fixes."
+      },
+      "afterRecord": {
+        "id": "HD-RETURN-1e8c86b1c729",
+        "project": "hon",
+        "filename": "1e8c86b1c729__1e8c86b1c7293db98fdf9112db2382b698a1795b171f6fc8f621885160bfb2c3.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/1e8c86b1c729__1e8c86b1c7293db98fdf9112db2382b698a1795b171f6fc8f621885160bfb2c3.jpg",
+        "sha256": "1e8c86b1c7293db98fdf9112db2382b698a1795b171f6fc8f621885160bfb2c3",
+        "role": "review",
+        "status": "keep",
+        "note": "need the dummy treatment to identify the location",
+        "shotPlan": null,
+        "updatedAt": "2026-10-14T02:11:09.596Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Add the same reference-dummy placement treatment to locate this tattoo. Production stage does not override needs_fixes."
+      }
+    },
+    {
+      "id": "GEM-8B51108E",
+      "classification": "review_fields_changed",
+      "exportRecordUpdatedAt": "2026-10-14T03:14:13.323Z",
+      "canonicalPreviousUpdatedAt": "2026-10-10T03:20:52.402Z",
+      "fields": {
+        "updatedAt": {
+          "before": "2026-10-10T03:20:52.402Z",
+          "after": "2026-10-14T03:14:13.323Z"
+        },
+        "role": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": "videos"
+        },
+        "shotPlan": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        },
+        "variant": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": "multiverse"
+        },
+        "variantSource": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": "user"
+        },
+        "workingReference": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        }
+      },
+      "omittedCanonicalFieldsPreserved": [
+        "source",
+        "sourceIntakeID"
+      ],
+      "beforeRecord": {
+        "status": "needs_fixes",
+        "note": "This is suppposed to be Hooded traveler · 10",
+        "id": "GEM-8B51108E",
+        "project": "unassigned",
+        "filename": "gemini_generated_video_8b51108e.mp4",
+        "path": "docs/notes/explorable_world/comfy/projects/00_Unassigned_Gemini/gemini_generated_video_8b51108e.mp4",
+        "sha256": "c56a8ee9cbb97d2bd354b51c235a03b074cf269822c83f7c8cf520ec5b274f5a",
+        "updatedAt": "2026-10-10T03:20:52.402Z",
+        "origin": "user",
+        "source": "User dashboard export 2026-10-10T05:05:09.832Z, scoped working-reference reconciliation",
+        "sourceIntakeID": "CFA-REVIEW-20261010-WORKING-BOM"
+      },
+      "afterRecord": {
+        "status": "needs_fixes",
+        "note": "This is suppposed to be Hooded traveler · 10",
+        "id": "GEM-8B51108E",
+        "project": "unassigned",
+        "filename": "gemini_generated_video_8b51108e.mp4",
+        "path": "docs/notes/explorable_world/comfy/projects/00_Unassigned_Gemini/gemini_generated_video_8b51108e.mp4",
+        "sha256": "c56a8ee9cbb97d2bd354b51c235a03b074cf269822c83f7c8cf520ec5b274f5a",
+        "updatedAt": "2026-10-14T03:14:13.323Z",
+        "origin": "user",
+        "source": "User dashboard export 2026-10-10T05:05:09.832Z, scoped working-reference reconciliation",
+        "sourceIntakeID": "CFA-REVIEW-20261010-WORKING-BOM",
+        "role": "videos",
+        "shotPlan": null,
+        "variant": "multiverse",
+        "variantSource": "user",
+        "workingReference": null
+      }
+    },
+    {
+      "id": "HD-RETURN-efc1886a0d62",
+      "classification": "review_fields_changed",
+      "exportRecordUpdatedAt": "2026-10-14T03:22:57.162Z",
+      "canonicalPreviousUpdatedAt": "2026-10-10T12:56:35.886Z",
+      "fields": {
+        "status": {
+          "before": "keep",
+          "after": "needs_fixes"
+        },
+        "updatedAt": {
+          "before": "2026-10-10T12:56:35.886Z",
+          "after": "2026-10-14T03:22:57.162Z"
+        },
+        "sceneQualityRating": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": 5
+        },
+        "creativeReview": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": {
+            "status": "queued",
+            "recipients": [
+              "grok_chief"
+            ],
+            "purpose": "find_story_use",
+            "scope": "music_video_and_interstitials",
+            "note": ""
+          }
+        }
+      },
+      "omittedCanonicalFieldsPreserved": [
+        "source"
+      ],
+      "beforeRecord": {
+        "id": "HD-RETURN-efc1886a0d62",
+        "project": "hon",
+        "filename": "efc1886a0d62__HIP-VELVET-01_v001.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/efc1886a0d62__HIP-VELVET-01_v001.jpg",
+        "sha256": "efc1886a0d62645ce44b164090ad2312d039570f2a119e71b84c34d8e4370a4d",
+        "role": "outfits",
+        "status": "keep",
+        "note": "as far as adding the gun to the outfit - approved...but we still have no reference of the complete package for our DoLO",
+        "shotPlan": null,
+        "origin": "user",
+        "updatedAt": "2026-10-10T12:56:35.886Z",
+        "variant": "multiverse",
+        "variantSource": "user",
+        "workingReference": null,
+        "storyboardStage": "detailed_design",
+        "likenessRating": 2,
+        "source": "User dashboard export 2026-10-10T14:00:39.105Z, mouth-grill review intake"
+      },
+      "afterRecord": {
+        "id": "HD-RETURN-efc1886a0d62",
+        "project": "hon",
+        "filename": "efc1886a0d62__HIP-VELVET-01_v001.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/efc1886a0d62__HIP-VELVET-01_v001.jpg",
+        "sha256": "efc1886a0d62645ce44b164090ad2312d039570f2a119e71b84c34d8e4370a4d",
+        "role": "outfits",
+        "status": "needs_fixes",
+        "note": "as far as adding the gun to the outfit - approved...but we still have no reference of the complete package for our DoLO",
+        "shotPlan": null,
+        "origin": "user",
+        "updatedAt": "2026-10-14T03:22:57.162Z",
+        "variant": "multiverse",
+        "variantSource": "user",
+        "workingReference": null,
+        "storyboardStage": "detailed_design",
+        "likenessRating": 2,
+        "source": "User dashboard export 2026-10-10T14:00:39.105Z, mouth-grill review intake",
+        "sceneQualityRating": 5,
+        "creativeReview": {
+          "status": "queued",
+          "recipients": [
+            "grok_chief"
+          ],
+          "purpose": "find_story_use",
+          "scope": "music_video_and_interstitials",
+          "note": ""
+        }
+      }
+    },
+    {
+      "id": "HD-VIS-5b76b446306e",
+      "classification": "review_fields_changed",
+      "exportRecordUpdatedAt": "2026-10-12T16:46:10.399Z",
+      "canonicalPreviousUpdatedAt": "2026-10-10T13:40:54.088Z",
+      "fields": {
+        "status": {
+          "before": null,
+          "after": "keep"
+        },
+        "updatedAt": {
+          "before": "2026-10-10T13:40:54.088Z",
+          "after": "2026-10-12T16:46:10.399Z"
+        }
+      },
+      "omittedCanonicalFieldsPreserved": [
+        "source"
+      ],
+      "beforeRecord": {
+        "id": "HD-VIS-5b76b446306e",
+        "project": "hon",
+        "filename": "5b76b446306e__VIS-HD-01_REST.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/5b76b446306e__VIS-HD-01_REST.jpg",
+        "sha256": "5b76b446306e3f7e9f2dee5f206d28a264862b3ddf60818de773db622b59133a",
+        "role": "comfy",
+        "status": null,
+        "note": "",
+        "shotPlan": null,
+        "workingReferenceScope": "detail",
+        "updatedAt": "2026-10-10T13:40:54.088Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "likenessRating": 5,
+        "source": "User dashboard export 2026-10-10T14:00:39.105Z, mouth-grill review intake"
+      },
+      "afterRecord": {
+        "id": "HD-VIS-5b76b446306e",
+        "project": "hon",
+        "filename": "5b76b446306e__VIS-HD-01_REST.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/5b76b446306e__VIS-HD-01_REST.jpg",
+        "sha256": "5b76b446306e3f7e9f2dee5f206d28a264862b3ddf60818de773db622b59133a",
+        "role": "comfy",
+        "status": "keep",
+        "note": "",
+        "shotPlan": null,
+        "workingReferenceScope": "detail",
+        "updatedAt": "2026-10-12T16:46:10.399Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "likenessRating": 5,
+        "source": "User dashboard export 2026-10-10T14:00:39.105Z, mouth-grill review intake"
+      }
+    },
+    {
+      "id": "HD-VIS-bb94cfd4b528",
+      "classification": "review_fields_changed",
+      "exportRecordUpdatedAt": "2026-10-12T16:45:45.043Z",
+      "canonicalPreviousUpdatedAt": "2026-10-10T13:42:59.541Z",
+      "fields": {
+        "status": {
+          "before": null,
+          "after": "keep"
+        },
+        "note": {
+          "before": "",
+          "after": "if we are msising this mouth in our required set, make a new one...otherwise...just keep this a multiverse..."
+        },
+        "updatedAt": {
+          "before": "2026-10-10T13:42:59.541Z",
+          "after": "2026-10-12T16:45:45.043Z"
+        },
+        "variant": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": "multiverse"
+        },
+        "variantSource": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": "user"
+        },
+        "workingReference": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        }
+      },
+      "omittedCanonicalFieldsPreserved": [
+        "source"
+      ],
+      "beforeRecord": {
+        "id": "HD-VIS-bb94cfd4b528",
+        "project": "hon",
+        "filename": "bb94cfd4b528__VIS-HD-04_EE.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/bb94cfd4b528__VIS-HD-04_EE.jpg",
+        "sha256": "bb94cfd4b528c3d83a7e9143bf2f752e3b0a361fce27d258d22854e628eaad28",
+        "role": "comfy",
+        "status": null,
+        "note": "",
+        "shotPlan": null,
+        "workingReferenceScope": "detail",
+        "updatedAt": "2026-10-10T13:42:59.541Z",
+        "origin": "user",
+        "storyboardStage": "preliminary",
+        "likenessRating": 2,
+        "source": "User dashboard export 2026-10-10T14:00:39.105Z, mouth-grill review intake"
+      },
+      "afterRecord": {
+        "id": "HD-VIS-bb94cfd4b528",
+        "project": "hon",
+        "filename": "bb94cfd4b528__VIS-HD-04_EE.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/bb94cfd4b528__VIS-HD-04_EE.jpg",
+        "sha256": "bb94cfd4b528c3d83a7e9143bf2f752e3b0a361fce27d258d22854e628eaad28",
+        "role": "comfy",
+        "status": "keep",
+        "note": "if we are msising this mouth in our required set, make a new one...otherwise...just keep this a multiverse...",
+        "shotPlan": null,
+        "workingReferenceScope": "detail",
+        "updatedAt": "2026-10-12T16:45:45.043Z",
+        "origin": "user",
+        "storyboardStage": "preliminary",
+        "likenessRating": 2,
+        "source": "User dashboard export 2026-10-10T14:00:39.105Z, mouth-grill review intake",
+        "variant": "multiverse",
+        "variantSource": "user",
+        "workingReference": null
+      }
+    },
+    {
+      "id": "HD-FALCON-842566bfcfef466d",
+      "classification": "metadata_only_relocation_and_timestamp",
+      "exportRecordUpdatedAt": "2026-10-12T04:07:44.017Z",
+      "canonicalPreviousUpdatedAt": "2026-10-12T03:43:55.453Z",
+      "fields": {
+        "path": {
+          "before": "docs/notes/downloads/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-004.jpg",
+          "after": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-004.jpg"
+        },
+        "updatedAt": {
+          "before": "2026-10-12T03:43:55.453Z",
+          "after": "2026-10-12T04:07:44.017Z"
+        }
+      },
+      "omittedCanonicalFieldsPreserved": [
+        "importEvidence"
+      ],
+      "beforeRecord": {
+        "id": "HD-FALCON-842566bfcfef466d",
+        "project": "hon",
+        "filename": "C01-pilot-hover-004.jpg",
+        "path": "docs/notes/downloads/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-004.jpg",
+        "sha256": "842566bfcfef466df088434bf09e88f145579b28fd697204769cbf6c06399c72",
+        "role": "storyboard",
+        "status": "keep",
+        "note": "",
+        "shotPlan": null,
+        "workingReferenceScope": "scene",
+        "updatedAt": "2026-10-12T03:43:55.453Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "likenessRating": 5,
+        "sceneQualityRating": 5,
+        "importEvidence": {
+          "originalExportSHA256": "76e7914bc59514703d97db09e64c45c162b59615a936e859e6ee7aa061775249",
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+          "originalExport": "docs/notes/downloads/cfa-review (13).json",
+          "sha256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574"
+        }
+      },
+      "afterRecord": {
+        "id": "HD-FALCON-842566bfcfef466d",
+        "project": "hon",
+        "filename": "C01-pilot-hover-004.jpg",
+        "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-004.jpg",
+        "sha256": "842566bfcfef466df088434bf09e88f145579b28fd697204769cbf6c06399c72",
+        "role": "storyboard",
+        "status": "keep",
+        "note": "",
+        "shotPlan": null,
+        "workingReferenceScope": "scene",
+        "updatedAt": "2026-10-12T04:07:44.017Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "likenessRating": 5,
+        "sceneQualityRating": 5,
+        "importEvidence": {
+          "originalExportSHA256": "76e7914bc59514703d97db09e64c45c162b59615a936e859e6ee7aa061775249",
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_falcon_group1_20261011/user_feedback_20261011/FEEDBACK.v2.json",
+          "originalExport": "docs/notes/downloads/cfa-review (13).json",
+          "sha256": "090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574"
+        }
+      }
+    }
+  ],
+  "changedExistingIDs": [
+    "HD-RETURN-831f6171619f",
+    "HD-RETURN-1e8c86b1c729",
+    "GEM-8B51108E",
+    "HD-RETURN-efc1886a0d62",
+    "HD-VIS-5b76b446306e",
+    "HD-VIS-bb94cfd4b528",
+    "HD-FALCON-842566bfcfef466d"
+  ],
+  "newIDs": [
+    "HD-B-d98197d470ce",
+    "HD-RETURN-c35561756692",
+    "HD-DROP-88f20c203f5b",
+    "HD-TATGUIDE-f6420e93035e",
+    "HD-DROP-0f3a9ae0f699",
+    "HD-FALCON-11868f1948c1cebf",
+    "HD-FALCON-580d85f3fa90e675"
+  ],
+  "metadataOnlyExistingIDs": [
+    "HD-FALCON-842566bfcfef466d"
+  ],
+  "skippedRecords": [
+    {
+      "id": "HD-DROP-2691712601a9",
+      "reason": "Catalog seed; not a new explicit human decision."
+    },
+    {
+      "id": "HD-DROP-56a50dabe9e0",
+      "reason": "Catalog seed; not a new explicit human decision."
+    },
+    {
+      "id": "HD-DROP-54078722a35d",
+      "reason": "Catalog seed; not a new explicit human decision."
+    },
+    {
+      "id": "HD-DROP-790b795bb74a",
+      "reason": "Catalog seed; not a new explicit human decision."
+    },
+    {
+      "id": "HD-DROP-1966838931ad",
+      "reason": "Catalog seed; not a new explicit human decision."
+    },
+    {
+      "id": "HD-DROP-9cecaad5ed57",
+      "reason": "Catalog seed; not a new explicit human decision."
+    },
+    {
+      "id": "HD-DROP-bb0780a46f7d",
+      "reason": "Catalog seed; not a new explicit human decision."
+    },
+    {
+      "id": "GEM-97D0B65E",
+      "reason": "Catalog seed; not a new explicit human decision."
+    },
+    {
+      "id": "HD-DROP-19593c0144ed",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-08T06:21:36.957Z",
+      "canonicalUpdatedAt": "2026-10-08T06:21:36.957Z",
+      "incomingDifferencesNotApplied": {
+        "shotPlan": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        },
+        "variantSource": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": "catalog"
+        },
+        "workingReference": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        }
+      }
+    },
+    {
+      "id": "HD-DROP-d2d1369e30ec",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-08T06:30:39.348Z",
+      "canonicalUpdatedAt": "2026-10-08T06:30:39.348Z",
+      "incomingDifferencesNotApplied": {
+        "shotPlan": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        }
+      }
+    },
+    {
+      "id": "GEM-5A115C59",
+      "reason": "Catalog seed; not a new explicit human decision."
+    },
+    {
+      "id": "GEM-3CA92958",
+      "reason": "Catalog seed; not a new explicit human decision."
+    },
+    {
+      "id": "GEM-D6940AFC",
+      "reason": "Catalog seed; not a new explicit human decision."
+    },
+    {
+      "id": "HD-DROP-36679ee9953b",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T03:54:03.534Z",
+      "canonicalUpdatedAt": "2026-10-09T03:54:03.534Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-aea8323ad9b2",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T16:13:44.867Z",
+      "canonicalUpdatedAt": "2026-10-09T16:13:44.867Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-071660490855",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T16:20:01.559Z",
+      "canonicalUpdatedAt": "2026-10-09T16:20:01.559Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-4e493c00b66c",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T16:19:53.905Z",
+      "canonicalUpdatedAt": "2026-10-09T16:19:53.905Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-1c375c9d2ea9",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T16:19:46.826Z",
+      "canonicalUpdatedAt": "2026-10-09T16:19:46.826Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-abdcdd8f1ce1",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T16:17:16.969Z",
+      "canonicalUpdatedAt": "2026-10-09T16:17:16.969Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-64134f8b5231",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T16:20:26.499Z",
+      "canonicalUpdatedAt": "2026-10-09T16:20:26.499Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-14f8eb9979b5",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T16:22:34.703Z",
+      "canonicalUpdatedAt": "2026-10-09T16:22:34.703Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-205eb8df50f5",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T16:23:08.402Z",
+      "canonicalUpdatedAt": "2026-10-09T16:23:08.402Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-1225728294b2",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T16:25:21.802Z",
+      "canonicalUpdatedAt": "2026-10-09T16:25:21.802Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-104b30b1f4b7",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T16:27:27.081Z",
+      "canonicalUpdatedAt": "2026-10-09T16:27:27.081Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-8ef3180997c8",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T16:28:41.642Z",
+      "canonicalUpdatedAt": "2026-10-09T16:28:41.642Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-b0f479ab08bc",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T16:28:47.387Z",
+      "canonicalUpdatedAt": "2026-10-09T16:28:47.387Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-65375c760692",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T16:28:52.977Z",
+      "canonicalUpdatedAt": "2026-10-09T16:28:52.977Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-168698506c70",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T16:29:01.723Z",
+      "canonicalUpdatedAt": "2026-10-09T16:29:01.723Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-32ffc5ee7a2b",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T16:29:05.514Z",
+      "canonicalUpdatedAt": "2026-10-09T16:29:05.514Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "LAG-cb183973ed1fc70e",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:05:44.728Z",
+      "canonicalUpdatedAt": "2026-10-09T18:05:44.728Z",
+      "incomingDifferencesNotApplied": {
+        "role": {
+          "before": "review",
+          "after": "details"
+        }
+      }
+    },
+    {
+      "id": "HD-GRILL-PLAN-20261009",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:16:50.724Z",
+      "canonicalUpdatedAt": "2026-10-09T18:16:50.724Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-100e2ffb72a4",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:18:23.277Z",
+      "canonicalUpdatedAt": "2026-10-09T18:18:23.277Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-66a09f60ff80",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:19:57.066Z",
+      "canonicalUpdatedAt": "2026-10-09T18:19:57.066Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-19cf3cd478dd",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:22:11.513Z",
+      "canonicalUpdatedAt": "2026-10-09T18:22:11.513Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-6c8900223ee9",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:23:34.085Z",
+      "canonicalUpdatedAt": "2026-10-09T18:23:34.085Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-9ace849985b4",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:35:08.059Z",
+      "canonicalUpdatedAt": "2026-10-09T18:35:08.059Z",
+      "incomingDifferencesNotApplied": {
+        "workingReference": {
+          "before": {
+            "status": "requested",
+            "scope": "detail",
+            "scopeCorrection": "User GOLD standard statement applies to the pictured cheek detail, not a complete character."
+          },
+          "after": {
+            "status": "requested",
+            "scope": "complete_look"
+          }
+        }
+      }
+    },
+    {
+      "id": "HD-RETURN-7b156019ddf8",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:24:18.550Z",
+      "canonicalUpdatedAt": "2026-10-09T18:24:18.550Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-d91685dd99cd",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:26:06.103Z",
+      "canonicalUpdatedAt": "2026-10-09T18:26:06.103Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-b8c9247bfe47",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:27:13.407Z",
+      "canonicalUpdatedAt": "2026-10-09T18:27:13.407Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-3fa3290e85db",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:28:03.304Z",
+      "canonicalUpdatedAt": "2026-10-09T18:28:03.304Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-78ad6c79615a",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:28:13.249Z",
+      "canonicalUpdatedAt": "2026-10-09T18:28:13.249Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-f88ff5ae511e",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:29:47.270Z",
+      "canonicalUpdatedAt": "2026-10-09T18:29:47.270Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-891a3ee224eb",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:31:18.157Z",
+      "canonicalUpdatedAt": "2026-10-09T18:31:18.157Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-7fe77eadd174",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:31:46.383Z",
+      "canonicalUpdatedAt": "2026-10-09T18:31:46.383Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-aa147b8c0c26",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:37:28.499Z",
+      "canonicalUpdatedAt": "2026-10-09T18:37:28.499Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-10ac9771fdeb",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:33:04.196Z",
+      "canonicalUpdatedAt": "2026-10-09T18:33:04.196Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-d430b5f72e9b",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:37:19.302Z",
+      "canonicalUpdatedAt": "2026-10-09T18:37:19.302Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-9f62f9733312",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:36:31.346Z",
+      "canonicalUpdatedAt": "2026-10-09T18:36:31.346Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-a7bd855cda1e",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:36:36.093Z",
+      "canonicalUpdatedAt": "2026-10-09T18:36:36.093Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-106ae508f3c2",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:37:10.088Z",
+      "canonicalUpdatedAt": "2026-10-09T18:37:10.088Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-d55b97a3b322",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:38:52.274Z",
+      "canonicalUpdatedAt": "2026-10-09T18:38:52.274Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-ea8ca93c3eb8",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:39:07.994Z",
+      "canonicalUpdatedAt": "2026-10-09T18:39:07.994Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-5524a8c7f619",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:39:14.353Z",
+      "canonicalUpdatedAt": "2026-10-09T18:39:14.353Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-b3a2278408a4",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:46:22.960Z",
+      "canonicalUpdatedAt": "2026-10-09T18:46:22.960Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-4c42885da490",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:44:50.266Z",
+      "canonicalUpdatedAt": "2026-10-09T18:44:50.266Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-c29f7e8c4947",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:46:33.987Z",
+      "canonicalUpdatedAt": "2026-10-09T18:46:33.987Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-459feab9d440",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:45:13.247Z",
+      "canonicalUpdatedAt": "2026-10-09T18:45:13.247Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-ced1fbc35268",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:46:43.041Z",
+      "canonicalUpdatedAt": "2026-10-09T18:46:43.041Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-537207fbe4c8",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:46:01.291Z",
+      "canonicalUpdatedAt": "2026-10-09T18:46:01.291Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-1eaa31b63c1e",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:46:52.571Z",
+      "canonicalUpdatedAt": "2026-10-09T18:46:52.571Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-d9dd6e5aec15",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:47:14.152Z",
+      "canonicalUpdatedAt": "2026-10-09T18:47:14.152Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-eff745b8de10",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:47:33.151Z",
+      "canonicalUpdatedAt": "2026-10-09T18:47:33.151Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-RETURN-361e39a1e518",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-09T18:47:41.673Z",
+      "canonicalUpdatedAt": "2026-10-09T18:47:41.673Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "LAG-467cd70039955ce1",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T00:43:35.799Z",
+      "canonicalUpdatedAt": "2026-10-10T00:43:35.799Z",
+      "incomingDifferencesNotApplied": {
+        "role": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": "storyboard"
+        },
+        "shotPlan": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        }
+      }
+    },
+    {
+      "id": "GEM-92EF6FD7",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T03:18:54.768Z",
+      "canonicalUpdatedAt": "2026-10-10T03:18:54.768Z",
+      "incomingDifferencesNotApplied": {
+        "role": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": "videos"
+        },
+        "workingReference": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        }
+      }
+    },
+    {
+      "id": "HD-DROP-b18c4a123579",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T05:04:08.787Z",
+      "canonicalUpdatedAt": "2026-10-10T05:04:08.787Z",
+      "incomingDifferencesNotApplied": {
+        "role": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": "storyboard"
+        },
+        "shotPlan": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        }
+      }
+    },
+    {
+      "id": "HD-B-708df0bb5bff",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:32:32.361Z",
+      "canonicalUpdatedAt": "2026-10-10T13:32:32.361Z",
+      "incomingDifferencesNotApplied": {
+        "role": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": "comfy"
+        }
+      }
+    },
+    {
+      "id": "HD-RETURN-86cb39e4d5b6",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T12:57:07.707Z",
+      "canonicalUpdatedAt": "2026-10-10T12:57:07.707Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-91ef00348229",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:04:39.768Z",
+      "canonicalUpdatedAt": "2026-10-10T13:04:39.768Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-396bbd48b04e",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:04:59.435Z",
+      "canonicalUpdatedAt": "2026-10-10T13:04:59.435Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-4981ccf7e5b7",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:05:38.944Z",
+      "canonicalUpdatedAt": "2026-10-10T13:05:38.944Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-7b2c245e641d",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:06:01.155Z",
+      "canonicalUpdatedAt": "2026-10-10T13:06:01.155Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-2f74c026c40f",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:07:07.214Z",
+      "canonicalUpdatedAt": "2026-10-10T13:07:07.214Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-3933916802e7",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:07:38.930Z",
+      "canonicalUpdatedAt": "2026-10-10T13:07:38.930Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-4d98291202c5",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:07:53.042Z",
+      "canonicalUpdatedAt": "2026-10-10T13:07:53.042Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-ad63bb04fb64",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:08:02.584Z",
+      "canonicalUpdatedAt": "2026-10-10T13:08:02.584Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-4bc866b399f8",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:08:12.738Z",
+      "canonicalUpdatedAt": "2026-10-10T13:08:12.738Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-cdb1845bd6c9",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:08:22.507Z",
+      "canonicalUpdatedAt": "2026-10-10T13:08:22.507Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-ef471a1f5e46",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:08:34.791Z",
+      "canonicalUpdatedAt": "2026-10-10T13:08:34.791Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-31e4e53fdc8a",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:09:35.817Z",
+      "canonicalUpdatedAt": "2026-10-10T13:09:35.817Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-3a03ab8bec2d",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:12:07.818Z",
+      "canonicalUpdatedAt": "2026-10-10T13:12:07.818Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-c1a904850597",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:12:29.348Z",
+      "canonicalUpdatedAt": "2026-10-10T13:12:29.348Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-440eba7abaef",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:12:45.459Z",
+      "canonicalUpdatedAt": "2026-10-10T13:12:45.459Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-12d2685fd248",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:23:17.083Z",
+      "canonicalUpdatedAt": "2026-10-10T13:23:17.083Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-125e06fc0938",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:23:47.067Z",
+      "canonicalUpdatedAt": "2026-10-10T13:23:47.067Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-922938659564",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:13:52.067Z",
+      "canonicalUpdatedAt": "2026-10-10T13:13:52.067Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-47a43ca2be9a",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:15:16.317Z",
+      "canonicalUpdatedAt": "2026-10-10T13:15:16.317Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-c7053765a9cc",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:17:12.648Z",
+      "canonicalUpdatedAt": "2026-10-10T13:17:12.648Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-1295618a7f52",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:17:42.724Z",
+      "canonicalUpdatedAt": "2026-10-10T13:17:42.724Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-d22e8c910d3d",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:20:06.516Z",
+      "canonicalUpdatedAt": "2026-10-10T13:20:06.516Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-69b65c4c594b",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:20:34.412Z",
+      "canonicalUpdatedAt": "2026-10-10T13:20:34.412Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-c5d7212c6918",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:20:47.760Z",
+      "canonicalUpdatedAt": "2026-10-10T13:20:47.760Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-39f65ece9b5f",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:20:56.726Z",
+      "canonicalUpdatedAt": "2026-10-10T13:20:56.726Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-0d5da141329d",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:21:05.176Z",
+      "canonicalUpdatedAt": "2026-10-10T13:21:05.176Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-16c9a7ac5507",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:21:14.954Z",
+      "canonicalUpdatedAt": "2026-10-10T13:21:14.954Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-0a4b5d417eb6",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:21:32.137Z",
+      "canonicalUpdatedAt": "2026-10-10T13:21:32.137Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-929c131a48cf",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:22:08.259Z",
+      "canonicalUpdatedAt": "2026-10-10T13:22:08.259Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-e4c788ec7f22",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:22:19.322Z",
+      "canonicalUpdatedAt": "2026-10-10T13:22:19.322Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-8b5f910a03f9",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:22:50.636Z",
+      "canonicalUpdatedAt": "2026-10-10T13:22:50.636Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-c81d10305d1c",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:24:25.781Z",
+      "canonicalUpdatedAt": "2026-10-10T13:24:25.781Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-f3669e61b1bd",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:24:44.020Z",
+      "canonicalUpdatedAt": "2026-10-10T13:24:44.020Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-b465a10fd62e",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:25:26.851Z",
+      "canonicalUpdatedAt": "2026-10-10T13:25:26.851Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-00a8ecf5a1ce",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:25:57.253Z",
+      "canonicalUpdatedAt": "2026-10-10T13:25:57.253Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-6ffbc86e8d2a",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:26:14.017Z",
+      "canonicalUpdatedAt": "2026-10-10T13:26:14.017Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-13022569e659",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:27:54.375Z",
+      "canonicalUpdatedAt": "2026-10-10T13:27:54.375Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-74ca5a38e24b",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:28:07.304Z",
+      "canonicalUpdatedAt": "2026-10-10T13:28:07.304Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-7b1308e66ca6",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:28:20.489Z",
+      "canonicalUpdatedAt": "2026-10-10T13:28:20.489Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-cec61aae169b",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:28:30.974Z",
+      "canonicalUpdatedAt": "2026-10-10T13:28:30.974Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-028a688364ee",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:30:35.642Z",
+      "canonicalUpdatedAt": "2026-10-10T13:30:35.642Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-a3954eb2631a",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:31:01.896Z",
+      "canonicalUpdatedAt": "2026-10-10T13:31:01.896Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-3357a01cf4ae",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:31:19.027Z",
+      "canonicalUpdatedAt": "2026-10-10T13:31:19.027Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-b02f9c0a8059",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:31:31.528Z",
+      "canonicalUpdatedAt": "2026-10-10T13:31:31.528Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-89045669215e",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:31:41.526Z",
+      "canonicalUpdatedAt": "2026-10-10T13:31:41.526Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-65689d56c672",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:32:07.411Z",
+      "canonicalUpdatedAt": "2026-10-10T13:32:07.411Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-7c402821a4d4",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:32:25.258Z",
+      "canonicalUpdatedAt": "2026-10-10T13:32:25.258Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-e78d52187774",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:32:50.264Z",
+      "canonicalUpdatedAt": "2026-10-10T13:32:50.264Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-6dded3486a70",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:33:00.841Z",
+      "canonicalUpdatedAt": "2026-10-10T13:33:00.841Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-a96975f231d9",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:33:16.877Z",
+      "canonicalUpdatedAt": "2026-10-10T13:33:16.877Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-ddd85d7069ed",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:33:51.165Z",
+      "canonicalUpdatedAt": "2026-10-10T13:33:51.165Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-17e598dc9d13",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:34:26.160Z",
+      "canonicalUpdatedAt": "2026-10-10T13:34:26.160Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-6bfc2a736711",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:35:53.069Z",
+      "canonicalUpdatedAt": "2026-10-10T13:35:53.069Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-ccc297b93fd3",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:36:12.424Z",
+      "canonicalUpdatedAt": "2026-10-10T13:36:12.424Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-eacd4a6e17c1",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:37:11.981Z",
+      "canonicalUpdatedAt": "2026-10-10T13:37:11.981Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-b88f1c68d487",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:37:40.254Z",
+      "canonicalUpdatedAt": "2026-10-10T13:37:40.254Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-ba7787c1bc76",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:38:25.086Z",
+      "canonicalUpdatedAt": "2026-10-10T13:38:25.086Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-d1d1c1a442ed",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:39:14.122Z",
+      "canonicalUpdatedAt": "2026-10-10T13:39:14.122Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-B-d51368d22517",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:39:32.126Z",
+      "canonicalUpdatedAt": "2026-10-10T13:39:32.126Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-MOUTH-UPDATE-20261009-01",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:39:51.228Z",
+      "canonicalUpdatedAt": "2026-10-10T13:39:51.228Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-MOUTH-UPDATE-20261009-02",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:40:43.387Z",
+      "canonicalUpdatedAt": "2026-10-10T13:40:43.387Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-VIS-b35f9a0dc328",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:41:08.573Z",
+      "canonicalUpdatedAt": "2026-10-10T13:41:08.573Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-VIS-11bafdd2be5a",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:43:16.380Z",
+      "canonicalUpdatedAt": "2026-10-10T13:43:16.380Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-VIS-8fd90be71d79",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:46:02.262Z",
+      "canonicalUpdatedAt": "2026-10-10T13:46:02.262Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-VIS-860c70ea1081",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:46:34.794Z",
+      "canonicalUpdatedAt": "2026-10-10T13:46:34.794Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-VIS-9168d102c9f4",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:47:26.621Z",
+      "canonicalUpdatedAt": "2026-10-10T13:47:26.621Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-VIS-88d5651aedcf",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:53:02.815Z",
+      "canonicalUpdatedAt": "2026-10-10T13:53:02.815Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-VIS-305909fd6697",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:54:43.175Z",
+      "canonicalUpdatedAt": "2026-10-10T13:54:43.175Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-VIS-074dcb2fe720",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:56:12.174Z",
+      "canonicalUpdatedAt": "2026-10-10T13:56:12.174Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-VIS-6674cb3c9b70",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:56:24.845Z",
+      "canonicalUpdatedAt": "2026-10-10T13:56:24.845Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-VIS-397e5bd66681",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:56:36.850Z",
+      "canonicalUpdatedAt": "2026-10-10T13:56:36.850Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-VIS-41cf41b5b24e",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:57:55.591Z",
+      "canonicalUpdatedAt": "2026-10-10T13:57:55.591Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-6c2e98bd1125",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:58:39.381Z",
+      "canonicalUpdatedAt": "2026-10-10T13:58:39.381Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-84bf85a0a2da",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:59:01.989Z",
+      "canonicalUpdatedAt": "2026-10-10T13:59:01.989Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-44e53ee582fc",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:59:23.932Z",
+      "canonicalUpdatedAt": "2026-10-10T13:59:23.932Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-436a4c39ea4b",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T13:59:53.900Z",
+      "canonicalUpdatedAt": "2026-10-10T13:59:53.900Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-c6697a9754cb",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T14:00:09.209Z",
+      "canonicalUpdatedAt": "2026-10-10T14:00:09.209Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-2960f32bad93",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T14:00:19.554Z",
+      "canonicalUpdatedAt": "2026-10-10T14:00:19.554Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-DROP-de9bcb6562a5",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-10T14:00:35.670Z",
+      "canonicalUpdatedAt": "2026-10-10T14:00:35.670Z",
+      "incomingDifferencesNotApplied": {}
+    },
+    {
+      "id": "HD-FALCON-194702e9e041362d",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T03:43:36.135Z",
+      "canonicalUpdatedAt": "2026-10-12T03:43:36.135Z",
+      "incomingDifferencesNotApplied": {
+        "path": {
+          "before": "docs/notes/downloads/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-002.jpg",
+          "after": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-002.jpg"
+        }
+      }
+    },
+    {
+      "id": "HD-FALCON-ba27929770216e19",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T03:43:03.959Z",
+      "canonicalUpdatedAt": "2026-10-12T03:43:03.959Z",
+      "incomingDifferencesNotApplied": {
+        "path": {
+          "before": "docs/notes/downloads/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-007.jpg",
+          "after": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-007.jpg"
+        }
+      }
+    },
+    {
+      "id": "HD-FALCON-883bf1079583b958",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T03:42:57.693Z",
+      "canonicalUpdatedAt": "2026-10-12T03:42:57.693Z",
+      "incomingDifferencesNotApplied": {
+        "path": {
+          "before": "docs/notes/downloads/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-001.jpg",
+          "after": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-001.jpg"
+        }
+      }
+    },
+    {
+      "id": "HD-FALCON-96ba2c890ef9256c",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T03:42:41.149Z",
+      "canonicalUpdatedAt": "2026-10-12T03:42:41.149Z",
+      "incomingDifferencesNotApplied": {
+        "path": {
+          "before": "docs/notes/downloads/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-007.jpg",
+          "after": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-007.jpg"
+        }
+      }
+    },
+    {
+      "id": "HD-FALCON-1f55da287bbf7416",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T03:41:08.119Z",
+      "canonicalUpdatedAt": "2026-10-12T03:41:08.119Z",
+      "incomingDifferencesNotApplied": {
+        "path": {
+          "before": "docs/notes/downloads/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-002.jpg",
+          "after": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-002.jpg"
+        }
+      }
+    },
+    {
+      "id": "HD-FALCON-5a2d17265fd6bfed",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T03:42:16.797Z",
+      "canonicalUpdatedAt": "2026-10-12T03:42:16.797Z",
+      "incomingDifferencesNotApplied": {
+        "path": {
+          "before": "docs/notes/downloads/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-003.jpg",
+          "after": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-003.jpg"
+        }
+      }
+    },
+    {
+      "id": "HD-FALCON-381883a6beb1ed5e",
+      "reason": "older record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T03:52:05.873Z",
+      "canonicalUpdatedAt": "2026-10-12T03:57:00.6358653Z",
+      "incomingDifferencesNotApplied": {
+        "path": {
+          "before": "docs/notes/downloads/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-005.jpg",
+          "after": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-005.jpg"
+        },
+        "updatedAt": {
+          "before": "2026-10-12T03:57:00.6358653Z",
+          "after": "2026-10-12T03:52:05.873Z"
+        }
+      }
+    },
+    {
+      "id": "HD-FALCON-324dc694f8a3d311",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T03:44:19.979Z",
+      "canonicalUpdatedAt": "2026-10-12T03:44:19.979Z",
+      "incomingDifferencesNotApplied": {
+        "path": {
+          "before": "docs/notes/downloads/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-008.jpg",
+          "after": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-008.jpg"
+        }
+      }
+    },
+    {
+      "id": "HD-FALCON-047f5df94092eba9",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T03:45:01.223Z",
+      "canonicalUpdatedAt": "2026-10-12T03:45:01.223Z",
+      "incomingDifferencesNotApplied": {
+        "path": {
+          "before": "docs/notes/downloads/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-010.jpg",
+          "after": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-010.jpg"
+        }
+      }
+    },
+    {
+      "id": "HD-FALCON-25d3e53bd2619bb6",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T03:46:16.230Z",
+      "canonicalUpdatedAt": "2026-10-12T03:46:16.23Z",
+      "incomingDifferencesNotApplied": {
+        "path": {
+          "before": "docs/notes/downloads/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-013.jpg",
+          "after": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-013.jpg"
+        },
+        "updatedAt": {
+          "before": "2026-10-12T03:46:16.23Z",
+          "after": "2026-10-12T03:46:16.230Z"
+        }
+      }
+    },
+    {
+      "id": "HD-FALCON-ec339b70aa3f085e",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T03:46:12.654Z",
+      "canonicalUpdatedAt": "2026-10-12T03:46:12.654Z",
+      "incomingDifferencesNotApplied": {
+        "path": {
+          "before": "docs/notes/downloads/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-015.jpg",
+          "after": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-015.jpg"
+        }
+      }
+    },
+    {
+      "id": "HD-FALCON-44f47d59c87af316",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T03:47:00.946Z",
+      "canonicalUpdatedAt": "2026-10-12T03:47:00.946Z",
+      "incomingDifferencesNotApplied": {
+        "path": {
+          "before": "docs/notes/downloads/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-006.jpg",
+          "after": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-006.jpg"
+        }
+      }
+    },
+    {
+      "id": "FLOW-HD-VIDEO-002-A",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T16:25:21.394024Z",
+      "canonicalUpdatedAt": "2026-10-12T16:25:21.394024Z",
+      "incomingDifferencesNotApplied": {
+        "role": {
+          "before": "video",
+          "after": "videos"
+        },
+        "shotPlan": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        }
+      }
+    },
+    {
+      "id": "FLOW-HD-VIDEO-002-B",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T16:25:21.394024Z",
+      "canonicalUpdatedAt": "2026-10-12T16:25:21.394024Z",
+      "incomingDifferencesNotApplied": {
+        "role": {
+          "before": "video",
+          "after": "videos"
+        },
+        "shotPlan": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        }
+      }
+    },
+    {
+      "id": "LAG-VIS-afcdf01dce1fc114",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T16:49:27.774209Z",
+      "canonicalUpdatedAt": "2026-10-12T16:49:27.774209Z",
+      "incomingDifferencesNotApplied": {
+        "role": {
+          "before": "detail",
+          "after": "details"
+        },
+        "shotPlan": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        }
+      }
+    },
+    {
+      "id": "LAG-VIS-c111c9d91f8ff1c2",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T16:49:27.774209Z",
+      "canonicalUpdatedAt": "2026-10-12T16:49:27.774209Z",
+      "incomingDifferencesNotApplied": {
+        "role": {
+          "before": "detail",
+          "after": "details"
+        },
+        "shotPlan": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        }
+      }
+    },
+    {
+      "id": "LAG-VIS-00b8cf30f072b0a3",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T16:49:27.774209Z",
+      "canonicalUpdatedAt": "2026-10-12T16:49:27.774209Z",
+      "incomingDifferencesNotApplied": {
+        "role": {
+          "before": "detail",
+          "after": "details"
+        },
+        "shotPlan": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        }
+      }
+    },
+    {
+      "id": "LAG-VIS-69298b8068e57282",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T16:49:27.774209Z",
+      "canonicalUpdatedAt": "2026-10-12T16:49:27.774209Z",
+      "incomingDifferencesNotApplied": {
+        "role": {
+          "before": "detail",
+          "after": "details"
+        },
+        "shotPlan": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        }
+      }
+    },
+    {
+      "id": "LAG-VIS-13465b4300927d08",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T16:49:27.774209Z",
+      "canonicalUpdatedAt": "2026-10-12T16:49:27.774209Z",
+      "incomingDifferencesNotApplied": {
+        "role": {
+          "before": "detail",
+          "after": "details"
+        },
+        "shotPlan": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        }
+      }
+    },
+    {
+      "id": "LAG-VIS-3056ae61d9993a75",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T16:49:27.774209Z",
+      "canonicalUpdatedAt": "2026-10-12T16:49:27.774209Z",
+      "incomingDifferencesNotApplied": {
+        "role": {
+          "before": "detail",
+          "after": "details"
+        },
+        "shotPlan": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        }
+      }
+    },
+    {
+      "id": "LAG-VIS-cb41547abc0f110b",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T16:49:27.774209Z",
+      "canonicalUpdatedAt": "2026-10-12T16:49:27.774209Z",
+      "incomingDifferencesNotApplied": {
+        "role": {
+          "before": "detail",
+          "after": "details"
+        },
+        "shotPlan": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        }
+      }
+    },
+    {
+      "id": "GEM-2E361055",
+      "reason": "equal record timestamp; canonical corrections and metadata retained.",
+      "exportRecordUpdatedAt": "2026-10-12T17:00:42.132463Z",
+      "canonicalUpdatedAt": "2026-10-12T17:00:42.132463Z",
+      "incomingDifferencesNotApplied": {
+        "role": {
+          "before": "scene",
+          "after": "videos"
+        },
+        "shotPlan": {
+          "before": {
+            "destinations": [
+              "ComfyUI"
+            ],
+            "status": "requested_bounded_test",
+            "idea": "Harrison Ford identity into this alternate-universe Dolo Cantina toast; preserve existing scene/action/outfit/tattoos. One short Comfy proof with explicit preservation checks.",
+            "prompt": ""
+          },
+          "after": {
+            "status": "planned",
+            "destinations": [
+              "ComfyUI"
+            ],
+            "idea": "Harrison Ford identity into this alternate-universe Dolo Cantina toast; preserve existing scene/action/outfit/tattoos. One short Comfy proof with explicit preservation checks.",
+            "prompt": ""
+          }
+        },
+        "variantSource": {
+          "before": "user",
+          "after": "catalog"
+        },
+        "workingReference": {
+          "before": {
+            "fieldAbsent": true
+          },
+          "after": null
+        }
+      }
+    },
+    {
+      "id": "hon:doc:docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/START_HERE.txt",
+      "reason": "Unhashed document with empty review fields; source retained unchanged, no media decision imported."
+    }
+  ],
+  "catalogSeedsExcluded": 11,
+  "unhashedEmptyDocumentsExcluded": 1,
+  "favorites": {
+    "count": 36,
+    "unchanged": true
+  },
+  "portraitConfirmationIDsPreserved": [
+    "LAG-602a9fd4021dc356",
+    "LAG-63126392af1ccf8b"
+  ],
+  "validation": {
+    "canonicalPath": "docs/notes/explorable_world/comfy/projects/visual_library/reference_validation.json",
+    "bytes": 89056,
+    "sha256": "6a349b56b2b3534a2c2f04670f76002e27803ca6a1957e9eafed3ef3dc35af60",
+    "10ExportAssessmentsAlreadyIdentical": true,
+    "542LegacyRowsRetainedOnlyInFullRawExportHistory": true,
+    "validationOrCriteriaFilesWritten": false,
+    "flattenedIntoHumanReviews": false
+  },
+  "verifiedInputPins": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/inspiration/hon-dolo-armor-swap/REF-armor-source.jpg",
+      "bytes": 242739,
+      "sha256": "19593c0144edd9ed86c21fe74fc66ee475e62c9a7a7c22bfd5efba58afc331ab"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/inspiration/hon-dolo-drip-20/HD-DRIP-18-camo-hoodie.jpg",
+      "bytes": 426886,
+      "sha256": "d2d1369e30ec2bcf2b85a1731e39c874b846b410cfe9ed466696ef6b3579a339"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-03-pay-table.jpg",
+      "bytes": 316016,
+      "sha256": "36679ee9953bfb8d0492009c1a47309fdd8f04f951f2077bce0007067146b1c4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/needs_review/hon-dolo-armor-swap/HD-ARMOR-SWAP-01.jpg",
+      "bytes": 241919,
+      "sha256": "aea8323ad9b2969839ad2581b153f1343e9324047645148ca6140f790033af24"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/needs_review/hon-dolo-armor-swap/HD-ARMOR-SWAP-02.jpg",
+      "bytes": 255695,
+      "sha256": "071660490855a55ecb555c5ea5bb162c5a22802973a6cfc8799e331f6b0d6acc"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/needs_review/hon-dolo-armor-swap/HD-ARMOR-SWAP-03.jpg",
+      "bytes": 250850,
+      "sha256": "4e493c00b66c945c77e0a6778333809984a9ca52458bbf11e5f4108c168f5eba"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/retired_or_conflicting/hon-dolo-armor-swap/HD-ARMOR-SWAP-04.jpg",
+      "bytes": 243755,
+      "sha256": "1c375c9d2ea9fbef200033e4ada946f942ef1fd1698a9449864661a4a912ce0f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/retired_or_conflicting/hon-dolo-armor-swap/HD-ARMOR-SWAP-05.jpg",
+      "bytes": 243713,
+      "sha256": "abdcdd8f1ce162f4847a5ed6ab66333b1e56fdde531c4353068c134b6cef4173"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/needs_review/hon-dolo-cockpit-swap/HD-COCKPIT-SWAP-05.jpg",
+      "bytes": 326382,
+      "sha256": "64134f8b523190e3f2e9d8fa518ad074abd2d9a887daa1afc7ed95a1f14ef22a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/needs_review/hon-dolo-cockpit-swap-round2/HD-COCKPIT-R2-01.jpg",
+      "bytes": 313907,
+      "sha256": "14f8eb9979b5217ece058c612eb04fcddee5870f4910eacf2d7112ed2b38ee9b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/needs_review/hon-dolo-cockpit-swap-round2/HD-COCKPIT-R2-02.jpg",
+      "bytes": 308358,
+      "sha256": "205eb8df50f594137ce12ab70d0ca136e0ba2439c7a6e783d55d8cfc5f797aa1"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/needs_review/hon-dolo-cockpit-swap-round2/HD-COCKPIT-R2-03.jpg",
+      "bytes": 302680,
+      "sha256": "1225728294b297d823069a58563acfb558657d087269bc40df42c03eb52bff2b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/needs_review/hon-dolo-cockpit-swap-round2/HD-COCKPIT-R2-04.jpg",
+      "bytes": 231146,
+      "sha256": "104b30b1f4b7af4c7c3d4ee94405789198e558a41ade560562ca966f7e1dfcd6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/needs_review/hon-dolo-cockpit-swap-round2/HD-COCKPIT-R2-05.jpg",
+      "bytes": 268798,
+      "sha256": "8ef3180997c8dd596a9cd27b83c50d4aee42b4d04200f8371625010523bac356"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/needs_review/hon-dolo-cockpit-swap/HD-COCKPIT-SWAP-01.jpg",
+      "bytes": 331430,
+      "sha256": "b0f479ab08bc8c0055b4284ea61d1d6b80c664f2d44b8c2704c52016d1d7a32e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/retired_or_conflicting/hon-dolo-cockpit-swap/HD-COCKPIT-SWAP-02.jpg",
+      "bytes": 332262,
+      "sha256": "65375c76069203f3a979d6745e054d9033ca792a747f1fc57105cd59d6b5c942"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/needs_review/hon-dolo-cockpit-swap/HD-COCKPIT-SWAP-03.jpg",
+      "bytes": 329479,
+      "sha256": "168698506c7046f5447e0007e9281600947d9fcb3662dad966daed1ff9d32dcc"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/needs_review/hon-dolo-cockpit-swap/HD-COCKPIT-SWAP-04.jpg",
+      "bytes": 327803,
+      "sha256": "32ffc5ee7a2b85d1b2815e56db3496eef1eaa1f9540c18e5ae158a7a439c5417"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/03_Inspiration_History/g-superseded-refs/LAG-LOCK-FACE.jpg",
+      "bytes": 199546,
+      "sha256": "cb183973ed1fc70ec906b762fb263b29c8866934a67f9608786b712579eaf056"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/reference_updates/grill_and_hand_20261009/source/Hon_iced_grill_and_favorite_head_chat.jpg",
+      "bytes": 122726,
+      "sha256": "682b92ff3b11170daa194068e2a32e8ffd2a38af80c7d18f816bda8cd2d66e05"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/retired_or_conflicting/hooded-kid-ref-sheet/REF-4-alt-L-cross.jpg",
+      "bytes": 70634,
+      "sha256": "100e2ffb72a4e1e7c854a7d36fef9f490bce982c140b744c4f2860df79c4aa39"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/66a09f60ff80__259_neck_view.png",
+      "bytes": 196790,
+      "sha256": "66a09f60ff807a4da7ad113580155ad9567c73a972a55c56c820e2dfb003441f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/19cf3cd478dd__scoundrel.jpg",
+      "bytes": 168954,
+      "sha256": "19cf3cd478dd327371d646694fc5db4e1f23d345afe86d7d77a76865f7139ab4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/6c8900223ee9__lf_full.png",
+      "bytes": 1166382,
+      "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/9ace849985b4__lf_cheeks.png",
+      "bytes": 192440,
+      "sha256": "9ace849985b49dfec444a2171dc85854076e024352aaae8d1c8f53ef0a69daef"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/7b156019ddf8__lf_chest.png",
+      "bytes": 255365,
+      "sha256": "7b156019ddf8b854a68a3549c80aede545384ebc12a6d7403bb7b17075e11ebc"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/831f6171619f__cards_zoom.png",
+      "bytes": 782756,
+      "sha256": "831f6171619fe93baf6c0ab4784f3f7fc04c319040631cb5dc3fcf381dccf3ce"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/d91685dd99cd__flat_1.jpg",
+      "bytes": 323656,
+      "sha256": "d91685dd99cdb91dcf1153ba8f2f6672e7c1c57454d25fefce67d304a58e6d2d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/b8c9247bfe47__cards.jpg",
+      "bytes": 249498,
+      "sha256": "b8c9247bfe47208db1ec9ac6c9b3cc332dd38f27c2f62a7178ed1e0c18186a49"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/3fa3290e85db__eye_know_compare.png",
+      "bytes": 287000,
+      "sha256": "3fa3290e85db6799171875e4bf04cd14e60e3c108cebe2da447451c0f99cb6fa"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/78ad6c79615a__flat_2.jpg",
+      "bytes": 17830,
+      "sha256": "78ad6c79615a066279f1e60f07f8152e8a72f7159814a7b0ee08b085407ed281"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/f88ff5ae511e__flat_0.jpg",
+      "bytes": 252880,
+      "sha256": "f88ff5ae511e551fff2486bbb8c1e54c4c68d1c130992f7d3330f482ce0d0580"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/891a3ee224eb__ships_a.jpg",
+      "bytes": 102950,
+      "sha256": "891a3ee224eb2451f59954aac2c17e7474f0ff8126d32ca3abbe77fe853d139b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/7fe77eadd174__lf_neck.png",
+      "bytes": 256504,
+      "sha256": "7fe77eadd174a629216f2c7b36748fd7e1aebaabeb4e6e2acb51df9d6e88bf94"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/aa147b8c0c26__aa147b8c0c2633f61ba2c1ecd6d79b732398c9a336da7daa46c5042c849de1b1.jpg",
+      "bytes": 233734,
+      "sha256": "aa147b8c0c2633f61ba2c1ecd6d79b732398c9a336da7daa46c5042c849de1b1"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/10ac9771fdeb__10ac9771fdeb921c85c573a67beee340bbfef55c46fbbf279e41c15d0ec8a94c.jpg",
+      "bytes": 405342,
+      "sha256": "10ac9771fdeb921c85c573a67beee340bbfef55c46fbbf279e41c15d0ec8a94c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/d430b5f72e9b__d430b5f72e9b3ca4271229533880f24ba9b6c97adaca89fc8bc36ce77d7c9717.jpg",
+      "bytes": 388189,
+      "sha256": "d430b5f72e9b3ca4271229533880f24ba9b6c97adaca89fc8bc36ce77d7c9717"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/9f62f9733312__9f62f9733312c2cb638e34e333dd02411da182b3cdd2a3ca6e39ee5c765974be.jpg",
+      "bytes": 415776,
+      "sha256": "9f62f9733312c2cb638e34e333dd02411da182b3cdd2a3ca6e39ee5c765974be"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/a7bd855cda1e__a7bd855cda1ee397952d768a0692d5df9f4f89588a9fa764a38931598e2fb060.jpg",
+      "bytes": 259724,
+      "sha256": "a7bd855cda1ee397952d768a0692d5df9f4f89588a9fa764a38931598e2fb060"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/106ae508f3c2__106ae508f3c2cd837803d73433cc2a5206ea9f62e98295de85f83bdf452ddf01.jpg",
+      "bytes": 247834,
+      "sha256": "106ae508f3c2cd837803d73433cc2a5206ea9f62e98295de85f83bdf452ddf01"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/d55b97a3b322__d55b97a3b3222e5db70b5c38d66f2f57b3a59f3eb23f228ae16e2d137c37d8e6.jpg",
+      "bytes": 237446,
+      "sha256": "d55b97a3b3222e5db70b5c38d66f2f57b3a59f3eb23f228ae16e2d137c37d8e6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/ea8ca93c3eb8__ea8ca93c3eb84944fd7cb1ccd52040f917c1ac797a4c2697068222013d56106b.jpg",
+      "bytes": 245284,
+      "sha256": "ea8ca93c3eb84944fd7cb1ccd52040f917c1ac797a4c2697068222013d56106b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/5524a8c7f619__5524a8c7f619084f7d9bee32ccd0057a1db87300e91f1d3a61f5d740a77d7351.jpg",
+      "bytes": 243016,
+      "sha256": "5524a8c7f619084f7d9bee32ccd0057a1db87300e91f1d3a61f5d740a77d7351"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/1e8c86b1c729__1e8c86b1c7293db98fdf9112db2382b698a1795b171f6fc8f621885160bfb2c3.jpg",
+      "bytes": 278033,
+      "sha256": "1e8c86b1c7293db98fdf9112db2382b698a1795b171f6fc8f621885160bfb2c3"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/b3a2278408a4__b3a2278408a4417bc270b83766d10702f766d9177546ced9412d1eb21441edef.jpg",
+      "bytes": 249889,
+      "sha256": "b3a2278408a4417bc270b83766d10702f766d9177546ced9412d1eb21441edef"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/4c42885da490__HIP-CASH-a1_4c42885d.jpg",
+      "bytes": 201309,
+      "sha256": "4c42885da4901d23a260c73cb82e815633915005f03660a6aa5c850fe8ce1684"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/c29f7e8c4947__HIP-COAT-a1_c29f7e8c.jpg",
+      "bytes": 215523,
+      "sha256": "c29f7e8c494769fe137edcb6172c282c33008cfeb105cd601e4a2881528845b8"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/459feab9d440__HIP-CREAM-a1_459feab9.jpg",
+      "bytes": 207265,
+      "sha256": "459feab9d440e6ff83abdef532cb1df558ffe1ed14fef14680c7f303c9a65612"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/ced1fbc35268__HIP-FUR-a1_ced1fbc3.jpg",
+      "bytes": 271116,
+      "sha256": "ced1fbc35268805b693800b32a59387db875db7e5351e43aa54da743c3649e0d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/537207fbe4c8__HIP-LETTERMAN-a1_537207fb.jpg",
+      "bytes": 237657,
+      "sha256": "537207fbe4c80addc3d54505dc63ef16190a569500e016554a98ccd2ebb04802"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/1eaa31b63c1e__HIP-RAIN-a1_1eaa31b6.jpg",
+      "bytes": 264589,
+      "sha256": "1eaa31b63c1e187dfb63d31e523c056cf78e3a86c341ca2b38d416fae5ac316d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/d9dd6e5aec15__HIP-VELVET-a1_d9dd6e5a.jpg",
+      "bytes": 236523,
+      "sha256": "d9dd6e5aec15af3fb2a592b16bb4c004643b7ec66dea0d0d361ebe11edf69b40"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/eff745b8de10__HIP-VINYL-a1_eff745b8.jpg",
+      "bytes": 172967,
+      "sha256": "eff745b8de10fe56464ec61a43a06ab9d3b775aa08f5c6292f82144286054c28"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/361e39a1e518__HIP-YELLOW-a1_361e39a1.jpg",
+      "bytes": 201710,
+      "sha256": "361e39a1e5187c7ee054391b4dcbfea9386b39d70b9b1628b83941b46ae69850"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/02_Storyboard_Scenes/LAG-SC-18.jpg",
+      "bytes": 342800,
+      "sha256": "467cd70039955ce1b7cca1205cf5c3243a2af16d457a99e63be43feb557c41af"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/00_Unassigned_Gemini/gemini_generated_video_92ef6fd7.mp4",
+      "bytes": 2602394,
+      "sha256": "4f6933adccef283d48659d52837907c129bf8822682c47a943677c81fdd587c9"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/00_Unassigned_Gemini/gemini_generated_video_8b51108e.mp4",
+      "bytes": 4161553,
+      "sha256": "c56a8ee9cbb97d2bd354b51c235a03b074cf269822c83f7c8cf520ec5b274f5a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-06-scoundrel-detail.jpg",
+      "bytes": 308775,
+      "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/708df0bb5bff__VIS-HD-47_CHAIN-BITE.jpg",
+      "bytes": 324265,
+      "sha256": "708df0bb5bff17abe9f6e0ae09ac59a53cafdb8976defda55758aab5b9e01ab9"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/86cb39e4d5b6__HIP-YELLOW-01_v001.jpg",
+      "bytes": 173782,
+      "sha256": "86cb39e4d5b63e0f122b539cd278835f4e21e76082234897d4e06d43241bbe1d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/efc1886a0d62__HIP-VELVET-01_v001.jpg",
+      "bytes": 215297,
+      "sha256": "efc1886a0d62645ce44b164090ad2312d039570f2a119e71b84c34d8e4370a4d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/91ef00348229__GRILL-LOCK-4GOLD-v2.jpg",
+      "bytes": 295186,
+      "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/396bbd48b04e__GRILL-REF-4GOLD-ziggy.jpg",
+      "bytes": 33857,
+      "sha256": "396bbd48b04eed9b103c3f4a1a116110e6852cfa9d596515ea40cff28ea3f61e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/4981ccf7e5b7__VIS-HD-01_REST.jpg",
+      "bytes": 293466,
+      "sha256": "4981ccf7e5b71ba72154d182b7b410221f17ff9e704759007a584aeae3ee265b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/7b2c245e641d__VIS-HD-02_MBP.jpg",
+      "bytes": 295360,
+      "sha256": "7b2c245e641da01afd06dcb1d5b2f384473ef64bbee68d7bf031465a0f0faf26"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/2f74c026c40f__GRILL-MASTER_VIS-HD-03_AH_2f74c026c40fdc16aea74c9abd8a0943d3bccf8f99a591a3f915230e6d93a9e0.jpg",
+      "bytes": 293233,
+      "sha256": "2f74c026c40fdc16aea74c9abd8a0943d3bccf8f99a591a3f915230e6d93a9e0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/3933916802e7__VIS-HD-04_EE.jpg",
+      "bytes": 298493,
+      "sha256": "3933916802e70b0c01d8d5eb6e2a065dd2112194032e18b21cd5ee53c56318ef"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/4d98291202c5__VIS-HD-05_OH.jpg",
+      "bytes": 283027,
+      "sha256": "4d98291202c54da00d0e60d554424141a7df2623d2df4ae36612f329950cd82a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/ad63bb04fb64__VIS-HD-06_OO-W.jpg",
+      "bytes": 273225,
+      "sha256": "ad63bb04fb6444c8b1bd39e3704dc2d9fee0a9f91a438003da9c22198d1245ef"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/4bc866b399f8__VIS-HD-07_F-V.jpg",
+      "bytes": 300191,
+      "sha256": "4bc866b399f8e60f8a1e770bb21a4efaede09c0223703a63e2fc76e207c36e69"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/cdb1845bd6c9__VIS-HD-08_L-TH.jpg",
+      "bytes": 302763,
+      "sha256": "cdb1845bd6c95cb6b6fd6c8ef41ae8ae50ab688c8ecb8542d3fe138f196c89fd"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/ef471a1f5e46__VIS-HD-09_S-T-K.jpg",
+      "bytes": 306369,
+      "sha256": "ef471a1f5e46eccc62bad02b39aa5e324c6da60131a1302d36067126f053c134"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/31e4e53fdc8a__VIS-HD-10_CH-SH.jpg",
+      "bytes": 300920,
+      "sha256": "31e4e53fdc8ab5ef31ec3cf3aa57d4e980a045eefd60e352cd49dfe4230bee4b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/3a03ab8bec2d__VIS-HD-12_SHOUT.jpg",
+      "bytes": 273019,
+      "sha256": "3a03ab8bec2d21744403d109ff211a6ea269622e3ea4e1ae91109bcdc510df66"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/c1a904850597__VIS-HD-13_KISS-PUCKER.jpg",
+      "bytes": 276334,
+      "sha256": "c1a904850597152eba9d59f6fa77ee202f0c3c8dd8c25f7f81bcad56240394d9"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/440eba7abaef__VIS-HD-14_BLOW-KISS.jpg",
+      "bytes": 277827,
+      "sha256": "440eba7abaef2fc8167832dad4eb4e8b1305beb3da8b9c106c93fd48311927a3"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/12d2685fd248__VIS-HD-15_BITE-LOWER-LIP.jpg",
+      "bytes": 284623,
+      "sha256": "12d2685fd2481f877600fc0a6eec693cd1da0e0c1f2f865e551bd3371d56f72c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/125e06fc0938__VIS-HD-16_BITE-UPPER-LIP.jpg",
+      "bytes": 294297,
+      "sha256": "125e06fc0938715069a056270ba03ba5be4fe48c796c3caaeb3e0b886e9e9bf6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/922938659564__VIS-HD-17_LIPS-PRESSED-THIN.jpg",
+      "bytes": 291520,
+      "sha256": "9229386595640bdd98b8c62aed1b4e12793e6a2f60dd50d58033b37f3a5b06e4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/47a43ca2be9a__VIS-HD-18_LIP-ROLL-IN.jpg",
+      "bytes": 282696,
+      "sha256": "47a43ca2be9ad80bbf9ca12e08a4c8504361a313b359c46778e1fe269752ec83"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/c7053765a9cc__VIS-HD-19_SMIRK-LEFT.jpg",
+      "bytes": 291231,
+      "sha256": "c7053765a9ccc7b6c2652431fccdb673a09be57790b26b6e058fe07a229e1b65"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/1295618a7f52__VIS-HD-20_SMIRK-RIGHT.jpg",
+      "bytes": 285722,
+      "sha256": "1295618a7f5235175dabef2dc78b7580cc1c7e2fbb8f6a35fef9ffe1709b2792"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/d22e8c910d3d__VIS-HD-21_SNEER.jpg",
+      "bytes": 292986,
+      "sha256": "d22e8c910d3d1e4288bc81014c90c3000fccfc7dfc3d3b4474b49858fc37e456"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/69b65c4c594b__VIS-HD-22_SNARL.jpg",
+      "bytes": 295318,
+      "sha256": "69b65c4c594b876fc068949b27d436580db4a3c4b3ae1a56dd3e1e04dd7c7d0d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/c5d7212c6918__VIS-HD-23_GRIMACE.jpg",
+      "bytes": 300685,
+      "sha256": "c5d7212c69187d7a8190bb1165546f3bac50f40551f0acff408be2f1037263f8"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/39f65ece9b5f__VIS-HD-24_CLENCHED-JAW.jpg",
+      "bytes": 295639,
+      "sha256": "39f65ece9b5fd28789d88b06897228960ac4b72b504e769ee1ff7125bfd7ff42"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/0d5da141329d__VIS-HD-25_JAW-DROP.jpg",
+      "bytes": 259855,
+      "sha256": "0d5da141329d1f939f3ab88d37b9b204c8ee75528d9ed90f7096df7b24535b81"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/16c9a7ac5507__VIS-HD-26_SMALL-O.jpg",
+      "bytes": 271851,
+      "sha256": "16c9a7ac5507e53af39c26b67ed466cc1404b7acd7f712dfdf2bcffbc56a633e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/0a4b5d417eb6__VIS-HD-27_BIG-LAUGH.jpg",
+      "bytes": 292998,
+      "sha256": "0a4b5d417eb61ab2bbbbd25ff616f4d42a2f3a5557b78dabc1ac88c3e7448d3c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/929c131a48cf__VIS-HD-28_CHUCKLE.jpg",
+      "bytes": 305715,
+      "sha256": "929c131a48cfb2fabc1ebc77b9229ba97262f3007f3ee8961eb07b764204ed82"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/e4c788ec7f22__VIS-HD-29_CLOSED-SMILE.jpg",
+      "bytes": 290791,
+      "sha256": "e4c788ec7f22a422742071c40409c0dbf2e7bb44e7e14a66497555d2fb663806"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/8b5f910a03f9__VIS-HD-30_HALF-SMILE.jpg",
+      "bytes": 288296,
+      "sha256": "8b5f910a03f9be4d94569458bb54426a14daa01568523bf307fd96ff3b22192b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/c81d10305d1c__VIS-HD-31_POUT.jpg",
+      "bytes": 287586,
+      "sha256": "c81d10305d1ce8064e915138c5d1758c10ba1495c48bb1196dbc6f34851ff95c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/f3669e61b1bd__VIS-HD-32_FROWN.jpg",
+      "bytes": 287344,
+      "sha256": "f3669e61b1bdd40355211017656ece3603ddb26ebde90bd82826e0913033f233"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/b465a10fd62e__VIS-HD-33_LIP-LICK.jpg",
+      "bytes": 306083,
+      "sha256": "b465a10fd62ee8936c25a2c95032485efecc2f3b8fe41e8f2aab14260f1a973a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/00a8ecf5a1ce__VIS-HD-34_TONGUE-OUT.jpg",
+      "bytes": 301499,
+      "sha256": "00a8ecf5a1ce3a3ecba5250a60b6fc8bfe2ef846ad15320ae5b6197e87bdb524"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/6ffbc86e8d2a__VIS-HD-35_TONGUE-IN-CHEEK.jpg",
+      "bytes": 285332,
+      "sha256": "6ffbc86e8d2a76848f182f8ab1297860aafc8865a82f60e46fb8e6d7cd9a9df2"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/13022569e659__VIS-HD-36_WHISTLE.jpg",
+      "bytes": 269896,
+      "sha256": "13022569e659d419d8bb6f9f029311b848e1031b8d1ac2d290de2c11bd17beb6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/74ca5a38e24b__VIS-HD-37_PUFFED-CHEEKS.jpg",
+      "bytes": 280291,
+      "sha256": "74ca5a38e24bbc40c24daa199b1559c8a7f59077b7a50296aa0d30495c911a21"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/7b1308e66ca6__VIS-HD-38_TSK.jpg",
+      "bytes": 286056,
+      "sha256": "7b1308e66ca62d3b8bfd65d49934659a4f1434f4cd37561688b8b1736edbd1d6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/cec61aae169b__VIS-HD-39_YAWN.jpg",
+      "bytes": 260867,
+      "sha256": "cec61aae169b3a224b4ee57d8e1394437c4b0a284750343df55a74905cf4b787"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/028a688364ee__VIS-HD-40_WHISPER-SH.jpg",
+      "bytes": 291126,
+      "sha256": "028a688364eef7b14bb9f905d118db84629a8ea20b52e69753170dedba03397b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/a3954eb2631a__VIS-HD-41_R-SOUND.jpg",
+      "bytes": 295267,
+      "sha256": "a3954eb2631a8add13be7d73716267d712d9ec220eecb50e08a24a70127bc728"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/3357a01cf4ae__VIS-HD-42_Y-SOUND.jpg",
+      "bytes": 299306,
+      "sha256": "3357a01cf4aed7f11abc891be06886a55f809655511faa558dcfdec9299b037b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/b02f9c0a8059__VIS-HD-43_RAP-MID-WORD.jpg",
+      "bytes": 300378,
+      "sha256": "b02f9c0a8059abf97fd18b293c05edfe5eb10cdadc815b66d01c07000c3e6661"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/89045669215e__VIS-HD-44_YEAH-ADLIB.jpg",
+      "bytes": 290052,
+      "sha256": "89045669215e82c55622561b6fbff44a2214c8b89c467675ba609ddef516ed55"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/65689d56c672__VIS-HD-45_GRIT-LIPS-BACK.jpg",
+      "bytes": 273856,
+      "sha256": "65689d56c6721b349ee21572016ae680f74a59a419e5096470eb1b6dd364ce77"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/7c402821a4d4__VIS-HD-46_KISS-TEETH.jpg",
+      "bytes": 280962,
+      "sha256": "7c402821a4d4d3dafa3be797809314fec4ac124d76aadd3820289a2cdddc1a86"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/e78d52187774__VIS-HD-48_EXHALE.jpg",
+      "bytes": 296834,
+      "sha256": "e78d5218777402c58d9adcdea49206fb7ff0a30f399ff2bf0273d0a924cddad3"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/6dded3486a70__VIS-HD-49_HUM.jpg",
+      "bytes": 290719,
+      "sha256": "6dded3486a701fa0a691304c57b767d5d985efacb73c39b9cfe2ac57238e84ba"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/a96975f231d9__VIS-HD-50_SING-VOWEL.jpg",
+      "bytes": 293239,
+      "sha256": "a96975f231d9d901e708854518b0970dbc0dd9c9ac1edf985c3d95e0f0964f64"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/ddd85d7069ed__GROK-HD-20261009_VIS-HD_v003_SHEET_1of9.jpg",
+      "bytes": 972757,
+      "sha256": "ddd85d7069ed539d99bba00cd916be567520f5c2508d041ad9a9295b21969602"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/17e598dc9d13__GROK-HD-20261009_VIS-HD_v003_SHEET_2of9.jpg",
+      "bytes": 1002633,
+      "sha256": "17e598dc9d1326ed437d40386be51bb791818812ffad927f0ea225f282be00ce"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/6bfc2a736711__GROK-HD-20261009_VIS-HD_v003_SHEET_3of9.jpg",
+      "bytes": 964737,
+      "sha256": "6bfc2a736711b779fc8fe4583f56c3e1c7fea521577c71b227278870204d34c8"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/ccc297b93fd3__GROK-HD-20261009_VIS-HD_v003_SHEET_4of9.jpg",
+      "bytes": 987422,
+      "sha256": "ccc297b93fd3a7afbcc371aca921464cf673906d5c99519ea6c9a5e598b40995"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/eacd4a6e17c1__GROK-HD-20261009_VIS-HD_v003_SHEET_5of9.jpg",
+      "bytes": 952674,
+      "sha256": "eacd4a6e17c125866a3fd5aca1b62f24a1309d946f5b3d4d69ab68f3113755de"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/b88f1c68d487__GROK-HD-20261009_VIS-HD_v003_SHEET_6of9.jpg",
+      "bytes": 977247,
+      "sha256": "b88f1c68d487c1ea196a1f0d548f63dad20fbc5fe140de11a625314a9b6d6e87"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/ba7787c1bc76__GROK-HD-20261009_VIS-HD_v003_SHEET_7of9.jpg",
+      "bytes": 964913,
+      "sha256": "ba7787c1bc7615addc64ca721e21c895048ea73552b8c77a745f2f671c5f9b6b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/d1d1c1a442ed__GROK-HD-20261009_VIS-HD_v003_SHEET_8of9.jpg",
+      "bytes": 1004489,
+      "sha256": "d1d1c1a442ed7845bb4373a5a2182a7813f35a7e62a889aac3e1088160b23763"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/d51368d22517__GROK-HD-20261009_VIS-HD_v003_SHEET_9of9.jpg",
+      "bytes": 336915,
+      "sha256": "d51368d22517556eca1f9b036a324406f95410b966267af7561eee07b7ab1aa7"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/user_mouth_update_20261009/source/HD_MOUTH_USER_UPDATE_20261009_01.jpg",
+      "bytes": 222877,
+      "sha256": "b3a89714149fb27240728959f818c803d745165c8ab27ee884f6612052eff7cb"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/user_mouth_update_20261009/source/HD_MOUTH_USER_UPDATE_20261009_02.jpg",
+      "bytes": 237635,
+      "sha256": "84abd26d31ddd3f6367e85f8a46449e94ecc30efd4bc7b9425dd11acbe68e2f9"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/5b76b446306e__VIS-HD-01_REST.jpg",
+      "bytes": 360760,
+      "sha256": "5b76b446306e3f7e9f2dee5f206d28a264862b3ddf60818de773db622b59133a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/b35f9a0dc328__VIS-HD-02_MBP.jpg",
+      "bytes": 296636,
+      "sha256": "b35f9a0dc328ed1df7f59ad6e5121c1ff14e6cf8eefa3793aba6f33aac35a5dd"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/11bafdd2be5a__VIS-HD-03_AH.jpg",
+      "bytes": 300011,
+      "sha256": "11bafdd2be5ab7ae0a95a98723a564fd27344799f920eb320444f1963aa085c5"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/bb94cfd4b528__VIS-HD-04_EE.jpg",
+      "bytes": 346847,
+      "sha256": "bb94cfd4b528c3d83a7e9143bf2f752e3b0a361fce27d258d22854e628eaad28"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/8fd90be71d79__VIS-HD-05_OH.jpg",
+      "bytes": 274693,
+      "sha256": "8fd90be71d79587db2e63f29c452a33ae7d69dc18f38b5648545dcbb43753708"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/860c70ea1081__VIS-HD-06_OO-W.jpg",
+      "bytes": 258044,
+      "sha256": "860c70ea1081ea3027cde03ec635cd5da96c08f7f3f6a8cfff8323d414df32f5"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/9168d102c9f4__VIS-HD-07_F-V.jpg",
+      "bytes": 412867,
+      "sha256": "9168d102c9f4ce331853666a566ae36050c0ce4777752405a216889546d558d4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/88d5651aedcf__VIS-HD-08_L-TH.jpg",
+      "bytes": 354355,
+      "sha256": "88d5651aedcf2930c0d2578e4bc4f57252c1ea3b86ebea2bff6374158387dbae"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/305909fd6697__VIS-HD-09_S-T-K.jpg",
+      "bytes": 349983,
+      "sha256": "305909fd6697e1ab1f8c11fb91864bece95d6f725202c95e18bedcf474b0d186"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/074dcb2fe720__VIS-HD-10_CH-SH.jpg",
+      "bytes": 337566,
+      "sha256": "074dcb2fe720c655888ecebc690ccce49a08ce8b92d8120de734e8b13e1b46a6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/6674cb3c9b70__VIS-HD-11_GRIN.jpg",
+      "bytes": 345490,
+      "sha256": "6674cb3c9b70c13f31ca38878b6072525af9b52f092bf2d56ee04a064996e6b8"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/397e5bd66681__VIS-HD-12_SHOUT.jpg",
+      "bytes": 300633,
+      "sha256": "397e5bd66681e66f41dccbce8ca4a845d454752309b96bc6ba489a5513b4aeb1"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/content/41cf41b5b24e__CONTACT.jpg",
+      "bytes": 391091,
+      "sha256": "41cf41b5b24e02f75d8bb451aaf6d28daa0ee3926b602d40f670da0ac50e5db1"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/hon-dolo-ref-sheet-vest/HD-YEL-01-chest-up.jpg",
+      "bytes": 242712,
+      "sha256": "6c2e98bd112510f075696602c17da98368e7983e22ea076ee74c2264accd4faf"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/hon-dolo-ref-sheet-yellow/HD-YEL-02-full-front.jpg",
+      "bytes": 133358,
+      "sha256": "84bf85a0a2da42322a046fbd695a76f9137398a179b7bff899afbf7c7bfcc9bc"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/hon-dolo-ref-sheet-yellow/HD-YEL-03-full-left.jpg",
+      "bytes": 128764,
+      "sha256": "44e53ee582fcaef07de4882dfea81d6a30de69ddb8a1dc3eb24f4424ad5c7fb6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/hon-dolo-ref-sheet-yellow/HD-YEL-04-full-right.jpg",
+      "bytes": 125706,
+      "sha256": "436a4c39ea4b14f9b467ae892a1e03ff6542f1f92c38c06750f9885183931ef2"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/hon-dolo-ref-sheet-yellow/HD-YEL-05-full-back.jpg",
+      "bytes": 128005,
+      "sha256": "c6697a9754cb05f527120a09ae44105a9981375dc40716a2de9fa8cb955da6c4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/hon-dolo-ref-sheet-yellow/HD-YEL-SHEET.jpg",
+      "bytes": 249128,
+      "sha256": "2960f32bad93c9a7aaab9a42547d7a47ba64fda6a4d58c4b333d7fde6865e85a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/inspiration/hon-dolo-ref-sheet-yellow/REF-yellow-source.jpg",
+      "bytes": 193846,
+      "sha256": "de9bcb6562a595af5b8d545091b38845713725edebf2b6ac0546654b8cae91d4"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-002.jpg",
+      "bytes": 237743,
+      "sha256": "194702e9e041362ddbe647083209e8ad5e4a7ac696defa2193c842cf60563a9f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-007.jpg",
+      "bytes": 250620,
+      "sha256": "ba27929770216e19c42cdddd02897ac40184ca9e74b7927176655583aa1551bd"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-001.jpg",
+      "bytes": 212039,
+      "sha256": "883bf1079583b95857865cd1934dccb07ea01f6280596e80ff40e2f546c18e7d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-007.jpg",
+      "bytes": 185887,
+      "sha256": "96ba2c890ef9256cdcf3ecc82687bb00a27d3d37e088ba7cbc778c1458c666a8"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-002.jpg",
+      "bytes": 187449,
+      "sha256": "1f55da287bbf74168834922ab7fc13758ae0c196feba30ee63cfeab52fc43641"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-003.jpg",
+      "bytes": 264906,
+      "sha256": "5a2d17265fd6bfed30386cda96f01222cedd26999f716a62f9abdc070d2c41b0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C04-battle-light/C04-battle-light-005.jpg",
+      "bytes": 280636,
+      "sha256": "381883a6beb1ed5e280a2bd0c9c4b93fe624eb7d3613f5fdf90c1f15a08c120c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-004.jpg",
+      "bytes": 158288,
+      "sha256": "842566bfcfef466df088434bf09e88f145579b28fd697204769cbf6c06399c72"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-008.jpg",
+      "bytes": 216785,
+      "sha256": "324dc694f8a3d311f0844ddcb66345b16ef5b7f6aa3a49f5320531a5de0d1877"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C01-pilot-hover/C01-pilot-hover-010.jpg",
+      "bytes": 167397,
+      "sha256": "047f5df94092eba92385589213bc0a903478d83310f67166dbaa73016b67e350"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-013.jpg",
+      "bytes": 193236,
+      "sha256": "25d3e53bd2619bb65e71c9ecd0ea79c619864eb68c12efc44f36fcfe30cf7dc6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C02-captain-portrait/C02-captain-portrait-015.jpg",
+      "bytes": 223081,
+      "sha256": "ec339b70aa3f085ee32d3d1c0a380741f3f07af73a732d8c775a9137441590a0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C03-look-back-softened/C03-look-back-softened-006.jpg",
+      "bytes": 220107,
+      "sha256": "44f47d59c87af316f8fb613d33a6e467cebffbea0740889a498b2dae24998a27"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667.mp4",
+      "bytes": 1837099,
+      "sha256": "f8f2aa30265392634b67dbddebdc6ac0f05007de1abb2730f27d27513e72d378"
+    },
+    {
+      "path": "docs/notes/downloads/FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667_20261012004113.mp4",
+      "bytes": 2325046,
+      "sha256": "8d090aaa5a45cc42cb9d52e7b26d9419a8d8aa8c029c22a1859752ec7e0cf3c2"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-VIS-NATURAL-v001/01_VISEMES/VIS-LAG-20_SMIRK-RIGHT_Z_5.jpg",
+      "bytes": 331498,
+      "sha256": "afcdf01dce1fc1143471d4275475567f83a05899e5cc5c435000f5ed13a27f76"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-VIS-NATURAL-v001/01_VISEMES/VIS-LAG-20_SMIRK-RIGHT_r2_Z_5.jpg",
+      "bytes": 302929,
+      "sha256": "c111c9d91f8ff1c2da3f03b29dd4b0e3d8da66ed7b70cc3947db907048c3f137"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-VIS-NATURAL-v001/01_VISEMES/VIS-LAG-21_SNEER_Z_5.jpg",
+      "bytes": 284902,
+      "sha256": "00b8cf30f072b0a377f76df5ed78fba5d1f00039eac26fbf0f126cac99fa48f3"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-VIS-NATURAL-v001/01_VISEMES/VIS-LAG-22_SNARL_Z_5.jpg",
+      "bytes": 334778,
+      "sha256": "69298b8068e57282c0aa0af4980dec0186b22c03a64dc1b275e25d6b6cb70148"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-VIS-NATURAL-v001/01_VISEMES/VIS-LAG-22_SNARL_r2_Z_5.jpg",
+      "bytes": 277663,
+      "sha256": "13465b4300927d085ea99a0c24c1a0d78f63f43d225832b2f072f54277f8a51e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-VIS-NATURAL-v001/01_VISEMES/VIS-LAG-23_GRIMACE_Z_5.jpg",
+      "bytes": 322959,
+      "sha256": "3056ae61d9993a75d36e6b3fbbf1c5c9c4b7d11ba16259667bc95e44a3f1ed92"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-VIS-NATURAL-v001/01_VISEMES/VIS-LAG-24_CLENCHED-JAW_Z_5.jpg",
+      "bytes": 314588,
+      "sha256": "cb41547abc0f110ba5e66ac1e5eedb43d5659864072e71f37067e862917634f6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_review_20261007/review_copies/performance/gemini_generated_video_2e361055.mp4",
+      "bytes": 4883179,
+      "sha256": "fe4100afa5185a9d794f53744f18ef1fe144724a1e7b4cf942b3efa3418035ca"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/d98197d470ce__VIS-HD-11_GRIN.jpg",
+      "bytes": 303643,
+      "sha256": "d98197d470ceba82d430d257e99b687ad861bc4b7cf5a09b164088f77486bc79"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/c35561756692__HIP-PARKA-01_v001.jpg",
+      "bytes": 304954,
+      "sha256": "c3556175669257e2e52cfd00f04891a63f6a55302748dc843506b3eb66bc2c46"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-04-turnaround/SB-21-ship-turnaround.jpg",
+      "bytes": 395754,
+      "sha256": "88f20c203f5b3fc228f982ba9bc0ab11e08bbf912f881ff297436185665eed86"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/tattoo_placement_guide_20261009/received/clean_art/CA09_SCOUNDREL_lettering_1e8c.png",
+      "bytes": 371599,
+      "sha256": "f6420e93035eedc8bb28bda9e758d3ee0c6f1158c80bf33835882abe188b01a2"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/hon-dolo-ref-sheet-letterman/HD-LETTERMAN-01A-chest-up.jpg",
+      "bytes": 226168,
+      "sha256": "0f3a9ae0f6990834d65310e219d3d229c820c2bacf7245488a8434972775a701"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C05-lurch-grin/C05-lurch-grin-006.jpg",
+      "bytes": 226131,
+      "sha256": "11868f1948c1cebf328fd8626d2e0060fd91b037861c0b05092aa486f556341c"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-HD-FALCON-1000/C06-lurch-no-grin/C06-lurch-no-grin-014.jpg",
+      "bytes": 227262,
+      "sha256": "580d85f3fa90e67564fde90f1a584eca1007e6d9b6d973a5103e1cd250306934"
+    }
+  ],
+  "burgundyClarificationAuditPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_intake_20261013_latest_624e40c2-5d58-477d-bb07-5825da914219/BURGUNDY_CLARIFICATION.json",
+  "preservation": {
+    "prior178RecordsRetainedInExactImmutableBeforeSnapshot": true,
+    "all171UnchangedExistingRecordsSemanticallyAndTextuallyPreserved": true,
+    "allOmittedFieldsOf7ChangedExistingRecordsPreserved": true,
+    "allTopLevelMetadataAndFavoritesPreserved": true,
+    "bothPortraitRecordsExactlyPreserved": true,
+    "sourceExportBeforeSnapshotAndSavedPlanUnchanged": true,
+    "sourceMediaBytesUnchanged": true,
+    "noSiteBrowserWriterOrCriteriaEdits": true,
+    "noDispatchRegenerationOrMediaRemoval": true
+  },
+  "status": "applied_and_verified",
+  "burgundyClarificationAuditPin": {
+    "bytes": 1340,
+    "sha256": "3540650fabdf7eb0048b7ea219ef1ec6bfcd4afdcaf3ec39f6203c68cf7aa041"
+  }
+}

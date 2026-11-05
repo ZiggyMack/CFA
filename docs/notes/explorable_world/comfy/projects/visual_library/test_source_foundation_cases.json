@@ -1,0 +1,1286 @@
+[
+  {
+    "name": "canonical detailed_design scene",
+    "expectedState": "detailed",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "first_frame",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "preliminary scene",
+    "expectedState": "preliminary",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "preliminary",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "first_frame",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "verification scene",
+    "expectedState": "detailed",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "verification",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "first_frame",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "production scene retains exact stage",
+    "expectedState": "detailed",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "production",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "first_frame",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "missing recorded maturity does not use category fallback",
+    "expectedState": "unrecorded",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "first_frame",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "missing maturity and scope",
+    "expectedState": "unrecorded",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "first_frame",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "no selected frame despite linked production art",
+    "expectedState": "no_frame",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1",
+        "materials": [
+          {
+            "assetID": "fixture:scene",
+            "role": "inspiration"
+          }
+        ]
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": []
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "missing selected asset",
+    "expectedState": "unresolved",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "first_frame",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "changed hash",
+    "expectedState": "changed",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "first_frame",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "changed bytes",
+    "expectedState": "changed",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 101,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "first_frame",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "Production detail is not a scene",
+    "expectedState": "unresolved",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "production",
+          "defaultReferenceScope": "detail"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "first_frame",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "Production outfit is not a scene",
+    "expectedState": "unresolved",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "production",
+          "defaultReferenceScope": "outfit"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "first_frame",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "Production identity is not a scene",
+    "expectedState": "unresolved",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "production",
+          "defaultReferenceScope": "identity"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "first_frame",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "Production dental_mouth_only is not a scene",
+    "expectedState": "unresolved",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "production",
+          "defaultReferenceScope": "dental_mouth_only"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "first_frame",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "documented from scratch",
+    "expectedState": "from_scratch",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "from_scratch",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": []
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "documented image free",
+    "expectedState": "not_required",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "image_free",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": []
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "undocumented image free is unresolved",
+    "expectedState": "unresolved",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "image_free",
+            "evidence": null,
+            "inputs": []
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "edit using source still",
+    "expectedState": "detailed",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "edit",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "source_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "extend requires source video",
+    "expectedState": "unresolved",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "extend",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "extend selected video",
+    "expectedState": "detailed",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "video",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "extend",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "source_video",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "mixed required ingredients",
+    "expectedState": "mixed",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        },
+        {
+          "id": "fixture:identity",
+          "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "bytes": 90,
+          "kind": "image",
+          "storyboardStage": "preliminary",
+          "defaultReferenceScope": "identity"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "ingredients",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "source_frame",
+                "required": true
+              },
+              {
+                "assetID": "fixture:identity",
+                "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+                "bytes": 90,
+                "role": "identity_reference",
+                "required": true
+              }
+            ],
+            "requiredRoles": [
+              "source_frame",
+              "identity_reference"
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "declared required role missing",
+    "expectedState": "unresolved",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "ingredients",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ],
+            "requiredRoles": [
+              "start_frame",
+              "outfit"
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "conflicting selections",
+    "expectedState": "unresolved",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "first_frame",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          },
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "first_frame",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {},
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "exact current review stage and defects",
+    "expectedState": "preliminary",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "first_frame",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {
+        "fixture:scene": {
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "storyboardStage": "preliminary",
+          "workingReference": null,
+          "status": "needs_fixes",
+          "note": "Fixture defect: piercing absent."
+        }
+      },
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "outdated review not applied to new image",
+    "expectedState": "detailed",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": [
+          {
+            "project": "hon",
+            "storyID": "fixture:story",
+            "shotID": "S01-1",
+            "mode": "first_frame",
+            "evidence": {
+              "source": "Fixture only: explicit exact-shot selection"
+            },
+            "inputs": [
+              {
+                "assetID": "fixture:scene",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "bytes": 100,
+                "role": "start_frame",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": {
+        "fixture:scene": {
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "storyboardStage": "preliminary"
+        }
+      },
+      "sceneReviews": []
+    }
+  },
+  {
+    "name": "saved exact story selection",
+    "expectedState": "detailed",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": []
+      },
+      "reviews": {},
+      "sceneReviews": [
+        {
+          "project": "hon",
+          "storyID": "fixture:story",
+          "shotID": "S01-1",
+          "updatedAt": "2026-10-29",
+          "ingredients": [
+            {
+              "kind": "reference",
+              "assetID": "fixture:scene",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "bytes": 100,
+              "role": "start_frame",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "same named shot from another story",
+    "expectedState": "no_frame",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": []
+      },
+      "reviews": {},
+      "sceneReviews": [
+        {
+          "project": "hon",
+          "storyID": "other:story",
+          "shotID": "S01-1",
+          "updatedAt": "2026-10-29",
+          "ingredients": [
+            {
+              "kind": "reference",
+              "assetID": "fixture:scene",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "bytes": 100,
+              "role": "start_frame",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "unqualified legacy shot is not adopted",
+    "expectedState": "no_frame",
+    "arguments": {
+      "shot": {
+        "shotID": "S01-1"
+      },
+      "project": "hon",
+      "storyID": "fixture:story",
+      "assets": [
+        {
+          "id": "fixture:scene",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 100,
+          "kind": "image",
+          "category": "storyboard",
+          "storyboardStage": "detailed_design",
+          "defaultReferenceScope": "scene"
+        }
+      ],
+      "model": {
+        "bindings": []
+      },
+      "reviews": {},
+      "sceneReviews": [
+        {
+          "project": "hon",
+          "storyID": null,
+          "shotID": "S01-1",
+          "updatedAt": "2026-10-29",
+          "ingredients": [
+            {
+              "kind": "reference",
+              "assetID": "fixture:scene",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "bytes": 100,
+              "role": "start_frame",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

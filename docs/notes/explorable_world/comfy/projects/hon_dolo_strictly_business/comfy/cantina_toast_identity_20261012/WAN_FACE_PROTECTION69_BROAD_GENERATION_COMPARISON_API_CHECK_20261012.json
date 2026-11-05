@@ -1,0 +1,177 @@
+{
+  "createdAtUTC": "2026-10-13T01:14:08.638788+00:00",
+  "scope": "Actual UI-exported compiled API; static validation only, no comparison run.",
+  "actualAPI": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\comfy\\cantina_toast_identity_20261012\\WAN_FACE_PROTECTION69_BROAD_GENERATION_COMPARISON_API_ACTUAL_20261012.json",
+  "actualAPIBytes": 14666,
+  "actualAPISHA256": "3fb760f05d72d5eae06d40000ea051a60ad9d44537d2bd9d2e6837c5d7583a01",
+  "exactTwoInputDiffPass": true,
+  "changes": [
+    {
+      "node": "275",
+      "field": "inputs",
+      "before": {
+        "color": "0, 0, 0",
+        "device": "cpu",
+        "image": [
+          "212",
+          0
+        ],
+        "mask": [
+          "9006",
+          0
+        ]
+      },
+      "after": {
+        "color": "0, 0, 0",
+        "device": "cpu",
+        "image": [
+          "212",
+          0
+        ],
+        "mask": [
+          "1833034495877259",
+          0
+        ]
+      }
+    },
+    {
+      "node": "232:62",
+      "field": "inputs",
+      "before": {
+        "width": [
+          "159",
+          0
+        ],
+        "height": [
+          "160",
+          0
+        ],
+        "length": 69,
+        "batch_size": 1,
+        "continue_motion_max_frames": 5,
+        "video_frame_offset": 0,
+        "positive": [
+          "21",
+          0
+        ],
+        "negative": [
+          "1",
+          0
+        ],
+        "vae": [
+          "3",
+          0
+        ],
+        "clip_vision_output": [
+          "9",
+          0
+        ],
+        "reference_image": [
+          "10",
+          0
+        ],
+        "face_video": [
+          "100",
+          0
+        ],
+        "pose_video": [
+          "101",
+          0
+        ],
+        "background_video": [
+          "275",
+          0
+        ],
+        "character_mask": [
+          "9006",
+          0
+        ]
+      },
+      "after": {
+        "width": [
+          "159",
+          0
+        ],
+        "height": [
+          "160",
+          0
+        ],
+        "length": 69,
+        "batch_size": 1,
+        "continue_motion_max_frames": 5,
+        "video_frame_offset": 0,
+        "positive": [
+          "21",
+          0
+        ],
+        "negative": [
+          "1",
+          0
+        ],
+        "vae": [
+          "3",
+          0
+        ],
+        "clip_vision_output": [
+          "9",
+          0
+        ],
+        "reference_image": [
+          "10",
+          0
+        ],
+        "face_video": [
+          "100",
+          0
+        ],
+        "pose_video": [
+          "101",
+          0
+        ],
+        "background_video": [
+          "275",
+          0
+        ],
+        "character_mask": [
+          "1833034495877259",
+          0
+        ]
+      }
+    }
+  ],
+  "allOtherNodesInputsAndMetadataExactlyMatchBaseline": true,
+  "compiledNodes": 41,
+  "allReachableFinalAncestors": 41,
+  "cycles": false,
+  "KSamplerIDs": [
+    "232:63"
+  ],
+  "SaveVideoIDs": [
+    "3365632822813953"
+  ],
+  "finalStrictMask": [
+    "9006",
+    0
+  ],
+  "generationBroadMask": [
+    "1833034495877259",
+    0
+  ],
+  "sourceTrimIndex": 6,
+  "frames": 69,
+  "width": 768,
+  "height": 432,
+  "fps": 24,
+  "batchSize": 1,
+  "seed": 42,
+  "steps": 6,
+  "cfg": 1,
+  "sampler": "euler",
+  "scheduler": "simple",
+  "denoise": 1,
+  "allFourActualMediaBindingsUnchanged": true,
+  "modelReferencesUnchanged": true,
+  "decodedPostTrimSourceRouteUnchanged": true,
+  "comparisonRunSubmitted": false,
+  "modelOutputSuccessValidated": false
+}

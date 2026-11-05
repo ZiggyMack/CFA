@@ -1,0 +1,94 @@
+{
+  "sourceCatalogSHA256": "4491f7f6f13a7e00a8559a76d9a7beb242b2a6ffbe5733dc7be2a15fc38f0686",
+  "previousSourceCatalogSHA256": "e618ffe66c570adf7b2e25a986f9efbb55a0e47afd3716d40dd14ec3f6c890f2",
+  "changedKeys": [
+    "assets",
+    "writerDevelopment",
+    "reviewRequests",
+    "storyboardStories",
+    "missionControl",
+    "storyboardStructure"
+  ],
+  "reviewsUnchanged": true,
+  "reviewCount": 320,
+  "frozenIntakeUnchanged": true,
+  "oldAssetsUnchanged": true,
+  "newDocuments": 10,
+  "plannedShots": 70,
+  "sequences": 14,
+  "documentedKitchenBlocks": 11,
+  "blankTemplateFields": 28,
+  "runtime": "D:\\Documents\\CFA\\.cache\\runtimes\\python314\\python.exe",
+  "localShellBuild": "38330b6f9c",
+  "hostedAssets": 4669,
+  "snapshotSHA256": "9144ce81b882465a2030adb0e66754417d8878ea4e02af61de01d77a36d4c816",
+  "verifiedMedia": 9002,
+  "mediaPathChanges": [],
+  "unavailableLinks": 5,
+  "reviewsPreserved": true,
+  "reviewSeedPreserved": true,
+  "sceneReviewsPreserved": true,
+  "buildID": "362bacdb3d4a41d9d5d8",
+  "commit": "9c2f4a09a35c6d970359eefd3a8ac6a38c72bed9",
+  "remoteVerified": "9c2f4a09a35c6d970359eefd3a8ac6a38c72bed9",
+  "parent": "4be1350d4bbdc55889f31cd2aad1aad24d8eb661",
+  "status": "complete",
+  "liveURL": "https://algaib.streamlit.app/Full_Visual_Library",
+  "compactURL": "https://algaib.streamlit.app/",
+  "localStructureRoute": "#hon/storyboard/structure%3Ahon%3Astrictly-business",
+  "localTemplateRoute": "#hon/storyboard/template",
+  "navigation": "Storyboard → Structure & gaps → sequence / focus; Blank storyboard / shot template",
+  "tests": {
+    "sourceAdapter": 10,
+    "nativeAppInteraction": 1,
+    "nativeCatalogParity": 6,
+    "javascriptRenderer": "source and packaged snapshot passed",
+    "sceneReadiness": "11 scenarios passed",
+    "storySelector": "52 checks passed"
+  },
+  "futureEmptySlot": "A test-only 71st planned slot with no card or media renders all fields unknown and cites only the planning map. No production shot was added.",
+  "reviewSemantics": "320 saved decisions, seed, scene reviews, existing assets and frozen intake unchanged. No approvals, timing, dispatch or generation created. Only the four source-proposed parked-panel review requests are added; the optional 30-panel sweep stays unqueued.",
+  "sourceReconciliation": "Oct29 v2 task delta and verified addendum override their earlier proposals; posted writer bytes unchanged. DECISIONS_20261010.md differs from its earlier catalog hash, so its existing hosted evidence was retained instead of silently re-imported. No current structure fields depend on importing that changed file.",
+  "limits": [
+    "11 documented kitchen blocks include known gaps; they are not 11 completed or accepted packs.",
+    "Existing 29 unresolved bookkeeping/prepared links remain unchanged.",
+    "Cross-device reviews still use explicit export/import; this is not automatic cloud synchronization."
+  ],
+  "browserVerified": true,
+  "screenshots": [
+    "D:\\Documents\\CFA\\.cache\\story_structure_20261029\\live-structure.png",
+    "D:\\Documents\\CFA\\.cache\\story_structure_20261029\\live-template.png"
+  ],
+  "liveChecks": [
+    "Build token matches deployment",
+    "70 planned shots and14 sequences visible",
+    "Blank demonstration shows28 empty fields with no inherited story writings",
+    "S02 sequence filtering opens the ten authored shots",
+    "S02-9 exposes intentionally absent character and missing prompt separately",
+    "Source document opens from structured field",
+    "Compact live structure navigation loads without exception"
+  ],
+  "independentLiveReadback": {
+    "receipt": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\collaborators\\storyboard_skeleton_20261029\\LIVE_READBACK.json",
+    "checks": {
+      "url": "https://algaib.streamlit.app/Full_Visual_Library",
+      "build": "362bacdb3d4a41d9d5d8",
+      "blankRoute": "#hon/storyboard/template",
+      "structureRoute": "#hon/storyboard/structure%3Ahon%3Astrictly-business",
+      "blankFieldsObserved": 28,
+      "realStoryWritingsInBlank": false,
+      "plannedShotsObserved": 70,
+      "sequencesObserved": 14,
+      "kitchenBlocksDocumented": 11,
+      "missingPromptFilterObserved": 60,
+      "realCase": "S02-9: camera written, actor intentionally not needed, starting frame and clip prompt missing",
+      "reviewActionsTaken": false,
+      "generationSubmitted": false
+    }
+  },
+  "compactQACoverage": {
+    "liveBrowser": "Opened the deployed compact Storyboard → Structure & gaps view; observed 70 planned shots, 14 sequences, 11 documented blocks and the sequence selector without an error.",
+    "appTest": "Exercised S02 selection, missing-camera filtering and the 28-field blank template; saved reviews unchanged.",
+    "limits": "No physical-phone or mobile viewport test was performed. Compact blank-template interaction was tested with Streamlit AppTest, not separately in the live browser."
+  }
+}

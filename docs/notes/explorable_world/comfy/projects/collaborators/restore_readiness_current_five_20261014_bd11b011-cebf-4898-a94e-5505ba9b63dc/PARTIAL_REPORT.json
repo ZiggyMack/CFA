@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "createdAtUTC": "2026-10-14T13:37:14.563659Z",
+  "status": "partial_read_only_verification_full_restore_and_two_hour_rpo_unproved",
+  "scope": "Five CURRENT computer-synced folders only; separate CFA archives excluded. No upload, repair, backup, deletion or settings change.",
+  "localScan": {
+    "startUTC": "2026-10-14T13:25:11Z",
+    "endUTC": "2026-10-14T13:25:33Z",
+    "mtimeComparisonCutoffUTC": "2026-10-14T11:25:11Z",
+    "cutoffQualification": "Modification-time partition only, not a cloud-residency or recovery cutoff. Live inventory, not frozen.",
+    "roots": [
+      {
+        "path": "D:/Documents/CFA",
+        "files": 85955,
+        "logicalBytes": 15168750296,
+        "postCutoffFiles": 366,
+        "postCutoffBytes": 434495496
+      },
+      {
+        "path": "D:/Documents/Nyquist_Consciousness",
+        "files": 17868,
+        "logicalBytes": 9894576505,
+        "postCutoffFiles": 11,
+        "postCutoffBytes": 10355109
+      },
+      {
+        "path": "D:/Documents/Pan_Handlers",
+        "files": 2674,
+        "logicalBytes": 31497546,
+        "postCutoffFiles": 0
+      },
+      {
+        "path": "D:/Documents/VUDU_Fidelity",
+        "files": 235,
+        "logicalBytes": 1081273,
+        "postCutoffFiles": 0
+      },
+      {
+        "path": "D:/Documents/WHO_CARES",
+        "files": 4980,
+        "logicalBytes": 41177040,
+        "postCutoffFiles": 0
+      }
+    ],
+    "totalFiles": 111712,
+    "totalLogicalBytes": 25137082660,
+    "postCutoffFiles": 377,
+    "postCutoffLogicalBytes": 444850605,
+    "limitations": [
+      "Five unresolved CFA metadata errors; path-length diagnostic separately resolved 96 paths up to304 characters.",
+      "CFA hardlinks repeat many paths; later diagnostic measured40141 repeated paths and unique-file logical-byte bound6.144–6.174GB; these are not allocated bytes.",
+      "Nyquist later scan17,858files/9,894,567,985bytes shows inventory changed.",
+      "No offline/recall/reparse attributes encountered; absence of these attributes is not proof of cloud upload."
+    ]
+  },
+  "cloud": {
+    "computerURL": "https://drive.google.com/drive/u/1/folders/1nYKL-Rq3BGPWs7pAmGMcFPqS94d3SgRY",
+    "CFAURL": "https://drive.google.com/drive/u/1/folders/1IgiXVH-D58g7OWtDHy73ObovD8vZhTlc",
+    "freshHelperBrowserObservation": "Signed-in isolated helper tab displayed the five folders and CFA root, including .git and ordinary files with sizes. This is actual remote UI, not G: placeholders.",
+    "priorSuccessfulDownload": {
+      "checkedAtUTC": "2026-10-14T12:10:09.727Z",
+      "relativePath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/signal_prototype_20261013/take_002/FLOW-LAG-SIGNAL-002_original.mp4",
+      "bytes": 4310690,
+      "sha256": "38ff31d1e9de551509112e35eacad8b96804a6e3b65811fe2992b0f4d00f6e6c",
+      "source": "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/CLOUD_SAMPLE_VERIFICATION.json",
+      "qualification": "Only this selected ignored production output is proved byte-recoverable."
+    },
+    "newInboundDownloadAttempt": "CFA .gitignore Download control attempted once; documented download-event wait timed out; no new retrieved bytes confirmed. No retry/upload performed.",
+    "fullRecursiveRemoteManifest": "unavailable",
+    "remoteCountSizeHashComparison": "not established",
+    "metadataReviewRecordDownloadHashChecks": "not yet established",
+    "coverageBeforeAnyCutoff": "unproved"
+  },
+  "diagnostics": {
+    "source": "Official Google DriveFS Logs/drive_fs.txt status-only tail inspected read-only by helper delegate; no auth/cache/database or credential content read.",
+    "lastInspectedFileMtimeUTC": "2026-10-14T13:32:33Z",
+    "observations": [
+      {
+        "timeUTC": "2026-10-14T13:13:04.940Z",
+        "activeUploads": 0,
+        "activeDownloads": 0,
+        "operationQueueSize": 2,
+        "qualification": "Unmapped sync-engine block; neighboring block queue0; no five-root completion inference."
+      },
+      {
+        "timeUTC": "2026-10-14T13:29:54Z/13:29:55Z",
+        "localDifferUploadOperationCounts": [
+          54,
+          8
+        ],
+        "qualification": "Operation counts, not confirmed uploaded files or completion receipt."
+      },
+      {
+        "timeUTC": "2026-10-14T13:27:55Z/13:27:59Z",
+        "categories": [
+          "UNKNOWN/CANCELLED upload",
+          "LOCAL_FILE_NOT_FOUND"
+        ]
+      },
+      {
+        "throughUTC": "2026-10-14T13:28:09Z",
+        "category": "Repeated merge-task INVALID_ARGUMENT"
+      }
+    ],
+    "affectedRootMapping": "Only CFA root appeared plainly in current tail; error affected content and per-five-root queue/exclusion totals unresolved. Do not claim all five failed.",
+    "mountLimitation": "G:/Other computers denied in helper environment; not bypassed."
+  },
+  "cleanMachineRequirements": {
+    "insideRoots": "Repository code, documents, metadata and media if their actual bytes finished cloud upload; complete coverage not proven.",
+    "outsideRoots": [
+      "Reinstall Python/declared dependencies and Node>=18.17 for WHO_CARES Discord route; installed tools are outside project data.",
+      "Reestablish Google/Claude/provider/Discord account access and authentication; no credentials inspected.",
+      "Nyquist documents live Claude session history and plans outside its repo in user-profile .claude locations; current coverage by dated repository session-backup protocol is unverified."
+    ],
+    "limitedOpening": "Pan guide can open without GPU/API credentials; WHO_CARES Streamlit playtest does not need Discord credentials."
+  },
+  "nextVerification": "At a safe owner checkpoint inspect actual sync-status/errors/exclusions and their five-root mapping, obtain a remote inventory where supported, and independently retrieve/hash representative current review/metadata plus ignored media from the five current folders. Compare pre-cutoff paths/versions rather than inferring a two-hour RPO."
+}

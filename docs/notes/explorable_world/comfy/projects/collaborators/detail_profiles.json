@@ -119,12 +119,14 @@
       },
       {
         "id": "hon-chest-current",
-        "title": "Chest ship placement",
+        "title": "Ship tattoo - approved artwork alternatives",
         "kind": "tattoo",
         "location": "Upper chest / collar opening",
-        "status": "current_visible_placement_complete_art_unresolved",
-        "summary": "Use the visible ship in LOCK-FACE. #107 and #112/116/117/121 are reported but original file associations remain unverified. Hidden full drawing and calibrated physical size are not established.",
-        "assetIDs": [],
+        "status": "user_approved_alternative_artwork_transfer_unresolved",
+        "summary": "Ziggy accepts the six depicted ship variations on the source sheet as tattoo options; option 4 may be harder to reproduce. Keep these as alternatives, rather than forcing one drawing. Body references identify the upper-chest region; complete transfer bounds and calibrated size remain unverified.",
+        "assetIDs": [
+          "HD-RETURN-d430b5f72e9b"
+        ],
         "stencilAssetIDs": [],
         "exampleAssetIDs": [
           "HD-DROP-ef5d59a6402e"
@@ -133,14 +135,34 @@
           "HD-DROP-a428b6f6fa65",
           "HD-DROP-ef58d546cccd"
         ],
-        "artworkAssetIDs": [],
-        "approvedArtworkAssetIDs": [],
+        "artworkAssetIDs": [
+          "HD-RETURN-d430b5f72e9b"
+        ],
+        "approvedArtworkAssetIDs": [
+          "HD-RETURN-d430b5f72e9b"
+        ],
         "artworkApproval": {
-          "status": "unreviewed",
-          "source": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval."
+          "status": "user_approved_alternatives",
+          "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+          "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+          "assetID": "HD-RETURN-d430b5f72e9b",
+          "sourceSHA256": "d430b5f72e9b3ca4271229533880f24ba9b6c97adaca89fc8bc36ce77d7c9717",
+          "userNote": "fine with the tattoo looking like any of these versions...(#4 may be hard to pull of though hahah)",
+          "scope": "Keep the depicted tattoo variations as acceptable options per user; option 4 may be harder to reproduce. Do not force a single variant or claim execution verified.",
+          "wholeCharacterApproval": false
         },
-        "artworkApprovalSource": "No explicit user approval of this standalone artwork is recorded. Source or provider selection history is separate from artwork approval.",
-        "needsArtwork": true
+        "artworkApprovalSource": "Direct user dashboard decision 2026-10-09T18:37:19.302Z; six alternatives on d430 source sheet only.",
+        "needsArtwork": false,
+        "artworkAssessmentHistory": [
+          {
+            "recordedAtUTC": "2026-10-12T11:43:41.253357Z",
+            "reason": "Restore existing scoped user sheet approval omitted by the earlier artwork profile. No new user decision or review-file mutation.",
+            "earlierStatus": "current_visible_placement_complete_art_unresolved",
+            "earlierSummary": "Use the visible ship in LOCK-FACE. #107 and #112/116/117/121 are reported but original file associations remain unverified. Hidden full drawing and calibrated physical size are not established.",
+            "earlierApprovedArtworkAssetIDs": [],
+            "earlierNeedsArtwork": true
+          }
+        ]
       },
       {
         "id": "hon-ship-perspective",
@@ -202,7 +224,7 @@
         "assetIDs": [],
         "stencilAssetIDs": [],
         "exampleAssetIDs": [
-          "HD-MOUTH-UPDATE-20261009-01",
+          "HD-B-91ef00348229",
           "HD-MOUTH-UPDATE-20261009-02",
           "HD-DROP-ef5d59a6402e"
         ],
@@ -216,7 +238,7 @@
         "needsArtwork": false,
         "referenceSummaryBefore20261009Update": "Two slightly extended gold canine caps; other upper teeth natural. No full gold top row or oversized vampire fangs. Small mouth view cannot resolve fabrication geometry.",
         "latestUserReferenceAssetIDs": [
-          "HD-MOUTH-UPDATE-20261009-01",
+          "HD-B-91ef00348229",
           "HD-MOUTH-UPDATE-20261009-02"
         ],
         "latestUserReferenceAssessment": {
@@ -245,7 +267,7 @@
         "assetIDs": [],
         "stencilAssetIDs": [],
         "exampleAssetIDs": [
-          "HD-MOUTH-UPDATE-20261009-01",
+          "HD-B-91ef00348229",
           "HD-MOUTH-UPDATE-20261009-02",
           "HD-DROP-ef5d59a6402e"
         ],
@@ -259,7 +281,7 @@
         "needsArtwork": false,
         "referenceSummaryBefore20261009Update": "Silver/chrome lower grill. Older iced/full-gold closeups are not automatic current replacements.",
         "latestUserReferenceAssetIDs": [
-          "HD-MOUTH-UPDATE-20261009-01",
+          "HD-B-91ef00348229",
           "HD-MOUTH-UPDATE-20261009-02"
         ],
         "latestUserReferenceAssessment": {
@@ -316,7 +338,7 @@
         "assetIDs": [],
         "stencilAssetIDs": [],
         "exampleAssetIDs": [
-          "HD-MOUTH-UPDATE-20261009-01",
+          "HD-B-91ef00348229",
           "HD-MOUTH-UPDATE-20261009-02",
           "HD-DROP-ef5d59a6402e"
         ],
@@ -330,7 +352,7 @@
         "needsArtwork": false,
         "referenceSummaryBefore20261009Update": "Keep two lower lip rings as shown by the current anchor. Do not drop or duplicate them across angles.",
         "latestUserReferenceAssetIDs": [
-          "HD-MOUTH-UPDATE-20261009-01",
+          "HD-B-91ef00348229",
           "HD-MOUTH-UPDATE-20261009-02"
         ],
         "latestUserReferenceAssessment": {

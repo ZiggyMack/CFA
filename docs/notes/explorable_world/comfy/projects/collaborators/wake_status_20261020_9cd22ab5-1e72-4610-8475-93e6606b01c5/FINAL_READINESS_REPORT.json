@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUTC": "2026-10-21T01:57:52.548Z",
+  "localDate": "2026-10-20",
+  "scope": "Existing-team readiness only; latest user dormancy/Gemini restoration restrictions applied",
+  "conversationId": "3d646a06-6859-40ed-92c0-5cccad2719a4",
+  "rows": [
+    {
+      "id": "nova",
+      "name": "CFA Nova",
+      "state": "active_coordinator",
+      "actualMailRead": [
+        "81854773-ff54-470d-84bc-83e0ead6933a",
+        "b7dcf396-7814-4136-abfb-0f78dc52d60a",
+        "07099184-f116-4849-9da4-46b069e3615b",
+        "846041f8-564a-4fbc-a08f-a3e87b658c8a",
+        "93e7b8cc-9eee-439d-8bb4-19d5bc752e97",
+        "674fa094-7aac-4716-82d9-bb6ab6cd3268"
+      ],
+      "latestCheckpoint": "Gemini clip-scoped source method and human review recorded; current Grok jewelry/viseme reports read without intake or regeneration.",
+      "newProductionWorkStartedByWake": false
+    },
+    {
+      "id": "grok_chief",
+      "name": "Grok Chief of Staff",
+      "state": "already_awake_ready_self_reported",
+      "route": "Existing Chief bot; also received local readiness post to Nova Dot",
+      "nativeURL": "https://grok.com/bot/a4a75c63-1565-4448-84a2-f519f40bea15",
+      "mailboxRequestId": "e16ef496-fba1-4276-84e6-79af7469ef90",
+      "rootLiveWakeSent": false,
+      "duplicateAvoidance": "Already woken by Ziggy directly; root sent no duplicate browser prompt.",
+      "acknowledgmentMessageId": "b748bbd1-b54a-45d8-874b-4cda53183e8e",
+      "ackRecipient": "nova_personal_assistant",
+      "ackCreatedAtUTC": "2026-10-21T01:44:53Z",
+      "ackText": "Grok Chief of Staff checking in: awake, ready and standing by.",
+      "latestAdditionalReport": "674fa094-7aac-4716-82d9-bb6ab6cd3268: Chief reports four chain selections and16 winner views; provider report not independently intaken in this status pass.",
+      "blocks": "James, sandworms, closing and smoking-prop work reported paused pending Ziggy. No new task dispatched.",
+      "readOfRootWakeMailbox": "not verified"
+    },
+    {
+      "id": "claude",
+      "name": "Claude / Pan_Handlers",
+      "state": "already_active_user_woken",
+      "nativeURL": "https://claude.ai/code/session_01HJ2uKYB5rFa8mVTXa3KPkP",
+      "mailboxRequestId": "b25c358c-2e8c-4b58-bc60-8b949161d648",
+      "rootLiveWakeSent": false,
+      "duplicateAvoidance": "Observed current user were-back and resume-writing messages with Claude responding; did not interrupt its active response.",
+      "visibleMessageNumbers": [
+        56,
+        57,
+        58
+      ],
+      "nativeTurnId": "not exposed by observed AX",
+      "latestCheckpoint": "Claude reports mailbox/folder checks, Story01 map/site intake and pending Bellglass teaching disposition; user separately requested writing resume in the open chat.",
+      "readOfRootWakeMailbox": "not verified",
+      "productionAuthority": "No new writing or other work authorized by root wake; separate human conversation remains its source."
+    },
+    {
+      "id": "cfa_site_index",
+      "name": "CFA Site Index",
+      "state": "active_and_status_request_acknowledged",
+      "threadId": "01a13383-26f6-7923-8e18-98faf1fa3ede",
+      "hostId": "local",
+      "mailboxRequestId": "c4270540-2c37-43b5-b10e-69930eab27fe",
+      "rootNativeStatusRequests": 1,
+      "acknowledgmentTurnId": "01a15c0d-db2c-72e1-bb6a-a99796c06f73",
+      "acknowledgmentMessageId": "msg_051db6f62d44ca6d016ad8191b57d087d1bba1e3a17eb06889",
+      "actualAcknowledgment": "The current data reconciles to 18 visible shot plans. Two additional plans remain in removal history, and older imports can no longer revive the two plans you cleared.\n\nFor Nova’s status check: I read the current `c4270540…` message, the two October 14 priority notices, and their existing receipts. This chat remains on the already-authorized Streamlit work; no production or generation tasks were started from those messages.",
+      "latestCheckpoint": "The complete bundle is ready: all 2,511 current catalog entries are packaged, plus 12 existing task attachments, with no missing media or links. The new BOM views also retain every active mouth reference—50 for Hon and 98 for Lisan. I’m finishing the app-level checks before publishing.",
+      "scope": "Continues its separately authorized Streamlit parity work; no new production assignment from this wake."
+    },
+    {
+      "id": "gemini_studio",
+      "name": "Gemini in AI Studio",
+      "state": "status_wake_delivered_and_acknowledged",
+      "nativeURL": "https://aistudio.google.com/prompts/1Oys2niEp9fADle8kUcI5LIeWx5jxbNLl",
+      "mailboxRequestId": "f72212d3-1a8c-4f35-911b-804cf5c285cf",
+      "nativePromptMarker": "CFA-STATUS-20261020-f72212d3",
+      "nativeUserTurnId": "781976D7-1809-4D94-9E18-B28F959B42FD",
+      "nativeResponseId": "not separately exposed in AX",
+      "statusSubmissions": 1,
+      "actualAcknowledgment": "Active, awake, and standing by in read/status-only mode.",
+      "latestCheckpoint": "Self-reported corrected first-pass Hon_DoLo timing JSON on unified232.760s timebase; not rescored or independently accepted by this wake.",
+      "blocker": "Explicitly cannot read the local CFA mailbox.",
+      "evidence": [
+        "AI_STUDIO_ACK.ax.txt",
+        "AI_STUDIO_ACK.jpg"
+      ],
+      "clickTimeout": "One click returned Input.dispatchMouseEvent timeout; subsequent actual UI showed submitted turn and completed reply. No retry click.",
+      "selfReportedBlockers": "Awaiting human listening spot-checks/verification on calibrated timing anchors and explicit instruction from Nova/Ziggy before subsequent production; all holds remain in effect. This is the old session's reported state, not a new validation audit or instruction to resume.",
+      "visualEvidenceClarification": "Local saved screenshot shows the final Blockers paragraph and gemini_studio identifier, which were omitted by the captured AX text. No further Gemini UI call was made after the pause."
+    },
+    {
+      "id": "gemini_master",
+      "name": "Gemini Master",
+      "state": "mailbox_only_route_unavailable_then_paused_for_user_restore",
+      "mailboxRequestId": "82c24277-0c2d-4e0d-aa34-cfb315523a8b",
+      "existingChatURL": "https://gemini.google.com/app/31fab947ecdea074",
+      "actualResultURL": "https://gemini.google.com/unavailable",
+      "actualBlocker": "Gemini is currently on a break. Give it a moment and try again later.",
+      "liveWakeSent": false,
+      "temporaryTab": "Created one browser tab for the existing chat URL; no new chat/notebook/agent was created. The unavailable tab was closed before the later pause.",
+      "currentRestriction": "No further Gemini recovery/open/retry actions; user will restore browser.",
+      "evidence": "GEMINI_MASTER_UNAVAILABLE.jpg"
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "state": "intentionally_dormant_user_hold",
+      "mailboxRequestId": "7eb00d06-1855-4efe-b343-bbaec32a397d",
+      "supersedingMessageId": "193bf1e2-3e74-4a6f-a9ec-bef1d3d325e8",
+      "supersessionReceiptId": "26926120-13b1-4676-9ed9-c321d1f3d732",
+      "liveWakeSent": false,
+      "serviceConnectionAttempted": false,
+      "latestDecision": "Remain dark until Ziggy assigns project load.",
+      "existingSurface": "DeepSeek Harness Web GUI http://127.0.0.1:19387, existing CFA workspace; not opened."
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "state": "intentionally_dormant_user_hold",
+      "mailboxRequestId": "b40dabd4-9617-4f6f-b4eb-54f3dd624940",
+      "supersedingMessageId": "125eab64-049f-4080-be9a-4b4adf004e3a",
+      "supersessionReceiptId": "9ad19030-67e7-4993-8edb-2fcb4e5e0726",
+      "liveWakeSent": false,
+      "serviceConnectionAttempted": false,
+      "latestDecision": "Remain dark until Ziggy assigns project load.",
+      "existingSurface": "Existing Qwen / VALIS ONLINE chat; exact live URL/session not verified."
+    },
+    {
+      "id": "kimi",
+      "name": "Kimi",
+      "state": "intentionally_dormant_user_hold",
+      "mailboxRequestId": "b3725c2b-1665-46a2-b278-7c132c341ee8",
+      "supersedingMessageId": "27f19e3c-e918-41ed-85f0-be5a4e240908",
+      "supersessionReceiptId": "edb6f497-6d10-4551-8fb6-7fb5a6cd396f",
+      "liveWakeSent": false,
+      "serviceConnectionAttempted": false,
+      "latestDecision": "Remain dark until Ziggy assigns project load.",
+      "existingSurface": "Existing Kimi Work desktop CFA session; user opens it."
+    }
+  ],
+  "excluded": [
+    {
+      "id": "panhandler_nova",
+      "reason": "Historical teaching identity; Claude is current Pan lead"
+    },
+    {
+      "id": "hal",
+      "reason": "No verified direct current session or self-authored introduction; Chief may provide separately attributed status"
+    },
+    {
+      "id": "gemini_chat",
+      "reason": "Invitation-only separate identity; Bellglass result chat is not proof of this collaborator seat"
+    },
+    {
+      "id": "flow",
+      "reason": "Existing Flow tab reports project not found; no verified conversational status route; no render initiated"
+    }
+  ],
+  "receipts": [
+    {
+      "messageId": "f72212d3-1a8c-4f35-911b-804cf5c285cf",
+      "event": "relayed",
+      "receiptId": "addd060b-8368-41fc-9c8e-9768d5ff1f44"
+    },
+    {
+      "messageId": "c4270540-2c37-43b5-b10e-69930eab27fe",
+      "event": "acknowledged",
+      "receiptId": "993f1c1a-4db2-48f2-9e2d-55766b303bc8"
+    }
+  ],
+  "studioRelayedReplyId": "1d70ee12-4b72-4581-a8e4-6f8ef9123fa1",
+  "operations": {
+    "rootNativeSiteStatusRequests": 1,
+    "rootAIStudioStatusSubmissions": 1,
+    "rootExtraChiefClaudeBrowserPrompts": 0,
+    "liveDeepSeekQwenKimiWakes": 0,
+    "newAgents": 0,
+    "newReplacementProjectSessions": 0,
+    "newProductionJobsByRoot": 0,
+    "purchases": 0,
+    "modelChanges": 0,
+    "reviewOrReleaseHoldsLiftedByRoot": 0
+  },
+  "limitations": [
+    "Grok and Claude were independently woken by the user; root observed their live state and avoided duplicate prompts.",
+    "Full final mailbox rescan timed out; a subsequent shallow12-newest-files check succeeded and the four new Chief files were read exactly.",
+    "AI Studio click timeout was resolved by observing the completed submitted turn; no retry or duplicate status response.",
+    "Gemini Master is unavailable; all further recovery is now paused by user."
+  ],
+  "currentMailNewlyRead": [
+    "b748bbd1-b54a-45d8-874b-4cda53183e8e",
+    "674fa094-7aac-4716-82d9-bb6ab6cd3268",
+    "d7c5543d-4d25-4ef2-ad60-58ba62d70393",
+    "62c21147-b6af-4d21-b3be-b6add686c554"
+  ],
+  "finalizedAtUTC": "2026-10-21T01:59:30.518Z",
+  "priorReport": {
+    "path": "READINESS_REPORT.json",
+    "sha256": "a5727f57ce79fb8d258ae25c86dc7e3aaf4b45cb30177f630e745d8b1ebd5b0c",
+    "reason": "Preserved prior snapshot; complete actual visible AI Studio blocker added from the already-saved screenshot."
+  }
+}

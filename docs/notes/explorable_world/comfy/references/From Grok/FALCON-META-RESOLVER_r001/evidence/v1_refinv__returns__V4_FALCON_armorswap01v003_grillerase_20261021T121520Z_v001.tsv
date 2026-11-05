@@ -1,0 +1,36 @@
+# V_4 Falcon QA — HD-ARMOR-SWAP-01 v003 — grill + erase lane (NON-SPEC final per Chief: glyph kept, no pistol). Ship ink NOT judged (V_2 lane).
+# target	/workspace/hon-dolo-armor-swap/HD-ARMOR-SWAP-01_v003.jpg	a1d0426da69702745a74801f3824f4989eee6df3877ce384e9a674b62084d44d (== render_v003/cand/try_h_q97.jpg)
+# original	/workspace/hon-dolo-armor-swap/HD-ARMOR-SWAP-01.jpg	aea8323ad9b2969839ad2581b153f1343e9324047645148ca6140f790033af24
+# masks used	render_v003/cand/try_h_q97_{patchmask 19e5a5e5,chainmask b6d832df,starmask b1264aa1,shipm 5ce13056,exclmask 1a07c71b}.png; grill region = patchmask ∩ x560-670,y285-340 (1073 px)
+# grill patch f3559c5f / mask 57434af0: verified only via compose log (script asserts both shas; GRILL env unset). /workspace/z2_armor_grill/ not opened (outside search scope).
+# tooth IDs (image coords; midline x612/613): T1 img-left canine x570-584 | T2 img-left lateral x583-594 | T3 central x595-612 | T4 central x613-632 | T5 img-right lateral x632-644 | T6 img-right canine x645-656 | T7 white x656-666
+lane	check	box	metric	value	ref/limit	result	note
+GRILL	upper centrals white	T3 x595-612 y302-329; T4 x613-632 y299-326	gold px% / HSV median	T3 74.3% H18 S137 V168; T4 40.3% (specular) H19 S66 V230; d>12 42/63 px (edge touch-ups only)	white (cf T7 H8 S27 V186)	FAIL	both centrals still the original gold; patch did not whiten them (claim 'white centrals' not met)
+GRILL	laterals gold	T2 x583-594; T5 x632-644	gold px%	T2 84.9% S178; T5 49.0% S99 (unchanged orig)	gold	PASS	
+GRILL	img-right canine gold	T6 x645-656 y297-325	gold px% / HSV	82.6% H18 S104 V171 (orig white S24)	gold	PASS	new gold; hp-std 25.4 (T5 18.8) not blotchy
+GRILL	img-left canine gold	T1 x570-584 y308-332	gold px% / diff	58.7% (orig 34.4% = neighbour spill); 68 px d>12 in a blotch x572-582 y313-330	even gold	FAIL	partial blotchy tint on a white tooth, not a gold canine
+GRILL	canine length	T6 vs T5/T7; T1 vs T2	bottom edge y (median)	T6 325 vs T5 322, T7 322 => +3 px; T1 325 vs T2 330 => -5 px (T1 not lengthened)	slightly longer	T6 PASS / T1 n.a.	claimed '+3 px' is the img-right canine (T6), confirmed
+GRILL	lower row silver	x585-650 y326-340 (V>140, n=639)	HSV median	H10 S37 V181 (orig identical: H10 S37 V181.5)	gold H18-20 S99-178; white T7 H8 S27 V186	ADVISORY-ACCEPT	original px; dS +10 vs white, -62..-141 vs gold, dH +2 vs white: reads silver-white (metal outlines), not gold. Acceptable as silver; Ziggy may call if he wants greyer metal
+GRILL	seam into lips/gums	3 px ring around grill mask	px>12 / max	0 / 10	0	PASS	boundary grad p90 621 vs orig 658: no hard seam; top edges match orig (T6 top y298 = orig)
+GRILL	lip hoops unchanged	img-left x568-585 y326-348; img-right x648-668 y320-348	px>12 / max outside grill mask	0/8 ; 0/6	0 over 12	PASS	the 11+13 px >12 in those boxes are tooth px inside the grill mask (y320-329), not hoop
+GRILL	nostril hoops	x555-585 y235-265	px>12 / max	0 / 5	0	PASS	
+NECK	glyph kept, no pistol	x655-778 y345-535	px>12 / max excl edit masks	0 / 8 (y<510: 0 px>12)	0	PASS	only change in box = 79 px of new ship right spire tip x678-681 y510-535 (inside ship mask, V_2 lane). No pistol.
+ERASE	star tone vs adjacent skin	erase-only = starmask - ship(+2px) - chain - excl, 1317 px, bbox x576-709 y520-602; ring 1694 px clean skin	L median / local delta	erase 157.0 vs ring 159.0; local delta median +6.2 (+4.3%), mean +16.4	~0	FIX	light overall; worst in top arm
+ERASE	top arm tone	x634-650 y518-565 (696 px); tiles x630-649 y538-557 / y558-577	local dL median	+9.7 ; +11.6 ; +15.4 (tile x630-649 y518-537 -0.7 ok)	±3	FAIL	reads as a lighter star-arm silhouette between the spires at 1x/4x/6x (tone ghost)
+ERASE	texture ratio (hp-std, sigma3)	whole erase vs ring; tiles	ratio	whole 7.80/4.61=1.69; top arm 1.07; arm-tip tiles x570-589 y578-597 1.86, x590-609 y578-597 2.06, x690-709 y578-597 1.48; others 0.80-1.16	0.8-1.3	FIX	arm tips too grainy
+ERASE	residual star ink	erase-only	px < 0.86*local closed	9 (orig ink in same px: 611); comps (646-647,541-543) 3 px, (588-589,593) 2 px, singles (644,526),(642,524),(639,530),(651,549)	0	FIX(minor)	no ink lines remain; specks only. 5x HP shows no star line ghosts, only the tone/texture patch
+CHAIN	pixels vs original	chainmask 29441 px	px>12 / px>6 / max	0 / 102 / 12	0	PASS	
+CHAIN	highlights restored	chain px V>200 (4391)	max diff / mean dL	10 / -0.02	<=12	PASS	
+CHAIN	joins: continuity, no ink over links	L join x566-600 y560-625; R join x688-722 y550-630; V_2 spots a x707-709 y596-602, b x695-699 y613-620, c x578-594 y604-626	chain px>12 / max	L 0/9, R 0/8, a 0/5, b 0/5, c 0/9	0	PASS	links continuous; ship lines stop at link edges (56 L + 39 R skin px adjacent to links carry ship ink, chain on top); no link px darkened
+OUTSIDE	chain/hoodie/beard outside all masks	whole frame minus patchmask	px>12 / max	0 / 12; beard x500-686 y0-290: 0/7	<=25	PASS	
+SAVE	quant tables / subsampling	file	tables	libjpeg standard q97 (Y,C exact), 4:4:4, baseline; orig = std q95 4:2:0	q97 4:4:4	PASS	single save per compose log; not original's own tables (not required by this brief)
+VERDICT	GRILL	-	-	-	-	FIX	centrals T3+T4 still gold; T1 img-left canine blotchy partial gold
+VERDICT	ERASE	-	-	-	-	FIX	top-arm tone ghost (+10..+15 L) and grainy arm tips; 2 specks
+VERDICT	NECK/CHAIN/HOOPS/OUTSIDE/SAVE	-	-	-	-	PASS	
+FIXLIST	1 grill	T3 x595-612 y302-329, T4 x613-632 y299-326	-	-	-	-	make both centrals white: texture-clone white enamel from original white teeth (T7 x656-666 y302-322 / orig T6 x645-656), LF tone-matched, keep original tooth outlines, gaps and gum line; no flat fill
+FIXLIST	2 grill	T1 x570-584 y308-332	-	-	-	-	replace blotch with even gold matching T2 shading (texture from T2/T6 gold, tone-matched), clean top edge into gum, tip 1-3 px longer than T2 at 1x
+FIXLIST	3 grill	T2,T5,T6,lower row,hoops	-	-	-	-	keep as in v003 (do not touch)
+FIXLIST	4 erase	top arm x628-652 y516-580	-	-	-	-	re-clone from clean skin at the same height (lateral sources, not the (0,-60) upward offsets), LF tone matched to ring so local dL within ±3; keep ship lines
+FIXLIST	5 erase	arm tips x570-610 y575-600; x688-710 y575-600	-	-	-	-	re-clone with lower-variance skin source so hp-std ratio 0.8-1.3
+FIXLIST	6 erase	specks (645-647,540-543), (588-589,593), (639-651,524-549 singles)	-	-	-	-	clone out
+FIXLIST	7 method	-	-	-	-	-	restore original px outside grill/ship/erase masks (chain on top), texture-clone only, no flat fills, no generated px, one composite on aea8323a, one save q97 4:4:4

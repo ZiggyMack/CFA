@@ -1,0 +1,14 @@
+# V5 FALCON QA, C15-cockpit-twoshot-003 v008, ROUND 2 redo check (round 1 FIX = V5_FALCON_C15-003v007_fullscale_Z9_20261021T155154Z_v001.tsv d81aba3f). V_5 20261021T155837Z (EDT = UTC-4). Changed region + outside-diff only, per V_1's usage rule. Rules: TEAM-RULES v013 0136dace (rule 5: old-saucer traces visible at 1x/4x are FIX; 6x-autocontrast/high-pass only = ADVISORY).
+# Files (sha256): v008 89fe95e30a0cc7625620e40a8dff477cd10f351d856881e17f14aa5696cc923f (matches Z_9); v007 3344403e3c2c5907fac96da1feaf2d6229e2434dbb2dac0a8a9269625c769119; orig db2dc538cb45284f1d0a4e34b2f3c7446e66edc96a869900a189e815dbfd23f3. 1280x720.
+# Crop: V5_FALCON_C15-003v008_redocheck_20261021T155837Z_4x_v007_v008_v001.png (5999d36f) = orig | v007 | v008 at 4x nearest, no contrast change, crop 840,372,900,422, plus v007/v008 at 1x. Scratch in /tmp/v5c06.
+item	measured	result	note
+diff_v008_vs_v007	34 px >=12 (34 >12), bbox x849-892 y382-415. 0 px >=12 outside that box. 785 px differ at all (bbox 840-919, 368-415); outside the box the max diff is 11	PASS	Z_9's 34 px / box reproduced; sub-12 diffs are re-encode noise
+leftover_rim_speck	v007 at (851-856,384-389): min L 3, median 62 vs ring 60. v008: median 65 vs ring 62; the dark smudge is gone at 1x, plain 4x and plain 6x	PASS	-
+leftover_ray_tick	v007 at (886-888,409-412): the reddish-dark tick is visible at plain 4x. v008: gone at 1x, plain 4x and plain 6x; patch median L 83 vs 90 around it	PASS	Z_9 quoted 62-70; my patch reads a little lighter (it includes the skin highlight above the chain), and it matches visually
+clone_quality	plain 4x/6x: no seam, no flat or smooth patch. Patch high-pass std 12.6 (a flat fill would be about 2-4)	PASS	-
+chain	gold chain px (sat>0.45, R-B>45, comps >40 px): 0 changed >=12 vs v007 (19 changed by 1-11 = encode noise)	PASS	chain untouched
+ship_ink	0 ship-ink px changed >=12 vs v007	PASS	-
+cloth	b>r+5 cloth comps: 0 px >12 vs original. Z_9's own cloth mask shows 30 px >12 vs original, all of them the redo pixels in skin inside x849-892, y382-415: Z_9's cloth mask (about 98% of the frame) covers this skin	PASS	no cloth changed. Z_9's cloth12=0 claim doesn't match Z_9's own mask; mask hygiene note only
+pistol	pistol box 885,255,935,330: 0 px >12 vs original	PASS	-
+outside_diff	0 px >=12 vs v007 outside the redo box	PASS	-
+VERDICT	-	PASS	C15-003 v008 closes round 1's two erase items. Systematic tone is ADVISORY under v013 rule 2; fill is not required under v013 rule 1

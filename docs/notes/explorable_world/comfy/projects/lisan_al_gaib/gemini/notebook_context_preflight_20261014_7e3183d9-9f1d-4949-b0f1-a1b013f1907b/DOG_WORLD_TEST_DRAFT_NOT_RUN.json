@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "status": "draft_not_run",
+  "purpose": "Test whether a named-world rule stored only in notebook context affects later video output without repeating it in the immediate shot prompt.",
+  "productionNotebookModified": false,
+  "currentRenders": 0,
+  "initialComparisonProposedClips": 2,
+  "executionRequiresSeparateConcreteRunApproval": true,
+  "setup": {
+    "conditions": "Two fresh matched test contexts, isolated from production chats/history and existing dog references.",
+    "commonWorldSource": "Bellglass is a small fantasy settlement with outdoor village courtyards. A local resident can cross the courtyard in daylight.",
+    "onlyTreatmentAddition": "Every outdoor Bellglass scene includes an ordinary dog in the background wearing a vivid blue collar. Barking is part of its ambient location audio.",
+    "control": "Same common world source without the dog paragraph; do not add an explicit no-dog rule.",
+    "media": "Prefer text-to-video to avoid dog imagery or an exact-first-frame preservation requirement confounding object addition. If a reference is necessary, use the same animal-free reference and a compatible role in both conditions."
+  },
+  "sharedImmediatePrompt": "On the home world of Bellglass, show one continuous wide shot of a local resident crossing a village courtyard in daylight. Use a gentle forward camera move and natural location ambience. No music or narration.",
+  "beforeExecution": [
+    "Verify actual supported generation surface/model, duration/aspect ratio/output count, native audio support, quota/cost and allowed total spend. Unknowns remain unknown until observed.",
+    "Use identical supported settings; record the source text and exact prompt separately. Do not restate the dog rule in either immediate prompt or carry a dog-test discussion into either context.",
+    "Record any exposed assembled generator inputs; distinguish notebook retrieval from injected prompt text and reference conditioning."
+  ],
+  "scoring": {
+    "visual": "Independent playback: dog actually visible in background; blue collar separately recorded as distinctive canary detail.",
+    "audio": "Listen to actual exported audio for barking, separate from a model report or Mute control.",
+    "outcomes": "Capture pass/partial/absent/unknown for each criterion in each condition; record frame/timestamp evidence.",
+    "interpretation": "A treatment-specific distinctive dog plus barking supports context influence; it is not proof of universal compliance. A single absence is inconclusive: retrieval, prompt assembly, instruction conflict, renderer omission, audio support or randomness can cause it. Dog appearing in control reduces specificity.",
+    "repetition": "Any additional comparison or direct-prompt positive control needs a later bounded decision; no automatic retries/batches."
+  }
+}

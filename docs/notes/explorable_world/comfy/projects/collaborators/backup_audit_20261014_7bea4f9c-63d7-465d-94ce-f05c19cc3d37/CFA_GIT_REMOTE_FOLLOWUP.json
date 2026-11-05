@@ -1,0 +1,4064 @@
+{
+  "schemaVersion": 1,
+  "recordType": "CFA-read-only-fresh-remote-followup-after-concurrent-push",
+  "createdAtUTC": "2026-10-14T12:19:49.912900+00:00",
+  "author": "CFA Nova helper / sw2_result_technical_review",
+  "scope": "Refresh only CFA main remote evidence and its relation to local HEAD; no fetch, checkout, reset, merge, commit, push or source mutations.",
+  "priorEvidencePreserved": {
+    "initialScan": {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/CFA_GIT.json",
+      "bytes": 89372,
+      "sha256": "58b87fe7ca3cf4ce28fd0be9039c79759d63e0693acb449e4f44bc73055b5e9f"
+    },
+    "longPathVerifiedScan": {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/CFA_GIT_VERIFIED.json",
+      "bytes": 103307,
+      "sha256": "1178421a5b2e40dd33b1492b6de54db4f380cc9376d43d120519372e2f86d587"
+    }
+  },
+  "reason": "The later local metadata already recorded an updated origin/main and update-by-push reflog while local main HEAD remained old. The first remote checkpoint predates that concurrent push and cannot establish a current match.",
+  "freshRemoteQuery": {
+    "command": "git ls-remote --exit-code origin refs/heads/main",
+    "route": "Explicitly authorized read-only network escalation",
+    "startedAtUTC": "2026-10-14T12:15:49Z",
+    "completedAtUTC": "2026-10-14T12:15:53Z",
+    "exitCode": 0,
+    "ref": "refs/heads/main",
+    "head": "264c47cd3f44d1b32f3c7a8cd414d924298363f3",
+    "freshRemoteEvidence": true,
+    "fetchPerformed": false,
+    "localRefsUpdatedByThisQuery": false
+  },
+  "localMetadata": {
+    "checkedAtUTC": "2026-10-14T12:19:49.912900+00:00",
+    "repository": "D:/Documents/CFA",
+    "canonicalName": "CFA",
+    "sanitizedRemoteURL": "https://github.com/ZiggyMack/CFA.git",
+    "branch": "main",
+    "upstream": "origin/main",
+    "localHEADAtStart": "e58074d0fe345e8b429ed44b5b938a82f55f1fdd",
+    "localHEADAtEnd": "e58074d0fe345e8b429ed44b5b938a82f55f1fdd",
+    "cachedUpstreamAtStart": "264c47cd3f44d1b32f3c7a8cd414d924298363f3",
+    "cachedUpstreamAtEnd": "264c47cd3f44d1b32f3c7a8cd414d924298363f3",
+    "localHEADStableDuringFollowup": true,
+    "cachedUpstreamStableDuringFollowup": true
+  },
+  "remoteCommitObjectAlreadyPresentLocally": true,
+  "commitRelationToFreshRemote": {
+    "ahead": 0,
+    "behind": 1,
+    "localHEADIsAncestorOfRemote": true,
+    "remoteIsAncestorOfLocalHEAD": false,
+    "mergeBase": "e58074d0fe345e8b429ed44b5b938a82f55f1fdd",
+    "state": "behind"
+  },
+  "remoteCommitMetadata": {
+    "head": "264c47cd3f44d1b32f3c7a8cd414d924298363f3",
+    "parents": [
+      "e58074d0fe345e8b429ed44b5b938a82f55f1fdd"
+    ],
+    "committerTimestamp": "2026-10-14T07:18:31-04:00",
+    "committerTimestampIsNotPushTime": true,
+    "authorNotQueriedOrAttributed": true
+  },
+  "committedDifference": {
+    "from": "e58074d0fe345e8b429ed44b5b938a82f55f1fdd",
+    "to": "264c47cd3f44d1b32f3c7a8cd414d924298363f3",
+    "pathCount": 803,
+    "statusCounts": {
+      "M": 4,
+      "A": 799
+    },
+    "paths": [
+      {
+        "status": "M",
+        "path": "apps/creative_studio/README.md"
+      },
+      {
+        "status": "M",
+        "path": "apps/creative_studio/app.py"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/build_mission_control.py"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_control.json"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_manifest.json"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/00707cc7302336e7f72991f1809d7f6b26e1bcd4101b6e1ce87b9498002954dd.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/00be7c942acce0bb585ce190e05cce09b86f59a6c76e7db8680cd05776d1a48d.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0143813bd5876ff8e6144db2f7fd3f622a549f66fed60bac22bd82545e0dda5b.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/016a285fb2ffd37b153069ab1976241b6a79a71d03ff1cbe5927a26934c90410.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/019c2f06e543e0ad82d84fd949f2fb4c8623efe539505abc76de79b96719e853.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/027013f356701456b036ab2a578e2119c45d332f9cadb6a41873d62fa172772f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0296e3fc2497cc684291e9f299ad5d4123e38315092c5dcf72428826fbec2bad.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/02f1dca3557a55d421139f1a825c1294ab22a94e8306f1513d241871374116b7.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/02f9faee77c1d9100374c848b19ac9ccef35062be3f6da91ee8e2764d482c86f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/038a5c82117359a693e6634de8e63a7c310a0ce9681d40144152a405f10e20d2.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/03a0bd658b267553ac838e32ae2fc96c85ced06b05a4bfb84cd0cae72d51f23d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/03bad3b41e63df7140315680d13e1bb5ad99d418941b21b88faf01aca3bff059.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/03f7f91badd05077b3801c7892c630f32e26c6afcee5ba065a583b621fa5d45b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/04477642cf076e30aa35be95312b03a8398df037c33ee782acb42947074c56eb.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/046d09d34f9c905e18b5fc8ec9a975c135fb354583c00777a065023badf14ff7.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0489de03ac82ba5fae922e53176fd725ab6f82e7de1773e03f5ca55867e04774.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/04aa01260809346d187d420f959225aa6b1cf61b241604d927bf569dd45f44b3.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/05373a8f84a82c5940d202d843602f1f86a038859927b46f82f512e8aab4916c.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0572d30053a63a984088773ea8cb1edcb9debe966822dc20b7e1adb275b1c96c.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/059225ba4edd6f3e40d8df3e9b50f163dc489957e706e87222a6b1098830a195.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/061a0bc55078c6ad384ca447a4f603b6444a546c85eac74aa99bfacc15c0d237.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/064f69400ee47fc7aaa29e148bdd28af5a5689f9e3fa0f845685f81b490f659b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/06522e210322bc91a162e1b5f4772bfe0c55cfbd4342f8e8e96652449bb458f2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/066546387e8e5b1589c2bac54b888f8322dcbb9de60a94098debf231f39f440b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/06a5d6d0255e2ae70e2730e868a4c4c61c227783d20d1b323c1c86dc4647ae78.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/06af4e066eb8c1011afe74aed244962b89e7da91679a86b6841538bbe64738cb.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/06fd513bcdba9dd880f199a6f72c433e1ddace8a1e23bb8888081404157f5295.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/074258195ecec72c18df70ecb5ab3b723e7043c644cee686e492dfb56c2f5073.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/07626c301305cc17d07660f39ddfefb9f9d1a3f48e6e0facf6f962a14f6dfa59.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/086c34144fa3d2708ef5823b60958eba028ae262f98cdb77f540cc770e1d3273.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0900fce3d02e11f16efd2686ec8c7a793512921b723bfac120f1c35a8102ee64.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/090773f2021a316198a7db57c0276d06aca509322837cde45d93fb83f9ac4574.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/09166363d61a10434f400112ee2eac6b98020ebb4aa1e934a76ebe6ff513e524.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0985c8e91f03c462e4fca279bde195e2b75ef35bc82228954abf48330493e7c0.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/09d19894c43c3f8d54d62952f48516224363706465b6dd12a8cd2d981c1df182.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0a3461ebb594f6c943ce057f406ec07e165273eaffc4216408cf07fa0f3bf28d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0a8b133cabb1266e32295e79ff9d1f9b28a9b04a445cd028796127a30f10ad08.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0af8a348979afebc5aad18e6511bc10dd87dd5acc65e9a37024b93eb149b1200.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0b03095d3816d88f0c3b710b2d2c15998e75ada6da97a836b1d9557689b8eb3f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0b5d4b125a7f0ef22a4ac59e805cf9ca967006fe9e3415bc6e54edeb3955a69b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0cb6b4995bc839f292be90bddb2a51d16a6558f8d2d59594396b91cc6c0d4fe4.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0cf45d78bb4e99286499cba0f8d6d440d25ba04c4e0ae37ee355fba04c5e2de1.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0dfd50b856328ca8def9bb745dfdbb7dc201f67d823e58c3d6d3391b5124d5b7.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0e1c91e0c02b83b2b2f93c22e0248088ad7fcbba8f7b69cf30df2735844a5b2b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0e446fce1583e2b63abaec7b03c1a0262645abde06f263f65f640fd650d063ff.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0e58d2e0bf38d5d7a11852b49dea23a8357c89ffbe238ef286a5df2ecda8f887.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0e7472424f1cf9ef0fdb88f07971b34c73c2c34abf2cda1ca103472ff0e8670b.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0eb0144c9a20f4a0786dee3c86172a7a4e8c455f9238207b10b9f313203cfd16.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0eddfdd3b059f89df48e5aa86ce8151dc54ddb093ba7bbf29152066df2c39da5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0ee26e4ba6ae034b3dfe07027f6ef87ed9162f87acfdbb642b286f38bf9f664c.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0efd0647fd4eaf60b0b0ea79d7e6ababff44e435d36f0b9a63aacd65c48c74fd.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0f1efaf5f7aa1684167fb08135937a052117ecdd2b5d6a1a9ab7c42c924bf7bc.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0f4be8b583f977d88d9f3a0901b13f4d7c8b0e46f96e92e7aee2060f615d84ae.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0fc5b012a4734fac46702765cef0430e556f073de6ce43947ae90508de73326c.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/0fd980682171bf511cd1b5108dd166074a000f8b918d6a2f1f723558cd5786d2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/108157d98f91ddc93e68a0bfdfa10764d65e673f11c487a05839fd670b495a8a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/10ad6fc904612a644c7e5e0dd4db01f546e128a6b0f9d4a4aa2846631069623f.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/10ba41b7160454efe0382a8834d579ca7147d846c12a75adf456970d112fa90f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/10c3912c88232748d1ffdb6e9826cb97251eefb85b92da8b17deb4af61ef8791.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/10cd89e2a522901eb2d66b1c0a52c215785569ebe7a83e4762d71f97fba76678.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/1147c658e974a0e2745c4014735e4313e6c889d7d0d144610b8350d991e707e3.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/118403ec31ab08cac570b04b44c9719e72922132f83a37b0e994b6f8029ef66f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/118f2b8a530f66dc17edae50b8b4ddaa4ec026adf9a77e4061bddb770fe9c68f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/127b2e2db9bf1e9311af868eec6b85159aa2282f3086b90267c1b213b7b6a8e1.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/12aac49d1e7d6d62c7ed770c23b84b1776a310240ddae97bcd811a2d5328eb80.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/12de92b24d64c8c207cbf633cf35b011d12c29a37d8ce8a8003cb5d1b4e69045.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/12f87db884d129d7827a744e6ca99d794bc2793eceed58632f99040ea81cba49.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/138d69e04fd428f2ede1c606f1fe75c72684c832933a268f3bf64e8085659773.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/144c67914d5e36e2f1d6439067685ab2fed611ae7522235075e784c91d5c19b8.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/14afe65394df8f977db5428b6ca1e304d5c375f01922622be1aa6d022cb6b20e.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/1540b5448d56e3cc70efe0098a2625b846b17fe6e1ea0e053c0000c5873bfb32.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/15757d555f26d3ce0e5f4487ec9979b8fa8d08e4905fc5008a66cef2555d6d79.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/15b90db41ea7c53c30c95790ec3bb72f9a795102d0d8e19373af38b310b5fe57.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/163eccbb70ae756d1fee2606aac1fb9ad7cbe408cea015bd71f6b88f8935b09b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/1667b66be1f05527286a2e73e818ffdde58f1a00378a212cd8a008d65cf11ac0.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/1736b049b653212b317941fb2811a724b7833e9f8cac5bcb7bbf9021ce9bc410.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/174519f59e88265eb9dce2705e7e8bdc3c1bdc0a00fe9444c6841925ce27b175.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/17ed0ce899d587ed8feedb361429c0ff82849c113f25da43c5fe38d2d32822b4.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/18110906cbabd25868dedae34d7900b18594928194628490bbaaa9c57d78ea01.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/1858898e9677742ead1af5c77c2bc5cf0f6ef494e2699a8b888d5f810d6f7ed8.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/186379cc98eda069dc1ce3ea63650b61c85bd5074d1952dd1c133c788d9aaf05.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/197356296f3ae27e0f5485f90e978802a04ad46eb5c34ff5b2c6df0f147ca0f2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/1a0eaa2bc31af8ab7ceff649a53e3ecd0bc27c3448830e4cfe7cdb60ee89ef2b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/1a29965c5e60ee9abdfc0676bdf3e77779209fa03bcfecc73859de3719dd37b2.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/1a68e93178ca30583d26838e2f3290d94b545e7f9eb966090cd3523f1b129f67.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/1b7dfb5f1c8cff6787e35ab5188c64c70857a32d958731bc40f0279b021b78c7.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/1c5a430ca64759762af456d7eaf36305ac9e952173b56c43f81f20233b170cbc.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/1c8454df4565831c3e79b48183de4a2ef0cc5bf9913fde4e2b798ffd2925b07a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/1d66ab277c8bd552fa43a901a2e4a88ffb0388f20c01561787d9c023b54bc3ca.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/1e3a9c0795b4d00a17899a9c9f677acc9c9071feda37bbc924455ec4a09f05c9.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/1ea4c0e44c9c3d61a9f033a8ff9a923cd9c5ecffe363cec660e4d4913f5302e4.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/1f1da7877d6e805b58b48e639fd3896a03fc335fe9c624682b7a672615bab3b5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/1f6ba191213d86907b62675f173639e115590cfbaad7a422652cd5758d7321b2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/1fd98e82b5efad1cd50113b3149069da1f2a1926485b9992435ad4ce31de57f5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/200f67fe4699543507e2d4b8d31111caf6d6f66dbe8acd0a7c255557700c4ec1.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/201623b3877da78cbe384659b5d4ebabf6720e2afa0d7e4243424d8f3e13c809.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/206bd8393178ba40b1eafd5f6238eeb98b05d335c46d05f2e2b15b92f3f213b0.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/2126b1e388bc4bdddab734b2e4f5cf7d6f64e6417f3483bae664659d38094f8e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/217930008022e4015268f7911a315a6a40bb20e1681553532f51a0079a29abf6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/21dd0c1ab8cfe7401c0ca960fdf930ca8363f4cef4fb0b07601791ec414771fc.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/224ae787e4309acd9eba7586ebf72b7cfa7ce87d9447efea34af9d9c57023bfc.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/22b6e092e24cd899da32bc634e5b27d897e727016b112479d2e7bb83c71b7500.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/22db7c41097e9c625ffdcf4e81231f7d91a7d2a046284672e6630a3d320da6f7.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/22f5a1b10353429fd8ef2b8b7984898d925ae00336a77cde6cb6aef9b6700346.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/2318018d3faa41a84303eb349ce0aa6b716119ee80bb44b494bd6f12ed844777.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/232fb1bca5c3ed6aa0f2b8c0b6cd9501cdcf8b4729b326f9d2f58b060379ec25.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/233318007cc04bb74c165c9a481bcbc9ee72fb38f5287274d7fc8ebfc9dce8ce.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/235c42ea3d890f086cf9f61d9d75e400d1d718059e3837f4ad9b8a7ce5253bd6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/23c0bd46eff4b7ac4e9954136d3a86e9a04489958816b90fc57e70b1143e0020.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/241ae1d3ff5bd4b362cbbe71241a312f21baf595a2c9835f84dd870da56f6f32.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/24c775135ad2440804ad41c988811366bc814fec85455f93063455b5499c99ee.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/2589475b893f8e2aa387630090e21f55468f33205ef780b6925a7a18ea097751.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/25bb6fcb63e2507b277064f5c3e4f719889712c3e71834939f6643dc75ea9954.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/25eb399fd767f7ed2d2e558925c390bdd0b8dddbef89dd05e969432ed78d3734.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/25f2fc1389a1c1d93d9efe14ba795044cedac67ff9076fbb64a08707a7919503.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/2667d90eef5947f49ee0b447c10d63df591168d5bd4acd938e6513b16ce5eef8.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/27c52b78366aad0ac28f62c1bcbbca8f70e91369f29e7500f47132c7c10f7945.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/28472649649d013d14e67c5467a4d04e1a9d7056a4e84dd77b9cda5901b7ce91.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/289679cf58a2ce03eb381e0ef7a97b36c171b8dd84c464c64768299a10c42ced.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/28c56f5d3334ad6c764e1342d5017463a7897ccb0d6127dd61aec0f689022312.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/28e8e3e88217694833517d0314a2b6eb7e159aa24f9eca430a02c52f6725845b.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/295b86f50f5c027d8662cd13794df6c9b36389cfa9e1a89dcbae408f8dc0d4b0.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/2a8e0e7da1d084638bb9fde2f275ae040d5d113983a0077fdf8bc7de5c1f4910.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/2abedf08860d1e103be8d2118df66413109cab829ae3338d60113c12ed7cb458.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/2bc0b31f304b9fee0dc26d0ae2ccb18f526cdf3dc403e73bb1cb3139838c77a6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/2c25f66e86f6e6634f61b0f054e95649319e9f2718fd1bd2e25cddb53be8945f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/2c3370ef2db22ea6675d0f57b7babd311b106568909a696c7204052f43a8f2b6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/2c35b1112e444542780fffd670d7373131eaefade2c5d330f9881d93b944df40.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/2c9bd941c9d7e048045273d5c2b710de1c108a7f68cb0a473a4f26f8d3f5ac81.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/2e0ec519656173a60844cfc3fe6425bd1af834b946384505b55d0d7ddb204540.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/2e2bfa1ced1afc2bb8114007d86adfcc1c9fe95d590c1382843869cc97487701.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/2e7f2ff3f3ff807b5d7073f62cb914edc0a09c638d09ddf549d19574f8c0832e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/2eab60e9dffbabeaaff66094e12c731321f1dbf535d19855bf381038852ccb14.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/2f56e251d1b5c0c8c1362bcc33572d81964b19c584939e0edcd71d40563e5b3c.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/2fabbe0d882584d5958658d6dc935889d1d0702011912449fea66b301cbaf29e.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/302519eefee2833c44cb80bd5134aec4bbad4a634c5ceac202c6d077043bec51.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3087b96434ba70039fbca453d04bac4eb320809f524b4b5054c7e6c977eeab7b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/30d97bd661149c819d3d08f02f3d3b1999d2346dd82198431cdc119e25104ef9.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/31348dd5a0cd467c32308d86a3eac297d5ef5a6ddc0ccb5b81bdbb6c6445c6e8.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/31a461163a077b4ede99df06e15645d4b72aac8d3d388364fc3438dcd9640529.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3208700853d317ce421a0fa27418ed0a4fd1adec5a7273766f2566630c3f4229.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/325e315afcbdebf8635068b5a7e02bfdab2ec07240d059428a26fd7ee3d5b862.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/32c156be2ebe09d2eb90ca2054f611d43aa029e6e29a85dd09122accff8c3488.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/332a29160b2f544cb0fc9837fe20b0c75b08a310f65219a29835c89389ad4b3b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/332d69ccaf2ae00ba608ed3dfad7706933264e1bcb27e9741da97dcd134c01da.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3363a7760154bc42418efa63d232621b1c2f22ff8b22978e0d37c5a2459b7c03.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/336ceb50b3262d553d9cefddc72c40275dff308d3c3f2b916b7ec00d1b5ac9f3.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/33ab21bc21b82cbcd1d5d626c18067bc0cd7330460148c6d0ff9314035ae63ff.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/340143a24f0e680ba21de7515119d88decaac121cd4cd846c8545be5922c593a.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3509ca701ae32d3971b71af7b74913f67404578de4354446c7733092842479b0.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/35332ba5e2b07f04483e4054420dcfceb736226d907419aaff2e641f3606ecf5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3586295c82f43dc208945b08d6ff3bedeb5e75cf9cc05f034f44f322fd160afb.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/35d83394ec5b347ece893e0a2cb82636a8f9dd7efac965e95b48879367390f66.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/366c5744b162fdf354583359491b8c249fb1e7cd02b6caa3d52bde9f71d8bf1e.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/37274e126d670f7ba494043cef374bea2cb25be5d57b4b392b68b8c859331718.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/372efaba38d2c3868817cbbdead55730ffe5aa0b146bd951cc75494573aed679.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3747b0b8a5659f15f4ef2b6f0b45857f454f550a471d13c48981a71db6c0fc10.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/37504fa731c69374c0fad4608f8290fb1af4133288a92f424b7cc78d060d2ae2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/379d3e98ca522eeffc209dd84c2980bc0166cec689011d94ed7d78d9d52b849e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/37c7a09e004f36a88f9500df4787632342361bff66d5b17b900e47eb5be9ef76.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/38178923ae78366e8b12fe7d4ebf636ba6c29d87c5a3eda169d98ea8c144e3a3.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/38a4ccfccfd3ccae3c5bb7017c8530f67709bf57b8c605fca7fc7f40564f6602.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/38c55ece8748dbbdaf348500f31adfd0d910369a583bb6418d2ec33165334e81.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/38e213475362d9f59f064b21aaba566081f1cfe4fecf4c8b17699e266c94bffd.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/38effc9ce2276716d6feddd74f10f16e8f626894e481b829e6384dbcd934336d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3905ae2513f80951ebd44ade7c73f02eb309ec15febe4f2a795b689945653e2a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/39173cb32c897226b42ab7ea758f33e53cf7d4fe3b0e944b8e6bd26c0e4eb78e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3984c5bcb2eaed5959ad4981175410026af290cc83f3426484de3557d6b68554.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/39c9075346b91743ff102f63be383570538a4ac49fd60bedc019f3c9fb87b310.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/39f7a6016f293ea36b2221cdb55a611c538d3d5a4166875fa8cd5b0ec649991c.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/39f7c617fde99b069e65eb6325a0f440d59788f85300a86885050926c0128dad.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3a00e4d1e2e12826c3e09059f4c431e3f844a0e0199d02695668877f796d5c2a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3a27ee4592659f514929447893b045e8f073ff5d853e09add41f640a4f95d6a7.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3a54ee54f4196a2b6369f549b6f1933534f2a63922f61379683f544baf254b0e.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3a8513592051ac098bf94cc7398be82c7cad9d7f246c20a1833a3baf2c501bc3.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3a9104836af9597235ba08aadd46eff4e4acb43da3003a2f129ac4c571f3d0b8.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3b1467d750770d50bd555b51df468fb93c8206dffa275f0345f4748020b77fa2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3be93e84f33d089b816df08b3a40e193cfc1c5c2e5f2f1da9dda91861e8d7f25.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3bff505b663a717bdd73aac815cabd83d2439f053a72980d4afb7c9944765664.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3c166395ccfb1e835b924668ce9e3f1c84771eacb8d582b0a8cde5498d10c9ce.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3c3a8be8ec788d7748ae8246b4f0d3f79f4720ee7be0ed74d357f76a44e4d8e4.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3c5ddf71723b296a0199f772d2d0999f03c8f1abc849d1de46794544dae5f04a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3c61666696b44ebbd095c5a856c90d3c48ffaa5df116ba52c4fe204bd861645b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3cbd2f918c3adef98617212922a526afc6c657fdcdf0e7627aa480c3019162d5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3d57176819fabd8f66f5d458c90e08b3a51efc6c4744e23b4cdc5c51ed9a1d39.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3dd3dda10495abce88f82708db81ff96aba8b27fc505e09055a123a3ae3e7f5d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3e4fb519f0c4ea50862568c4652acb0bbb7002c8b80639fc6acf937a2927eede.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3e90b6b6b18b215db25e69b17aa19c98045f206a26e0b24660cd533de0fa75e5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3eab4b00c88107f1af170735e0daca43155561786602d8a5d4be0aab03f8e021.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3eddceaad72c3d6450bd189ff2be01909016ee02f9b19e0fe8d59c305cc2a9d3.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3f39a4c41b302650e7f2c0a37e2b3fd4c86d2c60095214485b78f62cdc32247b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3f41823fec8ce08a7dae63052c9fb7fd8db9c5ea442bf0947d72cac2382a9e02.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3f44b414adc226a7ca6c61fa13d2e209eaed0fef3e92698f44e5ea6b67d67272.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3fc42f5a1ca3d99d4799e5e037ed27606f390231b64ce0919fec383b1d8a9375.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/3ffbd30e2ee006901adb77d9d3a5d54b77e6adf10a515713d946229c95fe0f7b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/404e87205b6e851ef08ee40552e693665300c540462faaa555445af81550fbc5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/407edf3f782af0d868b8bffe9301d19b45715a1783d9eba1b86a0af64dc856bf.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/40ad7e7fbff6574dbe3672db98bcf03d22e64dc4267337aebcf0e1849702fa79.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/40b10b8027b3e41f93c443c6760fc54848181aa5dfa2887417be50fc36e53559.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/40e02ee4075d556d43524e6e2bff9639040a0beb2ee7075658826f9e3ba5030a.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/4122b9ff7a4aa263745371917efec34a59f273e41a479730bbdc21d5ae9a09b1.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/415ff70719da59b6441d87fffe01fc424a640d14a083a31d987a874433fef3eb.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/422341d8cf01d8ba90bff17912d16b869ea8f126659ce1e148ed40cdf83f7198.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/422f187a3ed5d531f39689eec7276b43c5a36a74eec90a36a152d0a9cf7d1ea6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/43520897e6dc8a0c986d3cf16a82496b37f4b8c21c622b6623cbf38a2e38462a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/439f58181d1698f2aa8540bac9b328dfde3d5d5135ce6e297d6663d2d5116417.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/44753f83366e0d35c2a1ffc7aac3c660f9bb4a6af03190b07b322b37f8b93340.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/44a4191bd35964281cdc13c52fc0a7132838bd08f79fd1e72bb68a9a00b9cd89.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/44de6db2c39d691adf54aac788d312110bc4dbe019636ac7a969da4cfee8f80a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/44feac94a479bce24f1be99d260e10442b6bcdd63d343c1e66cfbbcec7423108.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/4553ca28f2a742ddf079e3c9097439b287c0fd8b32cde9a45127bae3cd2b06b9.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/45773619e9b657130fcc32b1c735d6999a717fd67bcf002fd446f9682be9e912.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/45c7e96e13e4fd0391bba3519ca2a82dfb2eb70cbd32ab956a116c4a7025f8ec.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/45f3f55d8188eb740cc40d8c20571cf7815a326e93ea0d9c162cf0d6bccecc5b.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/462478a47b515940b263475294b8b98c3034cd74a851b38305340315ab907372.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/46add718dc065cca3e9e5fee809f613dac81252f6414a5b6122e3490a2b0314d.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/46c8641173cb4a79c7bb63e897e18035a79c5e9a240d92bb2f96fbb294c4bd1a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/472eac6ba80b48582f1235622acdb22d445b50ba3f834d4602b402750721c5e4.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/474f6214d517d74cb266975b3a9f47d6666d8ec34bc352de6cf8348e8116fded.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/47fae0fbfacef739352f3ae711ba4f8bcaa7cd7f63df60d4ee2039ffeb068f28.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/48915616eaf6969bddf034ad94cc19c0bbf7495c5692ad2a6fd8009396dc59c6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/48e54d0ce43eeb4265f34759be700d465ca2b83311cf4102ddd31cddde86505e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/49e13dd530fc3be0a20809f3c5632a7f8fd0f558cfafec5170612bf755838c69.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/49f397eec018b8b9e78e0c340b8a52bd0de9d8d0a9421ef3bff5e98c07428d43.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/4a38394b6737505fbcc24ce0a835bc8b51210d13322ad96640a5bd92b26a44dd.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/4a3903461fe5d7827ee0ffa5f1dba1666d3db0936fcafee44428b3158e39b413.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/4ac48f68da8145d282ebb53c0534dadaf06585ca182e633f3b2af57074d9c093.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/4af033f25e544ad111a1bfac9e7ad42fd22d8875f836a167d091b4a421197a7e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/4b43d3545a6778b7196b2f2da22dd982b6617b4415aefc8306f3acda6bca0789.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/4b92c87da94e73e505ebb6738a0fdab8407b9a29f9ab9bd905e0e15cdff79800.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/4bfe68923da6805ed88b4c41fb94192700e19f154df493e84605e682fb5a1c7c.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/4cbb9e6b62642c930a13fedff6cb3b89fc0bbde646c1864c53c94a9be743f1a7.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/4d3bd0f5119772a9f0ceda0b2897ea78599c244a0bcd96e8faff893e196f81eb.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/4d8af29bdeb323a58920ca3e0f354ad5a56454a07b90de6c81503d96e11531f2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/4db015c4ec67f76d7e3b7c05a3982f05c2ef4840f72ba3f828ef2fc02aaf0efe.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/4e451d2d1fff64bf3cbd2b0a690790793da0595efd3a540b05da67d371beb511.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/4e8fb0386c43cb87bca7111ec2b7e686e29b9e4c2d325072e3fb0b3a7f64a8b4.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/4e90159cfe5a0f11553bf9175c589f3be311516c31b5b1adc4a88ba980c71c2d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/4f0d143835c4599729dffcde96f185da8f8443b4a807580eff2237f454c95c50.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/500bbd513345464f530dbe6a107ea6302457afa17303e0797444bdfcf2b993ac.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/50ceba8a137f6bed9151b15994055867f159bb02c49251d0d7e9a6c464ea41f2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/50cf657e00af6ee1b9d29cffea80d4e0a87cfcb1defa0c7ad7d1629c7f70c43b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/50d7446f93cc343f0841c371a37750b851858b881f4c0ffba14d1206b5b3c53b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/510d8177bb455110bf6bd0475c11ec93f03a8684a4ace141f3c0f96c276835ba.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5116a8b5e68f6a20fe4f70c9c90b5fd3e5a6a8076472020d074b5a6f75599b55.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/51a377e12ee37692a137f4a83be093c998a5d0b1c790ba75ac99addbf98c21c2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/522907ba728c68e7df164225948a42cb69a2029ad0c3284f50a9df3863b9d658.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/525a012aaa0446d4847426a573982953c42ffaa6ad15fe994d5f012668e3a8d5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/526373c5bc73f814ced8b397560d9a75885b626cb418b2fc398fd513c3feaff0.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5341a5ccc1ed46f298485193f075ec97ea69e530cf9159f95ffc4c78bedf8daf.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5365516b90882b15c6b57c458b302d8c6865d76c7638ffdf0b0e924d3d5f4d5a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/53a1d7804c6e0d3d24f1eb273b29186e0a54fd7e90a204000e315e083929da60.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/53c2532663a05403cc2b06fd65a517c1b3ce045252695a130d0d860d447cb395.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/540c8f3a39b39a6c1b36bbc04c2edd865d307fa6612a616d850c467134cad33a.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5419b7b8ebdd5b49af5e7d086b1c383ee42c8f8b42337cd31cc0539939625801.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/55018cbb853cd10492060af4307e23d32f5770d210524463dec5d7d393e0a65a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/55263aea30154333558aaca697566f7d73e7db45832f224490096cae4f6cb385.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/558ffc4f3172979f692afa1172f0d61abca253e94c1d2a52ff54eba56abef4b1.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/565ab3e24cc774f665d39d4c4409260a3f91015ad2263d2390541e5af43b3b3d.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/56a120919c4baf47b9ebd357b4a64f536bb745597834c9d2136f780cc1927fd0.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/56fbf19b023d6e382c8a882ae6230061fe99d628a16ca791d0b867a6dc9650c5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5719c092f8ad2debf93f4eaea4a679a5527585da0b1ffc2a81d1485fccdeae0a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5765cdb8d09dcfe13275afccd74981a1f92bbdf24624ea53d33ebf4a981675a2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/57c824406b714370b8a2594e5294699691df07640aeb2201c66c5d5438680e19.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/57cc45542810af6201f6c350f469386fb98c8a6e834dfbb58989f32f61e233e9.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/588fa45a7c38c4b32ada6637fcf3e4923a4bb75677dae05e615aec77096d1d14.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/58d2d3606d0e6bea944e8b1ccf274a54c28727faba07b361a273d036cb1afd39.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/59f4d10f5a1b34ad49a734c83c8990164103ac61bd42c9be9206ee9b3282b2c1.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5a0bc3bbf62c4173413dbe1f1a8abb04c5be00b74d418fbfec0f2c2045e40f19.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5a69c89430729ec7320d378fb09ee7d804f891174b1bf8f2dc12e80f459337e5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5a7ee8a18b2fe2a3589263c217a8513e5345a5ed7e8e0cf796e55b0a8832c02d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5a992b23213baf25f68529b9117f384ce3ff1b512d9d56185d17c443246c2362.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5b3d569b5d17ebcc6807f900b77ebaf01f6ab0cfb13544c1fa44676ec44fab0d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5b75dbf23cdb7031edd7c49004a6b30f14db5c38842ee7f842be658673a93e0e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5bdad528bb2f9e8c1b520c321315cde0b2540ab0078b02947395129a7d8d0839.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5c42929a31243661c7e7095a588a6d36decb61929a9728543d213bd6011ca720.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5c75f73ed48055d0ec36bb300bba4160a691f56addaf282d1e540e6932cd1516.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5cd6a544820abe6ab6022a045f97736b910208a47ba1098be408c8e646e07058.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5ce8dcec52cba56326299f5ffd54f3b2a85bd5fcac29714e5189d491f595f4d8.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5d48901d739caba70e166f028d227cd7e92e499aaaf16ddbf95eb199c0322e8f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5dbb9c0c37f1f8e23cf53f6a6c9852d99e416731af498bf7417e65f7807fd38a.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5e3c7423e77f386f2f94b2360d9d619e8dde6f8ff3b953d11a22af870cbd61ed.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5e7034a48906f1a7831a9a356670d0b6d0ab29ba09211fc9b51d0cbc97ad0795.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5e7623e6d57aa0da596f0b0cd9b02a19e431a450b82777a09b1298d317b0c901.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5f00dd768e02d0c38d6fe56982256f74867a0c508d8000e8f8403a02419a18a7.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5f2547bf1569309bc67a6356bb8a34f01c4ac89d13e222c765a585488674d350.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5f2f9f46ab3f45684e5a6d9d3a800537ef8812c44f1e7bb3fa87f85d163ae9cf.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5f5718c64fdb935643ff952ba6c742485772a63eeaa9109ed4db1d13a47f472d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5fcbf36456c24680959d443ae57305b3fcbf9dbb3672eed7ec4a6e0c723ac4a1.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/5fe132de2c35df76e24c7f332fad9fd946c319a404eca42ba5f44efc907fc617.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/611549ee8b2e2525bc9897c675d9f0972d13b9d837e69fcbdc826c2c89011cd1.zip"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/61b0351d5ffa50480f65c35bbc453554c43c3d64ae759248b92aab011ae90e5f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/61e47995075174185f7b8488b7462bb18916f063dd1a96b69c3bee7839b806cd.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/62376502fe002d23eecbe3e24c568d33c78b21789f524d5bc4816aafc7733ebc.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/6254a2800a80216e767b81ba6d24eb206943888f6b6749a6756e704bc6439a50.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/62802c3bdcc9550fe99a9a10112826516a61a0749232f8b96919769169b0e970.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/630dda72e061bebe8237f5f21ad0c4d47fdde65158b988bf1cc8912fe98709c9.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/631765d890e670dbc578e1cfe1d8803931633b537ba42f187fe7bae52d67c9e9.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/6373da9d1f99463abb758c468df4c3e5e0fc8232ef95f05fb501fc8075b01169.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/639c8044df4db9f495d8f3b0e38e8b8f18ae454b70db6d90972083ea4d6d5bfa.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/642828d4840fd0f00fa763a0b4367c08e4409a3b47943c2ef8da30ffad524ed6.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/6478dc0c340e8fd6c611f5006d4f250be8fdf44c3b495cc3aff368d3cc1170d1.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/647dffbf382842831011bfecd21ec0196907c47abd0e96d9f83ce5ad1ecd9c9d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/64947f90a4b7d0f01948fc535c7d5a6b97be88386b917e96efe14bc265c270b9.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/64a52c5be3ed0e3a6650c15a0eeb80629fc06d6170946f6a06df93cf77941d57.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/65601c1bbb42dab052260f6796b3761ced7cf28969c3c3eff9b05de6e64afd63.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/661b69d9ccd58d2583a46c710d97773c02f9bdae8b8db6b5c43eecb7fb56ecbf.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/668ce8dd8c677ce3cfed131189879e876290e9c3b32e9232e56250a62f8ee3f8.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/66918cc2d64f46a52d1ccd5aa0507fe4236c614b612c7e0410dfee9e7744a56b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/66ad29c9b41ea79f41d391d11f316341bc3f48ccb3744bfc7fa6cbbb95c71ceb.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/66c971e697e9a734e42b5a9f9ba3a2698b751bac65db726796d9685934943a42.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/679860da5c98ddd4bc685c3295ff3092877bec82b8f740600d2623899ca5eb24.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/67c1c49835f9f08fcf369b70a78645209a0a22b7dcf776031b1748c6654870ba.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/67ebd8d98cf4b640e8b0921ee6f98829005da3b886889acbf69be69395a8c3a7.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/67edcd4040ca07cd6bf986e0a536ea7dec13992a0ecaec432c6f6351b4523224.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/6925729719e916f2cc7c8fc2f1e4c87dedeea646e57f86c3abfce18de7d8694f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/69640c2c4553913893b4fac0a1237aba038eb3cfdee14b4c3fdc2b34d5714652.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/69abdfa62a3babf58a8d2d26a5716c4b8fa61828793f7386a478486d0de08ba4.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/69e5e37f93b1c7aeacae0e0d60d27b3d204529649840f4fe1f1137ae99b13a8d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/6a721a6053ac3f9d232c25cc90a6516058dec18fdfa616bac7408460e6ac15a6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/6a785af5da1aee0b94b898b5e77f93cd8a02ba58184a4ccf560d2de365d35fd2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/6ac0bf8ccba50f908b556d3423b1f84259483d09f6ae16d9505c4c70f8d8ecaa.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/6b1860b24d88377e185e7a67bd3ee576f07fa185b8e4bcd8804d76a25e962bff.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/6c2cf468df4c61aa26518714e430c64a6412e962991f7a32f578833c0e4107f0.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/6d180d8e0db08ffee86ceb5b7b3c5267bd47743c7d9371ff698b0f85c422b5f8.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/6e93d37b22a8c98c3dfb442203a09c6e06d6bee5b2a6c87830027a1c0152313f.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/6ec2fc4d6e2b18f2f74c23927309353db0e5aaf13e624754af632dc679238583.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/6ed03ff31107fc283a53835bf0ece546ec42bcafff4cb19c41a974cf84602adc.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/6ed182f6e1b8b46472533a4719fd6f0f84c611c790005a1b3737c0e5a8d17ce0.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/6f05dd1c7cfcdbee609f7c976e7678408e158af7d56d18ce2da1c03b39925470.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/6f66a1d5c4cdc99e7cbe87b0c9086b7550288c8ce0b7e5f0a37c2a4e81bfe5ea.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/6f8eef825be834b4cadbb1b66a340fd9398f83130c0bd0cc57c6a6e698ae9b14.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/70b42e6d6d048182ef9828e66655d637db83f55d192e63610a45e0a03c5ac55e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/710d333dc161ec3d474cfbc5ed415b399ca46ecf87df934e48cc15b0764e91c8.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/714229fc8cd03367ac7a8b8c37ba68e4ed4a1172a71d0a813928ab55c0a26fd4.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7175eed26b1dc2968c03e61b28ae41f2f902feeb5010a8e6172e0c5e7e195a20.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/717dcc8e745d602707700e6c5767f9f42d22ff8f58574e1ed4a45c3071c46cdf.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/71d6c8a0c40dc995ccf9443235d2824be1d63751ebe23260ddf5826bc366271f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/71dccaf94481d0704111e4a6fb113642c4bc25ebc5cef6688dee37eb4e2e851d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/71eb2b8dafa15737a5ecaa49fba468e20da7f5652279159c42793211461709ee.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7205aa4670f7e9fc9f9ded81be69f5ff2de35330227c5cf9128dbabeef85dcc9.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/723715a73e56a6046455f333247b75e2a49a61b7da0026ae2e32a0771cb5cbbb.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/727730e46396084c3811cd56da9ee2286e1302f40444afb52b06cea42fa01862.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7279bef8c1c9fad2869be8955697f70297f2408148e792893951483780137b98.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/73012f9f865a7591880c2954862703914caacb40a0cc7b1e10d862d1ab43b727.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/730dfda665f52ce68e507794fd02dc600fa5bcc49482874382db84428e37f56b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/732fc0f83eb40e6dbd5bcc3e6c2403f84b31a90dcc284a3b68d488560cb8b164.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/73dfd0abc8157fdde05f1d6ec486ec29f69d0ce018617e0048be06c58d4d742d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/74c00fa813b25f5e77d8703310e8e772067e9d081097427881242fc4fcf9900d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7540deab29020bdf610a65246f81625fbd877f08149ed4c694acd523121517d4.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/75660a58f790adb365956b9b26b2aec9e55c01b5d83531e673c2ae91fdc3f23b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/75dae4f128c382f843df2754c7292f09d8bf5f9ed69e9ed99fda0e5c0aed67ab.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/779009f49b8c3caac49c817b4a8b1d7f35c806a68b5eaf48742cda88c81b290c.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/77df70214386126c13eaf009924463dbcf6dc0b18776d30d5f132185d4e8f472.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/77f9fbffbca89b15cacb7ac9b29c8636fc2b422673fcfffd0922fb204dadd087.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/78667d25f839b344645dbc37fb2132eae0b590f955dc54ec18aa090451b9f238.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/790f4eddbdaa72ee84256538c5945751c2ad82a954269a59b0238afb16d1e222.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/793f76267c65f1960e931104971a4e9bc98ddd0c43a8c357d8a46d760a9d4bc7.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/793fe1e897814aaed6873ba8e1729298afd5b8f233b6648db19fcfeed318792a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7965f9115853248500119b802bc09503b5ed6136dadfbf49e36139853e7c45de.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7967813170f12b1d178a3035a780d2072b927960489ed6cee1ade08c97606963.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7a0658912f93185b88f4e30d14bef242efd81a9137a8f0507efb71e4c235e4c9.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7a4afaa8a83c79cabf1c48164130c75db45d6eb92fc1db473d454a433aed8a33.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7a5b2a93015dc71d521f57ecd115be848291ab86b11b60626f7f25e4c5a0cf4c.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7a7bfabdbf775010ce68137ad097c67b2631346f257155dbca02b50cb39814d8.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7a9067a7024c6b36f066d85021c0ec683eab28c20bfbbab51ad7441c87ef1d5f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7b31187fce60681a1531f8ca1489e3734206016474c9592b611c9b050dec74bf.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7b6b3c4db965c4fc54d910077c85639db218dccf59e55729c150c250dc8492d4.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7b6fa92a29c7438050999b0a4807f7aebb96dedcec7430e93553008cc6ce17e0.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7b7c573d404d30b9fc720e08259ef311d4cd1d2f0fa3df155b2b0c2e488dbf34.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7c4c5d603c4d02c385b28e0ef875d9712bc28df1ae263bb36d2cde2cb1fbdd92.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7c5413ccb7a05924bfb91921525ebbd53c11d3c4832a953e9d528e3b7eb373d5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7c7ca99bb7b26cfd00e53f0e994e5171f7dcb2599c9d34887e90e68a9e8c102c.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7c8964d29725f4e63b2fab7fc3a7db7b2d3d4fd9a3dbfd0e75bbc8584b7bce34.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7cb108f3832dd0100490018bca80163730530d1dc330647274a07dde839b6b8c.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7cbc16eb2511d49a384b532991cbfa849740e28ef5dbfc1c9c7bb943d6aee0c8.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7ce346b19fa68912ce287541c3d4a31f7a8e76022a401a7737ac21afbf8ed6b0.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7cf9373d8e45f0e054de102e543ff267cf4e8fdb44f5b956e4c110180f93bbb9.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7d0d59fe996cfbc0cf0a3e7ad98e4f2160eef0c8b738f31a1cc4d46f10dea2fa.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7d24cac50c6ffc57a30eeeabb93b749cd66904299702fdabd0c7766aa6f1e23b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7da45445f32d67b0d75602a26f4db79a46467489df3b6033de688101ab55f942.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7e377f8e4afc589f1d49d9b4e2bd3acf9f704203c82ee8e19e9df9bf0a47f11f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7e3f36f29129a2a858e4648972328393c9a8bf09b7a2ab043e1527641b2e28bb.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7e9075d805509065b122a1bd933e3bcdbfd3a332fe45d0283ad32502fe8487ae.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/7f3ad2bdc0701ff8b1266e510cf391d011af988f16dd0d8a2c9b2c58ce0a5e0a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8004b63d55b9d5a5da6f9de58123b962e94d9de8b76739960e3876df38c45c6d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/80a737026ab17f7e3e515afb5572e33a71a05c6f4f5e94bdbd7ecd3cc356aff6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/80d36fbf7d86fdfc777e284abbc678ff6757fe837f217c4e32572e7c3fcc125b.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/81a1edec925a441f738f6a88dd7b9980ea1da5debe9db8557c44673758b5f5e1.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/823dd85be893e7103a7fc8f6b7b53b69b3bbe457f490b06311a22e52ccaf9dc6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/824dc4bf6deb0dee25448db4efdd3404de022ad8fa78973d803729fa154f8b63.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/83160352dbb37f6855f31612c59acdb544377971fe04d9d98a1955467fbc554d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/83b82117c7a47dbf490c5c4a1cb39fbade4fed78ec86aac7003c6502987740c6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/83dd2c34960b316ed9cc76334f824a0fc83d1a8545204ced1f8a219c421bcc0b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/844889f47d870ed3c6694452f93aa2c784ded723beebe5aeffd51b944ef98aca.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8485d8b19a43b83a5aef0f393a3d2faf61b5e5226b5ff46bef081792e3ffdecd.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8552d6e0b9a760e9912ba868ca9201930a553848a8f398e64f23d90e5edbe64f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8571a79fc5d01c37b757a1553e77708874fbd82af7a6484847a9083b0e926fbb.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8581b31d414e9d606f2e9329933d1b818bdd42e465b3058ae8870f6143562c5b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/85c8a2a3e1d547873bb143c34c572f98253c19b7b6c44d5c2b8031faf5dc22fc.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/85cef3a1f0f162dd60ed581878eadabb65ea68bc332fbc6cc37e44b4e46b5981.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/864abc01d73e8a3c96ff4270e263d463f2307357e9685ab0d96ca58d01067530.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8661ee98521fc198f23bc5ab5de079e4879993b8cab5d4400ce0874cca929236.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/86942e0ff801660e01fbe7d4fc747608db73fd0b1993ef2386abb4be562a21e6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/86c545b9014b0056bde25c448a2568074f9cd68fa1e0dd75151ead681584b839.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/86ef3f5279b2a5fe2f2c2c587c9c04ce70e566bb458120c343ab14027d164851.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/871d0a63465f6f4b711bcc44781fd0142e6ce91e0e21cc76ba5b7a18ecf369e4.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/87f6c6fa184747db8f2d587286a9940e8a1dd09dd7156dbc824a3230172c599d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/883c24c397f9d75aa35b1f6f52d602a08d05c5299f2ccc42030df55aa52628ba.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/88514413d63c22ae711663e68eb9ac76f2fefeee882f26eff6c3881292f24e16.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/889bb56b50eaf72c48af3ebc4e3117d8aac616be03b01dda421467674fc7e6d4.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/890cd2366fd4b420e0bc4c42c60de6141858b88d6837f26ce8dd69486f587503.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8986fed4b0d1c45306c8b4295b33d61e557151f44fd778eb4f4b1f0ad99d8c48.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/899ca5e9b5c04978724262ff70eb3468b5aee612d84e146482d9c94be12c6876.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8a0a35b13859091fde616c9660ecb405ceab9e179151905937a945bba66862c8.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8a2337dcc57c9c430b213f59f237fef0af8b9df1753bade2c2b3edaf81798fed.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8a65674af50d058356a04536edf8ea45f4c8d0537d04f30c51a4b99b927176c3.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8a6f88746216059d7a38af7998399ee9a158878c4ca1d894c24fd70b43dd97e7.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8a90cc8a0cafb732e01334bb8099168d9942fc57aee535eb85ce44d3846d0c04.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8b0bbdd15e2aa6eaabb24c51bbf1d8614546e2508cd92073b48f660eba70a6c2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8b145489a9f44bb0ff872e0e11d0b78b42503f986ad441208047d189cb568c38.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8b1cecfcf0a45c1831ef0119bb7ca1c86b48f2adbe72912dd434c8bdeea42809.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8b62c99ed9ae09540af032065457f44d0979ccd144dd2552458f2e50540bac19.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8b972a76596e247d35af402b1905987225bf8eb5bd931d98dd8408e222405df5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8bad708b71537f43af78eaabf6dd3fb7cafdd5d4742486883432763e4f022ead.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8bb59b77583570d45bd6889e0eb2803071181dbbd3d93d9bd54db2229a598586.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8c6ed62db46fbd3119021b2ec9d550d5375532d0c7a19c38fd672bc70ae8f5c8.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8cc006f64d0613292a6a4238b9c805f51bf9357d39b8bc56de5da86959587a43.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8cca8458bf260e3a65f8ed19bbe7b99193d3544c38290f740f814dd44c2c1364.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8d07c32a8c7cf833b1ca70b7f6f8e5afcf9a474c3262ab4551b2fd8acb335074.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8d090aaa5a45cc42cb9d52e7b26d9419a8d8aa8c029c22a1859752ec7e0cf3c2.mp4"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8d2814cd33cb4f00a049eb9ea0380c8358b27d8d3673ea73519dfc6c6c8c6bf0.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8e44aed5d815abf69329191bfac29260b664a56cd5e379eb73d76b1278196808.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8ea8a3d78f0d69d3339f38b69ba876b6b36087b5c1ccfb7f60bd7be3a9c2d79d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8eb785ed214ed3bc0b0feed73e53b0c16dc996f4d6e81f3ce175a4e5861b4e9e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8eebbff5bc1605ed060f11e7bd05c08c9b860482ddc93e385771b4b78087c17f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8eefc61bdf54fdd7a72d2ddd4c51c959d7f48e08c12c366c857c924a4732e0b2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8f00f985e65c6e0f8f3d4eb2c1cae08ab329419cc957f115f2a53a6232f3d4cd.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8f0ae9fe95e8a8b0480bb1e37cafca3c6d2a206c7305e3d37bd10f407a0ae66d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8f0c3d3bb4f7c8ff6fd6c98ec0f5cc4c8a5ae02daad375b4d2b9e63df0edebaf.mp4"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8f2b49ea853822994e73a418affefbf1018480f2b69607fbde57f4975fc7ddfb.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8f3476c2eeed7fc3685be52ef88aacb8582f70fb1fa32a1d6a7c266d037736ac.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8f57936421295533ce291e2c8584c4fc513ced0078e9b27326c2c4c12019821b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/8fb481cea484fd068aa91e4a5b0a4ff9165fc009648e5b31d9cbdc9f8791f100.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/90357aeb074f404d8312fbb5314693aad88f84e643cf097389b6c52c6c99d67e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/905a9f085542a9277fe27d999a590c23bfe7e6c0ec9601dacb0de7bcc51dab73.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/90f19d880eb7a402fb97c49204b82b3bdc330b4c3f2796d62b1725c2a727b0d0.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9147f3bf4eccae4f869b23aade809a4f073184696625b4b19f56cccb88f97bf4.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/92e9dd8f746d9a92a84bcbbed9cddbecb5585120197c4bd19a029ffd2071dbfe.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/92f3e616c2e3df0d43edbcdd91abca8e31272f3e92f27b7463322cc62ac4caa4.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/92feceffc4cf80e577ddfc1ce0e518a6bb3866204c8417a856a6e50bdd27688f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9335797f01b08a81df983bebb39a53ba31d920379615fd06f518abdc32b0135e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/939a5e90c0564e6a42bb913d0b623a92cfeaf4f2d7818ad8b3f36d3867a3a41c.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/93f2407d7994f57365f3ebafa554ad9e8d4442324cb4f5d36a7d566820683b5e.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/93fc6b7bc6ff7cdaad73ea4ec596efce5d81bfec79e42e8182723fa862c0153d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9425e3a38db27cd137a2c2d197676d1304421f93e10a79682c06114f39d52db8.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/94304687e91dd47d8fc6d0dd875e41e14d511e9b1654acedd9b1ec912b02a077.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/949d7ac5f7907e537e5ae6efd609599aee4e094926364be1e4d286becc46c267.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/94e5b7b5912fbdc86415433b2a61960e993d16a09a6dbfa1627cb6e2dd86f20b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/94ff28694a251b30c8a1546b532f2e263c8b44d936d122c5480205540fe90353.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/951e32b74ab1f59f856949ddc6a08098af407e131db4c27d007396e4b17aa671.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/95b5425ce2c8483d88c7223e069a3c04a01ea21262dd5bb40892da3ad36cef77.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9656cfbcf6ebce2557211c75a6583f37bb53811f6e524af60f4095bf806b318a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/968222b548988dde849e95a8d645438dd50f3a7784852813cb22d92fdecea3b6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/96b6df3585e0cc07b6b0a052e76ef527847c4a2f30557b3c88fd01a6653d8510.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/96bdfb71629917ba9e09ef1171fef877139002120acd1661bba1e83914d6495d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9707d71a8e2f84258713e8909919ee4789a2330dac5a2727c8c5206fa9a6006e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/97167346132a342b6c4c7a955c159152e3d656114a173bd9f5b428768e30fe3a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9775b7daf20e02c9f1424fd57caacbc87941ea6445d01501388356da546c5ac6.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/978797c57b466792deaeef48bb90622c2d7d4678b5a141425d631f33903b708b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/97a541d268d5960217e2e23b5db95642ebe6d11f62ffce802a3a757bf48c79eb.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9841bf1bad7a34242d75921da8b5f76e8df69a176b7cf52331a6cfa404f93fb6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9877a025ac0c71f421cf61e627a642d1616dcb2ed74321bd78a9441e776b12d1.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/98789c650dc0cf2ae7b84e98977f4d8b49137c14d63689b13aff1156fc7b0313.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/987a48ede5e8119c46fb488952a004205cf2f447723fda350e415c0f3897ca9c.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/98d57e029ccdef6e393dbfcad18d7226bac68ee5a6885fc6deadd4b371314219.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/991eba28969c185110b68490c5b4a201d0cbdf0d162144547b7a36108f9c7a1f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/99583157e77fdf6b4d296346fa8cbae10994fe2e8baee4ff01d5b7042bdb0891.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/999485a9d57e88532953b7a20668dabe5727664c9723c8f19f1770263496f2ce.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9a1dac441fc0fd79f4c1d8b4cdefb6bdd704bcbb9fe8df95f8deb1b74515ca02.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9b7391e30fe1c33939ef31dce7a8bea792b82536d6373874b18e74b59be82574.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9b88e5608e01efd0461ff2bb69820d2500ed01ca2cb61aaa590ed7191ac76a83.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9c526db0771949f613060d4d4905377d8f28668076f4d0dc76f87b90d7afc5fa.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9c55fbb2192427e39ce643129c919e0bac645cfcbd6904233bf9d4dcf68c898a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9c919c39ee02db3b696fa3c59c26438f92973c9f1e0b5bdc61b5703e36223fa1.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9cc70fe1f87f95068ebf5a2b796aab99dc3bdff6010bda74dbd0a9ac06536615.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9d017113e20cf34ddd55beb1411bea6130e053c54f93f609697d837365ef854c.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9d1f0a35f27b084e03a985a102fd0bb0e4cc7ee303c1cbf123f435a1f387ff7a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9db2f4534bf424862a67ff01d151474d61c2126149047a867a11388cc8121ee5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9e0543d7d8541730ec0a7a2c42086f8eaacb8e7df8f713f3ef1ccb9d00dfe6ff.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9e56bb88c0b4606e877ebb0f9042484e0bfe5ed32b5ef565c6cfc0f30f5c245a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9ecf5e85441020de0b7aafea22f177843d59cb0ad0fcc5fcb5b747def9727d23.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9ed4ae691eeb5610ea378696644697a55ad7ccc9b40128e5a4ae2c2160697035.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9f098b81e7b7427aca2b7ce6effa2a41de7a7453189bf673ce286a4e70cd3d78.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9f4e12724a59683ea8ec1e97600610280a98b8cc80574980ebb80657bf65f6ea.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/9fa75b262a67a5c260f7e5ef2eba9e27fb5455d3b0878e25a956a399649a5f88.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a03601f2c747909e078fd00c93c82aafb7a2c4ceafe194fc7eb75749fe1adb5b.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a052eb968307d69eaaa5456cb98702368439ccd84193be621ae7dae694a2d533.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a0f846908894f73620bf9fc0ac2d3c6562ae40481e7435b138edc511db7bb080.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a151c3f069e728d8294658844b8d2381b1f73c142d6fb77b04bc8d1dbe5df293.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a2549cc3e8e7f3e66bae4a16bf66103090e5b2a3e5dca9f00da3489e57683090.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a28fb53dd22667e59ddaf248096882ec047daa4a5dc755db9310539390a18a45.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a2d65a5939f5a94c15bafc8d01dd21a17765abb5d3ecc24aca72986b94f0c42f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a2df563e98a85f33c02d1c645a70cb3290fbc1a3efa5bbe60f9095ec48efd009.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a2f148b88f141bf2f7ceddfae6dc491a785d210cceb66952a0eda91dca86e793.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a3903ffbe18e49d0a121db795e32a19cd643473a542589e29c69ff4aef56d9a8.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a3bece8c152077ab14ce1824ec057d6667e522dedea24f67b0d44099f0dd719b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a3cf8b5758170d341f9ccafe8b9aa6a43d220bdcf74c12fa5d9d2676f2b2c18d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a3f580dc86d4f826d15eea0b6d16503d24d3ab242058ac2c6c2e898775959ae8.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a46408d94bffa77b5516b011035448e8787d9b8a1877a4299e9f0004eb8fe632.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a4990bbfc5b8e66a0cd3e661f0b2e929779406b34ffbbe5e4a1c51996e3d56ed.zip"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a4a05a7ab21adc984c36efd128ad282e45fe82d6567e710703f4e71d754f508d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a4ae1895f6d38a8c4bf00d95a65ee0063c1a23da53b80a5b107eb2a59b6b32f5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a573c003d7e558ba9d9f82dd2437d4dc54a1d12c35cdac1b6d8e4ff5f2f9d93b.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a5c54e890526f8e5d43167eaea97888c31fc3a7f60a876989a627e501e41e84a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a5cddd1be500fe0b703f8182bbcc0ef38825d4abec7d417cb25fc43dc079ac1d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a605d9dd37198ead817d2ed08d4419ec7cf74cda5f0b21c4630843d91d6cf8f4.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a618650b511e0b0b2fc9322da6c4cbf687ae3bed3f000e1bd07e2bd56f507bf2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a685dbd11a01537c2fe5123842af83ff7657224f58ff85869c8d447ad842d1e2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a6e5df938e493254a25f2aa75ec5dda19580ae9f6a20f1aacffa14b5a8e97614.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a74bc1ffaf26bcc6cc8a0db1cca97c67bc009343699042cc39a9d6a0484f5979.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a7bfc0725ab780a4b3963748866a8de0a20474044b2770771346ce439d1ccb95.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a84bfc29c62564cfda3bc1585ad313da75441b16479ced6976fabaa9b0a90f61.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a88e4b859cc6df5140d5f8580a57800ddceff23df39af4685f983319362f76fd.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a8c20f676c8de5a691e7b1bc8e2eb0e205349014a494ea4d3f408541da34ed53.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a979067db9529a94a61aafb5f5ecca161b2195114a065a8428a3c8fe32424ee2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/a990d9c287c15a8ad971b1723245bb0152920a63f54097376479dd235fffff39.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/aade9ee8a4a59823ea56a28efb68237ef5bd209072eee213f4bf061d1a7619f7.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/aba6a530bd5f40042d54e462f25da24cb219d168368f189c94d55b711c081b8e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ac8ef2635fd59cf6c1e1ec6ae4f1a449a87200e84967a9b7e2b407fed668f8b7.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ad06e6ed8ff3ed71229ceb3f1f2872f360fe40d70180001d61ecddcf7a10c90b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ad3ff5c45dedd77f984ea6634eb95850407e0f24b6d637b2243b4a2de5c66e82.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ad522f7828fd517088e5eb743ea9acb349a00dcb0aaf7e417dac4390c7e1e979.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ad85f9cb53989675ffb14cb10f58ee06b7cb5a95652832645d15b1534e7aebf6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/adb066e7c64f114d7b5a985620128dd355cd330a80655f7b9d1632cf55a93ac5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/add835fcbf466eee7ccd8ebed3faa1c5713341662785a5e4be8663d783957735.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/aedc956925270184e42f76d357a85c56521a7218d7bbb359bd88a436b6970ff6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/af07658110d404295da56d10caf20aba5458065e7991d4ab81854492039b2e7a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/af76a5724b0b030cb3cf804b616b540c4635fe4aa86a35185557f085d06aff84.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/afafc01cc5f746a396649753a616513652609843e7a239ab9ef00c41ccbefcb0.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/afedaa0310cd8732bddd2e1b73fa8e035b163e5f12be2eea7e8d01b3eff904e9.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/affc40a61d047fea4df6d1691894bd25982a3d2833fc0dd18bcf919a62fbddbd.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b02f81f6f0099238a7bcece5302a9ec2381473dc0576fb1ff27d03aa97c45d19.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b04358d718ed7f6b09f52327a219f68f4725a9951ba40e43b6aa1fd722345e0b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b0530610d0fa47d95504cfed45305140cd7893bfb209df3bbc870ab5b4cfa81d.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b0d4595e3ca25c3b91cf0d9df234838eb104d86d3d6220d3a98e5e5e0127fa96.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b0d96df143689af9313fa10c6eb9cfc0943b943d8eead9307304869c6108c567.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b16aa1e92a2a20e26758f28493214bec1667cdb57ccea568584df0951c49521c.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b1a1f2180cf1812cb6ca2cd4d2d77402f9791e18dbc5f4abfcfcb3c5af166634.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b234209578a77a84d0efb4b50860c7a713d7f442bf21be63ca148624c6cdc833.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b3b9f06777fcd8eccaddd48e62b12aed9fc2a5489c51b39a6636983270213800.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b3d5ec08fd6b098625d1d4af1c240310dcd8bf0aba7ee3d0c51d581c09eb9305.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b3dad22e75e51528af92c0d18b336531e6a691cad652c038807307895daf4058.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b435569ba138181d6e0dc7ec25820ba67a0332ba967dac2a70baa0e95f2419f0.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b4ff663b2fed5c5a166d7f114a80457b9f686aff1a81b68b3871f2b4d35c1729.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b5096cb385e861416fec00a059f7c0f3ff3742785b5258d370276a10a586476a.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b6181a4dbc12dbba1f7d180bcdfa59d33323194e70d549bc10decc1640ca0e74.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b64c2eab25821f6f9de2540c9a2e559bcc1d2f3ef17a45fcd34388a3d026efe2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b6b67848800cae1694fd974f32ba380b50862a6529c5f1f91fc16b7f3a078c5f.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b757ed3dd3723dcab79e0b207533ebc96a9711ee5e0596d1b9113d58afa6009d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b7de5e9c5da1d57d8709a2196d45827276035fc686be91375920082571aa3deb.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b8541edfc0a4e4352904fcb01a921e6e46fa74e143082909021b038cf9d7341f.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b854fec34a895bffc9f9682fb60681f018d0223bfbed3e7e62b9d0645f40f1c1.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b8d48dd06a812a6375ed9e89449c02ebe97cd690b77eead3ac60a48f5c868a31.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b8f3a6881e5ef70cb6490462659a2191ec1a281d91be6b439f0cfabe2f45ba19.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b925cf437c98e831b9f295396db9b91b95a3fa70a19e58cb847b46339129212a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b9689b011e32fa64b67c1a22d30f04ad94e1829d53c62d974a159502d8481c67.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b96fdef3e2801f91c91aa2091e414ba3959d7ea62d7a0292cee585f5bbf3bc68.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b99842a8cbfd830e7206d7cc00ca0033b17cd42fd40dcaba5344227453692843.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/b9cfbce48bc94e92f1127d5163257d0f3e8fb754b7833acba5cdfdec9674523f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ba1c41a0f8c2d1192bafe866d3e6b7c706a8823ebcddb6d731104863de3d1333.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ba4bb1adb89b0a22a42b6c331c3a7a19545d65a7cdaa5b9790e0ea8f290c4be5.zip"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ba7c62bfcd47a88e0c33469d59a9ee6b09d519bb715e082f8c677ef69cd9bff1.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/bac1175ac2b73d77b0ae26e01485c1c068b0c8f30236529801a4903669d7632f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/bc17724194aea89936442fda43aa60de4c3bf9cb3bd8fc795ec7ef7d3f0bc39e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/bd11e11b706c7026e8e600636a47500e467f9233385a4554de0383813495ff99.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/bd18ff307dea92859997fa898aa9da6d1a95e9172ae0ddbbbb3d73fb5377e156.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/bd23552595fd47aad8ee70a2acf8b8d6bd32cca190e969f36ba58f0b6a636b45.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/bd35a1a1e5381bf9d69fdd2aac6863a03abd3958eb4e21f76ae712dd6be45cc6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/bd9d67a0d98c1a1b9c252e28f49dfdc79764f2030b8b0adea75ad53df7eb746b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/bdf8ca67e6f16fcc66728372f541d0f4ea90ff4015599274197fe98c3a16b350.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/be1b352e7d04b4db44950c8e0c060ff5f2a9279ad0a5452d058990af8befa5ab.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/be2ceca26e02f90ec712b450586a666c6af83c85e922b2d704c9f823db8a4f08.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/be92b224f70b7e23850f0a702fde4b8a91117911b2c1e7fc6960cb6dfe5a43d1.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/bea82bfa0a7103c8e632cefe222e4e81b6f33ff55a52cb6862e7353018856172.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/bf098c3ee7fd64766acbec72a7332125c2a3c4afd1e37748012e222dfc0e4900.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/bfa47e9801c9293a9dcb59712cc36e747c96b254de0c0e605e15d7871bb5e014.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/bfa6c00e99c59067450929272a5e9a1f0aad4376d9c38ba55a25f1025bfda069.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/bfd54bff969304e8a2e657f0e7b75384768b936dc4b4a501e3069fb71d0ed966.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/bfdc1632da66de5f533f546c6ad19346d3802e6528cc8d85821045512bec3ca6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/bfe7967bd4cab5986c133f9c0333a60e3b802352ea7f194221412beb7220816c.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c0a731f52bb937bbb4085ff3eb281b7687d5759bb63cca85793b95584c7b5104.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c1167fb0733a7026fb069718cbb6942bacb787f74b685f0f9d371b28f62f67b3.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c1759e10cee4423955eabed79f44bfd1c51174d3d033529f7942ef7b3cc8d236.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c1a2d689d80a8971b1e769b780c89157c518a7a156b553bbb58d0ef8d6542b42.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c1e162eb8a0544a0bc8d85f9872b9a879559f181e3646230416776152e3f9870.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c2281961bec489f4372b34d5a5f9fe40204123256c86e7403c9a90652f2b5eed.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c283e6191ecfb0676e677cce7270d24c7c3b30c354270e9ef372b4b77d44837f.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c3110acd9b3e71c618e12780a2fe8db2dc48a4f724bdfdeaaea512bcdbf54e65.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c41064eb35685eac86f751519ffd24654fcf2eb57f991246bc5828256924f6b3.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c41070bec84d6edd0ab33d51178b434dc6eed02ab1276a8732e41831d58eb21a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c441ee3cc2a051cbf71cc9d55b634d670870911ebc402dd8c80f8b57f5997903.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c449f1f34f0cc5c4a847c5939cae6fa92d073bb15cc67eaecc5d26a91a7b1470.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c476db50cc1699414d2a8f1c60bc977188f8984427488849d31ff6aedd93026a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c49098ad0ac90810ab2e5a75e0aa57076676b58e6ca7900bfcc031cbcac39c4e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c4b865fb5f47bf738d24e7dd1039c2e9bd05fef8a40d8b90592b791a7ca9f9ae.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c57b695637db740eca4c77cab3cfadd335c698aea464aa9f2ec41ef9a62ae052.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c5d56d8d1e1e9fcccad2879eb03334394878a21ea56e76f1a34ae0d223fc1743.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c5f93b5bc8fc7f8027c9b8ddafcccf9172744659ff60709c296ddf1841a81058.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c6279456b66ababc321619f86d4cf5405549c9b1c9281ae7db8cf2eabdddf5dc.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c68e3812b6abc481ff07a1ea21e3c981f6e981114d3840dfc408834aa07664f4.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c6a8b4694d62b16f03e60e28d35c884e552748710e7326efde36d600301f9a7e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c6b922c9bf121ca546f8adb26d2c3c2a549afac46e9d1c564ab68d7e52bf581a.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c6fe0b33c7d5d38646a1a10cf97b2b311200451a8291bf102bd3c3e636c18f77.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c715f935f49784136e585b459218620e43e338f456155a802f5464d5177b2557.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c71dc65573374ed60ea57d6b43f8fee56cdb15aea46cbbdc5e6b56109643d20e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c742ca89f03da8e4d97bd967863230154cdce4429be29eed8c87b1948fcfafab.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c77885fd334c860c3aab02e1341b9b627ada0ff49924ddbd76834ec79678b236.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c7e03fcce09bfd17b4ba8cdcc503223c763b21061a0c5ea87a5f0dfb05d84c19.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c809ae6c33481390b8a46a69cc563ecec43a9cc90054c76512b474850bc8eaad.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c85ca8dd8cac146fdfa0b179d1b731a38b6871055bbe2fbc9558107b683b34da.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/c9e7c19cb38678678c4be83ceb79af628a9dde7189f656411e6761c82be7f0ae.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/cab3524c114263d8f32d3d11199d03247f5e0547bf4861af70ef81d64e854aec.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/caf68b9646a30d3e54a09e094e603d2c59b1c68fb52f5e4fb680cb29c67cee58.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/caf8d17ef7bf0d7215cc05cefe05ef7cf77e2d33d1e8acfa83c8fb7ae82ef42c.zip"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/cc16990dec272c1a00f808d6c1d4f93ac56325a70cce32ec97ea026b5cda0ea7.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/cc5de66323aa90a59d70d9d310b32af8808342c81e9a5690fc96066be63f56c1.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/cca5fba72483502b1b3870cf589a05bf98d8bc59b54231f4d819db5c83a4c2f5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/cd3cebe4b966806ad9e46819542a4aacb7e706293e2f191ba845a9ed8af76a1d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/cd5b650763796964e68fc8762733580118cd7788c22cce6a15ea65d38df47cfd.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/cdab1c81892e7ebce780f9a776a17f5880b87e772d41d500d79bf4cc22121f42.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ce267c90c534d8a28ebefc2b82e7f4eb6940c044c0ea5902da8251bb1c55852c.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ce534b4d9d66d3df59b6d16cf28f80410dc4cee345312b9d72bd8fdb0be29592.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/cee4be8373532ef2e07d0f3e1c028403a3bb3aafcf43d9dd0dfbab7b55eb7019.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/cfa05d14ab448b5f9a4e52beb53ac937f631396f12610b9742cb4463fb0b97a1.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d004dc13626383719e7bfd3c86f747beb31bd4a2597667eb97c29345400bf3e7.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d06ab32b6c85172d17daab520d51cf6b7a8825f11665a9ab892bedc669cbd948.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d21c507000d6a546c4aa41e363f4c7e60ac31c23b650f4668a3ea7021d20b6e6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d374f6485ec8d407354968c2e8be4737c532370cabe21a46a173ceaaf0dd7bff.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d37c590577ebebb2f8e60e2b41cf9e71d35245102d6c933b8c78a6d044d6deb6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d4241f3690a11cf850162351df88b99787bc77489395b059fe143b8c1a9d8df7.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d447d1049487d58d5c22a0c68240246115465d273551b3735979d6aa2650f4eb.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d47300d415a8ef52a4f307849a7c5c6fd17da32ae531d13e540861a655dcf0a6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d49e6abdd0e4ce5eac9b0ac9019ff2a4ff498dbd3b7188524c08835269f55fc9.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d4b42afeb8d4f32d272d546e40a18f7202a83b607f59dd40e832bd2310d9f7a1.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d4c1d6f1bd2f54523508a740275becd44329a61f2214a2492a1d17a6968f9546.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d4f0543c2af7ea71ecaafe89350f88b2fbf43a7490a2e257d5dc6f89550ee722.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d521548664b1dc222bb11b6db44aacb991bbac1ae7ffb614f465d07e0ac499dc.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d5cd95dd3cd9061c56773da6279f8fbf1bec031dfb4efd88b3f8c3dacf878783.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d5ef7d407a8ea36c1ceb3e028c6239a798721c35f3c82276a0fc8d3196057449.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d601e9fd9e974a5ea61a4d266f7ba3683ec0695faf7f9eb46324b2b26b967bc3.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d6cc09aeffd11b056576ae6d5260d684e8e9a6b20493f2d45603af8b23beb360.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d6cf8d98ba5fd61f8bc0b8e3bd40772d2a95203a409792a1de85ce9d5127bf80.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d6d18a4f86bd689032f0586a703e749c00ab48408205f4df08cc87aeab7fe895.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d6e25426808fab52f33dd720c90257b79eabbe85254e407343ad3351bb097e85.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d79cf50c38bfaa12e6120dbcf0601bf1cec55d0d605ded0508acbaf540044ee9.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d7d93a0c11a977a7ee62b7bf162ece44a8604f01094377d3477d6d26508fa286.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d81299885b5547df35af19f4889547298556b42d184dea59e5697e5b4f5af0c8.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/d8bb6cf61b5fbbf0eaa10f65da59dd12d828620665fbadb991dc4b5354e237ef.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/da2c042b9d7fef0563d925af4ad0275ddc715cd45d4f93d975b857818c202e62.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/da8af18b6f0261caad47d507eb475868eeb678d9cb642f7b9cf1b102b149f9e2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/dae3544180b740384e7492e19be36210ef6867fa6c5e75d2982b376eb73ce3eb.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/db73dac7b8fd721afbbb02d62e39e175e875ad3541d54ce3af65ef473d3a0eda.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/dbc5818aa798ed84fdaf2f722d365cd2cdfffba4c31bb44bdf1ca9ba3b598a34.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/dc1266e34e06f16b0365da538a0dfc5a96752cf49330e4b6a2b07bb6c84b06a7.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/dc5685135a26b635e85a0df788e25b8702acc80c883e75de7ead9bb348024468.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/dc82911a4101ee72736bc654e58eb59fa61ae8223cba6b29ebfc51d756a0b54b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/dca8e8dc650c618dbba5d2181f0377794315358fcebd243ef022654fa0077995.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/dcd6475d3335aa780aa93c836b3c38c765c658938c795b8ac3ab94e5c835b3cb.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/dd1184b185bfcd631097de451212f554ee79e1ca0936a81ddf70e99337836503.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/dd3da974b402f20f1295dd0e4150b166bad4bc20a9395d5e7936f0092e5b0973.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/dd6392ba4ff057440a0755ac0a5fb272e35856d932cc5731b4585b15e6e57224.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/de1aafa276ffc32c6ba04af38ebf4b484121971cae6801804dedde441c1c57f7.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/de7c53f2406de6fcece3e63b8edf4179c52caadd33e0047a1df84f0eceb3492f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ded329b72684f033f108df5db044665c47d519af99a97aafd2332955bdd7688d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ded4936fc62d0f16a119c4ab4a0caa44005414b6f8f528fdf6f4c770add85984.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/df0139edddb39470731b1ad05235e86f259985480d6b07936abafa558af8f84c.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/df5f1aab1fbc76cbf7b82adec93499ce6f8be365d92d0f898eee8ca32668d36f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/dfdba630551fdc53bc2d5409bfa7dcf03443a4ac30bc75edff602a4d16c54d6b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e0bb2abe424b11b1ccb0311ea075115e158124132d0426f392d486f48abe04a5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e0e10b75bfd69d36c37c68e3c267af963883e72551dbafd7ad651c39f0810a33.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e0f2e0cfb3dc807f4f399457b29d0426d3042cebb7c8a7ac9bb3d1ec218b5f82.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e0f657095f9d3d6244a394d37dc22c392907ea30487d6aaaef8182c1e78850a3.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e13d26ee9a8df28366e7324ac83e45abed75710b07887d6ccba9b43d8d3eea64.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e1e2f5b800d2f9d112c7405da0d1b668499d5e061230b05910e515c26bd62f6a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e1ed7a5a01c54f4d0375133ba67d39619f11ca3bec9fd2efa789db2f68171179.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e25be05f2034fa080a2037bbcc17d13d8bac98918a2b305fb131f358e1c54689.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e275e955f1a3e498f1dcf8af7b4aa4337f09fdd2784a8f7a7f6f62db34acc755.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e2ca7bd6b9f4915d39f3b178ed1261c609fb27b4cd3a786cee7c76c47f883c76.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e306b132d7eabc8e597655efab4383e647fb0a44ebccb7592ada4516a2ef4bf9.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e3822b101a41765b3120302722415d8907d50a64929f51f719f5561afcb13c7e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e3ba2e28450496804b155f9179cd25cb2c5ce85b7666478a6a3f93fc2bc6f59b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e3d0f2c0cc46944a7a495b72b39a363a73d7a0d56f45f6399b8c23ec600a0665.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e3eec734a0dba0afee202618f88fb68c115c04b0628e58b83cf89bfddb078314.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e463edac2a2894ec5fdd568a17a01b5bd230f82795b8d9e48be91a0556c83125.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e57d4f3adedc6823ea2e1eb15cb707d2f1137d52443b66580249c708b5cb1460.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e5a165c7bc2816ec5b5bc76a27f12d1290d5fc2899719c08e8f2996365cfe4d3.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e5b6b0a77fa55ddec408b51d62c98e46858e983b1fbf8a517922414829a2ff68.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e5ef40675dd2a6a976badcc82d880fbf1ce0e02d7b845b22de14170fcef5600a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e6244c251315a5541a91db7112e66a60e5b26e8e5a7a44e2dcad093212411881.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e67380035109bb5a9d8133d2755adc70642851be27a6d5275c07225da8729dfd.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e69b8dbcb7420a1689ce04d85c4404f2b9811cff4d0716918a06f5b4cafaf9b3.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e6bea264175b9b48e567b658e4fe062eeabdd94eda46bc9b6c6343a9cf6dff51.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e6d6403434c60005fbdfbe5a04673670dfee97f78f592e2533100ae69fdd6954.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e75f6008a240f3a45f2da02053a757ca37447d9aa7fa2efa146ca1a172856917.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e7a37c47ab086285ae7ae6a1e152a42c308438f01b7d80835ed2de3b8d275c04.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e7a5124f5cd98e09454f51c52901ea130ef1f878e47c6bfbb5d5c763937c3f17.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e7be9192524cbd2f7f1fbb12ad007f7101859b36cde4d1fd8375545197a7a8b9.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e81522de4bdf362cdca560d8120b5f92fdd08d6cf362dfdc9b9d276e4f9144f6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e825edf756d9341d4df652f7fb1f9f21bec516ad9ad018350f737ea45371630c.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e8bfaaac6446fdeac4f89d6258572eadadb0eecdebd6d9f1c0a58954b4f8d169.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e8e81aea5790042d62c5dbbc1e0032af1cea1cc8059fbfee8c6760a25775ced1.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e8ec997d4dfa34373e09edf98a77b14f362c0066a1844066a7976414e25ba446.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e931b71faedbe6209ffff0569c5449f6c5b17eb15ebda0be99c42a710512b277.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e94819743f2f4b0245bc4a910bc0568954f4cce7db43d95b202fbb30f07254ac.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/e972e2006f101c00d0d598b5f2534255602eae1225e6f4a0d337586f663ea02f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ea060b780430319465d3349b42194f7ce2bfd25d6f27dc84cc4475975dc24c71.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ea2031ff6449959bd1e3ac172622f70882efc24f0f170b4ce95d231cff71968f.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ea475b14e6c3cbd19c3e82690fcfc7da5d44984717acb6f7a77885c14f8c1e61.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/eacfa004772667523db1e92f291593f7d9e47489ccd607d8fc90608e475e90f9.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/eae02018d140fb2281b87e1484e4ca9295055eabe3d01cb1ee21e56ac8b89605.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/eb6dabd353b17c2e9f3c8af886056de27bf3f73e3e4e006ff9b26d2abab10e0b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/eb8dd23e314042688d3b0c42c529a8aa0fbe9747fe4d4881ae5675e48dad0baa.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ebb15b223aaa123b9c399df6db485e9b509800deb022017a027dcc77767c5607.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ec957a388462990f04a7199e9183918c0ba2ca8d72b912e805569ab217bb6bd0.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/eca9df76e9cc382e0c2c22bde595635a0021d779f19e1ba7363a795e59d546c2.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ecaeed378e7e87ea62c94670a06fd641aea84949ce1f9593dcea8d62a23ebfd8.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ecc53910c0d67d210f0784384a937c50416b3a2d4292f0ce2ef741caf4afc756.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ecc73ac688a393b6e9c6fa29e8b8c7b63226afe1514b47652401a615fb7d9098.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/eccafd5af16991ff0ac55fc50ba2d5a0455310bd15e4c12feea378a649e8e83c.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/eced6eae8d4935c5bb239d5441afb503fffc8e5c138ed28f61e901ff7fc301f3.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ed3eccbd97f001cca0cbff59556c5ac1c608dcd79c283909a79ab4f08c66ebc1.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ed7eb51c2d9dc362ba569cd0d7d533cf0406fed1bd99622d3883ae1fc4d3d69b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ed9fcbf3f4960515e6a2c894f2900a184b7d04c30f7c43f335dcc8f694c14c11.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ee04d6e281ad70cc41f16b806f32da701cac5b004c8b99f3a59d686131b909b7.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ee4c483019d31da7c3a2c1a1dc949a7db27fafe1266af4585ddefc192f2d3b5c.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ee60c90c5a1ad7441023b7303066f70f629a8765955cdc1277c41d4472f24fd2.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/eec04561ea5854af1faad89d38fa74698b14c7c775c029c0b224bae0523dace8.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ef09e8810f39790b6aef79d0b7f026769d47404ee357d6d0bf6cd3359f7fe867.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ef1bb3262e84b8f35c2162ffe5ae43023831a8a222dc90ff409964e16e76b60a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/efd1f50221d09df005030d7a3f44132df27c08fe71f573eb42cfb93127895d3e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/effb7904f3b4796106a78013660451c4c45911719ad59d52973a99950715f5f6.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f01689c6d925345354b10cf0da707b027b02cb6562f54a4bcdf1d488a6e5afa0.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f0991f512ddeebf0290ef82e403da3e87033848a2807a1fd7ea9435f738ecc12.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f116d48feafcb66404631594ac741e38959de92126aaff4c40bb698ba1ec9975.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f2ab3fb357852fb4be3bde7aa9ef86046c8f7ba30e428ee9ca7c15a483b03384.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f2b56c5d6a654be16d10da57f18b5d585ad9d121daa8956e2d67ce069dcd956b.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f2f33c0d9c5e7d7b27387e4ccde2638d464079e807ffd21d22e03191fe2db5e5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f2fa2c2aa9dfbeccaec447721ae6e39acdf51a99312051c694e28fcc76dd3f47.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f339a85e789b1beeec7687c262c4ab428cdcbea15894fbeaa2dae001c7fa05a5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f37e019e9995350401e01e27362b2faf13a0e2b54f8d8491f0b67d42024d4aa5.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f384c3ce17cd195320f030be0de2af927aa96da6db22e11271d5c0c26d048298.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f397cd3b6aae401c5457361259c8287f2d9bbd4b571d054bebdf219ea4a823b2.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f3a1ae87d6533e4e1f0170ec790dcd4649a1bb254f11b4c103da89ccc6ea13fb.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f3b5657eacd7692bb139d8380d48f20b73365ed19a173ae59452ab8db7c91e35.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f3e74beeb9cf1c2af2d368acfdd3377e627c2a8d7925d32cc5e2939ad0d9165a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f3f778be1a3f61ddee528556ac6e2c2398b651d0a3921f542c64f1dcc7ea0a16.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f4cbed119d8f67dfa5c0c144e677e039c1c1380c481cf1b0c8407ed3ffdf842a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f4fde2f57672bd38ffb12c01ae51b7d61d9d96a95f77f175fc0e3474ed8b355f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f52d95083a191ae30c3696ebbcaea21056e3667cfd247445a3040b7183ce565e.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f537e842e604d45f76687652329c02947fa17ba51f19ffef670ae9c9a87d8e2d.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f6b587dc2a5b156632623e4abd3d03fe9b9100aa95134cca9d7a61e3eae95f11.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f6c53d6a700c2e21df2a9d5e98434211cdd140c0963a136435a6093ef16c5c9a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f6ee5b79451e04d53824f445aec9e034e12482d0d784efcaf05b44726e97fa37.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f749c6d81966e9b564cde12143314b8caa356f1c4df54ed0e31d96ba2c07147a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f7b762a3de4c157c1a34fe2eca0d7db2a233a1883dbd4b1ba02a6c82193bdf23.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f7bd5c9609772c948c71ceeb9ea359ef3c1202e7b36461589dccdc0ceb5d5134.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f7d2d6c9cb8fbb980fd390abc0283d20d3188b9c0d55feac938c8255ff685869.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f8008a62ec1cf265818d9313394eae00398960bf1b9a64154b8ffb71877ad3f8.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f8f2aa30265392634b67dbddebdc6ac0f05007de1abb2730f27d27513e72d378.mp4"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f969d476a67962fe951f88c385030c4c6ee98348f98d5de246e231dd56c10974.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f9deb25a146d8fd47e5939160fb285fff6d3064881beeb4a1815f03e5d4f81d2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/f9f92ec79696636fa5c951a2f0cd2ae1934aed98315bd3ab4af136c80380cd33.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/fa6d628fd90a67d01131f77121f8041b6255ef5e75780661f27b747924f034e8.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/fa7be5d1b3c87882a4d8b1a03f99217e042ae657145bed2a822a61f1ca0107b9.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/fac304573955e8374a1f8fd0e7b6387ebe419a674883231deabd8c313cf96157.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/fad863ae1dbf69e0fa90ddf8d1c33e4965a5fd72bc840202851278d65c6ce9f2.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/fad8b80588aa6af94fd6d6e2236e59dc0d292eeec15b5e81cc27f89f8ba75ca5.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/faf10edf213bf81dd121f47acebb954351715dbae29e042ae9967ba95041ddfb.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/fbca236a03acbe4519ce4cefa51be933b50a8a53f455254cb50f69e38c146b2f.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/fd7eceb7a2748825e15c177a35d03cb369c8f24de6d646c697c14f397b4bd166.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/fdbe053e291ab3bb06956976b58840377978d1d2715f7b3dba5a10d5dd6ab83a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/fdff272957ee6045fd6413cdfed55b81a9dc2c0f890de5defe5683dec58efaed.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/fea9ba3f9b067a82cf95cd8e5718376a00699e26bc3c44b6aebd7f5cb1ddde1f.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/febe6c527d619104bf8b72f83a7edc9535195b703cff57e8988cbdcd7f0d227c.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/fec43cbfde666198876a23f43bebe9cc69b2a505217a4f0acf39cd7d40577df7.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/fed445f319c80cdd0e485342efb900f300e22ac996be5d6cc8ced96698df73e0.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ff1956c0c2924e63879303a45413633e2166a5b7447c9136b2089e84d3937d73.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ff70cc20435c8d3df53d56e625efcf664799463c7054e78a2f59dca019874b9c.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ff7b82cc9fca3ac806908cab38d41dafdf8b92cb785640e28896058b36c3b97a.txt"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ff91b213958b4ca22786abbbf8536fd743f5e345cad296c5e42f7681d100e4ad.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ffa35b11936ae44892fb4c04f7c45ddf82f840534fa3b4a24f4c8743c9d3ef0a.jpg"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/library/mission_media/ffdf70f6828acf1bb942bd5d82f19787e092b3ac381aae5061dc70bebd678385.jpg"
+      },
+      {
+        "status": "M",
+        "path": "apps/creative_studio/library_helpers.py"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/mission_view.py"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/tests/test_mission_bundle.py"
+      },
+      {
+        "status": "A",
+        "path": "apps/creative_studio/tests/test_mission_progress.py"
+      },
+      {
+        "status": "M",
+        "path": "apps/creative_studio/tests/test_studio.py"
+      }
+    ],
+    "sensitivePathNamesOmittedCount": 0,
+    "scope": "Committed trees differ. Matching names alone do not prove current untracked/ignored file bytes match remote blobs."
+  },
+  "stagedAndWorktree": {
+    "checkedAtUTC": "2026-10-14T12:19:49.912900+00:00",
+    "stagedIndexChangesAgainstLocalHEADCount": 0,
+    "stagedPaths": [],
+    "unstagedTrackedWorktreeChangesAgainstIndexCount": 58,
+    "unstagedPaths": [
+      {
+        "status": "M",
+        "path": "apps/creative_studio/README.md"
+      },
+      {
+        "status": "M",
+        "path": "apps/creative_studio/app.py"
+      },
+      {
+        "status": "M",
+        "path": "apps/creative_studio/library_helpers.py"
+      },
+      {
+        "status": "M",
+        "path": "apps/creative_studio/tests/test_studio.py"
+      },
+      {
+        "status": "D",
+        "path": "docs/notes/downloads/cfa-review (1).json"
+      },
+      {
+        "status": "D",
+        "path": "docs/notes/downloads/cfa-review (2).json"
+      },
+      {
+        "status": "D",
+        "path": "docs/notes/downloads/cfa-review (3).json"
+      },
+      {
+        "status": "D",
+        "path": "docs/notes/downloads/cfa-review (4).json"
+      },
+      {
+        "status": "D",
+        "path": "docs/notes/downloads/cfa-review (5).json"
+      },
+      {
+        "status": "D",
+        "path": "docs/notes/downloads/cfa-review-sweep (1).json"
+      },
+      {
+        "status": "D",
+        "path": "docs/notes/downloads/cfa-review-sweep.json"
+      },
+      {
+        "status": "D",
+        "path": "docs/notes/downloads/cfa-review.json"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/LESSONS.md"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/benchmark_roles_20261010/README.txt"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/benchmark_roles_20261010/ROLES_AND_ROTATION_CURRENT.txt"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/collaboration_authority.json"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/comfy_workflows.json"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/detail_profiles.json"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/claude/I_AM.md"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/deepseek/I_AM.md"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/kimi/I_AM.md"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/nova/I_AM.md"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/registry.json"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/registry.json"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/mission_control.json"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/README.txt"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/source/01_CFA_PROJECT_CONTEXT.txt"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/source/02_CURRENT_WORK_AND_REVIEW.txt"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/source/shared_inputs.json"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/provider_roles.txt"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/index.html"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard.html"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/boss_discovery_20261008.json"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_review_20261007/index.html"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/DECISIONS_20261010.md"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/START_HERE.txt"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/index.html"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/README.md"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/project_brief.txt"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/gemini_instructions.txt"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/reference_map.txt"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/index.html"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/build_catalog.py"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/cast_collections.json"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/detail_display_groups.json"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.css"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_collaborator_profiles.cjs"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_collections_navigation.cjs"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_compact_browse.cjs"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_outfit_navigation.cjs"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_review_requests.cjs"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_scene_readiness.cjs"
+      },
+      {
+        "status": "M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_working_bom.cjs"
+      }
+    ],
+    "sensitivePathNamesOmittedCount": 0,
+    "currentTrackedChangesComparisonToRemote": {
+      "method": "Git diff of current working-tree versions against the locally available freshly advertised remote commit, restricted to non-sensitive tracked changed paths. Only status/path metadata is displayed.",
+      "comparedTrackedPathCount": 58,
+      "differentFromRemoteCount": 56,
+      "differentFromRemotePaths": [
+        {
+          "status": "M",
+          "path": "apps/creative_studio/app.py"
+        },
+        {
+          "status": "M",
+          "path": "apps/creative_studio/tests/test_studio.py"
+        },
+        {
+          "status": "D",
+          "path": "docs/notes/downloads/cfa-review (1).json"
+        },
+        {
+          "status": "D",
+          "path": "docs/notes/downloads/cfa-review (2).json"
+        },
+        {
+          "status": "D",
+          "path": "docs/notes/downloads/cfa-review (3).json"
+        },
+        {
+          "status": "D",
+          "path": "docs/notes/downloads/cfa-review (4).json"
+        },
+        {
+          "status": "D",
+          "path": "docs/notes/downloads/cfa-review (5).json"
+        },
+        {
+          "status": "D",
+          "path": "docs/notes/downloads/cfa-review-sweep (1).json"
+        },
+        {
+          "status": "D",
+          "path": "docs/notes/downloads/cfa-review-sweep.json"
+        },
+        {
+          "status": "D",
+          "path": "docs/notes/downloads/cfa-review.json"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/LESSONS.md"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/benchmark_roles_20261010/README.txt"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/benchmark_roles_20261010/ROLES_AND_ROTATION_CURRENT.txt"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/collaboration_authority.json"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/comfy_workflows.json"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/detail_profiles.json"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/claude/I_AM.md"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/deepseek/I_AM.md"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/kimi/I_AM.md"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/nova/I_AM.md"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/registry.json"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/registry.json"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/mission_control.json"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/README.txt"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/source/01_CFA_PROJECT_CONTEXT.txt"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/source/02_CURRENT_WORK_AND_REVIEW.txt"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/source/shared_inputs.json"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/provider_roles.txt"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/index.html"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard.html"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/boss_discovery_20261008.json"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_review_20261007/index.html"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/DECISIONS_20261010.md"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/START_HERE.txt"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/index.html"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/README.md"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/project_brief.txt"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/gemini_instructions.txt"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/reference_map.txt"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/index.html"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/build_catalog.py"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/cast_collections.json"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/detail_display_groups.json"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.css"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_collaborator_profiles.cjs"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_collections_navigation.cjs"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_compact_browse.cjs"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_outfit_navigation.cjs"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_review_requests.cjs"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_scene_readiness.cjs"
+        },
+        {
+          "status": "M",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_working_bom.cjs"
+        }
+      ],
+      "noDifferenceAgainstRemoteCount": 2,
+      "noDifferenceAgainstRemotePaths": [
+        "apps/creative_studio/README.md",
+        "apps/creative_studio/library_helpers.py"
+      ],
+      "untrackedIgnoredMediaVersionsVerifiedByThisComparison": false
+    },
+    "untrackedIgnoredVersionsNotContentVerified": true
+  },
+  "latestObservedLocalPushLog": {
+    "receipt": {
+      "head": "264c47cd3f44d1b32f3c7a8cd414d924298363f3",
+      "selector": "refs/remotes/origin/main@{2026-10-14T08:01:46-04:00}",
+      "action": "update by push"
+    },
+    "timestampUTCFromReflog": "2026-10-14T12:01:46+00:00",
+    "recordedActionIsUpdateByPush": true,
+    "headMatchesFreshAdvertisedRemote": true,
+    "actorIdentityAttributed": false,
+    "globalLastPushClaimed": false,
+    "limit": "This is actual local tracking-ref reflog evidence of an update by push. The audit does not identify the human/process/worktree author or guarantee no later push elsewhere."
+  },
+  "earlierCheckpointQualification": {
+    "timeUTC": "2026-10-14T11:37:56Z",
+    "thenRemoteHEAD": "e58074d0fe345e8b429ed44b5b938a82f55f1fdd",
+    "wasSameAsThenLocalHEAD": true,
+    "stillSupportsCurrentMatch": false,
+    "priorScanAndMediaInventoryNotOverwritten": true
+  },
+  "interpretation": {
+    "currentLocalBranchMatchesFreshRemote": false,
+    "branchRelation": "behind",
+    "noDivergenceIfBehindOnly": true,
+    "workingTreeVersionsMustBeConsideredSeparately": "A behind local branch does not automatically mean every changed local file lacks remote coverage; the restricted Git comparison above records which tracked current versions differ. Untracked/ignored media and Drive coverage remain separate evidence."
+  },
+  "localReadOnlyCommands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "startedAtUTC": "2026-10-14T12:19:49.096656+00:00",
+      "completedAtUTC": "2026-10-14T12:19:49.137468+00:00",
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "symbolic-ref",
+        "--short",
+        "HEAD"
+      ],
+      "startedAtUTC": "2026-10-14T12:19:49.137504+00:00",
+      "completedAtUTC": "2026-10-14T12:19:49.176678+00:00",
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--abbrev-ref",
+        "--symbolic-full-name",
+        "@{upstream}"
+      ],
+      "startedAtUTC": "2026-10-14T12:19:49.176724+00:00",
+      "completedAtUTC": "2026-10-14T12:19:49.220669+00:00",
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "@{upstream}"
+      ],
+      "startedAtUTC": "2026-10-14T12:19:49.220705+00:00",
+      "completedAtUTC": "2026-10-14T12:19:49.260174+00:00",
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "cat-file",
+        "-e",
+        "264c47cd3f44d1b32f3c7a8cd414d924298363f3^{commit}"
+      ],
+      "startedAtUTC": "2026-10-14T12:19:49.260214+00:00",
+      "completedAtUTC": "2026-10-14T12:19:49.303497+00:00",
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-list",
+        "--left-right",
+        "--count",
+        "e58074d0fe345e8b429ed44b5b938a82f55f1fdd...264c47cd3f44d1b32f3c7a8cd414d924298363f3"
+      ],
+      "startedAtUTC": "2026-10-14T12:19:49.303531+00:00",
+      "completedAtUTC": "2026-10-14T12:19:49.348773+00:00",
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "e58074d0fe345e8b429ed44b5b938a82f55f1fdd",
+        "264c47cd3f44d1b32f3c7a8cd414d924298363f3"
+      ],
+      "startedAtUTC": "2026-10-14T12:19:49.348819+00:00",
+      "completedAtUTC": "2026-10-14T12:19:49.392734+00:00",
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "264c47cd3f44d1b32f3c7a8cd414d924298363f3",
+        "e58074d0fe345e8b429ed44b5b938a82f55f1fdd"
+      ],
+      "startedAtUTC": "2026-10-14T12:19:49.392763+00:00",
+      "completedAtUTC": "2026-10-14T12:19:49.434587+00:00",
+      "exitCode": 1
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "e58074d0fe345e8b429ed44b5b938a82f55f1fdd",
+        "264c47cd3f44d1b32f3c7a8cd414d924298363f3"
+      ],
+      "startedAtUTC": "2026-10-14T12:19:49.434617+00:00",
+      "completedAtUTC": "2026-10-14T12:19:49.475481+00:00",
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%H%n%P%n%cI",
+        "264c47cd3f44d1b32f3c7a8cd414d924298363f3"
+      ],
+      "startedAtUTC": "2026-10-14T12:19:49.475520+00:00",
+      "completedAtUTC": "2026-10-14T12:19:49.518477+00:00",
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-status",
+        "-z",
+        "e58074d0fe345e8b429ed44b5b938a82f55f1fdd",
+        "264c47cd3f44d1b32f3c7a8cd414d924298363f3"
+      ],
+      "startedAtUTC": "2026-10-14T12:19:49.518523+00:00",
+      "completedAtUTC": "2026-10-14T12:19:49.563908+00:00",
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--name-status",
+        "-z"
+      ],
+      "startedAtUTC": "2026-10-14T12:19:49.564763+00:00",
+      "completedAtUTC": "2026-10-14T12:19:49.607544+00:00",
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-status",
+        "-z"
+      ],
+      "startedAtUTC": "2026-10-14T12:19:49.607584+00:00",
+      "completedAtUTC": "2026-10-14T12:19:49.699674+00:00",
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-status",
+        "-z",
+        "264c47cd3f44d1b32f3c7a8cd414d924298363f3",
+        "--",
+        "apps/creative_studio/README.md",
+        "apps/creative_studio/app.py",
+        "apps/creative_studio/library_helpers.py",
+        "apps/creative_studio/tests/test_studio.py",
+        "docs/notes/downloads/cfa-review (1).json",
+        "docs/notes/downloads/cfa-review (2).json",
+        "docs/notes/downloads/cfa-review (3).json",
+        "docs/notes/downloads/cfa-review (4).json",
+        "docs/notes/downloads/cfa-review (5).json",
+        "docs/notes/downloads/cfa-review-sweep (1).json",
+        "docs/notes/downloads/cfa-review-sweep.json",
+        "docs/notes/downloads/cfa-review.json",
+        "docs/notes/explorable_world/comfy/LESSONS.md",
+        "docs/notes/explorable_world/comfy/projects/collaborators/benchmark_roles_20261010/README.txt",
+        "docs/notes/explorable_world/comfy/projects/collaborators/benchmark_roles_20261010/ROLES_AND_ROTATION_CURRENT.txt",
+        "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt",
+        "docs/notes/explorable_world/comfy/projects/collaborators/collaboration_authority.json",
+        "docs/notes/explorable_world/comfy/projects/collaborators/comfy_workflows.json",
+        "docs/notes/explorable_world/comfy/projects/collaborators/detail_profiles.json",
+        "docs/notes/explorable_world/comfy/projects/collaborators/identity/claude/I_AM.md",
+        "docs/notes/explorable_world/comfy/projects/collaborators/identity/deepseek/I_AM.md",
+        "docs/notes/explorable_world/comfy/projects/collaborators/identity/kimi/I_AM.md",
+        "docs/notes/explorable_world/comfy/projects/collaborators/identity/nova/I_AM.md",
+        "docs/notes/explorable_world/comfy/projects/collaborators/identity/registry.json",
+        "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/registry.json",
+        "docs/notes/explorable_world/comfy/projects/collaborators/mission_control.json",
+        "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/README.txt",
+        "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/source/01_CFA_PROJECT_CONTEXT.txt",
+        "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/source/02_CURRENT_WORK_AND_REVIEW.txt",
+        "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/source/shared_inputs.json",
+        "docs/notes/explorable_world/comfy/projects/collaborators/provider_roles.txt",
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/index.html",
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard.html",
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/boss_discovery_20261008.json",
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_review_20261007/index.html",
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/DECISIONS_20261010.md",
+        "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/START_HERE.txt",
+        "docs/notes/explorable_world/comfy/projects/index.html",
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/README.md",
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/project_brief.txt",
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/gemini_instructions.txt",
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/reference_map.txt",
+        "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/index.html",
+        "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt",
+        "docs/notes/explorable_world/comfy/projects/visual_library/build_catalog.py",
+        "docs/notes/explorable_world/comfy/projects/visual_library/cast_collections.json",
+        "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+        "docs/notes/explorable_world/comfy/projects/visual_library/detail_display_groups.json",
+        "docs/notes/explorable_world/comfy/projects/visual_library/library.css",
+        "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+        "docs/notes/explorable_world/comfy/projects/visual_library/test_collaborator_profiles.cjs",
+        "docs/notes/explorable_world/comfy/projects/visual_library/test_collections_navigation.cjs",
+        "docs/notes/explorable_world/comfy/projects/visual_library/test_compact_browse.cjs",
+        "docs/notes/explorable_world/comfy/projects/visual_library/test_outfit_navigation.cjs",
+        "docs/notes/explorable_world/comfy/projects/visual_library/test_review_requests.cjs",
+        "docs/notes/explorable_world/comfy/projects/visual_library/test_scene_readiness.cjs",
+        "docs/notes/explorable_world/comfy/projects/visual_library/test_working_bom.cjs"
+      ],
+      "startedAtUTC": "2026-10-14T12:19:49.700769+00:00",
+      "completedAtUTC": "2026-10-14T12:19:49.789446+00:00",
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "reflog",
+        "show",
+        "--date=iso-strict",
+        "--format=%H%x09%gD%x09%gs",
+        "--max-count=20",
+        "refs/remotes/origin/main"
+      ],
+      "startedAtUTC": "2026-10-14T12:19:49.789582+00:00",
+      "completedAtUTC": "2026-10-14T12:19:49.832826+00:00",
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "startedAtUTC": "2026-10-14T12:19:49.833072+00:00",
+      "completedAtUTC": "2026-10-14T12:19:49.871386+00:00",
+      "exitCode": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "@{upstream}"
+      ],
+      "startedAtUTC": "2026-10-14T12:19:49.871423+00:00",
+      "completedAtUTC": "2026-10-14T12:19:49.911289+00:00",
+      "exitCode": 0
+    }
+  ],
+  "environmentSafety": {
+    "GIT_OPTIONAL_LOCKS": "0",
+    "GIT_TERMINAL_PROMPT": "0"
+  },
+  "preservation": {
+    "earlierReportsUnchanged": true,
+    "gitFetchOrRefMutation": false,
+    "branchIndexOrWorktreeMutation": false,
+    "mediaEditsTransfersOrHashAudit": false,
+    "settingsCredentialOrSyncChanges": false,
+    "backupOrCleanup": false,
+    "onlyNewFile": "CFA_GIT_REMOTE_FOLLOWUP.json created exclusively."
+  },
+  "appendOnlyEvidence": true
+}

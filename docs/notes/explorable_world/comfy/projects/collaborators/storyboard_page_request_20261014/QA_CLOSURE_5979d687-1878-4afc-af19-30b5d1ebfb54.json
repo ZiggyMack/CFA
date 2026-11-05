@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "5979d687-1878-4afc-af19-30b5d1ebfb54",
+  "checkedAtUTC": "2026-10-14T23:30:24.423669Z",
+  "authoredBy": "nova_personal_assistant",
+  "assignmentID": "storyboard-story-selector-story01-intake-20261014",
+  "outcome": "remaining_regression_question_closed_and_additional_functional_checks_complete",
+  "supplements": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_page_request_20261014/INDEPENDENT_LOCAL_VERIFICATION_b4e6e8d5-d9bd-4bf9-935b-415b6c056611.json",
+    "bytes": 7872,
+    "sha256": "e0ed74649766ac5d8dce2c0b6f856a2adafaa73d5bc3eec62e3f2de6a542520e"
+  },
+  "currentVersions": {
+    "catalog": {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+      "bytes": 11083117,
+      "sha256": "3dc3211e7e457a005d0c4b32ee4af63b34287455eb3e10f2589f112053575583"
+    },
+    "renderer": {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "bytes": 256259,
+      "sha256": "1b9356615a50ba8de4f53a946d17f347af515d3468242a41df7bd787d19634c6"
+    },
+    "reviewLedger": {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "bytes": 204969,
+      "sha256": "b37518b802a24d141a64933d13f61f5aad6462de9874f9a79319f26cfa0aa566"
+    }
+  },
+  "headAnchorDisposition": {
+    "classification": "confirmed_pre_existing_not_introduced_by_storyboard_update",
+    "fullTestResult": "still_fails_unchanged_at_line118",
+    "siteEvidence": {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_implementation_20261014/HEAD_ANCHOR_BASELINE_20261014.json",
+      "bytes": 6584,
+      "sha256": "5325b52131c834da5708b34cdb664738222899c76b5332e666221949f8c976a1"
+    },
+    "independentReproduction": {
+      "historicalRendererAndPreStoryCatalog": "same_assertion_failure_at118",
+      "currentRendererAndSamePreStoryCatalog": "same_assertion_failure_at118",
+      "currentRendererAndPublishedCatalog": "same_assertion_failure_at118",
+      "originalTestAssertionsEdited": false,
+      "sourcePinsMatched": true,
+      "allPurposeControlsAndCompactAllFilesExactNormalizedTextEqual": true,
+      "independentlyExtractedFunctionSpanSHA256": "228d8903bc8aa4b90cd0177cf93d870d6a150b5cc7631b5b2db3d98020baf0c6",
+      "historicalSnapshotUTC": "2026-10-14T06:13:40.612Z",
+      "priorUserLayoutChangeUTC": "2026-10-14T01:59:25.719870+00:00",
+      "priorDirection": "All files starts with Outfits and stops repeating Working references; dedicated sidebar route remains.",
+      "limitation": "Historical full renderer is06:13snapshot, not exact22:19immediate-before snapshot; relevant functions are identical and actual pre-story catalog isolates data changes.",
+      "unrelatedGitHEADUsed": false
+    },
+    "correctionRequiredForStoryboardScope": false,
+    "codeOrTestChangesMadeForClassification": false,
+    "buildRunForClassification": false
+  },
+  "additionalFunctionalVerification": {
+    "route": "existingNodeCLIandactualpublishedrenderer",
+    "oldPendingInitHelper": "interrupted; previous_status=pending_init; no incomplete work counted as passed",
+    "publishedSelectorReexecutedChecks": 52,
+    "exactStoryIDs": 11,
+    "exactLandingHrefs": 11,
+    "proseOnlyStates": 7,
+    "selectedDocumentButtons": 68,
+    "actualRegisteredHashchangeHandlerAndReturnToMetaMirror": "passed",
+    "staleFiltersResetOnReturn": "passed",
+    "reviewWrites": 0,
+    "fileWrites": 0,
+    "artifactHashesStableDuringExecution": true,
+    "testFilesModified": false,
+    "nativeBrowserBackButtonTested": false
+  },
+  "actualVisualCapabilityCheck": {
+    "availableSurfaces": "Codex In-app Browser; native-app inventory empty",
+    "attemptedURL": "file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/index.html#lisan/storyboard",
+    "result": "explicit_browser_security_policy_rejection",
+    "specificReason": "Requested URL protocol is not allowed; permitted protocols arehttp/https only. Policy explicitly forbids alternate surfaces, indirect execution, hosting or raw-browser workarounds.",
+    "visualQA": false,
+    "workaroundAttempted": false,
+    "manualReviewSteps": [
+      "Open the existing local project index in your normal browser and go to Lisan then Storyboard.",
+      "Inspect MetaMirror50panels; chooseStory01 and confirm38shotcards/ninescenes, covers and pending-reference labels.",
+      "Switch toHonDolo toinspectits storylanding; openprose-onlycards and confirmNoPanelsYet; openwritings/fullsize media and useBack; inspecttext contrast, spacing and thumbnails."
+    ],
+    "scopeOfManualCheck": "Appearance and native browser interactions remain unverified by automation."
+  },
+  "transportDisposition": {
+    "execServer": "initialunknown-session disconnect recovered with harmlessNodeversionprobe; directfunctional checks then executed successfully",
+    "siteTaskAPI": "lastread returnedTransportclosed; sharedSitebaseline evidence was successfullyreadandverified instead",
+    "newInfrastructureOrSecurityChanges": false
+  },
+  "boundaries": {
+    "siteOwnerRetained": "cfa_site_index",
+    "helperBuilds": 0,
+    "helperCodeEdits": false,
+    "newCreativeAcceptance": false,
+    "generationOrChiefDispatch": false,
+    "hostedDeploymentOrPush": false,
+    "backupApprovalInferred": false
+  }
+}

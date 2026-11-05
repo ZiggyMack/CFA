@@ -1,0 +1,173 @@
+{
+  "format": "cfa-character-reference-board-v1",
+  "assignmentID": "lisan-character-look-reference-board-20261014",
+  "status": "draft",
+  "project": "lisan",
+  "character": "Lisan Al Gaib",
+  "title": "Lisan character-look references",
+  "route": "#lisan/working",
+  "existingCollectionID": "lisan:character-bom",
+  "coverAssetID": "LAG-602a9fd4021dc356",
+  "presentation": {
+    "reuseExistingCover": true,
+    "layout": "compact_rows",
+    "placement": "Inside the existing character collection, after its cover summary.",
+    "rowDetailsInitiallyOpen": false,
+    "sourceAction": "Open the existing asset and provide its exact full-size original.",
+    "candidateLabel": "Provisional body-build candidate"
+  },
+  "scopeNotice": "Each row has its own scope and evidence class. Existing selections remain scoped; this draft adds no ratings, stages, criteria passes or new creative acceptance.",
+  "portraitContext": "The relayed human direction accepts visible variation between the two portrait looks; they need not be carbon copies. Core identity and AL/GAIB lettering remain required. That statement does not approve unseen body details or derivatives.",
+  "rows": [
+    {
+      "id": "natural-face",
+      "label": "Natural face and neck marks",
+      "optional": false,
+      "asset": {
+        "id": "LAG-602a9fd4021dc356",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOCK-FACE-NATURAL.jpg",
+        "bytes": 212322,
+        "sha256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+        "version": "sha256:602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f"
+      },
+      "scope": "Existing identity reference for the visible face, natural teeth and neck marks. No automatic ink-criterion binding.",
+      "provenance": [
+        {
+          "kind": "existing_source_nomination",
+          "summary": "Current identity nomination and existing character cover; earlier selection history was reported by Chief."
+        },
+        {
+          "kind": "attributed_human_statement_pending_canonical_import",
+          "summary": "A later relayed Ziggy statement accepts both this portrait and the outfit portrait as character/look examples. CFA Nova owns the pending canonical portrait rating import; this board does not write it."
+        }
+      ],
+      "limitations": [
+        "Single near-frontal bust with a slight head tilt; no back, opposite neck or full-body view.",
+        "Visible teeth and marks are static evidence; motion consistency is not demonstrated."
+      ],
+      "unresolved": {
+        "status": "owner_reconciliation",
+        "owner": "CFA Nova",
+        "summary": "Complete the pending portrait rating import and any explicit face-mark criterion binding without changing the source or extending its scope."
+      }
+    },
+    {
+      "id": "signature-outfit",
+      "label": "Signature stillsuit and cloak",
+      "optional": false,
+      "asset": {
+        "id": "LAG-63126392af1ccf8b",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOOK-V3-01.jpg",
+        "bytes": 327619,
+        "sha256": "63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026",
+        "version": "sha256:63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026"
+      },
+      "scope": "Outfit only: the visible signature stillsuit and cloak. This nomination does not govern face, body build or the whole scene.",
+      "provenance": [
+        {
+          "kind": "existing_source_nomination",
+          "summary": "Existing current wardrobe nomination."
+        },
+        {
+          "kind": "attributed_human_statement_pending_canonical_import",
+          "summary": "The same relayed Ziggy statement accepts both portrait looks. CFA Nova owns the pending canonical portrait rating import; the board retains this row's outfit-only nomination."
+        }
+      ],
+      "limitations": [
+        "Chest-up crop; lower garments, boots, back and overall body proportions are not visible.",
+        "Cloak and chain obscure parts of the neck and torso; the background does not establish a scene reference."
+      ],
+      "unresolved": {
+        "status": "owner_reconciliation",
+        "owner": "CFA Nova",
+        "summary": "Complete the pending portrait rating import while preserving the outfit-only board scope."
+      }
+    },
+    {
+      "id": "optional-breather",
+      "label": "Optional breather with natural teeth",
+      "optional": true,
+      "asset": {
+        "id": "LAG-PART-1b60815fa2bb",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/reference_updates/breather_partial_20261009/received/content/1b60815fa2bb__LAG-BR-01_REST_front_v3_STANDARD.jpg",
+        "bytes": 201192,
+        "sha256": "1b60815fa2bb4f8f488ebcf123a6a71af4cba144d06667c73b2ceeb2de053c00",
+        "version": "sha256:1b60815fa2bb4f8f488ebcf123a6a71af4cba144d06667c73b2ceeb2de053c00"
+      },
+      "sourceVersion": "v3",
+      "scope": "Settled optional combination: breather, natural teeth and no grill. Does not set default face, artwork, jewelry or outfit.",
+      "provenance": [
+        {
+          "kind": "retained_observation_of_human_selection",
+          "summary": "A retained coordinator observation records the actual scoped human selection on 2026-10-09. The direct transcript is not embedded; provider self-scores are not human ratings."
+        }
+      ],
+      "limitations": [
+        "One front rest view; the breather and tube obscure part of the nose and cheek.",
+        "Slightly parted lips show some natural upper teeth; lower teeth and the mouth interior are mostly hidden. No articulation or continuity proof."
+      ],
+      "unresolved": {
+        "status": "owner_reconciliation",
+        "owner": "CFA Nova",
+        "summary": "Bind the existing scoped selection in the owner records. The absence of a sidecar does not require the user to repeat the settled choice."
+      }
+    },
+    {
+      "id": "optional-grill",
+      "label": "Optional iced grill design",
+      "optional": true,
+      "asset": {
+        "id": "LAG-cb183973ed1fc70e",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/03_Inspiration_History/g-superseded-refs/LAG-LOCK-FACE.jpg",
+        "bytes": 199546,
+        "sha256": "cb183973ed1fc70ec906b762fb263b29c8866934a67f9608786b712579eaf056",
+        "version": "sha256:cb183973ed1fc70ec906b762fb263b29c8866934a67f9608786b712579eaf056"
+      },
+      "scope": "Exact optional grill design only. Natural teeth remain the default; the historic face, tattoos and piercings are outside this selection.",
+      "provenance": [
+        {
+          "kind": "existing_canonical_human_record",
+          "summary": "An exact canonical user Keep record already exists for this optional grill design, recorded on 2026-10-09. This board preserves that scoped record and creates no new nomination."
+        }
+      ],
+      "limitations": [
+        "Near-frontal portrait shows the visible front grill design; rear teeth, side fit and other angles are not established.",
+        "The surrounding historic face details are not an identity standard, and motion consistency is not demonstrated."
+      ],
+      "unresolved": {
+        "status": "owner_reconciliation",
+        "owner": "CFA Nova",
+        "summary": "Reconcile matching optional mouth views to the existing grill-design choice without broadening it. No repeated human confirmation is needed solely for a missing sidecar."
+      }
+    },
+    {
+      "id": "body-build-candidate",
+      "label": "Body-build candidate",
+      "optional": false,
+      "asset": {
+        "id": "LAG500-L01-V2",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part01/LAG-L01-mirror-voice-signature.zip.contents/LAG-L01-mirror-voice-signature/LAG-L01-mirror-voice-signature__V2-front.jpg",
+        "bytes": 310928,
+        "sha256": "545a335e0d33e62cf2aa55520118311b8e65057b9596bc3abdf903ddff8801f1",
+        "version": "sha256:545a335e0d33e62cf2aa55520118311b8e65057b9596bc3abdf903ddff8801f1"
+      },
+      "sourceVersion": "V2 front",
+      "scope": "Provisional full-body candidate only; no accepted physique role or body-build approval is established.",
+      "provenance": [
+        {
+          "kind": "unaccepted_provider_candidate",
+          "summary": "Existing catalog candidate with provider QA, awaiting accuracy review. Provider QA is not human acceptance."
+        }
+      ],
+      "limitations": [
+        "Full-length front view is clothed in a stillsuit and long cloak; the underlying physique is substantially occluded.",
+        "No side or back view; the face is small. Exact body dimensions or unseen anatomy cannot be inferred."
+      ],
+      "unresolved": {
+        "status": "missing_human_choice_or_prior_evidence",
+        "owner": "CFA Nova",
+        "summary": "Locate prior accepted body-build evidence or request the genuinely missing body-build source and scope choice. Keep this row provisional until then."
+      }
+    }
+  ]
+}

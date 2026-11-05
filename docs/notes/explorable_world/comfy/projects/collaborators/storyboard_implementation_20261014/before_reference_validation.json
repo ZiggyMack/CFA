@@ -1,0 +1,1994 @@
+{
+  "format": "cfa-reference-validation-catalog-v1",
+  "schemaVersion": 1,
+  "policyVersion": "2026-10-13.1",
+  "inventory": [
+    {
+      "id": "bom:HD-RETURN-6c8900223ee9",
+      "project": "hon",
+      "characterID": "HON-DOLO",
+      "reference": {
+        "assetID": "HD-RETURN-6c8900223ee9",
+        "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae",
+        "version": "sha256:6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae"
+      },
+      "scope": "identity",
+      "label": "Default face and character cover",
+      "recordedSelection": "user_selected_default",
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [],
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": {
+        "id": "HD-RETURN-6c8900223ee9",
+        "project": "hon",
+        "filename": "6c8900223ee9__lf_full.png",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/6c8900223ee9__lf_full.png",
+        "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae",
+        "role": "review",
+        "status": "keep",
+        "note": "Even better....this is the defualt...and the one with the Dice are back up if we want to get spicy...",
+        "shotPlan": {
+          "status": "planned",
+          "destinations": [
+            "Gemini",
+            "Flow"
+          ],
+          "idea": "",
+          "prompt": ""
+        },
+        "updatedAt": "2026-10-09T18:23:34.085Z",
+        "origin": "user",
+        "workingReference": {
+          "status": "requested",
+          "scope": "complete_look"
+        },
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "User selects this Scoundrel version as default; keep dice as an optional alternative. Requested complete-look role requires scope reconciliation, not automatic approval.",
+        "lookSelection": {
+          "status": "user_selected_default_no_forehead_dice",
+          "scope": "Default look option compared with the optional forehead-dice composite; not a replacement dental master."
+        }
+      },
+      "sourceBOMID": "hon:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    },
+    {
+      "id": "bom:HD-B-91ef00348229",
+      "project": "hon",
+      "characterID": "HON-DOLO",
+      "reference": {
+        "assetID": "HD-B-91ef00348229",
+        "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+        "version": "sha256:91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86"
+      },
+      "scope": "dental_mouth_only",
+      "label": "Four-gold upper / silver-lower dental layout and plain lip hoops",
+      "recordedSelection": "current_scoped_dental_reference",
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [],
+      "allowedVariation": {
+        "recordedKnownDifferences": "Mouth only. Ignore the cropped nose jewelry; identity and nose remain from lf_full.",
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": {
+        "id": "HD-B-91ef00348229",
+        "project": "hon",
+        "filename": "91ef00348229__GRILL-LOCK-4GOLD-v2.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/91ef00348229__GRILL-LOCK-4GOLD-v2.jpg",
+        "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+        "role": "comfy",
+        "status": "keep",
+        "note": "",
+        "shotPlan": null,
+        "workingReferenceScope": "detail",
+        "updatedAt": "2026-10-10T13:04:39.768Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "likenessRating": 5,
+        "source": "User dashboard export 2026-10-10T14:00:39.105Z, mouth-grill review intake"
+      },
+      "sourceBOMID": "hon:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/REVIEWED_PLAN.txt",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    },
+    {
+      "id": "bom:HD-RETURN-9ace849985b4",
+      "project": "hon",
+      "characterID": "HON-DOLO",
+      "reference": {
+        "assetID": "HD-RETURN-9ace849985b4",
+        "sha256": "9ace849985b49dfec444a2171dc85854076e024352aaae8d1c8f53ef0a69daef",
+        "version": "sha256:9ace849985b49dfec444a2171dc85854076e024352aaae8d1c8f53ef0a69daef"
+      },
+      "scope": "cheek_detail",
+      "label": "Cheek lettering · gold standard",
+      "recordedSelection": "user_selected_gold_standard_component",
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [
+        "HD-TATGUIDE-920a68edfcc6",
+        "HD-TATGUIDE-0fd9cb5f902a"
+      ],
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": {
+        "id": "HD-RETURN-9ace849985b4",
+        "project": "hon",
+        "filename": "9ace849985b4__lf_cheeks.png",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/9ace849985b4__lf_cheeks.png",
+        "sha256": "9ace849985b49dfec444a2171dc85854076e024352aaae8d1c8f53ef0a69daef",
+        "role": "review",
+        "status": "keep",
+        "note": "Don't change a thing...this is the GOLD standard...",
+        "shotPlan": null,
+        "storyboardStage": "production",
+        "updatedAt": "2026-10-09T18:35:08.059Z",
+        "origin": "user",
+        "workingReference": {
+          "status": "requested",
+          "scope": "detail",
+          "scopeCorrection": "User GOLD standard statement applies to the pictured cheek detail, not a complete character."
+        },
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Preserve this cheek detail exactly as the user-designated gold standard; do not turn a detail crop into a full-character approval.",
+        "workingReferenceScope": "detail",
+        "componentSelection": {
+          "scope": "cheek lettering and visible placement only",
+          "status": "user_selected",
+          "note": "Cursive eye on character-right; serif/upright know on character-left. Whole-character and dental design not changed."
+        }
+      },
+      "sourceBOMID": "hon:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    },
+    {
+      "id": "bom:HD-RETURN-7b156019ddf8",
+      "project": "hon",
+      "characterID": "HON-DOLO",
+      "reference": {
+        "assetID": "HD-RETURN-7b156019ddf8",
+        "sha256": "7b156019ddf8b854a68a3549c80aede545384ebc12a6d7403bb7b17075e11ebc",
+        "version": "sha256:7b156019ddf8b854a68a3549c80aede545384ebc12a6d7403bb7b17075e11ebc"
+      },
+      "scope": "chest_placement",
+      "label": "Chest ship · placement",
+      "recordedSelection": null,
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [],
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": {
+        "id": "HD-RETURN-7b156019ddf8",
+        "project": "hon",
+        "filename": "7b156019ddf8__lf_chest.png",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/7b156019ddf8__lf_chest.png",
+        "sha256": "7b156019ddf8b854a68a3549c80aede545384ebc12a6d7403bb7b17075e11ebc",
+        "role": "review",
+        "status": "keep",
+        "note": "",
+        "shotPlan": null,
+        "storyboardStage": "production",
+        "updatedAt": "2026-10-09T18:24:18.550Z",
+        "origin": "user",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep this asset with the user-selected stage and lane; no blanket working-reference or execution approval."
+      },
+      "sourceBOMID": "hon:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    },
+    {
+      "id": "bom:HD-RETURN-7fe77eadd174",
+      "project": "hon",
+      "characterID": "HON-DOLO",
+      "reference": {
+        "assetID": "HD-RETURN-7fe77eadd174",
+        "sha256": "7fe77eadd174a629216f2c7b36748fd7e1aebaabeb4e6e2acb51df9d6e88bf94",
+        "version": "sha256:7fe77eadd174a629216f2c7b36748fd7e1aebaabeb4e6e2acb51df9d6e88bf94"
+      },
+      "scope": "neck_placement",
+      "label": "Neck blaster · placement",
+      "recordedSelection": null,
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [],
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": {
+        "id": "HD-RETURN-7fe77eadd174",
+        "project": "hon",
+        "filename": "7fe77eadd174__lf_neck.png",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/7fe77eadd174__lf_neck.png",
+        "sha256": "7fe77eadd174a629216f2c7b36748fd7e1aebaabeb4e6e2acb51df9d6e88bf94",
+        "role": "review",
+        "status": "keep",
+        "note": "",
+        "shotPlan": null,
+        "storyboardStage": "production",
+        "updatedAt": "2026-10-09T18:31:46.383Z",
+        "origin": "user",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep this asset with the user-selected stage and lane; no blanket working-reference or execution approval."
+      },
+      "sourceBOMID": "hon:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    },
+    {
+      "id": "bom:HD-RETURN-891a3ee224eb",
+      "project": "hon",
+      "characterID": "HON-DOLO",
+      "reference": {
+        "assetID": "HD-RETURN-891a3ee224eb",
+        "sha256": "891a3ee224eb2451f59954aac2c17e7474f0ff8126d32ca3abbe77fe853d139b",
+        "version": "sha256:891a3ee224eb2451f59954aac2c17e7474f0ff8126d32ca3abbe77fe853d139b"
+      },
+      "scope": "tattoo_artwork_options",
+      "label": "Ship artwork options",
+      "recordedSelection": null,
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [],
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": {
+        "id": "HD-RETURN-891a3ee224eb",
+        "project": "hon",
+        "filename": "891a3ee224eb__ships_a.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/891a3ee224eb__ships_a.jpg",
+        "sha256": "891a3ee224eb2451f59954aac2c17e7474f0ff8126d32ca3abbe77fe853d139b",
+        "role": "review",
+        "status": "keep",
+        "note": "",
+        "shotPlan": null,
+        "updatedAt": "2026-10-09T18:31:18.157Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep this asset with the user-selected stage and lane; no blanket working-reference or execution approval."
+      },
+      "sourceBOMID": "hon:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    },
+    {
+      "id": "bom:HD-RETURN-d430b5f72e9b",
+      "project": "hon",
+      "characterID": "HON-DOLO",
+      "reference": {
+        "assetID": "HD-RETURN-d430b5f72e9b",
+        "sha256": "d430b5f72e9b3ca4271229533880f24ba9b6c97adaca89fc8bc36ce77d7c9717",
+        "version": "sha256:d430b5f72e9b3ca4271229533880f24ba9b6c97adaca89fc8bc36ce77d7c9717"
+      },
+      "scope": "tattoo_artwork_options",
+      "label": "Permitted ship variations",
+      "recordedSelection": null,
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [],
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": {
+        "id": "HD-RETURN-d430b5f72e9b",
+        "project": "hon",
+        "filename": "d430b5f72e9b__d430b5f72e9b3ca4271229533880f24ba9b6c97adaca89fc8bc36ce77d7c9717.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/d430b5f72e9b__d430b5f72e9b3ca4271229533880f24ba9b6c97adaca89fc8bc36ce77d7c9717.jpg",
+        "sha256": "d430b5f72e9b3ca4271229533880f24ba9b6c97adaca89fc8bc36ce77d7c9717",
+        "role": "review",
+        "status": "keep",
+        "note": "fine with the tattoo looking like any of these versions...(#4 may be hard to pull of though hahah)",
+        "shotPlan": null,
+        "updatedAt": "2026-10-09T18:37:19.302Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep the depicted tattoo variations as acceptable options per user; option 4 may be harder to reproduce. Do not force a single variant or claim execution verified."
+      },
+      "sourceBOMID": "hon:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    },
+    {
+      "id": "bom:HD-RETURN-aa147b8c0c26",
+      "project": "hon",
+      "characterID": "HON-DOLO",
+      "reference": {
+        "assetID": "HD-RETURN-aa147b8c0c26",
+        "sha256": "aa147b8c0c2633f61ba2c1ecd6d79b732398c9a336da7daa46c5042c849de1b1",
+        "version": "sha256:aa147b8c0c2633f61ba2c1ecd6d79b732398c9a336da7daa46c5042c849de1b1"
+      },
+      "scope": "tattoo_artwork_options",
+      "label": "Princess Leigh artwork options",
+      "recordedSelection": null,
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [],
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": {
+        "id": "HD-RETURN-aa147b8c0c26",
+        "project": "hon",
+        "filename": "aa147b8c0c26__aa147b8c0c2633f61ba2c1ecd6d79b732398c9a336da7daa46c5042c849de1b1.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/aa147b8c0c26__aa147b8c0c2633f61ba2c1ecd6d79b732398c9a336da7daa46c5042c849de1b1.jpg",
+        "sha256": "aa147b8c0c2633f61ba2c1ecd6d79b732398c9a336da7daa46c5042c849de1b1",
+        "role": "review",
+        "status": "keep",
+        "note": "",
+        "shotPlan": null,
+        "updatedAt": "2026-10-09T18:37:28.499Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep this asset with the user-selected stage and lane; no blanket working-reference or execution approval."
+      },
+      "sourceBOMID": "hon:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    },
+    {
+      "id": "bom:HD-RETURN-106ae508f3c2",
+      "project": "hon",
+      "characterID": "HON-DOLO",
+      "reference": {
+        "assetID": "HD-RETURN-106ae508f3c2",
+        "sha256": "106ae508f3c2cd837803d73433cc2a5206ea9f62e98295de85f83bdf452ddf01",
+        "version": "sha256:106ae508f3c2cd837803d73433cc2a5206ea9f62e98295de85f83bdf452ddf01"
+      },
+      "scope": "tattoo_artwork_options",
+      "label": "Princess Leigh · red/black suit options",
+      "recordedSelection": null,
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [],
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": {
+        "id": "HD-RETURN-106ae508f3c2",
+        "project": "hon",
+        "filename": "106ae508f3c2__106ae508f3c2cd837803d73433cc2a5206ea9f62e98295de85f83bdf452ddf01.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/106ae508f3c2__106ae508f3c2cd837803d73433cc2a5206ea9f62e98295de85f83bdf452ddf01.jpg",
+        "sha256": "106ae508f3c2cd837803d73433cc2a5206ea9f62e98295de85f83bdf452ddf01",
+        "role": "review",
+        "status": "keep",
+        "note": "like the variability and option of having either the black or red suit in play",
+        "shotPlan": null,
+        "updatedAt": "2026-10-09T18:37:10.088Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep black/red card-suit alternatives available; preserve both options rather than combining them in one tattoo."
+      },
+      "sourceBOMID": "hon:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    },
+    {
+      "id": "bom:HD-DROP-b18c4a123579",
+      "project": "hon",
+      "characterID": "HON-DOLO",
+      "reference": {
+        "assetID": "HD-DROP-b18c4a123579",
+        "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+        "version": "sha256:b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a"
+      },
+      "scope": "visible_jewelry_only",
+      "label": "Wrist chain and black band",
+      "recordedSelection": "user_selected_component",
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [],
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": {
+        "status": "keep",
+        "note": "",
+        "workingReferenceScope": "identity",
+        "storyboardStage": "production",
+        "id": "HD-DROP-b18c4a123579",
+        "project": "hon",
+        "filename": "SB-06-scoundrel-detail.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-06-scoundrel-detail.jpg",
+        "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+        "updatedAt": "2026-10-10T05:04:08.787Z",
+        "origin": "user",
+        "source": "User dashboard export 2026-10-10T05:05:09.832Z, scoped working-reference reconciliation",
+        "sourceIntakeID": "CFA-REVIEW-20261010-WORKING-BOM",
+        "scopeNote": "Production use covers the selected visible wrist jewelry. The broad dropdown does not approve the unseen hand, wrist side or whole identity."
+      },
+      "sourceBOMID": "hon:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/permanent_accessories.json",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    },
+    {
+      "id": "bom:HD-B-708df0bb5bff",
+      "project": "hon",
+      "characterID": "HON-DOLO",
+      "reference": {
+        "assetID": "HD-B-708df0bb5bff",
+        "sha256": "708df0bb5bff17abe9f6e0ae09ac59a53cafdb8976defda55758aab5b9e01ab9",
+        "version": "sha256:708df0bb5bff17abe9f6e0ae09ac59a53cafdb8976defda55758aab5b9e01ab9"
+      },
+      "scope": "mouth_detail",
+      "label": "Chain-bite mouth detail",
+      "recordedSelection": null,
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [],
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": {
+        "status": "keep",
+        "note": "",
+        "workingReferenceScope": "detail",
+        "storyboardStage": "production",
+        "id": "HD-B-708df0bb5bff",
+        "project": "hon",
+        "filename": "708df0bb5bff__VIS-HD-47_CHAIN-BITE.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/708df0bb5bff__VIS-HD-47_CHAIN-BITE.jpg",
+        "sha256": "708df0bb5bff17abe9f6e0ae09ac59a53cafdb8976defda55758aab5b9e01ab9",
+        "updatedAt": "2026-10-10T13:32:32.361Z",
+        "origin": "user",
+        "source": "User dashboard export 2026-10-10T14:00:39.105Z, mouth-grill review intake",
+        "sourceIntakeID": "CFA-REVIEW-20261010-WORKING-BOM",
+        "scopeNote": "User Production choice applies to this chain-bite mouth macro only; no face, wardrobe or motion acceptance.",
+        "shotPlan": null,
+        "likenessRating": 5
+      },
+      "sourceBOMID": "hon:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    },
+    {
+      "id": "bom:HD-RETURN-4c42885da490",
+      "project": "hon",
+      "characterID": "HON-DOLO",
+      "reference": {
+        "assetID": "HD-RETURN-4c42885da490",
+        "sha256": "4c42885da4901d23a260c73cb82e815633915005f03660a6aa5c850fe8ce1684",
+        "version": "sha256:4c42885da4901d23a260c73cb82e815633915005f03660a6aa5c850fe8ce1684"
+      },
+      "scope": "outfit",
+      "label": "Cash outfit · hip-prop option",
+      "recordedSelection": null,
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [],
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": {
+        "id": "HD-RETURN-4c42885da490",
+        "project": "hon",
+        "filename": "4c42885da490__HIP-CASH-a1_4c42885d.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/4c42885da490__HIP-CASH-a1_4c42885d.jpg",
+        "sha256": "4c42885da4901d23a260c73cb82e815633915005f03660a6aa5c850fe8ce1684",
+        "role": "review",
+        "status": "keep",
+        "note": "",
+        "shotPlan": {
+          "status": "planned",
+          "destinations": [
+            "undecided"
+          ],
+          "idea": "",
+          "prompt": ""
+        },
+        "storyboardStage": "production",
+        "updatedAt": "2026-10-09T18:44:50.266Z",
+        "origin": "user",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep this asset with the user-selected stage and lane; no blanket working-reference or execution approval."
+      },
+      "sourceBOMID": "hon:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    },
+    {
+      "id": "bom:HD-RETURN-1eaa31b63c1e",
+      "project": "hon",
+      "characterID": "HON-DOLO",
+      "reference": {
+        "assetID": "HD-RETURN-1eaa31b63c1e",
+        "sha256": "1eaa31b63c1e187dfb63d31e523c056cf78e3a86c341ca2b38d416fae5ac316d",
+        "version": "sha256:1eaa31b63c1e187dfb63d31e523c056cf78e3a86c341ca2b38d416fae5ac316d"
+      },
+      "scope": "outfit",
+      "label": "Rain outfit · hip-prop option",
+      "recordedSelection": null,
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [],
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": {
+        "id": "HD-RETURN-1eaa31b63c1e",
+        "project": "hon",
+        "filename": "1eaa31b63c1e__HIP-RAIN-a1_1eaa31b6.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/1eaa31b63c1e__HIP-RAIN-a1_1eaa31b6.jpg",
+        "sha256": "1eaa31b63c1e187dfb63d31e523c056cf78e3a86c341ca2b38d416fae5ac316d",
+        "role": "review",
+        "status": "keep",
+        "note": "",
+        "shotPlan": null,
+        "storyboardStage": "production",
+        "updatedAt": "2026-10-09T18:46:52.571Z",
+        "origin": "user",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep this asset with the user-selected stage and lane; no blanket working-reference or execution approval."
+      },
+      "sourceBOMID": "hon:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    },
+    {
+      "id": "bom:HD-RETURN-19cf3cd478dd",
+      "project": "hon",
+      "characterID": "HON-DOLO",
+      "reference": {
+        "assetID": "HD-RETURN-19cf3cd478dd",
+        "sha256": "19cf3cd478dd327371d646694fc5db4e1f23d345afe86d7d77a76865f7139ab4",
+        "version": "sha256:19cf3cd478dd327371d646694fc5db4e1f23d345afe86d7d77a76865f7139ab4"
+      },
+      "scope": "tattoo_artwork_options",
+      "label": "Scoundrel · optional dice artwork",
+      "recordedSelection": null,
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [
+        "HD-TATGUIDE-1fd07b088244",
+        "HD-TATGUIDE-5706390cb876"
+      ],
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": {
+        "id": "HD-RETURN-19cf3cd478dd",
+        "project": "hon",
+        "filename": "19cf3cd478dd__scoundrel.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/19cf3cd478dd__scoundrel.jpg",
+        "sha256": "19cf3cd478dd327371d646694fc5db4e1f23d345afe86d7d77a76865f7139ab4",
+        "role": "review",
+        "status": "keep",
+        "note": "i think our standard is not to have the dice....but im fine having this is the floating pool...everything else was nailed",
+        "shotPlan": {
+          "status": "planned",
+          "destinations": [
+            "Flow"
+          ],
+          "idea": "Use this as one of the options for the bar scene we are already planning for.",
+          "prompt": ""
+        },
+        "updatedAt": "2026-10-09T18:22:11.513Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep dice variant as an optional bar-scene choice; default Scoundrel does not include dice."
+      },
+      "sourceBOMID": "hon:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    },
+    {
+      "id": "bom:HD-GRILLUP-40064d98db89",
+      "project": "hon",
+      "characterID": "HON-DOLO",
+      "reference": {
+        "assetID": "HD-GRILLUP-40064d98db89",
+        "sha256": "40064d98db897276b80085273919ccd79ca377a068dcc2bd23c519e4038ee93e",
+        "version": "sha256:40064d98db897276b80085273919ccd79ca377a068dcc2bd23c519e4038ee93e"
+      },
+      "scope": "optional_iced_look",
+      "label": "Selected external iced r4 look",
+      "recordedSelection": "user_selected_scoped_look",
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [],
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": null,
+      "sourceBOMID": "hon:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    },
+    {
+      "id": "bom:LAG-602a9fd4021dc356",
+      "project": "lisan",
+      "characterID": "LISAN-AL-GAIB",
+      "reference": {
+        "assetID": "LAG-602a9fd4021dc356",
+        "sha256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+        "version": "sha256:602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f"
+      },
+      "scope": "identity",
+      "label": "Default face · natural teeth",
+      "recordedSelection": "current_scoped_reference",
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [],
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": null,
+      "sourceBOMID": "lisan:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    },
+    {
+      "id": "bom:LAG-63126392af1ccf8b",
+      "project": "lisan",
+      "characterID": "LISAN-AL-GAIB",
+      "reference": {
+        "assetID": "LAG-63126392af1ccf8b",
+        "sha256": "63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026",
+        "version": "sha256:63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026"
+      },
+      "scope": "outfit",
+      "label": "Signature stillsuit and cloak",
+      "recordedSelection": "current_scoped_reference",
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [],
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": null,
+      "sourceBOMID": "lisan:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    },
+    {
+      "id": "bom:LAG-5c47f12190e9ba68",
+      "project": "lisan",
+      "characterID": "LISAN-AL-GAIB",
+      "reference": {
+        "assetID": "LAG-5c47f12190e9ba68",
+        "sha256": "5c47f12190e9ba68f87f7c3f8d66f571400f8058baf9ff54ecfe406adf037567",
+        "version": "sha256:5c47f12190e9ba68f87f7c3f8d66f571400f8058baf9ff54ecfe406adf037567"
+      },
+      "scope": "arm_tattoo_placement",
+      "label": "Left-arm sandworm placement",
+      "recordedSelection": "current_scoped_reference",
+      "familyID": null,
+      "familyStatus": "requires_scoped_reconciliation",
+      "derivativeIDs": [],
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "acceptanceEvidence": null,
+      "sourceBOMID": "lisan:character-bom",
+      "sourceBOMVersion": 1,
+      "evidencePath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json",
+      "unresolvedOwner": "CFA Nova / Claude: family, derivative and defaults reconciliation; no new selection"
+    }
+  ],
+  "criteriaSets": [
+    {
+      "id": "hon-face",
+      "version": "2026-10-13.1",
+      "axis": "character",
+      "project": "hon",
+      "title": "Hon default face and curls only",
+      "scope": {
+        "id": "hon-face",
+        "kind": "identity",
+        "label": "Hon default face and curls only"
+      },
+      "nominationID": "bom:HD-RETURN-6c8900223ee9",
+      "reference": {
+        "assetID": "HD-RETURN-6c8900223ee9",
+        "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae",
+        "version": "sha256:6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae"
+      },
+      "criteria": [
+        {
+          "id": "face",
+          "label": "Face and curls",
+          "rule": "Compare visible face geometry and curls to the selected no-dice portrait; do not judge teeth from this reference.",
+          "required": true
+        },
+        {
+          "id": "no-dice",
+          "label": "Default forehead",
+          "rule": "Default face has no forehead dice; optional dice remain a separate look.",
+          "required": true
+        }
+      ],
+      "allowedVariation": "Pose and lighting may vary. Nose/ear jewelry variations have separate recorded tolerance; this scope excludes dental design.",
+      "provenance": [
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt",
+          "bytes": 16509,
+          "sha256": "3b2ac815fb16380c482aabafa66a1d80f36905a84b4fa57d0b8e68e0e4420967"
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/REVIEWED_PLAN.txt",
+          "bytes": 18120,
+          "sha256": "96ae004bdfb479e1c904886fb9dc0e030fb51e7c664c7f1a9684690c82d937f4"
+        }
+      ],
+      "authorship": "CFA Site Index engineering transcription of existing scoped requirements; no new creative acceptance",
+      "wholeActorApproval": false,
+      "sha256": "87425efbb49dc395c8c655ba28d4ffd79b37332d9d2b5b866f45cd80ec169b25",
+      "nominationScope": "identity"
+    },
+    {
+      "id": "hon-dental",
+      "version": "2026-10-13.1",
+      "axis": "character",
+      "project": "hon",
+      "title": "Hon default external-off / lip-rings-on dental detail",
+      "scope": {
+        "id": "hon-dental",
+        "kind": "detail",
+        "label": "Hon default external-off / lip-rings-on dental detail"
+      },
+      "nominationID": "bom:HD-B-91ef00348229",
+      "reference": {
+        "assetID": "HD-B-91ef00348229",
+        "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+        "version": "sha256:91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86"
+      },
+      "criteria": [
+        {
+          "id": "upper",
+          "label": "Four gold upper caps",
+          "rule": "Two lateral incisors plus two short canines are gold; central and remaining upper teeth are white.",
+          "required": true
+        },
+        {
+          "id": "lower",
+          "label": "Silver/chrome lower grill",
+          "rule": "Visible lower row matches the selected silver/chrome layout.",
+          "required": true
+        },
+        {
+          "id": "lip-rings",
+          "label": "Two plain lip hoops",
+          "rule": "Required for this default external-off / lip-rings-on combination. Lip-ring state is independent of grillState; scoped quarters/no-ring exceptions stay separate. Natural height/angle/spacing asymmetry is allowed.",
+          "required": true
+        }
+      ],
+      "allowedVariation": "Natural lip-ring placement asymmetry allowed. Cropped nose excluded. external_off retains four gold uppers and chrome lowers; it does not mean natural teeth.",
+      "provenance": [
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt",
+          "bytes": 16509,
+          "sha256": "3b2ac815fb16380c482aabafa66a1d80f36905a84b4fa57d0b8e68e0e4420967"
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/REVIEWED_PLAN.txt",
+          "bytes": 18120,
+          "sha256": "96ae004bdfb479e1c904886fb9dc0e030fb51e7c664c7f1a9684690c82d937f4"
+        }
+      ],
+      "authorship": "CFA Site Index engineering transcription of existing scoped requirements; no new creative acceptance",
+      "wholeActorApproval": false,
+      "sha256": "1e310ca708ec80162e845ed70b31b38439000c74182d776d051cee85e7d7a9e2",
+      "nominationScope": "dental_mouth_only"
+    },
+    {
+      "id": "hon-mouth-static",
+      "version": "2026-10-13.1",
+      "axis": "character",
+      "project": "hon",
+      "title": "Hon default external-off / lip-rings-on dental and named static mouth pose",
+      "scope": {
+        "id": "hon-mouth-static",
+        "kind": "detail",
+        "label": "Hon default external-off / lip-rings-on dental and named static mouth pose"
+      },
+      "nominationID": "bom:HD-B-91ef00348229",
+      "reference": {
+        "assetID": "HD-B-91ef00348229",
+        "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+        "version": "sha256:91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86"
+      },
+      "criteria": [
+        {
+          "id": "upper",
+          "label": "Four gold upper caps",
+          "rule": "Two lateral incisors plus two short canines are gold; central and remaining upper teeth are white.",
+          "required": true
+        },
+        {
+          "id": "lower",
+          "label": "Silver/chrome lower grill",
+          "rule": "Visible lower row matches the selected silver/chrome layout.",
+          "required": true
+        },
+        {
+          "id": "lip-rings",
+          "label": "Two plain lip hoops",
+          "rule": "Required for this default external-off / lip-rings-on combination. Lip-ring state is independent of grillState; scoped quarters/no-ring exceptions stay separate. Natural height/angle/spacing asymmetry is allowed.",
+          "required": true
+        },
+        {
+          "id": "articulation",
+          "label": "Named static pose",
+          "rule": "Record the intended numbered state and actually visible closure/contact/rounding/tongue position. Distinct labels or teeth-showing alone do not prove distinct articulation.",
+          "required": true
+        }
+      ],
+      "allowedVariation": "No pixel matching or forced symmetry. A static pose cannot prove speech, timing or transitions; hidden required features remain unresolved.",
+      "provenance": [
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt",
+          "bytes": 16509,
+          "sha256": "3b2ac815fb16380c482aabafa66a1d80f36905a84b4fa57d0b8e68e0e4420967"
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/REVIEWED_PLAN.txt",
+          "bytes": 18120,
+          "sha256": "96ae004bdfb479e1c904886fb9dc0e030fb51e7c664c7f1a9684690c82d937f4"
+        }
+      ],
+      "authorship": "CFA Site Index engineering transcription of existing scoped requirements; no new creative acceptance",
+      "wholeActorApproval": false,
+      "sha256": "2922c1cf5fdc2b4f3fa9820162dac7c133ea318c7ef1411f5938c6216af66eb7",
+      "nominationScope": "dental_mouth_only"
+    },
+    {
+      "id": "hon-cheek",
+      "version": "2026-10-13.1",
+      "axis": "character",
+      "project": "hon",
+      "title": "Hon visible cheek lettering",
+      "scope": {
+        "id": "hon-cheek",
+        "kind": "detail",
+        "label": "Hon visible cheek lettering"
+      },
+      "nominationID": "bom:HD-RETURN-9ace849985b4",
+      "reference": {
+        "assetID": "HD-RETURN-9ace849985b4",
+        "sha256": "9ace849985b49dfec444a2171dc85854076e024352aaae8d1c8f53ef0a69daef",
+        "version": "sha256:9ace849985b49dfec444a2171dc85854076e024352aaae8d1c8f53ef0a69daef"
+      },
+      "criteria": [
+        {
+          "id": "lettering",
+          "label": "Lettering and side",
+          "rule": "Cursive eye on character-right; upright/serif know on character-left; preserve visible placement only.",
+          "required": true
+        }
+      ],
+      "allowedVariation": "Natural pose/light variations allowed. No whole face or dental assertion.",
+      "provenance": [
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt",
+          "bytes": 16509,
+          "sha256": "3b2ac815fb16380c482aabafa66a1d80f36905a84b4fa57d0b8e68e0e4420967"
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/REVIEWED_PLAN.txt",
+          "bytes": 18120,
+          "sha256": "96ae004bdfb479e1c904886fb9dc0e030fb51e7c664c7f1a9684690c82d937f4"
+        }
+      ],
+      "authorship": "CFA Site Index engineering transcription of existing scoped requirements; no new creative acceptance",
+      "wholeActorApproval": false,
+      "sha256": "b0b459056987612093e9811b89ea9331c337f4f696e9c1d99d0ea0c3bd132981",
+      "nominationScope": "cheek_detail"
+    },
+    {
+      "id": "hon-wrist",
+      "version": "2026-10-13.1",
+      "axis": "character",
+      "project": "hon",
+      "title": "Hon visible wrist jewelry",
+      "scope": {
+        "id": "hon-wrist",
+        "kind": "detail",
+        "label": "Hon visible wrist jewelry"
+      },
+      "nominationID": "bom:HD-DROP-b18c4a123579",
+      "reference": {
+        "assetID": "HD-DROP-b18c4a123579",
+        "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+        "version": "sha256:b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a"
+      },
+      "criteria": [
+        {
+          "id": "chain",
+          "label": "Wrist curb chain",
+          "rule": "Gold broad flattened interlocking links visible where required.",
+          "required": true
+        },
+        {
+          "id": "band",
+          "label": "Dark wrist band",
+          "rule": "The selected dark band must be present when this scoped combination is required.",
+          "required": true
+        }
+      ],
+      "allowedVariation": "Hidden clasp, watch, arm side, exact material and dimensions are unknown; do not infer them.",
+      "provenance": [
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/permanent_accessories.json",
+          "bytes": 2453,
+          "sha256": "af9b486635746a625ee46dd4d1dfea8b0851a37847d4f99d46966e49e511f0c8"
+        }
+      ],
+      "authorship": "CFA Site Index engineering transcription of existing scoped requirements; no new creative acceptance",
+      "wholeActorApproval": false,
+      "sha256": "47263dad019703cdae43283e195e1d4d929c8e153fbee5e9814bc5ee90fbd2dc",
+      "nominationScope": "visible_jewelry_only"
+    },
+    {
+      "id": "hon-iced-r4",
+      "version": "2026-10-13.1",
+      "axis": "character",
+      "project": "hon",
+      "title": "Hon selected optional iced r4 look",
+      "scope": {
+        "id": "hon-iced-r4",
+        "kind": "complete_look",
+        "label": "Hon selected optional iced r4 look"
+      },
+      "nominationID": "bom:HD-GRILLUP-40064d98db89",
+      "reference": {
+        "assetID": "HD-GRILLUP-40064d98db89",
+        "sha256": "40064d98db897276b80085273919ccd79ca377a068dcc2bd23c519e4038ee93e",
+        "version": "sha256:40064d98db897276b80085273919ccd79ca377a068dcc2bd23c519e4038ee93e"
+      },
+      "criteria": [
+        {
+          "id": "look",
+          "label": "Selected r4 look",
+          "rule": "Compare this optional look to exact r4; preserve its selected face/curls and iced accessory.",
+          "required": true
+        },
+        {
+          "id": "no-lip-rings",
+          "label": "r4 lip-ring state",
+          "rule": "This look intentionally omits lip rings; do not apply that removal to external_off.",
+          "required": true
+        }
+      ],
+      "allowedVariation": "Scope is this optional look only; no automatic whole-actor, scene or motion acceptance.",
+      "provenance": [
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt",
+          "bytes": 16509,
+          "sha256": "3b2ac815fb16380c482aabafa66a1d80f36905a84b4fa57d0b8e68e0e4420967"
+        }
+      ],
+      "authorship": "CFA Site Index engineering transcription of existing scoped requirements; no new creative acceptance",
+      "wholeActorApproval": false,
+      "sha256": "8abb7e9df40140a4b4a7cde4a1aafba7ef3859512eb8b31aff848d9665e69434",
+      "nominationScope": "optional_iced_look"
+    },
+    {
+      "id": "lisan-face",
+      "version": "2026-10-13.1",
+      "axis": "character",
+      "project": "lisan",
+      "title": "Lisan visible natural-face identity",
+      "scope": {
+        "id": "lisan-face",
+        "kind": "identity",
+        "label": "Lisan visible natural-face identity"
+      },
+      "nominationID": "bom:LAG-602a9fd4021dc356",
+      "reference": {
+        "assetID": "LAG-602a9fd4021dc356",
+        "sha256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+        "version": "sha256:602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f"
+      },
+      "criteria": [
+        {
+          "id": "face",
+          "label": "Face and eyes",
+          "rule": "Compare visible face geometry/curls and blue eyes to the nominated portrait.",
+          "required": true
+        },
+        {
+          "id": "teeth",
+          "label": "Natural teeth",
+          "rule": "Teeth remain natural for this look; occluded teeth cannot be assessed.",
+          "required": true
+        },
+        {
+          "id": "ink",
+          "label": "Facial and neck artwork",
+          "rule": "Match AL, vertical GAIB, paired neck worms and throat sun-eye to the exact portrait.",
+          "required": true
+        },
+        {
+          "id": "jewelry",
+          "label": "Required portrait jewelry",
+          "rule": "Character-left nostril hoop, eyebrow ring and ear hoop when required by this portrait scope; do not mirror.",
+          "required": true
+        }
+      ],
+      "allowedVariation": "Pose and lighting may vary. The separate seven human mouth-detail selections retain their recorded tolerances; this face scope does not replace them.",
+      "provenance": [
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt",
+          "bytes": 16509,
+          "sha256": "3b2ac815fb16380c482aabafa66a1d80f36905a84b4fa57d0b8e68e0e4420967"
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/project_brief.txt",
+          "bytes": 2485,
+          "sha256": "8e3147dd5f8eb0940db962682b6d9ae305fe07da597d06b97f68b1eca0a28b85"
+        }
+      ],
+      "authorship": "CFA Site Index engineering transcription of existing scoped requirements; no new creative acceptance",
+      "wholeActorApproval": false,
+      "sha256": "46bc215b82bede28dd634992e24b5144f38938474b6fcb3bd8dad71a19205b8f",
+      "nominationScope": "identity"
+    },
+    {
+      "id": "lisan-outfit",
+      "version": "2026-10-13.1",
+      "axis": "character",
+      "project": "lisan",
+      "title": "Lisan signature wardrobe",
+      "scope": {
+        "id": "lisan-outfit",
+        "kind": "outfit",
+        "label": "Lisan signature wardrobe"
+      },
+      "nominationID": "bom:LAG-63126392af1ccf8b",
+      "reference": {
+        "assetID": "LAG-63126392af1ccf8b",
+        "sha256": "63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026",
+        "version": "sha256:63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026"
+      },
+      "criteria": [
+        {
+          "id": "wardrobe",
+          "label": "Stillsuit and cloak",
+          "rule": "Tan stillsuit and black hooded cloak.",
+          "required": true
+        },
+        {
+          "id": "chain",
+          "label": "Gold Cuban chain",
+          "rule": "Required chain in the selected signature wardrobe.",
+          "required": true
+        }
+      ],
+      "allowedVariation": "Pose/background not mandatory; portrait controls conflicting face/neck details.",
+      "provenance": [
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/project_brief.txt",
+          "bytes": 2485,
+          "sha256": "8e3147dd5f8eb0940db962682b6d9ae305fe07da597d06b97f68b1eca0a28b85"
+        }
+      ],
+      "authorship": "CFA Site Index engineering transcription of existing scoped requirements; no new creative acceptance",
+      "wholeActorApproval": false,
+      "sha256": "a5396eaf0f3d59a59b586047bd3933a940b063dc46268c9e19dcb3fd34dab244",
+      "nominationScope": "outfit"
+    },
+    {
+      "id": "lisan-arm",
+      "version": "2026-10-13.1",
+      "axis": "character",
+      "project": "lisan",
+      "title": "Lisan exposed left-arm tattoo",
+      "scope": {
+        "id": "lisan-arm",
+        "kind": "detail",
+        "label": "Lisan exposed left-arm tattoo"
+      },
+      "nominationID": "bom:LAG-5c47f12190e9ba68",
+      "reference": {
+        "assetID": "LAG-5c47f12190e9ba68",
+        "sha256": "5c47f12190e9ba68f87f7c3f8d66f571400f8058baf9ff54ecfe406adf037567",
+        "version": "sha256:5c47f12190e9ba68f87f7c3f8d66f571400f8058baf9ff54ecfe406adf037567"
+      },
+      "criteria": [
+        {
+          "id": "tattoo",
+          "label": "Striped coiled sandworm",
+          "rule": "Match visible left-arm sandworm placement and artwork when exposed; hidden tattoo remains unresolved.",
+          "required": true
+        }
+      ],
+      "allowedVariation": "Artwork-only; old teeth, facial jewelry and neck details excluded.",
+      "provenance": [
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/project_brief.txt",
+          "bytes": 2485,
+          "sha256": "8e3147dd5f8eb0940db962682b6d9ae305fe07da597d06b97f68b1eca0a28b85"
+        }
+      ],
+      "authorship": "CFA Site Index engineering transcription of existing scoped requirements; no new creative acceptance",
+      "wholeActorApproval": false,
+      "sha256": "808f488d3dec0b9fe7ea61e447a30f3d589e151761fdba3bca935a4c0ecb37aa",
+      "nominationScope": "arm_tattoo_placement"
+    }
+  ],
+  "assessments": [
+    {
+      "schemaVersion": 1,
+      "id": "site-mouth-beta-20261013:HD-B-ef471a1f5e46:character",
+      "target": {
+        "assetID": "HD-B-ef471a1f5e46",
+        "sha256": "ef471a1f5e46eccc62bad02b39aa5e324c6da60131a1302d36067126f053c134",
+        "version": "sha256:ef471a1f5e46eccc62bad02b39aa5e324c6da60131a1302d36067126f053c134"
+      },
+      "axis": "character",
+      "applicability": "required",
+      "status": "uncertain",
+      "scope": {
+        "id": "hon-mouth-static",
+        "kind": "detail",
+        "label": "Hon default external-off / lip-rings-on dental and named static mouth pose"
+      },
+      "criteria": {
+        "id": "hon-mouth-static",
+        "version": "2026-10-13.1",
+        "sha256": "2922c1cf5fdc2b4f3fa9820162dac7c133ea318c7ef1411f5938c6216af66eb7"
+      },
+      "reference": {
+        "assetID": "HD-B-91ef00348229",
+        "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+        "version": "sha256:91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86"
+      },
+      "reviewer": {
+        "name": "CFA Site Index",
+        "model": "Codex model variant not independently verified",
+        "surface": "view_image original · local source pixels",
+        "reviewedAtUTC": "2026-10-13T20:07:06Z"
+      },
+      "imagesSeen": [
+        {
+          "assetID": "HD-B-ef471a1f5e46",
+          "sha256": "ef471a1f5e46eccc62bad02b39aa5e324c6da60131a1302d36067126f053c134",
+          "version": "sha256:ef471a1f5e46eccc62bad02b39aa5e324c6da60131a1302d36067126f053c134",
+          "accessible": true,
+          "view": "original"
+        },
+        {
+          "assetID": "HD-B-91ef00348229",
+          "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "version": "sha256:91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "accessible": true,
+          "view": "original"
+        }
+      ],
+      "criteriaResults": [
+        {
+          "criterionID": "upper",
+          "outcome": "pass",
+          "visibility": "visible",
+          "observation": "Four gold lateral/canine caps with white central incisors are visible."
+        },
+        {
+          "criterionID": "lower",
+          "outcome": "pass",
+          "visibility": "visible",
+          "observation": "Lower silver/chrome row is visible."
+        },
+        {
+          "criterionID": "lip-rings",
+          "outcome": "pass",
+          "visibility": "visible",
+          "observation": "Two plain lip hoops are visible; slight placement difference is tolerated."
+        },
+        {
+          "criterionID": "articulation",
+          "outcome": "uncertain",
+          "visibility": "occluded",
+          "observation": "Both 09 and 10 show broad teeth-baring openings. Tongue contact is hidden and a distinct forward CH/SH funnel is not clearly demonstrated."
+        }
+      ],
+      "evidence": "09 and 10 have different bytes and slightly different opening/curvature, with overlapping visible poses. Their independent 5-star reviews and duplicate question remain unchanged.",
+      "uncertainty": "Cannot count two distinct usable speech categories from these stills; no timing or motion inspected.",
+      "provenance": {
+        "source": "reference-validation-evidence-ui-20261013 bounded mouth beta; Site Index direct pixel comparison",
+        "observationDocumentSHA256": "1262be06cbe3df9e6a8e1224ecb73bd7c1a14cacea6238777c23d062d07cd7bf",
+        "adapter": "Direct independent inspection, not conversion of the Nova PA observations or old stars"
+      },
+      "clipEvidence": "not_tested"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "site-mouth-beta-20261013:HD-B-ef471a1f5e46:scene",
+      "target": {
+        "assetID": "HD-B-ef471a1f5e46",
+        "sha256": "ef471a1f5e46eccc62bad02b39aa5e324c6da60131a1302d36067126f053c134",
+        "version": "sha256:ef471a1f5e46eccc62bad02b39aa5e324c6da60131a1302d36067126f053c134"
+      },
+      "axis": "scene",
+      "applicability": "not_applicable",
+      "status": "not_checked",
+      "scope": {
+        "id": "mouth_detail_scene_na",
+        "kind": "none",
+        "label": "Mouth/portrait detail comparison; no scene assertion"
+      },
+      "criteria": null,
+      "reference": null,
+      "reviewer": {
+        "name": "CFA Site Index",
+        "model": "Codex model variant not independently verified",
+        "surface": "view_image original · local source pixels",
+        "reviewedAtUTC": "2026-10-13T20:07:06Z"
+      },
+      "imagesSeen": [
+        {
+          "assetID": "HD-B-ef471a1f5e46",
+          "sha256": "ef471a1f5e46eccc62bad02b39aa5e324c6da60131a1302d36067126f053c134",
+          "version": "sha256:ef471a1f5e46eccc62bad02b39aa5e324c6da60131a1302d36067126f053c134",
+          "accessible": true,
+          "view": "original"
+        },
+        {
+          "assetID": "HD-B-91ef00348229",
+          "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "version": "sha256:91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "accessible": true,
+          "view": "original"
+        }
+      ],
+      "criteriaResults": [],
+      "evidence": "This beta compares static character details only. Scene constraints and whole-scene readiness are outside its scope.",
+      "uncertainty": "No scene or temporal claim.",
+      "provenance": {
+        "source": "reference-validation-evidence-ui-20261013 bounded mouth beta; Site Index direct pixel comparison",
+        "observationDocumentSHA256": "1262be06cbe3df9e6a8e1224ecb73bd7c1a14cacea6238777c23d062d07cd7bf",
+        "adapter": "Direct independent inspection, not conversion of the Nova PA observations or old stars"
+      },
+      "clipEvidence": "not_tested"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "site-mouth-beta-20261013:HD-B-31e4e53fdc8a:character",
+      "target": {
+        "assetID": "HD-B-31e4e53fdc8a",
+        "sha256": "31e4e53fdc8ab5ef31ec3cf3aa57d4e980a045eefd60e352cd49dfe4230bee4b",
+        "version": "sha256:31e4e53fdc8ab5ef31ec3cf3aa57d4e980a045eefd60e352cd49dfe4230bee4b"
+      },
+      "axis": "character",
+      "applicability": "required",
+      "status": "uncertain",
+      "scope": {
+        "id": "hon-mouth-static",
+        "kind": "detail",
+        "label": "Hon default external-off / lip-rings-on dental and named static mouth pose"
+      },
+      "criteria": {
+        "id": "hon-mouth-static",
+        "version": "2026-10-13.1",
+        "sha256": "2922c1cf5fdc2b4f3fa9820162dac7c133ea318c7ef1411f5938c6216af66eb7"
+      },
+      "reference": {
+        "assetID": "HD-B-91ef00348229",
+        "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+        "version": "sha256:91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86"
+      },
+      "reviewer": {
+        "name": "CFA Site Index",
+        "model": "Codex model variant not independently verified",
+        "surface": "view_image original · local source pixels",
+        "reviewedAtUTC": "2026-10-13T20:07:06Z"
+      },
+      "imagesSeen": [
+        {
+          "assetID": "HD-B-31e4e53fdc8a",
+          "sha256": "31e4e53fdc8ab5ef31ec3cf3aa57d4e980a045eefd60e352cd49dfe4230bee4b",
+          "version": "sha256:31e4e53fdc8ab5ef31ec3cf3aa57d4e980a045eefd60e352cd49dfe4230bee4b",
+          "accessible": true,
+          "view": "original"
+        },
+        {
+          "assetID": "HD-B-91ef00348229",
+          "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "version": "sha256:91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "accessible": true,
+          "view": "original"
+        }
+      ],
+      "criteriaResults": [
+        {
+          "criterionID": "upper",
+          "outcome": "pass",
+          "visibility": "visible",
+          "observation": "Four gold lateral/canine caps with white central incisors are visible."
+        },
+        {
+          "criterionID": "lower",
+          "outcome": "pass",
+          "visibility": "visible",
+          "observation": "Lower silver/chrome row is visible."
+        },
+        {
+          "criterionID": "lip-rings",
+          "outcome": "pass",
+          "visibility": "visible",
+          "observation": "Two plain lip hoops are visible; slight placement difference is tolerated."
+        },
+        {
+          "criterionID": "articulation",
+          "outcome": "uncertain",
+          "visibility": "occluded",
+          "observation": "Both 09 and 10 show broad teeth-baring openings. Tongue contact is hidden and a distinct forward CH/SH funnel is not clearly demonstrated."
+        }
+      ],
+      "evidence": "09 and 10 have different bytes and slightly different opening/curvature, with overlapping visible poses. Their independent 5-star reviews and duplicate question remain unchanged.",
+      "uncertainty": "Cannot count two distinct usable speech categories from these stills; no timing or motion inspected.",
+      "provenance": {
+        "source": "reference-validation-evidence-ui-20261013 bounded mouth beta; Site Index direct pixel comparison",
+        "observationDocumentSHA256": "1262be06cbe3df9e6a8e1224ecb73bd7c1a14cacea6238777c23d062d07cd7bf",
+        "adapter": "Direct independent inspection, not conversion of the Nova PA observations or old stars"
+      },
+      "clipEvidence": "not_tested"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "site-mouth-beta-20261013:HD-B-31e4e53fdc8a:scene",
+      "target": {
+        "assetID": "HD-B-31e4e53fdc8a",
+        "sha256": "31e4e53fdc8ab5ef31ec3cf3aa57d4e980a045eefd60e352cd49dfe4230bee4b",
+        "version": "sha256:31e4e53fdc8ab5ef31ec3cf3aa57d4e980a045eefd60e352cd49dfe4230bee4b"
+      },
+      "axis": "scene",
+      "applicability": "not_applicable",
+      "status": "not_checked",
+      "scope": {
+        "id": "mouth_detail_scene_na",
+        "kind": "none",
+        "label": "Mouth/portrait detail comparison; no scene assertion"
+      },
+      "criteria": null,
+      "reference": null,
+      "reviewer": {
+        "name": "CFA Site Index",
+        "model": "Codex model variant not independently verified",
+        "surface": "view_image original · local source pixels",
+        "reviewedAtUTC": "2026-10-13T20:07:06Z"
+      },
+      "imagesSeen": [
+        {
+          "assetID": "HD-B-31e4e53fdc8a",
+          "sha256": "31e4e53fdc8ab5ef31ec3cf3aa57d4e980a045eefd60e352cd49dfe4230bee4b",
+          "version": "sha256:31e4e53fdc8ab5ef31ec3cf3aa57d4e980a045eefd60e352cd49dfe4230bee4b",
+          "accessible": true,
+          "view": "original"
+        },
+        {
+          "assetID": "HD-B-91ef00348229",
+          "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "version": "sha256:91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "accessible": true,
+          "view": "original"
+        }
+      ],
+      "criteriaResults": [],
+      "evidence": "This beta compares static character details only. Scene constraints and whole-scene readiness are outside its scope.",
+      "uncertainty": "No scene or temporal claim.",
+      "provenance": {
+        "source": "reference-validation-evidence-ui-20261013 bounded mouth beta; Site Index direct pixel comparison",
+        "observationDocumentSHA256": "1262be06cbe3df9e6a8e1224ecb73bd7c1a14cacea6238777c23d062d07cd7bf",
+        "adapter": "Direct independent inspection, not conversion of the Nova PA observations or old stars"
+      },
+      "clipEvidence": "not_tested"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "site-mouth-beta-20261013:HD-B-125e06fc0938:character",
+      "target": {
+        "assetID": "HD-B-125e06fc0938",
+        "sha256": "125e06fc0938715069a056270ba03ba5be4fe48c796c3caaeb3e0b886e9e9bf6",
+        "version": "sha256:125e06fc0938715069a056270ba03ba5be4fe48c796c3caaeb3e0b886e9e9bf6"
+      },
+      "axis": "character",
+      "applicability": "required",
+      "status": "fail",
+      "scope": {
+        "id": "hon-mouth-static",
+        "kind": "detail",
+        "label": "Hon default external-off / lip-rings-on dental and named static mouth pose"
+      },
+      "criteria": {
+        "id": "hon-mouth-static",
+        "version": "2026-10-13.1",
+        "sha256": "2922c1cf5fdc2b4f3fa9820162dac7c133ea318c7ef1411f5938c6216af66eb7"
+      },
+      "reference": {
+        "assetID": "HD-B-91ef00348229",
+        "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+        "version": "sha256:91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86"
+      },
+      "reviewer": {
+        "name": "CFA Site Index",
+        "model": "Codex model variant not independently verified",
+        "surface": "view_image original · local source pixels",
+        "reviewedAtUTC": "2026-10-13T20:07:06Z"
+      },
+      "imagesSeen": [
+        {
+          "assetID": "HD-B-125e06fc0938",
+          "sha256": "125e06fc0938715069a056270ba03ba5be4fe48c796c3caaeb3e0b886e9e9bf6",
+          "version": "sha256:125e06fc0938715069a056270ba03ba5be4fe48c796c3caaeb3e0b886e9e9bf6",
+          "accessible": true,
+          "view": "original"
+        },
+        {
+          "assetID": "HD-B-91ef00348229",
+          "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "version": "sha256:91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "accessible": true,
+          "view": "original"
+        }
+      ],
+      "criteriaResults": [
+        {
+          "criterionID": "upper",
+          "outcome": "fail",
+          "visibility": "visible",
+          "observation": "Four upper metallic caps appear silver/chrome rather than the gold of the nominated external_off reference."
+        },
+        {
+          "criterionID": "lower",
+          "outcome": "uncertain",
+          "visibility": "occluded",
+          "observation": "Lower teeth mostly hidden by lip."
+        },
+        {
+          "criterionID": "lip-rings",
+          "outcome": "pass",
+          "visibility": "visible",
+          "observation": "Two plain lip hoops visible."
+        },
+        {
+          "criterionID": "articulation",
+          "outcome": "uncertain",
+          "visibility": "occluded",
+          "observation": "Lower teeth do not visibly establish a bite on the upper lip."
+        }
+      ],
+      "evidence": "Scoped external_off dental mismatch. The existing Needs fixes / Production / 5-star / Multiverse record is preserved exactly.",
+      "uncertainty": "This is not rejection of all possible looks or actor/scene acceptance.",
+      "provenance": {
+        "source": "reference-validation-evidence-ui-20261013 bounded mouth beta; Site Index direct pixel comparison",
+        "observationDocumentSHA256": "1262be06cbe3df9e6a8e1224ecb73bd7c1a14cacea6238777c23d062d07cd7bf",
+        "adapter": "Direct independent inspection, not conversion of the Nova PA observations or old stars"
+      },
+      "clipEvidence": "not_tested"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "site-mouth-beta-20261013:HD-B-125e06fc0938:scene",
+      "target": {
+        "assetID": "HD-B-125e06fc0938",
+        "sha256": "125e06fc0938715069a056270ba03ba5be4fe48c796c3caaeb3e0b886e9e9bf6",
+        "version": "sha256:125e06fc0938715069a056270ba03ba5be4fe48c796c3caaeb3e0b886e9e9bf6"
+      },
+      "axis": "scene",
+      "applicability": "not_applicable",
+      "status": "not_checked",
+      "scope": {
+        "id": "mouth_detail_scene_na",
+        "kind": "none",
+        "label": "Mouth/portrait detail comparison; no scene assertion"
+      },
+      "criteria": null,
+      "reference": null,
+      "reviewer": {
+        "name": "CFA Site Index",
+        "model": "Codex model variant not independently verified",
+        "surface": "view_image original · local source pixels",
+        "reviewedAtUTC": "2026-10-13T20:07:06Z"
+      },
+      "imagesSeen": [
+        {
+          "assetID": "HD-B-125e06fc0938",
+          "sha256": "125e06fc0938715069a056270ba03ba5be4fe48c796c3caaeb3e0b886e9e9bf6",
+          "version": "sha256:125e06fc0938715069a056270ba03ba5be4fe48c796c3caaeb3e0b886e9e9bf6",
+          "accessible": true,
+          "view": "original"
+        },
+        {
+          "assetID": "HD-B-91ef00348229",
+          "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "version": "sha256:91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "accessible": true,
+          "view": "original"
+        }
+      ],
+      "criteriaResults": [],
+      "evidence": "This beta compares static character details only. Scene constraints and whole-scene readiness are outside its scope.",
+      "uncertainty": "No scene or temporal claim.",
+      "provenance": {
+        "source": "reference-validation-evidence-ui-20261013 bounded mouth beta; Site Index direct pixel comparison",
+        "observationDocumentSHA256": "1262be06cbe3df9e6a8e1224ecb73bd7c1a14cacea6238777c23d062d07cd7bf",
+        "adapter": "Direct independent inspection, not conversion of the Nova PA observations or old stars"
+      },
+      "clipEvidence": "not_tested"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "site-mouth-beta-20261013:HD-VIS-5b76b446306e:character",
+      "target": {
+        "assetID": "HD-VIS-5b76b446306e",
+        "sha256": "5b76b446306e3f7e9f2dee5f206d28a264862b3ddf60818de773db622b59133a",
+        "version": "sha256:5b76b446306e3f7e9f2dee5f206d28a264862b3ddf60818de773db622b59133a"
+      },
+      "axis": "character",
+      "applicability": "required",
+      "status": "uncertain",
+      "scope": {
+        "id": "hon-mouth-static",
+        "kind": "detail",
+        "label": "Hon default external-off / lip-rings-on dental and named static mouth pose"
+      },
+      "criteria": {
+        "id": "hon-mouth-static",
+        "version": "2026-10-13.1",
+        "sha256": "2922c1cf5fdc2b4f3fa9820162dac7c133ea318c7ef1411f5938c6216af66eb7"
+      },
+      "reference": {
+        "assetID": "HD-B-91ef00348229",
+        "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+        "version": "sha256:91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86"
+      },
+      "reviewer": {
+        "name": "CFA Site Index",
+        "model": "Codex model variant not independently verified",
+        "surface": "view_image original · local source pixels",
+        "reviewedAtUTC": "2026-10-13T20:07:06Z"
+      },
+      "imagesSeen": [
+        {
+          "assetID": "HD-VIS-5b76b446306e",
+          "sha256": "5b76b446306e3f7e9f2dee5f206d28a264862b3ddf60818de773db622b59133a",
+          "version": "sha256:5b76b446306e3f7e9f2dee5f206d28a264862b3ddf60818de773db622b59133a",
+          "accessible": true,
+          "view": "original"
+        },
+        {
+          "assetID": "HD-B-91ef00348229",
+          "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "version": "sha256:91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "accessible": true,
+          "view": "original"
+        }
+      ],
+      "criteriaResults": [
+        {
+          "criterionID": "upper",
+          "outcome": "uncertain",
+          "visibility": "occluded",
+          "observation": "Lips closed; upper teeth hidden."
+        },
+        {
+          "criterionID": "lower",
+          "outcome": "uncertain",
+          "visibility": "occluded",
+          "observation": "Lips closed; lower teeth hidden."
+        },
+        {
+          "criterionID": "lip-rings",
+          "outcome": "pass",
+          "visibility": "visible",
+          "observation": "Two plain lip hoops visible."
+        },
+        {
+          "criterionID": "articulation",
+          "outcome": "pass",
+          "visibility": "visible",
+          "observation": "Closed lips demonstrate a static seal/rest appearance only."
+        }
+      ],
+      "evidence": "Closure is visible in the historical REST candidate. Hidden dental fidelity remains unresolved against the current reference.",
+      "uncertainty": "Historical look is not promoted into current coverage; no speech or temporal proof.",
+      "provenance": {
+        "source": "reference-validation-evidence-ui-20261013 bounded mouth beta; Site Index direct pixel comparison",
+        "observationDocumentSHA256": "1262be06cbe3df9e6a8e1224ecb73bd7c1a14cacea6238777c23d062d07cd7bf",
+        "adapter": "Direct independent inspection, not conversion of the Nova PA observations or old stars"
+      },
+      "clipEvidence": "not_tested"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "site-mouth-beta-20261013:HD-VIS-5b76b446306e:scene",
+      "target": {
+        "assetID": "HD-VIS-5b76b446306e",
+        "sha256": "5b76b446306e3f7e9f2dee5f206d28a264862b3ddf60818de773db622b59133a",
+        "version": "sha256:5b76b446306e3f7e9f2dee5f206d28a264862b3ddf60818de773db622b59133a"
+      },
+      "axis": "scene",
+      "applicability": "not_applicable",
+      "status": "not_checked",
+      "scope": {
+        "id": "mouth_detail_scene_na",
+        "kind": "none",
+        "label": "Mouth/portrait detail comparison; no scene assertion"
+      },
+      "criteria": null,
+      "reference": null,
+      "reviewer": {
+        "name": "CFA Site Index",
+        "model": "Codex model variant not independently verified",
+        "surface": "view_image original · local source pixels",
+        "reviewedAtUTC": "2026-10-13T20:07:06Z"
+      },
+      "imagesSeen": [
+        {
+          "assetID": "HD-VIS-5b76b446306e",
+          "sha256": "5b76b446306e3f7e9f2dee5f206d28a264862b3ddf60818de773db622b59133a",
+          "version": "sha256:5b76b446306e3f7e9f2dee5f206d28a264862b3ddf60818de773db622b59133a",
+          "accessible": true,
+          "view": "original"
+        },
+        {
+          "assetID": "HD-B-91ef00348229",
+          "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "version": "sha256:91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+          "accessible": true,
+          "view": "original"
+        }
+      ],
+      "criteriaResults": [],
+      "evidence": "This beta compares static character details only. Scene constraints and whole-scene readiness are outside its scope.",
+      "uncertainty": "No scene or temporal claim.",
+      "provenance": {
+        "source": "reference-validation-evidence-ui-20261013 bounded mouth beta; Site Index direct pixel comparison",
+        "observationDocumentSHA256": "1262be06cbe3df9e6a8e1224ecb73bd7c1a14cacea6238777c23d062d07cd7bf",
+        "adapter": "Direct independent inspection, not conversion of the Nova PA observations or old stars"
+      },
+      "clipEvidence": "not_tested"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "site-mouth-beta-20261013:LAG-MOUTH2-8552bf1dbbb1ca25:character",
+      "target": {
+        "assetID": "LAG-MOUTH2-8552bf1dbbb1ca25",
+        "sha256": "8552bf1dbbb1ca25e27b826d0d5ce98f17d5bcff1fe107c8b0188fa1af52c987",
+        "version": "sha256:8552bf1dbbb1ca25e27b826d0d5ce98f17d5bcff1fe107c8b0188fa1af52c987"
+      },
+      "axis": "character",
+      "applicability": "required",
+      "status": "fail",
+      "scope": {
+        "id": "lisan-face",
+        "kind": "identity",
+        "label": "Lisan visible natural-face identity"
+      },
+      "criteria": {
+        "id": "lisan-face",
+        "version": "2026-10-13.1",
+        "sha256": "46bc215b82bede28dd634992e24b5144f38938474b6fcb3bd8dad71a19205b8f"
+      },
+      "reference": {
+        "assetID": "LAG-602a9fd4021dc356",
+        "sha256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+        "version": "sha256:602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f"
+      },
+      "reviewer": {
+        "name": "CFA Site Index",
+        "model": "Codex model variant not independently verified",
+        "surface": "view_image original · local source pixels",
+        "reviewedAtUTC": "2026-10-13T20:07:06Z"
+      },
+      "imagesSeen": [
+        {
+          "assetID": "LAG-MOUTH2-8552bf1dbbb1ca25",
+          "sha256": "8552bf1dbbb1ca25e27b826d0d5ce98f17d5bcff1fe107c8b0188fa1af52c987",
+          "version": "sha256:8552bf1dbbb1ca25e27b826d0d5ce98f17d5bcff1fe107c8b0188fa1af52c987",
+          "accessible": true,
+          "view": "original"
+        },
+        {
+          "assetID": "LAG-602a9fd4021dc356",
+          "sha256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+          "version": "sha256:602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+          "accessible": true,
+          "view": "original"
+        }
+      ],
+      "criteriaResults": [
+        {
+          "criterionID": "face",
+          "outcome": "fail",
+          "visibility": "visible",
+          "observation": "Full face geometry differs from the nominated natural portrait."
+        },
+        {
+          "criterionID": "teeth",
+          "outcome": "uncertain",
+          "visibility": "occluded",
+          "observation": "Closed lips hide the teeth."
+        },
+        {
+          "criterionID": "ink",
+          "outcome": "fail",
+          "visibility": "visible",
+          "observation": "AL/GAIB typography and neck worms/sun-eye geometry differ from the nominated portrait."
+        },
+        {
+          "criterionID": "jewelry",
+          "outcome": "fail",
+          "visibility": "visible",
+          "observation": "Visible eyebrow/nose/ear regions omit the portrait jewelry."
+        }
+      ],
+      "evidence": "Unilateral cheek bulge is compatible with the requested static tongue-in-cheek mechanics, but this face-scope comparison fails visible identity/ink/jewelry criteria.",
+      "uncertainty": "Tongue itself is hidden. No whole-actor pass, distinct speech-category validation or motion proof; no changes to seven human mouth-detail approvals.",
+      "provenance": {
+        "source": "reference-validation-evidence-ui-20261013 bounded mouth beta; Site Index direct pixel comparison",
+        "observationDocumentSHA256": "1262be06cbe3df9e6a8e1224ecb73bd7c1a14cacea6238777c23d062d07cd7bf",
+        "adapter": "Direct independent inspection, not conversion of the Nova PA observations or old stars"
+      },
+      "clipEvidence": "not_tested"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "site-mouth-beta-20261013:LAG-MOUTH2-8552bf1dbbb1ca25:scene",
+      "target": {
+        "assetID": "LAG-MOUTH2-8552bf1dbbb1ca25",
+        "sha256": "8552bf1dbbb1ca25e27b826d0d5ce98f17d5bcff1fe107c8b0188fa1af52c987",
+        "version": "sha256:8552bf1dbbb1ca25e27b826d0d5ce98f17d5bcff1fe107c8b0188fa1af52c987"
+      },
+      "axis": "scene",
+      "applicability": "not_applicable",
+      "status": "not_checked",
+      "scope": {
+        "id": "mouth_detail_scene_na",
+        "kind": "none",
+        "label": "Mouth/portrait detail comparison; no scene assertion"
+      },
+      "criteria": null,
+      "reference": null,
+      "reviewer": {
+        "name": "CFA Site Index",
+        "model": "Codex model variant not independently verified",
+        "surface": "view_image original · local source pixels",
+        "reviewedAtUTC": "2026-10-13T20:07:06Z"
+      },
+      "imagesSeen": [
+        {
+          "assetID": "LAG-MOUTH2-8552bf1dbbb1ca25",
+          "sha256": "8552bf1dbbb1ca25e27b826d0d5ce98f17d5bcff1fe107c8b0188fa1af52c987",
+          "version": "sha256:8552bf1dbbb1ca25e27b826d0d5ce98f17d5bcff1fe107c8b0188fa1af52c987",
+          "accessible": true,
+          "view": "original"
+        },
+        {
+          "assetID": "LAG-602a9fd4021dc356",
+          "sha256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+          "version": "sha256:602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+          "accessible": true,
+          "view": "original"
+        }
+      ],
+      "criteriaResults": [],
+      "evidence": "This beta compares static character details only. Scene constraints and whole-scene readiness are outside its scope.",
+      "uncertainty": "No scene or temporal claim.",
+      "provenance": {
+        "source": "reference-validation-evidence-ui-20261013 bounded mouth beta; Site Index direct pixel comparison",
+        "observationDocumentSHA256": "1262be06cbe3df9e6a8e1224ecb73bd7c1a14cacea6238777c23d062d07cd7bf",
+        "adapter": "Direct independent inspection, not conversion of the Nova PA observations or old stars"
+      },
+      "clipEvidence": "not_tested"
+    }
+  ],
+  "mouthAssetIDs": [
+    "LAG-PART-71c5b8015094",
+    "LAG-PART-b2ec1fc11b3e",
+    "LAG-PART-9d7fbe4a470e",
+    "LAG-PART-85a4bd861c4b",
+    "LAG-PART-7b372c45774e",
+    "LAG-PART-dba40ed6683a",
+    "LAG-PART-3135c5b1cf55",
+    "LAG-PART-ee68aeabe9f3",
+    "LAG-PART-478412c8ba50",
+    "LAG-PART-de6dc4a34045",
+    "LAG-PART-13dfe3c9656d",
+    "LAG-PART-2be8b0473895",
+    "LAG-PART-91dc61cdf980",
+    "LAG-PART-72b341a8190c",
+    "LAG-PART-218606ba2d46",
+    "LAG-VIS-c111c9d91f8ff1c2",
+    "LAG-VIS-afcdf01dce1fc114",
+    "LAG-VIS-00b8cf30f072b0a3",
+    "LAG-VIS-13465b4300927d08",
+    "LAG-VIS-69298b8068e57282",
+    "LAG-VIS-3056ae61d9993a75",
+    "LAG-VIS-cb41547abc0f110b",
+    "LAG-VIS-415fcbe05bc98db7",
+    "LAG-VIS-0dffe07f8187406a",
+    "LAG-VIS-4902daa823bf3b7d",
+    "LAG-VIS-4342a07e82f70ced",
+    "LAG-VIS-6fa3ec09ce90c2f1",
+    "LAG-VIS-766499fe461b8f07",
+    "LAG-VIS-10439af65a6f461b",
+    "LAG-VIS-a46bb597789cb219",
+    "LAG-VIS-f59f8f3402bfd530",
+    "LAG-VIS-b9ecf0b2629f7513",
+    "LAG-VIS-a1657d66a34f69c3",
+    "LAG-VIS-2604563440e706fa",
+    "LAG-VIS-1ca6b6880d8b2a27",
+    "LAG-VIS-a030f1d9801c7fb3",
+    "LAG-VIS-e82e6f8231bfe36f",
+    "LAG-VIS-a175280d92bf7534",
+    "LAG-VIS-b0c5f40daa2a2357",
+    "LAG-VIS-78d3d00e9e3010db",
+    "LAG-VIS-21769c1711ca6697",
+    "LAG-VIS-9a655f5419484948",
+    "LAG-VIS-7f37155bc3c752bc",
+    "LAG-VIS-ac37032efc3a9b94",
+    "LAG-VIS-e22a9ffbda187b4f",
+    "LAG-VIS-9bee5ab3615106de",
+    "LAG-VIS-8acc974f2db2ca86",
+    "LAG-VIS-4c282d605daf0d31",
+    "LAG-VIS-bd5259da5320c413",
+    "LAG-VIS-436567e2e63f15ce",
+    "LAG-VIS-ca9027d4711e1491",
+    "LAG-MOUTH2-0246ce5444a587e9",
+    "LAG-MOUTH2-7f815ffa3b6b407d",
+    "LAG-MOUTH2-211187885a9625b7",
+    "LAG-MOUTH2-c25f47c212a2e930",
+    "LAG-MOUTH2-dd1cfade7db38856",
+    "LAG-MOUTH2-638e8344ecb49ac4",
+    "LAG-MOUTH2-a360487e0964b3bd",
+    "LAG-MOUTH2-2e3d23af01d4e4c5",
+    "LAG-MOUTH2-732aeb273a633af1",
+    "LAG-MOUTH2-758627ce534a0e32",
+    "LAG-MOUTH2-8dc9a39a4aa5ad35",
+    "LAG-MOUTH2-9514fa10c66a8baf",
+    "LAG-MOUTH2-7aa16b647aedce3a",
+    "LAG-MOUTH2-c203e13cbea517da",
+    "LAG-MOUTH2-463addd941689bbf",
+    "LAG-MOUTH2-c30494ff1aa1dfeb",
+    "LAG-MOUTH2-7a6bc9d3ea724bea",
+    "LAG-MOUTH2-bfa73c27c6135ef5",
+    "LAG-MOUTH2-81bb98c6a58c2a86",
+    "LAG-MOUTH2-48f7c6260d860850",
+    "LAG-MOUTH2-7f08855202544394",
+    "LAG-MOUTH2-c19c4c26a601a97b",
+    "LAG-MOUTH2-9cb00de46e34a2bc",
+    "LAG-MOUTH2-e59431e104606ad8",
+    "LAG-MOUTH2-1814d479c237369d",
+    "LAG-MOUTH2-787f5abf34646f7f",
+    "LAG-MOUTH2-81a543a9eb0d1f42",
+    "LAG-MOUTH2-690987f250adc2ac",
+    "LAG-MOUTH2-f56638ef33413e4b",
+    "LAG-MOUTH2-dfa4c08c6f6664fe",
+    "LAG-MOUTH2-bd771506f3daa859",
+    "LAG-MOUTH2-b80bbdc4dd81ffa2",
+    "LAG-MOUTH2-db02cfd9b6d39f12",
+    "LAG-MOUTH2-47d81a9a5050f205",
+    "LAG-MOUTH2-c118faa4cac03813",
+    "LAG-MOUTH2-8552bf1dbbb1ca25",
+    "LAG-MOUTH2-4e8ce7a4095d665a",
+    "LAG-MOUTH2-38e7deb7eb09dd0f",
+    "HD-B-00a8ecf5a1ce",
+    "HD-B-028a688364ee",
+    "HD-B-0a4b5d417eb6",
+    "HD-B-0d5da141329d",
+    "HD-B-125e06fc0938",
+    "HD-B-1295618a7f52",
+    "HD-B-12d2685fd248",
+    "HD-B-13022569e659",
+    "HD-B-16c9a7ac5507",
+    "HD-B-2f74c026c40f",
+    "HD-B-31e4e53fdc8a",
+    "HD-B-3357a01cf4ae",
+    "HD-B-3933916802e7",
+    "HD-B-39f65ece9b5f",
+    "HD-B-3a03ab8bec2d",
+    "HD-B-440eba7abaef",
+    "HD-B-47a43ca2be9a",
+    "HD-B-4981ccf7e5b7",
+    "HD-B-4bc866b399f8",
+    "HD-B-4d98291202c5",
+    "HD-B-65689d56c672",
+    "HD-B-69b65c4c594b",
+    "HD-B-6dded3486a70",
+    "HD-B-6ffbc86e8d2a",
+    "HD-B-708df0bb5bff",
+    "HD-B-74ca5a38e24b",
+    "HD-B-7b1308e66ca6",
+    "HD-B-7b2c245e641d",
+    "HD-B-7c402821a4d4",
+    "HD-B-89045669215e",
+    "HD-B-8b5f910a03f9",
+    "HD-B-922938659564",
+    "HD-B-929c131a48cf",
+    "HD-B-a3954eb2631a",
+    "HD-B-a96975f231d9",
+    "HD-B-ad63bb04fb64",
+    "HD-B-b02f9c0a8059",
+    "HD-B-b465a10fd62e",
+    "HD-B-c1a904850597",
+    "HD-B-c5d7212c6918",
+    "HD-B-c7053765a9cc",
+    "HD-B-c81d10305d1c",
+    "HD-B-cdb1845bd6c9",
+    "HD-B-cec61aae169b",
+    "HD-B-d22e8c910d3d",
+    "HD-B-d98197d470ce",
+    "HD-B-e4c788ec7f22",
+    "HD-B-e78d52187774",
+    "HD-B-ef471a1f5e46",
+    "HD-B-f3669e61b1bd",
+    "HD-VIS-5b76b446306e"
+  ],
+  "sceneUses": [],
+  "gaps": [
+    "Family IDs/defaults and derivative graph remain unresolved.",
+    "No universal Hon cockpit nomination; explicit locked scene constraints require scoped declarations.",
+    "Lisan environments remain open unless explicitly locked.",
+    "Required per-scene validation scopes remain undeclared; no vacuous technical pass.",
+    "No new pet nominated.",
+    "DeepSeek deepseek-v4-pro in the reported tool setup cannot take images; no visual grades or model activation."
+  ],
+  "guidePath": "../visual_library/REFERENCE_VALIDATION_GUIDE.txt",
+  "petCandidates": [
+    {
+      "assetID": "LAG-e9ec71626983bb97",
+      "status": "located_not_nominated",
+      "scope": "Existing dog image; species and reference acceptance not established"
+    }
+  ]
+}

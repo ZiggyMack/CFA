@@ -1,0 +1,62 @@
+CANTINA IDENTITY TRANSFER - CURRENT METHOD REFRESH
+Reviewed October 12, 2026, America/New_York; sources accessed October 13 UTC.
+Status: primary-source research and actual local graph/QA audit. No new render, installation, model import or production acceptance.
+
+QUESTION AND BASELINE
+Change the lead actor's likeness to the supplied Harrison Ford reference while retaining the accepted Multiverse Cantina toast's performance and setting. Preserve timing/audio, hand/glass, costume, hair, tattoos, grill and jewelry. Those constraints can conflict with replacing recognizable facial geometry.
+The recipe lookup and Pan Help/content/video_routes.py:wan_mix informed our Wan2.2 replacement baseline. v004 actual graph: WAN_FACE_PROTECTION69_BROAD_GENERATION_COMPARISON_API_ACTUAL_20261012.json. Job: ae13aefd-845b-445c-a118-d8418a728785. Original zero-based F168-236: 69 frames, 24 fps, 768 x 432, 2.875 seconds. Source remains Production; derived proofs remain Preliminary/unaccepted.
+
+LOCAL OBSERVATIONS
+v004 removed the black face windows but Ford likeness remained weak/mixed. Source-open eyes became closed at F198. Outside the edit plus an 8-pixel neighborhood, all 69 best offsets are 0 and mean error is 2.11841/255; audio lag 0, correlation 0.999047. These checks establish alignment/preservation within lossy-codec tolerance, not exact generated facial performance. Full evidence: MEASURED_RETURN_20261012.txt and final verification JSON.
+The final mask permits 999-2683 pixels per frame (about 0.30-0.81% of the whole frame). Disconnected eye/brow, nose-bridge, chin and small lower-cheek windows retain most original face outline, marked cheeks, mouth/grill and hair. Inference: even a better raw generated face could lose its Ford geometry when source pixels are restored. SaveVideo contains only the final composite, so raw generation's likeness is unknown.
+
+GAP1 - FACE CONTROL REPRESENTATION
+Actual v004 connects DWPreprocessor100.IMAGE to WanAnimateToVideo232:62.face_video. Pinned DWPose code renders facial landmarks on black. Wan's own replacement preprocessing instead crops RGB source faces with a 1.3x landmark box and resizes them to 512 x 512. Current official Comfy template also uses DWPose IMAGE: this discrepancy is inherited, not an established accidental rewire. No directly verified upstream fix was found. Treat it as a comparison question, not the demonstrated cause of closed eyes.
+https://github.com/Fannovel16/comfyui_controlnet_aux/blob/59b027e088c1c8facf7258f6e392d16d204b4d27/src/custom_controlnet_aux/dwpose/__init__.py
+https://github.com/Wan-Video/Wan2.2/blob/29d4a35d32273d5309a3a95250bd4e118d8789b2/wan/modules/animate/preprocess/process_pipepline.py
+https://github.com/Comfy-Org/workflow_templates/blob/main/templates/video_wan2_2_14B_animate.json
+
+GAP2 - DIFFERENT REFERENCE BRANCHES
+Published native WanAnimateToVideo center-crops reference_image to output aspect before VAE encoding, and face_video to 512 x 512. For our 275 x 361 donor and 768 x 432 output, published resize math predicts retention near original y103-258. A full 768 x 432 face guide becomes roughly x168-600 before square resizing, without lead-face detection. These are predictions, not captured Cloud intermediates; exact server revision is unknown. The separate CLIPVision branch has crop=none. Wan's own reference preparation pads to retain aspect. Inspect actual preparation before correcting an input. Node10 currently feeds both CLIPVisionEncode9.image and Wan232:62.reference_image. A VAE-only comparison must retain node9 on the original donor and bind a separately prepared padded image only to Wan reference_image; replacing the shared loader would change both branches.
+https://github.com/Comfy-Org/ComfyUI/blob/a464ac33588ae182f81a090d910cfbf21e255b73/comfy_extras/nodes_wan.py
+https://github.com/Comfy-Org/ComfyUI/blob/a464ac33588ae182f81a090d910cfbf21e255b73/comfy/utils.py
+https://github.com/Wan-Video/Wan2.2/blob/29d4a35d32273d5309a3a95250bd4e118d8789b2/wan/animate.py
+
+GAP3 - IDENTITY-SPECIFIC COMPARISON
+FaceFusion 3.9.1 uses face alignment/swap/paste-back on existing frames, reference selection/tracking, region/occlusion masks and separate LivePortrait target-expression restoration with upper/lower-face controls. ReActor 0.7.1 offers Comfy image-batch swaps with optional masks/restoration. Both are plausible identity-only comparisons. Neither guarantees identical blinks or semantic protection for tattoo lettering, individual jewelry or grills. Tracking does not establish flicker-free video. Retain explicit source-protection compositing.
+https://github.com/facefusion/facefusion/blob/master/facefusion/processors/modules/face_swapper/core.py
+https://docs.facefusion.io/usage/cli-arguments/processors/expression-restorer
+https://docs.facefusion.io/usage/cli-arguments/face-masker
+https://docs.facefusion.io/usage/cli-arguments/face-tracker
+https://github.com/Gourieff/ComfyUI-ReActor
+
+DreamID-V is a current identity-specific video diffusion model with developer-linked Comfy wrappers. Authors separate identity, structure and temporal-context injection. Their repository recommends a cropped 512 x 512 face donor and describes full-size and faster 1.3B variants. It is a credible later challenger, not a tested improvement here. Required weights, runtime, installed Cloud schemas and effective inputs remain unverified. Our accelerated Wan six-step settings do not automatically apply.
+https://github.com/bytedance/DreamID-V
+https://guoxu1233.github.io/DreamID-V/
+https://github.com/HM-RunningHub/ComfyUI_RH_DreamID-V
+https://github.com/Goldlionren/ComfyUI_JR_DreamID-V
+
+AVAILABILITY / LIMITS
+The official FaceFusion Comfy integration is archived and calls an external API; this does not establish a native Cloud node. ReActor/DreamID-V Cloud nodes and weights have not been checked. Desktop installation would not establish Cloud availability.
+Code licensing does not establish rights for each weight set. InsightFace pretrained weights are explicitly noncommercial research; HyperSwap carries ResearchRAIL-MS. Verify the selected model's actual terms when choosing a production route.
+https://github.com/facefusion/facefusion-comfyui
+https://raw.githubusercontent.com/deepinsight/insightface/master/python-package/README.md
+https://github.com/facefusion/facefusion-labs/blob/master/hyperswap/LICENSE.md
+
+Do not guess an identity-strength knob. A wrapper maintainer discussion reports replacement black blocks when reducing face_strength; resemblance to our defect does not prove cause. Native Animate2 is a distinct newer node/model, not a validated drop-in fix. Six accelerated steps are not independently established as the fault.
+https://github.com/kijai/ComfyUI-WanVideoWrapper/issues/1683
+https://github.com/Comfy-Org/ComfyUI/issues/14965
+https://docs.comfy.org/tutorials/video/wan/wan2-2-animate
+
+NEXT BOUNDED CHECK - BEFORE ANOTHER SAMPLER
+1. Inspect actual prepared donor, all 69 lead-face guides and aligned RGB source-face crops. Confirm lead selection, frame indexing and source eye state. Local resize predictions are not Cloud captures.
+2. Try read-only raw pre-composite output recovery from the completed job/cache if available. Do not submit a sampler to discover whether it was saved; exported media contain only the final composite.
+3. Choose ONE treatment from that evidence: final clean-skin mask if raw likeness is lost by compositing; VAE reference-branch preparation if identity is cropped away; or face_video RGB lead crops versus inherited landmark guide if expression conditioning is suspect. Keep these as separate comparisons.
+4. If raw recovery is unavailable, a later single 69-frame comparison must save raw generation and final composite from the same sampler. Retain actual graph, inputs/hashes, effective settings, result and defects. Verify Cloud schemas/models before selecting one dedicated-swap challenger. No automatic model grid.
+
+SUCCESS CHECK
+Recognizable Ford identity throughout; source-matched gaze/blinks and mouth performance; correct lead selection; stable edges; retained tattoos/grill/jewelry/hair/hand/glass/background;69-frame 24 fps timing/audio. Specifically inspect source-open eyes at F198. Likeness and scene quality remain separate scores. Completed jobs and filled masks are not acceptance.
+
+MANUAL PAN RETURN - ADOPTION PENDING
+Companion to MEASURED_RETURN_20261012.txt. Bounded task for Panhandler Nova: reconcile dated wan_mix teaching with two executed/unaccepted proofs; teach generation masking versus final protection, input representation/aspect and raw-versus-composited evidence. Link canonical CFA artifacts and keep Cloud revision/availability unknowns. Return proposals through the existing manual CFA/Pan feedback route; no Pan files/schemas changed here.
+

@@ -1,0 +1,656 @@
+{
+  "format": "cfa-grok-image-intake-v1",
+  "project": "criminal_mind",
+  "batchID": "TCM-SET-PRECINCT-BATHROOM-L11-L19",
+  "lane": "set_round",
+  "taskID": "tcm-grok-sets-20261030",
+  "intakeRole": "site_index_receipt",
+  "sealStatus": "complete_only_when_pinned_by_required_aggregate",
+  "requiredAggregatePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/CFA_SET_INTAKE_035-118_SITE_INDEX_v003.json",
+  "supersedesReceipt": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19/CFA_INTAKE_RECEIPT_v002.json",
+  "verifiedAtUTC": "2026-11-04T13:41:07Z",
+  "receivedAtUTC": null,
+  "receivedTimeStatus": "not_recorded_in_archive",
+  "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19.zip",
+  "archiveSHA256": "59388daafd06df3c53f8011d2e44f103fd5f985db74e554d2a3484971178acad",
+  "archiveBytes": 1989775,
+  "archiveMemberCount": 19,
+  "receivedOriginals": 9,
+  "acceptedOriginals": 0,
+  "humanVerdictsCreated": 0,
+  "selectedStartingFrames": 0,
+  "assets": [
+    {
+      "candidateID": "TCM-SET-PRECINCT-BATHROOM-L11__P01-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-PRECINCT-BATHROOM-L11-L19\\TCM-SET-PRECINCT-BATHROOM-L11__P01-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L11__P01-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19.zip",
+      "archiveMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L11__P01-LS1.jpg",
+      "sha256": "284f701a4b6917a900cc4afe7db63c5b984baba34085ccb354d7415e9fb85044",
+      "bytes": 201288,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "ADVISORY",
+        "hardTrait": "G-REFL; P01; DOOR",
+        "note": "[S01] Slot P01 met: aimed into the long mirror, reflection shows the empty floor where two could stand, stall fronts, entry door and frosted window; basin rims + chrome faucets in lower frame; zoom: no camera, figure or face. ADVISORY: reflected entry leaf has a lever and a blank closer plate but NO small window or push plate (family check). Plate is blank. Door ruling (V_3): the family check \"Entry door leaf matches OFF-P08's door (small window, push plate, no sign/pictogram)\" is DRIFT where the door is the subject (P05, P06) and ADVISORY where incidental (reflection, frame edge, wide). Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-PRECINCT-BATHROOM_card_v001 / ac08892adae492ce90e1e94b35e52012160ebd9390e4bbb08f8e3308db35d709 ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/SCREENING_ROWS_PRECINCT-BATHROOM_PRELIMINARY.tsv",
+        "sourceSHA256": "1abd001005fe349bafd934838e5d7c72b927d585c77793e6dafd39155d167692",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "BATH-LS1 basins and long mirror",
+        "sourceVsProposal": null,
+        "defectNote": "mirror reflects empty room incl. entry door leaf with small plate (blank)",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L11",
+        "cameraPositionID": "BATH-P01",
+        "lightState": "BATH-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-PRECINCT-BATHROOM-L01"
+        ],
+        "servesShotsRaw": "TCM-31-01",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-31-01"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-PRECINCT-BATHROOM",
+      "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L11",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-31-01"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-31"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Precinct bathroom",
+      "sourceConstraints": "Basin and mirror with enough space for two agents physically behind John. Make it different from the home bathroom and consistent with the precinct look."
+    },
+    {
+      "candidateID": "TCM-SET-PRECINCT-BATHROOM-L12__P01-LS2",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-PRECINCT-BATHROOM-L11-L19\\TCM-SET-PRECINCT-BATHROOM-L12__P01-LS2.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L12__P01-LS2.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19.zip",
+      "archiveMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L12__P01-LS2.jpg",
+      "sha256": "2f5ecd8c24978423ff437934fcf6f42a08f78d48e476bb6f01755aa2138bd63f",
+      "bytes": 194523,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "P01; G-GEO; G-LS pass",
+        "note": "[S02] DRIFT: reflection shows window and door but NO stall fronts - P01 \"the reflection shows the room behind: the floor where two people could stand, the stall fronts, and the entry door\"; window/door order is reversed vs L11 at the same position. LS2 passes: overheads off, strip over mirror on, room darker, mirror brighter. Door here has a small dark panel; no glyphs. No figure/camera in mirror. Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-PRECINCT-BATHROOM_card_v001 / ac08892adae492ce90e1e94b35e52012160ebd9390e4bbb08f8e3308db35d709 ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/SCREENING_ROWS_PRECINCT-BATHROOM_PRELIMINARY.tsv",
+        "sourceSHA256": "1abd001005fe349bafd934838e5d7c72b927d585c77793e6dafd39155d167692",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "BATH-LS2 darker, strip light",
+        "sourceVsProposal": null,
+        "defectNote": "none noted",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L12",
+        "cameraPositionID": "BATH-P01",
+        "lightState": "BATH-LS2",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-PRECINCT-BATHROOM-L01"
+        ],
+        "servesShotsRaw": "TCM-31-01",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-31-01"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-PRECINCT-BATHROOM",
+      "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L12",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-31-01"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-31"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Precinct bathroom",
+      "sourceConstraints": "Basin and mirror with enough space for two agents physically behind John. Make it different from the home bathroom and consistent with the precinct look."
+    },
+    {
+      "candidateID": "TCM-SET-PRECINCT-BATHROOM-L13__P02-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-PRECINCT-BATHROOM-L11-L19\\TCM-SET-PRECINCT-BATHROOM-L13__P02-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L13__P02-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19.zip",
+      "archiveMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L13__P02-LS1.jpg",
+      "sha256": "a32d823aa2941a2be960e041661b72c83173b4a54cd960d40f81ff430f568b1c",
+      "bytes": 189411,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "P02; F-TEXT",
+        "note": "[S03] Slot P02 met: down into the basin, chrome faucet, drain, wet rim with droplets, blank pump dispenser at the edge (zoom: no label), mirror bottom edge at top; no hands, no water running. Single wall-hung institutional basin. Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-PRECINCT-BATHROOM_card_v001 / ac08892adae492ce90e1e94b35e52012160ebd9390e4bbb08f8e3308db35d709 ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/SCREENING_ROWS_PRECINCT-BATHROOM_PRELIMINARY.tsv",
+        "sourceSHA256": "1abd001005fe349bafd934838e5d7c72b927d585c77793e6dafd39155d167692",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "BATH-LS1 basin close, blank pump dispenser",
+        "sourceVsProposal": null,
+        "defectNote": "none noted",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L13",
+        "cameraPositionID": "BATH-P02",
+        "lightState": "BATH-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-PRECINCT-BATHROOM-L01"
+        ],
+        "servesShotsRaw": "TCM-31-01",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-31-01"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-PRECINCT-BATHROOM",
+      "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L13",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-31-01"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-31"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Precinct bathroom",
+      "sourceConstraints": "Basin and mirror with enough space for two agents physically behind John. Make it different from the home bathroom and consistent with the precinct look."
+    },
+    {
+      "candidateID": "TCM-SET-PRECINCT-BATHROOM-L14__P03-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-PRECINCT-BATHROOM-L11-L19\\TCM-SET-PRECINCT-BATHROOM-L14__P03-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L14__P03-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19.zip",
+      "archiveMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L14__P03-LS1.jpg",
+      "sha256": "60112aab4d389f50bb8b12786ca3270de244ad1093114cd41ccd5429eec381a2",
+      "bytes": 224019,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "P03; G-REFL",
+        "note": "[S04] Slot P03 met: sink run + long mirror receding at left, open floor centre, stall fronts at right, window on the end wall, white tile with green band (L01 look). Mirror reflects stalls and the window (spec says tile and stall doors only; the L01 anchor also reflects its window; empty, no figure - note only). Stall layout differs from L01 - see open question. Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-PRECINCT-BATHROOM_card_v001 / ac08892adae492ce90e1e94b35e52012160ebd9390e4bbb08f8e3308db35d709 ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/SCREENING_ROWS_PRECINCT-BATHROOM_PRELIMINARY.tsv",
+        "sourceSHA256": "1abd001005fe349bafd934838e5d7c72b927d585c77793e6dafd39155d167692",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "BATH-LS1 sink run axis three-shot space",
+        "sourceVsProposal": null,
+        "defectNote": "none noted",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L14",
+        "cameraPositionID": "BATH-P03",
+        "lightState": "BATH-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-PRECINCT-BATHROOM-L01"
+        ],
+        "servesShotsRaw": "TCM-31-02, TCM-31-03",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-31-02",
+          "TCM-31-03"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-PRECINCT-BATHROOM",
+      "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L14",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-31-02",
+        "TCM-31-03"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-31"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Precinct bathroom",
+      "sourceConstraints": "Basin and mirror with enough space for two agents physically behind John. Make it different from the home bathroom and consistent with the precinct look."
+    },
+    {
+      "candidateID": "TCM-SET-PRECINCT-BATHROOM-L15__P04-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-PRECINCT-BATHROOM-L11-L19\\TCM-SET-PRECINCT-BATHROOM-L15__P04-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L15__P04-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19.zip",
+      "archiveMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L15__P04-LS1.jpg",
+      "sha256": "c0d319a17b2e81c0517de6349e468193681b1a37d871088347f8ac918c741804",
+      "bytes": 204404,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "P04; DOOR",
+        "note": "[S05] Slot P04 met: back to the mirror, closed stall doors, tile band, part of the entry door at left frame edge, no mirror in frame; L01 layout (stalls on the far wall, window right). Door leaf cropped at the edge, so the small-window check cannot be judged. No people. Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-PRECINCT-BATHROOM_card_v001 / ac08892adae492ce90e1e94b35e52012160ebd9390e4bbb08f8e3308db35d709 ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/SCREENING_ROWS_PRECINCT-BATHROOM_PRELIMINARY.tsv",
+        "sourceSHA256": "1abd001005fe349bafd934838e5d7c72b927d585c77793e6dafd39155d167692",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "BATH-LS1 reverse into room, no mirror",
+        "sourceVsProposal": null,
+        "defectNote": "none noted",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L15",
+        "cameraPositionID": "BATH-P04",
+        "lightState": "BATH-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-PRECINCT-BATHROOM-L01"
+        ],
+        "servesShotsRaw": "TCM-31-03",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-31-03"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-PRECINCT-BATHROOM",
+      "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L15",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-31-03"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-31"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Precinct bathroom",
+      "sourceConstraints": "Basin and mirror with enough space for two agents physically behind John. Make it different from the home bathroom and consistent with the precinct look."
+    },
+    {
+      "candidateID": "TCM-SET-PRECINCT-BATHROOM-L16__P05-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-PRECINCT-BATHROOM-L11-L19\\TCM-SET-PRECINCT-BATHROOM-L16__P05-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L16__P05-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19.zip",
+      "archiveMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L16__P05-LS1.jpg",
+      "sha256": "a34b09a89e08fa94ecd10bf67166ba21e383a3cdd6702b3c30547c1fac5e3e7e",
+      "bytes": 245187,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "P05; F-DOOR; F-ROOM",
+        "note": "[S06] DRIFT: TWO doors with full-width push bars vs P05 \"a single plain leaf with a small window and push plate, closed\" and the writer's \"a single plain door back to the office floor\"; full-height dark-green tile and beige sheet floor vs L01 \"white tile with a green band\", grey tile (maker flag \"ROOM DRIFT\"). Wired-glass window allowed; trees only, no people. Sink run + mirror at frame left met; door panels blank. Door ruling (V_3): the family check \"Entry door leaf matches OFF-P08's door (small window, push plate, no sign/pictogram)\" is DRIFT where the door is the subject (P05, P06) and ADVISORY where incidental (reflection, frame edge, wide). Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-PRECINCT-BATHROOM_card_v001 / ac08892adae492ce90e1e94b35e52012160ebd9390e4bbb08f8e3308db35d709 ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/SCREENING_ROWS_PRECINCT-BATHROOM_PRELIMINARY.tsv",
+        "sourceSHA256": "1abd001005fe349bafd934838e5d7c72b927d585c77793e6dafd39155d167692",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "BATH-LS1 entry door from inside",
+        "sourceVsProposal": null,
+        "defectNote": "ROOM DRIFT: two doors with push bars, dark green full-height tile, beige floor, wired window - does not match L01 room; door has bars/push hardware not plain leaf",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L16",
+        "cameraPositionID": "BATH-P05",
+        "lightState": "BATH-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-PRECINCT-BATHROOM-L01"
+        ],
+        "servesShotsRaw": "TCM-31-04",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-31-04"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-PRECINCT-BATHROOM",
+      "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L16",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-31-04"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-31"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Precinct bathroom",
+      "sourceConstraints": "Basin and mirror with enough space for two agents physically behind John. Make it different from the home bathroom and consistent with the precinct look."
+    },
+    {
+      "candidateID": "TCM-SET-PRECINCT-BATHROOM-L17__P06-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-PRECINCT-BATHROOM-L11-L19\\TCM-SET-PRECINCT-BATHROOM-L17__P06-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L17__P06-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19.zip",
+      "archiveMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L17__P06-LS1.jpg",
+      "sha256": "445aad1ab09a0c5ed4748594298b456af852ecd33dff505a7c61fcce602a41f9",
+      "bytes": 210798,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "P06; F-DOOR",
+        "note": "[S07] Room matches L01 (sink run + mirror one side, stalls other, window far end; mirror shows stalls/window only, zoom clean). DRIFT: door leaves at BOTH frame edges with meeting levers = a double door, vs P06 \"the door leaf at the frame edge\" and \"a single plain door back to the office floor\" (maker: \"door leaves both sides of frame\"). Door ruling (V_3): the family check \"Entry door leaf matches OFF-P08's door (small window, push plate, no sign/pictogram)\" is DRIFT where the door is the subject (P05, P06) and ADVISORY where incidental (reflection, frame edge, wide). Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-PRECINCT-BATHROOM_card_v001 / ac08892adae492ce90e1e94b35e52012160ebd9390e4bbb08f8e3308db35d709 ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/SCREENING_ROWS_PRECINCT-BATHROOM_PRELIMINARY.tsv",
+        "sourceSHA256": "1abd001005fe349bafd934838e5d7c72b927d585c77793e6dafd39155d167692",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "BATH-LS1 threshold view in",
+        "sourceVsProposal": null,
+        "defectNote": "door leaves both sides of frame; matches L01 room",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L17",
+        "cameraPositionID": "BATH-P06",
+        "lightState": "BATH-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-PRECINCT-BATHROOM-L01"
+        ],
+        "servesShotsRaw": "exploratory",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-PRECINCT-BATHROOM",
+      "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L17",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-31"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Precinct bathroom",
+      "sourceConstraints": "Basin and mirror with enough space for two agents physically behind John. Make it different from the home bathroom and consistent with the precinct look."
+    },
+    {
+      "candidateID": "TCM-SET-PRECINCT-BATHROOM-L18__P07-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-PRECINCT-BATHROOM-L11-L19\\TCM-SET-PRECINCT-BATHROOM-L18__P07-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L18__P07-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19.zip",
+      "archiveMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L18__P07-LS1.jpg",
+      "sha256": "97ac98c27fd8c19b6312ef67538c68fb45091c64415232222a8a082ef06e96b0",
+      "bytes": 198783,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "P07; F-TEXT",
+        "note": "[S08] Slot P07 met: square to the end wall, frosted window with daylight, blank paper-towel dispenser (zoom: slot only, no glyphs), grey bin, tile band, last stall edge at left. Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-PRECINCT-BATHROOM_card_v001 / ac08892adae492ce90e1e94b35e52012160ebd9390e4bbb08f8e3308db35d709 ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/SCREENING_ROWS_PRECINCT-BATHROOM_PRELIMINARY.tsv",
+        "sourceSHA256": "1abd001005fe349bafd934838e5d7c72b927d585c77793e6dafd39155d167692",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "BATH-LS1 window and blank dispenser/bin wall",
+        "sourceVsProposal": null,
+        "defectNote": "none noted",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L18",
+        "cameraPositionID": "BATH-P07",
+        "lightState": "BATH-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-PRECINCT-BATHROOM-L01"
+        ],
+        "servesShotsRaw": "exploratory",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-PRECINCT-BATHROOM",
+      "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L18",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-31"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Precinct bathroom",
+      "sourceConstraints": "Basin and mirror with enough space for two agents physically behind John. Make it different from the home bathroom and consistent with the precinct look."
+    },
+    {
+      "candidateID": "TCM-SET-PRECINCT-BATHROOM-L19__P08-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-PRECINCT-BATHROOM-L11-L19\\TCM-SET-PRECINCT-BATHROOM-L19__P08-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L19__P08-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-PRECINCT-BATHROOM-L11-L19.zip",
+      "archiveMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/TCM-SET-PRECINCT-BATHROOM-L19__P08-LS1.jpg",
+      "sha256": "a113637c1cfd4cd2187a4e29be53b89f987190f409839f36c4671a4fb15f7d3e",
+      "bytes": 234424,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "ADVISORY",
+        "hardTrait": "P08; G-REFL; DOOR",
+        "note": "[S09] Slot P08 met: high corner wide, sink wall + long mirror, stalls, entry door and window in one frame; mirror shows tile only; L01 layout. ADVISORY: door leaf is plain with a lever, no small window or push plate (family check); door at the end of the stalls rather than the end of the sink run (writer proposal only). Door ruling (V_3): the family check \"Entry door leaf matches OFF-P08's door (small window, push plate, no sign/pictogram)\" is DRIFT where the door is the subject (P05, P06) and ADVISORY where incidental (reflection, frame edge, wide). Manifest: index row carries family, full position id, full light id and reference_ids (L01); NO slot-id and NO maker column - slot id derived by V_3 from (position, light); not MANIFEST-INCOMPLETE.",
+        "cardVersion": "v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-PRECINCT-BATHROOM_card_v001 / ac08892adae492ce90e1e94b35e52012160ebd9390e4bbb08f8e3308db35d709 ; CARDS_INDEX_B2 cf6e6d9834efbdb81dd56e00cbf3f7e254674a788e63363c5de53af69d5a9044 ; SLOTS_B2 9ba1844077f73ebda221bc5a2a84b1446fa13d79d6ba5f892deb3654734c322f ; maps f57c5923050f6f8bb3f8e0c6d0338401a063ed6409238d1fafb237b503f13c7e ; R1 ec6c2634c532357005210a927ede04616997654cbe8f47bc6fba85ffaf5540df ; R2 e6d453122639c5d2e8348e854a2b73e1cbe30c059dc5af69774b1d6bd900c265",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/SCREENING_ROWS_PRECINCT-BATHROOM_PRELIMINARY.tsv",
+        "sourceSHA256": "1abd001005fe349bafd934838e5d7c72b927d585c77793e6dafd39155d167692",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "BATH-LS1 high corner wide",
+        "sourceVsProposal": null,
+        "defectNote": "none noted",
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L19",
+        "cameraPositionID": "BATH-P08",
+        "lightState": "BATH-LS1",
+        "variant": null,
+        "variantOf": null,
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-PRECINCT-BATHROOM-L01"
+        ],
+        "servesShotsRaw": "exploratory",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-PRECINCT-BATHROOM-L11-L19/MAKER_BATCH_SETROUND_02_index.tsv",
+        "sourceSHA256": "01cac436f7731edcec8831e9eda0df9f88ab0d6d007fabb6835d1e274b16d471",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-PRECINCT-BATHROOM",
+      "providerCandidateID": "TCM-SET-PRECINCT-BATHROOM-L19",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-31"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Precinct bathroom",
+      "sourceConstraints": "Basin and mirror with enough space for two agents physically behind John. Make it different from the home bathroom and consistent with the precinct look."
+    }
+  ],
+  "verification": {
+    "zipCRC": true,
+    "archiveHash": true,
+    "safeMemberPaths": true,
+    "noSymlinks": true,
+    "noEncryptedMembers": true,
+    "uniqueCandidateIDs": true,
+    "indexedBytesAndHashes": true,
+    "JPEGDecode": true,
+    "humanReviewOrAcceptanceCreated": false
+  },
+  "note": "Technical receipt for unreviewed originals. It is a completed site intake only when its exact hash is pinned by the required lane aggregate. Provider/V-team screening remains attributed preliminary evidence, never a human verdict or acceptance."
+}

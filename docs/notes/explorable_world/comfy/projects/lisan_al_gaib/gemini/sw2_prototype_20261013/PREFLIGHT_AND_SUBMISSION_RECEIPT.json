@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "recordType": "bounded-provider-preflight-and-submission-receipt",
+  "createdAtUTC": "2026-10-14T02:19:05.862601+00:00",
+  "project": "Lisan Al Gaib / Meta Mirror",
+  "shotID": "SW-2",
+  "shotTitle": "The rise",
+  "provider": "Google Gemini",
+  "chatURL": "https://gemini.google.com/app/e6a2bab576bff5a3",
+  "existingConversation": true,
+  "scope": "One short video request submitted once by CFA Nova root with explicitly approved unexposed settings. This is a historical submission checkpoint, not a returned-result record.",
+  "rootReportedSourceUploadCount": 1,
+  "selectedSource": {
+    "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-1K-C13/C13-sandworm-rising/repairs/C13-04_Z_1_R1-try5-patch-c.jpg",
+    "bytes": 447799,
+    "sha256": "23817577d3d32f0df03d57ac1e49c4c85246e86c405b13c492194f7aa2f52bad"
+  },
+  "sourceChoiceScope": "Direct user selection of repaired patch-c for a short Flow/Gemini prototype. Not a whole-look, character-canon or production acceptance.",
+  "prompt": {
+    "artifact": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/sw2_prototype_20261013/ACTUAL_SUBMITTED_PROMPT.txt",
+      "bytes": 1245,
+      "sha256": "20b5a0e2be1c267c3db5c8ba42082313256f686129408b337574c0a3d7783fa6"
+    },
+    "text": "Use the supplied image as the exact first frame. One uninterrupted 8-second landscape shot with a locked eye-height camera, no zoom or push. The open sandworm maw at screen-right rises vertically approximately one apparent maw-height through the existing haze; sand spills from its rim and fine dust drifts screen-left. Keep one worm with the same maw design and teeth, no lunge or lateral movement. The man stays in the same position and takes one slow breath: his chest rises and settles once, mouth closed, gaze toward the camera as in the starting frame, one blink at most. No head turn, step or hand gesture. Preserve his face geometry, dark curls, blue eyes, small AL between the brows, vertical G-A-I-B on the chin, paired segmented neck worms and the throat eye-disc. Preserve the dark shirt, cloak, single chain and existing ear hoops on the same ear; do not repair, add or change tattoos, piercings or clothing. Keep the warm diffuse haze, soft near-frontal face illumination and dark maw interior; dust catches only the existing haze light. No new emitter, visible sun, flicker or color wash. No cuts, camera movement, new characters, objects, text or watermarks. Silent output: no speech, singing, music, narration or sound effects.\n",
+    "words": 204,
+    "exactBytesMatchFlowPrompt": true,
+    "actualSubmissionEvidence": "Root reports the exact same 204-word Flow prompt submitted verbatim; local helper verified exact byte copy and viewed screenshot only. The screenshots do not independently display the full prompt."
+  },
+  "authorization": {
+    "route": "Direct human asynchronous approval reported by root",
+    "questionItemID": null,
+    "answer": "Approve this one Gemini run with those unknowns",
+    "scope": "One existing Ultra-quota video request with unknown actual video engine/version, native duration/resolution controls, per-run quote and remaining allowance. No purchase, upgrade, extension, retry or further batch."
+  },
+  "approvalReview": {
+    "initialSubmitAttempt": "Rejected by automatic approval review before the action occurred, as reported by root.",
+    "laterSubmission": "After the direct user approval, root clicked Send once (reported UI index 187).",
+    "rejectedAttemptCountedAsSubmission": false,
+    "successfulSubmissionCountReported": 1,
+    "automaticRetryPerformed": false
+  },
+  "uiSettingsEvidence": {
+    "observer": "CFA Nova root, sole browser operator",
+    "mode": "Videos",
+    "chatModelLabelReported": "3.5 Flash-Lite",
+    "chatModelLabelVisibleInScreenshots": "Flash-Lite",
+    "chatModelIsNotVerifiedVideoEngine": true,
+    "actualVideoEngine": null,
+    "actualVideoEngineVersion": null,
+    "nativeDurationSecondsControl": null,
+    "nativeResolutionControl": null,
+    "nativeAspectRatioControl": null,
+    "perRunQuote": null,
+    "remainingAllowance": null,
+    "accountTierVisible": "Ultra",
+    "accountTierIsNotEvidenceOfRemainingQuota": true,
+    "requestedDurationSecondsInPrompt": 8,
+    "requestedOrientationInPrompt": "Landscape",
+    "requestedAudioInPrompt": "Silent; no speech, singing, music, narration or sound effects",
+    "requestedOutputPropertiesAreNotMeasuredResultProperties": true
+  },
+  "screenshots": [
+    {
+      "stage": "Ready to send",
+      "capturedAtUTCReported": "2026-10-14T02:15:37.514Z",
+      "artifact": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/sw2_prototype_20261013/GEMINI_SW2_READY_1791944135255.jpg",
+        "bytes": 95897,
+        "sha256": "147dbf9aa9d3f8e80e0f7fa3df5c44ff4e2b42b6674ba9c48ddf8e3fdcb28512"
+      }
+    },
+    {
+      "stage": "Submitted / response pending",
+      "capturedAtUTCReported": "2026-10-14T02:16:35.953Z",
+      "artifact": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/sw2_prototype_20261013/GEMINI_SW2_SUBMITTED_1791944195630.jpg",
+        "bytes": 61663,
+        "sha256": "de69a481ac8fecfa4bbc1301a6d51fb8fdc39f8e160d65e9780ea7bf1cc2f90b"
+      }
+    }
+  ],
+  "helperScreenshotInspection": {
+    "viewedBothSavedScreenshots": true,
+    "independentlyVisible": "Ready screenshot shows the selected patch-c thumbnail, Videos mode and Flash-Lite label. Submission screenshot shows the thumbnail in a sent message, the prompt opening, cleared composer and Stop control.",
+    "rootReportedAdditionalEvidence": "Sent message contains the image and exact prompt; root observed cleared composer and Stop response control.",
+    "helperPerformedBrowserAction": false
+  },
+  "stateAtSubmissionCheckpoint": {
+    "submitted": true,
+    "responsePending": true,
+    "resultCompletedClaimed": false,
+    "resultReceivedClaimed": false,
+    "resultVerifiedClaimed": false,
+    "resultReviewedClaimed": false,
+    "acceptedClaimed": false,
+    "providerJobID": null,
+    "providerOutputID": null,
+    "outputPath": null,
+    "outputSHA256": null,
+    "actualReturnedDurationSeconds": null,
+    "actualReturnedFPS": null,
+    "actualReturnedDimensions": null,
+    "actualReturnedAudioPresent": null,
+    "actualDebit": null
+  },
+  "comparisonLimits": "Same requested source and prompt do not establish matched model settings, seeds, prior conversation context, timing or cost across providers. Gemini video-engine metadata and native output properties await actual returned evidence.",
+  "pendingEvidence": [
+    "Provider completion/error",
+    "Verified original local result and hash",
+    "Measured duration, dimensions, frame grid, streams and decode health",
+    "Normal-speed visual and listening review",
+    "Scoped user acceptance"
+  ],
+  "storage": "New files only in project-owned D: folder. Existing Flow and site records preserved.",
+  "appendOnlyEvidence": true
+}

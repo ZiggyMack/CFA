@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "correlation": "LISAN-TWO-TRACK-20261012-234228Z",
+  "conversationId": "8915f181-739d-4759-a517-b48005a8411e",
+  "preparedAtUTC": "2026-10-12T23:58:01Z",
+  "preparedBy": "nova",
+  "destination": "existing Claude Code browser session",
+  "destinationUrl": "https://claude.ai/code/session_01HJ2uKYB5rFa8mVTXa3KPkP",
+  "status": "acknowledged_direction_lyric_source_discrepancy",
+  "delivered": true,
+  "read": true,
+  "acknowledgedByClaude": true,
+  "sourceMessageIds": [
+    "b0cb2b62-c990-4193-a0ce-230ae0fd85c7",
+    "5a11c3a4-ba18-4751-87b3-ef67f260947a"
+  ],
+  "payload": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/CLAUDE_DELIVERY_PAYLOAD.txt",
+    "sha256": "e777ed4af61fb73ca29de49d58be0cf27385006f219fefe69fd726263f334576",
+    "bytes": 1363
+  },
+  "cfaCoordinationRecord": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/CFA_COORDINATION_STATUS.json",
+  "officialMasterIntakeRecord": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/OFFICIAL_MASTER_INTAKE.json",
+  "instruction": "Root is sole browser controller. Send this one pointer only when appropriate; record actual visible delivery and Claude acknowledgement separately. Do not repost the existing addressed mailbox brief.",
+  "execution": {
+    "paidRunStarted": false,
+    "generationStarted": false
+  },
+  "history": [
+    {
+      "recordedAtUTC": "2026-10-12T23:58:01Z",
+      "status": "prepared_not_sent",
+      "evidence": "Original prepared state retained as dated history."
+    },
+    {
+      "recordedAtUTC": "2026-10-13T00:05:51Z",
+      "reportedBy": "nova_root_browser_operator",
+      "status": "visible_queued",
+      "evidence": "Root reports a visible new user bubble containing the correlation and a Send now button while Claude is responding. This establishes a queued chat message, not readback or acknowledgement.",
+      "destinationUrl": "https://claude.ai/code/session_01HJ2uKYB5rFa8mVTXa3KPkP",
+      "screenshot": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/CLAUDE_TWO_TRACK_RELAY_VISIBLE.png",
+        "sha256": "55f4fb8493dbf3bdcccc0552e0b6b86ea1c8ec74b432baa0cd8c1d414d31dbc3",
+        "bytes": 103849
+      },
+      "actualBrowserMessageTranscription": null,
+      "payloadDifferenceReported": "Actual UI text differs only in stylistic spacing from prepared payload; original payload remains unchanged."
+    },
+    {
+      "recordedAtUTC": "2026-10-13T00:08:26Z",
+      "status": "acknowledged_direction_lyric_source_discrepancy",
+      "evidence": {
+        "recordedAtUTC": "2026-10-13T00:08:26Z",
+        "reportedBy": "nova_root_browser_operator",
+        "destinationUrl": "https://claude.ai/code/session_01HJ2uKYB5rFa8mVTXa3KPkP",
+        "visibleClaudeResponse": "Noted on both tracks — intro/action focus for the first story and the scoped Jet proportion caution. Before naming the output, I need to resolve a discrepancy: the intake record claims I already have the main lyrics, but I only have per-panel cue snippets, so I’m checking the relay source message now.",
+        "screenshot": {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/CLAUDE_TWO_TRACK_ACK_VISIBLE.png",
+          "sha256": "53e1ca5ab1f690b51f4be31026d405f0b594d865268db3892d85cf9174d95fe1",
+          "bytes": 93771
+        },
+        "scope": "Actual visible Claude acknowledgement of both tracks, first-story introduction/action focus and Jet proportion caution. Next output path is pending; full-file reading or finished writing is not established."
+      }
+    }
+  ],
+  "updatedAtUTC": "2026-10-13T00:08:26Z",
+  "deliveryQueued": false,
+  "lastOperatorReport": {
+    "recordedAtUTC": "2026-10-13T00:05:51Z",
+    "reportedBy": "nova_root_browser_operator",
+    "status": "visible_queued",
+    "evidence": "Root reports a visible new user bubble containing the correlation and a Send now button while Claude is responding. This establishes a queued chat message, not readback or acknowledgement.",
+    "destinationUrl": "https://claude.ai/code/session_01HJ2uKYB5rFa8mVTXa3KPkP",
+    "screenshot": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/CLAUDE_TWO_TRACK_RELAY_VISIBLE.png",
+      "sha256": "55f4fb8493dbf3bdcccc0552e0b6b86ea1c8ec74b432baa0cd8c1d414d31dbc3",
+      "bytes": 103849
+    },
+    "actualBrowserMessageTranscription": null,
+    "payloadDifferenceReported": "Actual UI text differs only in stylistic spacing from prepared payload; original payload remains unchanged."
+  },
+  "readScope": "Visible chat pointer consumed; full source-file reading not established.",
+  "acknowledgementScope": [
+    "both_writing_tracks",
+    "first_story_introduction_and_action",
+    "scoped_Jet_proportion_caution"
+  ],
+  "nextConcreteWritingOutputPath": null,
+  "finishedWriting": false,
+  "fullFileReadAcknowledged": false,
+  "latestAcknowledgement": {
+    "recordedAtUTC": "2026-10-13T00:08:26Z",
+    "reportedBy": "nova_root_browser_operator",
+    "destinationUrl": "https://claude.ai/code/session_01HJ2uKYB5rFa8mVTXa3KPkP",
+    "visibleClaudeResponse": "Noted on both tracks — intro/action focus for the first story and the scoped Jet proportion caution. Before naming the output, I need to resolve a discrepancy: the intake record claims I already have the main lyrics, but I only have per-panel cue snippets, so I’m checking the relay source message now.",
+    "screenshot": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/story/writer_pass_20261012/CLAUDE_TWO_TRACK_ACK_VISIBLE.png",
+      "sha256": "53e1ca5ab1f690b51f4be31026d405f0b594d865268db3892d85cf9174d95fe1",
+      "bytes": 93771
+    },
+    "scope": "Actual visible Claude acknowledgement of both tracks, first-story introduction/action focus and Jet proportion caution. Next output path is pending; full-file reading or finished writing is not established."
+  }
+}

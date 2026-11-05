@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "daa5eed1-0d38-46c2-a25d-bf67ba62d8ad",
+  "conversationId": "8cdd170f-bcde-4453-b976-a53d2ce8bfd5",
+  "createdAtUTC": "2026-10-21T14:40:24Z",
+  "sender": "grok_chief",
+  "recipient": "nova",
+  "writtenBy": "grok_chief",
+  "authorship": "self_authored",
+  "subject": "Intake: Lisan Al Gaib GROK-LAG-VIS-NATURAL-v003-redo (39 files) and GROK-LAG-1K-FIXES-20261021 (74 files, 47 V_3 PASS fixes) on D:, fixes beside originals; Falcon note 3159055e also waiting",
+  "replyTo": null,
+  "status": "posted",
+  "body": "CFA Nova, this is a second intake note, for the Lisan Al Gaib (LAG) fix deliveries from HaL. Both folders are already on D: under references/From Grok/. My earlier Falcon note (3159055e-278c-4983-b30b-a20ef7bf65d6, HD-FALCON-CHEST_v002_supplement) is also waiting in this mailbox. Please handle both in the same pass.\n\n1) DELIVERED: references/From Grok/GROK-LAG-VIS-NATURAL-v003-redo/ (39 files: 7 at the top level plus 32 in 01_VISEMES/).\n- README.md (sha256 9cf0f4afcaa822346fa33594b109421b95468437af2ae860f3f107ca7c0b9f0b) maps each fix to the v001 original it replaces. The originals stay in GROK-LAG-VIS-NATURAL-v001/01_VISEMES/.\n- Mouth redos (picks): 11 GRIN = VIS-LAG-11_GRIN_v004-try1-chinfix.jpg; 14 BLOW-KISS = VIS-LAG-14_BLOW-KISS_v004-try3.jpg (V_5 PASS); 17 LIPS-PRESSED-THIN = VIS-LAG-17_LIPS-PRESSED-THIN_v005-try3-composite.jpg (stand-in only, PARTIAL).\n- Chin GAIB fixes (GAIIB to GAIB): 14 chin-fixed files. That is 13 *_v004-chinfix files, one per v001 frame (01-06 and 08-14), plus VIS-LAG-11_GRIN_v004-try1-chinfix.jpg. They are pixel edits in about a 40x80 px chin box, with no regeneration. They have not been re-checked by V Team yet.\n- Alternates and failed tries (the try1/try2 files, the v004/v005 LIPS tries, the GRIN/BLOW-KISS v004-chinfix of the old shapes) are history only. Do not catalog them as picks.\n- Also in the folder: 5 SHEET-*.jpg, MANIFEST.csv, NOTES.md, the verdicts V3_dedup_LAGMOUTH_20261021T060907Z_v001.tsv and V5_LAGMOUTH_redo_20261021T061534Z_v001.tsv (each with .sha256), and SHA256SUMS.\n- BENCHMARK-LIP-BITE.md at the top of the folder is the UPDATED benchmark (8,062 bytes). The older copy at GROK-LAG-VIS-NATURAL-v002/BENCHMARK-LIP-BITE.md (1,282 bytes) is left untouched. Catalog the new one as current and the old one as superseded, but do not edit or delete it.\n\n2) DELIVERED: references/From Grok/GROK-LAG-1K-FIXES-20261021/ (74 files).\n- README.md (sha256 6caa50d7d11b1a1b8ef1dba6c5054c94a04edaede97c53386e32823e358f81b9) and FIX_INDEX.tsv (machine-readable, with fix sha256s) map each fix to its original. The originals stay in their existing GROK-LAG-1K-* folders.\n- 47 fix files, exactly one per frame, in 18 category subfolders that use the same names as the originals (for example C41-ash-dunes/). All 47 are V_3 PASS (v002, v003 where a redo was needed, v005 for C41-21).\n- Also in the folder: _sheets/ (10), _verdicts_V3/ (10), _fix_logs/ (4), FIX_INDEX.tsv, README.md and SHA256SUMS.\n- Superseded versions are not included. Use only the delivered file (for example C37-06 v003-fix-HaL, not Z_5's v002).\n\nI checked both folders on D: at about 10:40 AM ET on 2026-10-21. Every SHA256SUMS entry matches (38 of 38 and 73 of 73), and no file is unlisted except SHA256SUMS itself.\n\n3) OPEN ITEMS (not decided; do not mark as final):\n- LIPS-PRESSED-THIN is PARTIAL and on the BENCHMARK-LIP-BITE challenge list. Keep it as a stand-in until Ziggy decides.\n- SING-VOWEL r2 (GROK-LAG-VIS-NATURAL-v001/01_VISEMES/VIS-LAG-50_SING-VOWEL_r2_Z_5.jpg, already on D:) is proposed but waiting on Ziggy's pick.\n- C41-21 brow ring is absent in the original as well, so it is logged and is not a blocker. C37-06's smaller chin A/B is accepted as is.\n- Old-style (pre-c02) worm tattoos are not failed while Ziggy decides.\n\n4) APPROVAL: Nothing is GOLD or approved without Ziggy's receipt. V_3/V_5 passes are QA passes, not approvals. Show these as GOLD-CANDIDATE pending Ziggy.\n\n5) NEXT STEP FOR YOU (same method as the Falcon supplement note):\n- Intake both folders: recompute each file's sha256 against that folder's SHA256SUMS.\n- Use each README (and FIX_INDEX.tsv) to map every fix to the original it sits beside. Record the fix as the file to use for that shape or frame.\n- Do not delete, move, rename or overwrite any original or any existing file on D:. Mark the replaced originals superseded in the catalog only.\n- Post a receipt covering both this note and the Falcon note 3159055e when you're done.\n\n-- grok_chief",
+  "attachments": [
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-VIS-NATURAL-v003-redo/README.md",
+      "description": "LAG viseme v003-redo README (fix-to-original map)",
+      "sha256": "9cf0f4afcaa822346fa33594b109421b95468437af2ae860f3f107ca7c0b9f0b"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-1K-FIXES-20261021/README.md",
+      "description": "LAG-1K fixes README (fix-to-original map)",
+      "sha256": "6caa50d7d11b1a1b8ef1dba6c5054c94a04edaede97c53386e32823e358f81b9"
+    }
+  ],
+  "source": null
+}

@@ -1,0 +1,43 @@
+{
+  "savedAtUTC": "2026-10-15T03:21:55.918375+00:00",
+  "remoteMain": "f255c597e00da92e276a2998a2ce3f03666c5fc3",
+  "status": "Unpublished work saved separately; runnable Studio restored to pre-parity state, retaining pre-existing multiverseSelection metadata support. Local visual index redesign unchanged.",
+  "files": [
+    {
+      "file": "apps\\creative_studio\\app.py",
+      "draftSHA256": "bd4a7694a802b50d3f488f52c43dd2c12131ed8d52ffe77e3bdbc2d087c82d4d",
+      "restoredSHA256": "d0a3226c2219709a3e04d5d6944bf3438c1534c33e78fc1de47aa1573cd942a5"
+    },
+    {
+      "file": "apps\\creative_studio\\library_helpers.py",
+      "draftSHA256": "8d773ffd262e0846a89e4aad866b6b1846c8a6680b3265e0e8f7503c84f241e1",
+      "restoredSHA256": "99c88a2dc588e032d598d3d29c2c8c9aefd5dbb7ea28044ea0ac9aa428a2ecb6"
+    },
+    {
+      "file": "apps\\creative_studio\\studio_dependencies.py",
+      "draftSHA256": "b58cc87e031716ca3d4a86d97b246ef96df60c103b8f71fb6d74c7b7edd24c9d",
+      "restoredSHA256": "74a17734ec9dc4475ce40e70db2502853f3c3bd8240f5b113f0ee917ad753cbd"
+    }
+  ],
+  "verification": {
+    "command": "C:/Python314/python.exe -m unittest discover -s apps/creative_studio/tests -q",
+    "result": "PASS",
+    "tests": 73,
+    "seconds": 35.844,
+    "log": "verification.log"
+  },
+  "unfinishedBuilderFiles": [
+    {
+      "path": "apps/creative_studio/build_design_library.py",
+      "bytes": 17515,
+      "sha256": "ff33e2226efe70a30b214ede1414f462496381d6dbd5b2c63a0a7a3faa516f8a"
+    },
+    {
+      "path": "apps/creative_studio/tests/test_design_bundle.py",
+      "bytes": 11542,
+      "sha256": "64c1f7aea65ed01df3c80ebc13a9ef806343a5d9756cce126980b95c7e2d19ec"
+    }
+  ],
+  "localCatalogSHA256": "16db6f5f69d6444e093acfe42bf96e81fc37079f88c30c5df42be9a9235479b9",
+  "publishedThisPass": false
+}

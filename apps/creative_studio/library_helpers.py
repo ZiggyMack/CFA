@@ -91,6 +91,22 @@ def navigation_storyboard_shot_count(data: dict, project: str) -> int:
     return len(counted)
 
 
+def navigation_storyboard_sequence_count(data: dict, project: str) -> int:
+    """Count authored navigation sequences; fall back to unique story records."""
+    counted = set()
+    for story in data.get("storyboardStructure", {}).get("stories", []):
+        if story.get("project", project) != project:
+            continue
+        story_id = story.get("storyID") or story.get("id")
+        for index, section in enumerate(story.get("sections", [])):
+            section_id = section.get("id") or section.get("sequenceID") or index
+            counted.add((story_id, section_id))
+    if counted:
+        return len(counted)
+    return len({story.get("id") for story in data.get("storyboardStories", [])
+                if story.get("project") == project and story.get("id")})
+
+
 STORYBOARD_STAGES = {"preliminary": "Preliminary", "detailed_design": "Detailed design",
                      "verification": "Verification", "production": "Production"}
 HISTORICAL_TATTOO_IDS = {

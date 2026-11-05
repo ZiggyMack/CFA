@@ -76,7 +76,7 @@ function boot() {
     localStorage:{getItem:key => storage.get(key) ?? null,setItem(key,value){storage.set(key,value);writes.push([key,value]);}},
     sessionStorage:{getItem(){return null;},setItem(){}}
   };
-  const instrumented = source.replace(/\}\)\(\);\s*$/, 'window.__collectionsTest={collectionCards,collectionGroups,sharedCharacterReferences,castExplorer,detailAlbumGroups,renderMain,expandedCollections,reviews,reviewRecord,reviewPayload,basketPayload,setState(p){Object.assign(state,p);},getState(){return state;}};})();');
+  const instrumented = source.replace(/\}\)\(\);\s*$/, 'window.__collectionsTest={normalVisible,collectionCards,collectionGroups,sharedCharacterReferences,castExplorer,castHubGroups,castWorkingGroups,parseHash,detailAlbumGroups,renderMain,expandedCollections,reviews,reviewRecord,reviewPayload,basketPayload,setState(p){Object.assign(state,p);},getState(){return state;}};})();');
   assert.notEqual(instrumented, source, 'Collection test hook attached');
   vm.runInNewContext(instrumented, context);
   return {
@@ -88,7 +88,22 @@ function boot() {
 }
 
 const page = boot(), api = page.api;
+function expectCollapsed(id) {
+  const panel='collection-'+id.replace(/[^a-z0-9_-]/gi,'-');
+  assert(page.html().includes('<div id="'+panel+'" class="collection-inline-views" hidden></div>'),'Collapsed panel is hidden and empty: '+id);
+  const toggles=page.toggles(id);assert(toggles.length,'Collapsed collection has controls: '+id);
+  for(const toggle of toggles)assert.equal(toggle.attributes['aria-expanded'],'false','Controls report collapsed: '+id);
+}
 let checks = 0;
+page.location.hash='#hon/working';api.parseHash();api.renderMain();
+expectCollapsed('hon:character-bom');
+const workingHash=page.location.hash;page.toggle('hon:character-bom');
+assert.equal(page.location.hash,workingHash,'Dolo cover expands inline without changing the route');
+assert(page.html().includes('<h3>Body art</h3>')&&page.html().includes('<h3>Bling bling</h3>')&&page.html().includes('aria-label="Verbose BOM"'),'Dolo cover handler opens its nested BOM');
+page.toggle('hon:character-bom');expectCollapsed('hon:character-bom');
+page.location.hash='#hon/all';api.parseHash();api.renderMain();
+checks++;
+
 const initialReview = clone(api.reviewPayload().items), initialStorage = Object.fromEntries(page.storage);
 const expectedCovers = {
   'hon:cast-enforcer':'HD-DROP-0d83180f0903',
@@ -117,15 +132,24 @@ checks++;
 
 for (const [id, historicalID] of [['hon:cast-ivory','LEIA-STYLE-01'],['hon:cast-enforcer','VADER-ARMOR-01'],['hon:cast-dj','CHEW-STYLE-01']]) {
   const definition = catalog.castCollections.find(g => g.id === id);
-  assert(definition.historyIDs.includes(historicalID), 'Earlier study stays inside the current character');
-  assert(!page.html().includes('data-open="' + historicalID + '"'), 'History is collapsed initially');
+  assert(definition.historyIDs.includes(historicalID), 'Earlier study retains its character membership');
+  assert(!page.html().includes('data-open="' + historicalID + '"'), 'Design history stays outside the ordinary All files gallery');
   const hash = page.location.hash;
   page.toggle(id);
-  assert.equal(page.location.hash, hash, 'Clicking cover keeps the current page/hash');
-  assert(page.html().includes('data-open="' + historicalID + '"'), 'Expanding reveals the earlier study without leaving All files');
-  assert(page.html().includes('Earlier studies'), 'History remains explicitly labeled');
+  assert.equal(page.location.hash, hash, 'Clicking the character cover keeps the current page/hash');
+  assert(!page.html().includes('data-open="' + historicalID + '"'), 'Supporting hub does not expose design setup/history as scene appearances');
+  assert(page.html().includes('#hon/working/' + encodeURIComponent(id)), 'Character hub links to its Working reference collection');
   page.toggle(id);
-  assert(!page.html().includes('data-open="' + historicalID + '"'), 'Collapse hides the nested study again');
+  page.location.hash = '#hon/working/' + encodeURIComponent(id);
+  api.parseHash();api.renderMain();
+  const working = api.castWorkingGroups(id)[0];
+  assert(!working.items.some(a => a.id === historicalID), 'Explicitly historical study is no longer in Working references');
+  page.toggle(id + '-working');
+  assert(!page.html().includes('data-open="' + historicalID + '"'), 'Working expansion does not resurface archived history');
+  page.toggle(id + '-working');
+  page.location.hash = '#hon/archive';api.parseHash();api.renderMain();
+  assert(page.html().includes('data-open="' + historicalID + '"'), 'Archive preserves the exact historical image');
+  page.location.hash = '#hon/all';api.parseHash();api.renderMain();
 }
 for (const id of ['hon:cast-existing-LEIA','hon:cast-existing-VADER-GENERAL','hon:cast-existing-CHEWBACCA']) {
   assert.equal(page.toggles(id).length, 0, 'No second character card for earlier studies: ' + id);
@@ -137,15 +161,17 @@ const chain = byID.get('HD-B-708df0bb5bff');
 assert(chain && /VIS-HD-47_CHAIN-BITE/.test(chain.filename), 'The real received chain-bite macro is retained');
 const mouth = catalog.sharedReferenceCollections.find(g => (g.assetIDs || []).includes(chain.id));
 assert(mouth, 'Chain bite belongs to a shared mouth collection');
-assert(!page.html().includes('data-open="' + chain.id + '"'), 'Individual mouth views start collapsed');
+expectCollapsed(mouth.id);
+assert(!page.html().includes('class="media-open" data-open="' + chain.id + '"'), 'Individual mouth views start collapsed');
 let hash = page.location.hash;
 page.toggle(mouth.id);
 assert.equal(page.location.hash, hash, 'Opening shared mouths is an inline action');
-assert(page.html().includes('data-open="' + chain.id + '"'), 'Chain-bite macro is visible inside the expanded mouth collection');
-for (const id of mouth.assetIDs.filter(id => byID.has(id) && !byID.get(id).archived && api.reviewRecord(id).status !== 'remove')) {
-  assert(page.html().includes('data-open="' + id + '"'), 'Every received mouth member remains reachable: ' + id);
+assert(page.html().includes('class="media-open" data-open="' + chain.id + '"'), 'Chain-bite macro is visible inside the expanded mouth collection');
+for (const id of mouth.assetIDs.filter(id => api.normalVisible(byID.get(id)))) {
+  assert(page.html().includes('class="media-open" data-open="' + id + '"'), 'Every received mouth member remains reachable: ' + id);
 }
 page.toggle(mouth.id);
+expectCollapsed(mouth.id);
 checks++;
 
 const detailMembers = new Set();
@@ -167,9 +193,15 @@ const armor = catalog.castCollections.find(g => g.id === 'hon:cast-enforcer'), c
 const oldReview = api.reviews.get(coverID);
 api.reviews.set(coverID, {...api.reviewRecord(coverID), status:'remove'});
 api.expandedCollections.add(armor.id);
-let html = renderCollection(armor);
-assert(!html.includes('data-open="' + coverID + '"'), 'Marked-for-removal member is omitted from expanded views');
-assert(!html.includes(new URL(byID.get(coverID).thumb, 'file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/visual_library/').href), 'Marked-for-removal cover falls back to an available view');
+const availableReplacementID = armor.currentIDs.find(id => id !== coverID && byID.has(id) && !byID.get(id).archived && api.reviewRecord(id).status !== 'remove');
+assert(availableReplacementID, 'A surviving current design view is available for the one-cover fallback');
+const filteredArmorHub = api.castHubGroups(armor.id)[0];
+assert(filteredArmorHub, 'Removing the representative does not remove the entire character hub');
+assert.equal(filteredArmorHub.cover.id, availableReplacementID, 'Actual cast hub uses one surviving current design cover');
+let html = api.collectionCards([filteredArmorHub]);
+assert(html.includes('data-collection="' + armor.id + '"'), 'Actual Supporting cast collection remains reachable');
+assert(!html.includes('data-open="' + coverID + '"'), 'Marked-for-removal representative is omitted from actual hub views');
+assert(!html.includes(new URL(byID.get(coverID).thumb, 'file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/visual_library/').href), 'Removed image is not used as the fallback cover');
 assert.equal(api.reviewRecord(coverID).note, oldReview.note, 'Filtering preserves review notes');
 api.reviews.set(coverID, oldReview);
 api.expandedCollections.delete(armor.id);
@@ -177,14 +209,14 @@ const archivalCandidate = page.C.assets.find(a => a.id === armor.assetIDs.find(i
 const wasArchived = archivalCandidate.archived;
 archivalCandidate.archived = true;
 api.expandedCollections.add(armor.id);
-assert(!renderCollection(armor).includes('data-open="' + archivalCandidate.id + '"'), 'Archived media does not reappear inside a collection');
+assert(!api.castWorkingGroups(armor.id)[0].items.some(a => a.id === archivalCandidate.id), 'Archived design/setup media does not reappear inside Working');
 if (wasArchived === undefined) delete archivalCandidate.archived; else archivalCandidate.archived = wasArchived;
 api.expandedCollections.delete(armor.id);
 checks++;
 
 api.setState({search:'chain bite'});api.renderMain();
-if (!page.html().includes('data-open="' + chain.id + '"')) page.toggle(mouth.id);
-assert(page.html().includes('data-open="' + chain.id + '"'), 'Search exposes the matching mouth view without changing routes');
+if (!page.html().includes('class="media-open" data-open="' + chain.id + '"')) page.toggle(mouth.id);
+assert(page.html().includes('class="media-open" data-open="' + chain.id + '"'), 'Search exposes the matching mouth view without changing routes');
 assert.equal(page.location.hash, '#hon/all');
 api.setState({search:''});api.expandedCollections.clear();api.renderMain();
 checks++;
@@ -213,8 +245,10 @@ assert(page.html().includes('Earlier alternatives · history'), 'Alternatives ar
 page.toggle(sequence.id);
 checks++;
 
-const mainPanels = catalog.assets.filter(a => a.project === 'hon' && a.category === 'storyboard' && !a.storySequenceID).sort((a,b) => a.storyboardOrder - b.storyboardOrder);
+const mainPanels = catalog.assets.filter(a => a.project === 'hon' && a.category === 'storyboard' && Number.isInteger(a.storyboardOrder) && a.storyboardOrder > 0 && !a.storySequenceID).sort((a,b) => a.storyboardOrder - b.storyboardOrder);
 assert.equal(mainPanels.length, 36, 'Original storyboard retains 36 source panels');
+assert.equal(catalog.storyboardMetadata.hon.panelCount, 36, 'Hon source panel metadata excludes untimed provider drafts');
+assert.equal(catalog.storyboardMetadata.lisan.panelCount, 50, 'Lisan source panel metadata retains its original 50-panel series');
 mainPanels.forEach((a,i) => {
   assert.equal(a.storyboardOrder, i + 1, 'Original panel order is not interleaved with the separate scene');
   assert.equal(a.storyboardPosition, Number((i / 35 * 100).toFixed(4)), 'Original range percentages remain unchanged');
@@ -222,19 +256,28 @@ mainPanels.forEach((a,i) => {
 for (const id of sequence.assetIDs) assert.equal(byID.get(id).storyboardPosition, undefined, 'New scene references receive no implied song/source-range position');
 api.setState({view:'storyboard',storyStart:50,storyEnd:60,storyStage:'all',storyLayout:'panels'});api.renderMain();
 assert(page.html().includes('4 matching panels'), 'The existing 50–60% slice still contains the same four source panels');
-assert(page.toggles(sequence.id).length >= 1, 'Untimed scene remains separately reachable while browsing a source range');
+const sequenceStory=catalog.storyboardStories.find(s=>s.sequenceID===sequence.id);assert(sequenceStory,'Independent scene has a selectable story');
+assert(page.html().includes('data-story-card="'+sequenceStory.id+'"'),'Untimed scene remains reachable from a landing card while browsing a song range');
+assert(page.html().includes('#'+[sequenceStory.project,'storyboard','story:'+sequenceStory.id].map(encodeURIComponent).join('/')),'Story card carries its shareable destination');
 api.setState({storyLayout:'progress'});api.renderMain();
-assert(page.html().includes('shot-work-' + sequence.id), 'Received scene retains a placement-pending progress card');
-api.setState({view:'all',storyStart:0,storyEnd:100,storyLayout:'panels'});api.expandedCollections.clear();api.renderMain();
+assert(!page.html().includes('id="shot-work-'+sequence.id+'"'),'Independent scene progress does not mix into song progress');
+api.setState({album:'story:'+sequenceStory.id,storyLayout:'panels'});api.renderMain();
+assert(page.toggles(sequence.id).length>=1,'Selected independent story retains its source and history collection');
+assert(page.html().includes('id="shot-work-'+sequence.id+'"'),'Existing placement-pending progress card remains under its selected story');
+assert(page.html().includes('data-scene-id="'+sequence.id+'"'),'Existing scene readiness controls remain reachable under that story');
+assert(!page.html().includes('id="story-start"'),'Song range does not filter independent scene');
+api.setState({view:'all',album:'',storyStart:0,storyEnd:100,storyLayout:'panels'});api.expandedCollections.clear();api.renderMain();
 checks++;
 
 api.setState({project:'lisan',view:'all',search:'',album:null});api.expandedCollections.clear();api.renderMain();
 for (const group of catalog.sharedReferenceCollections.filter(g => g.project === 'lisan')) {
   assert(page.toggles(group.id).length >= 1, 'Lisan reference collection expands inline: ' + group.id);
-  for (const id of group.assetIDs) assert(!page.html().includes('data-open="' + id + '"'), 'Lisan views start collapsed without duplicate flat cards');
+  expectCollapsed(group.id);
+  for (const id of group.assetIDs) assert(!page.html().includes('class="media-open" data-open="' + id + '"'), 'Lisan views start collapsed without duplicate flat cards');
   page.toggle(group.id);
-  for (const id of group.assetIDs) assert(page.html().includes('data-open="' + id + '"'), 'Each received Lisan view is reachable inline: ' + id);
+  for (const id of group.assetIDs) assert(page.html().includes('class="media-open" data-open="' + id + '"'), 'Each received Lisan view is reachable inline: ' + id);
   page.toggle(group.id);
+  expectCollapsed(group.id);
 }
 api.setState({project:'hon',view:'all'});api.expandedCollections.clear();api.renderMain();
 checks++;

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "createdAtUTC": "2026-10-14T14:03:38.948926Z",
+  "status": "complete_five_root_cloud_comparison_not_performed_capability_and_access_limits",
+  "scope": "Existing read-only tools/API/UI only; no installation, credentials, permission expansion, sync repair or new upload.",
+  "capabilityChecks": {
+    "exposedGoogleDriveFilesListConnector": false,
+    "pluginDiscovery": "Google Drive is in recommended uninstalled plugins, but no callable search_plugins/suggest_plugins/tool_search is exposed in current tool metadata. No installation/connection/permission action taken.",
+    "existingCLI": "Delegate found rclone,gdrive,drive,gcloud,gsutil absent from PATH and checked standard configuration locations; no credential contents read. Installation elsewhere not excluded.",
+    "browser": {
+      "surface": "Isolated signed-in Codex in-app browser",
+      "computerFolderURL": "https://drive.google.com/drive/u/1/folders/1nYKL-Rq3BGPWs7pAmGMcFPqS94d3SgRY",
+      "advertisedTabCapabilities": [
+        "pageAssets",
+        "webmcp"
+      ],
+      "pageAssetsScope": "Assets already observed on the current page; no recursive Drive listing advertised.",
+      "webmcpTools": "No WebMCP tools are available in this document.",
+      "folderDetails": "Initial CFA folder details failed to load; one visible Try again succeeded. Pane exposes folder Type/Created/Modified/Description, no recursive file count/size/version manifest or inventory export control observed.",
+      "ordinaryUI": "Folder listing and individually selected downloads are available. A recursive exact path/size/content-version comparison was not produced; rounded row sizes and folder dates do not establish it.",
+      "bulkDownload": "Folder Download control is present. A full independent restore-download is an alternative byte-comparison input, not an API inventory. It was not started; current tool download calls expose no destination parameter and returned prior samples inside the current synced CFA root. No browser download settings were changed."
+    },
+    "desktop": {
+      "enabledAppSurfaces": [],
+      "nativeAutomation": "Disabled by this task tool configuration; no supported Drive tray/error-view surface available. DriveFS diagnostics do not substitute for per-root current status.",
+      "mountedDrive": "Earlier G:/Other computers access was denied; not retried/escalated/bypassed."
+    }
+  },
+  "documentedAPIRequirements": {
+    "reference": "https://developers.google.com/workspace/drive/api/reference/rest/v3/files/list",
+    "needed": "An already-authorized client able to list all descendants of the five current root IDs, retain parent/name/size/modifiedTime/version/checksum fields where available, exhaust nextPageToken and reject incompleteSearch; then compare a dated local inventory. No such authenticated client is exposed here.",
+    "authorizationAction": "None performed; browser login was not reused by extracting tokens/cookies or issuing hidden authenticated API calls."
+  },
+  "smallestInputsToFinish": {
+    "currentStatus": "User opens Google Drive for desktop tray status/activity/error view for the account containing My Computer(1), and provides its current pending/error details. Reading that view does not require changing settings. This gives status only, not a checksum audit.",
+    "completeComparison": "Provide a complete cloud metadata manifest from an existing authorized inventory tool, or independently download the five current folders through Drive Web into a separate D: restore directory outside all five source/synced roots and provide resulting ZIP paths. The helper can then compare all paths/sizes/content hashes read-only; no installation or permission expansion is needed for that input.",
+    "transferQualification": "Previous local inventory111712file paths/25137082660logicalbytes is dated and includes hardlinks; actual cloud download/archive size and completion must be measured. No full restore copy/new backup was created during this check.",
+    "currentFiveRoots": [
+      "D:/Documents/CFA",
+      "D:/Documents/Nyquist_Consciousness",
+      "D:/Documents/Pan_Handlers",
+      "D:/Documents/VUDU_Fidelity",
+      "D:/Documents/WHO_CARES"
+    ]
+  },
+  "currentEvidence": "FOLLOWUP_9e725688-68b0-42d0-87cf-ad3e555ace5d.json proves selected2CFAfiles4515659bytes only; complete per-root coverage and2hourRPO remain unverified.",
+  "newDogPreflightUpdate": {
+    "source": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/bellglass_context_video_preflight_20261014_9655a5f6-9915-448c-9352-8eea050996fa/PREFLIGHT.json",
+    "verifiedBytes": 6728,
+    "verifiedSHA256": "e5ee4494a49f0dffe280ed25c69d8921fdb999a023b49d84c6fb746f490d1161",
+    "attribution": "CFA native author update; exact saved evidence independently rehashed by helper.",
+    "summary": "CFA resumed after Codex capacity failure. ONE clean Bellglass notebook/world text source prepared; dog/collar/barking confined to context, immediate world-cue prompt staged. No video submitted; actual video variant/duration/output bound/quote/allowance remain unexposed. No further helper steering."
+  },
+  "actions": {
+    "cloudFileSamplesRepeated": false,
+    "fullCloudInventoryCreated": false,
+    "fullCloudCopyCreated": false,
+    "nativeStatusRead": false,
+    "syncRepair": false,
+    "uploads": false,
+    "settingsChange": false,
+    "installsOrNewCredentials": false,
+    "permissionsExpanded": false,
+    "secretsReadOrExposed": false,
+    "CFARepeatedSteering": false
+  }
+}

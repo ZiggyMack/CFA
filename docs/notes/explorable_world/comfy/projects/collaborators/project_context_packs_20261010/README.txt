@@ -1,3 +1,18 @@
+METHOD WRAPPER UPDATE - OCTOBER 12, 2026
+Release 20261010-ed9a95bad4c6 remains immutable and unchanged. Its existing
+UPLOAD_MAP and uploaded project copies do not contain the new method.
+For that existing release, separately supply PRODUCTION_METHOD_20261012.txt
+and CURRENT_TASK_SUPPLEMENT.txt through a recorded supported handoff;
+then ask for actual readback. A path or mailbox notice is not delivery.
+
+Future-source update: source/01_CFA_PROJECT_CONTEXT.txt now appends the
+complete exact method text; source/02_CURRENT_WORK_AND_REVIEW.txt records
+the current scoped milestone; source/shared_inputs.json captures the
+method locator for hashing. Rebuild only a NEW content-addressed release
+with the existing builder, then verify it. The Phase 0 nine-file order and
+withheld baseline/answer/peer boundaries stay intact. No new release was
+built, uploaded, applied or read by this wrapper/source edit.
+
 CFA COLLABORATOR PROJECT CONTEXT PACKS
 
 Start with UPLOAD_MAP.txt for the latest immutable release and exact per-recipient files. Each folder is standalone. ZIPs are transport containers to extract, not assumed project inputs. No uploads or provider tasks are performed by packaging.

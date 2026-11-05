@@ -1,0 +1,33 @@
+META MIRROR SOURCE-LINE SUMMARY - mm_1
+Independent secondary cut; Prime designation unchanged
+
+This is an exact text map, not a listening pass or accepted alignment.
+Audio: docs/notes/explorable_world/comfy/projects/lisan_al_gaib/MM_1.mp3
+Audio SHA-256: 6c563b7938e066bd5b55ff7c7f736f7a7c0d52950ce48efc8b7098a07f95fade
+Audio bytes: 6650704
+Independent decoded duration: 271.760 seconds
+Lyrics: docs/notes/explorable_world/comfy/projects/lisan_al_gaib/MM_1.txt
+Lyric SHA-256: ce57412c88e3aa44f4d55b811cee4140e33035a2694b9da7587a03f775188c8f
+Lyric bytes: 4398
+Physical source lines: 148; excluding terminal blank lines: 148
+Literal section headers: 8; nonblank lyric lines: 103
+
+SECTION HEADERS (one-based physical source lines; exact labels)
+S01 | line 1 | [Chorus] | source span 1-23 | 19 lyric lines
+S02 | line 24 | [Verse 1] | source span 24-38 | 9 lyric lines
+S03 | line 39 | [BRIDGE] | source span 39-46 | 4 lyric lines
+S04 | line 47 | [ VERSE 2] | source span 47-61 | 11 lyric lines
+S05 | line 62 | [BRIDGE] | source span 62-72 | 7 lyric lines
+S06 | line 73 | [Refrain] | source span 73-80 | 6 lyric lines
+S07 | line 81 | [Verse 3] | source span 81-119 | 27 lyric lines
+S08 | line 120 | [Final Refrain] | source span 120-148 | 20 lyric lines
+
+STRUCTURE LIMITS
+The exact [ VERSE 2] header contains a leading space inside the brackets; preserve it unchanged.
+Repeated [BRIDGE] headings have distinct section IDs. Their wording is not renumbered.
+Final Refrain includes later callback/coda-like lines without a new source header. The line map retains that source span; an audible coda boundary is unresolved.
+The initial Lisan / Buried deep / Cooking passage has no [BRIDGE] heading. It is retained within the literal [Chorus] span until [Verse 1]. No new section or audio boundary is inferred.
+
+The supplied MM_1 text matches the older MM_0 draft after only line-ending and trailing-space/tab normalization. This is text correspondence, not audio equivalence.
+
+All section/line timestamps and vocal lanes remain null. No timing transfer, offset or duration scaling between the two tracks is permitted. Prime remains the first selected track.

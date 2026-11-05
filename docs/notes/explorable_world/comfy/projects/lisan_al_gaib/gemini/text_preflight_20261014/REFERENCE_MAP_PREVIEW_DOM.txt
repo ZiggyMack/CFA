@@ -1,0 +1,355 @@
+- main:
+  - link:
+    - /url: /
+    - generic: Gemini
+  - text: side_nav_expand
+  - text: play_arrow
+  - button:
+    - img: more_vert
+  - navigation:
+    - button:
+      - generic: search
+    - button [expanded]:
+      - img: side_nav
+    - navigation:
+      - link:
+        - /url: /app
+        - img: gemini_chat
+        - generic: New chat
+    - navigation:
+      - link:
+        - /url: library
+        - img: features
+        - generic: Library
+      - link:
+        - /url: /images
+        - img: image_create
+        - generic: Images
+      - link:
+        - /url: /scheduled
+        - img: schedule
+        - generic: Scheduled
+      - link:
+        - /url: daily-brief
+        - img: today
+        - generic: Daily brief
+      - button:
+        - img: more_horiz
+        - generic: More
+    - button [expanded]:
+      - generic: Notebooks
+      - img: keyboard_arrow_down
+    - navigation:
+      - link:
+        - /url: /notebooks/create
+        - img: add_2
+        - generic: New notebook
+      - link:
+        - /url: /notebook/114707d8-29b3-4505-bc06-dd7abcc60e4d
+        - img: notebook
+        - generic: Notebook 2 — Lisan Al Gaib · Meta Mirror
+      - link:
+        - /url: /notebook/167cfa37-ddca-4f34-a408-2d67d4e65ee3
+        - img: notebook
+        - generic: Nagual
+      - link:
+        - /url: /notebook/586b3ee6-5c57-45b3-a59d-a2e21c18a852
+        - img: notebook
+        - generic: Notebook 1 — Hon Dolo · Strictly Business
+      - link:
+        - /url: /notebooks/view
+        - img: more_horiz
+        - generic: All notebooks
+    - button [expanded]:
+      - generic: All
+      - img: keyboard_arrow_down
+    - button:
+      - img: filter_alt
+    - navigation:
+      - link:
+        - /url: /app/181be15451cf86c9
+        - generic: Logo Design for Practice
+      - link:
+        - /url: /app/9418077211b5a1b5
+        - generic: Logo Design for Mental Health Practice
+      - link:
+        - /url: /app/d18231a69189b008
+        - generic: Hikers Celebrating at Mountain Summit
+      - link:
+        - /url: /app/135a6244a57830a3
+        - generic: Download Capabilities and Browser Limitations
+      - link:
+        - /url: /app/551397eaf18c5fc0
+        - generic: Missing Video Project Status
+      - link:
+        - /url: /app/540a9a4dcdad3bbc
+        - generic: Gemini Spark Setup
+      - link:
+        - /url: /app/df9d85239adcc725
+        - generic: Suno Prompt for Muffled Lo-Fi
+      - link:
+        - /url: /app/bb31979e1bcff491
+        - generic: Trap Beat Musical Analysis
+      - link:
+        - /url: /app/e0f702608e9caa96
+        - generic: "AI Math Proof: SME Role & Stone Soup"
+      - link:
+        - /url: /app/848a87d61fe04677
+        - generic: "Benefit of Doubt: Grace or Denial?"
+      - link:
+        - /url: /app/8dc9ee45ecaa16a1
+        - generic: Designing Classical Theism Profile Image
+      - link:
+        - /url: /app/881d778b45decdf6
+        - generic: Designing Classical Theism Visual Identity
+      - link:
+        - /url: /app/80cbc3294278230d
+        - generic: Transforming Project into State Float
+      - link:
+        - /url: /app/6aff13a830900d1e
+        - generic: Maryland State Float Project Guide
+      - link:
+        - /url: /app/9c234bcd8ba2800d
+        - generic: "Create the following image: An eerie metaphysical landscape inspired by Carlos Castaneda’s inorganic beings from The Art of Dreaming. Vast dark void filled with glowing filament-like entities made of blue-white and amber energy. The beings are elongated, semi-transparent, intelligent luminous fibers rather than humanoid aliens. Their forms resemble shifting vertical ribbons, crystalline tendrils, and living currents of awareness. Some appear as towering columns of light with hidden faces emerging from within. Others resemble geometric cocoons woven from luminous threads. The environment feels outside normal reality — silent, ancient, dreamlike, cosmic, and unsettling. Atmosphere of forbidden knowledge and predatory intelligence. Surreal, hyper-detailed, cinematic lighting, mystical energy fog, non-Euclidean depth, dream-realm aesthetic."
+      - link:
+        - /url: /app/4016ebb2b5bcbad2
+        - generic: Front Door Color Options for Home
+      - link:
+        - /url: /app/35bc77338fde33cc
+        - generic: Dress Accessory Suggestions
+      - link:
+        - /url: /app/d58cf9357b3d7621
+        - generic: Warm Earthy Vibe Update
+      - link:
+        - /url: /app/efbdcc8e966bd632
+        - generic: Change the cabinets to a lighter shade
+      - link:
+        - /url: /app/2854dfeaa3cec48a
+        - generic: Continuous Cinematic Video Generation
+      - link:
+        - /url: /app/56faa4c2ad36b013
+        - generic: "Video Generation: Parents' Date"
+      - link:
+        - /url: /app/c8684a0b2d2d8b2b
+        - generic: Dreams as Religions Video Creation
+    - link:
+      - /url: https://accounts.google.com/SignOutOptions?continue=https://gemini.google.com
+      - generic: Ziggy Mack
+      - generic: Ultra
+    - button:
+      - img: settings
+  - heading [level=1]: Conversation with Gemini
+  - button:
+    - generic: TXT
+    - generic: first_video_prompt
+  - button:
+    - generic: TXT
+    - generic: reference_map
+  - heading [level=5]: You said GEMINI PROJECT INSTRUCTIONS — LISAN AL GAIB / META MIRROR Paste the instructions below into a dedic…
+  - paragraph: GEMINI PROJECT INSTRUCTIONS — LISAN AL GAIB / META MIRROR
+  - paragraph
+  - paragraph: Paste the instructions below into a dedicated Lisan Gem or the start of its chat. If saving them in account-wide instructions, keep the project scope in the first sentence. Attach the actual files named in reference_map.txt; PC paths and this text do not give Gemini access to them.
+  - paragraph
+  - list:
+    - listitem: CREATIVE DIRECTION
+  - paragraph: When we work on Lisan Al Gaib / Meta Mirror, act as my director, cinematographer and creative collaborator. Lisan is my alter ego, a desert-prophet trap performer. Build from the supplied Lisan avatar; do not substitute Hon Dolo or infer my real facial appearance without photographs I provide for that purpose. Bring swagger, intelligence, humor, physical presence and moments of vulnerability to a cinematic, lifelike world. Use mirrors, desert light, signals, shadows, ritual and performance as recurring visual ideas. The supplied storyboard moves from reflection and finding a voice through creation and community into archetypes, shadow work and the signal in the noise. Treat that as a creative starting point; my latest direction governs its meaning. Suggest bold visual ideas that serve the song, while keeping each individual shot readable.
+  - paragraph
+  - paragraph: 2. CURRENT CHARACTER
+  - paragraph: "LAG-LOCK-FACE-NATURAL.jpg controls the avatar's face and current facial details: messy dark curls, light stubble, electric-blue eyes and normal natural white teeth. One small AL sits between the eyebrows; small G-A-I-B runs vertically down the center of the chin. Two mirrored sandworms rise on the neck with their mouths facing toward each other under the jaw; a small rayed sun disc with an eye sits at the throat. Match the portrait's artwork rather than inventing a new tattoo on every shot. One small silver nostril hoop, one eyebrow ring and one ear hoop belong on the character's left side, image-right in the front-facing reference. Keep the other side bare. No grillz, fangs, lip rings, ear stacks, extra face/chest/hand ink, brow slit, eye/know lettering, gun tattoo or anatomical third eye. Preserve skin texture, facial proportions and eye detail through motion."
+  - paragraph
+  - paragraph: 3. REFERENCES EACH HAVE A JOB
+  - paragraph: "Use reference_map.txt to identify actual attachments by exact filename and stable reference ID. LAG-LOOK-V3-01.jpg supplies the signature tan stillsuit, black hooded cloak and gold Cuban chain; its pose and backdrop are not mandatory. LAG-LOCK-ARM-SH13.jpg supplies ONLY the striped coiled sandworm artwork on his left arm. That arm image contains retired grillz and extra piercings: do not copy its face, mouth, jewelry or neck details. Add it only for shots that expose that arm. Let sleeves and collars cover tattoos naturally. A thin black stillsuit nose-breather is an occasional accessory for appropriate desert shots, not a permanent facial feature."
+  - paragraph
+  - paragraph: LAG-SC-01 through LAG-SC-50 are scene and costume ideas, not fifty competing identity masters. Some contain duplicated lettering, misplaced piercings or extra ink. Follow the current portrait and reference map when a scene disagrees. History images are for discussing ideas only unless I explicitly revive a detail. Hon Dolo's references, cast, song and design rules remain in his separate project.
+  - paragraph
+  - paragraph: 4. MAKE EDITABLE VIDEO
+  - paragraph: "Default to landscape 16:9, one continuous shot, one main action and one purposeful camera move. Give the performer intention: he notices something, chooses, reacts, commands attention or settles into a thought. Use subtle breathing, eye movements, believable hands and prop contact, cloth motion and environmental movement to make a still feel alive. Keep short usable holds at the beginning and end when duration permits. Preserve direction of movement and eyelines across related takes. Mirrors should behave coherently unless a specific supernatural reflection effect is requested. Do not add cuts, costume changes, extra people or a collage of actions to a single-shot request."
+  - paragraph
+  - paragraph: "When animating an attached still, inspect it first. If it visibly conflicts with the current design, identify the specific conflict and prepare a corrected starting frame before animation, or label the result as a motion study. Do not promise that a prompt alone will fix an incorrect starting frame while preserving it exactly. Use the supported attachment controls: an initial frame controls composition; extra identity/detail references have separate roles where the available video tool supports them. If only one image is supported, use one consolidated, reviewed starting frame instead of claiming the tool consumed multiple references."
+  - paragraph
+  - paragraph: 5. SONG AND SPEECH
+  - paragraph: Use the actual Meta Mirror recording and my lyric master when supplied. The current storyboard has lyric snippets and placeholder 4.5-second holds; these are not verified music timings. Never use Hon Dolo's Strictly Business recording as Lisan's song. For now, make visual footage with no invented lyrics, narration or singing unless I request them. Generated sound is optional temporary ambience, separate from the final song. Exact sung/spoken words require the specified recording and timing where supported; soundtrack replacement and visible lip-sync are separate tasks. Preserve my wording when I request an exact line. Do not claim synchronized performance without checking it.
+  - paragraph
+  - paragraph: 6. WORKING TOGETHER
+  - paragraph: When I ask for a take and the brief is clear, generate it using the available tool. In exploration, offer a few distinct directions; once we select a baseline, change the requested element and preserve the rest. A favorite location or tattoo detail does not approve an entire character design. Use names such as LAG-SC-28_T01 for takes if naming is available; otherwise report the actual download filename and its intended scene ID. Keep source and output separate. With each result, briefly give the scene/purpose, references actually used, effective prompt, any known limitations and visible defects. Report only controls and settings you can verify. Do not invent file access, background progress, seeds or successful exports. Ask one focused question only when a missing detail blocks the requested result. Final favorites and approvals belong to me.
+  - paragraph
+  - paragraph: SETUP NOTE
+  - paragraph: This brief follows the latest natural-teeth direction in the supplied Grok handoff. Its older LOCK-V2 text and arm reference still contain superseded features. Current source-designated references are working anchors; this kit does not claim I independently approved every frame or changed Gemini settings. Latest direct user corrections take precedence.
+  - button:
+    - img: expand_more
+  - button:
+    - img: copy
+  - button:
+    - img: edit
+  - heading [level=6]: Gemini said
+  - paragraph: Your video is ready!
+  - button:
+    - img: download
+  - button:
+    - img: share_1
+  - button:
+    - img: volume_up
+  - button:
+    - img: play_arrow
+  - generic: 0:00 / 0:10
+  - slider: "0"
+  - button:
+    - img: thumb_up
+  - button:
+    - img: thumb_down
+  - button:
+    - img: share_1
+  - button:
+    - img: more_horiz
+  - button:
+    - generic: 01_Flagship_References
+  - heading [level=5]: You said should of given you these first
+  - paragraph: should of given you these first
+  - button:
+    - img: copy
+  - button:
+    - img: edit
+  - heading [level=6]: Gemini said
+  - paragraph: I can only generate videos. Try another prompt.
+  - button:
+    - img: thumb_up
+  - button:
+    - img: thumb_down
+  - button:
+    - img: copy
+  - button:
+    - img: more_horiz
+  - button:
+  - button:
+  - button:
+  - heading [level=5]: You said regenerate the video using this as the character actor..
+  - paragraph: regenerate the video using this as the character actor..
+  - button:
+    - img: copy
+  - button:
+    - img: edit
+  - heading [level=6]: Gemini said
+  - paragraph: Your video is ready!
+  - button:
+    - img: subtitles
+  - button:
+    - img: download
+  - button:
+    - img: share_1
+  - button:
+    - img: volume_up
+  - button:
+    - img: play_arrow
+  - generic: 0:00 / 0:10
+  - slider: "0"
+  - button:
+    - img: thumb_up
+  - button:
+    - img: thumb_down
+  - button:
+    - img: share_1
+  - button:
+    - img: more_horiz
+  - button:
+  - heading [level=5]: You said Use the supplied image as the exact first frame. One uninterrupted 8-second landscape shot with a lo…
+  - paragraph: "Use the supplied image as the exact first frame. One uninterrupted 8-second landscape shot with a locked eye-height camera, no zoom or push. The open sandworm maw at screen-right rises vertically approximately one apparent maw-height through the existing haze; sand spills from its rim and fine dust drifts screen-left. Keep one worm with the same maw design and teeth, no lunge or lateral movement. The man stays in the same position and takes one slow breath: his chest rises and settles once, mouth closed, gaze toward the camera as in the starting frame, one blink at most. No head turn, step or hand gesture. Preserve his face geometry, dark curls, blue eyes, small AL between the brows, vertical G-A-I-B on the chin, paired segmented neck worms and the throat eye-disc. Preserve the dark shirt, cloak, single chain and existing ear hoops on the same ear; do not repair, add or change tattoos, piercings or clothing. Keep the warm diffuse haze, soft near-frontal face illumination and dark maw interior; dust catches only the existing haze light. No new emitter, visible sun, flicker or color wash. No cuts, camera movement, new characters, objects, text or watermarks. Silent output: no speech, singing, music, narration or sound effects."
+  - button:
+    - img: expand_more
+  - button:
+    - img: copy
+  - button:
+    - img: edit
+  - heading [level=6]: Gemini said
+  - paragraph: I seem to be encountering an error. Can I try something else for you?
+  - button:
+    - img: download
+  - button:
+    - img: share_1
+  - button:
+    - img: volume_up
+  - button:
+    - img: play_arrow
+  - generic: 0:08 / 0:08
+  - slider: "1"
+  - button:
+    - img: thumb_up
+  - button:
+    - img: thumb_down
+  - button:
+    - img: share_1
+  - button:
+    - img: more_horiz
+  - button:
+  - heading [level=5]: You said now add on to this scene...and have the character turn around and walk though one of these doors..
+  - paragraph: now add on to this scene...and have the character turn around and walk though one of these doors..
+  - button:
+    - img: copy
+  - button:
+    - img: edit
+  - heading [level=6]: Gemini said
+  - paragraph: Your video is ready!
+  - button:
+    - img: download
+  - button:
+    - img: share_1
+  - button:
+    - img: volume_up
+  - button:
+    - img: play_arrow
+  - generic: 0:00 / 0:16
+  - slider: "0"
+  - button:
+    - img: thumb_up
+  - button:
+    - img: thumb_down
+  - button:
+    - img: refresh
+  - button:
+    - img: share_1
+  - button:
+    - img: more_horiz
+  - button:
+    - img: arrow_downward
+  - textbox:
+    - text: Describe your video
+    - paragraph
+  - button:
+    - img: plus
+  - button:
+    - img: movie
+    - generic: Videos
+    - text: close
+  - button:
+    - generic: Flash-Lite
+    - img: keyboard_arrow_down
+  - button:
+    - img: mic
+  - button:
+    - img: add_image
+  - button:
+    - img: aspect_ratio
+    - generic: Aspect ratio
+    - img: keyboard_arrow_down
+  - button:
+    - generic: Format
+    - img: keyboard_arrow_down
+  - paragraph: Gemini is AI and can make mistakes.
+  - dialog:
+    - button
+    - button [disabled]
+    - button
+    - button [disabled]
+    - button
+    - main:
+      - document
+    - main:
+      - document:
+        - generic: "LISAN AL GAIB / META MIRROR — GEMINI ATTACHMENT MAP Prepared from actual files received October 7, 2026. Source guide is labelled October 8; that label is retained as reported, not independently verified chronology. UPLOAD RECIPE Attach gemini_instructions.txt and this map. Start with the current face and the selected scene/wardrobe image. Add the arm image only if its detail is needed and the tool supports role-separated references. If limited to one image, use a reviewed starting frame and report which file was actually used. Use filenames + reference IDs. Example LAG-BATCH-001/P01 is only a label you bind to a real upload; no picture numbers are assigned here. CURRENT WORKING REFERENCES LAG-FACE-01 = LAG-LOCK-FACE-NATURAL.jpg USE: Primary current avatar face, teeth, face/neck tattoos and piercings LIMIT: Use for identity. Generated avatar reference; does not independently establish a photographic likeness of Ziggy. STATUS: current per supplied Grok handoff; no new user acceptance inferred REVIEW COPY: docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOCK-FACE-NATURAL.jpg SHA256: 602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f LAG-ARM-01 = LAG-LOCK-ARM-SH13.jpg USE: Striped coiled sandworm artwork on character left arm only LIMIT: Do not copy face, grillz, lip rings, extra nostril hoops, ear plugs, neck artwork, outfit or glow intensity. Never use as identity or initial video frame. Include only if that arm is exposed. STATUS: current per supplied Grok handoff; no new user acceptance inferred REVIEW COPY: docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOCK-ARM-SH13.jpg SHA256: 5c47f12190e9ba68f87f7c3f8d66f571400f8058baf9ff54ecfe406adf037567 LAG-OUTFIT-01 = LAG-LOOK-V3-01.jpg USE: Tan stillsuit, black hooded cloak and gold Cuban chain LIMIT: Wardrobe/composition only; face-natural controls disputed face/neck details. Neck sun and worm geometry differ subtly. A one-image motion study uses this actual frame, not a verified composite of multiple refs. STATUS: current per supplied Grok handoff; no new user acceptance inferred REVIEW COPY: docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOOK-V3-01.jpg SHA256: 63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026 CURRENT SCENE REFERENCES All numbered scenes below refer to 02_Storyboard_Scenes/ in this project, copied from LAG-50-SCENES-FINAL. The older scenes with identical filenames under 03_Inspiration_History are superseded. Use these for scene, clothing and framing; the portrait governs identity. All 4.5-second holds in the source CSV are placeholders. No Meta Mirror master recording or complete lyric master was found in the two Lisan packs. LAG-SC-01.jpg — signature gold stillsuit + black cloak, speaking into antique mirror showing a desert sun Motion idea: slow push-in on the mirror, sun flares Grok QA (reported): AL doubled (brow+cheek) LAG-SC-02.jpg — Cracked glowing mirror reflection, cream silk shirt buttoned Motion idea: rack focus from crack to face Grok QA (reported): good LAG-SC-03.jpg — rooftop night, black leather trench, orange haze city Motion idea: slow orbit on rooftop, haze drift Grok QA (reported): AL drifted to cheek, GAIB faint LAG-SC-04.jpg — smoky kitchen-studio, custom chef whites + gold chain, glowing cast-iron pan Motion idea: handheld, steam and pan glow Grok QA (reported): good LAG-SC-05.jpg — tan velour tracksuit slouched on a dune at sunset Motion idea: locked wide, slow sunset fade Grok QA (reported): brow ring flipped to viewer left LAG-SC-06.jpg — cliff edge, sand scarf robe flapping Motion idea: low angle, scarf whipping, slight shake Grok QA (reported): brow ring flipped to viewer left LAG-SC-07.jpg — infinite mirror tunnel, mirror-shard jacket Motion idea: dolly forward down the mirror tunnel Grok QA (reported): AL on cheek, brow ring flipped LAG-SC-08.jpg — gothic hall, tall gilded mirror, burgundy velvet suit Motion idea: slow push toward the gilded mirror Grok QA (reported): good LAG-SC-09.jpg — salt flat, white prophet robe, sun disc Motion idea: wide static, robe moving, sun pulse Grok QA (reported): ear hoops both sides LAG-SC-10.jpg — rising from dunes, stillsuit, sand bursting Motion idea: low angle, sand bursting up, slow-mo Grok QA (reported): stray face marks LAG-SC-11.jpg — desert camp kitchen, apron over stillsuit, sparks Motion idea: handheld, sparks, quick cuts Grok QA (reported): stray face marks, GAIB slid to throat (weakest) LAG-SC-12.jpg — white sci-fi medical bay, white lab coat over black turtleneck Motion idea: clean dolly, cool light flicker Grok QA (reported): good, brow ring barely visible LAG-SC-13.jpg — navy pinstripe 3-piece, law library, briefcase Motion idea: slow lateral track past shelves Grok QA (reported): good, small mark on sternum LAG-SC-14.jpg — with a muscular dog in a gold chain, alley, varsity jacket Motion idea: tracking walk with the dog Grok QA (reported): ear hoops both sides LAG-SC-15.jpg — backstage bulb vanity mirror, black satin bomber Motion idea: mirror reflection push-in, bulbs flicker Grok QA (reported): good, extra ear studs in reflection LAG-SC-16.jpg — holding glowing gold ring to camera, black turtleneck Motion idea: macro push on the ring, glow pulse Grok QA (reported): ear stack too busy LAG-SC-17.jpg — galaxy vs cell projections, silver metallic puffer Motion idea: slow orbit, projections drifting Grok QA (reported): ear stack + brow ring flipped LAG-SC-18.jpg — desert officer jacket black/gold, saluting Motion idea: locked medium, salute snaps in Grok QA (reported): good, nose hoop missing LAG-SC-19.jpg — walking through flames, desert armor Motion idea: slow-mo walk toward camera through flames Grok QA (reported): GAIB duplicated on chest, stray marks LAG-SC-20.jpg — red heat-lamp close-up, sweat, high-collar sleeveless stillsuit vest Motion idea: tight close-up, sweat drip, heat shimmer Grok QA (reported): strong, arm worm shown; rings in both brows LAG-SC-21.jpg — kneeling in candlelit desert temple, brown hooded cloak Motion idea: slow crane down, candles flicker Grok QA (reported): good, brow ring flipped LAG-SC-22.jpg — white suit, wing-shaped shadow on wall Motion idea: slow push, wing shadow spreads Grok QA (reported): extra chest ink LAG-SC-23.jpg — ledge between mirrors over a void, black cloak Motion idea: top-down vertigo, void below Grok QA (reported): good LAG-SC-24.jpg — studio console, oversized graphic hoodie Motion idea: console lights, slow slide along desk Grok QA (reported): extra hand tattoos LAG-SC-25.jpg — wall of glowing code & chat bubbles, black techwear Motion idea: code scrolling, slow push-in Grok QA (reported): strong; brow ring each side LAG-SC-26.jpg — festival stage, backlit crowd silhouettes, sequined jacket Motion idea: crane over crowd, strobes Grok QA (reported): two brow rings LAG-SC-27.jpg — holographic Lisan Al-Gaib card, sand robe + pouch belt Motion idea: card spins and glows, hold on face Grok QA (reported): brow ring flipped, stray cheek mark LAG-SC-28.jpg — mystic tent, embroidered kaftan Motion idea: slow pan through tent, incense smoke Grok QA (reported): strong Nova: extra opposite-side brow ring visible on full-image inspection despite reported strong rating. LAG-SC-29.jpg — row of faceless robed mannequins, him in red Motion idea: track along mannequins, end on him Grok QA (reported): extra chest ink LAG-SC-30.jpg — shouting in canyon, desert cargo gear Motion idea: head throws back, echo ripple, wide pull-out Grok QA (reported): AL hidden by angle LAG-SC-31.jpg — DJ booth loading vinyl, bucket hat + windbreaker Motion idea: hand drops needle, lasers sweep Grok QA (reported): strong LAG-SC-32.jpg — cross-legged on dune, big headphones, linen set Motion idea: slow orbit around him on the dune Grok QA (reported): AL missing (dot only), hoops both ears LAG-SC-33.jpg — slicing a mirror with crystal blade, cloak Motion idea: slow-mo blade slice, glass explodes Grok QA (reported): stray cheek marks, brow ring flipped LAG-SC-34.jpg — white tee + jeans, gray backdrop, candle Motion idea: static, candle flicker, slight push Grok QA (reported): strong, arm worm visible LAG-SC-35.jpg — starry desert night, shearling coat Motion idea: slow tilt up to the Milky Way Grok QA (reported): strong LAG-SC-36.jpg — smoky library back room, tweed suit, old book Motion idea: smoke curls, slow push-in on book Grok QA (reported): strong, faint hoop both ears LAG-SC-37.jpg — four mask-shadow silhouettes, long black coat Motion idea: shadows morph behind him, static Grok QA (reported): strong LAG-SC-38.jpg — spiral staircase from above, monochrome suit Motion idea: top-down spiral rotation Grok QA (reported): GAIB duplicated on neck LAG-SC-39.jpg — shadow moves on its own, single bulb, black hoodie Motion idea: bulb swings, shadow reaches on its own Grok QA (reported): brow rings both sides LAG-SC-40.jpg — hand mirror toward camera, rainy alley, leather jacket Motion idea: mirror pushed to lens, rain Grok QA (reported): strong LAG-SC-41.jpg — mansion doorway backlit by desert light Motion idea: silhouette resolves as he steps forward Grok QA (reported): AL on cheek LAG-SC-42.jpg — kneeling in sandstorm, torn cloak Motion idea: storm gusts, cloak tearing, slow-mo Grok QA (reported): AL faint, great mood LAG-SC-43.jpg — feathered top hat, purple tailcoat, candles & bottles Motion idea: lean-in grin, candles flicker Grok QA (reported): brow rings both sides LAG-SC-44.jpg — candlelit apothecary, jars, layered beads Motion idea: mortar grinding, dust in candlelight Grok QA (reported): strong, arm worm; small stray cheek marks LAG-SC-45.jpg — pouring glowing blue liquid into gold chalice, velvet blazer Motion idea: liquid pour slow-mo, blue glow Grok QA (reported): strong LAG-SC-46.jpg — convertible in the desert, linen shirt, winking Motion idea: car rolling, wink on beat Grok QA (reported): GAIB duplicated on chest LAG-SC-47.jpg — floating cards & sigils, black-gold brocade duster Motion idea: cards orbit, sigils ignite Grok QA (reported): strong, faint ink under collar LAG-SC-48.jpg — two doors in the desert (sun / cosmos) Motion idea: slow dolly between the doors Grok QA (reported): BREATHER; stray letters on neck LAG-SC-49.jpg — street level on a car hood with mic, signature look Motion idea: handheld, crowd behind, mic to lens Grok QA (reported): BREATHER + signature look; wrist ink, AL tiny LAG-SC-50.jpg — crystal blade raised before giant mandala sun disc, cloak flowing Motion idea: low-angle hero push, mandala blazes, hold Grok QA (reported): BREATHER; blade floats with no visible hand, stray cheek mark DO NOT REACTIVATE Historical grillz, gold fangs, old Dolo eye/know/blaster details, doubled AL or GAIB, piercings on both sides, extra chest/hand ink or the old neck layouts. LAG-LOCK-FACE.jpg without NATURAL is superseded. Do not copy tattoos hidden by clothing into new exposed areas. The throat sun-eye is a tattoo, not an anatomical third eye. A flagships folder records the source-designated role, not approval of all pixels. Changes to a supplied first frame require a corrected frame or an explicitly labelled motion study; a prompt is not proof of correction."
+    - toolbar:
+      - button:
+      - generic: reference_map.txt
+      - button
+      - button
+      - button
+- region
+- generic: Displaying reference_map.txt.

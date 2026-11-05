@@ -1,0 +1,11 @@
+# V_2 review SB-34 v004 89d118ac full-scale ROUND 2 of 2 FINAL; rules v012/v013/v014 + parent SB instructions
+check	verdict	measured	claim_Z1	note
+inputs	INFO	orig 4639c31e; v003 1ed35fd5; v004 89d118ac...ab789 (matches brief); round-1 return 4aec7cab; V5 c62c6789	-	ROUND 2 of 2 FINAL
+diff_v003_v004	PASS	20 px >12, all in x716-732 y713-719 (inside restore box x720-732 y711-719 + JPEG bleed); outside box 0 >12, max 6 (re-encode noise)	only box changed; 0 outside	-
+box_vs_orig	PASS	x720-732 y711-719 vs orig max 2, 0 >12	0 >12	-
+lettering_wedge	PASS	dark<90 px in x712-740 y708-720: orig 29 / v003 18 / v004 29; row maps identical to orig; wedge shape matches at 1x, 4x, 6x plain and 6x autocontrast	restored	round-1 FIX resolved
+old_saucer_return	PASS	box y711-719 is below saucer footprint (saucer ink ended y~702, 12-row gap); no saucer trace at 4x/6x/6x autocontrast	-	-
+seam_box_edges	PASS	left seam |L719-L720| rows 711-719 = 1-6, same as orig (last row 3 vs 1); top edge L 104.8 out / 105.1 in (orig 104.8/105.2); R-B 57.6/58.3 (orig 57.6/57.7); no line at 6x autocontrast	-	-
+ship_ink	PASS	V5 v004 ship 570,600,690,719 skin 610,660,650,700: main 0.482, xcheck 0.420 ADVISORY, p90 2.0, skinbox_ok - unchanged from v003	unchanged	-
+carried_round1	PASS	size DW 321 OK (target 315, band 312-335); placement; CLAMP-UNMET accepted; clearance 85.1 px; cloth/outside 0; pistol/neck identical to v002d - all unchanged (v004=v003 outside box)	-	ADVISORIES kept: pit at frame bottom; clone repeat x605-655 y620-700 6x autocontrast only
+ROUND_VERDICT	PASS (final)	no FIX at 1x/4x/6x plain	-	no ROUND-CAP

@@ -1,0 +1,26 @@
+{
+  "source_sha256": "477627e4db431ba0ef8cf226b13745f3cdcc32050d88b8f0fc1f7aba3e45e154",
+  "bytes": 6438669,
+  "probe_exit_code": 0,
+  "native_sample_rate_hz": 48000,
+  "channels": 2,
+  "source_stream_descriptions": [
+    "Stream #0:0: Audio: mp3 (mp3float), 48000 Hz, stereo, fltp, 205 kb/s",
+    "Stream #0:1: Video: mjpeg (Baseline), yuvj420p(pc, bt470bg/unknown/unknown), 360x360 [SAR 1:1 DAR 1:1], 90k tbr, 90k tbn (attached pic)"
+  ],
+  "decoded_audio": {
+    "format": "interleaved float32 little-endian at native source sample rate/channels; no output sample-rate conversion",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "sample_frames": 11986560,
+    "decoded_pcm_bytes": 95892480,
+    "duration_seconds": 249.72,
+    "pcm_sha256": "07029878b4cfb537e146d1378128b545ad8d6d501a5bee311722cf5049f65f67",
+    "exit_code": 0,
+    "errors": []
+  },
+  "source_unchanged": true,
+  "listening_or_alignment_performed": false,
+  "reported_container_duration_seconds": 249.74,
+  "reported_container_start_seconds": 0.023021
+}

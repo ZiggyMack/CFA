@@ -1,0 +1,531 @@
+{
+  "format": "cfa-author-interview-v1",
+  "taskID": "hon-coverage-review-queue-20261028",
+  "storyID": "hon:strictly-business",
+  "status": "original_17_and_current_followups_answered_held_for_claude_return",
+  "workflow": "Nova interviews Ziggy in chat, records answers and follow-up clarifications, then prepares one consolidated prompt for PH Claude to reconcile and apply.",
+  "guidePath": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\collaborators\\storyboard_skeleton_20261029\\INTERVIEW_GUIDE_20261030.json",
+  "sourceQuestionCount": 17,
+  "currentQuestion": null,
+  "pendingQuestion": null,
+  "answers": [
+    {
+      "order": 1,
+      "questionExact": "P-6b, the street (Dolo steps out of his parked cab, sees the cantina, walks; between P-6 and P-7; no art yet): in, or out?",
+      "userAnswer": "Include the transition",
+      "decision": "Include P-6b, Across the street, between P-6 and P-7 as proposed: Dolo leaves his parked cab, sees the cantina and walks over unhurriedly.",
+      "scope": "Story inclusion. Exact timing and artwork remain to be developed; this does not approve assets or authorize generation.",
+      "recordedAt": "2026-10-30T07:07:53.3115686-04:00",
+      "followUps": []
+    },
+    {
+      "order": 2,
+      "questionExact": "The song's start: the room wide (SB-05's idea) under the intro beat, then the mouth (SB-01) on the first word, then frame A (SB-03 and SB-04 behind it), as the packet proposes; or the card's order, mouth first? And may the intro beat begin over the cantina settle (the pre-lap)?",
+      "userAnswer": "A",
+      "clarificationAnswers": [
+        {
+          "question": "Should the instrumental intro begin during Dolo settling, or only on the room-wide cut?",
+          "userAnswer": "2",
+          "userClarification": "start only when we cut to the room-wide shot?"
+        }
+      ],
+      "decision": "Use opening order A: room wide under instrumental intro, mouth close-up on the first word Strictly, then Frame A at the counter. Start the instrumental only on the cut to the room-wide shot. No music pre-lap over P-7 cantina settle.",
+      "recordedAt": "2026-10-30T07:17:52.8715167-04:00",
+      "followUps": []
+    },
+    {
+      "order": 3,
+      "questionExact": "The informant's direction, so her production adaptation can be requested; the packet assumes nothing about her beyond the mechanical forearm.",
+      "userAnswer": "Carry this look forward",
+      "decision": "Carry the existing inspiration look into the informant adaptation: silver-gray/pink hair, cropped cream jacket, dark trousers/boots and mechanical forearm. Use the pictured appearance as the design reference.",
+      "referencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/cast/unnamed_informant/source/civitai_144607296_user_screenshot.png",
+      "scope": "Design direction for adaptation. Anatomical left/right arm was not separately named; resolve consistently from the reference during adaptation rather than inventing a user choice.",
+      "recordedAt": "2026-10-30T07:47:49.6662131-04:00",
+      "followUps": []
+    },
+    {
+      "order": 4,
+      "questionExact": "The opening outfit for the cab (one coherent outfit chosen before cabin frames).",
+      "userAnswer": "lets use the brown flight jacket with a cream collar please",
+      "clarification": "this one",
+      "decision": "Select the Shearling bomber outfit collection: brown flight jacket with cream collar, as shown in the user screenshot, for Dolo throughout the opening cab sequence. This replaces the proposed plain brown leather jacket/open off-white shirt.",
+      "collectionID": "hon:outfit-bomber",
+      "portraitAssetID": "HD-DROP-942e859fdcf6",
+      "sourceLookAssetID": "HD-DROP-d52eab252ede",
+      "turnaroundAssetIDs": [
+        "HD-DROP-d4f0ba97acf3",
+        "HD-DROP-ea7df18c1ff7",
+        "HD-DROP-a0196adbeb80",
+        "HD-DROP-63746923528c",
+        "HD-DROP-9e7ff2afc05d"
+      ],
+      "scope": "Wardrobe choice. Reference tattoos, facial details, bare feet in turnarounds and optional gun variants are not new character or prop decisions.",
+      "recordedAt": "2026-10-30T07:55:24.7991972-04:00",
+      "followUps": []
+    },
+    {
+      "order": 5,
+      "questionExact": "P-5's exchange as the prologue card proposes it (no fare; the tip is the fare), so the page of lines can be written.",
+      "userAnswer": "Use the tip as her fare",
+      "decision": "Use the proposed exchange: the informant cannot pay, supplies the lead about a princess needing a ride who has money, and Dolo accepts that information as her fare. Claude should write the dialogue from this premise.",
+      "recordedAt": "2026-10-30T08:00:30.1065954-04:00",
+      "followUps": []
+    },
+    {
+      "order": 6,
+      "questionExact": "Leia's costume from S03-2 through S10 (the ivory coat is the candidate); nothing accepted yet.",
+      "userAnswer": "Keep the ivory-coat outfit",
+      "decision": "Keep Leia in the ivory-coat costume continuously from S03-2 through S10, including the counter scene, boarding the ship and later love declaration.",
+      "referenceAssetID": "HD-DROP-5171bb20c773",
+      "referencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/reference_candidates/buns-coat-ref-sheet/BC-01-chest-up.jpg",
+      "scope": "Costume continuity choice. Final production likeness/reference acceptance remains separate.",
+      "recordedAt": "2026-10-30T12:05:34.7044282+00:00",
+      "followUps": []
+    },
+    {
+      "order": 7,
+      "questionExact": "The outro's 'restrained' reading: the three names as sound, no stage (SB-31 parked), no card inside the song (SB-35 parked), no desert sign-off (SB-33 parked); and where the end title sits, inside the song's last seconds or after.",
+      "userAnswer": "Use the DJ-booth → mouth ending",
+      "decision": "Use the restrained ending: Chewie at the DJ booth as the lights settle, closing name shout-outs as sound without separate stage (SB-31), desert (SB-33), or title-card (SB-35) cutaways during the song; finish on Dolo’s mouth closing. Place the end title only after the song ends; do not overlay it during the song’s final seconds.",
+      "status": "answered",
+      "recordedAt": "2026-10-30T12:26:39.751341+00:00",
+      "followUps": [
+        {
+          "question": "Should the end title appear over the DJ-booth image during the song’s final seconds, or only after the song ends?",
+          "status": "answered",
+          "userAnswer": "After the song ends",
+          "recordedAt": "2026-10-30T12:29:32.759250+00:00"
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "questionExact": "The ship exterior: which silhouette, once a round exists (no art yet; S02-8, S04-1).",
+      "questionAsked": "For the ship exteriors, should our reply ask Claude to bring back clearly labelled options for Dolo’s freighter and the opposing warship, or do you already want to develop this pictured freighter design?",
+      "userAnswer": "Develop this direction for Dolo’s freighter",
+      "decision": "Develop the pictured SB-13 junk-ship exterior direction for Dolo’s freighter. Ask PH Claude to bring back a small, clearly labelled shortlist for the opposing warship, separately from Dolo’s freighter.",
+      "referenceAssetID": "HD-DROP-8896508767b4",
+      "referencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-13-junk-ship-exterior.jpg",
+      "scope": "Design-development direction for Dolo’s freighter, not final production acceptance. Opposing-warship selection is deferred until Claude supplies a distinct shortlist. Include both directions in the consolidated PH Claude handback; no generation or external message sent.",
+      "status": "answered",
+      "recordedAt": "2026-10-30T12:53:23.040174+00:00",
+      "followUps": [
+        {
+          "question": "For the opposing warship, should Claude bring back a small, clearly labelled shortlist, or do you already have a specific design in mind?",
+          "status": "answered",
+          "userAnswer": "Have Claude bring back a shortlist",
+          "recordedAt": "2026-10-30T12:56:34.878503+00:00"
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "questionExact": "The chamber wardrobe in S10 (the jacket unless told otherwise) and the dinner's staging, which departs from SB-07 on purpose (the armored enforcer alone at the far end).",
+      "questionAsked": "Should Dolo keep the brown flight jacket with the cream collar you chose for the cab through the dinner and freezing-chamber scenes, or change outfits there?",
+      "userAnswer": "this is the outfit we will have DoLo in for the dinner date with darth vader scenes... (Yellow Jacket)",
+      "decision": "Choose the existing Yellow Jacket outfit for Dolo’s dinner-with-Darth-Vader scenes. This is a change from the brown flight jacket selected for the opening cab sequence. Change into the pictured white Fur coat outfit for the freezing-chamber scenes. Claude should reconcile the wardrobe transition and frozen-slab continuity. The Gemini clips are inspiration tests for a later reshoot once the complete scene direction is ready. Seating and blocking remain open for Claude to develop; the tests do not lock the scene layout.",
+      "collectionID": "hon:outfit-yellow",
+      "referenceAssetID": "HD-DROP-6c2e98bd1125",
+      "referenceSHA256": "6c2e98bd112510f075696602c17da98368e7983e22ea076ee74c2264accd4faf",
+      "scope": "Yellow Jacket for dinner, white Fur coat for the freezing chamber. Proposed dinner seating remains open. Costume selection does not replace individual reference ratings. The frozen imprint SB-27 has a separate user likeness rating of 1/5 and needs a passing Dolo likeness.",
+      "relatedUserRequest": "Add gemini_generated_video_5ecc4396.mp4 and gemini_generated_video_5cfe73f5.mp4 as library videos and storyboard references for the dinner sequence.",
+      "status": "answered_with_staging_deferred",
+      "recordedAt": "2026-10-30T14:07:55.905154+00:00",
+      "followUps": [
+        {
+          "question": "Should Dolo stay in this Yellow Jacket outfit through the freezing-chamber scenes too, or change after the dinner?",
+          "status": "answered",
+          "userAnswer": "yeah we change - i think we were going in the direction of the white furry coat",
+          "clarification": "this one",
+          "collectionID": "hon:outfit-fur",
+          "referenceAssetID": "HD-DROP-1bb70fbe9511",
+          "referenceSHA256": "1bb70fbe9511a66e2b048c61e307cae9b99847df0dbebd067ea614eb74b949ad",
+          "recordedAt": "2026-10-30T14:15:54.392283+00:00"
+        },
+        {
+          "question": "For the dinner staging, use the side-by-side banquet arrangement in your Gemini test, or Claude’s proposal: Vader alone at the far end of a long table, with Dolo’s empty place near the camera before he sits?",
+          "status": "answered",
+          "userAnswer": "right now the gemini banquet videos was just a test and can be inspo...i had anticipating needing to reshoot once we have all the elements in place we wanted ie - lights, camera, action...eh?",
+          "decision": "Use the Gemini banquet videos as inspiration tests. Anticipate a reshoot after lighting, camera, action and the other scene elements have been developed. Neither the side-by-side arrangement nor the far-end table proposal is selected; ask Claude to develop a complete dinner scene proposal.",
+          "recordedAt": "2026-10-30T14:35:15.714991+00:00"
+        }
+      ],
+      "inspirationVideoAssetIDs": [
+        "GEM-HON-203A795FBF12",
+        "GEM-HON-44141C686AA5"
+      ]
+    },
+    {
+      "order": 10,
+      "questionExact": "The editorial order dinner, farewell, slab (SB-07; SB-28 and SB-29; SB-27 and SB-25); the lyric mentions the ice first.",
+      "questionAsked": "Should the pictures unfold as dinner trap, farewell (I love you / I know), then reveal Dolo frozen in the slab, even though the lyric mentions the ice earlier?",
+      "userAnswer": "Keep that visual order",
+      "decision": "Briefly preview Dolo already frozen when the lyric mentions ice. The following pre-freezing scenes are a flashback explaining how he got there: include Dolo asking Chewie to look after Leia and the farewell, then let the freezing event play out afterward. Claude should make the temporal transition legible so Dolo does not appear to be frozen and then inexplicably speaking in continuous time. The exact on-screen depiction of the full freezing moment remains for scene development. Keep Leia saying I love you and Dolo answering I know. Leia’s lips move for the audience to read her declaration, while the audible words remain Dolo’s song vocal.",
+      "scope": "Replaces the prior linear dinner/farewell/slab order with a frozen preview followed by a flashback and the fuller event. Dinner staging remains open, and the current SB-27 likeness remains rated 1/5. This does not approve an asset or generation. Farewell speakers are settled; Leia’s declaration is visual under Dolo’s song vocal.",
+      "status": "answered",
+      "recordedAt": "2026-10-30T14:37:44.797536+00:00",
+      "followUps": [
+        {
+          "question": "In that farewell, keep Leia saying I love you and Dolo answering I know, or change it so Dolo says I love you to Leia?",
+          "status": "answered",
+          "askedAt": "2026-10-30T14:39:08.063904+00:00",
+          "userAnswer": "Keep Leia: “I love you”; Dolo: “I know”",
+          "recordedAt": "2026-10-30T14:41:30.696604+00:00"
+        },
+        {
+          "userClarification": "we can have leigh;'s lips moviing...but the song lyrics of DoLo will be whats heard...so the audiance can read her lips - type of thing...eh?",
+          "decision": "Leia mouths I love you visually; Dolo’s sung lyric remains the audible soundtrack. No separately audible Leia dialogue is added. Keep the farewell response I know assigned to Dolo.",
+          "recordedAt": "2026-10-30T14:41:30.696604+00:00",
+          "status": "answered"
+        }
+      ],
+      "revisions": [
+        {
+          "previousDecision": "Keep the visual order dinner trap, farewell (Leia: I love you; Dolo: I know), then reveal Dolo frozen in the slab, even though the lyric mentions ice earlier.",
+          "previousStatus": "answered",
+          "supersededAt": "2026-10-30T14:39:08.063904+00:00",
+          "reason": "User revised the editorial order after considering the lyric cue."
+        }
+      ],
+      "clarificationAnswer": "or actually...we can briefly show him in ice first when the lyrics mention it...and then the scenes after nee to be more of a flash back then continuation as to why you were prolly asking me...it wouldnt make sense for him to be frozen and then up talking again - so yes hes frozen...and we stil lget to see that moment he had with chew asking him to take care of leigh before he goes in..so alsmost like we see a prieview..and then we see it play out full after he talks to chew and says i love you to leigh...eh?"
+    },
+    {
+      "order": 11,
+      "questionExact": "The bridges' shouted words as sound over the inserts (SB-18; SB-08 and SB-24); neither bridge is a lip-sync card.",
+      "questionAsked": "For both bridges, keep the shouted words on the soundtrack over those action shots, or show Dolo performing some of the shouts on camera?",
+      "userAnswer": "mostly keep the shots over the action - but where we can fit a cool scene transition or different set locaiton - we can take advantage of dolo doing the adlib - and we get the opportunity to show off another outfit ... another grill...",
+      "decision": "Keep the bridge shouts mostly on the soundtrack over action inserts. Allow selected on-camera Dolo ad-lib cutaways where a scene transition or different setting creates a good opportunity to show another outfit or grill. Claude should propose these moments as part of the edit, retaining the contrasting swagger/commitment of the two bridges.",
+      "scope": "Flexible creative direction, not a selection of specific new costumes, grills, locations or accepted assets. Identify any proposed alternate outfit/grill in Card D with the relevant shot scope and reconcile continuity in Card B; do not silently replace the established scene wardrobes or mouth reference.",
+      "status": "answered",
+      "recordedAt": "2026-10-30T14:41:30.696604+00:00",
+      "followUps": []
+    },
+    {
+      "order": 12,
+      "questionExact": "The epilogue's length, and whether the informant's witness beat in E-1 (SB-30 repurposed) is wanted now that her return is decided.",
+      "questionAsked": "For the epilogue after the song—from thawing Dolo through the final mirror reveal—do you have a target length, or should Claude propose the pacing and we decide after a rough cut?",
+      "userAnswer": "as long as it needs to be - Ultimately, let's not forget there's also we're going to be perhaps playing the song two or three times because we have different versions of it. So we're going to be mixing it right into the next version. So we do need a little buffer space, and we can continue the story and even loop back to the beginning, do a different version. That's something we had to discuss. I don't know if you have notes on that, but that, I hope, helps with the guidance.",
+      "decision": "No fixed epilogue duration: let it run as long as the story needs. Plan breathing/buffer space that can mix into another version of the song. The piece may contain two or three song passes, continuing the story between them or looping back to a differently treated beginning. Claude should account for inter-song transitions instead of treating this epilogue as necessarily the end of the entire multi-version piece.",
+      "existingEvidence": [
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/DECISIONS_20261010.md",
+          "section": "9, answer4",
+          "meaning": "Prior user direction: informant returns and her story develops between song versions."
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SONG_VERSIONS_20261010.md",
+          "section": "1–5",
+          "meaning": "Earlier four-flavor exploration; latest author revision there makes version2 Prime. Variant jobs and the long mixed-piece structure were proposals, not all adopted decisions."
+        }
+      ],
+      "scope": "Exact version count, order, alternate recordings and transition lengths remain open. Do not infer selection of all four historical flavor proposals. Preserve the existing mirror-ending and returning-informant decisions within the appropriate passage; reconcile how passages join rather than silently deleting those decisions. Each selected recording requires its own timing alignment.",
+      "status": "answered_with_version_sequence_to_develop",
+      "recordedAt": "2026-10-30T14:47:52.120882+00:00",
+      "followUps": []
+    },
+    {
+      "order": 13,
+      "questionExact": "Beat density. You asked today for steps of about one per cent of the song (about 2.3 seconds of 232.76), with holds from half a second to ten, and a shot allowed to be a group of images. The record proposes: the shot is the generation unit (one clip per brief), the beat is the edit unit and the one-per-cent layer; beats are anchored to lyric words now and get their seconds from CFA Nova's alignment. Today: 51 shots inside the song (about one per 4.6 seconds) and 43 beats across the opening's 11 cards. Thinnest sections: S06 (1 shot over 6 lines), S09 (1 shot over 6 lines), S11 (1 shot over 6 lines), S12 (2 shots over 18 lines). Confirm the target of about 100 beats across the song so the section packets are written to it.",
+      "questionAsked": "For one full pass of the current song, should Claude aim for roughly 100 visual beats as a flexible pacing target, with a mix of quick cuts and longer holds? These are editing beats, not 100 separate generated clips.",
+      "userAnswer": "Let the pacing determine the count",
+      "decision": "Let musical and dramatic pacing determine the number of visual beats. Do not write to a target of roughly 100 beats per song pass or impose a uniform 2.3-second cadence. Use fast changes, longer holds and multiple beats within clips where they serve the music and story.",
+      "scope": "Supersedes the proposed approximate-100-beat target. Exact timing still requires alignment to each selected recording; this is not authorization for a generation count.",
+      "status": "answered",
+      "recordedAt": "2026-10-30T14:50:42.725463+00:00",
+      "followUps": []
+    },
+    {
+      "order": 14,
+      "questionExact": "14. The head-to-head on S01-1, the mouth insert: go for Round M first (one prepared start frame, by hash, into Gemini, Flow, Comfy and Grok video in first-frame mode with the same clip prompt; native lengths recorded and trimmed to the hold), with Round E (each route prepares its own still, then its clip) separately labelled and optional after or beside it; or hold. Dispatch, mode and cost are CFA Nova's; nothing runs on this card alone.",
+      "questionAsked": "Should we prepare a mouth-motion comparison using one shared starting image and the same direction across Gemini, Flow, Comfy and Grok, or hold that comparison for now?",
+      "userAnswer": "Let's hold that comparison for now. I think the only comparison, right, like that we're moving into is just who's making the better video output. Who can, like, handle the kitchen the best type of thing. But who's gonna make the best image and whose mouths are gonna be the best, we'll just figure that out as we go. You know, we'll know quickly if we don't like what we're seeing, we're gonna try someone else, and then so organically we'll figure out who's gonna do the best mouth if we're really just having a hard time with one of them with mouths in general, for example.",
+      "decision": "Hold the dedicated mouth-motion comparison. Focus comparison on the quality of video outputs from the Kitchen briefs. Learn which routes handle images and mouths well through actual work; if a route repeatedly disappoints, try another. Do not run a separate mouth/image winner benchmark now.",
+      "scope": "No separate Round M benchmark preparation or execution. Existing Kitchen video-output evaluation remains a distinct workflow; this answer is not authorization for new runs, spending or a blanket change to prepared inputs.",
+      "status": "answered",
+      "recordedAt": "2026-10-30T14:53:20.081476+00:00",
+      "followUps": []
+    },
+    {
+      "order": 15,
+      "questionExact": "15. The hold for the mouth: 2.5 seconds (the Fibonacci ladder's choice) or 4 seconds. Both fit every route's native length; the edit trims.",
+      "questionAsked": "For the opening mouth insert, choose an edited duration of 2.5 seconds or 4 seconds, or decide after seeing it in the edit?",
+      "userAnswer": "we can run long so we dont run out of room if we want it - but ultimately in the editing room is where i will get a better idea the duration i want things /scenes to be",
+      "decision": "Prepare footage with enough extra duration/handles to leave editing room. Ziggy will choose the mouth insert’s final screen duration when seeing it in the edit; neither 2.5 nor 4 seconds is locked. This is his general preference for deciding scene duration in the editing room.",
+      "scope": "No fixed generation length or unbounded long run authorized. CFA Nova should choose bounded provider output settings that provide useful editorial handles, within the eventual chosen route and task limits. Edited duration remains distinct from generated duration.",
+      "status": "answered",
+      "recordedAt": "2026-10-30T15:02:05.720317+00:00",
+      "followUps": []
+    },
+    {
+      "order": 16,
+      "questionExact": "16. The start state of the prepared frame for the mouth (STILL PREP, before any motion): poised, lips just parted, nose out of frame, as the card writes it (the grin then arrives inside the clip), or the full grin of the dental reference held from the start (the clip's one variable changes). The earlier item 16 is withdrawn: mouth B (HD-B-91ef00348229) is the current scoped dental reference by the BOM and the review of October 10 and needs no new word; the selection covers the teeth map and the two hoops only, not a new frame or the whole character.",
+      "questionAsked": "For the opening mouth close-up, should Dolo start with his lips slightly parted and grow into a grin, or already be grinning in the first frame?",
+      "userAnswer": "Slightly parted, then grow into a grin",
+      "decision": "Start the opening mouth close-up with lips slightly parted and let the expression grow into a grin. Prepare the new starting image for that expression instead of treating the full-grin reference as the starting frame.",
+      "scope": "Expression/start-state decision. Mouth B remains the scoped dental reference; the shot excludes the nose and does not become a lip-sync shot. No entire reference image is accepted as a ready scene/start frame.",
+      "status": "answered",
+      "recordedAt": "2026-10-30T15:03:52.452390+00:00",
+      "followUps": []
+    },
+    {
+      "order": 17,
+      "questionExact": "17. Dispatch of the rebuilt scope-A text for the opening to a notebook or another improvement collaborator, once the text exists: go, or hold. Preparing the text does not wait on this answer; the Gemini improvement pass is optional for the pilot, not a dependency. The filled improvement round (cinematography and pacing on the opening) is linked below for assessment.",
+      "questionAsked": "Once today’s choices are reconciled, should Claude prepare the opening package for an outside cinematography and pacing review, or keep developing it within our current team for now?",
+      "userAnswer": "both - Not really sure the success we'll have with adding another collaborator to the team. So we have to plan as if we won't get, like, specialized expertise there, since we really haven't solidified it. But we will make an attempt. But the existing team will put, you know, our preliminary rough draft, and, you know, it will be what we use if we can't get our specialist, or, like, an attempt at a specialist. We don't have a specialist nominated, but, you know, I think we're attempting to use some of the other models, like Q&B, or DeepSeek, or Gemini even maybe. Not sure who will do the cinematography, but that it's just, we need to make it flexible enough so, like we always said, we have a hook so that if we gave the work package to one of the collaborators, you know, like the creative one to seven bit of the storyboard gaps or what have you, that they could slot in. Or not even all of it, but I guess just the cinematography card. But, I mean, I guess, yeah, all of it so they understand the picture. Maybe they even need A to D. Whatever's required. I mean, I hope they wouldn't need the kitchen, but some form of, I'm thinking just A to D, one to seven, or one to ten, or whatever. Whatever, we'll figure out what they need to help write that cinematography card. That's what you're asking, so that's how I would do it.",
+      "decision": "Do both: the current team develops a usable preliminary scene/cinematography draft, while keeping a modular opportunity for an outside specialist to improve the cinematography card. Attempt specialist input when a suitable collaborator is identified, but do not make completion dependent on one. Supply enough A–D context and relevant creative-direction cards to understand the scene as a whole, rather than an isolated camera instruction. The existing team’s draft remains the fallback if specialist input is unavailable or unhelpful.",
+      "scope": "No specialist/provider is selected. Mentioned model possibilities are exploratory, not a dispatch instruction. Decide the minimum useful context package for the specialist; do not assume the generation-ready Kitchen package is needed for a creative review. Preserve one reconciled scene draft rather than competing silently adopted versions.",
+      "status": "answered_with_specialist_routing_open",
+      "recordedAt": "2026-10-30T15:08:38.496062+00:00",
+      "followUps": [
+        {
+          "status": "answered",
+          "recordedAt": "2026-10-30T15:11:23.012870+00:00",
+          "userClarification": "Apply the same fallback to other sections, including music cues; do not leave them blank waiting for DeepSeek or another specialist. Available writers should draft under the rulebook, and a specialist may later bolster/bless the section. Need something for every section to test Kitchen wrap-up.",
+          "decision": "Every required creative section gets a usable working draft from the available team under the existing rulebook, including cinematography and music/cue direction. Specialist contribution is optional enrichment, not a dependency that leaves sections blank or stalls the Kitchen trial. Record who drafted the section and whether a specialist has reviewed it; a team draft and specialist review are separate states. Keep each section open to later contributions while maintaining one coherent current take."
+        },
+        {
+          "status": "answered",
+          "recordedAt": "2026-10-30T15:17:53.834671+00:00",
+          "userClarification": "Preliminary is the autonomous/fill-in team pass; Detailed design is specialist work in that role (Claude writing counts even in draft one). Automated validation and human dispositions remain distinguishable. Production should be mature and firm, while storyboard tests may use earlier material.",
+          "decision": {
+            "recordedAt": "2026-10-30T15:17:53.834671+00:00",
+            "source": "Ziggy live author clarification, 2026-10-30, following all original seventeen answers",
+            "preliminary": "Autonomous exploratory work or work drafted by the available team filling in for a specialist defaults to Preliminary in that creative role.",
+            "detailedDesign": "Work by the designated specialist within their specialty is Detailed design even while iterative (draft one, two, three). Claude writing in his lead-writer role is Detailed design. Fill-in writing becomes Detailed design when Claude substantively reviews/adopts or revises it. Mere assignment to a specialist does not constitute completed specialist work.",
+            "reviewEvidence": "Track the responsible author/role, specialist review or adoption, automated validation, and human disposition separately and against the relevant section, take or asset revision. Grok validator-bot work is automated validation; Ziggy intake decisions are human review. A Needs fixes or removal disposition records a completed review, not a passed quality check.",
+            "production": "Production denotes mature material that has passed the applicable checks for its intended use. Neither Detailed design alone nor an automated pass alone establishes production readiness.",
+            "storyboardUse": "Earlier-stage material may be used in storyboards for scoped testing, reference or inspiration, with that role explicit. Presence on a storyboard does not itself promote a source asset to Production.",
+            "sectionScope": "Apply maturity to the actual creative section and role: Claude writing does not imply specialist review of cinematography, cue/music direction or every source image. Keep draft revision separate from maturity and preserve one coherent current take.",
+            "migrationScope": "Reconcile existing flags from known authorship and review evidence; preserve unknowns and source-asset maturity rather than bulk-promoting all material because a collaborator name appears."
+          }
+        }
+      ]
+    }
+  ],
+  "settledSourceDecisions": [
+    {
+      "choice": "Leia is the customer during the song; they marry after the love declaration.",
+      "source": {
+        "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\story\\writer_pass_20261010\\DECISIONS_20261010.md",
+        "relativePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/DECISIONS_20261010.md",
+        "available": true,
+        "sha256": "e63ab3f54f902f5d8559742f68edec711e5a7c9b8d8db7ebe7de737f9f5e2601",
+        "bytes": 42069,
+        "line": 81
+      }
+    },
+    {
+      "choice": "The mirror is the final epilogue frame; exit is an optional earlier beat.",
+      "source": {
+        "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\story\\writer_pass_20261010\\DECISIONS_20261010.md",
+        "relativePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/DECISIONS_20261010.md",
+        "available": true,
+        "sha256": "e63ab3f54f902f5d8559742f68edec711e5a7c9b8d8db7ebe7de737f9f5e2601",
+        "bytes": 42069,
+        "line": 83
+      }
+    },
+    {
+      "choice": "The informant returns; E-1 witness beat is on.",
+      "source": {
+        "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\story\\writer_pass_20261010\\DECISIONS_20261010.md",
+        "relativePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/DECISIONS_20261010.md",
+        "available": true,
+        "sha256": "e63ab3f54f902f5d8559742f68edec711e5a7c9b8d8db7ebe7de737f9f5e2601",
+        "bytes": 42069,
+        "line": 84
+      }
+    },
+    {
+      "choice": "Mouth B is the current scoped dental reference; item 16 now asks start state.",
+      "source": {
+        "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\story\\writer_pass_20261010\\DECISIONS_20261010.md",
+        "relativePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/DECISIONS_20261010.md",
+        "available": true,
+        "sha256": "e63ab3f54f902f5d8559742f68edec711e5a7c9b8d8db7ebe7de737f9f5e2601",
+        "bytes": 42069,
+        "line": 148
+      }
+    }
+  ],
+  "draftHandback": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\collaborators\\storyboard_skeleton_20261029\\PH_CLAUDE_CONSOLIDATED_ANSWERS_20261030.md",
+  "sent": false,
+  "siteRole": "Read-only context and navigation; no individual storyboard answer forms.",
+  "pendingFollowUp": null,
+  "storyboardSOPHandback": {
+    "userRequest": "Wardrobe choices should populate Card D for the selected characters and selected shots.",
+    "recordedAt": "2026-10-30T14:35:15.714991+00:00",
+    "cardD": "Record each character, selected outfit, exact reference asset IDs and the shot scope in References & their roles. Distinguish outfit/design selection from production reference or scene acceptance. Gemini dinner videos are inspiration only; no starting frame or take acceptance is implied.",
+    "cardB": "Record wardrobe transitions and continuity between shots, including the change from the dinner Yellow Jacket to the white Fur coat in the chamber.",
+    "wardrobeSelections": [
+      {
+        "character": "Dolo",
+        "scope": "Opening cab sequence",
+        "outfit": "Shearling bomber: brown flight jacket with cream collar",
+        "collectionID": "hon:outfit-bomber",
+        "referenceAssetID": "HD-DROP-942e859fdcf6"
+      },
+      {
+        "character": "Dolo",
+        "scope": "Dinner with Darth Vader",
+        "outfit": "Yellow Jacket",
+        "collectionID": "hon:outfit-yellow",
+        "referenceAssetID": "HD-DROP-6c2e98bd1125"
+      },
+      {
+        "character": "Dolo",
+        "scope": "Freezing chamber, then post-thaw quarters and mirror scene (E-2 through E-10)",
+        "outfit": "White Fur coat",
+        "collectionID": "hon:outfit-fur",
+        "referenceAssetID": "HD-DROP-1bb70fbe9511"
+      },
+      {
+        "character": "Leia",
+        "scope": "S03-2 through S10: counter, boarding and love declaration",
+        "outfit": "Ivory coat",
+        "referenceAssetID": "HD-DROP-5171bb20c773"
+      }
+    ],
+    "applicationStatus": "For consolidated PH Claude handback; reconcile and apply after interview. Individual authored cards have not been rewritten by this record."
+  },
+  "pendingQuestionAsked": null,
+  "newerPacketReconciliation": "The original seventeen answers and all current author follow-ups reconciled from Claude’s opening/S02/S03 note are complete. Current author queue is empty. Team-drafted camera, HUD, blocking and provisional holds remain delegated; later version count/order and other editorial development remain separate. Hold the consolidated handback for Claude’s return while the explicit communication pause remains in force; it has not been delivered.",
+  "teamDraftAndSpecialistReview": "Every required creative section gets a usable working draft from the available team under the existing rulebook, including cinematography and music/cue direction. Specialist contribution is optional enrichment, not a dependency that leaves sections blank or stalls the Kitchen trial. Record who drafted the section and whether a specialist has reviewed it; a team draft and specialist review are separate states. Keep each section open to later contributions while maintaining one coherent current take.",
+  "creativeMaturityAndValidation": {
+    "recordedAt": "2026-10-30T15:17:53.834671+00:00",
+    "source": "Ziggy live author clarification, 2026-10-30, following all original seventeen answers",
+    "preliminary": "Autonomous exploratory work or work drafted by the available team filling in for a specialist defaults to Preliminary in that creative role.",
+    "detailedDesign": "Work by the designated specialist within their specialty is Detailed design even while iterative (draft one, two, three). Claude writing in his lead-writer role is Detailed design. Fill-in writing becomes Detailed design when Claude substantively reviews/adopts or revises it. Mere assignment to a specialist does not constitute completed specialist work.",
+    "reviewEvidence": "Track the responsible author/role, specialist review or adoption, automated validation, and human disposition separately and against the relevant section, take or asset revision. Grok validator-bot work is automated validation; Ziggy intake decisions are human review. A Needs fixes or removal disposition records a completed review, not a passed quality check.",
+    "production": "Production denotes mature material that has passed the applicable checks for its intended use. Neither Detailed design alone nor an automated pass alone establishes production readiness.",
+    "storyboardUse": "Earlier-stage material may be used in storyboards for scoped testing, reference or inspiration, with that role explicit. Presence on a storyboard does not itself promote a source asset to Production.",
+    "sectionScope": "Apply maturity to the actual creative section and role: Claude writing does not imply specialist review of cinematography, cue/music direction or every source image. Keep draft revision separate from maturity and preserve one coherent current take.",
+    "migrationScope": "Reconcile existing flags from known authorship and review evidence; preserve unknowns and source-asset maturity rather than bulk-promoting all material because a collaborator name appears."
+  },
+  "reconciliationAnswers": [
+    {
+      "id": "opening_wardrobe_continuity",
+      "recordedAt": "2026-10-30T15:23:04.135263+00:00",
+      "question": "From the cab through the cantina counter, should Dolo wear the cream-collar flight jacket over an open off-white shirt (Claude suggestion), or keep the full pictured flight-jacket look with its plain white T-shirt?",
+      "initialAnswer": "Flight jacket + open off-white shirt",
+      "latestUserClarification": "The jacket is what I am more in love with. The plain white tee is the desired existing outfit and gives us the benefit of the model/references already made. Off-white is fine if Claude feels strongly; do not require a new outfit reference round just for that. The scene will be reshot anyway.",
+      "decision": "Carry the cream-collar brown flight jacket through cab and cantina. Prefer the existing plain white T-shirt outfit to reuse the available references. Open off-white shirt is permitted if Claude has a strong creative reason, but is not a required redesign or a gate. The later clarification supersedes treating the initial open-shirt choice as mandatory.",
+      "status": "answered_with_writer_discretion",
+      "scope": "Jacket choice firm. Do not conflate planned scene reshoot with an instruction to regenerate all outfit references; exact new scene starting frame still needs preparation."
+    },
+    {
+      "id": "full_freezing_event_placement",
+      "recordedAt": "2026-10-30T16:15:04.891289+00:00",
+      "question": "After the flashback farewell, should we show the full freezing event during the final chorus, cutting between it and Dolo performing at the counter, or after the song in the epilogue before he thaws?",
+      "verbatimAnswer": "During the final chorus - going back and forth from showing what happened - and him rapping about it on … different parts of the ship maybe?",
+      "decision": "Show the full freezing during the final chorus, intercutting the events with Dolo rapping about what happened. Develop performance coverage in different parts of the ship rather than fixing every return to the counter.",
+      "status": "answered_with_writer_development",
+      "scope": "Final-chorus timing and intercut structure are firm. Different ship locations are a proposed creative direction for Claude to develop; exact locations, blocking and performance wardrobe are not selected. Preserve the earlier brief frozen preview, flashback farewell, Chewie care-for-Leia moment and silent Leia I love you / Dolo I know. Make the performance/story distinction legible; do not imply a literal thaw between cuts."
+    },
+    {
+      "id": "quarters_wardrobe",
+      "recordedAt": "2026-10-30T16:54:46.493458+00:00",
+      "question": "After Dolo thaws, should he keep the white fur coat through the quarters and mirror scene, as Claude suggests, or change clothes?",
+      "verbatimAnswer": "Keep it",
+      "decision": "Dolo keeps the selected white Fur coat after thawing, through the quarters and mirror scene.",
+      "status": "answered",
+      "scope": "E-2 through E-10. Continue the chamber outfit; supersedes the old epilogue opening-outfit assumption. Does not independently select wardrobe for other performance cutaways.",
+      "referenceAssetID": "HD-DROP-1bb70fbe9511",
+      "collectionID": "hon:outfit-fur",
+      "deliveryStatus": "saved_for_consolidated_followup"
+    },
+    {
+      "id": "iced_grill_first_reveal",
+      "recordedAt": "2026-10-30T19:30:46.333089+00:00",
+      "question": "For the bridge cutaways, should we save the pictured iced grill's first appearance for the quarters/mirror reveal, show it earlier during the song, or develop a different bridge grill? Claude suggests saving the iced reveal.",
+      "verbatimAnswer": "Usual mouth look until the iced reveal",
+      "decision": "Keep Dolo's usual mouth look during the song, including bridge cutaways. Save the selected iced grill's first appearance for the quarters/mirror reveal.",
+      "status": "answered",
+      "scope": "S05/S08 ad-libs and epilogue E-6/E-10. Earlier alternate outfits and performance locations remain available; this answer does not request a different bridge grill. Record mouth-reference roles in Card D and reveal continuity in Card B. It does not accept a generated shot or take.",
+      "referenceAssetID": "HD-GRILLUP-40064d98db89",
+      "deliveryStatus": "saved_for_consolidated_followup"
+    },
+    {
+      "id": "s02_shot_order",
+      "recordedAt": "2026-10-30T19:47:48.351261+00:00",
+      "question": "Next, the first verse: should we show the crime boss in his counting room → the bounty puck showing Dolo as wanted → the waiting hunter, or put the bounty puck before the boss? Claude’s draft starts with the boss to establish the debt before showing the pursuit.",
+      "verbatimAnswer": "Bounty puck → boss → hunter",
+      "decision": "Show the bounty puck first, then the boss in his counting room, then the waiting hunter.",
+      "status": "answered",
+      "scope": "First verse S02: display order S02-3 → S02-2 → S02-4. Preserve stable shot IDs and update story ordering/continuity during reconciliation. Exact lyric alignment and durations remain unverified; this does not accept a shot or request generation.",
+      "deliveryStatus": "saved_for_consolidated_followup"
+    },
+    {
+      "id": "boss_wardrobe",
+      "recordedAt": "2026-10-30T19:50:04.461866+00:00",
+      "question": "Next is the crocodile boss’s outfit in the counting room. Claude proposes dark robes; the selected character reference shows a burgundy jacket over a black shirt. Which direction should we use?",
+      "verbatimAnswer": "Keep the pictured burgundy jacket and black shirt",
+      "decision": "Keep the selected crocodile boss’s pictured burgundy jacket and black shirt in the counting-room scene.",
+      "status": "answered",
+      "scope": "S02-2. Use the wardrobe pictured in HD-RETURN-8421e7cfa1a0 instead of the proposed dark robes. Preserve the already-selected boss identity. Reconcile the scoped wardrobe reference in Card D and scene continuity in Card B; this does not accept a new scene or request generation.",
+      "referenceAssetID": "HD-RETURN-8421e7cfa1a0",
+      "deliveryStatus": "saved_for_consolidated_followup"
+    },
+    {
+      "id": "bouncer_shape",
+      "recordedAt": "2026-10-30T19:58:15.417311+00:00",
+      "question": "For the nightclub entrance, keep this rhino-shaped bouncer, or would you like a different kind of character?",
+      "verbatimAnswer": "Keep",
+      "decision": "Keep the pictured rhino-shaped character as the nightclub bouncer.",
+      "status": "answered",
+      "scope": "S02-7; reference HD-RETURN-cafa39484145. Select the shown bouncer character direction and record its scoped reference role in Card D. This does not accept a finished nightclub scene, resolve all reference defects, or request generation.",
+      "referenceAssetID": "HD-RETURN-cafa39484145",
+      "deliveryStatus": "saved_for_consolidated_followup"
+    },
+    {
+      "id": "dolo_leia_glance",
+      "recordedAt": "2026-10-30T20:02:32.976904+00:00",
+      "question": "Last outstanding choice from Claude’s follow-up: at the cantina counter, when Dolo glances at Leia, should he keep counting the credits while his smile softens, or pause his hands and glance with just his eyes, keeping his expression unchanged?",
+      "verbatimAnswer": "Keep counting; let his smile soften",
+      "decision": "Dolo keeps counting the credits while his smile softens as he glances at Leia.",
+      "status": "answered",
+      "scope": "S03-1. Use the packet’s performance choice: counting continues and the smile softens during the glance, instead of the older card’s still hands and unchanged expression. Reconcile the character direction and continuity in the current shot/take. This selects the action, not exact timing, shot acceptance or generation.",
+      "source": "hon_dolo_strictly_business/story/writer_pass_20261010/kitchen_block_20261029/S03_PACKET_20261029.md:125",
+      "deliveryStatus": "saved_for_consolidated_followup"
+    }
+  ],
+  "coordinationDeliveries": [
+    {
+      "recordedAt": "2026-10-30T15:28:32.227566+00:00",
+      "destination": "https://claude.ai/code/session_01HJ2uKYB5rFa8mVTXa3KPkP",
+      "messageNumber": 29,
+      "status": "posted_visible",
+      "scope": "Original17 consolidated handback referenced, latest opening wardrobe correction, general fallback/maturity rules, direct CFA Nova Kitchen package brainstorming and Nova Dot report-only handbook audit. Not final resolution of all newer author gaps.",
+      "exactMessage": "D:/Documents/CFA/.cache/gemini_dinner_intake_20261030/claude-team-update-17.txt",
+      "screenshot": "D:/Documents/CFA/.cache/gemini_dinner_intake_20261030/claude-team-update-17.png"
+    },
+    {
+      "recordedAt": "2026-10-30T15:50:45.010002+00:00",
+      "destination": "https://claude.ai/code/session_01HJ2uKYB5rFa8mVTXa3KPkP",
+      "messageNumber": 35,
+      "status": "posted_visible_and_acknowledged",
+      "scope": "Existing plain white tee preferred under firm cream-collar jacket; optional open off-white shirt is not a redesign gate. Existing site fields and delivery/run history boundary; Map Maker Nova ownership. No new author answer or generation.",
+      "exactMessage": "D:/Documents/CFA/.cache/gemini_dinner_intake_20261030/claude-wardrobe-kitchen-map-update.txt",
+      "screenshot": "D:/Documents/CFA/.cache/gemini_dinner_intake_20261030/claude-wardrobe-kitchen-map-update.png",
+      "claudeAcknowledgement": "Take 1 revision B is the authoritative reconciled take; Take 2 remains not adopted. Actual reconciled file still awaits verification/posting."
+    },
+    {
+      "recordedAt": "2026-10-30T16:16:42.532550+00:00",
+      "destination": "https://claude.ai/code/session_01HJ2uKYB5rFa8mVTXa3KPkP",
+      "messageNumber": 37,
+      "status": "posted_visible",
+      "scope": "Final-chorus full freezing intercut with Dolo rapping about it; different ship locations proposed for writer development. Quarters wardrobe now asked. No generation or final consolidated-send trigger.",
+      "exactMessage": "D:/Documents/CFA/.cache/gemini_dinner_intake_20261030/claude-final-chorus-update.txt",
+      "screenshot": "D:/Documents/CFA/.cache/gemini_dinner_intake_20261030/claude-final-chorus-update.png"
+    }
+  ],
+  "claudeRequests": {
+    "status": "paused_by_user",
+    "recordedAt": "2026-10-30T19:30:46.333089+00:00",
+    "reportedDurationHours": 12,
+    "verbatimInstruction": "fyi - claude usage ran out for 12 hours ...so lets pause any requests to claude...",
+    "scope": "Pause requests and messages to PH Claude. Continue the local author interview and preserve answers for the consolidated handback. No automatic resume request scheduled."
+  },
+  "currentFollowupsCompletedAt": "2026-10-30T20:02:32.976904+00:00",
+  "handbackStatus": "held_for_claude_return_not_delivered"
+}

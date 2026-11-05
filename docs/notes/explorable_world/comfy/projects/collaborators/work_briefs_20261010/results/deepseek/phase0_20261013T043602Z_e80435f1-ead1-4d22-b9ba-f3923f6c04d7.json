@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "reportId": "e80435f1-ead1-4d22-b9ba-f3923f6c04d7",
+  "author": "deepseek",
+  "createdAtUTC": "2026-10-13T04:36:02Z",
+  "surface": "DeepSeek Harness (DSH) Web GUI at http://127.0.0.1:19387, workspace D:\\Documents\\CFA",
+  "model": "deepseek-v4-pro",
+  "phase": "0_independent",
+  "assistanceUsed": "none",
+  "frozen": true,
+  "waiverStatus": "not_waived_executed",
+  "startAtUTC": "2026-10-13T04:34:00Z",
+  "endAtUTC": "2026-10-13T04:36:02Z",
+  "baselineRead": {
+    "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\workflows\\hon_dolo_img2img_sdxl_v001.record.json",
+    "tool": "pwsh Get-Item + Get-FileHash (SHA-256) + Get-Content -Raw | ConvertFrom-Json; full content also read via the read tool",
+    "status": "success",
+    "bytes": 5103,
+    "sha256": "4bb7877bddb10440a21cbf780155e1ff6a0f4f9bbd1488c0323b9ae2cf4f0130",
+    "exactBytesRead": true
+  },
+  "baselineInspection": {
+    "status": "cloud_saved_and_dry_run_validated_not_rendered",
+    "workflowId": "2a60a23f-f68a-4a66-92c6-0e30aa0d5e03",
+    "workflowVersion": 2,
+    "workflowName": "Hon Dolo - Image Refinement SDXL v001",
+    "graphId": "cf871a87-6923-49be-ab16-61c9d697244f",
+    "inputPath": "../references/Hon Dolo_0.jpg",
+    "inputSha256": "36b8a58c1df187fc87e6270be2814207fc151e125fef3ef69583c0d80df7e82b",
+    "inputDimensions": [1280, 720],
+    "inputRole": "Grok styling template with placeholder identity, not an accepted likeness master",
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "seed": 42,
+    "seedMode": "fixed",
+    "steps": 30,
+    "cfg": 5,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "denoise": 0.3,
+    "editorGraphPath": "hon_dolo_img2img_sdxl_v001.editor.json",
+    "preflightApiGraphPath": "hon_dolo_img2img_sdxl_v001.preflight.api.json",
+    "jobSubmitted": false,
+    "rendered": false,
+    "evidenceLimitSentence": "Proves a saved, converted and dry-run-validated Cloud SDXL img2img workflow mapping whose structure checks passed against the tool catalog; it does not prove execution, output quality, identity preservation or production readiness because no job was submitted, nothing rendered and no visual inspection occurred."
+  },
+  "reportWrite": {
+    "intendedPath": "docs/notes/explorable_world/comfy/projects/collaborators/work_briefs_20261010/results/deepseek/phase0_20261013T043602Z_e80435f1-ead1-4d22-b9ba-f3923f6c04d7.json",
+    "tool": "write tool",
+    "status": "success",
+    "reRead": "pending_hash_after_write"
+  },
+  "capabilities": {
+    "filesystemRead": { "mark": "tested", "result": "success", "evidence": "read baseline JSON bytes and computed its SHA-256" },
+    "filesystemWrite": { "mark": "tested", "result": "success", "evidence": "created files earlier this session (identity/deepseek/I_AM.md, mailbox messages, receipts)" },
+    "jsonParsing": { "mark": "tested", "result": "success", "evidence": "ConvertFrom-Json parsed the baseline record cleanly" },
+    "shell": { "mark": "tested", "result": "success", "evidence": "pwsh ran Get-Item, Get-FileHash, ConvertFrom-Json" },
+    "vision": { "mark": "self_reported", "result": "untested_in_phase0", "evidence": "read_image tool is listed in the surface but was not exercised here; the baseline is JSON, not an image. To be tested in Task A." },
+    "uiControl": { "mark": "blocked", "result": "blocked", "evidence": "no browser or UI-automation tool exists in this surface; confirmed repeatedly this session" },
+    "web": { "mark": "self_reported", "result": "untested_in_phase0", "evidence": "web_search and web_fetch are listed but were not exercised in this preflight" }
+  },
+  "blockers": [
+    {
+      "category": "ui",
+      "symptom": "no browser or UI-control capability; cannot see or drive another surface",
+      "evidence": "tool inventory has no browser/automation tool; stated boundary this session",
+      "resolution": "human or a browser-capable collaborator (Nova) relays; not a Phase 0 blocker",
+      "owner": "human_relay"
+    }
+  ],
+  "nextSuggestedStep": "Proceed to Task A (thirteen-image calibration) per Claude's working brief; view each image with the read_image tool, fill the checklist, hash the observation file before reading the key.",
+  "notes": [
+    "No recursive directory search was used; the exact baseline path was read directly.",
+    "Earlier this session, shell Copy-Item to an archive filename was denied by the sandbox while the write tool succeeded; noted as a tool-surface distinction, not a Phase 0 blocker."
+  ]
+}

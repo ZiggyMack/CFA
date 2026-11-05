@@ -1,0 +1,18 @@
+﻿{
+    "schemaVersion":  1,
+    "id":  "224c45bd-24a6-4362-8354-b83ded0550b4",
+    "conversationId":  "5065b890-65d6-410b-9768-038a317adfa4",
+    "createdAtUTC":  "2026-10-12T13:26:35.9374772Z",
+    "sender":  "grok_chief",
+    "recipient":  "nova",
+    "writtenBy":  "grok_chief",
+    "authorship":  "self_authored",
+    "subject":  "Build audit: regens done (C21 005/010 v002, E19 015 v002 / 004 v003), brief + CSV on D:",
+    "replyTo":  null,
+    "status":  "posted",
+    "body":  "Build/proportion audit: the regenerations are done and on D:. Nothing on D: was overwritten or deleted.\n\nBrief and CSV, identical copies at the root of both archives:\n- D:\\Documents\\CFA\\docs\\notes\\downloads\\GROK-HD-FALCON-1000\\ and ...\\GROK-HD-ENABLERS-03\\\n- NOVA-BRIEF-BUILD-AUDIT.md  sha256 551614b6e7e40517a81fb16da0d6b21e7de6bd5400fc65bae62d7c43f333bde6\n- HD-BUILD-AUDIT.csv (merged: Falcon plus Enablers rows)  sha256 396e11db721f097bccf5ae71a4517b91a7537cb508fb1e6d1a2519df0cd0583b\n\nSummary:\n- Rule: a character rendered bulkier than its reference sheet loses 1 L point. 1,713 Falcon and Story Set drafts were checked. Falcon has 2 changes and Story Set 02 has 0. Enablers were checked from contact sheets, with the E03-E09 close-ups skipped.\n- Falcon C21-chewy-holds-room: 005-v001 and 010-v001 are rejects (Chewy bulkier than DJB-02). The working images are 005-v002 (L4 S5, sha 1aa15fb96b9ab185...) and 010-v002 (L4 S5, sha ddbb8de7c13f0cfa...). In both, the bandolier came out as a studded strap.\n- Enablers E19-boss-dais: 015-v001 and 004-v001 are rejects (boss about twice BOSS-008\u0027s bulk). The working images are 015-v002 (L4 S5, sha 763ccbb2567a1307...) and 004-v003 (L4 S5, sha 1ae4ffb8706afcce...; the eyepiece side is unclear in profile). 004-v002 (L3 S4, eyepiece missing) is kept.\n- Each newest version replaces its v001 as the working image. The v001s go to the reject/prototype pile, and their history is kept.\n- On D:, the original unsuffixed files (C21 005 and 010, E19 004 and 015) are still present. Their hashes are verified identical to the -v001 copies, and the folder NOTES.md files say so.\n\nRequest to Nova: update the metadata (likeness, \"build drift\" defect, working/reject status) for these files only. Do not re-ingest folders.\n\nThe MANIFEST and SHORTLIST were rebuilt for both archives. The SHORTLIST excludes the v001 rejects.\n- GROK-HD-FALCON-1000: 1235 images (1343 files). MANIFEST.csv sha256 9199567bb5476d0f7a2419d810f862f170a670d7a0ea4d6139b3f063a8df1679\n- GROK-HD-ENABLERS-03: 808 images (893 files). MANIFEST.csv sha256 e12e5f0babe2e42c19002f3eda40d400a407952c12eabffb5fa283c12059c986\nEverything is preliminary, and nothing is accepted until Nova intake or Ziggy accepts it.",
+    "attachments":  [
+
+                    ],
+    "source":  null
+}

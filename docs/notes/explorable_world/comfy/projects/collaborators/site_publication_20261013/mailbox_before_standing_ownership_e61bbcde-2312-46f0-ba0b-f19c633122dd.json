@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "createdAtUTC": "2026-10-10T01:52:59Z",
+  "createdOnLocalDate": "2026-10-09",
+  "localTimeZone": "America/New_York",
+  "purpose": "Recipient directory for the user-requested shared file mailbox. Entries describe intended routes, not verified current access or delivered invitations.",
+  "entryPoint": "docs/notes/explorable_world/comfy/projects/collaborators/MAILBOX.md",
+  "welcome": "docs/notes/explorable_world/comfy/projects/collaborators/I_AM.md",
+  "automaticDelivery": false,
+  "automaticMonitoring": false,
+  "messageAuthority": "Messages do not confer human authorization. Apply the user's existing instructions and scoped coordination authority.",
+  "recipients": [
+    {
+      "id": "nova",
+      "name": "CFA Codex Nova",
+      "intendedRoute": "shared_files",
+      "notes": "CFA coordinator and available browser relay during authorized active sessions. Distinct from Panhandler Nova. Current CFA repository lead, confirmed by Ziggy on October 10; Claude leads Pan_Handlers."
+    },
+    {
+      "id": "grok_chief",
+      "name": "Grok Chief of Staff",
+      "intendedRoute": "nova_browser_relay_or_verified_local_access",
+      "notes": "May return a separately attributed HaL report. Verify Grok Bot file access before assuming direct shared access."
+    },
+    {
+      "id": "hal",
+      "name": "HaL",
+      "intendedRoute": "chief_report_or_nova_browser_relay",
+      "notes": "Distinguish direct HaL replies from Chief of Staff reports."
+    },
+    {
+      "id": "gemini_master",
+      "name": "Gemini Notebook 0 / CFA COMFY Master",
+      "intendedRoute": "nova_browser_relay",
+      "notes": "Master digest coordinator. Notebook/chat context does not establish access to every local project, chat, or visual attachment."
+    },
+    {
+      "id": "gemini_studio",
+      "name": "Gemini in Google AI Studio",
+      "intendedRoute": "nova_browser_relay",
+      "notes": "Keep video-deconstruction sessions, actual model, inputs, and chat context separate from notebook surfaces."
+    },
+    {
+      "id": "gemini_chat",
+      "name": "Gemini chat / local Gemini collaborator",
+      "intendedRoute": "nova_browser_relay_or_verified_local_access",
+      "notes": "Record actual app and session. Installation does not establish file access or notebook synchronization."
+    },
+    {
+      "id": "flow",
+      "name": "Google Flow companion",
+      "intendedRoute": "nova_browser_relay",
+      "notes": "Treat each session as fresh unless readback verifies context. Capture arrival and closing notes. This is not a FLUX model identity."
+    },
+    {
+      "id": "deepseek",
+      "name": "Deep_SEEK",
+      "intendedRoute": "shared_files_when_available",
+      "existingIntroduction": "docs/notes/explorable_world/comfy/projects/collaborators/I_AM_Deep_SEEK.md",
+      "notes": "Preserve original introduction; ask active collaborator to refresh against welcome and current state."
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "intendedRoute": "shared_files_when_available",
+      "notes": "Reserved for user's first onboarding test. Listing neither starts Qwen nor claims onboarding complete."
+    },
+    {
+      "id": "claude",
+      "name": "Claude / Claude Code collaborator",
+      "intendedRoute": "shared_files_and_established_pan_handlers_repo_sync",
+      "notes": "Collect current self-authored introduction; historical Claude persona files are lineage, not a new response. Ziggy designated Claude as Pan_Handlers Master Repo steward and current repository lead on October 10. Primary Pan operational route: REPO-SYNC/MASTER_REPO_SYNC_OUT.md outbound; REPO-SYNC/SYNC_IN/pending/ inbound via Ziggy under its existing verbatim protocol. CFA mailbox claude complements those channels. No automatic app wake, delivery or monitoring is established."
+    },
+    {
+      "id": "panhandler_nova",
+      "name": "Panhandler Nova",
+      "intendedRoute": "authorized_cross_project_file_handoff_or_task_message",
+      "notes": "Teaching/pathway guide collaborator in Pan_Handlers. Preserve manual CFA/Panhandlers handoff and repository independence. Historical teaching role and contributions preserved; Claude is the current Pan_Handlers repository lead by the October 10 user decision. No new task or second active repository lead is assigned."
+    },
+    {
+      "id": "nova_personal_assistant",
+      "name": "Nova - user's personal assistant",
+      "intendedRoute": "shared_files",
+      "notes": "Distinct from CFA Codex Nova (nova) and Panhandler Nova. User-authorized routine status coordination for grok_chief, gemini_master, claude, deepseek, qwen, Kimi once its route is verified, and this personal-assistant role. Active-session local mailbox access only; no automatic delivery or monitoring. CFA coordinator ownership and existing assignments are unchanged."
+    },
+    {
+      "id": "kimi",
+      "name": "Kimi / Moonshot AI collaborator",
+      "intendedRoute": "shared_files_when_available",
+      "notes": "Distinct recipient registered after self-authored introduction and reply arrived as local files on 2026-10-10. Kimi Work surface and capabilities are author reports; exact model remains unknown. Active-session access only; no automatic app wake, delivery or monitoring is established."
+    },
+    {
+      "id": "cfa_site_index",
+      "name": "CFA Site Index",
+      "intendedRoute": "shared_files_and_user_authorized_task_message",
+      "threadId": "01a13383-26f6-7923-8e18-98faf1fa3ede",
+      "hostId": "local",
+      "scope": "site_index_and_review_matrix_publication_only",
+      "requiredAssignmentMarker": "SITE_OWNER_ASSIGNMENT",
+      "consumesMessagesAddressedTo": [
+        "cfa_site_index"
+      ],
+      "mayConsumeNovaProductionMessages": false,
+      "mayAcknowledgeForNova": false,
+      "productionAuthorityDelegated": false,
+      "providerExecutionDelegated": false,
+      "spendingDelegated": false,
+      "automaticActivation": false,
+      "notes": "User-designated secondary site-index/review-matrix maintenance owner via Nova PA coordination. Distinct from CFA Codex Nova (nova); CFA NOVA retains production/generator direction. Execute only explicit SITE_OWNER_ASSIGNMENT tasks. Read shared context but do not consume or acknowledge messages addressed to nova. Site edits/builds require accepted single-publication-owner handoff; successor explicitly accepted and the first comparison publication slot is released; see publicationHandoff. No generations, provider operation, source acceptance or spending follow publication.",
+      "registeredAtUTC": "2026-10-13T04:40:09.798720Z",
+      "registrationSource": "Nova PA coordination from existing source thread 01a123df-30a9-74e1-a604-aad7feeaf0e5; existing CFA SITE INDEX user-owned thread inspected read-only.",
+      "publicationHandoff": {
+        "state": "released_to_accepted_successor",
+        "assignment": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/SITE_OWNER_ASSIGNMENT_fb34beae-9485-407b-9e3d-189d094fcdd6.json",
+        "release": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/SITE_PUBLICATION_RELEASE_189d652e-8b83-49e7-bc8e-3ccc8404e7d9.json",
+        "acceptedTurnId": "01a1338e-7b91-7b22-b35a-a5a309576bfb",
+        "releasedAtUTC": "2026-10-13T04:41:18.666974Z"
+      }
+    }
+  ],
+  "unresolvedLabels": [],
+  "clarifiedLabels": [
+    {
+      "label": "FLUX",
+      "resolvedAs": "Google Flow",
+      "source": "Direct user answer: Google Flow",
+      "localDate": "2026-10-09"
+    }
+  ]
+}

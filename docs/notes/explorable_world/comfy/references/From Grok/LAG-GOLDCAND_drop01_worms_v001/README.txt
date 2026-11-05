@@ -1,0 +1,1 @@
+Lisan Al Gaib GOLD-CANDIDATE drop01: segmented Dune-style throat worms. ALL items pending Ziggy - NOT gold. V_1 ranking: c04, c02, c01 gold-candidates; c03, c05 multiverse (drift: snake-style heads). Anchor CAND-01 602a9fd4. Field scope: throat worms only.

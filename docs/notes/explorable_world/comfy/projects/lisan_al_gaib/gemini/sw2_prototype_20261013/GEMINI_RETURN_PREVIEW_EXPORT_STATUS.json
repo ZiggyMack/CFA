@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "recordType": "provider-return-preview-and-export-status",
+  "createdAtUTC": "2026-10-14T02:35:55.963855+00:00",
+  "project": "Lisan Al Gaib / Meta Mirror",
+  "shotID": "SW-2",
+  "shotTitle": "The rise",
+  "provider": "Google Gemini",
+  "chatURL": "https://gemini.google.com/app/e6a2bab576bff5a3",
+  "originalSubmissionReceipt": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/sw2_prototype_20261013/PREFLIGHT_AND_SUBMISSION_RECEIPT.json",
+    "bytes": 7014,
+    "sha256": "911e5951862f411d207a881997b6a785267f46b0637b89c39b569e6920bdf595"
+  },
+  "submittedPrompt": {
+    "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/sw2_prototype_20261013/ACTUAL_SUBMITTED_PROMPT.txt",
+    "bytes": 1245,
+    "sha256": "20b5a0e2be1c267c3db5c8ba42082313256f686129408b337574c0a3d7783fa6"
+  },
+  "scope": "Only the root-submitted SW2 request and its first eight-second preview response. The later human-requested scene extension is explicitly excluded.",
+  "rootReportedResponse": {
+    "responseID": "409acf809fe78991",
+    "errorProse": "I seem to be encountering an error. Can I try something else for you?",
+    "playableVideoAlsoPresent": true,
+    "interpretation": "The response contains error prose and a playable preview together. It is not classified as no output; it is also not a verified downloadable original or an accepted result.",
+    "rootObservationTimestampUTC": null,
+    "observer": "CFA Nova root, sole browser operator",
+    "independentlyObservedBrowserByHelper": false
+  },
+  "renderedPreviewMeasurementsReported": {
+    "source": "Root read the rendered video DOM after clicking Play.",
+    "durationSeconds": 8,
+    "videoWidth": 1280,
+    "videoHeight": 720,
+    "readyState": 4,
+    "elapsedAndRemainingUIObserved": [
+      {
+        "elapsedSecondsDisplayed": 5,
+        "remainingSecondsDisplayed": 2
+      },
+      {
+        "elapsedSecondsDisplayed": 8,
+        "remainingSecondsDisplayed": 0
+      }
+    ],
+    "progressReachedDisplayedEnd": true,
+    "fullNormalSpeedVisualReviewClaimed": false,
+    "listeningReviewClaimed": false,
+    "fps": null,
+    "frameCount": null,
+    "codec": null,
+    "audioPresence": null,
+    "audioContent": null,
+    "scope": "Rendered-element duration and dimensions describe the available preview only. No local file, all-frame decode, frame grid, audio stream or hash measurement exists for this result."
+  },
+  "exportAttemptsReported": [
+    {
+      "method": "Visible Download button with awaited download event",
+      "timeoutSeconds": 30,
+      "outcome": "Timed out; browser tool kernel reset. No saved local result was found."
+    },
+    {
+      "method": "Rendered video downloadMedia after reconnect",
+      "timeoutSeconds": 25,
+      "outcome": "Timed out. No saved local result was found."
+    }
+  ],
+  "pageAssetsInspectionReported": {
+    "availableEntries": "Two older ten-second video resources only.",
+    "latestEightSecondPreviewCorrelatedToInventoryAsset": false,
+    "bundleExportPerformed": false,
+    "reasonNoBundleExport": "The latest preview could not be correlated to an inventory resource; older resources must not be relabeled as this result."
+  },
+  "localReceiptInspection": {
+    "checkedAtUTC": "2026-10-14T02:35:55.963855+00:00",
+    "inspector": "CFA Nova helper, ordinary local filesystem read only",
+    "runFolder": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/sw2_prototype_20261013",
+    "runFolderMP4Files": [],
+    "downloadsFolder": "docs/notes/downloads",
+    "downloadsCreationOrModificationThresholdUTC": "2026-10-14T02:16:00Z",
+    "downloadsMP4FilesAtOrAfterThreshold": [],
+    "otherRecentIntakeFileNamesAndSizes": [
+      {
+        "name": "cfa-reference-validation.json",
+        "bytes": 334420,
+        "suffix": ".json"
+      }
+    ],
+    "otherRecentIntakeFilesAreNotClaimedGeminiMedia": true,
+    "verifiedLocalSW2MP4Received": false,
+    "localOutputPath": null,
+    "localOutputSHA256": null,
+    "limit": "Narrow checks cover this run folder and the designated Downloads intake, not a whole-machine search. A concurrent non-media JSON intake is not treated as this Gemini result; its contents were not read. No media was copied, moved, exported or deleted by helper."
+  },
+  "laterHumanExtensionExcluded": {
+    "responseID": "fed76d8751b7c930",
+    "requestExcerptReported": "now add on to this scene ... turn around ... doors",
+    "reportedDurationSeconds": 16,
+    "attribution": "Human appended a later message in the same conversation; this is outside root original bounded SW2 run.",
+    "isOriginalSW2Duration": false,
+    "isRootRetry": false,
+    "includedInThisResultReceipt": false,
+    "extensionLocalReceiptOrAcceptanceClaimed": false
+  },
+  "generationAccounting": {
+    "originalRootSubmissionCount": 1,
+    "generationRetryPerformedByRoot": false,
+    "exportAttemptsAreNotGenerationSubmissions": true,
+    "extensionIsSeparateHumanRequest": true,
+    "additionalSpendingOrPurchaseClaimed": false
+  },
+  "returnPreviewScreenshot": {
+    "artifact": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/sw2_prototype_20261013/GEMINI_SW2_PREVIEW_1791945225118.jpg",
+      "bytes": 87796,
+      "sha256": "36d8225479c7c9339141b7431ef5d3921954cac7bea434cfb25c38ba9de28658"
+    },
+    "observedAtUTCReported": "2026-10-14T02:33:45.231Z",
+    "helperViewedSavedScreenshot": true,
+    "independentlyVisible": "The saved screenshot shows the exact error prose above the video, the patch-c-derived scene, an active Pause overlay, and 0:01 / 0:08 player time. Static screenshot inspection does not verify all temporal behavior or audio.",
+    "responseCorrelation": "Root attributes this screenshot to original SW2 response 409acf809fe78991, not the later human extension."
+  },
+  "routeBoundaries": {
+    "rootDidNotFetchBlobAPIOrNetworkWorkaround": true,
+    "helperNoBrowserOrNetworkActions": true,
+    "onlyDocumentedDownloadMethodsAttemptedReported": true
+  },
+  "status": {
+    "providerResponseReceivedRootObserved": true,
+    "playablePreviewAvailableRootObserved": true,
+    "exportUnresolved": true,
+    "verifiedLocalOriginalReceived": false,
+    "localMediaTechnicalVerificationComplete": false,
+    "sampledVisualReviewComplete": false,
+    "humanAccepted": false,
+    "productionAccepted": false,
+    "overallGrade": null
+  },
+  "nextStep": "Resolve an export route tied to response 409acf809fe78991 before local media verification; retain the original submission and keep the later sixteen-second extension separate. No automatic generation retry is authorized by this record.",
+  "priorSubmissionReceiptPreserved": true,
+  "siteEdited": false,
+  "appendOnlyEvidence": true
+}

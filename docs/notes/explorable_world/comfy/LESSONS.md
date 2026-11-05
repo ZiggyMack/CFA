@@ -1,5 +1,13 @@
 # Comfy learning record
 
+**2026-10-12 - Cantina identity repair; inspect conditioning and compositing separately**
+
+The [measured return](projects/hon_dolo_strictly_business/comfy/cantina_toast_identity_20261012/MEASURED_RETURN_20261012.txt) records two executed Wan2.2 replacement jobs. Broadening generation masking while retaining final protection removed the black windows, but Harrison Ford likeness stayed weak and the proof closed source-open eyes at F198. Both derived outputs remain Preliminary and unaccepted. Outside-edit alignment and audio preservation did not establish faithful generated facial performance.
+
+The [current primary-source refresh](projects/hon_dolo_strictly_business/comfy/cantina_toast_identity_20261012/RESEARCH_REFRESH_20261012.txt) identifies three investigation targets: final protection retains most original face geometry; inherited Comfy landmark face controls differ from official Wan RGB face crops; and the published native reference center crop differs from its separate CLIP branch. Cloud intermediates and exact server revision remain unknown, so these are not established causes. Dedicated face-swap and identity-specific video routes are comparison candidates with current Cloud availability unverified.
+
+Apply Pan's existing `wan_mix` lesson and the workflow-intake comparison procedure. Next inspect prepared references/guides and recover raw pre-composite output if available; choose one treatment from that evidence and retain raw plus protected results from any later sampler. No new generation or installation occurred in the research refresh. The companion manual Pan teaching return is pending adoption.
+
 **2026-10-07 - Soundtrack replacement and mouth timing**
 
 For a liked clip with wrong audio, first prepare the exact replacement recording and hear it under the retained footage. The [ten-second proof](workflows/hon_dolo_audio_replace_v001.record.json) replaces all Gemini sound with song time 0:00–0:10 while matching compressed video packet hashes and every decoded frame/timestamp. This preservation evidence belongs to local FFmpeg stream copy. The separate native Comfy frame-assembly editor re-encodes and still needs Cloud validation; authentication blocked this turn's Cloud calls.

@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "assignmentID": "site-writer-visibility-reconciliation-20261013",
+  "status": "published_locally_verified",
+  "completedAtUTC": "2026-10-13T17:10:48.905048+00:00",
+  "owner": "cfa_site_index",
+  "ownership": "standing_owner_retained",
+  "summary": "Published current Claude writer-development in project Storyboard, Documents and Claude Work views, sharing canonical document records and exact documented source links.",
+  "counts": {
+    "writerDocuments": 41,
+    "honWriterDocuments": 18,
+    "lisanWriterDocuments": 23,
+    "sharedProductionMethodDocuments": 1,
+    "excludedControlDocuments": 8,
+    "documentedSourceAssociations": 31,
+    "assets": 2391,
+    "albums": 227,
+    "documents": 475,
+    "media": 1916
+  },
+  "entryPoints": [
+    {
+      "file": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\index.html",
+      "route": "#hon/storyboard"
+    },
+    {
+      "file": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\index.html",
+      "route": "#lisan/storyboard"
+    },
+    {
+      "file": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\index.html",
+      "route": "#hon/documents"
+    },
+    {
+      "file": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\lisan_al_gaib\\index.html",
+      "route": "#lisan/documents"
+    },
+    {
+      "file": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\index.html",
+      "route": "#hon/collaborators",
+      "choose": "Claude / Pan_Handlers > Work & handoffs"
+    }
+  ],
+  "liveAuthorDeltas": [
+    "Initial inventory had 47 writer files; completed intake has 49.",
+    "Seed 09 The Echo arrived during preparation and was included after its completed-review notice.",
+    "Time and the Fall was initially under author review, then included after the 14:42 UTC completed-review notice and final hash verification.",
+    "Current Lisan Decisions and START_HERE revisions are registered; Decisions has a complete text preview.",
+    "Latest VALIS remains 16,241 bytes / 1104a098148eb26296a60e4db41eb6caa66c575aeba98b23ac4cab130ab0f8eb."
+  ],
+  "build": {
+    "assignmentID": "site-writer-visibility-reconciliation-20261013",
+    "owner": "cfa_site_index",
+    "buildInvocations": 1,
+    "startedAtUTC": "2026-10-13T16:39:08.375272+00:00",
+    "command": [
+      "C:\\Python314\\python.exe",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\visual_library\\build_catalog.py"
+    ],
+    "sourceManifestSHA256": "a0638824dddc9e68e13647b3c09dc2df2a60696fad77e20389b82ebc4736f31f",
+    "finishedAtUTC": "2026-10-13T16:40:11.929512+00:00",
+    "exitCode": 0,
+    "stdout": "{\"assets\": 2391, \"albums\": 227, \"documents\": 475, \"media\": 1916}\n",
+    "stderr": ""
+  },
+  "preservation": {
+    "existingAssetIDs": 2349,
+    "unchangedMediaRecords": 1916,
+    "unchangedReviewRecords": 176,
+    "canonicalGuards": 521,
+    "existingCatalogSectionsUnchanged": true,
+    "documentPreviewRefresh": {
+      "id": "hon:doc:docs/notes/explorable_world/comfy/projects/collaborators/collaboration_authority.json",
+      "changedFields": [
+        "text"
+      ],
+      "reason": "Existing coordinator source already recorded standing site ownership before this task; builder refreshed its previously stale catalog preview. Canonical source hash is unchanged from this task baseline."
+    },
+    "songAndTimingRecords": "All captured song/alignment files and scene_map remain byte-identical; no timing accepted.",
+    "sceneMapScenes": 50,
+    "sceneMapTimingFields": [],
+    "storageWrites": 0
+  },
+  "tests": [
+    {
+      "name": "Writer publication",
+      "passed": true,
+      "checks": 6,
+      "evidence": "dom_verification.json"
+    },
+    {
+      "name": "Reference scope",
+      "passed": true,
+      "scenarios": 8
+    },
+    {
+      "name": "Collections navigation",
+      "passed": true,
+      "checks": 11
+    },
+    {
+      "name": "Compact browse",
+      "passed": true,
+      "checks": 9
+    },
+    {
+      "name": "C13 source comparison",
+      "passed": true,
+      "checks": 6
+    },
+    {
+      "name": "JavaScript syntax",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "Local publication only; no hosted deployment or generator execution.",
+    "Real renderer and handlers checked with DOM/storage doubles. Browser visual QA remained policy-blocked; no alternate-browser or localhost workaround.",
+    "Document associations are creative/context links, not new media acceptance or character canon.",
+    "No background watcher or automatic wake installed."
+  ],
+  "pendingSiteWork": [
+    "reference-validation-evidence-ui-20261013 remains separate and unimplemented"
+  ],
+  "evidenceFiles": [
+    "SOURCE_PLACEMENT_CHECKPOINT.json",
+    "preservation.before.json",
+    "preservation.after.json",
+    "dom_verification.json",
+    "build_result.json"
+  ],
+  "changedSiteSources": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/writer_development.json",
+      "bytes": 46479,
+      "sha256": "a0638824dddc9e68e13647b3c09dc2df2a60696fad77e20389b82ebc4736f31f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/build_catalog.py",
+      "bytes": 46995,
+      "sha256": "54f6ddf4ce15fdb5f9b1689bbfb6c6d26030d4a633e8bdca48927a7cb7ee4005"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "bytes": 185815,
+      "sha256": "bbef980a805dd818ec9f483221fa122a74fb7dd1c3276a6ee94eb512764d19cf"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.css",
+      "bytes": 49303,
+      "sha256": "e022fee58a9a96c7588346e9a9b898e13857895fcb7053d5863bfd0767fbf143"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_writer_publication.cjs",
+      "bytes": 6919,
+      "sha256": "9aa1ebf69cf2f43519680c9fba4b85e8599b154042507af5bb898d042429cb40"
+    }
+  ],
+  "ownerIdentity": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/cfa_site_index/I_AM.md",
+    "bytes": 6967,
+    "sha256": "bb9f6f6003079ee838fb616226954dbe8e29723ae87055cfd386e1431a4a8c6d"
+  },
+  "generatedFiles": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+      "bytes": 10349395,
+      "sha256": "d1022b2c6c20a39477b0859205ab31e3f7a32dc5a8e5592285d667f2ad97954f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/browser_media_paths.json",
+      "bytes": 41181,
+      "sha256": "a8688f60cc2cffb920fc618de41fac1540980ff2689444413319a719959ac60f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/index.html",
+      "bytes": 496,
+      "sha256": "25bd462fdd6b67a7ad5a9fb89e61e00aa884257f18305a17057482e20a008288"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/index.html",
+      "bytes": 514,
+      "sha256": "a74ac5b2754f0ee4b77537b31b762b007896a0fc38df59466c0533e06e70d2ef"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard.html",
+      "bytes": 521,
+      "sha256": "ef7b34a4b6093c4c67fcd892dfff5904c8f6c1235cf57337648ce2143d48316e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_review_20261007/index.html",
+      "bytes": 517,
+      "sha256": "48803fc47e9b7119dd167b8ef564f639f2a17debc555c13888b31578da55eb77"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/index.html",
+      "bytes": 507,
+      "sha256": "9f12979ae1a15f29e324c03201c1bc6857d58c7f4c3f175d31a92f59b51a930a"
+    }
+  ]
+}

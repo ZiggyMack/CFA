@@ -1,0 +1,461 @@
+{
+  "format": "cfa-grok-image-intake-v1",
+  "project": "criminal_mind",
+  "batchID": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23",
+  "lane": "set_round",
+  "taskID": "tcm-grok-sets-20261030",
+  "intakeRole": "site_index_receipt",
+  "sealStatus": "complete_only_when_pinned_by_required_aggregate",
+  "requiredAggregatePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/CFA_SET_INTAKE_035-118_SITE_INDEX_v003.json",
+  "supersedesReceipt": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/CFA_INTAKE_RECEIPT_v002.json",
+  "verifiedAtUTC": "2026-11-04T13:41:07Z",
+  "receivedAtUTC": null,
+  "receivedTimeStatus": "not_recorded_in_archive",
+  "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23.zip",
+  "archiveSHA256": "a9777ec4341dfda730bc7ffe5e8285a93c259ce8a97ee2bbcda2c959a709ddf1",
+  "archiveBytes": 5265414,
+  "archiveMemberCount": 20,
+  "receivedOriginals": 6,
+  "acceptedOriginals": 0,
+  "humanVerdictsCreated": 0,
+  "selectedStartingFrames": 0,
+  "assets": [
+    {
+      "candidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22__PX-LS2-a",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23\\TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22__PX-LS2-a.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22__PX-LS2-a.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23.zip",
+      "archiveMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22__PX-LS2-a.jpg",
+      "sha256": "374ecdc3cc98ec05efc6da78144b2581da9c648ddee3ab53a90a6cee1db7f809",
+      "bytes": 369349,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "still 1 (S12): door about 0.56 of frame width, near centre; overcast, porch light off (lantern unlit)",
+        "note": "PRELIMINARY; Square-on front, door closed and intact near centre, steps and railings, unlit lantern right of the door. NOTE only: camera reads at about L11's distance, so close to L11 (near-duplicate is not Q-DUP); lantern side differs across variants (right here, left in b and c); L02/L11 show no lantern. Own sha256 matches maker index BATCH_03_index.tsv. 1280x720 16:9. Judged at 1x and 2x crop of the door, windows and lantern: no people, figures, silhouettes, hands, faces or reflections of any; no letters, numerals, house number, sign, plate or emblem; no vehicles; no weapons or blood; overcast day, no direct sun, not dusk (matches ruling, not the card dusk text); door closed and intact; no brand. PRELIMINARY, not selected.",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSTAGE-HOUSE_card_v001 (v001 B2; HOST-PX slots S12/S13)",
+        "judgedAgainst": "Claude rulings TCM_HELD_POSITIONS_RULINGS_20261102.md sha256 74cfc1e6d66463a4d4a7bc84c6f4f14d0630167de6e00724c3d87f202b9ad6a3 (HOST-PX: pairing A, overcast day, porch light off; still 1 house front from the front walk, door centred; still 2 wider from the street, whole front and walk); Addenda A, B, C, D (set-only rules; D: three variants, a = take 1); card TCMSET_B2_TCM-SET-HOSTAGE-HOUSE_card_v001.md sha256 08a38154b55d1103db075096649d18f2b143a3a2384a7634f06cf0243a6d8ebf (HOST-PX light dusk in card is superseded by the ruling); CARDS_INDEX_B2_v001 cf6e6d98; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; handoff Z_3 BATCH_03_index.tsv (own sha256 matches)",
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/SCREENING_ROWS_HOSTPX_PRELIMINARY.tsv",
+        "sourceSHA256": "6c6e2c08191a79898328d2f776d05194f80f59c0e97c485539ad2d3684d4970e",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY, not selected. Still 1 (front from the front walk, door centred). Red-brick rowhouse of L02/L11, dark green door closed and intact, unlit wall lantern right of the door (porch light OFF), damp pavement, bare tree left.",
+        "sourceVsProposal": null,
+        "defectNote": "Framing vs brief: camera reads as from the kerb/opposite edge at roughly L11's distance, not ON the front walk close to the stoop - near-duplicate of L11 (same composition, lantern added). Door centre at ~0.56 of frame width (slightly right of centre). none seen at 1x and 2x door crop: no people/figures/silhouettes (windows, street, door glass), no hands, no text/numbers/house number/signs/plates/emblems, no vehicles, no weapons/blood; overcast day, no direct sun, not dusk; door closed and intact; 1280x720 16:9.",
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/MAKER_BATCH_03_index.tsv",
+        "sourceSHA256": "cee6b5a1fa890676e4aff90a63df8f10dabe95473bb744c2837cc36d9f943560"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22-a",
+        "cameraPositionID": "HOST-PX",
+        "lightState": "HH-LS2 (overcast day, porch light OFF; relit from dusk per TCM_HELD_POSITIONS_RULINGS_20261102)",
+        "variant": null,
+        "variantOf": "HOST-PX still 1 / HH-LS2 (overcast day, porch light off; Claude ruling 2026-11-02) [slot S12]",
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-HOSTAGE-HOUSE-L11",
+          "TCM-SET-HOSTAGE-HOUSE-L02"
+        ],
+        "servesShotsRaw": "TCM-40-04",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-40-04"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/MAKER_BATCH_03_index.tsv",
+        "sourceSHA256": "cee6b5a1fa890676e4aff90a63df8f10dabe95473bb744c2837cc36d9f943560",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSTAGE-HOUSE",
+      "providerCandidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22-a",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-40-04"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-40"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Four-months-earlier hostage house",
+      "sourceConstraints": "Exterior entry and an interior confrontation space with a mirror and clear exit. Distinct from both the childhood room and Henderson home. Time of day unspecified; label any light/time choice as a proposal."
+    },
+    {
+      "candidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22__PX-LS2-b",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23\\TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22__PX-LS2-b.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22__PX-LS2-b.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23.zip",
+      "archiveMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22__PX-LS2-b.jpg",
+      "sha256": "030ccc21c67241b4215b99a3171f92ccee6cbc5fbb5bedf69cf656a8146a3f99",
+      "bytes": 337172,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "\"still 1 (S12) text: \"\"house front from the front walk with the door centred\"\" (ruling; card HOST-PX); door about 0.62 of width and the view is oblique from the left, not square-on\"",
+        "note": "PRELIMINARY; Breaks its own position text: door off-centre and three-quarter view, so not the square-on centred front-walk plate. Facade, door and overcast light are on brief; unlit lantern left of the door. NOTE: composition close to L12 with a lantern added; door surround here reads with a small transom, as L02 does not show clearly. Own sha256 matches maker index BATCH_03_index.tsv. 1280x720 16:9. Judged at 1x and 2x crop of the door, windows and lantern: no people, figures, silhouettes, hands, faces or reflections of any; no letters, numerals, house number, sign, plate or emblem; no vehicles; no weapons or blood; overcast day, no direct sun, not dusk (matches ruling, not the card dusk text); door closed and intact; no brand. PRELIMINARY, not selected.",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSTAGE-HOUSE_card_v001 (v001 B2; HOST-PX slots S12/S13)",
+        "judgedAgainst": "Claude rulings TCM_HELD_POSITIONS_RULINGS_20261102.md sha256 74cfc1e6d66463a4d4a7bc84c6f4f14d0630167de6e00724c3d87f202b9ad6a3 (HOST-PX: pairing A, overcast day, porch light off; still 1 house front from the front walk, door centred; still 2 wider from the street, whole front and walk); Addenda A, B, C, D (set-only rules; D: three variants, a = take 1); card TCMSET_B2_TCM-SET-HOSTAGE-HOUSE_card_v001.md sha256 08a38154b55d1103db075096649d18f2b143a3a2384a7634f06cf0243a6d8ebf (HOST-PX light dusk in card is superseded by the ruling); CARDS_INDEX_B2_v001 cf6e6d98; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; handoff Z_3 BATCH_03_index.tsv (own sha256 matches)",
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/SCREENING_ROWS_HOSTPX_PRELIMINARY.tsv",
+        "sourceSHA256": "6c6e2c08191a79898328d2f776d05194f80f59c0e97c485539ad2d3684d4970e",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY, not selected. Still 1 (front from the front walk, door centred). Same facade family; closed intact door, unlit lantern left of the door (porch light OFF); oblique three-quarter view.",
+        "sourceVsProposal": null,
+        "defectNote": "Framing vs brief: DOOR NOT CENTRED (door centre ~0.62 of width) and view is oblique from the left, not square-on; composition near-duplicate of L12 (HH-P02 framing) with lantern added; reads as from the pavement corner rather than on the walk. none seen at 1x and 2x door crop: no people/figures/silhouettes (windows, street, door glass), no hands, no text/numbers/house number/signs/plates/emblems, no vehicles, no weapons/blood; overcast day, no direct sun, not dusk; door closed and intact; 1280x720 16:9.",
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/MAKER_BATCH_03_index.tsv",
+        "sourceSHA256": "cee6b5a1fa890676e4aff90a63df8f10dabe95473bb744c2837cc36d9f943560"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22-b",
+        "cameraPositionID": "HOST-PX",
+        "lightState": "HH-LS2 (overcast day, porch light OFF; relit from dusk per TCM_HELD_POSITIONS_RULINGS_20261102)",
+        "variant": null,
+        "variantOf": "HOST-PX still 1 / HH-LS2 (overcast day, porch light off; Claude ruling 2026-11-02) [slot S12]",
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-HOSTAGE-HOUSE-L12",
+          "TCM-SET-HOSTAGE-HOUSE-L02"
+        ],
+        "servesShotsRaw": "TCM-40-04",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-40-04"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/MAKER_BATCH_03_index.tsv",
+        "sourceSHA256": "cee6b5a1fa890676e4aff90a63df8f10dabe95473bb744c2837cc36d9f943560",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSTAGE-HOUSE",
+      "providerCandidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22-b",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-40-04"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-40"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Four-months-earlier hostage house",
+      "sourceConstraints": "Exterior entry and an interior confrontation space with a mirror and clear exit. Distinct from both the childhood room and Henderson home. Time of day unspecified; label any light/time choice as a proposal."
+    },
+    {
+      "candidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22__PX-LS2-c",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23\\TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22__PX-LS2-c.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22__PX-LS2-c.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23.zip",
+      "archiveMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22__PX-LS2-c.jpg",
+      "sha256": "0c83c90d01ee672103332fb0d3f770e8fd4a7432c08f04ac1e90c96e74afd0ac",
+      "bytes": 338984,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "still 1 (S12): door about 0.55 of width, square-on and symmetrical, closer than L11; overcast, porch light off",
+        "note": "\"PRELIMINARY; Best fit to \"\"front walk, door centred\"\" of the three: symmetrical stoop and railings, upper windows partly cropped, unlit lantern left of the door. NOTE only: camera still reads from about the kerb line; lantern side differs from a. Own sha256 matches maker index BATCH_03_index.tsv. 1280x720 16:9. Judged at 1x and 2x crop of the door, windows and lantern: no people, figures, silhouettes, hands, faces or reflections of any; no letters, numerals, house number, sign, plate or emblem; no vehicles; no weapons or blood; overcast day, no direct sun, not dusk (matches ruling, not the card dusk text); door closed and intact; no brand. PRELIMINARY, not selected.\"",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSTAGE-HOUSE_card_v001 (v001 B2; HOST-PX slots S12/S13)",
+        "judgedAgainst": "Claude rulings TCM_HELD_POSITIONS_RULINGS_20261102.md sha256 74cfc1e6d66463a4d4a7bc84c6f4f14d0630167de6e00724c3d87f202b9ad6a3 (HOST-PX: pairing A, overcast day, porch light off; still 1 house front from the front walk, door centred; still 2 wider from the street, whole front and walk); Addenda A, B, C, D (set-only rules; D: three variants, a = take 1); card TCMSET_B2_TCM-SET-HOSTAGE-HOUSE_card_v001.md sha256 08a38154b55d1103db075096649d18f2b143a3a2384a7634f06cf0243a6d8ebf (HOST-PX light dusk in card is superseded by the ruling); CARDS_INDEX_B2_v001 cf6e6d98; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; handoff Z_3 BATCH_03_index.tsv (own sha256 matches)",
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/SCREENING_ROWS_HOSTPX_PRELIMINARY.tsv",
+        "sourceSHA256": "6c6e2c08191a79898328d2f776d05194f80f59c0e97c485539ad2d3684d4970e",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY, not selected. Still 1 (front from the front walk, door centred). Square-on, symmetrical stoop and railings, door closed and intact, unlit lantern left of the door (porch light OFF); slightly closer than L11, upper floor windows cropped.",
+        "sourceVsProposal": null,
+        "defectNote": "Framing vs brief: door near centre (~0.55 of width, slightly right); camera still reads from the kerb line rather than on the walk at the bottom step - closer than L11 but not 4 m. Lantern is on the opposite side from L22-a (continuity note: lantern side differs across variants). none seen at 1x and 2x door crop: no people/figures/silhouettes (windows, street, door glass), no hands, no text/numbers/house number/signs/plates/emblems, no vehicles, no weapons/blood; overcast day, no direct sun, not dusk; door closed and intact; 1280x720 16:9.",
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/MAKER_BATCH_03_index.tsv",
+        "sourceSHA256": "cee6b5a1fa890676e4aff90a63df8f10dabe95473bb744c2837cc36d9f943560"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22-c",
+        "cameraPositionID": "HOST-PX",
+        "lightState": "HH-LS2 (overcast day, porch light OFF; relit from dusk per TCM_HELD_POSITIONS_RULINGS_20261102)",
+        "variant": null,
+        "variantOf": "HOST-PX still 1 / HH-LS2 (overcast day, porch light off; Claude ruling 2026-11-02) [slot S12]",
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-HOSTAGE-HOUSE-L11"
+        ],
+        "servesShotsRaw": "TCM-40-04",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-40-04"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/MAKER_BATCH_03_index.tsv",
+        "sourceSHA256": "cee6b5a1fa890676e4aff90a63df8f10dabe95473bb744c2837cc36d9f943560",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSTAGE-HOUSE",
+      "providerCandidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L22-c",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-40-04"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-40"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Four-months-earlier hostage house",
+      "sourceConstraints": "Exterior entry and an interior confrontation space with a mirror and clear exit. Distinct from both the childhood room and Henderson home. Time of day unspecified; label any light/time choice as a proposal."
+    },
+    {
+      "candidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23__PX-LS2-a",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23\\TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23__PX-LS2-a.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23__PX-LS2-a.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23.zip",
+      "archiveMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23__PX-LS2-a.jpg",
+      "sha256": "022fd785b6921e9b0af3eb8603949791d881625a060b190e256565df62203951",
+      "bytes": 363413,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "ADVISORY",
+        "hardTrait": "\"still 2 (S13) text: \"\"wider from the street, the whole front and the walk\"\"; whole front, cornice and chimney, stoop and walk are in frame, but only a thin strip of roadway, so the camera reads from the near kerb rather than across the street\"",
+        "note": "PRELIMINARY; Meets the content of still 2 (whole front, walk, sky, neighbours) but with a close-in street view; no lantern visible. NOTE: the house now reads two storeys with a bracketed cornice and chimney (L02/L11 crop the top), a fact later stills must follow. Own sha256 matches maker index BATCH_03_index.tsv. 1280x720 16:9. Judged at 1x and 2x crop of the door, windows and lantern: no people, figures, silhouettes, hands, faces or reflections of any; no letters, numerals, house number, sign, plate or emblem; no vehicles; no weapons or blood; overcast day, no direct sun, not dusk (matches ruling, not the card dusk text); door closed and intact; no brand. PRELIMINARY, not selected.",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSTAGE-HOUSE_card_v001 (v001 B2; HOST-PX slots S12/S13)",
+        "judgedAgainst": "Claude rulings TCM_HELD_POSITIONS_RULINGS_20261102.md sha256 74cfc1e6d66463a4d4a7bc84c6f4f14d0630167de6e00724c3d87f202b9ad6a3 (HOST-PX: pairing A, overcast day, porch light off; still 1 house front from the front walk, door centred; still 2 wider from the street, whole front and walk); Addenda A, B, C, D (set-only rules; D: three variants, a = take 1); card TCMSET_B2_TCM-SET-HOSTAGE-HOUSE_card_v001.md sha256 08a38154b55d1103db075096649d18f2b143a3a2384a7634f06cf0243a6d8ebf (HOST-PX light dusk in card is superseded by the ruling); CARDS_INDEX_B2_v001 cf6e6d98; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; handoff Z_3 BATCH_03_index.tsv (own sha256 matches)",
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/SCREENING_ROWS_HOSTPX_PRELIMINARY.tsv",
+        "sourceSHA256": "6c6e2c08191a79898328d2f776d05194f80f59c0e97c485539ad2d3684d4970e",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY, not selected. Still 2 (wider from the street, whole front and walk). Whole facade to cornice with chimney and sky, door closed and intact near centre (~0.54), stoop and pavement, neighbour fronts both sides, bare tree left. No lantern visible (porch light off/none).",
+        "sourceVsProposal": null,
+        "defectNote": "Framing vs brief: only a thin strip of roadway at the bottom - reads as from the near kerb rather than across the street; wider than L11 mainly in height. Continuity note: house now reads two storeys with a bracketed cornice (L02/L11 crop the top, so not a contradiction, but a fact the later stills must follow). none seen at 1x and 2x door crop: no people/figures/silhouettes (windows, street, door glass), no hands, no text/numbers/house number/signs/plates/emblems, no vehicles, no weapons/blood; overcast day, no direct sun, not dusk; door closed and intact; 1280x720 16:9.",
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/MAKER_BATCH_03_index.tsv",
+        "sourceSHA256": "cee6b5a1fa890676e4aff90a63df8f10dabe95473bb744c2837cc36d9f943560"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23-a",
+        "cameraPositionID": "HOST-PX",
+        "lightState": "HH-LS2 (overcast day, porch light OFF; relit from dusk per TCM_HELD_POSITIONS_RULINGS_20261102)",
+        "variant": null,
+        "variantOf": "HOST-PX still 2 / HH-LS2 (overcast day, porch light off; Claude ruling 2026-11-02) [slot S13]",
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-HOSTAGE-HOUSE-L11",
+          "TCM-SET-HOSTAGE-HOUSE-L02"
+        ],
+        "servesShotsRaw": "TCM-40-04",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-40-04"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/MAKER_BATCH_03_index.tsv",
+        "sourceSHA256": "cee6b5a1fa890676e4aff90a63df8f10dabe95473bb744c2837cc36d9f943560",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSTAGE-HOUSE",
+      "providerCandidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23-a",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-40-04"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-40"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Four-months-earlier hostage house",
+      "sourceConstraints": "Exterior entry and an interior confrontation space with a mirror and clear exit. Distinct from both the childhood room and Henderson home. Time of day unspecified; label any light/time choice as a proposal."
+    },
+    {
+      "candidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23__PX-LS2-b",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23\\TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23__PX-LS2-b.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23__PX-LS2-b.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23.zip",
+      "archiveMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23__PX-LS2-b.jpg",
+      "sha256": "6808d819d629a77db7666b9bf9829e0711dc9de70531f20e8ee935d11888aa48",
+      "bytes": 327023,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "still 2 (S13): from across the street, lower third empty damp roadway and kerb, whole two-storey front with cornice, door near centre (about 0.52), walk and stoop in frame",
+        "note": "\"PRELIMINARY; Closest to \"\"wider from the street, the whole front and the walk\"\". NOTE only: neighbour fronts leave a narrow gap to the right so the house looks slightly detached; door surround reads plainer than L02; no lantern visible (L22 variants have an unlit one). Own sha256 matches maker index BATCH_03_index.tsv. 1280x720 16:9. Judged at 1x and 2x crop of the door, windows and lantern: no people, figures, silhouettes, hands, faces or reflections of any; no letters, numerals, house number, sign, plate or emblem; no vehicles; no weapons or blood; overcast day, no direct sun, not dusk (matches ruling, not the card dusk text); door closed and intact; no brand. PRELIMINARY, not selected.\"",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSTAGE-HOUSE_card_v001 (v001 B2; HOST-PX slots S12/S13)",
+        "judgedAgainst": "Claude rulings TCM_HELD_POSITIONS_RULINGS_20261102.md sha256 74cfc1e6d66463a4d4a7bc84c6f4f14d0630167de6e00724c3d87f202b9ad6a3 (HOST-PX: pairing A, overcast day, porch light off; still 1 house front from the front walk, door centred; still 2 wider from the street, whole front and walk); Addenda A, B, C, D (set-only rules; D: three variants, a = take 1); card TCMSET_B2_TCM-SET-HOSTAGE-HOUSE_card_v001.md sha256 08a38154b55d1103db075096649d18f2b143a3a2384a7634f06cf0243a6d8ebf (HOST-PX light dusk in card is superseded by the ruling); CARDS_INDEX_B2_v001 cf6e6d98; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; handoff Z_3 BATCH_03_index.tsv (own sha256 matches)",
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/SCREENING_ROWS_HOSTPX_PRELIMINARY.tsv",
+        "sourceSHA256": "6c6e2c08191a79898328d2f776d05194f80f59c0e97c485539ad2d3684d4970e",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY, not selected. Still 2 (wider from the street, whole front and walk). Widest of the three: lower third empty damp roadway, kerb, pavement, stoop, whole two-storey front with cornice and chimneys, door closed and intact at centre (~0.52), neighbouring fronts right, bare tree and street of rowhouses left. No lantern visible.",
+        "sourceVsProposal": null,
+        "defectNote": "Framing vs brief: meets the brief best of the three (from the street, whole front and walk). Continuity notes: two-storey with cornice; the house reads as detached-looking with a narrow gap to the right neighbour; door surround slightly plainer than L02. none seen at 1x and 2x door crop: no people/figures/silhouettes (windows, street, door glass), no hands, no text/numbers/house number/signs/plates/emblems, no vehicles, no weapons/blood; overcast day, no direct sun, not dusk; door closed and intact; 1280x720 16:9.",
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/MAKER_BATCH_03_index.tsv",
+        "sourceSHA256": "cee6b5a1fa890676e4aff90a63df8f10dabe95473bb744c2837cc36d9f943560"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23-b",
+        "cameraPositionID": "HOST-PX",
+        "lightState": "HH-LS2 (overcast day, porch light OFF; relit from dusk per TCM_HELD_POSITIONS_RULINGS_20261102)",
+        "variant": null,
+        "variantOf": "HOST-PX still 2 / HH-LS2 (overcast day, porch light off; Claude ruling 2026-11-02) [slot S13]",
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-HOSTAGE-HOUSE-L02",
+          "TCM-SET-HOSTAGE-HOUSE-L11"
+        ],
+        "servesShotsRaw": "TCM-40-04",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-40-04"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/MAKER_BATCH_03_index.tsv",
+        "sourceSHA256": "cee6b5a1fa890676e4aff90a63df8f10dabe95473bb744c2837cc36d9f943560",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSTAGE-HOUSE",
+      "providerCandidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23-b",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-40-04"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-40"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Four-months-earlier hostage house",
+      "sourceConstraints": "Exterior entry and an interior confrontation space with a mirror and clear exit. Distinct from both the childhood room and Henderson home. Time of day unspecified; label any light/time choice as a proposal."
+    },
+    {
+      "candidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23__PX-LS2-c",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23\\TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23__PX-LS2-c.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23__PX-LS2-c.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23.zip",
+      "archiveMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23__PX-LS2-c.jpg",
+      "sha256": "867c14868fc2f78affb123be1a26345b616eb1b0b1686021bdfb630131195cb5",
+      "bytes": 354489,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "OK",
+        "hardTrait": "still 2 (S13): whole two-storey front with cornice and two chimneys, door near centre (about 0.54), stoop, leaves on the pavement, neighbour fronts at the edges",
+        "note": "PRELIMINARY; On brief for the wide approach plate; roadway strip is narrower than in b but present, so the street position reads across the road. No lantern visible. Own sha256 matches maker index BATCH_03_index.tsv. 1280x720 16:9. Judged at 1x and 2x crop of the door, windows and lantern: no people, figures, silhouettes, hands, faces or reflections of any; no letters, numerals, house number, sign, plate or emblem; no vehicles; no weapons or blood; overcast day, no direct sun, not dusk (matches ruling, not the card dusk text); door closed and intact; no brand. PRELIMINARY, not selected.",
+        "cardVersion": "TCMSET_B2_TCM-SET-HOSTAGE-HOUSE_card_v001 (v001 B2; HOST-PX slots S12/S13)",
+        "judgedAgainst": "Claude rulings TCM_HELD_POSITIONS_RULINGS_20261102.md sha256 74cfc1e6d66463a4d4a7bc84c6f4f14d0630167de6e00724c3d87f202b9ad6a3 (HOST-PX: pairing A, overcast day, porch light off; still 1 house front from the front walk, door centred; still 2 wider from the street, whole front and walk); Addenda A, B, C, D (set-only rules; D: three variants, a = take 1); card TCMSET_B2_TCM-SET-HOSTAGE-HOUSE_card_v001.md sha256 08a38154b55d1103db075096649d18f2b143a3a2384a7634f06cf0243a6d8ebf (HOST-PX light dusk in card is superseded by the ruling); CARDS_INDEX_B2_v001 cf6e6d98; FIDELITY_RUBRIC_v002 4b4de5b4; V1 rulings v001 ec6c2634; addendum v002 e6d45312; handoff Z_3 BATCH_03_index.tsv (own sha256 matches)",
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/SCREENING_ROWS_HOSTPX_PRELIMINARY.tsv",
+        "sourceSHA256": "6c6e2c08191a79898328d2f776d05194f80f59c0e97c485539ad2d3684d4970e",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "PRELIMINARY, not selected. Still 2 (wider from the street, whole front and walk). Whole two-storey front with cornice and two chimneys, door closed and intact at centre (~0.54), stoop, pavement with leaves, thin roadway strip, neighbour front right, bare tree and rowhouse street left. No lantern visible.",
+        "sourceVsProposal": null,
+        "defectNote": "Framing vs brief: roadway only a thin strip at the bottom - closer to L23-a than to the 'from the street' framing of L23-b; whole front and walk present. none seen at 1x and 2x door crop: no people/figures/silhouettes (windows, street, door glass), no hands, no text/numbers/house number/signs/plates/emblems, no vehicles, no weapons/blood; overcast day, no direct sun, not dusk; door closed and intact; 1280x720 16:9.",
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/MAKER_BATCH_03_index.tsv",
+        "sourceSHA256": "cee6b5a1fa890676e4aff90a63df8f10dabe95473bb744c2837cc36d9f943560"
+      },
+      "providerMetadata": {
+        "providerCandidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23-c",
+        "cameraPositionID": "HOST-PX",
+        "lightState": "HH-LS2 (overcast day, porch light OFF; relit from dusk per TCM_HELD_POSITIONS_RULINGS_20261102)",
+        "variant": null,
+        "variantOf": "HOST-PX still 2 / HH-LS2 (overcast day, porch light off; Claude ruling 2026-11-02) [slot S13]",
+        "carID": null,
+        "referenceIDs": [
+          "TCM-SET-HOSTAGE-HOUSE-L11",
+          "TCM-SET-HOSTAGE-HOUSE-L02"
+        ],
+        "servesShotsRaw": "TCM-40-04",
+        "servesShotsSourcePresent": true,
+        "servesShotIDs": [
+          "TCM-40-04"
+        ],
+        "shotsIDsSourceDetail": [],
+        "sourceMember": "TCM-SET-HOSTAGE-HOUSE-HOSTPX-L22-L23/MAKER_BATCH_03_index.tsv",
+        "sourceSHA256": "cee6b5a1fa890676e4aff90a63df8f10dabe95473bb744c2837cc36d9f943560",
+        "isMakerSupplied": true
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-HOSTAGE-HOUSE",
+      "providerCandidateID": "TCMSET_B3_TCM-SET-HOSTAGE-HOUSE-L23-c",
+      "candidateIDSource": "filename_stem_with_provider_mapping",
+      "providerServesShotIDs": [
+        "TCM-40-04"
+      ],
+      "bindingPolicy": "family_context_only_no_shot_binding_by_intake",
+      "sourceScenes": [
+        "TCM-SRC-40"
+      ],
+      "eligibleShotIDs": [],
+      "locationTitle": "Four-months-earlier hostage house",
+      "sourceConstraints": "Exterior entry and an interior confrontation space with a mirror and clear exit. Distinct from both the childhood room and Henderson home. Time of day unspecified; label any light/time choice as a proposal."
+    }
+  ],
+  "verification": {
+    "zipCRC": true,
+    "archiveHash": true,
+    "safeMemberPaths": true,
+    "noSymlinks": true,
+    "noEncryptedMembers": true,
+    "uniqueCandidateIDs": true,
+    "indexedBytesAndHashes": true,
+    "JPEGDecode": true,
+    "humanReviewOrAcceptanceCreated": false
+  },
+  "note": "Technical receipt for unreviewed originals. It is a completed site intake only when its exact hash is pinned by the required lane aggregate. Provider/V-team screening remains attributed preliminary evidence, never a human verdict or acceptance."
+}

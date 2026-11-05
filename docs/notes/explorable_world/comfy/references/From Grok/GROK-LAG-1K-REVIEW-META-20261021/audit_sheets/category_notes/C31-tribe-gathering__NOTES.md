@@ -1,0 +1,25 @@
+# C31-tribe-gathering (Z_3)
+Refs: FACE-REF-v3 (ref1), LOOK-01. Breather: none.
+- C31-01_Z_3 SOFT PASS: vertical letters on chin (G faint), worms+eye disc, white teeth, look 01
+- C31-02: L4 S5 | GAB | preserve: dusk bonfire ring, hooded tribe, scrap rigs
+- C31-03: L5 S5 | full vertical GAIB, AL centered | preserve: vast crowd with raised fists and banners on dunes
+- C31-04: L5 S5 | full vertical GAIB; worms less open-jawed; heavy chain | preserve: masked elders, drums, torches in canyon
+- C31-05: L4 S5 | GAB | preserve: clans arriving on bikes and buggies, golden dust
+- C31-06: L4 S5 | GAB, AL stacked vertically, teeth show | preserve: car-hulk stadium crowd, smoke
+- C31-07: L3 S5 | breather variant; GAB, AL garbled, extra letters under disc | preserve: tent camp, families, water barrels
+- C31-08: L4 S5 | GIB, extra GIB under disc, teeth show | preserve: kneeling warrior rows, planted spears, sunrise
+- C31-09: L5 S5 | full vertical GAIB; extra worm head | preserve: lantern sea under stars
+- C31-10: L4 S5 | GAB, AL high, disc above worms | preserve: elder council around fire in rusted water tower
+- C31-11: L4 S5 | GAB | preserve: war-rig convoy circle, tribe on rigs, flags in storm wind
+- C31-12: L4 S5 | GAB, AL high | preserve: salt-flat crowd reaching hands toward him
+- C31-13: L4 S5 | GAB, faint extra letters under disc | preserve: cave sietch feast, eye sun-disc banners
+- C31-14: L5 S5 | full vertical GAIB; disc lacks eye | preserve: fire-poi dancers, bonfire sparks at night
+- C31-15: L4 S5 | GAB | preserve: dry riverbed under broken bridge, blue dawn tribe
+- C31-16: L4 S5 | GAB, AL high, pendant on chain | preserve: scrap market, water traders, goat
+- C31-17: L4 S5 | GAB, AL high | preserve: silhouetted tribe on dune ridge, giant red sun
+- C31-18: L5 S5 | full vertical GAIB; disc lacks eye | preserve: oil-drum drummers, refinery flares
+- C31-19: L4 S5 | GIB; worms segmented-larval, AL high | preserve: hooded pilgrim line through golden canyon
+- C31-20: L3 S4 | GAB, AL garbled, worms closed-jaw thin | preserve: cistern water sharing
+- C31-21: L4 S5 | GAB, AL high | preserve: airfield plane wrecks, crowd on wings, storm sky
+- C31-22: L4 S5 | GAB | preserve: crater amphitheater crowd, torches at dusk
+- BUILD AUDIT (Z_3, 2026-10-12): checked 1 Z_3 drafts vs slim ref; 0 dinged. Width in hooded shots is cloak, not body.

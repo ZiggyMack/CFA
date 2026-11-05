@@ -1,0 +1,6 @@
+BATCH_04 provenance note (HaL, 2026-10-30, PRELIMINARY)
+X01-X07 are over-cap extras. They came from separate extra GenerateImage calls, not additional variants inside the same 10 tool responses: some LATE-BAR calls were interrupted but still completed tool-side, and the prompts were then re-run, so both results reached the asset store.
+Exact per-call attribution is not known. X01 matches no single prompt with confidence.
+Originals preserved byte-for-byte; no deletions. Unique LATE-BAR outputs on disk: 17 (cap 10).
+
+Over-cap extras LATE-BAR-X01..X07 are NOT in this package (kept outside, read-only). The copied V return lists them as separate OVER-CAP rows; SCREENING_ROWS excludes them.

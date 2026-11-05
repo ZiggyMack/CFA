@@ -1,0 +1,24 @@
+- C20-01_Z_2_FAIL: GAIB read GABB, disc a sun not an eye
+- C20-02_Z_2_FAIL: crawling pose, tattoos small and garbled
+- C20-03_Z_2: pass, top pick: hooded, purple canyon sunset
+- C20-04_Z_2: pass, buggy convoy; GAIB last letter faint
+- C20-05_Z_2: pass, dead trees; worms extra-segmented but read well
+- C20-06_Z_2: pass (soft): moonlight; worms slightly snake-like
+- C20-07_Z_2: pass, breather image, dust storm
+- C20-08_Z_2: pass, graffiti bridge; AL a touch faint
+- C20-09_Z_2: pass, top pick: fish skeletons, crisp identity
+- C20-10_Z_2: pass, sunk pickup at dusk
+- C20-11_Z_2: pass, red cliffs cairn; worms slightly lizard-headed
+- C20-12_Z_2_FAIL: GAIB garbled to GAIAIB, canteen not inverted
+- C20-13_Z_2_FAIL: GAIB reads GAB (I missing)
+- C20-14_Z_2: pass, wanderer column
+- C20-15_Z_2: pass (soft): AL stylized, worms snake-headed
+- C20-16_Z_2: pass (soft): firelit; small stray worm marks on jaw
+- C20-17_Z_2_FAIL: worms fragmented into 4+ pieces
+- C20-18_Z_2: pass, salt-crust blue morning; GAIB slightly off-center
+- C20-19_Z_2: pass, top pick: war boy bikes, clean identity
+- C20-20_Z_2_FAIL: GAB (I missing), no eye in disc
+- C20-21_Z_2: pass, toppled pylon; worms slightly snake-headed
+- C20-22_Z_2: pass (soft): worm ridge bg; worms cobra-headed
+
+SUMMARY: requested 22, returned 22, pass 16, fail 6. Breather in C20-07. Best: C20-03, C20-09, C20-19.

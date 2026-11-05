@@ -1,0 +1,2172 @@
+{
+  "schemaVersion": 1,
+  "recordType": "read-only-CFA-Git-media-coverage-verified-long-path-followup",
+  "createdAtUTC": "2026-10-14T12:07:14.556642+00:00",
+  "author": "CFA Nova helper / sw2_result_technical_review",
+  "scope": "D:/Documents/CFA only. Root combines other repository and Google Drive findings.",
+  "initialQualifiedScanHistory": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/CFA_GIT.json",
+    "bytes": 89372,
+    "sha256": "58b87fe7ca3cf4ce28fd0be9039c79759d63e0693acb449e4f44bc73055b5e9f",
+    "preservedUnchanged": true,
+    "initialErrorsWereStatAccessFailuresNotMissingFileProof": true
+  },
+  "authorization": {
+    "userReportedFiveRepositoriesSynced": "Context to verify, not a request to repeat syncing.",
+    "mailboxMessages": [
+      "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/2c00b7e1-3596-4e44-9cc0-b6f849237cf9.json",
+      "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/messages/2da85f0d-1dc2-4bdc-9664-5c356e296ff2.json"
+    ],
+    "pickup": "Current natural stopping point; read-only check and report.",
+    "noNewWorkersOrExternalMessagesByThisAudit": true
+  },
+  "repository": {
+    "canonicalPath": "D:/Documents/CFA",
+    "canonicalName": "CFA",
+    "branch": "main",
+    "localHEAD": "e58074d0fe345e8b429ed44b5b938a82f55f1fdd",
+    "localHEADAtEnd": "e58074d0fe345e8b429ed44b5b938a82f55f1fdd",
+    "headStableDuringInventory": true,
+    "upstream": "origin/main",
+    "remoteName": "origin",
+    "upstreamBranchRef": "refs/heads/main",
+    "remoteURLSanitized": "https://github.com/ZiggyMack/CFA.git",
+    "headCommitTimestamp": "2026-10-11T15:24:16-04:00",
+    "commitTimestampIsNotPushTimestamp": true,
+    "localHEADAtFinalReadOnlyCheck": "e58074d0fe345e8b429ed44b5b938a82f55f1fdd",
+    "cachedUpstreamAtFinalReadOnlyCheck": "264c47cd3f44d1b32f3c7a8cd414d924298363f3",
+    "finalReadOnlyCheckUTC": "2026-10-14T12:07:14.556642+00:00"
+  },
+  "freshRemoteCheck": {
+    "command": "git ls-remote --exit-code origin refs/heads/main",
+    "route": "authorized read-only network escalation",
+    "startedAtUTC": "2026-10-14 11:37:43 UTC",
+    "completedAtUTC": "2026-10-14 11:37:56 UTC",
+    "exitCode": 0,
+    "refs": [
+      {
+        "sha": "e58074d0fe345e8b429ed44b5b938a82f55f1fdd",
+        "ref": "refs/heads/main"
+      }
+    ],
+    "freshRemoteEvidence": true,
+    "localRefsUpdated": false,
+    "sessionID": null,
+    "error": null
+  },
+  "defaultSandboxAttempt": {
+    "command": "git ls-remote --exit-code origin refs/heads/main",
+    "startedAtUTC": "2026-10-14T11:31:49.490808+00:00",
+    "completedAtUTC": "2026-10-14T11:31:50.492188+00:00",
+    "exitCode": 128,
+    "refs": [],
+    "stderrSanitized": "fatal: unable to access 'https://github.com/ZiggyMack/CFA.git/': Failed to connect to github.com port 443 after 867 ms: Could not connect to server\n",
+    "freshRemoteEvidence": false,
+    "localRefsUpdated": false
+  },
+  "remoteComparison": {
+    "freshRemoteHEAD": "e58074d0fe345e8b429ed44b5b938a82f55f1fdd",
+    "matchesLocalHEADAtInventoryStart": true,
+    "matchesLocalHEADAtInventoryEnd": true,
+    "interpretation": "At the fresh ls-remote checkpoint, committed main matches. This does not establish protection for changed worktree, untracked or ignored media.",
+    "sameLocalHEADStillPresentAtFinalCheck": true,
+    "freshRemoteObservationRemainsAtRecordedQueryTime": "2026-10-14 11:37:56 UTC; no later remote query is claimed."
+  },
+  "cachedTrackingStateAtFinalCheck": {
+    "head": "264c47cd3f44d1b32f3c7a8cd414d924298363f3",
+    "ahead": 0,
+    "behind": 1,
+    "checkedAtUTC": "2026-10-14T12:07:14.556642+00:00",
+    "isFreshRemoteEvidence": false
+  },
+  "pushEvidence": {
+    "latestObservedLocalTrackingRefUpdateByPush": {
+      "head": "e58074d0fe345e8b429ed44b5b938a82f55f1fdd",
+      "reflogSelector": "refs/remotes/origin/main@{2026-10-11T15:24:30-04:00}",
+      "action": "update by push"
+    },
+    "latestObservedLocalPushLogTimestampUTC": "2026-10-11T19:24:30+00:00",
+    "basis": "Actual origin/main reflog action update by push; not a commit date.",
+    "latestObservedLocalPushLogMatchesFreshRemoteHEAD": true,
+    "globalLastPushTimestamp": null,
+    "limit": "A local reflog receipt cannot establish the last push by every machine/user or the method/time of the user-reported five-repository sync. No separate receipt for a newer CFA push was identified by this scoped log read.",
+    "latestObservedLocalTrackingRefUpdateByPushAtFinalCheck": {
+      "head": "264c47cd3f44d1b32f3c7a8cd414d924298363f3",
+      "reflogSelector": "refs/remotes/origin/main@{2026-10-14T08:01:46-04:00}",
+      "action": "update by push"
+    },
+    "localPushLogRecheckedAtUTC": "2026-10-14T12:07:14.556642+00:00"
+  },
+  "gitLFSAndAttributes": {
+    "latestTrackingRefPushLogEvidence": [
+      {
+        "head": "e58074d0fe345e8b429ed44b5b938a82f55f1fdd",
+        "reflogSelector": "refs/remotes/origin/main@{2026-10-11T15:24:30-04:00}",
+        "action": "update by push"
+      },
+      {
+        "head": "29423e2383a51e2ca0626999a8542e23ac752e20",
+        "reflogSelector": "refs/remotes/origin/main@{2026-10-11T15:16:23-04:00}",
+        "action": "update by push"
+      },
+      {
+        "head": "aabe022960c502648888537d6d11fe22c11c08e2",
+        "reflogSelector": "refs/remotes/origin/main@{2026-10-10T21:23:26-04:00}",
+        "action": "update by push"
+      }
+    ],
+    "pushLogExit": 0,
+    "lfsVersion": "git-lfs/3.7.1 (GitHub; windows amd64; go 1.25.1; git b84b3384)",
+    "lfsVersionExit": 0,
+    "lfsMetadataExit": 0,
+    "lfsTrackedCount": 0,
+    "lfsTrackedMetadata": [],
+    "observedAtUTC": "2026-10-14T11:40:31.556853+00:00",
+    "trackedGitattributesPins": [
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/.gitattributes",
+        "bytes": 437,
+        "sha256": "be570b1c682e6a2e85b03518c75d2f82424c69972a29540120731b94f0c93169",
+        "filterLFSPatternLines": []
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/.gitattributes",
+        "bytes": 73,
+        "sha256": "984b70b881c6faa27a72a4528ca075664ab894ac70588ee6c88b704c1503fc96",
+        "filterLFSPatternLines": []
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/.gitattributes",
+        "bytes": 156,
+        "sha256": "9108dee6415ba132943a12ce554cfdf7e54702fcab95e296a93d0d44dba91fd5",
+        "filterLFSPatternLines": []
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/.gitattributes",
+        "bytes": 29,
+        "sha256": "51aa0b7c928616242ca520e96386c3e7362da5433a6c7410aca600adc387aca9",
+        "filterLFSPatternLines": []
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261010_mouth_grills/.gitattributes",
+        "bytes": 8,
+        "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+        "filterLFSPatternLines": []
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_20261010_working_bom/.gitattributes",
+        "bytes": 9,
+        "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992",
+        "filterLFSPatternLines": []
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/provider_opening_benchmark_20261009/.gitattributes",
+        "bytes": 91,
+        "sha256": "94afb35a0b293bf6b5f0634effb6e213731a384d68a3022bbf8725941eb8d249",
+        "filterLFSPatternLines": []
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/music_alignment_20261011/.gitattributes",
+        "bytes": 79,
+        "sha256": "477ed92a9f55750e52ae631f16c3770202a216d0e48d37ab81312e10f4c3a7e1",
+        "filterLFSPatternLines": []
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/.gitattributes",
+        "bytes": 318,
+        "sha256": "46f8bbfcb09bd4627b21e7bde2bf9ed1c151e54f62915965ec4bc077493eea5b",
+        "filterLFSPatternLines": []
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/.gitattributes",
+        "bytes": 74,
+        "sha256": "2688afba0666a8a468d4a56711bacab3e82885bfe4bd9c789dc72ac72f75a1eb",
+        "filterLFSPatternLines": []
+      },
+      {
+        "path": "docs/notes/explorable_world/pathfinder_handoff/claude_return_20261010/.gitattributes",
+        "bytes": 61,
+        "sha256": "05241ee9bd8afdc7b8ec561d49103b97e94560cfcc4b435b21d6b2ef834fa664",
+        "filterLFSPatternLines": []
+      },
+      {
+        "path": "docs/notes/explorable_world/pathfinder_handoff/pan_cfa_sync_20261010/.gitattributes",
+        "bytes": 68,
+        "sha256": "6e53f07c42a5541b3f3aef4863bbefad2409abd1b29d255a78b61d3788aadb6b",
+        "filterLFSPatternLines": []
+      },
+      {
+        "path": "docs/notes/storage/google_drive_20261009/coordination_supplement/.gitattributes",
+        "bytes": 8,
+        "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+        "filterLFSPatternLines": []
+      }
+    ]
+  },
+  "workingTreeAtFinalCheck": {
+    "checkedAtUTC": "2026-10-14T12:07:14.556642+00:00",
+    "trackedFileCount": 3777,
+    "trackedChangedPathCount": 58,
+    "indexOrWorktreeStatusCounts": {
+      " M": 50,
+      " D": 8
+    },
+    "untrackedFileCountExcludingAudit": 3203,
+    "ignoredFileCountExcludingAudit": 72119,
+    "trackedChangedPaths": [
+      {
+        "xy": " M",
+        "path": "apps/creative_studio/README.md"
+      },
+      {
+        "xy": " M",
+        "path": "apps/creative_studio/app.py"
+      },
+      {
+        "xy": " M",
+        "path": "apps/creative_studio/library_helpers.py"
+      },
+      {
+        "xy": " M",
+        "path": "apps/creative_studio/tests/test_studio.py"
+      },
+      {
+        "xy": " D",
+        "path": "docs/notes/downloads/cfa-review (1).json"
+      },
+      {
+        "xy": " D",
+        "path": "docs/notes/downloads/cfa-review (2).json"
+      },
+      {
+        "xy": " D",
+        "path": "docs/notes/downloads/cfa-review (3).json"
+      },
+      {
+        "xy": " D",
+        "path": "docs/notes/downloads/cfa-review (4).json"
+      },
+      {
+        "xy": " D",
+        "path": "docs/notes/downloads/cfa-review (5).json"
+      },
+      {
+        "xy": " D",
+        "path": "docs/notes/downloads/cfa-review-sweep (1).json"
+      },
+      {
+        "xy": " D",
+        "path": "docs/notes/downloads/cfa-review-sweep.json"
+      },
+      {
+        "xy": " D",
+        "path": "docs/notes/downloads/cfa-review.json"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/LESSONS.md"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/benchmark_roles_20261010/README.txt"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/benchmark_roles_20261010/ROLES_AND_ROTATION_CURRENT.txt"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/collaboration_authority.json"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/comfy_workflows.json"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/detail_profiles.json"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/claude/I_AM.md"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/deepseek/I_AM.md"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/kimi/I_AM.md"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/nova/I_AM.md"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/registry.json"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/mailbox/registry.json"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/mission_control.json"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/README.txt"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/source/01_CFA_PROJECT_CONTEXT.txt"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/source/02_CURRENT_WORK_AND_REVIEW.txt"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/project_context_packs_20261010/source/shared_inputs.json"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/provider_roles.txt"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/index.html"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard.html"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/boss_discovery_20261008.json"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_review_20261007/index.html"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/DECISIONS_20261010.md"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/START_HERE.txt"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/index.html"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/README.md"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/flow/project_brief.txt"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/gemini_instructions.txt"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/gemini/reference_map.txt"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/index.html"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/build_catalog.py"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/cast_collections.json"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/detail_display_groups.json"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.css"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_collaborator_profiles.cjs"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_collections_navigation.cjs"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_compact_browse.cjs"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_outfit_navigation.cjs"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_review_requests.cjs"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_scene_readiness.cjs"
+      },
+      {
+        "xy": " M",
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_working_bom.cjs"
+      }
+    ],
+    "sensitiveChangedPathsCountOnly": 0,
+    "rootCreatedAuditDirectoryExcluded": "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37"
+  },
+  "productionMedia": {
+    "metadataOnly": true,
+    "inventoryStartedAtUTC": "2026-10-14T11:59:17.843421+00:00",
+    "inventoryCompletedAtUTC": "2026-10-14T11:59:23.357327+00:00",
+    "longPathFollowupCheckedAtUTC": "2026-10-14T12:07:14.424707+00:00",
+    "finalStructuredCorrectionRecordedAtUTC": "2026-10-14T12:07:14.556642+00:00",
+    "enumerationRoot": "docs/notes",
+    "all": {
+      "filePathCount": 8780,
+      "pathOccurrenceBytes": 2693135381,
+      "uniqueLocalPhysicalFileObjects": null,
+      "uniqueLocalPhysicalFileObjectBytes": null,
+      "countsByKind": {
+        "images": 7874,
+        "videos": 82,
+        "archives": 791,
+        "audio": 33
+      },
+      "countsByGitCoverage": {
+        "tracked_clean": 233,
+        "untracked_not_in_git_index": 265,
+        "ignored_not_in_git_index": 8282
+      },
+      "bytesByGitCoverage": {
+        "ignored_not_in_git_index": 2504688303,
+        "tracked_clean": 116598570,
+        "untracked_not_in_git_index": 71848508
+      },
+      "effectiveGitFilterCounts": {
+        "unspecified": 8780
+      },
+      "newestFiles": [
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/TRACE-OVERLAY-FULL-4x_v006b.png",
+          "bytes": 123340,
+          "modifiedAtUTC": "2026-10-14T06:05:16+00:00",
+          "kind": "images",
+          "scope": "comfy",
+          "area": "Lisan Al Gaib production",
+          "gitCoverage": "ignored_not_in_git_index",
+          "effectiveGitFilter": "unspecified"
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sheets/JAMES-TATTOO-PLACEMENT-MAP_v006b.png",
+          "bytes": 1382684,
+          "modifiedAtUTC": "2026-10-14T06:05:16+00:00",
+          "kind": "images",
+          "scope": "comfy",
+          "area": "Lisan Al Gaib production",
+          "gitCoverage": "ignored_not_in_git_index",
+          "effectiveGitFilter": "unspecified"
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sheets/JAMES-TRACE-STENCIL-SHEET_v006b.png",
+          "bytes": 62645,
+          "modifiedAtUTC": "2026-10-14T06:05:16+00:00",
+          "kind": "images",
+          "scope": "comfy",
+          "area": "Lisan Al Gaib production",
+          "gitCoverage": "ignored_not_in_git_index",
+          "effectiveGitFilter": "unspecified"
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-1-CHEST_v006b.png",
+          "bytes": 28265,
+          "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+          "kind": "images",
+          "scope": "comfy",
+          "area": "Lisan Al Gaib production",
+          "gitCoverage": "ignored_not_in_git_index",
+          "effectiveGitFilter": "unspecified"
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-2-NECK_v006b.png",
+          "bytes": 5376,
+          "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+          "kind": "images",
+          "scope": "comfy",
+          "area": "Lisan Al Gaib production",
+          "gitCoverage": "ignored_not_in_git_index",
+          "effectiveGitFilter": "unspecified"
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-3-FACE_v006b.png",
+          "bytes": 4011,
+          "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+          "kind": "images",
+          "scope": "comfy",
+          "area": "Lisan Al Gaib production",
+          "gitCoverage": "ignored_not_in_git_index",
+          "effectiveGitFilter": "unspecified"
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-4-ABDOMEN_v006b.png",
+          "bytes": 7888,
+          "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+          "kind": "images",
+          "scope": "comfy",
+          "area": "Lisan Al Gaib production",
+          "gitCoverage": "ignored_not_in_git_index",
+          "effectiveGitFilter": "unspecified"
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-5-L-FOREARM-HAND_v006b.png",
+          "bytes": 11949,
+          "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+          "kind": "images",
+          "scope": "comfy",
+          "area": "Lisan Al Gaib production",
+          "gitCoverage": "ignored_not_in_git_index",
+          "effectiveGitFilter": "unspecified"
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/TRACE-OVERLAY-FULL_v006b.png",
+          "bytes": 16940,
+          "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+          "kind": "images",
+          "scope": "comfy",
+          "area": "Lisan Al Gaib production",
+          "gitCoverage": "ignored_not_in_git_index",
+          "effectiveGitFilter": "unspecified"
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sbs/SBS-1-CHEST_v006b.png",
+          "bytes": 893164,
+          "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+          "kind": "images",
+          "scope": "comfy",
+          "area": "Lisan Al Gaib production",
+          "gitCoverage": "ignored_not_in_git_index",
+          "effectiveGitFilter": "unspecified"
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sbs/SBS-2-NECK_v006b.png",
+          "bytes": 271545,
+          "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+          "kind": "images",
+          "scope": "comfy",
+          "area": "Lisan Al Gaib production",
+          "gitCoverage": "ignored_not_in_git_index",
+          "effectiveGitFilter": "unspecified"
+        },
+        {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sbs/SBS-3-FACE_v006b.png",
+          "bytes": 338490,
+          "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+          "kind": "images",
+          "scope": "comfy",
+          "area": "Lisan Al Gaib production",
+          "gitCoverage": "ignored_not_in_git_index",
+          "effectiveGitFilter": "unspecified"
+        }
+      ],
+      "physicalIdentityDeduplicationLimit": "Not recomputed across initial inventory and resolved long paths; use path-occurrence totals. Initial dedup figures remain qualified history."
+    },
+    "byScope": {
+      "comfy": {
+        "filePathCount": 8745,
+        "pathOccurrenceBytes": 2639559135,
+        "uniqueLocalPhysicalFileObjects": null,
+        "uniqueLocalPhysicalFileObjectBytes": null,
+        "countsByKind": {
+          "images": 7845,
+          "videos": 80,
+          "audio": 33,
+          "archives": 787
+        },
+        "countsByGitCoverage": {
+          "ignored_not_in_git_index": 8282,
+          "untracked_not_in_git_index": 244,
+          "tracked_clean": 219
+        },
+        "bytesByGitCoverage": {
+          "ignored_not_in_git_index": 2504688303,
+          "tracked_clean": 77881675,
+          "untracked_not_in_git_index": 56989157
+        },
+        "effectiveGitFilterCounts": {
+          "unspecified": 8745
+        },
+        "newestFiles": [
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/TRACE-OVERLAY-FULL-4x_v006b.png",
+            "bytes": 123340,
+            "modifiedAtUTC": "2026-10-14T06:05:16+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sheets/JAMES-TATTOO-PLACEMENT-MAP_v006b.png",
+            "bytes": 1382684,
+            "modifiedAtUTC": "2026-10-14T06:05:16+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sheets/JAMES-TRACE-STENCIL-SHEET_v006b.png",
+            "bytes": 62645,
+            "modifiedAtUTC": "2026-10-14T06:05:16+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-1-CHEST_v006b.png",
+            "bytes": 28265,
+            "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-2-NECK_v006b.png",
+            "bytes": 5376,
+            "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-3-FACE_v006b.png",
+            "bytes": 4011,
+            "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          }
+        ],
+        "physicalIdentityDeduplicationLimit": "Not recomputed across initial inventory and resolved long paths; use path-occurrence totals. Initial dedup figures remain qualified history."
+      },
+      "downloads_intake": {
+        "filePathCount": 27,
+        "pathOccurrenceBytes": 49689638,
+        "uniqueLocalPhysicalFileObjects": 27,
+        "uniqueLocalPhysicalFileObjectBytes": 49689638,
+        "countsByKind": {
+          "images": 21,
+          "videos": 2,
+          "archives": 4
+        },
+        "countsByGitCoverage": {
+          "tracked_clean": 6,
+          "untracked_not_in_git_index": 21
+        },
+        "bytesByGitCoverage": {
+          "tracked_clean": 34830287,
+          "untracked_not_in_git_index": 14859351
+        },
+        "effectiveGitFilterCounts": {
+          "unspecified": 27
+        },
+        "newestFiles": [
+          {
+            "path": "docs/notes/downloads/GROK-BOSS-DISCOVERY-20261008.zip",
+            "bytes": 1168139,
+            "modifiedAtUTC": "2026-10-14T03:46:43.969448+00:00",
+            "kind": "archives",
+            "scope": "downloads_intake",
+            "area": "Downloads intake",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/downloads/The_Bubble_of_Perception_Diagram.png",
+            "bytes": 6758637,
+            "modifiedAtUTC": "2026-10-13T03:59:08.486891+00:00",
+            "kind": "images",
+            "scope": "downloads_intake",
+            "area": "Downloads intake",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/downloads/FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667_20261012004113.mp4",
+            "bytes": 2325046,
+            "modifiedAtUTC": "2026-10-12T04:41:14.692039+00:00",
+            "kind": "videos",
+            "scope": "downloads_intake",
+            "area": "Downloads intake",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/downloads/GROK-HD-SB-WRITER-batch02/SB-W05-falcon-turn-v002.jpg",
+            "bytes": 238157,
+            "modifiedAtUTC": "2026-10-12T01:30:28+00:00",
+            "kind": "images",
+            "scope": "downloads_intake",
+            "area": "Downloads intake",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/downloads/GROK-HD-SB-WRITER-batch02/SB-W06-dj-station-v002.jpg",
+            "bytes": 274668,
+            "modifiedAtUTC": "2026-10-12T01:30:28+00:00",
+            "kind": "images",
+            "scope": "downloads_intake",
+            "area": "Downloads intake",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/downloads/GROK-HD-SB-WRITER-batch02/SB-W07-chewy-threequarter-v002.jpg",
+            "bytes": 276873,
+            "modifiedAtUTC": "2026-10-12T01:30:28+00:00",
+            "kind": "images",
+            "scope": "downloads_intake",
+            "area": "Downloads intake",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          }
+        ]
+      },
+      "other_notes": {
+        "filePathCount": 8,
+        "pathOccurrenceBytes": 3886608,
+        "uniqueLocalPhysicalFileObjects": 8,
+        "uniqueLocalPhysicalFileObjectBytes": 3886608,
+        "countsByKind": {
+          "images": 8
+        },
+        "countsByGitCoverage": {
+          "tracked_clean": 8
+        },
+        "bytesByGitCoverage": {
+          "tracked_clean": 3886608
+        },
+        "effectiveGitFilterCounts": {
+          "unspecified": 8
+        },
+        "newestFiles": [
+          {
+            "path": "docs/notes/storage/google_drive_20261009/prime_checkpoint_20261011/evidence/cloud_visible.jpg",
+            "bytes": 82722,
+            "modifiedAtUTC": "2026-10-11T19:07:05.866672+00:00",
+            "kind": "images",
+            "scope": "other_notes",
+            "area": "docs",
+            "gitCoverage": "tracked_clean",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/storage/google_drive_20261009/coordination_cloud_visible_20261010.jpg",
+            "bytes": 100733,
+            "modifiedAtUTC": "2026-10-10T12:27:36.524662+00:00",
+            "kind": "images",
+            "scope": "other_notes",
+            "area": "docs",
+            "gitCoverage": "tracked_clean",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/storage/google_drive_20261009/cloud_archive_visible_20261010.jpg",
+            "bytes": 94714,
+            "modifiedAtUTC": "2026-10-10T06:11:18.209389+00:00",
+            "kind": "images",
+            "scope": "other_notes",
+            "area": "docs",
+            "gitCoverage": "tracked_clean",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/visual_pass/lake_after.png",
+            "bytes": 874435,
+            "modifiedAtUTC": "2026-09-12T19:51:54.418231+00:00",
+            "kind": "images",
+            "scope": "other_notes",
+            "area": "docs",
+            "gitCoverage": "tracked_clean",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/visual_pass/pump_after.png",
+            "bytes": 1443633,
+            "modifiedAtUTC": "2026-09-12T19:51:54.399735+00:00",
+            "kind": "images",
+            "scope": "other_notes",
+            "area": "docs",
+            "gitCoverage": "tracked_clean",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/visual_pass/courtyard_after.png",
+            "bytes": 1122628,
+            "modifiedAtUTC": "2026-09-12T19:51:54.351259+00:00",
+            "kind": "images",
+            "scope": "other_notes",
+            "area": "docs",
+            "gitCoverage": "tracked_clean",
+            "effectiveGitFilter": "unspecified"
+          }
+        ]
+      }
+    },
+    "byArea": {
+      "Collaborator work and handoffs": {
+        "filePathCount": 979,
+        "pathOccurrenceBytes": 59393309,
+        "uniqueLocalPhysicalFileObjects": 979,
+        "uniqueLocalPhysicalFileObjectBytes": 59393309,
+        "countsByKind": {
+          "images": 220,
+          "archives": 737,
+          "audio": 22
+        },
+        "countsByGitCoverage": {
+          "untracked_not_in_git_index": 159,
+          "tracked_clean": 48,
+          "ignored_not_in_git_index": 772
+        },
+        "bytesByGitCoverage": {
+          "ignored_not_in_git_index": 22627479,
+          "tracked_clean": 16692155,
+          "untracked_not_in_git_index": 20073675
+        },
+        "effectiveGitFilterCounts": {
+          "unspecified": 979
+        },
+        "newestFiles": [
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/review_export_cleanup_20261014/older_review_exports.zip",
+            "bytes": 620782,
+            "modifiedAtUTC": "2026-10-14T03:42:13.826654+00:00",
+            "kind": "archives",
+            "scope": "comfy",
+            "area": "Collaborator work and handoffs",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/collaborators/onboarding_current_20261011/kimi/daimon-share/daimon/plugin-packages/kimi-word/icon.png",
+            "bytes": 1072,
+            "modifiedAtUTC": "2026-10-14T02:56:01.778995+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Collaborator work and handoffs",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/collaborators/onboarding_current_20261011/kimi/daimon-share/daimon/runtime/kimi-code/home/plugins/managed/kimi-word/icon.png",
+            "bytes": 1072,
+            "modifiedAtUTC": "2026-10-14T02:56:01.778995+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Collaborator work and handoffs",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          }
+        ]
+      },
+      "Comfy received references": {
+        "filePathCount": 4723,
+        "pathOccurrenceBytes": 1578186612,
+        "uniqueLocalPhysicalFileObjects": 4723,
+        "uniqueLocalPhysicalFileObjectBytes": 1578186612,
+        "countsByKind": {
+          "images": 4653,
+          "videos": 30,
+          "archives": 39,
+          "audio": 1
+        },
+        "countsByGitCoverage": {
+          "tracked_clean": 16,
+          "ignored_not_in_git_index": 4706,
+          "untracked_not_in_git_index": 1
+        },
+        "bytesByGitCoverage": {
+          "ignored_not_in_git_index": 1566382248,
+          "tracked_clean": 5045727,
+          "untracked_not_in_git_index": 6758637
+        },
+        "effectiveGitFilterCounts": {
+          "unspecified": 4723
+        },
+        "newestFiles": [
+          {
+            "path": "docs/notes/explorable_world/comfy/references/From NotebookLM/NQ-NAGUAL-R3-20261013/20261013_infographic_two-halves-one-gate.png",
+            "bytes": 6758637,
+            "modifiedAtUTC": "2026-10-13T04:01:41.866045+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Comfy received references",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-VIS-NATURAL-v002/01_VISEMES/VIS-LAG-16_BITE-UPPER-LIP_try-zD1-src_Z_3.jpg",
+            "bytes": 344336,
+            "modifiedAtUTC": "2026-10-13T02:42:36+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Comfy received references",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-VIS-NATURAL-v002/01_VISEMES/VIS-LAG-16_BITE-UPPER-LIP_try-zD2-src_Z_3.jpg",
+            "bytes": 304936,
+            "modifiedAtUTC": "2026-10-13T02:42:36+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Comfy received references",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          }
+        ]
+      },
+      "Downloads intake": {
+        "filePathCount": 27,
+        "pathOccurrenceBytes": 49689638,
+        "uniqueLocalPhysicalFileObjects": 27,
+        "uniqueLocalPhysicalFileObjectBytes": 49689638,
+        "countsByKind": {
+          "images": 21,
+          "videos": 2,
+          "archives": 4
+        },
+        "countsByGitCoverage": {
+          "tracked_clean": 6,
+          "untracked_not_in_git_index": 21
+        },
+        "bytesByGitCoverage": {
+          "tracked_clean": 34830287,
+          "untracked_not_in_git_index": 14859351
+        },
+        "effectiveGitFilterCounts": {
+          "unspecified": 27
+        },
+        "newestFiles": [
+          {
+            "path": "docs/notes/downloads/GROK-BOSS-DISCOVERY-20261008.zip",
+            "bytes": 1168139,
+            "modifiedAtUTC": "2026-10-14T03:46:43.969448+00:00",
+            "kind": "archives",
+            "scope": "downloads_intake",
+            "area": "Downloads intake",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/downloads/The_Bubble_of_Perception_Diagram.png",
+            "bytes": 6758637,
+            "modifiedAtUTC": "2026-10-13T03:59:08.486891+00:00",
+            "kind": "images",
+            "scope": "downloads_intake",
+            "area": "Downloads intake",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/downloads/FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667_20261012004113.mp4",
+            "bytes": 2325046,
+            "modifiedAtUTC": "2026-10-12T04:41:14.692039+00:00",
+            "kind": "videos",
+            "scope": "downloads_intake",
+            "area": "Downloads intake",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          }
+        ]
+      },
+      "Hon Dolo production": {
+        "filePathCount": 692,
+        "pathOccurrenceBytes": 470458750,
+        "uniqueLocalPhysicalFileObjects": 692,
+        "uniqueLocalPhysicalFileObjectBytes": 470458750,
+        "countsByKind": {
+          "audio": 6,
+          "images": 642,
+          "videos": 37,
+          "archives": 7
+        },
+        "countsByGitCoverage": {
+          "ignored_not_in_git_index": 473,
+          "tracked_clean": 154,
+          "untracked_not_in_git_index": 65
+        },
+        "bytesByGitCoverage": {
+          "ignored_not_in_git_index": 386873158,
+          "tracked_clean": 55383523,
+          "untracked_not_in_git_index": 28202069
+        },
+        "effectiveGitFilterCounts": {
+          "unspecified": 692
+        },
+        "newestFiles": [
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_delivery_20261014/ACK.jpg",
+            "bytes": 149365,
+            "modifiedAtUTC": "2026-10-14T05:37:22.686398+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Hon Dolo production",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_delivery_20261014/DISPATCH.jpg",
+            "bytes": 105021,
+            "modifiedAtUTC": "2026-10-14T05:35:53.004722+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Hon Dolo production",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/comfy/cantina_toast_identity_20261012/CLOUD_PREFLIGHT_EVIDENCE/IDENTITY_JOB_ae13aefd_REPAIRED_PREVIEW.png",
+            "bytes": 86770,
+            "modifiedAtUTC": "2026-10-13T01:33:06.690386+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Hon Dolo production",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          }
+        ]
+      },
+      "Lisan Al Gaib production": {
+        "filePathCount": 1121,
+        "pathOccurrenceBytes": 427914112,
+        "uniqueLocalPhysicalFileObjects": null,
+        "uniqueLocalPhysicalFileObjectBytes": null,
+        "countsByKind": {
+          "archives": 4,
+          "audio": 2,
+          "images": 1111,
+          "videos": 4
+        },
+        "countsByGitCoverage": {
+          "ignored_not_in_git_index": 1120,
+          "tracked_clean": 1
+        },
+        "bytesByGitCoverage": {
+          "ignored_not_in_git_index": 427153842,
+          "tracked_clean": 760270
+        },
+        "effectiveGitFilterCounts": {
+          "unspecified": 1121
+        },
+        "newestFiles": [
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/TRACE-OVERLAY-FULL-4x_v006b.png",
+            "bytes": 123340,
+            "modifiedAtUTC": "2026-10-14T06:05:16+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sheets/JAMES-TATTOO-PLACEMENT-MAP_v006b.png",
+            "bytes": 1382684,
+            "modifiedAtUTC": "2026-10-14T06:05:16+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sheets/JAMES-TRACE-STENCIL-SHEET_v006b.png",
+            "bytes": 62645,
+            "modifiedAtUTC": "2026-10-14T06:05:16+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          }
+        ],
+        "physicalIdentityDeduplicationLimit": "Not recomputed across initial inventory and resolved long paths; use path-occurrence totals. Initial dedup figures remain qualified history."
+      },
+      "Other Comfy workshop": {
+        "filePathCount": 1211,
+        "pathOccurrenceBytes": 101651576,
+        "uniqueLocalPhysicalFileObjects": 1211,
+        "uniqueLocalPhysicalFileObjectBytes": 101651576,
+        "countsByKind": {
+          "images": 1200,
+          "videos": 9,
+          "audio": 2
+        },
+        "countsByGitCoverage": {
+          "ignored_not_in_git_index": 1211
+        },
+        "bytesByGitCoverage": {
+          "ignored_not_in_git_index": 101651576
+        },
+        "effectiveGitFilterCounts": {
+          "unspecified": 1211
+        },
+        "newestFiles": [
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/review_previews_20261008/41cf41b5b24e02f75d8bb451aaf6d28daa0ee3926b602d40f670da0ac50e5db1.jpg",
+            "bytes": 32389,
+            "modifiedAtUTC": "2026-10-09T06:18:47.338978+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Other Comfy workshop",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/review_previews_20261008/8b5fef5f0b7097a236557ae2873de3512bca3cf51347c29edc7cd7e9fd33fabb.jpg",
+            "bytes": 26025,
+            "modifiedAtUTC": "2026-10-09T06:18:47.284505+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Other Comfy workshop",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/review_previews_20261008/dcaf71bfc803abe982dbc45ad11caf586801408c5b42bc3775b0a88b634f737c.jpg",
+            "bytes": 33363,
+            "modifiedAtUTC": "2026-10-09T06:18:47.248527+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Other Comfy workshop",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          }
+        ]
+      },
+      "Visual library site": {
+        "filePathCount": 19,
+        "pathOccurrenceBytes": 1954776,
+        "uniqueLocalPhysicalFileObjects": 19,
+        "uniqueLocalPhysicalFileObjectBytes": 1954776,
+        "countsByKind": {
+          "images": 19
+        },
+        "countsByGitCoverage": {
+          "untracked_not_in_git_index": 19
+        },
+        "bytesByGitCoverage": {
+          "untracked_not_in_git_index": 1954776
+        },
+        "effectiveGitFilterCounts": {
+          "unspecified": 19
+        },
+        "newestFiles": [
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/visual_library/grok_source_relocation_20261012/GROK_COMPLETION_SENT.png",
+            "bytes": 147569,
+            "modifiedAtUTC": "2026-10-12T17:47:52.674977+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Visual library site",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/visual_library/lisan_mouth_seven_review_20261012/PUBLISHED_SNARL_REVIEW.png",
+            "bytes": 111713,
+            "modifiedAtUTC": "2026-10-12T17:46:58.264412+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Visual library site",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/visual_library/cantina_toast_review_20261012/PUBLISHED_REVIEW.png",
+            "bytes": 83114,
+            "modifiedAtUTC": "2026-10-12T17:46:18.836961+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Visual library site",
+            "gitCoverage": "untracked_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          }
+        ]
+      },
+      "docs": {
+        "filePathCount": 8,
+        "pathOccurrenceBytes": 3886608,
+        "uniqueLocalPhysicalFileObjects": 8,
+        "uniqueLocalPhysicalFileObjectBytes": 3886608,
+        "countsByKind": {
+          "images": 8
+        },
+        "countsByGitCoverage": {
+          "tracked_clean": 8
+        },
+        "bytesByGitCoverage": {
+          "tracked_clean": 3886608
+        },
+        "effectiveGitFilterCounts": {
+          "unspecified": 8
+        },
+        "newestFiles": [
+          {
+            "path": "docs/notes/storage/google_drive_20261009/prime_checkpoint_20261011/evidence/cloud_visible.jpg",
+            "bytes": 82722,
+            "modifiedAtUTC": "2026-10-11T19:07:05.866672+00:00",
+            "kind": "images",
+            "scope": "other_notes",
+            "area": "docs",
+            "gitCoverage": "tracked_clean",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/storage/google_drive_20261009/coordination_cloud_visible_20261010.jpg",
+            "bytes": 100733,
+            "modifiedAtUTC": "2026-10-10T12:27:36.524662+00:00",
+            "kind": "images",
+            "scope": "other_notes",
+            "area": "docs",
+            "gitCoverage": "tracked_clean",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/storage/google_drive_20261009/cloud_archive_visible_20261010.jpg",
+            "bytes": 94714,
+            "modifiedAtUTC": "2026-10-10T06:11:18.209389+00:00",
+            "kind": "images",
+            "scope": "other_notes",
+            "area": "docs",
+            "gitCoverage": "tracked_clean",
+            "effectiveGitFilter": "unspecified"
+          }
+        ]
+      }
+    },
+    "newerMtimeThanHEADCommit": {
+      "summary": {
+        "filePathCount": 4125,
+        "pathOccurrenceBytes": 1206346291,
+        "uniqueLocalPhysicalFileObjects": 4125,
+        "uniqueLocalPhysicalFileObjectBytes": 1206346291,
+        "countsByKind": {
+          "videos": 15,
+          "archives": 7,
+          "images": 4099,
+          "audio": 4
+        },
+        "countsByGitCoverage": {
+          "untracked_not_in_git_index": 117,
+          "ignored_not_in_git_index": 4008
+        },
+        "bytesByGitCoverage": {
+          "ignored_not_in_git_index": 1153506069,
+          "untracked_not_in_git_index": 52840222
+        },
+        "effectiveGitFilterCounts": {
+          "unspecified": 4125
+        },
+        "newestFiles": [
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/TRACE-OVERLAY-FULL-4x_v006b.png",
+            "bytes": 123340,
+            "modifiedAtUTC": "2026-10-14T06:05:16+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sheets/JAMES-TATTOO-PLACEMENT-MAP_v006b.png",
+            "bytes": 1382684,
+            "modifiedAtUTC": "2026-10-14T06:05:16+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sheets/JAMES-TRACE-STENCIL-SHEET_v006b.png",
+            "bytes": 62645,
+            "modifiedAtUTC": "2026-10-14T06:05:16+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-1-CHEST_v006b.png",
+            "bytes": 28265,
+            "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-2-NECK_v006b.png",
+            "bytes": 5376,
+            "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-3-FACE_v006b.png",
+            "bytes": 4011,
+            "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-4-ABDOMEN_v006b.png",
+            "bytes": 7888,
+            "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/JAMES-TRACE-ZONE-5-L-FOREARM-HAND_v006b.png",
+            "bytes": 11949,
+            "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/individual/TRACE-OVERLAY-FULL_v006b.png",
+            "bytes": 16940,
+            "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sbs/SBS-1-CHEST_v006b.png",
+            "bytes": 893164,
+            "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sbs/SBS-2-NECK_v006b.png",
+            "bytes": 271545,
+            "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          },
+          {
+            "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/handoffs/james_gun_removal_20261014/received/stencil_set_v006b_photo_trace/james_stencil_v006b/sbs/SBS-3-FACE_v006b.png",
+            "bytes": 338490,
+            "modifiedAtUTC": "2026-10-14T06:05:14+00:00",
+            "kind": "images",
+            "scope": "comfy",
+            "area": "Lisan Al Gaib production",
+            "gitCoverage": "ignored_not_in_git_index",
+            "effectiveGitFilter": "unspecified"
+          }
+        ]
+      },
+      "note": "File mtime only; neither a backup cutoff nor push time."
+    },
+    "unresolvedStatErrors": [],
+    "initialStatErrorsCount": 65,
+    "allInitialStatErrorsResolvedAsExistingRegularFiles": true,
+    "resolvedLongPathCount": 65,
+    "resolvedLongPathBytes": 20005942,
+    "resolvedLongPathRecords": [
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part01/LAG-L01-mirror-voice-signature.zip.contents/LAG-L01-mirror-voice-signature/LAG-L01-mirror-voice-signature__S1-worm-ride-sunrise.jpg",
+        "bytes": 352009,
+        "modifiedAtUTC": "2026-10-09T02:16:18.968683+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part01/LAG-L01-mirror-voice-signature.zip.contents/LAG-L01-mirror-voice-signature/LAG-L01-mirror-voice-signature__S4-convoy-swallowed.jpg",
+        "bytes": 368944,
+        "modifiedAtUTC": "2026-10-09T02:16:19.025266+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part01/LAG-L01-mirror-voice-signature.zip.contents/LAG-L01-mirror-voice-signature/LAG-L01-mirror-voice-signature__S5-statue-reflection.jpg",
+        "bytes": 253426,
+        "modifiedAtUTC": "2026-10-09T02:16:19.048809+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part01/LAG-L04-panhandlers-chef-whites.zip.contents/LAG-L04-panhandlers-chef-whites/LAG-L04-panhandlers-chef-whites__S1-midnight-rush.jpg",
+        "bytes": 290638,
+        "modifiedAtUTC": "2026-10-09T02:16:19.644531+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part01/LAG-L04-panhandlers-chef-whites.zip.contents/LAG-L04-panhandlers-chef-whites/LAG-L04-panhandlers-chef-whites__S2-cook-off-rival.jpg",
+        "bytes": 262138,
+        "modifiedAtUTC": "2026-10-09T02:16:19.661601+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part01/LAG-L04-panhandlers-chef-whites.zip.contents/LAG-L04-panhandlers-chef-whites/LAG-L04-panhandlers-chef-whites__S3-feeding-the-block.jpg",
+        "bytes": 313913,
+        "modifiedAtUTC": "2026-10-09T02:16:19.677607+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part01/LAG-L04-panhandlers-chef-whites.zip.contents/LAG-L04-panhandlers-chef-whites/LAG-L04-panhandlers-chef-whites__S4-spice-bazaar.jpg",
+        "bytes": 289971,
+        "modifiedAtUTC": "2026-10-09T02:16:19.691636+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part01/LAG-L04-panhandlers-chef-whites.zip.contents/LAG-L04-panhandlers-chef-whites/LAG-L04-panhandlers-chef-whites__S5-forging-the-pan.jpg",
+        "bytes": 272009,
+        "modifiedAtUTC": "2026-10-09T02:16:19.707169+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part01/LAG-L06-dare-cliff-scarf-robe.zip.contents/LAG-L06-dare-cliff-scarf-robe/LAG-L06-dare-cliff-scarf-robe__S2-canyon-skimmer-chase.jpg",
+        "bytes": 318313,
+        "modifiedAtUTC": "2026-10-09T02:16:20.158883+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part02/LAG-L07-rorrim-mirror-shard-jacket.zip.contents/LAG-L07-rorrim-mirror-shard-jacket/CONTACT-LAG-L07-rorrim-mirror-shard-jacket.jpg",
+        "bytes": 472942,
+        "modifiedAtUTC": "2026-10-09T02:16:20.665502+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part02/LAG-L07-rorrim-mirror-shard-jacket.zip.contents/LAG-L07-rorrim-mirror-shard-jacket/LAG-L07-rorrim-mirror-shard-jacket__S1-mirror-realm-duel.jpg",
+        "bytes": 456399,
+        "modifiedAtUTC": "2026-10-09T02:16:20.493216+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part02/LAG-L07-rorrim-mirror-shard-jacket.zip.contents/LAG-L07-rorrim-mirror-shard-jacket/LAG-L07-rorrim-mirror-shard-jacket__S2-shard-storm.jpg",
+        "bytes": 353322,
+        "modifiedAtUTC": "2026-10-09T02:16:20.517246+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part02/LAG-L07-rorrim-mirror-shard-jacket.zip.contents/LAG-L07-rorrim-mirror-shard-jacket/LAG-L07-rorrim-mirror-shard-jacket__S3-hall-of-selves.jpg",
+        "bytes": 333873,
+        "modifiedAtUTC": "2026-10-09T02:16:20.542784+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part02/LAG-L07-rorrim-mirror-shard-jacket.zip.contents/LAG-L07-rorrim-mirror-shard-jacket/LAG-L07-rorrim-mirror-shard-jacket__S4-breaking-out.jpg",
+        "bytes": 428377,
+        "modifiedAtUTC": "2026-10-09T02:16:20.580358+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part02/LAG-L07-rorrim-mirror-shard-jacket.zip.contents/LAG-L07-rorrim-mirror-shard-jacket/LAG-L07-rorrim-mirror-shard-jacket__S5-maze-guide.jpg",
+        "bytes": 323123,
+        "modifiedAtUTC": "2026-10-09T02:16:20.608951+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part02/LAG-L07-rorrim-mirror-shard-jacket.zip.contents/LAG-L07-rorrim-mirror-shard-jacket/LAG-L07-rorrim-mirror-shard-jacket__V1-chestup.jpg",
+        "bytes": 395377,
+        "modifiedAtUTC": "2026-10-09T02:16:20.376355+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part02/LAG-L07-rorrim-mirror-shard-jacket.zip.contents/LAG-L07-rorrim-mirror-shard-jacket/LAG-L07-rorrim-mirror-shard-jacket__V2-front.jpg",
+        "bytes": 314937,
+        "modifiedAtUTC": "2026-10-09T02:16:20.408583+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part02/LAG-L07-rorrim-mirror-shard-jacket.zip.contents/LAG-L07-rorrim-mirror-shard-jacket/LAG-L07-rorrim-mirror-shard-jacket__V3-left.jpg",
+        "bytes": 224217,
+        "modifiedAtUTC": "2026-10-09T02:16:20.425609+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part02/LAG-L07-rorrim-mirror-shard-jacket.zip.contents/LAG-L07-rorrim-mirror-shard-jacket/LAG-L07-rorrim-mirror-shard-jacket__V4-right.jpg",
+        "bytes": 238329,
+        "modifiedAtUTC": "2026-10-09T02:16:20.450647+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part02/LAG-L07-rorrim-mirror-shard-jacket.zip.contents/LAG-L07-rorrim-mirror-shard-jacket/LAG-L07-rorrim-mirror-shard-jacket__V5-back.jpg",
+        "bytes": 274399,
+        "modifiedAtUTC": "2026-10-09T02:16:20.468664+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part02/LAG-L08-mirror-wall-velvet-suit.zip.contents/LAG-L08-mirror-wall-velvet-suit/LAG-L08-mirror-wall-velvet-suit__S1-masquerade-entrance.jpg",
+        "bytes": 287382,
+        "modifiedAtUTC": "2026-10-09T02:16:20.811339+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part02/LAG-L08-mirror-wall-velvet-suit.zip.contents/LAG-L08-mirror-wall-velvet-suit/LAG-L08-mirror-wall-velvet-suit__S2-mirror-queen.jpg",
+        "bytes": 316197,
+        "modifiedAtUTC": "2026-10-09T02:16:20.831289+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part02/LAG-L08-mirror-wall-velvet-suit.zip.contents/LAG-L08-mirror-wall-velvet-suit/LAG-L08-mirror-wall-velvet-suit__S3-ballroom-duel.jpg",
+        "bytes": 259605,
+        "modifiedAtUTC": "2026-10-09T02:16:20.849324+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part02/LAG-L08-mirror-wall-velvet-suit.zip.contents/LAG-L08-mirror-wall-velvet-suit/LAG-L08-mirror-wall-velvet-suit__S4-behind-the-mirror.jpg",
+        "bytes": 332673,
+        "modifiedAtUTC": "2026-10-09T02:16:20.870855+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part02/LAG-L08-mirror-wall-velvet-suit.zip.contents/LAG-L08-mirror-wall-velvet-suit/LAG-L08-mirror-wall-velvet-suit__S5-dawn-after-ball.jpg",
+        "bytes": 285121,
+        "modifiedAtUTC": "2026-10-09T02:16:20.889379+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part02/LAG-L10-buried-deep-stillsuit.zip.contents/LAG-L10-buried-deep-stillsuit/LAG-L10-buried-deep-stillsuit__S2-ornithopter-dogfight.jpg",
+        "bytes": 265071,
+        "modifiedAtUTC": "2026-10-09T02:16:21.309704+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part03/LAG-L15-baddest-mirror-bomber.zip.contents/LAG-L15-baddest-mirror-bomber/LAG-L15-baddest-mirror-bomber__S2-green-room-contract.jpg",
+        "bytes": 216357,
+        "modifiedAtUTC": "2026-10-09T02:16:22.537940+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part03/LAG-L20-pan-hot-sleeveless-vest.zip.contents/LAG-L20-pan-hot-sleeveless-vest/LAG-L20-pan-hot-sleeveless-vest__S1-climbing-the-worm.jpg",
+        "bytes": 392186,
+        "modifiedAtUTC": "2026-10-09T02:16:23.640172+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part03/LAG-L20-pan-hot-sleeveless-vest.zip.contents/LAG-L20-pan-hot-sleeveless-vest/LAG-L20-pan-hot-sleeveless-vest__S2-heat-of-forge.jpg",
+        "bytes": 272374,
+        "modifiedAtUTC": "2026-10-09T02:16:23.653689+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part03/LAG-L20-pan-hot-sleeveless-vest.zip.contents/LAG-L20-pan-hot-sleeveless-vest/LAG-L20-pan-hot-sleeveless-vest__S3-bazaar-brawl.jpg",
+        "bytes": 352019,
+        "modifiedAtUTC": "2026-10-09T02:16:23.687241+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part03/LAG-L20-pan-hot-sleeveless-vest.zip.contents/LAG-L20-pan-hot-sleeveless-vest/LAG-L20-pan-hot-sleeveless-vest__S4-hidden-cistern.jpg",
+        "bytes": 298598,
+        "modifiedAtUTC": "2026-10-09T02:16:23.701256+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part03/LAG-L20-pan-hot-sleeveless-vest.zip.contents/LAG-L20-pan-hot-sleeveless-vest/LAG-L20-pan-hot-sleeveless-vest__S5-fixing-thumper.jpg",
+        "bytes": 285651,
+        "modifiedAtUTC": "2026-10-09T02:16:23.714769+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part04/LAG-L22-angel-knows-white-suit.zip.contents/LAG-L22-angel-knows-white-suit/LAG-L22-angel-knows-white-suit__S1-cathedral-wings.jpg",
+        "bytes": 298089,
+        "modifiedAtUTC": "2026-10-09T02:16:24.027630+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part04/LAG-L22-angel-knows-white-suit.zip.contents/LAG-L22-angel-knows-white-suit/LAG-L22-angel-knows-white-suit__S4-bedside-sunrise.jpg",
+        "bytes": 224093,
+        "modifiedAtUTC": "2026-10-09T02:16:24.072695+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part04/LAG-L22-angel-knows-white-suit.zip.contents/LAG-L22-angel-knows-white-suit/LAG-L22-angel-knows-white-suit__S5-feathers-over-city.jpg",
+        "bytes": 243135,
+        "modifiedAtUTC": "2026-10-09T02:16:24.087210+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part04/LAG-L24-engineers-graphic-hoodie.zip.contents/LAG-L24-engineers-graphic-hoodie/LAG-L24-engineers-graphic-hoodie__S1-four-am-session.jpg",
+        "bytes": 249317,
+        "modifiedAtUTC": "2026-10-09T02:16:24.441170+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part04/LAG-L24-engineers-graphic-hoodie.zip.contents/LAG-L24-engineers-graphic-hoodie/LAG-L24-engineers-graphic-hoodie__S2-machine-wakes.jpg",
+        "bytes": 393054,
+        "modifiedAtUTC": "2026-10-09T02:16:24.459208+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part04/LAG-L24-engineers-graphic-hoodie.zip.contents/LAG-L24-engineers-graphic-hoodie/LAG-L24-engineers-graphic-hoodie__S3-studio-blackout.jpg",
+        "bytes": 162791,
+        "modifiedAtUTC": "2026-10-09T02:16:24.472717+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part04/LAG-L24-engineers-graphic-hoodie.zip.contents/LAG-L24-engineers-graphic-hoodie/LAG-L24-engineers-graphic-hoodie__S4-field-recording.jpg",
+        "bytes": 241012,
+        "modifiedAtUTC": "2026-10-09T02:16:24.488845+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part04/LAG-L24-engineers-graphic-hoodie.zip.contents/LAG-L24-engineers-graphic-hoodie/LAG-L24-engineers-graphic-hoodie__S5-rooftop-cypher.jpg",
+        "bytes": 235094,
+        "modifiedAtUTC": "2026-10-09T02:16:24.505260+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part04/LAG-L25-designing-convo-techwear.zip.contents/LAG-L25-designing-convo-techwear/LAG-L25-designing-convo-techwear__S1-hacker-den.jpg",
+        "bytes": 300884,
+        "modifiedAtUTC": "2026-10-09T02:16:24.659488+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part04/LAG-L25-designing-convo-techwear.zip.contents/LAG-L25-designing-convo-techwear/LAG-L25-designing-convo-techwear__S2-echo-interface.jpg",
+        "bytes": 277595,
+        "modifiedAtUTC": "2026-10-09T02:16:24.680022+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part04/LAG-L25-designing-convo-techwear.zip.contents/LAG-L25-designing-convo-techwear/LAG-L25-designing-convo-techwear__S3-atrium-escape.jpg",
+        "bytes": 271824,
+        "modifiedAtUTC": "2026-10-09T02:16:24.700530+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part04/LAG-L25-designing-convo-techwear.zip.contents/LAG-L25-designing-convo-techwear/LAG-L25-designing-convo-techwear__S4-neon-drop.jpg",
+        "bytes": 294561,
+        "modifiedAtUTC": "2026-10-09T02:16:24.719554+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part04/LAG-L25-designing-convo-techwear.zip.contents/LAG-L25-designing-convo-techwear/LAG-L25-designing-convo-techwear__S5-server-farm-sand.jpg",
+        "bytes": 281676,
+        "modifiedAtUTC": "2026-10-09T02:16:24.736588+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part04/LAG-L27-claim-cards-sand-robe.zip.contents/LAG-L27-claim-cards-sand-robe/LAG-L27-claim-cards-sand-robe__S3-amphitheater-card-duel.jpg",
+        "bytes": 357121,
+        "modifiedAtUTC": "2026-10-09T02:16:25.287047+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part06/LAG-L38-tail-recursion-monochrome.zip.contents/LAG-L38-tail-recursion-monochrome/LAG-L38-tail-recursion-monochrome__S1-infinite-staircase.jpg",
+        "bytes": 336758,
+        "modifiedAtUTC": "2026-10-09T02:16:28.100402+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part06/LAG-L38-tail-recursion-monochrome.zip.contents/LAG-L38-tail-recursion-monochrome/LAG-L38-tail-recursion-monochrome__S2-the-loop.jpg",
+        "bytes": 275804,
+        "modifiedAtUTC": "2026-10-09T02:16:28.117388+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part06/LAG-L38-tail-recursion-monochrome.zip.contents/LAG-L38-tail-recursion-monochrome/LAG-L38-tail-recursion-monochrome__S3-clock-tower.jpg",
+        "bytes": 350553,
+        "modifiedAtUTC": "2026-10-09T02:16:28.134378+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part06/LAG-L38-tail-recursion-monochrome.zip.contents/LAG-L38-tail-recursion-monochrome/LAG-L38-tail-recursion-monochrome__S4-fractal-battle.jpg",
+        "bytes": 307648,
+        "modifiedAtUTC": "2026-10-09T02:16:28.152367+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part06/LAG-L38-tail-recursion-monochrome.zip.contents/LAG-L38-tail-recursion-monochrome/LAG-L38-tail-recursion-monochrome__S5-spiral-garden.jpg",
+        "bytes": 380796,
+        "modifiedAtUTC": "2026-10-09T02:16:28.169861+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part06/LAG-L38-tail-recursion-monochrome.zip.contents/LAG-L38-tail-recursion-monochrome/LAG-L38-tail-recursion-monochrome__V1-chestup.jpg",
+        "bytes": 258783,
+        "modifiedAtUTC": "2026-10-09T02:16:28.020943+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part06/LAG-L41-who-let-you-in-mansion.zip.contents/LAG-L41-who-let-you-in-mansion/LAG-L41-who-let-you-in-mansion__S2-desert-reclaims.jpg",
+        "bytes": 376880,
+        "modifiedAtUTC": "2026-10-09T02:16:28.731539+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part06/LAG-L41-who-let-you-in-mansion.zip.contents/LAG-L41-who-let-you-in-mansion/LAG-L41-who-let-you-in-mansion__S4-courtyard-mirrors.jpg",
+        "bytes": 454470,
+        "modifiedAtUTC": "2026-10-09T02:16:28.779510+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part07/LAG-L42-knees-sandstorm-torn-cloak.zip.contents/LAG-L42-knees-sandstorm-torn-cloak/CONTACT-LAG-L42-knees-sandstorm-torn-cloak.jpg",
+        "bytes": 361051,
+        "modifiedAtUTC": "2026-10-09T02:16:29.055350+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part07/LAG-L42-knees-sandstorm-torn-cloak.zip.contents/LAG-L42-knees-sandstorm-torn-cloak/LAG-L42-knees-sandstorm-torn-cloak__S1-out-of-storm.jpg",
+        "bytes": 396019,
+        "modifiedAtUTC": "2026-10-09T02:16:28.973895+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part07/LAG-L42-knees-sandstorm-torn-cloak.zip.contents/LAG-L42-knees-sandstorm-torn-cloak/LAG-L42-knees-sandstorm-torn-cloak__S2-storm-battle.jpg",
+        "bytes": 357851,
+        "modifiedAtUTC": "2026-10-09T02:16:28.989885+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part07/LAG-L42-knees-sandstorm-torn-cloak.zip.contents/LAG-L42-knees-sandstorm-torn-cloak/LAG-L42-knees-sandstorm-torn-cloak__S3-brought-to-knees.jpg",
+        "bytes": 322071,
+        "modifiedAtUTC": "2026-10-09T02:16:29.004877+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part07/LAG-L42-knees-sandstorm-torn-cloak.zip.contents/LAG-L42-knees-sandstorm-torn-cloak/LAG-L42-knees-sandstorm-torn-cloak__S4-through-the-storm.jpg",
+        "bytes": 320714,
+        "modifiedAtUTC": "2026-10-09T02:16:29.020866+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part07/LAG-L42-knees-sandstorm-torn-cloak.zip.contents/LAG-L42-knees-sandstorm-torn-cloak/LAG-L42-knees-sandstorm-torn-cloak__S5-storm-clears.jpg",
+        "bytes": 363783,
+        "modifiedAtUTC": "2026-10-09T02:16:29.036362+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part07/LAG-L42-knees-sandstorm-torn-cloak.zip.contents/LAG-L42-knees-sandstorm-torn-cloak/LAG-L42-knees-sandstorm-torn-cloak__V1-chestup.jpg",
+        "bytes": 305014,
+        "modifiedAtUTC": "2026-10-09T02:16:28.902434+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part07/LAG-L42-knees-sandstorm-torn-cloak.zip.contents/LAG-L42-knees-sandstorm-torn-cloak/LAG-L42-knees-sandstorm-torn-cloak__V2-front.jpg",
+        "bytes": 237396,
+        "modifiedAtUTC": "2026-10-09T02:16:28.916425+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part07/LAG-L42-knees-sandstorm-torn-cloak.zip.contents/LAG-L42-knees-sandstorm-torn-cloak/LAG-L42-knees-sandstorm-torn-cloak__V3-left.jpg",
+        "bytes": 234592,
+        "modifiedAtUTC": "2026-10-09T02:16:28.930416+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part07/LAG-L42-knees-sandstorm-torn-cloak.zip.contents/LAG-L42-knees-sandstorm-torn-cloak/LAG-L42-knees-sandstorm-torn-cloak__V4-right.jpg",
+        "bytes": 201290,
+        "modifiedAtUTC": "2026-10-09T02:16:28.943408+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      },
+      {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/content/LAG-500-MASTER-part07/LAG-L42-knees-sandstorm-torn-cloak.zip.contents/LAG-L42-knees-sandstorm-torn-cloak/LAG-L42-knees-sandstorm-torn-cloak__V5-back.jpg",
+        "bytes": 234333,
+        "modifiedAtUTC": "2026-10-09T02:16:28.957400+00:00",
+        "kind": "images",
+        "scope": "comfy",
+        "area": "Lisan Al Gaib production",
+        "gitCoverage": "ignored_not_in_git_index",
+        "effectiveGitFilter": "unspecified"
+      }
+    ],
+    "windowsStatMethod": "Read-only os.stat with extended-length absolute Windows prefix; same D:/Documents/CFA target paths. No contents read, edits or moves.",
+    "scanExclusionsFromInitialHistory": {
+      "skippedAuditReparseOrSensitiveDirectoryCount": 1,
+      "sensitiveMediaPathCountOmitted": 0
+    },
+    "countDefinitions": "File-path bytes count hardlink aliases as separate paths. Unique-local-physical counts deduplicate device/inode metadata only; they neither deduplicate equal-content separate files nor establish remote-backup coverage.",
+    "contentHashVerificationPerformed": false,
+    "filesystemSnapshotFrozen": false
+  },
+  "coverageInterpretation": {
+    "trackedCleanRegularGit": "A matching fresh remote HEAD supports committed tree coverage, subject to non-atomic concurrent-work caveats. This audit did not hash media contents.",
+    "trackedChanged": "The current changed worktree/index version is not established as remote by matching HEADs.",
+    "untrackedOrIgnored": "These files are outside this repository Git index; matching main and installed LFS do not establish protection. Other backup coverage is outside this evidence.",
+    "lfsObjectsRemoteAvailabilityVerified": false,
+    "driveCoverageVerifiedByThisHelper": false,
+    "userReportedSyncMethodIndependentlyVerified": false
+  },
+  "auditArtifactsExcludedFromPreexistingGaps": {
+    "directory": "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37",
+    "currentlyUntrackedAuditFiles": [
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/CFA_GIT.json",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_CFA_FLOW_TAKE002_FRESH_AX.txt",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_CFA_PATH_CHECKS.json",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_CFA_PATH_FOLLOWUP_CHECKS.json",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_CFA_PATH_FOLLOWUP_comfy_AX.txt",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_CFA_PATH_FOLLOWUP_explorable_world_AX.txt",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_CFA_PATH_FOLLOWUP_flow_AX.txt",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_CFA_PATH_FOLLOWUP_lisan_al_gaib_AX.txt",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_CFA_PATH_FOLLOWUP_projects_AX.txt",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_CFA_PATH_FOLLOWUP_signal_prototype_20261013_AX.txt",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_CFA_PATH_FOLLOWUP_take_002_AX.txt",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_CFA_PATH_explorable_world_AX.txt",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_CFA_PATH_notes_AX.txt",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_CFA_RECENT_LEAF_AX.txt",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_CFA_ROOT_FRESH_AX.txt",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_COMPUTERS_FRESH_AX.txt",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_FIVE_REPOSITORIES.jpg",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_FLOW_RECENT_SEARCH_AX.txt",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_NEW_COMPUTER_FRESH_AX.txt",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/DRIVE_PRIME_FRESH_AX.txt",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/NYQUIST_PAN_GIT.json",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/NYQUIST_PAN_GIT_VERIFIED.json",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/VUDU_WHOCARES_GIT.json",
+      "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/VUDU_WHOCARES_GIT_VERIFIED.json"
+    ],
+    "thisFutureFileExcluded": "docs/notes/explorable_world/comfy/projects/collaborators/backup_audit_20261014_7bea4f9c-63d7-465d-94ce-f05c19cc3d37/CFA_GIT_VERIFIED.json",
+    "rootCreatedAuditFolderIsNotAPreexistingProductionSyncGap": true
+  },
+  "environmentSafety": {
+    "GIT_OPTIONAL_LOCKS": "0",
+    "GIT_TERMINAL_PROMPT": "0"
+  },
+  "preservation": {
+    "initialCFA_GITUnchanged": true,
+    "GitRefFetchCommitPushMutation": false,
+    "sourceMediaEditsOrTransfers": false,
+    "LFSUploadDownload": false,
+    "backupSyncOrCleanup": false,
+    "settingsOrCredentialChanges": false,
+    "siteOrProductionMutations": false,
+    "newWorkersOrExternalMessagingByThisHelper": false,
+    "onlyNewFile": "CFA_GIT_VERIFIED.json created exclusively."
+  },
+  "limits": [
+    "Point-in-time metadata inventory while Site/Claude/user activity may continue; no filesystem freeze.",
+    "No private answer-key/blind-map or secret-file contents read; path samples omit identified sensitive names.",
+    "No inspection of other four repositories or Google Drive by this helper.",
+    "Latest observed local push log is not a global last-push guarantee.",
+    "Corrected totals combine initial metadata inventory with all 65 resolved long-path entries. They are not a new atomic rescan or deduplicated-content total."
+  ],
+  "appendOnlyEvidence": true
+}

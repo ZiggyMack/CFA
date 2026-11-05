@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-13T03:47:48.007534+00:00",
+  "project_id": "lisan_al_gaib",
+  "request_basis": "Direct user request to take both attached Meta Mirror cuts and their supplied lyrics through Google AI Studio.",
+  "status": "both_provider_full_maps_captured_static_validation_complete_listening_review_pending",
+  "prime_track_id": "prime",
+  "provider": "Google AI Studio",
+  "actual_ui_model": "gemini-3.8-flash",
+  "actual_ui_model_label": "Gemini 3.8 Flash",
+  "thinking_level": "Medium",
+  "api_key_selected": false,
+  "external_claims_only": true,
+  "independent_listening_performed": false,
+  "timestamps_accepted": false,
+  "lip_sync_accepted": false,
+  "cost": "No monetary charge displayed/recorded for UI analysis; no API key selected. Do not infer a measured zero cost.",
+  "timing_transfer_or_rescaling_performed": false,
+  "audio_transcode_uploaded": false,
+  "source_audio_bytes_changed": false,
+  "lyric_words_rewritten": false,
+  "video_generation": false,
+  "tracks": [
+    {
+      "track_id": "prime",
+      "designation": "User-designated Prime Meta Mirror track",
+      "inputs": {
+        "audio": {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/Meta Mirror_0 (Remastered).mp3",
+          "bytes": 6438669,
+          "sha256": "477627e4db431ba0ef8cf226b13745f3cdcc32050d88b8f0fc1f7aba3e45e154"
+        },
+        "lyrics": {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/Meta_Mirror.txt",
+          "bytes": 4194,
+          "sha256": "5303adca22ea91cebe00efc9c62c2f8949631865b3265a0c615c06b4f11e605c"
+        }
+      },
+      "uploaded": true,
+      "destination_url": "https://aistudio.google.com/prompts/1LU5IJ-vHotVjCo0oA-xVbPAUFAr836_J",
+      "measured_duration_seconds": 249.72,
+      "pass_history": [
+        {
+          "pass": "initial_anchor",
+          "result": "invalid_timestamps_rejected",
+          "report": "ai_studio_return_01.json"
+        },
+        {
+          "pass": "bounded_correction",
+          "result": "complete_provisional_sections_and_anchors",
+          "report": "ai_studio_return_02.json"
+        },
+        {
+          "pass": "verbose_full_map",
+          "result": "provider_internal_error_no_full_report",
+          "evidence": "internal_error_full_map_01.dom.txt"
+        },
+        {
+          "pass": "compact_full_map",
+          "result": "complete_93_rows",
+          "report": "ai_studio_return_03.json",
+          "intermediate_snapshot": "ai_studio_return_03.partial.txt"
+        },
+        {
+          "pass": "four_row_followup",
+          "result": "all_four_times_match_completed_report03_event_differences_preserved",
+          "report": "ai_studio_return_04.json"
+        }
+      ],
+      "latest_full_provider_report": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/ai_studio_return_03.json",
+        "bytes": 7301,
+        "sha256": "4a7346a05f73440a6738397851154aac9a8fe649b69a258791cd2e3057bfb2aa"
+      },
+      "validation": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/full_map_validation.json",
+        "bytes": 95024,
+        "sha256": "d3e76dee8e8050dc8cd34a0a86669a0ffd227f296b36cb65aa655c4baf197d50"
+      },
+      "derived_map": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/provisional_timed_lyrics.json",
+        "bytes": 128611,
+        "sha256": "d997dee90872c20f1b3c0719941782baf3b4a03ad6f9883e6bd492f1a716153b"
+      },
+      "summary": {
+        "expected_canonical_lyric_lines": 93,
+        "provider_rows": 93,
+        "coverage_unique_exact": true,
+        "all_track_duration_bounds_valid": true,
+        "all_source_heading_indices_match": true,
+        "decreasing_start_count": 0,
+        "section_containment_conflict_source_lines": [
+          54,
+          112
+        ],
+        "derived_provisional_intervals_retained": 91,
+        "derived_intervals_withheld": 2,
+        "quoted_source_checks": 4,
+        "quoted_source_exact_matches": 4,
+        "main_sparse_vocal_event_count": 17,
+        "followup_sparse_vocal_event_count": 17,
+        "main_event_interval_bounds_all_valid": true,
+        "anchor_to_line_reconciliation_source_lines": [
+          76,
+          102,
+          125
+        ],
+        "audio_accuracy_established": false,
+        "timings_accepted": false,
+        "state": "complete_source_coverage_provisional_provider_claims_with_boundary_reconciliation_pending"
+      },
+      "final_browser_evidence": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/prime/studio.final.dom.txt",
+        "bytes": 35083,
+        "sha256": "383f6ad0926b9b4a018a31b9dee20f22b34db1e8df3755f79535cf0f431bac49"
+      }
+    },
+    {
+      "track_id": "mm_1",
+      "designation": "Independent secondary cut; Prime designation unchanged",
+      "inputs": {
+        "audio": {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/MM_1.mp3",
+          "bytes": 6650704,
+          "sha256": "6c563b7938e066bd5b55ff7c7f736f7a7c0d52950ce48efc8b7098a07f95fade"
+        },
+        "lyrics": {
+          "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/MM_1.txt",
+          "bytes": 4398,
+          "sha256": "ce57412c88e3aa44f4d55b811cee4140e33035a2694b9da7587a03f775188c8f"
+        }
+      },
+      "uploaded": true,
+      "destination_url": "https://aistudio.google.com/prompts/1NYJQJs3H-8DytYCNWRKr8z9w3gq9p5p6",
+      "measured_duration_seconds": 271.76,
+      "pass_history": [
+        {
+          "pass": "initial",
+          "result": "provider_internal_error_no_report",
+          "evidence": "internal_error_01.dom.txt"
+        },
+        {
+          "pass": "rerun",
+          "result": "partial_invalid_timestamps_and_internal_error",
+          "report": "ai_studio_return_01.partial.txt",
+          "evidence": "internal_error_02.dom.txt"
+        },
+        {
+          "pass": "bounded_correction",
+          "result": "complete_provisional_sections_and_anchors",
+          "report": "ai_studio_return_02.json"
+        },
+        {
+          "pass": "compact_full_map",
+          "result": "complete_103_rows",
+          "report": "ai_studio_return_03.json",
+          "note": "internal_error_full_map_01.dom.txt was an intermediate UI capture, not a final failure verdict."
+        },
+        {
+          "pass": "extra_bounded_half_a",
+          "result": "56_rows_extracted_from_final_rendered_dom_all_match_full_report03",
+          "report": "bounded_followup_04.extracted.json",
+          "evidence": "studio.final.dom.txt",
+          "note": "Sent after lagging UI capture appeared incomplete; no half B or further request."
+        }
+      ],
+      "latest_full_provider_report": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/ai_studio_return_03.json",
+        "bytes": 7887,
+        "sha256": "350a68bc54cf2b916238f47660522d72d6c9c0c32573b5d16bb9df16669473f1"
+      },
+      "validation": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/full_map_validation.json",
+        "bytes": 80575,
+        "sha256": "2bdb44a9c45997494660a157ef0dfe6469d495f5c489f70ef3d4ab8b3185a850"
+      },
+      "derived_map": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/provisional_timed_lyrics.json",
+        "bytes": 107502,
+        "sha256": "49bff621d69696de09e3c9854104e2d2f5dd3b8dce35129b1cb8bda92c987ea7"
+      },
+      "summary": {
+        "expected_canonical_lyric_lines": 103,
+        "provider_rows": 103,
+        "coverage_unique_exact": true,
+        "all_track_duration_bounds_valid": true,
+        "all_source_heading_indices_match": true,
+        "decreasing_start_count": 0,
+        "section_containment_conflict_source_lines": [
+          60
+        ],
+        "derived_provisional_intervals_retained": 102,
+        "derived_intervals_withheld": 1,
+        "quoted_source_checks": 9,
+        "quoted_source_exact_matches": 9,
+        "main_sparse_vocal_event_count": 14,
+        "followup_sparse_vocal_event_count": 0,
+        "main_event_interval_bounds_all_valid": true,
+        "anchor_to_line_reconciliation_source_lines": [
+          2,
+          20,
+          128,
+          134,
+          139
+        ],
+        "audio_accuracy_established": false,
+        "timings_accepted": false,
+        "state": "complete_source_coverage_provisional_provider_claims_with_boundary_reconciliation_pending"
+      },
+      "final_browser_evidence": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/music_alignment_20261013/mm_1/studio.final.dom.txt",
+        "bytes": 30989,
+        "sha256": "dbdf5e2117e8b5e354fc97281a21326dc98fb1e0acdc13a993487a60b36a98f7"
+      }
+    }
+  ],
+  "workflow_findings": [
+    "Initial timestamps exceeded measured recording length; unbounded or invalid reports retained as rejected evidence.",
+    "Corrected sections and complete compact maps pass exact source-line coverage, recording bounds and start order.",
+    "Passing numeric checks does not establish that the model independently listened or that timestamps are accurate.",
+    "Large or lagging UI responses can appear partial; final complete report03 was captured for each cut. Intermediate files with internal_error names do not by themselves establish that final compact runs failed.",
+    "Prime has two section-containment conflicts, MM_1 one; three working intervals withheld pending listening/boundary review.",
+    "Provider confidence and vocal-lane observations are claims, not accepted grading, stems or precision lip-sync timing."
+  ]
+}

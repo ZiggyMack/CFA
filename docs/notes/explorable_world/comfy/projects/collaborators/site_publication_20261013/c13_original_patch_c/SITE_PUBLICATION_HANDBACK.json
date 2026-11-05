@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "kind": "SITE_PUBLICATION_HANDBACK",
+  "assignmentID": "site-c13-original-patch-c-comparison-20261013",
+  "completedAtUTC": "2026-10-13T11:55:40.407567+00:00",
+  "owner": "cfa_site_index",
+  "state": "local_publication_complete_static_and_dom_test_verified",
+  "publicationSlot": "handed_back_to_CFA_NOVA; no further site edits or builds from this owner without a new SITE_OWNER_ASSIGNMENT",
+  "publishedLabel": "C13-04 — ORIGINAL / REPAIRED patch-c",
+  "statusLabel": "Pending comparison",
+  "entryPath": "docs/notes/explorable_world/comfy/projects/index.html",
+  "route": "#lisan/review_queue",
+  "alternativeEntryPath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/index.html",
+  "missionTaskID": "comfy-report-decisions-20261013",
+  "missionTaskTitle": "Comfy results and next decisions",
+  "buttonLabel": "Open paired full-size comparison",
+  "buttonSelector": "[data-source-comparison=\"c13-original-patch-c\"]",
+  "pairSelector": "#source-comparison-c13-original-patch-c",
+  "pairImplementation": "Two 1280x720 full-resolution source images in a responsive paired panel, labeled ORIGINAL and REPAIRED patch-c; each has independent full-size links. No thumbnail substitution or image regeneration.",
+  "exactSources": [
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-1K-C13/C13-sandworm-rising/C13-04_Z_1.jpg",
+      "bytes": 268027,
+      "sha256": "7eafd9ac048dc6d6125dc38281c1b664f7ae0cac1159909c34d90a5e3eef93a3"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/references/From Grok/GROK-LAG-1K-C13/C13-sandworm-rising/repairs/C13-04_Z_1_R1-try5-patch-c.jpg",
+      "bytes": 447799,
+      "sha256": "23817577d3d32f0df03d57ac1e49c4c85246e86c405b13c492194f7aa2f52bad"
+    }
+  ],
+  "sourceChanges": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/source_comparisons.json",
+      "bytes": 2669,
+      "sha256": "956ec7bb4de1b5f97d0ac5eb7584277783af5b097b913759451ab85a143bc240"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/build_catalog.py",
+      "bytes": 45358,
+      "sha256": "14fa247599dd805fe10776a0517d7ec72052760fb2faaccd616a36f634fa01e6"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "bytes": 184349,
+      "sha256": "34b943e6d8ad43d51ef24cc30b7668c388e4d4151ffeeb0e529e5fc67814b6f0"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.css",
+      "bytes": 48851,
+      "sha256": "ccf95e45dfda54cfc84494c2fbfe71942bb87aea3cc4624273292ed8e84a874d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_source_comparison_publication.cjs",
+      "bytes": 5384,
+      "sha256": "db481e79635bb4d0987fc0b709a1e16de26c6877d47e5ab518eee20f561abc2a"
+    }
+  ],
+  "entryShells": [
+    {
+      "entry": {
+        "path": "docs/notes/explorable_world/comfy/projects/index.html",
+        "bytes": 496,
+        "sha256": "12c45c56d4331b329156b9530973b1500449c8c277f7382d6752c6092b956288"
+      },
+      "resources": [
+        {
+          "relativeURL": "visual_library/library.css",
+          "cacheVersion": "ccf95e45df",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.css",
+          "bytes": 48851,
+          "sha256": "ccf95e45dfda54cfc84494c2fbfe71942bb87aea3cc4624273292ed8e84a874d"
+        },
+        {
+          "relativeURL": "visual_library/catalog.js",
+          "cacheVersion": "0ddf8c86e5",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+          "bytes": 9645351,
+          "sha256": "0ddf8c86e5c0e107e33bf1336a29f1840c9f6d48fea50a8edace4497716fef1a"
+        },
+        {
+          "relativeURL": "visual_library/library.js",
+          "cacheVersion": "34b943e6d8",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+          "bytes": 184349,
+          "sha256": "34b943e6d8ad43d51ef24cc30b7668c388e4d4151ffeeb0e529e5fc67814b6f0"
+        }
+      ]
+    },
+    {
+      "entry": {
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/index.html",
+        "bytes": 507,
+        "sha256": "a227dd37636d4332228fa283c54d02a3933abaa3dfd0f966306a2cf8d2856301"
+      },
+      "resources": [
+        {
+          "relativeURL": "../visual_library/library.css",
+          "cacheVersion": "ccf95e45df",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.css",
+          "bytes": 48851,
+          "sha256": "ccf95e45dfda54cfc84494c2fbfe71942bb87aea3cc4624273292ed8e84a874d"
+        },
+        {
+          "relativeURL": "../visual_library/catalog.js",
+          "cacheVersion": "0ddf8c86e5",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+          "bytes": 9645351,
+          "sha256": "0ddf8c86e5c0e107e33bf1336a29f1840c9f6d48fea50a8edace4497716fef1a"
+        },
+        {
+          "relativeURL": "../visual_library/library.js",
+          "cacheVersion": "34b943e6d8",
+          "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+          "bytes": 184349,
+          "sha256": "34b943e6d8ad43d51ef24cc30b7668c388e4d4151ffeeb0e529e5fc67814b6f0"
+        }
+      ]
+    }
+  ],
+  "build": {
+    "assignmentID": "site-c13-original-patch-c-comparison-20261013",
+    "owner": "cfa_site_index",
+    "buildInvocations": 1,
+    "command": [
+      "C:\\Python314\\python.exe",
+      "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\visual_library\\build_catalog.py"
+    ],
+    "startedAtUTC": "2026-10-13T11:49:47.970300+00:00",
+    "state": "completed",
+    "finishedAtUTC": "2026-10-13T11:51:19.030371+00:00",
+    "exitCode": 0,
+    "stdout": "{\"assets\": 2349, \"albums\": 227, \"documents\": 433, \"media\": 1916}\n",
+    "stderr": ""
+  },
+  "preservation": {
+    "allNineCanonicalGuardFilesByteIdentical": true,
+    "existingAssetsUnchanged": 2347,
+    "existingAlbumsUnchanged": 226,
+    "existingReviewRecordsUnchanged": 176,
+    "allPriorCatalogSectionsUnchanged": true,
+    "missionTasksUnchanged": 42,
+    "reviewFavoritesBasketScopesUnchangedInDOMTest": true,
+    "browserStorageWritesDuringDOMTest": 0,
+    "sourceChoiceRecordUnchanged": true,
+    "sevenMouthTaskUnchanged": true,
+    "registryUnchanged": true,
+    "priorStylesheetBytesPreserved": true
+  },
+  "verification": [
+    {
+      "check": "JavaScript syntax",
+      "result": "passed"
+    },
+    {
+      "check": "Source comparison publication",
+      "result": "passed",
+      "checks": [
+        "exact sources and labels",
+        "task route",
+        "full-source pair",
+        "independent source links",
+        "thumbnail/source separation",
+        "review/favorite/basket/scope preservation"
+      ]
+    },
+    {
+      "check": "Reference scope regression",
+      "result": "passed",
+      "scenarios": 8
+    },
+    {
+      "check": "Collection navigation regression",
+      "result": "passed",
+      "checks": 11
+    },
+    {
+      "check": "Compact browse regression",
+      "result": "passed",
+      "checks": 9
+    },
+    {
+      "check": "Direct clarification regression",
+      "result": "unavailable_due_to_stale_test_harness",
+      "reason": "Existing exact export hook omits castHubGroups, castWorkingGroups and parseHash; assertion fails before library execution. Test and production review code were not changed."
+    },
+    {
+      "check": "Source byte/hash checks and generated shell cache targets",
+      "result": "passed"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/c13_original_patch_c/preservation.before.json",
+      "bytes": 3805,
+      "sha256": "db2b54a467df89ac0183478c94f3b48bfb634d61db8f613271431502eb1c4399"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/c13_original_patch_c/preservation.after.json",
+      "bytes": 8492,
+      "sha256": "2d6eba8781f2a75837dcf372a08e33db27b52dacdf8613bc75fbe893667a9b3e"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/c13_original_patch_c/build_result.json",
+      "bytes": 555,
+      "sha256": "ccd04ba838b726730ab5fbb19f9ebd09ae1524701068149b486a7d507d794f7a"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/c13_original_patch_c/dom_verification.json",
+      "bytes": 202299,
+      "sha256": "1e25d7b86297e8060c3e021c1dfa1913c00f94f9ee874b298e79b599c29aeace"
+    }
+  ],
+  "limitations": [
+    "Browser file-protocol preview was previously policy-blocked. No browser, alternate-browser or localhost workaround attempted.",
+    "DOM evidence comes from the real renderer and handlers running against the existing DOM/storage double; it is not browser visual QA or a screenshot.",
+    "Local catalog and HTML entries are updated. Hosted mirror packaging/deployment and public release were not performed.",
+    "Both sources remain pending comparison. No source selection, grades, production acceptance, timing changes, generation or spending."
+  ],
+  "coordination": "This artifact and the completion reply provide the handback. No production mailbox message was consumed or acknowledged on nova behalf."
+}

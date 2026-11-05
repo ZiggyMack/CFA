@@ -1,0 +1,163 @@
+FLOW PROTOTYPES — DRAFT FOR THE SITE OWNER
+Prepared 2026-10-14 UTC. This folder does not publish or modify the live site.
+
+PROPOSED CHANGE
+
+Register the three exact received Lisan Flow originals once each, then reference
+those same asset IDs in Videos and Storyboard. Add three unplaced shot-material
+records for existing clickable source/result/intake connections. Preserve every
+existing source, review, scene record, album and writer association.
+
+The proposed live additions are exactly:
+- 3 video assets: FLOW-LAG-SW2-001, FLOW-LAG-SIGNAL-001, FLOW-LAG-SIGNAL-002.
+- 3 Lisan intake document assets, one for each RESULT_INTAKE.json.
+- 2 albums: lisan:video-flow-prototypes and lisan:story-flow-prototypes.
+- 3 unplaced shot-material records: LAG-FLOW-SW2-001, LAG-FLOW-SIGNAL-001, LAG-FLOW-SIGNAL-002.
+- No new human review, scene review, working-reference approval or song timing.
+
+AUTHORITATIVE EVIDENCE
+
+The manifest contains the exact three final intake pins, all 30 nested path/bytes/
+SHA-256 records from those intakes, and separately measured pins for three existing
+first-frame PNG posters. All 36 pin records were verified from local files; repeated baseline and writer-card paths remain explicit.
+
+SW-2 original:
+  FLOW-LAG-SW2-001_original.mp4
+  2,614,493 bytes
+  8f0c3d3bb4f7c8ff6fd6c98ec0f5cc4c8a5ae02daad375b4d2b9e63df0edebaf
+  Starting source: LAG-C13-PATCH-C-23817577d3d3
+  Eight seconds, 1280 x 720, 24 fps, 192 frames.
+  Sampled mouth/teeth and audio deviations are recorded. Normal-speed playback,
+  listening, exact continuity and production acceptance remain unrecorded.
+
+Signal original:
+  FLOW-LAG-SIGNAL-001_original.mp4
+  3,635,702 bytes
+  e6ace86c4ebe59a3fa7c695cb3e1960840e0424a7fc57a7deed984c0417b524a
+  Starting source: LAG500-L19-S3
+  Eight seconds, 1280 x 720, 24 fps, 192 frames.
+  Ziggy's positive scene feedback and performance revision request remain scoped
+  narrative evidence. No numeric stars, Keep, whole-look pass or production
+  acceptance is inferred. The actor/screen-side interpretation is not authored
+  here. The take-two intake pins the finished Claude card actually submitted.
+
+Signal take two original:
+  FLOW-LAG-SIGNAL-002_original.mp4
+  4,310,690 bytes
+  38ff31d1e9de551509112e35eacad8b96804a6e3b65811fe2992b0f4d00f6e6c
+  Same starting still: LAG500-L19-S3. Take one is a comparison, not its input.
+  Eight seconds, 1280 x 720, 24 fps, 192 frames.
+  Final intake: 7,330 bytes, SHA-256
+  ac7270aba5216acf90b6eb030ab9f2128b44b75c53a1a7ef57e21d61ad4724ea
+  Review: 14,620 bytes, SHA-256
+  ad6b1031e3b907e2f0bb7f398d034e6aab056c3d4b7c10a527112710edce33c2
+  Observed sampled defects: opposite teammate eyeline, later gaze return toward
+  lens, oversized central palm motion, mouth opening/visible teeth, substantial
+  audio. Added motion does not mean performance fixed. Playback/listening and
+  writer review remain pending. No human acceptance or first-take approval is
+  inherited. The actual submitted prompt and frozen finished author card are
+  nested intake pins; no new direction is authored by this site draft.
+
+EXACT INTEGRATION POINTS
+
+1. After the C13 checkpoint, revalidate the current inputs and this proposal.
+   Copy flow_prototypes.json to visual_library/flow_prototypes.json and change
+   publicationState from draft_only to registered_for_site_build. The proposed
+   loader rejects draft_only, so a draft cannot be silently treated as live.
+
+2. Copy PROPOSED_LOADER.py to visual_library/flow_prototype_intake.py. This helper
+   contains functions only; importing it does not execute a build. It verifies
+   intake hashes, complete nested pin lists, source/output bindings, dimensions,
+   stage boundaries and link identity before adding in-memory catalog records.
+
+3. In build_catalog.py, place this exact invocation AFTER the source-comparison
+   media registration loop and BEFORE the review-promotion/album assetIDs passes:
+
+   from flow_prototype_intake import add_flow_prototypes, append_flow_shots
+   flow_prototypes = add_flow_prototypes(
+       HERE/'flow_prototypes.json', root=ROOT, assets=assets,
+       add_album=add_album, url=url, doc=doc,
+       io_path=io_path, resolve_source=resolve_source)
+
+   Placement after source comparisons matters: the selected C13 image must
+   already be present in assets for the exact source binding check.
+
+4. Immediately AFTER the existing catalog['shotMaterials'] JSON load and BEFORE
+   its existing material-ID/hash validator, insert:
+
+   append_flow_shots(catalog['shotMaterials'], flow_prototypes)
+
+   This appends only in memory. The existing shot_materials.json file and all
+   its current records remain unchanged. The existing validation loop verifies
+   each proposed material ID and SHA against the resulting catalog assets.
+
+5. Perform the root's guarded publication once the pending checkpoint is ready.
+   Account for +6 assets, +2 albums and +3 in-memory unplaced shots, plus the
+   separately authorized writer/C13 changes. Keep review data unchanged.
+
+WHY THE EXISTING UI WORKS
+
+library.js storyWorkForAsset() matches either panelAssetIDs or any materials
+entry. Each proposed shot contains the actual starting image, received
+video, and pinned intake document. The take-two record also includes the retained
+take-one video, creating links between both takes without replacing their source. storyMaterialLinks() excludes the current
+asset and renders the remaining items as existing data-open viewer buttons.
+Consequently a video opens its source and intake, and the starting image opens
+its video and intake. The documents receive their exact verified SHA/bytes in
+the loader so the existing material hash validator remains strict.
+
+The clips have category videos and one primary video album. A separate
+storyboard album references the same IDs through related. Neither duplicate
+assets nor new player code is needed. The three shot records have empty
+panelAssetIDs/panelIDs and timing unassigned, so Shot progress puts them under
+Placement still needed. They do not receive song timestamps or numbered source
+panel associations. Reading these connections does not create review state.
+
+INTEGRATION CONFLICTS AVOIDED
+
+- parentAssetID alone is currently metadata; it does not render a source link.
+- The Comfy document loader hardcodes Hon; it must not ingest these Lisan docs.
+- Flow's collaborator Work tab shows missionControl tasks, not Comfy workflows.
+  This proposal does not claim a new Flow task card has been added.
+- The Gemini output path adds staged clips to Developed video takes, described
+  as selected footage beyond preliminary panels. That label is unsuitable here.
+- The undownloaded Gemini result is excluded, as are unfinished writer drafts.
+- Existing ratings, acceptance scopes, source choices, images, videos, author
+  text, timeline metadata and production/reference boards are not rewritten.
+
+VERIFICATION PERFORMED
+
+VERIFY_DRAFT.py runs the proposed loader with the actual current source files,
+copied catalog records, and in-memory add_album/doc/url adapters. It passed:
+  Exact three intakes, all 30 nested pins and all three poster pins.
+  Three videos, three documents, two albums, three unplaced shots.
+  All original assets and shot records byte-equivalent after normalization.
+  Existing material ID/hash validation for the new shot records.
+  Rejection of a draft-only publication and seven invalid fixtures: wrong source,
+  missing nested evidence pin, wrong original bytes, Production stage, invented
+  working approval, invented song time, and a wrong take-one baseline.
+
+VERIFY_DRAFT_RENDERER.cjs injects only these additions into a catalog copy and
+executes the actual current library.js through the established DOM/storage
+double. Six grouped checks passed:
+  Video -> exact source/intake links, and source -> result/intake links.
+  Native video player and intake document viewer.
+  Same clip IDs visible in Video and Storyboard album views.
+  All three unplaced shot-progress records visible; take-one/take-two links verified.
+  Preliminary stage, no numeric/Keep/working approval or scene grade inferred.
+  All existing assets/shot records preserved; zero storage and review-file writes.
+
+This is renderer-contract verification, not browser visual or playback QA.
+No live build, generation, downloads, media edits or live-source writes occurred.
+
+FILES IN THIS DRAFT FOLDER
+
+flow_prototypes.json is the proposed source manifest.
+PROPOSED_LOADER.py is the exact proposed helper.
+VERIFY_DRAFT.py and VERIFY_DRAFT_RENDERER.cjs reproduce the checks above.
+registered_manifest_fixture.json is a TEST COPY used for in-memory validation;
+do not publish it instead of the reviewed manifest.
+DRAFT_ADDITIONS_FIXTURE.json is a TEST COPY of the six added assets, two albums
+and three shots; it is not a replacement catalog.
+DRAFT_VERIFICATION.json records preparation pins.
+FINAL_DRAFT_HANDBACK.json records the final artifact pins and test results.

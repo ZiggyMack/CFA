@@ -1,0 +1,25 @@
+- C23-01_Z_2_FAIL: a small face appeared under the eye disc
+- C23-02_Z_2: pass, half-sunk bus and traffic lights
+- C23-10_Z_2: pass, buried subway entrance at dusk
+- C23-03_Z_2: pass, top pick: church spire and clock tower in dunes (worms thin)
+- C23-04_Z_2_FAIL: fail: doubled GAIB (second copy under eye disc)
+- C23-05_Z_2: pass, breather image, half-sunk statue head
+- C23-07/08/09: generated but lost to media-store save errors; slots refilled later
+- C23-06_Z_2: pass, top pick: hooded, buried overpass, thick worms
+- C23-07_Z_2: pass (soft): glass skyscraper sunset; GAIB B clipped by jawline
+- C23-08_Z_2: pass (soft): moonlit sunken theater; worms snake-like, stray marks on neck
+- C23-09_Z_2: pass, half-buried Ferris wheel, ringed worm mouths
+- C23-11_Z_2: pass, top pick: hooded, sand-choked street at blue dusk
+- C23-12_Z_2: pass (soft): buried capitol dome; worms horn-like
+- C23-13_Z_2: pass (soft): buried railway station; sign text in scene
+- C23-14_Z_2_FAIL: fail: worms climbed onto cheeks
+- C23-15_Z_2: pass, top pick: hooded, buried stadium storm
+- C23-16_Z_2: pass, buried suspension bridge moonrise
+- C23-17_Z_2: pass, buried pyramid tower, noon haze
+- C23-18_Z_2: pass, top pick: hooded, buried roller coaster at purple twilight
+- C23-19_Z_2: pass (soft): buried harbor + lighthouse; worms snake-headed
+- C23-20_Z_2_FAIL: fail: worm mouths rendered as extra eye/rosette discs
+- C23-21_Z_2: pass (soft): night market lanterns; stray mark under AL
+- C23-22_Z_2: pass, top pick: buried skyline at blazing sunset
+
+SUMMARY: requested 22, saved 22, pass 18 (several soft), fail 4 (01, 04, 14, 20). Breather in C23-05. 3 earlier gens lost to media-store save errors and were regenerated. Best: C23-22, C23-06, C23-18, C23-15. Z_5's '(four letters, the I included)' + single-column GAIB gave complete GAIB on all 13 drafts from 09 onward.

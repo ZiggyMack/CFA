@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUTC": "2026-10-14T23:25:58.953Z",
+  "disposition": "baseline_demonstrated_not_introduced_by_storyboard_update",
+  "assertion": "test_head_anchor_group.cjs:118:114 requires working among the All Files purpose chips.",
+  "evidenceBasis": "Re-executed the unmodified current test against an actual preserved pre-story renderer and the actual pre-story catalog, then current renderer with that same catalog, then the published pair. All three fail at the same assertion; only working is missing. Relevant allPurposeControls and compactAllFiles functions are identical before/after.",
+  "historicalRenderer": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/corner_sync_20261014/library.js.before-compact-review",
+    "bytes": 241110,
+    "sha256": "624f0f2b76d15d4da13559dcaacf70c34bf1e38cf25e305b16d0cb2f678cda07",
+    "savedAtUTC": "2026-10-14T06:13:40.612Z",
+    "startLine": 750,
+    "endLine": 780
+  },
+  "currentRenderer": {
+    "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+    "bytes": 256259,
+    "sha256": "1b9356615a50ba8de4f53a946d17f347af515d3468242a41df7bd787d19634c6",
+    "startLine": 751,
+    "endLine": 781
+  },
+  "relevantFunctions": {
+    "names": [
+      "allPurposeControls",
+      "compactAllFiles"
+    ],
+    "comparison": "exact text after CRLF-to-LF normalization",
+    "sha256": "9552828533fdac7f1ddebbc2b23a94e7ab25a3fb97355053d9e61eca958825d5",
+    "equal": true
+  },
+  "priorLayoutChange": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/all_files_outfits_first_20261014/CHANGE.json",
+    "bytes": 708,
+    "sha256": "04d102641a45ccf1aa5689901a485db327e51d7350caaf95395f0d13141694ce",
+    "changedAtUTC": "2026-10-14T01:59:25.719870+00:00",
+    "recordedRequest": "Live user: All files should start with Outfits and stop repeating Working references; use the existing Working references sidebar route."
+  },
+  "test": {
+    "path": "docs/notes/explorable_world/comfy/projects/visual_library/test_head_anchor_group.cjs",
+    "bytes": 14032,
+    "sha256": "e06dfab5f4dc58a63e9db3bd3b18b47aec25a74fb52e0906a02e6a610d2f4091"
+  },
+  "runs": [
+    {
+      "label": "historical_renderer_and_pre_story_catalog",
+      "renderer": {
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/corner_sync_20261014/library.js.before-compact-review",
+        "bytes": 241110,
+        "sha256": "624f0f2b76d15d4da13559dcaacf70c34bf1e38cf25e305b16d0cb2f678cda07"
+      },
+      "catalog": {
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_implementation_20261014/before_catalog.js",
+        "bytes": 10808134,
+        "sha256": "c8035de3a1d87fe7d595751115c5807c1381a0b381d969e8d5cfbca0dbb18a5a"
+      },
+      "error": {
+        "name": "AssertionError",
+        "message": "The expression evaluated to a falsy value:\n\n  assert(chipNames.includes(name))\n",
+        "location": [
+          "    at D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\visual_library\\test_head_anchor_group.cjs:118:114"
+        ]
+      },
+      "purposeChips": [
+        "all",
+        "outfits",
+        "details",
+        "cast",
+        "storyboard",
+        "videos",
+        "comfy",
+        "inspiration",
+        "history",
+        "documents"
+      ],
+      "missingExpectedChips": [
+        "working"
+      ],
+      "checksPassedBeforeFailure": 2
+    },
+    {
+      "label": "current_renderer_same_pre_story_catalog",
+      "renderer": {
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+        "bytes": 256259,
+        "sha256": "1b9356615a50ba8de4f53a946d17f347af515d3468242a41df7bd787d19634c6"
+      },
+      "catalog": {
+        "path": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_implementation_20261014/before_catalog.js",
+        "bytes": 10808134,
+        "sha256": "c8035de3a1d87fe7d595751115c5807c1381a0b381d969e8d5cfbca0dbb18a5a"
+      },
+      "error": {
+        "name": "AssertionError",
+        "message": "The expression evaluated to a falsy value:\n\n  assert(chipNames.includes(name))\n",
+        "location": [
+          "    at D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\visual_library\\test_head_anchor_group.cjs:118:114"
+        ]
+      },
+      "purposeChips": [
+        "all",
+        "outfits",
+        "details",
+        "cast",
+        "storyboard",
+        "videos",
+        "comfy",
+        "inspiration",
+        "history",
+        "documents"
+      ],
+      "missingExpectedChips": [
+        "working"
+      ],
+      "checksPassedBeforeFailure": 2
+    },
+    {
+      "label": "current_renderer_published_catalog",
+      "renderer": {
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+        "bytes": 256259,
+        "sha256": "1b9356615a50ba8de4f53a946d17f347af515d3468242a41df7bd787d19634c6"
+      },
+      "catalog": {
+        "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+        "bytes": 11083117,
+        "sha256": "3dc3211e7e457a005d0c4b32ee4af63b34287455eb3e10f2589f112053575583"
+      },
+      "error": {
+        "name": "AssertionError",
+        "message": "The expression evaluated to a falsy value:\n\n  assert(chipNames.includes(name))\n",
+        "location": [
+          "    at D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\visual_library\\test_head_anchor_group.cjs:118:114"
+        ]
+      },
+      "purposeChips": [
+        "all",
+        "outfits",
+        "details",
+        "cast",
+        "storyboard",
+        "videos",
+        "comfy",
+        "inspiration",
+        "history",
+        "documents"
+      ],
+      "missingExpectedChips": [
+        "working"
+      ],
+      "checksPassedBeforeFailure": 2
+    }
+  ],
+  "limitations": [
+    "The historical full renderer is the preserved 06:13 UTC snapshot, not an exact immediate-before 22:19 UTC renderer backup. The relevant functions are identical to current source and the actual pre-story catalog is used to isolate renderer behavior.",
+    "No unrelated Git HEAD was used as a baseline.",
+    "This is a source/DOM test reproduction, not browser visual QA."
+  ],
+  "appCodeChanged": false,
+  "testAssertionsChanged": false,
+  "catalogChanged": false,
+  "buildRun": false,
+  "action": "Leave the unrelated stale test expectation and requested All Files layout unchanged. This evidence supplements the earlier baseline label."
+}

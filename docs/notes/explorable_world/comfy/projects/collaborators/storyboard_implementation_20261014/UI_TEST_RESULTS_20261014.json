@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUTC": "2026-10-14 22:53:25 UTC",
+  "scope": "Published local Storyboard selector, story-scoped writings, Flow placement, and retained collection/navigation controls.",
+  "catalogMode": "Actual rebuilt catalog, not prebuild fixtures",
+  "summary": {
+    "passedFullTests": 4,
+    "failedFullTests": 1,
+    "baselineFailure": "Unchanged All-files expectation for a Working references purpose chip.",
+    "reviewOrFileWrites": 0,
+    "browserVisualQA": false
+  },
+  "tests": [
+    {
+      "command": "node test_story_selector.cjs --published",
+      "exitCode": 0,
+      "result": "passed",
+      "details": {
+        "checks": 52,
+        "mode": "published",
+        "songs": {
+          "lisan": 50,
+          "hon": 36
+        },
+        "story01": {
+          "shots": 38,
+          "scenes": 9,
+          "frames": 33,
+          "results": 1,
+          "pending": 21,
+          "characters": 20,
+          "objects": 5
+        },
+        "reviewWrites": 0
+      }
+    },
+    {
+      "command": "node test_writer_publication.cjs",
+      "exitCode": 0,
+      "result": "passed",
+      "details": {
+        "passed": true,
+        "checks": 6,
+        "writerDocuments": 57,
+        "sharedMethodDocuments": 1,
+        "stories": 11,
+        "safePublications": 2,
+        "excludedSources": 9,
+        "exactAssociations": 41,
+        "storageWrites": 0,
+        "browserVisualQA": false,
+        "evidenceLimit": "Actual renderer and bound click handlers exercised with DOM/storage doubles; no browser visual rendering, screenshots or native details/anchor behavior tested."
+      }
+    },
+    {
+      "command": "node test_flow_prototypes.cjs",
+      "exitCode": 0,
+      "result": "passed",
+      "details": {
+        "checks": 7,
+        "videoAssets": 3,
+        "intakeDocuments": 3,
+        "sharedAlbums": 2,
+        "unplacedSongShots": 2,
+        "story01SW2Placement": "S01-4.1",
+        "videoSourceAndIntakeLinks": true,
+        "sourceResultLinks": true,
+        "signalTakeOneAndTwoLinks": true,
+        "videoAndStoryboardMembership": true,
+        "preliminaryWithoutReviewSeeds": true,
+        "existingAssetsAndShotsPreserved": true,
+        "storageWrites": 0,
+        "reviewFileWrites": 0,
+        "browserQA": false,
+        "catalogMode": "published"
+      }
+    },
+    {
+      "command": "node test_collections_navigation.cjs",
+      "exitCode": 0,
+      "result": "passed",
+      "details": {
+        "passed": true,
+        "checks": 11,
+        "castCovers": 6,
+        "detailCovers": 22,
+        "detailAssets": 9,
+        "mouthMembers": 76,
+        "browserVisualQA": false
+      }
+    },
+    {
+      "command": "node test_head_anchor_group.cjs",
+      "exitCode": 1,
+      "result": "known_baseline_failure",
+      "details": {
+        "failure": "Stale All-files purpose-chip assertion at test_head_anchor_group.cjs:118 requires 'working'. Current layout intentionally places Working references in its dedicated view.",
+        "output": "node:internal/assert/utils:77\r\n    throw err;\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\r\n\r\n  assert(chipNames.includes(name))\r\n\r\n    at Object.<anonymous> (D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\visual_library\\test_head_anchor_group.cjs:118:114)\r\n    at Module._compile (node:internal/modules/cjs/loader:1761:14)\r\n    at Object..js (node:internal/modules/cjs/loader:1893:10)\r\n    at Module.load (node:internal/modules/cjs/loader:1481:32)\r\n    at Module._load (node:internal/modules/cjs/loader:1300:12)\r\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\r\n    at node:internal/main/run_main_module:33:47 {\r\n  generatedMessage: true,\r\n  code: 'ERR_ASSERTION',\r\n  actual: false,\r\n  expected: true,\r\n  operator: '==',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.11.1"
+      }
+    }
+  ],
+  "isolatedDiagnostic": {
+    "result": "Passed only after omitting the unrelated stale purpose-chip/BOM block in memory. This is not a full test pass; the test file retains that block unchanged.",
+    "exitCode": 0,
+    "output": [
+      {
+        "diagnosticOnly": true,
+        "omittedBlock": "Unrelated stale All-files purpose-chip/BOM block",
+        "currentPurposeChips": [
+          "all",
+          "outfits",
+          "details",
+          "cast",
+          "storyboard",
+          "videos",
+          "comfy",
+          "inspiration",
+          "history",
+          "documents"
+        ],
+        "missingExpectedChips": [
+          "working"
+        ]
+      },
+      {
+        "passed": true,
+        "checks": 8,
+        "headVariants": 3,
+        "FalconDrafts": 90,
+        "sourceStoryPanels": 36,
+        "reviewWrites": 0,
+        "browserVisualQA": false
+      }
+    ]
+  },
+  "verifiedArtifactVersions": {
+    "catalog.js": {
+      "bytes": 11083117,
+      "sha256": "3dc3211e7e457a005d0c4b32ee4af63b34287455eb3e10f2589f112053575583"
+    },
+    "library.js": {
+      "bytes": 256259,
+      "sha256": "1b9356615a50ba8de4f53a946d17f347af515d3468242a41df7bd787d19634c6"
+    },
+    "library.css": {
+      "bytes": 62086,
+      "sha256": "104eec7cc5cac6b17fe2427a5a8b42a8fa6cf19185055fff6a375e594262f4f0"
+    },
+    "storyboard_stories.json": {
+      "bytes": 13155,
+      "sha256": "fc658498ccab5c760b83b1658032c466ee44322bcebd79f25e4472bdb0115941"
+    },
+    "writer_development.json": {
+      "bytes": 64701,
+      "sha256": "8840aa94f866277dfbe96002d079c88dc1c164aa279480577e7fc2dff8837bfe"
+    },
+    "test_story_selector.cjs": {
+      "bytes": 13485,
+      "sha256": "ca75d5361b0ba440323854ccc303c2c68081968471ef46a273b7dbf6118beff4"
+    },
+    "test_writer_publication.cjs": {
+      "bytes": 10463,
+      "sha256": "2e20ea196fe1757b29621a3a3104e1a94051306f6c493cf94adb1509493d4036"
+    },
+    "test_flow_prototypes.cjs": {
+      "bytes": 10534,
+      "sha256": "edb1bd56e603b45bcc1ab581ea12458463ca188b160b4bc2774ff4c515447973"
+    },
+    "test_collections_navigation.cjs": {
+      "bytes": 20869,
+      "sha256": "30f40a8f0e1231b98b67caaf239e80bd6029e42349778e170cc2f40857f6bf6f"
+    },
+    "test_head_anchor_group.cjs": {
+      "bytes": 14032,
+      "sha256": "e06dfab5f4dc58a63e9db3bd3b18b47aec25a74fb52e0906a02e6a610d2f4091"
+    }
+  },
+  "limitations": [
+    "DOM/storage doubles exercise actual renderer and handlers; no native browser visual layout, native anchor interaction, or screenshot QA was performed.",
+    "No builder run, source-media edit, review write, network publication, or provider request was performed by this test pass."
+  ]
+}

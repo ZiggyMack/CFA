@@ -1,0 +1,22 @@
+# GROK-LAG-VIS-NATURAL-v002 (Z_5) — regen of 07, 15, 16, 18, 35
+Natural teeth, no grill, no breather; prompts describe lip mechanics only. 26 tries kept (07 has 6).
+Finding: when a face reference is attached, the model copies its mouth and ignores the mechanics (15a/16a/18a/35a = L5 S1). Text-only prompts move the mouth but drift the throat tattoos.
+Usable: 35d (L4 S4), 18d (L4 S3). 07, 15 and 16 still don't render a true lip tuck or bite — CONTROVERSIAL, recommend a pixel or inpaint pass on the mouth of an L5 frame.
+Passed shapes and Production mouths untouched.
+
+## Z_2 local mouth edits (2026-10-12)
+Base: 15a (L5, natural teeth). Method: pure PIL/OpenCV pixel compositing, no regen (GenerateImage was not available in this session). Vertical displacement warp of the lips only, with a per-column filled teeth mask layered on top and a contact shadow under the teeth, blended through a feathered ellipse around the mouth. AL, GAIB, the throat tattoos, eyes and hair are unchanged (diffs stay inside the mouth box). 6 tries kept.
+- VIS-LAG-07_F-V_try-zA_Z_2.jpg: L5 S2. pixel warp from 15a: lower lip lifted 5px under upper teeth; contact too subtle
+- VIS-LAG-07_F-V_try-zB_Z_2.jpg: L5 S3. pixel warp: lip lifted 8px, upper teeth rest on lower lip; faint seam at right canine - best 07
+- VIS-LAG-15_BITE-LOWER-LIP_try-zA_Z_2.jpg: L5 S3. pixel warp: lip tucked 11px under upper teeth, reads as lower-lip bite; small shadow blotch left - best 15
+- VIS-LAG-15_BITE-LOWER-LIP_try-zB_Z_2.jpg: L4 S3. deeper 14px tuck; slight lip smear and shadow blotch
+- VIS-LAG-16_BITE-UPPER-LIP_try-zA_Z_2.jpg: L4 S2. upper lip pushed down + flipped-teeth lower row; reads as double teeth row, pink chip artifact
+- VIS-LAG-16_BITE-UPPER-LIP_try-zB_Z_2.jpg: L3 S1. stronger push; teeth stack looks fake - reject pile
+Verdict: 07-zB and 15-zA are usable (S3). 16 (lower teeth over the upper lip) isn't solved by pixel warp because the base frame has no lower teeth to borrow, so it stays CONTROVERSIAL and needs an inpaint or regen pass.
+
+## Z_2 follow-up on 16 BITE-UPPER-LIP, try-zC (2026-10-12)
+Base 15a. Step 1: took the visible lower-teeth row from 16e (x590-700, y325-343), tone-matched it to 15a's teeth, and pasted it with a feathered, arched alpha. The upper lip is warped down over the upper teeth, the lower lip is lifted to meet the graft, a pressure shadow is added on the upper lip, and the whole edit is blended in a feathered ellipse around the mouth only. Step 2 (GenerateImage) wasn't possible: the cursor namespace still isn't present.
+- VIS-LAG-16_BITE-UPPER-LIP_try-zC1_Z_2.jpg: L5 S2. lower-teeth row from 16e grafted under the upper lip (6px push); upper-teeth tips still peek out, so it reads as clenched teeth, not a bite
+- VIS-LAG-16_BITE-UPPER-LIP_try-zC2_Z_2.jpg: L5 S3. 10px lip push and 8px teeth overlap; the lower teeth sit against the upper lip edge, the closest to a bite - best 16, near miss
+- VIS-LAG-16_BITE-UPPER-LIP_try-zC3_Z_2.jpg: L4 S2. 14px push; the upper teeth re-emerge below the graft, double-row artifact - reject pile
+Verdict: zC2 is the best but still a near miss (S3). 16 stays CONTROVERSIAL until a GenerateImage or inpaint pass can draw the upper lip folding under the teeth.

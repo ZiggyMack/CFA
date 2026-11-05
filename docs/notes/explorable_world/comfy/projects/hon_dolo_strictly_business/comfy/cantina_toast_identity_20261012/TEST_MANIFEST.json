@@ -1,0 +1,615 @@
+{
+  "version": 1,
+  "id": "HON-CANTINA-IDENTITY-PROOF-20261012",
+  "createdAtUTC": "2026-10-12T17:06:57.558501+00:00",
+  "status": "two_identity_jobs_completed_technical_repair_pass_actor_performance_not_accepted",
+  "evidenceState": "executed_measured_reviewed_preliminary_not_accepted",
+  "generationSubmitted": true,
+  "jobID": "ae13aefd-845b-445c-a118-d8418a728785",
+  "output": {
+    "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/comfy/cantina_toast_identity_20261012/IDENTITY_JOB_ae13aefd_RESULT_20261012/2026-10-13T01-14-55/video/hon_dolo_face_identity_composite_00001_.mp4",
+    "bytes": 829630,
+    "sha256": "b2d3dfac19971b6a8bb1454f77dea02487c9496ec0adc61764db332911c0e308"
+  },
+  "cost": null,
+  "sourceClip": {
+    "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/gemini_review_20261007/review_copies/performance/gemini_generated_video_2e361055.mp4",
+    "absolutePath": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\projects\\hon_dolo_strictly_business\\gemini_review_20261007\\review_copies\\performance\\gemini_generated_video_2e361055.mp4",
+    "bytes": 4883179,
+    "sha256": "fe4100afa5185a9d794f53744f18ef1fe144724a1e7b4cf942b3efa3418035ca",
+    "id": "GEM-2E361055",
+    "title": "Cantina toast",
+    "requestedFilenameCorrection": "User/dispatch shorthand 2e36105 resolves to catalog/source 2e361055, not a separate file.",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "decodedFrames": 240,
+    "nominalFPS": 24,
+    "decoderReportedFPS": 24,
+    "videoPresentationSeconds": 10.0,
+    "containerHeaderSeconds": 10.01,
+    "audio": {
+      "codec": "AAC-LC",
+      "sampleRateHz": 48000,
+      "channels": 2
+    },
+    "measurement": "FFmpeg v7.1 complete video decode to null; exit0. ffprobe unavailable.",
+    "visualInspection": {
+      "sampleSeconds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "previewDimensions": [
+        512,
+        288
+      ],
+      "fullMotionPlaybackReviewed": false,
+      "audibleReview": false,
+      "observations": "Leather jacket, pale open shirt, neck chain, dense older face/neck/chest tattoos, smiling grill and moving cantina camera; glass lift visible in7–9s samples. User identifies the older bird tattoo for preservation; no new stencil identity is inferred."
+    },
+    "decodedTimingCheck": {
+      "method": "FFmpeg showinfo, full decode, fps_mode passthrough, exit0",
+      "inputTimeBase": "1/12288",
+      "inputFrameRate": "24/1",
+      "decodedFrames": 240,
+      "firstFrame": {
+        "index": 0,
+        "pts": 0,
+        "seconds": 0.0
+      },
+      "lastFrame": {
+        "index": 239,
+        "pts": 122368,
+        "seconds": 9.958333
+      },
+      "allConsecutivePTSDelta": 512,
+      "excerptFirst": {
+        "index": 162,
+        "pts": 82944,
+        "seconds": 6.75
+      },
+      "excerptLast": {
+        "index": 238,
+        "pts": 121856,
+        "seconds": 9.916667
+      }
+    }
+  },
+  "identityReference": {
+    "path": "docs/notes/explorable_world/comfy/casting/likeness_crops/han_source_crop.png",
+    "absolutePath": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\casting\\likeness_crops\\han_source_crop.png",
+    "bytes": 152368,
+    "sha256": "e8a66e490bd14c486e5143426e0035df64f4835cb239c762a238565ec689fc50",
+    "id": "HD-LIKENESS-03",
+    "dimensions": [
+      275,
+      361
+    ],
+    "role": "User-supplied intended Han Solo / Harrison Ford actor likeness only; not current Dolo identity, clothing, jewelry, tattoos, props or setting.",
+    "inspected": true,
+    "sourceParent": {
+      "id": "HD-LIKENESS-02",
+      "path": "docs/notes/explorable_world/comfy/references/Han Solo.png",
+      "sha256": "5a6bd67a77920d3f2eae4bbaa98db0aa1e3dad288d38327c963d15cee1722974",
+      "cropBoundsLTRB": [
+        407,
+        9,
+        682,
+        370
+      ]
+    },
+    "limitation": "Small source crop; no claim of high-resolution face detail or an accepted generated master."
+  },
+  "userSourceDisposition": {
+    "attribution": "Explicit user request relayed by root; canonical review remains root-owned.",
+    "triage": "keep",
+    "creativeLane": "multiverse",
+    "referenceScope": "scene",
+    "storyboardStage": "production",
+    "likenessRating": 3,
+    "sceneRating": 5,
+    "collaboratorPlan": "comfy",
+    "doesNotApproveNewOutput": true
+  },
+  "experiment": {
+    "question": "Can one short actor-identity substitution retain the existing Multiverse toast performance and all scene/design details?",
+    "baseline": "Unchanged exact source frames162–238 at native timing, compared at the same display size.",
+    "oneDeliberateChange": "Lead facial identity to HD-LIKENESS-03; no other creative change.",
+    "maximumVideoGenerations": 2,
+    "batchSize": 1,
+    "automaticRetries": 0,
+    "automaticAlternateModels": false,
+    "outputAcceptance": "not accepted; technical fill repair passed but actor likeness and eye performance failed",
+    "currentBaseline": "Failed identity job569bec13, same source originalF168-236, compared with v004 broad-conditioning proof.",
+    "currentDeliberateComparison": "Only generation conditioning-mask breadth changes:275.mask and232:62.character_mask use full featheredface1833034495877259; final strict preservation9006 unchanged."
+  },
+  "proposedExcerpt": {
+    "firstFrameZeroBased": 162,
+    "lastFrameInclusive": 238,
+    "endFrameExclusive": 239,
+    "startSeconds": 6.75,
+    "endSecondsExclusive": 9.958333333333334,
+    "frameCount": 77,
+    "durationSeconds": 3.2083333333333335,
+    "fps": 24,
+    "reason": "Includes glass lift and smile/head turn near7–9s; sampled visual inspection only, continuous-shot/mask check required before submission.",
+    "derivativeCreated": false,
+    "inputPreparation": "Read exact decoded frames at native timestamps; create a new named trim only after preflight. Retain original audio separately; no respeed, interpolation, extension or source overwrite."
+  },
+  "recipe": {
+    "selection": "Official Wan2.2 Animate Mix, original-setting character-replacement branch.",
+    "why": "Existing CFA/Pan lesson selects this route when a replacement identity must share a source performance and background.",
+    "officialGuide": "https://docs.comfy.org/tutorials/video/wan/wan2-2-animate",
+    "officialTemplate": "https://raw.githubusercontent.com/Comfy-Org/workflow_templates/main/templates/video_wan2_2_14B_animate.json",
+    "publicGraphObserved": {
+      "id": "ba1df054-50a8-4da2-b45a-25b4dde3cc2f",
+      "revision": 1,
+      "lastNodeID": 283,
+      "lastLinkID": 714,
+      "observedDate": "2026-10-12",
+      "method": "Official docs and targeted raw editor-JSON sections read through web tool.",
+      "localGraphSnapshotSaved": false,
+      "sha256": null,
+      "fullGraphInventoryComplete": false,
+      "downloadAttempt": "Direct Python HTTPS socket was denied by sandbox; no downloaded graph exists. Root must fetch/save/pin the exact template for preflight."
+    },
+    "localSavedWanProductionGraphFound": false,
+    "localSearchScope": "Comfy workflow library and project file-name index; dated production plan explicitly records no verified Wan performance-transfer graph.",
+    "liveCloudQueried": true,
+    "accountValidated": false,
+    "compiled": true,
+    "executed": true,
+    "accepted": false,
+    "exactCloudServerVersionKnown": false,
+    "evidenceScope": "The archived actual graphs executed on these dated jobs. This is not blanket future Cloud compatibility or recommended optimal settings."
+  },
+  "proposedSettings": {
+    "width": 768,
+    "height": 432,
+    "aspect": "16:9",
+    "dimensionsMultipleOf16": true,
+    "fps": 24,
+    "frameCount": 77,
+    "batchSize": 1,
+    "seed": 42,
+    "seedBehavior": "fixed",
+    "steps": "retain current loaded official branch baseline; compile/read back, not disconnected widget values",
+    "cfg": "retain actual loaded official baseline",
+    "sampler": "retain actual loaded official baseline",
+    "extensionBranches": "disabled and disconnected from active output; one initial77-frame segment only",
+    "inputResize": "same16:9 framing, no center crop or geometric distortion",
+    "effectiveInputsVerified": false,
+    "note": "768x432 is a bounded coarse proof, not production delivery or evidence of fine tattoo fidelity. Native-source matched comparison remains mandatory."
+  },
+  "preservation": {
+    "identityMayChange": [
+      "lead facial likeness toward isolated Han/Harrison Ford actor target"
+    ],
+    "mustRemain": [
+      "toast hand/glass contact and lift timing",
+      "source smile/head-turn/mouth performance",
+      "source camera motion/framing and other patrons",
+      "bar layout/background action/lighting",
+      "leather jacket and pale open shirt",
+      "existing necklace/rings/piercings/grill",
+      "older source face/neck/chest tattoo treatment including bird; no Prime cleanup",
+      "original excerpt timing and unmodified original source audio retained"
+    ],
+    "maskAndAppearanceRisk": "Wan Mix is full-character replacement, not a proven face-only editor or tattoo lock. A raw actor crop can transfer reference clothing or regenerate skin details. Character_mask/background_video routing alone does not prove source-pixel preservation.",
+    "requiredPreparation": "Inspect target face, subject mask and pose/face controls over every selected frame. Root must resolve an appearance input/mask/composite that protects source body/costume/tattoos. A shot-matched identity-edited still using the existing two-reference recipe is a possible input-preparation step, not already created; any preparation and its settings belong in the root preflight record. Do not run the full-subject template pretending an identity-only contract is already solved.",
+    "abortBeforeGenerationIf": [
+      "No valid scoped likeness input/appearance strategy",
+      "Mask includes unrelated patrons or loses head/hand/glass occlusion",
+      "Protected body/wardrobe/neck-bird region cannot be retained by the selected graph/composite plan",
+      "Face tattoos cannot be preserved or explicitly compared",
+      "More than77frames/one active generation path",
+      "Output FPS differs from24 or source trim is retimed",
+      "Current node/model/schema/conversion check fails"
+    ]
+  },
+  "preflight": {
+    "cloudMissingNodes": null,
+    "cloudMissingModels": null,
+    "unknownReason": "No Cloud node/model/API reads authorized for this subtask; absence is not asserted.",
+    "requiredModelCandidates": [
+      {
+        "category": "diffusion_models",
+        "name": "Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors",
+        "cloudAvailability": "unknown_not_queried"
+      },
+      {
+        "category": "text_encoders",
+        "name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        "cloudAvailability": "unknown_not_queried"
+      },
+      {
+        "category": "clip_vision",
+        "name": "clip_vision_h.safetensors",
+        "cloudAvailability": "unknown_not_queried"
+      },
+      {
+        "category": "vae",
+        "name": "wan_2.1_vae.safetensors",
+        "cloudAvailability": "unknown_not_queried"
+      },
+      {
+        "category": "loras",
+        "name": "lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors",
+        "cloudAvailability": "unknown_not_queried"
+      },
+      {
+        "category": "loras",
+        "name": "WanAnimate_relight_lora_fp16.safetensors",
+        "cloudAvailability": "unknown_not_queried"
+      },
+      {
+        "category": "sam2",
+        "name": "sam2_hiera_base_plus.safetensors",
+        "cloudAvailability": "unknown_not_queried"
+      },
+      {
+        "category": "pose_preprocessor",
+        "name": "yolox_l.onnx",
+        "cloudAvailability": "unknown_not_queried"
+      },
+      {
+        "category": "pose_preprocessor",
+        "name": "dw-ll_ucoco_384_bs5.torchscript.pt",
+        "cloudAvailability": "unknown_not_queried"
+      }
+    ],
+    "criticalNodes": [
+      "LoadVideo",
+      "GetVideoComponents",
+      "LoadImage",
+      "ImageScale",
+      "PixelPerfectResolution",
+      "DWPreprocessor",
+      "PointsEditor",
+      "DownloadAndLoadSAM2Model",
+      "Sam2Segmentation",
+      "WanAnimateToVideo",
+      "CLIPVisionLoader",
+      "CLIPVisionEncode",
+      "CLIPLoader",
+      "UNETLoader",
+      "VAELoader",
+      "LoraLoaderModelOnly",
+      "KSampler",
+      "CreateVideo",
+      "SaveVideo"
+    ],
+    "customPackages": [
+      "ComfyUI-KJNodes",
+      "comfyui_controlnet_aux",
+      "ComfyUI-segment-anything-2"
+    ],
+    "rootChecks": [
+      "Read live server and exact template revision; preserve full editor JSON and hash.",
+      "Inspect every node schema and all active model files, including segmentation/pose assets.",
+      "Keep Mix background_video and character_mask connected; Move is not equivalent.",
+      "Inspect input-only pose/face/mask previews without activating a generation output.",
+      "Resolve source-matched target appearance and protected regions before claiming an identity-only edit.",
+      "Disable extension outputs and inspect effective77-frame/24fps/768x432/batch1 compilation.",
+      "Read actual sampler/LoRA values through compiled inputs; do not trust stale inner widgets.",
+      "Check current account estimate and run scope; cost remains unknown here.",
+      "Save actual executed graph/job/output/usage only if root later submits the single proof."
+    ],
+    "evidenceRole": "Historical initial requirements above; current actual compiled inputs and runtime diagnosis are authoritative in CLOUD_PREFLIGHT_STATUS.json."
+  },
+  "successChecks": [
+    "At normal speed, the actor likeness is recognizable without identity wobble or pasted-face boundaries.",
+    "Matched first/mid/last and gesture-event frames retain glass contour, liquid, fingers, contact and lift trajectory.",
+    "Source head/camera motion and smile timing remain aligned; no new cut or temporal drift.",
+    "Costume, chain, old bird/other tattoos and grill retain their source design; no Prime replacement or cleanup.",
+    "Decode output and verify frame count, dimensions, timebase, duration and audio policy.",
+    "Review full-size motion, not only a contact sheet. Human likeness/scene/defect decisions are new scoped review, not inherited source grades."
+  ],
+  "prompt": "Use the supplied isolated Han Solo actor image for the lead face identity only. In the supplied Cantina toast excerpt, replace the lead man's facial identity with that likeness while preserving the same performance. Keep the source leather jacket, pale open shirt, neck chain, rings, grill, hairstyle treatment and every visible older face, neck and chest tattoo, including the older bird tattoo. This is an intentional Multiverse version; do not apply the current Prime Dolo tattoo or jewelry standard. Keep the glass, liquid level, hand grip, lift path, smile timing, head turn, camera movement, framing, other patrons, bar fixtures, neon/practical lighting and background action as in the source. Retain the source scene and expression; the actor reference supplies no wardrobe, prop, setting or tattoo instructions. Produce only the selected short excerpt, without a new cut, extension, added action, relighting, lip-sync rewrite or invented dialogue.",
+  "alternativesNotActivated": [
+    {
+      "candidate": "Wan Animate 2 / Move",
+      "reason": "New environment/camera behavior does not meet the retained bar-scene contract."
+    },
+    {
+      "candidate": "MiniMax H3 R2V",
+      "reason": "Existing lesson calls it richer reference candidate; its researched starter had no driving-video connection and no CFA preservation result. Not an automatic second run."
+    },
+    {
+      "candidate": "Existing LTX depth/Canny relight tests",
+      "reason": "Prior executed tests drifted mouth/grill/tattoos and did not perform this actor-identity substitution."
+    }
+  ],
+  "referencesRead": [
+    {
+      "path": "../Pan_Handlers/Help/content/video_routes.py",
+      "section": "wan_mix and wan_animate route comparison",
+      "sha256": "c82e588784d4cefbe02240a5eb7771053077cd1a3bf2c9bebadf661bd4308b4b",
+      "read": true
+    },
+    {
+      "path": "../Pan_Handlers/Help/content/h3_candidate.py",
+      "section": "H3 appearance/performance roles; why not already a source-preserving edit",
+      "sha256": "9be5067c7cc4db3fd5da3657892028517ee279f7f5a3b5de7b51d6222e90392d",
+      "read": true
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/README.md",
+      "section": "Choose by problem: replacement character driven by existing performance",
+      "sha256": "d140ab2a15ebe066805c4ef23d8e6e9dc950478793e3420d098b864dccf57ada",
+      "read": true
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/workflows/HON_DOLO_PRODUCTION_PLAN.md",
+      "section": "New shots and transferred performances",
+      "sha256": "945cf83e65cf5ce32d5d321949eb461572dc2d52f72f235ab6c5af26c132dec3",
+      "read": true
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/templates/workflow_intake.md",
+      "section": "Evidence states; Decision and feedback",
+      "sha256": "d80907334430b8248f70f92c92daf02d32013f13987e22a5099a3943b7c1d951",
+      "read": true
+    },
+    {
+      "path": "docs/notes/explorable_world/pathfinder_handoff/README.md",
+      "section": "Manual bounded teaching return",
+      "sha256": "999a3e74d13a5096764d7e683f42f7e14c8514f4fd57d5d95885b8c891c3df5d",
+      "read": true
+    },
+    {
+      "path": "../Pan_Handlers/Help/CFA_TUTORIAL_LEDGER.md",
+      "section": "October4 performance-transfer research; current lesson breadcrumbs",
+      "sha256": "40b80e392b48728be62240260b9329a79203a994e8fecc01bf4a0204f722bf91",
+      "read": true
+    },
+    {
+      "path": "../Pan_Handlers/Help/FILE_MAP.md",
+      "section": "Video workshop route lesson location",
+      "sha256": "62d01a17d9414696ead0660ccc7ee72a2c52723f9bb819af1f42b077231bcefb",
+      "read": true
+    }
+  ],
+  "manualTeachingReturn": {
+    "route": "Existing CFA/Panhandlers handoff; no new framework.",
+    "status": "prepared locally, manual Pan adoption pending",
+    "boundedLesson": "Existing wan_mix lesson: generation-conditioning mask versus final source-preservation mask; source alignment versus generated eye performance; technical repair versus actor acceptance. No universal success or failure-cause claim.",
+    "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/comfy/cantina_toast_identity_20261012/MEASURED_RETURN_20261012.txt",
+    "PanFilesEdited": false
+  },
+  "preparationSnapshot": {
+    "preservedAtUTC": "2026-10-13T01:38:42.871586+00:00",
+    "status": "prepared_for_root_preflight",
+    "evidenceState": "reviewed_candidate_not_cloud_validated",
+    "generationSubmitted": false,
+    "jobID": null,
+    "output": null,
+    "experiment": {
+      "question": "Can one short actor-identity substitution retain the existing Multiverse toast performance and all scene/design details?",
+      "baseline": "Unchanged exact source frames162–238 at native timing, compared at the same display size.",
+      "oneDeliberateChange": "Lead facial identity to HD-LIKENESS-03; no other creative change.",
+      "maximumVideoGenerations": 1,
+      "batchSize": 1,
+      "automaticRetries": 0,
+      "automaticAlternateModels": false,
+      "outputAcceptance": "pending; source Production stage does not promote the new test"
+    },
+    "recipe": {
+      "selection": "Official Wan2.2 Animate Mix, original-setting character-replacement branch.",
+      "why": "Existing CFA/Pan lesson selects this route when a replacement identity must share a source performance and background.",
+      "officialGuide": "https://docs.comfy.org/tutorials/video/wan/wan2-2-animate",
+      "officialTemplate": "https://raw.githubusercontent.com/Comfy-Org/workflow_templates/main/templates/video_wan2_2_14B_animate.json",
+      "publicGraphObserved": {
+        "id": "ba1df054-50a8-4da2-b45a-25b4dde3cc2f",
+        "revision": 1,
+        "lastNodeID": 283,
+        "lastLinkID": 714,
+        "observedDate": "2026-10-12",
+        "method": "Official docs and targeted raw editor-JSON sections read through web tool.",
+        "localGraphSnapshotSaved": false,
+        "sha256": null,
+        "fullGraphInventoryComplete": false,
+        "downloadAttempt": "Direct Python HTTPS socket was denied by sandbox; no downloaded graph exists. Root must fetch/save/pin the exact template for preflight."
+      },
+      "localSavedWanProductionGraphFound": false,
+      "localSearchScope": "Comfy workflow library and project file-name index; dated production plan explicitly records no verified Wan performance-transfer graph.",
+      "liveCloudQueried": false,
+      "accountValidated": false,
+      "compiled": false,
+      "executed": false,
+      "accepted": false
+    },
+    "preflight": {
+      "cloudMissingNodes": null,
+      "cloudMissingModels": null,
+      "unknownReason": "No Cloud node/model/API reads authorized for this subtask; absence is not asserted.",
+      "requiredModelCandidates": [
+        {
+          "category": "diffusion_models",
+          "name": "Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors",
+          "cloudAvailability": "unknown_not_queried"
+        },
+        {
+          "category": "text_encoders",
+          "name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+          "cloudAvailability": "unknown_not_queried"
+        },
+        {
+          "category": "clip_vision",
+          "name": "clip_vision_h.safetensors",
+          "cloudAvailability": "unknown_not_queried"
+        },
+        {
+          "category": "vae",
+          "name": "wan_2.1_vae.safetensors",
+          "cloudAvailability": "unknown_not_queried"
+        },
+        {
+          "category": "loras",
+          "name": "lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors",
+          "cloudAvailability": "unknown_not_queried"
+        },
+        {
+          "category": "loras",
+          "name": "WanAnimate_relight_lora_fp16.safetensors",
+          "cloudAvailability": "unknown_not_queried"
+        },
+        {
+          "category": "sam2",
+          "name": "sam2_hiera_base_plus.safetensors",
+          "cloudAvailability": "unknown_not_queried"
+        },
+        {
+          "category": "pose_preprocessor",
+          "name": "yolox_l.onnx",
+          "cloudAvailability": "unknown_not_queried"
+        },
+        {
+          "category": "pose_preprocessor",
+          "name": "dw-ll_ucoco_384_bs5.torchscript.pt",
+          "cloudAvailability": "unknown_not_queried"
+        }
+      ],
+      "criticalNodes": [
+        "LoadVideo",
+        "GetVideoComponents",
+        "LoadImage",
+        "ImageScale",
+        "PixelPerfectResolution",
+        "DWPreprocessor",
+        "PointsEditor",
+        "DownloadAndLoadSAM2Model",
+        "Sam2Segmentation",
+        "WanAnimateToVideo",
+        "CLIPVisionLoader",
+        "CLIPVisionEncode",
+        "CLIPLoader",
+        "UNETLoader",
+        "VAELoader",
+        "LoraLoaderModelOnly",
+        "KSampler",
+        "CreateVideo",
+        "SaveVideo"
+      ],
+      "customPackages": [
+        "ComfyUI-KJNodes",
+        "comfyui_controlnet_aux",
+        "ComfyUI-segment-anything-2"
+      ],
+      "rootChecks": [
+        "Read live server and exact template revision; preserve full editor JSON and hash.",
+        "Inspect every node schema and all active model files, including segmentation/pose assets.",
+        "Keep Mix background_video and character_mask connected; Move is not equivalent.",
+        "Inspect input-only pose/face/mask previews without activating a generation output.",
+        "Resolve source-matched target appearance and protected regions before claiming an identity-only edit.",
+        "Disable extension outputs and inspect effective77-frame/24fps/768x432/batch1 compilation.",
+        "Read actual sampler/LoRA values through compiled inputs; do not trust stale inner widgets.",
+        "Check current account estimate and run scope; cost remains unknown here.",
+        "Save actual executed graph/job/output/usage only if root later submits the single proof."
+      ]
+    }
+  },
+  "updatedAtUTC": "2026-10-13T01:38:42.871586+00:00",
+  "executionSummary": {
+    "identityJobsCompleted": 2,
+    "preflightJobsCompleted": 2,
+    "identityJobs": [
+      {
+        "id": "569bec13-c8d8-4767-bddf-070b6765708b",
+        "reportedElapsedSeconds": 45.46,
+        "reportedComputeHours": 0.013,
+        "accepted": false,
+        "result": "Black edit windows all69; intended actor transfer failed.",
+        "verification": {
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/comfy/cantina_toast_identity_20261012/IDENTITY_JOB_569bec13_RESULT_20261012/VERIFICATION/FINAL_PROOF_VERIFICATION.json",
+          "sha256": "d832da1f9a6a39b5437ea6a383311335abdc6853bfdd7c803d1242fea8f9b1c5",
+          "videoShapeTimingPass": true,
+          "all69SourceAlignmentOffsetsZero": true,
+          "audioLagSamples": 0,
+          "audioCorrelation": 0.9990468395056972,
+          "identityPass": false,
+          "accepted": false,
+          "benchmarkVisualReviewCompleted": true,
+          "rootReviewRecordedSeparately": true,
+          "compressionToleranceScope": "Compare against the diagnostic baseline; no arbitrary numeric visual-acceptance threshold. Outside-mask alignment confirms source composition, not generated eye/performance alignment inside the edit window."
+        }
+      },
+      {
+        "id": "ae13aefd-845b-445c-a118-d8418a728785",
+        "reportedElapsedSeconds": 43.99,
+        "reportedComputeHours": 0.012,
+        "accepted": false,
+        "result": "Black windows repaired; actor likeness weak/mixed and eye expression drift.",
+        "verification": {
+          "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/comfy/cantina_toast_identity_20261012/IDENTITY_JOB_ae13aefd_RESULT_20261012/VERIFICATION/FINAL_PROOF_VERIFICATION.json",
+          "bytes": 60418,
+          "sha256": "81763df5dd621fef62092386f984875b17e8120fe0f20e9fb189479886a1f00e",
+          "videoShapeTimingPass": true,
+          "all69SourceAlignmentOffsetsZero": true,
+          "meanMAEOutsideEditPlus8px": 2.1184125529189672,
+          "diagnosticBaselineMAE": 2.1245415793059954,
+          "audioLagSamples": 0,
+          "audioCorrelation": 0.9990468395056972,
+          "AACPaddingSamples": 240,
+          "AACPaddingSeconds": 0.005,
+          "technicalMaskFillRepairPass": true,
+          "actorLikenessPass": false,
+          "facialPerformancePass": false,
+          "accepted": false,
+          "scope": "Compare against the diagnostic baseline; no arbitrary numeric visual-acceptance threshold. Outside-mask alignment confirms source composition, not generated eye/performance alignment inside the edit window."
+        }
+      }
+    ],
+    "actualExcerpt": {
+      "firstOriginalFrameZeroBased": 168,
+      "lastOriginalFrameInclusive": 236,
+      "sourceUploadedFrames": 77,
+      "uploadedBatchTrimIndex": 6,
+      "frames": 69,
+      "fps": 24,
+      "durationSeconds": 2.875
+    },
+    "actualSettings": {
+      "width": 768,
+      "height": 432,
+      "frames": 69,
+      "fps": 24,
+      "batchSize": 1,
+      "seed": 42,
+      "seedBehavior": "fixed",
+      "steps": 6,
+      "cfg": 1,
+      "sampler": "euler",
+      "scheduler": "simple",
+      "denoise": 1
+    },
+    "centralStatus": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/comfy/cantina_toast_identity_20261012/CLOUD_PREFLIGHT_STATUS.json",
+    "generationHold": true,
+    "stage": "Preliminary",
+    "accepted": false,
+    "userAcceptance": false,
+    "actualCost": null,
+    "reportedComputeHoursAreNotDollarCost": true,
+    "nativePreviewEvidence": {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/comfy/cantina_toast_identity_20261012/CLOUD_PREFLIGHT_EVIDENCE/IDENTITY_JOB_ae13aefd_REPAIRED_PREVIEW.png",
+      "bytes": 86770,
+      "sha256": "b73c19ba4b4ef9cc72cce1c2f16369c57ca9f9aa98fa92fb5a8b6eee87bdb399",
+      "source": "Root sole browser controller",
+      "videoWidth": 768,
+      "videoHeight": 432,
+      "durationSeconds": 2.875,
+      "readyState": 4,
+      "pausedAtSeconds": 1.718865,
+      "noErrorBannerObserved": true,
+      "accepted": false
+    }
+  }
+}

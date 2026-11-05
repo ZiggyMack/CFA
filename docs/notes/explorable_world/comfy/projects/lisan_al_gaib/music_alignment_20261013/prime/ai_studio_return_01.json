@@ -1,0 +1,265 @@
+{
+  "audio_access": true,
+  "audio_witnesses": [
+    {
+      "time_range": "00:12 - 00:22",
+      "detail": "808 trap beat drops with skittering hi-hat rolls beneath rhythmic, pitch-shifted stereo 'Who?' and 'Can you?' call-and-response vocal ad-libs."
+    },
+    {
+      "time_range": "01:40 - 01:43",
+      "detail": "Vocalist abruptly snaps into an aggressive cadence on 'Fuck it, I'll do it live' followed by a brief dry beat pocket before bass re-engages."
+    },
+    {
+      "time_range": "03:54 - 04:09",
+      "detail": "Arrangement strips to low-pass filtered atmospheric drone pads and sub-bass; vocals drop to a deep vocoded whisper on 'Find the signal in the noise' before final trailing reverb decays to full silence."
+    }
+  ],
+  "duration_check": {
+    "observed_ending_s": 249.72,
+    "vocal_ending_s": 248.8,
+    "instrumental_reverb_tail_s": 0.92,
+    "uncertainty_s": 0.2
+  },
+  "sections": [
+    {
+      "section_id": "S01",
+      "header_line": 1,
+      "label": "Chorus",
+      "start_s": 1.8,
+      "end_s": 35.0,
+      "confidence": 0.98,
+      "boundary_cue": "Opens over atmospheric intro synths; transitions into bridge upon vocal entry of 'Lisan'"
+    },
+    {
+      "section_id": "S02",
+      "header_line": 18,
+      "label": "BRIDGE",
+      "start_s": 35.0,
+      "end_s": 48.0,
+      "confidence": 0.95,
+      "boundary_cue": "'Lisan, to the silence break' kick/bass rhythm; ends before verse 1 flow kicks in"
+    },
+    {
+      "section_id": "S03",
+      "header_line": 24,
+      "label": "Verse 1",
+      "start_s": 48.0,
+      "end_s": 125.0,
+      "confidence": 0.96,
+      "boundary_cue": "Begins with 'Birth pains inside the Handle'; ends after 'Mirrors cook don't you know?'"
+    },
+    {
+      "section_id": "S04",
+      "header_line": 33,
+      "label": "BRIDGE",
+      "start_s": 125.0,
+      "end_s": 135.5,
+      "confidence": 0.94,
+      "boundary_cue": "Return of 'Lisan, to the silence break'; cut short into verse 2 entry"
+    },
+    {
+      "section_id": "S05",
+      "header_line": 41,
+      "label": "VERSE 2",
+      "start_s": 135.5,
+      "end_s": 156.5,
+      "confidence": 0.97,
+      "boundary_cue": "Starts on 'Engineers - talking shit'; concludes on vocal 'another one'"
+    },
+    {
+      "section_id": "S06",
+      "header_line": 56,
+      "label": "BRIDGE",
+      "start_s": 156.5,
+      "end_s": 217.0,
+      "confidence": 0.94,
+      "boundary_cue": "'Mirror rorrim, don't fall' melody building into reflective philosophical bars"
+    },
+    {
+      "section_id": "S07",
+      "header_line": 67,
+      "label": "Refrain",
+      "start_s": 217.0,
+      "end_s": 231.0,
+      "confidence": 0.96,
+      "boundary_cue": "High-energy hook cadence: 'But who cares? Who cares?'; ends before verse 3 intro"
+    },
+    {
+      "section_id": "S08",
+      "header_line": 75,
+      "label": "Verse 3",
+      "start_s": 231.0,
+      "end_s": 331.5,
+      "confidence": 0.97,
+      "boundary_cue": "Starts with 'Jung in the back room'; long continuous narrative ending on 'Nobody gotta think alone'"
+    },
+    {
+      "section_id": "S09",
+      "header_line": 114,
+      "label": "Final Refrain",
+      "start_s": 331.5,
+      "end_s": 249.72,
+      "confidence": 0.98,
+      "boundary_cue": "Final hook iteration starting with 'But who cares? Who cares? We do.' into whisper outro and fade"
+    }
+  ],
+  "anchors": [
+    {
+      "anchor_name": "opening Voice from the outer world",
+      "audible_words": "Voice from the outer world",
+      "source_line": 2,
+      "start_s": 1.8,
+      "end_s": 4.5,
+      "lane": "LEAD",
+      "confidence": 0.98,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_name": "first Lisan to the silence break",
+      "audible_words": "Lisan to the silence break",
+      "source_line": 19,
+      "start_s": 35.0,
+      "end_s": 38.2,
+      "lane": "LEAD",
+      "confidence": 0.96,
+      "uncertainty_s": 0.25
+    },
+    {
+      "anchor_name": "Birth pains inside the Handle",
+      "audible_words": "Birth pains inside the Handle",
+      "source_line": 25,
+      "start_s": 48.2,
+      "end_s": 50.8,
+      "lane": "LEAD",
+      "confidence": 0.97,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_name": "Engineers talking shit",
+      "audible_words": "Engineers talking shit",
+      "source_line": 42,
+      "start_s": 135.6,
+      "end_s": 137.6,
+      "lane": "LEAD",
+      "confidence": 0.98,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_name": "Jung in the back room",
+      "audible_words": "Jung in the back room",
+      "source_line": 76,
+      "start_s": 231.2,
+      "end_s": 232.8,
+      "lane": "LEAD",
+      "confidence": 0.98,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_name": "CJ echoed adlib",
+      "audible_words": "CJ!",
+      "source_line": 77,
+      "start_s": 232.6,
+      "end_s": 233.8,
+      "lane": "AD_LIB",
+      "confidence": 0.95,
+      "uncertainty_s": 0.2
+    },
+    {
+      "anchor_name": "DOCTOR interjection",
+      "audible_words": "DOCTOR?",
+      "source_line": 93,
+      "start_s": 300.9,
+      "end_s": 302.2,
+      "lane": "DOUBLE",
+      "confidence": 0.97,
+      "uncertainty_s": 0.15
+    },
+    {
+      "anchor_name": "Outer world inner world same breath two doors",
+      "audible_words": "Outer world, inner world, same breath, two doors",
+      "source_line": 102,
+      "start_s": 320.1,
+      "end_s": 323.2,
+      "lane": "LEAD",
+      "confidence": 0.96,
+      "uncertainty_s": 0.25
+    },
+    {
+      "anchor_name": "final We do",
+      "audible_words": "We do",
+      "source_line": 116,
+      "start_s": 333.1,
+      "end_s": 334.3,
+      "lane": "LEAD",
+      "confidence": 0.98,
+      "uncertainty_s": 0.15
+    },
+    {
+      "anchor_name": "final whispered who's meta mirrors all",
+      "audible_words": "who's meta mirrors all?",
+      "source_line": 125,
+      "start_s": 346.1,
+      "end_s": 348.0,
+      "lane": "LEAD",
+      "confidence": 0.92,
+      "uncertainty_s": 0.3
+    },
+    {
+      "anchor_name": "Find the signal in the noise",
+      "audible_words": "Find the signal in the noise",
+      "source_line": 127,
+      "start_s": 354.8,
+      "end_s": 357.3,
+      "lane": "LEAD",
+      "confidence": 0.97,
+      "uncertainty_s": 0.25
+    },
+    {
+      "anchor_name": "last one for every womb and man",
+      "audible_words": "one for every womb and man",
+      "source_line": 134,
+      "start_s": 406.4,
+      "end_s": 408.8,
+      "lane": "LEAD",
+      "confidence": 0.96,
+      "uncertainty_s": 0.25
+    }
+  ],
+  "vocal_character": {
+    "voice_count": "Primary male hip-hop vocal lead, accompanied by pitch-shifted doubling layers, formant-shifted stereo ad-lib tracks, and filtered low/whisper registers.",
+    "delivery": "Rhythmic rap cadence blending conversational flow, sharp hype interjections, rhythmic repetition, and spoken/whispered philosophical asides.",
+    "overlap": "Substantial vocal doubling and ad-lib overlay over the main lead track in hook segments and key transitions (e.g., 'CJ!', 'DOCTOR?', 'Who?')."
+  },
+  "tempo": {
+    "bpm": 75.0,
+    "confidence": 0.95,
+    "meter": "4/4",
+    "evidence": "Consistent half-time trap groove with third-beat snare/clap pattern measured across verses (approx. 150 BPM in standard double-time grid)."
+  },
+  "text_audio_differences": [
+    {
+      "source_line": 43,
+      "text": "Fuck it, I’ll do it LIE’ve - the way it is",
+      "audible": "Audibly pronounced as 'Fuck it, I'll do it live, the way it is'."
+    },
+    {
+      "source_line": 47,
+      "text": "va-riot tee",
+      "audible": "Pronounced rhythmically as three distinct syllables: 'va-ri-e-ty'."
+    },
+    {
+      "source_line": 94,
+      "text": "voodoo changes thing a bit, ya?",
+      "audible": "Audible plural vocal: 'voodoo changes things a bit, ya?'"
+    },
+    {
+      "source_line": 121,
+      "text": "mirror mirror on the wall - (whispered) who’s meta mirrors all?",
+      "audible": "The phrase is broken up across dynamic vocal layers; the whisper line recurs as an isolated vocal tag around 03:46 - 03:48."
+    }
+  ],
+  "uncertainties": [
+    "Vocal boundaries on trailing reverb tails of low-frequency whispers (03:46 - 03:55) blend closely with the underlying drone synth pads.",
+    "Refrain repetition boundaries contain overlapping ad-lib doubles slightly leading into subsequent bars by ~0.15s."
+  ]
+}

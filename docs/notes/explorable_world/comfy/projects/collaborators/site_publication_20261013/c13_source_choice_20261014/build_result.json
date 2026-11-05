@@ -1,0 +1,88 @@
+{
+  "assignmentID": "c13-patch-c-scoped-source-choice-20261014",
+  "status": "complete",
+  "startedAtUTC": "2026-10-14T02:36:51.983346+00:00",
+  "buildInvocations": 1,
+  "sourceInputs": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+      "bytes": 223181,
+      "sha256": "ff7c03e10b984538b50aac5e3c782802ddbe73f04e2c0b05491492bf1fdaa414"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/library.css",
+      "bytes": 53653,
+      "sha256": "71f45f0d7af045a0db25f4cf989c5b1c19739c0b86110400be66879769d0920f"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/build_catalog.py",
+      "bytes": 52074,
+      "sha256": "b591cbbf476e11a4c7a8d5597bc55d869218bb3772a325a14d6567be0b8e5a98"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/reference_validation.json",
+      "bytes": 89056,
+      "sha256": "6a349b56b2b3534a2c2f04670f76002e27803ca6a1957e9eafed3ef3dc35af60"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/mouth_coverage.json",
+      "bytes": 174313,
+      "sha256": "c65c4b7829b32bb8aaa5c965d565b92639701f3947b044343a487aaec923a7e5"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/writer_development.json",
+      "bytes": 52290,
+      "sha256": "867f4a4c82de987777054ee8a9154b1e81e9743df9f991109007785d6ebe0c25"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/source_comparisons.json",
+      "bytes": 4260,
+      "sha256": "6032efcc75c1e3a545f5f7e6629bed59c9760ea6585eeee591803f95edd46e24"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/reference_provenance.py",
+      "bytes": 1927,
+      "sha256": "ee2db5b9cb07aaa979c03292dca5784ce2bc993886cd44fa45c94e42b0647424"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/reference_provenance_snapshots.json",
+      "bytes": 1355,
+      "sha256": "462ffa88ee758c45b6b333e786a6048184de32690c312cbe14f9444268e87c6d"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/mission_control.json",
+      "bytes": 143045,
+      "sha256": "62677517cf8aef5a4fb3646d657eb93642a6c7bd093b87179e06f88adbf07a94"
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/c13_source_choice_20261014/SOURCE_CHOICE.json",
+      "bytes": 2527,
+      "sha256": "227b07bcc2268c37d1eca3f59a7f711abe1b1dd7a4f95d1435a5039017b7ca66"
+    }
+  ],
+  "catalogBefore": {
+    "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+    "bytes": 10619448,
+    "sha256": "75a3b708d3fbea50877d461daa234a2da59b048a5f1f20649a7efb8148834fcc"
+  },
+  "build": {
+    "name": "build_catalog.py",
+    "exitCode": 0,
+    "stdout": "{\"assets\": 2437, \"albums\": 229, \"documents\": 480, \"media\": 1957}\n",
+    "stderr": ""
+  },
+  "error": "Verification failed; no automatic rebuild",
+  "checkedAtUTC": "2026-10-14T02:37:58.109815+00:00",
+  "completedAtUTC": "2026-10-14T02:40:15.854403+00:00",
+  "catalogAfter": {
+    "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+    "bytes": 10643143,
+    "sha256": "0b6f1c822f6f263adc47455f735d8731014714d6ccbedac1c9371ce24d866b1d"
+  },
+  "handback": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/site_publication_20261013/c13_source_choice_20261014/SITE_PUBLICATION_HANDBACK.json",
+    "bytes": 2269,
+    "sha256": "4f5f5cd7d2287907ab7abf9eb0683cb830db99d3b70d4fe54e22df28105f6afe"
+  },
+  "verificationFollowup": "Two stale test harness hooks fixed and task-scoped assertions restored. Runtime now ignores source preview requests without a task ID. No catalog rebuild."
+}

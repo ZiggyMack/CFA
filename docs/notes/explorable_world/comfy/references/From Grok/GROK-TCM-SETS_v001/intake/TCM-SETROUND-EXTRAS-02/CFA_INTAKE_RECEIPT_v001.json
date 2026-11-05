@@ -1,0 +1,82 @@
+{
+  "format": "cfa-grok-image-intake-v1",
+  "project": "criminal_mind",
+  "batchID": "TCM-SETROUND-EXTRAS-02",
+  "lane": "set_round",
+  "taskID": "tcm-grok-sets-20261030",
+  "intakeRole": "site_index_receipt",
+  "verifiedAtUTC": "2026-11-04T13:41:07Z",
+  "receivedAtUTC": null,
+  "receivedTimeStatus": "not_recorded_in_archive",
+  "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SETROUND-EXTRAS-02.zip",
+  "archiveSHA256": "cd2580d9c83c1717f01691a54b9855ff6ca10e320330c4795bb9f00a249b8811",
+  "archiveBytes": 273221,
+  "archiveMemberCount": 12,
+  "receivedOriginals": 1,
+  "acceptedOriginals": 0,
+  "humanVerdictsCreated": 0,
+  "selectedStartingFrames": 0,
+  "assets": [
+    {
+      "candidateID": "TCM-SET-CAFE-X01__P09-LS1",
+      "project": "criminal_mind",
+      "lane": "set_round",
+      "role": "set_camera_option",
+      "path": "D:\\Documents\\CFA\\docs\\notes\\explorable_world\\comfy\\references\\From Grok\\GROK-TCM-SETS_v001\\intake\\TCM-SETROUND-EXTRAS-02\\TCM-SET-CAFE\\TCM-SET-CAFE-X01__P09-LS1.jpg",
+      "repoPath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SETROUND-EXTRAS-02/TCM-SET-CAFE/TCM-SET-CAFE-X01__P09-LS1.jpg",
+      "archivePath": "docs/notes/explorable_world/comfy/references/From Grok/GROK-TCM-SETS_v001/intake/TCM-SETROUND-EXTRAS-02.zip",
+      "archiveMember": "TCM-SETROUND-EXTRAS-02/TCM-SET-CAFE/TCM-SET-CAFE-X01__P09-LS1.jpg",
+      "sha256": "159db0cbb7ae413cb1330642dcc9a92053935a786f5f59a1eae4204af35056de",
+      "bytes": 251284,
+      "width": 1280,
+      "height": 720,
+      "provider": "Grok",
+      "stage": "preliminary",
+      "reviewControllerID": "baldadoon",
+      "selected": false,
+      "humanReview": null,
+      "providerScreening": {
+        "tag": "SCRIPT-DRIFT",
+        "hardTrait": "Continuity / L01 geography (family: street outside EMPTY)",
+        "note": "REROLL-OF TCM-SET-CAFE-L21; fixes original defect: yes. Inspected at 1x, 4x, 6x and 10x (normal and darkened). Door glass (about x965-1075, y150-440) and transom (x952-1085, y62-119): flat pale plaster-like surface over a grey pavement strip, no figure, no speck, no tree. Original figure box x983-992 y296-324 is now uniform (luma 213-224, sd 2.9); bluish-cluster box x1008-1021 y303-322 uniform (luma 212-220, sd 2.1). Left window (x0-175, y0-450): same blank pale wall over grey pavement, no figure, no pedestrian, no car, no reflection of people. Pixel diff vs L21 sits almost entirely in the glass areas; the interior is unchanged. Hard rules pass: no people, hands, faces or figures, no reflections of people, no weapons or blood, no legible text, no brand: espresso machine and grinder blank at 6x, the door closer is a plain bar. P09 met: card 'Standing eye height from beside the corner table, 28 to 35 mm feel, looking across the room to the entrance door: the empty tables and chairs along the path, the counter edge at one side, the door and its glass with daylight at the far end.' Window still LEFT of the table. New defect (soft): card family check 'the city street outside is EMPTY', and the writer's L01 reading names a 'tree-lined street with parked cars and no people'. The exterior is now a featureless pale wall right outside the glass, with no street, trees or buildings. It reads as a blank backdrop/courtyard and breaks continuity with L11-L20 and L21, where the same windows show a tree-lined row-house street. | screener sha256 own (R12); matches EXTRAS_B2_index sha256 (maker value identical); manifest reference_ids: 'REROLL of L21 (Chief-approved ...); img_ref: original L21' (present, so not MANIFEST-INCOMPLETE); maker index id TCM-SET-CAFE-X01__P09-LS1; over-cap extra per Chief approval; PRELIMINARY",
+        "cardVersion": "TCMSET_B2_CAFE_card_v001",
+        "judgedAgainst": "TCMSET_B2_TCM-SET-CAFE_card_v001.md sha256:ea71659d818c95d4885d72cc03204e7c13daa54eaa2ad124a831894af4771725",
+        "sourceMember": "TCM-SETROUND-EXTRAS-02/SCREENING_ROWS_EXTRAS02_PRELIMINARY.tsv",
+        "sourceSHA256": "a900f22600a48594608c28c5bc2b95ed9152fed841120935cbf1739fd80efcba",
+        "isHumanVerdict": false
+      },
+      "providerProposal": {
+        "lookNote": "Route from corner table across room to glazed entrance door, counter at right; door glass and window show only empty overexposed glare and bare pavement.",
+        "sourceVsProposal": null,
+        "defectNote": "PRELIMINARY OVER-CAP EXTRA; door glass shows blank bright glare, no figure/blur/trees seen at full view; original L21 kept unchanged",
+        "sourceMember": "TCM-SETROUND-EXTRAS-02/TCM-SET-CAFE/MAKER_EXTRAS_B2_index.tsv",
+        "sourceSHA256": "5a1becb1620874a97c4185fefddea9405a817cca0369d594c7f6849f40c029f9"
+      },
+      "indexedBytesAndHashes": true,
+      "locationFamilyID": "TCM-SET-CAFE",
+      "sourceScenes": [
+        "TCM-SRC-18"
+      ],
+      "eligibleShotIDs": [
+        "TCM-18-01",
+        "TCM-18-02",
+        "TCM-18-03",
+        "TCM-18-04"
+      ],
+      "locationTitle": "Cafe corner/window table",
+      "sourceConstraints": "Small table in a corner by the window, seating for two, coffee and a believable patron background zone. A shared environment, not two disconnected close-up sets."
+    }
+  ],
+  "verification": {
+    "zipCRC": true,
+    "archiveHash": true,
+    "safeMemberPaths": true,
+    "noSymlinks": true,
+    "noEncryptedMembers": true,
+    "uniqueCandidateIDs": true,
+    "indexedBytesAndHashes": true,
+    "JPEGDecode": true,
+    "humanReviewOrAcceptanceCreated": false
+  },
+  "note": "Technical receipt for unreviewed originals. Provider/V-team screening remains attributed preliminary evidence, never a human verdict or acceptance."
+}

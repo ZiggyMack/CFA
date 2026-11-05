@@ -1,0 +1,1296 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "independent_static_audit_of_external_provider_anchor_claims_not_listening",
+  "created_at_utc": "2026-10-13T03:36:10.689271+00:00",
+  "track_id": "mm_1",
+  "independent_timebase": true,
+  "timing_transfer_or_rescaling_performed": false,
+  "decoded_duration_seconds": 271.76,
+  "source_line_manifest": {
+    "file": "source_line_manifest.json",
+    "sha256": "33c196d90ec4062ac739471040fb0558d014185dbf031d285f58402ffe5eb3fc",
+    "source_line_count": 148,
+    "canonical_lyric_line_count": 103,
+    "manifest_exact_text_mismatch_lines": []
+  },
+  "source_provenance": {
+    "audio": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/MM_1.mp3",
+      "expected_sha256": "6c563b7938e066bd5b55ff7c7f736f7a7c0d52950ce48efc8b7098a07f95fade",
+      "actual_sha256": "6c563b7938e066bd5b55ff7c7f736f7a7c0d52950ce48efc8b7098a07f95fade",
+      "hash_matches": true
+    },
+    "lyrics": {
+      "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/MM_1.txt",
+      "expected_sha256": "ce57412c88e3aa44f4d55b811cee4140e33035a2694b9da7587a03f775188c8f",
+      "actual_sha256": "ce57412c88e3aa44f4d55b811cee4140e33035a2694b9da7587a03f775188c8f",
+      "hash_matches": true
+    }
+  },
+  "independent_listening_performed": false,
+  "timestamps_accepted": false,
+  "audio_access_verified": false,
+  "provider_claims_are_external_evidence": true,
+  "reports": [
+    {
+      "report_file": "ai_studio_return_01.partial.txt",
+      "report_sha256": "66ba0781f86e6615968daf0ac2b423399a6a8776f356636e12d31fbf00ae1b67",
+      "report_parse": {
+        "valid_complete_json": false,
+        "recovered_arrays": {
+          "audio_witnesses": {
+            "complete_objects_recovered": 3,
+            "trailing_object_incomplete": false
+          },
+          "sections": {
+            "complete_objects_recovered": 8,
+            "trailing_object_incomplete": false
+          },
+          "anchors": {
+            "complete_objects_recovered": 11,
+            "trailing_object_incomplete": true
+          }
+        },
+        "method": "Read-only JSONDecoder salvage of complete values only; unfinished anchor is not reconstructed."
+      },
+      "provider_audio_access_claim": true,
+      "audio_access_independently_verified": false,
+      "independent_listening_performed": false,
+      "timings_accepted": false,
+      "vocal_lanes_accepted": false,
+      "summary": {
+        "section_count": 8,
+        "complete_anchor_count": 11,
+        "invalid_section_ids": [
+          "S06",
+          "S07",
+          "S08"
+        ],
+        "invalid_anchor_source_lines": [
+          80,
+          105,
+          128,
+          130
+        ],
+        "anchor_source_section_containment_failures": [
+          80,
+          128,
+          130
+        ],
+        "header_indices_all_match": true,
+        "source_access_strings_checked": 0,
+        "source_access_exact_matches": 0,
+        "confidence_range_external_claim": [
+          0.91,
+          0.98
+        ],
+        "state": "invalid_provisional_report"
+      },
+      "sections": [
+        {
+          "section_id": "S01",
+          "source_section_exists": true,
+          "reported_header_line": 1,
+          "expected_header_line": 1,
+          "header_index_matches": true,
+          "exact_source_heading": "[Chorus]",
+          "provider_display_label": "Chorus & Lisan passage",
+          "label_is_literal_source_heading": false,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 6.0,
+            "end_s": 51.2,
+            "reasons": []
+          }
+        },
+        {
+          "section_id": "S02",
+          "source_section_exists": true,
+          "reported_header_line": 24,
+          "expected_header_line": 24,
+          "header_index_matches": true,
+          "exact_source_heading": "[Verse 1]",
+          "provider_display_label": "VERSE1",
+          "label_is_literal_source_heading": false,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 51.2,
+            "end_s": 116.8,
+            "reasons": []
+          }
+        },
+        {
+          "section_id": "S03",
+          "source_section_exists": true,
+          "reported_header_line": 39,
+          "expected_header_line": 39,
+          "header_index_matches": true,
+          "exact_source_heading": "[BRIDGE]",
+          "provider_display_label": "BRIDGE",
+          "label_is_literal_source_heading": false,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 116.8,
+            "end_s": 145.8,
+            "reasons": []
+          }
+        },
+        {
+          "section_id": "S04",
+          "source_section_exists": true,
+          "reported_header_line": 47,
+          "expected_header_line": 47,
+          "header_index_matches": true,
+          "exact_source_heading": "[ VERSE 2]",
+          "provider_display_label": "VERSE2",
+          "label_is_literal_source_heading": false,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 145.8,
+            "end_s": 216.5,
+            "reasons": []
+          }
+        },
+        {
+          "section_id": "S05",
+          "source_section_exists": true,
+          "reported_header_line": 62,
+          "expected_header_line": 62,
+          "header_index_matches": true,
+          "exact_source_heading": "[BRIDGE]",
+          "provider_display_label": "BRIDGE",
+          "label_is_literal_source_heading": false,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 216.5,
+            "end_s": 240.5,
+            "reasons": []
+          }
+        },
+        {
+          "section_id": "S06",
+          "source_section_exists": true,
+          "reported_header_line": 73,
+          "expected_header_line": 73,
+          "header_index_matches": true,
+          "exact_source_heading": "[Refrain]",
+          "provider_display_label": "Refrain",
+          "label_is_literal_source_heading": false,
+          "time_check": {
+            "state": "invalid",
+            "valid_numeric_interval": false,
+            "start_s": 240.5,
+            "end_s": 313.2,
+            "reasons": [
+              "end_after_decoded_duration"
+            ]
+          }
+        },
+        {
+          "section_id": "S07",
+          "source_section_exists": true,
+          "reported_header_line": 81,
+          "expected_header_line": 81,
+          "header_index_matches": true,
+          "exact_source_heading": "[Verse 3]",
+          "provider_display_label": "Verse3",
+          "label_is_literal_source_heading": false,
+          "time_check": {
+            "state": "invalid",
+            "valid_numeric_interval": false,
+            "start_s": 313.2,
+            "end_s": 349.0,
+            "reasons": [
+              "start_after_decoded_duration",
+              "end_after_decoded_duration"
+            ]
+          }
+        },
+        {
+          "section_id": "S08",
+          "source_section_exists": true,
+          "reported_header_line": 120,
+          "expected_header_line": 120,
+          "header_index_matches": true,
+          "exact_source_heading": "[Final Refrain]",
+          "provider_display_label": "Final Refrain",
+          "label_is_literal_source_heading": false,
+          "time_check": {
+            "state": "invalid",
+            "valid_numeric_interval": false,
+            "start_s": 349.0,
+            "end_s": 271.76,
+            "reasons": [
+              "start_not_before_end",
+              "start_after_decoded_duration"
+            ]
+          }
+        }
+      ],
+      "anchors": [
+        {
+          "provider_anchor_index": 1,
+          "source_line": 2,
+          "canonical_line_id": "MM1.S01.L002",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "Voice from the outer world,",
+          "claimed_audible_words": "Voice from the outer world",
+          "source_section_id": "S01",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 6.2,
+            "end_s": 8.9,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.98,
+          "claimed_uncertainty_s": 0.2,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 2,
+          "source_line": 19,
+          "canonical_line_id": null,
+          "source_line_is_nonblank_lyric": false,
+          "exact_source_text": "",
+          "claimed_audible_words": "Under the lies half truths realized",
+          "source_section_id": "S01",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 40.5,
+            "end_s": 47.8,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.95,
+          "claimed_uncertainty_s": 0.3,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 3,
+          "source_line": 21,
+          "canonical_line_id": "MM1.S01.L021",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "Buried deep Al-Gaib",
+          "claimed_audible_words": "Listen to the silence break",
+          "source_section_id": "S01",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 48.0,
+            "end_s": 50.8,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.94,
+          "claimed_uncertainty_s": 0.2,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 4,
+          "source_line": 26,
+          "canonical_line_id": "MM1.S02.L026",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "Birth pains inside the Handle, Doctors on stand by for the channel. Did I mention we got a lawyer - non contingent and pro bono … Kaleb K on retainer, that’s my dog dipped in flavor. Sassy Frass, yeah she’s a bitch -",
+          "claimed_audible_words": "Birth pains inside the Handle",
+          "source_section_id": "S02",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 54.1,
+            "end_s": 56.1,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.96,
+          "claimed_uncertainty_s": 0.2,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 5,
+          "source_line": 40,
+          "canonical_line_id": "MM1.S03.L040",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "Lisan, to the silence break.",
+          "claimed_audible_words": "We do",
+          "source_section_id": "S03",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 118.2,
+            "end_s": 119.5,
+            "reasons": []
+          },
+          "claimed_lane": "DOUBLE",
+          "claimed_confidence": 0.95,
+          "claimed_uncertainty_s": 0.2,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 6,
+          "source_line": 48,
+          "canonical_line_id": "MM1.S04.L048",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "Engineers - talking shit … designing convo - just a bit … a dab a do ya, in the biz",
+          "claimed_audible_words": "Engineers talking shit designing combo",
+          "source_section_id": "S04",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 146.0,
+            "end_s": 148.5,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.97,
+          "claimed_uncertainty_s": 0.2,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 7,
+          "source_line": 74,
+          "canonical_line_id": "MM1.S06.L074",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "But who cares? Who cares?",
+          "claimed_audible_words": "Jung in the back room CJ archetypes",
+          "source_section_id": "S06",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 240.8,
+            "end_s": 243.6,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.96,
+          "claimed_uncertainty_s": 0.2,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 8,
+          "source_line": 80,
+          "canonical_line_id": null,
+          "source_line_is_nonblank_lyric": false,
+          "exact_source_text": "",
+          "claimed_audible_words": "Doctor!",
+          "source_section_id": "S06",
+          "within_reported_source_section": false,
+          "time_check": {
+            "state": "invalid",
+            "valid_numeric_interval": false,
+            "start_s": 312.4,
+            "end_s": 313.8,
+            "reasons": [
+              "start_after_decoded_duration",
+              "end_after_decoded_duration"
+            ]
+          },
+          "claimed_lane": "AD_LIB",
+          "claimed_confidence": 0.97,
+          "claimed_uncertainty_s": 0.2,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 9,
+          "source_line": 105,
+          "canonical_line_id": "MM1.S07.L105",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "Pan handling in the biz - it’s what you do, use that riz. ",
+          "claimed_audible_words": "Outer world inner world same breath two doors",
+          "source_section_id": "S07",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "invalid",
+            "valid_numeric_interval": false,
+            "start_s": 334.2,
+            "end_s": 337.4,
+            "reasons": [
+              "start_after_decoded_duration",
+              "end_after_decoded_duration"
+            ]
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.95,
+          "claimed_uncertainty_s": 0.3,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 10,
+          "source_line": 128,
+          "canonical_line_id": "MM1.S08.L128",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "I am the voice of y’all",
+          "claimed_audible_words": "I am the voice of y'all",
+          "source_section_id": "S08",
+          "within_reported_source_section": false,
+          "time_check": {
+            "state": "invalid",
+            "valid_numeric_interval": false,
+            "start_s": 400.4,
+            "end_s": 402.8,
+            "reasons": [
+              "start_after_decoded_duration",
+              "end_after_decoded_duration"
+            ]
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.96,
+          "claimed_uncertainty_s": 0.2,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 11,
+          "source_line": 130,
+          "canonical_line_id": "MM1.S08.L130",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "Cooking in the pan, one for every womb and man",
+          "claimed_audible_words": "Can you handle what you hand out let the mirror talk back",
+          "source_section_id": "S08",
+          "within_reported_source_section": false,
+          "time_check": {
+            "state": "invalid",
+            "valid_numeric_interval": false,
+            "start_s": 408.2,
+            "end_s": 412.3,
+            "reasons": [
+              "start_after_decoded_duration",
+              "end_after_decoded_duration"
+            ]
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.94,
+          "claimed_uncertainty_s": 0.3,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        }
+      ],
+      "source_access_checks": [],
+      "concrete_issues": [
+        {
+          "kind": "partial_report_incomplete",
+          "detail": "Raw response terminates inside the twelfth anchor. Only 11 complete anchors are audited; no remainder is reconstructed."
+        },
+        {
+          "kind": "incorrect_source_line_assignments",
+          "assignments": [
+            {
+              "reported": 19,
+              "expected": [
+                18
+              ]
+            },
+            {
+              "reported": 21,
+              "expected": [
+                20
+              ]
+            },
+            {
+              "reported": 40,
+              "expected": [
+                30
+              ]
+            },
+            {
+              "reported": 74,
+              "expected": [
+                82,
+                83,
+                84
+              ]
+            },
+            {
+              "reported": 80,
+              "expected": [
+                99
+              ]
+            },
+            {
+              "reported": 105,
+              "expected": [
+                108
+              ]
+            },
+            {
+              "reported": 130,
+              "expected": [
+                134,
+                135
+              ]
+            }
+          ],
+          "detail": "Seven completed anchor references disagree with the exact TXT. Lines19 and80 are blank. Combined phrases need separate events or explicit multi-line references."
+        },
+        {
+          "kind": "witness_section_contradiction",
+          "source_line": 67,
+          "witness_s": 135.5,
+          "source_section": "S05",
+          "reported_section_s": [
+            216.5,
+            240.5
+          ],
+          "detail": "Keep it simple witness precedes its reported source section."
+        },
+        {
+          "kind": "late_witness_final_section_contradiction",
+          "witness_s": 252.0,
+          "source_section": "S08",
+          "reported_section_s": [
+            349.0,
+            271.76
+          ],
+          "detail": "Final womb/man callback witness conflicts with the impossible final-section interval."
+        },
+        {
+          "kind": "boundary_cue_source_mismatch",
+          "detail": "S03 cue cites Who cares/We do from S02 source lines29-30. S06 cue cites Jung/CJ from S07 source lines82-84."
+        },
+        {
+          "kind": "unsupported_confidence_precision",
+          "detail": "Impossible times, wrong line assignments and truncated response still claim roughly 0.91-0.98 confidence; no confidence calibration or independent listening verification."
+        }
+      ],
+      "independent_duration_source": "Existing native-decode AUDIO_VALIDATION / manifest, not provider listening. Matching supplied ending metadata is not an audio-access witness."
+    },
+    {
+      "report_file": "ai_studio_return_02.json",
+      "report_sha256": "5812fcb561caeea27865f63a090faab7ea7b293308fbd2cdd211ad379a056abe",
+      "report_parse": {
+        "valid_complete_json": true
+      },
+      "provider_audio_access_claim": true,
+      "audio_access_independently_verified": false,
+      "independent_listening_performed": false,
+      "timings_accepted": false,
+      "vocal_lanes_accepted": false,
+      "summary": {
+        "section_count": 8,
+        "complete_anchor_count": 15,
+        "invalid_section_ids": [],
+        "invalid_anchor_source_lines": [],
+        "anchor_source_section_containment_failures": [],
+        "header_indices_all_match": true,
+        "source_access_strings_checked": 8,
+        "source_access_exact_matches": 8,
+        "confidence_range_external_claim": [
+          0.92,
+          0.98
+        ],
+        "state": "static_consistency_pass_audio_unverified"
+      },
+      "sections": [
+        {
+          "section_id": "S01",
+          "source_section_exists": true,
+          "reported_header_line": 1,
+          "expected_header_line": 1,
+          "header_index_matches": true,
+          "exact_source_heading": "[Chorus]",
+          "provider_display_label": "[Chorus]",
+          "label_is_literal_source_heading": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 0.0,
+            "end_s": 54.0,
+            "reasons": []
+          }
+        },
+        {
+          "section_id": "S02",
+          "source_section_exists": true,
+          "reported_header_line": 24,
+          "expected_header_line": 24,
+          "header_index_matches": true,
+          "exact_source_heading": "[Verse 1]",
+          "provider_display_label": "[Verse 1]",
+          "label_is_literal_source_heading": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 54.0,
+            "end_s": 91.5,
+            "reasons": []
+          }
+        },
+        {
+          "section_id": "S03",
+          "source_section_exists": true,
+          "reported_header_line": 39,
+          "expected_header_line": 39,
+          "header_index_matches": true,
+          "exact_source_heading": "[BRIDGE]",
+          "provider_display_label": "[BRIDGE]",
+          "label_is_literal_source_heading": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 91.5,
+            "end_s": 105.5,
+            "reasons": []
+          }
+        },
+        {
+          "section_id": "S04",
+          "source_section_exists": true,
+          "reported_header_line": 47,
+          "expected_header_line": 47,
+          "header_index_matches": true,
+          "exact_source_heading": "[ VERSE 2]",
+          "provider_display_label": "[ VERSE 2]",
+          "label_is_literal_source_heading": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 105.5,
+            "end_s": 126.0,
+            "reasons": []
+          }
+        },
+        {
+          "section_id": "S05",
+          "source_section_exists": true,
+          "reported_header_line": 62,
+          "expected_header_line": 62,
+          "header_index_matches": true,
+          "exact_source_heading": "[BRIDGE]",
+          "provider_display_label": "[BRIDGE]",
+          "label_is_literal_source_heading": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 126.0,
+            "end_s": 145.8,
+            "reasons": []
+          }
+        },
+        {
+          "section_id": "S06",
+          "source_section_exists": true,
+          "reported_header_line": 73,
+          "expected_header_line": 73,
+          "header_index_matches": true,
+          "exact_source_heading": "[Refrain]",
+          "provider_display_label": "[Refrain]",
+          "label_is_literal_source_heading": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 145.8,
+            "end_s": 160.5,
+            "reasons": []
+          }
+        },
+        {
+          "section_id": "S07",
+          "source_section_exists": true,
+          "reported_header_line": 81,
+          "expected_header_line": 81,
+          "header_index_matches": true,
+          "exact_source_heading": "[Verse 3]",
+          "provider_display_label": "[Verse 3]",
+          "label_is_literal_source_heading": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 160.5,
+            "end_s": 229.0,
+            "reasons": []
+          }
+        },
+        {
+          "section_id": "S08",
+          "source_section_exists": true,
+          "reported_header_line": 120,
+          "expected_header_line": 120,
+          "header_index_matches": true,
+          "exact_source_heading": "[Final Refrain]",
+          "provider_display_label": "[Final Refrain]",
+          "label_is_literal_source_heading": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 229.0,
+            "end_s": 271.76,
+            "reasons": []
+          }
+        }
+      ],
+      "anchors": [
+        {
+          "provider_anchor_index": 1,
+          "source_line": 2,
+          "canonical_line_id": "MM1.S01.L002",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "Voice from the outer world,",
+          "claimed_audible_words": "Voice from the outer world,",
+          "source_section_id": "S01",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 6.3,
+            "end_s": 9.0,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.98,
+          "claimed_uncertainty_s": 0.2,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 2,
+          "source_line": 18,
+          "canonical_line_id": "MM1.S01.L018",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "Under the lies….half truths realized—",
+          "claimed_audible_words": "Under the lies….half truths realized—",
+          "source_section_id": "S01",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 40.6,
+            "end_s": 47.3,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.95,
+          "claimed_uncertainty_s": 0.3,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 3,
+          "source_line": 20,
+          "canonical_line_id": "MM1.S01.L020",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "Lisan, to the silence break.",
+          "claimed_audible_words": "Lisan, to the silence break.",
+          "source_section_id": "S01",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 47.7,
+            "end_s": 50.4,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.95,
+          "claimed_uncertainty_s": 0.2,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 4,
+          "source_line": 26,
+          "canonical_line_id": "MM1.S02.L026",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "Birth pains inside the Handle, Doctors on stand by for the channel. Did I mention we got a lawyer - non contingent and pro bono … Kaleb K on retainer, that’s my dog dipped in flavor. Sassy Frass, yeah she’s a bitch -",
+          "claimed_audible_words": "Birth pains inside the Handle,",
+          "source_section_id": "S02",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 54.2,
+            "end_s": 56.4,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.96,
+          "claimed_uncertainty_s": 0.2,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 5,
+          "source_line": 30,
+          "canonical_line_id": "MM1.S02.L030",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "We do.",
+          "claimed_audible_words": "We do.",
+          "source_section_id": "S02",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 78.0,
+            "end_s": 79.4,
+            "reasons": []
+          },
+          "claimed_lane": "DOUBLE",
+          "claimed_confidence": 0.95,
+          "claimed_uncertainty_s": 0.2,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 6,
+          "source_line": 48,
+          "canonical_line_id": "MM1.S04.L048",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "Engineers - talking shit … designing convo - just a bit … a dab a do ya, in the biz",
+          "claimed_audible_words": "Engineers - talking shit … designing convo - just a bit …",
+          "source_section_id": "S04",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 105.8,
+            "end_s": 109.4,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.96,
+          "claimed_uncertainty_s": 0.3,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 7,
+          "source_line": 82,
+          "canonical_line_id": "MM1.S07.L082",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "Jung in the back room. ",
+          "claimed_audible_words": "Jung in the back room.",
+          "source_section_id": "S07",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 160.5,
+            "end_s": 162.1,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.96,
+          "claimed_uncertainty_s": 0.2,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 8,
+          "source_line": 83,
+          "canonical_line_id": "MM1.S07.L083",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "CJ! (Echoed adlib)",
+          "claimed_audible_words": "CJ!",
+          "source_section_id": "S07",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 162.0,
+            "end_s": 163.2,
+            "reasons": []
+          },
+          "claimed_lane": "ECHO",
+          "claimed_confidence": 0.97,
+          "claimed_uncertainty_s": 0.2,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 9,
+          "source_line": 99,
+          "canonical_line_id": "MM1.S07.L099",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "DOCTOR?",
+          "claimed_audible_words": "DOCTOR?",
+          "source_section_id": "S07",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 193.1,
+            "end_s": 194.3,
+            "reasons": []
+          },
+          "claimed_lane": "AD_LIB",
+          "claimed_confidence": 0.97,
+          "claimed_uncertainty_s": 0.2,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 10,
+          "source_line": 108,
+          "canonical_line_id": "MM1.S07.L108",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "Outer world, inner world—same breath, two doors.",
+          "claimed_audible_words": "Outer world, inner world—same breath, two doors.",
+          "source_section_id": "S07",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 214.2,
+            "end_s": 217.8,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.95,
+          "claimed_uncertainty_s": 0.3,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 11,
+          "source_line": 128,
+          "canonical_line_id": "MM1.S08.L128",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "I am the voice of y’all",
+          "claimed_audible_words": "I am the voice of y’all",
+          "source_section_id": "S08",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 240.6,
+            "end_s": 242.9,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.95,
+          "claimed_uncertainty_s": 0.3,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 12,
+          "source_line": 134,
+          "canonical_line_id": "MM1.S08.L134",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "Can you handle what you hand out?",
+          "claimed_audible_words": "Can you handle what you hand out?",
+          "source_section_id": "S08",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 248.3,
+            "end_s": 250.7,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.94,
+          "claimed_uncertainty_s": 0.3,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 13,
+          "source_line": 139,
+          "canonical_line_id": "MM1.S08.L139",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "Why he got my eyes?",
+          "claimed_audible_words": "Why he got my eyes?",
+          "source_section_id": "S08",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 255.1,
+            "end_s": 257.0,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.95,
+          "claimed_uncertainty_s": 0.3,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 14,
+          "source_line": 141,
+          "canonical_line_id": "MM1.S08.L141",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "Find the signal in the noise—",
+          "claimed_audible_words": "Find the signal in the noise—",
+          "source_section_id": "S08",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 257.2,
+            "end_s": 259.9,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.94,
+          "claimed_uncertainty_s": 0.3,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        },
+        {
+          "provider_anchor_index": 15,
+          "source_line": 148,
+          "canonical_line_id": "MM1.S08.L148",
+          "source_line_is_nonblank_lyric": true,
+          "exact_source_text": "one for every womb and man….",
+          "claimed_audible_words": "one for every womb and man….",
+          "source_section_id": "S08",
+          "within_reported_source_section": true,
+          "time_check": {
+            "state": "numeric_valid",
+            "valid_numeric_interval": true,
+            "start_s": 266.8,
+            "end_s": 270.2,
+            "reasons": []
+          },
+          "claimed_lane": "LEAD",
+          "claimed_confidence": 0.95,
+          "claimed_uncertainty_s": 0.4,
+          "confidence_calibrated": false,
+          "audible_words_independently_verified": false
+        }
+      ],
+      "source_access_checks": [
+        {
+          "source_line": 18,
+          "returned_text": "Under the lies….half truths realized—",
+          "exact_source_text": "Under the lies….half truths realized—",
+          "exact_match_including_whitespace": true,
+          "source_trailing_ascii_whitespace_count": 0,
+          "returned_trailing_ascii_whitespace_count": 0
+        },
+        {
+          "source_line": 20,
+          "returned_text": "Lisan, to the silence break.",
+          "exact_source_text": "Lisan, to the silence break.",
+          "exact_match_including_whitespace": true,
+          "source_trailing_ascii_whitespace_count": 0,
+          "returned_trailing_ascii_whitespace_count": 0
+        },
+        {
+          "source_line": 30,
+          "returned_text": "We do.",
+          "exact_source_text": "We do.",
+          "exact_match_including_whitespace": true,
+          "source_trailing_ascii_whitespace_count": 0,
+          "returned_trailing_ascii_whitespace_count": 0
+        },
+        {
+          "source_line": 82,
+          "returned_text": "Jung in the back room. ",
+          "exact_source_text": "Jung in the back room. ",
+          "exact_match_including_whitespace": true,
+          "source_trailing_ascii_whitespace_count": 1,
+          "returned_trailing_ascii_whitespace_count": 1
+        },
+        {
+          "source_line": 99,
+          "returned_text": "DOCTOR?",
+          "exact_source_text": "DOCTOR?",
+          "exact_match_including_whitespace": true,
+          "source_trailing_ascii_whitespace_count": 0,
+          "returned_trailing_ascii_whitespace_count": 0
+        },
+        {
+          "source_line": 128,
+          "returned_text": "I am the voice of y’all",
+          "exact_source_text": "I am the voice of y’all",
+          "exact_match_including_whitespace": true,
+          "source_trailing_ascii_whitespace_count": 0,
+          "returned_trailing_ascii_whitespace_count": 0
+        },
+        {
+          "source_line": 134,
+          "returned_text": "Can you handle what you hand out?",
+          "exact_source_text": "Can you handle what you hand out?",
+          "exact_match_including_whitespace": true,
+          "source_trailing_ascii_whitespace_count": 0,
+          "returned_trailing_ascii_whitespace_count": 0
+        },
+        {
+          "source_line": 138,
+          "returned_text": "I kept pointin’ at the devil—",
+          "exact_source_text": "I kept pointin’ at the devil—",
+          "exact_match_including_whitespace": true,
+          "source_trailing_ascii_whitespace_count": 0,
+          "returned_trailing_ascii_whitespace_count": 0
+        }
+      ],
+      "concrete_issues": [
+        {
+          "kind": "provider_audio_claim_not_independently_verified",
+          "detail": "All static source/bounds checks pass. Claimed audio details, vocal lanes, phrase onsets/offsets and confidence have not been confirmed through independent listening."
+        }
+      ],
+      "independent_duration_source": "Existing native-decode AUDIO_VALIDATION / manifest, not provider listening. Matching supplied ending metadata is not an audio-access witness."
+    }
+  ],
+  "mechanical_conversion_comparison": {
+    "purpose": "Read-only investigation of provider arithmetic explanation; not an adopted timing conversion or proof of relistening. Tracks are never rescaled into one another.",
+    "formula": "floor(old_start_s / 100) * 60 + (old_start_s % 100)",
+    "matched_complete_anchor_count": 11,
+    "maximum_absolute_start_delta_s": 0.7,
+    "rows": [
+      {
+        "initial_source_line": 2,
+        "corrected_source_line": 2,
+        "initial_start_s_claim": 6.2,
+        "interpreted_as_mm_ss_seconds": 6.2,
+        "corrected_start_s_claim": 6.3,
+        "corrected_minus_interpretation_s": 0.1
+      },
+      {
+        "initial_source_line": 19,
+        "corrected_source_line": 18,
+        "initial_start_s_claim": 40.5,
+        "interpreted_as_mm_ss_seconds": 40.5,
+        "corrected_start_s_claim": 40.6,
+        "corrected_minus_interpretation_s": 0.1
+      },
+      {
+        "initial_source_line": 21,
+        "corrected_source_line": 20,
+        "initial_start_s_claim": 48.0,
+        "interpreted_as_mm_ss_seconds": 48.0,
+        "corrected_start_s_claim": 47.7,
+        "corrected_minus_interpretation_s": -0.3
+      },
+      {
+        "initial_source_line": 26,
+        "corrected_source_line": 26,
+        "initial_start_s_claim": 54.1,
+        "interpreted_as_mm_ss_seconds": 54.1,
+        "corrected_start_s_claim": 54.2,
+        "corrected_minus_interpretation_s": 0.1
+      },
+      {
+        "initial_source_line": 40,
+        "corrected_source_line": 30,
+        "initial_start_s_claim": 118.2,
+        "interpreted_as_mm_ss_seconds": 78.2,
+        "corrected_start_s_claim": 78.0,
+        "corrected_minus_interpretation_s": -0.2
+      },
+      {
+        "initial_source_line": 48,
+        "corrected_source_line": 48,
+        "initial_start_s_claim": 146.0,
+        "interpreted_as_mm_ss_seconds": 106.0,
+        "corrected_start_s_claim": 105.8,
+        "corrected_minus_interpretation_s": -0.2
+      },
+      {
+        "initial_source_line": 74,
+        "corrected_source_line": 82,
+        "initial_start_s_claim": 240.8,
+        "interpreted_as_mm_ss_seconds": 160.8,
+        "corrected_start_s_claim": 160.5,
+        "corrected_minus_interpretation_s": -0.3
+      },
+      {
+        "initial_source_line": 80,
+        "corrected_source_line": 99,
+        "initial_start_s_claim": 312.4,
+        "interpreted_as_mm_ss_seconds": 192.4,
+        "corrected_start_s_claim": 193.1,
+        "corrected_minus_interpretation_s": 0.7
+      },
+      {
+        "initial_source_line": 105,
+        "corrected_source_line": 108,
+        "initial_start_s_claim": 334.2,
+        "interpreted_as_mm_ss_seconds": 214.2,
+        "corrected_start_s_claim": 214.2,
+        "corrected_minus_interpretation_s": 0.0
+      },
+      {
+        "initial_source_line": 128,
+        "corrected_source_line": 128,
+        "initial_start_s_claim": 400.4,
+        "interpreted_as_mm_ss_seconds": 240.4,
+        "corrected_start_s_claim": 240.6,
+        "corrected_minus_interpretation_s": 0.2
+      },
+      {
+        "initial_source_line": 130,
+        "corrected_source_line": 134,
+        "initial_start_s_claim": 408.2,
+        "interpreted_as_mm_ss_seconds": 248.2,
+        "corrected_start_s_claim": 248.3,
+        "corrected_minus_interpretation_s": 0.1
+      }
+    ]
+  },
+  "next_validation": {
+    "full_map_expected_canonical_line_count": 103,
+    "preserve_exact_source_text_including_whitespace": true,
+    "use_canonical_source_line_ids": true,
+    "unresolved_or_inaudible_timestamps_must_be_null": true,
+    "explain_repeated_occurrence_and_shared_event_assignments": true,
+    "all_numeric_intervals_within_track_duration": true,
+    "explicitly_explain_cross_section_overlap": true,
+    "independent_listening_spotchecks_required": true,
+    "do_not_accept_provider_confidence_as_calibration": true,
+    "lip_sync_or_shot_cuts_accepted": false,
+    "full_line_map_audited_here": false,
+    "specific_spotcheck_ranges_seconds": [
+      [
+        40,
+        54
+      ],
+      [
+        78,
+        80
+      ],
+      [
+        160,
+        164
+      ],
+      [
+        193,
+        195
+      ],
+      [
+        240,
+        243
+      ],
+      [
+        255,
+        260
+      ],
+      [
+        266,
+        271.76
+      ]
+    ]
+  },
+  "actions": {
+    "provider_reports_modified": false,
+    "source_media_or_text_modified": false,
+    "api_relistening_or_comfy_jobs": 0,
+    "new_audit_files_only": true
+  }
+}
