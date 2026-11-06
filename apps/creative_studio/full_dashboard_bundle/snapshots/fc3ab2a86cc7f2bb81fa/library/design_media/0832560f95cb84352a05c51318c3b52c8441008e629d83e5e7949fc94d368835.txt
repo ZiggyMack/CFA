@@ -1,0 +1,24 @@
+import json,re,sys,glob,collections
+sys.path.insert(0,'/workspace/hd-sb/recovery')
+from _common import *
+files=glob.glob('/workspace/hd-sb/GROK-HD-20261008/*.json')+glob.glob('/workspace/hd-sb/GROK-HD-20261008/review_context/*.json')+glob.glob('/workspace/hd-sb/GROK-BOSS-DISCOVERY-20261008/*.json')
+refs={}; ids=collections.defaultdict(set)
+def walk(o,src):
+    if isinstance(o,dict):
+        fn=sh=aid=None
+        for k,v in o.items():
+            if isinstance(v,str):
+                if re.fullmatch(r'[0-9a-f]{64}',v) and k.lower() in ('sha256','validatedsourcesha256','sha'): sh=v
+                if re.search(r'\.(jpe?g|png|webp)$',v,re.I) and k.lower() in ('filename','source_filename','file','name','canonical_filename','archive_member','member'): fn=v.split('/')[-1]
+                if k in ('id','source_asset_id','asset_id','reference_id') and aid is None: aid=v
+        if fn or sh: refs.setdefault((fn,sh),set()).add((src,str(aid)))
+        for v in o.values(): walk(v,src)
+    elif isinstance(o,list):
+        for v in o: walk(v,src)
+    elif isinstance(o,str):
+        for m in re.findall(r'HD-DROP-[0-9a-f]{12}',o): ids[m].add(src)
+for f in files:
+    walk(json.load(open(f)),f.split('/')[-1])
+for f in glob.glob('/workspace/hd-sb/*/*.txt')+glob.glob('/workspace/hd-sb/*/*/*.txt'):
+    if 'tattoo_audit' in f: continue
+    for m in re.findall(r'HD-DROP-[0-9a-f]{12}',open(f).read()): ids[m].add(f.split('/')[-1])
