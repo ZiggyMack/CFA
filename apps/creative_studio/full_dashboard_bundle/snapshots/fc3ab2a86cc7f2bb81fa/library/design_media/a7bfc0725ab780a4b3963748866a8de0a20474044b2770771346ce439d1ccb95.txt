@@ -1,0 +1,186 @@
+{
+  "kit_manifest_rows": 113,
+  "manifest_present_verified": 97,
+  "manifest_mismatch": [],
+  "manifest_missing": [
+    "refs/BOSS-001/01_BOSS-001_character-ref.png",
+    "refs/BOSS-002/01_BOSS-002_character-ref.png",
+    "refs/BOSS-003/01_BOSS-003_character-ref.png",
+    "refs/BOSS-003/02_BOSS-003_hourglass-coins_matching-option-A.png",
+    "refs/BOSS-003/CTX_BOSS-003_hourglass-coins_options-A-D.png",
+    "refs/BOSS-004/01_BOSS-004_character-ref.png",
+    "refs/BOSS-005/01_BOSS-005_character-ref.png",
+    "refs/BOSS-006/01_BOSS-006_character-ref.png",
+    "refs/BOSS-006/02_BOSS-006_crowned-scales_matching-option-A.png",
+    "refs/BOSS-006/CTX_BOSS-006_crowned-scales_options-A-D.png",
+    "refs/BOSS-007/01_BOSS-007_character-ref.png",
+    "refs/BOSS-008/01_BOSS-008_character-ref.png",
+    "refs/BOSS-009/01_BOSS-009_character-ref.png",
+    "refs/BOSS-009/02_BOSS-009_serpent-coin_matching-option-B.png",
+    "refs/BOSS-009/CTX_BOSS-009_serpent-coin_options-A-D.png",
+    "refs/BOSS-010/01_BOSS-010_character-ref.png"
+  ],
+  "archive_unlisted_files": [
+    "KIT_MANIFEST.csv"
+  ],
+  "tests": 18,
+  "ledger_rows": 57,
+  "ledger_tool_counts": {
+    "A_NANOBANANA": 18,
+    "B_CHATGPT": 18,
+    "C_GROKBOT": 21
+  },
+  "ledger_status_counts": {
+    "needs_user_review": 57
+  },
+  "ledger_filled_outside_output_scores": [],
+  "references": {
+    "total": 60,
+    "kind_counts": {
+      "UPLOAD": 42,
+      "CONTEXT_ONLY": 18
+    },
+    "present": 44,
+    "pending": 16,
+    "mismatch": [],
+    "by_test": [
+      {
+        "id": "HD-01",
+        "uploads_expected": 5,
+        "uploads_present": 5,
+        "missing": []
+      },
+      {
+        "id": "HD-02",
+        "uploads_expected": 5,
+        "uploads_present": 5,
+        "missing": []
+      },
+      {
+        "id": "HD-03",
+        "uploads_expected": 6,
+        "uploads_present": 6,
+        "missing": []
+      },
+      {
+        "id": "HD-04",
+        "uploads_expected": 6,
+        "uploads_present": 6,
+        "missing": []
+      },
+      {
+        "id": "LAG-01",
+        "uploads_expected": 2,
+        "uploads_present": 2,
+        "missing": []
+      },
+      {
+        "id": "BOSS-001",
+        "uploads_expected": 1,
+        "uploads_present": 0,
+        "missing": [
+          "refs/BOSS-001/01_BOSS-001_character-ref.png"
+        ]
+      },
+      {
+        "id": "BOSS-002",
+        "uploads_expected": 1,
+        "uploads_present": 0,
+        "missing": [
+          "refs/BOSS-002/01_BOSS-002_character-ref.png"
+        ]
+      },
+      {
+        "id": "BOSS-003",
+        "uploads_expected": 2,
+        "uploads_present": 0,
+        "missing": [
+          "refs/BOSS-003/01_BOSS-003_character-ref.png",
+          "refs/BOSS-003/02_BOSS-003_hourglass-coins_matching-option-A.png"
+        ]
+      },
+      {
+        "id": "BOSS-004",
+        "uploads_expected": 1,
+        "uploads_present": 0,
+        "missing": [
+          "refs/BOSS-004/01_BOSS-004_character-ref.png"
+        ]
+      },
+      {
+        "id": "BOSS-005",
+        "uploads_expected": 1,
+        "uploads_present": 0,
+        "missing": [
+          "refs/BOSS-005/01_BOSS-005_character-ref.png"
+        ]
+      },
+      {
+        "id": "BOSS-006",
+        "uploads_expected": 2,
+        "uploads_present": 0,
+        "missing": [
+          "refs/BOSS-006/01_BOSS-006_character-ref.png",
+          "refs/BOSS-006/02_BOSS-006_crowned-scales_matching-option-A.png"
+        ]
+      },
+      {
+        "id": "BOSS-007",
+        "uploads_expected": 1,
+        "uploads_present": 0,
+        "missing": [
+          "refs/BOSS-007/01_BOSS-007_character-ref.png"
+        ]
+      },
+      {
+        "id": "BOSS-008",
+        "uploads_expected": 1,
+        "uploads_present": 0,
+        "missing": [
+          "refs/BOSS-008/01_BOSS-008_character-ref.png"
+        ]
+      },
+      {
+        "id": "BOSS-009",
+        "uploads_expected": 2,
+        "uploads_present": 0,
+        "missing": [
+          "refs/BOSS-009/01_BOSS-009_character-ref.png",
+          "refs/BOSS-009/02_BOSS-009_serpent-coin_matching-option-B.png"
+        ]
+      },
+      {
+        "id": "BOSS-010",
+        "uploads_expected": 1,
+        "uploads_present": 0,
+        "missing": [
+          "refs/BOSS-010/01_BOSS-010_character-ref.png"
+        ]
+      },
+      {
+        "id": "PROBE-01",
+        "uploads_expected": 1,
+        "uploads_present": 1,
+        "missing": []
+      },
+      {
+        "id": "PROBE-02",
+        "uploads_expected": 2,
+        "uploads_present": 2,
+        "missing": []
+      },
+      {
+        "id": "PROBE-03",
+        "uploads_expected": 2,
+        "uploads_present": 2,
+        "missing": []
+      }
+    ]
+  },
+  "baselines": {
+    "count": 21,
+    "present": 21,
+    "mismatch": [],
+    "converted": 13
+  }
+}
