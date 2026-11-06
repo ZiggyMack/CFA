@@ -1,0 +1,13 @@
+# All maker outputs PRELIMINARY until V_2 passes. V_2 review, HD-ARMOR-SWAP-01 v007, full-scale ROUND 2 of 2 (FINAL). 20261021T161754Z. Rules: TEAM-RULES v012 9dc5bf82 + v013 0136dace + v014 be9cd49a + Chief steering 12:06 EDT; final round: 6x-only = ADVISORY. Ink script V5_INK_METHOD_v004.py c62c6789. Round-1 return 9c79ae13.
+# FILES: v007 /workspace/hon-dolo-armor-swap/HD-ARMOR-SWAP-01_v007.jpg 056bc38e (= 056bc38e claim) | v006 e14b0378 | v005 131c2216 | original aea8323a | pilot v011 d68287f1 | Z_5 12x crops /workspace/z5chest/render_v007/crops/ viewed.
+item	box/where	measured (V_2 independent)	Z_5 claim	result	note
+FIX1 left chain	x586-608 y618-640	134 px that v006 changed are back within 12 of the original; all 228 metal px in the box (orig L>175 or B/R<0.45) are <=8 vs original (0 >12). The link highlight is back to bright gold with no bleach and no dark lines at 1x, 4x, plain 6x and 8x. Disc grid and circle arcs now stop at the link edge: no gap, halo or stub, and the arcs read as passing under the chain	361 px restored, lines stop at edge	PASS	remaining >12 px in the box vs original are ship lines on skin (expected)
+FIX2 right rim	x689-695 y610-617	max 6 vs original, 0 >12; the link's dark rim is continuous and the notch is gone at 4x, plain 6x and 10x	56 px original	PASS	-
+diff v006->v007	whole frame	>12 only in the two fix boxes (17 + 134 px); outside them max 7 (re-encode)	0 >12 outside	PASS	-
+outside/cloth vs orig	whole frame excl. chest + mouth	1 px >12: (744,539) = 14, chain highlight re-encode jitter, invisible at 4x	-	ADVISORY	well under the v009 limit (<25 px, invisible at 4x)
+clearance	pistol muzzle	ship ink to pistol ink L<0.60 13.6 px ((658,495)-(666,484)); any hull px >12 to pistol 12.2 px; L<0.70 13.5 / 12.0 (ADVISORY log); pistol px max diff vs original 10	-	PASS	>=10 px; unchanged from round 1
+ink	L 583,493,616,640 / R 641,493,680,640 (skinref 684,520,698,534) / disc 616,598,656,626 / 612,626,640,648 / 590,600,616,628	0.486 / 0.487 / 0.479 / 0.553 / 0.546; stroke p90 2.0 in all	unchanged	PASS	band 0.402-0.562; 1x next to v011 reads black, same weight
+geometry	1x/4x	spires, rim y617-618 (+0.375 DW), centre (627,729), DW 224 unchanged; ship not visibly broken	-	PASS	-
+grill/canine/hoops	y<440	v007 vs v005 max 4, vs v006 max 4 (re-encode), 0 >12	untouched	PASS	-
+carried ADVISORY	-	round-1 notes: faint lighter area between the spires (6x autocontrast only); ink on the under-chain contact shadow x602-666 y670-684	-	ADVISORY	no action
+VERDICT	-	-	-	PASS-ADVISORY (FINAL, round 2 of 2)	both chain fixes verified; advisories are 6x-AC-only or below threshold
