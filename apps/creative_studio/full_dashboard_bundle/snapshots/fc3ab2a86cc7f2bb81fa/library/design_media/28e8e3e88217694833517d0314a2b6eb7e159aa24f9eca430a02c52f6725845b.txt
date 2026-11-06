@@ -1,0 +1,969 @@
+{
+  "schemaVersion": 1,
+  "id": "85326dc2-9270-466c-9e02-aa7df3286206",
+  "createdAtUTC": "2026-10-13T03:45:01.637672Z",
+  "author": "nova_personal_assistant",
+  "authorship": "coordinator_summary",
+  "source": "Ziggy's explicit implementation/coordination request via Personal Nova, source thread 01a12392-6543-7410-b29a-822656fb60d4, 2026-10-13: put reference validation and index/method organization on CFA Nova's plate; separate character and scene evidence indicators beside stars, preserve prior reviews, feed methodology/reviewer notes back to Claude and HaL. Current scoring/generation must not be interrupted.",
+  "correlation": "REFERENCE-MAP-TWO-AXIS-VALIDATION-20261013",
+  "kind": "authorized_engineering_handoff_with_proposed_inventory_not_new_canon",
+  "plan": "Ziggy now authorizes bounded engineering implementation, not merely a UI proposal. CFA Nova owns application and serialized publication at its natural checkpoint after current scoring/generation; this handoff does not compete with its browser/execution controller.\n\nImplement two independent validation indicators beside CHARACTER likeness stars and SCENE craft stars. Preserve the historical star meanings: character likeness and scene craft, independently 1–5 or unrated; any future desirability wording needs a dated distinction. Five stars do not establish validation. Validation is an evidence result from actual image comparison against a nominated scoped reference and explicit criteria, not a synonym for stars, design stage or Production approval. Preserve all manual reviews, provider history and human acceptance, including seven Production mouth details and previous review sets. Never auto-tick legacy assets.\n\nInspect the existing dropdown/serialization/export/import paths before any transition. The current normalizedReview field whitelist makes silently adding evidence into old review objects unsafe. Prefer an additive versioned validation sidecar with preserved assessment history and a separately reviewed reference-family map. Keep old 'verification' stage records readable as legacy manual design stages; do not convert them into AI passes. Any eventual dropdown transition must be reversible and tested against a pre-change snapshot. Do not remove values or rewrite old reviews destructively.\n\nEach axis needs status not_checked / pass / fail / uncertain and independent applicability (required / optional / not_applicable), reference asset ID, SHA-256 and explicit version or immutable snapshot, comparison scope, criteria/tolerance version, actual image IDs/hashes seen, reviewer/model/surface/time, per-criterion observations and outcomes, evidence/uncertainty and source provenance. N/A is not pass. A missing/unscoped reference, inaccessible image or unobservable required feature cannot produce a pass; offscreen required features remain unresolved. Character-detail passes cover only visible scoped details, never the whole actor or scene. A changed reference/hash/criteria version requires rechecking; retain prior evidence and display that it is stale.\n\nCharacter checks are stricter on identity, anatomy/build, required mouth state, tattoo spelling/placement and required jewelry. Apply documented natural placement/asymmetry/accessory tolerances rather than pixel matching or forced symmetry. Required jewelry must be present when required, while optional accessories and recorded pose/light/variation remain allowed. Scene checks use looser declared constraints: Hon's recurring Falcon cockpit/ship layout must remain consistent where actually locked; Lisan's wandering abstract/desert environments are OPEN unless a particular scene has an explicit lock. Do not invent a fixed Lisan home or universal scene standard. Mouth-only details normally have scene applicability N/A. A recurring pet selected by Ziggy should receive its own character reference with reasonable variation; no pet is selected by this handoff.\n\nOverall technical readiness is derived only from all required applicable checks passing and the existing ingredients/shoot-plan gates. Validation does not replace final human video judgment, launch approval, cost checks or accepted masters, and should not promise perfection. Missing/offscreen checks must remain visible. Separate future potential, needs repair, not ready to animate, and approved scoped reference use; preserve the original manual statuses.\n\nSeed the reference inventory from existing verified scoped selections rather than picking new gold. The attached snapshot mechanically carries all 18 existing BOM rows and current canonical review fields. Eight BOM rows contain an explicit selection; ten have null selection but are already Keep/Production for their specific roles, not rejected. Many families still need nomination/lineage reconciliation. Desired family record: family ID, nominated WORKING reference asset ID/hash/version/scope, explicit derivative links, required/optional visible criteria, allowed variation, acceptance evidence and unresolved decision/owner. A working nomination is distinct from Production acceptance. Actor acceptance does not approve scenes; crops govern only what is visible. '120 categories' was illustrative, not a measured count. Do not infer family lineage or acceptance from albums, filenames, covers or stars.\n\nNewcomer integration remains bounded and unassigned. Actual current I_AMs do not prove image viewing for Kimi, DeepSeek or Qwen. Kimi/DeepSeek desktop file access reports and Kimi's later browser/Linux 'image tools exist' report do not establish tested pixels; Qwen has text/courier evidence. Claude's statement 'DeepSeek cannot view images' is too strong: vision is untested. Before any visual backlog assignment, a separately authorized actual-session calibration should demonstrate image access and three checkable pixel-only facts, then compare known accepted/failure examples using these scoped references. Keep provisional AI ratings separate from Ziggy's ratings; no acceptance override. If no vision, use metadata/text QA. Honor frozen Phase 0; no reset or model activation. Claude's nine proposals are source-linked; its preferred first tasks are Kimi coverage inventory, DeepSeek repair/intake text reconciliation and Qwen draft coverage prompts, all still proposals. Lisan-only coverage and user review gates remain.\n\nRequired verification for implementation: lossless round-trip/preservation of all 176 current review records and favorites/history; retain legacy verification-stage values without AI passes; independent character/scene statuses; N/A details; missing reference/image/occluded required criterion; strict required jewelry versus allowed variation; reference/criteria-change invalidation; same-hash/version provenance; sidecar import/export and restart; old storage/backups; UI badges beside stars; rollback. Run existing relevant reference-scope, scene-craft/readiness, working-BOM and review-import regressions plus meaningful new sidecar tests. Use the owner-controlled existing browser for the final UI check and serialized catalog build; no competing rebuild.\n\nCFA Nova updates canonical production/reference methods, current/future onboarding/carepack wrappers and reviewer instructions through their established owner routes after implementing/verifying the schema. Claude reconciles creative/reference criteria and its own guidance; HaL receives this source-aware future-return guidance. Crosslink central methods instead of spawning conflicting copies; preserve author/writer attribution. Return changed files, measured preservation/test results, actual publication evidence and remaining bounded decisions. This engineering task authorizes code/docs/metadata organization only, not new image/video generation, purchases, uploads, unlimited retries, broad canon resets or activation. Existing alien-dog images should be located and shown; do not generate replacements or nominate a new pet automatically.\n",
+  "snapshot": {
+    "catalogAssets": 2344,
+    "catalogAlbums": 226,
+    "canonicalReviewCount": 176,
+    "BOMEntries": 18,
+    "explicitBOMSelections": 8,
+    "allBOMAssetBytesVerified": true,
+    "verifiedTotalFamilyCount": null,
+    "illustrative120NotActualCount": true
+  },
+  "referenceInventory": [
+    {
+      "sourceBOMID": "hon:character-bom",
+      "characterID": "HON-DOLO",
+      "project": "hon",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "HD-RETURN-6c8900223ee9",
+        "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae",
+        "role": "identity",
+        "section": "identity",
+        "label": "Default face and character cover",
+        "recordedSelection": "user_selected_default",
+        "optional": false,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json"
+      },
+      "asset": {
+        "id": "HD-RETURN-6c8900223ee9",
+        "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae",
+        "filename": "6c8900223ee9__lf_full.png",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/6c8900223ee9__lf_full.png",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": {
+        "id": "HD-RETURN-6c8900223ee9",
+        "project": "hon",
+        "filename": "6c8900223ee9__lf_full.png",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/6c8900223ee9__lf_full.png",
+        "sha256": "6c8900223ee9c5eb8f4724a9db189711db9142f40ac48ad84e505b9e925f29ae",
+        "role": "review",
+        "status": "keep",
+        "note": "Even better....this is the defualt...and the one with the Dice are back up if we want to get spicy...",
+        "shotPlan": {
+          "status": "planned",
+          "destinations": [
+            "Gemini",
+            "Flow"
+          ],
+          "idea": "",
+          "prompt": ""
+        },
+        "updatedAt": "2026-10-09T18:23:34.085Z",
+        "origin": "user",
+        "workingReference": {
+          "status": "requested",
+          "scope": "complete_look"
+        },
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "User selects this Scoundrel version as default; keep dice as an optional alternative. Requested complete-look role requires scope reconciliation, not automatic approval.",
+        "lookSelection": {
+          "status": "user_selected_default_no_forehead_dice",
+          "scope": "Default look option compared with the optional forehead-dice composite; not a replacement dental master."
+        }
+      },
+      "explicitCatalogDerivativeIDs": [],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    },
+    {
+      "sourceBOMID": "hon:character-bom",
+      "characterID": "HON-DOLO",
+      "project": "hon",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "HD-B-91ef00348229",
+        "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+        "label": "Four-gold upper / silver-lower dental layout and plain lip hoops",
+        "role": "dental_mouth_only",
+        "section": "details",
+        "recordedSelection": "current_scoped_dental_reference",
+        "optional": false,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/REVIEWED_PLAN.txt",
+        "knownDifferences": "Mouth only. Ignore the cropped nose jewelry; identity and nose remain from lf_full."
+      },
+      "asset": {
+        "id": "HD-B-91ef00348229",
+        "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+        "filename": "91ef00348229__GRILL-LOCK-4GOLD-v2.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/91ef00348229__GRILL-LOCK-4GOLD-v2.jpg",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": {
+        "id": "HD-B-91ef00348229",
+        "project": "hon",
+        "filename": "91ef00348229__GRILL-LOCK-4GOLD-v2.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/91ef00348229__GRILL-LOCK-4GOLD-v2.jpg",
+        "sha256": "91ef0034822997d4d78a583ffb9c5aba09470b841b713d5396f07890aa790c86",
+        "role": "comfy",
+        "status": "keep",
+        "note": "",
+        "shotPlan": null,
+        "workingReferenceScope": "detail",
+        "updatedAt": "2026-10-10T13:04:39.768Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "likenessRating": 5,
+        "source": "User dashboard export 2026-10-10T14:00:39.105Z, mouth-grill review intake"
+      },
+      "explicitCatalogDerivativeIDs": [],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": "Mouth only. Ignore the cropped nose jewelry; identity and nose remain from lf_full.",
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    },
+    {
+      "sourceBOMID": "hon:character-bom",
+      "characterID": "HON-DOLO",
+      "project": "hon",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "HD-RETURN-9ace849985b4",
+        "sha256": "9ace849985b49dfec444a2171dc85854076e024352aaae8d1c8f53ef0a69daef",
+        "role": "cheek_detail",
+        "section": "details",
+        "label": "Cheek lettering · gold standard",
+        "recordedSelection": "user_selected_gold_standard_component",
+        "optional": false,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json"
+      },
+      "asset": {
+        "id": "HD-RETURN-9ace849985b4",
+        "sha256": "9ace849985b49dfec444a2171dc85854076e024352aaae8d1c8f53ef0a69daef",
+        "filename": "9ace849985b4__lf_cheeks.png",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/9ace849985b4__lf_cheeks.png",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": {
+        "id": "HD-RETURN-9ace849985b4",
+        "project": "hon",
+        "filename": "9ace849985b4__lf_cheeks.png",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/9ace849985b4__lf_cheeks.png",
+        "sha256": "9ace849985b49dfec444a2171dc85854076e024352aaae8d1c8f53ef0a69daef",
+        "role": "review",
+        "status": "keep",
+        "note": "Don't change a thing...this is the GOLD standard...",
+        "shotPlan": null,
+        "storyboardStage": "production",
+        "updatedAt": "2026-10-09T18:35:08.059Z",
+        "origin": "user",
+        "workingReference": {
+          "status": "requested",
+          "scope": "detail",
+          "scopeCorrection": "User GOLD standard statement applies to the pictured cheek detail, not a complete character."
+        },
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Preserve this cheek detail exactly as the user-designated gold standard; do not turn a detail crop into a full-character approval.",
+        "workingReferenceScope": "detail",
+        "componentSelection": {
+          "scope": "cheek lettering and visible placement only",
+          "status": "user_selected",
+          "note": "Cursive eye on character-right; serif/upright know on character-left. Whole-character and dental design not changed."
+        }
+      },
+      "explicitCatalogDerivativeIDs": [
+        "HD-TATGUIDE-920a68edfcc6",
+        "HD-TATGUIDE-0fd9cb5f902a"
+      ],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    },
+    {
+      "sourceBOMID": "hon:character-bom",
+      "characterID": "HON-DOLO",
+      "project": "hon",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "HD-RETURN-7b156019ddf8",
+        "sha256": "7b156019ddf8b854a68a3549c80aede545384ebc12a6d7403bb7b17075e11ebc",
+        "role": "chest_placement",
+        "section": "details",
+        "label": "Chest ship · placement",
+        "recordedSelection": null,
+        "optional": false,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json"
+      },
+      "asset": {
+        "id": "HD-RETURN-7b156019ddf8",
+        "sha256": "7b156019ddf8b854a68a3549c80aede545384ebc12a6d7403bb7b17075e11ebc",
+        "filename": "7b156019ddf8__lf_chest.png",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/7b156019ddf8__lf_chest.png",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": {
+        "id": "HD-RETURN-7b156019ddf8",
+        "project": "hon",
+        "filename": "7b156019ddf8__lf_chest.png",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/7b156019ddf8__lf_chest.png",
+        "sha256": "7b156019ddf8b854a68a3549c80aede545384ebc12a6d7403bb7b17075e11ebc",
+        "role": "review",
+        "status": "keep",
+        "note": "",
+        "shotPlan": null,
+        "storyboardStage": "production",
+        "updatedAt": "2026-10-09T18:24:18.550Z",
+        "origin": "user",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep this asset with the user-selected stage and lane; no blanket working-reference or execution approval."
+      },
+      "explicitCatalogDerivativeIDs": [],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    },
+    {
+      "sourceBOMID": "hon:character-bom",
+      "characterID": "HON-DOLO",
+      "project": "hon",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "HD-RETURN-7fe77eadd174",
+        "sha256": "7fe77eadd174a629216f2c7b36748fd7e1aebaabeb4e6e2acb51df9d6e88bf94",
+        "role": "neck_placement",
+        "section": "details",
+        "label": "Neck blaster · placement",
+        "recordedSelection": null,
+        "optional": false,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json"
+      },
+      "asset": {
+        "id": "HD-RETURN-7fe77eadd174",
+        "sha256": "7fe77eadd174a629216f2c7b36748fd7e1aebaabeb4e6e2acb51df9d6e88bf94",
+        "filename": "7fe77eadd174__lf_neck.png",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/7fe77eadd174__lf_neck.png",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": {
+        "id": "HD-RETURN-7fe77eadd174",
+        "project": "hon",
+        "filename": "7fe77eadd174__lf_neck.png",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/7fe77eadd174__lf_neck.png",
+        "sha256": "7fe77eadd174a629216f2c7b36748fd7e1aebaabeb4e6e2acb51df9d6e88bf94",
+        "role": "review",
+        "status": "keep",
+        "note": "",
+        "shotPlan": null,
+        "storyboardStage": "production",
+        "updatedAt": "2026-10-09T18:31:46.383Z",
+        "origin": "user",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep this asset with the user-selected stage and lane; no blanket working-reference or execution approval."
+      },
+      "explicitCatalogDerivativeIDs": [],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    },
+    {
+      "sourceBOMID": "hon:character-bom",
+      "characterID": "HON-DOLO",
+      "project": "hon",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "HD-RETURN-891a3ee224eb",
+        "sha256": "891a3ee224eb2451f59954aac2c17e7474f0ff8126d32ca3abbe77fe853d139b",
+        "role": "tattoo_artwork_options",
+        "section": "artwork",
+        "label": "Ship artwork options",
+        "recordedSelection": null,
+        "optional": false,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json"
+      },
+      "asset": {
+        "id": "HD-RETURN-891a3ee224eb",
+        "sha256": "891a3ee224eb2451f59954aac2c17e7474f0ff8126d32ca3abbe77fe853d139b",
+        "filename": "891a3ee224eb__ships_a.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/891a3ee224eb__ships_a.jpg",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": {
+        "id": "HD-RETURN-891a3ee224eb",
+        "project": "hon",
+        "filename": "891a3ee224eb__ships_a.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/891a3ee224eb__ships_a.jpg",
+        "sha256": "891a3ee224eb2451f59954aac2c17e7474f0ff8126d32ca3abbe77fe853d139b",
+        "role": "review",
+        "status": "keep",
+        "note": "",
+        "shotPlan": null,
+        "updatedAt": "2026-10-09T18:31:18.157Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep this asset with the user-selected stage and lane; no blanket working-reference or execution approval."
+      },
+      "explicitCatalogDerivativeIDs": [],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    },
+    {
+      "sourceBOMID": "hon:character-bom",
+      "characterID": "HON-DOLO",
+      "project": "hon",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "HD-RETURN-d430b5f72e9b",
+        "sha256": "d430b5f72e9b3ca4271229533880f24ba9b6c97adaca89fc8bc36ce77d7c9717",
+        "role": "tattoo_artwork_options",
+        "section": "artwork",
+        "label": "Permitted ship variations",
+        "recordedSelection": null,
+        "optional": false,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json"
+      },
+      "asset": {
+        "id": "HD-RETURN-d430b5f72e9b",
+        "sha256": "d430b5f72e9b3ca4271229533880f24ba9b6c97adaca89fc8bc36ce77d7c9717",
+        "filename": "d430b5f72e9b__d430b5f72e9b3ca4271229533880f24ba9b6c97adaca89fc8bc36ce77d7c9717.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/d430b5f72e9b__d430b5f72e9b3ca4271229533880f24ba9b6c97adaca89fc8bc36ce77d7c9717.jpg",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": {
+        "id": "HD-RETURN-d430b5f72e9b",
+        "project": "hon",
+        "filename": "d430b5f72e9b__d430b5f72e9b3ca4271229533880f24ba9b6c97adaca89fc8bc36ce77d7c9717.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/d430b5f72e9b__d430b5f72e9b3ca4271229533880f24ba9b6c97adaca89fc8bc36ce77d7c9717.jpg",
+        "sha256": "d430b5f72e9b3ca4271229533880f24ba9b6c97adaca89fc8bc36ce77d7c9717",
+        "role": "review",
+        "status": "keep",
+        "note": "fine with the tattoo looking like any of these versions...(#4 may be hard to pull of though hahah)",
+        "shotPlan": null,
+        "updatedAt": "2026-10-09T18:37:19.302Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep the depicted tattoo variations as acceptable options per user; option 4 may be harder to reproduce. Do not force a single variant or claim execution verified."
+      },
+      "explicitCatalogDerivativeIDs": [],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    },
+    {
+      "sourceBOMID": "hon:character-bom",
+      "characterID": "HON-DOLO",
+      "project": "hon",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "HD-RETURN-aa147b8c0c26",
+        "sha256": "aa147b8c0c2633f61ba2c1ecd6d79b732398c9a336da7daa46c5042c849de1b1",
+        "role": "tattoo_artwork_options",
+        "section": "artwork",
+        "label": "Princess Leigh artwork options",
+        "recordedSelection": null,
+        "optional": false,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json"
+      },
+      "asset": {
+        "id": "HD-RETURN-aa147b8c0c26",
+        "sha256": "aa147b8c0c2633f61ba2c1ecd6d79b732398c9a336da7daa46c5042c849de1b1",
+        "filename": "aa147b8c0c26__aa147b8c0c2633f61ba2c1ecd6d79b732398c9a336da7daa46c5042c849de1b1.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/aa147b8c0c26__aa147b8c0c2633f61ba2c1ecd6d79b732398c9a336da7daa46c5042c849de1b1.jpg",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": {
+        "id": "HD-RETURN-aa147b8c0c26",
+        "project": "hon",
+        "filename": "aa147b8c0c26__aa147b8c0c2633f61ba2c1ecd6d79b732398c9a336da7daa46c5042c849de1b1.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/aa147b8c0c26__aa147b8c0c2633f61ba2c1ecd6d79b732398c9a336da7daa46c5042c849de1b1.jpg",
+        "sha256": "aa147b8c0c2633f61ba2c1ecd6d79b732398c9a336da7daa46c5042c849de1b1",
+        "role": "review",
+        "status": "keep",
+        "note": "",
+        "shotPlan": null,
+        "updatedAt": "2026-10-09T18:37:28.499Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep this asset with the user-selected stage and lane; no blanket working-reference or execution approval."
+      },
+      "explicitCatalogDerivativeIDs": [],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    },
+    {
+      "sourceBOMID": "hon:character-bom",
+      "characterID": "HON-DOLO",
+      "project": "hon",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "HD-RETURN-106ae508f3c2",
+        "sha256": "106ae508f3c2cd837803d73433cc2a5206ea9f62e98295de85f83bdf452ddf01",
+        "role": "tattoo_artwork_options",
+        "section": "artwork",
+        "label": "Princess Leigh · red/black suit options",
+        "recordedSelection": null,
+        "optional": false,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json"
+      },
+      "asset": {
+        "id": "HD-RETURN-106ae508f3c2",
+        "sha256": "106ae508f3c2cd837803d73433cc2a5206ea9f62e98295de85f83bdf452ddf01",
+        "filename": "106ae508f3c2__106ae508f3c2cd837803d73433cc2a5206ea9f62e98295de85f83bdf452ddf01.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/106ae508f3c2__106ae508f3c2cd837803d73433cc2a5206ea9f62e98295de85f83bdf452ddf01.jpg",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": {
+        "id": "HD-RETURN-106ae508f3c2",
+        "project": "hon",
+        "filename": "106ae508f3c2__106ae508f3c2cd837803d73433cc2a5206ea9f62e98295de85f83bdf452ddf01.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/106ae508f3c2__106ae508f3c2cd837803d73433cc2a5206ea9f62e98295de85f83bdf452ddf01.jpg",
+        "sha256": "106ae508f3c2cd837803d73433cc2a5206ea9f62e98295de85f83bdf452ddf01",
+        "role": "review",
+        "status": "keep",
+        "note": "like the variability and option of having either the black or red suit in play",
+        "shotPlan": null,
+        "updatedAt": "2026-10-09T18:37:10.088Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep black/red card-suit alternatives available; preserve both options rather than combining them in one tattoo."
+      },
+      "explicitCatalogDerivativeIDs": [],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    },
+    {
+      "sourceBOMID": "hon:character-bom",
+      "characterID": "HON-DOLO",
+      "project": "hon",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "HD-DROP-b18c4a123579",
+        "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+        "role": "visible_jewelry_only",
+        "section": "details",
+        "label": "Wrist chain and black band",
+        "recordedSelection": "user_selected_component",
+        "optional": false,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/neck_bling_20261009/permanent_accessories.json"
+      },
+      "asset": {
+        "id": "HD-DROP-b18c4a123579",
+        "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+        "filename": "SB-06-scoundrel-detail.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-06-scoundrel-detail.jpg",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": {
+        "status": "keep",
+        "note": "",
+        "workingReferenceScope": "identity",
+        "storyboardStage": "production",
+        "id": "HD-DROP-b18c4a123579",
+        "project": "hon",
+        "filename": "SB-06-scoundrel-detail.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-06-scoundrel-detail.jpg",
+        "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+        "updatedAt": "2026-10-10T05:04:08.787Z",
+        "origin": "user",
+        "source": "User dashboard export 2026-10-10T05:05:09.832Z, scoped working-reference reconciliation",
+        "sourceIntakeID": "CFA-REVIEW-20261010-WORKING-BOM",
+        "scopeNote": "Production use covers the selected visible wrist jewelry. The broad dropdown does not approve the unseen hand, wrist side or whole identity."
+      },
+      "explicitCatalogDerivativeIDs": [],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    },
+    {
+      "sourceBOMID": "hon:character-bom",
+      "characterID": "HON-DOLO",
+      "project": "hon",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "HD-B-708df0bb5bff",
+        "sha256": "708df0bb5bff17abe9f6e0ae09ac59a53cafdb8976defda55758aab5b9e01ab9",
+        "role": "mouth_detail",
+        "section": "details",
+        "label": "Chain-bite mouth detail",
+        "recordedSelection": null,
+        "optional": false,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json"
+      },
+      "asset": {
+        "id": "HD-B-708df0bb5bff",
+        "sha256": "708df0bb5bff17abe9f6e0ae09ac59a53cafdb8976defda55758aab5b9e01ab9",
+        "filename": "708df0bb5bff__VIS-HD-47_CHAIN-BITE.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/708df0bb5bff__VIS-HD-47_CHAIN-BITE.jpg",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": {
+        "status": "keep",
+        "note": "",
+        "workingReferenceScope": "detail",
+        "storyboardStage": "production",
+        "id": "HD-B-708df0bb5bff",
+        "project": "hon",
+        "filename": "708df0bb5bff__VIS-HD-47_CHAIN-BITE.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_drop_b_20261009/received/content/708df0bb5bff__VIS-HD-47_CHAIN-BITE.jpg",
+        "sha256": "708df0bb5bff17abe9f6e0ae09ac59a53cafdb8976defda55758aab5b9e01ab9",
+        "updatedAt": "2026-10-10T13:32:32.361Z",
+        "origin": "user",
+        "source": "User dashboard export 2026-10-10T14:00:39.105Z, mouth-grill review intake",
+        "sourceIntakeID": "CFA-REVIEW-20261010-WORKING-BOM",
+        "scopeNote": "User Production choice applies to this chain-bite mouth macro only; no face, wardrobe or motion acceptance.",
+        "shotPlan": null,
+        "likenessRating": 5
+      },
+      "explicitCatalogDerivativeIDs": [],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    },
+    {
+      "sourceBOMID": "hon:character-bom",
+      "characterID": "HON-DOLO",
+      "project": "hon",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "HD-RETURN-4c42885da490",
+        "sha256": "4c42885da4901d23a260c73cb82e815633915005f03660a6aa5c850fe8ce1684",
+        "role": "outfit",
+        "section": "wardrobe",
+        "label": "Cash outfit · hip-prop option",
+        "recordedSelection": null,
+        "optional": false,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json"
+      },
+      "asset": {
+        "id": "HD-RETURN-4c42885da490",
+        "sha256": "4c42885da4901d23a260c73cb82e815633915005f03660a6aa5c850fe8ce1684",
+        "filename": "4c42885da490__HIP-CASH-a1_4c42885d.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/4c42885da490__HIP-CASH-a1_4c42885d.jpg",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": {
+        "id": "HD-RETURN-4c42885da490",
+        "project": "hon",
+        "filename": "4c42885da490__HIP-CASH-a1_4c42885d.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/4c42885da490__HIP-CASH-a1_4c42885d.jpg",
+        "sha256": "4c42885da4901d23a260c73cb82e815633915005f03660a6aa5c850fe8ce1684",
+        "role": "review",
+        "status": "keep",
+        "note": "",
+        "shotPlan": {
+          "status": "planned",
+          "destinations": [
+            "undecided"
+          ],
+          "idea": "",
+          "prompt": ""
+        },
+        "storyboardStage": "production",
+        "updatedAt": "2026-10-09T18:44:50.266Z",
+        "origin": "user",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep this asset with the user-selected stage and lane; no blanket working-reference or execution approval."
+      },
+      "explicitCatalogDerivativeIDs": [],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    },
+    {
+      "sourceBOMID": "hon:character-bom",
+      "characterID": "HON-DOLO",
+      "project": "hon",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "HD-RETURN-1eaa31b63c1e",
+        "sha256": "1eaa31b63c1e187dfb63d31e523c056cf78e3a86c341ca2b38d416fae5ac316d",
+        "role": "outfit",
+        "section": "wardrobe",
+        "label": "Rain outfit · hip-prop option",
+        "recordedSelection": null,
+        "optional": false,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json"
+      },
+      "asset": {
+        "id": "HD-RETURN-1eaa31b63c1e",
+        "sha256": "1eaa31b63c1e187dfb63d31e523c056cf78e3a86c341ca2b38d416fae5ac316d",
+        "filename": "1eaa31b63c1e__HIP-RAIN-a1_1eaa31b6.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/1eaa31b63c1e__HIP-RAIN-a1_1eaa31b6.jpg",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": {
+        "id": "HD-RETURN-1eaa31b63c1e",
+        "project": "hon",
+        "filename": "1eaa31b63c1e__HIP-RAIN-a1_1eaa31b6.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/1eaa31b63c1e__HIP-RAIN-a1_1eaa31b6.jpg",
+        "sha256": "1eaa31b63c1e187dfb63d31e523c056cf78e3a86c341ca2b38d416fae5ac316d",
+        "role": "review",
+        "status": "keep",
+        "note": "",
+        "shotPlan": null,
+        "storyboardStage": "production",
+        "updatedAt": "2026-10-09T18:46:52.571Z",
+        "origin": "user",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep this asset with the user-selected stage and lane; no blanket working-reference or execution approval."
+      },
+      "explicitCatalogDerivativeIDs": [],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    },
+    {
+      "sourceBOMID": "hon:character-bom",
+      "characterID": "HON-DOLO",
+      "project": "hon",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "HD-RETURN-19cf3cd478dd",
+        "sha256": "19cf3cd478dd327371d646694fc5db4e1f23d345afe86d7d77a76865f7139ab4",
+        "role": "tattoo_artwork_options",
+        "section": "optional",
+        "label": "Scoundrel · optional dice artwork",
+        "recordedSelection": null,
+        "optional": true,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json"
+      },
+      "asset": {
+        "id": "HD-RETURN-19cf3cd478dd",
+        "sha256": "19cf3cd478dd327371d646694fc5db4e1f23d345afe86d7d77a76865f7139ab4",
+        "filename": "19cf3cd478dd__scoundrel.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/19cf3cd478dd__scoundrel.jpg",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": {
+        "id": "HD-RETURN-19cf3cd478dd",
+        "project": "hon",
+        "filename": "19cf3cd478dd__scoundrel.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/received/content/19cf3cd478dd__scoundrel.jpg",
+        "sha256": "19cf3cd478dd327371d646694fc5db4e1f23d345afe86d7d77a76865f7139ab4",
+        "role": "review",
+        "status": "keep",
+        "note": "i think our standard is not to have the dice....but im fine having this is the floating pool...everything else was nailed",
+        "shotPlan": {
+          "status": "planned",
+          "destinations": [
+            "Flow"
+          ],
+          "idea": "Use this as one of the options for the bar scene we are already planning for.",
+          "prompt": ""
+        },
+        "updatedAt": "2026-10-09T18:22:11.513Z",
+        "origin": "user",
+        "storyboardStage": "production",
+        "source": "User dashboard export 2026-10-09T18:47:47.148Z, finishing-pass reconciliation",
+        "sourceIntakeID": "HON-REVIEW-20261009-LATEST-FINISH",
+        "scopeNote": "Keep dice variant as an optional bar-scene choice; default Scoundrel does not include dice."
+      },
+      "explicitCatalogDerivativeIDs": [
+        "HD-TATGUIDE-1fd07b088244",
+        "HD-TATGUIDE-5706390cb876"
+      ],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    },
+    {
+      "sourceBOMID": "hon:character-bom",
+      "characterID": "HON-DOLO",
+      "project": "hon",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "HD-GRILLUP-40064d98db89",
+        "sha256": "40064d98db897276b80085273919ccd79ca377a068dcc2bd23c519e4038ee93e",
+        "role": "optional_iced_look",
+        "section": "optional",
+        "label": "Selected external iced r4 look",
+        "recordedSelection": "user_selected_scoped_look",
+        "optional": true,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt"
+      },
+      "asset": {
+        "id": "HD-GRILLUP-40064d98db89",
+        "sha256": "40064d98db897276b80085273919ccd79ca377a068dcc2bd23c519e4038ee93e",
+        "filename": "40064d98db89__HEAD-HD-ICED-ANCHOR-LOCK-r4.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/received/content/40064d98db89__HEAD-HD-ICED-ANCHOR-LOCK-r4.jpg",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": null,
+      "explicitCatalogDerivativeIDs": [],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    },
+    {
+      "sourceBOMID": "lisan:character-bom",
+      "characterID": "LISAN-AL-GAIB",
+      "project": "lisan",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "LAG-602a9fd4021dc356",
+        "sha256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+        "role": "identity",
+        "section": "identity",
+        "label": "Default face · natural teeth",
+        "recordedSelection": "current_scoped_reference",
+        "optional": false,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      },
+      "asset": {
+        "id": "LAG-602a9fd4021dc356",
+        "sha256": "602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f",
+        "filename": "LAG-LOCK-FACE-NATURAL.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOCK-FACE-NATURAL.jpg",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": null,
+      "explicitCatalogDerivativeIDs": [],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    },
+    {
+      "sourceBOMID": "lisan:character-bom",
+      "characterID": "LISAN-AL-GAIB",
+      "project": "lisan",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "LAG-63126392af1ccf8b",
+        "sha256": "63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026",
+        "role": "outfit",
+        "section": "wardrobe",
+        "label": "Signature stillsuit and cloak",
+        "recordedSelection": "current_scoped_reference",
+        "optional": false,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      },
+      "asset": {
+        "id": "LAG-63126392af1ccf8b",
+        "sha256": "63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026",
+        "filename": "LAG-LOOK-V3-01.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOOK-V3-01.jpg",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": null,
+      "explicitCatalogDerivativeIDs": [],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    },
+    {
+      "sourceBOMID": "lisan:character-bom",
+      "characterID": "LISAN-AL-GAIB",
+      "project": "lisan",
+      "sourceBOMVersion": 1,
+      "existingBOMEntry": {
+        "assetID": "LAG-5c47f12190e9ba68",
+        "sha256": "5c47f12190e9ba68f87f7c3f8d66f571400f8058baf9ff54ecfe406adf037567",
+        "role": "arm_tattoo_placement",
+        "section": "details",
+        "label": "Left-arm sandworm placement",
+        "recordedSelection": "current_scoped_reference",
+        "optional": false,
+        "evidencePath": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/manifest.json"
+      },
+      "asset": {
+        "id": "LAG-5c47f12190e9ba68",
+        "sha256": "5c47f12190e9ba68f87f7c3f8d66f571400f8058baf9ff54ecfe406adf037567",
+        "filename": "LAG-LOCK-ARM-SH13.jpg",
+        "path": "docs/notes/explorable_world/comfy/projects/lisan_al_gaib/01_Flagship_References/LAG-LOCK-ARM-SH13.jpg",
+        "version": null,
+        "bytesVerified": true
+      },
+      "canonicalHumanReviewSnapshot": null,
+      "explicitCatalogDerivativeIDs": [],
+      "familyID": null,
+      "familyNominationStatus": "requires_scoped_family_reconciliation_no_new_selection",
+      "allowedVariation": {
+        "recordedKnownDifferences": null,
+        "policyPath": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt"
+      },
+      "noNewAcceptanceOrValidation": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/working_reference_bom.json",
+      "description": "Existing scoped BOM; no new nominations.",
+      "sha256": "da07aff47b66a5d47d0d7dec3d0fa8a7f216a6f6e2aa0a535fb378621103c6ea",
+      "bytes": 9927
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/feedback/review_decisions.json",
+      "description": "Current canonical human review snapshot.",
+      "sha256": "da4f71f778c44aba475c790f2d5bf0d4584207229f7b0ad8b614920fdf2fc32a",
+      "bytes": 186911
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/catalog.js",
+      "description": "Generated catalog snapshot, not complete family lineage.",
+      "sha256": "06aa29952575587b10927a40e1960b58876d43eb09ad7201b16b563063fab7f1",
+      "bytes": 9578278
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/visual_library/REFERENCE_POLICY.txt",
+      "description": "Existing scoped ratings/readiness/tolerance policy.",
+      "sha256": "ac5734de6fce7ec80ab7526493b4d07fcd522760fe1d0b5792ec8a55b82c5fb0",
+      "bytes": 5853
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/PRODUCTION_METHOD_20261012.txt",
+      "description": "Existing central production method.",
+      "sha256": "b854511b001e5f35f98330c04947f1c4fd4a30308ef9c61ffe5ea766aa93bebf",
+      "bytes": 13759
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/team_integration_20261013/SUGGESTIONS_FROM_CLAUDE_20261013.md",
+      "description": "Claude-authored unassigned nine-task suggestions.",
+      "sha256": "68ffa2707f4b37ae0dc9f8d050295480526e532d32e6d46b4226610a4b4615d5",
+      "bytes": 14282
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/kimi/I_AM.md",
+      "description": "Current Kimi introduction; image viewing untested.",
+      "sha256": "aa3c61e3f89ea4c04ae28ee64b85155f927e9ddc49064ffdd45df7f4a278a23f",
+      "bytes": 6740
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/deepseek/I_AM.md",
+      "description": "Current DeepSeek introduction; image viewing untested.",
+      "sha256": "beb585aa6894a03480e6753aa3087c7fb9ea50072fb9289331946c4746603f5c",
+      "bytes": 13507
+    },
+    {
+      "path": "docs/notes/explorable_world/comfy/projects/collaborators/identity/qwen38_valis/I_AM.md",
+      "description": "Current Qwen introduction; text/courier evidence.",
+      "sha256": "0543f5df93f4ac6de5eb44c7c9398eaf8f16546dbc47899bf9389a6429a9aa31",
+      "bytes": 1801
+    }
+  ],
+  "observedUISchema": {
+    "source": "docs/notes/explorable_world/comfy/projects/visual_library/library.js",
+    "normalizedReviewLine": 97,
+    "workingBOMEntriesLine": 250,
+    "starDropdownsLine": 995,
+    "ratingFields": [
+      "likenessRating",
+      "sceneQualityRating"
+    ],
+    "starDomain": "integer 1..5 or null",
+    "evidenceFieldsPresentInCanonicalReviews": false,
+    "legacyVerificationStagesAreNotAIPasses": true,
+    "parserWhitelistNeedsExplicitEvidenceStorageIntegration": true
+  },
+  "gaps": [
+    "No comprehensive family IDs/nominations or derivative graph.",
+    "Null-selection Production artwork/outfit options need defaults reconciled without rejection.",
+    "Supporting-cast cover selection does not establish identity acceptance.",
+    "Scene refs are independently scoped; Lisan environments remain open unless explicitly locked.",
+    "No successful actual image-viewing test for Kimi/DeepSeek/Qwen.",
+    "No registered Nova PA project I_AM path found; do not edit CFA Nova introduction."
+  ],
+  "existingAcceptedStandardsChanged": false,
+  "validationPassesAdded": 0,
+  "newProviderJobs": 0
+}
