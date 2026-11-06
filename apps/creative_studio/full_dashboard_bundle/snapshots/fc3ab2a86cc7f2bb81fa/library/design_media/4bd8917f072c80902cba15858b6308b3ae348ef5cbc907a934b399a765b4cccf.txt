@@ -1,0 +1,22 @@
+- C24-leia-surveys-001.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | eyebrow raise subtle | preserve: eyes screen-left, junk table
+- C24-leia-surveys-002.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | freestanding record decks not built-in | preserve: arms folded, droid head, eyes left
+- C24-leia-surveys-003.jpg | prelim_likeness=4 prelim_scene=4 lane=prime scope=identity stage=preliminary | L4 S4 | no eyebrow raise, reads sad not skeptical | preserve: rim light close-up
+- C24-leia-surveys-004.jpg | prelim_likeness=4 prelim_scene=4 lane=prime scope=scene stage=preliminary | L4 S4 | eye direction ambiguous; room reads abandoned flat, not Falcon | preserve: laundry pipe, composition
+- C24-leia-surveys-005.jpg | prelim_likeness=3 prelim_scene=5 lane=prime scope=scene stage=preliminary | L3 S5 | face drifts from ref | preserve: greasy rag gag, galley
+- C24-leia-surveys-006.jpg | prelim_likeness=2 prelim_scene=4 lane=prime scope=identity stage=preliminary | L2 S4 | face and hair drift far from ref (tight curls) | preserve: smirk, eyes left
+- C24-leia-surveys-007.jpg | prelim_likeness=4 prelim_scene=4 lane=prime scope=scene stage=preliminary | L4 S4 | eyes not toward screen-left; no brow raise | preserve: junk foreground, round chamber
+- C24-leia-surveys-008.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | brow raise mild | preserve: dust-check gesture, eyes left
+- C24-leia-surveys-009.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | no brow raise | preserve: Chewy shrug two-shot, eyes left
+- C24-leia-surveys-010.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | no brow raise | preserve: profile gaze left, engine junk, light shafts
+- C24-leia-surveys-011.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=identity stage=preliminary | L4 S5 | brow raise mild; eyes right not left | preserve: patched cushions, porthole
+- C24-leia-surveys-012.jpg | prelim_likeness=3 prelim_scene=4 lane=prime scope=scene stage=preliminary | L3 S4 | hair straightened, face drift; eyes not left | preserve: mug + junk table
+- C24-leia-surveys-013.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | no brow raise | preserve: hammock, pristine coat vs grime
+- C24-leia-surveys-014.jpg | prelim_likeness=3 prelim_scene=5 lane=prime scope=complete_look stage=preliminary | L3 S5 | Dolo: eye/know correct sides, neck blaster drifted to image-LEFT, no earrings; Leia brow raised, eyes left OK | preserve: two-shot comedy beat, junk pile | RESCORED -1: face reads younger and clean-shaven vs ref lf_full (ref has stubble, nostril hoops)
+- C24-leia-surveys-015.jpg | prelim_likeness=3 prelim_scene=5 lane=prime scope=scene stage=preliminary | L3 S5 | face mostly hidden, brow not readable | preserve: vast junky lounge, holochess table, laundry
+- C24-leia-surveys-016.jpg | prelim_likeness=5 prelim_scene=5 lane=prime scope=scene stage=preliminary | L5 S5 | none | preserve: eyebrow arched, eyes screen-LEFT, cable clutter
+- C24-leia-surveys-017.jpg | prelim_likeness=4 prelim_scene=4 lane=prime scope=scene stage=preliminary | L4 S4 | reads like burnt building more than ship | preserve: wide junk survey, eyes screen-LEFT
+- C24-leia-surveys-018.jpg | prelim_likeness=4 prelim_scene=5 lane=prime scope=scene stage=preliminary | L4 S5 | eyes on part not screen-left | preserve: greasy part at arm's length, disdain
+- C24-leia-surveys-019.jpg | prelim_likeness=3 prelim_scene=5 lane=prime scope=scene stage=preliminary | L3 S5 | face drift (softer/older), looks screen-left not raised | preserve: OTS junk lounge, DJ rig, sparking panel
+- C24-leia-surveys-020.jpg | prelim_likeness=3 prelim_scene=4 lane=prime scope=scene stage=preliminary | L3 S4 | face drift from ref, older, no raised brow | preserve: hard side-eye screen-LEFT close-up
+- C24-leia-surveys-021.jpg | prelim_likeness=4 prelim_scene=4 lane=prime scope=scene stage=preliminary | L4 S4 | eyes forward not screen-left | preserve: lifting coat hem over cable tangle
+- C24-leia-surveys-022.jpg | prelim_likeness=Unrated prelim_scene=5 lane=prime scope=scene stage=preliminary | LUnrated S5 | none | preserve: junk lounge POV, speakers, cable hammock
