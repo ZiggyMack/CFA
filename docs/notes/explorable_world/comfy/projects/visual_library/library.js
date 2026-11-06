@@ -101,7 +101,7 @@
   const referencePolicyText='An explicitly named reference is used for that scene only. Other scenes start from canonical scoped gold standards and the highest-rated suitable approved Prime references. A scene image does not replace identity. Character/component likeness is rated against its scoped gold standard; only likenessRating guides default reference ranking. Scene craft rates framing, lighting and staging separately; never average it with likeness or treat it as production readiness.';
   const normalizedRating=value=>Number.isInteger(value)&&value>=1&&value<=5?value:null;
   const assistantLikenessAssessments=new Map((C.assistantLikenessAssessments||[]).filter(p=>{const a=byID.get(p?.assetID);return a?.sha256&&p.sha256===a.sha256&&p.status==='proposal'&&p.assessedBy==='nova'&&(p.likenessRating===null||normalizedRating(p.likenessRating)!==null)&&Array.isArray(p.referenceAssets)&&p.referenceAssets.length&&p.referenceAssets.every(r=>byID.get(r.assetID)?.sha256&&r.sha256===byID.get(r.assetID).sha256);}).map(p=>[p.assetID,p]));
-  let favorites = new Set(), basket = new Set(), storageOK = true, reviews = new Map(), sceneReviews = new Map();
+  let favorites = new Set(), basket = new Set(), storageOK = true, reviews = new Map(), sceneReviews = new Map(), locationReviews = new Map();
   const takeStore=window.CFA_STORYBOARD_TAKES;
   let storyboardTakes=takeStore?.empty()||{format:'cfa-storyboard-takes-v1',takes:[]},storyboardTakeBackups=[];
   const storyboardTakeOpen=new Set();
@@ -482,6 +482,30 @@
     const ingredients=Array.isArray(item.ingredients)?item.ingredients.slice(0,80).filter(i=>i&&typeof i==='object'&&typeof i.id==='string').map(i=>({id:i.id.slice(0,180),label:typeof i.label==='string'?i.label.slice(0,300):'Unnamed ingredient',role:typeof i.role==='string'?i.role.slice(0,180):'scene_detail',kind:i.kind==='criterion'?'criterion':'reference',required:i.required===true,status:['unreviewed','ready','needs_fixes','missing'].includes(i.status)?i.status:'unreviewed',assetID:typeof i.assetID==='string'?i.assetID:null,sha256:typeof i.sha256==='string'?i.sha256:null,note:typeof i.note==='string'?i.note.slice(0,6000):''})):[];
     return {...preserveHumanAttribution(item),project:item.project,shotID:item.shotID,grade:['A','B','C','D','F'].includes(item.grade)?item.grade:null,note:typeof item.note==='string'?item.note.slice(0,12000):'',criticalBlockers:Array.isArray(item.criticalBlockers)?item.criticalBlockers.filter(v=>typeof v==='string'&&v.trim()).map(v=>v.trim().slice(0,1000)).slice(0,40):[],ingredients,shootPlan:normalizedShootPlan(item.shootPlan),updatedAt:typeof item.updatedAt==='string'?item.updatedAt:null};
   }
+  function knownLocationFamily(project,familyID){
+    return C.albums.some(album=>album.project===project&&(album.locationFamilyID||album.setFamilyID||(['sets','locations'].includes(album.category)?album.id:''))===familyID);
+  }
+  const locationReviewKey=(project,familyID)=>project+':'+familyID;
+  function normalizedLocationReview(item,origin='import'){
+    if(!item||typeof item!=='object'||typeof item.project!=='string'||typeof item.locationFamilyID!=='string'||!knownLocationFamily(item.project,item.locationFamilyID))return null;
+    const owner=projectController(item.project),confirmed=item.reviewerControllerID===owner&&item.decisionScope==='location'&&humanControllers.some(person=>person.id===owner),updatedAt=typeof item.updatedAt==='string'&&!Number.isNaN(Date.parse(item.updatedAt))?item.updatedAt:null;
+    const record={project:item.project,locationFamilyID:item.locationFamilyID,note:typeof item.note==='string'?item.note.slice(0,20000):'',updatedAt,origin:typeof item.origin==='string'?item.origin:origin,attributionStatus:confirmed?'confirmed':'draft',projectControllerID:owner,decisionScope:'location'};
+    if(confirmed){
+      record.reviewer=controllerName(owner);record.reviewerControllerID=owner;record.decisionAuthorityControllerID=owner;
+      record.humanReview={reviewer:record.reviewer,reviewerControllerID:owner,projectControllerID:owner,decisionAuthorityControllerID:owner,decisionScope:'location',project:item.project,locationFamilyID:item.locationFamilyID,updatedAt,fields:['note']};
+    }
+    return record;
+  }
+  function locationReviewRecord(project,familyID){
+    return locationReviews.get(locationReviewKey(project,familyID))||{project,locationFamilyID:familyID,note:'',updatedAt:null,origin:'browser',attributionStatus:'draft',projectControllerID:projectController(project),decisionScope:'location'};
+  }
+  function updateLocationReview(project,familyID,note,actorID=''){
+    if(!knownLocationFamily(project,familyID))return null;
+    const owner=projectController(project),confirmed=actorID===owner&&humanControllers.some(person=>person.id===actorID),updatedAt=new Date().toISOString();
+    const record=normalizedLocationReview({project,locationFamilyID:familyID,note,updatedAt,origin:'browser',...(confirmed?{reviewerControllerID:owner,decisionScope:'location'}:{})},'browser');
+    if(!record)return null;
+    locationReviews.set(locationReviewKey(project,familyID),record);reviewRevision++;saveBrowserReview();scheduleFileSave();return record;
+  }
   function sceneReviewRecord(project,shotID){
     const saved=sceneReviews.get(project+':'+shotID);if(saved)return saved;
     const shot=(C.shotMaterials?.shots||[]).find(s=>s.project===project&&s.id===shotID);if(!shot)return null;
@@ -567,6 +591,7 @@
     const record = normalizedReview(item,'catalog'); if(record)mergeReview(record);
   }
   for(const item of C.sceneReviews||[]){const record=normalizedSceneReview(item);if(record)sceneReviews.set(record.project+':'+record.shotID,record);}
+  for(const item of C.locationReviews||[]){const record=normalizedLocationReview(item,'catalog');if(record)locationReviews.set(locationReviewKey(record.project,record.locationFamilyID),record);}
   acceptStoryboardTakes(prepareStoryboardTakes(C,'catalog'));
   acceptCollaboratorReviews(prepareCollaboratorReviews(C,'catalog'));
   try {
@@ -575,6 +600,7 @@
     if(saved?.format===REVIEW_KEY && Array.isArray(saved.items)) {
       for(const item of saved.items){const record=normalizedReview(item,'browser');if(record)mergeReview(record);}
       for(const item of saved.sceneReviews||[]){const record=normalizedSceneReview(item);if(record)sceneReviews.set(record.project+':'+record.shotID,record);}
+      for(const item of saved.locationReviews||[]){const record=normalizedLocationReview(item,'browser');if(record)locationReviews.set(locationReviewKey(record.project,record.locationFamilyID),record);}
     }
   } catch {storageOK=false;}
   refreshCollaboratorReviewSidecar();
@@ -590,6 +616,7 @@
     status:'review decisions and notes; removal is a queue, not a file deletion',
     items:[...reviews.values()].map(record=>({...assetReference(byID.get(record.id)),...record})),
     sceneReviews:[...sceneReviews.values()],
+    locationReviews:[...locationReviews.values()],
     storyboardTakes,storyboardTakeBackups,
     collaboratorReviews,collaboratorReviewBackups,
     validationEvidence:validationEnvelope(),
@@ -598,8 +625,8 @@
   function fileStatus(message){fileMessage=message;document.querySelectorAll('[data-review-file-status]').forEach(e=>e.textContent=message);}
   function saveBrowserReview(){
     if(!validationStorageError){try{localStorage.setItem(VALIDATION_KEY,JSON.stringify(validationEnvelope()));}catch{notice('Evidence backup unavailable; export validation evidence. Your manual review save will still be attempted.');}}
-    try {localStorage.setItem(REVIEW_KEY,JSON.stringify(reviewPayload()));localStorage.setItem('cfa-visual-favorites-v1',JSON.stringify([...favorites]));localStorage.setItem(EXPORT_KEY,JSON.stringify(basketPayload(true)));storageOK=true;}
-    catch {storageOK=false;fileStatus('Browser backup unavailable. Export review to keep this session.');notice('Browser storage unavailable. Export review to keep your decisions.');}
+    try {localStorage.setItem(REVIEW_KEY,JSON.stringify(reviewPayload()));localStorage.setItem('cfa-visual-favorites-v1',JSON.stringify([...favorites]));localStorage.setItem(EXPORT_KEY,JSON.stringify(basketPayload(true)));storageOK=true;if(!reviewFileHandle)fileStatus('Saved in this browser · not yet sent to CFA. Download the review file to share it.');return true;}
+    catch {storageOK=false;fileStatus('Browser backup unavailable. Download the review now to keep this session.');notice('Browser storage unavailable. Download the review now to keep your decisions.');return false;}
   }
   function saveFavorites(){saveBrowserReview();reviewRevision++;scheduleFileSave();}
   function scheduleFileSave(){
@@ -803,6 +830,7 @@
     document.querySelectorAll('[data-project]').forEach(b=>b.onclick=()=>route(b.dataset.project,'all'));
     document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>route(b.dataset.navProject||state.project,b.dataset.view));
     document.querySelector('#search').oninput=e=>{state.search=e.target.value;renderMain();};
+    const storageHint=document.querySelector('.review-storage-hint');if(storageHint)storageHint.textContent='Notes save only in this browser on this device. Save review file can maintain an optional file while this page stays open. To hand off, download the review and send the JSON to CFA or Nova; nothing uploads or sends automatically.';
     document.querySelector('#export').onclick=exportFavorites;document.querySelector('#import').onclick=()=>document.querySelector('#import-file').click();document.querySelector('#save-review').onclick=chooseReviewFile;document.querySelector('#export-review').onclick=exportReview;
     renderMain();
     if(state.openAsset){const id=state.openAsset;delete state.openAsset;openViewer(id);}
@@ -2163,6 +2191,21 @@
     const values=[asset.cameraPositionID&&['Camera',asset.cameraPositionID],asset.lightState&&['Light',asset.lightState],asset.providerVariant&&['Variant',asset.providerVariant]].filter(Boolean);
     return values.length?`<div class="location-meta-chips">${values.map(([label,value])=>`<span><small>${esc(label)}</small>${esc(value)}</span>`).join('')}</div>`:'';
   }
+  function locationReviewActor(project,familyID){return actorSelections.get(project)||locationReviewRecord(project,familyID).reviewerControllerID||'';}
+  function locationReviewSaveText(record){
+    if(!record.note.trim())return 'Nothing typed yet · notes auto-save in this browser as you type.';
+    if(!storageOK)return 'Browser backup unavailable · download the feedback file now to keep this note.';
+    const stamp=record.updatedAt?' · '+displayTimestamp(record.updatedAt):'';
+    return record.attributionStatus==='confirmed'?'Saved in this browser · ready to download for CFA'+stamp:'Saved in this browser as an unsigned draft · choose the reviewer before sending'+stamp;
+  }
+  function locationDirectionComposer(family){
+    const record=locationReviewRecord(family.project,family.id),owner=projectController(family.project),actor=locationReviewActor(family.project,family.id);
+    return `<section class="location-direction-composer" aria-label="Direction for ${esc(family.title)}"><p class="eyebrow">Your direction for this place</p><h4>What should stay or change?</h4><label>Reviewing as<select data-location-reviewer><option value="">Choose the actual reviewer</option><option value="${esc(owner)}" ${actor===owner?'selected':''}>${esc(controllerName(owner))} · project owner</option></select></label><p class="review-help">Scope is fixed to this location family. This shared page is not an authenticated account.</p><label for="location-direction-note">Location note</label><textarea id="location-direction-note" data-location-note rows="4" maxlength="20000" placeholder="Example: replace the vehicle, adjust the setting, or explain what came up.">${esc(record.note)}</textarea><p class="location-save-indicator ${record.note.trim()?'has-note':''}" data-location-save-status role="status">${esc(locationReviewSaveText(record))}</p><p class="review-help">This note does not select a set, bind a shot, or approve production.</p></section>`;
+  }
+  function locationHandoffPanel(project){
+    const notes=[...locationReviews.values()].filter(record=>record.project===project&&record.note.trim()),confirmed=notes.filter(record=>record.attributionStatus==='confirmed').length;
+    return `<section class="location-handoff" aria-label="Return this review to CFA"><p class="eyebrow">Finish & return</p><h4>Return this review to CFA</h4><ol><li>Your notes save automatically in this browser on this device.</li><li>Choose the reviewer, then download the feedback file.</li><li>Attach or send that JSON file back to CFA, Ziggy, or Nova.</li></ol><button type="button" class="pill location-download" data-location-export>Download feedback file for CFA</button><details><summary>Optional continuous file backup</summary><p class="review-help">If your browser supports it, choose a file once and this open page will keep updating it.</p><button type="button" class="small-link" data-location-save>Choose continuous backup file</button></details><p class="location-handoff-count">${notes.length} location note${notes.length===1?'':'s'} saved here · ${confirmed} reviewer-confirmed</p><p class="review-help"><strong>Nothing uploads automatically.</strong> CFA cannot see these browser notes until the downloaded file is sent back.</p></section>`;
+  }
   function locationScoutWorkspace({director=false}={}){
     const allFamilies=locationFamilies(state.project,false),allItems=allFamilies.flatMap(family=>family.items),allReviewed=allItems.filter(asset=>Object.hasOwn(statusLabels,reviewRecord(asset.id).status)).length;
     const header=`<header class="casa-session-header location-scout-header"><div><p class="eyebrow">${director?'Director’s chair · Location scout':'Location library · Scout board'}</p><h2>${director?'Build the world before you roll camera.':'Scout the places that shape the story.'}</h2><p>${director?'Compare the look of each place, then walk its recorded camera coverage.':'The shared location inventory, organized by recorded place and coverage lineage.'}</p></div><div class="casa-progress"><strong>${allReviewed}<span> / ${allItems.length}</span></strong><span>references reviewed · ${allFamilies.length} locations</span><progress value="${allReviewed}" max="${Math.max(allItems.length,1)}" aria-label="Location review progress"></progress></div></header>`;
@@ -2176,13 +2219,13 @@
     const notes=[['Look proposal',asset.providerProposal?.lookNote||asset.providerLookNote],['Source / proposal distinction',asset.providerProposal?.sourceVsProposal||asset.providerSourceVsProposal],['Recorded defect note',asset.providerProposal?.defectNote||asset.providerDefectNote]].filter(([,value])=>value);
     const signal=asset.relayedAuthorChoiceSignal;
     for(const item of items)if(!displayed.includes(item.id))displayed.push(item.id);
-    const familyRail=families.map((item,n)=>{const studies=item.lanes.identity.length+item.lanes.extra.length+item.lanes.references.length;return `<button type="button" data-location-family="${esc(item.id)}" aria-pressed="${item.id===family.id}" class="${item.id===family.id?'active':''}"><img loading="lazy" src="${esc(href(item.cover.thumb||item.cover.src))}" alt=""><span><b>${esc(item.title)}</b><small>${item.lanes.look.length} looks · ${item.lanes.coverage.length} coverage${studies?' · '+studies+' studies':''}</small><em>${item.reviewed} / ${item.items.length} reviewed</em></span><span class="location-queue-number">${String(n+1).padStart(2,'0')}</span></button>`;}).join('');
+    const familyRail=families.map((item,n)=>{const studies=item.lanes.identity.length+item.lanes.extra.length+item.lanes.references.length,note=locationReviewRecord(item.project,item.id).note.trim();return `<button type="button" data-location-family="${esc(item.id)}" aria-pressed="${item.id===family.id}" class="${item.id===family.id?'active':''}"><img loading="lazy" src="${esc(href(item.cover.thumb||item.cover.src))}" alt=""><span><b>${esc(item.title)}</b><small>${item.lanes.look.length} looks · ${item.lanes.coverage.length} coverage${studies?' · '+studies+' studies':''}</small><em>${item.reviewed} / ${item.items.length} reviewed${note?' · note saved':''}</em></span><span class="location-queue-number">${String(n+1).padStart(2,'0')}</span></button>`;}).join('');
     const laneNav=availableLanes.map(value=>`<button type="button" data-location-lane="${value}" aria-pressed="${value===lane}" class="${value===lane?'active':''}">${esc(locationLaneLabels[value])}<span>${family.lanes[value].length}</span></button>`).join('');
     const positionNav=positions.length?`<div class="location-position-nav" aria-label="Recorded camera positions"><span>Camera map</span><div>${positions.map(value=>`<button type="button" data-location-position="${esc(value)}" aria-pressed="${value===position}" class="${value===position?'active':''}">${esc(value||'Position not recorded')} <small>${family.lanes[lane].filter(item=>String(item.cameraPositionID||'').trim()===value).length}</small></button>`).join('')}</div></div>`:'';
     const filmstrip=strip.items.map((item,offset)=>{const itemReview=reviewRecord(item.id),active=item.id===asset.id;return `<button type="button" data-location-asset="${esc(item.id)}" aria-pressed="${active}" class="${active?'active':''}" title="${esc(item.title)}"><img loading="lazy" src="${esc(href(item.thumb||item.src))}" alt=""><span>${strip.start+offset+1}${itemReview.status?' · '+esc(statusLabels[itemReview.status]):''}</span></button>`;}).join('');
     const sourceScenes=family.sourceScenes.map(id=>{const scene=sceneByID.get(id);return `<li><b>${esc(id)}</b>${scene?`<span>${esc(scene.heading)}</span>`:''}</li>`;}).join('');
     const shotRows=shots.map(({story,shot})=>`<li><button type="button" class="small-link" data-author-shot="${esc(shot.shotID)}" data-author-story="${esc(story.storyID)}" data-author-project="${esc(state.project)}">${esc(shot.shotID)} · ${esc(shot.title||'Storyboard shot')}</button></li>`).join('');
-    const providerNotes=`<details class="casa-provider-notes location-provider-notes"><summary>Preliminary provider notes${asset.providerScreening?.tag?' · '+esc(asset.providerScreening.tag):''}</summary>${notes.map(([label,value])=>`<h4>${esc(label)}</h4><p>${esc(value)}</p>`).join('')||'<p>No provider proposal notes supplied for this reference.</p>'}${asset.providerScreening?.note?`<h4>Provider screening · not a human verdict</h4><p>${esc(asset.providerScreening.note)}</p>`:''}</details>`;
+    const providerNotes=`${locationDirectionComposer(family)}<details class="casa-provider-notes location-provider-notes"><summary>Preliminary provider notes${asset.providerScreening?.tag?' · '+esc(asset.providerScreening.tag):''}</summary>${notes.map(([label,value])=>`<h4>${esc(label)}</h4><p>${esc(value)}</p>`).join('')||'<p>No provider proposal notes supplied for this reference.</p>'}${asset.providerScreening?.note?`<h4>Provider screening · not a human verdict</h4><p>${esc(asset.providerScreening.note)}</p>`:''}</details>${locationHandoffPanel(state.project)}`;
     return `<section class="casa-location-room location-scout-shell" aria-label="${director?'Director’s location scout':'Location scout board'}">${header}<div class="location-scout-layout"><aside class="location-scout-queue"><header><p class="eyebrow">Scout board</p><h3>${families.length} recorded places</h3></header><nav aria-label="Location families">${familyRail}</nav>${director?`<a class="small-link" href="#${esc(state.project)}/locations">Open shared Locations library →</a>`:''}</aside><section class="location-scout-stage"><header class="location-stage-heading"><div><p class="eyebrow">Now viewing · ${esc(locationLaneLabels[lane])}</p><h3>${esc(family.title)}</h3><p>${esc(family.description||'Recorded location references awaiting human direction.')}</p></div><span>${index+1} / ${items.length}</span></header><nav class="location-lane-nav" aria-label="Location study type">${laneNav}</nav>${positionNav}<button type="button" class="location-hero" data-open="${esc(asset.id)}" aria-label="Enlarge ${esc(asset.title)}"><img src="${esc(href(asset.src))}" alt="${esc(asset.title)}"><span>Enlarge reference</span></button><div class="location-active-caption"><div><p class="eyebrow">${esc(asset.setRoundKind?.replaceAll('_',' ')||locationLaneLabels[lane])}</p><h4>${esc(asset.title)}</h4></div><div class="location-reference-actions"><button type="button" class="favorite ${favorites.has(asset.id)?'on':''}" data-favorite="${esc(asset.id)}" aria-label="${favorites.has(asset.id)?'Remove favorite: ':'Favorite: '}${esc(asset.title)}" aria-pressed="${favorites.has(asset.id)}">${iconStar(asset.id)}</button><button type="button" class="basket-toggle ${basket.has(asset.id)?'on':''}" data-basket="${esc(asset.id)}" aria-label="${basket.has(asset.id)?'Remove from export basket: ':'Add to export basket: '}${esc(asset.title)}" aria-pressed="${basket.has(asset.id)}">${basket.has(asset.id)?'✓':'⇩'}</button></div></div>${locationMetadataChips(asset)}<div class="location-reference-nav"><button type="button" class="pill" data-location-step="-1" ${index===0?'disabled':''}>← Previous</button><div class="location-filmstrip" data-location-window-start="${strip.start}" aria-label="References in this recorded view">${filmstrip}</div><button type="button" class="pill" data-location-step="1" ${index===items.length-1?'disabled':''}>Next →</button></div></section><aside class="location-scout-dossier"><p class="eyebrow">Story & coverage brief</p><h3>${esc(family.title)}</h3><section><h4>Story use</h4>${sourceScenes?`<ul class="location-context-list">${sourceScenes}</ul>`:'<p class="review-help">No source-scene link is recorded for this family.</p>'}${shots.length?`<details><summary>${shots.length} canonical storyboard shot${shots.length===1?'':'s'}</summary><ul class="location-shot-list">${shotRows}</ul></details>`:'<p class="review-help">No canonical storyboard shots name this location family.</p>'}</section><section><h4>Coverage record</h4>${eligible.length?`<p class="review-help">Family eligibility recorded on concept looks</p><div class="location-token-list">${eligible.map(id=>`<span>${esc(id)}</span>`).join('')}</div>`:'<p class="review-help">No family shot eligibility is recorded.</p>'}${makerShots.length?`<p class="review-help">Maker-reported coverage · not a shot binding</p><div class="location-token-list">${makerShots.map(id=>`<span>${esc(id)}</span>`).join('')}</div>`:''}${lane==='coverage'&&!asset.eligibleShotIDs?.length?'<p class="location-guardrail">This camera reference has family context only. No exact shot binding is recorded.</p>':''}</section>${signal?`<section class="location-author-signal"><p class="eyebrow">Relayed author signal · non-binding</p><p>${esc(signal.note||'A narrowly scoped signal was relayed; no formal image choice is inferred.')}</p><small>Scope: ${esc(signal.scope||'not recorded')} · Decision maker: ${esc(signal.decisionMaker||'not recorded')} · Relayed by: ${esc(signal.relayedBy||'not recorded')}</small></section>`:''}<section class="location-review-summary"><h4>Director review</h4><p><strong>${esc(statusText)}</strong>${review.reviewer?` · ${esc(review.reviewer)}`:''}</p>${review.note?`<blockquote>${esc(review.note)}</blockquote>`:'<p class="review-help">A location-scoped note can be saved without choosing a winner.</p>'}<button type="button" class="pill" data-location-review="${esc(asset.id)}">Open detailed review</button></section>${providerNotes}<p class="location-guardrail">Viewing, favoriting, keeping, or exporting a reference does not choose the set, bind a shot, approve a starting frame, or accept production.</p><div class="tools location-save-tools"><button type="button" class="small-link" data-location-save>Save review file</button><button type="button" class="small-link" data-location-export>Export review</button></div></aside></div></section>`;
   }
   function casaLocations(){return locationScoutWorkspace({director:true});}
@@ -2236,15 +2279,18 @@
     document.querySelector('#casa-save-file')?.addEventListener('click',()=>{if(saveNote()!==false)chooseReviewFile();});
   }
   function bindLocationScout(){
-    const refresh=()=>renderMain();
-    document.querySelectorAll('[data-location-family]').forEach(button=>button.onclick=()=>{state.locationFamilySelections=state.locationFamilySelections||{};state.locationFamilySelections[state.project]=button.dataset.locationFamily;refresh();});
+    const noteField=document.querySelector('[data-location-note]'),reviewerField=document.querySelector('[data-location-reviewer]');
+    const saveDirection=()=>{const {family}=locationScoutSelection();if(!family||!noteField)return null;const actor=reviewerField?.value||'',prior=locationReviewRecord(family.project,family.id),confirmed=actor===projectController(family.project);if(actor)actorSelections.set(family.project,actor);else actorSelections.delete(family.project);if(noteField.value===prior.note&&(confirmed?prior.attributionStatus==='confirmed':prior.attributionStatus!=='confirmed'))return prior;const record=updateLocationReview(family.project,family.id,noteField.value,actor),status=document.querySelector('[data-location-save-status]');if(status){status.textContent=locationReviewSaveText(record||prior);status.classList.toggle('has-note',Boolean((record||prior).note.trim()));}return record;};
+    const refresh=()=>{saveDirection();renderMain();};
+    noteField?.addEventListener('input',saveDirection);reviewerField?.addEventListener('change',saveDirection);
+    document.querySelectorAll('[data-location-family]').forEach(button=>button.onclick=()=>{saveDirection();state.locationFamilySelections=state.locationFamilySelections||{};state.locationFamilySelections[state.project]=button.dataset.locationFamily;renderMain();});
     document.querySelectorAll('[data-location-lane]').forEach(button=>button.onclick=()=>{const {family}=locationScoutSelection();if(!family)return;state.locationLaneSelections=state.locationLaneSelections||{};state.locationLaneSelections[locationStateKey(family.id)]=button.dataset.locationLane;refresh();});
     document.querySelectorAll('[data-location-position]').forEach(button=>button.onclick=()=>{const {family}=locationScoutSelection();if(!family)return;state.locationPositionSelections=state.locationPositionSelections||{};state.locationPositionSelections[locationStateKey(family.id)]=button.dataset.locationPosition;refresh();});
     document.querySelectorAll('[data-location-asset]').forEach(button=>button.onclick=()=>{const selection=locationScoutSelection();if(!selection.assetKey)return;state.locationAssetSelections[selection.assetKey]=button.dataset.locationAsset;refresh();});
     document.querySelectorAll('[data-location-step]').forEach(button=>button.onclick=()=>{const selection=locationScoutSelection();if(!selection.asset)return;const next=Math.max(0,Math.min(selection.items.length-1,selection.index+Number(button.dataset.locationStep)));state.locationAssetSelections[selection.assetKey]=selection.items[next].id;refresh();});
-    document.querySelectorAll('[data-location-review]').forEach(button=>button.onclick=()=>{const asset=byID.get(button.dataset.locationReview);if(!asset)return;scopeSelections.set(asset.project,'location');openViewer(asset.id);});
-    document.querySelectorAll('[data-location-save]').forEach(button=>button.onclick=chooseReviewFile);
-    document.querySelectorAll('[data-location-export]').forEach(button=>button.onclick=exportReview);
+    document.querySelectorAll('[data-location-review]').forEach(button=>button.onclick=()=>{saveDirection();const asset=byID.get(button.dataset.locationReview);if(!asset)return;const record=locationReviewRecord(asset.project,locationScoutSelection().family?.id||'');if(record.reviewerControllerID)actorSelections.set(asset.project,record.reviewerControllerID);scopeSelections.set(asset.project,'location');openViewer(asset.id);});
+    document.querySelectorAll('[data-location-save]').forEach(button=>button.onclick=()=>{saveDirection();chooseReviewFile();});
+    document.querySelectorAll('[data-location-export]').forEach(button=>button.onclick=()=>{saveDirection();exportLocationReview(state.project);});
   }
   function missionControl(){
     const tasks=missionActiveTasks(),providers=missionProviderOptions([...tasks,...(C.missionControl?.tasks||[]).filter(task=>task.status!=='done'&&taskOwner(task)===cornerController()&&cornerProjectMatches(task.project))]);
@@ -2838,6 +2884,11 @@
   function exportFavorites(){const selected=[...favorites].map(id=>byID.get(id)).filter(Boolean),items=selected.filter(exportAllowed).map(exportReference);downloadJSON({format:'cfa-visual-favorites-v1',exported:new Date().toISOString(),exportIntent:state.exportIntent,status:'user review shortlist; not automatic final approval',items},'CFA-favorites-'+new Date().toISOString().slice(0,10)+'.json');notice(items.length+' favorites exported; '+(selected.length-items.length)+' excluded by export intent. Full review backups retain every star.');}
   function downloadJSON(data,filename){const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=filename;link.click();setTimeout(()=>URL.revokeObjectURL(url),3000);}
   function exportReview(){downloadJSON(reviewPayload(),'cfa-review.json');notice('Review exported with decisions, notes, and favorites. Save it in docs/notes/downloads (or docs/notes/cfa-review.json) for the next sweep.');}
+  function exportLocationReview(project){
+    const data=reviewPayload(),notes=data.locationReviews.filter(record=>record.project===project&&record.note.trim()),drafts=notes.filter(record=>record.attributionStatus!=='confirmed').length;
+    downloadJSON({...data,handoff:{kind:'location_review',project,noteCount:notes.length,reviewerConfirmedCount:notes.length-drafts,status:'downloaded browser review; not uploaded or sent automatically'}},'cfa-'+project+'-location-review.json');
+    notice(notes.length+' location note'+(notes.length===1?'':'s')+' downloaded for CFA'+(drafts?' · '+drafts+' still '+(drafts===1?'needs':'need')+' the reviewer selected.':'. Attach or send the JSON file back; nothing was uploaded automatically.'));
+  }
   function importReview(data){
     if(!data||typeof data!=='object')throw Error('Choose an exported CFA review, favorites, or selection-list file.');
     if(data.format===VALIDATION_KEY){importValidation(data);return;}
@@ -2860,6 +2911,7 @@
       for(const [id,note] of Object.entries(data.notes)){if(typeof note!=='string')continue;const a=matchingAsset({id,sha256:data.note_refs?.[id]});if(a){const record=normalizedReview({id,sha256:data.note_refs?.[id]||a.sha256,note,updatedAt:data.exported||null});if(record){archiveLegacy([{id,sha256:data.note_refs?.[id]||a.sha256,note,updatedAt:data.exported||null}]);mergeReview(record);imported++;}}}
     }
     if(data.format===REVIEW_KEY&&Array.isArray(data.sceneReviews)){for(const item of data.sceneReviews){const record=normalizedSceneReview(item);if(record){sceneReviews.set(record.project+':'+record.shotID,record);imported++;}else skipped++;}}
+    if(data.format===REVIEW_KEY&&Array.isArray(data.locationReviews)){for(const item of data.locationReviews){const record=normalizedLocationReview(item);if(record){locationReviews.set(locationReviewKey(record.project,record.locationFamilyID),record);imported++;}else skipped++;}}
     if(data.format===REVIEW_KEY&&Array.isArray(data.exportBasket)){const result=importBasket(data.exportBasket);skipped+=result.skipped;}
     reviewRevision++;saveBrowserReview();scheduleFileSave();render();notice(`${imported} review records and ${stars} favorites imported; ${skipped} unmatched entries skipped.`);
   }

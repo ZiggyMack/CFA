@@ -43,7 +43,7 @@
     if (footer && !footer.querySelector('.hosted-storage-note')) {
       const note = document.createElement('p');
       note.className = 'hosted-storage-note';
-      note.textContent = 'Hosted review copies. Decisions stay in this browser; Export review to bring them back to the local library.';
+      note.textContent = 'Notes save only in this browser on this device. CFA cannot see them until you download the review file and send it back.';
       footer.append(note);
     }
   };

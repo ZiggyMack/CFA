@@ -1,0 +1,3 @@
+# Portable dashboard snapshots are content-addressed build artifacts.
+# Preserve their exact bytes so bundle_manifest.json hashes stay valid.
+apps/creative_studio/full_dashboard_bundle/snapshots/** -text
