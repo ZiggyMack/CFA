@@ -1,0 +1,87 @@
+# Scene card, between the music — "Chewy at work" (first Flow / Gemini prototype set)
+
+Project: Hon Dolo / Strictly Business. Section: none; a frame-story beat Ziggy asked for in the Pent House on October 12 ("scenes of Chewbacca helping out, doing work... write a storyboard, have the metadata indicate we want to flow this to Flow and Gemini"). Author: Claude, lead writer, October 12, 2026. Status: **proposed**; the five source frames are preliminary Grok drafts; nothing here is accepted art, an accepted reference, a timing or a run. Each frame's metadata follows `VIDEO_PROTOTYPE_BRIEF_STANDARD.md`; the dispatch of any run is CFA Nova's under the production method, and Ziggy's gate is the actual video.
+
+## Story beat
+
+The ship is down on a dry world at sunset and there is cargo to move. Nobody sings. Chewy does the work: crates down the ramp, crates in the hold, the case of credits checked, and then, the job done, his hands go to the decks and the ship's lights answer him. Dolo walks away from the ship toward the business, as he does. It is the cheapest story in the piece to prove on video, because it is one character doing one physical thing per shot, and it gives the music video's three recurring Chewy images (the boards, the look, the fader) a life outside the song.
+
+No bosses, no enforcer, no Leia: Ziggy wants the bosses handled with special care for IP reasons, so this set stays with the crew.
+
+**Refinement applied (2026-10-12, mailbox 98220a40):** every output from these frames enters Preliminary with no per-image gate; the accepted foundations (face, mouth, wrist, the DJB sheet) do not approve the new scene; each output gets separate Complete look, Scene, Details and Outfit notes, never averaged. Lighting per frame is stated as sources below: W-1 and W-2 the low sun as the key with the hull in shadow; W-3 the hold's practicals and one cold spill; W-4 the credits' own glow as the key on his face; W-5 the console's small lights (and, in the C20 source, the corridor neon, which is the continuity defect recorded there). The actions chosen avoid body-to-object contact physics except the crate carry, which is a hold, not a climb.
+
+## Frames, in order, with prototype metadata
+
+Archive root: `docs\notes\downloads\`. Grok scores are the swarm's preliminary self-scores; mine are from `CLAUDE_GRADES_20261012.md`. "Target" names the providers Ziggy wants a prototype from; nothing is dispatched by this card.
+
+### W-1 Down the ramp
+- Source: `GROK-HD-FALCON-1000/C44-chewy-boarding/C44-chewy-boarding-001.jpg`, SHA-256 `9900dcd673ce6b6a1ee13512a6d5c2572bf147a764a48acb415eeddddd6776bb`, 283,433 bytes; Grok L5 S5; Claude L5 S5.
+- Locks visible: Chewy per the DJB sheet (dark gorilla-like beast, black over-ear headphones, gold neck chain, bullet bandolier); the ship's ramp and hull (one silhouette candidate, undecided).
+- Declared change, one action: Chewy carries the crate down the ramp toward the ground, three or four steps, and stops at the foot; the crate stays level; nothing else moves but dust.
+- Sides: the ramp runs from the hull at screen-right down to the ground at screen-left; he moves screen-left.
+- Camera: locked; no push.
+- Bound: one clip, the model's native short length (six seconds at Flow002's settings), 1280x720; no retries.
+- Target: Flow (video from this frame); Gemini (a second scene from the same frame, as HaL's Lisan brief does).
+- Acceptance checks: the beast's face, headphones, chain and bandolier hold at start, middle and end; four fingers and a thumb on each hand; the crate's geometry constant; no second figure; no morph of the ramp.
+- Defects known: none in the frame; the sunset haze may drift.
+
+### W-2 Walking away from the ship
+- Source: `GROK-HD-FALCON-1000/C42-ramp-landing/C42-ramp-landing-001.jpg`, SHA-256 `9f4d516f4ab8f10f541c7494409eaa406682b04bc0e889d6ef9e681c97a0cf6a`, 306,604 bytes; Grok L5 S5; Claude L4 (Dolo) / L5 (Chewy) S5.
+- Locks visible: Dolo's face per lf_full, cheek words on the correct sides, two lip hoops, ear hoop, neck blaster character-left, the jacket over the open shirt; Chewy with a crate on the ramp behind.
+- Declared change, one action: Dolo walks two steps toward camera and past its right edge while Chewy takes one step down the ramp; the sun stays put.
+- Sides: Dolo exits screen-right; Chewy moves screen-left down the ramp.
+- Camera: locked.
+- Bound: as W-1.
+- Target: Flow; Gemini.
+- Acceptance checks: Dolo's cheek words, hoops and neck blaster at start, middle and end; no new tattoos; Chewy's beast holds at small scale.
+- Defects known: **Dolo wears an extra gold neck chain he does not have, and it hides the chest ship.** For a Prime-lane shot the source needs a repair (remove the chain, show the open shirt) before use; as a motion test the frame is usable with the defect recorded. Ziggy's call.
+
+### W-3 In the hold
+- Source: `GROK-HD-FALCON-1000/C67-cargo-hold-dolo-chewy/C67-cargo-hold-dolo-chewy-002.jpg`, SHA-256 `a1a553116a1d985b0c6a151cf79c52c7b95e4c9b70055daf615ffd72839bf0df`, 274,946 bytes; Grok L5 S5; Claude L5 / L5 S5.
+- Locks visible: Dolo chest-up, cheek words correct, two lip hoops, both ear pieces, neck blaster character-left; Chewy among crates and netting at screen-left.
+- Declared change, one action: Chewy lifts the nearest crate and sets it on the stack behind him; Dolo holds still, one blink, eyes on camera.
+- Sides: Chewy at screen-left, crates at screen-left; Dolo screen-right of center.
+- Camera: locked.
+- Bound: as W-1.
+- Target: Flow; Gemini.
+- Acceptance checks: Dolo's face and marks unchanged through the clip (he is the still element; any drift fails the clip); Chewy's hands and the crate coherent; the netting does not morph.
+- Defects known: the chest ship is not visible (the shirt sits higher); acceptable for this frame.
+
+### W-4 The case
+- Source: `GROK-HD-FALCON-1000/C30-cargo/C30-cargo-013.jpg`, SHA-256 `d6b65339e87a0da082e8e1627310d9c84877e9cd7a061d91ed8a6f4298d77ef4`, 266,564 bytes; Grok L5 S5; Claude L5 S5.
+- Locks visible: Chewy per the DJB sheet, close; the open case with four luminous credits; crates.
+- Declared change, one action: his eyes drop from the lens to the credits and the glow brightens a step; the lid does not move.
+- Sides: the case at screen-left-low, his face screen-right.
+- Camera: locked.
+- Bound: as W-1.
+- Target: Flow; Gemini.
+- Acceptance checks: four credits, countable, start to end; no readable text; the beast's face holds.
+- Defects known: none.
+
+### W-5 The decks
+- Source: `GROK-HD-FALCON-1000/C20-fader-push/C20-fader-push-001.jpg`, SHA-256 `8c55b4a2cfdc1275e14f532b881f59f57542a43c2ef3890d8490df57f917fade`, 279,611 bytes; Grok L5 S5; Claude L5 S4 (the beast holds; the corridor is lit with magenta and cyan neon rather than the Falcon's warm practicals). Alternate: `GROK-HD-ENABLERS-03/E13-chewy-hands-actions/E13-chewy-hands-actions-004.jpg`, SHA-256 `b7e2f2956d31c1f74d6eb28c22d5209f21ac94a9c822908fb494886a7e627367`, Claude L5 S4 (club-like void, not the Falcon lounge).
+- Locks visible: Chewy per the DJB sheet at the decks.
+- Declared change, one action: one fader push, screen-left to screen-right, hand and fader in contact throughout; the practicals pulse once as it lands (the S04-7 beat, here as frame-story rehearsal).
+- Sides: fader travels screen-right.
+- Camera: locked.
+- Bound: as W-1.
+- Target: Flow; Gemini.
+- Acceptance checks: hand stays on the fader; finger count holds; the decks' geometry constant; no second hand appears.
+- Defects known: the neon lighting breaks lounge continuity with W05/W06 v002; acceptable for an action test, or swap the source for a C19 frame in the warm lounge after a view.
+
+## Cut logic
+
+1 → 2 on the crate reaching the ground to Dolo walking; 2 → 3 on Dolo leaving frame to the hold; 3 → 4 on the crate landing to the case; 4 → 5 on his eyes dropping to his hands on the decks. Five shots, five single actions, no dialogue, no song. If only one clip is run first, run W-1: one character, one action, no face lock to fail on.
+
+## Required before any run (per the standard and the method)
+
+- CFA Nova names the mode and model actually offered, verifies the displayed cost and the allowance, and dispatches; unknown cost or access is a stop.
+- Each output saved unchanged with its hash beside the source hash; mailbox to `nova` and `claude`; candidate until Ziggy reviews the actual video.
+- W-2 needs Ziggy's call on the neck-chain defect (repair first, or motion test as is).
+- No lip motion, no song timing, no second character added by the model.
+
+## Scene grade and review
+
+Grade: Ungraded. Shoot-plan review: Unreviewed. Source frames preliminary. This card is the writer's version of the storyboard Ziggy asked the Grok team to draft; when the Chief's and Z_6's draft instructions arrive, they are reviewed against this card and the standard, and the better framing of each shot wins.
+
+— Claude
