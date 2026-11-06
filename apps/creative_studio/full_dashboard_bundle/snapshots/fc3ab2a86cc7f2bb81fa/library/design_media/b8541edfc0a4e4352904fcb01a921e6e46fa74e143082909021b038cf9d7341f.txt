@@ -1,0 +1,137 @@
+{
+  "experiment_id": "FLOW-HD-VIDEO-002",
+  "variant": "B",
+  "source_asset_id": "FLOW-HD-VIDEO-002-A",
+  "source_filename": "FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667.mp4",
+  "source_sha256": "f8f2aa30265392634b67dbddebdc6ac0f05007de1abb2730f27d27513e72d378",
+  "actual_download_filename": "FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667_20261012004113.mp4",
+  "output_sha256": "8d090aaa5a45cc42cb9d52e7b26d9419a8d8aa8c029c22a1859752ec7e0cf3c2",
+  "hash_status": "verified_local_bytes",
+  "output_bytes": 2325046,
+  "actual_model": "Omni 1.1 Flash",
+  "actual_mode": "Video edit with the uploaded six-second video ingredient",
+  "actual_prompt": "Edit the attached six-second video. Make only one visual change: give the existing illumination a subtle warmer color balance, keeping the night scene, approximate exposure and neon atmosphere. Preserve the existing performer, face, hair, visible tattoos, grillz and jewelry exactly as they appear in this clip. Keep the silver jacket silver, the car’s design and color, all hands and clothing, street layout, signs and reflections coherent. Preserve the complete motion sequence, timing, camera movement, car descent, door opening, character turn and body/door contact. Keep one continuous shot with no new cuts, objects, people, face replacement, tattoo correction, retiming or extra action. Return silent video with no dialogue, lyrics, music or narration.",
+  "actual_settings": {
+    "outputCount": 1,
+    "uiDownload": "720p (Original size)",
+    "sourceEditorAssetID": "ee3f7e84-462d-41e5-b8c2-0ea1d9624aa1",
+    "settingsNotInferred": "No hidden seed, sampling settings or credit cost recovered"
+  },
+  "duration_seconds": 6.0,
+  "fps": 24,
+  "frame_count": 144,
+  "width": 1280,
+  "height": 720,
+  "audio_present": true,
+  "audible_content": null,
+  "displayed_cost": null,
+  "actual_cost": null,
+  "flow_generation_id": null,
+  "visible_defects": [
+    "An AAC stereo track exists despite the silent-video request. Measured mean -91.0 dB and maximum -84.3 dB; near-silent is not an absent audio stream."
+  ],
+  "timing_comparison": "Both files are 1280x720, 144 frames, nominal 24 tbr. Fresh Personal Assistant FFmpeg observations report A header 5.96s / average about 24.17fps and B header 6.02s / 24fps; packet presentation about six seconds. Exact source avg_frame_rate and stream duration remain unknown because ffprobe was unavailable. Do not claim identical native average rates. Earlier matching-frame samples remain historical sample evidence; the user now reports unrealistic car entry/descent/body interaction already present in A.",
+  "continuity_comparison": "Three matching samples show the requested warmer illumination, broadly matching actor/car/door/street layout. Fine tattoos, grill, fingers and material-color fidelity are not fully verified by these samples.",
+  "user_review_state": "October 12 clarified user review: BOTH A and B are Scene / Preliminary / Needs fixes, without numerical scores and not production-approved. B demonstrates a visible warmth effect, but not accepted physically motivated relighting. A has inherited likeness/visibility and car/body-action defects. Earlier notes and warmth-only observation are preserved as history.",
+  "accepted": false,
+  "recorded_at_utc": "2026-10-12T05:04:36.559717Z",
+  "output_repo_path": "docs/notes/downloads/FLOW-HD-VIDEO-002_GEM-5A115C59_10p1667-16p1667_20261012004113.mp4",
+  "container_duration_seconds": 6.02,
+  "flow_editor_url": "https://flow.google.com/project/e8a547ef-f801-4021-a5ee-fad3080b439c/edit/ee3f7e84-462d-41e5-b8c2-0ea1d9624aa1",
+  "accepted_scope": [],
+  "audio_measurement": {
+    "codec": "AAC LC",
+    "channels": 2,
+    "sampleRate": 48000,
+    "meanDB": -91.0,
+    "maxDB": -84.3,
+    "subjectiveListeningRecorded": false
+  },
+  "technical_verification": {
+    "fullVideoDecodeExitCode": 0,
+    "videoCodec": "H264 High",
+    "pixelFormat": "yuv420p",
+    "matchedSampleFrames": [
+      0,
+      72,
+      143
+    ]
+  },
+  "evidence_paths": [
+    "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/FLOW_EDIT_SUBMITTED_20261012.png",
+    "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/FLOW_EDIT_COMPLETED_20261012.png",
+    "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/result_review_20261012/matched_frames.jpg"
+  ],
+  "history_note": "The October 8 pre-run manifest/delivery_status and later access-only receipts remain unchanged dated history. This receipt establishes the actual returned result; it does not retroactively prove the cost preflight succeeded.",
+  "scope_boundary": "One output received. No second run, purchase, auto retry, source-file change, final-track synchronization or general identity acceptance.",
+  "review_history": [
+    {
+      "receipt_recorded_at_utc": "2026-10-12T05:04:36.559717Z",
+      "user_review_state": "Ziggy explicitly accepted the warmer lighting change; broader preservation/action/acting acceptance remains unrecorded.",
+      "accepted_scope": [
+        "warmer lighting only"
+      ],
+      "accepted": false,
+      "superseded_by": "FLOW-HD-VIDEO-002-USER-REVIEW-20261012",
+      "preservation_note": "Historical scoped warmth observation retained unchanged. The later A/B review supplies the current needs-fixes/nonproduction disposition; measured media observations and the actual prompt remain unchanged."
+    }
+  ],
+  "current_disposition": "needs_fixes_nonproduction",
+  "current_review_path": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/flow/video_test_002/USER_REVIEW_20261012.json",
+  "review_clarification_date": "2026-10-12",
+  "measurement_history": [
+    {
+      "preserved_at_utc": "2026-10-12T16:24:05.7139114Z",
+      "prior_timing_comparison": "Both videos encode 144 frames at 24 fps. Matching frames 0, 72 and 143 retain the broad arrival/turn/door sequence and scene layout. Full motion/acting review is not recorded.",
+      "original_recorded_duration_seconds": 6.0,
+      "original_recorded_fps": 24,
+      "original_container_duration_seconds": 6.02,
+      "clarification": "Original receipt observations retained. The nominal-rate shorthand is superseded by the explicitly attributed A/B FFmpeg refinement below."
+    }
+  ],
+  "fps_interpretation": "B nominal / reported 24fps. This field does not establish A has the same exact native average rate.",
+  "current_scene_review": {
+    "source_A": {
+      "production_eligible": false,
+      "scope": "Scene",
+      "status": "needs_fixes",
+      "numeric_grade": null,
+      "stage": "preliminary"
+    },
+    "output_B": {
+      "production_eligible": false,
+      "scope": "Scene",
+      "status": "needs_fixes",
+      "numeric_grade": null,
+      "stage": "preliminary"
+    },
+    "received_via": "Personal Assistant relay of explicit Ziggy refinement, October 12"
+  },
+  "current_measurement_refinement": {
+    "recorded_at_utc": "2026-10-12T16:24:05.7139114Z",
+    "source": "Personal Assistant fresh FFmpeg observations relayed by root; not independently reprobed by this transcriber",
+    "A": {
+      "width": 1280,
+      "height": 720,
+      "frames": 144,
+      "nominal_tbr": 24,
+      "ffmpeg_header_duration_seconds": 5.96,
+      "ffmpeg_reported_average_fps": 24.17,
+      "packet_presentation_seconds_approx": 6,
+      "exact_avg_frame_rate": null,
+      "exact_stream_duration_seconds": null,
+      "evidence": "Fresh FFmpeg observations supplied by Personal Assistant and relayed by CFA Nova. ffprobe unavailable; exact source avg_frame_rate and stream duration remain unknown. This transcriber did not rerun the probe."
+    },
+    "B": {
+      "width": 1280,
+      "height": 720,
+      "frames": 144,
+      "nominal_tbr": 24,
+      "ffmpeg_header_duration_seconds": 6.02,
+      "ffmpeg_reported_average_fps": 24,
+      "packet_presentation_seconds_approx": 6,
+      "historical_recorded_video_seconds": 6.0,
+      "evidence": "Fresh FFmpeg observations supplied by Personal Assistant and relayed by CFA Nova. Historical receipt video_seconds=6.0 is retained as earlier evidence, not an inference that A/B native average rates are identical."
+    }
+  }
+}
