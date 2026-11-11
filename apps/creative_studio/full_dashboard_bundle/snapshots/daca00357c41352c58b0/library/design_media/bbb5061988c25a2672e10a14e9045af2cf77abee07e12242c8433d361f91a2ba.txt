@@ -1,0 +1,31 @@
+QA NOTES - GROK-HD-20261008_return_v001 (PARTIAL RETURN: REV-HD-001 review checkpoint)
+Built 2026-10-08 17:13 UTC by Grok Bot. Everything needs_user_review; nothing approved.
+Model for new images: Grok Bot image generation (internal). Seeds unknown. Hashes = sha256 of the exact bytes in this ZIP.
+
+REV-HD-001 (01_REVISIONS/REV-HD-001_v001.png) - lossless PNG of generated JPEG 57cb62bb...
+  Inputs: REF-cash-source.jpg (HD-DROP-2691712601a9, 2691712601a9da9ab3c629b2c1d3204cdd1106cb64c301218aec1eb63182b702)
+          HD-EXP-LOCK-FACE.jpg (HD-DROP-ef5d59a6402e / HD-DESIGN-01, ef5d59a6402eaff568e30bb6a4432b14b90c692ea6758a761c7702c44d457978)
+          lockface_face_neck_crop.png (derived_crop of LOCK-FACE, bounds 380,80,960,720, 89000d0149bef4f8d846500d0e111c9bde5e03bdd3be5ad4650b074799cc20a5) - also fed as reference
+  FAIL: outfit/scene preservation - studded armor vest became plain leather vest, chain thinner, table/money/background redrawn.
+  PASS-ish: eye (char-right cheek / viewer-left), know (char-left cheek / viewer-right), neck blaster (char-left / viewer-right) on correct sides;
+            retired motifs removed; gold upper canines + silver lower grill; nose hoops; ear hoop/stud.
+  Issues: canines long; lip ring unclear; chest ship only a loose match.
+  Rejected attempts (NOT included): 0c368ec3b28a1c90bf681ccdb15a98742b28496dafcbe1b85981bad5177e7fc0.jpg (sha256 0c368ec3b28a1c90bf681ccdb15a98742b28496dafcbe1b85981bad5177e7fc0); 16fb6530dbc33a4f130b8add4f037d9084ebf2178f1d109559a03241a92354ad.jpg (sha256 16fb6530dbc33a4f130b8add4f037d9084ebf2178f1d109559a03241a92354ad).
+  Request result recorded as failed_continuity_check (the template's status for this outcome); still needs_user_review - Ziggy decides retry vs accept.
+
+NOT STARTED (awaiting REV-HD-001 review): REV-HD-002, REV-HD-003, REV-HD-004 + PROP-HD-HIP, SC-CAL-001 (CALEB-K_REF + CAL-P01). No dummy files.
+HOLD: SC-BOSS-001 / BOSS-P01 until a boss winner is selected (see GROK-BOSS-DISCOVERY round 01 return).
+
+TATTOO RECOVERY (03_DETAILS, 04_RECOVERED_ORIGINALS)
+  ST-HD-BLASTER: original sheet recovered unchanged -> 04_RECOVERED_ORIGINALS/c91af37e775d5e6d941d2bc05fcc2f26f1ad4ad9a50caa1427a5dd3c01755419.jpg (6-option RGB JPEG on white, no alpha; panel #3 = current neck design). Needs Ziggy confirmation.
+     03_DETAILS/ST-HD-BLASTER: panel #3 derived_crop (900,0,1280,330 verified vs /workspace/b3crop.png), flat black-on-white export, white->alpha transparent export, LOCK-FACE neck placement crop. Exact original not duplicated here (it is in 04_RECOVERED_ORIGINALS).
+  ST-HD-EYE: original_missing. Only placement evidence (LOCK-FACE crop, char-right cheek / viewer-left). Unconfirmed candidate sheet d55b97a3...jpg needs Ziggy confirmation; not included.
+  ST-HD-KNOW: original_missing. Only placement evidence (LOCK-FACE crop, char-left cheek / viewer-right). No matching serif "know" flat art found.
+  ST-HD-SHIP: original_missing. Placement evidence = LOCK-FACE upper-chest crop (partial). SHIP-TATTOO-REF-05.jpg is a derived_crop of saucer-sheet panel #5 (two near-identical sheet encodings 9f62f973.../d430b5f7...; original unproven). SHIP-SCHEMATIC-REF is a different design - not merged.
+  REC-HD-ORIGINALS: #101 #103 #107 #206 #112 #116 #117 #121 #152 #154 all original_missing (no numbered files anywhere on this machine).
+  No proposed_reconstruction produced in this pass.
+
+ROLLOUT REFS: 19/19 (17 primaries + 2 alternates) located locally by exact sha256; only HD-SALOON-01 is inside the package. List in RETURN_MANIFEST.json rollout_reference_check.
+
+MISSING SOURCES: see MISSING_SOURCES.txt (verbatim copy of recovery/MISSING_SOURCES.txt).
+No dialogue, lyric timing, subtitles or animation produced.

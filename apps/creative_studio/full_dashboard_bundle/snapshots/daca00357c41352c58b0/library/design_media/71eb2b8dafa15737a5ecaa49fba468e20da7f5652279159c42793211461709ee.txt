@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "characterID": "HON-DOLO",
+  "project": "hon",
+  "groupID": "hon:permanent-accessories",
+  "title": "Permanent jewelry and accessory references",
+  "coverAssetID": "HD-DROP-b18c4a123579",
+  "userDecisionDate": "2026-10-09",
+  "userDecision": "SB-06 wrist jewelry is a loved standard component of Dolo; keep accessories attached to the character and account for them in visible-hand shots.",
+  "lockedComponents": [
+    {
+      "componentID": "hon:wrist-jewelry-sb06",
+      "status": "user_selected_component",
+      "scope": "visible_jewelry_only",
+      "sourceAssetID": "HD-DROP-b18c4a123579",
+      "sourceSHA256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+      "parts": [
+        {
+          "name": "gold curb-link wrist chain",
+          "material": "gold appearance",
+          "geometry": "broad flattened interlocking links as pictured"
+        },
+        {
+          "name": "black wrist strap/band",
+          "material": "black appearance; exact material unresolved",
+          "geometry": "partially visible strip at wrist"
+        }
+      ],
+      "unknown": [
+        "hidden clasp and reverse side",
+        "watch face or mechanism not shown",
+        "exact dimensions",
+        "anatomical side from this tight crop"
+      ],
+      "acceptsFullLook": false,
+      "continuityRule": "Preserve when visible; hidden wrists/hands are occluded rather than evidence the accessories are absent."
+    }
+  ],
+  "groups": [
+    {
+      "label": "Locked wrist jewelry",
+      "assetIDs": [
+        "HD-DROP-b18c4a123579"
+      ]
+    },
+    {
+      "label": "Existing hand/ring context",
+      "assetIDs": [
+        "HD-HAND-LEIGH-PLACEMENT-20261009"
+      ],
+      "newApproval": false
+    },
+    {
+      "label": "Chain-mouth interaction candidate",
+      "assetIDs": [
+        "HD-B-708df0bb5bff"
+      ],
+      "newApproval": false
+    },
+    {
+      "label": "Neck chains: four staple lanes",
+      "status": "24 candidates planned; none generated or selected",
+      "planPath": "PLAN.json"
+    }
+  ],
+  "linkedHandTattooOptionIDs": [
+    "HD-HAND-LEIGH-HEARTS-20261009",
+    "HD-HAND-LEIGH-SPADES-20261009"
+  ],
+  "storage": "References existing asset IDs/bytes; no duplicate media or moved originals",
+  "dashboardIntegration": "Suggested grouping config only; parent task integrates the existing dashboard."
+}

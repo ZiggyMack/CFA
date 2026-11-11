@@ -1,0 +1,257 @@
+# V1_reconciliation: Lisan Al Gaib reference inventory, v001
+- Coordinator: V_1, bot id 96ead2b6-3f8a-4535-b179-30cd44123f8a. Reports to Grok Chief of Staff.
+- UTC: 20261021T031026Z (2026-10-20 23:10:26 ET)
+- Tool/model: Grok Bot built-in Read image tool, plus Python PIL crops (CAND-07 eye band 3x, CAND-09 face 4x, CAND-08 head 4x) written to /tmp/v1rec only.
+- Pixels seen: YES, all 10 candidates (1280x720; CAND-03 1320x749), each viewed full frame at about 1024 px wide. sha256 of all 10 files in /workspace/v1_refinv/candidates/ was recomputed at write time, and all match CANDIDATES.tsv.
+- Status label: everything below is **GOLD-CANDIDATE pending Ziggy**. Nothing here is an approval, grade, gold promotion, release or hold. Lane verdicts and provider nominations are kept separate from HUMAN approvals.
+- Scope kept: no forbidden path was opened (/workspace/v1_calib/, /workspace/v1_push/, /home/box/chief_private/, any private/alias map or answer key). Nothing was hash-matched against pilot inputs, and the frozen pilot return (2cf53ec7…) was not touched. This file generated nothing and sends nothing. The only write is to /workspace/v1_refinv/returns/.
+- Conventions: "his left/right" is the subject's own side. All 10 views are direct (lettering reads un-mirrored where present, and the CAND-08 mirror shows only dunes). bh = brow-height. The rough reference for distance checks is CAND-03 (lock era).
+
+## Inputs
+Every sha256 below was recomputed with `sha256sum -c` against its sidecar at write time, and all are OK.
+| file (/workspace/v1_refinv/returns/) | sha256 | role |
+|---|---|---|
+| V2_face_marks_20261021T030206Z_v001.md | ea8559b3e157f1753c800255031c7b65ef1d96a0404d3fea346548a6247440b5 | V2 face marks FINAL (9 candidates; CAND-10 not in V2's set) |
+| V2_face_marks_20261021T025736Z_batch01_v002.md | 2f17c6fd948393e340bda9cf7e9ea6c34971923af8022463ad0a625aaa3f7875 | V2 correction: CAND-02 MULTIVERSE→SUPPORTS |
+| V2_face_marks_20261021T025736Z_batch01_v001.md | 954e5caa8bb493bf0b48f347cffd99460ea3f372e7d49c42cf2e03ee9b618c8f | V2 batch01 (superseded on CAND-02 only) |
+| V3_piercings_20261021T025811Z_v001.md | c00fbbc754416eebab89adf792a3c115374d2387c8e6aee1f4e58dd511d95295 | V3 piercings FINAL (CAND-01..05, 08, 09) |
+| V3_piercings_20261021T030653Z_v002.md | 309ffaca02c951ee69eff22b1e12cac723a469ba07e64738f114e31a57d87b60 | V3 supplement: adds CAND-06, 07, 10 (corrects nothing in v001) |
+| V3_piercings_20261021T025550Z_batch01_v001.md | 85709cf44b82cd50f44807c88db85ca82fae52fcbab147e5f8e9a610d3d30424 | V3 batch01 |
+| V4_eyes_20261021T025952Z_v001.md | 41ee83f58dbac1cce27305014278951d595fcfe2eabaac629a28ed8e241bad6e | V4 eyes FINAL (8 candidates; CAND-08 and CAND-10 not in V4's set) |
+| V4_eyes_20261021T025646Z_batch01_v001.md | 935bc520e7e34e2fd5bbe6c7574e0ed64817447446ac11b5f447f56c1d1f1589 | V4 batch01 |
+| V5_build_20261021T025801Z_v001.md | f264611d47982c9bf4151df18d6aa4d35cba26889c4af37bf09c92919b2e4efa | V5 build FINAL (CAND-01, 02, 08, 09; CAND-03 as baseline) |
+| V5_build_20261021T025609Z_batch01_v001.md | 178a1ac772deb03efec1fddab16eb2a85ec453bffd3379a905423e4c6441a090 | V5 batch01 |
+| V1_batchcheck_20261021T025731Z_v001.md | 57ece2cae84d0f993065440a37033d4933c8da7666355b651589e1312d67a94c | V1 batch check: V3, V4 and V5 PASS |
+| V1_batchcheck_20261021T025936Z_v001.md | 7fab9dca98f11d2bc31e718338f189dbe10a8abc1b33eb79d112c70381862fe4 | V1 batch check: V2 PASS |
+
+I also read the master brief (V1_TASK_REF_INVENTORY_20261020.md), COMMON_RULES.md, CANDIDATES.tsv, REF_DECISION_QUEUE_20261020.md (Chief's preliminary queue), lanes/V1_coord/* and the four lanes' REVIEW_HISTORY.md.
+
+Final-return checks (V_1): all four lane finals have the required sections (per-candidate entries, converged look, supporting images, at most one fork, out-of-lane notes, method), and every sidecar matches. No lane jammed, so no V_6 was requested.
+
+In progress (not an input to any verdict): render drop01, segmented worms, /workspace/v1_refinv/returns/renders/drop01_worms/. It was started under Chief's 2026-10-20 22:59 ET launch update to fill the segmented-worm gap in fork 1. The folder was empty at write time. No render is cited or judged here, and each render will arrive as its own rolling drop with a sheet and manifest.
+
+## Candidate inventory
+| cand_id | sha256 | stars | what it shows | known scope (CANDIDATES.tsv) |
+|---|---|---|---|---|
+| CAND-01 | 602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f | 5★ (likeness) | Smiling head-and-chest portrait, black tee, dark interior, all face marks, his-left piercing set, blue eyes with no glow, natural teeth | face identity nomination; teeth settled |
+| CAND-02 | 63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026 | 5★ (likeness) | Bust, hooded black cloak over tan tunic, heavy gold curb chain, giant gold sun-ring prop, desert | wardrobe settled; face marks unbound |
+| CAND-03 | cb183973ed1fc70ec906b762fb263b29c8866934a67f9608786b712579eaf056 | unrated | Lock-era face at dusk, black jacket with gold piping and epaulettes, gold pavé grill with fangs, segmented dune-rising worms | grill design only (Keep); superseded face |
+| CAND-04 | 1b60815fa2bb4f8f488ebcf123a6a71af4cba144d06667c73b2ceeb2de053c00 | unrated | Frontal studio portrait, grey backdrop, black tee, nasal breather tube from his right cheek, bold face and throat ink | optional breather + natural teeth + no grill |
+| CAND-05 | 5c47f12190e9ba68f87f7c3f8d66f571400f8058baf9ff54ecfe406adf037567 | unrated | Lock-era dusk portrait, sleeveless black vest with gold panels, worm ink on his left arm, gold grill, lip rings, gold sun pendant | arm worm (SH-13) only |
+| CAND-06 | ea096947b28c105000a87b430ad7964b7b28f9213e2aa341b396890479b66b36 | unrated | Test face A, black hoodie, dim interior, smiling | history only (PROVIDER) |
+| CAND-07 | e4442e4c0ea054d2a8fc01e1b407e32ec276bc26f3d5f1004fe8a9bfb2bf8262 | unrated | Test face B, black shirt-jacket over black tee, dim interior, smiling | history only (PROVIDER) |
+| CAND-08 | 545a335e0d33e62cf2aa55520118311b8e65057b9596bc3abdf903ddff8801f1 | unrated | Full body standing in desert, tan wrapped bodysuit, dark hooded cloak, gold chain, boots, gilt mirror on an easel showing dunes | body build candidate only |
+| CAND-09 | e2188aa3de4756017fa82d5b14757d24993033604de18625fd9a8a08044d3c1b | 5★ (likeness + scene) | Night two-shot with Jet Black (orb head, suit, cube); Lisan crouched in a three-quarter view, hooded cloak, silver chains, glowing eyes | cast two-shot; Jet proportion caution |
+| CAND-10 | 363a0264a5b6cd0616a9b7b206917fd02c4d679f7d4d151c613fcc15e05e75bb | unrated | Mouth and chin close-up, gold grill (pavé incisors, gold fang caps upper and lower), chin reads G-A-I-I-B | optional grill only |
+
+## Visible-feature notes
+**V_1's own look** covers wardrobe, teeth, breather, grill and other defects. The **lane merge** gives verdicts in the order face marks (V2) / piercings (V3) / eyes (V4) / build (V5). "—" means the candidate is not in that lane's set.
+
+- **CAND-01**
+  - Wardrobe: plain black crew tee, not the Look V3 outfit (fine, because wardrobe is scoped to CAND-02).
+  - Teeth: natural, upper row visible in a smile; no grill, no breather.
+  - Other defects: none seen.
+  - Lane merge: SUPPORTS / **SUPPORTS (anchor)** / **SUPPORTS (anchor)** / NOT DETERMINABLE (crop; jaw and neck read heavier than CAND-03).
+- **CAND-02**
+  - Wardrobe: the settled Look V3 outfit (hooded black cloak, tan tunic, heavy gold curb chain).
+  - Teeth: natural, upper teeth partly visible; no grill, no breather.
+  - Other defects: GAIB column leans about 9 px toward his left, following the head roll (V2). Nothing else.
+  - Lane merge: SUPPORTS (corrected in V2 batch01 v002) / MULTIVERSE (drift: a second hoop in his left lobe, i.e. an ear stack) / SUPPORTS (slight-glow pole) / NOT DETERMINABLE (cloak hides the shoulders).
+- **CAND-03**
+  - Wardrobe: black jacket with gold piping and epaulettes (lock era).
+  - Teeth: gold pavé grill with gold fang caps, the same design family as CAND-10. That matches the historic Keep, scoped to grill design only.
+  - Other defects: a 1 px black letterbox row along the bottom edge.
+  - Lane merge: HISTORY (rough reference; the only image with segmented dune-rising worms) / HISTORY / MULTIVERSE (drift: cobalt hue about 10° deeper plus a starburst iris; the glow is slight) / baseline for jaw and neck only.
+- **CAND-04**
+  - Wardrobe: black tee.
+  - Breather: thin black nasal tube from his right cheek to under the nose. It covers no mark and doesn't block his left nostril.
+  - Teeth: natural, parted lips; no grill.
+  - Other defects: none seen.
+  - Lane merge: **SUPPORTS (anchor)** / MULTIVERSE (drift: no brow ring, plus a two-hoop stack in his left lobe) / SUPPORTS (no glow) / —.
+- **CAND-05**
+  - Wardrobe: sleeveless black vest with gold panels and a gold sun pendant (jewellery, not ink).
+  - Teeth: gold pavé grill with fangs, plus two lower-lip rings.
+  - Other defects: lock era overall. AL is oversized and on the nasal bridge, and there is no throat set.
+  - Lane merge: HISTORY / HISTORY (both sides pierced, plus lip rings) / MULTIVERSE (drift: strong emissive glow, saturation near maximum) / —.
+- **CAND-06**
+  - Wardrobe: black hoodie.
+  - Teeth: natural, wide smile; no grill or breather.
+  - Other defects: the throat disc has no eye (plain oval ring), and AL is faded grey.
+  - Lane merge: HISTORY (disc lacks eye) / SUPPORTS (V3 v002: exactly 3 silver pieces on his left) / MULTIVERSE (drift: desaturated grey-blue eyes) / —.
+- **CAND-07**
+  - Wardrobe: black shirt-jacket over a black tee.
+  - Teeth: natural, smile; no grill or breather.
+  - Other defects, confirmed in V_1's own 3x crop: a small silver stud at the outer corner of his RIGHT eye (image left). AL is off-centre toward his right and tilted about 15°. GAIB leans strongly. The worm heads sit at unequal heights. V3 v002 also notes a pale diagonal streak at the tail of his left brow that could be a brow slit or a highlight; not determined.
+  - Lane merge: HISTORY / MULTIVERSE (V3 v002 drift: extra stud at the outer corner of his right eye) / SUPPORTS (no glow) / —.
+- **CAND-08**
+  - Wardrobe: tan wrapped bodysuit, dark hooded cloak, gold curb chain and boots. This is the same family as Look V3, but CAND-08 is a build-only candidate and wardrobe stays with CAND-02.
+  - Teeth: mouth closed, NOT DETERMINABLE. No breather or grill.
+  - Other defects, confirmed in V_1's own 4x crop: the forehead shows one "A"-like glyph, there are no chin letters, and there is an extra star mark at mid-throat. The disc sits low on the sternum.
+  - Lane merge: NOT DETERMINABLE (scale) / NOT DETERMINABLE (scale) / — / **SUPPORTS (anchor)**.
+- **CAND-09**
+  - Wardrobe: dark hooded cloak, brown tunic, silver chains (chain colour differs from Look V3).
+  - Teeth: natural, upper teeth faintly visible; no grill or breather.
+  - Other defects, confirmed in V_1's own 4x crop: his left cheek reads "AI", the chin and jaw read "AL", there is no AL between the brows, and only one throat worm is visible. The Jet two-shot proportion caution applies.
+  - Lane merge: HISTORY / MULTIVERSE (drift: ear stack, plus a brow barbell or edge-on ring) / MULTIVERSE (drift: strong emissive glow with bloom) / NOT DETERMINABLE (partial view; lean build consistent with CAND-08).
+- **CAND-10**
+  - Grill: gold, with pavé-set upper and lower incisors and gold fang caps on the upper and lower canines. Natural back teeth show behind it. Same design family as the CAND-03 Keep.
+  - Other defects: the chin reads **G-A-I-I-B**, the known r2 lettering defect. The GAIIB→GAIB repair is owned by Z_2 (R-2) and is in progress. This is recorded as a grill-image defect, not a face-marks verdict, because CAND-10 was not in V2's set.
+  - Lane merge: — / NOT DETERMINABLE (V3 v002: brows and nostrils cropped; no lip rings, seen) / — / —.
+
+Star priors applied (§2.2): CAND-01, 02 and 09 are 5★. CAND-01 and CAND-02 are in the pool and their lane verdicts agree, except piercings on CAND-02 (the ear stack is visible evidence). CAND-09's 5★ is overridden **for face marks, piercings, eyes and build only**, on visible evidence: misplaced and misspelled marks, an ear stack, strong glow, and a partial view. It is kept as likeness and scene history, not rejected. All other candidates are unrated, meaning unknown, not rejected. CAND-04 (unrated) and CAND-08 (unrated) were promoted to field anchors on visible evidence plus the receipts cited.
+
+## Converged look per field
+Every entry is **GOLD-CANDIDATE pending Ziggy**, with one existing image per field and no composites.
+- **Face marks** (V2): anchor **CAND-04**, sha256 1b60815fa2bb4f8f488ebcf123a6a71af4cba144d06667c73b2ceeb2de053c00.
+  - What it shows: a small serif AL, centred just above the inner brow heads (about 1–1.5 bh, lowest forehead); a straight vertical G-A-I-B on the chin; and two mirrored, smooth, scaled snake-like worms with eyes, fanged jaws open and facing each other under the jaw, around a star-point rayed disc with an almond eye. The ink is bold and dark.
+  - Open item: worm STYLE is fork 1 (smooth vs segmented).
+- **Piercings** (V3): anchor **CAND-01**, sha256 602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f. Three silver pieces, all on his left: a ring through the outer tail of the brow, a thin nostril hoop and one lobe hoop. His right side is bare. Lobe count and ring-vs-bar are fork 2.
+- **Eyes** (V4): anchor **CAND-01**, sha256 602a9fd4…944f. Saturated medium azure blue (hue about 201°), matched and symmetric, with no glow. Glow level is fork 3.
+- **Build** (V5): anchor **CAND-08**, sha256 545a335e0d33e62cf2aa55520118311b8e65057b9596bc3abdf903ddff8801f1. Slim and lean, about 7 heads tall, narrow-to-normal sloping shoulders (about 2.4 face widths), slim neck (about 0.6–0.65 of face width), normal limb length. The approval is PROVIDER-only, and lean vs fuller is fork 4.
+- **Wardrobe** (settled §2.9): **CAND-02**, sha256 63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026, outfit only. Hooded black cloak, tan tunic, heavy gold curb chain. No defects found.
+- **Teeth** (settled §2.9): **CAND-01**, sha256 602a9fd4…944f, natural teeth, only where the mouth is visible. Natural teeth are the default. No defects found. The mouth is closed in CAND-08, so it is not determinable there.
+- **Breather** (settled §2.9): **CAND-04**, sha256 1b60815f…3c00, breather v3, OPTIONAL and not a default. HUMAN receipt delivery_receipt.json f0c1b73c…, 2026-10-09T23:12:51Z (2026-10-09 19:12:51 ET). No defects found.
+- **Grill** (settled §2.9, optional): working master **CAND-10**, sha256 363a0264a5b6cd0616a9b7b206917fd02c4d679f7d4d151c613fcc15e05e75bb, grill design only.
+  - It is the working master subject to one GAIIB→GAIB chin repair, owned by Z_2 (R-2) and in progress. **No acceptance of a repair is recorded.**
+  - The historic optional Keep is CAND-03 (cb183973…), grill design only, and it is listed as support.
+  - Natural teeth remain the default.
+- **Other defects**: no anchor. See the visible-feature notes and the lane conflicts below.
+
+## Supporting images per field
+All paths are under /workspace/v1_refinv/candidates/, and every cand_id, path and sha256 matches CANDIDATES.tsv.
+| field | cand_id | path | sha256 | role |
+|---|---|---|---|---|
+| face marks | CAND-04 | /workspace/v1_refinv/candidates/CAND-04__LAG-BR-01_REST_front_v3_STANDARD.jpg | 1b60815fa2bb4f8f488ebcf123a6a71af4cba144d06667c73b2ceeb2de053c00 | anchor |
+| face marks | CAND-01 | /workspace/v1_refinv/candidates/CAND-01__LAG-LOCK-FACE-NATURAL.jpg | 602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f | supports (thin-ray disc variant); fork 1 option A |
+| face marks | CAND-02 | /workspace/v1_refinv/candidates/CAND-02__LAG-LOOK-V3-01.jpg | 63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026 | supports |
+| face marks | CAND-03 | /workspace/v1_refinv/candidates/CAND-03__LAG-LOCK-FACE.jpg | cb183973ed1fc70ec906b762fb263b29c8866934a67f9608786b712579eaf056 | history; fork 1 option B (segmented, dune-rising) |
+| piercings | CAND-01 | /workspace/v1_refinv/candidates/CAND-01__LAG-LOCK-FACE-NATURAL.jpg | 602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f | anchor; fork 2 option A |
+| piercings | CAND-06 | /workspace/v1_refinv/candidates/CAND-06__LAG-FACE-NAT-A.jpg | ea096947b28c105000a87b430ad7964b7b28f9213e2aa341b396890479b66b36 | supports (single lobe hoop) |
+| piercings | CAND-04 | /workspace/v1_refinv/candidates/CAND-04__LAG-BR-01_REST_front_v3_STANDARD.jpg | 1b60815fa2bb4f8f488ebcf123a6a71af4cba144d06667c73b2ceeb2de053c00 | multiverse (no brow ring; ear stack); fork 2 option B |
+| piercings | CAND-02 | /workspace/v1_refinv/candidates/CAND-02__LAG-LOOK-V3-01.jpg | 63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026 | multiverse (ear stack) |
+| piercings | CAND-07 | /workspace/v1_refinv/candidates/CAND-07__LAG-FACE-NAT-B.jpg | e4442e4c0ea054d2a8fc01e1b407e32ec276bc26f3d5f1004fe8a9bfb2bf8262 | multiverse (extra stud at the outer corner of his right eye) |
+| piercings | CAND-09 | /workspace/v1_refinv/candidates/CAND-09__Jet_Black_with_Lisan_user_reference.jpg | e2188aa3de4756017fa82d5b14757d24993033604de18625fd9a8a08044d3c1b | multiverse (ear stack; brow barbell form) |
+| eyes | CAND-01 | /workspace/v1_refinv/candidates/CAND-01__LAG-LOCK-FACE-NATURAL.jpg | 602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f | anchor; fork 3 option A |
+| eyes | CAND-04 | /workspace/v1_refinv/candidates/CAND-04__LAG-BR-01_REST_front_v3_STANDARD.jpg | 1b60815fa2bb4f8f488ebcf123a6a71af4cba144d06667c73b2ceeb2de053c00 | supports (no glow) |
+| eyes | CAND-07 | /workspace/v1_refinv/candidates/CAND-07__LAG-FACE-NAT-B.jpg | e4442e4c0ea054d2a8fc01e1b407e32ec276bc26f3d5f1004fe8a9bfb2bf8262 | supports (no glow) |
+| eyes | CAND-02 | /workspace/v1_refinv/candidates/CAND-02__LAG-LOOK-V3-01.jpg | 63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026 | supports; fork 3 option B (slight glow) |
+| eyes | CAND-05 | /workspace/v1_refinv/candidates/CAND-05__LAG-LOCK-ARM-SH13.jpg | 5c47f12190e9ba68f87f7c3f8d66f571400f8058baf9ff54ecfe406adf037567 | multiverse (strong emissive) |
+| build | CAND-08 | /workspace/v1_refinv/candidates/CAND-08__LAG-L01-mirror-voice-signature__V2-front.jpg | 545a335e0d33e62cf2aa55520118311b8e65057b9596bc3abdf903ddff8801f1 | anchor; fork 4 option A |
+| build | CAND-09 | /workspace/v1_refinv/candidates/CAND-09__Jet_Black_with_Lisan_user_reference.jpg | e2188aa3de4756017fa82d5b14757d24993033604de18625fd9a8a08044d3c1b | supports (neck and torso only; partial view; Jet caution) |
+| build | CAND-01 | /workspace/v1_refinv/candidates/CAND-01__LAG-LOCK-FACE-NATURAL.jpg | 602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f | fork 4 option B (fuller jaw and neck; crop) |
+| build | CAND-03 | /workspace/v1_refinv/candidates/CAND-03__LAG-LOCK-FACE.jpg | cb183973ed1fc70ec906b762fb263b29c8866934a67f9608786b712579eaf056 | history (jaw, neck and upper-shoulder baseline) |
+| wardrobe | CAND-02 | /workspace/v1_refinv/candidates/CAND-02__LAG-LOOK-V3-01.jpg | 63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026 | settled anchor (outfit only) |
+| teeth | CAND-01 | /workspace/v1_refinv/candidates/CAND-01__LAG-LOCK-FACE-NATURAL.jpg | 602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f | settled anchor (natural teeth, visible mouth only) |
+| teeth | CAND-04 | /workspace/v1_refinv/candidates/CAND-04__LAG-BR-01_REST_front_v3_STANDARD.jpg | 1b60815fa2bb4f8f488ebcf123a6a71af4cba144d06667c73b2ceeb2de053c00 | supports (natural teeth with breather, no grill) |
+| breather | CAND-04 | /workspace/v1_refinv/candidates/CAND-04__LAG-BR-01_REST_front_v3_STANDARD.jpg | 1b60815fa2bb4f8f488ebcf123a6a71af4cba144d06667c73b2ceeb2de053c00 | settled anchor (optional) |
+| grill | CAND-10 | /workspace/v1_refinv/candidates/CAND-10__LAG-GRILL-MASTER_r2_CANDIDATE.jpg | 363a0264a5b6cd0616a9b7b206917fd02c4d679f7d4d151c613fcc15e05e75bb | settled working master (optional; GAIIB repair pending, owned by Z_2) |
+| grill | CAND-03 | /workspace/v1_refinv/candidates/CAND-03__LAG-LOCK-FACE.jpg | cb183973ed1fc70ec906b762fb263b29c8866934a67f9608786b712579eaf056 | settled historic Keep (grill design only) |
+
+## Lane conflicts
+1. **Face-marks anchor: Chief's preliminary queue proposed CAND-01, and V2 chose CAND-04.** Resolved for CAND-04 on visible evidence plus the receipt. CAND-04 is the only image tied to a dated HUMAN tattoo-standard note (DECISION-LAG-BREATHER-V3.md, 2026-10-09). It matches CAND-01 on AL, GAIB and worm layout, and differs only in disc-ray style, which no human text specifies. CAND-01 stays SUPPORTS. The worm style itself is not resolvable and goes to fork 1.
+2. **CAND-02 face marks: V2 batch01 had MULTIVERSE, and V2 batch01 v002 has SUPPORTS.** Accepted. Its star-point disc, curled tails and side-neck fins all appear in the HUMAN-receipted CAND-04.
+3. **AL placement, "between the brows" vs lower forehead (uncertainty in Chief's queue item 1).** Resolved on visible evidence and not queued. The HUMAN note's "AL between brows" is depicted by CAND-04, where AL sits about 1–1.5 bh above the inner brow heads.
+   - Drift record: AL drifts uniformly upward by about 1.5–2 brow-heights from CAND-03, which sits at the glabella, to CAND-01, CAND-02 and CAND-06 (about 2–2.5 bh for CAND-04).
+   - That uniform drift hid the off-centre CAND-07 AL (about 0.1 IPD toward his right).
+4. **Correction to Chief's queue item 2:** CAND-02's nostril piece is a **hoop, not a stud**. V3 saw this, and V_1 confirmed it at full frame.
+5. **Correction to Chief's queue item 3:** CAND-03's eye glow is **slight, not strong**. V4 measured it: about +0.16 V above skin and unclipped, against CAND-05's +0.38 V, clipped, with bloom. Strong glow occurs only in CAND-05 and CAND-09.
+6. **Build: Chief's queue item 4 offered CAND-08 vs CAND-09.** Re-framed on visible evidence as CAND-08 (lean) vs CAND-01 (fuller jaw and neck). CAND-09 is NOT DETERMINABLE for build: crouched, legs hidden, shoulders under the cloak, Jet caution. Its visible neck and torso are lean, consistent with CAND-08.
+7. **Per-field splits on the same image** are not conflicts, because gold is per field:
+   - CAND-04 is the face-marks anchor and SUPPORTS for eyes, but MULTIVERSE for piercings.
+   - CAND-02 is SUPPORTS for face marks and eyes, MULTIVERSE for piercings, and the wardrobe anchor.
+   - CAND-01 is the piercings, eyes and teeth anchor, but its jaw and neck mass is option B in the build fork.
+8. **Cross-lane findings,** each confirmed in the relevant lane and in V_1's own crops:
+   - CAND-07 has a stud at the outer corner of his RIGHT eye. It was outside V3's v001 set and is now covered by V3 v002 as MULTIVERSE.
+   - CAND-09 shows AI on his left cheek, AL on the chin and jaw, no AL between the brows, and one throat worm (V2, V4, V5).
+   - CAND-08 shows a single "A" glyph, no chin letters and an extra mid-throat star (V2, V5).
+   - CAND-07 may have a left-brow slit, or it may be a highlight (V3 v002). Not determined, and no field depends on it.
+9. **CAND-10 face marks:** not in V2's set, so there is no face-marks verdict. The chin reads GAIIB. This is recorded as a grill-image defect, with the repair owned by Z_2 (R-2) and in progress. V_1 does not redo or judge the repair.
+
+## Missing-receipt list
+HUMAN means a dated Ziggy decision or a verbatim relay. PROVIDER means an agent spec, rating or nomination, and a nomination is not approval. "Not located" means it is not in the inputs in scope.
+| field | HUMAN evidence located | HUMAN receipt missing | PROVIDER-only claims |
+|---|---|---|---|
+| face marks | HUMAN: DECISION-LAG-BREATHER-V3.md (/workspace/lisan-al-gaib/nova/, sha256 b6bde940…, 2026-10-09, "approved by Ziggy"): tattoo-strength standard seen in CAND-04. It names the file but not the hash, and says "NOT a new universal look". HUMAN relay 2026-10-13 (Claude 8776d4df/d1120c33): the C13-04 repair asks for segmented Dune-style worms. HUMAN 2026-10-13 21:16 ET: the field is OPEN. | A hash-bound human binding of face marks to one image: **not located**. An approved repaired C13-04 image: **not located** (Chief confirmed). The external C13-04 patch-c comparator (sha256 23817577…) is **comparison only, not approved**. | LOCK-V2.txt (2026-10-08). Chief guide LAG-NOVA-GUIDE.md (CAND-01 face ground truth). Dashboard 5★ likeness on CAND-01, 02 and 09 (writer unverified; 2026-10-13 22:47 ET and 2026-10-14 19:57 ET). bb4a97c8 acceptanceEvidence=null. |
+| piercings | HUMAN relay 2026-10-13 (Claude 8776d4df): "three silver piercings on his left remain the standard", and no-piercing desert drafts are kept. HUMAN 2026-10-13 21:16 ET: OPEN, no bound image. Both are rule text only. | A human image binding for piercings: **not located**. A ruling on a single vs stacked lobe hoop: **not located**. | Chief guide: "one each… no ear stacks". LOCK-V2.txt. PA a01131f4 item 3 (scene tolerance). 5★ likeness priors. |
+| eyes | HUMAN 2026-10-13 21:16 ET: field 9 OPEN (a record that the field is open, not an approval). | An eye-specific human receipt: **not located**. | Chief guide and the 2026-10-09 Nova scoring guide: "glowing electric-blue eyes". 5★ likeness priors on CAND-01 and 02. |
+| build | HUMAN 2026-10-13 21:16 ET: field 13 needs a body-build reference, OPEN. | A human build approval: **not located** (bb4a97c8 humanBuildApprovalLocated=false). | bb4a97c8 (2026-10-13 21:33 ET): CAND-08 is a "provisional candidate only". CAND-09's 5★ is likeness and scene, not build. |
+| wardrobe | HUMAN: 10-13 map (REFERENCE_MAP_PER_CRITERION_v001, cited in lanes/V1_coord/REVIEW_HISTORY.md; file not opened by V_1). Look V3 = CAND-02, outfit only. | None for scope. The map's hash is not cited in inputs. | Dashboard 5★ likeness on CAND-02. |
+| teeth | HUMAN: 10-13 map (CAND-01, natural teeth, visible mouth only). LOCK-V2 update 2026-10-08 and the breather decision 2026-10-09 make natural teeth the default (as cited in REVIEW_HISTORY). | None for scope. | none relied on |
+| breather | HUMAN: selection receipt delivery_receipt.json f0c1b73c…, 2026-10-09T23:12:51Z (19:12:51 ET), scoped to breather + natural teeth + no grill. Also DECISION-LAG-BREATHER-V3.md. (V_1 did not open the receipt file.) | None. | none relied on |
+| grill | HUMAN: historic Keep on CAND-03 (dashboard status=keep, 2026-10-09T18:05:44Z = 14:05 ET), grill design only. HUMAN relay 2026-10-13 (Claude d1120c33): r2 (CAND-10) is the working master, subject to one GAIIB→GAIB repair. | **A HUMAN acceptance of any repaired r2: not located.** The repair is owned by Z_2 (R-2) and in progress. | Claude reported that a repair try reads G-A-I-B (3246865c; repair tries 821fa0d9/0b7f04da). That is a provider report, not acceptance. |
+| other defects | n/a | n/a | n/a |
+
+## Proposed scoped mappings
+Each mapping is **PROPOSED, GOLD-CANDIDATE pending Ziggy**. None is gold, approved, released or held.
+- face marks → CAND-04 → "CAND-04, face marks only: small centred AL just above the inner brows; straight vertical G-A-I-B on chin; two mirrored open-jawed sandworms facing under the jaw around a rayed sun disc with an eye, bold dark ink. Worm style subject to fork 1."
+- piercings → CAND-01 → "CAND-01, piercings only: silver brow ring (outer tail of brow) + silver nostril hoop + 1 silver lobe hoop, all his left; nothing on his right. Lobe count and ring-vs-bar subject to fork 2."
+- eyes → CAND-01 → "CAND-01, eyes only: saturated medium azure-blue irises, matched, no glow. Glow level subject to fork 3; strong emissive (CAND-05, CAND-09) stays multiverse."
+- build → CAND-08 → "CAND-08, body build and proportions only: slim lean frame, ~7 heads, narrow-to-normal shoulders, slim neck, normal limbs. Not face, ink, piercings or wardrobe. Subject to fork 4."
+- wardrobe → CAND-02 → "CAND-02, outfit only (settled §2.9; restated, not re-decided)."
+- teeth → CAND-01 → "CAND-01, natural teeth only where the mouth is visible; natural teeth default (settled; restated)."
+- breather → CAND-04 → "CAND-04, optional breather v3 + natural teeth + no grill only; not a default (settled; restated)."
+- grill → CAND-10 → "CAND-10, optional grill design only; working master pending the GAIIB→GAIB chin repair owned by Z_2 (no acceptance recorded); historic Keep CAND-03 remains scoped to the grill design only (settled; restated)."
+
+## Settled items (§2.9), restated, not re-asked
+These are reported, not re-decided, and only defects or uncertainty are added. None appears in the queue.
+- Look V3 wardrobe = CAND-02, outfit only. No defect.
+- Lock Face natural teeth = CAND-01, visible mouth only, and natural teeth are the default. No defect.
+- Breather v3 = CAND-04, optional, receipt f0c1b73c… 2026-10-09T23:12:51Z. No defect.
+- Historic optional grill Keep = CAND-03, grill design only. No defect in the grill design. The face in CAND-03 is superseded.
+- Grill working master r2 = CAND-10, subject to GAIIB→GAIB. The repair is owned by Z_2 (R-2) and in progress, and no acceptance is recorded. V_1 is not redoing it.
+
+## Single unresolved fork
+**Throat-worm style (face marks).** Should Lisan's throat sandworms be **(A)** smooth, scaled, snake-like worms with eyes and fanged jaws, with no dune base, as in CAND-01 and the HUMAN-receipted tattoo standard CAND-04? Or **(B)** segmented, ring-ribbed, eyeless Dune-style worms rising from dunes on the collarbones, as in CAND-03 (lock era), which is the style the 2026-10-13 C13-04 repair relay asked for?
+- No approved repaired image exists, so visible evidence can't settle it.
+- Render drop01 (segmented worms, in progress) is meant to give option B a current-face example. It is not evidence here.
+
+## Decision queue (3–5)
+The queue is ranked with face marks, piercings, eyes and build first, and holds no settled items. Every option is **GOLD-CANDIDATE pending Ziggy**.
+
+**1. Face marks: throat-worm style (TOP FORK).**
+- Images: CAND-01 /workspace/v1_refinv/candidates/CAND-01__LAG-LOCK-FACE-NATURAL.jpg 602a9fd4021dc356086728a781aee985741811b3b401a52d9e85869652bb944f; CAND-04 /workspace/v1_refinv/candidates/CAND-04__LAG-BR-01_REST_front_v3_STANDARD.jpg 1b60815fa2bb4f8f488ebcf123a6a71af4cba144d06667c73b2ceeb2de053c00; CAND-03 /workspace/v1_refinv/candidates/CAND-03__LAG-LOCK-FACE.jpg cb183973ed1fc70ec906b762fb263b29c8866934a67f9608786b712579eaf056.
+- Scope: throat worm style only. AL, GAIB and the disc with eye stay with anchor CAND-04 either way.
+- Defects and uncertainty: CAND-01's disc has thin rays where CAND-04's has star points. CAND-03 is a superseded lock-era face, and no current-face segmented image exists yet (drop01 in progress).
+- Evidence:
+  - HUMAN: the 2026-10-09 tattoo standard is depicted with smooth worms in CAND-04, but its text doesn't name a style. The 2026-10-13 relay asked for segmented worms, but no approved file was located.
+  - PROVIDER: LOCK-V2 text describes dune-rising worms. The 5★ ratings are likeness only. The patch-c comparator (23817577…) is comparison only.
+- **Choice: A = smooth snake worms with eyes (CAND-01/04) or B = segmented, dune-rising worms (CAND-03).**
+
+**2. Piercings: left lobe count, plus brow ring vs bar.**
+- Images: CAND-01 (602a9fd4…944f, path above); CAND-04 (1b60815f…3c00, path above); CAND-09 /workspace/v1_refinv/candidates/CAND-09__Jet_Black_with_Lisan_user_reference.jpg e2188aa3de4756017fa82d5b14757d24993033604de18625fd9a8a08044d3c1b.
+- Scope: piercing count and type on his left only.
+- Defects and uncertainty:
+  - The evidence splits 3-3: a single lobe hoop in CAND-01, 06 and 07, and a two-hoop stack in CAND-02, 04 and 09.
+  - The brow piece is a clear ring in CAND-01, 02, 06 and 07, but reads as a curved bar or edge-on ring in CAND-03 and 09.
+  - CAND-04 has no brow ring (drift either way). CAND-07 has an extra right-eye stud (drift either way).
+- Evidence: HUMAN rule text "three silver piercings on his left" (2026-10-13), with no image bound. PROVIDER Chief guide text: "one ear hoop… no ear stacks".
+- **Choice: (2a) A = ONE left-lobe hoop (CAND-01), with the stack as drift, or B = a two-hoop left-lobe stack (CAND-04) tolerated as variation. (2b) Brow piece A = ring (CAND-01) or B = a curved bar also tolerated (CAND-09).**
+
+**3. Eyes: glow level.**
+- Images: CAND-01 (602a9fd4…944f, path above); CAND-02 /workspace/v1_refinv/candidates/CAND-02__LAG-LOOK-V3-01.jpg 63126392af1ccf8b6cd667998e169aeb2cd8fdf7ebaa79976b39730255677026.
+- Scope: iris colour and glow level only.
+- Defects and uncertainty: both are 5★ portraits at different glow levels. Strong emissive glow (CAND-05, 09) stays multiverse under either choice.
+- Evidence: HUMAN record only that the field is OPEN. PROVIDER text says "glowing electric-blue" and the 5★ ratings are likeness only.
+- **Choice: A = CAND-01, vivid azure with no glow (also CAND-04 and 07), or B = CAND-02, a slight inner glow (CAND-03 is similar).**
+
+**4. Build: lean vs fuller.**
+- Images: CAND-08 /workspace/v1_refinv/candidates/CAND-08__LAG-L01-mirror-voice-signature__V2-front.jpg 545a335e0d33e62cf2aa55520118311b8e65057b9596bc3abdf903ddff8801f1; CAND-01 (602a9fd4…944f, path above).
+- Scope: frame, shoulders, neck and jaw mass, and limb and head proportions only.
+- Defects and uncertainty:
+  - CAND-08's face is tiny and its marks are unreadable, which doesn't matter for build.
+  - CAND-01 is a crop that shows only the jaw and neck, which read heavier and older (neck about 0.8 of head width, against 0.6–0.7 in CAND-08 and CAND-03).
+  - This bears on Ziggy's proportion-drift rule that build should match the original reference. Only the lean option (A) agrees with the lock-era jaw and neck in CAND-03.
+- Evidence: PROVIDER-only (bb4a97c8 provisional nomination; humanBuildApprovalLocated=false). HUMAN record only that the field is OPEN.
+- **Choice: A = lean CAND-08 build, with CAND-01/02's heavier jaw and neck treated as drift to correct, or B = the fuller CAND-01 jaw and neck is intended, and build needs a different full-body reference.**
+
+## Gaps and open items
+- Render drop01 (segmented worms, /workspace/v1_refinv/returns/renders/drop01_worms/) is in progress and was empty at write time. It will be reported separately with its sheet and manifest.
+- The CAND-10 GAIIB→GAIB repair is owned by Z_2 (R-2). No acceptance is recorded.
+- There is no human receipt for eyes, build or piercing images (see the missing-receipt list).
+- CAND-08's face marks and piercings are not determinable at its scale. No closer existing image of the same render is in scope.
+
+## Method
+- V_1 viewed all 10 candidates with the Read image tool at full frame, plus PIL crops of the CAND-07 eye band (3x), CAND-09's face (4x) and CAND-08's head (4x).
+- Every lane return was read in full, and every sidecar was recomputed with `sha256sum -c` (12 of 12 OK at write time). The 10 candidate hashes were recomputed against CANDIDATES.tsv.
+- No forbidden paths were opened. Nothing was generated or rendered for this file. No grades. No messages were sent; reporting to Chief goes through the parent.
+- This file is frozen with a .sha256 sidecar. Any correction will go in a `_v002`.

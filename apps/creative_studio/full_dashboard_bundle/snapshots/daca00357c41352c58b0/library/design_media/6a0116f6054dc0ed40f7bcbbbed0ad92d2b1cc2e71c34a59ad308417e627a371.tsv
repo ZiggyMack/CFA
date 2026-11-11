@@ -1,0 +1,10 @@
+# V5 FALCON QA, C06-lurch-no-grin-014 v006, redo check for the round-1 trace item (tick at ~(639-643,449-451), FIX under v013 rule 5 per my 155705Z note). Changed region + outside-diff only.
+# Rules: TEAM-RULES v013 0136dace + V_1 11:57 ET rulings (a stair-step at the cloth is FIX only if visible at plain 4x or it leaves a gap/halo/overlap; clearance on the L<0.60 ink mask, L<0.70 ADVISORY). Spec v014 6439c0f3, V5_INK_METHOD_v004.py c62c6789, V5_EDGE_METRICS_v001.py 94719844. Pilot v011 d68287f1: main 0.482, p90 2.0. Anchor 0.482+/-0.08 (0.402-0.562). V_5 20261021T160548Z (UTC; 12:0x EDT). Scratch in /tmp/v5c06 only. Maker files read only.
+# Files (sha256): v006 b9a90fc1118bfd8a78bd202a25f7b3881a331c58935c18f877a7e9a2e63a5ecf (no sha was supplied by Z_9; recorded as read); v005 25b3d9df0c44248b2fdd82085c0b80dee7920df49cb1766ca0712337b1c11d66; orig 580d85f3fa90e67564fde90f1a584eca1007e6d9b6d973a5103e1cd250306934. Z_9 cloth mask v002 exists (not needed: no edit near the cloth).
+# Crop: V5_FALCON_C06-014v006_redocheck_20261021T160548Z_4x_orig_v005_v006_tick_v001.png (273cda00): orig|v005|v006 at 4x plain, crop 625,438,660,470, plus v005/v006 at 1x.
+item	measured	result	note
+diff_v006_vs_v005	7 px >12 (max 19), all in x639-643 y448-451 = the tick. 220 px differ at all; max diff outside the tick box 6 (encode noise)	PASS	-
+tick	v005 tick px L 71-82 = 0.76-0.86 x local skin; v006 L 90-97 = 0.97-1.03 x local skin. Not visible at 1x or at plain 4x	PASS	texture matches the surrounding skin at 4x
+outside/cloth/pistol	nothing >12 outside the tick box	PASS	-
+scope	only the tick region was re-read (V_1 usage rule). The rest of the frame stands as in my round-1 return	-	-
+VERDICT	-	PASS	C06-014 v006 closes the tick. Round-1 items: rim 0.582 = margin call (v013 rule 3 confirms the disc-circle top); tone ADVISORY per v013 rule 2

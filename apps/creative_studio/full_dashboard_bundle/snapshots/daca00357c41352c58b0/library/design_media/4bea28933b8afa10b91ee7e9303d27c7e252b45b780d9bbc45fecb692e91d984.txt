@@ -1,0 +1,31 @@
+PROMPT CARD LAG-01  |  Lisan Al Gaib (Hon Dolo recast) - signature look 01
+Kit: NOVA-IMG-BENCH-20261009  |  Block: LISAN AL GAIB
+
+RULES: fresh chat / new session for this test in each tool. Upload the images below IN THIS ORDER, then paste the PROMPT block verbatim (identical for Nano Banana and ChatGPT). Max 2 rerolls (3 attempts total). If refused, copy the refusal text verbatim into LEDGER and do NOT rephrase.
+
+UPLOAD IN ORDER (from refs/LAG-01/):
+  image 1: 01_LAG-LOCK-FACE-NATURAL.jpg   - identity ground truth, natural teeth (current per LAG-NOVA-GUIDE)
+  image 2: 02_LAG-LOCK-FACE_SH18.jpg   - LOCK-V2 face: neck sandworm SH-18 + piercings; its grill is RETIRED
+DO NOT UPLOAD (context for scoring only): CTX_LAG-LOCK-V2.txt, CTX_LAG-LOOK-01_original-look01_old-tattoo-spec.jpg, CTX_LAG-LOCK-ARM-SH13.jpg
+
+SAVE AS: RETURNS/A_NANOBANANA/LAG-01_NANOBANANA_a1.png  and  RETURNS/B_CHATGPT/LAG-01_CHATGPT_a1.png  (a2, a3 for rerolls)
+COMPARE AGAINST: BASELINES/LAG-01_GROKBOT.jpg, BASELINES/LAG-01_GROKBOT_B.jpg
+
+==================== PROMPT (copy everything between the lines) ====================
+Generate one new image using the 2 attached reference images (numbered in upload order).
+
+IDENTITY + LOCKS (image 1 is the identity ground truth):
+- Same man as image 1, exact face. Original fictional character, NOT a celebrity or any real person. Messy dark curls, light stubble, glowing electric-blue eyes.
+- Teeth: normal NATURAL WHITE teeth. NO grill - no gold, no diamonds, no fangs. (Image 2 shows an old iced grill - IGNORE its teeth; use image 2 only for the neck tattoo and piercing detail.)
+- Face tattoos, small black lettering, spelled exactly: "AL" once, small, centred between the eyebrows; "G A I B" as small vertical letters (G on top, B at bottom) down the centre of the chin. Nothing on the cheeks.
+- Neck tattoo: two mirrored sandworms rising up both sides of the neck, maws facing each other under the jaw, with a small rayed sun disc containing an eye at the centre of the throat.
+- Piercings, all on HIS LEFT side (character-left = VIEWER-RIGHT): one small silver nostril hoop, one silver eyebrow ring, one small silver ear hoop. Other eyebrow and ear bare. No lip rings.
+- No chest, hand or extra face ink. No "eye"/"know" text, no neck blaster, no eyebrow slit (those belong to a different character).
+
+OUTFIT: tan/sand desert stillsuit with ribbed panels and a high collar open at the throat, heavy BLACK hooded cloak worn over it with the hood DOWN, thick gold Cuban-link chain. No nose breather tube.
+SCENE: open desert dunes at golden hour, huge low sun behind him, warm haze. Chest-up to waist, facing camera, calm confident half-smile showing natural white teeth. 16:9 landscape, cinematic photoreal.
+
+Sides: 'character-left/right' means the character's own left/right; 'viewer-left/right' means as seen in the image when he faces the camera. Keep every listed feature on the stated side - do not mirror the image.
+
+AVOID: celebrity likeness; any grill, gold or diamond teeth, fangs; AL on a cheek or repeated; GAIB repeated on neck/chest; piercings on both sides or ear stacks; extra tattoos; text or logos in the scene.
+====================================================================================

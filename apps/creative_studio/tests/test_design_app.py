@@ -7,6 +7,7 @@ import unittest
 APP = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(APP))
 from library_helpers import effective_design_data, mission_visible
+from controller_routing import project_controller
 from streamlit.testing.v1 import AppTest
 
 
@@ -50,12 +51,12 @@ class DesignAppTest(unittest.TestCase):
         snapshot = json.loads((APP / "library/design_catalog.json").read_text(encoding="utf-8"))
         reviews = app.session_state["studio_reviews"]
         visible = effective_design_data(snapshot, reviews)
-        plans = [asset for asset in visible["assets"] if reviews.get(asset["id"], {}).get("shotPlan") and mission_visible(asset, reviews)]
+        plans = [asset for asset in visible["assets"] if project_controller(snapshot, asset.get("project")) == "ziggy" and reviews.get(asset["id"], {}).get("shotPlan") and mission_visible(asset, reviews)]
         self.assertGreater(len(plans), 0)
         self.assertEqual(app.button(key="mission-shot-plans").label, f"Shot plans · {len(plans)} →")
         app.button(key="mission-shot-plans").click().run()
         self.assertFalse(app.exception)
-        self.assertIn(f"{len(plans)} saved shot plans across all projects.", [c.value for c in app.caption])
+        self.assertIn(f"{len(plans)} saved shot plans for this controller's projects.", [c.value for c in app.caption])
         app.button(key="corner-collection-back").click().run()
         nav = [b.label for b in app.sidebar.button]
         self.assertFalse(any(label == 'Needs review' for label in nav))
@@ -67,7 +68,9 @@ class DesignAppTest(unittest.TestCase):
         toggle = next(b for b in app.button if b.label == "Show references")
         toggle.click().run()
         self.assertFalse(app.exception)
-        headings = [h.value for h in app.subheader]
+        context = next(e for e in app.expander if e.label == "Reference context & notes")
+        self.assertFalse(context.proto.expanded, "Reference tiles lead; supporting context stays optional")
+        headings = [m.value.strip("*") for m in context.markdown]
         self.assertIn("Body art", headings)
         self.assertIn("Bling bling", headings)
         self.assertIn("Wardrobe", headings)

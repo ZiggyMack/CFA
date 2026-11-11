@@ -1,0 +1,83 @@
+README - GROK-HD-20261008_hip_rollout_v001
+Built 2026-10-09 02:01 UTC by Grok Bot.
+Everything status=needs_user_review (velvet=failed_side_check); user_approved=false everywhere. Never write approved.
+
+PURPOSE
+  Hip-blaster rollout across Hon Dolo looks. Ziggy locked the hip blaster on character-LEFT hip
+  (viewer-RIGHT when facing camera), per REV-HD-004 saloon proof.
+  Each look got a new three-quarter (head to mid-thigh) 16:9 still from its chest-up primary ref
+  + PROP-HD-HIP (/workspace/hd-sb/return/GROK-HD-20261008_return_v002/03_DETAILS/PROP-HD-HIP_v001.png) as references.
+  Output resolution typically 1024x576 JPEG (saloon reuse is 1280x720 PNG from REV-HD-004).
+
+CONTENTS
+  01_STILLS/     17 deliverables HIP-<LOOK>-01_v001.{jpg,png}
+  02_REJECTED/   9 rejected attempt-1 stills (trench-coat batch + wrong-side)
+  CONTACT.jpg    labelled contact sheet (look + PASS/FAIL side)
+  manifest.json  full package manifest
+  manifest.csv   flat table (look, output, sha256, source ref, attempt, side check, drift, status)
+  README.txt     this file
+
+  Contact sheet also copied next to the ZIP as:
+    /workspace/hd-sb/return/GROK-HD-20261008_hip_rollout_v001_CONTACT.jpg
+
+HIP SIDE LOCK
+  Required: CHARACTER-LEFT hip = VIEWER-RIGHT (front-facing).
+  PASS: all deliverables except velvet.
+  FAIL: velvet efc1886a (attempt 2) and its attempt 1 d9dd6e5a — holster on character-RIGHT / viewer-LEFT.
+        Reroll budget used; needs a decision.
+
+DELIVERABLES
+  yellow      01_STILLS/HIP-YELLOW-01_v001.jpg            a2      side=PASS  status=needs_user_review
+             drift: neck/chest ink heavier than ref; canines read as full gold grill
+  cash        01_STILLS/HIP-CASH-01_v001.jpg              a2      side=PASS  status=needs_user_review
+             drift: invented screen text 'COUNT IN PROGRESS' in background; chest tattoo reads as compass/mandala more than the disc ship
+  coat        01_STILLS/HIP-COAT-01_v001.jpg              a2      side=PASS  status=needs_user_review
+             drift: coat longer than ref; chest tattoo reads as compass/mandala, not the twin-tower disc ship
+  cream       01_STILLS/HIP-CREAM-01_v001.jpg             a2      side=PASS  status=needs_user_review
+             drift: holster sits high near waist; best outfit match
+  fur         01_STILLS/HIP-FUR-01_v001.jpg               a2      side=PASS  status=needs_user_review
+             drift: full gold upper grill (should be gold canines only); face ink heavier than lock
+  rain        01_STILLS/HIP-RAIN-01_v001.jpg              a2      side=PASS  status=needs_user_review
+             drift: minor; scene widened
+  vinyl       01_STILLS/HIP-VINYL-01_v001.jpg             a2      side=PASS  status=needs_user_review
+             drift: extra forehead cross tattoo; chest tattoo dropped to stomach
+  letterman   01_STILLS/HIP-LETTERMAN-01_v001.jpg         a2      side=PASS  status=needs_user_review
+  bomber      01_STILLS/HIP-BOMBER-01_v001.jpg            a1      side=PASS  status=needs_user_review
+             drift: cargo trousers added
+  velvet      01_STILLS/HIP-VELVET-01_v001.jpg            a2      side=FAIL  status=failed_side_check
+             drift: holster is on character RIGHT hip (viewer-left) in both attempts (attempt 1 d9dd6e5a also wrong side, included in 02_REJECTED). Reroll budget used; needs a decision
+  casino      01_STILLS/HIP-CASINO-01_v001.jpg            a1      side=PASS  status=needs_user_review
+  dragon      01_STILLS/HIP-DRAGON-01_v001.jpg            a1      side=PASS  status=needs_user_review
+             drift: grin broad, face ink heavier
+  parka       01_STILLS/HIP-PARKA-01_v001.jpg             a1      side=PASS  status=needs_user_review
+  pilot       01_STILLS/HIP-PILOT-01_v001.jpg             a1      side=PASS  status=needs_user_review
+             drift: background shows 'REBEL' wing logo sign and suit has a winged-star patch; franchise-adjacent text should be removed in a cleanup pass
+  pinstripe   01_STILLS/HIP-PINSTRIPE-01_v001.jpg         a1      side=PASS  status=needs_user_review
+             drift: skyline resembles a real-city landmark
+  velour      01_STILLS/HIP-VELOUR-01_v001.jpg            a1      side=PASS  status=needs_user_review
+             drift: snack bags show garbled pseudo-brand text
+  saloon      01_STILLS/HIP-SALOON-01_v001.png            reuse   side=PASS  status=needs_user_review
+             drift: NO new render; reused REV-HD-004_v001.png byte-identical (reused_from REV-HD-004). Hip CHAR-LEFT / VIEWER-RIGHT per Ziggy lock / REV-HD-004 saloon proof. Prop reads western revolver-like (see PROP-HD-HIP).
+             reused_from: REV-HD-004_v001.png (GROK-HD-20261008_return_v002/01_REVISIONS/)
+
+REJECTED (02_REJECTED/)
+  361e39a1 / 4c42885d / c29f7e8c / 459feab9 / ced1fbc3 / 1eaa31b6
+    attempt-1 yellow/cash/coat/cream/fur/rain: all replaced outfit with same dark trench coat and drifted face
+  eff745b8 vinyl a1 wrong side
+  537207fb letterman a1 wrong side
+  d9dd6e5a velvet a1 wrong side
+
+GENERAL NOTES (all looks)
+  'eye'/'know' cheek text, neck blaster, lip rings and ear stud/hoop not verifiable at output resolution (1024x576); prop reads as western-style revolver in tooled holster, matching PROP-HD-HIP, not yet a distinct sci-fi blaster. Alternates (yellow HD-YEL-02, cream HD-CREAM-02) were used as context only for attempt 1s that were rejected; attempt 2 used primary only except cream (used CREAM-02).
+
+SOURCE REFS
+  Primaries from /workspace/hd-sb/recovery/rollout_refs_19.csv (best_exact_path / expected_sha256 / asset_id).
+  Generated stills from assets/ (filenames = content sha256.jpg).
+  Saloon: byte-identical copy of REV-HD-004_v001.png from return_v002.
+
+HASHES
+  All sha256 values in manifest.* are computed from the exact bytes packaged.
+  Asset filenames under assets/ are <sha256>.jpg and match file contents.
+
+MODEL
+  Grok Bot image generation (internal). Prompts not recorded verbatim; seeds unknown.

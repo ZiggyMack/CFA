@@ -1,0 +1,591 @@
+{
+  "id": "HON-OPENING-BENCHMARK-20261009",
+  "preparedAtUTC": "2026-10-09T05:29:37.219538+00:00",
+  "status": "needs_reference_reconciliation_not_run",
+  "scope": "One opening-transaction screening comparison, not a general benchmark framework or universal model ranking.",
+  "parentPlan": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/RUN_PLAN.json",
+  "primaryShotID": "S01B",
+  "contextShotIDs": [
+    "S01A"
+  ],
+  "startingFrame": {
+    "sourceOfTruth": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/RUN_PLAN.json#proposedFrame",
+    "status": "awaiting_corrected_primary_reference_then_finite_still_screen_and_scene_frame_selection",
+    "selectedPath": null,
+    "sha256": null,
+    "sameSelectedBytesForAllLanes": true
+  },
+  "commonInput": {
+    "promptPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/BENCHMARK.txt",
+    "promptDelimiters": [
+      "BEGIN SHARED PROMPT",
+      "END SHARED PROMPT"
+    ],
+    "promptSHA256": "b7d461272ce646207df08c8c7571648ad3cf2223941b35bd39dabd2f4cad4c49",
+    "hashNormalization": "UTF-8 inner prompt, LF line endings, trimmed outer whitespace",
+    "requestedSeconds": 8,
+    "requestedAspectRatio": "16:9",
+    "preferredNativeDimensions": [
+      1280,
+      720
+    ],
+    "dimensionsAreGuaranteed": false,
+    "conditioning": "one_start_frame_only",
+    "requestedOutputsPerAttempt": 1,
+    "optionalEnhancement": false,
+    "optionalOutputUpscale": false,
+    "extraIdentityReferences": false,
+    "audioReview": "Picture muted first; no speech or music, room tone optional; inspect native audio separately.",
+    "mismatchPolicy": "Record forced differences; do not stretch, loop, crop or relabel to appear matched. Common-time review windows are labeled derivatives."
+  },
+  "bounds": {
+    "roundA_maximumAttempts": 4,
+    "roundB_maximumAdditionalFlowAttempts": 3,
+    "maximumInitialVideoOutputs": 7,
+    "automaticRetries": 0,
+    "startingFrameStillCount": 2,
+    "startingFrameAlreadyPlannedElsewhere": false,
+    "generationPerformed": false,
+    "spendingPerformed": false,
+    "openEndedExecutionAuthorized": false,
+    "continuation": "Separate selected-route test; Gemini chain max ten total including reused benchmark creation, not ten calls per contender.",
+    "stillBreakdown": {
+      "existingGrokRequest": 1,
+      "addedChatGPTImageEntry": 1
+    },
+    "conditionalChatGPTVideoAttempts": 1,
+    "maximumVideoOutputsIfChatGPTRouteVerified": 8
+  },
+  "lanes": [
+    {
+      "id": "gemini",
+      "round": "A",
+      "service": "Gemini app",
+      "plannedModel": null,
+      "actualModel": null,
+      "accountObserved": false,
+      "state": "planned_pending_input_and_live_preflight",
+      "notes": "Documented Gemini Omni family; actual account model and effective controls unknown.",
+      "evidenceRef": "google-gemini",
+      "runRecord": null,
+      "output": null,
+      "scores": null
+    },
+    {
+      "id": "flow-fast",
+      "round": "A",
+      "service": "Flow",
+      "plannedModel": "Veo 3.1 Fast",
+      "actualModel": null,
+      "accountObserved": false,
+      "state": "planned_pending_input_and_live_preflight",
+      "notes": "Proposed first-frame baseline; inspect account selector before submission.",
+      "evidenceRef": "google-flow-models",
+      "runRecord": null,
+      "output": null,
+      "scores": null
+    },
+    {
+      "id": "grok",
+      "round": "A",
+      "service": "Grok app",
+      "plannedModel": null,
+      "actualModel": null,
+      "accountObserved": false,
+      "state": "planned_pending_input_and_live_preflight",
+      "notes": "Use actual consumer video mode. Do not substitute API settings for unobserved app controls.",
+      "evidenceRef": "grok-app",
+      "runRecord": null,
+      "output": null,
+      "scores": null
+    },
+    {
+      "id": "comfy-ltx25",
+      "round": "A",
+      "service": "Comfy Cloud",
+      "plannedModel": "LTX-2.5",
+      "actualModel": null,
+      "accountObserved": false,
+      "state": "planned_pending_input_and_live_preflight",
+      "notes": "Reuse saved executed I2V recipe; current dependencies and new input/configuration unverified.",
+      "evidenceRef": "saved-comfy-baseline",
+      "runRecord": null,
+      "output": null,
+      "scores": null
+    },
+    {
+      "id": "flow-lite",
+      "round": "B",
+      "service": "Flow",
+      "plannedModel": "Veo 3.1 Lite",
+      "actualModel": null,
+      "accountObserved": false,
+      "state": "planned_pending_input_and_live_preflight",
+      "notes": "Optional after Round A; same input and prompt.",
+      "evidenceRef": "google-flow-models",
+      "runRecord": null,
+      "output": null,
+      "scores": null
+    },
+    {
+      "id": "flow-quality",
+      "round": "B",
+      "service": "Flow",
+      "plannedModel": "Veo 3.1 Quality",
+      "actualModel": null,
+      "accountObserved": false,
+      "state": "planned_pending_input_and_live_preflight",
+      "notes": "Optional after Round A; first-frame mode, not Ingredients.",
+      "evidenceRef": "google-flow-models",
+      "runRecord": null,
+      "output": null,
+      "scores": null
+    },
+    {
+      "id": "flow-omni",
+      "round": "B",
+      "service": "Flow",
+      "plannedModel": "Gemini Omni Flash 1.1",
+      "actualModel": null,
+      "accountObserved": false,
+      "state": "planned_pending_input_and_live_preflight",
+      "notes": "Optional after Round A; actual offered native resolution and sound controls recorded.",
+      "evidenceRef": "google-flow-models",
+      "runRecord": null,
+      "output": null,
+      "scores": null
+    }
+  ],
+  "deferred": [
+    {
+      "id": "comfy-seedance25",
+      "kind": "different_model_family",
+      "service": "Comfy Partner Nodes",
+      "plannedModel": "Seedance 2.5",
+      "state": "official_graph_saved_reviewed_cloud_preflight_pending",
+      "registryWorkflowID": "comfy-seedance25-first-frame",
+      "templateID": "api_seedance2_5_flf2v",
+      "localDiscovery": "docs/notes/explorable_world/comfy/workflows/seedance_2_5_20261009.discovery.json",
+      "localRecipe": "docs/notes/explorable_world/comfy/workflows/seedance_2_5_20261009.README.txt",
+      "officialGraph": "docs/notes/explorable_world/comfy/workflows/seedance_2_5_first_frame.official.json",
+      "officialGraphSHA256": "62eb1b0312fc02988bf2b2f3790946b80f053fa5ad3e0e08926701df84e2acc9",
+      "sourceRefs": [
+        "seedance-comfy-template",
+        "seedance-comfy-guide",
+        "seedance-first-frame-node"
+      ],
+      "accountObserved": false,
+      "cloudValidated": false,
+      "compiled": false,
+      "executed": false,
+      "accepted": false,
+      "runRecord": null,
+      "output": null,
+      "scores": null,
+      "includedInInitialRunCounts": false,
+      "note": "Saved official example has two pool frames, five seconds and audio on. A separate planned copy uses the common 16:9 first frame only, eight seconds, 720p and audio off; disconnect the optional last frame before preflight. Existing Comfy account/credit route; availability and quote unknown. Extension returns only a new segment. No runs are added to existing bounds."
+    },
+    {
+      "id": "nova-tuned",
+      "kind": "workflow_tuning",
+      "service": "Comfy Cloud",
+      "state": "not_scheduled",
+      "note": "Nova-directed variant must name its actual backend, one deliberate change and extra effort; not an independent Codex video model."
+    },
+    {
+      "id": "openai-video",
+      "kind": "unavailable_API",
+      "service": "OpenAI",
+      "state": "not_available",
+      "note": "No standalone video tool is connected. Documented Sora/Videos API retirement was September 24, 2026.",
+      "sourceRef": "openai-deprecation"
+    },
+    {
+      "id": "comfy-minimax-h3",
+      "kind": "different_model_family",
+      "service": "Comfy Cloud",
+      "state": "discovered_not_validated",
+      "templateID": "video_minimax_h3_i2v",
+      "localDiscovery": "docs/notes/explorable_world/comfy/workflows/minimax_h3_20261003.discovery.json",
+      "sourceRefs": [
+        "minimax-api",
+        "minimax-native-template"
+      ],
+      "note": "Native and paid API routes are distinct. Pick and verify one; no saved native I2V execution exists. Do not borrow H3 R2V settings as I2V defaults."
+    },
+    {
+      "id": "comfy-kling3",
+      "kind": "different_model_family",
+      "service": "Comfy API integration",
+      "state": "documented_not_account_verified",
+      "sourceRefs": [
+        "kling-comfy-node",
+        "kling-template"
+      ],
+      "note": "Deferred contender through existing host, not an instruction to create an account or start a paid job."
+    }
+  ],
+  "comparison": {
+    "roundA": "End-to-end service/configuration comparison, not a clean model-only experiment.",
+    "roundB": "Within Flow, change model only when supported; record every forced setting difference.",
+    "sampleLimit": "One attempt per lane is an initial screen, not a reliable failure-rate estimate.",
+    "reviewScale": {
+      "0": "unusable/broken",
+      "1": "major defects",
+      "2": "mixed/repair needed",
+      "3": "usable with minor defects",
+      "4": "clean for this shot",
+      "N/A": "not observable"
+    },
+    "categories": [
+      "identity_and_visible_details",
+      "hands_and_objects",
+      "temporal_continuity",
+      "instruction_following",
+      "cinematic_usefulness"
+    ],
+    "criticalFailureRule": "Serious identity substitution or impossible hand/credit event fails reusable-shot acceptance regardless of beauty.",
+    "recordSeparately": [
+      "Ziggy preference",
+      "defect time/frame and severity",
+      "native duration/resolution/fps",
+      "effective prompt and input transforms",
+      "model/version/mode",
+      "credits or currency and attribution confidence",
+      "queue and execution latency where observable",
+      "output count",
+      "all failures",
+      "operator effort",
+      "native audio review"
+    ],
+    "blinding": "Neutral labels where possible; retain watermarks and note incomplete blinding."
+  },
+  "runEvidence": {
+    "reuseTemplate": "docs/notes/explorable_world/comfy/templates/run_record.json",
+    "decisionProcedure": "docs/notes/explorable_world/comfy/templates/workflow_intake.md#decision-and-feedback",
+    "recordTemplateUnchanged": true,
+    "parent_experiment_id": "HON-OPENING-BENCHMARK-20261009",
+    "mapping": "One existing run_record per attempt: provider; source.model_identifiers; inputs.resolved_parameters; outputs; usage; review.observations and decision. Consumer lanes use null graph fields, not invented graphs. Link any review detail sheet from observations.",
+    "records": [],
+    "results": [],
+    "acceptedWinner": null
+  },
+  "savedComfyBaseline": {
+    "id": "saved-comfy-baseline",
+    "cloudURL": "https://cloud.comfy.org/#bfe78175-2366-4a28-bb76-518c89bef525",
+    "templateID": "video_ltx2_5_i2v",
+    "recordPath": "docs/notes/explorable_world/comfy/workflows/hon_dolo_motion_v001.record.json",
+    "editorPath": "docs/notes/explorable_world/comfy/workflows/hon_dolo_motion_v001.editor.json",
+    "editorSHA256": "103235b3086f98fe41b2b4155f76616f5b4958c98ff82fd75867995115ecdc9c",
+    "executedAPIPath": "docs/notes/explorable_world/comfy/workflows/hon_dolo_motion_v001.executed.api.json",
+    "executedAPISHA256": "83a16d8835c7edf1358fa840ad477f94b00b6df85d9f7ca20c8b7ffbda03f181",
+    "previousResult": {
+      "reviewPath": "docs/notes/explorable_world/comfy/outputs/hon_dolo_motion_v001.media_review.json",
+      "state": "executed_sampled_review_acceptance_pending",
+      "actualDimensions": [
+        960,
+        512
+      ],
+      "actualAspectRatio": "15:8",
+      "fps": 24,
+      "frames": 97,
+      "durationSeconds": 4.041666666666667,
+      "defects": [
+        "prolonged eye closure",
+        "smile drift"
+      ],
+      "inputWasOpeningMoneyFrame": false
+    },
+    "oldSettingsEvidenceOnly": {
+      "seed": 42,
+      "refinementSeed": 42,
+      "batch": 1,
+      "promptEnhancement": false,
+      "samplers": [
+        "euler_ancestral",
+        "euler_ancestral"
+      ],
+      "videoCFG": 1,
+      "audioCFG": 1,
+      "imageStrengths": [
+        0.7,
+        1.0
+      ],
+      "intrinsicLatentRefinement": "x2",
+      "optionalHD4KFinishing": false
+    },
+    "livePreflight": "Verify Cloud access, exact models/nodes/versions, uploaded common frame/hash, effective prompts, actual dimensions/frame count, seeds, schedules, branches and current usage. Old zero-credit API-node estimate did not establish free GPU execution."
+  },
+  "reuseBreadcrumbs": {
+    "sharedMethodHome": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/README.txt",
+    "problemLookup": "docs/notes/explorable_world/comfy/workflows/README.md#choose-by-problem",
+    "lessons": [
+      "../Pan_Handlers/Help/content/video_routes.py",
+      "../Pan_Handlers/Help/guides/sampling_lab.py",
+      "../Pan_Handlers/Help/guides/workflow_decision.py"
+    ],
+    "civitaiIntake": "docs/notes/explorable_world/comfy/CIVITAI.md",
+    "returnHandoff": "docs/notes/explorable_world/comfy/projects/collaborators/panhandler_return_20261008.txt"
+  },
+  "sources": [
+    {
+      "id": "seedance-comfy-template",
+      "url": "https://github.com/Comfy-Org/workflow_templates/blob/main/templates/api_seedance2_5_flf2v.json",
+      "supports": "Official first/last-frame editor graph downloaded unchanged; local source hash recorded. Template presence is not Cloud validation.",
+      "reviewed": "2026-10-09"
+    },
+    {
+      "id": "seedance-comfy-guide",
+      "url": "https://docs.comfy.org/tutorials/partner-nodes/bytedance/seedance-2-5",
+      "supports": "Official hosted Seedance recipe family and extension returning only the new segment; no CFA quality result established.",
+      "reviewed": "2026-10-09"
+    },
+    {
+      "id": "seedance-first-frame-node",
+      "url": "https://github.com/Comfy-Org/embedded-docs/blob/main/comfyui_embedded_docs/docs/ByteDance2FirstLastFrameNode/en.md",
+      "supports": "Required first frame with optional last frame; 2.5 controls include 4-30 seconds, 480p/720p/1080p and audio toggle, with aspect following the first frame and non-deterministic outputs. Live account schema remains unverified.",
+      "reviewed": "2026-10-09"
+    },
+    {
+      "id": "google-gemini",
+      "url": "https://support.google.com/gemini/answer/16126339?hl=en",
+      "supports": "Gemini Omni video and multi-turn editing; does not establish append-only prefix preservation.",
+      "reviewed": "2026-10-09"
+    },
+    {
+      "id": "google-flow-models",
+      "url": "https://support.google.com/flow/answer/16352836?hl=en-KE",
+      "supports": "Documented Lite/Fast/Quality/Omni first-frame controls; Lite extends eligible eight-second Veo parents; account availability unverified.",
+      "reviewed": "2026-10-09"
+    },
+    {
+      "id": "google-flow-controls",
+      "url": "https://support.google.com/flow/answer/16353334?hl=en",
+      "supports": "Video / Frames control route and first-frame input.",
+      "reviewed": "2026-10-09"
+    },
+    {
+      "id": "grok-app",
+      "url": "https://x.ai/news/grok-imagine-video-1-5",
+      "supports": "Consumer Video 1.5 Fast announcement; actual Chief of Staff video model/mode unknown.",
+      "reviewed": "2026-10-09"
+    },
+    {
+      "id": "grok-generation",
+      "url": "https://docs.x.ai/developers/model-capabilities/video/generation",
+      "supports": "API I2V 1-15 seconds; image determines aspect; controls do not establish app UI availability.",
+      "reviewed": "2026-10-09"
+    },
+    {
+      "id": "grok-models",
+      "url": "https://docs.x.ai/developers/model-capabilities/video/overview",
+      "supports": "API 1.5 native 1080p versus lite upscaled 1080p; original model supplies editing/extension.",
+      "reviewed": "2026-10-09"
+    },
+    {
+      "id": "grok-extension",
+      "url": "https://docs.x.ai/developers/model-capabilities/video/extension",
+      "supports": "Original API model accepts 2-15-second parents and adds 2-10 seconds, capped at 720p; consumer support unknown.",
+      "reviewed": "2026-10-09"
+    },
+    {
+      "id": "openai-deprecation",
+      "url": "https://developers.openai.com/api/docs/deprecations",
+      "supports": "Sora 2 / Pro and Videos API shutdown September 24, 2026; no active OpenAI API lane.",
+      "reviewed": "2026-10-09"
+    },
+    {
+      "id": "kling-comfy-node",
+      "url": "https://github.com/Comfy-Org/ComfyUI/blob/master/comfy_api_nodes/nodes_kling.py",
+      "supports": "kling-v3 first-frame route, 3-15 seconds, audio controls; Cloud deployment unverified.",
+      "reviewed": "2026-10-09"
+    },
+    {
+      "id": "kling-template",
+      "url": "https://github.com/Comfy-Org/workflow_templates/blob/main/templates/api_kling_v3_video.json",
+      "supports": "Official template candidate; not a saved or validated CFA execution.",
+      "reviewed": "2026-10-09"
+    },
+    {
+      "id": "minimax-api",
+      "url": "https://platform.minimax.io/docs/api-reference/video-generation-v2-create",
+      "supports": "H3 API first-frame 4-15 seconds at 768P/2K; native output dimensions differ from the proposed 720p comparison.",
+      "reviewed": "2026-10-09"
+    },
+    {
+      "id": "minimax-native-template",
+      "url": "https://github.com/Comfy-Org/workflow_templates/blob/main/templates/video_minimax_h3_i2v.json",
+      "supports": "Official native I2V template candidate; current Cloud weights/nodes/compiled inputs unverified.",
+      "reviewed": "2026-10-09"
+    },
+    {
+      "id": "chatgpt-built-in-images",
+      "url": "https://learn.chatgpt.com/docs/image-generation",
+      "reviewed": "2026-10-09",
+      "supports": "Built-in image generation is documented as gpt-image-2. Session tool is available; no runtime snapshot or result is observed yet."
+    }
+  ],
+  "preparationLimits": {
+    "browser": "Two initialization failures before account UI could be read; no account settings inspected or mutated.",
+    "comfy": "Native Comfy connector not callable in this preparation; no authentication, import or execution.",
+    "uploads": 0,
+    "videoJobs": 0
+  },
+  "updatedAtUTC": "2026-10-09T15:41:24.674832+00:00",
+  "imageScreen": {
+    "status": "awaiting_corrected_primary_reference_before_still_attempts",
+    "sameBriefPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_opening_continuation_20261009/GROK_STARTING_FRAME.txt",
+    "creativePromptRegion": "DRAFT REQUEST — UPDATE A TO THE RECEIVED/INSPECTED CORRECTED PRIMARY FIRST through the line before REVIEW BEFORE GEMINI (operator)",
+    "sameReferenceSource": "RUN_PLAN.json referenceSources A/B/C after replacing legacy A with the received/inspected corrected current primary; identical reconciled role-scoped bytes across still lanes.",
+    "maximumAttempts": 2,
+    "automaticRetries": 0,
+    "selectOneFrameForAllVideoLanes": true,
+    "selection": null,
+    "lanes": [
+      {
+        "id": "grok-still",
+        "service": "Grok",
+        "actualModel": null,
+        "state": "planned",
+        "runRecord": null,
+        "output": null
+      },
+      {
+        "id": "chatgpt-still",
+        "service": "ChatGPT image generation via Codex",
+        "tool": "image_gen",
+        "documentedModel": "gpt-image-2",
+        "documentationURL": "https://learn.chatgpt.com/docs/image-generation",
+        "actualRuntimeModel": null,
+        "modelSelectorExposed": false,
+        "availability": "built_in_tool_callable_not_yet_executed",
+        "state": "planned",
+        "runRecord": null,
+        "output": null
+      }
+    ],
+    "operatorNotes": "Inspect all three references, capture real output path/hash/dimensions and exposed metadata. No API fallback/model switch required. An API catalog model is not proof of a built-in selector."
+  },
+  "conditionalVideoEntry": {
+    "id": "chatgpt-video",
+    "service": "ChatGPT / actual native video generator",
+    "state": "requested_if_available_currently_unavailable_in_session",
+    "maximumAttempts": 1,
+    "actualModel": null,
+    "actualRoute": null,
+    "accountModeVerified": false,
+    "toolAvailable": false,
+    "inclusionRule": "Verify an accessible native generator, name its model, then use the same selected frame and video prompt. Record forced control differences. Do not relabel a still, slideshow or Comfy result as ChatGPT video.",
+    "runRecord": null,
+    "output": null,
+    "scores": null
+  },
+  "specialtyMap": {
+    "purpose": "Choose service/model/configuration by the next shot need; no universal winner or permanent provider ban.",
+    "scope": "Project-specific observations linked to existing run records, not a new evaluation engine.",
+    "sceneRows": [
+      {
+        "id": "opening_transaction",
+        "label": "One person at the ship counter",
+        "scope": "Current planned test: restrained expression and hand hover, not a bar or walking scene.",
+        "imageEvidence": [],
+        "videoEvidence": [],
+        "state": "untested"
+      },
+      {
+        "id": "single_bar",
+        "label": "One person seated at a bar",
+        "scope": "Atmosphere, posture, hair/face, glass or hand contact; visible grill only when exposed.",
+        "imageEvidence": [],
+        "videoEvidence": [],
+        "state": "untested"
+      },
+      {
+        "id": "single_moving",
+        "label": "One person moving",
+        "scope": "Body/camera movement and identity/details under change.",
+        "imageEvidence": [],
+        "videoEvidence": [],
+        "state": "untested"
+      },
+      {
+        "id": "two_interacting",
+        "label": "Two people interacting",
+        "scope": "Distinct identities, eyelines, hand ownership, contact and props.",
+        "imageEvidence": [],
+        "videoEvidence": [],
+        "state": "untested"
+      },
+      {
+        "id": "crowd",
+        "label": "Crowded scene",
+        "scope": "Foreground identity through occlusion; background consistency and duplication.",
+        "imageEvidence": [],
+        "videoEvidence": [],
+        "state": "untested"
+      }
+    ],
+    "detailDimensions": [
+      "facial_identity",
+      "hair_shape_texture",
+      "tattoo_shape_placement",
+      "visible_grill_teeth",
+      "jewelry",
+      "hands_anatomy_ownership",
+      "object_count_contact",
+      "wardrobe",
+      "environment"
+    ],
+    "temporalDimensions": [
+      "face_preservation",
+      "hair_preservation",
+      "detail_preservation",
+      "objects_and_wardrobe_stability",
+      "camera_and_scene_stability"
+    ],
+    "continuationEvidence": [],
+    "observationConvention": "Record each visible detail separately in existing run-record review.observations, with medium, scene/configuration, source/run ID, time/frame if video, actual strength/defect and observability. Non-visible detail is not_observable; static media is not temporal evidence.",
+    "routingRecommendations": [],
+    "routingFields": [
+      "medium",
+      "scene_and_conditions",
+      "service_model_version",
+      "configuration",
+      "evidence_run_ids",
+      "observed_strength",
+      "observed_failure",
+      "attempts_and_passes",
+      "confidence_and_limits",
+      "next_check"
+    ],
+    "growthRule": "Choose one missing capability relevant to the next storyboard shot and a small bounded comparison; do not run the Cartesian product of scenes/models.",
+    "mixedPipeline": "Later best-still -> animation -> finishing trials are separate experiments with every handoff checked.",
+    "promoteReusableFindingsVia": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/README.txt"
+  },
+  "relatedImageRefinementIntake": {
+    "path": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/INTAKE_STATUS.json",
+    "state": "complete_intake_hd01_prepared_not_sent",
+    "scope": "Separate selected-winner tests; do not add all reported 18 to opening-scene bounds."
+  },
+  "revisionHistory": [
+    {
+      "status": "prepared_local_not_run",
+      "commonPromptSHA256": "db4aa1fcac8fec5d097acfddec3613cdb9d0438b5750bf69ef3f84cc3c2c5a4b",
+      "startingFrameStatus": "awaiting_Grok_and_ChatGPT_still_screen_then_one_scene_scoped_selection",
+      "reason": "Preserved dated pre-four-gold benchmark metadata."
+    }
+  ],
+  "referenceReadiness": {
+    "canSubmit": false,
+    "status": "awaiting_corrected_primary_and_current_scene_frame",
+    "correctedPrimaryAssetID": null,
+    "standardPath": "docs/notes/explorable_world/comfy/projects/collaborators/character_head_reference_standard.txt",
+    "expectedIntakePath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/head_library_20261009/expected_intake.json",
+    "currentRule": "Four gold upper caps: lateral incisors + SHORT canines; white central incisors and natural other uppers; lower silver/chrome grill; two plain lip hoops; original nostril placement, no septum substitution.",
+    "required": [
+      "Receive and inspect compatible corrected primary head/face reference.",
+      "Replace historical A, reconcile exact filename/hash and draft attachment wording for both still lanes.",
+      "Select one passing current-design scene frame with exact hash for all video lanes."
+    ]
+  }
+}
