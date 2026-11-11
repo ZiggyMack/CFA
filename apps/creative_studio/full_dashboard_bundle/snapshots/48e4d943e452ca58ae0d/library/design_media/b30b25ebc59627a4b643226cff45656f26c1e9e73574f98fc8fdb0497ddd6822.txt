@@ -1,0 +1,1 @@
+Hon Dolo viseme mouth lock v002 (grill corrected 2026-10-09 per Ziggy): two center upper incisors natural white, lateral incisors gold, short gold canines (4 gold upper total), silver lower grill, one hoop each nostril, two lip rings at bottom-lip corners. Grill master = VIS-HD-03. Supersedes v001. All needs_user_review.

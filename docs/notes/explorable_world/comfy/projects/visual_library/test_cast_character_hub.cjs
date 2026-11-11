@@ -65,7 +65,8 @@ assert(hub.coverPreviewOnly, 'Selected representative is a preview, not an inven
 assert.deepEqual(clone(hub.items.map(a => a.id)).sort(), expectedHubIDs.sort(), 'Hub includes representative and exact connected scene/video/context material');
 assert.equal(hub.items.length, 279);
 page.toggle(cast.id);
-assert(page.html().includes('#hon/working/hon%3Acast-dj'), 'Hub links directly to this character Working collection');
+assert(page.html().includes('#hon/cast/hon%3Acast-dj'), 'The character hub remains reachable from the expanded card');
+assert(!page.html().includes('#hon/working/hon%3Acast-dj'), 'The redundant design-reference navigation button was removed');
 assert(page.html().includes('Scene appearances'));
 assert(page.html().includes('Video appearances'));
 for (const id of [...cast.workingReferenceIDs.slice(1),...cast.setupAssetIDs,...cast.historicalReferenceIDs]) {

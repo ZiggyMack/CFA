@@ -330,7 +330,7 @@ class DesignBundle(MissionBundle):
             return [self.clean_config(x) for x in value]
         if isinstance(value, dict):
             source = self.portable_link(value) if 'href' in value else value
-            return {k: deepcopy(v) if k in {'storyboardTakes', 'storyboardTakeBackups', 'collaboratorReviews', 'collaboratorReviewBackups'} else self.clean_config(v)
+            return {k: deepcopy(v) if k in {'storyboardTakes', 'storyboardTakeBackups', 'collaboratorReviews', 'collaboratorReviewBackups', 'locationReviews', 'locationReviewBackups', 'validationEvidence'} else self.clean_config(v)
                     for k, v in source.items()}
         return value
 

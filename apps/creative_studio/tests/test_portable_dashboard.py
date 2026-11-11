@@ -128,9 +128,30 @@ class PortableDashboardTest(unittest.TestCase):
         for text in ('Pick &lt;safe&gt;', 'Chest only', 'PASS-ADVISORY', 'Nose ring is missing', 'index.html#hon/asset/asset-one'):
             self.assertIn(text, page)
 
+    def test_location_notes_and_unmapped_review_evidence_are_not_navigation(self):
+        evidence = {'href': '../unread.json', 'src': 'D:/Documents/CFA/source.jpg',
+                    'sourceURL': '../original.txt'}
+        self.catalog['locationReviews'] = {'criminal_mind:house': {'note': 'Denser neighborhood', 'source': evidence}}
+        self.catalog['locationReviewBackups'] = [{'reason': 'older note', 'data': evidence}]
+        self.catalog['validationEvidence'] = {'legacyReviewArchive': [{'source': evidence}]}
+        self.write_manifest()
+        _, snapshot, catalog = self.make()
+        for key in ('locationReviews', 'locationReviewBackups', 'validationEvidence'):
+            self.assertEqual(catalog[key], self.catalog[key])
+        self.assertFalse((snapshot / 'source.jpg').exists())
+        self.assertFalse((snapshot / 'unread.json').exists())
+
     def test_copy_mode_is_independent(self):
         _, snapshot, catalog = self.make(copy_media=True)
         self.assertFalse(os.path.samefile(snapshot / catalog['assets'][0]['src'], self.design / 'design_media/review.jpg'))
+
+    def test_changed_independent_snapshot_copy_is_still_rejected(self):
+        _, snapshot, catalog = self.make(copy_media=True)
+        before = (self.output / 'current.json').read_bytes()
+        (snapshot / catalog['assets'][0]['src']).write_bytes(b'corrupted hosted copy')
+        with self.assertRaisesRegex(ValueError, 'content-addressed snapshot was modified'):
+            self.make(copy_media=True)
+        self.assertEqual((self.output / 'current.json').read_bytes(), before)
 
     def test_take_snapshots_and_unread_backups_are_never_rewritten(self):
         from copy import deepcopy

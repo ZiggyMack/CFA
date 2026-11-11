@@ -1,0 +1,25 @@
+import cv2, glob, os, sys, numpy as np, csv
+sys.path.insert(0,'.')
+from _common import *
+cand_prefix=['6d4dd909','aa147b8c','106ae508','ea8ca93c','d55b97a3','b3a22784','a7bd855c','1e8c86b1','8df88113','a104e808','9f62f973','d430b5f7','000da3c8','c91af37e','e08cee0f','10ac9771','2f10e700','c146d897']
+parents={}
+for p in cand_prefix:
+    h=[x for x in by_hash if x.startswith(p)][0]
+    parents[h]=[r for r in by_hash[h] if r['source_type']=='file'][0]['path']
+for n in ['HD-EXP-LOCK-FACE.jpg','HD-EXP-259-blaster.jpg','SHIP-TATTOO-REF-05.jpg','SHIP-SCHEMATIC-REF.jpg','HD-EXP-289.jpg']:
+    r=[r for r in by_name[n] if r['source_type']=='file'][0]; parents[r['sha256']]=r['path']
+P={h:cv2.imread(p,cv2.IMREAD_GRAYSCALE) for h,p in parents.items()}
+out=[]
+for f in sorted(glob.glob('/workspace/*.png')+glob.glob('/workspace/*.jpg')):
+    im=cv2.imread(f,cv2.IMREAD_GRAYSCALE)
+    if im is None: continue
+    for h,pg in P.items():
+        if im.shape[0]>pg.shape[0] or im.shape[1]>pg.shape[1] or (im.shape==pg.shape): continue
+        res=cv2.matchTemplate(pg,im,cv2.TM_SQDIFF)
+        mn,_,loc,_=cv2.minMaxLoc(res)
+        mad=np.abs(pg[loc[1]:loc[1]+im.shape[0],loc[0]:loc[0]+im.shape[1]].astype(float)-im).mean()
+        if mad<4:
+            out.append((os.path.basename(f),h,parents[h],loc[0],loc[1],loc[0]+im.shape[1],loc[1]+im.shape[0],round(mad,3)))
+            print(out[-1])
+with open('_crop_parent_scan.csv','w',newline='') as fh:
+    w=csv.writer(fh); w.writerow(['scratch_file','parent_sha256','parent_path','x0','y0','x1','y1','mean_abs_diff_gray']); w.writerows(out)

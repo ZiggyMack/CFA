@@ -6,7 +6,7 @@ Hosted entry: [algaib.streamlit.app](https://algaib.streamlit.app/).
 
 ## Current local-index mirror and mobile reviews
 
-[Full Visual Library](https://algaib.streamlit.app/Full_Visual_Library) serves the current local index's exact JavaScript and CSS with verified, browser-sized media. It starts at Intake, including Still to review / Reviewed / All families, batch gallery and detailed evidence views, the winners visual map, cast filters, note presets and the current local review layout. Reviews remain in that browser across Streamlit reruns. Export review and import the JSON on the desktop to transfer decisions; this is not automatic cross-device synchronization.
+[Full Visual Library](https://algaib.streamlit.app/Full_Visual_Library) serves the published local index's JavaScript and CSS with verified, browser-sized media. A fresh entry starts at Hon Dolo / All files; explicit project/view links still work, including Intake. Ordinary navigation stays inside the embedded library so Streamlit cannot bounce it back to an earlier route. The outer address bar retains the entry URL. Reviews remain in that browser across Streamlit reruns. Export review and import the JSON on the desktop to transfer decisions; this is not automatic cross-device synchronization.
 
 The compact Creative Studio shares the published catalog and offers quick triage, notes, note presets, optional scores and previous/next Intake navigation. Its changes remain in the Streamlit session, so Export review is available in the sidebar and beside the review controls. The two views have separate review storage. Use the Full Visual Library for longer sessions and use JSON export/import when switching views or devices.
 
@@ -15,8 +15,8 @@ The October 28 publication reconciles the latest exact-hash local review export 
 Prepare both current publication snapshots:
 
 ```powershell
-python apps/creative_studio/build_design_library.py --expected-source-sha <catalog-sha256> --review-export <latest-review.json> --expected-review-sha <review-sha256> --review-mode latest
-python apps/creative_studio/build_portable_dashboard.py
+& 'D:/Documents/CFA/.cache/runtimes/run-python.ps1' apps/creative_studio/build_design_library.py --expected-source-sha <catalog-sha256> --review-export <latest-review.json> --expected-review-sha <review-sha256> --review-mode latest
+& 'D:/Documents/CFA/.cache/runtimes/run-python.ps1' apps/creative_studio/build_portable_dashboard.py
 ```
 
 Publish the changed application modules, all `design_manifest.json` publication files, and the portable dashboard receipt's publication files together. These are explicit allowlists; the older original-master dashboard builder is not needed for this deployment. The full mirror keeps original media outside the publication and supplies an honest hosted-copy label. Registered text-document changes must be reconciled before packaging; an image/hash mismatch fails verification.
@@ -26,7 +26,7 @@ Publish the changed application modules, all `design_manifest.json` publication 
 From the CFA repository root:
 
 ```powershell
-python -m streamlit run apps/creative_studio/app.py
+& 'D:/Documents/CFA/.cache/runtimes/run-python.ps1' -m streamlit run apps/creative_studio/app.py
 ```
 
 The tested requirement is `streamlit==1.52.1`. Install `apps/creative_studio/requirements.txt` in the deployment environment. The app otherwise uses Python's standard library.
@@ -43,7 +43,7 @@ Native `st.image` and `st.video` serve packaged files through Streamlit. No stat
 
 ## Review behavior
 
-- **Ziggy’s Corner / Mission Control:** the first view in a new session. Current index tasks appear as collapsed status/title/project cards, with summary counts first, a closed Top priority section and collaborator handoffs. A compact Image review area offers Review images only when unanswered requests remain. The Shot plans count opens visible saved plans across all projects; review sweep stays in a closed disclosure. Before sending lists prerequisites; Deliverables lists expected returns; later review stays separate. Shortlist counts respect saved Keep/Fix/Remove decisions. References open within the Corner, and reviewed history remains accessible. The page does not monitor third-party accounts or imply a draft was sent.
+- **Ziggy’s Corner / Mission Control:** a dedicated workspace reached from the sidebar. Current index tasks appear as collapsed status/title/project cards, with summary counts first, a closed Top priority section and collaborator handoffs. A compact Image review area offers Review images only when unanswered requests remain. The Shot plans count opens visible saved plans across all projects; review sweep stays in a closed disclosure. Before sending lists prerequisites; Deliverables lists expected returns; later review stays separate. Shortlist counts respect saved Keep/Fix/Remove decisions. References open within the Corner, and reviewed history remains accessible. The page does not monitor third-party accounts or imply a draft was sent.
 - **Library:** filter by category, album, and words; open an item for its larger picture or video and review details. Videos have independent Layout (Grouped or All clips) and Sort (Longest first, Shortest, or Alphabetical A–Z) controls. The default is Grouped with Longest first within each scene category, alphabetical ties, unknown durations last, and turnarounds at the bottom. All clips sorts across the current collection/search.
 - **Storyboard:** filter by planning stage, source-panel position, and story themes. Narrowing the position range also narrows the available themes. Stages are Preliminary, Detailed design, Verification, and Production; changing a stage does not claim a technical check passed. Planning order does not imply measured song timings.
 - **Collaborators:** a global production workspace with ComfyUI first, then Flow, Gemini, Grok, and Panhandler Nova. ComfyUI shows concrete saved workflow records and their actual inputs, outputs/previews, documents, and execution status. Cloud links are restricted to `https://cloud.comfy.org/` and do not run the graph. Other providers show their saved tasks and current briefs across projects. A local FFmpeg result must not be described as a Cloud execution.
@@ -81,9 +81,9 @@ Deploy the changed Python files, the two snapshot JSON files, and **every path l
 
 ## Complete local-design publication
 
-When `library/design_catalog.json` exists, the native app uses that complete snapshot for every view, including Ziggy’s Corner. It takes precedence over both the smaller original catalog and the older Corner-only snapshot. The Full Visual Library page opens the native Library so both entry points share the same session review.
+When `library/design_catalog.json` exists, the native app uses that complete snapshot for every view, including Ziggy’s Corner. It takes precedence over both the smaller original catalog and the older Corner-only snapshot. Full Visual Library remains the separate HTML interface and uses `full_dashboard_bundle/current.json` to select its immutable published snapshot. The two interfaces have separate review state; use a complete JSON export/import to transfer it.
 
-The sidebar provides Working references, Outfits, Tattoos & piercings, Supporting cast, Storyboard, Videos, Comfy swap targets, Needs review, and Archive. Hon’s retired Inspiration collections move to Archive; Lisan retains Inspiration. No second Needs fixes list is added to Ziggy’s Corner.
+The sidebar provides Locations, Working references, Outfits, Accessories, Supporting cast, Storyboard, Videos, Comfy swap targets, review workspaces, and Archive where applicable. Browse badges count recorded entities such as location families, characters, outfits and storyboard sequences; image and planned-shot totals remain inside the corresponding workspaces. Hon’s retired Inspiration collections move to Archive; Lisan retains Inspiration.
 
 - Working references opens one character BOM gallery. Dolo appears alongside the supporting characters. His nested sections keep one dental standard, Body art, Bling bling before Wardrobe, explicit Approved Multiverse choices, Video production candidates, one WIP disclosure, and the Verbose BOM. Reference-purpose previews are visible when the character opens.
 - Hon outfits use Formal attire, Casual, and Scoundrel gear tags and expandable collections. Tattoo subjects pair artwork, mannequin placement, and applicable revision-needed proofs before their remaining examples. Creature boss ideas appear once under Supporting cast. Comfy keeps its ancillary swap references.
@@ -107,13 +107,19 @@ Publish `design_catalog.json`, `design_manifest.json`, every manifest `publicati
 From the repository root:
 
 ```powershell
-python -m unittest discover -s apps/creative_studio/tests -v
+& 'D:/Documents/CFA/.cache/runtimes/run-python.ps1' -m unittest discover -s apps/creative_studio/tests -v
 ```
 
 The checks cover bundle path isolation, collection order, legacy and current hash compatibility, seed restoration, explicit clears, provider-filtered handoffs, draft-only plan state, and unchanged source bytes. Streamlit interaction checks exercise pagination, project navigation, storyboard rendering, collaborator text, review decisions, and plan save/removal. Native widgets keep the sidebar toggle accessible on narrow screens.
 
-## Legacy full dashboard mirror
+## Full dashboard publication and recovery
 
-Without a complete design snapshot, the separate **Full Visual Library** page can reuse the older HTML dashboard. Prepare that fallback with `python apps/creative_studio/build_full_dashboard.py`, then use Streamlit's page sidebar. When a design snapshot is present, this entry opens the native Library instead. Local fallback bundles use hardlinks on D: and preserve all original bytes and review IDs; nothing is uploaded by the builder.
+Use `build_portable_dashboard.py` for the hosted **Full Visual Library**. It verifies the design publication, packages the current UI with hosted media, and writes a receipt and build pointer. The older `build_full_dashboard.py` is a local original-media fallback, not the normal live publication route. Neither builder uploads anything. Include the receipt's exact files and `current.json` in the release; an ignored generated snapshot can otherwise be missing even after a successful source push.
+
+Casa Baldadoon has Script desk, Casting room, and Locations rooms. Location family direction is distinct from per-image reviews and never selects a location or approves a production frame. Preserve family notes and their attribution when transferring a full review. A favorite, Keep, or exported reference does not finalize a director's choice.
+
+Git protects committed source and the hosted publication. It does not by itself protect ignored original masters, uncommitted files, or browser-only reviews. Recovery needs a verified source/media backup plus exported review JSON. Do not replace a canonical review database wholesale with an older export, and do not run blanket staging from a checkout whose base is older than the live release: preserve upstream-only paths and reconcile intentional local changes explicitly.
+
+Start a recovery with [the CFA restore guide](../../docs/notes/storage/RECOVERY_START_HERE.txt), then consult the dated backup's manifest and verification receipts.
 
 See [full dashboard preparation and deployment notes](FULL_DASHBOARD_README.txt) for phone review transfers, an explicit portable-copy option, media size and hosting constraints. The hosted page needs its complete bundle before deployment; preparation is not publication or cross-device autosync.

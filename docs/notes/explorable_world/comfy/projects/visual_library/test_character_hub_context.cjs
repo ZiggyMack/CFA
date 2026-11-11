@@ -9,8 +9,9 @@ const wife='hon:cast-ivory',id='HD-DROP-5171bb20c773',p=makePage(),sourceBefore=
 p.api.route('hon','cast',wife);let html=p.node('#main').innerHTML;
 assert.match(html,/Back to Supporting cast/);assert.match(html,/data-character-hub="hon:cast-ivory"/);assert(!html.includes('Open character hub'),'The hub does not offer a loop back to itself');
 assert(html.includes('Explore character appearances, storyboard connections, saved plans and reference candidates here.'));assert(!html.includes('Choose a group or browse the previews below'),'Exact hub intro matches its purpose');
-const origin=html.slice(html.indexOf('class="character-hub-section character-hub-origin"'));assert(!origin.includes('<img'),'Origin retains provenance without repeating reference images');assert(origin.includes('Ivory-coat woman'),'Origin keeps the source collection identity');
-for(const title of ['Scenes & planned work','Video appearances','Storyboard use & scene plans','Design & animation reference candidates','Origin & story connections'])assert(html.includes(title),title);
+assert(!html.includes('character-hub-origin')&&!html.includes('Origin & story connections'),'The removed Origin drawer does not duplicate the character references');
+assert(html.includes('Hon Dolo&#39;s wife')||html.includes("Hon Dolo's wife"),'Character biography remains in the top card');
+for(const title of ['Scenes & planned work','Video appearances','Storyboard use & scene plans','Design & animation reference candidates'])assert(html.includes(title),title);
 assert(!html.includes('Appearances & scene candidates'),'An empty scene-appearance section is omitted without inventing a use');
 for(const shot of ['S03-2','S04-1'])assert(html.includes('data-author-shot="'+shot+'"'),'Actual authored named reference: '+shot);
 assert(html.includes('version not bound'),'Hashless authored names are distinguished from exact-version evidence');

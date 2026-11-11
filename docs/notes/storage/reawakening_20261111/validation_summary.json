@@ -1,0 +1,106 @@
+{
+  "audit_date": "2026-11-11",
+  "evidence_scope": "Automated source/model/DOM-double tests. Does not establish browser download delivery or visual rendering.",
+  "initial_javascript": {
+    "suites": 60,
+    "passed": 36,
+    "failed": 24
+  },
+  "baseline_comparison": {
+    "reference": "origin/main b11e0022 at audit start",
+    "method": "Run each failing test with only library.js replaced by exact remote baseline through fs.readFileSync intercept; leave catalog and fixtures unchanged. Writer failure was a metadata integrity failure before JS execution.",
+    "reproduced_suites": [
+      "test_archive",
+      "test_bom_workspace",
+      "test_cast_character_hub",
+      "test_character_hub_context",
+      "test_cast_browse_filters",
+      "test_collections_navigation",
+      "test_comfy_collections",
+      "test_crocodile_validator_navigation",
+      "test_document_counts",
+      "test_compact_browse",
+      "test_grok_video_route",
+      "test_head_anchor_group",
+      "test_hon_browse_retirement",
+      "test_mission_actions",
+      "test_mission_gun_variants",
+      "test_mission_priority",
+      "test_review_direct_clarification",
+      "test_review_intake",
+      "test_reference_validation",
+      "test_review_note_presets",
+      "test_source_comparison_publication",
+      "test_validation_presence",
+      "test_winners_review_actions"
+    ],
+    "writer_metadata_failure": "Two current source documents had stale registered bytes/hash/text. Source documents already matched remote; exact2 document records refreshed."
+  },
+  "fixed_and_rerun_passed": [
+    "test_archive",
+    "test_bom_workspace",
+    "test_cast_browse_filters",
+    "test_cast_character_hub",
+    "test_character_hub_context",
+    "test_collections_navigation",
+    "test_mission_gun_variants",
+    "test_mission_priority",
+    "test_review_note_presets",
+    "test_writer_publication",
+    "test_grok_video_route",
+    "test_mission_actions",
+    "test_head_anchor_group",
+    "test_validation_presence",
+    "test_winners_review_actions",
+    "test_document_counts"
+  ],
+  "new_or_extended_regressions_passed": [
+    "test_download_handoff",
+    "test_location_scout",
+    "test_location_reviews (7 tests)",
+    "test_review_snapshot (12 tests)",
+    "test_hot_reload (10 tests)"
+  ],
+  "remaining_preexisting_javascript_failures": [
+    "test_comfy_collections",
+    "test_compact_browse",
+    "test_crocodile_validator_navigation",
+    "test_hon_browse_retirement",
+    "test_reference_validation",
+    "test_review_direct_clarification",
+    "test_review_intake",
+    "test_source_comparison_publication"
+  ],
+  "remaining_failure_notes": {
+    "test_comfy_collections": "Old source-likeness group location expectation; not refreshed.",
+    "test_compact_browse": "Global collapsed-video leaf expectation; further UI/fixture reconciliation needed.",
+    "test_crocodile_validator_navigation": "Old separate character/staging gallery label; references now flat.",
+    "test_document_counts": "Old sidebar shot counts versus current sequence counts.",
+    "test_grok_video_route": "Old all-project handoff filename versus controller/output scoped filename.",
+    "test_head_anchor_group": "Working BOM now has a dedicated workspace; removed images stay hidden; tattoo headings updated.",
+    "test_hon_browse_retirement": "Old12-creature membership count versus11matching source and catalog IDs; later Comfy layout assertions also need reconciliation.",
+    "test_mission_actions": "Old all-project plan route versus controller route.",
+    "test_reference_validation": "Historical full-object equality predates scoped reviewer metadata.",
+    "test_review_direct_clarification": "Hardcoded Keep expectation conflicts with later saved Remove decision; decision preserved.",
+    "test_review_intake": "Old C04-006 family label expected despite current catalog mapping/search result; further fixture reconciliation needed.",
+    "test_source_comparison_publication": "Older preliminary stage expectation versus later saved verification review; not altered.",
+    "test_validation_presence": "Regex stops at nested reviewer-identity section; old quick-review markup boundary.",
+    "test_winners_review_actions": "Old45 exact reviewed originals count versus current49."
+  },
+  "initial_native": {
+    "tests": 282,
+    "failures": 8,
+    "errors": 4,
+    "log": ".cache/reawakening_20261111/regressions/studio_python.log"
+  },
+  "native_logic_baseline": "app.py,design_view.py,review_intake_view.py,controller_routing.py exactly equal origin/main after LF normalization; native failures in these areas predate this pass.",
+  "native_targeted_log": ".cache/reawakening_20261111/regressions/python_targeted_refresh.log",
+  "native_targeted_result": "Ran 18 tests in 339.051s\n\nFAILED (errors=2)\n",
+  "source_hashes": {
+    "library.js": "99b069f263ac395dd1e5ad00da63cd30aee9bdbca4e0e258e3027347c2d24dfd",
+    "library.css": "f0e029d2e6bbf18d012e1a4dd62df2f57a7dc6d710c28aa5757ea7d74cb87185",
+    "catalog.js": "606be90590d5fd17a25e3d4cd1bc837d76c5afd78ffc5bd4a875fdc05ec14290",
+    "writer_development.json": "46c61685afce2c88f3e727aa0c2128a3435a25a3313e0d52e1fdeb547494145b"
+  },
+  "preservation": "No human image selection, casting choice, location choice, production acceptance or validation assessment was created by tests or this metadata refresh."
+}

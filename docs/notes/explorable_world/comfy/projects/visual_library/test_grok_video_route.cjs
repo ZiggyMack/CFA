@@ -45,7 +45,7 @@ assert(api.missionControl().includes('data-mission-export="grok_video"'),'Grok d
 api.setState({view:'mission_control',search:'',destination:'Grok'});api.renderMain();
 api.node('[data-mission-export="grok_video"]').click();
 const download=page.downloads.at(-1);
-assert.equal(download.name,'cfa-shot-handoff-all-grok_video.txt','The actual dashboard button exports a distinct video filename');
+assert.equal(download.name,'cfa-shot-handoff-controller-ziggy-grok_video-unspecified.txt','The dashboard export identifies its controller, video destination and unspecified output type');
 assert(download.text.includes('Destination: Grok video')&&download.text.includes(asset.id));
 assert(download.text.includes('planned; not sent or generated'),'A download cannot claim provider dispatch');
 assert.equal(api.getState().destination,'Grok','Export restores the prior route filter');

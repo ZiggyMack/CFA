@@ -138,7 +138,8 @@ for (const [id, historicalID] of [['hon:cast-ivory','LEIA-STYLE-01'],['hon:cast-
   page.toggle(id);
   assert.equal(page.location.hash, hash, 'Clicking the character cover keeps the current page/hash');
   assert(!page.html().includes('data-open="' + historicalID + '"'), 'Supporting hub does not expose design setup/history as scene appearances');
-  assert(page.html().includes('#hon/working/' + encodeURIComponent(id)), 'Character hub links to its Working reference collection');
+  assert(page.html().includes('#hon/cast/' + encodeURIComponent(id)), 'Character hub remains reachable while browsing the collection');
+  assert(!page.html().includes('#hon/working/' + encodeURIComponent(id)), 'The redundant design-reference navigation button stays removed');
   page.toggle(id);
   page.location.hash = '#hon/working/' + encodeURIComponent(id);
   api.parseHash();api.renderMain();

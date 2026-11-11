@@ -658,9 +658,11 @@ def review_provenance(payload: dict, existing: dict | None = None, *, strict_tak
     from studio_dependencies import current_module
     takes = current_module("storyboard_takes")
     collaborator = current_module("collaborator_review")
+    locations = current_module("location_reviews")
     result = {"validationEvidence": {"format": "cfa-reference-validation-v1", "schemaVersion": 1,
                                      "assessments": [], "legacyReviewArchive": []}, "sceneReviews": [],
-              "storyboardTakes": takes.empty(), "storyboardTakeBackups": [], "collaboratorReviews": {}, "collaboratorReviewBackups": []}
+              "storyboardTakes": takes.empty(), "storyboardTakeBackups": [], "collaboratorReviews": {}, "collaboratorReviewBackups": [],
+              "locationReviews": [], "locationReviewBackups": []}
     envelope = result["validationEvidence"]
     seen_assessments: dict[str, str] = {}
 
@@ -682,6 +684,7 @@ def review_provenance(payload: dict, existing: dict | None = None, *, strict_tak
     for source in (existing or {}, payload):
         if not isinstance(source, dict):
             raise ValueError("Review provenance must be an object.")
+        result.update(locations.merge_state(result, source))
         if "collaboratorReviews" in source:
             try:
                 result["collaboratorReviews"] = collaborator.merge(result["collaboratorReviews"], source["collaboratorReviews"])

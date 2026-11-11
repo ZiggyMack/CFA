@@ -27,6 +27,7 @@ assert.equal(html.split('>'+ready.title+'<').length-1,1,'Regular task title appe
 const hon=api.C.assets.find(a=>a.project==='hon'&&a.kind==='image'&&api.normalVisible(a));
 const lisan=api.C.assets.find(a=>a.project==='lisan'&&a.kind==='image'&&api.normalVisible(a));
 const removed=api.C.assets.find(a=>a.project==='hon'&&a.kind==='image'&&a.id!==hon.id&&api.normalVisible(a));
+const otherOwner=api.C.assets.find(a=>a.project==='criminal_mind'&&a.kind==='image'&&api.normalVisible(a));assert(otherOwner);
 api.reviewRequests.set(hon.id,{id:hon.id,sha256:hon.sha256});
 api.reviews.set(hon.id,{...api.reviewRecord(hon.id),status:null});api.renderMain();
 assert(page.html().includes('Review images · 1'),'An unanswered request exposes a one-image action');
@@ -40,26 +41,29 @@ for(const status of ['keep','needs_fixes','remove']){
 }
 for(const a of api.C.assets){if(api.reviewRecord(a.id).shotPlan)api.reviews.set(a.id,{...api.reviewRecord(a.id),shotPlan:null});}
 const plan={destinations:['Grok'],idea:'Preserve this shot idea.',prompt:'Preserve the draft prompt.',status:'planned'};
-for(const a of [hon,lisan,removed])api.reviews.set(a.id,{...api.reviewRecord(a.id),status:a===removed?'remove':'keep',shotPlan:clone(plan)});
+for(const a of [hon,lisan,removed,otherOwner])api.reviews.set(a.id,{...api.reviewRecord(a.id),status:a===removed?'remove':'keep',shotPlan:clone(plan)});
 const beforeNavigation=clone(api.reviewPayload().items);
 api.setState({view:'mission_control',album:'',search:'',destination:'Gemini'});api.renderMain();
 assert(page.html().includes('aria-label="Open all 2 shot plans"'),'Counter counts exactly two visible plans across projects');
 api.clickMission('shot_plans');
-assert.equal(page.location.hash,'hon/shot_plans/all-projects');
+assert.equal(page.location.hash,'hon/shot_plans/controller-ziggy');
 assert.equal(api.getState().destination,'all','Counter clears stale collaborator filtering');
 html=page.html();
-assert(html.includes('All shot plans')&&html.includes('2 plans across all projects'));
+assert(html.includes('<h1>Shot plans</h1>')&&html.includes('2 plans.')&&html.includes('value="controller-ziggy" selected'));
 for(const a of [hon,lisan])assert(html.includes('data-open="'+a.id+'"'),'Both projects are reachable: '+a.id);
 assert(!html.includes('data-open="'+removed.id+'"'),'Removed reference stays out of ordinary plans');
+assert(!html.includes('data-open="'+otherOwner.id+'"'),'Corner scope excludes another controller’s plan');
 assert(!html.includes('id="back-group"')&&!html.includes('undefined'),'All-project scope is not treated as an album');
-assert.deepEqual(clone(api.exportScope('#export-handoff-json')),{format:'json',scope:'all'},'All-project JSON export respects visible scope');
-assert.deepEqual(clone(api.exportScope('#export-handoff-txt')),{format:'txt',scope:'all'},'All-project text export respects visible scope');
+assert.deepEqual(clone(api.exportScope('#export-handoff-json')),{format:'json',scope:'controller-ziggy'},'JSON export respects the controller scope');
+assert.deepEqual(clone(api.exportScope('#export-handoff-txt')),{format:'txt',scope:'controller-ziggy'},'Text export respects the controller scope');
 api.changeScope('project');
 assert.equal(page.location.hash,'hon/shot_plans');
 assert(page.html().includes('data-open="'+hon.id+'"')&&!page.html().includes('data-open="'+lisan.id+'"'),'Project filter narrows the same view');
 assert.equal(api.exportScope('#export-handoff-json').scope,'hon');
 page.location.hash='#hon/shot_plans/all-projects';api.parseHash();api.renderMain();
-assert(page.html().includes('2 plans across all projects'),'All-project route survives hash parsing');
+assert(page.html().includes('3 plans across all projects'),'Explicit all-project route survives hash parsing');
+assert(page.html().includes('data-open="'+otherOwner.id+'"'),'Explicit all-project browsing includes the separate controller');
+assert.equal(api.exportScope('#export-handoff-json').scope,'all');
 assert.deepEqual(clone(api.reviewPayload().items),beforeNavigation,'Navigation preserves review and plan metadata');
 assert.deepEqual(clone(api.C.assets),originalAssets,'No source records mutated');
 assert.deepEqual(Object.fromEntries(page.storage),originalStorage,'No review storage writes from browsing');

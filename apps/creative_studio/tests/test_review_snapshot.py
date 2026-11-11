@@ -5,7 +5,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from library_helpers import effective_reviews, review_payload
+from library_helpers import effective_reviews, review_payload, review_provenance
 from review_snapshot import overlay_review_snapshot
 
 
@@ -111,6 +111,83 @@ class ReviewSnapshotTest(unittest.TestCase):
         self.assertNotIn("acceptedScope", result["reviewDecisions"][1])
         self.assertNotIn("reviewSessionSeed", result)
         self.assertEqual(report["skipped"][0]["reason"], "unmatched_id_or_hash")
+
+    def attributed(self, asset, fields, stamp=LATE, reviewer="baldadoon", **changes):
+        human = {"reviewerControllerID": reviewer, "reviewer": reviewer.title(),
+                 "projectControllerID": reviewer, "decisionAuthorityControllerID": reviewer,
+                 "decisionScope": "location", "project": asset.get("project"),
+                 "assetID": asset["id"], "sha256": asset["sha256"], "updatedAt": stamp,
+                 "fields": fields}
+        return {"id": asset["id"], "sha256": asset["sha256"], "origin": "user", "updatedAt": stamp,
+                **{key: human[key] for key in ("reviewerControllerID", "reviewer", "projectControllerID",
+                                               "decisionAuthorityControllerID", "decisionScope")},
+                "humanReview": human, **changes}
+
+    def test_mixed_new_note_stale_status_only_attributes_applied_note_and_archives_originals(self):
+        asset = {"id": "house", "sha256": "a" * 64, "project": "criminal_mind"}
+        prior = self.attributed(asset, ["note", "status"], MIDDLE, reviewer="ziggy", note="Earlier note", status="keep")
+        incoming = self.attributed(asset, ["note", "status"], note="Denser neighborhood", status="remove",
+                                  fieldUpdatedAt={"note": LATE, "status": EARLY})
+        result, report = overlay_review_snapshot({"assets": [asset], "reviewDecisions": [prior]},
+                                                 {"format": "cfa-visual-review-v1", "items": [incoming]})
+        row = result["reviewDecisions"][0]
+        self.assertEqual(row["note"], "Denser neighborhood")
+        self.assertEqual(row["status"], "keep")
+        self.assertEqual(row["reviewerControllerID"], "baldadoon")
+        self.assertEqual(row["humanReview"]["fields"], ["note"])
+        self.assertEqual(report["attributionConflicts"], [])
+        archive = result["validationEvidence"]["legacyReviewArchive"]
+        self.assertIn(prior, archive)
+        self.assertIn(incoming, archive)
+        exported = review_payload([asset], effective_reviews([asset], result["reviewDecisions"], {}), set(),
+                                  provenance=review_provenance(result))
+        self.assertEqual(exported["items"][0]["humanReview"]["fields"], ["note"])
+        self.assertIn(incoming, exported["validationEvidence"]["legacyReviewArchive"])
+
+    def test_no_change_echo_keeps_prior_attribution_but_preserves_incoming_receipt(self):
+        asset = {"id": "house", "sha256": "a" * 64, "project": "criminal_mind"}
+        prior = self.attributed(asset, ["note"], MIDDLE, reviewer="ziggy", note="Same note")
+        incoming = self.attributed(asset, ["note"], note="Same note")
+        result, report = overlay_review_snapshot({"assets": [asset], "reviewDecisions": [prior]},
+                                                 {"format": "cfa-visual-review-v1", "items": [incoming]})
+        self.assertEqual(result["reviewDecisions"], [prior])
+        self.assertEqual(report["changedFields"], 0)
+        self.assertIn(incoming, result["validationEvidence"]["legacyReviewArchive"])
+
+    def test_alias_observation_is_archived_without_transplanting_reviewer_to_new_pixels(self):
+        asset = {"id": "house", "sha256": "a" * 64, "project": "criminal_mind"}
+        old = {**asset, "id": "old-house", "sha256": "b" * 64}
+        incoming = self.attributed(old, ["note"], note="Alias-bound original observation")
+        catalog = {"assets": [asset], "reviewDecisions": [], "assetAliases": [
+            {"id": old["id"], "sha256": old["sha256"], "canonicalID": asset["id"],
+             "canonicalSHA256": asset["sha256"], "kind": "visual_duplicate_reencoding"}]}
+        result, report = overlay_review_snapshot(catalog, {"format": "cfa-visual-review-v1", "items": [incoming]})
+        self.assertEqual(result["reviewDecisions"][0]["note"], incoming["note"])
+        self.assertNotIn("humanReview", result["reviewDecisions"][0])
+        self.assertNotIn("reviewerControllerID", result["reviewDecisions"][0])
+        self.assertEqual(report["attributionConflicts"][0]["reason"], "human_receipt_target_mismatch_or_alias")
+        self.assertIn(incoming, result["validationEvidence"]["legacyReviewArchive"])
+
+    def test_unscoped_incoming_attribution_is_not_guessed_and_explicit_clear_evidence_survives(self):
+        asset = {"id": "house", "sha256": "a" * 64, "project": "criminal_mind"}
+        prior = self.attributed(asset, ["note", "shotPlan"], MIDDLE, reviewer="ziggy", note="Earlier",
+                                shotPlan={"status": "planned", "destinations": ["Flow"], "idea": "Old", "prompt": ""})
+        clear = {"updatedAt": LATE, "source": "Explicit director clear", "sourceReceipt": "original receipt"}
+        incoming = {"id": asset["id"], "sha256": asset["sha256"], "origin": "user", "updatedAt": LATE,
+                    "note": "New note", "shotPlan": None, "shotPlanClearEvidence": clear, "reviewerControllerID": "baldadoon"}
+        result, report = overlay_review_snapshot({"assets": [asset], "reviewDecisions": [prior]},
+                                                 {"format": "cfa-visual-review-v1", "items": [incoming]})
+        row = result["reviewDecisions"][0]
+        self.assertEqual(row["note"], incoming["note"])
+        self.assertIsNone(row["shotPlan"])
+        self.assertEqual(row["shotPlanClearEvidence"], clear)
+        self.assertNotIn("humanReview", row)
+        self.assertNotIn("reviewerControllerID", row)
+        self.assertEqual(report["attributionConflicts"][0]["reason"], "missing_scoped_human_receipt")
+        self.assertIn(prior, result["validationEvidence"]["legacyReviewArchive"])
+        exported = review_payload([asset], effective_reviews([asset], [row], {}), set(), provenance=review_provenance(result))
+        again, _ = overlay_review_snapshot({"assets": [asset], "reviewDecisions": []}, exported)
+        self.assertIn(incoming, again["validationEvidence"]["legacyReviewArchive"])
 
     def test_cast_choices_survive_publication_and_review_export(self):
         catalog, asset = self.fixture()

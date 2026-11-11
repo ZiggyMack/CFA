@@ -1,0 +1,79 @@
+CFA RECOVERY — START HERE
+Prepared during the 11 November 2026 reawakening audit.
+
+What restores what
+------------------
+1. GitHub: https://github.com/ZiggyMack/CFA
+   Source, recorded decisions and the committed hosted-site snapshots.
+   Use the remote main branch, not the old local checkout's HEAD.
+2. Private Google Drive: My Drive / CFA_Backups
+   https://drive.google.com/drive/u/1/folders/127OvsYK9FG2Zg2ensK3X24LkgBy9JUzN
+   Dated source/media archives protect ignored originals and local work that
+   need not be part of a public site release. Read the chosen backup's manifest,
+   exclusions, verification and transfer receipts before restoring it.
+3. Review JSON exports from each reviewing browser/device.
+   Full Visual Library and compact Studio have separate storage. Neither sends
+   notes to this repository automatically. Chris's browser cannot be recovered
+   from our Git backup unless his exported feedback has been returned to us.
+
+A mounted G: copy is not proof of a completed cloud upload. A visible cloud
+file is not a checksum comparison. Distinguish local verification, mounted
+transfer, cloud visibility, and independent cloud download/restore receipts.
+The dated audit report records which of these actually completed.
+
+Restore on a replacement Windows computer
+----------------------------------------
+1. Sign in to the existing GitHub and backup Drive accounts. Restore into a
+   NEW directory on D:, with enough room for the source/media archive plus a
+   Git checkout. Do not extract over the only existing copy of a project.
+2. Install Git, Python and any required project tools on D:. The former local
+   runtime was Python 3.14, with user-site packages disabled; Streamlit's tested
+   pin is in apps/creative_studio/requirements.txt. The .cache runtime itself
+   is reproducible and is excluded from the new source backup.
+3. Clone remote main or restore its source into a separate checkout. Record the
+   commit. Git includes old immutable hosted snapshots; do not mistake the
+   count of snapshot paths for unique original media or new creative work.
+4. Download EVERY part of the chosen dated source backup and its companions.
+   Check each part's SHA-256 against its manifest before extraction. Use the
+   supplied no-overwrite restore helper for Windows long paths and verify
+   restored content hashes. Keep the untouched archives until verified.
+5. Reconcile the recovered source working copy with remote main. An older
+   local base or absent file is not permission to delete an upstream path.
+   Keep recovered review exports and original media unchanged as evidence.
+6. If rebuilding the Full Library, prepare the verified design publication
+   then run build_portable_dashboard.py using a D: runtime, D: temp/cache and
+   dependencies. Its receipt, immutable snapshot and current.json must be
+   published together. See apps/creative_studio/README.md.
+7. Open the restored site, import complete review JSON through the supported
+   UI, and verify notes/ratings/favorites/family direction and original hashes.
+   Stale exports are inputs to a field-aware merge, not replacement databases.
+8. Check the live Streamlit entry and deployed build after publication:
+   https://algaib.streamlit.app/Full_Visual_Library
+   Main file: apps/creative_studio/app.py. Requirements: its adjacent file.
+
+Preservation boundaries
+-----------------------
+The new source backup excludes credential/session recovery trees, installed
+dependencies, runtime/shader caches, .git objects and redundant generated
+snapshot trees. Git history remains on GitHub. A manifest records exact
+included paths and exclusions; selected irreplaceable evidence under .cache
+is rescued explicitly. This is a CFA project recovery plan, not a Windows
+system image, password-manager backup, or complete backup of sibling projects.
+Account sessions and externally stored credentials require account recovery.
+
+Director decisions
+------------------
+Exploration, favorites, Keep and export selections do not choose a final cast,
+location, starting frame or production approval. Preserve reviewer attribution
+and the specific scope of every decision. The Oct30 Chris test recovered a
+favorite/basket choice for Henderson L03 but no location note. The request to
+make the neighborhood denser was relayed by Ziggy, not recovered from that JSON.
+See the original receipt and SITE_NOVA_REVIEW_CHECKPOINT_20261030.txt.
+
+For future maintenance
+----------------------
+Export review JSON before changing devices or clearing browser data. Keep raw
+incoming exports before merging. Commit/push source changes and the exact
+publication allowlist, verify the remote commit and live build separately,
+then refresh dated source/media backups. Do not erase older backups merely
+because a newer file or sync folder is visible. Test restoration periodically.

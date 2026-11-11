@@ -102,6 +102,7 @@
   const normalizedRating=value=>Number.isInteger(value)&&value>=1&&value<=5?value:null;
   const assistantLikenessAssessments=new Map((C.assistantLikenessAssessments||[]).filter(p=>{const a=byID.get(p?.assetID);return a?.sha256&&p.sha256===a.sha256&&p.status==='proposal'&&p.assessedBy==='nova'&&(p.likenessRating===null||normalizedRating(p.likenessRating)!==null)&&Array.isArray(p.referenceAssets)&&p.referenceAssets.length&&p.referenceAssets.every(r=>byID.get(r.assetID)?.sha256&&r.sha256===byID.get(r.assetID).sha256);}).map(p=>[p.assetID,p]));
   let favorites = new Set(), basket = new Set(), storageOK = true, reviews = new Map(), sceneReviews = new Map(), locationReviews = new Map();
+  let locationReviewBackups=[];
   const takeStore=window.CFA_STORYBOARD_TAKES;
   let storyboardTakes=takeStore?.empty()||{format:'cfa-storyboard-takes-v1',takes:[]},storyboardTakeBackups=[];
   const storyboardTakeOpen=new Set();
@@ -423,6 +424,10 @@
     document.querySelectorAll('[data-v-import]').forEach(b=>b.addEventListener('click',()=>input.click()));
   }
   archiveLegacy(C.reviewDecisions);
+  // Publication retains original scoped reviewer receipts in this archive;
+  // they are backup evidence, never an additional image decision or validation.
+  if(Array.isArray(C.validationEvidence?.legacyReviewArchive))archiveLegacy(C.validationEvidence.legacyReviewArchive);
+  if(Array.isArray(C.validationEvidence?.unreadBackups))archiveUnread(C.validationEvidence.unreadBackups);
   mergeValidation({format:VALIDATION_KEY,schemaVersion:1,assessments:validationData.assessments||[]});
   let legacyValidationRaw=null,legacyValidationBackup=null;
   try{legacyValidationRaw=localStorage.getItem(REVIEW_KEY);if(legacyValidationRaw){legacyValidationBackup=JSON.parse(legacyValidationRaw);archiveLegacy(legacyValidationBackup.items);}}
@@ -487,7 +492,7 @@
   }
   const locationReviewKey=(project,familyID)=>project+':'+familyID;
   function normalizedLocationReview(item,origin='import'){
-    if(!item||typeof item!=='object'||typeof item.project!=='string'||typeof item.locationFamilyID!=='string'||!knownLocationFamily(item.project,item.locationFamilyID))return null;
+    if(!item||typeof item!=='object'||typeof item.project!=='string'||typeof item.locationFamilyID!=='string'||typeof item.note!=='string'||item.note.length>20000||(item.decisionScope&&item.decisionScope!=='location')||!knownLocationFamily(item.project,item.locationFamilyID))return null;
     const owner=projectController(item.project),confirmed=item.reviewerControllerID===owner&&item.decisionScope==='location'&&humanControllers.some(person=>person.id===owner),updatedAt=typeof item.updatedAt==='string'&&!Number.isNaN(Date.parse(item.updatedAt))?item.updatedAt:null;
     const record={project:item.project,locationFamilyID:item.locationFamilyID,note:typeof item.note==='string'?item.note.slice(0,20000):'',updatedAt,origin:typeof item.origin==='string'?item.origin:origin,attributionStatus:confirmed?'confirmed':'draft',projectControllerID:owner,decisionScope:'location'};
     if(confirmed){
@@ -495,6 +500,31 @@
       record.humanReview={reviewer:record.reviewer,reviewerControllerID:owner,projectControllerID:owner,decisionAuthorityControllerID:owner,decisionScope:'location',project:item.project,locationFamilyID:item.locationFamilyID,updatedAt,fields:['note']};
     }
     return record;
+  }
+  // Family notes travel independently of image decisions. Keep every losing or
+  // unsupported version so an old JSON/browser backup cannot destroy newer work.
+  function locationStable(value){return JSON.stringify(value,(_,item)=>item&&typeof item==='object'&&!Array.isArray(item)?Object.fromEntries(Object.entries(item).sort(([a],[b])=>a.localeCompare(b))):item);}
+  function preserveLocationReview(reason,data){const entry={reason,data},key=locationStable(entry);if(!locationReviewBackups.some(item=>locationStable(item)===key))locationReviewBackups.push(entry);}
+  function mergeLocationReviews(data,origin='import'){
+    let imported=0,skipped=0;
+    if(Object.hasOwn(data,'locationReviewBackups')){
+      if(Array.isArray(data.locationReviewBackups))for(const entry of data.locationReviewBackups){if(entry&&typeof entry==='object'&&typeof entry.reason==='string'&&Object.hasOwn(entry,'data')){if(!locationReviewBackups.some(item=>locationStable(item)===locationStable(entry)))locationReviewBackups.push(entry);}else preserveLocationReview('Unrecognized location review backup',entry);}
+      else preserveLocationReview('Unrecognized location review backup list',data.locationReviewBackups);
+    }
+    if(!Object.hasOwn(data,'locationReviews'))return {imported,skipped};
+    if(!Array.isArray(data.locationReviews)){preserveLocationReview('Unrecognized location review list',data.locationReviews);return {imported,skipped:1};}
+    for(const item of data.locationReviews){
+      const record=normalizedLocationReview(item,origin);
+      if(!record){preserveLocationReview('Unsupported location review',item);skipped++;continue;}
+      if(Object.keys(item).some(key=>locationStable(item[key])!==locationStable(record[key])))preserveLocationReview('Additional location review fields retained',item);
+      const key=locationReviewKey(record.project,record.locationFamilyID),prior=locationReviews.get(key);
+      if(!prior){locationReviews.set(key,record);imported++;continue;}
+      if(locationStable(prior)===locationStable(record)){imported++;continue;}
+      const before=Date.parse(prior.updatedAt)||0,after=Date.parse(record.updatedAt)||0;
+      if(after&&after>before){preserveLocationReview('Superseded location review',prior);locationReviews.set(key,record);imported++;}
+      else{preserveLocationReview(!after?'Undated location review conflict':after===before?'Equal-time location review conflict':'Older location review retained',record);skipped++;}
+    }
+    return {imported,skipped};
   }
   function locationReviewRecord(project,familyID){
     return locationReviews.get(locationReviewKey(project,familyID))||{project,locationFamilyID:familyID,note:'',updatedAt:null,origin:'browser',attributionStatus:'draft',projectControllerID:projectController(project),decisionScope:'location'};
@@ -591,16 +621,15 @@
     const record = normalizedReview(item,'catalog'); if(record)mergeReview(record);
   }
   for(const item of C.sceneReviews||[]){const record=normalizedSceneReview(item);if(record)sceneReviews.set(record.project+':'+record.shotID,record);}
-  for(const item of C.locationReviews||[]){const record=normalizedLocationReview(item,'catalog');if(record)locationReviews.set(locationReviewKey(record.project,record.locationFamilyID),record);}
+  mergeLocationReviews(C,'catalog');
   acceptStoryboardTakes(prepareStoryboardTakes(C,'catalog'));
   acceptCollaboratorReviews(prepareCollaboratorReviews(C,'catalog'));
   try {
     const saved = JSON.parse(localStorage.getItem(REVIEW_KEY) || 'null');
-    if(saved?.format===REVIEW_KEY){acceptStoryboardTakes(prepareStoryboardTakes(saved,'browser'));acceptCollaboratorReviews(prepareCollaboratorReviews(saved,'browser'));}
+    if(saved?.format===REVIEW_KEY){acceptStoryboardTakes(prepareStoryboardTakes(saved,'browser'));acceptCollaboratorReviews(prepareCollaboratorReviews(saved,'browser'));mergeLocationReviews(saved,'browser');}
     if(saved?.format===REVIEW_KEY && Array.isArray(saved.items)) {
       for(const item of saved.items){const record=normalizedReview(item,'browser');if(record)mergeReview(record);}
       for(const item of saved.sceneReviews||[]){const record=normalizedSceneReview(item);if(record)sceneReviews.set(record.project+':'+record.shotID,record);}
-      for(const item of saved.locationReviews||[]){const record=normalizedLocationReview(item,'browser');if(record)locationReviews.set(locationReviewKey(record.project,record.locationFamilyID),record);}
     }
   } catch {storageOK=false;}
   refreshCollaboratorReviewSidecar();
@@ -617,6 +646,7 @@
     items:[...reviews.values()].map(record=>({...assetReference(byID.get(record.id)),...record})),
     sceneReviews:[...sceneReviews.values()],
     locationReviews:[...locationReviews.values()],
+    locationReviewBackups,
     storyboardTakes,storyboardTakeBackups,
     collaboratorReviews,collaboratorReviewBackups,
     validationEvidence:validationEnvelope(),
@@ -2877,17 +2907,27 @@
         `${i+1}. ${a.title}`,`Reference ID: ${a.id}`,`SHA-256: ${a.sha256||'not recorded'}`,`File: ${a.filename}`,`Source path: ${a.path||'see source catalog'}`,
         `Destinations: ${a.shotPlan.destinations.map(destinationLabel).join(', ')}`,`Lane: ${a.variant}`,`Reference role: ${a.referenceRole}`,`Likeness to gold standard: ${a.likenessRating===null?'Unrated':a.likenessRating+'/5'}`,`Scene craft: ${a.sceneQualityRating===null?'Unrated':a.sceneQualityRating+'/5'} (framing, lighting and staging; separate from likeness and production readiness)`,`Character validation: ${a.validationEvidence.character.label} | Scene validation: ${a.validationEvidence.scene.label}`,`Review: ${a.reviewStatus||'unreviewed'}`,`Review note / known differences: ${a.knownDifferences||'(none)'}`,`Scene use: ${a.referenceUsePolicy.explicitSceneReference?.instruction||a.referenceUsePolicy.defaultReferenceSelection.instruction}`,
         `Handoff purpose: ${a.handoffPurpose} | Bound scenes: ${(a.shotPlan.sceneIDs||[]).join(', ')||'none; planning only'}`,`Intended output: ${planOutputLabels[planOutputKind(a.shotPlan)]}`,`Shot idea: ${a.shotPlan.idea||'(to be written)'}`,`Draft prompt: ${a.shotPlan.prompt||'(not drafted)'}`,''])].join('\n');
-      const url=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'})),link=document.createElement('a');link.href=url;link.download=filename;link.click();setTimeout(()=>URL.revokeObjectURL(url),3000);
+      downloadBlob(new Blob([text],{type:'text/plain;charset=utf-8'}),filename);
     }
     notice(data.items.length+' planned shots exported. Attach the actual reference files when handing them over.');
   }
   function exportFavorites(){const selected=[...favorites].map(id=>byID.get(id)).filter(Boolean),items=selected.filter(exportAllowed).map(exportReference);downloadJSON({format:'cfa-visual-favorites-v1',exported:new Date().toISOString(),exportIntent:state.exportIntent,status:'user review shortlist; not automatic final approval',items},'CFA-favorites-'+new Date().toISOString().slice(0,10)+'.json');notice(items.length+' favorites exported; '+(selected.length-items.length)+' excluded by export intent. Full review backups retain every star.');}
-  function downloadJSON(data,filename){const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=filename;link.click();setTimeout(()=>URL.revokeObjectURL(url),3000);}
-  function exportReview(){downloadJSON(reviewPayload(),'cfa-review.json');notice('Review exported with decisions, notes, and favorites. Save it in docs/notes/downloads (or docs/notes/cfa-review.json) for the next sweep.');}
+  let activeDownload=null;
+  function downloadBlob(blob,filename){
+    if(activeDownload){activeDownload.link.remove();URL.revokeObjectURL(activeDownload.url);}
+    const url=URL.createObjectURL(blob),link=document.createElement('a');
+    link.href=url;link.download=filename;link.className='toast download-retry';
+    link.textContent='Download '+filename+' again';link.setAttribute('aria-label','Download '+filename+' again if the download did not start');
+    // A connected, directly clickable anchor also works as a retry in embedded browsers.
+    // Keep its URL valid until the next export (or page close), not a short timer.
+    document.body.append(link);activeDownload={url,link};link.click();
+  }
+  function downloadJSON(data,filename){downloadBlob(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),filename);}
+  function exportReview(){downloadJSON(reviewPayload(),'cfa-review.json');notice('Download requested. Check your browser downloads for cfa-review.json, then send that file back to CFA. Nothing was uploaded automatically.');}
   function exportLocationReview(project){
     const data=reviewPayload(),notes=data.locationReviews.filter(record=>record.project===project&&record.note.trim()),drafts=notes.filter(record=>record.attributionStatus!=='confirmed').length;
-    downloadJSON({...data,handoff:{kind:'location_review',project,noteCount:notes.length,reviewerConfirmedCount:notes.length-drafts,status:'downloaded browser review; not uploaded or sent automatically'}},'cfa-'+project+'-location-review.json');
-    notice(notes.length+' location note'+(notes.length===1?'':'s')+' downloaded for CFA'+(drafts?' · '+drafts+' still '+(drafts===1?'needs':'need')+' the reviewer selected.':'. Attach or send the JSON file back; nothing was uploaded automatically.'));
+    downloadJSON({...data,handoff:{kind:'location_review',project,noteCount:notes.length,reviewerConfirmedCount:notes.length-drafts,status:'browser review prepared for download; not uploaded or sent automatically'}},'cfa-'+project+'-location-review.json');
+    notice('Download requested for '+notes.length+' location note'+(notes.length===1?'':'s')+'. Check your browser downloads and send the JSON file back to CFA.'+(drafts?' '+drafts+' still '+(drafts===1?'needs':'need')+' the reviewer selected.':''));
   }
   function importReview(data){
     if(!data||typeof data!=='object')throw Error('Choose an exported CFA review, favorites, or selection-list file.');
@@ -2911,7 +2951,7 @@
       for(const [id,note] of Object.entries(data.notes)){if(typeof note!=='string')continue;const a=matchingAsset({id,sha256:data.note_refs?.[id]});if(a){const record=normalizedReview({id,sha256:data.note_refs?.[id]||a.sha256,note,updatedAt:data.exported||null});if(record){archiveLegacy([{id,sha256:data.note_refs?.[id]||a.sha256,note,updatedAt:data.exported||null}]);mergeReview(record);imported++;}}}
     }
     if(data.format===REVIEW_KEY&&Array.isArray(data.sceneReviews)){for(const item of data.sceneReviews){const record=normalizedSceneReview(item);if(record){sceneReviews.set(record.project+':'+record.shotID,record);imported++;}else skipped++;}}
-    if(data.format===REVIEW_KEY&&Array.isArray(data.locationReviews)){for(const item of data.locationReviews){const record=normalizedLocationReview(item);if(record){locationReviews.set(locationReviewKey(record.project,record.locationFamilyID),record);imported++;}else skipped++;}}
+    if(data.format===REVIEW_KEY){const result=mergeLocationReviews(data);imported+=result.imported;skipped+=result.skipped;}
     if(data.format===REVIEW_KEY&&Array.isArray(data.exportBasket)){const result=importBasket(data.exportBasket);skipped+=result.skipped;}
     reviewRevision++;saveBrowserReview();scheduleFileSave();render();notice(`${imported} review records and ${stars} favorites imported; ${skipped} unmatched entries skipped.`);
   }

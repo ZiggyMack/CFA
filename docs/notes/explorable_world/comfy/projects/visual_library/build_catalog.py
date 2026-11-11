@@ -625,6 +625,9 @@ apply_take_history(catalog, ROOT, read(review_path) if review_path.exists() else
 from collaborator_review_intake import apply_collaborator_reviews
 apply_collaborator_reviews(catalog, ROOT, read(review_path) if review_path.exists() else {},
                           json.loads(catalog_source_before.decode('utf-8').split('=',1)[1].strip().removesuffix(';')) if catalog_source_before else {})
+from location_review_intake import apply_location_reviews
+apply_location_reviews(catalog, ROOT, read(review_path) if review_path.exists() else {},
+                       json.loads(catalog_source_before.decode('utf-8').split('=',1)[1].strip().removesuffix(';')) if catalog_source_before else {})
 catalog['storyboardSequences']=storyboard_sequences
 storyboard_stories=read(HERE/'storyboard_stories.json')
 assert storyboard_stories['format']=='cfa-storyboard-stories-v1'

@@ -102,7 +102,7 @@ for(const a of received){
   const album=page.C.albums.find(al=>al.id===a.outfitAlbumID),href='#hon/outfits/'+encodeURIComponent(album.id);
   const links=api.albumLinks(href);assert.equal(links.length,1,'The real rendered outfit anchor is present: '+album.id);
   assert.equal(links[0].href,href);
-  const row=group(page.html()).match(new RegExp('<div class="tools" data-gun-variant="'+a.id+'">([\\s\\S]*?)</div>'))[1];
+  const row=group(page.html()).match(new RegExp('<div class="mission-variant-tile" data-gun-variant="'+a.id+'">([\\s\\S]*?)</div>'))[1];
   const visibleCount=album.assetIDs.filter(id=>{const asset=page.C.assets.find(a=>a.id===id);return asset&&!asset.archived&&api.reviewRecord(id).status!=='remove';}).length;
   assert(row.includes('Compare full outfit · '+visibleCount+' images'),'Comparison count includes visible originals and the gun variant: '+album.id);
   // A browser follows this native anchor; simulate its URL, then use the real router.

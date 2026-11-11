@@ -1,0 +1,221 @@
+{
+  "id": "GROK-IMAGE-BENCHMARK-INTAKE-20261009",
+  "observedAtUTC": "2026-10-09T05:46:04.047583+00:00",
+  "state": "complete_intake_hd01_prepared_not_sent",
+  "sourceChat": "https://grok.com/bot/a4a75c63-1565-4448-84a2-f519f40bea15",
+  "observation": "All three user-supplied extracted folders verified against source manifests, canonical hashes, sizes and image decoding. One retained part-one ZIP also had CRC verification; part two and VIS arrived extracted, so their original ZIP CRCs were not available.",
+  "expectedArchives": [
+    {
+      "filename": "NOVA-IMG-BENCH-20261009_part1of2.zip",
+      "displayedSize": "17.7 MB",
+      "localPath": "docs/notes/downloads/NOVA-IMG-BENCH-20261009_part1of2.zip",
+      "sha256": "4cad4dc5a344c81381be7932189db0523d34b61965cd46dffd8ffdea915561b0",
+      "extracted": true,
+      "bytes": 18565835,
+      "receipt": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/part1_receipt.json",
+      "sourceFolder": "docs/notes/explorable_world/comfy/references/From Grok/Processed/NOVA-IMG-BENCH-20261009_part1of2",
+      "sourceKind": "user_supplied_extracted_folder",
+      "receivedAndVerified": true,
+      "currentPath": "docs/notes/explorable_world/comfy/references/From Grok/Processed/NOVA-IMG-BENCH-20261009_part1of2",
+      "archiveRemovedAfterVerification": true
+    },
+    {
+      "filename": "NOVA-IMG-BENCH-20261009_part2of2.zip",
+      "displayedSize": "12.7 MB",
+      "localPath": null,
+      "sha256": null,
+      "extracted": true,
+      "sourceFolder": "docs/notes/explorable_world/comfy/references/From Grok/Processed/NOVA-IMG-BENCH-20261009_part2of2",
+      "sourceKind": "user_supplied_extracted_folder",
+      "receivedAndVerified": true,
+      "currentPath": "docs/notes/explorable_world/comfy/references/From Grok/Processed/NOVA-IMG-BENCH-20261009_part2of2",
+      "originalZipReceived": false
+    },
+    {
+      "filename": "GROK-HD-20261009_VIS-HD_v001.zip",
+      "displayedSize": "5.5 MB",
+      "localPath": null,
+      "sha256": null,
+      "extracted": true,
+      "sourceFolder": "docs/notes/explorable_world/comfy/references/From Grok/Processed/GROK-HD-20261009_VIS-HD_v001",
+      "sourceKind": "user_supplied_extracted_folder",
+      "receivedAndVerified": true,
+      "currentPath": "docs/notes/explorable_world/comfy/references/From Grok/Processed/GROK-HD-20261009_VIS-HD_v001",
+      "originalZipReceived": false
+    }
+  ],
+  "inbox": "docs/notes/downloads",
+  "alternateInbox": "docs/notes/explorable_world/comfy/references/From Grok",
+  "providerClaims": {
+    "imageTestCount": 18,
+    "ledgerRows": 57,
+    "ledgerFormats": [
+      "CSV",
+      "Excel"
+    ],
+    "comparisonPage": true,
+    "referenceCopies": true,
+    "promptCards": true,
+    "testOrder": [
+      "HD pinstripe/saloon/yellow/cream",
+      "Lisan signature",
+      "ten bosses",
+      "hippo/gecko-frog/slug probes"
+    ],
+    "mouthShapes": 12,
+    "mouthSupplementSeparateFromInitialZips": true,
+    "comparators": [
+      "Nano Banana Pro",
+      "ChatGPT Images 2.5"
+    ],
+    "scoresBlank": true
+  },
+  "holds": [
+    {
+      "id": "slug-source",
+      "state": "pending_file_match"
+    },
+    {
+      "id": "lisan-grill",
+      "state": "pending_optional_reference_scope_check"
+    },
+    {
+      "id": "boss009",
+      "state": "option_B_prior_defects_and_unselected_status_retained"
+    },
+    {
+      "id": "hon-nostril-rings",
+      "state": "hd01_scoped_adapter_follows_one_hoop_each_in_viewed_anchor_global_canon_unchanged"
+    },
+    {
+      "id": "mouth-shapes",
+      "state": "independent_static_review_complete_all_candidates_unaccepted",
+      "reportedDefects": [
+        "F/V lower lip does not tuck",
+        "02 one nostril hoop",
+        "05/07/08 ball-end lip rings"
+      ],
+      "reviewPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/handoffs/gemini_mouth_continuity_20261008/grok_viseme_return_20261009/visual_review.json",
+      "additionalObservedDefects": [
+        "03 AH ball-ended lip rings",
+        "07 F/V lower silver grill replaced by natural white teeth",
+        "Exaggerated gold canine and lower-cap geometry in open poses"
+      ]
+    },
+    {
+      "id": "chatgpt-model",
+      "state": "kit_2_5_vs_documented_builtin_2_route_mismatch"
+    }
+  ],
+  "downloadAttempts": [
+    {
+      "archive": "NOVA-IMG-BENCH-20261009_part1of2.zip",
+      "route": "Codex in-app browser button",
+      "outcome": "download_event_timeout_after_20_seconds",
+      "fileReceived": true,
+      "pageAssetFound": false,
+      "subsequentOutcome": "File appeared locally after timeout and was verified; timeout did not mean permanent download failure."
+    },
+    {
+      "archive": "NOVA-IMG-BENCH-20261009_part2of2.zip",
+      "route": "Codex in-app browser button",
+      "outcome": "Clicked; no local file observed at latest intake check.",
+      "fileReceived": false
+    },
+    {
+      "archive": "GROK-HD-20261009_VIS-HD_v001.zip",
+      "route": "Codex in-app browser button",
+      "outcome": "Clicked; no local file observed at latest intake check.",
+      "fileReceived": false
+    }
+  ],
+  "actualManifest": {
+    "reviewPath": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/intake_receipt.json",
+    "rows": 113,
+    "verified": 113,
+    "pending": 0,
+    "mismatches": 0,
+    "tests": 18,
+    "ledgerRows": 57,
+    "plannedNewOutputRows": 36,
+    "historicalBaselineRows": 21,
+    "referencesVerified": 60,
+    "completeSummary": {
+      "source_folders": 3,
+      "file_occurrences": 135,
+      "source_bytes": 38459582,
+      "unique_files": 117,
+      "unique_kind_counts": {
+        "document": 37,
+        "image": 78,
+        "helper_text": 2
+      },
+      "image_occurrences": 96,
+      "existing_canonical_files_reused": 96,
+      "new_content_files_written": 21,
+      "duplicate_occurrences_reused": 18,
+      "canonical_unique_bytes": 32422285,
+      "new_content_bytes": 6014808
+    },
+    "mouthCandidateCount": 12,
+    "mouthRejectedCount": 5,
+    "mouthContactSheetCount": 1
+  },
+  "actualTestIDs": [
+    "HD-01",
+    "HD-02",
+    "HD-03",
+    "HD-04",
+    "LAG-01",
+    "BOSS-001",
+    "BOSS-002",
+    "BOSS-003",
+    "BOSS-004",
+    "BOSS-005",
+    "BOSS-006",
+    "BOSS-007",
+    "BOSS-008",
+    "BOSS-009",
+    "BOSS-010",
+    "PROBE-01",
+    "PROBE-02",
+    "PROBE-03"
+  ],
+  "actualAssetMappings": {
+    "receiptPath": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/received/intake_receipt.json",
+    "ledgerPath": "docs/notes/explorable_world/comfy/projects/collaborators/grok_image_benchmark_20261009/asset_ledger.json",
+    "canonicalUniqueFiles": 117,
+    "newImageCards": 31,
+    "existingImageHashesReused": 47,
+    "case": "HD01_HANDOFF.json"
+  },
+  "outboundPromptsPrepared": true,
+  "remoteGenerationPerformed": false,
+  "providerScriptsExecuted": false,
+  "sourceScoresModified": false,
+  "followup": {
+    "providerReadyNotification": "reported in current conversation",
+    "localFileMonitor": {
+      "automationID": "grok-benchmark-intake",
+      "status": "PAUSED",
+      "intervalMinutes": 15,
+      "purpose": "Finish finite intake when remaining two archives arrive; do not generate or upload.",
+      "completedAtUTC": "2026-10-09T06:18:35.683203+00:00",
+      "reason": "All three packages ingested and the first calibration handoff is prepared."
+    }
+  },
+  "reuse": {
+    "previousIntakeHelpers": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/grok_return_20261009/intake_return.py",
+    "oldCLIReusableUnchanged": false,
+    "notebookReturnProcedure": "docs/notes/explorable_world/comfy/projects/collaborators/notebook_workflow/README.txt"
+  },
+  "updatedAtUTC": "2026-10-09T06:18:35.683203+00:00",
+  "outboundStatus": "HD-01 draft only; five uploads resolved; not sent, uploaded or generated",
+  "sourceZIPCleanup": "Complete: source folders moved to Processed and rehashed; verified part-one ZIP removed. Canonical copies and frozen receipts unchanged.",
+  "allPackagesIngested": true,
+  "limitations": [
+    "No model comparison or mouth animation has run.",
+    "Other raw provider prompt cards retain local-scope conflicts; HD-01 is the only adapted outgoing test.",
+    "Manifest and decode checks are file integrity evidence, not creative approval."
+  ]
+}

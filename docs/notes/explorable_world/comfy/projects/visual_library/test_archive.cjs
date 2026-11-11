@@ -28,7 +28,7 @@ assert.equal(sidebarCount('archive'),3);
 assert(ordinary().includes('source-restored'),'A saved Restore overrides source archive flags');
 assert(ordinary().includes('rejected'),'Needs fixes and rejected naming alone do not archive an image');
 assert(!ordinary().includes('history'),'Earlier-design history defaults into Archive');
-assert(page.node('#app').innerHTML.match(/data-view="review"[\s\S]*?<\/button><button data-view="archive"/),'Archive immediately follows Needs review');
+assert(page.node('#app').innerHTML.match(/data-view="collaborators"[\s\S]*?<\/button><button data-view="archive"/),'Collaborators sits immediately above Archive, as requested');
 api.route('hon','working');assert(!html().includes('Earlier design references'),'Old Working drawer is removed');
 api.route('hon','archive');assert(html().includes('data-open="history"'));assert(html().includes('data-open="source-archive"'));assert(!html().includes('data-open="active"'));
 api.setState({search:'history'});api.renderMain();assert(html().includes('data-open="history"'));assert(!html().includes('data-open="source-archive"'));

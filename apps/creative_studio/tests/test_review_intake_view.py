@@ -253,7 +253,7 @@ class IntakeParityAppTest(unittest.TestCase):
         self.assertFalse(app.expander[-1].proto.expanded)
         self.assertEqual(len([b for b in app.button if b.key and b.key.startswith("intake-supplement:") and b.key.endswith(":open")]), 1)
         self.assertTrue(any("source file not packaged" in c.value for c in app.caption))
-        self.assertTrue(any("Preview only" in c.value for c in app.caption))
+        self.assertTrue(any("Original verified in the local archive; this hosted view is preview-only." == c.value for c in app.caption))
         self.assertNotIn("repair", app.session_state["studio_reviews"])
         app.button(key="intake-supplement:hon:0:exact:open").click().run()
         self.assertEqual(app.session_state["selected"], "repair")

@@ -146,7 +146,10 @@ check('quick review leads the viewer with image description below Your note and 
  const p=boot({},fixtureCatalog),before=clone(p.api.reviewPayload().items);p.api.openViewer(asset.id);
  const html=p.api.dialog.innerHTML;
  assert(/<div class="viewer-quick-actions">[\s\S]*?<\/div><section class="review-controls"/.test(html),'Your review follows favorite and basket buttons directly');
- const review=html.match(/<section class="review-controls"[^>]*>([\s\S]*?)<\/section>/)?.[1];assert(review,'Quick review section is rendered');
+ const reviewStart=html.indexOf('<section class="review-controls"');assert(reviewStart>=0,'Quick review section is rendered');
+ const reviewTail=html.slice(reviewStart);let depth=0,reviewEnd=-1;
+ for(const tag of reviewTail.matchAll(/<\/?section\b[^>]*>/g)){depth+=tag[0].startsWith('</')?-1:1;if(!depth){reviewEnd=tag.index+tag[0].length;break;}}
+ assert(reviewEnd>0,'The full review section includes nested identity controls');const review=reviewTail.slice(0,reviewEnd);
  const ordered=['<h3>Your review</h3>','id="review-current-status"','class="review-actions"','<label for="review-note">Your note</label>','id="review-note"','Image description','Synthetic review context','id="viewer-save-review"','id="viewer-export-review"','id="viewer-archive"'];
  let previous=-1;for(const marker of ordered){const position=review.indexOf(marker);assert(position>previous,'Quick review order: '+marker);previous=position;}
  for(const status of ['keep','needs_fixes','remove',''])assert(review.includes('data-review-status="'+status+'"'),'Quick triage action remains available: '+(status||'clear'));

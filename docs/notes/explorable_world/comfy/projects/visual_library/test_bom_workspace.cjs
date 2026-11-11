@@ -50,8 +50,10 @@ const archive=api.archiveReferenceGroups(archived),remaining=new Set(archive.rem
 const represented=[];
 for(const match of archive.html.matchAll(/data-collection="([^"]+)"/g)){api.expand(match[1]);}
 const archiveIDs=[...html().matchAll(/class="media-open" data-open="([^"]+)"/g)].map(m=>m[1]);
-assert.equal(new Set(archiveIDs).size,archived.length,'Archive groups plus the loose gallery cover every archived image exactly once');
-assert.equal(archiveIDs.length,archived.length,'Grouping does not duplicate an archived mouth/image');
+const removalIDs=api.C.assets.filter(a=>a.project==='hon'&&!['document','pdf'].includes(a.kind)&&api.reviewRecord(a.id).status==='remove').map(a=>a.id);
+const expectedArchiveIDs=new Set([...archived.map(a=>a.id),...removalIDs]);
+assert.deepEqual(new Set(archiveIDs),expectedArchiveIDs,'Archive includes every archived reference and saved removal decision');
+assert.equal(archiveIDs.length,expectedArchiveIDs.size,'Separate removal and archive sections do not duplicate a reference');
 for(const a of archived)assert(a.thumb&&fs.existsSync(new URL(a.thumb,'file:///'+__dirname.replaceAll('\\','/')+'/')),'Archived reference has its thumbnail: '+a.id);
 assert(archive.html.includes('Earlier reference collections'),'Historical collections are grouped in Archive');
 api.route('hon','working');

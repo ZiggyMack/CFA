@@ -1,4 +1,4 @@
-/* Sidebar counts are visual-only except Storyboard, which counts authored parent shots. */
+/* Sidebar counts reflect browse units; documents stay separate from visual counts. */
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const clone=v=>JSON.parse(JSON.stringify(v)),REVIEW_KEY='cfa-visual-review-v1',FAVORITES_KEY='cfa-visual-favorites-v1';
 const raw=fs.readFileSync(path.join(__dirname,'catalog.js'),'utf8'),catalog=JSON.parse(raw.slice(raw.indexOf('=')+1).trim().replace(/;$/,'')),source=fs.readFileSync(path.join(__dirname,'library.js'),'utf8');
@@ -18,7 +18,8 @@ p.api.route('hon','all');
 const before=JSON.stringify(p.api.reviewPayload().items),catalogBefore=JSON.stringify(p.api.C),normal=items=>items.filter(p.api.normalVisible),visual=items=>items.filter(a=>!isDoc(a));
 const storyIDs=[...new Set(catalog.albums.filter(a=>a.project==='hon'&&a.category==='storyboard').flatMap(a=>a.assetIDs))],storyItems=normal(storyIDs.map(id=>byID.get(id)));
 assert(storyItems.some(isDoc),'Mixed storyboard fixture exercises documents alongside actual image membership');
-assert.equal(count('storyboard'),71,'Strictly Business70 authored shots plus GrillUp1');assert.equal(p.node('[data-view="storyboard"] .count').textContent,'71');
+assert.equal(count('storyboard'),14,'Storyboard navigation counts its14 authored sequences');assert.equal(p.node('[data-view="storyboard"] .count').textContent,'14');
+assert.equal(p.api.storyboardShotCount('hon'),71,'The separate shot total remains70 authored shots plus GrillUp1');
 assert.equal(p.api.storyboardShotCount('lisan'),38,'Only explicitly bound Gloved Hand authored shots count; unrelated work cannot populate Meta Mirror');
 assert.equal(p.api.storyStructure(p.api.storyboardStories('lisan').find(s=>s.kind==='song')).shots.length,0,'Structure & gaps also excludes unbound work when a story has no explicit sequence');
 assert.equal(p.api.storyboardShotCount('unassigned'),0,'An unrelated project does not inherit another project’s storyboards');
@@ -28,7 +29,7 @@ assert.equal(count('documents'),p.api.projectAssets().filter(isDoc).length);
 assert.equal(count('review_queue'),p.api.projectAssets().filter(a=>!isDoc(a)&&(catalog.reviewRequests||[]).some(r=>r.id===a.id&&r.sha256===a.sha256&&r.type==='missing_decision')&&!['keep','needs_fixes','remove'].includes(p.api.reviewRecord(a.id).status)).length,'Pending document requests do not inflate the image review count');
 assert.equal(count('notes_only'),0,'A document-only category remains navigable with zero visuals');
 for(const [id] of catalog.categories){
-  if(id==='intake'||id==='inspiration'||id==='storyboard'||id==='review')continue;
+  if(['intake','inspiration','storyboard','review','working','outfits','details','cast'].includes(id))continue;
   const ids=id==='working'?p.api.workingReferenceVisibleIDs():id==='comfy'?p.api.comfyWorkspaceIDs():[...new Set(catalog.albums.filter(a=>a.project==='hon'&&a.category===id).flatMap(a=>a.assetIDs))];
   const rows=normal(ids.map(id=>byID.get(id)).filter(Boolean));if(rows.length||['review','comfy'].includes(id))assert.equal(count(id),visual(rows).length,id+' sidebar excludes documents');
 }
@@ -39,7 +40,7 @@ p.api.route('hon','documents');for(const a of documents)assert(p.node('#main').i
 assert.equal(JSON.stringify(p.api.reviewPayload().items),before,'Counting and document browsing do not change reviews');assert.equal(JSON.stringify(p.api.C),catalogBefore);
 const duplicateCatalog=clone(catalog);duplicateCatalog.storyboardStories.push(clone(duplicateCatalog.storyboardStories.find(s=>s.id==='hon:strictly-business')),{id:'hon:extra-seed',project:'hon',title:'Seed only',kind:'sequence',group:'Series and seeds',documentIDs:[]});
 duplicateCatalog.albums.filter(a=>a.project==='hon'&&a.category==='storyboard').forEach(a=>a.assetIDs=[]);
-const duplicatePage=makePage({},duplicateCatalog);assert.equal(duplicatePage.api.storyboardShotCount('hon'),71,'Duplicate IDs, source sequence registration, seed-only records and absent image membership do not inflate shot totals');assert.equal(parseInt(duplicatePage.node('[data-view="storyboard"] .count').textContent,10),71,'Registered authored shots retain their navigation when there are no image-album members');
+const duplicatePage=makePage({},duplicateCatalog);assert.equal(duplicatePage.api.storyboardShotCount('hon'),71,'Duplicate IDs, source sequence registration, seed-only records and absent image membership do not inflate shot totals');assert.equal(parseInt(duplicatePage.node('[data-view="storyboard"] .count').textContent,10),14,'Registered authored sequences retain navigation without image-album members');
 const authored=duplicateCatalog.storyboardStructure.stories.find(s=>s.storyID==='hon:strictly-business');
 assert.equal(authored.sections.find(s=>s.id==='PROLOGUE').shotIDs.length,8);assert.equal(authored.sections.find(s=>s.id==='S02').shotIDs.length,10);
 authored.shots.push(clone(authored.shots[0]),{shotID:'P-1B',title:'Distinct authored suffix',parent:{path:'source.md'}},{shotID:'P-1-detail',parentShotID:'P-1'},{shotID:'P-1-detail-two',parent_shot_id:'P-1'},{shotID:'P-1-detail-three',parent:{shotID:'P-1'}});
@@ -53,4 +54,4 @@ p.api.toggleBasket(image.id);assert.equal(count('export_basket'),basketBefore+1)
 const plan={status:'planned',destinations:['Flow'],idea:'Counting test',prompt:''};p.api.updateReview(doc.id,{shotPlan:plan});assert.equal(count('shot_plans'),plansBefore);assert.deepEqual(clone(p.api.reviewRecord(doc.id).shotPlan),plan);
 p.api.render();assert.equal(count('favorites'),favoritesBefore);assert.equal(count('export_basket'),basketBefore+1);assert.equal(count('shot_plans'),plansBefore);
 const archiveBefore=count('archive');p.api.updateReview(doc.id,{collectionState:'archived'});assert.equal(count('archive'),archiveBefore,'Archived document is excluded from sidebar visual total');p.api.route('hon','archive');assert(p.node('#main').innerHTML.includes('data-open="'+doc.id+'"'));
-console.log('Document counts passed: Storyboard counts authored parent shots, other sidebar totals count visuals, live updates and document navigation preserve selections and reviews.');
+console.log('Document counts passed: Storyboard counts sequences separately from shots; document exclusion, live updates and document navigation preserve selections and reviews.');

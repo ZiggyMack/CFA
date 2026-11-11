@@ -74,6 +74,7 @@ sys.path.insert(0, {str(APP)!r})
 import streamlit as st
 from library_helpers import ordered_assets, mission_pending_requests
 CORNER = 'Corner'
+CASA = 'Casa Baldadoon'
 {functions}
 init_state()
 if 'fixture_reviews' not in st.session_state:

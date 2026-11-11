@@ -72,8 +72,9 @@ check('exact character route keeps its content and source evidence in place',()=
  const p=boot();show(p,{album:'hon:boss-round01',castFilter:'planned',castSource:'hon:cast-ivory'});
  sameIDs(p.api.castHubGroups('hon:boss-round01').map(g=>g.id),['hon:boss-round01'],'Exact character ID takes precedence over shared source album membership');
  assert(p.html().includes('data-character-hub="hon:boss-round01"'),'A direct character route ignores browse filters');assert(!p.html().includes('id="cast-source"'),'Focused hub does not masquerade as a filtered grid');
- assert(p.html().includes('<details class="character-hub-section character-hub-origin">'),'Origin evidence starts in a collapsed drawer');
- assert(p.html().includes('Source collection / run · hon:boss-round01'),'The original discovery run remains visible in the hub');
+ assert(!p.html().includes('character-hub-origin'),'The removed Origin drawer does not duplicate the reference gallery');
+ assert(p.html().includes('character-hub-references'),'Character reference images remain directly available inside the hub');
+ assert(p.C.castCollections.some(group=>group.id==='hon:boss-round01'),'Removing the Origin drawer preserves the source collection identity');
  assert(!p.html().includes('data-character-hub="hon:cast-bartender"'),'Related roles do not replace the current character hub');
 });
 

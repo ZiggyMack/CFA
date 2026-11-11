@@ -42,6 +42,11 @@ coverage/
 # Temporary files
 *.tmp
 *.temp
+*.crdownload
+
+# Google Drive transfer staging is transient, not project source.
+.tmp.driveupload/
+.tmp.drivedownload/
 
 # Nyquist Consciousness sync directory
 # OLD folder contains archived/reference materials - ignored

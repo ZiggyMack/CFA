@@ -1,0 +1,105 @@
+LISAN AL GAIB — GROK 500 DELIVERY RECEIPT
+
+Verified 2026-10-09T02:16:53.192404+00:00 (October 8, 2026 in America/New_York).
+Intake ID: LAG-500-20261008. All paths below are relative to the CFA repository root.
+
+MEASURED DELIVERY
+Eight already-unpacked outer folders supplied 50 nested look ZIPs and a loose guide.
+The verified received copy has 555 files / 157,332,928 bytes:
+500 distinct source JPEGs (138,116,226 bytes), 50 contact sheets
+(18,089,009 bytes), one contact index, and four document copies.
+The four document copies are LEGEND-500.csv, QA.txt, and two byte-identical
+NOVA-GUIDE-500.md copies retained from part01 and the loose guide.
+
+Each of 50 looks has V1–V5 and S1–S5: 250 reference-view studies and
+250 story-scene studies. Source images are 1280 x 720; contacts are
+2496 x 748; the index is 3088 x 1083. All 551 images decoded successfully.
+CSV rows 1–500 match every exact ZIP/member name with no gaps or extras.
+All 500 source hashes are unique within this batch. The intake verified
+all 50 nested ZIP CRCs, 55 original input hashes and 555 output hashes/sizes.
+The read-only audit also found no source hash matches in the hosted catalog
+that existed before this batch was added. This is not a whole-machine search.
+At extraction time outer ZIP CRCs could not be verified because those bytes
+were not yet available; see the later verification below.
+
+PORTABLE FILE MAP
+Ledger: docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/asset_ledger.json
+Ledger SHA-256: 862bf97eb9028e25018fd1191bda9d43ccc7827f17a8f33c93d489c3e08626b9
+Receipt: docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/intake_receipt.json
+Receipt SHA-256: 96069a962794403c9d426150158acff20fd6de66f833e129f006cd70d5ce8db9
+Receipt size: 820212 bytes
+Original input folder: docs/notes/explorable_world/comfy/references/From Grok
+Received originals: docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/
+
+Stable source IDs: LAG500-L01-V1 through LAG500-L50-S5.
+Contacts: LAG500-L01-CONTACT through LAG500-L50-CONTACT.
+Index: LAG500-CONTACT-INDEX. Ledger sourceRow is the exact CSV ledger number.
+Formula: (look number - 1) x 10 + shot position; V1–V5 = 1–5, S1–S5 = 6–10.
+Each ledger row preserves all 14 original CSV fields in providerRecord, plus
+its saved path, SHA-256, bytes, dimensions and exact directory/ZIP/member chain.
+
+PROVIDER LABELS — KEPT SEPARATE FROM APPROVAL
+CSV labels: 220 OK, 271 OK-note, 9 FLAG. Flagged rows:
+4, 19, 61, 192, 200, 216, 291, 301, 319.
+75 hero candidates: 33 OK and 42 OK-note. These are Grok's candidates.
+69 breather=Y and 25 arm_worm=Y describe requested features, not confirmed
+visibility. For example, row 486 requests a breather but its QA says it is missing.
+470 rows have nonempty notes, including 190 OK rows. Use qa_status rather
+than note-presence to find the 280 caveated rows.
+
+The guide's six overlapping drift lists reconcile to their stated counts:
+72 piercing, 48 GAIB, 42 neckline/chest, 5 arm-side, 7 profile-direction,
+11 breather. Do not sum those counts as unique images. All 50 look mappings
+and all 75 hero-table entries match the CSV.
+The raw QA log has 136 explicit numbered statuses from 363–500, matching
+the CSV; rows 366/367 remain free-form entries like the earlier records.
+Rows 1, 2, 5, 6, 82, 86 are labelled packager spot-checks without raw QA lines.
+
+REUSE AND REMAINING REVIEW
+No new working reference, favorite, technical production acceptance or
+storyboard stage is established by this intake. Keep the existing Lisan
+face/arm/outfit roles and approved Gemini scene scope separate.
+Use stable IDs plus exact images when preparing collaborator subsets.
+V views are reference studies; S scenes are composition candidates.
+The older 422-image tattoo audit does not cover these 500 new sources.
+
+PRESERVATION AND CLEANUP
+No source image was transformed. The first extraction hit the Windows
+legacy path limit; six partial files were reused only after exact verification.
+The resumed intake finished successfully. The longest saved path is 274
+characters; readers on Windows should use long-path-capable I/O while
+keeping the portable relative names unchanged.
+At receipt time every source ZIP remained intact; no ZIP cleanup occurred.
+This receipt and ledger record that observation. Later cleanup must preserve
+the received originals and explicitly record the verified ZIPs removed.
+The frozen extraction receipt preserves the then-unavailable outer ZIP state;
+see the later separately verified outer ZIP observation below.
+
+
+LATER VERIFIED ZIP CLEANUP AND CATALOG CHECK — 2026-10-09T03:00:02.475982+00:00
+The ZIP cleanup completed at 2026-10-09T02:53:25.757735+00:00.
+50 nested ZIPs (156,330,213 bytes) and eight outer ZIPs
+(157,427,803 bytes) were removed: 58 ZIPs / 313,758,016 bytes reclaimed.
+All 555 extracted files were reverified after cleanup. No image, document
+or directory was deleted. The eight outer ZIPs were found later in Downloads;
+all eight passed CRC and their 54 members matched the original input hashes.
+This later verification supersedes the earlier unknown outer-CRC state
+without changing that frozen receipt or the original source ledger.
+
+Nested cleanup receipt: docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/cleanup_summary.json
+SHA-256: 8d843f84f5a1449ec37551b63bb07a2c68104dfe0fe3841123e4db24723f42a9
+Outer cleanup receipt: docs/notes/explorable_world/comfy/projects/lisan_al_gaib/grok_500_20261008/received/outer_cleanup_summary.json
+SHA-256: 7e06628a3e1c478fefff4b33e0735996e0e139cd47e4955d0f65d6316087e35a
+Frozen extraction receipt SHA-256 remains 96069a962794403c9d426150158acff20fd6de66f833e129f006cd70d5ce8db9.
+Frozen source-ledger SHA-256 remains 862bf97eb9028e25018fd1191bda9d43ccc7827f17a8f33c93d489c3e08626b9.
+
+The local catalog contains 1,133 assets / 1,005 media / 128 documents /
+136 albums. The added batch has 551 media and four documents. Its full
+file audit rehashed and decoded all 551 originals and decoded all 551
+previews (at most 480 pixels). The 50 look groups each contain ten sources
+and their contact sheet; provider QA counts and hero flags reconcile.
+These file/navigation checks do not establish creative approval.
+Root visually viewed CONTACT-INDEX.jpg only: all 50 V1 portrait thumbnails
+were visible. Individual500-image/tattoo review remains pending.
+The browser file URL was blocked, so no rendered gallery QA is claimed.
+Hosted rebuild/publication remains unverified in this record.

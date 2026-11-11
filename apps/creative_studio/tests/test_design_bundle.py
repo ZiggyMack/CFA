@@ -102,6 +102,18 @@ class DesignBundleTests(unittest.TestCase):
         self.assertEqual(result['collaboratorReviews'], before)
         self.assertEqual(result['collaboratorReviewBackups'], collaborator_backups())
 
+    def test_location_notes_and_unmapped_review_evidence_bypass_path_cleaning(self):
+        evidence = {'href': '../unread.json', 'src': 'D:/Documents/CFA/source.jpg',
+                    'sourceURL': '../original.txt'}
+        self.catalog['locationReviews'] = {'criminal_mind:house': {'note': 'Denser neighborhood', 'source': evidence}}
+        self.catalog['locationReviewBackups'] = [{'reason': 'older note', 'data': evidence}]
+        self.catalog['validationEvidence'] = {'legacyReviewArchive': [{'source': evidence}]}
+        result = self.run_build()
+        for key in ('locationReviews', 'locationReviewBackups', 'validationEvidence'):
+            self.assertEqual(result[key], self.catalog[key])
+        self.assertFalse((self.out / 'source.jpg').exists())
+        self.assertFalse((self.out / 'unread.json').exists())
+
     def test_reuses_verified_media_by_hash_even_when_id_changed(self):
         relative = self.seed_cache()
         result = self.run_build()

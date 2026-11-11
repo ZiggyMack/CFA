@@ -183,7 +183,7 @@ def build(design: Path = APP / 'library', source: Path = VISUAL, output: Path = 
         result = {}
         for key, item in value.items():
             # User review payloads are evidence, not navigation instructions.
-            if key in {'reviewDecisions', 'sceneReviews', 'storyboardTakes', 'storyboardTakeBackups', 'collaboratorReviews', 'collaboratorReviewBackups'}:
+            if key in {'reviewDecisions', 'sceneReviews', 'storyboardTakes', 'storyboardTakeBackups', 'collaboratorReviews', 'collaboratorReviewBackups', 'locationReviews', 'locationReviewBackups', 'validationEvidence'}:
                 result[key] = item
             elif isinstance(item, str) and (key in {'src', 'thumb', 'href', 'url', 'downloadPath'} or key.endswith(('URL', 'Href'))):
                 mapped = portable_url(item, value, key, trail)
@@ -218,7 +218,9 @@ def build(design: Path = APP / 'library', source: Path = VISUAL, output: Path = 
             raise ValueError('Packaged media destination escapes the bundle')
         record = media_records[relative]
         if target.exists():
-            if sha(target.read_bytes()) != record['sha256']:
+            # A hardlink is the exact file already checked by verified_files.
+            # Independent copies still need their own content check.
+            if not os.path.samefile(origin, target) and sha(target.read_bytes()) != record['sha256']:
                 raise ValueError('Existing content-addressed snapshot was modified')
         elif copy_media:
             shutil.copyfile(origin, target)

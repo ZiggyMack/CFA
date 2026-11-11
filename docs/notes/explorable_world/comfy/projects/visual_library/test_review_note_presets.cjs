@@ -31,7 +31,7 @@ function open(p,id){
  // The small shared DOM double does not parse textarea defaultValue as a browser does.
  node(p,'review-note').value=p.api.reviewRecord(id).note||'';
 }
-function unchangedFields(record){const copy=clone(record);delete copy.note;delete copy.updatedAt;delete copy.origin;copy.sha256=copy.sha256||byID.get(record.id).sha256;copy.shotPlan=copy.shotPlan||null;return copy;}
+function unchangedFields(record){const copy=clone(record);for(const field of ['note','updatedAt','origin','reviewer','reviewerControllerID','projectControllerID','decisionAuthorityControllerID','decisionScope','humanReview'])delete copy[field];copy.sha256=copy.sha256||byID.get(record.id).sha256;copy.shotPlan=copy.shotPlan||null;return copy;}
 function saveNew(p,label,text){const before=new Set(presets(p).map(r=>r.id));assert.equal(p.api.saveNotePreset('',label,text),true);const row=presets(p).find(r=>!before.has(r.id));assert(row,'A unique preset ID was created');return row;}
 const checks=[];function check(name,fn){fn();checks.push(name);}
 
@@ -65,6 +65,10 @@ check('select handler appends literal text to the visible note for images and vi
   assert.equal(node(p,'review-note').value,expected);assert.equal(p.api.reviewRecord(id).note,expected);
   assert.equal(node(p,'note-preset-select').value,'','Applying resets the chooser');
   assert.deepEqual(unchangedFields(p.api.reviewRecord(id)),before,'Preset application changes no decision, rating, plan or role');
+  const receipt=clone(p.api.reviewRecord(id).humanReview);
+  assert.deepEqual(receipt.fields,['note'],'Human attribution covers only the note changed by the preset');
+  assert.equal(receipt.reviewerControllerID,'ziggy');assert.equal(receipt.assetID,id);assert.equal(receipt.sha256,byID.get(id).sha256);
+  assert.equal(receipt.decisionScope,'project_decision');assert.equal(receipt.project,'hon');assert(Number.isFinite(Date.parse(receipt.updatedAt)));
   assert.equal(p.api.reviewPayload().items.find(a=>a.id===id).note,expected,'Export uses actual text, not a preset ID');
  }
  assert(p.writes.filter(([key])=>key===REVIEW_KEY).length>=2,'Both media notes use the normal review persistence');

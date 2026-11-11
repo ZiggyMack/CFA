@@ -9,7 +9,7 @@ const source=fs.readFileSync(path.join(__dirname,'library.js'),'utf8');
 const catalog=JSON.parse(fs.readFileSync(path.join(__dirname,'catalog.js'),'utf8').split('=').slice(1).join('=').trim().replace(/;$/,''));
 const REVIEW_KEY='cfa-visual-review-v1';
 
-function boot(saved={},hash='#criminal_mind/locations'){
+function boot(saved={},hash='#criminal_mind/locations',catalogOverride={}){
   const elements=new Set(),nodes=new Map(),storage=new Map(Object.entries(saved)),writes=[],downloads=[],blobs=new Map();
   const decode=value=>value.replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>');
   const dataKey=name=>name.replace(/^data-/,'').replace(/-([a-z])/g,(_,letter)=>letter.toUpperCase());
@@ -43,7 +43,7 @@ function boot(saved={},hash='#criminal_mind/locations'){
   nodes.set('#app',new Element());
   const selectAll=selector=>{const match=/^\[([\w-]+)(?:="([^"]*)")?\]$/.exec(selector);if(!match)return[];return[...elements].filter(element=>Object.hasOwn(element.attributes,match[1])&&(match[2]===undefined||element.attributes[match[1]]===match[2]));};
   const document={currentScript:{src:'file:///D:/Documents/CFA/docs/notes/explorable_world/comfy/projects/visual_library/library.js'},body:new Element('body'),createElement:tag=>new Element(tag),addEventListener(){},querySelector:selector=>nodes.get(selector)||selectAll(selector)[0]||null,querySelectorAll:selectAll};
-  const location={hash},window={REVIEW_CATALOG:clone(catalog),REVIEW_INITIAL:{project:'criminal_mind',view:'locations'},addEventListener(){},scrollTo(){},scrollBy(){}};
+  const location={hash},window={REVIEW_CATALOG:{...clone(catalog),...clone(catalogOverride)},REVIEW_INITIAL:{project:'criminal_mind',view:'locations'},addEventListener(){},scrollTo(){},scrollBy(){}};
   class TestURL extends URL{static createObjectURL(blob){const url='blob:location-'+blobs.size;blobs.set(url,blob);return url;}static revokeObjectURL(){}}
   const context={window,document,location,URL:TestURL,Blob,Intl,console,setTimeout(){return 1;},clearTimeout(){},localStorage:{getItem:key=>storage.get(key)??null,setItem(key,value){storage.set(key,value);writes.push([key,value]);}},sessionStorage:{getItem(){return null;},setItem(){}}};
   const hook=`window.__locationTest={C,route,renderMain,locationFamilies,locationFamilyCount,storyboardSequenceCount,supportingCastCount,outfitCollectionCount,accessoryUnitCount,workingReferenceSetCount,locationScoutSelection,locationReviewRecord,updateLocationReview,reviewRecord,reviewPayload,importReview,updateReview,selectedReviewScope,getState:()=>state,setCasaStage(value){state.casaStages=state.casaStages||{};state.casaStages[state.project]=value;},setReviewIdentity(project,actor,scope){actorSelections.set(project,actor);scopeSelections.set(project,scope);}};`;
@@ -158,6 +158,43 @@ const portableConfirmed=familyPayload.locationReviews.find(row=>row.project==='c
 assert.equal(portableConfirmed.reviewerControllerID,'baldadoon');
 assert.equal(portableConfirmed.decisionScope,'location');
 assert(!portableConfirmed.status&&!portableConfirmed.workingReference&&!portableConfirmed.castUse&&!portableConfirmed.shotPlan,'A location note carries no asset approval fields');
+
+// A publication seed restores family direction in a clean browser. Older local
+// backups and imported JSON cannot roll it back; conflicts remain exportable.
+const currentNote={...clone(portableConfirmed),updatedAt:'2026-11-06T12:00:00Z'};
+const oldNote={...clone(currentNote),note:'Earlier draft',updatedAt:'2026-11-05T12:00:00Z'};
+const noteEnvelope=record=>({format:REVIEW_KEY,items:[],favorites:[],locationReviews:[record]});
+const seeded=boot({},'#criminal_mind/locations',{locationReviews:[currentNote]});
+assert.equal(seeded.api.locationReviewRecord('criminal_mind',impalaFamilyID).note,currentNote.note,'Published family note seeds a clean browser');
+const archivedReceipt={id:'archive-only-receipt',sha256:'a'.repeat(64),note:'Original reviewer receipt',humanReview:{reviewerControllerID:'baldadoon',fields:['note']}};
+const publishedEvidence=boot({},'#criminal_mind/locations',{validationEvidence:{format:'cfa-reference-validation-v1',schemaVersion:1,assessments:[],legacyReviewArchive:[archivedReceipt]}});
+assert(publishedEvidence.api.reviewPayload().validationEvidence.legacyReviewArchive.some(row=>row.id===archivedReceipt.id&&row.humanReview?.reviewerControllerID==='baldadoon'),'Catalog publication archive survives a clean browser export without becoming an active decision');
+assert(!publishedEvidence.api.reviewPayload().items.some(row=>row.id===archivedReceipt.id),'Archived attribution never activates an image decision');
+const provenanceExtra={...clone(currentNote),humanReview:{...clone(currentNote.humanReview),sourceReceipt:'director-original-export'},reviewer:'Director-provided label'};
+const provenancePage=boot({},'#criminal_mind/locations',{locationReviews:[provenanceExtra]});
+assert(provenancePage.api.reviewPayload().locationReviewBackups.some(item=>item.data.humanReview?.sourceReceipt==='director-original-export'&&item.data.reviewer==='Director-provided label'),'Supplied nested provenance and reviewer labels remain recoverable when normalization rewrites them');
+const draftProvenance={...clone(currentNote),reviewerControllerID:'unrecognized-reviewer',humanReview:{sourceReceipt:'unconfirmed-original'}};
+provenancePage.api.importReview(noteEnvelope(draftProvenance));
+assert(provenancePage.api.reviewPayload().locationReviewBackups.some(item=>item.data.humanReview?.sourceReceipt==='unconfirmed-original'),'Unconfirmed supplied provenance is backed up without inventing confirmation');
+const staleBrowser=boot({[REVIEW_KEY]:JSON.stringify(noteEnvelope(oldNote))},'#criminal_mind/locations',{locationReviews:[currentNote]});
+assert.equal(staleBrowser.api.locationReviewRecord('criminal_mind',impalaFamilyID).note,currentNote.note,'Stale localStorage cannot replace newer published direction');
+seeded.api.importReview(noteEnvelope(oldNote));
+assert.equal(seeded.api.locationReviewRecord('criminal_mind',impalaFamilyID).note,currentNote.note,'Stale JSON cannot replace newer direction');
+const conflict={...clone(currentNote),note:'Conflicting same-time suggestion'};
+seeded.api.importReview(noteEnvelope(conflict));
+seeded.api.importReview(noteEnvelope({...clone(oldNote),updatedAt:null}));
+assert.equal(seeded.api.locationReviewRecord('criminal_mind',impalaFamilyID).note,currentNote.note,'Equal-time and undated notes cannot erase current work');
+assert(seeded.api.reviewPayload().locationReviewBackups.some(item=>item.data.note===oldNote.note),'Old note is retained in the complete review backup');
+assert(seeded.api.reviewPayload().locationReviewBackups.some(item=>item.data.note===conflict.note),'Conflicting note is retained for reconciliation');
+const clear={...clone(currentNote),note:'',updatedAt:'2026-11-07T12:00:00Z'};
+seeded.api.importReview(noteEnvelope(clear));
+assert.equal(seeded.api.locationReviewRecord('criminal_mind',impalaFamilyID).note,'','A newer dated explicit clear is respected');
+assert(seeded.api.reviewPayload().locationReviewBackups.some(item=>item.data.note===currentNote.note),'Cleared text remains recoverable in backup');
+seeded.api.importReview(noteEnvelope({...clone(oldNote),locationFamilyID:'unknown-future-family'}));
+assert(seeded.api.reviewPayload().locationReviewBackups.some(item=>item.data.locationFamilyID==='unknown-future-family'),'Unknown family feedback is preserved without rebinding');
+const seededAgain=boot(seeded.snapshot(),'#criminal_mind/locations',{locationReviews:[currentNote]});
+assert.equal(seededAgain.api.locationReviewRecord('criminal_mind',impalaFamilyID).note,'','Explicit clear survives fresh context plus older catalog seed');
+assert.deepEqual(clone(seededAgain.api.reviewPayload().items),clone(seeded.api.reviewPayload().items),'Family-note reconciliation never changes asset reviews');
 
 api.setCasaStage('locations');api.route('criminal_mind','casa_baldadoon');assert.match(page.html(),/Director’s chair · Location scout/);assert.match(page.html(),/Open shared Locations library/);assert.equal(api.locationScoutSelection().family.id,'TCM-SET-IMPALA','Casa reuses the shared scout selection and inventory');
 for(const project of ['hon','lisan']){api.route(project,'locations');assert.equal(api.getState().view,'locations');assert.match(page.html(),/No location families have been recorded for this project yet/);}

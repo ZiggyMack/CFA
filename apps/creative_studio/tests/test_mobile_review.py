@@ -31,7 +31,7 @@ def callbacks(state):
              "undo_clear_note_presets", "load_note_preset_editor", "save_note_preset", "seed_review_selections"}
     tree = ast.parse((APP / "app.py").read_text(encoding="utf-8"))
     definitions = ast.Module(body=[node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name in names], type_ignores=[])
-    namespace = {"st": SimpleNamespace(session_state=state), "NOTE_LIMIT": 20000,
+    namespace = {"st": SimpleNamespace(session_state=state), "NOTE_LIMIT": 20000, "CASA": "Casa Baldadoon",
                  "NOTE_PRESETS_FORMAT": "cfa-review-note-presets-v1", "review_payload": review_payload,
                  "REVIEW_EDITABLE_FIELDS": ("status", "note", "shotPlan", "likenessRating", "sceneQualityRating"),
                  "read_review": read_review, "read_basket": read_basket, "EXPORT_FORMAT": EXPORT_FORMAT,

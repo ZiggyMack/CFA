@@ -90,7 +90,7 @@ if(!process.argv.includes('--fixtures-only')){
  const realItems=real.items||[];
  const reviewable=realItems.filter(item=>item.availability==='local_original_verified'&&byID.get(item.exactAssetID)?.sha256===item.sha256);
  assert.equal(realItems.filter(item=>item.availability==='local_original_verified').length,50,'50 original images are verified locally');
- assert.equal(reviewable.length,45,'45 verified originals have exact catalog IDs and normal review controls');
+ assert.equal(reviewable.length,49,'49 verified originals now have exact catalog IDs and normal review controls');
  for(const item of reviewable){
   const html=live.api.supplementCard(item);
   assert(html.includes('data-open="'+item.exactAssetID+'"'),'Real supplied version opens its exact asset: '+item.title);

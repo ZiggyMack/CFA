@@ -115,11 +115,12 @@ assert(hasLeaf(heads[1]));assert(!hasLeaf(heads[0]));assert(!hasLeaf(heads[2]));
 // Purpose chips hide unrelated sections and leave BOM expansion available.
 state({view:'all'});assert(page.html().includes('data-purpose="all"'));
 const chipNames=page.elements('[data-all-purpose]').map(e=>e.dataset.allPurpose);
-for(const name of ['working','outfits','details','cast','storyboard','videos','comfy','inspiration','documents'])assert(chipNames.includes(name));
-page.click('data-all-purpose','working');assert(!page.html().includes('data-outfit-collection='));
-assert(page.html().includes('class="working-bom"'));assert(!page.html().includes('class="cast-explorer"'));
-const bomGroup=groups()[0];assert(bomGroup);page.toggle(bomGroup);assert(page.html().includes('Default identity'));checks++;
-page.click('data-all-purpose','outfits');assert(page.html().includes('data-outfit-collection='));assert(!page.html().includes('class="working-bom"'));checks++;
+for(const name of ['outfits','details','cast','storyboard','videos','comfy','inspiration','documents'])assert(chipNames.includes(name));
+assert(!chipNames.includes('working'),'The detailed working BOM has its own workspace');
+state({view:'working'});assert(!page.html().includes('data-outfit-collection='));
+assert(page.html().includes('data-collection="hon:character-bom"'));assert(!page.html().includes('class="cast-explorer"'));
+const bomGroup=groups()[0];assert(bomGroup);page.toggle(bomGroup);assert(page.html().includes('Verbose BOM'));checks++;
+state({view:'all'});page.click('data-all-purpose','outfits');assert(page.html().includes('data-outfit-collection='));assert(!page.html().includes('class="working-bom"'));checks++;
 page.click('data-all-purpose','details');assert(page.html().includes('Tattoo stencils'));assert(!page.html().includes('data-outfit-collection='));checks++;
 page.click('data-all-purpose','documents');assert(!page.html().includes('data-collection="'));assert(page.html().includes('document'));checks++;
 const css=fs.readFileSync(path.join(__dirname,'library.css'),'utf8');assert(css.includes('.all-files-workspace .working-bom>.collection-catalog{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}'));
@@ -133,14 +134,14 @@ assert(groups().includes('hon:falcon-reference-exploration'));assert(page.html()
 page.toggle('hon:falcon-reference-exploration');assert(page.html().includes('Claude directed the scene/category concepts'));
 assert(page.html().includes('not narrative chapters'));const categoryCount=new Set(falcon.map(a=>a.providerCategory)).size;
 assert.equal(groups().filter(id=>/^hon:falcon-reference-c\d+$/.test(id)).length,categoryCount);
-page.toggle('hon:falcon-reference-c01');const c01=falcon.filter(a=>a.providerCategory.startsWith('C01-'));
+page.toggle('hon:falcon-reference-c01');const c01=falcon.filter(a=>a.providerCategory.startsWith('C01-')&&!a.archived&&api.reviewRecord(a.id).status!=='remove');
 for(const a of c01)assert(hasLeaf(a.id));checks++;
 api.setState({storyStart:25,storyEnd:50});api.renderMain();for(const a of c01)assert(hasLeaf(a.id),'source-panel range does not drop untimed candidates');checks++;
 const sourceAlbum=sbAlbums[0];state({view:'storyboard',album:sourceAlbum.id});page.toggle(sourceAlbum.id);
 const sourceIDs=[...page.html().matchAll(/data-open="([^"]+)"/g)].map(m=>byID.get(m[1])).filter(a=>a?.storyboardOrder).map(a=>a.storyboardOrder);
 assert.deepEqual(sourceIDs,[...sourceIDs].sort((a,b)=>a-b));assert(!groups().includes('hon:falcon-reference-exploration'));checks++;
 const falconAlbum=catalog.albums.find(a=>a.id==='hon:falcon-group1-c01');state({view:'storyboard',album:falconAlbum.id});page.toggle(falconAlbum.id);page.toggle('hon:falcon-reference-c01');
-for(const id of falconAlbum.assetIDs)assert(hasLeaf(id));assert(!page.html().includes('id="story-start"'));
+for(const id of falconAlbum.assetIDs.filter(id=>!byID.get(id).archived&&api.reviewRecord(id).status!=='remove'))assert(hasLeaf(id));assert(!page.html().includes('id="story-start"'));
 assert(!hasLeaf(falcon.find(a=>a.providerCategory.startsWith('C02-')).id));checks++;
 // The selected Grill Up reference/history remain separate from its ten panels.
 const grillSequenceID='HON-QUARTERS-GRILL-CHANGE-20261009',grillStory=catalog.storyboardStories.find(s=>s.sequenceID===grillSequenceID);assert(grillStory);
@@ -154,7 +155,7 @@ assert(page.html().includes('data-scene-id="'+grillSequenceID+'"'),'Scene readin
 state({view:'details',detailLayout:'all'});
 for(const key of ['ship','eye','know','blaster','leigh','scoundrel','optional-motifs'])assert(groups().includes('hon:tattoo-'+key));
 assert(page.html().includes('One collection per tattoo'));assert(!page.html().includes('class="working-bom"'));
-page.toggle('hon:tattoo-eye');assert(page.html().includes('Stencils and artwork options'));assert(page.html().includes('Body appearances'));checks++;
+page.toggle('hon:tattoo-eye');for(const title of ['Artwork / stencil','Placement and mannequin guide','Body appearances'])assert(page.html().includes(title),'Tattoo workspace retains '+title);checks++;
 
 // Video grouping uses real album purpose, retaining existing four design stages.
 state({view:'videos',videoLayout:'grouped'});

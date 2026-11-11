@@ -19,6 +19,8 @@ class DesignAppTest(unittest.TestCase):
 
     def test_storyboard_review_lane_opens_exact_authored_package(self):
         app = self.launch()
+        self.assertEqual(app.session_state.studio_view, "Library")
+        app.button(key="nav:Ziggy’s Corner").click().run()
         before = json.dumps(app.session_state.studio_reviews, sort_keys=True)
         self.assertTrue(any('1 writing package awaits your choices.' == caption.value for caption in app.caption))
         button = app.button(key='mission-storyboard-review:hon-coverage-review-queue-20261028')
@@ -43,6 +45,8 @@ class DesignAppTest(unittest.TestCase):
 
     def test_all_design_destinations_and_archive_restore_without_review_loss(self):
         app = self.launch()
+        self.assertEqual(app.session_state.studio_view, "Library")
+        app.button(key="nav:Ziggy’s Corner").click().run()
         snapshot = json.loads((APP / "library/design_catalog.json").read_text(encoding="utf-8"))
         reviews = app.session_state["studio_reviews"]
         visible = effective_design_data(snapshot, reviews)

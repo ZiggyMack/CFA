@@ -1,0 +1,4010 @@
+{
+ "schemaVersion": 1,
+ "id": "HD-STRICTLY-BUSINESS-VIDEO-01",
+ "project": "hon",
+ "title": "Hon Dolo - Strictly Business: coverage crosswalk",
+ "role": "companion map v001 (posted 2026-10-28): the 36 original panels placed against the authored shots by position in the final track; nothing accepted",
+ "stage": "preliminary",
+ "timing": null,
+ "author": "claude",
+ "sourceDocuments": [
+  "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_PROLOGUE.md",
+  "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_CHORUSES_OUTRO.md",
+  "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S02.md",
+  "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S04.md",
+  "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S05_S08.md",
+  "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S07.md",
+  "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S10.md",
+  "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_EPILOGUE.md",
+  "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/STORYBOARD_UPDATE_20261011.md",
+  "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/shot_plan.json",
+  "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/Hon_DoLo.txt",
+  "docs/notes/explorable_world/comfy/projects/visual_library/story_notes.json",
+  "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/DECISIONS_20261010.md",
+  "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/OPENING_PACKET_20261028.md",
+  "docs/notes/explorable_world/comfy/projects/collaborators/storyboard_detail_20261009/01_hon/workshop_current_20261009/REVIEWED_PLAN.txt",
+  "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/CLAUDE_GRADES_20261012.md",
+  "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/asset_ledger.json"
+ ],
+ "positionBasis": "shot_order within section; sections in track order (PROLOGUE, S01 to S12, EPILOGUE); the prologue and epilogue are sequence contexts outside the song",
+ "notes": [
+  "Every acceptance state word is proposed, existing or missing (artState also uses partial); nothing here is accepted by anyone; timing is null everywhere and no time value appears in this file.",
+  "Placement (panels[].placement) is not a state: used = one shot cites the panel, reused = two or more shots cite it, parked = no shot uses it (SB-20 and SB-33 as the brief asks; SB-31 and SB-35 as the choruses card names them). A parked panel may still carry a usedBy entry whose role is named_only, meaning the card names the panel without using it.",
+  "Roles (originalPanels[].role and usedBy[].role) are a closed list: composition, staging, idea, framing, mood, repurposed, precedent, concept, evidence, layout, legibility, continuity, reference_d, reference_e, text_described, wrist_reference_f, anchor_r4, named_only. The card's wording is in note. named_only entries do not count as art behind the shot. Three labels are this crosswalk's rather than the card's and their notes say so: continuity for SB-05 at S02-7 and for SB-25 at S10-3 (the card names each in the shot's Continuity line), and anchor_r4 at E-6 and E-8 (the card says 'for the grill's shape' and 'for the piece').",
+  "Art state: existing where a panel stands behind the shot and the card names no missing art; partial where a panel stands behind it but the card still names missing art, or gates the shot on an unaccepted frame (S02-1); missing where no panel stands behind it. A graded Falcon frame is staging only and does not change the state.",
+  "The wrist chain and band reference F is SB-06's asset id and is named in most Dolo shots as an identity reference; SB-06 counts as a panel use only where a card lists it among the shot's panels (S02-6, S07-1).",
+  "The epilogue's quarters-board ids (SB-GRILL-01 to SB-GRILL-10, the two filename ids the card uses for the transposed panels SB-GRILL-02-mirror-r2.jpg and SB-GRILL-03-lipring-out-r2.jpg, and the r4 anchor HD-GRILLUP-40064d98db89) appear only in originalPanels, as the card gives them, and are not among the 36 panels; their repoPath, sha256 and bytes come from the quarters package asset_ledger.json. The r4 anchor carries the one sbID 'r4 anchor' in every entry; its filename is in the E-6 note.",
+  "lyricCue: where the card quotes a cue, text is the lyric master's glyphs word for word and txtLine its line (a list when one cue spans two lines); where the card quotes none but the shot title is a lyric phrase with one determinable line, lyricCue carries that line with note 'the card quotes no cue, the line follows the title's lyric words'; otherwise lyricCue is null and the section's txtLines stand.",
+  "Section S07's TXT range follows shot_plan.json (50 to 70), one line off the S07 card's own 51 to 71; section S10's range is supplied from shot_plan.json because the card carries none. Both are recounts for CFA Nova.",
+  "Settled holds (shots[].settled) cite DECISIONS_20261010.md sections 7 and 9 and CLAUDE_GRADES_20261012.md; where a card still carries the hold the display string says settled and the list carries hold and citation.",
+  "P-6b is new, proposed in OPENING_PACKET_20261028.md, placed between P-6 and P-7 with no panel and artState missing; the packet's proposed reorder (S01-2 before S01-1) is noted and not applied to the card's shot order.",
+  "All paths are repo-relative with forward slashes from the CFA repo root, the form panels[].repoPath and the Story 01 panel map use."
+ ],
+ "sections": [
+  {
+   "id": "PROLOGUE",
+   "title": "Prologue, the tip (frame story, before the song)",
+   "txtLines": null,
+   "spineBeat": "The tip: the cab arrival four-beat board; the informant waits, boards, sits; the first exchange with Dolo at the controls, silent. Hand-off: cut to the counter as the first chorus starts.",
+   "browsingGroups": [
+    "Pay me first"
+   ],
+   "shotIDs": [
+    "P-1",
+    "P-2",
+    "P-3",
+    "P-4",
+    "P-5",
+    "P-6",
+    "P-6b",
+    "P-7"
+   ]
+  },
+  {
+   "id": "S01",
+   "title": "[Chorus]",
+   "txtLines": [
+    1,
+    7
+   ],
+   "spineBeat": "The price: mouth insert (SB-01, external-off); cantina wide, Chewie at the boards behind the room (SB-05, new); frame A, the ten-turn prototype as reviewed; Leia the offscreen customer. Hand-off: hard cut on the half-smile to the creditor.",
+   "browsingGroups": [
+    "Pay me first"
+   ],
+   "shotIDs": [
+    "S01-1",
+    "S01-2",
+    "S01-3"
+   ]
+  },
+  {
+   "id": "S02",
+   "title": "[Verse]",
+   "txtLines": [
+    8,
+    20
+   ],
+   "spineBeat": "The creditors behind the boast, sung to her: S02A Jabba's room; S02B Boba, motionless; frame B (S02C) the captain line, the neck-blaster insert, one club cut-in (SB-08, new); S02D the junky ship banks once, the parsec graphic, one Maw wide. Hand-off: the bank hands the eye back to frame A.",
+   "browsingGroups": [
+    "Pay me first",
+    "Debt and danger",
+    "The ship and the crew"
+   ],
+   "shotIDs": [
+    "S02-1",
+    "S02-2",
+    "S02-3",
+    "S02-4",
+    "S02-5",
+    "S02-6",
+    "S02-7",
+    "S02-8",
+    "S02-9",
+    "S02-10"
+   ]
+  },
+  {
+   "id": "S03",
+   "title": "[Chorus]",
+   "txtLines": [
+    21,
+    26
+   ],
+   "spineBeat": "The first doubt: frame A, one change, mid-count his eyes leave the credits and go to her. Hand-off: cut on the glance.",
+   "browsingGroups": [
+    "Pay me first"
+   ],
+   "shotIDs": [
+    "S03-1",
+    "S03-2"
+   ]
+  },
+  {
+   "id": "S04",
+   "title": "[Verse 2]",
+   "txtLines": [
+    27,
+    39
+   ],
+   "spineBeat": "A home and a crew: S04A Leia looks around the junky home; frame B, Dolo defends the ship, the chest ship (SB-17, upright); S04C the promise, the softened face, the fee in the same breath; on drop that beat, frame C, Chewie's fader (S04B). Hand-off: hold the softened face one beat too long; the fader hands to the ignition.",
+   "browsingGroups": [
+    "The ship and the crew"
+   ],
+   "shotIDs": [
+    "S04-1",
+    "S04-2",
+    "S04-3",
+    "S04-4",
+    "S04-5",
+    "S04-6",
+    "S04-7"
+   ]
+  },
+  {
+   "id": "S05",
+   "title": "[Bridge]",
+   "txtLines": [
+    40,
+    43
+   ],
+   "spineBeat": "Ignition as swagger: straps; the overhead lever on punch it (the lightspeed idea, now literal); thrusters. Hand-off: thrusters wipe to frame C (the card makes it a hard cut on the star streaks).",
+   "browsingGroups": [
+    "The ship and the crew"
+   ],
+   "shotIDs": [
+    "S05-1",
+    "S05-2",
+    "S05-3",
+    "S05-4a",
+    "S05-4b"
+   ]
+  },
+  {
+   "id": "S06",
+   "title": "[Chorus]",
+   "txtLines": [
+    44,
+    49
+   ],
+   "spineBeat": "Chewie sees through him: frame C, Chewie looking at Dolo, not the boards (S06A); hold through the question. Hand-off: cut to the crates.",
+   "browsingGroups": [
+    "The ship and the crew"
+   ],
+   "shotIDs": [
+    "S06-1"
+   ]
+  },
+  {
+   "id": "S07",
+   "title": "[Verse 2]",
+   "txtLines": [
+    50,
+    70
+   ],
+   "spineBeat": "The clean exit and the choice, as SCENE_CARD_S07.md: the cut (credits in the case), the kid's channel cut, the hover (the beat stop after the line Man, don't start. falls here), the look, the levers, the grin, the turn (S07B). Hand-off: the turn cuts to the hands.",
+   "browsingGroups": [
+    "Pay me first",
+    "The ship and the crew",
+    "Turn her around"
+   ],
+   "shotIDs": [
+    "S07-1",
+    "S07-2",
+    "S07-3",
+    "S07-4",
+    "S07-5",
+    "S07-6",
+    "S07-7"
+   ]
+  },
+  {
+   "id": "S08",
+   "title": "[Bridge]",
+   "txtLines": [
+    71,
+    73
+   ],
+   "spineBeat": "Same speed, changed purpose: the three inserts, committed; S08A the throttle all the way on punch it; the ship, already turned, accelerates. Hand-off: lands on frame B.",
+   "browsingGroups": [
+    "The ship and the crew",
+    "Turn her around"
+   ],
+   "shotIDs": [
+    "S08-1",
+    "S08-2",
+    "S08-3",
+    "S08-4a",
+    "S08-4b"
+   ]
+  },
+  {
+   "id": "S09",
+   "title": "[Chorus]",
+   "txtLines": [
+    74,
+    79
+   ],
+   "spineBeat": "The question has an answer: frame B, battle light moving across his face; performing, not selling. Hand-off: black on the last around; then the table.",
+   "browsingGroups": [
+    "Debt and danger",
+    "Turn her around"
+   ],
+   "shotIDs": [
+    "S09-1"
+   ]
+  },
+  {
+   "id": "S10",
+   "title": "[Verse 3]",
+   "txtLines": [
+    80,
+    101
+   ],
+   "spineBeat": "The price comes due, as SCENE_CARD_S10.md: the dinner, the reaction, the tilt, the trusted look, Leia silent, the two words, the slab. Hand-off: the slab's raised hands match the opening's poised hands.",
+   "browsingGroups": [
+    "The ship and the crew",
+    "The price of love"
+   ],
+   "shotIDs": [
+    "S10-1",
+    "S10-2",
+    "S10-3",
+    "S10-4",
+    "S10-5",
+    "S10-6",
+    "S10-7"
+   ]
+  },
+  {
+   "id": "S11",
+   "title": "[Final Chorus]",
+   "txtLines": [
+    102,
+    107
+   ],
+   "spineBeat": "The boast against the cost: frame A, identical to S01, intercut with the slab and the farewell. Hand-off: cut to frame C.",
+   "browsingGroups": [
+    "Pay me first",
+    "I know"
+   ],
+   "shotIDs": [
+    "S11-1"
+   ]
+  },
+  {
+   "id": "S12",
+   "title": "[Outro]",
+   "txtLines": [
+    108,
+    125
+   ],
+   "spineBeat": "Signature: frame C, Chewie holds the room; the three names as sound; mouth insert closes (SB-36, external-off). Hand-off: end of song.",
+   "browsingGroups": [
+    "Pay me first",
+    "I know"
+   ],
+   "shotIDs": [
+    "S12-1",
+    "S12-2"
+   ]
+  },
+  {
+   "id": "EPILOGUE",
+   "title": "Epilogue, back in business (frame story, after the song)",
+   "txtLines": null,
+   "spineBeat": "Back in business: thaw (SB-30 repurposed); the quarters grill-change board, repaired: rings out, case open, grill in, mirror reveal, turn-back exit. Hand-off: end.",
+   "browsingGroups": [
+    "The price of love"
+   ],
+   "shotIDs": [
+    "E-1",
+    "E-2",
+    "E-3",
+    "E-4",
+    "E-5",
+    "E-6",
+    "E-7",
+    "E-8",
+    "E-9",
+    "E-10",
+    "E-11"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "shotID": "P-1",
+   "sectionID": "PROLOGUE",
+   "title": "Waiting above the city (the handoff's P01)",
+   "purpose": "establish her, the landing and the incoming cab, and that she is waiting for something she cannot afford.",
+   "lyricCue": null,
+   "originalPanels": [],
+   "otherReferences": [
+    "handoff beat P01",
+    "cast/unnamed_informant/source/civitai_144607296_user_screenshot.png (inspiration only; the original clip was never downloaded or played; no production adaptation exists)",
+    "Her design is open."
+   ],
+   "transitionTo": "P-2: 1 to 2 on her head turning to the cab arriving.",
+   "additionalCoverage": "no panel. missing art: the informant as a production character; the landing and city as a set.",
+   "artState": "missing",
+   "missingArt": [
+    "the informant as a production character",
+    "the landing and city as a set"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_PROLOGUE.md"
+  },
+  {
+   "shotID": "P-2",
+   "sectionID": "PROLOGUE",
+   "title": "The cab comes alongside (P02)",
+   "purpose": "the vehicle, and the geometry every later cab shot depends on.",
+   "lyricCue": null,
+   "originalPanels": [],
+   "otherReferences": [
+    "handoff beat P02",
+    "none; the cab exterior, door, step and interior are undesigned (cab handoff, \"Missing now\")"
+   ],
+   "transitionTo": "P-3: 2 to 3 on the door opening to her hand on the frame.",
+   "additionalCoverage": "no panel. missing art: the cab.",
+   "artState": "missing",
+   "missingArt": [
+    "the cab"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_PROLOGUE.md"
+  },
+  {
+   "shotID": "P-3",
+   "sectionID": "PROLOGUE",
+   "title": "Boarding (P03)",
+   "purpose": "the physical-action proof the handoff is built around: one connected boarding that keeps geometry and contact.",
+   "lyricCue": null,
+   "originalPanels": [],
+   "otherReferences": [
+    "handoff beat P03",
+    "as P-1 and P-2",
+    "The handoff's accept and stop rules govern this shot as written there (they are not restated here)."
+   ],
+   "transitionTo": "P-4: 3 to 4 on her seated to the door closing.",
+   "additionalCoverage": "no panel. missing art: the informant adaptation; the cab; a reviewed start frame and end state.",
+   "artState": "missing",
+   "missingArt": [
+    "the informant adaptation",
+    "the cab",
+    "a reviewed start frame and end state"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_PROLOGUE.md"
+  },
+  {
+   "shotID": "P-4",
+   "sectionID": "PROLOGUE",
+   "title": "The door and the lift (new)",
+   "purpose": "the later beat the handoff separates: the door closes and the cab goes.",
+   "lyricCue": null,
+   "originalPanels": [],
+   "otherReferences": [
+    "as P-2"
+   ],
+   "transitionTo": "P-5: 4 to 5 on the cab leaving the landing to the windscreen two-shot, the first time we see Dolo.",
+   "additionalCoverage": "no panel. missing art: the cab.",
+   "artState": "missing",
+   "missingArt": [
+    "the cab"
+   ],
+   "settled": [],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_PROLOGUE.md"
+  },
+  {
+   "shotID": "P-5",
+   "sectionID": "PROLOGUE",
+   "title": "The first exchange (P04)",
+   "purpose": "the tip. The handoff's interior two-shot: informant in the passenger seat, Dolo at the controls, a restrained businesslike acknowledgment. The first proof is silent; the lines come later.",
+   "lyricCue": null,
+   "originalPanels": [],
+   "otherReferences": [
+    "handoff beat P04",
+    "face A HD-RETURN-6c8900223ee9",
+    "mouth B HD-B-91ef00348229 (external-off; the lips stay closed or minimally parted in the silent proof)",
+    "wrist chain and band F HD-DROP-b18c4a123579 on the character-right wrist (set for this scene, not canon)",
+    "the opening outfit (dark brown distressed leather jacket over the open off-white shirt, chest ship visible) as the one coherent outfit",
+    "the informant as adapted",
+    "Cheek lettering cursive \"eye\" character-right/viewer-left, serif \"know\" character-left/viewer-right, neck blaster character-left, no forehead dice, one hoop per nostril and ear hoop with crystal stud as targets"
+   ],
+   "transitionTo": "P-6: 5 to 6 on his half-smile to the cab settling at her stop.",
+   "additionalCoverage": "no panel. missing art: the cab interior; a reviewed two-character cabin frame; the informant; the dialogue.",
+   "artState": "missing",
+   "missingArt": [
+    "the cab interior",
+    "a reviewed two-character cabin frame",
+    "the informant",
+    "the dialogue"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_PROLOGUE.md"
+  },
+  {
+   "shotID": "P-6",
+   "sectionID": "PROLOGUE",
+   "title": "The drop (new)",
+   "purpose": "she gets what she paid for; he gets what he came for. She leaves the song here.",
+   "lyricCue": null,
+   "originalPanels": [],
+   "otherReferences": [
+    "as P-2 and P-3"
+   ],
+   "transitionTo": "P-7: 6 to 7 on the cab leaving to the cantina's far door opening. The opening packet proposes instead that the cab stays settled, its passenger door closing, and the cut goes to P-6b, Dolo stepping down from the driver's door; the card's ending is kept as the alternate (proposal).",
+   "additionalCoverage": "no panel. missing art: the cab; the street as a set. settled: the informant returns after the song (DECISIONS section 9 row 4); E-1's witness beat is on.",
+   "artState": "missing",
+   "missingArt": [
+    "the cab",
+    "the street as a set"
+   ],
+   "settled": [
+    {
+     "hold": "The informant's return as the witness at the thaw",
+     "citation": "DECISIONS_20261010.md section 9 row 4"
+    }
+   ],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_PROLOGUE.md"
+  },
+  {
+   "shotID": "P-6b",
+   "sectionID": "PROLOGUE",
+   "title": "Across the street (new, proposed in the opening packet)",
+   "purpose": "the in-between the card left to the edit: Dolo gets out of his cab, sees the cantina across the street, and goes; the first time we see him whole, and the only time we see him walk toward the song.",
+   "lyricCue": null,
+   "originalPanels": [],
+   "otherReferences": [
+    "face A HD-RETURN-6c8900223ee9, mouth B HD-B-91ef00348229, wrist F HD-DROP-b18c4a123579 as P-5",
+    "the cab and the street undesigned",
+    "Falcon archive C42 ramp landing: a graded frame of him walking in the opening outfit, daylight exterior, staging only"
+   ],
+   "transitionTo": "P-7: on his first step, to the cantina door opening from inside.",
+   "additionalCoverage": "no panel. graded frame exists, staging only (C42 ramp landing, a daylight exterior). missing art: the cab; the street; the cantina's exterior and sign (undesigned; the sign carries no readable text).",
+   "artState": "missing",
+   "missingArt": [
+    "the cab",
+    "the street",
+    "the cantina's exterior and sign (undesigned; the sign carries no readable text)"
+   ],
+   "settled": [],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/OPENING_PACKET_20261028.md"
+  },
+  {
+   "shotID": "P-7",
+   "sectionID": "PROLOGUE",
+   "title": "The cantina walk (SB-05, the last shot before the song)",
+   "purpose": "Dolo walks into the cantina and sits at the counter. The walk is the prologue's last beat; the song starts on the cut that follows it. This is the reverse of the choruses card's S01-2, which looks from the entrance toward the back wall with him already seated.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-05",
+     "assetID": "HD-DROP-6e8eb6a956c9",
+     "role": "idea",
+     "note": "for the idea (cantina walk; its lead and DJ anatomy differ and do not govern)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-05-cantina-walk.jpg",
+     "sha256": "6e8eb6a956c9146a0adc3f1c8c3c71db7d0cc34bbf646f4d681cd6e54ae24428",
+     "bytes": 271645
+    }
+   ],
+   "otherReferences": [
+    "Chewie: no accepted anatomy",
+    "frame A (the seated position is frame A's)",
+    "choruses card S01-2 (reverse of this view)"
+   ],
+   "transitionTo": "Hand-off: hard cut from the settle to S01-1, the mouth insert, as the song begins; then S01-2 (the room from the entrance side, Dolo already seated) and S01-3 (frame A) as the choruses card has them. The customer the tip was about is across the counter, offscreen. (Cut logic: 7 to S01-1 on the settle, the mouth insert, and the song.) The opening packet proposes that the intro beat may begin over the settle (pre-lap, proposal).",
+   "additionalCoverage": "existing art: SB-05 (idea). missing art: the cantina set; Chewbacca. settled: Chewy's established reference since 2026-10-12 is the DJB beast sheet (DECISIONS section 9 row 5; CLAUDE_GRADES_20261012.md); the card's 'no accepted anatomy' hold is superseded; what remains missing is a frame of him in this room.",
+   "artState": "partial",
+   "missingArt": [
+    "the cantina set",
+    "Chewbacca"
+   ],
+   "settled": [
+    {
+     "hold": "Chewbacca: no accepted anatomy",
+     "citation": "DECISIONS_20261010.md section 9 row 5; CLAUDE_GRADES_20261012.md"
+    }
+   ],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_PROLOGUE.md"
+  },
+  {
+   "shotID": "S01-1",
+   "sectionID": "S01",
+   "title": "The mouth (SB-01 insert)",
+   "purpose": "\"Strictly business. Count it twice.\" The smile and the mercenary tone, before the man.",
+   "lyricCue": {
+    "text": "Strictly business. Count it twice.",
+    "txtLine": 3
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-01",
+     "assetID": "HD-DROP-725c38458fd8",
+     "role": "composition",
+     "note": "for composition only (its obsolete two-gold, one-hoop dental map does not govern)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-01-grill-ecu.jpg",
+     "sha256": "725c38458fd8e8d6cff78c1c330368e1057333ab8dc84a900070065f02f02ff8",
+     "bytes": 257623
+    }
+   ],
+   "otherReferences": [
+    "mouth B HD-B-91ef00348229",
+    "face A HD-RETURN-6c8900223ee9 for any surrounding identity"
+   ],
+   "transitionTo": "Not stated in the card for this shot.",
+   "additionalCoverage": "existing art: SB-01 (composition). missing art: A corrected ECU still (an editorial design need, per the reviewed plan, not a prototype request).",
+   "artState": "partial",
+   "missingArt": [
+    "A corrected ECU still (an editorial design need, per the reviewed plan, not a prototype request)"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_CHORUSES_OUTRO.md"
+  },
+  {
+   "shotID": "S01-2",
+   "sectionID": "S01",
+   "title": "The room (cantina wide, proposed)",
+   "purpose": "Establish the room once, with Chewie at the boards behind it, so every later return to frame C has a home.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-05",
+     "assetID": "HD-DROP-6e8eb6a956c9",
+     "role": "idea",
+     "note": "for the idea (cantina walk, \"Hook settle + Chewie DJ bg\"; its lead and DJ anatomy differ and do not govern)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-05-cantina-walk.jpg",
+     "sha256": "6e8eb6a956c9146a0adc3f1c8c3c71db7d0cc34bbf646f4d681cd6e54ae24428",
+     "bytes": 271645
+    }
+   ],
+   "otherReferences": [
+    "Chewie: no accepted anatomy",
+    "mixer portrait HD-DROP-ca406436d384 is his cover",
+    "CHEW-STAGE-01 (CHEW-EXP-01-furry-dj.jpg) for booth staging only"
+   ],
+   "transitionTo": "Not stated in the card for this shot.",
+   "additionalCoverage": "existing art: SB-05 (idea). graded frame exists, staging only (enablers E13 and Falcon C20, Chewy at decks; writer batch SB-W07; none in this room; Falcon C18 and C19 hold decks frames the grades file has not graded). missing art: The cantina as a set; Chewbacca. settled: Chewy's established reference since 2026-10-12 is the DJB beast sheet (DECISIONS section 9 row 5; CLAUDE_GRADES_20261012.md); the card's 'no accepted anatomy' hold is superseded; what remains missing is a frame of him in this room.",
+   "artState": "partial",
+   "missingArt": [
+    "The cantina as a set",
+    "Chewbacca"
+   ],
+   "settled": [
+    {
+     "hold": "Chewbacca: no accepted anatomy",
+     "citation": "DECISIONS_20261010.md section 9 row 5; CLAUDE_GRADES_20261012.md"
+    }
+   ],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_CHORUSES_OUTRO.md"
+  },
+  {
+   "shotID": "S01-3",
+   "sectionID": "S01",
+   "title": "Frame A, the price (the prototype)",
+   "purpose": "The pitch, the count, the fuel gesture, the half-smile. Exactly the ten-turn prototype as reviewed: poise, first count, firm price, recount, align, fuel reminder, draw payment closer, passage gesture, \"nice try\" half-smile, settle.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-02",
+     "assetID": "HD-DROP-fd723df3ec04",
+     "role": "text_described",
+     "note": "text-described in REVIEWED_PLAN.txt (marker HON-OPENING-WORKSHOP-REVIEWED-20261009): its pitch is frame A's gaze and attitude; its image was not attached",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-02-title-face.jpg",
+     "sha256": "fd723df3ec04216423ecbe98962c48d554b91eb3081aab178cf97632e337d37f",
+     "bytes": 229139
+    },
+    {
+     "sbID": "SB-03",
+     "assetID": "HD-DROP-36679ee9953b",
+     "role": "reference_d",
+     "note": "attachment D of the reviewed opening prototype: the credits and counter geography; old face, hair and ink do not govern",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-03-pay-table.jpg",
+     "sha256": "36679ee9953bfb8d0492009c1a47309fdd8f04f951f2077bce0007067146b1c4",
+     "bytes": 316016
+    },
+    {
+     "sbID": "SB-04",
+     "assetID": "HD-DROP-60f245863c6b",
+     "role": "reference_e",
+     "note": "attachment E of the reviewed opening prototype: the fuel indicator concept and geography; old identity, headgear and generated text do not govern",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-04-fuel-gauge.jpg",
+     "sha256": "60f245863c6ba88e160514f4de1363dd4550a1d95b1a59b3b4c443f6dfcf5fd8",
+     "bytes": 239785
+    }
+   ],
+   "otherReferences": [
+    "A (face)",
+    "B (mouth)",
+    "D HD-DROP-36679ee9953b",
+    "E HD-DROP-60f245863c6b",
+    "F HD-DROP-b18c4a123579",
+    "as the manifest limits them (IMAGE_MANIFEST.json for A-F)",
+    "REVIEWED_PLAN.txt prompts 01 to 10 (marker HON-OPENING-WORKSHOP-REVIEWED-20261009)"
+   ],
+   "transitionTo": "Hand-off: the generated clip ends on the settle (prompt 10); the edit cuts to S02-1, her hand on the counter, either on the half-smile (prompt 09, the spine's proposal) or on the settle. An editorial choice, not a generation difference.",
+   "additionalCoverage": "existing art: SB-02 (text-described); SB-03 (reference D); SB-04 (reference E). missing art: An accepted consolidated starting frame. settled: the weave is confirmed, Leia across the counter in S01 and the S03 glance landing on her (DECISIONS section 7 row 1).",
+   "artState": "partial",
+   "missingArt": [
+    "An accepted consolidated starting frame"
+   ],
+   "settled": [
+    {
+     "hold": "The weave: Leia across the counter in S01, the S03 glance to her",
+     "citation": "DECISIONS_20261010.md section 7 row 1"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [
+    "S01A"
+   ],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_CHORUSES_OUTRO.md"
+  },
+  {
+   "shotID": "S03-1",
+   "sectionID": "S03",
+   "title": "Frame A, one change: the glance",
+   "purpose": "\"So why’d I turn this ship around?\" The question enters the hook, and his eyes leave the credits for the first time.",
+   "lyricCue": {
+    "text": "So why’d I turn this ship around?",
+    "txtLine": 25
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-03",
+     "assetID": "HD-DROP-36679ee9953b",
+     "role": "reference_d",
+     "note": "as S01-3: reference D, named by the card's reference line",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-03-pay-table.jpg",
+     "sha256": "36679ee9953bfb8d0492009c1a47309fdd8f04f951f2077bce0007067146b1c4",
+     "bytes": 316016
+    },
+    {
+     "sbID": "SB-04",
+     "assetID": "HD-DROP-60f245863c6b",
+     "role": "reference_e",
+     "note": "as S01-3: reference E, named by the card's reference line",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-04-fuel-gauge.jpg",
+     "sha256": "60f245863c6ba88e160514f4de1363dd4550a1d95b1a59b3b4c443f6dfcf5fd8",
+     "bytes": 239785
+    }
+   ],
+   "otherReferences": [
+    "as S01-3 (A, B, D HD-DROP-36679ee9953b, E HD-DROP-60f245863c6b, F HD-DROP-b18c4a123579)",
+    "The plan's note that the credit stack remains in frame holds."
+   ],
+   "transitionTo": "Not stated for this shot; S03-2 (\"what he is looking at\") follows, and the section's hand-off after S03-2 is \"cut on her look to S04-1, the hatch.\"",
+   "additionalCoverage": "existing art: SB-03 (reference D); SB-04 (reference E). missing art: As S01-3. settled: the weave is confirmed, Leia across the counter in S01 and the S03 glance landing on her (DECISIONS section 7 row 1).",
+   "artState": "partial",
+   "missingArt": [
+    "As S01-3"
+   ],
+   "settled": [
+    {
+     "hold": "The weave: Leia across the counter in S01, the S03 glance to her",
+     "citation": "DECISIONS_20261010.md section 7 row 1"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [
+    "S03A"
+   ],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_CHORUSES_OUTRO.md"
+  },
+  {
+   "shotID": "S03-2",
+   "sectionID": "S03",
+   "title": "Her, across the counter (the reverse, one beat)",
+   "purpose": "What he is looking at. One beat of Leia, the only time her face is on screen before S04.",
+   "lyricCue": null,
+   "originalPanels": [],
+   "otherReferences": [
+    "LEIA-LIKENESS-01 (leia_source_crop.png, likeness input only)",
+    "LEIA-STYLE-01 (LEIA-EXP-01-ivory-coat.jpg, ivory wardrobe and hair styling only)",
+    "the ivory-coat album cover HD-DROP-5171bb20c773",
+    "No accepted Leia production reference; costume undecided; customer-versus-wife reading is Ziggy's open question (SCENE_CARD_S04.md)"
+   ],
+   "transitionTo": "Hand-off: cut on her look to S04-1, the hatch.",
+   "additionalCoverage": "no panel. missing art: An accepted Leia. settled: Leia is the customer across the counter and the song's love, married after the song (DECISIONS section 7 row 1 and section 9 row 1); the customer-versus-wife question is closed; her costume and production reference are still open.",
+   "artState": "missing",
+   "missingArt": [
+    "An accepted Leia"
+   ],
+   "settled": [
+    {
+     "hold": "Leia: customer or wife",
+     "citation": "DECISIONS_20261010.md section 7 row 1; section 9 row 1"
+    }
+   ],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_CHORUSES_OUTRO.md"
+  },
+  {
+   "shotID": "S06-1",
+   "sectionID": "S06",
+   "title": "Frame C, the look (S06A)",
+   "purpose": "The second chorus asks the question again; Chewie already knows the answer. The shot plan's S06A: he turns from his controls and gives Dolo, off camera, a knowing look, and holds it.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-18",
+     "assetID": "HD-DROP-b443c1d21d74",
+     "role": "staging",
+     "note": "for staging only (ape-like copilot, a recorded defect)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-18-tall-copilot.jpg",
+     "sha256": "b443c1d21d7481ca8d8fa7af54fe88ad38f526bca1d0260c5d9decd7a38418c0",
+     "bytes": 412836
+    }
+   ],
+   "otherReferences": [
+    "No accepted Chewbacca anatomy"
+   ],
+   "transitionTo": "Hand-off: cut from the look to S07-1, the crates.",
+   "additionalCoverage": "existing art: SB-18 (staging). graded frame exists, staging only (C12 Chewy at the switches, C15 cockpit two-shot). missing art: Chewbacca. settled: Chewy's established reference since 2026-10-12 is the DJB beast sheet (DECISIONS section 9 row 5; CLAUDE_GRADES_20261012.md); the card's 'no accepted anatomy' hold is superseded; what remains missing is a frame of him in this room.",
+   "artState": "partial",
+   "missingArt": [
+    "Chewbacca"
+   ],
+   "settled": [
+    {
+     "hold": "Chewbacca: no accepted anatomy",
+     "citation": "DECISIONS_20261010.md section 9 row 5; CLAUDE_GRADES_20261012.md"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [
+    "S06A"
+   ],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_CHORUSES_OUTRO.md"
+  },
+  {
+   "shotID": "S09-1",
+   "sectionID": "S09",
+   "title": "Frame B, the battle light (S09A)",
+   "purpose": "The fourth chorus. He is still performing. He is not selling anything. The shot plan's S09A: steady resolve, battle light across his face.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-08",
+     "assetID": "HD-DROP-e1250a0bce91",
+     "role": "staging",
+     "note": "the crosswalk's candidate for S09A, staging only (SB-08's mouth, hair, marks and neck ink drift)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-02-bounty-heat/SB-08-debt-flex-cu.jpg",
+     "sha256": "e1250a0bce91bcd16078f69452504d621e799ddbde5c5e743c7d59a2dd64c4c3",
+     "bytes": 224125
+    },
+    {
+     "sbID": "SB-24",
+     "assetID": "HD-DROP-35f608374a7b",
+     "role": "staging",
+     "note": "the crosswalk's candidate for S09A, staging only (a rescue-approach composition)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-04-turnaround/SB-24-rescue-hatch.jpg",
+     "sha256": "35f608374a7b3a998574fc0d1f05c559a78f16170c3006f5eaadbd1d831bb75d",
+     "bytes": 283341
+    }
+   ],
+   "otherReferences": [
+    "face A",
+    "mouth B",
+    "wrist F if the hands are in frame (character-right, provisional)",
+    "the seated cockpit idea HD-DROP-14f8eb9979b5 (R2-01, needs review)",
+    "SCENE_CARD_S05_S08.md (whether the seated still carries a harness)"
+   ],
+   "transitionTo": "Hand-off: cut to black on the last \"around\"; then S10-1, the table.",
+   "additionalCoverage": "existing art: SB-08 (staging); SB-24 (staging). graded frame exists, staging only (C04 battle light; its graded repair lost the head standard, the original stays Needs fixes). missing art: The seated cockpit still.",
+   "artState": "partial",
+   "missingArt": [
+    "The seated cockpit still"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [
+    "S09A"
+   ],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_CHORUSES_OUTRO.md"
+  },
+  {
+   "shotID": "S11-1",
+   "sectionID": "S11",
+   "title": "Frame A, identical to S01, intercut",
+   "purpose": "The final chorus. Same picture, same bearing, same credits, and the words have changed under it: \"Fuel ain’t free. Still paid that price.\" and \"Still turned this motherfucker around.\" (TXT lines 104 and 106). The shot plan's S11A: hold the familiar confident expression for a later editorial juxtaposition with the farewell and the carbonite reveal.",
+   "lyricCue": {
+    "text": "Fuel ain’t free. Still paid that price. / Still turned this motherfucker around.",
+    "txtLine": [
+     104,
+     106
+    ]
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-34",
+     "assetID": "HD-DROP-4639c31e55bc",
+     "role": "staging",
+     "note": "the crosswalk's candidate for S11A, staging only (final face hold; its tattoo map differs from the lock and does not govern)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-06-outro/SB-34-final-lock-face.jpg",
+     "sha256": "4639c31e55bcd15353f242d4c197ecc12f7c61ed7b0c99ad32c7765db5043dac",
+     "bytes": 195955
+    },
+    {
+     "sbID": "SB-03",
+     "assetID": "HD-DROP-36679ee9953b",
+     "role": "reference_d",
+     "note": "as S01-3: reference D, named by the card's reference line",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-03-pay-table.jpg",
+     "sha256": "36679ee9953bfb8d0492009c1a47309fdd8f04f951f2077bce0007067146b1c4",
+     "bytes": 316016
+    },
+    {
+     "sbID": "SB-04",
+     "assetID": "HD-DROP-60f245863c6b",
+     "role": "reference_e",
+     "note": "as S01-3: reference E, named by the card's reference line",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-04-fuel-gauge.jpg",
+     "sha256": "60f245863c6ba88e160514f4de1363dd4550a1d95b1a59b3b4c443f6dfcf5fd8",
+     "bytes": 239785
+    }
+   ],
+   "otherReferences": [
+    "as S01-3 (A, B, D HD-DROP-36679ee9953b, E HD-DROP-60f245863c6b, F HD-DROP-b18c4a123579)"
+   ],
+   "transitionTo": "Hand-off: cut to frame C on the last line.",
+   "additionalCoverage": "existing art: SB-34 (staging); SB-03 (reference D); SB-04 (reference E). missing art: As S01-3.",
+   "artState": "partial",
+   "missingArt": [
+    "As S01-3"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [
+    "S11A"
+   ],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_CHORUSES_OUTRO.md"
+  },
+  {
+   "shotID": "S12-1",
+   "sectionID": "S12",
+   "title": "Frame C, Chewie holds the room (S12A)",
+   "purpose": "The shot plan's S12A: Chewie at the DJ console as the performance lighting settles, a calm final pose, composition space left clear for an editorial title.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-32",
+     "assetID": "HD-DROP-39ede31230fd",
+     "role": "staging",
+     "note": "for staging only (DJ booth, \"Chewie hype\")",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-06-outro/SB-32-dj-booth.jpg",
+     "sha256": "39ede31230fda9ab878922388472554d71bfdfc3baf8765fe28dd8ddd694396b",
+     "bytes": 309265
+    },
+    {
+     "sbID": "SB-31",
+     "assetID": "HD-DROP-76b5b1730778",
+     "role": "named_only",
+     "note": "proposed parked (stage mic, \"Voice from outer world\"), since the names are sound in this reading; pass 001 kept it as a restrained performance; either is possible under \"restrained\"",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-06-outro/SB-31-stage-mic.jpg",
+     "sha256": "76b5b173077811a2f99a97e42593b1f372e004e2080720d1e3c29cbf3eeaab3f",
+     "bytes": 208080
+    },
+    {
+     "sbID": "SB-35",
+     "assetID": "HD-DROP-a2587d798b7c",
+     "role": "named_only",
+     "note": "ruled out as the logo or typography (the Panhandlers card is a generated stand-in, per the choruses card and Grok's review note); its place inside or after the song is Ziggy's",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-06-outro/SB-35-panhandlers-card.jpg",
+     "sha256": "a2587d798b7c4527c69e93135c197043bd1b459d2cc6b9f2c180f41ba20db05e",
+     "bytes": 268121
+    }
+   ],
+   "otherReferences": [
+    "No accepted Chewbacca anatomy",
+    "S01-2's boards at the back of the room (room from S01-2)"
+   ],
+   "transitionTo": "Not stated for this shot; the card's closing insert in S12 is S12-2.",
+   "additionalCoverage": "existing art: SB-32 (staging). graded frame exists, staging only (C21 Chewy holds the room). missing art: Chewbacca; the cantina set. settled: Chewy's established reference since 2026-10-12 is the DJB beast sheet (DECISIONS section 9 row 5; CLAUDE_GRADES_20261012.md); the card's 'no accepted anatomy' hold is superseded; what remains missing is a frame of him in this room.",
+   "artState": "partial",
+   "missingArt": [
+    "Chewbacca",
+    "the cantina set"
+   ],
+   "settled": [
+    {
+     "hold": "Chewbacca: no accepted anatomy",
+     "citation": "DECISIONS_20261010.md section 9 row 5; CLAUDE_GRADES_20261012.md"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [
+    "S12A"
+   ],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_CHORUSES_OUTRO.md"
+  },
+  {
+   "shotID": "S12-2",
+   "sectionID": "S12",
+   "title": "The mouth closes it (SB-36 insert)",
+   "purpose": "The end sting. The mouth that opened the song closes it.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-36",
+     "assetID": "HD-DROP-ec55fb59f604",
+     "role": "idea",
+     "note": "for the idea only (\"grill/title proposal, not final jewelry or title\")",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-06-outro/SB-36-end-sting.jpg",
+     "sha256": "ec55fb59f6048b8c02de02b3a87346d4fe204df1339d4b03bbfa2aa787a64a2a",
+     "bytes": 235569
+    },
+    {
+     "sbID": "SB-01",
+     "assetID": "HD-DROP-725c38458fd8",
+     "role": "composition",
+     "note": "composition from SB-01",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-01-grill-ecu.jpg",
+     "sha256": "725c38458fd8e8d6cff78c1c330368e1057333ab8dc84a900070065f02f02ff8",
+     "bytes": 257623
+    }
+   ],
+   "otherReferences": [
+    "mouth B HD-B-91ef00348229"
+   ],
+   "transitionTo": "End of song. The epilogue (the thaw, then the quarters grill-change) is the frame story's card, not this one.",
+   "additionalCoverage": "existing art: SB-36 (idea); SB-01 (composition). missing art: As S01-1.",
+   "artState": "partial",
+   "missingArt": [
+    "As S01-1"
+   ],
+   "settled": [],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_CHORUSES_OUTRO.md"
+  },
+  {
+   "shotID": "S02-1",
+   "sectionID": "S02",
+   "title": "Money to spare (her hand, not her face)",
+   "purpose": "the first picture of Leia without showing her. The money arrives on the counter from her side.",
+   "lyricCue": {
+    "text": "money to spare",
+    "txtLine": 9,
+    "note": "the card quotes no cue, the line follows the title's lyric words"
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-03",
+     "assetID": "HD-DROP-36679ee9953b",
+     "role": "reference_d",
+     "note": "for the credits and counter surface (pay-table D); props, the opening prototype's reference D",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-03-pay-table.jpg",
+     "sha256": "36679ee9953bfb8d0492009c1a47309fdd8f04f951f2077bce0007067146b1c4",
+     "bytes": 316016
+    }
+   ],
+   "otherReferences": [
+    "wrist chain and band F HD-DROP-b18c4a123579 on his character-right wrist (provisional blocking choice carried from the opening, not canon)",
+    "LEIA-STYLE-01 (LEIA-EXP-01-ivory-coat.jpg), the ivory wardrobe candidate only",
+    "SCENE_CARD_S10.md S10-5 (her sleeve: costume undecided)"
+   ],
+   "transitionTo": "S02-2 on money: her hand's stack to the lieutenant's ledgers.",
+   "additionalCoverage": "existing art: SB-03 (reference D). missing art: nothing new of its own; the frame A starting frame its credits must match is unaccepted (S02 card ingredient table), and her sleeve waits on the costume call. settled: Leia is the customer across the counter and the song's love, married after the song (DECISIONS section 7 row 1 and section 9 row 1); the customer-versus-wife question is closed; her costume and production reference are still open.",
+   "artState": "partial",
+   "missingArt": [
+    "the frame A starting frame its credits must match (unaccepted; S02 card ingredient table)",
+    "her sleeve (waits on the costume call)"
+   ],
+   "settled": [
+    {
+     "hold": "Leia: customer or wife",
+     "citation": "DECISIONS_20261010.md section 7 row 1; section 9 row 1"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S02.md"
+  },
+  {
+   "shotID": "S02-2",
+   "sectionID": "S02",
+   "title": "Jabba's room (frame of the first creditor)",
+   "purpose": "\"Jabbah funding.\" The first creditor, told as pressure without a word. The shot plan's S02A.",
+   "lyricCue": {
+    "text": "Jabbah funding",
+    "txtLine": 11
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-10",
+     "assetID": "HD-DROP-df1418147b5d",
+     "role": "staging",
+     "note": "for staging (low, wide, gold, pressure; its boss does not govern)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-02-bounty-heat/SB-10-crime-boss-dais.jpg",
+     "sha256": "df1418147b5d86de989b65feaa553090af4129d9efed778eff9bc5ef488a373c",
+     "bytes": 454078
+    }
+   ],
+   "otherReferences": [
+    "BOSS-002 gecko-frog HD-RETURN-339cdbe1e03a (October 9 shortlist)",
+    "BOSS-008 crocodilian HD-RETURN-8421e7cfa1a0 (October 9 shortlist)",
+    "BOSS-005 catfish HD-RETURN-e18185bdab18 (October 9 shortlist)",
+    "BOSS-010 walrus HD-RETURN-9143639db1cf (October 9 shortlist)",
+    "no final winner; the lyric names Jabba, the record's character is the crime boss"
+   ],
+   "transitionTo": "S02-3 on the boss's eyes landing on camera to the puck's light.",
+   "additionalCoverage": "existing art: SB-10 (staging). missing art: an accepted boss; the room as a set. settled: Jabba = the crocodile boss BOSS-008 (DECISIONS section 9 row 2); the card's shortlist question is closed; one staging round follows.",
+   "artState": "partial",
+   "missingArt": [
+    "an accepted boss",
+    "the room as a set"
+   ],
+   "settled": [
+    {
+     "hold": "Jabba: which shortlist design wears the name",
+     "citation": "DECISIONS_20261010.md section 9 row 2"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [
+    "S02A"
+   ],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S02.md"
+  },
+  {
+   "shotID": "S02-3",
+   "sectionID": "S02",
+   "title": "The puck",
+   "purpose": "\"bounty hunt-ahhhs.\" The hunters, announced by their instrument before their face.",
+   "lyricCue": {
+    "text": "bounty hunt-ahhhs",
+    "txtLine": 11
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-09",
+     "assetID": "HD-DROP-af2c7daaf039",
+     "role": "idea",
+     "note": "for the insert's idea (inspect hands and invented marks; the panel's card art does not govern)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-02-bounty-heat/SB-09-bounty-puck.jpg",
+     "sha256": "af2c7daaf039014c1a60db373598137f3c834b5c4b99d509a1d9ff10277c5e9d",
+     "bytes": 254191
+    }
+   ],
+   "otherReferences": [
+    "face A HD-RETURN-6c8900223ee9 (the likeness on the puck must be made from it)"
+   ],
+   "transitionTo": "S02-4 on the gloved hand leaving screen-right to the hunter standing screen-right.",
+   "additionalCoverage": "existing art: SB-09 (idea). missing art: the puck as a prop with A's likeness. settled: the hunter = the olive-armored supporting character BOBA-ARMOR-01 (DECISIONS section 9 row 2); helmet geometry and rangefinder still unresolved.",
+   "artState": "partial",
+   "missingArt": [
+    "the puck as a prop with A's likeness"
+   ],
+   "settled": [
+    {
+     "hold": "The hunter: Boba in the BOBA-ARMOR-01 concept or a numbered hunter",
+     "citation": "DECISIONS_20261010.md section 9 row 2"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S02.md"
+  },
+  {
+   "shotID": "S02-4",
+   "sectionID": "S02",
+   "title": "The watch (Boba, motionless)",
+   "purpose": "one hunter, one look. The shot plan's S02B as written (a motionless watch, one helmet turn); pass 001 reassigns the board's alley-run panel SB-11 to it, because running contradicts the bravado.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-11",
+     "assetID": "HD-DROP-ac71d8209a11",
+     "role": "repurposed",
+     "note": "the alley-run panel the plan reassigns (its running Dolo does not govern; its neon and crowd may inform the bay)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-02-bounty-heat/SB-11-neon-alley-run.jpg",
+     "sha256": "ac71d8209a11427f2aafa7ff0e04cc88992e9fdb918ae6cea8fa2ac55fc6f3ae",
+     "bytes": 316542
+    }
+   ],
+   "otherReferences": [
+    "shot plan names Boba Fett (\"bounty pressure\")",
+    "cast map Boba Fett entry with BOBA-ARMOR-01 (BOBA-EXP-01-olive-armor.jpg, an armor concept, \"not automatically Bounty Hunter 1 or 2\")",
+    "BH-01 and BH-02 reserved with no identity, body or armor assigned; no production reference accepted for either"
+   ],
+   "transitionTo": "S02-5 on the helmet's turn to the light crossing the neck, the two \"looks\" at Dolo in a row.",
+   "additionalCoverage": "existing art: SB-11 (repurposed). missing art: a hunter; the bay as a set; the ship exterior. settled: the hunter = the olive-armored supporting character BOBA-ARMOR-01 (DECISIONS section 9 row 2); helmet geometry and rangefinder still unresolved.",
+   "artState": "partial",
+   "missingArt": [
+    "a hunter",
+    "the bay as a set",
+    "the ship exterior"
+   ],
+   "settled": [
+    {
+     "hold": "The hunter: Boba in the BOBA-ARMOR-01 concept or a numbered hunter",
+     "citation": "DECISIONS_20261010.md section 9 row 2"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [
+    "S02B"
+   ],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S02.md"
+  },
+  {
+   "shotID": "S02-5",
+   "sectionID": "S02",
+   "title": "My name (the neck blaster)",
+   "purpose": "\"not safe ta play with my name.\" The tattoo as a threat, in one catch-light.",
+   "lyricCue": {
+    "text": "not safe ta play with my name",
+    "txtLine": 12
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-12",
+     "assetID": "HD-DROP-e5e5bb2eb7ee",
+     "role": "idea",
+     "note": "for the insert's idea (neck blaster detail; not scale or placement acceptance)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-02-bounty-heat/SB-12-neck-blaster-cu.jpg",
+     "sha256": "e5e5bb2eb7eece96f131d8280e87ed422c3378574e5c181ab722f54ec6d1164b",
+     "bytes": 308854
+    }
+   ],
+   "otherReferences": [
+    "neck-bling handoff (handoffs/neck_bling_20261009/), prepared, not sent",
+    "the head standard"
+   ],
+   "transitionTo": "S02-6 on the neck to the man, same side, wider.",
+   "additionalCoverage": "existing art: SB-12 (idea). missing art: an accepted neck reference. The neck-bling handoff (handoffs/neck_bling_20261009/) is prepared, not sent; nothing is generated or accepted.",
+   "artState": "partial",
+   "missingArt": [
+    "an accepted neck reference. The neck-bling handoff (handoffs/neck_bling_20261009/) is prepared, not sent",
+    "nothing is generated or accepted"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S02.md"
+  },
+  {
+   "shotID": "S02-6",
+   "sectionID": "S02",
+   "title": "El capatain Solo (the captain portrait, frame B)",
+   "purpose": "the boast that names him. The verse's lip-sync anchor, the shot plan's S02C.",
+   "lyricCue": {
+    "text": "it’s el capatain Solo",
+    "txtLine": 14,
+    "note": "the card quotes no cue, the line follows the title's lyric words"
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-14",
+     "assetID": "HD-DROP-d36a3316372d",
+     "role": "staging",
+     "note": "for staging (cockpit captain; its face and tattoo drift do not govern)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-14-cockpit-captain.jpg",
+     "sha256": "d36a3316372d3685b17b99249b1b4f27539ea602a57d905f4dc6bc89250c392e",
+     "bytes": 355129
+    },
+    {
+     "sbID": "SB-06",
+     "assetID": "HD-DROP-b18c4a123579",
+     "role": "concept",
+     "note": "the scoundrel-forearm concept the crosswalk points at S02C; exact design unresolved",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-06-scoundrel-detail.jpg",
+     "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+     "bytes": 308775
+    }
+   ],
+   "otherReferences": [
+    "COCKPIT-R2-01 (the cockpit idea the S07 card keeps, grill and neck corrections pending)",
+    "face A HD-RETURN-6c8900223ee9",
+    "mouth B HD-B-91ef00348229 (external-off: four upper gold caps on lateral incisors and short canines, white central incisors, lower silver/chrome, two plain lip hoops)",
+    "wrist chain and band F HD-DROP-b18c4a123579 on the character-right wrist (provisional)"
+   ],
+   "transitionTo": "S02-7 on the look screen-left for agreement to the crowd that gives it.",
+   "additionalCoverage": "existing art: SB-14 (staging); SB-06 (concept). missing art: an accepted cockpit still with Dolo seated (the same repair S07-3 needs; one still serves both).",
+   "artState": "partial",
+   "missingArt": [
+    "an accepted cockpit still with Dolo seated (the same repair S07-3 needs; one still serves both)"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [
+    "S02C"
+   ],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S02.md"
+  },
+  {
+   "shotID": "S02-7",
+   "sectionID": "S02",
+   "title": "The club cut-in",
+   "purpose": "the same boast, thrown to a room. One beat, so the cockpit's portrait does not have to carry the whole verse alone. A new insert proposed by pass 001, not an existing card.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-08",
+     "assetID": "HD-DROP-e1250a0bce91",
+     "role": "idea",
+     "note": "for the idea (debt flex; its mouth, hair, marks and neck ink drift and do not govern; it is a close-up, this is a wide)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-02-bounty-heat/SB-08-debt-flex-cu.jpg",
+     "sha256": "e1250a0bce91bcd16078f69452504d621e799ddbde5c5e743c7d59a2dd64c4c3",
+     "bytes": 224125
+    },
+    {
+     "sbID": "SB-05",
+     "assetID": "HD-DROP-6e8eb6a956c9",
+     "role": "continuity",
+     "note": "S01's cantina wide (proposed); this cut-in must agree with it (from the card's Continuity line; the label is this crosswalk's; asset id supplied from panels.json, the card gives none)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-05-cantina-walk.jpg",
+     "sha256": "6e8eb6a956c9146a0adc3f1c8c3c71db7d0cc34bbf646f4d681cd6e54ae24428",
+     "bytes": 271645
+    }
+   ],
+   "otherReferences": [
+    "Chewy: the mixer portrait HD-DROP-ca406436d384 is his cover, chosen October 9; no accepted production reference for his anatomy exists",
+    "Bouncer: BOSS-006 rhino HD-RETURN-cafa39484145, the user story intent for the club entrance (not generated, not accepted)",
+    "Bartender: BOSS-009 toad HD-RETURN-80d3ca6a6858, may be in the deep background if the bar is in frame; not required"
+   ],
+   "transitionTo": "S02-8, the hardest cut in the verse, club color to cold grey.",
+   "additionalCoverage": "existing art: SB-08 (idea); SB-05 (continuity). missing art: Chewy's anatomy; the club as a set; the bouncer and bartender as accepted designs. settled: Chewy's established reference since 2026-10-12 is the DJB beast sheet (DECISIONS section 9 row 5; CLAUDE_GRADES_20261012.md); the card's 'no accepted anatomy' hold is superseded; what remains missing is a frame of him in this room.",
+   "artState": "partial",
+   "missingArt": [
+    "Chewy's anatomy",
+    "the club as a set",
+    "the bouncer and bartender as accepted designs"
+   ],
+   "settled": [
+    {
+     "hold": "Chewbacca: no accepted anatomy",
+     "citation": "DECISIONS_20261010.md section 9 row 5; CLAUDE_GRADES_20261012.md"
+    }
+   ],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S02.md"
+  },
+  {
+   "shotID": "S02-8",
+   "sectionID": "S02",
+   "title": "Imperial GO GOs (the warship)",
+   "purpose": "the second creditor's reach, the one he pretends not to fear. The first flight exterior in the piece.",
+   "lyricCue": {
+    "text": "the empire’s imperial GO GOs",
+    "txtLine": 15,
+    "note": "the card quotes no cue, the line follows the title's lyric words"
+   },
+   "originalPanels": [],
+   "otherReferences": [
+    "The warship is undesigned"
+   ],
+   "transitionTo": "S02-9 inside the same vector, the ship crossing to the ship banking.",
+   "additionalCoverage": "no panel. graded frame exists, staging only (writer batch SB-W04, made for this shot). missing art: the warship; the ship exterior.",
+   "artState": "missing",
+   "missingArt": [
+    "the warship",
+    "the ship exterior"
+   ],
+   "settled": [],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S02.md"
+  },
+  {
+   "shotID": "S02-9",
+   "sectionID": "S02",
+   "title": "This junky ship (the bank)",
+   "purpose": "the one boast that is true. The shot plan's S02D.",
+   "lyricCue": {
+    "text": "they can’t catch me",
+    "txtLine": 18
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-13",
+     "assetID": "HD-DROP-8896508767b4",
+     "role": "idea",
+     "note": "for the idea (fastest junk exterior; silhouette differs)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-13-junk-ship-exterior.jpg",
+     "sha256": "8896508767b4deb140202f313d7cb054a765cebd56abd29affbb72621f090bde",
+     "bytes": 443711
+    }
+   ],
+   "otherReferences": [
+    "STORYBOARD_UPDATE_20261011.md item 9: the silhouette round proposed there serves this shot, S05, S07-7 and S08; no accepted ship exterior exists"
+   ],
+   "transitionTo": "S02-10 the exit screen-right to the number, then the Maw, then frame A.",
+   "additionalCoverage": "existing art: SB-13 (idea). missing art: the ship exterior.",
+   "artState": "partial",
+   "missingArt": [
+    "the ship exterior"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [
+    "S02D"
+   ],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S02.md"
+  },
+  {
+   "shotID": "S02-10",
+   "sectionID": "S02",
+   "title": "Twelve-par (the number and the Maw)",
+   "purpose": "the receipt for the boast. Two beats: the number as a graphic, the Maw as a wide. Then the hand-off to frame A.",
+   "lyricCue": {
+    "text": "less than twelve-par! Twelve-Par!",
+    "txtLine": 19,
+    "note": "the card quotes no cue, the line follows the title's lyric words"
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-15",
+     "assetID": "HD-DROP-a962c9148eb5",
+     "role": "idea",
+     "note": "parsec HUD; final text editorial",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-15-parsec-hud.jpg",
+     "sha256": "a962c9148eb589f8e5bfb4e75856393dcd3ee8377ca1651a1f948e3fedf3f1a5",
+     "bytes": 307253
+    },
+    {
+     "sbID": "SB-16",
+     "assetID": "HD-DROP-0c8852c50251",
+     "role": "concept",
+     "note": "Maw wide; story and VFX concept only",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-16-maw-skim.jpg",
+     "sha256": "0c8852c50251b198d124fbeaa416d696bc4d39c1b0c43487df23e8e03a47e831",
+     "bytes": 331284
+    }
+   ],
+   "otherReferences": [],
+   "transitionTo": "Hard cut to frame A at the same angle and light S01 left it, so the chorus that follows reads as the same man a little less sure.",
+   "additionalCoverage": "existing art: SB-15 (idea); SB-16 (concept). missing art: the HUD plate; the Maw.",
+   "artState": "partial",
+   "missingArt": [
+    "the HUD plate",
+    "the Maw"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S02.md"
+  },
+  {
+   "shotID": "S04-1",
+   "sectionID": "S04",
+   "title": "Lay Ah (the hatch)",
+   "purpose": "her name, sung twice, is her entrance into the ship. Her first scene.",
+   "lyricCue": {
+    "text": "Lay Ah",
+    "txtLine": 28
+   },
+   "originalPanels": [],
+   "otherReferences": [
+    "LEIA-LIKENESS-01 (`leia_source_crop.png`, exact source-pixel likeness crop, likeness input only)",
+    "LEIA-STYLE-01 (`LEIA-EXP-01-ivory-coat.jpg`, ivory wardrobe and hair styling only)",
+    "cast-ivory album, cover `HD-DROP-5171bb20c773` (chosen October 9), her working look; costume not locked",
+    "No accepted Leia production reference exists"
+   ],
+   "transitionTo": "S04-2, on her stopping to her looking.",
+   "additionalCoverage": "no panel. missing art: an accepted Leia; the hold as a set. settled: Leia is the customer across the counter and the song's love, married after the song (DECISIONS section 7 row 1 and section 9 row 1); the customer-versus-wife question is closed; her costume and production reference are still open.",
+   "artState": "missing",
+   "missingArt": [
+    "an accepted Leia",
+    "the hold as a set"
+   ],
+   "settled": [
+    {
+     "hold": "Leia: customer or wife",
+     "citation": "DECISIONS_20261010.md section 7 row 1; section 9 row 1"
+    }
+   ],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S04.md"
+  },
+  {
+   "shotID": "S04-2",
+   "sectionID": "S04",
+   "title": "The junky home (one eyebrow)",
+   "purpose": "the shot plan's S04A. What she thinks of what she paid for, in one eyebrow.",
+   "lyricCue": null,
+   "originalPanels": [],
+   "otherReferences": [
+    "as S04-1: LEIA-LIKENESS-01, LEIA-STYLE-01, cast-ivory cover `HD-DROP-5171bb20c773`",
+    "No panel on Grok's board shows this beat; the biggest missing beat in the pass (`WRITER_PASS_001.md`, note 1)"
+   ],
+   "transitionTo": "S04-3, on her eyeline (screen-left, to the cockpit) to him turning back to meet it (over the shoulder, screen-right-rear): the two looks meet across the cut.",
+   "additionalCoverage": "no panel. graded frame exists, staging only (writer batch SB-W02, made for this shot). missing art: an accepted Leia. settled: Leia is the customer across the counter and the song's love, married after the song (DECISIONS section 7 row 1 and section 9 row 1); the customer-versus-wife question is closed; her costume and production reference are still open.",
+   "artState": "missing",
+   "missingArt": [
+    "an accepted Leia"
+   ],
+   "settled": [
+    {
+     "hold": "Leia: customer or wife",
+     "citation": "DECISIONS_20261010.md section 7 row 1; section 9 row 1"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [
+    "S04A"
+   ],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S04.md"
+  },
+  {
+   "shotID": "S04-3",
+   "sectionID": "S04",
+   "title": "My junky home, my name (frame B, the defense)",
+   "purpose": "he hears the eyebrow. He defends the ship like a home and his name like a title.",
+   "lyricCue": {
+    "text": "This is my junky home, my home / put some on my name, on my name",
+    "txtLine": 28
+   },
+   "originalPanels": [],
+   "otherReferences": [
+    "face A `HD-RETURN-6c8900223ee9`",
+    "mouth B `HD-B-91ef00348229` (external-off: four upper gold caps on lateral incisors and short canines, white central incisors, lower silver/chrome, two plain lip hoops)",
+    "wrist chain and band F `HD-DROP-b18c4a123579` on the character-right wrist (provisional blocking choice, not canon)",
+    "Cockpit: `HD-DROP-14f8eb9979b5` (`HD-COCKPIT-R2-01.jpg`, visual library \"Cockpit round 2 · 01\", needs review), the cockpit idea the S07 card keeps, grill and neck corrections pending; no accepted cockpit still with Dolo seated exists"
+   ],
+   "transitionTo": "S04-4, on his hand on the console to his hand on the shirt.",
+   "additionalCoverage": "no panel. graded frame exists, staging only (C16 Leia doorway, for the doorway set). missing art: the cockpit still with Dolo seated (the S07-3 repair; one still serves S02-6, this shot, S04-6, S05, S07 and S09).",
+   "artState": "missing",
+   "missingArt": [
+    "the cockpit still with Dolo seated (the S07-3 repair; one still serves S02-6, this shot, S04-6, S05, S07 and S09)"
+   ],
+   "settled": [],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S04.md"
+  },
+  {
+   "shotID": "S04-4",
+   "sectionID": "S04",
+   "title": "Captain Falcon (the chest ship)",
+   "purpose": "the second ship mention. The ship he is proud of is on his skin.",
+   "lyricCue": {
+    "text": "Captain Falcon",
+    "txtLine": 30
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-17",
+     "assetID": "HD-DROP-baf5e3ccb48f",
+     "role": "idea",
+     "note": "for the idea only; its horizontal ship conflicts with the upright twin-spire goal and does not govern",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-17-chest-ship-peek.jpg",
+     "sha256": "baf5e3ccb48f63050a190151fa575f41445d5c6a4a788f8ec9df196515cd6fac",
+     "bytes": 264849
+    }
+   ],
+   "otherReferences": [
+    "Wrist F `HD-DROP-b18c4a123579` on the hand that opens the shirt (character-right, provisional) only if the wrist is in frame; the draft prompt keeps the wrist out of frame",
+    "The chest ship's design is unresolved beyond \"upright twin-spire\"; no accepted chest reference exists"
+   ],
+   "transitionTo": "S04-5, on the shirt falling to the hands rising.",
+   "additionalCoverage": "existing art: SB-17 (idea). missing art: an accepted chest-ship design.",
+   "artState": "partial",
+   "missingArt": [
+    "an accepted chest-ship design"
+   ],
+   "settled": [],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S04.md"
+  },
+  {
+   "shotID": "S04-5",
+   "sectionID": "S04",
+   "title": "Status report, flipping switches (hands)",
+   "purpose": "\"status report\" and \"flipping switches.\" Hands on controls, in motion for the first time in the song (S02-6 rested a hand on the throttle without moving it).",
+   "lyricCue": {
+    "text": "status report / Start flipping switches",
+    "txtLine": [
+     33,
+     34
+    ]
+   },
+   "originalPanels": [],
+   "otherReferences": [
+    "wrist chain and band F `HD-DROP-b18c4a123579` on the character-right wrist (provisional)",
+    "the cockpit idea as S04-3 (`HD-DROP-14f8eb9979b5`)",
+    "No panel on the board shows an overhead",
+    "the lightspeed-lever idea recorded in `feedback/review_20261009_162912/REVIEW_NOTES.txt` belongs to S05, not here"
+   ],
+   "transitionTo": "S04-6, on the status light to his face, the first still frame after three moving hands.",
+   "additionalCoverage": "no panel. missing art: an overhead panel as a set piece; nothing else.",
+   "artState": "missing",
+   "missingArt": [
+    "an overhead panel as a set piece",
+    "nothing else"
+   ],
+   "settled": [],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S04.md"
+  },
+  {
+   "shotID": "S04-6",
+   "sectionID": "S04",
+   "title": "I will protect you princess (the softened face)",
+   "purpose": "the shot plan's S04C, and the beat the whole song turns on. The promise, the softened face held one beat too long, then the fee and the swagger back.",
+   "lyricCue": {
+    "text": "I will protect you princess",
+    "txtLine": 36
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-14",
+     "assetID": "HD-DROP-d36a3316372d",
+     "role": "staging",
+     "note": "cockpit staging for the portrait, with face and tattoo drift that does not govern",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-14-cockpit-captain.jpg",
+     "sha256": "d36a3316372d3685b17b99249b1b4f27539ea602a57d905f4dc6bc89250c392e",
+     "bytes": 355129
+    }
+   ],
+   "otherReferences": [
+    "face A `HD-RETURN-6c8900223ee9` (as S04-3)",
+    "mouth B `HD-B-91ef00348229` (as S04-3)",
+    "wrist F `HD-DROP-b18c4a123579` (as S04-3)",
+    "the cockpit idea as S04-3 (`HD-DROP-14f8eb9979b5`)"
+   ],
+   "transitionTo": "S04-7, on the swagger's return to Chewie's hand, the fastest cut in the section.",
+   "additionalCoverage": "existing art: SB-14 (staging). missing art: the cockpit still with Dolo seated.",
+   "artState": "partial",
+   "missingArt": [
+    "the cockpit still with Dolo seated"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [
+    "S04C"
+   ],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S04.md"
+  },
+  {
+   "shotID": "S04-7",
+   "sectionID": "S04",
+   "title": "Drop that beat (the fader)",
+   "purpose": "the shot plan's S04B. Chewie's one fader move, and the room answering. The hand-off to S05.",
+   "lyricCue": {
+    "text": "drop that beat",
+    "txtLine": 38
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-18",
+     "assetID": "HD-DROP-b443c1d21d74",
+     "role": "staging",
+     "note": "for the staging idea (Chewie on boards; its ape-like copilot is a recorded defect and does not govern)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-18-tall-copilot.jpg",
+     "sha256": "b443c1d21d7481ca8d8fa7af54fe88ad38f526bca1d0260c5d9decd7a38418c0",
+     "bytes": 412836
+    }
+   ],
+   "otherReferences": [
+    "CHEW-STAGE-01 (`CHEW-EXP-01-furry-dj.jpg`) for decks, headphones, styling and pose only",
+    "CHEW-STYLE-01 (`DJ-STYLE-01-human-booth.jpg`) for equipment layout only",
+    "mixer portrait `HD-DROP-ca406436d384`, his cover (chosen October 9 as \"Chewy,\" the DJ's working name)",
+    "No accepted Wookiee anatomy exists (CHEW-IDENTITY-01 to supply)"
+   ],
+   "transitionTo": "S05, on the pulse to the straps.",
+   "additionalCoverage": "existing art: SB-18 (staging). graded frame exists, staging only (C20 fader push). missing art: Chewbacca; the console controller as a set piece. settled: Chewy's established reference since 2026-10-12 is the DJB beast sheet (DECISIONS section 9 row 5; CLAUDE_GRADES_20261012.md); the card's 'no accepted anatomy' hold is superseded; what remains missing is a frame of him in this room.",
+   "artState": "partial",
+   "missingArt": [
+    "Chewbacca",
+    "the console controller as a set piece"
+   ],
+   "settled": [
+    {
+     "hold": "Chewbacca: no accepted anatomy",
+     "citation": "DECISIONS_20261010.md section 9 row 5; CLAUDE_GRADES_20261012.md"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [
+    "S04B"
+   ],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S04.md"
+  },
+  {
+   "shotID": "S05-1",
+   "sectionID": "S05",
+   "title": "Strap in",
+   "purpose": "the opening words of the bridge (\"Strap in mother fucka,\"). The harness, snapped one-handed, as a boast.",
+   "lyricCue": {
+    "text": "Strap in mother fucka,",
+    "txtLine": 42
+   },
+   "originalPanels": [],
+   "otherReferences": [
+    "HD-DROP-14f8eb9979b5 (HD-COCKPIT-R2-01.jpg, \"Cockpit round 2 · 01\", needs review; the October 9 note retains its pilot and cockpit idea and flags its grill and neck tattoo for correction; library tags round-2 stills \"harness\" but no harness design is recorded, so the harness here is this card's proposal)",
+    "face A HD-RETURN-6c8900223ee9 not needed in frame",
+    "wrist chain and band F HD-DROP-b18c4a123579 on the character-right wrist (provisional blocking choice, not canon)",
+    "Chest ship: upright twin-spire goal, no accepted design (SCENE_CARD_S04.md, S04-4)"
+   ],
+   "transitionTo": "S05-2: 1 to 2 on the buckle's snap to the lock's snap",
+   "additionalCoverage": "no panel. missing art: An accepted seated cockpit still; a harness design; the chest-ship design.",
+   "artState": "missing",
+   "missingArt": [
+    "An accepted seated cockpit still",
+    "a harness design",
+    "the chest-ship design"
+   ],
+   "settled": [],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S05_S08.md"
+  },
+  {
+   "shotID": "S05-2",
+   "sectionID": "S05",
+   "title": "Coordinates locked",
+   "purpose": "\"Line us up, coordinates locked,\" in one graphic: the ship lines itself up.",
+   "lyricCue": {
+    "text": "Line us up, coordinates locked,",
+    "txtLine": 42
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-15",
+     "assetID": "HD-DROP-a962c9148eb5",
+     "role": "precedent",
+     "note": "the precedent for a display insert whose text is editorial (the parsec HUD, \"final text can be added editorially\")",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-15-parsec-hud.jpg",
+     "sha256": "a962c9148eb589f8e5bfb4e75856393dcd3ee8377ca1651a1f948e3fedf3f1a5",
+     "bytes": 307253
+    }
+   ],
+   "otherReferences": [
+    "No navigation display is designed."
+   ],
+   "transitionTo": "S05-3: 2 to 3 on the lock to the first thruster flare",
+   "additionalCoverage": "existing art: SB-15 (precedent). missing art: The display design.",
+   "artState": "partial",
+   "missingArt": [
+    "The display design"
+   ],
+   "settled": [],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S05_S08.md"
+  },
+  {
+   "shotID": "S05-3",
+   "sectionID": "S05",
+   "title": "Thrusters hot",
+   "purpose": "\"thrusters hot, hot… hot…hot…\" The shot plan's S05A: the thrusters flare and the ship begins to move out of the hangar.",
+   "lyricCue": {
+    "text": "thrusters hot, hot… hot…hot…",
+    "txtLine": 42
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-13",
+     "assetID": "HD-DROP-8896508767b4",
+     "role": "idea",
+     "note": "for the exterior idea only (silhouette differs)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-13-junk-ship-exterior.jpg",
+     "sha256": "8896508767b4deb140202f313d7cb054a765cebd56abd29affbb72621f090bde",
+     "bytes": 443711
+    }
+   ],
+   "otherReferences": [
+    "No accepted ship exterior exists; the silhouette round proposed in STORYBOARD_UPDATE_20261011.md item 9 serves this shot"
+   ],
+   "transitionTo": "S05-4a: 3 to 4a on the ship clearing the hangar to the hand reaching up",
+   "additionalCoverage": "existing art: SB-13 (idea). missing art: The ship exterior; the hangar as a set.",
+   "artState": "partial",
+   "missingArt": [
+    "The ship exterior",
+    "the hangar as a set"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [
+    "S05A"
+   ],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S05_S08.md"
+  },
+  {
+   "shotID": "S05-4a",
+   "sectionID": "S05",
+   "title": "Punch it (the lever)",
+   "purpose": "\"punch it - hang on to your butt!\" The overhead lever pull. The supplemental lightspeed scene recorded on October 9, placed here; its timing is pending.",
+   "lyricCue": {
+    "text": "punch it - hang on to your butt!",
+    "txtLine": 42
+   },
+   "originalPanels": [],
+   "otherReferences": [],
+   "transitionTo": "S05-4b: 4a to 4b on the lever down to the lurch",
+   "additionalCoverage": "no panel. missing art: the card carries no missing-art line of its own; S05-4b names the overhead lever set piece and the corrected R2-03 still.",
+   "artState": "missing",
+   "missingArt": [
+    "the overhead lever set piece (named by S05-4b)",
+    "the corrected R2-03 still (named by S05-4b)"
+   ],
+   "settled": [],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S05_S08.md"
+  },
+  {
+   "shotID": "S05-4b",
+   "sectionID": "S05",
+   "title": "Hang on (the lurch, the grin)",
+   "purpose": "the ship throws him into the seat and he loves it.",
+   "lyricCue": {
+    "text": "hang on to your butt!",
+    "txtLine": 42
+   },
+   "originalPanels": [],
+   "otherReferences": [
+    "HD-DROP-1225728294b2 (COCKPIT-R2-03, \"Cockpit round 2 · 03\", needs fixes: the protruding gold tooth corrected to the current head and mouth standard; the still Ziggy attached the lever idea to)",
+    "face A HD-RETURN-6c8900223ee9",
+    "mouth B HD-B-91ef00348229",
+    "wrist F on the lever hand (character-right, provisional)"
+   ],
+   "transitionTo": "4b to S06 on the streaks to Chewie's face, the one thing in the cockpit not impressed; hard cut to S06A, Chewie's look (the spine's \"thrusters wipe to frame C\" is this image, not an optical wipe)",
+   "additionalCoverage": "no panel. missing art: The overhead lever as a set piece; the corrected R2-03 still.",
+   "artState": "missing",
+   "missingArt": [
+    "The overhead lever as a set piece",
+    "the corrected R2-03 still"
+   ],
+   "settled": [],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S05_S08.md"
+  },
+  {
+   "shotID": "S08-1",
+   "sectionID": "S08",
+   "title": "Strap in (reprise)",
+   "purpose": "the same buckle, both hands, pulled tight. No flourish.",
+   "lyricCue": {
+    "text": "Strap in",
+    "txtLine": 72
+   },
+   "originalPanels": [],
+   "otherReferences": [
+    "as S05-1"
+   ],
+   "transitionTo": "S08-2: 1 to 2 on the tug to the lock",
+   "additionalCoverage": "no panel. missing art: As S05-1.",
+   "artState": "missing",
+   "missingArt": [
+    "As S05-1"
+   ],
+   "settled": [],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S05_S08.md"
+  },
+  {
+   "shotID": "S08-2",
+   "sectionID": "S08",
+   "title": "Coordinates locked (reprise)",
+   "purpose": "the same display, a different target.",
+   "lyricCue": {
+    "text": "coordinates locked",
+    "txtLine": 72
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-15",
+     "assetID": "HD-DROP-a962c9148eb5",
+     "role": "precedent",
+     "note": "as S05-2 (the card's References line reads \"as S05-2\")",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-15-parsec-hud.jpg",
+     "sha256": "a962c9148eb589f8e5bfb4e75856393dcd3ee8377ca1651a1f948e3fedf3f1a5",
+     "bytes": 307253
+    }
+   ],
+   "otherReferences": [
+    "as S05-2"
+   ],
+   "transitionTo": "S08-3: 2 to 3 on the lock over the battle to the ship pointed at it",
+   "additionalCoverage": "existing art: SB-15 (precedent). missing art: As S05-2.",
+   "artState": "partial",
+   "missingArt": [
+    "As S05-2"
+   ],
+   "settled": [],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S05_S08.md"
+  },
+  {
+   "shotID": "S08-3",
+   "sectionID": "S08",
+   "title": "Thrusters hot (reprise, the acceleration)",
+   "purpose": "the ship, already turned, accelerates toward the battle. A continuation of S07-7, not a second turn.",
+   "lyricCue": {
+    "text": "thrusters hot",
+    "txtLine": 72
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-21",
+     "assetID": "HD-DROP-88f20c203f5b",
+     "role": "staging",
+     "note": "for staging only, as S07-7",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-04-turnaround/SB-21-ship-turnaround.jpg",
+     "sha256": "88f20c203f5b3fc228f982ba9bc0ab11e08bbf912f881ff297436185665eed86",
+     "bytes": 395754
+    },
+    {
+     "sbID": "SB-13",
+     "assetID": "HD-DROP-8896508767b4",
+     "role": "staging",
+     "note": "for staging only, as S07-7",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-13-junk-ship-exterior.jpg",
+     "sha256": "8896508767b4deb140202f313d7cb054a765cebd56abd29affbb72621f090bde",
+     "bytes": 443711
+    }
+   ],
+   "otherReferences": [
+    "no accepted exterior"
+   ],
+   "transitionTo": "S08-4a: 3 to 4a on the acceleration to the throttle",
+   "additionalCoverage": "existing art: SB-21 (staging); SB-13 (staging). missing art: The ship exterior; the battle light as a designed element (S07-7 sets it).",
+   "artState": "partial",
+   "missingArt": [
+    "The ship exterior",
+    "the battle light as a designed element (S07-7 sets it)"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S05_S08.md"
+  },
+  {
+   "shotID": "S08-4a",
+   "sectionID": "S08",
+   "title": "Punch it (the throttle, S08A)",
+   "purpose": "the shot plan's S08A. The hand finally hits the gas: the throttle all the way forward, one decisive movement, cockpit lights responding.",
+   "lyricCue": {
+    "text": "punch it",
+    "txtLine": 72
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-23",
+     "assetID": "HD-DROP-e693f5f7bff1",
+     "role": "staging",
+     "note": "Chewie's levers (S07-5), staging only for a hand-on-control insert and not the subject here",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-04-turnaround/SB-23-tall-levers.jpg",
+     "sha256": "e693f5f7bff17ce50fda237f81c3a4a83541b4d104556d909a34171c144e8ef2",
+     "bytes": 411320
+    }
+   ],
+   "otherReferences": [
+    "HD-DROP-14f8eb9979b5 (R2-01) for the seated idea with corrections pending",
+    "wrist F on the throttle hand (character-right, provisional)"
+   ],
+   "transitionTo": "S08-4b: 4a to 4b on the throttle forward to the lurch",
+   "additionalCoverage": "existing art: SB-23 (staging). graded frame exists, staging only (C07 throttle insert). missing art: the card carries no missing-art line of its own; S08-4b names the throttle console and the seated still.",
+   "artState": "partial",
+   "missingArt": [
+    "the throttle console (named by S08-4b)",
+    "the seated still (named by S08-4b)"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [
+    "S08A"
+   ],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S05_S08.md"
+  },
+  {
+   "shotID": "S08-4b",
+   "sectionID": "S08",
+   "title": "Hang on (the lurch, no grin)",
+   "purpose": "the same lurch as S05-4b, and a different man in the seat.",
+   "lyricCue": {
+    "text": "hang on to your butt!",
+    "txtLine": 72
+   },
+   "originalPanels": [],
+   "otherReferences": [
+    "as S05-4b: face A",
+    "mouth B (closed)",
+    "wrist F if the hands show"
+   ],
+   "transitionTo": "4b to S09 on the battle light on his face to the same light moving across it; lands on frame B: hard cut to S09A, the battle light moving across his face",
+   "additionalCoverage": "no panel. missing art: The throttle and its console as a set piece (S07-3's repair); the seated still.",
+   "artState": "missing",
+   "missingArt": [
+    "The throttle and its console as a set piece (S07-3's repair)",
+    "the seated still"
+   ],
+   "settled": [],
+   "newCoverage": true,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S05_S08.md"
+  },
+  {
+   "shotID": "S07-1",
+   "sectionID": "S07",
+   "title": "The cut (insert)",
+   "purpose": "the counting motif returns. Same four warm-gold rectangular credits as S01B, now in or on a battered case; crates behind.",
+   "lyricCue": {
+    "text": "Got my cut.",
+    "txtLine": 51,
+    "note": "the card quotes no cue, the line follows the title's lyric words"
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-03",
+     "assetID": "HD-DROP-36679ee9953b",
+     "role": "reference_d",
+     "note": "props and geography only (credit design and hand contact; the opening prototype's reference D)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-03-pay-table.jpg",
+     "sha256": "36679ee9953bfb8d0492009c1a47309fdd8f04f951f2077bce0007067146b1c4",
+     "bytes": 316016
+    },
+    {
+     "sbID": "SB-19",
+     "assetID": "HD-DROP-d3f1eb0d0504",
+     "role": "staging",
+     "note": "staging, with its chip stacks replaced by the four credits",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-04-turnaround/SB-19-credits-insert.jpg",
+     "sha256": "d3f1eb0d0504fbde537218e7c49d156b022062b481a7667c51d63844dfc7b0cc",
+     "bytes": 293510
+    },
+    {
+     "sbID": "SB-06",
+     "assetID": "HD-DROP-b18c4a123579",
+     "role": "wrist_reference_f",
+     "note": "wrist chain and dark band, if the wrist enters frame, on the provisionally chosen character-right wrist as in the opening",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-06-scoundrel-detail.jpg",
+     "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+     "bytes": 308775
+    }
+   ],
+   "otherReferences": [
+    "the opening prototype's reference D (HD-DROP-36679ee9953b)",
+    "S01B (same four warm-gold rectangular credits)"
+   ],
+   "transitionTo": "1 to 2 on the hand (case lid to comms panel).",
+   "additionalCoverage": "existing art: SB-03 (reference D); SB-19 (staging); SB-06 (wrist reference F). graded frame exists, staging only (writer batch SB-W03, made for this shot; C30 cargo insert candidate). missing art: the case (undrawn, S07 card ingredient).",
+   "artState": "partial",
+   "missingArt": [
+    "the case (undrawn, S07 card ingredient)"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S07.md"
+  },
+  {
+   "shotID": "S07-2",
+   "sectionID": "S07",
+   "title": "Good luck, kid (insert, then profile)",
+   "purpose": "the farewell to the kid without the kid.",
+   "lyricCue": {
+    "text": "Told the kid, “Good luck.”",
+    "txtLine": 53,
+    "note": "the card quotes no cue, the line follows the title's lyric words"
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-22",
+     "assetID": "HD-DROP-825d9fd99e3d",
+     "role": "mood",
+     "note": "for mood only, not its wet white shirt and not its face",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-04-turnaround/SB-22-kid-good-luck.jpg",
+     "sha256": "825d9fd99e3de8a711e33840e1b14a0257f0cfd9e99d0b01dc2320c0d2e46466",
+     "bytes": 232810
+    }
+   ],
+   "otherReferences": [
+    "face HD-RETURN-6c8900223ee9 (lf_full, identity only)",
+    "Outfit: the opening's dark brown distressed leather jacket over the open off-white shirt, chest ship visible where the shirt opens"
+   ],
+   "transitionTo": "2 to 3 on Dolo's eyes (profile forward to the display).",
+   "additionalCoverage": "existing art: SB-22 (mood). missing art: the comms panel (undrawn).",
+   "artState": "partial",
+   "missingArt": [
+    "the comms panel (undrawn)"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S07.md"
+  },
+  {
+   "shotID": "S07-3",
+   "sectionID": "S07",
+   "title": "Still has not hit the gas (frame B, the key shot)",
+   "purpose": "the decision forming. The scene's starting still.",
+   "lyricCue": {
+    "text": "Still ain’t hit the gas.",
+    "txtLine": 64,
+    "note": "the card quotes no cue, the line follows the title's lyric words"
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-14",
+     "assetID": "HD-DROP-d36a3316372d",
+     "role": "composition",
+     "note": "composition only (cockpit staging)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-14-cockpit-captain.jpg",
+     "sha256": "d36a3316372d3685b17b99249b1b4f27539ea602a57d905f4dc6bc89250c392e",
+     "bytes": 355129
+    }
+   ],
+   "otherReferences": [
+    "face A HD-RETURN-6c8900223ee9",
+    "mouth B HD-B-91ef00348229 only if the lips part (external-off: four upper gold caps on lateral incisors and short canines, white central incisors, lower silver/chrome, two plain lip hoops)",
+    "wrist chain and band F HD-DROP-b18c4a123579 on the character-right wrist, which is the throttle hand, so the chain reads (provisional blocking choice carried from the opening, not canon)",
+    "COCKPIT-R2-01 HD-DROP-14f8eb9979b5 (the user-kept pilot idea, which still needs its grill and neck-tattoo corrections before it can be a reference)"
+   ],
+   "transitionTo": "3 to 4 on the eyeline (Dolo looks screen-right at the display; cut to Chewie, screen-left of him, looking screen-right at Dolo; same direction, different objects).",
+   "additionalCoverage": "existing art: SB-14 (composition). graded frame exists, staging only (writer batch SB-W01, made for this shot). missing art: an accepted cockpit set with a throttle and an unlettered distress display at screen-right.",
+   "artState": "partial",
+   "missingArt": [
+    "an accepted cockpit set with a throttle and an unlettered distress display at screen-right"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S07.md"
+  },
+  {
+   "shotID": "S07-4",
+   "sectionID": "S07",
+   "title": "The look (Chewie)",
+   "purpose": "the copilot sees the decision before Dolo admits it. Same setup and size as S06A, held longer, with Dolo's shoulder now in frame.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-18",
+     "assetID": "HD-DROP-b443c1d21d74",
+     "role": "staging",
+     "note": "staging only; their ape-like anatomy is a recorded defect, not a design",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-18-tall-copilot.jpg",
+     "sha256": "b443c1d21d7481ca8d8fa7af54fe88ad38f526bca1d0260c5d9decd7a38418c0",
+     "bytes": 412836
+    }
+   ],
+   "otherReferences": [
+    "CHEW-STAGE-01 through 03 in casting/gemini_cast_reference_map.txt (staging only; ape-like anatomy is a recorded defect, not a design)",
+    "no accepted Chewbacca production reference exists",
+    "S06A (same setup and size, held longer)"
+   ],
+   "transitionTo": "4 to 5 on Chewie's hands (from the look to the levers).",
+   "additionalCoverage": "existing art: SB-18 (staging). graded frame exists, staging only (C12 Chewy at the switches, C15 cockpit two-shot). missing art: Chewbacca. settled: Chewy's established reference since 2026-10-12 is the DJB beast sheet (DECISIONS section 9 row 5; CLAUDE_GRADES_20261012.md); the card's 'no accepted anatomy' hold is superseded; what remains missing is a frame of him in this room.",
+   "artState": "partial",
+   "missingArt": [
+    "Chewbacca"
+   ],
+   "settled": [
+    {
+     "hold": "Chewbacca: no accepted anatomy",
+     "citation": "DECISIONS_20261010.md section 9 row 5; CLAUDE_GRADES_20261012.md"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S07.md"
+  },
+  {
+   "shotID": "S07-5",
+   "sectionID": "S07",
+   "title": "Swing her back (insert)",
+   "purpose": "the order carried out. Hands on the levers.",
+   "lyricCue": {
+    "text": "Chewie, swing her back.",
+    "txtLine": 67,
+    "note": "the card quotes no cue, the line follows the title's lyric words"
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-23",
+     "assetID": "HD-DROP-e693f5f7bff1",
+     "role": "staging",
+     "note": "for staging only; the hands must be Chewbacca's, not the panel's",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-04-turnaround/SB-23-tall-levers.jpg",
+     "sha256": "e693f5f7bff17ce50fda237f81c3a4a83541b4d104556d909a34171c144e8ef2",
+     "bytes": 411320
+    }
+   ],
+   "otherReferences": [],
+   "transitionTo": "5 to 6 on the lever throw to the grin, the fastest cut in the scene.",
+   "additionalCoverage": "existing art: SB-23 (staging). missing art: Chewbacca's hands on the levers. settled: Chewy's established reference since 2026-10-12 is the DJB beast sheet (DECISIONS section 9 row 5; CLAUDE_GRADES_20261012.md); the card's 'no accepted anatomy' hold is superseded; what remains missing is a frame of him in this room.",
+   "artState": "partial",
+   "missingArt": [
+    "Chewbacca's hands on the levers"
+   ],
+   "settled": [
+    {
+     "hold": "Chewbacca: no accepted anatomy",
+     "citation": "DECISIONS_20261010.md section 9 row 5; CLAUDE_GRADES_20261012.md"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S07.md"
+  },
+  {
+   "shotID": "S07-6",
+   "sectionID": "S07",
+   "title": "No extra charge (mouth)",
+   "purpose": "the grin that pretends the sacrifice was a favor.",
+   "lyricCue": {
+    "text": "No - extra - charge.",
+    "txtLine": 68,
+    "note": "the card quotes no cue, the line follows the title's lyric words"
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-01",
+     "assetID": "HD-DROP-725c38458fd8",
+     "role": "composition",
+     "note": "composition, with its obsolete dental map replaced; the SB-01 framing exactly",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-01-grill-ecu.jpg",
+     "sha256": "725c38458fd8e8d6cff78c1c330368e1057333ab8dc84a900070065f02f02ff8",
+     "bytes": 257623
+    }
+   ],
+   "otherReferences": [
+    "mouth B HD-B-91ef00348229",
+    "two plain lower-lip hoops"
+   ],
+   "transitionTo": "6 to 7 the grin to the turn, held long.",
+   "additionalCoverage": "existing art: SB-01 (composition). missing art: a corrected mouth ECU (choruses card blocker 2 names S07-6).",
+   "artState": "partial",
+   "missingArt": [
+    "a corrected mouth ECU (choruses card blocker 2 names S07-6)"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S07.md"
+  },
+  {
+   "shotID": "S07-7",
+   "sectionID": "S07",
+   "title": "The turn (S07B, exterior)",
+   "purpose": "the consequence. The junky ship leaves the clean lane for the battle.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-21",
+     "assetID": "HD-DROP-88f20c203f5b",
+     "role": "staging",
+     "note": "for staging only",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-04-turnaround/SB-21-ship-turnaround.jpg",
+     "sha256": "88f20c203f5b3fc228f982ba9bc0ab11e08bbf912f881ff297436185665eed86",
+     "bytes": 395754
+    },
+    {
+     "sbID": "SB-13",
+     "assetID": "HD-DROP-8896508767b4",
+     "role": "staging",
+     "note": "for staging only",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-13-junk-ship-exterior.jpg",
+     "sha256": "8896508767b4deb140202f313d7cb054a765cebd56abd29affbb72621f090bde",
+     "bytes": 443711
+    }
+   ],
+   "otherReferences": [
+    "the ship's silhouette is CFA's open design question and no accepted exterior exists",
+    "S08A (S08 keeps its throttle-push card; the hand finally hits the gas)"
+   ],
+   "transitionTo": "Not stated; Cut logic ends at 6 to 7. Continuity: S08 keeps its throttle-push card S08A (the hand finally hits the gas); any S08 exterior is a proposed continuation of this turn, not a second turn.",
+   "additionalCoverage": "existing art: SB-21 (staging); SB-13 (staging). missing art: the ship exterior (S07 card blocker 3).",
+   "artState": "partial",
+   "missingArt": [
+    "the ship exterior (S07 card blocker 3)"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [
+    "S07B"
+   ],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S07.md"
+  },
+  {
+   "shotID": "S10-1",
+   "sectionID": "S10",
+   "title": "The dinner (frame D begins)",
+   "purpose": "the trap sprung, told as composure. The host does not move.",
+   "lyricCue": {
+    "text": "Dinner date with Darth Vader?",
+    "txtLine": 83,
+    "note": "the card quotes no cue, the line follows the title's lyric words"
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-07",
+     "assetID": "HD-DROP-f7c3d8374e68",
+     "role": "evidence",
+     "note": "the board's dinner panel and evidence that the dinner exists in Verse 3; its seating (side by side at the near edge, Vader screen-right), its Dolo and its lighting do not govern this shot",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-02-bounty-heat/SB-07-dinner-vader.jpg",
+     "sha256": "f7c3d8374e68ae28950230a6ba5a1fb753eac70e870b364c4de80ada8ae1a16b",
+     "bytes": 306064
+    }
+   ],
+   "otherReferences": [
+    "VADER-ARMOR-01 (VADER-EXP-01-black-armor.jpg): the general slim concept; cast-map role is armor, material and lighting concept, not production identity",
+    "Thick Vader: a named variant with no verified reference; which Vader this is remains Ziggy's choice",
+    "Gemini candidate clip references/Gemini Video/gemini_generated_video_58328bf1.mp4: the user-directed S10A dinner reference; informs the setting; does not establish continuity"
+   ],
+   "transitionTo": "S10-2: 1 to 2 on the empty chair becoming occupied (the helmet turns toward the door; cut; he is in the chair).",
+   "additionalCoverage": "existing art: SB-07 (evidence). missing art: The table and room as a set; an accepted Vader. settled: the one Vader = the armored enforcer collection (DECISIONS section 7 row 2); Thick Vader is the same character; the card's slim-versus-Thick question is closed.",
+   "artState": "partial",
+   "missingArt": [
+    "The table and room as a set",
+    "an accepted Vader"
+   ],
+   "settled": [
+    {
+     "hold": "Vader: the slim concept or Thick Vader",
+     "citation": "DECISIONS_20261010.md section 7 row 2"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [
+    "S10A"
+   ],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S10.md"
+  },
+  {
+   "shotID": "S10-2",
+   "sectionID": "S10",
+   "title": "The guest (reaction)",
+   "purpose": "the fine print, read on his face.",
+   "lyricCue": {
+    "text": "Shoulda red the fine print.",
+    "txtLine": 82,
+    "note": "the card quotes no cue; the line follows the card's purpose words ('the fine print, read on his face')"
+   },
+   "originalPanels": [],
+   "otherReferences": [
+    "face A HD-RETURN-6c8900223ee9",
+    "mouth B HD-B-91ef00348229 if the lips part (external-off: four upper gold caps on lateral incisors and short canines, white central incisors, lower silver/chrome, two plain lip hoops)",
+    "wrist chain and band F HD-DROP-b18c4a123579 on the character-right wrist (provisional blocking choice carried from the opening, not canon) if the hands are on the table"
+   ],
+   "transitionTo": "S10-3: 2 to 3 on the cool light: the same light, the same man, a different room; the dinner ends with his frozen smile and the chamber begins with his head tilting back.",
+   "additionalCoverage": "no panel. missing art: the dining room set (shared with S10-1). settled: the one Vader = the armored enforcer collection (DECISIONS section 7 row 2); Thick Vader is the same character; the card's slim-versus-Thick question is closed.",
+   "artState": "missing",
+   "missingArt": [
+    "the dining room set (shared with S10-1)"
+   ],
+   "settled": [
+    {
+     "hold": "Vader: the slim concept or Thick Vader",
+     "citation": "DECISIONS_20261010.md section 7 row 2"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S10.md"
+  },
+  {
+   "shotID": "S10-3",
+   "sectionID": "S10",
+   "title": "Night night (the tilt)",
+   "purpose": "the one Carbon Knight joke that works as a picture. One beat only.",
+   "lyricCue": {
+    "text": "night night…",
+    "txtLine": 89,
+    "note": "the card quotes no cue, the line follows the title's lyric words"
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-26",
+     "assetID": "HD-DROP-4aadd9404769",
+     "role": "framing",
+     "note": "for the pose and framing only (its face, lettering and jewelry do not govern)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-05-carbon-knight/SB-26-night-night-tilt.jpg",
+     "sha256": "4aadd940476960e787e32c54abe03ebddbe7c263cd1bbb827ad1cd07ea3569c7",
+     "bytes": 240891
+    },
+    {
+     "sbID": "SB-25",
+     "assetID": "HD-DROP-e397f8389a14",
+     "role": "continuity",
+     "note": "named in continuity only: the fur coat in SB-25 and SB-26 is not the established outfit (asset id given in S10-7)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-05-carbon-knight/SB-25-carbonite-chamber.jpg",
+     "sha256": "e397f8389a140aa22275eae51cbb0471d065a2ebc1662415be691d870e2f03c0",
+     "bytes": 280877
+    }
+   ],
+   "otherReferences": [
+    "face A HD-RETURN-6c8900223ee9 (\"A and B as above\")",
+    "mouth B HD-B-91ef00348229 (\"A and B as above\")"
+   ],
+   "transitionTo": "S10-4: 3 to 4 on the eyes closing to Chewie's eyes opening on him.",
+   "additionalCoverage": "existing art: SB-26 (framing); SB-25 (continuity). missing art: the chamber set (S10 card ingredient).",
+   "artState": "partial",
+   "missingArt": [
+    "the chamber set (S10 card ingredient)"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S10.md"
+  },
+  {
+   "shotID": "S10-4",
+   "sectionID": "S10",
+   "title": "Keep her safe (the trusted look)",
+   "purpose": "the third look. In S06 Chewie doubted him; here Chewie is the one he trusts with the only thing he was not paid for.",
+   "lyricCue": {
+    "text": "Chewie, keep her safe,",
+    "txtLine": 91,
+    "note": "the card quotes no cue, the line follows the title's lyric words"
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-18",
+     "assetID": "HD-DROP-b443c1d21d74",
+     "role": "staging",
+     "note": "staging only, their ape-like anatomy a recorded defect",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-18-tall-copilot.jpg",
+     "sha256": "b443c1d21d7481ca8d8fa7af54fe88ad38f526bca1d0260c5d9decd7a38418c0",
+     "bytes": 412836
+    }
+   ],
+   "otherReferences": [
+    "CHEW-STAGE-01 through 03: staging only, their ape-like anatomy a recorded defect",
+    "no accepted Chewbacca production reference exists"
+   ],
+   "transitionTo": "S10-5: 4 to 5 on the trusted look to her face: both are looks at Dolo from either side.",
+   "additionalCoverage": "existing art: SB-18 (staging). missing art: Chewbacca. This shot cannot be detailed past this card until that reference is accepted. settled: Chewy's established reference since 2026-10-12 is the DJB beast sheet (DECISIONS section 9 row 5; CLAUDE_GRADES_20261012.md); the card's 'no accepted anatomy' hold is superseded; what remains missing is a frame of him in this room.",
+   "artState": "partial",
+   "missingArt": [
+    "Chewbacca. This shot cannot be detailed past this card until that reference is accepted"
+   ],
+   "settled": [
+    {
+     "hold": "Chewbacca: no accepted anatomy",
+     "citation": "DECISIONS_20261010.md section 9 row 5; CLAUDE_GRADES_20261012.md"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S10.md"
+  },
+  {
+   "shotID": "S10-5",
+   "sectionID": "S10",
+   "title": "She said it (Leia, silent)",
+   "purpose": "Leia's line is sung by Dolo in the lyric; he reports it. So her shot is silent: she says it, and we do not hear her, we hear him.",
+   "lyricCue": {
+    "text": "She said, “I love you.”",
+    "txtLine": 98,
+    "note": "the card quotes no cue, the line follows the title's lyric words"
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-28",
+     "assetID": "HD-DROP-4964cf10eb47",
+     "role": "framing",
+     "note": "for framing only (its performer is not the intended likeness)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-05-carbon-knight/SB-28-i-love-you.jpg",
+     "sha256": "4964cf10eb47225588610dda058a3f7485a461e2606d4f99814be28419139f42",
+     "bytes": 225224
+    }
+   ],
+   "otherReferences": [
+    "LEIA-LIKENESS-01 (leia_source_crop.png): the exact source-pixel crop, likeness input only",
+    "LEIA-STYLE-01 (LEIA-EXP-01-ivory-coat.jpg): ivory wardrobe and hair styling only, per the cast map",
+    "no accepted Leia production reference exists"
+   ],
+   "transitionTo": "S10-6: 5 to 6 on her mouth to his: the answer.",
+   "additionalCoverage": "existing art: SB-28 (framing). missing art: Leia, as a production reference. settled: Leia is the customer across the counter and the song's love, married after the song (DECISIONS section 7 row 1 and section 9 row 1); the customer-versus-wife question is closed; her costume and production reference are still open.",
+   "artState": "partial",
+   "missingArt": [
+    "Leia, as a production reference"
+   ],
+   "settled": [
+    {
+     "hold": "Leia: customer or wife",
+     "citation": "DECISIONS_20261010.md section 7 row 1; section 9 row 1"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S10.md"
+  },
+  {
+   "shotID": "S10-6",
+   "sectionID": "S10",
+   "title": "I know (the two words)",
+   "purpose": "the only close-up in the piece with no sales in it.",
+   "lyricCue": {
+    "text": "I know…. I know.",
+    "txtLine": 100
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-29",
+     "assetID": "HD-DROP-d4f916925c82",
+     "role": "framing",
+     "note": "for framing only (its performer is not the likeness)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-05-carbon-knight/SB-29-i-know.jpg",
+     "sha256": "d4f916925c822861fb7e9c0367f3810fdd64a24e776622d1081debdd9b2bf979",
+     "bytes": 227805
+    }
+   ],
+   "otherReferences": [
+    "A face HD-RETURN-6c8900223ee9",
+    "B mouth HD-B-91ef00348229, which will be visible, external-off",
+    "lip hoops"
+   ],
+   "transitionTo": "S10-7: 6 to 7 the longest hold in the piece, then the vapor.",
+   "additionalCoverage": "existing art: SB-29 (framing). missing art: the chamber set.",
+   "artState": "partial",
+   "missingArt": [
+    "the chamber set"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S10.md"
+  },
+  {
+   "shotID": "S10-7",
+   "sectionID": "S10",
+   "title": "Carbon Knight (the slab)",
+   "purpose": "the price, shown last. A reveal, not a transformation.",
+   "lyricCue": {
+    "text": "Now I’m her Carbon Knight.",
+    "txtLine": 88,
+    "note": "the card quotes no cue, the line follows the title's lyric words"
+   },
+   "originalPanels": [
+    {
+     "sbID": "SB-27",
+     "assetID": "HD-DROP-16ad386979c6",
+     "role": "staging",
+     "note": "for staging only; the frozen likeness is a prop design that does not exist and must be made from A, not from the panel",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-05-carbon-knight/SB-27-carbonite-slab.jpg",
+     "sha256": "16ad386979c6b27642d99d8e20e4a96e57e6e1e74d9a0ae52fd5263c4d1e7895",
+     "bytes": 322889
+    },
+    {
+     "sbID": "SB-25",
+     "assetID": "HD-DROP-e397f8389a14",
+     "role": "staging",
+     "note": "for the room: shows the chamber before the freeze and is staging for the room, not for this shot",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-05-carbon-knight/SB-25-carbonite-chamber.jpg",
+     "sha256": "e397f8389a140aa22275eae51cbb0471d065a2ebc1662415be691d870e2f03c0",
+     "bytes": 280877
+    }
+   ],
+   "otherReferences": [
+    "face A HD-RETURN-6c8900223ee9: the frozen likeness must be made from A",
+    "wrist chain and band F HD-DROP-b18c4a123579: on the character-right wrist in the relief, provisional"
+   ],
+   "transitionTo": "Last shot of the Cut logic; continuity: the raised hands match-cut to the opening's poised hands over the credits in S11.",
+   "additionalCoverage": "existing art: SB-27 (staging); SB-25 (staging). missing art: The slab as a designed prop; the chamber set.",
+   "artState": "partial",
+   "missingArt": [
+    "The slab as a designed prop",
+    "the chamber set"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_S10.md"
+  },
+  {
+   "shotID": "E-1",
+   "sectionID": "EPILOGUE",
+   "title": "The thaw (SB-30 repurposed)",
+   "purpose": "he comes out of it. Not a reunion with Leia; a release, with Chewie there because Chewie was asked to be.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-30",
+     "assetID": "HD-DROP-32580c30003c",
+     "role": "repurposed",
+     "note": "repurposed; for the idea only (its two-shot is a reunion the lyrics do not establish; its pairing does not govern)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-05-carbon-knight/SB-30-thaw-twoshot.jpg",
+     "sha256": "32580c30003cabab3f2ab222c315995840d563429aad27659e41b0bd3ebec9ca",
+     "bytes": 210629
+    }
+   ],
+   "otherReferences": [
+    "the slab prop from S10-7 (undesigned)",
+    "face A HD-RETURN-6c8900223ee9 for the relief and the face as it emerges",
+    "wrist chain and band F HD-DROP-b18c4a123579 on the character-right wrist in the relief, as S10-7 (provisional)",
+    "Chewbacca: no accepted anatomy"
+   ],
+   "transitionTo": "E-2 on Chewie's hold to the empty room: the hardest cut in the piece, from the chamber to home, no travel shown.",
+   "additionalCoverage": "existing art: SB-30 (repurposed). missing art: the slab prop; the chamber; Chewbacca. settled: Chewy's established reference since 2026-10-12 is the DJB beast sheet (DECISIONS section 9 row 5; CLAUDE_GRADES_20261012.md); the card's 'no accepted anatomy' hold is superseded; what remains missing is a frame of him in this room. settled: the informant returns (DECISIONS section 9 row 4): the optional witness beat is on, its one line of direction not yet written.",
+   "artState": "partial",
+   "missingArt": [
+    "the slab prop",
+    "the chamber",
+    "Chewbacca"
+   ],
+   "settled": [
+    {
+     "hold": "Chewbacca: no accepted anatomy",
+     "citation": "DECISIONS_20261010.md section 9 row 5; CLAUDE_GRADES_20261012.md"
+    },
+    {
+     "hold": "The informant's return as the witness at the thaw",
+     "citation": "DECISIONS_20261010.md section 9 row 4"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_EPILOGUE.md"
+  },
+  {
+   "shotID": "E-2",
+   "sectionID": "EPILOGUE",
+   "title": "The doorway (beat 01, SB-GRILL-01)",
+   "purpose": "his quarters. Alone, upright, himself.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-GRILL-01",
+     "assetID": "HD-GRILLUP-a9e6f58d0b70",
+     "role": "layout",
+     "note": "for the doorway and the warm cabin behind it only (its face, tattoos and bare hands do not govern; the room's layout beyond the doorway is this card's)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/received/content/a9e6f58d0b70__SB-GRILL-01-doorway.jpg",
+     "sha256": "a9e6f58d0b704948f12c9ca1613a81cc16822f7158030bedcca9fc9209c55d9e",
+     "bytes": 206017
+    }
+   ],
+   "otherReferences": [
+    "face A HD-RETURN-6c8900223ee9 (as above)",
+    "wrist chain and band F HD-DROP-b18c4a123579 (as above)",
+    "the opening outfit"
+   ],
+   "transitionTo": "E-3 on hands on the bureau's edge to the same hand resting on it in the mirror.",
+   "additionalCoverage": "existing art: SB-GRILL-01 (layout). missing art: the cabin as a set; a corrected panel.",
+   "artState": "partial",
+   "missingArt": [
+    "the cabin as a set",
+    "a corrected panel"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_EPILOGUE.md"
+  },
+  {
+   "shotID": "E-3",
+   "sectionID": "EPILOGUE",
+   "title": "The mirror (beat 02 by story order; the pixels are in the file named 03)",
+   "purpose": "the first look at himself since the counter. Priority 1's progression begins here: mirror, then removal, then dish.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-GRILL-03-lipring-out-r2.jpg",
+     "assetID": "HD-GRILLUP-02659c457fb9",
+     "role": "composition",
+     "note": "the panel actually showing the bureau and mirror portrait (its name says removal; its pixels show the portrait, with a direct face that smiles while the reflection does not, and one lip hoop visible: those mismatches do not govern)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/received/content/02659c457fb9__SB-GRILL-03-lipring-out-r2.jpg",
+     "sha256": "02659c457fb9833daa540b02f929c829ddbd4707ec11a61ba66219c4e74089e1",
+     "bytes": 299905
+    }
+   ],
+   "otherReferences": [
+    "A for the face",
+    "mouth B HD-B-91ef00348229 for the teeth if the lips part (external-off, both hoops still in)",
+    "F on the resting hand (character-right, provisional)"
+   ],
+   "transitionTo": "E-4 on his look at himself to the fingers at the lip, the mirror left behind.",
+   "additionalCoverage": "existing art: SB-GRILL-03-lipring-out-r2.jpg (composition). missing art: a corrected mirror panel.",
+   "artState": "partial",
+   "missingArt": [
+    "a corrected mirror panel"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_EPILOGUE.md"
+  },
+  {
+   "shotID": "E-4",
+   "sectionID": "EPILOGUE",
+   "title": "Rings out (beat 03 by story order; the pixels are in the file named 02)",
+   "purpose": "the first of the two things that change his mouth. Two hoops, one at a time.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-GRILL-02-mirror-r2.jpg",
+     "assetID": "HD-GRILLUP-57bce647c089",
+     "role": "composition",
+     "note": "the panel actually showing the removal (its long pointed canines and white lower row contradict the external-off reference and do not govern)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/received/content/57bce647c089__SB-GRILL-02-mirror-r2.jpg",
+     "sha256": "57bce647c089bbee5e285f4240be128fc16d8e91ade466bc215722caa94f0784",
+     "bytes": 266586
+    }
+   ],
+   "otherReferences": [
+    "mouth B for the teeth at this moment",
+    "A for the face",
+    "F on the wrist"
+   ],
+   "transitionTo": "E-5 on the hoops in the fingers to the hoops in the dish.",
+   "additionalCoverage": "existing art: SB-GRILL-02-mirror-r2.jpg (composition). missing art: a corrected removal panel; the corrected mouth ECU the choruses card also needs.",
+   "artState": "partial",
+   "missingArt": [
+    "a corrected removal panel",
+    "the corrected mouth ECU the choruses card also needs"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_EPILOGUE.md"
+  },
+  {
+   "shotID": "E-5",
+   "sectionID": "EPILOGUE",
+   "title": "Rings in the dish (beat 04, SB-GRILL-04)",
+   "purpose": "the hoops set down. The props that will still be there at the exit.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-GRILL-04",
+     "assetID": "HD-GRILLUP-894990536803",
+     "role": "idea",
+     "note": "for the idea only (it shows three hoops, generic hand tattoos and no gold hand rings; the count and the hands do not govern)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/received/content/894990536803__SB-GRILL-04-rings-in-dish.jpg",
+     "sha256": "894990536803c62f979952399dbc6403236e2576841ab439f0adc9b44e5d4f9e",
+     "bytes": 262878
+    }
+   ],
+   "otherReferences": [
+    "F on the wrist (character-right, provisional)",
+    "the gold hand rings and the Leigh hand-art reference where the hand shows"
+   ],
+   "transitionTo": "E-6 on the hand leaving the dish to the hand opening the case.",
+   "additionalCoverage": "existing art: SB-GRILL-04 (idea). missing art: a corrected panel.",
+   "artState": "partial",
+   "missingArt": [
+    "a corrected panel"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_EPILOGUE.md"
+  },
+  {
+   "shotID": "E-6",
+   "sectionID": "EPILOGUE",
+   "title": "The case (beat 05, SB-GRILL-05)",
+   "purpose": "the iced grill, in its case, the first time the audience sees it.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-GRILL-05",
+     "assetID": "HD-GRILLUP-aa4962b0cbaa",
+     "role": "composition",
+     "note": "for composition only (its long pointed canines differ from r4 and do not govern)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/received/content/aa4962b0cbaa__SB-GRILL-05-case-open.jpg",
+     "sha256": "aa4962b0cbaa88662c5330004b47e8a7bd9808e377debf82c45deb7e0a58ed7f",
+     "bytes": 260356
+    },
+    {
+     "sbID": "r4 anchor",
+     "assetID": "HD-GRILLUP-40064d98db89",
+     "role": "anchor_r4",
+     "note": "for the grill's shape (the card's wording; file HEAD-HD-ICED-ANCHOR-LOCK-r4.jpg)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/received/content/40064d98db89__HEAD-HD-ICED-ANCHOR-LOCK-r4.jpg",
+     "sha256": "40064d98db897276b80085273919ccd79ca377a068dcc2bd23c519e4038ee93e",
+     "bytes": 242776
+    }
+   ],
+   "otherReferences": [],
+   "transitionTo": "E-7 on the open case to him looking down at it.",
+   "additionalCoverage": "existing art: SB-GRILL-05 (composition); r4 anchor (anchor). missing art: the grill as a prop built from r4; a corrected panel.",
+   "artState": "partial",
+   "missingArt": [
+    "the grill as a prop built from r4",
+    "a corrected panel"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_EPILOGUE.md"
+  },
+  {
+   "shotID": "E-7",
+   "sectionID": "EPILOGUE",
+   "title": "Standing at the case (beat 06, SB-GRILL-06)",
+   "purpose": "he looks down at what is about to change his smile.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-GRILL-06",
+     "assetID": "HD-GRILLUP-08541ac0b6d8",
+     "role": "staging",
+     "note": "for staging only (its different face, heavy angular neck ink and changed jewelry do not govern; its case content does not establish the r4 grill shape)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/received/content/08541ac0b6d8__SB-GRILL-06-standing-at-case-r2.jpg",
+     "sha256": "08541ac0b6d813d0da9a2316d16b9c2a3ade6ff5b7df658ba961439ce6d9f063",
+     "bytes": 246076
+    }
+   ],
+   "otherReferences": [
+    "A for the face",
+    "F on the wrist"
+   ],
+   "transitionTo": "E-8 on the hand moving to the piece lifting.",
+   "additionalCoverage": "existing art: SB-GRILL-06 (staging). missing art: a corrected panel.",
+   "artState": "partial",
+   "missingArt": [
+    "a corrected panel"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_EPILOGUE.md"
+  },
+  {
+   "shotID": "E-8",
+   "sectionID": "EPILOGUE",
+   "title": "Lift (beat 07, SB-GRILL-07)",
+   "purpose": "the grill comes out of the case and up toward the mouth. The last look at the old smile.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-GRILL-07",
+     "assetID": "HD-GRILLUP-fde483650ebb",
+     "role": "staging",
+     "note": "for staging only (its different face, large star-like neck tattoo and changed brow do not govern; its held piece is not an r4 match and its fingers lack the character's gold rings)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/received/content/fde483650ebb__SB-GRILL-07-lift-grill-r2.jpg",
+     "sha256": "fde483650ebb8e9b0163e06909e69bbbbdee50c9038c9188e80be983454fe9cd",
+     "bytes": 217739
+    },
+    {
+     "sbID": "r4 anchor",
+     "assetID": "HD-GRILLUP-40064d98db89",
+     "role": "anchor_r4",
+     "note": "for the piece (the card's wording)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/received/content/40064d98db89__HEAD-HD-ICED-ANCHOR-LOCK-r4.jpg",
+     "sha256": "40064d98db897276b80085273919ccd79ca377a068dcc2bd23c519e4038ee93e",
+     "bytes": 242776
+    }
+   ],
+   "otherReferences": [
+    "A",
+    "F",
+    "the gold hand rings"
+   ],
+   "transitionTo": "E-9 on the piece below the mouth to the mirror.",
+   "additionalCoverage": "existing art: SB-GRILL-07 (staging); r4 anchor (anchor). missing art: a corrected panel; the grill prop.",
+   "artState": "partial",
+   "missingArt": [
+    "a corrected panel",
+    "the grill prop"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_EPILOGUE.md"
+  },
+  {
+   "shotID": "E-9",
+   "sectionID": "EPILOGUE",
+   "title": "Grill in (beat 08, SB-GRILL-08)",
+   "purpose": "the change itself, in the mirror.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-GRILL-08",
+     "assetID": "HD-GRILLUP-2369c3b2f126",
+     "role": "legibility",
+     "note": "for the action's legibility only (its face, cheek lettering, neck coverage and jewelry drift; its teeth read gold rather than the r4 iced pattern)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/received/content/2369c3b2f126__SB-GRILL-08-grill-in-r2.jpg",
+     "sha256": "2369c3b2f126eb2a64750a1a517e2bcfc7352714bb2ee80c109ffad3b9724ed1",
+     "bytes": 211177
+    },
+    {
+     "sbID": "r4 anchor",
+     "assetID": "HD-GRILLUP-40064d98db89",
+     "role": "anchor_r4",
+     "note": "listed as \"the r4 anchor\" with no role stated",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/received/content/40064d98db89__HEAD-HD-ICED-ANCHOR-LOCK-r4.jpg",
+     "sha256": "40064d98db897276b80085273919ccd79ca377a068dcc2bd23c519e4038ee93e",
+     "bytes": 242776
+    }
+   ],
+   "otherReferences": [],
+   "transitionTo": "E-10 inside the mirror, lips closed to lips parted.",
+   "additionalCoverage": "existing art: SB-GRILL-08 (legibility); r4 anchor (anchor). missing art: a corrected mirror panel; the grill prop.",
+   "artState": "partial",
+   "missingArt": [
+    "a corrected mirror panel",
+    "the grill prop"
+   ],
+   "settled": [],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_EPILOGUE.md"
+  },
+  {
+   "shotID": "E-10",
+   "sectionID": "EPILOGUE",
+   "title": "The mirror reveal (beat 09, SB-GRILL-09): the proposed last frame",
+   "purpose": "the smile that pays. The r4 look, lip rings out, in the mirror. The piece's last frame if Ziggy takes the recommendation.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-GRILL-09",
+     "assetID": "HD-GRILLUP-1c67855e0139",
+     "role": "layout",
+     "note": "for layout only (different face and major neck, cheek and brow differences; tooth row not verified against r4)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/received/content/1c67855e0139__SB-GRILL-09-mirror-reveal-r2.jpg",
+     "sha256": "1c67855e013939315eb5a25927a099ef8078dce7775f2986d529776ad999d123",
+     "bytes": 216743
+    },
+    {
+     "sbID": "r4 anchor",
+     "assetID": "HD-GRILLUP-40064d98db89",
+     "role": "anchor_r4",
+     "note": "governs the look (the card's wording)",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/received/content/40064d98db89__HEAD-HD-ICED-ANCHOR-LOCK-r4.jpg",
+     "sha256": "40064d98db897276b80085273919ccd79ca377a068dcc2bd23c519e4038ee93e",
+     "bytes": 242776
+    }
+   ],
+   "otherReferences": [
+    "A (Continuity line: everything else about the head per A)"
+   ],
+   "transitionTo": "End on 10 (proposed last frame); or 10 to 11 on the smile to the turn, and end on the doorway.",
+   "additionalCoverage": "existing art: SB-GRILL-09 (layout); r4 anchor (anchor). missing art: a corrected reveal panel. settled: the epilogue ends on the mirror (DECISIONS section 9 row 3); E-10 is the piece's last frame.",
+   "artState": "partial",
+   "missingArt": [
+    "a corrected reveal panel"
+   ],
+   "settled": [
+    {
+     "hold": "The epilogue's last frame: E-10 the mirror or E-11 the exit",
+     "citation": "DECISIONS_20261010.md section 9 row 3"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_EPILOGUE.md"
+  },
+  {
+   "shotID": "E-11",
+   "sectionID": "EPILOGUE",
+   "title": "The exit (beat 10, SB-GRILL-10): the board's ending, kept as the alternate",
+   "purpose": "the board ends on the turn-back exit with the open empty case and two hoops in the dish. Kept as the alternate ending; the recommendation is to end on E-10.",
+   "lyricCue": null,
+   "originalPanels": [
+    {
+     "sbID": "SB-GRILL-10",
+     "assetID": "HD-GRILLUP-5c213b5307ad",
+     "role": "idea",
+     "note": "for the props' idea (open empty case, two hoops in the dish); its face, tattoos, nose jewelry and dental pattern differ from r4 and do not govern",
+     "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/quarters_grill_change_20261009/received/content/5c213b5307ad__SB-GRILL-10-exit-r2.jpg",
+     "sha256": "5c213b5307ada0e77432ea0bdbcfe4950aa6cc94649db305def2293efaa3c1ea",
+     "bytes": 222409
+    }
+   ],
+   "otherReferences": [],
+   "transitionTo": "end on the doorway (alternate ending, reached by 10 to 11 on the smile to the turn).",
+   "additionalCoverage": "existing art: SB-GRILL-10 (idea). missing art: a corrected panel. settled: E-11 is dropped from the ending and kept only as a beat before the mirror if the edit wants it (DECISIONS section 9 row 3).",
+   "artState": "partial",
+   "missingArt": [
+    "a corrected panel"
+   ],
+   "settled": [
+    {
+     "hold": "The epilogue's last frame: E-10 the mirror or E-11 the exit",
+     "citation": "DECISIONS_20261010.md section 9 row 3"
+    }
+   ],
+   "newCoverage": false,
+   "shotPlanCandidateIDs": [],
+   "cardRepoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/SCENE_CARD_EPILOGUE.md"
+  }
+ ],
+ "panels": [
+  {
+   "sbID": "SB-01",
+   "assetID": "HD-DROP-725c38458fd8",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-01-grill-ecu.jpg",
+   "sha256": "725c38458fd8e8d6cff78c1c330368e1057333ab8dc84a900070065f02f02ff8",
+   "bytes": 257623,
+   "beatTitle": "The opening grin",
+   "lyricCue": "Strictly business. Count it twice.",
+   "browsingGroup": "Pay me first",
+   "shotPlanCandidateIDs": [
+    "S01A",
+    "S11A"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S01-1",
+     "role": "composition",
+     "note": "for composition only (its obsolete two-gold, one-hoop dental map does not govern)"
+    },
+    {
+     "shotID": "S07-6",
+     "role": "composition",
+     "note": "composition, with its obsolete dental map replaced; the SB-01 framing exactly"
+    },
+    {
+     "shotID": "S12-2",
+     "role": "composition",
+     "note": "composition from SB-01"
+    }
+   ],
+   "placement": "reused",
+   "note": "Use the close-up idea; jewelry still needs matching."
+  },
+  {
+   "sbID": "SB-02",
+   "assetID": "HD-DROP-fd723df3ec04",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-02-title-face.jpg",
+   "sha256": "fd723df3ec04216423ecbe98962c48d554b91eb3081aab178cf97632e337d37f",
+   "bytes": 229139,
+   "beatTitle": "Strictly business",
+   "lyricCue": "Strictly business.",
+   "browsingGroup": "Pay me first",
+   "shotPlanCandidateIDs": [
+    "S01A"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S01-3",
+     "role": "text_described",
+     "note": "text-described in REVIEWED_PLAN.txt (marker HON-OPENING-WORKSHOP-REVIEWED-20261009): its pitch is frame A's gaze and attitude; its image was not attached"
+    }
+   ],
+   "placement": "used",
+   "note": "Face and small details differ from the chosen reference."
+  },
+  {
+   "sbID": "SB-03",
+   "assetID": "HD-DROP-36679ee9953b",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-03-pay-table.jpg",
+   "sha256": "36679ee9953bfb8d0492009c1a47309fdd8f04f951f2077bce0007067146b1c4",
+   "bytes": 316016,
+   "beatTitle": "Pay up front",
+   "lyricCue": "Pay me up front. You’re buying a ride.",
+   "browsingGroup": "Pay me first",
+   "shotPlanCandidateIDs": [
+    "S01B"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S01-3",
+     "role": "reference_d",
+     "note": "attachment D of the reviewed opening prototype: the credits and counter geography; old face, hair and ink do not govern"
+    },
+    {
+     "shotID": "S02-1",
+     "role": "reference_d",
+     "note": "for the credits and counter surface (pay-table D); props, the opening prototype's reference D"
+    },
+    {
+     "shotID": "S03-1",
+     "role": "reference_d",
+     "note": "as S01-3: reference D, named by the card's reference line"
+    },
+    {
+     "shotID": "S07-1",
+     "role": "reference_d",
+     "note": "props and geography only (credit design and hand contact; the opening prototype's reference D)"
+    },
+    {
+     "shotID": "S11-1",
+     "role": "reference_d",
+     "note": "as S01-3: reference D, named by the card's reference line"
+    }
+   ],
+   "placement": "reused",
+   "note": "Keep the transaction idea; match his face and hair."
+  },
+  {
+   "sbID": "SB-04",
+   "assetID": "HD-DROP-60f245863c6b",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-04-fuel-gauge.jpg",
+   "sha256": "60f245863c6ba88e160514f4de1363dd4550a1d95b1a59b3b4c443f6dfcf5fd8",
+   "bytes": 239785,
+   "beatTitle": "Fuel costs extra",
+   "lyricCue": "Fuel ain’t free, and neither am I.",
+   "browsingGroup": "Pay me first",
+   "shotPlanCandidateIDs": [
+    "S01A"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S01-3",
+     "role": "reference_e",
+     "note": "attachment E of the reviewed opening prototype: the fuel indicator concept and geography; old identity, headgear and generated text do not govern"
+    },
+    {
+     "shotID": "S03-1",
+     "role": "reference_e",
+     "note": "as S01-3: reference E, named by the card's reference line"
+    },
+    {
+     "shotID": "S11-1",
+     "role": "reference_e",
+     "note": "as S01-3: reference E, named by the card's reference line"
+    }
+   ],
+   "placement": "reused",
+   "note": "Keep the fuel gag; match his face and hair."
+  },
+  {
+   "sbID": "SB-05",
+   "assetID": "HD-DROP-6e8eb6a956c9",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-05-cantina-walk.jpg",
+   "sha256": "6e8eb6a956c9146a0adc3f1c8c3c71db7d0cc34bbf646f4d681cd6e54ae24428",
+   "bytes": 271645,
+   "beatTitle": "Own the room",
+   "lyricCue": "Saving the galaxy costs extra. Nice try.",
+   "browsingGroup": "Pay me first",
+   "shotPlanCandidateIDs": [
+    "S01A",
+    "S04B"
+   ],
+   "usedBy": [
+    {
+     "shotID": "P-7",
+     "role": "idea",
+     "note": "for the idea (cantina walk; its lead and DJ anatomy differ and do not govern)"
+    },
+    {
+     "shotID": "S01-2",
+     "role": "idea",
+     "note": "for the idea (cantina walk, \"Hook settle + Chewie DJ bg\"; its lead and DJ anatomy differ and do not govern)"
+    },
+    {
+     "shotID": "S02-7",
+     "role": "continuity",
+     "note": "S01's cantina wide (proposed); this cut-in must agree with it (from the card's Continuity line; the label is this crosswalk's; asset id supplied from panels.json, the card gives none)"
+    }
+   ],
+   "placement": "reused",
+   "note": "Both the lead and DJ need appearance checks."
+  },
+  {
+   "sbID": "SB-06",
+   "assetID": "HD-DROP-b18c4a123579",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-01-cold-open/SB-06-scoundrel-detail.jpg",
+   "sha256": "b18c4a1235795305e841d6828d5e60f6ffa49f8d3bbb9bef755595b1e0f67d9a",
+   "bytes": 308775,
+   "beatTitle": "Proud scoundrel",
+   "lyricCue": "Captain Falcon - proud Scoundrel",
+   "browsingGroup": "Pay me first",
+   "shotPlanCandidateIDs": [
+    "S02C"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S02-6",
+     "role": "concept",
+     "note": "the scoundrel-forearm concept the crosswalk points at S02C; exact design unresolved"
+    },
+    {
+     "shotID": "S07-1",
+     "role": "wrist_reference_f",
+     "note": "wrist chain and dark band, if the wrist enters frame, on the provisionally chosen character-right wrist as in the opening"
+    }
+   ],
+   "placement": "reused",
+   "note": "The forearm lettering is an idea, not a chosen tattoo."
+  },
+  {
+   "sbID": "SB-07",
+   "assetID": "HD-DROP-f7c3d8374e68",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-02-bounty-heat/SB-07-dinner-vader.jpg",
+   "sha256": "f7c3d8374e68ae28950230a6ba5a1fb753eac70e870b364c4de80ada8ae1a16b",
+   "bytes": 306064,
+   "beatTitle": "Dinner with Vader",
+   "lyricCue": "Dinner date with Darth Vader?",
+   "browsingGroup": "The price of love",
+   "shotPlanCandidateIDs": [
+    "S10A"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S10-1",
+     "role": "evidence",
+     "note": "the board's dinner panel and evidence that the dinner exists in Verse 3; its seating (side by side at the near edge, Vader screen-right), its Dolo and its lighting do not govern this shot"
+    }
+   ],
+   "placement": "used",
+   "note": "Place with the later Vader verse; the supplied early time is wrong."
+  },
+  {
+   "sbID": "SB-08",
+   "assetID": "HD-DROP-e1250a0bce91",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-02-bounty-heat/SB-08-debt-flex-cu.jpg",
+   "sha256": "e1250a0bce91bcd16078f69452504d621e799ddbde5c5e743c7d59a2dd64c4c3",
+   "bytes": 224125,
+   "beatTitle": "Swagger on credit",
+   "lyricCue": "Trust - trust, not safe ta play with my name",
+   "browsingGroup": "Debt and danger",
+   "shotPlanCandidateIDs": [
+    "S02C",
+    "S09A"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S02-7",
+     "role": "idea",
+     "note": "for the idea (debt flex; its mouth, hair, marks and neck ink drift and do not govern; it is a close-up, this is a wide)"
+    },
+    {
+     "shotID": "S09-1",
+     "role": "staging",
+     "note": "the crosswalk's candidate for S09A, staging only (SB-08's mouth, hair, marks and neck ink drift)"
+    }
+   ],
+   "placement": "reused",
+   "note": "Mouth, hair and tattoos differ from his references."
+  },
+  {
+   "sbID": "SB-09",
+   "assetID": "HD-DROP-af2c7daaf039",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-02-bounty-heat/SB-09-bounty-puck.jpg",
+   "sha256": "af2c7daaf039014c1a60db373598137f3c834b5c4b99d509a1d9ff10277c5e9d",
+   "bytes": 254191,
+   "beatTitle": "A price on his head",
+   "lyricCue": "ducking, bounty hunt-ahhhs",
+   "browsingGroup": "Debt and danger",
+   "shotPlanCandidateIDs": [
+    "S02B"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S02-3",
+     "role": "idea",
+     "note": "for the insert's idea (inspect hands and invented marks; the panel's card art does not govern)"
+    }
+   ],
+   "placement": "used",
+   "note": "Check the hands and remove invented markings."
+  },
+  {
+   "sbID": "SB-10",
+   "assetID": "HD-DROP-df1418147b5d",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-02-bounty-heat/SB-10-crime-boss-dais.jpg",
+   "sha256": "df1418147b5d86de989b65feaa553090af4129d9efed778eff9bc5ef488a373c",
+   "bytes": 454078,
+   "beatTitle": "Jabba expects payment",
+   "lyricCue": "Jabbah funding",
+   "browsingGroup": "Debt and danger",
+   "shotPlanCandidateIDs": [
+    "S02A"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S02-2",
+     "role": "staging",
+     "note": "for staging (low, wide, gold, pressure; its boss does not govern)"
+    }
+   ],
+   "placement": "used",
+   "note": "Useful throne-room staging; Jabba’s final look remains open."
+  },
+  {
+   "sbID": "SB-11",
+   "assetID": "HD-DROP-ac71d8209a11",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-02-bounty-heat/SB-11-neon-alley-run.jpg",
+   "sha256": "ac71d8209a11427f2aafa7ff0e04cc88992e9fdb918ae6cea8fa2ac55fc6f3ae",
+   "bytes": 316542,
+   "beatTitle": "Hunters on his trail",
+   "lyricCue": "ducking, bounty hunt-ahhhs",
+   "browsingGroup": "Debt and danger",
+   "shotPlanCandidateIDs": [
+    "S02B"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S02-4",
+     "role": "repurposed",
+     "note": "the alley-run panel the plan reassigns (its running Dolo does not govern; its neon and crowd may inform the bay)"
+    }
+   ],
+   "placement": "used",
+   "note": "Keep the chase setting; match his face and tattoos."
+  },
+  {
+   "sbID": "SB-12",
+   "assetID": "HD-DROP-e5e5bb2eb7ee",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-02-bounty-heat/SB-12-neck-blaster-cu.jpg",
+   "sha256": "e5e5bb2eb7eece96f131d8280e87ed422c3378574e5c181ab722f54ec6d1164b",
+   "bytes": 308854,
+   "beatTitle": "The blaster catches light",
+   "lyricCue": "not safe ta play with my name",
+   "browsingGroup": "Debt and danger",
+   "shotPlanCandidateIDs": [
+    "S02C"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S02-5",
+     "role": "idea",
+     "note": "for the insert's idea (neck blaster detail; not scale or placement acceptance)"
+    }
+   ],
+   "placement": "used",
+   "note": "Confirm the blaster tattoo’s size and position."
+  },
+  {
+   "sbID": "SB-13",
+   "assetID": "HD-DROP-8896508767b4",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-13-junk-ship-exterior.jpg",
+   "sha256": "8896508767b4deb140202f313d7cb054a765cebd56abd29affbb72621f090bde",
+   "bytes": 443711,
+   "beatTitle": "The fastest junk in the galaxy",
+   "lyricCue": "This junky ship - fastest in the galaxy!",
+   "browsingGroup": "The ship and the crew",
+   "shotPlanCandidateIDs": [
+    "S02D"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S02-9",
+     "role": "idea",
+     "note": "for the idea (fastest junk exterior; silhouette differs)"
+    },
+    {
+     "shotID": "S05-3",
+     "role": "idea",
+     "note": "for the exterior idea only (silhouette differs)"
+    },
+    {
+     "shotID": "S07-7",
+     "role": "staging",
+     "note": "for staging only"
+    },
+    {
+     "shotID": "S08-3",
+     "role": "staging",
+     "note": "for staging only, as S07-7"
+    }
+   ],
+   "placement": "reused",
+   "note": "Match the chosen ship silhouette before animation."
+  },
+  {
+   "sbID": "SB-14",
+   "assetID": "HD-DROP-d36a3316372d",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-14-cockpit-captain.jpg",
+   "sha256": "d36a3316372d3685b17b99249b1b4f27539ea602a57d905f4dc6bc89250c392e",
+   "bytes": 355129,
+   "beatTitle": "Captain Solo",
+   "lyricCue": "it’s el capatain Solo",
+   "browsingGroup": "The ship and the crew",
+   "shotPlanCandidateIDs": [
+    "S02C"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S02-6",
+     "role": "staging",
+     "note": "for staging (cockpit captain; its face and tattoo drift do not govern)"
+    },
+    {
+     "shotID": "S04-6",
+     "role": "staging",
+     "note": "cockpit staging for the portrait, with face and tattoo drift that does not govern"
+    },
+    {
+     "shotID": "S07-3",
+     "role": "composition",
+     "note": "composition only (cockpit staging)"
+    }
+   ],
+   "placement": "reused",
+   "note": "Cockpit idea works; face and tattoos need matching."
+  },
+  {
+   "sbID": "SB-15",
+   "assetID": "HD-DROP-a962c9148eb5",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-15-parsec-hud.jpg",
+   "sha256": "a962c9148eb589f8e5bfb4e75856393dcd3ee8377ca1651a1f948e3fedf3f1a5",
+   "bytes": 307253,
+   "beatTitle": "Less than twelve",
+   "lyricCue": "less than twelve-par! Twelve-Par!",
+   "browsingGroup": "The ship and the crew",
+   "shotPlanCandidateIDs": [
+    "S02D"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S02-10",
+     "role": "idea",
+     "note": "parsec HUD; final text editorial"
+    },
+    {
+     "shotID": "S05-2",
+     "role": "precedent",
+     "note": "the precedent for a display insert whose text is editorial (the parsec HUD, \"final text can be added editorially\")"
+    },
+    {
+     "shotID": "S08-2",
+     "role": "precedent",
+     "note": "as S05-2 (the card's References line reads \"as S05-2\")"
+    }
+   ],
+   "placement": "reused",
+   "note": "Add readable display lettering during editing if needed."
+  },
+  {
+   "sbID": "SB-16",
+   "assetID": "HD-DROP-0c8852c50251",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-16-maw-skim.jpg",
+   "sha256": "0c8852c50251b198d124fbeaa416d696bc4d39c1b0c43487df23e8e03a47e831",
+   "bytes": 331284,
+   "beatTitle": "Beat the Maw",
+   "lyricCue": "Beat the Maw",
+   "browsingGroup": "The ship and the crew",
+   "shotPlanCandidateIDs": [
+    "S02D"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S02-10",
+     "role": "concept",
+     "note": "Maw wide; story and VFX concept only"
+    }
+   ],
+   "placement": "used",
+   "note": "A space-action idea; the motion is still to be made."
+  },
+  {
+   "sbID": "SB-17",
+   "assetID": "HD-DROP-baf5e3ccb48f",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-17-chest-ship-peek.jpg",
+   "sha256": "baf5e3ccb48f63050a190151fa575f41445d5c6a4a788f8ec9df196515cd6fac",
+   "bytes": 264849,
+   "beatTitle": "My junky home",
+   "lyricCue": "this my everything",
+   "browsingGroup": "The ship and the crew",
+   "shotPlanCandidateIDs": [
+    "S04C"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S04-4",
+     "role": "idea",
+     "note": "for the idea only; its horizontal ship conflicts with the upright twin-spire goal and does not govern"
+    }
+   ],
+   "placement": "used",
+   "note": "This tattoo lies sideways; the intended design points upward."
+  },
+  {
+   "sbID": "SB-18",
+   "assetID": "HD-DROP-b443c1d21d74",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-03-kessel-run/SB-18-tall-copilot.jpg",
+   "sha256": "b443c1d21d7481ca8d8fa7af54fe88ad38f526bca1d0260c5d9decd7a38418c0",
+   "bytes": 412836,
+   "beatTitle": "Chewie, drop that beat",
+   "lyricCue": "Chewy, Chewy - drop that beat",
+   "browsingGroup": "The ship and the crew",
+   "shotPlanCandidateIDs": [
+    "S04B",
+    "S06A"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S04-7",
+     "role": "staging",
+     "note": "for the staging idea (Chewie on boards; its ape-like copilot is a recorded defect and does not govern)"
+    },
+    {
+     "shotID": "S06-1",
+     "role": "staging",
+     "note": "for staging only (ape-like copilot, a recorded defect)"
+    },
+    {
+     "shotID": "S07-4",
+     "role": "staging",
+     "note": "staging only; their ape-like anatomy is a recorded defect, not a design"
+    },
+    {
+     "shotID": "S10-4",
+     "role": "staging",
+     "note": "staging only, their ape-like anatomy a recorded defect"
+    }
+   ],
+   "placement": "reused",
+   "note": "The pictured copilot needs proper Chewbacca anatomy."
+  },
+  {
+   "sbID": "SB-19",
+   "assetID": "HD-DROP-d3f1eb0d0504",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-04-turnaround/SB-19-credits-insert.jpg",
+   "sha256": "d3f1eb0d0504fbde537218e7c49d156b022062b481a7667c51d63844dfc7b0cc",
+   "bytes": 293510,
+   "beatTitle": "Already paid",
+   "lyricCue": "Got my cut. Crates in the back.",
+   "browsingGroup": "Turn her around",
+   "shotPlanCandidateIDs": [
+    "S01B",
+    "S07A"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S07-1",
+     "role": "staging",
+     "note": "staging, with its chip stacks replaced by the four credits"
+    }
+   ],
+   "placement": "used",
+   "note": "Useful money insert; place it by the song’s actual phrase."
+  },
+  {
+   "sbID": "SB-20",
+   "assetID": "HD-DROP-3bc8b565e14c",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-04-turnaround/SB-20-exit-ramp.jpg",
+   "sha256": "3bc8b565e14c0c20c3cf63ca8cc704573383d53d204a5eaf5b453e09f8e9164a",
+   "bytes": 247623,
+   "beatTitle": "A clean way out",
+   "lyricCue": "I got a clean way out. Still ain’t hit the gas.",
+   "browsingGroup": "Turn her around",
+   "shotPlanCandidateIDs": [
+    "S07A"
+   ],
+   "usedBy": [],
+   "placement": "parked",
+   "note": "Keep the hesitation; match the lead’s appearance. parked: used by no card; a staging candidate for S07-3 (the hover), a proposal of this crosswalk only. Pass 001 read it as 'wet, ready to leave, has not left'."
+  },
+  {
+   "sbID": "SB-21",
+   "assetID": "HD-DROP-88f20c203f5b",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-04-turnaround/SB-21-ship-turnaround.jpg",
+   "sha256": "88f20c203f5b3fc228f982ba9bc0ab11e08bbf912f881ff297436185665eed86",
+   "bytes": 395754,
+   "beatTitle": "Swing her back",
+   "lyricCue": "Chewie, swing her back.",
+   "browsingGroup": "Turn her around",
+   "shotPlanCandidateIDs": [
+    "S07B"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S07-7",
+     "role": "staging",
+     "note": "for staging only"
+    },
+    {
+     "shotID": "S08-3",
+     "role": "staging",
+     "note": "for staging only, as S07-7"
+    }
+   ],
+   "placement": "reused",
+   "note": "Good direction for a turn; check the flight once animated."
+  },
+  {
+   "sbID": "SB-22",
+   "assetID": "HD-DROP-825d9fd99e3d",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-04-turnaround/SB-22-kid-good-luck.jpg",
+   "sha256": "825d9fd99e3de8a711e33840e1b14a0257f0cfd9e99d0b01dc2320c0d2e46466",
+   "bytes": 232810,
+   "beatTitle": "Good luck, kid",
+   "lyricCue": "Told the kid, “Good luck.” I ain’t comin’ back.",
+   "browsingGroup": "Turn her around",
+   "shotPlanCandidateIDs": [
+    "S07A"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S07-2",
+     "role": "mood",
+     "note": "for mood only, not its wet white shirt and not its face"
+    }
+   ],
+   "placement": "used",
+   "note": "Face, hair and tattoos need matching."
+  },
+  {
+   "sbID": "SB-23",
+   "assetID": "HD-DROP-e693f5f7bff1",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-04-turnaround/SB-23-tall-levers.jpg",
+   "sha256": "e693f5f7bff17ce50fda237f81c3a4a83541b4d104556d909a34171c144e8ef2",
+   "bytes": 411320,
+   "beatTitle": "No extra charge",
+   "lyricCue": "No - extra - charge.",
+   "browsingGroup": "Turn her around",
+   "shotPlanCandidateIDs": [
+    "S07B",
+    "S08A"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S07-5",
+     "role": "staging",
+     "note": "for staging only; the hands must be Chewbacca's, not the panel's"
+    },
+    {
+     "shotID": "S08-4a",
+     "role": "staging",
+     "note": "Chewie's levers (S07-5), staging only for a hand-on-control insert and not the subject here"
+    }
+   ],
+   "placement": "reused",
+   "note": "Match Chewbacca and check his hands on the controls."
+  },
+  {
+   "sbID": "SB-24",
+   "assetID": "HD-DROP-35f608374a7b",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-04-turnaround/SB-24-rescue-hatch.jpg",
+   "sha256": "35f608374a7b3a998574fc0d1f05c559a78f16170c3006f5eaadbd1d831bb75d",
+   "bytes": 283341,
+   "beatTitle": "Back into danger",
+   "lyricCue": "So why’d I turn this ship around?",
+   "browsingGroup": "Turn her around",
+   "shotPlanCandidateIDs": [
+    "S09A"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S09-1",
+     "role": "staging",
+     "note": "the crosswalk's candidate for S09A, staging only (a rescue-approach composition)"
+    }
+   ],
+   "placement": "used",
+   "note": "Keep the rescue staging; match the lead’s appearance."
+  },
+  {
+   "sbID": "SB-25",
+   "assetID": "HD-DROP-e397f8389a14",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-05-carbon-knight/SB-25-carbonite-chamber.jpg",
+   "sha256": "e397f8389a140aa22275eae51cbb0471d065a2ebc1662415be691d870e2f03c0",
+   "bytes": 280877,
+   "beatTitle": "The freezing chamber",
+   "lyricCue": "So Vader put me on ice",
+   "browsingGroup": "The price of love",
+   "shotPlanCandidateIDs": [
+    "S10C"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S10-3",
+     "role": "continuity",
+     "note": "named in continuity only: the fur coat in SB-25 and SB-26 is not the established outfit (asset id given in S10-7)"
+    },
+    {
+     "shotID": "S10-7",
+     "role": "staging",
+     "note": "for the room: shows the chamber before the freeze and is staging for the room, not for this shot"
+    }
+   ],
+   "placement": "reused",
+   "note": "The lead’s face, hair and markings differ substantially."
+  },
+  {
+   "sbID": "SB-26",
+   "assetID": "HD-DROP-4aadd9404769",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-05-carbon-knight/SB-26-night-night-tilt.jpg",
+   "sha256": "4aadd940476960e787e32c54abe03ebddbe7c263cd1bbb827ad1cd07ea3569c7",
+   "bytes": 240891,
+   "beatTitle": "Carbon Knight",
+   "lyricCue": "Now I’m her Carbon Knight.",
+   "browsingGroup": "The price of love",
+   "shotPlanCandidateIDs": [
+    "S10C"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S10-3",
+     "role": "framing",
+     "note": "for the pose and framing only (its face, lettering and jewelry do not govern)"
+    }
+   ],
+   "placement": "used",
+   "note": "Match his appearance and lettering before animation."
+  },
+  {
+   "sbID": "SB-27",
+   "assetID": "HD-DROP-16ad386979c6",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-05-carbon-knight/SB-27-carbonite-slab.jpg",
+   "sha256": "16ad386979c6b27642d99d8e20e4a96e57e6e1e74d9a0ae52fd5263c4d1e7895",
+   "bytes": 322889,
+   "beatTitle": "The frozen sacrifice",
+   "lyricCue": "Fuel ain’t free. Still paid that price.",
+   "browsingGroup": "The price of love",
+   "shotPlanCandidateIDs": [
+    "S10C"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S10-7",
+     "role": "staging",
+     "note": "for staging only; the frozen likeness is a prop design that does not exist and must be made from A, not from the panel"
+    }
+   ],
+   "placement": "used",
+   "note": "The frozen likeness still needs choosing."
+  },
+  {
+   "sbID": "SB-28",
+   "assetID": "HD-DROP-4964cf10eb47",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-05-carbon-knight/SB-28-i-love-you.jpg",
+   "sha256": "4964cf10eb47225588610dda058a3f7485a461e2606d4f99814be28419139f42",
+   "bytes": 225224,
+   "beatTitle": "She said, “I love you”",
+   "lyricCue": "She said, “I love you.”",
+   "browsingGroup": "The price of love",
+   "shotPlanCandidateIDs": [
+    "S10B"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S10-5",
+     "role": "framing",
+     "note": "for framing only (its performer is not the intended likeness)"
+    }
+   ],
+   "placement": "used",
+   "note": "This co-star is a concept; Leia’s likeness is a separate choice."
+  },
+  {
+   "sbID": "SB-29",
+   "assetID": "HD-DROP-d4f916925c82",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-05-carbon-knight/SB-29-i-know.jpg",
+   "sha256": "d4f916925c822861fb7e9c0367f3810fdd64a24e776622d1081debdd9b2bf979",
+   "bytes": 227805,
+   "beatTitle": "I know",
+   "lyricCue": "I know…. I know.",
+   "browsingGroup": "The price of love",
+   "shotPlanCandidateIDs": [
+    "S10B"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S10-6",
+     "role": "framing",
+     "note": "for framing only (its performer is not the likeness)"
+    }
+   ],
+   "placement": "used",
+   "note": "Match the lead’s face and hair."
+  },
+  {
+   "sbID": "SB-30",
+   "assetID": "HD-DROP-32580c30003c",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-05-carbon-knight/SB-30-thaw-twoshot.jpg",
+   "sha256": "32580c30003cabab3f2ab222c315995840d563429aad27659e41b0bd3ebec9ca",
+   "bytes": 210629,
+   "beatTitle": "Optional reunion",
+   "lyricCue": "No direct lyric match",
+   "browsingGroup": "The price of love",
+   "shotPlanCandidateIDs": [
+    "S10B"
+   ],
+   "usedBy": [
+    {
+     "shotID": "E-1",
+     "role": "repurposed",
+     "note": "repurposed; for the idea only (its two-shot is a reunion the lyrics do not establish; its pairing does not govern)"
+    }
+   ],
+   "placement": "used",
+   "note": "Optional only: an early reunion could weaken the sacrifice."
+  },
+  {
+   "sbID": "SB-31",
+   "assetID": "HD-DROP-76b5b1730778",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-06-outro/SB-31-stage-mic.jpg",
+   "sha256": "76b5b173077811a2f99a97e42593b1f372e004e2080720d1e3c29cbf3eeaab3f",
+   "bytes": 208080,
+   "beatTitle": "Voice from the outer world",
+   "lyricCue": "Voice from the outer world",
+   "browsingGroup": "I know",
+   "shotPlanCandidateIDs": [
+    "S12A"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S12-1",
+     "role": "named_only",
+     "note": "proposed parked (stage mic, \"Voice from outer world\"), since the names are sound in this reading; pass 001 kept it as a restrained performance; either is possible under \"restrained\""
+    }
+   ],
+   "placement": "parked",
+   "note": "The performer shown differs from the intended lead. parked: the choruses card names it as proposed parked under the 'restrained' outro reading (DECISIONS section 3 row 4, 'restrained, for now'); pass 001 kept it as a restrained performance; either is possible under 'restrained'; Ziggy decides."
+  },
+  {
+   "sbID": "SB-32",
+   "assetID": "HD-DROP-39ede31230fd",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-06-outro/SB-32-dj-booth.jpg",
+   "sha256": "39ede31230fda9ab878922388472554d71bfdfc3baf8765fe28dd8ddd694396b",
+   "bytes": 309265,
+   "beatTitle": "Chewie holds the room",
+   "lyricCue": "I know",
+   "browsingGroup": "I know",
+   "shotPlanCandidateIDs": [
+    "S12A"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S12-1",
+     "role": "staging",
+     "note": "for staging only (DJ booth, \"Chewie hype\")"
+    }
+   ],
+   "placement": "used",
+   "note": "This image has a bear DJ; use Chewbacca for the final shot."
+  },
+  {
+   "sbID": "SB-33",
+   "assetID": "HD-DROP-332150e24fd8",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-06-outro/SB-33-lisan-desert.jpg",
+   "sha256": "332150e24fd8290c8f7aa148cb1bbf702d03ce01a1a320bcef4f6b9c9f324702",
+   "bytes": 194175,
+   "beatTitle": "The desert sign-off",
+   "lyricCue": "LISAN AL Gaib on the mic",
+   "browsingGroup": "I know",
+   "shotPlanCandidateIDs": [],
+   "usedBy": [],
+   "placement": "parked",
+   "note": "An outro idea for this song; not automatically part of Lisan’s separate project. parked: not requested (STORYBOARD_UPDATE_20261011.md section 4; the choruses card does not request it; no Lisan crossover imagery inside the song)."
+  },
+  {
+   "sbID": "SB-34",
+   "assetID": "HD-DROP-4639c31e55bc",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-06-outro/SB-34-final-lock-face.jpg",
+   "sha256": "4639c31e55bcd15353f242d4c197ecc12f7c61ed7b0c99ad32c7765db5043dac",
+   "bytes": 195955,
+   "beatTitle": "The same face, a different meaning",
+   "lyricCue": "Still turned this motherfucker around.",
+   "browsingGroup": "I know",
+   "shotPlanCandidateIDs": [
+    "S11A",
+    "S10B"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S11-1",
+     "role": "staging",
+     "note": "the crosswalk's candidate for S11A, staging only (final face hold; its tattoo map differs from the lock and does not govern)"
+    }
+   ],
+   "placement": "used",
+   "note": "The filename says lock, but the visible tattoos still differ."
+  },
+  {
+   "sbID": "SB-35",
+   "assetID": "HD-DROP-a2587d798b7c",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-06-outro/SB-35-panhandlers-card.jpg",
+   "sha256": "a2587d798b7c4527c69e93135c197043bd1b459d2cc6b9f2c180f41ba20db05e",
+   "bytes": 268121,
+   "beatTitle": "Shout out to Panhandlers",
+   "lyricCue": "Shout out to Panhandlers!",
+   "browsingGroup": "I know",
+   "shotPlanCandidateIDs": [
+    "S12A"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S12-1",
+     "role": "named_only",
+     "note": "ruled out as the logo or typography (the Panhandlers card is a generated stand-in, per the choruses card and Grok's review note); its place inside or after the song is Ziggy's"
+    }
+   ],
+   "placement": "parked",
+   "note": "Use the intended Panhandlers lettering or logo, not this generated stand-in. parked: not requested (STORYBOARD_UPDATE_20261011.md section 4); the choruses card rules it out as a logo or typography and leaves the title's place inside or after the song to Ziggy."
+  },
+  {
+   "sbID": "SB-36",
+   "assetID": "HD-DROP-ec55fb59f604",
+   "repoPath": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/asset_review_20261007/storyboard/hon-dolo-storyboard-strictly-business/series-06-outro/SB-36-end-sting.jpg",
+   "sha256": "ec55fb59f6048b8c02de02b3a87346d4fe204df1339d4b03bbfa2aa787a64a2a",
+   "bytes": 235569,
+   "beatTitle": "Last flash of gold",
+   "lyricCue": "I know",
+   "browsingGroup": "I know",
+   "shotPlanCandidateIDs": [
+    "S12A"
+   ],
+   "usedBy": [
+    {
+     "shotID": "S12-2",
+     "role": "idea",
+     "note": "for the idea only (\"grill/title proposal, not final jewelry or title\")"
+    }
+   ],
+   "placement": "used",
+   "note": "Closing idea only; match the chosen grill and title."
+  }
+ ],
+ "summary": {
+  "shots": 70,
+  "shotsNewCoverage": 20,
+  "shotsWithAPanel": 51,
+  "shotsWithALyricLine": 39,
+  "artState": {
+   "existing": 0,
+   "partial": 51,
+   "missing": 19
+  },
+  "panels": 36,
+  "placement": {
+   "used": 19,
+   "reused": 13,
+   "parked": 4
+  },
+  "quartersIdsOutsideThe36": [
+   "SB-GRILL-01",
+   "SB-GRILL-02-mirror-r2.jpg",
+   "SB-GRILL-03-lipring-out-r2.jpg",
+   "SB-GRILL-04",
+   "SB-GRILL-05",
+   "SB-GRILL-06",
+   "SB-GRILL-07",
+   "SB-GRILL-08",
+   "SB-GRILL-09",
+   "SB-GRILL-10",
+   "r4 anchor"
+  ]
+ },
+ "proposedFields": {
+  "basis": "STORY_01_PANEL_MAP_20261014.json (schemaVersion 1) extended; every difference is listed here for CFA SITE INDEX to reconcile; all of it proposed",
+  "topLevel": {
+   "carried": [
+    "schemaVersion",
+    "id",
+    "project",
+    "title",
+    "role",
+    "stage",
+    "timing",
+    "author",
+    "sourceDocuments",
+    "positionBasis",
+    "notes",
+    "sections",
+    "shots",
+    "summary",
+    "createdAtUTC"
+   ],
+   "added": [
+    "panels",
+    "proposedFields",
+    "companionReadable"
+   ],
+   "notCarried": {}
+  },
+  "sections": {
+   "renamed": {
+    "scene": "id"
+   },
+   "carried": [
+    "title",
+    "shotIDs"
+   ],
+   "added": {
+    "txtLines": "[start, end] TXT lines of Hon_DoLo.txt from shot_plan.json, null for the prologue and epilogue",
+    "spineBeat": "STORYBOARD_UPDATE_20261011.md section 3 beat for the section",
+    "browsingGroups": "Ziggy's browsing groups whose panels land in the section"
+   },
+   "notCarried": {
+    "archive": "Story 01's archive category per scene has no equivalent; Falcon categories are named per shot in otherReferences and additionalCoverage as staging only"
+   }
+  },
+  "shots": {
+   "renamed": {
+    "scene": "sectionID",
+    "label": "title",
+    "line": "purpose",
+    "materials": "originalPanels",
+    "pendingReferences": "missingArt and settled"
+   },
+   "carried": [
+    "shotID"
+   ],
+   "added": {
+    "lyricCue": "null or {text, txtLine (integer or list of integers), note?}",
+    "otherReferences": "the card's non-panel references, cleaned",
+    "transitionTo": "the card's cut to the next beat",
+    "additionalCoverage": "display string: existing art, graded frames (staging only), missing art, settled holds",
+    "artState": "existing, partial or missing",
+    "missingArt": "list of strings, the pendingReferences equivalent (what the shot cannot run without)",
+    "settled": "list of {hold, citation}, holds the card still carries that a later decision settled",
+    "newCoverage": "true where the card flags the shot as new coverage",
+    "shotPlanCandidateIDs": "shot_plan.json candidate ids the card maps the shot to",
+    "cardRepoPath": "repo-relative path of the authoring card (or the opening packet for P-6b)"
+   },
+   "notCarried": {
+    "onDisk": "not carried; artState (existing, partial, missing) and the missingArt list replace it (in Story 01 onDisk said whether a frame or result for the shot was on disk)"
+   }
+  },
+  "originalPanelsEntry": {
+   "keys": [
+    "sbID",
+    "assetID",
+    "role",
+    "note",
+    "repoPath",
+    "sha256",
+    "bytes"
+   ],
+   "againstStory01materials": "repoPath, role, note, sha256, bytes carried; sbID and assetID added; role is the closed list in roleVocabulary and note holds the card's wording"
+  },
+  "roleVocabulary": [
+   "composition",
+   "staging",
+   "idea",
+   "framing",
+   "mood",
+   "repurposed",
+   "precedent",
+   "concept",
+   "evidence",
+   "layout",
+   "legibility",
+   "continuity",
+   "reference_d",
+   "reference_e",
+   "text_described",
+   "wrist_reference_f",
+   "anchor_r4",
+   "named_only"
+  ],
+  "panelsEntry": {
+   "keys": [
+    "sbID",
+    "assetID",
+    "repoPath",
+    "sha256",
+    "bytes",
+    "beatTitle",
+    "lyricCue",
+    "browsingGroup",
+    "shotPlanCandidateIDs",
+    "usedBy",
+    "placement",
+    "note"
+   ],
+   "usedByEntry": [
+    "shotID",
+    "role",
+    "note"
+   ],
+   "placementVocabulary": [
+    "used",
+    "reused",
+    "parked"
+   ]
+  },
+  "artStateVocabulary": [
+   "existing",
+   "partial",
+   "missing"
+  ],
+  "paths": "repo-relative, forward slashes, root = the CFA repo (docs/notes/...)"
+ },
+ "createdAtUTC": "2026-10-28T07:42:09Z",
+ "companionReadable": "docs/notes/explorable_world/comfy/projects/hon_dolo_strictly_business/story/writer_pass_20261010/COVERAGE_CROSSWALK_20261028.md"
+}

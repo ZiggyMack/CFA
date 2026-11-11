@@ -11,7 +11,8 @@ from datetime import datetime, timezone
 import hashlib
 import json
 
-from library_helpers import normalize_decision, reference_record, resolve_asset_reference
+from library_helpers import normalize_decision, reference_record, resolve_asset_reference, review_provenance
+from controller_routing import ATTRIBUTION_FIELDS
 
 
 EDITABLE_FIELDS = ("status", "note", "shotPlan", "likenessRating", "sceneQualityRating",
@@ -44,6 +45,51 @@ def _iso(value: float) -> str:
     return datetime.fromtimestamp(value, timezone.utc).isoformat()
 
 
+def _scoped_attribution(updated, prior, item, normalized, changed, asset, report):
+    """Attribute only newly applied fields; never rebind an observation via alias."""
+    # A retained prior receipt cannot continue to claim a field that was changed
+    # by another incoming record. Its complete original remains in the archive.
+    earlier = prior.get("humanReview")
+    remaining = ([field for field in earlier.get("fields", []) if field not in changed]
+                 if isinstance(earlier, dict) and isinstance(earlier.get("fields"), list) else [])
+    if remaining:
+        updated["humanReview"] = {**deepcopy(earlier), "fields": remaining}
+    else:
+        for key in ATTRIBUTION_FIELDS:
+            updated.pop(key, None)
+    if not any(key in item for key in ATTRIBUTION_FIELDS):
+        return
+    human = normalized.get("humanReview")
+    reason = None
+    if not isinstance(human, dict) or not isinstance(human.get("fields"), list):
+        reason = "missing_scoped_human_receipt"
+    elif (human.get("assetID") != item.get("id") or item.get("id") != asset["id"]
+          or human.get("sha256") != asset.get("sha256") or item.get("sha256") != asset.get("sha256")
+          or human.get("project") != asset.get("project")):
+        reason = "human_receipt_target_mismatch_or_alias"
+    elif not human.get("reviewerControllerID") or not human.get("decisionScope"):
+        reason = "incomplete_human_receipt_identity"
+    elif any(key in normalized and normalized[key] != human.get(key)
+             for key in ATTRIBUTION_FIELDS - {"humanReview"}):
+        reason = "human_receipt_identity_conflict"
+    fields = [field for field in changed if isinstance(human, dict) and field in human.get("fields", [])]
+    if reason is None and not fields:
+        reason = "no_applied_fields_in_human_receipt"
+    if reason is None and (not _time(human.get("updatedAt"))
+                           or any(_time(human["updatedAt"]) < _field_time(item, field) for field in fields)):
+        reason = "human_receipt_does_not_date_applied_fields"
+    if reason:
+        report["attributionConflicts"].append({"id": asset["id"], "sourceID": item.get("id"),
+                                               "fields": list(changed), "reason": reason,
+                                               "preservedIn": "validationEvidence.legacyReviewArchive"})
+        return
+    for key in ATTRIBUTION_FIELDS - {"humanReview"}:
+        updated.pop(key, None)
+        if key in human:
+            updated[key] = deepcopy(human[key])
+    updated["humanReview"] = {**deepcopy(human), "fields": fields}
+
+
 def overlay_review_snapshot(catalog: dict, payload: dict, *, source_label: str = "Latest local review export",
                             include_selections: bool = True) -> tuple[dict, dict]:
     """Return (independent catalog copy, reconciliation report); never write files.
@@ -57,6 +103,17 @@ def overlay_review_snapshot(catalog: dict, payload: dict, *, source_label: str =
             or not isinstance(payload.get("items"), list)):
         raise ValueError("Expected a CFA review export with an items list.")
     result = deepcopy(catalog)
+    # Preserve raw incoming and prior rows even when no field wins reconciliation.
+    # This archive is inert and keeps attribution, source aliases and clear receipts
+    # recoverable through compact/full exports without assigning them to new pixels.
+    incoming_evidence = {"items": payload["items"]}
+    if "validationEvidence" in payload:
+        incoming_evidence["validationEvidence"] = payload["validationEvidence"]
+    result["validationEvidence"] = review_provenance(
+        incoming_evidence, catalog, strict_takes=False)["validationEvidence"]
+    if any(key in source for source in (catalog, payload) for key in ("locationReviews", "locationReviewBackups")):
+        from location_reviews import merge_state
+        result.update(merge_state(catalog, payload))
     if 'collaboratorReviews' in catalog or 'collaboratorReviews' in payload:
         from collaborator_review import merge
         result['collaboratorReviews'] = merge(catalog.get('collaboratorReviews', {}),
@@ -90,7 +147,7 @@ def overlay_review_snapshot(catalog: dict, payload: dict, *, source_label: str =
               "sourceDigest": hashlib.sha256(json.dumps(payload, sort_keys=True, ensure_ascii=False,
                                                        allow_nan=False, separators=(",", ":")).encode()).hexdigest(),
               "inputRecords": len(payload["items"]), "applied": [], "conflicts": [], "skipped": [],
-              "aliases": [], "unchangedFields": 0}
+              "aliases": [], "unchangedFields": 0, "attributionConflicts": []}
     report['changedCollaboratorTasks'] = [task_id for task_id, record in result.get('collaboratorReviews', {}).items()
                                          if catalog.get('collaboratorReviews', {}).get(task_id) != record]
     by_id, by_index, mismatched_ids = {}, {}, set()
@@ -164,8 +221,11 @@ def overlay_review_snapshot(catalog: dict, payload: dict, *, source_label: str =
                 updated["variantSource"] = "user"
             if field == "shotPlan":
                 updated["shotPlanUpdatedAt"] = _iso(incoming_time)
+                if value is None and isinstance(normalized.get("shotPlanClearEvidence"), dict):
+                    updated["shotPlanClearEvidence"] = deepcopy(normalized["shotPlanClearEvidence"])
         if not changed:
             continue
+        _scoped_attribution(updated, prior, item, normalized, changed, asset, report)
         updated.update(reference_record(asset))
         updated["fieldUpdatedAt"] = dates
         updated["updatedAt"] = _iso(max([_time(prior.get("updatedAt")), *(_time(value) for value in dates.values())]))

@@ -1,0 +1,116 @@
+CFA REAWAKENING / RECOVERY AUDIT — 11 NOVEMBER 2026
+Status: verification in progress; final receipts below will be completed before closeout.
+
+Purpose
+-------
+Review the Site_Index_Lite maintenance, repair any transfer/publication gaps,
+publish the verified changes, and protect CFA against loss of this computer.
+Director casting/location choices and Ziggy's intake remain pending. No new
+creative selections, production approvals or reviewer decisions were made.
+
+What the audit found and repaired
+--------------------------------
+* Lite's November 6 release was already on remote main. The everyday checkout's
+  local main still pointed to e58074d0fe345e8b429ed44b5b938a82f55f1fdd,
+  151 commits behind remote b11e0022231b0e0c51eab7d18c62525262673bd3.
+  Many apparent local changes therefore represented published work, not a
+  license to replace upstream files. Publication uses an isolated Git index
+  based on the actual remote parent, with no reset of the working checkout.
+* Full Library location-family notes now survive the compact editor's import
+  and export, review publication, browser restoration and local catalog rebuild.
+  Newer timestamps win; older/equal/unknown records remain recoverable evidence.
+  This does not select a location or manufacture reviewer attribution.
+* Asset-review publication retains raw attribution/conflict receipts and only
+  applies attribution to fields actually supplied and applied. Unknown future
+  data and an explicit cleared plan remain recoverable.
+* Full Library downloads now attach their link before requesting the download
+  and retain a visible retry until the next export or page close. Review-export
+  notices say the download was requested rather than claiming it was saved.
+* Two Criminal Mind writer documents had current November source files but
+  stale registered/published copies. Only those two records were refreshed.
+  The preliminary writer binding is not a director's final selection.
+* The Studio README now describes the actual All-files entry, full/compact
+  storage separation, D: runtime commands and immutable publication procedure.
+
+Content reconciliation
+----------------------
+Local catalog: 5,892 assets. Existing hosted catalog: 5,904 assets and 321 review
+records. The twelve additional hosted records are eleven older Mission handoff
+documents and one Hon matching-frame image. They are retained. Hosted text/PDF
+sanitization explains other known source/publication differences; it is not a
+missing-media discrepancy. All current local catalog originals and thumbnails
+resolve inside CFA, with no missing or externally located references.
+
+Recovery layers
+---------------
+Start at ../RECOVERY_START_HERE.txt.
+GitHub: https://github.com/ZiggyMack/CFA
+Private dated source backup:
+https://drive.google.com/drive/u/1/folders/1phXs8zmv9pmshv0I1yyYx-3Hpl0Yp7TK
+Local staging: D:/CFA_Backup_Staging/CFA_20261111_reawakening_sources
+
+The source snapshot covers 6,278,763,404 bytes / 31,814 files before the final
+changed-file supplement. 10,799 files / 4.10 GB of its exact original content are absent
+from remote main's entire tree, even allowing alternate paths. Most of that is
+Grok, Lisan and Hon originals and Gemini video. This proves that the live site
+and Git tree alone are insufficient to restore all current originals; it does
+not prove those bytes were absent from older Drive synchronization or history.
+
+Archives are independent parts with SHA-256 receipts, member CRC checks,
+original paths, a no-overwrite Windows long-path restore helper and explicit
+exclusions. Credentials, sessions, installed dependencies, runtime/shader caches
+and redundant generated snapshots are excluded. Selected irreplaceable cache
+evidence, including the raw Chris feedback export and five required thumbnails,
+is rescued explicitly. See the backup manifest for exact scope.
+
+The final cumulative manifest selects the latest captured bytes for each path,
+including the end-of-audit supplement, so the supplied helper restores into
+one new directory without overwriting an earlier version. When cloning on
+Windows, enable Git long paths and choose a short new directory on D:.
+
+Research branches were checked against freshly read remote refs. The genuine
+research branches are recoverable remotely; temporary publication branches are
+not required to reconstruct project research. Git's old immutable site history
+is retained. This is a CFA project backup, not a Windows image or a complete
+backup of Pan_Handlers, Nyquist_Consciousness or other sibling projects.
+
+Independent restore evidence
+----------------------------
+The new recovery guide was downloaded through Google Drive's web UI from the
+current computer-sync tree. Its SHA-256 exactly matched the local source:
+42006042bf69bd6b66898693e8b80b3a34ff40a33b09e06a75d258449a755385
+See cloud_restore_probe.json. This proves one current file reached the cloud;
+it is not proof that every synchronized file uploaded successfully.
+
+The first complete source archive was then independently downloaded from the
+new dated Drive backup: 536,831,732 bytes, SHA-256
+41c0bbb8a29f88ebb38d743e9aac5e1a130a5282dae360c77a62734f3e435c19.
+It matched the local manifest; all 597 archive members passed CRC checks.
+CFA/README.md was restored into a new directory and matched its manifest hash.
+See cloud_archive_restore.json. This proves an actual archive round trip and
+source-file restore, not a full download of every backup part.
+
+All twelve base archives passed SHA-256/CRC checks, and every mounted Drive
+copy matched. The base manifest SHA-256 is
+36c07e0e2c8997a607ec620d1ee83d8ce7ed2a720743f9d4e046708ce85ffad1.
+The published restore helper also restored a 333-character Lisan source path
+and the raw Chris feedback export into an empty directory; both matched their
+manifest hashes. See source_backup_receipt.json and its probe details.
+
+Review and synchronization limits
+--------------------------------
+The full library, compact Studio and different browsers/devices keep separate
+review state. Browser-only notes are not automatically in Git or the archives.
+The browser tool blocks the local file-page URL, so this pass could not export
+unsaved local browser state. Chris must return his complete JSON export for
+his latest review to become recoverable here. Existing returned exports are
+preserved unchanged; a favorite does not imply a saved note or final casting.
+
+Google Drive Desktop displayed active syncing and four errors. Its error-detail
+window could not be controlled reliably, so the audit does not claim those four
+errors were resolved. Dated archive verification is recorded separately from
+the computer-sync status.
+
+Validation and publication closeout
+----------------------------------
+Pending final candidate, remote read-back, live build and archive restore receipts.

@@ -275,7 +275,7 @@ class StudioAppTest(unittest.TestCase):
         cache.mkdir(exist_ok=True)
         cls.temp = tempfile.TemporaryDirectory(prefix="studio-test-", dir=cache)
         cls.app_dir = Path(cls.temp.name)
-        for name in ("app.py", "library_helpers.py", "mission_view.py", "design_view.py", "studio_dependencies.py", "storyboard_takes.py", "collaborator_review.py", "collaborator_review_storage.py", "controller_routing.py", "project_intake_view.py"):
+        for name in ("app.py", "library_helpers.py", "mission_view.py", "design_view.py", "studio_dependencies.py", "storyboard_takes.py", "collaborator_review.py", "collaborator_review_storage.py", "controller_routing.py", "project_intake_view.py", "location_reviews.py"):
             shutil.copy2(APP_DIR / name, cls.app_dir / name)
         shutil.copytree(APP_DIR / "collaborator_review_storage", cls.app_dir / "collaborator_review_storage")
         library = cls.app_dir / "library"
@@ -465,7 +465,7 @@ class StudioAppTest(unittest.TestCase):
             path.write_text(poisoned, encoding="utf-8")
             fixed = self.AppTest.from_file(str(path), default_timeout=45).run()
             self.assertFalse(fixed.exception)
-            self.assertEqual(fixed.session_state.studio_view, "Ziggy’s Corner")
+            self.assertEqual(fixed.session_state.studio_view, "Library")
             self.assertEqual(fixed.session_state.studio_reviews["hon-00"]["note"], "Keep this outfit only.")
         finally:
             path.write_text(original, encoding="utf-8")
@@ -572,6 +572,7 @@ def sync(component):
         try:
             app = self.app(library=False)
             self.assertFalse(app.exception)
+            app.button(key="nav:Ziggy’s Corner").click().run()
             self.assertTrue(any("Current Corner task" in e.label for e in app.expander))
             self.assertTrue(app.get("imgs"))
             reviews_before = json.dumps(app.session_state["studio_reviews"], sort_keys=True)
@@ -612,6 +613,7 @@ def sync(component):
                 exec("from library_helpers import mission_review_data", {})
             app = self.app(library=False)
             self.assertFalse(app.exception)
+            app.button(key="nav:Ziggy’s Corner").click().run()
             self.assertEqual(app.button(key="mission-shot-plans").label, "Shot plans · 1 →")
             self.assertTrue(any("Correct the coat reference" in e.label for e in app.expander))
             app.button(key="mission-shot-plans").click().run()
@@ -696,8 +698,10 @@ def sync(component):
         self.assertIsNone(app.session_state["studio_reviews"]["hon-00"]["status"])
         self.assertEqual(before, {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in library.iterdir()})
 
-    def test_mission_control_is_default_global_and_opens_packaged_references(self):
+    def test_library_is_default_and_corner_opens_global_packaged_references(self):
         app = self.app(library=False)
+        self.assertEqual(app.session_state["studio_view"], "Library")
+        app.button(key="nav:Ziggy’s Corner").click().run()
         self.assertEqual(app.session_state["studio_view"], "Ziggy’s Corner")
         self.assertTrue(any("Mission Control" in item.value for item in app.markdown))
         self.assertTrue(any("Correct the coat reference" in item.label for item in app.expander))
@@ -733,6 +737,7 @@ def sync(component):
         path.write_text(json.dumps(data), encoding="utf-8")
         try:
             app = self.app(library=False)
+            app.button(key="nav:Ziggy’s Corner").click().run()
             self.assertFalse(any(item.value == "Current work" for item in app.subheader))
             self.assertEqual(sum("Correct the coat reference" in e.label for e in app.expander), 1)
             self.assertFalse(any(b.key in {"mission-shots", "mission-library"} for b in app.button))
