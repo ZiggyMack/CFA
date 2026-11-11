@@ -1,5 +1,5 @@
 CFA REAWAKENING / RECOVERY AUDIT — 11 NOVEMBER 2026
-Status: verification in progress; final receipts below will be completed before closeout.
+Status: source capture frozen. Final runtime/cloud results are separate closeout receipts.
 
 Purpose
 -------
@@ -62,6 +62,8 @@ exclusions. Credentials, sessions, installed dependencies, runtime/shader caches
 and redundant generated snapshots are excluded. Selected irreplaceable cache
 evidence, including the raw Chris feedback export and five required thumbnails,
 is rescued explicitly. See the backup manifest for exact scope.
+The required D: Python launcher script is also rescued from .cache/runtimes;
+the Python installation itself still needs to be installed on the new machine.
 
 The final cumulative manifest selects the latest captured bytes for each path,
 including the end-of-audit supplement, so the supplied helper restores into
@@ -113,4 +115,35 @@ the computer-sync status.
 
 Validation and publication closeout
 ----------------------------------
-Pending final candidate, remote read-back, live build and archive restore receipts.
+Verified portable build: 48e4d943e452ca58ae0d.
+Published release commit: 5bf43731855e71b499f5fd0002e130bcc2c7fce8.
+Remote main was independently read back at that exact commit. The local
+portable pointer was adopted only after publication. Streamlit briefly showed
+a missing-snapshot error during checkout; a later reload opened build 48e4...
+correctly without a runtime-code change. Hon All files, Baldadoon All files,
+Casa casting and Casa Locations navigation all passed without a bounce.
+Every allowed publication file passed the original builder's size/SHA-256
+verification, partitioned into eight batches with a global duplicate-path
+check. Source hashes remained unchanged during the build. The bundle preserves
+all 5,904 assets and 321 review records. Its 25 unresolved prepared-document
+links exactly match the prior build; none were added by this release.
+
+All 18 targeted native cases passed (16 together, two isolated retries after
+the initial timeouts and obsolete expectations were resolved). Sixteen of the
+24 initial JS failures were corrected and passed; eight older baseline failures
+remain documented. See validation_summary.json for the broad test run, baseline
+comparisons, focused regression results and remaining expectations. This audit
+does not claim that the entire historical test suite is green.
+
+The live export check additionally caught the toast status message reusing and
+removing the intended persistent download-retry link. The one-line status-toast
+selector correction and actual export/notice/timer regression passed. Follow-up
+commit 0182d2e3af49755d4b08abeb5a028991b7cc38e0 was pushed and independently
+read back from remote main. Its immutable UI build is daca00357c41352c58b0;
+the native catalog, original identities and all 321 reviews remain unchanged.
+
+The source archive is frozen independently of deployment/upload timing. Read
+closeout_receipt.json for the final live-build and download observations, and
+source_backup_receipt.json for the cumulative manifest/part hashes. These final
+companion receipts are preserved separately in Git and the dated Drive folder
+to avoid making the archive recursively contain its own checksum receipt.
